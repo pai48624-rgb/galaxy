@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>방문자 제안 목록 - 관리자</title>
+<style>
+  body { font-family: -apple-system, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 16px; color: #222; }
+  h1 { font-size: 20px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { text-align: left; padding: 8px; border-bottom: 1px solid #eee; vertical-align: top; }
+  .del-btn { background: #c0392b; padding: 4px 10px; font-size: 12px; border:none; border-radius:4px; color:#fff; cursor:pointer; }
+  a.back { font-size: 13px; }
+  .empty { color: #888; font-size: 13px; }
+</style>
+</head>
+<body>
+<a class="back" href="{{ url_for('admin') }}">← 관리자 화면으로</a>
+<h1>방문자 제안 목록 ({{ rows|length }})</h1>
+
+{% if not rows %}
+<p class="empty">아직 들어온 제안이 없습니다.</p>
+{% else %}
+<table>
+  <tr><th>이름</th><th>카테고리</th><th>메모</th><th>날짜</th><th></th></tr>
+  {% for r in rows %}
+  <tr>
+    <td>{{ r.name }}</td>
+    <td>{{ r.category or '-' }}</td>
+    <td>{{ r.note or '-' }}</td>
+    <td>{{ r.created_at }}</td>
+    <td>
+      <form method="POST" action="{{ url_for('admin_suggestion_delete', sid=r.id) }}" style="margin:0;">
+        <button class="del-btn" type="submit">삭제</button>
+      </form>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+{% endif %}
+</body>
+</html>

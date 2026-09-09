@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>AI 성단 지도 - 관리자</title>
+<style>
+  body { font-family: -apple-system, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 16px; color: #222; }
+  h1 { font-size: 20px; }
+  form { border: 1px solid #ddd; border-radius: 8px; padding: 16px; margin-bottom: 24px; }
+  label { display: block; font-size: 13px; color: #555; margin: 10px 0 4px; }
+  input, select, textarea { width: 100%; box-sizing: border-box; padding: 6px 8px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; }
+  button { margin-top: 14px; padding: 8px 16px; border: none; background: #333; color: #fff; border-radius: 6px; cursor: pointer; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid #eee; }
+  .del-btn { background: #c0392b; padding: 4px 10px; font-size: 12px; }
+  .note { font-size: 12px; color: #888; margin-top: 4px; }
+</style>
+</head>
+<body>
+<h1>AI 성단 지도 - 관리자 <a href="{{ url_for('admin_logout') }}" style="font-size:12px; float:right;">로그아웃</a></h1>
+<p class="note">전체 AI 서비스: {{ total }}개 (아래 표는 최대 500개까지만 표시됩니다)</p>
+<p>
+  <a href="{{ url_for('admin_suggestions') }}">📥 방문자 제안 목록 보기</a>
+  &nbsp;|&nbsp;
+  <a href="{{ url_for('admin_relations') }}">🔗 AI 간 연관관계 관리</a>
+</p>
+<p class="note">환경변수 ADMIN_PASSWORD로 비밀번호를 바꿀 수 있습니다. (기본값은 반드시 바꾸세요)</p>
+
+<form method="POST">
+  <label>이름 (한글)</label>
+  <input name="name" required placeholder="예: 라마(Llama)">
+
+  <label>영문 이름 (영문 검색용)</label>
+  <input name="name_en" placeholder="예: Llama">
+
+  <label>유형</label>
+  <select name="type">
+    <option value="star">star (AI 서비스)</option>
+    <option value="satellite">satellite (주기능)</option>
+  </select>
+
+  <label>카테고리 (star일 때만)</label>
+  <input name="category" placeholder="star일 때만 입력">
+
+  <label>소속 별 (satellite일 때만)</label>
+  <select name="parent_id">
+    <option value="">-- 선택 안 함 --</option>
+    {% for s in stars %}
+    <option value="{{ s.id }}">{{ s.name }}</option>
+    {% endfor %}
+  </select>
+
+  <label>설명</label>
+  <textarea name="description" rows="2"></textarea>
+
+  <label>전체 순위 (1위가 가장 큼, 숫자 작을수록 큼)</label>
+  <input name="rank" type="number" min="1" placeholder="예: 12">
+
+  <label>가격 유형</label>
+  <select name="pricing">
+    <option value="정보없음" selected>정보없음</option>
+    <option value="무료">무료</option>
+    <option value="부분유료">부분유료 (freemium)</option>
+    <option value="유료">유료</option>
+    <option value="정보없음">정보없음</option>
+  </select>
+
+  <label>연결할 블로그 글 URL</label>
+  <input name="blog_url" placeholder="https://...">
+
+  <button type="submit">추가</button>
+</form>
+
+<table>
+  <tr><th>ID</th><th>이름</th><th>영문명</th><th>유형</th><th>카테고리</th><th>순위</th><th>가격</th><th>소속</th><th></th></tr>
+  {% for n in nodes %}
+  <tr>
+    <td>{{ n.id }}</td>
+    <td>{{ n.name }}</td>
+    <td>{{ n.name_en or '-' }}</td>
+    <td>{{ n.type }}</td>
+    <td>{{ n.category or '-' }}</td>
+    <td>{{ n.rank or '-' }}</td>
+    <td>{{ n.pricing or '-' }}</td>
+    <td>{{ n.parent_id or '-' }}</td>
+    <td>
+      <form method="POST" action="{{ url_for('admin_delete', node_id=n.id) }}" style="margin:0;">
+        <button class="del-btn" type="submit">삭제</button>
+      </form>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+</body>
+</html>

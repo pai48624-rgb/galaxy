@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ node.name }} - AI 성단 지도</title>
+<meta name="description" content="{{ node.description }}">
+<style>
+  body { margin:0; background:#0a0a12; color:#e8e8f0; font-family:-apple-system, BlinkMacSystemFont, "Malgun Gothic", sans-serif; }
+  .wrap { max-width: 640px; margin: 0 auto; padding: 40px 20px 60px; }
+  .back { color:#a89bf0; text-decoration:none; font-size:13px; }
+  h1 { font-size: 24px; margin: 18px 0 4px; }
+  .cat { display:inline-block; font-size:12px; color:#a89bf0; background:rgba(140,120,230,0.15); padding:3px 10px; border-radius:10px; margin-bottom:16px; }
+  .score { font-size:13px; color:#9a9ab0; margin-bottom:20px; }
+  p.desc { font-size:15px; line-height:1.7; color:#d0d0e0; }
+  .sat-box { margin-top:28px; }
+  .sat-box h2 { font-size:15px; color:#8fd6c4; margin-bottom:10px; }
+  .sat-item { font-size:13px; color:#c4c4d6; margin-bottom:8px; padding-left:12px; border-left:2px solid rgba(143,214,196,0.4); }
+  .cta { margin-top:30px; }
+  .cta a { display:inline-block; background:#7f77dd; color:#fff; text-decoration:none; padding:10px 18px; border-radius:8px; font-size:13px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="{{ url_for('index') }}">← AI 성단 지도로 돌아가기</a>
+  <h1>{{ node.name }}</h1>
+  <span class="cat">{{ node.category }}</span>
+  <span class="cat" style="color:#e0c080; background:rgba(200,170,90,0.15);">{{ node.pricing }}</span>
+  <div class="score">인기도 점수: {{ node.score }}/100</div>
+  <p class="desc">{{ node.description }}</p>
+
+  {% if satellites %}
+  <div class="sat-box">
+    <h2>주요 기능</h2>
+    {% for s in satellites %}
+    <div class="sat-item"><strong>{{ s.name }}</strong> — {{ s.description }}</div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if related %}
+  <div class="sat-box">
+    <h2>🔗 함께 쓰면 좋은 AI</h2>
+    {% for r in related %}
+    <div class="sat-item"><a href="{{ url_for('ai_detail', node_id=r.id) }}" style="color:#f0d090;">{{ r.name }}</a> — {{ r.label }}</div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if node.blog_url %}
+  <div class="cta"><a href="{{ node.blog_url }}" target="_blank" rel="noopener">블로그에서 자세한 리뷰 보기 →</a></div>
+  {% endif %}
+</div>
+</body>
+</html>

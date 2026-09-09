@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 추천하기 - AI 성단 지도</title>
+<style>
+  body { margin:0; background:#0a0a12; color:#e8e8f0; font-family:-apple-system, BlinkMacSystemFont, "Malgun Gothic", sans-serif; }
+  .wrap { max-width: 480px; margin: 0 auto; padding: 40px 20px 60px; }
+  .back { color:#a89bf0; text-decoration:none; font-size:13px; }
+  h1 { font-size: 20px; margin: 18px 0 20px; }
+  label { display:block; font-size:13px; color:#9a9ab0; margin:14px 0 6px; }
+  input, textarea { width:100%; box-sizing:border-box; padding:9px 12px; border-radius:8px; border:1px solid rgba(255,255,255,0.2); background:rgba(255,255,255,0.05); color:#eee; font-size:14px; }
+  button { margin-top:20px; padding:10px 20px; border:none; border-radius:8px; background:#7f77dd; color:#fff; cursor:pointer; font-size:14px; }
+  .saved { background:rgba(100,200,150,0.15); border:1px solid rgba(100,200,150,0.4); padding:14px 16px; border-radius:8px; font-size:14px; margin-bottom:16px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="{{ url_for('index') }}">← AI 성단 지도로 돌아가기</a>
+  <h1>추가했으면 하는 AI 서비스가 있나요?</h1>
+
+  {% if saved %}
+  <div class="saved">제안 감사합니다! 검토 후 지도에 추가할게요.</div>
+  {% endif %}
+
+  <form method="POST">
+    <label>AI 서비스 이름</label>
+    <input name="name" required placeholder="예: 라마(Llama)">
+
+    <label>카테고리 (아는 만큼만)</label>
+    <input name="category" placeholder="예: 챗봇, 이미지생성 등">
+
+    <label>어떤 서비스인지 / 왜 추가하면 좋을지</label>
+    <textarea name="note" rows="3"></textarea>
+
+    <button type="submit">제안하기</button>
+  </form>
+</div>
+</body>
+</html>

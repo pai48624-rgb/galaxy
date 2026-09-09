@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>AI 연관관계 관리</title>
+<style>
+  body { font-family: -apple-system, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 16px; color: #222; }
+  h1 { font-size: 20px; }
+  form { border: 1px solid #ddd; border-radius: 8px; padding: 16px; margin-bottom: 24px; display:flex; gap:10px; flex-wrap:wrap; align-items:flex-end; }
+  label { display: block; font-size: 12px; color: #555; margin-bottom: 4px; }
+  select, input { padding: 6px 8px; border: 1px solid #ccc; border-radius: 4px; font-size: 13px; }
+  button { padding: 8px 16px; border: none; background: #333; color: #fff; border-radius: 6px; cursor: pointer; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid #eee; }
+  .del-btn { background: #c0392b; padding: 4px 10px; font-size: 12px; }
+  a.back { font-size: 13px; }
+  .note { font-size: 12px; color: #888; margin: 8px 0 16px; }
+</style>
+</head>
+<body>
+<a class="back" href="{{ url_for('admin') }}">← 관리자 화면으로</a>
+<h1>AI 간 연관관계 관리</h1>
+<p class="note">두 AI를 골라 "왜 연결되는지" 짧게 적으면, 지도에서 한쪽 별을 클릭했을 때 다른 쪽 별로 연결선이 그려집니다.</p>
+
+<form method="POST">
+  <div>
+    <label>AI A</label>
+    <select name="from_id" required>
+      {% for s in stars %}<option value="{{ s.id }}">{{ s.name }}</option>{% endfor %}
+    </select>
+  </div>
+  <div>
+    <label>AI B</label>
+    <select name="to_id" required>
+      {% for s in stars %}<option value="{{ s.id }}">{{ s.name }}</option>{% endfor %}
+    </select>
+  </div>
+  <div style="flex:1; min-width:200px;">
+    <label>연결 이유 (짧게)</label>
+    <input name="label" style="width:100%;" placeholder="예: 함께 쓰면 좋음, MCP로 연동됨 등">
+  </div>
+  <button type="submit">연결 추가</button>
+</form>
+
+<table>
+  <tr><th>A</th><th>B</th><th>이유</th><th></th></tr>
+  {% for r in relations %}
+  <tr>
+    <td>{{ r.from_name }}</td>
+    <td>{{ r.to_name }}</td>
+    <td>{{ r.label or '-' }}</td>
+    <td>
+      <form method="POST" action="{{ url_for('admin_relation_delete', rid=r.id) }}" style="margin:0;">
+        <button class="del-btn" type="submit">삭제</button>
+      </form>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+</body>
+</html>

@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 성단 지도 - AI 서비스 생태계 한눈에 보기</title>
+<meta name="description" content="챗봇, 이미지생성, 코딩AI 등 모든 AI 서비스를 하나의 네트워크 그래프로 탐색하고, 함께 쓰면 좋은 AI 조합까지 확인하세요.">
+<script src="{{ url_for('static', filename='d3.min.js') }}"></script>
+<style>
+  body {
+    margin: 0;
+    background: radial-gradient(ellipse at center, #10101a 0%, #05050a 100%);
+    color: #e8e8f0;
+    font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", sans-serif;
+    overflow-x: hidden;
+    transition: background 0.6s ease;
+  }
+  body.theme-bg1, body.theme-bg2, body.theme-bg3, body.theme-bg4 {
+    background-image:
+      linear-gradient(rgba(4,4,8,0.55), rgba(4,4,8,0.7)),
+      var(--bg-img);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  body.theme-bg1 { --bg-img: url('/static/bg1.jpg'); }
+  body.theme-bg2 { --bg-img: url('/static/bg2.jpg'); }
+  body.theme-bg3 { --bg-img: url('/static/bg3.jpg'); }
+  body.theme-bg4 { --bg-img: url('/static/bg4.jpg'); }
+  .theme-switcher { position: fixed; top: 14px; right: 14px; z-index: 40; display: flex; gap: 8px; }
+  .theme-btn {
+    width: 30px; height: 30px; border-radius: 8px; border: 1.5px solid rgba(255,255,255,0.4);
+    cursor: pointer; opacity: 0.7; background-size: cover; background-position: center;
+    transition: opacity 0.2s, transform 0.15s;
+  }
+  .theme-btn:hover { opacity: 1; transform: scale(1.1); }
+  .theme-btn.active { border-color: #fff; opacity: 1; box-shadow: 0 0 6px rgba(255,255,255,0.6); }
+  .theme-btn.bg1 { background-image: url('/static/bg1.jpg'); }
+  .theme-btn.bg2 { background-image: url('/static/bg2.jpg'); }
+  .theme-btn.bg3 { background-image: url('/static/bg3.jpg'); }
+  .theme-btn.bg4 { background-image: url('/static/bg4.jpg'); }
+  .credit { position: fixed; bottom: 6px; right: 10px; font-size: 9px; color: rgba(255,255,255,0.35); z-index: 5; }
+  header { text-align: center; padding: 22px 16px 6px; position: relative; z-index: 5; }
+  header h1 { font-size: 22px; font-weight: 500; margin: 0; }
+  header p { font-size: 13px; color: #9a9ab0; margin: 6px 0 0; }
+
+  #bgstars { position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
+  @keyframes twinkle { 0%, 100% { opacity: 0.15; } 50% { opacity: 0.9; } }
+  .twinkle-dot { position: absolute; border-radius: 50%; background: #ffffff; box-shadow: 0 0 4px 1px rgba(255,255,255,0.6); animation: twinkle 3s ease-in-out infinite; }
+
+  .controls { max-width: 700px; margin: 4px auto 0; padding: 0 16px; display: flex; flex-direction: column; gap: 10px; align-items: center; position: relative; z-index: 5; }
+  #searchInput {
+    width: 100%; max-width: 320px; padding: 9px 14px; border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.25); background: rgba(20,20,32,0.6);
+    color: #eee; font-size: 13px; outline: none;
+  }
+  #searchInput::placeholder { color: #8a8aa0; }
+  .cat-filters, .price-chips { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
+  .cat-chip {
+    font-size: 11px; padding: 5px 12px; border-radius: 14px; cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.25); color: #cfcfe0; background: rgba(255,255,255,0.05);
+    transition: all 0.15s; user-select: none;
+  }
+  .cat-chip.active { background: rgba(140,120,230,0.35); border-color: #a89bf0; color: #fff; }
+  .cat-row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; align-items: center; }
+  .layout-select-wrap { position: relative; display: inline-block; }
+  .layout-select {
+    appearance: none; -webkit-appearance: none;
+    font-size: 11.5px; font-weight: 600; padding: 6px 28px 6px 14px; border-radius: 14px;
+    border: 1.5px solid #a89bf0; background: linear-gradient(135deg, rgba(140,120,230,0.35), rgba(90,70,180,0.25));
+    color: #fff; cursor: pointer; outline: none;
+  }
+  .layout-select:hover { border-color: #cabdff; }
+  .layout-select option { background: #191928; color: #f0f0fa; padding: 6px; }
+  .layout-select-wrap::after {
+    content: '▾'; position: absolute; right: 11px; top: 50%; transform: translateY(-50%);
+    color: #cabdff; font-size: 10px; pointer-events: none;
+  }
+  .info-toggle { font-size: 11px; color: #8a8aa0; text-decoration: underline; cursor: pointer; background: none; border: none; padding: 0; }
+  .cat-explain { max-width: 600px; margin: 0; font-size: 11.5px; color: #9a9ab0; text-align: center; line-height: 1.6; display: none; }
+  .cat-explain.show { display: block; }
+  .suggest-link { font-size: 12px; color: #8fd6c4; text-decoration: none; }
+  .hint { font-size: 11px; color: #7a7a90; }
+
+  #graphWrap { max-width: 1100px; margin: 6px auto 0; padding: 0 8px; position: relative; z-index: 1; }
+  svg#graph { width: 100%; height: 780px; display: block; cursor: grab; }
+  svg#graph.panning { cursor: grabbing; }
+  .fit-btn {
+    position: absolute; top: 8px; right: 16px; z-index: 6;
+    font-size: 11px; padding: 5px 12px; border-radius: 14px; cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.3); color: #cfcfe0; background: rgba(20,20,32,0.6);
+  }
+
+  .main-layout { display: flex; gap: 24px; max-width: 1500px; margin: 6px auto 40px; padding: 0 16px; align-items: flex-start; position: relative; z-index: 1; }
+  .main-layout > #graphWrap { flex: 1 1 auto; min-width: 0; margin: 0; max-width: none; }
+  .main-layout > #ai-list { flex: 0 0 340px; margin: 0; max-height: 700px; overflow-y: auto; }
+  @media (max-width: 980px) {
+    .main-layout { flex-direction: column; }
+    .main-layout > #ai-list { flex: 1 1 auto; width: 100%; max-height: none; }
+  }
+
+  .link-satellite { stroke: #6fcaa8; stroke-width: 1; opacity: 0.45; transition: opacity 0.2s; }
+  .link-satellite.dimmed { opacity: 0.05; }
+  .link-relation { stroke: #f0b429; stroke-width: 1.3; stroke-dasharray: 4 3; opacity: 0.35; transition: opacity 0.2s, stroke-width 0.2s; }
+  .link-relation.dimmed { opacity: 0.04; }
+  .link-relation.active { opacity: 1; stroke-width: 2.2; }
+
+  .node-circle { cursor: pointer; transition: filter 0.15s; }
+  .node-circle.dimmed { opacity: 0.12; }
+  .node-group.related .node-circle { filter: drop-shadow(0 0 8px rgba(240,180,41,0.95)); }
+  .node-group.selected .node-circle { filter: drop-shadow(0 0 10px rgba(255,255,255,0.95)); }
+  .node-label { fill: #f2f2fa; font-size: 10px; font-weight: 600; text-anchor: middle; pointer-events: none; paint-order: stroke; stroke: rgba(5,5,10,0.75); stroke-width: 3px; }
+  .cat-anchor-label { fill: #b9b9d8; font-size: 11px; font-weight: 600; text-anchor: middle; opacity: 0.55; pointer-events: none; }
+
+  .legend { display: flex; justify-content: center; gap: 16px; font-size: 11.5px; color: #9a9ab0; margin-top: 4px; flex-wrap: wrap; }
+  .visible-count { text-align: center; font-size: 12px; color: #cabdff; margin-top: 6px; font-weight: 600; }
+  .legend span { display: inline-flex; align-items: center; gap: 5px; }
+  .dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
+
+  .detail-panel {
+    position: fixed; right: 16px; bottom: 16px; left: auto; transform: translateY(120%);
+    width: 340px; max-width: calc(100vw - 32px); background: rgba(18,18,28,0.97);
+    backdrop-filter: blur(6px); border-radius: 14px; padding: 16px 20px 18px;
+    box-sizing: border-box; z-index: 30; transition: transform 0.25s ease;
+    border: 1px solid rgba(255,255,255,0.15);
+    max-height: 46vh; overflow-y: auto;
+  }
+  .detail-panel.open { transform: translateY(0); }
+  @media (max-width: 700px) {
+    .detail-panel { left: 12px; right: 12px; width: auto; bottom: 10px; max-height: 40vh; }
+  }
+  .detail-panel h3 { margin: 0 0 6px; font-size: 16px; font-weight: 600; }
+  .detail-panel .meta { font-size: 11px; color: #9a9ab0; margin-bottom: 10px; }
+  .detail-panel .price-badge { font-size: 10px; padding: 1px 7px; border-radius: 8px; margin-left: 6px; }
+  .price-badge.free { background: rgba(100,200,150,0.2); color: #8fe0b8; }
+  .price-badge.freemium { background: rgba(200,170,90,0.2); color: #e0c080; }
+  .price-badge.paid { background: rgba(220,120,120,0.2); color: #e89a9a; }
+  .price-badge.unknown { background: rgba(150,150,170,0.2); color: #b8b8c8; }
+  .detail-panel p { margin: 0 0 12px; font-size: 13px; color: #c4c4d6; line-height: 1.5; }
+  .detail-panel a.blog-link { color: #a89bf0; font-size: 13px; text-decoration: none; }
+  .blog-link-row { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 8px; }
+  .detail-close {
+    position: absolute; top: 10px; right: 14px; background: none; border: none;
+    color: #999; font-size: 20px; cursor: pointer; line-height: 1;
+  }
+  .related-box { margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.1); }
+  .related-box h4 { font-size: 12px; color: #f0b429; margin: 0 0 6px; font-weight: 600; }
+  .related-chip { display: inline-block; font-size: 11.5px; background: rgba(240,180,41,0.15); color: #f0d090; padding: 3px 10px; border-radius: 10px; margin: 0 4px 4px 0; cursor: pointer; }
+  .sat-box { margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.1); }
+  .sat-box h4 { font-size: 12px; color: #6fcaa8; margin: 0 0 6px; font-weight: 600; }
+  .sat-item { font-size: 12px; color: #cfe8de; margin-bottom: 5px; }
+
+  #ai-list { max-width: 900px; margin: 30px auto 60px; padding: 0 16px; position: relative; z-index: 5; }
+  #ai-list h2 { font-size: 17px; font-weight: 500; margin-bottom: 14px; }
+  .list-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+  .list-cat { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 14px 16px; }
+  .list-cat h3 { font-size: 13px; color: #a89bf0; margin: 0 0 8px; }
+  .list-cat ul { list-style: none; margin: 0; padding: 0; }
+  .list-cat li { font-size: 12.5px; color: #cfcfe0; margin-bottom: 8px; line-height: 1.5; }
+  .list-cat li strong { color: #fff; }
+  .list-cat li a { color: #8fd6c4; font-size: 11.5px; margin-left: 4px; text-decoration: none; }
+  .list-cat li a strong { color: #a89bf0; }
+  .list-cat li[data-visible="false"] { display: none; }
+  .list-cat[data-visible="false"] { display: none; }
+  .price-badge { font-size: 10px; padding: 1px 7px; border-radius: 8px; margin-left: 6px; }
+</style>
+</head>
+<body>
+<div class="theme-switcher">
+  <div class="theme-btn bg1" onclick="setTheme('bg1')" title="Westerlund 2 성단"></div>
+  <div class="theme-btn bg2" onclick="setTheme('bg2')" title="Cosmic Reef 성운"></div>
+  <div class="theme-btn bg3" onclick="setTheme('bg3')" title="솜브레로 은하"></div>
+  <div class="theme-btn bg4" onclick="setTheme('bg4')" title="타란튤라 성운"></div>
+</div>
+<div class="credit">이미지: NASA, ESA, Hubble Space Telescope</div>
+<div id="bgstars"></div>
+
+<header>
+  <h1>AI 성단 지도</h1>
+  <p>모든 AI가 하나의 네트워크로 연결되어 있어요 — 노드를 드래그하거나, 클릭해서 연관 AI를 확인해보세요</p>
+</header>
+
+<div class="controls">
+  <input type="text" id="searchInput" placeholder="AI 이름 검색..." oninput="onSearch(this.value)">
+  <div class="visible-count" id="visibleCount"></div>
+  <div class="cat-row">
+    <div class="layout-select-wrap">
+      <select class="layout-select" id="layoutSelect" onchange="window.setLayoutMode && window.setLayoutMode(this.value)">
+        <option value="network">🕸 네트워크형</option>
+        <option value="board">🗂 보드형(칸별 정리)</option>
+        <option value="orbit">🪐 궤도형(카테고리 원형)</option>
+        <option value="sphere3d">🌐 3D 구체형(진짜 회전)</option>
+      </select>
+    </div>
+    <div class="cat-filters" id="catFilters"></div>
+  </div>
+  <button class="info-toggle" onclick="document.getElementById('catExplain').classList.toggle('show')">카테고리가 무슨 뜻이에요?</button>
+  <div class="cat-explain" id="catExplain">
+    이 지도의 대분류(31개)·세부분류(107개) 체계는 실제 운영중인 AI 디렉토리 사이트
+    <a href="https://ailandscape.org" target="_blank" rel="noopener" style="color:#a89bf0;">ailandscape.org</a>의
+    분류를 그대로 가져온 거예요. 각 AI를 클릭하면 상세 카드에 정확한 세부분류가 함께 표시됩니다.
+  </div>
+  <div class="price-chips" id="priceFilters"></div>
+  <div class="cat-chip active" id="featuredToggle" onclick="toggleFeaturedOnly(this)" style="border-color:#f0b429; font-weight:700;">⭐ 주요 AI만 (기본 ~50개+연관)</div>
+  <a class="suggest-link" href="{{ url_for('suggest') }}">+ 추가했으면 하는 AI 제안하기</a>
+  <div class="hint">드래그해서 옮기기 · 배경 드래그로 이동 · 휠로 확대/축소</div>
+</div>
+
+<div class="main-layout">
+<div id="graphWrap">
+  <button class="fit-btn" onclick="fitToView()">⤢ 전체 보기</button>
+  <svg id="graph" viewBox="0 0 1300 820"></svg>
+  <div class="legend" id="legend"></div>
+</div>
+
+<!-- SEO/접근성용: 검색엔진과 스크린리더가 바로 읽을 수 있는 실제 텍스트 목록. 검색/필터와도 연동됨 -->
+<section id="ai-list" aria-label="전체 AI 서비스 목록">
+  <h2>카테고리별 AI 서비스 전체 목록 <span style="font-size:12px; color:#8a8aa0; font-weight:400;">(그래프와 별개로 전체를 모두 확인할 수 있어요)</span></h2>
+  <div class="list-grid">
+    {% for cat, items in grouped.items() %}
+    <div class="list-cat" data-list-category="{{ cat }}">
+      <h3>{{ cat }} ({{ items|length }})</h3>
+      <ul>
+        {% for it in items %}
+        <li id="node-{{ it.id }}" data-list-name="{{ it.name|lower }}" data-list-name-en="{{ (it.name_en or '')|lower }}" data-list-pricing="{{ it.pricing }}">
+          <a href="{{ url_for('ai_detail', node_id=it.id) }}"><strong>{{ it.name }}</strong></a>{% if it.name_en %} <span style="color:#8a8aa0; font-size:11px;">({{ it.name_en }})</span>{% endif %}
+          <span class="price-badge {{ 'free' if it.pricing == '무료' else ('paid' if it.pricing == '유료' else 'freemium') }}">{{ it.pricing }}</span>
+          {% if it.description %} — {{ it.description }}{% endif %}
+          {% if it.blog_url %}<a href="{{ it.blog_url }}">리뷰 보기</a>{% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+</div>
+
+<div class="detail-panel" id="detailPanel">
+  <button class="detail-close" onclick="closeDetail()">×</button>
+  <h3 id="detailName"></h3>
+  <div class="meta" id="detailMeta"></div>
+  <p id="detailDesc"></p>
+  <div id="detailLink" class="blog-link-row" style="display:none;"></div>
+  <div class="sat-box" id="satBox" style="display:none;"></div>
+  <div class="related-box" id="relatedBox" style="display:none;"></div>
+</div>
+
+<script>
+// 카테고리가 몇 개든(지금은 31개) 이름 기반 해시로 자동으로 구분되는 파스텔 색을 만들어줌
+const catColorCache = {};
+function getCatColor(cat) {
+  if (catColorCache[cat]) return catColorCache[cat];
+  let hash = 0;
+  for (let i = 0; i < cat.length; i++) hash = (hash * 31 + cat.charCodeAt(i)) >>> 0;
+  const hue = hash % 360;
+  const color = `hsl(${hue}, 62%, 70%)`;
+  catColorCache[cat] = color;
+  return color;
+}
+const CAT_COLORS = new Proxy({}, { get: (_, cat) => getCatColor(cat) });
+const SAT_COLOR = '#6fcaa8';
+const PRICE_STROKE = { '무료': '#5fd68f', '부분유료': '#e8b84a', '유료': '#e05f5f', '정보없음': '#8a8a9a' };
+let TOTAL_STARS = 1;
+
+function setTheme(name) {
+  document.body.classList.remove('theme-bg1', 'theme-bg2', 'theme-bg3', 'theme-bg4');
+  document.body.classList.add('theme-' + name);
+  document.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'));
+  document.querySelector('.theme-btn.' + name).classList.add('active');
+  localStorage.setItem('ai_map_theme', name);
+}
+setTheme(localStorage.getItem('ai_map_theme') || 'bg2');
+
+const bgEl = document.getElementById('bgstars');
+let bgHtml = '';
+for (let i = 0; i < 160; i++) {
+  const size = (Math.random() * 2.5 + 1.2).toFixed(1);
+  const top = (Math.random() * 100).toFixed(2);
+  const left = (Math.random() * 100).toFixed(2);
+  const delay = (Math.random() * 4).toFixed(2);
+  const dur = (2.5 + Math.random() * 3).toFixed(2);
+  bgHtml += `<div class="twinkle-dot" style="width:${size}px;height:${size}px;top:${top}%;left:${left}%;animation-delay:${delay}s;animation-duration:${dur}s;"></div>`;
+}
+bgEl.innerHTML = bgHtml;
+
+function nodeRadius(d) {
+  if (d.type === 'satellite') return 9;
+  if (!d.rank) return 12; // 순위 정보 없는 다수(675개)는 기본 크기
+  const r = Math.max(1, Math.min(56, d.rank));
+  return 30 - (r - 1) * (30 - 16) / 55; // 1위=30px ~ 56위=16px
+}
+
+let searchTerm = '';
+let hoveredId = null, selectedId = null, relatedIds = new Set();
+let currentLayout = 'network';
+
+// 라벨/글로우를 CSS 캐스케이드에 기대지 않고 매번 직접 계산해서 적용
+// (SVG 안에서 :hover/자식 클래스 조합 opacity가 이 환경에서 간헐적으로 안 먹는 문제를 우회)
+function refreshNodeVisuals() {
+  if (!nodeSel) return;
+  nodeSel.select('.node-label').style('opacity', d => {
+    if (typeof isNodeVisible === 'function' && !isNodeVisible(d)) return 0;
+    if (d.id === hoveredId || d.id === selectedId || relatedIds.has(d.id)) return 1;
+    return 0;
+  });
+  nodeSel.select('.node-circle').style('filter', d => {
+    if (d.id === selectedId) return 'drop-shadow(0 0 10px rgba(255,255,255,0.95))';
+    if (relatedIds.has(d.id)) return 'drop-shadow(0 0 8px rgba(240,180,41,0.95))';
+    return null;
+  });
+}
+let activeCategories = new Set();
+let activePricing = new Set(['무료', '부분유료', '유료', '정보없음']);
+let allNodesData = [], allRelationsData = [];
+let nodeSel, linkSel, labelSel, simulation;
+
+function onSearch(v) { searchTerm = v.trim().toLowerCase(); applyFilters(); }
+function toggleCategory(cat, el) {
+  if (activeCategories.has(cat)) { activeCategories.delete(cat); el.classList.remove('active'); }
+  else { activeCategories.add(cat); el.classList.add('active'); }
+  applyFilters();
+}
+function togglePricing(p, el) {
+  if (activePricing.has(p)) { activePricing.delete(p); el.classList.remove('active'); }
+  else { activePricing.add(p); el.classList.add('active'); }
+  applyFilters();
+}
+
+function isNodeVisible(d) {
+  const hay = (d.name + ' ' + (d.name_en || '')).toLowerCase();
+  if (searchTerm !== '') return hay.includes(searchTerm); // 검색 중엔 필터 무시하고 전체에서 찾음
+  if (d.type === 'satellite') return true;
+  const matchCat = activeCategories.has(d.category);
+  const matchPrice = activePricing.has(d.pricing);
+  const matchFeatured = !window.showOnlyFeatured || (window.featuredIds && window.featuredIds.has(d.id));
+  return matchCat && matchPrice && matchFeatured;
+}
+
+function toggleFeaturedOnly(el) {
+  window.showOnlyFeatured = !window.showOnlyFeatured;
+  el.classList.toggle('active', window.showOnlyFeatured);
+  applyFilters();
+}
+
+function applyFilters() {
+  if (nodeSel) {
+    nodeSel.select('circle').classed('dimmed', d => !isNodeVisible(d));
+    labelSel.classed('dimmed', d => !isNodeVisible(d));
+  }
+  if (linkSel) {
+    // 연결선은 양쪽 노드가 둘 다 보일 때만 선명하게, 하나라도 흐려지면 같이 흐려짐
+    linkSel.classed('dimmed', l => !(isNodeVisible(l.source) && isNodeVisible(l.target)));
+  }
+  refreshNodeVisuals();
+  const countEl = document.getElementById('visibleCount');
+  if (countEl && allNodesData.length) {
+    const totalStars = allNodesData.filter(n => n.type === 'star').length;
+    const visibleStars = allNodesData.filter(n => n.type === 'star' && isNodeVisible(n)).length;
+    countEl.textContent = `${totalStars}개 중 ${visibleStars}개 표시중`;
+  }
+  document.querySelectorAll('.list-cat').forEach(catEl => {
+    const cat = catEl.dataset.listCategory;
+    const catActive = activeCategories.has(cat);
+    let any = false;
+    catEl.querySelectorAll('li').forEach(li => {
+      const name = (li.dataset.listName || '') + ' ' + (li.dataset.listNameEn || '');
+      const price = li.dataset.listPricing || '';
+      const visible = (searchTerm === '' || name.includes(searchTerm)) && catActive && activePricing.has(price);
+      li.setAttribute('data-visible', visible ? 'true' : 'false');
+      if (visible) any = true;
+    });
+    catEl.setAttribute('data-visible', any ? 'true' : 'false');
+  });
+}
+
+function priceBadgeClass(p) {
+  if (p === '무료') return 'free';
+  if (p === '유료') return 'paid';
+  if (p === '부분유료') return 'freemium';
+  return 'unknown';
+}
+
+function openDetail(d) {
+  document.getElementById('detailName').textContent = d.name;
+  document.getElementById('detailMeta').innerHTML = d.type === 'satellite'
+    ? '주기능'
+    : `${d.category || ''}${d.subcategory ? ' · ' + d.subcategory : ''} <span class="price-badge ${priceBadgeClass(d.pricing)}">${d.pricing || ''}</span>`;
+  document.getElementById('detailDesc').textContent = d.description || '설명이 아직 없습니다.';
+  const link = document.getElementById('detailLink');
+  const links = [];
+  if (d.url) links.push(`<a class="blog-link" href="${d.url}" target="_blank" rel="noopener">공식 사이트 →</a>`);
+  if (d.github) links.push(`<a class="blog-link" href="${d.github}" target="_blank" rel="noopener">GitHub →</a>`);
+  if (d.twitter) links.push(`<a class="blog-link" href="${d.twitter}" target="_blank" rel="noopener">X(Twitter) →</a>`);
+  if (d.blog_url) links.push(`<a class="blog-link" href="${d.blog_url}" target="_blank" rel="noopener">블로그 리뷰 →</a>`);
+  if (links.length) { link.style.display = 'flex'; link.innerHTML = links.join(''); } else { link.style.display = 'none'; }
+
+  // 위성(주기능) 표시
+  const satBox = document.getElementById('satBox');
+  if (d.type === 'star') {
+    const sats = allNodesData.filter(n => n.type === 'satellite' && n.parent_id === d.id);
+    if (sats.length) {
+      satBox.innerHTML = `<h4>⚙️ 주요 기능</h4>` + sats.map(s => `<div class="sat-item"><strong>${s.name}</strong> — ${s.description || ''}</div>`).join('');
+      satBox.style.display = 'block';
+    } else { satBox.style.display = 'none'; satBox.innerHTML = ''; }
+  } else { satBox.style.display = 'none'; satBox.innerHTML = ''; }
+
+  // 연관 AI 표시
+  const relBox = document.getElementById('relatedBox');
+  const related = allRelationsData.filter(r => r.from_id === d.id || r.to_id === d.id);
+  if (related.length) {
+    const chips = related.map(r => {
+      const otherId = r.from_id === d.id ? r.to_id : r.from_id;
+      const other = allNodesData.find(n => n.id === otherId);
+      if (!other) return '';
+      return `<span class="related-chip" onclick='selectNodeById(${otherId})' title="${(r.label || '').replace(/"/g, '&quot;')}">${other.name}</span>`;
+    }).join('');
+    relBox.innerHTML = `<h4>🔗 함께 쓰면 좋은 AI</h4>${chips}`;
+    relBox.style.display = 'block';
+  } else { relBox.style.display = 'none'; relBox.innerHTML = ''; }
+
+  document.getElementById('detailPanel').classList.add('open');
+  highlightRelated(d.id);
+}
+function closeDetail() {
+  document.getElementById('detailPanel').classList.remove('open');
+  highlightRelated(null);
+}
+function selectNodeById(id) {
+  const d = allNodesData.find(n => n.id === id);
+  if (d) openDetail(d);
+}
+
+function highlightRelated(id) {
+  if (!linkSel || !nodeSel) return;
+  linkSel.classed('active', l => id !== null && l.kind === 'relation' && (l.source.id === id || l.target.id === id));
+  selectedId = id;
+  relatedIds = new Set();
+  if (id !== null) {
+    allRelationsData.forEach(r => {
+      if (r.from_id === id) relatedIds.add(r.to_id);
+      if (r.to_id === id) relatedIds.add(r.from_id);
+    });
+  }
+  refreshNodeVisuals();
+}
+
+fetch('/api/graph').then(r => r.json()).then(data => {
+  const nodes = data.nodes.map(n => ({ ...n }));
+  const relations = data.relations || [];
+  allNodesData = nodes;
+  allRelationsData = relations;
+
+  const stars = nodes.filter(n => n.type === 'star');
+  TOTAL_STARS = stars.length;
+  const categories = [...new Set(stars.map(s => s.category))];
+
+  // 순위 정보 + 연관관계 개수를 기준으로 "주요 AI" 약 50개 + 그것들과 직접 연관된 AI를 기본 표시셋으로 삼음
+  const relCount = {};
+  relations.forEach(r => {
+    relCount[r.from_id] = (relCount[r.from_id] || 0) + 1;
+    relCount[r.to_id] = (relCount[r.to_id] || 0) + 1;
+  });
+  const scored = stars.map(s => ({ id: s.id, score: s.rank ? (100000 - s.rank) : (relCount[s.id] || 0) }));
+  scored.sort((a, b) => b.score - a.score);
+  const coreIds = new Set(scored.slice(0, 50).map(s => s.id));
+  const featuredIds = new Set(coreIds);
+  relations.forEach(r => {
+    if (coreIds.has(r.from_id)) featuredIds.add(r.to_id);
+    if (coreIds.has(r.to_id)) featuredIds.add(r.from_id);
+  });
+  window.featuredIds = featuredIds;
+  window.showOnlyFeatured = true;
+
+  // 카테고리 필터 칩 - "주요 AI"가 하나라도 포함된 카테고리만 기본 활성화, 나머진 기본 비활성
+  document.getElementById('catFilters').innerHTML = categories.map(c => {
+    const hasFeatured = stars.some(s => s.category === c && featuredIds.has(s.id));
+    if (hasFeatured) activeCategories.add(c); else activeCategories.delete(c);
+    return `<div class="cat-chip${hasFeatured ? ' active' : ''}" onclick="toggleCategory('${c}', this)" style="border-color:${CAT_COLORS[c] || '#888'};">${c}</div>`;
+  }).join('');
+
+  // 가격 필터 칩 (기본은 눌리지 않은 상태로 보이되, 데이터상으론 전부 표시됨)
+  const priceLabels = { '무료': '🟢 무료', '부분유료': '🟡 부분유료', '유료': '🔴 유료', '정보없음': '⚪ 정보없음' };
+  document.getElementById('priceFilters').innerHTML = Object.keys(priceLabels).map(p =>
+    `<div class="cat-chip" onclick="togglePricing('${p}', this)">${priceLabels[p]}</div>`
+  ).join('');
+
+  // 범례
+  document.getElementById('legend').innerHTML =
+    categories.map(c => `<span><span class="dot" style="background:${CAT_COLORS[c] || '#888'}"></span>${c}</span>`).join('') +
+    `<span><span class="dot" style="background:${SAT_COLOR}"></span>주기능</span>`;
+
+  // 링크 구성: 위성-부모 링크(짧고 강함) + AI간 연관관계 링크(길고 약함)
+  const links = [];
+  nodes.forEach(n => {
+    if (n.type === 'satellite' && n.parent_id) {
+      links.push({ source: n.parent_id, target: n.id, kind: 'satellite' });
+    }
+  });
+  relations.forEach(r => {
+    links.push({ source: r.from_id, target: r.to_id, kind: 'relation', label: r.label });
+  });
+
+  const width = 2600, height = 1700;
+
+  // 카테고리별 앵커 위치(느슨한 군집을 위한 중심점) - 2D 레이아웃(네트워크/보드/궤도)용
+  const catAnchor = {};
+  categories.forEach((c, i) => {
+    const angle = (i / categories.length) * 2 * Math.PI - Math.PI / 2;
+    catAnchor[c] = {
+      x: width / 2 + Math.cos(angle) * (width * 0.32),
+      y: height / 2 + Math.sin(angle) * (height * 0.34)
+    };
+  });
+
+  // 카테고리별 3D 구체 표면 방향(골든 스파이럴로 고르게 분산) - 3D 구체형 레이아웃용
+  const catDir3 = {};
+  categories.forEach((c, i) => {
+    const off = 2 / categories.length;
+    const yv = (i * off - 1) + off / 2;
+    const r = Math.sqrt(Math.max(0, 1 - yv * yv));
+    const phi = i * Math.PI * (3 - Math.sqrt(5));
+    catDir3[c] = [Math.cos(phi) * r, yv, Math.sin(phi) * r];
+  });
+  nodes.forEach(n => {
+    if (n.type !== 'star' || !catDir3[n.category]) { n.p3 = null; return; }
+    const base = catDir3[n.category];
+    const jitter = 0.3;
+    let vx = base[0] + (Math.random() - 0.5) * jitter;
+    let vy = base[1] + (Math.random() - 0.5) * jitter;
+    let vz = base[2] + (Math.random() - 0.5) * jitter;
+    const len = Math.sqrt(vx * vx + vy * vy + vz * vz) || 1;
+    const depthVar = 0.72 + Math.random() * 0.28; // 표면에 두께감(뭉게구름처럼)
+    n.p3 = [vx / len * depthVar, vy / len * depthVar, vz / len * depthVar];
+  });
+  let is3D = false;
+  let rot3X = 0.4, rot3Y = 0.6;
+  const sphereR = Math.min(width, height) * 0.42;
+
+  function render3D(skipLinks) {
+    const cx0 = width / 2, cy0 = height / 2;
+    const cosY = Math.cos(rot3Y), sinY = Math.sin(rot3Y), cosX = Math.cos(rot3X), sinX = Math.sin(rot3X);
+
+    if (skipLinks) {
+      // 드래그 중: D3 셀렉션 없이 원본 DOM을 순회하며 직접 속성만 갱신 (제일 빠른 경로)
+      for (let i = 0; i < nodes.length; i++) {
+        const n = nodes[i];
+        if (!n.p3) continue;
+        const x = n.p3[0], y = n.p3[1], z = n.p3[2];
+        const x1 = x * cosY + z * sinY;
+        const z1 = -x * sinY + z * cosY;
+        const y1 = y * cosX - z1 * sinX;
+        const z2 = y * sinX + z1 * cosX;
+        n.__depth = z2;
+        n.x = cx0 + x1 * sphereR;
+        n.y = cy0 + y1 * sphereR;
+        const depthScale = 0.5 + (z2 + 1) / 2 * 0.7;
+        const rad = nodeRadius(n) * depthScale;
+        const opac = (isNodeVisible(n) ? 1 : 0.12) * (0.35 + (z2 + 1) / 2 * 0.65);
+        const c = circleEls[i];
+        if (c) {
+          c.setAttribute('cx', n.x); c.setAttribute('cy', n.y); c.setAttribute('r', rad);
+          c.style.opacity = opac;
+        }
+        const l = labelEls[i];
+        if (l) { l.setAttribute('x', n.x); l.setAttribute('y', n.y + rad + 11); }
+      }
+      return;
+    }
+
+    nodes.forEach(n => {
+      if (!n.p3) return;
+      const [x, y, z] = n.p3;
+      const x1 = x * cosY + z * sinY;
+      const z1 = -x * sinY + z * cosY;
+      const y1 = y * cosX - z1 * sinX;
+      const z2 = y * sinX + z1 * cosX;
+      n.__depth = z2;
+      n.x = cx0 + x1 * sphereR;
+      n.y = cy0 + y1 * sphereR;
+    });
+    linkSel
+      .attr('x1', d => d.source.x).attr('y1', d => d.source.y)
+      .attr('x2', d => d.target.x).attr('y2', d => d.target.y)
+      .style('opacity', d => (d.source.p3 && d.target.p3) ? (0.08 + (((d.source.__depth + d.target.__depth) / 2 + 1) / 2) * 0.3) : null);
+    nodeSel.select('.node-circle')
+      .attr('cx', d => d.x).attr('cy', d => d.y)
+      .attr('r', d => d.p3 ? nodeRadius(d) * (0.5 + (d.__depth + 1) / 2 * 0.7) : nodeRadius(d))
+      .style('opacity', d => d.p3 ? (isNodeVisible(d) ? 1 : 0.12) * (0.35 + (d.__depth + 1) / 2 * 0.65) : null);
+    labelSel.attr('x', d => d.x).attr('y', d => d.y + nodeRadius(d) * (d.p3 ? (0.5 + (d.__depth + 1) / 2 * 0.7) : 1) + 11);
+  }
+
+
+  const svg = d3.select('#graph').attr('viewBox', [0, 0, width, height]);
+  svg.selectAll('*').remove();
+  const zoomLayer = svg.append('g').attr('id', 'zoomLayer');
+
+  // 카테고리 앵커 라벨(은은하게)
+  zoomLayer.selectAll('.cat-anchor-label')
+    .data(categories).enter().append('text')
+    .attr('class', 'cat-anchor-label')
+    .attr('x', c => catAnchor[c].x)
+    .attr('y', c => catAnchor[c].y)
+    .text(c => c);
+
+  const linkG = zoomLayer.append('g').attr('id', 'linksLayer');
+  const nodeG = zoomLayer.append('g').attr('id', 'nodesLayer');
+
+  linkSel = linkG.selectAll('line').data(links).enter().append('line')
+    .attr('class', d => d.kind === 'satellite' ? 'link-satellite' : 'link-relation');
+
+  nodeSel = nodeG.selectAll('g').data(nodes).enter().append('g')
+    .attr('class', 'node-group')
+    .call(drag());
+
+  nodeSel.append('circle')
+    .attr('class', 'node-circle')
+    .attr('r', d => nodeRadius(d))
+    .attr('fill', d => d.type === 'satellite' ? SAT_COLOR : (CAT_COLORS[d.category] || '#8aa'))
+    .attr('stroke', d => d.type === 'star' ? (PRICE_STROKE[d.pricing] || '#888') : 'rgba(255,255,255,0.3)')
+    .attr('stroke-width', d => d.type === 'star' ? 2.5 : 1);
+
+  // 라벨은 노드 그룹의 자식으로 넣어서, 평소엔 숨겨두고 마우스를 올리거나
+  // 선택/연관 하이라이트됐을 때만 보이게 함 (731개가 한번에 다 뜨면 못 읽으니까)
+  labelSel = nodeSel.append('text')
+    .attr('class', 'node-label')
+    .text(d => d.name);
+
+  // 3D 회전 전용: D3 셀렉션 오버헤드 없이 매 프레임 빠르게 갱신하기 위해 원본 DOM을 캐싱
+  const circleEls = nodeSel.select('.node-circle').nodes();
+  const labelEls = labelSel.nodes();
+
+  nodeSel.on('click', (event, d) => {
+    if (event.defaultPrevented) return; // 드래그 후 클릭 무시
+    openDetail(d);
+  });
+  nodeSel.on('mouseenter', (event, d) => { hoveredId = d.id; refreshNodeVisuals(); });
+  nodeSel.on('mouseleave', () => { hoveredId = null; refreshNodeVisuals(); });
+
+  simulation = window.__sim = d3.forceSimulation(nodes)
+    .alphaDecay(0.09)   // 기본(0.0228)보다 훨씬 빠르게 식어서 731개 규모에서도 금방 안정화됨
+    .velocityDecay(0.5)
+    .force('link', d3.forceLink(links).id(d => d.id)
+      .distance(l => l.kind === 'satellite' ? 62 : 120)
+      .strength(l => l.kind === 'satellite' ? 1 : 0.08))
+    .force('charge', d3.forceManyBody().strength(d => d.type === 'satellite' ? -25 : -120).theta(0.9))
+    .force('collide', d3.forceCollide().radius(d => nodeRadius(d) + (d.type === 'satellite' ? 6 : 8)).iterations(1))
+    .force('x', d3.forceX(d => d.type === 'satellite' ? width / 2 : (catAnchor[d.category] ? catAnchor[d.category].x : width / 2)).strength(d => d.type === 'satellite' ? 0 : 0.15))
+    .force('y', d3.forceY(d => d.type === 'satellite' ? height / 2 : (catAnchor[d.category] ? catAnchor[d.category].y : height / 2)).strength(d => d.type === 'satellite' ? 0 : 0.15))
+    .on('tick', ticked)
+    .on('end', () => { if (window.fitToView) window.fitToView(); });
+  setTimeout(() => { if (window.fitToView) window.fitToView(); }, 900);
+
+  const PAD = 30;
+  function ticked() {
+    // 화면 밖으로 완전히 튕겨나가지 않도록 넉넉한 범위 안에서만 움직이게 고정
+    nodes.forEach(d => {
+      d.x = Math.max(PAD, Math.min(width - PAD, d.x));
+      d.y = Math.max(PAD, Math.min(height - PAD, d.y));
+    });
+    linkSel
+      .attr('x1', d => d.source.x).attr('y1', d => d.source.y)
+      .attr('x2', d => d.target.x).attr('y2', d => d.target.y);
+    nodeSel.select('circle').attr('cx', d => d.x).attr('cy', d => d.y);
+    labelSel.attr('x', d => d.x).attr('y', d => d.y + nodeRadius(d) + 11);
+  }
+
+  // 전체 노드가 한 화면에 들어오도록 자동으로 확대/축소 및 이동
+  window.fitToView = function() {
+    const xs = nodes.map(d => d.x), ys = nodes.map(d => d.y);
+    const minX = Math.min(...xs) - 40, maxX = Math.max(...xs) + 40;
+    const minY = Math.min(...ys) - 40, maxY = Math.max(...ys) + 40;
+    const w = maxX - minX, h = maxY - minY;
+    const scale = Math.max(0.35, Math.min(2.2, 0.92 / Math.max(w / width, h / height)));
+    const cx = minX + w / 2, cy = minY + h / 2;
+    const t = d3.zoomIdentity.translate(width / 2, height / 2).scale(scale).translate(-cx, -cy);
+    svg.transition().duration(500).call(zoomBehavior.transform, t);
+  };
+
+  // ---- 레이아웃 모드: 네트워크형(기본, 물리시뮬레이션) / 보드형(카테고리별 사각형 칸) / 궤도형(카테고리별 원형 배치) / 3D 구체형 ----
+  window.setLayoutMode = function(mode) {
+    zoomLayer.selectAll('.board-rect').remove();
+    zoomLayer.selectAll('.board-label').remove();
+
+    if (is3D && mode !== 'sphere3d') {
+      // 3D 모드에서 빠져나갈 때 3D 전용으로 바꿔둔 반지름/투명도/링크 스타일을 원상복구
+      is3D = false;
+      nodeSel.select('.node-circle').attr('r', d => nodeRadius(d)).style('opacity', null);
+      linkSel.style('opacity', null);
+      zoomLayer.selectAll('.cat-anchor-label').style('opacity', null);
+    }
+    if (currentLayout === 'board' && mode !== 'board') {
+      labelSel.style('opacity', null); // 보드형에서 강제로 켜뒀던 라벨을 다시 호버 제어로 되돌림
+    }
+    currentLayout = mode;
+
+    if (mode === 'network') {
+      nodes.forEach(n => { n.fx = null; n.fy = null; });
+      simulation.alpha(0.5).restart();
+    } else if (mode === 'board') {
+      simulation.stop();
+      layoutBoard();
+    } else if (mode === 'orbit') {
+      simulation.stop();
+      layoutOrbit();
+    } else if (mode === 'sphere3d') {
+      simulation.stop();
+      is3D = true;
+      zoomLayer.selectAll('.cat-anchor-label').style('opacity', 0);
+      render3D();
+      setTimeout(() => window.fitToView && window.fitToView(), 60);
+    }
+  };
+
+  function layoutBoard() {
+    const cols = 4;
+    const rows = Math.ceil(categories.length / cols);
+    const boardW = width / cols, boardH = height / rows;
+    const pad = 30, headerH = 42;
+    categories.forEach((c, i) => {
+      const col = i % cols, row = Math.floor(i / cols);
+      const bx = col * boardW, by = row * boardH;
+      const innerW = boardW - pad * 2, innerH = boardH - pad * 2 - headerH;
+      zoomLayer.insert('rect', '#linksLayer')
+        .attr('class', 'board-rect')
+        .attr('x', bx + pad).attr('y', by + pad + headerH)
+        .attr('width', innerW).attr('height', innerH)
+        .attr('rx', 12)
+        .attr('fill', 'rgba(255,255,255,0.03)')
+        .attr('stroke', CAT_COLORS[c] || '#888').attr('stroke-width', 1.3);
+      zoomLayer.append('text').attr('class', 'board-label')
+        .attr('x', bx + pad + 8).attr('y', by + pad + headerH - 14)
+        .text(c).attr('fill', CAT_COLORS[c] || '#ccc')
+        .attr('font-size', 22).attr('font-weight', 700);
+
+      const members = nodes.filter(n => n.category === c && n.type === 'star');
+      const mcols = Math.max(1, Math.ceil(Math.sqrt(members.length)));
+      const mrows = Math.max(1, Math.ceil(members.length / mcols));
+      const cellW = innerW / mcols, cellH = innerH / mrows;
+      members.forEach((n, idx) => {
+        const mc = idx % mcols, mr = Math.floor(idx / mcols);
+        n.x = n.fx = bx + pad + cellW * (mc + 0.5);
+        n.y = n.fy = by + pad + headerH + cellH * (mr + 0.5);
+        const sats = nodes.filter(s => s.type === 'satellite' && s.parent_id === n.id);
+        sats.forEach((s, si) => {
+          s.x = s.fx = n.x + 24;
+          s.y = s.fy = n.y - 12 * (sats.length - 1) / 2 + 12 * si;
+        });
+      });
+    });
+    ticked();
+    // 보드형에서는 호버 없이도 이름이 바로 보이게 (탐색/열람용 모드라서)
+    labelSel.style('opacity', d => isNodeVisible(d) ? 1 : 0);
+    setTimeout(() => window.fitToView && window.fitToView(), 60);
+  }
+
+  function layoutOrbit() {
+    categories.forEach((c) => {
+      const anchor = catAnchor[c];
+      const members = nodes.filter(n => n.category === c && n.type === 'star');
+      const orbitR = 60 + members.length * 8;
+      members.forEach((n, idx) => {
+        const angle = (idx / members.length) * 2 * Math.PI - Math.PI / 2;
+        n.x = n.fx = anchor.x + Math.cos(angle) * orbitR;
+        n.y = n.fy = anchor.y + Math.sin(angle) * orbitR;
+        const sats = nodes.filter(s => s.type === 'satellite' && s.parent_id === n.id);
+        sats.forEach((s, si) => {
+          const sAngle = angle + (si + 1) * 0.35;
+          s.x = s.fx = n.x + Math.cos(sAngle) * 30;
+          s.y = s.fy = n.y + Math.sin(sAngle) * 30;
+        });
+      });
+    });
+    ticked();
+    setTimeout(() => window.fitToView && window.fitToView(), 60);
+  }
+
+  function drag() {
+    function started(event, d) {
+      if (!event.active) simulation.alphaTarget(0.25).restart();
+      d.fx = d.x; d.fy = d.y;
+    }
+    function dragged(event, d) {
+      d.fx = event.x; d.fy = event.y;
+    }
+    function ended(event, d) {
+      if (!event.active) simulation.alphaTarget(0);
+      d.fx = null; d.fy = null;
+    }
+    // clickDistance: 이 정도(px) 이내의 미세한 움직임은 드래그로 치지 않고 클릭으로 인정
+    return d3.drag().clickDistance(8).on('start', started).on('drag', dragged).on('end', ended);
+  }
+
+  // 배경 드래그로 이동 + 휠 확대/축소 (노드 위에서는 동작 안 함, 3D 모드에서는 드래그를 회전에 양보)
+  const zoomBehavior = d3.zoom()
+    .scaleExtent([0.4, 3])
+    .filter(event => {
+      if (event.target.closest('.node-group')) return false;
+      if (is3D && event.type !== 'wheel') return false;
+      return !event.button;
+    })
+    .on('zoom', (event) => { zoomLayer.attr('transform', event.transform); })
+    .on('start', () => svg.classed('panning', true))
+    .on('end', () => svg.classed('panning', false));
+  svg.call(zoomBehavior);
+
+  // 3D 구체형 전용: 배경 드래그로 회전 (성능: requestAnimationFrame으로 묶어서 처리 +
+  // 드래그 중엔 링크 2000여개를 잠깐 숨겨서 매 프레임 부담을 줄임)
+  let dragging3D = false, last3DX = 0, last3DY = 0, pendingDx = 0, pendingDy = 0, rafScheduled = false;
+  svg.on('pointerdown.rot3d', (event) => {
+    if (!is3D || event.target.closest('.node-group')) return;
+    dragging3D = true; last3DX = event.clientX; last3DY = event.clientY;
+    svg.classed('panning', true);
+    linkG.style('display', 'none'); // 드래그 중엔 링크 숨김(제일 무거운 부분)
+  });
+  svg.on('pointermove.rot3d', (event) => {
+    if (!is3D || !dragging3D) return;
+    pendingDx += event.clientX - last3DX;
+    pendingDy += event.clientY - last3DY;
+    last3DX = event.clientX; last3DY = event.clientY;
+    if (!rafScheduled) {
+      rafScheduled = true;
+      requestAnimationFrame(() => {
+        rot3Y += pendingDx * 0.006;
+        rot3X = Math.max(-1.5, Math.min(1.5, rot3X - pendingDy * 0.006));
+        pendingDx = 0; pendingDy = 0;
+        render3D(true); // 드래그 중엔 링크 갱신 생략
+        rafScheduled = false;
+      });
+    }
+  });
+  window.addEventListener('pointerup', () => {
+    if (dragging3D && is3D) {
+      linkG.style('display', null);
+      render3D(); // 손 뗀 순간 링크까지 정확히 다시 그림
+    }
+    dragging3D = false;
+    if (is3D) svg.classed('panning', false);
+  });
+
+  applyFilters();
+});
+</script>
+</body>
+</html>
