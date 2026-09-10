@@ -1,0 +1,13 @@
+{
+  "name": "ai-galaxy",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "전세계 AI 관계형 지도 — 서버리스 정적 웹 (Supabase + 3d-force-graph)",
+  "scripts": {
+    "import": "node --env-file=.env import-data.mjs"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.0"
+  }
+}

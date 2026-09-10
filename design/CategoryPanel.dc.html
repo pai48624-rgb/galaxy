@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "Segoe UI", sans-serif; }
+    a { color: #a89bf0; text-decoration: none; }
+    a:hover { color: #cabdff; }
+    .row { display: flex; align-items: center; }
+    .tag { display: inline-flex; align-items: center; padding: 2px 8px; border-radius: 999px; font-size: 10px; font-weight: 800; letter-spacing: 0.5px; }
+    .card { border-radius: 16px; padding: 20px; }
+  </style>
+</helmet>
+
+<div style="width: 900px; height: 1180px; background: radial-gradient(ellipse at 50% 0%, #12121f 0%, #06060c 70%); color: #e8e8f0; padding: 26px; display: flex; flex-direction: column; gap: 22px;">
+
+  <div>
+    <div style="font-size: 19px; font-weight: 700;">"카테고리별 AI 서비스 전체 목록" — 지금 무엇이고, 어떻게 바꾸나</div>
+    <div style="font-size: 12.5px; color: #9a9ab0; margin-top: 5px;">= 현재 <b style="color:#c4c4d6;">templates/index.html</b> 의 <b style="color:#c4c4d6;">&lt;section id="ai-list"&gt;</b> 블록</div>
+  </div>
+
+  <!-- ===== BEFORE ===== -->
+  <div class="card" style="background: rgba(229,118,107,0.06); border: 1px solid rgba(229,118,107,0.35);">
+    <div class="row" style="gap: 9px; margin-bottom: 14px;">
+      <span class="tag" style="background: rgba(229,118,107,0.2); color: #e5766b;">지금</span>
+      <span style="font-size: 14px; font-weight: 700;">화면 전체 폭을 차지하는 생(raw) 목록</span>
+    </div>
+
+    <div style="border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 16px; background: rgba(10,10,18,0.6);">
+      <div style="font-size: 14px; font-weight: 600; margin-bottom: 10px;">카테고리별 AI 서비스 전체 목록 <span style="font-size: 11px; color: #8a8aa0;">(그래프와 별개로 731개 전부 표시)</span></div>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 14px; font-size: 11px; color: #b7b7c8; line-height: 1.7;">
+        <div><b style="color:#fff;">프런티어 연구소 (56)</b><br>Anthropic · OpenAI · Google DeepMind · Mistral · Cohere · DeepSeek · xAI …</div>
+        <div><b style="color:#fff;">파운데이션 모델 (60)</b><br>GPT-4o · Claude 3.7 · Gemini 2.0 · Llama 3 · Qwen · Command R …</div>
+        <div><b style="color:#fff;">코딩·개발 에이전트 (50)</b><br>Cursor · Claude Code · Copilot · Cline · Aider · Windsurf · Devin …</div>
+        <div><b style="color:#fff;">이미지 생성 (24)</b><br>Midjourney · DALL·E · Stable Diffusion · Flux · Ideogram …</div>
+        <div><b style="color:#fff;">에이전트 프레임워크 (36)</b><br>LangChain · LlamaIndex · CrewAI · AutoGPT · Semantic Kernel …</div>
+        <div style="color:#6a6a80;">… 31개 카테고리 · 731개 항목이 계속 세로로 이어짐 ↓↓↓</div>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 7px; margin-top: 14px; font-size: 12px;">
+      <div class="row" style="gap: 8px;"><span style="color:#e5766b;">●</span> 그래프 아래(또는 옆)에 <b>항상 펼쳐진 채</b> 전체 폭 차지 → 스크롤이 한없이 길어짐</div>
+      <div class="row" style="gap: 8px;"><span style="color:#e5766b;">●</span> 731개가 <b>필터링만 될 뿐 전부 나열</b> → 우주 배경 몰입이 깨짐</div>
+      <div class="row" style="gap: 8px;"><span style="color:#e5766b;">●</span> 항목 클릭 → <b>&lt;a href="/ai/123"&gt; 로 딴 페이지 이동(새로고침)</b> → 노드 클릭(드로어)과 동작이 따로 놂</div>
+    </div>
+
+    <div style="margin-top: 14px; font-size: 11.5px; color: #9a9ab0; border-top: 1px dashed rgba(255,255,255,0.14); padding-top: 12px; line-height: 1.6;">
+      <b style="color:#c4c4d6;">근데 왜 있냐?</b> — 중앙 은하계는 SVG 원(circle) 덩어리라 <b>구글 크롤러·스크린리더가 글자로 못 읽음.</b>
+      이 목록이 731개 이름·설명을 <b>진짜 텍스트</b>로 깔아줘서 검색 노출 + 접근성을 담당. 검색창·요금제 필터와도 연동됨.
+      → <b style="color:#8fd6c4;">기능은 필요하지만, 화면에 크게 보일 필요는 없다.</b>
+    </div>
+  </div>
+
+  <!-- ===== AFTER ===== -->
+  <div class="card" style="background: rgba(140,120,230,0.07); border: 1px solid rgba(140,120,230,0.4);">
+    <div class="row" style="gap: 9px; margin-bottom: 14px;">
+      <span class="tag" style="background: rgba(140,120,230,0.28); color: #cabdff;">개편</span>
+      <span style="font-size: 14px; font-weight: 700;">좌측 사이드바 아코디언 트리 + 숨겨진 SEO 목록</span>
+    </div>
+
+    <div class="row" style="gap: 18px; align-items: flex-start;">
+      <!-- mini sidebar -->
+      <div style="width: 270px; flex: none; border: 1px solid rgba(255,255,255,0.12); border-radius: 12px; background: rgba(10,10,18,0.7); padding: 12px;">
+        <div class="row" style="gap: 8px; padding: 8px 10px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.16); background: rgba(20,20,32,0.7); font-size: 11.5px; color: #8a8aa0; margin-bottom: 10px;">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#8a8aa0" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>AI 이름 검색…
+        </div>
+        <div class="row" style="justify-content: space-between; font-size: 11px; font-weight: 700; letter-spacing: 1px; color: #b9b9d8; margin-bottom: 8px;"><span>카테고리</span><span style="color:#cabdff;">31</span></div>
+
+        <div class="row" style="justify-content: space-between; padding: 7px 8px; font-size: 12px; color: #d4d4e2;"><span class="row" style="gap:6px;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#8a8aa0" stroke-width="2.5"><path d="M9 6l6 6-6 6"/></svg>프런티어 연구소</span><span style="color:#7a7a90;">56</span></div>
+        <div class="row" style="justify-content: space-between; padding: 7px 8px; font-size: 12px; color: #d4d4e2;"><span class="row" style="gap:6px;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#8a8aa0" stroke-width="2.5"><path d="M9 6l6 6-6 6"/></svg>파운데이션 모델</span><span style="color:#7a7a90;">60</span></div>
+
+        <div style="border-radius: 8px; background: rgba(140,120,230,0.14); border: 1px solid rgba(140,120,230,0.3); margin: 2px 0;">
+          <div class="row" style="justify-content: space-between; padding: 7px 8px; font-size: 12px; font-weight: 700; color: #fff;"><span class="row" style="gap:6px;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#cabdff" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>코딩·개발 에이전트</span><span style="color:#cabdff;">50</span></div>
+          <div style="padding: 2px 6px 8px 20px; display: flex; flex-direction: column; gap: 1px;">
+            <div class="row" style="gap: 6px; padding: 5px 6px; border-radius: 6px; font-size: 11.5px; background: rgba(255,255,255,0.07); color: #fff;"><span style="width:5px;height:5px;border-radius:50%;background:#ffd479;box-shadow:0 0 5px #ffd479;"></span>Cursor</div>
+            <div style="padding: 5px 6px; font-size: 11.5px; color: #c4c4d6;">Claude Code</div>
+            <div style="padding: 5px 6px; font-size: 11.5px; color: #c4c4d6;">GitHub Copilot</div>
+            <div style="padding: 5px 6px; font-size: 11px; color: #8fd6c4;">＋ 47개 더보기</div>
+          </div>
+        </div>
+        <div class="row" style="justify-content: space-between; padding: 7px 8px; font-size: 12px; color: #d4d4e2;"><span class="row" style="gap:6px;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#8a8aa0" stroke-width="2.5"><path d="M9 6l6 6-6 6"/></svg>이미지 생성</span><span style="color:#7a7a90;">24</span></div>
+      </div>
+
+      <!-- what a click does -->
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 12px;">
+        <div style="font-size: 12.5px; font-weight: 700; color: #cabdff;">역할 ① &nbsp;브라우저 = 필터</div>
+        <div style="font-size: 11.5px; color: #9a9ab0; line-height: 1.6;">카테고리 헤더 클릭 → 펼침/접힘 + 그 카테고리만 지도에 표시(다른 필터와 AND).</div>
+
+        <div style="font-size: 12.5px; font-weight: 700; color: #cabdff; margin-top: 6px;">역할 ② &nbsp;AI 이름 클릭 시 (페이지 이동 X)</div>
+        <div class="row" style="gap: 10px; align-items: flex-start;">
+          <span style="font-size: 18px; color: #8fd6c4;">↳</span>
+          <div style="font-size: 12px; color: #d6d6e4; line-height: 1.6;"><b style="color:#8fd6c4;">①</b> 중앙 은하계가 그 별로 <b>확대·이동(fly-to)</b> 하며 연관선 하이라이트</div>
+        </div>
+        <div class="row" style="gap: 10px; align-items: flex-start;">
+          <span style="font-size: 18px; color: #8fd6c4;">↳</span>
+          <div style="font-size: 12px; color: #d6d6e4; line-height: 1.6;"><b style="color:#8fd6c4;">②</b> 우측에서 <b>상세 드로어가 슥</b> 등장 (노드 클릭과 완전히 동일한 화면)</div>
+        </div>
+
+        <div style="margin-top: 8px; font-size: 11px; color: #9a9ab0; border: 1px dashed rgba(255,255,255,0.16); border-radius: 10px; padding: 11px; line-height: 1.6;">
+          <b style="color:#c4c4d6;">SEO·접근성은?</b><br>
+          731개 전체 텍스트 목록은 <b style="color:#c4c4d6;">&lt;div hidden aria-hidden="false"&gt;</b> 로 페이지 맨 아래에 그대로 둠.
+          사람 눈엔 안 보이지만 구글·스크린리더는 읽음 → <b style="color:#8fd6c4;">검색 노출 손해 0, 화면 잡음 제거.</b>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

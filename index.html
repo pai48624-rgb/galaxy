@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 성단 지도 — 전세계 AI 관계형 지도</title>
+<meta name="description" content="731개+ AI 서비스를 용도별 은하계로 탐색하세요. 함께 쓰면 좋은 조합, 비슷한 대안, 한 줄 리뷰까지 한 화면에서.">
+<meta property="og:title" content="AI 성단 지도">
+<meta property="og:description" content="전세계 AI 툴을 관계형 지도로 — 텍스트·이미지·코딩·에이전트">
+<meta property="og:type" content="website">
+<!-- 배포 후 실제 도메인으로 교체하세요 -->
+<link rel="canonical" href="https://YOUR_DOMAIN/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23a89bf0' d='M12 2l2.6 7.4L22 12l-7.4 2.6L12 22l-2.6-7.4L2 12l7.4-2.6z'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#05050b; --panel:rgba(12,12,20,.74); --line:rgba(255,255,255,.08);
+    --ink:#e8e8f0; --dim:#9a9ab0; --faint:#6b6b80;
+    --purple:#a89bf0; --purple2:#7f77dd; --teal:#8fd6c4; --amber:#f0b429; --red:#e5766b;
+    --font:-apple-system,BlinkMacSystemFont,"Malgun Gothic","Apple SD Gothic Neo","Segoe UI",sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%}
+  body{background:var(--bg);color:var(--ink);font-family:var(--font);overflow:hidden}
+  a{color:var(--purple);text-decoration:none}
+  a:hover{color:#cabdff}
+  button{font-family:inherit}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+  #app{display:flex;flex-direction:column;height:100%}
+
+  /* ---- top bar ---- */
+  #topbar{flex:none;height:54px;display:flex;align-items:center;justify-content:space-between;
+    padding:0 14px;border-bottom:1px solid var(--line);background:rgba(8,8,14,.6);position:relative;z-index:5}
+  .brand{display:flex;align-items:center;gap:9px;font-size:15px;font-weight:600;letter-spacing:.3px}
+  .brand small{color:var(--faint);font-weight:400;font-size:11px}
+  #menuBtn{display:none;background:none;border:1px solid var(--line);border-radius:8px;color:var(--ink);
+    width:34px;height:34px;font-size:16px;cursor:pointer;margin-right:8px}
+  .spons{display:flex;align-items:center;gap:9px}
+  .spons .lab{font-size:10px;color:var(--faint);letter-spacing:1px}
+  .spons-card{display:flex;align-items:center;gap:8px;padding:5px 11px;border:1px solid rgba(240,180,41,.38);
+    border-radius:11px;background:rgba(240,180,41,.07)}
+  .spons-card .lg{width:22px;height:22px;border-radius:6px;background:linear-gradient(135deg,#f0b429,#e0870b)}
+  .spons-card b{font-size:12px}
+  .spons-card span{font-size:10px;color:var(--dim)}
+  .tag{display:inline-flex;align-items:center;justify-content:center;padding:1px 6px;border-radius:999px;
+    font-size:9px;font-weight:800;background:rgba(240,180,41,.22);color:var(--amber)}
+
+  /* ---- body / 3 zones ---- */
+  #body{flex:1;display:flex;min-height:0}
+
+  #sidebar{width:288px;flex:none;border-right:1px solid var(--line);background:var(--panel);
+    overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:15px;z-index:4}
+  .field{display:flex;align-items:center;gap:8px;padding:9px 12px;border-radius:11px;
+    border:1px solid rgba(255,255,255,.16);background:rgba(20,20,32,.7)}
+  .field input{border:0;background:none;outline:0;color:var(--ink);font-size:13px;width:100%}
+  .field input::placeholder{color:#8a8aa0}
+  .s-head{display:flex;align-items:center;justify-content:space-between;font-size:11px;font-weight:700;
+    letter-spacing:1px;color:#b9b9d8}
+  .count-pill{padding:1px 8px;border-radius:999px;background:rgba(140,120,230,.25);color:#cabdff;font-size:10px;font-weight:700}
+
+  .cat{border-radius:8px}
+  .cat.active{background:rgba(140,120,230,.12);border:1px solid rgba(140,120,230,.28)}
+  .cat-h{width:100%;display:flex;align-items:center;gap:7px;padding:7px 8px;background:none;border:0;
+    color:#d4d4e2;font-size:12.5px;cursor:pointer;text-align:left}
+  .cat.active .cat-h{color:#fff;font-weight:700}
+  .cat-h .chev{transition:transform .18s;flex:none}
+  .cat.open .cat-h .chev{transform:rotate(90deg)}
+  .cat-name{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .cat-n{color:var(--faint);font-size:11px}
+  .cat.active .cat-n{color:#cabdff}
+  .cat-body{display:flex;flex-direction:column;padding:2px 4px 8px 20px;gap:1px}
+  .tool{display:flex;align-items:center;gap:7px;padding:5px 7px;border-radius:6px;background:none;border:0;
+    color:#c4c4d6;font-size:12px;cursor:pointer;text-align:left;width:100%}
+  .tool:hover{background:rgba(255,255,255,.06);color:#fff}
+  .dot{width:6px;height:6px;border-radius:50%;flex:none;background:#8a8aa0}
+  .dot.free{background:var(--teal)} .dot.freemium{background:var(--purple)} .dot.paid{background:var(--amber)}
+  .mini-ad{font-size:8px;font-weight:800;color:var(--amber);border:1px solid rgba(240,180,41,.4);border-radius:4px;padding:0 3px}
+
+  .checks{display:flex;flex-direction:column;gap:7px}
+  .checks label{display:flex;align-items:center;gap:8px;font-size:12.5px;color:#d4d4e2;cursor:pointer}
+  .checks input{accent-color:var(--purple2);width:15px;height:15px}
+
+  .s-foot{margin-top:auto;display:flex;flex-direction:column;gap:9px}
+  .note{font-size:10px;color:var(--faint);line-height:1.55;border:1px dashed rgba(255,255,255,.14);
+    border-radius:8px;padding:8px}
+  .s-foot .lnk{display:flex;align-items:center;gap:6px;font-size:12px;color:#8a8aa0;background:none;border:0;cursor:pointer;padding:0}
+
+  /* ---- center stage ---- */
+  #stage{flex:1;position:relative;min-width:0}
+  #graph{position:absolute;inset:0}
+  #hud{position:absolute;left:14px;top:12px;font-size:12px;font-weight:700;color:#cabdff;
+    background:rgba(10,10,20,.55);border:1px solid var(--line);border-radius:11px;padding:5px 11px}
+  #zoom{position:absolute;right:14px;bottom:64px;display:flex;flex-direction:column;gap:6px}
+  #zoom button{width:32px;height:32px;border-radius:9px;border:1px solid rgba(255,255,255,.18);
+    background:rgba(20,20,32,.72);color:#cfcfe0;font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+  #legend{position:absolute;left:50%;transform:translateX(-50%);bottom:14px;display:flex;gap:16px;
+    font-size:11px;color:var(--dim);background:rgba(10,10,20,.5);border-radius:999px;padding:6px 15px}
+  #legend span{display:inline-flex;align-items:center;gap:6px}
+  .lg-line{width:22px;height:0;border-top:2px solid var(--teal)}
+  .lg-line.alt{border-top:2px dashed var(--amber)}
+  .lg-dot{width:10px;height:10px;border-radius:50%;background:#ffd479;box-shadow:0 0 7px #ffd479}
+  #addBtn{position:absolute;left:14px;bottom:14px;padding:9px 14px;border-radius:11px;border:1px solid rgba(255,255,255,.18);
+    background:rgba(20,20,32,.72);color:var(--ink);font-size:12px;cursor:pointer}
+  #addBtn:hover{border-color:var(--purple)}
+
+  /* ---- right drawer (slides over the galaxy) ---- */
+  #drawer{position:absolute;top:0;right:0;bottom:0;width:min(384px,94vw);z-index:20;
+    background:rgba(9,9,16,.96);border-left:1px solid var(--line);backdrop-filter:blur(6px);
+    overflow-y:auto;padding:18px 18px 44px;transform:translateX(105%);transition:transform .28s ease}
+  #drawer.open{transform:none}
+  .d-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+  .d-name{font-size:18px;font-weight:700;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .badge{font-size:10px;font-weight:700;padding:2px 8px;border-radius:999px}
+  .badge.free{background:rgba(143,214,196,.18);color:var(--teal)}
+  .badge.freemium{background:rgba(168,155,240,.18);color:var(--purple)}
+  .badge.paid{background:rgba(240,180,41,.18);color:var(--amber)}
+  .badge.na{background:rgba(255,255,255,.08);color:var(--dim)}
+  .d-meta{font-size:11px;color:var(--dim);margin-top:4px}
+  .d-close{background:none;border:0;color:#8a8aa0;font-size:20px;cursor:pointer;line-height:1}
+  .d-desc{font-size:13px;color:#d6d6e4;line-height:1.6;margin:14px 0 12px}
+  .d-links{display:flex;gap:14px;font-size:12px;flex-wrap:wrap;margin-bottom:14px}
+  .d-cta{display:flex;align-items:center;justify-content:center;gap:8px;padding:12px;border-radius:11px;
+    background:linear-gradient(135deg,#f0b429,#e0870b);color:#221500;font-weight:800;font-size:13px;position:relative}
+  .d-cta .tag{position:absolute;right:10px;background:rgba(0,0,0,.22);color:#221500}
+  .d-sec{font-size:11px;font-weight:700;color:var(--teal);margin:18px 0 9px;display:flex;gap:6px;align-items:center}
+  .d-sec b{color:var(--faint);font-weight:700}
+  .chips{display:flex;flex-wrap:wrap;gap:6px}
+  .chip{padding:5px 10px;border-radius:12px;font-size:11.5px;border:1px solid rgba(255,255,255,.18);
+    color:#cfcfe0;background:rgba(255,255,255,.05);cursor:pointer}
+  .chip:hover{border-color:var(--purple);color:#fff}
+
+  .rv-form{display:flex;flex-direction:column;gap:8px;background:rgba(20,20,32,.5);border:1px solid var(--line);
+    border-radius:11px;padding:12px}
+  .stars{display:flex;gap:3px}
+  .star{background:none;border:0;font-size:20px;color:#5a5a70;cursor:pointer;line-height:1;padding:0}
+  .star.on{color:var(--amber)}
+  .rv-form textarea{width:100%;min-height:56px;resize:vertical;border:1px solid rgba(255,255,255,.16);
+    border-radius:9px;background:rgba(12,12,20,.7);color:var(--ink);font:inherit;font-size:12.5px;padding:9px}
+  .rv-form .row{display:flex;gap:8px;align-items:center}
+  .rv-form input[type=text]{flex:1;border:1px solid rgba(255,255,255,.16);border-radius:9px;
+    background:rgba(12,12,20,.7);color:var(--ink);font:inherit;font-size:12px;padding:8px 10px}
+  .rv-form button.send{padding:8px 18px;border-radius:9px;border:0;background:var(--purple2);color:#fff;
+    font-size:12.5px;font-weight:700;cursor:pointer}
+  .rv-form button.send:disabled{opacity:.5;cursor:default}
+  .rv-hint{font-size:10px;color:var(--faint)}
+  .rv{border-top:1px solid var(--line);padding:10px 0;font-size:12.5px;color:#d0d0de;line-height:1.55}
+  .rv-top{display:flex;justify-content:space-between;font-size:11px;color:var(--dim);margin-bottom:4px}
+  .rv-top .st{color:var(--amber);letter-spacing:1px}
+
+  /* ---- toast / dialog / overlays ---- */
+  #toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(16px);opacity:0;
+    background:#1a1a28;border:1px solid var(--line);border-radius:11px;padding:10px 18px;font-size:12.5px;
+    z-index:60;transition:.24s;pointer-events:none}
+  #toast.show{opacity:1;transform:translateX(-50%)}
+  dialog{border:1px solid var(--line);border-radius:16px;background:#0f0f1a;color:var(--ink);padding:0;
+    width:min(420px,92vw)}
+  dialog::backdrop{background:rgba(0,0,0,.6)}
+  .dlg-in{padding:20px;display:flex;flex-direction:column;gap:11px}
+  .dlg-in h3{margin:0;font-size:15px}
+  .dlg-in label{font-size:11px;color:var(--dim);display:flex;flex-direction:column;gap:4px}
+  .dlg-in input,.dlg-in textarea{border:1px solid rgba(255,255,255,.16);border-radius:9px;background:rgba(12,12,20,.7);
+    color:var(--ink);font:inherit;font-size:13px;padding:9px}
+  .dlg-in textarea{min-height:60px;resize:vertical}
+  .dlg-act{display:flex;justify-content:flex-end;gap:8px;margin-top:4px}
+  .dlg-act button{padding:9px 16px;border-radius:9px;border:0;font-size:12.5px;font-weight:700;cursor:pointer}
+  .dlg-act .ghost{background:rgba(255,255,255,.06);color:var(--dim)}
+  .dlg-act .go{background:var(--purple2);color:#fff}
+
+  .overlay{position:fixed;inset:0;z-index:80;background:rgba(5,5,11,.94);display:flex;align-items:center;
+    justify-content:center;padding:24px}
+  .overlay .box{max-width:520px;background:#0f0f1a;border:1px solid var(--line);border-radius:16px;padding:24px;line-height:1.6}
+  .overlay h2{margin:0 0 10px;font-size:17px}
+  .overlay code{background:rgba(255,255,255,.08);padding:2px 6px;border-radius:5px;font-size:12px}
+  .overlay pre{background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:9px;padding:12px;
+    overflow:auto;font-size:12px}
+
+  @media (max-width:900px){
+    #menuBtn{display:block}
+    #sidebar{position:absolute;inset:54px auto 0 0;height:calc(100% - 54px);transform:translateX(-105%);
+      transition:transform .25s ease;box-shadow:0 0 40px rgba(0,0,0,.5)}
+    #sidebar.open{transform:none}
+    #drawer{width:100%}
+    #legend{display:none}
+  }
+</style>
+</head>
+<body>
+<div id="app">
+  <header id="topbar">
+    <div style="display:flex;align-items:center">
+      <button id="menuBtn" aria-label="메뉴">☰</button>
+      <div class="brand">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#a89bf0" stroke-width="1.6"><path d="M12 2l2.2 6.6L21 11l-6.8 2.4L12 22l-2.2-8.6L3 11l6.8-2.4z"/></svg>
+        AI 성단 지도 <small>전세계 AI 관계형 지도</small>
+      </div>
+    </div>
+    <div class="spons" id="sponsSlot" hidden>
+      <span class="lab">오늘의 스폰서</span>
+      <a class="spons-card" id="sponsCard" href="#" target="_blank" rel="noopener">
+        <span class="lg"></span>
+        <span><b id="sponsName"></b><br><span id="sponsBlurb"></span></span>
+        <span class="tag">AD</span>
+      </a>
+    </div>
+  </header>
+
+  <div id="body">
+    <aside id="sidebar" aria-label="필터">
+      <div class="field">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#8a8aa0" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input id="search" type="search" placeholder="AI 이름 검색…" autocomplete="off">
+      </div>
+
+      <div>
+        <div class="s-head"><span>카테고리</span><span class="count-pill" id="catCount">–</span></div>
+        <div id="catTree" style="margin-top:8px"></div>
+      </div>
+
+      <div>
+        <div class="s-head" style="margin-bottom:9px"><span>요금제</span></div>
+        <div class="checks" id="priceChecks">
+          <label><input type="checkbox" value="무료" checked>무료</label>
+          <label><input type="checkbox" value="부분유료" checked>부분유료</label>
+          <label><input type="checkbox" value="유료" checked>유료</label>
+          <label><input type="checkbox" value="미지정" checked>미지정</label>
+        </div>
+      </div>
+
+      <div class="s-foot">
+        <div class="note">전체 텍스트 목록(<span id="seoN">–</span>개)은 화면에서 감추고 페이지 하단 DOM에 유지 → 검색·스크린리더 노출은 그대로.</div>
+        <button class="lnk" id="suggestOpen">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 5v14M5 12h14"/></svg>
+          빠진 AI 추천하기
+        </button>
+      </div>
+    </aside>
+
+    <main id="stage">
+      <div id="graph"></div>
+      <div id="hud">불러오는 중…</div>
+      <div id="zoom">
+        <button id="zIn" aria-label="확대">+</button>
+        <button id="zOut" aria-label="축소">−</button>
+        <button id="zFit" aria-label="전체 보기"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+      </div>
+      <div id="legend">
+        <span><span class="lg-line"></span>보완재 (함께 사용)</span>
+        <span><span class="lg-line alt"></span>대체재 (비슷한 대안)</span>
+        <span><span class="lg-dot"></span>스폰서</span>
+      </div>
+      <button id="addBtn">＋ 빠진 AI 추천</button>
+
+      <aside id="drawer" role="complementary" aria-label="AI 상세"></aside>
+    </main>
+  </div>
+</div>
+
+<div id="toast" role="status"></div>
+
+<dialog id="suggestDlg">
+  <form method="dialog" class="dlg-in" id="suggestForm">
+    <h3>빠진 AI 추천</h3>
+    <label>이름 *<input name="name" required maxlength="120" placeholder="예: Perplexity"></label>
+    <label>웹사이트<input name="url" type="url" placeholder="https://…"></label>
+    <label>카테고리<input name="category" list="catList" placeholder="예: 코딩·개발 에이전트"></label>
+    <label>한 줄 소개<textarea name="note" maxlength="2000" placeholder="어떤 AI인가요? 어디에 쓰나요?"></textarea></label>
+    <label>연락처(선택)<input name="contact" maxlength="120" placeholder="반영되면 알려드릴 이메일/트위터"></label>
+    <datalist id="catList"></datalist>
+    <div class="dlg-act">
+      <button type="button" class="ghost" id="suggestCancel">취소</button>
+      <button type="submit" class="go">제보하기</button>
+    </div>
+  </form>
+</dialog>
+
+<div class="overlay" id="setup" hidden>
+  <div class="box">
+    <h2>⚙️ Supabase 연결 설정이 필요해요</h2>
+    <p><code>index.html</code> 상단 <code>CONFIG</code> 에서 두 값을 채우세요:</p>
+    <pre>const CONFIG = {
+  SUPABASE_URL: "https://<b>여기에-프로젝트-ref</b>.supabase.co",
+  SUPABASE_ANON_KEY: "<b>여기에-publishable(anon) 키</b>",
+};</pre>
+    <p>값은 Supabase 대시보드 ▸ <b>Project Settings ▸ API</b> 에 있습니다.
+    그다음 <code>supabase_schema.sql</code> 실행 → <code>npm install &amp;&amp; npm run import</code> 순서로 진행하세요.</p>
+  </div>
+</div>
+
+<div class="overlay" id="fatal" hidden><div class="box">
+  <h2>😵 불러오기 실패</h2><p id="fatalMsg"></p>
+</div></div>
+
+<section id="seoList" class="sr-only" aria-label="전세계 AI 서비스 전체 목록"></section>
+
+<script type="module">
+/* ==========================================================================
+   설정 — 이 두 줄만 본인 프로젝트 값으로 바꾸면 됩니다.
+   ANON(=publishable) 키는 브라우저에 노출돼도 안전합니다. RLS 가 보호합니다.
+   ========================================================================== */
+const CONFIG = {
+  SUPABASE_URL: "https://YOUR_PROJECT_REF.supabase.co",
+  SUPABASE_ANON_KEY: "sb_publishable_MtDGFqdSWe09vUFTTDR3RWhzRWRVbXo3TzVCM21lYmI0OFd3PT0=",
+};
+const AFFILIATE_PARAM = "ref";
+const AFFILIATE_VALUE = "ai-galaxy";
+
+/* ---- 라이브러리 (정적 CDN, 번들 불필요) ---- */
+import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";
+import ForceGraph3D from "https://cdn.jsdelivr.net/npm/3d-force-graph@1/+esm";
+import SpriteText from "https://cdn.jsdelivr.net/npm/three-spritetext@1/+esm";
+import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.160/+esm";
+
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
+const priceClass = p => p === "무료" ? "free" : p === "유료" ? "paid" : p === "부분유료" ? "freemium" : "na";
+const toast = (msg) => { const t = $("#toast"); t.textContent = msg; t.classList.add("show"); clearTimeout(toast._t); toast._t = setTimeout(() => t.classList.remove("show"), 2600); };
+function timeago(iso){
+  const s = (Date.now() - new Date(iso).getTime()) / 1000;
+  if (s < 60) return "방금"; if (s < 3600) return Math.floor(s/60) + "분 전";
+  if (s < 86400) return Math.floor(s/3600) + "시간 전"; if (s < 2592000) return Math.floor(s/86400) + "일 전";
+  return new Date(iso).toLocaleDateString("ko-KR");
+}
+function affiliate(url){
+  if (!url) return "#";
+  try { const u = new URL(url); u.searchParams.set(AFFILIATE_PARAM, AFFILIATE_VALUE); return u.toString(); }
+  catch { return url; }
+}
+const catColor = (() => { const c = {}; return s => c[s] || (c[s] = `hsl(${[...String(s)].reduce((h,ch)=>(h*31+ch.charCodeAt(0))>>>0,0)%360} 60% 68%)`); })();
+
+/* ---- 설정 안 됨 → 안내 오버레이 ---- */
+if (!/^https:\/\/[a-z0-9-]+\.supabase\.co/i.test(CONFIG.SUPABASE_URL)) {
+  $("#setup").hidden = false;
+  throw new Error("Supabase not configured");
+}
+const sb = createClient(CONFIG.SUPABASE_URL, CONFIG.SUPABASE_ANON_KEY, { auth: { persistSession: false } });
+
+/* ---- 데이터 로드 (범위 페이지네이션) ---- */
+async function selectAll(table, cols){
+  const out = [], size = 1000;
+  for (let from = 0; ; from += size){
+    const { data, error } = await sb.from(table).select(cols).order("id", { ascending: true }).range(from, from + size - 1);
+    if (error) throw error;
+    out.push(...data);
+    if (data.length < size) break;
+  }
+  return out;
+}
+
+let nodes = [], links = [], nodeById = new Map(), cats = [];
+const state = { cats: new Set(), price: new Set(["무료","부분유료","유료","미지정"]), q: "" };
+let Graph, SHOW_LABELS = false;
+
+const linkEnds = l => [typeof l.source === "object" ? l.source.id : l.source,
+                       typeof l.target === "object" ? l.target.id : l.target];
+
+boot();
+
+async function boot(){
+  try {
+    const [tools, rels, sponsors] = await Promise.all([
+      selectAll("ai_tools", "id,slug,name,name_en,category,subcategory,url,github,twitter,description,pricing,rank"),
+      selectAll("relations", "source_id,target_id,kind,label"),
+      sb.from("active_sponsors").select("ai_id,tier,blurb,link,name").then(r => r.data || []).catch(() => []),
+    ]);
+    if (!tools.length) throw new Error("ai_tools 가 비어 있습니다. supabase_schema.sql 실행 후 npm run import 를 돌리세요.");
+
+    const spo = new Map(sponsors.map(s => [s.ai_id, s]));
+    nodes = tools.map(t => ({ ...t, id: t.id, sponsor: spo.get(t.id) || null, deg: 0 }));
+    nodeById = new Map(nodes.map(n => [n.id, n]));
+
+    links = rels
+      .filter(r => nodeById.has(r.source_id) && nodeById.has(r.target_id))
+      .map(r => ({ source: r.source_id, target: r.target_id, kind: r.kind, label: r.label }));
+    for (const l of links){ nodeById.get(l.source).deg++; nodeById.get(l.target).deg++; }
+
+    cats = [...new Set(nodes.map(n => n.category))]
+      .map(c => ({ c, n: nodes.filter(x => x.category === c).length }))
+      .sort((a,b) => b.n - a.n);
+
+    initGraph();
+    buildSidebar();
+    buildSeoList();
+    buildSponsorSlot(sponsors);
+    refresh();
+  } catch (e){
+    console.error(e);
+    $("#fatal").hidden = false;
+    $("#fatalMsg").textContent = e.message || String(e);
+  }
+}
+
+/* ---- 3D 은하계 ---- */
+function makeGlowTexture(){
+  const s = 128, cv = document.createElement("canvas"); cv.width = cv.height = s;
+  const g = cv.getContext("2d").createRadialGradient(s/2, s/2, 0, s/2, s/2, s/2);
+  g.addColorStop(0, "rgba(255,221,140,.95)"); g.addColorStop(.4, "rgba(255,200,90,.35)"); g.addColorStop(1, "rgba(255,200,90,0)");
+  const ctx = cv.getContext("2d"); ctx.fillStyle = g; ctx.fillRect(0,0,s,s);
+  return new THREE.CanvasTexture(cv);
+}
+const GLOW = new THREE.SpriteMaterial({ map: makeGlowTexture(), blending: THREE.AdditiveBlending, depthWrite: false, transparent: true });
+
+function nodeObject(n){
+  const g = new THREE.Group();
+  if (n.sponsor){
+    try {
+      const halo = new THREE.Sprite(GLOW.clone());
+      halo.scale.setScalar(48);
+      g.add(halo);
+    } catch (e){ /* glow optional */ }
+  }
+  if (n.sponsor || SHOW_LABELS){
+    const t = new SpriteText(n.name);
+    t.textHeight = n.sponsor ? 8 : 4.5;
+    t.color = n.sponsor ? "#ffe6ad" : "#d7dbf0";
+    t.fontFace = "system-ui, sans-serif";
+    t.material.depthWrite = false;
+    t.position.y = n.sponsor ? 15 : 7;
+    g.add(t);
+  }
+  return g.children.length ? g : null;
+}
+
+function initGraph(){
+  Graph = ForceGraph3D()($("#graph"))
+    .backgroundColor("#05050b")
+    .showNavInfo(false)
+    .nodeId("id")
+    .nodeLabel(n => `${esc(n.name)}${n.sponsor ? " · 스폰서" : ""}`)
+    .nodeVal(n => n.sponsor ? 34 : 3 + Math.min(n.deg, 10))
+    .nodeColor(n => n.sponsor ? "#ffd479" : catColor(n.category))
+    .nodeOpacity(0.92)
+    .nodeThreeObjectExtend(true)
+    .nodeThreeObject(nodeObject)
+    .linkColor(l => l.kind === "alternative" ? "rgba(240,180,41,.28)" : "rgba(120,210,180,.42)")
+    .linkWidth(l => l.kind === "alternative" ? 0.4 : 0.9)
+    .linkDirectionalParticleWidth(1.6)
+    .linkDirectionalParticleSpeed(0.006)
+    .onNodeClick(n => { openDrawer(n); focusNode(n.id); })
+    .onBackgroundClick(closeDrawer);
+
+  Graph.d3Force("charge").strength(-70);
+  Graph.cameraPosition({ z: 780 });
+
+  // 배경 별 (실패해도 지도는 그대로 동작)
+  try {
+    const N = 1400, pos = new Float32Array(N * 3);
+    for (let i = 0; i < N * 3; i++) pos[i] = (Math.random() - 0.5) * 4200;
+    const geo = new THREE.BufferGeometry();
+    geo.setAttribute("position", new THREE.BufferAttribute(pos, 3));
+    Graph.scene().add(new THREE.Points(geo, new THREE.PointsMaterial({ color: 0x9aa0c0, size: 1.6, sizeAttenuation: true, transparent: true, opacity: 0.7 })));
+  } catch (e){ console.warn("starfield skipped", e); }
+}
+
+function focusNode(id){
+  const n = nodeById.get(id);
+  if (!n || n.x == null) return;
+  const d = 90, r = 1 + d / Math.hypot(n.x, n.y, n.z || 1);
+  Graph.cameraPosition({ x: n.x * r, y: n.y * r, z: (n.z || 0) * r }, n, 1200);
+}
+
+/* ---- 필터 ---- */
+function passes(n){
+  if (state.cats.size && !state.cats.has(n.category)) return false;
+  if (!state.price.has(n.pricing || "미지정")) return false;
+  if (state.q){
+    const q = state.q.toLowerCase();
+    if (!(String(n.name).toLowerCase().includes(q) || String(n.name_en || "").toLowerCase().includes(q))) return false;
+  }
+  return true;
+}
+function refresh(){
+  const vis = nodes.filter(passes);
+  const ids = new Set(vis.map(n => n.id));
+  const vlinks = links.filter(l => { const [a,b] = linkEnds(l); return ids.has(a) && ids.has(b); });
+
+  const wantLabels = vis.length <= 160;
+  if (wantLabels !== SHOW_LABELS){ SHOW_LABELS = wantLabels; Graph.nodeThreeObject(nodeObject).refresh(); }
+  Graph.linkDirectionalParticles(vis.length <= 160 ? (l => l.kind === "complement" ? 2 : 0) : 0);
+  Graph.graphData({ nodes: vis, links: vlinks });
+
+  $("#hud").textContent = `${vis.length} / ${nodes.length} AI 표시중`;
+  document.querySelectorAll("#seoList .seo-cat").forEach(el => {
+    el.hidden = state.cats.size ? !state.cats.has(el.dataset.cat) : false;
+  });
+}
+
+/* ---- 좌측 사이드바 ---- */
+function buildSidebar(){
+  $("#catCount").textContent = cats.length;
+  $("#seoN").textContent = nodes.length;
+  $("#catList").innerHTML = cats.map(c => `<option value="${esc(c.c)}">`).join("");
+
+  $("#catTree").innerHTML = cats.map(c => `
+    <div class="cat" data-cat="${esc(c.c)}">
+      <button class="cat-h" type="button">
+        <svg class="chev" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M9 6l6 6-6 6"/></svg>
+        <span class="cat-name">${esc(c.c)}</span><span class="cat-n">${c.n}</span>
+      </button>
+      <div class="cat-body" hidden></div>
+    </div>`).join("");
+
+  $("#catTree").addEventListener("click", e => {
+    const h = e.target.closest(".cat-h"); if (!h) return;
+    const wrap = h.parentElement, c = wrap.dataset.cat, body = wrap.querySelector(".cat-body");
+    const on = !state.cats.has(c);
+    on ? state.cats.add(c) : state.cats.delete(c);
+    wrap.classList.toggle("active", on);
+    wrap.classList.toggle("open", on);
+    body.hidden = !on;
+    if (on && !body.dataset.filled){
+      const items = nodes.filter(n => n.category === c).sort((a,b) => a.name.localeCompare(b.name, "ko"));
+      body.innerHTML = items.map(n => `<button class="tool" type="button" data-go="${n.id}"><span class="dot ${priceClass(n.pricing)}"></span>${esc(n.name)}${n.sponsor ? ' <span class="mini-ad">AD</span>' : ""}</button>`).join("");
+      body.dataset.filled = "1";
+    }
+    refresh();
+  });
+
+  $("#catTree").addEventListener("click", e => {
+    const t = e.target.closest(".tool"); if (!t) return;
+    const n = nodeById.get(+t.dataset.go); if (!n) return;
+    if (innerWidth <= 900) $("#sidebar").classList.remove("open");
+    focusNode(n.id); openDrawer(n);
+  });
+
+  $("#priceChecks").addEventListener("change", () => {
+    state.price = new Set([...document.querySelectorAll("#priceChecks input:checked")].map(i => i.value));
+    refresh();
+  });
+
+  let dt;
+  $("#search").addEventListener("input", e => { clearTimeout(dt); dt = setTimeout(() => { state.q = e.target.value.trim(); refresh(); }, 180); });
+
+  $("#menuBtn").addEventListener("click", () => $("#sidebar").classList.toggle("open"));
+  $("#zIn").addEventListener("click", () => zoomBy(0.75));
+  $("#zOut").addEventListener("click", () => zoomBy(1.33));
+  $("#zFit").addEventListener("click", () => Graph.zoomToFit(600, 40));
+
+  $("#suggestOpen").addEventListener("click", openSuggest);
+  $("#addBtn").addEventListener("click", openSuggest);
+  $("#suggestCancel").addEventListener("click", () => $("#suggestDlg").close());
+  $("#suggestForm").addEventListener("submit", submitSuggest);
+}
+function zoomBy(k){
+  const p = Graph.cameraPosition();
+  Graph.cameraPosition({ x: p.x * k, y: p.y * k, z: p.z * k }, undefined, 300);
+}
+
+/* ---- 우측 드로어 ---- */
+function neighbors(id){
+  const seen = new Set(), out = [];
+  for (const l of links){
+    const [a,b] = linkEnds(l);
+    const other = a === id ? b : b === id ? a : null;
+    if (other == null || seen.has(other)) continue;
+    seen.add(other);
+    const nn = nodeById.get(other);
+    if (nn) out.push({ n: nn, kind: l.kind });
+  }
+  return out.sort((x,y) => y.n.deg - x.n.deg).slice(0, 10);
+}
+
+let curNode = null, formRating = 0, sending = false;
+
+async function openDrawer(n){
+  curNode = n; formRating = 0;
+  $("#drawer").classList.add("open");
+  $("#drawer").innerHTML = drawerHTML(n, null);
+  wireDrawer(n);
+  const { data, error } = await sb.from("reviews")
+    .select("rating,body,author_name,created_at").eq("ai_id", n.id)
+    .order("created_at", { ascending: false }).limit(50);
+  if (curNode !== n) return;
+  $("#drawer").innerHTML = drawerHTML(n, error ? [] : (data || []));
+  wireDrawer(n);
+}
+function closeDrawer(){ curNode = null; $("#drawer").classList.remove("open"); }
+
+function drawerHTML(n, reviews){
+  const nb = neighbors(n.id);
+  const link = n.sponsor?.link || n.url;
+  const rv = reviews == null
+    ? `<div class="rv-hint">리뷰 불러오는 중…</div>`
+    : reviews.length
+      ? reviews.map(r => `<div class="rv"><div class="rv-top"><span class="st">${"★".repeat(r.rating)}${"☆".repeat(5 - r.rating)}</span><span>${esc(r.author_name)} · ${timeago(r.created_at)}</span></div>${esc(r.body)}</div>`).join("")
+      : `<div class="rv-hint">아직 리뷰가 없어요. 첫 리뷰를 남겨보세요.</div>`;
+
+  return `
+    <div class="d-head">
+      <div>
+        <div class="d-name">${esc(n.name)}<span class="badge ${priceClass(n.pricing)}">${esc(n.pricing || "미지정")}</span>${n.sponsor ? '<span class="tag">스폰서</span>' : ""}</div>
+        <div class="d-meta">${esc(n.category)}${n.subcategory ? " · " + esc(n.subcategory) : ""}</div>
+      </div>
+      <button class="d-close" aria-label="닫기">×</button>
+    </div>
+    <p class="d-desc">${esc(n.description || "설명이 아직 없어요. 아래에 한 줄 남겨주시면 큰 도움이 됩니다.")}</p>
+    <div class="d-links">
+      ${n.url ? `<a href="${esc(n.url)}" target="_blank" rel="noopener">공식 사이트 ↗</a>` : ""}
+      ${n.github ? `<a href="${esc(n.github)}" target="_blank" rel="noopener">GitHub ↗</a>` : ""}
+      ${n.twitter ? `<a href="${esc(n.twitter)}" target="_blank" rel="noopener">X ↗</a>` : ""}
+    </div>
+    ${link ? `<a class="d-cta" href="${esc(affiliate(link))}" target="_blank" rel="noopener sponsored">${esc(n.name)} 바로가기 →<span class="tag">${n.sponsor ? "스폰서" : "제휴"}</span></a>` : ""}
+
+    ${nb.length ? `<div class="d-sec">함께 쓰면 좋은 · 비슷한 AI</div><div class="chips">${nb.map(x => `<button class="chip" data-go="${x.n.id}">${esc(x.n.name)}</button>`).join("")}</div>` : ""}
+
+    <div class="d-sec">한 줄 리뷰 <b>${reviews ? reviews.length : ""}</b></div>
+    <form class="rv-form" id="rvForm">
+      <div class="stars" id="rvStars">${[1,2,3,4,5].map(v => `<button type="button" class="star" data-v="${v}">★</button>`).join("")}</div>
+      <textarea id="rvBody" maxlength="2000" placeholder="예: 리팩토링할 때 코드베이스 전체를 참고해줘서 편해요"></textarea>
+      <div class="row">
+        <input type="text" id="rvAuthor" maxlength="40" placeholder="닉네임 (선택)">
+        <button type="submit" class="send" id="rvSend">등록</button>
+      </div>
+      <div class="rv-hint">등록 즉시 지도에 반영됩니다 · Supabase insert → select</div>
+    </form>
+    <div id="rvList">${rv}</div>`;
+}
+
+function wireDrawer(n){
+  const d = $("#drawer");
+  d.querySelector(".d-close")?.addEventListener("click", closeDrawer);
+  d.querySelectorAll("[data-go]").forEach(b => b.addEventListener("click", () => {
+    const nn = nodeById.get(+b.dataset.go); if (nn){ focusNode(nn.id); openDrawer(nn); }
+  }));
+  const stars = d.querySelector("#rvStars");
+  stars?.addEventListener("click", e => {
+    const b = e.target.closest(".star"); if (!b) return;
+    formRating = +b.dataset.v;
+    stars.querySelectorAll(".star").forEach((s,i) => s.classList.toggle("on", i < formRating));
+  });
+  d.querySelector("#rvForm")?.addEventListener("submit", e => { e.preventDefault(); submitReview(n); });
+}
+
+async function submitReview(n){
+  if (sending) return;
+  const body = $("#rvBody").value.trim();
+  const author = ($("#rvAuthor").value.trim() || "익명").slice(0, 40);
+  if (!formRating) return toast("별점을 선택해 주세요");
+  if (body.length < 2) return toast("두 글자 이상 입력해 주세요");
+
+  sending = true; $("#rvSend").disabled = true;
+  const { error } = await sb.from("reviews").insert({ ai_id: n.id, rating: formRating, body, author_name: author });
+  sending = false;
+
+  if (error){ toast("등록 실패: " + error.message); $("#rvSend").disabled = false; return; }
+  toast("리뷰가 등록됐어요 — 바로 반영됩니다");
+  if (curNode === n) openDrawer(n);
+}
+
+/* ---- 빠진 AI 추천 ---- */
+function openSuggest(){ $("#suggestDlg").showModal(); }
+async function submitSuggest(e){
+  e.preventDefault();
+  const f = e.target, fd = new FormData(f);
+  const name = String(fd.get("name") || "").trim();
+  if (name.length < 1) return;
+  const row = {
+    name,
+    url: String(fd.get("url") || "").trim() || null,
+    category: String(fd.get("category") || "").trim() || null,
+    note: String(fd.get("note") || "").trim() || null,
+    contact: String(fd.get("contact") || "").trim() || null,
+  };
+  const { error } = await sb.from("suggestions").insert(row);
+  $("#suggestDlg").close();
+  toast(error ? "제보 실패: " + error.message : "제보 감사합니다! 검토 후 지도에 추가할게요");
+  if (!error) f.reset();
+}
+
+/* ---- 상단 스폰서 슬롯 ---- */
+function buildSponsorSlot(sponsors){
+  if (!sponsors.length) return;
+  const s = sponsors[0];
+  $("#sponsName").textContent = s.name;
+  $("#sponsBlurb").textContent = s.blurb || "";
+  $("#sponsCard").href = affiliate(s.link || (nodeById.get(s.ai_id)?.url) || "#");
+  $("#sponsSlot").hidden = false;
+  $("#sponsCard").addEventListener("click", () => {
+    const n = nodeById.get(s.ai_id); if (n){ focusNode(n.id); openDrawer(n); }
+  });
+}
+
+/* ---- SEO / 스크린리더용 텍스트 목록 (화면엔 안 보이지만 DOM 유지) ---- */
+function buildSeoList(){
+  $("#seoList").innerHTML = cats.map(({ c }) => {
+    const items = nodes.filter(n => n.category === c).sort((a,b) => a.name.localeCompare(b.name, "ko"));
+    return `<div class="seo-cat" data-cat="${esc(c)}"><h2>${esc(c)} (${items.length})</h2><ul>${
+      items.map(n => `<li><a href="${esc(n.url || "#")}">${esc(n.name)}</a>${n.name_en && n.name_en !== n.name ? " (" + esc(n.name_en) + ")" : ""}${n.description ? " — " + esc(n.description) : ""}</li>`).join("")
+    }</ul></div>`;
+  }).join("");
+}
+</script>
+</body>
+</html>

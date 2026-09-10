@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "Segoe UI", sans-serif; }
+    a { color: #a89bf0; text-decoration: none; }
+    a:hover { color: #cabdff; }
+    .row { display: flex; align-items: center; }
+    .pill { display: inline-flex; align-items: center; justify-content: center; padding: 2px 8px; border-radius: 999px; font-size: 10px; font-weight: 800; }
+    .nlabel { fill: #f2f2fa; font-size: 12px; font-weight: 600; text-anchor: middle; paint-order: stroke; stroke: rgba(5,5,10,0.8); stroke-width: 3px; }
+  </style>
+</helmet>
+
+<div style="width: 1040px; height: 720px; background: radial-gradient(ellipse at 50% 0%, #14121f 0%, #06060c 70%); color: #e8e8f0; padding: 26px; display: flex; flex-direction: column; gap: 18px;">
+
+  <div style="font-size: 18px; font-weight: 700;">배너 없는 수익화 — 우주 미관을 해치지 않는 3개 지점</div>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px; flex: 1;">
+
+    <!-- 1 sponsor slot -->
+    <div style="border: 1px solid rgba(240,180,41,0.35); border-radius: 16px; background: rgba(240,180,41,0.05); padding: 18px; display: flex; flex-direction: column; gap: 12px;">
+      <div class="row" style="gap: 8px;"><span class="pill" style="background: rgba(240,180,41,0.22); color: #f0b429;">1</span><span style="font-size: 14px; font-weight: 700;">상단 스폰서 슬롯</span></div>
+      <div style="border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; background: rgba(8,8,14,0.7); padding: 10px 12px;">
+        <div class="row" style="justify-content: space-between;">
+          <span class="row" style="gap: 8px; font-size: 13px; font-weight: 600;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#a89bf0" stroke-width="1.6"><path d="M12 2l2.2 6.6L21 11l-6.8 2.4L12 22l-2.2-8.6L3 11l6.8-2.4z"/></svg>AI 성단 지도</span>
+          <span class="row" style="gap: 7px; padding: 5px 10px; border: 1px solid rgba(240,180,41,0.4); border-radius: 10px; background: rgba(240,180,41,0.08);">
+            <span style="width: 18px; height: 18px; border-radius: 5px; background: linear-gradient(135deg,#f0b429,#e0870b);"></span>
+            <span style="line-height: 1.2;"><span style="font-size: 11px; font-weight: 700; display: block;">Perplexity</span><span style="font-size: 9px; color: #9a9ab0;">답을 아는 검색</span></span>
+            <span class="pill" style="background: rgba(240,180,41,0.22); color: #f0b429;">AD</span>
+          </span>
+        </div>
+      </div>
+      <div style="font-size: 11.5px; color: #9a9ab0; line-height: 1.6;">우상단 <b style="color:#c4c4d6;">로고 + 한 줄</b> 카드 하나. 배너 아님. "오늘의 추천 스폰서 AI" 라벨로 광고임을 명시 → 신뢰 유지.</div>
+    </div>
+
+    <!-- 2 glowing node -->
+    <div style="border: 1px solid rgba(255,212,121,0.35); border-radius: 16px; background: rgba(255,212,121,0.05); padding: 18px; display: flex; flex-direction: column; gap: 12px;">
+      <div class="row" style="gap: 8px;"><span class="pill" style="background: rgba(255,212,121,0.22); color: #ffd479;">2</span><span style="font-size: 14px; font-weight: 700;">지도 위 스폰서 노드 하이라이트</span></div>
+      <svg width="100%" height="150" viewBox="0 0 400 150">
+        <defs><filter id="g2" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="6"/></filter></defs>
+        <line x1="120" y1="80" x2="230" y2="70" stroke="#6fcaa8" stroke-width="1.6" opacity="0.5"/>
+        <line x1="230" y1="70" x2="320" y2="95" stroke="#f0b429" stroke-width="1.4" stroke-dasharray="5 4" opacity="0.45"/>
+        <circle cx="120" cy="80" r="12" fill="#8ea6ff"/><text class="nlabel" x="120" y="110">Copilot</text>
+        <circle cx="320" cy="95" r="11" fill="#c99bf0"/><text class="nlabel" x="320" y="123">Cline</text>
+        <circle cx="230" cy="70" r="24" fill="#ffd479" filter="url(#g2)" opacity="0.9"/>
+        <circle cx="230" cy="70" r="24" fill="#ffd479"/><circle cx="230" cy="70" r="24" fill="none" stroke="#fff" stroke-opacity="0.7"/>
+        <text x="230" y="74" text-anchor="middle" font-size="9" font-weight="800" fill="#5a3d00">AD</text>
+        <text class="nlabel" x="230" y="112" style="font-size:13px;">Cursor</text>
+      </svg>
+      <div style="font-size: 11.5px; color: #9a9ab0; line-height: 1.6;">광고비 낸 AI 별은 <b style="color:#ffd479;">크기 2배 + Glow(반짝임)</b>. 사이드바 목록·검색 결과에서도 상단 고정 + 작은 AD 태그.</div>
+    </div>
+
+    <!-- 3 affiliate -->
+    <div style="grid-column: 1 / -1; border: 1px solid rgba(140,120,230,0.35); border-radius: 16px; background: rgba(140,120,230,0.06); padding: 18px; display: flex; align-items: center; gap: 20px;">
+      <div class="row" style="gap: 8px; flex: none;"><span class="pill" style="background: rgba(140,120,230,0.28); color: #cabdff;">3</span><span style="font-size: 14px; font-weight: 700;">제휴(Affiliate) 링크</span></div>
+      <div style="flex: none; padding: 10px 16px; border-radius: 10px; background: linear-gradient(135deg,#f0b429,#e0870b); color: #221500; font-weight: 800; font-size: 12.5px;">바로가기 → <span style="font-size: 9px; opacity: 0.7;">제휴</span></div>
+      <div style="font-size: 11.5px; color: #9a9ab0; line-height: 1.6;">상세 드로어의 <b style="color:#c4c4d6;">바로가기 버튼 한 곳에만</b> ref 파라미터 부착. 클릭당 수익. 본문·링크 영역은 건드리지 않아 UI가 깨끗함.</div>
+    </div>
+
+  </div>
+
+  <div style="font-size: 10.5px; color: #6a6a80; border-top: 1px dashed rgba(255,255,255,0.14); padding-top: 12px; line-height: 1.6;">
+    스폰서 관리는 Supabase <b style="color:#9a9ab0;">sponsors</b> 테이블(ai_id, tier, starts_at, ends_at) 한 개로 처리 — 프런트엔드는 select 해서 해당 노드에 <b style="color:#9a9ab0;">is_sponsored</b> 플래그만 얹음.
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>
