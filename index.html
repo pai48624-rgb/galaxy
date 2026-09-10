@@ -375,12 +375,15 @@ $("#fatalRetry")?.addEventListener("click", () => location.reload());
 boot();
 
 async function boot(attempt = 1){
+  let phase = "시작";
   try {
+    phase = "데이터 요청";
     const [tools, rels, sponsors] = await Promise.all([
       selectAll("ai_tools", "id,slug,name,name_en,category,subcategory,url,github,twitter,description,pricing,rank"),
       selectAll("relations", "source_id,target_id,kind,label"),
       sb.from("active_sponsors").select("ai_id,tier,blurb,link,name").then(r => r.data || []).catch(() => []),
     ]);
+    phase = "데이터 확인";
     if (!tools.length) throw new Error("ai_tools 가 비어 있습니다. supabase_schema.sql 실행 후 npm run import 를 돌리세요.");
 
     const spo = new Map(sponsors.map(s => [s.ai_id, s]));
@@ -396,24 +399,33 @@ async function boot(attempt = 1){
       .map(c => ({ c, n: nodes.filter(x => x.category === c).length }))
       .sort((a,b) => b.n - a.n);
 
+    phase = "3D 그래픽 초기화(WebGL)";
+    const _gl = document.createElement("canvas");
+    if (!(_gl.getContext("webgl2") || _gl.getContext("webgl") || _gl.getContext("experimental-webgl"))){
+      throw new Error("이 브라우저에서 WebGL(3D 그래픽)이 비활성화되어 있습니다.");
+    }
     initGraph();
+    phase = "화면 구성";
     buildSidebar();
     buildSeoList();
     buildSponsorSlot(sponsors);
     refresh();
   } catch (e){
-    console.error("boot failed (attempt " + attempt + ")", e);
-    // 일시적 네트워크/CDN 오류면 한 번 자동 재시도
-    const isNet = e instanceof TypeError || /fetch|network|load failed/i.test(e?.message || "");
-    if (isNet && attempt < 3){
+    const detail = (e && (e.message || e.error_description || e.hint || e.code)) || String(e);
+    console.error("boot failed @ [" + phase + "] attempt " + attempt, e);
+    const isNet = e instanceof TypeError || /fetch|network|load failed|Failed to fetch/i.test(detail);
+    if (isNet && attempt < 3 && phase === "데이터 요청"){
       await new Promise(r => setTimeout(r, 1200 * attempt));
       return boot(attempt + 1);
     }
     $("#fatal").hidden = false;
-    $("#fatalMsg").textContent = (e && (e.message || e.error_description)) || String(e);
-    $("#fatalHint").textContent = isNet
-      ? "네트워크에서 supabase.co 접속이 막힌 것 같습니다. 다른 네트워크(모바일 데이터 등)나 광고차단 확장 끄기를 시도해 보세요."
-      : "브라우저를 강력 새로고침(Ctrl+Shift+R) 후 다시 시도해 보세요.";
+    $("#fatalMsg").textContent = "[" + phase + "] " + detail;
+    $("#fatalHint").textContent =
+      phase === "데이터 요청"
+        ? "데이터 서버 요청이 막혔습니다. 네트워크(회사/학교/보안 프로그램) 또는 광고차단 확장을 확인하세요."
+        : phase.indexOf("WebGL") >= 0
+        ? "브라우저 설정에서 '하드웨어 가속'을 켜거나 다른 브라우저로 열어보세요."
+        : "강력 새로고침(Ctrl+Shift+R) 후 다시 시도하세요.";
   }
 }
 
