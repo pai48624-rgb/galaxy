@@ -409,7 +409,7 @@ async function boot(attempt = 1){
     $("#fatal").hidden = false;
     $("#fatalMsg").textContent = (e && (e.message || e.error_description)) || String(e);
     $("#fatalHint").textContent = isNet
-      ? "네트워크에서 supabase.co 또는 cdn.jsdelivr.net 접속이 막힌 것 같습니다. 다른 네트워크(모바일 데이터 등)나 광고차단 확장 끄기를 시도해 보세요."
+      ? "네트워크에서 supabase.co 접속이 막힌 것 같습니다. 다른 네트워크(모바일 데이터 등)나 광고차단 확장 끄기를 시도해 보세요."
       : "브라우저를 강력 새로고침(Ctrl+Shift+R) 후 다시 시도해 보세요.";
   }
 }
