@@ -40,6 +40,11 @@ async function proxy(request, url) {
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+    if (url.pathname === "/api/log") {
+      const body = request.method === "POST" ? await request.text() : "";
+      console.log("CLIENT-LOG", body);
+      return new Response(null, { status: 204, headers: CORS });
+    }
     if (url.pathname === "/api" || url.pathname.startsWith("/api/")) return proxy(request, url);
     return env.ASSETS.fetch(request);
   },

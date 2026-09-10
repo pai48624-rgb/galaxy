@@ -318,9 +318,23 @@ const CONFIG = {
 const AFFILIATE_PARAM = "ref";
 const AFFILIATE_VALUE = "ai-galaxy";
 
+/* ---- 진단: 클라이언트 오류를 서버 로그로 전송 (build B7) ---- */
+const _report = (tag, obj) => {
+  try {
+    const p = JSON.stringify({ tag, build: "B7", ua: navigator.userAgent, ...obj });
+    (navigator.sendBeacon && navigator.sendBeacon("/api/log", p)) ||
+      fetch("/api/log", { method: "POST", body: p, keepalive: true }).catch(() => {});
+  } catch (_) {}
+};
+window.addEventListener("error", e => _report("window.error", {
+  msg: e.message, src: e.filename, line: e.lineno, col: e.colno, stack: e.error && e.error.stack }));
+window.addEventListener("unhandledrejection", e => _report("unhandledrejection", {
+  msg: String(e.reason && (e.reason.message || e.reason)), stack: e.reason && e.reason.stack }));
+
 /* ---- 라이브러리: 위 vendor/*.js 가 전역으로 로드됨 (THREE, SpriteText, ForceGraph3D, supabase) ---- */
 const _missing = ["THREE","SpriteText","ForceGraph3D","supabase"].filter(k => !window[k]);
 if (_missing.length){
+  _report("libs-missing", { missing: _missing });
   document.getElementById("fatal").hidden = false;
   document.getElementById("fatalMsg").textContent = "라이브러리 로드 실패: " + _missing.join(", ");
   document.getElementById("fatalHint").textContent = "vendor/*.js 로드가 차단되었습니다. 광고차단·보안 확장 끄고 강력 새로고침(Ctrl+Shift+R) 하세요.";
@@ -348,6 +362,7 @@ const catColor = (() => { const c = {}; return s => c[s] || (c[s] = `hsl(${[...S
 /* ---- 설정 안 됨 → 안내 오버레이 ---- */
 if (!/^https:\/\/[a-z0-9.-]+(\.supabase\.co|\.pages\.dev\/api|\/api)$/i.test(CONFIG.SUPABASE_URL)
     && !/^https:\/\/[a-z0-9-]+\.supabase\.co/i.test(CONFIG.SUPABASE_URL)) {
+  _report("setup-guard", { url: CONFIG.SUPABASE_URL });
   $("#setup").hidden = false;
   throw new Error("Supabase not configured");
 }
@@ -426,6 +441,7 @@ async function boot(attempt = 1){
     refresh();
   } catch (e){
     const detail = (e && (e.message || e.error_description || e.hint || e.code)) || String(e);
+    _report("boot-catch", { phase, attempt, detail, stack: e && e.stack, name: e && e.name });
     console.error("boot failed @ [" + phase + "] attempt " + attempt, e);
     const isNet = e instanceof TypeError || /fetch|network|load failed|Failed to fetch/i.test(detail);
     if (isNet && attempt < 3 && phase === "데이터 요청"){
