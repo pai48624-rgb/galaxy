@@ -6,10 +6,15 @@
   "description": "전세계 AI 관계형 지도 — 서버리스 정적 웹 (Supabase + 3d-force-graph)",
   "scripts": {
     "bootstrap": "node --env-file=.env bootstrap.mjs",
-    "import": "node --env-file=.env import-data.mjs"
+    "import": "node --env-file=.env import-data.mjs",
+    "deploy": "wrangler pages deploy dist --project-name ai-galaxy --branch main --commit-dirty=true",
+    "preview": "wrangler pages dev dist"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.45.0",
     "pg": "^8.23.0"
+  },
+  "devDependencies": {
+    "wrangler": "^4.131.0"
   }
 }
