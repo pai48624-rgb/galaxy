@@ -8,9 +8,9 @@
 <meta property="og:title" content="AI 성단 지도">
 <meta property="og:description" content="전세계 AI 툴을 관계형 지도로 — 텍스트·이미지·코딩·에이전트">
 <meta property="og:type" content="website">
-<!-- 기본(canonical) 도메인 = GitHub Pages. Cloudflare Pages를 주 도메인으로 쓰려면 아래 두 줄을 그 주소로 바꾸세요. -->
-<meta property="og:url" content="https://pai48624-rgb.github.io/galaxy/">
-<link rel="canonical" href="https://pai48624-rgb.github.io/galaxy/">
+<!-- 주 도메인 = Cloudflare Pages (github.io 가 일부 망에서 차단되어 이쪽을 기본으로). -->
+<meta property="og:url" content="https://ai-galaxy.pages.dev/">
+<link rel="canonical" href="https://ai-galaxy.pages.dev/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23a89bf0' d='M12 2l2.6 7.4L22 12l-7.4 2.6L12 22l-2.6-7.4L2 12l7.4-2.6z'/%3E%3C/svg%3E">
 <style>
   :root{
@@ -330,7 +330,9 @@ mu.readability=function(t,e){var n=mu(t),i=mu(e);return(Math.max(n.getLuminance(
    ANON(=publishable) 키는 브라우저에 노출돼도 안전합니다. RLS 가 보호합니다.
    ========================================================================== */
 const CONFIG = {
-  SUPABASE_URL: "https://urflispegkzouclljxzg.supabase.co",
+  // 일부 사내/학교/ISP 망이 *.supabase.co 를 막아서, Cloudflare Pages Function(/api) 이
+  // 대신 요청을 전달함. 직결로 되돌리려면: "https://urflispegkzouclljxzg.supabase.co"
+  SUPABASE_URL: "https://ai-galaxy.pages.dev/api",
   SUPABASE_ANON_KEY: "sb_publishable_MtDGFqdSWe09vUXg2ALtqw_5p1gZVCr",
 };
 const AFFILIATE_PARAM = "ref";
@@ -364,7 +366,8 @@ function affiliate(url){
 const catColor = (() => { const c = {}; return s => c[s] || (c[s] = `hsl(${[...String(s)].reduce((h,ch)=>(h*31+ch.charCodeAt(0))>>>0,0)%360} 60% 68%)`); })();
 
 /* ---- 설정 안 됨 → 안내 오버레이 ---- */
-if (!/^https:\/\/[a-z0-9-]+\.supabase\.co/i.test(CONFIG.SUPABASE_URL)) {
+if (!/^https:\/\/[a-z0-9.-]+(\.supabase\.co|\.pages\.dev\/api|\/api)$/i.test(CONFIG.SUPABASE_URL)
+    && !/^https:\/\/[a-z0-9-]+\.supabase\.co/i.test(CONFIG.SUPABASE_URL)) {
   $("#setup").hidden = false;
   throw new Error("Supabase not configured");
 }

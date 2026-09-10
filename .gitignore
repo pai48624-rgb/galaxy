@@ -8,3 +8,14 @@ venv/
 # serverless / static site
 node_modules/
 design/ai-galaxy-redesign.html
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example
+
+# cloudflare
+wrangler.jsonc
+.wrangler/
+dist/index.html
