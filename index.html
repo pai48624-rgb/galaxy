@@ -296,6 +296,12 @@
 
 <section id="seoList" class="sr-only" aria-label="전세계 AI 서비스 전체 목록"></section>
 
+<!-- 라이브러리: 같은 도메인 vendor/ 로 포함 (외부 CDN 차단 환경 대비). 순서 중요: three → spritetext → force-graph -->
+<script src="vendor/three.min.js"></script>
+<script src="vendor/three-spritetext.min.js"></script>
+<script src="vendor/3d-force-graph.min.js"></script>
+<script src="vendor/supabase.min.js"></script>
+
 <script type="module">
 /* ==========================================================================
    설정 — 이 두 줄만 본인 프로젝트 값으로 바꾸면 됩니다.
@@ -308,11 +314,15 @@ const CONFIG = {
 const AFFILIATE_PARAM = "ref";
 const AFFILIATE_VALUE = "ai-galaxy";
 
-/* ---- 라이브러리 (정적 CDN, 번들 불필요) ---- */
-import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";
-import ForceGraph3D from "https://cdn.jsdelivr.net/npm/3d-force-graph@1/+esm";
-import SpriteText from "https://cdn.jsdelivr.net/npm/three-spritetext@1/+esm";
-import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.160/+esm";
+/* ---- 라이브러리: 위 vendor/*.js 가 전역으로 로드됨 (THREE, SpriteText, ForceGraph3D, supabase) ---- */
+const _missing = ["THREE","SpriteText","ForceGraph3D","supabase"].filter(k => !window[k]);
+if (_missing.length){
+  document.getElementById("fatal").hidden = false;
+  document.getElementById("fatalMsg").textContent = "라이브러리 로드 실패: " + _missing.join(", ");
+  document.getElementById("fatalHint").textContent = "vendor/ 파일이 아직 배포되지 않았을 수 있습니다. 30초 뒤 강력 새로고침(Ctrl+Shift+R) 하세요.";
+  throw new Error("vendor libs missing: " + _missing.join(", "));
+}
+const { createClient } = window.supabase;
 
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
