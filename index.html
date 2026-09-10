@@ -288,7 +288,10 @@
 </div>
 
 <div class="overlay" id="fatal" hidden><div class="box">
-  <h2>😵 불러오기 실패</h2><p id="fatalMsg"></p>
+  <h2>😵 불러오기 실패</h2>
+  <p id="fatalMsg"></p>
+  <p id="fatalHint" style="color:var(--dim);font-size:12px;margin-top:6px"></p>
+  <button id="fatalRetry" style="margin-top:14px;padding:8px 18px;border:1px solid var(--line);border-radius:8px;background:var(--purple2);color:#fff;font-size:13px;cursor:pointer">다시 시도</button>
 </div></div>
 
 <section id="seoList" class="sr-only" aria-label="전세계 AI 서비스 전체 목록"></section>
@@ -354,9 +357,11 @@ let Graph, SHOW_LABELS = false;
 const linkEnds = l => [typeof l.source === "object" ? l.source.id : l.source,
                        typeof l.target === "object" ? l.target.id : l.target];
 
+$("#fatalRetry")?.addEventListener("click", () => location.reload());
+
 boot();
 
-async function boot(){
+async function boot(attempt = 1){
   try {
     const [tools, rels, sponsors] = await Promise.all([
       selectAll("ai_tools", "id,slug,name,name_en,category,subcategory,url,github,twitter,description,pricing,rank"),
@@ -384,9 +389,18 @@ async function boot(){
     buildSponsorSlot(sponsors);
     refresh();
   } catch (e){
-    console.error(e);
+    console.error("boot failed (attempt " + attempt + ")", e);
+    // 일시적 네트워크/CDN 오류면 한 번 자동 재시도
+    const isNet = e instanceof TypeError || /fetch|network|load failed/i.test(e?.message || "");
+    if (isNet && attempt < 3){
+      await new Promise(r => setTimeout(r, 1200 * attempt));
+      return boot(attempt + 1);
+    }
     $("#fatal").hidden = false;
-    $("#fatalMsg").textContent = e.message || String(e);
+    $("#fatalMsg").textContent = (e && (e.message || e.error_description)) || String(e);
+    $("#fatalHint").textContent = isNet
+      ? "네트워크에서 supabase.co 또는 cdn.jsdelivr.net 접속이 막힌 것 같습니다. 다른 네트워크(모바일 데이터 등)나 광고차단 확장 끄기를 시도해 보세요."
+      : "브라우저를 강력 새로고침(Ctrl+Shift+R) 후 다시 시도해 보세요.";
   }
 }
 
