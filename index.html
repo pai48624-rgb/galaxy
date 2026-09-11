@@ -112,6 +112,20 @@
     background:rgba(20,20,32,.72);color:var(--ink);font-size:12px;cursor:pointer}
   #addBtn:hover{border-color:var(--purple)}
 
+  /* ---- 수면 모드: UI를 다 걷어내고 화면 가득 천천히 도는 밤하늘만 남김 ---- */
+  #sleepExit{position:absolute;right:16px;bottom:16px;z-index:30;padding:8px 14px;border-radius:999px;
+    border:1px solid rgba(255,255,255,.22);background:rgba(10,10,18,.55);color:rgba(255,255,255,.75);
+    font-size:11px;cursor:pointer;backdrop-filter:blur(4px)}
+  #sleepExit:hover{color:#fff;border-color:rgba(255,255,255,.4)}
+  body.sleep-mode #topbar,
+  body.sleep-mode #sidebar,
+  body.sleep-mode #hud,
+  body.sleep-mode #zoom,
+  body.sleep-mode #legend,
+  body.sleep-mode #addBtn,
+  body.sleep-mode #drawer,
+  body.sleep-mode #menuBtn{display:none !important}
+
   /* ---- right drawer (slides over the galaxy) ---- */
   #drawer{position:absolute;top:0;right:0;bottom:0;width:min(384px,94vw);z-index:20;
     background:rgba(9,9,16,.96);border-left:1px solid var(--line);backdrop-filter:blur(6px);
@@ -202,16 +216,20 @@
       <button id="menuBtn" aria-label="메뉴">☰</button>
       <div class="brand">
         <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#a89bf0" stroke-width="1.6"><path d="M12 2l2.2 6.6L21 11l-6.8 2.4L12 22l-2.2-8.6L3 11l6.8-2.4z"/></svg>
-        AI 성단 지도 <small>전세계 AI 관계형 지도</small>
+        AI 성단 지도 <small id="brandSub">전세계 AI 관계형 지도</small>
       </div>
     </div>
-    <div class="spons" id="sponsSlot" hidden>
-      <span class="lab">오늘의 스폰서</span>
-      <a class="spons-card" id="sponsCard" href="#" target="_blank" rel="noopener">
-        <span class="lg"></span>
-        <span><b id="sponsName"></b><br><span id="sponsBlurb"></span></span>
-        <span class="tag">AD</span>
-      </a>
+    <div style="display:flex;align-items:center;gap:10px">
+      <button id="langBtn" style="padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.18);
+        background:rgba(20,20,32,.7);color:var(--ink);font-size:11px;font-weight:700;cursor:pointer">EN</button>
+      <div class="spons" id="sponsSlot" hidden>
+        <span class="lab">오늘의 스폰서</span>
+        <a class="spons-card" id="sponsCard" href="#" target="_blank" rel="noopener">
+          <span class="lg"></span>
+          <span><b id="sponsName"></b><br><span id="sponsBlurb"></span></span>
+          <span class="tag">AD</span>
+        </a>
+      </div>
     </div>
   </header>
 
@@ -223,42 +241,43 @@
       </div>
 
       <div>
-        <div class="s-head" style="margin-bottom:9px"><span>지도 형태</span></div>
+        <div class="s-head" style="margin-bottom:9px"><span id="lblMapView">지도 형태</span></div>
         <select id="layoutMode" style="width:100%;padding:8px 10px;border-radius:11px;border:1px solid rgba(255,255,255,.16);
           background:rgba(20,20,32,.7);color:var(--ink);font:inherit;font-size:12.5px">
-          <option value="network">네트워크형 (기본)</option>
-          <option value="board">보드형 (카테고리별 정리)</option>
+          <option id="optNet" value="network">네트워크형 (기본)</option>
+          <option id="optBoard" value="board">보드형 (카테고리별 정리)</option>
         </select>
       </div>
 
       <div>
-        <div class="s-head" style="margin-bottom:9px"><span>요금제</span></div>
+        <div class="s-head" style="margin-bottom:9px"><span id="lblPricing">요금제</span></div>
         <div class="checks" id="priceChecks">
-          <label><input type="checkbox" value="무료" checked>무료</label>
-          <label><input type="checkbox" value="부분유료" checked>부분유료</label>
-          <label><input type="checkbox" value="유료" checked>유료</label>
-          <label><input type="checkbox" value="미지정" checked>미지정</label>
+          <label><input type="checkbox" value="무료" checked><span data-price-label>무료</span></label>
+          <label><input type="checkbox" value="부분유료" checked><span data-price-label>부분유료</span></label>
+          <label><input type="checkbox" value="유료" checked><span data-price-label>유료</span></label>
+          <label><input type="checkbox" value="미지정" checked><span data-price-label>미지정</span></label>
         </div>
       </div>
 
       <div>
-        <div class="s-head"><span>카테고리</span><span class="count-pill" id="catCount">–</span></div>
+        <div class="s-head"><span id="lblCategories">카테고리</span><span class="count-pill" id="catCount">–</span></div>
         <div id="catTree" style="margin-top:8px"></div>
       </div>
 
       <div class="s-foot">
-        <div class="note">전체 텍스트 목록(<span id="seoN">–</span>개)은 화면에서 감추고 페이지 하단 DOM에 유지 → 검색·스크린리더 노출은 그대로.</div>
+        <div class="note" id="seoNote">전체 텍스트 목록은 화면에서 감추고 페이지 하단 DOM에 유지 → 검색·스크린리더 노출은 그대로.</div>
         <button class="lnk" id="suggestOpen">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 5v14M5 12h14"/></svg>
-          빠진 AI 추천하기
+          <span id="lblSuggestLink">빠진 AI 추천하기</span>
         </button>
       </div>
     </aside>
 
     <main id="stage">
       <div id="graph"></div>
-      <div id="hud"><span class="spin"></span>은하계를 불러오는 중…</div>
+      <div id="hud"><span class="spin"></span><span id="loadingLabel">은하계를 불러오는 중…</span></div>
       <div id="zoom">
+        <button id="sleepBtn" aria-label="수면 모드 — 화면 가득 은하수처럼 천천히 돌며 잠들기 좋은 소리 재생" title="수면 모드">🌙</button>
         <button id="soundBtn" aria-label="배경음 켜기/끄기" aria-pressed="false">🔇</button>
         <button id="zIn" aria-label="확대">+</button>
         <button id="zOut" aria-label="축소">−</button>
@@ -266,11 +285,12 @@
         <button id="zFit" aria-label="전체화면"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
       </div>
       <div id="legend">
-        <span><span class="lg-line"></span>보완재 (함께 사용)</span>
-        <span><span class="lg-line alt"></span>대체재 (비슷한 대안)</span>
-        <span><span class="lg-dot"></span>스폰서</span>
+        <span><span class="lg-line"></span><span id="lblLegendComplement">보완재 (함께 사용)</span></span>
+        <span><span class="lg-line alt"></span><span id="lblLegendAlt">대체재 (비슷한 대안)</span></span>
+        <span><span class="lg-dot"></span><span id="lblLegendSponsor">스폰서</span></span>
       </div>
-      <button id="addBtn">＋ 빠진 AI 추천</button>
+      <button id="addBtn"><span id="lblAddBtn">＋ 빠진 AI 추천</span></button>
+      <button id="sleepExit" hidden><span id="lblSleepExit">✕ 수면 모드 종료</span></button>
 
       <aside id="drawer" role="complementary" aria-label="AI 상세"></aside>
     </main>
@@ -281,16 +301,16 @@
 
 <dialog id="suggestDlg">
   <form method="dialog" class="dlg-in" id="suggestForm">
-    <h3>빠진 AI 추천</h3>
-    <label>이름 *<input name="name" required maxlength="120" placeholder="예: Perplexity"></label>
-    <label>웹사이트<input name="url" type="url" placeholder="https://…"></label>
-    <label>카테고리<input name="category" list="catList" placeholder="예: 코딩·개발 에이전트"></label>
-    <label>한 줄 소개<textarea name="note" maxlength="2000" placeholder="어떤 AI인가요? 어디에 쓰나요?"></textarea></label>
-    <label>연락처(선택)<input name="contact" maxlength="120" placeholder="반영되면 알려드릴 이메일/트위터"></label>
+    <h3 id="lblSuggestTitle">빠진 AI 추천</h3>
+    <label><span id="lblFieldName">이름 *</span><input name="name" required maxlength="120" placeholder="예: Perplexity"></label>
+    <label><span id="lblFieldUrl">웹사이트</span><input name="url" type="url" placeholder="https://…"></label>
+    <label><span id="lblFieldCategory">카테고리</span><input name="category" list="catList" placeholder="예: 코딩·개발 에이전트"></label>
+    <label><span id="lblFieldNote">한 줄 소개</span><textarea name="note" maxlength="2000" placeholder="어떤 AI인가요? 어디에 쓰나요?"></textarea></label>
+    <label><span id="lblFieldContact">연락처(선택)</span><input name="contact" maxlength="120" placeholder="반영되면 알려드릴 이메일/트위터"></label>
     <datalist id="catList"></datalist>
     <div class="dlg-act">
       <button type="button" class="ghost" id="suggestCancel">취소</button>
-      <button type="submit" class="go">제보하기</button>
+      <button type="submit" class="go" id="suggestSubmitBtn">제보하기</button>
     </div>
   </form>
 </dialog>
@@ -352,6 +372,84 @@ const { createClient } = window.supabase;
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
 const priceClass = p => p === "무료" ? "free" : p === "유료" ? "paid" : p === "부분유료" ? "freemium" : "na";
+
+/* ---- 다국어(한국어/영어) — UI 뼈대 + 카테고리명 + 별자리명 + 요금제 라벨 + 별 이름(name_en) 전환.
+   설명(description)은 번역 데이터가 없어 원문(한국어) 그대로 둠. ---- */
+let lang = localStorage.getItem("galaxyLang") || "ko";
+const I18N = {
+  ko: {
+    subtitle: "전세계 AI 관계형 지도", searchPh: "AI 이름 검색…",
+    mapView: "지도 형태", netMode: "네트워크형 (기본)", boardMode: "보드형 (카테고리별 정리)",
+    pricing: "요금제", free: "무료", freemium: "부분유료", paid: "유료", unspecified: "미지정",
+    categories: "카테고리",
+    seoNote: n => `전체 텍스트 목록(${n}개)은 화면에서 감추고 페이지 하단 DOM에 유지 → 검색·스크린리더 노출은 그대로.`,
+    suggestLink: "빠진 AI 추천하기", loading: "은하계를 불러오는 중…",
+    hudCount: (a, b) => `${a} / ${b} AI 표시중`,
+    legendComplement: "보완재 (함께 사용)", legendAlt: "대체재 (비슷한 대안)", legendSponsor: "스폰서",
+    addBtn: "＋ 빠진 AI 추천", sleepExit: "✕ 수면 모드 종료", dKicker: "⭐ AI 상세정보",
+    suggestTitle: "빠진 AI 추천", fieldName: "이름 *", fieldUrl: "웹사이트", fieldCategory: "카테고리",
+    fieldNote: "한 줄 소개", fieldContact: "연락처(선택)", cancel: "취소", submit: "제보하기",
+    officialSite: "공식 사이트 ↗", together: "함께 쓰면 좋은 · 비슷한 AI",
+    close: "닫기", noDescription: "설명이 아직 없어요. 아래에 한 줄 남겨주시면 큰 도움이 됩니다.",
+    goto: "바로가기 →", sponsorTag: "스폰서", affiliateTag: "제휴",
+    reviewLabel: "한 줄 리뷰", reviewPh: "예: 리팩토링할 때 코드베이스 전체를 참고해줘서 편해요",
+    nickname: "닉네임 (선택)", submitReview: "등록", reviewHint: "등록 즉시 지도에 반영됩니다 · Supabase insert → select",
+    loadingReviews: "리뷰 불러오는 중…", noReviews: "아직 리뷰가 없어요. 첫 리뷰를 남겨보세요.",
+    langBtnLabel: "EN",
+  },
+  en: {
+    subtitle: "Global AI Relationship Map", searchPh: "Search AI name…",
+    mapView: "Map View", netMode: "Network (default)", boardMode: "Board (by category)",
+    pricing: "Pricing", free: "Free", freemium: "Freemium", paid: "Paid", unspecified: "Unspecified",
+    categories: "Categories",
+    seoNote: n => `The full text list (${n} items) is visually hidden but kept in the DOM for search engines and screen readers.`,
+    suggestLink: "Suggest a missing AI", loading: "Loading the galaxy…",
+    hudCount: (a, b) => `${a} / ${b} AI shown`,
+    legendComplement: "Complement (use together)", legendAlt: "Alternative (similar option)", legendSponsor: "Sponsor",
+    addBtn: "＋ Suggest missing AI", sleepExit: "✕ Exit sleep mode", dKicker: "⭐ AI Details",
+    suggestTitle: "Suggest a missing AI", fieldName: "Name *", fieldUrl: "Website", fieldCategory: "Category",
+    fieldNote: "One-line description", fieldContact: "Contact (optional)", cancel: "Cancel", submit: "Submit",
+    officialSite: "Official site ↗", together: "Goes well with · Similar AI",
+    close: "Close", noDescription: "No description yet. Leave a line below — it helps a lot.",
+    goto: "Visit →", sponsorTag: "Sponsor", affiliateTag: "Affiliate",
+    reviewLabel: "Reviews", reviewPh: "e.g. Great for refactoring since it references the whole codebase",
+    nickname: "Nickname (optional)", submitReview: "Post", reviewHint: "Shows on the map right away · Supabase insert → select",
+    loadingReviews: "Loading reviews…", noReviews: "No reviews yet. Be the first to leave one.",
+    langBtnLabel: "한국어",
+  },
+};
+function tr(key, ...args){
+  const v = I18N[lang]?.[key] ?? I18N.ko[key];
+  return typeof v === "function" ? v(...args) : v;
+}
+const PRICE_KEY = { "무료": "free", "부분유료": "freemium", "유료": "paid", "미지정": "unspecified" };
+const priceLabel = p => tr(PRICE_KEY[p] ? PRICE_KEY[p] : "unspecified");
+const displayName = n => (lang === "en" && n.name_en) ? n.name_en : n.name;
+// 31개 카테고리 한→영 (설명 데이터는 없어서 이름만 번역)
+const CAT_EN = {
+  "AI 데이터 및 휴먼 피드백": "AI Data & Human Feedback", "AI 보안 및 안전": "AI Security & Safety",
+  "AI 앱 빌더": "AI App Builders", "AI 프로토콜": "AI Protocols",
+  "LLM 게이트웨이 및 API": "LLM Gateways & APIs", "MLOps 및 학습": "MLOps & Training",
+  "RAG 및 메모리": "RAG & Memory", "개발자 도구": "Developer Tools", "개인 비서 AI": "Personal Assistant AI",
+  "관측성 및 평가": "Observability & Evaluation", "데이터 엔지니어링": "Data Engineering",
+  "멀티모달 및 인지": "Multimodal & Perception", "벡터 및 검색": "Vector & Search",
+  "벤치마크 및 리더보드": "Benchmarks & Leaderboards",
+  "브라우저 및 컴퓨터 사용 자동화": "Browser & Computer-Use Automation",
+  "산업별 특화 AI": "Industry-Specific AI", "생성형 콘텐츠": "Generative Content",
+  "실체화 AI 및 로보틱스": "Embodied AI & Robotics", "에이전트 스킬": "Agent Skills",
+  "에이전트 실행 환경 및 샌드박스": "Agent Runtimes & Sandboxes", "에이전트 프레임워크": "Agent Frameworks",
+  "오디오·음악 생성": "Audio & Music Generation", "워크플로 자동화": "Workflow Automation",
+  "음성 에이전트": "Voice Agents", "이미지·영상 생성": "Image & Video Generation",
+  "지식 탐색": "Knowledge Discovery", "추론 및 컴퓨팅 인프라": "Inference & Compute Infrastructure",
+  "코딩 에이전트 오케스트레이션": "Coding Agent Orchestration", "코딩 에이전트": "Coding Agents",
+  "파운데이션 모델": "Foundation Models", "프런티어 연구소": "Frontier Labs",
+};
+const catLabel = c => (lang === "en" && CAT_EN[c]) ? CAT_EN[c] : c;
+const CONST_NAMES_EN = {
+  "트라이앵글자리": "Triangulum", "남십자자리": "Southern Cross", "카시오페이아자리": "Cassiopeia",
+  "왕관자리": "Corona", "북두칠성": "Big Dipper", "돛자리": "Vela",
+};
+const constNameLabel = k => (lang === "en" && CONST_NAMES_EN[k]) ? CONST_NAMES_EN[k] : k;
 const toast = (msg) => { const t = $("#toast"); t.textContent = msg; t.classList.add("show"); clearTimeout(toast._t); toast._t = setTimeout(() => t.classList.remove("show"), 2600); };
 function timeago(iso){
   const s = (Date.now() - new Date(iso).getTime()) / 1000;
@@ -400,6 +498,11 @@ const linkEnds = l => [typeof l.source === "object" ? l.source.id : l.source,
                        typeof l.target === "object" ? l.target.id : l.target];
 
 $("#fatalRetry")?.addEventListener("click", () => location.reload());
+
+// 데이터 로딩 끝나기 전에도 로딩문구/언어버튼은 저장된 언어로 바로 보이게
+$("#loadingLabel").textContent = tr("loading");
+$("#langBtn").textContent = tr("langBtnLabel");
+document.documentElement.lang = lang === "en" ? "en" : "ko";
 
 boot();
 
@@ -454,6 +557,7 @@ async function boot(attempt = 1){
     buildSeoList();
     buildSponsorSlot(sponsors);
     refresh();
+    applyLanguage();
   } catch (e){
     const detail = (e && (e.message || e.error_description || e.hint || e.code)) || String(e);
     console.error("boot failed @ [" + phase + "] attempt " + attempt, e);
@@ -606,7 +710,7 @@ function nodeObject(n){
     g.add(halo);
   }
   if (isSponsor || SHOW_LABELS || n.category === highlightedCategory){
-    const t = new SpriteText(n.name);
+    const t = new SpriteText(displayName(n));
     t.textHeight = isSponsor ? 7 : 4;
     t.color = isSponsor ? "#ffe6ad" : "#eef0fb";
     t.fontFace = "system-ui, sans-serif";
@@ -630,7 +734,7 @@ function buildConstellationLabels(){
     // assignConstellationShapes()와 반드시 같은 정렬 순서(id순) — 모양대로 이어야 별자리처럼 보임
     const members = nodes.filter(n => n.category === c).sort((a,b) => a.id - b.id);
     const constName = catShapeName.get(c);
-    const labelText = constName ? `✦ ${constName}(${c})` : c;
+    const labelText = constName ? `✦ ${constNameLabel(constName)}(${catLabel(c)})` : catLabel(c);
 
     // 그룹 크기(별자리 모양의 반경)만큼 라벨을 위로 띄움 — 안 그러면 별 많은 큰 그룹은
     // 라벨이 한가운데 별들 속에 파묻혀 사실상 안 보이게 됨
@@ -731,7 +835,7 @@ function initGraph(){
     .backgroundColor("#05050b")
     .showNavInfo(false)
     .nodeId("id")
-    .nodeLabel(n => `${esc(n.name)}${n.sponsor ? " · 스폰서" : ""}`)
+    .nodeLabel(n => `${esc(displayName(n))}${n.sponsor ? " · " + tr("sponsorTag") : ""}`)
     .nodeThreeObjectExtend(false)
     .nodeThreeObject(nodeObject)
     .linkColor(l => `hsl(${linkHue(l)} ${l.kind === "alternative" ? "70% 58%" : "85% 68%"})`)
@@ -910,6 +1014,15 @@ function initSceneLoop(){
       a.mesh.rotation.y += a.rot[1] * dt;
       a.mesh.rotation.z += a.rot[2] * dt;
       a.mesh.material.opacity = 0.5 * (p < 0.2 ? p / 0.2 : p > 0.8 ? (1 - p) / 0.2 : 1);
+    }
+
+    if (sleepMode){
+      sleepAngle += dt * (2 * Math.PI / 480); // 8분에 한 바퀴 — 아주 천천히
+      const R = 2700, tiltY = 420 * Math.sin(sleepAngle * 0.31);
+      Graph.cameraPosition(
+        { x: R * Math.cos(sleepAngle), y: tiltY, z: R * Math.sin(sleepAngle) },
+        { x: 0, y: 0, z: 0 }, 0
+      );
     }
 
     updateConstellationLabels();
@@ -1096,7 +1209,7 @@ function refresh(){
   Graph.linkDirectionalParticles(vis.length <= 160 ? (l => l.kind === "complement" ? 2 : 0) : 0);
   Graph.graphData({ nodes: vis, links: vlinks });
 
-  $("#hud").textContent = `${vis.length} / ${nodes.length} AI 표시중`;
+  $("#hud").textContent = tr("hudCount", vis.length, nodes.length);
   document.querySelectorAll("#seoList .seo-cat").forEach(el => {
     el.hidden = state.cats.size ? !state.cats.has(el.dataset.cat) : false;
   });
@@ -1108,7 +1221,7 @@ function refresh(){
 function fillCatBody(body, c){
   if (body.dataset.filled){ syncSelectedToolButton(); return; }
   const items = nodes.filter(n => n.category === c).sort((a,b) => a.name.localeCompare(b.name, "ko"));
-  body.innerHTML = items.map(n => `<button class="tool" type="button" data-go="${n.id}"><span class="dot ${priceClass(n.pricing)}"></span>${esc(n.name)}${n.sponsor ? ' <span class="mini-ad">AD</span>' : ""}</button>`).join("");
+  body.innerHTML = items.map(n => `<button class="tool" type="button" data-go="${n.id}"><span class="dot ${priceClass(n.pricing)}"></span>${esc(displayName(n))}${n.sponsor ? ' <span class="mini-ad">AD</span>' : ""}</button>`).join("");
   body.dataset.filled = "1";
   syncSelectedToolButton();
 }
@@ -1135,19 +1248,21 @@ function syncCategoryExpansion(){
 }
 
 /* ---- 좌측 사이드바 ---- */
-function buildSidebar(){
+function renderCatTree(){
   $("#catCount").textContent = cats.length;
-  $("#seoN").textContent = nodes.length;
   $("#catList").innerHTML = cats.map(c => `<option value="${esc(c.c)}">`).join("");
-
   $("#catTree").innerHTML = cats.map(c => `
     <div class="cat" data-cat="${esc(c.c)}">
       <button class="cat-h" type="button">
         <svg class="chev" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M9 6l6 6-6 6"/></svg>
-        <span class="cat-name">${esc(c.c)}</span><span class="cat-n">${c.n}</span>
+        <span class="cat-name">${esc(catLabel(c.c))}</span><span class="cat-n">${c.n}</span>
       </button>
       <div class="cat-body" hidden></div>
     </div>`).join("");
+}
+function buildSidebar(){
+  $("#seoNote").textContent = tr("seoNote", nodes.length);
+  renderCatTree();
 
   $("#catTree").addEventListener("click", e => {
     const h = e.target.closest(".cat-h"); if (!h) return;
@@ -1191,22 +1306,80 @@ function buildSidebar(){
   $("#zReset").addEventListener("click", () => { userTouchedCamera = true; Graph.zoomToFit(600, 40); });
   $("#zFit").addEventListener("click", toggleFullscreen);
   document.addEventListener("fullscreenchange", () => {
+    if (!document.fullscreenElement && sleepMode) exitSleepMode();
+    if (sleepMode){ setTimeout(resizeGraph, 60); return; }
     setTimeout(() => { resizeGraph(); Graph.zoomToFit(500, 60); }, 60);
   });
   $("#soundBtn").addEventListener("click", toggleAmbientAudio);
+  $("#sleepBtn").addEventListener("click", enterSleepMode);
+  $("#sleepExit").addEventListener("click", exitSleepMode);
+  document.addEventListener("keydown", e => { if (sleepMode && e.key === "Escape") exitSleepMode(); });
 
   $("#suggestOpen").addEventListener("click", openSuggest);
   $("#addBtn").addEventListener("click", openSuggest);
   $("#suggestCancel").addEventListener("click", () => $("#suggestDlg").close());
   $("#suggestForm").addEventListener("submit", submitSuggest);
+
+  $("#langBtn").addEventListener("click", () => {
+    lang = lang === "ko" ? "en" : "ko";
+    try { localStorage.setItem("galaxyLang", lang); } catch (e) { /* 저장 안 돼도 이번 세션엔 적용됨 */ }
+    applyLanguage();
+  });
+}
+function applyLanguage(){
+  document.documentElement.lang = lang === "en" ? "en" : "ko";
+  $("#brandSub").textContent = tr("subtitle");
+  $("#search").placeholder = tr("searchPh");
+  $("#lblMapView").textContent = tr("mapView");
+  $("#optNet").textContent = tr("netMode");
+  $("#optBoard").textContent = tr("boardMode");
+  $("#lblPricing").textContent = tr("pricing");
+  const priceKeys = ["free", "freemium", "paid", "unspecified"];
+  document.querySelectorAll("#priceChecks [data-price-label]").forEach((el, i) => { el.textContent = tr(priceKeys[i]); });
+  $("#lblCategories").textContent = tr("categories");
+  $("#seoNote").textContent = tr("seoNote", nodes.length);
+  $("#lblSuggestLink").textContent = tr("suggestLink");
+  const loadingLabelEl = $("#loadingLabel"); // 로딩 끝나면 hud 내용이 이미 바뀌어 있어서 없을 수 있음
+  if (loadingLabelEl) loadingLabelEl.textContent = tr("loading");
+  $("#lblLegendComplement").textContent = tr("legendComplement");
+  $("#lblLegendAlt").textContent = tr("legendAlt");
+  $("#lblLegendSponsor").textContent = tr("legendSponsor");
+  $("#lblAddBtn").textContent = tr("addBtn");
+  $("#lblSleepExit").textContent = tr("sleepExit");
+  $("#lblSuggestTitle").textContent = tr("suggestTitle");
+  $("#lblFieldName").textContent = tr("fieldName");
+  $("#lblFieldUrl").textContent = tr("fieldUrl");
+  $("#lblFieldCategory").textContent = tr("fieldCategory");
+  $("#lblFieldNote").textContent = tr("fieldNote");
+  $("#lblFieldContact").textContent = tr("fieldContact");
+  $("#suggestCancel").textContent = tr("cancel");
+  $("#suggestSubmitBtn").textContent = tr("submit");
+  $("#langBtn").textContent = tr("langBtnLabel");
+
+  renderCatTree();
+  if (Graph){
+    buildConstellationLabels();
+    refresh();
+  }
+  if (curNode) openDrawer(curNode);
 }
 /* ---- 배경음: 실제 음원 파일 대신, 저작권/네트워크 문제 없는 합성 우주 앰비언트를 즉석에서 생성 ---- */
-let audioCtx = null, audioOn = false;
+let audioCtx = null, audioOn = false, masterGain = null;
+const AMBIENT_VOLUME = { normal: 0.055, sleep: 0.1 };
 function initAmbientAudio(){
   audioCtx = new (window.AudioContext || window.webkitAudioContext)();
   const master = audioCtx.createGain();
-  master.gain.value = 0.055; // 낮은 볼륨
+  master.gain.value = AMBIENT_VOLUME.normal;
   master.connect(audioCtx.destination);
+  masterGain = master;
+
+  // 아주 느린 "숨쉬듯" 볼륨 변화 — 수면 모드에서 특히 편안하게 들리도록
+  const breathLfo = audioCtx.createOscillator();
+  breathLfo.frequency.value = 0.045;
+  const breathGain = audioCtx.createGain();
+  breathGain.gain.value = 0.012;
+  breathLfo.connect(breathGain); breathGain.connect(master.gain);
+  breathLfo.start();
 
   const lowpass = audioCtx.createBiquadFilter();
   lowpass.type = "lowpass";
@@ -1273,6 +1446,50 @@ function toggleFullscreen(){
     (document.exitFullscreen || document.webkitExitFullscreen || document.msExitFullscreen)?.call(document);
   }
 }
+
+/* ---- 수면 모드: 전체화면으로 전환해 UI를 다 걷어내고, 관계선/이름표 없이 별만 천천히 도는
+   실제 밤하늘처럼 만들고 잔잔한 배경음을 재생함. 잠 안 올 때 틀어놓고 자라는 용도. ---- */
+let sleepMode = false, sleepAngle = 0, sleepAudioWasOn = false, sleepSavedLinkOpacity = null;
+function enterSleepMode(){
+  if (sleepMode) return;
+  sleepMode = true;
+  userTouchedCamera = true;
+  document.body.classList.add("sleep-mode");
+  $("#sleepExit").hidden = false;
+  closeDrawer();
+
+  sleepSavedLinkOpacity = Graph.linkOpacity();
+  Graph.linkOpacity(0);
+  for (const { sprite, line } of constLabels){ sprite.visible = false; line.visible = false; }
+
+  sleepAudioWasOn = audioOn;
+  if (!audioOn) toggleAmbientAudio();
+  if (audioCtx && masterGain) masterGain.gain.setTargetAtTime(AMBIENT_VOLUME.sleep, audioCtx.currentTime, 2.5);
+
+  try {
+    const el = document.documentElement;
+    (el.requestFullscreen || el.webkitRequestFullscreen || el.msRequestFullscreen)?.call(el);
+  } catch (e) { /* 전체화면이 막혀도 나머지 연출은 그대로 진행 */ }
+}
+function exitSleepMode(){
+  if (!sleepMode) return;
+  sleepMode = false;
+  document.body.classList.remove("sleep-mode");
+  $("#sleepExit").hidden = true;
+
+  if (sleepSavedLinkOpacity != null) Graph.linkOpacity(sleepSavedLinkOpacity);
+  for (const entry of constLabels){ entry.sprite.visible = true; entry.line.visible = true; }
+  refresh(); // 필터에 맞는 실제 라벨/윤곽선 표시 상태로 재계산
+
+  if (audioCtx && masterGain) masterGain.gain.setTargetAtTime(AMBIENT_VOLUME.normal, audioCtx.currentTime, 1.5);
+  if (!sleepAudioWasOn && audioOn) toggleAmbientAudio();
+
+  if (document.fullscreenElement){
+    (document.exitFullscreen || document.webkitExitFullscreen || document.msExitFullscreen)?.call(document);
+  }
+  didInitialFit = true;
+  setTimeout(() => Graph.zoomToFit(500, 60), 250);
+}
 function zoomBy(k){
   userTouchedCamera = true;
   const p = Graph.cameraPosition();
@@ -1321,39 +1538,39 @@ function drawerHTML(n, reviews){
   const nb = neighbors(n.id);
   const link = n.sponsor?.link || n.url;
   const rv = reviews == null
-    ? `<div class="rv-hint">리뷰 불러오는 중…</div>`
+    ? `<div class="rv-hint">${tr("loadingReviews")}</div>`
     : reviews.length
       ? reviews.map(r => `<div class="rv"><div class="rv-top"><span class="st">${"★".repeat(r.rating)}${"☆".repeat(5 - r.rating)}</span><span>${esc(r.author_name)} · ${timeago(r.created_at)}</span></div>${esc(r.body)}</div>`).join("")
-      : `<div class="rv-hint">아직 리뷰가 없어요. 첫 리뷰를 남겨보세요.</div>`;
+      : `<div class="rv-hint">${tr("noReviews")}</div>`;
 
   return `
-    <div class="d-kicker">⭐ AI 상세정보</div>
+    <div class="d-kicker">${tr("dKicker")}</div>
     <div class="d-head">
       <div>
-        <div class="d-name">${esc(n.name)}<span class="badge ${priceClass(n.pricing)}">${esc(n.pricing || "미지정")}</span>${n.sponsor ? '<span class="tag">스폰서</span>' : ""}</div>
-        <div class="d-meta">${esc(n.category)}${n.subcategory ? " · " + esc(n.subcategory) : ""}</div>
+        <div class="d-name">${esc(displayName(n))}<span class="badge ${priceClass(n.pricing)}">${esc(priceLabel(n.pricing))}</span>${n.sponsor ? `<span class="tag">${tr("sponsorTag")}</span>` : ""}</div>
+        <div class="d-meta">${esc(catLabel(n.category))}${n.subcategory ? " · " + esc(n.subcategory) : ""}</div>
       </div>
-      <button class="d-close" aria-label="닫기">×</button>
+      <button class="d-close" aria-label="${tr("close")}">×</button>
     </div>
-    <p class="d-desc">${esc(n.description || "설명이 아직 없어요. 아래에 한 줄 남겨주시면 큰 도움이 됩니다.")}</p>
+    <p class="d-desc">${esc(n.description || tr("noDescription"))}</p>
     <div class="d-links">
-      ${n.url ? `<a href="${esc(n.url)}" target="_blank" rel="noopener">공식 사이트 ↗</a>` : ""}
+      ${n.url ? `<a href="${esc(n.url)}" target="_blank" rel="noopener">${tr("officialSite")}</a>` : ""}
       ${n.github ? `<a href="${esc(n.github)}" target="_blank" rel="noopener">GitHub ↗</a>` : ""}
       ${n.twitter ? `<a href="${esc(n.twitter)}" target="_blank" rel="noopener">X ↗</a>` : ""}
     </div>
-    ${link ? `<a class="d-cta" href="${esc(affiliate(link))}" target="_blank" rel="noopener sponsored">${esc(n.name)} 바로가기 →<span class="tag">${n.sponsor ? "스폰서" : "제휴"}</span></a>` : ""}
+    ${link ? `<a class="d-cta" href="${esc(affiliate(link))}" target="_blank" rel="noopener sponsored">${esc(displayName(n))} ${tr("goto")}<span class="tag">${n.sponsor ? tr("sponsorTag") : tr("affiliateTag")}</span></a>` : ""}
 
-    ${nb.length ? `<div class="d-sec">함께 쓰면 좋은 · 비슷한 AI</div><div class="chips">${nb.map(x => `<button class="chip" data-go="${x.n.id}">${esc(x.n.name)}</button>`).join("")}</div>` : ""}
+    ${nb.length ? `<div class="d-sec">${tr("together")}</div><div class="chips">${nb.map(x => `<button class="chip" data-go="${x.n.id}">${esc(displayName(x.n))}</button>`).join("")}</div>` : ""}
 
-    <div class="d-sec">한 줄 리뷰 <b>${reviews ? reviews.length : ""}</b></div>
+    <div class="d-sec">${tr("reviewLabel")} <b>${reviews ? reviews.length : ""}</b></div>
     <form class="rv-form" id="rvForm">
       <div class="stars" id="rvStars">${[1,2,3,4,5].map(v => `<button type="button" class="star" data-v="${v}">★</button>`).join("")}</div>
-      <textarea id="rvBody" maxlength="2000" placeholder="예: 리팩토링할 때 코드베이스 전체를 참고해줘서 편해요"></textarea>
+      <textarea id="rvBody" maxlength="2000" placeholder="${esc(tr("reviewPh"))}"></textarea>
       <div class="row">
-        <input type="text" id="rvAuthor" maxlength="40" placeholder="닉네임 (선택)">
-        <button type="submit" class="send" id="rvSend">등록</button>
+        <input type="text" id="rvAuthor" maxlength="40" placeholder="${esc(tr("nickname"))}">
+        <button type="submit" class="send" id="rvSend">${tr("submitReview")}</button>
       </div>
-      <div class="rv-hint">등록 즉시 지도에 반영됩니다 · Supabase insert → select</div>
+      <div class="rv-hint">${tr("reviewHint")}</div>
     </form>
     <div id="rvList">${rv}</div>`;
 }
