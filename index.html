@@ -59,8 +59,9 @@
     letter-spacing:1px;color:#b9b9d8}
   .count-pill{padding:1px 8px;border-radius:999px;background:rgba(140,120,230,.25);color:#cabdff;font-size:10px;font-weight:700}
 
-  .cat{border-radius:8px}
-  .cat.active{background:rgba(140,120,230,.12);border:1px solid rgba(140,120,230,.28)}
+  .cat{border-radius:8px;border:1px solid transparent}
+  .cat.active{background:rgba(140,120,230,.22);border:1px solid rgba(140,120,230,.55)}
+  .cat.search-hit{background:rgba(143,214,196,.12);border:1px solid rgba(143,214,196,.4)}
   .cat-h{width:100%;display:flex;align-items:center;gap:7px;padding:7px 8px;background:none;border:0;
     color:#d4d4e2;font-size:12.5px;cursor:pointer;text-align:left}
   .cat.active .cat-h{color:#fff;font-weight:700}
@@ -70,6 +71,7 @@
   .cat-n{color:var(--faint);font-size:11px}
   .cat.active .cat-n{color:#cabdff}
   .cat-body{display:flex;flex-direction:column;padding:2px 4px 8px 20px;gap:1px}
+  .cat-body[hidden]{display:none}
   .tool{display:flex;align-items:center;gap:7px;padding:5px 7px;border-radius:6px;background:none;border:0;
     color:#c4c4d6;font-size:12px;cursor:pointer;text-align:left;width:100%}
   .tool:hover{background:rgba(255,255,255,.06);color:#fff}
@@ -211,6 +213,15 @@
       <div class="field">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#8a8aa0" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
         <input id="search" type="search" placeholder="AI 이름 검색…" autocomplete="off">
+      </div>
+
+      <div>
+        <div class="s-head" style="margin-bottom:9px"><span>지도 형태</span></div>
+        <select id="layoutMode" style="width:100%;padding:8px 10px;border-radius:11px;border:1px solid rgba(255,255,255,.16);
+          background:rgba(20,20,32,.7);color:var(--ink);font:inherit;font-size:12.5px">
+          <option value="network">네트워크형 (기본)</option>
+          <option value="board">보드형 (카테고리별 정리)</option>
+        </select>
       </div>
 
       <div>
@@ -368,7 +379,7 @@ async function selectAll(table, cols){
 
 let nodes = [], links = [], nodeById = new Map(), cats = [];
 const state = { cats: new Set(), price: new Set(["무료","부분유료","유료","미지정"]), q: "" };
-let Graph, SHOW_LABELS = false;
+let Graph, SHOW_LABELS = false, layoutMode = "network", didInitialFit = false;
 
 const linkEnds = l => [typeof l.source === "object" ? l.source.id : l.source,
                        typeof l.target === "object" ? l.target.id : l.target];
@@ -414,6 +425,8 @@ async function boot(attempt = 1){
       .map(c => ({ c, n: nodes.filter(x => x.category === c).length }))
       .sort((a,b) => b.n - a.n);
 
+    assignConstellationShapes();
+
     phase = "3D 그래픽 초기화(WebGL)";
     const _gl = document.createElement("canvas");
     if (!(_gl.getContext("webgl2") || _gl.getContext("webgl") || _gl.getContext("experimental-webgl"))){
@@ -442,6 +455,71 @@ async function boot(attempt = 1){
         ? "브라우저 설정에서 '하드웨어 가속'을 켜거나 다른 브라우저로 열어보세요."
         : "강력 새로고침(Ctrl+Shift+R) 후 다시 시도하세요.";
   }
+}
+
+/* ---- 카테고리별 별자리 모양 배치 ---- */
+const CONST_TEMPLATES = {
+  3: [[0,42,0],[-38,-22,10],[38,-24,-8]],
+  4: [[0,46,0],[34,2,8],[0,-40,-8],[-32,8,0]],
+  5: [[0,44,0],[36,14,6],[20,-38,-6],[-20,-38,6],[-36,14,-6]],
+  6: [[-40,30,0],[0,46,10],[40,26,-6],[34,-28,4],[-8,-42,0],[-40,-10,-8]],
+  7: [[-64,10,0],[-36,24,4],[-8,18,-6],[16,28,8],[32,-2,-4],[56,-10,10],[74,-34,-8]],
+  8: [[-50,34,0],[-16,44,8],[18,36,-6],[46,14,4],[44,-20,-4],[10,-42,6],[-24,-38,-6],[-52,-8,4]],
+};
+function mulberry32(a){
+  return function(){
+    a |= 0; a = (a + 0x6D2B79F5) | 0;
+    let t = Math.imul(a ^ (a >>> 15), 1 | a);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+function hashStr(s){ let h = 0; for (const c of String(s)) h = (h * 31 + c.charCodeAt(0)) >>> 0; return h; }
+function shapeOffsets(n, seed){
+  if (n <= 1) return [[0,0,0]];
+  if (n === 2) return [[-30,0,0],[30,0,0]];
+  if (CONST_TEMPLATES[n]) return CONST_TEMPLATES[n];
+  // 미리 만든 모양이 없는 개수라면, 시드 고정 무작위 지그재그 경로로 "덩어리"가 아닌 별자리 느낌의 배치를 만듦
+  const rnd = mulberry32(seed);
+  const pts = []; let x = 0, y = 0, ang = rnd() * Math.PI * 2;
+  for (let i = 0; i < n; i++){
+    pts.push([x, y, (rnd() - 0.5) * 30]);
+    ang += (rnd() - 0.5) * 2.4;
+    const step = 24 + rnd() * 22;
+    x += Math.cos(ang) * step; y += Math.sin(ang) * step;
+  }
+  const cx = pts.reduce((s,p) => s + p[0], 0) / n, cy = pts.reduce((s,p) => s + p[1], 0) / n;
+  return pts.map(p => [p[0] - cx, p[1] - cy, p[2]]);
+}
+function assignConstellationShapes(){
+  for (const { c } of cats){
+    const members = nodes.filter(x => x.category === c).sort((a,b) => a.id - b.id);
+    const offs = shapeOffsets(members.length, hashStr(c));
+    members.forEach((n, i) => { n.__shape = offs[i] || [0,0,0]; });
+  }
+}
+function makeShapeForce(){
+  let fnodes = [];
+  function force(alpha){
+    if (layoutMode !== "network") return;
+    const cent = new Map();
+    for (const n of fnodes){
+      let c = cent.get(n.category);
+      if (!c){ c = { x:0, y:0, z:0, n:0 }; cent.set(n.category, c); }
+      c.x += n.x || 0; c.y += n.y || 0; c.z += n.z || 0; c.n++;
+    }
+    for (const c of cent.values()){ c.x /= c.n; c.y /= c.n; c.z /= c.n; }
+    const k = 0.12 * alpha;
+    for (const n of fnodes){
+      const c = cent.get(n.category);
+      if (!c || !n.__shape) continue;
+      n.vx += (c.x + n.__shape[0] - n.x) * k;
+      n.vy += (c.y + n.__shape[1] - n.y) * k;
+      n.vz += (c.z + n.__shape[2] - n.z) * k;
+    }
+  }
+  force.initialize = _nodes => { fnodes = _nodes; };
+  return force;
 }
 
 /* ---- 3D 은하계 ---- */
@@ -494,7 +572,13 @@ function initGraph(){
     .onBackgroundClick(closeDrawer);
 
   Graph.d3Force("charge").strength(-70);
+  Graph.d3Force("shape", makeShapeForce());
   Graph.cameraPosition({ z: 780 });
+  Graph.onEngineStop(() => {
+    if (!didInitialFit){ didInitialFit = true; Graph.zoomToFit(400, 60); }
+  });
+
+  window.addEventListener("resize", resizeGraph);
 
   // 배경 별 (실패해도 지도는 그대로 동작)
   try {
@@ -513,18 +597,71 @@ function focusNode(id){
   Graph.cameraPosition({ x: n.x * r, y: n.y * r, z: (n.z || 0) * r }, n, 1200);
 }
 
+/* ---- 캔버스 크기: 우측 드로어가 열리면 남는 영역 기준으로 다시 계산 ---- */
+function resizeGraph(){
+  if (!Graph) return;
+  const stageEl = $("#stage");
+  const drawerW = $("#drawer").classList.contains("open") ? $("#drawer").getBoundingClientRect().width : 0;
+  Graph.width(stageEl.clientWidth - drawerW).height(stageEl.clientHeight);
+}
+
+/* ---- 레이아웃 모드: 네트워크형(기본) / 보드형(카테고리별 정리) ---- */
+function applyBoardLayout(){
+  const cols = Math.ceil(Math.sqrt(cats.length));
+  const cellW = 240, cellH = 240;
+  cats.forEach(({ c }, ci) => {
+    const gx = (ci % cols) - (cols - 1) / 2;
+    const gy = Math.floor(ci / cols) - (Math.ceil(cats.length / cols) - 1) / 2;
+    const originX = gx * cellW, originY = -gy * cellH;
+    const members = nodes.filter(n => n.category === c).sort((a,b) => a.id - b.id);
+    const subCols = Math.max(1, Math.ceil(Math.sqrt(members.length)));
+    members.forEach((n, i) => {
+      const lx = (i % subCols) - (subCols - 1) / 2;
+      const ly = Math.floor(i / subCols) - (Math.ceil(members.length / subCols) - 1) / 2;
+      n.fx = originX + lx * 20; n.fy = originY + ly * 20; n.fz = 0;
+    });
+  });
+  Graph.d3ReheatSimulation();
+}
+function applyNetworkLayout(){
+  for (const n of nodes){ n.fx = undefined; n.fy = undefined; n.fz = undefined; }
+  Graph.d3ReheatSimulation();
+}
+let _layoutFitTimer = null;
+function setLayoutMode(mode){
+  layoutMode = mode;
+  if (mode === "board") applyBoardLayout(); else applyNetworkLayout();
+  refresh();
+  // 보드형은 위치가 즉시 확정되고, 네트워크형은 물리 시뮬레이션이 어느 정도 퍼질 시간이 필요함
+  clearTimeout(_layoutFitTimer);
+  _layoutFitTimer = setTimeout(() => Graph.zoomToFit(400, 60), mode === "board" ? 300 : 1200);
+}
+
 /* ---- 필터 ---- */
 function passes(n){
   if (state.cats.size && !state.cats.has(n.category)) return false;
   if (!state.price.has(n.pricing || "미지정")) return false;
-  if (state.q){
-    const q = state.q.toLowerCase();
-    if (!(String(n.name).toLowerCase().includes(q) || String(n.name_en || "").toLowerCase().includes(q))) return false;
-  }
   return true;
 }
+function searchMatches(){
+  if (!state.q) return [];
+  const q = state.q.toLowerCase();
+  return nodes.filter(n => String(n.name).toLowerCase().includes(q) || String(n.name_en || "").toLowerCase().includes(q));
+}
 function refresh(){
-  const vis = nodes.filter(passes);
+  let vis;
+  if (state.q){
+    // 검색어와 일치하는 AI + 그 AI와 관계선으로 연결된 AI들을 함께 표시 (카테고리 필터는 무시, 요금제 필터는 유지)
+    const keep = new Set(searchMatches().map(n => n.id));
+    for (const l of links){
+      const [a,b] = linkEnds(l);
+      if (keep.has(a)) keep.add(b);
+      if (keep.has(b)) keep.add(a);
+    }
+    vis = nodes.filter(n => keep.has(n.id) && state.price.has(n.pricing || "미지정"));
+  } else {
+    vis = nodes.filter(passes);
+  }
   const ids = new Set(vis.map(n => n.id));
   const vlinks = links.filter(l => { const [a,b] = linkEnds(l); return ids.has(a) && ids.has(b); });
 
@@ -536,6 +673,30 @@ function refresh(){
   $("#hud").textContent = `${vis.length} / ${nodes.length} AI 표시중`;
   document.querySelectorAll("#seoList .seo-cat").forEach(el => {
     el.hidden = state.cats.size ? !state.cats.has(el.dataset.cat) : false;
+  });
+
+  syncCategoryExpansion();
+}
+
+/* ---- 검색어에 해당하는 카테고리를 왼쪽 목록에서 자동으로 펼침 ---- */
+function fillCatBody(body, c){
+  if (body.dataset.filled) return;
+  const items = nodes.filter(n => n.category === c).sort((a,b) => a.name.localeCompare(b.name, "ko"));
+  body.innerHTML = items.map(n => `<button class="tool" type="button" data-go="${n.id}"><span class="dot ${priceClass(n.pricing)}"></span>${esc(n.name)}${n.sponsor ? ' <span class="mini-ad">AD</span>' : ""}</button>`).join("");
+  body.dataset.filled = "1";
+}
+function syncCategoryExpansion(){
+  const matchedCats = new Set(searchMatches().map(n => n.category));
+  document.querySelectorAll("#catTree .cat").forEach(wrap => {
+    const c = wrap.dataset.cat;
+    const isHit = matchedCats.has(c);
+    wrap.classList.toggle("search-hit", isHit);
+    if (isHit){
+      const body = wrap.querySelector(".cat-body");
+      fillCatBody(body, c);
+      body.hidden = false;
+      wrap.classList.add("open");
+    }
   });
 }
 
@@ -562,11 +723,7 @@ function buildSidebar(){
     wrap.classList.toggle("active", on);
     wrap.classList.toggle("open", on);
     body.hidden = !on;
-    if (on && !body.dataset.filled){
-      const items = nodes.filter(n => n.category === c).sort((a,b) => a.name.localeCompare(b.name, "ko"));
-      body.innerHTML = items.map(n => `<button class="tool" type="button" data-go="${n.id}"><span class="dot ${priceClass(n.pricing)}"></span>${esc(n.name)}${n.sponsor ? ' <span class="mini-ad">AD</span>' : ""}</button>`).join("");
-      body.dataset.filled = "1";
-    }
+    if (on) fillCatBody(body, c);
     refresh();
   });
 
@@ -584,6 +741,8 @@ function buildSidebar(){
 
   let dt;
   $("#search").addEventListener("input", e => { clearTimeout(dt); dt = setTimeout(() => { state.q = e.target.value.trim(); refresh(); }, 180); });
+
+  $("#layoutMode").addEventListener("change", e => setLayoutMode(e.target.value));
 
   $("#menuBtn").addEventListener("click", () => $("#sidebar").classList.toggle("open"));
   $("#zIn").addEventListener("click", () => zoomBy(0.75));
@@ -619,6 +778,7 @@ let curNode = null, formRating = 0, sending = false;
 async function openDrawer(n){
   curNode = n; formRating = 0;
   $("#drawer").classList.add("open");
+  resizeGraph();
   $("#drawer").innerHTML = drawerHTML(n, null);
   wireDrawer(n);
   const { data, error } = await sb.from("reviews")
@@ -628,7 +788,7 @@ async function openDrawer(n){
   $("#drawer").innerHTML = drawerHTML(n, error ? [] : (data || []));
   wireDrawer(n);
 }
-function closeDrawer(){ curNode = null; $("#drawer").classList.remove("open"); }
+function closeDrawer(){ curNode = null; $("#drawer").classList.remove("open"); resizeGraph(); }
 
 function drawerHTML(n, reviews){
   const nb = neighbors(n.id);
