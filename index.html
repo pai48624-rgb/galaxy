@@ -169,6 +169,7 @@
 
   .overlay{position:fixed;inset:0;z-index:80;background:rgba(5,5,11,.94);display:flex;align-items:center;
     justify-content:center;padding:24px}
+  .overlay[hidden]{display:none}
   .overlay .box{max-width:520px;background:#0f0f1a;border:1px solid var(--line);border-radius:16px;padding:24px;line-height:1.6}
   .overlay h2{margin:0 0 10px;font-size:17px}
   .overlay code{background:rgba(255,255,255,.08);padding:2px 6px;border-radius:5px;font-size:12px}
@@ -759,6 +760,5 @@ function buildSeoList(){
   }).join("");
 }
 </script>
-<div style="position:fixed;right:5px;bottom:3px;font:10px/1.2 monospace;color:#667;background:rgba(0,0,0,.45);padding:2px 5px;border-radius:4px;z-index:99999;pointer-events:none">build B7 · 2026-09-10 · seed-inline</div>
 </body>
 </html>

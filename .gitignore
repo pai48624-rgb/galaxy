@@ -20,3 +20,8 @@ wrangler.jsonc
 .wrangler/
 dist/*
 !dist/_worker.js
+
+# qa / scratch
+.qa/
+.seed*.json
+.did
