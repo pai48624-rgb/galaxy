@@ -1091,9 +1091,12 @@ function wireSunClicks(){
 /* ---- 세계 도시 지구본: 나라 > 수도(1) > 주요도시(2) 순으로 실제 위경도에 점을 찍어
    지구 표면 위의 "도시 별자리"로 표시(data/world_countries.json). 또 다른 빈 공간에 배치.
    클릭하면 인구·핵심정보를 토스트로 보여줌 ---- */
+// "네트워크형에 왜 지구가 있냐"는 피드백 — 이 지구본은 "지구형" 지도에서만 보이게 강제 숨김.
+// 지구형이 아닐 땐 만들어만 두고 전부 .visible=false — setLayoutMode()가 켜고 끔.
 let worldCities = [];
-const GLOBE_CENTER = new THREE.Vector3(0, 2800, -3400);
-const GLOBE_R = 900;
+let worldGlobeObjects = []; // 지구 표면 위 모든 THREE 오브젝트(구체·라벨·도시점) — 모드 전환 시 한꺼번에 토글
+const GLOBE_CENTER = new THREE.Vector3(0, 0, 0); // "지구형" 레이아웃과 같은 자리(원점)에 겹쳐서 하나의 지구로 보이게
+const GLOBE_R = 380; // EARTH_LAYOUT_R(420)의 별들이 표면 바로 바깥에 놓이도록 살짝 작게
 async function buildWorldCityGlobe(){
   try {
     const res = await fetch("data/world_countries.json");
@@ -1107,6 +1110,7 @@ async function buildWorldCityGlobe(){
       if (pRes.ok) earthUrl = (await pRes.json())?.earth?.url || null;
     } catch (e){ /* 텍스처 없어도 단색 구체로 대체 */ }
 
+    const show = layoutMode === "earth";
     const loader = new THREE.TextureLoader();
     const addGlobe = (tex) => {
       const mat = new THREE.MeshBasicMaterial({
@@ -1114,12 +1118,15 @@ async function buildWorldCityGlobe(){
       });
       const globe = new THREE.Mesh(new THREE.SphereGeometry(GLOBE_R, 48, 48), mat);
       globe.position.copy(GLOBE_CENTER);
+      globe.visible = show;
       Graph.scene().add(globe);
       const label = new SpriteText("🌍 세계 도시 지도 · World Cities");
       label.textHeight = 24; label.color = "#9fd3ff"; label.fontFace = "system-ui, sans-serif";
       label.material.depthWrite = false; label.material.transparent = true; label.material.opacity = 0.85;
       label.position.set(GLOBE_CENTER.x, GLOBE_CENTER.y + GLOBE_R + 60, GLOBE_CENTER.z);
+      label.visible = show;
       Graph.scene().add(label);
+      worldGlobeObjects.push(globe, label);
     };
     if (earthUrl) loader.load(earthUrl, addGlobe, undefined, () => addGlobe(null));
     else addGlobe(null);
@@ -1129,19 +1136,23 @@ async function buildWorldCityGlobe(){
     for (const country of countries){
       const placeCity = (city, isCapital) => {
         if (!city || city.lat == null || city.lon == null) return;
-        const pos = latLonToVec3(city.lat, city.lon, GLOBE_R * 1.01).add(GLOBE_CENTER);
+        const pos = latLonToVec3(city.lat, city.lon, GLOBE_R * 1.03).add(GLOBE_CENTER);
         const spr = new THREE.Sprite(new THREE.SpriteMaterial({
           map: isCapital ? capTex : cityTex, transparent: true, blending: THREE.AdditiveBlending,
         }));
         spr.scale.setScalar(isCapital ? 14 : 8);
         spr.position.copy(pos);
+        spr.visible = show;
         Graph.scene().add(spr);
+        worldGlobeObjects.push(spr);
         if (isCapital){
           const label = new SpriteText(city.name_ko || city.name_en || "");
           label.textHeight = 8; label.color = "#ffe6ad"; label.fontFace = "system-ui, sans-serif";
           label.material.depthWrite = false; label.material.transparent = true; label.material.opacity = 0.75;
           label.position.set(pos.x, pos.y + 16, pos.z);
+          label.visible = show;
           Graph.scene().add(label);
+          worldGlobeObjects.push(label);
         }
         worldCities.push({ mesh: spr, info: { country, city, isCapital } });
       };
@@ -1150,12 +1161,15 @@ async function buildWorldCityGlobe(){
     }
   } catch (e){ console.warn("world city globe skipped", e); }
 }
+function setWorldGlobeVisible(on){
+  for (const o of worldGlobeObjects) o.visible = on;
+}
 function wireGlobeClicks(){
   const dom = Graph.renderer().domElement;
   const raycaster = new THREE.Raycaster();
   const mouse = new THREE.Vector2();
   dom.addEventListener("click", (ev) => {
-    if (!worldCities.length) return;
+    if (layoutMode !== "earth" || !worldCities.length) return; // 지구형일 때만 클릭 인식
     const rect = dom.getBoundingClientRect();
     mouse.x = ((ev.clientX - rect.left) / rect.width) * 2 - 1;
     mouse.y = -((ev.clientY - rect.top) / rect.height) * 2 + 1;
@@ -1466,7 +1480,6 @@ function initGraph(){
   try { buildUnusedConstellations(); } catch (e){ console.warn("unused constellations skipped", e); }
   buildSolarSystem();
   buildAffiliateSuns();
-  buildEarthLayoutSphere();
   buildWorldCityGlobe();
   wireSunClicks();
   wireGlobeClicks();
@@ -1849,24 +1862,8 @@ function applyEarthLayout(){
   }
   Graph.d3ReheatSimulation();
 }
-let earthLayoutSphere = null;
-async function buildEarthLayoutSphere(){
-  try {
-    let earthUrl = null;
-    const res = await fetch("data/planet_textures.json");
-    if (res.ok) earthUrl = (await res.json())?.earth?.url || null;
-    const build = (tex) => {
-      const mat = new THREE.MeshBasicMaterial({
-        map: tex || null, color: tex ? 0xffffff : 0x3a6fb0, transparent: true, opacity: 0.35, depthWrite: false,
-      });
-      earthLayoutSphere = new THREE.Mesh(new THREE.SphereGeometry(EARTH_LAYOUT_R * 0.9, 40, 40), mat);
-      earthLayoutSphere.visible = layoutMode === "earth";
-      Graph.scene().add(earthLayoutSphere);
-    };
-    if (earthUrl) new THREE.TextureLoader().load(earthUrl, build, undefined, () => build(null));
-    else build(null);
-  } catch (e){ console.warn("earth layout sphere skipped", e); }
-}
+// (지구형 레이아웃의 배경 지구는 별도 구체를 또 만들지 않고, 아래 세계 도시 지구본을 그대로 재사용함
+// — "네트워크형에 지구가 보인다"는 피드백 이후 지구 오브젝트를 하나로 통일)
 let _layoutFitTimer = null;
 function setLayoutMode(mode){
   layoutMode = mode;
@@ -1874,7 +1871,7 @@ function setLayoutMode(mode){
   else if (mode === "earth") applyEarthLayout();
   else applyNetworkLayout();
   refresh();
-  if (earthLayoutSphere) earthLayoutSphere.visible = mode === "earth";
+  setWorldGlobeVisible(mode === "earth");
   // 보드형·지구형은 위치가 즉시 확정되고, 네트워크형은 물리 시뮬레이션이 어느 정도 퍼질 시간이 필요함
   clearTimeout(_layoutFitTimer);
   _layoutFitTimer = setTimeout(() => Graph.zoomToFit(400, 60), mode === "network" ? 1200 : 500);
