@@ -1,0 +1,264 @@
+{% extends "base.html" %}
+{% block title %}당첨확인 - 로또 스틸의 법칙{% endblock %}
+{% block content %}
+
+<section class="text-center mb-6">
+  <h1 class="text-3xl font-extrabold mb-2">당첨확인 🔍</h1>
+  <p class="text-gray-500 text-sm">회차를 직접 조회하거나, 로또 용지 QR코드를 스캔해보세요</p>
+</section>
+
+<div class="flex gap-2 mb-6 justify-center">
+  <button id="tab-btn-lookup" onclick="switchCheckTab('lookup')" class="px-5 py-2.5 rounded-full font-bold text-sm bg-indigo-600 text-white">회차 조회</button>
+  <button id="tab-btn-qr" onclick="switchCheckTab('qr')" class="px-5 py-2.5 rounded-full font-bold text-sm bg-gray-100 text-gray-600">QR 스캔</button>
+</div>
+
+<!-- ============ 회차 조회 ============ -->
+<div id="panel-lookup">
+  <section class="bg-white rounded-2xl shadow-md p-6 md:p-8">
+    <div class="flex flex-wrap gap-2 mb-6">
+      <input id="draw-input" type="number" placeholder="회차 번호 입력 (예: 1120)"
+             class="flex-1 min-w-[180px] border border-gray-200 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-400">
+      <button id="lookup-btn" class="px-5 py-2 rounded-xl bg-gray-800 text-white font-semibold hover:bg-gray-900">조회</button>
+      <button id="latest-btn" class="px-5 py-2 rounded-xl bg-indigo-100 text-indigo-700 font-semibold hover:bg-indigo-200">최신 회차</button>
+    </div>
+
+    <div id="draw-result" class="hidden">
+      <p class="text-sm text-gray-500 mb-2">
+        <span id="draw-no" class="font-bold text-gray-800"></span>회차
+        (<span id="draw-date"></span> 추첨)
+      </p>
+      <div class="flex flex-wrap items-center gap-3 mb-2">
+        <div id="draw-balls" class="flex gap-2 flex-wrap"></div>
+        <span class="text-gray-400 font-bold">+</span>
+        <div id="bonus-ball"></div>
+      </div>
+      <p id="prize-info" class="text-xs text-gray-400"></p>
+    </div>
+    <p id="draw-error" class="text-red-500 text-sm hidden"></p>
+  </section>
+</div>
+
+<!-- ============ QR 스캔 ============ -->
+<div id="panel-qr" class="hidden">
+  <div class="bg-amber-50 border border-amber-200 text-amber-800 text-xs rounded-xl p-4 mb-4 leading-relaxed">
+    ⚠️ 동행복권 QR 코드의 정확한 인코딩 규격은 공개되어 있지 않아, 커뮤니티에 알려진 일반적인 패턴으로
+    <b>최선의 추정 파싱</b>을 합니다. 스캔된 원본 텍스트를 함께 보여드리니, 번호가 이상하면 직접 고쳐서 확인해주세요.
+  </div>
+
+  <section class="bg-white rounded-2xl shadow-md p-6 md:p-8 mb-6">
+    <div class="flex flex-col items-center gap-4">
+      <video id="qr-video" class="w-full max-w-sm rounded-xl bg-black" muted playsinline></video>
+      <canvas id="qr-canvas" class="hidden"></canvas>
+      <div class="flex gap-3">
+        <button id="qr-start-btn" class="px-6 py-2.5 rounded-full bg-indigo-600 text-white font-bold hover:bg-indigo-700">📷 카메라 켜기</button>
+        <button id="qr-stop-btn" class="px-6 py-2.5 rounded-full bg-gray-200 text-gray-700 font-bold hidden">중지</button>
+      </div>
+      <p id="qr-status" class="text-xs text-gray-400"></p>
+    </div>
+  </section>
+
+  <section id="qr-result-section" class="bg-white rounded-2xl shadow-md p-6 md:p-8 hidden">
+    <h2 class="font-bold mb-2">스캔 결과</h2>
+    <p class="text-xs text-gray-400 mb-1">원본 텍스트</p>
+    <p id="qr-raw-text" class="text-[11px] break-all bg-gray-50 rounded-lg p-2 mb-4 text-gray-500"></p>
+
+    <div class="grid md:grid-cols-2 gap-4 mb-4">
+      <div>
+        <label class="text-xs font-semibold text-gray-500 mb-1 block">회차 (자동인식, 필요시 수정)</label>
+        <input id="qr-draw-no" type="number" class="w-full border border-gray-200 rounded-xl px-3 py-2">
+      </div>
+    </div>
+
+    <div id="qr-games-list" class="space-y-3 mb-4"></div>
+
+    <p class="text-[11px] text-gray-400">자동 인식이 틀렸다면 위 번호 칸을 직접 눌러서 수정한 뒤 각 게임의 "당첨확인" 버튼을 눌러주세요.</p>
+  </section>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsqr/1.4.0/jsQR.js"></script>
+<script>
+function switchCheckTab(tab) {
+  const isLookup = tab === "lookup";
+  document.getElementById("panel-lookup").classList.toggle("hidden", !isLookup);
+  document.getElementById("panel-qr").classList.toggle("hidden", isLookup);
+  const active = ["bg-indigo-600", "text-white"];
+  const inactive = ["bg-gray-100", "text-gray-600"];
+  document.getElementById("tab-btn-lookup").classList.remove(...active, ...inactive);
+  document.getElementById("tab-btn-qr").classList.remove(...active, ...inactive);
+  document.getElementById("tab-btn-lookup").classList.add(...(isLookup ? active : inactive));
+  document.getElementById("tab-btn-qr").classList.add(...(isLookup ? inactive : active));
+  if (!isLookup) { /* QR 탭 진입 시 자동 시작하지 않음(권한 요청은 버튼 클릭 시) */ }
+  else stopQrScan();
+}
+
+function ballEl(number, color) {
+  const el = document.createElement("div");
+  el.className = `ball ball-sm ball-${color}`;
+  el.textContent = number;
+  return el;
+}
+function renderBalls(container, balls) {
+  container.innerHTML = "";
+  balls.forEach((b, i) => {
+    const el = document.createElement("div");
+    el.className = `ball ball-anim ball-${b.color}`;
+    el.style.animationDelay = `${i * 0.08}s`;
+    el.textContent = b.number;
+    container.appendChild(el);
+  });
+}
+
+/* ---------- 회차 조회 ---------- */
+document.getElementById("lookup-btn").addEventListener("click", () => lookupDraw());
+document.getElementById("draw-input").addEventListener("keydown", (e) => { if (e.key === "Enter") lookupDraw(); });
+document.getElementById("latest-btn").addEventListener("click", async () => {
+  const res = await fetch("/api/latest");
+  await handleDrawResponse(res);
+});
+async function lookupDraw() {
+  const no = document.getElementById("draw-input").value;
+  if (!no) return;
+  const res = await fetch(`/api/draw/${no}`);
+  await handleDrawResponse(res);
+}
+async function handleDrawResponse(res) {
+  const resultBox = document.getElementById("draw-result");
+  const errorBox = document.getElementById("draw-error");
+  const data = await res.json();
+  if (!res.ok) {
+    errorBox.textContent = data.error || "조회 중 오류가 발생했습니다.";
+    errorBox.classList.remove("hidden");
+    resultBox.classList.add("hidden");
+    return;
+  }
+  errorBox.classList.add("hidden");
+  resultBox.classList.remove("hidden");
+  document.getElementById("draw-no").textContent = data.draw_no;
+  document.getElementById("draw-date").textContent = data.draw_date;
+  renderBalls(document.getElementById("draw-balls"), data.balls);
+  renderBalls(document.getElementById("bonus-ball"), [data.bonus_ball]);
+  document.getElementById("prize-info").textContent = data.first_prize_amount
+    ? `1등 ${data.first_prize_count}명 · 1인당 ${Number(data.first_prize_amount).toLocaleString()}원` : "";
+}
+
+/* ---------- QR 스캔 ---------- */
+let qrStream = null;
+let qrScanning = false;
+
+document.getElementById("qr-start-btn").addEventListener("click", startQrScan);
+document.getElementById("qr-stop-btn").addEventListener("click", stopQrScan);
+
+async function startQrScan() {
+  const video = document.getElementById("qr-video");
+  const statusEl = document.getElementById("qr-status");
+  try {
+    qrStream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } });
+  } catch (e) {
+    statusEl.textContent = "카메라 권한이 필요합니다. 브라우저 설정을 확인해주세요.";
+    return;
+  }
+  video.srcObject = qrStream;
+  await video.play();
+  document.getElementById("qr-start-btn").classList.add("hidden");
+  document.getElementById("qr-stop-btn").classList.remove("hidden");
+  statusEl.textContent = "QR코드를 카메라 중앙에 비춰주세요...";
+  qrScanning = true;
+  requestAnimationFrame(scanLoop);
+}
+
+function stopQrScan() {
+  qrScanning = false;
+  if (qrStream) { qrStream.getTracks().forEach(t => t.stop()); qrStream = null; }
+  document.getElementById("qr-start-btn").classList.remove("hidden");
+  document.getElementById("qr-stop-btn").classList.add("hidden");
+}
+
+function scanLoop() {
+  if (!qrScanning) return;
+  const video = document.getElementById("qr-video");
+  const canvas = document.getElementById("qr-canvas");
+  if (video.readyState === video.HAVE_ENOUGH_DATA) {
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+    const ctx = canvas.getContext("2d");
+    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    const code = jsQR(imageData.data, imageData.width, imageData.height);
+    if (code && code.data) {
+      document.getElementById("qr-status").textContent = "인식 완료!";
+      stopQrScan();
+      handleQrText(code.data);
+      return;
+    }
+  }
+  requestAnimationFrame(scanLoop);
+}
+
+async function handleQrText(rawText) {
+  const res = await fetch("/api/qr/parse", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ raw_text: rawText })
+  });
+  const data = await res.json();
+
+  document.getElementById("qr-result-section").classList.remove("hidden");
+  document.getElementById("qr-raw-text").textContent = data.raw_text;
+  document.getElementById("qr-draw-no").value = data.draw_no || "";
+
+  const gamesBox = document.getElementById("qr-games-list");
+  gamesBox.innerHTML = "";
+  const games = (data.games && data.games.length) ? data.games : [[1,2,3,4,5,6]];
+
+  games.forEach((nums, idx) => {
+    const row = document.createElement("div");
+    row.className = "border border-gray-100 rounded-xl p-4";
+    row.innerHTML = `
+      <p class="text-xs font-bold text-gray-400 mb-2">게임 ${String.fromCharCode(65+idx)}</p>
+      <div class="flex flex-wrap gap-2 mb-3 game-numbers-input">
+        ${nums.map((n, i) => `<input type="number" min="1" max="45" value="${n}" data-idx="${i}" class="w-14 border border-gray-200 rounded-lg px-2 py-1 text-center num-input">`).join("")}
+      </div>
+      <button class="check-game-btn px-4 py-1.5 rounded-full bg-emerald-600 text-white text-xs font-bold hover:bg-emerald-700">당첨확인</button>
+      <div class="check-result mt-3 text-sm"></div>
+    `;
+    const btn = row.querySelector(".check-game-btn");
+    btn.addEventListener("click", () => checkGameAgainstDraw(row));
+    gamesBox.appendChild(row);
+  });
+}
+
+async function checkGameAgainstDraw(row) {
+  const drawNo = document.getElementById("qr-draw-no").value;
+  if (!drawNo) { alert("회차를 입력해주세요."); return; }
+  const inputs = row.querySelectorAll(".num-input");
+  const userNums = Array.from(inputs).map(i => parseInt(i.value, 10));
+  if (userNums.some(isNaN) || new Set(userNums).size !== 6) {
+    alert("1~45 사이 중복 없는 6개 번호를 입력해주세요.");
+    return;
+  }
+
+  const res = await fetch(`/api/draw/${drawNo}`);
+  const draw = await res.json();
+  if (!res.ok) { alert(draw.error); return; }
+
+  const winning = new Set(draw.numbers);
+  const bonus = draw.bonus;
+  const matchCount = userNums.filter(n => winning.has(n)).length;
+  let rank = 0, label = "낙첨";
+  if (matchCount === 6) { rank = 1; label = "1등 🎉"; }
+  else if (matchCount === 5 && userNums.includes(bonus)) { rank = 2; label = "2등 🎉"; }
+  else if (matchCount === 5) { rank = 3; label = "3등"; }
+  else if (matchCount === 4) { rank = 4; label = "4등"; }
+  else if (matchCount === 3) { rank = 5; label = "5등"; }
+
+  const resultBox = row.querySelector(".check-result");
+  resultBox.innerHTML = `
+    <span class="font-bold ${rank > 0 && rank <= 2 ? 'text-rose-500' : 'text-gray-700'}">${label}</span>
+    <span class="text-gray-400 text-xs"> (${matchCount}개 일치${userNums.includes(bonus) ? ' + 보너스 일치' : ''}, ${draw.draw_no}회차 기준)</span>
+  `;
+}
+</script>
+{% endblock %}

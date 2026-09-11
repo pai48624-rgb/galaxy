@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% block title %}로또 스틸의 법칙 | 당신의 로또를 빌려갈게{% endblock %}</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body { font-family: -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; }
+  .ball {
+    display:inline-flex; align-items:center; justify-content:center;
+    width:52px; height:52px; border-radius:9999px;
+    font-weight:800; font-size:1.1rem; color:white;
+    box-shadow: inset -3px -4px 6px rgba(0,0,0,0.25), 0 3px 6px rgba(0,0,0,0.25);
+  }
+  .ball-sm { width:38px; height:38px; font-size:0.85rem; }
+  .ball-yellow { background: linear-gradient(145deg,#ffd452,#f5a623); color:#5a3d00; }
+  .ball-blue   { background: linear-gradient(145deg,#5aa9ff,#1f6feb); }
+  .ball-red    { background: linear-gradient(145deg,#ff6b6b,#e63946); }
+  .ball-gray   { background: linear-gradient(145deg,#9aa0a6,#5f6368); }
+  .ball-green  { background: linear-gradient(145deg,#4cd97b,#149c4a); }
+  @keyframes pop { 0%{transform:scale(0);opacity:0;} 70%{transform:scale(1.15);} 100%{transform:scale(1);opacity:1;} }
+  .ball-anim { animation: pop 0.45s ease-out both; }
+</style>
+</head>
+<body class="bg-gradient-to-b from-indigo-50 to-white min-h-screen text-gray-800">
+
+<nav class="bg-white/80 backdrop-blur sticky top-0 z-10 shadow-sm">
+  <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="/" class="flex items-baseline gap-2">
+      <span class="text-xl font-extrabold text-indigo-600">😏 로또 스틸의 법칙</span>
+      <span class="hidden sm:inline text-xs text-gray-400">당신의 로또를 빌려갈게</span>
+    </a>
+    <div class="space-x-4 text-sm font-semibold">
+      <a href="/" class="{{ 'text-indigo-600' if request.path == '/' else 'text-gray-500' }} hover:text-indigo-600">행운번호</a>
+      <a href="/generate" class="{{ 'text-indigo-600' if request.path == '/generate' else 'text-gray-500' }} hover:text-indigo-600">번호생성</a>
+      <a href="/check" class="{{ 'text-indigo-600' if request.path == '/check' else 'text-gray-500' }} hover:text-indigo-600">당첨확인</a>
+      <a href="/stats" class="{{ 'text-indigo-600' if request.path == '/stats' else 'text-gray-500' }} hover:text-indigo-600">통계·궁합수</a>
+      <a href="/my" class="{{ 'text-indigo-600' if request.path == '/my' else 'text-gray-500' }} hover:text-indigo-600">내 번호함</a>
+    </div>
+  </div>
+</nav>
+
+<main class="max-w-5xl mx-auto px-4 py-8">
+  {% block content %}{% endblock %}
+</main>
+
+<footer class="text-center text-xs text-gray-400 py-8">
+  🎱 로또 스틸의 법칙 — 참고·재미용 서비스이며 실제 당첨 확률에는 영향을 주지 않습니다.
+  (동행복권 공식 사이트: dhlottery.co.kr)
+</footer>
+
+{% block scripts %}{% endblock %}
+</body>
+</html>

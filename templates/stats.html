@@ -1,0 +1,190 @@
+{% extends "base.html" %}
+{% block title %}통계 · 예측 - 로또 스틸의 법칙{% endblock %}
+
+{% block content %}
+<section class="text-center mb-8">
+  <h1 class="text-3xl font-extrabold mb-2">번호 통계 & 참고 예측 📊</h1>
+  <p class="text-gray-500 text-sm">
+    총 <span id="total-draws" class="font-bold text-indigo-600">-</span>회차 데이터를 기준으로 분석했어요.
+  </p>
+</section>
+
+<div class="bg-indigo-50 border border-indigo-100 text-indigo-700 text-xs rounded-xl p-4 mb-8 leading-relaxed">
+  ⚠️ 로또는 매 회차 완전히 독립적인 무작위 추첨입니다. 아래 통계는 흥미로운 참고 자료일 뿐,
+  특정 번호가 나올 확률을 실제로 높이거나 낮추지 않습니다. 모든 조합의 당첨 확률은 항상 동일합니다(1/8,145,060).
+</div>
+
+<div class="grid md:grid-cols-2 gap-6 mb-8">
+  <div class="bg-white rounded-2xl shadow-md p-6">
+    <h2 class="font-bold mb-4">🔥 가장 많이 나온 번호 TOP 10</h2>
+    <div id="hot-list" class="flex flex-wrap gap-2"></div>
+  </div>
+  <div class="bg-white rounded-2xl shadow-md p-6">
+    <h2 class="font-bold mb-4">🧊 가장 적게 나온 번호 TOP 10</h2>
+    <div id="cold-list" class="flex flex-wrap gap-2"></div>
+  </div>
+</div>
+
+<div class="bg-white rounded-2xl shadow-md p-6 mb-8">
+  <h2 class="font-bold mb-4">⏳ 오랫동안 안 나온 번호 (미출현 기간 TOP 10)</h2>
+  <div id="overdue-list" class="flex flex-wrap gap-3"></div>
+</div>
+
+<div class="bg-white rounded-2xl shadow-md p-6 mb-8">
+  <h2 class="font-bold mb-4">🤝 궁합수 TOP 15 (자주 함께 나온 번호 쌍)</h2>
+  <div id="pairs-list" class="space-y-2"></div>
+</div>
+
+<div class="bg-white rounded-2xl shadow-md p-6 mb-8">
+  <h2 class="font-bold mb-2">🔁 이월수 분석</h2>
+  <p id="carryover-summary" class="text-xs text-gray-400 mb-4"></p>
+  <div id="carryover-list" class="flex flex-wrap gap-2"></div>
+</div>
+
+<div class="bg-white rounded-2xl shadow-md p-6 mb-8">
+  <h2 class="font-bold mb-2">📈 번호별 전체 출현 빈도</h2>
+  <canvas id="freq-chart" height="90"></canvas>
+</div>
+
+<div class="bg-white rounded-2xl shadow-md p-6">
+  <div class="flex items-center justify-between mb-4">
+    <h2 class="font-bold">🔮 이번 달 참고 추천 조합 (하이브리드 알고리즘 5세트)</h2>
+    <button id="reload-monthly" class="text-xs px-3 py-1.5 rounded-full bg-indigo-100 text-indigo-700 font-semibold">다시 뽑기</button>
+  </div>
+  <div id="monthly-sets" class="space-y-3"></div>
+  <p class="text-[11px] text-gray-400 mt-4">
+    출현 빈도와 미출현 기간을 절반씩 반영한 가중 무작위 조합입니다. 당첨을 보장하지 않는 참고용 기능입니다.
+  </p>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+<script>
+function ball(number, color, size="ball-sm") {
+  const el = document.createElement("div");
+  el.className = `ball ${size} ball-${color}`;
+  el.textContent = number;
+  return el;
+}
+
+async function loadStats() {
+  const res = await fetch("/api/stats");
+  const data = await res.json();
+
+  document.getElementById("total-draws").textContent = data.total_draws;
+
+  const hotList = document.getElementById("hot-list");
+  data.hot_numbers.forEach(item => {
+    const wrap = document.createElement("div");
+    wrap.className = "flex flex-col items-center gap-1";
+    wrap.appendChild(ball(item.number, item.color));
+    const label = document.createElement("span");
+    label.className = "text-[10px] text-gray-400";
+    label.textContent = `${item.count}회`;
+    wrap.appendChild(label);
+    hotList.appendChild(wrap);
+  });
+
+  const coldList = document.getElementById("cold-list");
+  data.cold_numbers.forEach(item => {
+    const wrap = document.createElement("div");
+    wrap.className = "flex flex-col items-center gap-1";
+    wrap.appendChild(ball(item.number, item.color));
+    const label = document.createElement("span");
+    label.className = "text-[10px] text-gray-400";
+    label.textContent = `${item.count}회`;
+    wrap.appendChild(label);
+    coldList.appendChild(wrap);
+  });
+
+  const overdueList = document.getElementById("overdue-list");
+  data.overdue_numbers.forEach(item => {
+    const wrap = document.createElement("div");
+    wrap.className = "flex flex-col items-center gap-1";
+    wrap.appendChild(ball(item.number, item.color));
+    const label = document.createElement("span");
+    label.className = "text-[10px] text-gray-400";
+    label.textContent = `${item.gap}회째 미출현`;
+    wrap.appendChild(label);
+    overdueList.appendChild(wrap);
+  });
+
+  const labels = data.frequency_all.map(d => d.number);
+  const counts = data.frequency_all.map(d => d.count);
+  new Chart(document.getElementById("freq-chart"), {
+    type: "bar",
+    data: {
+      labels,
+      datasets: [{ label: "출현 횟수", data: counts, backgroundColor: "#6366f1" }]
+    },
+    options: {
+      plugins: { legend: { display: false } },
+      scales: { x: { ticks: { font: { size: 9 } } } }
+    }
+  });
+}
+
+async function loadMonthly() {
+  const res = await fetch("/api/generate/monthly");
+  const data = await res.json();
+  const box = document.getElementById("monthly-sets");
+  box.innerHTML = "";
+  data.sets.forEach((set, idx) => {
+    const row = document.createElement("div");
+    row.className = "flex items-center gap-3 bg-gray-50 rounded-xl px-4 py-3";
+    const label = document.createElement("span");
+    label.className = "text-xs font-bold text-gray-400 w-14";
+    label.textContent = `조합 ${idx + 1}`;
+    row.appendChild(label);
+    const ballsWrap = document.createElement("div");
+    ballsWrap.className = "flex gap-2";
+    set.balls.forEach(b => ballsWrap.appendChild(ball(b.number, b.color)));
+    row.appendChild(ballsWrap);
+    box.appendChild(row);
+  });
+}
+
+document.getElementById("reload-monthly").addEventListener("click", loadMonthly);
+
+loadStats();
+loadMonthly();
+loadPairs();
+
+async function loadPairs() {
+  const res = await fetch("/api/stats/pairs");
+  const data = await res.json();
+
+  const pairsBox = document.getElementById("pairs-list");
+  data.top_pairs.forEach(p => {
+    const row = document.createElement("div");
+    row.className = "flex items-center gap-3";
+    const ballsWrap = document.createElement("div");
+    ballsWrap.className = "flex gap-1";
+    p.pair.forEach((n, i) => ballsWrap.appendChild(ball(n, p.colors[i])));
+    row.appendChild(ballsWrap);
+    const label = document.createElement("span");
+    label.className = "text-xs text-gray-400";
+    label.textContent = `함께 ${p.count}회 출현`;
+    row.appendChild(label);
+    pairsBox.appendChild(row);
+  });
+
+  const c = data.carryover;
+  document.getElementById("carryover-summary").textContent =
+    `연속 두 회차(${c.compared_draw_pairs}쌍) 평균 ${c.avg_carryover_per_draw}개 번호가 그대로 이월돼요.`;
+  const carryBox = document.getElementById("carryover-list");
+  c.top_carryover_numbers.forEach(item => {
+    const wrap = document.createElement("div");
+    wrap.className = "flex flex-col items-center gap-1";
+    wrap.appendChild(ball(item.number, item.color));
+    const label = document.createElement("span");
+    label.className = "text-[10px] text-gray-400";
+    label.textContent = `${item.count}회 이월`;
+    wrap.appendChild(label);
+    carryBox.appendChild(wrap);
+  });
+}
+</script>
+{% endblock %}

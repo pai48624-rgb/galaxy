@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+{% block title %}내 번호함 - 로또 스틸의 법칙{% endblock %}
+{% block content %}
+
+<section class="text-center mb-6">
+  <h1 class="text-3xl font-extrabold mb-2">내 번호함 🗂️</h1>
+  <p class="text-gray-500 text-sm">저장해둔 번호를 관리하고, 원하는 회차로 바로 당첨확인 해보세요</p>
+</section>
+
+<section class="bg-white rounded-2xl shadow-md p-6 md:p-8 mb-6">
+  <h2 class="font-bold mb-4">번호 직접 추가</h2>
+  <div class="flex flex-wrap gap-2 mb-3">
+    {% for i in range(6) %}
+    <input type="number" min="1" max="45" class="manual-num w-16 border border-gray-200 rounded-lg px-2 py-2 text-center">
+    {% endfor %}
+    <input id="manual-memo" type="text" placeholder="메모 (선택)" class="flex-1 min-w-[140px] border border-gray-200 rounded-lg px-3 py-2">
+    <button id="manual-add-btn" class="px-5 py-2 rounded-xl bg-indigo-600 text-white font-semibold hover:bg-indigo-700">추가</button>
+  </div>
+  <p class="text-[11px] text-gray-400">1~45 사이 중복 없는 6개 번호를 입력해주세요.</p>
+</section>
+
+<section id="saved-list" class="space-y-4"></section>
+<p id="empty-msg" class="text-center text-gray-400 text-sm hidden py-10">아직 저장된 번호가 없어요. 행운번호나 번호생성 페이지에서 저장해보세요!</p>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+function ball(number, color) {
+  const el = document.createElement("div");
+  el.className = `ball ball-sm ball-${color}`;
+  el.textContent = number;
+  return el;
+}
+
+async function loadSaved() {
+  const res = await fetch("/api/saved");
+  const data = await res.json();
+  const list = document.getElementById("saved-list");
+  list.innerHTML = "";
+
+  if (!data.items.length) {
+    document.getElementById("empty-msg").classList.remove("hidden");
+    return;
+  }
+  document.getElementById("empty-msg").classList.add("hidden");
+
+  data.items.forEach(item => {
+    const card = document.createElement("div");
+    card.className = "bg-white rounded-2xl shadow-md p-5";
+
+    const ballsWrap = document.createElement("div");
+    ballsWrap.className = "flex gap-2 mb-2 flex-wrap";
+    item.balls.forEach(b => ballsWrap.appendChild(ball(b.number, b.color)));
+
+    const meta = document.createElement("p");
+    meta.className = "text-xs text-gray-400 mb-3";
+    meta.textContent = `${item.memo || "메모 없음"} · ${item.created_at} · 출처: ${sourceLabel(item.source)}`;
+
+    const controls = document.createElement("div");
+    controls.className = "flex flex-wrap items-center gap-2";
+    controls.innerHTML = `
+      <input type="number" placeholder="회차(생략시 최신)" class="draw-no-input w-36 border border-gray-200 rounded-lg px-2 py-1.5 text-sm">
+      <button class="check-btn px-4 py-1.5 rounded-full bg-emerald-600 text-white text-xs font-bold hover:bg-emerald-700">당첨확인</button>
+      <button class="delete-btn px-4 py-1.5 rounded-full bg-rose-50 text-rose-500 text-xs font-bold hover:bg-rose-100">삭제</button>
+    `;
+
+    const resultBox = document.createElement("div");
+    resultBox.className = "check-result mt-3 text-sm";
+    if (item.last_check_result) {
+      renderCheckResult(resultBox, item.last_check_result);
+    }
+
+    controls.querySelector(".check-btn").addEventListener("click", async () => {
+      const drawNo = controls.querySelector(".draw-no-input").value;
+      const url = drawNo ? `/api/saved/${item.id}/check?draw_no=${drawNo}` : `/api/saved/${item.id}/check`;
+      const res = await fetch(url);
+      const result = await res.json();
+      if (!res.ok) { alert(result.error); return; }
+      renderCheckResult(resultBox, result);
+    });
+
+    controls.querySelector(".delete-btn").addEventListener("click", async () => {
+      if (!confirm("이 번호를 삭제할까요?")) return;
+      await fetch(`/api/saved/${item.id}`, { method: "DELETE" });
+      loadSaved();
+    });
+
+    card.appendChild(ballsWrap);
+    card.appendChild(meta);
+    card.appendChild(controls);
+    card.appendChild(resultBox);
+    list.appendChild(card);
+  });
+}
+
+function sourceLabel(source) {
+  return { personal: "행운번호", generate: "번호생성기", manual: "직접입력" }[source] || source;
+}
+
+function renderCheckResult(box, result) {
+  const colorCls = result.rank > 0 && result.rank <= 3 ? "text-rose-500" : "text-gray-700";
+  box.innerHTML = `
+    <span class="font-bold ${colorCls}">${result.rank_label}</span>
+    <span class="text-gray-400 text-xs"> (${result.match_count}개 일치${result.bonus_matched ? " + 보너스 일치" : ""}, ${result.draw_no}회차 기준)</span>
+  `;
+}
+
+document.getElementById("manual-add-btn").addEventListener("click", async () => {
+  const inputs = document.querySelectorAll(".manual-num");
+  const numbers = Array.from(inputs).map(i => parseInt(i.value, 10));
+  if (numbers.some(isNaN) || new Set(numbers).size !== 6 || Math.min(...numbers) < 1 || Math.max(...numbers) > 45) {
+    alert("1~45 사이 중복 없는 6개 번호를 입력해주세요.");
+    return;
+  }
+  const memo = document.getElementById("manual-memo").value;
+  const res = await fetch("/api/saved", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ numbers, memo, source: "manual" })
+  });
+  const data = await res.json();
+  if (!res.ok) { alert(data.error); return; }
+  inputs.forEach(i => i.value = "");
+  document.getElementById("manual-memo").value = "";
+  loadSaved();
+});
+
+loadSaved();
+</script>
+{% endblock %}
