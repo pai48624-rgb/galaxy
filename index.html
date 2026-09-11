@@ -385,7 +385,7 @@ async function selectAll(table, cols){
 
 let nodes = [], links = [], nodeById = new Map(), cats = [];
 const state = { cats: new Set(), price: new Set(["무료","부분유료","유료","미지정"]), q: "" };
-let Graph, SHOW_LABELS = false, layoutMode = "network", didInitialFit = false, userTouchedCamera = false, wasSearching = false, _searchFitTimer = null;
+let Graph, SHOW_LABELS = false, layoutMode = "network", didInitialFit = false, userTouchedCamera = false, wasSearching = false, _searchFitTimer = null, _catFocusTimer = null;
 
 const linkEnds = l => [typeof l.source === "object" ? l.source.id : l.source,
                        typeof l.target === "object" ? l.target.id : l.target];
@@ -557,10 +557,10 @@ function starTexture(hue){
   // 흰색 중심점은 아주 작게만 두고, 카테고리 색이 별 전체에서 또렷하게 보이도록 채도/범위를 키움
   const g = ctx.createRadialGradient(cx, cy, 0, cx, cy, s / 2);
   g.addColorStop(0, "rgba(255,255,255,1)");
-  g.addColorStop(0.05, `hsla(${hue},95%,75%,1)`);
-  g.addColorStop(0.30, `hsla(${hue},95%,62%,.95)`);
-  g.addColorStop(0.60, `hsla(${hue},92%,52%,.5)`);
-  g.addColorStop(1, `hsla(${hue},92%,45%,0)`);
+  g.addColorStop(0.02, `hsla(${hue},100%,78%,1)`);
+  g.addColorStop(0.22, `hsla(${hue},100%,64%,1)`);
+  g.addColorStop(0.50, `hsla(${hue},95%,54%,.65)`);
+  g.addColorStop(1, `hsla(${hue},95%,45%,0)`);
   ctx.fillStyle = g; ctx.fillRect(0, 0, s, s);
   ctx.globalCompositeOperation = "lighter";
   ctx.strokeStyle = "rgba(255,255,255,.5)";
@@ -602,7 +602,7 @@ function nodeObject(n){
   return g;
 }
 
-/* ---- 카테고리 대표 그룹에 별자리 이름 + 연결선(연상 가능한 실제 모양) ---- */
+/* ---- 모든 카테고리 그룹에 이름표 + 연결선. 실제 별자리 이름이 있는 대표 그룹은 더 크고 밝게 ---- */
 let constLabels = [];
 function buildConstellationLabels(){
   for (const { sprite, line } of constLabels){
@@ -610,29 +610,34 @@ function buildConstellationLabels(){
     Graph.scene().remove(line);
   }
   constLabels = [];
-  for (const [c, name] of catShapeName){
-    // assignConstellationShapes()와 반드시 같은 정렬 순서(id순) — 별자리 순서대로 이어야 모양이 나옴
+  for (const { c } of cats){
+    // assignConstellationShapes()와 반드시 같은 정렬 순서(id순) — 모양대로 이어야 별자리처럼 보임
     const members = nodes.filter(n => n.category === c).sort((a,b) => a.id - b.id);
+    const constName = catShapeName.get(c);
+    const labelText = constName ? `✦ ${constName}(${c})` : c;
 
-    const t = new SpriteText(`✦ ${name}`);
-    t.textHeight = 30; // 전체 지도를 축소해서 봐도 읽히도록 큼직하게(아래에서 거리에 따라 재조정됨)
-    t.color = "#fff3d8";
+    const t = new SpriteText(labelText);
+    t.textHeight = constName ? 30 : 19; // 전체 지도를 축소해서 봐도 읽히도록(아래에서 거리에 따라 재조정됨)
+    t.color = constName ? "#fff3d8" : "#cfd8f5";
     t.fontFace = "system-ui, sans-serif";
     t.material.depthWrite = false;
     t.material.depthTest = false;
     t.material.transparent = true;
-    t.material.opacity = 0.95;
+    t.material.opacity = constName ? 0.95 : 0.78;
     Graph.scene().add(t);
     const baseScale = t.scale.clone();
 
+    // 그룹 윤곽선도 그 카테고리 색으로 — 별과 마찬가지로 그룹마다 다른 색이 보이도록
+    const hue = catHue(c);
     const lineGeo = new THREE.BufferGeometry();
     lineGeo.setAttribute("position", new THREE.BufferAttribute(new Float32Array(members.length * 3), 3));
     const line = new THREE.Line(lineGeo, new THREE.LineBasicMaterial({
-      color: 0xcfe0ff, transparent: true, opacity: 0.4, depthWrite: false,
+      color: new THREE.Color(`hsl(${hue}, 75%, 72%)`), transparent: true,
+      opacity: constName ? 0.5 : 0.24, depthWrite: false,
     }));
     Graph.scene().add(line);
 
-    constLabels.push({ sprite: t, line, members, baseScale });
+    constLabels.push({ sprite: t, line, members, baseScale, c });
   }
 }
 // 카메라가 가까이 갈수록 라벨을 비례해서 축소 — 화면상 크기가 거리와 상관없이 일정하게(=너무 커지지 않게) 유지됨
@@ -657,6 +662,16 @@ function updateConstellationLabels(){
   }
 }
 
+// 관계선도 양쪽 AI가 속한 카테고리 색을 섞어서 다양하게 — 고정 2색 대신 조합마다 다른 색이 나옴
+function linkHue(l){
+  const [aId, bId] = linkEnds(l);
+  const a = nodeById.get(aId), b = nodeById.get(bId);
+  if (!a || !b) return 0;
+  const ha = catHue(a.category), hb = catHue(b.category);
+  const diff = ((hb - ha + 540) % 360) - 180; // 원형 최단 각도차
+  return (ha + diff / 2 + 360) % 360;
+}
+
 function initGraph(){
   Graph = ForceGraph3D()($("#graph"))
     .backgroundColor("#05050b")
@@ -665,7 +680,7 @@ function initGraph(){
     .nodeLabel(n => `${esc(n.name)}${n.sponsor ? " · 스폰서" : ""}`)
     .nodeThreeObjectExtend(false)
     .nodeThreeObject(nodeObject)
-    .linkColor(l => l.kind === "alternative" ? "#f0b429" : "#8fd6c4")
+    .linkColor(l => `hsl(${linkHue(l)} ${l.kind === "alternative" ? "70% 58%" : "85% 68%"})`)
     .linkWidth(l => l.kind === "alternative" ? 0.6 : 1.1)
     .linkOpacity(0.85)
     .linkDirectionalParticleWidth(1.6)
@@ -746,6 +761,25 @@ function focusNode(id){
   );
 }
 
+/* ---- 멀리/뒤쪽에 있는 작은 성단도 카테고리 클릭 한 번으로 앞으로 가져와서 크게 보기 ---- */
+function focusCategory(c){
+  const members = nodes.filter(n => n.category === c && n.x != null);
+  if (!members.length) return;
+  userTouchedCamera = true;
+  let cx = 0, cy = 0, cz = 0;
+  for (const n of members){ cx += n.x; cy += n.y; cz += (n.z || 0); }
+  cx /= members.length; cy /= members.length; cz /= members.length;
+  let maxR = 0;
+  for (const n of members){ const r = Math.hypot(n.x - cx, n.y - cy, (n.z || 0) - cz); if (r > maxR) maxR = r; }
+  const dist = Math.max(200, maxR * 2.6);
+  const dirLen = Math.hypot(cx, cy, cz) || 1;
+  const ux = cx / dirLen, uy = cy / dirLen, uz = cz / dirLen;
+  Graph.cameraPosition(
+    { x: cx + ux * dist, y: cy + uy * dist, z: cz + uz * dist },
+    { x: cx, y: cy, z: cz }, 1400
+  );
+}
+
 /* ---- 캔버스 크기: 우측 드로어가 열리면 남는 영역 기준으로 다시 계산 ---- */
 function resizeGraph(){
   if (!Graph) return;
@@ -813,6 +847,14 @@ function refresh(){
   }
   const ids = new Set(vis.map(n => n.id));
   const vlinks = links.filter(l => { const [a,b] = linkEnds(l); return ids.has(a) && ids.has(b); });
+
+  // 필터로 가려진 카테고리는 별자리 이름표/윤곽선도 함께 숨김(별 없이 선만 둥둥 떠 보이는 것 방지)
+  const visCats = new Set(vis.map(n => n.category));
+  for (const entry of constLabels){
+    const show = visCats.has(entry.c);
+    entry.sprite.visible = show;
+    entry.line.visible = show;
+  }
 
   // 검색 결과처럼 노드 수가 적을 때는 서로 더 멀리 밀어내서 연결관계가 겹쳐 보이지 않게 함
   const searching = !!state.q;
@@ -887,6 +929,11 @@ function buildSidebar(){
     body.hidden = !on;
     if (on) fillCatBody(body, c);
     refresh();
+    if (on){
+      // 필터가 반영되어 별들이 새 자리로 좀 퍼진 뒤에 측정해야 카메라가 엉뚱한 빈 자리를 보지 않음
+      clearTimeout(_catFocusTimer);
+      _catFocusTimer = setTimeout(() => focusCategory(c), 550);
+    }
   });
 
   $("#catTree").addEventListener("click", e => {
