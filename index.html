@@ -252,6 +252,7 @@
       <div id="graph"></div>
       <div id="hud">불러오는 중…</div>
       <div id="zoom">
+        <button id="soundBtn" aria-label="배경음 켜기/끄기" aria-pressed="false">🔇</button>
         <button id="zIn" aria-label="확대">+</button>
         <button id="zOut" aria-label="축소">−</button>
         <button id="zReset" aria-label="전체 별 한눈에 보기"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/></svg></button>
@@ -488,21 +489,28 @@ function mulberry32(a){
   };
 }
 function hashStr(s){ let h = 0; for (const c of String(s)) h = (h * 31 + c.charCodeAt(0)) >>> 0; return h; }
+const SHAPE_SCALE = 2.1; // 별 사이 간격이 너무 좁다는 피드백 반영 — 모양은 그대로 두고 전체적으로 넓힘
 function shapeOffsets(n, seed){
-  if (n <= 1) return [[0,0,0]];
-  if (n === 2) return [[-30,0,0],[30,0,0]];
-  if (CONST_TEMPLATES[n]) return CONST_TEMPLATES[n];
-  // 미리 만든 모양이 없는 개수라면, 시드 고정 무작위 지그재그 경로로 "덩어리"가 아닌 별자리 느낌의 배치를 만듦
-  const rnd = mulberry32(seed);
-  const pts = []; let x = 0, y = 0, ang = rnd() * Math.PI * 2;
-  for (let i = 0; i < n; i++){
-    pts.push([x, y, (rnd() - 0.5) * 30]);
-    ang += (rnd() - 0.5) * 2.4;
-    const step = 24 + rnd() * 22;
-    x += Math.cos(ang) * step; y += Math.sin(ang) * step;
+  let pts;
+  if (n <= 1) pts = [[0,0,0]];
+  else if (n === 2) pts = [[-30,0,0],[30,0,0]];
+  else if (CONST_TEMPLATES[n]) pts = CONST_TEMPLATES[n];
+  else {
+    // 미리 만든 모양이 없는 개수(주로 큰 카테고리)는 해바라기씨 나선형(golden-angle spiral)으로 배치.
+    // 지그재그 무작위 경로는 큰 그룹에서 국소적으로 뭉쳐 라벨/이름이 서로 겹치는 문제가 있었음 —
+    // 나선형은 개수(n)가 많을수록 반경이 sqrt(n)으로 자연히 넓어지면서 항상 고르게 퍼짐
+    const rnd = mulberry32(seed);
+    const golden = 2.399963229728653; // 137.5도(라디안)
+    const jitter = rnd() * Math.PI * 2;
+    const raw = [];
+    for (let i = 0; i < n; i++){
+      const r = 15 * Math.sqrt(i + 0.5);
+      const theta = i * golden + jitter;
+      raw.push([r * Math.cos(theta), r * Math.sin(theta), (rnd() - 0.5) * 26]);
+    }
+    pts = raw;
   }
-  const cx = pts.reduce((s,p) => s + p[0], 0) / n, cy = pts.reduce((s,p) => s + p[1], 0) / n;
-  return pts.map(p => [p[0] - cx, p[1] - cy, p[2]]);
+  return pts.map(p => [p[0] * SHAPE_SCALE, p[1] * SHAPE_SCALE, p[2] * SHAPE_SCALE]);
 }
 let catShapeName = new Map(); // category -> 별자리 이름(있는 경우만)
 function assignConstellationShapes(){
@@ -617,6 +625,15 @@ function buildConstellationLabels(){
     const constName = catShapeName.get(c);
     const labelText = constName ? `✦ ${constName}(${c})` : c;
 
+    // 그룹 크기(별자리 모양의 반경)만큼 라벨을 위로 띄움 — 안 그러면 별 많은 큰 그룹은
+    // 라벨이 한가운데 별들 속에 파묻혀 사실상 안 보이게 됨
+    let shapeR = 40;
+    for (const m of members){
+      const s = m.__shape || [0, 0, 0];
+      const r = Math.hypot(s[0], s[1], s[2]);
+      if (r > shapeR) shapeR = r;
+    }
+
     const t = new SpriteText(labelText);
     t.textHeight = constName ? 30 : 22; // 전체 지도를 축소해서 봐도 읽히도록(아래에서 거리에 따라 재조정됨)
     t.color = constName ? "#fff3d8" : "#dbe2f8";
@@ -638,14 +655,14 @@ function buildConstellationLabels(){
     }));
     Graph.scene().add(line);
 
-    constLabels.push({ sprite: t, line, members, baseScale, c });
+    constLabels.push({ sprite: t, line, members, baseScale, c, labelOffsetY: shapeR + 28 });
   }
 }
 // 카메라가 가까이 갈수록 라벨을 비례해서 축소 — 화면상 크기가 거리와 상관없이 일정하게(=너무 커지지 않게) 유지됨
 const CONST_LABEL_REF_DIST = 2200;
 function updateConstellationLabels(){
   const camPos = Graph.camera().position;
-  for (const { sprite, line, members, baseScale } of constLabels){
+  for (const { sprite, line, members, baseScale, labelOffsetY } of constLabels){
     let n = 0, x = 0, y = 0, z = 0;
     const pos = line.geometry.attributes.position;
     members.forEach((m, i) => {
@@ -655,12 +672,41 @@ function updateConstellationLabels(){
     });
     pos.needsUpdate = true;
     if (!n) continue;
-    const cx = x / n, cy = y / n + 34, cz = z / n;
+    const cx = x / n, cy = y / n + labelOffsetY, cz = z / n;
     sprite.position.set(cx, cy, cz);
     const dist = Math.hypot(camPos.x - cx, camPos.y - cy, camPos.z - cz);
     const k = Math.min(Math.max(dist / CONST_LABEL_REF_DIST, 0.28), 1.4);
     sprite.scale.set(baseScale.x * k, baseScale.y * k, baseScale.z * k);
   }
+}
+
+/* ---- 지금 클릭해서 상세정보가 열려있는 별에 링 표시 — "내가 뭘 눌렀는지" 바로 알 수 있게 ---- */
+function makeRingTexture(){
+  const s = 128, cv = document.createElement("canvas"); cv.width = cv.height = s;
+  const ctx = cv.getContext("2d"), cx = s / 2, cy = s / 2;
+  ctx.strokeStyle = "rgba(255,255,255,.95)"; ctx.lineWidth = 5;
+  ctx.beginPath(); ctx.arc(cx, cy, s / 2 - 5, 0, Math.PI * 2); ctx.stroke();
+  ctx.strokeStyle = "rgba(255,255,255,.3)"; ctx.lineWidth = 13;
+  ctx.beginPath(); ctx.arc(cx, cy, s / 2 - 12, 0, Math.PI * 2); ctx.stroke();
+  return new THREE.CanvasTexture(cv);
+}
+let selectionRing = null;
+function ensureSelectionRing(){
+  if (selectionRing) return;
+  selectionRing = new THREE.Sprite(new THREE.SpriteMaterial({
+    map: makeRingTexture(), transparent: true, depthWrite: false, depthTest: false,
+  }));
+  selectionRing.visible = false;
+  selectionRing.renderOrder = 999;
+  Graph.scene().add(selectionRing);
+}
+function updateSelectionRing(){
+  if (!selectionRing) return;
+  if (!curNode || curNode.x == null){ selectionRing.visible = false; return; }
+  selectionRing.visible = true;
+  selectionRing.position.set(curNode.x, curNode.y, curNode.z || 0);
+  const starSize = curNode.sponsor ? 24 : 5 + Math.min(curNode.deg, 10) * 0.8;
+  selectionRing.scale.setScalar(Math.max(34, starSize * 3.2));
 }
 
 // 관계선도 양쪽 AI가 속한 카테고리 색을 섞어서 다양하게 — 고정 2색 대신 조합마다 다른 색이 나옴
@@ -691,7 +737,7 @@ function initGraph(){
     .onNodeDrag((n, translate) => dragGroup(n, translate))
     .onNodeDragEnd(() => { dragGroupIds = null; });
 
-  Graph.d3Force("charge").strength(-70);
+  Graph.d3Force("charge").strength(-165);
   Graph.d3Force("shape", makeShapeForce());
   Graph.cameraPosition({ z: 780 });
   // 물리 시뮬레이션이 "완전히 멈추는" 시점은 예측 불가(수초~수십초) — 사용자가 그 사이 줌 조작을 하다가
@@ -714,7 +760,7 @@ function initGraph(){
   try {
     Graph.controls().addEventListener("start", () => { userTouchedCamera = true; });
   } catch (e) { /* 컨트롤 접근 불가 시 무시 */ }
-  Graph.onEngineTick(updateConstellationLabels);
+  ensureSelectionRing();
 
   window.addEventListener("resize", resizeGraph);
 
@@ -729,34 +775,47 @@ function initGraph(){
     Graph.scene().add(new THREE.Points(geo, new THREE.PointsMaterial({ color: 0x9aa0c0, size: 1.6, sizeAttenuation: true, transparent: true, opacity: 0.7 })));
   } catch (e){ console.warn("starfield skipped", e); }
 
-  try { initMeteors(); } catch (e){ console.warn("meteors skipped", e); }
+  try { initSceneLoop(); } catch (e){ console.warn("scene loop skipped", e); }
 }
 
-/* ---- 가끔 지나가는 별똥별(운석) — 물리 시뮬레이션과 무관하게 항상 돌아가는 별도 애니메이션 루프 ---- */
-function initMeteors(){
+/* ---- 물리 시뮬레이션이 멈춰도 항상 도는 별도 루프: 별똥별 + 라벨/선택링 위치 갱신 ----
+   (onEngineTick은 성단 배치가 안정되어 알파가 0에 가까워지면 더 안 불림 — 그래서 라벨/선택링을
+   여기로 옮겨서, 정착 후에 별을 클릭해도 선택 링이 계속 정확히 따라다니게 함) */
+function initSceneLoop(){
   const group = new THREE.Group();
   Graph.scene().add(group);
   const active = [];
+  const MAX_METEORS = 10;
 
   function spawnMeteor(){
-    const span = 3200;
+    if (active.length >= MAX_METEORS) return;
+    const span = 3400;
     const start = new THREE.Vector3((Math.random() - 0.5) * span, (Math.random() - 0.5) * span, (Math.random() - 0.5) * span);
-    const dir = new THREE.Vector3(Math.random() - 0.5, Math.random() * -0.6 - 0.2, Math.random() - 0.5).normalize();
-    const length = 50 + Math.random() * 70;
+    const dir = new THREE.Vector3(Math.random() - 0.5, Math.random() * -0.6 - 0.15, Math.random() - 0.5).normalize();
+    const long = Math.random() < 0.3; // 셋 중 하나 꼴로 꼬리가 긴 별똥별
+    const length = long ? 140 + Math.random() * 170 : 30 + Math.random() * 70;
     const end = start.clone().addScaledVector(dir, -length);
     const geo = new THREE.BufferGeometry().setFromPoints([start, end]);
     const mat = new THREE.LineBasicMaterial({ color: 0xdfe8ff, transparent: true, opacity: 0 });
     const line = new THREE.Line(geo, mat);
     group.add(line);
-    active.push({ line, dir, speed: 500 + Math.random() * 400, life: 0, maxLife: 0.9 + Math.random() * 0.6 });
+    active.push({
+      line, dir,
+      speed: (long ? 650 : 480) + Math.random() * 420,
+      life: 0,
+      maxLife: long ? 1.3 + Math.random() * 0.9 : 0.6 + Math.random() * 0.7,
+    });
   }
 
-  let lastT = performance.now(), lastSpawn = 0;
+  let lastT = performance.now(), lastBurst = 0;
   function tick(t){
     requestAnimationFrame(tick);
     const dt = Math.min(0.05, (t - lastT) / 1000); lastT = t;
-    if (t - lastSpawn > 2600 + Math.random() * 5200 && active.length < 3){
-      lastSpawn = t; spawnMeteor();
+
+    if (t - lastBurst > 1400 + Math.random() * 3200){
+      lastBurst = t;
+      const burst = 1 + Math.floor(Math.random() * 4); // 한 번에 1~4개, 랜덤한 개수로 동시에
+      for (let i = 0; i < burst; i++) spawnMeteor();
     }
     for (let i = active.length - 1; i >= 0; i--){
       const m = active[i];
@@ -768,8 +827,11 @@ function initMeteors(){
         continue;
       }
       m.line.position.copy(m.dir.clone().multiplyScalar(-m.speed * m.life));
-      m.line.material.opacity = p < 0.15 ? p / 0.15 : p > 0.7 ? (1 - p) / 0.3 : 1;
+      m.line.material.opacity = p < 0.12 ? p / 0.12 : p > 0.75 ? (1 - p) / 0.25 : 1;
     }
+
+    updateConstellationLabels();
+    updateSelectionRing();
   }
   requestAnimationFrame(tick);
 }
@@ -818,11 +880,16 @@ function focusCategory(c){
   let maxR = 0;
   for (const n of members){ const r = Math.hypot(n.x - cx, n.y - cy, (n.z || 0) - cz); if (r > maxR) maxR = r; }
   // 카테고리가 크면(예: 60개) 임의 지그재그 모양이 넓게 퍼질 수 있어서, 너무 멀리 빠지지 않게 상한을 둠
-  const dist = Math.min(950, Math.max(200, maxR * 2.6));
+  const idealDist = Math.min(950, Math.max(200, maxR * 2.6));
+  // 이미 이 거리보다 더 가까이 보고 있으면 그대로 둠 — 안 그러면 확대해서 보던 중에 클릭했을 때
+  // 오히려 더 멀리 밀려나서 별이 갑자기 작아지는 것처럼 느껴짐
+  const cam = Graph.cameraPosition();
+  const curDist = Math.hypot(cam.x - cx, cam.y - cy, cam.z - cz);
+  if (curDist <= idealDist * 1.1) return;
   const dirLen = Math.hypot(cx, cy, cz) || 1;
   const ux = cx / dirLen, uy = cy / dirLen, uz = cz / dirLen;
   Graph.cameraPosition(
-    { x: cx + ux * dist, y: cy + uy * dist, z: cz + uz * dist },
+    { x: cx + ux * idealDist, y: cy + uy * idealDist, z: cz + uz * idealDist },
     { x: cx, y: cy, z: cz }, 1400
   );
 }
@@ -905,7 +972,7 @@ function refresh(){
 
   // 검색 결과처럼 노드 수가 적을 때는 서로 더 멀리 밀어내서 연결관계가 겹쳐 보이지 않게 함
   const searching = !!state.q;
-  Graph.d3Force("charge").strength(searching ? -190 : -70);
+  Graph.d3Force("charge").strength(searching ? -220 : -165);
   if (searching !== wasSearching){
     wasSearching = searching;
     Graph.d3ReheatSimulation();
@@ -1008,12 +1075,77 @@ function buildSidebar(){
   document.addEventListener("fullscreenchange", () => {
     setTimeout(() => { resizeGraph(); Graph.zoomToFit(500, 60); }, 60);
   });
+  $("#soundBtn").addEventListener("click", toggleAmbientAudio);
 
   $("#suggestOpen").addEventListener("click", openSuggest);
   $("#addBtn").addEventListener("click", openSuggest);
   $("#suggestCancel").addEventListener("click", () => $("#suggestDlg").close());
   $("#suggestForm").addEventListener("submit", submitSuggest);
 }
+/* ---- 배경음: 실제 음원 파일 대신, 저작권/네트워크 문제 없는 합성 우주 앰비언트를 즉석에서 생성 ---- */
+let audioCtx = null, audioOn = false;
+function initAmbientAudio(){
+  audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  const master = audioCtx.createGain();
+  master.gain.value = 0.055; // 낮은 볼륨
+  master.connect(audioCtx.destination);
+
+  const lowpass = audioCtx.createBiquadFilter();
+  lowpass.type = "lowpass";
+  lowpass.frequency.value = 700;
+  lowpass.connect(master);
+
+  // 은은한 드론 패드 (서로 살짝 어긋난 저음 3개)
+  [55, 82.5, 110].forEach((f, i) => {
+    const o = audioCtx.createOscillator();
+    o.type = i === 1 ? "triangle" : "sine";
+    o.frequency.value = f;
+    const g = audioCtx.createGain();
+    g.gain.value = 0.18;
+    o.connect(g); g.connect(lowpass);
+    o.start();
+  });
+
+  // 필터 컷오프를 아주 느리게 흔들어서 "우주 바람" 같은 움직임을 줌
+  const lfo = audioCtx.createOscillator();
+  lfo.frequency.value = 0.028;
+  const lfoGain = audioCtx.createGain();
+  lfoGain.gain.value = 260;
+  lfo.connect(lfoGain); lfoGain.connect(lowpass.frequency);
+  lfo.start();
+
+  // 필터링한 브라운 노이즈 — 잔잔한 쉬익 소리(우주/심해 느낌 둘 다에 어울림)
+  const bufferSize = 2 * audioCtx.sampleRate;
+  const noiseBuffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+  const data = noiseBuffer.getChannelData(0);
+  let b0 = 0;
+  for (let i = 0; i < bufferSize; i++){
+    const white = Math.random() * 2 - 1;
+    b0 = (b0 + 0.02 * white) / 1.02;
+    data[i] = b0 * 3.5;
+  }
+  const noise = audioCtx.createBufferSource();
+  noise.buffer = noiseBuffer; noise.loop = true;
+  const noiseFilter = audioCtx.createBiquadFilter();
+  noiseFilter.type = "lowpass"; noiseFilter.frequency.value = 420;
+  const noiseGain = audioCtx.createGain();
+  noiseGain.gain.value = 0.5;
+  noise.connect(noiseFilter); noiseFilter.connect(noiseGain); noiseGain.connect(master);
+  noise.start();
+}
+function toggleAmbientAudio(){
+  if (!audioOn){
+    if (!audioCtx) initAmbientAudio();
+    audioCtx.resume();
+    audioOn = true;
+  } else {
+    audioCtx.suspend();
+    audioOn = false;
+  }
+  $("#soundBtn").textContent = audioOn ? "🔊" : "🔇";
+  $("#soundBtn").setAttribute("aria-pressed", String(audioOn));
+}
+
 function toggleFullscreen(){
   userTouchedCamera = true;
   const el = document.documentElement;
@@ -1047,6 +1179,7 @@ let curNode = null, formRating = 0, sending = false;
 
 async function openDrawer(n){
   curNode = n; formRating = 0;
+  updateSelectionRing();
   $("#drawer").classList.add("open");
   resizeGraph();
   $("#drawer").innerHTML = drawerHTML(n, null);
@@ -1060,6 +1193,7 @@ async function openDrawer(n){
 }
 function closeDrawer(){
   curNode = null; $("#drawer").classList.remove("open"); resizeGraph();
+  updateSelectionRing();
   if (highlightedCategory){ highlightedCategory = null; Graph.nodeThreeObject(nodeObject).refresh(); }
 }
 
