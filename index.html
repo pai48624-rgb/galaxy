@@ -379,7 +379,7 @@ async function selectAll(table, cols){
 
 let nodes = [], links = [], nodeById = new Map(), cats = [];
 const state = { cats: new Set(), price: new Set(["무료","부분유료","유료","미지정"]), q: "" };
-let Graph, SHOW_LABELS = false, layoutMode = "network", didInitialFit = false;
+let Graph, SHOW_LABELS = false, layoutMode = "network", didInitialFit = false, userTouchedCamera = false;
 
 const linkEnds = l => [typeof l.source === "object" ? l.source.id : l.source,
                        typeof l.target === "object" ? l.target.id : l.target];
@@ -593,31 +593,58 @@ function nodeObject(n){
   return g;
 }
 
-/* ---- 카테고리 대표 그룹에 별자리 이름 라벨 ---- */
+/* ---- 카테고리 대표 그룹에 별자리 이름 + 연결선(연상 가능한 실제 모양) ---- */
 let constLabels = [];
 function buildConstellationLabels(){
-  for (const { sprite } of constLabels) Graph.scene().remove(sprite);
+  for (const { sprite, line } of constLabels){
+    Graph.scene().remove(sprite);
+    Graph.scene().remove(line);
+  }
   constLabels = [];
   for (const [c, name] of catShapeName){
-    const members = nodes.filter(n => n.category === c);
+    // assignConstellationShapes()와 반드시 같은 정렬 순서(id순) — 별자리 순서대로 이어야 모양이 나옴
+    const members = nodes.filter(n => n.category === c).sort((a,b) => a.id - b.id);
+
     const t = new SpriteText(`✦ ${name}`);
-    t.textHeight = 6.5;
-    t.color = "#ffe9c2";
+    t.textHeight = 30; // 전체 지도를 축소해서 봐도 읽히도록 큼직하게(아래에서 거리에 따라 재조정됨)
+    t.color = "#fff3d8";
     t.fontFace = "system-ui, sans-serif";
     t.material.depthWrite = false;
     t.material.depthTest = false;
     t.material.transparent = true;
-    t.material.opacity = 0.9;
+    t.material.opacity = 0.95;
     Graph.scene().add(t);
-    constLabels.push({ sprite: t, members });
+    const baseScale = t.scale.clone();
+
+    const lineGeo = new THREE.BufferGeometry();
+    lineGeo.setAttribute("position", new THREE.BufferAttribute(new Float32Array(members.length * 3), 3));
+    const line = new THREE.Line(lineGeo, new THREE.LineBasicMaterial({
+      color: 0xcfe0ff, transparent: true, opacity: 0.4, depthWrite: false,
+    }));
+    Graph.scene().add(line);
+
+    constLabels.push({ sprite: t, line, members, baseScale });
   }
 }
+// 카메라가 가까이 갈수록 라벨을 비례해서 축소 — 화면상 크기가 거리와 상관없이 일정하게(=너무 커지지 않게) 유지됨
+const CONST_LABEL_REF_DIST = 2200;
 function updateConstellationLabels(){
-  for (const { sprite, members } of constLabels){
+  const camPos = Graph.camera().position;
+  for (const { sprite, line, members, baseScale } of constLabels){
     let n = 0, x = 0, y = 0, z = 0;
-    for (const m of members){ if (m.x == null) continue; x += m.x; y += m.y; z += m.z; n++; }
+    const pos = line.geometry.attributes.position;
+    members.forEach((m, i) => {
+      if (m.x == null) return;
+      pos.setXYZ(i, m.x, m.y, m.z || 0);
+      x += m.x; y += m.y; z += (m.z || 0); n++;
+    });
+    pos.needsUpdate = true;
     if (!n) continue;
-    sprite.position.set(x / n, y / n + 34, z / n);
+    const cx = x / n, cy = y / n + 34, cz = z / n;
+    sprite.position.set(cx, cy, cz);
+    const dist = Math.hypot(camPos.x - cx, camPos.y - cy, camPos.z - cz);
+    const k = Math.min(Math.max(dist / CONST_LABEL_REF_DIST, 0.28), 1.4);
+    sprite.scale.set(baseScale.x * k, baseScale.y * k, baseScale.z * k);
   }
 }
 
@@ -640,9 +667,15 @@ function initGraph(){
   Graph.d3Force("charge").strength(-70);
   Graph.d3Force("shape", makeShapeForce());
   Graph.cameraPosition({ z: 780 });
-  Graph.onEngineStop(() => {
-    if (!didInitialFit){ didInitialFit = true; Graph.zoomToFit(400, 60); }
-  });
+  // 물리 시뮬레이션이 "완전히 멈추는" 시점은 예측 불가(수초~수십초) — 사용자가 그 사이 줌 조작을 하다가
+  // 손을 떼면 그 타이밍에 자동 맞춤이 뒤늦게 실행되어 "화면이 스스로 줄어드는" 것처럼 보였음.
+  // 대신 짧은 고정 지연 후 1회만 맞추고, 그 전에 사용자가 카메라를 직접 조작했다면 건너뜀.
+  setTimeout(() => {
+    if (!didInitialFit && !userTouchedCamera){ didInitialFit = true; Graph.zoomToFit(400, 60); }
+  }, 2600);
+  try {
+    Graph.controls().addEventListener("start", () => { userTouchedCamera = true; });
+  } catch (e) { /* 컨트롤 접근 불가 시 무시 */ }
   Graph.onEngineTick(updateConstellationLabels);
 
   window.addEventListener("resize", resizeGraph);
@@ -662,8 +695,15 @@ function initGraph(){
 function focusNode(id){
   const n = nodeById.get(id);
   if (!n || n.x == null) return;
-  const d = 90, r = 1 + d / Math.hypot(n.x, n.y, n.z || 1);
-  Graph.cameraPosition({ x: n.x * r, y: n.y * r, z: (n.z || 0) * r }, n, 1200);
+  userTouchedCamera = true;
+  // 노드에서 고정 거리만큼 떨어뜨려서 "별 하나만 꽉 채움"과 "은하 전체"의 중간 정도로 보이게 함
+  const dist = Math.hypot(n.x, n.y, n.z || 1) || 1;
+  const d = 260;
+  const ux = n.x / dist, uy = n.y / dist, uz = (n.z || 0) / dist;
+  Graph.cameraPosition(
+    { x: n.x + ux * d, y: n.y + uy * d, z: (n.z || 0) + uz * d },
+    n, 1200
+  );
 }
 
 /* ---- 캔버스 크기: 우측 드로어가 열리면 남는 영역 기준으로 다시 계산 ---- */
@@ -816,7 +856,7 @@ function buildSidebar(){
   $("#menuBtn").addEventListener("click", () => $("#sidebar").classList.toggle("open"));
   $("#zIn").addEventListener("click", () => zoomBy(0.75));
   $("#zOut").addEventListener("click", () => zoomBy(1.33));
-  $("#zFit").addEventListener("click", () => Graph.zoomToFit(600, 40));
+  $("#zFit").addEventListener("click", () => { userTouchedCamera = true; Graph.zoomToFit(600, 40); });
 
   $("#suggestOpen").addEventListener("click", openSuggest);
   $("#addBtn").addEventListener("click", openSuggest);
@@ -824,6 +864,7 @@ function buildSidebar(){
   $("#suggestForm").addEventListener("submit", submitSuggest);
 }
 function zoomBy(k){
+  userTouchedCamera = true;
   const p = Graph.cameraPosition();
   Graph.cameraPosition({ x: p.x * k, y: p.y * k, z: p.z * k }, undefined, 300);
 }
