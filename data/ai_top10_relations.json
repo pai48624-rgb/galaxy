@@ -1,0 +1,280 @@
+[
+  {
+    "tool_name_en": "GPT",
+    "groups": [
+      {
+        "category_ko": "GPT Store · 플러그인/커넥터 생태계",
+        "items": [
+          { "name": "GPT Store", "reason_ko": "1,000개 이상의 서드파티 플러그인·커스텀 GPT가 등록된 공식 마켓플레이스(2026년 7월 '플러그인' 체계로 재편)" },
+          { "name": "Connectors(커넥터)", "reason_ko": "앱·스킬·MCP 커넥터를 통합한 워크플로 확장 기능으로 ChatGPT/Codex에서 공통으로 사용" }
+        ]
+      },
+      {
+        "category_ko": "자동화 플랫폼 연동",
+        "items": [
+          { "name": "Zapier", "reason_ko": "ChatGPT 액션을 트리거로 다른 앱과 연결하는 노코드 자동화 워크플로 구성" },
+          { "name": "Make", "reason_ko": "GPT API 응답을 시나리오 기반 자동화 파이프라인에 연결" },
+          { "name": "n8n", "reason_ko": "자체 호스팅 자동화 워크플로에서 GPT를 노드로 호출" }
+        ]
+      },
+      {
+        "category_ko": "오피스·생산성 제품군 내장",
+        "items": [
+          { "name": "Microsoft 365 Copilot", "reason_ko": "OpenAI GPT 모델을 기반으로 Word·Excel·Outlook 등 오피스 제품군에 내장(브랜드는 별도)" }
+        ]
+      },
+      {
+        "category_ko": "격차 참고",
+        "items": [
+          { "name": "MCP(Model Context Protocol)", "reason_ko": "Claude·Gemini 등은 표준 MCP로 외부 툴을 자유롭게 연결하지만, ChatGPT는 GPT Store 승인 또는 커스텀 API 함수 호출에 의존하는 구조적 차이가 있음" }
+        ]
+      }
+    ]
+  },
+  {
+    "tool_name_en": "Claude",
+    "groups": [
+      {
+        "category_ko": "MCP(Model Context Protocol) 직접 연동 — 2026년 1월 업데이트",
+        "items": [
+          { "name": "Canva", "reason_ko": "Claude 채팅창 안에서 Canva 디자인을 직접 열람·수정하는 인터랙티브 툴로 연동" },
+          { "name": "Figma", "reason_ko": "디자인 캔버스를 Claude 대화 안에서 바로 조작" },
+          { "name": "Slack", "reason_ko": "메시징 플랫폼 콘텐츠를 Claude 안에서 확인·조작" },
+          { "name": "Asana / monday.com", "reason_ko": "프로젝트 관리 보드를 Claude 채팅 인터페이스에서 직접 열람·편집" },
+          { "name": "Box", "reason_ko": "문서 저장소 콘텐츠를 Claude에서 직접 조회" }
+        ]
+      },
+      {
+        "category_ko": "코드 에디터·개발 도구 (MCP 클라이언트)",
+        "items": [
+          { "name": "Cursor", "reason_ko": "Claude 모델을 코드 에디터에 직접 연동해 AI 페어 프로그래밍에 사용" },
+          { "name": "GitHub Copilot", "reason_ko": "MCP 표준을 함께 채택해 Claude 기반 에이전트를 IDE 워크플로에 연결" },
+          { "name": "Sourcegraph Amp", "reason_ko": "대규모 코드베이스 탐색·리팩토링에 Claude를 MCP로 연결" }
+        ]
+      },
+      {
+        "category_ko": "엔터프라이즈 데이터 연동(벤더 공개 MCP 서버)",
+        "items": [
+          { "name": "Salesforce", "reason_ko": "CRM 데이터를 MCP 서버로 노출해 Claude가 직접 조회·활용" },
+          { "name": "Atlassian(Jira/Confluence)", "reason_ko": "이슈 트래커·문서를 MCP로 연결해 업무 맥락을 Claude에 제공" },
+          { "name": "HubSpot", "reason_ko": "마케팅·영업 데이터를 MCP 서버를 통해 Claude와 연동" }
+        ]
+      }
+    ]
+  },
+  {
+    "tool_name_en": "Gemini",
+    "groups": [
+      {
+        "category_ko": "Google Workspace 사이드패널 통합",
+        "items": [
+          { "name": "Gmail / Docs / Drive / Slides / Chat", "reason_ko": "모든 Workspace 앱의 사이드패널에서 동일한 Gemini 기능으로 앱 간 복합 작업을 처리" }
+        ]
+      },
+      {
+        "category_ko": "서드파티 커넥터(읽기 전용)",
+        "items": [
+          { "name": "Asana", "reason_ko": "Gemini가 Asana 작업 정보를 검색·조회(수정은 불가)" },
+          { "name": "Mailchimp", "reason_ko": "마케팅 캠페인 데이터를 Gemini에서 조회" }
+        ]
+      },
+      {
+        "category_ko": "Gemini CLI 확장 생태계",
+        "items": [
+          { "name": "Shopify", "reason_ko": "커머스 데이터를 커맨드라인에서 Gemini로 다루는 공식 확장" },
+          { "name": "Elasticsearch / Dynatrace", "reason_ko": "검색·모니터링 데이터를 Gemini CLI로 질의하는 공식 파트너 확장" },
+          { "name": "Google Apps Script", "reason_ko": "Workspace 자동화 스크립트를 Gemini CLI에서 직접 생성·실행" }
+        ]
+      },
+      {
+        "category_ko": "Gemini Enterprise MCP 서버",
+        "items": [
+          { "name": "Google Workspace API", "reason_ko": "Google이 직접 관리하는 MCP 서버로 Gemini Enterprise 에이전트가 Workspace 데이터에 접근" }
+        ]
+      }
+    ]
+  },
+  {
+    "tool_name_en": "Canva Magic Edit",
+    "groups": [
+      {
+        "category_ko": "AI 모델 수급 파트너십(Magic Studio 백엔드)",
+        "items": [
+          { "name": "OpenAI (gpt-image-2)", "reason_ko": "2026년 4월 Canva AI 2.0에 통합되어 포토리얼리스틱 이미지 생성 품질을 끌어올림" },
+          { "name": "Google Gemini Ultra", "reason_ko": "Magic Studio가 활용하는 파운데이션 모델 중 하나" },
+          { "name": "Runway (Gen-3)", "reason_ko": "영상 생성 기능에 Runway 모델을 결합해 제공" }
+        ]
+      },
+      {
+        "category_ko": "업무 툴 연동",
+        "items": [
+          { "name": "Gmail / Slack / Zoom", "reason_ko": "디자인 결과물을 업무 커뮤니케이션 도구로 바로 공유" },
+          { "name": "Google Drive", "reason_ko": "디자인 파일을 드라이브와 동기화" }
+        ]
+      },
+      {
+        "category_ko": "개발자 연동(제약 있음)",
+        "items": [
+          { "name": "Canva Connect API / Apps SDK", "reason_ko": "Canva 내부 앱·자동화 개발에는 쓸 수 있지만, AI 기능 자체는 API로 호출할 수 없고 UI 안에서만 사용 가능" }
+        ]
+      }
+    ]
+  },
+  {
+    "tool_name_en": "DeepSeek",
+    "groups": [
+      {
+        "category_ko": "API 호스팅 플랫폼",
+        "items": [
+          { "name": "DeepInfra", "reason_ko": "DeepSeek 최신 모델(V4 등)의 프로덕션 배포에 가장 많이 쓰이는 호스팅" },
+          { "name": "Clarifai", "reason_ko": "OpenAI 호환 API로 DeepSeek 모델을 관리형으로 제공" },
+          { "name": "Azure AI Foundry", "reason_ko": "엔터프라이즈용 대규모 배포에 활용되는 클라우드 통합" }
+        ]
+      },
+      {
+        "category_ko": "개발자 프레임워크",
+        "items": [
+          { "name": "LangChain / LlamaIndex", "reason_ko": "RAG·에이전트 파이프라인에서 DeepSeek를 기본 지원 모델로 연결" },
+          { "name": "LiteLLM", "reason_ko": "여러 LLM 제공자 사이를 코드 변경 없이 전환하는 게이트웨이로 DeepSeek 포함" }
+        ]
+      },
+      {
+        "category_ko": "AI 코딩 에이전트에서의 모델 옵션",
+        "items": [
+          { "name": "Claude Code / GitHub Copilot", "reason_ko": "OpenAI 호환 API 특성 덕분에 base_url만 바꿔 DeepSeek를 대체 모델로 연결 가능" }
+        ]
+      },
+      {
+        "category_ko": "자동화·협업 툴",
+        "items": [
+          { "name": "n8n / Zapier", "reason_ko": "저비용 추론 모델로 자동화 워크플로에 연결" },
+          { "name": "Notion / Slack", "reason_ko": "업무 데이터 요약·질의에 DeepSeek API 연동" }
+        ]
+      }
+    ]
+  },
+  {
+    "tool_name_en": "Perplexity AI",
+    "groups": [
+      {
+        "category_ko": "Comet 브라우저 생태계",
+        "items": [
+          { "name": "Samsung Galaxy S26 / Bixby / Samsung Internet", "reason_ko": "Perplexity API가 플랫폼 단으로 탑재된 첫 스마트폰 사례 — Comet의 에이전틱 브라우징이 Samsung Internet에 통합" }
+        ]
+      },
+      {
+        "category_ko": "엔터프라이즈 보안 파트너십",
+        "items": [
+          { "name": "CrowdStrike Falcon", "reason_ko": "2026년 3월 파트너십으로 Comet Enterprise에 보안·모니터링 계층을 추가" }
+        ]
+      },
+      {
+        "category_ko": "콘텐츠·언론사 제휴",
+        "items": [
+          { "name": "Conde Nast (Wired, Vogue 등)", "reason_ko": "Comet 브라우저 출시 파트너로 프리미엄 콘텐츠를 검색 결과에 연동" },
+          { "name": "CNN / Fortune / Washington Post", "reason_ko": "실시간 뉴스 콘텐츠 제휴로 답변 근거 소스에 포함" }
+        ]
+      }
+    ]
+  },
+  {
+    "tool_name_en": "GitHub Copilot",
+    "groups": [
+      {
+        "category_ko": "MCP 서버 생태계 (2025년 11월 Extensions → MCP 전환)",
+        "items": [
+          { "name": "GitHub MCP Server", "reason_ko": "GitHub 저장소·이슈·PR 데이터를 Copilot 에이전트에 직접 연결" },
+          { "name": "Figma", "reason_ko": "MCP로 디자인의 색상·간격·컴포넌트 상태 같은 정확한 파라미터를 가져와 코드로 변환" }
+        ]
+      },
+      {
+        "category_ko": "IDE 통합",
+        "items": [
+          { "name": "VS Code (Agent Mode)", "reason_ko": "코드베이스를 읽고 터미널 명령을 실행하며 여러 파일을 자동 수정하는 에이전트 모드" },
+          { "name": "Visual Studio 2026 / JetBrains IDE", "reason_ko": "MCP 서버 기반 Copilot 에이전트를 공식 지원" }
+        ]
+      },
+      {
+        "category_ko": "협업 툴 연동",
+        "items": [
+          { "name": "Azure Boards / Microsoft Teams", "reason_ko": "작업 항목·커뮤니케이션을 Copilot 워크플로에 연결" },
+          { "name": "Jira / Slack", "reason_ko": "이슈 트래킹과 팀 커뮤니케이션 컨텍스트를 Copilot에 제공" }
+        ]
+      },
+      {
+        "category_ko": "에이전틱 워크플로",
+        "items": [
+          { "name": "GitHub Actions (Coding Agent)", "reason_ko": "이슈를 받아 격리된 워크스페이스에서 코드를 작성·테스트하고 PR까지 자동으로 여는 에이전트" }
+        ]
+      }
+    ]
+  },
+  {
+    "tool_name_en": "Midjourney",
+    "groups": [
+      {
+        "category_ko": "공식 접점",
+        "items": [
+          { "name": "Discord 봇", "reason_ko": "가장 널리 쓰이는 기본 사용 경로 — 슬래시 명령으로 이미지 생성" },
+          { "name": "Midjourney 웹 인터페이스 / 개발자 API", "reason_ko": "2026년 기준 Discord 중심에서 자체 웹·제한적 개발자 API로 확장 중" }
+        ]
+      },
+      {
+        "category_ko": "서드파티 자동화 래퍼(비공식, 주의 필요)",
+        "items": [
+          { "name": "PiAPI / APIFrame / ImaginePro", "reason_ko": "Discord 봇을 대신 호출해주는 종량제 API 래퍼 — 공식 API가 아니라 상업적 자동화 시 이용약관 위반 소지가 있어 주의가 필요함" }
+        ]
+      }
+    ]
+  },
+  {
+    "tool_name_en": "Notion AI",
+    "groups": [
+      {
+        "category_ko": "AI 커넥터(검색 연동, 엔터프라이즈 플랜)",
+        "items": [
+          { "name": "Slack", "reason_ko": "공개 채널·DM(권한 있는 경우)을 Notion AI가 검색해 답변에 활용" },
+          { "name": "Google Drive", "reason_ko": "드라이브 파일 내용을 Notion AI 질의에 포함" },
+          { "name": "Jira", "reason_ko": "이슈 트래커 정보를 Notion AI 검색 범위에 연결" }
+        ]
+      },
+      {
+        "category_ko": "업무 툴 통합 (약 30여 종 공식 연동)",
+        "items": [
+          { "name": "Microsoft Teams / Outlook", "reason_ko": "일정·커뮤니케이션 데이터를 Notion과 동기화" },
+          { "name": "GitHub / Linear", "reason_ko": "개발 이슈·PR 정보를 Notion 페이지에 연결" },
+          { "name": "Figma / Loom", "reason_ko": "디자인·영상 자료를 Notion 문서에 임베드" }
+        ]
+      },
+      {
+        "category_ko": "MCP 기반 외부 에이전트 연동",
+        "items": [
+          { "name": "Claude Code", "reason_ko": "MCP 서버를 통해 Notion에 실제 읽기/쓰기 접근(단순 채팅이 아닌 자동화) 가능" }
+        ]
+      }
+    ]
+  },
+  {
+    "tool_name_en": "ElevenLabs",
+    "groups": [
+      {
+        "category_ko": "엔터프라이즈 에이전트 오케스트레이션",
+        "items": [
+          { "name": "IBM watsonx Orchestrate", "reason_ko": "2026년 3월 파트너십 — ElevenLabs TTS/STT를 IBM의 에이전틱 오케스트레이션 플랫폼에 탑재" }
+        ]
+      },
+      {
+        "category_ko": "ElevenAgents · MCP 툴콜",
+        "items": [
+          { "name": "MCP(Model Context Protocol)", "reason_ko": "음성 대화 중간에 CRM 조회, 예약, 결제 같은 실제 액션을 수행하는 툴콜 연동" }
+        ]
+      },
+      {
+        "category_ko": "네이티브 통합(200개 이상)",
+        "items": [
+          { "name": "저코드 자동화 플랫폼", "reason_ko": "30분 내로 음성 에이전트를 구성해 배포할 수 있는 API·웹훅·저코드 연동" }
+        ]
+      }
+    ]
+  }
+]

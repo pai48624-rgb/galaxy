@@ -177,6 +177,19 @@
   .combo-free-badge{font-size:9px;font-weight:800;padding:2px 7px;border-radius:999px;background:rgba(143,214,196,.18);color:var(--teal)}
   #comboDlg .combo-list{max-height:60vh;overflow:auto;padding-right:4px}
 
+  .d-glance{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:12.5px;color:#d6d6e4;
+    background:rgba(140,120,230,.1);border:1px solid rgba(140,120,230,.28);border-radius:9px;padding:7px 10px;margin:8px 0}
+  .d-glance b{color:#fff3d8}
+  .rel-group{margin-bottom:9px}
+  .rel-group-h{font-size:11px;font-weight:800;color:#cabdff;letter-spacing:.3px;margin-bottom:4px}
+  .rel-list{margin:0;padding-left:16px;font-size:12px;color:#d6d6e4;line-height:1.65}
+  .rel-list b{color:#fff}
+  details.d-collapse{border:1px solid var(--line);border-radius:9px;margin:8px 0;padding:0}
+  details.d-collapse summary{cursor:pointer;padding:8px 10px;font-size:11px;font-weight:700;letter-spacing:.5px;
+    color:#b9b9d8;list-style:revert}
+  details.d-collapse[open] summary{border-bottom:1px solid var(--line)}
+  details.d-collapse .d-collapse-body{padding:8px 10px}
+
   .rv-form{display:flex;flex-direction:column;gap:8px;background:rgba(20,20,32,.5);border:1px solid var(--line);
     border-radius:11px;padding:12px}
   .stars{display:flex;gap:3px}
@@ -448,6 +461,8 @@ const I18N = {
     comboSecTitle: "⭐ 이 AI와 함께 쓰면 좋은 조합", comboFree: "무료로 시작 가능", comboNone: "아직 등록된 조합이 없어요.",
     tipBar: "이 지도는 3D 입체 공간이에요 — 확대해도 커지지 않는 별이 있다면, 화면을 드래그해서 전체를 돌려보세요. 원하는 별이 가까이 오면서 훨씬 크게 보여요.",
     catComboTitle: "⭐ 이 그룹 AI들의 조합 · 가성비 총평", catMembersTitle: "이 그룹의 AI들",
+    curatedRelTitle: "🔗 실제 연동·연관 AI 툴", bestComboLabel: "가장 잘 맞는 조합",
+    altSecTitle: "대안 AI (비슷한 경쟁 제품)", altSecHint: "아래는 이 AI를 대체할 수 있는 비슷한 제품 목록입니다(함께 쓰는 조합 아님).",
   },
   en: {
     subtitle: "Global AI Relationship Map", searchPh: "Search AI name…",
@@ -477,6 +492,8 @@ const I18N = {
     comboSecTitle: "⭐ Great combos with this AI", comboFree: "Free to start", comboNone: "No combos yet.",
     tipBar: "This map is a 3D space — if a distant star doesn't get bigger when you zoom, try dragging to rotate the whole view instead. The star you want will swing closer and appear much larger.",
     catComboTitle: "⭐ Combos & value summary for this group", catMembersTitle: "AIs in this group",
+    curatedRelTitle: "🔗 Real integrations & related tools", bestComboLabel: "Best-fit combo",
+    altSecTitle: "Alternatives (similar competing products)", altSecHint: "These are products that could replace this one — not a combo to use together.",
   },
 };
 function tr(key, ...args){
@@ -610,6 +627,7 @@ async function boot(attempt = 1){
     assignCatHues();
     await loadTopRank();
     await loadAiCombos();
+    await loadTop10Relations();
 
     phase = "3D 그래픽 초기화(WebGL)";
     const _gl = document.createElement("canvas");
@@ -751,8 +769,10 @@ function categoryDrawerHTML(c){
     <div class="d-sec">${tr("catComboTitle")}</div>
     <p class="d-desc">${esc(evalText)}</p>
     ${combos.length ? `<div class="combo-list">${combos.map(comboCardHTML).join("")}</div>` : ""}
-    <div class="d-sec">${tr("catMembersTitle")}</div>
-    <div class="chips">${members.slice(0, 60).map(n => `<button class="chip" data-go="${n.id}">${esc(displayName(n))}</button>`).join("")}</div>`;
+    <details class="d-collapse" open>
+      <summary>${tr("catMembersTitle")} (${members.length})</summary>
+      <div class="d-collapse-body chips">${members.slice(0, 60).map(n => `<button class="chip" data-go="${n.id}">${esc(displayName(n))}</button>`).join("")}</div>
+    </details>`;
 }
 let curCategoryDrawer = null;
 function openCategoryDrawer(c){
@@ -774,6 +794,26 @@ function comboCardHTML(c){
     <div class="combo-use">${esc(c.title_ko)}</div>
     <div class="combo-price">${esc(c.pricing_summary_ko)}</div>
   </div>`;
+}
+/* ---- Top10 실제 연동 데이터(웹서치로 검증, data/ai_top10_relations.json) — "함께 쓰면 좋은"이
+   기존엔 전부 alternative(경쟁 대안) 관계뿐이라 엉뚱해 보인다는 피드백으로 추가한 실제 조사 데이터 ---- */
+let top10Relations = new Map(); // name_en -> { groups:[{category_ko, items:[{name, reason_ko}]}] }
+async function loadTop10Relations(){
+  try {
+    const res = await fetch("data/ai_top10_relations.json");
+    if (!res.ok) return;
+    const list = await res.json();
+    for (const item of list) top10Relations.set(item.tool_name_en, item);
+  } catch (e){ console.warn("top10 relations load skipped", e); }
+}
+function curatedRelationsHTML(n){
+  const data = top10Relations.get(n.name_en);
+  if (!data || !data.groups?.length) return "";
+  return `<div class="d-sec">${tr("curatedRelTitle")}</div>` + data.groups.map(g => `
+    <div class="rel-group">
+      <div class="rel-group-h">${esc(g.category_ko)}</div>
+      <ul class="rel-list">${g.items.map(it => `<li><b>${esc(it.name)}</b> — ${esc(it.reason_ko)}</li>`).join("")}</ul>
+    </div>`).join("");
 }
 function openComboDlg(){
   const top = [...aiCombos].sort((a, b) => b.impact - a.impact).slice(0, 30);
@@ -2286,8 +2326,14 @@ function closeDrawer(){
 }
 
 function drawerHTML(n, reviews){
+  // neighbors()는 기존 relations 데이터가 전부 "alternative"(경쟁 대안)뿐이라 — complement(보완재)는
+  // 하나도 없음. "함께 쓰면 좋은"이라고 뭉뚱그려 보여주면 사용자가 엉뚱한 추천으로 느낌 — 정직하게 분리.
   const nb = neighbors(n.id);
+  const complementNb = nb.filter(x => x.kind === "complement");
+  const altNb = nb.filter(x => x.kind !== "complement");
   const link = n.sponsor?.link || n.url;
+  const combos = combosForNode(n.id).slice(0, 4);
+  const bestCombo = combos[0];
   const rv = reviews == null
     ? `<div class="rv-hint">${tr("loadingReviews")}</div>`
     : reviews.length
@@ -2303,6 +2349,7 @@ function drawerHTML(n, reviews){
       </div>
       <button class="d-close" aria-label="${tr("close")}">×</button>
     </div>
+    ${bestCombo ? `<div class="d-glance">⭐ ${tr("bestComboLabel")}: <b>${esc(bestCombo.tools.join(" + "))}</b> <span class="combo-stars">★${bestCombo.impact}/10</span></div>` : ""}
     <p class="d-desc">${esc(nodeDesc(n))}</p>
     <div class="d-links">
       ${n.url ? `<a href="${esc(n.url)}" target="_blank" rel="noopener">${tr("officialSite")}</a>` : ""}
@@ -2311,33 +2358,54 @@ function drawerHTML(n, reviews){
     </div>
     ${link ? `<a class="d-cta" href="${esc(affiliate(link))}" target="_blank" rel="noopener sponsored">${esc(displayName(n))} ${tr("goto")}<span class="tag">${n.sponsor ? tr("sponsorTag") : tr("affiliateTag")}</span></a>` : ""}
 
+    ${curatedRelationsHTML(n)}
+
+    ${complementNb.length ? `<div class="d-sec">${tr("together")}</div><div class="chips">${complementNb.map(x => `<button class="chip" data-go="${x.n.id}">${esc(displayName(x.n))}</button>`).join("")}</div>` : ""}
+
+    ${combos.length ? `<div class="d-sec">${tr("comboSecTitle")}</div><div class="combo-list">${combos.map(comboCardHTML).join("")}</div>` : ""}
+
+    ${altNb.length ? `
+    <details class="d-collapse">
+      <summary>${tr("altSecTitle")} (${altNb.length})</summary>
+      <div class="d-collapse-body">
+        <div class="conf-hint" style="margin-bottom:8px">${tr("altSecHint")}</div>
+        <div class="chips">${altNb.map(x => `<button class="chip" data-go="${x.n.id}">${esc(displayName(x.n))}</button>`).join("")}</div>
+      </div>
+    </details>` : ""}
+
     ${n.key_features?.length ? `
-    <div class="d-sec">${tr("keyFeatures")}</div>
-    <ul class="feat-list">${n.key_features.map(f => `<li>${esc(f)}</li>`).join("")}</ul>` : ""}
+    <details class="d-collapse">
+      <summary>${tr("keyFeatures")}</summary>
+      <div class="d-collapse-body"><ul class="feat-list">${n.key_features.map(f => `<li>${esc(f)}</li>`).join("")}</ul></div>
+    </details>` : ""}
 
     ${(n.pricing_policy || n.pricing_detail) ? `
-    <div class="d-sec">${tr("pricingDetails")}
-      <span class="conf-badge ${n.info_verified ? "verified" : "estimated"}" title="${esc(n.info_confidence || "")}">${n.info_verified ? tr("confVerified") : tr("confEstimated")}</span>
-    </div>
-    ${n.pricing_policy ? `<p class="d-desc" style="margin:0 0 6px">${esc(n.pricing_policy)}</p>` : ""}
-    ${n.pricing_detail ? `<p class="d-desc" style="margin:0;font-size:12px;color:var(--dim)">${esc(n.pricing_detail)}</p>` : ""}
-    ${!n.info_verified ? `<div class="conf-hint">${tr("confEstimatedHint")}</div>` : ""}` : ""}
-
-    ${nb.length ? `<div class="d-sec">${tr("together")}</div><div class="chips">${nb.map(x => `<button class="chip" data-go="${x.n.id}">${esc(displayName(x.n))}</button>`).join("")}</div>` : ""}
-
-    ${(() => { const combos = combosForNode(n.id).slice(0, 4); return combos.length ? `<div class="d-sec">${tr("comboSecTitle")}</div><div class="combo-list">${combos.map(comboCardHTML).join("")}</div>` : ""; })()}
-
-    <div class="d-sec">${tr("reviewLabel")} <b>${reviews ? reviews.length : ""}</b></div>
-    <form class="rv-form" id="rvForm">
-      <div class="stars" id="rvStars">${[1,2,3,4,5].map(v => `<button type="button" class="star" data-v="${v}">★</button>`).join("")}</div>
-      <textarea id="rvBody" maxlength="2000" placeholder="${esc(tr("reviewPh"))}"></textarea>
-      <div class="row">
-        <input type="text" id="rvAuthor" maxlength="40" placeholder="${esc(tr("nickname"))}">
-        <button type="submit" class="send" id="rvSend">${tr("submitReview")}</button>
+    <details class="d-collapse">
+      <summary>${tr("pricingDetails")}
+        <span class="conf-badge ${n.info_verified ? "verified" : "estimated"}" title="${esc(n.info_confidence || "")}">${n.info_verified ? tr("confVerified") : tr("confEstimated")}</span>
+      </summary>
+      <div class="d-collapse-body">
+        ${n.pricing_policy ? `<p class="d-desc" style="margin:0 0 6px">${esc(n.pricing_policy)}</p>` : ""}
+        ${n.pricing_detail ? `<p class="d-desc" style="margin:0;font-size:12px;color:var(--dim)">${esc(n.pricing_detail)}</p>` : ""}
+        ${!n.info_verified ? `<div class="conf-hint">${tr("confEstimatedHint")}</div>` : ""}
       </div>
-      <div class="rv-hint">${tr("reviewHint")}</div>
-    </form>
-    <div id="rvList">${rv}</div>`;
+    </details>` : ""}
+
+    <details class="d-collapse">
+      <summary>${tr("reviewLabel")} (${reviews ? reviews.length : ""})</summary>
+      <div class="d-collapse-body">
+        <form class="rv-form" id="rvForm">
+          <div class="stars" id="rvStars">${[1,2,3,4,5].map(v => `<button type="button" class="star" data-v="${v}">★</button>`).join("")}</div>
+          <textarea id="rvBody" maxlength="2000" placeholder="${esc(tr("reviewPh"))}"></textarea>
+          <div class="row">
+            <input type="text" id="rvAuthor" maxlength="40" placeholder="${esc(tr("nickname"))}">
+            <button type="submit" class="send" id="rvSend">${tr("submitReview")}</button>
+          </div>
+          <div class="rv-hint">${tr("reviewHint")}</div>
+        </form>
+        <div id="rvList">${rv}</div>
+      </div>
+    </details>`;
 }
 
 function wireDrawer(n){
