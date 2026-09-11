@@ -3,27 +3,30 @@
 
 {% block content %}
 <style>
-  /* ===== "너의 행운을 빌릴게" 탭 전용 테마: 불길한 크림슨(적보라) + 골드 번호 ===== */
+  /* ===== "너의 행운을 빌릴게" 탭 전용 테마 =====
+     "불길한 적보라/빨간색" 컨셉 + "로또 스틸의 법칙" 브랜드에 맞는 어둡고 음침한
+     느낌을 살리되, 플랫하고 칙칙해 보이지 않도록 붉은 글로우와 그라데이션 대비를
+     강하게 줬다. */
   .borrow-theme {
-    background: radial-gradient(circle at 30% 0%, #6b0f1a 0%, #3a0810 45%, #1a0407 100%);
-    box-shadow: inset 0 0 80px rgba(0,0,0,0.55);
-    border: 1px solid rgba(255, 200, 120, 0.15);
+    background: radial-gradient(circle at 22% 0%, #9a0f1f 0%, #4a0812 42%, #0a0304 100%);
+    box-shadow: inset 0 0 90px rgba(0,0,0,0.65), 0 0 50px rgba(154,15,31,0.35);
+    border: 1px solid rgba(255,90,90,0.18);
   }
   .borrow-card {
-    background: rgba(10, 3, 5, 0.45);
-    border: 1px solid rgba(255, 200, 120, 0.18);
+    background: rgba(12, 3, 5, 0.55);
+    border: 1px solid rgba(255,90,90,0.22);
     backdrop-filter: blur(2px);
   }
-  .borrow-title { color: #ffdca8; text-shadow: 0 0 12px rgba(255,180,60,0.35); }
-  .borrow-sub { color: #d8a9a0; }
-  .borrow-label { color: #e8c199; }
+  .borrow-title { color: #ffcf9e; text-shadow: 0 0 14px rgba(255,70,70,0.5); }
+  .borrow-sub { color: #d9a3a3; }
+  .borrow-label { color: #f0c9b8; }
   .borrow-input {
-    background: rgba(0,0,0,0.35);
-    border: 1px solid rgba(255,200,120,0.3);
-    color: #fdf1e0;
+    background: rgba(0,0,0,0.4);
+    border: 1px solid rgba(255,90,90,0.35);
+    color: #fdf1e8;
   }
-  .borrow-input::placeholder { color: rgba(253,241,224,0.4); }
-  .borrow-input:focus { outline: none; box-shadow: 0 0 0 2px rgba(255,190,90,0.5); }
+  .borrow-input::placeholder { color: rgba(253,241,232,0.4); }
+  .borrow-input:focus { outline: none; box-shadow: 0 0 0 2px rgba(255,110,110,0.6); }
   .borrow-btn-primary {
     background: linear-gradient(145deg, #f4c869, #b8801f);
     color: #3a1e00;
@@ -32,11 +35,11 @@
   .borrow-btn-primary:hover { filter: brightness(1.08); }
   .borrow-btn-ghost {
     background: transparent;
-    border: 2px solid rgba(255,200,120,0.55);
-    color: #ffdca8;
+    border: 2px solid rgba(255,110,110,0.55);
+    color: #ffd9c7;
   }
-  .borrow-btn-ghost:hover { background: rgba(255,200,120,0.1); }
-  .borrow-phrase { color: #ffd98a; text-shadow: 0 0 10px rgba(255,180,60,0.4); }
+  .borrow-btn-ghost:hover { background: rgba(255,90,90,0.12); }
+  .borrow-phrase { color: #ffb199; text-shadow: 0 0 12px rgba(255,70,70,0.5); }
 
   /* 이 탭에서만 쓰는 골드 볼 (숫자 구간별 색상 대신 전부 금색으로 통일) */
   .ball-gold {
@@ -49,19 +52,17 @@
 </style>
 
 <section class="text-center mb-6">
-  <h1 class="text-3xl font-extrabold mb-2">😏 로또 스틸의 법칙</h1>
+  <h1 class="text-3xl font-extrabold mb-2 flex items-center justify-center gap-2">
+    <img src="{{ static_v('logo.png') }}" alt="로고" class="w-9 h-9 rounded-full inline-block align-middle">
+    로또 스틸의 법칙
+  </h1>
   <p class="text-gray-500 text-sm">당신의 로또를 빌려갈게 — 친구의 행운을 훔쳐보거나, 내 행운번호를 확인해보세요</p>
 </section>
-
-<div class="bg-amber-50 border border-amber-200 text-amber-800 text-xs rounded-xl p-4 mb-6 leading-relaxed">
-  ⚠️ <b>솔직 안내</b>: MBTI·혈액형·생년월일은 로또 당첨번호와 과학적으로 아무 관련이 없습니다.
-  같은 정보를 입력하면 항상 같은 결과가 나오는 <b>재미용 개인화 콘텐츠</b>이며, 실제 당첨 확률에는 영향을 주지 않습니다.
-</div>
 
 <!-- 탭 버튼 -->
 <div class="flex gap-2 mb-6 justify-center">
   <button id="tab-btn-borrow" onclick="switchTab('borrow')"
-          class="px-5 py-2.5 rounded-full font-bold text-sm bg-red-900 text-amber-100 transition">
+          class="px-5 py-2.5 rounded-full font-bold text-sm bg-[#4a0812] text-amber-100 transition">
     😉 너의 행운을 빌릴게
   </button>
   <button id="tab-btn-self" onclick="switchTab('self')"
@@ -75,9 +76,14 @@
   <section class="borrow-card rounded-2xl p-6 md:p-8 mb-6">
     <h2 class="font-bold mb-1 borrow-title">빌려올 사람의 정보</h2>
     <p class="text-xs mb-4 borrow-sub">친구, 애인, 연예인... 운 좋아 보이는 사람의 정보를 넣어보세요 😆</p>
-    <div class="grid md:grid-cols-4 gap-4 mb-6">
+    <div class="grid grid-cols-2 gap-3 mb-6">
       <div>
-        <label class="text-xs font-semibold mb-1 block borrow-label">별명</label>
+        <label class="text-xs font-semibold mb-1 block borrow-label">생년월일</label>
+        <input id="borrow-birth" type="date" value="1995-01-01"
+               class="w-full rounded-xl px-3 py-2 borrow-input">
+      </div>
+      <div>
+        <label class="text-xs font-semibold mb-1 block borrow-label">별명(이름)</label>
         <input id="borrow-nickname" type="text" placeholder="예: 행운의 짝꿍"
                class="w-full rounded-xl px-3 py-2 borrow-input">
       </div>
@@ -93,11 +99,6 @@
           {% for b in blood_types %}<option value="{{ b }}">{{ b }}형 · {{ blood_keyword[b] }}</option>{% endfor %}
         </select>
       </div>
-      <div>
-        <label class="text-xs font-semibold mb-1 block borrow-label">생년월일</label>
-        <input id="borrow-birth" type="date" value="1995-01-01"
-               class="w-full rounded-xl px-3 py-2 borrow-input">
-      </div>
     </div>
     <div class="text-center">
       <button onclick="analyzeProfile('borrow')" class="px-8 py-3 rounded-full font-bold transition borrow-btn-primary">
@@ -106,22 +107,10 @@
     </div>
   </section>
 
-  <div id="result-borrow" class="hidden">
+  <div id="result-borrow">
     <p id="borrow-phrase" class="text-center font-bold mb-4 borrow-phrase"></p>
-    <div class="grid md:grid-cols-2 gap-6 mb-6">
-      <div class="borrow-card rounded-2xl p-6">
-        <h2 class="font-bold mb-1" style="color:#ffe9a8;">💚 빌려온 행운번호</h2>
-        <p id="borrow-summary" class="text-xs mb-4 borrow-sub"></p>
-        <div id="borrow-lucky-list" class="flex flex-wrap gap-2"></div>
-      </div>
-      <div class="borrow-card rounded-2xl p-6">
-        <h2 class="font-bold mb-1" style="color:#ff9d9d;">💔 이 번호는 돌려드릴게요</h2>
-        <p class="text-xs mb-4 borrow-sub">궁합 점수가 가장 낮은 번호예요</p>
-        <div id="borrow-unlucky-list" class="flex flex-wrap gap-2"></div>
-      </div>
-    </div>
 
-    <section class="borrow-card rounded-2xl p-6 md:p-8">
+    <section class="borrow-card rounded-2xl p-6 md:p-8 mb-6">
       <h2 class="font-bold mb-1 borrow-title">🎯 빌린 행운으로 번호 뽑기</h2>
       <p class="text-xs mb-4 borrow-sub">
         <b>반대 방식</b>으로 뽑아요: 오래 안 나온(COLD) 번호 통계 + 상대방 궁합점수를 섞습니다.
@@ -129,6 +118,7 @@
       <div id="ball-result-borrow" class="flex flex-wrap gap-3 justify-center min-h-[64px] items-center mb-4">
         <span class="text-sm" style="color:rgba(253,241,224,0.4);">버튼을 눌러 번호를 뽑아보세요</span>
       </div>
+      <p id="borrow-remaining-label" class="text-center text-[11px] mb-4" style="color:#e6d3ff;"></p>
       <div class="flex flex-wrap gap-3 justify-center">
         <button onclick="generatePersonal('borrow')" class="px-8 py-3 rounded-full font-bold transition borrow-btn-primary">
           🎲 빌린 번호 뽑기
@@ -136,11 +126,33 @@
         <button onclick="saveCombo('borrow')" class="px-8 py-3 rounded-full font-bold transition borrow-btn-ghost">
           💾 내 번호함에 저장
         </button>
+        <button onclick="shareCombo('borrow')" class="px-8 py-3 rounded-full font-bold transition borrow-btn-ghost">
+          📤 공유하기
+        </button>
+        {% if kakao_js_key %}
+        <button onclick="shareToKakaoCombo('borrow')" class="px-8 py-3 rounded-full font-bold transition" style="background:#FEE500;color:#3C1E1E;">
+          💬 카카오톡으로 보내기
+        </button>
+        {% endif %}
       </div>
       <p class="text-center text-[11px] mt-4 borrow-sub">
-        ※ 참고용 재미 기능입니다. 실제 당첨 확률은 모든 조합이 동일합니다.
+        ※ 참고용 재미 기능입니다. 실제 당첨 확률은 모든 조합이 동일합니다.<br>
+        ※ 공유가 바로 안 되면 문구가 자동으로 복사돼 있으니 카카오톡 등에 붙여넣기 해주세요.
       </p>
     </section>
+
+    <div class="grid md:grid-cols-2 gap-6 mb-6">
+      <div class="borrow-card rounded-2xl p-6">
+        <h2 class="font-bold mb-1" style="color:#ffe9a8;">💚 빌려온 행운번호</h2>
+        <p id="borrow-summary" class="text-xs mb-4 borrow-sub"></p>
+        <div id="borrow-lucky-list" class="flex flex-wrap gap-2"><span class="text-xs" style="color:rgba(253,241,232,0.4);">위에서 "행운 빌려보기"를 누르면 표시돼요</span></div>
+      </div>
+      <div class="borrow-card rounded-2xl p-6">
+        <h2 class="font-bold mb-1" style="color:#ff9d9d;">💔 이 번호는 돌려드릴게요</h2>
+        <p class="text-xs mb-4 borrow-sub">궁합 점수가 가장 낮은 번호예요</p>
+        <div id="borrow-unlucky-list" class="flex flex-wrap gap-2"><span class="text-xs" style="color:rgba(253,241,232,0.4);">-</span></div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -148,7 +160,12 @@
 <div id="tab-panel-self" class="hidden">
   <section class="bg-white rounded-2xl shadow-md p-6 md:p-8 mb-6">
     <h2 class="font-bold mb-4">내 정보 입력</h2>
-    <div class="grid md:grid-cols-3 gap-4 mb-6">
+    <div class="grid grid-cols-2 gap-3 mb-6">
+      <div>
+        <label class="text-xs font-semibold text-gray-500 mb-1 block">생년월일</label>
+        <input id="self-birth" type="date" value="1995-01-01"
+               class="w-full border border-gray-200 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-400">
+      </div>
       <div>
         <label class="text-xs font-semibold text-gray-500 mb-1 block">MBTI</label>
         <select id="self-mbti" class="w-full border border-gray-200 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-400">
@@ -161,11 +178,6 @@
           {% for b in blood_types %}<option value="{{ b }}">{{ b }}형 · {{ blood_keyword[b] }}</option>{% endfor %}
         </select>
       </div>
-      <div>
-        <label class="text-xs font-semibold text-gray-500 mb-1 block">생년월일</label>
-        <input id="self-birth" type="date" value="1995-01-01"
-               class="w-full border border-gray-200 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-400">
-      </div>
     </div>
     <div class="text-center">
       <button onclick="analyzeProfile('self')" class="px-8 py-3 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold shadow-lg shadow-indigo-200 transition">
@@ -174,21 +186,8 @@
     </div>
   </section>
 
-  <div id="result-self" class="hidden">
-    <div class="grid md:grid-cols-2 gap-6 mb-6">
-      <div class="bg-white rounded-2xl shadow-md p-6">
-        <h2 class="font-bold mb-1 text-emerald-600">💚 나와 잘 맞는 번호</h2>
-        <p id="self-summary" class="text-xs text-gray-400 mb-4"></p>
-        <div id="self-lucky-list" class="flex flex-wrap gap-2"></div>
-      </div>
-      <div class="bg-white rounded-2xl shadow-md p-6">
-        <h2 class="font-bold mb-1 text-rose-500">💔 나와 안 맞는 번호</h2>
-        <p class="text-xs text-gray-400 mb-4">궁합 점수가 가장 낮은 번호예요</p>
-        <div id="self-unlucky-list" class="flex flex-wrap gap-2"></div>
-      </div>
-    </div>
-
-    <section class="bg-white rounded-2xl shadow-md p-6 md:p-8">
+  <div id="result-self">
+    <section class="bg-white rounded-2xl shadow-md p-6 md:p-8 mb-6">
       <h2 class="font-bold mb-1">🎯 맞춤 번호 생성하기</h2>
       <p class="text-xs text-gray-400 mb-4">
         내 궁합점수 + <b>자주 나온(HOT)</b> 번호 통계를 섞어서 6개를 뽑아요.
@@ -196,6 +195,7 @@
       <div id="ball-result-self" class="flex flex-wrap gap-3 justify-center min-h-[64px] items-center mb-4">
         <span class="text-gray-300">버튼을 눌러 맞춤 번호를 생성해보세요</span>
       </div>
+      <p id="self-remaining-label" class="text-center text-[11px] text-indigo-400 mb-4"></p>
       <div class="flex flex-wrap gap-3 justify-center">
         <button onclick="generatePersonal('self')" class="px-8 py-3 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold shadow-lg shadow-emerald-200 transition">
           🎲 맞춤 번호 생성하기
@@ -203,12 +203,39 @@
         <button onclick="saveCombo('self')" class="px-8 py-3 rounded-full bg-white border-2 border-emerald-600 text-emerald-600 font-bold transition hover:bg-emerald-50">
           💾 내 번호함에 저장
         </button>
+        <button onclick="shareCombo('self')" class="px-8 py-3 rounded-full bg-white border-2 border-gray-300 text-gray-600 font-bold transition hover:bg-gray-50">
+          📤 공유하기
+        </button>
+        {% if kakao_js_key %}
+        <button onclick="shareToKakaoCombo('self')" class="px-8 py-3 rounded-full font-bold transition" style="background:#FEE500;color:#3C1E1E;">
+          💬 카카오톡으로 보내기
+        </button>
+        {% endif %}
       </div>
       <p class="text-center text-[11px] text-gray-400 mt-4">
-        ※ 참고용 재미 기능입니다. 실제 당첨 확률은 모든 조합이 동일합니다.
+        ※ 참고용 재미 기능입니다. 실제 당첨 확률은 모든 조합이 동일합니다.<br>
+        ※ 공유가 바로 안 되면 문구가 자동으로 복사돼 있으니 카카오톡 등에 붙여넣기 해주세요.
       </p>
     </section>
+
+    <div class="grid md:grid-cols-2 gap-6 mb-6">
+      <div class="bg-white rounded-2xl shadow-md p-6">
+        <h2 class="font-bold mb-1 text-emerald-600">💚 나와 잘 맞는 번호</h2>
+        <p id="self-summary" class="text-xs text-gray-400 mb-4"></p>
+        <div id="self-lucky-list" class="flex flex-wrap gap-2"><span class="text-xs text-gray-300">위에서 "내 행운번호 분석하기"를 누르면 표시돼요</span></div>
+      </div>
+      <div class="bg-white rounded-2xl shadow-md p-6">
+        <h2 class="font-bold mb-1 text-rose-500">💔 나와 안 맞는 번호</h2>
+        <p class="text-xs text-gray-400 mb-4">궁합 점수가 가장 낮은 번호예요</p>
+        <div id="self-unlucky-list" class="flex flex-wrap gap-2"><span class="text-xs text-gray-300">-</span></div>
+      </div>
+    </div>
   </div>
+</div>
+
+<div class="bg-amber-50 border border-amber-200 text-amber-800 text-xs rounded-xl p-4 mt-8 leading-relaxed">
+  ⚠️ <b>솔직 안내</b>: MBTI·혈액형·생년월일은 로또 당첨번호와 과학적으로 아무 관련이 없습니다.
+  같은 정보를 입력하면 항상 같은 결과가 나오는 <b>재미용 개인화 콘텐츠</b>이며, 실제 당첨 확률에는 영향을 주지 않습니다.
 </div>
 {% endblock %}
 
@@ -221,9 +248,9 @@ function switchTab(tab) {
 
   const borrowBtn = document.getElementById("tab-btn-borrow");
   const selfBtn = document.getElementById("tab-btn-self");
-  borrowBtn.classList.remove("bg-red-900", "text-amber-100", "bg-gray-100", "text-gray-600");
+  borrowBtn.classList.remove("bg-[#4a0812]", "text-amber-100", "bg-gray-100", "text-gray-600");
   selfBtn.classList.remove("bg-indigo-600", "text-white", "bg-gray-100", "text-gray-600");
-  borrowBtn.classList.add(...(isBorrow ? ["bg-red-900", "text-amber-100"] : ["bg-gray-100", "text-gray-600"]));
+  borrowBtn.classList.add(...(isBorrow ? ["bg-[#4a0812]", "text-amber-100"] : ["bg-gray-100", "text-gray-600"]));
   selfBtn.classList.add(...(isBorrow ? ["bg-gray-100", "text-gray-600"] : ["bg-indigo-600", "text-white"]));
 }
 
@@ -279,10 +306,12 @@ async function analyzeProfile(ns) {
     document.getElementById("borrow-phrase").textContent = phraseData.phrase;
   }
 
+  renderRemainingLabel(`${ns}-remaining-label`);
   document.getElementById(`result-${ns}`).scrollIntoView({ behavior: "smooth" });
 }
 
 async function generatePersonal(ns) {
+  if (!guardGenerate()) return;
   const { mbti, blood, birth } = getInputs(ns);
   if (!birth) { alert("생년월일을 선택해주세요."); return; }
   const statMode = ns === "borrow" ? "cold" : "hot";
@@ -299,6 +328,7 @@ async function generatePersonal(ns) {
     box.appendChild(el);
   });
   box.dataset.numbers = JSON.stringify(data.numbers);
+  renderRemainingLabel(`${ns}-remaining-label`);
 }
 
 async function saveCombo(ns) {
@@ -318,6 +348,28 @@ async function saveCombo(ns) {
   const data = await res.json();
   if (!res.ok) { alert(data.error); return; }
   alert("내 번호함에 저장했어요! (내 번호함 메뉴에서 확인 가능)");
+}
+
+function shareCombo(ns) {
+  const box = document.getElementById(`ball-result-${ns}`);
+  const numbersJson = box.dataset.numbers;
+  if (!numbersJson) { alert("먼저 번호를 생성해주세요."); return; }
+
+  const label = ns === "borrow"
+    ? `${document.getElementById("borrow-nickname").value || "그 사람"}의 행운을 빌려온 번호 😉`
+    : "나의 행운번호 🍀";
+  shareNumbers(JSON.parse(numbersJson), label);
+}
+
+function shareToKakaoCombo(ns) {
+  const box = document.getElementById(`ball-result-${ns}`);
+  const numbersJson = box.dataset.numbers;
+  if (!numbersJson) { alert("먼저 번호를 생성해주세요."); return; }
+
+  const label = ns === "borrow"
+    ? `${document.getElementById("borrow-nickname").value || "그 사람"}의 행운을 빌려온 번호 😉`
+    : "나의 행운번호 🍀";
+  shareToKakao(JSON.parse(numbersJson), label);
 }
 </script>
 {% endblock %}

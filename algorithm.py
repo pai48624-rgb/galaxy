@@ -110,25 +110,16 @@ def sample_unique_weighted(weights: dict, k: int = 6):
     return sorted(picked)
 
 
-def weighted_pick(strategy: str = "hybrid"):
+def _build_weights(strategy: str):
     """
-    통계 기반 가중치 추첨 (참고/재미용).
-    strategy:
-      - "hot"     : 자주 나온 번호에 더 높은 가중치
-      - "overdue" : 오래 안 나온 번호에 더 높은 가중치
-      - "hybrid"  : 두 지표를 절반씩 섞어서 가중치 산정 (기본값)
-    DB에 데이터가 없으면 완전 무작위로 대체됩니다.
+    strategy별 1~45 가중치 딕셔너리를 만든다. DB에 데이터가 없으면 None을 반환한다
+    (호출부에서 완전 무작위로 대체하도록).
     """
     freq = get_frequency_table()
-    gap = get_gap_table()
-
     if sum(freq.values()) == 0:
-        return pure_random_pick(), "hybrid(데이터 없음 → 완전 무작위로 대체됨)"
+        return None
 
-    def normalize(d):
-        max_v = max(d.values()) or 1
-        return {k: (v / max_v) for k, v in d.items()}
-
+    gap = get_gap_table()
     freq_n = normalize(freq)
     gap_n = normalize(gap)
 
@@ -141,17 +132,71 @@ def weighted_pick(strategy: str = "hybrid"):
         else:  # hybrid
             w = 0.5 * freq_n[n] + 0.5 * gap_n[n]
         weights[n] = max(w, 0.01)  # 완전히 0이 되지 않도록 최소값 부여
+    return weights
 
-    numbers = list(weights.keys())
-    probs = list(weights.values())
 
-    picked = set()
-    # 중복 없이 6개가 뽑힐 때까지 가중 추첨 반복
-    while len(picked) < 6:
-        choice = _rng.choices(numbers, weights=probs, k=1)[0]
-        picked.add(choice)
+def weighted_pick(strategy: str = "hybrid"):
+    """
+    통계 기반 가중치 추첨 (참고/재미용).
+    strategy:
+      - "hot"     : 자주 나온 번호에 더 높은 가중치
+      - "overdue" : 오래 안 나온 번호에 더 높은 가중치
+      - "hybrid"  : 두 지표를 절반씩 섞어서 가중치 산정 (기본값)
+    DB에 데이터가 없으면 완전 무작위로 대체됩니다.
+    """
+    weights = _build_weights(strategy)
+    if weights is None:
+        return pure_random_pick(), "hybrid(데이터 없음 → 완전 무작위로 대체됨)"
 
-    return sorted(picked), strategy
+    return sample_unique_weighted(weights, k=6), strategy
+
+
+def generate_numbers(mode: str = "random", include=None, exclude=None):
+    """
+    번호생성기 화면의 "포함/제외 번호 지정" 옵션을 반영한 생성.
+    include는 그대로 결과에 포함시키고, 나머지 자리만 mode 전략(무작위/가중치)으로
+    exclude와 include를 뺀 풀에서 채운다. 호출부(app)에서 include/exclude 유효성
+    (범위, 중복, 개수, 겹침, 남은 풀 크기)을 먼저 검증해야 한다.
+    """
+    include_set = set(include or [])
+    exclude_set = set(exclude or [])
+    needed = 6 - len(include_set)
+    pool = [n for n in range(NUM_MIN, NUM_MAX + 1) if n not in include_set and n not in exclude_set]
+
+    if needed <= 0:
+        picks = []
+    elif mode == "random":
+        picks = _rng.sample(pool, needed)
+    else:
+        weights = _build_weights(mode)
+        if weights is None:
+            picks = _rng.sample(pool, needed)
+        else:
+            pool_weights = {n: weights[n] for n in pool}
+            picks = sample_unique_weighted(pool_weights, k=needed)
+
+    return sorted(include_set | set(picks))
+
+
+def calc_balance(numbers):
+    """
+    번호 조합의 "밸런스" 참고 지표 (합계/홀짝/저고/AC값).
+    AC값(Arithmetic Complexity)은 6개 번호 중 두 개씩 짝지은 모든 차이값의
+    서로 다른 개수에서 (n-1)을 뺀 값으로, 로또 번호 조합 분석에서 흔히 쓰는
+    "번호 분산도" 참고 지표다 (다른 값일수록 조합이 더 고르게 퍼져있다고 본다).
+    """
+    numbers = sorted(numbers)
+    odd_count = sum(1 for n in numbers if n % 2 == 1)
+    low_count = sum(1 for n in numbers if n <= 22)
+    diffs = {abs(a - b) for a, b in combinations(numbers, 2)}
+    return {
+        "sum": sum(numbers),
+        "odd_count": odd_count,
+        "even_count": len(numbers) - odd_count,
+        "low_count": low_count,
+        "high_count": len(numbers) - low_count,
+        "ac_value": len(diffs) - (len(numbers) - 1),
+    }
 
 
 def monthly_prediction_set(num_sets: int = 5):

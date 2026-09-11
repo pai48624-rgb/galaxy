@@ -49,18 +49,21 @@
 <div class="bg-white rounded-2xl shadow-md p-6">
   <div class="flex items-center justify-between mb-4">
     <h2 class="font-bold">🔮 이번 달 참고 추천 조합 (하이브리드 알고리즘 5세트)</h2>
-    <button id="reload-monthly" class="text-xs px-3 py-1.5 rounded-full bg-indigo-100 text-indigo-700 font-semibold">다시 뽑기</button>
+    <button id="reload-monthly" class="text-xs px-3 py-1.5 rounded-full bg-amber-100 text-amber-700 font-semibold">🔒 광고 보고 다시 뽑기</button>
   </div>
   <div id="monthly-sets" class="space-y-3"></div>
   <p class="text-[11px] text-gray-400 mt-4">
     출현 빈도와 미출현 기간을 절반씩 반영한 가중 무작위 조합입니다. 당첨을 보장하지 않는 참고용 기능입니다.
+  </p>
+  <p class="text-[11px] text-amber-600 mt-1">
+    ✨ 이 프리미엄 추천 조합은 갱신할 때마다 광고 시청이 필요합니다 (첫 화면 진입 시 1회는 무료로 보여드려요).
   </p>
 </div>
 
 {% endblock %}
 
 {% block scripts %}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+<script src="{{ static_v('chart.umd.js') }}"></script>
 <script>
 function ball(number, color, size="ball-sm") {
   const el = document.createElement("div");
@@ -146,7 +149,14 @@ async function loadMonthly() {
   });
 }
 
-document.getElementById("reload-monthly").addEventListener("click", loadMonthly);
+document.getElementById("reload-monthly").addEventListener("click", () => {
+  /* 프리미엄 필터형 기능: 처음 진입 시 1회는 무료로 보여주고,
+     이후 "다시 뽑기"는 항상 광고 시청(플레이스홀더)이 필요합니다. */
+  showInterstitialPlaceholder(() => {
+    loadMonthly();
+    showToast("🎬 광고 시청 완료! 새 추천 조합을 뽑았어요");
+  });
+});
 
 loadStats();
 loadMonthly();

@@ -78,7 +78,7 @@
 {% endblock %}
 
 {% block scripts %}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jsqr/1.4.0/jsQR.js"></script>
+<script src="{{ static_v('jsQR.js') }}"></script>
 <script>
 function switchCheckTab(tab) {
   const isLookup = tab === "lookup";
@@ -244,21 +244,27 @@ async function checkGameAgainstDraw(row) {
   const draw = await res.json();
   if (!res.ok) { alert(draw.error); return; }
 
-  const winning = new Set(draw.numbers);
-  const bonus = draw.bonus;
-  const matchCount = userNums.filter(n => winning.has(n)).length;
-  let rank = 0, label = "낙첨";
-  if (matchCount === 6) { rank = 1; label = "1등 🎉"; }
-  else if (matchCount === 5 && userNums.includes(bonus)) { rank = 2; label = "2등 🎉"; }
-  else if (matchCount === 5) { rank = 3; label = "3등"; }
-  else if (matchCount === 4) { rank = 4; label = "4등"; }
-  else if (matchCount === 3) { rank = 5; label = "5등"; }
+  const result = LottoCore.calcRank(userNums, draw.numbers, draw.bonus);
+  const emoji = result.rank === 1 || result.rank === 2 ? " 🎉" : "";
+  const label = result.rankLabel + emoji;
 
   const resultBox = row.querySelector(".check-result");
   resultBox.innerHTML = `
-    <span class="font-bold ${rank > 0 && rank <= 2 ? 'text-rose-500' : 'text-gray-700'}">${label}</span>
-    <span class="text-gray-400 text-xs"> (${matchCount}개 일치${userNums.includes(bonus) ? ' + 보너스 일치' : ''}, ${draw.draw_no}회차 기준)</span>
+    <span class="font-bold ${result.rank > 0 && result.rank <= 2 ? 'text-rose-500' : 'text-gray-700'}">${label}</span>
+    <span class="text-gray-400 text-xs"> (${result.matchCount}개 일치${result.bonusMatched ? ' + 보너스 일치' : ''}, ${draw.draw_no}회차 기준)</span>
+    <div class="mt-2">
+      <button class="close-result-btn px-3 py-1 rounded-full bg-gray-100 text-gray-500 text-xs font-semibold hover:bg-gray-200">
+        확인했어요 (닫기)
+      </button>
+    </div>
   `;
+  resultBox.querySelector(".close-result-btn").addEventListener("click", () => {
+    /* QR 확인 결과를 닫는 시점 = 전면광고를 넣기 가장 좋은 지점.
+       지금은 플레이스홀더만 표시하고, 닫히면 결과를 접습니다. */
+    showInterstitialPlaceholder(() => {
+      resultBox.innerHTML = "";
+    });
+  });
 }
 </script>
 {% endblock %}

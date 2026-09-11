@@ -26,6 +26,8 @@
 
 {% block scripts %}
 <script>
+const KAKAO_ENABLED = {{ 'true' if kakao_js_key else 'false' }};
+
 function ball(number, color) {
   const el = document.createElement("div");
   el.className = `ball ball-sm ball-${color}`;
@@ -62,6 +64,8 @@ async function loadSaved() {
     controls.innerHTML = `
       <input type="number" placeholder="회차(생략시 최신)" class="draw-no-input w-36 border border-gray-200 rounded-lg px-2 py-1.5 text-sm">
       <button class="check-btn px-4 py-1.5 rounded-full bg-emerald-600 text-white text-xs font-bold hover:bg-emerald-700">당첨확인</button>
+      <button class="share-btn px-4 py-1.5 rounded-full bg-gray-100 text-gray-600 text-xs font-bold hover:bg-gray-200">📤 공유</button>
+      ${KAKAO_ENABLED ? '<button class="kakao-share-btn px-4 py-1.5 rounded-full text-xs font-bold" style="background:#FEE500;color:#3C1E1E;">💬 카톡</button>' : ""}
       <button class="delete-btn px-4 py-1.5 rounded-full bg-rose-50 text-rose-500 text-xs font-bold hover:bg-rose-100">삭제</button>
     `;
 
@@ -79,6 +83,16 @@ async function loadSaved() {
       if (!res.ok) { alert(result.error); return; }
       renderCheckResult(resultBox, result);
     });
+
+    controls.querySelector(".share-btn").addEventListener("click", () => {
+      shareNumbers(item.numbers, item.memo || "저장한 번호");
+    });
+
+    if (KAKAO_ENABLED) {
+      controls.querySelector(".kakao-share-btn").addEventListener("click", () => {
+        shareToKakao(item.numbers, item.memo || "저장한 번호");
+      });
+    }
 
     controls.querySelector(".delete-btn").addEventListener("click", async () => {
       if (!confirm("이 번호를 삭제할까요?")) return;
