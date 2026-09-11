@@ -355,7 +355,13 @@ function affiliate(url){
   try { const u = new URL(url); u.searchParams.set(AFFILIATE_PARAM, AFFILIATE_VALUE); return u.toString(); }
   catch { return url; }
 }
-const catHue = (() => { const c = {}; return s => c[s] ?? (c[s] = [...String(s)].reduce((h,ch)=>(h*31+ch.charCodeAt(0))>>>0,0) % 360); })();
+// 카테고리마다 눈에 띄게 다른 색이 되도록 황금각으로 색상환을 고르게 배분(해시는 우연히 비슷한 색끼리 뭉칠 수 있음)
+let catHueMap = new Map();
+function assignCatHues(){
+  catHueMap = new Map();
+  cats.forEach(({ c }, i) => catHueMap.set(c, Math.round((i * 137.50776) % 360)));
+}
+function catHue(cat){ return catHueMap.get(cat) ?? 0; }
 
 /* ---- 설정 안 됨 → 안내 오버레이 ---- */
 if (!/^https:\/\/[a-z0-9.-]+(\.supabase\.co|\.pages\.dev\/api|\/api)$/i.test(CONFIG.SUPABASE_URL)
@@ -379,7 +385,7 @@ async function selectAll(table, cols){
 
 let nodes = [], links = [], nodeById = new Map(), cats = [];
 const state = { cats: new Set(), price: new Set(["무료","부분유료","유료","미지정"]), q: "" };
-let Graph, SHOW_LABELS = false, layoutMode = "network", didInitialFit = false, userTouchedCamera = false;
+let Graph, SHOW_LABELS = false, layoutMode = "network", didInitialFit = false, userTouchedCamera = false, wasSearching = false, _searchFitTimer = null;
 
 const linkEnds = l => [typeof l.source === "object" ? l.source.id : l.source,
                        typeof l.target === "object" ? l.target.id : l.target];
@@ -426,6 +432,7 @@ async function boot(attempt = 1){
       .sort((a,b) => b.n - a.n);
 
     assignConstellationShapes();
+    assignCatHues();
 
     phase = "3D 그래픽 초기화(WebGL)";
     const _gl = document.createElement("canvas");
@@ -509,7 +516,8 @@ function assignConstellationShapes(){
 function makeShapeForce(){
   let fnodes = [];
   function force(alpha){
-    if (layoutMode !== "network") return;
+    // 검색 결과(본체+연관 AI)를 볼 때는 별자리 모양으로 다시 뭉치지 않고, 관계가 잘 보이도록 넓게 퍼지게 둠
+    if (layoutMode !== "network" || state.q) return;
     const cent = new Map();
     for (const n of fnodes){
       let c = cent.get(n.category);
@@ -546,12 +554,13 @@ function starTexture(hue){
   if (starTexCache.has(hue)) return starTexCache.get(hue);
   const s = 160, cv = document.createElement("canvas"); cv.width = cv.height = s;
   const ctx = cv.getContext("2d"), cx = s / 2, cy = s / 2;
+  // 흰색 중심점은 아주 작게만 두고, 카테고리 색이 별 전체에서 또렷하게 보이도록 채도/범위를 키움
   const g = ctx.createRadialGradient(cx, cy, 0, cx, cy, s / 2);
   g.addColorStop(0, "rgba(255,255,255,1)");
-  g.addColorStop(0.10, "rgba(255,255,255,.96)");
-  g.addColorStop(0.26, `hsla(${hue},85%,80%,.8)`);
-  g.addColorStop(0.55, `hsla(${hue},80%,62%,.26)`);
-  g.addColorStop(1, `hsla(${hue},80%,55%,0)`);
+  g.addColorStop(0.05, `hsla(${hue},95%,75%,1)`);
+  g.addColorStop(0.30, `hsla(${hue},95%,62%,.95)`);
+  g.addColorStop(0.60, `hsla(${hue},92%,52%,.5)`);
+  g.addColorStop(1, `hsla(${hue},92%,45%,0)`);
   ctx.fillStyle = g; ctx.fillRect(0, 0, s, s);
   ctx.globalCompositeOperation = "lighter";
   ctx.strokeStyle = "rgba(255,255,255,.5)";
@@ -662,16 +671,29 @@ function initGraph(){
     .linkDirectionalParticleWidth(1.6)
     .linkDirectionalParticleSpeed(0.006)
     .onNodeClick(n => { openDrawer(n); focusNode(n.id); })
-    .onBackgroundClick(closeDrawer);
+    .onBackgroundClick(closeDrawer)
+    .onNodeDrag((n, translate) => dragGroup(n, translate))
+    .onNodeDragEnd(() => { dragGroupIds = null; });
 
   Graph.d3Force("charge").strength(-70);
   Graph.d3Force("shape", makeShapeForce());
   Graph.cameraPosition({ z: 780 });
   // 물리 시뮬레이션이 "완전히 멈추는" 시점은 예측 불가(수초~수십초) — 사용자가 그 사이 줌 조작을 하다가
   // 손을 떼면 그 타이밍에 자동 맞춤이 뒤늦게 실행되어 "화면이 스스로 줄어드는" 것처럼 보였음.
-  // 대신 짧은 고정 지연 후 1회만 맞추고, 그 전에 사용자가 카메라를 직접 조작했다면 건너뜀.
+  // 대신 짧은 고정 지연 후 1회만, 그것도 "전체를 다 담는" 완전한 줌아웃이 아니라 조금 더 확대된
+  // "중간" 정도로만 맞추고(zoomToFit(0,…)로 정확한 거리만 순간 계산해 화면엔 안 보이게 구함),
+  // 그 전에 사용자가 카메라를 직접 조작했다면 건너뜀.
   setTimeout(() => {
-    if (!didInitialFit && !userTouchedCamera){ didInitialFit = true; Graph.zoomToFit(400, 60); }
+    if (didInitialFit || userTouchedCamera) return;
+    didInitialFit = true;
+    // 전체를 다 담는 정확한 거리를 재려고 잠깐 순간이동시켰다가(0ms) 바로 제자리로 되돌림 —
+    // 아래 애니메이션 호출 전까지 화면에 그려질 기회가 없어 사용자 눈에는 보이지 않음
+    const before = Graph.cameraPosition();
+    Graph.zoomToFit(0, 60);
+    const full = Graph.cameraPosition();
+    Graph.cameraPosition(before, undefined, 0);
+    const k = 0.6; // 전체를 다 담지 않고 조금 더 확대된 "중간" 정도로
+    Graph.cameraPosition({ x: full.x * k, y: full.y * k, z: full.z * k }, undefined, 2600);
   }, 2600);
   try {
     Graph.controls().addEventListener("start", () => { userTouchedCamera = true; });
@@ -690,6 +712,24 @@ function initGraph(){
     geo.setAttribute("position", new THREE.BufferAttribute(pos, 3));
     Graph.scene().add(new THREE.Points(geo, new THREE.PointsMaterial({ color: 0x9aa0c0, size: 1.6, sizeAttenuation: true, transparent: true, opacity: 0.7 })));
   } catch (e){ console.warn("starfield skipped", e); }
+}
+
+/* ---- 이름 붙은(별자리 모양) 그룹은 별 하나를 드래그하면 그룹 전체가 함께 움직임 ---- */
+let dragGroupIds = null;
+function dragGroup(n, translate){
+  if (dragGroupIds == null){
+    dragGroupIds = catShapeName.has(n.category)
+      ? nodes.filter(x => x.category === n.category && x.id !== n.id).map(x => x.id)
+      : [];
+  }
+  for (const id of dragGroupIds){
+    const sib = nodeById.get(id);
+    if (!sib) continue;
+    sib.fx = (sib.fx ?? sib.x) + translate.x;
+    sib.fy = (sib.fy ?? sib.y) + translate.y;
+    sib.fz = (sib.fz ?? sib.z ?? 0) + translate.z;
+    sib.x = sib.fx; sib.y = sib.fy; sib.z = sib.fz;
+  }
 }
 
 function focusNode(id){
@@ -773,6 +813,19 @@ function refresh(){
   }
   const ids = new Set(vis.map(n => n.id));
   const vlinks = links.filter(l => { const [a,b] = linkEnds(l); return ids.has(a) && ids.has(b); });
+
+  // 검색 결과처럼 노드 수가 적을 때는 서로 더 멀리 밀어내서 연결관계가 겹쳐 보이지 않게 함
+  const searching = !!state.q;
+  Graph.d3Force("charge").strength(searching ? -190 : -70);
+  if (searching !== wasSearching){
+    wasSearching = searching;
+    Graph.d3ReheatSimulation();
+    clearTimeout(_searchFitTimer);
+    if (searching){
+      didInitialFit = true; userTouchedCamera = true;
+      _searchFitTimer = setTimeout(() => { if (state.q) Graph.zoomToFit(600, 90); }, 950);
+    }
+  }
 
   const wantLabels = vis.length <= 160;
   if (wantLabels !== SHOW_LABELS){ SHOW_LABELS = wantLabels; Graph.nodeThreeObject(nodeObject).refresh(); }
