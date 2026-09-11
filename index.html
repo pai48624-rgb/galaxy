@@ -75,6 +75,8 @@
   .tool{display:flex;align-items:center;gap:7px;padding:5px 7px;border-radius:6px;background:none;border:0;
     color:#c4c4d6;font-size:12px;cursor:pointer;text-align:left;width:100%}
   .tool:hover{background:rgba(255,255,255,.06);color:#fff}
+  .tool.selected{background:rgba(140,120,230,.28);color:#fff;font-weight:700}
+  .tool.selected .dot{box-shadow:0 0 0 3px rgba(140,120,230,.35)}
   .dot{width:6px;height:6px;border-radius:50%;flex:none;background:#8a8aa0}
   .dot.free{background:var(--teal)} .dot.freemium{background:var(--purple)} .dot.paid{background:var(--amber)}
   .mini-ad{font-size:8px;font-weight:800;color:var(--amber);border:1px solid rgba(240,180,41,.4);border-radius:4px;padding:0 3px}
@@ -778,7 +780,12 @@ function initGraph(){
   try { initSceneLoop(); } catch (e){ console.warn("scene loop skipped", e); }
 }
 
-/* ---- 물리 시뮬레이션이 멈춰도 항상 도는 별도 루프: 별똥별 + 라벨/선택링 위치 갱신 ----
+// 실제 NASA 소행성 사진(433 Eros, NEAR Shoemaker 탐사선 촬영, 퍼블릭 도메인) — 위키미디어 공용은
+// CORS 헤더를 제대로 보내줘서 캔버스/텍스처로 안전하게 쓸 수 있음. 네트워크가 막혀 있으면(광고차단,
+// 사내망 등) 조용히 실패하고 그냥 안 띄움 — 지도 자체 동작에는 영향 없음.
+const ASTEROID_TEX_URL = "https://upload.wikimedia.org/wikipedia/commons/e/e5/Eros_-_PIA02923_%28color%29.jpg";
+
+/* ---- 물리 시뮬레이션이 멈춰도 항상 도는 별도 루프: 별똥별/소행성 + 라벨/선택링 위치 갱신 ----
    (onEngineTick은 성단 배치가 안정되어 알파가 0에 가까워지면 더 안 불림 — 그래서 라벨/선택링을
    여기로 옮겨서, 정착 후에 별을 클릭해도 선택 링이 계속 정확히 따라다니게 함) */
 function initSceneLoop(){
@@ -786,6 +793,40 @@ function initSceneLoop(){
   Graph.scene().add(group);
   const active = [];
   const MAX_METEORS = 10;
+
+  const asteroids = [];
+  const MAX_ASTEROIDS = 2;
+  let asteroidTex = null, asteroidTriedLoad = false;
+  function tryLoadAsteroidTexture(){
+    if (asteroidTriedLoad) return;
+    asteroidTriedLoad = true;
+    new THREE.TextureLoader().load(
+      ASTEROID_TEX_URL,
+      (tex) => { asteroidTex = tex; },
+      undefined,
+      () => { /* 네트워크 차단 등 — 소행성 없이 별똥별만으로 계속 동작 */ }
+    );
+  }
+  tryLoadAsteroidTexture();
+
+  function spawnAsteroid(){
+    if (!asteroidTex || asteroids.length >= MAX_ASTEROIDS) return;
+    const img = asteroidTex.image;
+    const w = 34 + Math.random() * 46, h = w * ((img && img.height && img.width) ? img.height / img.width : 1);
+    const mat = new THREE.MeshBasicMaterial({ map: asteroidTex, transparent: true, opacity: 0 });
+    const mesh = new THREE.Mesh(new THREE.PlaneGeometry(w, h), mat);
+    const span = 2600;
+    mesh.position.set((Math.random() - 0.5) * span, (Math.random() - 0.5) * span, (Math.random() - 0.5) * span);
+    mesh.rotation.set(Math.random() * Math.PI, Math.random() * Math.PI, Math.random() * Math.PI);
+    group.add(mesh);
+    asteroids.push({
+      mesh,
+      dir: new THREE.Vector3(Math.random() - 0.5, Math.random() * 0.4 - 0.2, Math.random() - 0.5).normalize(),
+      speed: 12 + Math.random() * 16,
+      rot: [(Math.random() - 0.5) * 0.5, (Math.random() - 0.5) * 0.5, (Math.random() - 0.5) * 0.5],
+      life: 0, maxLife: 10 + Math.random() * 8,
+    });
+  }
 
   function spawnMeteor(){
     if (active.length >= MAX_METEORS) return;
@@ -807,7 +848,7 @@ function initSceneLoop(){
     });
   }
 
-  let lastT = performance.now(), lastBurst = 0;
+  let lastT = performance.now(), lastBurst = 0, lastAsteroid = 0;
   function tick(t){
     requestAnimationFrame(tick);
     const dt = Math.min(0.05, (t - lastT) / 1000); lastT = t;
@@ -828,6 +869,25 @@ function initSceneLoop(){
       }
       m.line.position.copy(m.dir.clone().multiplyScalar(-m.speed * m.life));
       m.line.material.opacity = p < 0.12 ? p / 0.12 : p > 0.75 ? (1 - p) / 0.25 : 1;
+    }
+
+    if (t - lastAsteroid > 9000 + Math.random() * 9000){
+      lastAsteroid = t; spawnAsteroid();
+    }
+    for (let i = asteroids.length - 1; i >= 0; i--){
+      const a = asteroids[i];
+      a.life += dt;
+      const p = a.life / a.maxLife;
+      if (p >= 1){
+        group.remove(a.mesh); a.mesh.geometry.dispose(); a.mesh.material.dispose();
+        asteroids.splice(i, 1);
+        continue;
+      }
+      a.mesh.position.addScaledVector(a.dir, a.speed * dt);
+      a.mesh.rotation.x += a.rot[0] * dt;
+      a.mesh.rotation.y += a.rot[1] * dt;
+      a.mesh.rotation.z += a.rot[2] * dt;
+      a.mesh.material.opacity = 0.85 * (p < 0.15 ? p / 0.15 : p > 0.8 ? (1 - p) / 0.2 : 1);
     }
 
     updateConstellationLabels();
@@ -860,17 +920,27 @@ function setHighlightedCategory(c){
   Graph.nodeThreeObject(nodeObject).refresh();
 }
 
+// 어떤 지점이 지금 화면 안(여백 포함)에 실제로 들어와 있는지 — 카메라 투영으로 직접 확인
+function isPointOnScreen(x, y, z, marginFrac){
+  const v = new THREE.Vector3(x, y, z).project(Graph.camera());
+  if (v.z >= 1 || v.z <= -1) return false; // 카메라 뒤쪽이거나 절두체 밖
+  const m = marginFrac ?? 0.14;
+  return v.x >= -1 + m && v.x <= 1 - m && v.y >= -1 + m && v.y <= 1 - m;
+}
+
 function focusNode(id){
   const n = nodeById.get(id);
   if (!n || n.x == null) return;
   // 별 하나만 꽉 채우는 클로즈업 대신, 이 별이 속한 그룹 전체를 중간 크기로 앞에 가져와서 보여줌
   // (그래야 옆에 같이 뜬 다른 별들 이름도 같이 보여서 "이게 무슨 별인지" 알 수 있음)
   setHighlightedCategory(n.category);
-  focusCategory(n.category);
+  focusCategory(n.category, n);
 }
 
-/* ---- 멀리/뒤쪽에 있는 작은 성단도 카테고리 클릭 한 번으로 앞으로 가져와서 크게 보기 ---- */
-function focusCategory(c){
+/* ---- 멀리/뒤쪽에 있는 작은 성단도 카테고리 클릭 한 번으로 앞으로 가져와서 크게 보기 ----
+   anchor(특정 별)가 있으면, 그룹 중심까지의 거리뿐 아니라 "그 별이 실제로 화면 안에 보이는지"도 확인함 —
+   큰 그룹은 넓게 퍼져 있어서 중심은 가까워도 클릭한 별 자체는 화면 밖에 있을 수 있었음 */
+function focusCategory(c, anchor){
   const members = nodes.filter(n => n.category === c && n.x != null);
   if (!members.length) return;
   userTouchedCamera = true;
@@ -882,10 +952,12 @@ function focusCategory(c){
   // 카테고리가 크면(예: 60개) 임의 지그재그 모양이 넓게 퍼질 수 있어서, 너무 멀리 빠지지 않게 상한을 둠
   const idealDist = Math.min(950, Math.max(200, maxR * 2.6));
   // 이미 이 거리보다 더 가까이 보고 있으면 그대로 둠 — 안 그러면 확대해서 보던 중에 클릭했을 때
-  // 오히려 더 멀리 밀려나서 별이 갑자기 작아지는 것처럼 느껴짐
+  // 오히려 더 멀리 밀려나서 별이 갑자기 작아지는 것처럼 느껴짐. 단, anchor(클릭한 별)가 실제로
+  // 화면 밖에 있으면 "가깝다"는 판단과 무관하게 반드시 다시 잡아줌.
   const cam = Graph.cameraPosition();
   const curDist = Math.hypot(cam.x - cx, cam.y - cy, cam.z - cz);
-  if (curDist <= idealDist * 1.1) return;
+  const anchorOnScreen = anchor ? isPointOnScreen(anchor.x, anchor.y, anchor.z || 0) : true;
+  if (anchorOnScreen && curDist <= idealDist * 1.1) return;
   const dirLen = Math.hypot(cx, cy, cz) || 1;
   const ux = cx / dirLen, uy = cy / dirLen, uz = cz / dirLen;
   Graph.cameraPosition(
@@ -998,10 +1070,18 @@ function refresh(){
 
 /* ---- 검색어에 해당하는 카테고리를 왼쪽 목록에서 자동으로 펼침 ---- */
 function fillCatBody(body, c){
-  if (body.dataset.filled) return;
+  if (body.dataset.filled){ syncSelectedToolButton(); return; }
   const items = nodes.filter(n => n.category === c).sort((a,b) => a.name.localeCompare(b.name, "ko"));
   body.innerHTML = items.map(n => `<button class="tool" type="button" data-go="${n.id}"><span class="dot ${priceClass(n.pricing)}"></span>${esc(n.name)}${n.sponsor ? ' <span class="mini-ad">AD</span>' : ""}</button>`).join("");
   body.dataset.filled = "1";
+  syncSelectedToolButton();
+}
+// 사이드바 목록에서도 "지금 어떤 별을 클릭했는지" 색으로 표시 — 3D 링과 별개로 목록에서도 바로 보이게
+function syncSelectedToolButton(){
+  document.querySelectorAll("#catTree .tool.selected").forEach(b => b.classList.remove("selected"));
+  if (!curNode) return;
+  const btn = document.querySelector(`#catTree .tool[data-go="${curNode.id}"]`);
+  if (btn) btn.classList.add("selected");
 }
 function syncCategoryExpansion(){
   const matchedCats = new Set(searchMatches().map(n => n.category));
@@ -1037,6 +1117,8 @@ function buildSidebar(){
     const h = e.target.closest(".cat-h"); if (!h) return;
     const wrap = h.parentElement, c = wrap.dataset.cat, body = wrap.querySelector(".cat-body");
     const on = !state.cats.has(c);
+    // 다른 카테고리로 넘어가면 이전에 클릭해뒀던 별의 선택 링/상세패널이 배경에 그대로 남아있던 버그 — 초기화
+    closeDrawer();
     on ? state.cats.add(c) : state.cats.delete(c);
     wrap.classList.toggle("active", on);
     wrap.classList.toggle("open", on);
@@ -1180,6 +1262,7 @@ let curNode = null, formRating = 0, sending = false;
 async function openDrawer(n){
   curNode = n; formRating = 0;
   updateSelectionRing();
+  syncSelectedToolButton();
   $("#drawer").classList.add("open");
   resizeGraph();
   $("#drawer").innerHTML = drawerHTML(n, null);
@@ -1194,6 +1277,7 @@ async function openDrawer(n){
 function closeDrawer(){
   curNode = null; $("#drawer").classList.remove("open"); resizeGraph();
   updateSelectionRing();
+  syncSelectedToolButton();
   if (highlightedCategory){ highlightedCategory = null; Graph.nodeThreeObject(nodeObject).refresh(); }
 }
 
