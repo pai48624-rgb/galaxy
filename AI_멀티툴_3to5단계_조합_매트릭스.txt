@@ -1,0 +1,2510 @@
+
+AI 멀티툴 3 to 5 단계 조합 매트릭스
+731개 기준 목록에서 선별한 300개 실전 운영 스택
+이 문서는 단순한 두 도구 연결이 아니라, 하나의 뇌 모델에 3~4개의 실행 도구를 붙인 4~5도구 스택 300개를 제시한다. 데이터 수집부터 정규화·검수·웹 구축·콘텐츠 제작·배포·성과 측정까지 실제 서비스 운영 단위를 기준으로 묶었다.
+범위와 사용법
+10개 뇌 모델 × 30개 멀티툴 운영 패턴 = 300개 조합. 모든 행은 총 4~5개 도구로 구성된다.
+포함 영역: 웹 수집, 데이터 엔지니어링, RAG·에이전트, 노코드 자동화, 웹앱 구축, SEO·리서치, 이미지·영상·음성, CRM, 분석·평가, LLM 게이트웨이.
+731개 도구의 모든 가능한 다중 조합은 수천만 건 이상으로 실무에 의미가 없다. 따라서 가격 비교·광고 수익 플랫폼에서 바로 실행할 수 있는 30개 운영 패턴을 각 핵심 뇌 모델과 교차했다.
+요금은 기준 엑셀에 있는 정책 유형을 요약했다. 실제 월 요금·크레딧·토큰 단가는 수시로 바뀌므로 배포 전 공식 가격 페이지를 확인한다.
+1. ChatGPT 기반 멀티툴 스택 30개
+뇌 역할: 기획·구조화·범용 코드. 아래 패턴은 ChatGPT이 기획·판단·분류·검수·응답을 맡고, 나머지 3~4개 도구가 실행 체인을 완성하는 구조다.
+번호
+멀티툴 조합
+뇌 + 실행 3~4개
+주요 마케팅 활용
+파급력
+데이터 분석 및 알고리즘 연동 방식
+요금 구조
+1
+ChatGPT + Firecrawl + dbt + n8n
+공식 가격 비교 페이지와 변경 알림
+★★★★★★★★★★
+1. ChatGPT이 공개 공식 가격 페이지를 수집해 플랜·통화·주기·한도 필드로 추출한다.
+2. Firecrawl + dbt + n8n 조합이 dbt 테스트로 누락·중복·비정상 값을 걸러 이전 값과 비교한다.
+3. n8n은 근거 URL과 차이 요약을 검수자에게 보내고 승인 후에만 게시한다.
+API 종량제 + 구독형(ChatGPT) / 프리미엄(무료+유료 구독) / 오픈소스 + 클라우드 매니지드 유료 플랜
+2
+ChatGPT + Apify + Airbyte + Make
+카테고리별 가격 변동 모니터링
+★★★★★★★★★★
+1. ChatGPT이 승인된 공개 대상의 스냅샷과 변경 신호를 주기적으로 수집한다.
+2. Apify + Airbyte + Make 조합이 Airbyte가 원천 데이터를 저장소로 적재해 추적 가능한 이력을 만든다.
+3. Make가 임계값을 넘는 변경만 검수 큐와 콘텐츠 갱신 작업으로 연결한다.
+API 종량제 + 구독형(ChatGPT) / 프리미엄(무료+유료 구독) / 오픈소스 + 클라우드 매니지드 유료 플랜
+3
+ChatGPT + Browserbase + Playwright Agent + Cursor
+동적 가격 페이지 파싱과 테스트
+★★★★★★★★★★
+1. ChatGPT이 브라우저 자동화가 JavaScript 렌더링 후의 공개 가격 정보를 읽는다.
+2. Browserbase + Playwright Agent + Cursor 조합이 Cursor가 사이트별 파서와 회귀 테스트를 작성해 DOM 변화에 대응한다.
+3. 실패율·응답 시간·필드 누락을 대시보드로 보내 수집 품질을 관리한다.
+API 종량제 + 구독형(ChatGPT) / 프리미엄(무료+유료 구독)
+4
+ChatGPT + Exa AI + Jasper + Notion AI
+신규 AI 카테고리 리서치와 검색 콘텐츠
+★★★★★★★★★☆
+1. ChatGPT이 시장 신호와 출처 링크를 수집해 비교할 질문 단위로 정리한다.
+2. Exa AI + Jasper + Notion AI 조합이 Jasper가 독자 의도에 맞는 초안을 만들고 Notion AI가 편집 캘린더를 운영한다.
+3. 최종 가격 수치와 주장은 원문 공식 URL을 검수한 뒤 발행한다.
+API 종량제 + 구독형(ChatGPT) / 프리미엄(무료+유료 구독) / 애드온(월 구독)
+5
+ChatGPT + Genspark + Gamma + Beautiful.ai
+투자자·파트너용 시장 브리프
+★★★★★★★★☆☆
+1. ChatGPT이 조사 결과를 제품군·변화·기회·리스크로 구조화한다.
+2. Genspark + Gamma + Beautiful.ai 조합이 Gamma와 Beautiful.ai가 같은 데이터로 발표물과 제안서 시안을 만든다.
+3. 슬라이드의 수치마다 공식 출처와 기준일을 남겨 재검증 가능성을 유지한다.
+API 종량제 + 구독형(ChatGPT) / 프리미엄(무료+유료 구독)
+6
+ChatGPT + v0.dev + Figma AI + Vercel AI Gateway
+가격 비교 랜딩과 광고 레이아웃
+★★★★★★★★★☆
+1. ChatGPT이 요구사항을 반응형 카드·테이블·FAQ·광고 영역 컴포넌트로 변환한다.
+2. v0.dev + Figma AI + Vercel AI Gateway 조합이 Figma AI 디자인 토큰을 v0 화면에 반영하고 API 게이트웨이를 통일한다.
+3. CLS·모바일 가독성·광고와 편집 콘텐츠의 구분을 배포 전 점검한다.
+API 종량제 + 구독형(ChatGPT) / 프리미엄(무료+유료 구독) / 공식 가격 페이지 확인 필요
+7
+ChatGPT + Lovable + Supabase + Cursor
+가격 검수와 게시 이력 관리
+★★★★★★★★★☆
+1. ChatGPT이 검수자가 이전값·신규값·근거 URL·승인 상태를 비교하는 화면을 만든다.
+2. Lovable + Supabase + Cursor 조합이 Supabase에 역할·변경 로그·레코드 상태를 저장하고 Cursor로 규칙을 구현한다.
+3. 공개 사이트와 관리자 권한을 분리해 실수로 인한 데이터 변경을 막는다.
+API 종량제 + 구독형(ChatGPT) / 프리미엄(무료+유료 구독) / 공식 가격 페이지 확인 필요
+8
+ChatGPT + Bolt.new + Replit Agent + GitHub Copilot
+카테고리 MVP와 데이터 검증
+★★★★★★★★☆☆
+1. ChatGPT이 빠른 웹 화면과 API 프로토타입을 만들고 비교 필드를 연결한다.
+2. Bolt.new + Replit Agent + GitHub Copilot 조합이 Replit Agent와 Copilot이 입력 검증·테스트·배포 준비 코드를 보조한다.
+3. 운영 전에는 비밀키·백업·보안·성능을 별도 체크리스트로 검수한다.
+API 종량제 + 구독형(ChatGPT) / 프리미엄(무료+유료 구독)
+9
+ChatGPT + LlamaIndex + LangChain + Cohere Rerank 3
+출처를 제시하는 비교 챗봇
+★★★★★★★★★★
+1. ChatGPT이 공식 문서와 가격 DB를 버전·URL·수집 시각을 가진 청크로 인덱싱한다.
+2. LlamaIndex + LangChain + Cohere Rerank 3 조합이 LangChain이 검색·도구 호출·답변 생성을 연결하고 Rerank가 근거를 정렬한다.
+3. 근거가 부족한 질문은 답을 추정하지 않고 공식 페이지 링크로 안내한다.
+API 종량제 + 구독형(ChatGPT) / 오픈소스 + 클라우드 매니지드 유료 플랜
+10
+ChatGPT + LangGraph + OpenAI Agents SDK + PydanticAI
+수집·검수·게시 전 승인 자동화
+★★★★★★★★★★
+1. ChatGPT이 에이전트를 수집·필드 추출·값 비교·승인 요청 역할로 나눈다.
+2. LangGraph + OpenAI Agents SDK + PydanticAI 조합이 상태 그래프가 실패·보류·재검수 경로와 구조화 출력 스키마를 강제한다.
+3. 출처 완결성과 사람 승인이 없으면 게시 도구를 호출하지 않는다.
+API 종량제 + 구독형(ChatGPT) / 오픈소스(무료)
+11
+ChatGPT + Dify + Flowise + Make
+운영팀의 질문 응답과 태스크 자동화
+★★★★★★★★★☆
+1. ChatGPT이 운영팀이 가격 변경·콘텐츠 상태·출처를 조회하는 노코드 앱을 만든다.
+2. Dify + Flowise + Make 조합이 Dify와 Flowise가 지식베이스·프롬프트·워크플로를 역할별로 연결한다.
+3. Make는 승인된 작업만 CMS·태스크·알림 시스템으로 전달한다.
+API 종량제 + 구독형(ChatGPT) / 오픈소스(무료) / 프리미엄(무료+유료 구독)
+12
+ChatGPT + CrewAI + AutoGen + Notion AI
+리서치에서 발행까지의 역할 분담
+★★★★★★★★☆☆
+1. ChatGPT이 리서처·검수자·SEO 편집자·배포 담당자의 산출물 형식을 분리한다.
+2. CrewAI + AutoGen + Notion AI 조합이 CrewAI와 AutoGen이 역할 간 전달물에 출처·기준일·신뢰도를 포함한다.
+3. Notion AI가 편집 캘린더·담당자·수정 이력을 유지한다.
+API 종량제 + 구독형(ChatGPT) / 오픈소스(무료) / 애드온(월 구독)
+13
+ChatGPT + Higgsfield + ElevenLabs + Descript
+릴스·틱톡 가격 비교 숏폼
+★★★★★★★★★★
+1. ChatGPT이 비교 포인트를 훅·장면·CTA가 있는 15초 대본으로 압축한다.
+2. Higgsfield + ElevenLabs + Descript 조합이 Higgsfield가 모션 영상, ElevenLabs가 내레이션, Descript가 자막과 편집을 맡는다.
+3. 완주율·클릭률·랜딩 진입률을 영상 버전과 연결해 다음 훅을 선정한다.
+API 종량제 + 구독형(ChatGPT) / 프리미엄(무료+유료 구독)
+14
+ChatGPT + Runway + ElevenLabs + Canva Magic Edit
+SaaS 기능 비교와 유튜브 설명 영상
+★★★★★★★★★☆
+1. ChatGPT이 대본을 제품 화면·B-roll·그래픽·내레이션으로 분해한다.
+2. Runway + ElevenLabs + Canva Magic Edit 조합이 Runway 영상과 Canva 카드, ElevenLabs 음성을 한 타임라인으로 조립한다.
+3. 영상 설명란에 가격 기준일과 공식 링크를 넣고 업데이트 작업을 예약한다.
+API 종량제 + 구독형(ChatGPT) / 프리미엄(무료+유료 구독)
+15
+ChatGPT + HeyGen + ElevenLabs + Canva Magic Edit
+국가별 가격 안내와 리드 유입
+★★★★★★★★☆☆
+1. ChatGPT이 현지화된 대본을 아바타·음성·자막으로 변환해 언어별 영상을 만든다.
+2. HeyGen + ElevenLabs + Canva Magic Edit 조합이 Canva가 동일 캠페인의 배너·캐러셀·랜딩 그래픽을 파생한다.
+3. 언어·국가·URL별 성과를 비교하고 초상·음성 사용 동의를 관리한다.
+API 종량제 + 구독형(ChatGPT) / 프리미엄(무료+유료 구독)
+16
+ChatGPT + Synthesia + OpenAI TTS + Gamma
+B2B 온보딩과 플랜 설명
+★★★★★★★★☆☆
+1. ChatGPT이 역할별 학습 경로와 플랜별 한계를 교육 시나리오로 만든다.
+2. Synthesia + OpenAI TTS + Gamma 조합이 Synthesia 영상, TTS 음성, Gamma 슬라이드를 같은 데이터 원본에 연결한다.
+3. 도움말 클릭·시청 완료·지원 문의를 분석해 설명이 약한 항목을 보강한다.
+API 종량제 + 구독형(ChatGPT) / 프리미엄(무료+유료 구독)
+17
+ChatGPT + Midjourney + Canva Magic Edit + Recraft
+블로그·SNS 비교 카드
+★★★★★★★★★☆
+1. ChatGPT이 검색 의도와 브랜드 톤을 시각 프롬프트·카피·아이콘 체계로 바꾼다.
+2. Midjourney + Canva Magic Edit + Recraft 조합이 Midjourney가 무드 이미지를 만들고 Recraft·Canva가 카드와 템플릿을 완성한다.
+3. 가격 사실은 이미지에만 넣지 않고 접근 가능한 표와 공식 링크로 함께 제공한다.
+API 종량제 + 구독형(ChatGPT) / 유료 구독제 / 프리미엄(무료+유료 구독)
+18
+ChatGPT + Adobe Firefly + Ideogram + Canva Magic Edit
+배너·썸네일·검색 광고 변형
+★★★★★★★★☆☆
+1. ChatGPT이 브랜드 가이드와 타깃 세그먼트를 기반으로 여러 시각 가설을 만든다.
+2. Adobe Firefly + Ideogram + Canva Magic Edit 조합이 Firefly·Ideogram 결과를 Canva 템플릿의 제목·CTA·규격에 맞춰 변형한다.
+3. A/B 결과와 사용 권리 상태를 크리에이티브 ID에 기록한다.
+API 종량제 + 구독형(ChatGPT) / 프리미엄(무료+유료 구독)
+19
+ChatGPT + Kling + Luma Dream Machine + Pika
+기능 시연형 짧은 광고
+★★★★★★★★☆☆
+1. ChatGPT이 한 장면에 하나의 기능·가격 가치 메시지만 담는 모션 브리프를 설계한다.
+2. Kling + Luma Dream Machine + Pika 조합이 Kling·Luma·Pika로 서로 다른 움직임과 스타일을 빠르게 실험한다.
+3. 플랫폼 광고 정책과 저작권 검수를 통과한 자산만 집행한다.
+API 종량제 + 구독형(ChatGPT) / 프리미엄(무료+유료 구독)
+20
+ChatGPT + Sora + Runway + Adobe Firefly
+브랜드 인지도와 고관여 전환
+★★★★★★★★☆☆
+1. ChatGPT이 복잡한 요금제 차이를 이해시키는 내러티브·장면·시각 콘셉트를 만든다.
+2. Sora + Runway + Adobe Firefly 조합이 Sora와 Runway 영상에 Firefly 그래픽을 결합해 캠페인 일관성을 높인다.
+3. 실제 UI·가격표와 생성형 비주얼을 명확히 구분한다.
+API 종량제 + 구독형(ChatGPT) / 프리미엄(무료+유료 구독)
+21
+ChatGPT + Descript + ElevenLabs + Notion AI
+긴 콘텐츠의 블로그·클립 전환
+★★★★★★★★☆☆
+1. ChatGPT이 녹취에서 구매 질문·반론·FAQ를 분류하고 시간 코드를 보존한다.
+2. Descript + ElevenLabs + Notion AI 조합이 Descript가 편집·클립·자막을 만들고 ElevenLabs가 보완 내레이션을 만든다.
+3. Notion AI에서 발행 우선순위와 검수 상태를 관리한다.
+API 종량제 + 구독형(ChatGPT) / 프리미엄(무료+유료 구독) / 애드온(월 구독)
+22
+ChatGPT + Suno + Udio + ElevenLabs SFX
+숏폼 배경음과 효과음
+★★★★★★★☆☆☆
+1. ChatGPT이 캠페인 분위기·길이·채널을 음악 브리프로 구조화한다.
+2. Suno + Udio + ElevenLabs SFX 조합이 Suno·Udio·SFX 도구로 음악과 효과음을 버전별로 생성한다.
+3. 상업 이용 가능 범위·콘텐츠 ID·사용 위치를 기록한다.
+API 종량제 + 구독형(ChatGPT) / 프리미엄(무료+유료 구독)
+23
+ChatGPT + Zapier + HubSpot + Copy.ai
+동의 기반 리드 육성과 콘텐츠 추천
+★★★★★★★★☆☆
+1. ChatGPT이 폼 제출과 페이지 행동을 동의 상태에 맞춰 CRM으로 전달한다.
+2. Zapier + HubSpot + Copy.ai 조합이 Copy.ai가 세그먼트별 다음 읽을거리·뉴스레터 카피를 생성한다.
+3. Zapier가 수신 거부·보존 기간·태그 규칙을 흐름에 포함한다.
+API 종량제 + 구독형(ChatGPT) / 프리미엄(무료+유료 구독) / 공식 가격 페이지 확인 필요
+24
+ChatGPT + Jasper + Writesonic + Surfer SEO
+카테고리 페이지와 비교 글 확장
+★★★★★★★★☆☆
+1. ChatGPT이 키워드·질문·비교 축을 콘텐츠 브리프로 표준화한다.
+2. Jasper + Writesonic + Surfer SEO 조합이 두 작성 도구가 제목·FAQ·설명을 생성하고 SEO 도구가 구조를 점검한다.
+3. 사실·가격·성능 주장은 공식 출처 검수 후에만 게시한다.
+API 종량제 + 구독형(ChatGPT) / 프리미엄(무료+유료 구독) / 공식 가격 페이지 확인 필요
+25
+ChatGPT + Perplexity + Exa AI + Apify
+신생 AI 기업 탐색과 카테고리 맵
+★★★★★★★★☆☆
+1. ChatGPT이 공개 웹의 기업·제품·분야·발행일·출처를 조사한다.
+2. Perplexity + Exa AI + Apify 조합이 Exa와 Apify 결과를 중복 제거하고 Perplexity로 근거를 요약한다.
+3. 개인 이메일·연락처 수집이나 로그인 영역 수집은 범위에서 제외한다.
+API 종량제 + 구독형(ChatGPT) / 프리미엄(무료+유료 구독)
+26
+ChatGPT + Airbyte + dbt + Great Expectations
+가격 DB 정규화와 품질 테스트
+★★★★★★★★★★
+1. ChatGPT이 원천 API·공식 페이지 데이터를 분석 저장소로 적재한다.
+2. Airbyte + dbt + Great Expectations 조합이 dbt 변환과 Great Expectations 테스트가 관계·범위·NULL·중복을 검사한다.
+3. 실패 레코드는 출처·오류 유형·영향 페이지와 함께 검수 큐로 보낸다.
+API 종량제 + 구독형(ChatGPT) / 오픈소스 + 클라우드 매니지드 유료 플랜 / 공식 가격 페이지 확인 필요
+27
+ChatGPT + Apache Kafka + Flink + dbt
+가격 변경 이벤트와 실시간 대시보드
+★★★★★★★★★☆
+1. ChatGPT이 수집·변경·승인 이벤트를 스트림으로 분리해 기록한다.
+2. Apache Kafka + Flink + dbt 조합이 Flink가 이벤트를 정리하고 dbt가 분석 가능한 가격 이력으로 모델링한다.
+3. 이상 급증·반복 실패·승인 지연을 운영 지표로 감시한다.
+API 종량제 + 구독형(ChatGPT) / 오픈소스 + 클라우드 매니지드 유료 플랜
+28
+ChatGPT + LiteLLM + OpenRouter + PortKey
+모델별 비용·품질·장애 대응
+★★★★★★★★★☆
+1. ChatGPT이 작업 난이도와 예상 토큰을 기준으로 저비용·고성능 모델을 라우팅한다.
+2. LiteLLM + OpenRouter + PortKey 조합이 게이트웨이가 키 관리·호출 로그·대체 모델 정책을 일관되게 적용한다.
+3. 샘플 평가·오류율·비용을 비교해 라우팅 규칙을 주기적으로 조정한다.
+API 종량제 + 구독형(ChatGPT) / 오픈소스 + 종량제/구독 혼합
+29
+ChatGPT + LangSmith + Ragas + DeepEval
+AI 답변과 SEO 초안 검증
+★★★★★★★★★★
+1. ChatGPT이 질문 세트와 정답 근거를 기준으로 응답 품질을 평가한다.
+2. LangSmith + Ragas + DeepEval 조합이 Ragas·DeepEval이 환각·근거성·일관성을 점수화하고 LangSmith가 추적한다.
+3. 기준 미달 응답은 자동 게시하지 않고 프롬프트·검색·데이터를 수정한다.
+API 종량제 + 구독형(ChatGPT) / 오픈소스 + 클라우드 매니지드 유료 플랜
+30
+ChatGPT + PostHog + Google Analytics + Mixpanel
+비교 페이지 전환 최적화
+★★★★★★★★☆☆
+1. ChatGPT이 페이지뷰·비교표 진입·광고 클릭·다음 페이지 이동을 이벤트로 정의한다.
+2. PostHog + Google Analytics + Mixpanel 조합이 분석 도구가 퍼널·세그먼트·실험 결과를 비교한다.
+3. 개인정보 동의와 쿠키 정책 범위 안에서 집계 데이터를 사용한다.
+API 종량제 + 구독형(ChatGPT) / 공식 가격 페이지 확인 필요 / 프리미엄(무료+유료 구독)
+2. Claude 기반 멀티툴 스택 30개
+뇌 역할: 장문 분석·검수·정책. 아래 패턴은 Claude이 기획·판단·분류·검수·응답을 맡고, 나머지 3~4개 도구가 실행 체인을 완성하는 구조다.
+번호
+멀티툴 조합
+뇌 + 실행 3~4개
+주요 마케팅 활용
+파급력
+데이터 분석 및 알고리즘 연동 방식
+요금 구조
+31
+Claude + Firecrawl + dbt + n8n
+공식 가격 비교 페이지와 변경 알림
+★★★★★★★★★★
+1. Claude이 공개 공식 가격 페이지를 수집해 플랜·통화·주기·한도 필드로 추출한다.
+2. Firecrawl + dbt + n8n 조합이 dbt 테스트로 누락·중복·비정상 값을 걸러 이전 값과 비교한다.
+3. n8n은 근거 URL과 차이 요약을 검수자에게 보내고 승인 후에만 게시한다.
+프리미엄(무료+유료 구독) + API 종량제 / 프리미엄(무료+유료 구독) / 오픈소스 + 클라우드 매니지드 유료 플랜
+32
+Claude + Apify + Airbyte + Make
+카테고리별 가격 변동 모니터링
+★★★★★★★★★★
+1. Claude이 승인된 공개 대상의 스냅샷과 변경 신호를 주기적으로 수집한다.
+2. Apify + Airbyte + Make 조합이 Airbyte가 원천 데이터를 저장소로 적재해 추적 가능한 이력을 만든다.
+3. Make가 임계값을 넘는 변경만 검수 큐와 콘텐츠 갱신 작업으로 연결한다.
+프리미엄(무료+유료 구독) + API 종량제 / 프리미엄(무료+유료 구독) / 오픈소스 + 클라우드 매니지드 유료 플랜
+33
+Claude + Browserbase + Playwright Agent + Cursor
+동적 가격 페이지 파싱과 테스트
+★★★★★★★★★★
+1. Claude이 브라우저 자동화가 JavaScript 렌더링 후의 공개 가격 정보를 읽는다.
+2. Browserbase + Playwright Agent + Cursor 조합이 Cursor가 사이트별 파서와 회귀 테스트를 작성해 DOM 변화에 대응한다.
+3. 실패율·응답 시간·필드 누락을 대시보드로 보내 수집 품질을 관리한다.
+프리미엄(무료+유료 구독) + API 종량제 / 프리미엄(무료+유료 구독)
+34
+Claude + Exa AI + Jasper + Notion AI
+신규 AI 카테고리 리서치와 검색 콘텐츠
+★★★★★★★★★☆
+1. Claude이 시장 신호와 출처 링크를 수집해 비교할 질문 단위로 정리한다.
+2. Exa AI + Jasper + Notion AI 조합이 Jasper가 독자 의도에 맞는 초안을 만들고 Notion AI가 편집 캘린더를 운영한다.
+3. 최종 가격 수치와 주장은 원문 공식 URL을 검수한 뒤 발행한다.
+프리미엄(무료+유료 구독) + API 종량제 / 프리미엄(무료+유료 구독) / 애드온(월 구독)
+35
+Claude + Genspark + Gamma + Beautiful.ai
+투자자·파트너용 시장 브리프
+★★★★★★★★☆☆
+1. Claude이 조사 결과를 제품군·변화·기회·리스크로 구조화한다.
+2. Genspark + Gamma + Beautiful.ai 조합이 Gamma와 Beautiful.ai가 같은 데이터로 발표물과 제안서 시안을 만든다.
+3. 슬라이드의 수치마다 공식 출처와 기준일을 남겨 재검증 가능성을 유지한다.
+프리미엄(무료+유료 구독) + API 종량제 / 프리미엄(무료+유료 구독)
+36
+Claude + v0.dev + Figma AI + Vercel AI Gateway
+가격 비교 랜딩과 광고 레이아웃
+★★★★★★★★★☆
+1. Claude이 요구사항을 반응형 카드·테이블·FAQ·광고 영역 컴포넌트로 변환한다.
+2. v0.dev + Figma AI + Vercel AI Gateway 조합이 Figma AI 디자인 토큰을 v0 화면에 반영하고 API 게이트웨이를 통일한다.
+3. CLS·모바일 가독성·광고와 편집 콘텐츠의 구분을 배포 전 점검한다.
+프리미엄(무료+유료 구독) + API 종량제 / 프리미엄(무료+유료 구독) / 공식 가격 페이지 확인 필요
+37
+Claude + Lovable + Supabase + Cursor
+가격 검수와 게시 이력 관리
+★★★★★★★★★☆
+1. Claude이 검수자가 이전값·신규값·근거 URL·승인 상태를 비교하는 화면을 만든다.
+2. Lovable + Supabase + Cursor 조합이 Supabase에 역할·변경 로그·레코드 상태를 저장하고 Cursor로 규칙을 구현한다.
+3. 공개 사이트와 관리자 권한을 분리해 실수로 인한 데이터 변경을 막는다.
+프리미엄(무료+유료 구독) + API 종량제 / 프리미엄(무료+유료 구독) / 공식 가격 페이지 확인 필요
+38
+Claude + Bolt.new + Replit Agent + GitHub Copilot
+카테고리 MVP와 데이터 검증
+★★★★★★★★☆☆
+1. Claude이 빠른 웹 화면과 API 프로토타입을 만들고 비교 필드를 연결한다.
+2. Bolt.new + Replit Agent + GitHub Copilot 조합이 Replit Agent와 Copilot이 입력 검증·테스트·배포 준비 코드를 보조한다.
+3. 운영 전에는 비밀키·백업·보안·성능을 별도 체크리스트로 검수한다.
+프리미엄(무료+유료 구독) + API 종량제 / 프리미엄(무료+유료 구독)
+39
+Claude + LlamaIndex + LangChain + Cohere Rerank 3
+출처를 제시하는 비교 챗봇
+★★★★★★★★★★
+1. Claude이 공식 문서와 가격 DB를 버전·URL·수집 시각을 가진 청크로 인덱싱한다.
+2. LlamaIndex + LangChain + Cohere Rerank 3 조합이 LangChain이 검색·도구 호출·답변 생성을 연결하고 Rerank가 근거를 정렬한다.
+3. 근거가 부족한 질문은 답을 추정하지 않고 공식 페이지 링크로 안내한다.
+프리미엄(무료+유료 구독) + API 종량제 / 오픈소스 + 클라우드 매니지드 유료 플랜
+40
+Claude + LangGraph + OpenAI Agents SDK + PydanticAI
+수집·검수·게시 전 승인 자동화
+★★★★★★★★★★
+1. Claude이 에이전트를 수집·필드 추출·값 비교·승인 요청 역할로 나눈다.
+2. LangGraph + OpenAI Agents SDK + PydanticAI 조합이 상태 그래프가 실패·보류·재검수 경로와 구조화 출력 스키마를 강제한다.
+3. 출처 완결성과 사람 승인이 없으면 게시 도구를 호출하지 않는다.
+프리미엄(무료+유료 구독) + API 종량제 / 오픈소스(무료)
+41
+Claude + Dify + Flowise + Make
+운영팀의 질문 응답과 태스크 자동화
+★★★★★★★★★☆
+1. Claude이 운영팀이 가격 변경·콘텐츠 상태·출처를 조회하는 노코드 앱을 만든다.
+2. Dify + Flowise + Make 조합이 Dify와 Flowise가 지식베이스·프롬프트·워크플로를 역할별로 연결한다.
+3. Make는 승인된 작업만 CMS·태스크·알림 시스템으로 전달한다.
+프리미엄(무료+유료 구독) + API 종량제 / 오픈소스(무료) / 프리미엄(무료+유료 구독)
+42
+Claude + CrewAI + AutoGen + Notion AI
+리서치에서 발행까지의 역할 분담
+★★★★★★★★☆☆
+1. Claude이 리서처·검수자·SEO 편집자·배포 담당자의 산출물 형식을 분리한다.
+2. CrewAI + AutoGen + Notion AI 조합이 CrewAI와 AutoGen이 역할 간 전달물에 출처·기준일·신뢰도를 포함한다.
+3. Notion AI가 편집 캘린더·담당자·수정 이력을 유지한다.
+프리미엄(무료+유료 구독) + API 종량제 / 오픈소스(무료) / 애드온(월 구독)
+43
+Claude + Higgsfield + ElevenLabs + Descript
+릴스·틱톡 가격 비교 숏폼
+★★★★★★★★★★
+1. Claude이 비교 포인트를 훅·장면·CTA가 있는 15초 대본으로 압축한다.
+2. Higgsfield + ElevenLabs + Descript 조합이 Higgsfield가 모션 영상, ElevenLabs가 내레이션, Descript가 자막과 편집을 맡는다.
+3. 완주율·클릭률·랜딩 진입률을 영상 버전과 연결해 다음 훅을 선정한다.
+프리미엄(무료+유료 구독) + API 종량제 / 프리미엄(무료+유료 구독)
+44
+Claude + Runway + ElevenLabs + Canva Magic Edit
+SaaS 기능 비교와 유튜브 설명 영상
+★★★★★★★★★☆
+1. Claude이 대본을 제품 화면·B-roll·그래픽·내레이션으로 분해한다.
+2. Runway + ElevenLabs + Canva Magic Edit 조합이 Runway 영상과 Canva 카드, ElevenLabs 음성을 한 타임라인으로 조립한다.
+3. 영상 설명란에 가격 기준일과 공식 링크를 넣고 업데이트 작업을 예약한다.
+프리미엄(무료+유료 구독) + API 종량제 / 프리미엄(무료+유료 구독)
+45
+Claude + HeyGen + ElevenLabs + Canva Magic Edit
+국가별 가격 안내와 리드 유입
+★★★★★★★★☆☆
+1. Claude이 현지화된 대본을 아바타·음성·자막으로 변환해 언어별 영상을 만든다.
+2. HeyGen + ElevenLabs + Canva Magic Edit 조합이 Canva가 동일 캠페인의 배너·캐러셀·랜딩 그래픽을 파생한다.
+3. 언어·국가·URL별 성과를 비교하고 초상·음성 사용 동의를 관리한다.
+프리미엄(무료+유료 구독) + API 종량제 / 프리미엄(무료+유료 구독)
+46
+Claude + Synthesia + OpenAI TTS + Gamma
+B2B 온보딩과 플랜 설명
+★★★★★★★★☆☆
+1. Claude이 역할별 학습 경로와 플랜별 한계를 교육 시나리오로 만든다.
+2. Synthesia + OpenAI TTS + Gamma 조합이 Synthesia 영상, TTS 음성, Gamma 슬라이드를 같은 데이터 원본에 연결한다.
+3. 도움말 클릭·시청 완료·지원 문의를 분석해 설명이 약한 항목을 보강한다.
+프리미엄(무료+유료 구독) + API 종량제 / 프리미엄(무료+유료 구독)
+47
+Claude + Midjourney + Canva Magic Edit + Recraft
+블로그·SNS 비교 카드
+★★★★★★★★★☆
+1. Claude이 검색 의도와 브랜드 톤을 시각 프롬프트·카피·아이콘 체계로 바꾼다.
+2. Midjourney + Canva Magic Edit + Recraft 조합이 Midjourney가 무드 이미지를 만들고 Recraft·Canva가 카드와 템플릿을 완성한다.
+3. 가격 사실은 이미지에만 넣지 않고 접근 가능한 표와 공식 링크로 함께 제공한다.
+프리미엄(무료+유료 구독) + API 종량제 / 유료 구독제 / 프리미엄(무료+유료 구독)
+48
+Claude + Adobe Firefly + Ideogram + Canva Magic Edit
+배너·썸네일·검색 광고 변형
+★★★★★★★★☆☆
+1. Claude이 브랜드 가이드와 타깃 세그먼트를 기반으로 여러 시각 가설을 만든다.
+2. Adobe Firefly + Ideogram + Canva Magic Edit 조합이 Firefly·Ideogram 결과를 Canva 템플릿의 제목·CTA·규격에 맞춰 변형한다.
+3. A/B 결과와 사용 권리 상태를 크리에이티브 ID에 기록한다.
+프리미엄(무료+유료 구독) + API 종량제 / 프리미엄(무료+유료 구독)
+49
+Claude + Kling + Luma Dream Machine + Pika
+기능 시연형 짧은 광고
+★★★★★★★★☆☆
+1. Claude이 한 장면에 하나의 기능·가격 가치 메시지만 담는 모션 브리프를 설계한다.
+2. Kling + Luma Dream Machine + Pika 조합이 Kling·Luma·Pika로 서로 다른 움직임과 스타일을 빠르게 실험한다.
+3. 플랫폼 광고 정책과 저작권 검수를 통과한 자산만 집행한다.
+프리미엄(무료+유료 구독) + API 종량제 / 프리미엄(무료+유료 구독)
+50
+Claude + Sora + Runway + Adobe Firefly
+브랜드 인지도와 고관여 전환
+★★★★★★★★☆☆
+1. Claude이 복잡한 요금제 차이를 이해시키는 내러티브·장면·시각 콘셉트를 만든다.
+2. Sora + Runway + Adobe Firefly 조합이 Sora와 Runway 영상에 Firefly 그래픽을 결합해 캠페인 일관성을 높인다.
+3. 실제 UI·가격표와 생성형 비주얼을 명확히 구분한다.
+프리미엄(무료+유료 구독) + API 종량제 / 프리미엄(무료+유료 구독)
+51
+Claude + Descript + ElevenLabs + Notion AI
+긴 콘텐츠의 블로그·클립 전환
+★★★★★★★★☆☆
+1. Claude이 녹취에서 구매 질문·반론·FAQ를 분류하고 시간 코드를 보존한다.
+2. Descript + ElevenLabs + Notion AI 조합이 Descript가 편집·클립·자막을 만들고 ElevenLabs가 보완 내레이션을 만든다.
+3. Notion AI에서 발행 우선순위와 검수 상태를 관리한다.
+프리미엄(무료+유료 구독) + API 종량제 / 프리미엄(무료+유료 구독) / 애드온(월 구독)
+52
+Claude + Suno + Udio + ElevenLabs SFX
+숏폼 배경음과 효과음
+★★★★★★★☆☆☆
+1. Claude이 캠페인 분위기·길이·채널을 음악 브리프로 구조화한다.
+2. Suno + Udio + ElevenLabs SFX 조합이 Suno·Udio·SFX 도구로 음악과 효과음을 버전별로 생성한다.
+3. 상업 이용 가능 범위·콘텐츠 ID·사용 위치를 기록한다.
+프리미엄(무료+유료 구독) + API 종량제 / 프리미엄(무료+유료 구독)
+53
+Claude + Zapier + HubSpot + Copy.ai
+동의 기반 리드 육성과 콘텐츠 추천
+★★★★★★★★☆☆
+1. Claude이 폼 제출과 페이지 행동을 동의 상태에 맞춰 CRM으로 전달한다.
+2. Zapier + HubSpot + Copy.ai 조합이 Copy.ai가 세그먼트별 다음 읽을거리·뉴스레터 카피를 생성한다.
+3. Zapier가 수신 거부·보존 기간·태그 규칙을 흐름에 포함한다.
+프리미엄(무료+유료 구독) + API 종량제 / 프리미엄(무료+유료 구독) / 공식 가격 페이지 확인 필요
+54
+Claude + Jasper + Writesonic + Surfer SEO
+카테고리 페이지와 비교 글 확장
+★★★★★★★★☆☆
+1. Claude이 키워드·질문·비교 축을 콘텐츠 브리프로 표준화한다.
+2. Jasper + Writesonic + Surfer SEO 조합이 두 작성 도구가 제목·FAQ·설명을 생성하고 SEO 도구가 구조를 점검한다.
+3. 사실·가격·성능 주장은 공식 출처 검수 후에만 게시한다.
+프리미엄(무료+유료 구독) + API 종량제 / 프리미엄(무료+유료 구독) / 공식 가격 페이지 확인 필요
+55
+Claude + Perplexity + Exa AI + Apify
+신생 AI 기업 탐색과 카테고리 맵
+★★★★★★★★☆☆
+1. Claude이 공개 웹의 기업·제품·분야·발행일·출처를 조사한다.
+2. Perplexity + Exa AI + Apify 조합이 Exa와 Apify 결과를 중복 제거하고 Perplexity로 근거를 요약한다.
+3. 개인 이메일·연락처 수집이나 로그인 영역 수집은 범위에서 제외한다.
+프리미엄(무료+유료 구독) + API 종량제 / 프리미엄(무료+유료 구독)
+56
+Claude + Airbyte + dbt + Great Expectations
+가격 DB 정규화와 품질 테스트
+★★★★★★★★★★
+1. Claude이 원천 API·공식 페이지 데이터를 분석 저장소로 적재한다.
+2. Airbyte + dbt + Great Expectations 조합이 dbt 변환과 Great Expectations 테스트가 관계·범위·NULL·중복을 검사한다.
+3. 실패 레코드는 출처·오류 유형·영향 페이지와 함께 검수 큐로 보낸다.
+프리미엄(무료+유료 구독) + API 종량제 / 오픈소스 + 클라우드 매니지드 유료 플랜 / 공식 가격 페이지 확인 필요
+57
+Claude + Apache Kafka + Flink + dbt
+가격 변경 이벤트와 실시간 대시보드
+★★★★★★★★★☆
+1. Claude이 수집·변경·승인 이벤트를 스트림으로 분리해 기록한다.
+2. Apache Kafka + Flink + dbt 조합이 Flink가 이벤트를 정리하고 dbt가 분석 가능한 가격 이력으로 모델링한다.
+3. 이상 급증·반복 실패·승인 지연을 운영 지표로 감시한다.
+프리미엄(무료+유료 구독) + API 종량제 / 오픈소스 + 클라우드 매니지드 유료 플랜
+58
+Claude + LiteLLM + OpenRouter + PortKey
+모델별 비용·품질·장애 대응
+★★★★★★★★★☆
+1. Claude이 작업 난이도와 예상 토큰을 기준으로 저비용·고성능 모델을 라우팅한다.
+2. LiteLLM + OpenRouter + PortKey 조합이 게이트웨이가 키 관리·호출 로그·대체 모델 정책을 일관되게 적용한다.
+3. 샘플 평가·오류율·비용을 비교해 라우팅 규칙을 주기적으로 조정한다.
+프리미엄(무료+유료 구독) + API 종량제 / 오픈소스 + 종량제/구독 혼합
+59
+Claude + LangSmith + Ragas + DeepEval
+AI 답변과 SEO 초안 검증
+★★★★★★★★★★
+1. Claude이 질문 세트와 정답 근거를 기준으로 응답 품질을 평가한다.
+2. LangSmith + Ragas + DeepEval 조합이 Ragas·DeepEval이 환각·근거성·일관성을 점수화하고 LangSmith가 추적한다.
+3. 기준 미달 응답은 자동 게시하지 않고 프롬프트·검색·데이터를 수정한다.
+프리미엄(무료+유료 구독) + API 종량제 / 오픈소스 + 클라우드 매니지드 유료 플랜
+60
+Claude + PostHog + Google Analytics + Mixpanel
+비교 페이지 전환 최적화
+★★★★★★★★☆☆
+1. Claude이 페이지뷰·비교표 진입·광고 클릭·다음 페이지 이동을 이벤트로 정의한다.
+2. PostHog + Google Analytics + Mixpanel 조합이 분석 도구가 퍼널·세그먼트·실험 결과를 비교한다.
+3. 개인정보 동의와 쿠키 정책 범위 안에서 집계 데이터를 사용한다.
+프리미엄(무료+유료 구독) + API 종량제 / 공식 가격 페이지 확인 필요 / 프리미엄(무료+유료 구독)
+3. Gemini 기반 멀티툴 스택 30개
+뇌 역할: 멀티모달·Google 연동. 아래 패턴은 Gemini이 기획·판단·분류·검수·응답을 맡고, 나머지 3~4개 도구가 실행 체인을 완성하는 구조다.
+번호
+멀티툴 조합
+뇌 + 실행 3~4개
+주요 마케팅 활용
+파급력
+데이터 분석 및 알고리즘 연동 방식
+요금 구조
+61
+Gemini + Firecrawl + dbt + n8n
+공식 가격 비교 페이지와 변경 알림
+★★★★★★★★★★
+1. Gemini이 공개 공식 가격 페이지를 수집해 플랜·통화·주기·한도 필드로 추출한다.
+2. Firecrawl + dbt + n8n 조합이 dbt 테스트로 누락·중복·비정상 값을 걸러 이전 값과 비교한다.
+3. n8n은 근거 URL과 차이 요약을 검수자에게 보내고 승인 후에만 게시한다.
+프리미엄(무료+유료 구독) + API 종량제 / 프리미엄(무료+유료 구독) / 오픈소스 + 클라우드 매니지드 유료 플랜
+62
+Gemini + Apify + Airbyte + Make
+카테고리별 가격 변동 모니터링
+★★★★★★★★★★
+1. Gemini이 승인된 공개 대상의 스냅샷과 변경 신호를 주기적으로 수집한다.
+2. Apify + Airbyte + Make 조합이 Airbyte가 원천 데이터를 저장소로 적재해 추적 가능한 이력을 만든다.
+3. Make가 임계값을 넘는 변경만 검수 큐와 콘텐츠 갱신 작업으로 연결한다.
+프리미엄(무료+유료 구독) + API 종량제 / 프리미엄(무료+유료 구독) / 오픈소스 + 클라우드 매니지드 유료 플랜
+63
+Gemini + Browserbase + Playwright Agent + Cursor
+동적 가격 페이지 파싱과 테스트
+★★★★★★★★★★
+1. Gemini이 브라우저 자동화가 JavaScript 렌더링 후의 공개 가격 정보를 읽는다.
+2. Browserbase + Playwright Agent + Cursor 조합이 Cursor가 사이트별 파서와 회귀 테스트를 작성해 DOM 변화에 대응한다.
+3. 실패율·응답 시간·필드 누락을 대시보드로 보내 수집 품질을 관리한다.
+프리미엄(무료+유료 구독) + API 종량제 / 프리미엄(무료+유료 구독)
+64
+Gemini + Exa AI + Jasper + Notion AI
+신규 AI 카테고리 리서치와 검색 콘텐츠
+★★★★★★★★★☆
+1. Gemini이 시장 신호와 출처 링크를 수집해 비교할 질문 단위로 정리한다.
+2. Exa AI + Jasper + Notion AI 조합이 Jasper가 독자 의도에 맞는 초안을 만들고 Notion AI가 편집 캘린더를 운영한다.
+3. 최종 가격 수치와 주장은 원문 공식 URL을 검수한 뒤 발행한다.
+프리미엄(무료+유료 구독) + API 종량제 / 프리미엄(무료+유료 구독) / 애드온(월 구독)
+65
+Gemini + Genspark + Gamma + Beautiful.ai
+투자자·파트너용 시장 브리프
+★★★★★★★★☆☆
+1. Gemini이 조사 결과를 제품군·변화·기회·리스크로 구조화한다.
+2. Genspark + Gamma + Beautiful.ai 조합이 Gamma와 Beautiful.ai가 같은 데이터로 발표물과 제안서 시안을 만든다.
+3. 슬라이드의 수치마다 공식 출처와 기준일을 남겨 재검증 가능성을 유지한다.
+프리미엄(무료+유료 구독) + API 종량제 / 프리미엄(무료+유료 구독)
+66
+Gemini + v0.dev + Figma AI + Vercel AI Gateway
+가격 비교 랜딩과 광고 레이아웃
+★★★★★★★★★☆
+1. Gemini이 요구사항을 반응형 카드·테이블·FAQ·광고 영역 컴포넌트로 변환한다.
+2. v0.dev + Figma AI + Vercel AI Gateway 조합이 Figma AI 디자인 토큰을 v0 화면에 반영하고 API 게이트웨이를 통일한다.
+3. CLS·모바일 가독성·광고와 편집 콘텐츠의 구분을 배포 전 점검한다.
+프리미엄(무료+유료 구독) + API 종량제 / 프리미엄(무료+유료 구독) / 공식 가격 페이지 확인 필요
+67
+Gemini + Lovable + Supabase + Cursor
+가격 검수와 게시 이력 관리
+★★★★★★★★★☆
+1. Gemini이 검수자가 이전값·신규값·근거 URL·승인 상태를 비교하는 화면을 만든다.
+2. Lovable + Supabase + Cursor 조합이 Supabase에 역할·변경 로그·레코드 상태를 저장하고 Cursor로 규칙을 구현한다.
+3. 공개 사이트와 관리자 권한을 분리해 실수로 인한 데이터 변경을 막는다.
+프리미엄(무료+유료 구독) + API 종량제 / 프리미엄(무료+유료 구독) / 공식 가격 페이지 확인 필요
+68
+Gemini + Bolt.new + Replit Agent + GitHub Copilot
+카테고리 MVP와 데이터 검증
+★★★★★★★★☆☆
+1. Gemini이 빠른 웹 화면과 API 프로토타입을 만들고 비교 필드를 연결한다.
+2. Bolt.new + Replit Agent + GitHub Copilot 조합이 Replit Agent와 Copilot이 입력 검증·테스트·배포 준비 코드를 보조한다.
+3. 운영 전에는 비밀키·백업·보안·성능을 별도 체크리스트로 검수한다.
+프리미엄(무료+유료 구독) + API 종량제 / 프리미엄(무료+유료 구독)
+69
+Gemini + LlamaIndex + LangChain + Cohere Rerank 3
+출처를 제시하는 비교 챗봇
+★★★★★★★★★★
+1. Gemini이 공식 문서와 가격 DB를 버전·URL·수집 시각을 가진 청크로 인덱싱한다.
+2. LlamaIndex + LangChain + Cohere Rerank 3 조합이 LangChain이 검색·도구 호출·답변 생성을 연결하고 Rerank가 근거를 정렬한다.
+3. 근거가 부족한 질문은 답을 추정하지 않고 공식 페이지 링크로 안내한다.
+프리미엄(무료+유료 구독) + API 종량제 / 오픈소스 + 클라우드 매니지드 유료 플랜
+70
+Gemini + LangGraph + OpenAI Agents SDK + PydanticAI
+수집·검수·게시 전 승인 자동화
+★★★★★★★★★★
+1. Gemini이 에이전트를 수집·필드 추출·값 비교·승인 요청 역할로 나눈다.
+2. LangGraph + OpenAI Agents SDK + PydanticAI 조합이 상태 그래프가 실패·보류·재검수 경로와 구조화 출력 스키마를 강제한다.
+3. 출처 완결성과 사람 승인이 없으면 게시 도구를 호출하지 않는다.
+프리미엄(무료+유료 구독) + API 종량제 / 오픈소스(무료)
+71
+Gemini + Dify + Flowise + Make
+운영팀의 질문 응답과 태스크 자동화
+★★★★★★★★★☆
+1. Gemini이 운영팀이 가격 변경·콘텐츠 상태·출처를 조회하는 노코드 앱을 만든다.
+2. Dify + Flowise + Make 조합이 Dify와 Flowise가 지식베이스·프롬프트·워크플로를 역할별로 연결한다.
+3. Make는 승인된 작업만 CMS·태스크·알림 시스템으로 전달한다.
+프리미엄(무료+유료 구독) + API 종량제 / 오픈소스(무료) / 프리미엄(무료+유료 구독)
+72
+Gemini + CrewAI + AutoGen + Notion AI
+리서치에서 발행까지의 역할 분담
+★★★★★★★★☆☆
+1. Gemini이 리서처·검수자·SEO 편집자·배포 담당자의 산출물 형식을 분리한다.
+2. CrewAI + AutoGen + Notion AI 조합이 CrewAI와 AutoGen이 역할 간 전달물에 출처·기준일·신뢰도를 포함한다.
+3. Notion AI가 편집 캘린더·담당자·수정 이력을 유지한다.
+프리미엄(무료+유료 구독) + API 종량제 / 오픈소스(무료) / 애드온(월 구독)
+73
+Gemini + Higgsfield + ElevenLabs + Descript
+릴스·틱톡 가격 비교 숏폼
+★★★★★★★★★★
+1. Gemini이 비교 포인트를 훅·장면·CTA가 있는 15초 대본으로 압축한다.
+2. Higgsfield + ElevenLabs + Descript 조합이 Higgsfield가 모션 영상, ElevenLabs가 내레이션, Descript가 자막과 편집을 맡는다.
+3. 완주율·클릭률·랜딩 진입률을 영상 버전과 연결해 다음 훅을 선정한다.
+프리미엄(무료+유료 구독) + API 종량제 / 프리미엄(무료+유료 구독)
+74
+Gemini + Runway + ElevenLabs + Canva Magic Edit
+SaaS 기능 비교와 유튜브 설명 영상
+★★★★★★★★★☆
+1. Gemini이 대본을 제품 화면·B-roll·그래픽·내레이션으로 분해한다.
+2. Runway + ElevenLabs + Canva Magic Edit 조합이 Runway 영상과 Canva 카드, ElevenLabs 음성을 한 타임라인으로 조립한다.
+3. 영상 설명란에 가격 기준일과 공식 링크를 넣고 업데이트 작업을 예약한다.
+프리미엄(무료+유료 구독) + API 종량제 / 프리미엄(무료+유료 구독)
+75
+Gemini + HeyGen + ElevenLabs + Canva Magic Edit
+국가별 가격 안내와 리드 유입
+★★★★★★★★☆☆
+1. Gemini이 현지화된 대본을 아바타·음성·자막으로 변환해 언어별 영상을 만든다.
+2. HeyGen + ElevenLabs + Canva Magic Edit 조합이 Canva가 동일 캠페인의 배너·캐러셀·랜딩 그래픽을 파생한다.
+3. 언어·국가·URL별 성과를 비교하고 초상·음성 사용 동의를 관리한다.
+프리미엄(무료+유료 구독) + API 종량제 / 프리미엄(무료+유료 구독)
+76
+Gemini + Synthesia + OpenAI TTS + Gamma
+B2B 온보딩과 플랜 설명
+★★★★★★★★☆☆
+1. Gemini이 역할별 학습 경로와 플랜별 한계를 교육 시나리오로 만든다.
+2. Synthesia + OpenAI TTS + Gamma 조합이 Synthesia 영상, TTS 음성, Gamma 슬라이드를 같은 데이터 원본에 연결한다.
+3. 도움말 클릭·시청 완료·지원 문의를 분석해 설명이 약한 항목을 보강한다.
+프리미엄(무료+유료 구독) + API 종량제 / 프리미엄(무료+유료 구독)
+77
+Gemini + Midjourney + Canva Magic Edit + Recraft
+블로그·SNS 비교 카드
+★★★★★★★★★☆
+1. Gemini이 검색 의도와 브랜드 톤을 시각 프롬프트·카피·아이콘 체계로 바꾼다.
+2. Midjourney + Canva Magic Edit + Recraft 조합이 Midjourney가 무드 이미지를 만들고 Recraft·Canva가 카드와 템플릿을 완성한다.
+3. 가격 사실은 이미지에만 넣지 않고 접근 가능한 표와 공식 링크로 함께 제공한다.
+프리미엄(무료+유료 구독) + API 종량제 / 유료 구독제 / 프리미엄(무료+유료 구독)
+78
+Gemini + Adobe Firefly + Ideogram + Canva Magic Edit
+배너·썸네일·검색 광고 변형
+★★★★★★★★☆☆
+1. Gemini이 브랜드 가이드와 타깃 세그먼트를 기반으로 여러 시각 가설을 만든다.
+2. Adobe Firefly + Ideogram + Canva Magic Edit 조합이 Firefly·Ideogram 결과를 Canva 템플릿의 제목·CTA·규격에 맞춰 변형한다.
+3. A/B 결과와 사용 권리 상태를 크리에이티브 ID에 기록한다.
+프리미엄(무료+유료 구독) + API 종량제 / 프리미엄(무료+유료 구독)
+79
+Gemini + Kling + Luma Dream Machine + Pika
+기능 시연형 짧은 광고
+★★★★★★★★☆☆
+1. Gemini이 한 장면에 하나의 기능·가격 가치 메시지만 담는 모션 브리프를 설계한다.
+2. Kling + Luma Dream Machine + Pika 조합이 Kling·Luma·Pika로 서로 다른 움직임과 스타일을 빠르게 실험한다.
+3. 플랫폼 광고 정책과 저작권 검수를 통과한 자산만 집행한다.
+프리미엄(무료+유료 구독) + API 종량제 / 프리미엄(무료+유료 구독)
+80
+Gemini + Sora + Runway + Adobe Firefly
+브랜드 인지도와 고관여 전환
+★★★★★★★★☆☆
+1. Gemini이 복잡한 요금제 차이를 이해시키는 내러티브·장면·시각 콘셉트를 만든다.
+2. Sora + Runway + Adobe Firefly 조합이 Sora와 Runway 영상에 Firefly 그래픽을 결합해 캠페인 일관성을 높인다.
+3. 실제 UI·가격표와 생성형 비주얼을 명확히 구분한다.
+프리미엄(무료+유료 구독) + API 종량제 / 프리미엄(무료+유료 구독)
+81
+Gemini + Descript + ElevenLabs + Notion AI
+긴 콘텐츠의 블로그·클립 전환
+★★★★★★★★☆☆
+1. Gemini이 녹취에서 구매 질문·반론·FAQ를 분류하고 시간 코드를 보존한다.
+2. Descript + ElevenLabs + Notion AI 조합이 Descript가 편집·클립·자막을 만들고 ElevenLabs가 보완 내레이션을 만든다.
+3. Notion AI에서 발행 우선순위와 검수 상태를 관리한다.
+프리미엄(무료+유료 구독) + API 종량제 / 프리미엄(무료+유료 구독) / 애드온(월 구독)
+82
+Gemini + Suno + Udio + ElevenLabs SFX
+숏폼 배경음과 효과음
+★★★★★★★☆☆☆
+1. Gemini이 캠페인 분위기·길이·채널을 음악 브리프로 구조화한다.
+2. Suno + Udio + ElevenLabs SFX 조합이 Suno·Udio·SFX 도구로 음악과 효과음을 버전별로 생성한다.
+3. 상업 이용 가능 범위·콘텐츠 ID·사용 위치를 기록한다.
+프리미엄(무료+유료 구독) + API 종량제 / 프리미엄(무료+유료 구독)
+83
+Gemini + Zapier + HubSpot + Copy.ai
+동의 기반 리드 육성과 콘텐츠 추천
+★★★★★★★★☆☆
+1. Gemini이 폼 제출과 페이지 행동을 동의 상태에 맞춰 CRM으로 전달한다.
+2. Zapier + HubSpot + Copy.ai 조합이 Copy.ai가 세그먼트별 다음 읽을거리·뉴스레터 카피를 생성한다.
+3. Zapier가 수신 거부·보존 기간·태그 규칙을 흐름에 포함한다.
+프리미엄(무료+유료 구독) + API 종량제 / 프리미엄(무료+유료 구독) / 공식 가격 페이지 확인 필요
+84
+Gemini + Jasper + Writesonic + Surfer SEO
+카테고리 페이지와 비교 글 확장
+★★★★★★★★☆☆
+1. Gemini이 키워드·질문·비교 축을 콘텐츠 브리프로 표준화한다.
+2. Jasper + Writesonic + Surfer SEO 조합이 두 작성 도구가 제목·FAQ·설명을 생성하고 SEO 도구가 구조를 점검한다.
+3. 사실·가격·성능 주장은 공식 출처 검수 후에만 게시한다.
+프리미엄(무료+유료 구독) + API 종량제 / 프리미엄(무료+유료 구독) / 공식 가격 페이지 확인 필요
+85
+Gemini + Perplexity + Exa AI + Apify
+신생 AI 기업 탐색과 카테고리 맵
+★★★★★★★★☆☆
+1. Gemini이 공개 웹의 기업·제품·분야·발행일·출처를 조사한다.
+2. Perplexity + Exa AI + Apify 조합이 Exa와 Apify 결과를 중복 제거하고 Perplexity로 근거를 요약한다.
+3. 개인 이메일·연락처 수집이나 로그인 영역 수집은 범위에서 제외한다.
+프리미엄(무료+유료 구독) + API 종량제 / 프리미엄(무료+유료 구독)
+86
+Gemini + Airbyte + dbt + Great Expectations
+가격 DB 정규화와 품질 테스트
+★★★★★★★★★★
+1. Gemini이 원천 API·공식 페이지 데이터를 분석 저장소로 적재한다.
+2. Airbyte + dbt + Great Expectations 조합이 dbt 변환과 Great Expectations 테스트가 관계·범위·NULL·중복을 검사한다.
+3. 실패 레코드는 출처·오류 유형·영향 페이지와 함께 검수 큐로 보낸다.
+프리미엄(무료+유료 구독) + API 종량제 / 오픈소스 + 클라우드 매니지드 유료 플랜 / 공식 가격 페이지 확인 필요
+87
+Gemini + Apache Kafka + Flink + dbt
+가격 변경 이벤트와 실시간 대시보드
+★★★★★★★★★☆
+1. Gemini이 수집·변경·승인 이벤트를 스트림으로 분리해 기록한다.
+2. Apache Kafka + Flink + dbt 조합이 Flink가 이벤트를 정리하고 dbt가 분석 가능한 가격 이력으로 모델링한다.
+3. 이상 급증·반복 실패·승인 지연을 운영 지표로 감시한다.
+프리미엄(무료+유료 구독) + API 종량제 / 오픈소스 + 클라우드 매니지드 유료 플랜
+88
+Gemini + LiteLLM + OpenRouter + PortKey
+모델별 비용·품질·장애 대응
+★★★★★★★★★☆
+1. Gemini이 작업 난이도와 예상 토큰을 기준으로 저비용·고성능 모델을 라우팅한다.
+2. LiteLLM + OpenRouter + PortKey 조합이 게이트웨이가 키 관리·호출 로그·대체 모델 정책을 일관되게 적용한다.
+3. 샘플 평가·오류율·비용을 비교해 라우팅 규칙을 주기적으로 조정한다.
+프리미엄(무료+유료 구독) + API 종량제 / 오픈소스 + 종량제/구독 혼합
+89
+Gemini + LangSmith + Ragas + DeepEval
+AI 답변과 SEO 초안 검증
+★★★★★★★★★★
+1. Gemini이 질문 세트와 정답 근거를 기준으로 응답 품질을 평가한다.
+2. LangSmith + Ragas + DeepEval 조합이 Ragas·DeepEval이 환각·근거성·일관성을 점수화하고 LangSmith가 추적한다.
+3. 기준 미달 응답은 자동 게시하지 않고 프롬프트·검색·데이터를 수정한다.
+프리미엄(무료+유료 구독) + API 종량제 / 오픈소스 + 클라우드 매니지드 유료 플랜
+90
+Gemini + PostHog + Google Analytics + Mixpanel
+비교 페이지 전환 최적화
+★★★★★★★★☆☆
+1. Gemini이 페이지뷰·비교표 진입·광고 클릭·다음 페이지 이동을 이벤트로 정의한다.
+2. PostHog + Google Analytics + Mixpanel 조합이 분석 도구가 퍼널·세그먼트·실험 결과를 비교한다.
+3. 개인정보 동의와 쿠키 정책 범위 안에서 집계 데이터를 사용한다.
+프리미엄(무료+유료 구독) + API 종량제 / 공식 가격 페이지 확인 필요 / 프리미엄(무료+유료 구독)
+4. DeepSeek 기반 멀티툴 스택 30개
+뇌 역할: 저비용 대량 분류. 아래 패턴은 DeepSeek이 기획·판단·분류·검수·응답을 맡고, 나머지 3~4개 도구가 실행 체인을 완성하는 구조다.
+번호
+멀티툴 조합
+뇌 + 실행 3~4개
+주요 마케팅 활용
+파급력
+데이터 분석 및 알고리즘 연동 방식
+요금 구조
+91
+DeepSeek + Firecrawl + dbt + n8n
+공식 가격 비교 페이지와 변경 알림
+★★★★★★★★★★
+1. DeepSeek이 공개 공식 가격 페이지를 수집해 플랜·통화·주기·한도 필드로 추출한다.
+2. Firecrawl + dbt + n8n 조합이 dbt 테스트로 누락·중복·비정상 값을 걸러 이전 값과 비교한다.
+3. n8n은 근거 URL과 차이 요약을 검수자에게 보내고 승인 후에만 게시한다.
+오픈소스(무료) + API 종량제 / 프리미엄(무료+유료 구독) / 오픈소스 + 클라우드 매니지드 유료 플랜
+92
+DeepSeek + Apify + Airbyte + Make
+카테고리별 가격 변동 모니터링
+★★★★★★★★★★
+1. DeepSeek이 승인된 공개 대상의 스냅샷과 변경 신호를 주기적으로 수집한다.
+2. Apify + Airbyte + Make 조합이 Airbyte가 원천 데이터를 저장소로 적재해 추적 가능한 이력을 만든다.
+3. Make가 임계값을 넘는 변경만 검수 큐와 콘텐츠 갱신 작업으로 연결한다.
+오픈소스(무료) + API 종량제 / 프리미엄(무료+유료 구독) / 오픈소스 + 클라우드 매니지드 유료 플랜
+93
+DeepSeek + Browserbase + Playwright Agent + Cursor
+동적 가격 페이지 파싱과 테스트
+★★★★★★★★★★
+1. DeepSeek이 브라우저 자동화가 JavaScript 렌더링 후의 공개 가격 정보를 읽는다.
+2. Browserbase + Playwright Agent + Cursor 조합이 Cursor가 사이트별 파서와 회귀 테스트를 작성해 DOM 변화에 대응한다.
+3. 실패율·응답 시간·필드 누락을 대시보드로 보내 수집 품질을 관리한다.
+오픈소스(무료) + API 종량제 / 프리미엄(무료+유료 구독)
+94
+DeepSeek + Exa AI + Jasper + Notion AI
+신규 AI 카테고리 리서치와 검색 콘텐츠
+★★★★★★★★★☆
+1. DeepSeek이 시장 신호와 출처 링크를 수집해 비교할 질문 단위로 정리한다.
+2. Exa AI + Jasper + Notion AI 조합이 Jasper가 독자 의도에 맞는 초안을 만들고 Notion AI가 편집 캘린더를 운영한다.
+3. 최종 가격 수치와 주장은 원문 공식 URL을 검수한 뒤 발행한다.
+오픈소스(무료) + API 종량제 / 프리미엄(무료+유료 구독) / 애드온(월 구독)
+95
+DeepSeek + Genspark + Gamma + Beautiful.ai
+투자자·파트너용 시장 브리프
+★★★★★★★★☆☆
+1. DeepSeek이 조사 결과를 제품군·변화·기회·리스크로 구조화한다.
+2. Genspark + Gamma + Beautiful.ai 조합이 Gamma와 Beautiful.ai가 같은 데이터로 발표물과 제안서 시안을 만든다.
+3. 슬라이드의 수치마다 공식 출처와 기준일을 남겨 재검증 가능성을 유지한다.
+오픈소스(무료) + API 종량제 / 프리미엄(무료+유료 구독)
+96
+DeepSeek + v0.dev + Figma AI + Vercel AI Gateway
+가격 비교 랜딩과 광고 레이아웃
+★★★★★★★★★☆
+1. DeepSeek이 요구사항을 반응형 카드·테이블·FAQ·광고 영역 컴포넌트로 변환한다.
+2. v0.dev + Figma AI + Vercel AI Gateway 조합이 Figma AI 디자인 토큰을 v0 화면에 반영하고 API 게이트웨이를 통일한다.
+3. CLS·모바일 가독성·광고와 편집 콘텐츠의 구분을 배포 전 점검한다.
+오픈소스(무료) + API 종량제 / 프리미엄(무료+유료 구독) / 공식 가격 페이지 확인 필요
+97
+DeepSeek + Lovable + Supabase + Cursor
+가격 검수와 게시 이력 관리
+★★★★★★★★★☆
+1. DeepSeek이 검수자가 이전값·신규값·근거 URL·승인 상태를 비교하는 화면을 만든다.
+2. Lovable + Supabase + Cursor 조합이 Supabase에 역할·변경 로그·레코드 상태를 저장하고 Cursor로 규칙을 구현한다.
+3. 공개 사이트와 관리자 권한을 분리해 실수로 인한 데이터 변경을 막는다.
+오픈소스(무료) + API 종량제 / 프리미엄(무료+유료 구독) / 공식 가격 페이지 확인 필요
+98
+DeepSeek + Bolt.new + Replit Agent + GitHub Copilot
+카테고리 MVP와 데이터 검증
+★★★★★★★★☆☆
+1. DeepSeek이 빠른 웹 화면과 API 프로토타입을 만들고 비교 필드를 연결한다.
+2. Bolt.new + Replit Agent + GitHub Copilot 조합이 Replit Agent와 Copilot이 입력 검증·테스트·배포 준비 코드를 보조한다.
+3. 운영 전에는 비밀키·백업·보안·성능을 별도 체크리스트로 검수한다.
+오픈소스(무료) + API 종량제 / 프리미엄(무료+유료 구독)
+99
+DeepSeek + LlamaIndex + LangChain + Cohere Rerank 3
+출처를 제시하는 비교 챗봇
+★★★★★★★★★★
+1. DeepSeek이 공식 문서와 가격 DB를 버전·URL·수집 시각을 가진 청크로 인덱싱한다.
+2. LlamaIndex + LangChain + Cohere Rerank 3 조합이 LangChain이 검색·도구 호출·답변 생성을 연결하고 Rerank가 근거를 정렬한다.
+3. 근거가 부족한 질문은 답을 추정하지 않고 공식 페이지 링크로 안내한다.
+오픈소스(무료) + API 종량제 / 오픈소스 + 클라우드 매니지드 유료 플랜
+100
+DeepSeek + LangGraph + OpenAI Agents SDK + PydanticAI
+수집·검수·게시 전 승인 자동화
+★★★★★★★★★★
+1. DeepSeek이 에이전트를 수집·필드 추출·값 비교·승인 요청 역할로 나눈다.
+2. LangGraph + OpenAI Agents SDK + PydanticAI 조합이 상태 그래프가 실패·보류·재검수 경로와 구조화 출력 스키마를 강제한다.
+3. 출처 완결성과 사람 승인이 없으면 게시 도구를 호출하지 않는다.
+오픈소스(무료) + API 종량제 / 오픈소스(무료)
+101
+DeepSeek + Dify + Flowise + Make
+운영팀의 질문 응답과 태스크 자동화
+★★★★★★★★★☆
+1. DeepSeek이 운영팀이 가격 변경·콘텐츠 상태·출처를 조회하는 노코드 앱을 만든다.
+2. Dify + Flowise + Make 조합이 Dify와 Flowise가 지식베이스·프롬프트·워크플로를 역할별로 연결한다.
+3. Make는 승인된 작업만 CMS·태스크·알림 시스템으로 전달한다.
+오픈소스(무료) + API 종량제 / 오픈소스(무료) / 프리미엄(무료+유료 구독)
+102
+DeepSeek + CrewAI + AutoGen + Notion AI
+리서치에서 발행까지의 역할 분담
+★★★★★★★★☆☆
+1. DeepSeek이 리서처·검수자·SEO 편집자·배포 담당자의 산출물 형식을 분리한다.
+2. CrewAI + AutoGen + Notion AI 조합이 CrewAI와 AutoGen이 역할 간 전달물에 출처·기준일·신뢰도를 포함한다.
+3. Notion AI가 편집 캘린더·담당자·수정 이력을 유지한다.
+오픈소스(무료) + API 종량제 / 오픈소스(무료) / 애드온(월 구독)
+103
+DeepSeek + Higgsfield + ElevenLabs + Descript
+릴스·틱톡 가격 비교 숏폼
+★★★★★★★★★★
+1. DeepSeek이 비교 포인트를 훅·장면·CTA가 있는 15초 대본으로 압축한다.
+2. Higgsfield + ElevenLabs + Descript 조합이 Higgsfield가 모션 영상, ElevenLabs가 내레이션, Descript가 자막과 편집을 맡는다.
+3. 완주율·클릭률·랜딩 진입률을 영상 버전과 연결해 다음 훅을 선정한다.
+오픈소스(무료) + API 종량제 / 프리미엄(무료+유료 구독)
+104
+DeepSeek + Runway + ElevenLabs + Canva Magic Edit
+SaaS 기능 비교와 유튜브 설명 영상
+★★★★★★★★★☆
+1. DeepSeek이 대본을 제품 화면·B-roll·그래픽·내레이션으로 분해한다.
+2. Runway + ElevenLabs + Canva Magic Edit 조합이 Runway 영상과 Canva 카드, ElevenLabs 음성을 한 타임라인으로 조립한다.
+3. 영상 설명란에 가격 기준일과 공식 링크를 넣고 업데이트 작업을 예약한다.
+오픈소스(무료) + API 종량제 / 프리미엄(무료+유료 구독)
+105
+DeepSeek + HeyGen + ElevenLabs + Canva Magic Edit
+국가별 가격 안내와 리드 유입
+★★★★★★★★☆☆
+1. DeepSeek이 현지화된 대본을 아바타·음성·자막으로 변환해 언어별 영상을 만든다.
+2. HeyGen + ElevenLabs + Canva Magic Edit 조합이 Canva가 동일 캠페인의 배너·캐러셀·랜딩 그래픽을 파생한다.
+3. 언어·국가·URL별 성과를 비교하고 초상·음성 사용 동의를 관리한다.
+오픈소스(무료) + API 종량제 / 프리미엄(무료+유료 구독)
+106
+DeepSeek + Synthesia + OpenAI TTS + Gamma
+B2B 온보딩과 플랜 설명
+★★★★★★★★☆☆
+1. DeepSeek이 역할별 학습 경로와 플랜별 한계를 교육 시나리오로 만든다.
+2. Synthesia + OpenAI TTS + Gamma 조합이 Synthesia 영상, TTS 음성, Gamma 슬라이드를 같은 데이터 원본에 연결한다.
+3. 도움말 클릭·시청 완료·지원 문의를 분석해 설명이 약한 항목을 보강한다.
+오픈소스(무료) + API 종량제 / 프리미엄(무료+유료 구독)
+107
+DeepSeek + Midjourney + Canva Magic Edit + Recraft
+블로그·SNS 비교 카드
+★★★★★★★★★☆
+1. DeepSeek이 검색 의도와 브랜드 톤을 시각 프롬프트·카피·아이콘 체계로 바꾼다.
+2. Midjourney + Canva Magic Edit + Recraft 조합이 Midjourney가 무드 이미지를 만들고 Recraft·Canva가 카드와 템플릿을 완성한다.
+3. 가격 사실은 이미지에만 넣지 않고 접근 가능한 표와 공식 링크로 함께 제공한다.
+오픈소스(무료) + API 종량제 / 유료 구독제 / 프리미엄(무료+유료 구독)
+108
+DeepSeek + Adobe Firefly + Ideogram + Canva Magic Edit
+배너·썸네일·검색 광고 변형
+★★★★★★★★☆☆
+1. DeepSeek이 브랜드 가이드와 타깃 세그먼트를 기반으로 여러 시각 가설을 만든다.
+2. Adobe Firefly + Ideogram + Canva Magic Edit 조합이 Firefly·Ideogram 결과를 Canva 템플릿의 제목·CTA·규격에 맞춰 변형한다.
+3. A/B 결과와 사용 권리 상태를 크리에이티브 ID에 기록한다.
+오픈소스(무료) + API 종량제 / 프리미엄(무료+유료 구독)
+109
+DeepSeek + Kling + Luma Dream Machine + Pika
+기능 시연형 짧은 광고
+★★★★★★★★☆☆
+1. DeepSeek이 한 장면에 하나의 기능·가격 가치 메시지만 담는 모션 브리프를 설계한다.
+2. Kling + Luma Dream Machine + Pika 조합이 Kling·Luma·Pika로 서로 다른 움직임과 스타일을 빠르게 실험한다.
+3. 플랫폼 광고 정책과 저작권 검수를 통과한 자산만 집행한다.
+오픈소스(무료) + API 종량제 / 프리미엄(무료+유료 구독)
+110
+DeepSeek + Sora + Runway + Adobe Firefly
+브랜드 인지도와 고관여 전환
+★★★★★★★★☆☆
+1. DeepSeek이 복잡한 요금제 차이를 이해시키는 내러티브·장면·시각 콘셉트를 만든다.
+2. Sora + Runway + Adobe Firefly 조합이 Sora와 Runway 영상에 Firefly 그래픽을 결합해 캠페인 일관성을 높인다.
+3. 실제 UI·가격표와 생성형 비주얼을 명확히 구분한다.
+오픈소스(무료) + API 종량제 / 프리미엄(무료+유료 구독)
+111
+DeepSeek + Descript + ElevenLabs + Notion AI
+긴 콘텐츠의 블로그·클립 전환
+★★★★★★★★☆☆
+1. DeepSeek이 녹취에서 구매 질문·반론·FAQ를 분류하고 시간 코드를 보존한다.
+2. Descript + ElevenLabs + Notion AI 조합이 Descript가 편집·클립·자막을 만들고 ElevenLabs가 보완 내레이션을 만든다.
+3. Notion AI에서 발행 우선순위와 검수 상태를 관리한다.
+오픈소스(무료) + API 종량제 / 프리미엄(무료+유료 구독) / 애드온(월 구독)
+112
+DeepSeek + Suno + Udio + ElevenLabs SFX
+숏폼 배경음과 효과음
+★★★★★★★☆☆☆
+1. DeepSeek이 캠페인 분위기·길이·채널을 음악 브리프로 구조화한다.
+2. Suno + Udio + ElevenLabs SFX 조합이 Suno·Udio·SFX 도구로 음악과 효과음을 버전별로 생성한다.
+3. 상업 이용 가능 범위·콘텐츠 ID·사용 위치를 기록한다.
+오픈소스(무료) + API 종량제 / 프리미엄(무료+유료 구독)
+113
+DeepSeek + Zapier + HubSpot + Copy.ai
+동의 기반 리드 육성과 콘텐츠 추천
+★★★★★★★★☆☆
+1. DeepSeek이 폼 제출과 페이지 행동을 동의 상태에 맞춰 CRM으로 전달한다.
+2. Zapier + HubSpot + Copy.ai 조합이 Copy.ai가 세그먼트별 다음 읽을거리·뉴스레터 카피를 생성한다.
+3. Zapier가 수신 거부·보존 기간·태그 규칙을 흐름에 포함한다.
+오픈소스(무료) + API 종량제 / 프리미엄(무료+유료 구독) / 공식 가격 페이지 확인 필요
+114
+DeepSeek + Jasper + Writesonic + Surfer SEO
+카테고리 페이지와 비교 글 확장
+★★★★★★★★☆☆
+1. DeepSeek이 키워드·질문·비교 축을 콘텐츠 브리프로 표준화한다.
+2. Jasper + Writesonic + Surfer SEO 조합이 두 작성 도구가 제목·FAQ·설명을 생성하고 SEO 도구가 구조를 점검한다.
+3. 사실·가격·성능 주장은 공식 출처 검수 후에만 게시한다.
+오픈소스(무료) + API 종량제 / 프리미엄(무료+유료 구독) / 공식 가격 페이지 확인 필요
+115
+DeepSeek + Perplexity + Exa AI + Apify
+신생 AI 기업 탐색과 카테고리 맵
+★★★★★★★★☆☆
+1. DeepSeek이 공개 웹의 기업·제품·분야·발행일·출처를 조사한다.
+2. Perplexity + Exa AI + Apify 조합이 Exa와 Apify 결과를 중복 제거하고 Perplexity로 근거를 요약한다.
+3. 개인 이메일·연락처 수집이나 로그인 영역 수집은 범위에서 제외한다.
+오픈소스(무료) + API 종량제 / 프리미엄(무료+유료 구독)
+116
+DeepSeek + Airbyte + dbt + Great Expectations
+가격 DB 정규화와 품질 테스트
+★★★★★★★★★★
+1. DeepSeek이 원천 API·공식 페이지 데이터를 분석 저장소로 적재한다.
+2. Airbyte + dbt + Great Expectations 조합이 dbt 변환과 Great Expectations 테스트가 관계·범위·NULL·중복을 검사한다.
+3. 실패 레코드는 출처·오류 유형·영향 페이지와 함께 검수 큐로 보낸다.
+오픈소스(무료) + API 종량제 / 오픈소스 + 클라우드 매니지드 유료 플랜 / 공식 가격 페이지 확인 필요
+117
+DeepSeek + Apache Kafka + Flink + dbt
+가격 변경 이벤트와 실시간 대시보드
+★★★★★★★★★☆
+1. DeepSeek이 수집·변경·승인 이벤트를 스트림으로 분리해 기록한다.
+2. Apache Kafka + Flink + dbt 조합이 Flink가 이벤트를 정리하고 dbt가 분석 가능한 가격 이력으로 모델링한다.
+3. 이상 급증·반복 실패·승인 지연을 운영 지표로 감시한다.
+오픈소스(무료) + API 종량제 / 오픈소스 + 클라우드 매니지드 유료 플랜
+118
+DeepSeek + LiteLLM + OpenRouter + PortKey
+모델별 비용·품질·장애 대응
+★★★★★★★★★☆
+1. DeepSeek이 작업 난이도와 예상 토큰을 기준으로 저비용·고성능 모델을 라우팅한다.
+2. LiteLLM + OpenRouter + PortKey 조합이 게이트웨이가 키 관리·호출 로그·대체 모델 정책을 일관되게 적용한다.
+3. 샘플 평가·오류율·비용을 비교해 라우팅 규칙을 주기적으로 조정한다.
+오픈소스(무료) + API 종량제 / 오픈소스 + 종량제/구독 혼합
+119
+DeepSeek + LangSmith + Ragas + DeepEval
+AI 답변과 SEO 초안 검증
+★★★★★★★★★★
+1. DeepSeek이 질문 세트와 정답 근거를 기준으로 응답 품질을 평가한다.
+2. LangSmith + Ragas + DeepEval 조합이 Ragas·DeepEval이 환각·근거성·일관성을 점수화하고 LangSmith가 추적한다.
+3. 기준 미달 응답은 자동 게시하지 않고 프롬프트·검색·데이터를 수정한다.
+오픈소스(무료) + API 종량제 / 오픈소스 + 클라우드 매니지드 유료 플랜
+120
+DeepSeek + PostHog + Google Analytics + Mixpanel
+비교 페이지 전환 최적화
+★★★★★★★★☆☆
+1. DeepSeek이 페이지뷰·비교표 진입·광고 클릭·다음 페이지 이동을 이벤트로 정의한다.
+2. PostHog + Google Analytics + Mixpanel 조합이 분석 도구가 퍼널·세그먼트·실험 결과를 비교한다.
+3. 개인정보 동의와 쿠키 정책 범위 안에서 집계 데이터를 사용한다.
+오픈소스(무료) + API 종량제 / 공식 가격 페이지 확인 필요 / 프리미엄(무료+유료 구독)
+5. Perplexity 기반 멀티툴 스택 30개
+뇌 역할: 출처 기반 조사. 아래 패턴은 Perplexity이 기획·판단·분류·검수·응답을 맡고, 나머지 3~4개 도구가 실행 체인을 완성하는 구조다.
+번호
+멀티툴 조합
+뇌 + 실행 3~4개
+주요 마케팅 활용
+파급력
+데이터 분석 및 알고리즘 연동 방식
+요금 구조
+121
+Perplexity + Firecrawl + dbt + n8n
+공식 가격 비교 페이지와 변경 알림
+★★★★★★★★★★
+1. Perplexity이 공개 공식 가격 페이지를 수집해 플랜·통화·주기·한도 필드로 추출한다.
+2. Firecrawl + dbt + n8n 조합이 dbt 테스트로 누락·중복·비정상 값을 걸러 이전 값과 비교한다.
+3. n8n은 근거 URL과 차이 요약을 검수자에게 보내고 승인 후에만 게시한다.
+프리미엄(무료+유료 구독) / 오픈소스 + 클라우드 매니지드 유료 플랜
+122
+Perplexity + Apify + Airbyte + Make
+카테고리별 가격 변동 모니터링
+★★★★★★★★★★
+1. Perplexity이 승인된 공개 대상의 스냅샷과 변경 신호를 주기적으로 수집한다.
+2. Apify + Airbyte + Make 조합이 Airbyte가 원천 데이터를 저장소로 적재해 추적 가능한 이력을 만든다.
+3. Make가 임계값을 넘는 변경만 검수 큐와 콘텐츠 갱신 작업으로 연결한다.
+프리미엄(무료+유료 구독) / 오픈소스 + 클라우드 매니지드 유료 플랜
+123
+Perplexity + Browserbase + Playwright Agent + Cursor
+동적 가격 페이지 파싱과 테스트
+★★★★★★★★★★
+1. Perplexity이 브라우저 자동화가 JavaScript 렌더링 후의 공개 가격 정보를 읽는다.
+2. Browserbase + Playwright Agent + Cursor 조합이 Cursor가 사이트별 파서와 회귀 테스트를 작성해 DOM 변화에 대응한다.
+3. 실패율·응답 시간·필드 누락을 대시보드로 보내 수집 품질을 관리한다.
+프리미엄(무료+유료 구독)
+124
+Perplexity + Exa AI + Jasper + Notion AI
+신규 AI 카테고리 리서치와 검색 콘텐츠
+★★★★★★★★★☆
+1. Perplexity이 시장 신호와 출처 링크를 수집해 비교할 질문 단위로 정리한다.
+2. Exa AI + Jasper + Notion AI 조합이 Jasper가 독자 의도에 맞는 초안을 만들고 Notion AI가 편집 캘린더를 운영한다.
+3. 최종 가격 수치와 주장은 원문 공식 URL을 검수한 뒤 발행한다.
+프리미엄(무료+유료 구독) / 애드온(월 구독)
+125
+Perplexity + Genspark + Gamma + Beautiful.ai
+투자자·파트너용 시장 브리프
+★★★★★★★★☆☆
+1. Perplexity이 조사 결과를 제품군·변화·기회·리스크로 구조화한다.
+2. Genspark + Gamma + Beautiful.ai 조합이 Gamma와 Beautiful.ai가 같은 데이터로 발표물과 제안서 시안을 만든다.
+3. 슬라이드의 수치마다 공식 출처와 기준일을 남겨 재검증 가능성을 유지한다.
+프리미엄(무료+유료 구독)
+126
+Perplexity + v0.dev + Figma AI + Vercel AI Gateway
+가격 비교 랜딩과 광고 레이아웃
+★★★★★★★★★☆
+1. Perplexity이 요구사항을 반응형 카드·테이블·FAQ·광고 영역 컴포넌트로 변환한다.
+2. v0.dev + Figma AI + Vercel AI Gateway 조합이 Figma AI 디자인 토큰을 v0 화면에 반영하고 API 게이트웨이를 통일한다.
+3. CLS·모바일 가독성·광고와 편집 콘텐츠의 구분을 배포 전 점검한다.
+프리미엄(무료+유료 구독) / 공식 가격 페이지 확인 필요 / 오픈소스 + 종량제/구독 혼합
+127
+Perplexity + Lovable + Supabase + Cursor
+가격 검수와 게시 이력 관리
+★★★★★★★★★☆
+1. Perplexity이 검수자가 이전값·신규값·근거 URL·승인 상태를 비교하는 화면을 만든다.
+2. Lovable + Supabase + Cursor 조합이 Supabase에 역할·변경 로그·레코드 상태를 저장하고 Cursor로 규칙을 구현한다.
+3. 공개 사이트와 관리자 권한을 분리해 실수로 인한 데이터 변경을 막는다.
+프리미엄(무료+유료 구독) / 공식 가격 페이지 확인 필요
+128
+Perplexity + Bolt.new + Replit Agent + GitHub Copilot
+카테고리 MVP와 데이터 검증
+★★★★★★★★☆☆
+1. Perplexity이 빠른 웹 화면과 API 프로토타입을 만들고 비교 필드를 연결한다.
+2. Bolt.new + Replit Agent + GitHub Copilot 조합이 Replit Agent와 Copilot이 입력 검증·테스트·배포 준비 코드를 보조한다.
+3. 운영 전에는 비밀키·백업·보안·성능을 별도 체크리스트로 검수한다.
+프리미엄(무료+유료 구독)
+129
+Perplexity + LlamaIndex + LangChain + Cohere Rerank 3
+출처를 제시하는 비교 챗봇
+★★★★★★★★★★
+1. Perplexity이 공식 문서와 가격 DB를 버전·URL·수집 시각을 가진 청크로 인덱싱한다.
+2. LlamaIndex + LangChain + Cohere Rerank 3 조합이 LangChain이 검색·도구 호출·답변 생성을 연결하고 Rerank가 근거를 정렬한다.
+3. 근거가 부족한 질문은 답을 추정하지 않고 공식 페이지 링크로 안내한다.
+프리미엄(무료+유료 구독) / 오픈소스 + 클라우드 매니지드 유료 플랜
+130
+Perplexity + LangGraph + OpenAI Agents SDK + PydanticAI
+수집·검수·게시 전 승인 자동화
+★★★★★★★★★★
+1. Perplexity이 에이전트를 수집·필드 추출·값 비교·승인 요청 역할로 나눈다.
+2. LangGraph + OpenAI Agents SDK + PydanticAI 조합이 상태 그래프가 실패·보류·재검수 경로와 구조화 출력 스키마를 강제한다.
+3. 출처 완결성과 사람 승인이 없으면 게시 도구를 호출하지 않는다.
+프리미엄(무료+유료 구독) / 오픈소스(무료)
+131
+Perplexity + Dify + Flowise + Make
+운영팀의 질문 응답과 태스크 자동화
+★★★★★★★★★☆
+1. Perplexity이 운영팀이 가격 변경·콘텐츠 상태·출처를 조회하는 노코드 앱을 만든다.
+2. Dify + Flowise + Make 조합이 Dify와 Flowise가 지식베이스·프롬프트·워크플로를 역할별로 연결한다.
+3. Make는 승인된 작업만 CMS·태스크·알림 시스템으로 전달한다.
+프리미엄(무료+유료 구독) / 오픈소스(무료)
+132
+Perplexity + CrewAI + AutoGen + Notion AI
+리서치에서 발행까지의 역할 분담
+★★★★★★★★☆☆
+1. Perplexity이 리서처·검수자·SEO 편집자·배포 담당자의 산출물 형식을 분리한다.
+2. CrewAI + AutoGen + Notion AI 조합이 CrewAI와 AutoGen이 역할 간 전달물에 출처·기준일·신뢰도를 포함한다.
+3. Notion AI가 편집 캘린더·담당자·수정 이력을 유지한다.
+프리미엄(무료+유료 구독) / 오픈소스(무료) / 애드온(월 구독)
+133
+Perplexity + Higgsfield + ElevenLabs + Descript
+릴스·틱톡 가격 비교 숏폼
+★★★★★★★★★★
+1. Perplexity이 비교 포인트를 훅·장면·CTA가 있는 15초 대본으로 압축한다.
+2. Higgsfield + ElevenLabs + Descript 조합이 Higgsfield가 모션 영상, ElevenLabs가 내레이션, Descript가 자막과 편집을 맡는다.
+3. 완주율·클릭률·랜딩 진입률을 영상 버전과 연결해 다음 훅을 선정한다.
+프리미엄(무료+유료 구독)
+134
+Perplexity + Runway + ElevenLabs + Canva Magic Edit
+SaaS 기능 비교와 유튜브 설명 영상
+★★★★★★★★★☆
+1. Perplexity이 대본을 제품 화면·B-roll·그래픽·내레이션으로 분해한다.
+2. Runway + ElevenLabs + Canva Magic Edit 조합이 Runway 영상과 Canva 카드, ElevenLabs 음성을 한 타임라인으로 조립한다.
+3. 영상 설명란에 가격 기준일과 공식 링크를 넣고 업데이트 작업을 예약한다.
+프리미엄(무료+유료 구독)
+135
+Perplexity + HeyGen + ElevenLabs + Canva Magic Edit
+국가별 가격 안내와 리드 유입
+★★★★★★★★☆☆
+1. Perplexity이 현지화된 대본을 아바타·음성·자막으로 변환해 언어별 영상을 만든다.
+2. HeyGen + ElevenLabs + Canva Magic Edit 조합이 Canva가 동일 캠페인의 배너·캐러셀·랜딩 그래픽을 파생한다.
+3. 언어·국가·URL별 성과를 비교하고 초상·음성 사용 동의를 관리한다.
+프리미엄(무료+유료 구독)
+136
+Perplexity + Synthesia + OpenAI TTS + Gamma
+B2B 온보딩과 플랜 설명
+★★★★★★★★☆☆
+1. Perplexity이 역할별 학습 경로와 플랜별 한계를 교육 시나리오로 만든다.
+2. Synthesia + OpenAI TTS + Gamma 조합이 Synthesia 영상, TTS 음성, Gamma 슬라이드를 같은 데이터 원본에 연결한다.
+3. 도움말 클릭·시청 완료·지원 문의를 분석해 설명이 약한 항목을 보강한다.
+프리미엄(무료+유료 구독)
+137
+Perplexity + Midjourney + Canva Magic Edit + Recraft
+블로그·SNS 비교 카드
+★★★★★★★★★☆
+1. Perplexity이 검색 의도와 브랜드 톤을 시각 프롬프트·카피·아이콘 체계로 바꾼다.
+2. Midjourney + Canva Magic Edit + Recraft 조합이 Midjourney가 무드 이미지를 만들고 Recraft·Canva가 카드와 템플릿을 완성한다.
+3. 가격 사실은 이미지에만 넣지 않고 접근 가능한 표와 공식 링크로 함께 제공한다.
+프리미엄(무료+유료 구독) / 유료 구독제
+138
+Perplexity + Adobe Firefly + Ideogram + Canva Magic Edit
+배너·썸네일·검색 광고 변형
+★★★★★★★★☆☆
+1. Perplexity이 브랜드 가이드와 타깃 세그먼트를 기반으로 여러 시각 가설을 만든다.
+2. Adobe Firefly + Ideogram + Canva Magic Edit 조합이 Firefly·Ideogram 결과를 Canva 템플릿의 제목·CTA·규격에 맞춰 변형한다.
+3. A/B 결과와 사용 권리 상태를 크리에이티브 ID에 기록한다.
+프리미엄(무료+유료 구독)
+139
+Perplexity + Kling + Luma Dream Machine + Pika
+기능 시연형 짧은 광고
+★★★★★★★★☆☆
+1. Perplexity이 한 장면에 하나의 기능·가격 가치 메시지만 담는 모션 브리프를 설계한다.
+2. Kling + Luma Dream Machine + Pika 조합이 Kling·Luma·Pika로 서로 다른 움직임과 스타일을 빠르게 실험한다.
+3. 플랫폼 광고 정책과 저작권 검수를 통과한 자산만 집행한다.
+프리미엄(무료+유료 구독)
+140
+Perplexity + Sora + Runway + Adobe Firefly
+브랜드 인지도와 고관여 전환
+★★★★★★★★☆☆
+1. Perplexity이 복잡한 요금제 차이를 이해시키는 내러티브·장면·시각 콘셉트를 만든다.
+2. Sora + Runway + Adobe Firefly 조합이 Sora와 Runway 영상에 Firefly 그래픽을 결합해 캠페인 일관성을 높인다.
+3. 실제 UI·가격표와 생성형 비주얼을 명확히 구분한다.
+프리미엄(무료+유료 구독)
+141
+Perplexity + Descript + ElevenLabs + Notion AI
+긴 콘텐츠의 블로그·클립 전환
+★★★★★★★★☆☆
+1. Perplexity이 녹취에서 구매 질문·반론·FAQ를 분류하고 시간 코드를 보존한다.
+2. Descript + ElevenLabs + Notion AI 조합이 Descript가 편집·클립·자막을 만들고 ElevenLabs가 보완 내레이션을 만든다.
+3. Notion AI에서 발행 우선순위와 검수 상태를 관리한다.
+프리미엄(무료+유료 구독) / 애드온(월 구독)
+142
+Perplexity + Suno + Udio + ElevenLabs SFX
+숏폼 배경음과 효과음
+★★★★★★★☆☆☆
+1. Perplexity이 캠페인 분위기·길이·채널을 음악 브리프로 구조화한다.
+2. Suno + Udio + ElevenLabs SFX 조합이 Suno·Udio·SFX 도구로 음악과 효과음을 버전별로 생성한다.
+3. 상업 이용 가능 범위·콘텐츠 ID·사용 위치를 기록한다.
+프리미엄(무료+유료 구독)
+143
+Perplexity + Zapier + HubSpot + Copy.ai
+동의 기반 리드 육성과 콘텐츠 추천
+★★★★★★★★☆☆
+1. Perplexity이 폼 제출과 페이지 행동을 동의 상태에 맞춰 CRM으로 전달한다.
+2. Zapier + HubSpot + Copy.ai 조합이 Copy.ai가 세그먼트별 다음 읽을거리·뉴스레터 카피를 생성한다.
+3. Zapier가 수신 거부·보존 기간·태그 규칙을 흐름에 포함한다.
+프리미엄(무료+유료 구독) / 공식 가격 페이지 확인 필요
+144
+Perplexity + Jasper + Writesonic + Surfer SEO
+카테고리 페이지와 비교 글 확장
+★★★★★★★★☆☆
+1. Perplexity이 키워드·질문·비교 축을 콘텐츠 브리프로 표준화한다.
+2. Jasper + Writesonic + Surfer SEO 조합이 두 작성 도구가 제목·FAQ·설명을 생성하고 SEO 도구가 구조를 점검한다.
+3. 사실·가격·성능 주장은 공식 출처 검수 후에만 게시한다.
+프리미엄(무료+유료 구독) / 공식 가격 페이지 확인 필요
+145
+Perplexity + Perplexity + Exa AI + Apify
+신생 AI 기업 탐색과 카테고리 맵
+★★★★★★★★☆☆
+1. Perplexity이 공개 웹의 기업·제품·분야·발행일·출처를 조사한다.
+2. Perplexity + Exa AI + Apify 조합이 Exa와 Apify 결과를 중복 제거하고 Perplexity로 근거를 요약한다.
+3. 개인 이메일·연락처 수집이나 로그인 영역 수집은 범위에서 제외한다.
+프리미엄(무료+유료 구독)
+146
+Perplexity + Airbyte + dbt + Great Expectations
+가격 DB 정규화와 품질 테스트
+★★★★★★★★★★
+1. Perplexity이 원천 API·공식 페이지 데이터를 분석 저장소로 적재한다.
+2. Airbyte + dbt + Great Expectations 조합이 dbt 변환과 Great Expectations 테스트가 관계·범위·NULL·중복을 검사한다.
+3. 실패 레코드는 출처·오류 유형·영향 페이지와 함께 검수 큐로 보낸다.
+프리미엄(무료+유료 구독) / 오픈소스 + 클라우드 매니지드 유료 플랜 / 공식 가격 페이지 확인 필요
+147
+Perplexity + Apache Kafka + Flink + dbt
+가격 변경 이벤트와 실시간 대시보드
+★★★★★★★★★☆
+1. Perplexity이 수집·변경·승인 이벤트를 스트림으로 분리해 기록한다.
+2. Apache Kafka + Flink + dbt 조합이 Flink가 이벤트를 정리하고 dbt가 분석 가능한 가격 이력으로 모델링한다.
+3. 이상 급증·반복 실패·승인 지연을 운영 지표로 감시한다.
+프리미엄(무료+유료 구독) / 오픈소스 + 클라우드 매니지드 유료 플랜
+148
+Perplexity + LiteLLM + OpenRouter + PortKey
+모델별 비용·품질·장애 대응
+★★★★★★★★★☆
+1. Perplexity이 작업 난이도와 예상 토큰을 기준으로 저비용·고성능 모델을 라우팅한다.
+2. LiteLLM + OpenRouter + PortKey 조합이 게이트웨이가 키 관리·호출 로그·대체 모델 정책을 일관되게 적용한다.
+3. 샘플 평가·오류율·비용을 비교해 라우팅 규칙을 주기적으로 조정한다.
+프리미엄(무료+유료 구독) / 오픈소스 + 종량제/구독 혼합
+149
+Perplexity + LangSmith + Ragas + DeepEval
+AI 답변과 SEO 초안 검증
+★★★★★★★★★★
+1. Perplexity이 질문 세트와 정답 근거를 기준으로 응답 품질을 평가한다.
+2. LangSmith + Ragas + DeepEval 조합이 Ragas·DeepEval이 환각·근거성·일관성을 점수화하고 LangSmith가 추적한다.
+3. 기준 미달 응답은 자동 게시하지 않고 프롬프트·검색·데이터를 수정한다.
+프리미엄(무료+유료 구독) / 오픈소스 + 클라우드 매니지드 유료 플랜
+150
+Perplexity + PostHog + Google Analytics + Mixpanel
+비교 페이지 전환 최적화
+★★★★★★★★☆☆
+1. Perplexity이 페이지뷰·비교표 진입·광고 클릭·다음 페이지 이동을 이벤트로 정의한다.
+2. PostHog + Google Analytics + Mixpanel 조합이 분석 도구가 퍼널·세그먼트·실험 결과를 비교한다.
+3. 개인정보 동의와 쿠키 정책 범위 안에서 집계 데이터를 사용한다.
+프리미엄(무료+유료 구독) / 공식 가격 페이지 확인 필요
+6. Grok-2 기반 멀티툴 스택 30개
+뇌 역할: 실시간 화제·대화형 발상. 아래 패턴은 Grok-2이 기획·판단·분류·검수·응답을 맡고, 나머지 3~4개 도구가 실행 체인을 완성하는 구조다.
+번호
+멀티툴 조합
+뇌 + 실행 3~4개
+주요 마케팅 활용
+파급력
+데이터 분석 및 알고리즘 연동 방식
+요금 구조
+151
+Grok-2 + Firecrawl + dbt + n8n
+공식 가격 비교 페이지와 변경 알림
+★★★★★★★★★★
+1. Grok-2이 공개 공식 가격 페이지를 수집해 플랜·통화·주기·한도 필드로 추출한다.
+2. Firecrawl + dbt + n8n 조합이 dbt 테스트로 누락·중복·비정상 값을 걸러 이전 값과 비교한다.
+3. n8n은 근거 URL과 차이 요약을 검수자에게 보내고 승인 후에만 게시한다.
+구독형(X 구독 포함) + API 종량제 / 프리미엄(무료+유료 구독) / 오픈소스 + 클라우드 매니지드 유료 플랜
+152
+Grok-2 + Apify + Airbyte + Make
+카테고리별 가격 변동 모니터링
+★★★★★★★★★★
+1. Grok-2이 승인된 공개 대상의 스냅샷과 변경 신호를 주기적으로 수집한다.
+2. Apify + Airbyte + Make 조합이 Airbyte가 원천 데이터를 저장소로 적재해 추적 가능한 이력을 만든다.
+3. Make가 임계값을 넘는 변경만 검수 큐와 콘텐츠 갱신 작업으로 연결한다.
+구독형(X 구독 포함) + API 종량제 / 프리미엄(무료+유료 구독) / 오픈소스 + 클라우드 매니지드 유료 플랜
+153
+Grok-2 + Browserbase + Playwright Agent + Cursor
+동적 가격 페이지 파싱과 테스트
+★★★★★★★★★★
+1. Grok-2이 브라우저 자동화가 JavaScript 렌더링 후의 공개 가격 정보를 읽는다.
+2. Browserbase + Playwright Agent + Cursor 조합이 Cursor가 사이트별 파서와 회귀 테스트를 작성해 DOM 변화에 대응한다.
+3. 실패율·응답 시간·필드 누락을 대시보드로 보내 수집 품질을 관리한다.
+구독형(X 구독 포함) + API 종량제 / 프리미엄(무료+유료 구독)
+154
+Grok-2 + Exa AI + Jasper + Notion AI
+신규 AI 카테고리 리서치와 검색 콘텐츠
+★★★★★★★★★☆
+1. Grok-2이 시장 신호와 출처 링크를 수집해 비교할 질문 단위로 정리한다.
+2. Exa AI + Jasper + Notion AI 조합이 Jasper가 독자 의도에 맞는 초안을 만들고 Notion AI가 편집 캘린더를 운영한다.
+3. 최종 가격 수치와 주장은 원문 공식 URL을 검수한 뒤 발행한다.
+구독형(X 구독 포함) + API 종량제 / 프리미엄(무료+유료 구독) / 애드온(월 구독)
+155
+Grok-2 + Genspark + Gamma + Beautiful.ai
+투자자·파트너용 시장 브리프
+★★★★★★★★☆☆
+1. Grok-2이 조사 결과를 제품군·변화·기회·리스크로 구조화한다.
+2. Genspark + Gamma + Beautiful.ai 조합이 Gamma와 Beautiful.ai가 같은 데이터로 발표물과 제안서 시안을 만든다.
+3. 슬라이드의 수치마다 공식 출처와 기준일을 남겨 재검증 가능성을 유지한다.
+구독형(X 구독 포함) + API 종량제 / 프리미엄(무료+유료 구독)
+156
+Grok-2 + v0.dev + Figma AI + Vercel AI Gateway
+가격 비교 랜딩과 광고 레이아웃
+★★★★★★★★★☆
+1. Grok-2이 요구사항을 반응형 카드·테이블·FAQ·광고 영역 컴포넌트로 변환한다.
+2. v0.dev + Figma AI + Vercel AI Gateway 조합이 Figma AI 디자인 토큰을 v0 화면에 반영하고 API 게이트웨이를 통일한다.
+3. CLS·모바일 가독성·광고와 편집 콘텐츠의 구분을 배포 전 점검한다.
+구독형(X 구독 포함) + API 종량제 / 프리미엄(무료+유료 구독) / 공식 가격 페이지 확인 필요
+157
+Grok-2 + Lovable + Supabase + Cursor
+가격 검수와 게시 이력 관리
+★★★★★★★★★☆
+1. Grok-2이 검수자가 이전값·신규값·근거 URL·승인 상태를 비교하는 화면을 만든다.
+2. Lovable + Supabase + Cursor 조합이 Supabase에 역할·변경 로그·레코드 상태를 저장하고 Cursor로 규칙을 구현한다.
+3. 공개 사이트와 관리자 권한을 분리해 실수로 인한 데이터 변경을 막는다.
+구독형(X 구독 포함) + API 종량제 / 프리미엄(무료+유료 구독) / 공식 가격 페이지 확인 필요
+158
+Grok-2 + Bolt.new + Replit Agent + GitHub Copilot
+카테고리 MVP와 데이터 검증
+★★★★★★★★☆☆
+1. Grok-2이 빠른 웹 화면과 API 프로토타입을 만들고 비교 필드를 연결한다.
+2. Bolt.new + Replit Agent + GitHub Copilot 조합이 Replit Agent와 Copilot이 입력 검증·테스트·배포 준비 코드를 보조한다.
+3. 운영 전에는 비밀키·백업·보안·성능을 별도 체크리스트로 검수한다.
+구독형(X 구독 포함) + API 종량제 / 프리미엄(무료+유료 구독)
+159
+Grok-2 + LlamaIndex + LangChain + Cohere Rerank 3
+출처를 제시하는 비교 챗봇
+★★★★★★★★★★
+1. Grok-2이 공식 문서와 가격 DB를 버전·URL·수집 시각을 가진 청크로 인덱싱한다.
+2. LlamaIndex + LangChain + Cohere Rerank 3 조합이 LangChain이 검색·도구 호출·답변 생성을 연결하고 Rerank가 근거를 정렬한다.
+3. 근거가 부족한 질문은 답을 추정하지 않고 공식 페이지 링크로 안내한다.
+구독형(X 구독 포함) + API 종량제 / 오픈소스 + 클라우드 매니지드 유료 플랜
+160
+Grok-2 + LangGraph + OpenAI Agents SDK + PydanticAI
+수집·검수·게시 전 승인 자동화
+★★★★★★★★★★
+1. Grok-2이 에이전트를 수집·필드 추출·값 비교·승인 요청 역할로 나눈다.
+2. LangGraph + OpenAI Agents SDK + PydanticAI 조합이 상태 그래프가 실패·보류·재검수 경로와 구조화 출력 스키마를 강제한다.
+3. 출처 완결성과 사람 승인이 없으면 게시 도구를 호출하지 않는다.
+구독형(X 구독 포함) + API 종량제 / 오픈소스(무료)
+161
+Grok-2 + Dify + Flowise + Make
+운영팀의 질문 응답과 태스크 자동화
+★★★★★★★★★☆
+1. Grok-2이 운영팀이 가격 변경·콘텐츠 상태·출처를 조회하는 노코드 앱을 만든다.
+2. Dify + Flowise + Make 조합이 Dify와 Flowise가 지식베이스·프롬프트·워크플로를 역할별로 연결한다.
+3. Make는 승인된 작업만 CMS·태스크·알림 시스템으로 전달한다.
+구독형(X 구독 포함) + API 종량제 / 오픈소스(무료) / 프리미엄(무료+유료 구독)
+162
+Grok-2 + CrewAI + AutoGen + Notion AI
+리서치에서 발행까지의 역할 분담
+★★★★★★★★☆☆
+1. Grok-2이 리서처·검수자·SEO 편집자·배포 담당자의 산출물 형식을 분리한다.
+2. CrewAI + AutoGen + Notion AI 조합이 CrewAI와 AutoGen이 역할 간 전달물에 출처·기준일·신뢰도를 포함한다.
+3. Notion AI가 편집 캘린더·담당자·수정 이력을 유지한다.
+구독형(X 구독 포함) + API 종량제 / 오픈소스(무료) / 애드온(월 구독)
+163
+Grok-2 + Higgsfield + ElevenLabs + Descript
+릴스·틱톡 가격 비교 숏폼
+★★★★★★★★★★
+1. Grok-2이 비교 포인트를 훅·장면·CTA가 있는 15초 대본으로 압축한다.
+2. Higgsfield + ElevenLabs + Descript 조합이 Higgsfield가 모션 영상, ElevenLabs가 내레이션, Descript가 자막과 편집을 맡는다.
+3. 완주율·클릭률·랜딩 진입률을 영상 버전과 연결해 다음 훅을 선정한다.
+구독형(X 구독 포함) + API 종량제 / 프리미엄(무료+유료 구독)
+164
+Grok-2 + Runway + ElevenLabs + Canva Magic Edit
+SaaS 기능 비교와 유튜브 설명 영상
+★★★★★★★★★☆
+1. Grok-2이 대본을 제품 화면·B-roll·그래픽·내레이션으로 분해한다.
+2. Runway + ElevenLabs + Canva Magic Edit 조합이 Runway 영상과 Canva 카드, ElevenLabs 음성을 한 타임라인으로 조립한다.
+3. 영상 설명란에 가격 기준일과 공식 링크를 넣고 업데이트 작업을 예약한다.
+구독형(X 구독 포함) + API 종량제 / 프리미엄(무료+유료 구독)
+165
+Grok-2 + HeyGen + ElevenLabs + Canva Magic Edit
+국가별 가격 안내와 리드 유입
+★★★★★★★★☆☆
+1. Grok-2이 현지화된 대본을 아바타·음성·자막으로 변환해 언어별 영상을 만든다.
+2. HeyGen + ElevenLabs + Canva Magic Edit 조합이 Canva가 동일 캠페인의 배너·캐러셀·랜딩 그래픽을 파생한다.
+3. 언어·국가·URL별 성과를 비교하고 초상·음성 사용 동의를 관리한다.
+구독형(X 구독 포함) + API 종량제 / 프리미엄(무료+유료 구독)
+166
+Grok-2 + Synthesia + OpenAI TTS + Gamma
+B2B 온보딩과 플랜 설명
+★★★★★★★★☆☆
+1. Grok-2이 역할별 학습 경로와 플랜별 한계를 교육 시나리오로 만든다.
+2. Synthesia + OpenAI TTS + Gamma 조합이 Synthesia 영상, TTS 음성, Gamma 슬라이드를 같은 데이터 원본에 연결한다.
+3. 도움말 클릭·시청 완료·지원 문의를 분석해 설명이 약한 항목을 보강한다.
+구독형(X 구독 포함) + API 종량제 / 프리미엄(무료+유료 구독)
+167
+Grok-2 + Midjourney + Canva Magic Edit + Recraft
+블로그·SNS 비교 카드
+★★★★★★★★★☆
+1. Grok-2이 검색 의도와 브랜드 톤을 시각 프롬프트·카피·아이콘 체계로 바꾼다.
+2. Midjourney + Canva Magic Edit + Recraft 조합이 Midjourney가 무드 이미지를 만들고 Recraft·Canva가 카드와 템플릿을 완성한다.
+3. 가격 사실은 이미지에만 넣지 않고 접근 가능한 표와 공식 링크로 함께 제공한다.
+구독형(X 구독 포함) + API 종량제 / 유료 구독제 / 프리미엄(무료+유료 구독)
+168
+Grok-2 + Adobe Firefly + Ideogram + Canva Magic Edit
+배너·썸네일·검색 광고 변형
+★★★★★★★★☆☆
+1. Grok-2이 브랜드 가이드와 타깃 세그먼트를 기반으로 여러 시각 가설을 만든다.
+2. Adobe Firefly + Ideogram + Canva Magic Edit 조합이 Firefly·Ideogram 결과를 Canva 템플릿의 제목·CTA·규격에 맞춰 변형한다.
+3. A/B 결과와 사용 권리 상태를 크리에이티브 ID에 기록한다.
+구독형(X 구독 포함) + API 종량제 / 프리미엄(무료+유료 구독)
+169
+Grok-2 + Kling + Luma Dream Machine + Pika
+기능 시연형 짧은 광고
+★★★★★★★★☆☆
+1. Grok-2이 한 장면에 하나의 기능·가격 가치 메시지만 담는 모션 브리프를 설계한다.
+2. Kling + Luma Dream Machine + Pika 조합이 Kling·Luma·Pika로 서로 다른 움직임과 스타일을 빠르게 실험한다.
+3. 플랫폼 광고 정책과 저작권 검수를 통과한 자산만 집행한다.
+구독형(X 구독 포함) + API 종량제 / 프리미엄(무료+유료 구독)
+170
+Grok-2 + Sora + Runway + Adobe Firefly
+브랜드 인지도와 고관여 전환
+★★★★★★★★☆☆
+1. Grok-2이 복잡한 요금제 차이를 이해시키는 내러티브·장면·시각 콘셉트를 만든다.
+2. Sora + Runway + Adobe Firefly 조합이 Sora와 Runway 영상에 Firefly 그래픽을 결합해 캠페인 일관성을 높인다.
+3. 실제 UI·가격표와 생성형 비주얼을 명확히 구분한다.
+구독형(X 구독 포함) + API 종량제 / 프리미엄(무료+유료 구독)
+171
+Grok-2 + Descript + ElevenLabs + Notion AI
+긴 콘텐츠의 블로그·클립 전환
+★★★★★★★★☆☆
+1. Grok-2이 녹취에서 구매 질문·반론·FAQ를 분류하고 시간 코드를 보존한다.
+2. Descript + ElevenLabs + Notion AI 조합이 Descript가 편집·클립·자막을 만들고 ElevenLabs가 보완 내레이션을 만든다.
+3. Notion AI에서 발행 우선순위와 검수 상태를 관리한다.
+구독형(X 구독 포함) + API 종량제 / 프리미엄(무료+유료 구독) / 애드온(월 구독)
+172
+Grok-2 + Suno + Udio + ElevenLabs SFX
+숏폼 배경음과 효과음
+★★★★★★★☆☆☆
+1. Grok-2이 캠페인 분위기·길이·채널을 음악 브리프로 구조화한다.
+2. Suno + Udio + ElevenLabs SFX 조합이 Suno·Udio·SFX 도구로 음악과 효과음을 버전별로 생성한다.
+3. 상업 이용 가능 범위·콘텐츠 ID·사용 위치를 기록한다.
+구독형(X 구독 포함) + API 종량제 / 프리미엄(무료+유료 구독)
+173
+Grok-2 + Zapier + HubSpot + Copy.ai
+동의 기반 리드 육성과 콘텐츠 추천
+★★★★★★★★☆☆
+1. Grok-2이 폼 제출과 페이지 행동을 동의 상태에 맞춰 CRM으로 전달한다.
+2. Zapier + HubSpot + Copy.ai 조합이 Copy.ai가 세그먼트별 다음 읽을거리·뉴스레터 카피를 생성한다.
+3. Zapier가 수신 거부·보존 기간·태그 규칙을 흐름에 포함한다.
+구독형(X 구독 포함) + API 종량제 / 프리미엄(무료+유료 구독) / 공식 가격 페이지 확인 필요
+174
+Grok-2 + Jasper + Writesonic + Surfer SEO
+카테고리 페이지와 비교 글 확장
+★★★★★★★★☆☆
+1. Grok-2이 키워드·질문·비교 축을 콘텐츠 브리프로 표준화한다.
+2. Jasper + Writesonic + Surfer SEO 조합이 두 작성 도구가 제목·FAQ·설명을 생성하고 SEO 도구가 구조를 점검한다.
+3. 사실·가격·성능 주장은 공식 출처 검수 후에만 게시한다.
+구독형(X 구독 포함) + API 종량제 / 프리미엄(무료+유료 구독) / 공식 가격 페이지 확인 필요
+175
+Grok-2 + Perplexity + Exa AI + Apify
+신생 AI 기업 탐색과 카테고리 맵
+★★★★★★★★☆☆
+1. Grok-2이 공개 웹의 기업·제품·분야·발행일·출처를 조사한다.
+2. Perplexity + Exa AI + Apify 조합이 Exa와 Apify 결과를 중복 제거하고 Perplexity로 근거를 요약한다.
+3. 개인 이메일·연락처 수집이나 로그인 영역 수집은 범위에서 제외한다.
+구독형(X 구독 포함) + API 종량제 / 프리미엄(무료+유료 구독)
+176
+Grok-2 + Airbyte + dbt + Great Expectations
+가격 DB 정규화와 품질 테스트
+★★★★★★★★★★
+1. Grok-2이 원천 API·공식 페이지 데이터를 분석 저장소로 적재한다.
+2. Airbyte + dbt + Great Expectations 조합이 dbt 변환과 Great Expectations 테스트가 관계·범위·NULL·중복을 검사한다.
+3. 실패 레코드는 출처·오류 유형·영향 페이지와 함께 검수 큐로 보낸다.
+구독형(X 구독 포함) + API 종량제 / 오픈소스 + 클라우드 매니지드 유료 플랜 / 공식 가격 페이지 확인 필요
+177
+Grok-2 + Apache Kafka + Flink + dbt
+가격 변경 이벤트와 실시간 대시보드
+★★★★★★★★★☆
+1. Grok-2이 수집·변경·승인 이벤트를 스트림으로 분리해 기록한다.
+2. Apache Kafka + Flink + dbt 조합이 Flink가 이벤트를 정리하고 dbt가 분석 가능한 가격 이력으로 모델링한다.
+3. 이상 급증·반복 실패·승인 지연을 운영 지표로 감시한다.
+구독형(X 구독 포함) + API 종량제 / 오픈소스 + 클라우드 매니지드 유료 플랜
+178
+Grok-2 + LiteLLM + OpenRouter + PortKey
+모델별 비용·품질·장애 대응
+★★★★★★★★★☆
+1. Grok-2이 작업 난이도와 예상 토큰을 기준으로 저비용·고성능 모델을 라우팅한다.
+2. LiteLLM + OpenRouter + PortKey 조합이 게이트웨이가 키 관리·호출 로그·대체 모델 정책을 일관되게 적용한다.
+3. 샘플 평가·오류율·비용을 비교해 라우팅 규칙을 주기적으로 조정한다.
+구독형(X 구독 포함) + API 종량제 / 오픈소스 + 종량제/구독 혼합
+179
+Grok-2 + LangSmith + Ragas + DeepEval
+AI 답변과 SEO 초안 검증
+★★★★★★★★★★
+1. Grok-2이 질문 세트와 정답 근거를 기준으로 응답 품질을 평가한다.
+2. LangSmith + Ragas + DeepEval 조합이 Ragas·DeepEval이 환각·근거성·일관성을 점수화하고 LangSmith가 추적한다.
+3. 기준 미달 응답은 자동 게시하지 않고 프롬프트·검색·데이터를 수정한다.
+구독형(X 구독 포함) + API 종량제 / 오픈소스 + 클라우드 매니지드 유료 플랜
+180
+Grok-2 + PostHog + Google Analytics + Mixpanel
+비교 페이지 전환 최적화
+★★★★★★★★☆☆
+1. Grok-2이 페이지뷰·비교표 진입·광고 클릭·다음 페이지 이동을 이벤트로 정의한다.
+2. PostHog + Google Analytics + Mixpanel 조합이 분석 도구가 퍼널·세그먼트·실험 결과를 비교한다.
+3. 개인정보 동의와 쿠키 정책 범위 안에서 집계 데이터를 사용한다.
+구독형(X 구독 포함) + API 종량제 / 공식 가격 페이지 확인 필요 / 프리미엄(무료+유료 구독)
+7. Llama 기반 멀티툴 스택 30개
+뇌 역할: 자체 호스팅·맞춤화. 아래 패턴은 Llama이 기획·판단·분류·검수·응답을 맡고, 나머지 3~4개 도구가 실행 체인을 완성하는 구조다.
+번호
+멀티툴 조합
+뇌 + 실행 3~4개
+주요 마케팅 활용
+파급력
+데이터 분석 및 알고리즘 연동 방식
+요금 구조
+181
+Llama + Firecrawl + dbt + n8n
+공식 가격 비교 페이지와 변경 알림
+★★★★★★★★★★
+1. Llama이 공개 공식 가격 페이지를 수집해 플랜·통화·주기·한도 필드로 추출한다.
+2. Firecrawl + dbt + n8n 조합이 dbt 테스트로 누락·중복·비정상 값을 걸러 이전 값과 비교한다.
+3. n8n은 근거 URL과 차이 요약을 검수자에게 보내고 승인 후에만 게시한다.
+오픈소스(무료, 라이선스 조건부) / 프리미엄(무료+유료 구독) / 오픈소스 + 클라우드 매니지드 유료 플랜
+182
+Llama + Apify + Airbyte + Make
+카테고리별 가격 변동 모니터링
+★★★★★★★★★★
+1. Llama이 승인된 공개 대상의 스냅샷과 변경 신호를 주기적으로 수집한다.
+2. Apify + Airbyte + Make 조합이 Airbyte가 원천 데이터를 저장소로 적재해 추적 가능한 이력을 만든다.
+3. Make가 임계값을 넘는 변경만 검수 큐와 콘텐츠 갱신 작업으로 연결한다.
+오픈소스(무료, 라이선스 조건부) / 프리미엄(무료+유료 구독) / 오픈소스 + 클라우드 매니지드 유료 플랜
+183
+Llama + Browserbase + Playwright Agent + Cursor
+동적 가격 페이지 파싱과 테스트
+★★★★★★★★★★
+1. Llama이 브라우저 자동화가 JavaScript 렌더링 후의 공개 가격 정보를 읽는다.
+2. Browserbase + Playwright Agent + Cursor 조합이 Cursor가 사이트별 파서와 회귀 테스트를 작성해 DOM 변화에 대응한다.
+3. 실패율·응답 시간·필드 누락을 대시보드로 보내 수집 품질을 관리한다.
+오픈소스(무료, 라이선스 조건부) / 프리미엄(무료+유료 구독)
+184
+Llama + Exa AI + Jasper + Notion AI
+신규 AI 카테고리 리서치와 검색 콘텐츠
+★★★★★★★★★☆
+1. Llama이 시장 신호와 출처 링크를 수집해 비교할 질문 단위로 정리한다.
+2. Exa AI + Jasper + Notion AI 조합이 Jasper가 독자 의도에 맞는 초안을 만들고 Notion AI가 편집 캘린더를 운영한다.
+3. 최종 가격 수치와 주장은 원문 공식 URL을 검수한 뒤 발행한다.
+오픈소스(무료, 라이선스 조건부) / 프리미엄(무료+유료 구독) / 애드온(월 구독)
+185
+Llama + Genspark + Gamma + Beautiful.ai
+투자자·파트너용 시장 브리프
+★★★★★★★★☆☆
+1. Llama이 조사 결과를 제품군·변화·기회·리스크로 구조화한다.
+2. Genspark + Gamma + Beautiful.ai 조합이 Gamma와 Beautiful.ai가 같은 데이터로 발표물과 제안서 시안을 만든다.
+3. 슬라이드의 수치마다 공식 출처와 기준일을 남겨 재검증 가능성을 유지한다.
+오픈소스(무료, 라이선스 조건부) / 프리미엄(무료+유료 구독)
+186
+Llama + v0.dev + Figma AI + Vercel AI Gateway
+가격 비교 랜딩과 광고 레이아웃
+★★★★★★★★★☆
+1. Llama이 요구사항을 반응형 카드·테이블·FAQ·광고 영역 컴포넌트로 변환한다.
+2. v0.dev + Figma AI + Vercel AI Gateway 조합이 Figma AI 디자인 토큰을 v0 화면에 반영하고 API 게이트웨이를 통일한다.
+3. CLS·모바일 가독성·광고와 편집 콘텐츠의 구분을 배포 전 점검한다.
+오픈소스(무료, 라이선스 조건부) / 프리미엄(무료+유료 구독) / 공식 가격 페이지 확인 필요
+187
+Llama + Lovable + Supabase + Cursor
+가격 검수와 게시 이력 관리
+★★★★★★★★★☆
+1. Llama이 검수자가 이전값·신규값·근거 URL·승인 상태를 비교하는 화면을 만든다.
+2. Lovable + Supabase + Cursor 조합이 Supabase에 역할·변경 로그·레코드 상태를 저장하고 Cursor로 규칙을 구현한다.
+3. 공개 사이트와 관리자 권한을 분리해 실수로 인한 데이터 변경을 막는다.
+오픈소스(무료, 라이선스 조건부) / 프리미엄(무료+유료 구독) / 공식 가격 페이지 확인 필요
+188
+Llama + Bolt.new + Replit Agent + GitHub Copilot
+카테고리 MVP와 데이터 검증
+★★★★★★★★☆☆
+1. Llama이 빠른 웹 화면과 API 프로토타입을 만들고 비교 필드를 연결한다.
+2. Bolt.new + Replit Agent + GitHub Copilot 조합이 Replit Agent와 Copilot이 입력 검증·테스트·배포 준비 코드를 보조한다.
+3. 운영 전에는 비밀키·백업·보안·성능을 별도 체크리스트로 검수한다.
+오픈소스(무료, 라이선스 조건부) / 프리미엄(무료+유료 구독)
+189
+Llama + LlamaIndex + LangChain + Cohere Rerank 3
+출처를 제시하는 비교 챗봇
+★★★★★★★★★★
+1. Llama이 공식 문서와 가격 DB를 버전·URL·수집 시각을 가진 청크로 인덱싱한다.
+2. LlamaIndex + LangChain + Cohere Rerank 3 조합이 LangChain이 검색·도구 호출·답변 생성을 연결하고 Rerank가 근거를 정렬한다.
+3. 근거가 부족한 질문은 답을 추정하지 않고 공식 페이지 링크로 안내한다.
+오픈소스(무료, 라이선스 조건부) / 오픈소스 + 클라우드 매니지드 유료 플랜
+190
+Llama + LangGraph + OpenAI Agents SDK + PydanticAI
+수집·검수·게시 전 승인 자동화
+★★★★★★★★★★
+1. Llama이 에이전트를 수집·필드 추출·값 비교·승인 요청 역할로 나눈다.
+2. LangGraph + OpenAI Agents SDK + PydanticAI 조합이 상태 그래프가 실패·보류·재검수 경로와 구조화 출력 스키마를 강제한다.
+3. 출처 완결성과 사람 승인이 없으면 게시 도구를 호출하지 않는다.
+오픈소스(무료, 라이선스 조건부) / 오픈소스(무료)
+191
+Llama + Dify + Flowise + Make
+운영팀의 질문 응답과 태스크 자동화
+★★★★★★★★★☆
+1. Llama이 운영팀이 가격 변경·콘텐츠 상태·출처를 조회하는 노코드 앱을 만든다.
+2. Dify + Flowise + Make 조합이 Dify와 Flowise가 지식베이스·프롬프트·워크플로를 역할별로 연결한다.
+3. Make는 승인된 작업만 CMS·태스크·알림 시스템으로 전달한다.
+오픈소스(무료, 라이선스 조건부) / 오픈소스(무료) / 프리미엄(무료+유료 구독)
+192
+Llama + CrewAI + AutoGen + Notion AI
+리서치에서 발행까지의 역할 분담
+★★★★★★★★☆☆
+1. Llama이 리서처·검수자·SEO 편집자·배포 담당자의 산출물 형식을 분리한다.
+2. CrewAI + AutoGen + Notion AI 조합이 CrewAI와 AutoGen이 역할 간 전달물에 출처·기준일·신뢰도를 포함한다.
+3. Notion AI가 편집 캘린더·담당자·수정 이력을 유지한다.
+오픈소스(무료, 라이선스 조건부) / 오픈소스(무료) / 애드온(월 구독)
+193
+Llama + Higgsfield + ElevenLabs + Descript
+릴스·틱톡 가격 비교 숏폼
+★★★★★★★★★★
+1. Llama이 비교 포인트를 훅·장면·CTA가 있는 15초 대본으로 압축한다.
+2. Higgsfield + ElevenLabs + Descript 조합이 Higgsfield가 모션 영상, ElevenLabs가 내레이션, Descript가 자막과 편집을 맡는다.
+3. 완주율·클릭률·랜딩 진입률을 영상 버전과 연결해 다음 훅을 선정한다.
+오픈소스(무료, 라이선스 조건부) / 프리미엄(무료+유료 구독)
+194
+Llama + Runway + ElevenLabs + Canva Magic Edit
+SaaS 기능 비교와 유튜브 설명 영상
+★★★★★★★★★☆
+1. Llama이 대본을 제품 화면·B-roll·그래픽·내레이션으로 분해한다.
+2. Runway + ElevenLabs + Canva Magic Edit 조합이 Runway 영상과 Canva 카드, ElevenLabs 음성을 한 타임라인으로 조립한다.
+3. 영상 설명란에 가격 기준일과 공식 링크를 넣고 업데이트 작업을 예약한다.
+오픈소스(무료, 라이선스 조건부) / 프리미엄(무료+유료 구독)
+195
+Llama + HeyGen + ElevenLabs + Canva Magic Edit
+국가별 가격 안내와 리드 유입
+★★★★★★★★☆☆
+1. Llama이 현지화된 대본을 아바타·음성·자막으로 변환해 언어별 영상을 만든다.
+2. HeyGen + ElevenLabs + Canva Magic Edit 조합이 Canva가 동일 캠페인의 배너·캐러셀·랜딩 그래픽을 파생한다.
+3. 언어·국가·URL별 성과를 비교하고 초상·음성 사용 동의를 관리한다.
+오픈소스(무료, 라이선스 조건부) / 프리미엄(무료+유료 구독)
+196
+Llama + Synthesia + OpenAI TTS + Gamma
+B2B 온보딩과 플랜 설명
+★★★★★★★★☆☆
+1. Llama이 역할별 학습 경로와 플랜별 한계를 교육 시나리오로 만든다.
+2. Synthesia + OpenAI TTS + Gamma 조합이 Synthesia 영상, TTS 음성, Gamma 슬라이드를 같은 데이터 원본에 연결한다.
+3. 도움말 클릭·시청 완료·지원 문의를 분석해 설명이 약한 항목을 보강한다.
+오픈소스(무료, 라이선스 조건부) / 프리미엄(무료+유료 구독)
+197
+Llama + Midjourney + Canva Magic Edit + Recraft
+블로그·SNS 비교 카드
+★★★★★★★★★☆
+1. Llama이 검색 의도와 브랜드 톤을 시각 프롬프트·카피·아이콘 체계로 바꾼다.
+2. Midjourney + Canva Magic Edit + Recraft 조합이 Midjourney가 무드 이미지를 만들고 Recraft·Canva가 카드와 템플릿을 완성한다.
+3. 가격 사실은 이미지에만 넣지 않고 접근 가능한 표와 공식 링크로 함께 제공한다.
+오픈소스(무료, 라이선스 조건부) / 유료 구독제 / 프리미엄(무료+유료 구독)
+198
+Llama + Adobe Firefly + Ideogram + Canva Magic Edit
+배너·썸네일·검색 광고 변형
+★★★★★★★★☆☆
+1. Llama이 브랜드 가이드와 타깃 세그먼트를 기반으로 여러 시각 가설을 만든다.
+2. Adobe Firefly + Ideogram + Canva Magic Edit 조합이 Firefly·Ideogram 결과를 Canva 템플릿의 제목·CTA·규격에 맞춰 변형한다.
+3. A/B 결과와 사용 권리 상태를 크리에이티브 ID에 기록한다.
+오픈소스(무료, 라이선스 조건부) / 프리미엄(무료+유료 구독)
+199
+Llama + Kling + Luma Dream Machine + Pika
+기능 시연형 짧은 광고
+★★★★★★★★☆☆
+1. Llama이 한 장면에 하나의 기능·가격 가치 메시지만 담는 모션 브리프를 설계한다.
+2. Kling + Luma Dream Machine + Pika 조합이 Kling·Luma·Pika로 서로 다른 움직임과 스타일을 빠르게 실험한다.
+3. 플랫폼 광고 정책과 저작권 검수를 통과한 자산만 집행한다.
+오픈소스(무료, 라이선스 조건부) / 프리미엄(무료+유료 구독)
+200
+Llama + Sora + Runway + Adobe Firefly
+브랜드 인지도와 고관여 전환
+★★★★★★★★☆☆
+1. Llama이 복잡한 요금제 차이를 이해시키는 내러티브·장면·시각 콘셉트를 만든다.
+2. Sora + Runway + Adobe Firefly 조합이 Sora와 Runway 영상에 Firefly 그래픽을 결합해 캠페인 일관성을 높인다.
+3. 실제 UI·가격표와 생성형 비주얼을 명확히 구분한다.
+오픈소스(무료, 라이선스 조건부) / 프리미엄(무료+유료 구독)
+201
+Llama + Descript + ElevenLabs + Notion AI
+긴 콘텐츠의 블로그·클립 전환
+★★★★★★★★☆☆
+1. Llama이 녹취에서 구매 질문·반론·FAQ를 분류하고 시간 코드를 보존한다.
+2. Descript + ElevenLabs + Notion AI 조합이 Descript가 편집·클립·자막을 만들고 ElevenLabs가 보완 내레이션을 만든다.
+3. Notion AI에서 발행 우선순위와 검수 상태를 관리한다.
+오픈소스(무료, 라이선스 조건부) / 프리미엄(무료+유료 구독) / 애드온(월 구독)
+202
+Llama + Suno + Udio + ElevenLabs SFX
+숏폼 배경음과 효과음
+★★★★★★★☆☆☆
+1. Llama이 캠페인 분위기·길이·채널을 음악 브리프로 구조화한다.
+2. Suno + Udio + ElevenLabs SFX 조합이 Suno·Udio·SFX 도구로 음악과 효과음을 버전별로 생성한다.
+3. 상업 이용 가능 범위·콘텐츠 ID·사용 위치를 기록한다.
+오픈소스(무료, 라이선스 조건부) / 프리미엄(무료+유료 구독)
+203
+Llama + Zapier + HubSpot + Copy.ai
+동의 기반 리드 육성과 콘텐츠 추천
+★★★★★★★★☆☆
+1. Llama이 폼 제출과 페이지 행동을 동의 상태에 맞춰 CRM으로 전달한다.
+2. Zapier + HubSpot + Copy.ai 조합이 Copy.ai가 세그먼트별 다음 읽을거리·뉴스레터 카피를 생성한다.
+3. Zapier가 수신 거부·보존 기간·태그 규칙을 흐름에 포함한다.
+오픈소스(무료, 라이선스 조건부) / 프리미엄(무료+유료 구독) / 공식 가격 페이지 확인 필요
+204
+Llama + Jasper + Writesonic + Surfer SEO
+카테고리 페이지와 비교 글 확장
+★★★★★★★★☆☆
+1. Llama이 키워드·질문·비교 축을 콘텐츠 브리프로 표준화한다.
+2. Jasper + Writesonic + Surfer SEO 조합이 두 작성 도구가 제목·FAQ·설명을 생성하고 SEO 도구가 구조를 점검한다.
+3. 사실·가격·성능 주장은 공식 출처 검수 후에만 게시한다.
+오픈소스(무료, 라이선스 조건부) / 프리미엄(무료+유료 구독) / 공식 가격 페이지 확인 필요
+205
+Llama + Perplexity + Exa AI + Apify
+신생 AI 기업 탐색과 카테고리 맵
+★★★★★★★★☆☆
+1. Llama이 공개 웹의 기업·제품·분야·발행일·출처를 조사한다.
+2. Perplexity + Exa AI + Apify 조합이 Exa와 Apify 결과를 중복 제거하고 Perplexity로 근거를 요약한다.
+3. 개인 이메일·연락처 수집이나 로그인 영역 수집은 범위에서 제외한다.
+오픈소스(무료, 라이선스 조건부) / 프리미엄(무료+유료 구독)
+206
+Llama + Airbyte + dbt + Great Expectations
+가격 DB 정규화와 품질 테스트
+★★★★★★★★★★
+1. Llama이 원천 API·공식 페이지 데이터를 분석 저장소로 적재한다.
+2. Airbyte + dbt + Great Expectations 조합이 dbt 변환과 Great Expectations 테스트가 관계·범위·NULL·중복을 검사한다.
+3. 실패 레코드는 출처·오류 유형·영향 페이지와 함께 검수 큐로 보낸다.
+오픈소스(무료, 라이선스 조건부) / 오픈소스 + 클라우드 매니지드 유료 플랜 / 공식 가격 페이지 확인 필요
+207
+Llama + Apache Kafka + Flink + dbt
+가격 변경 이벤트와 실시간 대시보드
+★★★★★★★★★☆
+1. Llama이 수집·변경·승인 이벤트를 스트림으로 분리해 기록한다.
+2. Apache Kafka + Flink + dbt 조합이 Flink가 이벤트를 정리하고 dbt가 분석 가능한 가격 이력으로 모델링한다.
+3. 이상 급증·반복 실패·승인 지연을 운영 지표로 감시한다.
+오픈소스(무료, 라이선스 조건부) / 오픈소스 + 클라우드 매니지드 유료 플랜
+208
+Llama + LiteLLM + OpenRouter + PortKey
+모델별 비용·품질·장애 대응
+★★★★★★★★★☆
+1. Llama이 작업 난이도와 예상 토큰을 기준으로 저비용·고성능 모델을 라우팅한다.
+2. LiteLLM + OpenRouter + PortKey 조합이 게이트웨이가 키 관리·호출 로그·대체 모델 정책을 일관되게 적용한다.
+3. 샘플 평가·오류율·비용을 비교해 라우팅 규칙을 주기적으로 조정한다.
+오픈소스(무료, 라이선스 조건부) / 오픈소스 + 종량제/구독 혼합
+209
+Llama + LangSmith + Ragas + DeepEval
+AI 답변과 SEO 초안 검증
+★★★★★★★★★★
+1. Llama이 질문 세트와 정답 근거를 기준으로 응답 품질을 평가한다.
+2. LangSmith + Ragas + DeepEval 조합이 Ragas·DeepEval이 환각·근거성·일관성을 점수화하고 LangSmith가 추적한다.
+3. 기준 미달 응답은 자동 게시하지 않고 프롬프트·검색·데이터를 수정한다.
+오픈소스(무료, 라이선스 조건부) / 오픈소스 + 클라우드 매니지드 유료 플랜
+210
+Llama + PostHog + Google Analytics + Mixpanel
+비교 페이지 전환 최적화
+★★★★★★★★☆☆
+1. Llama이 페이지뷰·비교표 진입·광고 클릭·다음 페이지 이동을 이벤트로 정의한다.
+2. PostHog + Google Analytics + Mixpanel 조합이 분석 도구가 퍼널·세그먼트·실험 결과를 비교한다.
+3. 개인정보 동의와 쿠키 정책 범위 안에서 집계 데이터를 사용한다.
+오픈소스(무료, 라이선스 조건부) / 공식 가격 페이지 확인 필요 / 프리미엄(무료+유료 구독)
+8. Mistral 기반 멀티툴 스택 30개
+뇌 역할: 기업형 배포·다국어. 아래 패턴은 Mistral이 기획·판단·분류·검수·응답을 맡고, 나머지 3~4개 도구가 실행 체인을 완성하는 구조다.
+번호
+멀티툴 조합
+뇌 + 실행 3~4개
+주요 마케팅 활용
+파급력
+데이터 분석 및 알고리즘 연동 방식
+요금 구조
+211
+Mistral + Firecrawl + dbt + n8n
+공식 가격 비교 페이지와 변경 알림
+★★★★★★★★★★
+1. Mistral이 공개 공식 가격 페이지를 수집해 플랜·통화·주기·한도 필드로 추출한다.
+2. Firecrawl + dbt + n8n 조합이 dbt 테스트로 누락·중복·비정상 값을 걸러 이전 값과 비교한다.
+3. n8n은 근거 URL과 차이 요약을 검수자에게 보내고 승인 후에만 게시한다.
+오픈소스(무료) + API 종량제 / 프리미엄(무료+유료 구독) / 오픈소스 + 클라우드 매니지드 유료 플랜
+212
+Mistral + Apify + Airbyte + Make
+카테고리별 가격 변동 모니터링
+★★★★★★★★★★
+1. Mistral이 승인된 공개 대상의 스냅샷과 변경 신호를 주기적으로 수집한다.
+2. Apify + Airbyte + Make 조합이 Airbyte가 원천 데이터를 저장소로 적재해 추적 가능한 이력을 만든다.
+3. Make가 임계값을 넘는 변경만 검수 큐와 콘텐츠 갱신 작업으로 연결한다.
+오픈소스(무료) + API 종량제 / 프리미엄(무료+유료 구독) / 오픈소스 + 클라우드 매니지드 유료 플랜
+213
+Mistral + Browserbase + Playwright Agent + Cursor
+동적 가격 페이지 파싱과 테스트
+★★★★★★★★★★
+1. Mistral이 브라우저 자동화가 JavaScript 렌더링 후의 공개 가격 정보를 읽는다.
+2. Browserbase + Playwright Agent + Cursor 조합이 Cursor가 사이트별 파서와 회귀 테스트를 작성해 DOM 변화에 대응한다.
+3. 실패율·응답 시간·필드 누락을 대시보드로 보내 수집 품질을 관리한다.
+오픈소스(무료) + API 종량제 / 프리미엄(무료+유료 구독)
+214
+Mistral + Exa AI + Jasper + Notion AI
+신규 AI 카테고리 리서치와 검색 콘텐츠
+★★★★★★★★★☆
+1. Mistral이 시장 신호와 출처 링크를 수집해 비교할 질문 단위로 정리한다.
+2. Exa AI + Jasper + Notion AI 조합이 Jasper가 독자 의도에 맞는 초안을 만들고 Notion AI가 편집 캘린더를 운영한다.
+3. 최종 가격 수치와 주장은 원문 공식 URL을 검수한 뒤 발행한다.
+오픈소스(무료) + API 종량제 / 프리미엄(무료+유료 구독) / 애드온(월 구독)
+215
+Mistral + Genspark + Gamma + Beautiful.ai
+투자자·파트너용 시장 브리프
+★★★★★★★★☆☆
+1. Mistral이 조사 결과를 제품군·변화·기회·리스크로 구조화한다.
+2. Genspark + Gamma + Beautiful.ai 조합이 Gamma와 Beautiful.ai가 같은 데이터로 발표물과 제안서 시안을 만든다.
+3. 슬라이드의 수치마다 공식 출처와 기준일을 남겨 재검증 가능성을 유지한다.
+오픈소스(무료) + API 종량제 / 프리미엄(무료+유료 구독)
+216
+Mistral + v0.dev + Figma AI + Vercel AI Gateway
+가격 비교 랜딩과 광고 레이아웃
+★★★★★★★★★☆
+1. Mistral이 요구사항을 반응형 카드·테이블·FAQ·광고 영역 컴포넌트로 변환한다.
+2. v0.dev + Figma AI + Vercel AI Gateway 조합이 Figma AI 디자인 토큰을 v0 화면에 반영하고 API 게이트웨이를 통일한다.
+3. CLS·모바일 가독성·광고와 편집 콘텐츠의 구분을 배포 전 점검한다.
+오픈소스(무료) + API 종량제 / 프리미엄(무료+유료 구독) / 공식 가격 페이지 확인 필요
+217
+Mistral + Lovable + Supabase + Cursor
+가격 검수와 게시 이력 관리
+★★★★★★★★★☆
+1. Mistral이 검수자가 이전값·신규값·근거 URL·승인 상태를 비교하는 화면을 만든다.
+2. Lovable + Supabase + Cursor 조합이 Supabase에 역할·변경 로그·레코드 상태를 저장하고 Cursor로 규칙을 구현한다.
+3. 공개 사이트와 관리자 권한을 분리해 실수로 인한 데이터 변경을 막는다.
+오픈소스(무료) + API 종량제 / 프리미엄(무료+유료 구독) / 공식 가격 페이지 확인 필요
+218
+Mistral + Bolt.new + Replit Agent + GitHub Copilot
+카테고리 MVP와 데이터 검증
+★★★★★★★★☆☆
+1. Mistral이 빠른 웹 화면과 API 프로토타입을 만들고 비교 필드를 연결한다.
+2. Bolt.new + Replit Agent + GitHub Copilot 조합이 Replit Agent와 Copilot이 입력 검증·테스트·배포 준비 코드를 보조한다.
+3. 운영 전에는 비밀키·백업·보안·성능을 별도 체크리스트로 검수한다.
+오픈소스(무료) + API 종량제 / 프리미엄(무료+유료 구독)
+219
+Mistral + LlamaIndex + LangChain + Cohere Rerank 3
+출처를 제시하는 비교 챗봇
+★★★★★★★★★★
+1. Mistral이 공식 문서와 가격 DB를 버전·URL·수집 시각을 가진 청크로 인덱싱한다.
+2. LlamaIndex + LangChain + Cohere Rerank 3 조합이 LangChain이 검색·도구 호출·답변 생성을 연결하고 Rerank가 근거를 정렬한다.
+3. 근거가 부족한 질문은 답을 추정하지 않고 공식 페이지 링크로 안내한다.
+오픈소스(무료) + API 종량제 / 오픈소스 + 클라우드 매니지드 유료 플랜
+220
+Mistral + LangGraph + OpenAI Agents SDK + PydanticAI
+수집·검수·게시 전 승인 자동화
+★★★★★★★★★★
+1. Mistral이 에이전트를 수집·필드 추출·값 비교·승인 요청 역할로 나눈다.
+2. LangGraph + OpenAI Agents SDK + PydanticAI 조합이 상태 그래프가 실패·보류·재검수 경로와 구조화 출력 스키마를 강제한다.
+3. 출처 완결성과 사람 승인이 없으면 게시 도구를 호출하지 않는다.
+오픈소스(무료) + API 종량제 / 오픈소스(무료)
+221
+Mistral + Dify + Flowise + Make
+운영팀의 질문 응답과 태스크 자동화
+★★★★★★★★★☆
+1. Mistral이 운영팀이 가격 변경·콘텐츠 상태·출처를 조회하는 노코드 앱을 만든다.
+2. Dify + Flowise + Make 조합이 Dify와 Flowise가 지식베이스·프롬프트·워크플로를 역할별로 연결한다.
+3. Make는 승인된 작업만 CMS·태스크·알림 시스템으로 전달한다.
+오픈소스(무료) + API 종량제 / 오픈소스(무료) / 프리미엄(무료+유료 구독)
+222
+Mistral + CrewAI + AutoGen + Notion AI
+리서치에서 발행까지의 역할 분담
+★★★★★★★★☆☆
+1. Mistral이 리서처·검수자·SEO 편집자·배포 담당자의 산출물 형식을 분리한다.
+2. CrewAI + AutoGen + Notion AI 조합이 CrewAI와 AutoGen이 역할 간 전달물에 출처·기준일·신뢰도를 포함한다.
+3. Notion AI가 편집 캘린더·담당자·수정 이력을 유지한다.
+오픈소스(무료) + API 종량제 / 오픈소스(무료) / 애드온(월 구독)
+223
+Mistral + Higgsfield + ElevenLabs + Descript
+릴스·틱톡 가격 비교 숏폼
+★★★★★★★★★★
+1. Mistral이 비교 포인트를 훅·장면·CTA가 있는 15초 대본으로 압축한다.
+2. Higgsfield + ElevenLabs + Descript 조합이 Higgsfield가 모션 영상, ElevenLabs가 내레이션, Descript가 자막과 편집을 맡는다.
+3. 완주율·클릭률·랜딩 진입률을 영상 버전과 연결해 다음 훅을 선정한다.
+오픈소스(무료) + API 종량제 / 프리미엄(무료+유료 구독)
+224
+Mistral + Runway + ElevenLabs + Canva Magic Edit
+SaaS 기능 비교와 유튜브 설명 영상
+★★★★★★★★★☆
+1. Mistral이 대본을 제품 화면·B-roll·그래픽·내레이션으로 분해한다.
+2. Runway + ElevenLabs + Canva Magic Edit 조합이 Runway 영상과 Canva 카드, ElevenLabs 음성을 한 타임라인으로 조립한다.
+3. 영상 설명란에 가격 기준일과 공식 링크를 넣고 업데이트 작업을 예약한다.
+오픈소스(무료) + API 종량제 / 프리미엄(무료+유료 구독)
+225
+Mistral + HeyGen + ElevenLabs + Canva Magic Edit
+국가별 가격 안내와 리드 유입
+★★★★★★★★☆☆
+1. Mistral이 현지화된 대본을 아바타·음성·자막으로 변환해 언어별 영상을 만든다.
+2. HeyGen + ElevenLabs + Canva Magic Edit 조합이 Canva가 동일 캠페인의 배너·캐러셀·랜딩 그래픽을 파생한다.
+3. 언어·국가·URL별 성과를 비교하고 초상·음성 사용 동의를 관리한다.
+오픈소스(무료) + API 종량제 / 프리미엄(무료+유료 구독)
+226
+Mistral + Synthesia + OpenAI TTS + Gamma
+B2B 온보딩과 플랜 설명
+★★★★★★★★☆☆
+1. Mistral이 역할별 학습 경로와 플랜별 한계를 교육 시나리오로 만든다.
+2. Synthesia + OpenAI TTS + Gamma 조합이 Synthesia 영상, TTS 음성, Gamma 슬라이드를 같은 데이터 원본에 연결한다.
+3. 도움말 클릭·시청 완료·지원 문의를 분석해 설명이 약한 항목을 보강한다.
+오픈소스(무료) + API 종량제 / 프리미엄(무료+유료 구독)
+227
+Mistral + Midjourney + Canva Magic Edit + Recraft
+블로그·SNS 비교 카드
+★★★★★★★★★☆
+1. Mistral이 검색 의도와 브랜드 톤을 시각 프롬프트·카피·아이콘 체계로 바꾼다.
+2. Midjourney + Canva Magic Edit + Recraft 조합이 Midjourney가 무드 이미지를 만들고 Recraft·Canva가 카드와 템플릿을 완성한다.
+3. 가격 사실은 이미지에만 넣지 않고 접근 가능한 표와 공식 링크로 함께 제공한다.
+오픈소스(무료) + API 종량제 / 유료 구독제 / 프리미엄(무료+유료 구독)
+228
+Mistral + Adobe Firefly + Ideogram + Canva Magic Edit
+배너·썸네일·검색 광고 변형
+★★★★★★★★☆☆
+1. Mistral이 브랜드 가이드와 타깃 세그먼트를 기반으로 여러 시각 가설을 만든다.
+2. Adobe Firefly + Ideogram + Canva Magic Edit 조합이 Firefly·Ideogram 결과를 Canva 템플릿의 제목·CTA·규격에 맞춰 변형한다.
+3. A/B 결과와 사용 권리 상태를 크리에이티브 ID에 기록한다.
+오픈소스(무료) + API 종량제 / 프리미엄(무료+유료 구독)
+229
+Mistral + Kling + Luma Dream Machine + Pika
+기능 시연형 짧은 광고
+★★★★★★★★☆☆
+1. Mistral이 한 장면에 하나의 기능·가격 가치 메시지만 담는 모션 브리프를 설계한다.
+2. Kling + Luma Dream Machine + Pika 조합이 Kling·Luma·Pika로 서로 다른 움직임과 스타일을 빠르게 실험한다.
+3. 플랫폼 광고 정책과 저작권 검수를 통과한 자산만 집행한다.
+오픈소스(무료) + API 종량제 / 프리미엄(무료+유료 구독)
+230
+Mistral + Sora + Runway + Adobe Firefly
+브랜드 인지도와 고관여 전환
+★★★★★★★★☆☆
+1. Mistral이 복잡한 요금제 차이를 이해시키는 내러티브·장면·시각 콘셉트를 만든다.
+2. Sora + Runway + Adobe Firefly 조합이 Sora와 Runway 영상에 Firefly 그래픽을 결합해 캠페인 일관성을 높인다.
+3. 실제 UI·가격표와 생성형 비주얼을 명확히 구분한다.
+오픈소스(무료) + API 종량제 / 프리미엄(무료+유료 구독)
+231
+Mistral + Descript + ElevenLabs + Notion AI
+긴 콘텐츠의 블로그·클립 전환
+★★★★★★★★☆☆
+1. Mistral이 녹취에서 구매 질문·반론·FAQ를 분류하고 시간 코드를 보존한다.
+2. Descript + ElevenLabs + Notion AI 조합이 Descript가 편집·클립·자막을 만들고 ElevenLabs가 보완 내레이션을 만든다.
+3. Notion AI에서 발행 우선순위와 검수 상태를 관리한다.
+오픈소스(무료) + API 종량제 / 프리미엄(무료+유료 구독) / 애드온(월 구독)
+232
+Mistral + Suno + Udio + ElevenLabs SFX
+숏폼 배경음과 효과음
+★★★★★★★☆☆☆
+1. Mistral이 캠페인 분위기·길이·채널을 음악 브리프로 구조화한다.
+2. Suno + Udio + ElevenLabs SFX 조합이 Suno·Udio·SFX 도구로 음악과 효과음을 버전별로 생성한다.
+3. 상업 이용 가능 범위·콘텐츠 ID·사용 위치를 기록한다.
+오픈소스(무료) + API 종량제 / 프리미엄(무료+유료 구독)
+233
+Mistral + Zapier + HubSpot + Copy.ai
+동의 기반 리드 육성과 콘텐츠 추천
+★★★★★★★★☆☆
+1. Mistral이 폼 제출과 페이지 행동을 동의 상태에 맞춰 CRM으로 전달한다.
+2. Zapier + HubSpot + Copy.ai 조합이 Copy.ai가 세그먼트별 다음 읽을거리·뉴스레터 카피를 생성한다.
+3. Zapier가 수신 거부·보존 기간·태그 규칙을 흐름에 포함한다.
+오픈소스(무료) + API 종량제 / 프리미엄(무료+유료 구독) / 공식 가격 페이지 확인 필요
+234
+Mistral + Jasper + Writesonic + Surfer SEO
+카테고리 페이지와 비교 글 확장
+★★★★★★★★☆☆
+1. Mistral이 키워드·질문·비교 축을 콘텐츠 브리프로 표준화한다.
+2. Jasper + Writesonic + Surfer SEO 조합이 두 작성 도구가 제목·FAQ·설명을 생성하고 SEO 도구가 구조를 점검한다.
+3. 사실·가격·성능 주장은 공식 출처 검수 후에만 게시한다.
+오픈소스(무료) + API 종량제 / 프리미엄(무료+유료 구독) / 공식 가격 페이지 확인 필요
+235
+Mistral + Perplexity + Exa AI + Apify
+신생 AI 기업 탐색과 카테고리 맵
+★★★★★★★★☆☆
+1. Mistral이 공개 웹의 기업·제품·분야·발행일·출처를 조사한다.
+2. Perplexity + Exa AI + Apify 조합이 Exa와 Apify 결과를 중복 제거하고 Perplexity로 근거를 요약한다.
+3. 개인 이메일·연락처 수집이나 로그인 영역 수집은 범위에서 제외한다.
+오픈소스(무료) + API 종량제 / 프리미엄(무료+유료 구독)
+236
+Mistral + Airbyte + dbt + Great Expectations
+가격 DB 정규화와 품질 테스트
+★★★★★★★★★★
+1. Mistral이 원천 API·공식 페이지 데이터를 분석 저장소로 적재한다.
+2. Airbyte + dbt + Great Expectations 조합이 dbt 변환과 Great Expectations 테스트가 관계·범위·NULL·중복을 검사한다.
+3. 실패 레코드는 출처·오류 유형·영향 페이지와 함께 검수 큐로 보낸다.
+오픈소스(무료) + API 종량제 / 오픈소스 + 클라우드 매니지드 유료 플랜 / 공식 가격 페이지 확인 필요
+237
+Mistral + Apache Kafka + Flink + dbt
+가격 변경 이벤트와 실시간 대시보드
+★★★★★★★★★☆
+1. Mistral이 수집·변경·승인 이벤트를 스트림으로 분리해 기록한다.
+2. Apache Kafka + Flink + dbt 조합이 Flink가 이벤트를 정리하고 dbt가 분석 가능한 가격 이력으로 모델링한다.
+3. 이상 급증·반복 실패·승인 지연을 운영 지표로 감시한다.
+오픈소스(무료) + API 종량제 / 오픈소스 + 클라우드 매니지드 유료 플랜
+238
+Mistral + LiteLLM + OpenRouter + PortKey
+모델별 비용·품질·장애 대응
+★★★★★★★★★☆
+1. Mistral이 작업 난이도와 예상 토큰을 기준으로 저비용·고성능 모델을 라우팅한다.
+2. LiteLLM + OpenRouter + PortKey 조합이 게이트웨이가 키 관리·호출 로그·대체 모델 정책을 일관되게 적용한다.
+3. 샘플 평가·오류율·비용을 비교해 라우팅 규칙을 주기적으로 조정한다.
+오픈소스(무료) + API 종량제 / 오픈소스 + 종량제/구독 혼합
+239
+Mistral + LangSmith + Ragas + DeepEval
+AI 답변과 SEO 초안 검증
+★★★★★★★★★★
+1. Mistral이 질문 세트와 정답 근거를 기준으로 응답 품질을 평가한다.
+2. LangSmith + Ragas + DeepEval 조합이 Ragas·DeepEval이 환각·근거성·일관성을 점수화하고 LangSmith가 추적한다.
+3. 기준 미달 응답은 자동 게시하지 않고 프롬프트·검색·데이터를 수정한다.
+오픈소스(무료) + API 종량제 / 오픈소스 + 클라우드 매니지드 유료 플랜
+240
+Mistral + PostHog + Google Analytics + Mixpanel
+비교 페이지 전환 최적화
+★★★★★★★★☆☆
+1. Mistral이 페이지뷰·비교표 진입·광고 클릭·다음 페이지 이동을 이벤트로 정의한다.
+2. PostHog + Google Analytics + Mixpanel 조합이 분석 도구가 퍼널·세그먼트·실험 결과를 비교한다.
+3. 개인정보 동의와 쿠키 정책 범위 안에서 집계 데이터를 사용한다.
+오픈소스(무료) + API 종량제 / 공식 가격 페이지 확인 필요 / 프리미엄(무료+유료 구독)
+9. Qwen 기반 멀티툴 스택 30개
+뇌 역할: 다국어·개발 최적화. 아래 패턴은 Qwen이 기획·판단·분류·검수·응답을 맡고, 나머지 3~4개 도구가 실행 체인을 완성하는 구조다.
+번호
+멀티툴 조합
+뇌 + 실행 3~4개
+주요 마케팅 활용
+파급력
+데이터 분석 및 알고리즘 연동 방식
+요금 구조
+241
+Qwen + Firecrawl + dbt + n8n
+공식 가격 비교 페이지와 변경 알림
+★★★★★★★★★★
+1. Qwen이 공개 공식 가격 페이지를 수집해 플랜·통화·주기·한도 필드로 추출한다.
+2. Firecrawl + dbt + n8n 조합이 dbt 테스트로 누락·중복·비정상 값을 걸러 이전 값과 비교한다.
+3. n8n은 근거 URL과 차이 요약을 검수자에게 보내고 승인 후에만 게시한다.
+오픈소스(무료) + 알리바바 클라우드 API 종량제 / 프리미엄(무료+유료 구독) / 오픈소스 + 클라우드 매니지드 유료 플랜
+242
+Qwen + Apify + Airbyte + Make
+카테고리별 가격 변동 모니터링
+★★★★★★★★★★
+1. Qwen이 승인된 공개 대상의 스냅샷과 변경 신호를 주기적으로 수집한다.
+2. Apify + Airbyte + Make 조합이 Airbyte가 원천 데이터를 저장소로 적재해 추적 가능한 이력을 만든다.
+3. Make가 임계값을 넘는 변경만 검수 큐와 콘텐츠 갱신 작업으로 연결한다.
+오픈소스(무료) + 알리바바 클라우드 API 종량제 / 프리미엄(무료+유료 구독) / 오픈소스 + 클라우드 매니지드 유료 플랜
+243
+Qwen + Browserbase + Playwright Agent + Cursor
+동적 가격 페이지 파싱과 테스트
+★★★★★★★★★★
+1. Qwen이 브라우저 자동화가 JavaScript 렌더링 후의 공개 가격 정보를 읽는다.
+2. Browserbase + Playwright Agent + Cursor 조합이 Cursor가 사이트별 파서와 회귀 테스트를 작성해 DOM 변화에 대응한다.
+3. 실패율·응답 시간·필드 누락을 대시보드로 보내 수집 품질을 관리한다.
+오픈소스(무료) + 알리바바 클라우드 API 종량제 / 프리미엄(무료+유료 구독)
+244
+Qwen + Exa AI + Jasper + Notion AI
+신규 AI 카테고리 리서치와 검색 콘텐츠
+★★★★★★★★★☆
+1. Qwen이 시장 신호와 출처 링크를 수집해 비교할 질문 단위로 정리한다.
+2. Exa AI + Jasper + Notion AI 조합이 Jasper가 독자 의도에 맞는 초안을 만들고 Notion AI가 편집 캘린더를 운영한다.
+3. 최종 가격 수치와 주장은 원문 공식 URL을 검수한 뒤 발행한다.
+오픈소스(무료) + 알리바바 클라우드 API 종량제 / 프리미엄(무료+유료 구독) / 애드온(월 구독)
+245
+Qwen + Genspark + Gamma + Beautiful.ai
+투자자·파트너용 시장 브리프
+★★★★★★★★☆☆
+1. Qwen이 조사 결과를 제품군·변화·기회·리스크로 구조화한다.
+2. Genspark + Gamma + Beautiful.ai 조합이 Gamma와 Beautiful.ai가 같은 데이터로 발표물과 제안서 시안을 만든다.
+3. 슬라이드의 수치마다 공식 출처와 기준일을 남겨 재검증 가능성을 유지한다.
+오픈소스(무료) + 알리바바 클라우드 API 종량제 / 프리미엄(무료+유료 구독)
+246
+Qwen + v0.dev + Figma AI + Vercel AI Gateway
+가격 비교 랜딩과 광고 레이아웃
+★★★★★★★★★☆
+1. Qwen이 요구사항을 반응형 카드·테이블·FAQ·광고 영역 컴포넌트로 변환한다.
+2. v0.dev + Figma AI + Vercel AI Gateway 조합이 Figma AI 디자인 토큰을 v0 화면에 반영하고 API 게이트웨이를 통일한다.
+3. CLS·모바일 가독성·광고와 편집 콘텐츠의 구분을 배포 전 점검한다.
+오픈소스(무료) + 알리바바 클라우드 API 종량제 / 프리미엄(무료+유료 구독) / 공식 가격 페이지 확인 필요
+247
+Qwen + Lovable + Supabase + Cursor
+가격 검수와 게시 이력 관리
+★★★★★★★★★☆
+1. Qwen이 검수자가 이전값·신규값·근거 URL·승인 상태를 비교하는 화면을 만든다.
+2. Lovable + Supabase + Cursor 조합이 Supabase에 역할·변경 로그·레코드 상태를 저장하고 Cursor로 규칙을 구현한다.
+3. 공개 사이트와 관리자 권한을 분리해 실수로 인한 데이터 변경을 막는다.
+오픈소스(무료) + 알리바바 클라우드 API 종량제 / 프리미엄(무료+유료 구독) / 공식 가격 페이지 확인 필요
+248
+Qwen + Bolt.new + Replit Agent + GitHub Copilot
+카테고리 MVP와 데이터 검증
+★★★★★★★★☆☆
+1. Qwen이 빠른 웹 화면과 API 프로토타입을 만들고 비교 필드를 연결한다.
+2. Bolt.new + Replit Agent + GitHub Copilot 조합이 Replit Agent와 Copilot이 입력 검증·테스트·배포 준비 코드를 보조한다.
+3. 운영 전에는 비밀키·백업·보안·성능을 별도 체크리스트로 검수한다.
+오픈소스(무료) + 알리바바 클라우드 API 종량제 / 프리미엄(무료+유료 구독)
+249
+Qwen + LlamaIndex + LangChain + Cohere Rerank 3
+출처를 제시하는 비교 챗봇
+★★★★★★★★★★
+1. Qwen이 공식 문서와 가격 DB를 버전·URL·수집 시각을 가진 청크로 인덱싱한다.
+2. LlamaIndex + LangChain + Cohere Rerank 3 조합이 LangChain이 검색·도구 호출·답변 생성을 연결하고 Rerank가 근거를 정렬한다.
+3. 근거가 부족한 질문은 답을 추정하지 않고 공식 페이지 링크로 안내한다.
+오픈소스(무료) + 알리바바 클라우드 API 종량제 / 오픈소스 + 클라우드 매니지드 유료 플랜
+250
+Qwen + LangGraph + OpenAI Agents SDK + PydanticAI
+수집·검수·게시 전 승인 자동화
+★★★★★★★★★★
+1. Qwen이 에이전트를 수집·필드 추출·값 비교·승인 요청 역할로 나눈다.
+2. LangGraph + OpenAI Agents SDK + PydanticAI 조합이 상태 그래프가 실패·보류·재검수 경로와 구조화 출력 스키마를 강제한다.
+3. 출처 완결성과 사람 승인이 없으면 게시 도구를 호출하지 않는다.
+오픈소스(무료) + 알리바바 클라우드 API 종량제 / 오픈소스(무료)
+251
+Qwen + Dify + Flowise + Make
+운영팀의 질문 응답과 태스크 자동화
+★★★★★★★★★☆
+1. Qwen이 운영팀이 가격 변경·콘텐츠 상태·출처를 조회하는 노코드 앱을 만든다.
+2. Dify + Flowise + Make 조합이 Dify와 Flowise가 지식베이스·프롬프트·워크플로를 역할별로 연결한다.
+3. Make는 승인된 작업만 CMS·태스크·알림 시스템으로 전달한다.
+오픈소스(무료) + 알리바바 클라우드 API 종량제 / 오픈소스(무료) / 프리미엄(무료+유료 구독)
+252
+Qwen + CrewAI + AutoGen + Notion AI
+리서치에서 발행까지의 역할 분담
+★★★★★★★★☆☆
+1. Qwen이 리서처·검수자·SEO 편집자·배포 담당자의 산출물 형식을 분리한다.
+2. CrewAI + AutoGen + Notion AI 조합이 CrewAI와 AutoGen이 역할 간 전달물에 출처·기준일·신뢰도를 포함한다.
+3. Notion AI가 편집 캘린더·담당자·수정 이력을 유지한다.
+오픈소스(무료) + 알리바바 클라우드 API 종량제 / 오픈소스(무료) / 애드온(월 구독)
+253
+Qwen + Higgsfield + ElevenLabs + Descript
+릴스·틱톡 가격 비교 숏폼
+★★★★★★★★★★
+1. Qwen이 비교 포인트를 훅·장면·CTA가 있는 15초 대본으로 압축한다.
+2. Higgsfield + ElevenLabs + Descript 조합이 Higgsfield가 모션 영상, ElevenLabs가 내레이션, Descript가 자막과 편집을 맡는다.
+3. 완주율·클릭률·랜딩 진입률을 영상 버전과 연결해 다음 훅을 선정한다.
+오픈소스(무료) + 알리바바 클라우드 API 종량제 / 프리미엄(무료+유료 구독)
+254
+Qwen + Runway + ElevenLabs + Canva Magic Edit
+SaaS 기능 비교와 유튜브 설명 영상
+★★★★★★★★★☆
+1. Qwen이 대본을 제품 화면·B-roll·그래픽·내레이션으로 분해한다.
+2. Runway + ElevenLabs + Canva Magic Edit 조합이 Runway 영상과 Canva 카드, ElevenLabs 음성을 한 타임라인으로 조립한다.
+3. 영상 설명란에 가격 기준일과 공식 링크를 넣고 업데이트 작업을 예약한다.
+오픈소스(무료) + 알리바바 클라우드 API 종량제 / 프리미엄(무료+유료 구독)
+255
+Qwen + HeyGen + ElevenLabs + Canva Magic Edit
+국가별 가격 안내와 리드 유입
+★★★★★★★★☆☆
+1. Qwen이 현지화된 대본을 아바타·음성·자막으로 변환해 언어별 영상을 만든다.
+2. HeyGen + ElevenLabs + Canva Magic Edit 조합이 Canva가 동일 캠페인의 배너·캐러셀·랜딩 그래픽을 파생한다.
+3. 언어·국가·URL별 성과를 비교하고 초상·음성 사용 동의를 관리한다.
+오픈소스(무료) + 알리바바 클라우드 API 종량제 / 프리미엄(무료+유료 구독)
+256
+Qwen + Synthesia + OpenAI TTS + Gamma
+B2B 온보딩과 플랜 설명
+★★★★★★★★☆☆
+1. Qwen이 역할별 학습 경로와 플랜별 한계를 교육 시나리오로 만든다.
+2. Synthesia + OpenAI TTS + Gamma 조합이 Synthesia 영상, TTS 음성, Gamma 슬라이드를 같은 데이터 원본에 연결한다.
+3. 도움말 클릭·시청 완료·지원 문의를 분석해 설명이 약한 항목을 보강한다.
+오픈소스(무료) + 알리바바 클라우드 API 종량제 / 프리미엄(무료+유료 구독)
+257
+Qwen + Midjourney + Canva Magic Edit + Recraft
+블로그·SNS 비교 카드
+★★★★★★★★★☆
+1. Qwen이 검색 의도와 브랜드 톤을 시각 프롬프트·카피·아이콘 체계로 바꾼다.
+2. Midjourney + Canva Magic Edit + Recraft 조합이 Midjourney가 무드 이미지를 만들고 Recraft·Canva가 카드와 템플릿을 완성한다.
+3. 가격 사실은 이미지에만 넣지 않고 접근 가능한 표와 공식 링크로 함께 제공한다.
+오픈소스(무료) + 알리바바 클라우드 API 종량제 / 유료 구독제 / 프리미엄(무료+유료 구독)
+258
+Qwen + Adobe Firefly + Ideogram + Canva Magic Edit
+배너·썸네일·검색 광고 변형
+★★★★★★★★☆☆
+1. Qwen이 브랜드 가이드와 타깃 세그먼트를 기반으로 여러 시각 가설을 만든다.
+2. Adobe Firefly + Ideogram + Canva Magic Edit 조합이 Firefly·Ideogram 결과를 Canva 템플릿의 제목·CTA·규격에 맞춰 변형한다.
+3. A/B 결과와 사용 권리 상태를 크리에이티브 ID에 기록한다.
+오픈소스(무료) + 알리바바 클라우드 API 종량제 / 프리미엄(무료+유료 구독)
+259
+Qwen + Kling + Luma Dream Machine + Pika
+기능 시연형 짧은 광고
+★★★★★★★★☆☆
+1. Qwen이 한 장면에 하나의 기능·가격 가치 메시지만 담는 모션 브리프를 설계한다.
+2. Kling + Luma Dream Machine + Pika 조합이 Kling·Luma·Pika로 서로 다른 움직임과 스타일을 빠르게 실험한다.
+3. 플랫폼 광고 정책과 저작권 검수를 통과한 자산만 집행한다.
+오픈소스(무료) + 알리바바 클라우드 API 종량제 / 프리미엄(무료+유료 구독)
+260
+Qwen + Sora + Runway + Adobe Firefly
+브랜드 인지도와 고관여 전환
+★★★★★★★★☆☆
+1. Qwen이 복잡한 요금제 차이를 이해시키는 내러티브·장면·시각 콘셉트를 만든다.
+2. Sora + Runway + Adobe Firefly 조합이 Sora와 Runway 영상에 Firefly 그래픽을 결합해 캠페인 일관성을 높인다.
+3. 실제 UI·가격표와 생성형 비주얼을 명확히 구분한다.
+오픈소스(무료) + 알리바바 클라우드 API 종량제 / 프리미엄(무료+유료 구독)
+261
+Qwen + Descript + ElevenLabs + Notion AI
+긴 콘텐츠의 블로그·클립 전환
+★★★★★★★★☆☆
+1. Qwen이 녹취에서 구매 질문·반론·FAQ를 분류하고 시간 코드를 보존한다.
+2. Descript + ElevenLabs + Notion AI 조합이 Descript가 편집·클립·자막을 만들고 ElevenLabs가 보완 내레이션을 만든다.
+3. Notion AI에서 발행 우선순위와 검수 상태를 관리한다.
+오픈소스(무료) + 알리바바 클라우드 API 종량제 / 프리미엄(무료+유료 구독) / 애드온(월 구독)
+262
+Qwen + Suno + Udio + ElevenLabs SFX
+숏폼 배경음과 효과음
+★★★★★★★☆☆☆
+1. Qwen이 캠페인 분위기·길이·채널을 음악 브리프로 구조화한다.
+2. Suno + Udio + ElevenLabs SFX 조합이 Suno·Udio·SFX 도구로 음악과 효과음을 버전별로 생성한다.
+3. 상업 이용 가능 범위·콘텐츠 ID·사용 위치를 기록한다.
+오픈소스(무료) + 알리바바 클라우드 API 종량제 / 프리미엄(무료+유료 구독)
+263
+Qwen + Zapier + HubSpot + Copy.ai
+동의 기반 리드 육성과 콘텐츠 추천
+★★★★★★★★☆☆
+1. Qwen이 폼 제출과 페이지 행동을 동의 상태에 맞춰 CRM으로 전달한다.
+2. Zapier + HubSpot + Copy.ai 조합이 Copy.ai가 세그먼트별 다음 읽을거리·뉴스레터 카피를 생성한다.
+3. Zapier가 수신 거부·보존 기간·태그 규칙을 흐름에 포함한다.
+오픈소스(무료) + 알리바바 클라우드 API 종량제 / 프리미엄(무료+유료 구독) / 공식 가격 페이지 확인 필요
+264
+Qwen + Jasper + Writesonic + Surfer SEO
+카테고리 페이지와 비교 글 확장
+★★★★★★★★☆☆
+1. Qwen이 키워드·질문·비교 축을 콘텐츠 브리프로 표준화한다.
+2. Jasper + Writesonic + Surfer SEO 조합이 두 작성 도구가 제목·FAQ·설명을 생성하고 SEO 도구가 구조를 점검한다.
+3. 사실·가격·성능 주장은 공식 출처 검수 후에만 게시한다.
+오픈소스(무료) + 알리바바 클라우드 API 종량제 / 프리미엄(무료+유료 구독) / 공식 가격 페이지 확인 필요
+265
+Qwen + Perplexity + Exa AI + Apify
+신생 AI 기업 탐색과 카테고리 맵
+★★★★★★★★☆☆
+1. Qwen이 공개 웹의 기업·제품·분야·발행일·출처를 조사한다.
+2. Perplexity + Exa AI + Apify 조합이 Exa와 Apify 결과를 중복 제거하고 Perplexity로 근거를 요약한다.
+3. 개인 이메일·연락처 수집이나 로그인 영역 수집은 범위에서 제외한다.
+오픈소스(무료) + 알리바바 클라우드 API 종량제 / 프리미엄(무료+유료 구독)
+266
+Qwen + Airbyte + dbt + Great Expectations
+가격 DB 정규화와 품질 테스트
+★★★★★★★★★★
+1. Qwen이 원천 API·공식 페이지 데이터를 분석 저장소로 적재한다.
+2. Airbyte + dbt + Great Expectations 조합이 dbt 변환과 Great Expectations 테스트가 관계·범위·NULL·중복을 검사한다.
+3. 실패 레코드는 출처·오류 유형·영향 페이지와 함께 검수 큐로 보낸다.
+오픈소스(무료) + 알리바바 클라우드 API 종량제 / 오픈소스 + 클라우드 매니지드 유료 플랜 / 공식 가격 페이지 확인 필요
+267
+Qwen + Apache Kafka + Flink + dbt
+가격 변경 이벤트와 실시간 대시보드
+★★★★★★★★★☆
+1. Qwen이 수집·변경·승인 이벤트를 스트림으로 분리해 기록한다.
+2. Apache Kafka + Flink + dbt 조합이 Flink가 이벤트를 정리하고 dbt가 분석 가능한 가격 이력으로 모델링한다.
+3. 이상 급증·반복 실패·승인 지연을 운영 지표로 감시한다.
+오픈소스(무료) + 알리바바 클라우드 API 종량제 / 오픈소스 + 클라우드 매니지드 유료 플랜
+268
+Qwen + LiteLLM + OpenRouter + PortKey
+모델별 비용·품질·장애 대응
+★★★★★★★★★☆
+1. Qwen이 작업 난이도와 예상 토큰을 기준으로 저비용·고성능 모델을 라우팅한다.
+2. LiteLLM + OpenRouter + PortKey 조합이 게이트웨이가 키 관리·호출 로그·대체 모델 정책을 일관되게 적용한다.
+3. 샘플 평가·오류율·비용을 비교해 라우팅 규칙을 주기적으로 조정한다.
+오픈소스(무료) + 알리바바 클라우드 API 종량제 / 오픈소스 + 종량제/구독 혼합
+269
+Qwen + LangSmith + Ragas + DeepEval
+AI 답변과 SEO 초안 검증
+★★★★★★★★★★
+1. Qwen이 질문 세트와 정답 근거를 기준으로 응답 품질을 평가한다.
+2. LangSmith + Ragas + DeepEval 조합이 Ragas·DeepEval이 환각·근거성·일관성을 점수화하고 LangSmith가 추적한다.
+3. 기준 미달 응답은 자동 게시하지 않고 프롬프트·검색·데이터를 수정한다.
+오픈소스(무료) + 알리바바 클라우드 API 종량제 / 오픈소스 + 클라우드 매니지드 유료 플랜
+270
+Qwen + PostHog + Google Analytics + Mixpanel
+비교 페이지 전환 최적화
+★★★★★★★★☆☆
+1. Qwen이 페이지뷰·비교표 진입·광고 클릭·다음 페이지 이동을 이벤트로 정의한다.
+2. PostHog + Google Analytics + Mixpanel 조합이 분석 도구가 퍼널·세그먼트·실험 결과를 비교한다.
+3. 개인정보 동의와 쿠키 정책 범위 안에서 집계 데이터를 사용한다.
+오픈소스(무료) + 알리바바 클라우드 API 종량제 / 공식 가격 페이지 확인 필요 / 프리미엄(무료+유료 구독)
+10. Command R+ 기반 멀티툴 스택 30개
+뇌 역할: 기업 검색·RAG. 아래 패턴은 Command R+이 기획·판단·분류·검수·응답을 맡고, 나머지 3~4개 도구가 실행 체인을 완성하는 구조다.
+번호
+멀티툴 조합
+뇌 + 실행 3~4개
+주요 마케팅 활용
+파급력
+데이터 분석 및 알고리즘 연동 방식
+요금 구조
+271
+Command R+ + Firecrawl + dbt + n8n
+공식 가격 비교 페이지와 변경 알림
+★★★★★★★★★★
+1. Command R+이 공개 공식 가격 페이지를 수집해 플랜·통화·주기·한도 필드로 추출한다.
+2. Firecrawl + dbt + n8n 조합이 dbt 테스트로 누락·중복·비정상 값을 걸러 이전 값과 비교한다.
+3. n8n은 근거 URL과 차이 요약을 검수자에게 보내고 승인 후에만 게시한다.
+모델별 상이(오픈웨이트 또는 API 종량제) / 프리미엄(무료+유료 구독) / 오픈소스 + 클라우드 매니지드 유료 플랜
+272
+Command R+ + Apify + Airbyte + Make
+카테고리별 가격 변동 모니터링
+★★★★★★★★★★
+1. Command R+이 승인된 공개 대상의 스냅샷과 변경 신호를 주기적으로 수집한다.
+2. Apify + Airbyte + Make 조합이 Airbyte가 원천 데이터를 저장소로 적재해 추적 가능한 이력을 만든다.
+3. Make가 임계값을 넘는 변경만 검수 큐와 콘텐츠 갱신 작업으로 연결한다.
+모델별 상이(오픈웨이트 또는 API 종량제) / 프리미엄(무료+유료 구독) / 오픈소스 + 클라우드 매니지드 유료 플랜
+273
+Command R+ + Browserbase + Playwright Agent + Cursor
+동적 가격 페이지 파싱과 테스트
+★★★★★★★★★★
+1. Command R+이 브라우저 자동화가 JavaScript 렌더링 후의 공개 가격 정보를 읽는다.
+2. Browserbase + Playwright Agent + Cursor 조합이 Cursor가 사이트별 파서와 회귀 테스트를 작성해 DOM 변화에 대응한다.
+3. 실패율·응답 시간·필드 누락을 대시보드로 보내 수집 품질을 관리한다.
+모델별 상이(오픈웨이트 또는 API 종량제) / 프리미엄(무료+유료 구독)
+274
+Command R+ + Exa AI + Jasper + Notion AI
+신규 AI 카테고리 리서치와 검색 콘텐츠
+★★★★★★★★★☆
+1. Command R+이 시장 신호와 출처 링크를 수집해 비교할 질문 단위로 정리한다.
+2. Exa AI + Jasper + Notion AI 조합이 Jasper가 독자 의도에 맞는 초안을 만들고 Notion AI가 편집 캘린더를 운영한다.
+3. 최종 가격 수치와 주장은 원문 공식 URL을 검수한 뒤 발행한다.
+모델별 상이(오픈웨이트 또는 API 종량제) / 프리미엄(무료+유료 구독) / 애드온(월 구독)
+275
+Command R+ + Genspark + Gamma + Beautiful.ai
+투자자·파트너용 시장 브리프
+★★★★★★★★☆☆
+1. Command R+이 조사 결과를 제품군·변화·기회·리스크로 구조화한다.
+2. Genspark + Gamma + Beautiful.ai 조합이 Gamma와 Beautiful.ai가 같은 데이터로 발표물과 제안서 시안을 만든다.
+3. 슬라이드의 수치마다 공식 출처와 기준일을 남겨 재검증 가능성을 유지한다.
+모델별 상이(오픈웨이트 또는 API 종량제) / 프리미엄(무료+유료 구독)
+276
+Command R+ + v0.dev + Figma AI + Vercel AI Gateway
+가격 비교 랜딩과 광고 레이아웃
+★★★★★★★★★☆
+1. Command R+이 요구사항을 반응형 카드·테이블·FAQ·광고 영역 컴포넌트로 변환한다.
+2. v0.dev + Figma AI + Vercel AI Gateway 조합이 Figma AI 디자인 토큰을 v0 화면에 반영하고 API 게이트웨이를 통일한다.
+3. CLS·모바일 가독성·광고와 편집 콘텐츠의 구분을 배포 전 점검한다.
+모델별 상이(오픈웨이트 또는 API 종량제) / 프리미엄(무료+유료 구독) / 공식 가격 페이지 확인 필요
+277
+Command R+ + Lovable + Supabase + Cursor
+가격 검수와 게시 이력 관리
+★★★★★★★★★☆
+1. Command R+이 검수자가 이전값·신규값·근거 URL·승인 상태를 비교하는 화면을 만든다.
+2. Lovable + Supabase + Cursor 조합이 Supabase에 역할·변경 로그·레코드 상태를 저장하고 Cursor로 규칙을 구현한다.
+3. 공개 사이트와 관리자 권한을 분리해 실수로 인한 데이터 변경을 막는다.
+모델별 상이(오픈웨이트 또는 API 종량제) / 프리미엄(무료+유료 구독) / 공식 가격 페이지 확인 필요
+278
+Command R+ + Bolt.new + Replit Agent + GitHub Copilot
+카테고리 MVP와 데이터 검증
+★★★★★★★★☆☆
+1. Command R+이 빠른 웹 화면과 API 프로토타입을 만들고 비교 필드를 연결한다.
+2. Bolt.new + Replit Agent + GitHub Copilot 조합이 Replit Agent와 Copilot이 입력 검증·테스트·배포 준비 코드를 보조한다.
+3. 운영 전에는 비밀키·백업·보안·성능을 별도 체크리스트로 검수한다.
+모델별 상이(오픈웨이트 또는 API 종량제) / 프리미엄(무료+유료 구독)
+279
+Command R+ + LlamaIndex + LangChain + Cohere Rerank 3
+출처를 제시하는 비교 챗봇
+★★★★★★★★★★
+1. Command R+이 공식 문서와 가격 DB를 버전·URL·수집 시각을 가진 청크로 인덱싱한다.
+2. LlamaIndex + LangChain + Cohere Rerank 3 조합이 LangChain이 검색·도구 호출·답변 생성을 연결하고 Rerank가 근거를 정렬한다.
+3. 근거가 부족한 질문은 답을 추정하지 않고 공식 페이지 링크로 안내한다.
+모델별 상이(오픈웨이트 또는 API 종량제) / 오픈소스 + 클라우드 매니지드 유료 플랜
+280
+Command R+ + LangGraph + OpenAI Agents SDK + PydanticAI
+수집·검수·게시 전 승인 자동화
+★★★★★★★★★★
+1. Command R+이 에이전트를 수집·필드 추출·값 비교·승인 요청 역할로 나눈다.
+2. LangGraph + OpenAI Agents SDK + PydanticAI 조합이 상태 그래프가 실패·보류·재검수 경로와 구조화 출력 스키마를 강제한다.
+3. 출처 완결성과 사람 승인이 없으면 게시 도구를 호출하지 않는다.
+모델별 상이(오픈웨이트 또는 API 종량제) / 오픈소스(무료)
+281
+Command R+ + Dify + Flowise + Make
+운영팀의 질문 응답과 태스크 자동화
+★★★★★★★★★☆
+1. Command R+이 운영팀이 가격 변경·콘텐츠 상태·출처를 조회하는 노코드 앱을 만든다.
+2. Dify + Flowise + Make 조합이 Dify와 Flowise가 지식베이스·프롬프트·워크플로를 역할별로 연결한다.
+3. Make는 승인된 작업만 CMS·태스크·알림 시스템으로 전달한다.
+모델별 상이(오픈웨이트 또는 API 종량제) / 오픈소스(무료) / 프리미엄(무료+유료 구독)
+282
+Command R+ + CrewAI + AutoGen + Notion AI
+리서치에서 발행까지의 역할 분담
+★★★★★★★★☆☆
+1. Command R+이 리서처·검수자·SEO 편집자·배포 담당자의 산출물 형식을 분리한다.
+2. CrewAI + AutoGen + Notion AI 조합이 CrewAI와 AutoGen이 역할 간 전달물에 출처·기준일·신뢰도를 포함한다.
+3. Notion AI가 편집 캘린더·담당자·수정 이력을 유지한다.
+모델별 상이(오픈웨이트 또는 API 종량제) / 오픈소스(무료) / 애드온(월 구독)
+283
+Command R+ + Higgsfield + ElevenLabs + Descript
+릴스·틱톡 가격 비교 숏폼
+★★★★★★★★★★
+1. Command R+이 비교 포인트를 훅·장면·CTA가 있는 15초 대본으로 압축한다.
+2. Higgsfield + ElevenLabs + Descript 조합이 Higgsfield가 모션 영상, ElevenLabs가 내레이션, Descript가 자막과 편집을 맡는다.
+3. 완주율·클릭률·랜딩 진입률을 영상 버전과 연결해 다음 훅을 선정한다.
+모델별 상이(오픈웨이트 또는 API 종량제) / 프리미엄(무료+유료 구독)
+284
+Command R+ + Runway + ElevenLabs + Canva Magic Edit
+SaaS 기능 비교와 유튜브 설명 영상
+★★★★★★★★★☆
+1. Command R+이 대본을 제품 화면·B-roll·그래픽·내레이션으로 분해한다.
+2. Runway + ElevenLabs + Canva Magic Edit 조합이 Runway 영상과 Canva 카드, ElevenLabs 음성을 한 타임라인으로 조립한다.
+3. 영상 설명란에 가격 기준일과 공식 링크를 넣고 업데이트 작업을 예약한다.
+모델별 상이(오픈웨이트 또는 API 종량제) / 프리미엄(무료+유료 구독)
+285
+Command R+ + HeyGen + ElevenLabs + Canva Magic Edit
+국가별 가격 안내와 리드 유입
+★★★★★★★★☆☆
+1. Command R+이 현지화된 대본을 아바타·음성·자막으로 변환해 언어별 영상을 만든다.
+2. HeyGen + ElevenLabs + Canva Magic Edit 조합이 Canva가 동일 캠페인의 배너·캐러셀·랜딩 그래픽을 파생한다.
+3. 언어·국가·URL별 성과를 비교하고 초상·음성 사용 동의를 관리한다.
+모델별 상이(오픈웨이트 또는 API 종량제) / 프리미엄(무료+유료 구독)
+286
+Command R+ + Synthesia + OpenAI TTS + Gamma
+B2B 온보딩과 플랜 설명
+★★★★★★★★☆☆
+1. Command R+이 역할별 학습 경로와 플랜별 한계를 교육 시나리오로 만든다.
+2. Synthesia + OpenAI TTS + Gamma 조합이 Synthesia 영상, TTS 음성, Gamma 슬라이드를 같은 데이터 원본에 연결한다.
+3. 도움말 클릭·시청 완료·지원 문의를 분석해 설명이 약한 항목을 보강한다.
+모델별 상이(오픈웨이트 또는 API 종량제) / 프리미엄(무료+유료 구독)
+287
+Command R+ + Midjourney + Canva Magic Edit + Recraft
+블로그·SNS 비교 카드
+★★★★★★★★★☆
+1. Command R+이 검색 의도와 브랜드 톤을 시각 프롬프트·카피·아이콘 체계로 바꾼다.
+2. Midjourney + Canva Magic Edit + Recraft 조합이 Midjourney가 무드 이미지를 만들고 Recraft·Canva가 카드와 템플릿을 완성한다.
+3. 가격 사실은 이미지에만 넣지 않고 접근 가능한 표와 공식 링크로 함께 제공한다.
+모델별 상이(오픈웨이트 또는 API 종량제) / 유료 구독제 / 프리미엄(무료+유료 구독)
+288
+Command R+ + Adobe Firefly + Ideogram + Canva Magic Edit
+배너·썸네일·검색 광고 변형
+★★★★★★★★☆☆
+1. Command R+이 브랜드 가이드와 타깃 세그먼트를 기반으로 여러 시각 가설을 만든다.
+2. Adobe Firefly + Ideogram + Canva Magic Edit 조합이 Firefly·Ideogram 결과를 Canva 템플릿의 제목·CTA·규격에 맞춰 변형한다.
+3. A/B 결과와 사용 권리 상태를 크리에이티브 ID에 기록한다.
+모델별 상이(오픈웨이트 또는 API 종량제) / 프리미엄(무료+유료 구독)
+289
+Command R+ + Kling + Luma Dream Machine + Pika
+기능 시연형 짧은 광고
+★★★★★★★★☆☆
+1. Command R+이 한 장면에 하나의 기능·가격 가치 메시지만 담는 모션 브리프를 설계한다.
+2. Kling + Luma Dream Machine + Pika 조합이 Kling·Luma·Pika로 서로 다른 움직임과 스타일을 빠르게 실험한다.
+3. 플랫폼 광고 정책과 저작권 검수를 통과한 자산만 집행한다.
+모델별 상이(오픈웨이트 또는 API 종량제) / 프리미엄(무료+유료 구독)
+290
+Command R+ + Sora + Runway + Adobe Firefly
+브랜드 인지도와 고관여 전환
+★★★★★★★★☆☆
+1. Command R+이 복잡한 요금제 차이를 이해시키는 내러티브·장면·시각 콘셉트를 만든다.
+2. Sora + Runway + Adobe Firefly 조합이 Sora와 Runway 영상에 Firefly 그래픽을 결합해 캠페인 일관성을 높인다.
+3. 실제 UI·가격표와 생성형 비주얼을 명확히 구분한다.
+모델별 상이(오픈웨이트 또는 API 종량제) / 프리미엄(무료+유료 구독)
+291
+Command R+ + Descript + ElevenLabs + Notion AI
+긴 콘텐츠의 블로그·클립 전환
+★★★★★★★★☆☆
+1. Command R+이 녹취에서 구매 질문·반론·FAQ를 분류하고 시간 코드를 보존한다.
+2. Descript + ElevenLabs + Notion AI 조합이 Descript가 편집·클립·자막을 만들고 ElevenLabs가 보완 내레이션을 만든다.
+3. Notion AI에서 발행 우선순위와 검수 상태를 관리한다.
+모델별 상이(오픈웨이트 또는 API 종량제) / 프리미엄(무료+유료 구독) / 애드온(월 구독)
+292
+Command R+ + Suno + Udio + ElevenLabs SFX
+숏폼 배경음과 효과음
+★★★★★★★☆☆☆
+1. Command R+이 캠페인 분위기·길이·채널을 음악 브리프로 구조화한다.
+2. Suno + Udio + ElevenLabs SFX 조합이 Suno·Udio·SFX 도구로 음악과 효과음을 버전별로 생성한다.
+3. 상업 이용 가능 범위·콘텐츠 ID·사용 위치를 기록한다.
+모델별 상이(오픈웨이트 또는 API 종량제) / 프리미엄(무료+유료 구독)
+293
+Command R+ + Zapier + HubSpot + Copy.ai
+동의 기반 리드 육성과 콘텐츠 추천
+★★★★★★★★☆☆
+1. Command R+이 폼 제출과 페이지 행동을 동의 상태에 맞춰 CRM으로 전달한다.
+2. Zapier + HubSpot + Copy.ai 조합이 Copy.ai가 세그먼트별 다음 읽을거리·뉴스레터 카피를 생성한다.
+3. Zapier가 수신 거부·보존 기간·태그 규칙을 흐름에 포함한다.
+모델별 상이(오픈웨이트 또는 API 종량제) / 프리미엄(무료+유료 구독) / 공식 가격 페이지 확인 필요
+294
+Command R+ + Jasper + Writesonic + Surfer SEO
+카테고리 페이지와 비교 글 확장
+★★★★★★★★☆☆
+1. Command R+이 키워드·질문·비교 축을 콘텐츠 브리프로 표준화한다.
+2. Jasper + Writesonic + Surfer SEO 조합이 두 작성 도구가 제목·FAQ·설명을 생성하고 SEO 도구가 구조를 점검한다.
+3. 사실·가격·성능 주장은 공식 출처 검수 후에만 게시한다.
+모델별 상이(오픈웨이트 또는 API 종량제) / 프리미엄(무료+유료 구독) / 공식 가격 페이지 확인 필요
+295
+Command R+ + Perplexity + Exa AI + Apify
+신생 AI 기업 탐색과 카테고리 맵
+★★★★★★★★☆☆
+1. Command R+이 공개 웹의 기업·제품·분야·발행일·출처를 조사한다.
+2. Perplexity + Exa AI + Apify 조합이 Exa와 Apify 결과를 중복 제거하고 Perplexity로 근거를 요약한다.
+3. 개인 이메일·연락처 수집이나 로그인 영역 수집은 범위에서 제외한다.
+모델별 상이(오픈웨이트 또는 API 종량제) / 프리미엄(무료+유료 구독)
+296
+Command R+ + Airbyte + dbt + Great Expectations
+가격 DB 정규화와 품질 테스트
+★★★★★★★★★★
+1. Command R+이 원천 API·공식 페이지 데이터를 분석 저장소로 적재한다.
+2. Airbyte + dbt + Great Expectations 조합이 dbt 변환과 Great Expectations 테스트가 관계·범위·NULL·중복을 검사한다.
+3. 실패 레코드는 출처·오류 유형·영향 페이지와 함께 검수 큐로 보낸다.
+모델별 상이(오픈웨이트 또는 API 종량제) / 오픈소스 + 클라우드 매니지드 유료 플랜 / 공식 가격 페이지 확인 필요
+297
+Command R+ + Apache Kafka + Flink + dbt
+가격 변경 이벤트와 실시간 대시보드
+★★★★★★★★★☆
+1. Command R+이 수집·변경·승인 이벤트를 스트림으로 분리해 기록한다.
+2. Apache Kafka + Flink + dbt 조합이 Flink가 이벤트를 정리하고 dbt가 분석 가능한 가격 이력으로 모델링한다.
+3. 이상 급증·반복 실패·승인 지연을 운영 지표로 감시한다.
+모델별 상이(오픈웨이트 또는 API 종량제) / 오픈소스 + 클라우드 매니지드 유료 플랜
+298
+Command R+ + LiteLLM + OpenRouter + PortKey
+모델별 비용·품질·장애 대응
+★★★★★★★★★☆
+1. Command R+이 작업 난이도와 예상 토큰을 기준으로 저비용·고성능 모델을 라우팅한다.
+2. LiteLLM + OpenRouter + PortKey 조합이 게이트웨이가 키 관리·호출 로그·대체 모델 정책을 일관되게 적용한다.
+3. 샘플 평가·오류율·비용을 비교해 라우팅 규칙을 주기적으로 조정한다.
+모델별 상이(오픈웨이트 또는 API 종량제) / 오픈소스 + 종량제/구독 혼합
+299
+Command R+ + LangSmith + Ragas + DeepEval
+AI 답변과 SEO 초안 검증
+★★★★★★★★★★
+1. Command R+이 질문 세트와 정답 근거를 기준으로 응답 품질을 평가한다.
+2. LangSmith + Ragas + DeepEval 조합이 Ragas·DeepEval이 환각·근거성·일관성을 점수화하고 LangSmith가 추적한다.
+3. 기준 미달 응답은 자동 게시하지 않고 프롬프트·검색·데이터를 수정한다.
+모델별 상이(오픈웨이트 또는 API 종량제) / 오픈소스 + 클라우드 매니지드 유료 플랜
+300
+Command R+ + PostHog + Google Analytics + Mixpanel
+비교 페이지 전환 최적화
+★★★★★★★★☆☆
+1. Command R+이 페이지뷰·비교표 진입·광고 클릭·다음 페이지 이동을 이벤트로 정의한다.
+2. PostHog + Google Analytics + Mixpanel 조합이 분석 도구가 퍼널·세그먼트·실험 결과를 비교한다.
+3. 개인정보 동의와 쿠키 정책 범위 안에서 집계 데이터를 사용한다.
+모델별 상이(오픈웨이트 또는 API 종량제) / 공식 가격 페이지 확인 필요 / 프리미엄(무료+유료 구독)
+플랫폼 구현 우선순위
+1단계 신뢰 데이터
+가격 데이터 신뢰 파이프라인, 공개 웹 모니터링, 데이터웨어하우스 품질 관리, 콘텐츠 품질 평가를 먼저 구현한다. 이 단계가 없으면 생성 콘텐츠가 늘어도 플랫폼의 신뢰가 쌓이지 않는다.
+2단계 검색과 웹 경험
+비교 플랫폼 프론트엔드, RAG 가격 Q&amp;A, 시장 조사에서 SEO 발행을 붙인다. 콘텐츠와 챗봇은 항상 공식 URL·기준일·출처 상태를 반환해야 한다.
+3단계 확장과 수익화
+숏폼·설명 영상·다국어 아바타·이미지 캐러셀 스택을 성과가 검증된 카테고리에만 확장한다. 광고 수익은 정보성 콘텐츠와 광고 슬롯을 명확히 구분한 페이지에서 측정한다.
+4단계 자동화와 비용
+LLM 비용 라우팅, 상태형 갱신 에이전트, CRM 개인화 여정을 운영 데이터에 연결한다. 자동 발행은 금지하고 사람 승인과 감사 로그를 유지한다.
+기준 데이터와 제한
+기준 파일: AI_Landscape_731개_상세정보포함_1.xlsx. 731개 도구와 30개 대분류를 참조했다. 이 문서는 그중 수집·데이터·개발·자동화·생성 콘텐츠·에이전트에서 많이 쓰이는 도구를 다중 스택으로 재구성했다. 일부 보조 도구는 기준 파일의 특정 행 이름과 가격정책이 일치하지 않을 수 있으므로, 해당 행에는 공식 가격 페이지 확인 필요로 표시했다. 개인정보 수집, 로그인 영역 자동화, 약관 또는 robots 정책 위반 크롤링은 권장하지 않는다.

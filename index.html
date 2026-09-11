@@ -46,6 +46,13 @@
   .tag{display:inline-flex;align-items:center;justify-content:center;padding:1px 6px;border-radius:999px;
     font-size:9px;font-weight:800;background:rgba(240,180,41,.22);color:var(--amber)}
 
+  #tipBar{flex:none;display:flex;align-items:center;justify-content:center;gap:10px;padding:6px 14px;
+    background:rgba(255,90,90,.08);border-bottom:1px solid rgba(255,90,90,.25);
+    color:#ff8a8a;font-size:11.5px;font-weight:600;text-align:center;line-height:1.5}
+  #tipBar button{background:none;border:0;color:#ff8a8a;font-size:16px;cursor:pointer;line-height:1;padding:0 2px;flex:none}
+  body.tip-dismissed #tipBar{display:none}
+  body.sleep-mode #tipBar{display:none}
+
   /* ---- body / 3 zones ---- */
   #body{flex:1;display:flex;min-height:0}
 
@@ -85,10 +92,12 @@
   .checks label{display:flex;align-items:center;gap:8px;font-size:12.5px;color:#d4d4e2;cursor:pointer}
   .checks input{accent-color:var(--purple2);width:15px;height:15px}
 
-  .s-foot{margin-top:auto;display:flex;flex-direction:column;gap:9px}
+  .s-foot,.s-actions{display:flex;flex-direction:column;gap:9px}
   .note{font-size:10px;color:var(--faint);line-height:1.55;border:1px dashed rgba(255,255,255,.14);
     border-radius:8px;padding:8px}
-  .s-foot .lnk{display:flex;align-items:center;gap:6px;font-size:12px;color:#8a8aa0;background:none;border:0;cursor:pointer;padding:0}
+  .s-foot .lnk,.s-actions .lnk{display:flex;align-items:center;gap:6px;font-size:12px;color:#8a8aa0;background:none;border:0;cursor:pointer;padding:0}
+  .s-actions .lnk{font-size:12.5px;font-weight:700;color:#cabdff}
+  .s-actions .lnk:hover{color:#fff}
 
   /* ---- center stage ---- */
   #stage{flex:1;position:relative;min-width:0}
@@ -158,6 +167,15 @@
   .chip{padding:5px 10px;border-radius:12px;font-size:11.5px;border:1px solid rgba(255,255,255,.18);
     color:#cfcfe0;background:rgba(255,255,255,.05);cursor:pointer}
   .chip:hover{border-color:var(--purple);color:#fff}
+
+  .combo-list{display:flex;flex-direction:column;gap:8px}
+  .combo-card{border:1px solid rgba(240,180,41,.28);background:rgba(240,180,41,.06);border-radius:11px;padding:10px 12px}
+  .combo-title{font-weight:800;font-size:13px;color:#fff3d8;display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+  .combo-stars{color:var(--amber);font-size:11px;letter-spacing:1px}
+  .combo-use{font-size:12.5px;color:#d6d6e4;margin:5px 0 6px;line-height:1.5}
+  .combo-price{font-size:11px;color:var(--dim);line-height:1.5}
+  .combo-free-badge{font-size:9px;font-weight:800;padding:2px 7px;border-radius:999px;background:rgba(143,214,196,.18);color:var(--teal)}
+  #comboDlg .combo-list{max-height:60vh;overflow:auto;padding-right:4px}
 
   .rv-form{display:flex;flex-direction:column;gap:8px;background:rgba(20,20,32,.5);border:1px solid var(--line);
     border-radius:11px;padding:12px}
@@ -239,6 +257,11 @@
     </div>
   </header>
 
+  <div id="tipBar" role="note">
+    <span id="lblTipBar">이 지도는 3D 입체 공간이에요 — 확대해도 커지지 않는 별이 있다면, 화면을 드래그해서 전체를 돌려보세요. 원하는 별이 가까이 오면서 훨씬 크게 보여요.</span>
+    <button id="tipBarClose" aria-label="닫기">×</button>
+  </div>
+
   <div id="body">
     <aside id="sidebar" aria-label="필터">
       <div class="field">
@@ -252,6 +275,7 @@
           background:rgba(20,20,32,.7);color:var(--ink);font:inherit;font-size:12.5px">
           <option id="optNet" value="network">네트워크형 (기본)</option>
           <option id="optBoard" value="board">보드형 (카테고리별 정리)</option>
+          <option id="optEarth" value="earth">지구형 (지구 모양으로 배치)</option>
         </select>
       </div>
 
@@ -265,18 +289,23 @@
         </div>
       </div>
 
-      <div>
-        <div class="s-head"><span id="lblCategories">카테고리</span><span class="count-pill" id="catCount">–</span></div>
-        <div id="catTree" style="margin-top:8px"></div>
-      </div>
-
-      <div class="s-foot">
-        <div class="note" id="seoNote">전체 텍스트 목록은 화면에서 감추고 페이지 하단 DOM에 유지 → 검색·스크린리더 노출은 그대로.</div>
+      <div class="s-actions">
+        <button class="lnk" id="comboOpen">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l2.4 7.2H22l-6 4.4 2.3 7.2-6.3-4.5-6.3 4.5 2.3-7.2-6-4.4h7.6z"/></svg>
+          <span id="lblComboOpen">⭐ 추천 AI 조합 TOP</span>
+        </button>
         <button class="lnk" id="suggestOpen">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 5v14M5 12h14"/></svg>
           <span id="lblSuggestLink">빠진 AI 추천하기</span>
         </button>
       </div>
+
+      <div>
+        <div class="s-head"><span id="lblCategories">카테고리</span><span class="count-pill" id="catCount">–</span></div>
+        <div id="catTree" style="margin-top:8px"></div>
+      </div>
+
+      <div class="note" id="seoNote">전체 텍스트 목록은 화면에서 감추고 페이지 하단 DOM에 유지 → 검색·스크린리더 노출은 그대로.</div>
     </aside>
 
     <main id="stage">
@@ -284,11 +313,11 @@
       <div id="hud"><span class="spin"></span><span id="loadingLabel">은하계를 불러오는 중…</span></div>
       <div id="zoom">
         <button id="sleepBtn" aria-label="수면 모드 — 화면 가득 은하수처럼 천천히 돌며 잠들기 좋은 소리 재생" title="수면 모드">🌙</button>
-        <button id="soundBtn" aria-label="배경음 켜기/끄기" aria-pressed="false">🔇</button>
-        <button id="zIn" aria-label="확대">+</button>
-        <button id="zOut" aria-label="축소">−</button>
-        <button id="zReset" aria-label="전체 별 한눈에 보기"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/></svg></button>
-        <button id="zFit" aria-label="전체화면"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+        <button id="soundBtn" aria-label="배경음 켜기/끄기" aria-pressed="false" title="배경음 켜기/끄기">🔇</button>
+        <button id="zIn" aria-label="확대" title="확대">+</button>
+        <button id="zOut" aria-label="축소" title="축소">−</button>
+        <button id="zReset" aria-label="전체 별 한눈에 보기" title="전체 별 한눈에 보기"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/></svg></button>
+        <button id="zFit" aria-label="전체화면" title="전체화면"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
       </div>
       <div id="legend">
         <span><span class="lg-line"></span><span id="lblLegendComplement">보완재 (함께 사용)</span></span>
@@ -319,6 +348,14 @@
       <button type="submit" class="go" id="suggestSubmitBtn">제보하기</button>
     </div>
   </form>
+</dialog>
+
+<dialog id="comboDlg">
+  <div class="dlg-in" style="max-width:520px">
+    <h3 id="lblComboDlgTitle">⭐ 이 AI들을 함께 쓰면 이런 결과가 나와요</h3>
+    <div class="combo-list" id="comboDlgList"></div>
+    <div class="dlg-act"><button type="button" class="ghost" id="comboClose">닫기</button></div>
+  </div>
 </dialog>
 
 <div class="overlay" id="setup" hidden>
@@ -385,7 +422,7 @@ let lang = localStorage.getItem("galaxyLang") || "ko";
 const I18N = {
   ko: {
     subtitle: "전세계 AI 관계형 지도", searchPh: "AI 이름 검색…",
-    mapView: "지도 형태", netMode: "네트워크형 (기본)", boardMode: "보드형 (카테고리별 정리)",
+    mapView: "지도 형태", netMode: "네트워크형 (기본)", boardMode: "보드형 (카테고리별 정리)", earthMode: "지구형 (지구 모양으로 배치)",
     pricing: "요금제", free: "무료", freemium: "부분유료", paid: "유료", unspecified: "미지정",
     categories: "카테고리",
     seoNote: n => `전체 텍스트 목록(${n}개)은 화면에서 감추고 페이지 하단 DOM에 유지 → 검색·스크린리더 노출은 그대로.`,
@@ -405,10 +442,16 @@ const I18N = {
     confVerified: "✓ 공식 확인", confEstimated: "⚠ AI 추정",
     confEstimatedHint: "AI가 일반 지식을 바탕으로 추정한 정보입니다. 정확한 가격은 공식 사이트에서 확인하세요.",
     langBtnLabel: "EN",
+    ttSound: "배경음 켜기/끄기", ttZoomIn: "확대", ttZoomOut: "축소",
+    ttZoomFit: "전체 별 한눈에 보기", ttFullscreen: "전체화면",
+    comboOpenLabel: "⭐ 추천 AI 조합 TOP", comboDlgTitle: "⭐ 이 AI들을 함께 쓰면 이런 결과가 나와요",
+    comboSecTitle: "⭐ 이 AI와 함께 쓰면 좋은 조합", comboFree: "무료로 시작 가능", comboNone: "아직 등록된 조합이 없어요.",
+    tipBar: "이 지도는 3D 입체 공간이에요 — 확대해도 커지지 않는 별이 있다면, 화면을 드래그해서 전체를 돌려보세요. 원하는 별이 가까이 오면서 훨씬 크게 보여요.",
+    catComboTitle: "⭐ 이 그룹 AI들의 조합 · 가성비 총평", catMembersTitle: "이 그룹의 AI들",
   },
   en: {
     subtitle: "Global AI Relationship Map", searchPh: "Search AI name…",
-    mapView: "Map View", netMode: "Network (default)", boardMode: "Board (by category)",
+    mapView: "Map View", netMode: "Network (default)", boardMode: "Board (by category)", earthMode: "Earth (globe-shaped layout)",
     pricing: "Pricing", free: "Free", freemium: "Freemium", paid: "Paid", unspecified: "Unspecified",
     categories: "Categories",
     seoNote: n => `The full text list (${n} items) is visually hidden but kept in the DOM for search engines and screen readers.`,
@@ -428,6 +471,12 @@ const I18N = {
     confVerified: "✓ Officially confirmed", confEstimated: "⚠ AI estimate",
     confEstimatedHint: "Estimated by AI from general knowledge (text below is in Korean, the only language this was generated in) — check the official site for exact pricing.",
     langBtnLabel: "한국어",
+    ttSound: "Toggle background sound", ttZoomIn: "Zoom in", ttZoomOut: "Zoom out",
+    ttZoomFit: "Fit all stars in view", ttFullscreen: "Fullscreen",
+    comboOpenLabel: "⭐ Top AI Combos", comboDlgTitle: "⭐ Combine these AIs for results like this",
+    comboSecTitle: "⭐ Great combos with this AI", comboFree: "Free to start", comboNone: "No combos yet.",
+    tipBar: "This map is a 3D space — if a distant star doesn't get bigger when you zoom, try dragging to rotate the whole view instead. The star you want will swing closer and appear much larger.",
+    catComboTitle: "⭐ Combos & value summary for this group", catMembersTitle: "AIs in this group",
   },
 };
 function tr(key, ...args){
@@ -462,7 +511,7 @@ const CONST_NAMES_EN = {
   "트라이앵글자리": "Triangulum", "남십자자리": "Southern Cross", "카시오페이아자리": "Cassiopeia",
   "왕관자리": "Corona", "북두칠성": "Big Dipper", "돛자리": "Vela",
 };
-const constNameLabel = k => (lang === "en" && CONST_NAMES_EN[k]) ? CONST_NAMES_EN[k] : k;
+const constNameLabel = k => lang !== "en" ? k : (CONST88_KO_TO_EN.get(k) || CONST_NAMES_EN[k] || k);
 const toast = (msg) => { const t = $("#toast"); t.textContent = msg; t.classList.add("show"); clearTimeout(toast._t); toast._t = setTimeout(() => t.classList.remove("show"), 2600); };
 function timeago(iso){
   const s = (Date.now() - new Date(iso).getTime()) / 1000;
@@ -556,8 +605,11 @@ async function boot(attempt = 1){
       .map(c => ({ c, n: nodes.filter(x => x.category === c).length }))
       .sort((a,b) => b.n - a.n);
 
+    await loadConstellations88();
     assignConstellationShapes();
     assignCatHues();
+    await loadTopRank();
+    await loadAiCombos();
 
     phase = "3D 그래픽 초기화(WebGL)";
     const _gl = document.createElement("canvas");
@@ -588,6 +640,145 @@ async function boot(attempt = 1){
         ? "브라우저 설정에서 '하드웨어 가속'을 켜거나 다른 브라우저로 열어보세요."
         : "강력 새로고침(Ctrl+Shift+R) 후 다시 시도하세요.";
   }
+}
+
+/* ---- 가장 많이 쓰이는 AI Top10 로드(data/ai_top_rank.json) — 실패해도 지도는 그대로 동작 ---- */
+async function loadTopRank(){
+  try {
+    const res = await fetch("data/ai_top_rank.json");
+    if (!res.ok) return;
+    const list = await res.json();
+    for (const item of list){
+      const match = nodes.find(n =>
+        n.name === item.tool_name || n.name_en === item.tool_name ||
+        (item.matched_name_en && n.name_en === item.matched_name_en) ||
+        (item.matched_name_ko && n.name === item.matched_name_ko)
+      );
+      if (match) topRankMap.set(match.id, item.rank);
+    }
+  } catch (e){ console.warn("top rank load skipped", e); }
+}
+
+/* ---- AI 조합 쇼케이스(data/ai_combos.json) — "Claude + Higgsfield = 압도적 영상" 같은
+   실사용 조합을 해당 AI의 이름과 매칭해 상세 드로어 및 "추천 조합 TOP" 다이얼로그에 노출 ---- */
+let aiCombos = [];
+let nodeNameIndex = new Map();
+const TOOL_ALIASES = { chatgpt: "gpt" }; // 문서 표기(ChatGPT)와 데이터셋 표기(GPT)가 다른 경우
+function normTool(s){ return String(s || "").toLowerCase().replace(/[^a-z0-9가-힣]/g, ""); }
+function buildNodeNameIndex(){
+  nodeNameIndex = new Map();
+  for (const n of nodes){
+    if (n.name) nodeNameIndex.set(normTool(n.name), n);
+    if (n.name_en) nodeNameIndex.set(normTool(n.name_en), n);
+  }
+}
+function findNodeForTool(toolStr){
+  const t = normTool(toolStr);
+  if (!t) return null;
+  const alias = TOOL_ALIASES[t] || t;
+  if (nodeNameIndex.has(alias)) return nodeNameIndex.get(alias);
+  if (nodeNameIndex.has(t)) return nodeNameIndex.get(t);
+  if (t.length < 3) return null;
+  for (const [key, n] of nodeNameIndex){
+    if (key.length >= 3 && (key.includes(alias) || alias.includes(key))) return n;
+  }
+  return null;
+}
+async function loadAiCombos(){
+  try {
+    const res = await fetch("data/ai_combos.json");
+    if (!res.ok) return;
+    const list = await res.json();
+    buildNodeNameIndex();
+    aiCombos = list.map(c => {
+      const matched = [...new Set(c.tools.map(findNodeForTool).filter(Boolean))];
+      return {
+        ...c,
+        matchedIds: matched.map(n => n.id),
+        allFree: matched.length > 0 && matched.every(n => ["free", "freemium"].includes(priceClass(n.pricing))),
+      };
+    });
+  } catch (e){ console.warn("ai combos load skipped", e); }
+}
+function combosForNode(id){
+  return aiCombos.filter(c => c.matchedIds.includes(id)).sort((a, b) => b.impact - a.impact);
+}
+function combosForCategory(c){
+  const memberIds = new Set(nodes.filter(n => n.category === c).map(n => n.id));
+  const seen = new Set(), out = [];
+  for (const combo of aiCombos){
+    if (!seen.has(combo.id) && combo.matchedIds.some(id => memberIds.has(id))){
+      seen.add(combo.id);
+      out.push(combo);
+    }
+  }
+  return out.sort((a, b) => b.impact - a.impact);
+}
+// 문서(가격비교·멀티툴 조합 매트릭스)에서 뽑은 파급력·요금 데이터를 실제 계산해 종합평가 문장으로 합성
+// (미리 써둔 문구가 아니라, 이 카테고리 멤버·조합 수를 그때그때 집계한 결과라 카테고리마다 다르게 나옴)
+function synthesizeCategoryEval(c, members, combos){
+  const total = members.length || 1;
+  const counts = { free: 0, freemium: 0, paid: 0, na: 0 };
+  for (const n of members) counts[priceClass(n.pricing)]++;
+  const freeFriendly = counts.free + counts.freemium;
+  const parts = [];
+  parts.push(`${catLabel(c)} 카테고리에는 AI가 ${members.length}개 있고, 이 중 ${freeFriendly}개(${Math.round(freeFriendly / total * 100)}%)는 무료·부분유료로 바로 시작할 수 있어요.`);
+  if (combos.length){
+    const best = combos[0];
+    parts.push(`가장 파급력 높은 조합은 "${best.tools.join(" + ")}"(★${best.impact}/10) — ${best.title_ko}`);
+    const freeCombos = combos.filter(x => x.allFree).length;
+    if (freeCombos) parts.push(`등록된 조합 ${combos.length}개 중 ${freeCombos}개는 참여 도구 전부 무료·부분유료로 시작할 수 있습니다.`);
+    else parts.push(`등록된 조합은 총 ${combos.length}개입니다.`);
+  } else {
+    parts.push(`아직 이 카테고리 AI들을 활용한 추천 조합은 등록되지 않았어요.`);
+  }
+  return parts.join(" ");
+}
+function categoryDrawerHTML(c){
+  const members = nodes.filter(n => n.category === c).sort((a, b) => (b.deg || 0) - (a.deg || 0));
+  const combos = combosForCategory(c).slice(0, 8);
+  const evalText = synthesizeCategoryEval(c, members, combos);
+  const constName = catShapeName.get(c);
+  return `
+    <div class="d-kicker">${tr("dKicker")}</div>
+    <div class="d-head">
+      <div>
+        <div class="d-name">${esc(catLabel(c))}</div>
+        <div class="d-meta">${members.length}${lang === "en" ? " AIs" : "개 AI"}${constName ? " · ✦ " + esc(constNameLabel(constName)) : ""}</div>
+      </div>
+      <button class="d-close" aria-label="${tr("close")}">×</button>
+    </div>
+    <div class="d-sec">${tr("catComboTitle")}</div>
+    <p class="d-desc">${esc(evalText)}</p>
+    ${combos.length ? `<div class="combo-list">${combos.map(comboCardHTML).join("")}</div>` : ""}
+    <div class="d-sec">${tr("catMembersTitle")}</div>
+    <div class="chips">${members.slice(0, 60).map(n => `<button class="chip" data-go="${n.id}">${esc(displayName(n))}</button>`).join("")}</div>`;
+}
+let curCategoryDrawer = null;
+function openCategoryDrawer(c){
+  curNode = null;
+  curCategoryDrawer = c;
+  $("#drawer").classList.add("open");
+  resizeGraph();
+  $("#drawer").innerHTML = categoryDrawerHTML(c);
+  $("#drawer").querySelector(".d-close")?.addEventListener("click", closeDrawer);
+  $("#drawer").querySelectorAll("[data-go]").forEach(b => b.addEventListener("click", () => {
+    const nn = nodeById.get(+b.dataset.go); if (nn){ focusNode(nn.id); openDrawer(nn); }
+  }));
+}
+function comboCardHTML(c){
+  const stars = "★".repeat(c.impact) + "☆".repeat(10 - c.impact);
+  return `<div class="combo-card">
+    <div class="combo-title">${esc(c.tools.join(" + "))}${c.allFree ? `<span class="combo-free-badge">${tr("comboFree")}</span>` : ""}</div>
+    <div class="combo-stars">${stars}</div>
+    <div class="combo-use">${esc(c.title_ko)}</div>
+    <div class="combo-price">${esc(c.pricing_summary_ko)}</div>
+  </div>`;
+}
+function openComboDlg(){
+  const top = [...aiCombos].sort((a, b) => b.impact - a.impact).slice(0, 30);
+  $("#comboDlgList").innerHTML = top.length ? top.map(comboCardHTML).join("") : `<div class="rv-hint">${tr("comboNone")}</div>`;
+  $("#comboDlg").showModal();
 }
 
 /* ---- 카테고리별 별자리 모양 배치 ---- */
@@ -636,15 +827,349 @@ function shapeOffsets(n, seed){
   }
   return pts.map(p => [p[0] * SHAPE_SCALE, p[1] * SHAPE_SCALE, p[2] * SHAPE_SCALE]);
 }
+/* ---- 실제 IAU 88개 별자리(data/constellations_88.json) — 있는 카테고리는 실좌표 모양으로,
+   AI 툴이 배정 안 된 나머지는 지도 가장자리에 장식으로 배치(88별자리 완전판 느낌) ---- */
+let CONST88 = [];
+let CONST88_KO_TO_EN = new Map();
+const usedConstAbbrs = new Set();
+async function loadConstellations88(){
+  try {
+    const res = await fetch("data/constellations_88.json");
+    if (!res.ok) return;
+    CONST88 = await res.json();
+    CONST88_KO_TO_EN = new Map(CONST88.map(c => [c.name_ko, c.name_en]));
+  } catch (e){ console.warn("constellations_88 load skipped", e); }
+}
+// 카테고리(멤버 수)에 가장 가까운, 아직 안 쓴 별자리를 고름
+function pickConstellationFor(memberCount){
+  let best = null, bestDiff = Infinity;
+  for (const c of CONST88){
+    if (usedConstAbbrs.has(c.abbr)) continue;
+    const diff = Math.abs(c.points.length - memberCount);
+    if (diff < bestDiff){ best = c; bestDiff = diff; }
+  }
+  if (best) usedConstAbbrs.add(best.abbr);
+  return best;
+}
+// 실제 별자리의 "대표 별"(있는 만큼)은 진짜 좌표에, 나머지 AI들은 그 주변에 자연스럽게 흩어지게
+function realConstellationOffsets(memberCount, constellation, seed){
+  const scale = SHAPE_SCALE * 7; // constellations_88.json 좌표는 -20~20 박스 — 기존 별자리 크기감과 맞춤
+  const basePts = constellation.points.map(p => [p[0] * scale, p[1] * scale, 0]);
+  let r = 10;
+  for (const p of basePts) r = Math.max(r, Math.hypot(p[0], p[1]));
+  const flagshipCount = Math.min(memberCount, basePts.length);
+  const rnd = mulberry32(seed);
+  const out = basePts.slice(0, flagshipCount).map(p => [p[0], p[1], (rnd() - 0.5) * 20]);
+  for (let i = flagshipCount; i < memberCount; i++){
+    const theta = rnd() * Math.PI * 2;
+    const rad = r * (0.35 + rnd() * 0.85);
+    out.push([rad * Math.cos(theta), rad * Math.sin(theta), (rnd() - 0.5) * 40]);
+  }
+  return out;
+}
 let catShapeName = new Map(); // category -> 별자리 이름(있는 경우만)
+let catConstMeta = new Map(); // category -> 별자리 메타(실좌표 등)
 function assignConstellationShapes(){
   catShapeName = new Map();
+  catConstMeta = new Map();
+  usedConstAbbrs.clear();
   for (const { c } of cats){
     const members = nodes.filter(x => x.category === c).sort((a,b) => a.id - b.id);
-    const offs = shapeOffsets(members.length, hashStr(c));
+    const seed = hashStr(c);
+    const real = CONST88.length ? pickConstellationFor(members.length) : null;
+    const offs = real ? realConstellationOffsets(members.length, real, seed) : shapeOffsets(members.length, seed);
     members.forEach((n, i) => { n.__shape = offs[i] || [0,0,0]; });
-    if (CONST_NAMES[members.length]) catShapeName.set(c, CONST_NAMES[members.length]);
+    if (real){ catShapeName.set(c, real.name_ko); catConstMeta.set(c, real); }
+    else if (CONST_NAMES[members.length]) catShapeName.set(c, CONST_NAMES[members.length]);
   }
+}
+/* ---- 안 쓰인 나머지 별자리(대부분) — AI 툴이 없는 "빈 별자리"로 지도 맨 바깥에 실좌표 그대로 장식 배치 ---- */
+let unusedConstObjs = [];
+function buildUnusedConstellations(){
+  for (const o of unusedConstObjs){ Graph.scene().remove(o.line); Graph.scene().remove(o.label); }
+  unusedConstObjs = [];
+  const leftovers = CONST88.filter(c => !usedConstAbbrs.has(c.abbr));
+  const scale = SHAPE_SCALE * 14; // 배경 장식이라 실제 스타맵보다 훨씬 크게 그려서 존재감을 줌
+  leftovers.forEach((cst, i) => {
+    const rnd = mulberry32(hashStr(cst.abbr));
+    // 지도 반경보다 훨씬 바깥, 구 표면에 고르게 흩어지도록(골든 스파이럴)
+    const R = 3600 + rnd() * 700;
+    const t = (i + 0.5) / leftovers.length;
+    const incl = Math.acos(1 - 2 * t);
+    const az = i * 2.399963229728653;
+    const cx = R * Math.sin(incl) * Math.cos(az);
+    const cy = R * Math.cos(incl);
+    const cz = R * Math.sin(incl) * Math.sin(az);
+
+    const positions = [];
+    for (const [a, b] of cst.lines){
+      const pa = cst.points[a], pb = cst.points[b];
+      positions.push(cx + pa[0] * scale, cy + pa[1] * scale, cz);
+      positions.push(cx + pb[0] * scale, cy + pb[1] * scale, cz);
+    }
+    const geo = new THREE.BufferGeometry();
+    geo.setAttribute("position", new THREE.BufferAttribute(new Float32Array(positions), 3));
+    const line = new THREE.LineSegments(geo, new THREE.LineBasicMaterial({
+      color: 0x8f96c4, transparent: true, opacity: 0.32, depthWrite: false,
+    }));
+    Graph.scene().add(line);
+
+    const label = new SpriteText(`${cst.name_ko} · ${cst.name_en}`);
+    label.textHeight = 20;
+    label.color = "#8f96c4";
+    label.fontFace = "system-ui, sans-serif";
+    label.material.transparent = true;
+    label.material.opacity = 0.55;
+    label.material.depthWrite = false;
+    label.position.set(cx, cy + 24 * SHAPE_SCALE, cz);
+    Graph.scene().add(label);
+
+    unusedConstObjs.push({ line, label });
+  });
+}
+
+/* ---- 태양계: 스타맵과 안 겹치는 바깥쪽 고정 위치에 실제 NASA 사진 텍스처로 태양+8행성을
+   상대적 크기·궤도로 배치(data/planet_textures.json). 토성·천왕성은 고리 텍스처(ringTexture) 부착 ---- */
+let solarPlanets = [];
+const SS_CENTER = new THREE.Vector3(-3600, 550, -700);
+const PLANET_NAMES_KO = { mercury:"수성", venus:"금성", earth:"지구", mars:"화성", jupiter:"목성", saturn:"토성", uranus:"천왕성", neptune:"해왕성" };
+const PLANET_NAMES_EN = { mercury:"Mercury", venus:"Venus", earth:"Earth", mars:"Mars", jupiter:"Jupiter", saturn:"Saturn", uranus:"Uranus", neptune:"Neptune" };
+function planetLabel(key){ return lang === "en" ? PLANET_NAMES_EN[key] : PLANET_NAMES_KO[key]; }
+async function buildSolarSystem(){
+  try {
+    const res = await fetch("data/planet_textures.json");
+    if (!res.ok) return;
+    const data = await res.json();
+    const baseR = 14;
+    const dist = { mercury: 260, venus: 340, earth: 430, mars: 520, jupiter: 780, saturn: 1050, uranus: 1300, neptune: 1520 };
+    const order = ["mercury", "venus", "earth", "mars", "jupiter", "saturn", "uranus", "neptune"];
+    const loader = new THREE.TextureLoader();
+
+    if (data.sun){
+      loader.load(data.sun.url, (tex) => {
+        const r = baseR * data.sun.relative_size;
+        const sun = new THREE.Mesh(new THREE.SphereGeometry(r, 32, 32), new THREE.MeshBasicMaterial({ map: tex }));
+        sun.position.copy(SS_CENTER);
+        Graph.scene().add(sun);
+        const halo = new THREE.Sprite(GLOW.clone());
+        halo.scale.setScalar(r * 3.6);
+        halo.position.copy(SS_CENTER);
+        Graph.scene().add(halo);
+        const label = new SpriteText("☀ 태양계 · Solar System");
+        label.textHeight = 26; label.color = "#ffd479"; label.fontFace = "system-ui, sans-serif";
+        label.material.depthWrite = false; label.material.transparent = true; label.material.opacity = 0.85;
+        label.position.set(SS_CENTER.x, SS_CENTER.y + r + 60, SS_CENTER.z);
+        Graph.scene().add(label);
+      }, undefined, () => {});
+    }
+
+    order.forEach((key, idx) => {
+      const p = data[key];
+      if (!p) return;
+      const d = dist[key];
+      const segs = 96, pts = [];
+      for (let i = 0; i <= segs; i++){
+        const a = (i / segs) * Math.PI * 2;
+        pts.push(new THREE.Vector3(SS_CENTER.x + d * Math.cos(a), SS_CENTER.y, SS_CENTER.z + d * Math.sin(a)));
+      }
+      Graph.scene().add(new THREE.LineLoop(
+        new THREE.BufferGeometry().setFromPoints(pts),
+        new THREE.LineBasicMaterial({ color: 0x6f7bb8, transparent: true, opacity: 0.22 }),
+      ));
+
+      loader.load(p.url, (tex) => {
+        const r = baseR * p.relative_size;
+        const mesh = new THREE.Mesh(new THREE.SphereGeometry(r, 28, 28), new THREE.MeshBasicMaterial({ map: tex }));
+        const angle = idx * 0.9;
+        mesh.position.set(SS_CENTER.x + d * Math.cos(angle), SS_CENTER.y, SS_CENTER.z + d * Math.sin(angle));
+        Graph.scene().add(mesh);
+
+        if (p.has_rings){
+          const ringIdx = key === "saturn" ? 0 : 1; // 토성형/천왕성형 고리 텍스처 재사용
+          const ring = new THREE.Mesh(
+            new THREE.RingGeometry(r * 1.4, r * (key === "saturn" ? 2.3 : 1.8), 64),
+            new THREE.MeshBasicMaterial({ map: ringTexture(ringIdx), transparent: true, side: THREE.DoubleSide, depthWrite: false }),
+          );
+          ring.rotation.x = key === "saturn" ? 1.2 : 0.25; // 토성은 완만하게, 천왕성은 거의 옆으로 누운 고리
+          mesh.add(ring);
+        }
+
+        const label = new SpriteText(planetLabel(key));
+        label.textHeight = 12; label.color = "#cfd6f5"; label.fontFace = "system-ui, sans-serif";
+        label.material.depthWrite = false; label.material.transparent = true; label.material.opacity = 0.8;
+        label.position.y = r + 14;
+        mesh.add(label);
+
+        solarPlanets.push({ mesh, distance: d, angle, speed: 0.045 / Math.sqrt(d / 260) });
+      }, undefined, () => {});
+    });
+  } catch (e){ console.warn("solar system skipped", e); }
+}
+
+/* ---- 제휴/광고 "태양": AI 툴이 아닌 별도 제휴 사이트(예: 로또 추첨 사이트)를 일반 별보다 2~3배
+   큰 태양으로, 그리스·로마 신 이름 + 한 줄 요약으로 표시. 클릭하면 제휴 링크로 이동.
+   (data/affiliate_suns.json — 항목이 늘수록 태양도 늘어남, 사이트별 이름은 파일에서 개별 지정) ---- */
+let affiliateSuns = [];
+let affiliateSunsData = [];
+function sunPlacement(i, total){
+  // 태양계(-X쪽)·소행성/유성 반경과 겹치지 않는 반대편 빈 공간(+X,+Y,+Z 방향)에 나란히 배치
+  const spread = 300;
+  const base = new THREE.Vector3(3300, 850, 1300);
+  const off = (i - (total - 1) / 2) * spread;
+  return new THREE.Vector3(base.x, base.y + off, base.z - off * 0.4);
+}
+function sunLabel(s){
+  const name = lang === "en" ? (s.god_name_en || s.god_name_ko) : s.god_name_ko;
+  const summary = lang === "en" ? (s.summary_en || s.summary_ko) : s.summary_ko;
+  return summary ? `☀ ${name}(${summary})` : `☀ ${name}`;
+}
+async function buildAffiliateSuns(){
+  try {
+    const res = await fetch("data/affiliate_suns.json");
+    if (!res.ok) return;
+    const list = await res.json();
+    if (!list.length) return;
+    affiliateSunsData = list;
+    let sunUrl = null;
+    try {
+      const pRes = await fetch("data/planet_textures.json");
+      if (pRes.ok) sunUrl = (await pRes.json())?.sun?.url || null;
+    } catch (e){ /* 태양 사진 못 구해도 아래에서 별 텍스처로 대체 */ }
+
+    const loader = new THREE.TextureLoader();
+    const baseSize = 46; // 가장 큰 일반 별(top10, ~22) 대비 약 2배, 스폰서(24)보다도 크게
+    list.forEach((s, i) => {
+      const pos = sunPlacement(i, list.length);
+      const build = (tex) => {
+        const mat = tex
+          ? new THREE.SpriteMaterial({ map: tex, transparent: true })
+          : new THREE.SpriteMaterial({ map: starTexture(42), blending: THREE.AdditiveBlending, transparent: true });
+        const spr = new THREE.Sprite(mat);
+        spr.scale.setScalar(baseSize);
+        spr.position.copy(pos);
+        Graph.scene().add(spr);
+
+        const halo = new THREE.Sprite(GLOW.clone());
+        halo.scale.setScalar(baseSize * 2.6);
+        halo.position.copy(pos);
+        Graph.scene().add(halo);
+
+        const label = new SpriteText(sunLabel(s));
+        label.textHeight = 17;
+        label.color = "#ffe6ad";
+        label.fontFace = "system-ui, sans-serif";
+        label.material.depthWrite = false;
+        label.material.transparent = true;
+        label.position.set(pos.x, pos.y + baseSize * 0.95, pos.z);
+        Graph.scene().add(label);
+
+        affiliateSuns.push({ mesh: spr, label, link: s.site_url });
+      };
+      if (sunUrl) loader.load(sunUrl, build, undefined, () => build(null));
+      else build(null);
+    });
+  } catch (e){ console.warn("affiliate suns skipped", e); }
+}
+function wireSunClicks(){
+  const dom = Graph.renderer().domElement;
+  const raycaster = new THREE.Raycaster();
+  const mouse = new THREE.Vector2();
+  dom.addEventListener("click", (ev) => {
+    if (!affiliateSuns.length) return;
+    const rect = dom.getBoundingClientRect();
+    mouse.x = ((ev.clientX - rect.left) / rect.width) * 2 - 1;
+    mouse.y = -((ev.clientY - rect.top) / rect.height) * 2 + 1;
+    raycaster.setFromCamera(mouse, Graph.camera());
+    const targets = affiliateSuns.flatMap(s => [s.mesh, s.label]);
+    const hit = raycaster.intersectObjects(targets)[0];
+    if (!hit) return;
+    const sun = affiliateSuns.find(s => s.mesh === hit.object || s.label === hit.object);
+    if (sun) window.open(affiliate(sun.link), "_blank", "noopener");
+  });
+}
+
+/* ---- 세계 도시 지구본: 나라 > 수도(1) > 주요도시(2) 순으로 실제 위경도에 점을 찍어
+   지구 표면 위의 "도시 별자리"로 표시(data/world_countries.json). 또 다른 빈 공간에 배치.
+   클릭하면 인구·핵심정보를 토스트로 보여줌 ---- */
+let worldCities = [];
+const GLOBE_CENTER = new THREE.Vector3(0, 2800, -3400);
+const GLOBE_R = 900;
+async function buildWorldCityGlobe(){
+  try {
+    const res = await fetch("data/world_countries.json");
+    if (!res.ok) return;
+    const countries = await res.json();
+    if (!countries.length) return;
+
+    let earthUrl = null;
+    try {
+      const pRes = await fetch("data/planet_textures.json");
+      if (pRes.ok) earthUrl = (await pRes.json())?.earth?.url || null;
+    } catch (e){ /* 텍스처 없어도 단색 구체로 대체 */ }
+
+    const loader = new THREE.TextureLoader();
+    const addGlobe = (tex) => {
+      const mat = new THREE.MeshBasicMaterial({
+        map: tex || null, color: tex ? 0xffffff : 0x3a6fb0, transparent: true, opacity: 0.6, depthWrite: false,
+      });
+      const globe = new THREE.Mesh(new THREE.SphereGeometry(GLOBE_R, 48, 48), mat);
+      globe.position.copy(GLOBE_CENTER);
+      Graph.scene().add(globe);
+      const label = new SpriteText("🌍 세계 도시 지도 · World Cities");
+      label.textHeight = 24; label.color = "#9fd3ff"; label.fontFace = "system-ui, sans-serif";
+      label.material.depthWrite = false; label.material.transparent = true; label.material.opacity = 0.85;
+      label.position.set(GLOBE_CENTER.x, GLOBE_CENTER.y + GLOBE_R + 60, GLOBE_CENTER.z);
+      Graph.scene().add(label);
+    };
+    if (earthUrl) loader.load(earthUrl, addGlobe, undefined, () => addGlobe(null));
+    else addGlobe(null);
+
+    const cityTex = starTexture(200); // 일반 도시 — 은은한 하늘색
+    const capTex = starTexture(48); // 수도 — 금빛으로 구분
+    for (const country of countries){
+      const placeCity = (city, isCapital) => {
+        if (!city || city.lat == null || city.lon == null) return;
+        const pos = latLonToVec3(city.lat, city.lon, GLOBE_R * 1.01).add(GLOBE_CENTER);
+        const spr = new THREE.Sprite(new THREE.SpriteMaterial({
+          map: isCapital ? capTex : cityTex, transparent: true, blending: THREE.AdditiveBlending,
+        }));
+        spr.scale.setScalar(isCapital ? 14 : 8);
+        spr.position.copy(pos);
+        Graph.scene().add(spr);
+        if (isCapital){
+          const label = new SpriteText(city.name_ko || city.name_en || "");
+          label.textHeight = 8; label.color = "#ffe6ad"; label.fontFace = "system-ui, sans-serif";
+          label.material.depthWrite = false; label.material.transparent = true; label.material.opacity = 0.75;
+          label.position.set(pos.x, pos.y + 16, pos.z);
+          Graph.scene().add(label);
+        }
+        worldCities.push({ mesh: spr, info: { country, city, isCapital } });
+      };
+      placeCity(country.capital, true);
+      for (const c of (country.major_cities || [])) placeCity(c, false);
+    }
+  } catch (e){ console.warn("world city globe skipped", e); }
+}
+function wireGlobeClicks(){
+  const dom = Graph.renderer().domElement;
+  const raycaster = new THREE.Raycaster();
+  const mouse = new THREE.Vector2();
+  dom.addEventListener("click", (ev) => {
+    if (!worldCities.length) return;
+    const rect = dom.getBoundingClientRect();
+    mouse.x = ((ev.clientX - rect.left) / rect.width) * 2 - 1;
+    mouse.y = -((ev.clientY - rect.top) / rect.height) * 2 + 1;
+    raycaster.setFromCamera(mouse, Graph.camera());
+    const hit = raycaster.intersectObjects(worldCities.map(c => c.mesh))[0];
+    if (!hit) return;
+    const entry = worldCities.find(c => c.mesh === hit.object);
+    if (!entry) return;
+    const { country, city, isCapital } = entry.info;
+    const name = city.name_ko || city.name_en || "";
+    const tag = isCapital ? `${country.country_ko} 수도` : country.country_ko;
+    const pop = country.population ? ` · 인구 약 ${Math.round(country.population / 10000)}만` : "";
+    toast(`${name}(${tag})${pop} · ${country.key_info_ko || ""}`);
+  });
 }
 function makeShapeForce(){
   let fnodes = [];
@@ -707,31 +1232,80 @@ function starTexture(hue){
   return tex;
 }
 
+/* ---- 가장 많이 쓰이는 AI Top10은 다른 별보다 크고, 토성/천왕성처럼 고리를 두름(data/ai_top_rank.json) ---- */
+let topRankMap = new Map(); // node.id -> 1~10위
+const RING_VARIANTS = [
+  // 토성형: 넓고 또렷, 사이 간극(카시니 간극)이 보임
+  { stops: [[0,"rgba(255,225,170,0)"],[0.22,"rgba(255,225,170,.65)"],[0.42,"rgba(255,225,170,.15)"],[0.5,"rgba(255,225,170,.55)"],[0.7,"rgba(255,225,170,.35)"],[1,"rgba(255,225,170,0)"]], innerK: 1.55, outerK: 2.5, tilt: 1.25 },
+  // 천왕성형: 좁고 창백하며 기울기가 수직에 가까움
+  { stops: [[0,"rgba(190,225,255,0)"],[0.35,"rgba(190,225,255,.5)"],[0.5,"rgba(190,225,255,.6)"],[0.65,"rgba(190,225,255,.5)"],[1,"rgba(190,225,255,0)"]], innerK: 1.5, outerK: 1.95, tilt: 1.55 },
+  // 해왕성형: 얇고 은은한 파란 고리 여러 겹
+  { stops: [[0,"rgba(150,190,255,0)"],[0.2,"rgba(150,190,255,.4)"],[0.35,"rgba(150,190,255,.1)"],[0.5,"rgba(150,190,255,.45)"],[0.65,"rgba(150,190,255,.1)"],[0.8,"rgba(150,190,255,.4)"],[1,"rgba(150,190,255,0)"]], innerK: 1.45, outerK: 2.15, tilt: 1.1 },
+  // 골드 코로나형: 넓고 완만하게 기운 화려한 고리(순위 상위 스타 전용 느낌)
+  { stops: [[0,"rgba(255,205,120,0)"],[0.25,"rgba(255,205,120,.6)"],[0.5,"rgba(255,235,190,.7)"],[0.75,"rgba(255,205,120,.5)"],[1,"rgba(255,205,120,0)"]], innerK: 1.6, outerK: 2.9, tilt: 0.95 },
+];
+const ringTexCache = new Map();
+function ringTexture(i){
+  if (ringTexCache.has(i)) return ringTexCache.get(i);
+  const v = RING_VARIANTS[i % RING_VARIANTS.length];
+  const w = 8, h = 128, cv = document.createElement("canvas"); cv.width = w; cv.height = h;
+  const ctx = cv.getContext("2d");
+  const grad = ctx.createLinearGradient(0, 0, 0, h);
+  for (const [o, c] of v.stops) grad.addColorStop(o, c);
+  ctx.fillStyle = grad; ctx.fillRect(0, 0, w, h);
+  const tex = new THREE.CanvasTexture(cv);
+  ringTexCache.set(i, tex);
+  return tex;
+}
+function addStarRing(g, size, seed){
+  const idx = seed % RING_VARIANTS.length;
+  const v = RING_VARIANTS[idx];
+  const ring = new THREE.Mesh(
+    new THREE.RingGeometry(size * v.innerK, size * v.outerK, 48),
+    new THREE.MeshBasicMaterial({ map: ringTexture(idx), transparent: true, side: THREE.DoubleSide, depthWrite: false }),
+  );
+  ring.rotation.x = v.tilt;
+  ring.rotation.z = (seed * 0.71) % (Math.PI * 2); // 별마다 살짝 다른 방향으로 기울여 다 같은 모양처럼 안 보이게
+  g.add(ring);
+}
+
 function nodeObject(n){
   const g = new THREE.Group();
   const isSponsor = !!n.sponsor;
+  const isTop = topRankMap.has(n.id);
   const hue = isSponsor ? 42 : catHue(n.category);
   const spr = new THREE.Sprite(new THREE.SpriteMaterial({
     map: starTexture(hue), blending: THREE.AdditiveBlending, depthWrite: false, transparent: true,
   }));
-  const size = isSponsor ? 24 : 5 + Math.min(n.deg, 10) * 0.8;
+  let size = isSponsor ? 24 : 5 + Math.min(n.deg, 10) * 0.8;
+  if (isTop) size *= 1.7; // 가장 많이 쓰이는 AI Top10은 눈에 띄게 크게
   spr.scale.setScalar(size);
   g.add(spr);
   if (isSponsor){
     const halo = new THREE.Sprite(GLOW.clone());
     halo.scale.setScalar(46);
     g.add(halo);
+  } else if (isTop){
+    const halo = new THREE.Sprite(GLOW.clone());
+    halo.scale.setScalar(size * 1.9);
+    g.add(halo);
+    addStarRing(g, size, hashStr(n.slug || n.name || String(n.id)));
   }
-  if (isSponsor || SHOW_LABELS || n.category === highlightedCategory){
-    const t = new SpriteText(displayName(n));
-    t.textHeight = isSponsor ? 7 : 4;
-    t.color = isSponsor ? "#ffe6ad" : "#eef0fb";
-    t.fontFace = "system-ui, sans-serif";
-    t.material.depthWrite = false;
-    t.material.depthTest = false; // 별 스프라이트에 가려지지 않고 항상 위에 보이도록
-    t.position.y = size * 0.65 + (isSponsor ? 6 : 4);
-    g.add(t);
-  }
+  // 클릭해야만 이름을 알 수 있다는 피드백 반영 — 보통 별도 이름표를 기본으로 달아두되,
+  // 흐리게(작고 옅게) 두고 카메라 거리에 따라 tick()에서 더 흐려지거나 살아나게 함(updateFarLabels)
+  const isEmph = isSponsor || isTop || SHOW_LABELS || n.category === highlightedCategory;
+  const t = new SpriteText(isTop ? `★${topRankMap.get(n.id)} ${displayName(n)}` : displayName(n));
+  t.textHeight = isSponsor ? 7 : isTop ? 6 : isEmph ? 4 : 2.6;
+  t.color = isSponsor ? "#ffe6ad" : isTop ? "#ffe9c2" : "#eef0fb";
+  t.fontFace = "system-ui, sans-serif";
+  t.material.depthWrite = false;
+  t.material.depthTest = false; // 별 스프라이트에 가려지지 않고 항상 위에 보이도록
+  t.material.transparent = true;
+  t.material.opacity = isSponsor || isTop || isEmph ? 1 : 0.4; // 기본 별은 흐리게 — tick()에서 거리로 추가 보정
+  t.position.y = size * 0.65 + (isSponsor ? 6 : isTop ? 6 : 4);
+  g.add(t);
+  if (!isEmph) n.__labelObj = t; // 평범한 별만 거리 기반 페이드 대상(위 등급은 항상 또렷하게 고정)
+  else n.__labelObj = null;
   return g;
 }
 
@@ -889,6 +1463,13 @@ function initGraph(){
   window.addEventListener("resize", resizeGraph);
 
   buildConstellationLabels();
+  try { buildUnusedConstellations(); } catch (e){ console.warn("unused constellations skipped", e); }
+  buildSolarSystem();
+  buildAffiliateSuns();
+  buildEarthLayoutSphere();
+  buildWorldCityGlobe();
+  wireSunClicks();
+  wireGlobeClicks();
 
   // 배경 별 (실패해도 지도는 그대로 동작)
   try {
@@ -947,6 +1528,47 @@ function initSceneLoop(){
   }
   tryLoadAsteroidTexture();
 
+  /* ---- 딥스카이 배경 레이어: 은하·성운·성단·블랙홀 사진이 아주 멀리서 서서히 나타났다 사라짐
+     (data/deepsky_textures.json) — 기존 소행성 패턴보다 지속시간을 약 2배로 늘려 여유롭게 감상되게 함.
+     실사진(검은 배경)이라 원형 마스킹 없이 가산혼합(Additive)만으로 검은 배경 위에 자연스럽게 겹쳐짐 ---- */
+  const deepskyCatalog = [];
+  const deepsky = [];
+  const MAX_DEEPSKY = 2;
+  (async () => {
+    try {
+      const res = await fetch("data/deepsky_textures.json");
+      if (!res.ok) return;
+      const list = await res.json();
+      const loader = new THREE.TextureLoader();
+      for (const item of list){
+        loader.load(item.url, (tex) => {
+          if (THREE.SRGBColorSpace) tex.colorSpace = THREE.SRGBColorSpace;
+          deepskyCatalog.push({ ...item, tex });
+        }, undefined, () => { /* 개별 이미지 로드 실패는 무시하고 나머지로 계속 동작 */ });
+      }
+    } catch (e){ /* 네트워크 차단 등 — 배경 레이어 없이 계속 동작 */ }
+  })();
+
+  function spawnDeepSky(){
+    if (!deepskyCatalog.length || deepsky.length >= MAX_DEEPSKY) return;
+    const item = deepskyCatalog[Math.floor(Math.random() * deepskyCatalog.length)];
+    const w = item.type === "blackhole" ? 260 + Math.random() * 140 : 420 + Math.random() * 520;
+    const mat = new THREE.MeshBasicMaterial({
+      map: item.tex, transparent: true, opacity: 0, depthWrite: false, blending: THREE.AdditiveBlending,
+    });
+    const mesh = new THREE.Mesh(new THREE.PlaneGeometry(w, w), mat);
+    const span = 4600;
+    mesh.position.set((Math.random() - 0.5) * span, (Math.random() - 0.5) * span, (Math.random() - 0.5) * span);
+    mesh.rotation.z = Math.random() * Math.PI * 2;
+    group.add(mesh);
+    deepsky.push({
+      mesh,
+      rotSpeed: (Math.random() - 0.5) * 0.02,
+      life: 0,
+      maxLife: 22 + Math.random() * 14, // 소행성(10~18초)의 약 2배
+    });
+  }
+
   function spawnAsteroid(){
     if (!asteroidTex || asteroids.length >= MAX_ASTEROIDS) return;
     const w = 30 + Math.random() * 34;
@@ -987,7 +1609,7 @@ function initSceneLoop(){
     });
   }
 
-  let lastT = performance.now(), lastBurst = 0, lastAsteroid = 0;
+  let lastT = performance.now(), lastBurst = 0, lastAsteroid = 0, lastDeepSky = 0;
   function tick(t){
     requestAnimationFrame(tick);
     const dt = Math.min(0.05, (t - lastT) / 1000); lastT = t;
@@ -1012,6 +1634,23 @@ function initSceneLoop(){
 
     if (t - lastAsteroid > 9000 + Math.random() * 9000){
       lastAsteroid = t; spawnAsteroid();
+    }
+
+    if (t - lastDeepSky > 8000 + Math.random() * 9000){
+      lastDeepSky = t; spawnDeepSky();
+    }
+    for (let i = deepsky.length - 1; i >= 0; i--){
+      const d = deepsky[i];
+      d.life += dt;
+      const p = d.life / d.maxLife;
+      if (p >= 1){
+        group.remove(d.mesh); d.mesh.geometry.dispose(); d.mesh.material.dispose();
+        deepsky.splice(i, 1);
+        continue;
+      }
+      d.mesh.rotation.z += d.rotSpeed * dt;
+      // 천천히 페이드인 → 오래 유지 → 천천히 페이드아웃(기존 소행성보다 두 배 여유롭게)
+      d.mesh.material.opacity = 0.55 * (p < 0.18 ? p / 0.18 : p > 0.82 ? (1 - p) / 0.18 : 1);
     }
     for (let i = asteroids.length - 1; i >= 0; i--){
       const a = asteroids[i];
@@ -1038,10 +1677,30 @@ function initSceneLoop(){
       );
     }
 
+    for (const sp of solarPlanets){
+      sp.angle += sp.speed * dt * 0.12; // 아주 천천히 공전
+      sp.mesh.position.set(SS_CENTER.x + sp.distance * Math.cos(sp.angle), SS_CENTER.y, SS_CENTER.z + sp.distance * Math.sin(sp.angle));
+      sp.mesh.rotation.y += dt * 0.15; // 자전
+    }
+
     updateConstellationLabels();
     updateSelectionRing();
+    updateFarLabels();
   }
   requestAnimationFrame(tick);
+}
+// 클릭 없이도 별 이름을 알아볼 수 있게 — 가까우면 좀 더 또렷, 멀면 흐리게(완전히는 안 사라짐)
+const LABEL_NEAR = 260, LABEL_FAR = 1100;
+function updateFarLabels(){
+  if (!Graph) return;
+  const camPos = Graph.camera().position;
+  for (const n of nodes){
+    const lbl = n.__labelObj;
+    if (!lbl || n.x == null) continue;
+    const d = Math.hypot(camPos.x - n.x, camPos.y - n.y, camPos.z - (n.z || 0));
+    const k = d <= LABEL_NEAR ? 0.6 : d >= LABEL_FAR ? 0.15 : 0.6 - 0.45 * (d - LABEL_NEAR) / (LABEL_FAR - LABEL_NEAR);
+    lbl.material.opacity = k;
+  }
 }
 
 /* ---- 이름 붙은(별자리 모양) 그룹은 별 하나를 드래그하면 그룹 전체가 함께 움직임 ---- */
@@ -1158,14 +1817,67 @@ function applyNetworkLayout(){
   for (const n of nodes){ n.fx = undefined; n.fy = undefined; n.fz = undefined; }
   Graph.d3ReheatSimulation();
 }
+/* ---- 지구형 레이아웃: 카테고리마다 지구 표면의 한 지점(위도·경도)을 배정하고,
+   그 카테고리 소속 AI들은 그 지점 주변에 별자리처럼 흩어지게 함(실험적 — 안 예쁘면 select에서만 빼면 됨) ---- */
+const EARTH_LAYOUT_R = 420;
+function latLonToVec3(lat, lon, r){
+  const phi = (90 - lat) * Math.PI / 180, theta = (lon + 180) * Math.PI / 180;
+  return new THREE.Vector3(-r * Math.sin(phi) * Math.cos(theta), r * Math.cos(phi), r * Math.sin(phi) * Math.sin(theta));
+}
+let catEarthAnchor = new Map();
+function assignEarthAnchors(){
+  catEarthAnchor = new Map();
+  cats.forEach(({ c }, i) => {
+    const rnd = mulberry32(hashStr(c) ^ 0x9e3779b9);
+    const t = (i + 0.5) / cats.length;
+    const lat = 90 - Math.acos(1 - 2 * t) * 180 / Math.PI + (rnd() - 0.5) * 6;
+    const lon = ((i * 137.5) % 360) - 180 + (rnd() - 0.5) * 10;
+    catEarthAnchor.set(c, { lat, lon });
+  });
+}
+function applyEarthLayout(){
+  if (!catEarthAnchor.size) assignEarthAnchors();
+  for (const { c } of cats){
+    const anchor = catEarthAnchor.get(c);
+    if (!anchor) continue;
+    const base = latLonToVec3(anchor.lat, anchor.lon, EARTH_LAYOUT_R);
+    for (const n of nodes){
+      if (n.category !== c) continue;
+      const s = n.__shape || [0, 0, 0];
+      n.fx = base.x + s[0] * 0.4; n.fy = base.y + s[1] * 0.4; n.fz = base.z + s[2] * 0.4;
+    }
+  }
+  Graph.d3ReheatSimulation();
+}
+let earthLayoutSphere = null;
+async function buildEarthLayoutSphere(){
+  try {
+    let earthUrl = null;
+    const res = await fetch("data/planet_textures.json");
+    if (res.ok) earthUrl = (await res.json())?.earth?.url || null;
+    const build = (tex) => {
+      const mat = new THREE.MeshBasicMaterial({
+        map: tex || null, color: tex ? 0xffffff : 0x3a6fb0, transparent: true, opacity: 0.35, depthWrite: false,
+      });
+      earthLayoutSphere = new THREE.Mesh(new THREE.SphereGeometry(EARTH_LAYOUT_R * 0.9, 40, 40), mat);
+      earthLayoutSphere.visible = layoutMode === "earth";
+      Graph.scene().add(earthLayoutSphere);
+    };
+    if (earthUrl) new THREE.TextureLoader().load(earthUrl, build, undefined, () => build(null));
+    else build(null);
+  } catch (e){ console.warn("earth layout sphere skipped", e); }
+}
 let _layoutFitTimer = null;
 function setLayoutMode(mode){
   layoutMode = mode;
-  if (mode === "board") applyBoardLayout(); else applyNetworkLayout();
+  if (mode === "board") applyBoardLayout();
+  else if (mode === "earth") applyEarthLayout();
+  else applyNetworkLayout();
   refresh();
-  // 보드형은 위치가 즉시 확정되고, 네트워크형은 물리 시뮬레이션이 어느 정도 퍼질 시간이 필요함
+  if (earthLayoutSphere) earthLayoutSphere.visible = mode === "earth";
+  // 보드형·지구형은 위치가 즉시 확정되고, 네트워크형은 물리 시뮬레이션이 어느 정도 퍼질 시간이 필요함
   clearTimeout(_layoutFitTimer);
-  _layoutFitTimer = setTimeout(() => Graph.zoomToFit(400, 60), mode === "board" ? 300 : 1200);
+  _layoutFitTimer = setTimeout(() => Graph.zoomToFit(400, 60), mode === "network" ? 1200 : 500);
 }
 
 /* ---- 필터 ---- */
@@ -1290,6 +2002,8 @@ function buildSidebar(){
     if (on) fillCatBody(body, c);
     refresh();
     if (on){
+      // 카테고리 선택 시 오른쪽 상세패널에 조합·가성비 총평을 바로 보여줌(개별 별을 안 눌러도 됨)
+      openCategoryDrawer(c);
       // 필터가 반영되어 별들이 새 자리로 좀 퍼진 뒤에 측정해야 카메라가 엉뚱한 빈 자리를 보지 않음
       clearTimeout(_catFocusTimer);
       _catFocusTimer = setTimeout(() => focusCategory(c), 550);
@@ -1328,6 +2042,13 @@ function buildSidebar(){
   $("#sleepExit").addEventListener("click", exitSleepMode);
   document.addEventListener("keydown", e => { if (sleepMode && e.key === "Escape") exitSleepMode(); });
 
+  if (localStorage.getItem("galaxyTipDismissed") === "1") document.body.classList.add("tip-dismissed");
+  $("#tipBarClose").addEventListener("click", () => {
+    document.body.classList.add("tip-dismissed");
+    try { localStorage.setItem("galaxyTipDismissed", "1"); } catch (e){}
+  });
+  $("#comboOpen").addEventListener("click", openComboDlg);
+  $("#comboClose").addEventListener("click", () => $("#comboDlg").close());
   $("#suggestOpen").addEventListener("click", openSuggest);
   $("#addBtn").addEventListener("click", openSuggest);
   $("#suggestCancel").addEventListener("click", () => $("#suggestDlg").close());
@@ -1346,6 +2067,7 @@ function applyLanguage(){
   $("#lblMapView").textContent = tr("mapView");
   $("#optNet").textContent = tr("netMode");
   $("#optBoard").textContent = tr("boardMode");
+  $("#optEarth").textContent = tr("earthMode");
   $("#lblPricing").textContent = tr("pricing");
   const priceKeys = ["free", "freemium", "paid", "unspecified"];
   document.querySelectorAll("#priceChecks [data-price-label]").forEach((el, i) => { el.textContent = tr(priceKeys[i]); });
@@ -1359,6 +2081,15 @@ function applyLanguage(){
   $("#lblLegendSponsor").textContent = tr("legendSponsor");
   $("#lblAddBtn").textContent = tr("addBtn");
   $("#lblSleepExit").textContent = tr("sleepExit");
+  $("#lblTipBar").textContent = tr("tipBar");
+  $("#lblComboOpen").textContent = tr("comboOpenLabel");
+  $("#lblComboDlgTitle").textContent = tr("comboDlgTitle");
+  $("#comboClose").textContent = tr("close");
+  $("#soundBtn").title = tr("ttSound");
+  $("#zIn").title = tr("ttZoomIn");
+  $("#zOut").title = tr("ttZoomOut");
+  $("#zReset").title = tr("ttZoomFit");
+  $("#zFit").title = tr("ttFullscreen");
   $("#lblSuggestTitle").textContent = tr("suggestTitle");
   $("#lblFieldName").textContent = tr("fieldName");
   $("#lblFieldUrl").textContent = tr("fieldUrl");
@@ -1374,23 +2105,33 @@ function applyLanguage(){
     buildConstellationLabels();
     refresh();
   }
+  for (const s of affiliateSuns){
+    const src = affiliateSunsData?.find(x => x.site_url === s.link);
+    if (src) s.label.text = sunLabel(src);
+  }
   if (curNode) openDrawer(curNode);
 }
 /* ---- 배경음: 실제 음원 파일 대신, 저작권/네트워크 문제 없는 합성 우주 앰비언트를 즉석에서 생성 ---- */
 let audioCtx = null, audioOn = false, masterGain = null;
-const AMBIENT_VOLUME = { normal: 0.055, sleep: 0.1 };
+// 휴대폰 최대 볼륨으로도 거의 안 들린다는 피드백 반영 — 기존(0.055/0.1) 대비 약 3배로 상향.
+// 합성 소스 자체 레벨은 그대로 두고, 상향된 마스터 게인이 클리핑되지 않도록 컴프레서를 하나 더 둠.
+const AMBIENT_VOLUME = { normal: 0.16, sleep: 0.3 };
 function initAmbientAudio(){
   audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  const compressor = audioCtx.createDynamicsCompressor();
+  compressor.threshold.value = -18; compressor.ratio.value = 4;
+  compressor.attack.value = 0.02; compressor.release.value = 0.3;
+  compressor.connect(audioCtx.destination);
   const master = audioCtx.createGain();
   master.gain.value = AMBIENT_VOLUME.normal;
-  master.connect(audioCtx.destination);
+  master.connect(compressor);
   masterGain = master;
 
   // 아주 느린 "숨쉬듯" 볼륨 변화 — 수면 모드에서 특히 편안하게 들리도록
   const breathLfo = audioCtx.createOscillator();
   breathLfo.frequency.value = 0.045;
   const breathGain = audioCtx.createGain();
-  breathGain.gain.value = 0.012;
+  breathGain.gain.value = 0.03;
   breathLfo.connect(breathGain); breathGain.connect(master.gain);
   breathLfo.start();
 
@@ -1541,7 +2282,7 @@ async function openDrawer(n){
   wireDrawer(n);
 }
 function closeDrawer(){
-  curNode = null; $("#drawer").classList.remove("open"); resizeGraph();
+  curNode = null; curCategoryDrawer = null; $("#drawer").classList.remove("open"); resizeGraph();
   updateSelectionRing();
   syncSelectedToolButton();
   if (highlightedCategory){ highlightedCategory = null; Graph.nodeThreeObject(nodeObject).refresh(); }
@@ -1586,6 +2327,8 @@ function drawerHTML(n, reviews){
     ${!n.info_verified ? `<div class="conf-hint">${tr("confEstimatedHint")}</div>` : ""}` : ""}
 
     ${nb.length ? `<div class="d-sec">${tr("together")}</div><div class="chips">${nb.map(x => `<button class="chip" data-go="${x.n.id}">${esc(displayName(x.n))}</button>`).join("")}</div>` : ""}
+
+    ${(() => { const combos = combosForNode(n.id).slice(0, 4); return combos.length ? `<div class="d-sec">${tr("comboSecTitle")}</div><div class="combo-list">${combos.map(comboCardHTML).join("")}</div>` : ""; })()}
 
     <div class="d-sec">${tr("reviewLabel")} <b>${reviews ? reviews.length : ""}</b></div>
     <form class="rv-form" id="rvForm">
