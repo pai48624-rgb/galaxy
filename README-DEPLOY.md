@@ -74,3 +74,9 @@ const CONFIG = {
   Table Editor 에서 바로잡으면 됩니다.
 - **SEO**: `#seoList` 는 JS 로 채우는 텍스트 목록입니다. 완전한 정적 SEO 가 필요하면
   빌드 시 이 목록을 HTML 로 미리 렌더(프리렌더)하는 스텝을 추가하세요.
+- **상세정보 보강(가격정책/핵심기능 등)**: `data/ai_enrichment.json` + `apply-enrichment.mjs`
+  로 관리합니다. `name_en` 매칭 UPDATE 방식이라 `npm run import` 를 다시 돌려도 안 지워집니다.
+  ⚠ 이 데이터는 실시간 크롤링이 아니라 AI 학습지식 기반 일괄 작성본입니다
+  (`info_verified=true` 42개 유명 툴만 공식 발표 기준으로 비교적 신뢰 가능, 나머지는 추정치 —
+  UI에도 그렇게 표시되어 있으니 신규 데이터 추가 시 이 컬럼들도 같은 방식으로 채우세요).
+  DB를 갱신한 뒤에는 `index.html` 의 인라인 `#seed-data` 를 재생성해야 실제로 반영됩니다.

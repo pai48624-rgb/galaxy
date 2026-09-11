@@ -35,6 +35,16 @@ create table if not exists public.ai_tools (
 create index if not exists ai_tools_category_idx on public.ai_tools (category);
 create index if not exists ai_tools_pricing_idx  on public.ai_tools (pricing);
 
+-- 상세정보 보강(2026-09-11): 가격정책/요금제 상세/보강 설명/핵심기능 — 대부분 AI(Claude) 학습지식 기반
+-- 추정치이며 실시간 크롤링이 아님(info_verified=true 인 42개 주요 툴만 공식 발표 기준 비교적 신뢰 가능).
+-- UI에는 반드시 info_verified=false 인 항목에 "AI 추정" 같은 표시를 같이 보여줄 것.
+alter table public.ai_tools add column if not exists pricing_policy  text;
+alter table public.ai_tools add column if not exists pricing_detail  text;
+alter table public.ai_tools add column if not exists long_desc_ko    text;
+alter table public.ai_tools add column if not exists key_features    text[] not null default '{}';
+alter table public.ai_tools add column if not exists info_confidence text;
+alter table public.ai_tools add column if not exists info_verified   boolean not null default false;
+
 -- ────────────────────────────────────────────────────────────────────────────
 --  2. relations  —  별과 별을 잇는 선 (무방향, 쌍당 1행)
 --     kind = 'complement'  → 보완재(함께 사용) : 실선 + 입자 흐름
