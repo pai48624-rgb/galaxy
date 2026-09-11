@@ -119,12 +119,12 @@
 <span class="hidden" aria-hidden="true"></span>
 
 <nav class="bg-white/80 backdrop-blur sticky top-0 z-10 shadow-sm">
-  <div class="max-w-5xl mx-auto px-4 py-2.5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1.5">
+  <div class="max-w-5xl mx-auto px-4 py-2.5 flex flex-col gap-1.5">
     <a href="/" class="flex items-center gap-2 shrink-0">
       <img src="{{ static_v('logo.png') }}" alt="로고" class="w-8 h-8 rounded-full ring-1 ring-indigo-200 object-cover">
       <span class="text-lg font-extrabold text-indigo-600 leading-none whitespace-nowrap">로또 스틸의 법칙</span>
     </a>
-    <div class="flex gap-3 text-xs sm:text-sm font-semibold overflow-x-auto whitespace-nowrap -mx-4 px-4 sm:mx-0 sm:px-0">
+    <div class="flex gap-3 text-xs sm:text-sm font-semibold overflow-x-auto whitespace-nowrap">
       <a href="/" class="{{ 'text-indigo-600' if request.path == '/' else 'text-gray-500' }} hover:text-indigo-600">행운번호</a>
       <a href="/generate" class="{{ 'text-indigo-600' if request.path == '/generate' else 'text-gray-500' }} hover:text-indigo-600">번호생성</a>
       <a href="/check" class="{{ 'text-indigo-600' if request.path == '/check' else 'text-gray-500' }} hover:text-indigo-600">당첨확인</a>

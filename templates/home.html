@@ -101,8 +101,8 @@
       </div>
     </div>
     <div class="text-center">
-      <button onclick="analyzeProfile('borrow')" class="px-8 py-3 rounded-full font-bold transition borrow-btn-primary">
-        😉 행운 빌려보기
+      <button onclick="revealProfile('borrow')" class="px-8 py-3 rounded-full font-bold transition borrow-btn-primary">
+        😉 행운 빌려서 번호 뽑기
       </button>
     </div>
   </section>
@@ -111,17 +111,17 @@
     <p id="borrow-phrase" class="text-center font-bold mb-4 borrow-phrase"></p>
 
     <section class="borrow-card rounded-2xl p-6 md:p-8 mb-6">
-      <h2 class="font-bold mb-1 borrow-title">🎯 빌린 행운으로 번호 뽑기</h2>
+      <h2 class="font-bold mb-1 borrow-title">🎯 빌린 행운으로 뽑은 번호</h2>
       <p class="text-xs mb-4 borrow-sub">
         <b>반대 방식</b>으로 뽑아요: 오래 안 나온(COLD) 번호 통계 + 상대방 궁합점수를 섞습니다.
       </p>
       <div id="ball-result-borrow" class="flex flex-wrap gap-3 justify-center min-h-[64px] items-center mb-4">
-        <span class="text-sm" style="color:rgba(253,241,224,0.4);">버튼을 눌러 번호를 뽑아보세요</span>
+        <span class="text-sm" style="color:rgba(253,241,224,0.4);">위에서 "행운 빌려서 번호 뽑기"를 누르면 표시돼요</span>
       </div>
       <p id="borrow-remaining-label" class="text-center text-[11px] mb-4" style="color:#e6d3ff;"></p>
       <div class="flex flex-wrap gap-3 justify-center">
-        <button onclick="generatePersonal('borrow')" class="px-8 py-3 rounded-full font-bold transition borrow-btn-primary">
-          🎲 빌린 번호 뽑기
+        <button onclick="regenerate('borrow')" class="px-8 py-3 rounded-full font-bold transition borrow-btn-ghost">
+          🔄 다시 뽑기
         </button>
         <button onclick="saveCombo('borrow')" class="px-8 py-3 rounded-full font-bold transition borrow-btn-ghost">
           💾 내 번호함에 저장
@@ -145,7 +145,7 @@
       <div class="borrow-card rounded-2xl p-6">
         <h2 class="font-bold mb-1" style="color:#ffe9a8;">💚 빌려온 행운번호</h2>
         <p id="borrow-summary" class="text-xs mb-4 borrow-sub"></p>
-        <div id="borrow-lucky-list" class="flex flex-wrap gap-2"><span class="text-xs" style="color:rgba(253,241,232,0.4);">위에서 "행운 빌려보기"를 누르면 표시돼요</span></div>
+        <div id="borrow-lucky-list" class="flex flex-wrap gap-2"><span class="text-xs" style="color:rgba(253,241,232,0.4);">위에서 "행운 빌려서 번호 뽑기"를 누르면 표시돼요</span></div>
       </div>
       <div class="borrow-card rounded-2xl p-6">
         <h2 class="font-bold mb-1" style="color:#ff9d9d;">💔 이 번호는 돌려드릴게요</h2>
@@ -180,25 +180,25 @@
       </div>
     </div>
     <div class="text-center">
-      <button onclick="analyzeProfile('self')" class="px-8 py-3 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold shadow-lg shadow-indigo-200 transition">
-        ✨ 내 행운번호 분석하기
+      <button onclick="revealProfile('self')" class="px-8 py-3 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold shadow-lg shadow-indigo-200 transition">
+        ✨ 내 행운번호 분석 + 번호 뽑기
       </button>
     </div>
   </section>
 
   <div id="result-self">
     <section class="bg-white rounded-2xl shadow-md p-6 md:p-8 mb-6">
-      <h2 class="font-bold mb-1">🎯 맞춤 번호 생성하기</h2>
+      <h2 class="font-bold mb-1">🎯 맞춤으로 뽑은 번호</h2>
       <p class="text-xs text-gray-400 mb-4">
         내 궁합점수 + <b>자주 나온(HOT)</b> 번호 통계를 섞어서 6개를 뽑아요.
       </p>
       <div id="ball-result-self" class="flex flex-wrap gap-3 justify-center min-h-[64px] items-center mb-4">
-        <span class="text-gray-300">버튼을 눌러 맞춤 번호를 생성해보세요</span>
+        <span class="text-gray-300">위에서 "내 행운번호 분석 + 번호 뽑기"를 누르면 표시돼요</span>
       </div>
       <p id="self-remaining-label" class="text-center text-[11px] text-indigo-400 mb-4"></p>
       <div class="flex flex-wrap gap-3 justify-center">
-        <button onclick="generatePersonal('self')" class="px-8 py-3 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold shadow-lg shadow-emerald-200 transition">
-          🎲 맞춤 번호 생성하기
+        <button onclick="regenerate('self')" class="px-8 py-3 rounded-full bg-white border-2 border-emerald-600 text-emerald-600 font-bold transition hover:bg-emerald-50">
+          🔄 다시 뽑기
         </button>
         <button onclick="saveCombo('self')" class="px-8 py-3 rounded-full bg-white border-2 border-emerald-600 text-emerald-600 font-bold transition hover:bg-emerald-50">
           💾 내 번호함에 저장
@@ -222,7 +222,7 @@
       <div class="bg-white rounded-2xl shadow-md p-6">
         <h2 class="font-bold mb-1 text-emerald-600">💚 나와 잘 맞는 번호</h2>
         <p id="self-summary" class="text-xs text-gray-400 mb-4"></p>
-        <div id="self-lucky-list" class="flex flex-wrap gap-2"><span class="text-xs text-gray-300">위에서 "내 행운번호 분석하기"를 누르면 표시돼요</span></div>
+        <div id="self-lucky-list" class="flex flex-wrap gap-2"><span class="text-xs text-gray-300">위에서 "내 행운번호 분석 + 번호 뽑기"를 누르면 표시돼요</span></div>
       </div>
       <div class="bg-white rounded-2xl shadow-md p-6">
         <h2 class="font-bold mb-1 text-rose-500">💔 나와 안 맞는 번호</h2>
@@ -278,16 +278,15 @@ function getInputs(ns) {
   };
 }
 
-async function analyzeProfile(ns) {
+/* 프로필 궁합 분석 부분만 담당 (번호 생성 없이 lucky/unlucky/문구만 채운다). */
+async function loadProfile(ns) {
   const { mbti, blood, birth } = getInputs(ns);
-  if (!birth) { alert("생년월일을 선택해주세요."); return; }
   const makeBall = ns === "borrow" ? (item => ballGold(item.number)) : (item => ball(item.number, item.color));
 
   const res = await fetch(`/api/personal/profile?mbti=${mbti}&blood=${blood}&birth=${birth}`);
   const data = await res.json();
-  if (!res.ok) { alert(data.error); return; }
+  if (!res.ok) { alert(data.error); return false; }
 
-  document.getElementById(`result-${ns}`).classList.remove("hidden");
   document.getElementById(`${ns}-summary`).textContent =
     `${data.mbti}(${data.mbti_keyword}) · ${data.blood_type}형(${data.blood_keyword}) · 라이프패스 넘버 ${data.life_path_number}`;
 
@@ -305,15 +304,12 @@ async function analyzeProfile(ns) {
     const phraseData = await phraseRes.json();
     document.getElementById("borrow-phrase").textContent = phraseData.phrase;
   }
-
-  renderRemainingLabel(`${ns}-remaining-label`);
-  document.getElementById(`result-${ns}`).scrollIntoView({ behavior: "smooth" });
+  return true;
 }
 
-async function generatePersonal(ns) {
-  if (!guardGenerate()) return;
+/* 번호 생성 부분만 담당 (오늘 남은 생성 횟수를 소비한다). */
+async function drawNumbers(ns) {
   const { mbti, blood, birth } = getInputs(ns);
-  if (!birth) { alert("생년월일을 선택해주세요."); return; }
   const statMode = ns === "borrow" ? "cold" : "hot";
 
   const res = await fetch(`/api/generate/personal?mbti=${mbti}&blood=${blood}&birth=${birth}&weight=0.6&stat_mode=${statMode}`);
@@ -329,6 +325,27 @@ async function generatePersonal(ns) {
   });
   box.dataset.numbers = JSON.stringify(data.numbers);
   renderRemainingLabel(`${ns}-remaining-label`);
+}
+
+/* 메인 버튼 하나로 "궁합 분석 + 번호 뽑기"를 한 번에 처리한다(통합 버튼). */
+async function revealProfile(ns) {
+  const { birth } = getInputs(ns);
+  if (!birth) { alert("생년월일을 선택해주세요."); return; }
+  if (!guardGenerate()) return;
+
+  const ok = await loadProfile(ns);
+  if (!ok) return;
+  await drawNumbers(ns);
+
+  document.getElementById(`result-${ns}`).scrollIntoView({ behavior: "smooth" });
+}
+
+/* "다시 뽑기": 프로필은 그대로 두고 번호만 새로 뽑는다(오늘 남은 횟수 소비). */
+async function regenerate(ns) {
+  const { birth } = getInputs(ns);
+  if (!birth) { alert("생년월일을 선택해주세요."); return; }
+  if (!guardGenerate()) return;
+  await drawNumbers(ns);
 }
 
 async function saveCombo(ns) {
