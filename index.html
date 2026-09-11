@@ -254,7 +254,8 @@
       <div id="zoom">
         <button id="zIn" aria-label="확대">+</button>
         <button id="zOut" aria-label="축소">−</button>
-        <button id="zFit" aria-label="전체 보기"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+        <button id="zReset" aria-label="전체 별 한눈에 보기"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/></svg></button>
+        <button id="zFit" aria-label="전체화면"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
       </div>
       <div id="legend">
         <span><span class="lg-line"></span>보완재 (함께 사용)</span>
@@ -385,7 +386,7 @@ async function selectAll(table, cols){
 
 let nodes = [], links = [], nodeById = new Map(), cats = [];
 const state = { cats: new Set(), price: new Set(["무료","부분유료","유료","미지정"]), q: "" };
-let Graph, SHOW_LABELS = false, layoutMode = "network", didInitialFit = false, userTouchedCamera = false, wasSearching = false, _searchFitTimer = null, _catFocusTimer = null;
+let Graph, SHOW_LABELS = false, layoutMode = "network", didInitialFit = false, userTouchedCamera = false, wasSearching = false, _searchFitTimer = null, _catFocusTimer = null, highlightedCategory = null;
 
 const linkEnds = l => [typeof l.source === "object" ? l.source.id : l.source,
                        typeof l.target === "object" ? l.target.id : l.target];
@@ -589,7 +590,7 @@ function nodeObject(n){
     halo.scale.setScalar(46);
     g.add(halo);
   }
-  if (isSponsor || SHOW_LABELS){
+  if (isSponsor || SHOW_LABELS || n.category === highlightedCategory){
     const t = new SpriteText(n.name);
     t.textHeight = isSponsor ? 7 : 4;
     t.color = isSponsor ? "#ffe6ad" : "#eef0fb";
@@ -617,13 +618,13 @@ function buildConstellationLabels(){
     const labelText = constName ? `✦ ${constName}(${c})` : c;
 
     const t = new SpriteText(labelText);
-    t.textHeight = constName ? 30 : 19; // 전체 지도를 축소해서 봐도 읽히도록(아래에서 거리에 따라 재조정됨)
-    t.color = constName ? "#fff3d8" : "#cfd8f5";
+    t.textHeight = constName ? 30 : 22; // 전체 지도를 축소해서 봐도 읽히도록(아래에서 거리에 따라 재조정됨)
+    t.color = constName ? "#fff3d8" : "#dbe2f8";
     t.fontFace = "system-ui, sans-serif";
     t.material.depthWrite = false;
     t.material.depthTest = false;
     t.material.transparent = true;
-    t.material.opacity = constName ? 0.95 : 0.78;
+    t.material.opacity = constName ? 0.95 : 0.86;
     Graph.scene().add(t);
     const baseScale = t.scale.clone();
 
@@ -727,6 +728,50 @@ function initGraph(){
     geo.setAttribute("position", new THREE.BufferAttribute(pos, 3));
     Graph.scene().add(new THREE.Points(geo, new THREE.PointsMaterial({ color: 0x9aa0c0, size: 1.6, sizeAttenuation: true, transparent: true, opacity: 0.7 })));
   } catch (e){ console.warn("starfield skipped", e); }
+
+  try { initMeteors(); } catch (e){ console.warn("meteors skipped", e); }
+}
+
+/* ---- 가끔 지나가는 별똥별(운석) — 물리 시뮬레이션과 무관하게 항상 돌아가는 별도 애니메이션 루프 ---- */
+function initMeteors(){
+  const group = new THREE.Group();
+  Graph.scene().add(group);
+  const active = [];
+
+  function spawnMeteor(){
+    const span = 3200;
+    const start = new THREE.Vector3((Math.random() - 0.5) * span, (Math.random() - 0.5) * span, (Math.random() - 0.5) * span);
+    const dir = new THREE.Vector3(Math.random() - 0.5, Math.random() * -0.6 - 0.2, Math.random() - 0.5).normalize();
+    const length = 50 + Math.random() * 70;
+    const end = start.clone().addScaledVector(dir, -length);
+    const geo = new THREE.BufferGeometry().setFromPoints([start, end]);
+    const mat = new THREE.LineBasicMaterial({ color: 0xdfe8ff, transparent: true, opacity: 0 });
+    const line = new THREE.Line(geo, mat);
+    group.add(line);
+    active.push({ line, dir, speed: 500 + Math.random() * 400, life: 0, maxLife: 0.9 + Math.random() * 0.6 });
+  }
+
+  let lastT = performance.now(), lastSpawn = 0;
+  function tick(t){
+    requestAnimationFrame(tick);
+    const dt = Math.min(0.05, (t - lastT) / 1000); lastT = t;
+    if (t - lastSpawn > 2600 + Math.random() * 5200 && active.length < 3){
+      lastSpawn = t; spawnMeteor();
+    }
+    for (let i = active.length - 1; i >= 0; i--){
+      const m = active[i];
+      m.life += dt;
+      const p = m.life / m.maxLife;
+      if (p >= 1){
+        group.remove(m.line); m.line.geometry.dispose(); m.line.material.dispose();
+        active.splice(i, 1);
+        continue;
+      }
+      m.line.position.copy(m.dir.clone().multiplyScalar(-m.speed * m.life));
+      m.line.material.opacity = p < 0.15 ? p / 0.15 : p > 0.7 ? (1 - p) / 0.3 : 1;
+    }
+  }
+  requestAnimationFrame(tick);
 }
 
 /* ---- 이름 붙은(별자리 모양) 그룹은 별 하나를 드래그하면 그룹 전체가 함께 움직임 ---- */
@@ -747,18 +792,19 @@ function dragGroup(n, translate){
   }
 }
 
+function setHighlightedCategory(c){
+  if (highlightedCategory === c) return;
+  highlightedCategory = c;
+  Graph.nodeThreeObject(nodeObject).refresh();
+}
+
 function focusNode(id){
   const n = nodeById.get(id);
   if (!n || n.x == null) return;
-  userTouchedCamera = true;
-  // 노드에서 고정 거리만큼 떨어뜨려서 "별 하나만 꽉 채움"과 "은하 전체"의 중간 정도로 보이게 함
-  const dist = Math.hypot(n.x, n.y, n.z || 1) || 1;
-  const d = 260;
-  const ux = n.x / dist, uy = n.y / dist, uz = (n.z || 0) / dist;
-  Graph.cameraPosition(
-    { x: n.x + ux * d, y: n.y + uy * d, z: (n.z || 0) + uz * d },
-    n, 1200
-  );
+  // 별 하나만 꽉 채우는 클로즈업 대신, 이 별이 속한 그룹 전체를 중간 크기로 앞에 가져와서 보여줌
+  // (그래야 옆에 같이 뜬 다른 별들 이름도 같이 보여서 "이게 무슨 별인지" 알 수 있음)
+  setHighlightedCategory(n.category);
+  focusCategory(n.category);
 }
 
 /* ---- 멀리/뒤쪽에 있는 작은 성단도 카테고리 클릭 한 번으로 앞으로 가져와서 크게 보기 ---- */
@@ -771,7 +817,8 @@ function focusCategory(c){
   cx /= members.length; cy /= members.length; cz /= members.length;
   let maxR = 0;
   for (const n of members){ const r = Math.hypot(n.x - cx, n.y - cy, (n.z || 0) - cz); if (r > maxR) maxR = r; }
-  const dist = Math.max(200, maxR * 2.6);
+  // 카테고리가 크면(예: 60개) 임의 지그재그 모양이 넓게 퍼질 수 있어서, 너무 멀리 빠지지 않게 상한을 둠
+  const dist = Math.min(950, Math.max(200, maxR * 2.6));
   const dirLen = Math.hypot(cx, cy, cz) || 1;
   const ux = cx / dirLen, uy = cy / dirLen, uz = cz / dirLen;
   Graph.cameraPosition(
@@ -956,12 +1003,25 @@ function buildSidebar(){
   $("#menuBtn").addEventListener("click", () => $("#sidebar").classList.toggle("open"));
   $("#zIn").addEventListener("click", () => zoomBy(0.75));
   $("#zOut").addEventListener("click", () => zoomBy(1.33));
-  $("#zFit").addEventListener("click", () => { userTouchedCamera = true; Graph.zoomToFit(600, 40); });
+  $("#zReset").addEventListener("click", () => { userTouchedCamera = true; Graph.zoomToFit(600, 40); });
+  $("#zFit").addEventListener("click", toggleFullscreen);
+  document.addEventListener("fullscreenchange", () => {
+    setTimeout(() => { resizeGraph(); Graph.zoomToFit(500, 60); }, 60);
+  });
 
   $("#suggestOpen").addEventListener("click", openSuggest);
   $("#addBtn").addEventListener("click", openSuggest);
   $("#suggestCancel").addEventListener("click", () => $("#suggestDlg").close());
   $("#suggestForm").addEventListener("submit", submitSuggest);
+}
+function toggleFullscreen(){
+  userTouchedCamera = true;
+  const el = document.documentElement;
+  if (!document.fullscreenElement){
+    (el.requestFullscreen || el.webkitRequestFullscreen || el.msRequestFullscreen)?.call(el);
+  } else {
+    (document.exitFullscreen || document.webkitExitFullscreen || document.msExitFullscreen)?.call(document);
+  }
 }
 function zoomBy(k){
   userTouchedCamera = true;
@@ -998,7 +1058,10 @@ async function openDrawer(n){
   $("#drawer").innerHTML = drawerHTML(n, error ? [] : (data || []));
   wireDrawer(n);
 }
-function closeDrawer(){ curNode = null; $("#drawer").classList.remove("open"); resizeGraph(); }
+function closeDrawer(){
+  curNode = null; $("#drawer").classList.remove("open"); resizeGraph();
+  if (highlightedCategory){ highlightedCategory = null; Graph.nodeThreeObject(nodeObject).refresh(); }
+}
 
 function drawerHTML(n, reviews){
   const nb = neighbors(n.id);
