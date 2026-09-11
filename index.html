@@ -355,7 +355,7 @@ function affiliate(url){
   try { const u = new URL(url); u.searchParams.set(AFFILIATE_PARAM, AFFILIATE_VALUE); return u.toString(); }
   catch { return url; }
 }
-const catColor = (() => { const c = {}; return s => c[s] || (c[s] = `hsl(${[...String(s)].reduce((h,ch)=>(h*31+ch.charCodeAt(0))>>>0,0)%360} 60% 68%)`); })();
+const catHue = (() => { const c = {}; return s => c[s] ?? (c[s] = [...String(s)].reduce((h,ch)=>(h*31+ch.charCodeAt(0))>>>0,0) % 360); })();
 
 /* ---- 설정 안 됨 → 안내 오버레이 ---- */
 if (!/^https:\/\/[a-z0-9.-]+(\.supabase\.co|\.pages\.dev\/api|\/api)$/i.test(CONFIG.SUPABASE_URL)
@@ -466,6 +466,11 @@ const CONST_TEMPLATES = {
   7: [[-64,10,0],[-36,24,4],[-8,18,-6],[16,28,8],[32,-2,-4],[56,-10,10],[74,-34,-8]],
   8: [[-50,34,0],[-16,44,8],[18,36,-6],[46,14,4],[44,-20,-4],[10,-42,6],[-24,-38,-6],[-52,-8,4]],
 };
+// 실제 별자리에서 따온 이름(개수가 맞는 대표 그룹에만 표시). 정확히 대응 안 되는 개수는 붙이지 않음.
+const CONST_NAMES = {
+  3: "트라이앵글자리", 4: "남십자자리", 5: "카시오페이아자리",
+  6: "왕관자리", 7: "북두칠성", 8: "돛자리",
+};
 function mulberry32(a){
   return function(){
     a |= 0; a = (a + 0x6D2B79F5) | 0;
@@ -491,11 +496,14 @@ function shapeOffsets(n, seed){
   const cx = pts.reduce((s,p) => s + p[0], 0) / n, cy = pts.reduce((s,p) => s + p[1], 0) / n;
   return pts.map(p => [p[0] - cx, p[1] - cy, p[2]]);
 }
+let catShapeName = new Map(); // category -> 별자리 이름(있는 경우만)
 function assignConstellationShapes(){
+  catShapeName = new Map();
   for (const { c } of cats){
     const members = nodes.filter(x => x.category === c).sort((a,b) => a.id - b.id);
     const offs = shapeOffsets(members.length, hashStr(c));
     members.forEach((n, i) => { n.__shape = offs[i] || [0,0,0]; });
+    if (CONST_NAMES[members.length]) catShapeName.set(c, CONST_NAMES[members.length]);
   }
 }
 function makeShapeForce(){
@@ -532,25 +540,85 @@ function makeGlowTexture(){
 }
 const GLOW = new THREE.SpriteMaterial({ map: makeGlowTexture(), blending: THREE.AdditiveBlending, depthWrite: false, transparent: true });
 
+/* 실사 망원경 사진 느낌의 별(밝은 중심 + 색 코로나 + 십자 회절스파이크), 카테고리 색조별로 캐시 */
+const starTexCache = new Map();
+function starTexture(hue){
+  if (starTexCache.has(hue)) return starTexCache.get(hue);
+  const s = 160, cv = document.createElement("canvas"); cv.width = cv.height = s;
+  const ctx = cv.getContext("2d"), cx = s / 2, cy = s / 2;
+  const g = ctx.createRadialGradient(cx, cy, 0, cx, cy, s / 2);
+  g.addColorStop(0, "rgba(255,255,255,1)");
+  g.addColorStop(0.10, "rgba(255,255,255,.96)");
+  g.addColorStop(0.26, `hsla(${hue},85%,80%,.8)`);
+  g.addColorStop(0.55, `hsla(${hue},80%,62%,.26)`);
+  g.addColorStop(1, `hsla(${hue},80%,55%,0)`);
+  ctx.fillStyle = g; ctx.fillRect(0, 0, s, s);
+  ctx.globalCompositeOperation = "lighter";
+  ctx.strokeStyle = "rgba(255,255,255,.5)";
+  for (const w of [2, 0.7]){
+    ctx.lineWidth = w;
+    ctx.beginPath(); ctx.moveTo(cx, 6); ctx.lineTo(cx, s - 6); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(6, cy); ctx.lineTo(s - 6, cy); ctx.stroke();
+  }
+  const tex = new THREE.CanvasTexture(cv);
+  starTexCache.set(hue, tex);
+  return tex;
+}
+
 function nodeObject(n){
   const g = new THREE.Group();
-  if (n.sponsor){
-    try {
-      const halo = new THREE.Sprite(GLOW.clone());
-      halo.scale.setScalar(48);
-      g.add(halo);
-    } catch (e){ /* glow optional */ }
+  const isSponsor = !!n.sponsor;
+  const hue = isSponsor ? 42 : catHue(n.category);
+  const spr = new THREE.Sprite(new THREE.SpriteMaterial({
+    map: starTexture(hue), blending: THREE.AdditiveBlending, depthWrite: false, transparent: true,
+  }));
+  const size = isSponsor ? 24 : 5 + Math.min(n.deg, 10) * 0.8;
+  spr.scale.setScalar(size);
+  g.add(spr);
+  if (isSponsor){
+    const halo = new THREE.Sprite(GLOW.clone());
+    halo.scale.setScalar(46);
+    g.add(halo);
   }
-  if (n.sponsor || SHOW_LABELS){
+  if (isSponsor || SHOW_LABELS){
     const t = new SpriteText(n.name);
-    t.textHeight = n.sponsor ? 8 : 4.5;
-    t.color = n.sponsor ? "#ffe6ad" : "#d7dbf0";
+    t.textHeight = isSponsor ? 7 : 4;
+    t.color = isSponsor ? "#ffe6ad" : "#eef0fb";
     t.fontFace = "system-ui, sans-serif";
     t.material.depthWrite = false;
-    t.position.y = n.sponsor ? 15 : 7;
+    t.material.depthTest = false; // 별 스프라이트에 가려지지 않고 항상 위에 보이도록
+    t.position.y = size * 0.65 + (isSponsor ? 6 : 4);
     g.add(t);
   }
-  return g.children.length ? g : null;
+  return g;
+}
+
+/* ---- 카테고리 대표 그룹에 별자리 이름 라벨 ---- */
+let constLabels = [];
+function buildConstellationLabels(){
+  for (const { sprite } of constLabels) Graph.scene().remove(sprite);
+  constLabels = [];
+  for (const [c, name] of catShapeName){
+    const members = nodes.filter(n => n.category === c);
+    const t = new SpriteText(`✦ ${name}`);
+    t.textHeight = 6.5;
+    t.color = "#ffe9c2";
+    t.fontFace = "system-ui, sans-serif";
+    t.material.depthWrite = false;
+    t.material.depthTest = false;
+    t.material.transparent = true;
+    t.material.opacity = 0.9;
+    Graph.scene().add(t);
+    constLabels.push({ sprite: t, members });
+  }
+}
+function updateConstellationLabels(){
+  for (const { sprite, members } of constLabels){
+    let n = 0, x = 0, y = 0, z = 0;
+    for (const m of members){ if (m.x == null) continue; x += m.x; y += m.y; z += m.z; n++; }
+    if (!n) continue;
+    sprite.position.set(x / n, y / n + 34, z / n);
+  }
 }
 
 function initGraph(){
@@ -559,13 +627,11 @@ function initGraph(){
     .showNavInfo(false)
     .nodeId("id")
     .nodeLabel(n => `${esc(n.name)}${n.sponsor ? " · 스폰서" : ""}`)
-    .nodeVal(n => n.sponsor ? 34 : 3 + Math.min(n.deg, 10))
-    .nodeColor(n => n.sponsor ? "#ffd479" : catColor(n.category))
-    .nodeOpacity(0.92)
-    .nodeThreeObjectExtend(true)
+    .nodeThreeObjectExtend(false)
     .nodeThreeObject(nodeObject)
-    .linkColor(l => l.kind === "alternative" ? "rgba(240,180,41,.28)" : "rgba(120,210,180,.42)")
-    .linkWidth(l => l.kind === "alternative" ? 0.4 : 0.9)
+    .linkColor(l => l.kind === "alternative" ? "#f0b429" : "#8fd6c4")
+    .linkWidth(l => l.kind === "alternative" ? 0.6 : 1.1)
+    .linkOpacity(0.85)
     .linkDirectionalParticleWidth(1.6)
     .linkDirectionalParticleSpeed(0.006)
     .onNodeClick(n => { openDrawer(n); focusNode(n.id); })
@@ -577,8 +643,11 @@ function initGraph(){
   Graph.onEngineStop(() => {
     if (!didInitialFit){ didInitialFit = true; Graph.zoomToFit(400, 60); }
   });
+  Graph.onEngineTick(updateConstellationLabels);
 
   window.addEventListener("resize", resizeGraph);
+
+  buildConstellationLabels();
 
   // 배경 별 (실패해도 지도는 그대로 동작)
   try {
