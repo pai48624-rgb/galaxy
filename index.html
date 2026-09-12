@@ -1734,14 +1734,16 @@ function nodeObject(n){
   // 흐리게(작고 옅게) 두고 카메라 거리에 따라 tick()에서 더 흐려지거나 살아나게 함(updateFarLabels)
   const isEmph = isSponsor || isTop || SHOW_LABELS || n.category === highlightedCategory;
   const t = new SpriteText(isTop ? `★${topRankMap.get(n.id)} ${displayName(n)}` : displayName(n));
-  t.textHeight = isSponsor ? 7 : isTop ? 6 : isEmph ? 4 : 2.6;
+  // 마우스로 올렸을 때 뜨는 툴팁 글자만큼 커야 한다는 요청 — 별자리 그룹명이 아니라 별 하나하나의
+  // 이름표였음(그동안 계속 다른 걸 고치고 있었음). 실제로 크게 키움.
+  t.textHeight = isSponsor ? 14 : isTop ? 12 : isEmph ? 9 : 6;
   t.color = isSponsor ? "#ffe6ad" : isTop ? "#ffe9c2" : "#eef0fb";
   t.fontFace = "system-ui, sans-serif";
   t.material.depthWrite = false;
   t.material.depthTest = false; // 별 스프라이트에 가려지지 않고 항상 위에 보이도록
   t.material.transparent = true;
   t.material.opacity = isSponsor || isTop || isEmph ? 1 : 0.4; // 기본 별은 흐리게 — tick()에서 거리로 추가 보정
-  t.position.y = size * 0.65 + (isSponsor ? 6 : isTop ? 6 : 4);
+  t.position.y = size * 0.65 + (isSponsor ? 6 : isTop ? 6 : 7);
   g.add(t);
   if (!isEmph) n.__labelObj = t; // 평범한 별만 거리 기반 페이드 대상(위 등급은 항상 또렷하게 고정)
   else n.__labelObj = null;
