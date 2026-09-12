@@ -552,6 +552,7 @@ const I18N = {
     boardLoginBtnLabel: "로그인 링크 받기", boardLoginHint: "이메일로 받은 링크를 눌러서 로그인하면 글을 쓸 수 있어요. (읽기는 로그인 없이 가능)",
     boardLoggedInAs: "로그인됨:", boardLogoutLabel: "로그아웃", boardSubmitLabel: "✎ 등록",
     boardListTitle: "최근 글", boardNone: "아직 글이 없어요. 첫 글을 남겨보세요.", boardDelete: "삭제",
+    boardWriteToggle: "✎ 글쓰기 (로그인 필요)",
     boardLoginSent: "로그인 링크를 이메일로 보냈어요 ✓", boardLoginFail: "로그인 링크 전송 실패 — 이메일을 확인해주세요",
     boardPostFail: "등록 실패 — 로그인 상태를 확인해주세요",
     comboBuildToggleLabel: "🔗 내 별 조합 만들기", comboBuildHint: "🔗 별을 2개 이상 클릭해서 골라보세요(최대 5개)",
@@ -599,6 +600,7 @@ const I18N = {
     boardLoginBtnLabel: "Get login link", boardLoginHint: "Click the link emailed to you to log in and post. (Reading doesn't require login)",
     boardLoggedInAs: "Logged in:", boardLogoutLabel: "Log out", boardSubmitLabel: "✎ Post",
     boardListTitle: "Recent posts", boardNone: "No posts yet — be the first.", boardDelete: "Delete",
+    boardWriteToggle: "✎ Write a post (login required)",
     boardLoginSent: "Login link emailed ✓", boardLoginFail: "Couldn't send login link — check the email address",
     boardPostFail: "Couldn't post — please check you're logged in",
     comboBuildToggleLabel: "🔗 Build my combo", comboBuildHint: "🔗 Click 2 or more stars to pick them (up to 5)",
@@ -1101,6 +1103,8 @@ async function deleteBoardPost(id){
 }
 // 화면을 통째로 덮는 모달 다이얼로그가 과하다는 피드백 — AI 상세정보와 똑같은 오른쪽 슬라이드
 // 패널(#drawer)에 넣어서, 별 클릭했을 때와 똑같은 방식(✕ 누르면 원래 화면으로)으로 통일함
+// 게시판 열자마자 로그인/글쓰기부터 들이미는 게 문제였음 — 누구든 열면 일단 글부터 보여야
+// 정상이고, 글쓰기는 본인이 원할 때만 펼치는 부가 기능으로 둠(읽기가 기본, 쓰기는 선택)
 function boardDrawerHTML(){
   return `
     <div class="d-kicker">${tr("dKicker")}</div>
@@ -1109,30 +1113,34 @@ function boardDrawerHTML(){
       <button class="d-close" aria-label="${tr("close")}">×</button>
     </div>
 
-    <div id="boardAuthLoggedOut">
-      <div style="display:flex;gap:8px">
-        <input type="email" id="boardEmail" placeholder="이메일 주소" style="flex:1;border:1px solid rgba(255,255,255,.16);
-          border-radius:9px;background:rgba(12,12,20,.7);color:var(--ink);font:inherit;font-size:12.5px;padding:9px">
-        <button type="button" class="go" id="boardLoginBtn" style="border:0;border-radius:9px;padding:0 14px;background:var(--purple2);color:#fff;cursor:pointer"><span id="lblBoardLoginBtn">${tr("boardLoginBtnLabel")}</span></button>
+    <div id="boardList" class="combo-list"></div>
+
+    <details class="d-collapse">
+      <summary id="lblBoardWriteToggle">${tr("boardWriteToggle")}</summary>
+      <div class="d-collapse-body">
+        <div id="boardAuthLoggedOut">
+          <div style="display:flex;gap:8px">
+            <input type="email" id="boardEmail" placeholder="이메일 주소" style="flex:1;border:1px solid rgba(255,255,255,.16);
+              border-radius:9px;background:rgba(12,12,20,.7);color:var(--ink);font:inherit;font-size:12.5px;padding:9px">
+            <button type="button" class="go" id="boardLoginBtn" style="border:0;border-radius:9px;padding:0 14px;background:var(--purple2);color:#fff;cursor:pointer"><span id="lblBoardLoginBtn">${tr("boardLoginBtnLabel")}</span></button>
+          </div>
+          <div class="rv-hint" id="lblBoardLoginHint">${tr("boardLoginHint")}</div>
+        </div>
+
+        <div id="boardAuthLoggedIn" hidden style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+          <span style="font-size:12px;color:var(--dim)"><span id="lblBoardLoggedInAs">${tr("boardLoggedInAs")}</span> <b id="boardUserEmail"></b></span>
+          <button type="button" class="ghost" id="boardLogoutBtn" style="padding:5px 10px;font-size:11px;border-radius:9px;border:0;background:rgba(255,255,255,.06);color:var(--dim);cursor:pointer"><span id="lblBoardLogout">${tr("boardLogoutLabel")}</span></button>
+        </div>
+
+        <form id="boardPostForm" hidden style="display:flex;flex-direction:column;gap:8px;margin-top:10px">
+          <input type="text" id="boardPostTitle" maxlength="120" placeholder="제목" style="border:1px solid rgba(255,255,255,.16);
+            border-radius:9px;background:rgba(12,12,20,.7);color:var(--ink);font:inherit;font-size:12.5px;padding:9px">
+          <textarea id="boardPostBody" maxlength="4000" rows="3" placeholder="내용" style="border:1px solid rgba(255,255,255,.16);
+            border-radius:9px;background:rgba(12,12,20,.7);color:var(--ink);font:inherit;font-size:12.5px;padding:9px;resize:vertical"></textarea>
+          <button type="submit" class="d-cta" style="border:0;cursor:pointer"><span id="lblBoardSubmit">${tr("boardSubmitLabel")}</span></button>
+        </form>
       </div>
-      <div class="rv-hint" id="lblBoardLoginHint">${tr("boardLoginHint")}</div>
-    </div>
-
-    <div id="boardAuthLoggedIn" hidden style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
-      <span style="font-size:12px;color:var(--dim)"><span id="lblBoardLoggedInAs">${tr("boardLoggedInAs")}</span> <b id="boardUserEmail"></b></span>
-      <button type="button" class="ghost" id="boardLogoutBtn" style="padding:5px 10px;font-size:11px;border-radius:9px;border:0;background:rgba(255,255,255,.06);color:var(--dim);cursor:pointer"><span id="lblBoardLogout">${tr("boardLogoutLabel")}</span></button>
-    </div>
-
-    <form id="boardPostForm" hidden style="display:flex;flex-direction:column;gap:8px;margin:10px 0">
-      <input type="text" id="boardPostTitle" maxlength="120" placeholder="제목" style="border:1px solid rgba(255,255,255,.16);
-        border-radius:9px;background:rgba(12,12,20,.7);color:var(--ink);font:inherit;font-size:12.5px;padding:9px">
-      <textarea id="boardPostBody" maxlength="4000" rows="3" placeholder="내용" style="border:1px solid rgba(255,255,255,.16);
-        border-radius:9px;background:rgba(12,12,20,.7);color:var(--ink);font:inherit;font-size:12.5px;padding:9px;resize:vertical"></textarea>
-      <button type="submit" class="d-cta" style="border:0;cursor:pointer"><span id="lblBoardSubmit">${tr("boardSubmitLabel")}</span></button>
-    </form>
-
-    <div class="d-sec" id="lblBoardListTitle">${tr("boardListTitle")}</div>
-    <div id="boardList" class="combo-list"></div>`;
+    </details>`;
 }
 function openBoardDrawer(){
   curNode = null;
