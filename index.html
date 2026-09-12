@@ -140,6 +140,7 @@
   .cbb-act .ghost{background:rgba(255,255,255,.06);color:var(--dim)}
   .cbb-act .go{background:#7dffef;color:#04302c;font-weight:800}
   #comboBuildToggle.active{color:#7dffef}
+  #labelsToggleBtn.active{border-color:rgba(240,180,41,.5) !important;color:var(--amber) !important}
   .lnk-desc{font-size:10px;color:var(--faint);line-height:1.5;margin:2px 0 2px 20px}
   #myCombosView{font-size:10.5px;color:#7dffef;background:none;border:0;cursor:pointer;text-decoration:underline;padding:0}
   @media (max-width:600px){ #comboBuildBar{bottom:14px} }
@@ -281,6 +282,8 @@
     <div style="display:flex;align-items:center;gap:10px">
       <button id="langBtn" style="padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.18);
         background:rgba(20,20,32,.7);color:var(--ink);font-size:11px;font-weight:700;cursor:pointer">EN</button>
+      <button id="labelsToggleBtn" style="padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.18);
+        background:rgba(20,20,32,.7);color:var(--ink);font-size:11px;font-weight:700;cursor:pointer"><span id="lblLabelsToggle">라벨 On</span></button>
       <div class="spons" id="sponsSlot" hidden>
         <span class="lab" id="lblSponsToday">오늘의 스폰서</span>
         <a class="spons-card" id="sponsCard" href="#" target="_blank" rel="noopener">
@@ -530,6 +533,7 @@ const I18N = {
     curatedRelTitle: "🔗 실제 연동·연관 AI 툴", bestComboLabel: "가장 잘 맞는 조합",
     altSecTitle: "대안 AI (비슷한 경쟁 제품)", altSecHint: "아래는 이 AI를 대체할 수 있는 비슷한 제품 목록입니다(함께 쓰는 조합 아님).",
     sponsToday: "오늘의 스폰서", privacyLink: "개인정보처리방침",
+    labelsOn: "라벨 On", labelsOff: "라벨 Off",
     comboBuildToggleLabel: "🔗 내 별 조합 만들기", comboBuildHint: "🔗 별을 2개 이상 클릭해서 골라보세요(최대 5개)",
     comboBuildMax: "최대 5개까지 고를 수 있어요", comboBuildClosest: "가장 비슷한 등록 조합",
     comboBuildNone: "아직 이 조합에 딱 맞는 등록된 결과가 없어요. 그래도 저장은 할 수 있어요.",
@@ -570,6 +574,7 @@ const I18N = {
     curatedRelTitle: "🔗 Real integrations & related tools", bestComboLabel: "Best-fit combo",
     altSecTitle: "Alternatives (similar competing products)", altSecHint: "These are products that could replace this one — not a combo to use together.",
     sponsToday: "Today's Sponsor", privacyLink: "Privacy Policy",
+    labelsOn: "Labels On", labelsOff: "Labels Off",
     comboBuildToggleLabel: "🔗 Build my combo", comboBuildHint: "🔗 Click 2 or more stars to pick them (up to 5)",
     comboBuildMax: "You can pick up to 5", comboBuildClosest: "closest registered combo",
     comboBuildNone: "No registered combo matches this exactly yet. You can still save it.",
@@ -660,6 +665,16 @@ const state = { cats: new Set(), price: new Set(["무료","부분유료"]), q: "
 let Graph, SHOW_LABELS = false, layoutMode = "network", didInitialFit = false, userTouchedCamera = false, wasSearching = false, _searchFitTimer = null, _catFocusTimer = null, highlightedCategory = null;
 // "내가 고른 별들을 저장하면 조합 결과가 나온다"는 요청 — 실제 다중 선택 기능이 없었던 걸 뒤늦게 발견해서 추가
 let comboSelectMode = false, comboSelection = [];
+// 라벨 전체 켜기/끄기 — 별 이름표 + 별자리 그룹명을 한 번에 토글
+let labelsVisible = true;
+function setLabelsVisible(on){
+  labelsVisible = on;
+  if (Graph) Graph.nodeThreeObject(nodeObject).refresh();
+  for (const { sprite } of constLabels) sprite.visible = on;
+  for (const o of unusedConstObjs) o.label.visible = on;
+  $("#labelsToggleBtn").classList.toggle("active", !on);
+  $("#lblLabelsToggle").textContent = on ? tr("labelsOn") : tr("labelsOff");
+}
 
 const linkEnds = l => [typeof l.source === "object" ? l.source.id : l.source,
                        typeof l.target === "object" ? l.target.id : l.target];
@@ -1736,7 +1751,8 @@ function nodeObject(n){
   const t = new SpriteText(isTop ? `★${topRankMap.get(n.id)} ${displayName(n)}` : displayName(n));
   // 마우스로 올렸을 때 뜨는 툴팁 글자만큼 커야 한다는 요청 — 별자리 그룹명이 아니라 별 하나하나의
   // 이름표였음(그동안 계속 다른 걸 고치고 있었음). 실제로 크게 키움.
-  t.textHeight = isSponsor ? 14 : isTop ? 12 : isEmph ? 9 : 6;
+  t.textHeight = isSponsor ? 18 : isTop ? 16 : isEmph ? 12 : 8;
+  t.visible = labelsVisible;
   t.color = isSponsor ? "#ffe6ad" : isTop ? "#ffe9c2" : "#eef0fb";
   t.fontFace = "system-ui, sans-serif";
   t.material.depthWrite = false;
@@ -2515,6 +2531,7 @@ function buildSidebar(){
   $("#comboBuildClear").addEventListener("click", () => { comboSelection = []; renderComboBuildBar(); Graph.nodeThreeObject(nodeObject).refresh(); });
   $("#comboBuildSave").addEventListener("click", saveComboSelection);
   $("#myCombosView").addEventListener("click", openMyCombosDlg);
+  $("#labelsToggleBtn").addEventListener("click", () => setLabelsVisible(!labelsVisible));
   $("#comboBuildChips").addEventListener("click", e => {
     const b = e.target.closest("[data-unpick]"); if (!b) return;
     const id = +b.dataset.unpick;
@@ -2566,6 +2583,7 @@ function applyLanguage(){
   $("#lblMyCombosView").textContent = tr("myCombosViewLabel");
   $("#lblSponsToday").textContent = tr("sponsToday");
   $("#lblPrivacyLink").textContent = tr("privacyLink");
+  $("#lblLabelsToggle").textContent = labelsVisible ? tr("labelsOn") : tr("labelsOff");
   if (comboSelectMode) renderComboBuildBar();
   $("#lblComboDlgTitle").textContent = tr("comboDlgTitle");
   $("#comboClose").textContent = tr("close");
