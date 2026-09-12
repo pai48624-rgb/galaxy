@@ -1741,8 +1741,10 @@ function buildConstellationLabels(){
     }
 
     const t = new SpriteText(labelText);
-    // 가까이 가야만 보인다는 피드백 반영 — 크기 2배, 색상도 더 밝게
-    t.textHeight = constName ? 60 : 44;
+    // 기본 글자 크기는 원래대로(전부 2배로 키운 건 되돌림) — 진짜 문제는 아래 updateConstellationLabels의
+    // 거리 보정값(k)이었음: 작은 별자리는 카테고리 클릭 시 카메라가 아주 가깝게 붙는데, k의 최소값이
+    // 너무 낮아서 오히려 "가까이 볼 때 라벨이 제일 작아지는" 역효과가 있었음 — 그 최소값을 올려서 고침
+    t.textHeight = constName ? 30 : 22;
     t.color = constName ? "#fff9d6" : "#eaf1ff";
     t.fontFace = "system-ui, sans-serif";
     t.material.depthWrite = false;
@@ -1765,8 +1767,10 @@ function buildConstellationLabels(){
     constLabels.push({ sprite: t, line, members, baseScale, c, labelOffsetY: shapeR + 28 });
   }
 }
-// 카메라가 가까이 갈수록 라벨을 비례해서 축소 — 화면상 크기가 거리와 상관없이 일정하게(=너무 커지지 않게) 유지됨
-const CONST_LABEL_REF_DIST = 2200;
+// 카메라가 가까이 갈수록 라벨을 비례해서 축소 — 화면상 크기가 거리와 상관없이 일정하게(=너무 커지지 않게) 유지됨.
+// 단, 작은 별자리는 카테고리 클릭 시 카메라가 아주 가깝게 붙어서 이 축소가 심하게 걸려 라벨이
+// 오히려 제일 작아 보이는 역효과가 있었음 — 최소값을 2배로 올려서 가까이 봐도 잘 보이게 함
+const CONST_LABEL_REF_DIST = 2200, CONST_LABEL_MIN_K = 0.56, CONST_LABEL_MAX_K = 1.4;
 function updateConstellationLabels(){
   const camPos = Graph.camera().position;
   for (const { sprite, line, members, baseScale, labelOffsetY } of constLabels){
@@ -1782,7 +1786,7 @@ function updateConstellationLabels(){
     const cx = x / n, cy = y / n + labelOffsetY, cz = z / n;
     sprite.position.set(cx, cy, cz);
     const dist = Math.hypot(camPos.x - cx, camPos.y - cy, camPos.z - cz);
-    const k = Math.min(Math.max(dist / CONST_LABEL_REF_DIST, 0.28), 1.4);
+    const k = Math.min(Math.max(dist / CONST_LABEL_REF_DIST, CONST_LABEL_MIN_K), CONST_LABEL_MAX_K);
     sprite.scale.set(baseScale.x * k, baseScale.y * k, baseScale.z * k);
   }
 }
