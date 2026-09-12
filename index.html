@@ -1775,7 +1775,7 @@ function buildConstellationLabels(){
     // 기본 글자 크기는 원래대로(전부 2배로 키운 건 되돌림) — 진짜 문제는 아래 updateConstellationLabels의
     // 거리 보정값(k)이었음: 작은 별자리는 카테고리 클릭 시 카메라가 아주 가깝게 붙는데, k의 최소값이
     // 너무 낮아서 오히려 "가까이 볼 때 라벨이 제일 작아지는" 역효과가 있었음 — 그 최소값을 올려서 고침
-    t.textHeight = constName ? 30 : 22;
+    t.textHeight = constName ? 70 : 55;
     t.color = constName ? "#fff9d6" : "#eaf1ff";
     t.fontFace = "system-ui, sans-serif";
     t.material.depthWrite = false;
