@@ -549,7 +549,7 @@ const I18N = {
     sponsToday: "오늘의 스폰서", privacyLink: "개인정보처리방침",
     labelsOn: "라벨 On", labelsOff: "라벨 Off",
     boardOpenLabel: "🗨 게시판", boardTitle: "🗨 커뮤니티 게시판",
-    boardLoginBtnLabel: "로그인 링크 받기", boardLoginHint: "이메일로 받은 링크를 눌러서 로그인하면 글을 쓸 수 있어요. (읽기는 로그인 없이 가능)",
+    boardLoginBtnLabel: "로그인 링크 받기", boardLoginHint: "비밀번호 없이 로그인해요: 이메일 주소를 넣고 위 버튼을 누르면, 그 메일함으로 '로그인' 링크가 도착해요. 그 링크를 누르면 이 사이트에 바로 로그인됩니다.",
     boardLoggedInAs: "로그인됨:", boardLogoutLabel: "로그아웃", boardSubmitLabel: "✎ 등록",
     boardListTitle: "최근 글", boardNone: "아직 글이 없어요. 첫 글을 남겨보세요.", boardDelete: "삭제",
     boardWriteToggle: "✎ 글쓰기 (로그인 필요)",
@@ -597,7 +597,7 @@ const I18N = {
     sponsToday: "Today's Sponsor", privacyLink: "Privacy Policy",
     labelsOn: "Labels On", labelsOff: "Labels Off",
     boardOpenLabel: "🗨 Board", boardTitle: "🗨 Community Board",
-    boardLoginBtnLabel: "Get login link", boardLoginHint: "Click the link emailed to you to log in and post. (Reading doesn't require login)",
+    boardLoginBtnLabel: "Get login link", boardLoginHint: "No password needed: enter your email and press the button above, a 'log in' link will arrive in your inbox, and clicking it logs you into this site right away.",
     boardLoggedInAs: "Logged in:", boardLogoutLabel: "Log out", boardSubmitLabel: "✎ Post",
     boardListTitle: "Recent posts", boardNone: "No posts yet — be the first.", boardDelete: "Delete",
     boardWriteToggle: "✎ Write a post (login required)",
@@ -1062,15 +1062,6 @@ async function boardLogin(){
 async function boardLogout(){
   try { await sb.auth.signOut(); } catch (e){}
 }
-// GitHub/구글로 한 번에 로그인 — Supabase 대시보드(Authentication ▸ Providers)에서
-// 해당 provider를 켜고 각 서비스의 OAuth 앱(Client ID/Secret)을 등록해둬야 실제로 동작함
-// (계정 등록은 사이트 소유자만 할 수 있어서 코드만으로는 여기까지가 최선 — 미설정 시 에러 토스트만 뜸)
-async function boardOAuthLogin(provider){
-  try {
-    const { error } = await sb.auth.signInWithOAuth({ provider, options: { redirectTo: location.href } });
-    if (error) toast(tr("boardLoginFail"));
-  } catch (e){ toast(tr("boardLoginFail")); }
-}
 async function loadBoardPosts(){
   $("#boardList").innerHTML = `<div class="rv-hint">${tr("loadingReviews")}</div>`;
   try {
@@ -1128,10 +1119,6 @@ function boardDrawerHTML(){
       <summary id="lblBoardWriteToggle">${tr("boardWriteToggle")}</summary>
       <div class="d-collapse-body">
         <div id="boardAuthLoggedOut">
-          <div style="display:flex;gap:8px;margin-bottom:8px">
-            <button type="button" class="ghost" id="boardGithubBtn" style="flex:1;padding:9px;border-radius:9px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);color:var(--ink);cursor:pointer;font-size:12.5px">🐙 GitHub</button>
-            <button type="button" class="ghost" id="boardGoogleBtn" style="flex:1;padding:9px;border-radius:9px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);color:var(--ink);cursor:pointer;font-size:12.5px">🔵 Google</button>
-          </div>
           <div style="display:flex;gap:8px">
             <input type="email" id="boardEmail" placeholder="이메일 주소" style="flex:1;width:100%;box-sizing:border-box;border:1px solid rgba(255,255,255,.16);
               border-radius:9px;background:rgba(12,12,20,.7);color:var(--ink);font:inherit;font-size:12.5px;padding:10px">
@@ -1170,8 +1157,6 @@ function openBoardDrawer(){
   $("#drawer").querySelector(".d-close").addEventListener("click", closeDrawer);
   $("#boardLoginBtn").addEventListener("click", boardLogin);
   $("#boardLogoutBtn").addEventListener("click", boardLogout);
-  $("#boardGithubBtn").addEventListener("click", () => boardOAuthLogin("github"));
-  $("#boardGoogleBtn").addEventListener("click", () => boardOAuthLogin("google"));
   $("#boardPostForm").addEventListener("submit", submitBoardPost);
   $("#boardPostTitle").addEventListener("input", e => { $("#boardTitleCount").textContent = e.target.value.length; });
   $("#boardPostBody").addEventListener("input", e => { $("#boardBodyCount").textContent = e.target.value.length; });
