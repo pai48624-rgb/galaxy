@@ -1704,13 +1704,14 @@ function buildConstellationLabels(){
     }
 
     const t = new SpriteText(labelText);
-    t.textHeight = constName ? 30 : 22; // 전체 지도를 축소해서 봐도 읽히도록(아래에서 거리에 따라 재조정됨)
-    t.color = constName ? "#fff3d8" : "#dbe2f8";
+    // 가까이 가야만 보인다는 피드백 반영 — 크기 2배, 색상도 더 밝게
+    t.textHeight = constName ? 60 : 44;
+    t.color = constName ? "#fff9d6" : "#eaf1ff";
     t.fontFace = "system-ui, sans-serif";
     t.material.depthWrite = false;
     t.material.depthTest = false;
     t.material.transparent = true;
-    t.material.opacity = constName ? 0.95 : 0.86;
+    t.material.opacity = constName ? 1 : 0.95;
     Graph.scene().add(t);
     const baseScale = t.scale.clone();
 
