@@ -551,6 +551,7 @@ const I18N = {
     boardOpenLabel: "🗨 게시판", boardTitle: "🗨 커뮤니티 게시판",
     boardSignupBtnLabel: "회원가입", boardLoginBtnLabel: "로그인",
     boardLoginHint: "처음이면 이메일·비밀번호 입력 후 '회원가입', 이미 가입했으면 '로그인'을 누르세요.",
+    boardNeedNickname: "닉네임을 입력해주세요", boardSignupRateLimited: "같은 네트워크(IP)에서는 7일에 한 번만 새로 가입할 수 있어요",
     boardPwTooShort: "비밀번호는 6자 이상 입력해주세요", boardSignupFail: "회원가입 실패 — 이미 가입된 이메일이거나 형식이 올바르지 않아요",
     boardSignupOk: "가입 완료! 위에서 바로 로그인해주세요 ✓",
     boardNeedLogin: "글을 쓰려면 먼저 로그인해주세요", boardNeedTitleBody: "제목과 내용을 모두 입력해주세요",
@@ -604,6 +605,7 @@ const I18N = {
     boardOpenLabel: "🗨 Board", boardTitle: "🗨 Community Board",
     boardSignupBtnLabel: "Sign up", boardLoginBtnLabel: "Log in",
     boardLoginHint: "First time? Enter email + password and press \"Sign up\". Already registered? Press \"Log in\".",
+    boardNeedNickname: "Please enter a nickname", boardSignupRateLimited: "Only one new signup per 7 days is allowed from the same network (IP)",
     boardPwTooShort: "Password must be at least 6 characters", boardSignupFail: "Sign-up failed — email may already be registered, or invalid format",
     boardSignupOk: "Signed up! Log in above ✓",
     boardNeedLogin: "Please log in before posting", boardNeedTitleBody: "Please fill in both title and body",
@@ -1057,7 +1059,7 @@ function updateBoardAuthUI(){
   $("#boardAuthLoggedOut").hidden = loggedIn;
   $("#boardAuthLoggedIn").hidden = !loggedIn;
   $("#boardPostForm").hidden = !loggedIn;
-  if (loggedIn) $("#boardUserEmail").textContent = boardSession.user.email || "";
+  if (loggedIn) $("#boardUserEmail").textContent = boardSession.user.user_metadata?.nickname || boardSession.user.email || "";
 }
 // 이메일 링크/OTP 둘 다 결국 이메일 발송이 필요해서 Supabase 무료 발송 한도(시간당 몇 통)에
 // 계속 걸림 — 로그인 자체엔 이메일이 필요 없는 이메일+비밀번호 방식으로 바꿈(가입 시 1번만
@@ -1065,11 +1067,18 @@ function updateBoardAuthUI(){
 // Providers ▸ Email ▸ "Confirm email"을 꺼두면 됨 — 이것도 코드로는 못 바꾸는 설정)
 async function boardSignup(){
   const email = $("#boardEmail").value.trim(), password = $("#boardPassword").value;
+  const nickname = $("#boardNickname").value.trim();
+  if (!nickname){ toast(tr("boardNeedNickname")); return; }
   if (!email || password.length < 6){ toast(tr("boardPwTooShort")); return; }
   $("#boardSignupBtn").disabled = true;
   try {
-    const { error } = await sb.auth.signUp({ email, password });
-    toast(error ? tr("boardSignupFail") : tr("boardSignupOk"));
+    const { error } = await sb.auth.signUp({ email, password, options: { data: { nickname } } });
+    if (error){
+      // 같은 IP로 7일 이내 재가입을 막는 조치(_worker.js)에 걸리면 429로 옴 — 그 경우만 다른 문구
+      toast(error.status === 429 ? tr("boardSignupRateLimited") : tr("boardSignupFail"));
+    } else {
+      toast(tr("boardSignupOk"));
+    }
   } catch (e){ toast(tr("boardSignupFail")); }
   $("#boardSignupBtn").disabled = false;
 }
@@ -1132,7 +1141,7 @@ async function submitBoardPost(e){
     newBoardCaptcha();
     return;
   }
-  const authorName = (boardSession.user.email || "user").split("@")[0];
+  const authorName = boardSession.user.user_metadata?.nickname || (boardSession.user.email || "user").split("@")[0];
   try {
     const { error } = await sb.from("board_posts").insert({ author_name: authorName, title, body });
     if (error) throw error;
@@ -1162,7 +1171,9 @@ function boardDrawerHTML(){
       <summary id="lblBoardWriteToggle">${tr("boardWriteToggle")}</summary>
       <div class="d-collapse-body">
         <div id="boardAuthLoggedOut">
-          <input type="email" id="boardEmail" placeholder="이메일" style="width:100%;box-sizing:border-box;border:1px solid rgba(255,255,255,.16);
+          <input type="text" id="boardNickname" maxlength="20" placeholder="닉네임(회원가입 시에만 필요)" style="width:100%;box-sizing:border-box;border:1px solid rgba(255,255,255,.16);
+            border-radius:9px;background:rgba(12,12,20,.7);color:var(--ink);font:inherit;font-size:12.5px;padding:10px">
+          <input type="email" id="boardEmail" placeholder="이메일" style="width:100%;box-sizing:border-box;margin-top:8px;border:1px solid rgba(255,255,255,.16);
             border-radius:9px;background:rgba(12,12,20,.7);color:var(--ink);font:inherit;font-size:12.5px;padding:10px">
           <input type="password" id="boardPassword" placeholder="비밀번호(6자 이상)" style="width:100%;box-sizing:border-box;margin-top:8px;border:1px solid rgba(255,255,255,.16);
             border-radius:9px;background:rgba(12,12,20,.7);color:var(--ink);font:inherit;font-size:12.5px;padding:10px">

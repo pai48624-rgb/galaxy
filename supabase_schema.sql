@@ -201,3 +201,37 @@ create policy "delete board_posts own" on public.board_posts for delete
 grant select on public.board_posts to anon, authenticated;
 grant insert, delete on public.board_posts to authenticated;
 grant usage, select on all sequences in schema public to authenticated;
+
+-- ────────────────────────────────────────────────────────────────────────────
+--  7. signup_ip_log — 같은 IP로 7일 이내 재가입 막기 (2026-09-13 추가)
+--     · 이메일 인증 없이 순수 IP+시간 기록만으로 막음(요청사항: 이메일 발송 불필요)
+--     · 실제 판단은 SECURITY DEFINER 함수 안에서만 하고, 테이블 자체는 anon/authenticated
+--       모두 직접 접근 불가 — Cloudflare Worker(_worker.js)가 가입 요청을 가로채서
+--       이 함수를 먼저 호출하고, false가 나오면 Supabase로 전달하지 않고 429를 돌려줌
+-- ────────────────────────────────────────────────────────────────────────────
+create table if not exists public.signup_ip_log (
+  ip           text primary key,
+  last_attempt timestamptz not null default now()
+);
+alter table public.signup_ip_log enable row level security;
+-- 일부러 select/insert 정책을 anon/authenticated에게 안 줌 — 아래 함수를 통해서만 건드릴 수 있게
+
+create or replace function public.check_signup_ip_ok(p_ip text)
+returns boolean
+language plpgsql
+security definer
+set search_path = public
+as $$
+declare
+  last_ts timestamptz;
+begin
+  select last_attempt into last_ts from public.signup_ip_log where ip = p_ip;
+  if last_ts is not null and last_ts > now() - interval '7 days' then
+    return false;
+  end if;
+  insert into public.signup_ip_log (ip, last_attempt) values (p_ip, now())
+    on conflict (ip) do update set last_attempt = now();
+  return true;
+end;
+$$;
+grant execute on function public.check_signup_ip_ok(text) to anon, authenticated;
