@@ -1775,7 +1775,7 @@ function buildConstellationLabels(){
     // 기본 글자 크기는 원래대로(전부 2배로 키운 건 되돌림) — 진짜 문제는 아래 updateConstellationLabels의
     // 거리 보정값(k)이었음: 작은 별자리는 카테고리 클릭 시 카메라가 아주 가깝게 붙는데, k의 최소값이
     // 너무 낮아서 오히려 "가까이 볼 때 라벨이 제일 작아지는" 역효과가 있었음 — 그 최소값을 올려서 고침
-    t.textHeight = constName ? 70 : 55;
+    t.textHeight = constName ? 30 : 22;
     t.color = constName ? "#fff9d6" : "#eaf1ff";
     t.fontFace = "system-ui, sans-serif";
     t.material.depthWrite = false;
@@ -1795,7 +1795,10 @@ function buildConstellationLabels(){
     }));
     Graph.scene().add(line);
 
-    constLabels.push({ sprite: t, line, members, baseScale, c, labelOffsetY: shapeR + 28 });
+    // 큰 그룹(멤버 많음)은 shapeR가 커서 라벨이 클러스터 위로 너무 멀리 떠버림 — 카테고리를 클릭해
+    // 가까이 확대했을 때 그 카메라 프레임 밖으로 라벨이 아예 벗어나서 "안 보이는" 진짜 원인이었음.
+    // 크기와 무관하게 클러스터 바로 위 근처에 오도록 오프셋 자체를 작게 고정
+    constLabels.push({ sprite: t, line, members, baseScale, c, labelOffsetY: Math.min(shapeR + 28, 110) });
   }
 }
 // 멀리 있을 땐 원근감 때문에 작아 보이니 그만큼 키워주되(최대 1.4배), 가까이 갈 땐 절대
