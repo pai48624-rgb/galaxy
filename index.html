@@ -1062,6 +1062,15 @@ async function boardLogin(){
 async function boardLogout(){
   try { await sb.auth.signOut(); } catch (e){}
 }
+// GitHub/구글로 한 번에 로그인 — Supabase 대시보드(Authentication ▸ Providers)에서
+// 해당 provider를 켜고 각 서비스의 OAuth 앱(Client ID/Secret)을 등록해둬야 실제로 동작함
+// (계정 등록은 사이트 소유자만 할 수 있어서 코드만으로는 여기까지가 최선 — 미설정 시 에러 토스트만 뜸)
+async function boardOAuthLogin(provider){
+  try {
+    const { error } = await sb.auth.signInWithOAuth({ provider, options: { redirectTo: location.href } });
+    if (error) toast(tr("boardLoginFail"));
+  } catch (e){ toast(tr("boardLoginFail")); }
+}
 async function loadBoardPosts(){
   $("#boardList").innerHTML = `<div class="rv-hint">${tr("loadingReviews")}</div>`;
   try {
@@ -1119,10 +1128,14 @@ function boardDrawerHTML(){
       <summary id="lblBoardWriteToggle">${tr("boardWriteToggle")}</summary>
       <div class="d-collapse-body">
         <div id="boardAuthLoggedOut">
+          <div style="display:flex;gap:8px;margin-bottom:8px">
+            <button type="button" class="ghost" id="boardGithubBtn" style="flex:1;padding:9px;border-radius:9px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);color:var(--ink);cursor:pointer;font-size:12.5px">🐙 GitHub</button>
+            <button type="button" class="ghost" id="boardGoogleBtn" style="flex:1;padding:9px;border-radius:9px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);color:var(--ink);cursor:pointer;font-size:12.5px">🔵 Google</button>
+          </div>
           <div style="display:flex;gap:8px">
-            <input type="email" id="boardEmail" placeholder="이메일 주소" style="flex:1;border:1px solid rgba(255,255,255,.16);
-              border-radius:9px;background:rgba(12,12,20,.7);color:var(--ink);font:inherit;font-size:12.5px;padding:9px">
-            <button type="button" class="go" id="boardLoginBtn" style="border:0;border-radius:9px;padding:0 14px;background:var(--purple2);color:#fff;cursor:pointer"><span id="lblBoardLoginBtn">${tr("boardLoginBtnLabel")}</span></button>
+            <input type="email" id="boardEmail" placeholder="이메일 주소" style="flex:1;width:100%;box-sizing:border-box;border:1px solid rgba(255,255,255,.16);
+              border-radius:9px;background:rgba(12,12,20,.7);color:var(--ink);font:inherit;font-size:12.5px;padding:10px">
+            <button type="button" class="go" id="boardLoginBtn" style="border:0;border-radius:9px;padding:0 14px;background:var(--purple2);color:#fff;cursor:pointer;white-space:nowrap"><span id="lblBoardLoginBtn">${tr("boardLoginBtnLabel")}</span></button>
           </div>
           <div class="rv-hint" id="lblBoardLoginHint">${tr("boardLoginHint")}</div>
         </div>
@@ -1133,10 +1146,16 @@ function boardDrawerHTML(){
         </div>
 
         <form id="boardPostForm" hidden style="display:flex;flex-direction:column;gap:8px;margin-top:10px">
-          <input type="text" id="boardPostTitle" maxlength="120" placeholder="제목" style="border:1px solid rgba(255,255,255,.16);
-            border-radius:9px;background:rgba(12,12,20,.7);color:var(--ink);font:inherit;font-size:12.5px;padding:9px">
-          <textarea id="boardPostBody" maxlength="4000" rows="3" placeholder="내용" style="border:1px solid rgba(255,255,255,.16);
-            border-radius:9px;background:rgba(12,12,20,.7);color:var(--ink);font:inherit;font-size:12.5px;padding:9px;resize:vertical"></textarea>
+          <div>
+            <input type="text" id="boardPostTitle" maxlength="120" placeholder="제목" style="width:100%;box-sizing:border-box;border:1px solid rgba(255,255,255,.16);
+              border-radius:9px;background:rgba(12,12,20,.7);color:var(--ink);font:inherit;font-size:13.5px;padding:11px">
+            <div class="rv-hint" style="text-align:right;margin-top:2px"><span id="boardTitleCount">0</span>/120</div>
+          </div>
+          <div>
+            <textarea id="boardPostBody" maxlength="4000" rows="7" placeholder="내용" style="width:100%;box-sizing:border-box;min-height:140px;border:1px solid rgba(255,255,255,.16);
+              border-radius:9px;background:rgba(12,12,20,.7);color:var(--ink);font:inherit;font-size:13.5px;padding:11px;resize:vertical"></textarea>
+            <div class="rv-hint" style="text-align:right;margin-top:2px"><span id="boardBodyCount">0</span>/4000</div>
+          </div>
           <button type="submit" class="d-cta" style="border:0;cursor:pointer"><span id="lblBoardSubmit">${tr("boardSubmitLabel")}</span></button>
         </form>
       </div>
@@ -1151,7 +1170,11 @@ function openBoardDrawer(){
   $("#drawer").querySelector(".d-close").addEventListener("click", closeDrawer);
   $("#boardLoginBtn").addEventListener("click", boardLogin);
   $("#boardLogoutBtn").addEventListener("click", boardLogout);
+  $("#boardGithubBtn").addEventListener("click", () => boardOAuthLogin("github"));
+  $("#boardGoogleBtn").addEventListener("click", () => boardOAuthLogin("google"));
   $("#boardPostForm").addEventListener("submit", submitBoardPost);
+  $("#boardPostTitle").addEventListener("input", e => { $("#boardTitleCount").textContent = e.target.value.length; });
+  $("#boardPostBody").addEventListener("input", e => { $("#boardBodyCount").textContent = e.target.value.length; });
   $("#boardList").addEventListener("click", e => {
     const b = e.target.closest("[data-del]"); if (!b) return;
     deleteBoardPost(+b.dataset.del);
