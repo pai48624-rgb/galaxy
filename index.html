@@ -552,6 +552,9 @@ const I18N = {
     boardSignupBtnLabel: "회원가입", boardLoginBtnLabel: "로그인",
     boardLoginHint: "처음이면 이메일·비밀번호 입력 후 '회원가입', 이미 가입했으면 '로그인'을 누르세요.",
     boardNeedNickname: "닉네임을 입력해주세요", boardSignupRateLimited: "같은 네트워크(IP)에서는 7일에 한 번만 새로 가입할 수 있어요",
+    boardSignupAutoLoginOk: "회원가입 완료! 바로 로그인됐어요 ✓",
+    boardSignupNeedConfirm: "가입은 됐는데, 이 사이트가 이메일 확인을 요구하고 있어서 아직 로그인은 안 돼요. 받은 확인 메일의 링크를 누르거나, 사이트 운영자에게 'Confirm email 꺼달라'고 요청해주세요.",
+    boardEmailNotConfirmed: "이메일 확인이 아직 안 됐어요 — 받은 메일을 확인해주세요",
     boardPwTooShort: "비밀번호는 6자 이상 입력해주세요", boardSignupFail: "회원가입 실패 — 이미 가입된 이메일이거나 형식이 올바르지 않아요",
     boardSignupOk: "가입 완료! 위에서 바로 로그인해주세요 ✓",
     boardNeedLogin: "글을 쓰려면 먼저 로그인해주세요", boardNeedTitleBody: "제목과 내용을 모두 입력해주세요",
@@ -606,6 +609,9 @@ const I18N = {
     boardSignupBtnLabel: "Sign up", boardLoginBtnLabel: "Log in",
     boardLoginHint: "First time? Enter email + password and press \"Sign up\". Already registered? Press \"Log in\".",
     boardNeedNickname: "Please enter a nickname", boardSignupRateLimited: "Only one new signup per 7 days is allowed from the same network (IP)",
+    boardSignupAutoLoginOk: "Signed up! You're logged in now ✓",
+    boardSignupNeedConfirm: "Account created, but this site currently requires email confirmation, so you can't log in yet. Click the link in the confirmation email, or ask the site owner to turn off \"Confirm email\".",
+    boardEmailNotConfirmed: "Email not confirmed yet — please check your inbox",
     boardPwTooShort: "Password must be at least 6 characters", boardSignupFail: "Sign-up failed — email may already be registered, or invalid format",
     boardSignupOk: "Signed up! Log in above ✓",
     boardNeedLogin: "Please log in before posting", boardNeedTitleBody: "Please fill in both title and body",
@@ -1055,7 +1061,8 @@ async function initBoardAuth(){
   } catch (e){ /* 인증 이벤트 구독 실패해도 게시판 읽기는 계속 동작 */ }
 }
 function updateBoardAuthUI(){
-  const loggedIn = !!boardSession?.user;
+  // access_token까지 확인 — user만 있고 실제 세션이 없는 반쪽 상태를 "로그인됨"으로 잘못 표시하는 걸 방지
+  const loggedIn = !!(boardSession?.user && boardSession?.access_token);
   $("#boardAuthLoggedOut").hidden = loggedIn;
   $("#boardAuthLoggedIn").hidden = !loggedIn;
   $("#boardPostForm").hidden = !loggedIn;
@@ -1065,6 +1072,11 @@ function updateBoardAuthUI(){
 // 계속 걸림 — 로그인 자체엔 이메일이 필요 없는 이메일+비밀번호 방식으로 바꿈(가입 시 1번만
 // 확인 메일이 갈 수 있음. 그마저 안 가게 하려면 Supabase 대시보드 ▸ Authentication ▸
 // Providers ▸ Email ▸ "Confirm email"을 꺼두면 됨 — 이것도 코드로는 못 바꾸는 설정)
+// 회원가입해도 반응이 없고 방금 만든 비밀번호로 로그인도 안 되는 문제 — 원인 확인함:
+// Supabase 프로젝트에 "Confirm email"이 켜져 있으면 signUp()이 세션을 안 돌려주고(자동
+// 로그인 불가), 이메일 확인 전까지는 같은 비번으로 로그인도 거부됨(Supabase 자체 동작).
+// 그래서 어느 경우든 사용자가 확실히 알 수 있게 상태를 직접 세팅하고 alert로 명확히 알림
+// (onAuthStateChange 이벤트가 언제 오는지 기다리지 않고 응답 받는 즉시 반영)
 async function boardSignup(){
   const email = $("#boardEmail").value.trim(), password = $("#boardPassword").value;
   const nickname = $("#boardNickname").value.trim();
@@ -1072,14 +1084,20 @@ async function boardSignup(){
   if (!email || password.length < 6){ toast(tr("boardPwTooShort")); return; }
   $("#boardSignupBtn").disabled = true;
   try {
-    const { error } = await sb.auth.signUp({ email, password, options: { data: { nickname } } });
+    const { data, error } = await sb.auth.signUp({ email, password, options: { data: { nickname } } });
     if (error){
       // 같은 IP로 7일 이내 재가입을 막는 조치(_worker.js)에 걸리면 429로 옴 — 그 경우만 다른 문구
-      toast(error.status === 429 ? tr("boardSignupRateLimited") : tr("boardSignupFail"));
+      alert(error.status === 429 ? tr("boardSignupRateLimited") : tr("boardSignupFail"));
+    } else if (data.session){
+      boardSession = data.session;
+      updateBoardAuthUI();
+      $("#boardPassword").value = "";
+      alert(tr("boardSignupAutoLoginOk"));
     } else {
-      toast(tr("boardSignupOk"));
+      // 세션이 안 왔다 = 이 프로젝트가 이메일 확인을 요구하는 중이라는 뜻(가입은 됐지만 로그인은 아직 안 됨)
+      alert(tr("boardSignupNeedConfirm"));
     }
-  } catch (e){ toast(tr("boardSignupFail")); }
+  } catch (e){ alert(tr("boardSignupFail")); }
   $("#boardSignupBtn").disabled = false;
 }
 async function boardPasswordLogin(){
@@ -1087,8 +1105,14 @@ async function boardPasswordLogin(){
   if (!email || !password) return;
   $("#boardLoginBtn").disabled = true;
   try {
-    const { error } = await sb.auth.signInWithPassword({ email, password });
-    if (error) toast(tr("boardLoginFail"));
+    const { data, error } = await sb.auth.signInWithPassword({ email, password });
+    if (error){
+      boardSession = null;
+      toast(/confirm/i.test(error.message || "") ? tr("boardEmailNotConfirmed") : tr("boardLoginFail"));
+    } else {
+      boardSession = data.session;
+    }
+    updateBoardAuthUI();
   } catch (e){ toast(tr("boardLoginFail")); }
   $("#boardLoginBtn").disabled = false;
 }
