@@ -1636,7 +1636,7 @@ function initGraph(){
     .onNodeClick(n => { comboSelectMode ? toggleComboSelection(n) : (openDrawer(n), focusNode(n.id)); })
     .onBackgroundClick(closeDrawer)
     .onNodeDrag((n, translate) => dragGroup(n, translate))
-    .onNodeDragEnd(() => { dragGroupIds = null; });
+    .onNodeDragEnd(() => { dragGroupIds = null; dragGroupBase = null; });
 
   Graph.d3Force("charge").strength(-165);
   Graph.d3Force("shape", makeShapeForce());
@@ -1908,19 +1908,35 @@ function updateFarLabels(){
 }
 
 /* ---- 이름 붙은(별자리 모양) 그룹은 별 하나를 드래그하면 그룹 전체가 함께 움직임 ---- */
-let dragGroupIds = null;
+let dragGroupIds = null, dragGroupBase = null;
 function dragGroup(n, translate){
   if (dragGroupIds == null){
     dragGroupIds = catShapeName.has(n.category)
       ? nodes.filter(x => x.category === n.category && x.id !== n.id).map(x => x.id)
       : [];
+    // 드래그 시작 시점의 절대 위치를 기록해두고, 매 프레임 "드래그한 별이 시작점에서 총 얼마나
+    // 움직였는지"를 다시 계산해서 그 오프셋을 그대로 적용함. 이전엔 매 프레임 translate를 계속
+    // 더해가는 방식이라(sib.fx += translate) 물리 시뮬레이션이 그 사이에 위치를 살짝 흔들면
+    // 오차가 프레임마다 누적돼 어떤 땐 거의 안 움직이고 어떤 땐 별이 엄청 멀리 튕겨나가는
+    // 버그가 있었음 — 절대 좌표 기준으로 매번 다시 계산하면 오차가 쌓일 수가 없음.
+    dragGroupBase = {
+      anchor: { x: n.x - translate.x, y: n.y - translate.y, z: (n.z || 0) - translate.z },
+      pos: new Map(dragGroupIds.map(id => {
+        const sib = nodeById.get(id);
+        return [id, sib ? { x: sib.x, y: sib.y, z: sib.z || 0 } : null];
+      })),
+    };
   }
+  const off = {
+    x: n.x - dragGroupBase.anchor.x,
+    y: n.y - dragGroupBase.anchor.y,
+    z: (n.z || 0) - dragGroupBase.anchor.z,
+  };
   for (const id of dragGroupIds){
     const sib = nodeById.get(id);
-    if (!sib) continue;
-    sib.fx = (sib.fx ?? sib.x) + translate.x;
-    sib.fy = (sib.fy ?? sib.y) + translate.y;
-    sib.fz = (sib.fz ?? sib.z ?? 0) + translate.z;
+    const base = dragGroupBase.pos.get(id);
+    if (!sib || !base) continue;
+    sib.fx = base.x + off.x; sib.fy = base.y + off.y; sib.fz = base.z + off.z;
     sib.x = sib.fx; sib.y = sib.fy; sib.z = sib.fz;
   }
 }
