@@ -91,6 +91,9 @@
   .checks{display:flex;flex-direction:column;gap:7px}
   .checks label{display:flex;align-items:center;gap:8px;font-size:12.5px;color:#d4d4e2;cursor:pointer}
   .checks input{accent-color:var(--purple2);width:15px;height:15px}
+  .checks-row{flex-direction:row;flex-wrap:wrap;gap:5px 12px} /* 요금제는 세로로 4줄 차지할 필요 없어서 한 줄로 */
+  .checks-row label{font-size:11.5px;gap:5px}
+  .checks-row input{width:13px;height:13px}
 
   .s-foot,.s-actions{display:flex;flex-direction:column;gap:9px}
   .note{font-size:10px;color:var(--faint);line-height:1.55;border:1px dashed rgba(255,255,255,.14);
@@ -135,6 +138,8 @@
   .cbb-act .ghost{background:rgba(255,255,255,.06);color:var(--dim)}
   .cbb-act .go{background:#7dffef;color:#04302c;font-weight:800}
   #comboBuildToggle.active{color:#7dffef}
+  .lnk-desc{font-size:10px;color:var(--faint);line-height:1.5;margin:2px 0 2px 20px}
+  #myCombosView{font-size:10.5px;color:#7dffef;background:none;border:0;cursor:pointer;text-decoration:underline;padding:0}
   @media (max-width:600px){ #comboBuildBar{bottom:14px} }
 
   /* ---- 수면 모드: UI를 다 걷어내고 화면 가득 천천히 도는 밤하늘만 남김 ---- */
@@ -309,7 +314,7 @@
 
       <div>
         <div class="s-head" style="margin-bottom:9px"><span id="lblPricing">요금제</span></div>
-        <div class="checks" id="priceChecks">
+        <div class="checks checks-row" id="priceChecks">
           <label><input type="checkbox" value="무료" checked><span data-price-label>무료</span></label>
           <label><input type="checkbox" value="부분유료" checked><span data-price-label>부분유료</span></label>
           <label><input type="checkbox" value="유료" checked><span data-price-label>유료</span></label>
@@ -322,6 +327,7 @@
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><path d="M8.5 8.5l7 7"/></svg>
           <span id="lblComboBuildToggle">🔗 내 별 조합 만들기</span>
         </button>
+        <div class="lnk-desc" id="lblComboBuildDesc">별을 클릭하면 선택 표시가 뜨고, 2개 이상 고르면 조합 결과가 바로 나와요</div>
         <button class="lnk" id="comboOpen">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l2.4 7.2H22l-6 4.4 2.3 7.2-6.3-4.5-6.3 4.5 2.3-7.2-6-4.4h7.6z"/></svg>
           <span id="lblComboOpen">⭐ 추천 AI 조합 TOP</span>
@@ -369,6 +375,7 @@
           <button type="button" class="ghost" id="comboBuildClear"><span id="lblComboBuildClear">초기화</span></button>
           <button type="button" class="go" id="comboBuildSave"><span id="lblComboBuildSave">💾 이 조합 저장</span></button>
         </div>
+        <button type="button" id="myCombosView"><span id="lblMyCombosView">📂 저장한 조합 보기(이 브라우저에만 저장됨)</span></button>
       </div>
       <button id="sleepExit" hidden><span id="lblSleepExit">✕ 수면 모드 종료</span></button>
 
@@ -501,6 +508,9 @@ const I18N = {
     comboBuildNone: "아직 이 조합에 딱 맞는 등록된 결과가 없어요. 그래도 저장은 할 수 있어요.",
     comboBuildNeedTwo: "별을 2개 이상 골라야 저장할 수 있어요", comboSaved: "조합을 저장했어요 ✓",
     comboBuildClear: "초기화", comboBuildSave: "💾 이 조합 저장",
+    comboBuildDesc: "별을 클릭하면 선택 표시가 뜨고, 2개 이상 고르면 조합 결과가 바로 나와요",
+    myCombosViewLabel: "📂 저장한 조합 보기(이 브라우저에만 저장됨)",
+    myCombosTitle: "📂 내가 저장한 조합", myCombosNone: "아직 저장한 조합이 없어요. 별을 골라서 저장해보세요.",
   },
   en: {
     subtitle: "Global AI Relationship Map", searchPh: "Search AI name…",
@@ -537,6 +547,9 @@ const I18N = {
     comboBuildNone: "No registered combo matches this exactly yet. You can still save it.",
     comboBuildNeedTwo: "Pick at least 2 stars to save", comboSaved: "Combo saved ✓",
     comboBuildClear: "Reset", comboBuildSave: "💾 Save this combo",
+    comboBuildDesc: "Click a star to select it — pick 2+ and the combo result shows up right away",
+    myCombosViewLabel: "📂 View saved combos (saved only in this browser)",
+    myCombosTitle: "📂 My saved combos", myCombosNone: "No saved combos yet — pick some stars and save one.",
   },
 };
 function tr(key, ...args){
@@ -931,8 +944,32 @@ function saveComboSelection(){
   toast(tr("comboSaved"));
 }
 function openComboDlg(){
+  $("#lblComboDlgTitle").textContent = tr("comboDlgTitle");
   const top = [...aiCombos].sort((a, b) => b.impact - a.impact).slice(0, 30);
   $("#comboDlgList").innerHTML = top.length ? top.map(comboCardHTML).join("") : `<div class="rv-hint">${tr("comboNone")}</div>`;
+  $("#comboDlg").showModal();
+}
+// "조합 저장하면 어디로 가는거야?" — 이 브라우저의 localStorage에만 저장됨(서버·다른 기기와 공유 안 됨).
+// 저장만 되고 다시 볼 방법이 없었던 게 문제였어서, 저장한 목록을 실제로 보여주는 화면을 추가함.
+function openMyCombosDlg(){
+  $("#lblComboDlgTitle").textContent = tr("myCombosTitle");
+  let saved = [];
+  try { saved = JSON.parse(localStorage.getItem("myCombos") || "[]"); } catch (e){}
+  if (!saved.length){
+    $("#comboDlgList").innerHTML = `<div class="rv-hint">${tr("myCombosNone")}</div>`;
+  } else {
+    $("#comboDlgList").innerHTML = saved.slice().reverse().map((entry) => {
+      const names = entry.ids.map(id => nodeById.get(id)).filter(Boolean).map(n => esc(displayName(n)));
+      const sel = new Set(entry.ids);
+      const found = aiCombos.filter(c => [...sel].every(id => c.matchedIds.includes(id))).sort((a, b) => b.impact - a.impact)[0];
+      const when = new Date(entry.savedAt).toLocaleDateString(lang === "en" ? "en-US" : "ko-KR");
+      return `<div class="combo-card">
+        <div class="combo-title">${names.join(" + ") || "?"}</div>
+        ${found ? `<div class="combo-stars">★${found.impact}/10</div><div class="combo-use">${esc(found.title_ko)}</div><div class="combo-price">${esc(found.pricing_summary_ko)}</div>` : `<div class="rv-hint">${tr("comboBuildNone")}</div>`}
+        <div class="combo-price" style="margin-top:4px;opacity:.7">${when}</div>
+      </div>`;
+    }).join("");
+  }
   $("#comboDlg").showModal();
 }
 
@@ -2437,6 +2474,7 @@ function buildSidebar(){
   $("#comboBuildExit").addEventListener("click", toggleComboSelectMode);
   $("#comboBuildClear").addEventListener("click", () => { comboSelection = []; renderComboBuildBar(); Graph.nodeThreeObject(nodeObject).refresh(); });
   $("#comboBuildSave").addEventListener("click", saveComboSelection);
+  $("#myCombosView").addEventListener("click", openMyCombosDlg);
   $("#comboBuildChips").addEventListener("click", e => {
     const b = e.target.closest("[data-unpick]"); if (!b) return;
     const id = +b.dataset.unpick;
@@ -2484,6 +2522,8 @@ function applyLanguage(){
   $("#lblComboBuildHint").textContent = tr("comboBuildHint");
   $("#lblComboBuildClear").textContent = tr("comboBuildClear");
   $("#lblComboBuildSave").textContent = tr("comboBuildSave");
+  $("#lblComboBuildDesc").textContent = tr("comboBuildDesc");
+  $("#lblMyCombosView").textContent = tr("myCombosViewLabel");
   if (comboSelectMode) renderComboBuildBar();
   $("#lblComboDlgTitle").textContent = tr("comboDlgTitle");
   $("#comboClose").textContent = tr("close");
