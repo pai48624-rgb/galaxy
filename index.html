@@ -549,13 +549,16 @@ const I18N = {
     sponsToday: "오늘의 스폰서", privacyLink: "개인정보처리방침",
     labelsOn: "라벨 On", labelsOff: "라벨 Off",
     boardOpenLabel: "🗨 게시판", boardTitle: "🗨 커뮤니티 게시판",
-    boardLoginBtnLabel: "인증번호 받기", boardLoginHint: "비밀번호 없이 로그인해요: 이메일 주소를 넣고 위 버튼을 누르면 그 메일함으로 6자리 숫자 인증번호가 와요. 이메일 안의 링크는 누르지 말고, 그 6자리 숫자를 아래 칸에 그대로 입력한 뒤 '확인'을 누르세요.",
-    boardOtpVerify: "확인", boardOtpFail: "인증번호가 틀렸거나 만료됐어요 — 다시 받아주세요",
+    boardSignupBtnLabel: "회원가입", boardLoginBtnLabel: "로그인",
+    boardLoginHint: "처음이면 이메일·비밀번호 입력 후 '회원가입', 이미 가입했으면 '로그인'을 누르세요.",
+    boardPwTooShort: "비밀번호는 6자 이상 입력해주세요", boardSignupFail: "회원가입 실패 — 이미 가입된 이메일이거나 형식이 올바르지 않아요",
+    boardSignupOk: "가입 완료! 위에서 바로 로그인해주세요 ✓",
     boardNeedLogin: "글을 쓰려면 먼저 로그인해주세요", boardNeedTitleBody: "제목과 내용을 모두 입력해주세요",
+    boardCaptchaLabel: "확인 숫자", boardCaptchaPh: "숫자 입력", boardCaptchaFail: "확인 숫자가 틀렸어요 — 다시 입력해주세요",
     boardLoggedInAs: "로그인됨:", boardLogoutLabel: "로그아웃", boardSubmitLabel: "✎ 등록",
     boardListTitle: "최근 글", boardNone: "아직 글이 없어요. 첫 글을 남겨보세요.", boardDelete: "삭제",
     boardWriteToggle: "✎ 글쓰기 (로그인 필요)",
-    boardLoginSent: "인증번호를 이메일로 보냈어요 ✓ (6자리 숫자를 아래에 입력하세요)", boardLoginFail: "인증번호 전송 실패 — 이메일을 확인해주세요",
+    boardLoginFail: "로그인 실패 — 이메일·비밀번호를 확인해주세요",
     boardPostFail: "등록 실패 — 로그인 상태를 확인해주세요",
     comboBuildToggleLabel: "🔗 내 별 조합 만들기", comboBuildHint: "🔗 별을 2개 이상 클릭해서 골라보세요(최대 5개)",
     comboBuildMax: "최대 5개까지 고를 수 있어요", comboBuildClosest: "가장 비슷한 등록 조합",
@@ -599,13 +602,16 @@ const I18N = {
     sponsToday: "Today's Sponsor", privacyLink: "Privacy Policy",
     labelsOn: "Labels On", labelsOff: "Labels Off",
     boardOpenLabel: "🗨 Board", boardTitle: "🗨 Community Board",
-    boardLoginBtnLabel: "Get code", boardLoginHint: "No password needed: enter your email and press the button above, and a 6-digit code will arrive in your inbox. Don't click the link in the email — type that 6-digit code into the box below and press \"Verify\".",
-    boardOtpVerify: "Verify", boardOtpFail: "Wrong or expired code — request a new one",
+    boardSignupBtnLabel: "Sign up", boardLoginBtnLabel: "Log in",
+    boardLoginHint: "First time? Enter email + password and press \"Sign up\". Already registered? Press \"Log in\".",
+    boardPwTooShort: "Password must be at least 6 characters", boardSignupFail: "Sign-up failed — email may already be registered, or invalid format",
+    boardSignupOk: "Signed up! Log in above ✓",
     boardNeedLogin: "Please log in before posting", boardNeedTitleBody: "Please fill in both title and body",
+    boardCaptchaLabel: "Verify", boardCaptchaPh: "Enter number", boardCaptchaFail: "Wrong number — try again",
     boardLoggedInAs: "Logged in:", boardLogoutLabel: "Log out", boardSubmitLabel: "✎ Post",
     boardListTitle: "Recent posts", boardNone: "No posts yet — be the first.", boardDelete: "Delete",
     boardWriteToggle: "✎ Write a post (login required)",
-    boardLoginSent: "Code emailed ✓ (enter the 6 digits below)", boardLoginFail: "Couldn't send the code — check the email address",
+    boardLoginFail: "Login failed — check your email/password",
     boardPostFail: "Couldn't post — please check you're logged in",
     comboBuildToggleLabel: "🔗 Build my combo", comboBuildHint: "🔗 Click 2 or more stars to pick them (up to 5)",
     comboBuildMax: "You can pick up to 5", comboBuildClosest: "closest registered combo",
@@ -1053,39 +1059,42 @@ function updateBoardAuthUI(){
   $("#boardPostForm").hidden = !loggedIn;
   if (loggedIn) $("#boardUserEmail").textContent = boardSession.user.email || "";
 }
-// 매직링크(이메일 클릭)가 Supabase 프로젝트의 기본 Site URL(localhost) 설정 때문에
-// 실제 배포 주소가 아니라 localhost로 리다이렉트되며 깨지는 문제가 있었음 — 그 설정은
-// Supabase 대시보드에서만 고칠 수 있어(코드로 못 고침), 리다이렉트 자체가 필요 없는
-// 6자리 인증번호 입력 방식으로 완전히 바꿈(이메일의 링크를 누르는 게 아니라 코드만 입력)
-async function boardLogin(){
-  const email = $("#boardEmail").value.trim();
-  if (!email) return;
+// 이메일 링크/OTP 둘 다 결국 이메일 발송이 필요해서 Supabase 무료 발송 한도(시간당 몇 통)에
+// 계속 걸림 — 로그인 자체엔 이메일이 필요 없는 이메일+비밀번호 방식으로 바꿈(가입 시 1번만
+// 확인 메일이 갈 수 있음. 그마저 안 가게 하려면 Supabase 대시보드 ▸ Authentication ▸
+// Providers ▸ Email ▸ "Confirm email"을 꺼두면 됨 — 이것도 코드로는 못 바꾸는 설정)
+async function boardSignup(){
+  const email = $("#boardEmail").value.trim(), password = $("#boardPassword").value;
+  if (!email || password.length < 6){ toast(tr("boardPwTooShort")); return; }
+  $("#boardSignupBtn").disabled = true;
+  try {
+    const { error } = await sb.auth.signUp({ email, password });
+    toast(error ? tr("boardSignupFail") : tr("boardSignupOk"));
+  } catch (e){ toast(tr("boardSignupFail")); }
+  $("#boardSignupBtn").disabled = false;
+}
+async function boardPasswordLogin(){
+  const email = $("#boardEmail").value.trim(), password = $("#boardPassword").value;
+  if (!email || !password) return;
   $("#boardLoginBtn").disabled = true;
   try {
-    const { error } = await sb.auth.signInWithOtp({ email });
-    if (error){
-      toast(tr("boardLoginFail"));
-    } else {
-      toast(tr("boardLoginSent"));
-      $("#boardOtpRow").hidden = false;
-      $("#boardOtpCode").focus();
-    }
+    const { error } = await sb.auth.signInWithPassword({ email, password });
+    if (error) toast(tr("boardLoginFail"));
   } catch (e){ toast(tr("boardLoginFail")); }
   $("#boardLoginBtn").disabled = false;
 }
-async function boardVerifyOtp(){
-  const email = $("#boardEmail").value.trim();
-  const token = $("#boardOtpCode").value.trim();
-  if (!email || !token) return;
-  $("#boardOtpVerifyBtn").disabled = true;
-  try {
-    const { error } = await sb.auth.verifyOtp({ email, token, type: "email" });
-    if (error) toast(tr("boardOtpFail"));
-  } catch (e){ toast(tr("boardOtpFail")); }
-  $("#boardOtpVerifyBtn").disabled = false;
-}
 async function boardLogout(){
   try { await sb.auth.signOut(); } catch (e){}
+}
+// 진짜 스팸 방지는 아니고(사용자도 이미 알고 있는 임시 조치) — 화면에 뜬 숫자를 그대로
+// 입력해야 등록되게 해서 아주 단순한 자동 스팸 봇 정도만 거르는 용도. 나중에 개선 예정.
+let boardCaptcha = null;
+function newBoardCaptcha(){
+  boardCaptcha = String(Math.floor(1000 + Math.random() * 9000));
+  const numEl = document.getElementById("boardCaptchaNum");
+  if (numEl) numEl.textContent = boardCaptcha;
+  const inputEl = document.getElementById("boardCaptchaInput");
+  if (inputEl) inputEl.value = "";
 }
 async function loadBoardPosts(){
   $("#boardList").innerHTML = `<div class="rv-hint">${tr("loadingReviews")}</div>`;
@@ -1118,11 +1127,17 @@ async function submitBoardPost(e){
   if (!boardSession?.user){ toast(tr("boardNeedLogin")); return; }
   const title = $("#boardPostTitle").value.trim(), body = $("#boardPostBody").value.trim();
   if (!title || !body){ toast(tr("boardNeedTitleBody")); return; }
+  if ($("#boardCaptchaInput").value.trim() !== boardCaptcha){
+    toast(tr("boardCaptchaFail"));
+    newBoardCaptcha();
+    return;
+  }
   const authorName = (boardSession.user.email || "user").split("@")[0];
   try {
     const { error } = await sb.from("board_posts").insert({ author_name: authorName, title, body });
     if (error) throw error;
     $("#boardPostTitle").value = ""; $("#boardPostBody").value = "";
+    newBoardCaptcha();
     loadBoardPosts();
   } catch (e){ toast(tr("boardPostFail")); }
 }
@@ -1147,17 +1162,15 @@ function boardDrawerHTML(){
       <summary id="lblBoardWriteToggle">${tr("boardWriteToggle")}</summary>
       <div class="d-collapse-body">
         <div id="boardAuthLoggedOut">
-          <div style="display:flex;gap:8px">
-            <input type="email" id="boardEmail" placeholder="이메일 주소" style="flex:1;width:100%;box-sizing:border-box;border:1px solid rgba(255,255,255,.16);
-              border-radius:9px;background:rgba(12,12,20,.7);color:var(--ink);font:inherit;font-size:12.5px;padding:10px">
-            <button type="button" class="go" id="boardLoginBtn" style="border:0;border-radius:9px;padding:0 14px;background:var(--purple2);color:#fff;cursor:pointer;white-space:nowrap"><span id="lblBoardLoginBtn">${tr("boardLoginBtnLabel")}</span></button>
+          <input type="email" id="boardEmail" placeholder="이메일" style="width:100%;box-sizing:border-box;border:1px solid rgba(255,255,255,.16);
+            border-radius:9px;background:rgba(12,12,20,.7);color:var(--ink);font:inherit;font-size:12.5px;padding:10px">
+          <input type="password" id="boardPassword" placeholder="비밀번호(6자 이상)" style="width:100%;box-sizing:border-box;margin-top:8px;border:1px solid rgba(255,255,255,.16);
+            border-radius:9px;background:rgba(12,12,20,.7);color:var(--ink);font:inherit;font-size:12.5px;padding:10px">
+          <div style="display:flex;gap:8px;margin-top:8px">
+            <button type="button" class="ghost" id="boardSignupBtn" style="flex:1;padding:9px;border-radius:9px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);color:var(--ink);cursor:pointer"><span id="lblBoardSignupBtn">${tr("boardSignupBtnLabel")}</span></button>
+            <button type="button" class="go" id="boardLoginBtn" style="flex:1;border:0;border-radius:9px;background:var(--purple2);color:#fff;cursor:pointer"><span id="lblBoardLoginBtn">${tr("boardLoginBtnLabel")}</span></button>
           </div>
           <div class="rv-hint" id="lblBoardLoginHint">${tr("boardLoginHint")}</div>
-          <div id="boardOtpRow" hidden style="display:flex;gap:8px;margin-top:8px">
-            <input type="text" id="boardOtpCode" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="6자리 인증번호" style="flex:1;width:100%;box-sizing:border-box;border:1px solid rgba(255,255,255,.16);
-              border-radius:9px;background:rgba(12,12,20,.7);color:var(--ink);font:inherit;font-size:14px;letter-spacing:3px;padding:10px;text-align:center">
-            <button type="button" class="go" id="boardOtpVerifyBtn" style="border:0;border-radius:9px;padding:0 14px;background:var(--purple2);color:#fff;cursor:pointer;white-space:nowrap"><span id="lblBoardOtpVerify">${tr("boardOtpVerify")}</span></button>
-          </div>
         </div>
 
         <div id="boardAuthLoggedIn" hidden style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
@@ -1176,6 +1189,11 @@ function boardDrawerHTML(){
               border-radius:9px;background:rgba(12,12,20,.7);color:var(--ink);font:inherit;font-size:13.5px;padding:11px;resize:vertical"></textarea>
             <div class="rv-hint" style="text-align:right;margin-top:2px"><span id="boardBodyCount">0</span>/4000</div>
           </div>
+          <div style="display:flex;align-items:center;gap:8px">
+            <span style="font-size:12px;color:var(--dim)"><span id="lblBoardCaptchaLabel">${tr("boardCaptchaLabel")}</span> <b id="boardCaptchaNum" style="color:#fff3d8;letter-spacing:3px;font-size:16px"></b></span>
+            <input type="text" id="boardCaptchaInput" inputmode="numeric" maxlength="4" placeholder="${esc(tr("boardCaptchaPh"))}" style="width:90px;box-sizing:border-box;border:1px solid rgba(255,255,255,.16);
+              border-radius:9px;background:rgba(12,12,20,.7);color:var(--ink);font:inherit;font-size:13px;padding:8px;text-align:center">
+          </div>
           <button type="submit" class="d-cta" style="border:0;cursor:pointer"><span id="lblBoardSubmit">${tr("boardSubmitLabel")}</span></button>
         </form>
       </div>
@@ -1188,8 +1206,8 @@ function openBoardDrawer(){
   resizeGraph();
   $("#drawer").innerHTML = boardDrawerHTML();
   $("#drawer").querySelector(".d-close").addEventListener("click", closeDrawer);
-  $("#boardLoginBtn").addEventListener("click", boardLogin);
-  $("#boardOtpVerifyBtn").addEventListener("click", boardVerifyOtp);
+  $("#boardSignupBtn").addEventListener("click", boardSignup);
+  $("#boardLoginBtn").addEventListener("click", boardPasswordLogin);
   $("#boardLogoutBtn").addEventListener("click", boardLogout);
   $("#boardPostForm").addEventListener("submit", submitBoardPost);
   $("#boardPostTitle").addEventListener("input", e => { $("#boardTitleCount").textContent = e.target.value.length; });
@@ -1199,6 +1217,7 @@ function openBoardDrawer(){
     deleteBoardPost(+b.dataset.del);
   });
   updateBoardAuthUI();
+  newBoardCaptcha();
   loadBoardPosts();
 }
 
