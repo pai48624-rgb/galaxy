@@ -427,37 +427,6 @@
   </div>
 </dialog>
 
-<dialog id="boardDlg">
-  <div class="dlg-in" style="max-width:560px">
-    <h3 id="lblBoardTitle">🗨 커뮤니티 게시판</h3>
-
-    <div id="boardAuthLoggedOut">
-      <div class="row" style="display:flex;gap:8px">
-        <input type="email" id="boardEmail" placeholder="이메일 주소" style="flex:1;border:1px solid rgba(255,255,255,.16);
-          border-radius:9px;background:rgba(12,12,20,.7);color:var(--ink);font:inherit;font-size:12.5px;padding:9px">
-        <button type="button" class="go" id="boardLoginBtn"><span id="lblBoardLoginBtn">로그인 링크 받기</span></button>
-      </div>
-      <div class="rv-hint" id="lblBoardLoginHint">이메일로 받은 링크를 눌러서 로그인하면 글을 쓸 수 있어요. (읽기는 로그인 없이 가능)</div>
-    </div>
-
-    <div id="boardAuthLoggedIn" hidden style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
-      <span style="font-size:12px;color:var(--dim)"><span id="lblBoardLoggedInAs">로그인됨:</span> <b id="boardUserEmail"></b></span>
-      <button type="button" class="ghost" id="boardLogoutBtn" style="padding:5px 10px;font-size:11px"><span id="lblBoardLogout">로그아웃</span></button>
-    </div>
-
-    <form id="boardPostForm" hidden style="display:flex;flex-direction:column;gap:8px;margin:10px 0">
-      <input type="text" id="boardPostTitle" maxlength="120" placeholder="제목" style="border:1px solid rgba(255,255,255,.16);
-        border-radius:9px;background:rgba(12,12,20,.7);color:var(--ink);font:inherit;font-size:12.5px;padding:9px">
-      <textarea id="boardPostBody" maxlength="4000" rows="3" placeholder="내용" style="border:1px solid rgba(255,255,255,.16);
-        border-radius:9px;background:rgba(12,12,20,.7);color:var(--ink);font:inherit;font-size:12.5px;padding:9px;resize:vertical"></textarea>
-      <div class="dlg-act" style="margin:0"><button type="submit" class="go"><span id="lblBoardSubmit">✎ 등록</span></button></div>
-    </form>
-
-    <div class="d-sec" id="lblBoardListTitle">최근 글</div>
-    <div id="boardList" class="combo-list"></div>
-    <div class="dlg-act"><button type="button" class="ghost" id="boardClose">닫기</button></div>
-  </div>
-</dialog>
 
 <div class="overlay" id="setup" hidden>
   <div class="box">
@@ -1130,10 +1099,57 @@ async function submitBoardPost(e){
 async function deleteBoardPost(id){
   try { await sb.from("board_posts").delete().eq("id", id); loadBoardPosts(); } catch (e){}
 }
-function openBoardDlg(){
+// 화면을 통째로 덮는 모달 다이얼로그가 과하다는 피드백 — AI 상세정보와 똑같은 오른쪽 슬라이드
+// 패널(#drawer)에 넣어서, 별 클릭했을 때와 똑같은 방식(✕ 누르면 원래 화면으로)으로 통일함
+function boardDrawerHTML(){
+  return `
+    <div class="d-kicker">${tr("dKicker")}</div>
+    <div class="d-head">
+      <div><div class="d-name" id="lblBoardTitle">${tr("boardTitle")}</div></div>
+      <button class="d-close" aria-label="${tr("close")}">×</button>
+    </div>
+
+    <div id="boardAuthLoggedOut">
+      <div style="display:flex;gap:8px">
+        <input type="email" id="boardEmail" placeholder="이메일 주소" style="flex:1;border:1px solid rgba(255,255,255,.16);
+          border-radius:9px;background:rgba(12,12,20,.7);color:var(--ink);font:inherit;font-size:12.5px;padding:9px">
+        <button type="button" class="go" id="boardLoginBtn" style="border:0;border-radius:9px;padding:0 14px;background:var(--purple2);color:#fff;cursor:pointer"><span id="lblBoardLoginBtn">${tr("boardLoginBtnLabel")}</span></button>
+      </div>
+      <div class="rv-hint" id="lblBoardLoginHint">${tr("boardLoginHint")}</div>
+    </div>
+
+    <div id="boardAuthLoggedIn" hidden style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+      <span style="font-size:12px;color:var(--dim)"><span id="lblBoardLoggedInAs">${tr("boardLoggedInAs")}</span> <b id="boardUserEmail"></b></span>
+      <button type="button" class="ghost" id="boardLogoutBtn" style="padding:5px 10px;font-size:11px;border-radius:9px;border:0;background:rgba(255,255,255,.06);color:var(--dim);cursor:pointer"><span id="lblBoardLogout">${tr("boardLogoutLabel")}</span></button>
+    </div>
+
+    <form id="boardPostForm" hidden style="display:flex;flex-direction:column;gap:8px;margin:10px 0">
+      <input type="text" id="boardPostTitle" maxlength="120" placeholder="제목" style="border:1px solid rgba(255,255,255,.16);
+        border-radius:9px;background:rgba(12,12,20,.7);color:var(--ink);font:inherit;font-size:12.5px;padding:9px">
+      <textarea id="boardPostBody" maxlength="4000" rows="3" placeholder="내용" style="border:1px solid rgba(255,255,255,.16);
+        border-radius:9px;background:rgba(12,12,20,.7);color:var(--ink);font:inherit;font-size:12.5px;padding:9px;resize:vertical"></textarea>
+      <button type="submit" class="d-cta" style="border:0;cursor:pointer"><span id="lblBoardSubmit">${tr("boardSubmitLabel")}</span></button>
+    </form>
+
+    <div class="d-sec" id="lblBoardListTitle">${tr("boardListTitle")}</div>
+    <div id="boardList" class="combo-list"></div>`;
+}
+function openBoardDrawer(){
+  curNode = null;
+  curCategoryDrawer = null;
+  $("#drawer").classList.add("open");
+  resizeGraph();
+  $("#drawer").innerHTML = boardDrawerHTML();
+  $("#drawer").querySelector(".d-close").addEventListener("click", closeDrawer);
+  $("#boardLoginBtn").addEventListener("click", boardLogin);
+  $("#boardLogoutBtn").addEventListener("click", boardLogout);
+  $("#boardPostForm").addEventListener("submit", submitBoardPost);
+  $("#boardList").addEventListener("click", e => {
+    const b = e.target.closest("[data-del]"); if (!b) return;
+    deleteBoardPost(+b.dataset.del);
+  });
   updateBoardAuthUI();
   loadBoardPosts();
-  $("#boardDlg").showModal();
 }
 
 // "조합 저장하면 어디로 가는거야?" — 이 브라우저의 localStorage에만 저장됨(서버·다른 기기와 공유 안 됨).
@@ -2672,15 +2688,7 @@ function buildSidebar(){
   $("#comboBuildClear").addEventListener("click", () => { comboSelection = []; renderComboBuildBar(); Graph.nodeThreeObject(nodeObject).refresh(); });
   $("#comboBuildSave").addEventListener("click", saveComboSelection);
   $("#myCombosView").addEventListener("click", openMyCombosDlg);
-  $("#boardOpenBtn").addEventListener("click", openBoardDlg);
-  $("#boardClose").addEventListener("click", () => $("#boardDlg").close());
-  $("#boardLoginBtn").addEventListener("click", boardLogin);
-  $("#boardLogoutBtn").addEventListener("click", boardLogout);
-  $("#boardPostForm").addEventListener("submit", submitBoardPost);
-  $("#boardList").addEventListener("click", e => {
-    const b = e.target.closest("[data-del]"); if (!b) return;
-    deleteBoardPost(+b.dataset.del);
-  });
+  $("#boardOpenBtn").addEventListener("click", openBoardDrawer);
   $("#labelsToggleBtn").addEventListener("click", () => setLabelsVisible(!labelsVisible));
   $("#comboBuildChips").addEventListener("click", e => {
     const b = e.target.closest("[data-unpick]"); if (!b) return;
@@ -2735,13 +2743,7 @@ function applyLanguage(){
   $("#lblPrivacyLink").textContent = tr("privacyLink");
   $("#lblLabelsToggle").textContent = labelsVisible ? tr("labelsOn") : tr("labelsOff");
   $("#lblBoardOpen").textContent = tr("boardOpenLabel");
-  $("#lblBoardTitle").textContent = tr("boardTitle");
-  $("#lblBoardLoginBtn").textContent = tr("boardLoginBtnLabel");
-  $("#lblBoardLoginHint").textContent = tr("boardLoginHint");
-  $("#lblBoardLoggedInAs").textContent = tr("boardLoggedInAs");
-  $("#lblBoardLogout").textContent = tr("boardLogoutLabel");
-  $("#lblBoardSubmit").textContent = tr("boardSubmitLabel");
-  $("#lblBoardListTitle").textContent = tr("boardListTitle");
+  if ($("#boardEmail")) openBoardDrawer(); // 게시판이 지금 열려있으면 새 언어로 다시 그림
   if (comboSelectMode) renderComboBuildBar();
   $("#lblComboDlgTitle").textContent = tr("comboDlgTitle");
   $("#comboClose").textContent = tr("close");
