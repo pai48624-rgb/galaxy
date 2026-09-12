@@ -768,7 +768,11 @@ function categoryDrawerHTML(c){
     </div>
     <div class="d-sec">${tr("catComboTitle")}</div>
     <p class="d-desc">${esc(evalText)}</p>
-    ${combos.length ? `<div class="combo-list">${combos.map(comboCardHTML).join("")}</div>` : ""}
+    ${combos.length ? `
+    <details class="d-collapse" open>
+      <summary>${tr("comboSecTitle")} (${combos.length})</summary>
+      <div class="d-collapse-body combo-list">${combos.map(comboCardHTML).join("")}</div>
+    </details>` : ""}
     <details class="d-collapse" open>
       <summary>${tr("catMembersTitle")} (${members.length})</summary>
       <div class="d-collapse-body chips">${members.slice(0, 60).map(n => `<button class="chip" data-go="${n.id}">${esc(displayName(n))}</button>`).join("")}</div>
@@ -809,11 +813,12 @@ async function loadTop10Relations(){
 function curatedRelationsHTML(n){
   const data = top10Relations.get(n.name_en);
   if (!data || !data.groups?.length) return "";
-  return `<div class="d-sec">${tr("curatedRelTitle")}</div>` + data.groups.map(g => `
+  const body = data.groups.map(g => `
     <div class="rel-group">
       <div class="rel-group-h">${esc(g.category_ko)}</div>
       <ul class="rel-list">${g.items.map(it => `<li><b>${esc(it.name)}</b> — ${esc(it.reason_ko)}</li>`).join("")}</ul>
     </div>`).join("");
+  return `<details class="d-collapse" open><summary>${tr("curatedRelTitle")}</summary><div class="d-collapse-body">${body}</div></details>`;
 }
 function openComboDlg(){
   const top = [...aiCombos].sort((a, b) => b.impact - a.impact).slice(0, 30);
@@ -899,11 +904,14 @@ function realConstellationOffsets(memberCount, constellation, seed){
   for (const p of basePts) r = Math.max(r, Math.hypot(p[0], p[1]));
   const flagshipCount = Math.min(memberCount, basePts.length);
   const rnd = mulberry32(seed);
-  const out = basePts.slice(0, flagshipCount).map(p => [p[0], p[1], (rnd() - 0.5) * 20]);
+  // 별자리 전체가 납작한 원반처럼 보인다는 피드백 반영 — z(깊이)를 x/y 폭에 비례하게 줘서
+  // 실좌표 모양은 유지하되 입체적인 성단처럼 보이게 함(이전엔 폭 대비 깊이가 1/10 수준으로 너무 얇았음)
+  const zSpread = r * 0.6;
+  const out = basePts.slice(0, flagshipCount).map(p => [p[0], p[1], (rnd() - 0.5) * zSpread]);
   for (let i = flagshipCount; i < memberCount; i++){
     const theta = rnd() * Math.PI * 2;
     const rad = r * (0.35 + rnd() * 0.85);
-    out.push([rad * Math.cos(theta), rad * Math.sin(theta), (rnd() - 0.5) * 40]);
+    out.push([rad * Math.cos(theta), rad * Math.sin(theta), (rnd() - 0.5) * zSpread * 1.3]);
   }
   return out;
 }
@@ -1105,7 +1113,7 @@ async function buildAffiliateSuns(){
 
         affiliateSuns.push({ mesh: spr, label, link: s.site_url });
       };
-      if (sunUrl) loader.load(sunUrl, build, undefined, () => build(null));
+      if (sunUrl) loader.load(sunUrl, (tex) => build(makeSoftPhotoTexture(tex.image, 0.3, 0.5)), undefined, () => build(null));
       else build(null);
     });
   } catch (e){ console.warn("affiliate suns skipped", e); }
@@ -1251,6 +1259,22 @@ function makeShapeForce(){
 }
 
 /* ---- 3D 은하계 ---- */
+// 사각형 사진을 그대로 스프라이트에 붙이면 네모난 테두리가 티가 남(특히 배경이 완전한 검정이 아닌
+// 딥스카이 사진들) — 정사각형으로 크롭 후 가장자리만 부드럽게 투명 처리해서 티 안 나게 함.
+// featherStart/End가 1에 가까울수록 원본 모양을 거의 그대로 보존(은하 등), 작을수록 더 둥글게 뭉개짐(소행성 등).
+function makeSoftPhotoTexture(img, featherStart, featherEnd){
+  const s = 400, cv = document.createElement("canvas"); cv.width = cv.height = s;
+  const ctx = cv.getContext("2d");
+  const side = Math.min(img.width, img.height);
+  ctx.drawImage(img, (img.width - side) / 2, (img.height - side) / 2, side, side, 0, 0, s, s);
+  ctx.globalCompositeOperation = "destination-in";
+  const g = ctx.createRadialGradient(s / 2, s / 2, s * featherStart, s / 2, s / 2, s * featherEnd);
+  g.addColorStop(0, "rgba(255,255,255,1)");
+  g.addColorStop(0.75, "rgba(255,255,255,.9)");
+  g.addColorStop(1, "rgba(255,255,255,0)");
+  ctx.fillStyle = g; ctx.fillRect(0, 0, s, s);
+  return new THREE.CanvasTexture(cv);
+}
 function makeGlowTexture(){
   const s = 128, cv = document.createElement("canvas"); cv.width = cv.height = s;
   const g = cv.getContext("2d").createRadialGradient(s/2, s/2, 0, s/2, s/2, s/2);
@@ -1595,8 +1619,10 @@ function initSceneLoop(){
       const loader = new THREE.TextureLoader();
       for (const item of list){
         loader.load(item.url, (tex) => {
-          if (THREE.SRGBColorSpace) tex.colorSpace = THREE.SRGBColorSpace;
-          deepskyCatalog.push({ ...item, tex });
+          // 원본 사진의 네모난 테두리가 안 보이게 가장자리만 살짝 페이드(모양 자체는 최대한 보존)
+          const soft = makeSoftPhotoTexture(tex.image, 0.4, 0.5);
+          if (THREE.SRGBColorSpace) soft.colorSpace = THREE.SRGBColorSpace;
+          deepskyCatalog.push({ ...item, tex: soft });
         }, undefined, () => { /* 개별 이미지 로드 실패는 무시하고 나머지로 계속 동작 */ });
       }
     } catch (e){ /* 네트워크 차단 등 — 배경 레이어 없이 계속 동작 */ }
@@ -2360,9 +2386,17 @@ function drawerHTML(n, reviews){
 
     ${curatedRelationsHTML(n)}
 
-    ${complementNb.length ? `<div class="d-sec">${tr("together")}</div><div class="chips">${complementNb.map(x => `<button class="chip" data-go="${x.n.id}">${esc(displayName(x.n))}</button>`).join("")}</div>` : ""}
+    ${complementNb.length ? `
+    <details class="d-collapse" open>
+      <summary>${tr("together")}</summary>
+      <div class="d-collapse-body chips">${complementNb.map(x => `<button class="chip" data-go="${x.n.id}">${esc(displayName(x.n))}</button>`).join("")}</div>
+    </details>` : ""}
 
-    ${combos.length ? `<div class="d-sec">${tr("comboSecTitle")}</div><div class="combo-list">${combos.map(comboCardHTML).join("")}</div>` : ""}
+    ${combos.length ? `
+    <details class="d-collapse" open>
+      <summary>${tr("comboSecTitle")}</summary>
+      <div class="d-collapse-body combo-list">${combos.map(comboCardHTML).join("")}</div>
+    </details>` : ""}
 
     ${altNb.length ? `
     <details class="d-collapse">
