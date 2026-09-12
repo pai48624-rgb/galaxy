@@ -1171,6 +1171,54 @@ async function buildSolarSystem(){
   } catch (e){ console.warn("solar system skipped", e); }
 }
 
+/* ---- 떠돌이별: "사진 스프라이트"가 아니라 태양계 행성과 똑같은 방식(조명 받는 3D 구체)으로
+   만들어서 색상·크기·표면 무늬만 랜덤하게 바꿈 — 사진이 없어도 훨씬 입체감 있게 보임.
+   소행성/유성처럼 사라지지 않고 넓은 구간을 계속 떠돌아다님(경계에 닿으면 반사돼서 튕겨나감) ---- */
+let wanderingStars = [];
+function makeWanderTexture(hue1, hue2){
+  const s = 256, cv = document.createElement("canvas"); cv.width = cv.height = s;
+  const ctx = cv.getContext("2d");
+  const g = ctx.createLinearGradient(0, 0, 0, s);
+  g.addColorStop(0, `hsl(${hue1},70%,58%)`);
+  g.addColorStop(0.5, `hsl(${(hue1 + hue2) / 2},60%,42%)`);
+  g.addColorStop(1, `hsl(${hue2},70%,32%)`);
+  ctx.fillStyle = g; ctx.fillRect(0, 0, s, s);
+  ctx.globalAlpha = 0.22; // 단색 구체보다 행성처럼 보이게 밴드 무늬를 얹음
+  for (let i = 0; i < 7; i++){
+    ctx.fillStyle = i % 2 ? `hsl(${hue1},55%,72%)` : `hsl(${hue2},55%,22%)`;
+    ctx.fillRect(0, Math.random() * s, s, 5 + Math.random() * 20);
+  }
+  ctx.globalAlpha = 1;
+  return new THREE.CanvasTexture(cv);
+}
+function buildWanderingStars(){
+  const N = 10, span = 3600;
+  for (let i = 0; i < N; i++){
+    const hue1 = Math.random() * 360, hue2 = (hue1 + 50 + Math.random() * 140) % 360;
+    const r = 9 + Math.random() * 18;
+    const mesh = new THREE.Mesh(
+      new THREE.SphereGeometry(r, 20, 20),
+      new THREE.MeshPhongMaterial({ map: makeWanderTexture(hue1, hue2), specular: 0x222222, shininess: 8 }),
+    );
+    mesh.position.set((Math.random() - 0.5) * span, (Math.random() - 0.5) * span * 0.6, (Math.random() - 0.5) * span);
+    Graph.scene().add(mesh);
+
+    const halo = new THREE.Sprite(GLOW.clone());
+    halo.material = halo.material.clone();
+    halo.material.color = new THREE.Color(`hsl(${hue1},80%,62%)`);
+    halo.scale.setScalar(r * 2.4);
+    Graph.scene().add(halo);
+
+    wanderingStars.push({
+      mesh, halo,
+      vel: new THREE.Vector3(Math.random() - 0.5, (Math.random() - 0.5) * 0.4, Math.random() - 0.5)
+        .normalize().multiplyScalar(6 + Math.random() * 10),
+      spin: (Math.random() - 0.5) * 0.4,
+      bound: span * 0.72,
+    });
+  }
+}
+
 /* ---- 제휴/광고 "태양": AI 툴이 아닌 별도 제휴 사이트(예: 로또 추첨 사이트)를 일반 별보다 2~3배
    큰 태양으로, 그리스·로마 신 이름 + 한 줄 요약으로 표시. 클릭하면 제휴 링크로 이동.
    (data/affiliate_suns.json — 항목이 늘수록 태양도 늘어남, 사이트별 이름은 파일에서 개별 지정) ---- */
@@ -1668,6 +1716,7 @@ function initGraph(){
   buildConstellationLabels();
   try { buildUnusedConstellations(); } catch (e){ console.warn("unused constellations skipped", e); }
   buildSolarSystem();
+  buildWanderingStars();
   buildAffiliateSuns();
   buildWorldCityGlobe();
   wireSunClicks();
@@ -1885,6 +1934,15 @@ function initSceneLoop(){
       sp.angle += sp.speed * dt * 0.12; // 아주 천천히 공전
       sp.mesh.position.set(SS_CENTER.x + sp.distance * Math.cos(sp.angle), SS_CENTER.y, SS_CENTER.z + sp.distance * Math.sin(sp.angle));
       sp.mesh.rotation.y += dt * 0.15; // 자전
+    }
+
+    for (const w of wanderingStars){
+      w.mesh.position.addScaledVector(w.vel, dt);
+      if (w.mesh.position.length() > w.bound){
+        w.vel.reflect(w.mesh.position.clone().normalize()); // 경계에 닿으면 튕겨나가며 안쪽으로 되돌아옴
+      }
+      w.mesh.rotation.y += w.spin * dt;
+      w.halo.position.copy(w.mesh.position);
     }
 
     updateConstellationLabels();
