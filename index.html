@@ -1191,8 +1191,14 @@ function makeWanderTexture(hue1, hue2){
   ctx.globalAlpha = 1;
   return new THREE.CanvasTexture(cv);
 }
+const WANDER_SPAN = 3600;
+// 대부분은 느긋하게 돌지만, 몇 개는(약 30%) 눈에 띄게 빠르게 — "다 느리다"는 피드백 반영해 속도를 다양화
+function wanderSpeed(){
+  const base = 6 + Math.random() * 10;
+  return Math.random() < 0.3 ? base * (3 + Math.random() * 3) : base;
+}
 function buildWanderingStars(){
-  const N = 10, span = 3600;
+  const N = 10;
   for (let i = 0; i < N; i++){
     const hue1 = Math.random() * 360, hue2 = (hue1 + 50 + Math.random() * 140) % 360;
     const r = 9 + Math.random() * 18;
@@ -1200,7 +1206,7 @@ function buildWanderingStars(){
       new THREE.SphereGeometry(r, 20, 20),
       new THREE.MeshPhongMaterial({ map: makeWanderTexture(hue1, hue2), specular: 0x222222, shininess: 8 }),
     );
-    mesh.position.set((Math.random() - 0.5) * span, (Math.random() - 0.5) * span * 0.6, (Math.random() - 0.5) * span);
+    mesh.position.set((Math.random() - 0.5) * WANDER_SPAN, (Math.random() - 0.5) * WANDER_SPAN * 0.6, (Math.random() - 0.5) * WANDER_SPAN);
     Graph.scene().add(mesh);
 
     const halo = new THREE.Sprite(GLOW.clone());
@@ -1210,13 +1216,46 @@ function buildWanderingStars(){
     Graph.scene().add(halo);
 
     wanderingStars.push({
-      mesh, halo,
+      mesh, halo, r,
       vel: new THREE.Vector3(Math.random() - 0.5, (Math.random() - 0.5) * 0.4, Math.random() - 0.5)
-        .normalize().multiplyScalar(6 + Math.random() * 10),
+        .normalize().multiplyScalar(wanderSpeed()),
       spin: (Math.random() - 0.5) * 0.4,
-      bound: span * 0.72,
+      bound: WANDER_SPAN * 0.72,
     });
   }
+}
+function respawnWanderingStar(w){
+  w.mesh.position.set((Math.random() - 0.5) * WANDER_SPAN, (Math.random() - 0.5) * WANDER_SPAN * 0.6, (Math.random() - 0.5) * WANDER_SPAN);
+  w.halo.position.copy(w.mesh.position);
+  w.vel = new THREE.Vector3(Math.random() - 0.5, (Math.random() - 0.5) * 0.4, Math.random() - 0.5).normalize().multiplyScalar(wanderSpeed());
+}
+
+/* ---- 작은 "떠돌이 태양": 자기 스스로 빛나는 작은 별로 함께 떠돌다가, 떠돌이별과 부딪히면
+   폭발 이펙트를 낸 뒤 그 별을 새 위치·속도로 다시 태어나게 함 ---- */
+let wanderSun = null;
+let explosions = [];
+function buildWanderSun(){
+  const r = 13;
+  const mesh = new THREE.Mesh(new THREE.SphereGeometry(r, 20, 20), new THREE.MeshBasicMaterial({ color: 0xffd27a }));
+  mesh.position.set((Math.random() - 0.5) * WANDER_SPAN, (Math.random() - 0.5) * WANDER_SPAN * 0.6, (Math.random() - 0.5) * WANDER_SPAN);
+  Graph.scene().add(mesh);
+  const halo = new THREE.Sprite(GLOW.clone());
+  halo.scale.setScalar(r * 4.2);
+  Graph.scene().add(halo);
+  wanderSun = {
+    mesh, halo, r,
+    vel: new THREE.Vector3(Math.random() - 0.5, (Math.random() - 0.5) * 0.3, Math.random() - 0.5).normalize().multiplyScalar(12 + Math.random() * 10),
+    bound: WANDER_SPAN * 0.72,
+  };
+}
+function triggerExplosion(pos){
+  const flash = new THREE.Sprite(new THREE.SpriteMaterial({
+    map: makeGlowTexture(), color: 0xffe2b0, blending: THREE.AdditiveBlending, transparent: true, depthWrite: false,
+  }));
+  flash.position.copy(pos);
+  flash.scale.setScalar(6);
+  Graph.scene().add(flash);
+  explosions.push({ mesh: flash, life: 0, maxLife: 0.9 });
 }
 
 /* ---- 제휴/광고 "태양": AI 툴이 아닌 별도 제휴 사이트(예: 로또 추첨 사이트)를 일반 별보다 2~3배
@@ -1717,6 +1756,7 @@ function initGraph(){
   try { buildUnusedConstellations(); } catch (e){ console.warn("unused constellations skipped", e); }
   buildSolarSystem();
   buildWanderingStars();
+  buildWanderSun();
   buildAffiliateSuns();
   buildWorldCityGlobe();
   wireSunClicks();
@@ -1779,48 +1819,8 @@ function initSceneLoop(){
   }
   tryLoadAsteroidTexture();
 
-  /* ---- 딥스카이 배경 레이어: 은하·성운·성단·블랙홀 사진이 아주 멀리서 서서히 나타났다 사라짐
-     (data/deepsky_textures.json) — 기존 소행성 패턴보다 지속시간을 약 2배로 늘려 여유롭게 감상되게 함.
-     실사진(검은 배경)이라 원형 마스킹 없이 가산혼합(Additive)만으로 검은 배경 위에 자연스럽게 겹쳐짐 ---- */
-  const deepskyCatalog = [];
-  const deepsky = [];
-  const MAX_DEEPSKY = 2;
-  (async () => {
-    try {
-      const res = await fetch("data/deepsky_textures.json");
-      if (!res.ok) return;
-      const list = await res.json();
-      const loader = new THREE.TextureLoader();
-      for (const item of list){
-        loader.load(item.url, (tex) => {
-          // 원본 사진의 네모난 테두리가 안 보이게 가장자리만 살짝 페이드(모양 자체는 최대한 보존)
-          const soft = makeSoftPhotoTexture(tex.image, 0.4, 0.5);
-          if (THREE.SRGBColorSpace) soft.colorSpace = THREE.SRGBColorSpace;
-          deepskyCatalog.push({ ...item, tex: soft });
-        }, undefined, () => { /* 개별 이미지 로드 실패는 무시하고 나머지로 계속 동작 */ });
-      }
-    } catch (e){ /* 네트워크 차단 등 — 배경 레이어 없이 계속 동작 */ }
-  })();
-
-  function spawnDeepSky(){
-    if (!deepskyCatalog.length || deepsky.length >= MAX_DEEPSKY) return;
-    const item = deepskyCatalog[Math.floor(Math.random() * deepskyCatalog.length)];
-    const w = item.type === "blackhole" ? 260 + Math.random() * 140 : 420 + Math.random() * 520;
-    const mat = new THREE.MeshBasicMaterial({
-      map: item.tex, transparent: true, opacity: 0, depthWrite: false, blending: THREE.AdditiveBlending,
-    });
-    const mesh = new THREE.Mesh(new THREE.PlaneGeometry(w, w), mat);
-    const span = 4600;
-    mesh.position.set((Math.random() - 0.5) * span, (Math.random() - 0.5) * span, (Math.random() - 0.5) * span);
-    mesh.rotation.z = Math.random() * Math.PI * 2;
-    group.add(mesh);
-    deepsky.push({
-      mesh,
-      rotSpeed: (Math.random() - 0.5) * 0.02,
-      life: 0,
-      maxLife: 22 + Math.random() * 14, // 소행성(10~18초)의 약 2배
-    });
-  }
+  // (딥스카이 배경 사진 레이어는 평면 스프라이트라 입체감이 없어서 보기 안 좋다는 피드백으로 제거함 —
+  // 태양계/떠돌이별처럼 조명 받는 3D 구체로 만들 수 없는 종류의 소재라 "고치기"보다 빼는 게 맞다고 판단)
 
   function spawnAsteroid(){
     if (!asteroidTex || asteroids.length >= MAX_ASTEROIDS) return;
@@ -1842,27 +1842,29 @@ function initSceneLoop(){
     });
   }
 
-  function spawnMeteor(){
-    if (active.length >= MAX_METEORS) return;
+  // epic=true면 꼬리가 훨씬 길고 아주 오래(수 초) 살아서 화면을 가로질러 지나갈 때까지
+  // 안 없어지는 "메인 이벤트" 별똥별 — 보통 별똥별과 별개로 훨씬 뜸하게 하나씩만 등장시킴
+  function spawnMeteor(epic){
+    if (!epic && active.length >= MAX_METEORS) return;
     const span = 3400;
     const start = new THREE.Vector3((Math.random() - 0.5) * span, (Math.random() - 0.5) * span, (Math.random() - 0.5) * span);
     const dir = new THREE.Vector3(Math.random() - 0.5, Math.random() * -0.6 - 0.15, Math.random() - 0.5).normalize();
-    const long = Math.random() < 0.3; // 셋 중 하나 꼴로 꼬리가 긴 별똥별
-    const length = long ? 140 + Math.random() * 170 : 30 + Math.random() * 70;
+    const long = epic || Math.random() < 0.3; // 셋 중 하나 꼴로 꼬리가 긴 별똥별
+    const length = epic ? 900 + Math.random() * 400 : long ? 140 + Math.random() * 170 : 30 + Math.random() * 70;
     const end = start.clone().addScaledVector(dir, -length);
     const geo = new THREE.BufferGeometry().setFromPoints([start, end]);
-    const mat = new THREE.LineBasicMaterial({ color: 0xdfe8ff, transparent: true, opacity: 0 });
+    const mat = new THREE.LineBasicMaterial({ color: epic ? 0xfff2c8 : 0xdfe8ff, transparent: true, opacity: 0 });
     const line = new THREE.Line(geo, mat);
     group.add(line);
     active.push({
       line, dir,
-      speed: (long ? 650 : 480) + Math.random() * 420,
+      speed: epic ? 260 + Math.random() * 60 : (long ? 650 : 480) + Math.random() * 420,
       life: 0,
-      maxLife: long ? 1.3 + Math.random() * 0.9 : 0.6 + Math.random() * 0.7,
+      maxLife: epic ? 7 + Math.random() * 3 : long ? 1.3 + Math.random() * 0.9 : 0.6 + Math.random() * 0.7,
     });
   }
 
-  let lastT = performance.now(), lastBurst = 0, lastAsteroid = 0, lastDeepSky = 0;
+  let lastT = performance.now(), lastBurst = 0, lastAsteroid = 0, lastEpicMeteor = 0;
   function tick(t){
     requestAnimationFrame(tick);
     const dt = Math.min(0.05, (t - lastT) / 1000); lastT = t;
@@ -1871,6 +1873,9 @@ function initSceneLoop(){
       lastBurst = t;
       const burst = 1 + Math.floor(Math.random() * 4); // 한 번에 1~4개, 랜덤한 개수로 동시에
       for (let i = 0; i < burst; i++) spawnMeteor();
+    }
+    if (t - lastEpicMeteor > 25000 + Math.random() * 20000){
+      lastEpicMeteor = t; spawnMeteor(true);
     }
     for (let i = active.length - 1; i >= 0; i--){
       const m = active[i];
@@ -1889,22 +1894,6 @@ function initSceneLoop(){
       lastAsteroid = t; spawnAsteroid();
     }
 
-    if (t - lastDeepSky > 8000 + Math.random() * 9000){
-      lastDeepSky = t; spawnDeepSky();
-    }
-    for (let i = deepsky.length - 1; i >= 0; i--){
-      const d = deepsky[i];
-      d.life += dt;
-      const p = d.life / d.maxLife;
-      if (p >= 1){
-        group.remove(d.mesh); d.mesh.geometry.dispose(); d.mesh.material.dispose();
-        deepsky.splice(i, 1);
-        continue;
-      }
-      d.mesh.rotation.z += d.rotSpeed * dt;
-      // 천천히 페이드인 → 오래 유지 → 천천히 페이드아웃(기존 소행성보다 두 배 여유롭게)
-      d.mesh.material.opacity = 0.55 * (p < 0.18 ? p / 0.18 : p > 0.82 ? (1 - p) / 0.18 : 1);
-    }
     for (let i = asteroids.length - 1; i >= 0; i--){
       const a = asteroids[i];
       a.life += dt;
@@ -1943,6 +1932,35 @@ function initSceneLoop(){
       }
       w.mesh.rotation.y += w.spin * dt;
       w.halo.position.copy(w.mesh.position);
+    }
+
+    if (wanderSun){
+      wanderSun.mesh.position.addScaledVector(wanderSun.vel, dt);
+      if (wanderSun.mesh.position.length() > wanderSun.bound){
+        wanderSun.vel.reflect(wanderSun.mesh.position.clone().normalize());
+      }
+      wanderSun.halo.position.copy(wanderSun.mesh.position);
+      for (const w of wanderingStars){
+        const dist = wanderSun.mesh.position.distanceTo(w.mesh.position);
+        if (dist < wanderSun.r + w.r + 6){
+          triggerExplosion(w.mesh.position.clone().lerp(wanderSun.mesh.position, 0.5));
+          const bounceN = w.mesh.position.clone().sub(wanderSun.mesh.position).normalize();
+          wanderSun.vel.reflect(bounceN);
+          respawnWanderingStar(w);
+        }
+      }
+    }
+    for (let i = explosions.length - 1; i >= 0; i--){
+      const ex = explosions[i];
+      ex.life += dt;
+      const p = ex.life / ex.maxLife;
+      if (p >= 1){
+        Graph.scene().remove(ex.mesh); ex.mesh.material.dispose();
+        explosions.splice(i, 1);
+        continue;
+      }
+      ex.mesh.scale.setScalar(6 + 90 * Math.pow(p, 0.4));
+      ex.mesh.material.opacity = 1 - p;
     }
 
     updateConstellationLabels();
