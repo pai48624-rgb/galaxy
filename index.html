@@ -341,7 +341,9 @@
         <div id="catTree" style="margin-top:8px"></div>
       </div>
 
+      <div id="adSlot" hidden></div>
       <div class="note" id="seoNote">전체 텍스트 목록은 화면에서 감추고 페이지 하단 DOM에 유지 → 검색·스크린리더 노출은 그대로.</div>
+      <a class="lnk" href="/privacy.html" target="_blank" rel="noopener" style="font-size:10px;color:var(--faint)"><span id="lblPrivacyLink">개인정보처리방침</span></a>
     </aside>
 
     <main id="stage">
@@ -453,6 +455,30 @@ const CONFIG = {
 const AFFILIATE_PARAM = "ref";
 const AFFILIATE_VALUE = "ai-galaxy";
 
+/* ---- 구글 애드센스 연동 준비 — 계정 승인 전까지는 빈 값으로 둬서 아무 것도 안 함(콘솔 에러도 없음).
+   승인받은 후 client/slot 값만 채우면 바로 활성화됨. 자리(#adSlot)는 사이드바 맨 아래(그래프 화면
+   침범 안 하는 가장 덜 방해되는 위치)에 이미 마련해둠. ---- */
+const ADSENSE_CLIENT = ""; // 예: "ca-pub-1234567890123456"
+const ADSENSE_SLOT = ""; // 예: "1234567890"
+function initAdSense(){
+  if (!ADSENSE_CLIENT || !ADSENSE_SLOT) return;
+  const ins = document.createElement("ins");
+  ins.className = "adsbygoogle";
+  ins.style.display = "block";
+  ins.dataset.adClient = ADSENSE_CLIENT;
+  ins.dataset.adSlot = ADSENSE_SLOT;
+  ins.dataset.adFormat = "auto";
+  ins.dataset.fullWidthResponsive = "true";
+  $("#adSlot").appendChild(ins);
+  $("#adSlot").hidden = false;
+  const s = document.createElement("script");
+  s.async = true;
+  s.src = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`;
+  s.crossOrigin = "anonymous";
+  s.onload = () => { try { (window.adsbygoogle = window.adsbygoogle || []).push({}); } catch (e){ console.warn("adsense push failed", e); } };
+  document.head.appendChild(s);
+}
+
 /* ---- 라이브러리: 위 vendor/*.js 가 전역으로 로드됨 (THREE, SpriteText, ForceGraph3D, supabase) ---- */
 const _missing = ["THREE","SpriteText","ForceGraph3D","supabase"].filter(k => !window[k]);
 if (_missing.length){
@@ -501,7 +527,7 @@ const I18N = {
     catComboTitle: "⭐ 이 그룹 AI들의 조합 · 가성비 총평", catMembersTitle: "이 그룹의 AI들",
     curatedRelTitle: "🔗 실제 연동·연관 AI 툴", bestComboLabel: "가장 잘 맞는 조합",
     altSecTitle: "대안 AI (비슷한 경쟁 제품)", altSecHint: "아래는 이 AI를 대체할 수 있는 비슷한 제품 목록입니다(함께 쓰는 조합 아님).",
-    sponsToday: "오늘의 스폰서",
+    sponsToday: "오늘의 스폰서", privacyLink: "개인정보처리방침",
     comboBuildToggleLabel: "🔗 내 별 조합 만들기", comboBuildHint: "🔗 별을 2개 이상 클릭해서 골라보세요(최대 5개)",
     comboBuildMax: "최대 5개까지 고를 수 있어요", comboBuildClosest: "가장 비슷한 등록 조합",
     comboBuildNone: "아직 이 조합에 딱 맞는 등록된 결과가 없어요. 그래도 저장은 할 수 있어요.",
@@ -541,7 +567,7 @@ const I18N = {
     catComboTitle: "⭐ Combos & value summary for this group", catMembersTitle: "AIs in this group",
     curatedRelTitle: "🔗 Real integrations & related tools", bestComboLabel: "Best-fit combo",
     altSecTitle: "Alternatives (similar competing products)", altSecHint: "These are products that could replace this one — not a combo to use together.",
-    sponsToday: "Today's Sponsor",
+    sponsToday: "Today's Sponsor", privacyLink: "Privacy Policy",
     comboBuildToggleLabel: "🔗 Build my combo", comboBuildHint: "🔗 Click 2 or more stars to pick them (up to 5)",
     comboBuildMax: "You can pick up to 5", comboBuildClosest: "closest registered combo",
     comboBuildNone: "No registered combo matches this exactly yet. You can still save it.",
@@ -705,6 +731,7 @@ async function boot(attempt = 1){
     buildSponsorSlot(sponsors);
     refresh();
     applyLanguage();
+    initAdSense();
   } catch (e){
     const detail = (e && (e.message || e.error_description || e.hint || e.code)) || String(e);
     console.error("boot failed @ [" + phase + "] attempt " + attempt, e);
@@ -2531,6 +2558,7 @@ function applyLanguage(){
   $("#lblComboBuildDesc").textContent = tr("comboBuildDesc");
   $("#lblMyCombosView").textContent = tr("myCombosViewLabel");
   $("#lblSponsToday").textContent = tr("sponsToday");
+  $("#lblPrivacyLink").textContent = tr("privacyLink");
   if (comboSelectMode) renderComboBuildBar();
   $("#lblComboDlgTitle").textContent = tr("comboDlgTitle");
   $("#comboClose").textContent = tr("close");
