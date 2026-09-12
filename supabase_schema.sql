@@ -165,3 +165,39 @@ grant usage, select on all sequences in schema public to anon, authenticated;
 
 -- (선택) Realtime 로 리뷰 스트림을 받고 싶으면:
 -- alter publication supabase_realtime add table public.reviews;
+
+-- ────────────────────────────────────────────────────────────────────────────
+--  6. board_posts — 사용자 커뮤니티 게시판 (2026-09-13 추가)
+--     · 글쓰기는 로그인(이메일 매직링크) 필요, 읽기는 누구나 공개
+--     · "체크는 최소화" 방침에 따라 이메일 인증 자체를 Supabase Auth에 맡기고
+--       앱 쪽에서는 별도 승인/검수 로직을 두지 않음(reviews와 동일한 철학)
+-- ────────────────────────────────────────────────────────────────────────────
+create table if not exists public.board_posts (
+  id          bigint generated always as identity primary key,
+  user_id     uuid not null default auth.uid() references auth.users(id) on delete cascade,
+  author_name text not null,
+  title       text not null,
+  body        text not null,
+  created_at  timestamptz not null default now(),
+  constraint board_posts_title_len  check (char_length(btrim(title)) between 1 and 120),
+  constraint board_posts_body_len   check (char_length(btrim(body)) between 1 and 4000),
+  constraint board_posts_author_len check (char_length(author_name) between 1 and 40)
+);
+create index if not exists board_posts_created_idx on public.board_posts (created_at desc);
+
+alter table public.board_posts enable row level security;
+drop policy if exists "read board_posts" on public.board_posts;
+drop policy if exists "insert board_posts own" on public.board_posts;
+drop policy if exists "delete board_posts own" on public.board_posts;
+
+create policy "read board_posts" on public.board_posts for select using (true);
+create policy "insert board_posts own" on public.board_posts for insert
+  to authenticated
+  with check (auth.uid() = user_id);
+create policy "delete board_posts own" on public.board_posts for delete
+  to authenticated
+  using (auth.uid() = user_id);
+
+grant select on public.board_posts to anon, authenticated;
+grant insert, delete on public.board_posts to authenticated;
+grant usage, select on all sequences in schema public to authenticated;

@@ -199,6 +199,14 @@
   .combo-price{font-size:11px;color:var(--dim);line-height:1.5}
   .combo-free-badge{font-size:9px;font-weight:800;padding:2px 7px;border-radius:999px;background:rgba(143,214,196,.18);color:var(--teal)}
   #comboDlg .combo-list{max-height:60vh;overflow:auto;padding-right:4px}
+  #boardList{max-height:42vh;overflow:auto;padding-right:4px}
+  .board-post{border:1px solid var(--line);background:rgba(255,255,255,.03);border-radius:11px;padding:10px 12px}
+  .board-post-head{display:flex;align-items:center;justify-content:space-between;gap:8px}
+  .board-post-title{font-weight:800;font-size:13px;color:#eef0fb}
+  .board-post-meta{font-size:10.5px;color:var(--faint);white-space:nowrap}
+  .board-post-body{font-size:12.5px;color:#d6d6e4;line-height:1.55;margin-top:4px;white-space:pre-wrap}
+  .board-post-del{background:none;border:0;color:var(--dim);font-size:11px;cursor:pointer;padding:0;margin-top:6px}
+  .board-post-del:hover{color:#ff8a8a}
 
   .d-glance{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:12.5px;color:#d6d6e4;
     background:rgba(140,120,230,.1);border:1px solid rgba(140,120,230,.28);border-radius:9px;padding:7px 10px;margin:8px 0}
@@ -280,6 +288,8 @@
       </div>
     </div>
     <div style="display:flex;align-items:center;gap:10px">
+      <button id="boardOpenBtn" style="padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.18);
+        background:rgba(20,20,32,.7);color:var(--ink);font-size:11px;font-weight:700;cursor:pointer"><span id="lblBoardOpen">🗨 게시판</span></button>
       <button id="langBtn" style="padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.18);
         background:rgba(20,20,32,.7);color:var(--ink);font-size:11px;font-weight:700;cursor:pointer">EN</button>
       <button id="labelsToggleBtn" style="padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.18);
@@ -415,6 +425,38 @@
   </div>
 </dialog>
 
+<dialog id="boardDlg">
+  <div class="dlg-in" style="max-width:560px">
+    <h3 id="lblBoardTitle">🗨 커뮤니티 게시판</h3>
+
+    <div id="boardAuthLoggedOut">
+      <div class="row" style="display:flex;gap:8px">
+        <input type="email" id="boardEmail" placeholder="이메일 주소" style="flex:1;border:1px solid rgba(255,255,255,.16);
+          border-radius:9px;background:rgba(12,12,20,.7);color:var(--ink);font:inherit;font-size:12.5px;padding:9px">
+        <button type="button" class="go" id="boardLoginBtn"><span id="lblBoardLoginBtn">로그인 링크 받기</span></button>
+      </div>
+      <div class="rv-hint" id="lblBoardLoginHint">이메일로 받은 링크를 눌러서 로그인하면 글을 쓸 수 있어요. (읽기는 로그인 없이 가능)</div>
+    </div>
+
+    <div id="boardAuthLoggedIn" hidden style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+      <span style="font-size:12px;color:var(--dim)"><span id="lblBoardLoggedInAs">로그인됨:</span> <b id="boardUserEmail"></b></span>
+      <button type="button" class="ghost" id="boardLogoutBtn" style="padding:5px 10px;font-size:11px"><span id="lblBoardLogout">로그아웃</span></button>
+    </div>
+
+    <form id="boardPostForm" hidden style="display:flex;flex-direction:column;gap:8px;margin:10px 0">
+      <input type="text" id="boardPostTitle" maxlength="120" placeholder="제목" style="border:1px solid rgba(255,255,255,.16);
+        border-radius:9px;background:rgba(12,12,20,.7);color:var(--ink);font:inherit;font-size:12.5px;padding:9px">
+      <textarea id="boardPostBody" maxlength="4000" rows="3" placeholder="내용" style="border:1px solid rgba(255,255,255,.16);
+        border-radius:9px;background:rgba(12,12,20,.7);color:var(--ink);font:inherit;font-size:12.5px;padding:9px;resize:vertical"></textarea>
+      <div class="dlg-act" style="margin:0"><button type="submit" class="go"><span id="lblBoardSubmit">✎ 등록</span></button></div>
+    </form>
+
+    <div class="d-sec" id="lblBoardListTitle">최근 글</div>
+    <div id="boardList" class="combo-list"></div>
+    <div class="dlg-act"><button type="button" class="ghost" id="boardClose">닫기</button></div>
+  </div>
+</dialog>
+
 <div class="overlay" id="setup" hidden>
   <div class="box">
     <h2>⚙️ Supabase 연결 설정이 필요해요</h2>
@@ -534,6 +576,12 @@ const I18N = {
     altSecTitle: "대안 AI (비슷한 경쟁 제품)", altSecHint: "아래는 이 AI를 대체할 수 있는 비슷한 제품 목록입니다(함께 쓰는 조합 아님).",
     sponsToday: "오늘의 스폰서", privacyLink: "개인정보처리방침",
     labelsOn: "라벨 On", labelsOff: "라벨 Off",
+    boardOpenLabel: "🗨 게시판", boardTitle: "🗨 커뮤니티 게시판",
+    boardLoginBtnLabel: "로그인 링크 받기", boardLoginHint: "이메일로 받은 링크를 눌러서 로그인하면 글을 쓸 수 있어요. (읽기는 로그인 없이 가능)",
+    boardLoggedInAs: "로그인됨:", boardLogoutLabel: "로그아웃", boardSubmitLabel: "✎ 등록",
+    boardListTitle: "최근 글", boardNone: "아직 글이 없어요. 첫 글을 남겨보세요.", boardDelete: "삭제",
+    boardLoginSent: "로그인 링크를 이메일로 보냈어요 ✓", boardLoginFail: "로그인 링크 전송 실패 — 이메일을 확인해주세요",
+    boardPostFail: "등록 실패 — 로그인 상태를 확인해주세요",
     comboBuildToggleLabel: "🔗 내 별 조합 만들기", comboBuildHint: "🔗 별을 2개 이상 클릭해서 골라보세요(최대 5개)",
     comboBuildMax: "최대 5개까지 고를 수 있어요", comboBuildClosest: "가장 비슷한 등록 조합",
     comboBuildNone: "아직 이 조합에 딱 맞는 등록된 결과가 없어요. 그래도 저장은 할 수 있어요.",
@@ -575,6 +623,12 @@ const I18N = {
     altSecTitle: "Alternatives (similar competing products)", altSecHint: "These are products that could replace this one — not a combo to use together.",
     sponsToday: "Today's Sponsor", privacyLink: "Privacy Policy",
     labelsOn: "Labels On", labelsOff: "Labels Off",
+    boardOpenLabel: "🗨 Board", boardTitle: "🗨 Community Board",
+    boardLoginBtnLabel: "Get login link", boardLoginHint: "Click the link emailed to you to log in and post. (Reading doesn't require login)",
+    boardLoggedInAs: "Logged in:", boardLogoutLabel: "Log out", boardSubmitLabel: "✎ Post",
+    boardListTitle: "Recent posts", boardNone: "No posts yet — be the first.", boardDelete: "Delete",
+    boardLoginSent: "Login link emailed ✓", boardLoginFail: "Couldn't send login link — check the email address",
+    boardPostFail: "Couldn't post — please check you're logged in",
     comboBuildToggleLabel: "🔗 Build my combo", comboBuildHint: "🔗 Click 2 or more stars to pick them (up to 5)",
     comboBuildMax: "You can pick up to 5", comboBuildClosest: "closest registered combo",
     comboBuildNone: "No registered combo matches this exactly yet. You can still save it.",
@@ -644,7 +698,9 @@ if (!/^https:\/\/[a-z0-9.-]+(\.supabase\.co|\.pages\.dev\/api|\/api)$/i.test(CON
   $("#setup").hidden = false;
   throw new Error("Supabase not configured");
 }
-const sb = createClient(CONFIG.SUPABASE_URL, CONFIG.SUPABASE_ANON_KEY, { auth: { persistSession: false } });
+// persistSession을 true로 바꿈 — 게시판 로그인(매직링크) 세션이 새로고침해도 유지되게 하려면 필요함
+// (기존엔 로그인 기능 자체가 없어서 false였음; 리뷰/제보는 어차피 로그인 없이 동작해 영향 없음)
+const sb = createClient(CONFIG.SUPABASE_URL, CONFIG.SUPABASE_ANON_KEY, { auth: { persistSession: true } });
 
 /* ---- 데이터 로드 (범위 페이지네이션) ---- */
 async function selectAll(table, cols){
@@ -749,6 +805,7 @@ async function boot(attempt = 1){
     refresh();
     applyLanguage();
     initAdSense();
+    initBoardAuth();
   } catch (e){
     const detail = (e && (e.message || e.error_description || e.hint || e.code)) || String(e);
     console.error("boot failed @ [" + phase + "] attempt " + attempt, e);
@@ -995,6 +1052,87 @@ function openComboDlg(){
   $("#comboDlgList").innerHTML = top.length ? top.map(comboCardHTML).join("") : `<div class="rv-hint">${tr("comboNone")}</div>`;
   $("#comboDlg").showModal();
 }
+/* ---- 커뮤니티 게시판: 이메일 매직링크 로그인(가장 손쉬운 방식 — 비밀번호·OAuth 앱 등록 불필요,
+   Supabase가 이메일 인증을 전부 처리) → 로그인한 사용자만 글쓰기, 읽기는 누구나 가능.
+   board_posts 테이블 + RLS는 supabase_schema.sql §6 / scripts/migrate_board_posts.mjs 참고 ---- */
+let boardSession = null;
+async function initBoardAuth(){
+  try {
+    const { data } = await sb.auth.getSession();
+    boardSession = data?.session || null;
+  } catch (e){ console.warn("board auth init skipped", e); }
+  try {
+    sb.auth.onAuthStateChange((_event, session) => {
+      boardSession = session;
+      updateBoardAuthUI();
+    });
+  } catch (e){ /* 인증 이벤트 구독 실패해도 게시판 읽기는 계속 동작 */ }
+}
+function updateBoardAuthUI(){
+  const loggedIn = !!boardSession?.user;
+  $("#boardAuthLoggedOut").hidden = loggedIn;
+  $("#boardAuthLoggedIn").hidden = !loggedIn;
+  $("#boardPostForm").hidden = !loggedIn;
+  if (loggedIn) $("#boardUserEmail").textContent = boardSession.user.email || "";
+}
+async function boardLogin(){
+  const email = $("#boardEmail").value.trim();
+  if (!email) return;
+  $("#boardLoginBtn").disabled = true;
+  try {
+    const { error } = await sb.auth.signInWithOtp({ email, options: { emailRedirectTo: location.href } });
+    toast(error ? tr("boardLoginFail") : tr("boardLoginSent"));
+  } catch (e){ toast(tr("boardLoginFail")); }
+  $("#boardLoginBtn").disabled = false;
+}
+async function boardLogout(){
+  try { await sb.auth.signOut(); } catch (e){}
+}
+async function loadBoardPosts(){
+  $("#boardList").innerHTML = `<div class="rv-hint">${tr("loadingReviews")}</div>`;
+  try {
+    const { data, error } = await sb.from("board_posts").select("id,user_id,author_name,title,body,created_at")
+      .order("created_at", { ascending: false }).limit(50);
+    if (error) throw error;
+    $("#boardList").innerHTML = data?.length
+      ? data.map(boardPostHTML).join("")
+      : `<div class="rv-hint">${tr("boardNone")}</div>`;
+  } catch (e){
+    $("#boardList").innerHTML = `<div class="rv-hint">${tr("boardNone")}</div>`;
+  }
+}
+function boardPostHTML(p){
+  const mine = boardSession?.user?.id && p.user_id === boardSession.user.id;
+  return `<div class="board-post" data-id="${p.id}">
+    <div class="board-post-head">
+      <span class="board-post-title">${esc(p.title)}</span>
+      <span class="board-post-meta">${esc(p.author_name)} · ${timeago(p.created_at)}</span>
+    </div>
+    <div class="board-post-body">${esc(p.body)}</div>
+    ${mine ? `<button type="button" class="board-post-del" data-del="${p.id}">${esc(tr("boardDelete"))}</button>` : ""}
+  </div>`;
+}
+async function submitBoardPost(e){
+  e.preventDefault();
+  const title = $("#boardPostTitle").value.trim(), body = $("#boardPostBody").value.trim();
+  if (!title || !body || !boardSession?.user) return;
+  const authorName = (boardSession.user.email || "user").split("@")[0];
+  try {
+    const { error } = await sb.from("board_posts").insert({ author_name: authorName, title, body });
+    if (error) throw error;
+    $("#boardPostTitle").value = ""; $("#boardPostBody").value = "";
+    loadBoardPosts();
+  } catch (e){ toast(tr("boardPostFail")); }
+}
+async function deleteBoardPost(id){
+  try { await sb.from("board_posts").delete().eq("id", id); loadBoardPosts(); } catch (e){}
+}
+function openBoardDlg(){
+  updateBoardAuthUI();
+  loadBoardPosts();
+  $("#boardDlg").showModal();
+}
+
 // "조합 저장하면 어디로 가는거야?" — 이 브라우저의 localStorage에만 저장됨(서버·다른 기기와 공유 안 됨).
 // 저장만 되고 다시 볼 방법이 없었던 게 문제였어서, 저장한 목록을 실제로 보여주는 화면을 추가함.
 function openMyCombosDlg(){
@@ -2531,6 +2669,15 @@ function buildSidebar(){
   $("#comboBuildClear").addEventListener("click", () => { comboSelection = []; renderComboBuildBar(); Graph.nodeThreeObject(nodeObject).refresh(); });
   $("#comboBuildSave").addEventListener("click", saveComboSelection);
   $("#myCombosView").addEventListener("click", openMyCombosDlg);
+  $("#boardOpenBtn").addEventListener("click", openBoardDlg);
+  $("#boardClose").addEventListener("click", () => $("#boardDlg").close());
+  $("#boardLoginBtn").addEventListener("click", boardLogin);
+  $("#boardLogoutBtn").addEventListener("click", boardLogout);
+  $("#boardPostForm").addEventListener("submit", submitBoardPost);
+  $("#boardList").addEventListener("click", e => {
+    const b = e.target.closest("[data-del]"); if (!b) return;
+    deleteBoardPost(+b.dataset.del);
+  });
   $("#labelsToggleBtn").addEventListener("click", () => setLabelsVisible(!labelsVisible));
   $("#comboBuildChips").addEventListener("click", e => {
     const b = e.target.closest("[data-unpick]"); if (!b) return;
@@ -2584,6 +2731,14 @@ function applyLanguage(){
   $("#lblSponsToday").textContent = tr("sponsToday");
   $("#lblPrivacyLink").textContent = tr("privacyLink");
   $("#lblLabelsToggle").textContent = labelsVisible ? tr("labelsOn") : tr("labelsOff");
+  $("#lblBoardOpen").textContent = tr("boardOpenLabel");
+  $("#lblBoardTitle").textContent = tr("boardTitle");
+  $("#lblBoardLoginBtn").textContent = tr("boardLoginBtnLabel");
+  $("#lblBoardLoginHint").textContent = tr("boardLoginHint");
+  $("#lblBoardLoggedInAs").textContent = tr("boardLoggedInAs");
+  $("#lblBoardLogout").textContent = tr("boardLogoutLabel");
+  $("#lblBoardSubmit").textContent = tr("boardSubmitLabel");
+  $("#lblBoardListTitle").textContent = tr("boardListTitle");
   if (comboSelectMode) renderComboBuildBar();
   $("#lblComboDlgTitle").textContent = tr("comboDlgTitle");
   $("#comboClose").textContent = tr("close");
