@@ -13,6 +13,8 @@
 <link rel="canonical" href="https://ai-galaxy.pages.dev/">
 <meta name="google-site-verification" content="ZKgNKWOhpPQ5sikJIkhGAV_GbgAloGAIYBsOVAJxz6o">
 <meta name="naver-site-verification" content="11527827ffc572c4fc7337b69af3d8a9">
+<meta name="google-adsense-account" content="ca-pub-1632907475675251">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1632907475675251" crossorigin="anonymous"></script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23a89bf0' d='M12 2l2.6 7.4L22 12l-7.4 2.6L12 22l-2.6-7.4L2 12l7.4-2.6z'/%3E%3C/svg%3E">
 <style>
   :root{
@@ -502,11 +504,12 @@ const CONFIG = {
 const AFFILIATE_PARAM = "ref";
 const AFFILIATE_VALUE = "ai-galaxy";
 
-/* ---- 구글 애드센스 연동 준비 — 계정 승인 전까지는 빈 값으로 둬서 아무 것도 안 함(콘솔 에러도 없음).
-   승인받은 후 client/slot 값만 채우면 바로 활성화됨. 자리(#adSlot)는 사이드바 맨 아래(그래프 화면
-   침범 안 하는 가장 덜 방해되는 위치)에 이미 마련해둠. ---- */
-const ADSENSE_CLIENT = ""; // 예: "ca-pub-1234567890123456"
-const ADSENSE_SLOT = ""; // 예: "1234567890"
+/* ---- 구글 애드센스 — 소유권 확인용 메타태그+스크립트는 <head>에 고정으로 넣어둠(자동광고는
+   그것만으로 켜짐). 아래 ADSENSE_SLOT은 나중에 특정 자리(#adSlot)에 수동 광고 유닛을 하나 더
+   박고 싶을 때만 채우면 됨 — 지금은 광고 유닛을 아직 안 만들어서 비워둠(승인 전엔 자동광고도
+   실제로 안 뜰 수 있음, 정상). ---- */
+const ADSENSE_CLIENT = "ca-pub-1632907475675251";
+const ADSENSE_SLOT = ""; // AdSense에서 수동 광고 유닛 만들면 그 슬롯 ID를 여기에
 function initAdSense(){
   if (!ADSENSE_CLIENT || !ADSENSE_SLOT) return;
   const ins = document.createElement("ins");
