@@ -280,7 +280,7 @@
       <button id="langBtn" style="padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.18);
         background:rgba(20,20,32,.7);color:var(--ink);font-size:11px;font-weight:700;cursor:pointer">EN</button>
       <div class="spons" id="sponsSlot" hidden>
-        <span class="lab">오늘의 스폰서</span>
+        <span class="lab" id="lblSponsToday">오늘의 스폰서</span>
         <a class="spons-card" id="sponsCard" href="#" target="_blank" rel="noopener">
           <span class="lg"></span>
           <span><b id="sponsName"></b><br><span id="sponsBlurb"></span></span>
@@ -317,8 +317,6 @@
         <div class="checks checks-row" id="priceChecks">
           <label><input type="checkbox" value="무료" checked><span data-price-label>무료</span></label>
           <label><input type="checkbox" value="부분유료" checked><span data-price-label>부분유료</span></label>
-          <label><input type="checkbox" value="유료" checked><span data-price-label>유료</span></label>
-          <label><input type="checkbox" value="미지정" checked><span data-price-label>미지정</span></label>
         </div>
       </div>
 
@@ -503,6 +501,7 @@ const I18N = {
     catComboTitle: "⭐ 이 그룹 AI들의 조합 · 가성비 총평", catMembersTitle: "이 그룹의 AI들",
     curatedRelTitle: "🔗 실제 연동·연관 AI 툴", bestComboLabel: "가장 잘 맞는 조합",
     altSecTitle: "대안 AI (비슷한 경쟁 제품)", altSecHint: "아래는 이 AI를 대체할 수 있는 비슷한 제품 목록입니다(함께 쓰는 조합 아님).",
+    sponsToday: "오늘의 스폰서",
     comboBuildToggleLabel: "🔗 내 별 조합 만들기", comboBuildHint: "🔗 별을 2개 이상 클릭해서 골라보세요(최대 5개)",
     comboBuildMax: "최대 5개까지 고를 수 있어요", comboBuildClosest: "가장 비슷한 등록 조합",
     comboBuildNone: "아직 이 조합에 딱 맞는 등록된 결과가 없어요. 그래도 저장은 할 수 있어요.",
@@ -542,6 +541,7 @@ const I18N = {
     catComboTitle: "⭐ Combos & value summary for this group", catMembersTitle: "AIs in this group",
     curatedRelTitle: "🔗 Real integrations & related tools", bestComboLabel: "Best-fit combo",
     altSecTitle: "Alternatives (similar competing products)", altSecHint: "These are products that could replace this one — not a combo to use together.",
+    sponsToday: "Today's Sponsor",
     comboBuildToggleLabel: "🔗 Build my combo", comboBuildHint: "🔗 Click 2 or more stars to pick them (up to 5)",
     comboBuildMax: "You can pick up to 5", comboBuildClosest: "closest registered combo",
     comboBuildNone: "No registered combo matches this exactly yet. You can still save it.",
@@ -626,7 +626,9 @@ async function selectAll(table, cols){
 }
 
 let nodes = [], links = [], nodeById = new Map(), cats = [];
-const state = { cats: new Set(), price: new Set(["무료","부분유료","유료","미지정"]), q: "" };
+// "유료"/"미지정"은 731개 데이터셋 전체에서 단 한 번도 실제로 쓰이지 않는 값이라(전부 무료 또는
+// 부분유료로만 태깅돼 있음) 체크박스로 둬도 항상 결과가 0개로 나오는 죽은 옵션이었음 — 제거함
+const state = { cats: new Set(), price: new Set(["무료","부분유료"]), q: "" };
 let Graph, SHOW_LABELS = false, layoutMode = "network", didInitialFit = false, userTouchedCamera = false, wasSearching = false, _searchFitTimer = null, _catFocusTimer = null, highlightedCategory = null;
 // "내가 고른 별들을 저장하면 조합 결과가 나온다"는 요청 — 실제 다중 선택 기능이 없었던 걸 뒤늦게 발견해서 추가
 let comboSelectMode = false, comboSelection = [];
@@ -996,7 +998,7 @@ function mulberry32(a){
   };
 }
 function hashStr(s){ let h = 0; for (const c of String(s)) h = (h * 31 + c.charCodeAt(0)) >>> 0; return h; }
-const SHAPE_SCALE = 2.1; // 별 사이 간격이 너무 좁다는 피드백 반영 — 모양은 그대로 두고 전체적으로 넓힘
+const SHAPE_SCALE = 2.6; // 별 사이 간격이 너무 좁아 클릭하기 힘들다는 피드백 반영 — 모양은 그대로 두고 전체적으로 더 넓힘
 function shapeOffsets(n, seed){
   let pts;
   if (n <= 1) pts = [[0,0,0]];
@@ -1767,10 +1769,10 @@ function buildConstellationLabels(){
     constLabels.push({ sprite: t, line, members, baseScale, c, labelOffsetY: shapeR + 28 });
   }
 }
-// 카메라가 가까이 갈수록 라벨을 비례해서 축소 — 화면상 크기가 거리와 상관없이 일정하게(=너무 커지지 않게) 유지됨.
-// 단, 작은 별자리는 카테고리 클릭 시 카메라가 아주 가깝게 붙어서 이 축소가 심하게 걸려 라벨이
-// 오히려 제일 작아 보이는 역효과가 있었음 — 최소값을 2배로 올려서 가까이 봐도 잘 보이게 함
-const CONST_LABEL_REF_DIST = 2200, CONST_LABEL_MIN_K = 0.56, CONST_LABEL_MAX_K = 1.4;
+// 멀리 있을 땐 원근감 때문에 작아 보이니 그만큼 키워주되(최대 1.4배), 가까이 갈 땐 절대
+// 기본 크기보다 작아지지 않게 함(최소 1.0배) — "가까이서 봐야 할 라벨이 오히려 제일
+// 작아진다"는 문제가 반복된 원인이 축소 쪽 보정이었어서, 축소는 아예 없애고 확대만 남김
+const CONST_LABEL_REF_DIST = 2200, CONST_LABEL_MAX_K = 1.4;
 function updateConstellationLabels(){
   const camPos = Graph.camera().position;
   for (const { sprite, line, members, baseScale, labelOffsetY } of constLabels){
@@ -1786,7 +1788,7 @@ function updateConstellationLabels(){
     const cx = x / n, cy = y / n + labelOffsetY, cz = z / n;
     sprite.position.set(cx, cy, cz);
     const dist = Math.hypot(camPos.x - cx, camPos.y - cy, camPos.z - cz);
-    const k = Math.min(Math.max(dist / CONST_LABEL_REF_DIST, CONST_LABEL_MIN_K), CONST_LABEL_MAX_K);
+    const k = Math.min(Math.max(dist / CONST_LABEL_REF_DIST, 1), CONST_LABEL_MAX_K);
     sprite.scale.set(baseScale.x * k, baseScale.y * k, baseScale.z * k);
   }
 }
@@ -1848,7 +1850,7 @@ function initGraph(){
     .onNodeDrag((n, translate) => dragGroup(n, translate))
     .onNodeDragEnd(() => { dragGroupIds = null; dragGroupBase = null; });
 
-  Graph.d3Force("charge").strength(-165);
+  Graph.d3Force("charge").strength(-260); // 별자리·별들이 너무 다닥다닥 붙어 클릭하기 힘들다는 피드백 — 반발력을 높여 전체적으로 더 넓게 퍼지게 함
   Graph.d3Force("shape", makeShapeForce());
   Graph.cameraPosition({ z: 780 });
   // 물리 시뮬레이션이 "완전히 멈추는" 시점은 예측 불가(수초~수십초) — 사용자가 그 사이 줌 조작을 하다가
@@ -2343,7 +2345,7 @@ function refresh(){
 
   // 검색 결과처럼 노드 수가 적을 때는 서로 더 멀리 밀어내서 연결관계가 겹쳐 보이지 않게 함
   const searching = !!state.q;
-  Graph.d3Force("charge").strength(searching ? -220 : -165);
+  Graph.d3Force("charge").strength(searching ? -320 : -260);
   if (searching !== wasSearching){
     wasSearching = searching;
     Graph.d3ReheatSimulation();
@@ -2453,8 +2455,8 @@ function buildSidebar(){
   $("#layoutMode").addEventListener("change", e => setLayoutMode(e.target.value));
 
   $("#menuBtn").addEventListener("click", () => $("#sidebar").classList.toggle("open"));
-  $("#zIn").addEventListener("click", () => zoomBy(0.75));
-  $("#zOut").addEventListener("click", () => zoomBy(1.33));
+  $("#zIn").addEventListener("click", () => zoomBy(0.85));
+  $("#zOut").addEventListener("click", () => zoomBy(1.18));
   $("#zReset").addEventListener("click", () => { userTouchedCamera = true; Graph.zoomToFit(600, 40); });
   $("#zFit").addEventListener("click", toggleFullscreen);
   document.addEventListener("fullscreenchange", () => {
@@ -2508,7 +2510,7 @@ function applyLanguage(){
   $("#optBoard").textContent = tr("boardMode");
   $("#optEarth").textContent = tr("earthMode");
   $("#lblPricing").textContent = tr("pricing");
-  const priceKeys = ["free", "freemium", "paid", "unspecified"];
+  const priceKeys = ["free", "freemium"];
   document.querySelectorAll("#priceChecks [data-price-label]").forEach((el, i) => { el.textContent = tr(priceKeys[i]); });
   $("#lblCategories").textContent = tr("categories");
   $("#seoNote").textContent = tr("seoNote", nodes.length);
@@ -2528,6 +2530,7 @@ function applyLanguage(){
   $("#lblComboBuildSave").textContent = tr("comboBuildSave");
   $("#lblComboBuildDesc").textContent = tr("comboBuildDesc");
   $("#lblMyCombosView").textContent = tr("myCombosViewLabel");
+  $("#lblSponsToday").textContent = tr("sponsToday");
   if (comboSelectMode) renderComboBuildBar();
   $("#lblComboDlgTitle").textContent = tr("comboDlgTitle");
   $("#comboClose").textContent = tr("close");
