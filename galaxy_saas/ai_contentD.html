@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Shortform MCP Roadmap v2</title>
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --panel-bg: #131a26;
+            --panel-border: #222f47;
+            --text-color: #f3f4f6;
+            --text-muted: #9ca3af;
+            --primary: #3b82f6;
+            --primary-glow: rgba(59, 130, 246, 0.5);
+            --success: #10b981;
+            --success-glow: rgba(16, 185, 129, 0.4);
+            --node-active: #2563eb;
+            --node-inactive: #1e293b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            overflow-x: auto;
+            overflow-y: hidden;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: var(--panel-bg);
+            border-bottom: 1px solid var(--panel-border);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+        }
+
+        header h1 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        header h1 span {
+            background: linear-gradient(135deg, #3b82f6, #10b981);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .reset-btn {
+            background-color: #1e293b;
+            color: var(--text-color);
+            border: 1px solid var(--panel-border);
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.875rem;
+            transition: all 0.2s;
+        }
+
+        .reset-btn:hover {
+            background-color: #2d3748;
+            border-color: var(--primary);
+        }
+
+        .header-status {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .status-badge {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 12px;
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 20px;
+            color: var(--primary);
+            font-size: 0.8rem;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--success);
+            border-radius: 50%;
+            box-shadow: 0 0 8px var(--success-glow);
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+            position: relative;
+            padding: 20px 40px;
+            gap: 40px;
+            min-width: 1400px;
+            height: calc(100vh - 140px);
+            overflow-y: auto;
+        }
+
+        .svg-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .lane {
+            flex: 1;
+            background-color: rgba(19, 26, 38, 0.6);
+            border: 1px solid var(--panel-border);
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 2;
+            position: relative;
+            min-width: 240px;
+            max-width: 320px;
+        }
+
+        .lane-header {
+            margin-bottom: 5px;
+        }
+
+        .lane-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .lane-title strong {
+            color: var(--text-color);
+        }
+
+        .filter-group {
+            display: flex;
+            gap: 4px;
+            background-color: rgba(11, 15, 25, 0.6);
+            padding: 3px;
+            border-radius: 6px;
+            border: 1px solid var(--panel-border);
+            margin-bottom: 5px;
+        }
+
+        .filter-btn {
+            flex: 1;
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            padding: 5px 2px;
+            font-size: 0.75rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .filter-btn:hover {
+            color: var(--text-color);
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .filter-btn.active {
+            color: var(--text-color);
+            background-color: var(--primary);
+            font-weight: 600;
+        }
+
+        .nodes-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            flex: 1;
+            overflow-y: auto;
+        }
+
+        .node {
+            background-color: var(--node-inactive);
+            border: 1px solid var(--panel-border);
+            padding: 14px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            user-select: none;
+        }
+
+        .node:hover {
+            border-color: #4b5563;
+            transform: translateY(-1px);
+        }
+
+        .node.active {
+            background-color: rgba(59, 130, 246, 0.15);
+            border-color: var(--primary);
+            box-shadow: 0 0 12px var(--primary-glow);
+        }
+
+        .node.dimmed {
+            opacity: 0.25;
+            pointer-events: none;
+        }
+
+        .node.hidden-node {
+            display: none !important;
+        }
+
+        .node-name {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .badge {
+            font-size: 0.68rem;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        .badge.free { background-color: rgba(16, 185, 129, 0.15); color: #10b981; }
+        .badge.half { background-color: rgba(245, 158, 11, 0.15); color: #f59e0b; }
+        .badge.paid { background-color: rgba(239, 68, 68, 0.15); color: #ef4444; }
+
+        .node-desc {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            line-height: 1.3;
+        }
+
+        .footer-bar {
+            background-color: var(--panel-bg);
+            border-top: 1px solid var(--panel-border);
+            padding: 15px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 10;
+            font-size: 0.85rem;
+        }
+
+        .pipeline-status {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-muted);
+        }
+
+        .pipeline-status strong {
+            color: var(--success);
+        }
+
+        .path-line {
+            fill: none;
+            stroke: #334155;
+            stroke-width: 2;
+            transition: stroke 0.3s, stroke-width 0.3s, stroke-dasharray 0.3s;
+        }
+
+        .path-line.active {
+            stroke: url(#line-gradient);
+            stroke-width: 3;
+            stroke-dasharray: 4;
+            filter: drop-shadow(0 0 4px var(--primary-glow));
+            animation: dash 20s linear infinite;
+        }
+
+        @keyframes dash {
+            to {
+                stroke-dashoffset: -1000;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>⚡ <span>AI Shortform MCP 아키텍처 매퍼</span> 로드맵 v2</h1>
+        <div class="header-status">
+            <div class="status-badge">
+                <div class="status-dot"></div>
+                <span>Live Sync Engine</span>
+            </div>
+            <button class="reset-btn" onclick="resetAll()">맵 초기화</button>
+        </div>
+    </header>
+
+    <div class="container" id="container">
+        <svg class="svg-canvas" id="svg-canvas">
+            <defs>
+                <linearGradient id="line-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#3b82f6" />
+                    <stop offset="100%" stop-color="#10b981" />
+                </linearGradient>
+            </defs>
+        </svg>
+
+        <!-- 1단계 -->
+        <div class="lane" id="lane-1" data-stage="1">
+            <div class="lane-header">
+                <div class="lane-title">1단계: <strong>제작 채널</strong></div>
+            </div>
+            <div class="nodes-container">
+                <div class="node" id="n-tiktok" onclick="selectNode(1, 'n-tiktok')" data-cost="free">
+                    <div class="node-name">🎵 틱톡 숏폼 <span class="badge free">FREE</span></div>
+                    <div class="node-desc">9:16 맞춤형 트렌디 숏폼 비디오 공정</div>
+                </div>
+                <div class="node" id="n-shorts" onclick="selectNode(1, 'n-shorts')" data-cost="free">
+                    <div class="node-name">🔴 유튜브 쇼츠 <span class="badge free">FREE</span></div>
+                    <div class="node-desc">알고리즘 저격 고화질 정보성 쇼츠 공정</div>
+                </div>
+                <div class="node" id="n-reels" onclick="selectNode(1, 'n-reels')" data-cost="free">
+                    <div class="node-name">📸 인스타그램 릴스 <span class="badge free">FREE</span></div>
+                    <div class="node-desc">트렌디한 감성의 비주얼 콘텐츠</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2단계 -->
+        <div class="lane" id="lane-2" data-stage="2">
+            <div class="lane-header">
+                <div class="filter-group">
+                    <button class="filter-btn active" onclick="filterStage(2, 'all', this)">전체</button>
+                    <button class="filter-btn" onclick="filterStage(2, 'free', this)">무료</button>
+                    <button class="filter-btn" onclick="filterStage(2, 'half', this)">부분무료</button>
+                    <button class="filter-btn" onclick="filterStage(2, 'paid', this)">유료</button>
+                </div>
+                <div class="lane-title">2단계: <strong>글/대본 기획</strong></div>
+            </div>
+            <div class="nodes-container">
+                <div class="node" id="n-chatgpt" onclick="selectNode(2, 'n-chatgpt')" data-cost="free">
+                    <div class="node-name">🤖 ChatGPT <span class="badge free">무료</span></div>
+                    <div class="node-desc">빠른 속도, 대량의 바이럴 스크립트 대본 초안 빌드</div>
+                </div>
+                <div class="node" id="n-claude" onclick="selectNode(2, 'n-claude')" data-cost="half">
+                    <div class="node-name">🧠 Claude <span class="badge half">부분무료</span></div>
+                    <div class="node-desc">감성적이고 자연스러운 문체, 3초 후킹 대본 특화</div>
+                </div>
+                <div class="node" id="n-wrthn" onclick="selectNode(2, 'n-wrthn')" data-cost="free">
+                    <div class="node-name">✨ 뤼튼 (Wrtn) <span class="badge free">무료</span></div>
+                    <div class="node-desc">국내 트렌드 및 한국어 숏폼 템플릿 최적화 스크립터</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3단계 -->
+        <div class="lane" id="lane-3" data-stage="3">
+            <div class="lane-header">
+                <div class="filter-group">
+                    <button class="filter-btn active" onclick="filterStage(3, 'all', this)">전체</button>
+                    <button class="filter-btn" onclick="filterStage(3, 'free', this)">무료</button>
+                    <button class="filter-btn" onclick="filterStage(3, 'half', this)">부분무료</button>
+                    <button class="filter-btn" onclick="filterStage(3, 'paid', this)">유료</button>
+                </div>
+                <div class="lane-title">3단계: <strong>에셋 소스 생성</strong></div>
+            </div>
+            <div class="nodes-container">
+                <div class="node" id="n-hixfield" onclick="selectNode(3, 'n-hixfield')" data-cost="free">
+                    <div class="node-name">🎨 힉스필드 <span class="badge free">무료</span></div>
+                    <div class="node-desc">애니메이션/일러스트 스타일 숏폼 소스 최적화</div>
+                </div>
+                <div class="node" id="n-pixels" onclick="selectNode(3, 'n-pixels')" data-cost="free">
+                    <div class="node-name">🎬 픽셀스 / 픽사베이 <span class="badge free">무료</span></div>
+                    <div class="node-desc">무료 고화질 실사 비디오 클립 및 안전한 음원 확보</div>
+                </div>
+                <div class="node" id="n-runway" onclick="selectNode(3, 'n-runway')" data-cost="paid">
+                    <div class="node-name">🎥 Runway Gen-3 <span class="badge paid">유료</span></div>
+                    <div class="node-desc">압도적인 시네마틱 퀄리티의 생성형 AI 실사 영상 추출</div>
+                </div>
+                <div class="node" id="n-heygen" onclick="selectNode(3, 'n-heygen')" data-cost="paid">
+                    <div class="node-name">🧑‍💼 HeyGen 아바타 <span class="badge paid">유료</span></div>
+                    <div class="node-desc">얼굴 노출 없이 말하는 가상 인간 마케팅 영상 생성</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4단계 -->
+        <div class="lane" id="lane-4" data-stage="4">
+            <div class="lane-header">
+                <div class="filter-group">
+                    <button class="filter-btn active" onclick="filterStage(4, 'all', this)">전체</button>
+                    <button class="filter-btn" onclick="filterStage(4, 'free', this)">무료</button>
+                    <button class="filter-btn" onclick="filterStage(4, 'half', this)">부분무료</button>
+                    <button class="filter-btn" onclick="filterStage(4, 'paid', this)">유료</button>
+                </div>
+                <div class="lane-title">4단계: <strong>종합 편집/자막</strong></div>
+            </div>
+            <div class="nodes-container">
+                <div class="node" id="n-capcut" onclick="selectNode(4, 'n-capcut')" data-cost="half">
+                    <div class="node-name">✂️ CapCut <span class="badge half">부분무료</span></div>
+                    <div class="node-desc">트렌디한 숏폼 템플릿, 자동 자막 및 화려한 이펙트 효과</div>
+                </div>
+                <div class="node" id="n-vrew" onclick="selectNode(4, 'n-vrew')" data-cost="half">
+                    <div class="node-name">📝 브루 (Vrew) <span class="badge half">부분무료</span></div>
+                    <div class="node-desc">빠른 무음 구간 컷 편집 및 자막 싱크 매칭 워크플로우</div>
+                </div>
+                <div class="node" id="n-opus" onclick="selectNode(4, 'n-opus')" data-cost="paid">
+                    <div class="node-name">🎞️ Opus Clip <span class="badge paid">유료</span></div>
+                    <div class="node-desc">롱폼 영상을 쇼츠로 지능형 하이라이트 자동 재가공</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5단계 -->
+        <div class="lane" id="lane-5" data-stage="5">
+            <div class="lane-header">
+                <div class="lane-title">5단계: <strong>최종 출시</strong></div>
+            </div>
+            <div class="nodes-container">
+                <div class="node" id="n-publish" onclick="selectNode(5, 'n-publish')" data-cost="free">
+                    <div class="node-name">🚀 알고리즘 배포 <span class="badge free">FREE</span></div>
+                    <div class="node-desc">AI 최적화 캡션 태그 장착 후 피크 시간대 최종 업로드</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bar">
+        <div class="pipeline-status" id="pipeline-status">
+            선택된 파이프라인: <span>단계를 선택해 매퍼 네트워크를 활성화하세요.</span>
+        </div>
+        <div>AI Shortform MCP System v2.0</div>
+    </div>
+
+    <script>
+        const connections = [
+            { from: 'n-tiktok', to: 'n-chatgpt' },
+            { from: 'n-tiktok', to: 'n-claude' },
+            { from: 'n-tiktok', to: 'n-wrthn' },
+            { from: 'n-shorts', to: 'n-chatgpt' },
+            { from: 'n-shorts', to: 'n-claude' },
+            { from: 'n-reels', to: 'n-chatgpt' },
+            { from: 'n-reels', to: 'n-claude' },
+            { from: 'n-reels', to: 'n-wrthn' },
+            { from: 'n-chatgpt', to: 'n-pixels' },
+            { from: 'n-chatgpt', to: 'n-hixfield' },
+            { from: 'n-claude', to: 'n-runway' },
+            { from: 'n-claude', to: 'n-heygen' },
+            { from: 'n-wrthn', to: 'n-pixels' },
+            { from: 'n-wrthn', to: 'n-hixfield' },
+            { from: 'n-hixfield', to: 'n-capcut' },
+            { from: 'n-pixels', to: 'n-vrew' },
+            { from: 'n-pixels', to: 'n-capcut' },
+            { from: 'n-runway', to: 'n-capcut' },
+            { from: 'n-heygen', to: 'n-vrew' },
+            { from: 'n-heygen', to: 'n-opus' },
+            { from: 'n-capcut', to: 'n-publish' },
+            { from: 'n-vrew', to: 'n-publish' },
+            { from: 'n-opus', to: 'n-publish' }
+        ];
+
+        let selections = { 1: null, 2: null, 3: null, 4: null, 5: null };
+        let stageFilters = { 2: 'all', 3: 'all', 4: 'all' };
+
+        window.addEventListener('resize', drawNetwork);
+        document.getElementById('container').addEventListener('scroll', drawNetwork);
+
+        function selectNode(stage, nodeId) {
+            const nodeEl = document.getElementById(nodeId);
+            if (nodeEl.classList.contains('dimmed') || nodeEl.classList.contains('hidden-node')) return;
+
+            if (selections[stage] === nodeId) {
+                for (let i = stage; i <= 5; i++) selections[i] = null;
+            } else {
+                for (let i = stage; i <= 5; i++) selections[i] = null;
+                selections[stage] = nodeId;
+            }
+
+            updateNodeStates();
+            drawNetwork();
+            updateStatusText();
+        }
+
+        function filterStage(stage, costType, btnEl) {
+            stageFilters[stage] = costType;
+            
+            const siblingBtns = btnEl.parentNode.querySelectorAll('.filter-btn');
+            siblingBtns.forEach(btn => btn.classList.remove('active'));
+            btnEl.classList.add('active');
+
+            const laneNodes = document.querySelectorAll(`#lane-${stage} .node`);
+            laneNodes.forEach(node => {
+                const nodeCost = node.getAttribute('data-cost');
+                if (costType === 'all' || nodeCost === costType) {
+                    node.classList.remove('hidden-node');
+                } else {
+                    node.classList.remove('active');
+                    node.classList.add('hidden-node');
+                    if (selections[stage] === node.id) {
+                        for (let i = stage; i <= 5; i++) selections[i] = null;
+                    }
+                }
+            });
+
+            updateNodeStates();
+            drawNetwork();
+            updateStatusText();
+        }
+
+        function updateNodeStates() {
+            const allNodes = document.querySelectorAll('.node');
+            
+            allNodes.forEach(n => {
+                if(!n.classList.contains('hidden-node')) n.classList.remove('dimmed', 'active');
+            });
+
+            for (let s = 1; s <= 5; s++) {
+                if (selections[s]) {
+                    document.getElementById(selections[s]).classList.add('active');
+                }
+            }
+
+            for (let stage = 2; stage <= 5; stage++) {
+                const prevStage = stage - 1;
+                const selectedPrev = selections[prevStage];
+
+                if (selectedPrev) {
+                    const stageNodes = document.querySelectorAll(`#lane-${stage} .node`);
+                    stageNodes.forEach(node => {
+                        if (node.classList.contains('hidden-node')) return;
+                        const isConnected = connections.some(c => c.from === selectedPrev && c.to === node.id);
+                        if (!isConnected) {
+                            node.classList.add('dimmed');
+                            if (selections[stage] === node.id) {
+                                for (let i = stage; i <= 5; i++) selections[i] = null;
+                            }
+                        }
+                    });
+                } else {
+                    const stageNodes = document.querySelectorAll(`#lane-${stage} .node`);
+                    stageNodes.forEach(node => {
+                        if (!node.classList.contains('hidden-node')) {
+                            node.classList.add('dimmed');
+                        }
+                    });
+                }
+            }
+        }
+
+        function drawNetwork() {
+            const canvas = document.getElementById('svg-canvas');
+            canvas.querySelectorAll('path').forEach(p => p.remove());
+            
+            const container = document.getElementById('container');
+            const cRect = container.getBoundingClientRect();
+
+            connections.forEach(conn => {
+                const fromEl = document.getElementById(conn.from);
+                const toEl = document.getElementById(conn.to);
+
+                if (fromEl && toEl && !fromEl.classList.contains('hidden-node') && !toEl.classList.contains('hidden-node')) {
+                    const fromRect = fromEl.getBoundingClientRect();
+                    const toRect = toEl.getBoundingClientRect();
+
+                    const x1 = fromRect.right - cRect.left + container.scrollLeft;
+                    const y1 = fromRect.top + fromRect.height / 2 - cRect.top + container.scrollTop;
+                    const x2 = toRect.left - cRect.left + container.scrollLeft;
+                    const y2 = toRect.top + toRect.height / 2 - cRect.top + container.scrollTop;
+
+                    const controlOffset = Math.abs(x2 - x1) * 0.5;
+                    const d = `M ${x1} ${y1} C ${x1 + controlOffset} ${y1}, ${x2 - controlOffset} ${y2}, ${x2} ${y2}`;
+
+                    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                    path.setAttribute('d', d);
+                    path.setAttribute('class', 'path-line');
+
+                    const stageFrom = parseInt(fromEl.parentNode.parentNode.getAttribute('data-stage'));
+                    if (selections[stageFrom] === conn.from && !toEl.classList.contains('dimmed')) {
+                        path.classList.add('active');
+                    }
+
+                    canvas.appendChild(path);
+                }
+            });
+        }
+
+        function updateStatusText() {
+            const statusEl = document.querySelector('#pipeline-status span');
+            let pathNames = [];
+
+            for (let i = 1; i <= 5; i++) {
+                if (selections[i]) {
+                    const el = document.getElementById(selections[i]);
+                    const name = el.querySelector('.node-name').childNodes[0].textContent.trim();
+                    pathNames.push(name);
+                }
+            }
+
+            if (pathNames.length > 0) {
+                statusEl.innerHTML = pathNames.map(name => `<strong>${name}</strong>`).join(' ➡️ ');
+            } else {
+                statusEl.textContent = '단계를 선택해 매퍼 네트워크를 활성화하세요.';
+            }
+        }
+
+        function resetAll() {
+            selections = { 1: null, 2: null, 3: null, 4: null, 5: null };
+            stageFilters = { 2: 'all', 3: 'all', 4: 'all' };
+            
+            document.querySelectorAll('.filter-group').forEach(group => {
+                const btns = group.querySelectorAll('.filter-btn');
+                btns.forEach((btn, idx) => {
+                    if (idx === 0) btn.classList.add('active');
+                    else btn.classList.remove('active');
+                });
+            });
+
+            document.querySelectorAll('.node').forEach(node => {
+                node.classList.remove('active', 'dimmed', 'hidden-node');
+            });
+
+            drawNetwork();
+            updateStatusText();
+        }
+
+        setTimeout(() => {
+            updateNodeStates();
+            drawNetwork();
+        }, 100);
+    </script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>상황별 맞춤형 AI 영상 제작 흐름도 & 프롬프트 생성기</title>
+    <style>
+        body { font-family: 'Malgun Gothic', sans-serif; background-color: #f7fafc; margin: 0; padding: 40px; }
+        .title { text-align: center; margin-bottom: 5px; color: #2d3748; }
+        .subtitle { text-align: center; color: #718096; margin-bottom: 40px; }
+        
+        /* 레이아웃 구조 */
+        .pipeline-container { display: flex; justify-content: space-between; max-width: 1200px; margin: 0 auto 30px auto; gap: 20px; }
+        .stage-column { flex: 1; background: #ffffff; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); padding: 20px; border: 1px solid #e2e8f0; position: relative; }
+        .stage-header { text-align: center; font-weight: bold; font-size: 14px; background: #4a5568; color: #fff; padding: 12px; border-radius: 6px; margin-bottom: 25px; }
+        
+        /* 버튼(카드) 디자인 및 인터랙션 효과 */
+        .tool-card { display: block; width: 100%; padding: 14px; margin-bottom: 15px; border: 2px solid #e2e8f0; border-radius: 8px; text-align: left; background: #ffffff; cursor: pointer; transition: all 0.25s ease; position: relative; }
+        .tool-card:hover { border-color: #a0aec0; background: #f7fafc; }
+        .tool-card.active { border-color: #3182ce; background: #ebf8ff; box-shadow: 0 0 10px rgba(49, 130, 206, 0.2); }
+        .tool-card.active .tool-name { color: #2b6cb0; }
+        .tool-name { font-weight: bold; font-size: 14px; color: #4a5568; }
+        
+        /* 요금제 배지 */
+        .badge { float: right; font-size: 11px; padding: 2px 6px; border-radius: 4px; font-weight: bold; }
+        .badge-free { background: #c6f6d5; color: #22543d; }
+        .badge-partial { background: #feebc8; color: #744210; }
+        .badge-paid { background: #fed7d7; color: #742a2a; }
+
+        /* 단계별 연결 화살표 가상 요소 */
+        .stage-column:not(:last-child)::after { content: "➔"; position: absolute; right: -15px; top: 50%; transform: translateY(-50%); color: #cbd5e0; font-size: 20px; z-index: 10; }
+
+        /* [추가] 마이크로 SaaS용 프롬프트 출력 섹션 디자인 */
+        .saas-section { max-width: 1200px; margin: 0 auto; background: #ffffff; border-radius: 10px; border: 2px solid #3182ce; padding: 25px; box-shadow: 0 4px 12px rgba(49, 130, 206, 0.1); }
+        .saas-title { font-size: 16px; font-weight: bold; color: #2b6cb0; margin-top: 0; margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
+        .prompt-box { width: 100%; height: 100px; background: #f8fafc; border: 1px solid #cbd5e0; border-radius: 6px; padding: 15px; font-size: 14px; color: #4a5568; box-sizing: border-box; resize: none; font-family: inherit; margin-bottom: 15px; }
+        .action-btn { background: #3182ce; color: white; border: none; padding: 12px 24px; font-size: 14px; font-weight: bold; border-radius: 6px; cursor: pointer; transition: background 0.2s; }
+        .action-btn:hover { background: #2b6cb0; }
+    </style>
+</head>
+<body>
+
+<h2 class="title">🎯 상황별 골라 쓰는 맞춤형 AI 영상 제작 지도</h2>
+<p class="subtitle">도구를 클릭하면 나만의 제작 경로에 불이 켜지며 하단에 맞춤형 AI 치트키 대본 프롬프트가 실시간 생성됩니다.</p>
+
+<div class="pipeline-container">
+    <!-- 1단계: 채널 -->
+    <div class="stage-column" id="stage-1">
+        <div class="stage-header">1단계: 제작 채널</div>
+        <button class="tool-card active" onclick="selectTool('stage-1', this, '틱톡 숏폼')" title="1분 미만의 세로형 폭발적 트래픽 타겟 채널"><span class="tool-name">틱톡 숏폼</span></button>
+        <button class="tool-card" onclick="selectTool('stage-1', this, '유튜브 쇼츠')" title="유튜브 알고리즘을 타는 60초 미만 세로형 영상"><span class="tool-name">유튜브 쇼츠</span></button>
+        <button class="tool-card" onclick="selectTool('stage-1', this, '유튜브 긴 영상')" title="10분 내외의 가로형 지식/정보 전달용 영상"><span class="tool-name">유튜브 긴 영상</span></button>
+    </div>
+
+    <!-- 2단계: 대본 -->
+    <div class="stage-column" id="stage-2">
+        <div class="stage-header">2단계: 글/대본 기획</div>
+        <button class="tool-card active" onclick="selectTool('stage-2', this, '챗GPT')" title="가장 범용적이고 대중적인 아이디어 뱅크 AI"><span class="tool-name">챗GPT</span> <span class="badge badge-free">무료</span></button>
+        <button class="tool-card" onclick="selectTool('stage-2', this, '클로드')" title="한국어가 완벽하고 긴 문장의 논리력이 독보적인 AI"><span class="tool-name">클로드</span> <span class="badge badge-partial">부분무료</span></button>
+        <button class="tool-card" onclick="selectTool('stage-2', this, '제미나이')" title="구글 실시간 검색을 연동해 최신 이슈를 잘 긁어오는 AI"><span class="tool-name">제미나이</span> <span class="badge badge-free">무료</span></button>
+        <button class="tool-card" onclick="selectTool('stage-2', this, '뤼튼')" title="로그인만 하면 유료 모델을 한국어 맞춤형으로 쓰는 국내 AI"><span class="tool-name">뤼튼</span> <span class="badge badge-free">무료</span></button>
+    </div>
+
+    <!-- 3단계: 에셋 -->
+    <div class="stage-column" id="stage-3">
+        <div class="stage-header">3단계: 에셋 소스 생성</div>
+        <button class="tool-card active" onclick="selectTool('stage-3', this, '힉스필드')" title="글씨만 쓰면 3D 애니메이션 캐릭터 영상을 구워주는 무료 AI"><span class="tool-name">힉스필드</span> <span class="badge badge-free">애니/무료</span></button>
+        <button class="tool-card" onclick="selectTool('stage-3', this, '픽셀스')" title="저작권 걱정 없는 고화질 실사 배경 비디오 무료 다운로드"><span class="tool-name">픽셀스</span> <span class="badge badge-free">실사/무료</span></button>
+        <button class="tool-card" onclick="selectTool('stage-3', this, '런웨이')" title="헐리우드급 초고화질 AI 비디오를 생성하는 전문가용 툴"><span class="tool-name">런웨이</span> <span class="badge badge-paid">유료</span></button>
+        <button class="tool-card" onclick="selectTool('stage-3', this, '픽사베이')" title="상업적 이용이 가능한 무료 배경음악(BGM)과 효과음창고"><span class="tool-name">픽사베이</span> <span class="badge badge-free">음원/무료</span></button>
+    </div>
+
+    <!-- 4단계: 편집 -->
+    <div class="stage-column" id="stage-4">
+        <div class="stage-header">4단계: 종합 편집/자막</div>
+        <button class="tool-card active" onclick="selectTool('stage-4', this, '캡컷 (CapCut)')" title="자동 자막 받아쓰기와 감성 폰트가 전부 공짜인 스마트폰/PC 필수앱"><span class="tool-name">캡컷 (CapCut)</span> <span class="badge badge-partial">부분무료</span></button>
+        <button class="tool-card" onclick="selectTool('stage-4', this, '브루 (Vrew)')" title="음성을 분석하여 문장 문서 편집하듯 자막을 자르는 컷편집 툴"><span class="tool-name">브루 (Vrew)</span> <span class="badge badge-partial">부분무료</span></button>
+    </div>
+
+    <!-- 5단계: 최종 출시 -->
+    <div class="stage-column" id="stage-5">
+        <div class="stage-header">5단계: 최종 출시</div>
+        <button class="tool-card active" style="text-align: center; cursor: default; border-color: #48bb78; background: #f0fff4;" title="체계적인 화살표 라인을 따라 영상 제작이 모두 끝났습니다!"><span class="tool-name" style="color: #38a169;">최종 업로드 완료 🚀</span></button>
+    </div>
+</div>
+
+<!-- [추가] 마이크로 SaaS 자동화 유틸리티 섹션 -->
+<div class="saas-section">
+    <div class="saas-title">⚡ 내 맞춤형 AI 대본 조합 치트키 프롬프트</div>
+    <textarea id="promptTextArea" class="prompt-box" readonly>선택 조건을 기반으로 프롬프트를 불러오는 중...</textarea>
+    <button class="action-btn" onclick="copyPrompt()">복사해서 대본 쓰러 가기 📋</button>
+</div>
+
+<script>
+    // 현재 유저가 선택한 조건들을 담는 글로벌 상태 객체
+    let currentSelection = {
+        channel: '틱톡 숏폼',
+        writer: '챗GPT',
+        asset: '힉스필드',
+        editor: '캡컷 (CapCut)'
+    };
+
+    // 최초 실행 시 기본 프롬프트 갱신
+    window.onload = function() {
+        updatePromptText();
+    };
+
+    // 버튼 선택 인터랙션 및 상태 제어 함수
+    function selectTool(stageId, element, toolName) {
+        const stage = document.getElementById(stageId);
+        const cards = stage.getElementsByClassName('tool-card');
+        
+        for (let card of cards) { card.classList.remove('active'); }
+        element.classList.add('active');
+
+        // 선택 데이터 상태 객체에 기록
+        if(stageId === 'stage-1') currentSelection.channel = toolName;
+        if(stageId === 'stage-2') currentSelection.writer = toolName;
+        if(stageId === 'stage-3') currentSelection.asset = toolName;
+        if(stageId === 'stage-4') currentSelection.editor = toolName;
+
+        // 선택이 바뀔 때마다 실시간 프롬프트 자동 갱신
+        updatePromptText();
+    }
+
+    // 마이크로 SaaS의 핵심: 선택 조합에 따라 문자열을 조합하는 백엔드 프론트 연동 로직
+    function updatePromptText() {
+        const txtArea = document.getElementById('promptTextArea');
+        
+        // [참고] 향후 질문자님의 파이썬(FastAPI) 백엔드와 연동 시 아래처럼 fetch API를 사용하시면 됩니다.
+        /* 
+        fetch(`/api/get-prompt?channel=${currentSelection.channel}&writer=${currentSelection.writer}`)
+           .then(res => res.json())
+           .then(data => txtArea.value = data.prompt);
+        */
+
+        // 현재는 임시로 프론트단에서 조건 분기 처리 적용
+        let customPrompt = `너는 전문 영상 크리에이터야. 이번에 [${currentSelection.channel}] 채널에 업로드할 독창적인 영상 시나리오 대본을 작성하려고 해.\n`;
+        customPrompt += `나는 대본 기획용 AI로 [${currentSelection.writer}]를 선택했고, 비주얼 에셋은 [${currentSelection.asset}]의 연출 스타일에 맞출 거야.\n`;
+        customPrompt += `최종 편집은 [${currentSelection.editor}]의 자동자막 기능을 쓸 거니, 성우 보이스가 끊김 없이 읽기 편하도록 찰진 한국어 구어체 문장으로 40초 분량의 숏폼 스크립트를 짜줘. 주제는 '개발자 공감 에러 에피소드'야.`;
+
+        txtArea.value = customPrompt;
+    }
+
+    // 클립보드 복사 인터랙션 기능
+    function copyPrompt() {
+        const txtArea = document.getElementById('promptTextArea');
+        txtArea.select();
+        document.execCommand('copy');
+        alert('프롬프트가 클립보드에 복사되었습니다! 선택하신 AI 툴에 붙여넣어 대본을 만드세요.');
+    }
+</script>
+
+</body>
+</html>

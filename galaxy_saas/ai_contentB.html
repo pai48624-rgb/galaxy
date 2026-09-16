@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>인터랙티브 숏폼 AI 파이프라인 MCP 로드맵 지도시스템 (Enhanced Version)</title>
+  <style>
+    :root {
+      --bg-dark: #0a0d14;
+      --panel-bg: rgba(18, 24, 38, 0.75);
+      --panel-border: rgba(56, 189, 248, 0.15);
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --accent-cyan: #38bdf8;
+      --accent-purple: #c084fc;
+      --accent-green: #4ade80;
+      
+      --type-free: #4ade80;
+      --type-freemium: #facc15;
+      --type-paid: #f87171;
+
+      /* =========================================================
+         [박스 길이 / 너비 조절 커스텀 변수]
+         아래 수치를 변경하여 단계를 가로/세로 길이를 조절하세요.
+         ========================================================= */
+      --lane-min-width: 290px;       /* 기본 레인 가로 길이 */
+      --lane-stage3-width: 330px;    /* 에셋 소스가 많은 STAGE 3 전용 가로 길이 */
+      --node-card-padding: 12px 14px; /* 카드 내부 여백 (높이감 조절) */
+      --node-gap: 10px;               /* 카드 간 세로 간격 */
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      user-select: none;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      overflow-x: auto;
+      overflow-y: hidden;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    .bg-grid {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .app-container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      position: relative;
+      z-index: 1;
+    }
+
+    header {
+      padding: 14px 28px;
+      background: rgba(10, 13, 20, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--panel-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo-group h1 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #38bdf8 0%, #c084fc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .logo-group p {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    /* [개선 1] 상단 검색바 추가 */
+    .search-box {
+      position: relative;
+      width: 280px;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 7px 12px 7px 32px;
+      background: rgba(30, 41, 59, 0.7);
+      border: 1px solid var(--panel-border);
+      border-radius: 8px;
+      color: #fff;
+      font-size: 0.82rem;
+      outline: none;
+      transition: all 0.2s;
+    }
+
+    .search-box input:focus {
+      border-color: var(--accent-cyan);
+      box-shadow: 0 0 8px rgba(56, 189, 248, 0.3);
+    }
+
+    .search-box::before {
+      content: '🔍';
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.75rem;
+      opacity: 0.6;
+    }
+
+    .pipeline-board {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(2, var(--lane-min-width)) var(--lane-stage3-width) repeat(2, var(--lane-min-width));
+      justify-content: center;
+      gap: 18px;
+      padding: 20px;
+      position: relative;
+      overflow-x: auto;
+    }
+
+    #svg-canvas {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .wire {
+      fill: none;
+      stroke: rgba(255, 255, 255, 0.1);
+      stroke-width: 2px;
+      transition: stroke 0.3s, stroke-width 0.3s, opacity 0.3s;
+    }
+
+    .wire.active {
+      stroke: url(#cyan-purple-gradient);
+      stroke-width: 3px;
+      filter: drop-shadow(0 0 5px rgba(56, 189, 248, 0.8));
+      stroke-dasharray: 8 4;
+      animation: dash 1s linear infinite;
+    }
+
+    .wire.dimmed { opacity: 0.05; }
+
+    @keyframes dash {
+      to { stroke-dashoffset: -12; }
+    }
+
+    .lane {
+      background: var(--panel-bg);
+      border: 1px solid var(--panel-border);
+      border-radius: 12px;
+      backdrop-filter: blur(10px);
+      display: flex;
+      flex-direction: column;
+      padding: 14px;
+      position: relative;
+      z-index: 3;
+    }
+
+    .lane-header {
+      margin-bottom: 12px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .lane-step-tag {
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--accent-cyan);
+    }
+
+    .lane-title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-top: 4px;
+    }
+
+    .filter-chips {
+      display: flex;
+      gap: 3px;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 2px;
+      border-radius: 6px;
+      margin-top: 8px;
+    }
+
+    .chip {
+      flex: 1;
+      text-align: center;
+      padding: 3px 0;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      border-radius: 4px;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+    }
+
+    .chip.active {
+      background: rgba(56, 189, 248, 0.2);
+      color: var(--accent-cyan);
+      font-weight: 600;
+    }
+
+    .node-list {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: var(--node-gap);
+      overflow-y: auto;
+      padding-right: 4px;
+    }
+
+    .node-list::-webkit-scrollbar { width: 4px; }
+    .node-list::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 4px;
+    }
+
+    /* [개선 2] 아코디언 그룹 헤더 */
+    .cat-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .cat-header {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      background: rgba(56, 189, 248, 0.08);
+      padding: 6px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid rgba(56, 189, 248, 0.15);
+    }
+
+    .cat-header::after {
+      content: '▼';
+      font-size: 0.65rem;
+      transition: transform 0.2s;
+    }
+
+    .cat-group.collapsed .cat-header::after {
+      transform: rotate(-90deg);
+    }
+
+    .cat-group.collapsed .cat-body {
+      display: none;
+    }
+
+    .cat-body {
+      display: flex;
+      flex-direction: column;
+      gap: var(--node-gap);
+      padding-left: 2px;
+    }
+
+    .node-card {
+      background: rgba(30, 41, 59, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      padding: var(--node-card-padding);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .node-card:hover {
+      border-color: rgba(56, 189, 248, 0.4);
+      transform: translateY(-1px);
+    }
+
+    .node-card.selected {
+      border-color: var(--accent-cyan);
+      background: rgba(56, 189, 248, 0.12);
+      box-shadow: 0 0 12px rgba(56, 189, 248, 0.3);
+    }
+
+    .node-card.highlighted {
+      border-color: var(--accent-purple);
+      background: rgba(192, 132, 252, 0.1);
+    }
+
+    .node-card.dimmed { opacity: 0.2; filter: grayscale(80%); }
+    .node-card.hidden { display: none !important; }
+
+    .node-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4px;
+    }
+
+    .node-name { font-size: 0.88rem; font-weight: 600; color: #fff; }
+
+    .price-badge {
+      font-size: 0.62rem;
+      font-weight: 700;
+      padding: 1px 5px;
+      border-radius: 4px;
+    }
+
+    .price-free { background: rgba(74, 222, 128, 0.15); color: var(--type-free); border: 1px solid rgba(74, 222, 128, 0.3); }
+    .price-freemium { background: rgba(250, 204, 21, 0.15); color: var(--type-freemium); border: 1px solid rgba(250, 204, 21, 0.3); }
+    .price-paid { background: rgba(248, 113, 113, 0.15); color: var(--type-paid); border: 1px solid rgba(248, 113, 113, 0.3); }
+
+    .node-desc { font-size: 0.75rem; color: var(--text-muted); line-height: 1.3; }
+
+    .lane-stage1 .node-card {
+      background: linear-gradient(145deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.9));
+      border-left: 3px solid var(--accent-cyan);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-grid"></div>
+
+  <div class="app-container">
+    <header>
+      <div class="logo-group">
+        <h1>⚡ MCP AI-Pipeline Map</h1>
+        <p>인터랙티브 숏폼 AI 로드맵 (Enhanced System)</p>
+      </div>
+      
+      <!-- [개선 1] 실시간 검색바 -->
+      <div class="search-box">
+        <input type="text" id="tool-search" placeholder="AI 도구 이름 또는 기능 검색...">
+      </div>
+    </header>
+
+    <main class="pipeline-board" id="board">
+      <svg id="svg-canvas">
+        <defs>
+          <linearGradient id="cyan-purple-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#38bdf8" />
+            <stop offset="100%" stop-color="#c084fc" />
+          </linearGradient>
+        </defs>
+      </svg>
+
+      <!-- Stage 1 -->
+      <section class="lane lane-stage1" data-stage="1">
+        <div class="lane-header">
+          <span class="lane-step-tag">STAGE 1</span>
+          <h2 class="lane-title">채널 / 목적인입</h2>
+        </div>
+        <div class="node-list" id="nodes-stage-1">
+          <div class="node-card" data-id="CH_SHORTS" data-stage="1" data-next="GPT-4O|CLAUDE-35|GEMINI-15|PERPLEXITY|WRTN">
+            <div class="node-top"><span class="node-name">🔴 일반 쇼츠/릴스/틱톡</span><span class="price-badge price-free">입력</span></div>
+            <div class="node-desc">스토리텔링, 트렌드, 정보성 세로형 숏폼 기획</div>
+          </div>
+          <div class="node-card" data-id="CH_CINEMATIC" data-stage="1" data-next="GPT-4O|CLAUDE-35">
+            <div class="node-top"><span class="node-name">🎬 AI 시네마틱 / MV</span><span class="price-badge price-free">입력</span></div>
+            <div class="node-desc">고품질 AI 비디오 및 음악 연출 기반 영화적 숏폼</div>
+          </div>
+          <div class="node-card" data-id="CH_REPURPOSE" data-stage="1" data-next="OPUS-CLIP|KLAP|PICTORY|DESCRIPT">
+            <div class="node-top"><span class="node-name">📺 롱폼 영상 재가공</span><span class="price-badge price-free">입력</span></div>
+            <div class="node-desc">유튜브 롱폼 URL 및 길고 느린 영상의 하이라이트 숏폼화</div>
+          </div>
+          <div class="node-card" data-id="CH_COMMERCE" data-stage="1" data-next="JASPER|COPYAI|WRTN">
+            <div class="node-top"><span class="node-name">🛒 커머스/마케팅</span><span class="price-badge price-free">입력</span></div>
+            <div class="node-desc">상품 셀링포인트 연출 및 전환율 중심 세일즈 숏폼</div>
+          </div>
+          <div class="node-card" data-id="CH_AUTO" data-stage="1" data-next="MAKE_N8N|COMFYUI">
+            <div class="node-top"><span class="node-name">⚙️ 자동화 워크플로우</span><span class="price-badge price-free">입력</span></div>
+            <div class="node-desc">대본 생성부터 비디오 파이프라인 무인 자동화 구축</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stage 2 -->
+      <section class="lane" data-stage="2">
+        <div class="lane-header">
+          <span class="lane-step-tag">STAGE 2</span>
+          <h2 class="lane-title">글/대본 기획</h2>
+          <div class="filter-chips" data-stage="2">
+            <button class="chip active" data-filter="all">전체</button>
+            <button class="chip" data-filter="free">무료</button>
+            <button class="chip" data-filter="freemium">부분무료</button>
+            <button class="chip" data-filter="paid">유료</button>
+          </div>
+        </div>
+        <div class="node-list" id="nodes-stage-2"></div>
+      </section>
+
+      <!-- Stage 3 (개선: 아코디언 지원) -->
+      <section class="lane" data-stage="3">
+        <div class="lane-header">
+          <span class="lane-step-tag">STAGE 3</span>
+          <h2 class="lane-title">에셋 소스 생성</h2>
+          <div class="filter-chips" data-stage="3">
+            <button class="chip active" data-filter="all">전체</button>
+            <button class="chip" data-filter="free">무료</button>
+            <button class="chip" data-filter="freemium">부분무료</button>
+            <button class="chip" data-filter="paid">유료</button>
+          </div>
+        </div>
+        <div class="node-list" id="nodes-stage-3"></div>
+      </section>
+
+      <!-- Stage 4 -->
+      <section class="lane" data-stage="4">
+        <div class="lane-header">
+          <span class="lane-step-tag">STAGE 4</span>
+          <h2 class="lane-title">종합 편집/자막</h2>
+          <div class="filter-chips" data-stage="4">
+            <button class="chip active" data-filter="all">전체</button>
+            <button class="chip" data-filter="free">무료</button>
+            <button class="chip" data-filter="freemium">부분무료</button>
+            <button class="chip" data-filter="paid">유료</button>
+          </div>
+        </div>
+        <div class="node-list" id="nodes-stage-4"></div>
+      </section>
+
+      <!-- Stage 5 -->
+      <section class="lane" data-stage="5">
+        <div class="lane-header">
+          <span class="lane-step-tag">STAGE 5</span>
+          <h2 class="lane-title">최종 플랫폼 발행</h2>
+        </div>
+        <div class="node-list" id="nodes-stage-5"></div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const state = {
+      nodes: {},
+      selectedChannel: null,
+      searchQuery: '',
+      filters: { 2: 'all', 3: 'all', 4: 'all' }
+    };
+
+    const fallbackTxtData = `
+ai_type,channel_type,id,tool_name,features,pros_cons,best_pricing,pricing_detail,description,next_ids
+기획 / 대본,대화형 AI,GPT-4O,ChatGPT (GPT-5.6),트렌드 분석·대본 스크립트 작성,장점: 한국어 자연스러움,플랜: Plus (월 $20),월 $20,숏폼 특화 3초 훅 및 시나리오 스크립트 생성,ELEVENLABS|MIDJOURNEY|RUNWAY|HIGGSFIELD|MINIMAX|SUNO|VIDU|LEONARDO|D-ID|BARK|VEO3|PIXVERSE
+기획 / 대본,대화형 AI,CLAUDE-35,Claude Sonnet 4.6,긴 문맥 이해·감성적 스토리텔링,장점: 문장력 최상,플랜: Pro (월 $20),월 $20,스토리텔링 및 영화적 숏폼 대본 기획 최적화,ELEVENLABS|MIDJOURNEY|KLING|HIGGSFIELD|RECRAFT|PLAYHT|VEO3|PIXVERSE
+기획 / 대본,대화형 AI,GEMINI-15,Gemini 3.1 Pro,구글 검색 연동·초장문 자료 분석,장점: 최신 검색 연동,플랜: Advanced (월 $20),Google One,실시간 이슈/뉴스 기반 숏폼 스크립트 추출,ELEVENLABS|DALLE3|FLUX1|LUMA|PLAYHT|VEO3|PIXVERSE
+기획 / 대본,대화 검색,PERPLEXITY,Perplexity AI,실시간 출처 명시형 검색·이슈 브리핑,장점: 신뢰도 높은 정보,플랜: Pro (월 $20),월 $20,팩트 중심 지식/이슈 정보성 쇼츠 대본 구성,ELEVENLABS|TYPECAST|CANVA
+기획 / 대본,대화형 AI,WRTN,뤼튼 (Wrtn),국내 맞춤형 생성형 AI,장점: 한국어 최적화,플랜: 무료,무료,국내 트렌드 반영 K-숏폼 대본 및 마케팅 문구,TYPECAST|CANVA|VREW
+기획 / 대본,마케팅/카피,JASPER,Jasper AI,광고 카피라이팅·마케팅 숏폼 대본,장점: 전환율 우수,플랜: Creator (월 $39),월 $39부터,마케팅 및 커머스 숏폼 카피 전문 생성,HEYGEN|SYNTHESIA|CANVA|D-ID
+기획 / 대본,마케팅/카피,COPYAI,Copy.ai,SNS 캡션·바이럴 카피라이팅,장점: 빠르게 작성,플랜: Pro (월 $36),월 $36,바이럴 숏폼 타이틀 및 세일즈 훅 문구 작성,CANVA|CAPCUT
+기획 / 대본,롱폼 재가공,OPUS-CLIP,Opus Clip,롱폼 URL 입력시 AI 자동 하이라이트,장점: 자동 자막/크롭,플랜: Starter (월 $9.50),월 150분,유튜브 롱폼을 짧은 쇼츠로 자동 재편집,CAPCUT|VREW
+기획 / 대본,롱폼 재가공,KLAP,Klap,롱폼 바이럴 구간 자동 탐지,장점: 바이럴 예측,플랜: Pro (월 $29),월 10개,롱폼 영상을 다수의 숏폼으로 자동 커팅,CAPCUT|VREW
+기획 / 대본,워크플로우,MAKE_N8N,Make / n8n,대본 작성부터 에셋 생성 무인 자동화,장점: 파이프라인 자동화,플랜: 무료 / Paid,무료 플랜,API 연동을 통한 숏폼 자동 제작 시스템 구축,CAPCUT|PREMIERE
+에셋 / 소스 생성,비디오 AI,HIGGSFIELD,Higgsfield AI,카메라 앵글 제어 및 고품질 비디오,장점: 정교한 카메라 워크,플랜: Standard (월 $15),크레딧 과금,영화적 연출 및 하이엔드 모션 비디오 숏폼 생성,CAPCUT|PREMIERE|DAVINCI
+에셋 / 소스 생성,비디오 AI,VIDU,Vidu AI,일관성 있는 캐릭터 움직임,장점: 캐릭터 유지력,플랜: Standard (월 $10),월 구독형,애니메이션 및 스타일화된 비디오 에셋 연출,CAPCUT|PREMIERE
+에셋 / 소스 생성,비디오 AI,COGVIDEOX,CogVideoX,최신 오픈소스 기반 비디오 생성 AI,장점: 커스텀 확장성,플랜: 무료 / OpenSource,오픈소스,고품질 모션 제어 비디오 숏폼 연출,CAPCUT|PREMIERE
+에셋 / 소스 생성,비디오 AI,MORPH,Morph Studio,텍스트 기반 숏폼 애니메이션,장점: 직관적 연출,플랜: Free / Paid,무료 크레딧,애니메이션 스타일 숏폼 영상 제작,CAPCUT|PREMIERE
+에셋 / 소스 생성,비디오 AI,MINIMAX,MiniMax (Hailuo 02),자연스러운 인물 움직임 제어,장점: 모션 자연스러움,플랜: 무료 체험 / Paid,월 구독형,인물 및 자연스러운 배경 모션 비디오 클립 생성,CAPCUT|PREMIERE
+에셋 / 소스 생성,비디오 AI,RUNWAY,Runway Gen-4,시네마틱 AI 비디오 생성,장점: 카메라 워크 우수,플랜: Standard (월 $12),월 625 크레딧,정지 이미지에 모션을 부여하여 비디오 제작,CAPCUT|PREMIERE
+에셋 / 소스 생성,비디오 AI,KLING,Kling AI 3.0,1080p 고화질 롱타임 영상 생성,장점: 프레임 연결 우수,플랜: Standard (월 $10),월 660 크레딧,실사풍 숏폼 비디오 클립 및 애니메이션 생성,CAPCUT|PREMIERE
+에셋 / 소스 생성,비디오 AI,LUMA,Luma Dream Machine 3.0,3D 구도 감각이 뛰어난 비디오 변환,장점: 빠른 속도,플랜: Standard (월 $29.99),월 120회,드론 샷 및 다이내믹 카메라 숏폼 연출,CAPCUT|PREMIERE
+에셋 / 소스 생성,비디오 AI,PIKA,Pika Labs,3D 애니메이션·특수효과 및 모션 제어,장점: 연출 재미,플랜: Standard (월 $10),월 700 크레딧,다양한 카툰/특수효과 모션 비디오 클립 생성,CAPCUT
+에셋 / 소스 생성,비디오 AI,VEO3,Google Veo 3.1,대사·SFX·환경음 동시 생성되는 고화질 비디오,장점: 사실적 화질과 동기 음성 생성,플랜: Google AI Pro/Ultra 포함,구독 포함형,실사 수준 화질에 대사와 효과음까지 한 번에 생성하는 차세대 비디오 에셋,CAPCUT|PREMIERE|DAVINCI
+에셋 / 소스 생성,비디오 AI,PIXVERSE,PixVerse V6,멀티샷 생성·네이티브 오디오·매일 무료 크레딧,장점: 캐릭터 일관성과 반복 테스트 용이,플랜: 무료 크레딧 제공 / Pro 유료,일일 무료 크레딧,멀티샷 스토리텔링과 자체 오디오 트랙까지 지원하는 비디오 에셋 생성,CAPCUT|PREMIERE
+에셋 / 소스 생성,이미지 AI,MIDJOURNEY,Midjourney v6,일러스트·실사 사진 스타일 최고화질,장점: 디테일 최상,플랜: Basic (월 $10),월 200분,대본 기반 숏폼 장면별 배경 및 인물 생성,RUNWAY|KLING|HIGGSFIELD|CAPCUT
+에셋 / 소스 생성,이미지 AI,LEONARDO,Leonardo.ai,게임 에셋 및 3D/시네마틱 특화,장점: 스타일 제어 우수,플랜: 무료 (일 150),무료 크레딧,다양한 아트 스타일 기반의 일관된 캐릭터/배경 에셋,RUNWAY|VIDU|CAPCUT
+에셋 / 소스 생성,이미지 AI,RECRAFT,Recraft AI,디자이너 특화 캔버스 기반 벡터,장점: 벡터 수정 용이,플랜: Free / Pro,무료 플랜,카드뉴스 및 모션 그래픽용 벡터 요소 생성,CANVA|CAPCUT
+에셋 / 소스 생성,이미지 AI,FOOOCUS,Fooocus,Midjourney 스타일을 무료 구동,장점: 완전 무료,플랜: 무료,개인 PC 구동,고품질 실사/일러스트 원본 이미지 생성,RUNWAY|KLING|CAPCUT
+에셋 / 소스 생성,이미지 AI,FLUX1,FLUX.1,손가락 및 텍스트 렌더링 극복,장점: 글자 표현 정확,플랜: 무료 / API 비례,Replicate API,이미지 내 정확한 글자 포함 컷 생성,RUNWAY|KLING|CAPCUT
+에셋 / 소스 생성,이미지 AI,DALLE3,DALL-E 3,프롬프트 이해도가 뛰어난 대화형,장점: 지시사항 잘 따름,플랜: ChatGPT Plus 포함,Plus 이용,지시사항을 정교하게 반영한 서사 이미지 생성,RUNWAY|KLING|CAPCUT
+에셋 / 소스 생성,음악/오디오,SUNO,Suno AI,텍스트 대본 기반 완성형 BGM/보컬,장점: 완벽한 노래 생성,플랜: Pro (월 $10),월 2500 크레딧,숏폼 분위기에 맞는 맞춤형 BGM/CM송 생성,CAPCUT|PREMIERE|VREW
+에셋 / 소스 생성,음악/오디오,UDIO,Udio,고음질 장르별 맞춤 음악 AI 생성,장점: 음질 우수,플랜: Standard (월 $10),월 1200 크레딧,시네마틱 및 트렌디 숏폼 배경음악 생성,CAPCUT|PREMIERE
+에셋 / 소스 생성,AI 성우 (TTS),ELEVENLABS,ElevenLabs,초고음질 AI 성우·감정 조절,장점: 감정 표현 최상,플랜: Creator (월 $11),월 100000자,자연스러운 AI 성우 음성을 대본에 입힘,CAPCUT|VREW|PREMIERE
+에셋 / 소스 생성,AI 성우 (TTS),TYPECAST,타입캐스트,한국어 특화 다양한 캐릭터 성우,장점: 한국어 억양 최상,플랜: Pro (월 39000원),월 60분,한국어 숏폼 캐릭터 음성 에셋 생성,CAPCUT|VREW
+에셋 / 소스 생성,AI 성우 (TTS),BARK,Bark AI,오픈소스 기반 자연스러운 음성,장점: 표현력 우수,플랜: 무료 / OpenSource,오픈소스,자연스러운 감정 음성 합성 에셋 생성,CAPCUT|VREW
+에셋 / 소스 생성,AI 성우 (TTS),PLAYHT,Play.ht,고품질 다국어 AI 음성 및 클로닝,장점: 자연스러운 음성,플랜: Creator (월 $31.20),월 구독,글로벌 다국어 숏폼 AI 음성 에셋 생성,CAPCUT|PREMIERE
+에셋 / 소스 생성,AI 아바타,D-ID,D-ID,이미지 한 장으로 말하는 아바타 생성,장점: 손쉬운 사용,플랜: Lite (월 $5.99),월 16분,사진 에셋 기반 지식 전달형 아바타 제작,CAPCUT|INVIDEO
+에셋 / 소스 생성,AI 아바타,HEYGEN,HeyGen,초실사형 AI 아바타 스피치 비디오,장점: 입모양 싱크 최상,플랜: Creator (월 $29),월 15 크레딧,말하는 아바타 기반 세일즈/지식 숏폼 제작,CAPCUT|INVIDEO
+에셋 / 소스 생성,AI 아바타,SYNTHESIA,Synthesia,기업형 AI 아바타 비디오 제작,장점: 다국어 지원,플랜: Starter (월 $22),월 120분,아바타가 설명하는 교육/기업 홍보 숏폼 생성,CAPCUT|INVIDEO
+에셋 / 소스 생성,디자인,CANVA,Canva,카드뉴스 템플릿·숏폼 레이아웃,장점: 사용성 쉬움,플랜: Pro (월 $12.99),배경 제거 무제한,카드뉴스 기반 릴스/쇼츠 그래픽 레이아웃,CAPCUT
+종합 편집 / 자막,원클릭 자동 자막,VREW,Vrew,AI 음성 인식 기반 텍스트 에디터 편집,장점: 컷편집 속도 압도적,플랜: Light (월 7900원),음성 120분,텍스트 편집 방식 자동 자막 및 효과음 생성,YOUTUBE-SHORTS|INSTA-REELS|TIKTOK
+종합 편집 / 자막,모바일/PC 종합,CAPCUT,CapCut (캡컷),모션 텍스트·자동 자막·트렌디 효과,장점: 트렌드 효과 최다,플랜: Pro (월 $7.99),고급 AI 효과,숏폼 크리에이터 필수 표준 종합 편집 프로그램,YOUTUBE-SHORTS|INSTA-REELS|TIKTOK|NAVER-CLIP
+종합 편집 / 자막,전문가용 편집,PREMIERE,Adobe Premiere Pro,전문가급 컷편집·모션 그래픽,장점: 세밀한 오디오/색보정,플랜: 단품 (월 30800원),CC 포함,고품질 브랜디드 숏폼 및 전문 편집용,YOUTUBE-SHORTS|INSTA-REELS|TIKTOK
+종합 편집 / 자막,전문가용 편집,DAVINCI,DaVinci Resolve,영화급 색보정·VFX 모션 그래픽,장점: 강력한 무료 버전,플랜: 무료 / Studio ($295),무료판 강력,고화질 AI 시네마틱 숏폼 후반 작업 및 마스터링,YOUTUBE-SHORTS|INSTA-REELS
+종합 편집 / 자막,전문가용 노드 AI,COMFYUI,ComfyUI,노드 기반 고급 이미지/비디오 AI 생성,장점: 디테일 제어 최상,플랜: 무료,오픈소스,전문가용 숏폼 에셋 연출 및 자동화 파이프라인,YOUTUBE-SHORTS|INSTA-REELS
+종합 편집 / 자막,텍스트 기반 편집,DESCRIPT,Descript,음성/영상 스크립트 기반 편집,장점: 노이즈 제거 최강,플랜: Hobbyist (월 $12),월 10시간,팟캐스트 및 롱폼 재가공 숏폼 편집,YOUTUBE-SHORTS|INSTA-REELS
+종합 편집 / 자막,자동 숏폼 생성,PICTORY,Pictory,대본/글을 스톡 비디오로 자동 전환,장점: 스톡 라이브러리,플랜: Standard (월 $19),월 30개,대본 기반 스톡 비디오 자동 조합 생성,YOUTUBE-SHORTS|INSTA-REELS
+종합 편집 / 자막,자동 비디오 생성,INVIDEO,InVideo AI,프롬프트 입력만으로 완성형 숏폼,장점: 기획부터 자막까지,플랜: Plus (월 $20),월 50분,텍스트 입력 시 스톡 영상 및 AI 음성 자동 제작,YOUTUBE-SHORTS|TIKTOK
+발행 / 플랫폼,유튜브 쇼츠,YOUTUBE-SHORTS,YouTube Shorts,최대 60초/3분 세로형 비디오,장점: 파급력/구독자 유입,플랜: 무료,수익 창출,글로벌 및 국내 최대 타깃 숏폼 발행 플랫폼,END
+발행 / 플랫폼,인스타그램 릴스,INSTA-REELS,Instagram Reels,알고리즘 기반 바이럴 및 마케팅,장점: 협찬/커머스 우수,플랜: 무료,프로필 연계,트렌디한 감성 및 퍼스널 브랜딩 발행 플랫폼,END
+발행 / 플랫폼,틱톡,TIKTOK,TikTok,알고리즘 기반 바이럴·글로벌 음원,장점: 노출 기회 균등,플랜: 무료,크리에이터 펀드,MZ세대 및 글로벌 타깃 바이럴 숏폼 발행 플랫폼,END
+발행 / 플랫폼,네이버 클립,NAVER-CLIP,Naver Clip,네이버 블로그 및 쇼핑 연동 숏폼,장점: 국내 검색 노출,플랜: 무료,크리에이터 연동,국내 블로그 및 커머스 연계 숏폼 플랫폼,END
+`.trim();
+
+    const svgCanvas = document.getElementById('svg-canvas');
+    const board = document.getElementById('board');
+    let rafId = null;
+
+    document.addEventListener('DOMContentLoaded', () => {
+      parseCSVAndBuildNodes(fallbackTxtData);
+      initEventListeners();
+    });
+
+    function getStageFromAiType(aiType) {
+      if (!aiType) return 2;
+      if (aiType.includes('기획') || aiType.includes('대본')) return 2;
+      if (aiType.includes('에셋') || aiType.includes('생성')) return 3;
+      if (aiType.includes('편집') || aiType.includes('자막')) return 4;
+      if (aiType.includes('발행') || aiType.includes('플랫폼')) return 5;
+      return 2;
+    }
+
+    function parsePriceCategory(pricingStr) {
+      if (!pricingStr) return 'freemium';
+      const lower = pricingStr.toLowerCase();
+      if (lower.includes('무료') || lower.includes('free') || lower.includes('opensource')) return 'free';
+      if (lower.includes('plus') || lower.includes('pro') || lower.includes('starter') || lower.includes('light') || lower.includes('basic') || lower.includes('standard') || lower.includes('월')) return 'freemium';
+      return 'paid';
+    }
+
+    function parseCSVAndBuildNodes(text) {
+      const lines = text.trim().split('\n');
+      const headers = lines[0].split(',').map(h => h.trim());
+
+      for (let i = 1; i < lines.length; i++) {
+        if (!lines[i].trim()) continue;
+        const currentline = lines[i].split(',');
+        const row = {};
+        for (let j = 0; j < headers.length; j++) {
+          row[headers[j]] = currentline[j] ? currentline[j].trim() : '';
+        }
+
+        const id = (row.id || '').toUpperCase();
+        if (!id) continue;
+
+        state.nodes[id] = {
+          id: id,
+          stage: getStageFromAiType(row.ai_type),
+          name: row.tool_name || id,
+          subcat: row.channel_type || '기타',
+          price: parsePriceCategory(row.best_pricing),
+          desc: row.description || row.features || '',
+          next: row.next_ids ? row.next_ids.split('|').map(x => x.trim().toUpperCase()).filter(x => x && x !== 'END') : []
+        };
+      }
+
+      renderNodes();
+    }
+
+    function renderNodes() {
+      // Stage 1 데이터 수집
+      document.querySelectorAll('#nodes-stage-1 .node-card').forEach(card => {
+        const id = card.dataset.id.toUpperCase();
+        state.nodes[id] = {
+          id: id,
+          stage: 1,
+          name: card.querySelector('.node-name').innerText,
+          price: 'free',
+          desc: card.querySelector('.node-desc').innerText,
+          next: card.dataset.next ? card.dataset.next.split('|').map(x => x.toUpperCase()) : []
+        };
+      });
+
+      // STAGE 2, 4, 5 일반 렌더링
+      [2, 4, 5].forEach(s => {
+        const container = document.getElementById(`nodes-stage-${s}`);
+        container.innerHTML = '';
+        Object.values(state.nodes).filter(n => n.stage === s).forEach(node => {
+          container.appendChild(createNodeCardEl(node));
+        });
+      });
+
+      // STAGE 3 아코디언 그룹 렌더링 (개선 2)
+      const stage3Container = document.getElementById('nodes-stage-3');
+      stage3Container.innerHTML = '';
+      
+      const stage3Nodes = Object.values(state.nodes).filter(n => n.stage === 3);
+      const groups = {};
+      
+      stage3Nodes.forEach(node => {
+        const cat = node.subcat || '기타';
+        if (!groups[cat]) groups[cat] = [];
+        groups[cat].push(node);
+      });
+
+      Object.entries(groups).forEach(([catName, nodeList]) => {
+        const groupEl = document.createElement('div');
+        groupEl.className = 'cat-group';
+        
+        const headerEl = document.createElement('div');
+        headerEl.className = 'cat-header';
+        headerEl.innerText = `${catName} (${nodeList.length})`;
+        headerEl.onclick = () => {
+          groupEl.classList.toggle('collapsed');
+          requestUpdateConnections();
+        };
+
+        const bodyEl = document.createElement('div');
+        bodyEl.className = 'cat-body';
+        nodeList.forEach(node => bodyEl.appendChild(createNodeCardEl(node)));
+
+        groupEl.appendChild(headerEl);
+        groupEl.appendChild(bodyEl);
+        stage3Container.appendChild(groupEl);
+      });
+
+      const defaultChannel = document.querySelector('#nodes-stage-1 .node-card');
+      if (defaultChannel) selectChannel(defaultChannel);
+    }
+
+    function createNodeCardEl(node) {
+      const card = document.createElement('div');
+      card.className = 'node-card';
+      card.dataset.id = node.id;
+      card.dataset.stage = node.stage;
+      card.dataset.price = node.price;
+
+      const priceLabel = node.price === 'free' ? '무료' : node.price === 'freemium' ? '부분무료' : '유료';
+      card.innerHTML = `
+        <div class="node-top">
+          <span class="node-name">${node.name}</span>
+          <span class="price-badge price-${node.price}">${priceLabel}</span>
+        </div>
+        <div class="node-desc">${node.desc}</div>
+      `;
+      return card;
+    }
+
+    function initEventListeners() {
+      // 채널 선택 및 필터 칩
+      board.addEventListener('click', (e) => {
+        const card = e.target.closest('.node-card');
+        if (card && card.dataset.stage === "1") selectChannel(card);
+
+        const chip = e.target.closest('.chip');
+        if (chip) {
+          const filterGroup = chip.closest('.filter-chips');
+          const stage = parseInt(filterGroup.dataset.stage, 10);
+          filterGroup.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+          chip.classList.add('active');
+          state.filters[stage] = chip.dataset.filter;
+          applyFiltersAndConnections();
+        }
+      });
+
+      // [개선 1] 실시간 검색 구현
+      document.getElementById('tool-search').addEventListener('input', (e) => {
+        state.searchQuery = e.target.value.toLowerCase().trim();
+        applyFiltersAndConnections();
+      });
+
+      // [개선 3] 스크롤 시 rAF 기반 성능 최적화 Wire 업계 반영
+      document.querySelectorAll('.node-list').forEach(list => {
+        list.addEventListener('scroll', requestUpdateConnections);
+      });
+      window.addEventListener('resize', requestUpdateConnections);
+    }
+
+    function selectChannel(cardElement) {
+      document.querySelectorAll('#nodes-stage-1 .node-card').forEach(c => c.classList.remove('selected'));
+      cardElement.classList.add('selected');
+      state.selectedChannel = cardElement.dataset.id.toUpperCase();
+      applyFiltersAndConnections();
+    }
+
+    function applyFiltersAndConnections() {
+      Object.values(state.nodes).forEach(node => {
+        if (node.stage === 1 || node.stage === 5) return;
+        
+        const card = document.querySelector(`.node-card[data-id="${node.id}"]`);
+        if (!card) return;
+
+        const matchesFilter = state.filters[node.stage] === 'all' || node.price === state.filters[node.stage];
+        const matchesSearch = !state.searchQuery || 
+                              node.name.toLowerCase().includes(state.searchQuery) || 
+                              node.desc.toLowerCase().includes(state.searchQuery);
+
+        if (matchesFilter && matchesSearch) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      // [버그 수정] 검색어가 있을 때, 결과가 접힌 아코디언(cat-group) 안에 숨어
+      // 안 보이는 문제 방지 — 매칭된 카드가 있는 그룹은 자동으로 펼친다.
+      if (state.searchQuery) {
+        document.querySelectorAll('.cat-group').forEach(group => {
+          const hasVisibleMatch = group.querySelector('.node-card:not(.hidden)');
+          if (hasVisibleMatch) group.classList.remove('collapsed');
+        });
+      }
+
+      const activeNodeIds = new Set();
+      const activeWires = new Set();
+
+      if (state.selectedChannel) {
+        activeNodeIds.add(state.selectedChannel);
+        const queue = [state.selectedChannel];
+        
+        while (queue.length > 0) {
+          const currId = queue.shift();
+          const currNode = state.nodes[currId];
+          if (!currNode || !currNode.next) continue;
+
+          currNode.next.forEach(nextId => {
+            const nextCard = document.querySelector(`.node-card[data-id="${nextId}"]`);
+            if (nextCard && !nextCard.classList.contains('hidden') && !nextCard.closest('.cat-group.collapsed')) {
+              activeWires.add(`${currId}->${nextId}`);
+              if (!activeNodeIds.has(nextId)) {
+                activeNodeIds.add(nextId);
+                queue.push(nextId);
+              }
+            }
+          });
+        }
+      }
+
+      document.querySelectorAll('.node-card').forEach(card => {
+        if (card.dataset.stage === "1") return;
+        if (activeNodeIds.has(card.dataset.id)) {
+          card.classList.add('highlighted');
+          card.classList.remove('dimmed');
+        } else {
+          card.classList.remove('highlighted');
+          card.classList.add('dimmed');
+        }
+      });
+
+      requestUpdateConnections(activeWires);
+    }
+
+    function requestUpdateConnections(activeWiresSet = null) {
+      if (rafId) cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(() => updateConnections(activeWiresSet));
+    }
+
+    function updateConnections(activeWiresSet) {
+      if (!(activeWiresSet instanceof Set)) {
+        return applyFiltersAndConnections();
+      }
+
+      svgCanvas.querySelectorAll('path').forEach(p => p.remove());
+      const boardRect = board.getBoundingClientRect();
+
+      Object.values(state.nodes).forEach(srcNode => {
+        const srcCard = document.querySelector(`.node-card[data-id="${srcNode.id}"]`);
+        if (!srcCard || srcCard.classList.contains('hidden') || srcCard.closest('.cat-group.collapsed')) return;
+
+        const srcRect = srcCard.getBoundingClientRect();
+
+        srcNode.next.forEach(targetId => {
+          const targetCard = document.querySelector(`.node-card[data-id="${targetId}"]`);
+          if (!targetCard || targetCard.classList.contains('hidden') || targetCard.closest('.cat-group.collapsed')) return;
+
+          const targetRect = targetCard.getBoundingClientRect();
+
+          const x1 = srcRect.right - boardRect.left;
+          const y1 = srcRect.top + srcRect.height / 2 - boardRect.top;
+          const x2 = targetRect.left - boardRect.left;
+          const y2 = targetRect.top + targetRect.height / 2 - boardRect.top;
+
+          const dx = Math.max(30, (x2 - x1) * 0.5);
+          const pathD = `M ${x1} ${y1} C ${x1 + dx} ${y1}, ${x2 - dx} ${y2}, ${x2} ${y2}`;
+
+          const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+          path.setAttribute('d', pathD);
+          path.setAttribute('class', activeWiresSet.has(`${srcNode.id}->${targetId}`) ? 'wire active' : 'wire dimmed');
+
+          svgCanvas.appendChild(path);
+        });
+      });
+    }
+  </script>
+</body>
+</html>

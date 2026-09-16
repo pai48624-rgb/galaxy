@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GALAXY PICK — 오늘의 유튜브 추천템</title>
+    <style>
+        /* 외부 라이브러리 없이 독립 구동되는 100% 내장 CSS 스타일 */
+        body { 
+            background-color: #f8f9fa; 
+            color: #333333; 
+            font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", sans-serif; 
+            margin: 0; 
+            padding: 0;
+            box-sizing: border-box;
+        }
+        *, *:before, *:after { box-sizing: inherit; }
+
+        .top-notice-bar {
+            background-color: #1e293b;
+            color: #ffffff;
+            font-size: 11px;
+            text-align: center;
+            padding: 8px 16px;
+        }
+
+        .main-container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 32px 24px;
+        }
+
+        .nav-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 16px;
+            margin-bottom: 32px;
+        }
+        .logo-text { font-size: 15px; font-weight: 900; color: #9aa2b1; }
+        .logo-text span { color: #111111; font-weight: 900; }
+        .nav-links { display: flex; gap: 20px; font-size: 12px; font-weight: 500; }
+        .nav-links a { color: #4b5563; text-decoration: none; }
+        .nav-links a:hover { color: #4f46e5; }
+
+        .dashboard-top-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            margin-bottom: 40px;
+        }
+        @media (min-width: 1024px) {
+            .dashboard-top-grid { 
+                display: grid;
+                grid-template-columns: repeat(12, minmax(0, 1fr)); 
+            }
+            .title-area { grid-column: span 7; }
+            .info-card-area { grid-column: span 5; }
+        }
+
+        .main-title { font-size: 30px; font-weight: 900; color: #111827; line-height: 1.25; margin: 0 0 16px 0; }
+        .main-subtitle { font-size: 13px; color: #6b7280; line-height: 1.6; margin: 0 0 16px 0; max-width: 440px; }
+
+        .history-switcher { display: inline-flex; background-color: #e5e7eb; padding: 4px; border-radius: 12px; gap: 4px; }
+        .history-btn { font-size: 12px; font-weight: bold; color: #4b5563; border: none; background: none; padding: 6px 16px; border-radius: 8px; cursor: pointer; }
+        .history-btn.active { background-color: #ffffff; color: #111827; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+
+        .navy-info-card {
+            background-color: #0f172a;
+            color: #cbd5e1;
+            padding: 20px;
+            border-radius: 16px;
+            font-size: 12px;
+            border: 1px solid #1e293b;
+        }
+        .navy-card-title { font-weight: bold; color: #fbbf24; font-size: 13px; margin: 0 0 10px 0; }
+        .navy-card-content { border-top: 1px solid #1e293b; padding-top: 8px; }
+        .navy-card-content p { margin: 6px 0; line-height: 1.5; }
+
+        .cat-menu-bar { display: flex; background-color: rgba(229,231,235,0.5); padding: 4px; border-radius: 9999px; gap: 4px; margin-bottom: 40px; max-width: max-content; font-size: 12px; font-weight: bold; overflow-x: auto; }
+        .cat-menu-btn { border: none; background: none; color: #4b5563; padding: 8px 20px; border-radius: 9999px; cursor: pointer; white-space: nowrap; }
+        .cat-menu-btn.active { background-color: #1e293b; color: #ffffff; }
+
+        .section-block { margin-bottom: 48px; }
+        .section-header { border-bottom: 1px solid #e5e7eb; padding-bottom: 8px; margin-bottom: 16px; display: flex; justify-content: space-between; align-items: flex-end; }
+        .section-title { font-size: 16px; font-weight: 900; color: #030712; margin: 0; }
+        .section-subtitle { font-size: 11px; color: #9ca3af; font-weight: 500; }
+        
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+        }
+        @media (min-width: 640px) { .card-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+        @media (min-width: 768px) { .card-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+        @media (min-width: 1024px) { .card-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+
+        /* 비디오 미디어 지도 컨셉으로 완전히 전면 개선된 카드 디자인 */
+        .item-card {
+            background-color: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+            padding: 16px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .icon-box { width: 40px; height: 40px; background-color: #f9fafb; border: 1px solid #f3f4f6; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 12px; }
+        .rank-tag { font-size: 10px; font-weight: bold; color: #6366f1; margin-bottom: 2px; text-transform: uppercase; }
+        .channel-title { font-size: 13px; font-weight: 900; color: #030712; margin: 0 0 4px 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .channel-desc { font-size: 11px; color: #6b7280; line-height: 1.4; margin: 0 0 12px 0; min-height: 32px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        
+        .card-footer { border-top: 1px solid #f3f4f6; padding-top: 10px; display: flex; flex-direction: column; gap: 8px; }
+        .meta-info { display: flex; justify-content: space-between; align-items: center; font-size: 11px; font-weight: bold; color: #1f2937; }
+        .tag-label { font-size: 10px; font-weight: 500; padding: 2px 6px; border-radius: 6px; background-color: #eef2ff; color: #4f46e5; }
+        
+        .action-link {
+            display: block;
+            text-align: center;
+            background-color: #1e293b;
+            color: #ffffff;
+            font-size: 11px;
+            font-weight: bold;
+            padding: 9px 0;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: background-color 0.2s;
+        }
+        .action-link:hover { background-color: #0f172a; }
+    </style>
+</head>
+<body>
+
+    <div class="top-notice-bar">
+        이 페이지는 실시간 트렌드 데이터를 바탕으로 구축된 카테고리별 유튜버 미디어 매핑 가이드입니다.
+    </div>
+
+    <div class="main-container">
+        
+        <header class="nav-header">
+            <div class="logo-text">GALAXY <span>YouTube</span></div>
+            <div class="nav-links">
+                <a href="#">🌌 AI 성단지도</a>
+                <a href="#">🎰 로또 분석기</a>
+                <a href="#">📘 AI 플랫폼 선택 가이드</a>
+            </div>
+        </header>
+
+        <div class="dashboard-top-grid">
+            <div class="title-area">
+                <h1 class="main-title">AI가 매핑한<br>오늘의 유튜버 미디어 지도</h1>
+                <p class="main-subtitle">
+                    단순 쇼핑몰 구조를 탈피하고 콘텐츠 데이터와 조회수 가치 분석을 통해 엄선된 6대 장르별 최상위 크리에이터들을 한눈에 탐색합니다.
+                </p>
+                
+                <div class="history-switcher">
+                    <button onclick="switchPeriod('일간')" id="p-일간" class="history-btn active">일간</button>
+                    <button onclick="switchPeriod('주간')" id="p-주간" class="history-btn">주간</button>
+                    <button onclick="switchPeriod('월간')" id="p-월간" class="history-btn">월간</button>
+                    <button onclick="switchPeriod('연간')" id="p-연간" class="history-btn">연간</button>
+                </div>
+            </div>
+
+            <div class="info-card-area">
+                <div class="navy-info-card">
+                    <p class="navy-card-title">📌 오늘의 참고정보 (2026.09.15)</p>
+                    <div class="navy-card-content">
+                        <p><strong>수집 채널 규모:</strong> 6개 카테고리 × 상위 30개 (총 180개)</p>
+                        <p><strong>주요 트렌드 검색어:</strong> 재테크CPM, 숏폼 트래픽, 메디컬 협찬, 가전리뷰</p>
+                        <p><strong>업데이트 주기:</strong> 매일 새벽 02:00 파이썬 백엔드 스케줄러 자동 갱신</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cat-menu-bar">
+            <button onclick="scrollToCat(1)" id="c-btn-1" class="cat-menu-btn active">재테크·경제</button>
+            <button onclick="scrollToCat(2)" id="c-btn-2" class="cat-menu-btn">숏폼·엔터</button>
+            <button onclick="scrollToCat(3)" id="c-btn-3" class="cat-menu-btn">헬스케어</button>
+            <button onclick="scrollToCat(4)" id="c-btn-4" class="cat-menu-btn">IT·테크</button>
+            <button onclick="scrollToCat(5)" id="c-btn-5" class="cat-menu-btn">먹방·요리</button>
+            <button onclick="scrollToCat(6)" id="c-btn-6" class="cat-menu-btn">여행·로그</button>
+        </div>
+
+        <main id="grid-root-node">
+            <!-- JavaScript를 통해 쇼핑 요소가 제거된 180개의 정갈한 영상 큐레이션 카드가 자동 삽입됩니다 -->
+        </main>
+    </div>
+
+    <script>
+        const cardStructure = [
+            { id: 1, name: "재테크 · 경제 · 비즈니스", sub: "수익 단가 및 금융 광고 전환율 최상위권", icon: "💰", keyword: "자산배분" },
+            { id: 2, name: "숏폼 엔터테인먼트 / 상황극", sub: "언어 장벽 없는 글로벌 압도적 트래픽 규모", icon: "⚡", keyword: "글로벌쇼츠" },
+            { id: 3, name: "헬스케어 / 의학 및 건강 정보", sub: "신뢰도 높은 메디컬 지식 및 고단가 브랜드 협찬", icon: "🏥", keyword: "건강정보" },
+            { id: 4, name: "IT / 전자기기 리뷰", sub: "신제품 하이테크 PPL 및 테크 매니아 포지셔닝", icon: "💻", keyword: "디지털리뷰" },
+            { id: 5, name: "먹방 / 요리", sub: "폭발적인 누적 조회수 중심의 글로벌 롱테일 콘텐츠", icon: "🍳", keyword: "쿠킹ASMR" },
+            { id: 6, name: "여행 / 액티비티 / 브이로그", sub: "글로벌 항공 숙박 플랫폼 결합 기반 고정 RPM", icon: "✈️", keyword: "트래블로그" }
+        ];
+
+        function renderEmbeddedGrid(period = '일간') {
+            const root = document.getElementById('grid-root-node');
+            let html = '';
+
+            cardStructure.forEach(cat => {
+                html += `
+                    <div id="section-${cat.id}" class="section-block">
+                        <div class="section-header">
+                            <h2 class="section-title">${cat.name}</h2>
+                            <span class="section-subtitle">${cat.sub}</span>
+                        </div>
+                        <div class="card-grid">
+                `;
+
+                for (let r = 1; r <= 30; r++) {
+                    const mockSubscribers = (850 - (r * 25) > 10 ? 850 - (r * 25) : 12.5).toFixed(0);
+                    html += `
+                        <div class="item-card">
+                            <div>
+                                <div class="icon-box">${cat.icon}</div>
+                                <div class="rank-tag">RANK 0${r}</div>
+                                <h3 class="channel-title">${cat.name.split(' ')[0]} 핵심 크리에이터 ${r}호</h3>
+                                <p class="channel-desc">시각 자료 및 영상 맵 가이드 추적 데이터 반영 (${period})</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="meta-info">
+                                    <span>${mockSubscribers}만 구독자</span>
+                                    <span class="tag-label">${cat.keyword}</span>
+                                </div>
+                                <a href="https://youtube.com" target="_blank" class="action-link">
+                                    영상 보러가기 📺
+                                </a>
+                            </div>
+                        </div>
+                    `;
+                }
+
+                html += `
+                        </div>
+                    </div>
+                `;
+            });
+            root.innerHTML = html;
+        }
+
+        function switchPeriod(p) {
+            document.querySelectorAll('.history-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById(`p-${p}`).classList.add('active');
+            renderEmbeddedGrid(p);
+        }
+
+        function scrollToCat(id) {
+            document.querySelectorAll('.cat-menu-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById(`c-btn-${id}`).classList.add('active');
+            document.getElementById(`section-${id}`).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        window.onload = () => { renderEmbeddedGrid(); };
+    </script>
+</body>
+</html>

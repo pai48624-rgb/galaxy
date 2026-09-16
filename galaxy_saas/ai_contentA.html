@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 숏폼 콘텐츠 제작 MCP 로드맵</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent-color: #38bdf8;
+            --text-main: #f8fafc;
+            --text-sub: #94a3b8;
+            --border-color: #334155;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--accent-color);
+            margin-bottom: 30px;
+        }
+
+        .pipeline-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .stage-column {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 15px;
+            border: 1px solid var(--border-color);
+        }
+
+        .stage-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .tool-card {
+            background-color: #0f172a;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 12px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .tool-card:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        .tool-card.active {
+            border-color: #f59e0b;
+            box-shadow: 0 0 10px rgba(245, 158, 11, 0.3);
+        }
+
+        .tool-name {
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        .tool-cat {
+            font-size: 0.8rem;
+            color: var(--accent-color);
+            margin-bottom: 8px;
+        }
+
+        .tool-desc {
+            font-size: 0.85rem;
+            color: var(--text-sub);
+            line-height: 1.4;
+        }
+
+        .badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            padding: 2px 6px;
+            border-radius: 4px;
+            background: #334155;
+            color: #e2e8f0;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>AI 숏폼 콘텐츠 제작 MCP 로드맵</h1>
+    <div id="pipelineGrid" class="pipeline-grid"></div>
+</div>
+
+<script>
+// 확장된 파이프라인 데이터 (Embedded)
+const embeddedData = `ai_type,channel_type,id,tool_name,features,pros_cons,best_pricing,pricing_detail,description,next_ids
+기획 / 대본,유튜브 쇼츠 / 릴스 / 틱톡,GPT-4o,ChatGPT (GPT-4o),트렌드 분석·대본 스크립트 작성·훅(Hook) 문구 추출,장점: 한국어 자연스러움·다양한 톤 조절 / 단점: 프롬프트 의존도 높음,플랜: Plus (월 $20),상세: 월 $20 구독시 GPT-4o 무제한급 이용 가능,숏폼 특화 3초 훅 및 시나리오 스크립트 생성을 전담하는 기본 기획 툴,ELEVENLABS|MIDJOURNEY|RUNWAY|SORA
+기획 / 대본,유튜브 쇼츠 / 릴스 / 틱톡,CLAUDE-35,Claude 3.5 Sonnet,긴 문맥 이해·감성적 스토리텔링·자연스러운 대화체,장점: 문장력이 뛰어남·논리적 스크립트 / 단점: 무료 플랜 일일 제한 엄격,플랜: Pro (월 $20),상세: 월 $20 구독시 Pro 기능 제공,스토리텔링 중심의 숏폼 대본 및 팩트 기반 정보형 콘텐츠 기획에 최적화,ELEVENLABS|MIDJOURNEY|KLING
+기획 / 대본,유튜브 쇼츠 / 릴스 / 틱톡,GEMINI-15,Gemini 1.5 Pro,구글 생태계 연동·최신 정보 탐색·초장문 스크립트 분석,장점: 검색 연동·대용량 컨텍스트 / 단점: 창의적 대본 연출 시 추가 조율 필요,플랜: Advanced (월 $20),상세: Google One AI Premium 플랜 포함,실시간 이슈/뉴스 기반 숏폼 스크립트 추출 및 분석에 강력,ELEVENLABS|MIDJOURNEY|FLUX1
+기획 / 대본,유튜브 롱폼 재가공,OPUS-CLIP,Opus Clip,롱폼 영상 URL 입력시 AI 자동 하이라이트 추출 및 숏폼 재가공,장점: 자동 자막·크롭·점수화 / 단점: 원본 화질/구도 의존적,플랜: Starter (월 $9.50),상세: 월 150분 영상 처리 가능,유튜브 롱폼을 짧은 쇼츠로 자동으로 재편집하고 훅 점수를 분석해주는 툴,CAPCUT|VREW
+기획 / 대본,유튜브 롱폼 재가공,KLAP,Klap,롱폼 바이럴 구간 자동 탐지·다국어 자막·스마트 리프레이밍,장점: 바이럴 예측 알고리즘 / 단점: 일부 세부 편집 자유도 낮음,플랜: Pro (월 $29),상세: 월 10개 롱폼 영상 자동 변환,기존 유튜브 롱폼 영상을 다수의 숏폼으로 자동 커팅해주는 기획/재가공 툴,CAPCUT|VREW
+기획 / 대본,인스타 카드뉴스/릴스,GEMS-WRITER,Custom GPTs (카드뉴스 기획기),인스타그램 슬라이드 카드뉴스 및 릴스 캡션 템플릿 자동 생성,장점: 인스타 규격 완벽 대응 / 단점: 텍스트 위주 구성,플랜: ChatGPT Plus 포함,상세: Plus 이용자 무료 사용 가능,카드뉴스 헤드라인과 릴스 스크립트를 동시에 생성하는 기획 도구,CANVA|MIDJOURNEY
+에셋 / 소스 생성,AI 음성 (TTS),ELEVENLABS,ElevenLabs,초고음질 AI 성우·목소리 클로닝·다국어 감정 표현 tts,장점: 최고 수준 감정 표현·인간 수준 음성 / 단점: 글자 수 기반 과금 비용,플랜: Creator (월 $11),상세: 월 100,000자 생성 및 음성 복제 지원,세계 최고 수준의 자연스러운 AI 성우 음성을 생성하여 대본에 입히는 에셋 툴,CAPCUT|VREW|PREMIERE
+에셋 / 소스 생성,AI 음성 (TTS),TYPECAST,타입캐스트 (Typecast),한국어 특화 다양한 캐릭터 성우·가상 인간 애니메이션,장점: 한국어 억양/캐릭터 음성 최상 / 단점: 해외 언어 스펙 부족,플랜: Pro (월 39,000원),상세: 월 60분 음성 및 비디오 다운로드,한국어 숏폼(주식, 썰, 뉴스, 애니 등)에 최적화된 캐릭터 음성 생성 툴,CAPCUT|VREW
+에셋 / 소스 생성,이미지 생성,MIDJOURNEY,Midjourney v6,일러스트·실사 사진·웹툰 스타일 등 최고 품질 이미지 생성,장점: 디테일 및 예술적 퀄리티 최상 / 단점: 디스코드 기반 인터페이스,플랜: Basic (월 $10),상세: 월 200분 생성 시간 제공,대본 프롬프트 기반으로 숏폼 장면별 배경 및 인물 이미지를 일관되게 생성,RUNWAY|KLING|LUMA|CAPCUT
+에셋 / 소스 생성,이미지 생성,FLUX1,FLUX.1 (Black Forest Labs),손가락 및 텍스트 렌더링 극복·고해상도 오픈소스 이미지 생성,장점: 글자 표현 정확·무료/로컬 사용 가능 / 단점: 고사양 GPU 필요(로컬 시),플랜: 무료 / API 비례 과금,상세: Replicate/Fal.ai API 이용 가능,이미지 내 정확한 글자 포함 및 사실적 그래픽 컷 생성에 최적화,RUNWAY|KLING|CAPCUT
+에셋 / 소스 생성,비디오 생성,RUNWAY,Runway Gen-3 Alpha,텍스트/이미지 기반 고화질 AI 비디오 클립 생성 및 모션 컨트롤,장점: 역동적인 카메라 워크 및 물리 엔진 / 단점: 크레딧 소모 빠름,플랜: Standard (월 $12),상세: 월 625 크레딧 제공,생성된 정지 이미지에 생생한 움직임을 부여하여 숏폼용 소스 비디오 제작,CAPCUT|PREMIERE
+에셋 / 소스 생성,비디오 생성,KLING,Kling AI,1080p 10초 고화질 영상 생성·자연스러운 인물 모션 연출,장점: 프레임 간 안정성 및 퀄리티 우수 / 단점: 생성 대기 시간 존재,플랜: Standard (월 $10),상세: 월 660 크레딧 제공,실사풍 숏폼 비디오 클립 및 캐릭터 애니메이션 비디오 생성,CAPCUT|PREMIERE
+에셋 / 소스 생성,비디오 생성,LUMA,Luma Dream Machine,3D 구도 감각이 뛰어난 고속 이미지-비디오 변환,장점: 빠른 생성 속도·자연스러운 카메라 이동 / 단점: 변형 오류 간혹 발생,플랜: Standard (월 $29.99),상세: 월 120회 고속 생성 지원,이미지 소스를 바탕으로 카메라 드론 샷 스타일의 비디오 연출 생성,CAPCUT|PREMIERE
+에셋 / 소스 생성,디자인 / 템플릿,CANVA,Canva,카드뉴스 템플릿·숏폼 레이아웃·자동 요소 일러스트 제공,장점: 초보자 쉬움·방대한 에셋 라이브러리 / 단점: 독창성 한계,플랜: Pro (월 $12.99),상세: 프리미엄 에셋 및 배경 제거 기능 무제한,카드뉴스 기반 릴스 및 쇼츠 그래픽 레이아웃 빠르게 조합,CAPCUT
+종합 편집 / 자막,원클릭 자동 자막/편집,VREW,Vrew,AI 음성 인식 기반 텍스트 에디터 방식 편집·자동 자막·AI 이미지/음성 연동,장점: 컷편집 속도 압도적·무료 폰트 다양 / 단점: 고급 이펙트/트랜지션 부족,플랜: Light (월 7,900원),상세: 음성인식 120분, AI 음성 10,000자 지원,대본을 텍스트처럼 편집하며 자동으로 모션 자막과 효과음을 생성하는 원스톱 툴,YOUTUBE-SHORTS|INSTA-REELS|TIKTOK
+종합 편집 / 자막,모바일/PC 종합 편집,CAPCUT,CapCut (캡컷),모션 텍스트·자동 자막·트렌디한 트랜지션 및 AI 바이럴 효과음,장점: 틱톡/쇼츠 트렌드 효과 최다·PC/모바일 연동 / 단점: Pro 전용 기능 확대,플랜: Pro (월 $7.99),상세: 고급 AI 효과 및 클라우드 용량 제공,현재 숏폼 크리에이터들이 가장 많이 사용하는 표준 종합 편집 및 자막 프로그램,YOUTUBE-SHORTS|INSTA-REELS|TIKTOK
+종합 편집 / 자막,전문가용 편집,PREMIERE,Adobe Premiere Pro,전문가급 컷편집·모션 그래픽·자동 자막(Text-based Editing),장점: 세밀한 색보정 및 오디오 다듬기·확장성 / 단점: 무겁고 진입장벽 있음,플랜: 단품 (월 30,800원),상세: 어도비 크리에이티브 클라우드 포함,고품질 브랜디드 숏폼 및 섬세한 타임라인 작업이 필요한 프로용 편집 소프트웨어,YOUTUBE-SHORTS|INSTA-REELS|TIKTOK
+발행 / 플랫폼,유튜브 쇼츠,YOUTUBE-SHORTS,YouTube Shorts,최대 60초/3분 세로형 비디오·구글 검색 및 추천 알고리즘 연동,장점: 파급력 및 구독자 유입 강력 / 단점: 음원 저작권 제한 유의,플랜: 무료,상세: 유튜브 채널을 통한 수익 창출 가능,글로벌 및 국내 최대 타깃 대상의 숏폼 최종 발행 플랫폼,END
+발행 / 플랫폼,인스타그램 릴스,INSTA-REELS,Instagram Reels,알고리즘 기반 바이럴·팔로워 기반 파급력 및 브랜드 마케팅 최적,장점: 브랜드 협찬 및 커머스 연계 우수 / 단점: 링크 삽입 제한,플랜: 무료,상세: 인스타그램 프로필 및 틱톡 연계 활용,트렌디한 감성 및 제품 홍보/퍼스널 브랜딩 최종 발행 플랫폼,END
+발행 / 플랫폼,틱톡,TIKTOK,TikTok,알고리즘 기반 폭발적 바이럴·젊은 타깃층 및 글로벌 음원 트렌드 주도,장점: 초반 노출 기회 균등·음원 라이브러리 풍부 / 단점: 연령층 치우침 존재,플랜: 무료,상세: 틱톡 크리에이터 펀드 및 숍 연동 가능,MZ세대 및 글로벌 타깃 바이럴 숏폼 최종 발행 플랫폼,END`;
+
+// CSV 파서 함수
+function parseCSV(text) {
+    const lines = text.trim().split('\n');
+    const headers = lines[0].split(',');
+    const result = [];
+
+    for (let i = 1; i < lines.length; i++) {
+        if (!lines[i]) continue;
+        const currentline = lines[i].split(',');
+        const obj = {};
+        for (let j = 0; j < headers.length; j++) {
+            obj[headers[j].trim()] = currentline[j] ? currentline[j].trim() : '';
+        }
+        result.push(obj);
+    }
+    return result;
+}
+
+// 화면 렌더링
+function renderRoadmap(data) {
+    const grid = document.getElementById('pipelineGrid');
+    grid.innerHTML = '';
+
+    // ai_type을 기준으로 그룹화
+    const stages = {};
+    data.forEach(item => {
+        if (!stages[item.ai_type]) {
+            stages[item.ai_type] = [];
+        }
+        stages[item.ai_type].push(item);
+    });
+
+    // 각 단계별 칼럼 생성
+    Object.keys(stages).forEach(stageName => {
+        const col = document.createElement('div');
+        col.className = 'stage-column';
+        
+        const title = document.createElement('div');
+        title.className = 'stage-title';
+        title.innerText = stageName;
+        col.appendChild(title);
+
+        stages[stageName].forEach(tool => {
+            const card = document.createElement('div');
+            card.className = 'tool-card';
+            card.id = `card-${tool.id}`;
+            card.innerHTML = `
+                <div class="tool-name">${tool.tool_name}</div>
+                <div class="tool-cat">${tool.channel_type}</div>
+                <div class="tool-desc">${tool.description}</div>
+                <div class="badge">${tool.best_pricing}</div>
+            `;
+
+            // 클릭 시 연결된 다음 단계 하이라이트
+            card.addEventListener('click', () => {
+                document.querySelectorAll('.tool-card').forEach(c => c.classList.remove('active'));
+                card.classList.add('active');
+
+                if (tool.next_ids && tool.next_ids !== 'END') {
+                    const nextList = tool.next_ids.split('|');
+                    nextList.forEach(nextId => {
+                        const target = document.getElementById(`card-${nextId}`);
+                        if (target) target.classList.add('active');
+                    });
+                }
+            });
+
+            col.appendChild(card);
+        });
+
+        grid.appendChild(col);
+    });
+}
+
+// 실행
+document.addEventListener('DOMContentLoaded', () => {
+    const parsedData = parseCSV(embeddedData);
+    renderRoadmap(parsedData);
+});
+</script>
+
+</body>
+</html>

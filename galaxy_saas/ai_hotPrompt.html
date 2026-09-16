@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전 분야 5단계(L1~L5) 초디테일 AI 프롬프트 엔진</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --bg-main: #f8fafc;
+            --card-bg: #ffffff;
+            --border: #cbd5e1;
+            --text-main: #0f172a;
+            --text-sub: #475569;
+            --danger: #ef4444;
+            --danger-hover: #dc2626;
+            --code-bg: #0f172a;
+            --code-text: #38bdf8;
+        }
+
+        * { box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+        body { background-color: var(--bg-main); color: var(--text-main); margin: 0; padding: 20px; }
+        
+        /* 양쪽 여백을 고정하고 중앙에 정렬하는 컨테이너 */
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 20px; }
+
+        .header { text-align: center; margin-bottom: 20px; }
+        .title { font-size: 22px; font-weight: 800; color: var(--text-main); letter-spacing: -0.5px; }
+        .subtitle { font-size: 13px; color: var(--text-sub); margin-top: 4px; }
+
+        /* 여백은 유지한 채 내부 그리드를 정확히 50:50(1fr 1fr)로 분할 */
+        .main-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        @media (max-width: 960px) { .main-grid { grid-template-columns: 1fr; } }
+
+        .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.04); }
+        .card-title { font-size: 14px; font-weight: 700; color: var(--primary); margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between; }
+
+        .field { margin-bottom: 10px; }
+        .field label { display: block; font-size: 11px; font-weight: 700; color: var(--text-sub); margin-bottom: 4px; }
+        .field select, .field input {
+            padding: 6px 8px; border: 1.5px solid var(--border); border-radius: 6px; font-size: 12px; outline: none; background: #fff;
+        }
+        .field select:focus, .field input:focus { border-color: var(--primary); }
+
+        .input-group { display: flex; gap: 6px; align-items: center; }
+        .input-group input { flex: 3; width: 0; }
+        .input-group select { flex: 1; width: 0; }
+        .btn-clear {
+            background: #fee2e2; color: var(--danger); border: 1px solid #fca5a5; border-radius: 6px;
+            padding: 6px 10px; font-size: 12px; font-weight: 700; cursor: pointer; white-space: nowrap; transition: all 0.2s;
+        }
+        .btn-clear:hover { background: var(--danger); color: white; border-color: var(--danger); }
+
+        .l1-row { display: flex; gap: 8px; align-items: flex-end; }
+        .l1-row .field-main { flex: 1.2; }
+        .l1-row .field-search { flex: 0.8; }
+        .l1-row select, .l1-row input { width: 100%; }
+
+        .field-highlight { background: #f0fdf4; border: 1px solid #bbf7d0; padding: 6px 8px; border-radius: 6px; margin-bottom: 8px; }
+        .field-highlight label { color: #166534; font-weight: 800; }
+        .field-highlight select { width: 100%; }
+
+        .output-box {
+            width: 100%; height: 580px; background: var(--code-bg); color: var(--code-text); border: none; border-radius: 8px; padding: 12px;
+            font-size: 12px; line-height: 1.5; font-family: 'Cascadia Code', 'Fira Code', Consolas, monospace; resize: vertical; box-sizing: border-box;
+            white-space: pre-wrap; word-break: break-all;
+        }
+
+        .btn-group { display: flex; gap: 8px; margin-top: 8px; }
+        .btn-copy {
+            flex: 1; background: var(--primary); color: white; border: none; padding: 10px 4px; font-size: 12px; font-weight: 700;
+            border-radius: 6px; cursor: pointer; transition: background 0.2s; white-space: nowrap;
+        }
+        .btn-copy:hover { background: var(--primary-hover); }
+
+        .copy-msg {
+            display: none; text-align: center; color: #059669; font-weight: 700; font-size: 11px; margin-top: 6px; padding: 4px; background: #ecfdf5; border-radius: 4px;
+        }
+
+        .badge { background: #dbeafe; color: var(--primary); font-size: 10px; font-weight: 700; padding: 2px 4px; border-radius: 4px; word-break: break-all; }
+        .stats-badge { background: #e0e7ff; color: #3730a3; font-weight: 700; font-size: 11px; padding: 2px 6px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <div class="title">⚡ 전 분야 5단계(L1~L5) 초디테일 AI 프롬프트 엔진</div>
+        <div class="subtitle">프로그래밍 부문 데이터 대폭 보강 및 무결성 연동 버전</div>
+    </div>
+
+    <div class="main-grid">
+        <!-- 왼쪽: 50% 입력 영역 -->
+        <div class="card">
+            <div class="card-title">
+                <span>📌 1. 계층별 카테고리 선택 (L1 ~ L5)</span>
+                <span class="stats-badge">대분류 8개 / 확장형 스펙</span>
+            </div>
+            
+            <div class="l1-row field">
+                <div class="field-main">
+                    <label>Level 1: 대분류</label>
+                    <select id="mainCat" onchange="onMainCatChange()"></select>
+                </div>
+                <div class="field-search">
+                    <label>🔍 키워드 검색</label>
+                    <input type="text" id="searchInput" placeholder="검색어..." oninput="filterCategories()">
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Level 2: 중분류</label>
+                <select id="midCat" style="width:100%;" onchange="onMidCatChange()"></select>
+            </div>
+
+            <div class="field">
+                <label>Level 3: 소분류 (실무 유즈케이스)</label>
+                <select id="subCat" style="width:100%;" onchange="onSubCatChange()"></select>
+            </div>
+
+            <div class="field-highlight">
+                <div class="field" style="margin-bottom:0;">
+                    <label id="labelL4">⚙️ Level 4: 세부 수단 / 매체 / 도구</label>
+                    <select id="l4Cat" onchange="onL4CatChange()"></select>
+                </div>
+            </div>
+
+            <div class="field-highlight" style="background: #eff6ff; border-color: #bfdbfe;">
+                <div class="field" style="margin-bottom:0;">
+                    <label id="labelL5" style="color: #1e40af;">💾 Level 5: 상세 구조 / 스타일 / 기술스택</label>
+                    <select id="l5Cat" onchange="buildPrompt()"></select>
+                </div>
+            </div>
+
+            <hr style="border: 0; border-top: 1px solid var(--border); margin: 12px 0;">
+
+            <div class="card-title" style="color: #059669; margin-bottom: 10px;">⚙️ 2. 세부 변수 설정 (기본값 / 콤보 / 삭제)</div>
+
+            <div class="field">
+                <label>핵심 주제 / 대상 [{topic}]</label>
+                <div class="input-group">
+                    <input type="text" id="paramTopic" oninput="buildPrompt()">
+                    <select onchange="applySample('paramTopic', this)">
+                        <option value="">샘플 선택</option>
+                        <option value="사과">사과</option>
+                        <option value="배">배</option>
+                        <option value="포도">포도</option>
+                    </select>
+                    <button type="button" class="btn-clear" onclick="clearInput('paramTopic')">삭제</button>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>추가 맥락 / 환경 [{context}]</label>
+                <div class="input-group">
+                    <input type="text" id="paramContext" oninput="buildPrompt()">
+                    <select onchange="applySample('paramContext', this)">
+                        <option value="">샘플 선택</option>
+                        <option value="사과">사과</option>
+                        <option value="배">배</option>
+                        <option value="포도">포도</option>
+                    </select>
+                    <button type="button" class="btn-clear" onclick="clearInput('paramContext')">삭제</button>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>기타 [{etc}]</label>
+                <div class="input-group">
+                    <input type="text" id="paramEtc" placeholder="추가 요청 사항..." oninput="buildPrompt()">
+                    <select onchange="applySample('paramEtc', this)">
+                        <option value="">샘플 선택</option>
+                        <option value="사과">사과</option>
+                        <option value="배">배</option>
+                        <option value="포도">포도</option>
+                    </select>
+                    <button type="button" class="btn-clear" onclick="clearInput('paramEtc')">삭제</button>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>출력 가이드라인 [{option}]</label>
+                <div class="input-group">
+                    <select id="paramOption" style="flex:1; width:100%;" onchange="buildPrompt()">
+                        <option value="strict_detail" selected>단계별 구체적 실행 지침 및 완벽한 마크다운 구조</option>
+                        <option value="summary_first">핵심 요약 후 항목별 실행 가이드 제공</option>
+                        <option value="expert_tone">전문가 관점의 정교하고 설득력 있는 문체 적용</option>
+                        <option value="">선택 안 함 (출력 조건 생략)</option>
+                    </select>
+                    <button type="button" class="btn-clear" onclick="clearOption('paramOption')">삭제</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 오른쪽: 50% 결과창 영역 -->
+        <div class="card" style="display: flex; flex-direction: column;">
+            <div class="card-title" style="margin-bottom: 10px;">
+                <span>🚀 실행 프롬프트</span>
+                <span id="catTag" class="badge">경로</span>
+            </div>
+            <textarea id="promptOutput" class="output-box" readonly></textarea>
+            
+            <div class="btn-group">
+                <button class="btn-copy" onclick="copyPrompt()">📋 복사하기</button>
+            </div>
+            <div id="copyMsg" class="copy-msg">✓ 클립보드에 복사되었습니다!</div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const levelPresets = {
+        content: {
+            l4Label: "⚙️ Level 4: 게재 채널 / 미디어 형태",
+            l5Label: "💾 Level 5: 작성 프레임워크 & 톤앤매너",
+            options: {
+                blog: { name: "네이버 / 티스토리 블로그", l5: ["PAS (Problem-Agitate-Solution) + 정중한 어조", "AIDA (Attention-Interest-Desire-Action) + 친근한 어조", "SEO 최적화 문단 구조 + 전문적인 어조"] },
+                sns: { name: "인스타그램 / 숏폼 / 카드뉴스", l5: ["3초 후킹 강조 + 가독성 위주 불렛포인트", "감성적 스토리텔링 + 해시태그 최적화", "핵심 정보 요약 + CTA 중심"] },
+                newsletter: { name: "이메일 뉴스레터 / 가이드", l5: ["오픈율 중심 제목 + 개인화 브리핑 톤", "문제 해결 중심 B2B 메일 스타일", "뉴스 큐레이션 + 인사이트 요약"] }
+            }
+        },
+        visual: {
+            l4Label: "⚙️ Level 4: 생성 AI 도구 / 엔진",
+            l5Label: "💾 Level 5: 비주얼 스타일 & 카메라/조명 렌더링",
+            options: {
+                mj: { name: "Midjourney v6", l5: ["Ultra-photorealistic 8k, 85mm lens, studio lighting", "Minimalist Vector, Clean Flat Design", "Cinematic Epic Concept Art, Unreal Engine 5 render"] },
+                sd: { name: "Stable Diffusion XL", l5: ["Masterpiece, highly detailed, realistic texture, RAW photo", "Anime illustration style, vibrant colors, fine lineart", "3D Blender Render, Claymation Isometric style"] },
+                dalle: { name: "DALL-E 3 / Firefly", l5: ["Commercial product mockup, isolated background", "High-fashion editorial photoshoot style", "Retro vintage poster typography layout"] }
+            }
+        },
+        business: {
+            l4Label: "⚙️ Level 4: 적용 기법 / 분석 프레임워크",
+            l5Label: "💾 Level 5: 보고서 및 출력 서식 표준",
+            options: {
+                swot: { name: "SWOT & 3C 분석 기법", l5: ["Executive Summary + 4분면 구조도 표 작성", "핵심 시사점 + 전략적 대응 과제 구분", "경영진 보고용 1Page 요약 규격"] },
+                okr: { name: "OKR / KPI 목표 수립 기법", l5: ["상위 목표 - 핵심 결과 - 세부 과제 연계 구조", "측정 가능한 수치화 지표(KPI) 테이블 작성", "분기별 실행 로드맵 및 리스크 요소 명시"] },
+                lean: { name: "Lean Canvas / BM 기법", l5: ["문제-솔루션-가치제안-수익모델 9칸 구조", "핵심 가공 지표 및 핵심 자원 명세", "피치덱 10 슬라이드 목차 연계형"] }
+            }
+        },
+        dev: {
+            l4Label: "⚙️ Level 4: 기술 영역 / 프레임워크",
+            l5Label: "💾 Level 5: 상세 구현 스택 & 아키텍처 규격",
+            options: {
+                frontend: { name: "프론트엔드 (Web Frontend)", l5: ["React (Vite) + Zustand + Tailwind CSS + TypeScript", "Next.js 14 (App Router) + TanStack Query + Shadcn UI", "Vue.js 3 + Pinia + Vite + Vuetify"] },
+                backend: { name: "백엔드 & 데이터베이스 (Backend & DB)", l5: ["Spring Boot 3.x + Spring Data JPA + PostgreSQL + Redis", "Node.js (NestJS) + TypeORM + MySQL 8.0", "Python (FastAPI) + SQLAlchemy + SQLite / PostgreSQL"] },
+                mobile: { name: "모바일 앱 (Mobile Cross/Native)", l5: ["React Native (Expo) + TypeScript + NativeWind", "Flutter + Provider / Bloc + Firebase 연동", "Native Android (Kotlin) / iOS (Swift) 기본 구조"] },
+                devops: { name: "인프라 & 데브옵스 (DevOps & Cloud)", l5: ["Docker + Kubernetes (K8s) 배포 매니페스트 구성", "AWS (EC2, S3, RDS, Lambda) 서버리스 아키텍처", "GitHub Actions CI/CD 파이프라인 자동화 구축"] }
+            }
+        },
+        education: {
+            l4Label: "⚙️ Level 4: 교수 학습 기법 / 전달 매체",
+            l5Label: "💾 Level 5: 커리큘럼 및 커뮤니케이션 구성",
+            options: {
+                lecture: { name: "온라인 강의 / 워크숍", l5: ["이론 설명 - 실습 적용 - Q&A 3단계 커리큘럼", "핵심 포인트 시각자료 가이드 + 불렛 요약", "참여자 난이도별 차등 학습 과제"] },
+                tutor: { name: "1:1 튜터링 / 맞춤 코칭", l5: ["소크라테스식 질문법 + 개념 재확인 구조", "오답 원인 분석 및 교정 팁 제시", "단계별 피드백 및 다음 행동 과제"] }
+            }
+        },
+        translation: {
+            l4Label: "⚙️ Level 4: 번역 및 현지화 톤앤매너",
+            l5Label: "💾 Level 5: 텍스트 다듬기 & 문맥 최적화 규격",
+            options: {
+                business_tr: { name: "비즈니스 / 공식 문서 번역", l5: ["격식 있는 비즈니스 어조 + 원문 대조 매핑", "전문 용어집(Glossary) 통일성 유지", "오역 방지 직역 후 자연스러운 의역 적용"] },
+                creative_tr: { name: "문학 / 창작물 의역", l5: ["현지 문화 맥락을 고려한 가색 문체", "원문의 감성과 뉘앙스 살린 창의적 번역", "구어체 및 자연스러운 대화체 변환"] }
+            }
+        },
+        life: {
+            l4Label: "⚙️ Level 4: 라이프스타일 / 실행 영역",
+            l5Label: "💾 Level 5: 세부 일정 및 루틴 서식 표준",
+            options: {
+                plan: { name: "일정 및 리소스 관리", l5: ["시간대별 일과표 + 우선순위 매트릭스", "체크리스트 기반 일일 실행 가이드", "예산/비용 산출 가이드라인"] },
+                routine: { name: "습관 형성 및 행동 습관", l5: ["트리거 - 행동 - 보상 3단계 루틴 설계", "주차별 목표 달성률 측정표", "슬럼프 방지 동기부여 전략"] }
+            }
+        },
+        general: {
+            l4Label: "⚙️ Level 4: 세부 실행 관점 / 접근 방식",
+            l5Label: "💾 Level 5: 단계별 상세 가이드라인",
+            options: {
+                step: { name: "단계별 상세 로드맵 접근", l5: ["초보자 맞춤 기초-중급-심화 3단계 설명", "일자별/주차별 실행 체크리스트 작성", "자주 묻는 질문(FAQ) 및 문제해결 팁 포함"] },
+                depth: { name: "심층 원리 분석 접근", l5: ["핵심 개념 및 학술적/실무적 배경 해설", "장단점 비교 및 에지 케이스 분석", "전문가 추천 참고자료 및 가이드 제시"] }
+            }
+        }
+    };
+
+    const promptTree = {
+        c1: {
+            name: "1. 콘텐츠 제작 & 글쓰기",
+            preset: "content",
+            mids: {
+                m1: {
+                    name: "블로그 / SEO / 기사",
+                    subs: [
+                        { id: "c1_1", name: "블로그/SEO 글쓰기", role: "SEO 전문 에디터", action: "검색엔진 상위 노출 포스팅을 작성해줘.", defaultTopic: "신제품 출시 안내 포스팅", defaultContext: "2030 직장인 타겟, 친근한 어조" },
+                        { id: "c1_2", name: "뉴스기사/보도자료", role: "언론 홍보 담당자", action: "언론 배포용 보도자료를 작성해줘.", defaultTopic: "신규 서비스 투자 유치", defaultContext: "표준 보도자료 양식 준수" }
+                    ]
+                },
+                m2: {
+                    name: "SNS / 마케팅 카피 / 스크립트",
+                    subs: [
+                        { id: "c1_3", name: "SNS/숏폼 스크립트", role: "숏폼 크리에이터", action: "릴스/쇼츠 대본을 작성해줘.", defaultTopic: "일상 생산성 향상 앱 추천", defaultContext: "30초 분량, 몰입감 높은 연출" }
+                    ]
+                }
+            }
+        },
+        c2: {
+            name: "2. 비즈니스 & 마케팅",
+            preset: "business",
+            mids: {
+                m3: {
+                    name: "시장조사 & 기획 & 브랜딩",
+                    subs: [
+                        { id: "c2_1", name: "시장 조사 & 경쟁사 분석", role: "경영 컨설턴트", action: "시장 분석 및 SWOT 분석을 실행해줘.", defaultTopic: "AI 기반 자동화 솔루션 시장", defaultContext: "국내외 주요 경쟁사 비교 포함" },
+                        { id: "c2_2", name: "기획서 & 랜딩페이지 카피", role: "리드 마케터", action: "기획안과 랜딩페이지 카피를 작성해줘.", defaultTopic: "SaaS 구독 서비스 랜딩페이지", defaultContext: "전환율을 높이는 헤드라인 중심" }
+                    ]
+                }
+            }
+        },
+        c3: {
+            name: "3. 비주얼 & 영상 생성",
+            preset: "visual",
+            mids: {
+                m4: {
+                    name: "AI 아트 & 디자인 렌더링",
+                    subs: [
+                        { id: "c3_1", name: "실사/인물 스튜디오 샷", role: "AI Visual Artist", action: "Generate a detailed studio portrait image prompt.", defaultTopic: "Cyberpunk Cybernetic Portrait", defaultContext: "Neon lighting, 8k resolution, cinematic atmosphere" },
+                        { id: "c3_2", name: "로고 & UI/UX 콘셉트", role: "UI/UX & Brand Designer", action: "Generate a high-quality logo concept prompt.", defaultTopic: "Eco-friendly Tech Startup Logo", defaultContext: "Minimalist vector, clean lines, green tone" }
+                    ]
+                },
+                m5: {
+                    name: "영상 콘티 & 연출 프롬프트",
+                    subs: [
+                        { id: "c3_3", name: "시네마틱 영상 스크립트", role: "영화 연출 감독", action: "비주얼 콘티 및 영상 연출안을 작성해줘.", defaultTopic: "SF 미래 도시 비행 장면", defaultContext: "4K 60fps, 슬로우 모션 연출" }
+                    ]
+                }
+            }
+        },
+        c4: {
+            name: "4. 프로그래밍 & 코딩",
+            preset: "dev",
+            mids: {
+                m6: {
+                    name: "프론트엔드 & 웹 UI 개발",
+                    subs: [
+                        { id: "c4_1", name: "웹 컴포넌트 & 화면 구현", role: "프론트엔드 리드 개발자", action: "반응형 웹 UI 컴포넌트 및 상태 관리 코드를 구현해줘.", defaultTopic: "대시보드 실시간 통계 차트 컴포넌트", defaultContext: "모바일 대응 반응형 및 다크모드 지원" },
+                        { id: "c4_2", name: "UI 상태 관리 및 성능 최적화", role: "웹 퍼포먼스 전문가", action: "렌더링 최적화 및 상태 관리 로직을 개선해줘.", defaultTopic: "대용량 리스트 가상화(Virtualization)", defaultContext: "불필요한 리렌더링 방지 및 메모이제이션 적용" }
+                    ]
+                },
+                m7: {
+                    name: "백엔드 & API & 데이터베이스",
+                    subs: [
+                        { id: "c4_3", name: "RESTful API / 비즈니스 로직", role: "백엔드 수석 개발자", action: "확장 가능하고 안전한 백엔드 API 코드를 구현해줘.", defaultTopic: "사용자 인증 및 권한 관리(RBAC) API", defaultContext: "JWT 인증 및 예외 처리 아키텍처 적용" },
+                        { id: "c4_4", name: "데이터베이스 쿼리 & 스키마 설계", role: "DBA / 데이터 엔지니어", action: "효율적인 데이터베이스 스키마와 최적화 쿼리를 작성해줘.", defaultTopic: "이커머스 주문/결제 데이터 모델링", defaultContext: "인덱스 최적화 및 트랜잭션 무결성 보장" }
+                    ]
+                },
+                m8: {
+                    name: "모바일 앱 & 크로스플랫폼",
+                    subs: [
+                        { id: "c4_5", name: "모바일 화면 및 네이티브 연동", role: "모바일 앱 개발자", action: "크로스플랫폼 모바일 앱 기능과 화면을 구현해줘.", defaultTopic: "위치 기반 실시간 지도 마커 기능", defaultContext: "GPS 권한 처리 및 백그라운드 예외 대응" }
+                    ]
+                },
+                m9: {
+                    name: "디버깅 & 인프라 & CI/CD",
+                    subs: [
+                        { id: "c4_6", name: "코드 리팩토링 및 버그 디버깅", role: "시니어 디버깅 엔지니어", action: "에러의 원인을 추적하고 클린 코드로 리팩토링해줘.", defaultTopic: "비동기 처리(Promise/Async) 메모리 누수", defaultContext: "에러 핸들링 보강 및 성능 개선" },
+                        { id: "c4_7", name: "클라우드 배포 및 자동화 파이프라인", role: "DevOps 엔지니어", action: "안정적인 클라우드 배포 스크립트와 파이프라인을 구축해줘.", defaultTopic: "Docker 컨테이너 빌드 및 AWS 배포", defaultContext: "Zero-Downtime 무중단 배포 구성" }
+                    ]
+                }
+            }
+        },
+        c5: {
+            name: "5. 데이터 분석 & 업무 생산성",
+            preset: "business",
+            mids: {
+                m10: {
+                    name: "문서 요약 & 스프레드시트 & 보고서",
+                    subs: [
+                        { id: "c5_1", name: "데이터 요약 및 문서 분석", role: "리서치 분석가", action: "문서 내용을 정밀 분석하여 요약해줘.", defaultTopic: "분기별 매출 보고서 데이터", defaultContext: "주요 증감 원인 및 불렛포인트 표출" },
+                        { id: "c5_2", name: "엑셀 수식 & 파이썬 스크립트", role: "스프레드시트 전문가", action: "업무 자동화 수식 및 스크립트를 작성해줘.", defaultTopic: "중복 제거 및 VLOOKUP 대체 수식", defaultContext: "대용량 데이터 처리 속도 향상 목적" }
+                    ]
+                }
+            }
+        },
+        c6: {
+            name: "6. 교육 & 강의 & 커리큘럼",
+            preset: "education",
+            mids: {
+                m11: {
+                    name: "강의 기획 & 교육자료 작성",
+                    subs: [
+                        { id: "c6_1", name: "온라인 강의 커리큘럼 설계", role: "교육 커리큘럼 전문가", action: "단계별 교육 커리큘럼을 작성해줘.", defaultTopic: "입문자용 파이썬 자동화 4주 코스", defaultContext: "주차별 실습 과제 포함" },
+                        { id: "c6_2", name: "시험 문제 및 퀴즈 생성", role: "출제 위원", action: "예상 문제와 상세 해설을 출제해줘.", defaultTopic: "정보처리기사 필기 예상 문제", defaultContext: "4지선다 보기 및 상세 해설 포함" }
+                    ]
+                }
+            }
+        },
+        c7: {
+            name: "7. 번역 & 외국어 & 현지화",
+            preset: "translation",
+            mids: {
+                m12: {
+                    name: "다국어 번역 & 교정",
+                    subs: [
+                        { id: "c7_1", name: "한영/영한 자연스러운 번역", role: "전문 번역가", action: "자연스러운 문맥으로 번역해줘.", defaultTopic: "글로벌 마케팅 이메일 서한", defaultContext: "비즈니스 매너에 맞는 정중한 표현" },
+                        { id: "c7_2", name: "외국어 텍스트 문법/어휘 교정", role: "원어민 에디터", action: "문법을 교정하고 다듬어줘.", defaultTopic: "영어 자기소개서 및 커버레터", defaultContext: "격식 있고 세련된 표현으로 수정" }
+                    ]
+                }
+            }
+        },
+        c8: {
+            name: "8. 개인 성장 & 라이프스타일",
+            preset: "life",
+            mids: {
+                m13: {
+                    name: "자기계발 & 아이디어 & 루틴",
+                    subs: [
+                        { id: "c8_1", name: "아이디어 발상 (Brainstorming)", role: "퍼실리테이터", action: "창의적인 아이디어를 제시해줘.", defaultTopic: "친환경 신제품 아이디어 10선", defaultContext: "실생활에 즉시 적용 가능한 방안" },
+                        { id: "c8_2", name: "시간 관리 & 생활 루틴 설계", role: "라이프 코치", action: "실행 계획과 습관 루틴을 설계해줘.", defaultTopic: "미라클 모닝 6시 기상 루틴", defaultContext: "지속 가능한 단계별 실천 계획" }
+                    ]
+                }
+            }
+        }
+    };
+
+    window.onload = function() {
+        initMainCat();
+    };
+
+    function initMainCat() {
+        const el = document.getElementById('mainCat');
+        el.innerHTML = '';
+        for (let k in promptTree) {
+            const opt = document.createElement('option');
+            opt.value = k;
+            opt.textContent = promptTree[k].name;
+            el.appendChild(opt);
+        }
+        onMainCatChange();
+    }
+
+    function onMainCatChange() {
+        const mainKey = document.getElementById('mainCat').value;
+        const el = document.getElementById('midCat');
+        el.innerHTML = '';
+
+        const mids = promptTree[mainKey]?.mids || {};
+        for (let k in mids) {
+            const opt = document.createElement('option');
+            opt.value = k;
+            opt.textContent = mids[k].name;
+            el.appendChild(opt);
+        }
+        onMidCatChange();
+    }
+
+    function onMidCatChange() {
+        const mainKey = document.getElementById('mainCat').value;
+        const midKey = document.getElementById('midCat').value;
+        const el = document.getElementById('subCat');
+        el.innerHTML = '';
+
+        if (midKey && promptTree[mainKey]?.mids[midKey]) {
+            const subs = promptTree[mainKey].mids[midKey].subs || [];
+            subs.forEach(s => {
+                const opt = document.createElement('option');
+                opt.value = s.id;
+                opt.textContent = s.name;
+                el.appendChild(opt);
+            });
+        }
+        onSubCatChange();
+    }
+
+    function onSubCatChange() {
+        const mainKey = document.getElementById('mainCat').value;
+        const midKey = document.getElementById('midCat').value;
+        const subId = document.getElementById('subCat').value;
+
+        const subObj = promptTree[mainKey]?.mids[midKey]?.subs.find(s => s.id === subId);
+
+        if (subObj) {
+            document.getElementById('paramTopic').value = subObj.defaultTopic || "";
+            document.getElementById('paramContext').value = subObj.defaultContext || "";
+        }
+
+        const presetKey = promptTree[mainKey]?.preset || "general";
+        const preset = levelPresets[presetKey];
+
+        document.getElementById('labelL4').innerText = preset.l4Label;
+        document.getElementById('labelL5').innerText = preset.l5Label;
+
+        const l4El = document.getElementById('l4Cat');
+        l4El.innerHTML = '';
+
+        for (let k in preset.options) {
+            const opt = document.createElement('option');
+            opt.value = k;
+            opt.textContent = preset.options[k].name;
+            l4El.appendChild(opt);
+        }
+
+        onL4CatChange();
+    }
+
+    function onL4CatChange() {
+        const mainKey = document.getElementById('mainCat').value;
+        const presetKey = promptTree[mainKey]?.preset || "general";
+        const preset = levelPresets[presetKey];
+        const l4Val = document.getElementById('l4Cat').value;
+
+        const l5El = document.getElementById('l5Cat');
+        l5El.innerHTML = '';
+
+        if (l4Val && preset.options[l4Val]) {
+            const l5List = preset.options[l4Val].l5 || [];
+            l5List.forEach((item, idx) => {
+                const opt = document.createElement('option');
+                opt.value = `opt_${idx}`;
+                opt.textContent = item;
+                l5El.appendChild(opt);
+            });
+        }
+
+        buildPrompt();
+    }
+
+    function clearInput(id) {
+        document.getElementById(id).value = '';
+        buildPrompt();
+    }
+
+    function clearOption(id) {
+        document.getElementById(id).value = '';
+        buildPrompt();
+    }
+
+    function applySample(inputId, selectEl) {
+        const val = selectEl.value;
+        if (val) {
+            document.getElementById(inputId).value = val;
+            selectEl.value = '';
+            buildPrompt();
+        }
+    }
+
+    function buildPrompt() {
+        const mainKey = document.getElementById('mainCat').value;
+        const midKey = document.getElementById('midCat').value;
+        const subId = document.getElementById('subCat').value;
+
+        const topic = document.getElementById('paramTopic').value.trim();
+        const context = document.getElementById('paramContext').value.trim();
+        const etc = document.getElementById('paramEtc').value.trim();
+        const optionSelect = document.getElementById('paramOption');
+        const optionText = optionSelect.value ? optionSelect.options[optionSelect.selectedIndex].text : "";
+
+        let mainObj = promptTree[mainKey];
+        let midObj = midKey ? mainObj?.mids[midKey] : null;
+        let subObj = subId && midObj ? midObj.subs.find(s => s.id === subId) : null;
+
+        let roleStr = subObj ? subObj.role : "분야 전문가";
+        let actionStr = subObj ? subObj.action : "요청 사항에 대해 최상의 결과물을 생성해줘.";
+
+        let promptLines = [];
+
+        // 1. 역할 지정
+        promptLines.push(`너는 최고의 ${roleStr}야.`);
+
+        // 2. 주제
+        if (topic) {
+            promptLines.push(`주제: [${topic}]`);
+        }
+
+        // 3. 수행 행동
+        promptLines.push(actionStr);
+
+        // 4. 추가 맥락
+        if (context) {
+            promptLines.push(`추가 맥락: ${context}`);
+        }
+
+        // 5. 기타 요청 사항
+        if (etc) {
+            promptLines.push(`기타 요청사항: ${etc}`);
+        }
+
+        // 6. Level 4 ~ Level 5 선택된 규격 표출
+        const presetKey = mainObj?.preset || "general";
+        const preset = levelPresets[presetKey];
+        const l4Val = document.getElementById('l4Cat').value;
+        const l4Text = l4Val && preset.options[l4Val] ? preset.options[l4Val].name : "";
+
+        const l5Select = document.getElementById('l5Cat');
+        const l5Text = l5Select.value ? l5Select.options[l5Select.selectedIndex].text : "";
+
+        let specs = [];
+        if (l4Text) specs.push(`- 적용 도구/채널/기법 (L4): ${l4Text}`);
+        if (l5Text) specs.push(`- 상세 스타일/서식/스택 (L5): ${l5Text}`);
+
+        if (specs.length > 0) {
+            promptLines.push(`\n[상세 실행 규격]`);
+            promptLines.push(...specs);
+        }
+
+        // 7. 출력 조건
+        if (optionText) {
+            promptLines.push(`\n[출력 조건]`);
+            promptLines.push(`- 지침 조건: ${optionText}`);
+        }
+
+        // 8. 기본 품질 지침
+        promptLines.push(`- 모호하거나 추상적인 설명을 배제하고, 즉시 활용 가능한 완벽한 구조의 결과물을 출력해줘.`);
+
+        document.getElementById('promptOutput').value = promptLines.join("\n");
+
+        // 경로 표시
+        let pathStr = mainObj ? mainObj.name : "";
+        if (midObj) pathStr += ` > ${midObj.name}`;
+        if (subObj) pathStr += ` > ${subObj.name}`;
+        document.getElementById('catTag').innerText = pathStr;
+    }
+
+    function filterCategories() {
+        const query = document.getElementById('searchInput').value.trim().toLowerCase();
+        
+        if (!query) {
+            initMainCat();
+            return;
+        }
+
+        for (let cKey in promptTree) {
+            for (let mKey in promptTree[cKey].mids) {
+                const subs = promptTree[cKey].mids[mKey].subs;
+                for (let sub of subs) {
+                    if (sub.name.toLowerCase().includes(query)) {
+                        document.getElementById('mainCat').value = cKey;
+                        onMainCatChange();
+                        document.getElementById('midCat').value = mKey;
+                        onMidCatChange();
+                        document.getElementById('subCat').value = sub.id;
+                        onSubCatChange();
+                        return;
+                    }
+                }
+            }
+        }
+    }
+
+    function copyPrompt() {
+        const output = document.getElementById('promptOutput');
+        output.select();
+        document.execCommand('copy');
+        
+        const msg = document.getElementById('copyMsg');
+        msg.style.display = 'block';
+        setTimeout(() => {
+            msg.style.display = 'none';
+        }, 2000);
+    }
+</script>
+
+</body>
+</html>
