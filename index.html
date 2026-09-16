@@ -552,6 +552,9 @@ const I18N = {
     boardOpenLabel: "🗨 게시판", boardTitle: "🗨 커뮤니티 게시판",
     boardSignupBtnLabel: "회원가입", boardLoginBtnLabel: "로그인",
     boardLoginHint: "처음이면 이메일·비밀번호 입력 후 '회원가입', 이미 가입했으면 '로그인'을 누르세요.",
+    boardSocialGoogle: "Google로 계속하기", boardSocialKakao: "카카오로 계속하기",
+    boardSocialNaver: "네이버로 계속하기", boardSocialMeta: "메타(Facebook)로 계속하기",
+    boardOrDivider: "또는", boardSocialFail: "소셜 로그인을 시작하지 못했어요 — 잠시 후 다시 시도해주세요",
     boardNeedNickname: "닉네임을 입력해주세요", boardSignupRateLimited: "같은 네트워크(IP)에서는 7일에 한 번만 새로 가입할 수 있어요",
     boardSignupAutoLoginOk: "회원가입 완료! 바로 로그인됐어요 ✓",
     boardSignupNeedConfirm: "가입은 됐는데, 이 사이트가 이메일 확인을 요구하고 있어서 아직 로그인은 안 돼요. 받은 확인 메일의 링크를 누르거나, 사이트 운영자에게 'Confirm email 꺼달라'고 요청해주세요.",
@@ -609,6 +612,9 @@ const I18N = {
     boardOpenLabel: "🗨 Board", boardTitle: "🗨 Community Board",
     boardSignupBtnLabel: "Sign up", boardLoginBtnLabel: "Log in",
     boardLoginHint: "First time? Enter email + password and press \"Sign up\". Already registered? Press \"Log in\".",
+    boardSocialGoogle: "Continue with Google", boardSocialKakao: "Continue with Kakao",
+    boardSocialNaver: "Continue with Naver", boardSocialMeta: "Continue with Meta (Facebook)",
+    boardOrDivider: "or", boardSocialFail: "Couldn't start social login — please try again shortly",
     boardNeedNickname: "Please enter a nickname", boardSignupRateLimited: "Only one new signup per 7 days is allowed from the same network (IP)",
     boardSignupAutoLoginOk: "Signed up! You're logged in now ✓",
     boardSignupNeedConfirm: "Account created, but this site currently requires email confirmation, so you can't log in yet. Click the link in the confirmation email, or ask the site owner to turn off \"Confirm email\".",
@@ -1050,6 +1056,10 @@ function openComboDlg(){
    board_posts 테이블 + RLS는 supabase_schema.sql §6 / scripts/migrate_board_posts.mjs 참고 ---- */
 let boardSession = null;
 async function initBoardAuth(){
+  // 소셜 로그인은 전체 페이지 이동으로 돌아오기 때문에(SPA 콜백이 아님) 복귀 시 URL 해시에
+  // access_token이 실려 있음 — 이걸 보고 "방금 소셜 로그인하고 돌아왔다"를 판단해서 게시판을
+  // 자동으로 열어줌(안 그러면 로그인은 됐는데 화면상 아무 변화가 없어 보임).
+  const returningFromOAuth = /access_token=/.test(location.hash);
   try {
     const { data } = await sb.auth.getSession();
     boardSession = data?.session || null;
@@ -1060,6 +1070,10 @@ async function initBoardAuth(){
       updateBoardAuthUI();
     });
   } catch (e){ /* 인증 이벤트 구독 실패해도 게시판 읽기는 계속 동작 */ }
+  if (returningFromOAuth && boardSession?.user){
+    history.replaceState(null, "", location.pathname + location.search);
+    openBoardDrawer();
+  }
 }
 function updateBoardAuthUI(){
   // access_token까지 확인 — user만 있고 실제 세션이 없는 반쪽 상태를 "로그인됨"으로 잘못 표시하는 걸 방지
@@ -1119,6 +1133,22 @@ async function boardPasswordLogin(){
 }
 async function boardLogout(){
   try { await sb.auth.signOut(); } catch (e){}
+}
+// 구글/카카오/메타(페이스북)는 Supabase가 기본 지원하는 OAuth 제공자라 signInWithOAuth 한 줄로 끝남.
+// 클릭 → 구글/카카오/메타 로그인 화면(전체 페이지 이동) → 동의 → 이 페이지로 자동 복귀 + 로그인 완료.
+// (Supabase 대시보드 ▸ Authentication ▸ Providers 에서 해당 제공자에 Client ID/Secret을
+// 등록해야 실제로 동작함 — 등록 전까지는 "provider is not enabled" 에러가 남)
+async function boardOAuthLogin(provider){
+  try {
+    const { error } = await sb.auth.signInWithOAuth({ provider, options: { redirectTo: location.origin + location.pathname } });
+    if (error) toast(tr("boardSocialFail"));
+  } catch (e){ toast(tr("boardSocialFail")); }
+}
+// 네이버는 Supabase 기본 지원 목록에 없어서(구글/카카오/메타와 다름) _worker.js에 직접 구현한
+// /api/auth/naver/start 로 이동 — 거기서 네이버 로그인 → 콜백에서 Supabase 세션을 발급해
+// 다시 이 페이지로 돌려보냄. 워커 쪽 NAVER_CLIENT_ID/SECRET 환경변수가 없으면 안내 메시지가 뜸.
+function boardNaverLogin(){
+  location.href = "/api/auth/naver/start?returnTo=" + encodeURIComponent(location.origin + location.pathname);
 }
 // 진짜 스팸 방지는 아니고(사용자도 이미 알고 있는 임시 조치) — 화면에 뜬 숫자를 그대로
 // 입력해야 등록되게 해서 아주 단순한 자동 스팸 봇 정도만 거르는 용도. 나중에 개선 예정.
@@ -1196,6 +1226,15 @@ function boardDrawerHTML(){
       <summary id="lblBoardWriteToggle">${tr("boardWriteToggle")}</summary>
       <div class="d-collapse-body">
         <div id="boardAuthLoggedOut">
+          <div style="display:flex;flex-direction:column;gap:7px">
+            <button type="button" class="board-social-btn" data-provider="google" style="display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:10px;border-radius:9px;border:1px solid rgba(255,255,255,.16);background:#fff;color:#1f1f1f;font:inherit;font-size:12.5px;font-weight:600;cursor:pointer"><span id="lblBoardSocialGoogle">${tr("boardSocialGoogle")}</span></button>
+            <button type="button" class="board-social-btn" data-provider="kakao" style="display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:10px;border-radius:9px;border:0;background:#FEE500;color:#191600;font:inherit;font-size:12.5px;font-weight:600;cursor:pointer"><span id="lblBoardSocialKakao">${tr("boardSocialKakao")}</span></button>
+            <button type="button" class="board-social-btn" data-provider="naver" style="display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:10px;border-radius:9px;border:0;background:#03C75A;color:#fff;font:inherit;font-size:12.5px;font-weight:600;cursor:pointer"><span id="lblBoardSocialNaver">${tr("boardSocialNaver")}</span></button>
+            <button type="button" class="board-social-btn" data-provider="facebook" style="display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:10px;border-radius:9px;border:0;background:#1877F2;color:#fff;font:inherit;font-size:12.5px;font-weight:600;cursor:pointer"><span id="lblBoardSocialMeta">${tr("boardSocialMeta")}</span></button>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;margin:12px 0;color:var(--faint);font-size:11px">
+            <div style="flex:1;height:1px;background:rgba(255,255,255,.12)"></div><span id="lblBoardOrDivider">${tr("boardOrDivider")}</span><div style="flex:1;height:1px;background:rgba(255,255,255,.12)"></div>
+          </div>
           <input type="text" id="boardNickname" maxlength="20" placeholder="닉네임(회원가입 시에만 필요)" style="width:100%;box-sizing:border-box;border:1px solid rgba(255,255,255,.16);
             border-radius:9px;background:rgba(12,12,20,.7);color:var(--ink);font:inherit;font-size:12.5px;padding:10px">
           <input type="email" id="boardEmail" placeholder="이메일" style="width:100%;box-sizing:border-box;margin-top:8px;border:1px solid rgba(255,255,255,.16);
@@ -1245,6 +1284,9 @@ function openBoardDrawer(){
   $("#boardSignupBtn").addEventListener("click", boardSignup);
   $("#boardLoginBtn").addEventListener("click", boardPasswordLogin);
   $("#boardLogoutBtn").addEventListener("click", boardLogout);
+  document.querySelectorAll(".board-social-btn").forEach(b => {
+    b.addEventListener("click", () => b.dataset.provider === "naver" ? boardNaverLogin() : boardOAuthLogin(b.dataset.provider));
+  });
   $("#boardPostForm").addEventListener("submit", submitBoardPost);
   $("#boardPostTitle").addEventListener("input", e => { $("#boardTitleCount").textContent = e.target.value.length; });
   $("#boardPostBody").addEventListener("input", e => { $("#boardBodyCount").textContent = e.target.value.length; });
@@ -2350,18 +2392,27 @@ function initSceneLoop(){
     }
 
     if (sleepMode){
-      sleepAngle += dt * (2 * Math.PI / 480); // 8분에 한 바퀴 — 아주 천천히
-      const R = 2700, tiltY = 420 * Math.sin(sleepAngle * 0.31);
+      // 기존 속도의 3배 + 방위각(azimuth)·고도각(polar)을 서로 다른 주기로 동시에 돌려서
+      // 평면 원운동이 아니라 밤하늘 전체가 입체적으로 도는 느낌을 냄
+      sleepAngle += dt * (2 * Math.PI / 160); // 원래 8분→ 이제 160초(약 2분40초)에 한 바퀴
+      sleepPolarAngle += dt * (2 * Math.PI / 200); // 고도각은 200초 주기 — 방위각과 안 겹치게
+      const R = 2700;
+      const phi = (Math.PI / 2) + Math.sin(sleepPolarAngle) * (Math.PI * 0.28); // 양 극에는 안 닿게 위아래로 오르내림
       Graph.cameraPosition(
-        { x: R * Math.cos(sleepAngle), y: tiltY, z: R * Math.sin(sleepAngle) },
+        {
+          x: R * Math.sin(phi) * Math.cos(sleepAngle),
+          y: R * Math.cos(phi),
+          z: R * Math.sin(phi) * Math.sin(sleepAngle),
+        },
         { x: 0, y: 0, z: 0 }, 0
       );
     }
 
+    const sleepSpeedMul = sleepMode ? 3 : 1; // 수면 모드에서는 공전·자전 다 3배 빠르게
     for (const sp of solarPlanets){
-      sp.angle += sp.speed * dt * 0.12; // 아주 천천히 공전
+      sp.angle += sp.speed * dt * 0.12 * sleepSpeedMul; // 아주 천천히 공전(수면 모드에선 3배)
       sp.mesh.position.set(SS_CENTER.x + sp.distance * Math.cos(sp.angle), SS_CENTER.y, SS_CENTER.z + sp.distance * Math.sin(sp.angle));
-      sp.mesh.rotation.y += dt * 0.15; // 자전
+      sp.mesh.rotation.y += dt * 0.15 * sleepSpeedMul; // 자전
     }
 
     const earthP = solarPlanets.find(p => p.key === "earth");
@@ -2970,7 +3021,7 @@ function toggleFullscreen(){
 
 /* ---- 수면 모드: 전체화면으로 전환해 UI를 다 걷어내고, 관계선/이름표 없이 별만 천천히 도는
    실제 밤하늘처럼 만들고 잔잔한 배경음을 재생함. 잠 안 올 때 틀어놓고 자라는 용도. ---- */
-let sleepMode = false, sleepAngle = 0, sleepAudioWasOn = false, sleepSavedLinkOpacity = null;
+let sleepMode = false, sleepAngle = 0, sleepPolarAngle = 0, sleepAudioWasOn = false, sleepSavedLinkOpacity = null, sleepSavedLabelsVisible = true;
 function enterSleepMode(){
   if (sleepMode) return;
   sleepMode = true;
@@ -2982,6 +3033,9 @@ function enterSleepMode(){
   sleepSavedLinkOpacity = Graph.linkOpacity();
   Graph.linkOpacity(0);
   for (const { sprite, line } of constLabels){ sprite.visible = false; line.visible = false; }
+  // 별자리 이름표뿐 아니라 별 하나하나의 이름표(+미사용 별자리 라벨)도 수면 모드에서는 다 숨김
+  sleepSavedLabelsVisible = labelsVisible;
+  if (labelsVisible) setLabelsVisible(false);
 
   sleepAudioWasOn = audioOn;
   if (!audioOn) toggleAmbientAudio();
@@ -3000,6 +3054,7 @@ function exitSleepMode(){
 
   if (sleepSavedLinkOpacity != null) Graph.linkOpacity(sleepSavedLinkOpacity);
   for (const entry of constLabels){ entry.sprite.visible = true; entry.line.visible = true; }
+  if (sleepSavedLabelsVisible) setLabelsVisible(true);
   refresh(); // 필터에 맞는 실제 라벨/윤곽선 표시 상태로 재계산
 
   if (audioCtx && masterGain) masterGain.gain.setTargetAtTime(AMBIENT_VOLUME.normal, audioCtx.currentTime, 1.5);
