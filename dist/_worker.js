@@ -59,6 +59,12 @@ async function proxy(request, url) {
   ["host", "cf-connecting-ip", "cf-ipcountry", "x-forwarded-host", "x-forwarded-proto", "x-real-ip"]
     .forEach((h) => headers.delete(h));
 
+  // Supabase Realtime(접속자 Presence/채팅 Broadcast)은 /api/realtime/v1/websocket 으로
+  // WebSocket 업그레이드 요청을 보냄. 아래 일반 프록시처럼 fetch 응답을 새 Response로 감싸버리면
+  // Cloudflare가 넘겨준 resp.webSocket(업그레이드된 실제 소켓)이 버려져서 연결이 끊김 —
+  // 그래서 업그레이드 요청은 별도로 감지해 webSocket을 그대로 들고 101을 돌려줌.
+  const isWebSocketUpgrade = (request.headers.get("Upgrade") || "").toLowerCase() === "websocket";
+
   const init = { method: request.method, headers, redirect: "follow" };
   if (!["GET", "HEAD"].includes(request.method)) init.body = await request.arrayBuffer();
 
@@ -68,6 +74,10 @@ async function proxy(request, url) {
   } catch (e) {
     return new Response(JSON.stringify({ error: "upstream_fetch_failed", message: String(e) }),
       { status: 502, headers: { "content-type": "application/json", ...CORS } });
+  }
+
+  if (isWebSocketUpgrade && resp.webSocket) {
+    return new Response(null, { status: 101, webSocket: resp.webSocket });
   }
 
   const out = new Headers(resp.headers);
