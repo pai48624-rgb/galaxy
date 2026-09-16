@@ -67,10 +67,27 @@ async function proxy(request, url) {
   return new Response(resp.body, { status: resp.status, statusText: resp.statusText, headers: out });
 }
 
+// 네이버/구글 사이트 소유 확인 크롤러는 리다이렉트를 안 따라가는 경우가 있는데,
+// Cloudflare Pages 기본 설정(html_handling)이 /foo.html 요청을 /foo 로 308
+// 리다이렉트시켜서 인증에 실패할 수 있음 -> ASSETS.fetch로 넘기기 전에 이 파일들만
+// 먼저 가로채서 리다이렉트 없이 직접 200으로 응답.
+const SITE_VERIFICATION_FILES = {
+  "/naver11527827ffc572c4fc7337b69af3d8a9.html":
+    "naver-site-verification: naver11527827ffc572c4fc7337b69af3d8a9.html",
+  "/naverf7a773b489c1dab0e775a86c8ababb3a.html":
+    "naver-site-verification: naverf7a773b489c1dab0e775a86c8ababb3a.html",
+};
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     if (url.pathname === "/api" || url.pathname.startsWith("/api/")) return proxy(request, url);
+    if (SITE_VERIFICATION_FILES[url.pathname]) {
+      return new Response(SITE_VERIFICATION_FILES[url.pathname], {
+        status: 200,
+        headers: { "content-type": "text/html; charset=utf-8" },
+      });
+    }
     return env.ASSETS.fetch(request);
   },
 };
