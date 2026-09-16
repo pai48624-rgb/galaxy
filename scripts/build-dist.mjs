@@ -16,6 +16,8 @@ const ROOT_FILES = [
   "index.html",
   "privacy.html",
   "ads.txt",
+  "sitemap.xml",
+  "robots.txt",
   "naver11527827ffc572c4fc7337b69af3d8a9.html",
   "naverf7a773b489c1dab0e775a86c8ababb3a.html",
 ];
