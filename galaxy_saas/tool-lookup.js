@@ -36,7 +36,7 @@
   // 허용한다. 4글자 이하 허용 시 "Opus Clip"이 DB의 범용 툴 "CLIP"(OpenAI 연구 모델)에,
   // "Morph Studio"가 "Udio"(음악 생성 툴, "studio"에 우연히 포함)에 잘못 매칭되는 걸
   // 실제로 확인해서 이렇게 제한함 — 틀린 링크를 보여주는 것보다 안 보여주는 게 낫다.
-  function findBest(tools, q) {
+  function findExactOrFuzzy(tools, q) {
     if (!q || q.length < 2) return null;
     for (const t of tools) {
       for (const raw of [t.name, t.name_en, t.name_ko]) {
@@ -49,6 +49,44 @@
         const c = normalize(raw);
         if (c.length >= 5 && (c.includes(q) || q.includes(c))) return t;
       }
+    }
+    return null;
+  }
+
+  // "브루 (Vrew)"처럼 괄호로 병기된 이름, "챗GPT"/"Suno AI"처럼 흔한 접두/접미사가 붙은
+  // 이름은 원문 그대로는 정확일치가 안 되지만, 괄호를 쪼개거나 접두/접미사를 떼면 DB의
+  // 정확한 이름과 완전일치한다. 완전일치만 이렇게 넓히고(안전), 5글자 미만 부분일치는
+  // 여전히 금지한다 — "CLIP"/"Udio" 같은 범용 단어 오매칭 위험은 그대로 차단된 채 유지.
+  function candidateQueries(rawText) {
+    const out = [];
+    const seen = new Set();
+    const push = (s) => {
+      const n = normalize(s);
+      if (n && !seen.has(n)) {
+        seen.add(n);
+        out.push(n);
+      }
+    };
+    const parenMatch = rawText.match(/\(([^)]*)\)/);
+    const withoutParen = rawText.replace(/\([^)]*\)/g, " ").trim();
+
+    push(rawText);
+    push(withoutParen);
+    if (parenMatch) push(parenMatch[1]);
+
+    // 위에서 만든 후보들 각각에 대해 흔한 접두("챗"/"chat")·접미("ai") 제거판도 추가.
+    for (const n of [...out]) {
+      if (n.startsWith("chat") && n.length > 4) push(n.slice(4));
+      if (n.startsWith("챗") && n.length > 1) push(n.slice(1));
+      if (n.endsWith("ai") && n.length > 2) push(n.slice(0, -2));
+    }
+    return out;
+  }
+
+  function findBest(tools, rawText) {
+    for (const q of candidateQueries(rawText)) {
+      const hit = findExactOrFuzzy(tools, q);
+      if (hit) return hit;
     }
     return null;
   }
@@ -73,7 +111,7 @@
     (root || document).querySelectorAll(SELECTOR).forEach((el) => {
       if (el.dataset.galaxyDone) return;
       el.dataset.galaxyDone = "1";
-      const info = findBest(tools, normalize(directText(el)));
+      const info = findBest(tools, directText(el));
       if (!info) return;
       const wrap = document.createElement("span");
       wrap.innerHTML = badgeHTML(info);
