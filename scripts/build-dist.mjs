@@ -64,4 +64,7 @@ copyDirRecursive(join(ROOT, "data", "models"), join(DIST, "data", "models"));
 console.log("[build] vendor/ -> dist/vendor/ (전체 복사)");
 copyDirRecursive(join(ROOT, "vendor"), join(DIST, "vendor"));
 
+console.log("[build] galaxy_saas/ -> dist/galaxy_saas/ (전체 복사, /galaxy_saas/ 경로로 배포됨)");
+copyDirRecursive(join(ROOT, "galaxy_saas"), join(DIST, "galaxy_saas"));
+
 console.log("[build] 완료. dist/_worker.js, dist/selftest.html 은 그대로 유지됨.");
