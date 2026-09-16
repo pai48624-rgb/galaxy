@@ -1,5 +1,7 @@
 # AI 성단 지도 (AI Constellation Map)
 
+운영 중인 사이트: **https://aigalaxy-map.com**
+
 731개 AI 툴(31개 대분류, 107개 세부분류)을 하나의 force-directed network
 그래프로 보여주는 인터랙티브 지도 사이트입니다. 데이터 출처는 실제 운영중인
 AI 디렉토리 [ailandscape.org](https://ailandscape.org)의 공개 저장소입니다.
