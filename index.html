@@ -2231,12 +2231,19 @@ function initVisitorPresence(){
   myClientId = getMyClientId();
   visitorChannel = sb.channel("galaxy-live", { config: { presence: { key: myClientId } } });
   visitorChannel
-    .on("presence", { event: "sync" }, () => rebuildVisitorStars(visitorChannel.presenceState()))
+    .on("presence", { event: "sync" }, () => {
+      console.info("[galaxy-live] presence sync:", JSON.stringify(visitorChannel.presenceState()));
+      rebuildVisitorStars(visitorChannel.presenceState());
+    })
     .on("broadcast", { event: "chat" }, ({ payload }) => { if (payload?.id && payload?.text) showChatBubble(payload.id, payload.text); })
     .subscribe(async (status, err) => {
+      console.info("[galaxy-live] status:", status, err ? String(err) : "");
       if (status === "SUBSCRIBED"){
         myDisplayName = myName();
-        try { await visitorChannel.track({ name: myDisplayName }); } catch (e){ console.warn("presence track failed", e); }
+        try {
+          const trackResp = await visitorChannel.track({ name: myDisplayName });
+          console.info("[galaxy-live] track() response:", trackResp);
+        } catch (e){ console.warn("presence track failed", e); }
       } else if (status === "CHANNEL_ERROR" || status === "TIMED_OUT" || status === "CLOSED"){
         // 콘솔에서 바로 원인 확인 가능하게(예: Realtime이 프로젝트에서 꺼져있거나 접속 자체가 막힌 경우)
         console.warn("galaxy-live channel not connected:", status, err);
