@@ -2434,6 +2434,15 @@ function initVisitorPresence(){
       rebuildVisitorStars(visitorChannel.presenceState());
     })
     .on("broadcast", { event: "chat" }, ({ payload }) => { if (payload?.id && payload?.text) showChatBubble(payload.id, payload.text); })
+    .on("broadcast", { event: "whisper" }, ({ payload }) => {
+      // 귓속말은 채널 전체에 브로드캐스트되지만(Realtime엔 1:1 전송이 없음), 받는 쪽에서
+      // "나한테 온 게 맞는지"만 확인하고 아니면 그냥 버림 — 그래서 나·상대방 화면에만 보임.
+      // (진짜 암호화된 비밀 채널은 아님 — 애초에 로그인 없이도 보이는 공개 게시판 성격의 부가
+      // 기능이라 이 정도 "화면에 안 보이게"면 충분하다고 판단, 보안에 민감한 용도로 쓸 건 아님)
+      if (!payload || payload.id === myClientId) return; // 내가 보낸 건 이미 로컬에 표시했음
+      if (payload.targetName !== resolveVisitorName(myClientId)) return;
+      addChatFeedLine(`🔒 ${payload.fromName} → 나`, payload.text);
+    })
     .subscribe(async (status, err) => {
       console.info("[galaxy-live] status:", status, err ? String(err) : "");
       if (status === "SUBSCRIBED"){
@@ -2528,9 +2537,35 @@ function scheduleProactiveGreet(){
     addChatFeedLine("🌌 우주", PROACTIVE_GREET_LINES[Math.floor(Math.random() * PROACTIVE_GREET_LINES.length)]);
   }, 25000);
 }
+// 숨겨진 비밀 명령어 — 채팅 UI 어디에도 힌트를 안 남겨둠(진짜 "아는 사람만" 쓰는 용도).
+// "/비밀사용자" 단독 → 지금 접속한 사람 목록(나한테만 표시, 방송 안 함)
+// "/비밀사용자 닉네임 메시지" → 그 닉네임에게만 보이는 귓속말(다른 사람 화면엔 안 뜸)
+// 둘 다 실제 보안 기능은 아니고(진짜 서버측 권한 분리 없이 클라이언트에서 걸러서 안 보이게 하는
+// 정도), 로그인/개인정보 등 진짜 민감한 건 전혀 안 건드리는 재미용 기능이라 이 정도로 충분함.
+const SECRET_CMD = "/비밀사용자";
+function handleChatCommand(text){
+  if (text !== SECRET_CMD && !text.startsWith(SECRET_CMD + " ")) return false;
+  const rest = text.slice(SECRET_CMD.length).trim();
+  if (!rest){
+    const myName = resolveVisitorName(myClientId);
+    const names = [...visitorStars.values()].map(v => v.name === myName ? `${v.name}(나)` : v.name);
+    addChatFeedLine("🔐 비밀명령", names.length ? `현재 접속자: ${names.join(", ")}` : "지금 아무도 없어요");
+    return true;
+  }
+  const sp = rest.indexOf(" ");
+  const targetName = sp === -1 ? rest : rest.slice(0, sp);
+  const whisperText = sp === -1 ? "" : rest.slice(sp + 1).trim();
+  if (!whisperText){ toast("사용법: /비밀사용자 닉네임 메시지"); return true; }
+  if (!visitorChannel){ toast("실시간 연결이 아직 안 됐어요 — 잠시 후 다시 시도해주세요"); return true; }
+  const myName = resolveVisitorName(myClientId);
+  addChatFeedLine(`🔒 나 → ${targetName}`, whisperText); // 내 화면엔 바로 반영
+  visitorChannel.send({ type: "broadcast", event: "whisper", payload: { id: myClientId, fromName: myName, targetName, text: whisperText } });
+  return true;
+}
 function sendChatMessage(text){
   text = text.trim();
   if (!text) return;
+  if (handleChatCommand(text)) return;
   if (!visitorChannel){ toast("실시간 연결이 아직 안 됐어요 — 잠시 후 다시 시도해주세요"); return; }
   hasChatted = true;
   showChatBubble(myClientId, text); // 내 화면에는 바로 반영(브로드캐스트 왕복 안 기다림)
