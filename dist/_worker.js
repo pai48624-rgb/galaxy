@@ -204,12 +204,17 @@ async function naverCallback(request, url, env) {
   } catch (e) {
     return new Response("Supabase 세션 발급 실패: " + String(e), { status: 502 });
   }
-  const actionLink = linkJson?.action_link || linkJson?.properties?.action_link;
-  if (!actionLink) {
-    return new Response("Supabase 세션 발급 실패: action_link 없음 — " + JSON.stringify(linkJson), { status: 502 });
+  // generate_link가 돌려주는 action_link는 type=magiclink로 돼있는데, 이 프로젝트의 GoTrue 버전
+  // /auth/v1/verify는 "Invalid email verification type"으로 거부함(magiclink는 더 이상 유효한
+  // type이 아니고 email/signup/email_change만 받음 — 실제 curl로 검증함). hashed_token을 받아
+  // type=email로 직접 verify URL을 구성해야 실제 access_token이 나옴.
+  const hashedToken = linkJson?.hashed_token || linkJson?.properties?.hashed_token;
+  if (!hashedToken) {
+    return new Response("Supabase 세션 발급 실패: hashed_token 없음 — " + JSON.stringify(linkJson), { status: 502 });
   }
+  const verifyUrl = `${UPSTREAM}/auth/v1/verify?token=${encodeURIComponent(hashedToken)}&type=email&redirect_to=${encodeURIComponent(returnTo)}`;
 
-  const headers = new Headers({ Location: actionLink });
+  const headers = new Headers({ Location: verifyUrl });
   clearCookies.forEach((c) => headers.append("Set-Cookie", c));
   return new Response(null, { status: 302, headers });
 }
