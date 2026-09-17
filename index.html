@@ -2235,6 +2235,11 @@ function addStarRing(g, size, seed){
 const VISITOR_BASE = new THREE.Vector3(0, -2100, 0); // 태양계(-X)·제휴 태양(+X)과 안 겹치는 화면 아래쪽 빈 공간
 const VISITOR_RADIUS = 220;
 let visitorChannel = null, myClientId = null, myDisplayName = null;
+// Supabase 무료 플랜 Realtime 동시 연결 한도가 200개(공식 문서 확인) — 넉넉하게 1/4 수준인 50명으로
+// 정원을 걸어둠. 전체 사이트가 아니라 이 실시간 채팅/접속자 표시 기능에만 적용되는 제한이라,
+// 정원이 차도 지도·게시판 등 나머지 기능은 그대로 잘 작동함(이 기능만 별과 채팅이 안 보일 뿐).
+const MAX_LIVE_VISITORS = 50;
+let checkedLiveCapacity = false;
 let visitorStars = new Map(); // clientId -> { sprite, halo, label, bubble, bubbleTimer, name }
 let visitorRegionLabel = null;
 let hasSyncedVisitorsOnce = false; // 첫 sync(막 접속해서 이미 있던 사람들이 한꺼번에 뜨는 경우)는 입장 알림에서 제외
@@ -2433,8 +2438,23 @@ function initVisitorPresence(){
   visitorChannel = sb.channel("galaxy-live", { config: { presence: { key: myClientId } } });
   visitorChannel
     .on("presence", { event: "sync" }, () => {
-      console.info("[galaxy-live] presence sync:", JSON.stringify(visitorChannel.presenceState()));
-      rebuildVisitorStars(visitorChannel.presenceState());
+      const state = visitorChannel.presenceState();
+      console.info("[galaxy-live] presence sync:", JSON.stringify(state));
+      // 무료 플랜 Realtime 동시 연결 한도(200개)를 안 건드리게, 그리고 다 같이 몰려서 채팅하면
+      // 초당 메시지 한도(100개)에 걸릴 수 있어서 정원을 넉넉히 여유 두고 미리 제한함 — "정원이
+      // 이미 찼는지"는 내가 아직 track() 하기 전(=순수 남의 인원수)인 첫 sync에서만 확인.
+      if (!checkedLiveCapacity){
+        checkedLiveCapacity = true;
+        if (Object.keys(state).length >= MAX_LIVE_VISITORS){
+          console.warn("galaxy-live: 정원 초과라 참여 안 함 —", Object.keys(state).length, "명");
+          toast("지금 실시간 접속자가 많아서 채팅·접속자 표시는 잠시 꺼둘게요");
+          visitorChannel.unsubscribe().catch(() => {});
+          return; // track() 자체를 안 해서 내 연결은 곧 정리됨, 별 표시/채팅도 그대로 비활성
+        }
+        myDisplayName = myName();
+        visitorChannel.track({ name: myDisplayName }).catch(e => console.warn("presence track failed", e));
+      }
+      rebuildVisitorStars(state);
     })
     .on("broadcast", { event: "chat" }, ({ payload }) => { if (payload?.id && payload?.text) showChatBubble(payload.id, payload.text); })
     .on("broadcast", { event: "whisper" }, ({ payload }) => {
@@ -2447,15 +2467,10 @@ function initVisitorPresence(){
       if (String(payload.targetName).trim().toLowerCase() !== resolveVisitorName(myClientId).trim().toLowerCase()) return;
       addChatFeedLine(`🔒 ${payload.fromName} → 나`, payload.text, true);
     })
-    .subscribe(async (status, err) => {
+    .subscribe((status, err) => {
+      // track()은 이제 위쪽 첫 presence sync에서 정원 확인 후에 함(여기서 안 함)
       console.info("[galaxy-live] status:", status, err ? String(err) : "");
-      if (status === "SUBSCRIBED"){
-        myDisplayName = myName();
-        try {
-          const trackResp = await visitorChannel.track({ name: myDisplayName });
-          console.info("[galaxy-live] track() response:", trackResp);
-        } catch (e){ console.warn("presence track failed", e); }
-      } else if (status === "CHANNEL_ERROR" || status === "TIMED_OUT" || status === "CLOSED"){
+      if (status === "CHANNEL_ERROR" || status === "TIMED_OUT" || status === "CLOSED"){
         // 콘솔에서 바로 원인 확인 가능하게(예: Realtime이 프로젝트에서 꺼져있거나 접속 자체가 막힌 경우)
         console.warn("galaxy-live channel not connected:", status, err);
       }
@@ -2580,11 +2595,18 @@ function handleChatCommand(text){
   visitorChannel.send({ type: "broadcast", event: "whisper", payload: { id: myClientId, fromName: myName, targetName, text: whisperText } });
   return true;
 }
+// 무료 플랜 초당 메시지 한도(100개)는 프로젝트 전체가 같이 쓰는 자원이라, 사람이 몰려서 다들
+// 빠르게 채팅하면 한도에 걸릴 수 있음 — 사람 1명당 1.2초에 한 번으로 막아서, 동시에 사람이
+// 많아져도(정원 50명 기준 최악의 경우도) 초당 메시지 수가 한도 안에 들어오게 함.
+let lastMessageSentAt = 0;
 function sendChatMessage(text){
   text = text.trim();
   if (!text) return;
   if (handleChatCommand(text)) return;
   if (!visitorChannel){ toast("실시간 연결이 아직 안 됐어요 — 잠시 후 다시 시도해주세요"); return; }
+  const now = performance.now();
+  if (now - lastMessageSentAt < 1200) return; // 너무 빠른 연속 전송은 조용히 무시(스팸/실수 연타 방지)
+  lastMessageSentAt = now;
   hasChatted = true;
   showChatBubble(myClientId, text); // 내 화면에는 바로 반영(브로드캐스트 왕복 안 기다림)
   visitorChannel.send({ type: "broadcast", event: "chat", payload: { id: myClientId, text } });
