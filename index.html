@@ -1193,7 +1193,12 @@ async function boardLogout(){
 // 등록해야 실제로 동작함 — 등록 전까지는 "provider is not enabled" 에러가 남)
 async function boardOAuthLogin(provider){
   try {
-    const { error } = await sb.auth.signInWithOAuth({ provider, options: { redirectTo: location.origin + location.pathname } });
+    const options = { redirectTo: location.origin + location.pathname };
+    // 카카오의 "카카오계정(이메일)" 동의항목은 "비즈 앱"으로 전환해야만 신청 가능 — 개인 앱은
+    // account_email을 요청하면 무조건 invalid_scope 에러가 남. 닉네임/프로필 사진만 요청하고,
+    // Supabase 대시보드 ▸ Kakao 설정에서 "Allow users without an email"을 켜둬야 함(코드로는 불가).
+    if (provider === "kakao") options.scopes = "profile_nickname profile_image";
+    const { error } = await sb.auth.signInWithOAuth({ provider, options });
     if (error) toast(tr("boardSocialFail"));
   } catch (e){ toast(tr("boardSocialFail")); }
 }
