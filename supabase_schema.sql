@@ -235,3 +235,34 @@ begin
 end;
 $$;
 grant execute on function public.check_signup_ip_ok(text) to anon, authenticated;
+
+-- ────────────────────────────────────────────────────────────────────────────
+--  8. site_visit_log — 누적 방문자 수 카운터 (2026-09-17 추가)
+--     · 새로고침할 때마다 카운트가 오르는 허접한 방식 방지 — 세션 하나(클라이언트가 sessionStorage에
+--       들고 있는 galaxyClientId)당 한 번만 기록되게 함. 같은 탭에서 새로고침해도 중복 카운트 안 됨,
+--       탭을 새로 열거나 나중에 다시 방문하면 새 세션이라 카운트됨.
+--     · signup_ip_log와 같은 패턴: 테이블은 anon 직접 접근 불가, SECURITY DEFINER 함수로만 기록+조회
+-- ────────────────────────────────────────────────────────────────────────────
+create table if not exists public.site_visit_log (
+  session_id text primary key,
+  created_at timestamptz not null default now()
+);
+alter table public.site_visit_log enable row level security;
+-- 일부러 select/insert 정책을 anon/authenticated에게 안 줌 — 아래 함수를 통해서만 건드릴 수 있게
+
+create or replace function public.record_visit(p_session_id text)
+returns bigint
+language plpgsql
+security definer
+set search_path = public
+as $$
+declare
+  total bigint;
+begin
+  insert into public.site_visit_log (session_id) values (p_session_id)
+    on conflict (session_id) do nothing;
+  select count(*) into total from public.site_visit_log;
+  return total;
+end;
+$$;
+grant execute on function public.record_visit(text) to anon, authenticated;

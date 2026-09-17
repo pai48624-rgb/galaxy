@@ -140,6 +140,7 @@
     border:1px solid rgba(157,255,176,.25);border-radius:999px;padding:3px 10px}
   #liveBadge.show{display:inline-flex}
   #liveBadge .dot{width:6px;height:6px;border-radius:50%;background:#4ade80;box-shadow:0 0 6px #4ade80;flex:none}
+  .visit-count{color:#b9b9ff;margin-left:2px}
   body.sleep-mode #liveBadge{display:none !important}
   #chatFeed{position:absolute;left:14px;top:78px;width:min(260px,60vw);z-index:8;
     display:flex;flex-direction:column;gap:5px;pointer-events:none}
@@ -482,7 +483,7 @@
     <main id="stage">
       <div id="graph"></div>
       <div id="hud"><span class="spin"></span><span id="loadingLabel">은하계를 불러오는 중…</span></div>
-      <div id="liveBadge"><span class="dot"></span><span id="liveBadgeText"></span></div>
+      <div id="liveBadge"><span class="dot"></span><span id="liveBadgeText"></span><span id="visitCountText" class="visit-count"></span></div>
       <div id="chatFeed"></div>
       <div id="zoom">
         <button id="sleepBtn" aria-label="수면 모드 — 화면 가득 은하수처럼 천천히 돌며 잠들기 좋은 소리 재생" title="수면 모드">🌙</button>
@@ -706,6 +707,7 @@ const I18N = {
     seoNote: n => `전체 텍스트 목록(${n}개)은 화면에서 감추고 페이지 하단 DOM에 유지 → 검색·스크린리더 노출은 그대로.`,
     suggestLink: "빠진 AI 추천하기", loading: "은하계를 불러오는 중…",
     hudCount: (a, b) => `${a} / ${b} AI 표시중`,
+    visitCountLabel: n => `누적 방문 ${n}회`,
     legendComplement: "보완재 (함께 사용)", legendAlt: "대체재 (비슷한 대안)", legendSponsor: "스폰서",
     addBtn: "＋ 빠진 AI 추천", sleepExit: "✕ 수면 모드 종료", dKicker: "⭐ AI 상세정보",
     liveVisitorsLabel: "지금 접속 중",
@@ -773,6 +775,7 @@ const I18N = {
     seoNote: n => `The full text list (${n} items) is visually hidden but kept in the DOM for search engines and screen readers.`,
     suggestLink: "Suggest a missing AI", loading: "Loading the galaxy…",
     hudCount: (a, b) => `${a} / ${b} AI shown`,
+    visitCountLabel: n => `${n} total visits`,
     legendComplement: "Complement (use together)", legendAlt: "Alternative (similar option)", legendSponsor: "Sponsor",
     addBtn: "＋ Suggest missing AI", sleepExit: "✕ Exit sleep mode", dKicker: "⭐ AI Details",
     liveVisitorsLabel: "Live now",
@@ -2186,6 +2189,20 @@ function getMyClientId(){
     return id;
   } catch (e){ return "guest-" + Math.random().toString(36).slice(2); }
 }
+// 누적 방문자 수 — "새로고침하면 카운트 오르는 허접한 방식"을 피하려고, 클라이언트에서 숫자를
+// 세는 게 아니라 서버(Supabase RPC record_visit)가 세션 ID 하나당 딱 한 번만 기록해서 셈.
+// getMyClientId()가 sessionStorage(같은 탭 새로고침엔 안 바뀜)에 저장해두는 값을 그대로 재사용 —
+// 같은 탭에서 계속 새로고침해도 중복 카운트 안 되고, 새 탭/나중 재방문이면 새 세션이라 카운트됨.
+let lastVisitCount = null;
+async function recordAndShowVisitCount(){
+  try {
+    const { data, error } = await sb.rpc("record_visit", { p_session_id: getMyClientId() });
+    if (error) throw error;
+    lastVisitCount = Number(data);
+    $("#visitCountText").textContent = "· " + tr("visitCountLabel", lastVisitCount.toLocaleString());
+    $("#liveBadge").classList.add("show"); // 접속자 프레즌스가 아직 안 붙었어도 방문자 수는 바로 보이게
+  } catch (e){ console.warn("visit count failed", e); }
+}
 const GUEST_ADJ = ["떠도는","작은","빛나는","조용한","이름없는","신비한","먼"];
 const GUEST_NOUN = ["관측자","여행자","탐험가","손님","별지기","방랑자"];
 function makeGuestName(){
@@ -2589,18 +2606,21 @@ function initGraph(){
 
   Graph.d3Force("charge").strength(-260); // 별자리·별들이 너무 다닥다닥 붙어 클릭하기 힘들다는 피드백 — 반발력을 높여 전체적으로 더 넓게 퍼지게 함
   Graph.d3Force("shape", makeShapeForce());
-  // 처음 화면은 전체 별자리 중앙이 아니라 태양계의 "태양" 근처를 바라보게 함(요청사항) —
+  // 처음 화면은 태양계의 "태양"이 보이되, 너무 바짝 당겨서 태양만 꽉 채우지 않고 뒤로 더 빠져서
+  // 다른 별자리들도 같은 화면에 같이 보이게 함(요청사항) — 시선(lookAt)은 태양과 은하 중심(원점)
+  // 사이 지점으로 살짝 옮기고, 카메라 자체도 훨씬 멀리 뒤로 뺌.
   // SS_CENTER가 실제 태양 3D 모델의 좌표(태양계는 buildSolarSystem()에서 이 근처에 그려짐).
-  Graph.cameraPosition({ x: SS_CENTER.x, y: SS_CENTER.y + 120, z: SS_CENTER.z + 780 }, SS_CENTER);
+  const SUN_VIEW_TARGET = SS_CENTER.clone().lerp(new THREE.Vector3(0, 0, 0), 0.3);
+  Graph.cameraPosition({ x: SS_CENTER.x + 500, y: SS_CENTER.y + 500, z: SS_CENTER.z + 2600 }, SUN_VIEW_TARGET);
   // 물리 시뮬레이션이 "완전히 멈추는" 시점은 예측 불가(수초~수십초) — 사용자가 그 사이 줌 조작을 하다가
   // 손을 떼면 그 타이밍에 자동 맞춤이 뒤늦게 실행되어 "화면이 스스로 줄어드는" 것처럼 보였음.
-  // 대신 짧은 고정 지연 후 1회만, 그것도 태양에서 너무 멀어지지 않는 선에서 살짝만 더 당겨줌
+  // 대신 짧은 고정 지연 후 1회만, 위와 같은 구도를 유지한 채 살짝만 더 당겨줌
   // (완전히 줌아웃해서 전체 별자리를 다 담아버리면 태양 포커스가 도로 사라지므로 zoomToFit은 안 씀).
   // 그 전에 사용자가 카메라를 직접 조작했다면 건너뜀.
   setTimeout(() => {
     if (didInitialFit || userTouchedCamera) return;
     didInitialFit = true;
-    Graph.cameraPosition({ x: SS_CENTER.x, y: SS_CENTER.y + 90, z: SS_CENTER.z + 560 }, SS_CENTER, 2600);
+    Graph.cameraPosition({ x: SS_CENTER.x + 400, y: SS_CENTER.y + 400, z: SS_CENTER.z + 2100 }, SUN_VIEW_TARGET, 2600);
   }, 2600);
   try {
     Graph.controls().addEventListener("start", () => { userTouchedCamera = true; });
@@ -2620,6 +2640,7 @@ function initGraph(){
   buildWorldCityGlobe();
   wireSunClicks();
   try { initVisitorPresence(); } catch (e){ console.warn("visitor presence skipped", e); }
+  try { recordAndShowVisitCount(); } catch (e){ console.warn("visit counter skipped", e); }
   wireGlobeClicks();
 
   // 배경 별 (실패해도 지도는 그대로 동작)
@@ -3320,6 +3341,7 @@ function applyLanguage(){
   $("#lblBoardPageTitle").textContent = tr("boardTitle");
   $("#lblBoardListTitleCol").textContent = tr("boardListTitleCol");
   $("#lblBoardListNickCol").textContent = tr("boardListNickCol");
+  if (lastVisitCount != null) $("#visitCountText").textContent = "· " + tr("visitCountLabel", lastVisitCount.toLocaleString());
   $("#lblBoardWriteOpen").textContent = tr("boardWriteToggle");
   $("#lblBoardWriteDlgTitle").textContent = tr("boardWriteDlgTitle");
   $("#lblBoardLoggedInAs").textContent = tr("boardLoggedInAs");
