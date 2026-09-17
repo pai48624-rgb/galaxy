@@ -259,7 +259,12 @@
   .bp-title{flex:1;font-size:15px;font-weight:700}
   .bp-head #boardWriteOpen{padding:8px 16px;border-radius:10px;font-size:12.5px;font-weight:700;cursor:pointer;border:0;background:var(--purple2);color:#fff}
   .bp-split{flex:1;min-height:0;display:flex}
-  .bp-list-pane{width:320px;flex:none;border-right:1px solid var(--line);overflow-y:auto;padding:8px}
+  .bp-list-pane{width:320px;flex:none;border-right:1px solid var(--line);display:flex;flex-direction:column;min-height:0}
+  /* 왼쪽 목록 맨 위 컬럼 헤더 — 표 형태처럼 "제목"/"닉네임"이 뭔지 한눈에 보이게(스크롤해도 안 밀려남) */
+  .board-list-header{flex:none;display:flex;justify-content:space-between;gap:8px;padding:10px 20px 8px;
+    border-bottom:1px solid var(--line);font-size:10.5px;font-weight:700;letter-spacing:.5px;
+    color:var(--dim);text-transform:uppercase}
+  .board-list-rows{flex:1;overflow-y:auto;padding:8px}
   .board-row{display:flex;flex-direction:column;gap:3px;width:100%;text-align:left;padding:11px 12px;border-radius:10px;
     border:0;background:none;color:var(--ink);cursor:pointer;min-width:0}
   .board-row:hover{background:rgba(255,255,255,.05)}
@@ -522,7 +527,13 @@
         <button type="button" class="go" id="boardWriteOpen"><span id="lblBoardWriteOpen">✎ 글쓰기 (로그인 필요)</span></button>
       </div>
       <div class="bp-split">
-        <div class="bp-list-pane" id="boardList"></div>
+        <div class="bp-list-pane">
+          <div class="board-list-header">
+            <span id="lblBoardListTitleCol">제목</span>
+            <span id="lblBoardListNickCol">닉네임</span>
+          </div>
+          <div id="boardList" class="board-list-rows"></div>
+        </div>
         <div class="bp-detail-pane" id="boardDetail">
           <div class="rv-hint" id="lblBoardDetailEmpty">왼쪽에서 글을 선택하세요.</div>
         </div>
@@ -757,6 +768,7 @@ const I18N = {
     boardWriteDlgTitle: "✎ 글쓰기", boardNicknamePh: "닉네임(회원가입 시에만 필요)", boardEmailPh: "이메일",
     boardPasswordPh: "비밀번호(6자 이상)", boardTitleFieldLabel: "제목", boardBodyFieldLabel: "내용",
     boardDetailEmpty: "왼쪽에서 글을 선택하세요.", boardNicknameLabel: "닉네임",
+    boardListTitleCol: "제목", boardListNickCol: "닉네임",
     boardNeedNickname: "닉네임을 입력해주세요", boardSignupRateLimited: "같은 네트워크(IP)에서는 7일에 한 번만 새로 가입할 수 있어요",
     boardSignupAutoLoginOk: "회원가입 완료! 바로 로그인됐어요 ✓",
     boardSignupNeedConfirm: "가입은 됐는데, 이 사이트가 이메일 확인을 요구하고 있어서 아직 로그인은 안 돼요. 받은 확인 메일의 링크를 누르거나, 사이트 운영자에게 'Confirm email 꺼달라'고 요청해주세요.",
@@ -823,6 +835,7 @@ const I18N = {
     boardWriteDlgTitle: "✎ New Post", boardNicknamePh: "Nickname (signup only)", boardEmailPh: "Email",
     boardPasswordPh: "Password (6+ chars)", boardTitleFieldLabel: "Title", boardBodyFieldLabel: "Body",
     boardDetailEmpty: "Select a post on the left.", boardNicknameLabel: "Nickname",
+    boardListTitleCol: "Title", boardListNickCol: "Nickname",
     boardNeedNickname: "Please enter a nickname", boardSignupRateLimited: "Only one new signup per 7 days is allowed from the same network (IP)",
     boardSignupAutoLoginOk: "Signed up! You're logged in now ✓",
     boardSignupNeedConfirm: "Account created, but this site currently requires email confirmation, so you can't log in yet. Click the link in the confirmation email, or ask the site owner to turn off \"Confirm email\".",
@@ -3377,6 +3390,8 @@ function applyLanguage(){
   $("#lblBoardOpen").textContent = tr("boardOpenLabel");
   $("#lblBoardBack").textContent = tr("boardBackToMap");
   $("#lblBoardPageTitle").textContent = tr("boardTitle");
+  $("#lblBoardListTitleCol").textContent = tr("boardListTitleCol");
+  $("#lblBoardListNickCol").textContent = tr("boardListNickCol");
   $("#lblBoardWriteOpen").textContent = tr("boardWriteToggle");
   $("#lblBoardWriteDlgTitle").textContent = tr("boardWriteDlgTitle");
   $("#lblBoardTopbarHint").textContent = tr("boardTopbarLoginHint");
