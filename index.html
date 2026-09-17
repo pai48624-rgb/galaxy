@@ -569,41 +569,10 @@
   <div class="dlg-in" style="max-width:480px">
     <h3 id="lblBoardWriteDlgTitle">✎ 글쓰기</h3>
 
-    <div id="boardAuthLoggedOut">
-      <!-- 헤더 아이콘은 showModal()로 뜬 이 창 뒤에서 클릭이 막힘(모달 배경은 비활성화됨) — 그래서
-           글쓰기 창을 열어둔 채로도 바로 로그인할 수 있게 같은 아이콘을 여기 안에도 둠(같은
-           .topbar-social-btn 클래스라 부팅 시 걸어둔 리스너를 그대로 같이 씀). -->
-      <div style="display:flex;justify-content:flex-start;gap:9px;margin-bottom:10px">
-        <button type="button" class="topbar-social-btn" data-provider="kakao" title="카카오로 로그인" aria-label="카카오로 로그인"
-          style="width:34px;height:34px;flex:none;border-radius:50%;border:0;background:#FEE500;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0">
-          <svg width="18" height="18" viewBox="0 0 18 18"><path fill="#191600" d="M9 2C4.58 2 1 4.94 1 8.56c0 2.32 1.49 4.36 3.74 5.53-.16.6-.59 2.15-.68 2.49-.11.42.15.42.32.3.13-.09 2.1-1.43 2.96-2.01.53.08 1.08.12 1.66.12 4.42 0 8-2.94 8-6.43C17 4.94 13.42 2 9 2z"/></svg>
-        </button>
-        <button type="button" class="topbar-social-btn" data-provider="naver" title="네이버로 로그인" aria-label="네이버로 로그인"
-          style="width:34px;height:34px;flex:none;border-radius:50%;border:0;background:#03C75A;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0">
-          <svg width="17" height="17" viewBox="0 0 18 18"><path fill="#fff" d="M11.4 2v6.2L6.6 2H2v14h4.6v-6.2l4.8 6.2H16V2h-4.6z"/></svg>
-        </button>
-        <button type="button" class="topbar-social-btn" data-provider="google" title="구글로 로그인" aria-label="구글로 로그인"
-          style="width:34px;height:34px;flex:none;border-radius:50%;border:1px solid rgba(255,255,255,.18);background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0">
-          <svg width="18" height="18" viewBox="0 0 18 18">
-            <path fill="#4285F4" d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.874 2.684-6.615z"/>
-            <path fill="#34A853" d="M9 18c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332C2.438 15.983 5.482 18 9 18z"/>
-            <path fill="#FBBC05" d="M3.964 10.71c-.18-.54-.282-1.117-.282-1.71s.102-1.17.282-1.71V4.958H.957C.347 6.173 0 7.548 0 9s.348 2.827.957 4.042l3.007-2.332z"/>
-            <path fill="#EA4335" d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0 5.482 0 2.438 2.017.957 4.958L3.964 7.29C4.672 5.163 6.656 3.58 9 3.58z"/>
-          </svg>
-        </button>
-      </div>
-      <div class="rv-hint" id="lblBoardTopbarHint" style="margin-bottom:10px">또는 아래에서 이메일로 가입/로그인하세요.</div>
-      <label><span id="lblBoardNicknameField">닉네임(회원가입 시에만 필요)</span><input type="text" id="boardNickname" maxlength="20" placeholder="닉네임"></label>
-      <label><span id="lblBoardEmailField">이메일</span><input type="email" id="boardEmail" placeholder="you@example.com"></label>
-      <label><span id="lblBoardPasswordField">비밀번호(6자 이상)</span><input type="password" id="boardPassword" placeholder="••••••"></label>
-      <div class="dlg-act" style="justify-content:flex-start">
-        <button type="button" class="ghost" id="boardSignupBtn"><span id="lblBoardSignupBtn">회원가입</span></button>
-        <button type="button" class="go" id="boardLoginBtn"><span id="lblBoardLoginBtn">로그인</span></button>
-      </div>
-      <div class="rv-hint" id="lblBoardLoginHint">처음이면 이메일·비밀번호 입력 후 '회원가입', 이미 가입했으면 '로그인'을 누르세요.</div>
-    </div>
-
-    <div id="boardAuthLoggedIn" hidden style="margin-bottom:4px;font-size:12.5px;color:var(--dim)">
+    <!-- 소셜 로그인(카카오/네이버/구글)이 다 되면서 이메일·비밀번호 회원가입/로그인 폼은 필요 없어짐 —
+         "글쓰기" 버튼 자체가 로그인했을 때만 보이므로(updateBoardAuthUI), 이 다이얼로그는 이제
+         로그인 안 된 상태로는 열릴 일이 없음. 로그인 상태 안내 한 줄만 남김. -->
+    <div id="boardAuthLoggedIn" style="margin-bottom:4px;font-size:12.5px;color:var(--dim)">
       <span id="lblBoardLoggedInAs">로그인됨:</span> <b id="boardUserEmail" style="color:var(--ink)"></b>
     </div>
 
@@ -1313,68 +1282,23 @@ async function initBoardAuth(){
 function updateBoardAuthUI(){
   // access_token까지 확인 — user만 있고 실제 세션이 없는 반쪽 상태를 "로그인됨"으로 잘못 표시하는 걸 방지
   const loggedIn = !!(boardSession?.user && boardSession?.access_token);
-  // 상단바 로그인 아이콘/로그아웃 버튼은 드로어와 달리 페이지 로드 직후부터 항상 DOM에 있음 —
-  // 드로어를 열기 전에도(예: 소셜 로그인하고 막 돌아왔을 때) 바로 로그인 상태로 바뀌어야 함.
+  // 상단바 로그인 아이콘/로그아웃 버튼은 페이지 로드 직후부터 항상 DOM에 있음 — 드로어를 열기
+  // 전에도(예: 소셜 로그인하고 막 돌아왔을 때) 바로 로그인 상태로 바뀌어야 함.
   document.querySelectorAll(".topbar-social-btn").forEach(b => { b.hidden = loggedIn; });
   const topbarLogout = $("#topbarLogoutBtn");
   if (topbarLogout) topbarLogout.hidden = !loggedIn;
-  // 글쓰기 다이얼로그(#boardWriteDlg) 안 로그인/글쓰기 폼도 항상 DOM에 있음(정적 마크업) — 다이얼로그를
-  // 열지 않았어도 미리 상태를 맞춰둠. 그래도 널 체크는 안전하게 남겨둠.
-  const loggedOutEl = $("#boardAuthLoggedOut");
-  if (!loggedOutEl) return;
-  loggedOutEl.hidden = loggedIn;
-  $("#boardAuthLoggedIn").hidden = !loggedIn;
+  // "글쓰기" 버튼 자체를 로그인했을 때만 보이게 함 — 이메일 회원가입 폼 없이도 로그인 안 된
+  // 사람은 애초에 글쓰기 창을 열 수가 없어짐(불필요한 로그인 폼을 다이얼로그 안에 또 둘 필요 없음).
+  const writeBtn = $("#boardWriteOpen");
+  if (writeBtn) writeBtn.hidden = !loggedIn;
+  const loggedInEl = $("#boardAuthLoggedIn");
+  if (!loggedInEl) return;
   $("#boardPostForm").hidden = !loggedIn;
   if (loggedIn) $("#boardUserEmail").textContent = socialDisplayName(boardSession.user);
 }
-// 이메일 링크/OTP 둘 다 결국 이메일 발송이 필요해서 Supabase 무료 발송 한도(시간당 몇 통)에
-// 계속 걸림 — 로그인 자체엔 이메일이 필요 없는 이메일+비밀번호 방식으로 바꿈(가입 시 1번만
-// 확인 메일이 갈 수 있음. 그마저 안 가게 하려면 Supabase 대시보드 ▸ Authentication ▸
-// Providers ▸ Email ▸ "Confirm email"을 꺼두면 됨 — 이것도 코드로는 못 바꾸는 설정)
-// 회원가입해도 반응이 없고 방금 만든 비밀번호로 로그인도 안 되는 문제 — 원인 확인함:
-// Supabase 프로젝트에 "Confirm email"이 켜져 있으면 signUp()이 세션을 안 돌려주고(자동
-// 로그인 불가), 이메일 확인 전까지는 같은 비번으로 로그인도 거부됨(Supabase 자체 동작).
-// 그래서 어느 경우든 사용자가 확실히 알 수 있게 상태를 직접 세팅하고 alert로 명확히 알림
-// (onAuthStateChange 이벤트가 언제 오는지 기다리지 않고 응답 받는 즉시 반영)
-async function boardSignup(){
-  const email = $("#boardEmail").value.trim(), password = $("#boardPassword").value;
-  const nickname = $("#boardNickname").value.trim();
-  if (!nickname){ toast(tr("boardNeedNickname")); return; }
-  if (!email || password.length < 6){ toast(tr("boardPwTooShort")); return; }
-  $("#boardSignupBtn").disabled = true;
-  try {
-    const { data, error } = await sb.auth.signUp({ email, password, options: { data: { nickname } } });
-    if (error){
-      // 같은 IP로 7일 이내 재가입을 막는 조치(_worker.js)에 걸리면 429로 옴 — 그 경우만 다른 문구
-      alert(error.status === 429 ? tr("boardSignupRateLimited") : tr("boardSignupFail"));
-    } else if (data.session){
-      boardSession = data.session;
-      updateBoardAuthUI();
-      $("#boardPassword").value = "";
-      alert(tr("boardSignupAutoLoginOk"));
-    } else {
-      // 세션이 안 왔다 = 이 프로젝트가 이메일 확인을 요구하는 중이라는 뜻(가입은 됐지만 로그인은 아직 안 됨)
-      alert(tr("boardSignupNeedConfirm"));
-    }
-  } catch (e){ alert(tr("boardSignupFail")); }
-  $("#boardSignupBtn").disabled = false;
-}
-async function boardPasswordLogin(){
-  const email = $("#boardEmail").value.trim(), password = $("#boardPassword").value;
-  if (!email || !password) return;
-  $("#boardLoginBtn").disabled = true;
-  try {
-    const { data, error } = await sb.auth.signInWithPassword({ email, password });
-    if (error){
-      boardSession = null;
-      toast(/confirm/i.test(error.message || "") ? tr("boardEmailNotConfirmed") : tr("boardLoginFail"));
-    } else {
-      boardSession = data.session;
-    }
-    updateBoardAuthUI();
-  } catch (e){ toast(tr("boardLoginFail")); }
-  $("#boardLoginBtn").disabled = false;
-}
+// 예전엔 이메일+비밀번호 가입/로그인 폼(boardSignup/boardPasswordLogin)도 있었음 — 소셜 로그인
+// (카카오/네이버/구글) 3개가 다 붙은 뒤로는 불필요해져서 삭제함(2026-09-17). "회원가입"이라는
+// 별도 개념 자체가 소셜 로그인에선 없음(로그인 = 자동 가입)이라 사용자 입장에서도 헷갈렸음.
 async function boardLogout(){
   try { await sb.auth.signOut(); } catch (e){}
 }
@@ -2665,23 +2589,18 @@ function initGraph(){
 
   Graph.d3Force("charge").strength(-260); // 별자리·별들이 너무 다닥다닥 붙어 클릭하기 힘들다는 피드백 — 반발력을 높여 전체적으로 더 넓게 퍼지게 함
   Graph.d3Force("shape", makeShapeForce());
-  Graph.cameraPosition({ z: 780 });
+  // 처음 화면은 전체 별자리 중앙이 아니라 태양계의 "태양" 근처를 바라보게 함(요청사항) —
+  // SS_CENTER가 실제 태양 3D 모델의 좌표(태양계는 buildSolarSystem()에서 이 근처에 그려짐).
+  Graph.cameraPosition({ x: SS_CENTER.x, y: SS_CENTER.y + 120, z: SS_CENTER.z + 780 }, SS_CENTER);
   // 물리 시뮬레이션이 "완전히 멈추는" 시점은 예측 불가(수초~수십초) — 사용자가 그 사이 줌 조작을 하다가
   // 손을 떼면 그 타이밍에 자동 맞춤이 뒤늦게 실행되어 "화면이 스스로 줄어드는" 것처럼 보였음.
-  // 대신 짧은 고정 지연 후 1회만, 그것도 "전체를 다 담는" 완전한 줌아웃이 아니라 조금 더 확대된
-  // "중간" 정도로만 맞추고(zoomToFit(0,…)로 정확한 거리만 순간 계산해 화면엔 안 보이게 구함),
+  // 대신 짧은 고정 지연 후 1회만, 그것도 태양에서 너무 멀어지지 않는 선에서 살짝만 더 당겨줌
+  // (완전히 줌아웃해서 전체 별자리를 다 담아버리면 태양 포커스가 도로 사라지므로 zoomToFit은 안 씀).
   // 그 전에 사용자가 카메라를 직접 조작했다면 건너뜀.
   setTimeout(() => {
     if (didInitialFit || userTouchedCamera) return;
     didInitialFit = true;
-    // 전체를 다 담는 정확한 거리를 재려고 잠깐 순간이동시켰다가(0ms) 바로 제자리로 되돌림 —
-    // 아래 애니메이션 호출 전까지 화면에 그려질 기회가 없어 사용자 눈에는 보이지 않음
-    const before = Graph.cameraPosition();
-    Graph.zoomToFit(0, 60);
-    const full = Graph.cameraPosition();
-    Graph.cameraPosition(before, undefined, 0);
-    const k = 0.6; // 전체를 다 담지 않고 조금 더 확대된 "중간" 정도로
-    Graph.cameraPosition({ x: full.x * k, y: full.y * k, z: full.z * k }, undefined, 2600);
+    Graph.cameraPosition({ x: SS_CENTER.x, y: SS_CENTER.y + 90, z: SS_CENTER.z + 560 }, SS_CENTER, 2600);
   }, 2600);
   try {
     Graph.controls().addEventListener("start", () => { userTouchedCamera = true; });
@@ -3322,8 +3241,6 @@ function buildSidebar(){
   document.querySelectorAll("dialog").forEach(dlg => {
     dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
   });
-  $("#boardSignupBtn").addEventListener("click", boardSignup);
-  $("#boardLoginBtn").addEventListener("click", boardPasswordLogin);
   $("#boardPostForm").addEventListener("submit", submitBoardPost);
   $("#boardPostTitle").addEventListener("input", e => { $("#boardTitleCount").textContent = e.target.value.length; });
   $("#boardPostBody").addEventListener("input", e => { $("#boardBodyCount").textContent = e.target.value.length; });
@@ -3405,13 +3322,6 @@ function applyLanguage(){
   $("#lblBoardListNickCol").textContent = tr("boardListNickCol");
   $("#lblBoardWriteOpen").textContent = tr("boardWriteToggle");
   $("#lblBoardWriteDlgTitle").textContent = tr("boardWriteDlgTitle");
-  $("#lblBoardTopbarHint").textContent = tr("boardTopbarLoginHint");
-  $("#lblBoardNicknameField").textContent = tr("boardNicknamePh");
-  $("#lblBoardEmailField").textContent = tr("boardEmailPh");
-  $("#lblBoardPasswordField").textContent = tr("boardPasswordPh");
-  $("#lblBoardSignupBtn").textContent = tr("boardSignupBtnLabel");
-  $("#lblBoardLoginBtn").textContent = tr("boardLoginBtnLabel");
-  $("#lblBoardLoginHint").textContent = tr("boardLoginHint");
   $("#lblBoardLoggedInAs").textContent = tr("boardLoggedInAs");
   $("#lblBoardTitleField").textContent = tr("boardTitleFieldLabel");
   $("#lblBoardBodyField").textContent = tr("boardBodyFieldLabel");
