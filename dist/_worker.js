@@ -9,8 +9,11 @@ const ANON_KEY = "sb_publishable_MtDGFqdSWe09vUXg2ALtqw_5p1gZVCr";
 const CORS = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Methods": "GET,POST,PATCH,PUT,DELETE,OPTIONS",
+  // x-supabase-api-version — 최신 supabase-js(2.116.0)가 세션 복구 시 자동으로 붙이는 헤더.
+  // 이게 허용 목록에 없으면 프리플라이트가 막혀서 로그인 후 access_token이 있어도 세션이
+  // 전혀 저장 안 됨(콘솔에 CORS 에러) — 소셜 로그인(구글/카카오/네이버) 전부에 영향을 주는 버그였음.
   "Access-Control-Allow-Headers":
-    "authorization,apikey,content-type,prefer,range,x-client-info,accept-profile,content-profile",
+    "authorization,apikey,content-type,prefer,range,x-client-info,accept-profile,content-profile,x-supabase-api-version",
   "Access-Control-Expose-Headers": "content-range,range-unit",
   "Access-Control-Max-Age": "86400",
 };
