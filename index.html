@@ -53,6 +53,7 @@
     #topbarAuth{gap:4px!important}
     .topbar-social-btn{width:24px!important;height:24px!important}
     #langBtn,#labelsToggleBtn,#topbarLogoutBtn{padding:4px 8px!important;font-size:9.5px!important}
+    #liveBadge{display:none!important} /* 아주 좁은 화면에선 로그인 아이콘/타이틀이 우선 — 다시 깨지는 거 방지 */
   }
   #menuBtn{display:none;background:none;border:1px solid var(--line);border-radius:8px;color:var(--ink);
     width:34px;height:34px;font-size:16px;cursor:pointer;margin-right:8px}
@@ -135,13 +136,15 @@
   /* ---- 접속자 채팅 피드 — 3D 별 옆 말풍선은 카메라가 그쪽을 보고 있을 때만 보여서 실효성이
      없다는 피드백(대화 내용이 안 보임) 반영: 화면에 고정된 투명 레이어로 따로 항상 띄움.
      클릭을 가로채면 안 되니 pointer-events:none, 배경 별과 안 섞이게 살짝만 어둡게 깔아줌 ---- */
-  #liveBadge{position:absolute;left:14px;top:44px;z-index:9;display:none;align-items:center;gap:6px;
+  /* 헤더 안에 있어서(2026-09-17 이전엔 #stage 안에 있어서 게시판 화면 등으로 전환하면 같이
+     숨겨졌음 — 항상 보이게 헤더로 옮김) 화면이 뭘로 바뀌든 계속 보임(수면 모드는 헤더 전체가
+     숨겨지므로 예외) */
+  #liveBadge{display:none;align-items:center;gap:6px;flex:none;
     font-size:11px;font-weight:700;color:#9dffb0;background:rgba(10,10,20,.5);
-    border:1px solid rgba(157,255,176,.25);border-radius:999px;padding:3px 10px}
+    border:1px solid rgba(157,255,176,.25);border-radius:999px;padding:5px 10px;white-space:nowrap}
   #liveBadge.show{display:inline-flex}
   #liveBadge .dot{width:6px;height:6px;border-radius:50%;background:#4ade80;box-shadow:0 0 6px #4ade80;flex:none}
   .visit-count{color:#b9b9ff;margin-left:2px}
-  body.sleep-mode #liveBadge{display:none !important}
   #chatFeed{position:absolute;left:14px;top:78px;width:min(260px,60vw);z-index:8;
     display:flex;flex-direction:column;gap:5px;pointer-events:none}
   #chatFeed .line{font-size:11.5px;line-height:1.4;color:#e8e8f0;background:rgba(8,8,16,.45);
@@ -259,6 +262,15 @@
   .bp-head #boardPageBack:hover{color:var(--ink)}
   .bp-title{flex:1;font-size:15px;font-weight:700}
   .bp-split{flex:1;min-height:0;display:flex}
+  /* 유형별 레일 — 지금은 "게시판" 하나지만 나중에 항목이 더 늘어날 걸 감안한 자리 */
+  .bp-rail{width:68px;flex:none;border-right:1px solid var(--line);display:flex;flex-direction:column;
+    align-items:center;gap:4px;padding:14px 6px;background:rgba(255,255,255,.015)}
+  .bp-rail-item{display:flex;flex-direction:column;align-items:center;gap:4px;width:100%;padding:9px 2px;
+    border-radius:11px;border:0;background:none;color:var(--dim);cursor:pointer}
+  .bp-rail-item:hover{background:rgba(255,255,255,.05)}
+  .bp-rail-item.active{background:rgba(140,120,230,.22);color:#fff}
+  .bp-rail-icon{font-size:18px;line-height:1}
+  .bp-rail-label{font-size:9.5px;font-weight:700;letter-spacing:.2px}
   .bp-list-pane{width:320px;flex:none;border-right:1px solid var(--line);display:flex;flex-direction:column;min-height:0}
   /* 글쓰기 버튼을 목록 바로 위(닉네임 컬럼과 같은 쪽)로 옮김 — 페이지 상단 헤더 대신 목록과
      붙어있는 게 자연스럽다는 피드백. */
@@ -296,6 +308,8 @@
     .bp-head{padding:11px 14px;gap:8px}
     .bp-title{font-size:13.5px}
     .bp-split{flex-direction:column}
+    .bp-rail{width:100%;flex-direction:row;justify-content:flex-start;padding:6px 10px;border-right:0;border-bottom:1px solid var(--line)}
+    .bp-rail-item{width:auto;flex-direction:row;padding:6px 12px}
     .bp-list-pane{width:100%;max-height:38vh;border-right:0;border-bottom:1px solid var(--line)}
     .bp-detail-pane{padding:18px}
     .board-detail-title{font-size:16px}
@@ -381,6 +395,9 @@
       </div>
     </div>
     <div style="display:flex;align-items:center;gap:10px">
+      <!-- 게시판 등 다른 화면으로 전환돼도(#stage가 숨겨져도) 계속 보여야 해서 헤더로 옮김
+           (원래 #stage 안에 있어서 게시판 페이지에선 안 보였음) -->
+      <div id="liveBadge"><span class="dot"></span><span id="liveBadgeText"></span><span id="visitCountText" class="visit-count"></span></div>
       <div id="topbarAuth" style="display:flex;align-items:center;gap:6px">
         <button type="button" class="topbar-social-btn" data-provider="kakao" title="카카오로 로그인" aria-label="카카오로 로그인"
           style="width:28px;height:28px;flex:none;border-radius:50%;border:0;background:#FEE500;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0">
@@ -483,7 +500,6 @@
     <main id="stage">
       <div id="graph"></div>
       <div id="hud"><span class="spin"></span><span id="loadingLabel">은하계를 불러오는 중…</span></div>
-      <div id="liveBadge"><span class="dot"></span><span id="liveBadgeText"></span><span id="visitCountText" class="visit-count"></span></div>
       <div id="chatFeed"></div>
       <div id="zoom">
         <button id="sleepBtn" aria-label="수면 모드 — 화면 가득 은하수처럼 천천히 돌며 잠들기 좋은 소리 재생" title="수면 모드">🌙</button>
@@ -530,6 +546,14 @@
         <div class="bp-title" id="lblBoardPageTitle">🗨 커뮤니티 게시판</div>
       </div>
       <div class="bp-split">
+        <!-- 지금은 "게시판" 하나뿐이지만 나중에 유형별로 몇 개 더 추가될 예정이라 미리 자리를 만들어둠 —
+             목록을 화면 맨 왼쪽에 바로 붙이지 않고 이 레일 옆으로 옮긴 이유. -->
+        <div class="bp-rail">
+          <button type="button" class="bp-rail-item active" title="커뮤니티 게시판" aria-current="page">
+            <span class="bp-rail-icon">🗨</span>
+            <span class="bp-rail-label">게시판</span>
+          </button>
+        </div>
         <div class="bp-list-pane">
           <div class="board-list-toolbar">
             <button type="button" class="go" id="boardWriteOpen"><span id="lblBoardWriteOpen">✎ 글쓰기</span></button>
@@ -1270,6 +1294,13 @@ async function initBoardAuth(){
     const { data } = await sb.auth.getSession();
     boardSession = data?.session || null;
   } catch (e){ console.warn("board auth init skipped", e); }
+  // 보안: URL 해시에 실려온 access_token/refresh_token/provider_token은 로그인 성공 여부와
+  // 상관없이 항상 바로 지움 — 예전엔 boardSession?.user가 확인된 경우에만 지웠는데, 그 조건이
+  // 어떤 이유로든 걸리지 않으면(타이밍 등) 토큰이 계속 주소창에 남아있게 되는 문제가 있었음
+  // (실제로 사용자가 주소창에서 자신의 access_token 전체를 본 사례로 확인됨 — 심각한 노출).
+  if (returningFromOAuth){
+    history.replaceState(null, "", location.pathname + location.search);
+  }
   try {
     sb.auth.onAuthStateChange((_event, session) => {
       boardSession = session;
@@ -1278,7 +1309,6 @@ async function initBoardAuth(){
     });
   } catch (e){ /* 인증 이벤트 구독 실패해도 게시판 읽기는 계속 동작 */ }
   if (returningFromOAuth && boardSession?.user){
-    history.replaceState(null, "", location.pathname + location.search);
     openBoardPage();
   }
 }
