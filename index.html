@@ -1284,12 +1284,12 @@ function boardDrawerHTML(){
       <summary id="lblBoardWriteToggle">${tr("boardWriteToggle")}</summary>
       <div class="d-collapse-body">
         <div id="boardAuthLoggedOut">
-          <div style="display:flex;flex-direction:column;gap:7px">
-            <button type="button" class="board-social-btn" data-provider="google" style="display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:10px;border-radius:9px;border:1px solid rgba(255,255,255,.16);background:#fff;color:#1f1f1f;font:inherit;font-size:12.5px;font-weight:600;cursor:pointer"><span id="lblBoardSocialGoogle">${tr("boardSocialGoogle")}</span></button>
-            <button type="button" class="board-social-btn" data-provider="kakao" style="display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:10px;border-radius:9px;border:0;background:#FEE500;color:#191600;font:inherit;font-size:12.5px;font-weight:600;cursor:pointer"><span id="lblBoardSocialKakao">${tr("boardSocialKakao")}</span></button>
-            <button type="button" class="board-social-btn" data-provider="naver" style="display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:10px;border-radius:9px;border:0;background:#03C75A;color:#fff;font:inherit;font-size:12.5px;font-weight:600;cursor:pointer"><span id="lblBoardSocialNaver">${tr("boardSocialNaver")}</span></button>
+          <div style="display:flex;justify-content:flex-start;gap:9px;margin-bottom:12px">
+            <button type="button" class="board-social-btn" data-provider="kakao" title="${esc(tr("boardSocialKakao"))}" aria-label="${esc(tr("boardSocialKakao"))}" style="width:38px;height:38px;flex:none;border-radius:50%;border:0;background:#FEE500;color:#191600;font:inherit;font-weight:800;font-size:13px;cursor:pointer;display:flex;align-items:center;justify-content:center">K</button>
+            <button type="button" class="board-social-btn" data-provider="naver" title="${esc(tr("boardSocialNaver"))}" aria-label="${esc(tr("boardSocialNaver"))}" style="width:38px;height:38px;flex:none;border-radius:50%;border:0;background:#03C75A;color:#fff;font:inherit;font-weight:800;font-size:13px;cursor:pointer;display:flex;align-items:center;justify-content:center">N</button>
+            <button type="button" class="board-social-btn" data-provider="google" title="${esc(tr("boardSocialGoogle"))}" aria-label="${esc(tr("boardSocialGoogle"))}" style="width:38px;height:38px;flex:none;border-radius:50%;border:1px solid rgba(255,255,255,.16);background:#fff;color:#1f1f1f;font:inherit;font-weight:800;font-size:13px;cursor:pointer;display:flex;align-items:center;justify-content:center">G</button>
             <!-- 메타(페이스북) 로그인 임시 주석 처리 — Meta for Developers 앱 계정을 찾기 어려워 등록을 보류함(2026-09-17). 나중에 재개하려면 이 버튼 주석만 풀면 됨(코드는 그대로 남겨둠).
-            <button type="button" class="board-social-btn" data-provider="facebook" style="display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:10px;border-radius:9px;border:0;background:#1877F2;color:#fff;font:inherit;font-size:12.5px;font-weight:600;cursor:pointer"><span id="lblBoardSocialMeta">${tr("boardSocialMeta")}</span></button>
+            <button type="button" class="board-social-btn" data-provider="facebook" title="${esc(tr("boardSocialMeta"))}" aria-label="${esc(tr("boardSocialMeta"))}" style="width:38px;height:38px;flex:none;border-radius:50%;border:0;background:#1877F2;color:#fff;font:inherit;font-weight:800;font-size:13px;cursor:pointer;display:flex;align-items:center;justify-content:center">F</button>
             -->
           </div>
           <div style="display:flex;align-items:center;gap:8px;margin:12px 0;color:var(--faint);font-size:11px">
@@ -1308,8 +1308,8 @@ function boardDrawerHTML(){
           <div class="rv-hint" id="lblBoardLoginHint">${tr("boardLoginHint")}</div>
         </div>
 
-        <div id="boardAuthLoggedIn" hidden style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
-          <span style="font-size:12px;color:var(--dim)"><span id="lblBoardLoggedInAs">${tr("boardLoggedInAs")}</span> <b id="boardUserEmail"></b></span>
+        <div id="boardAuthLoggedIn" hidden style="display:flex;align-items:center;justify-content:flex-start;gap:10px;margin-bottom:10px">
+          <span style="font-size:13.5px;color:var(--ink);font-weight:700" id="boardUserEmail"></span>
           <button type="button" class="ghost" id="boardLogoutBtn" style="padding:5px 10px;font-size:11px;border-radius:9px;border:0;background:rgba(255,255,255,.06);color:var(--dim);cursor:pointer"><span id="lblBoardLogout">${tr("boardLogoutLabel")}</span></button>
         </div>
 
