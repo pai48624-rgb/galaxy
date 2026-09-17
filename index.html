@@ -24,6 +24,10 @@
     --font:-apple-system,BlinkMacSystemFont,"Malgun Gothic","Apple SD Gothic Neo","Segoe UI",sans-serif;
   }
   *{box-sizing:border-box}
+  /* hidden 속성을 켠 요소에 인라인 display 스타일(예: display:flex)이 같이 붙어있으면
+     인라인 스타일이 항상 이겨서 hidden이 무시되고 계속 보이는 버그가 있었음(로그아웃 상태인데
+     로그아웃 버튼이 보이는 등) — !important로 hidden이 항상 이기게 못박음. */
+  [hidden]{display:none!important}
   html,body{margin:0;height:100%}
   body{background:var(--bg);color:var(--ink);font-family:var(--font);overflow:hidden}
   a{color:var(--purple);text-decoration:none}
