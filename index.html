@@ -1127,7 +1127,7 @@ function updateBoardAuthUI(){
   loggedOutEl.hidden = loggedIn;
   $("#boardAuthLoggedIn").hidden = !loggedIn;
   $("#boardPostForm").hidden = !loggedIn;
-  if (loggedIn) $("#boardUserEmail").textContent = boardSession.user.user_metadata?.nickname || boardSession.user.email || "";
+  if (loggedIn) $("#boardUserEmail").textContent = socialDisplayName(boardSession.user);
 }
 // 이메일 링크/OTP 둘 다 결국 이메일 발송이 필요해서 Supabase 무료 발송 한도(시간당 몇 통)에
 // 계속 걸림 — 로그인 자체엔 이메일이 필요 없는 이메일+비밀번호 방식으로 바꿈(가입 시 1번만
@@ -2096,8 +2096,15 @@ function makeGuestName(){
     return n;
   } catch (e){ return "손님" + Math.floor(Math.random() * 9000); }
 }
+// 이메일 가입자는 nickname이 있지만, 구글 등 소셜 로그인 사용자는 nickname 필드가 없어서
+// 그냥 손님(guest) 이름으로 잘못 표시되던 버그 — 구글이 주는 full_name/name, 그마저 없으면
+// 이메일 앞부분까지 순서대로 사용해서 실제 로그인한 사람 이름이 보이게 함.
+function socialDisplayName(user){
+  const m = user?.user_metadata;
+  return m?.nickname || m?.full_name || m?.name || (user?.email ? user.email.split("@")[0] : "") || "";
+}
 function myName(){
-  return boardSession?.user?.user_metadata?.nickname || makeGuestName();
+  return socialDisplayName(boardSession?.user) || makeGuestName();
 }
 function visitorPlacement(i, total){
   const angle = (i / Math.max(total, 1)) * Math.PI * 2;
@@ -2271,12 +2278,16 @@ const AMBIENT_ECHO_LINES = [
   "아무도 없어서 놀랐지? 나도 놀랐어",
 ];
 let lastAmbientEcho = 0;
+let lastAmbientLine = -1;
 function maybeAmbientEcho(){
   if (visitorStars.size > 1){ console.info("ambient echo skipped: not alone, visitorStars.size =", visitorStars.size); return; } // 나 말고 진짜 접속자가 있으면 끼어들지 않음
   const now = performance.now();
-  if (now - lastAmbientEcho < 15000){ console.info("ambient echo skipped: cooldown"); return; }
+  if (now - lastAmbientEcho < 3000){ console.info("ambient echo skipped: cooldown"); return; } // 연타 방지용 짧은 쿨다운만(대화가 이어지는 느낌을 위해 매 메시지마다 답함)
   lastAmbientEcho = now;
-  const line = AMBIENT_ECHO_LINES[Math.floor(Math.random() * AMBIENT_ECHO_LINES.length)];
+  let i = Math.floor(Math.random() * AMBIENT_ECHO_LINES.length);
+  if (AMBIENT_ECHO_LINES.length > 1 && i === lastAmbientLine) i = (i + 1) % AMBIENT_ECHO_LINES.length; // 방금 했던 말 연속으로 반복 방지
+  lastAmbientLine = i;
+  const line = AMBIENT_ECHO_LINES[i];
   setTimeout(() => addChatFeedLine("🌌 우주", line), 1600 + Math.random() * 1400);
 }
 function sendChatMessage(text){
