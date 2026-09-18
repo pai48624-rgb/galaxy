@@ -55,7 +55,7 @@
     .brand small{display:none}
     #topbar > div{gap:5px!important}
     #topbarAuth{gap:4px!important}
-    .topbar-social-btn{width:24px!important;height:24px!important}
+    .topbar-social-btn,#pwaInstallBtn{width:24px!important;height:24px!important}
     #langBtn,#labelsToggleBtn,#topbarLogoutBtn{padding:4px 8px!important;font-size:9.5px!important}
     #visitBadge{display:none!important} /* 아주 좁은 화면에선 로그인 아이콘/타이틀이 우선 — 다시 깨지는 거 방지 */
   }
@@ -414,7 +414,7 @@
            보여야 해서(요청사항). "지금 N명 접속 중"은 원래 있던 자리(#stage, AI 표시중 옆)에
            그대로 둠 — 이건 빼달라는 요청이 아니었음, 실수로 같이 옮겼던 걸 되돌림. -->
       <div id="visitBadge"><span id="visitCountText"></span></div>
-      <button type="button" id="pwaInstallBtn" class="topbar-social-btn" title="홈 화면에 추가" aria-label="홈 화면에 추가"
+      <button type="button" id="pwaInstallBtn" title="홈 화면에 추가" aria-label="홈 화면에 추가"
         style="width:28px;height:28px;flex:none;border-radius:50%;border:1px solid rgba(255,255,255,.18);
         background:rgba(20,20,32,.7);display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#a89bf0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
