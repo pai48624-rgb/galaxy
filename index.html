@@ -16,6 +16,8 @@
 <meta name="google-adsense-account" content="ca-pub-1632907475675251">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1632907475675251" crossorigin="anonymous"></script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23a89bf0' d='M12 2l2.6 7.4L22 12l-7.4 2.6L12 22l-2.6-7.4L2 12l7.4-2.6z'/%3E%3C/svg%3E">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#05050b">
 <style>
   :root{
     --bg:#05050b; --panel:rgba(12,12,20,.74); --line:rgba(255,255,255,.08);
@@ -412,6 +414,13 @@
            보여야 해서(요청사항). "지금 N명 접속 중"은 원래 있던 자리(#stage, AI 표시중 옆)에
            그대로 둠 — 이건 빼달라는 요청이 아니었음, 실수로 같이 옮겼던 걸 되돌림. -->
       <div id="visitBadge"><span id="visitCountText"></span></div>
+      <button type="button" id="pwaInstallBtn" class="topbar-social-btn" title="홈 화면에 추가" aria-label="홈 화면에 추가"
+        style="width:28px;height:28px;flex:none;border-radius:50%;border:1px solid rgba(255,255,255,.18);
+        background:rgba(20,20,32,.7);display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#a89bf0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 21h16"/>
+        </svg>
+      </button>
       <div id="topbarAuth" style="display:flex;align-items:center;gap:6px">
         <button type="button" class="topbar-social-btn" data-provider="kakao" title="카카오로 로그인" aria-label="카카오로 로그인"
           style="width:28px;height:28px;flex:none;border-radius:50%;border:0;background:#FEE500;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0">
@@ -736,6 +745,48 @@ const $ = s => document.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
 const priceClass = p => p === "무료" ? "free" : p === "유료" ? "paid" : p === "부분유료" ? "freemium" : "na";
 
+/* ---- PWA "홈 화면에 추가" — 요즘 사용자들은 주소창을 직접 치거나 검색하지 않고, 특히 모바일은
+   주소창이 잘 안 보이거나 입력이 불편해서 재방문 자체가 끊기는 경우가 많음. 로그인 아이콘
+   왼쪽에 아이콘 버튼 하나 둬서: Android/Chrome/Edge는 네이티브 설치 프롬프트, iOS Safari는
+   beforeinstallprompt 자체가 없어서 "공유 → 홈 화면에 추가" 안내, 그 외(예: 설치 자체를
+   지원 안 하는 데스크톱 브라우저)는 Ctrl+D 안내로 대체. ---- */
+let deferredInstallPrompt = null;
+const isIOSDevice = () => /iphone|ipad|ipod/i.test(navigator.userAgent);
+const isStandaloneDisplay = () => window.matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
+
+function refreshInstallBtn(){
+  const btn = $("#pwaInstallBtn");
+  if (btn) btn.hidden = isStandaloneDisplay();
+}
+
+window.addEventListener("beforeinstallprompt", (e) => {
+  e.preventDefault();
+  deferredInstallPrompt = e;
+});
+
+window.addEventListener("appinstalled", () => {
+  deferredInstallPrompt = null;
+  refreshInstallBtn();
+  toast(tr("pwaInstalledToast"));
+});
+
+$("#pwaInstallBtn")?.addEventListener("click", async () => {
+  if (deferredInstallPrompt){
+    deferredInstallPrompt.prompt();
+    try { await deferredInstallPrompt.userChoice; } catch (e) { /* 사용자가 그냥 닫은 경우 등 */ }
+    deferredInstallPrompt = null;
+  } else if (isIOSDevice()){
+    toast(tr("pwaIosHint"));
+  } else {
+    toast(tr("pwaFallbackHint"));
+  }
+});
+refreshInstallBtn();
+
+if ("serviceWorker" in navigator){
+  navigator.serviceWorker.register("/galaxy-sw.js").catch(() => {});
+}
+
 /* ---- 다국어(한국어/영어) — UI 뼈대 + 카테고리명 + 별자리명 + 요금제 라벨 + 별 이름(name_en) 전환.
    설명(description)은 번역 데이터가 없어 원문(한국어) 그대로 둠. ---- */
 let lang = localStorage.getItem("galaxyLang") || "ko";
@@ -807,6 +858,9 @@ const I18N = {
     comboBuildDesc: "별을 클릭하면 선택 표시가 뜨고, 2개 이상 고르면 조합 결과가 바로 나와요",
     myCombosViewLabel: "📂 저장한 조합 보기(이 브라우저에만 저장됨)",
     myCombosTitle: "📂 내가 저장한 조합", myCombosNone: "아직 저장한 조합이 없어요. 별을 골라서 저장해보세요.",
+    pwaInstallLabel: "홈 화면에 추가", pwaInstalledToast: "홈 화면에 추가됐어요 ✓",
+    pwaIosHint: "Safari 하단 공유 버튼(⬆️)을 누른 뒤 '홈 화면에 추가'를 선택해주세요",
+    pwaFallbackHint: "Ctrl+D(맥은 Cmd+D)를 눌러 즐겨찾기에 추가해보세요",
   },
   en: {
     subtitle: "Global AI Relationship Map", searchPh: "Search AI name…",
@@ -875,6 +929,9 @@ const I18N = {
     comboBuildDesc: "Click a star to select it — pick 2+ and the combo result shows up right away",
     myCombosViewLabel: "📂 View saved combos (saved only in this browser)",
     myCombosTitle: "📂 My saved combos", myCombosNone: "No saved combos yet — pick some stars and save one.",
+    pwaInstallLabel: "Add to Home Screen", pwaInstalledToast: "Added to your home screen ✓",
+    pwaIosHint: "Tap the Share button (⬆️) in Safari, then choose \"Add to Home Screen\"",
+    pwaFallbackHint: "Press Ctrl+D (Cmd+D on Mac) to bookmark this page",
   },
 };
 function tr(key, ...args){
@@ -3571,6 +3628,8 @@ function applyLanguage(){
   $("#suggestCancel").textContent = tr("cancel");
   $("#suggestSubmitBtn").textContent = tr("submit");
   $("#langBtn").textContent = tr("langBtnLabel");
+  const pwaBtnEl = $("#pwaInstallBtn");
+  if (pwaBtnEl){ pwaBtnEl.title = tr("pwaInstallLabel"); pwaBtnEl.setAttribute("aria-label", tr("pwaInstallLabel")); }
 
   renderCatTree();
   if (Graph){
