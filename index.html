@@ -264,6 +264,8 @@
   #boardList{max-height:42vh;overflow:auto;padding-right:4px}
   .board-post-del{background:none;border:0;color:var(--dim);font-size:11.5px;cursor:pointer;padding:0;margin-top:14px}
   .board-post-del:hover{color:#ff8a8a}
+  .board-post-report{background:none;border:0;color:var(--dim);font-size:11.5px;cursor:pointer;padding:0;margin-top:14px}
+  .board-post-report:hover{color:#ffb84d}
 
   /* ---- 게시판 전체화면 페이지: 왼쪽 목록 / 오른쪽 상세 2단 레이아웃 ---- */
   #boardPage{flex:1;min-width:0;display:flex;flex-direction:column;background:var(--bg)}
@@ -850,6 +852,8 @@ const I18N = {
     boardWriteToggle: "✎ 글쓰기",
     boardLoginFail: "로그인 실패 — 이메일·비밀번호를 확인해주세요",
     boardPostFail: "등록 실패 — 로그인 상태를 확인해주세요",
+    boardReport: "🚩 신고", boardReportNeedLogin: "신고하려면 먼저 로그인해주세요",
+    boardReportOk: "신고가 접수됐어요", boardReportDup: "이미 신고한 글이에요",
     comboBuildToggleLabel: "🔗 내 별 조합 만들기", comboBuildHint: "🔗 별을 2개 이상 클릭해서 골라보세요(최대 5개)",
     comboBuildMax: "최대 5개까지 고를 수 있어요", comboBuildClosest: "가장 비슷한 등록 조합",
     comboBuildNone: "아직 이 조합에 딱 맞는 등록된 결과가 없어요. 그래도 저장은 할 수 있어요.",
@@ -921,6 +925,8 @@ const I18N = {
     boardWriteToggle: "✎ Write",
     boardLoginFail: "Login failed — check your email/password",
     boardPostFail: "Couldn't post — please check you're logged in",
+    boardReport: "🚩 Report", boardReportNeedLogin: "Please log in before reporting",
+    boardReportOk: "Report submitted", boardReportDup: "You already reported this post",
     comboBuildToggleLabel: "🔗 Build my combo", comboBuildHint: "🔗 Click 2 or more stars to pick them (up to 5)",
     comboBuildMax: "You can pick up to 5", comboBuildClosest: "closest registered combo",
     comboBuildNone: "No registered combo matches this exactly yet. You can still save it.",
@@ -1502,7 +1508,20 @@ function renderBoardDetail(id){
     <div class="board-detail-title">${esc(p.title)}</div>
     <div class="board-detail-meta"><span class="board-detail-nick">${esc(p.author_name)}</span> · ${timeago(p.created_at)}</div>
     <div class="board-detail-body">${esc(p.body)}</div>
-    ${mine ? `<button type="button" class="board-post-del" data-del="${p.id}">${esc(tr("boardDelete"))}</button>` : ""}`;
+    ${mine ? `<button type="button" class="board-post-del" data-del="${p.id}">${esc(tr("boardDelete"))}</button>` : `<button type="button" class="board-post-report" data-report="${p.id}">${esc(tr("boardReport"))}</button>`}`;
+}
+async function reportBoardPost(id){
+  // 관리자 UI 없이도 애드센스 계정을 보호하기 위한 최소 장치: 같은 글이 서로 다른 사람에게
+  // 3번 신고당하면 DB 트리거(handle_board_report)가 자동으로 hidden=true 처리함.
+  if (!boardSession?.user){ toast(tr("boardReportNeedLogin")); return; }
+  try {
+    const { error } = await sb.from("board_reports").insert({ post_id: id });
+    if (error) throw error;
+    toast(tr("boardReportOk"));
+  } catch (e){
+    // unique_violation(post_id, reporter_id) — 이미 이 사람이 같은 글을 신고한 적 있음
+    toast(e?.code === "23505" ? tr("boardReportDup") : tr("boardReportOk"));
+  }
 }
 async function submitBoardPost(e){
   e.preventDefault();
@@ -3532,7 +3551,9 @@ function buildSidebar(){
   });
   $("#boardDetail").addEventListener("click", e => {
     const delBtn = e.target.closest("[data-del]");
-    if (delBtn) deleteBoardPost(+delBtn.dataset.del);
+    if (delBtn){ deleteBoardPost(+delBtn.dataset.del); return; }
+    const reportBtn = e.target.closest("[data-report]");
+    if (reportBtn) reportBoardPost(+reportBtn.dataset.report);
   });
   newBoardCaptcha();
   // 상단바 로그인 아이콘 — 페이지에 한 번만 존재해서(다시 그려지지 않음) 여기서 딱 한 번만

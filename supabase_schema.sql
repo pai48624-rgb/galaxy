@@ -266,3 +266,59 @@ begin
 end;
 $$;
 grant execute on function public.record_visit(text) to anon, authenticated;
+
+-- ────────────────────────────────────────────────────────────────────────────
+--  8. board_reports — 게시글 신고 (2026-09-29 추가)
+--     · 애드센스 계정 보호가 목적: 관리자 UI 없이도 신고 누적(3회)되면 자동으로 목록에서 숨김
+--     · 본인 신고 방지는 클라이언트에서 처리(자기 글엔 신고 버튼 자체를 안 보여줌)
+-- ────────────────────────────────────────────────────────────────────────────
+alter table public.board_posts add column if not exists report_count int not null default 0;
+alter table public.board_posts add column if not exists hidden boolean not null default false;
+
+create table if not exists public.board_reports (
+  id          bigint generated always as identity primary key,
+  post_id     bigint not null references public.board_posts(id) on delete cascade,
+  reporter_id uuid not null default auth.uid() references auth.users(id) on delete cascade,
+  reason      text,
+  created_at  timestamptz not null default now(),
+  constraint board_reports_one_per_user unique (post_id, reporter_id)
+);
+alter table public.board_reports enable row level security;
+drop policy if exists "insert board_reports own" on public.board_reports;
+create policy "insert board_reports own" on public.board_reports for insert
+  to authenticated
+  with check (auth.uid() = reporter_id);
+grant insert on public.board_reports to authenticated;
+grant usage, select on all sequences in schema public to authenticated;
+
+create or replace function public.handle_board_report()
+returns trigger
+language plpgsql
+security definer
+set search_path = public
+as $$
+declare
+  new_count int;
+begin
+  update public.board_posts
+     set report_count = report_count + 1
+   where id = new.post_id
+  returning report_count into new_count;
+
+  if new_count >= 3 then
+    update public.board_posts set hidden = true where id = new.post_id;
+  end if;
+
+  return new;
+end;
+$$;
+
+drop trigger if exists on_board_report_insert on public.board_reports;
+create trigger on_board_report_insert
+  after insert on public.board_reports
+  for each row execute function public.handle_board_report();
+
+-- 숨김 처리된 글은 작성자 본인에게만 계속 보이고, 그 외엔 목록/상세 모두에서 사라짐
+drop policy if exists "read board_posts" on public.board_posts;
+create policy "read board_posts" on public.board_posts for select
+  using (not hidden or auth.uid() = user_id);
