@@ -322,3 +322,52 @@ create trigger on_board_report_insert
 drop policy if exists "read board_posts" on public.board_posts;
 create policy "read board_posts" on public.board_posts for select
   using (not hidden or auth.uid() = user_id);
+
+-- ────────────────────────────────────────────────────────────────────────────
+--  9. board admin — 신고된 글을 사람이 직접 검토/복원/삭제 (2026-09-29 추가)
+--     · 사이트 소유자 계정(pai48624@gmail.com, Google 로그인) 하나만 admins에 등록
+-- ────────────────────────────────────────────────────────────────────────────
+create table if not exists public.admins (
+  user_id uuid primary key references auth.users(id) on delete cascade
+);
+alter table public.admins enable row level security;
+-- anon/authenticated에게 select/insert 권한을 안 줌 - 아래 security definer 함수로만 확인
+
+insert into public.admins (user_id) values ('1bac331f-35be-424c-b8d2-dfdeb9324719')
+  on conflict (user_id) do nothing;
+
+create or replace function public.is_board_admin()
+returns boolean
+language sql
+security definer
+set search_path = public
+stable
+as $$
+  select exists(select 1 from public.admins where user_id = auth.uid());
+$$;
+grant execute on function public.is_board_admin() to authenticated;
+
+-- 관리자는 숨김 처리된 글도 봐야 검토 가능
+drop policy if exists "read board_posts" on public.board_posts;
+create policy "read board_posts" on public.board_posts for select
+  using (not hidden or auth.uid() = user_id or public.is_board_admin());
+
+-- 관리자는 신고 누적을 초기화(숨김 해제)하거나 완전 삭제 가능
+drop policy if exists "delete board_posts own" on public.board_posts;
+create policy "delete board_posts own or admin" on public.board_posts for delete
+  to authenticated
+  using (auth.uid() = user_id or public.is_board_admin());
+
+drop policy if exists "admin update board_posts" on public.board_posts;
+create policy "admin update board_posts" on public.board_posts for update
+  to authenticated
+  using (public.is_board_admin())
+  with check (public.is_board_admin());
+grant update on public.board_posts to authenticated;
+
+-- 관리자는 신고 내역(몇 건인지 검토용)을 볼 수 있어야 함
+drop policy if exists "admin read board_reports" on public.board_reports;
+create policy "admin read board_reports" on public.board_reports for select
+  to authenticated
+  using (public.is_board_admin());
+grant select on public.board_reports to authenticated;
