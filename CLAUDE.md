@@ -53,3 +53,6 @@ AI 도구 관계형 지도 + 소셜로그인 + 실시간 방문자 채팅 + 커�
 - (10/03 배포) 노트북에서 wrangler 로그인(pai486@nate.com) 후 배포·push(75a271b). 배포 직전 다른 세션이 RSS·IndexNow(131d579, a8ae25e)를 먼저 배포해 둔 걸 발견 → rebase로 합쳐서 배포(덮어쓰기 없음). **배포 전 항상 `git fetch` + `wrangler pages deployment list`로 다른 세션 배포 확인할 것.**
   - 실서버 확인: /, /ai/, /ai/claude/, /category/…, /trend/, sitemap-ai·trend, robots, rss, IndexNow 키 파일 13개 200. 브라우저로 ?ai= 딥링크, 사이드바 링크, 게시판 탭 확인. 띠는 글이 없어 숨김 상태.
   - 남은 것: factory_tokens에 토큰 해시 insert(사용자) → 관리 화면 '발행'으로 첫 글 → 띠·/trend/<id> 실서버 확인. 서치콘솔·네이버에 sitemap-ai.xml·sitemap-trend.xml 제출(사용자).
+- (10/03 첫 글) 토큰 등록 확인 → 관리 화면과 같은 `site_publish.publish`로 `20261003_galaxy_top10` 발행 → https://aigalaxy-map.com/trend/7 (200, 트렌드 사이트맵 반영, 같은 external_id 재전송 시 dup=true). 실서버 메인 띠·게시판 탭에 표시 확인.
+  - IndexNow: `scripts/indexnow.py`가 sitemap-ai·trend도 실서버에서 읽게 수정(파이썬 기본 UA는 Cloudflare 403) → 빙·네이버 108개 접수(200). 새 글 생기면 다시 실행.
+  - 서치콘솔: sitemap-ai·trend 제출 직후 '가져올 수 없음' 표시 — 구글봇 UA로 200·XML 정상 확인함, 재확인 필요.
