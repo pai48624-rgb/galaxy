@@ -56,3 +56,4 @@ AI 도구 관계형 지도 + 소셜로그인 + 실시간 방문자 채팅 + 커�
 - (10/03 첫 글) 토큰 등록 확인 → 관리 화면과 같은 `site_publish.publish`로 `20261003_galaxy_top10` 발행 → https://aigalaxy-map.com/trend/7 (200, 트렌드 사이트맵 반영, 같은 external_id 재전송 시 dup=true). 실서버 메인 띠·게시판 탭에 표시 확인.
   - IndexNow: `scripts/indexnow.py`가 sitemap-ai·trend도 실서버에서 읽게 수정(파이썬 기본 UA는 Cloudflare 403) → 빙·네이버 108개 접수(200). 새 글 생기면 다시 실행.
   - 서치콘솔: sitemap-ai·trend 제출 직후 '가져올 수 없음' 표시 — 구글봇 UA로 200·XML 정상 확인함, 재확인 필요.
+- (10/03 메인 세션) /rss.xml을 워커가 처리: 정적 RSS(고정 페이지 9개)에 AI 트렌드 최신 글 30개를 맨 앞에 붙임(DB 실패 시 정적 그대로). 배포 전 deployment list로 75a271b 이후 다른 배포 없음 확인 후 배포, 실서버 /rss.xml 첫 항목 /trend/7·XML 정상, /, /trend/, /trend/7, sitemap-trend 200 확인.

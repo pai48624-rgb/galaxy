@@ -385,8 +385,36 @@ async function trendSitemap() {
     { headers: { "content-type": "application/xml; charset=utf-8", "cache-control": "public, max-age=3600" } });
 }
 
+// /rss.xml — 빌드 때 만든 정적 RSS(고정 페이지 10개, scripts/build-dist.mjs)에 AI 트렌드 최신 글을
+// 맨 앞에 붙여서 내보냄(2026-10-03 "새 글이 RSS에도 들어가게" - 네이버가 RSS로 새 글을 빨리 가져감).
+// DB를 못 읽으면 정적 RSS 그대로.
+function xmlEsc(s) {
+  return String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&apos;" }[c]));
+}
+
+async function rssFeed(request, env) {
+  const base = await env.ASSETS.fetch(new Request(new URL("/rss.xml", request.url)));
+  let xml = await base.text();
+  let posts = [];
+  try {
+    posts = await sbGet("board_posts?select=id,title,body,created_at&board=eq.ai_trend&hidden=eq.false&order=created_at.desc&limit=30");
+  } catch (e) { /* 정적 RSS만 */ }
+  if (posts.length) {
+    const items = posts.map((p) => {
+      const link = `${SITE}/trend/${p.id}`;
+      return `<item><title>${xmlEsc(p.title)}</title><link>${link}</link><guid isPermaLink="true">${link}</guid>` +
+        `<description>${xmlEsc(summary(p.body, 300))}</description><pubDate>${new Date(p.created_at).toUTCString()}</pubDate></item>`;
+    }).join("");
+    const newest = new Date(posts[0].created_at).toUTCString();
+    xml = xml.replace(/<lastBuildDate>[^<]*<\/lastBuildDate>/, `<lastBuildDate>${newest}</lastBuildDate>`)
+             .replace("<item>", items + "<item>");
+  }
+  return new Response(xml, { headers: { "content-type": "application/rss+xml; charset=utf-8", "cache-control": "public, max-age=600" } });
+}
+
 export default {
   async fetch(request, env) {
+    if (new URL(request.url).pathname === "/rss.xml") return rssFeed(request, env);
     const url = new URL(request.url);
     if (url.pathname === "/api/auth/naver/start") return naverStart(request, url, env);
     if (url.pathname === "/api/auth/naver/callback") return naverCallback(request, url, env);
