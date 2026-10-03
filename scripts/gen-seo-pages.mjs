@@ -146,7 +146,7 @@ export async function generateSeoPages() {
   const SEARCH_NAME = { gpt: "ChatGPT" };
   const displayName = (t) => {
     const main = SEARCH_NAME[t.slug] || t.name_en || t.name;
-    const ko = t.name_ko || (t.name !== main && !/^[ -]+$/.test(t.name) ? t.name : "");
+    const ko = t.name_ko || (t.name !== main && !/^[\x00-\x7F]+$/.test(t.name) ? t.name : "");
     return ko && ko !== main ? `${main} (${ko.replace(/^.*\((.*)\)$/, "$1")})` : main;
   };
 
@@ -208,7 +208,7 @@ export async function generateSeoPages() {
     const desc = t.desc_ko || t.description || "";
     const canonical = `${SITE}/ai/${t.slug}/`;
     writePage(`ai/${t.slug}`, shell({
-      title: `${SEARCH_NAME[t.slug] || t.name} — ${clip(desc || t.category, 40)} | 가격·대안·활용 조합`,
+      title: `${SEARCH_NAME[t.slug] || t.name_en || t.name} — ${clip(desc || t.category, 40)} | 가격·대안·활용 조합`,
       description: clip(`${t.name}: ${desc} 가격, 비슷한 AI, 함께 쓰면 좋은 조합까지 한 번에 정리.`, 155),
       canonical,
       jsonLd: { "@context": "https://schema.org", "@type": "SoftwareApplication", name: t.name, applicationCategory: t.category_en || t.category,
