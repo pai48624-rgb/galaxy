@@ -719,7 +719,7 @@
   <button id="fatalRetry" style="margin-top:14px;padding:8px 18px;border:1px solid var(--line);border-radius:8px;background:var(--purple2);color:#fff;font-size:13px;cursor:pointer">다시 시도</button>
 </div></div>
 
-<section id="seoList" class="sr-only" aria-label="전세계 AI 서비스 전체 목록"></section>
+<section id="seoList" class="sr-only" aria-label="전세계 AI 서비스 전체 목록"><p><a href="/ai/">AI 서비스 분야별 목록</a> · <a href="/trend/">AI 트렌드</a></p></section>
 
 <!-- 라이브러리: 같은 도메인 vendor/ 로 로드. (webpack 번들이라 HTML 인라인 시 publicPath 에러 → 반드시 외부 파일) -->
 <script src="vendor/three.min.js"></script>
@@ -869,7 +869,7 @@ const I18N = {
     altSecTitle: "대안 AI (비슷한 경쟁 제품)", altSecHint: "아래는 이 AI를 대체할 수 있는 비슷한 제품 목록입니다(함께 쓰는 조합 아님).",
     sponsToday: "오늘의 스폰서", privacyLink: "개인정보처리방침",
     labelsOn: "라벨 On", labelsOff: "라벨 Off",
-    boardOpenLabel: "🗨 커뮤니티 게시판", boardTitle: "🗨 커뮤니티 게시판", boardTrendTitle: "🔥 AI 트렌드", boardTrendFull: "📄 표·출처까지 전체 글 보기 →",
+    boardOpenLabel: "🗨 커뮤니티 게시판", boardTitle: "🗨 커뮤니티 게시판", boardTrendTitle: "🔥 AI 트렌드", boardTrendNone: "곧 AI 트렌드 글이 올라와요.", boardTrendFull: "📄 표·출처까지 전체 글 보기 →",
     boardSignupBtnLabel: "회원가입", boardLoginBtnLabel: "로그인",
     boardLoginHint: "처음이면 이메일·비밀번호 입력 후 '회원가입', 이미 가입했으면 '로그인'을 누르세요.",
     boardSocialGoogle: "Google로 계속하기", boardSocialKakao: "카카오로 계속하기",
@@ -945,7 +945,7 @@ const I18N = {
     altSecTitle: "Alternatives (similar competing products)", altSecHint: "These are products that could replace this one — not a combo to use together.",
     sponsToday: "Today's Sponsor", privacyLink: "Privacy Policy",
     labelsOn: "Labels On", labelsOff: "Labels Off",
-    boardOpenLabel: "🗨 Community Board", boardTitle: "🗨 Community Board", boardTrendTitle: "🔥 AI Trends", boardTrendFull: "📄 Read the full article (tables & sources) →",
+    boardOpenLabel: "🗨 Community Board", boardTitle: "🗨 Community Board", boardTrendTitle: "🔥 AI Trends", boardTrendNone: "AI trend articles are coming soon.", boardTrendFull: "📄 Read the full article (tables & sources) →",
     boardSignupBtnLabel: "Sign up", boardLoginBtnLabel: "Log in",
     boardLoginHint: "First time? Enter email + password and press \"Sign up\". Already registered? Press \"Log in\".",
     boardSocialGoogle: "Continue with Google", boardSocialKakao: "Continue with Kakao",
@@ -1162,6 +1162,10 @@ async function boot(attempt = 1){
     applyLanguage();
     initAdSense();
     initBoardAuth();
+    // /ai/<slug>/ 검색용 페이지의 "3D 지도에서 보기" 링크(?ai=slug)로 들어오면 그 AI를 바로 펼쳐 보여줌
+    const deepSlug = new URLSearchParams(location.search).get("ai");
+    const deepNode = deepSlug && nodes.find(n => n.slug === deepSlug);
+    if (deepNode) setTimeout(() => { focusNode(deepNode.id); openDrawer(deepNode); }, 800);
   } catch (e){
     const detail = (e && (e.message || e.error_description || e.hint || e.code)) || String(e);
     console.error("boot failed @ [" + phase + "] attempt " + attempt, e);
@@ -1534,16 +1538,24 @@ async function loadBoardPosts(){
   $("#boardList").innerHTML = `<div class="rv-hint" style="padding:11px 12px">${tr("loadingReviews")}</div>`;
   try {
     const from = boardPage * BOARD_PAGE_SIZE, to = from + BOARD_PAGE_SIZE - 1;
-    const { data, error, count } = await sb.from("board_posts")
-      .select("id,user_id,author_name,title,body,created_at", { count: "exact" })
-      .eq("board", boardKind)
-      .order("created_at", { ascending: false }).range(from, to);
+    const query = (withBoard) => {
+      let q = sb.from("board_posts").select("id,user_id,author_name,title,body,created_at", { count: "exact" });
+      if (withBoard) q = q.eq("board", boardKind);
+      return q.order("created_at", { ascending: false }).range(from, to);
+    };
+    let { data, error, count } = await query(true);
+    // DB에 board 칼럼이 아직 없을 때(scripts/migrate_board_ai_trend.sql 실행 전): 커뮤니티는 예전처럼 전체 목록,
+    // AI 트렌드는 빈 목록 — 배포 순서가 바뀌어도 커뮤니티 게시판이 비지 않게.
+    if (error && error.code === "42703"){ // undefined_column
+      if (boardKind !== "free"){ data = []; count = 0; error = null; }
+      else ({ data, error, count } = await query(false));
+    }
     if (error) throw error;
     boardPosts = data || [];
     boardTotalCount = count || 0;
     $("#boardList").innerHTML = (boardPosts.length
       ? boardPosts.map(boardRowHTML).join("")
-      : `<div class="rv-hint" style="padding:11px 12px">${tr("boardNone")}</div>`) + boardPagerHTML();
+      : `<div class="rv-hint" style="padding:11px 12px">${tr(boardKind === "ai_trend" ? "boardTrendNone" : "boardNone")}</div>`) + boardPagerHTML();
     if (boardActiveId != null && boardPosts.some(p => p.id === boardActiveId)) renderBoardDetail(boardActiveId);
     else { boardActiveId = null; $("#boardDetail").innerHTML = `<div class="rv-hint" id="lblBoardDetailEmpty">${tr("boardDetailEmpty")}</div>`; }
   } catch (e){
@@ -4155,11 +4167,15 @@ function buildSponsorSlot(sponsors){
 }
 
 /* ---- SEO / 스크린리더용 텍스트 목록 (화면엔 안 보이지만 DOM 유지) ---- */
-function buildSeoList(){
-  $("#seoList").innerHTML = cats.map(({ c }) => {
+async function buildSeoList(){
+  // 검색용 페이지(/ai/<slug>/, 빌드 때 scripts/gen-seo-pages.mjs 가 만듦)가 있는 AI는 그 페이지로,
+  // 없는 AI는 예전처럼 공식 사이트로 링크
+  let pages = new Set();
+  try { const r = await fetch("data/ai_pages.json"); if (r.ok) pages = new Set(await r.json()); } catch (e){}
+  $("#seoList").innerHTML = `<p><a href="/ai/">AI 서비스 분야별 목록</a> · <a href="/trend/">AI 트렌드</a></p>` + cats.map(({ c }) => {
     const items = nodes.filter(n => n.category === c).sort((a,b) => a.name.localeCompare(b.name, "ko"));
     return `<div class="seo-cat" data-cat="${esc(c)}"><h2>${esc(c)} (${items.length})</h2><ul>${
-      items.map(n => `<li><a href="${esc(n.url || "#")}">${esc(n.name)}</a>${n.name_en && n.name_en !== n.name ? " (" + esc(n.name_en) + ")" : ""}${n.description ? " — " + esc(n.description) : ""}</li>`).join("")
+      items.map(n => `<li><a href="${pages.has(n.slug) ? "/ai/" + esc(n.slug) + "/" : esc(n.url || "#")}">${esc(n.name)}</a>${n.name_en && n.name_en !== n.name ? " (" + esc(n.name_en) + ")" : ""}${n.description ? " — " + esc(n.description) : ""}</li>`).join("")
     }</ul></div>`;
   }).join("");
 }
