@@ -255,7 +255,34 @@ function json(obj, status = 200) {
   return new Response(JSON.stringify(obj), { status, headers: { "content-type": "application/json; charset=utf-8", ...CORS } });
 }
 
-async function receivePost(request) {
+// 이미 올라간 글 갱신 ("update": true, 같은 external_id) — 2026-10-03 글 형식을 바꾼 뒤 /trend/7 을 새 글로 바꾸려고 추가.
+// DB 함수(factory_post)를 고치지 않고, 네이버 로그인용으로 이미 있는 SUPABASE_SERVICE_ROLE_KEY 로
+// ① 토큰 해시가 factory_tokens 에 있는지 ② 같은 external_id 의 ai_trend 글을 찾아 제목·본문만 바꿈.
+// 글이 없으면 null 을 돌려줘서 일반 등록으로 넘어감.
+async function sha256hex(s) {
+  const d = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(s));
+  return [...new Uint8Array(d)].map((b) => b.toString(16).padStart(2, "0")).join("");
+}
+
+async function updatePost(token, p, env) {
+  const key = env?.SUPABASE_SERVICE_ROLE_KEY;
+  if (!key) return json({ ok: false, msg: "갱신 기능 미설정 (SUPABASE_SERVICE_ROLE_KEY 없음)" }, 500);
+  const h = { apikey: key, Authorization: `Bearer ${key}`, "content-type": "application/json" };
+  const ok = await (await fetch(`${UPSTREAM}/rest/v1/factory_tokens?select=token_hash&token_hash=eq.${await sha256hex(token)}`, { headers: h })).json();
+  if (!Array.isArray(ok) || !ok.length) return json({ ok: false, msg: "토큰이 맞지 않음" }, 401);
+  const found = await (await fetch(`${UPSTREAM}/rest/v1/board_posts?select=id&board=eq.ai_trend&external_id=eq.${encodeURIComponent(p.external_id)}`, { headers: h })).json();
+  if (!Array.isArray(found) || !found.length) return null;
+  const id = found[0].id;
+  const r = await fetch(`${UPSTREAM}/rest/v1/board_posts?id=eq.${id}`, {
+    method: "PATCH", headers: { ...h, Prefer: "return=minimal" },
+    body: JSON.stringify({ title: String(p.title).slice(0, 120), body: p.body_text, body_html: p.body_html || null,
+      tags: Array.isArray(p.tags) ? p.tags.slice(0, 15) : [] }),
+  });
+  if (!r.ok) return json({ ok: false, msg: `갱신 실패 ${r.status}: ${(await r.text()).slice(0, 150)}` }, 400);
+  return json({ ok: true, id, updated: true, url: `${SITE}/trend/${id}` });
+}
+
+async function receivePost(request, env) {
   if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: CORS });
   if (request.method !== "POST") return json({ ok: false, msg: "POST only" }, 405);
   const token = (request.headers.get("Authorization") || "").replace(/^Bearer\s+/i, "").trim();
@@ -263,6 +290,10 @@ async function receivePost(request) {
   let p;
   try { p = await request.json(); } catch (e) { return json({ ok: false, msg: "JSON 형식 아님" }, 400); }
   if (!p?.title || !p?.body_text) return json({ ok: false, msg: "title, body_text 필요" }, 400);
+  if (p.update && p.external_id) {
+    const res = await updatePost(token, p, env);
+    if (res) return res; // 없는 글이면 아래에서 새로 등록
+  }
   const r = await fetch(`${UPSTREAM}/rest/v1/rpc/factory_post`, {
     method: "POST",
     headers: { apikey: ANON_KEY, Authorization: `Bearer ${ANON_KEY}`, "content-type": "application/json" },
@@ -418,7 +449,7 @@ export default {
     const url = new URL(request.url);
     if (url.pathname === "/api/auth/naver/start") return naverStart(request, url, env);
     if (url.pathname === "/api/auth/naver/callback") return naverCallback(request, url, env);
-    if (url.pathname === "/api/posts") return receivePost(request);
+    if (url.pathname === "/api/posts") return receivePost(request, env);
     if (url.pathname === "/trend" || url.pathname === "/trend/") return trendList();
     const tm = url.pathname.match(/^\/trend\/(\d+)\/?$/);
     if (tm) return trendPost(tm[1]);
