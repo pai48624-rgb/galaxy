@@ -57,3 +57,4 @@ AI 도구 관계형 지도 + 소셜로그인 + 실시간 방문자 채팅 + 커�
   - IndexNow: `scripts/indexnow.py`가 sitemap-ai·trend도 실서버에서 읽게 수정(파이썬 기본 UA는 Cloudflare 403) → 빙·네이버 108개 접수(200). 새 글 생기면 다시 실행.
   - 서치콘솔: sitemap-ai·trend 제출 직후 '가져올 수 없음' 표시 — 구글봇 UA로 200·XML 정상 확인함, 재확인 필요.
 - (10/03 메인 세션) /rss.xml을 워커가 처리: 정적 RSS(고정 페이지 9개)에 AI 트렌드 최신 글 30개를 맨 앞에 붙임(DB 실패 시 정적 그대로). 배포 전 deployment list로 75a271b 이후 다른 배포 없음 확인 후 배포, 실서버 /rss.xml 첫 항목 /trend/7·XML 정상, /, /trend/, /trend/7, sitemap-trend 200 확인.
+- (10/03) `/api/posts`에 `"update": true` → 같은 external_id 글의 제목·본문 PATCH (워커가 SUPABASE_SERVICE_ROLE_KEY로 토큰 해시 확인, DB 함수 변경 없음). 공장 `site_publish.publish(..., update=True)`로 /trend/7을 새 형식(로고 10·사진 2·5천자대)으로 교체함. 사진은 공장 쪽에서 스톡 출처만 씀(위키미디어 군 행사 사진이 한때 들어갔다가 교체).
