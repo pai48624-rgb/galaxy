@@ -43,3 +43,10 @@ AI 도구 관계형 지도 + 소셜로그인 + 실시간 방문자 채팅 + 커�
 - 가짜 Supabase 응답으로 워커 시험함(목록·글·404·사이트맵·토큰 맞음/틀림/없음, script·onerror 제거, 390px 폭 가로 넘침 없음). 실제 DB·실서버에서는 아직 확인 못 함.
 - **남은 순서**: ① SQL 실행 → ② 토큰 만들어 해시 등록 + nas `.env`에 `GALAXY_POST_URL=https://aigalaxy-map.com/api/posts`·`GALAXY_POST_TOKEN` → ③ 배포(`npm run deploy`, wrangler 로그인 필요) → ④ 관리 화면 '발행'으로 재고 9개 중 하나 등록해 실서버 확인 → ⑤ 서치콘솔·네이버 서치어드바이저에 sitemap-trend.xml 제출.
 - 측정(10/03): 방문 기록 `site_visit_log` 9/17~10/3 총 137회(하루 1~30회). 메인 index.html 1.2MB 중 검색엔진이 읽는 글자 약 1,100자, JS 830KB, AI별 개별 페이지 없음 → 유입이 없는 가장 큰 원인으로 판단.
+- (10/03 2차) 검색용 정적 페이지: `scripts/gen-seo-pages.mjs`(build-dist가 부름) → `/ai/<slug>/` 74개, `/category/<slug>/` 21개, `/ai/` 허브, `sitemap-ai.xml`, `dist/data/ai_pages.json`. 후보 = 정보검증·TOP10·조합 3개+ (97개) 중 본문 1000자 이상만. 데이터상 검증된 AI는 747개 중 42개뿐이라 전부 만들면 얇은 대량 페이지 위험 → 기준 낮추지 말 것.
+  - 메인: `?ai=<slug>` 딥링크로 상세 열기, `#seoList`(sr-only) 링크를 새 페이지로. 게시판은 `board` 칼럼 없으면(42703) 커뮤니티는 전체 목록 → SQL·배포 순서 무관.
+  - 시험: Node 시험 서버(워커+dist)로 주소 10개 응답, 내부 링크 2079개 깨짐 0, 브라우저로 딥링크·게시판 탭 확인. `wrangler pages dev`는 이 노트북에서 workerd "write EOF"로 실패.
+  - ⚠ 로컬 시험 중 실서버 Supabase를 써서 `site_visit_log` 방문수가 몇 회(138→140+) 늘었음.
+  - 토큰: nas `.env`에 GALAXY_POST_URL·TOKEN 저장됨, DB에 넣을 sha256 = de1fd73a4424b6a31e3ed148e4329cb6e1529328b20ae71e7082ef1d017e4673
+  - 메인 화면 시안(사이드바 'AI 트렌드'·'분야별 AI 목록' 링크 + 지도 아래 요즘 뜨는 AI 띠): `design/mockup_main_trend_links_20261003.png` — **미적용, 사용자 결정 대기**
+  - DB SQL 실행은 Supabase MCP로 시도했으나 승인 후에도 auto 모드 권한 검사가 막음 → 사용자가 SQL Editor에서 직접 실행.
