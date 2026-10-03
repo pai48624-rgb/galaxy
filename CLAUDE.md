@@ -50,3 +50,6 @@ AI 도구 관계형 지도 + 소셜로그인 + 실시간 방문자 채팅 + 커�
   - 토큰: nas `.env`에 GALAXY_POST_URL·TOKEN 저장됨, DB에 넣을 sha256 = de1fd73a4424b6a31e3ed148e4329cb6e1529328b20ae71e7082ef1d017e4673
   - 메인 화면: 사용자 승인(10/03) 후 적용 — 사이드바 '🔥 AI 트렌드 NEW'·'📚 분야별 AI 목록' 링크 + 지도 아래 `#trendStrip`(AI 트렌드 최신 3개, 글 없으면 숨김, 채팅창 열리면 CSS `:has`로 숨김, 900px 이하 숨김). 캡처 `design/main_trend_strip_applied_20261003.png`. 브라우저 시험 시 사이트 서비스워커 때문에 요청 가로채기가 안 보이니 service_workers='block'.
   - DB SQL: auto 모드가 Claude 실행을 막아 사용자가 SQL Editor에서 실행(10/03), 칼럼·제약·정책·함수·틀린 토큰 거부·토큰 표 비공개 확인함. 토큰 해시 insert 줄은 주석이라 미실행 → 별도 실행 필요.
+- (10/03 배포) 노트북에서 wrangler 로그인(pai486@nate.com) 후 배포·push(75a271b). 배포 직전 다른 세션이 RSS·IndexNow(131d579, a8ae25e)를 먼저 배포해 둔 걸 발견 → rebase로 합쳐서 배포(덮어쓰기 없음). **배포 전 항상 `git fetch` + `wrangler pages deployment list`로 다른 세션 배포 확인할 것.**
+  - 실서버 확인: /, /ai/, /ai/claude/, /category/…, /trend/, sitemap-ai·trend, robots, rss, IndexNow 키 파일 13개 200. 브라우저로 ?ai= 딥링크, 사이드바 링크, 게시판 탭 확인. 띠는 글이 없어 숨김 상태.
+  - 남은 것: factory_tokens에 토큰 해시 insert(사용자) → 관리 화면 '발행'으로 첫 글 → 띠·/trend/<id> 실서버 확인. 서치콘솔·네이버에 sitemap-ai.xml·sitemap-trend.xml 제출(사용자).
