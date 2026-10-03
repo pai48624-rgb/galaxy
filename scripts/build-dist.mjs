@@ -23,6 +23,7 @@ const ROOT_FILES = [
   "naverf7a773b489c1dab0e775a86c8ababb3a.html",
   "manifest.webmanifest",
   "galaxy-sw.js",
+  "3836b201693766a26e82d00418c13d65.txt", // IndexNow 키 파일(scripts/indexnow.py, 2026-10-03)
 ];
 
 const DATA_FILES = [
