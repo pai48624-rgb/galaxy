@@ -233,11 +233,168 @@ const SITE_VERIFICATION_FILES = {
     "naver-site-verification: naverf7a773b489c1dab0e775a86c8ababb3a.html",
 };
 
+// ==== §TREND: AI 트렌드 게시판 (2026-10-03) ====
+// 콘텐츠 공장(노트북)이 POST /api/posts 로 글을 보내면 DB 함수 factory_post 가 토큰(해시 비교)을
+// 확인하고 board='ai_trend' 로 운영자 글을 넣음 — 워커엔 비밀키가 필요 없음.
+// 게시판 화면(index.html)은 JS로 그려서 검색엔진이 글을 못 읽으므로, 글마다 /trend/<id> 를
+// 워커가 서버에서 완성된 HTML로 만들어 줌 + /sitemap-trend.xml 로 색인 요청.
+const SITE = "https://aigalaxy-map.com";
+const TREND_HEADERS = { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=300" };
+
+function escHtml(s) {
+  return String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+}
+
+async function sbGet(path) {
+  const r = await fetch(`${UPSTREAM}/rest/v1/${path}`, { headers: { apikey: ANON_KEY, Authorization: `Bearer ${ANON_KEY}` } });
+  if (!r.ok) throw new Error(`supabase ${r.status}`);
+  return r.json();
+}
+
+function json(obj, status = 200) {
+  return new Response(JSON.stringify(obj), { status, headers: { "content-type": "application/json; charset=utf-8", ...CORS } });
+}
+
+async function receivePost(request) {
+  if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: CORS });
+  if (request.method !== "POST") return json({ ok: false, msg: "POST only" }, 405);
+  const token = (request.headers.get("Authorization") || "").replace(/^Bearer\s+/i, "").trim();
+  if (!token) return json({ ok: false, msg: "토큰 없음" }, 401);
+  let p;
+  try { p = await request.json(); } catch (e) { return json({ ok: false, msg: "JSON 형식 아님" }, 400); }
+  if (!p?.title || !p?.body_text) return json({ ok: false, msg: "title, body_text 필요" }, 400);
+  const r = await fetch(`${UPSTREAM}/rest/v1/rpc/factory_post`, {
+    method: "POST",
+    headers: { apikey: ANON_KEY, Authorization: `Bearer ${ANON_KEY}`, "content-type": "application/json" },
+    body: JSON.stringify({
+      p_token: token, p_external_id: p.external_id || null, p_title: String(p.title).slice(0, 120),
+      p_body: p.body_text, p_body_html: p.body_html || null, p_tags: Array.isArray(p.tags) ? p.tags.slice(0, 15) : [],
+    }),
+  });
+  const res = await r.json().catch(() => ({}));
+  if (!r.ok) {
+    const bad = String(res?.message || "").includes("bad_token");
+    return json({ ok: false, msg: bad ? "토큰이 맞지 않음" : (res?.message || `등록 실패 ${r.status}`) }, bad ? 401 : 400);
+  }
+  return json({ ok: true, id: res.id, dup: !!res.dup, url: `${SITE}/trend/${res.id}` });
+}
+
+function fmtDate(iso) {
+  const d = new Date(new Date(iso).getTime() + 9 * 3600 * 1000); // 한국 시간
+  return `${d.getUTCFullYear()}.${String(d.getUTCMonth() + 1).padStart(2, "0")}.${String(d.getUTCDate()).padStart(2, "0")}`;
+}
+
+function summary(body, n = 150) {
+  const s = String(body || "").replace(/\s+/g, " ").trim();
+  return s.length > n ? s.slice(0, n - 1) + "…" : s;
+}
+
+function trendShell({ title, description, canonical, body, jsonLd }) {
+  return `<!doctype html>
+<html lang="ko"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>${escHtml(title)}</title>
+<meta name="description" content="${escHtml(description)}">
+<link rel="canonical" href="${canonical}">
+<meta property="og:type" content="article"><meta property="og:site_name" content="AI 성단 지도">
+<meta property="og:title" content="${escHtml(title)}"><meta property="og:description" content="${escHtml(description)}">
+<meta property="og:url" content="${canonical}">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23a89bf0' d='M12 2l2.6 7.4L22 12l-7.4 2.6L12 22l-2.6-7.4L2 12l7.4-2.6z'/%3E%3C/svg%3E">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1632907475675251" crossorigin="anonymous"></script>
+${jsonLd ? `<script type="application/ld+json">${JSON.stringify(jsonLd).replace(/</g, "\\u003c")}</script>` : ""}
+<style>
+:root{--bg:#f7f7fb;--card:#fff;--ink:#1d1d2b;--dim:#6b6b80;--line:#e3e3ee;--acc:#5b4bd6}
+@media (prefers-color-scheme:dark){:root{--bg:#0d0d18;--card:#161626;--ink:#e8e8f2;--dim:#9a9ab0;--line:#2a2a40;--acc:#9d8cff}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;line-height:1.7}
+header{border-bottom:1px solid var(--line);background:var(--card)}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px}
+.top{display:flex;align-items:center;gap:14px;height:56px}
+.top a{color:var(--ink);text-decoration:none;font-weight:700}.top .sp{flex:1}.top .lnk{font-weight:500;color:var(--dim);font-size:14px}
+main{padding:28px 0 60px}
+h1{font-size:26px;line-height:1.35;margin:0 0 8px}
+.meta{color:var(--dim);font-size:13px;margin-bottom:24px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:24px 0}.tags span{font-size:12px;color:var(--acc);border:1px solid var(--line);border-radius:999px;padding:2px 10px}
+article{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px 22px;overflow-wrap:anywhere}
+article p,article li{color:var(--ink)!important}article table{width:100%;border-collapse:collapse;font-size:14px;display:block;overflow-x:auto}
+article th,article td{border:1px solid var(--line);padding:6px 8px}article img{max-width:100%;height:auto}
+article h2{color:var(--ink)}
+.list{list-style:none;padding:0;margin:0}.list li{border-bottom:1px solid var(--line)}
+.list a{display:block;padding:16px 4px;color:var(--ink);text-decoration:none}.list a:hover b{color:var(--acc)}
+.list b{display:block;font-size:17px}.list small{color:var(--dim);font-size:13px}
+.more{margin-top:36px}.more h2{font-size:18px}
+.cta{display:inline-block;margin-top:28px;background:var(--acc);color:#fff;text-decoration:none;padding:10px 18px;border-radius:10px;font-weight:700}
+footer{color:var(--dim);font-size:12px;text-align:center;padding:24px 0}footer a{color:var(--dim)}
+</style></head><body>
+<header><div class="wrap top"><a href="/">✦ AI 성단 지도</a><span class="sp"></span><a class="lnk" href="/trend/">AI 트렌드</a><a class="lnk" href="/">3D 지도</a></div></header>
+<main class="wrap">${body}</main>
+<footer class="wrap">© AI 성단 지도 · <a href="/privacy">개인정보처리방침</a></footer>
+</body></html>`;
+}
+
+async function trendList() {
+  let posts = [];
+  try {
+    posts = await sbGet("board_posts?select=id,title,body,created_at&board=eq.ai_trend&hidden=eq.false&order=created_at.desc&limit=100");
+  } catch (e) { /* 목록 실패해도 빈 화면으로 */ }
+  const items = posts.map((p) => `<li><a href="/trend/${p.id}"><b>${escHtml(p.title)}</b><small>${fmtDate(p.created_at)} · ${escHtml(summary(p.body, 90))}</small></a></li>`).join("");
+  return new Response(trendShell({
+    title: "AI 트렌드 — 요즘 뜨는 AI 도구·순위·종류 정리 | AI 성단 지도",
+    description: "요즘 많이 쓰는 AI 도구 순위, 종류별 AI 정리, 새로 나온 AI 소식을 누구나 읽기 쉽게 정리합니다.",
+    canonical: `${SITE}/trend/`,
+    body: `<h1>AI 트렌드</h1><div class="meta">요즘 뜨는 AI 도구·순위·종류를 쉽게 정리한 글</div>
+<ul class="list">${items || "<li style='padding:16px 4px;color:var(--dim)'>아직 글이 없어요.</li>"}</ul>
+<a class="cta" href="/">✦ 3D 지도에서 AI 731개 둘러보기</a>`,
+  }), { headers: TREND_HEADERS });
+}
+
+async function trendPost(id) {
+  let p, others = [];
+  try {
+    [p] = await sbGet(`board_posts?select=id,title,body,body_html,tags,created_at&board=eq.ai_trend&hidden=eq.false&id=eq.${id}`);
+    others = await sbGet(`board_posts?select=id,title,created_at&board=eq.ai_trend&hidden=eq.false&id=neq.${id}&order=created_at.desc&limit=6`);
+  } catch (e) { /* 아래 404 처리 */ }
+  if (!p) return new Response(trendShell({ title: "글을 찾을 수 없어요 | AI 성단 지도", description: "", canonical: `${SITE}/trend/`,
+    body: `<h1>글을 찾을 수 없어요</h1><a class="cta" href="/trend/">AI 트렌드 목록으로</a>` }), { status: 404, headers: TREND_HEADERS });
+  const canonical = `${SITE}/trend/${p.id}`;
+  // body_html 은 DB 정책상 운영자만 넣을 수 있음(factory_post). 그래도 스크립트·이벤트 속성은 걷어냄.
+  const content = p.body_html
+    ? String(p.body_html).replace(/<script[\s\S]*?<\/script>/gi, "").replace(/\son\w+\s*=\s*("[^"]*"|'[^']*'|[^\s>]+)/gi, "")
+    : `<div style="white-space:pre-wrap">${escHtml(p.body)}</div>`;
+  const tags = (p.tags || []).map((t) => `<span>#${escHtml(t)}</span>`).join("");
+  const more = others.map((o) => `<li><a href="/trend/${o.id}"><b>${escHtml(o.title)}</b><small>${fmtDate(o.created_at)}</small></a></li>`).join("");
+  return new Response(trendShell({
+    title: `${p.title} | AI 성단 지도`,
+    description: summary(p.body),
+    canonical,
+    jsonLd: { "@context": "https://schema.org", "@type": "Article", headline: p.title, datePublished: p.created_at,
+      author: { "@type": "Organization", name: "AI 성단 지도" }, mainEntityOfPage: canonical },
+    body: `<h1>${escHtml(p.title)}</h1><div class="meta">AI 성단 지도 · ${fmtDate(p.created_at)}</div>
+<article>${content}</article>
+${tags ? `<div class="tags">${tags}</div>` : ""}
+<a class="cta" href="/">✦ 3D 지도에서 AI 731개 둘러보기</a>
+${more ? `<section class="more"><h2>함께 보면 좋은 글</h2><ul class="list">${more}</ul></section>` : ""}`,
+  }), { headers: TREND_HEADERS });
+}
+
+async function trendSitemap() {
+  let posts = [];
+  try { posts = await sbGet("board_posts?select=id,created_at&board=eq.ai_trend&hidden=eq.false&order=created_at.desc&limit=5000"); } catch (e) {}
+  const urls = [`<url><loc>${SITE}/trend/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>`]
+    .concat(posts.map((p) => `<url><loc>${SITE}/trend/${p.id}</loc><lastmod>${String(p.created_at).slice(0, 10)}</lastmod><priority>0.7</priority></url>`));
+  return new Response(`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join("\n")}\n</urlset>\n`,
+    { headers: { "content-type": "application/xml; charset=utf-8", "cache-control": "public, max-age=3600" } });
+}
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     if (url.pathname === "/api/auth/naver/start") return naverStart(request, url, env);
     if (url.pathname === "/api/auth/naver/callback") return naverCallback(request, url, env);
+    if (url.pathname === "/api/posts") return receivePost(request);
+    if (url.pathname === "/trend" || url.pathname === "/trend/") return trendList();
+    const tm = url.pathname.match(/^\/trend\/(\d+)\/?$/);
+    if (tm) return trendPost(tm[1]);
+    if (url.pathname === "/sitemap-trend.xml") return trendSitemap();
     if (url.pathname === "/api" || url.pathname.startsWith("/api/")) return proxy(request, url);
     if (SITE_VERIFICATION_FILES[url.pathname]) {
       return new Response(SITE_VERIFICATION_FILES[url.pathname], {

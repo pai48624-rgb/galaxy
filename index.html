@@ -340,6 +340,7 @@
   .board-detail-meta{font-size:12px;color:var(--dim);margin-top:6px}
   .board-detail-nick{font-weight:700;color:var(--ink)}
   /* 긴 글(공백 없는 URL 등)이 화면 밖으로 삐져나가 안 보이던 문제 — anywhere로 강제 줄바꿈 */
+  .board-trend-link{display:inline-block;margin-top:16px;padding:8px 14px;border-radius:9px;background:var(--purple2);color:#fff;font-size:13px;font-weight:700;text-decoration:none}
   .board-detail-body{font-size:14px;color:#d6d6e4;line-height:1.7;margin-top:18px;white-space:pre-wrap;overflow-wrap:anywhere}
   @media (max-width:760px){
     .bp-head{padding:11px 14px;gap:8px}
@@ -603,9 +604,14 @@
         <!-- 지금은 "게시판" 하나뿐이지만 나중에 유형별로 몇 개 더 추가될 예정이라 미리 자리를 만들어둠 —
              목록을 화면 맨 왼쪽에 바로 붙이지 않고 이 레일 옆으로 옮긴 이유. -->
         <div class="bp-rail">
-          <button type="button" class="bp-rail-item active" title="커뮤니티 게시판" aria-current="page">
+          <button type="button" class="bp-rail-item active" data-board="free" title="커뮤니티 게시판" aria-current="page">
             <span class="bp-rail-icon">🗨</span>
             <span class="bp-rail-label">게시판</span>
+          </button>
+          <!-- 운영자 글(콘텐츠 공장 → POST /api/posts). 글마다 /trend/<id> 검색용 페이지가 따로 있음 -->
+          <button type="button" class="bp-rail-item" data-board="ai_trend" title="AI 트렌드">
+            <span class="bp-rail-icon">🔥</span>
+            <span class="bp-rail-label">AI 트렌드</span>
           </button>
         </div>
         <div class="bp-list-pane">
@@ -863,7 +869,7 @@ const I18N = {
     altSecTitle: "대안 AI (비슷한 경쟁 제품)", altSecHint: "아래는 이 AI를 대체할 수 있는 비슷한 제품 목록입니다(함께 쓰는 조합 아님).",
     sponsToday: "오늘의 스폰서", privacyLink: "개인정보처리방침",
     labelsOn: "라벨 On", labelsOff: "라벨 Off",
-    boardOpenLabel: "🗨 커뮤니티 게시판", boardTitle: "🗨 커뮤니티 게시판",
+    boardOpenLabel: "🗨 커뮤니티 게시판", boardTitle: "🗨 커뮤니티 게시판", boardTrendTitle: "🔥 AI 트렌드", boardTrendFull: "📄 표·출처까지 전체 글 보기 →",
     boardSignupBtnLabel: "회원가입", boardLoginBtnLabel: "로그인",
     boardLoginHint: "처음이면 이메일·비밀번호 입력 후 '회원가입', 이미 가입했으면 '로그인'을 누르세요.",
     boardSocialGoogle: "Google로 계속하기", boardSocialKakao: "카카오로 계속하기",
@@ -939,7 +945,7 @@ const I18N = {
     altSecTitle: "Alternatives (similar competing products)", altSecHint: "These are products that could replace this one — not a combo to use together.",
     sponsToday: "Today's Sponsor", privacyLink: "Privacy Policy",
     labelsOn: "Labels On", labelsOff: "Labels Off",
-    boardOpenLabel: "🗨 Community Board", boardTitle: "🗨 Community Board",
+    boardOpenLabel: "🗨 Community Board", boardTitle: "🗨 Community Board", boardTrendTitle: "🔥 AI Trends", boardTrendFull: "📄 Read the full article (tables & sources) →",
     boardSignupBtnLabel: "Sign up", boardLoginBtnLabel: "Log in",
     boardLoginHint: "First time? Enter email + password and press \"Sign up\". Already registered? Press \"Log in\".",
     boardSocialGoogle: "Continue with Google", boardSocialKakao: "Continue with Kakao",
@@ -1445,7 +1451,7 @@ function updateBoardAuthUI(){
   // "글쓰기" 버튼 자체를 로그인했을 때만 보이게 함 — 이메일 회원가입 폼 없이도 로그인 안 된
   // 사람은 애초에 글쓰기 창을 열 수가 없어짐(불필요한 로그인 폼을 다이얼로그 안에 또 둘 필요 없음).
   const writeBtn = $("#boardWriteOpen");
-  if (writeBtn) writeBtn.hidden = !loggedIn;
+  if (writeBtn) writeBtn.hidden = !loggedIn || boardKind === "ai_trend";
   refreshBoardAdminUI(loggedIn);
   const loggedInEl = $("#boardAuthLoggedIn");
   if (!loggedInEl) return;
@@ -1505,6 +1511,20 @@ function newBoardCaptcha(){
 // 피드백을 받아 이렇게 바꿈(이메일함/포럼에서 흔히 쓰는 목록-상세 구조).
 let boardPosts = [];
 let boardActiveId = null;
+// 왼쪽 레일에서 고른 게시판: "free"(커뮤니티) / "ai_trend"(운영자 글, 글쓰기 버튼 없음)
+let boardKind = "free";
+function setBoardKind(kind){
+  boardKind = kind;
+  boardPage = 0; boardActiveId = null;
+  document.querySelectorAll(".bp-rail-item[data-board]").forEach(b => {
+    const on = b.dataset.board === kind;
+    b.classList.toggle("active", on);
+    if (on) b.setAttribute("aria-current", "page"); else b.removeAttribute("aria-current");
+  });
+  $("#lblBoardPageTitle").textContent = kind === "ai_trend" ? tr("boardTrendTitle") : tr("boardTitle");
+  updateBoardAuthUI();
+  loadBoardPosts();
+}
 // 글이 많아지면 목록을 무한정 스크롤하게 두는 대신, 한 번에 15개씩만 불러오고 페이지 넘기기로
 // 이동함(이전/다음) — "글 많아지면 그냥 스크롤?"이라는 피드백을 받아 추가.
 const BOARD_PAGE_SIZE = 15;
@@ -1516,6 +1536,7 @@ async function loadBoardPosts(){
     const from = boardPage * BOARD_PAGE_SIZE, to = from + BOARD_PAGE_SIZE - 1;
     const { data, error, count } = await sb.from("board_posts")
       .select("id,user_id,author_name,title,body,created_at", { count: "exact" })
+      .eq("board", boardKind)
       .order("created_at", { ascending: false }).range(from, to);
     if (error) throw error;
     boardPosts = data || [];
@@ -1562,6 +1583,7 @@ function renderBoardDetail(id){
     <div class="board-detail-title">${esc(p.title)}</div>
     <div class="board-detail-meta"><span class="board-detail-nick">${esc(p.author_name)}</span> · ${timeago(p.created_at)}</div>
     <div class="board-detail-body">${esc(p.body)}</div>
+    ${boardKind === "ai_trend" ? `<a class="board-trend-link" href="/trend/${p.id}" target="_blank" rel="noopener">${esc(tr("boardTrendFull"))}</a>` : ""}
     ${mine ? `<button type="button" class="board-post-del" data-del="${p.id}">${esc(tr("boardDelete"))}</button>` : `<button type="button" class="board-post-report" data-report="${p.id}">${esc(tr("boardReport"))}</button>`}`;
 }
 async function reportBoardPost(id){
@@ -3632,6 +3654,9 @@ function buildSidebar(){
   $("#boardOpenBtn").addEventListener("click", openBoardPage);
   $("#boardPageBack").addEventListener("click", closeBoardPage);
   $("#boardWriteOpen").addEventListener("click", () => $("#boardWriteDlg").showModal());
+  document.querySelectorAll(".bp-rail-item[data-board]").forEach(b => {
+    b.addEventListener("click", () => { if (b.dataset.board !== boardKind) setBoardKind(b.dataset.board); });
+  });
   $("#boardWriteCancel").addEventListener("click", () => $("#boardWriteDlg").close());
   $("#boardAdminOpen").addEventListener("click", openBoardAdminPanel);
   $("#boardAdminClose").addEventListener("click", () => $("#boardAdminDlg").close());
@@ -3725,7 +3750,7 @@ function applyLanguage(){
   $("#lblLabelsToggle").textContent = labelsVisible ? tr("labelsOn") : tr("labelsOff");
   $("#lblBoardOpen").textContent = tr("boardOpenLabel");
   $("#lblBoardBack").textContent = tr("boardBackToMap");
-  $("#lblBoardPageTitle").textContent = tr("boardTitle");
+  $("#lblBoardPageTitle").textContent = tr(boardKind === "ai_trend" ? "boardTrendTitle" : "boardTitle");
   $("#lblBoardListTitleCol").textContent = tr("boardListTitleCol");
   $("#lblBoardListNickCol").textContent = tr("boardListNickCol");
   if (lastVisitCount != null) $("#visitCountText").textContent = tr("visitCountLabel", lastVisitCount.toLocaleString());
