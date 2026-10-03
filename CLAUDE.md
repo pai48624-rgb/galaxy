@@ -33,3 +33,13 @@ AI 도구 관계형 지도 + 소셜로그인 + 실시간 방문자 채팅 + 커�
 ### ✅ 작은 흐름 (이번 주)
 1. `/privacy.html` 리디렉션 색인 이슈 후속 확인 — Search Console 재검사 결과 확인.
 2. 게시판 신고 기능 설계 시작.
+
+## 작업 기록: AI 트렌드 게시판 (2026-10-03, 노트북에서 작업 — 노트북에서도 가끔 개발함)
+- 커밋 `2e49421` (로컬만, **push·배포 안 함**). 노트북엔 galaxy `.env`·wrangler 로그인이 없음 → DB는 Supabase 연결 도구로 읽기만 했고, 변경은 권한 검사에 막혀 미적용.
+- 만든 것:
+  - `dist/_worker.js` §TREND: `POST /api/posts`(콘텐츠 공장 → DB 함수 `factory_post`, 토큰은 DB에 sha256 해시만), `/trend/`·`/trend/<id>`(서버에서 완성 HTML — 게시판은 JS로만 그려서 구글이 못 읽기 때문), `/sitemap-trend.xml`. `robots.txt`에 두 번째 Sitemap 줄.
+  - `index.html`: 게시판 레일에 "🔥 AI 트렌드" 탭(`boardKind`), 그 탭에선 글쓰기 버튼 숨김, 상세에 '전체 글 보기 →' (/trend/<id>).
+  - `scripts/migrate_board_ai_trend.sql`: board/external_id/body_html/tags 칼럼, AI 트렌드 본문 20000자, 일반 사용자는 free 게시판만 쓰기, factory_tokens·factory_post.
+- 가짜 Supabase 응답으로 워커 시험함(목록·글·404·사이트맵·토큰 맞음/틀림/없음, script·onerror 제거, 390px 폭 가로 넘침 없음). 실제 DB·실서버에서는 아직 확인 못 함.
+- **남은 순서**: ① SQL 실행 → ② 토큰 만들어 해시 등록 + nas `.env`에 `GALAXY_POST_URL=https://aigalaxy-map.com/api/posts`·`GALAXY_POST_TOKEN` → ③ 배포(`npm run deploy`, wrangler 로그인 필요) → ④ 관리 화면 '발행'으로 재고 9개 중 하나 등록해 실서버 확인 → ⑤ 서치콘솔·네이버 서치어드바이저에 sitemap-trend.xml 제출.
+- 측정(10/03): 방문 기록 `site_visit_log` 9/17~10/3 총 137회(하루 1~30회). 메인 index.html 1.2MB 중 검색엔진이 읽는 글자 약 1,100자, JS 830KB, AI별 개별 페이지 없음 → 유입이 없는 가장 큰 원인으로 판단.
