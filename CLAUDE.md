@@ -48,5 +48,5 @@ AI 도구 관계형 지도 + 소셜로그인 + 실시간 방문자 채팅 + 커�
   - 시험: Node 시험 서버(워커+dist)로 주소 10개 응답, 내부 링크 2079개 깨짐 0, 브라우저로 딥링크·게시판 탭 확인. `wrangler pages dev`는 이 노트북에서 workerd "write EOF"로 실패.
   - ⚠ 로컬 시험 중 실서버 Supabase를 써서 `site_visit_log` 방문수가 몇 회(138→140+) 늘었음.
   - 토큰: nas `.env`에 GALAXY_POST_URL·TOKEN 저장됨, DB에 넣을 sha256 = de1fd73a4424b6a31e3ed148e4329cb6e1529328b20ae71e7082ef1d017e4673
-  - 메인 화면 시안(사이드바 'AI 트렌드'·'분야별 AI 목록' 링크 + 지도 아래 요즘 뜨는 AI 띠): `design/mockup_main_trend_links_20261003.png` — **미적용, 사용자 결정 대기**
-  - DB SQL 실행은 Supabase MCP로 시도했으나 승인 후에도 auto 모드 권한 검사가 막음 → 사용자가 SQL Editor에서 직접 실행.
+  - 메인 화면: 사용자 승인(10/03) 후 적용 — 사이드바 '🔥 AI 트렌드 NEW'·'📚 분야별 AI 목록' 링크 + 지도 아래 `#trendStrip`(AI 트렌드 최신 3개, 글 없으면 숨김, 채팅창 열리면 CSS `:has`로 숨김, 900px 이하 숨김). 캡처 `design/main_trend_strip_applied_20261003.png`. 브라우저 시험 시 사이트 서비스워커 때문에 요청 가로채기가 안 보이니 service_workers='block'.
+  - DB SQL: auto 모드가 Claude 실행을 막아 사용자가 SQL Editor에서 실행(10/03), 칼럼·제약·정책·함수·틀린 토큰 거부·토큰 표 비공개 확인함. 토큰 해시 insert 줄은 주석이라 미실행 → 별도 실행 필요.

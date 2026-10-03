@@ -192,6 +192,18 @@
     display:flex;align-items:center;gap:6px;padding:6px 8px;border-radius:999px;
     border:1px solid rgba(157,255,176,.35);background:rgba(10,10,18,.82);backdrop-filter:blur(4px)}
   #chatBar[hidden]{display:none}
+  .s-actions a.side-trend,.s-actions a.side-ailist{margin-top:9px;text-decoration:none}
+  .s-actions a.side-trend{color:#ffb36b}
+  .new-badge{font-size:9.5px;background:#e5766b;color:#fff;border-radius:6px;padding:1px 5px;font-weight:700}
+  #trendStrip{position:absolute;left:50%;transform:translateX(-50%);bottom:52px;z-index:15;width:min(620px,calc(100% - 140px));
+    background:rgba(20,18,40,.88);border:1px solid #3a3560;border-radius:12px;padding:9px 14px;font-size:12.5px;color:#e8e8f2;
+    display:flex;align-items:center;gap:10px}
+  #trendStrip[hidden]{display:none}
+  #trendStrip .ts-head{color:#ffb36b;font-weight:700;flex:none}
+  #trendStrip .ts-items{flex:1;min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+  #trendStrip a{color:#c9c3ff;text-decoration:none}#trendStrip a:hover{text-decoration:underline}
+  #trendStrip .ts-all{flex:none;color:#9a9ab0}
+  #trendStrip:has(~ #chatBar:not([hidden])){display:none}
   #chatBar input{width:640px;max-width:80vw;border:0;background:none;outline:0;color:var(--ink);font-size:12.5px}
   #chatBar input::placeholder{color:#8a8aa0}
   #chatBar .hint{font-size:9.5px;color:var(--faint);flex:none}
@@ -424,6 +436,7 @@
       background:rgba(0,0,0,.35)}
     #drawer{width:100%}
     #legend{display:none}
+    #trendStrip{display:none}
   }
 </style>
 </head>
@@ -511,6 +524,9 @@
         <button class="lnk" id="boardOpenBtn" style="width:100%">
           <span id="lblBoardOpen">🗨 커뮤니티 게시판</span>
         </button>
+        <!-- 검색용 글 페이지(/trend/, /ai/ — _worker.js·scripts/gen-seo-pages.mjs)로 가는 입구 (2026-10-03 시안 승인) -->
+        <a class="lnk side-trend" href="/trend/"><span id="lblTrendLink">🔥 AI 트렌드</span> <span class="new-badge">NEW</span></a>
+        <a class="lnk side-ailist" href="/ai/"><span id="lblAiListLink">📚 분야별 AI 목록 · 가격·대안</span></a>
       </div>
 
       <div>
@@ -571,6 +587,7 @@
       </div>
       <button id="addBtn"><span id="lblAddBtn">＋ 빠진 AI 추천</span></button>
 
+      <div id="trendStrip" hidden></div>
       <div id="chatBar" hidden>
         <input type="text" id="chatInput" maxlength="80" placeholder="지금 접속 중인 사람에게…">
         <span class="hint">Enter</span>
@@ -869,7 +886,7 @@ const I18N = {
     altSecTitle: "대안 AI (비슷한 경쟁 제품)", altSecHint: "아래는 이 AI를 대체할 수 있는 비슷한 제품 목록입니다(함께 쓰는 조합 아님).",
     sponsToday: "오늘의 스폰서", privacyLink: "개인정보처리방침",
     labelsOn: "라벨 On", labelsOff: "라벨 Off",
-    boardOpenLabel: "🗨 커뮤니티 게시판", boardTitle: "🗨 커뮤니티 게시판", boardTrendTitle: "🔥 AI 트렌드", boardTrendNone: "곧 AI 트렌드 글이 올라와요.", boardTrendFull: "📄 표·출처까지 전체 글 보기 →",
+    boardOpenLabel: "🗨 커뮤니티 게시판", boardTitle: "🗨 커뮤니티 게시판", trendLink: "🔥 AI 트렌드", aiListLink: "📚 분야별 AI 목록 · 가격·대안", trendStripHead: "🔥 요즘 뜨는 AI", trendStripAll: "전체 보기 →", boardTrendTitle: "🔥 AI 트렌드", boardTrendNone: "곧 AI 트렌드 글이 올라와요.", boardTrendFull: "📄 표·출처까지 전체 글 보기 →",
     boardSignupBtnLabel: "회원가입", boardLoginBtnLabel: "로그인",
     boardLoginHint: "처음이면 이메일·비밀번호 입력 후 '회원가입', 이미 가입했으면 '로그인'을 누르세요.",
     boardSocialGoogle: "Google로 계속하기", boardSocialKakao: "카카오로 계속하기",
@@ -945,7 +962,7 @@ const I18N = {
     altSecTitle: "Alternatives (similar competing products)", altSecHint: "These are products that could replace this one — not a combo to use together.",
     sponsToday: "Today's Sponsor", privacyLink: "Privacy Policy",
     labelsOn: "Labels On", labelsOff: "Labels Off",
-    boardOpenLabel: "🗨 Community Board", boardTitle: "🗨 Community Board", boardTrendTitle: "🔥 AI Trends", boardTrendNone: "AI trend articles are coming soon.", boardTrendFull: "📄 Read the full article (tables & sources) →",
+    boardOpenLabel: "🗨 Community Board", boardTitle: "🗨 Community Board", trendLink: "🔥 AI Trends", aiListLink: "📚 AI by category · pricing & alternatives", trendStripHead: "🔥 Trending in AI", trendStripAll: "See all →", boardTrendTitle: "🔥 AI Trends", boardTrendNone: "AI trend articles are coming soon.", boardTrendFull: "📄 Read the full article (tables & sources) →",
     boardSignupBtnLabel: "Sign up", boardLoginBtnLabel: "Log in",
     boardLoginHint: "First time? Enter email + password and press \"Sign up\". Already registered? Press \"Log in\".",
     boardSocialGoogle: "Continue with Google", boardSocialKakao: "Continue with Kakao",
@@ -1162,6 +1179,7 @@ async function boot(attempt = 1){
     applyLanguage();
     initAdSense();
     initBoardAuth();
+    loadTrendStrip();
     // /ai/<slug>/ 검색용 페이지의 "3D 지도에서 보기" 링크(?ai=slug)로 들어오면 그 AI를 바로 펼쳐 보여줌
     const deepSlug = new URLSearchParams(location.search).get("ai");
     const deepNode = deepSlug && nodes.find(n => n.slug === deepSlug);
@@ -3761,6 +3779,9 @@ function applyLanguage(){
   $("#lblPrivacyLink").textContent = tr("privacyLink");
   $("#lblLabelsToggle").textContent = labelsVisible ? tr("labelsOn") : tr("labelsOff");
   $("#lblBoardOpen").textContent = tr("boardOpenLabel");
+  $("#lblTrendLink").textContent = tr("trendLink");
+  $("#lblAiListLink").textContent = tr("aiListLink");
+  renderTrendStrip();
   $("#lblBoardBack").textContent = tr("boardBackToMap");
   $("#lblBoardPageTitle").textContent = tr(boardKind === "ai_trend" ? "boardTrendTitle" : "boardTitle");
   $("#lblBoardListTitleCol").textContent = tr("boardListTitleCol");
@@ -4167,6 +4188,26 @@ function buildSponsorSlot(sponsors){
 }
 
 /* ---- SEO / 스크린리더용 텍스트 목록 (화면엔 안 보이지만 DOM 유지) ---- */
+// 지도 아래 "요즘 뜨는 AI" 띠 — AI 트렌드 게시판 최신 글 3개. 글이 없거나 못 읽으면 띠 자체를 숨김.
+var trendStripPosts = []; // var: applyLanguage가 먼저 불려도 TDZ 오류 안 나게
+async function loadTrendStrip(){
+  try {
+    const { data, error } = await sb.from("board_posts").select("id,title").eq("board", "ai_trend")
+      .order("created_at", { ascending: false }).limit(3);
+    if (error) throw error;
+    trendStripPosts = data || [];
+  } catch (e){ trendStripPosts = []; }
+  renderTrendStrip();
+}
+function renderTrendStrip(){
+  const el = $("#trendStrip");
+  if (!el) return;
+  el.hidden = !trendStripPosts.length;
+  if (!trendStripPosts.length) return;
+  el.innerHTML = `<span class="ts-head">${esc(tr("trendStripHead"))}</span>
+    <span class="ts-items">${trendStripPosts.map(p => `<a href="/trend/${p.id}">${esc(p.title)}</a>`).join(" · ")}</span>
+    <a class="ts-all" href="/trend/">${esc(tr("trendStripAll"))}</a>`;
+}
 async function buildSeoList(){
   // 검색용 페이지(/ai/<slug>/, 빌드 때 scripts/gen-seo-pages.mjs 가 만듦)가 있는 AI는 그 페이지로,
   // 없는 AI는 예전처럼 공식 사이트로 링크
