@@ -29,6 +29,11 @@ const L = {
 };
 const pathOf = (lang, slug = "") => (lang === "en" ? "/en/korea/" : "/korea/") + (slug ? `${slug}/` : "");
 
+function extraCss() {
+  const f = join(SRC, "_style.css");
+  return existsSync(f) ? "\n/* 관리 화면 디자인 템플릿(content/korea/_style.css) */\n" + readFileSync(f, "utf8").replace(/<\/style/gi, "") : "";
+}
+
 function shell(lang, { title, description, path, altPath, body, jsonLd, image }) {
   const t = L[lang], o = lang === "en" ? "ko" : "en";
   return `<!doctype html>
@@ -73,7 +78,7 @@ th,td{text-align:left;padding:8px;border-bottom:1px solid var(--line);vertical-a
 .list img{width:96px;height:72px;object-fit:cover;border-radius:8px;background:var(--chip)}
 .list a{color:var(--ink);font-weight:700;text-decoration:none}.list a:hover{color:var(--acc)}.list small{display:block;color:var(--dim);font-size:13.5px}
 footer{color:var(--dim);font-size:12px;text-align:center;padding:24px 0}footer a{color:var(--dim)}
-</style></head><body>
+${extraCss()}</style></head><body>
 <header><div class="wrap top"><a href="${t.home}">✦ ${t.site}</a><span class="sp"></span><a class="lnk" href="${t.list}">${t.listName}</a><a class="lnk" href="/ai/">${t.ai}</a><a class="lnk" href="/trend/">${t.trend}</a><a class="lang" href="${altPath}" hreflang="${o}" lang="${o}">${L[o] === L.en ? "English" : "한국어"}</a></div></header>
 <main class="wrap">${body}</main>
 <footer class="wrap">© ${t.site} · <a href="/privacy">${lang === "en" ? "Privacy" : "개인정보처리방침"}</a></footer>
@@ -97,6 +102,29 @@ function chartSvg(c, lang) {
   return `<figure class="chart"><svg viewBox="0 0 560 176" role="img" aria-label="${esc(c[lang])}">${bars}<line x1="14" y1="150" x2="552" y2="150" stroke="currentColor" stroke-opacity=".25"/></svg><figcaption>${esc(c[lang])}</figcaption></figure>`;
 }
 
+export function articlePage(m, html, lang) {
+  const t = L[lang], o = lang === "en" ? "ko" : "en";
+  const path = pathOf(lang, m.slug), altPath = pathOf(o, m.slug);
+  const facts = (m.facts || []).map((f) => `<div><small>${esc(f[lang])}</small><b>${esc(f.v)}</b></div>`).join("");
+  const tables = html[lang].replace(/<table>/g, '<div class="tw"><table>').replace(/<\/table>/g, "</table></div>");
+  const bodyHtml = tables.replace("<!--CHART-->", m.chart ? chartSvg(m.chart, lang) : "");
+  const g = m.links?.guide;
+  const guide = g && g.live !== false ? `<a class="guide" href="${esc(g.url)}">${esc(g[lang])} →</a>` : "";
+  const src = (m.sources || []).map((s) => `<li>${esc(s[lang])} (${esc(s.date[lang])})</li>`).join("");
+  const photo = m.photo ? `<figure><img src="${esc(m.photo.url)}" alt="${esc(m.photo.alt[lang])}"${m.photo.width ? ` width="${m.photo.width}" height="${m.photo.height}"` : ""} loading="eager"><figcaption>${esc(m.photo.credit[lang])}</figcaption></figure>` : "";
+  const body = `<div class="crumb"><a href="${t.list}">${t.listName}</a> · ${esc(m.kind[lang])} · ${esc(m.region[lang])}</div>
+<h1>${esc(m.title[lang])}</h1><p class="lead">${esc(m.description[lang])}</p>
+<p class="meta">${t.updated} ${esc(m.publish)}</p>${photo}<div class="facts">${facts}</div>
+<article>${bodyHtml}</article>${guide}
+<p class="note">${t.note} ${t.emergency}</p>
+<div class="src"><b>${t.src}</b><ul>${src}</ul><a href="${altPath}" hreflang="${o}">${L[o] === L.en ? "Read in English" : "한국어로 보기"} →</a></div>`;
+  const jsonLd = { "@context": "https://schema.org", "@type": "Article", headline: m.title[lang], description: m.description[lang], inLanguage: lang,
+    datePublished: m.publish, dateModified: m.publish, image: m.photo ? [m.photo.url] : undefined, mainEntityOfPage: `${SITE}${path}`,
+    author: { "@type": "Organization", name: t.site, url: SITE }, publisher: { "@type": "Organization", name: t.site, url: SITE },
+    isBasedOn: (m.sources || []).map((s) => `${s[lang]} (${s.date[lang]})`) };
+  return { path, html: shell(lang, { title: `${m.title[lang]} | ${t.site}`, description: m.description[lang], path, altPath, body, jsonLd, image: m.photo?.url }) };
+}
+
 function kstToday() {
   const d = new Date(Date.now() + 9 * 3600 * 1000);
   return d.toISOString().slice(0, 10);
@@ -110,7 +138,7 @@ export function generateKoreaPages({ today = kstToday() } = {}) {
     const dir = join(SRC, slug);
     if (!existsSync(join(dir, "meta.json"))) continue;
     const m = JSON.parse(readFileSync(join(dir, "meta.json"), "utf8"));
-    if (m.publish > today) continue; // 예약: 그 날 빌드부터 공개
+    if (m.publish > today || m.hidden) continue; // 예약: 그 날 빌드부터 공개 · 관리 화면에서 숨긴 글은 안 만듦
     for (const s of m.sources || []) if (!s.date?.ko || !s.date?.en) throw new Error(`[korea] ${slug}: 출처 '${s.ko}' 에 날짜가 없음`);
     const html = {};
     for (const lang of ["ko", "en"]) {
@@ -124,28 +152,10 @@ export function generateKoreaPages({ today = kstToday() } = {}) {
 
   for (const { m, html } of items) {
     for (const lang of ["ko", "en"]) {
-      const t = L[lang], o = lang === "en" ? "ko" : "en";
-      const path = pathOf(lang, m.slug), altPath = pathOf(o, m.slug);
-      const facts = (m.facts || []).map((f) => `<div><small>${esc(f[lang])}</small><b>${esc(f.v)}</b></div>`).join("");
-      const tables = html[lang].replace(/<table>/g, '<div class="tw"><table>').replace(/<\/table>/g, "</table></div>");
-      const bodyHtml = tables.replace("<!--CHART-->", m.chart ? chartSvg(m.chart, lang) : "");
-      const g = m.links?.guide;
-      const guide = g && g.live !== false ? `<a class="guide" href="${esc(g.url)}">${esc(g[lang])} →</a>` : "";
-      const src = (m.sources || []).map((s) => `<li>${esc(s[lang])} (${esc(s.date[lang])})</li>`).join("");
-      const photo = m.photo ? `<figure><img src="${esc(m.photo.url)}" alt="${esc(m.photo.alt[lang])}"${m.photo.width ? ` width="${m.photo.width}" height="${m.photo.height}"` : ""} loading="eager"><figcaption>${esc(m.photo.credit[lang])}</figcaption></figure>` : "";
-      const body = `<div class="crumb"><a href="${t.list}">${t.listName}</a> · ${esc(m.kind[lang])} · ${esc(m.region[lang])}</div>
-<h1>${esc(m.title[lang])}</h1><p class="lead">${esc(m.description[lang])}</p>
-<p class="meta">${t.updated} ${esc(m.publish)}</p>${photo}<div class="facts">${facts}</div>
-<article>${bodyHtml}</article>${guide}
-<p class="note">${t.note} ${t.emergency}</p>
-<div class="src"><b>${t.src}</b><ul>${src}</ul><a href="${altPath}" hreflang="${o}">${L[o] === L.en ? "Read in English" : "한국어로 보기"} →</a></div>`;
-      const jsonLd = { "@context": "https://schema.org", "@type": "Article", headline: m.title[lang], description: m.description[lang], inLanguage: lang,
-        datePublished: m.publish, dateModified: m.publish, image: m.photo ? [m.photo.url] : undefined, mainEntityOfPage: `${SITE}${path}`,
-        author: { "@type": "Organization", name: t.site, url: SITE }, publisher: { "@type": "Organization", name: t.site, url: SITE },
-        isBasedOn: (m.sources || []).map((s) => `${s[lang]} (${s.date[lang]})`) };
-      const out = join(DIST, path);
+      const pg = articlePage(m, html, lang);
+      const out = join(DIST, pg.path);
       mkdirSync(out, { recursive: true });
-      writeFileSync(join(out, "index.html"), shell(lang, { title: `${m.title[lang]} | ${t.site}`, description: m.description[lang], path, altPath, body, jsonLd, image: m.photo?.url }));
+      writeFileSync(join(out, "index.html"), pg.html);
     }
   }
   for (const lang of ["ko", "en"]) {
@@ -166,5 +176,12 @@ export function generateKoreaPages({ today = kstToday() } = {}) {
 
 // 단독 실행: node scripts/gen-korea-pages.mjs [YYYY-MM-DD]  (날짜를 주면 그 날 기준으로 예약 글 포함 여부 시험)
 if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
-  console.log(generateKoreaPages(process.argv[2] ? { today: process.argv[2] } : {}));
+  if (process.argv[2] === "--preview") {  // 글 공장 관리 화면 미리보기(같은 코드로 그림, 파일은 안 씀)
+    const dir = join(SRC, process.argv[3]);
+    const m = JSON.parse(readFileSync(join(dir, "meta.json"), "utf8"));
+    const lang = process.argv[4] === "en" ? "en" : "ko";
+    process.stdout.write(articlePage(m, { [lang]: readFileSync(join(dir, `${lang}.html`), "utf8") }, lang).html);
+  } else {
+    console.log(generateKoreaPages(process.argv[2] ? { today: process.argv[2] } : {}));
+  }
 }

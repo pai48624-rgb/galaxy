@@ -25,8 +25,11 @@ def main():
         done[j["slug"]] = j["publish"]
     last = max(done.values()) if done else date.today().isoformat()
     start = date.fromisoformat(sys.argv[1]) if len(sys.argv) > 1 else date.fromisoformat(last) + timedelta(days=1)
-    written = {"gyeongpo-beach": "f306d1d3c8", "seoraksan": "seoraksan"}  # 글 slug → 장소 slug(이미 쓴 곳 빼기)
-    used = set(written.values())
+    used = set()  # 이미 쓴 곳 빼기(글 meta.json의 place — 글 공장이 쓴 글·직접 쓴 글 모두 들어 있음)
+    for m in CONTENT.glob("*/meta.json"):
+        pl = json.loads(m.read_text(encoding="utf-8")).get("place")
+        if pl:
+            used.add(pl["slug"])
     cands = []
     for x in d["places"]:
         if x["slug"] in used or not x.get("photo") or len(x["parking"]) < 3 or not x["emergency"] or not x["lodging"]["n"]:
