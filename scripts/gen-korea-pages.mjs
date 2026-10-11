@@ -80,12 +80,19 @@ footer{color:var(--dim);font-size:12px;text-align:center;padding:24px 0}footer a
 </body></html>`;
 }
 
+// 작은 해수욕장(1만 명대)도 읽히게: 한국어 만 단위, 영어 k·M (예전엔 모두 백만 단위라 '0.0M'으로 보였음)
+function fmtCount(v, lang) {
+  if (!v) return "0";
+  if (lang === "ko") return v >= 1e6 ? `${Math.round(v / 1e4).toLocaleString()}만` : v >= 1e4 ? `${(v / 1e4).toFixed(1)}만` : v.toLocaleString();
+  return v >= 1e6 ? `${(v / 1e6).toFixed(1)}M` : v >= 1e3 ? `${(v / 1e3).toFixed(1)}k` : String(v);
+}
+
 function chartSvg(c, lang) {
   const top = Math.max(...c.values), w = 54;
   const bars = c.values.map((v, i) => {
     const h = (v / top) * 128, x = 20 + i * w, y = 150 - h;
     return `<rect x="${x}" y="${y.toFixed(1)}" width="34" height="${h.toFixed(1)}" rx="2" class="${c.dip.includes(c.years[i]) ? "dip" : "bar"}"/>` +
-      `<text x="${x + 17}" y="168" text-anchor="middle">${c.years[i]}</text><text class="v" x="${x + 17}" y="${(y - 6).toFixed(1)}" text-anchor="middle">${(v / 1e6).toFixed(1)}M</text>`;
+      `<text x="${x + 17}" y="168" text-anchor="middle">${c.years[i]}</text><text class="v" x="${x + 17}" y="${(y - 6).toFixed(1)}" text-anchor="middle">${fmtCount(v, lang)}</text>`;
   }).join("");
   return `<figure class="chart"><svg viewBox="0 0 560 176" role="img" aria-label="${esc(c[lang])}">${bars}<line x1="14" y1="150" x2="552" y2="150" stroke="currentColor" stroke-opacity=".25"/></svg><figcaption>${esc(c[lang])}</figcaption></figure>`;
 }
