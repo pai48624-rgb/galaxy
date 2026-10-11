@@ -10,6 +10,7 @@ import { execSync } from "node:child_process";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { generateSeoPages } from "./gen-seo-pages.mjs";
+import { generateKoreaPages } from "./gen-korea-pages.mjs";
 
 const ROOT = dirname(dirname(fileURLToPath(import.meta.url)));
 const DIST = join(ROOT, "dist");
@@ -136,5 +137,8 @@ console.log(`  rss.xml 항목 ${items.length}개`);
 
 console.log("[build] 검색용 페이지 생성(/ai/, /category/, sitemap-ai.xml) — Supabase 읽기 실패하면 빌드 중단");
 console.log("[build]", await generateSeoPages());
+
+console.log("[build] 한국 여행 글(/korea/, /en/korea/, sitemap-korea.xml) — content/korea, 공개일(publish) 지난 글만");
+console.log("[build]", generateKoreaPages());
 
 console.log("[build] 완료. dist/_worker.js, dist/selftest.html 은 그대로 유지됨.");
