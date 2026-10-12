@@ -105,7 +105,10 @@ function chartSvg(c, lang) {
 export function articlePage(m, html, lang) {
   const t = L[lang], o = lang === "en" ? "ko" : "en";
   const path = pathOf(lang, m.slug), altPath = pathOf(o, m.slug);
-  const facts = (m.facts || []).map((f) => `<div><small>${esc(f[lang])}</small><b>${esc(f.v)}</b></div>`).join("");
+  // 영어판 숫자 칸: 한국어 단위(개·곳·명·면·번)를 떼거나 영어로(10/13 사용자 점검: 영어 글에 "13개·4곳" 섞여 나옴)
+  const factVal = (v) => lang !== "en" ? v : String(v)
+    .replace(/(\d)번 중 (\d+)번/g, "$2 of $1").replace(/(\d)면$/, "$1 spaces").replace(/(\d)(개|곳|명|번|편)$/g, "$1");
+  const facts = (m.facts || []).map((f) => `<div><small>${esc(f[lang])}</small><b>${esc(factVal(f.v))}</b></div>`).join("");
   const tables = html[lang].replace(/<table>/g, '<div class="tw"><table>').replace(/<\/table>/g, "</table></div>");
   const bodyHtml = tables.replace("<!--CHART-->", m.chart ? chartSvg(m.chart, lang) : "");
   const g = m.links?.guide;
