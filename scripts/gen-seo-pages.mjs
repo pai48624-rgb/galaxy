@@ -150,11 +150,13 @@ export async function generateSeoPages() {
     return ko && ko !== main ? `${main} (${ko.replace(/^.*\((.*)\)$/, "$1")})` : main;
   };
 
+  const faqLd = new Map();  // 10/12: 도구 페이지 자주 묻는 질문 구조화 데이터
+  const TODAY = new Date().toISOString().slice(0, 10);
   rmSync(join(DIST, "ai"), { recursive: true, force: true });
   rmSync(join(DIST, "category"), { recursive: true, force: true });
 
   // ---- AI별 페이지 ----
-  const renderTool = (t) => {
+  const renderTool = (t, extra = true) => {  // extra=false: 페이지를 만들지 정하는 분량 판단엔 10/12 추가 칸을 빼고(페이지 수가 늘지 않게)
     const rank = rankOf.get(t.id);
     const myCombos = (combosOf.get(t.id) || []).slice().sort((a, b) => (b.impact || 0) - (a.impact || 0)).slice(0, MAX_COMBOS_PER_PAGE);
     const alts = [...(altsOf.get(t.id) || [])].map((id) => byId.get(id))
@@ -188,6 +190,28 @@ export async function generateSeoPages() {
       for (const g of groups) parts.push(`<div class="card"><h3>${esc(g.category_ko)}</h3><ul class="feat">${(g.items || []).map((i) => `<li><b>${esc(i.name)}</b> — ${esc(i.reason_ko)}</li>`).join("")}</ul></div>`);
     }
     if (alts.length) parts.push(`<h2>${esc(t.name)}와 비슷한 AI (대안)</h2><div class="chips">${alts.map(toolLink).join("")}</div>`);
+    if (!extra) return parts.join(String.fromCharCode(10)) + `<a class="cta" href="/?ai=${encodeURIComponent(t.slug)}">✦ 3D 지도에서 ${esc(t.name)} 보기</a>`;
+    // 10/12: 서치콘솔 '크롤링됨-색인 안 됨'(유명 AI는 비슷한 소개 글이 많아 우리 페이지만의 내용이 필요) → 우리 지도 자료로만 만든 비교·위치·질문
+    const nCombo = (x) => (combosOf.get(x.id) || []).length;
+    const nLink = (x) => (altsOf.get(x.id) || new Set()).size;
+    const peersCat = tools.filter((x) => x.category === t.category);
+    const cmp = [t, ...alts.filter((a) => a.category === t.category && hasPage.has(a.id)).slice(0, 4)];
+    if (cmp.length >= 2) {
+      parts.push(`<h2>${esc(t.name)}와 대안 한눈에 비교</h2><div class="card"><table class="cmp"><tr><th>AI</th><th>가격</th><th>지도 속 조합</th><th>연결된 도구</th></tr>${cmp.map((x) => `<tr><td>${x.id === t.id ? `<b>${esc(x.name)}</b>` : toolLink(x)}</td><td>${esc(x.pricing || "-")}</td><td>${nCombo(x)}개</td><td>${nLink(x)}개</td></tr>`).join("")}</table><p class="note">조합·연결 수는 AI 갤럭시 지도에 정리된 관계 기준(${esc(TODAY)})이며 품질 순위가 아닙니다.</p></div>`);
+    }
+    if (peersCat.length >= 5) {
+      const byLink = peersCat.map(nLink).sort((a, b) => b - a);
+      const rankL = byLink.findIndex((v) => v <= nLink(t)) + 1;
+      parts.push(`<h2>AI 갤럭시 지도에서 본 ${esc(t.name)}</h2><div class="card"><ul class="feat"><li>${esc(t.category)} 분야 AI <b>${peersCat.length}개</b> 가운데 하나예요.</li><li>다른 도구와 연결된 수 <b>${nLink(t)}개</b> — 같은 분야에서 <b>${rankL}위</b>예요.</li>${nCombo(t) ? `<li>지도에 정리된 작업 조합 <b>${nCombo(t)}개</b>에 들어가 있어요.</li>` : ""}</ul></div>`);
+    }
+    const faq = [];
+    if (t.pricing_policy || t.pricing) faq.push([`${t.name}, 무료로 쓸 수 있나요?`, `${t.pricing_policy || t.pricing}. 요금은 바뀔 수 있으니 결제 전 공식 사이트에서 확인하세요.`]);
+    if (myCombos.length) faq.push([`${t.name}, 무엇과 함께 쓰면 좋나요?`, `지도에 정리된 조합 기준으로 '${myCombos[0].title_ko}'처럼 ${[...new Set(myCombos[0].tools.map(find).filter(Boolean))].filter((m) => m.id !== t.id).map((m) => m.name).slice(0, 3).join(", ")} 등과 함께 쓰는 흐름이 있어요.`]);
+    if (alts.length) faq.push([`${t.name} 대신 쓸 수 있는 AI는?`, `같은 일을 하는 도구로 ${alts.slice(0, 4).map((a) => a.name).join(", ")} 등이 지도에 연결돼 있어요.`]);
+    if (faq.length) {
+      parts.push(`<h2>자주 묻는 질문</h2><div class="card">${faq.map(([q, a]) => `<p><b>Q. ${esc(q)}</b><br>A. ${esc(a)}</p>`).join("")}</div>`);
+      faqLd.set(t.id, { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faq.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })) });
+    }
     parts.push(`<a class="cta" href="/?ai=${encodeURIComponent(t.slug)}">✦ 3D 지도에서 ${esc(t.name)} 보기</a>${t.url ? `<a class="cta ghost" href="${esc(t.url)}" rel="noopener nofollow" target="_blank">공식 사이트</a>` : ""}`);
     return parts.join("\n");
   };
@@ -201,7 +225,7 @@ export async function generateSeoPages() {
 <a class="cta" href="/">✦ 3D 지도에서 전체 보기</a>` };
   };
   // 1차로 그려 보고 분량 미달 페이지를 뺀 뒤(그러면 링크 대상이 바뀌므로) 최종본을 다시 그림
-  hasPage = new Set(candidates.filter((t) => textLen(renderTool(t)) >= MIN_TEXT_CHARS).map((t) => t.id));
+  hasPage = new Set(candidates.filter((t) => textLen(renderTool(t, false)) >= MIN_TEXT_CHARS).map((t) => t.id));
   catsWithPage = catsWithPage.filter((c) => textLen(renderCategory(c).body) >= MIN_TEXT_CHARS);
   const selected = candidates.filter((t) => hasPage.has(t.id));
   for (const t of selected) {
@@ -211,9 +235,9 @@ export async function generateSeoPages() {
       title: `${SEARCH_NAME[t.slug] || t.name_en || t.name} — ${clip(desc || t.category, 40)} | 가격·대안·활용 조합`,
       description: clip(`${t.name}: ${desc} 가격, 비슷한 AI, 함께 쓰면 좋은 조합까지 한 번에 정리.`, 155),
       canonical,
-      jsonLd: { "@context": "https://schema.org", "@type": "SoftwareApplication", name: t.name, applicationCategory: t.category_en || t.category,
-        description: desc, url: canonical, ...(t.url ? { sameAs: t.url } : {}) },
       body: renderTool(t),
+      jsonLd: [{ "@context": "https://schema.org", "@type": "SoftwareApplication", name: t.name, applicationCategory: t.category_en || t.category,
+        description: desc, url: canonical, ...(t.url ? { sameAs: t.url } : {}) }, ...(faqLd.get(t.id) ? [faqLd.get(t.id)] : [])],
     }));
   }
 
