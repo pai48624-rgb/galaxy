@@ -20,10 +20,10 @@ const textLen = (html) => html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").tri
 const ICON = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23a89bf0' d='M12 2l2.6 7.4L22 12l-7.4 2.6L12 22l-2.6-7.4L2 12l7.4-2.6z'/%3E%3C/svg%3E";
 
 const L = {
-  ko: { site: "AI 성단 지도", home: "/", list: "/korea/", listName: "한국 여행", ai: "AI 목록", trend: "AI 트렌드", other: "English", src: "자료 출처",
+  ko: { site: "AI 성단 지도", home: "/", list: "/korea/", listName: "한국 여행", ai: "AI 목록", trend: "AI 트렌드", map: "3D 지도", other: "English", src: "자료 출처",
     listTitle: "한국 여행 — 공공데이터로 정리한 가기 전 체크", listDesc: "주차·응급실·숙소·수질·이용객 같은 공공데이터로 정리한 한국 여행지 안내예요. 영어판도 함께 있어요.",
     updated: "기준", guide: "더 보기", note: "거리는 직선거리예요. 운영시간·요금은 바뀔 수 있으니 출발 전에 한 번 더 확인하세요.", emergency: "응급 119 · 바다 해양경찰 122" },
-  en: { site: "AI Galaxy Map", home: "/", list: "/en/korea/", listName: "Korea travel", ai: "AI list", trend: "AI trends", other: "한국어", src: "Sources",
+  en: { site: "AI Galaxy Map", home: "/", list: "/en/korea/", listName: "Korea travel", ai: "AI list", trend: "AI trends", map: "3D map", other: "한국어", src: "Sources",
     listTitle: "Korea travel — before-you-go guides from public data", listDesc: "Guides to places in Korea built from public data: parking, emergency care, places to stay, water quality and visitor numbers. Each guide also has a Korean version.",
     updated: "Data as of", guide: "More", note: "Distances are straight-line. Opening hours and fees can change, so check again before you travel.", emergency: "Emergency 119 · Coast Guard 122" },
 };
@@ -79,7 +79,7 @@ th,td{text-align:left;padding:8px;border-bottom:1px solid var(--line);vertical-a
 .list a{color:var(--ink);font-weight:700;text-decoration:none}.list a:hover{color:var(--acc)}.list small{display:block;color:var(--dim);font-size:13.5px}
 footer{color:var(--dim);font-size:12px;text-align:center;padding:24px 0}footer a{color:var(--dim)}
 ${extraCss()}</style></head><body>
-<header><div class="wrap top"><a href="${t.home}">✦ ${t.site}</a><span class="sp"></span><a class="lnk" href="${t.list}">${t.listName}</a><a class="lnk" href="/ai/">${t.ai}</a><a class="lnk" href="/trend/">${t.trend}</a><a class="lang" href="${altPath}" hreflang="${o}" lang="${o}">${L[o] === L.en ? "English" : "한국어"}</a></div></header>
+<header><div class="wrap top"><a href="${t.home}">✦ ${t.site}</a><span class="sp"></span><a class="lnk" href="${t.list}">${t.listName}</a><a class="lnk" href="/ai/">${t.ai}</a><a class="lnk" href="/trend/">${t.trend}</a><a class="lnk" href="/">${t.map}</a><a class="lang" href="${altPath}" hreflang="${o}" lang="${o}">${L[o] === L.en ? "English" : "한국어"}</a></div></header>
 <main class="wrap">${body}</main>
 <footer class="wrap">© ${t.site} · <a href="/privacy">${lang === "en" ? "Privacy" : "개인정보처리방침"}</a></footer>
 </body></html>`;

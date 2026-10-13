@@ -356,7 +356,7 @@ article h2{color:var(--ink)}
 .cta{display:inline-block;margin-top:28px;background:var(--acc);color:#fff;text-decoration:none;padding:10px 18px;border-radius:10px;font-weight:700}
 footer{color:var(--dim);font-size:12px;text-align:center;padding:24px 0}footer a{color:var(--dim)}
 </style></head><body>
-<header><div class="wrap top"><a href="/">✦ AI 성단 지도</a><span class="sp"></span><a class="lnk" href="/trend/">AI 트렌드</a><a class="lnk" href="/">3D 지도</a></div></header>
+<header><div class="wrap top"><a href="/">✦ AI 성단 지도</a><span class="sp"></span><a class="lnk" href="/korea/">한국 여행</a><a class="lnk" href="/ai/">AI 목록</a><a class="lnk" href="/trend/">AI 트렌드</a><a class="lnk" href="/">3D 지도</a></div></header>
 <main class="wrap">${body}</main>
 <footer class="wrap">© AI 성단 지도 · <a href="/privacy">개인정보처리방침</a></footer>
 </body></html>`;
