@@ -27,8 +27,11 @@
   <li><b>브라우저 저장(로컬 스토리지)</b>: 언어 설정(한/영), 안내 배너를 닫았는지 여부, 직접 만든 AI
     조합(별 선택 목록)을 사용자의 브라우저에만 저장합니다. 서버로 전송되지 않으며, 다른 기기·브라우저와
     공유되지 않습니다.</li>
-  <li><b>자동 수집 없음</b>: 별도의 방문자 추적(로그 분석, 쿠키 기반 프로파일링)은 현재 도입되어 있지
-    않습니다.</li>
+  <li><b>방문 통계(Google 애널리틱스)</b>: 2026-10-13부터 Google 애널리틱스(GA4)로 어떤 페이지를 얼마나 보는지
+    집계합니다. 쿠키(<code>_ga</code>)로 같은 브라우저의 재방문을 구분하며, 이름·이메일 같은 개인 식별 정보는 수집하지
+    않고 IP 주소는 Google이 익명 처리합니다. 수집을 원치 않으면 <a href="https://tools.google.com/dlpage/gaoptout?hl=ko"
+    target="_blank" rel="noopener">Google 애널리틱스 차단 부가기능</a>이나 브라우저의 쿠키 차단을 쓰면 됩니다.
+    Cloudflare의 서버 측 방문 수 집계(쿠키 없음)도 함께 씁니다.</li>
 </ul>
 
 <h2>2. 정보 이용 목적</h2>
@@ -68,6 +71,9 @@ later (e.g. Google AdSense), this page will be updated and you'll be able to opt
 via <a href="https://adssettings.google.com" target="_blank" rel="noopener">Google Ads Settings</a>.
 Outbound links to official AI tool sites may carry a <code>?ref=ai-galaxy</code> tracking parameter,
 which does not identify you personally. This site is hosted on Cloudflare Pages and uses Supabase to
-store review data.</p>
+store review data. Since 2026-10-13 we use Google Analytics (GA4) to count page views; it sets a <code>_ga</code>
+cookie to recognize repeat visits from the same browser, collects no name or email, and Google anonymizes IP
+addresses. You can opt out with the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank"
+rel="noopener">Google Analytics opt-out add-on</a> or by blocking cookies.</p>
 </body>
 </html>
