@@ -1,7 +1,7 @@
 # 로컬 테스트 → 배포 (혼자 할 때)
 
 새 Claude 세션 없이도 이 두 명령어만 터미널에 그대로 치면 됩니다.
-(`cd C:\dev\galaxy` 상태에서 실행)
+(`cd C:\dev\10_projects\galaxy` 상태에서 실행)
 
 ---
 

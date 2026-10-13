@@ -9,6 +9,7 @@
 import { readFileSync, writeFileSync, mkdirSync, readdirSync, existsSync, rmSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
+import { CHROME_CSS, FONT_LINKS, chromeTop, chromeFoot, chromeSide } from "./site-chrome.mjs";
 
 const ROOT = dirname(dirname(fileURLToPath(import.meta.url)));
 const DIST = join(ROOT, "dist");
@@ -45,15 +46,11 @@ function shell(lang, { title, description, path, altPath, body, jsonLd, image })
 <link rel="alternate" hreflang="${lang}" href="${SITE}${path}"><link rel="alternate" hreflang="${o}" href="${SITE}${altPath}"><link rel="alternate" hreflang="x-default" href="${SITE}${lang === "en" ? path : altPath}">
 <meta property="og:type" content="${jsonLd ? "article" : "website"}"><meta property="og:site_name" content="${t.site}"><meta property="og:locale" content="${lang === "en" ? "en_US" : "ko_KR"}">
 <meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(description)}"><meta property="og:url" content="${SITE}${path}">${image ? `<meta property="og:image" content="${esc(image)}">` : ""}
-<link rel="icon" href="${ICON}">
+<link rel="icon" href="${ICON}">${FONT_LINKS}
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1632907475675251" crossorigin="anonymous"></script>
 ${jsonLd ? `<script type="application/ld+json">${JSON.stringify(jsonLd).replace(/</g, "\\u003c")}</script>` : ""}
 <style>
-:root{--bg:#f7f7fb;--card:#fff;--ink:#1d1d2b;--dim:#6b6b80;--line:#e3e3ee;--acc:#5b4bd6;--chip:#efedff;--sea:#1f6f8b;--gold:#c9963a}
-@media (prefers-color-scheme:dark){:root{--bg:#0d0d18;--card:#161626;--ink:#e8e8f2;--dim:#9a9ab0;--line:#2a2a40;--acc:#9d8cff;--chip:#24203f;--sea:#7cc3dc;--gold:#e0b25a}}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;line-height:1.75}
-header{border-bottom:1px solid var(--line);background:var(--card)}
-.wrap{max-width:760px;margin:0 auto;padding:0 16px}
+${CHROME_CSS}
 .top{display:flex;align-items:center;gap:6px 14px;min-height:56px;flex-wrap:wrap;padding:8px 16px}
 .top a{color:var(--ink);text-decoration:none;font-weight:700}.top .sp{flex:1}.top .lnk{font-weight:500;color:var(--dim);font-size:14px}
 @media (max-width:520px){.top .sp{flex-basis:100%;height:0}.top{padding:10px 16px}}
@@ -77,11 +74,10 @@ th,td{text-align:left;padding:8px;border-bottom:1px solid var(--line);vertical-a
 .list{list-style:none;padding:0;margin:0}.list li{border-bottom:1px solid var(--line);padding:14px 2px;display:grid;grid-template-columns:96px minmax(0,1fr);gap:12px}
 .list img{width:96px;height:72px;object-fit:cover;border-radius:8px;background:var(--chip)}
 .list a{color:var(--ink);font-weight:700;text-decoration:none}.list a:hover{color:var(--acc)}.list small{display:block;color:var(--dim);font-size:13.5px}
-footer{color:var(--dim);font-size:12px;text-align:center;padding:24px 0}footer a{color:var(--dim)}
 ${extraCss()}</style></head><body>
-<header><div class="wrap top"><a href="${t.home}">✦ ${t.site}</a><span class="sp"></span><a class="lnk" href="${t.list}">${t.listName}</a><a class="lnk" href="/ai/">${t.ai}</a><a class="lnk" href="/trend/">${t.trend}</a><a class="lnk" href="/">${t.map}</a><a class="lang" href="${altPath}" hreflang="${o}" lang="${o}">${L[o] === L.en ? "English" : "한국어"}</a></div></header>
-<main class="wrap">${body}</main>
-<footer class="wrap">© ${t.site} · <a href="/privacy">${lang === "en" ? "Privacy" : "개인정보처리방침"}</a></footer>
+${chromeTop("korea", { lang, urls: { ko: lang === "en" ? altPath : path, en: lang === "en" ? path : altPath } })}
+<div class="wrap cols"><main>${body}</main>${chromeSide("", lang)}</div>
+${chromeFoot(lang)}
 </body></html>`;
 }
 

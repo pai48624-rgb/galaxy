@@ -12,6 +12,7 @@
 import { readFileSync, writeFileSync, mkdirSync, rmSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
+import { CHROME_CSS, FONT_LINKS, chromeTop, chromeFoot, chromeSide } from "./site-chrome.mjs";
 
 const ROOT = dirname(dirname(fileURLToPath(import.meta.url)));
 const DIST = join(ROOT, "dist");
@@ -60,15 +61,11 @@ function shell({ title, description, canonical, body, jsonLd }) {
 <meta property="og:type" content="website"><meta property="og:site_name" content="AI 성단 지도">
 <meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(description)}">
 <meta property="og:url" content="${canonical}">
-<link rel="icon" href="${ICON}">
+<link rel="icon" href="${ICON}">${FONT_LINKS}
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1632907475675251" crossorigin="anonymous"></script>
 ${jsonLd ? `<script type="application/ld+json">${JSON.stringify(jsonLd).replace(/</g, "\\u003c")}</script>` : ""}
 <style>
-:root{--bg:#f7f7fb;--card:#fff;--ink:#1d1d2b;--dim:#6b6b80;--line:#e3e3ee;--acc:#5b4bd6;--chip:#efedff}
-@media (prefers-color-scheme:dark){:root{--bg:#0d0d18;--card:#161626;--ink:#e8e8f2;--dim:#9a9ab0;--line:#2a2a40;--acc:#9d8cff;--chip:#24203f}}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;line-height:1.7}
-header{border-bottom:1px solid var(--line);background:var(--card)}
-.wrap{max-width:760px;margin:0 auto;padding:0 16px}
+${CHROME_CSS}
 .top{display:flex;align-items:center;gap:14px;height:56px}
 .top a{color:var(--ink);text-decoration:none;font-weight:700}.top .sp{flex:1}.top .lnk{font-weight:500;color:var(--dim);font-size:14px}
 main{padding:24px 0 60px}
@@ -87,11 +84,10 @@ ul.feat{margin:6px 0 0;padding-left:20px}
 .list a{color:var(--ink);font-weight:700;text-decoration:none}.list a:hover{color:var(--acc)}.list small{display:block;color:var(--dim);font-size:13.5px}
 .cta{display:inline-block;margin:24px 8px 0 0;background:var(--acc);color:#fff;text-decoration:none;padding:10px 18px;border-radius:10px;font-weight:700}
 .cta.ghost{background:transparent;color:var(--acc);border:1px solid var(--acc)}
-footer{color:var(--dim);font-size:12px;text-align:center;padding:24px 0}footer a{color:var(--dim)}
 </style></head><body>
-<header><div class="wrap top"><a href="/">✦ AI 성단 지도</a><span class="sp"></span><a class="lnk" href="/korea/">한국 여행</a><a class="lnk" href="/ai/">AI 목록</a><a class="lnk" href="/trend/">AI 트렌드</a><a class="lnk" href="/">3D 지도</a></div></header>
-<main class="wrap">${body}</main>
-<footer class="wrap">© AI 성단 지도 · <a href="/privacy">개인정보처리방침</a></footer>
+${chromeTop(String(canonical).includes("/category/") ? "category" : "ai")}
+<div class="wrap cols"><main>${body}</main>${chromeSide()}</div>
+${chromeFoot()}
 </body></html>`;
 }
 
@@ -141,7 +137,7 @@ export async function generateSeoPages() {
   let catsWithPage = [...catCount].filter(([, n]) => n >= MIN_CATEGORY_TOOLS).map(([c]) => c);
   const catEn = new Map(tools.map((t) => [t.category, t.category_en]));
   const catHref = (c) => (catsWithPage.includes(c) ? `/category/${catSlug(catEn.get(c))}/` : null);
-  const toolLink = (t) => (hasPage.has(t.id) ? `<a href="/ai/${esc(t.slug)}/">${esc(t.name)}</a>` : `<a href="/?ai=${encodeURIComponent(t.slug)}">${esc(t.name)}</a>`);
+  const toolLink = (t) => (hasPage.has(t.id) ? `<a href="/ai/${esc(t.slug)}/">${esc(t.name)}</a>` : `<a href="/map/?ai=${encodeURIComponent(t.slug)}">${esc(t.name)}</a>`);
   // 데이터셋 이름과 사람들이 실제로 검색하는 이름이 다른 경우(데이터: GPT, 검색: ChatGPT)
   const SEARCH_NAME = { gpt: "ChatGPT" };
   const displayName = (t) => {
@@ -190,7 +186,7 @@ export async function generateSeoPages() {
       for (const g of groups) parts.push(`<div class="card"><h3>${esc(g.category_ko)}</h3><ul class="feat">${(g.items || []).map((i) => `<li><b>${esc(i.name)}</b> — ${esc(i.reason_ko)}</li>`).join("")}</ul></div>`);
     }
     if (alts.length) parts.push(`<h2>${esc(t.name)}와 비슷한 AI (대안)</h2><div class="chips">${alts.map(toolLink).join("")}</div>`);
-    if (!extra) return parts.join(String.fromCharCode(10)) + `<a class="cta" href="/?ai=${encodeURIComponent(t.slug)}">✦ 3D 지도에서 ${esc(t.name)} 보기</a>`;
+    if (!extra) return parts.join(String.fromCharCode(10)) + `<a class="cta" href="/map/?ai=${encodeURIComponent(t.slug)}">✦ 3D 지도에서 ${esc(t.name)} 보기</a>`;
     // 10/12: 서치콘솔 '크롤링됨-색인 안 됨'(유명 AI는 비슷한 소개 글이 많아 우리 페이지만의 내용이 필요) → 우리 지도 자료로만 만든 비교·위치·질문
     const nCombo = (x) => (combosOf.get(x.id) || []).length;
     const nLink = (x) => (altsOf.get(x.id) || new Set()).size;
@@ -212,7 +208,7 @@ export async function generateSeoPages() {
       parts.push(`<h2>자주 묻는 질문</h2><div class="card">${faq.map(([q, a]) => `<p><b>Q. ${esc(q)}</b><br>A. ${esc(a)}</p>`).join("")}</div>`);
       faqLd.set(t.id, { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faq.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })) });
     }
-    parts.push(`<a class="cta" href="/?ai=${encodeURIComponent(t.slug)}">✦ 3D 지도에서 ${esc(t.name)} 보기</a>${t.url ? `<a class="cta ghost" href="${esc(t.url)}" rel="noopener nofollow" target="_blank">공식 사이트</a>` : ""}`);
+    parts.push(`<a class="cta" href="/map/?ai=${encodeURIComponent(t.slug)}">✦ 3D 지도에서 ${esc(t.name)} 보기</a>${t.url ? `<a class="cta ghost" href="${esc(t.url)}" rel="noopener nofollow" target="_blank">공식 사이트</a>` : ""}`);
     return parts.join("\n");
   };
   const renderCategory = (c) => {
@@ -222,7 +218,7 @@ export async function generateSeoPages() {
 <h1>${esc(c)} AI ${list.length}개</h1><p class="lead">${esc(catEn.get(c) || "")} 분야의 AI 서비스를 모았습니다. 이름을 누르면 자세한 설명·가격·대안을 볼 수 있어요.</p>
 <ul class="list">${list.map((t) => `<li>${toolLink(t)}${t.pricing ? ` <span class="meta">· ${esc(t.pricing)}</span>` : ""}<small>${esc(t.desc_ko || t.description || "")}</small></li>`).join("")}</ul>
 <h2>다른 분야 AI</h2><div class="chips">${others}</div>
-<a class="cta" href="/">✦ 3D 지도에서 전체 보기</a>` };
+<a class="cta" href="/map/">✦ 3D 지도에서 전체 보기</a>` };
   };
   // 1차로 그려 보고 분량 미달 페이지를 뺀 뒤(그러면 링크 대상이 바뀌므로) 최종본을 다시 그림
   hasPage = new Set(candidates.filter((t) => textLen(renderTool(t, false)) >= MIN_TEXT_CHARS).map((t) => t.id));
@@ -262,7 +258,7 @@ export async function generateSeoPages() {
     body: `<h1>AI 서비스 한눈에 보기</h1><p class="lead">전세계 AI ${tools.length}개 중 많이 쓰고 정보가 충분한 ${selected.length}개를 자세히 정리했습니다. 분야별 전체 목록은 아래 분야를 눌러 보세요.</p>
 <h2>분야별 전체 목록</h2><div class="chips">${catsWithPage.map((c) => `<a href="${catHref(c)}">${esc(c)} (${catCount.get(c)})</a>`).join("")}</div>
 ${hubCats.map((c) => `<h2>${esc(c)}</h2><ul class="list">${selected.filter((t) => t.category === c).sort((a, b) => a.name.localeCompare(b.name)).map((t) => `<li>${toolLink(t)}<small>${esc(clip(t.desc_ko || t.description, 90))}</small></li>`).join("")}</ul>`).join("\n")}
-<a class="cta" href="/">✦ 3D 지도에서 전체 보기</a><a class="cta ghost" href="/trend/">AI 트렌드 글</a>`,
+<a class="cta" href="/map/">✦ 3D 지도에서 전체 보기</a><a class="cta ghost" href="/trend/">AI 트렌드 글</a>`,
   }));
 
   // ---- 사이트맵 + 메인 화면용 링크 목록 ----

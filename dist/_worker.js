@@ -320,10 +320,22 @@ function summary(body, n = 150) {
   return s.length > n ? s.slice(0, n - 1) + "…" : s;
 }
 
-function trendShell({ title, description, canonical, body, jsonLd }) {
+/*<chrome>*/
+const CHROME_CSS = "\n:root{--bg:#05050b;--card:#0f0f1d;--card2:#141a3a;--line:#262640;--ink:#d9dae6;--soft:#c3c4d4;--dim:#9d9fb6;--faint:#6b6d86;--purple:#a89bf0;--amber:#f0b429;--teal:#8fd6c4;--red:#e5766b;--acc:#a89bf0;--chip:#1b1b30;--sea:#8fd6c4;--gold:#f0b429}\n*{box-sizing:border-box}html{overflow-x:hidden}body{margin:0;background:var(--bg);color:var(--ink);font-family:\"Pretendard Variable\",Pretendard,-apple-system,\"Apple SD Gothic Neo\",\"Malgun Gothic\",sans-serif;font-size:14.5px;line-height:1.6;word-break:keep-all}\na{color:inherit}img{max-width:100%}\n.serif{font-family:\"Noto Serif KR\",\"Pretendard Variable\",serif}\n.star{color:var(--amber);text-shadow:0 0 8px var(--amber),0 0 18px var(--purple);font-style:normal;animation:tw 2.6s ease-in-out infinite}@keyframes tw{0%,100%{opacity:1}50%{opacity:.65}}\n.ticker{display:flex;gap:22px;align-items:center;padding:7px 24px;border-bottom:1px solid var(--line);background:#0a0a16;font-size:12px;color:var(--dim);overflow:hidden;white-space:nowrap}\n.ticker b{color:var(--amber);flex:none}.ticker a{color:var(--dim);text-decoration:none}.ticker a::before{content:\"◆\";color:var(--purple);font-size:8px;margin-right:8px}.ticker a:hover{color:var(--ink)}\n.mast{display:flex;align-items:center;gap:18px;padding:12px 24px;border-bottom:1px solid var(--line)}\n.mast .brand{font-size:23px;color:#fff;font-weight:700;display:flex;align-items:center;gap:8px;letter-spacing:-.02em;text-decoration:none}\n.mast .date{font-size:12px;color:var(--dim)}.mast .right{margin-left:auto;display:flex;align-items:center;gap:8px}\n.mast .q{display:flex;align-items:center;gap:6px;border:1px solid var(--line);padding:0 10px;height:32px;color:var(--dim);font-size:12.5px;width:210px;border-radius:6px}.mast .q input{background:none;border:0;color:var(--ink);width:100%;outline:none;font-size:13px}\n.lg{width:28px;height:28px;border-radius:50%;display:inline-grid;place-items:center;font-weight:800;font-size:11px;flex:none;text-decoration:none}.lg-g{background:#fff;color:#4285f4}.lg-k{background:#fee500;color:#191919}.lg-n{background:#03c75a;color:#fff}\n.langbar{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}.langbar a{padding:4px 11px;font-size:12px;font-weight:700;color:var(--dim);text-decoration:none;line-height:1.5}.langbar a.on{background:var(--purple);color:#0b0b14}.langbar a:not(.on):hover{color:#fff}\n.menu{display:flex;gap:2px;padding:0 24px;border-bottom:2px solid var(--line);overflow-x:auto;scrollbar-width:none}.menu::-webkit-scrollbar{display:none}\n.menu a{padding:10px 14px;font-weight:700;font-size:14px;color:var(--ink);white-space:nowrap;border-bottom:2px solid transparent;margin-bottom:-2px;text-decoration:none}\n.menu a:hover,.menu a.on{color:#fff;border-bottom-color:var(--amber)}.menu a.map{color:var(--amber)}\n.wrap{max-width:1320px;margin:0 auto;padding:22px 24px}\n.wrap.cols{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:28px;align-items:start}\n.sec{display:flex;align-items:baseline;margin:26px 0 12px;border-bottom:2px solid var(--line);padding-bottom:6px}\n.sec h2{margin:0;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#fff}.sec a{margin-left:auto;font-size:12px;color:var(--dim);text-decoration:none}\n.side{display:grid;gap:22px;align-content:start}\n.rank{border:1px solid var(--line);background:var(--card2)}.rank .hd{padding:12px 14px;background:#1a2250;color:#fff;font-weight:700;font-size:14px}.rank .hd small{display:block;font-weight:400;font-size:11px;color:#b9bfdc}\n.rank ol{list-style:none;margin:0;padding:6px 0}.rank li{display:grid;grid-template-columns:22px 1fr auto;gap:10px;align-items:center;padding:8px 14px;border-top:1px solid rgba(255,255,255,.08);font-size:13.5px}\n.rank li:first-child{border-top:0}.rank .rk{font-family:\"Noto Serif KR\",serif;font-weight:700;font-size:15px;color:var(--dim);text-align:center}.rank li:nth-child(-n+3) .rk{color:#ff5a5a}.rank b{color:#fff;font-weight:600}.rank .val{font-size:12px;color:var(--dim)}.rank a{text-decoration:none}\n.sidebox{border:1px solid var(--line);padding:14px 16px;background:var(--card)}.sidebox b{display:block;color:#fff;margin-bottom:6px}.sidebox span,.sidebox small{font-size:12.5px;color:var(--dim)}\n.sidebox ul{list-style:none;margin:8px 0 0;padding:0}.sidebox li{padding:7px 0;border-top:1px solid var(--line);font-size:13.5px}.sidebox li:first-child{border-top:0}.sidebox li a{color:var(--soft);text-decoration:none}.sidebox li a:hover{color:#fff}\n.mapbtn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:999px;border:1px solid #4a3fa0;background:linear-gradient(180deg,#2a2360,#15152c);color:#fff;font-weight:700;box-shadow:0 0 24px -6px var(--purple);text-decoration:none}\n.chips{display:flex;flex-wrap:wrap;gap:6px}.chips a{font-size:12.5px;border:1px solid var(--line);padding:4px 10px;color:var(--dim);text-decoration:none;border-radius:4px}.chips a:hover{color:#fff;border-color:var(--purple)}\n.ft{font-size:11.5px;color:var(--dim);display:flex;flex-wrap:wrap;gap:14px;padding:16px 0;border-top:1px solid var(--line)}.ft a{color:var(--dim);text-decoration:none}\n.paper{background:#fff;color:#1d1d2b;border-radius:14px;padding:24px 22px;overflow-wrap:anywhere}.paper h2,.paper h3{color:#102a43}.paper table{display:block;overflow-x:auto}\n/* 본문 공통 글꼴·제목·카드 — 어느 페이지든 같은 모양(.wrap.cols main 안). 페이지 자체 CSS(h1{…})보다 구체도가 높아 이것이 이긴다 */\n.wrap.cols main{font-family:\"Pretendard Variable\",Pretendard,-apple-system,\"Apple SD Gothic Neo\",\"Malgun Gothic\",sans-serif;color:var(--ink);line-height:1.7}\n.wrap.cols main h1{font-family:\"Noto Serif KR\",\"Pretendard Variable\",serif;font-size:26px;line-height:1.35;margin:4px 0 8px;color:#fff;font-weight:700;letter-spacing:-.2px}\n.wrap.cols main h2{font-size:19px;line-height:1.4;margin:28px 0 10px;color:var(--soft);font-weight:700}\n.wrap.cols main h3{font-size:16px;margin:18px 0 6px;color:var(--soft);font-weight:700}\n.wrap.cols main p,.wrap.cols main li{font-size:15px;color:var(--ink)}.wrap.cols main a{color:var(--teal)}\n.wrap.cols main .lead,.wrap.cols main .meta,.wrap.cols main .note,.wrap.cols main .crumb,.wrap.cols main .updated,.wrap.cols main small{color:var(--dim)}\n.wrap.cols main .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:12px 0}\n.wrap.cols main .cta,.wrap.cols main .guide{display:inline-block;margin:24px 8px 0 0;background:linear-gradient(90deg,var(--purple),#7c6eff);color:#fff;text-decoration:none;padding:10px 18px;border-radius:999px;font-weight:700;border:0}\n.wrap.cols main .cta.ghost{background:transparent;color:var(--purple);border:1px solid var(--purple)}\n.wrap.cols main table{border-collapse:collapse;width:100%;font-size:14px}.wrap.cols main th,.wrap.cols main td{border-bottom:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}.wrap.cols main th{color:var(--dim);font-weight:600;font-size:12.5px}\n.wrap.cols main img{max-width:100%;height:auto;border-radius:12px}.wrap.cols main code{background:rgba(255,255,255,.08);padding:1px 5px;border-radius:4px;font-size:12.5px}\n.wrap.cols main .chips a,.wrap.cols main .chips span{font-size:12.5px;border:1px solid var(--line);padding:4px 10px;color:var(--dim);text-decoration:none;border-radius:4px;background:none}\n.mast .brand{white-space:nowrap;flex:none}\n@media (max-width:900px){.mast{padding:10px 14px;gap:8px}.mast .brand{font-size:17px}.mast .brand svg{width:18px;height:18px}.mast .date,.mast .q{display:none}.mast .right{gap:6px}.langbar a{padding:3px 8px;font-size:11px}.lg{width:26px;height:26px}.menu{padding:0 16px}.ticker{padding:6px 16px}\n .wrap{padding:16px}.wrap.cols{grid-template-columns:minmax(0,1fr);gap:20px}.wrap.cols>main{min-width:0}}\n";
+const FONT_LINKS = "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css\"><link href=\"https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;700&display=swap\" rel=\"stylesheet\">";
+const CHROME_TOP = "<div class=\"ticker\" id=\"ticker\"><b data-ko=\"이번 주 신호\" data-en=\"This week\">이번 주 신호</b><a href=\"/trend/\">AI 트렌드 새 글 보기</a></div>\n<header class=\"mast\"><a class=\"brand serif\" href=\"/\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 3v3M12 18v3M3 12h3M18 12h3M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10z\"/></svg><span data-ko=\"AI 성단 지도\" data-en=\"AI Galaxy Map\">AI 성단 지도</span></a><span class=\"date\">__DATE__ · <span data-ko=\"전세계 AI 관계형 지도\" data-en=\"Relationship map of AI tools worldwide\">전세계 AI 관계형 지도</span></span>\n<div class=\"right\"><form class=\"q\" action=\"/map/\" method=\"get\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"11\" cy=\"11\" r=\"7\"/><path d=\"m21 21-4.3-4.3\"/></svg><input type=\"search\" name=\"q\" placeholder=\"AI 이름 검색\" data-ko=\"AI 이름 검색\" data-en=\"Search AI tools\" aria-label=\"AI 검색\"></form><div class=\"langbar\" aria-label=\"언어\"><a href=\"/\" hreflang=\"ko\" lang=\"ko\" data-lang=\"ko\" class=\"on\">한국어</a><a href=\"/en/korea/\" hreflang=\"en\" lang=\"en\" data-lang=\"en\" class=\"\">English</a></div><a class=\"lg lg-g\" href=\"/map/#login\" title=\"구글 로그인\">G</a><a class=\"lg lg-k\" href=\"/map/#login\" title=\"카카오 로그인\">K</a><a class=\"lg lg-n\" href=\"/map/#login\" title=\"네이버 로그인\">N</a></div></header>\n<nav class=\"menu\"><a href=\"/map/\" class=\"map\" data-ko=\"✦ 3D 성단 지도\" data-en=\"✦ 3D Galaxy Map\"><i class=\"star\">✦</i> 3D 성단 지도</a><a href=\"/\" class=\"\" data-ko=\"홈\" data-en=\"Home\">홈</a><a href=\"/trend/\" class=\"on\" data-ko=\"AI 트렌드\" data-en=\"AI Trends\">AI 트렌드</a><a href=\"/ai/\" class=\"\" data-ko=\"AI 목록 731\" data-en=\"AI Tools 731\">AI 목록 731</a><a href=\"/category/\" class=\"\" data-ko=\"분야 21\" data-en=\"Fields 21\">분야 21</a><a href=\"/korea/\" class=\"\" data-ko=\"한국 여행\" data-en=\"Korea Travel\">한국 여행</a><a href=\"/map/#board\" class=\"\" data-ko=\"게시판 · 채팅\" data-en=\"Board · Chat\">게시판 · 채팅</a></nav>";
+const CHROME_FOOT = "<div class=\"wrap\"><footer class=\"ft\"><span>© 2026 AI 성단 지도 · aigalaxy-map.com</span><a href=\"/privacy\">개인정보 처리방침</a><a href=\"/rss.xml\">RSS</a><a href=\"/sitemap.xml\">사이트맵</a><a href=\"/map/#board\">문의 · 게시판</a></footer></div>\n<script src=\"/chrome.js\" defer></script>";
+/*</chrome>*/
+// 트렌드 글·목록 껍데기 — 2026-10-13 메인과 같은 매거진형(공통 CSS·머리줄은 build-dist.mjs가 위 /*<chrome>*/ 블록에 주입).
+// 글 본문이 글 틀(.gx 조각, 25_templates/post/galaxy_trend)이면 그대로 넓게 보여 주고, 옛 글(밝은 배경용 인라인 스타일)은 .paper 흰 카드에 담는다.
+function kstDateText(d = new Date()) {
+  const k = new Date(d.getTime() + 9 * 3600 * 1000);
+  return `${k.getUTCFullYear()}년 ${k.getUTCMonth() + 1}월 ${k.getUTCDate()}일`;
+}
+function trendShell({ title, description, canonical, body, jsonLd, side = "" }) {
   return `<!doctype html>
 <html lang="ko"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><!-- Google Analytics(GA4, 2026-10-13) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-DMZLKJKCFG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-DMZLKJKCFG");</script>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><!-- Google Analytics(GA4, 2026-10-13) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-DMZLKJKCFG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-DMZLKJKCFG');</script>
 <title>${escHtml(title)}</title>
 <meta name="description" content="${escHtml(description)}">
 <link rel="canonical" href="${canonical}">
@@ -331,36 +343,35 @@ function trendShell({ title, description, canonical, body, jsonLd }) {
 <meta property="og:title" content="${escHtml(title)}"><meta property="og:description" content="${escHtml(description)}">
 <meta property="og:url" content="${canonical}">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23a89bf0' d='M12 2l2.6 7.4L22 12l-7.4 2.6L12 22l-2.6-7.4L2 12l7.4-2.6z'/%3E%3C/svg%3E">
+${FONT_LINKS}
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1632907475675251" crossorigin="anonymous"></script>
-${jsonLd ? `<script type="application/ld+json">${JSON.stringify(jsonLd).replace(/</g, "\\u003c")}</script>` : ""}
-<style>
-:root{--bg:#f7f7fb;--card:#fff;--ink:#1d1d2b;--dim:#6b6b80;--line:#e3e3ee;--acc:#5b4bd6}
-@media (prefers-color-scheme:dark){:root{--bg:#0d0d18;--card:#161626;--ink:#e8e8f2;--dim:#9a9ab0;--line:#2a2a40;--acc:#9d8cff}}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;line-height:1.7}
-header{border-bottom:1px solid var(--line);background:var(--card)}
-.wrap{max-width:760px;margin:0 auto;padding:0 16px}
-.top{display:flex;align-items:center;gap:14px;height:56px}
-.top a{color:var(--ink);text-decoration:none;font-weight:700}.top .sp{flex:1}.top .lnk{font-weight:500;color:var(--dim);font-size:14px}
-main{padding:28px 0 60px}
-h1{font-size:26px;line-height:1.35;margin:0 0 8px}
-.meta{color:var(--dim);font-size:13px;margin-bottom:24px}
-.tags{display:flex;flex-wrap:wrap;gap:6px;margin:24px 0}.tags span{font-size:12px;color:var(--acc);border:1px solid var(--line);border-radius:999px;padding:2px 10px}
-article{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px 22px;overflow-wrap:anywhere}
-article p,article li{color:var(--ink)!important}article table{width:100%;border-collapse:collapse;font-size:14px;display:block;overflow-x:auto}
-article th,article td{border:1px solid var(--line);padding:6px 8px}article img{max-width:100%;height:auto}
-article h2{color:var(--ink)}
-.list{list-style:none;padding:0;margin:0}.list li{border-bottom:1px solid var(--line)}
-.list a{display:block;padding:16px 4px;color:var(--ink);text-decoration:none}.list a:hover b{color:var(--acc)}
-.list b{display:block;font-size:17px}.list small{color:var(--dim);font-size:13px}
-.more{margin-top:36px}.more h2{font-size:18px}
-.cta{display:inline-block;margin-top:28px;background:var(--acc);color:#fff;text-decoration:none;padding:10px 18px;border-radius:10px;font-weight:700}
-footer{color:var(--dim);font-size:12px;text-align:center;padding:24px 0}footer a{color:var(--dim)}
+${jsonLd ? `<script type="application/ld+json">${JSON.stringify(jsonLd).replace(/</g, "\u003c")}</script>` : ""}
+<style>${CHROME_CSS}
+.post-h1{font-size:26px;line-height:1.35;margin:4px 0 6px;color:#fff}.meta{color:var(--dim);font-size:13px;margin-bottom:18px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:22px 0}.tags span{font-size:12px;color:var(--purple);border:1px solid var(--line);border-radius:999px;padding:2px 10px}
+.list{list-style:none;padding:0;margin:0}.list li{border-bottom:1px solid var(--line)}.list a{display:block;padding:16px 4px;color:var(--ink);text-decoration:none}.list a:hover b{color:#fff}
+.list b{display:block;font-size:17px;color:var(--soft)}.list small{color:var(--dim);font-size:13px}
+.cta{display:inline-block;margin-top:24px;background:linear-gradient(90deg,var(--purple),#7c6eff);color:#fff;text-decoration:none;padding:10px 18px;border-radius:999px;font-weight:700}
+article img{max-width:100%;height:auto}
 </style></head><body>
-<header><div class="wrap top"><a href="/">✦ AI 성단 지도</a><span class="sp"></span><a class="lnk" href="/korea/">한국 여행</a><a class="lnk" href="/ai/">AI 목록</a><a class="lnk" href="/trend/">AI 트렌드</a><a class="lnk" href="/">3D 지도</a></div></header>
-<main class="wrap">${body}</main>
-<footer class="wrap">© AI 성단 지도 · <a href="/privacy">개인정보처리방침</a></footer>
+${CHROME_TOP.replace("__DATE__", kstDateText())}
+<div class="wrap cols"><main>${body}</main>${side}</div>
+${CHROME_FOOT}
 </body></html>`;
 }
+
+function trendSide(more) {
+  return `<aside class="side"><div class="sidebox"><b>함께 보면 좋은 글</b><ul>${more || '<li><a href="/trend/">AI 트렌드 목록</a></li>'}</ul></div><div class="sidebox"><b>새 글 받아 보기</b><ul><li><a href="/rss.xml">RSS 구독</a></li><li><a href="/map/">✦ 3D 성단 지도 열기</a></li></ul></div></aside>`;
+}
+
+// /api/trend/latest — 공통 껍데기(chrome.js)가 "이번 주 신호" 띠·최신 글 칸을 채울 때 씀. 5분 캐시.
+async function trendLatest() {
+  let posts = [];
+  try { posts = await sbGet("board_posts?select=id,title,body,tags,created_at&board=eq.ai_trend&hidden=eq.false&order=created_at.desc&limit=12"); } catch (e) {}
+  const out = posts.map((p) => ({ id: p.id, title: p.title, tags: p.tags || [], created_at: p.created_at, summary: summary(p.body, 120) }));
+  return new Response(JSON.stringify({ posts: out, total: out.length }), { headers: { "content-type": "application/json; charset=utf-8", "cache-control": "public, max-age=300", "access-control-allow-origin": "*" } });
+}
+
 
 async function trendList() {
   let posts = [];
@@ -372,9 +383,10 @@ async function trendList() {
     title: "AI 트렌드 — 요즘 뜨는 AI 도구·순위·종류 정리 | AI 성단 지도",
     description: "요즘 많이 쓰는 AI 도구 순위, 종류별 AI 정리, 새로 나온 AI 소식을 누구나 읽기 쉽게 정리합니다.",
     canonical: `${SITE}/trend/`,
-    body: `<h1>AI 트렌드</h1><div class="meta">요즘 뜨는 AI 도구·순위·종류를 쉽게 정리한 글</div>
+    body: `<h1 class="post-h1 serif">AI 트렌드</h1><div class="meta">요즘 뜨는 AI 도구·순위·요금·소식을 궤도 안내·별 대 별·성단 순위표 같은 틀로 정리한 글</div>
 <ul class="list">${items || "<li style='padding:16px 4px;color:var(--dim)'>아직 글이 없어요.</li>"}</ul>
-<a class="cta" href="/">✦ 3D 지도에서 AI 731개 둘러보기</a>`,
+<a class="cta" href="/map/">✦ 3D 지도에서 AI 731개 둘러보기</a>`,
+    side: trendSide(""),
   }), { headers: TREND_HEADERS });
 }
 
@@ -399,11 +411,11 @@ async function trendPost(id) {
     canonical,
     jsonLd: { "@context": "https://schema.org", "@type": "Article", headline: p.title, datePublished: p.created_at,
       author: { "@type": "Organization", name: "AI 성단 지도" }, mainEntityOfPage: canonical },
-    body: `<h1>${escHtml(p.title)}</h1><div class="meta">AI 성단 지도 · ${fmtDate(p.created_at)}</div>
-<article>${content}</article>
-${tags ? `<div class="tags">${tags}</div>` : ""}
-<a class="cta" href="/">✦ 3D 지도에서 AI 731개 둘러보기</a>
-${more ? `<section class="more"><h2>함께 보면 좋은 글</h2><ul class="list">${more}</ul></section>` : ""}`,
+    body: (content.includes('class="gx"')
+      ? `<article>${content}</article>`
+      : `<h1 class="post-h1 serif">${escHtml(p.title)}</h1><div class="meta">AI 성단 지도 · ${fmtDate(p.created_at)}</div><article class="paper">${content}</article>`)
+      + `${tags ? `<div class="tags">${tags}</div>` : ""}`,
+    side: trendSide(others.map((o) => `<li><a href="/trend/${o.id}">${escHtml(o.title)}</a></li>`).join("")),
   }), { headers: TREND_HEADERS });
 }
 
@@ -450,6 +462,7 @@ export default {
     if (url.pathname === "/api/auth/naver/start") return naverStart(request, url, env);
     if (url.pathname === "/api/auth/naver/callback") return naverCallback(request, url, env);
     if (url.pathname === "/api/posts") return receivePost(request, env);
+    if (url.pathname === "/api/trend/latest") return trendLatest();
     if (url.pathname === "/trend" || url.pathname === "/trend/") return trendList();
     const tm = url.pathname.match(/^\/trend\/(\d+)\/?$/);
     if (tm) return trendPost(tm[1]);
