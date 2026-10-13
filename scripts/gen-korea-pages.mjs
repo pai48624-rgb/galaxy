@@ -38,7 +38,7 @@ function shell(lang, { title, description, path, altPath, body, jsonLd, image })
   const t = L[lang], o = lang === "en" ? "ko" : "en";
   return `<!doctype html>
 <html lang="${lang}"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><!-- Google Analytics(GA4, 2026-10-13) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-DMZLKJKCFG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-DMZLKJKCFG");</script>
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(description)}">
 <link rel="canonical" href="${SITE}${path}">
