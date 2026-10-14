@@ -62,8 +62,23 @@ const tagOf = (p: TrendPost) => (lang === 'en' ? p.tags.find((t) => /^[A-Za-z]/.
   .tz-pic { display: block; min-width: 0; border: 1px solid rgb(51 65 85); border-radius: 1rem; padding: .5rem; background: rgb(15 23 42 / .4); transition: border-color .15s; }
   .tz-pic:hover { border-color: rgb(var(--aw-color-primary-rgb, 124 108 240) / .7); }
   .tz-pic img, .tz-ph { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: .75rem; }
-  .tz-pic img { object-fit: contain; background: rgb(2 6 23); }  /* 글 첫 그림은 글자 띠(3:1)가 많아 자르지 않고 통째로 */
-  .tz-ph { display: grid; place-items: center; align-content: center; gap: .4rem; background: radial-gradient(circle at 30% 25%, rgb(124 108 240 / .35), transparent 55%), radial-gradient(circle at 75% 80%, rgb(56 189 248 / .18), transparent 50%), rgb(2 6 23); color: var(--aw-color-text-heading); text-align: center; padding: 1rem; }
+  /* 사진 칸 배경 = 밤하늘(별 3겹 + 성운, CSS만 — 외부 그림 없음). 글 첫 그림은 글자 띠(3:1)라 자르지 않고 이 위에 통째로(10/14 사용자) */
+  .tz-pic img, .tz-ph {
+    background:
+      radial-gradient(1px 1px at 12% 18%, #fff 50%, transparent 51%), radial-gradient(1px 1px at 27% 72%, #fff 50%, transparent 51%),
+      radial-gradient(1.5px 1.5px at 41% 33%, #e0e7ff 50%, transparent 51%), radial-gradient(1px 1px at 58% 84%, #fff 50%, transparent 51%),
+      radial-gradient(1.5px 1.5px at 69% 14%, #fff 50%, transparent 51%), radial-gradient(1px 1px at 83% 61%, #c7d2fe 50%, transparent 51%),
+      radial-gradient(2px 2px at 91% 27%, #fff 50%, transparent 51%), radial-gradient(1px 1px at 6% 88%, #fff 50%, transparent 51%),
+      radial-gradient(1px 1px at 35% 9%, #fff 50%, transparent 51%), radial-gradient(1.5px 1.5px at 77% 92%, #e0e7ff 50%, transparent 51%),
+      radial-gradient(1px 1px at 50% 55%, #fff 50%, transparent 51%), radial-gradient(1px 1px at 18% 45%, #c7d2fe 50%, transparent 51%),
+      radial-gradient(1px 1px at 95% 75%, #fff 50%, transparent 51%),
+      radial-gradient(ellipse 60% 45% at 78% 22%, rgb(124 108 240 / .38), transparent 70%),
+      radial-gradient(ellipse 55% 40% at 18% 82%, rgb(56 189 248 / .22), transparent 70%),
+      radial-gradient(ellipse 40% 30% at 45% 50%, rgb(236 72 153 / .10), transparent 70%),
+      linear-gradient(180deg, #050816 0%, #0a0f2c 55%, #060818 100%);
+  }
+  .tz-pic img { object-fit: contain; }
+  .tz-ph { display: grid; place-items: center; align-content: center; gap: .4rem; color: var(--aw-color-text-heading); text-align: center; padding: 1rem; }
   .tz-ph i { font-style: normal; font-size: 1.6rem; color: var(--aw-color-primary); }
   .tz-ph b { font-size: 1.35rem; font-weight: 700; word-break: keep-all; }
 </style>
