@@ -1,0 +1,10 @@
+---
+// 영어판 — 한국어 화면(category/[slug]/index.astro)을 lang="en" 으로 그대로 씀(문구: src/i18n/ui.ts, 데이터 번역: src/i18n/cache)
+import Page from '../../../category/[slug]/index.astro';
+import { categories } from '~/lib/data';
+export async function getStaticPaths() {
+  return categories().map((c) => ({ params: { slug: c.slug }, props: { c } }));
+}
+---
+
+<Page c={Astro.props.c} lang="en" />

@@ -1,0 +1,165 @@
+---
+// astrowind Header.astro를 바탕으로: 로고 · 메뉴 7개 · 검색창(→/map/?q=) · 언어 전환(한국어|English) · 로그인 아이콘 3개(→/board/#login, 게시판의 로그인 줄 강조)
+// 머리줄은 사이트 전체에서 이 한 벌만 쓴다.
+import { Icon } from 'astro-icon/components';
+import Logo from '~/components/Logo.astro';
+import ToggleMenu from '~/components/common/ToggleMenu.astro';
+import SearchBox from '~/components/blocks/SearchBox.astro';
+import { headerLinks, type Lang } from '~/navigation';
+import { trimSlash } from '~/utils/utils';
+
+export interface Props {
+  id?: string;
+  lang?: Lang;
+  /** 이 화면의 다른 언어판 주소(없으면 한국어 홈 / 영어 한국 여행 목록) */
+  altLangHref?: string;
+  /** 이 화면의 주소(canonical 경로) — 현재 언어 버튼이 가리킴 */
+  currentHref?: string;
+  isSticky?: boolean;
+}
+
+const { id = 'header', lang = 'ko', altLangHref, currentHref, isSticky = true } = Astro.props;
+const links = headerLinks(lang);
+const linksKo = headerLinks('ko'), linksEn = headerLinks('en');  // 언어 기억(data-ko/en, 색인으로 짝)
+const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
+const isActive = (href?: string) => typeof href === 'string' && `/${trimSlash(href)}` === currentPath;
+const here = currentHref || currentPath;
+const koHref = lang === 'ko' ? here : altLangHref || '/';  // 영어 화면엔 PageLayout 이 한국어 짝 주소를 넣어 줌
+const enHref = lang === 'en' ? here : altLangHref || '/en/';  // 영어판 없는 화면이면 영어 홈
+const t = lang === 'en'
+  ? { search: 'Search AI tools', searchLabel: 'Search AI tools', nav: 'Main navigation', langLabel: 'Language', google: 'Sign in with Google', kakao: 'Sign in with Kakao', naver: 'Sign in with Naver', menu: 'Toggle menu' }
+  : { search: 'AI 이름 검색', searchLabel: 'AI 검색', nav: '주 메뉴', langLabel: '언어', google: '구글 로그인', kakao: '카카오 로그인', naver: '네이버 로그인', menu: '메뉴 열기' };
+---
+
+<aw-header>
+  <header
+    class:list={[{ sticky: isSticky, relative: !isSticky }, 'top-0 z-40 flex-none mx-auto w-full border-b border-gray-50/0 transition-[opacity] ease-in-out']}
+    {...isSticky ? { 'data-aw-sticky-header': true } : {}}
+    {...id ? { id } : {}}
+  >
+    <div class="absolute inset-0"></div>
+    <div class="relative text-default py-3 px-3 lg:px-6 mx-auto w-full lg:flex lg:justify-between lg:items-center max-w-[1320px]">
+      <div class="flex justify-between">
+        <a class="flex items-center" href={lang === 'en' ? '/en/' : '/'} data-href-ko="/" data-href-en="/en/">
+          <Logo lang={lang} />
+        </a>
+        <div class="flex items-center lg:hidden">
+          <ToggleMenu label={t.menu} />
+        </div>
+      </div>
+      <nav
+        class="items-center w-full lg:w-auto hidden lg:flex lg:mx-5 text-default overflow-y-auto overflow-x-hidden lg:overflow-visible lg:justify-self-center"
+        aria-label={t.nav}
+      >
+        <ul class="flex flex-col lg:flex-row lg:self-center w-full lg:w-auto text-xl lg:text-[0.8125rem] xl:text-sm 2xl:text-[0.9375rem] tracking-[0.01rem] font-medium lg:justify-center">
+          {
+            links.map(({ text, href, icon }, i) => (
+              <li>
+                <a
+                  class:list={['hover:text-link px-1.5 xl:px-2.5 2xl:px-3 py-3 flex items-center whitespace-nowrap gap-1', { 'aw-link-active': isActive(href) }]}
+                  href={href}
+                  data-ko={linksKo[i]?.text} data-en={linksEn[i]?.text} data-href-ko={linksKo[i]?.href} data-href-en={linksEn[i]?.href}
+                >
+                  {icon && <Icon name={icon} class="w-4 h-4 text-link" />}
+                  {text}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+      <div
+        class="hidden lg:self-center lg:flex items-center lg:mb-0 fixed w-full lg:w-auto lg:static justify-end left-0 rtl:left-auto rtl:right-0 bottom-0 p-3 lg:p-0 lg:justify-self-end"
+      >
+        <div class="items-center flex flex-wrap lg:flex-nowrap gap-2 justify-between w-full lg:w-auto">
+          <SearchBox size="header" lang={lang} placeholder={t.search} label={t.searchLabel} class="min-w-0 lg:hidden xl:block w-40 xl:w-32 2xl:w-40" />
+          <div class="flex items-center shrink-0 whitespace-nowrap text-sm rounded-full border border-slate-600 overflow-hidden" aria-label={t.langLabel}>
+            <a href={koHref} hreflang="ko" lang="ko" data-lang="ko" class:list={['px-2.5 py-1', lang === 'ko' ? 'bg-primary text-white font-semibold' : 'text-muted hover:text-link']}>한국어</a>
+            <a href={enHref} hreflang="en" lang="en" data-lang="en" class:list={['px-2.5 py-1', lang === 'en' ? 'bg-primary text-white font-semibold' : 'text-muted hover:text-link']}>English</a>
+          </div>
+          <!-- 로그인은 어느 화면에서든 그 자리에서(components/auth/site-auth.ts) — 2026-10-14 사용자 "다른 메뉴에서 로그인 누르면 왜 게시판으로 가나" -->
+          <div class="flex items-center gap-1 shrink-0" id="siteAuth" data-lang={lang}>
+            <button type="button" class="w-8 h-8 rounded-full grid place-items-center text-xs font-bold bg-white text-slate-900 site-login" data-provider="google" title={t.google} aria-label={t.google}>G</button>
+            <button type="button" class="w-8 h-8 rounded-full grid place-items-center text-xs font-bold bg-[#fee500] text-slate-900 site-login" data-provider="kakao" title={t.kakao} aria-label={t.kakao}>K</button>
+            <button type="button" class="w-8 h-8 rounded-full grid place-items-center text-xs font-bold bg-[#03c75a] text-white site-login" data-provider="naver" title={t.naver} aria-label={t.naver}>N</button>
+            <span id="siteUser" hidden class="flex items-center gap-1.5 text-xs">
+              <span id="siteUserName" class="max-w-[9rem] truncate text-default"></span>
+              <button type="button" id="siteLogout" class="rounded-full border border-slate-700 px-2 py-1 text-[11px] text-muted hover:text-link" data-ko="로그아웃" data-en="Sign out">{lang === 'en' ? 'Sign out' : '로그아웃'}</button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+</aw-header>
+
+<style>
+  aw-header {
+    display: contents;
+  }
+</style>
+
+<script>
+  class AwHeader extends HTMLElement {
+    private onScroll?: () => void;
+    private mql?: MediaQueryList;
+    private onMqlChange?: () => void;
+
+    connectedCallback() {
+      const header = this.querySelector<HTMLElement>('#header');
+      const toggle = this.querySelector<HTMLElement>('[data-aw-toggle-menu]');
+      const nav = this.querySelector<HTMLElement>('#header nav');
+      const lastChild = this.querySelector<HTMLElement>('#header > div > div:last-child');
+
+      const closeMenu = () => {
+        toggle?.classList.remove('expanded');
+        toggle?.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('overflow-hidden');
+        header?.classList.remove('h-screen', 'expanded', 'bg-page');
+        nav?.classList.add('hidden');
+        lastChild?.classList.add('hidden');
+      };
+
+      toggle?.addEventListener('click', () => {
+        const expanded = toggle.classList.toggle('expanded');
+        toggle.setAttribute('aria-expanded', String(expanded));
+        document.body.classList.toggle('overflow-hidden');
+        header?.classList.toggle('h-screen');
+        header?.classList.toggle('expanded');
+        header?.classList.toggle('bg-page');
+        nav?.classList.toggle('hidden');
+        lastChild?.classList.toggle('hidden');
+      });
+
+      nav?.addEventListener('click', closeMenu);
+
+      this.mql = window.matchMedia('(max-width: 1023px)');
+      this.onMqlChange = () => closeMenu();
+      this.mql.addEventListener('change', this.onMqlChange);
+
+      if (header?.hasAttribute('data-aw-sticky-header')) {
+        let ticking = false;
+        const applyStyles = () => {
+          if (window.scrollY > 60) header.classList.add('scroll');
+          else header.classList.remove('scroll');
+          ticking = false;
+        };
+        this.onScroll = () => {
+          if (!ticking) {
+            window.requestAnimationFrame(applyStyles);
+            ticking = true;
+          }
+        };
+        applyStyles();
+        document.addEventListener('scroll', this.onScroll, { passive: true });
+      }
+      document.documentElement.classList.add('motion-safe:scroll-smooth');
+    }
+
+    disconnectedCallback() {
+      if (this.onScroll) document.removeEventListener('scroll', this.onScroll);
+      if (this.mql && this.onMqlChange) this.mql.removeEventListener('change', this.onMqlChange);
+    }
+  }
+  if (!customElements.get('aw-header')) customElements.define('aw-header', AwHeader);
+</script>

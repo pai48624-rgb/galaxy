@@ -1,0 +1,36 @@
+---
+// AI 트렌드 목록(/trend/) — 목록만 템플릿 레이아웃. 글(/trend/<id>)은 기존 워커 화면으로 연결(2단계에서 통합).
+// 영어판 /en/trend/ 는 이 파일을 lang="en" 으로 씀: 제목·요약은 번역 캐시, 글 자체는 한국어 원문(“Korean article” 표시). 본문 자동 번역은 2단계.
+import PageLayout from '~/layouts/PageLayout.astro';
+import TrendList from '~/components/blocks/TrendList.astro';
+import Card from '~/components/ui/Card.astro';
+import { Icon } from 'astro-icon/components';
+import { trendPosts, loadTools } from '~/lib/data';
+import { ui } from '~/i18n/ui';
+import { lp, type Lang } from '~/i18n/tr';
+const lang: Lang = (Astro.props as { lang?: Lang }).lang || 'ko';
+const T = ui(lang);
+const posts = await trendPosts();
+const n = loadTools().length;
+import { R } from '~/lib/routes';
+---
+
+<PageLayout metadata={{ title: T.trend.title, description: T.trend.desc, canonical: R.trend(lang), lang }}>
+  <div class="max-w-[1320px] mx-auto px-4 sm:px-6 py-7 md:py-9 grid grid-cols-[minmax(0,1fr)] gap-8 lg:grid-cols-[minmax(0,1fr)_300px]">
+    <div class="min-w-0">
+      <h1 class="text-2xl md:text-3xl font-bold leading-tighter tracking-tighter font-heading text-heading">{T.trend.h1}</h1>
+      <p class="mt-2 text-base text-muted">{T.trend.lead}</p>
+      {T.trend.koreanNote && <p class="mt-2 text-sm text-muted">{T.trend.koreanNote}</p>}
+      <div class="mt-8"><TrendList posts={posts} lang={lang} /></div>
+      <a href={R.map(lang)} class="btn-primary mt-10">{T.trend.mapBtn(n)}<Icon name="tabler:arrow-right" class="w-5 h-5 ml-1 -mr-1" /></a>
+    </div>
+    <aside class="space-y-6">
+      <Card title={T.common.subscribeTitle}>
+        <ul class="space-y-2 text-sm">
+          <li><a href={R.rss()} class="text-link hover:underline inline-flex items-center gap-1"><Icon name="tabler:rss" class="w-4 h-4" />{T.common.rss}</a></li>
+          <li><a href={R.map(lang)} class="text-link hover:underline inline-flex items-center gap-1"><Icon name="tabler:sparkles" class="w-4 h-4" />{T.common.openMapCard}</a></li>
+        </ul>
+      </Card>
+    </aside>
+  </div>
+</PageLayout>

@@ -1,0 +1,16 @@
+---
+// 목록 화면의 구역 제목 + 오른쪽 "더 보기" 링크(astrowind Headline을 왼쪽 정렬 소형으로)
+import { Icon } from 'astro-icon/components';
+export interface Props { title: string; href?: string; more?: string; class?: string }
+const { title, href, more, class: className = '' } = Astro.props;
+---
+
+<div class:list={['flex items-end justify-between gap-4 mb-4 mt-9 first:mt-0', className]}>
+  <h2 class="text-xl md:text-2xl font-bold leading-tighter tracking-tighter font-heading text-heading">{title}</h2>
+  {href && more && (
+    <a href={href} class="inline-flex items-center gap-0.5 text-sm font-medium text-link hover:underline whitespace-nowrap">
+      {more}
+      <Icon name="tabler:chevron-right" class="w-4 h-4" />
+    </a>
+  )}
+</div>

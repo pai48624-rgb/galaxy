@@ -1,0 +1,51 @@
+---
+// astrowind Layout.astro — Fonts API·ClientRouter·astro-seo 제거, Metadata는 직접 작성한 컴포넌트
+import '~/assets/styles/tailwind.css';
+import CustomStyles from '~/components/CustomStyles.astro';
+import ApplyColorMode from '~/components/common/ApplyColorMode.astro';
+import Metadata from '~/components/common/Metadata.astro';
+import Intersect from '~/components/common/Intersect.astro';
+import type { Props as MetaProps } from '~/components/common/Metadata.astro';
+
+export interface Props {
+  metadata: MetaProps;
+}
+const { metadata } = Astro.props;
+const lang = metadata.lang || 'ko';
+---
+
+<!doctype html>
+<html lang={lang} dir="ltr" class="dark">
+  <head>
+    <Metadata {...metadata} />
+    <CustomStyles />
+    <ApplyColorMode />
+    <slot name="head" />
+    <script is:inline src="/vendor/supabase.min.js"></script>
+  </head>
+  <body class="antialiased text-default bg-page tracking-tight min-h-screen flex flex-col">
+    <slot />
+    <script is:inline>
+/* 언어 선택 기억(2026-10-14): 머리줄의 한국어|English 를 누르면 localStorage(galaxyLang, 3D 앱과 같은 키)에 저장하고,
+   모든 화면에서 머리줄·왼쪽 메뉴·꼬리말·검색창 문구를 그 언어로 바꾼다. 영어판이 있는 화면(hreflang alternate — 2026-10-14부터 거의 모든 화면)은 그 언어판으로 넘긴다. */
+(function(){
+  var KEY="galaxyLang"; function get(){try{return localStorage.getItem(KEY)||""}catch(e){return ""}} function set(l){try{localStorage.setItem(KEY,l)}catch(e){}}
+  var page=document.documentElement.lang==="en"?"en":"ko"; var lang=get()||page; if(!get()) set(page);
+  function apply(l){
+    document.querySelectorAll("[data-en]").forEach(function(e){var v=e.getAttribute(l==="en"?"data-en":"data-ko"); if(v!=null&&v!=="") e.textContent=v;});
+    document.querySelectorAll("[data-href-en]").forEach(function(a){var h=a.getAttribute(l==="en"?"data-href-en":"data-href-ko"); if(h) a.setAttribute("href",h);});
+    document.querySelectorAll("input[type=search]").forEach(function(i){i.placeholder=l==="en"?"Search AI tools":"AI 이름 검색";});
+    document.querySelectorAll("a[data-lang]").forEach(function(a){var on=a.getAttribute("data-lang")===l; a.classList.toggle("bg-primary",on); a.classList.toggle("text-white",on); a.classList.toggle("font-semibold",on); a.classList.toggle("text-muted",!on);});
+  }
+  if(lang!==page){
+    var alt=document.querySelector('link[rel=alternate][hreflang="'+lang+'"]');
+    if(alt){ try{ var u=new URL(alt.getAttribute("href"),location.href); if(u.pathname!==location.pathname){ location.replace(u.pathname+(location.search||u.search)+location.hash); return;  /* 검색어(?q=)·로그인 복귀 해시(#access_token)도 그대로 가져감 */ } }catch(e){} }
+  }
+  apply(lang);  /* 영어 페이지의 왼쪽 메뉴 등 기본이 한국어인 문구도 고른 언어로 */
+  document.addEventListener("click",function(ev){var a=ev.target.closest&&ev.target.closest("a[data-lang]"); if(a) set(a.getAttribute("data-lang"));},true);
+})();
+    </script>
+    <Intersect />
+    <script>import '~/components/auth/site-auth.ts';</script>
+  </body>
+</html>

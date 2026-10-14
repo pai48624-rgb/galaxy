@@ -1,0 +1,20 @@
+---
+// 템플릿(astrowind Features2/CallToAction 카드)과 같은 카드 틀: 둥근 모서리·얇은 테두리, 어두운 배경에서는 그림자 없음
+import { twMerge } from 'tailwind-merge';
+export interface Props { title?: string; href?: string; class?: string; as?: 'div' | 'article' | 'a'; id?: string; [k: string]: unknown }
+const { title, href, class: className = '', as = href ? 'a' : 'div', ...rest } = Astro.props;
+const Tag = as;
+---
+
+<Tag
+  {...(href ? { href } : {})}
+  {...rest}
+  class={twMerge(
+    'block rounded-md border border-slate-700 bg-slate-900/40 p-4 md:p-5 not-prose',
+    href ? 'hover:border-primary/70 hover:bg-slate-900/70 transition duration-150 ease-in-out' : '',
+    className
+  )}
+>
+  {title && <h3 class="text-lg font-bold text-heading mb-2 text-balance">{title}</h3>}
+  <slot />
+</Tag>

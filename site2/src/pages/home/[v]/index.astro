@@ -1,0 +1,22 @@
+---
+// 메인 시안 비교용(/home/a/ · /home/b/ · /home/c/) — 검색엔진 제외(noindex). 실제 메인은 config.ts homeVariant.
+import PageLayout from '~/layouts/PageLayout.astro';
+import { homeData } from '~/lib/data';
+import A from '~/layouts/home/A.astro';
+import B from '~/layouts/home/B.astro';
+import C from '~/layouts/home/C.astro';
+export async function getStaticPaths() {
+  return [{ params: { v: 'a' } }, { params: { v: 'b' } }, { params: { v: 'c' } }];
+}
+const v = Astro.params.v as 'a' | 'b' | 'c';
+const d = await homeData();
+const Home = { a: A, b: B, c: C }[v];
+const names = { a: '매거진형', b: '사이드 메뉴 + 격자형', c: '검색 중심 격자형' };
+---
+
+<PageLayout metadata={{ title: `메인 시안 ${v.toUpperCase()} — ${names[v]} | AI 성단 지도`, description: `메인 화면 시안 ${v} (${names[v]})`, canonical: `/home/${v}/`, noindex: true }}>
+  <div class="bg-primary/10 border-b border-primary/30 text-xs text-center py-1.5 text-default">
+    메인 시안 <b class="text-heading">{v.toUpperCase()} · {names[v]}</b> — 다른 시안: {(['a', 'b', 'c'] as const).filter((x) => x !== v).map((x) => <a href={`/home/${x}/`} class="text-link hover:underline mx-1">{x.toUpperCase()} {names[x]}</a>)}
+  </div>
+  <Home d={d} />
+</PageLayout>

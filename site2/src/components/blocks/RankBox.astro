@@ -1,0 +1,46 @@
+---
+// 메인 블록: 이번 달 가장 밝은 별 1~10(data/ai_top_rank.json). row=true 면 가로 한 줄 칩(검색형 메인). 영어판: 이름=영문, 이유=번역 캐시
+import { Icon } from 'astro-icon/components';
+import Card from '~/components/ui/Card.astro';
+import type { HomeData } from '~/lib/data';
+import { ui } from '~/i18n/ui';
+import { lp, tx, type Lang } from '~/i18n/tr';
+export interface Props { d: HomeData; row?: boolean; id?: string; class?: string; lang?: Lang }
+const { d, row = false, id = 'rank', class: className = '', lang = 'ko' } = Astro.props;
+const T = ui(lang).home;
+const nm = (s: HomeData['stars'][number]) => (lang === 'en' ? s.name_en : s.name);
+import { R } from '~/lib/routes';
+---
+
+{row ? (
+  <section id={id} class:list={['scroll-mt-28', className]}>
+    <div class="flex items-center justify-between mb-3">
+      <h2 class="text-base font-bold text-heading">{T.stars}</h2>
+      <a href={R.rank(lang)} class="text-xs text-link hover:underline">{T.rankAll}</a>
+    </div>
+    <ol class="flex flex-wrap gap-2 pb-1">
+      {d.stars.map((s) => (
+        <li class="shrink-0 snap-start">
+          <a href={lp(s.href, lang)} class="flex items-center gap-2 rounded-full border border-slate-700 pl-1 pr-3 py-1 text-sm hover:border-primary hover:text-link" title={tx(s.reason, lang)}>
+            <span class="w-6 h-6 rounded-full bg-primary/20 text-link text-xs font-bold grid place-items-center tabular-nums">{s.rank}</span>{nm(s)}
+          </a>
+        </li>
+      ))}
+    </ol>
+  </section>
+) : (
+  <Card title={T.stars} id={id} class:list={['scroll-mt-28', className]}>
+    <ol class="divide-y divide-slate-800">
+      {d.stars.map((s) => (
+        <li class="py-2 flex items-start gap-2.5">
+          <span class="w-5.5 h-5.5 shrink-0 rounded-full bg-primary/20 text-link text-[11px] font-bold grid place-items-center tabular-nums">{s.rank}</span>
+          <div class="min-w-0">
+            <a href={lp(s.href, lang)} class="text-sm font-semibold text-heading hover:text-link">{nm(s)}</a>
+            <p class="text-xs text-muted mt-0.5 line-clamp-2">{tx(s.reason, lang)}</p>
+          </div>
+        </li>
+      ))}
+    </ol>
+    <a href={R.rank(lang)} class="inline-flex items-center gap-0.5 text-xs text-link hover:underline mt-2">{T.rankAllLong}<Icon name="tabler:chevron-right" class="w-3.5 h-3.5" /></a>
+  </Card>
+)}

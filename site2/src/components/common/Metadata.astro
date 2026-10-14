@@ -1,0 +1,51 @@
+---
+// 머리(head) 메타: astro-seo 대신 직접 씀(의존성 줄이기). 제목·설명·canonical·OG·hreflang·robots.
+import { SITE, ICON_DATA_URI, GA_ID, ADSENSE_CLIENT, IS_PREVIEW } from '~/config';
+
+export interface Props {
+  title: string;
+  description: string;
+  /** 절대 주소 또는 사이트 기준 경로 */
+  canonical: string;
+  lang?: 'ko' | 'en';
+  ogType?: 'website' | 'article';
+  image?: string;
+  noindex?: boolean;
+  alternates?: Array<{ hreflang: string; href: string }>;
+}
+const { title, description, canonical, lang = 'ko', ogType = 'website', image, noindex = false, alternates = [] } = Astro.props;
+const abs = (p: string) => (p.startsWith('http') ? p : SITE.site + p);
+const canonicalUrl = abs(canonical);
+const siteName = lang === 'en' ? SITE.nameEn : SITE.name;
+---
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonicalUrl} />
+{(noindex || IS_PREVIEW) && <meta name="robots" content="noindex, nofollow" />}
+<meta property="og:type" content={ogType} />
+<meta property="og:site_name" content={siteName} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonicalUrl} />
+<meta property="og:locale" content={lang === 'en' ? 'en_US' : 'ko_KR'} />
+{image && <meta property="og:image" content={abs(image)} />}
+<meta name="twitter:card" content={image ? 'summary_large_image' : 'summary'} />
+{alternates.map((a) => <link rel="alternate" hreflang={a.hreflang} href={abs(a.href)} />)}
+<link rel="icon" href={ICON_DATA_URI} />
+<link rel="alternate" type="application/rss+xml" title={siteName} href="/rss.xml" />
+<link rel="sitemap" href="/sitemap-index.xml" />
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+<!-- Google Analytics(GA4) -->
+<script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}></script>
+<script is:inline define:vars={{ GA_ID }}>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', GA_ID);
+</script>
+<!-- Google AdSense(소유권 확인용 스크립트) -->
+<script is:inline async src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`} crossorigin="anonymous"></script>

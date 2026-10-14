@@ -1,0 +1,64 @@
+---
+// AI 조합 추천 허브(/combos/): 분야 11개 묶음 카드(조합 수·대표 두뇌 도구·평균 영향도) — 숫자는 전부 ai_combos.json 집계
+// 영어판 /en/combos/ 는 이 파일을 lang="en" 으로(분야 이름은 src/i18n/ui.ts combos.cats, 조합 문구는 번역 캐시)
+import PageLayout from '~/layouts/PageLayout.astro';
+import Breadcrumbs from '~/components/common/Breadcrumbs.astro';
+import Card from '~/components/ui/Card.astro';
+import SectionHead from '~/components/ui/SectionHead.astro';
+import ComboCard from '~/components/blocks2/ComboCard.astro';
+import SourceNote from '~/components/blocks2/SourceNote.astro';
+import { Icon } from 'astro-icon/components';
+import { comboCategories, comboStats } from '~/lib/data2';
+import { ui } from '~/i18n/ui';
+import { lp, tx, type Lang } from '~/i18n/tr';
+const lang: Lang = (Astro.props as { lang?: Lang }).lang || 'ko';
+const T = ui(lang);
+const U = T.combos;
+const cn = (c: { slug: string; name: string; desc: string }) => U.cats[c.slug] || { name: c.name, desc: c.desc };
+const cats = comboCategories();
+const st = comboStats();
+// 분야를 가리지 않고 영향도 10점 조합 중 앞 6개(id 순) — 허브에서 바로 보는 맛보기
+const picks = cats.flatMap((c) => c.combos).filter((c) => c.impact >= 10).sort((a, b) => a.id.localeCompare(b.id)).slice(0, 6);
+const title = U.title(st.n, st.nCats);
+const description = U.desc(st.n, st.nCats);
+import { R } from '~/lib/routes';
+---
+
+<PageLayout metadata={{ title, description, canonical: R.combos(lang), lang }}>
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 py-7 md:py-9">
+    <Breadcrumbs items={[{ text: T.common.aiList, href: R.ai(lang) }, { text: T.common.combos }]} class="mb-3" />
+    <h1 class="text-2xl md:text-3xl font-bold leading-tighter tracking-tighter font-heading text-heading">{U.h1}</h1>
+    <p class="mt-2 text-base text-muted text-pretty">
+      {U.lead(st.n, st.nCats, st.nTools, st.topBrains.map((b) => `${tx(b.name, lang)}${lang === 'en' ? ' (' : '('}${T.common.times(b.n)})`).join(', '))}
+    </p>
+
+    <SectionHead title={U.byField} />
+    <ul class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      {cats.map((c) => (
+        <li>
+          <Card href={R.combos(lang, c.slug)} class="h-full">
+            <div class="flex items-baseline justify-between gap-2">
+              <h3 class="text-lg font-bold text-heading">{cn(c).name}</h3>
+              <span class="text-sm text-muted whitespace-nowrap">{T.common.count(c.n)}</span>
+            </div>
+            <p class="mt-1 text-sm text-muted break-words">{cn(c).desc}</p>
+            <p class="mt-2 text-xs text-muted break-words">{U.brainLine(c.topBrains.map((b) => tx(b.name, lang)).join(' · '), c.avgImpact)}</p>
+          </Card>
+        </li>
+      ))}
+    </ul>
+
+    <SectionHead title={U.picks} />
+    <p class="text-sm text-muted mb-4">{U.picksLead(st.n, cats.reduce((n, c) => n + c.impact10, 0), picks.length)}</p>
+    <div class="grid gap-3 md:grid-cols-2">
+      {picks.map((c) => <ComboCard c={c} lang={lang} />)}
+    </div>
+
+    <div class="flex flex-wrap gap-3 mt-10">
+      <a href={R.pricing(lang, 'free')} class="btn-primary">{U.freeBtn}<Icon name="tabler:arrow-right" class="w-5 h-5 ml-1 -mr-1" /></a>
+      <a href={R.rank(lang)} class="btn">{U.rankBtn}</a>
+      <a href={R.search(lang)} class="btn">{T.common.search}</a>
+    </div>
+    <SourceNote lang={lang} source={U.source} note={U.note} />
+  </div>
+</PageLayout>

@@ -1,0 +1,39 @@
+---
+// 3D 지도(/map/): 기존 앱(public/map/app/index.html 사본)을 머리줄 아래 전체 높이 iframe 으로. 검색(?q=)·#login·#board·?ai= 는 iframe 주소로 그대로 넘김.
+// 영어판 /en/map/ 는 이 파일을 lang="en" 으로. 지도 앱 자체는 localStorage galaxyLang(사이트 언어 기억과 같은 키)을 읽어 영어로 뜬다.
+import PageLayout from '~/layouts/PageLayout.astro';
+import { loadTools } from '~/lib/data';
+import { ui } from '~/i18n/ui';
+import { lp, type Lang } from '~/i18n/tr';
+const lang: Lang = (Astro.props as { lang?: Lang }).lang || 'ko';
+const T = ui(lang).map;
+import { R } from '~/lib/routes';
+---
+
+<PageLayout metadata={{ title: T.title(loadTools().length), description: T.desc, canonical: R.map(lang), lang }} fullBleed>
+  <map-frame class="flex-1 flex flex-col" data-lang={lang}>
+    <iframe
+      src="/map/app/"
+      title={T.frame}
+      class="w-full flex-1 min-h-[calc(100vh-70px)] border-0 bg-black"
+      allow="clipboard-write; fullscreen"
+      referrerpolicy="same-origin"
+    ></iframe>
+  </map-frame>
+</PageLayout>
+
+<script>
+  class MapFrame extends HTMLElement {
+    connectedCallback() {
+      const f = this.querySelector('iframe');
+      if (!f) return;
+      // 영어판에서 열면 지도 앱도 영어로(앱이 읽는 키에 이 화면 언어를 적어 둠)
+      try { if (this.dataset.lang) localStorage.setItem('galaxyLang', this.dataset.lang); } catch {}
+      const want = '/map/app/' + location.search + location.hash;
+      if (location.search || location.hash) f.setAttribute('src', want);
+      // 로그인 복귀(#access_token) 같은 해시 변경도 iframe 으로
+      window.addEventListener('hashchange', () => f.setAttribute('src', '/map/app/' + location.search + location.hash));
+    }
+  }
+  if (!customElements.get('map-frame')) customElements.define('map-frame', MapFrame);
+</script>

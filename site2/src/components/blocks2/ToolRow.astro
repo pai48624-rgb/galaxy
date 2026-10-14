@@ -1,0 +1,27 @@
+---
+// 요금제 묶음 목록의 도구 행 하나: 이름(안내 페이지 또는 지도 검색) · 분야 · 한 줄 · 요금 정책·상세 · 공식 사이트 · 지도 등록일
+// 영어판: 이름=name_en, 설명=desc_en, 요금 정책·상세=번역 캐시, 주소=/en/…
+import type { PricingRow } from '~/lib/data2';
+import { ui } from '~/i18n/ui';
+import { lp, tx, toolName, toolDesc, toolCat, type Lang } from '~/i18n/tr';
+export interface Props { r: PricingRow; lang?: Lang }
+const { r, lang = 'ko' } = Astro.props;
+const T = ui(lang);
+const desc = toolDesc(r.t, lang);
+const policy = tx(r.policy, lang), detail = tx(r.detail, lang);
+---
+
+<li class="py-3 flex flex-col gap-1 min-w-0">
+  <div class="flex flex-wrap items-baseline gap-x-2 gap-y-0.5 min-w-0">
+    <a href={lp(r.href, lang)} class="font-bold text-heading hover:text-link break-words">{toolName(r.t, lang)}</a>
+    {lang === 'ko' && r.t.name_ko && r.t.name_en !== r.t.name && <span class="text-xs text-muted break-words">{r.t.name_en}</span>}
+    {r.hasPage && <span class="text-xs text-link">{T.common.detail}</span>}
+    {r.catHref ? <a href={lp(r.catHref, lang)} class="text-xs text-muted hover:text-link">· {toolCat(r.t, lang)}</a> : <span class="text-xs text-muted">· {toolCat(r.t, lang)}</span>}
+  </div>
+  {desc && <p class="text-sm text-muted break-words">{desc}</p>}
+  <p class="text-sm text-default/85 break-words"><span class="text-xs text-muted">{T.pricing.fee}</span> {policy}{r.detail && r.detail !== r.policy && <span class="text-muted"> — {detail}</span>}</p>
+  <p class="text-xs text-muted flex flex-wrap gap-x-3">
+    {r.url && <a href={r.url} target="_blank" rel="noopener nofollow" class="hover:text-link">{T.pricing.officialArrow}</a>}
+    {r.added && <span>{T.pricing.added(r.added)}</span>}
+  </p>
+</li>

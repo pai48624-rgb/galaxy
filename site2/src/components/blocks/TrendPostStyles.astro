@@ -1,0 +1,25 @@
+---
+// 트렌드 글 화면 공통 CSS(2026-10-14) — 한국어 글 틀(frame-template, 워커가 씀)과 영어 글(/en/trend/<id>/)이 같이 쓴다.
+// 글 틀 공통 CSS(토큰 버전) — 글에 박힌 옛 CSS보다 뒤에 실어 사이트 토큰이 이기게
+import { readFileSync } from 'node:fs';
+const gxCss = readFileSync('C:/dev/25_templates/post/galaxy_trend/theme.css', 'utf8');
+---
+
+<style is:global set:html={gxCss}></style>
+<style is:global>
+  /* 글 틀(.gx 조각)은 자기 CSS를 갖고 있고, 옛 글은 밝은 배경용이라 흰 카드(.paper)에 담는다 */
+  .trend-post .paper { background: #fff; color: #1d1d2b; border-radius: 14px; padding: 24px 22px; overflow-wrap: anywhere; }
+  .trend-post .paper h2, .trend-post .paper h3 { color: #102a43; }
+  .trend-post .paper table { display: block; overflow-x: auto; }
+  .trend-post .post-h1 { font-size: 1.6rem; line-height: 1.35; margin: 0 0 0.4rem; color: #fff; font-weight: 700; }
+  .trend-post .meta { color: rgb(229 236 246 / 66%); font-size: 0.85rem; margin-bottom: 1rem; }
+  .trend-post .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 1.2rem 0; }
+  .trend-post .tags span { font-size: 12px; color: #a89bf0; border: 1px solid #262640; border-radius: 999px; padding: 2px 10px; }
+  .trend-post img { max-width: 100%; height: auto; }
+  .trend-side .box { border: 1px solid #262640; background: rgb(15 15 29 / 60%); border-radius: 10px; padding: 14px 16px; }
+  .trend-side .box b { display: block; color: #fff; margin-bottom: 6px; }
+  .trend-side ul { list-style: none; margin: 0; padding: 0; }
+  .trend-side li { padding: 6px 0; border-top: 1px solid #262640; font-size: 0.9rem; }
+  .trend-side li:first-child { border-top: 0; }
+  .trend-side a { color: #d9dae6; text-decoration: none; } .trend-side a:hover { color: #a89bf0; }
+</style>

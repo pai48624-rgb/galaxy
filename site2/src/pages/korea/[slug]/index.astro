@@ -1,0 +1,15 @@
+---
+import { R } from '~/lib/routes';
+import PageLayout from '~/layouts/PageLayout.astro';
+import KoreaArticle from '~/components/blocks/KoreaArticle.astro';
+import { koreaArticles } from '~/lib/data';
+export async function getStaticPaths() {
+  return koreaArticles().map((a) => ({ params: { slug: a.m.slug }, props: { a } }));
+}
+const { a } = Astro.props;
+const m = a.m;
+---
+
+<PageLayout metadata={{ title: `${m.title.ko} | AI 성단 지도`, description: m.description.ko, canonical: R.korea('ko', m.slug), ogType: 'article', image: m.photo?.url, alternates: [{ hreflang: 'ko', href: R.korea('ko', m.slug) }, { hreflang: 'en', href: R.korea('en', m.slug) }, { hreflang: 'x-default', href: R.korea('en', m.slug) }] }} altLangHref={R.korea('en', m.slug)}>
+  <KoreaArticle a={a} lang="ko" />
+</PageLayout>

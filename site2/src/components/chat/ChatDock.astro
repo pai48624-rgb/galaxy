@@ -1,0 +1,78 @@
+---
+// 사이트 공통 실시간 채팅 창(2026-10-14) — 모든 화면 오른쪽 아래 접힌 💬 버튼, 누르면 작은 창.
+// 동작은 chat.ts(원본 3D 앱 채팅과 같은 방 galaxy-live), 문구는 src/i18n/ui.ts 의 chat.
+// disabled: 지도(/map/)처럼 앱 안에 자체 채팅이 있는 화면 — 버튼·창을 그리지 않고 #chat 링크만 무시한다.
+import { ui } from '~/i18n/ui';
+import type { Lang } from '~/i18n/tr';
+
+export interface Props { lang?: Lang; disabled?: boolean }
+const { lang = 'ko', disabled = false } = Astro.props;
+const T = ui(lang).chat;
+---
+
+<chat-dock data-t={JSON.stringify(T)} data-disabled={disabled ? '1' : '0'}>
+  {!disabled && (
+    <>
+      <section id="chatDockPanel" class="chat-dock-panel" hidden role="dialog" aria-labelledby="chatDockTitle">
+        <div class="chat-dock-head">
+          <div class="min-w-0">
+            <h2 id="chatDockTitle" class="chat-dock-title">💬 {T.title}</h2>
+            <p class="chat-dock-status"><span class="chat-dock-dot" aria-hidden="true"></span><span id="chatDockStatus">{T.connecting}</span></p>
+          </div>
+          <button type="button" id="chatDockClose" class="chat-dock-x" aria-label={T.close} title={T.close}>✕</button>
+        </div>
+        <div id="chatDockFeed" class="chat-dock-feed" aria-live="polite">
+          <p class="chat-dock-empty">{T.sub}</p>
+        </div>
+        <p id="chatDockNote" class="chat-dock-note" hidden role="status"></p>
+        <form id="chatDockForm" class="chat-dock-form">
+          <input type="text" id="chatDockInput" maxlength="80" placeholder={T.placeholder} aria-label={T.placeholder} autocomplete="off" />
+          <button type="submit" class="chat-dock-send">{T.send}</button>
+        </form>
+      </section>
+      <button type="button" id="chatDockBtn" class="chat-dock-btn" aria-expanded="false" aria-controls="chatDockPanel" aria-label={T.open} title={T.open}>
+        <span aria-hidden="true">💬</span><span id="chatDockCount" class="chat-dock-count" hidden></span>
+      </button>
+    </>
+  )}
+</chat-dock>
+
+<style is:global>
+  /* is:global — 대화 줄은 chat.ts 가 그려서 범위 스타일이 닿지 않음. 클래스는 전부 chat-dock- 접두, 색은 틀 토큰(--aw-*)·slate 만 */
+  chat-dock { position: fixed; right: 1rem; bottom: calc(3.5rem + env(safe-area-inset-bottom) + .75rem); z-index: 45; display: flex; flex-direction: column; align-items: flex-end; gap: .5rem; pointer-events: none; }
+  chat-dock > * { pointer-events: auto; }
+  @media (min-width: 1024px) { chat-dock { right: 1.25rem; bottom: 1.25rem; } }
+  /* 모바일 머리줄 메뉴를 펼쳤을 땐 숨김(메뉴 위에 겹치지 않게) */
+  body.overflow-hidden chat-dock { display: none; }
+  chat-dock[data-disabled='1'] { display: none; }
+  .chat-dock-btn { position: relative; width: 3rem; height: 3rem; border-radius: 9999px; display: grid; place-items: center; font-size: 1.35rem; background: var(--aw-color-primary); color: #fff; border: 0; box-shadow: 0 6px 20px rgb(0 0 0 / 40%); cursor: pointer; transition: transform .15s; }
+  .chat-dock-btn:hover { transform: translateY(-1px); }
+  .chat-dock-btn:focus-visible { outline: 3px solid #f0b429; outline-offset: 2px; }
+  .chat-dock-count { position: absolute; top: -4px; right: -4px; min-width: 1.25rem; height: 1.25rem; padding: 0 .3rem; border-radius: 9999px; font-size: .7rem; font-weight: 700; line-height: 1.25rem; text-align: center; background: rgb(30 41 59); color: #9dffb0; border: 1px solid rgb(51 65 85); }
+  .chat-dock-count.unread { background: #f0b429; color: rgb(15 23 42); border-color: #f0b429; }
+  .chat-dock-panel { width: min(22rem, calc(100vw - 2rem)); height: min(26rem, 60vh); display: flex; flex-direction: column; border: 1px solid rgb(51 65 85); border-radius: .75rem; background: var(--aw-color-bg-page); color: var(--aw-color-text-default); box-shadow: 0 12px 40px rgb(0 0 0 / 50%); overflow: hidden; }
+  .chat-dock-panel[hidden] { display: none; }
+  .chat-dock-head { display: flex; align-items: flex-start; justify-content: space-between; gap: .5rem; padding: .7rem .8rem .6rem 1rem; border-bottom: 1px solid rgb(30 41 59); }
+  .chat-dock-title { font-size: .95rem; font-weight: 700; color: var(--aw-color-text-heading); margin: 0; }
+  .chat-dock-status { display: flex; align-items: center; gap: .35rem; font-size: .72rem; color: var(--aw-color-text-muted); margin: .15rem 0 0; }
+  .chat-dock-dot { width: .45rem; height: .45rem; border-radius: 9999px; background: #9dffb0; flex: none; }
+  .chat-dock-x { width: 1.9rem; height: 1.9rem; border-radius: .375rem; border: 1px solid rgb(51 65 85); background: none; color: var(--aw-color-text-muted); cursor: pointer; flex: none; }
+  .chat-dock-x:hover { color: var(--aw-color-link); border-color: var(--aw-color-primary); }
+  .chat-dock-feed { flex: 1; min-height: 0; overflow-y: auto; padding: .6rem .8rem; display: flex; flex-direction: column; gap: .35rem; }
+  .chat-dock-empty { font-size: .78rem; color: var(--aw-color-text-muted); margin: auto 0; text-align: center; }
+  .chat-dock-line { font-size: .84rem; line-height: 1.45; overflow-wrap: anywhere; padding: .3rem .5rem; border-radius: .4rem; background: rgb(30 41 59 / 55%); }
+  .chat-dock-line b { color: #9dffb0; font-weight: 700; margin-right: .15rem; }
+  .chat-dock-line.whisper { background: rgb(60 20 70 / 55%); border: 1px solid rgb(220 140 255 / 30%); }
+  .chat-dock-line.whisper b { color: #e2b3ff; }
+  .chat-dock-note { margin: 0 .8rem .4rem; font-size: .75rem; color: #f0b429; }
+  .chat-dock-note[hidden] { display: none; }
+  .chat-dock-form { display: flex; gap: .4rem; padding: .55rem .6rem; border-top: 1px solid rgb(30 41 59); }
+  .chat-dock-form input { flex: 1; min-width: 0; border: 1px solid rgb(51 65 85); border-radius: .375rem; background: rgb(15 23 42 / 60%); padding: .45rem .65rem; color: var(--aw-color-text-default); font-size: .88rem; }
+  .chat-dock-form input:focus { outline: none; border-color: var(--aw-color-primary); }
+  .chat-dock-form input::placeholder { color: var(--aw-color-text-muted); }
+  .chat-dock-send { flex: none; border: 0; border-radius: .375rem; padding: .45rem .8rem; font-size: .82rem; font-weight: 600; background: var(--aw-color-primary); color: #fff; cursor: pointer; }
+</style>
+
+<script>
+  import '~/components/chat/chat.ts';
+</script>

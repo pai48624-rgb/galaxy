@@ -1,0 +1,72 @@
+---
+import { R } from '~/lib/routes';
+// AI 트렌드 최신 글 목록 — 빌드 때 정적 본문을 넣고, 열릴 때 /api/trend/latest 로 새로 채움(워커·Supabase 데이터).
+// 한국어 글 본문(/trend/<id>)은 워커가 그린다.
+// 영어판(lang=en): 번역된 글(src/i18n/cache/trend_posts.json)은 영어 제목 + /en/trend/<id>/ 로,
+//   아직 번역 안 된 글은 목록 번역 캐시(trend.json)의 제목·요약 + 한국어 원문 주소 + "Korean article" 표시.
+//   열릴 때 갱신은 하지 않는다(새 글은 번역이 없어 한국어가 섞이므로 — npm run translate 후 다시 빌드하면 들어옴).
+import { TREND_API } from '~/config';
+import { fmtDate } from '~/utils/utils';
+import type { TrendPost } from '~/lib/data';
+import { tx, trendEn } from '~/i18n/tr';
+import { ui } from '~/i18n/ui';
+export interface Props { posts: TrendPost[]; limit?: number; grid?: boolean; cols?: 2 | 3; lang?: 'ko' | 'en' }
+const { posts, limit = 100, grid = false, cols = 3, lang = 'ko' } = Astro.props;
+const shown = posts.slice(0, limit);
+const empty = ui(lang).home.noPosts;
+const badge = ui(lang).trend.koreanBadge;
+---
+
+<trend-list data-api={lang === 'en' ? '' : TREND_API} data-limit={String(limit)} data-lang={lang}>
+  <ul class:list={['list-none p-0 m-0', grid ? (cols === 2 ? 'grid gap-5 sm:grid-cols-2' : 'grid gap-5 sm:grid-cols-2 lg:grid-cols-3') : 'divide-y divide-slate-800']} data-list>
+    {
+      shown.length ? shown.map((p) => (
+        <li class:list={grid ? '' : 'py-4'}>
+          <a href={R.trendPost(p.id, lang)} hreflang={lang === 'en' && !trendEn(p.id) ? 'ko' : undefined} class:list={['block group', grid ? 'rounded-md border border-slate-700 bg-slate-900/40 p-5 h-full hover:border-primary/70 transition' : '']}>
+            <span class="block text-xs text-muted">{fmtDate(p.created_at, lang)}{badge && !trendEn(p.id) && <span class="ml-2 rounded-full border border-slate-600 px-2 py-0.5 text-[11px] text-muted">{badge}</span>}</span>
+            <b class="block text-lg font-bold text-heading leading-snug mt-1 group-hover:text-link text-balance">{(lang === 'en' && trendEn(p.id)?.title) || tx(p.title, lang)}</b>
+            <span class="block text-sm text-muted mt-2">{tx(p.summary, lang)}</span>
+          </a>
+        </li>
+      )) : <li class="py-4 text-muted">{empty}</li>
+    }
+  </ul>
+</trend-list>
+
+<script>
+  class TrendList extends HTMLElement {
+    async connectedCallback() {
+      const api = this.dataset.api;
+      const limit = Number(this.dataset.limit || 100);
+      const lang = this.dataset.lang || 'ko';
+      const list = this.querySelector('[data-list]');
+      if (!api || !list) return;
+      try {
+        const r = await fetch(api, { cache: 'default' });
+        if (!r.ok) return;
+        const data = await r.json();
+        const posts = (data.posts || []).slice(0, limit);
+        if (!posts.length) return;
+        const grid = list.classList.contains('grid');
+        const fmt = (iso: string) => {
+          const d = new Date(new Date(iso).getTime() + 9 * 3600e3);
+          return lang === 'en' ? d.toISOString().slice(0, 10) : `${d.getUTCFullYear()}년 ${d.getUTCMonth() + 1}월 ${d.getUTCDate()}일`;
+        };
+        list.innerHTML = '';
+        for (const p of posts) {
+          const li = document.createElement('li');
+          li.className = grid ? '' : 'py-4';
+          const a = document.createElement('a');
+          a.href = `/trend/${p.id}`;
+          a.className = 'block group' + (grid ? ' rounded-md border border-slate-700 bg-slate-900/40 p-5 h-full hover:border-primary/70 transition' : '');
+          const d = document.createElement('span'); d.className = 'block text-xs text-muted'; d.textContent = fmt(p.created_at);
+          const b = document.createElement('b'); b.className = 'block text-lg font-bold text-heading leading-snug mt-1 group-hover:text-link text-balance'; b.textContent = p.title;
+          const s = document.createElement('span'); s.className = 'block text-sm text-muted mt-2'; s.textContent = p.summary || '';
+          a.append(d, b, s); li.append(a); list.append(li);
+        }
+        document.querySelectorAll('[data-count-trend]').forEach((el) => (el.textContent = String(data.total ?? posts.length)));
+      } catch { /* 네트워크 실패 시 빌드 때 넣은 목록 유지 */ }
+    }
+  }
+  if (!customElements.get('trend-list')) customElements.define('trend-list', TrendList);
+</script>

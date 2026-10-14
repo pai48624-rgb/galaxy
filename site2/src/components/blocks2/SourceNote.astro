@@ -1,0 +1,14 @@
+---
+// 출처·확인일 한 줄(화면 아래). 숫자는 모두 자료 파일에서 집계한 것이고, 요금·순위는 바뀔 수 있다는 안내.
+import { dataDate } from '~/lib/data2';
+import { ui } from '~/i18n/ui';
+import type { Lang } from '~/i18n/tr';
+export interface Props { source: string; note?: string; class?: string; lang?: Lang }
+const { source, note, class: className = '', lang = 'ko' } = Astro.props;
+const date = dataDate();
+const C = ui(lang).common;
+---
+
+<p class:list={['mt-10 pt-4 border-t border-slate-800 text-xs text-muted leading-relaxed break-words', className]}>
+  {C.source}: {source} · {C.dataDate} {date}{note && ` · ${note}`}
+</p>

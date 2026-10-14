@@ -1,0 +1,16 @@
+---
+// 메인 블록: 최신 AI 트렌드 글(빌드 시점 목록 + 열릴 때 /api/trend/latest 로 갱신 — 영어판은 갱신 안 함). grid=카드 격자, 아니면 줄 목록
+import SectionHead from '~/components/ui/SectionHead.astro';
+import TrendList from '~/components/blocks/TrendList.astro';
+import type { HomeData } from '~/lib/data';
+import { ui } from '~/i18n/ui';
+import { lp, type Lang } from '~/i18n/tr';
+export interface Props { d: HomeData; limit?: number; grid?: boolean; cols?: 2 | 3; title?: string; id?: string; class?: string; lang?: Lang }
+const { d, limit = 6, grid = true, cols = 3, lang = 'ko', title = ui(lang).home.latestTrend, id = 'latest', class: className = '' } = Astro.props;
+import { R } from '~/lib/routes';
+---
+
+<section id={id} class:list={['scroll-mt-28', className]}>
+  <SectionHead title={title} href={R.trend(lang)} more={ui(lang).common.seeAll} />
+  <TrendList posts={d.posts} limit={limit} grid={grid} cols={cols} lang={lang} />
+</section>

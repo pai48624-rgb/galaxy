@@ -1,0 +1,39 @@
+---
+// 메인 시안 b 전용: 왼쪽 고정 사이드 메뉴(탐색·읽기·참여·바로가기). 머리줄이 아니라 <aside>라 머리줄은 여전히 한 벌.
+import { Icon } from 'astro-icon/components';
+import type { HomeData } from '~/lib/data';
+import { lp, catLabel, type Lang } from '~/i18n/tr';
+import { R } from '~/lib/routes';
+export interface Props { d: HomeData; class?: string; lang?: Lang }
+const { d, class: className = '', lang = 'ko' } = Astro.props;
+const groups = [
+  // 머리줄(3D 지도·홈·트렌드·목록·분야·여행·게시판)과 겹치지 않는 것만 — 2026-10-14 사용자 "왼쪽 중복 너무 많다"
+  { title: '더 보기', en: 'More', items: [[R.combos(), 'AI 조합 추천', 'tabler:puzzle', '686', 'AI Combos'], [R.pricing(), '요금제별 AI', 'tabler:coin', '', 'Pricing'], [R.rank(), '가장 밝은 별', 'tabler:trophy', '10', 'Brightest stars'], [R.search(), 'AI 검색', 'tabler:search', '', 'Search']] },
+  { title: '내 계정', en: 'Account', items: [[R.login(), '로그인', 'tabler:login', '', 'Sign in']] },
+];
+const link = 'flex items-center gap-2 rounded-md px-2.5 py-1.5 text-sm text-default hover:bg-slate-800 hover:text-link';
+const here = Astro.url.pathname.replace(/^\/en(?=\/)/, '');  // 영어판도 같은 칸을 "지금 화면"으로
+const isOn = (href: string) => href !== '/' && !href.includes('#') && (here === href || (href.length > 1 && here.startsWith(href)));
+const cls = (href: string) => isOn(href) ? link + ' bg-slate-800 text-link font-semibold' : link;
+---
+
+<aside class:list={['lg:sticky lg:self-start rounded-md border border-slate-800 bg-slate-900/30 p-3 space-y-4', className]} style="top: calc(var(--header-h, 60px) + 1rem)" aria-label={lang === 'en' ? 'Side menu' : '메인 사이드 메뉴'}>
+  {groups.map((g) => (
+    <div>
+      <div class="px-2.5 text-[11px] text-muted mb-1" data-ko={g.title} data-en={g.en}>{lang === 'en' ? g.en : g.title}</div>
+      <ul class="space-y-0.5">
+        {g.items.map(([href, text, icon, n, en, hrefEn]) => (
+          <li><a href={lang === 'en' ? hrefEn || lp(href, 'en') : href} class={cls(href)} aria-current={isOn(href) ? "page" : undefined} data-href-ko={href} data-href-en={hrefEn || lp(href, 'en')}><Icon name={icon} class="w-4 h-4 text-link shrink-0" /><span class="flex-1" data-ko={text} data-en={en}>{lang === 'en' ? en : text}</span>{n && <span class="text-xs text-muted tabular-nums">{n}</span>}</a></li>
+        ))}
+      </ul>
+    </div>
+  ))}
+  <div>
+    <div class="px-2.5 text-[11px] text-muted mb-1" data-ko="바로가기" data-en="Shortcuts">{lang === 'en' ? 'Shortcuts' : '바로가기'}</div>
+    <ul class="space-y-0.5">
+      {d.cats.slice(0, 6).map((c) => <li><a href={R.category(lang, c.slug)} data-href-ko={R.category('ko', c.slug)} data-href-en={R.category('en', c.slug)} class={cls(R.category('ko', c.slug))}><span class="flex-1" data-ko={c.name} data-en={catLabel(c, 'en')}>{catLabel(c, lang)}</span><span class="text-xs text-muted tabular-nums">{c.n}</span></a></li>)}
+      <li><a href={R.category(lang)} data-href-ko={R.category()} data-href-en={R.category('en')} class={link}><span class="flex-1 text-link" data-ko={`+${Math.max(0, d.cats.length - 6)}개 더`} data-en={`+${Math.max(0, d.cats.length - 6)} more`}>{lang === 'en' ? `+${Math.max(0, d.cats.length - 6)} more` : `+${Math.max(0, d.cats.length - 6)}개 더`}</span></a></li>
+    </ul>
+  </div>
+  <div class="px-2.5 pt-2 border-t border-slate-800 text-xs text-muted flex gap-2"><a href={R.privacy(lang)} data-href-ko={R.privacy()} data-href-en={R.privacy('en')} class="hover:text-link" data-ko="개인정보" data-en="Privacy">{lang === 'en' ? 'Privacy' : '개인정보'}</a><a href={R.rss()} class="hover:text-link">RSS</a></div>
+</aside>

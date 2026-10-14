@@ -1,0 +1,27 @@
+---
+import { R } from '~/lib/routes';
+// 메인 블록: "이 지도는" 소개 글(검색엔진용 본문). 한국어/영어 두 벌(문장 구조가 달라 사전 대신 여기서 바로)
+import SectionHead from '~/components/ui/SectionHead.astro';
+import type { HomeData } from '~/lib/data';
+import { ui } from '~/i18n/ui';
+import { lp, type Lang } from '~/i18n/tr';
+export interface Props { d: HomeData; id?: string; class?: string; lang?: Lang }
+const { d, id = 'intro', class: className = '', lang = 'ko' } = Astro.props;
+---
+
+<section id={id} class:list={['scroll-mt-28', className]}>
+  <SectionHead title={ui(lang).home.introTitle} href={R.ai(lang)} more={ui(lang).common.aiList} />
+  {lang === 'en' ? (
+    <p class="text-sm md:text-base text-muted leading-relaxed text-pretty">
+      AI Galaxy Map is a relationship map that places {d.nTools} AI tools from around the world in a 3D universe, grouped into {d.cats.length} field clusters. Pick a star and lines connect it to {d.nCombos} recommended combos and to similar alternatives;
+      the <a href={R.ai('en')} class="text-link hover:underline">tool guides</a> cover features, pricing and alternatives. <a href={R.trend('en')} class="text-link hover:underline">AI Trends</a> covers pricing plans, comparisons, rankings and news,
+      and <a href={R.korea('en')} class="text-link hover:underline">Korea Travel</a> uses public data for before-you-go checks on Korea's mountains, beaches and islands.
+    </p>
+  ) : (
+    <p class="text-sm md:text-base text-muted leading-relaxed text-pretty">
+      AI 성단 지도는 전 세계 AI 도구 {d.nTools}개를 {d.cats.length}개 분야 성단으로 묶어 3D 우주에 띄운 관계형 지도입니다. 별 하나를 고르면 함께 쓰면 좋은 조합 {d.nCombos}개와 비슷한 대안이 선으로 이어지고,
+      <a href={R.ai()} class="text-link hover:underline">도구별 안내 페이지</a>에서 기능·요금·대안을 확인할 수 있습니다. <a href={R.trend()} class="text-link hover:underline">AI 트렌드</a>에서는 요금제·비교·순위·소식을 정리하고,
+      <a href={R.korea()} class="text-link hover:underline">한국 여행</a>에서는 공공데이터로 산·바다·섬의 가기 전 체크를 다룹니다.
+    </p>
+  )}
+</section>

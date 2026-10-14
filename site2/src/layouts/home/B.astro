@@ -1,0 +1,41 @@
+---
+import { R } from '~/lib/routes';
+// 메인 시안 b — 왼쪽 고정 사이드 메뉴 + 오른쪽 콘텐츠 격자(대시보드/디렉터리형, 참고 25_templates/site/galaxy_main/s3_shadcn_admin.html)
+import type { HomeData } from '~/lib/data';
+import HeroMap from '~/components/blocks/HeroMap.astro';
+import LatestTrend from '~/components/blocks/LatestTrend.astro';
+import RankBox from '~/components/blocks/RankBox.astro';
+import ToolList from '~/components/blocks/ToolList.astro';
+import KoreaLatest from '~/components/blocks/KoreaLatest.astro';
+import CategoryChips from '~/components/blocks/CategoryChips.astro';
+import Intro from '~/components/blocks/Intro.astro';
+import SubscribeBox from '~/components/blocks/SubscribeBox.astro';
+import { ui } from '~/i18n/ui';
+import { tx, trendEn, type Lang } from '~/i18n/tr';
+export interface Props { d: HomeData; lang?: Lang }
+const { d, lang = 'ko' } = Astro.props;
+const T = ui(lang).home;
+---
+
+<!-- 왼쪽 고정 메뉴·격자는 사이트 틀(PageLayout)이 모든 화면에 공통으로 그림. 여기는 메인 본문 열만. -->
+<div id="top" class="min-w-0">
+  <div class="min-w-0">
+    <HeroMap d={d} compact lang={lang} />
+    <!-- 이번 주 신호: 최신 글 제목 칩 -->
+    {d.posts.length > 0 && (
+      <div class="mt-4 flex flex-wrap items-center gap-2 text-sm">
+        <b class="text-xs text-link whitespace-nowrap">{T.signals}</b>
+        {d.posts.slice(0, 5).map((p) => { const en = lang === 'en' ? trendEn(p.id) : undefined; const t = en?.title || tx(p.title, lang); const n = lang === 'en' ? 48 : 28; return <a href={R.trendPost(p.id, lang)} hreflang={lang === 'en' && !en ? 'ko' : undefined} class="rounded-full border border-slate-700 px-3 py-1 whitespace-nowrap text-default hover:border-primary hover:text-link max-w-full truncate">{t.length > n ? t.slice(0, n - 1) + '…' : t}</a>; })}
+      </div>
+    )}
+    <!-- 2026-10-14 사용자: C의 가로 순위 칩을 오늘의 흐름 위에, 세로 순위 상자·숫자 띠는 삭제 -->
+    <RankBox d={d} row lang={lang} class="mt-6" />
+    <LatestTrend d={d} limit={6} grid cols={2} title={T.flow} lang={lang} class="mt-6" />  <!-- 2026-10-14 사용자: 카드 2열(왼쪽·오른쪽) -->
+    <KoreaLatest d={d} limit={4} cols={4} lang={lang} class="mt-8" />
+    <CategoryChips d={d} show={10} lang={lang} class="mt-8" />
+    <Intro d={d} lang={lang} class="mt-8" />
+    <SubscribeBox banner lang={lang} class="mt-8" />
+    <!-- 2026-10-14 사용자: AI 도구 목록은 카드 형태로, 화면 맨 마지막에 -->
+    <ToolList d={d} limit={12} rows={false} lang={lang} class="mt-8" />
+  </div>
+</div>

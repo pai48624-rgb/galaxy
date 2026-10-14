@@ -1,0 +1,35 @@
+---
+// 디자인 토큰(astrowind CustomStyles.astro 구조 그대로, 값만 우리 것).
+// 글꼴: Pretendard 한 벌(본문·제목). 어두운 테마만 쓰므로 .dark 값이 실제 값.
+// 명암비(배경 rgb(8 9 10) 기준): 본문 #e5ecf6 ≈ 16:1, 흐린 글 66% ≈ 7:1, 링크 #a89bf0 ≈ 8:1, 버튼 #6d5ff5 위 흰 글자 ≈ 4.5:1.
+---
+
+<style is:inline>
+  :root,
+  .dark {
+    --aw-font-sans: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Malgun Gothic', system-ui, sans-serif;
+    --aw-font-serif: var(--aw-font-sans);
+    --aw-font-heading: var(--aw-font-sans);
+
+    --aw-color-primary: rgb(109 95 245);
+    --aw-color-secondary: rgb(91 77 224);
+    --aw-color-accent: rgb(143 214 196);
+    --aw-color-link: rgb(168 155 240);
+
+    --aw-color-text-heading: rgb(247 248 248);
+    --aw-color-text-default: rgb(229 236 246);
+    --aw-color-text-muted: rgb(229 236 246 / 66%);
+    --aw-color-bg-page: rgb(8 9 10);
+    /* 카드·선 색 — 글 틀(25_templates/post/galaxy_trend/theme.css)도 이 값을 받아 씀(2026-10-14) */
+    --aw-color-card: rgb(15 23 42 / 45%);
+    --aw-color-card-2: rgb(15 23 42 / 70%);
+    --aw-color-line: rgb(51 65 85);
+    --aw-color-bg-page-dark: rgb(8 9 10);
+
+    color-scheme: dark;
+  }
+  ::selection {
+    background-color: rgb(109 95 245 / 60%);
+    color: #fff;
+  }
+</style>

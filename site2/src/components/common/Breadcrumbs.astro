@@ -1,0 +1,57 @@
+---
+// astrowind Breadcrumbs.astro — permalinks 의존만 config로 바꿈
+import { Icon } from 'astro-icon/components';
+import { SITE } from '~/config';
+
+export interface Props {
+  items: Array<{ text: string; href?: string; icon?: string }>;
+  bar?: boolean;
+  hideCurrent?: boolean;
+  class?: string;
+}
+
+const { items, bar = false, hideCurrent = false, class: className = '' } = Astro.props;
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: items.map(({ text, href }, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: text,
+    ...(href ? { item: SITE.site + href } : {}),
+  })),
+};
+---
+
+<nav
+  aria-label="Breadcrumb"
+  class:list={[
+    'text-sm text-muted',
+    bar ? 'max-w-[1320px] mx-auto w-full px-3 lg:px-6 pt-4 [&>ol]:ml-2 rtl:[&>ol]:ml-0 rtl:[&>ol]:mr-2' : '',
+    className,
+  ]}
+>
+  <ol class="flex flex-wrap items-center gap-1 list-none">
+    {
+      items.map(({ text, href, icon }, index) => (
+        <li class="flex min-w-0 items-center gap-1">
+          {index > 0 && !(hideCurrent && index === items.length - 1) && (
+            <Icon name="tabler:chevron-right" class="h-3.5 w-3.5 shrink-0 opacity-60 rtl:rotate-180" />
+          )}
+          {href && index < items.length - 1 ? (
+            <a href={href} class="inline-flex items-center hover:text-link hover:underline" aria-label={icon ? text : undefined}>
+              {icon ? <Icon name={icon} class="h-4 w-4" /> : text}
+            </a>
+          ) : (
+            <span aria-current="page" class:list={hideCurrent ? 'sr-only' : 'text-default'}>
+              {text}
+            </span>
+          )}
+        </li>
+      ))
+    }
+  </ol>
+</nav>
+
+<script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />

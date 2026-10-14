@@ -1,0 +1,83 @@
+---
+// 가장 밝은 별 순위(/rank/): TOP10(방문 수 근거 이유) + 각 도구의 생태계(ai_top10_relations: 묶음·항목·이유)를 펼침 카드(details)로.
+// 영어판 /en/rank/ 는 이 파일을 lang="en" 으로(이유·묶음 이름은 번역 캐시 src/i18n/cache/rank.json)
+import PageLayout from '~/layouts/PageLayout.astro';
+import Breadcrumbs from '~/components/common/Breadcrumbs.astro';
+import SectionHead from '~/components/ui/SectionHead.astro';
+import SourceNote from '~/components/blocks2/SourceNote.astro';
+import { Icon } from 'astro-icon/components';
+import { rankViews, dataDate } from '~/lib/data2';
+import { SITE } from '~/config';
+import { ui } from '~/i18n/ui';
+import { lp, tx, toolCat, toolDesc, type Lang } from '~/i18n/tr';
+const lang: Lang = (Astro.props as { lang?: Lang }).lang || 'ko';
+const T = ui(lang);
+const U = T.rank;
+const list = rankViews();
+const nItems = list.reduce((n, r) => n + r.nItems, 0);
+const nGroups = list.reduce((n, r) => n + r.groups.length, 0);
+const title = U.title(list.length, nItems);
+const description = U.desc(list.length, list.slice(0, 4).map((r) => r.name_en).join(', '), nItems);
+const schema = {
+  '@context': 'https://schema.org', '@type': 'ItemList', name: U.schemaName,
+  itemListElement: list.map((r) => ({ '@type': 'ListItem', position: r.rank, name: r.name_en, url: SITE.site + lp(r.href, lang) })),
+};
+import { R } from '~/lib/routes';
+---
+
+<PageLayout metadata={{ title, description, canonical: R.rank(lang), lang }}>
+  <Fragment slot="head"><script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} /></Fragment>
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 py-7 md:py-9">
+    <Breadcrumbs items={[{ text: T.common.aiList, href: R.ai(lang) }, { text: T.common.rank }]} class="mb-3" />
+    <h1 class="text-2xl md:text-3xl font-bold leading-tighter tracking-tighter font-heading text-heading">{U.h1(list.length)}</h1>
+    <p class="mt-2 text-base text-muted text-pretty">{U.lead(list.length, nGroups, nItems, dataDate())}</p>
+
+    <ol class="mt-8 space-y-3">
+      {list.map((r) => (
+        <li>
+          <details class="group rounded-md border border-slate-700 bg-slate-900/40 open:border-primary/60">
+            <summary class="flex items-start gap-3 p-4 md:p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+              <span class="shrink-0 w-9 h-9 rounded-full border border-primary/60 text-link font-bold flex items-center justify-center text-sm" aria-label={U.rankAria(r.rank)}>{r.rank}</span>
+              <span class="min-w-0 flex-1">
+                <span class="flex flex-wrap items-baseline gap-x-2">
+                  <b class="text-heading text-base md:text-lg">{r.name_en}</b>
+                  {lang === 'ko' && r.name !== r.name_en && <span class="text-sm text-muted">{r.name}</span>}
+                  {r.t && <span class="text-xs text-muted">· {toolCat(r.t, lang)}</span>}
+                </span>
+                <span class="block mt-1 text-sm text-default/85 break-words">{tx(r.reason, lang)}</span>
+                <span class="block mt-1 text-xs text-muted">{U.eco(r.groups.length, r.nItems)}</span>
+              </span>
+              <Icon name="tabler:chevron-down" class="w-5 h-5 shrink-0 text-muted transition group-open:rotate-180" />
+            </summary>
+            <div class="px-4 md:px-5 pb-4 md:pb-5 border-t border-slate-800">
+              {r.t?.desc_ko && <p class="mt-3 text-sm text-muted break-words">{toolDesc(r.t, lang)}{r.t.pricing_policy && ` · ${U.fee}: ${tx(r.t.pricing_policy, lang)}`}</p>}
+              {r.groups.map((g) => (
+                <section class="mt-4">
+                  <h3 class="text-sm font-bold text-heading">{tx(g.category, lang)}</h3>
+                  <ul class="mt-1.5 space-y-1.5">
+                    {g.items.map((i) => (
+                      <li class="text-sm break-words">
+                        <a href={lp(i.href, lang)} class="font-semibold text-link hover:underline">{tx(i.name, lang)}</a>
+                        {i.hasPage && <span class="ml-1 text-xs text-muted">{T.common.guide}</span>}
+                        <span class="text-default/85"> — {tx(i.reason, lang)}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              ))}
+              <a href={lp(r.href, lang)} class="btn-primary mt-4 py-1.5 px-4 text-sm">{r.hasPage ? U.view(r.name_en) : U.find(r.name_en)}<Icon name="tabler:arrow-right" class="w-4 h-4 ml-1 -mr-1" /></a>
+            </div>
+          </details>
+        </li>
+      ))}
+    </ol>
+
+    <SectionHead title={U.moreTitle} />
+    <div class="flex flex-wrap gap-3">
+      <a href={R.combos(lang)} class="btn-primary">{U.combosBtn}<Icon name="tabler:arrow-right" class="w-5 h-5 ml-1 -mr-1" /></a>
+      <a href={R.pricing(lang, 'free')} class="btn">{T.common.freeStart}</a>
+      <a href={R.map(lang)} class="btn">{T.common.map3d}</a>
+    </div>
+    <SourceNote lang={lang} source={U.source} note={U.note} />
+  </div>
+</PageLayout>

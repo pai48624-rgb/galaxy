@@ -1,0 +1,67 @@
+---
+// 요금제별 AI 모음 허브(/pricing/): 6묶음 카드(도구 수·안내 페이지 수·많은 분야) + 무료로 시작하는 AI 바로가기. 묶음 기준은 한 줄씩 표기.
+// 영어판 /en/pricing/ 는 이 파일을 lang="en" 으로(묶음 이름·기준은 src/i18n/ui.ts pricing.groups)
+import PageLayout from '~/layouts/PageLayout.astro';
+import Breadcrumbs from '~/components/common/Breadcrumbs.astro';
+import Card from '~/components/ui/Card.astro';
+import SectionHead from '~/components/ui/SectionHead.astro';
+import SourceNote from '~/components/blocks2/SourceNote.astro';
+import { Icon } from 'astro-icon/components';
+import { pricingGroups, freeStartGroup, pricingNA, pricingRows, NA_GROUP } from '~/lib/data2';
+import { loadTools } from '~/lib/data';
+import { ui } from '~/i18n/ui';
+import { lp, type Lang } from '~/i18n/tr';
+const lang: Lang = (Astro.props as { lang?: Lang }).lang || 'ko';
+const T = ui(lang);
+const U = T.pricing;
+const groups = pricingGroups();
+const free = freeStartGroup();
+const na = pricingNA();
+const total = loadTools().length;
+const gv = (g: { slug: string; name: string; rule: string }) => (lang === 'en' ? U.groups[g.slug] || g : g);
+const catEn = new Map(pricingRows().map((r) => [r.t.category, r.t.category_en || r.t.category]));
+const cName = (n: string) => (lang === 'en' ? catEn.get(n) || n : n);
+const title = U.title(total);
+const description = U.desc(total, free.n, groups[0].n);
+import { R } from '~/lib/routes';
+---
+
+<PageLayout metadata={{ title, description, canonical: R.pricing(lang), lang }}>
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 py-7 md:py-9">
+    <Breadcrumbs items={[{ text: T.common.aiList, href: R.ai(lang) }, { text: T.common.pricing }]} class="mb-3" />
+    <h1 class="text-2xl md:text-3xl font-bold leading-tighter tracking-tighter font-heading text-heading">{U.h1}</h1>
+    <p class="mt-2 text-base text-muted text-pretty">{U.lead(total, na, lang === 'en' ? U.na : NA_GROUP.name)}</p>
+
+    <Card href={R.pricing(lang, 'free')} class="mt-6 border-primary/50">
+      <div class="flex items-center justify-between gap-3">
+        <div>
+          <h2 class="text-lg md:text-xl font-bold text-heading">{U.freeN(free.n)}</h2>
+          <p class="mt-1 text-sm text-muted break-words">{lang === 'en' ? U.free.rule : free.rule}</p>
+        </div>
+        <Icon name="tabler:arrow-right" class="w-6 h-6 shrink-0 text-link" />
+      </div>
+    </Card>
+
+    <SectionHead title={U.six} />
+    <ul class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      {groups.map((g) => (
+        <li>
+          <Card href={R.pricing(lang, g.slug)} class="h-full">
+            <div class="flex items-baseline justify-between gap-2">
+              <h3 class="text-lg font-bold text-heading">{gv(g).name}</h3>
+              <span class="text-sm text-muted whitespace-nowrap">{T.common.count(g.n)}</span>
+            </div>
+            <p class="mt-1 text-sm text-muted break-words">{gv(g).rule}</p>
+            <p class="mt-2 text-xs text-muted break-words">{U.cardMeta(g.nPage, g.cats.slice(0, 3).map((c) => `${cName(c.name)} ${c.n}`).join(' · '))}</p>
+          </Card>
+        </li>
+      ))}
+    </ul>
+
+    <div class="flex flex-wrap gap-3 mt-10">
+      <a href={R.combos(lang)} class="btn-primary">{T.common.combos}<Icon name="tabler:arrow-right" class="w-5 h-5 ml-1 -mr-1" /></a>
+      <a href={R.search(lang)} class="btn">{T.common.search}</a>
+    </div>
+    <SourceNote lang={lang} source={U.source} note={U.note} />
+  </div>
+</PageLayout>

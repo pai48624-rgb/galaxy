@@ -1,0 +1,37 @@
+---
+// 개인정보 처리방침(/privacy) — 기존 privacy.html 본문을 그대로 읽어 템플릿 글 틀에 넣음
+// 영어판 /en/privacy 는 이 파일을 lang="en" 으로: 한국어 본문(<hr> 앞)을 덩어리(h1·p·h2·ul)별로 번역 캐시(src/i18n/cache/privacy.json)에서 바꿔 끼움.
+// (원본 뒤쪽의 옛 영문 요약은 한국어 본문과 내용이 어긋나 — "분석 도구 없음" 등 — 영어판에는 넣지 않고 전체 번역만 씀)
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
+import PageLayout from '~/layouts/PageLayout.astro';
+import { GALAXY_ROOT } from '~/lib/data';
+import { ui } from '~/i18n/ui';
+import { tx, type Lang } from '~/i18n/tr';
+const lang: Lang = (Astro.props as { lang?: Lang }).lang || 'ko';
+const T = ui(lang).privacy;
+const src = readFileSync(join(GALAXY_ROOT, 'privacy.html'), 'utf8');
+const rawBody = (src.match(/<body[^>]*>([\s\S]*?)<\/body>/) || [, ''])[1]!.trim();
+let body: string;
+if (lang === 'en') {
+  // scripts/translate.mjs privacyBlocks 와 같은 규칙으로 쪼갬
+  const ko = rawBody.split(/<hr[^>]*>/)[0];
+  const blocks = (ko.match(/<(h1|h2|p|ul)[\s\S]*?<\/\1>/g) || []).map((s) => s.replace(/\s+/g, ' ').trim());
+  body = blocks.map((b) => tx(b, 'en')).join('\n').replace(/hl=ko/g, 'hl=en');
+  body = body.replace(/(<\/h1>)/, `$1\n<p class="updated">${T.note}</p>`);
+} else {
+  body = rawBody.replace(/<h1 style="font-size:16px">([^<]*)<\/h1>/, '<h2>$1</h2>'); // 영문 요약 제목은 h2로(h1은 하나만)
+}
+const title = lang === 'en' ? 'Privacy Policy · AI Galaxy Map' : (src.match(/<title>([^<]*)<\/title>/) || [, '개인정보처리방침 · AI 성단 지도'])[1]!;
+import { R } from '~/lib/routes';
+---
+
+<PageLayout metadata={{ title, description: T.desc, canonical: R.privacy(lang), lang }}>
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 py-7 md:py-9 prose prose-invert prose-base max-w-none privacy-body" set:html={body} />
+</PageLayout>
+
+<style is:global>
+  .privacy-body h1 { font-size: 1.75rem; margin-bottom: 0.25rem; }
+  .privacy-body .updated { font-size: 0.85rem; color: rgb(229 236 246 / 66%); }
+  .privacy-body h2 { font-size: 1.15rem; margin-top: 2rem; }
+</style>

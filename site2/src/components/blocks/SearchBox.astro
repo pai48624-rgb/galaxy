@@ -1,0 +1,81 @@
+---
+// 검색창 + 로컬 자동완성(/search-index.json, 이름 731개). Enter → /map/?q=, 제안 선택 → 안내 페이지(/ai/<slug>/) 또는 지도(/map/?ai=)
+// size: 'header'(작게) | 'hero'(크게, 검색 중심 메인)
+import { Icon } from 'astro-icon/components';
+export interface Props { size?: 'header' | 'hero'; placeholder?: string; label?: string; class?: string; inputClass?: string; lang?: 'ko' | 'en' }
+const { size = 'header', lang = 'ko', placeholder = lang === 'en' ? 'Search AI tools' : 'AI 이름 검색', label = lang === 'en' ? 'Search AI tools' : 'AI 검색', class: className = '', inputClass = '' } = Astro.props;
+const big = size === 'hero';
+import { R } from '~/lib/routes';
+---
+
+<ai-search class:list={['relative block', className]} data-lang={lang} data-ai-ko={R.ai()} data-ai-en={R.ai('en')} data-map-ko={R.map()} data-map-en={R.map('en')}>
+  <form action={R.map(lang)} method="get" role="search" class="relative" autocomplete="off">
+    <Icon name="tabler:search" class:list={['absolute top-1/2 -translate-y-1/2 text-muted pointer-events-none', big ? 'w-5 h-5 left-4' : 'w-4 h-4 left-2.5']} />
+    <input
+      type="search" name="q" placeholder={placeholder} aria-label={label} aria-autocomplete="list" aria-expanded="false" role="combobox"
+      class:list={[
+        'w-full rounded-full border border-slate-600 bg-transparent text-default placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-primary',
+        big ? 'pl-11 pr-24 py-3 text-base bg-slate-900/60' : 'pl-8 pr-3 py-1.5 text-sm',
+        inputClass,
+      ]}
+    />
+    {big && <button type="submit" class="btn-primary absolute right-1.5 top-1/2 -translate-y-1/2 py-1.5 px-4 text-sm">{lang === 'en' ? 'Search' : '검색'}</button>}
+  </form>
+  <ul role="listbox" hidden class="absolute z-50 left-0 right-0 mt-1 max-h-80 overflow-auto rounded-md border border-slate-700 bg-page shadow-xl text-sm"></ul>
+</ai-search>
+
+<script>
+  type Row = { n: string; e: string; s: string; c: string; k?: string; p: number };
+  let index: Row[] | null = null;
+  let loading: Promise<Row[]> | null = null;
+  const load = () => (loading ||= fetch('/search-index.json').then((r) => r.json()).then((d) => (index = d)));
+
+  class AiSearch extends HTMLElement {
+    connectedCallback() {
+      const input = this.querySelector('input')!;
+      const list = this.querySelector('ul')!;
+      // 언어: 이 화면 언어 또는 기억한 언어(galaxyLang) — 영어면 영어 이름·분야, /en/ 주소로
+      const en = () => { try { return (localStorage.getItem('galaxyLang') || this.dataset.lang) === 'en'; } catch { return this.dataset.lang === 'en'; } };
+      const form = this.querySelector('form');
+      if (form && en()) form.setAttribute('action', this.dataset.mapEn || '');
+      const base = (k: 'ai' | 'map') => (en() ? (k === 'ai' ? this.dataset.aiEn : this.dataset.mapEn) : (k === 'ai' ? this.dataset.aiKo : this.dataset.mapKo)) || '';
+      let items: Row[] = [], active = -1;
+      const close = () => { list.hidden = true; input.setAttribute('aria-expanded', 'false'); active = -1; };
+      const render = () => {
+        list.innerHTML = '';
+        items.forEach((r, i) => {
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          const E = en();
+          a.href = r.p ? `${base('ai')}${r.s}/` : `${base('map')}?ai=${encodeURIComponent(r.s)}`;  // 주소 앞부분은 R(data-*)에서
+          a.className = 'flex items-center justify-between gap-3 px-3 py-2 hover:bg-slate-800' + (i === active ? ' bg-slate-800' : '');
+          a.setAttribute('role', 'option');
+          const b = document.createElement('b'); b.className = 'text-heading font-semibold'; b.textContent = E ? r.e || r.n : r.n + (r.e && r.e !== r.n ? ` · ${r.e}` : '');
+          const s = document.createElement('span'); s.className = 'text-xs text-muted whitespace-nowrap'; s.textContent = E ? (r.k || r.c) + (r.p ? ' · guide' : '') : r.c + (r.p ? ' · 안내' : '');
+          a.append(b, s); li.append(a); list.append(li);
+        });
+        list.hidden = items.length === 0;
+        input.setAttribute('aria-expanded', String(items.length > 0));
+      };
+      const search = async () => {
+        const q = input.value.trim().toLowerCase();
+        if (!q) return close();
+        const rows = index || (await load());
+        const starts = rows.filter((r) => r.n.toLowerCase().startsWith(q) || r.e.toLowerCase().startsWith(q));
+        const incl = rows.filter((r) => !starts.includes(r) && (r.n.toLowerCase().includes(q) || r.e.toLowerCase().includes(q)));
+        items = [...starts, ...incl].slice(0, 8); active = -1; render();
+      };
+      input.addEventListener('focus', () => { load(); });
+      input.addEventListener('input', search);
+      input.addEventListener('keydown', (e) => {
+        if (list.hidden) return;
+        if (e.key === 'ArrowDown') { e.preventDefault(); active = (active + 1) % items.length; render(); }
+        else if (e.key === 'ArrowUp') { e.preventDefault(); active = (active - 1 + items.length) % items.length; render(); }
+        else if (e.key === 'Enter' && active >= 0) { e.preventDefault(); (list.querySelectorAll('a')[active] as HTMLAnchorElement).click(); }
+        else if (e.key === 'Escape') close();
+      });
+      document.addEventListener('click', (e) => { if (!this.contains(e.target as Node)) close(); });
+    }
+  }
+  if (!customElements.get('ai-search')) customElements.define('ai-search', AiSearch);
+</script>

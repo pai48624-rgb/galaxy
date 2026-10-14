@@ -1,0 +1,11 @@
+---
+import { R } from '~/lib/routes';
+import PageLayout from '~/layouts/PageLayout.astro';
+import KoreaList from '~/components/blocks/KoreaList.astro';
+import { koreaArticles } from '~/lib/data';
+const items = koreaArticles();
+---
+
+<PageLayout metadata={{ title: '한국 여행 — 공공데이터로 정리한 가기 전 체크 | AI 성단 지도', description: '주차·응급실·숙소·수질·이용객 같은 공공데이터로 정리한 한국 여행지 안내예요. 영어판도 함께 있어요.', canonical: R.korea('ko'), alternates: [{ hreflang: 'ko', href: R.korea('ko') }, { hreflang: 'en', href: R.korea('en') }, { hreflang: 'x-default', href: R.korea('en') }] }} altLangHref={R.korea('en')}>
+  <KoreaList items={items} lang="ko" />
+</PageLayout>

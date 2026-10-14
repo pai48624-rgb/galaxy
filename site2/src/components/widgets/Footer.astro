@@ -1,0 +1,23 @@
+---
+// astrowind Footer.astro — 'astrowind:config'·permalinks 의존만 바꿈
+import { SITE } from '~/config';
+import { footerData, type Lang } from '~/navigation';
+
+export interface Props {
+  lang?: Lang;
+}
+const { lang = 'ko' } = Astro.props;
+const { links, secondaryLinks, footNote } = footerData(lang);
+const fKo = footerData('ko'), fEn = footerData('en');  // 언어 기억용
+---
+
+<!-- 2026-10-14 사용자 "이렇게 길 필요 있나, 다른 사이트처럼 줄여": 메뉴와 겹치는 목록(둘러보기·여행·함께) 빼고 한 줄 -->
+<footer class="relative border-t border-slate-800 not-prose">
+  <div class="relative max-w-[1320px] mx-auto px-4 sm:px-6 py-5 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted">
+    <a class="font-bold text-default" href={lang === 'en' ? '/en/' : '/'} data-href-ko="/" data-href-en="/en/" data-ko={SITE.name} data-en={SITE.nameEn}>{lang === 'en' ? SITE.nameEn : SITE.name}</a>
+    {secondaryLinks.map(({ text, href }, index) => (
+      <a class="hover:text-link hover:underline" href={href} data-ko={fKo.secondaryLinks[index]?.text} data-en={fEn.secondaryLinks[index]?.text}>{text}</a>
+    ))}
+    <span class="sm:ml-auto" data-ko={fKo.footNote} data-en={fEn.footNote}><Fragment set:html={footNote} /></span>
+  </div>
+</footer>

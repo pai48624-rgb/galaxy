@@ -1,0 +1,140 @@
+---
+// 커뮤니티 게시판 본문 한 벌(2026-10-14) — /board/ 와 /en/board/ 가 이 컴포넌트만 부른다(lang 으로 문구만 바뀜).
+// 화면 고정 문구: src/i18n/ui.ts 의 board. 목록·알림·시간 문구: components/board/board.ts 의 T/T_EN.
+// 로그인·로그아웃은 머리줄(#siteAuth, components/auth/site-auth.ts) 한 벌만 — 여기엔 로그인 전 안내 한 줄만 있고, 누르면 머리줄 버튼을 강조한다.
+// 세션은 머리줄·채팅과 같은 클라이언트(window.__galaxySb, components/auth/auth-client.ts) 하나.
+// 기능은 기존 3D 앱(index.html #boardPage · #boardWriteDlg · #boardAdminDlg)을 옮긴 것.
+import PageLayout from '~/layouts/PageLayout.astro';
+import { ui } from '~/i18n/ui';
+import { R } from '~/lib/routes';
+import type { Lang } from '~/i18n/tr';
+
+export interface Props { lang?: Lang }
+const { lang = 'ko' } = Astro.props;
+const T = ui(lang).board;
+---
+
+<PageLayout metadata={{ title: T.title, description: T.desc, canonical: R.board(lang), noindex: true, lang }}>
+  <section class="not-prose" aria-label={T.h1}>
+    <div class="flex flex-wrap items-end justify-between gap-3 mb-4">
+      <div>
+        <h1 class="text-2xl md:text-3xl font-bold text-heading">{T.h1}</h1>
+        <p class="text-sm text-muted mt-1">{T.chatLead} <button type="button" data-chat-open class="text-link hover:underline">{T.chatOpen}</button>{T.postsNote && <> {T.postsNote}</>}</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <button type="button" id="boardAdminOpen" hidden class="rounded-full border border-slate-700 px-3 py-1 text-sm text-default hover:border-primary hover:text-link transition">{T.admin}</button>
+        <button type="button" id="boardWriteOpen" hidden class="btn-primary !py-2 !px-4 !text-sm">{T.write}</button>
+      </div>
+    </div>
+
+    <!-- 로그인 전 안내 한 줄(로그인 버튼은 머리줄 한 벌만). 누르면 머리줄 버튼 강조, 모바일은 메뉴를 열고 강조 -->
+    <p id="boardLoginNote" class="mb-4 text-sm">
+      <button type="button" id="boardLoginHint" class="w-full text-left rounded-md border border-slate-700 bg-slate-900/40 px-4 py-3 text-muted hover:border-primary hover:text-link transition">🔑 {T.needLogin}</button>
+    </p>
+
+    <!-- 왼쪽 목록 / 오른쪽 상세 (모바일은 목록 위·상세 아래 1열) -->
+    <div class="grid gap-4 grid-cols-1 lg:grid-cols-[320px_minmax(0,1fr)]">
+      <div class="rounded-md border border-slate-700 bg-slate-900/40 flex flex-col min-w-0">
+        <div class="flex justify-between gap-2 px-4 py-2 border-b border-slate-800 text-[11px] font-bold tracking-wider uppercase text-muted">
+          <span>{T.colTitle}</span>
+          <span>{T.colNick}</span>
+        </div>
+        <div id="boardList" class="board-list-rows p-2" aria-live="polite"></div>
+      </div>
+      <div id="boardDetail" class="rounded-md border border-slate-700 bg-slate-900/40 p-5 md:p-7 min-w-0 min-h-[240px]">
+        <div class="text-muted" id="lblBoardDetailEmpty">{T.detailEmpty}</div>
+      </div>
+    </div>
+  </section>
+
+  <div id="toast" role="status"></div>
+
+  <dialog id="boardWriteDlg" class="board-dlg">
+    <div class="p-5">
+      <h3 class="text-lg font-bold text-heading mb-2">{T.write}</h3>
+      <div id="boardAuthLoggedIn" class="text-xs text-muted mb-2">
+        <span>{T.signedIn}</span> <b id="boardUserEmail" class="text-heading"></b>
+      </div>
+      <form id="boardPostForm" hidden class="flex flex-col gap-3">
+        <label class="flex flex-col gap-1 text-sm">
+          <span class="text-muted">{T.fTitle}</span>
+          <input type="text" id="boardPostTitle" maxlength="120" placeholder={T.fTitle} class="board-input" />
+          <div class="text-xs text-muted text-right"><span id="boardTitleCount">0</span>/120</div>
+        </label>
+        <label class="flex flex-col gap-1 text-sm">
+          <span class="text-muted">{T.fBody}</span>
+          <textarea id="boardPostBody" maxlength="3000" rows="7" placeholder={T.fBody} class="board-input min-h-[140px]"></textarea>
+          <div class="text-xs text-muted text-right"><span id="boardBodyCount">0</span>/3000</div>
+        </label>
+        <label class="flex items-center gap-2 text-sm">
+          <span class="text-muted">{T.captcha} <b id="boardCaptchaNum" class="text-heading tracking-[3px] text-base"></b></span>
+          <input type="text" id="boardCaptchaInput" inputmode="numeric" maxlength="4" placeholder={T.captchaPh} class="board-input board-input-sm" />
+        </label>
+        <div class="flex justify-end gap-2 mt-1">
+          <button type="button" id="boardWriteCancel" class="btn-secondary !py-2 !px-4 !text-sm">{T.cancel}</button>
+          <button type="submit" class="btn-primary !py-2 !px-4 !text-sm">{T.post}</button>
+        </div>
+      </form>
+    </div>
+  </dialog>
+
+  <dialog id="boardAdminDlg" class="board-dlg board-dlg-wide">
+    <div class="p-5">
+      <h3 class="text-lg font-bold text-heading mb-2">{T.admin}</h3>
+      <div id="boardAdminList" class="board-admin-list"></div>
+      <div class="flex justify-end mt-2">
+        <button type="button" id="boardAdminClose" class="btn-secondary !py-2 !px-4 !text-sm">{T.close}</button>
+      </div>
+    </div>
+  </dialog>
+</PageLayout>
+
+<style is:global>
+  /* is:global — 글 목록·상세는 board.ts 가 innerHTML 로 그려서 범위(scoped) 스타일이 닿지 않음. 클래스는 전부 board- 접두. */
+  /* 색은 틀의 토큰·slate 팔레트만 씀(새 색 없음). 명암비: 본문 ≈16:1, 흐린 글 ≈7:1, 링크 ≈8:1 */
+  .board-list-rows { max-height: 60vh; overflow-y: auto; }
+  .board-row { display: flex; flex-direction: column; gap: 3px; width: 100%; text-align: left; padding: 10px 12px; border-radius: .375rem; border: 0; background: none; color: var(--aw-color-text-default); cursor: pointer; min-width: 0; }
+  .board-row:hover { background: rgb(30 41 59 / 60%); }
+  .board-row.active { background: rgb(109 95 245 / 18%); }
+  .board-row-top { display: flex; align-items: baseline; gap: 8px; min-width: 0; }
+  .board-row-title { flex: 1; min-width: 0; font-weight: 700; font-size: .875rem; color: var(--aw-color-text-heading); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .board-row-nick { flex: none; font-size: .75rem; color: var(--aw-color-text-muted); }
+  .board-row-meta { font-size: .7rem; color: var(--aw-color-text-muted); }
+  .board-pager { display: flex; align-items: center; justify-content: center; gap: 14px; padding: 12px 0 6px; }
+  .board-pager button { width: 28px; height: 28px; border-radius: .375rem; border: 1px solid rgb(51 65 85); background: rgb(30 41 59 / 40%); color: var(--aw-color-text-default); font-size: 14px; cursor: pointer; }
+  .board-pager button:disabled { opacity: .3; cursor: default; }
+  .board-pager span { font-size: .75rem; color: var(--aw-color-text-muted); font-variant-numeric: tabular-nums; }
+
+  .board-detail-title { font-size: 1.25rem; font-weight: 800; color: var(--aw-color-text-heading); overflow-wrap: anywhere; }
+  .board-detail-meta { font-size: .8rem; color: var(--aw-color-text-muted); margin-top: 6px; }
+  .board-detail-nick { font-weight: 700; color: var(--aw-color-text-default); }
+  /* 긴 글(공백 없는 URL 등)이 화면 밖으로 삐져나가지 않게 anywhere로 강제 줄바꿈 */
+  .board-detail-body { font-size: .95rem; color: var(--aw-color-text-default); line-height: 1.7; margin-top: 18px; white-space: pre-wrap; overflow-wrap: anywhere; }
+  .board-post-del, .board-post-report { background: none; border: 1px solid rgb(51 65 85); border-radius: 9999px; color: var(--aw-color-text-muted); font-size: .75rem; cursor: pointer; padding: .2rem .7rem; margin-top: 16px; }
+  .board-post-del:hover, .board-post-report:hover { color: var(--aw-color-link); border-color: var(--aw-color-primary); }
+
+  .board-dlg { margin: auto; width: calc(100% - 2rem); max-width: 480px; padding: 0; border: 1px solid rgb(51 65 85); border-radius: .5rem; background: var(--aw-color-bg-page); color: var(--aw-color-text-default); }
+  .board-dlg-wide { max-width: 560px; }
+  .board-dlg::backdrop { background: rgb(0 0 0 / 65%); }
+  .board-input { width: 100%; border: 1px solid rgb(51 65 85); border-radius: .375rem; background: rgb(15 23 42 / 60%); padding: .5rem .75rem; color: var(--aw-color-text-default); font-size: .9rem; }
+  .board-input:focus { outline: none; border-color: var(--aw-color-primary); }
+  /* 확인 숫자 칸 — 유틸(w-24)은 레이어 때문에 .board-input의 width:100%에 밀려서 여기서 직접 지정 */
+  .board-input-sm { width: 6rem; text-align: center; }
+  .board-input::placeholder { color: var(--aw-color-text-muted); }
+
+  .board-admin-list { display: flex; flex-direction: column; gap: 8px; max-height: 50vh; overflow-y: auto; margin: 12px 0; }
+  .board-admin-row { border: 1px solid rgb(51 65 85); border-radius: .5rem; padding: 10px 12px; font-size: .8rem; }
+  .board-admin-row .ba-title { font-weight: 700; color: var(--aw-color-text-heading); margin-bottom: 2px; }
+  .board-admin-row .ba-meta { color: var(--aw-color-text-muted); font-size: .72rem; margin-bottom: 8px; }
+  .board-admin-row .ba-hidden { color: var(--aw-color-link); }
+  .board-admin-row .ba-act { display: flex; gap: 8px; }
+  .board-admin-row .ba-act button { font-size: .75rem; padding: 4px 10px; border-radius: .375rem; border: 1px solid rgb(51 65 85); background: none; color: var(--aw-color-text-muted); cursor: pointer; }
+  .board-admin-row .ba-act button:hover { color: var(--aw-color-text-default); border-color: var(--aw-color-primary); }
+
+  #toast { position: fixed; left: 50%; bottom: 5rem; transform: translateX(-50%) translateY(10px); background: rgb(30 41 59); color: var(--aw-color-text-default); border: 1px solid rgb(51 65 85); border-radius: .5rem; padding: .5rem .9rem; font-size: .875rem; opacity: 0; pointer-events: none; transition: opacity .2s, transform .2s; z-index: 60; max-width: calc(100% - 2rem); }
+  #toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+</style>
+
+<script>
+  import '~/components/board/board.ts';
+</script>

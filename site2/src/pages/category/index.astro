@@ -1,0 +1,28 @@
+---
+// 분야 목록(/category/) — 21개 성단 카드. 영어판 /en/category/ 는 이 파일을 lang="en" 으로(분야 이름 = category_en)
+import PageLayout from '~/layouts/PageLayout.astro';
+import Card from '~/components/ui/Card.astro';
+import { categories } from '~/lib/data';
+import { ui } from '~/i18n/ui';
+import { lp, catLabel, toolName, type Lang } from '~/i18n/tr';
+const lang: Lang = (Astro.props as { lang?: Lang }).lang || 'ko';
+const T = ui(lang).category;
+const cats = categories();
+import { R } from '~/lib/routes';
+---
+
+<PageLayout metadata={{ title: T.title(cats.length), description: T.desc(cats.length), canonical: R.category(lang), lang }}>
+  <div class="max-w-[1320px] mx-auto px-4 sm:px-6 py-7 md:py-9">
+    <h1 class="text-2xl md:text-3xl font-bold leading-tighter tracking-tighter font-heading text-heading">{T.h1(cats.length)}</h1>
+    <p class="mt-2 text-base text-muted">{T.lead}</p>
+    <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 mt-8">
+      {cats.map((c) => (
+        <Card href={R.category(lang, c.slug)}>
+          <span class="text-xs text-link">{ui(lang).common.count(c.n)}{lang === 'en' ? ' tools' : ''}</span>
+          <h3 class="text-lg font-bold text-heading mt-1">{catLabel(c, lang)}</h3>
+          <p class="text-sm text-muted mt-2">{T.card(c.name_en, c.tools.slice(0, 4).map((t) => toolName(t, lang)).join(', '))}</p>
+        </Card>
+      ))}
+    </div>
+  </div>
+</PageLayout>

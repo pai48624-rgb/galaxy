@@ -1,0 +1,34 @@
+---
+// 메인(/): src/config.ts 의 homeVariant 하나로 시안(a/b/c)이 바뀜. 블록은 components/blocks, 데이터는 lib/data homeData() 한 곳.
+// 영어판 /en/ 은 src/pages/en/index.astro 가 이 파일을 lang="en" 으로 그대로 씀(영어 문구가 있는 시안은 B — 지금 메인).
+import PageLayout from '~/layouts/PageLayout.astro';
+import { homeVariant } from '~/config';
+import { homeData } from '~/lib/data';
+import { R } from '~/lib/routes';
+import { ui } from '~/i18n/ui';
+import type { Lang } from '~/i18n/tr';
+import A from '~/layouts/home/A.astro';
+import B from '~/layouts/home/B.astro';
+import C from '~/layouts/home/C.astro';
+
+const lang: Lang = (Astro.props as { lang?: Lang }).lang || 'ko';
+const T = ui(lang);
+const d = await homeData();
+const Home = { a: A, b: B, c: C }[homeVariant];
+import { SITE_URL as SITE } from '~/env';
+const base = R.home(lang);
+const title = T.home.title(d.nTools);
+const description = T.home.desc(d.nTools, d.cats.length);
+const jsonLd = { '@context': 'https://schema.org', '@type': 'WebSite', name: T.site, url: SITE + base, inLanguage: lang, potentialAction: { '@type': 'SearchAction', target: SITE + (lang === 'en' ? '/en' : '') + '/map/?q={search_term_string}', 'query-input': 'required name=search_term_string' } };
+---
+
+<PageLayout metadata={{ title, description, canonical: base, image: '/img/map_preview.jpg', lang }}>
+  <Fragment slot="head">
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    <script is:inline define:vars={{ mapBase: R.map(lang) }}>
+      // 옛 메인 주소로 온 지도 깊은 링크(/?ai=…)·로그인 복귀(#access_token)·게시판(#board)은 3D 지도로
+      (function () { var s = location.search, h = location.hash; if ((s && s.length > 1) || /access_token=|^#(board|login)/.test(h)) location.replace(mapBase + s + h); })();
+    </script>
+  </Fragment>
+  <Home d={d} lang={lang} />
+</PageLayout>

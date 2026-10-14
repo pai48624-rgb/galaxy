@@ -1,0 +1,21 @@
+# site2 커밋 제외(2026-10-14): 빌드 결과·의존성·받은 템플릿 원본·시험 캡처·비밀값·prepare-map이 매번 복사하는 사본
+node_modules/
+dist/
+dist*/
+.astro/
+.wrangler/
+_candidates/
+_qa*/
+.env
+.env.*
+public/vendor/
+public/data/
+public/img/
+public/galaxy_saas/
+public/map/app/
+public/_worker.js
+public/chrome.js
+public/galaxy-sw.js
+public/manifest.webmanifest
+.translate_work/
+*.log

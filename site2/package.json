@@ -1,0 +1,28 @@
+{
+  "name": "aigalaxy-site2",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "aigalaxy-map.com 새 뼈대(site2) — AstroWind 템플릿 위에 기존 기능 복사. 배포는 사용자 지시 전까지 하지 않음(로컬 확인만).",
+  "scripts": {
+    "prepare-map": "node scripts/prepare-map.mjs",
+    "dev": "astro dev",
+    "build": "node scripts/prepare-map.mjs && astro build && node scripts/postbuild.mjs",
+    "serve": "npx wrangler pages dev dist --port 8792 --ip 127.0.0.1",
+    "qa": "python -X utf8 scripts/qa.py http://127.0.0.1:8792",
+    "translate": "node scripts/translate.mjs",
+    "serve:static": "python -X utf8 scripts/serve_local.py 8793",
+    "translate:trend": "node scripts/translate.mjs trend trend_posts",
+    "build:full": "npm run translate:trend && npm run build"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.3",
+    "@iconify-json/tabler": "^1.2.38",
+    "@tailwindcss/typography": "^0.5.20",
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^7.3.1",
+    "astro-icon": "^1.1.5",
+    "tailwind-merge": "^3.6.0",
+    "tailwindcss": "^4.3.3"
+  }
+}

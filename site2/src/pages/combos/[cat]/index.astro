@@ -1,0 +1,50 @@
+---
+// 분야별 조합 묶음(/combos/<category>/) 11쪽: 머리에 실제 집계 요약 2~3줄, 아래에 조합 카드(영향도 높은 순). 낱장 페이지 없음.
+// 영어판 /en/combos/<category>/ 는 이 파일을 lang="en" 으로
+import PageLayout from '~/layouts/PageLayout.astro';
+import Breadcrumbs from '~/components/common/Breadcrumbs.astro';
+import SectionHead from '~/components/ui/SectionHead.astro';
+import ComboCard from '~/components/blocks2/ComboCard.astro';
+import SourceNote from '~/components/blocks2/SourceNote.astro';
+import { comboCategories, type ComboCategory } from '~/lib/data2';
+import { clip } from '~/utils/utils';
+import { ui } from '~/i18n/ui';
+import { lp, tx, type Lang } from '~/i18n/tr';
+
+export async function getStaticPaths() {
+  return comboCategories().map((c) => ({ params: { cat: c.slug }, props: { c } }));
+}
+const { c, lang = 'ko' } = Astro.props as { c: ComboCategory; lang?: Lang };
+const T = ui(lang);
+const U = T.combos;
+const cn = (x: { slug: string; name: string; desc: string }) => U.cats[x.slug] || { name: x.name, desc: x.desc };
+const others = comboCategories().filter((x) => x.slug !== c.slug);
+const title = U.cTitle(cn(c).name, c.n);
+const description = clip(U.cDesc(cn(c).name, c.n, c.topBrains.map((b) => tx(b.name, lang)).join(', '), c.topExecutors.map((b) => tx(b.name, lang)).join(', ')), 155);
+const joinTop = (l: Array<{ name: string; n: number; href: string }>) => l.map((b) => ({ ...b, label: `${tx(b.name, lang)} ${T.common.times(b.n)}` }));
+import { R } from '~/lib/routes';
+---
+
+<PageLayout metadata={{ title, description, canonical: R.combos(lang, c.slug), lang }}>
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 py-7 md:py-9">
+    <Breadcrumbs items={[{ text: T.common.aiList, href: R.ai(lang) }, { text: T.common.combos, href: R.combos(lang) }, { text: cn(c).name }]} class="mb-3" />
+    <h1 class="text-2xl md:text-3xl font-bold leading-tighter tracking-tighter font-heading text-heading">{U.cH1(cn(c).name, c.n)}</h1>
+    <p class="mt-2 text-base text-muted text-pretty">{cn(c).desc}.</p>
+    <ul class="mt-4 rounded-md border border-slate-800 bg-slate-900/40 p-4 text-sm leading-relaxed space-y-1 break-words">
+      <li set:html={U.sum1(c.n, c.nTools, c.avgImpact, c.impact10)} />
+      <li>{U.topBrain}{joinTop(c.topBrains).map((b, i) => <>{i > 0 && ', '}<a href={lp(b.href, lang)} class="text-link hover:underline">{b.label}</a></>)}</li>
+      {c.topExecutors.length > 0 && <li>{U.topExec}{joinTop(c.topExecutors).map((b, i) => <>{i > 0 && ', '}<a href={lp(b.href, lang)} class="text-link hover:underline">{b.label}</a></>)}</li>}
+    </ul>
+
+    <SectionHead title={U.list} />
+    <div class="grid gap-3 md:grid-cols-2">
+      {c.combos.map((v) => <ComboCard c={v} lang={lang} />)}
+    </div>
+
+    <SectionHead title={U.others} href={R.combos(lang)} more={T.common.seeAllMore} />
+    <div class="flex flex-wrap gap-2">
+      {others.map((x) => <a href={R.combos(lang, x.slug)} class="rounded-full border border-slate-700 px-3.5 py-1.5 text-sm hover:border-primary hover:text-link transition">{cn(x).name} <span class="text-muted">{x.n}</span></a>)}
+    </div>
+    <SourceNote lang={lang} source={U.cSource} note={U.cNote} />
+  </div>
+</PageLayout>

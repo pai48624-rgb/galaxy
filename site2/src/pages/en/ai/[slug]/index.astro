@@ -1,0 +1,10 @@
+---
+// 영어판 — 한국어 화면(ai/[slug]/index.astro)을 lang="en" 으로 그대로 씀(문구: src/i18n/ui.ts, 데이터 번역: src/i18n/cache)
+import Page from '../../../ai/[slug]/index.astro';
+import { aiPageSlugs } from '~/lib/data';
+export async function getStaticPaths() {
+  return aiPageSlugs().map((slug) => ({ params: { slug } }));
+}
+---
+
+<Page lang="en" />

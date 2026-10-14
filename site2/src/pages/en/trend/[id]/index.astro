@@ -1,0 +1,89 @@
+---
+// 영어 트렌드 글(/en/trend/<id>/) — 2026-10-14. 빌드 때 정적 페이지로 만든다(워커 수정 없음).
+// 본문: src/i18n/cache/trend_posts.json(npm run translate:trend 가 공개 글을 옮겨 둔 것). 캐시에 있는 글만 페이지가 생긴다.
+// 틀: 한국어 글 틀(frame-template — 워커가 /trend/<id> 를 그릴 때 씀)과 같은 모양 = PageLayout + 글 + 옆칸(함께 보면 좋은 글·새 글 받아 보기).
+// 짝: 이 페이지 hreflang en(자기) ↔ ko(/trend/<id>, 워커 화면). 한국어 화면 쪽 alternate en 은 워커 담당(아직 없음).
+// 본문 안 사이트 링크는 lp 규칙(R)으로 영어판이 있으면 /en/… 로.
+import PageLayout from '~/layouts/PageLayout.astro';
+import TrendPostStyles from '~/components/blocks/TrendPostStyles.astro';
+import { trendPosts } from '~/lib/data';
+import { trendEnAll, trendEn, tx, lp, type Lang } from '~/i18n/tr';
+import { ui } from '~/i18n/ui';
+import { R } from '~/lib/routes';
+import { SITE_URL } from '~/env';
+import { fmtDate } from '~/utils/utils';
+
+export async function getStaticPaths() {
+  const all = trendEnAll();
+  const live = await trendPosts();
+  // 공개 목록을 읽었으면 그 안에 있는 글만(번역 뒤 비공개로 바뀐 글은 안 만듦). 목록을 못 읽으면 캐시대로.
+  const liveIds = new Set(live.map((p) => String(p.id)));
+  return Object.keys(all).filter((id) => !live.length || liveIds.has(id)).map((id) => ({ params: { id } }));
+}
+
+const lang: Lang = 'en';
+const T = ui(lang).trend.post;
+const { id } = Astro.params as { id: string };
+const p = trendEn(id)!;
+const esc = (s: string) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
+// 한국어 글과 같은 손질(워커 trendPost): 스크립트·이벤트 속성 제거
+let body = String(p.body_html).replace(/<script[\s\S]*?<\/script>/gi, '').replace(/\son\w+\s*=\s*("[^"]*"|'[^']*'|[^\s>]+)/gi, '');
+// 사이트 안 주소 → 영어판(있으면). 우리 도메인 절대 주소도 상대 주소로.
+const SITE_RE = new RegExp('^' + SITE_URL.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/\/$/, ''));
+body = body.replace(/(\shref=")([^"]*)(")/g, (_m, a, href, z) => {
+  let h = href.replace(SITE_RE, '') || '/';
+  if (/^https?:\/\/(www\.)?google\.[^/]+\//.test(h)) h = h.replace(/([?&])hl=ko\b/, '$1hl=en');
+  return a + (h.startsWith('/') ? lp(h, lang) : h) + z;
+});
+const isGx = body.includes('class="gx"');
+const koHref = R.trendPost(id, 'ko');
+const enHref = R.trendPost(id, 'en');
+const tags = [...new Set(p.tags || [])];
+const text = body.replace(/<style[\s\S]*?<\/style>/g, ' ').replace(/<[^>]+>/g, ' ').replace(/&[a-z#0-9]+;/g, ' ').replace(/\s+/g, ' ').trim();
+// 설명: 글 틀(.gx)은 맨 앞에 칩·제목이 있으므로 제목 뒤 문장부터
+const afterTitle = text.includes(p.title) ? text.slice(text.indexOf(p.title) + p.title.length).trim() : text;
+const description = afterTitle.length > 155 ? afterTitle.slice(0, 154).replace(/\s+\S*$/, '') + '…' : afterTitle;
+const date = fmtDate(p.created_at, lang);
+
+const others = (await trendPosts()).filter((o) => String(o.id) !== id).slice(0, 6);
+const related = others.map((o) => {
+  const en = trendEn(o.id);
+  return `<li><a href="${esc(R.trendPost(o.id, lang))}"${en ? '' : ' hreflang="ko"'}>${esc(en?.title || tx(o.title, lang))}${en ? '' : ` <small>(${esc(ui(lang).trend.koreanBadge)})</small>`}</a></li>`;
+}).join('') || `<li><a href="${R.trend(lang)}">${esc(T.list)}</a></li>`;
+
+const note = `<p class="meta tr-note">${esc(T.note)} <a href="${esc(koHref)}" hreflang="ko">${esc(T.readKo)}</a></p>`;
+const html = (isGx
+  ? `<article>${body}</article>`
+  : `<h1 class="post-h1 serif">${esc(p.title)}</h1><div class="meta">${esc(T.by)} · ${esc(date)} · ${esc(T.translated)}</div><article class="paper">${body}</article>`)
+  + note + (tags.length ? `<div class="tags">${tags.map((t) => `<span>#${esc(t)}</span>`).join('')}</div>` : '');
+const side = `<div class="trend-side"><div class="box"><b>${esc(T.related)}</b><ul>${related}</ul></div><div class="box"><b>${esc(T.subscribe)}</b><ul><li><a href="${R.rss()}">${esc(T.rss)}</a></li><li><a href="${R.map(lang)}">${esc(T.openMap)}</a></li></ul></div></div>`;
+const abs = (x: string) => SITE_URL.replace(/\/$/, '') + x;
+const jsonLd = {
+  '@context': 'https://schema.org', '@type': 'Article', headline: p.title, datePublished: p.created_at, inLanguage: 'en',
+  author: { '@type': 'Organization', name: T.by }, mainEntityOfPage: abs(enHref),
+  translationOfWork: { '@type': 'Article', '@id': abs(koHref), inLanguage: 'ko' },
+};
+---
+
+<PageLayout
+  metadata={{ title: `${p.title} | ${T.by}`, description, canonical: enHref, lang, ogType: 'article',
+    alternates: [{ hreflang: 'en', href: enHref }, { hreflang: 'ko', href: koHref }] }}
+  altLangHref={koHref}
+>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd).replace(/</g, '\\u003c')} />
+  <div class="max-w-[1320px] mx-auto px-4 sm:px-6 py-7 md:py-9 grid grid-cols-[minmax(0,1fr)] gap-6 xl:grid-cols-[minmax(0,1fr)_280px]">
+    <article class="min-w-0 trend-post" lang="en" set:html={html} />
+    <aside class="min-w-0 space-y-4" set:html={side} />
+  </div>
+</PageLayout>
+
+<TrendPostStyles />
+<style is:global>
+  .trend-post .tr-note { margin-top: 1.4rem; }
+  .trend-post .tr-note a { color: #a89bf0; }
+  .trend-side small { color: rgb(229 236 246 / 55%); font-size: 11px; }
+  /* 영어는 단어가 길어(예: environments) 한국어용 좁은 칸(.steps 3칸 등)을 밀어내므로 칸 안에서 줄바꿈되게 — 모바일 넘침 0 */
+  .trend-post[lang='en'] .gx { word-break: normal; }
+  .trend-post[lang='en'] .gx :is(.step, .tile, .orb, .card) { min-width: 0; overflow-wrap: anywhere; }
+  @media (max-width: 560px) { .trend-post[lang='en'] .gx .steps { grid-template-columns: 1fr !important; gap: 16px; } }
+</style>

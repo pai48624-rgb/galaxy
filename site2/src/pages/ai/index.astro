@@ -1,0 +1,51 @@
+---
+// AI 목록 허브(/ai/) — 기존 gen-seo-pages.mjs 허브와 같은 내용. 영어판 /en/ai/ 는 이 파일을 lang="en" 으로(영문 이름·desc_en·category_en)
+import PageLayout from '~/layouts/PageLayout.astro';
+import SectionHead from '~/components/ui/SectionHead.astro';
+import { Icon } from 'astro-icon/components';
+import { loadTools, aiPageSlugs, categories, toolHref } from '~/lib/data';
+import { clip } from '~/utils/utils';
+import { ui } from '~/i18n/ui';
+import { lp, toolName, toolDesc, catLabel, type Lang } from '~/i18n/tr';
+const lang: Lang = (Astro.props as { lang?: Lang }).lang || 'ko';
+const T = ui(lang);
+const tools = loadTools();
+const pages = new Set(aiPageSlugs());
+const selected = tools.filter((t) => pages.has(t.slug));
+const cats = categories();
+const hubCats = [...new Set(selected.map((t) => t.category))].sort((a, b) => (cats.find((c) => c.name === b)?.n || 0) - (cats.find((c) => c.name === a)?.n || 0));
+const catTitle = (c: string) => { const x = cats.find((y) => y.name === c); return x ? catLabel(x, lang) : lang === 'en' ? selected.find((t) => t.category === c)?.category_en || c : c; };
+import { R } from '~/lib/routes';
+---
+
+<PageLayout metadata={{ title: T.ai.title(tools.length), description: T.ai.desc(tools.length), canonical: R.ai(lang), lang }}>
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 py-7 md:py-9">
+    <h1 class="text-2xl md:text-3xl font-bold leading-tighter tracking-tighter font-heading text-heading">{T.ai.h1}</h1>
+    <p class="mt-2 text-base text-muted text-pretty">{T.ai.lead(tools.length, selected.length)}</p>
+
+    <SectionHead title={T.ai.byField} href={R.category(lang)} more={T.ai.fieldPage} />
+    <div class="flex flex-wrap gap-2">
+      {cats.map((c) => <a href={R.category(lang, c.slug)} class="rounded-full border border-slate-700 px-3.5 py-1.5 text-sm hover:border-primary hover:text-link transition">{catLabel(c, lang)} <span class="text-muted">({c.n})</span></a>)}
+    </div>
+
+    {hubCats.map((c) => (
+      <>
+        <SectionHead title={catTitle(c)} href={R.category(lang, cats.find((x) => x.name === c)?.slug)} more={T.common.fieldAll} />
+        <ul class="grid gap-3 sm:grid-cols-2">
+          {selected.filter((t) => t.category === c).sort((a, b) => toolName(a, lang).localeCompare(toolName(b, lang))).map((t) => (
+            <li>
+              <a href={lp(toolHref(t), lang)} class="block rounded-md border border-slate-800 p-4 hover:border-primary/70 transition h-full">
+                <b class="text-heading">{toolName(t, lang)}</b>
+                <small class="block text-sm text-muted mt-1">{clip(toolDesc(t, lang), lang === 'en' ? 140 : 90)}</small>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </>
+    ))}
+    <div class="flex flex-wrap gap-3 mt-10">
+      <a href={R.map(lang)} class="btn-primary">{T.common.mapAll}<Icon name="tabler:arrow-right" class="w-5 h-5 ml-1 -mr-1" /></a>
+      <a href={R.trend(lang)} class="btn">{T.common.trendPosts}</a>
+    </div>
+  </div>
+</PageLayout>

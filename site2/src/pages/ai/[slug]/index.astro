@@ -1,0 +1,180 @@
+---
+// AI 도구 페이지(/ai/<slug>/) 74쪽 — 기존 dist/ai/<slug>/index.html 과 같은 정보(소개·기능·가격·조합·연동·대안·비교·지도 속 위치·FAQ·3D 지도 링크)를 템플릿 카드로
+// 영어판 /en/ai/<slug>/ 는 이 파일을 lang="en" 으로: 이름=name_en, 설명=desc_en, 기능·요금·조합·생태계 문구=번역 캐시(src/i18n/cache), 고정 문구=src/i18n/ui.ts
+import PageLayout from '~/layouts/PageLayout.astro';
+import Breadcrumbs from '~/components/common/Breadcrumbs.astro';
+import Card from '~/components/ui/Card.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import { Icon } from 'astro-icon/components';
+import { aiPageSlugs, toolPage, comboMembers, toolHref, categories, type Tool } from '~/lib/data';
+import { clip } from '~/utils/utils';
+import { ui } from '~/i18n/ui';
+import { lp, tx, toolName, toolDesc, toolCat, toolSub, toolPricing, catLabel, type Lang } from '~/i18n/tr';
+
+export async function getStaticPaths() {
+  return aiPageSlugs().map((slug) => ({ params: { slug } }));
+}
+const lang: Lang = (Astro.props as { lang?: Lang }).lang || 'ko';
+const T = ui(lang);
+const U = T.tool;
+const { slug } = Astro.params;
+const p = toolPage(slug!);
+if (!p) return Astro.redirect(R.ai(lang));
+const { t, display, rank, combos, alts, groups, cmp, peers, linkRank } = p;
+const cat = categories().find((c) => c.name === t.category);
+const SEARCH_NAME: Record<string, string> = { gpt: 'ChatGPT' };
+const N = (x: Tool) => toolName(x, lang);
+const name = lang === 'en' ? SEARCH_NAME[t.slug] || t.name_en || t.name : t.name;  // 본문에서 부르는 이름
+const canonical = R.ai(lang, t.slug);
+const desc = toolDesc(t, lang);
+const title = U.title(SEARCH_NAME[t.slug] || t.name_en || t.name, clip(desc || toolCat(t, lang), lang === 'en' ? 60 : 40));
+const description = clip(U.desc(name, desc), 155);
+const jsonLd = { '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: N(t), applicationCategory: t.category_en || t.category, description: desc, inLanguage: lang, url: 'https://aigalaxy-map.com' + canonical, ...(t.url ? { sameAs: t.url } : {}) };
+const chip = (x: Tool) => (x.slug === t.slug ? `<span class="rounded-full bg-primary/20 text-heading px-3 py-1 text-sm">${N(x)}</span>` : `<a href="${lp(toolHref(x), lang)}" class="rounded-full border border-slate-700 px-3 py-1 text-sm hover:border-primary hover:text-link">${N(x)}</a>`);
+const policy = tx(t.pricing_policy, lang);
+const longDesc = lang === 'en' ? tx(t.long_desc_ko, lang) : t.long_desc_ko;
+// FAQ: 한국어는 data.ts 가 만든 것 그대로, 영어는 같은 규칙으로 영어 문장
+const faq: Array<[string, string]> = lang === 'ko' ? p.faq : [];
+if (lang === 'en') {
+  if (t.pricing_policy || t.pricing) faq.push([U.faqFree(name), U.faqFreeA(policy || toolPricing(t.pricing, lang))]);
+  if (combos.length) { const members = comboMembers(combos[0]).filter((m) => m.slug !== t.slug).map(N).slice(0, 3).join(', '); faq.push([U.faqWith(name), U.faqWithA(tx(combos[0].title_ko, lang), members)]); }
+  if (alts.length) faq.push([U.faqAlt(name), U.faqAltA(alts.slice(0, 4).map(N).join(', '))]);
+}
+const me = cmp.find((x) => x.t.slug === t.slug);
+import { R } from '~/lib/routes';
+---
+
+<PageLayout metadata={{ title, description, canonical, lang }}>
+  <Fragment slot="head"><script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd).replace(/</g, '\\u003c')} /></Fragment>
+  <div class="max-w-[1320px] mx-auto px-4 sm:px-6 py-7 md:py-9 grid grid-cols-[minmax(0,1fr)] gap-8 lg:grid-cols-[minmax(0,1fr)_280px]">
+    <article class="min-w-0">
+      <Breadcrumbs items={[{ text: T.common.aiList, href: R.ai(lang) }, { text: toolCat(t, lang), href: cat ? R.category(lang, cat.slug) : undefined }, ...(t.subcategory ? [{ text: toolSub(t, lang) || '' }] : []), { text: N(t) }]} hideCurrent class="mb-3" />
+      <h1 class="text-2xl md:text-3xl font-bold leading-tighter tracking-tighter font-heading text-heading text-balance">{lang === 'en' ? SEARCH_NAME[t.slug] || t.name_en : display}</h1>
+      <p class="mt-2 text-sm text-muted">{toolCat(t, lang)}{t.pricing ? ` · ${toolPricing(t.pricing, lang)}` : ''}{rank ? ` · ${U.rankN(rank.rank)}` : ''}</p>
+      {desc && <p class="mt-3 text-base text-default text-pretty">{desc}</p>}
+
+      {rank && (
+        <Card class="mt-6 border-primary/60">
+          <h3 class="text-lg font-bold text-heading inline-flex items-center gap-2"><Icon name="tabler:trophy" class="w-5 h-5 text-link" />{U.rankN(rank.rank)}</h3>
+          <p class="mt-2 text-default">{tx(rank.reason, lang)}</p>
+          <a href={(lang === 'en' ? R.rank(lang) : R.trend(lang))} class="inline-flex items-center gap-0.5 text-sm text-link hover:underline mt-2">{U.rankLink}<Icon name="tabler:chevron-right" class="w-4 h-4" /></a>
+        </Card>
+      )}
+
+      {(t.key_features.length || t.long_desc_ko) && (
+        <section class="mt-8">
+          <h2 class="text-xl font-bold text-heading mb-3">{U.what(name)}</h2>
+          <Card>
+            {t.long_desc_ko && t.long_desc_ko !== t.desc_ko && <p class="text-default">{longDesc}</p>}
+            {t.key_features.length > 0 && <ul class="list-disc pl-5 mt-3 space-y-1 text-default">{t.key_features.map((f) => <li>{tx(f, lang)}</li>)}</ul>}
+          </Card>
+        </section>
+      )}
+
+      {(t.pricing_policy || t.pricing_detail) && (
+        <section class="mt-8">
+          <h2 class="text-xl font-bold text-heading mb-3">{U.price}</h2>
+          <Card>
+            {t.pricing_policy && <p class="font-bold text-heading">{policy}</p>}
+            {t.pricing_detail && <p class="mt-2 text-default">{tx(t.pricing_detail, lang)}</p>}
+            <p class="mt-3 text-sm text-muted">{t.info_verified ? U.verified : tx(t.info_confidence, lang) || U.priceNote}</p>
+          </Card>
+        </section>
+      )}
+
+      {combos.length > 0 && (
+        <section class="mt-8">
+          <h2 class="text-xl font-bold text-heading mb-3">{U.combos(name)}</h2>
+          <div class="grid gap-4">
+            {combos.map((c) => (
+              <Card title={tx(c.title_ko, lang)}>
+                <div class="flex flex-wrap gap-2 mb-3" set:html={comboMembers(c).map(chip).join('')} />
+                <p class="text-default">{tx(c.workflow_ko, lang)}</p>
+                {c.pricing_summary_ko && <p class="mt-2 text-sm text-muted">{U.cost}: {tx(c.pricing_summary_ko, lang)}</p>}
+              </Card>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {groups.length > 0 && (
+        <section class="mt-8">
+          <h2 class="text-xl font-bold text-heading mb-3">{U.eco(name)}</h2>
+          <div class="grid gap-4">
+            {groups.map((g: any) => (
+              <Card title={tx(g.category_ko, lang)}>
+                <ul class="list-disc pl-5 space-y-1 text-default">{(g.items || []).map((i: any) => <li><b>{tx(i.name, lang)}</b> — {tx(i.reason_ko, lang)}</li>)}</ul>
+              </Card>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {alts.length > 0 && (
+        <section class="mt-8">
+          <h2 class="text-xl font-bold text-heading mb-3">{U.alts(name)}</h2>
+          <div class="flex flex-wrap gap-2" set:html={alts.map(chip).join('')} />
+        </section>
+      )}
+
+      {cmp.length >= 2 && (
+        <section class="mt-8">
+          <h2 class="text-xl font-bold text-heading mb-3">{U.cmp(name)}</h2>
+          <Card class="overflow-x-auto">
+            <table class="w-full text-sm min-w-[420px]">
+              <thead><tr class="text-left text-muted text-xs">{U.th.map((h) => <th class="pb-2">{h}</th>)}</tr></thead>
+              <tbody class="divide-y divide-slate-800">
+                {cmp.map((x) => (
+                  <tr>
+                    <td class="py-2">{x.t.slug === t.slug ? <b class="text-heading">{N(x.t)}</b> : <a href={lp(toolHref(x.t), lang)} class="text-link hover:underline">{N(x.t)}</a>}</td>
+                    <td class="py-2">{toolPricing(x.t.pricing, lang) || '-'}</td>
+                    <td class="py-2 tabular-nums">{T.common.count(x.combos)}</td>
+                    <td class="py-2 tabular-nums">{T.common.count(x.links)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <p class="mt-3 text-sm text-muted">{U.cmpNote(p.today)}</p>
+          </Card>
+        </section>
+      )}
+
+      {peers >= 5 && (
+        <section class="mt-8">
+          <h2 class="text-xl font-bold text-heading mb-3">{U.onMap(name)}</h2>
+          <Card>
+            <ul class="list-disc pl-5 space-y-1 text-default">
+              <li set:html={U.peers(toolCat(t, lang), peers)} />
+              <li set:html={U.links(me?.links ?? alts.length, linkRank)} />
+              {combos.length > 0 && <li set:html={U.inCombos(me?.combos ?? combos.length)} />}
+            </ul>
+          </Card>
+        </section>
+      )}
+
+      {faq.length > 0 && (
+        <FAQs title={U.faq} items={faq.map(([q, a]) => ({ title: q, description: a }))} schema classes={{ container: 'max-w-none px-0 md:px-0 py-6 md:py-6 lg:py-6', headline: { container: 'text-left md:mx-0 mb-4 md:mb-4', title: 'text-2xl md:text-2xl' } }} />
+      )}
+
+      <div class="flex flex-wrap gap-3 mt-8">
+        <a href={R.map(lang, { ai: t.slug })} class="btn-primary"><Icon name="tabler:sparkles" class="w-5 h-5 mr-1 -ml-1" />{U.view3d(N(t))}</a>
+        {t.url && <a href={t.url} rel="noopener nofollow" target="_blank" class="btn">{T.common.official}<Icon name="tabler:external-link" class="w-4 h-4 ml-1" /></a>}
+      </div>
+    </article>
+
+    <aside class="space-y-6 min-w-0">
+      <Card title={U.sameField}>
+        <ul class="space-y-2 text-sm">
+          {(cat?.tools || []).filter((x) => x.slug !== t.slug).slice(0, 10).map((x) => <li><a href={lp(toolHref(x), lang)} class="text-default hover:text-link">{N(x)}</a></li>)}
+        </ul>
+        {cat && <a href={R.category(lang, cat.slug)} class="inline-flex items-center gap-0.5 text-sm text-link hover:underline mt-3">{U.fieldAllN(catLabel(cat, lang), cat.n)}<Icon name="tabler:chevron-right" class="w-4 h-4" /></a>}
+      </Card>
+      <Card title={T.common.subscribeTitle}>
+        <ul class="space-y-2 text-sm">
+          <li><a href={R.rss()} class="text-link hover:underline inline-flex items-center gap-1"><Icon name="tabler:rss" class="w-4 h-4" />{T.common.rss}</a></li>
+          <li><a href={R.trend(lang)} class="text-link hover:underline inline-flex items-center gap-1"><Icon name="tabler:news" class="w-4 h-4" />{T.common.trendPosts}</a></li>
+        </ul>
+      </Card>
+    </aside>
+  </div>
+</PageLayout>

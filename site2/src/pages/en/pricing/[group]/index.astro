@@ -1,0 +1,10 @@
+---
+// 영어판 — 한국어 화면(pricing/[group]/index.astro)을 lang="en" 으로 그대로 씀(문구: src/i18n/ui.ts, 데이터 번역: src/i18n/cache)
+import Page from '../../../pricing/[group]/index.astro';
+import { pricingGroups, freeStartGroup } from '~/lib/data2';
+export async function getStaticPaths() {
+  return [freeStartGroup(), ...pricingGroups()].map((g) => ({ params: { group: g.slug }, props: { g } }));
+}
+---
+
+<Page g={Astro.props.g} lang="en" />

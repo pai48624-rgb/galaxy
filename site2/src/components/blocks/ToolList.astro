@@ -1,0 +1,51 @@
+---
+// 메인 블록: AI 도구 목록(안내 페이지 있는 74개 중 지도 속 조합 많은 순). rows=줄 목록, 아니면 카드 격자(4열). 영어판: 영문 이름·desc_en·category_en
+import { Icon } from 'astro-icon/components';
+import SectionHead from '~/components/ui/SectionHead.astro';
+import type { HomeData } from '~/lib/data';
+import { ui } from '~/i18n/ui';
+import { lp, toolName, toolDesc, toolCat, toolSub, toolPricing, type Lang } from '~/i18n/tr';
+export interface Props { d: HomeData; limit?: number; rows?: boolean; id?: string; class?: string; title?: string; lang?: Lang }
+const { d, limit = 10, rows = true, id = 'tools', class: className = '', lang = 'ko', title = ui(lang).home.tools } = Astro.props;
+const T = ui(lang).home;
+const list = d.toolList.slice(0, limit);
+const initials = (t: { name_en: string }) => t.name_en.replace(/[^A-Za-z0-9]/g, '').slice(0, 2) || 'AI';
+const hue = (s: string) => { let h = 0; for (const ch of s) h = (h * 31 + ch.charCodeAt(0)) % 360; return h; };
+import { R } from '~/lib/routes';
+---
+
+<section id={id} class:list={['scroll-mt-28', className]}>
+  <SectionHead title={title} href={R.ai(lang)} more={T.toolsAll(d.nTools)} />
+  {rows ? (
+    <ol class="divide-y divide-slate-800 rounded-md border border-slate-800">
+      {list.map(({ t, href, combos }) => (
+        <li class="flex items-center gap-3 px-3 py-2">
+          <span class="w-8 h-8 shrink-0 rounded-md grid place-items-center text-xs font-bold text-white" style={`background:hsl(${hue(t.slug)} 45% 38%)`} aria-hidden="true">{initials(t)}</span>
+          <div class="min-w-0 flex-1">
+            <a href={lp(href, lang)} class="text-sm font-bold text-heading hover:text-link">{toolName(t, lang)}</a>
+            <p class="text-xs text-muted truncate">{toolDesc(t, lang)}</p>
+          </div>
+          <span class="hidden sm:inline rounded-full border border-slate-700 px-2 py-0.5 text-[11px] text-muted whitespace-nowrap">{toolCat(t, lang)}</span>
+          <span class="rounded-full border border-slate-700 px-2 py-0.5 text-[11px] text-muted whitespace-nowrap">{toolPricing(t.pricing, lang)}</span>
+          <a href={R.map(lang, { ai: t.slug })} class="hidden md:inline-flex items-center text-xs text-link hover:underline whitespace-nowrap" title={T.combosN(combos)}>{T.onMap}<Icon name="tabler:chevron-right" class="w-3.5 h-3.5" /></a>
+        </li>
+      ))}
+    </ol>
+  ) : (
+    <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+      {list.map(({ t, href }) => (
+        <a href={lp(href, lang)} class="block rounded-md border border-slate-700 bg-slate-900/40 p-3.5 hover:border-primary/70 transition">
+          <div class="flex items-center gap-2.5">
+            <span class="w-9 h-9 shrink-0 rounded-md grid place-items-center text-xs font-bold text-white" style={`background:hsl(${hue(t.slug)} 45% 38%)`} aria-hidden="true">{initials(t)}</span>
+            <div class="min-w-0"><b class="block text-sm text-heading truncate">{toolName(t, lang)}</b><small class="text-xs text-muted">{toolCat(t, lang)}</small></div>
+          </div>
+          <p class="text-xs text-muted mt-2.5 line-clamp-2">{toolDesc(t, lang)}</p>
+          <div class="mt-2.5 flex items-center justify-between text-[11px]">
+            <span class="text-muted">{lang === 'en' ? toolSub(t, lang) || t.category_en : t.subcategory || t.category_en}</span>
+            <span class="rounded-full border border-slate-700 px-2 py-0.5 text-muted">{toolPricing(t.pricing, lang)}</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  )}
+</section>

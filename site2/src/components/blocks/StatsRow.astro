@@ -1,0 +1,16 @@
+---
+// 메인 블록: 숫자 5칸(AI 도구·분야·조합·트렌드 글(런타임 갱신)·여행 글)
+import type { HomeData } from '~/lib/data';
+export interface Props { d: HomeData; class?: string }
+const { d, class: className = '' } = Astro.props;
+const items: Array<[number, string, boolean?]> = [[d.nTools, 'AI 도구'], [d.cats.length, '분야 성단'], [d.nCombos, 'AI 조합'], [d.posts.length, '트렌드 글', true], [d.korea.length, '여행 글']];
+---
+
+<div class:list={['grid grid-cols-3 sm:grid-cols-5 gap-2 text-center', className]}>
+  {items.map(([n, label, live]) => (
+    <div class="rounded-md border border-slate-800 py-2.5">
+      <div class="text-xl font-bold text-heading tabular-nums" {...(live ? { 'data-count-trend': '' } : {})}>{n}</div>
+      <div class="text-xs text-muted">{label}</div>
+    </div>
+  ))}
+</div>

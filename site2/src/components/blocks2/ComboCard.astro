@@ -1,0 +1,33 @@
+---
+// 조합 카드 하나: 제목 · 두뇌 도구 · 실행 도구 · 한 줄 흐름(workflow_ko) · 요금 요약 · 영향도 별점(impact 7~10 → 별 5개 기준)
+// 낱장 페이지는 두지 않는다(조합 한 건 글이 짧아 얇은 페이지가 됨). 도구 이름만 안내 페이지·지도 검색으로 연결.
+// 영어판: 제목·흐름·요금 요약은 번역 캐시(src/i18n/cache/combos.json), 주소는 /en/…
+import Card from '~/components/ui/Card.astro';
+import type { ComboView } from '~/lib/data2';
+import { ui } from '~/i18n/ui';
+import { lp, tx, type Lang } from '~/i18n/tr';
+export interface Props { c: ComboView; class?: string; lang?: Lang }
+const { c, class: className = '', lang = 'ko' } = Astro.props;
+const T = ui(lang).combos;
+const full = Math.floor(c.impact / 2);
+const half = c.impact % 2 === 1;
+const stars = '★'.repeat(full) + (half ? '½' : '') + '☆'.repeat(5 - full - (half ? 1 : 0));
+const chip = 'inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs whitespace-nowrap max-w-full truncate';
+---
+
+<Card as="article" class={className}>
+  <div class="flex items-start justify-between gap-3">
+    <h3 class="text-base md:text-lg font-bold text-heading text-balance leading-snug">{tx(c.title, lang)}</h3>
+    <span class="shrink-0 text-xs text-muted whitespace-nowrap" title={T.impact(c.impact)} aria-label={T.impactAria(c.impact)}>
+      <span class="text-amber-300/90 tracking-tight" aria-hidden="true">{stars}</span> {c.impact}/10
+    </span>
+  </div>
+  <div class="mt-2.5 flex flex-wrap gap-1.5 items-center">
+    <span class="text-xs text-muted mr-0.5">{T.brain}</span>
+    <a href={lp(c.brain.href, lang)} class:list={[chip, 'border-primary/60 text-heading hover:border-primary hover:text-link']}>{tx(c.brain.name, lang)}</a>
+    {c.executors.length > 0 && <span class="text-xs text-muted ml-1 mr-0.5">{T.exec}</span>}
+    {c.executors.map((e) => <a href={lp(e.href, lang)} class:list={[chip, 'border-slate-700 hover:border-primary hover:text-link']}>{tx(e.name, lang)}</a>)}
+  </div>
+  <p class="mt-2.5 text-sm text-default/90 leading-relaxed break-words">{tx(c.workflow, lang)}</p>
+  {c.pricing && <p class="mt-2 text-xs text-muted break-words"><span class="text-default/70">{T.fee}</span> {tx(c.pricing, lang)}</p>}
+</Card>

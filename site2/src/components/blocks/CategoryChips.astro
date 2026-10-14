@@ -1,0 +1,45 @@
+---
+// 메인 블록: 분야 성단 21 칩. show 개까지 보이고 나머지는 "더 보기"로 펼침(긴 섹션 접기). 영어판은 분야 영문 이름(category_en)
+import SectionHead from '~/components/ui/SectionHead.astro';
+import type { HomeData } from '~/lib/data';
+import { ui } from '~/i18n/ui';
+import { lp, catLabel, type Lang } from '~/i18n/tr';
+export interface Props { d: HomeData; show?: number; title?: boolean; id?: string; class?: string; lang?: Lang }
+const { d, show = 12, title = true, id = 'category', class: className = '', lang = 'ko' } = Astro.props;
+const T = ui(lang);
+const head = d.cats.slice(0, show), rest = d.cats.slice(show);
+const chip = 'rounded-full border border-slate-700 px-3 py-1 text-sm text-default hover:border-primary hover:text-link transition';
+import { R } from '~/lib/routes';
+---
+
+<section id={id} class:list={['scroll-mt-28', className]}>
+  {title && <SectionHead title={T.home.fieldsN(d.cats.length)} href={R.category(lang)} more={T.common.seeAllMore} />}
+  <fold-more class="flex flex-wrap gap-1.5" data-less={T.common.less}>
+    {head.map((c) => <a href={R.category(lang, c.slug)} class={chip}>{catLabel(c, lang)} <span class="text-muted">{c.n}</span></a>)}
+    {rest.length > 0 && (
+      <>
+        <span class="contents" data-more hidden>{rest.map((c) => <a href={R.category(lang, c.slug)} class={chip}>{catLabel(c, lang)} <span class="text-muted">{c.n}</span></a>)}</span>
+        <button type="button" data-toggle class="rounded-full border border-dashed border-slate-600 px-3 py-1 text-sm text-link hover:border-primary" aria-expanded="false">{T.home.moreN(rest.length)}</button>
+      </>
+    )}
+  </fold-more>
+</section>
+
+<script>
+  class FoldMore extends HTMLElement {
+    connectedCallback() {
+      const btn = this.querySelector<HTMLButtonElement>('[data-toggle]');
+      const more = this.querySelector<HTMLElement>('[data-more]');
+      if (!btn || !more) return;
+      const label = btn.textContent;
+      const less = this.dataset.less || '접기';
+      btn.addEventListener('click', () => {
+        const open = more.hidden;
+        more.hidden = !open;
+        btn.setAttribute('aria-expanded', String(open));
+        btn.textContent = open ? less : label;
+      });
+    }
+  }
+  if (!customElements.get('fold-more')) customElements.define('fold-more', FoldMore);
+</script>

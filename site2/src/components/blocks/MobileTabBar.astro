@@ -1,0 +1,31 @@
+---
+// 모바일 하단 고정 탭(홈·검색·트렌드·도구) — lg 미만에서만. "검색"은 머리줄 메뉴를 열어 검색창에 초점.
+import { Icon } from 'astro-icon/components';
+import type { Lang } from '~/navigation';
+import { R } from '~/lib/routes';
+export interface Props { lang?: Lang }
+const { lang = 'ko' } = Astro.props;
+const t = lang === 'en' ? ['Home', 'Search', 'Trends', 'Tools'] : ['홈', '검색', '트렌드', '도구'];
+const item = 'flex-1 flex flex-col items-center justify-center gap-0.5 py-1.5 text-[11px] text-muted hover:text-link';
+---
+
+<mobile-tabs class="lg:hidden fixed inset-x-0 bottom-0 z-40 flex border-t border-slate-800 bg-page/95 backdrop-blur pb-[env(safe-area-inset-bottom)]" aria-label={lang === 'en' ? 'Quick tabs' : '빠른 탭'}>
+  <a href={R.home(lang)} data-href-ko={R.home()} data-href-en={R.home('en')} class={item}><Icon name="tabler:home" class="w-5 h-5" /><span data-ko="홈" data-en="Home">{t[0]}</span></a>
+  <button type="button" data-open-search class={item}><Icon name="tabler:search" class="w-5 h-5" /><span data-ko="검색" data-en="Search">{t[1]}</span></button>
+  <a href={R.trend(lang)} data-href-ko={R.trend()} data-href-en={R.trend('en')} class={item}><Icon name="tabler:flame" class="w-5 h-5" /><span data-ko="트렌드" data-en="Trends">{t[2]}</span></a>
+  <a href={R.ai(lang)} data-href-ko={R.ai()} data-href-en={R.ai('en')} class={item}><Icon name="tabler:list" class="w-5 h-5" /><span data-ko="도구" data-en="Tools">{t[3]}</span></a>
+</mobile-tabs>
+
+<script>
+  class MobileTabs extends HTMLElement {
+    connectedCallback() {
+      this.querySelector('[data-open-search]')?.addEventListener('click', () => {
+        const toggle = document.querySelector<HTMLElement>('[data-aw-toggle-menu]');
+        const input = document.querySelector<HTMLInputElement>('#header input[type="search"]');
+        if (toggle && !toggle.classList.contains('expanded')) toggle.click();
+        setTimeout(() => input?.focus(), 50);
+      });
+    }
+  }
+  if (!customElements.get('mobile-tabs')) customElements.define('mobile-tabs', MobileTabs);
+</script>

@@ -1,0 +1,34 @@
+---
+// 메인 섹션 바로가기 띠: 머리줄 바로 아래 고정(sticky). 긴 메인에서 메뉴를 잊지 않게.
+import { Icon } from 'astro-icon/components';
+export interface Props { items: Array<[string, string]>; class?: string }
+const { items, class: className = '' } = Astro.props;
+---
+
+<section-nav class:list={['sticky z-30 block bg-page/90 backdrop-blur border-b border-slate-800', className]} style="top: var(--header-h, 60px)">
+  <nav aria-label="메인 섹션 바로가기" class="max-w-[1320px] mx-auto px-4 sm:px-6 flex items-center gap-1 overflow-x-auto text-sm py-1.5">
+    <Icon name="tabler:list" class="w-4 h-4 text-muted shrink-0" />
+    {items.map(([href, text]) => <a href={href} class="px-2.5 py-1 rounded-full whitespace-nowrap text-muted hover:text-link data-[on]:bg-primary/20 data-[on]:text-heading">{text}</a>)}
+    <a href="#top" class="ml-auto px-2.5 py-1 rounded-full whitespace-nowrap text-muted hover:text-link">위로</a>
+  </nav>
+</section-nav>
+
+<script>
+  class SectionNav extends HTMLElement {
+    connectedCallback() {
+      const header = document.getElementById('header');
+      const setTop = () => document.documentElement.style.setProperty('--header-h', `${header?.getBoundingClientRect().height || 60}px`);
+      setTop(); window.addEventListener('resize', setTop);
+      const links = [...this.querySelectorAll<HTMLAnchorElement>('a[href^="#"]')].filter((a) => a.hash !== '#top');
+      const targets = links.map((a) => document.querySelector<HTMLElement>(a.hash)).filter(Boolean) as HTMLElement[];
+      if (!targets.length) return;
+      const io = new IntersectionObserver((entries) => {
+        for (const e of entries) if (e.isIntersecting) {
+          links.forEach((a) => a.toggleAttribute('data-on', a.hash === '#' + e.target.id));
+        }
+      }, { rootMargin: '-40% 0px -55% 0px' });
+      targets.forEach((t) => io.observe(t));
+    }
+  }
+  if (!customElements.get('section-nav')) customElements.define('section-nav', SectionNav);
+</script>

@@ -1,0 +1,31 @@
+---
+// 한국 여행 목록(한국어/영어 공용) — 템플릿 블로그 카드 격자
+import { R } from '~/lib/routes';
+import Card from '~/components/ui/Card.astro';
+import type { KoreaArticle } from '~/lib/data';
+export interface Props { items: KoreaArticle[]; lang: 'ko' | 'en' }
+const { items, lang } = Astro.props;
+const T = {
+  ko: { title: '한국 여행 — 공공데이터로 정리한 가기 전 체크', desc: '주차·응급실·숙소·수질·이용객 같은 공공데이터로 정리한 한국 여행지 안내예요. 영어판도 함께 있어요.', empty: '아직 글이 없어요.', base: '' },
+  en: { title: 'Korea travel — before-you-go guides from public data', desc: 'Guides to places in Korea built from public data: parking, emergency care, places to stay, water quality and visitor numbers. Each guide also has a Korean version.', empty: 'No guides yet.', base: '' },
+}[lang];
+---
+
+<div class="max-w-[1320px] mx-auto px-4 sm:px-6 py-7 md:py-9">
+  <h1 class="text-2xl md:text-3xl font-bold leading-tighter tracking-tighter font-heading text-heading text-balance">{T.title}</h1>
+  <p class="mt-2 text-base text-muted max-w-3xl text-pretty">{T.desc}</p>
+  {items.length ? (
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-8">
+      {items.map(({ m }) => (
+        <Card href={R.korea(lang, m.slug)} class="p-0 overflow-hidden" as="a">
+          {m.photo?.url && <img src={m.photo.url} alt={m.photo.alt?.[lang] || ''} loading="lazy" class="w-full h-44 object-cover bg-slate-800" />}
+          <div class="p-5">
+            <small class="text-xs text-link">{m.kind[lang]} · {m.region[lang]} · {m.publish}</small>
+            <h3 class="text-lg font-bold text-heading leading-snug mt-1 text-balance">{m.title[lang]}</h3>
+            <p class="text-sm text-muted mt-2 line-clamp-3">{m.description[lang]}</p>
+          </div>
+        </Card>
+      ))}
+    </div>
+  ) : <p class="mt-8 text-muted">{T.empty}</p>}
+</div>

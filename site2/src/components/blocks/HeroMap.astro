@@ -1,0 +1,34 @@
+---
+// 메인 블록: 3D 지도 미리보기 큰 기사. compact=true 면 글+작은 그림(사이드 메뉴형), 기본은 큰 그림 위 글(매거진형). 문구는 src/i18n/ui.ts(home)
+import { Icon } from 'astro-icon/components';
+import type { HomeData } from '~/lib/data';
+import { ui } from '~/i18n/ui';
+import { lp, type Lang } from '~/i18n/tr';
+export interface Props { d: HomeData; compact?: boolean; class?: string; lang?: Lang }
+const { d, compact = false, class: className = '', lang = 'ko' } = Astro.props;
+const T = ui(lang).home;
+const map = R.map(lang);
+import { R } from '~/lib/routes';
+---
+
+{compact ? (
+  <section class:list={['grid gap-5 md:grid-cols-[minmax(0,1fr)_260px] items-center rounded-md border border-slate-700 bg-slate-900/40 p-5', className]}>
+    <div>
+      <p class="text-xs font-semibold text-link inline-flex items-center gap-1"><Icon name="tabler:sparkles" class="w-3.5 h-3.5" />{T.kicker}</p>
+      <h1 class="mt-1.5 text-xl md:text-2xl font-bold leading-tighter tracking-tighter font-heading text-heading text-balance">{T.h1(d.nTools, d.cats.length)}</h1>
+      <p class="mt-2 text-sm text-muted max-w-2xl">{T.lead}</p>
+      <a href={map} class="btn-primary mt-3 text-sm py-2 px-4">{ui(lang).common.openMap}<Icon name="tabler:arrow-right" class="w-4 h-4 ml-1 -mr-1" /></a>
+    </div>
+    <a href={map} class="block rounded-md overflow-hidden border border-slate-700 bg-black"><img src="/img/map_preview.jpg" alt={T.imgAlt} width="1600" height="900" class="w-full h-36 md:h-40 object-cover object-left-top opacity-90 hover:opacity-100 transition" loading="lazy" /></a>
+  </section>
+) : (
+  <a href={map} class:list={['group block relative overflow-hidden rounded-md border border-slate-700 bg-black', className]}>
+    <img src="/img/map_preview.jpg" alt={T.imgAlt} width="1600" height="900" class="w-full h-48 md:h-[18rem] object-cover object-[70%_20%] opacity-90 group-hover:opacity-100 transition" fetchpriority="high" />
+    <div class="p-4 md:p-5 border-t border-slate-700 bg-slate-900/40">
+      <p class="text-xs font-semibold text-link inline-flex items-center gap-1"><Icon name="tabler:sparkles" class="w-3.5 h-3.5" />{T.kicker}</p>
+      <h1 class="mt-1.5 text-xl md:text-3xl font-bold leading-tighter tracking-tighter font-heading text-heading text-balance max-w-3xl">{T.h1(d.nTools, d.cats.length)}</h1>
+      <p class="mt-2 text-sm text-muted max-w-2xl hidden md:block">{T.lead}</p>
+      <span class="btn-primary mt-3 text-sm py-2 px-4">{ui(lang).common.openMap}<Icon name="tabler:arrow-right" class="w-4 h-4 ml-1 -mr-1" /></span>
+    </div>
+  </a>
+)}

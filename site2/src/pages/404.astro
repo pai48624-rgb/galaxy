@@ -1,0 +1,26 @@
+---
+// 404(dist/404.html). 영어판 dist/en/404.html 은 src/pages/en/404.astro 가 이 파일을 lang="en" 으로 —
+// Cloudflare Pages 는 없는 주소에 가장 가까운 상위 폴더의 404.html 을 내보내므로 /en/… 아래는 영어 404 가 뜬다.
+import PageLayout from '~/layouts/PageLayout.astro';
+import { Icon } from 'astro-icon/components';
+import SearchBox from '~/components/blocks/SearchBox.astro';
+import { ui } from '~/i18n/ui';
+import type { Lang } from '~/i18n/tr';
+import { R } from '~/lib/routes';
+const lang: Lang = (Astro.props as { lang?: Lang }).lang || 'ko';
+const T = ui(lang).notFound;
+---
+
+<PageLayout metadata={{ title: T.title, description: T.desc, canonical: R.home(lang) + '404', noindex: true, lang }}>
+  <section class="py-0">
+    <div class="max-w-xl">
+      <Icon name="tabler:planet-off" class="w-12 h-12 text-link" />
+      <h1 class="mt-4 text-2xl md:text-3xl font-bold leading-tighter tracking-tighter font-heading text-heading">{T.h1}</h1>
+      <p class="mt-2 text-base text-muted">{T.lead}</p>
+      <SearchBox size="hero" lang={lang} placeholder={T.placeholder} class="max-w-md mt-6" />
+      <div class="flex flex-wrap gap-2 mt-5">
+        {[R.home(lang), R.map(lang), R.trend(lang), R.ai(lang), R.korea(lang)].map((href, i) => [href, T.links[i]] as const).map(([href, text]) => <a href={href} class="rounded-full border border-slate-700 px-4 py-2 text-sm hover:border-primary hover:text-link transition">{text}</a>)}
+      </div>
+    </div>
+  </section>
+</PageLayout>

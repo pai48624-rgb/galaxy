@@ -1,0 +1,33 @@
+---
+// 메인 블록: 새 글 받아 보기(RSS·게시판). banner=true 면 가로 띠. 문구 src/i18n/ui.ts
+import { Icon } from 'astro-icon/components';
+import Card from '~/components/ui/Card.astro';
+import { ui } from '~/i18n/ui';
+import { lp, type Lang } from '~/i18n/tr';
+export interface Props { banner?: boolean; class?: string; lang?: Lang }
+const { banner = false, class: className = '', lang = 'ko' } = Astro.props;
+const T = ui(lang);
+const board = R.board(lang);
+import { R } from '~/lib/routes';
+---
+
+{banner ? (
+  <div class:list={['rounded-md border border-slate-700 bg-slate-900/40 p-4 md:p-5 flex flex-wrap items-center justify-between gap-3', className]}>
+    <div>
+      <b class="text-base text-heading">{T.common.subscribeTitle}</b>
+      <p class="text-sm text-muted mt-0.5">{T.home.subLead}</p>
+    </div>
+    <div class="flex gap-2">
+      <a href={R.rss()} class="btn-primary text-sm py-2 px-4"><Icon name="tabler:rss" class="w-4 h-4 mr-1 -ml-1" />{T.common.rss}</a>
+      <a href={board} class="btn text-sm py-2 px-4"><Icon name="tabler:message" class="w-4 h-4 mr-1 -ml-1" />{T.home.board}</a>
+    </div>
+  </div>
+) : (
+  <Card title={T.common.subscribeTitle} class={className}>
+    <p class="text-sm text-muted">{T.home.subLeadShort}</p>
+    <ul class="mt-2.5 space-y-1.5 text-sm">
+      <li><a href={R.rss()} class="text-link hover:underline inline-flex items-center gap-1"><Icon name="tabler:rss" class="w-4 h-4" />{T.common.rss}</a></li>
+      <li><a href={board} class="text-link hover:underline inline-flex items-center gap-1"><Icon name="tabler:message" class="w-4 h-4" />{T.home.boardFeedback}</a></li>
+    </ul>
+  </Card>
+)}

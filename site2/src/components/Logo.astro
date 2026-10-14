@@ -1,0 +1,12 @@
+---
+// 로고: 기존 사이트 머리줄의 별 아이콘 + 이름(astrowind Logo.astro 자리에 넣음, 이모지 대신 SVG)
+import { SITE } from '~/config';
+const { lang = 'ko' } = Astro.props as { lang?: 'ko' | 'en' };
+---
+
+<span class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-xl lg:text-base xl:text-lg font-bold text-heading whitespace-nowrap inline-flex items-center gap-2">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="text-link">
+    <path d="M12 3v3M12 18v3M3 12h3M18 12h3M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10z"></path>
+  </svg>
+  {lang === 'en' ? SITE.nameEn : SITE.name}
+</span>

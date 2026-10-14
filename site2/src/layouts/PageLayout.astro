@@ -1,0 +1,63 @@
+---
+// astrowind PageLayout.astro — Announcement 띠는 빼고(개발용 문구 없음), 머리줄·꼬리말 한 벌
+import Layout from '~/layouts/Layout.astro';
+import Header from '~/components/widgets/Header.astro';
+import Footer from '~/components/widgets/Footer.astro';
+import MobileTabBar from '~/components/blocks/MobileTabBar.astro';
+import SideMenu from '~/components/blocks/SideMenu.astro';
+import ChatDock from '~/components/chat/ChatDock.astro';
+import { homeData } from '~/lib/data';
+import { hasEn, koPathOf } from '~/i18n/tr';
+import type { Props as MetaProps } from '~/components/common/Metadata.astro';
+
+export interface Props {
+  metadata: MetaProps;
+  altLangHref?: string;
+  /** 지도·게시판처럼 본문이 화면을 꽉 채우는 화면(왼쪽 메뉴 없이 — 지도 앱 안에 자기 사이드바가 있어 둘이 겹치지 않게) */
+  fullBleed?: boolean;
+  /** 사이트 공통 실시간 채팅 창(오른쪽 아래 💬). 기본: 켬, 단 fullBleed(지도 — 앱 안에 자체 채팅)면 끔 */
+  chat?: boolean;
+}
+const { metadata: meta0, altLangHref: alt0, fullBleed = false, chat = !fullBleed } = Astro.props;
+const lang = meta0.lang || 'ko';
+// 영어판(2026-10-14): 한국어 화면마다 /en/… 짝이 있으면 hreflang(ko·en·x-default)과 언어 버튼 주소를 자동으로 넣는다.
+// (한국 여행처럼 페이지가 직접 alternates 를 준 경우는 그대로) — Layout 의 언어 기억 스크립트가 이 alternate 를 보고 넘어간다.
+const koPath = lang === 'en' ? koPathOf(meta0.canonical) : meta0.canonical;
+const pairOk = !meta0.alternates?.length && !koPath.startsWith('/home/') && koPath !== '/404' && !koPath.startsWith('http') && hasEn(koPath);
+const enPath = '/en' + koPath;
+const metadata = pairOk ? { ...meta0, alternates: [{ hreflang: 'ko', href: koPath }, { hreflang: 'en', href: enPath }, { hreflang: 'x-default', href: koPath }] } : meta0;
+const altLangHref = alt0 || (pairOk ? (lang === 'en' ? koPath : enPath) : undefined);
+// 사이트 틀(2026-10-14 사용자 선택 B): 모든 화면 = 위 머리줄(고정) + 왼쪽 고정 메뉴 + 오른쪽 본문. 메인뿐 아니라 트렌드·AI·분야·여행·조합·요금·순위·검색·개인정보·404 전부 같은 틀.
+const d = fullBleed ? null : await homeData();
+---
+
+<Layout metadata={metadata}>
+  <slot name="head" slot="head" />
+  <Header lang={lang} altLangHref={altLangHref} currentHref={metadata.canonical} />
+  <main class:list={['flex-1', fullBleed ? 'flex flex-col' : '']}>
+    {fullBleed ? (
+      <slot />
+    ) : (
+      <div class="max-w-[1320px] mx-auto px-4 sm:px-6 py-5 md:py-6 grid grid-cols-[minmax(0,1fr)] gap-6 lg:grid-cols-[200px_minmax(0,1fr)]">
+        <SideMenu d={d} lang={lang} class="hidden lg:block" />
+        <div class="min-w-0 page-col">
+          <slot />
+        </div>
+      </div>
+    )}
+  </main>
+  <Footer lang={lang} />
+  <div class="h-14 lg:hidden" aria-hidden="true"></div>
+  <MobileTabBar lang={lang} />
+  <ChatDock lang={lang} disabled={!chat} />
+</Layout>
+
+<style is:global>
+  /* 2026-10-14 사용자 "화면마다 옆으로 벌어지는 게 다르다": 페이지가 가진 안쪽 칸(max-w-* mx-auto px py)이
+     본문 칸 안에서 가운데로 몰려 왼쪽 메뉴와의 간격이 22·85·201px로 달랐음 → 틀이 강제로 본문 칸에 맞춤(왼쪽 붙임·여백 0). */
+  .page-col > [class*='max-w-'], .page-col > * > [class*='max-w-'] {
+    max-width: none !important; margin-left: 0 !important; margin-right: 0 !important;
+    padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;
+  }
+  .page-col > section, .page-col > div > section:first-child { padding-top: 0 !important; }
+</style>

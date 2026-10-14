@@ -1,0 +1,46 @@
+---
+// 분야 페이지(/category/<slug>/) 21쪽 — 기존 renderCategory 와 같은 내용. 영어판 /en/category/<slug>/ 는 이 파일을 lang="en" 으로
+import PageLayout from '~/layouts/PageLayout.astro';
+import Breadcrumbs from '~/components/common/Breadcrumbs.astro';
+import SectionHead from '~/components/ui/SectionHead.astro';
+import { Icon } from 'astro-icon/components';
+import { categories, aiPageSlugs, toolHref } from '~/lib/data';
+import { clip } from '~/utils/utils';
+import { ui } from '~/i18n/ui';
+import { lp, catLabel, toolName, toolDesc, toolPricing, type Lang } from '~/i18n/tr';
+
+export async function getStaticPaths() {
+  return categories().map((c) => ({ params: { slug: c.slug }, props: { c } }));
+}
+const { c, lang = 'ko' } = Astro.props as { c: ReturnType<typeof categories>[number]; lang?: Lang };
+const T = ui(lang);
+const U = T.category;
+const pages = new Set(aiPageSlugs());
+const list = c.tools.slice().sort((a, b) => (Number(pages.has(b.slug)) - Number(pages.has(a.slug))) || toolName(a, lang).localeCompare(toolName(b, lang)));
+const others = categories().filter((x) => x.slug !== c.slug);
+const cn = catLabel(c, lang);
+import { R } from '~/lib/routes';
+---
+
+<PageLayout metadata={{ title: U.pTitle(cn, list.length), description: clip(U.pDesc(cn, list.length, list.slice(0, 6).map((t) => toolName(t, lang)).join(', ')), 155), canonical: R.category(lang, c.slug), lang }}>
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 py-7 md:py-9">
+    <Breadcrumbs items={[{ text: T.common.aiList, href: R.ai(lang) }, { text: T.common.fields, href: R.category(lang) }, { text: cn }]} class="mb-3" />
+    <h1 class="text-2xl md:text-3xl font-bold leading-tighter tracking-tighter font-heading text-heading">{U.pH1(cn, list.length)}</h1>
+    <p class="mt-2 text-base text-muted text-pretty">{U.pLead(c.name_en)}</p>
+    <ul class="divide-y divide-slate-800 mt-8">
+      {list.map((t) => (
+        <li class="py-3">
+          <a href={lp(toolHref(t), lang)} class="font-bold text-heading hover:text-link">{toolName(t, lang)}</a>
+          {pages.has(t.slug) && <span class="ml-2 text-xs text-link">{T.common.detail}</span>}
+          {t.pricing && <span class="ml-2 text-xs text-muted">· {toolPricing(t.pricing, lang)}</span>}
+          <small class="block text-sm text-muted mt-0.5">{toolDesc(t, lang)}</small>
+        </li>
+      ))}
+    </ul>
+    <SectionHead title={U.others} href={R.category(lang)} more={T.common.seeAllMore} />
+    <div class="flex flex-wrap gap-2">
+      {others.map((x) => <a href={R.category(lang, x.slug)} class="rounded-full border border-slate-700 px-3.5 py-1.5 text-sm hover:border-primary hover:text-link transition">{catLabel(x, lang)} <span class="text-muted">{x.n}</span></a>)}
+    </div>
+    <a href={R.map(lang)} class="btn-primary mt-10">{T.common.mapAll}<Icon name="tabler:arrow-right" class="w-5 h-5 ml-1 -mr-1" /></a>
+  </div>
+</PageLayout>

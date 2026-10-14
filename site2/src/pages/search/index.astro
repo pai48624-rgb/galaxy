@@ -1,0 +1,120 @@
+---
+// AI 검색(/search/): 빌드 때 public/data/search-index.json(이름 한·영·분야·한 줄, 100KB 이내)을 다시 쓰고,
+// 화면에서는 그 파일만 받아 입력 즉시 로컬 필터(서버 호출 없음). ?q= 로 들어오면 그 검색어로 시작.
+// 영어판 /en/search/ 는 이 파일을 lang="en" 으로: 색인 /data/search-index-en.json(영문 이름·분야·desc_en), 화면 문구는 data-t(JSON)로 스크립트에 넘김
+import PageLayout from '~/layouts/PageLayout.astro';
+import Breadcrumbs from '~/components/common/Breadcrumbs.astro';
+import SourceNote from '~/components/blocks2/SourceNote.astro';
+import { Icon } from 'astro-icon/components';
+import { writeSearchIndex, searchIndex2 } from '~/lib/data2';
+import { categories, aiPageSlugs } from '~/lib/data';
+import { ui } from '~/i18n/ui';
+import { lp, catLabel, type Lang } from '~/i18n/tr';
+const lang: Lang = (Astro.props as { lang?: Lang }).lang || 'ko';
+const T = ui(lang);
+const U = T.search;
+const bytes = writeSearchIndex();
+if (bytes > 100 * 1024) throw new Error(`[search] 색인이 100KB를 넘음: ${bytes} bytes`);
+const idx = searchIndex2();
+const nPage = aiPageSlugs().length;
+const cats = categories(); // 분야 칩(분야 페이지가 있는 21개, 도구 많은 순)
+const title = U.title(idx.n);
+const description = U.desc(idx.n, nPage);
+const indexUrl = lang === 'en' ? '/data/search-index-en.json' : '/data/search-index.json';
+import { R } from '~/lib/routes';
+---
+
+<PageLayout metadata={{ title, description, canonical: R.search(lang), lang }}>
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 py-7 md:py-9">
+    <Breadcrumbs items={[{ text: T.common.aiList, href: R.ai(lang) }, { text: T.common.search }]} class="mb-3" />
+    <h1 class="text-2xl md:text-3xl font-bold leading-tighter tracking-tighter font-heading text-heading">{U.h1}</h1>
+    <p class="mt-2 text-base text-muted text-pretty">{U.lead(idx.n, nPage)}</p>
+
+    <ai-search-page class="block mt-6" data-n={idx.n} data-index={indexUrl} data-ai={R.ai(lang)} data-map={R.map(lang)} data-t={JSON.stringify(U.js)}>
+      <form role="search" class="relative" autocomplete="off" action={R.search(lang)} method="get">
+        <Icon name="tabler:search" class="absolute top-1/2 -translate-y-1/2 left-4 w-5 h-5 text-muted pointer-events-none" />
+        <input type="search" name="q" placeholder={U.placeholder} aria-label={U.aria}
+          class="w-full rounded-full border border-slate-600 bg-slate-900/60 text-default placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-primary pl-11 pr-4 py-3 text-base" />
+      </form>
+      <p class="mt-3 text-sm text-muted" data-status aria-live="polite">{U.idle}</p>
+      <div class="mt-3 flex flex-wrap gap-2" data-chips>
+        {cats.map((c) => <button type="button" data-q={catLabel(c, lang)} class="rounded-full border border-slate-700 px-3 py-1 text-xs hover:border-primary hover:text-link transition">{catLabel(c, lang)} <span class="text-muted">{c.n}</span></button>)}
+      </div>
+      <ul class="mt-5 divide-y divide-slate-800" data-results></ul>
+      <button type="button" hidden data-more class="btn mt-4">{T.common.more}</button>
+    </ai-search-page>
+
+    <div class="flex flex-wrap gap-3 mt-10">
+      <a href={R.ai(lang)} class="btn-primary">{U.allTools}<Icon name="tabler:arrow-right" class="w-5 h-5 ml-1 -mr-1" /></a>
+      <a href={R.combos(lang)} class="btn">{T.common.combos}</a>
+      <a href={R.pricing(lang, 'free')} class="btn">{T.common.freeStart}</a>
+    </div>
+    <SourceNote lang={lang} source={U.source} note={U.note(Math.round(bytes / 1024))} />
+  </div>
+</PageLayout>
+
+<script>
+  type Row = { n: string; e: string; k?: string; c: number; d: string; s?: string };
+  type Index = { date: string; n: number; cats: string[]; tools: Row[] };
+  const PAGE = 60;
+  const norm = (s: string) => (s || '').toLowerCase().replace(/\s+/g, '');
+  const fill = (s: string, v: Record<string, string | number>) => s.replace(/\{(\w+)\}/g, (_, k) => String(v[k] ?? ''));
+
+  class AiSearchPage extends HTMLElement {
+    idx: Index | null = null;
+    hits: Row[] = [];
+    shown = 0;
+    connectedCallback() {
+      const input = this.querySelector('input')!;
+      const results = this.querySelector('[data-results]') as HTMLUListElement;
+      const status = this.querySelector('[data-status]') as HTMLElement;
+      const more = this.querySelector('[data-more]') as HTMLButtonElement;
+      const T = JSON.parse(this.dataset.t || '{}') as Record<string, string>;
+      const aiBase = this.dataset.ai || '', mapBase = this.dataset.map || '';  // 주소 앞부분은 R(data-*)에서
+      const load = fetch(this.dataset.index || '/data/search-index.json').then((r) => r.json()).then((d: Index) => (this.idx = d));
+
+      const render = (append = false) => {
+        if (!append) { results.innerHTML = ''; this.shown = 0; }
+        const slice = this.hits.slice(this.shown, this.shown + PAGE);
+        for (const r of slice) {
+          const li = document.createElement('li');
+          li.className = 'py-3 min-w-0';
+          const a = document.createElement('a');
+          a.href = r.s ? `${aiBase}${r.s}/` : `${mapBase}?q=${encodeURIComponent(r.e || r.n)}`;
+          a.className = 'font-bold text-heading hover:text-link break-words';
+          a.textContent = r.n;
+          const en = document.createElement('span'); en.className = 'ml-2 text-xs text-muted break-words'; en.textContent = r.e && r.e !== r.n ? r.e : '';
+          const tag = document.createElement('span'); tag.className = 'ml-2 text-xs ' + (r.s ? 'text-link' : 'text-muted'); tag.textContent = r.s ? T.detail : T.find;
+          const cat = document.createElement('span'); cat.className = 'ml-2 text-xs text-muted'; cat.textContent = '· ' + (this.idx!.cats[r.c] || '');
+          const d = document.createElement('small'); d.className = 'block text-sm text-muted mt-0.5 break-words'; d.textContent = r.d || '';
+          li.append(a, en, tag, cat, d);
+          results.append(li);
+        }
+        this.shown += slice.length;
+        more.hidden = this.shown >= this.hits.length;
+        if (!more.hidden) more.textContent = fill(T.moreLeft, { n: this.hits.length - this.shown });
+      };
+      const search = async (raw: string) => {
+        const q = norm(raw.trim());
+        const idx = this.idx || (await load);
+        if (!q) { this.hits = []; render(); status.textContent = fill(T.idle, { n: idx.n }); return; }
+        const name = (r: Row) => norm(r.n).startsWith(q) || norm(r.e).startsWith(q) || norm(r.k || '').startsWith(q);
+        const inName = (r: Row) => norm(r.n).includes(q) || norm(r.e).includes(q) || norm(r.k || '').includes(q);
+        const inRest = (r: Row) => norm(idx.cats[r.c] || '').includes(q) || norm(r.d).includes(q);
+        const a: Row[] = [], b: Row[] = [], c: Row[] = [];
+        for (const r of idx.tools) { if (name(r)) a.push(r); else if (inName(r)) b.push(r); else if (inRest(r)) c.push(r); }
+        this.hits = [...a, ...b, ...c];
+        render();
+        status.textContent = this.hits.length ? fill(T.result, { q: raw.trim(), n: this.hits.length, a: a.length + b.length, c: c.length }) : fill(T.none, { q: raw.trim() });
+      };
+      input.addEventListener('input', () => search(input.value));
+      this.querySelector('form')!.addEventListener('submit', (e) => { e.preventDefault(); search(input.value); });
+      more.addEventListener('click', () => render(true));
+      this.querySelectorAll<HTMLButtonElement>('[data-chips] button').forEach((b) => b.addEventListener('click', () => { input.value = b.dataset.q || ''; search(input.value); input.focus(); }));
+      const q0 = new URLSearchParams(location.search).get('q') || '';
+      if (q0) { input.value = q0; search(q0); } else { load.then((d) => { status.textContent = fill(T.idle, { n: d.n }); }); }
+      input.focus({ preventScroll: true });
+    }
+  }
+  if (!customElements.get('ai-search-page')) customElements.define('ai-search-page', AiSearchPage);
+</script>

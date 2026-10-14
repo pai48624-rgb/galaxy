@@ -1,0 +1,15 @@
+---
+// 트렌드 글(/trend/<id>) 껍데기 틀 — 워커(_worker.js)가 빌드 때 만들어진 이 HTML을 읽어 __TITLE__ 등 자리표를 글 내용으로 바꿔 내보낸다(2026-10-14).
+// 그래서 글은 서버에서 그대로 그리면서도 사이트 틀(고정 머리줄·왼쪽 메뉴·본문 열)은 다른 화면과 똑같다. 이 페이지 자체는 검색에 안 잡히게 noindex.
+import PageLayout from '~/layouts/PageLayout.astro';
+import TrendPostStyles from '~/components/blocks/TrendPostStyles.astro'; // 글 CSS — 영어 글(/en/trend/<id>/)과 같이 씀
+---
+
+<PageLayout metadata={{ title: '__TITLE__', description: '__DESC__', canonical: '__CANON__', robots: { index: false, follow: false } }}>
+  <div class="max-w-[1320px] mx-auto px-4 sm:px-6 py-7 md:py-9 grid grid-cols-[minmax(0,1fr)] gap-6 xl:grid-cols-[minmax(0,1fr)_280px]">
+    <article class="min-w-0 trend-post" set:html="__BODY__" />
+    <aside class="min-w-0 space-y-4" set:html="__SIDE__" />
+  </div>
+</PageLayout>
+
+<TrendPostStyles />

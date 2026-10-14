@@ -1,0 +1,11 @@
+---
+import { R } from '~/lib/routes';
+import PageLayout from '~/layouts/PageLayout.astro';
+import KoreaList from '~/components/blocks/KoreaList.astro';
+import { koreaArticles } from '~/lib/data';
+const items = koreaArticles();
+---
+
+<PageLayout metadata={{ lang: 'en', title: 'Korea travel — before-you-go guides from public data | AI Galaxy Map', description: 'Guides to places in Korea built from public data: parking, emergency care, places to stay, water quality and visitor numbers. Each guide also has a Korean version.', canonical: R.korea('en'), alternates: [{ hreflang: 'ko', href: R.korea('ko') }, { hreflang: 'en', href: R.korea('en') }, { hreflang: 'x-default', href: R.korea('en') }] }} altLangHref={R.korea('ko')}>
+  <KoreaList items={items} lang="en" />
+</PageLayout>

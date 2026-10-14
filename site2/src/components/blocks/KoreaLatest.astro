@@ -1,0 +1,27 @@
+---
+// 메인 블록: 한국 여행 최신 n개(content/korea, 공개일 지난 글). 영어판은 meta 의 en 문구와 /en/korea/ 주소
+import SectionHead from '~/components/ui/SectionHead.astro';
+import Card from '~/components/ui/Card.astro';
+import type { HomeData } from '~/lib/data';
+import { ui } from '~/i18n/ui';
+import type { Lang } from '~/i18n/tr';
+export interface Props { d: HomeData; limit?: number; cols?: 3 | 4; id?: string; class?: string; lang?: Lang }
+const { d, limit = 3, cols = 3, id = 'korea', class: className = '', lang = 'ko' } = Astro.props;
+const base = R.korea(lang);
+import { R } from '~/lib/routes';
+---
+
+<section id={id} class:list={['scroll-mt-28', className]}>
+  <SectionHead title={ui(lang).home.korea} href={base} more={ui(lang).common.seeAll} />
+  <div class:list={['grid gap-4', cols === 4 ? 'sm:grid-cols-2 lg:grid-cols-4' : 'sm:grid-cols-3']}>
+    {d.korea.slice(0, limit).map(({ m }) => (
+      <Card href={R.korea(lang, m.slug)} class="p-0 overflow-hidden">
+        {m.photo?.url && <img src={m.photo.url} alt={m.photo.alt?.[lang] || ''} loading="lazy" width="640" height="360" class="w-full h-28 object-cover bg-slate-800" />}
+        <div class="p-3">
+          <small class="text-xs text-link">{m.region?.[lang]} · {m.kind?.[lang]}</small>
+          <b class="block text-sm font-bold text-heading leading-snug mt-0.5 text-balance">{m.title?.[lang]}</b>
+        </div>
+      </Card>
+    ))}
+  </div>
+</section>

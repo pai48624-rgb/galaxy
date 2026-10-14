@@ -1,0 +1,89 @@
+---
+// 한국 여행 글 본문 — scripts/gen-korea-pages.mjs articlePage() 와 같은 구성(크럼·제목·사진·숫자 칸·본문·안내 링크·출처·다른 언어)
+import { Icon } from 'astro-icon/components';
+import Breadcrumbs from '~/components/common/Breadcrumbs.astro';
+import type { KoreaArticle } from '~/lib/data';
+import { esc } from '~/utils/utils';
+import { R } from '~/lib/routes';
+
+export interface Props { a: KoreaArticle; lang: 'ko' | 'en' }
+const { a, lang } = Astro.props;
+const { m } = a;
+const o = lang === 'en' ? 'ko' : 'en';
+const T = {
+  ko: { list: R.korea('ko'), listName: '한국 여행', src: '자료 출처', updated: '기준', note: '거리는 직선거리예요. 운영시간·요금은 바뀔 수 있으니 출발 전에 한 번 더 확인하세요.', emergency: '응급 119 · 바다 해양경찰 122', other: 'Read in English' },
+  en: { list: R.korea('en'), listName: 'Korea travel', src: 'Sources', updated: 'Data as of', note: 'Distances are straight-line. Opening hours and fees can change, so check again before you travel.', emergency: 'Emergency 119 · Coast Guard 122', other: '한국어로 보기' },
+}[lang];
+const altPath = R.korea(o, m.slug);
+
+const factVal = (v: string) => (lang !== 'en' ? v : String(v).replace(/(\d)번 중 (\d+)번/g, '$2 of $1').replace(/(\d)면$/, '$1 spaces').replace(/(\d)(개|곳|명|번|편)$/g, '$1'));
+const fmtCount = (v: number) => {
+  if (!v) return '0';
+  if (lang === 'ko') return v >= 1e6 ? `${Math.round(v / 1e4).toLocaleString()}만` : v >= 1e4 ? `${(v / 1e4).toFixed(1)}만` : v.toLocaleString();
+  return v >= 1e6 ? `${(v / 1e6).toFixed(1)}M` : v >= 1e3 ? `${(v / 1e3).toFixed(1)}k` : String(v);
+};
+const chartSvg = (c: any) => {
+  const top = Math.max(...c.values), w = 54;
+  const bars = c.values.map((v: number, i: number) => {
+    const h = (v / top) * 128, x = 20 + i * w, y = 150 - h;
+    return `<rect x="${x}" y="${y.toFixed(1)}" width="34" height="${h.toFixed(1)}" rx="2" class="${(c.dip || []).includes(c.years[i]) ? 'dip' : 'bar'}"/>` +
+      `<text x="${x + 17}" y="168" text-anchor="middle">${c.years[i]}</text><text class="v" x="${x + 17}" y="${(y - 6).toFixed(1)}" text-anchor="middle">${fmtCount(v)}</text>`;
+  }).join('');
+  return `<figure class="chart"><svg viewBox="0 0 560 176" role="img" aria-label="${esc(c[lang])}">${bars}<line x1="14" y1="150" x2="552" y2="150" stroke="currentColor" stroke-opacity=".25"/></svg><figcaption>${esc(c[lang])}</figcaption></figure>`;
+};
+const body = a.html[lang].replace(/<table>/g, '<div class="tw"><table>').replace(/<\/table>/g, '</table></div>').replace('<!--CHART-->', m.chart ? chartSvg(m.chart) : '');
+const g = m.links?.guide;
+import { SITE_URL as SITE } from '~/env';
+const path = R.korea(lang, m.slug);
+const jsonLd = {
+  '@context': 'https://schema.org', '@type': 'Article', headline: m.title[lang], description: m.description[lang], inLanguage: lang,
+  datePublished: m.publish, dateModified: m.publish, image: m.photo ? [m.photo.url] : undefined, mainEntityOfPage: SITE + path,
+  author: { '@type': 'Organization', name: lang === 'en' ? 'AI Galaxy Map' : 'AI 성단 지도', url: SITE },
+  publisher: { '@type': 'Organization', name: lang === 'en' ? 'AI Galaxy Map' : 'AI 성단 지도', url: SITE },
+  isBasedOn: (m.sources || []).map((s) => `${s[lang]} (${s.date[lang]})`),
+};
+---
+
+<article class="max-w-3xl mx-auto px-4 sm:px-6 py-7 md:py-9">
+  <Breadcrumbs items={[{ text: T.listName, href: T.list }, { text: `${m.kind[lang]} · ${m.region[lang]}` }]} class="mb-3" />
+  <h1 class="text-2xl md:text-3xl font-bold leading-tighter tracking-tighter font-heading text-heading text-balance">{m.title[lang]}</h1>
+  <p class="mt-2 text-base text-muted text-pretty">{m.description[lang]}</p>
+  <p class="mt-2 text-sm text-muted">{T.updated} {m.publish}</p>
+  {m.photo && (
+    <figure class="mt-6">
+      <img src={m.photo.url} alt={m.photo.alt[lang]} class="w-full h-auto rounded-md bg-slate-800" loading="eager" {...(m.photo.width ? { width: m.photo.width, height: m.photo.height } : {})} />
+      <figcaption class="text-xs text-muted mt-2">{m.photo.credit[lang]}</figcaption>
+    </figure>
+  )}
+  {m.facts && m.facts.length > 0 && (
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-px bg-slate-700 border border-slate-700 rounded-md overflow-hidden mt-6">
+      {m.facts.map((f) => (
+        <div class="bg-page p-3">
+          <small class="block text-xs text-muted">{f[lang]}</small>
+          <b class="text-xl tabular-nums text-heading">{factVal(f.v)}</b>
+        </div>
+      ))}
+    </div>
+  )}
+  <div class="prose prose-invert prose-base max-w-none mt-8 korea-body" set:html={body} />
+  {g && g.live !== false && (
+    <a href={g.url} class="btn-primary mt-6">{g[lang]}<Icon name="tabler:arrow-right" class="w-5 h-5 ml-1 -mr-1" /></a>
+  )}
+  <p class="text-sm text-muted mt-6">{T.note} {T.emergency}</p>
+  <div class="border-t border-slate-800 mt-8 pt-4 text-sm text-muted">
+    <b class="text-default">{T.src}</b>
+    <ul class="list-disc pl-5 mt-2 space-y-1">{(m.sources || []).map((s) => <li>{s[lang]} ({s.date[lang]})</li>)}</ul>
+    <a href={altPath} hreflang={o} class="inline-flex items-center gap-1 mt-4 text-link hover:underline font-medium">{T.other}<Icon name="tabler:chevron-right" class="w-4 h-4" /></a>
+  </div>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd).replace(/</g, '\\u003c')} />
+</article>
+
+<style is:global>
+  .korea-body .tw { overflow-x: auto; margin: 0.5rem 0 1rem; }
+  .korea-body table { min-width: 420px; }
+  .korea-body .chart svg { width: 100%; height: auto; }
+  .korea-body .chart text { fill: rgb(229 236 246 / 66%); font-size: 11px; }
+  .korea-body .chart .v { fill: rgb(229 236 246); font-weight: 700; }
+  .korea-body .chart .bar { fill: rgb(109 95 245); }
+  .korea-body .chart .dip { fill: rgb(234 179 8); }
+</style>
