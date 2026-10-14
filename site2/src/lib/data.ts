@@ -1,5 +1,5 @@
 // 기존 사이트 데이터를 그대로 읽어 화면용으로 정리(빌드 때만 실행, 브라우저엔 안 감).
-// 원본: ../data/ai_landscape.json(731) · ai_enrichment.json(731) · ai_combos.json · ai_top_rank.json · ai_top10_relations.json
+// 원본: ../data/ai_landscape.json · ai_enrichment.json(747, 10/14 Supabase와 맞춤: scripts/sync-tools-from-supabase.mjs) · ai_combos.json · ai_top_rank.json · ai_top10_relations.json
 //       ../dist/data/ai_pages.json(도구 페이지 74개 슬러그) · ../content/korea/<slug>/(meta.json·ko.html·en.html)
 // 규칙은 scripts/gen-seo-pages.mjs · import-data.mjs · gen-home.mjs · gen-korea-pages.mjs 와 같게 맞춤.
 import { readFileSync, existsSync, readdirSync } from 'node:fs';
@@ -294,7 +294,7 @@ async function _homeData(): Promise<HomeData> {
   return _home;
 }
 
-// ---- 검색 자동완성 색인(/search-index.json): 이름 731개 + 안내 페이지 유무 ----
+// ---- 검색 자동완성 색인(/search-index.json): 이름 전체 + 안내 페이지 유무 ----
 // 검색 별칭(src/data/search-aliases.json, 흔히 부르는 이름 → slug)
 let _alias: Record<string, string[]> | null = null;
 export function searchAlias(slug: string): string {

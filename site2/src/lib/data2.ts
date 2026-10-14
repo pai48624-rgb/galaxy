@@ -1,6 +1,6 @@
 // 수집 데이터로 만든 새 화면(조합 추천 /combos · 요금제별 /pricing · 밝은 별 순위 /rank · 검색 /search)용 데이터 함수.
 // 기존 data.ts 는 손대지 않고 그 함수만 가져다 쓴다. 빌드 때만 실행(브라우저엔 안 감).
-// 원본: ../data/ai_combos.json(686) · ai_enrichment.json(731) · ai_landscape.json(731) · ai_top_rank.json(10) · ai_top10_relations.json(10) · dist/data/ai_pages.json(74)
+// 원본: ../data/ai_combos.json(686) · ai_enrichment.json · ai_landscape.json(747) · ai_top_rank.json(10) · ai_top10_relations.json(10) · dist/data/ai_pages.json(74)
 import { readFileSync, existsSync, mkdirSync, writeFileSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import { searchAlias, loadTools, toolIndex, aiPageSlugs, combos, top10Relations, brightestStars, categories, GALAXY_ROOT, type Tool } from '~/lib/data';

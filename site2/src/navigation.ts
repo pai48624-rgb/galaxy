@@ -1,5 +1,8 @@
 // 머리줄·꼬리말 메뉴(한국어/영어). 영어 메뉴는 2026-10-14부터 /en/… 영어판 주소로. 기존 사이트 공통 껍데기(scripts/site-chrome.mjs)의 메뉴 항목을 그대로 옮김.
 import { R } from '~/lib/routes';
+import { loadTools, categories } from '~/lib/data';
+// 메뉴 숫자 = 실제 데이터 개수(10/14: 숫자를 박아 두어 747로 바뀐 뒤에도 731로 남던 문제)
+const nTools = () => loadTools().length, nCats = () => categories().length;
 export type Lang = 'ko' | 'en';
 
 export const headerLinks = (lang: Lang) =>
@@ -8,8 +11,8 @@ export const headerLinks = (lang: Lang) =>
         { text: '3D Galaxy Map', href: R.map('en'), icon: 'tabler:sparkles' },
         { text: 'Home', href: R.home('en') },
         { text: 'AI Trends', href: R.trend('en') },
-        { text: 'AI Tools 731', href: R.ai('en') },
-        { text: 'Fields 21', href: R.category('en') },
+        { text: `AI Tools ${nTools()}`, href: R.ai('en') },
+        { text: `Fields ${nCats()}`, href: R.category('en') },
         { text: 'Korea Travel', href: R.korea('en') },
         { text: 'Board · Chat', href: R.board('en') },
       ]
@@ -17,8 +20,8 @@ export const headerLinks = (lang: Lang) =>
         { text: '3D 성단 지도', href: R.map(), icon: 'tabler:sparkles' },
         { text: '홈', href: R.home() },
         { text: 'AI 트렌드', href: R.trend() },
-        { text: 'AI 목록 731', href: R.ai() },
-        { text: '분야 21', href: R.category() },
+        { text: `AI 목록 ${nTools()}`, href: R.ai() },
+        { text: `분야 ${nCats()}`, href: R.category() },
         { text: '한국 여행', href: R.korea() },
         { text: '게시판 · 채팅', href: R.board() },
       ];
