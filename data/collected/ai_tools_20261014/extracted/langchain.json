@@ -1,0 +1,53 @@
+{
+ "company": "LangChain",
+ "one_liner_ko": "에이전트와 LLM 기반 애플리케이션을 만드는 오픈소스 프레임워크이자, 에이전트 개발 전 과정을 지원하는 LangSmith 플랫폼.",
+ "what_it_does_ko": "LangChain은 상호 운용 가능한 구성 요소와 외부 연동을 엮어 에이전트·LLM 앱을 만드는 프레임워크다. 모델·임베딩·벡터 저장소 등에 표준 인터페이스를 제공해 모델을 쉽게 바꿔 끼울 수 있다. 같은 회사의 LangSmith는 프레임워크와 무관하게 에이전트를 테스트·배포·모니터링·개선하는 유료 플랫폼이다. LangGraph(저수준 제어)와 Deep Agents(장시간 자율 에이전트) 같은 오픈소스 프레임워크도 함께 제공한다.",
+ "key_features": [
+  "어떤 모델 제공사와도 쓰는 에이전트 프레임워크(langchain)",
+  "저수준 제어용 LangGraph, 장시간 자율 에이전트용 Deep Agents",
+  "모델·도구·벡터 저장소 등 방대한 연동 라이브러리",
+  "LangSmith 추적(Tracing)·평가(Evals)로 에이전트 디버깅",
+  "LangSmith Deployment — 장시간·상태 유지 에이전트 배포",
+  "격리된 샌드박스에서 에이전트 생성 코드 실행",
+  "LLM Gateway — 비용 한도·모델 폴백·민감정보 가리기",
+  "코드 없이 에이전트를 만드는 LangSmith Fleet"
+ ],
+ "use_cases_ko": [
+  "개발자가 LLM 앱·에이전트를 빠르게 시제품화",
+  "기업이 운영 중인 에이전트 품질을 추적·평가",
+  "고객 상담 AI 어시스턴트 구축(예: 처리 시간 단축 사례)"
+ ],
+ "pricing": {
+  "free_tier": "있음 (LangSmith Developer: 1석, 월 5k 기본 트레이스)",
+  "plans": [
+   {"name": "Developer", "price": 0, "currency": "USD", "period": "month", "limits": "1석, 월 5k 트레이스 후 종량제"},
+   {"name": "Plus", "price": 39, "currency": "USD", "period": "month", "limits": "석당, 월 10k 트레이스, 서버리스 배포 1개 포함"},
+   {"name": "Enterprise", "price": null, "currency": "USD", "period": null, "limits": "맞춤 가격, 셀프호스팅·하이브리드"}
+  ],
+  "pricing_url": "https://www.langchain.com/pricing"
+ },
+ "open_source": "MIT",
+ "api": "있음",
+ "platforms": ["API", "CLI"],
+ "korean_support": "불명",
+ "evidence": [
+  {"field": "company", "url": "https://www.langchain.com/pricing", "quote": "Cloud: Fully managed by LangChain"},
+  {"field": "one_liner_ko", "url": "https://github.com/langchain-ai/langchain", "quote": "LangChain is a framework for building agents and LLM-powered applications."},
+  {"field": "what_it_does_ko", "url": "https://docs.langchain.com/", "quote": "LangChain provides open source, model-agnostic harnesses for building agents. LangSmith is the framework-agnostic platform for testing, deploying, monitoring, and improving your agents"},
+  {"field": "what_it_does_ko", "url": "https://github.com/langchain-ai/langchain", "quote": "LangChain helps developers build applications powered by LLMs through a standard interface for models, embeddings, vector stores, and more."},
+  {"field": "key_features", "url": "https://www.langchain.com/", "quote": "Quick start agents with any model provider"},
+  {"field": "key_features", "url": "https://github.com/langchain-ai/langchain", "quote": "Build agents that can reliably handle complex tasks with our low-level agent orchestration framework"},
+  {"field": "key_features", "url": "https://www.langchain.com/", "quote": "Run agent-generated code in isolated sandboxes"},
+  {"field": "key_features", "url": "https://www.langchain.com/pricing", "quote": "Manage costs, fallbacks, and sensitive data between your agents and LLM providers"},
+  {"field": "key_features", "url": "https://www.langchain.com/pricing", "quote": "Create agents for daily tasks using everyday language, not code"},
+  {"field": "use_cases_ko", "url": "https://www.langchain.com/", "quote": "Klarna’s AI assistant reduced case resolution time by 80% with LangSmith"},
+  {"field": "use_cases_ko", "url": "https://github.com/langchain-ai/langchain", "quote": "Quickly build and iterate on LLM applications with LangChain's modular, component-based architecture."},
+  {"field": "pricing", "url": "https://www.langchain.com/pricing", "quote": "Up to 5k base traces / mo, then pay-as-you-go"},
+  {"field": "pricing", "url": "https://www.langchain.com/pricing", "quote": "$39 / seat per month"},
+  {"field": "pricing", "url": "https://www.langchain.com/pricing", "quote": "Self-hosted and hybrid deployment options"},
+  {"field": "open_source", "url": "https://github.com/langchain-ai/langchain", "quote": "<a href=\"https://opensource.org/licenses/MIT\" target=\"_blank\"><img src=\"https://img.shields.io/pypi/l/langchain\" alt=\"PyPI - License\"></a>"},
+  {"field": "api", "url": "https://www.langchain.com/pricing", "quote": "30+ API endpoints including state and memory"},
+  {"field": "platforms", "url": "https://docs.langchain.com/", "quote": "Code with an AI agent in your terminal using the open source dcode CLI."}
+ ],
+ "mismatch": []
+}

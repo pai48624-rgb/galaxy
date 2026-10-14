@@ -1,0 +1,56 @@
+{
+ "company": "Anysphere, Inc.",
+ "one_liner_ko": "대담한 소프트웨어를 만드는 AI 코딩 에이전트.",
+ "what_it_does_ko": "Cursor는 에디터 안에서 직접 코딩부터 에이전트 기반 코딩까지 지원하는 AI 코딩 도구다. 에이전트가 자체 컴퓨터에서 기능을 처음부터 끝까지 만들고 테스트·데모까지 진행하며 여러 작업을 병렬로 실행한다. 터미널(CLI), Slack, GitHub PR 리뷰 등 여러 환경에서 같은 에이전트를 쓸 수 있다. OpenAI, Anthropic, Gemini, SpaceXAI, Cursor의 최신 모델 중에서 골라 쓸 수 있다.",
+ "key_features": [
+  "데스크톱 에디터에서 직접 코딩과 에이전트 코딩",
+  "자율적으로 병렬 실행되는 클라우드 에이전트",
+  "터미널·스크립트에서 쓰는 Cursor CLI",
+  "Slack·GitHub·Linear·JetBrains IDE 연동",
+  "Bugbot을 통한 AI 코드 리뷰",
+  "여러 회사 최신 모델 선택(OpenAI, Anthropic, Gemini 등)",
+  "Privacy Mode(코드 데이터 학습 미사용)"
+ ],
+ "use_cases_ko": [
+  "개발자가 기능 구현을 에이전트에 위임",
+  "팀이 GitHub PR 리뷰를 자동화",
+  "대규모 조직이 보안 통제 하에 개발 가속"
+ ],
+ "pricing": {
+  "free_tier": "있음 (제한된 에이전트·Chat 요청)",
+  "plans": [
+   {"name": "무료", "price": 0, "currency": "USD", "period": "month", "limits": "제한된 에이전트 요청 횟수"},
+   {"name": "Plus", "price": 8, "currency": "USD", "period": "month", "limits": "Grok 모델만 사용 가능"},
+   {"name": "Premium", "price": 30, "currency": "USD", "period": "month", "limits": "Plus 대비 4배 사용량, 클라우드 에이전트"},
+   {"name": "Super", "price": 100, "currency": "USD", "period": "month", "limits": "Plus 대비 15배 사용량"},
+   {"name": "Ultra", "price": 200, "currency": "USD", "period": "month", "limits": "Plus 대비 50배 사용량"},
+   {"name": "Teams", "price": 30, "currency": "USD", "period": "month", "limits": "사용자당, SSO·중앙 청구"},
+   {"name": "기업", "price": null, "currency": "USD", "period": null, "limits": "맞춤형"}
+  ],
+  "pricing_url": "https://cursor.com/ko/pricing"
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": ["맥", "CLI", "웹"],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {"field": "company", "url": "https://cursor.com/", "quote": "© 2026 Anysphere, Inc."},
+  {"field": "one_liner_ko", "url": "https://cursor.com/", "quote": "Cursor는 대담한 소프트웨어를 만드는 당신의 코딩 에이전트입니다."},
+  {"field": "what_it_does_ko", "url": "https://cursor.com/", "quote": "에이전트는 자체 컴퓨터를 사용해 기능을 처음부터 끝까지 만들고, 테스트하고, 데모를 진행해 리뷰할 수 있도록 합니다."},
+  {"field": "what_it_does_ko", "url": "https://cursor.com/", "quote": "OpenAI, Anthropic, Gemini, SpaceXAI, Cursor의 모든 최첨단 모델 중에서 선택하세요."},
+  {"field": "key_features", "url": "https://cursor.com/ko/product", "quote": "익숙한 하나의 에디터에서 직접 코딩부터 에이전트 기반 코딩까지."},
+  {"field": "key_features", "url": "https://cursor.com/ko/product", "quote": "GitHub, Slack, Linear, JetBrains IDEs 등에서 에이전트를 시작해 보세요."},
+  {"field": "key_features", "url": "https://cursor.com/ko/pricing", "quote": "Bugbot을 통한 AI 코드 검토"},
+  {"field": "key_features", "url": "https://cursor.com/ko/pricing", "quote": "이 기능이 켜지면 당사와 모델 제공업체가 코드 데이터를 학습에 사용하지 않도록 보장합니다."},
+  {"field": "use_cases_ko", "url": "https://cursor.com/", "quote": "Fortune 500 기업의 절반 이상이 안전하게 대규모 개발을 가속화하기 위해 신뢰하는 솔루션입니다."},
+  {"field": "use_cases_ko", "url": "https://cursor.com/", "quote": "Cursor는 터미널에서 실행되고, Slack에서 협업하며, GitHub에서 PR을 검토합니다."},
+  {"field": "pricing", "url": "https://cursor.com/ko/pricing", "quote": "기능 무료 $0 /월"},
+  {"field": "pricing", "url": "https://cursor.com/ko/pricing", "quote": "Ultra $200 /월 \n Ultra 시작하기 \n Teams $30 +/사용자/월"},
+  {"field": "pricing", "url": "https://cursor.com/ko/pricing", "quote": "*이 플랜에서는 Grok 모델만 사용 가능합니다"},
+  {"field": "platforms", "url": "https://cursor.com/", "quote": "macOS용 다운로드 ⤓"},
+  {"field": "platforms", "url": "https://cursor.com/ko/product", "quote": "브라우저나 모바일에서 클라우드 에이전트를 실행하세요."},
+  {"field": "platforms", "url": "https://cursor.com/ko/product", "quote": "어떤 터미널, 스크립트, 편집기에서든 에이전트를 실행하세요."},
+  {"field": "korean_support", "url": "https://cursor.com/", "quote": "한국어 ✓"}
+ ],
+ "mismatch": []
+}

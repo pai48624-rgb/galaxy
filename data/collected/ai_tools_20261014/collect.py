@@ -1,0 +1,322 @@
+# -*- coding: utf-8 -*-
+"""[galaxy] AI 도구 공식 자료 수집 (2026-10-14 지시서) — 1단계: 공식 페이지 받기(자료만, 글 안 씀).
+
+도구마다 공식 페이지만: 홈 + 요금 + 소개/문서 1곳 + (있으면) GitHub — 최대 4페이지.
+예의: robots.txt 지킴, 같은 도메인 3초 간격, 동시 4개 이하, 로그인·유료벽·캡차 안 넘음(막히면 blocked 기록).
+글자가 거의 없는 자바스크립트 화면은 진짜 크롬(보이지 않게)으로 읽기만. 정직한 이름(UA)으로 접속.
+결과: raw/<slug>.txt (페이지 본문, 도구당 30KB 이내) · fetch.jsonl (상태·최종 주소·받은 페이지·GitHub 수치)
+2단계(도구별 정리 tools.jsonl)는 extract.py — 근거 인용이 raw 본문에 실제로 있는지 검사.
+  python collect.py fetch [slug ...]   (없으면 747개 전부, 이미 받은 slug 건너뜀)
+  python collect.py status"""
+import concurrent.futures as cf
+import html
+import json
+import os
+import re
+import subprocess
+import sys
+import threading
+import time
+import urllib.error
+import urllib.parse
+import urllib.request
+import urllib.robotparser
+from datetime import datetime
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+RAW = os.path.join(HERE, "raw")
+FETCH = os.path.join(HERE, "fetch.jsonl")
+INPUT = os.path.join(HERE, "input_tools.json")
+UA = "AIGalaxyMap-research/1.0 (+https://aigalaxy-map.com; official-page reader)"
+GAP = 3.0
+MAX_RAW = 30000
+WORKERS = 4
+KIND = [("pricing", r"pricing|/plans?\b|/price|요금|가격|subscribe|/premium|/upgrade"),
+        ("about", r"/about|/features?|/product|/docs?\b|documentation|/overview|/platform|/how-it-works|소개|기능")]
+BLOCK_HINT = r"captcha|cf-chl|cloudflare ray id|access denied|attention required|are you a robot|verify you are human|enable javascript and cookies"
+
+_dom_lock = threading.Lock()
+_dom_last = {}
+_robots = {}
+_write = threading.Lock()
+
+
+def now():
+    return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+
+def host(u):
+    return (urllib.parse.urlsplit(u).hostname or "").lower()
+
+
+def root_dom(h):
+    p = h.split(".")
+    return ".".join(p[-3:]) if len(p) > 2 and p[-2] in ("co", "or", "ac", "com", "go") else ".".join(p[-2:])
+
+
+def wait_domain(u):
+    d = root_dom(host(u))
+    while True:
+        with _dom_lock:
+            t = time.time() - _dom_last.get(d, 0)
+            if t >= GAP:
+                _dom_last[d] = time.time()
+                return
+        time.sleep(GAP - t + 0.05)
+
+
+def allowed(u):
+    h = urllib.parse.urlsplit(u)
+    base = "%s://%s" % (h.scheme or "https", h.netloc)
+    if base not in _robots:
+        rp = urllib.robotparser.RobotFileParser()
+        try:
+            wait_domain(base)
+            req = urllib.request.Request(base + "/robots.txt", headers={"User-Agent": UA})
+            with urllib.request.urlopen(req, timeout=15, context=CTX) as r:
+                rp.parse(r.read(200000).decode("utf-8", "replace").splitlines())
+        except urllib.error.HTTPError as e:
+            rp.parse([] if e.code in (404, 410) else ["User-agent: *", "Disallow: /"] if e.code in (401, 403) else [])
+        except Exception:
+            rp.parse([])
+        _robots[base] = rp
+    return _robots[base].can_fetch(UA, u)
+
+
+def text_of(h):
+    h = re.sub(r"(?is)<(script|style|noscript|svg)[^>]*>.*?</\1>", " ", h)
+    h = re.sub(r"(?i)<br\s*/?>|</(p|div|li|h[1-6]|tr|section)>", "\n", h)
+    t = html.unescape(re.sub(r"<[^>]+>", " ", h))
+    t = re.sub(r"[ \t\r\f\v]+", " ", t)
+    return re.sub(r"\n\s*\n+", "\n", t).strip()
+
+
+try:
+    import certifi, ssl
+    CTX = ssl.create_default_context(cafile=certifi.where())   # 윈도 기본 인증서 묶음에 없는 중간 인증서 때문에 생기는 검증 실패 방지
+except Exception:
+    CTX = None
+
+
+def get(u):
+    wait_domain(u)
+    req = urllib.request.Request(u, headers={"User-Agent": UA, "Accept": "text/html,*/*;q=0.5", "Accept-Language": "ko,en;q=0.8",
+                                           "Accept-Encoding": "gzip, identity"})
+    try:
+        with urllib.request.urlopen(req, timeout=25, context=CTX) as r:
+            raw = r.read(3_000_000)
+            ce = (r.headers.get("Content-Encoding") or "").lower()
+            if "gzip" in ce or raw[:2] == bytes([0x1f, 0x8b]):   # 압축된 응답 풀기(10/14 gemma·google-veo 본문 깨짐 고침)
+                import gzip
+                raw = gzip.decompress(raw)
+            elif "br" in ce:
+                try:
+                    import brotli
+                    raw = brotli.decompress(raw)
+                except Exception:
+                    pass
+            cs = re.search(r"charset=([\w-]+)", r.headers.get("Content-Type", "")) or re.search(rb'charset=["\']?([\w-]+)', raw[:3000])
+            enc = cs.group(1) if cs else "utf-8"
+            enc = enc.decode() if isinstance(enc, bytes) else enc
+            try:
+                body = raw.decode(enc, "replace")
+            except LookupError:
+                body = raw.decode("utf-8", "replace")
+            return r.status, r.geturl(), body
+    except urllib.error.HTTPError as e:
+        return e.code, u, ""
+    except Exception as e:
+        return 0, u, "ERR " + str(e)[:150]
+
+
+class Browser:
+    """자바스크립트 화면용 — 크롬을 보이지 않게 띄워 읽기만(작업마다 하나)."""
+
+    def __init__(self):
+        self.p = self.b = None
+
+    def get(self, u):
+        if self.b is None:
+            from playwright.sync_api import sync_playwright
+            self.p = sync_playwright().start()
+            self.b = self.p.chromium.launch(channel="chrome", headless=True)
+        wait_domain(u)
+        pg = self.b.new_page(user_agent=UA, locale="ko-KR")
+        try:
+            r = pg.goto(u, timeout=30000, wait_until="domcontentloaded")
+            try:
+                pg.wait_for_load_state("networkidle", timeout=8000)
+            except Exception:
+                pass
+            return (r.status if r else 0), pg.url, pg.content()
+        except Exception as e:
+            return 0, u, "ERR " + str(e)[:150]
+        finally:
+            pg.close()
+
+    def close(self):
+        try:
+            if self.b:
+                self.b.close()
+            if self.p:
+                self.p.stop()
+        except Exception:
+            pass
+
+
+def links(body, base):
+    out = []
+    for href, label in re.findall(r'(?is)<a[^>]+href=["\']([^"\'#]+)["\'][^>]*>(.*?)</a>', body):
+        u = urllib.parse.urljoin(base, href.strip())
+        if not u.startswith("http") or root_dom(host(u)) != root_dom(host(base)):
+            continue
+        out.append((u.split("#")[0], text_of(label)[:60]))
+    return out
+
+
+def github_info(gh_url):
+    m = re.search(r"github\.com/([^/\s]+)/([^/\s#?]+)", gh_url or "")
+    if not m:
+        return None
+    o, r = m.group(1), re.sub(r"\.git$", "", m.group(2))
+    try:
+        j = json.loads(subprocess.run(["gh", "api", "repos/%s/%s" % (o, r)], capture_output=True, text=True, encoding="utf-8",
+                                      timeout=60).stdout or "{}")
+        if not j.get("full_name"):
+            return {"repo": "%s/%s" % (o, r), "status": "못 찾음"}
+        c = json.loads(subprocess.run(["gh", "api", "repos/%s/%s/commits?per_page=1" % (o, r)], capture_output=True, text=True,
+                                      encoding="utf-8", timeout=60).stdout or "[]")
+        last = c[0]["commit"]["committer"]["date"] if isinstance(c, list) and c else j.get("pushed_at")
+        readme = subprocess.run(["gh", "api", "repos/%s/%s/readme" % (o, r), "-H", "Accept: application/vnd.github.raw"],
+                                capture_output=True, text=True, encoding="utf-8", timeout=60).stdout or ""
+        return {"repo": j["full_name"], "url": j.get("html_url"), "stars": j.get("stargazers_count"),
+                "license": (j.get("license") or {}).get("spdx_id"), "last_commit": last, "archived": j.get("archived"),
+                "description": j.get("description"), "readme": readme[:12000]}
+    except Exception as e:
+        return {"repo": "%s/%s" % (o, r), "status": "오류 " + str(e)[:80]}
+
+
+def one(tool, br):
+    slug, url = tool["slug"], tool["url"]
+    rec = {"slug": slug, "name_en": tool["name_en"], "checked_at": now(), "input_url": url, "pages": [], "requests": 0}
+    parts = []
+    gh = tool.get("github") or (url if "github.com" in (url or "") else None)
+    if url and "github.com" not in url:
+        if not allowed(url):
+            rec.update(status="blocked", final_url=url, reason="robots.txt 금지")
+            return rec, parts
+        st, final, body = get(url)
+        rec["requests"] += 2
+        used_browser = False
+        if (st == 0 or st == 403 or (st == 200 and len(text_of(body)) < 800)) and not body.startswith("ERR getaddrinfo"):
+            st2, final2, body2 = br.get(url)
+            rec["requests"] += 1
+            if st2 and len(text_of(body2)) > len(text_of(body)):
+                st, final, body, used_browser = st2, final2, body2, True
+        t = text_of(body)
+        if st == 0 or (st >= 400 and st not in (403,)):
+            rec.update(status="dead", final_url=final, reason="HTTP %s %s" % (st, body[:100] if body.startswith("ERR") else ""))
+        elif st == 403 or re.search(BLOCK_HINT, t[:3000], re.I) and len(t) < 3000:
+            rec.update(status="blocked", final_url=final, reason="접근 거부·캡차·봇 확인 화면(넘지 않음)")
+        else:
+            rec.update(status="redirect" if host(final) != host(url) else "ok", final_url=final)
+            rec["pages"].append({"kind": "home", "url": final, "http": st, "chars": len(t), "browser": used_browser})
+            parts.append(("home", final, t))
+            cand = links(body, final)
+            for kind, pat in KIND:
+                pick = next((u for u, lab in cand if re.search(pat, u, re.I)), None) or \
+                       next((u for u, lab in cand if re.search(pat, lab, re.I)), None)
+                if not pick or pick.rstrip("/") == final.rstrip("/") or any(p["url"] == pick for p in rec["pages"]):
+                    continue
+                if not allowed(pick):
+                    rec["pages"].append({"kind": kind, "url": pick, "http": None, "skip": "robots"})
+                    continue
+                s3, f3, b3 = get(pick)
+                rec["requests"] += 1
+                if s3 in (0, 403) or (s3 == 200 and len(text_of(b3)) < 800):
+                    s4, f4, b4 = br.get(pick)
+                    rec["requests"] += 1
+                    if s4 and len(text_of(b4)) > len(text_of(b3)):
+                        s3, f3, b3 = s4, f4, b4
+                t3 = text_of(b3)
+                rec["pages"].append({"kind": kind, "url": f3, "http": s3, "chars": len(t3)})
+                if s3 == 200 and t3:
+                    parts.append((kind, f3, t3))
+    if gh:
+        g = github_info(gh)
+        rec["requests"] += 3
+        rec["github"] = {k: v for k, v in (g or {}).items() if k != "readme"}
+        if g and g.get("readme"):
+            parts.append(("github", g.get("url") or gh, g["readme"]))
+            rec["pages"].append({"kind": "github", "url": g.get("url") or gh, "http": 200, "chars": len(g["readme"])})
+        if "status" not in rec:
+            rec.update(status="ok" if g and g.get("stars") is not None else "dead", final_url=g.get("url") if g else gh)
+    return rec, parts
+
+
+def save(rec, parts):
+    budget, out = MAX_RAW, []
+    share = {"home": 0.4, "pricing": 0.3, "about": 0.15, "github": 0.15}
+    for kind, u, t in parts:
+        n = int(MAX_RAW * share.get(kind, 0.15))
+        out.append("=== [%s] %s\n%s\n" % (kind, u, t[:n]))
+    body = "\n".join(out)[:budget]
+    with open(os.path.join(RAW, rec["slug"] + ".txt"), "w", encoding="utf-8") as f:
+        f.write(body)
+    with _write:
+        with open(FETCH, "a", encoding="utf-8") as f:
+            f.write(json.dumps(rec, ensure_ascii=False) + "\n")
+
+
+def done_slugs():
+    if not os.path.exists(FETCH):
+        return set()
+    return {json.loads(l)["slug"] for l in open(FETCH, encoding="utf-8") if l.strip()}
+
+
+def fetch(only=None):
+    os.makedirs(RAW, exist_ok=True)
+    tools = json.load(open(INPUT, encoding="utf-8"))
+    if only:
+        want = {s.lower() for s in only}
+        tools = [t for t in tools if t["slug"].lower() in want]
+    skip = done_slugs()
+    todo = [t for t in tools if t["slug"] not in skip]
+    print("대상 %d · 이미 받음 %d · 이번 %d  (%s)" % (len(tools), len(tools) - len(todo), len(todo), now()), flush=True)
+    local = threading.local()
+    browsers = []
+
+    def work(t):
+        if not hasattr(local, "br"):
+            local.br = Browser()
+            browsers.append(local.br)
+        try:
+            rec, parts = one(t, local.br)
+        except Exception as e:
+            rec, parts = {"slug": t["slug"], "name_en": t["name_en"], "checked_at": now(), "status": "dead",
+                          "final_url": t["url"], "reason": "수집 오류 " + str(e)[:120], "pages": [], "requests": 0}, []
+        save(rec, parts)
+        return rec
+
+    n = 0
+    with cf.ThreadPoolExecutor(WORKERS) as ex:
+        for rec in ex.map(work, todo):
+            n += 1
+            print("[%d/%d] %s %s %s 페이지%d" % (n, len(todo), rec["slug"], rec["status"], rec.get("final_url", ""),
+                                               len([p for p in rec["pages"] if p.get("chars")])), flush=True)
+    for b in browsers:
+        b.close()
+    status()
+
+
+def status():
+    recs = [json.loads(l) for l in open(FETCH, encoding="utf-8")] if os.path.exists(FETCH) else []
+    from collections import Counter
+    print("받은 도구 %d · 상태 %s · 요청 %d" % (len(recs), dict(Counter(r["status"] for r in recs)), sum(r.get("requests", 0) for r in recs)))
+
+
+if __name__ == "__main__":
+    if sys.argv[1] == "fetch":
+        fetch(sys.argv[2:] or None)
+    else:
+        status()

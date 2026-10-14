@@ -1,0 +1,60 @@
+{
+ "company": "Runway AI, Inc.",
+ "one_liner_ko": "영상·이미지·오디오를 한 작업공간에서 생성·편집하는 클라우드 기반 AI 크리에이티브 플랫폼.",
+ "what_it_does_ko": "Runway는 세상을 이해·시뮬레이션하는 '실세계 지능' 모델을 만들고 그 위에 Creative·Dev·Robotics 세 플랫폼을 운영한다. Runway Creative는 영상·이미지·오디오를 한 작업공간에서 생성·편집하는 클라우드 도구다. Runway Dev는 Runway와 다른 연구소 모델을 API로 쓰는 개발자 플랫폼이다. 자체 영상 모델 Gen-4.5와 Seedance·Kling·Nano Banana Pro 등 외부 모델을 함께 쓸 수 있다.",
+ "key_features": [
+  "자체 영상 생성 모델 Gen-4.5",
+  "영상 속 한 프레임을 고치면 나머지에 적용하는 Aleph 2.0 편집",
+  "대화만으로 영상을 처음부터 끝까지 만드는 Runway Agent",
+  "음악·음성·효과음 생성",
+  "여러 모델을 잇는 노드 기반 워크플로",
+  "Premiere Pro·After Effects 플러그인",
+  "Claude·ChatGPT 등 에이전트와 연결하는 Runway MCP",
+  "4K 업스케일링"
+ ],
+ "use_cases_ko": [
+  "광고·VFX·게임 업계의 영상 제작",
+  "개인·팀 크리에이터의 영상·이미지 생성",
+  "개발자가 API로 영상·이미지 모델을 서비스에 연동"
+ ],
+ "pricing": {
+  "free_tier": "있음 (1회 지급 125 크레딧, 저장 5GB)",
+  "plans": [
+   {"name": "Free", "price": 0, "currency": "USD", "period": "month", "limits": "1회 125 크레딧, 5GB"},
+   {"name": "Standard", "price": 12, "currency": "USD", "period": "month", "limits": "연간 결제 기준(월 결제 $15), 월 625 크레딧, 워터마크 없음, 20GB"},
+   {"name": "Pro", "price": 28, "currency": "USD", "period": "month", "limits": "연간 결제 기준(월 결제 $35), 월 2250 크레딧, 100GB"},
+   {"name": "Max", "price": 76, "currency": "USD", "period": "month", "limits": "연간 결제 기준(월 결제 $95), 월 9500 크레딧, 1개월 이월, 500GB"}
+  ],
+  "pricing_url": "https://runway.com/pricing"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["웹", "iOS", "안드로이드", "API"],
+ "korean_support": "불명",
+ "evidence": [
+  {"field": "company", "url": "https://runway.com/", "quote": "© 2026 Runway AI, Inc."},
+  {"field": "one_liner_ko", "url": "https://runway.com/", "quote": "An all-in-one cloud-based creative platform that offers endless ways to generate and edit video, images and audio in one workspace."},
+  {"field": "what_it_does_ko", "url": "https://runway.com/", "quote": "Runway is building foundational Real-World Intelligence that can understand, simulate and act in the world."},
+  {"field": "what_it_does_ko", "url": "https://runway.com/", "quote": "The AI media platform for developers to build with the best models from Runway and other labs."},
+  {"field": "key_features", "url": "https://runway.com/", "quote": "The world's best video model, featuring state-of-the-art motion quality, prompt adherence and visual fidelity."},
+  {"field": "key_features", "url": "https://runway.com/product", "quote": "Edit a frame in a video, apply it to the rest of the video."},
+  {"field": "key_features", "url": "https://runway.com/product", "quote": "Create end-to-end videos with simple conversations."},
+  {"field": "key_features", "url": "https://runway.com/pricing", "quote": "Music, voice & sound effects generation"},
+  {"field": "key_features", "url": "https://runway.com/product", "quote": "Create your own custom node-based workflows that chain together multiple models, modalities and intermediary steps"},
+  {"field": "key_features", "url": "https://runway.com/product", "quote": "Generate, edit and extend footage inside Premiere Pro and After Effects."},
+  {"field": "key_features", "url": "https://runway.com/product", "quote": "Connect Runway to your agent - Claude, ChatGPT etc."},
+  {"field": "key_features", "url": "https://runway.com/pricing", "quote": "Unlimited 4K video upscaling"},
+  {"field": "use_cases_ko", "url": "https://runway.com/product", "quote": "AI for Advertising \n AI for VFX \n AI for Gaming"},
+  {"field": "use_cases_ko", "url": "https://runway.com/", "quote": "Built for individuals and teams of all sizes."},
+  {"field": "use_cases_ko", "url": "https://runway.com/", "quote": "The API platform with Runway's expertise built in."},
+  {"field": "pricing", "url": "https://runway.com/pricing", "quote": "125 one-time credits to explore Runway's AI tools."},
+  {"field": "pricing", "url": "https://runway.com/pricing", "quote": "5GB asset storage"},
+  {"field": "pricing", "url": "https://runway.com/pricing", "quote": "Standard\n Billed annually. Save $36/year.\n For curious creators trying AI video\n $15\n $12\n /month\n 625 credits /mo"},
+  {"field": "pricing", "url": "https://runway.com/pricing", "quote": "$35\n $28\n /month\n 2250 credits /mo"},
+  {"field": "pricing", "url": "https://runway.com/pricing", "quote": "$95\n $76\n /month\n 9500 credits /mo"},
+  {"field": "api", "url": "https://runway.com/", "quote": "Get API Key View documentation For Enterprise"},
+  {"field": "platforms", "url": "https://runway.com/", "quote": "Runway app for iPhone Runway app for Android"},
+  {"field": "platforms", "url": "https://runway.com/", "quote": "An all-in-one cloud-based creative platform"}
+ ],
+ "mismatch": []
+}

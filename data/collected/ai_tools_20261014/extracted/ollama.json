@@ -1,0 +1,59 @@
+{
+ "company": "Ollama",
+ "one_liner_ko": "최신 오픈 모델을 내 컴퓨터(로컬)나 클라우드에서 개인정보 걱정 없이 실행하는 가장 인기 있는 방법.",
+ "what_it_does_ko": "Ollama는 오픈 모델을 내 컴퓨터에 내려받아 실행하거나, 로컬 GPU 없이 클라우드 모델로 실행하게 해 준다. 데스크톱 앱이나 코딩 에이전트에서 오픈 모델을 쓰거나, 자체 애플리케이션에 붙일 수 있다. 로컬에서 모델을 실행하고 관리하는 REST API와 Python·JavaScript 라이브러리를 제공하며 OpenAI·Anthropic 호환 클라이언트도 지원한다. 프롬프트와 응답 데이터는 저장하거나 학습에 쓰지 않는다고 밝힌다.",
+ "key_features": [
+  "오픈 모델을 내 컴퓨터에서 실행(로컬 실행은 무제한)",
+  "로컬 GPU 없이 쓰는 클라우드 모델",
+  "모델 실행·관리용 REST API",
+  "OpenAI·Anthropic 호환 API",
+  "Python·JavaScript 라이브러리",
+  "Claude Code·Codex·Copilot CLI 등 코딩 에이전트 연동(ollama launch)",
+  "코딩·비전·임베딩·추론 모델 라이브러리"
+ ],
+ "use_cases_ko": [
+  "개발자가 오픈 모델을 자기 애플리케이션에 내장",
+  "터미널에서 코딩 에이전트를 오픈 모델로 실행",
+  "팀이 오픈 모델 사용량·결제를 공동 관리"
+ ],
+ "pricing": {
+  "free_tier": "있음 (로컬 실행 무제한, 클라우드는 스타터 크레딧·동시 요청 1개)",
+  "plans": [
+   {"name": "Free", "price": 0, "currency": "USD", "period": "month", "limits": "로컬 실행, 스타터 모델·크레딧"},
+   {"name": "Pro", "price": 20, "currency": "USD", "period": "month", "limits": "월 $60 사용 크레딧, 동시 요청 3개 (연 $200)"},
+   {"name": "Max", "price": 100, "currency": "USD", "period": "month", "limits": "월 $300 사용 크레딧, 동시 요청 10개"},
+   {"name": "Team", "price": 500, "currency": "USD", "period": "month", "limits": "사용자 무제한, 월 $1,000 공유 크레딧"},
+   {"name": "Enterprise", "price": null, "currency": "USD", "period": null, "limits": "맞춤"}
+  ],
+  "pricing_url": "https://ollama.com/pricing"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["맥", "윈도", "리눅스", "Docker", "CLI", "API"],
+ "korean_support": "불명",
+ "evidence": [
+  {"field": "company", "url": "https://ollama.com", "quote": "© 2026 Ollama"},
+  {"field": "one_liner_ko", "url": "https://ollama.com", "quote": "Ollama is the most popular way to build with open models."},
+  {"field": "one_liner_ko", "url": "https://ollama.com", "quote": "Access the latest open models with complete privacy locally or in the cloud. Your prompts are never stored or trained on."},
+  {"field": "what_it_does_ko", "url": "https://docs.ollama.com", "quote": "Use open models in your desktop apps and coding agents, or build them into your application."},
+  {"field": "what_it_does_ko", "url": "https://github.com/ollama/ollama", "quote": "Ollama has a REST API for running and managing models."},
+  {"field": "key_features", "url": "https://ollama.com/pricing", "quote": "Running models on your own hardware is always unlimited."},
+  {"field": "key_features", "url": "https://docs.ollama.com", "quote": "API reference — use Ollama’s API or compatible OpenAI and Anthropic clients."},
+  {"field": "key_features", "url": "https://github.com/ollama/ollama", "quote": "Supported integrations include [Claude Code](https://docs.ollama.com/integrations/claude-code), [Codex](https://docs.ollama.com/integrations/codex)"},
+  {"field": "key_features", "url": "https://docs.ollama.com", "quote": "Browse the model library for coding, vision, embeddings, and reasoning models."},
+  {"field": "use_cases_ko", "url": "https://docs.ollama.com", "quote": "Connect Claude or ChatGPT on your desktop, or launch a coding agent from your terminal."},
+  {"field": "use_cases_ko", "url": "https://ollama.com/pricing", "quote": "The Team plan is for teams that want shared usage, billing, and administration across the whole team."},
+  {"field": "pricing", "url": "https://ollama.com/pricing", "quote": "$20 / mo. or $200/yr billed annually"},
+  {"field": "pricing", "url": "https://ollama.com/pricing", "quote": "$300 of usage credits per month"},
+  {"field": "pricing", "url": "https://ollama.com/pricing", "quote": "Team starts at $500 per month with unlimited users and $1,000 of usage credits included each month, shared across the team."},
+  {"field": "pricing", "url": "https://ollama.com/pricing", "quote": "Free includes 1 concurrent request, Pro 3, and Max and Team 10."},
+  {"field": "api", "url": "https://github.com/ollama/ollama", "quote": "See the [API documentation](https://docs.ollama.com/api) for all endpoints."},
+  {"field": "platforms", "url": "https://github.com/ollama/ollama", "quote": "or [download manually](https://ollama.com/download/OllamaSetup.exe)"},
+  {"field": "platforms", "url": "https://github.com/ollama/ollama", "quote": "The official [Ollama Docker image](https://hub.docker.com/r/ollama/ollama) `ollama/ollama` is available on Docker Hub."},
+  {"field": "platforms", "url": "https://github.com/ollama/ollama", "quote": "or [download manually](https://ollama.com/download/Ollama.dmg)"},
+  {"field": "platforms", "url": "https://github.com/ollama/ollama", "quote": "[Manual install instructions](https://docs.ollama.com/linux#manual-install)"}
+ ],
+ "mismatch": [
+  {"official": "무료 플랜(로컬 실행 무제한·스타터 크레딧)과 Pro $20·Max $100·Team $500 월 구독이 있고, 초과분만 크레딧 종량제", "diff": "기존 '사용량 기반 종량제'만으로는 무료 로컬 사용과 월 구독 플랜이 빠져 있음", "url": "https://ollama.com/pricing"}
+ ]
+}

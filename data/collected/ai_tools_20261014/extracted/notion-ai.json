@@ -1,0 +1,57 @@
+{
+ "company": "Notion Labs, Inc.",
+ "one_liner_ko": "질문에 답하고 업무 우선순위를 정하고 보고서를 쓰는, 24시간 일하는 Notion 안의 AI 팀.",
+ "what_it_does_ko": "Notion AI는 Notion의 페이지·문서·작업·데이터베이스 안에서 바로 일하는 내장 AI 팀원이다. 워크스페이스와 연결된 앱의 맥락을 활용해 Notion Agent가 페이지·데이터베이스를 만들고 고치는 등 여러 단계 작업을 처리한다. Custom Agents는 트리거나 일정에 맞춰 반복 업무를 자동으로 수행한다. Enterprise Search로 Slack·Google Drive·GitHub 등 연결된 앱을 가로질러 검색하고, AI Meeting Notes로 회의를 전사·요약한다.",
+ "key_features": [
+  "Notion Agent — 워크스페이스 맥락으로 여러 단계 작업 수행",
+  "Custom Agents — 일정·트리거 기반 반복 업무 자동화",
+  "Enterprise Search — Slack·Google Drive·GitHub 등 연결 앱 통합 검색",
+  "AI Meeting Notes — 회의 자동 전사·요약",
+  "Research Mode — 웹·워크스페이스 기반 상세 보고서 생성",
+  "데이터베이스 Autofill·AI 블록으로 글쓰기",
+  "모델·제공사 전환(Model agnostic)"
+ ],
+ "use_cases_ko": [
+  "팀이 주간 보고 자동화",
+  "Slack에서 고객 지원 티켓 처리",
+  "제품 피드백 분류"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Notion AI 제한 체험만)",
+  "plans": [
+   {"name": "Free", "price": 0, "currency": "KRW", "period": "month", "limits": "AI 체험만, 파일 업로드 5MB"},
+   {"name": "Plus", "price": 14000, "currency": "KRW", "period": "month", "limits": "멤버당, AI는 체험만"},
+   {"name": "Business", "price": 30000, "currency": "KRW", "period": "month", "limits": "멤버당, Notion Agent·회의록·Enterprise Search 포함"},
+   {"name": "Enterprise", "price": null, "currency": "KRW", "period": null, "limits": "맞춤 가격, LLM 데이터 보존 0"},
+   {"name": "Notion credits(Custom Agents 애드온)", "price": 10, "currency": "USD", "period": "month", "limits": "1,000 크레딧당"}
+  ],
+  "pricing_url": "https://www.notion.com/pricing"
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": ["데스크톱", "모바일"],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {"field": "company", "url": "https://www.notion.com/product/ai", "quote": "© 2026 Notion Labs, Inc."},
+  {"field": "one_liner_ko", "url": "https://www.notion.com/product/ai", "quote": "Infinite minds, built for teamwork. Answer questions, prioritize tasks, and write reports—all while you sleep."},
+  {"field": "what_it_does_ko", "url": "https://www.notion.com/product/ai", "quote": "Notion AI is your built-in teammate inside Notion, working directly in your pages, docs, tasks, and databases so you can move faster without switching tools."},
+  {"field": "what_it_does_ko", "url": "https://www.notion.com/product/ai", "quote": "Custom Agents automate recurring work for your entire team. Set a trigger or schedule, and the agent handles it from there"},
+  {"field": "key_features", "url": "https://www.notion.com/product/ai", "quote": "Chat with Notion Agent to take on entire tasks, using context from your workspace and connected apps to create and edit pages and databases."},
+  {"field": "key_features", "url": "https://www.notion.com/product/ai", "quote": "Capture meetings with AI Meeting Notes , which transcribe conversations, summarize key points, and surface insights automatically."},
+  {"field": "key_features", "url": "https://www.notion.com/product/ai", "quote": "Dive deep on a topic with Research Mode to generate detailed reports and summaries."},
+  {"field": "key_features", "url": "https://www.notion.com/product/ai", "quote": "Switch any workflow to a different model or provider, without losing any context."},
+  {"field": "use_cases_ko", "url": "https://www.notion.com/product/ai", "quote": "Automate weekly reporting →"},
+  {"field": "use_cases_ko", "url": "https://www.notion.com/product/ai", "quote": "Resolve support tickets in Slack →"},
+  {"field": "use_cases_ko", "url": "https://www.notion.com/product/ai", "quote": "Triage product feedback →"},
+  {"field": "pricing", "url": "https://www.notion.com/pricing", "quote": "Free ₩0 per seat/month Sign up"},
+  {"field": "pricing", "url": "https://www.notion.com/pricing", "quote": "Plus ₩14,000 per seat/month Get started"},
+  {"field": "pricing", "url": "https://www.notion.com/pricing", "quote": "Business ₩30,000 per seat/month Get started"},
+  {"field": "pricing", "url": "https://www.notion.com/pricing", "quote": "AI agents handle repetitive tasks autonomously, so your team doesn’t have to. Free to try, then $10 per 1,000 monthly Notion credits."},
+  {"field": "pricing", "url": "https://www.notion.com/product/ai", "quote": "Notion AI is included with Notion’s Business and Enterprise plans, with core features like Notion Agent, AI Meeting Notes, and Enterprise Search."},
+  {"field": "platforms", "url": "https://www.notion.com/pricing", "quote": "Use Notion offline on the desktop and mobile app."},
+  {"field": "korean_support", "url": "https://www.notion.com/product/ai", "quote": "ภาษาไทย \n 한국어 \n 日本語"}
+ ],
+ "mismatch": [
+  {"official": "Notion AI는 Business·Enterprise 요금제에 포함되고, 다른 요금제는 제한 체험만 제공. 별도 애드온은 Custom Agents용 Notion 크레딧($10/1,000 크레딧)뿐", "diff": "기존 '애드온(월 구독)'과 달리 Notion AI 자체는 별도 월 구독 애드온이 아니라 상위 요금제 번들", "url": "https://www.notion.com/product/ai"}
+ ]
+}

@@ -1,0 +1,57 @@
+{
+ "company": "Suno, Inc.",
+ "one_liner_ko": "간단한 프롬프트만으로 상상하는 노래를 만드는 AI 음악 생성 서비스.",
+ "what_it_does_ko": "Suno는 장르·분위기·주제나 직접 쓴 가사를 입력하면 보컬·가사·편곡까지 갖춘 완성곡을 1분 안에 만들어 주는 AI 음악 생성기다. 브라우저용 DAW인 Suno Studio에서 곡을 편집·믹싱할 수 있다. 내 목소리를 녹음해 노래하게 하는 Voices, 스템 분리, 리믹스, 내 녹음으로 맞춤 모델 학습 기능이 있다. 웹·iOS·안드로이드에서 쓸 수 있으며, 유료 구독자가 만든 곡은 상업적 이용이 가능하다고 안내한다.",
+ "key_features": [
+  "텍스트 프롬프트로 보컬·가사·편곡이 포함된 완성곡 생성",
+  "브라우저 기반 DAW Suno Studio(MIDI·이펙트·자동화)",
+  "내 목소리로 노래 만들기(Voices)",
+  "스템 분리(보컬·악기 트랙 분리)",
+  "리믹스(스타일·가사 변경, 내 녹음 기반 재구성)",
+  "내 녹음으로 맞춤 모델 학습(Custom models)",
+  "장르·분위기별 음악 라이브러리"
+ ],
+ "use_cases_ko": [
+  "크리에이터가 유튜브·팟캐스트·광고용 배경음악 제작",
+  "음악 경험이 없는 사람부터 프로 프로듀서까지 곡 작업",
+  "앨범 발매 등 상업적 음원 제작(유료 구독 시)"
+ ],
+ "pricing": {
+  "free_tier": "있음 (하루 50 크레딧, 상업적 권리 없음, 무료 모델만)",
+  "plans": [
+   {"name": "Free", "price": 0, "currency": "USD", "period": "month", "limits": "하루 50 크레딧, 상업적 권리 없음"},
+   {"name": "Pro", "price": 8, "currency": "USD", "period": "month", "limits": "월 2,500 크레딧, 월 20곡 다운로드, 상업적 이용 권리 (연간 결제 시 표시 가격으로 보임)"},
+   {"name": "Premier", "price": 24, "currency": "USD", "period": "month", "limits": "월 10,000 크레딧, 월 60곡 다운로드, Suno Studio (연간 결제 시 표시 가격으로 보임)"}
+  ],
+  "pricing_url": "https://suno.com/pricing"
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": ["웹", "iOS", "안드로이드"],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {"field": "company", "url": "https://suno.com", "quote": "© 2026 Suno, Inc."},
+  {"field": "one_liner_ko", "url": "https://suno.com", "quote": "Make any song you can imagine"},
+  {"field": "one_liner_ko", "url": "https://suno.com", "quote": "Start with a simple prompt or dive into our pro editing tools, your next track is just a step away."},
+  {"field": "what_it_does_ko", "url": "https://suno.com", "quote": "Suno helps you create complete, original songs – vocals, lyrics, full production – from a single text prompt in under a minute, across every genre."},
+  {"field": "key_features", "url": "https://suno.com", "quote": "A browser-based DAW for arranging, editing and mixing every part of a song until it is exactly yours."},
+  {"field": "key_features", "url": "https://suno.com/pricing", "quote": "Access to Suno Studio - now with MIDI, effects, automation, and design-your-own-plugins"},
+  {"field": "key_features", "url": "https://suno.com", "quote": "Record a few seconds of your own voice, then hear it sing anything you write, in any style."},
+  {"field": "key_features", "url": "https://suno.com", "quote": "Pull any song apart into clean, time-aligned stems and carry them into the DAW you already use."},
+  {"field": "key_features", "url": "https://suno.com", "quote": "Take a song somewhere new. Change its style, rewrite the lyrics or rebuild it around your own recording."},
+  {"field": "key_features", "url": "https://suno.com", "quote": "Train a model on your own recordings so every song it makes starts from your sound."},
+  {"field": "key_features", "url": "https://suno.com", "quote": "Browse songs by genre, mood and occasion"},
+  {"field": "use_cases_ko", "url": "https://suno.com", "quote": "royalty free music for YouTube, podcasts, ads, or any commercial project."},
+  {"field": "use_cases_ko", "url": "https://suno.com", "quote": "Suno is built for everyone – people making music for the first time and chart-topping pros alike."},
+  {"field": "use_cases_ko", "url": "https://suno.com", "quote": "from using them as background music in videos to publishing an album."},
+  {"field": "pricing", "url": "https://suno.com/pricing", "quote": "Access to our free models \n 50 credits per day"},
+  {"field": "pricing", "url": "https://suno.com/pricing", "quote": "No commercial rights"},
+  {"field": "pricing", "url": "https://suno.com/pricing", "quote": "$8\n /month \n Saves $24 by billing yearly!"},
+  {"field": "pricing", "url": "https://suno.com/pricing", "quote": "2,500 credits per month \n 20 song downloads per month \n Commercial use rights"},
+  {"field": "pricing", "url": "https://suno.com/pricing", "quote": "$24\n /month \n Saves $72 by billing yearly!"},
+  {"field": "pricing", "url": "https://suno.com/pricing", "quote": "10,000 credits per month \n 60 song downloads per month"},
+  {"field": "platforms", "url": "https://suno.com/about", "quote": "Full creative experiences on web, iOS and Android let the music travel with you."},
+  {"field": "korean_support", "url": "https://suno.com/pricing", "quote": "모델 버전 간의 차이점은 무엇인가요?"}
+ ],
+ "mismatch": []
+}

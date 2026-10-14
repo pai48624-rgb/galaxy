@@ -1,0 +1,57 @@
+{
+ "company": "Pictory",
+ "one_liner_ko": "텍스트·블로그·스크립트·PPT·이미지·URL 등을 몇 분 만에 전문적인 영상으로 바꿔 주는 AI 영상 제작 도구.",
+ "what_it_does_ko": "Pictory는 텍스트, 블로그, 스크립트, 아이디어, PPT, 이미지, 화면 녹화, URL, 기존 영상을 자동 편집·자막·AI 음성·AI 아바타·템플릿을 붙여 영상으로 만든다. 내용을 이해해 구조를 잡고 알맞은 영상 소재를 찾아 장면을 구성한다. 브랜드 글꼴·색·로고를 적용하고 자막·전환·레이아웃을 조정할 수 있다. PDF 문서를 요약해 문서 속 차트·이미지를 재사용한 영상도 만들며 브라우저에서 동작한다.",
+ "key_features": [
+  "텍스트·스크립트·블로그를 영상으로 변환(Text to Video)",
+  "URL·PPT·PDF·오디오를 영상으로 변환",
+  "AI Studio — 프롬프트로 이미지·영상 클립 생성",
+  "이미지를 움직이는 영상으로(Image to Video)",
+  "AI 아바타와 음성 복제",
+  "자동 자막·캡션, 텍스트로 영상 편집",
+  "브랜드 키트(글꼴·색·로고) 적용",
+  "Make·Zapier 연동과 크롬 확장"
+ ],
+ "use_cases_ko": [
+  "마케터가 광고·소셜 영상 대량 제작",
+  "교육 담당자가 문서·PPT로 교육 영상 제작",
+  "크리에이터가 긴 스크립트를 짧은 소셜 클립으로 재가공"
+ ],
+ "pricing": {
+  "free_tier": "없음 (14일 무료 체험만)",
+  "plans": [
+   {"name": "Starter", "price": 29, "currency": "USD", "period": "month", "limits": "1인, 월 200분 영상, 5GB (연간 결제 시 월 $25)"},
+   {"name": "Professional", "price": 59, "currency": "USD", "period": "month", "limits": "1인, 월 600분 영상, 20GB, 음성 복제 (연간 결제 시 월 $35)"},
+   {"name": "Team", "price": 199, "currency": "USD", "period": "month", "limits": "3인 이상, 월 1,800분, 100GB (연간 결제 시 월 $119)"},
+   {"name": "Enterprise", "price": null, "currency": "USD", "period": null, "limits": "10인 이상, 맞춤"}
+  ],
+  "pricing_url": "https://pictory.ai/pricing/?nav=mega"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["웹", "API"],
+ "korean_support": "불명",
+ "evidence": [
+  {"field": "company", "url": "https://pictory.ai", "quote": "Pictory - Text to Video AI"},
+  {"field": "one_liner_ko", "url": "https://pictory.ai", "quote": "Create professional videos in minutes. Turn text, blogs, scripts, ideas, PPTs, images, screen recordings, URLs, and existing videos into engaging videos"},
+  {"field": "what_it_does_ko", "url": "https://pictory.ai", "quote": "It understands your content, builds the structure, finds the right visuals, highlights the key moments, and delivers a clean, polished video you can publish instantly."},
+  {"field": "what_it_does_ko", "url": "https://pictory.ai/doc-to-video", "quote": "Upload a report, manual or guide. Pictory summarizes it, reuses your charts and images, and builds a video you can edit scene by scene."},
+  {"field": "key_features", "url": "https://pictory.ai", "quote": "Create images and videos from text prompts, and add them directly into your video scenes using the editor."},
+  {"field": "key_features", "url": "https://pictory.ai", "quote": "Start with a single image, add a quick prompt, and instantly turn it into a smooth, animated video clip."},
+  {"field": "key_features", "url": "https://pictory.ai/pricing/?nav=mega", "quote": "Edit video recordings easily using text, and generate video highlights."},
+  {"field": "key_features", "url": "https://pictory.ai", "quote": "Make and Zapier move videos through your processes automatically"},
+  {"field": "key_features", "url": "https://pictory.ai", "quote": "Upload brand fonts, colors, and logos to ensure every scene follows your established look."},
+  {"field": "use_cases_ko", "url": "https://pictory.ai", "quote": "Accelerate content creation for marketing, sales, and training."},
+  {"field": "use_cases_ko", "url": "https://pictory.ai", "quote": "You can refresh old material, turn presentations into explainers, break long scripts into short social clips"},
+  {"field": "pricing", "url": "https://pictory.ai/pricing/?nav=mega", "quote": "14 Days Free Use"},
+  {"field": "pricing", "url": "https://pictory.ai/pricing/?nav=mega", "quote": "Annual Pricing (save up to 40%)"},
+  {"field": "pricing", "url": "https://pictory.ai/pricing/?nav=mega", "quote": "Pictory Pricing | From $25 per Month"},
+  {"field": "pricing", "url": "https://pictory.ai/pricing/?nav=mega", "quote": "For video creators who need professional-quality results\n $ 59  \n per month"},
+  {"field": "pricing", "url": "https://pictory.ai/pricing/?nav=mega", "quote": "For teams who work together to create videos\n $ 199  \n per month"},
+  {"field": "api", "url": "https://pictory.ai/pricing/?nav=mega", "quote": "Automate and scale video creation\n Explore API Pricing"},
+  {"field": "platforms", "url": "https://pictory.ai/doc-to-video", "quote": "It runs online in your browser and is free to try."}
+ ],
+ "mismatch": [
+  {"official": "상시 무료 플랜 없이 14일 무료 체험 후 Starter $29/월부터 유료", "diff": "기존 '프리미엄(무료+유료 구독)'과 달리 영구 무료 플랜이 보이지 않음(무료 체험만)", "url": "https://pictory.ai/pricing/?nav=mega"}
+ ]
+}

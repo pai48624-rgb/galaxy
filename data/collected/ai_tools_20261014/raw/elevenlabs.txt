@@ -1,0 +1,657 @@
+=== [home] https://elevenlabs.io
+Free AI Voice Generator & Voice Agents Platform | ElevenLabs &)]:tw-overflow-x-hidden"> 
+ strong]:tw-font-normal tw-text-gray-600"> Introducing Eleven v4 Meet Eleven v4, our most emotive model yet. 
+ Discover 
+ Skip to content 
+ Products
+ Solutions
+ Customers
+ Resources
+ Enterprise
+ Pricing
+ Log in Sign up 
+ Contact sales Log in 
+ Contact sales 
+ Sign up 
+ Bringing technology to life 
+ Sign up Contact sales 
+ Powering the best enterprises, creators, and developers. From ElevenAgents for customer experience, ElevenCreative for content creation, to the leading AI voice generator.
+ ElevenCreative
+ Creative
+ ElevenAgents
+ Agents
+ ElevenAPI
+ API
+ AI Voice Generator
+ Text to Speech
+ Music
+ Speech to Text
+ Voice Cloning
+ Dubbing
+ Narration 
+ Expressive voices that bring audiobooks and podcasts to life.
+ Advertisement 
+ Persuasive voices that drive action and brand recall.
+ Characters 
+ Playful and engaging voices for cartoons or video games.
+ Narration 
+ Expressive voices that bring audiobooks and podcasts to life.
+ Conversational 
+ Natural voices perfect for informal scenarios.
+ Social Media 
+ Trendy, attention-grabbing voices for short-form content.
+ Sign up 
+ Trusted by leading developers and enterprises
+ Read all stories 
+ Twilio
+ The Walt Disney Studios
+ KPN
+ Stripe is now an ElevenLabs customer
+ Telus
+ Cisco
+ Epic games uses ElevenLabs
+ Nvidia
+ Revolut
+ Meta
+ Zoom
+ Square + ElevenLabs partnership
+ Ramp
+ IBM
+ Deutsche Telekom
+ Klarna
+ Harvey
+ Salesforce + ElevenLabs
+ Two platforms built on the same research foundation
+ ElevenCreative 
+ Generate ultra-realistic speech, videos, music, and sound effects.
+ ElevenAgents 
+ Configure, deploy and monitor conversational agents.
+ ElevenCreative
+ Create, edit, and localize in one AI platform
+ Learn more 
+ Create ultra-realistic speech, turn ideas into videos, compose music in any genre, or design immersive sound effects. Craft your next film, ad, campaign, social content, audiobook, or podcast with our creative platform.
+ All-in-one AI editor
+ Create podcasts, audiobooks and voiceovers in an editor built on all of ElevenLabs’ audio research.
+ Amidst the outer atmosphere of the planet Aurora, the sky shimmered with fractured light, as though the planet's veil were made of stained glass suspended in space.
+ Sensors pulsed with irregular patterns, the kind no algorithm could quite reconcile.
+ Amidst the outer atmosphere of the planet Aurora, the sky shimmered with fractured light, as though the planet's veil were made of stained glass suspended in space.
+ Ultra-realistic speech 
+ Create controllable, expressive speech layered across 90+ languages.
+ In the ancient land of Eldoria, where skies shimmered and forests, whispered secrets to the wind, lived a dragon named Zephyros. [sarcastically] Not the “burn it all down” kind... [giggles] but he was gentle, wise, with eyes like old stars. [whispers] Even the birds fell silent when he passed. ​
+ In the ancient land of Eldoria, where skies shimmered and forests, whispered secrets to the wind, lived a dragon named Zephyros. [sarcastically] Not the “burn it all down” kind... [giggles] but he was gentle, wise, with eyes like old stars. [whispers] Even the birds fell silent when he passed. 
+ English
+ English Afrikaans Arabic Armenian Assamese Azerbaijani Belarusian Bengali Bosnian Bulgarian Catalan Cebuano Chichewa Chinese Croatian Czech Danish Dutch Estonian Filipino Finnish French Galician Georgian German Greek Gujarati Hausa Hebrew Hindi Hungarian Icelandic Igbo Indonesian Irish Italian Japanese Javanese Kannada Kazakh Kirghiz Korean Latvian Lingala Lithuanian Luxembourgish Macedonian Malay Malayalam Mandarin Chinese Marathi Nepali Norwegian Pashto Persian Polish Portuguese (Brazil) Punjabi Romanian Russian Serbian Sindhi Slovak Slovenian Somali Spanish Swahili Swedish Tamil Telugu Thai Turkish Ukrainian Urdu Vietnamese Welsh 
+ Spuds Oxley
+ Spuds Oxley James Cassidy Hope Michael C. Vincent Christopher Adam John Doe Mark Peter Arabella Jessica Anne Bogart Ian Cartwell Alex Declan Sage Bradford David Castlemore Frederick Surrey Jon 
+ Play 
+ Music 
+ Generate studio-quality tracks instantly, any genre, any style, vocals or instrumental.
+ SFX 
+ Create custom sound effects, soundscapes and ambient audio or search the SFX library.
+ Voices 
+ Clone your voice, design one from a prompt, or explore 10,000+ voices from the library.
+ Image & Video 
+ Create or edit images and turn ideas into videos with leading models like Veo, Wan, Kling and Seedance.
+ NVIDIA 
+ Using synthetic voice technology to power multilingual marketing content
+ Clay 
+ Streamlining product updates and localization with AI voices
+ Duolingo 
+ Character voices for learning and marketing
+ Get started 
+ ElevenAgents
+ Deploy agents that talk, type, and take action
+ Learn more 
+ Configure, deploy and monitor natural, human-sounding agents in 90+ languages with leading accuracy and ultra-low latency across voice or chat.
+ Omnichannel agents
+ Agents listen, read and interact just like humans would across phone, chat, email and WhatsApp.
+ Can I get a refund?
+ Sure. Can you share your order number please?
+ It's EL4543490
+ Thank you. I have initiated the order refund process.
+ Refund completed
+ Analytics
+ Easily measure success rates and CX metrics, optimizing flows over time.
+ Resolution Rate
+ 83.4%
+ 100%
+ 50%
+ 0%
+ *]:tw-pointer-events-none"> 
+ V1: 
+ 87.37%
+ V2: 
+ 61.71%
+ 17 Aug
+ 24 Aug
+ Testing
+ Simulate real-world conversations to validate agents behave as expected before deployment.
+ Guardrails
+ Establish clear behavioral and compliance rules that keep agent responses aligned with policy.
+ Workflows
+ Handle complex conversation flows, apply business logic and connect securely to systems.
+ Deliveroo 
+ Using voice agents to enhance rider and restaurant experience
+ Meesho 
+ Delivering real-time, multilingual customer support with voice agents
+ Cars24 
+ Powering India’s largest voice-driven car retail operation
+ Get started 
+ ElevenAPI
+ Or build anything with a powerful host of APIs
+ Explore docs 
+ Text to Speech API 
+ Independently rated the leading Text to Speech models. Choose a model to optimize for consistency, latency or emotional control. All support 29+ languages.
+ Eleven Flash
+ 75ms latency for conversational usecases
+ Eleven Multilingual
+ Best lifelike consistent speech
+ Eleven v3
+ Our most expressive model yet
+ :focus-visible]:tw-outline-focus tw-shadow-sm tw-ring tw-isolate" style="border-top-left-radius:1.25rem;border-top-right-radius:1.25rem;border-bottom-right-radius:1.25rem;border-bottom-left-radius:1.25rem"> 
+ import { ElevenLabsClient } from "@elevenlabs/elevenlabs-js" ;
+ const client = new ElevenLabsClient({ apiKey: "YOUR_API_KEY" });
+ await client.textToSpeech.convert( "JBFqnCBsd6RMkjVDRZzb" , {
+ outputFormat: "mp3_44100_128" ,
+ text: "The first move is what sets everything in motion." ,
+ modelId: "eleven_multilingual_v2" ,
+}); 
+ Speech to Text API 
+ The most accurate ASR model . Low cost and supporting speaker diarization and character level timestamps.
+ Eleven Scribe
+ 98% accuracy
+ Music API 
+ Studio-grade music with natural language prompts in any genre, style or structure. 
+ Music
+ Built in partnership with artists, labels, and publishers. Cleared for broad commercial use. Commercial rights vary by subscription tier.
+ :focus-visible]:tw-outline-focus tw-shadow-sm tw-ring tw-isolate" style="border-top-left-radius:1.25rem;border-top-right-radius:1.25rem;border-bottom-right-radius:1.25rem;border-bottom-left-radius:1.25rem"> 
+ import { ElevenLabsClient } from "@elevenlabs/elevenlabs-js" ;
+ const { music } = new ElevenLabsClient();
+ const compositionPlan = await music.compositionPlan.create({
+ prompt: "Fast-paced electronic track for a video..." ,
+ musicLengthMs: 10000 ,
+}); 
+ Showcasing the global impact of AI audio research
+ ElevenCreative
+ Creative
+ ElevenAgents
+ Agents
+ ElevenLabs showcases multilingual AI voice technology with NVIDIA ACE at Computex 
+ ElevenLabs AI voice revives Salvador Dalí with a surreal twist 
+Ukrainian public services will speak through AI: announcing a partnership with ElevenLabs
+Matthew McConaughey’s Lyrics of Livin’ expands with ElevenLabs
+ Bringing ElevenLabs' AI voice agents to the customer service of Europe’s largest Telco 
+ ElevenLabs Impact Announces $1B In-Kind Donation and Releases Original Docuseries 
+ Research that redefines human technology interaction
+ Our vision is to make communication and creation with technology seamless. We build our own foundational models, beginning with the first human-like voice model and now extending far beyond voice.
+ Eleven Multilingual v2
+ Our most consistent and lifelike Text to Speech model
+ Aug 2023
+ Eleven Turbo v2
+ Our high-quality, low-latency Text to Speech model
+ Nov 2023
+ Eleven Flash v2.5
+ Our ultra-low latency Text to Speech model
+ Dec 2024
+ Scribe
+ The original Scribe model, later surpassed by Scribe v2
+ Feb 2025
+ Eleven v3
+ The most expressive Text to Speech model ever released
+ Jun 2025
+ Eleven Music
+ One of the highest quality AI music models, built in partnership with artists, labels, and publishers.
+ Aug 2025
+ Scribe v2 Realtime
+ The most accurate real-time transcription model
+ Nov 2025
+ Scribe v2
+ The most accurate transcription model ever released
+ Jan 2026
+ Expressive Mode for Agents
+ More expressive voice agents, built for real-world customer conversations.
+ Feb 2026
+ Music v2
+ Better vocals, instrumentation, and arrangement across every genre.
+ May 2026
+ Dubbing v2
+ For the first time, the emotion and performance of the original speaker carries across every language.
+ May 2026
+ Eleven v4
+ Our fastest and most emotive voice models yet.
+ Sep 2026
+ Advancing research beyond voice into transcription, music, voice cloning, intelligent agents, and more.
+ Sep 2026 
+ Introducing Eleven v4, our most emotive model 
+ May 2026 
+ Introducing Dubbing v2 
+ Learn more 
+ Safety, built in
+ Learn more 
+ :focus-visible]:tw-outline-focus tw-rounded-sm"> Moderation
+ We actively monitor content generated with our technology.
+ Accountability
+ We believe misuse must have consequences.
+ Provenance
+ We believe that you should know if audio is AI-generated.
+ Latest updates
+ All posts 
+ :focus-visible]:tw-outline-focus tw-rounded-sm"> 
+ Introducing Flows in ElevenCreative 
+ Category Product Date Mar 11, 2026 
+ Introducing ElevenLabs for Government 
+ Category Product Date Feb 11, 2026 
+ Introducing Expressive Mode for ElevenAgents 
+ Category Product Date Feb 10, 2026 
+ AI Communication Platform
+ Talk to sales Create an AI agent 
+ English 
+ ElevenCreative 
+ Text to Speech 
+ Speech to Text 
+ Voice Changer 
+ Text to Sound Effects 
+ Voice Cloning 
+ Voice Isolator 
+ AI Music Generator 
+ Studio 
+ Voice Design 
+ AI Voice Generator 
+ AI Image Generator 
+ AI Video Generator 
+ Ads Engine 
+ ElevenAgents 
+ Voice Agents 
+ Conversational AI 
+ Integrations 
+ Telecommunications 
+ Financial Services 
+ Healthcare 
+ Government 
+ Technology 
+ Retail & E-commerce 
+ Travel & Hospitality 
+ Customer Support 
+ Chatbots 
+ ElevenAPI 
+ API Reference 
+ Agents API 
+ Speech Engine 
+ Dubbing API 
+ Text to Speech API 
+ Speech to Text API 
+ Sound Effects API 
+ Music API 
+ API Key 
+ Resources 
+ Blog 
+ Iconic Marketplace 
+ Impact Program 
+ Startup Grants 
+ Help Center 
+ Webinars 
+ Docs 
+ Enterprise 
+ Trust Center 
+ India 
+ Socials 
+ X ElevenLabs 
+ ElevenCreative 
+ Developers 
+ LinkedIn ElevenLabs 
+ ElevenCreative 
+ GitHub 
+ YouTube 
+ Discord 
+ TikTok 
+ Instagram 
+ Facebook 
+ Reddit 
+ Company 
+ About 
+ Careers 
+ Safety 
+ Brand & Press Kit 
+ ElevenLabs Summit 
+ Policies Terms 
+ Privacy 
+ EU Digital Services Act (DSA) 
+ Modern Slavery Policy 
+ CCPA Notice 
+ EU-US DPF Policy 
+ AI Transparency 
+ Human Rights Statement 
+ Cookie Settings 
+ Voice chat
+ Voice chat
+
+=== [pricing] https://elevenlabs.io/pricing
+ElevenLabs Pricing for Creators & Businesses of All Sizes &)]:tw-overflow-x-hidden"> 
+ strong]:tw-font-normal tw-text-gray-600"> Introducing Eleven v4 Meet Eleven v4, our most emotive model yet. 
+ Discover 
+ Skip to content 
+ Products
+ Solutions
+ Customers
+ Resources
+ Enterprise
+ Pricing
+ Log in Sign up 
+ Contact sales Log in 
+ Sign up 
+ Flexible pricing for your needs
+ ElevenCreative
+ Creative
+ ElevenAgents
+ Agents
+ ElevenAPI
+ API
+ ElevenCreative
+ Creative
+ ElevenAgents
+ Agents
+ ElevenAPI
+ API
+ Monthly billing Monthly billing Yearly billing 
+ Free
+ $0 per month 
+ Build for free 
+ Text to Speech 
+ Speech to Text 
+ Sound Effects 
+ Voice Design 
+ Music 
+ Productions 
+ Image 
+ 3 Projects in Studio 
+ 10k credits per month 
+ Starter
+ Until Oct 18 
+ $6 First month 83% off 
+ $1 per month 
+ Choose Starter 
+ Everything in free, plus 
+ Commercial License 
+ Instant Voice Cloning 
+ 20 Projects in Studio 
+ Music commercial use 
+ Dubbing Studio 
+ Image & Video 
+ 30k credits per month 
+ Creator
+ Popular
+ $22 First month 50% off 
+ $11 per month 
+ Choose Creator 
+ Everything in Starter, plus 
+ Professional Voice Cloning 
+ Additional Credits 
+ 121k credits per month 
+ Pro
+ $99 per month 
+ Choose Pro 
+ Everything in Creator, plus 
+ 44.1kHz PCM audio output via API 
+ 192kbps quality audio 
+ 600k credits per month 
+ For
+Businesses
+ Scale
+ $299 per month 
+ Choose Scale 
+ Everything in Pro, plus 
+ 3 Workspace seats 
+ Team Collaboration 
+ 3 Professional Voice Clones 
+ 1.8M credits per month 
+ 3 seats
+ Business
+ $990 per month 
+ Choose Business 
+ Everything in Scale, plus 
+ Low-latency TTS as low as 5c/minute 
+ 10 Professional Voice Clones 
+ 10 Workspace seats 
+ 6M credits per month 
+ 10 seats
+ Enterprise
+ Custom pricing 
+ Contact us 
+ Everything in Business, plus 
+ Custom terms & assurance around DPA/SLAs 
+ BAAs for HIPAA customers 
+ Custom SSO 
+ More seats and voices 
+ Elevated concurrency limits 
+ Fully managed dubbing with Productions 
+ Significant discounts at scale 
+ Priority support 
+ Custom number of credits and seats
+ Prices exclude all taxes, levies and duties.
+ Calculate your costs based on your usage needs
+ Monthly billing Monthly billing Yearly billing 
+ Startup Grants Program
+ Build intelligent, real-time conversational AI agents into your new product or startup for free with an ElevenLabs Grant.
+ 12 Months free
+ To build, launch & test
+ 33M Characters
+ Valid for 12 months
+ Learn more 
+ Compare plans
+ Text to Speech
+ Speech to Text
+ Voice Changer
+ Sound Effects
+ Voice Isolator
+ Music
+ Image & Video
+ Automatic Dubbing
+ Dubbing Studio
+ Voices
+ Studio
+ Productions
+ Free 
+ Starter 
+ Creator 
+ Pro 
+ Scale 
+ Business 
+ Free
+ Free Starter Creator Pro Scale Business 
+ Text to Speech (UI)
+ Minutes included
+ Extra minute
+ Commercial use
+ Eleven v3 model
+ Languages
+ Custom voice slots
+ Instant Voice Cloning
+ Professional Voice Cloning
+ Audio quality
+ WAV / PCM 44.1 kHz
+ Concurrent requests
+ ~ 10
+ ~ $0.36 
+ 74
+ 3
+ 128 kbps, 44.1kHz
+ 2
+ ~ 30
+ ~ $0.20 
+ 74
+ 10
+ 128 kbps, 44.1kHz
+ 3
+ ~ 121
+ ~ $0.18 
+ 74
+ 30
+ 1
+ 128 & 192 kbps, 44.1kHz
+ 5
+ ~ 600
+ ~ $0.17 
+ 74
+ 160
+ 1
+ 128 & 192 kbps, 44.1kHz
+ 10
+ ~ 1,800
+ ~ $0.17 
+ 74
+ 660
+ 3
+ 128 & 192 kbps, 44.1kHz
+ 15
+ ~ 6,000
+ ~ $0.17 
+ 74
+ 2,200
+ 10
+ 128 & 192 kbps, 44.1kHz
+ 25
+ FAQs
+ How much does each plan cost and what is included?
+ Monthly price and included credits per plan: Free $0 (10,000 credits); Starter $6 (30,000 credits); Creator $22 (121,000 credits, $11 for the first month); Pro $99 (600,000 credits); Scale $299 (1,800,000 credits, 3 seats); Business $990 (6,000,000 credits, 10 seats); Enterprise is custom. Credits are shared across every product — see the per-product credit costs below.
+ How do text characters and credits work?
+ Each text character you generate consumes credits, with the exact cost depending on the model used. For V2 Multilingual models, 1 text character equals 1 credit. For V2 Flash/Turbo English and V2.5 Flash/Turbo Multilingual models, discounted pricing applies for API usage, costing between 0.5 and 1 credit per character.
+ How many credits does each product use?
+ All products draw from one shared monthly credit pool, so the same credits can be spent on any of them and using one leaves fewer for the others. Approximate credit costs are: Text to Speech 1 credit per character; Speech to Text 330 credits per minute; Eleven Music 900 credits per minute; Sound Effects 200 credits per generation; Voice Changer and Voice Isolator 1,000 credits per minute; and Dubbing 2,000 credits per minute (automatic with watermark), 3,000 (automatic without watermark), 5,000 (Dubbing Studio with watermark) or 10,000 (Dubbing Studio without watermark).
+ When do my credits reset, and do unused credits roll over?
+ Your credit allowance resets at the start of each billing cycle, which begins on the day you subscribed. Unused credits roll over for up to two months — up to 2× your monthly quota — so your balance can reach at most 3× your monthly quota (this month's allotment plus up to two months of rollover), as long as you maintain an active paid subscription and do not downgrade or cancel. Downgrading or cancelling forfeits unused credits at the end of the cycle. Rollover does not apply to the Free plan. Pay-as-you-go top-up credits are separate and are not subject to this rollover cap. When your subscription renews, you receive a new monthly allotment of credits.
+ Do you offer annual billing, and what does it cost?
+ Yes. Annual billing works out to two months free — you pay for 10 months (annual price = monthly price × 10). The equivalent monthly price on an annual plan is $5 for Starter, $18.33 for Creator, $82.50 for Pro, $249.17 for Scale, and $825 for Business.
+ Is there a limit on how many credits I can use in a single request?
+ Yes. There is a maximum number of credits that can be used in a single generation request. The limit depends on whether you are on the Free tier or a paid subscription.
+ Am I charged for every generation?
+ Credits are charged per generation request, not per download. If you are not satisfied with the output, a limited number of free regenerations may be available as long as the content and certain settings do not change. Whether a regeneration is free is indicated before generating.
+ What happens if I upgrade, downgrade, or cancel my subscription?
+ If you upgrade to a higher plan, any unused credits from your previous plan will roll over into the next billing cycle. If you downgrade or cancel your subscription, your subscription will remain active until the end of the current billing cycle. After that, your account will be downgraded to the Free plan and any unused paid credits will expire.
+ When can I cancel my subscription?
+ You can cancel your subscription at any time. Your subscription will remain active until the end of your current billing cycle, after which it will not renew and your account will be downgraded to the Free plan.
+ How do I check how many credits I have remaining?
+ You can view your remaining credits by logging into the platform and navigating to your subscription page from your profile menu.
+ What kind of payment do you accept?
+ We accept Credit Card, Apple Pay, and Google Pay. Subscriptions are billed on a monthly or yearly basis starting from the day you subscribe.
+ Create with the highest quality AI Audio
+ Talk to sales Sign up 
+ English 
+ ElevenCreative 
+ Text to Speech 
+ Speech to Text 
+ Voice Changer 
+ Text to Sound Effects 
+ Voice Cloning 
+ Voice Isolator 
+ AI Music Generator 
+ Studio 
+ Voice Design 
+ AI Voice Generator 
+ AI Image Generator 
+ AI Video Generator 
+ Ads Engine 
+ ElevenAgents 
+ Voice Agents 
+ Conversational AI 
+ Integrations 
+ Telecommunications 
+ Financial Services 
+ Healthcare 
+ Government 
+ Technology 
+ Retail & E-commerce 
+ Travel & Hospitality 
+ Customer Support 
+ Chatbots 
+ ElevenAPI 
+ API Reference 
+ Agents API 
+ Speech Engine 
+ Dubbing API 
+ Text to Speech API 
+ Speech to Text API 
+ Sound Effects API 
+ Music API 
+ API Key 
+ Resources 
+ Blog 
+ Iconic Marketplace 
+ Impact Program 
+ Startup Grants 
+ Help Center 
+ Webinars 
+ Docs 
+ Enterprise 
+ Trust Center 
+ India 
+ Socials 
+ X ElevenLabs 
+ ElevenCreative 
+ Developers 
+ LinkedIn ElevenLabs 
+ ElevenCreative 
+ GitHub 
+ YouTube 
+ Discord 
+ TikTok 
+ Instagram 
+ Facebook 
+ Reddit 
+ Company 
+ About 
+ Careers 
+ Safety 
+ Brand & Press Kit 
+ ElevenLabs Summit 
+ Policies Terms 
+ Privacy 
+ EU Digital Services Act (DSA) 
+ Modern Slavery Policy 
+ CCPA Notice 
+ EU-US DPF Policy 
+ AI Transparency 
+ Human Rights Statement 
+ Cookie Settings 
+ Voice chat
+ Voice chat
+
+=== [about] https://elevenlabs.io/docs/overview/intro
+Documentation | ElevenLabs Documentation Learn more "> {var v=Object.create;var i=Object.defineProperty;var h=Object.getOwnPropertyDescriptor;var _=Object.getOwnPropertyNames;var y=Object.getPrototypeOf,M=Object.prototype.hasOwnProperty;var j=(e,o,t)=>()=>{if(t)throw t[0];try{return e&&(o=e(e=0)),o}catch(n){throw t=[n],n}};var E=(e,o)=>()=>{try{return o||e((o={exports:{}}).exports,o),o.exports}catch(t){throw o=0,t}},C=(e,o)=>{for(var t in o)i(e,t,{get:o[t],enumerable:!0})},m=(e,o,t,n)=>{if(o&&typeof o=="object"||typeof o=="function")for(let c of _(o))!M.call(e,c)&&c!==t&&i(e,c,{get:()=>o[c],enumerable:!(n=h(o,c))||n.enumerable});return e};var b=(e,o,t)=>(t=e!=null?v(y(e)):{},m(o||!e||!e.__esModule?i(t,"default",{value:e,enumerable:!0}):t,e)),w=e=>m(i({},"__esModule",{value:!0}),e);var r=j(()=>{});var u=E((L,p)=>{r();p.exports=_jsx_runtime});var g={};C(g,{default:()=>l,frontmatter:()=>X,toc:()=>D});r();var s=b(u());r();var{useMDXComponents:d}=MdxJsReact;var D=[],X=void 0;function f(e){let o={p:"p",...d(),...e.components},{A:t,ErrorBoundary:n}=o;return t||x("A",!0),n||x("ErrorBoundary",!0),(0,s.jsxs)(o.p,{children:["Eleven v4 and Eleven v4 Turbo are here. Our fastest and most emotive speech synthesis models yet. ",(0,s.jsx)(n,{children:(0,s.jsx)(t,{href:"/docs/overview/models#eleven-v4",target:"_blank",children:"Learn more"})})]})}function l(e={}){let{wrapper:o}={...d(),...e.components};return o?(0,s.jsx)(o,{...e,children:(0,s.jsx)(f,{...e})}):f(e)}function x(e,o){throw new Error("Expected "+(o?"component":"object")+" `"+e+"` to be defined: you likely forgot to import, pass, or provide it.")}return w(g);})();
+;return Component;"> For AI agents: a documentation index is available at the root level at /llms.txt. Append /llms.txt to any URL for a page-level index, or .md for the markdown version of any page.
+ Search / 
+ Connect 
+ Blog Help Center API Pricing Sign up Login 
+ English 
+ Overview ElevenCreative ElevenAgents ElevenAPI Reception.ai API reference Changelog Help Center 
+ Skip to navigation On this page
+ How ElevenLabs works 
+ Concepts 
+ Choose your path 
+ Meet the models 
+ Browse by capability 
+ Scroll to top 
+ ElevenLabs Documentation
+ Copy page 
+ Explore our docs and guides to integrate ElevenLabs
+ How ElevenLabs works
+ ElevenLabs provides AI voice infrastructure: text-to-speech, speech-to-text, voice cloning, conversational agents, and generative audio. You can use it in four ways, suited to different audiences.
+ ElevenCreative is a no-code web application where creators, producers, and editors generate voiceovers, music, dubs, and studio projects directly in the browser.
+ ElevenAgents is the platform for designing and operating conversational voice agents, with a visual builder for non-technical users and full programmatic control for developers.
+ ElevenAPI exposes every capability as a REST interface with official Python and TypeScript SDKs, so developers can embed voice into their own applications and workflows.
+ Reception AI is a ready-to-deploy AI phone receptionist for small and medium businesses that answers calls, books appointments, and manages day-to-day operations from a single dashboard.
+ Concepts
+ Voices are the speech persona used in audio generation. Each voice has a unique ID — for example, JBFqnCBsd6RMkjVDRZzb — that you select in the dashboard or pass in API requests. ElevenLabs maintains a library of 10,000+ voices . You can also clone a voice from an audio recording or generate one from a text description.
+ Models control the quality, latency, and language coverage of generated audio. eleven_v4 produces the most expressive output across 90+ languages. eleven_v4_turbo targets real-time use at median inference latency of ~100ms. Each capability — speech-to-text, music, sound effects — has its own dedicated model.
+ Credits are the unit of consumption shared across every product. Text-to-speech costs one credit per character of input text. Other operations are charged per second of audio processed. Credits reset monthly and unused credits roll over for up to two months. See pricing for a full breakdown.
+ Choose your path
+ ElevenCreative
+ Learn how to use the ElevenCreative platform with step-by-step guides
+ ElevenAgents
+ Learn how to build, launch, and scale agents with ElevenLabs
+ ElevenAPI
+ Learn how to integrate with the ElevenLabs API with examples and tutorials
+ Meet the models
+ Eleven v4
+ Our most emotive, high quality speech synthesis model
+ Exceptional voice cloning capabilities
+ 90+ la

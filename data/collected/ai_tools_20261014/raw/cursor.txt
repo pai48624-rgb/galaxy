@@ -1,0 +1,978 @@
+=== [home] https://cursor.com/
+AI Coding Agent for Building Ambitious Software | Cursor 
+ 콘텐츠로 건너뛰기 Cursor 
+ 모델 ↓ Grok 
+ Evals 
+ 제품 ↓ 에이전트 
+ 클라우드 
+ Grok 봇  ↗ 
+ 모바일 
+ 자동화 
+ CLI 
+ 마켓플레이스  ↗ 
+ 리뷰 
+ 기업 
+ 요금제 
+ 리소스 ↓ Changelog 
+ Blog 
+ 문서 
+ 커뮤니티 
+ 도움말  ↗ 
+ 워크숍 
+ 포럼  ↗ 
+ 채용 
+ 모델  → 
+ 제품  → 
+ 기업 
+ 요금제 
+ 리소스  → 
+ 로그인 문의하기 영업팀에 문의하기 다운로드 
+ Cursor는 대담한 소프트웨어를 만드는 당신의 코딩 에이전트입니다. 
+ macOS용 다운로드 ⤓ 
+ 시작하기 → 
+ 데모 요청 → 
+ This element contains an interactive demo for sighted users showing multiple Cursor interfaces: Cursor Desktop interface, Cursor CLI interface. The interface is displayed over a subtle, solid brand background.
+ Cursor Desktop
+ Cursor 시작하기 
+ 진행 중 2 
+ 랜딩 페이지 만들기
+ Reading docs 
+ Mission Control 계획
+ Generating plan 
+ 리뷰 준비 완료 3 
+ PyTorch MNIST 실험
+ 10m
+ PyTorch MNIST 실험 
+ 대시보드용 Cursor Rules 설정
+ 30m
+ 대시보드용 Cursor Rules 설정 
+ 생물정보학 도구
+ 45m
+ + 135 - 21 · 생물정보학 도구 
+ http://localhost:3000 
+ Acme Labs 
+ Software creation is changing. We are a group of researchers, engineers, and technologists inventing at the edge of what's useful and possible.
+ We have much to learn, try, and build. 
+ See projects Join our team → 
+ 2026 Secure codebase indexing Published 
+ 2026 Semantic search Published 
+ 2025 Reinforcement learning Published 
+ 2024 Shadow workspaces Published 
+ 2024 Multi-agent collaboration Published 
+ 2023 Context-aware completions Published 
+ 2023 Intelligent code navigation Published 
+ 2022 Fast inference optimization Published 
+ 2022 Language model fine-tuning Published 
+ 랜딩 페이지 만들기
+ 첨부된 Docs를 바탕으로 우리가 하는 일을 설명하는 랜딩 페이지를 만들어 주세요
+ Agent Grok 4.7 
+ Cursor CLI
+ CLI 시작하기 
+ Cursor Agent 
+ ~/cursor/cursor-web
+ 생물정보학 도구
+ affine gap alignment를 추가하세요. 현재는 기본적인 NW alignment만 있는데, indel을 더 잘 처리하려면 Gotoh 알고리즘이 필요합니다. 그리고 FASTA parser도 수정하세요.
+ → 
+ Grok 4.7
+ 명령어는 / · 파일은 @ 를 사용하세요 
+ 세계적 수준의 소프트웨어를 만드는 팀들이 매일 Cursor를 신뢰합니다 
+ 에이전트가 아이디어를 코드로 구현합니다 
+ 의사결정에 집중하는 동안 작업은 Cursor에 맡기고 개발 속도를 높이세요. 
+ 에이전트 기반 개발 살펴보기 → 
+ This element contains an interactive demo for sighted users. It's a demonstration of Cursor's IDE showing AI-powered coding assistance features. The interface is displayed over a subtle, solid brand background.
+ Cursor
+ Cursor 시작하기 
+ feature-prd.md 
+ presence.ts 
+ Plans feature-prd.md 
+ Grok 4.7 Build 
+ Mission Control Interface
+ A grid view of all open windows as scaled previews, allowing quick selection to bring any window to front.
+ Trigger
+ Menu item in MenuBar.tsx (View > Mission Control), hotkey F3, or double-tap desktop.
+ View Behavior
+ Overlay existing windows into a grid of live previews with spring-based layout animations and shared element transitions.
+ 3 Tasks 
+ Add multiplayer mode to useAppStore.ts 
+ Create a new MissionControlView.tsx component 
+ Update AppManager.tsx to apply expose modes. 
+ Add a task, ⌘K to generate... 
+ Mission Control 계획
+ macOS의 Exposé 스타일 윈도우 관리자와 유사한 Mission Control 인터페이스를 만들어 봅시다
+ Plan Grok 4.7 
+ 자율적으로 동작하고 병렬로 실행됩니다 
+ 에이전트는 자체 컴퓨터를 사용해 기능을 처음부터 끝까지 만들고, 테스트하고, 데모를 진행해 리뷰할 수 있도록 합니다. 
+ 클라우드 Agent 살펴보기 → 
+  cursor.com/agent  
+ This Week
+ Acme Research Dashboard 
+  Live Telemetry Pipeline 
+  Zero-Downtime Deploys 
+ This Month
+  Binary Protocol Parser 
+ Edge Cache Invalidation 
+  Auth Token Rotation 
+ Acme Research Dashboard 
+ let's build a dashboard to make our research findings interactive
+ Explored 12 files, 4 searches 
+ On it. I'll build the dashboard using your theme config, wire up the research data, and add interactive charts with public access controls.
+ Worked for 14m 22s
+ Processed screen recording 
+ Done! Here's a walkthrough of the dashboard.
+ Acme Labs
+ Summary
+ Built the interactive dashboard with realtime charts, data from Snowflake, and shadcn components. Deployed to staging via Vercel.
+ Add a follow up...
+ Agent 
+ Opus 5.5 
+ 모든 도구에서, 모든 단계에 걸쳐 
+ Cursor는 터미널에서 실행되고, Slack에서 협업하며, GitHub에서 PR을 검토합니다. 
+ curl https://cursor.com/install -fsS | bash 
+ This element contains an interactive demo for sighted users showing multiple Cursor interfaces: the CLI with command-line assistance, Slack integration for team communication. The interface is displayed over a scenic painted landscape wallpaper, giving the demo an artistic backdrop.
+ Slack
+ Slack용 Cursor 시작하기 
+ #feature-realtime-sync
+ 멤버 8명 
+ swhitmore 5m 
+ 1.0 changelog를 볼 수 있게 cursor.com/changelog#1.0으로 바로 갈 수 있으면 좋겠어요
+ eric 4m 
+ 문제없어 보여요
+ @cursor can you take a stab?
+ Cursor APP 2m 
+ Changelog 항목에 대한 직접 링크를 추가하고, 유지보수성을 높이기 위해 프로젝트 전반의 Node.js 버전 제약 조건을 업데이트했습니다.
+ PR 보기 Cursor에서 열기 Web에서 열기 
+ cursor-agent
+ CLI 시작하기 
+ > agent 
+ Cursor Agent
+ ~/anysphere/research · main
+ → Plan, search, build anything 
+ GPT-5.6 Sol Extra High Fast 
+ / commands · @ files · ! shell
+ AI 팀원에게 업무 맡기기 
+ 봇은 사용자의 도구에 로그인해 사용자처럼 활용하고, 완료된 작업을 가져옵니다. 
+ Grok 봇 다운로드 → 
+ Interactive demo showing Grok Bot. The interface is displayed over a scenic painted landscape wallpaper, giving the demo an artistic backdrop.
+ Grok Bot
+ 다운로드 
+ 소프트웨어를 만드는 새로운 방식. 
+ “ 어느 순간 완전히 판이 바뀌었어요. 도입률이 한 자릿수에서 80%를 넘겼죠. 순식간에 들불처럼 퍼졌고, 최고의 빌더들은 모두 Cursor를 쓰고 있었습니다. ”
+ Diana Hu General Partner , Y Combinator 
+ “ 제가 가장 선호하는 기업용 AI 서비스는 Cursor입니다. 현재 약 4만 명에 달하는 저희 엔지니어 모두가 AI의 도움을 받고 있으며, 생산성도 놀라울 만큼 향상되었습니다. ”
+ Jensen Huang President & CEO , NVIDIA 
+ “ 최고의 LLM 애플리케이션에는 자율성 조절 기능이 있습니다. AI에 어느 정도의 자율성을 부여할지 직접 제어할 수 있습니다. Cursor에서는 Cmd+K로 원하는 부분만 수정할 수도 있고, 완전 자율형 Agent 버전에 맡길 수도 있습니다. ”
+ Andrej Karpathy CEO , Eureka Labs 
+ “ Cursor는 수백 명의 열성적인 Stripe 직원들 사이에서 빠르게 수천 명 규모로 확산되었습니다. 우리는 다른 어떤 분야보다도 R&D와 소프트웨어 개발에 더 많이 투자하고 있으며, 그 과정을 더 효율적으로 만들면 경제적 효과도 상당합니다. ”
+ Patrick Collison Co‑Founder & CEO , Stripe 
+ “ 제가 지금 돈을 내고 쓰는 AI 도구 가운데 단연 가장 유용한 건 Cursor입니다. 빠르고, 필요할 때 필요한 곳에서 자동 완성을 해주고, 괄호도 제대로 처리하고, 키보드 단축키도 합리적이고, 자체 모델도 사용할 수 있고... 모든 게 정말 잘 갖춰져 있습니다. ”
+ shadcn Creator of shadcn/ui 
+ “ 프로그래머라는 일은 분명 더 재미있어지고 있습니다. 우리는 아직 가능한 것의 1% 지점에 있고, GPT-5 같은 모델은 Cursor 같은 대화형 경험에서 가장 빛을 발합니다. ”
+ Greg Brockman President , OpenAI 
+ 최첨단을 유지하세요 
+ 모든 작업에 가장 적합한 모델을 사용하세요 
+ OpenAI, Anthropic, Gemini, SpaceXAI, Cursor의 모든 최첨단 모델 중에서 선택하세요. 
+ 모델 살펴보기 ↗ 
+ Cursor에게 무엇이든 계획하거나 만들도록 요청하세요
+ Agent Auto Auto 추천 ✓ Grok 4.7 GPT-5.6 Sol Fable 5.1 Max Opus 5.5 Gemini 3.1 Pro Composer 2.5 
+ 자율형 에이전트로 구축 
+ 몇 시간 또는 며칠 동안 야심찬 작업을 병렬로 수행하는 에이전트 집단을 실행하세요. 
+ 클라우드 에이전트 알아보기 ↗ 
+ All Repos
+ Recents
+ Fix sign-in redirect on iOS Working · cursor/mobile 
+ Add rate limits to public routes Working · cursor/api 
+ Cache repository search results Working · cursor/web 
+ Investigate flaky CI shard Working · cursor/infra 
+ Retry failed billing webhooks Working · cursor/backend 
+ Polish usage chart loading state Working · cursor/dashboard 
+ 지속 가능한 소프트웨어 개발 
+ Fortune 500 기업의 절반 이상이 안전하게 대규모 개발을 가속화하기 위해 신뢰하는 솔루션입니다. 
+ 기업 플랜 살펴보기 → 
+ Changelog 
+ 2026년 10월 13일 
+ Origin 앱 마켓플레이스
+ 2026년 10월 6일 
+ 로컬 에이전트 원격 제어
+ 2026년 9월 23일 
+ Rollouts와 Security Review
+ 2026년 9월 10일 
+ Cursor Projects
+ Cursor의 새로운 기능 확인하기 → 
+ Cursor는 소프트웨어 개발의 미래를 만드는 데 집중하는 응용 연구 팀입니다. 
+ 함께하세요 → 
+ 최신 주요 업데이트 
+ 2026년 3월 27일 · 리서치 
+ Composer 2 기술 보고서
+ Sasha Rush · 읽는 데 3분 
+ 2026년 8월 14일 · 기업 
+ Cursor는 이제 SpaceX의 일원입니다
+ Cursor Team · 읽는 데 2분 
+ 2026년 9월 21일 · 리서치 
+ Grok 4.7 소개
+ Cursor Team · 읽는 데 3분 
+ 2026년 8월 18일 · 조사 
+ 모든 규모의 Git
+ VM 
+ Vicent Martí · 읽는 데 19분 
+ 모든 Blog 게시물 보기 → 
+ 지금 Cursor를 시작해 보세요. 
+ macOS용 다운로드 ⤓ 
+ 시작하기 → 
+ 제품 
+ 에이전트 
+ Teams 
+ 기업 
+ 요금제 
+ 코드 리뷰 
+ CLI 
+ 클라우드 Agent 
+ Composer 
+ 마켓플레이스  ↗ 
+ 리소스 
+ 다운로드 
+ Changelog 
+ 문서 
+ 알아보기  ↗ 
+ 포럼  ↗ 
+ 도움말  ↗ 
+ 워크숍 
+ 상태  ↗ 
+ 기업 
+ 채용 
+ Blog 
+ 커뮤니티 
+ 학생 
+ 브랜드 
+ 미래 
+ Anysphere  ↗ 
+ 법률 
+ 서비스 약관 
+ 허용 가능한 사용 정책 
+ Grok 봇 이용약관 
+ SpaceXAI 구독 약관  ↗ 
+ 개인정보 처리방침 
+ 쿠키 정책 
+ 데이터 사용 
+ 보안 
+ 연결하다 
+ X  ↗ 
+ LinkedIn  ↗ 
+ YouTube  ↗ 
+ © 2026 Anysphere, Inc. 🛡 SOC 2 | ISO27001 | ISO42001 | AIUC-1 인증 
+ 🌐 한국어 ↓ English 
+ 简体中文 
+ 日本語 
+ 繁體中文 
+ Español 
+ Français 
+ Português 
+ 한국어 ✓ 
+ Deutsch 
+ हिन्दी 
+ 콘텐츠로 건너뛰기 Cursor 
+ 모델 ↓ Grok 
+ Evals 
+ 제품 ↓ 에이전트 
+ 클라우드 
+ Grok 봇  ↗ 
+ 모바일 
+ 자동화 
+ CLI 
+ 마켓플레이스  ↗ 
+ 리뷰 
+ 기업 
+ 요금제 
+ 리소스 ↓ Changelog 
+ Blog 
+ 문서 
+ 커뮤니티 
+ 도움말  ↗ 
+ 워크숍 
+ 포럼  ↗ 
+ 채용 
+ 모델  → 
+ 제품  → 
+ 기업 
+ 요금제 
+ 리소스  → 
+ 로그인 문의하기 영업팀에 문의하기 다운로드 
+ Cursor는 대담한 소프트웨어를 만드는 당신의 코딩 에이전트입니다. 
+ macOS용 다운로드 ⤓ 
+ 시작하기 → 
+ 데모 요청 → 
+ This element contains an interactive demo for sighted users showing multiple Cursor interfaces: Cursor Desktop interface, Cursor CLI interface. The interface is displayed over a subtle, solid brand background.
+ Cursor Desktop
+ Cursor 시작하기 
+ 진행 중 2 
+ 랜딩 페이지 만들기
+ Reading docs 
+ Mission Control 계획
+ Generating plan 
+ 리뷰 준비 완료 3 
+ PyTorch MNIST 실험
+ 10m
+ PyTorch MNIST 실험 
+ 대시보드용 Cursor Rules 설정
+ 30m
+ 대시보드용 Cursor Rules 설정 
+ 생물정보학 도구
+ 45m
+ + 135 - 21 · 생물정보학 도구 
+ http://localhost:3000 
+ Acme Labs 
+ Software creation is changing. We are a group of researchers, engineers, and technologists inventing at the edge of what's useful and possible.
+ We have much to learn, try, and build. 
+ See projects Join our team → 
+ 2026 Secure codebase indexing Published 
+ 2026 Semantic search Published 
+ 2025 Reinforcement learning Published 
+ 2024 Shadow workspaces Published 
+ 2024 Multi-agent collaboration Published 
+ 2023 Context-aware completions Published 
+ 2023 Intelligent code navigation Published 
+ 2022 Fast inference optimization Published 
+ 2022 Language model fine-tuning Published 
+ 랜딩 페이지 만들기
+ 첨부된 Docs를 바탕으로 우리가 하는 일을 설명하는 랜딩 페이지를 만들어 주세요
+ Agent Grok 4.7 
+ Cursor CLI
+ CLI 시작하기 
+ Cursor Agent 
+ ~/cursor/cursor-web
+ 생물정보학 도구
+ affine gap alignment를 추가하세요. 현재는 기본적인 NW alignment만 있는데, indel을 더 잘 처리하려면 Gotoh 알고리즘이 필요합니다. 그리고 FASTA parser도 수정하세요.
+ → 
+ Grok 4.7
+ 명령어는 / · 파일은 @ 를 사용하세요 
+ 세계적 수준의 소프트웨어를 만드는 팀들이 매일 Cursor를 신뢰합니다 
+ 에이전트가 아이디어를 코드로 구현합니다 
+ 의사결정에 집중하는 동안 작업은 Cursor에 맡기고 개발 속도를 높이세요. 
+ 에이전트 기반 개발 살펴보기 → 
+ This element contains an interactive demo for sighted users. It's a demonstration of Cursor's IDE showing AI-powered coding assistance features. The interface is displayed over a subtle, solid brand background.
+ Cursor
+ Cursor 시작하기 
+ feature-prd.md 
+ presence.ts 
+ Plans feature-prd.md 
+ Grok 4.7 Build 
+ Mission Control Interface
+ A grid view of all open windows as scaled previews, allowing quick selection to bring any window to front.
+ Trigger
+ Menu item in MenuBar.tsx (View > Mission Control), hotkey F3, or double-tap desktop.
+ View Behavior
+ Overlay existing windows into a grid of live previews with spring-based layout animations and shared element transitions.
+ 3 Tasks 
+ Add multiplayer mode to useAppStore.ts 
+ Create a new MissionControlView.tsx component 
+ Update AppManager.tsx to apply expose modes. 
+ Add a task, ⌘K to generate... 
+ Mission Control 계획
+ macOS의 Exposé 스타일 윈도우 관리자와 유사한 Mission Control 인터페이스를 만들어 봅시다
+ Plan Grok 4.7 
+ 자율적으로 동작하고 병렬로 실행됩니다 
+ 에이전트는 자체 컴퓨터를 사용해 기능을 처음부터 끝까지 만들고, 테스트하고, 데모를 진행해 리뷰할 수 있도록 합니다. 
+ 클라우드 Agent 살펴보기 → 
+  cursor.com/agent  
+ This Week
+ Acme Research Dashboard 
+  Live Telemetry Pipeline 
+  Zero-Downtime Deploys 
+ This Month
+  Binary Protocol Parser 
+ Edge Cache Invalidation 
+  Auth Token Rotation 
+ Acme Research Dashboard 
+ let's build a dashboard to make our research findings interactive
+ Explored 12 files, 4 searches 
+ On it. I'll build the dashboard using your theme config, wire up the research data, and add interactive charts with public access controls.
+ Worked for 14m 22s
+ Processed screen recording 
+ Done! Here's a walkthrough of the dashboard.
+ Acme Labs
+ Summary
+ Built the interactive dashboard with realtime charts, data from Snowflake, and shadcn components. Deployed to staging via Vercel.
+ Add a follow up...
+ Agent 
+ Opus 5.5 
+ 모든 도구에서, 모든 단계에 걸쳐 
+ Cursor는 터미널에서 실행되고, Slack에서 협업하며, GitHub에서 PR을 검토합니다. 
+ curl https://cursor.com/install -fsS | bash 
+ This element contains an interactive demo for sighted users showing multiple Cursor interfaces: the CLI with command-line assistance, Slack integration for team communication. The interface is displayed over a scenic painted landscape wallpaper, giving the demo an artistic backdrop.
+ Slack
+ Slack용 Cursor 시작하기 
+ #feature-realtime-sync
+ 멤버 8명 
+ swhitmore 5m 
+ 1.0 changelog를 볼 수 있게 cursor.com/changelog#1.0으로 바로 갈 수 있으면 좋겠어요
+ eric 4m 
+ 문제없어 보여요
+ @cursor can you take a stab?
+ Cursor APP 2m 
+ Changelog 항목에 대한 직접 링크를 추가하고, 유지보수성을 높이기 위해 프로젝트 전
+
+=== [pricing] https://cursor.com/ko/pricing
+Cursor · 요금제 
+ 콘텐츠로 건너뛰기 Cursor 
+ 모델 ↓ Grok 
+ Evals 
+ 제품 ↓ 에이전트 
+ 클라우드 
+ Grok 봇  ↗ 
+ 모바일 
+ 자동화 
+ CLI 
+ 마켓플레이스  ↗ 
+ 리뷰 
+ 기업 
+ 요금제 
+ 리소스 ↓ Changelog 
+ Blog 
+ 문서 
+ 커뮤니티 
+ 도움말  ↗ 
+ 워크숍 
+ 포럼  ↗ 
+ 채용 
+ 모델  → 
+ 제품  → 
+ 기업 
+ 요금제 
+ 리소스  → 
+ 로그인 문의하기 영업팀에 문의하기 다운로드 
+ 요금제
+ 개별 Teams 
+ 무료
+ $0 /월 
+ 시작하기 
+ 다음으로 시작하기:
+ 제한적
+ AI 사용량
+ AI 기능
+ 제한된 에이전트 요청 횟수 
+ Chat 요청 횟수 제한 
+ 기능
+ ✓ 게시, 답글, 팔로우 
+ Plus
+ $8 /월 
+ Plus 시작하기 
+ 입문용 플랜:
+ 공유
+ AI 사용량 풀
+ AI 기능
+ Cursor 
+ Grok Chat, Voice, Imagine, Build 
+ Grok API 접근 
+ 기능
+ ✓ Premium 체크마크 
+ ✓ 타임라인 광고 감소 
+ ✓ 향상된 크리에이터 도구 
+ ✓ 고급 분석 
+ *이 플랜에서는 Grok 모델만 사용 가능합니다
+ Premium
+ 가장 인기 
+ $30 /월 
+ Premium 시작하기 
+ Plus의 모든 혜택에 더해:
+ 4x
+ Plus 대비 더 많은 사용량
+ AI 기능
+ ✓ 최신 Grok 모델 
+ 클라우드 Agent 및 자동화 
+ 코드 호스팅 및 AI 코드 검토 
+ API 정가로 제공되는 타사 모델 
+ Grok 봇 
+ 더 빠른 채팅 응답 
+ 멋진 AI 이미지 및 동영상 제작 
+ 기능
+ ✓ 대부분의 화면에서 광고 없이 스크롤 
+ ✓ 선호하는 @핸들 
+ ✓ 더 높은 답글 부스트 
+ *Cursor에서 타사 모델을 사용할 수 있으며, 사용량에 따라 요금이 별도로 청구됩니다
+ Super
+ $100 /월 
+ Super 시작하기 
+ Premium의 모든 혜택과 다음 추가 혜택:
+ 15x
+ Plus 대비 더 많은 사용량
+ AI 기능
+ ✓ 피크 시간대 모델 우선 접근 
+ *Cursor에서 타사 모델을 사용할 수 있으며, 사용량에 따라 요금이 별도로 청구됩니다
+ Ultra
+ $200 /월 
+ Ultra 시작하기 
+ Super의 모든 혜택에 더해:
+ 50x
+ Plus 대비 더 많은 사용량
+ AI 기능
+ ✓ 모든 제품 및 모델에 대한 최우선 접근 
+ *Cursor에서 타사 모델을 사용할 수 있으며, 사용량에 따라 요금이 별도로 청구됩니다
+ 표시된 가격에는 해당 세금이나 요금(예: VAT)이 포함되어 있지 않습니다. Cursor에서의 타사 모델 사용량은 표시된 월 요금에 포함되지 않으며 별도로 구매해야 합니다. 사용량 요금 보기. 언제든지 취소할 수 있습니다 . 추가 요금이 발생하지 않도록 갱신 시점 최소 24시간 전까지 취소해야 합니다. 가격은 변경될 수 있습니다. 
+ 플랜별 기능 비교
+ 기능 무료 $0 /월 
+ 시작하기 
+ Plus $8 /월 
+ Plus 시작하기 
+ Premium $30 /월 
+ Premium 시작하기 
+ Super $100 /월 
+ Super 시작하기 
+ Ultra $200 /월 
+ Ultra 시작하기 
+ Teams $30 +/사용자/월 
+ Teams 시작하기 
+ 기업 맞춤형 
+ 영업팀에 문의하기 
+ 사용량 제한적 기본 Plus의 4배 Plus의 15배 Plus의 50배 Plus의 4-50배 공유 
+ Cursor 
+ Agent ✓ ✓ ✓ ✓ ✓ ✓ ✓ 
+ 클라우드 Agent 및 자동화 — — ✓ ✓ ✓ ✓ ✓ 
+ 오리진을 통한 코드 호스팅 — — ✓ ✓ ✓ ✓ ✓ 
+ Bugbot을 통한 AI 코드 검토 — — ✓ ✓ ✓ ✓ ✓ 
+ API 정가로 제공되는 타사 모델 — — ✓ ✓ ✓ ✓ ✓ 
+ 내부 규칙, 스킬, 플러그인을 위한 팀 마켓플레이스 — — — — — ✓ ✓ 
+ Grok 
+ Chat 제한적 ✓ ✓ ✓ ✓ ✓ ✓ 
+ 이미지 생성(Imagine) 제한적 ✓ ✓ ✓ ✓ ✓ ✓ 
+ 동영상 생성 — — ✓ ✓ ✓ ✓ ✓ 
+ Grok API 접근 — ✓ ✓ ✓ ✓ ✓ ✓ 
+ Grok Build 제한적 ✓ ✓ ✓ ✓ ✓ ✓ 
+ Grok 봇 — — ✓ ✓ ✓ ✓ ✓ 
+ 팀 관리 
+ 중앙 집중식 청구 및 관리 — — — — — ✓ ✓ 
+ 사용량 분석 — — — — — ✓ ✓ 
+ 팀 전체 개인정보 보호 설정 — — — — — ✓ ✓ 
+ Chat 데이터 보관 기간 맞춤 설정 — — — — — ✓ ✓ 
+ SAML/OIDC SSO — — — — — ✓ ✓ 
+ 좌석 유형을 자유롭게 조합 — — — — — ✓ ✓ 
+ 인보이스/PO 청구 — — — — — — ✓ 
+ SCIM 좌석 관리 — — — — — — ✓ 
+ 세밀한 지출 제어 — — — — — — ✓ 
+ 그룹별 설정 및 지출 한도 — — — — — — ✓ 
+ Auto-run, 브라우저 및 네트워크 제어 — — — — — — ✓ 
+ 리포지토리, 모델 및 MCP 액세스 제어 — — — — — — ✓ 
+ 감사 로그 및 서비스 계정 — — — — — — ✓ 
+ Grok 봇의 접근, 네트워크 및 감사 제어 — — — — — — ✓ 
+ 추가 혜택 
+ 피크 시간대 모델 우선 접근 — — — ✓ ✓ ✓ ✓ 
+ 모든 제품 및 모델에 대한 최우선 접근 — — — — ✓ 좌석 등급별 ✓ 
+ 우선 지원 — — — — — — ✓ 
+ X 
+ 게시, 답글, 팔로우 ✓ ✓ ✓ ✓ ✓ ✓ ✓ 
+ Premium 체크마크 — ✓ ✓ ✓ ✓ ✓ ✓ 
+ 광고 없는 스크롤 — 일부 서비스 화면 대부분의 서비스 화면 대부분의 서비스 화면 대부분의 서비스 화면 대부분의 서비스 화면 대부분의 서비스 화면 
+ 게시물로 수익 창출 — ✓ ✓ ✓ ✓ ✓ ✓ 
+ 게시물 수정 — ✓ ✓ ✓ ✓ ✓ ✓ 
+ 사용 환경 맞춤 설정 — ✓ ✓ ✓ ✓ ✓ ✓ 
+ 더 긴 게시물 만들기 — ✓ ✓ ✓ ✓ ✓ ✓ 
+ 아티클 작성 — ✓ ✓ ✓ ✓ ✓ ✓ 
+ Media Studio — ✓ ✓ ✓ ✓ ✓ ✓ 
+ 고급 분석 — ✓ ✓ ✓ ✓ ✓ ✓ 
+ 북마크 폴더 — ✓ ✓ ✓ ✓ ✓ ✓ 
+ 오프라인 동영상 — ✓ ✓ ✓ ✓ ✓ ✓ 
+ 백그라운드 동영상 재생 — ✓ ✓ ✓ ✓ ✓ ✓ 
+ 커뮤니티 만들기 — ✓ ✓ ✓ ✓ ✓ ✓ 
+ 동영상 다운로드 — ✓ ✓ ✓ ✓ ✓ ✓ 
+ 하이라이트 탭 — ✓ ✓ ✓ ✓ ✓ ✓ 
+ 크리에이터 구독 — ✓ ✓ ✓ ✓ ✓ ✓ 
+ 답글 부스트 — ✓ ✓ ✓ ✓ ✓ ✓ 
+ Radar 검색 — ✓ ✓ ✓ ✓ ✓ ✓ 
+ 질문과 답변
+ 나에게 맞는 플랜은 무엇인가요? ↓ ↑ 
+ AI를 처음 사용하는 사용자에게는 Premium을, 매일 에이전트를 사용하는 사용자에게는 Super를, 사용량이 많은 고급 사용자에게는 Ultra를 권장합니다. AI 사용량이 적은 소셜 미디어 크리에이터에게는 Plus를 권장합니다. 다른 사람들과 협업하는 전문가에게는 Teams 플랜을 권장하며, 인보이스 청구, 공유 사용량 또는 고급 보안이 필요한 대규모 조직에는 기업 플랜이 적합합니다.
+ 결제 옵션에는 어떤 것이 있나요? ↓ ↑ 
+ 셀프 서비스 플랜은 주요 신용카드와 직불카드를 모두 지원합니다. 인보이스 청구 및 계좌이체를 원하시면, 기업 플랜에 대해 논의할 수 있도록 문의하기 를 이용해 주세요. 
+ 사용량 한도는 어떻게 적용되나요? ↓ ↑ 
+ 모든 티어에는 Cursor와 Grok에서 함께 사용하는 AI 사용량 풀이 포함됩니다. Grok에서는 이 풀을 Chat, Imagine, Voice, Bot에 사용할 수 있습니다. 상위 티어일수록 더 큰 풀이 제공되며, 사용 요금은 제품별로 다릅니다. 사용 한도는 매주 갱신되므로 하루 동안 많이 사용하더라도 한 달 치 사용량이 한꺼번에 소진되지는 않습니다.
+ 기본 제공 사용량을 모두 소진하면 추가 충전으로 계속 사용하거나 사용 한도가 갱신될 때까지 기다릴 수 있습니다. 설정에서 남은 사용량을 언제든 확인할 수 있습니다. 자세한 내용은 문서 를 참조하세요.
+ 내 플랜에 Grok API가 포함되나요? ↓ ↑ 
+ 유료 요금제에는 Grok API 접근 권한이 포함됩니다. API 사용량은 표준 모델 요금에 따라 별도로 청구되며, 사용자의 플랜에 포함된 사용량 풀에서 차감되지 않습니다. 모델 요금제 를 참조하세요. 
+ 어떤 모델을 지원하나요? ↓ ↑ 
+ Plus에는 Grok 모델만 포함됩니다. Premium 이상 요금제에는 넉넉한 Grok 모델 사용량이 포함되지만, 서드파티 모델의 기본 제공 사용량은 포함되지 않습니다. 서드파티 모델은 Cursor에서 API 정가로 계속 사용할 수 있습니다. 사용자는 사용한 만큼만 요금을 지불하며, 지출 한도를 설정해 요금을 관리할 수 있습니다.
+ 가격에 세금이 포함되어 있나요? ↓ ↑ 
+ 모든 가격은 세금 별도입니다. 자세한 정보는 구독 약관 을 확인하세요. 
+ 조직에서 Cursor의 사용량을 확인하고 관리하려면 어떻게 해야 하나요? ↓ ↑ 
+ 관리자는 관리자 대시보드 를 통해 사용량 정보와 주요 지표를 확인할 수 있습니다. 
+ Cursor는 내 데이터를 어떻게 사용하나요? ↓ ↑ 
+ Privacy Mode는 설정에서 켜거나 팀 관리자가 켤 수 있습니다. 이 기능이 켜지면 당사와 모델 제공업체가 코드 데이터를 학습에 사용하지 않도록 보장합니다. 자세한 내용은 Security 페이지에서 확인할 수 있습니다. 
+ 리셀러나 타사를 통해 Cursor를 구매할 수 있나요? ↓ ↑ 
+ 아니요. 구독은 X Subscription Corp.에서만 직접 판매합니다. 당사는 어떤 리셀러나 타사 판매자도 공식 판매자로 인정하지 않습니다. 다른 경로로 구매한 구독은 정식 구독이 아니며, 사기로 판매되었거나 보안에 취약하거나 당사 시스템을 악용해 취득한 것일 수 있습니다. 이러한 계정은 언제든지 정지되거나 해지될 수 있습니다. 접근 권한과 보안을 보호하려면 반드시 공식 웹사이트에서 X Subscription을 구매하세요.
+ Cursor 시작하기 
+ 다운로드 ⤓ 
+ 문의하기 
+ 제품 
+ 에이전트 
+ Teams 
+ 기업 
+ 요금제 
+ 코드 리뷰 
+ CLI 
+ 클라우드 Agent 
+ Composer 
+ 마켓플레이스  ↗ 
+ 리소스 
+ 다운로드 
+ Changelog 
+ 문서 
+ 알아보기  ↗ 
+ 포럼  ↗ 
+ 도움말  ↗ 
+ 워크숍 
+ 상태  ↗ 
+ 기업 
+ 채용 
+ Blog 
+ 커뮤니티 
+ 학생 
+ 브랜드 
+ 미래 
+ Anysphere  ↗ 
+ 법률 
+ 서비스 약관 
+ 허용 가능한 사용 정책 
+ Grok 봇 이용약관 
+ SpaceXAI 구독 약관  ↗ 
+ 개인정보 처리방침 
+ 쿠키 정책 
+ 데이터 사용 
+ 보안 
+ 연결하다 
+ X  ↗ 
+ LinkedIn  ↗ 
+ YouTube  ↗ 
+ © 2026 Anysphere, Inc. 🛡 SOC 2 | ISO27001 | ISO42001 | AIUC-1 인증 
+ 🌐 한국어 ↓ English 
+ 简体中文 
+ 日本語 
+ 繁體中文 
+ Español 
+ Français 
+ Português 
+ 한국어 ✓ 
+ Deutsch 
+ हिन्दी 
+ 콘텐츠로 건너뛰기 Cursor 
+ 모델 ↓ Grok 
+ Evals 
+ 제품 ↓ 에이전트 
+ 클라우드 
+ Grok 봇  ↗ 
+ 모바일 
+ 자동화 
+ CLI 
+ 마켓플레이스  ↗ 
+ 리뷰 
+ 기업 
+ 요금제 
+ 리소스 ↓ Changelog 
+ Blog 
+ 문서 
+ 커뮤니티 
+ 도움말  ↗ 
+ 워크숍 
+ 포럼  ↗ 
+ 채용 
+ 모델  → 
+ 제품  → 
+ 기업 
+ 요금제 
+ 리소스  → 
+ 로그인 문의하기 영업팀에 문의하기 다운로드 
+ 요금제
+ 개별 Teams 
+ 무료
+ $0 /월 
+ 시작하기 
+ 다음으로 시작하기:
+ 제한적
+ AI 사용량
+ AI 기능
+ 제한된 에이전트 요청 횟수 
+ Chat 요청 횟수 제한 
+ 기능
+ ✓ 게시, 답글, 팔로우 
+ Plus
+ $8 /월 
+ Plus 시작하기 
+ 입문용 플랜:
+ 공유
+ AI 사용량 풀
+ AI 기능
+ Cursor 
+ Grok Chat, Voice, Imagine, Build 
+ Grok API 접근 
+ 기능
+ ✓ Premium 체크마크 
+ ✓ 타임라인 광고 감소 
+ ✓ 향상된 크리에이터 도구 
+ ✓ 고급 분석 
+ *이 플랜에서는 Grok 모델만 사용 가능합니다
+ Premium
+ 가장 인기 
+ $30 /월 
+ Premium 시작하기 
+ Plus의 모든 혜택에 더해:
+ 4x
+ Plus 대비 더 많은 사용량
+ AI 기능
+ ✓ 최신 Grok 모델 
+ 클라우드 Agent 및 자동화 
+ 코드 호스팅 및 AI 코드 검토 
+ API 정가로 제공되는 타사 모델 
+ Grok 봇 
+ 더 빠른 채팅 응답 
+ 멋진 AI 이미지 및 동영상 제작 
+ 기능
+ ✓ 대부분의 화면에서 광고 없이 스크롤 
+ ✓ 선호하는 @핸들 
+ ✓ 더 높은 답글 부스트 
+ *Cursor에서 타사 모델을 사용할 수 있으며, 사용량에 따라 요금이 별도로 청구됩니다
+ Super
+ $100 /월 
+ Super 시작하기 
+ Premium의 모든 혜택과 다음 추가 혜택:
+ 15x
+ Plus 대비 더 많은 사용량
+ AI 기능
+ ✓ 피크 시간대 모델 우선 접근 
+ *Cursor에서 타사 모델을 사용할 수 있으며, 사용량에 따라 요금이 별도로 청구됩니다
+ Ultra
+ $200 /월 
+ Ultra 시작하기 
+ Super의 모든 혜택에 더해:
+ 50x
+ Plus 대비 더 많은 사용량
+ AI 기능
+ ✓ 모든 제품 및 모델에 대한 최우선 접근 
+ *Cursor에서 타사 모델을 사용할 수 있으며, 사용량에 따라 요금이 별도로 청구됩니다
+ 표시된 가격에는 해당 세금이나 요금(예: VAT)이 포함되어 있지 않습니다. Cursor에서의 타사 모델 사용량은 표시된 월 요금에 포함되지 않으며 별도로 구매해야 합니다. 사용량 요금 보기. 언제든지 취소할 수 있습니다 . 추가 요금이 발생하지 않도록 갱신 시점 최소 24시간 전까지 취소해야 합니다. 가격은 변경될 수 있습니다. 
+ 플랜별 기능 비교
+ 기능 무료 $0 /월 
+ 시작하기 
+ Plus $8 /월 
+ Plus 시작하기 
+ Premium $30 /월 
+ Premium 시작하기 
+ Super $100 /월 
+ Super 시작하기 
+ Ultra $200 /월 
+ Ultra 시작하기 
+ Teams $30 +/사용자/월 
+ Teams 시작하기 
+ 기업 맞춤형 
+ 영업팀에 문의하기 
+ 사용량 제한적 기본 Plus의 4배 Plus의 15배 Plus의 50배 Plus의 4-50배 공유 
+ Cursor 
+ Agent ✓ ✓ ✓ ✓ ✓ ✓ ✓ 
+ 클라우드 Agent 및 자동화 — — ✓ ✓ ✓ ✓ ✓ 
+ 오리진을 통한 코드 호스팅 — — ✓ ✓ ✓ ✓ ✓ 
+ Bugbot을 통한 AI 코드 검토 — — ✓ ✓ ✓ ✓ ✓ 
+ API 정가로 제공되는 타사 모델 — — ✓ ✓ ✓ ✓ ✓ 
+ 내부 규칙, 스킬, 플러그인을 위한 팀 마켓플레이스 — — — — — ✓ ✓ 
+ Grok 
+ Chat 제한적 ✓ ✓ ✓ ✓ ✓ ✓ 
+ 이미지 생성(Imagine) 제한적 ✓ ✓ ✓ ✓ ✓ ✓ 
+ 동영상 생성 — — ✓ ✓ ✓ ✓ ✓ 
+ Grok API 접근 — ✓ ✓ ✓ ✓ ✓ ✓ 
+ Grok Build 제한적 ✓ ✓ ✓ ✓ ✓ ✓ 
+ Grok 봇 — — ✓ ✓ ✓ ✓ ✓ 
+ 팀 관리 
+ 중앙 집중식 청구 및 관리 — — — — — ✓ ✓ 
+ 사용량 분석 — — — — — ✓ ✓ 
+ 팀 전체 개인정보 보호 설정 — — — — — ✓ ✓ 
+ Chat 데이터 보관 기간 맞춤 설정 — — — — — ✓ ✓ 
+ SAML/OIDC SSO — — — — — ✓ ✓ 
+ 좌석 유형을 자유롭게 조합 — — — — — ✓ ✓ 
+ 인보이스/PO 청구 — — — — — — ✓ 
+ SCIM 좌석 관리 — — — — — — ✓ 
+ 세밀한 지출 제어 — — — — — — ✓ 
+ 그룹별 설정 및 지출 한도 — — — — — — ✓ 
+ Auto-run, 브라우저 및 네트워크 제어 — — — — — — ✓ 
+ 리포지토리, 모델 및 MCP 액세스 제어 — — — — — — ✓ 
+ 감사 로그 및 서비스 계정 — — — — — — ✓ 
+ Grok 봇의 접근, 네트워크 및 감사 제어 — — — — — — ✓ 
+ 추가 혜택 
+ 피크 시간대 모델 우선 접근 — — — ✓ ✓ ✓ ✓ 
+ 모든 제품 및 모델에 대한 최우선 접근 — — — — ✓ 좌석 등급별 ✓ 
+ 우선 지원 — — — — — — ✓ 
+ X 
+ 게시, 답글, 팔로우 ✓ ✓ ✓ ✓ ✓ ✓ ✓ 
+ Premium 체크마크 — ✓ ✓ ✓ ✓ ✓ ✓ 
+ 광고 없는 스크롤 — 일부 서비스 화면 대부분의 서비스 화면 대부분의 서비스 화면 대부분의 서비스 화면 대부분의 서비스 화면 대부분의 서비스 화면 
+ 게시물로 수익 창출 — ✓ ✓ ✓ ✓ ✓ ✓ 
+ 게시물 수정 — ✓ ✓ ✓ ✓ ✓ ✓ 
+ 사용 환경 맞춤 설정 — ✓ ✓ ✓ ✓ ✓ ✓ 
+ 더 긴 게시물 만들기 — ✓ ✓ ✓ ✓ ✓ ✓ 
+ 아티클 작성 — ✓ ✓ ✓ ✓ ✓ ✓ 
+ Media Studio — ✓ ✓ ✓ ✓ ✓ ✓ 
+ 고급 분석 — ✓ ✓ ✓ ✓ ✓ ✓ 
+ 북마크 폴더 — ✓ ✓ ✓ ✓ ✓ ✓ 
+ 오프라인 동영상 — ✓ ✓ ✓ ✓ ✓ ✓ 
+ 백그라운드 동영상 재생 — ✓ ✓ ✓ ✓ ✓ ✓ 
+ 커뮤니티 만들기 — ✓ ✓ ✓ ✓ ✓ ✓ 
+ 동영상 다운로드 — ✓ ✓ ✓ ✓ ✓ ✓ 
+ 하이라이트 탭 — ✓ ✓ ✓ ✓ ✓ ✓ 
+ 크리에이터 구독 — ✓ ✓ ✓ ✓ ✓ ✓ 
+ 답글 부스트 — ✓ ✓ ✓ ✓ ✓ ✓ 
+ Radar 검색 — ✓ ✓ ✓ ✓ ✓ ✓ 
+ 질문과 답변
+ 나에게 맞는 플랜은 무엇인가요? ↓ ↑ 
+ AI를 처음 사용하는 사용자에게는 Premium을, 매일 에이전트를 사용하는 사용자에게는 Super를, 사용량이 많은 고급 사용자에게는 Ultra를 권장합니다. AI 사용량이 적은 소셜 미디어 크리에이터에게는 Plus를 권장합니다. 다른 사람들과 협업하는 전문가에게는 Teams 플랜을 권장하며, 인보이스 청구, 공유 사용량 또는 고급 보안이 필요한 대규모 조직에는 기업 플랜이 적합합니다.
+ 결제 옵션에는 어떤 것이 있나요? ↓ ↑ 
+ 셀프 서비스 플랜은 주요 신용카드와 직불카드를 모두 지원합니다. 인보이스 청구 및 계좌이체를 원하시면, 기업 플랜에 대해 논의할 수 있도록 문의하기 를 이용해 주세요. 
+ 사용량 한도는 어떻게 적용되나요? ↓ ↑ 
+ 모든 티어에는 Cursor와 Grok에서 함께 사용하는 AI 사용량 풀이 포함됩니다. Grok에서는 이 풀을 Chat, Imagine, Voice, Bot에 사용할 수 있습니다. 상위 티어일수록 더 큰 풀이 제공되며, 사용 요금은
+
+=== [about] https://cursor.com/ko/product
+Cursor — Build Software with AI Agents 
+ 콘텐츠로 건너뛰기 Cursor 
+ 모델 ↓ Grok 
+ Evals 
+ 제품 ↓ 에이전트 
+ 클라우드 
+ Grok 봇  ↗ 
+ 모바일 
+ 자동화 
+ CLI 
+ 마켓플레이스  ↗ 
+ 리뷰 
+ 기업 
+ 요금제 
+ 리소스 ↓ Changelog 
+ Blog 
+ 문서 
+ 커뮤니티 
+ 도움말  ↗ 
+ 워크숍 
+ 포럼  ↗ 
+ 채용 
+ 모델  → 
+ 제품  → 
+ 기업 
+ 요금제 
+ 리소스  → 
+ 로그인 문의하기 영업팀에 문의하기 다운로드 
+ Agents 
+ 아이디어를 코드로 구현하세요 
+ 더 높은 수준의 방향성에 집중할 수 있도록 구현은 위임하세요. 
+ macOS용 다운로드 ⤓ 
+ 모바일 Agent 사용해 보기 → 
+ This element contains an interactive demo for sighted users showing multiple Cursor interfaces: Cursor Desktop interface, Cursor CLI interface. The interface is displayed over a subtle, solid brand background.
+ Cursor Desktop
+ Cursor 시작하기 
+ 진행 중 2 
+ 랜딩 페이지 만들기
+ Reading docs 
+ Mission Control 계획
+ Generating plan 
+ 리뷰 준비 완료 3 
+ PyTorch MNIST 실험
+ 10m
+ PyTorch MNIST 실험 
+ 대시보드용 Cursor Rules 설정
+ 30m
+ 대시보드용 Cursor Rules 설정 
+ 생물정보학 도구
+ 45m
+ + 135 - 21 · 생물정보학 도구 
+ feature-prd.md 
+ presence.ts 
+ Plans feature-prd.md 
+ Grok 4.7 Build 
+ Mission Control Interface
+ A grid view of all open windows as scaled previews, allowing quick selection to bring any window to front.
+ Trigger
+ Menu item in MenuBar.tsx (View > Mission Control), hotkey F3, or double-tap desktop.
+ View Behavior
+ Overlay existing windows into a grid of live previews with spring-based layout animations and shared element transitions.
+ 3 Tasks 
+ Add multiplayer mode to useAppStore.ts 
+ Create a new MissionControlView.tsx component 
+ Update AppManager.tsx to apply expose modes. 
+ Add a task, ⌘K to generate... 
+ Mission Control 계획
+ macOS의 Exposé 스타일 윈도우 관리자와 유사한 Mission Control 인터페이스를 만들어 봅시다
+ Plan Grok 4.7 
+ Cursor CLI
+ CLI 시작하기 
+ Cursor Agent 
+ ~/cursor/cursor-web
+ 생물정보학 도구
+ affine gap alignment를 추가하세요. 현재는 기본적인 NW alignment만 있는데, indel을 더 잘 처리하려면 Gotoh 알고리즘이 필요합니다. 그리고 FASTA parser도 수정하세요.
+ → 
+ Grok 4.7
+ 명령어는 / · 파일은 @ 를 사용하세요 
+ 어디에서 작업하든 
+ 모든 환경에서 하나의 에이전트. 
+ 데스크톱 
+ 익숙한 하나의 에디터에서 직접 코딩부터 에이전트 기반 코딩까지. 
+ 다운로드 → 
+ Interactive demo with multiple windows showing Cursor's AI-powered features. The interface is displayed over a subtle, solid brand background.
+ let's add a spotlight-style search
+ Read App.tsx, Menu.tsx 
+ Searched ⌘K shortcut handlers 
+ Edited Search.tsx 
+ Done. Press ⌘K to search files, actions, and settings.
+ Cursor에게 무엇이든 계획하거나 만들도록 요청하세요
+ Agent Grok 4.7 
+ CLI 
+ 어떤 터미널, 스크립트, 편집기에서든 에이전트를 실행하세요. 
+ 설치 → 
+ Interactive demo with multiple windows showing Cursor's AI-powered features. The interface is displayed over a subtle, solid brand background.
+ Cursor Agent 
+ ~/cursor/cursor-web
+ 생물정보학 도구
+ affine gap alignment를 추가하세요. 현재는 기본적인 NW alignment만 있는데, indel을 더 잘 처리하려면 Gotoh 알고리즘이 필요합니다. 그리고 FASTA parser도 수정하세요.
+ ⬢ 5 초 간 생 각 함 
+ ⬢ b i o / s e q u e n c e _ a l i g n m e n t . p y , b i o / f a s t a . p y , b i o / t r a n s l a t e . p y 읽 기 
+ ⬢ ' g o t o h a l g o r i t h m i m p l e m e n t a t i o n p y t h o n ' 을 검 색 했 습 니 다 
+ 정렬 모듈에 Gotoh의 affine gap 알고리즘을 추가하고 FASTA parser를 수정하겠습니다. 먼저 정렬 코드부터 시작하겠습니다:
+ bio/sequence_alignment.py
++GAP_OPEN - 10 
+ 좋습니다. 적절한 traceback을 포함한 완전한 Gotoh 구현을 추가했습니다. 이제 FASTA 파서를 수정하겠습니다:
+ bio/fasta.py
+-def 
+ 완벽합니다! 이제 자주 필요한 기능이니 translate 모듈에 ORF 탐색 기능도 추가하겠습니다:
+ bio/translate.py
++def + 3 - 1 
+ 좋습니다! 다음을 추가했습니다:
+1. 적절한 affine gap penalty(갭 오픈: -10, 확장: -1)를 적용한 Gotoh 알고리즘 
+2. 여러 줄 시퀀스를 처리하고 공백/숫자를 정리하는 수정된 FASTA 파서 
+3. 세 개의 frame 전체에서 시작/종결 코돈을 검색하는 ORF finder 
+4. 양쪽 가닥을 모두 검색하기 위한 reverse complement 함수
+Gotoh 구현은 세 개의 행렬(M, X, Y)을 사용해 match/mismatch와 gap 상태를 각각 별도로 추적하므로, indel이 있는 시퀀스에서 훨씬 더 나은 정렬 결과를 제공합니다. 기존 `nw_align` 함수는 변경하지 않았습니다.
+모든 것이 제대로 동작하는지 확인할 수 있도록 간단한 테스트도 만들어 드릴까요?
+ → 
+ Grok 4.7
+ 명령어는 / · 파일은 @ 를 사용하세요 
+ 기타 환경 
+ GitHub, Slack, Linear, JetBrains IDEs 등에서 에이전트를 시작해 보세요. 
+ Slack에 추가 ↗ 
+ Interactive demo with multiple windows showing Cursor's AI-powered features. The interface is displayed over a subtle, solid brand background.
+ leerob 5분 전 
+ @cursor 이 PR 리뷰해줄래?
+ cursor bot reviewed 3분 전 
+ src/vs/workbench/composer/browser/components/ComposerUnifiedDropdown.tsx 
+ 3292
+ -
+ {selectedMode().keybinding}
+ 3293
+ +
+ {composerOpenModeToggleKeybinding()}
+ 버그: 함수가 문자열 대신 객체를 반환함(로직 버그) 
+ composerOpenModeToggleKeybinding 는 값을 가져오려면 호출해야 하는 함수입니다. 그래서 이 조건은 항상 참으로 평가됩니다.
+ Cursor에서 수정 Web에서 수정 
+ 웹 및 모바일 
+ 브라우저나 모바일에서 클라우드 에이전트를 실행하세요. 
+ 브라우저에서 열기 ↗ 
+ Agent Dashboard 
+ Today
+ Vercel streaming SDK functionality
+ Analyzing codebase · dashboard-ui 
+ Model selector dropdown
+ Planning next moves · stripe-landing 
+ Implement agent window
+ 2 models · agent-ui 
+ Fix send button functionality
+ 2 Files + 26 - 12 · agent-ui 
+ This Week
+ Fix send button funct
