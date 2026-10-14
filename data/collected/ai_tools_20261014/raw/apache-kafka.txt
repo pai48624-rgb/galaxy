@@ -1,0 +1,227 @@
+=== [home] https://kafka.apache.org (lang=en)
+Apache Kafka 
+ Get Started Introduction 
+ Quickstart 
+ Use Cases 
+ Books and Papers 
+ Videos 
+ Podcasts 
+ Docs Key Concepts 
+ APIs 
+ Configuration 
+ Design 
+ Implementation 
+ Operations 
+ Security 
+ Clients 
+ Kafka Connect 
+ Kafka Streams 
+ Powered By 
+ Community Blog 
+ Kafka Summit 
+ Project Info 
+ Trademark 
+ Ecosystem 
+ Events 
+ Contact Us 
+ Apache Apache.org 
+ License 
+ Donate 
+ Sponsors 
+ Security 
+ Privacy 
+ Releases 4.3 
+ 4.2 
+ 4.1 
+ 4.0 
+ 3.9 
+ 3.8 
+ 3.7 
+ 3.6 
+ 3.5 
+ 3.4 
+ 3.3 
+ 3.2 
+ 3.1 
+ 3.0 
+ 2.8 
+ 2.7 
+ 2.6 
+ 2.5 
+ 2.4 
+ 2.3 
+ 2.2 
+ 2.1 
+ 2.0 
+ 1.1 
+ 1.0 
+ 0.11.0 
+ 0.10.2 
+ 0.10.1 
+ 0.10.0 
+ 0.9.0 
+ 0.8.2 
+ 0.8.1 
+ 0.8.0 
+ 0.7 
+ DOWNLOAD KAFKA 
+ Learn More 
+ Download More than 80% of all Fortune 100 companies trust, and use Apache Kafka. 
+ Apache Kafka 
+ Apache Kafka is an open-source distributed event streaming platform used by thousands of companies for high-performance data pipelines, streaming analytics, data integration, and mission-critical applications.
+ Manufacturing
+ 10 OUT OF 10 
+ Banks
+ 7 OUT OF 10 
+ Insurance
+ 10 OUT OF 10 
+ Telecom
+ 8 OUT OF 10 
+ Transportation
+ 8 OUT OF 10 
+ Energy and Utilities
+ 10 OUT OF 10 
+ Above is a snapshot of the number of top-ten largest companies using Kafka, per-industry.
+ See full list 
+ Core capabilities 
+ Kafka boasts core capabilities that are battle tested and ready to power businesses in the digital world.
+ High Throughput
+ Deliver messages at network limited throughput using a cluster of machines with latencies as low as 2ms.
+ Scalable
+ Scale production clusters up to a thousand brokers, trillions of messages per day, petabytes of data, hundreds of thousands of partitions. Elastically expand and contract storage and processing.
+ Permanent Storage
+ Store streams of data safely in a distributed, durable, fault-tolerant cluster.
+ High Availability
+ Stretch clusters efficiently over availability zones or connect separate clusters across geographic regions.
+ Built-in Stream Processing
+ Process streams of events with joins, aggregations, filters, transformations, and more, using event-time and exactly-once processing.
+ Connect to almost anything
+ Kafka’s out-of-the-box Connect interface integrates with hundreds of event sources and event sinks including Postgres, JMS, Elasticsearch, AWS S3, and more.
+ Trust and Ease of Use 
+ Kafka is simple to use and is trusted by thousands of organizations around the world.
+ Mission Critical
+ Support mission-critical use cases with guaranteed ordering, zero message loss, and efficient exactly-once processing.
+ Trusted By Thousands of Orgs
+ Thousands of organizations use Kafka, from internet giants to car manufacturers to stock exchanges. More than 5 million unique lifetime downloads.
+ Vast User Community
+ Kafka is one of the five most active projects of the Apache Software Foundation, with hundreds of meetups around the world.
+ Client Libraries
+ Read, write and process streams of events in a vast array of programming languages.
+ Rich Online Resources
+ Rich documentation, online training, guided tutorials, videos, sample projects, Stack overflow, etc.
+ Large Ecosystem Open Source Tools
+ Large ecosystem of open source tools: Leverage a vast array of community-driven tooling.
+ The contents of this website are © 2026 Apache Software Foundation
+under the terms of the Apache License v2 .
+Apache Kafka, Kafka, and the Kafka logo are either registered trademarks or trademarks of The Apache Software Foundation
+in the United States and other countries.
+ Security |
+ Donate |
+ Thanks |
+ Events |
+ License |
+ Privacy
+
+=== [meta] https://kafka.apache.org
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/apache/kafka
+<p align="center">
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="docs/images/kafka-logo-readme-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/images/kafka-logo-readme-dark.svg">
+  <img src="docs/images/kafka-logo-readme-light.svg" alt="Kafka Logo" width="50%"> 
+</picture>
+</p>
+
+[![CI](https://github.com/apache/kafka/actions/workflows/ci.yml/badge.svg?branch=trunk&event=push)](https://github.com/apache/kafka/actions/workflows/ci.yml?query=event%3Apush+branch%3Atrunk)
+[![Flaky Test Report](https://github.com/apache/kafka/actions/workflows/generate-reports.yml/badge.svg?branch=trunk&event=schedule)](https://github.com/apache/kafka/actions/workflows/generate-reports.yml?query=event%3Aschedule+branch%3Atrunk)
+
+[**Apache Kafka**](https://kafka.apache.org) is an open-source distributed event streaming platform used by thousands of companies for high-performance data pipelines, streaming analytics, data integration, and mission-critical applications.
+
+You need to have [Java](http://www.oracle.com/technetwork/java/javase/downloads/index.html) installed.
+
+We build and test Apache Kafka with Java versions 17 and 25. The `release` parameter in javac is set to `11` for the clients 
+and streams modules, and `17` for the rest, ensuring compatibility with their respective
+minimum Java versions. Similarly, the `release` parameter in scalac is set to `11` for the streams modules and `17`
+for the rest.
+
+Scala 2.13 is the only supported version in Apache Kafka.
+
+### Build a JAR and run it
+```bash
+./gradlew jar
+```
+
+Follow instructions in https://kafka.apache.org/quickstart
+
+### Build source JAR
+```bash
+./gradlew srcJar
+```
+
+### Build aggregated javadoc
+```bash
+./gradlew aggregatedJavadoc --no-parallel
+```
+
+### Build javadoc and scaladoc
+```bash
+./gradlew javadoc
+./gradlew javadocJar # builds a javadoc jar for each module
+./gradlew scaladoc
+./gradlew scaladocJar # builds a scaladoc jar for each module
+./gradlew docsJar # builds both (if applicable) javadoc and scaladoc jars for each module
+```
+
+### Run unit/integration tests
+```bash
+./gradlew test  # runs both unit and integration tests
+./gradlew unitTest
+./gradlew integrationTest
+./gradlew test -Pkafka.test.run.flaky=true  # runs tests that are marked as flaky
+```
+
+### Force re-running tests without code change
+```bash
+./gradlew test --rerun-tasks
+./gradlew unitTest --rerun-tasks
+./gradlew integrationTest --rerun-tasks
+```
+
+### Running a particular unit/integration test
+```bash
+./gradlew clients:test --tests RequestResponseTest
+./gradlew streams:integration-tests:test --tests RestoreIntegrationTest
+```
+
+### Running a particular unit/integration test N times
+```bash
+N=500; I=0; while [ $I -lt $N ] && ./gradlew clients:test --tests RequestResponseTest --rerun --fail-fast; do (( I=$I+1 )); echo "Completed run: $I"; sleep 1; done
+```
+
+### Running a particular test method within a unit/integration test
+```bash
+./gradlew clients:test --tests org.apache.kafka.clients.MetadataTest.testTimeToNextUpdate
+./gradlew clients:clients-integration-tests:test --tests org.apache.kafka.clients.producer.ProducerFailureHandlingTest.testCannotSendToInternalTopic
+./gradlew streams:integration-tests:test --tests org.apache.kafka.streams.integration.RestoreIntegrationTest.shouldRestoreNullRecord
+```
+
+### Running a particular unit/integration test with log4j output
+By default, there will be only a small number of logs output while testing. You can adjust it by changing the `log4j2.yaml` file in the module's `src/test/resources` directory.
+
+For example, if you want to see more logs for clients project tests, you can modify [the line](https://github.com/apache/kafka/blob/trunk/clients/src/test/resources/log4j2.yaml#L35) in `clients/src/test/resources/log4j2.yaml` 
+to `level: INFO` and then run:
+
+```bash
+./gradlew cleanTest clients:test --tests NetworkClientTest
+```
+
+And you should see `INFO` level logs in the file under the `clients/build/test-results/test` directory.
+
+### Specifying test retries
+Retries are disabled by default, but you can set maxTestRetryFailures and maxTestRetries to enable retries.
+
+The following example declares -PmaxTestRetries=1 and -PmaxTestRetryFailur

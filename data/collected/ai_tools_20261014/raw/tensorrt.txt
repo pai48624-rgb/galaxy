@@ -1,0 +1,218 @@
+=== [home] https://developer.nvidia.com/tensorrt (lang=en)
+TensorRT SDK | NVIDIA Developer 
+ Topic 
+ AI Inference 
+ TensorRT
+ NVIDIA TensorRT
+ NVIDIA® TensorRT™ is an ecosystem of tools for developers to achieve high-performance deep learning inference. TensorRT includes inference compilers, runtimes, and model optimizations that deliver low latency and high throughput for production applications. The TensorRT ecosystem includes the TensorRT compiler, TensorRT-LLM, TensorRT Model Optimizer, TensorRT for RTX, and TensorRT Cloud. 
+ Download Now Documentation
+ GitHub 
+ How TensorRT Works
+ Speed up inference by 36X compared to CPU-only platforms. 
+ Built on the NVIDIA® CUDA® parallel programming model, TensorRT includes libraries that optimize neural network models trained on all major frameworks, calibrate them for lower precision with high accuracy, and deploy them to hyperscale data centers, workstations, laptops, and edge devices. TensorRT optimizes inference using quantization, layer and tensor fusion, and kernel tuning techniques.
+NVIDIA TensorRT Model Optimizer provides easy-to-use quantization techniques, including post-training quantization and quantization-aware training to compress your models. FP8, FP4, INT8, INT4, and advanced techniques such as AWQ are supported for your deep learning inference optimization needs. Quantized inference significantly minimizes latency and memory bandwidth, which is required for many real-time services, autonomous and embedded applications.
+ Read the Introductory TensorRT Blog 
+ Learn how to apply TensorRT optimizations and deploy a PyTorch model to GPUs. 
+ Read Blog 
+ Watch On-Demand TensorRT Sessions From GTC 
+ Learn more about TensorRT and its features from a curated list of webinars at GTC. 
+ Watch Sessions 
+ Get the Complete Developer Guide 
+ See how to get started with TensorRT in this step-by-step developer and API reference guide.
+ Read Guide 
+ Navigate AI infrastructure and Performance 
+ Learn how to lower your cost per token and get the most out of your AI models with our ebook.
+ View Ebook 
+ Key Features 
+ Large Language Model Inference
+ NVIDIA TensorRT-LLM is an open-source library that accelerates and optimizes inference performance of large language models (LLMs) on the NVIDIA AI platform with a simplified Python API.
+Developers accelerate LLM performance on NVIDIA GPUs in the data center or on workstation GPUs. 
+ Compile in the Cloud
+ NVIDIA TensorRT Cloud is a developer-focused service for generating hyper-optimized engines for given constraints and KPIs. Given an LLM and inference throughput/latency requirements, a developer can invoke TensorRT Cloud service using a command-line interface to hyper-optimize a TensorRT-LLM engine for a target GPU. The cloud service will automatically determine the best engine configuration that meets the requirements. Developers can also use the service to build optimized TensorRT engines from ONNX models on a variety of NVIDIA RTX, GeForce, Quadro®, or Tesla®-class GPUs.
+TensorRT Cloud is available with limited access to select partners. Apply for access, subject to approval.
+ Optimize Neural Networks
+ TensorRT Model Optimizer is a unified library of state-of-the-art model optimization techniques, including quantization, pruning, speculation, sparsity, and distillation. It compresses deep learning models for downstream deployment frameworks like TensorRT-LLM, TensorRT, vLLM, and SGLang to efficiently optimize inference on NVIDIA GPUs. TensorRT Model Optimizer also supports training for inference techniques such as Speculative Decoding Module Training, Pruning/Distillation, and Quantization Aware Training through NeMo and Hugging Face frameworks.
+ Major Framework Integrations
+ TensorRT integrates directly into PyTorch and Hugging Face to achieve 6X faster inference with a single line of code. TensorRT provides an ONNX parser to import ONNX models from popular frameworks into TensorRT. MATLAB is integrated with TensorRT through GPU Coder to automatically generate high-performance inference engines for NVIDIA Jetson™, NVIDIA DRIVE®, and data center platforms.
+ Deploy, Run, and Scale With Dynamo-Triton
+ TensorRT-optimized models are deployed, run, and scaled with NVIDIA Dynamo Triton inference-serving software that includes TensorRT as a backend. The advantages of using Triton include high throughput with dynamic batching, concurrent model execution, model ensembling, and streaming audio and video inputs.
+ Simplify AI deployment on RTX
+ TensorRT for RTX offers an optimized inference deployment solution for NVIDIA RTX GPUs. It facilitates faster engine build times within 15 to 30s, facilitating apps to build inference engines directly on target RTX PCs during app installation or on first run, and does so within a total library footprint of under 200 MB, minimizing memory footprint. Engines built with TensorRT for RTX are cross-OS, cross-GPU portable, ensuring a build once, deploy anywhere workflow. 
+ Accelerate Every Inference Platform
+ TensorRT can optimize models for applications across the edge, laptops, desktops, and data centers. It powers key NVIDIA solutions—such as NVIDIA TAO, NVIDIA DRIVE, NVIDIA Clara™, and NVIDIA JetPack™—and is integrated with application-specific SDKs, such as NVIDIA NIM™, NVIDIA DeepStream, NVIDIA Riva, NVIDIA Merlin™, NVIDIA AI for Media, NVIDIA Morpheus, and NVIDIA Broadcast Engine. 
+TensorRT provides developers a unified path to deploy intelligent video analytics, speech AI, recommender systems, video conferencing, AI-based cybersecurity, and streaming apps in production.
+ Get Started With TensorRT
+ TensorRT is an ecosystem of APIs for building and deploying high-performance deep learning inference. It offers a variety of inference solutions for different developer requirements.
+ Use-case
+ Deployment Platform
+ Solution
+ Inference for LLMs
+ Data center GPUs like GB100, H100, A100, etc.
+ Download TRT-LLM
+ TensorRT-LLM is available for free on GitHub . 
+ Download (GitHub) 
+ Documentation 
+ Inference for non-LLMs like CNNs, Diffusions, Transformers, etc.
+Safety-compliant and high-performance inference for Automotive Embedded
+Inference for non-LLMs in robotics and edge applications
+ Data center GPUs, Embedded, and Edge platforms
+Automotive platform: NVIDIA DRIVE AGX
+Edge Platform: Jetson, NVIDIA IGX, etc.
+ Download TensorRT
+ The TensorRT inference library provides a general-purpose AI compiler and an inference runtime that delivers low latency and high throughput for production applications.
+ Download SDK 
+ Download Container 
+ AI Model Inferencing on RTX PCs 
+ NVIDIA GeForce RTX and RTX Pro GPUs in laptops and desktops 
+ Download TensorRT for RTX
+ TensorRT for RTX is a dedicated inference deployment solution for RTX GPUs.
+ Download SDK 
+ Documentation 
+ Model optimizations like Quantization, Distillation, Sparsity, etc.
+ Data center GPUs like GB100, H100, etc.
+ Download TensorRT Model Optimizer
+ TensorRT Model Optimizer is free on NVIDIA PyPI, with examples and recipes on GitHub . 
+ Download (GitHub) 
+ Documentation 
+ Get Started With TensorRT Frameworks
+ TensorRT Frameworks add TensorRT compiler functionality to frameworks like PyTorch.
+ Download ONNX and Torch-TensorRT
+ The TensorRT inference library provides a general-purpose AI compiler and an inference runtime that delivers low latency and high throughput for production applications.
+ ONYX: 
+ Documentation 
+ Torch-TensorRT: 
+ Download Container 
+ Documentation 
+ Experience Tripy: Pythonic Inference With TensorRT
+ Experience high-performance inferen
+
+=== [about] https://docs.nvidia.com/deeplearning/tensorrt/latest/index.html (lang=en)
+NVIDIA TensorRT Documentation — NVIDIA TensorRT 
+ Skip to main content 
+ Back to top 
+ Ctrl + K 
+ NVIDIA TensorRT
+ Choose version 
+ Documentation Home 
+ Search 
+ Ctrl + K 
+ Search 
+ Ctrl + K 
+ NVIDIA TensorRT
+ Choose version 
+ Documentation Home 
+ Table of Contents
+ Getting Started 
+ Release Notes 
+ 11.4.0 (Latest) 
+ 11.3.0 
+ 11.2.1 
+ 11.1.0 
+ 11.0.0 
+ Build Your First Engine 
+ Quick Start Guide 
+ Example Deployment Using ONNX 
+ Using the TensorRT Runtime API 
+ Support Matrix 
+ Installing TensorRT 
+ Installation Guide Overview 
+ Prerequisites 
+ Installing TensorRT 
+ Method 1: Python Package Index (pip) 
+ Method 2: Debian Package Installation 
+ Method 3: RPM Package Installation 
+ Method 4: Tar File Installation 
+ Method 5: Zip File Installation (Windows) 
+ Method 6: Container Installation 
+ Alternative Installation Methods 
+ Upgrading TensorRT 
+ Uninstalling TensorRT 
+ Architecture 
+ Architecture Overview 
+ How TensorRT Works 
+ Inference Library 
+ Inference Library Overview 
+ TensorRT Capabilities 
+ Engine Compatibility 
+ C++ API Documentation 
+ Python API Documentation 
+ Sample Support Guide 
+ Sample Explorer 
+ Building and Running C++ Samples 
+ Running Python Samples 
+ Cross Compiling Samples 
+ Advanced Topics 
+ Refitting an Engine 
+ Precision Control 
+ Data Formats and Tensors 
+ Data Format Descriptions 
+ Engine Tools and Debugging 
+ Weight Streaming 
+ Multi-Device Inference 
+ Working with Quantized Types 
+ Quantization Workflows 
+ Quantization Schemes 
+ Explicit Quantization 
+ Accuracy Considerations 
+ Working with Dynamic Shapes 
+ Dynamic Shapes: Core Concepts 
+ Dynamic Shapes: Advanced Topics 
+ Extending TensorRT with Custom Layers 
+ Adding Custom Layers Using the C++ API 
+ Enabling Timing Caching and Using Custom Tactics 
+ Plugin API Description 
+ Working with Loops 
+ Working with Conditionals 
+ Working with DLA 
+ Building and Launching the Loadable 
+ DLA Supported Layers and Restrictions 
+ DLA Runtime Configuration 
+ DLA Standalone Mode 
+ Customizing DLA Memory Pools 
+ Strongly Typed Networks for DLA 
+ ONNX Parser Flags for DLA 
+ DLA Supported Layers for Windows on ARM 
+ TensorRT API Capture and Replay 
+ Working with Transformers 
+ Rotary Position Embedding 
+ KV Cache 
+ MoE (Mixture of Experts) 
+ Fused Attention 
+ Multi-Device Attention 
+ Performance 
+ Best Practices 
+ Performance Benchmarking 
+ Optimizing TensorRT Performance 
+ Layer Fusion Catalog 
+ Global Performance Tuning 
+ API 
+ C++ API 
+ Python API 
+ TensorRT Operators 
+ Migration Guide 
+ Migrating from TensorRT 10.x to 11.x 
+ Migrating Python Code from TensorRT 10.x to 11.x 
+ Python Migration Patterns for TensorRT 11.x 
+ Removed Python APIs and Replacements 
+ Migrating C++ Code from TensorRT 10.x to 11.x 
+ C++ Migration Patterns for TensorRT 11.x 
+ Removed and Deprecated C++ APIs in TensorRT 11.x 
+ Migrating trtexec Usage from TensorRT 10.x to 11.x 
+ Migrating Safety Runtime Code from TensorRT 10.x to 11.x 
+ Migrating IEngineInspector Usage from TensorRT 10.x to 11.x 
+ Migrating TensorRT from 10.x to 11.x on NVIDIA DriveOS 
+ Migrating TensorRT from 10.x to 11.x on Jetson/JetPack 
+ Appendix: Migrating from TensorRT 8.x to 10.x 
+ Appendix: Migrating Python Code from TensorRT 8.x to 10.x 
+ Appendix: Python Migration Patterns for TensorRT 10.x 
+ Appendix: Added and Removed Python APIs in TensorRT 10.x 
+ Appendix: Migrating C++ Code from TensorRT 8.x to 10.x 
+ Appendix: C++ Migration Patterns for TensorRT 10.x 
+ Appendix: Added and Removed C++ APIs in TensorRT 10.x 
+ Appendix: Migrating trtexec Usage from TensorRT 8.x to 10.x 
+ Appendix: Migrating Safety Runtime Code from T
+
+=== [meta] https://developer.nvidia.com/tensorrt
+html lang: en
+hreflang: en-us, ko-kr, x-default, zh-cn
+화면에 보이는 언어 이름: 없음

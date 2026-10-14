@@ -1,0 +1,99 @@
+{
+ "company": "Horovod (LF AI & Data Foundation 호스팅, Uber가 처음 개발)",
+ "one_liner_ko": "PyTorch·TensorFlow·Keras·Apache MXNet용 분산 딥러닝 학습 프레임워크.",
+ "what_it_does_ko": "Horovod는 Uber가 분산 딥러닝을 빠르고 쉽게 하려고 처음 만든 학습 프레임워크로, 기존 학습 스크립트를 몇 줄의 파이썬 코드로 수백 개 GPU까지 확장한다. 온프레미스에 설치하거나 AWS·Azure·Databricks 같은 클라우드에서 바로 돌릴 수 있고 Apache Spark 위에서도 실행된다. LF AI & Data Foundation이 호스팅한다. GitHub 저장소에 따르면 활동이 없어 2026년 9월 보관(archived) 처리됐다.",
+ "key_features": [
+  "수백 개 GPU까지 90% 이상 확장 효율",
+  "몇 줄의 파이썬 코드로 학습 확장",
+  "PyTorch·TensorFlow·Keras·MXNet에서 같은 방식으로 동작",
+  "Apache Spark 위에서 데이터 처리와 학습 통합",
+  "단일 GPU·다중 GPU·다중 호스트를 코드 변경 없이 실행"
+ ],
+ "use_cases_ko": [
+  "단일 GPU 학습 스크립트를 여러 GPU로 병렬 확장"
+ ],
+ "pricing": {
+  "free_tier": "불명 (가격 표기 없음)",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "Apache 2.0",
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://github.com/horovod/horovod",
+   "quote": "Horovod is hosted by the `LF AI & Data Foundation <https://lfdl.io>`_ (LF AI & Data)."
+  },
+  {
+   "field": "company",
+   "url": "https://horovod.ai",
+   "quote": "Horovod was originally developed by Uber to make distributed deep learning fast and easy to use"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://horovod.ai",
+   "quote": "Horovod is a distributed deep learning training framework for PyTorch, TensorFlow, Keras and Apache MXNet."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://horovod.ai",
+   "quote": "With Horovod, an existing training script can be scaled up to run on hundreds of GPUs in just a few lines of Python code."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/horovod/horovod",
+   "quote": "Due to inactivity, this project was archived in September 2026."
+  },
+  {
+   "field": "key_features",
+   "url": "https://horovod.ai",
+   "quote": "Scale up to hundreds of GPUs with upwards of 90% scaling efficiency."
+  },
+  {
+   "field": "key_features",
+   "url": "https://horovod.ai",
+   "quote": "Start scaling your model training with just a few lines of Python code."
+  },
+  {
+   "field": "key_features",
+   "url": "https://horovod.ai",
+   "quote": "Runs the same for PyTorch, TensorFlow, Keras, and MXNet; on premise, in the cloud, and on Apache Spark."
+  },
+  {
+   "field": "key_features",
+   "url": "https://horovod.ai",
+   "quote": "Horovod can additionally run on top of Apache Spark, making it possible to unify data processing and model training into a single pipeline."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/horovod/horovod",
+   "quote": "it can run on a single-GPU, multiple-GPUs, or even multiple hosts without any further code changes."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/horovod/horovod",
+   "quote": "The primary motivation for this project is to make it easy to take a single-GPU training script and successfully scale"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/horovod/horovod",
+   "quote": ".. image:: https://img.shields.io/badge/License-Apache%202.0-blue.svg"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://horovod.ai",
+   "quote": "hreflang: 없음"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "Apache 2.0 오픈소스 분산 학습 프레임워크(LF AI & Data), 직접 설치, 요금 표기 없음 — 2026년 9월 보관 처리",
+   "diff": "기존 '사용량 기반 종량제(클라우드/GPU)'와 반대로 자체 설치형 오픈소스 소프트웨어",
+   "url": "https://horovod.ai"
+  }
+ ],
+ "plan_change": []
+}

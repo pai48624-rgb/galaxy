@@ -1,0 +1,223 @@
+{
+ "company": "Databricks",
+ "one_liner_ko": "여러 클라우드에서 데이터·분석·AI 작업을 하나로 묶는 Databricks 플랫폼과 그 AI 연구 조직(Databricks AI Research).",
+ "what_it_does_ko": "Databricks는 데이터 엔지니어링, 데이터 웨어하우징, AI(모델 서빙·학습·Agent Bricks), Postgres 데이터베이스, Genie AI 도우미를 하나의 플랫폼으로 제공한다. AI 연구 블로그에서는 맞춤 강화학습으로 만든 기업 지식 에이전트 KARL, 기업용 벤치마크 OfficeQA Pro V2, GPU 커널 생성 등 연구를 공개한다. 요금은 선불 없는 종량제(초 단위, DBU 기준)이며 약정 계약 시 할인된다. AWS·Azure·GCP에서 쓸 수 있다. 블로그·요금 페이지에는 'Mosaic'이라는 이름이 보이지 않는다.",
+ "key_features": [
+  "맞춤 강화학습 기반 기업 지식 에이전트 KARL",
+  "기업용 근거 추론 벤치마크 OfficeQA Pro V2",
+  "특화 GPU 커널 생성 연구",
+  "프로덕션 수준 생성형 AI·ML 앱 구축(모델 서빙·학습·AI 검색)",
+  "자연어 Q&A·코딩 도우미 Genie",
+  "완전 관리형 Postgres 운영 데이터베이스",
+  "AWS·Azure·GCP 지원"
+ ],
+ "use_cases_ko": [
+  "데이터·ML·분석 파이프라인 구축",
+  "BI 보고·분석용 SQL 쿼리 실행",
+  "기업용 생성형 AI·ML 앱 구축"
+ ],
+ "pricing": {
+  "free_tier": "있음 (무료 학습용 Free Edition, 무료 체험, Genie 무료 사용량)",
+  "plans": [
+   {
+    "name": "Data Engineering",
+    "price": 0.15,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "DBU당 $0.15부터",
+    "page_lang": "en-US"
+   },
+   {
+    "name": "Data Warehousing",
+    "price": 0.22,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "DBU당 $0.22부터",
+    "page_lang": "en-US"
+   },
+   {
+    "name": "Interactive workloads",
+    "price": 0.4,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "DBU당 $0.40부터",
+    "page_lang": "en-US"
+   },
+   {
+    "name": "Operational Database",
+    "price": 0.069,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "CU당 $0.069부터",
+    "page_lang": "en-US"
+   },
+   {
+    "name": "Artificial Intelligence",
+    "price": 0.07,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "DBU당 $0.07부터",
+    "page_lang": "en-US"
+   },
+   {
+    "name": "Genie",
+    "price": 0.07,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "무료 사용량 초과분 DBU당 $0.07부터",
+    "page_lang": "en-US"
+   },
+   {
+    "name": "운영 데이터베이스",
+    "price": 0.069,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "DBU당 $0.069부터(한국어 페이지 표기)",
+    "page_lang": "ko-KR"
+   },
+   {
+    "name": "Genie(한국어 페이지)",
+    "price": 0.07,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "무료 사용량 초과분 DBU당 $0.07부터",
+    "page_lang": "ko-KR"
+   }
+  ],
+  "pricing_url": "https://www.databricks.com/product/pricing"
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.databricks.com/product/pricing",
+   "quote": "Databricks Pricing: Flexible Plans for Data and AI Solutions"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.databricks.com/product/pricing",
+   "quote": "One simple platform to unify all your data, analytics and AI workloads — across all your preferred clouds"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.databricks.com/blog/category/research",
+   "quote": "Databricks AI Research"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.databricks.com/product/pricing",
+   "quote": "Databricks offers you a pay-as-you-go approach with no up-front costs. Only pay for the products you use at per second granularity."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.databricks.com/blog/category/research",
+   "quote": "Meet KARL: A faster agent for enterprise knowledge, powered by custom RL"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.databricks.com/blog/category/research",
+   "quote": "Introducing OfficeQA Pro V2: A New Benchmark for Enterprise Grounded-Reasoning"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.databricks.com/blog/category/research",
+   "quote": "Achieving Extreme Efficiency through Specialized GPU Kernel Generation"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.databricks.com/product/pricing",
+   "quote": "Build production-quality GenAI or ML apps across any use case"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.databricks.com/product/pricing",
+   "quote": "Genie Code - AI Coding Assistant"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.databricks.com/product/pricing",
+   "quote": "Fully-managed Postgres transactional database for serving data and features"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.databricks.com/blog/category/research",
+   "quote": "Cloud Providers Databricks on AWS, Azure and GCP"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.databricks.com/product/pricing",
+   "quote": "Orchestrate data processing, machine learning and analytics pipelines"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.databricks.com/product/pricing",
+   "quote": "Run SQL queries for BI reporting, analytics and visualization"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.databricks.com/product/pricing",
+   "quote": "Build production-quality GenAI or ML apps across any use case"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.databricks.com/blog/category/research",
+   "quote": "Free Edition Learn professional Data and AI tools for free"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.databricks.com/product/pricing",
+   "quote": "Starting at $0.15 / DBU"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.databricks.com/product/pricing",
+   "quote": "Starting at $0.22 / DBU"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.databricks.com/product/pricing",
+   "quote": "Starting at $0.40 / DBU"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.databricks.com/product/pricing",
+   "quote": "Starting at $0.069 / CU"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.databricks.com/product/pricing",
+   "quote": "Starting at $0.07 / DBU beyond free usage"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.databricks.com/kr/product/pricing",
+   "quote": "Starting at $0.069 / DBU"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.databricks.com/kr/product/pricing",
+   "quote": "Starting at $0.07 / DBU 무료 사용량 초과"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.databricks.com/blog/category/research",
+   "quote": "hreflang: de, en, es-419, fr, it, ja, ko, pt-br, x-default"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.databricks.com/kr/product/pricing",
+   "quote": "Databricks 가격: 데이터 및 AI 솔루션을 위한 유연한 요금제"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "Databricks 플랫폼은 선불 없는 종량제(DBU당 $0.07~$0.40부터)와 약정 할인 계약으로 판매",
+   "diff": "기존 '해당없음(연구조직/기업)'과 달리 공개 유료 종량제 요금이 있음",
+   "url": "https://www.databricks.com/product/pricing"
+  }
+ ],
+ "plan_change": []
+}

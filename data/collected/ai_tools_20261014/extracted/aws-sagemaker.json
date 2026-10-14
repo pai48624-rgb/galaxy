@@ -1,0 +1,52 @@
+{
+ "company": "Amazon Web Services (AWS)",
+ "one_liner_ko": "모든 데이터·분석·AI의 중심이 되는 차세대 Amazon SageMaker.",
+ "what_it_does_ko": "차세대 Amazon SageMaker는 AWS의 기계 학습(ML)과 분석 기능을 결합해 모든 데이터에 통합 접근하며 분석과 AI를 함께 다루는 환경을 제공한다. SageMaker AI(구 Amazon SageMaker)로 완전관리형 인프라에서 ML과 파운데이션 모델을 구축·훈련·배포하고, Unified Studio에서 데이터 처리·SQL 분석·생성형 AI 개발을 한 곳에서 한다. 레이크하우스 아키텍처로 S3 데이터 레이크와 Redshift 데이터 웨어하우스를 통합하고, SageMaker Catalog로 데이터·AI 거버넌스를 관리한다.",
+ "key_features": [
+  "SageMaker AI: 완전관리형 인프라로 ML·FM 구축·훈련·배포(HyperPod·JumpStart·MLOps 포함)",
+  "Unified Studio: 분석·AI 통합 개발 환경(서버리스 노트북·SQL 편집기)",
+  "레이크하우스 아키텍처(S3·Redshift 통합, Apache Iceberg 호환, 제로 ETL)",
+  "SageMaker Catalog(Amazon DataZone 기반) 데이터·AI 거버넌스",
+  "Amazon Q Developer로 자연어 기반 모델 구축·SQL 생성",
+  "Amazon Bedrock 연동 생성형 AI 앱 개발",
+  "가드레일·유해성 탐지·책임 있는 AI 정책"
+ ],
+ "use_cases_ko": [
+  "사업부별로 흩어진 데이터 통합·관리(Toyota 사례)",
+  "레이크하우스 구현 단축과 데이터 제품 구축(Carrier 사례)",
+  "개발자가 여러 AWS 서비스를 한 곳에서 사용(Charter Communications 사례)"
+ ],
+ "pricing": {
+  "free_tier": "불명 (AWS 전체로는 프리 티어·무료 가입 언급, SageMaker 전용 가격은 수집 페이지에 없음)",
+  "plans": [],
+  "pricing_url": "https://aws.amazon.com/ko/pricing/?nc2=h_pr_hub/"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["웹", "API", "CLI"],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {"field": "company", "url": "https://aws.amazon.com/ko/sagemaker/", "quote": "널리 도입된 AWS 기계 학습(ML) 및 분석 기능을 결합하여"},
+  {"field": "one_liner_ko", "url": "https://aws.amazon.com/ko/sagemaker/", "quote": "모든 데이터, 분석, AI의 중심이 되는 차세대 Amazon SageMaker"},
+  {"field": "what_it_does_ko", "url": "https://aws.amazon.com/ko/sagemaker/", "quote": "모든 데이터에 대한 통합 액세스를 통해 분석 및 AI를 위한 통합 경험을 제공합니다."},
+  {"field": "what_it_does_ko", "url": "https://aws.amazon.com/ko/sagemaker/", "quote": "완전관리형 인프라, 도구, 워크플로를 활용하여 사용 사례에 대한 기계 학습 모델(FM 포함)을 구축, 훈련, 배포하세요."},
+  {"field": "key_features", "url": "https://aws.amazon.com/ko/sagemaker/", "quote": "SageMaker AI 의 모델 개발( HyperPod , JumpStart 및 MLOps 포함)"},
+  {"field": "key_features", "url": "https://aws.amazon.com/ko/sagemaker/", "quote": "AI 에이전트가 내장된 완전 관리형 서버리스 노트북에서 작업하고, 내장된 SQL 편집기로 다양한 데이터 소스를 검색 및 쿼리하고"},
+  {"field": "key_features", "url": "https://aws.amazon.com/ko/sagemaker/", "quote": "분석 데이터의 단일 복사본에서 모든 Apache Iceberg와 호환되는 도구 및 엔진을 사용하여 데이터에 액세스하고 쿼리할 수 있는 유연성을 확보할 수 있습니다."},
+  {"field": "key_features", "url": "https://aws.amazon.com/ko/sagemaker/", "quote": "Amazon DataZone에 구축된 SageMaker Catalog를 사용하여 데이터 및 AI를 안전하게 검색, 관리, 협업"},
+  {"field": "key_features", "url": "https://aws.amazon.com/ko/sagemaker/", "quote": "이 모든 작업을 자연어로 수행할 수 있습니다."},
+  {"field": "key_features", "url": "https://aws.amazon.com/ko/sagemaker/", "quote": "Amazon Bedrock으로 생성형 AI 애플리케이션 구축 및 확장"},
+  {"field": "key_features", "url": "https://aws.amazon.com/ko/sagemaker/", "quote": "데이터 분류, 유해성 탐지, 가드레일, 책임 있는 AI 정책을 통해 AI 모델을 보호합니다."},
+  {"field": "use_cases_ko", "url": "https://aws.amazon.com/ko/sagemaker/", "quote": "커넥티드 카, 판매, 제조 및 공급망 부서 전반의 데이터를 통합하고 관리할 수 있도록 도와주는 Amazon SageMaker를 구현하고 있습니다."},
+  {"field": "use_cases_ko", "url": "https://aws.amazon.com/ko/sagemaker/", "quote": "레이크하우스 구현 과정을 크게 단축했습니다."},
+  {"field": "use_cases_ko", "url": "https://aws.amazon.com/ko/sagemaker/", "quote": "다양한 AWS 서비스와 상호 작용할 수 있는 원스톱 서비스를 제공합니다."},
+  {"field": "pricing", "url": "https://aws.amazon.com/ko/pricing/?nc2=h_pr_hub/", "quote": "AWS는 방대한 클라우드 서비스에 대해 사용량에 따른 요금 접근 방식을 제공합니다."},
+  {"field": "pricing", "url": "https://aws.amazon.com/ko/pricing/?nc2=h_pr_hub/", "quote": "AWS 제품 및 서비스를 무료로 직접 체험해 보세요"},
+  {"field": "api", "url": "https://docs.aws.amazon.com/?nc2=h_rsc_lrn_docs/", "quote": "Find user guides, code samples, SDKs & toolkits, tutorials, API & CLI references, and more."},
+  {"field": "platforms", "url": "https://aws.amazon.com/ko/sagemaker/", "quote": "SageMaker 시작하기"},
+  {"field": "platforms", "url": "https://docs.aws.amazon.com/?nc2=h_rsc_lrn_docs/", "quote": "Find user guides, code samples, SDKs & toolkits, tutorials, API & CLI references, and more."},
+  {"field": "korean_support", "url": "https://aws.amazon.com/ko/sagemaker/", "quote": "hreflang: ar-sa, de-de, en-us, es-es, fr-fr, id-id, it-it, ja-jp, ko-kr, pt-br, ru-ru, th-th, tr-tr, vi-vn, zh-cn, zh-tw"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

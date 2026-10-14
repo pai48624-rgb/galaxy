@@ -1,0 +1,151 @@
+=== [home] https://www.kubeflow.org/ (lang=en)
+Kubeflow 
+ 🎉 Kubeflow is now a CNCF graduated project — Read more 
+ × 
+ Kubeflow 
+ Join us at KubeCon NA 
+ November 9-12, Salt Lake City, Utah 
+ Docs 
+ Community 
+ Blog 
+ GitHub 
+ Theme 
+ Light 
+ Dark 
+ Version master 
+ v26.03 
+ v1.11 
+ v1.10 
+ v1.9 
+ v1.8 
+ v1.7 
+ v1.6 
+ v1.5 
+ v1.4 
+ v1.3 
+ v1.2 
+ v1.1 
+ v1.0 
+ Kubeflow
+ The Open Source AI Platform
+ Get Started
+ Contribute
+ GenAI
+ Open Source. Battle-Tested. Community Built. 
+ 258M+
+ PyPI Downloads
+ 33.1K+
+ GitHub Stars
+ 3K
+ Contributors
+ What is Kubeflow? 
+ Kubeflow is the Cloud Native AI platform.
+Kubeflow is composed of modular, open source projects that form The Kubernetes-native stack
+for data & AI workloads. Whether you are an AI practitioner, a platform administrator, or a
+decision-maker, Kubeflow offers modular, scalable, and extensible tools to support your
+Data, AI/ML, and HPC use-cases.
+ Kubeflow Mission 
+ Kubeflow's mission is to bridge the Data, AI, and Cloud Native ecosystems. We enable teams
+to deliver more models, agents, and AI applications into production with well-lit paths across
+ the AI lifecycle. 
+By bringing together the skills and expertise of an open global community, our goal is to
+be the standard for Data & AI workloads on Kubernetes.
+ The Kubeflow Community and Subprojects embrace the following core principles:
+ Simple
+ Run workloads at any scale without becoming a Kubernetes expert
+ Portable
+ Use the same code on a local laptop, on-premises, or in any cloud
+ Scalable
+ Manage hyperscale training jobs and high-throughput AI agents
+ Composable
+ Mix and match tools across the AI lifecycle
+ Trusted by 
+ see more adopters on 
+ Kubeflow Subprojects 
+ Kubeflow Spark Operator
+ Kubeflow Spark Operator aims to make specifying and running Spark applications as easy and idiomatic as running other workloads on Kubernetes.
+ 3.1k 
+ Kubeflow Notebooks
+ Kubeflow Notebooks runs interactive development environments for AI, ML, and Data workloads on Kubernetes.
+ 0.1k 
+ Kubeflow Trainer
+ Kubeflow Trainer is a Kubernetes-native distributed AI platform
+for scalable LLM fine-tuning and training of AI models across a wide range of frameworks,
+including PyTorch, MLX, HuggingFace, DeepSpeed, Megatron, JAX, XGBoost, and more.
+ 1.4k 
+ Kubeflow Katib
+ Kubeflow Katib is a Kubernetes-native project for automated machine learning (AutoML) with support for hyperparameter tuning, early stopping and neural architecture search.
+ 1.4k 
+ Kubeflow Hub
+ Kubeflow Hub (formerly Model Registry) is a cloud-native component that provides a single pane of glass for ML model developers to index and manage models, versions, and ML artifacts metadata.
+It fills a gap between model experimentation and production activities.
+ 0.1k 
+ Kubeflow Pipelines
+ Kubeflow Pipelines (KFP) is a platform for building then deploying portable and scalable machine learning workflows using Kubernetes.
+ 3.4k 
+ Kubeflow Dashboard
+ Kubeflow Central Dashboard is our hub which connects the authenticated web interfaces of Kubeflow and other ecosystem components.
+ 16 
+ Join our Community 
+ We are an open and welcoming community of software developers, data scientists, and organizations!
+Check out the weekly community calls , get involved in discussions on the mailing list or chat with others on the Slack Workspace !
+ We are a Cloud Native Computing Foundation project.
+ © 2026 The Kubeflow Authors. 
+ Documentation distributed under CC BY 4.0 
+ The Linux Foundation® (TLF) has registered trademarks and uses trademarks. For a list of TLF trademarks, see Trademark Usage . 
+ The R Logo is used under CC BY-SA 4.0 . 
+ Website Privacy Policy
+
+=== [meta] https://www.kubeflow.org/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/kubeflow/kubeflow
+# Kubeflow
+
+[![Join Kubeflow Slack](https://img.shields.io/badge/slack-join_chat-white.svg?logo=slack&style=social)](https://www.kubeflow.org/docs/about/community/#kubeflow-slack-channels)
+
+<img src="./logo/stacked.svg" width="120">
+
+## What is Kubeflow
+
+[Kubeflow](https://www.kubeflow.org/) is _the_ Cloud Native AI platform.
+
+Kubeflow is composed of modular, open source projects that form the Kubernetes-native stack
+for data & AI workloads. Whether you are an AI practitioner, a platform administrator, or a
+decision-maker, Kubeflow offers modular, scalable, and extensible tools to support your
+data, AI/ML, and HPC use-cases.
+
+## Kubeflow Mission
+
+Kubeflow's mission is to bridge the Data, AI, and Cloud Native ecosystems. We enable teams to
+deliver more models, agents, and AI applications into production with well-lit paths across
+[the AI lifecycle](/docs/started/architecture/#kubeflow-landscape-in-the-ai-lifecycle). By bringing
+together the skills and expertise of an open global community, our goal is to be the standard for
+data & AI workloads on Kubernetes.
+
+The Kubeflow Community and Subprojects embrace the following core principles:
+
+- **Simple**: Run workloads at any scale without becoming a Kubernetes expert
+- **Portable**: Use the same code on a local laptop, on-premises, or in any cloud
+- **Scalable**: Manage hyperscale training jobs and high-throughput AI agents
+- **Composable**: Mix and match tools across the AI lifecycle
+
+## Kubeflow Community
+
+Kubeflow is a community-led project maintained by the
+[Kubeflow Working Groups](https://www.kubeflow.org/docs/about/governance/#5-working-groups)
+under the guidance of the
+[Kubeflow Outreach Committee](https://www.kubeflow.org/docs/about/governance/#3-kubeflow-outreach-committee),
+[Kubeflow Distribution Committee](https://www.kubeflow.org/docs/about/governance/#4-kubeflow-distribution-committee),
+and [Kubeflow Steering Committee](https://www.kubeflow.org/docs/about/governance/#2-kubeflow-steering-committee).
+
+We encourage you to learn about the [Kubeflow Community](https://www.kubeflow.org/docs/about/community/)
+and how to [contribute](https://www.kubeflow.org/docs/about/contributing/) to the project!
+
+## Repository Role
+
+This repository serves primarily as a gateway to Kubeflow subprojects and shared project metadata.
+Kubeflow development happens in the individual subproject repositories.
+

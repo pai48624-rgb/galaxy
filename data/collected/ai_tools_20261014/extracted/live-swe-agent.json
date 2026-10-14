@@ -1,0 +1,78 @@
+{
+ "company": null,
+ "one_liner_ko": "실제 소프트웨어 문제를 푸는 동안 실행 중에 스스로 도구를 만들며 진화하는 소프트웨어 에이전트와 그 리더보드.",
+ "what_it_does_ko": "Live-SWE-agent는 실제 소프트웨어 문제를 풀면서 실행 중에 스스로를 계속 진화시키는 첫 '라이브' 소프트웨어 에이전트라고 소개한다. bash 명령 같은 제한된 도구로 시작해, 단계마다 명령을 실행하거나 문제 해결에 도움이 되는 맞춤 도구(실행 가능한 스크립트)를 만든다. 환경 피드백을 받은 뒤 지난 단계를 돌아보고 도구를 만들지 결정하는 과정을 반복한다. 리더보드는 같은 Live-SWE-agent 스캐폴드로 SWE-bench Verified와 SWE-Bench Pro에서 모델들을 비교한다.",
+ "key_features": [
+  "실행 중 맞춤 도구(스크립트) 자동 생성",
+  "환경 피드백 후 지난 단계 반성·도구 생성 판단",
+  "SWE-bench Verified 리더보드",
+  "SWE-Bench Pro 리더보드",
+  "검증된 결과 배지(✓)",
+  "독점·오픈소스 모델 유형 필터",
+  "해결률·평균 비용 표시, 같은 스캐폴드로 점수 제출"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": null,
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://live-swe-agent.github.io/",
+   "quote": "Live-SWE-agent is the first live software agent that can autonomously and continuously evolve itself on-the-fly during runtime when solving real-world software problems."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://live-swe-agent.github.io/",
+   "quote": "create a custom tool that can help it solve the issue."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://live-swe-agent.github.io/",
+   "quote": "we specifically ask the agent to reflect upon the past steps and decide whether a tool should be created."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://live-swe-agent.github.io/",
+   "quote": "All results are evaluated using our Live-SWE-agent scaffold."
+  },
+  {
+   "field": "key_features",
+   "url": "https://live-swe-agent.github.io/",
+   "quote": "In Live-SWE-Agent, we define a custom tool as a script that can be executed in the environment."
+  },
+  {
+   "field": "key_features",
+   "url": "https://live-swe-agent.github.io/",
+   "quote": "SWE-bench Verified benchmark contains 500 software development problems"
+  },
+  {
+   "field": "key_features",
+   "url": "https://live-swe-agent.github.io/",
+   "quote": "SWE-Bench Pro contains 731 publicly-available problems"
+  },
+  {
+   "field": "key_features",
+   "url": "https://live-swe-agent.github.io/",
+   "quote": "The ✓ badge indicates that results have been verified."
+  },
+  {
+   "field": "key_features",
+   "url": "https://live-swe-agent.github.io/",
+   "quote": "Model Type: \n All \n Proprietary \n Open Source"
+  },
+  {
+   "field": "key_features",
+   "url": "https://live-swe-agent.github.io/",
+   "quote": "Submit your model's score with our scaffold for an apples-to-apples comparison!"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

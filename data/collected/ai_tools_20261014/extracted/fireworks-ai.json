@@ -1,0 +1,68 @@
+{
+ "company": "Fireworks AI, Inc.",
+ "one_liner_ko": "오픈 모델을 학습·추론해 나만의 특화 지능으로 만드는 AI 인프라 플랫폼(PyTorch 제작자들이 만듦).",
+ "what_it_does_ko": "Fireworks는 최신 오픈소스 모델과 자사 데이터를 결합해 특화 모델을 만드는 학습·추론 플랫폼이다. 안내형 학습부터 직접 손실 함수·RL 루프를 작성하는 방식까지 지원하고, 학습한 체크포인트를 몇 초 만에 프로덕션에 배포한다. 추론은 토큰 단위 과금 서버리스(OpenAI·Anthropic 호환), 전용 온디맨드 배포, 예약 용량 중에서 고를 수 있다. Fireworks Nexus는 작업별로 최적의 오픈·클로즈드 모델로 라우팅해 AI 코딩 비용을 줄이는 대체 API다.",
+ "key_features": [
+  "서버리스 추론: 토큰 단위 과금, 콜드 스타트 없음, OpenAI·Anthropic 호환",
+  "온디맨드 전용 배포: GPU 초 단위 과금, 멀티 리전",
+  "예약 용량(Reserved)",
+  "관리형 학습: LoRA·전체 파라미터 SFT·DPO",
+  "Serverless Training API(공유 트레이너 풀, LoRA)",
+  "직접 작성하는 RL 학습 루프(Training SDK)",
+  "Fireworks Nexus: 모델 라우팅으로 AI 코딩 비용 50~75% 절감",
+  "모델 라이브러리(오픈 모델을 코드 한 줄로 실행)"
+ ],
+ "use_cases_ko": [
+  "AI 코딩 도구의 모델 학습·서빙(Cursor 사례)",
+  "미세 조정으로 지연 시간 단축(Notion 사례: 약 2초→350ms)",
+  "오픈소스 모델 호스팅으로 응답 속도 개선(Quora 사례: 3배)"
+ ],
+ "pricing": {
+  "free_tier": "불명 (Muse Glimmer 30B SFT 학습은 10/31까지 한시 무료·신용카드 불필요)",
+  "plans": [
+   {"name": "Serverless Inference (선불 크레딧)", "price": null, "currency": "USD", "period": "usage", "limits": "입력·출력·캐시 토큰 단위 과금, 모델별 상이(예: GLM 5.3 Flash 입력 $0.15/M·출력 $0.5/M)", "page_lang": "en"},
+   {"name": "Embeddings (150M 이하)", "price": 0.008, "currency": "USD", "period": "usage", "limits": "100만 입력 토큰당", "page_lang": "en"},
+   {"name": "Managed Training LoRA SFT (16B 이하)", "price": 0.50, "currency": "USD", "period": "usage", "limits": "100만 학습 토큰당", "page_lang": "en"},
+   {"name": "On-Demand H100 80GB", "price": 8.00, "currency": "USD", "period": "usage", "limits": "GPU 시간당(분당 $0.134)", "page_lang": "en"},
+   {"name": "On-Demand B200 180GB", "price": 13.00, "currency": "USD", "period": "usage", "limits": "GPU 시간당", "page_lang": "en"},
+   {"name": "On-Demand GB300 288GB", "price": 20.00, "currency": "USD", "period": "usage", "limits": "GPU 시간당", "page_lang": "en"},
+   {"name": "Enterprise", "price": null, "currency": null, "period": null, "limits": "영업 문의", "page_lang": "en"}
+  ],
+  "pricing_url": "https://fireworks.ai/pricing"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["웹", "CLI", "API"],
+ "korean_support": "불명",
+ "evidence": [
+  {"field": "company", "url": "https://fireworks.ai/pricing", "quote": "© 2026 Fireworks AI, Inc. All rights reserved."},
+  {"field": "one_liner_ko", "url": "https://fireworks.ai", "quote": "Fireworks’ SoTA training and inference take you beyond the frontier, transforming open models into your specialized intelligence."},
+  {"field": "one_liner_ko", "url": "https://fireworks.ai", "quote": "From the Creators of pytorch Own your model."},
+  {"field": "what_it_does_ko", "url": "https://fireworks.ai", "quote": "Every checkpoint deploys to production in seconds."},
+  {"field": "what_it_does_ko", "url": "https://fireworks.ai", "quote": "Serverless. Pay per token with Priority and Fast options to meet your requirements. OpenAI and Anthropic compatible."},
+  {"field": "key_features", "url": "https://fireworks.ai/pricing", "quote": "Get started in seconds with per token pricing, zero setup and no cold starts"},
+  {"field": "key_features", "url": "https://fireworks.ai", "quote": "On-Demand. Dedicated deployments. Multi-region, supports post-trained models."},
+  {"field": "key_features", "url": "https://fireworks.ai", "quote": "Reserved. Guaranteed capacity, higher quotas, get the newest hardware first."},
+  {"field": "key_features", "url": "https://fireworks.ai/pricing", "quote": "Base Model LoRA SFT LoRA DPO Full Param SFT Full Param DPO"},
+  {"field": "key_features", "url": "https://fireworks.ai/pricing", "quote": "Attach to a shared, always-on trainer pool for LoRA training on the launch models."},
+  {"field": "key_features", "url": "https://fireworks.ai", "quote": "Your own loss, trainer, and RL loop, on our GPUs, rollout serving, and weight sync."},
+  {"field": "key_features", "url": "https://fireworks.ai", "quote": "Route to the best open or closed model for every task, and cut your AI coding spend 50 to 75%."},
+  {"field": "key_features", "url": "https://fireworks.ai", "quote": "Run the latest open models with a single line of code"},
+  {"field": "use_cases_ko", "url": "https://fireworks.ai", "quote": "Fireworks has been a key partner in helping us train and serve the models behind Cursor at scale."},
+  {"field": "use_cases_ko", "url": "https://fireworks.ai", "quote": "we reduced latency from about 2 seconds to 350 milliseconds"},
+  {"field": "use_cases_ko", "url": "https://fireworks.ai", "quote": "we noticed a 3x speedup in response time"},
+  {"field": "pricing", "url": "https://fireworks.ai/pricing", "quote": "Pay per token with pre-paid, usage-based billing. Simply add a payment method to buy credits, and usage is then deducted from your balance."},
+  {"field": "pricing", "url": "https://fireworks.ai", "quote": "$0.15/M Input • $0.5/M Output • 1048576 Context"},
+  {"field": "pricing", "url": "https://fireworks.ai/pricing", "quote": "up to 150M\n $0.008"},
+  {"field": "pricing", "url": "https://fireworks.ai/pricing", "quote": "Models up to 16B parameters\n $0.50"},
+  {"field": "pricing", "url": "https://fireworks.ai/pricing", "quote": "H100 80 GB GPU\n $0.134\n $8.00"},
+  {"field": "pricing", "url": "https://fireworks.ai/pricing", "quote": "B200 180 GB GPU\n $0.217\n $13.00"},
+  {"field": "pricing", "url": "https://fireworks.ai/pricing", "quote": "GB300 288 GB GPU\n $0.334\n $20.00"},
+  {"field": "pricing", "url": "https://fireworks.ai/pricing", "quote": "Muse Glimmer 30B SFT is free via UI and Serverless Training API until 10/31"},
+  {"field": "pricing", "url": "https://fireworks.ai/pricing", "quote": "Contact us for enterprise deployments with faster speeds, lower costs, and higher rate limits."},
+  {"field": "api", "url": "https://docs.fireworks.ai/updates/changelog", "quote": "API & SDK Reference"},
+  {"field": "platforms", "url": "https://fireworks.ai/pricing", "quote": "Model Library Docs CLI API Changelog"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

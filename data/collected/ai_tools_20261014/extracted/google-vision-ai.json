@@ -1,0 +1,141 @@
+{
+ "company": "Google Cloud",
+ "one_liner_ko": "API로 고급 비전 모델에 접근해 이미지·문서·동영상에서 유용한 정보를 추출하는 Google Cloud의 비전 AI 제품군.",
+ "what_it_does_ko": "Vision AI는 Google Cloud의 컴퓨터 비전 제품군으로, API를 통해 고급 비전 모델에 접근해 비전 작업을 자동화하거나 관리형 환경에서 노코드로 커스텀 모델을 학습시킬 수 있다. Cloud Vision API는 이미지 라벨 지정, 얼굴·랜드마크 인식, OCR, 선정적 콘텐츠 태그 지정 같은 기능을 REST·RPC API로 제공한다. Document AI는 스캔 문서에서 텍스트·데이터를 추출하고, Video Intelligence API는 저장·스트리밍 동영상의 객체·장소·동작을 인식한다. Imagen으로 이미지 생성·편집·캡셔닝도 지원한다.",
+ "key_features": [
+  "이미지 라벨 지정·얼굴 및 랜드마크 감지·OCR·세이프서치(Cloud Vision API)",
+  "스캔 문서 텍스트·데이터 추출(Document AI)",
+  "저장·스트리밍 동영상 객체·장소·동작 인식(Video Intelligence API)",
+  "Imagen 이미지 생성·편집·캡셔닝·멀티모달 임베딩",
+  "노코드 커스텀 모델 학습",
+  "REST·RPC API 제공"
+ ],
+ "use_cases_ko": [
+  "대용량 문서 텍스트 감지·자동 요약",
+  "사용자 제작 콘텐츠 검토·이미지 객체 감지 파이프라인",
+  "콘텐츠 검토·추천, 미디어 보관, 문맥 광고"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Cloud Vision API 매월 처음 1,000개 단위 무료, 신규 고객 최대 $300 무료 크레딧)",
+  "plans": [
+   {
+    "name": "Vision API 무료 등급",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "처음 1,000개 단위(이미지에 적용하는 기능 1개=청구 단위)",
+    "page_lang": "ko"
+   },
+   {
+    "name": "Vision API 종량제",
+    "price": null,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "1,000개 초과분 종량제(구체 단가는 수집 본문에서 잘림)",
+    "page_lang": "ko"
+   }
+  ],
+  "pricing_url": "https://cloud.google.com/vision"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "API"
+ ],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://cloud.google.com/vision",
+   "quote": "Vision AI: 이미지 및 시각적 AI 도구 | Google Cloud"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://cloud.google.com/vision",
+   "quote": "API를 통해 고급 비전 모델에 액세스하여 비전 작업을 자동화하고, 분석을 간소화하며, 실행 가능한 인사이트를 확보하세요."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://cloud.google.com/vision",
+   "quote": "또는 관리형 환경에서 노 코드 모델 학습을 통해 저렴한 비용으로 커스텀 앱을 빌드할 수 있습니다."
+  },
+  {
+   "field": "key_features",
+   "url": "https://cloud.google.com/vision",
+   "quote": "이미지 라벨 지정, 얼굴 및 랜드마크 감지, OCR, 세이프서치와 같은 사전 빌드된 기능입니다."
+  },
+  {
+   "field": "key_features",
+   "url": "https://cloud.google.com/vision",
+   "quote": "스캔한 문서에서 텍스트와 데이터를 추출하고 비정형 데이터를 정형 정보와 비즈니스 인사이트로 변환하는 문서 이해 플랫폼입니다."
+  },
+  {
+   "field": "key_features",
+   "url": "https://cloud.google.com/vision",
+   "quote": "사전 학습된 ML 모델은 저장된 동영상과 스트리밍 동영상에서 수많은 객체, 장소, 동작을 탁월한 품질로 자동 인식합니다."
+  },
+  {
+   "field": "key_features",
+   "url": "https://cloud.google.com/vision",
+   "quote": "이미지 생성, 이미지 편집, 이미지 캡셔닝, 멀티모달 임베딩"
+  },
+  {
+   "field": "key_features",
+   "url": "https://cloud.google.com/vision",
+   "quote": " Google의 선행 학습된 컴퓨터 비전 ML 모델을 기반으로 하는 Cloud Vision API 는 즉시 사용 가능한 API(REST 및 RPC)로"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://cloud.google.com/vision",
+   "quote": " 일반적인 용도\n 원시 파일에서 텍스트를 감지하고 자동으로 요약"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://cloud.google.com/vision",
+   "quote": "안전하지 않거나 유해한 사용자 제작 콘텐츠를 처리하고, 물리적 문서에서 텍스트를 디지털화하고, 이미지에서 객체를 감지하고 분류하는 데 도움이 되는"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://cloud.google.com/vision",
+   "quote": "콘텐츠 검토 및 추천, 미디어 보관, 문맥 광고와 같은 일반적인 사용 사례"
+  },
+  {
+   "field": "pricing",
+   "url": "https://cloud.google.com/vision",
+   "quote": "이미지에 적용하는 각 기능은 청구 가능한 단위입니다. Cloud Vision API를 사용하면 매월 1,000개 단위의 기능을 무료로 사용할 수 있습니다."
+  },
+  {
+   "field": "pricing",
+   "url": "https://cloud.google.com/vision",
+   "quote": " Vision API\n 처음 1,000개 단위\n 매월 무료"
+  },
+  {
+   "field": "pricing",
+   "url": "https://cloud.google.com/vision",
+   "quote": " 이미지 라벨 지정, 얼굴 및 랜드마크 감지, OCR, 세이프서치와 같은 사전 빌드된 기능입니다. \n 비용 효율적인 종량제 요금입니다."
+  },
+  {
+   "field": "pricing",
+   "url": "https://cloud.google.com/vision",
+   "quote": "신규 고객에게는 최대 $300의 무료 크레딧이 제공되어 Vision AI 및 기타 Google Cloud 제품을 사용해 볼 수 있습니다."
+  },
+  {
+   "field": "api",
+   "url": "https://cloud.google.com/vision",
+   "quote": "Cloud Vision API 는 즉시 사용 가능한 API(REST 및 RPC)로"
+  },
+  {
+   "field": "platforms",
+   "url": "https://cloud.google.com/vision",
+   "quote": "Google Cloud 콘솔 또는 API 호출을 통해 액세스할 수 있습니다."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://cloud.google.com/vision",
+   "quote": "hreflang: de, en, es, es-419, fr, id, it, ja, ko, pt-br, x-default, zh-hans, zh-hant"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

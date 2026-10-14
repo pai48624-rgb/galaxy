@@ -1,0 +1,204 @@
+{
+ "company": "Akash Network",
+ "one_liner_ko": "전 세계 GPU를 훨씬 낮은 비용으로 쓰게 해 주는 탈중앙화 컴퓨팅 마켓플레이스(AI용 오픈 클라우드).",
+ "what_it_does_ko": "Akash Network는 독립 인프라 제공자들이 GPU·CPU를 올리고 사용자가 컨테이너 워크로드를 배포하는 탈중앙화 컴퓨팅 마켓플레이스다. 사용자가 템플릿이나 컨테이너 이미지와 GPU·지역·최대 가격을 지정하면 제공자들이 실시간으로 입찰하고, 가장 좋은 입찰을 수락하면 컨테이너가 실행된다. 가격은 전 세계 역경매로 정해진다고 설명한다. AkashML에서는 OpenAI 호환 API로 오픈소스 모델 추론을 쓸 수 있고, 남는 서버를 제공자로 등록해 수익을 낼 수도 있다.",
+ "key_features": [
+  "역경매 기반 자동 입찰로 GPU 가격 결정",
+  "AkashML: OpenAI 호환 API로 오픈소스 모델 추론",
+  "Akash Console에서 Docker 컨테이너 배포(템플릿·SDL)",
+  "Llama 3·DeepSeek·Stable Diffusion 1-클릭 템플릿",
+  "멀티노드 Ray 분산 클러스터",
+  "H100·A100부터 RTX 5090까지 GPU 선택",
+  "유휴 서버를 제공자로 등록해 수익 창출",
+  "Go·JavaScript/TypeScript SDK 및 API"
+ ],
+ "use_cases_ko": [
+  "AI 학습·추론용 GPU를 저렴하게 임대",
+  "기업의 생성형 AI 추론 확장(Razer 사례: 이미지 1장당 $0.01)",
+  "서버 보유자가 GPU·CPU를 빌려주고 수익"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [
+   {
+    "name": "B300 (288 GB SXM6)",
+    "price": 6.0,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "GPU 시간당, 고정 요금",
+    "page_lang": "en"
+   },
+   {
+    "name": "B200 (180 GB HBM3e)",
+    "price": 5.0,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "GPU 시간당, 고정 요금",
+    "page_lang": "en"
+   },
+   {
+    "name": "H100 (80 GB SXM5)",
+    "price": 2.73,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "GPU 시간당 시작가(최근 입찰 기준)",
+    "page_lang": "en"
+   },
+   {
+    "name": "A100 (80 GB SXM4)",
+    "price": 1.67,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "GPU 시간당 시작가(최근 입찰 기준)",
+    "page_lang": "en"
+   },
+   {
+    "name": "A100 (80 GB PCIe)",
+    "price": 1.33,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "GPU 시간당 시작가(최근 입찰 기준)",
+    "page_lang": "en"
+   },
+   {
+    "name": "RTX 5090 (32 GB PCIe)",
+    "price": 0.57,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "GPU 시간당 시작가(최근 입찰 기준)",
+    "page_lang": "en"
+   },
+   {
+    "name": "RTX 4090 (24 GB PCIe)",
+    "price": 0.39,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "GPU 시간당 시작가(최근 입찰 기준)",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://akash.network/pricing/gpus/"
+ },
+ "open_source": "Apache 2.0",
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "CLI",
+  "API"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://akash.network",
+   "quote": "Akash Network - Decentralized Compute Marketplace"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://akash.network",
+   "quote": "Tap into global GPU power at a fraction of the cost."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://akash.network",
+   "quote": "Independent infrastructure providers meeting your exact requirements automatically submit competitive bids in real time."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://akash.network",
+   "quote": "Akash prices are determined by a global reverse auction to maximize hardware utilization."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://akash.network",
+   "quote": "Accept the optimal bid to open the lease."
+  },
+  {
+   "field": "key_features",
+   "url": "https://akash.network",
+   "quote": "Access leading open-source models instantly via drop-in, OpenAI-compatible APIs."
+  },
+  {
+   "field": "key_features",
+   "url": "https://akash.network",
+   "quote": "Migrate your Docker containers to an independent cloud network. Use pre-built templates or supply an SDL configuration file"
+  },
+  {
+   "field": "key_features",
+   "url": "https://akash.network",
+   "quote": "Launch pre-configured environments for Llama 3, DeepSeek, and Stable Diffusion in seconds."
+  },
+  {
+   "field": "key_features",
+   "url": "https://akash.network",
+   "quote": "Provision multi-node Ray clusters to train and fine-tune large-scale models natively"
+  },
+  {
+   "field": "key_features",
+   "url": "https://akash.network",
+   "quote": "Access enterprise-grade H100s and A100s alongside high-performance consumer RTX 5090s."
+  },
+  {
+   "field": "key_features",
+   "url": "https://akash.network",
+   "quote": "Monetize your idle server capacity."
+  },
+  {
+   "field": "key_features",
+   "url": "https://akash.network/docs/",
+   "quote": "Official Go and JavaScript/TypeScript SDKs"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://akash.network",
+   "quote": "H100s for $1.33/hr vs AWS at $3.93/hr."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://akash.network",
+   "quote": "per generated image"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://akash.network",
+   "quote": "Run our provider software to list your GPU and CPU hardware on the global network and automatically earn revenue from enterprise deployments."
+  },
+  {
+   "field": "pricing",
+   "url": "https://akash.network/pricing/gpus/",
+   "quote": "Prices are per GPU-hour in USD, derived from recent provider bids on the network and weighted by each provider's GPU count. B200 and B300 are listed at fixed rates."
+  },
+  {
+   "field": "pricing",
+   "url": "https://akash.network/pricing/gpus/",
+   "quote": "H100\n 80 GB SXM5 \n $2.73 /hr Rent"
+  },
+  {
+   "field": "pricing",
+   "url": "https://akash.network/pricing/gpus/",
+   "quote": "B300\n 288 GB SXM6 \n $6.00 /hr Get access"
+  },
+  {
+   "field": "pricing",
+   "url": "https://akash.network/pricing/gpus/",
+   "quote": "$0.57 /hr Rent"
+  },
+  {
+   "field": "open_source",
+   "url": "https://akash.network",
+   "quote": "Open-source Apache 2.0 Licensed."
+  },
+  {
+   "field": "api",
+   "url": "https://akash.network/docs/",
+   "quote": "Console Managed Wallet API"
+  },
+  {
+   "field": "platforms",
+   "url": "https://akash.network/docs/",
+   "quote": "Console, CLI, SDKs, and AuthZ"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

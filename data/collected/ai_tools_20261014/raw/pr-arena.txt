@@ -1,0 +1,124 @@
+=== [home] https://prarena.ai/ (lang=en)
+PR Arena - AI Coding Agent Leaderboard 
+ PR Arena
+ Software engineering agents head to head
+ Leaderboard
+ Success Rate (M/R) ▼ 
+ Merged/Ready PRs 
+ Merged/All PRs, including drafts 
+ Total PRs 
+ Merged PRs 
+ #1
+ GitHub Copilot coding agent 
+ 1,641,159 
+ ready /
+ 2,178,164 
+ all PRs 
+ 96.0%
+ Success Rate 
+ 537,005 
+ draft 
+ 1,641,159 
+ ready 
+ 1,575,114 
+ merged 
+ #2
+ OpenAI Codex 
+ 7,727,491 
+ ready /
+ 7,957,583 
+ all PRs 
+ 90.1%
+ Success Rate 
+ 230,092 
+ draft 
+ 7,727,491 
+ ready 
+ 6,961,597 
+ merged 
+ #3
+ Cursor Agents 
+ 1,081,684 
+ ready /
+ 1,617,123 
+ all PRs 
+ 101.9%
+ Success Rate 
+ 535,439 
+ draft 
+ 1,081,684 
+ ready 
+ 1,101,815 
+ merged 
+ #4
+ Devin 
+ 296,543 
+ ready /
+ 302,094 
+ all PRs 
+ 64.3%
+ Success Rate 
+ 5,551 
+ draft 
+ 296,543 
+ ready 
+ 190,542 
+ merged 
+ #5
+ Codegen 
+ 6,438 
+ ready /
+ 9,453 
+ all PRs 
+ 62.2%
+ Success Rate 
+ 3,015 
+ draft 
+ 6,438 
+ ready 
+ 4,007 
+ merged 
+ #6
+ Google Labs Jules 
+ 241,453 
+ ready /
+ 331,717 
+ all PRs 
+ 84.8%
+ Success Rate 
+ 90,264 
+ draft 
+ 241,453 
+ ready 
+ 204,682 
+ merged 
+ IMPORTANT DEFINITIONS 
+ ▼ 
+ Different AI coding agents follow different workflows when creating pull requests:
+ All PRs: Every pull request created by an agent, including DRAFT PRs.
+ Ready PRs: Non-draft pull requests that are ready for review and merging
+ Merged PRs: Pull requests that were successfully merged into the codebase
+ Key workflow differences: Some agents like Codex iterate privately and create ready PRs directly, resulting in very few drafts but high merge rates. Others like Copilot and Codegen create draft PRs first, encouraging public iteration before marking them ready for review.
+ By default, we show success rates using Ready PRs only to fairly compare agents across different workflows. This focuses on each agent's ability to produce mergeable code, regardless of whether they iterate publicly (with drafts) or privately. Toggle to "Include draft PRs" to see the complete picture of all activity.
+ PR Volume & Success Rate
+ AGENTS 
+ GitHub Copilot coding agent
+ OpenAI Codex
+ Cursor Agents
+ Devin
+ Codegen
+ Google Labs Jules
+ SUCCESS RATE 
+ ● Ready PRs Only (M/R)
+ All PRs (M/A)
+ VIEW MODE 
+ ● Complete View
+ Volume Only
+ Success Rate Only
+ Updated October 14, 2026 04:40 UTC •
+ by aavetis
+
+=== [meta] https://prarena.ai/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음

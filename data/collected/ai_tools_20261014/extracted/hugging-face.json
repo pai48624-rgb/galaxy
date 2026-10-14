@@ -1,51 +1,129 @@
 {
  "company": "Hugging Face",
- "one_liner_ko": "머신러닝 커뮤니티가 모델·데이터셋·애플리케이션을 함께 만드는 협업 플랫폼.",
- "what_it_does_ko": "Hugging Face는 머신러닝 커뮤니티가 모델, 데이터셋, 애플리케이션(Spaces)을 올리고 함께 작업하는 플랫폼이다. 공개 모델·데이터셋·앱은 무제한으로 호스팅할 수 있으며 200만 개 이상의 모델과 50만 개 이상의 데이터셋을 둘러볼 수 있다. Transformers, Diffusers, Datasets 등 오픈소스 ML 라이브러리를 만든다. 유료로 팀·기업용 플랫폼, 추론 엔드포인트와 GPU 컴퓨팅을 제공한다.",
+ "one_liner_ko": "머신러닝 커뮤니티가 모델·데이터셋·앱을 함께 만드는 플랫폼.",
+ "what_it_does_ko": "Hugging Face는 머신러닝 커뮤니티가 모델, 데이터셋, 애플리케이션(Spaces)을 올리고 협업하는 플랫폼이다. 공개 모델·데이터셋·앱은 무제한으로 호스팅할 수 있다. Transformers·Diffusers·Datasets 등 오픈소스 라이브러리를 만든다. 유료로 Team·Enterprise, Inference Endpoints·GPU 컴퓨트를 제공하고, Inference Providers로 여러 제공사의 모델을 하나의 API로 호출할 수 있다.",
  "key_features": [
-  "모델·데이터셋·Spaces 호스팅(Git 기반 Hub)",
-  "200만 개 이상 모델, 50만 개 이상 데이터셋 탐색",
-  "Inference Providers — 여러 제공사 모델을 하나의 API로 호출",
-  "Inference Endpoints — 전용 관리형 인프라에 모델 배포",
-  "Transformers·Diffusers·Datasets 등 오픈소스 라이브러리",
-  "HuggingChat 채팅 서비스",
-  "Team & Enterprise — SSO·감사 로그·리소스 그룹"
+  "모델 허브(200만 개 이상 모델)",
+  "데이터셋(50만 개 이상)",
+  "Spaces(AI 앱 호스팅)",
+  "Inference Providers(통합 API, 서비스 수수료 없음)",
+  "Inference Endpoints(전용 배포)",
+  "오픈소스 라이브러리(Transformers·Diffusers 등)",
+  "Team & Enterprise(SSO·감사 로그)",
+  "HuggingChat"
  ],
  "use_cases_ko": [
-  "개발자·연구자가 모델·데이터셋을 공유하고 ML 포트폴리오 구축",
-  "팀이 보안·권한 관리가 필요한 AI 개발",
-  "모델을 GPU 인프라에 배포해 서비스"
+  "ML 개발자가 모델·데이터셋을 공유·협업",
+  "팀이 모델을 전용 인프라에 배포",
+  "포트폴리오 공개"
  ],
  "pricing": {
   "free_tier": "있음 (공개 모델·데이터셋·앱 무제한 호스팅)",
   "plans": [
-   {"name": "Team & Enterprise", "price": 20, "currency": "USD", "period": "month", "limits": "사용자당 시작가, SSO·감사 로그"},
-   {"name": "Compute (GPU)", "price": 0.6, "currency": "USD", "period": "hour", "limits": "GPU 시간당 시작가"}
+   {
+    "name": "Team & Enterprise",
+    "price": 20,
+    "currency": "USD",
+    "period": "month",
+    "limits": "사용자당 월 $20부터",
+    "page_lang": null
+   },
+   {
+    "name": "Compute (Inference Endpoints·Spaces GPU)",
+    "price": 0.6,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "GPU 시간당 $0.60부터",
+    "page_lang": null
+   }
   ],
-  "pricing_url": "https://huggingface.co/pricing"
+  "pricing_url": "https://huggingface.co"
  },
  "open_source": null,
  "api": "있음",
- "platforms": ["웹", "API", "CLI"],
+ "platforms": [
+  "웹",
+  "API",
+  "CLI"
+ ],
  "korean_support": "불명",
  "evidence": [
-  {"field": "company", "url": "https://huggingface.co", "quote": "Hugging Face – The AI community building the future."},
-  {"field": "one_liner_ko", "url": "https://huggingface.co", "quote": "The platform where the machine learning community collaborates on models, datasets, and applications."},
-  {"field": "what_it_does_ko", "url": "https://huggingface.co", "quote": "Host and collaborate on unlimited public models, datasets and applications."},
-  {"field": "what_it_does_ko", "url": "https://huggingface.co", "quote": "We provide paid Compute and Enterprise solutions."},
-  {"field": "key_features", "url": "https://huggingface.co/docs", "quote": "Host Git-based models, datasets, and Spaces on the HF Hub"},
-  {"field": "key_features", "url": "https://huggingface.co", "quote": "Access 45,000+ models from leading AI providers through a single, unified API with no service fees."},
-  {"field": "key_features", "url": "https://huggingface.co/docs", "quote": "Deploy models on dedicated & fully managed infrastructure on HF"},
-  {"field": "key_features", "url": "https://huggingface.co", "quote": "Browse 500k+ datasets"},
-  {"field": "key_features", "url": "https://huggingface.co/docs", "quote": "Open source chat frontend powering HuggingChat"},
-  {"field": "use_cases_ko", "url": "https://huggingface.co", "quote": "Share your work with the world and build your ML profile."},
-  {"field": "use_cases_ko", "url": "https://huggingface.co", "quote": "Give your team the most advanced platform to build AI with enterprise-grade security, access controls and"},
-  {"field": "pricing", "url": "https://huggingface.co", "quote": "Getting started Starting at $20/user/month"},
-  {"field": "pricing", "url": "https://huggingface.co", "quote": "View pricing Starting at $0.60/hour for GPU"},
-  {"field": "pricing", "url": "https://huggingface.co", "quote": "Host and collaborate on unlimited public models, datasets and applications."},
-  {"field": "api", "url": "https://huggingface.co/docs", "quote": "Guides, references, and API docs for the Hugging Face ecosystem."},
-  {"field": "platforms", "url": "https://huggingface.co/docs", "quote": "Tools for agents and humans to interact with all the Hugging Face services"},
-  {"field": "platforms", "url": "https://huggingface.co/docs", "quote": "Python client to interact with the Hugging Face Hub"}
+  {
+   "field": "company",
+   "url": "https://huggingface.co",
+   "quote": "Hugging Face – The AI community building the future."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://huggingface.co",
+   "quote": "The platform where the machine learning community collaborates on models, datasets, and applications."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://huggingface.co",
+   "quote": "Host and collaborate on unlimited public models, datasets and applications."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://huggingface.co",
+   "quote": "We provide paid Compute and Enterprise solutions."
+  },
+  {
+   "field": "key_features",
+   "url": "https://huggingface.co",
+   "quote": "Browse 2M+ models \n Trending on"
+  },
+  {
+   "field": "key_features",
+   "url": "https://huggingface.co",
+   "quote": "Browse 500k+ datasets \n The Home"
+  },
+  {
+   "field": "key_features",
+   "url": "https://huggingface.co",
+   "quote": "Access 45,000+ models from leading AI providers through a single, unified API with no service fees."
+  },
+  {
+   "field": "key_features",
+   "url": "https://huggingface.co/docs",
+   "quote": "Deploy models on dedicated & fully managed infrastructure on HF"
+  },
+  {
+   "field": "key_features",
+   "url": "https://huggingface.co",
+   "quote": "State-of-the-art AI models for PyTorch"
+  },
+  {
+   "field": "key_features",
+   "url": "https://huggingface.co",
+   "quote": "Single Sign-On Regions Priority Support Audit Logs Resource Groups Private Datasets Viewer"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://huggingface.co",
+   "quote": "Share your work with the world and build your ML profile."
+  },
+  {
+   "field": "pricing",
+   "url": "https://huggingface.co",
+   "quote": "Getting started Starting at $20/user/month"
+  },
+  {
+   "field": "pricing",
+   "url": "https://huggingface.co",
+   "quote": "View pricing Starting at $0.60/hour for GPU"
+  },
+  {
+   "field": "api",
+   "url": "https://huggingface.co",
+   "quote": "through a single, unified API with no service fees."
+  },
+  {
+   "field": "platforms",
+   "url": "https://huggingface.co/docs",
+   "quote": "Tools for agents and humans to interact with all the Hugging Face services"
+  }
  ],
- "mismatch": []
+ "mismatch": [],
+ "plan_change": []
 }

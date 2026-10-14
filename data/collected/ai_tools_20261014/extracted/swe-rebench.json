@@ -1,0 +1,76 @@
+{
+ "company": null,
+ "one_liner_ko": "실제 소프트웨어 엔지니어링 과제로 LLM을 표준화·투명하게, 계속 갱신하며 평가하는 SWE-rebench 리더보드.",
+ "what_it_does_ko": "SWE-rebench는 SWE-bench의 데이터 오염, 스캐폴딩 차이로 인한 비교 불가, 검증 부족 문제를 보완하려고 만든 벤치마크다. 실제 소프트웨어 과제로 LLM을 표준화된 방식으로 계속 새로 평가해 에이전트 성능에서 LLM 자체의 기여를 분리하는 것을 목표로 한다. 리더보드는 기간을 골라 그 기간의 문제(예: 65개 저장소 111개 문제)로 해결률, Pass@5, 문제당 비용·토큰을 보여 주며 오염 가능성도 표시한다. 모델뿐 아니라 Claude Code·Codex·Cursor 같은 에이전트도 함께 비교한다.",
+ "key_features": [
+  "기간(시간 창) 선택형 리더보드",
+  "해결률·Pass@5·문제당 비용·토큰 표시",
+  "오염 가능성(Potential contamination) 표시",
+  "모델과 에이전트 함께 비교",
+  "SWE-rebench v2 리더보드",
+  "신규 모델 정기 추가"
+ ],
+ "use_cases_ko": [
+  "모델 개발자·연구자가 LLM 코딩 능력을 공정 비교"
+ ],
+ "pricing": {
+  "free_tier": null,
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "웹"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://swe-rebench.com/about",
+   "quote": "This new benchmark provides standardized, transparent and continuously evolving evaluations of LLMs on real-world software engineering tasks."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://swe-rebench.com/about",
+   "quote": "Our goal is to better isolate the contribution of the LLM itself to an agent’s performance."
+  },
+  {
+   "field": "key_features",
+   "url": "https://swe-rebench.com/",
+   "quote": "111 problems from 65 repositories selected within the current time window."
+  },
+  {
+   "field": "key_features",
+   "url": "https://swe-rebench.com/",
+   "quote": "Potential contamination"
+  },
+  {
+   "field": "key_features",
+   "url": "https://swe-rebench.com/",
+   "quote": "Cost per Problem ($)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://swe-rebench.com/",
+   "quote": "❗ SWE-rebench v2 Leaderboard"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://swe-rebench.com/about",
+   "quote": "enable fairer comparisons of LLM progress"
+  },
+  {
+   "field": "platforms",
+   "url": "https://swe-rebench.com/",
+   "quote": "SWE-rebench Leaderboard"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://swe-rebench.com/",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

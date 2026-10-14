@@ -1,0 +1,307 @@
+=== [home] https://www.sglang.io/ (lang=en)
+SGLang – Fast, Open-Source LLM & Multimodal Serving Framework 
+ Join us for the first SGLang Summit on Nov 12 - 13, 2026 in SF. Register now 
+ Doc Blog Model Event Community Contact Summit 2026 GitHub 
+ High-Performance Serving Framework for LLMs and Multimodal Models
+ SGLang powers fast, scalable inference for large language and multimodal models.
+ Get Started 
+ Trusted by industry leaders:
+ Production-Grade Inference
+ Built for large-scale deployments, delivering reliable, low-latency, high-throughput serving from a single GPU to distributed clusters.
+ Model & Hardware Flexibility
+ Supports a wide range of open models — from LLMs to diffusion models — and runs across diverse hardware platforms.
+ Advanced Optimizations
+ Incorporates disaggregated prefill/decode, speculative decoding, parallelisms, a zero-overhead scheduler, and optimized GPU kernels.
+ Get Started in Seconds
+ Select your preferences and run the deployment command. SGLang is designed to be easy to install and deploy.
+ 1
+ Install via pip or docker
+ The easiest ways to get started.
+ 2
+ Launch the server
+ Start the server with a single command pointing to your model.
+ 3
+ Query the API
+ Use standard OpenAI-compatible endpoints to interact with your model.
+ View Documentation 
+ Build Stable Nightly 
+ Platform CUDA ROCm XPU CPU 
+ Package Python (uv) Python Docker 
+ CUDA Version CUDA 12.9 CUDA 13.0 
+ Run this Command: 
+ uv pip install sglang sglang-kernel \ 
+ --extra-index-url https://sgl-project.github.io/whl/cu129/ \ 
+ --extra-index-url https://download.pytorch.org/whl/cu129 \ 
+ --index-strategy unsafe-best-match 
+ Broad Model & Hardware Support
+ A single engine that runs across various models and hardware.
+ Supported Hardware
+ NVIDIA GPUs
+ AMD GPUs
+ CPU Servers
+ TPU
+ Ascend NPUs
+ XPU
+ See all supported hardware 
+ Supported Models
+ DeepSeek
+ Qwen
+ GPT-OSS
+ Llama
+ Mistral
+ GLM
+ See all supported models 
+ Release Notes
+ v0.5.21 Latest 779 PRs · 227 contributors · 55 new contributors
+ Oct 2, 2026 New models
+ DeepSeek-V4.1 Flash GigaChat 3.5 IQuest-Q1 MiMo-V2.6 / MiMo-V2.6-Pro Ling-3.0-flash-VL DiffusionGemma Qwen-Image 2.1 Anima Base v1.0 Ming-Image 0.1 Design / Design-Layer FLUX 3 Action 
+ Highlights
+ PD instances can switch between prefill and decode on the fly, no restart needed.
+ #28403 
+ The prefix cache now runs on a Rust core by default.
+ #39627 
+ DeepSeek-V4.1 gets 22% faster first token on long prompts.
+ #40352 
+ Kimi K3 gets 20.6% higher prefill throughput in PD serving.
+ #40045 
+ GLM-5.3-Flash now runs on AMD MI355X, with FP8 / MXFP4 MoE and MTP speculative decoding.
+ #38546 #39341 #39778 
+ More accurate results under PP, DP attention, and CP, with layer communication now handled by SGLang (guide).
+ guide #41557 
+ +6 more highlights +3 more highlights 
+ Full release notes lmsysorg/sglang:v0.5.21 
+ v0.5.20 713 PRs · 237 contributors · 60 new contributors
+ Sep 18, 2026 New models
+ GLM-5.3-Flash Hy4-Preview Qwen3.8-Flash-Next K2 Horizon Nanbeige4.2 SenseNova-U1.5-8B-MoT FastH3 VDN-H3 
+ Highlights
+ Sampling masks for RL rollouts
+ #36630 #36631 #38279 
+ With return_sampling_mask , each decode step returns the exact token support the sampler drew from and the log-probability of the sampled token under it, so a trainer can replay the rollout without reconstructing top-k or top-p. Masks now run under overlap…
+ Unified radix tree
+ #34565 #37381 
+ Branching-point caching for the SWA component keeps the sliding-window state at the point where requests fork from a shared prefix, so branches reuse it instead of recomputing. On DeepSeek-V4-Flash with a shared system prompt, token hit rate rises from 43.8%…
+ DSpark under PD with decode context parallelism
+ #37709 
+ A DCP1 prefill can now transfer its DSpark draft KV to a DCP-N decode, so hybrid models such as Kimi-Linear run DSpark in disaggregated, context-parallel serving. Verified on 8x B300 over NIXL and Mooncake up to 256K input.
+ Responses API storage is opt-in
+ #39122 
+ /v1/responses no longer retains results in memory unless the server starts with --enable-response-store . Without it, retrieval, previous_response_id chaining, and background requests return 400; PD deployments cannot enable it.
+ SGLang Simulator
+ #33824 
+ A CPU-only simulator runs the real scheduler, radix cache, and hierarchical cache with a latency predictor in place of the model forward. Against measured serving traces it predicts TTFT within about 6% on most traces (up to 10% on the longest 32K to 128K…
+ Prefill context parallelism v1 removed
+ #36228 
+ The strategy-based implementation is now the only prefill CP path; the v1 runtime and its CLI options are gone. Prefill CP on HIP, NPU, and MUSA is rejected until those platforms are ported.
+ +8 more highlights +5 more highlights 
+ Full release notes lmsysorg/sglang:v0.5.20 
+ v0.5.19 786 PRs · 214 contributors · 51 new contributors
+ Sep 5, 2026 New models
+ Qwen3.8 Qwen3.8-27B dots3.note Ling-3.0-flash Ling-3.0-tiny Spark2.5 MiniCPM-SALA Granite 4.2 LongCat-Image-Edit & Edit-Turbo 
+ Highlights
+ Beam search
+ #31626 
+ SGLang can now do beam search. Pass beam_width in your request and you get back the n best sequences instead of a single sample. It works out of the box next to regular requests, though it does not yet mix with speculative decoding, disaggregation, DP…
+ DeepEP v2
+ #35634 #34923 
+ DeepEP's new ElasticBuffer engine is available as --moe-a2a-backend deepep_v2 for DeepSeek-V3/V4 and Qwen3-MoE in FP8. Its buffers have a fixed size, so decode can run under CUDA graphs even across nodes. Performance is on par with the classic backend.
+ LayerNorm sequence parallelism
+ #30915 
+ With --enable-layernorm-sp , each tensor-parallel rank normalizes only its own share of the prefill tokens instead of all of them. That takes 3.5% off Qwen3-8B prefill on H100 and 5.6% on B200, and the saving grows with the TP degree. Dense Qwen3 models only…
+ W4A8 MoE on Hopper
+ #34967 
+ If you serve MXFP4 experts on Hopper, you can now quantize the activations to FP8 as well with --flashinfer-mxfp4-moe-precision fp8 . DeepSeek-V4-Flash gains about 12% output throughput with no change in GSM8K accuracy. Needs FlashInfer 0.6.18.
+ DCP on the default Blackwell MLA backend
+ #33926 
+ Decode context parallelism now runs on trtllm_mla , not just CuTe DSL and Tokenspeed. It pays off at long context: at 128K input, plain TP stops scaling around 680 tokens per second on eight B200s, while DCP keeps going as concurrency grows.
+ Faster speculative kernels
+ #35175 #33722 
+ DSA prefill top-k moves to the v2 kernel, 1.3 to 1.8 times faster on B200. KDA models get an opt-in fused accept path, SGLANG_OPT_KDA_FUSED_ACCEPT_STATE=1 , that cuts MTP verify-and-commit time by 45% to 63% on Kimi-Linear shapes with bit-identical output.
+ +7 more highlights +4 more highlights 
+ Full release notes lmsysorg/sglang:v0.5.19 
+ v0.5.18 710 PRs · 212 contributors · 61 new contributors
+ Aug 22, 2026 New models
+ Muse Glimmer Intern-S2-Mobius SANA-Video LingBot-Video-MoE LTX-2.5 Cosmos3 Edge & Distilled LongCat-Image 
+ Highlights
+ Overlapped checkpoint staging at startup
+ #32017 
+ Checkpoint pages now stage from storage while CUDA graphs capture. Qwen3-32B on H100 starts 8.6-11.7% faster than serial with prefetch, and 2.38x faster (35.6s vs 84.8s) than the plain default. Opt in with --startup-weight-load-mode overlap .
+ TP LMHead with All-to-All
+ #32313 
+ The TP LMHead's allgather + scatter becomes a single all-to-all for pure-DP dp-attention. On DeepSeek-V4-Pro B200 decode, LMHead time 
+
+=== [about] https://docs.sglang.io/ (lang=en)
+Welcome to SGLang - SGLang Documentation 
+ Documentation Index
+ Fetch the complete documentation index at: /llms.txt 
+ Use this file to discover all available pages before exploring further.
+ Skip to main content 
+ SGLang Documentation home page 
+ Search...
+ ⌘ K Ask Assistant ⌘ I 
+ Search... 
+ Navigation 
+ Get Started 
+ Welcome to SGLang
+ Get Started 
+ User Guide 
+ Hardware 
+ Cookbook 
+ SGLang Diffusion 
+ Get Started 
+ Welcome to SGLang 
+ Quickstart 
+ Installation 
+ Examples 
+ Get Started
+ Welcome to SGLang
+ Copy page Copy page 
+ High-performance serving framework for large language and multimodal models.
+ Copy page Copy page 
+ Star 
+ Fork 
+ Performance & Runtime
+ Designed for low-latency, high-throughput inference with RadixAttention, prefix caching, and multi-GPU parallelism. 
+ Models & Ecosystem
+ Broad support for Llama, Qwen, DeepSeek, and more. Compatible with Hugging
+Face and OpenAI APIs. 
+ Extensive Hardware Support
+ Native support across Hardware Platforms 
+including NVIDIA, AMD, Intel Xeon, Google TPU, Ascend NPU, and Moore Threads MUSA accelerators. 
+ Community & Training
+ Open-source with widespread adoption, powering 400k+ GPUs and integrated with major RL frameworks. 
+ SGLang powers large-scale production deployments, generating trillions of tokens each day across more than 400,000 GPUs worldwide. It is hosted under the non-profit open-source organization LMSYS . 
+ ​ 
+ Get Started 
+ SGLang is an inference framework meant for production level serving.
+It is designed to deliver low-latency and high-throughput inference across a wide range of setups, from a single GPU to large distributed clusters. 
+ Quickstart
+ Start a model server and send a request to verify it is running. 
+ Examples
+ Stream replies, request tool calls, and process multiple prompts from Python. 
+ For environment setup and other installation methods, see the Installation guide . 
+ ​ 
+ News and latest blogs 
+ ​ 
+ Community and resources 
+ Slack : Technical questions and development discussions.
+ Events: Meetups, workshops, and office hours | Developer meetings .
+ Updates: X | LinkedIn | LMSYS Blog .
+ Contribute: Contributor guide | Roadmap .
+ Release notes : Changes in each release.
+ Was this page helpful?
+ Yes No 
+ Quickstart
+ Next 
+ github x linkedin slack discord 
+ Powered by This documentation is built and hosted on Mintlify, a developer documentation platform 
+ Assistant 
+ Responses are generated using AI and may contain mistakes.
+
+=== [pricing] https://www.sglang.io/pricing (lang=en)
+SGLang – Fast, Open-Source LLM & Multimodal Serving Framework 
+ Join us for the first SGLang Summit on Nov 12 - 13, 2026 in SF. Register now 
+ Doc Blog Model Event Community Contact Summit 2026 GitHub 
+ 404
+ Page Not Found
+ Sorry, the page you are looking for doesn't exist.
+It may have been moved or deleted.
+ Go Home 
+ © 2026 SGLang Team. All rights reserved.
+
+=== [pricing] https://www.sglang.io/ko/pricing (lang=en)
+SGLang – Fast, Open-Source LLM & Multimodal Serving Framework 
+ Join us for the first SGLang Summit on Nov 12 - 13, 2026 in SF. Register now 
+ Doc Blog Model Event Community Contact Summit 2026 GitHub 
+ 404
+ Page Not Found
+ Sorry, the page you are looking for doesn't exist.
+It may have been moved or deleted.
+ Go Home 
+ © 2026 SGLang Team. All rights reserved.
+
+=== [pricing] https://www.sglang.io/plans (lang=en)
+SGLang – Fast, Open-Source LLM & Multimodal Serving Framework 
+ Join us for the first SGLang Summit on Nov 12 - 13, 2026 in SF. Register now 
+ Doc Blog Model Event Community Contact Summit 2026 GitHub 
+ 404
+ Page Not Found
+ Sorry, the page you are looking for doesn't exist.
+It may have been moved or deleted.
+ Go Home 
+ © 2026 SGLang Team. All rights reserved.
+
+=== [meta] https://www.sglang.io/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/sgl-project/sglang
+# SGLang: Fast inference for LLMs and multimodal models
+
+<p align="center" id="sglangtop">
+<img src="https://raw.githubusercontent.com/sgl-project/sglang/main/assets/logo.png" alt="SGLang" width="400">
+</p>
+
+<p align="center">
+  <a href="https://pypi.org/project/sglang/"><img src="https://img.shields.io/pypi/v/sglang?style=flat&amp;label=PyPI&amp;labelColor=555555&amp;color=orange" alt="PyPI version"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-green?style=flat&amp;labelColor=555555" alt="License: Apache 2.0"></a>
+  <a href="https://pypistats.org/packages/sglang"><img src="https://img.shields.io/pypi/dm/sglang?style=flat&amp;label=Downloads&amp;labelColor=555555&amp;color=blue" alt="PyPI downloads per month"></a>
+</p>
+
+<p align="center">
+  <a href="https://docs.sglang.io/">Docs</a> |
+  <a href="https://cookbook.sglang.io/">Cookbook</a> |
+  <a href="https://www.sglang.io/">Website</a> |
+  <a href="https://lmsys.org/blog/">Blog</a> |
+  <a href="https://slack.sglang.io/">Slack</a>
+</p>
+
+SGLang is an open-source inference framework for large language, vision-language, and diffusion models, optimized for agentic workloads, large-scale serving, and RL rollouts. [SGLang Diffusion](https://docs.sglang.io/docs/sglang-diffusion) is its built-in image and video generation engine, included in this repository and the `sglang` Python package.
+
+👋 Get started below, or meet the community at [SGLang Events](https://www.sglang.io/events), including meetups, developer meetings, workshops, and office hours.
+
+## Get Started
+
+Pull the Docker image, which includes SGLang and its dependencies:
+
+```bash
+docker pull lmsysorg/sglang:latest
+```
+
+Alternatively, install SGLang in an activated Python environment with uv:
+
+```bash
+uv pip install --prerelease=allow sglang
+```
+
+Next, launch your model:
+
+- [Quickstart](https://docs.sglang.io/docs/get-started/quickstart): Run your first model and send a request.
+- [Cookbook](https://cookbook.sglang.io/): Choose your model and hardware to get a ready-to-run launch command.
+
+## Supported Hardware
+
+SGLang supports a wide range of GPUs, TPUs, NPUs, CPUs, and Apple Silicon platforms.
+
+| Platform | Representative hardware |
+| --- | --- |
+| [NVIDIA](https://docs.sglang.io/docs/hardware-platforms/nvidia-gpus) | B200/B300/GB200/GB300; H100/H200/H800/H20; A100; RTX 30/40/50 series, RTX 6000 Ada / PRO 6000; DGX Spark, Jetson Orin |
+| [AMD](https://docs.sglang.io/docs/hardware-platforms/amd_gpu) | Instinct MI300X, MI325X, MI350X, MI355X |
+| [Google TPU](https://docs.sglang.io/docs/hardware-platforms/tpu) | v6e, v7; [SGL-JAX](https://github.com/sgl-project/sglang-jax) / [SGL-torchtpu](https://lmsys.org/blog/2026-07-30-sglang-google-tpu/) |
+| Intel ([GPU](https://docs.sglang.io/docs/hardware-platforms/xpu) / [CPU](https://docs.sglang.io/docs/hardware-platforms/cpu_server)) | Arc / Arc Pro B-Series GPUs, Xeon CPUs |
+| [Apple Silicon](https://docs.sglang.io/docs/hardware-platforms/apple_metal) | Macs via Metal / MLX |
+| [Huawei Ascend](https://docs.sglang.io/docs/hardware-platforms/ascend-npus/getting-started/installation) | A2, A3, 950PR/DT NPUs |
+| [Moore Threads](https://docs.sglang.io/docs/hardware-platforms/mthreads_gpu) | MTT S5000 GPUs |
+
+Integrations in progress: AWS Trainium, [Alibaba T-Head PPU](https://github.com/sgl-project/sglang/issues/37519), [Cambricon MLU](https://github.com/sgl-project/sglang/pull/26898), Qualcomm QAIC, MetaX, Hygon HCU/DCU, Iluvatar CoreX, and more.
+
+See the [Cookbook](https://cookbook.sglang.io/) and platform guides for model compatibility and setup.
+
+## SGL Ecosystem
+
+| Area | Projects | Purpose |
+| --- | --- | --- |
+| Diffusion | [SGLang Diffusion](https://docs.sglang.io/docs/sglang-diffusion/installation) | Built into SGLang for image and video generation with diffusion models. |
+| Audio | [SGLang Omni](https://github.com/sgl-project/sglang-omni) | Audio model serving for text-to-speech (TTS) and automatic speech recognition (ASR). |
+| Speculative Decoding | [SpecForge](https://github.com/sgl-project/SpecForge) | Train draft models for speculative decoding and deploy them with SGLang. |
+| RL and Post-Training | [Miles](https://github.com/radixar

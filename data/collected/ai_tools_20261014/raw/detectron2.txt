@@ -1,0 +1,188 @@
+=== [home] https://detectron2.readthedocs.io/en/latest/ (lang=en)
+Welcome to detectron2’s documentation! — detectron2 0.6 documentation 
+ -->
+ detectron2
+ latest
+ Tutorials 
+ Notes 
+ API Documentation 
+ detectron2 
+ Docs »
+ Welcome to detectron2’s documentation!
+ Edit on GitHub 
+ Welcome to detectron2’s documentation! ¶ 
+ Tutorials 
+ Installation 
+ Getting Started with Detectron2 
+ Use Builtin Datasets 
+ Extend Detectron2’s Defaults 
+ Use Custom Datasets 
+ Dataloader 
+ Data Augmentation 
+ Use Models 
+ Write Models 
+ Training 
+ Evaluation 
+ Yacs Configs 
+ Lazy Configs 
+ Deployment 
+ Notes 
+ Benchmarks 
+ Compatibility with Other Libraries 
+ Contributing to detectron2 
+ Change Log and Backward Compatibility 
+ API Documentation 
+ detectron2.checkpoint 
+ detectron2.config 
+ detectron2.data 
+ detectron2.data.transforms 
+ detectron2.engine 
+ detectron2.evaluation 
+ detectron2.layers 
+ detectron2.model_zoo 
+ detectron2.modeling 
+ detectron2.solver 
+ detectron2.structures 
+ detectron2.utils 
+ detectron2.export 
+ fvcore documentation 
+ Next 
+ © Copyright 2019-2020, detectron2 contributors
+ Revision 8c4a333c .
+ Built with Sphinx using a theme provided by Read the Docs .
+
+=== [about] https://detectron2.readthedocs.io/en/latest/modules/index.html (lang=en)
+API Documentation — detectron2 0.6 documentation 
+ -->
+ detectron2
+ latest
+ Tutorials 
+ Notes 
+ API Documentation 
+ detectron2.checkpoint 
+ detectron2.config 
+ detectron2.data 
+ detectron2.data.transforms 
+ detectron2.engine 
+ detectron2.evaluation 
+ detectron2.layers 
+ detectron2.model_zoo 
+ detectron2.modeling 
+ detectron2.solver 
+ detectron2.structures 
+ detectron2.utils 
+ detectron2.export 
+ fvcore documentation 
+ detectron2 
+ Docs »
+ API Documentation
+ Edit on GitHub 
+ API Documentation ¶ 
+ detectron2.checkpoint 
+ detectron2.config 
+ Yaml Config References 
+ detectron2.data 
+ detectron2.data.detection_utils module 
+ detectron2.data.datasets module 
+ detectron2.data.samplers module 
+ detectron2.data.transforms 
+ detectron2.engine 
+ detectron2.engine.defaults module 
+ detectron2.engine.hooks module 
+ detectron2.evaluation 
+ detectron2.layers 
+ detectron2.model_zoo 
+ detectron2.modeling 
+ detectron2.modeling.poolers module 
+ detectron2.modeling.sampling module 
+ detectron2.modeling.box_regression module 
+ Model Registries 
+ detectron2.solver 
+ detectron2.structures 
+ detectron2.utils 
+ detectron2.utils.colormap module 
+ detectron2.utils.comm module 
+ detectron2.utils.events module 
+ detectron2.utils.logger module 
+ detectron2.utils.registry module 
+ detectron2.utils.memory module 
+ detectron2.utils.analysis module 
+ detectron2.utils.visualizer module 
+ detectron2.utils.video_visualizer module 
+ detectron2.export 
+ fvcore documentation 
+ fvcore.nn 
+ fvcore.common 
+ Next 
+ Previous 
+ © Copyright 2019-2020, detectron2 contributors
+ Revision 8c4a333c .
+ Built with Sphinx using a theme provided by Read the Docs .
+
+=== [meta] https://detectron2.readthedocs.io/en/latest/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/facebookresearch/detectron2
+<img src=".github/Detectron2-Logo-Horz.svg" width="300" >
+
+Detectron2 is Facebook AI Research's next generation library
+that provides state-of-the-art detection and segmentation algorithms.
+It is the successor of
+[Detectron](https://github.com/facebookresearch/Detectron/)
+and [maskrcnn-benchmark](https://github.com/facebookresearch/maskrcnn-benchmark/).
+It supports a number of computer vision research projects and production applications in Facebook.
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/1381301/66535560-d3422200-eace-11e9-9123-5535d469db19.png"/>
+</div>
+<br>
+
+## Learn More about Detectron2
+
+* Includes new capabilities such as panoptic segmentation, Densepose, Cascade R-CNN, rotated bounding boxes, PointRend,
+  DeepLab, ViTDet, MViTv2 etc.
+* Used as a library to support building [research projects](projects/) on top of it.
+* Models can be exported to TorchScript format or Caffe2 format for deployment.
+* It [trains much faster](https://detectron2.readthedocs.io/notes/benchmarks.html).
+
+See our [blog post](https://ai.meta.com/blog/-detectron2-a-pytorch-based-modular-object-detection-library-/)
+to see more demos.
+See this [interview](https://ai.meta.com/blog/detectron-everingham-prize/) to learn more about the stories behind detectron2.
+
+## Installation
+
+See [installation instructions](https://detectron2.readthedocs.io/tutorials/install.html).
+
+## Getting Started
+
+See [Getting Started with Detectron2](https://detectron2.readthedocs.io/tutorials/getting_started.html),
+and the [Colab Notebook](https://colab.research.google.com/drive/16jcaJoc6bCFAQ96jDe2HwtXj7BMD_-m5)
+to learn about basic usage.
+
+Learn more at our [documentation](https://detectron2.readthedocs.org).
+And see [projects/](projects/) for some projects that are built on top of detectron2.
+
+## Model Zoo and Baselines
+
+We provide a large set of baseline results and trained models available for download in the [Detectron2 Model Zoo](MODEL_ZOO.md).
+
+## License
+
+Detectron2 is released under the [Apache 2.0 license](LICENSE).
+
+## Citing Detectron2
+
+If you use Detectron2 in your research or wish to refer to the baseline results published in the [Model Zoo](MODEL_ZOO.md), please use the following BibTeX entry.
+
+```BibTeX
+@misc{wu2019detectron2,
+  author =       {Yuxin Wu and Alexander Kirillov and Francisco Massa and
+                  Wan-Yen Lo and Ross Girshick},
+  title =        {Detectron2},
+  howpublished = {\url{https://github.com/facebookresearch/detectron2}},
+  year =         {2019}
+}
+```
+

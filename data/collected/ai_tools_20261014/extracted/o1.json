@@ -1,0 +1,32 @@
+{
+ "company": null,
+ "one_liner_ko": null,
+ "what_it_does_ko": "o1 소개 페이지는 열리지 않아 o1 자체에 대한 공식 설명은 확인하지 못했다. 함께 받은 ChatGPT 한국어 요금 페이지에는 o1이라는 이름이 나오지 않고, Free·Go·Plus·Pro 요금제와 GPT-6·GPT-5.6 계열 모델, '레거시 모델'(Plus·Pro 제공) 항목만 있다.",
+ "key_features": [],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": "불명 (ChatGPT Free 요금제는 있으나 o1 포함 여부는 페이지에 없음)",
+  "plans": [
+   {"name": "ChatGPT Free", "price": 0, "currency": null, "period": "month", "limits": "o1 언급 없음, 레거시 모델 이용 불가", "page_lang": "ko-KR"},
+   {"name": "ChatGPT Go", "price": null, "currency": null, "period": "month", "limits": "o1 언급 없음, 레거시 모델 이용 불가, 광고 포함 가능", "page_lang": "ko-KR"},
+   {"name": "ChatGPT Plus", "price": null, "currency": null, "period": "month", "limits": "o1 언급 없음, 레거시 모델 이용 가능", "page_lang": "ko-KR"},
+   {"name": "ChatGPT Pro", "price": null, "currency": null, "period": "month", "limits": "o1 언급 없음, 레거시 모델 이용 가능, 3가지 사용량 등급", "page_lang": "ko-KR"}
+  ],
+  "pricing_url": "https://chatgpt.com/ko-KR/pricing/"
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {"field": "what_it_does_ko", "url": "https://openai.com/ko-KR/o1/", "quote": "This page couldn’t load"},
+  {"field": "what_it_does_ko", "url": "https://chatgpt.com/ko-KR/pricing/", "quote": " 플랜: Plus, 기능: 레거시 모델, 예 "},
+  {"field": "pricing", "url": "https://chatgpt.com/ko-KR/pricing/", "quote": " 플랜: Free, 기능: 레거시 모델, 아니요 "},
+  {"field": "pricing", "url": "https://chatgpt.com/ko-KR/pricing/", "quote": " 플랜: Pro, 기능: 레거시 모델, 예 "},
+  {"field": "pricing", "url": "https://chatgpt.com/ko-KR/pricing/", "quote": " 이 플랜에는 광고가 포함될 수 있습니다. 자세히 알아보기 ⁠ "},
+  {"field": "pricing", "url": "https://chatgpt.com/ko-KR/pricing/", "quote": " 3가지 사용량 등급 중 선택"},
+  {"field": "korean_support", "url": "https://chatgpt.com/ko-KR/pricing/", "quote": "=== [pricing] https://chatgpt.com/ko-KR/pricing/ (lang=ko-KR)"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

@@ -1,0 +1,192 @@
+{
+ "company": "Mistral AI",
+ "one_liner_ko": "'소버린 AI 1위'를 내세우며, 기업이 직접 소유하는 프런티어 오픈 모델과 이를 맞춤화·운영하는 도구를 제공하는 회사.",
+ "what_it_does_ko": "Mistral은 프런티어·특화 오픈 웨이트 모델을 만들어 그대로 쓰거나 조직에 맞게 바꿔 쓰게 한다. Forge로 자체 데이터에 맞춰 모델을 맞춤화하고, Studio로 에이전트·앱을 만들고 관리한다. Vibe는 웹·모바일·터미널·IDE에서 리서치·코딩·일상 업무를 돕는 통합 에이전트다. 모델은 온프레미스, VPC, 또는 Mistral 인프라에서 실행할 수 있다.",
+ "key_features": [
+  "오픈 웨이트 프런티어·특화 모델",
+  "Forge로 자체 데이터 기반 모델 맞춤화",
+  "Studio(개발자 콘솔·API·에이전트 구축)",
+  "Vibe 코딩 에이전트(CLI·IDE·웹)",
+  "온프레미스·VPC·호스팅 추론, 전용 GPU 예약",
+  "커스텀 MCP 커넥터 등 커넥터",
+  "이미지 생성·편집, 스프레드시트·슬라이드 생성"
+ ],
+ "use_cases_ko": [
+  "에너지 기업의 저류층 탐사 가속(TotalEnergies)",
+  "은행의 KYC 절차 단축(BNP Paribas)",
+  "공공기관의 전사(받아쓰기) 시간 단축(유럽특허청)"
+ ],
+ "pricing": {
+  "free_tier": "있음 (메시지·웹 검색·코딩 세션 제한)",
+  "plans": [
+   {
+    "name": "Free",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "메시지·웹 검색 제한, 코딩 세션 제한",
+    "page_lang": "en"
+   },
+   {
+    "name": "Pro (Education plan)",
+    "price": 14.99,
+    "currency": "USD",
+    "period": "month",
+    "limits": "인증 학생 대상 최대 12개월, 세금 별도 — 일반 Pro 가격은 본문에서 확인 안 됨",
+    "page_lang": "en"
+   },
+   {
+    "name": "Team",
+    "price": 24.99,
+    "currency": "USD",
+    "period": "month",
+    "limits": "사용자당 월 요금, 사용자당 최대 30GB 저장",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": null,
+    "period": null,
+    "limits": "문의(맞춤 모델·에이전트, 감사 로그, SAML SSO)",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://mistral.ai/pricing/"
+ },
+ "open_source": "Apache 2.0(Mistral Small 4 등), Modified MIT(Mistral Medium 3.5)",
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "iOS",
+  "안드로이드",
+  "CLI",
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://mistral.ai",
+   "quote": "Seminal contributions to AI\n Latest research\n Why Sovereign AI"
+  },
+  {
+   "field": "company",
+   "url": "https://mistral.ai",
+   "quote": "Get Mistral Vibe\n Mistral AI © 2026\n English"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://mistral.ai",
+   "quote": "Mistral | #1 in Sovereign AI: Frontier Open Models You Own"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://mistral.ai",
+   "quote": "Start with Mistral’s frontier and specialist open-weight models. Use them as they are, or make them specific to your organization."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://mistral.ai",
+   "quote": "Run on-prem, in your VPC, or have us run it for you."
+  },
+  {
+   "field": "key_features",
+   "url": "https://mistral.ai",
+   "quote": "Customize models around your data, use cases, and requirements with Forge."
+  },
+  {
+   "field": "key_features",
+   "url": "https://mistral.ai",
+   "quote": "Build, govern and improve agents and applications with Studio. Vibe brings that AI into research, coding, and everyday tasks."
+  },
+  {
+   "field": "key_features",
+   "url": "https://mistral.ai/pricing/",
+   "quote": "Terminal-native coding agent powered by Devstral for autonomous software engineering tasks."
+  },
+  {
+   "field": "key_features",
+   "url": "https://mistral.ai/pricing/",
+   "quote": "Connect to any remote MCP server of choice."
+  },
+  {
+   "field": "key_features",
+   "url": "https://mistral.ai/pricing/",
+   "quote": "Generate and edit high-quality AI images, turning ideas into visuals with just a few words."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://mistral.ai",
+   "quote": "TotalEnergies is accelerating reservoir exploration."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://mistral.ai",
+   "quote": "BNP Paribas is speeding up the KYC process from weeks to days."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://mistral.ai",
+   "quote": "The European Patent Office is cutting transcription from days to minutes."
+  },
+  {
+   "field": "pricing",
+   "url": "https://mistral.ai/pricing/",
+   "quote": "Limited messages and web searches.\n Limited coding sessions."
+  },
+  {
+   "field": "pricing",
+   "url": "https://mistral.ai/pricing/",
+   "quote": "Valid for a maximum of 12 months for verified students at accredited higher institutions"
+  },
+  {
+   "field": "pricing",
+   "url": "https://mistral.ai/pricing/",
+   "quote": "Secure, collaborative workspace for teams building with AI.\n $24.99 \n /user/mo"
+  },
+  {
+   "field": "open_source",
+   "url": "https://docs.mistral.ai/",
+   "quote": "Mistral Small 4\n Apache 2.0 \n Hybrid model unifying instruct"
+  },
+  {
+   "field": "open_source",
+   "url": "https://docs.mistral.ai/",
+   "quote": "Mistral Medium 3.5\n Modified MIT"
+  },
+  {
+   "field": "api",
+   "url": "https://docs.mistral.ai/",
+   "quote": "The developer console and the Mistral API. Keys, the Playground, evaluations, agents, and SDKs to ship applications."
+  },
+  {
+   "field": "platforms",
+   "url": "https://mistral.ai/pricing/",
+   "quote": "Vibe on mobile (iOS and Android)"
+  },
+  {
+   "field": "platforms",
+   "url": "https://mistral.ai/pricing/",
+   "quote": "Vibe in your browser: run long-horizon work and code tasks from a chat interface."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://mistral.ai",
+   "quote": "hreflang: en, fr, it, x-default\n화면에 보이는 언어 이름: English, Français, Italiano"
+  },
+  {
+   "field": "plan_change",
+   "url": "https://mistral.ai/pricing/",
+   "quote": "if you haven't used Vibe (or Le Chat) before"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "구독 상품 이름이 Vibe로 바뀌었고 Free/Pro/Team/Enterprise 구성(Team은 사용자당 $24.99/월), 유료 플랜에 월 API 크레딧 포함",
+   "diff": "기존 분류의 'Le Chat 구독'은 현재 'Vibe(또는 Le Chat)'로 표기되며, 플랜에 월 API 크레딧이 묶여 있음",
+   "url": "https://mistral.ai/pricing/"
+  }
+ ]
+}

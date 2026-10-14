@@ -1,0 +1,61 @@
+{
+ "company": "Cloudflare",
+ "one_liner_ko": "Cloudflare의 AI 클라우드에서 AI 에이전트와 애플리케이션을 빌드·배포한다.",
+ "what_it_does_ko": "Cloudflare AI는 Cloudflare가 자사 AI에 쓰는 같은 네트워크 위에서 학습 데이터 저장, 추론 실행 등 AI 애플리케이션 확장 인프라를 제공한다. Workers AI로 GPU 서버리스 추론을 돌리고, Agents SDK와 원격 MCP 서버로 에이전트를 만들며, R2에 학습 데이터를 송신료 없이 저장한다. AI Gateway(캐싱·속도 제한·모델 폴백·관측), AI Search(RAG), Vectorize(벡터 DB)도 함께 제공한다. 신용카드 없이 무료로 시작할 수 있고 쓰는 만큼 과금된다.",
+ "key_features": [
+  "Workers AI: GPU 서버리스 추론(Llama 3·Gemma 3·Whisper·TTS·LoRA 변형, 190곳 이상)",
+  "Agents SDK: TypeScript API로 목표 지향 에이전트 구축",
+  "원격 MCP 서버(OAuth 범위 엔드포인트)",
+  "AI Gateway: 캐싱·속도 제한·모델 폴백·관측",
+  "AI Search: 자동 색인 RAG 워크플로",
+  "Vectorize: 전 세계 복제 벡터 데이터베이스",
+  "R2: 송신료 $0 객체 스토리지",
+  "Sandbox SDK: 보안 샌드박스 컨테이너에서 명령 실행"
+ ],
+ "use_cases_ko": [
+  "AI 앱의 저장·캐시·큐·학습 데이터·엣지 배포를 한 곳에서 처리(SiteGPT 사례)",
+  "AI 검색·채팅을 몇 분 만에 출시",
+  "에이전트용 MCP 서버 배포"
+ ],
+ "pricing": {
+  "free_tier": "있음 (신용카드 없이 무료 시작, Workers 하루 10만 요청·요청당 CPU 10ms)",
+  "plans": [
+   {"name": "Workers Free", "price": 0, "currency": "USD", "period": "usage", "limits": "하루 10만 요청, 요청당 CPU 10ms", "page_lang": "en"},
+   {"name": "Workers Paid (요청)", "price": 0.30, "currency": "USD", "period": "usage", "limits": "100만 요청당", "page_lang": "en"},
+   {"name": "Workers Paid (CPU 시간)", "price": 0.02, "currency": "USD", "period": "usage", "limits": "100만 CPU ms당", "page_lang": "en"},
+   {"name": "Containers (메모리)", "price": 0.0000025, "currency": "USD", "period": "usage", "limits": "GiB-초당, 25 GiB-시간 포함", "page_lang": "en"}
+  ],
+  "pricing_url": "https://www.cloudflare.com/plans/"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["웹", "API"],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {"field": "company", "url": "https://www.cloudflare.com/solutions/ai/", "quote": "Cloudflare AI Cloud"},
+  {"field": "one_liner_ko", "url": "https://www.cloudflare.com/solutions/ai/", "quote": "Build and deploy AI agents and applications on the AI Cloud"},
+  {"field": "what_it_does_ko", "url": "https://www.cloudflare.com/solutions/ai/", "quote": "Cloudflare provides the infrastructure to scale your AI applications at every step — store training data, run inference — on the same network Cloudflare uses to power its own use of AI."},
+  {"field": "what_it_does_ko", "url": "https://www.cloudflare.com/solutions/ai/", "quote": "Start building for free — no credit card required."},
+  {"field": "key_features", "url": "https://www.cloudflare.com/solutions/ai/", "quote": "Access Llama 3, Gemma 3, Whisper, TTS, and LoRA-fine-tuned variants across 190+ locations."},
+  {"field": "key_features", "url": "https://www.cloudflare.com/solutions/ai/", "quote": "Build goal-driven agents that call models, APIs, and schedules from a single TypeScript API."},
+  {"field": "key_features", "url": "https://www.cloudflare.com/solutions/ai/", "quote": "Secure, OAuth-scoped endpoints that expose tools and data to agents without self-hosting."},
+  {"field": "key_features", "url": "https://www.cloudflare.com/solutions/ai/", "quote": "Built-in caching, rate-limiting, model fallback, and observability for every inference call."},
+  {"field": "key_features", "url": "https://www.cloudflare.com/solutions/ai/", "quote": "Complete RAG workflows with automatic indexing and fresh data."},
+  {"field": "key_features", "url": "https://www.cloudflare.com/solutions/ai/", "quote": "Globally-replicated vector database that pairs with Workers AI for RAG in a few lines of code."},
+  {"field": "key_features", "url": "https://www.cloudflare.com/solutions/ai/", "quote": "Move to any cloud for $0 egress."},
+  {"field": "key_features", "url": "https://www.cloudflare.com/solutions/ai/", "quote": "Execute commands, manage files, run services, and expose them via public URLs - all within secure, sandboxed containers with our Sandbox SDK ."},
+  {"field": "use_cases_ko", "url": "https://www.cloudflare.com/solutions/ai/", "quote": "We use Cloudflare for everything – storage, cache, queues, and most importantly for training data and deploying the app on the edge"},
+  {"field": "use_cases_ko", "url": "https://www.cloudflare.com/solutions/ai/", "quote": "Ship AI search and chat with one instance in minutes."},
+  {"field": "use_cases_ko", "url": "https://www.cloudflare.com/solutions/ai/", "quote": "Deploy MCP Servers between meetings with Agents SDK."},
+  {"field": "pricing", "url": "https://www.cloudflare.com/plans/", "quote": "Requests\n Free 100k / day\n Paid $0.30 / million requests"},
+  {"field": "pricing", "url": "https://www.cloudflare.com/plans/", "quote": "CPU Time\n Free 10 ms / request\n Paid $0.02 / million CPU ms"},
+  {"field": "pricing", "url": "https://www.cloudflare.com/plans/", "quote": "Memory\n Free 25 GiB-hrs included\n Paid $0.0000025 / GiB-second"},
+  {"field": "pricing", "url": "https://www.cloudflare.com/plans/", "quote": "Pay only for what you use. Simple, transparent pricing for all Cloudflare products"},
+  {"field": "api", "url": "https://www.cloudflare.com/solutions/ai/", "quote": "Agents are just code. Use any AI model , integrate browsers or APIs"},
+  {"field": "api", "url": "https://github.com/cloudflare/workers-ai-provider", "quote": "A custom provider that enables [Workers AI](https://ai.cloudflare.com/)'s models for the [Vercel AI SDK](https://sdk.vercel.ai/)."},
+  {"field": "platforms", "url": "https://www.cloudflare.com/solutions/ai/", "quote": "Try in Cloudflare AI Playground Agents"},
+  {"field": "korean_support", "url": "https://www.cloudflare.com/solutions/ai/", "quote": "hreflang: de-de, es-es, fr-fr, it-it, ja-jp, ko-kr, pt-br, x-default, zh-cn, zh-tw"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

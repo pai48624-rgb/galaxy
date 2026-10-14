@@ -1,0 +1,424 @@
+=== [home] https://vllm.ai (lang=en)
+vLLM 
+ Menu 
+ Search Docs Documentation Blog Events Contact GitHub Community Theme 
+ Docs Blog Events Contact Community Search ⌘J 
+ The High-Throughput and Memory-Efficient inference and serving engine for LLMs
+ Easy, fast, and cost-efficient LLM serving for everyone.
+ Get Started Documentation 
+ Easy
+ Deploy the widest range of open-source models on any hardware. Includes a drop-in OpenAI-compatible API for instant integration.
+ Fast
+ Maximize throughput with PagedAttention. Advanced scheduling and continuous batching ensure peak GPU utilization.
+ Cost Efficient
+ Slash inference costs by maximizing hardware efficiency. We make high-performance LLMs affordable and accessible to everyone.
+ Quick Start 
+ Select your preferences and run the install command. Stable represents the most currently tested and supported version of vLLM. Nightly is available if you want the latest builds.
+ 📦 Requires Python 3.10+. Python 3.12+ recommended.
+ ⚡ We recommend uv for faster and more reliable installation.
+ 🔧 For other platforms, see docs.vllm.ai 
+ 🎉 See what's new in 
+ 🔍 Find which release contains a PR 
+ Build Stable Nightly 
+ Platform CUDA ROCm XPU CPU 
+ Package Python (uv) Python Docker 
+ CUDA Version CUDA 13.0 CUDA 12.9 
+ Run this Command: 
+ uv pip install vllm --torch-backend auto
+ 💡 Compatible with all CUDA 13.x versions (13.0 - 13.1) · Troubleshooting 
+ Looking for older versions? 
+ Sponsors 
+ vLLM is a community project. Our compute resources for development and testing are supported by the following organizations. Thank you for your support!
+ Cash Donations
+ a16z
+ Sequoia Capital
+ Skywork AI
+ ZhenFund
+ Compute Resources
+ Alibaba Cloud
+ AMD
+ Anyscale
+ AWS
+ Crusoe Cloud
+ Google Cloud
+ IBM
+ Intel
+ Lambda Lab
+ Nebius
+ Novita AI
+ NVIDIA
+ Red Hat
+ Roblox
+ RunPod
+ UC Berkeley
+ Slack Sponsor
+ Inferact
+ — Stars — ⭐ — Contributors — 👥 PyTorch Foundation 
+ We collect donation through GitHub and OpenCollective . We plan to use the fund to support the development, maintenance, and adoption of vLLM.
+ Universal Compatibility 
+ One engine, endless possibilities. Run any model on any hardware.
+ Hardware
+ Unified API across platforms
+ NVIDIA CUDA GPU 
+ Popular 
+ AMD ROCm GPU 
+ Huawei Ascend NPU 
+ AWS Neuron Accelerator 
+ Google Cloud TPU 
+ IBM Spyre Accelerator 
+ Intel Gaudi XPU CPU 
+ Apple Apple Silicon 
+ Baidu Kunlun XPU 
+ Cambricon MLU 
+ View all supported hardware 
+ Open Models
+ Latest trending open-source models, optimized & production-ready
+ DeepSeek
+ DeepSeek V4 DeepSeek V3.2 DeepSeek R1 
+ Google
+ Gemma 4 Gemma 3 
+ Meta
+ Muse Glimmer Llama 4 Scout Llama 4 Maverick 
+ Minimax
+ MiniMax M3 MiniMax M2.7 MiniMax M2.5 
+ Mistral AI
+ Mistral Small 4 Mistral Large 3 
+ MoonshotAI
+ Kimi K3 Kimi K2.6 Kimi K2.5 
+ NVIDIA
+ Nemotron 3 Ultra Nemotron 3 Super Nemotron 3 Nano 
+ Qwen
+ Qwen3.8 Qwen3.6 Qwen3.5 
+ StepFun
+ Step-3.7-Flash Step-3.5-Flash 
+ Z-AI
+ GLM 5.2 GLM 5.1 GLM 5 
+ View all supported models 
+ Everyone welcome!
+ Got questions? We're here to help. 
+ Whether you're just getting started or debugging a complex deployment, our community is open to everyone. No question is too basic!
+ Fast & friendly responses 
+ Active maintainers 
+ Join Slack
+ Real-time help & discussions
+ Visit Forum
+ Searchable Q&A knowledge base
+ GitHub Issues
+ Bug reports & feature requests
+ Resources 
+ Explore recipes, benchmarks, and roadmap
+ Recipes
+ Example notebooks and tutorials
+ recipes.vllm.ai 
+ Performance
+ Benchmarks and comparisons
+ perf.vllm.ai 
+ Roadmap
+ Project roadmap and milestones
+ roadmap.vllm.ai 
+ Ecosystem 
+ Tools and libraries built around vLLM
+ AIBrix · AI infrastructure on K8s GuideLLM · LLM performance evaluation LLM Compressor · Model quantization Production Stack · Production deployment Semantic Router · Intelligent routing Speculators · Speculative decoding vLLM Omni · Omni-modality models vLLM Playground · Web UI for vLLM 
+ © 2026 vLLM · All rights reserved. 
+ GitHub X LinkedIn Slack Discuss
+
+=== [about] https://docs.vllm.ai/en/latest/ (lang=en)
+vLLM 
+ Skip to content
+ You are viewing the latest developer preview docs. Click here to view docs for the latest stable release.
+ vLLM
+ Home
+ Initializing search
+ GitHub
+ Home
+ User Guide
+ Developer Guide
+ Benchmarking
+ API Reference
+ CLI Reference
+ Community
+ vLLM
+ GitHub
+ Home
+ User Guide
+ User Guide
+ Getting Started
+ Getting Started
+ Quickstart
+ Installation
+ Installation
+ GPU
+ CPU
+ TPU
+ Examples
+ Examples
+ Applications
+ Applications
+ API Server
+ Chatbot
+ Rag
+ Basic
+ Basic
+ Offline Inference
+ Online Serving
+ Deployment
+ Deployment
+ Async LLM Streaming
+ Helm Charts
+ LLM Engine Example
+ Sagemaker-Entrypoint
+ Disaggregated
+ Disaggregated
+ Disaggregated Encoder
+ Disaggregated Serving
+ Ec Both Encoder
+ Disaggregated Prefill V1
+ Flexkv Connector
+ KV Load Failure Recovery Test
+ LMCache Examples
+ Mooncake Connector
+ Features
+ Features
+ Automatic Prefix Caching
+ Context Extension
+ Data Parallel
+ Kv Events
+ Logging Configuration
+ Custom Logits Processors
+ LoRA
+ Offline Inference with the OpenAI Batch file format
+ Profiling
+ Prompt Embed
+ Reset Kv
+ Sharded State
+ Speculative Decoding
+ Structured reads on DiffusionGemma
+ Structured Outputs
+ Tensorize vLLM Model
+ Torchrun
+ Generate
+ Generate
+ Batched Chat Completions Online
+ Multimodal
+ Qwen 1M Offline
+ Trace Replay Offline
+ Observability
+ Observability
+ Monitoring Dashboards
+ Metrics
+ Setup OpenTelemetry POC
+ Prometheus and Grafana
+ Pooling
+ Pooling
+ Classify
+ Embed
+ Plugin
+ Reward
+ Score
+ Token Classify
+ Token Embed
+ Ray Serving
+ Ray Serving
+ Batch LLM Inference
+ Elastic Ep
+ Multi-Node-Serving
+ Ray Serve Deepseek
+ Run Cluster
+ Reasoning
+ Reasoning
+ OpenAI Chat Completion Tool Calls With Reasoning
+ OpenAI Chat Completion With Reasoning
+ OpenAI Chat Completion With Reasoning Streaming
+ OpenAI Responses Client
+ RL
+ RL
+ Batch Invariance
+ Pause Resume
+ Rdt vLLM Serve
+ Rdt Weight Source
+ RLHF Async New APIs
+ RLHF Http IPC
+ RLHF Http NCCL
+ RLHF IPC Fsdp Ep
+ RLHF M2N
+ RLHF NCCL Fsdp Ep
+ RLHF Sharded Rdt Small Ep
+ RLHF Sparse NCCL
+ Routed Experts E2E
+ Skip Loading Weights In Engine Init
+ Scale Out
+ Scale Out
+ Init
+ Example Mm Serve
+ Token Generation Client
+ Speech To Text
+ Speech To Text
+ OpenAI
+ Realtime
+ Tool Calling
+ Tool Calling
+ Chat With Tools Offline
+ OpenAI Chat Completion Client With Tools
+ OpenAI Chat Completion Client With Tools Required
+ OpenAI Chat Completion Client With Tools Xlam
+ OpenAI Chat Completion Client With Tools Xlam Streaming
+ OpenAI Responses Client With Mcp Tools
+ OpenAI Responses Client With Tools
+ General
+ General
+ vLLM V1
+ Frequently Asked Questions
+ Production Metrics
+ Reproducibility
+ Security
+ Troubleshooting
+ Usage Stats Collection
+ Inference and Serving
+ Inference and Serving
+ Offline Inference
+ Online Serving
+ Online Serving
+ Decisions API
+ Derenderer APIs
+ Generative Scoring
+ OpenAI-Compatible Server
+ Renderer APIs
+ Speech to Text APIs
+ Structured Decisions
+ Tokens In <> Tokens Out API
+ Trace Replay
+ Context Parallel Deployment
+ Data Parallel Deployment
+ Troubleshooting distributed deployments
+ Expert Parallel Deployment
+ Parallelism and Scaling
+ Integrations
+ Integrations
+ Claude Code
+ Codex
+ LangChain
+ LlamaIndex
+ Deployment
+ Deployment
+ Using Docker
+ Using Kubernetes
+ Using Nginx
+ Frameworks
+ Frameworks
+ Anyscale
+ AnythingLLM
+ AutoGen
+ BentoML
+ Cerebrium
+ Chatbox
+ Crusoe
+ Dify
+ dstack
+ Haystack
+ Helm
+ Hugging Face Inference Endpoints
+ LiteLLM
+ Lobe Chat
+ LWS
+ Modal
+ Nebius Serverless AI
+ Open WebUI
+ Retrieval-Augmented Generation
+ RunPod
+ SkyPilot
+ Streamlit
+ NVIDIA Triton
+ Integrations
+ Integrations
+ AIBrix
+ NVIDIA Dynamo
+ KAITO
+ KServe
+ Kthena
+ KubeAI
+ KubeRa
+
+=== [meta] https://vllm.ai
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/vllm-project/vllm
+<!-- markdownlint-disable MD001 MD041 -->
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/vllm-project/vllm/main/docs/assets/logos/vllm-logo-text-dark.png">
+    <img alt="vLLM" src="https://raw.githubusercontent.com/vllm-project/vllm/main/docs/assets/logos/vllm-logo-text-light.png" width=55%>
+  </picture>
+</p>
+
+<h3 align="center">
+Easy, fast, and cheap LLM serving for everyone
+</h3>
+
+<p align="center">
+| <a href="https://docs.vllm.ai"><b>Documentation</b></a> | <a href="https://blog.vllm.ai/"><b>Blog</b></a> | <a href="https://arxiv.org/abs/2309.06180"><b>Paper</b></a> | <a href="https://x.com/vllm_project"><b>Twitter/X</b></a> | <a href="https://discuss.vllm.ai"><b>User Forum</b></a> | <a href="https://slack.vllm.ai"><b>Developer Slack</b></a> |
+</p>
+
+🔥 We have built a vLLM website to help you get started with vLLM. Please visit [vllm.ai](https://vllm.ai) to learn more.
+For events, please visit [vllm.ai/events](https://vllm.ai/events) to join us.
+
+---
+
+## About
+
+vLLM is a fast and easy-to-use library for LLM inference and serving.
+
+Originally developed in the [Sky Computing Lab](https://sky.cs.berkeley.edu) at UC Berkeley, vLLM has grown into one of the most active open-source AI projects built and maintained by a diverse community of many dozens of academic institutions and companies from over 2000 contributors.
+
+vLLM is fast with:
+
+- State-of-the-art serving throughput
+- Efficient management of attention key and value memory with [**PagedAttention**](https://blog.vllm.ai/2023/06/20/vllm.html)
+- Continuous batching of incoming requests, chunked prefill, prefix caching
+- Fast and flexible model execution with piecewise and full CUDA/HIP graphs
+- Quantization: FP8, MXFP8/MXFP4, NVFP4, INT8, INT4, GPTQ/AWQ, GGUF, compressed-tensors, ModelOpt, TorchAO, and [more](https://docs.vllm.ai/en/latest/features/quantization/index.html)
+- Optimized attention kernels including FlashAttention, FlashInfer, TRTLLM-GEN, FlashMLA, and Triton
+- Optimized GEMM/MoE kernels for various precisions using CUTLASS, TRTLLM-GEN, CuTeDSL
+- Speculative decoding including n-gram, suffix, EAGLE, DFlash
+- Automatic kernel generation and graph-level transformations using torch.compile
+- Disaggregated prefill, decode, and encode
+
+vLLM is flexible and easy to use with:
+
+- Seamless integration with popular Hugging Face models
+- High-throughput serving with various decoding algorithms, including *parallel sampling*, *beam search*, and more
+- Tensor, pipeline, data, expert, and context parallelism for distributed inference
+- Streaming outputs
+- Generation of structured outputs using xgrammar or guidance
+- Tool calling and reasoning parsers
+- OpenAI-compatible API server, plus Anthropic Messages API and gRPC support
+- Efficient multi-LoRA support for dense and MoE layers
+- Support for NVIDIA GPUs, AMD GPUs, Intel GPUs, and x86/ARM/PowerPC CPUs. Additionally, diverse hardware plugins such as Google TPUs, Intel Gaudi, IBM Spyre, Huawei Ascend, Rebellions NPU, Apple Silicon, MetaX GPU, and more.
+
+vLLM seamlessly supports 200+ model architectures on Hugging Face, including:
+
+- Decoder-only LLMs (e.g., Llama, Qwen, Gemma)
+- Mixture-of-Expert LLMs (e.g., Mixtral, DeepSeek-V3, Qwen-MoE, GPT-OSS)
+- Hybrid attention and state-space models (e.g., Mamba, Qwen3.5)
+- Multi-modal models (e.g., LLaVA, Qwen-VL, Pixtral)
+- Embedding and retrieval models (e.g., E5-Mistral, GTE, ColBERT)
+- Reward and classification models (e.g., Qwen-Math)
+
+Find the full list of supported models [here](https://docs.vllm.ai/en/latest/models/supported_models.html).
+
+## Getting Started
+
+Install vLLM with [`uv`](https://docs.astral.sh/uv/) (recommended) or `pip`:
+
+```bash
+uv pip install vllm
+vllm download-kernels  # precompiled kernels for faster startup
+```
+
+Or [build from source](https://docs.vllm.ai/en/latest/getting_started/installation/gpu/index.html#build-wheel-from-source) for development.
+
+Visit our [documentation](https://docs.vllm.ai/en/latest/) to learn more.
+
+- [Installation](https://docs.vllm.ai/en/latest/getting_started/installation.html)
+- [Quickstart](https://docs.vllm.ai/en/latest/getting_started/quickstart.html

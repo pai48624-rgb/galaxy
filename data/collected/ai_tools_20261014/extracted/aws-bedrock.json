@@ -1,0 +1,51 @@
+{
+ "company": "Amazon Web Services (AWS)",
+ "one_liner_ko": "생성형 AI 애플리케이션과 에이전트를 프로토타입부터 프로덕션까지 빠르게 구축하는 AWS의 엔드 투 엔드 플랫폼.",
+ "what_it_does_ko": "Amazon Bedrock은 생성형 AI 애플리케이션과 에이전트를 구축하기 위한 플랫폼으로, 주요 AI 회사의 수백 개 파운데이션 모델(FM)과 모델 평가 도구를 제공한다. Knowledge Bases·Bedrock Data Automation·미세 조정 등으로 자사 데이터에 맞게 모델을 사용자 지정할 수 있다. Bedrock Guardrails로 유해 콘텐츠를 차단하고, 모델 증류·프롬프트 캐싱·지능형 프롬프트 라우팅으로 비용을 줄인다. Bedrock Agents·Flows·AgentCore로 에이전트를 만들고 프로덕션에 배포한다.",
+ "key_features": [
+  "주요 AI 회사의 수백 개 파운데이션 모델 선택과 평가 도구",
+  "Knowledge Bases·Data Automation·미세 조정으로 데이터 기반 사용자 지정",
+  "Bedrock Guardrails(유해 콘텐츠 최대 88% 차단)",
+  "모델 증류·프롬프트 캐싱·지능형 프롬프트 라우팅으로 비용 최적화",
+  "Bedrock Agents와 시각적 빌더 Bedrock Flows",
+  "AgentCore(Gateway·Memory·Runtime·Identity·Observability)",
+  "데이터를 저장하거나 모델 훈련에 쓰지 않음, ISO·SOC·GDPR·FedRAMP High·HIPAA 적격"
+ ],
+ "use_cases_ko": [
+  "블로그·소셜 미디어·웹 페이지 카피 작성",
+  "긴 문서 요약과 가상 도우미 에이전트 구축",
+  "금융 서비스 AI 확장(Robinhood 사례: 일일 토큰 5억→50억, AI 비용 80% 절감)"
+ ],
+ "pricing": {
+  "free_tier": "불명 (AWS 전체로는 프리 티어·무료 가입 언급, Bedrock 전용 가격은 수집 페이지에 없음)",
+  "plans": [],
+  "pricing_url": "https://aws.amazon.com/ko/pricing/?nc2=h_pr_hub/"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["웹", "API", "CLI"],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {"field": "company", "url": "https://aws.amazon.com/ko/bedrock/", "quote": "© 2026, Amazon Web Services, Inc. 또는 자회사. All rights reserved."},
+  {"field": "one_liner_ko", "url": "https://aws.amazon.com/ko/bedrock/", "quote": "프로토타입부터 프로덕션까지 생성형 AI 애플리케이션 및 에이전트를 높은 신뢰도로 빠르게 추적"},
+  {"field": "what_it_does_ko", "url": "https://aws.amazon.com/ko/bedrock/", "quote": "Amazon Bedrock은 생성형 AI 애플리케이션과 에이전트를 구축하기 위한 포괄적이고 안전하며 유연한 플랫폼입니다."},
+  {"field": "key_features", "url": "https://aws.amazon.com/ko/bedrock/", "quote": "주요 AI 회사의 수백 개 FM을 활용할 수 있습니다."},
+  {"field": "key_features", "url": "https://aws.amazon.com/ko/bedrock/", "quote": "Knowledge Bases, Bedrock Data Automation, 프롬프트 엔지니어링, 미세 조정 등 다양한 데이터 사용자 지정 도구를 결합하여"},
+  {"field": "key_features", "url": "https://aws.amazon.com/ko/bedrock/", "quote": "자동 추론 검사를 사용하여 유해 콘텐츠를 최대 88% 차단하고"},
+  {"field": "key_features", "url": "https://aws.amazon.com/ko/bedrock/", "quote": "모델 증류, 프롬프트 캐싱, 지능형 프롬프트 라우팅 등의 기능을 통해 성능을 유지하면서 비용을 절감할 수 있습니다."},
+  {"field": "key_features", "url": "https://aws.amazon.com/ko/bedrock/", "quote": "Prompts, Agents, Guardrails, Knowledge Bases 및 기타 AWS 서비스를 완전한 에이전틱 AI 애플리케이션에 연결하는 시각적 빌더 도구를 제공합니다."},
+  {"field": "key_features", "url": "https://aws.amazon.com/ko/bedrock/", "quote": "AgentCore Memory: 에이전트가 단기 메모리와 장기 메모리를 모두 높은 정확도로 유지할 수 있습니다."},
+  {"field": "key_features", "url": "https://aws.amazon.com/ko/bedrock/", "quote": "Bedrock은 데이터를 저장하거나 모델 훈련에 사용하지 않으므로"},
+  {"field": "use_cases_ko", "url": "https://aws.amazon.com/ko/bedrock/", "quote": "블로그 게시물, 소셜 미디어 게시물, 웹 페이지 카피 등의 새로운 원본 카피로 글쓰기 프로젝트를 빠르게 시작하세요."},
+  {"field": "use_cases_ko", "url": "https://aws.amazon.com/ko/bedrock/", "quote": "기사, 보고서, 연구 논문, 기술 설명서, 서적 등의 긴 문서를 요약하여"},
+  {"field": "use_cases_ko", "url": "https://aws.amazon.com/ko/bedrock/", "quote": "6개월 만에 일일 토큰 처리량을 5억 개에서 50억 개로 확장했습니다. 동시에 AI 비용은 80% 절감하고"},
+  {"field": "pricing", "url": "https://aws.amazon.com/ko/pricing/?nc2=h_pr_hub/", "quote": "AWS는 방대한 클라우드 서비스에 대해 사용량에 따른 요금 접근 방식을 제공합니다."},
+  {"field": "pricing", "url": "https://aws.amazon.com/ko/bedrock/", "quote": "AWS 제품 및 서비스를 무료로 직접 체험해 보세요"},
+  {"field": "api", "url": "https://docs.aws.amazon.com/?nc2=h_rsc_lrn_docs/", "quote": "Find user guides, code samples, SDKs & toolkits, tutorials, API & CLI references, and more."},
+  {"field": "platforms", "url": "https://aws.amazon.com/ko/bedrock/", "quote": "콘솔 로그인"},
+  {"field": "platforms", "url": "https://docs.aws.amazon.com/?nc2=h_rsc_lrn_docs/", "quote": "Find user guides, code samples, SDKs & toolkits, tutorials, API & CLI references, and more."},
+  {"field": "korean_support", "url": "https://aws.amazon.com/ko/bedrock/", "quote": "hreflang: ar-sa, de-de, en-us, es-es, fr-fr, id-id, it-it, ja-jp, ko-kr, pt-br, ru-ru, th-th, tr-tr, vi-vn, zh-cn, zh-tw"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

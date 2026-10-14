@@ -1,36 +1,78 @@
 {
  "company": null,
- "one_liner_ko": "Stable Diffusion XL 기반으로, 복잡한 조정 없이 프롬프트만으로 이미지를 만드는 오프라인·무료 오픈소스 이미지 생성 소프트웨어.",
- "what_it_does_ko": "Fooocus는 Gradio 기반의 이미지 생성 소프트웨어로, 오프라인에서 무료로 동작하는 오픈소스다. 수동 조정 없이 프롬프트와 이미지에만 집중하도록 설계됐고, 오프라인 GPT-2 기반 프롬프트 처리 엔진을 갖췄다. 설치는 다운로드부터 첫 이미지 생성까지 클릭 3번 미만으로 단순화했으며 최소 GPU 메모리는 4GB(Nvidia)다. 현재는 버그 수정만 하는 제한적 장기 지원(LTS) 상태이며 새 모델 구조로 옮길 계획은 없다고 밝힌다.",
+ "one_liner_ko": "프롬프트와 이미지에만 집중하면 되는 오프라인·무료 오픈소스 이미지 생성 소프트웨어.",
+ "what_it_does_ko": "Fooocus는 Gradio 기반의 이미지 생성 소프트웨어로, 오프라인에서 돌아가는 무료 오픈소스다. Midjourney처럼 수동 조정 없이 프롬프트와 이미지에만 집중하도록 설계됐고 설치도 몇 번의 클릭으로 끝난다. Stable Diffusion XL 구조 위에 만들어졌으며 현재는 버그 수정만 하는 제한적 장기 지원(LTS) 상태다. 최소 Nvidia GPU 메모리 4GB가 필요하다.",
  "key_features": [
-  "프롬프트 조정 없이 고품질 텍스트→이미지 생성",
-  "이미지 변형(Vary Subtle/Strong)과 업스케일(1.5x/2x)",
-  "자체 알고리즘의 인페인트·아웃페인트",
-  "이미지 프롬프트(이미지를 입력으로 사용)",
-  "스타일·품질·가이던스 등 고급 설정",
-  "Civitai의 SDXL 모델 지원"
+  "프롬프트 튜닝 없이 고품질 텍스트→이미지",
+  "오프라인 GPT-2 기반 프롬프트 처리",
+  "업스케일·변형(Vary)",
+  "인페인트·아웃페인트",
+  "이미지 프롬프트",
+  "스타일·품질 고급 설정",
+  "Civitai SDXL 모델 지원"
  ],
  "use_cases_ko": [],
  "pricing": {
-  "free_tier": "있음 (완전 무료, 오프라인)",
+  "free_tier": "있음 (오프라인 무료 오픈소스)",
   "plans": [],
-  "pricing_url": null
+  "pricing_url": "https://github.com/lllyasviel/Fooocus"
  },
- "open_source": "오픈소스(라이선스명 본문 미기재)",
+ "open_source": null,
  "api": "불명",
- "platforms": ["로컬 설치(오프라인)"],
+ "platforms": [],
  "korean_support": "불명",
  "evidence": [
-  {"field": "one_liner_ko", "url": "https://github.com/lllyasviel/Fooocus", "quote": "The software is offline, open source, and free, while at the same time, similar to many online image generators like Midjourney, the manual tweaking is not needed"},
-  {"field": "what_it_does_ko", "url": "https://github.com/lllyasviel/Fooocus", "quote": "Minimal GPU memory requirement is 4GB (Nvidia)."},
-  {"field": "what_it_does_ko", "url": "https://github.com/lllyasviel/Fooocus", "quote": "is now in a state of limited long-term support (LTS) with bug fixes only."},
-  {"field": "key_features", "url": "https://github.com/lllyasviel/Fooocus", "quote": "Input Image -> Upscale or Variation -> Upscale (1.5x) / Upscale (2x)"},
-  {"field": "key_features", "url": "https://github.com/lllyasviel/Fooocus", "quote": "Input Image -> Inpaint or Outpaint -> Inpaint / Up / Down / Left / Right"},
-  {"field": "key_features", "url": "https://github.com/lllyasviel/Fooocus", "quote": "Fooocus support SDXL models on Civitai"},
-  {"field": "key_features", "url": "https://github.com/lllyasviel/Fooocus", "quote": "Fooocus has an offline GPT-2 based prompt processing engine and lots of sampling improvements"},
-  {"field": "pricing", "url": "https://github.com/lllyasviel/Fooocus", "quote": "Fooocus is a 100% non-commercial offline open-source software."},
-  {"field": "open_source", "url": "https://github.com/lllyasviel/Fooocus", "quote": "Fooocus is a 100% non-commercial offline open-source software."},
-  {"field": "platforms", "url": "https://github.com/lllyasviel/Fooocus", "quote": "The software is offline, open source, and free"}
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/lllyasviel/Fooocus",
+   "quote": "The software is offline, open source, and free, while at the same time, similar to many online image generators like Midjourney, the manual tweaking is not needed, and users only need to focus on the"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/lllyasviel/Fooocus",
+   "quote": "Fooocus is an image generating software (based on [Gradio](https://www.gradio.app/)"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/lllyasviel/Fooocus",
+   "quote": "is now in a state of limited long-term support (LTS) with bug fixes only."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/lllyasviel/Fooocus",
+   "quote": "Minimal GPU memory requirement is 4GB (Nvidia)."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/lllyasviel/Fooocus",
+   "quote": "Fooocus has an offline GPT-2 based prompt processing engine"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/lllyasviel/Fooocus",
+   "quote": "Input Image -> Upscale or Variation -> Vary (Subtle) / Vary (Strong)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/lllyasviel/Fooocus",
+   "quote": "Input Image -> Inpaint or Outpaint -> Inpaint / Up / Down / Left / Right"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/lllyasviel/Fooocus",
+   "quote": "Input Image -> Image Prompt <br>"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/lllyasviel/Fooocus",
+   "quote": "Fooocus support SDXL models on Civitai"
+  },
+  {
+   "field": "pricing",
+   "url": "https://github.com/lllyasviel/Fooocus",
+   "quote": "Fooocus is a 100% non-commercial offline open-source software."
+  }
  ],
- "mismatch": []
+ "mismatch": [],
+ "plan_change": []
 }

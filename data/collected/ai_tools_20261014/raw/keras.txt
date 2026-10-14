@@ -1,0 +1,371 @@
+=== [home] https://keras.io (lang=en)
+Keras: Deep Learning for humans 
+ About Keras 
+ Getting started 
+ Developer guides 
+ Code examples 
+ Keras 3 API documentation 
+ Keras 2 API documentation 
+ KerasHub: Pretrained Models 
+ Keras RS 
+ KerasTuner: Hyperparam Tuning 
+ GET STARTED 
+ GUIDES 
+ API 
+ EXAMPLES 
+ KERAS HUB 
+ KERAS RS 
+ KERAS TUNER 
+ KERAS 3.0 RELEASED 
+ A superpower for ML developers
+ Keras is a deep learning API designed for human beings, not
+ machines. Keras focuses on debugging speed, code elegance &
+ conciseness, maintainability, and deployability. When you choose
+ Keras, your codebase is smaller, more readable, easier to iterate
+ on.
+ API DOCS 
+ GUIDES 
+ EXAMPLES 
+ Copied
+ inputs = keras.Input(shape=(32, 32, 3))
+x = layers.Conv2D(32, 3, activation="relu")(inputs)
+x = layers.Conv2D(64, 3, activation="relu")(x)
+residual = x = layers.MaxPooling2D(3)(x)
+x = layers.Conv2D(64, 3, padding="same")(x)
+x = layers.Activation("relu")(x)
+x = layers.Conv2D(64, 3, padding="same")(x)
+x = layers.Activation("relu")(x)
+x = x + residual
+x = layers.Conv2D(64, 3, activation="relu")(x)
+x = layers.GlobalAveragePooling2D()(x)
+outputs = layers.Dense(10, activation="softmax")(x)
+model = keras.Model(inputs, outputs, name="mini_resnet")
+keras.utils.plot_model(model, "mini_resnet.png")
+model.fit(dataset, epochs=10) 
+ Run quickstart 
+ Copied
+ causal_lm = keras_hub.models.CausalLM.from_preset(
+ "gemma4_instruct_2b",
+ dtype="bfloat16",
+)
+prompt = """<|turn>user
+Write python code to print the first 100 primes.<turn|>
+<|turn>model
+"""
+text_output = causal_lm.generate(prompt, max_length=512)
+text_to_image = keras_hub.models.TextToImage.from_preset(
+ "stable_diffusion_3_medium",
+ dtype="float16",
+)
+prompt = "Astronaut in a jungle, detailed"
+image_output = text_to_image.generate(prompt) 
+ Run quickstart 
+ Welcome to multi-framework machine learning
+ With its multi-backend approach, Keras gives you the freedom to
+ work with JAX, TensorFlow, and PyTorch. Build models that can move
+ seamlessly across these frameworks and leverage the strengths of
+ each ecosystem.
+ GET STARTED
+ Developer Guides
+ VIEW ALL
+ Copied
+ inputs = keras.Input(shape=(28, 28, 1))
+x = inputs
+x = layers.Conv2D(16, 3, activation="relu")(x)
+x = layers.Conv2D(32, 3, activation="relu")(x)
+x = layers.MaxPooling2D(3)(x)
+x = layers.Conv2D(32, 3, activation="relu")(x)
+x = layers.Conv2D(16, 3, activation="relu")(x)
+x = layers.GlobalMaxPooling2D()(x)
+x = layers.Dropout(0.5)
+outputs = layers.Dense(10)
+model = keras.Model(inputs, outputs)
+model.summary() 
+ The Functional API
+ Starting from the beginning and learn how to build models using the functional building pattern.
+ VIEW GUIDE
+ Copied
+ model.compile(
+ optimizer="rmsprop",
+ loss="categorical_crossentropy",
+ metrics=["accuracy"],
+)
+history = model.fit(
+ x_train,
+ y_train,
+ batch_size=64,
+ epochs=2,
+ validation_data=(x_val, y_val),
+) 
+ Training & evaluation with the built-in methods
+ Train and evaluate your model using model.fit(...).
+ VIEW GUIDE
+ Copied
+ class MLPBlock(keras.layers.Layer):
+ def __init__(self):
+ super().__init__()
+ self.dense_1 = layers.Dense(32)
+ self.dense_2 = layers.Dense(32)
+ self.dense_3 = layers.Dense(1)
+ def call(self, inputs):
+ x = self.dense_1(inputs)
+ x = keras.activations.relu(x)
+ x = self.dense_2(x)
+ x = keras.activations.relu(x)
+ return self.dense_3(x) 
+ Making new layers and models via subclassing
+ Learn how to customize your model via subclassing Keras layers.
+ VIEW GUIDE
+ VIEW ALL
+ KerasHub
+ The KerasHub library provides Keras 3 implementations of popular model architectures, paired with a collection of pretrained checkpoints available on Kaggle Models. Models can be used for both training and inference, on any of the TensorFlow, JAX, and PyTorch backends.
+ SEE ALL
+ GEMMA 4
+ Google’s family of open multimodal and agentic models built from the same research and technology used to create Gemini.
+ VIEW DOCUMENTATION 
+ KAGGLE DETAILS 
+ QWEN 3.8
+ Alibaba’s flagship open-weight multimodal and reasoning models, excelling at coding, math, and agentic workflows.
+ VIEW DOCUMENTATION 
+ KAGGLE DETAILS 
+ GPT-OSS
+ OpenAI’s open-weight Mixture-of-Experts reasoning models built for high-efficiency text generation across 128k context.
+ VIEW DOCUMENTATION 
+ KAGGLE DETAILS 
+ MISTRAL
+ A generative language from the French company Mistral AI, making frontier models accessible to all.
+ VIEW DOCUMENTATION 
+ KAGGLE DETAILS 
+ SEE ALL
+ Code examples
+ VIEW ALL
+ Computer vision
+ Take a look at our examples for doing image classification, object detection, video processing, and more.
+ SEE EXAMPLE
+ Natural Language Processing
+ We also have many guides for doing NLP including text classification, machine translation, and language modeling.
+ SEE EXAMPLE
+ Generative Deep Learning
+ Get started with generative deep learning with our wealth of guides involving state-of-the-art diffusion models, GANs, and transformer models.
+ SEE EXAMPLE
+ VIEW ALL
+ Trusted for research and production
+ Keras is used by CERN, NASA, NIH, and many more scientific
+ organizations around the world (and yes, Keras is used at the Large
+ Hadron Collider). Keras is used by Waymo to power self-driving
+ vehicles. Keras partners with Kaggle and HuggingFace to meet ML
+ developers in the tools they use daily.
+ Stay in touch
+ Sign up to our mailing list for regular updates and discussions about the Keras ecosystem. Listen in at our community meetings, and follow us on social media!
+ JOIN GOOGLE GROUP
+ JOIN COMMUNITY MEETING
+ DISCORD 
+ GOOGLE AI FORUM 
+ Contributions welcome!
+ We welcome your code, ideas, and feedback as we continue to grow. Visit our roadmap, contribution guide or GitHub for more information.
+ VIEW ROADMAP 
+ CONTRIBUTION GUIDE
+ GITHUB 
+ Terms 
+ |
+ Privacy
+
+=== [about] https://keras.io/getting_started/about/ (lang=en)
+About Keras 3 
+ None
+ Getting started 
+ About Keras 
+ Introduction to Keras for engineers 
+ Keras 3 benchmarks 
+ The Keras ecosystem 
+ Frequently Asked Questions 
+ Developer guides 
+ Code examples 
+ Keras 3 API documentation 
+ Keras 2 API documentation 
+ KerasTuner: Hyperparam Tuning 
+ KerasHub: Pretrained Models 
+ KerasRS 
+ Get started 
+ Guides 
+ API 
+ Examples 
+ Keras Hub 
+ Keras RS 
+ Keras Tuner 
+ Getting started
+ About Keras 
+ Introduction to Keras for engineers 
+ Keras 3 benchmarks 
+ The Keras ecosystem 
+ Frequently Asked Questions 
+ ► 
+ Getting started /
+ About Keras 3
+ About Keras 3
+ Keras is a deep learning API written in Python and capable of running on top of either JAX ,
+ TensorFlow ,
+or PyTorch .
+ Keras is:
+ Simple – but not simplistic. Keras reduces developer cognitive load to free you to focus on the parts of the problem that really matter.
+ Flexible – Keras adopts the principle of progressive disclosure of complexity : simple workflows should be quick and easy,
+while arbitrarily advanced workflows should be possible via a clear path that builds upon what you've already learned.
+ Powerful – Keras provides industry-strength performance and scalability: it is used by organizations including NASA, YouTube, or Waymo.
+ Keras 3 is a multi-framework deep learning API
+ As a multi-framework API, Keras can be used to develop modular components that are compatible with any framework – JAX, TensorFlow, or PyTorch.
+ This approach has several key benefits:
+ Always get the best performance for your models. In our benchmarks,
+we found that JAX typically delivers the best training and inference performance
+on GPU, TPU, and CPU – but results vary from model to model, as non-XLA
+TensorFlow is occasionally faster on GPU. The ability to dynamically select
+the backend that will deliver the best performance for your model
+ without having to change anything to your code means you're always guaranteed
+to train and serve with the highest achievable efficiency.
+ Maximize available ecosystem surface for your models. Any Keras
+model can be instantiated as a PyTorch Module , can be exported as a TensorFlow
+ SavedModel , or can be instantiated as a stateless JAX function. That means
+that you can use your Keras models with PyTorch ecosystem packages,
+with the full range of TensorFlow deployment & production tools, and with
+JAX large-scale TPU training infrastructure. Write one model.py using
+Keras APIs, and get access to everything the ML world has to offer.
+ Maximize distribution for your open-source model releases. Want to
+release a pretrained model? Want as many people as possible
+to be able to use it? If you implement it in pure TensorFlow or PyTorch,
+it will be usable by roughly half of the market.
+If you implement it in Keras, it is instantly usable by anyone regardless
+of their framework of choice (even if they're not Keras users).
+Twice the impact at no added development cost.
+ Use data pipelines from any source. The Keras
+ fit() / evaluate() / predict() routines are compatible with tf.data.Dataset objects,
+with PyTorch DataLoader objects, with NumPy arrays, Pandas dataframes –
+regardless of the backend you're using. You can train a Keras + TensorFlow
+model on a PyTorch DataLoader or train a Keras + PyTorch model on a
+ tf.data.Dataset .
+ First contact with Keras
+ The core data structures of Keras are layers and models .
+The simplest type of model is the Sequential model , a linear stack of layers.
+For more complex architectures, you should use the Keras functional API ,
+which allows to build arbitrary graphs of layers, or write models entirely 
+
+=== [meta] https://keras.io
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/keras-team/keras
+# Keras 3: Deep Learning for Humans
+
+Keras 3 is a multi-backend deep learning framework, with support for JAX, TensorFlow, PyTorch, and OpenVINO (for inference-only).
+Effortlessly build and train models for computer vision, natural language processing, audio processing,
+timeseries forecasting, recommender systems, etc.
+
+- **Accelerated model development**: Ship deep learning solutions faster thanks to the high-level UX of Keras
+and the availability of easy-to-debug runtimes like PyTorch or JAX eager execution.
+- **State-of-the-art performance**: By picking the backend that is the fastest for your model architecture (often JAX!),
+leverage speedups ranging from 20% to 350% compared to other frameworks. [Benchmark here](https://keras.io/getting_started/benchmarks/).
+- **Datacenter-scale training**: Scale confidently from your laptop to large clusters of GPUs or TPUs.
+
+Join nearly three million developers, from burgeoning startups to global enterprises, in harnessing the power of Keras 3.
+
+
+## Installation
+
+### Install with pip
+
+Keras 3 is available on PyPI as `keras`. Note that Keras 2 remains available as the `tf-keras` package.
+
+1. Install `keras`:
+
+```
+pip install keras --upgrade
+```
+
+2. Install backend package(s).
+
+To use `keras`, you should also install the backend of choice: `tensorflow`, `jax`, or `torch`. Additionally,
+The `openvino` backend is available with support for model inference only.
+
+### Local installation
+
+#### Minimal installation
+
+Keras 3 is compatible with Linux and macOS systems. For Windows users, we recommend using WSL2 to run Keras.
+To install a local development version:
+
+1. Install dependencies:
+
+```
+pip install -r requirements.txt
+```
+
+2. Run installation command from the root directory.
+
+```
+python pip_build.py --install
+```
+
+3. Run API generation script when creating PRs that update `keras_export` public APIs:
+
+```
+./shell/api_gen.sh
+```
+
+## Backend Compatibility Table
+
+The following table lists the minimum supported versions of each backend for the latest stable release of Keras (v3.x):
+
+| Backend    | Minimum Supported Version |
+|------------|---------------------------|
+| TensorFlow | 2.16.1                    |
+| JAX        | 0.4.20                    |
+| PyTorch    | 2.1.0                     |
+| OpenVINO   | 2026.2.0                  |
+
+#### Adding GPU support
+
+The `requirements.txt` file will install a CPU-only version of TensorFlow, JAX, and PyTorch. For GPU support, we also
+provide a separate `requirements-{backend}-cuda.txt` for TensorFlow, JAX, and PyTorch. These install all CUDA
+dependencies via `pip` and expect a NVIDIA driver to be pre-installed. We recommend a clean Python environment for each
+backend to avoid CUDA version mismatches. As an example, here is how to create a JAX GPU environment with `conda`:
+
+```shell
+conda create -y -n keras-jax python=3.10
+conda activate keras-jax
+pip install -r requirements-jax-cuda.txt
+python pip_build.py --install
+```
+
+## Configuring your backend
+
+You can export the environment variable `KERAS_BACKEND` or you can edit your local config file at `~/.keras/keras.json`
+to configure your backend. Available backend options are: `"tensorflow"`, `"jax"`, `"torch"`, `"openvino"`. Example:
+
+```
+export KERAS_BACKEND="jax"
+```
+
+In Colab, you can do:
+
+```python
+import os
+os.environ["KERAS_BACKEND"] = "jax"
+
+import keras
+```
+
+**Note:** The backend must be configured before importing `keras`, and the backend cannot be changed after
+the package has been imported.
+
+**Note:** The OpenVINO backend is an inference-only backend, meaning it is designed only for running model
+predictions using `model.predict()` method.
+
+## Backwards compatibility
+
+Keras 3 is intended to work as a drop-in replacement for `tf.keras` (when using the TensorFlow backend). Just take your
+existing `tf.keras` code, make sure that your calls to `model.save()` are using the up-to-date `.keras` format, and you're
+done.
+
+If your `tf.keras` model does not include custom components, you can start running it on top of JAX or PyTorch immediately.
+
+If it does include custom components (e.g. custom layers or a custom `train_step()`), it is usually possible to convert it
+to a backend-agnostic implement

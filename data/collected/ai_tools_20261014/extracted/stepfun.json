@@ -1,0 +1,126 @@
+{
+ "company": "StepFun",
+ "one_liner_ko": "Step 시리즈 언어 모델과 StepAudio 음성 모델을 API로 제공하는 StepFun의 오픈 플랫폼.",
+ "what_it_does_ko": "StepFun 오픈 플랫폼은 새 플래그십 Step 5 Preview와 Step 3.7/3.5 Flash 언어 모델을 API로 제공한다. StepAudio 3 계열로 음성 인식, 실시간 음성 대화, 음성 합성, 음성·음악 생성을 지원한다. API는 사용량 기반 과금이다. 코딩부터 에이전트 워크플로까지 쓰는 Step Plan 구독과, 코드 없이 브라우저에서 모델을 시험하는 Studio도 있다.",
+ "key_features": [
+  "Step 5 Preview 플래그십 모델",
+  "Step 3.7 Flash·Step 3.5 Flash",
+  "StepAudio 3(실시간 음성·TTS·음성 생성·음악·ASR)",
+  "OpenAI 호환 API(base_url 방식)",
+  "노코드 Studio(브라우저에서 모델 시험)",
+  "Step Plan 구독",
+  "개발자 지원 프로그램(Builder Program)"
+ ],
+ "use_cases_ko": [
+  "독립 개발자·초기 팀의 AI 앱 개발(토큰·기술 지원)"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [
+   {
+    "name": "API 종량제",
+    "price": null,
+    "currency": null,
+    "period": "usage",
+    "limits": "사용량 기반 과금 — 단가는 본문에 없음",
+    "page_lang": null
+   },
+   {
+    "name": "Step Plan",
+    "price": null,
+    "currency": null,
+    "period": null,
+    "limits": "구독 — 가격은 본문에 없음",
+    "page_lang": null
+   }
+  ],
+  "pricing_url": "https://platform.stepfun.ai/"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "API"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://platform.stepfun.ai/",
+   "quote": "Join the developer community \n Copyright © 2023 StepFun Inc."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://platform.stepfun.ai/",
+   "quote": "StepFun Open Platform \n Meet our new flagship model"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://platform.stepfun.ai/",
+   "quote": "A new-generation frontier model built for real-world tasks"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://platform.stepfun.ai/",
+   "quote": "A family of models for speech recognition, real-time interaction, voice and music generation"
+  },
+  {
+   "field": "key_features",
+   "url": "https://platform.stepfun.ai/",
+   "quote": "Step 3.7 Flash Step 3.5 Flash Explore Step 5 Preview"
+  },
+  {
+   "field": "key_features",
+   "url": "https://platform.stepfun.ai/",
+   "quote": "base_url = \"https://api.stepfun.ai/v1\""
+  },
+  {
+   "field": "key_features",
+   "url": "https://platform.stepfun.ai/",
+   "quote": "Try models straight in the browser, then wire up the API once you know it works"
+  },
+  {
+   "field": "key_features",
+   "url": "https://platform.stepfun.ai/",
+   "quote": "One subscription for building with StepFun-from coding to agentic workflows"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://platform.stepfun.ai/",
+   "quote": "Tokens and technical support for independent developers and early-stage teams"
+  },
+  {
+   "field": "pricing",
+   "url": "https://platform.stepfun.ai/",
+   "quote": "Sign up and call every public model,usage-based billing"
+  },
+  {
+   "field": "pricing",
+   "url": "https://platform.stepfun.ai/",
+   "quote": "Step Plan subscription\n One subscription for building"
+  },
+  {
+   "field": "api",
+   "url": "https://platform.stepfun.ai/",
+   "quote": "Get API key now\n Sign up and call every public model"
+  },
+  {
+   "field": "platforms",
+   "url": "https://platform.stepfun.ai/",
+   "quote": "Try models straight in the browser, then wire up the API once you know it works"
+  },
+  {
+   "field": "mismatch",
+   "url": "https://platform.stepfun.ai/",
+   "quote": "Sign up and call every public model,usage-based billing"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "공개 모델 전체를 사용량 기반 과금 API로 제공하고 Step Plan 구독 상품이 있음",
+   "diff": "기존 분류 '해당없음(연구조직/기업)'과 달리 유료 API(종량제)와 구독 상품이 공식 페이지에 있음",
+   "url": "https://platform.stepfun.ai/"
+  }
+ ],
+ "plan_change": []
+}

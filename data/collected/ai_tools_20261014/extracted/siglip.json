@@ -1,0 +1,53 @@
+{
+ "company": "Google",
+ "one_liner_ko": "받아 둔 공식 페이지는 SigLIP이 포함된 Google 연구용 대규모 비전 모델 학습 코드베이스 big_vision 이다.",
+ "what_it_does_ko": "big_vision은 Cloud TPU VM이나 GPU 머신에서 대규모 비전 모델을 학습하기 위한 코드베이스다. Jax/Flax 기반이며 tf.data와 TensorFlow Datasets로 입력 파이프라인을 구성한다. 단일 TPU 코어부터 최대 2048 TPU 코어 분산 환경까지 확장되도록 설계됐다. Google 연구 프로젝트 지원이 목적이며 외부 기여는 사전 승인 없이는 받지 않는다. 받아 둔 본문에는 SigLIP 자체에 대한 설명이 없다.",
+ "key_features": [
+  "Cloud TPU VM·GPU에서 대규모 비전 모델 학습",
+  "Jax/Flax 기반",
+  "tf.data·TensorFlow Datasets 입력 파이프라인",
+  "최대 2048 TPU 코어까지 분산 확장",
+  "연구 프로젝트 코드·설정 공개"
+ ],
+ "use_cases_ko": [
+  "연구자가 대규모 비전 실험을 GPU·Cloud TPU에서 수행"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://github.com/google-research/big_vision",
+   "quote": "`big_vision` aims to support research projects at Google."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/google-research/big_vision",
+   "quote": "This codebase is designed for training large-scale vision models using"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/google-research/big_vision",
+   "quote": "out-of-the box from a single TPU core to a distributed setup with up to 2048"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/google-research/big_vision",
+   "quote": "Publishing the code of research projects developed in this codebase"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/google-research/big_vision",
+   "quote": "Providing a strong starting point for running large-scale vision experiments"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

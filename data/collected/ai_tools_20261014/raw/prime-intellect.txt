@@ -1,0 +1,361 @@
+=== [home] https://www.primeintellect.ai (lang=en)
+Prime Intellect - The Open Superintelligence Stack 
+ TRAINING 01 INFERENCE 02 COMPUTE 03 RESEARCH 04 DOCS BLOG CAREERS 35 Book a call Login Start training 
+ The Open Superintelligence Stack Own Your Intelligence Own Your Intelligence Own Your Intelligence 
+ Train, deploy, and continuously improve your own models on an integrated compute, training, inference, and sandbox stack.
+ START TRAINING 
+ BOOK A CALL 
+ $ pip install prime pip install prime 
+ Backed by
+ Founders Fund / Radical / NVIDIA / Intel / Andrej Karpathy / John Schulman / Dylan Patel / Clem Delangue 
+ Case study Read more Case study Case study Case study 
+ Read more 
+ Lab. Post-train your own self improving agents 
+ Start Training 
+ Book a Demo 
+ FIG.1
+ 01 RL Environments 
+ Turn any task into an RL environment. Init, develop, eval, and push with the Prime CLI.
+ 1.1 Built on the open-source Verifiers library 
+ 1.2 One CLI loop: init, develop, eval, push 
+ 1.3 2,500+ community environments on the Hub 
+ Create Environments 
+ FIG.2
+ 02 Evaluations 
+ Hosted evaluations for you to benchmark the performance of your models.
+ 2.1 100+ open-source models 
+ 2.2 No infra, no setup. 
+ 2.3 Public leaderboard 
+ Run your first eval 
+ FIG.3
+ Reward 0.01 
+ 1 0.8 0.6 0.4 0.2 0 
+ max_steps 10,000 
+ rollouts_per_example 19 
+ seq_len 4 
+ batch_size 65536 
+ max_tokens 256 
+ learning_rate 0.00005 
+ 03 Hosted Training 
+ Train large-scale models optimized for agentic workflows.
+ 3.1 Train on 2,500+ RL environments 
+ 3.2 Managed training workflows with full visibility and control 
+ 3.3 Hands on support from our applied research team 
+ Start Training 
+ FIG.4
+ 04 Inference 
+ Run GLM-5.3 on Prime infrastructure and access more models through the Prime Inference Gateway.
+ 4.1 Prime Hosted Models, starting with GLM-5.3 
+ 4.2 Gateway access to third-party models 
+ 4.3 One OpenAI-compatible API 
+ Try model API 
+ “We worked with Prime Intellect to train Fast Ask on Lab — a small RL-trained subagent that helps the Ramp Sheets agent find answers inside spreadsheets. The result beat the frontier models on accuracy while running at faster speeds and a fraction of the cost. Rather than wait on a better frontier model, we trained our own for the workflow that mattered to us”
+ Karim Atiyeh
+ Ramp Co-CEO
+ “Evals are the foundation for building better agents. Prime Intellect helps turn them into real improvement loops.”
+ Robin Salimans
+ Principal AI Engineer
+ Environment Hub
+ Access and contribute to 2,500+ open-source RL environments and a community of researchers and developers.
+ Explore Environments 
+ Explore 
+ My Stars 
+ My Environments 
+ Featured 9 
+ Show All 
+ primeintellect 
+ 2 
+ opencode-science
+ Solve science problems using OpenCode agent via...
+ science opencode +1 
+ Updated 8 days ago 
+ v0.3.8 
+ primeintellect 
+ 6 
+ deepdive
+ DeepDive QA RL environment with a Serper-powered search tool
+ rl qa +1 
+ Updated 11 days ago 
+ v0.2.5 
+ stochi0 
+ 3 
+ rubric-discovery
+ Meta-environment for learning rubric functions from labeled...
+ rlm training +4 
+ Updated 2 months ago 
+ v0.2.0 
+ INTELLECT-3 3 
+ primeintellect 
+ 8 
+ mini-swe-agent-plus
+ Mini SWE Agent Plus environment for solving SWE issues inside Pri...
+ swe sandbox +1 
+ Updated 3 days ago 
+ v0.2.23 
+ primeintellect 
+ 6 
+ deepdive
+ DeepDive QA RL environment with a Serper-powered search tool
+ rl qa +1 
+ Updated 11 days ago 
+ v0.2.5 
+ primeintellect 
+ 3 
+ science-env
+ A collection of challenging single-turn science problems
+ science single-turn 
+ Updated 11 days ago 
+ v0.1.3 
+ Evals 13 
+ Show All 
+ hud 
+ 18 
+ hud-text-2048
+ Text-based 2048 game for training agents to reach target tiles through strategic moves
+ game text +2 
+ Updated 7 months ago 
+ v0.1.0 
+ hud 
+ 18 
+ hud-text-2048
+ Text-based 2048 game for training agents to reach target tiles through strategic moves
+ game text +2 
+ Updated 7 months ago 
+ v0.1.0 
+ will 
+ 29 
+ will/tau2-bench
+ Verifiers implementation of tau2-bench
+ tool-agent-user tool-use +2 
+ Updated 2 months ago 
+ v0.1.0 
+ Verifiers 
+ 1 2 3 4 5 6 7 8 9 
+ import verifiers as vf
+ vf_env = vf.ToolEnv( 
+ dataset=dataset,
+ parser=parser,
+ rubric=rubric,
+ tools=tool_list,
+ max_turns=10,
+ ) 
+ A library of modular components for creating RL environments and training LLM agents.
+ Prime-RL 
+ uv run rl \ 
+ --trainer @ examples/reverse_text/
+rl/train.toml \
+ --orchestrator @ examples/
+reverse_text/rl/orch.toml \
+ --inference @ examples/
+reverse_text/rl/infer.toml 
+ A framework for asynchronous reinforcement learning (RL) at scale.
+ Sandboxes 
+ deepswe-sandbox-1
+ python:3.11-slim
+ deepcoder-sandbox-1
+ python:3.11-slim
+ i3-math-sandbox-1
+ python:3.11-slim
+ For secure code execution optimized for large-scale reinforcement learning.
+ Inference. Run GLM-5.3 and other leading models
+through one OpenAI-compatible API. 
+ Try model API 
+ Book a Call 
+ Prime Hosted Models run on Prime infrastructure. Prime Inference Gateway connects you to models served by third-party providers. Access both through the same API.
+ Prime Hosted Models
+ Run GLM-5.3 on Prime infrastructure, with serving managed directly by Prime.
+ Prime Inference Gateway
+ Access models from third-party providers through the same OpenAI-compatible API.
+ Dedicated inference
+ Work with us on dedicated serving capacity for your latency, reliability, and custom model requirements.
+ Find the right model for your workflow.
+ Evaluate models on your tasks, build with the API, and talk to us when you need dedicated serving capacity.
+ Book a Call 
+ Compute. Find reliable compute operated globally from a single GPU to largest clusters. 
+ FIND COMPUTE 
+ BOOK A DEMO 
+ On demand
+ Instant access to 1-256 GPUs.
+Use your GPUs across clouds in a single platform.
+ 1.1 SLURM, K8s Orchestration Orchestrate dynamic workloads with enterprise-grade scheduling and container automation. 
+ 1.2 Infiniband Networking Scale distributed training with high-bandwidth interconnects across nodes. 
+ 1.3 Grafana Monitoring Dashboards Visualize metrics in real time with customizable dashboards for full system observability. 
+ GET COMPUTE 
+ FIG.5
+ Single-Node Multi-Node 
+ H200
+ Available x2 · x1 
+ $1.99/HR
+ 80 GB VRAM · 184 GB RAM · 32 vCP 
+ H200
+ Available x2 · x1 
+ $1.80/HR
+ 80 GB VRAM · 184 GB RAM · 32 vCP 
+ H200
+ Available x2 · x1 
+ $1.23/HR
+ 80 GB VRAM · 184 GB RAM · 32 vCP 
+ H200
+ Available x2 · x1 
+ $0.47/HR
+ 80 GB VRAM · 184 GB RAM · 32 vCP 
+ B300
+ Available x2 · x1 
+ $4.99/HR
+ 288 GB VRAM · 480 GB RAM · 48 vCP 
+ B200
+ Available x2 · x1 
+ $3.49/hr
+ 192 GB VRAM · 384 GB RAM · 32 vCP 
+ H200
+ Available x2 · x1 
+ $3.14/HR
+ 141 GB VRAM · 182 GB RAM · 44 vCPUs 
+ H100
+ Available x2 · x1 
+ $2.43/HR
+ Spot 0.94/HR
+ 80 GB VRAM · 185 GB RAM · 32 vCPUs 
+ GH200
+ Available x2 · x1 
+ $3.14/HR
+ 96 GB VRAM · 480 GB RAM · 72 vCP 
+ RTX Pro 6000
+ Available x2 · x1 
+ $3.14/HR
+ 96 GB VRAM 
+ A100
+ Available x2 · x1 
+ $3.14/HR
+ 80 GB VRAM 
+ A40
+ Available x2 · x1 
+ $3.14/HR
+ 48 GB VRAM 
+ Liquid Reserved Clusters
+ Request large-scale clusters from 50+ providers.
+Sell-back idle GPUs to our spot market.
+ 1.1 Get quotes from 50+ datacenters within 24 hours One request, parallel bids for options, from H100, H200, to  B200, B300, GB300 NVL72 
+ 1.2 Re-sell idle GPUs back to our spot market Resell idle node on our spot market or put on our spot market with no manual ops. Reclaim capacity instantly when you need it 
+ 1.3 Direct assistance from our research and infra engineering team Dedicated solutions engineer from cluster bring-up through steady-state 
+ GET A QUOTE 
+ BOOK A CALL 
+ FIG.7
+ En
+
+=== [about] https://docs.primeintellect.ai/introduction (lang=en)
+Introduction - Prime Intellect Docs 
+ Documentation Index
+ Fetch the complete documentation index at: /llms.txt 
+ Use this file to discover all available pages before exploring further.
+ Skip to main content 
+ Prime Intellect Docs home page 
+ Search...
+ ⌘ K Ask Assistant ⌘ I 
+ Support 
+ Home 
+ Home 
+ Search... 
+ Navigation 
+ Getting Started 
+ Introduction
+ Platform 
+ Guides 
+ API 
+ CLI 
+Join Discord 
+Twitter 
+Blog 
+ Getting Started 
+ Introduction 
+ Platform Overview 
+ Inference 
+ Prime Inference 
+ Troubleshooting 
+ Model Factory 
+ BETA 
+ Training 
+ Evaluations 
+ Dedicated Clusters 
+ Shared LoRA (Retired) 
+ Community 
+ Environments Hub 
+ Compute 
+ Sandboxes 
+ Storage 
+ FAQ 
+ Traces 
+ Overview 
+ Uploading traces 
+ Pricing and settings 
+ Viewing and deleting traces 
+ Legacy storage retirement 
+ Libraries 
+ verifiers 
+ prime-rl 
+ On this page 
+ Platform 
+ Libraries 
+ Inference 
+ Compute 
+ Resources 
+ Getting Started
+ Introduction
+ Welcome to the Prime Intellect Documentation
+ ​ 
+ Platform 
+ Train, evaluate, and deploy AI models with our frontier research infrastructure. 
+ Hosted Training
+ Run large-scale RL training on-demand, without managing infrastructure 
+ Environments Hub
+ Create, share, and discover RL environments for training and evaluation 
+ Evaluations
+ Run evaluations on your environments with hosted inference 
+ Sandboxes
+ Secure code execution environments for AI agents 
+ Guides
+ Step-by-step workflows for training and environments 
+ ​ 
+ Libraries 
+ Open source tooling for environments, evaluations, and large-scale RL training. 
+ verifiers
+ Our library for environments and evals 
+ prime-rl
+ Our large-scale async RL framework 
+ ​ 
+ Inference 
+ Use hosted models through an OpenAI-compatible API. 
+ Get started
+ Make your first inference request 
+ GLM-5.3
+ Use GLM-5.3 hosted on Prime Inference 
+ ​ 
+ Compute 
+ Access GPUs and infrastructure for AI workloads. 
+ On-Demand Cloud
+ Deploy single GPU instances in under a minute 
+ Storage
+ Persistent storage for datasets and checkpoints 
+ Reserved Clusters
+ Dedicated GPU clusters with monitoring 
+ ​ 
+ Resources 
+ API Reference
+ REST API documentation 
+ CLI Reference
+ Prime CLI commands 
+ Compute FAQ
+ Common questions 
+ Was this page helpful?
+ Yes No 
+ Platform Overview
+ x github linkedin 
+ Powered by This documentation is built and hosted on Mintlify, a developer documentation platform 
+ Assistant 
+ Responses are generated using AI and may contain mistakes.
+ Contact support
+
+=== [meta] https://www.primeintellect.ai
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음

@@ -1,0 +1,540 @@
+=== [home] https://x.ai/news/grok-code-fast-1 (lang=en)
+Grok Code Fast 1 | SpaceXSI 
+ Products 
+ Solutions 
+ Developer 
+ Company 
+ Pricing 
+ News 
+ Contact Sales Try for free 
+ Products
+ Grok Business Government 
+ Download
+ iOS Android Grok on X Grok Bot 
+ Developers
+ API Console Documentation Grok Build 
+ Try for free 
+ Back to news Aug 28, 2025 
+ Grok Code Fast 1
+ We're thrilled to introduce grok-code-fast-1, a speedy and economical reasoning model that excels at agentic coding.
+ A speedy daily driver 
+ While today's models are undeniably powerful, they often don't feel purpose-built for agentic coding workflows, where loops of reasoning and tool calls can feel frustratingly slow. As heavy users of agentic coding tools, our engineers saw room for a more nimble, responsive solution optimized for our day-to-day tasks.
+ We built grok-code-fast-1 from scratch, starting with a brand-new model architecture. To lay a robust foundation, we carefully assembled a pre-training corpus rich with programming-related content. For post-training, we curated high-quality datasets that reflect real-world pull requests and coding tasks.
+ Throughout the training process, we collaborated closely with our launch partners to refine and sharpen the model’s behavior inside their agentic platforms. grok-code-fast-1 has mastered the use of common tools like grep, terminal, and file editing, and thus should feel right at home in your favorite IDE.
+ We've teamed up with select launch partners to offer grok-code-fast-1 for free for a limited time, including GitHub Copilot, Cursor, Cline, Roo Code, Kilo Code, opencode, and Windsurf.
+ Try free on
+ Cursor
+ Try free on
+ GitHub Copilot
+ Try free on
+ Cline
+ Blazing fast 
+ Our inference and supercomputing teams developed several innovative techniques to dramatically accelerate our serving speed, creating a uniquely responsive experience where the model will have already called dozens of tools before you even finish reading the first paragraph of the thinking trace. We've also invested in prompt caching optimizations, regularly achieving cache hit rates above 90% when used with our launch partners.
+ A versatile programmer 
+ grok-code-fast-1 is exceptionally versatile across the full software development stack and is particularly adept at TypeScript, Python, Java, Rust, C++, and Go. It can complete common programming tasks with minimal oversight, ranging from building zero-to-one projects and providing insightful answers to codebase questions to performing surgical bug fixes.
+ Example 1 of 2 Battle Simulator 
+ Danny Limanseta
+ @ dannylimanseta
+ It's so quick that I actually had to change up how I work in Cursor.
+ Read more 
+ Grok Code Fast is ridiculously fast, it’s probably the fastest model out there right now. It's so quick that I actually had to change up how I work in Cursor.
+ I threw together this battle simulator prototype in less than a day with Grok Code Fast on Cursor. Because it responds so fast and follows instructions well, I've found I'm better off giving it smaller, focused tasks. That way I can iterate quickly and steer it exactly where I want.
+ For this battle simulator, my workflow is to have it plan out big features first, then break them down and execute in phases. Works way better than dumping a huge prompt on it all at once. The battle simulator came together so smoothly this way, just rapid iterations in Cursor until I get it to what I want.
+ An economical choice 
+ We designed grok-code-fast-1 to be widely accessible, priced at:
+ $0.20 per million input tokens
+ $1.50 per million output tokens
+ $0.02 per million cached input tokens
+ grok-code-fast-1 was crafted to shine in the tasks developers face every day, striking a compelling balance between performance and cost. Its strength lies in delivering strong performance in a economical, compact form factor, making it a versatile choice for tackling common coding tasks quickly and cost-effectively.
+ Model Performance
+ Tokens per Second vs Output Price
+ Tokens per second (TPS) 
+ 190 
+ Output price / per 1M tokens 
+ $ 18 
+ Methodology
+ TPS metrics were calculated by directly measuring response generation speed via each model provider's API, considering only the final response tokens.
+ - Gemini 2.5 Pro, GPT-5, and Claude Sonnet 4: Measured using their respective public APIs. 
+ - Grok Code Fast 1 and Grok 4: Measured using the xAI API. 
+ - Qwen3-Coder: Hosted on DeepInfra at low precision (fp4), which reduces response quality. 
+ We took a holistic approach to evaluating model performance, blending public benchmarks with real-world testing. On the full subset of SWE-Bench-Verified, grok-code-fast-1 scored 70.8% using our own internal harness.
+ While benchmarks like SWE-Bench provide valuable insights, we've found they don't fully reflect the nuances of real-world software engineering, particularly the end-user experience in agentic coding workflows.
+ To guide our model training, we pair these benchmarks with routine human assessments, where experienced developers rate the model's end-to-end performance on everyday tasks. We've also built automated evaluations to track key aspects of behavior, helping us balance trade-offs in design.
+ When developing grok-code-fast-1 , we focused on usability and user satisfaction, guided by real-world human evaluations. The result is a model rated by programmers as fast and reliable for everyday coding tasks.
+ Grok Code for everyone 
+ For a limited time, we’re excited to offer grok-code-fast-1 for free on exclusive launch partners. Here’s what our launch partners had to say about our model, which was recently released in stealth under the codename sonic .
+ Free for a limited time
+ We’re excited to offer Grok Code Fast 1 for free on exclusive launch partners.
+ GitHub Copilot
+ Cline
+ opencode
+ Cursor
+ Kilo Code
+ Roo Code
+ Windsurf
+ GitHub Copilot
+ " In early testing, Grok Code Fast has shown both its speed and quality in agentic coding tasks. Empowering developers with powerful tools is a core part of our mission at GitHub Copilot, and this is a compelling new option for our developers. "
+ Mario Rodriguez (@ mariorod1 ) 
+ Chief Product Officer , GitHub
+ Instructions 
+ View instructions 
+ Try free on
+ GitHub Copilot
+ The model is generally available via the xAI API, priced at $0.20 / 1M input tokens, $1.50 / 1M output tokens, and $0.02 / 1M cached input tokens.
+ Open
+ xAI Cloud Console
+ What to expect in the next few weeks 
+ Last week, we quietly released grok-code-fast-1 under the codename sonic . During this stealth phase, our team carefully monitored community channels and deployed multiple new model checkpoints to address feedback.
+ As we advance this new model family, we're excited to iterate rapidly on your input. We highly value the developer community's support and encourage you to freely share all feedback , positive and negative.
+ We'll focus on delivering consistent updates to grok-code-fast-1 , with improvements arriving in days rather than weeks. A new variant that supports multimodal inputs, parallel tool calling, and extended context length is already in training.
+ Read the grok-code-fast-1 model card here . We’re excited to see what you build!
+ © 2026 SpaceXAI LLC 
+ Built with Grok 
+ Products Chat Build Imagine Voice Bot Grokipedia 
+ Download grok.com iOS Android Grok on X 
+ Solutions Business Government Customer Support Legal Security Use Cases 
+ Grok Bot Overview Marketplace Guides Use Cases Changelog 
+ Developers API Overview Pricing Models Console Changelog Docs Status 
+ Enterprise Cont
+
+=== [pricing] https://x.ai/pricing (lang=en)
+Pricing: Compare Plans | SpaceXSI 
+ Products 
+ Solutions 
+ Developer 
+ Company 
+ Pricing 
+ News 
+ Contact Sales Try for free 
+ Products
+ Grok Business Government 
+ Download
+ iOS Android Grok on X Grok Bot 
+ Developers
+ API Console Documentation Grok Build 
+ Try for free 
+ Pricing
+ One subscription. Access to everything.
+ Individual Teams API 
+ Free
+ $0 /month 
+ Get started Everything in Free, and:
+ Limited
+ AI usage
+ AI Features
+ Limited Chat requests 
+ Limited agent requests 
+ 𝕏 Features
+ Post, reply, and follow 
+ Plus
+ $8 /month 
+ Get Plus Everything in Free, and:
+ Shared
+ AI usage pool
+ AI Features
+ Grok Chat, Voice, Imagine, and Build 
+ Grok API access 
+ Cursor 
+ 𝕏 Features
+ Premium checkmark 
+ Less timeline ads 
+ Enhanced creator tools 
+ Advanced Analytics 
+ Premium
+ Most popular 
+ $30 /month 
+ Get Premium Everything in Plus, and:
+ 4x
+ more usage compared to Plus
+ AI Features
+ Grok Bot 
+ Latest Grok models 
+ Faster Chat responses 
+ Make stunning AI images & videos 
+ Code hosting & AI code reviews 
+ Cloud agents & automations 
+ 𝕏 Features
+ Ad-free scrolling on most surfaces 
+ Preferred @handle 
+ Higher reply boost 
+ 3rd party models available in Cursor, billed separately
+ Super
+ $100 /month 
+ Get Super Everything in Premium, and:
+ 15x
+ more usage compared to Plus
+ AI Features
+ Priority model access at peak times 
+ 3rd party models available in Cursor, billed separately
+ Ultra
+ $200 /month 
+ Get Ultra Everything in Super, and:
+ 50x
+ more usage compared to Plus
+ 3rd party models available in Cursor, billed separately
+ Prices shown do not include applicable taxes or fees (e.g. VAT). Third Party model usage in Cursor is not included in the monthly prices shown and must be purchased separately. View usage charges . Cancel anytime , at least 24 hours prior to renewal to avoid additional charges. Prices subject to change.
+ Compare features Compare features across plans 
+ Feature
+ Free $0/month Get started 
+ Plus $8/month Get Plus 
+ Premium $30/month Get Premium 
+ Super $100/month Get Super 
+ Ultra $200/month Get Ultra 
+ Teams $30+/user/month Get Teams 
+ Enterprise Custom Contact Sales 
+ Usage 
+ Usage
+ Limited 
+ Basic 
+ 4x Plus 
+ 15x Plus 
+ 50x Plus 
+ 4-50x Plus 
+ Pooled 
+ Grok 
+ Chat
+ Limited 
+ Image generation (Imagine)
+ Limited 
+ Video generation
+ Grok API access
+ Grok Build
+ Limited 
+ Grok Bot
+ Cursor 
+ Agent
+ Cloud agents & automations
+ Code hosting via Origin
+ AI code reviews via Bugbot
+ Third-party models at API list price
+ Team marketplace for internal rules, skills, and plugins
+ Team management 
+ Centralized billing and administration
+ Usage analytics
+ Team-wide privacy settings
+ Custom Chat data retention
+ SAML/OIDC SSO
+ Mix and match seat types
+ Invoice/PO billing
+ SCIM seat management
+ Granular spend controls
+ Group-level settings and spend limits
+ Auto-run, browser, and network controls
+ Repository, model, and MCP access controls
+ Audit logs and service accounts
+ Access, network, and audit controls for Grok Bot
+ Additional benefits 
+ Priority model access at peak times
+ Earliest access to all products & models
+ By seat tier 
+ Priority support
+ X 
+ Post, reply, and follow
+ Premium checkmark
+ Ad-free scrolling
+ Some surfaces 
+ Most surfaces 
+ Most surfaces 
+ Most surfaces 
+ Most surfaces 
+ Most surfaces 
+ Get paid to post
+ Edit posts
+ Customize your experience
+ Create longer posts
+ Write Articles
+ Media Studio
+ Advanced Analytics
+ Bookmark folders
+ Offline videos
+ Background video playback
+ Create communities
+ Download videos
+ Highlights tab
+ Creator Subscriptions
+ Reply boost
+ Radar Search
+ Feature
+ Free Plus Premium Super Ultra Teams Enterprise 
+ $8/month Get Plus 
+ Free Plus Premium Super Ultra Teams Enterprise 
+ $30/month Get Premium 
+ Usage 
+ Usage
+ Basic 
+ 4x Plus 
+ Grok 
+ Chat
+ Image generation (Imagine)
+ Video generation
+ Grok API access
+ Grok Build
+ Grok Bot
+ Cursor 
+ Agent
+ Cloud agents & automations
+ Code hosting via Origin
+ AI code reviews via Bugbot
+ Third-party models at API list price
+ Team marketplace for internal rules, skills, and plugins
+ Team management 
+ Centralized billing and administration
+ Usage analytics
+ Team-wide privacy settings
+ Custom Chat data retention
+ SAML/OIDC SSO
+ Mix and match seat types
+ Invoice/PO billing
+ SCIM seat management
+ Granular spend controls
+ Group-level settings and spend limits
+ Auto-run, browser, and network controls
+ Repository, model, and MCP access controls
+ Audit logs and service accounts
+ Access, network, and audit controls for Grok Bot
+ Additional benefits 
+ Priority model access at peak times
+ Earliest access to all products & models
+ Priority support
+ X 
+ Post, reply, and follow
+ Premium checkmark
+ Ad-free scrolling
+ Some surfaces 
+ Most surfaces 
+ Get paid to post
+ Edit posts
+ Customize your experience
+ Create longer posts
+ Write Articles
+ Media Studio
+ Advanced Analytics
+ Bookmark folders
+ Offline videos
+ Background video playback
+ Create communities
+ Download videos
+ Highlights tab
+ Creator Subscriptions
+ Reply boost
+ Radar Search
+ Enterprise
+ Need a custom plan?
+ Talk to our sales team about custom rate limits, dedicated infrastructure, SSO, compliance requirements, and volume pricing for your organization.
+ Contact Sales Or email sales@x.ai 
+ Custom rate limits
+ Tailored throughput for your workload.
+ Dedicated support
+ Named account team and onboarding.
+ SSO & SCIM
+ Bring your identity provider.
+ Data residency
+ Control where your data lives.
+ Volume pricing
+ Discounts at scale.
+ Frequently asked questions
+ What is the right plan for me? 
+ We recommend Premium for new AI users, Super for daily agent users, and Ultra for power users. Plus is recommended for social creators with limited AI usage.
+ The Teams plan is recommended for professionals collaborating with others, and larger organizations that need invoicing, pooled usage, or advanced security should choose Enterprise.
+ What are my payment options? 
+ Self-serve plans support all major credit and debit cards. For invoice-based billing and wire transfers, please contact us to discuss the Enterprise plan.
+ How do usage limits work? 
+ Every tier includes a pool of AI usage shared across Grok and Cursor. Within Grok, the pool covers Chat, Imagine, Voice, and Bot. Higher tiers include larger pools, and usage costs vary by product. Your allowance refreshes weekly, so one heavy day never wipes out your whole month.
+ If you reach your included usage, you can keep going with top-ups, or wait for your allowance to refresh. You’ll always see your remaining usage in settings. See our docs for more details.
+ Is the Grok API included in my plan? 
+ Paid plans incl
+
+=== [about] https://docs.x.ai/overview (lang=en)
+Grok API Documentation | SpaceXSI Docs 
+ API 
+ Grok Build Grok Bot Grok X Subscription 
+ Search
+ ⌘ K 
+ API Console 
+ Products
+ Grok 
+ Status
+ Loading... 
+ Resources
+ llms.txt Discord Email support Terms and Policies 
+ Get Started 
+ Overview 
+ Quickstart 
+ Grok 4.7 Latest
+ Models 
+ Pricing 
+ Release Notes 
+ Text 
+ Text Generation 
+ Streaming 
+ Reasoning 
+ Structured Outputs 
+ Image Understanding 
+ Multi Agent 
+ Best Practices Guide 
+ Imagine 
+ Overview 
+ Image Generation 
+ Image Editing 
+ Multi-Image Editing 
+ Image Prompting Guide 
+ Video Generation 
+ Video Overview New
+ Image-to-Video 
+ Reference-to-Video 
+ Video Editing 
+ Video Extension 
+ Voice 
+ Overview 
+ Speech to Speech 
+ Text to Speech 
+ Speech to Text New
+ Custom Voices 
+ Ephemeral Tokens 
+ Files & Collections 
+ Files Overview 
+ Managing Files 
+ Public URLs New
+ Chat with Files 
+ Collections 
+ Collections via API 
+ Collection Metadata 
+ Generated Media 
+ Tools 
+ Overview 
+ Function Calling 
+ Web Search 
+ X Search 
+ Code Execution 
+ Image Generation 
+ Collections Search (RAG) 
+ Remote MCP Tools 
+ In Depth 
+ Advanced API Usage 
+ Rate Limits 
+ Prompt Caching 
+ Context Compaction 
+ Priority Processing 
+ Batch API 
+ Deferred Completions 
+ Async Requests 
+ WebSocket Mode 
+ mTLS Authentication 
+ Regional Endpoints New
+ Cost Tracking 
+ Debugging Errors 
+ Platforms 
+ Community Integrations 
+ Google Cloud Vertex AI 
+ Microsoft Foundry 
+ Docs MCP 
+ Migration Guides 
+ Imagine Image Quality Retirement (Nov 2, 2026) New
+ Model Retirement (May 15, 2026) 
+ Migrating to Responses API 
+ Chat Completions (Legacy) 
+ FAQ 
+ Data & Privacy 
+ General 
+ API Docs 
+ REST Reference 
+ Grok Build 
+ Grok Bot 
+ Grok 
+ X Subscription 
+ Get Started 
+ Overview 
+ Quickstart 
+ Grok 4.7 Latest
+ Models 
+ Pricing 
+ Release Notes 
+ Text 
+ Text Generation 
+ Streaming 
+ Reasoning 
+ Structured Outputs 
+ Image Understanding 
+ Multi Agent 
+ Best Practices Guide 
+ Imagine 
+ Overview 
+ Image Generation 
+ Image Editing 
+ Multi-Image Editing 
+ Image Prompting Guide 
+ Video Generation 
+ Video Overview New
+ Image-to-Video 
+ Reference-to-Video 
+ Video Editing 
+ Video Extension 
+ Voice 
+ Overview 
+ Speech to Speech 
+ Text to Speech 
+ Speech to Text New
+ Custom Voices 
+ Ephemeral Tokens 
+ Files & Collections 
+ Files Overview 
+ Managing Files 
+ Public URLs New
+ Chat with Files 
+ Collections 
+ Collections via API 
+ Collection Metadata 
+ Generated Media 
+ Tools 
+ Overview 
+ Function Calling 
+ Web Search 
+ X Search 
+ Code Execution 
+ Image Generation 
+ Collections Search (RAG) 
+ Remote MCP Tools 
+ In Depth 
+ Advanced API Usage 
+ Rate Limits 
+ Prompt Caching 
+ Context Compaction 
+ Priority Processing 
+ Batch API 
+ Deferred Completions 
+ Async Requests 
+ WebSocket Mode 
+ mTLS Authentication 
+ Regional Endpoints New
+ Cost Tracking 
+ Debugging Errors 
+ Platforms 
+ Community Integrations 
+ Google Cloud Vertex AI 
+ Microsoft Foundry 
+ Docs MCP 
+ Migration Guides 
+ Imagine Image Quality Retirement (Nov 2, 2026) New
+ Model Retirement (May 15, 2026) 
+ Migrating to Responses API 
+ Chat Completions (Legacy) 
+ FAQ 
+ Data & Privacy 
+ General 
+ Get started with SpaceX Super Intelligence 
+ Intelligent, fast, and cost-effective models across code, text, voice, image, and video.
+ Create API key Get Started 
+ JavaScript Python (OpenAI) cURL Python 
+ import { xai } from "@ai-sdk/xai" ; 
+ import { generateText } from "ai" ; 
+ const { text } = await generateText ({ 
+ model: xai. responses ( "grok-4.7" ), 
+ prompt: "Fix this function and explain the bug: function median(a){a.sort();return a[a.length/2]}" , 
+ }); 
+ console. log (text); 
+ from openai import
+
+=== [meta] https://x.ai/news/grok-code-fast-1
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음

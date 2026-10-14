@@ -1,0 +1,137 @@
+=== [home] https://exolabs.net (lang=en)
+Exo Labs — Frontier models. On hardware you own. 
+ Skip to content Labs exo local.ai About Blog For business GitHub Menu + 
+ Frontier models.
+ On hardware you own. 
+ Exo connects your devices into a powerful cluster.
+ Download Exo View GitHub 
+ Open source · Built for local inference
+ Deploy for your team 
+ Your devices acting as one.
+ Mac Studio 
+ Mac Studio 
+ DGX Spark 
+ DGX Spark 
+ Local models in your preferred harness.
+ Run open models in the harness you already love. 
+ Claude Code OpenAI Codex Hermes Agent OpenCode 
+ Coding agents 
+ Chat interfaces 
+ Team tools 
+ Custom apps 
+ Be your own datacenter.
+ Without the headache of managing one.
+ See how Exo works 
+ 0 1 Setup a cluster with ease. 
+ Connect your devices via Thunderbolt or USB-C. See your cluster and manage your models from one dashboard.
+ ↔ 0 2 Make room for bigger models
+ Exo distributes a model across your devices and optimizes runtime parameters for turnkey simplicity.
+ ⊞ 0 3 Deploy Local AI seamlessly.
+ Connect through familiar API formats: OpenAI Chat Completions, Responses, Claude Messages, and Ollama.
+ ↗ 
+ EXO FOR BUSINESS
+ Local AI.
+Built around your team.
+ Explore running Exo on your own infrastructure.
+ Let’s find your starting point.
+ Share a few details so we can discuss your models, hardware, and deployment needs. Still exploring? That’s a good place to start.
+ Prefer email? sales@exolabs.net 
+ Explore a deployment
+ Fields marked * are required.
+ Name * Work email * Company * What would you like to run? * Hardware you have in mind (optional) Leave this field empty 
+ Send inquiry → 
+ local.ai Your hardware.
+The right model.
+ Which models can your computer run? What hardware should you choose? local.ai helps you understand the possibilities before you build your setup.
+ Explore local.ai 
+ FIND YOUR STARTING POINT 
+ 0 1 Start with your hardware
+ Discover models and configurations for the machines you have.
+ 0 2 Start with a model
+ Understand the hardware and memory a model needs.
+ 0 3 Compare the whole setup
+ Look at capability, task time, and cost together.
+ AI should be
+in your hands.
+ Exo is the Local AI Lab. We are building the future of democratized, sovereign machine intelligence. On your desk. On your phone. Across your team. On infrastructure you control.
+ ↗ Own your infrastructure
+ Choose where your models run and how you put your hardware to work.
+ + Build in the open
+ Inspect the code, contribute an improvement, or build something of your own.
+ ↔ Make informed choices
+ Connect real performance measurements to the models and hardware behind them.
+ A FEW PRACTICAL DETAILS
+ Good to know.
+ What is the difference between Exo Labs and Exo? + Exo Labs is the company behind exo and local.ai. Exo is the open-source software that connects your devices into a local AI cluster.
+ What is local AI, and how does local.ai help? + Local AI means running models on your own hardware, whether that is one computer or a cluster on your local network. The model processes your requests there. local.ai is a website owned and operated by Exo Labs that helps you understand which models your hardware can run, how much memory they need, and how different setups perform. Exo is the software that brings your devices together to run them.
+ What hardware does Exo support? + Exo runs on Apple silicon Macs, including Mac Studio, Mac mini, and MacBook Pro. The macOS app requires macOS Tahoe 26.2 or later. Linux installations are also available from source. Your available memory determines which models fit, and your network affects how well devices work together. RDMA acceleration requires Macs with Thunderbolt 5 and compatible cables.
+ Can I run it without an internet connection? + Yes. Download your models and software dependencies first, then enable Exo’s offline mode. Inference runs on your devices; machines in a cluster still need a local connection to communicate. You will need internet access to download new models or updates, and any connected tools that rely on cloud services may still need to be online.
+ Labs Blog Careers GitHub Hugging Face
+
+=== [meta] https://exolabs.net
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/exo-explore/exo
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="/docs/imgs/exo-logo-black-bg.jpg">
+  <img alt="exo logo" src="/docs/imgs/exo-logo-transparent.png" width="50%" height="50%">
+</picture>
+
+exo: Run frontier AI locally. Maintained by [exo labs](https://x.com/exolabs).
+
+<p align="center">
+  <a href="https://discord.gg/TJ4P57arEm" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Discord-Join%20Server-5865F2?logo=discord&logoColor=white" alt="Discord"></a>
+  <a href="https://x.com/exolabs" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/twitter/follow/exolabs?style=social" alt="X"></a>
+  <a href="https://www.apache.org/licenses/LICENSE-2.0.html" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/License-Apache2.0-blue.svg" alt="License: Apache-2.0"></a>
+</p>
+
+</div>
+
+---
+
+exo connects all your devices into an AI cluster. Not only does exo enable running models larger than would fit on a single device, but with [day-0 support for RDMA over Thunderbolt](https://x.com/exolabs/status/2001817749744476256?s=20), makes models run faster as you add more devices.
+
+## Features
+
+- **Automatic Device Discovery**: Devices running exo automatically discover each other - no manual configuration.
+- **RDMA over Thunderbolt**: exo ships with [day-0 support for RDMA over Thunderbolt 5](https://x.com/exolabs/status/2001817749744476256?s=20), enabling 99% reduction in latency between devices.
+- **Topology-Aware Auto Parallel**: exo figures out the best way to split your model across all available devices based on a realtime view of your device topology. It takes into account device resources and network latency/bandwidth between each link.
+- **Tensor Parallelism**: exo supports sharding models, for up to 1.8x speedup on 2 devices and 3.2x speedup on 4 devices.
+- **MLX Support**: exo uses [MLX](https://github.com/ml-explore/mlx) as an inference backend and [MLX distributed](https://ml-explore.github.io/mlx/build/html/usage/distributed.html) for distributed communication.
+- **Multiple API Compatibility**: Compatible with OpenAI Chat Completions API, Claude Messages API, OpenAI Responses API, and Ollama API - use your existing tools and clients.
+- **Custom Model Support**: Load custom models from HuggingFace hub to expand the range of available models.
+
+## Dashboard
+
+exo includes a built-in dashboard for managing your cluster and chatting with models.
+
+<p align="center">
+  <img src="docs/imgs/dashboard-cluster-view.png" alt="exo dashboard - cluster view showing 4 x M3 Ultra Mac Studio with DeepSeek v3.1 and Kimi-K2-Thinking loaded" width="80%" />
+</p>
+<p align="center"><em>4 × 512GB M3 Ultra Mac Studio running DeepSeek v3.1 (8-bit) and Kimi-K2-Thinking (4-bit)</em></p>
+
+## Benchmarks
+
+<details>
+  <summary>Qwen3-235B (8-bit) on 4 × M3 Ultra Mac Studio with Tensor Parallel RDMA</summary>
+  <img src="docs/benchmarks/jeffgeerling/mac-studio-cluster-ai-full-1-qwen3-235b.jpeg" alt="Benchmark - Qwen3-235B (8-bit) on 4 × M3 Ultra Mac Studio with Tensor Parallel RDMA" width="80%" />
+  <p>
+    <strong>Source:</strong> <a href="https://www.jeffgeerling.com/blog/2025/15-tb-vram-on-mac-studio-rdma-over-thunderbolt-5">Jeff Geerling: 15 TB VRAM on Mac Studio – RDMA over Thunderbolt 5</a>
+  </p>
+</details>
+
+<details>
+  <summary>DeepSeek v3.1 671B (8-bit) on 4 × M3 Ultra Mac Studio with Tensor Parallel RDMA</summary>
+  <img src="docs/benchmarks/jeffgeerling/mac-studio-cluster-ai-full-2-deepseek-3.1-671b.jpeg" alt="Benchmark - DeepSeek v3.1 671B (8-bit) on 4 × M3 Ultra Mac Studio with Tensor Parallel RDMA" width="80%" />
+  <p>
+    <strong>Source:</strong> <a href="https://www.jeffgeerling.com/blog/2025/15-tb-vram-on-mac-studio-rdma-over-thunderbolt-5">Jeff Geerling: 15 TB VRAM on Mac Studio – RDMA over Thunderbolt 5</a>
+  </p>
+</details>
+
+<details>
+  <summary>Kimi K2 Thinking (native 4-bit) on 4 × M3 Ultra Mac Studio with Tensor Parallel RDMA</summary>
+  <img src="docs/benchmarks/jeffgeerling/mac-studio-cluster-ai-full-3-kimi-k2-thinking.jpeg" alt="Benchmark - Kimi K2 Thinking (native 4-bit) on 4 × M3 Ultra Mac Studio with Tensor Parallel RDMA" 

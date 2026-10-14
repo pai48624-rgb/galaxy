@@ -1,0 +1,60 @@
+{
+ "company": "Mistral AI",
+ "one_liner_ko": "코드 에이전트용 Mistral AI의 차세대 공개 코딩 모델 제품군(Devstral 2 123B·Devstral Small 2 24B)과 터미널 코딩 에이전트 Mistral Vibe CLI.",
+ "what_it_does_ko": "Devstral 2는 Mistral AI의 차세대 코딩 모델 제품군으로 Devstral 2(1,230억 파라미터)와 Devstral Small 2(240억 파라미터) 두 가지 크기가 있다. Devstral 2는 256K 컨텍스트를 지원하고 SWE-bench Verified에서 72.2%를 기록했으며, 여러 파일에 걸친 변경을 조율하고 실패를 감지해 다시 시도한다. Devstral Small 2는 일반 소비자용 하드웨어에서 로컬 실행할 수 있고 이미지 입력도 지원한다. 함께 공개한 Mistral Vibe CLI는 Devstral 기반의 오픈소스 터미널 코딩 에이전트이며, Devstral 2는 현재 API로 무료 제공 중이다.",
+ "key_features": [
+  "Devstral 2(123B)·Devstral Small 2(24B) 두 가지 크기",
+  "256K 컨텍스트, SWE-bench Verified 72.2%",
+  "여러 파일 변경 조율·실패 감지 후 재시도",
+  "Devstral Small 2 로컬 실행·이미지 입력 지원",
+  "온프레미스 배포·맞춤 미세조정 지원",
+  "Mistral Vibe CLI 터미널 코딩 에이전트(Apache 2.0)",
+  "Zed 확장·Kilo Code·Cline 연동"
+ ],
+ "use_cases_ko": [
+  "버그 수정과 레거시 시스템 현대화",
+  "개발자·소규모 기업이 제한된 하드웨어에서 코딩 모델 배포",
+  "터미널·IDE에서 자연어로 코드베이스 수정"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Devstral 2 API 현재 무료 제공, Vibe Free 요금제: 메시지·코딩 세션 제한)",
+  "plans": [
+   {"name": "Devstral 2 API", "price": 0.4, "currency": "USD", "period": "usage", "limits": "무료 기간 이후 입력 100만 토큰당 $0.40, 출력 $2.00", "page_lang": "en"},
+   {"name": "Devstral Small 2 API", "price": 0.1, "currency": "USD", "period": "usage", "limits": "무료 기간 이후 입력 100만 토큰당 $0.10, 출력 $0.30", "page_lang": "en"},
+   {"name": "Free", "price": 0, "currency": "USD", "period": "month", "limits": "메시지·웹 검색·코딩 세션 제한", "page_lang": "en"},
+   {"name": "Pro", "price": 14.99, "currency": "USD", "period": "month", "limits": "CLI·IDE·웹에서 종일 코딩, 공정 사용 한도", "page_lang": "en"},
+   {"name": "Team", "price": 24.99, "currency": "USD", "period": "month", "limits": "사용자당 월 요금, 사용자당 최대 30GB 저장", "page_lang": "en"},
+   {"name": "Enterprise", "price": null, "currency": null, "period": null, "limits": "맞춤 모델·에이전트, 감사 로그, SAML SSO, 문의", "page_lang": "en"}
+  ],
+  "pricing_url": "https://mistral.ai/pricing/"
+ },
+ "open_source": "Devstral 2: 수정 MIT 라이선스 / Devstral Small 2·Vibe CLI: Apache-2.0",
+ "api": "있음",
+ "platforms": ["CLI", "API", "웹", "iOS", "안드로이드"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://mistral.ai/news/devstral-2-vibe-cli/", "quote": "Introducing: Devstral 2 and Mistral Vibe CLI. | Mistral AI "},
+  {"field": "one_liner_ko", "url": "https://mistral.ai/news/devstral-2-vibe-cli/", "quote": "Today, we're releasing Devstral 2—our next-generation coding model family available in two sizes: Devstral 2 (123B) and Devstral Small 2 (24B)."},
+  {"field": "what_it_does_ko", "url": "https://mistral.ai/news/devstral-2-vibe-cli/", "quote": "Devstral 2 is a 123B-parameter dense transformer supporting a 256K context window. It reaches 72.2% on SWE-bench Verified"},
+  {"field": "what_it_does_ko", "url": "https://mistral.ai/news/devstral-2-vibe-cli/", "quote": "Devstral 2 is currently free to use via our API ."},
+  {"field": "key_features", "url": "https://mistral.ai/news/devstral-2-vibe-cli/", "quote": "It tracks framework dependencies, detects failures, and retries with corrections—solving challenges like bug fixing and modernizing legacy systems."},
+  {"field": "key_features", "url": "https://mistral.ai/news/devstral-2-vibe-cli/", "quote": "It also supports image inputs, and can power multimodal agents."},
+  {"field": "key_features", "url": "https://mistral.ai/news/devstral-2-vibe-cli/", "quote": "Compatible with on-prem deployment and custom fine-tuning."},
+  {"field": "key_features", "url": "https://mistral.ai/news/devstral-2-vibe-cli/", "quote": "Mistral Vibe CLI is available as an extension in Zed , so you can use it directly inside your IDE."},
+  {"field": "use_cases_ko", "url": "https://mistral.ai/news/devstral-2-vibe-cli/", "quote": "Their reduced size makes deployment practical on limited hardware, lowering barriers for developers, small businesses, and hobbyists."},
+  {"field": "use_cases_ko", "url": "https://mistral.ai/news/devstral-2-vibe-cli/", "quote": "It explores, modifies, and executes changes across your codebase using natural language—in your terminal or integrated into your preferred IDE"},
+  {"field": "pricing", "url": "https://mistral.ai/news/devstral-2-vibe-cli/", "quote": "After the free period, the API pricing will be $0.40/$2.00 per million tokens (input/output) for Devstral 2 and $0.10/$0.30 for Devstral Small 2."},
+  {"field": "pricing", "url": "https://mistral.ai/pricing/", "quote": " Full access to Vibe for all-day coding and long-running tasks."},
+  {"field": "pricing", "url": "https://mistral.ai/pricing/", "quote": " $14.99 "},
+  {"field": "pricing", "url": "https://mistral.ai/pricing/", "quote": " $24.99 "},
+  {"field": "pricing", "url": "https://mistral.ai/pricing/", "quote": " Secure, collaborative workspace for teams building with AI."},
+  {"field": "pricing", "url": "https://mistral.ai/pricing/", "quote": " Limited coding sessions."},
+  {"field": "open_source", "url": "https://mistral.ai/news/devstral-2-vibe-cli/", "quote": "Devstral 2 ships under a modified MIT license, while Devstral Small 2 uses Apache 2.0."},
+  {"field": "api", "url": "https://mistral.ai/news/devstral-2-vibe-cli/", "quote": "Devstral Small 2: 24B parameter model available via API or deployable locally on consumer hardware."},
+  {"field": "platforms", "url": "https://mistral.ai/pricing/", "quote": " Vibe on mobile (iOS and Android)"},
+  {"field": "platforms", "url": "https://mistral.ai/pricing/", "quote": "Terminal-native coding agent powered by Devstral for autonomous software engineering tasks."},
+  {"field": "korean_support", "url": "https://mistral.ai/news/devstral-2-vibe-cli/", "quote": "hreflang: en, fr, it, x-default"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

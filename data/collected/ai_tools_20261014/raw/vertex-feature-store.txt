@@ -1,0 +1,1079 @@
+=== [home] https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/featurestore?hl=ko (lang=ko-x-mtfrom-en)
+Gemini Enterprise Agent Platform의 기능 관리 소개  |  Google Cloud Documentation 
+ 기본 콘텐츠로 건너뛰기
+ 문서
+ close 
+ 시작하기
+ Google Cloud 시작하기
+ 제품 목록
+ Cloud Customer Care
+ 추천 제품
+ Agent Platform
+ Apigee API 관리
+ BigQuery
+ Compute Engine은
+ Cloud CDN
+ Cloud Run
+ Cloud Storage
+ Cloud SQL
+ Gemini Enterprise
+ Google Kubernetes Engine
+ Looker
+ 크로스 프로덕트 도구
+ 액세스 및 리소스 관리
+ 비용 및 사용량 관리
+ 코드형 인프라
+ SDK, 언어, 프레임워크, 도구
+ 기술 분야
+ AI 및 ML
+ 애플리케이션 개발
+ 애플리케이션 호스팅
+ 컴퓨팅
+ 데이터 분석 및 파이프라인
+ 데이터베이스
+ 분산, 하이브리드, 멀티 클라우드
+ 업종별 솔루션
+ 이전
+ 네트워킹
+ 모니터링 가능성 및 모니터링
+ 보안
+ Storage
+ / 
+ 콘솔
+ English 
+ Deutsch 
+ Español – América Latina 
+ Français 
+ Indonesia 
+ Italiano 
+ Português – Brasil 
+ עברית 
+ 中文 – 简体 
+ 中文 – 繁體 
+ 日本語 
+ 한국어 
+ 로그인 
+ Gemini Enterprise Agent Platform
+ 무료로 시작하기 
+ 개요
+ Studio
+ 에이전트
+ 모델
+ Notebooks
+ API 참조 문서
+ 가격 책정
+ Agent Platform
+ 생성형 AI
+ 엔지니어링 블로그
+ 문서
+ 더보기
+ 개요
+ Studio
+ 에이전트
+ 모델
+ Notebooks
+ API 참조 문서
+ 가격 책정
+ 더보기
+ 엔지니어링 블로그
+ 콘솔
+ 개요 
+ 초보자 가이드 
+ 시작하기 
+ Agent Platform 시작하기 
+ 생성형 AI SDK로 Gemini API 코드 개발 
+ Knowledge MCP 서버에 연결 
+ API 키 가져오기 
+ 애플리케이션 기본 사용자 인증 정보 구성 
+ Google AI Studio에서 Agent Platform으로 마이그레이션 
+ Gemini 3 시작하기 
+ Gemini 모델 개발자 가이드 
+ Gemini 3.8 Live 
+ Gemini 3.8 Flash 
+ Gemini 3.7 Flash 
+ Gemini 3.6 Flash 
+ Gemini 3.5 Flash 
+ Google 생성형 AI 라이브러리 
+ 생성형 AI 설명서 
+ OpenAI 라이브러리를 사용하여 Gemini 모델 액세스 
+ 익스프레스 모드 
+ 개요 
+ 콘솔 튜토리얼 
+ API 튜토리얼 
+ 모델 선택 
+ Model Garden 
+ Model Garden 개요 
+ Model Garden에서 모델 사용 
+ 모델 기능 테스트 
+ Google 모델 
+ 모든 Google 모델 
+ Gemini 
+ 최신 Gemini 모델로 마이그레이션 
+ Pro 
+ 3.1 Pro 
+ 2.5 Pro 
+ 플래시 
+ 3.8 Flash 
+ 3.7 Flash 
+ 3.6 Flash 
+ 3.5 Flash 
+ 3 Flash 
+ 2.5 Flash 
+ 2.5 Flash Live API 
+ Flash-Lite 
+ 3.5 Flash-Lite 
+ 3.1 Flash-Lite 
+ 2.5 Flash-Lite 
+ 이미지 
+ Nano Banana 2.1 
+ Nano Banana 2 
+ Nano Banana 2 Lite 
+ Nano Banana Pro 
+ Nano Banana 
+ 가상 착용 
+ Omni 
+ Omni 1.1 Flash 
+ Omni Flash 
+ 사이버 
+ 3.8 Flash Cyber 
+ 게시됨 
+ 3.8 라이브 
+ Text-to-Speech 
+ Gemini 3.8 Flash TTS 
+ Gemini 3.8 Flash-Lite TTS 
+ 스크립트 작성 
+ Gemini 3.5 Transcribe 
+ 번역 
+ Gemini 3.5 Live Translate 
+ 임베딩 
+ Gemini 임베딩 2 
+ 로봇공학 
+ Gemini Robotics ER 2 
+ 개요 
+ 공간 추론 
+ 에이전트형 기능 
+ 태스크 조정 
+ 동영상 이해 
+ Veo 
+ Veo 3 
+ Veo 3.1 
+ Lyria 
+ Lyria 2 
+ Lyria 3 
+ 모델 버전 
+ 파트너 모델 
+ 파트너 모델 개요 
+ Claude 
+ 개요 
+ 예측 요청 
+ Anthropic Claude 모델 할당량 
+ 일괄 예측 
+ 구조화된 출력 
+ 프롬프트 캐싱 
+ 토큰 집계 
+ 웹 검색 
+ 안전 분류기 
+ 사이버 인증 프로그램 
+ Claude 모델 
+ Fable 
+ Fable 5.1 
+ Fable 5 
+ Opus 
+ Opus 5.5 
+ Opus 5 
+ Opus 4.8 
+ Opus 4.7 
+ Opus 4.6 
+ Opus 4.5 
+ Opus 4.1 
+ Opus 4 
+ 소네트 
+ Sonnet 5.5 
+ Sonnet 5 
+ Sonnet 4.6 
+ Sonnet 4.5 
+ Sonnet 4 
+ Haiku 
+ Haiku 5.5 
+ Haiku 4.5 
+ Grok 
+ 개요 
+ Responses API 
+ 함수 호출 
+ 구조화된 출력 
+ 추론 
+ 모델 세부정보 
+ Grok 4.1 Fast 
+ Grok 4.20 
+ Grok 4.3 
+ Grok 4.6 
+ Grok 4.7 
+ Mistral AI 
+ 개요 
+ 모델 세부정보 
+ Mistral Medium 3 
+ Mistral OCR(25.05) 
+ Mistral Small 3.1(25.03) 
+ Codestral 2 
+ 메타 
+ 개요 
+ 모델 세부정보 
+ Muse Spark 1.3 
+ Model Garden에서 파트너 모델 배포 
+ 파트너 모델 지원 중단 
+ 개방형 모델 
+ 개요 
+ AlphaFold 3 
+ AlphaGenome 
+ DeepSeek 
+ 개요 
+ DeepSeek-V3.2 
+ DeepSeek-V3.1 
+ DeepSeek-R1-0528 
+ DeepSeek-OCR 
+ 임베딩(e5) 
+ Multilingual E5 Small 
+ Multilingual E5 Large 
+ Google Gemma 
+ 서비스형 모델 (MaaS) 
+ Gemma-4-26B-A4B-IT MaaS 
+ Gemma 사용 
+ 튜토리얼: Gemma 배포 및 추론(GPU) 
+ 튜토리얼: Gemma 배포 및 추론(TPU) 
+ Kimi 
+ 개요 
+ Kimi K2 Thinking 
+ Llama 
+ 개요 
+ 예측 요청 
+ 모델 세부정보 
+ Llama 4 Maverick 
+ Llama 4 Scout 
+ Llama 3.3 
+ MiniMax 
+ 개요 
+ MiniMax M2 
+ OpenAI 
+ 개요 
+ OpenAI gpt-oss-120b 
+ OpenAI gpt-oss-20b 
+ Qwen 
+ 개요 
+ Qwen 3 Next Instruct 80B 
+ Qwen 3 Next Thinking 80B 
+ Qwen 3 Coder 
+ Qwen 3 235B 
+ ZAI.org 
+ 개요 
+ GLM 5.2 
+ GLM 5 
+ GLM 4.7 
+ 관리형 개방형 모델 (MaaS) 
+ 개요 
+ 서비스형 모델(MaaS)을 통해 개방형 모델 사용 
+ 개방형 모델에 대한 액세스 권한 부여 
+ API 
+ 개방형 모델의 MaaS API 호출 
+ 함수 호출 
+ 사고 
+ 구조화된 출력 
+ 일괄 예측 
+ 오픈 모델 지원 중단 
+ 자체 배포 개방형 모델 
+ 개요 
+ 오픈 모델 배포 
+ Model Garden에서 개방형 모델 배포 
+ 사전 빌드된 컨테이너로 개방형 모델 배포 
+ 커스텀 vLLM 컨테이너로 개방형 모델 배포 
+ 커스텀 가중치를 적용한 모델 배포 
+ Hugging Face 모델 사용 
+ 튜토리얼 
+ Model Garden의 고급 기능으로 모델 성능 최적화 
+ Hex-LLM 
+ 텍스트 및 멀티모달 LLM 서빙을 위한 vLLM에 관한 종합 가이드(GPU) 
+ vLLM TPU 
+ xDiT 
+ SpotVM 및 예약으로 Llama 3 모델 배포 
+ 빌드 
+ 프롬프트 설계 
+ 프롬프팅 소개 
+ 프롬프트 전략 
+ 개요 
+ 명확하고 구체적인 요청 사항 제공 
+ 시스템 안내 사용 
+ 퓨샷 예시 포함 
+ 컨텍스트 정보 추가 
+ 구조 프롬프트 
+ 프롬프트 비교 
+ 이유를 설명하도록 모델에 지시 
+ 복잡한 태스크 분할 
+ 매개변수 값 실험 
+ 프롬프트 반복 전략 
+ 태스크별 프롬프트 안내 
+ 멀티모달 프롬프트 설계 
+ 채팅 프롬프트 설계 
+ 기능 
+ 안전 
+ 개요 
+ 책임감 있는 AI 
+ 안전을 위한 시스템 안내 
+ 콘텐츠 필터 구성 
+ 안전 필터링 및 콘텐츠 검토를 위한 Gemini 
+ 악용 모니터링 
+ 차단된 응답 처리 
+ 콘텐츠 자격 증명 
+ AI Content Detection API 
+ 텍스트 및 코드 생성 
+ 텍스트 생성 
+ 시스템 안내 
+ 구조화된 출력 
+ 콘텐츠 생성 파라미터 
+ 이미지 생성 
+ Gemini로 이미지 생성하기 
+ Gemini로 동영상에서 이미지 생성하기 
+ Gemini로 이미지 수정하기 
+ Gemini 이미지 생성 권장사항 
+ 가상 테스트 이미지 생성 
+ Gemini 이미지 생성 제한사항 
+ Gemini 이미지 생성을 위한 책임감 있는 AI 및 사용 
+ Imagen 문서 
+ 동영상 생성 
+ 개요 
+ 텍스트로 동영상 생성 
+ 첫 번째 프레임 이미지로 동영상 만들기 
+ 첫 번째 및 마지막 프레임으로 동영상 만들기 
+ 참조로 동영상 생성 
+ 동영상 연장 
+ 동영상 수정 
+ 프롬프트 가이드 
+ 동영상 권장사항 
+ Veo를 위한 책임감 있는 AI 
+ 음악 생성 
+ Lyria 소개 
+ Lyria를 사용하여 음악 생성 
+ Lyria 프롬프트 가이드 
+ 오디오 생성 
+ 개요 
+ 음성 디자인으로 맞춤 음성 만들기 
+ 음성 복제 
+ 프롬프트 작성 가이드 
+ 이전 가이드 
+ 미디어 분석 
+ 이미지 이해 
+ 동영상 이해 
+ 오디오 이해 
+ 문서 이해 
+ 경계 상자 감지 
+ URL 컨텍스트 
+ 사고 
+ 개요 
+ 사고 서명 
+ 프롬프트 작성 가이드 
+ Interactions API 
+ 개요 
+ 개발자 가이드 
+ Live API 
+ 개요 
+ 시작하기 
+ 생성형 AI SDK 사용 시작하기 
+ WebSockets 사용 시작하기 
+ ADK 사용 시작하기 
+ 라이브 세션 시작 및 관리 
+ 오디오 및 동영상 스트림 전송 
+ 라이브 아바타 구성 
+ 언어 및 음성 구성 
+ Gemini 기능 구성 
+ 비동기 함수 호출 
+ Live API 권장사항 
+ Live API 문제 해결 
+ 데모 앱 및 리소스 
+ Gemini 2.5 Flash Live API에서 Gemini 3.8 Live로 이전 
+ 임베딩 
+ 개요 
+ 텍스트 임베딩 
+ 텍스트 임베딩 가져오기 
+ 임베딩 태스크 유형 선택 
+ 멀티모달 임베딩 가져오기 
+ 일괄 임베딩 추론 수행 
+ 번역 
+ 음성 텍스트 변환 
+ 모델 도구 
+ 코드 실행 
+ 컴퓨터 사용 
+ 함수 호출 
+ 그라운딩 
+ 개요 
+ Google 검색으로 그라운딩 
+ Google 지도를 사용한 그라운딩 
+ Agent Search를 사용한 그라운딩 
+ 검색 API로 그라운딩 
+ RAG를 사용하여 대답 그라운딩 
+ Elasticsearch를 사용한 그라운딩 
+ Parallel 웹 검색을 사용한 그라운딩 
+ Exa 웹 검색을 사용한 그라운딩 
+ 엔터프라이즈용 웹 그라운딩 
+ 개발 도구 
+ AI 기반 프롬프트 작성 도구 사용 
+ 개요 
+ 프롬프트 최적화 
+ 개요 
+ 제로샷 옵티마이저 
+ 퓨샷 옵티마이저 
+ 데이터 기반 옵티마이저 
+ 프롬프트 템플릿 사용 
+ SDK로 프롬프트 관리 
+ 모델 조정 
+ 조정 소개 
+ Gemini 모델 조정 
+ 지도 미세 조정 
+ 지도 미세 조정 정보 
+ 데이터 준비 
+ 지도 미세 조정 사용 
+ 지원되는 모달리티 
+ 텍스트 조정 
+ 문서 조정 
+ 이미지 조정 
+ 오디오 조정 
+ 동영상 조정 
+ 함수 호출 조정 
+ 강화 학습 미세 조정 
+ 강화 학습 미세 조정 정보 
+ 콘솔을 사용한 빠른 시작 
+ API를 사용한 빠른 시작 
+ 강화 학습 미세 조정 작업 
+ 개요 
+ 조정 데이터 세트 
+ 초매개변수 
+ 리워드 함수 
+ 측정항목 및 모니터링 
+ 지속적 조정 
+ 선호도 조정 
+ 선호도 조정 정보 
+ 데이터 준비 
+ 선호도 조정 사용 
+ 조정 체크포인트 사용 
+ 지속적 조정 사용 
+ LoRA 및 QLoRA를 사용한 조정 권장사항 
+ 개방형 모델 
+ 지도 및 정제 미세 조정 
+ 임베딩 모델 
+ 텍스트 임베딩 모델 조정 
+ 번역 모델 
+ 지도 미세 조정 정보 
+ 데이터 준비 
+ 지도 미세 조정 사용 
+ 마이그레이션 
+ OpenAI 라이브러리를 사용하여 Agent Platform 모델 호출 
+ 개요 
+ 인증 
+ 예 
+ OpenAI SDK에서 이전 
+ 평가 
+ 개요 
+ 튜토리얼: 콘솔을 사용하여 평가 수행 
+ Agent Platform SDK의 생성형 AI 클라이언트를 사용하여 평가 수행 
+ 튜토리얼: Agent Platform SDK의 생성형 AI 클라이언트를 사용하여 모델 평가 
+ 평가 측정항목 정의 
+ 평가 측정항목 정의 
+ 관리형 기준표 기반 측정항목 세부정보 
+ 평가 데이터 세트 준비 
+ 평가 실행 
+ 평가 결과 보기 및 해석 
+ 에이전트 평가 
+ 대체 평가 방법 
+ Agent Platform SDK의 평가 모듈을 사용하여 평가 
+ 튜토리얼: Agent Platform SDK의 평가 모듈을 사용하여 평가 수행 
+ 평가 측정항목 정의 
+ 평가 데이터 세트 준비 
+ 평가 실행 
+ 평가 결과 해석 
+ 모델 기반 측정항목 템플릿 
+ 에이전트 평가 
+ 평가 모델 평가 
+ 평가 모델 구성 
+ AutoSxS 파이프라인 실행 
+ 계산 기반 평가 파이프라인 실행 
+ 배포 
+ 소비 옵션 개요 
+ 프로비저닝된 처리량 
+ 프로비저닝된 처리량 개요 
+ 지원되는 모델 
+ 프로비저닝된 처리량 계산 요구사항 
+ Live API의 프로비저닝된 처리량 
+ Gemini Nano Banana 모델의 프로비저닝된 처리량 
+ Gemini Omni 모델의 프로비저닝된 처리량 
+ Veo 3 모델의 프로비저닝된 처리량 
+ 단일 영역 프로비저닝된 처리량 
+ 프로비저닝된 처리량 구매 
+ 프로비저닝된 처리량 사용 
+ 사용한 만큼만 지불 
+ Standard PayGo 
+ 우선순위 사용한 만큼만 지불 
+ Flex PayGo 
+ 일괄 추론 
+ 개요 
+ Cloud Storage에서 일괄 작업 만들기 
+ BigQuery에서 일괄 작업 만들기 
+ 미완료된 일괄 작업 재개 
+ 할당량 및 시스템 한도 
+ 캐시 재사용 프롬프트 컨텍스트 
+ 개요 
+ 컨텍스트 캐시 만들기 
+ 컨텍스트 캐시 사용 
+ 컨텍스트 캐시 정보 가져오기 
+ 컨텍스트 캐시 업데이트 
+ 컨텍스트 캐시 삭제 
+ 미세 조정된 Gemini 모델의 컨텍스트 캐시 
+ 생성형 AI 모델 배포 
+ 오류 코드 429 문제 해결 
+ 재시도 전략 
+ 관리 
+ 액세스 제어 
+ 네트워킹 
+ 보안 제어 
+ Model Garden 모델의 액세스 제어 
+ 데이터 액세스 감사 로그 사용 설정 
+ 프롬프트 저장 및 공유 
+ 모델 모니터링 
+ 커스텀 메타데이터 라벨을 사용하여 비용 모니터링 
+ 요청-응답 로깅 
+ IAP를 사용하여 생성형 AI 앱 보호 
+ 개요 
+ 프로젝트 및 소스 저장소 설정 
+ Cloud Run 서비스 만들기 
+ 부하 분산기 만들기 
+ IAP 구성 
+ IAP 보안 앱 테스트 
+ 프로젝트 삭제 
+ 직접 모델 빌드 
+ 개요 
+ Agent Platform의 MLOps 
+ Agent Platform 인터페이스 
+ Agent Platform 초보자 가이
+
+=== [pricing] https://cloud.google.com/pricing?hl=ko/ (lang=ko)
+가격 책정 개요 | Google Cloud 
+ Google Cloud 가격 책정
+ Google Cloud의 투명하고 혁신적인 가격 책정 방식으로 비용을 절감해 보세요. 가격 계산기 로 비용을 예상해 보거나 Google에 문의하여 조직에 대한 견적을 받아보세요.
+ 견적 요청 
+ 무료로 시작하기 
+ 워크로드 무료로 실행해 보기
+ 계정을 만들어 실제 시나리오에서 Google Cloud 제품 실적을 평가하세요. 신규 고객에게는 Google에서 추천하는 사전 빌드된 솔루션 을 포함하여 워크로드를 실행, 테스트, 배포하는 데 사용할 수 있는 $300의 무료 크레딧 이 제공됩니다. 모든 고객이 월간 사용량 한도까지 20개 이상의 제품을 무료 로 사용할 수 있습니다.
+ $300
+ 무료 크레딧 
+ 20+
+ 무료 제품
+ 사용한 만큼만 비용 지불
+ Google Cloud의 사용한 만큼만 지불 가격 책정 구조를 사용하면 사용한 서비스에 대한 요금만 지불하면 됩니다. 선불 비용은 없으며, 해지 수수료가 부과되지 않습니다. 가격은 제품 및 사용량에 따라 다릅니다( 자세한 가격 목록 보기 ).
+ 워크로드 비용 최대 57% 절감하기
+ Google Cloud를 사용하면 월별 사용량에 기초한 자동 절약과 할인된 가격에 리소스 비용 선불 결제를 통해 다른 제공업체를 사용할 때보다 비용을 절감할 수 있습니다. 예를 들어 머신 유형 또는 GPU와 같은 Compute Engine 리소스에 약정 사용 할인을 적용하여 최대 57%를 절약 할 수 있습니다.
+ 2:48 
+ 현재의 비용 추세와 예상 비용 파악
+ 지속적인 지출 관리
+ 예산, 알림, 할당량 한도, 기타 무료 비용 관리 도구로 지출을 관리 하세요. 활용 가능한 AI 기반 지능형 추천과 비용 추세 및 예상 비용을 보여주는 커스텀 대시보드로 비용을 최적화 하세요. 
+ 연중무휴 무료 결제 지원 으로 도와드리겠습니다.
+ 비용 예측 
+ 가격 계산기 로 위치, 워크로드, 기타 변수에 따라 비용이 어떻게 달라지는지 알아보세요. 또는 영업 담당자 에게 문의하여 커스텀 견적을 받으세요.
+ 0:46 
+ 4:01 
+ 무료 크레딧 받기
+ 아이디어 구상부터 출시 이후까지 Google과 함께 빌드하고 Google의 최고의 서비스를 이용하세요. 스타트업은 Google for Startups Cloud Program 을 통해 최대 $350,000의 Cloud 크레딧을 받아 맞춤 지원 및 솔루션을 통해 계속해서 확장할 수 있습니다.
+ 지금 신청하기 
+ 더 자세한 안내가 필요하신가요? Google에서 지원해 드립니다.
+ 마이그레이션 평가: 마이그레이션 비용을 예측해 보고 엔드 투 엔드 계획을 세워 보세요.
+ 무료 마이그레이션 평가 요청 
+ 비용 최적화 전략으로 전반적인 클라우드 지출을 줄이는 5가지 방법을 알아보세요.
+ 백서 다운로드 
+ 전문 컨설턴트와 협력하여 구현, 마이그레이션 등의 지원을 받으세요.
+ 모든 예산에 맞는 파트너 찾기 
+ 다음 단계 수행
+ 해결해야 하는 문제를 알려주세요. 가장 적합한 솔루션을 찾을 수 있도록 Google Cloud 전문가가 도와드립니다.
+ 영업팀에 문의 
+ 신뢰할 수 있는 파트너 지원
+ 파트너 찾기 
+ Google Cloud 사용 시작하기
+ 무료로 사용해 보기 
+ 계속 탐색
+ 모든 제품 보기 
+ menu 
+ 개요 솔루션 제품 가격 책정 리소스 Docs 지원 문의하기 
+  
+ Docs 지원 
+ 콘솔 로그인 
+ 무료로 시작하기 
+ 무료로 시작하기 
+ 문의하기 
+ close 디지털 혁신 가속화
+ 디지털 혁신을 이제 막 시작한 기업이든 이미 일정 수준에 도달한 기업이든 Google Cloud를 사용하면 가장 까다로운 도전과제를 해결할 수 있습니다.
+ 자세히 알아보기
+ 주요 이점
+ Google Cloud를 선택해야 하는 이유
+ 기업들이 Google을 선택하는 주요 이유
+ AI 및 에이전트
+ 엔터프라이즈 지원 AI를 활용하세요.
+ 멀티 클라우드
+ 어디서나 필요한 앱을 실행
+ 글로벌 인프라
+ Google과 동일한 인프라를 기반으로 빌드
+ 데이터 클라우드
+ 통합 데이터를 통한 더욱 스마트한 결정
+ 최신 인프라 클라우드
+ 차세대 클라우드 인프라입니다.
+ 보안
+ 사용자, 데이터, 앱을 보호하세요.
+ 생산성 및 공동작업
+ AI 지원 앱으로 팀과 소통
+ 보고서 및 통계
+ 경영진 통계
+ 최고 책임자의 관점에 맞게 선별됩니다.
+ 애널리스트 보고서
+ Google에 대한 업계 분석가들의 평가
+ 백서
+ 인기 백서 탐색 및 다운로드
+ 고객 사례
+ 우수사례 및 동영상 살펴보기
+ close 업종별 솔루션 
+ 애플리케이션 현대화 
+ 인공지능 
+ API 및 애플리케이션 
+ 데이터 분석 
+ 데이터베이스 
+ 인프라 
+ 생산성 및 공동작업 
+ 보안 
+ 스타트업 및 SMB 
+ 모든 솔루션 보기 
+ 업종별 솔루션
+ 비용 절감, 운영 민첩성 향상, 새로운 시장 기회 포착
+ 소매업
+ 소매 가치 사슬을 위한 분석 및 공동작업 도구
+ 소비재
+ 소비재 디지털 혁신 및 브랜드 성장 솔루션
+ 금융 서비스
+ 금융 서비스를 위한 컴퓨팅, 데이터 관리, 분석 도구
+ 의료 및 생명과학
+ 대규모의 연구 진행 및 의료 혁신 지원
+ 미디어 및 엔터테인먼트
+ 콘텐츠 제작 및 배포 작업을 위한 솔루션
+ 전자통신
+ 5G 배포 및 수익 창출을 위한 하이브리드 및 멀티 클라우드 서비스
+ 게임
+ 게임을 더욱 빠르게 빌드하고 확장할 수 있는 AI 기반 솔루션
+ 제조업
+ 제조업 가치 사슬을 최적화하는 마이그레이션 및 AI 도구
+ 공급망 및 물류
+ 공급망 및 물류 운영 전반에서 지속 가능하고 효율적이며 복원력이 우수한 데이터 기반 운영을 지원합니다.
+ 정부 기관
+ 정부 기관을 위한 데이터 스토리지, AI, 분석 솔루션
+ 교육
+ 더 적극적인 학습 경험을 제공하는 교육 도구
+ 원하는 내용을 찾을 수 없으신가요?
+ 모든 업종별 솔루션 보기
+ 애플리케이션 현대화
+ 소프트웨어 관행과 기능을 평가, 계획, 구현, 측정하여 조직의 비즈니스 애플리케이션 포트폴리오를 현대화하고 단순화합니다.
+ CAMP
+ DORA를 사용하여 소프트웨어 배포 기능을 개선하는 프로그램
+ 기존 애플리케이션 현대화
+ 기존 워크로드의 클라우드 마이그레이션을 분석 및 분류하고 시작합니다.
+ PaaS에서 마이그레이션: Cloud Foundry, OpenShift
+ 기존 컨테이너를 Google의 관리형 컨테이너 서비스로 이동하기 위한 도구입니다.
+ 메인프레임에서 마이그레이션
+ 메인프레임 앱을 클라우드로 이전하기 위한 자동화된 도구 및 처방적 안내입니다.
+ 소프트웨어 배포 현대화
+ 내부 루프 생산성, CI/CD, S3C 등 소프트웨어 공급망 권장사항입니다.
+ DevOps 권장사항
+ 조직에서 DevOps를 구현하기 위한 프로세스 및 리소스
+ SRE 원칙
+ 조직에 사이트 안정성 엔지니어링(SRE)을 채택하기 위한 도구 및 리소스
+ 플랫폼 엔지니어링
+ IDP를 빌드, 관리, 확장하기 위한 포괄적인 관리형 서비스 제품군과 최적의 경로를 제공합니다.
+ 멀티 클라우드를 위한 설계
+ 여러 클라우드에서 일관된 플랫폼으로 워크로드를 관리합니다.
+ 인공지능
+ AI 및 머신러닝을 사용하여 비즈니스에 인텔리전스 및 효율성 추가
+ Gemini Enterprise for Customer Experience
+ 고객 수명 주기 전반에서 사용 가능한 에이전트를 빌드하고 관리할 수 있습니다.
+ Gemini Enterprise
+ 조직 전체를 위한 통합 에이전트형 포트폴리오입니다.
+ AI Commerce Search
+ 소매업체를 위한 Google 품질 수준의 검색 및 제품 추천
+ Gemini 기반 Google Cloud
+ 애플리케이션 개발, 코딩 등을 위한 AI 어시스턴트입니다.
+ 물리적 AI
+ 차세대 로봇, 자율 주행 차량, 산업용 기기, 기계를 시뮬레이션하고 학습시키고 작동시킵니다.
+ API 및 애플리케이션
+ API, 앱, 자동화를 사용하여 코딩 없이도 혁신 속도 향상
+ API를 사용한 새 비즈니스 채널
+ 개발자 및 파트너 생태계의 조성과 지원
+ API를 사용한 기존 애플리케이션 활용
+ 기존 앱을 확장하고 현대화하는 클라우드 서비스
+ Open Banking APIx
+ 오픈 뱅킹 규정 준수 API의 보안 전송 간소화 및 가속화
+ 데이터 분석
+ 분석을 대폭 간소화하는 완전 관리형 서버리스 분석 플랫폼으로 규모에 상관없이 데이터에서 빠르게 유용한 정보 파악
+ 데이터 마이그레이션
+ AI 기반 마이그레이션 서비스로 데이터 웨어하우스 및 데이터 레이크를 마이그레이션하고 현대화하세요.
+ 데이터 레이크하우스
+ 고성능 개방형 데이터 레이크하우스로 멀티모달 데이터를 통합하고 제어하세요.
+ 실시간 분석
+ 이벤트 스트림 수집, 처리, 분석을 통해 유용한 정보 파악
+ 마케팅 분석
+ 고객 데이터 수집, 분석, 활성화를 위한 솔루션
+ 데이터 세트
+ Google, 공공부문, 상용 공급업체 제공 데이터로 분석 및 AI 이니셔티브 강화
+ 비즈니스 인텔리전스
+ BI 스택을 현대화하고 풍부한 데이터 환경을 만들기 위한 솔루션
+ 데이터 분석 에이전트
+ 데이터 수명 주기를 위한 기본 제공 에이전트와 자체 에이전트를 빌드할 수 있는 도구입니다.
+ 지리 공간 분석
+ 지리 공간 사용 사례를 대규모로 해결할 수 있는 포괄적인 플랫폼입니다.
+ 데이터 과학
+ 데이터 과학을 빌드, 관리, 확장하기 위한 관리형 서비스 및 통합 워크플로입니다.
+ 데이터베이스
+ 보안, 안정성, 고가용성, 완전 관리형 데이터 서비스로 기업 데이터를 마이그레이션하고 관리
+ 데이터베이스 마이그레이션
+ 데이터베이스 마이그레이션 수명 주기를 간소화하는 가이드 및 도구
+ 데이터베이스 현대화
+ 운영 데이터베이스 인프라 현대화를 위한 업그레이드
+ 게임용 데이터베이스
+ Google Cloud 데이터베이스로 글로벌 실시간 게임 빌드
+ Google Cloud 데이터베이스
+ 데이터를 마이그레이션, 관리, 현대화하는 데이터베이스 서비스
+ Oracle 워크로드를 Google Cloud로 마이그레이션
+ Oracle 워크로드의 재호스팅, 플랫폼 변경, 재작성
+ 오픈소스 데이터베이스
+ 엔터프라이즈급 지원을 제공하는 완전 관리형 오픈소스 데이터베이스
+ Google Cloud 기반 SQL Server
+ Google Cloud에서 SQL Server 가상 머신을 실행하는 옵션
+ 데이터베이스를 위한 Gemini
+ AI를 사용하여 데이터베이스 개발 및 관리를 강화하세요.
+ 인프라
+ SAP, VMware, Windows, Oracle, 기타 워크로드를 위한 솔루션으로 빠르게 마이그레이션
+ 애플리케이션 마이그레이션
+ 클라우드로 이전하기 위한 검색 및 분석 도구
+ Google Cloud 기반 SAP
+ SAP 애플리케이션 및 SAP HANA 실행을 위한 인증
+ 고성능 컴퓨팅
+ 모든 워크로드를 지원하는 컴퓨팅, 스토리지, 네트워킹 옵션
+ Google Cloud에서 Windows 실행
+ Windows 워크로드 실행을 위한 도구 및 파트너
+ 데이터 센터 마이그레이션
+ VM, 앱, 데이터베이스 등을 위한 마이그레이션 솔루션
+ Active Assist
+ 클라우드 리소스의 자동 최적화 및 보안 강화
+ 가상 데스크톱
+ 데스크톱 및 애플리케이션용 원격 근무 솔루션(VDI 및 DaaS)
+ Rapid Migration and Modernization Program
+ 클라우드로 간편하게 이전할 수 있게 해주는 엔드 투 엔드 마이그레이션 프로그램
+ 백업 및 재해 복구
+ 비즈니스 연속성 니즈를 충족하는지 확인
+ Google Cloud 기반 Red Hat
+ Google과 Red Hat은 기존 온프렘 및 커스텀 애플리케이션을 위한 엔터프라이즈급 플랫폼을 제공합니다.
+ 교차 클라우드 네트워크
+ 하이브리드 및 멀티 클라우드 네트워킹을 간소화하고 워크로드, 데이터, 사용자를 보호하세요.
+ 생산성 및 공동작업
+ 영향력을 발휘하기 위해 빌드된 인간 중심 설계의 솔루션으로 팀의 공동작업 방식을 변경
+ Google Workspace
+ 기업용 공동작업 및 생산성 도구
+ Google Workspace Essentials
+ 팀을 위한 안전한 화상 회의와 현대적 공동작업 도구
+ Cloud ID
+ IT 관리자가 사용자 기기와 앱을 관리할 수 있는 통합 플랫폼
+ Chrome Enterprise
+ 비즈니스용 ChromeOS, Chrome 브라우저, Chrome 기기
+ 보안
+ 온라인 위협을 감지, 조사, 대응하여 비즈니스 보호
+ 에이전트형 SOC
+ AI 에이전트를 통해 더욱 우수한 보안 성과를 제공합니다.
+ 웹 앱 및 API 보호
+ 웹 애플리케이션 및 API에 대한 위협 및 사기 방지
+ 보안 및 복원력 프레임워크
+ 보안 및 복원력 수명 주기의 각 단계에 대한 솔루션
+ 코드형 위험 및 규정 준수(RCaC)
+ 자동화를 통해 거버넌스, 위험, 규정 준수 기능을 현대화하는 솔루션
+ 소프트웨어 공급망 보안
+ 엔드 투 엔드 소프트웨어 공급망 보안 개선을 위한 솔루션
+ Security Foundation
+ 강력한 보안 상황을 달성하는 데 도움이 되는 추천 제품
+ 스타트업 및 SMB
+ 맞춤형 솔루션과 프로그램을 통해 스타트업 및 SMB 성장 가속화
+ 스타트업 프로그램
+ 스타트업의 역량을 한 단계 끌어올리기 위한 재무, 비즈니스, 기술 지원 받기
+ 중소기업
+ 웹 호스팅, 앱 개발, AI, 분석을 위한 솔루션 살펴보기
+ Software as a Service
+ 더욱 우수한 SaaS 제품을 빌드하고 효율적으로 확장하며 비즈니스 성장 도모
+ close 추천 제품 
+ AI 및 머신러닝 
+ 비즈니스 인텔리전스 
+ 컴퓨팅 
+ 컨테이너 
+ 데이터 분석 
+ 데이터베이스 
+ 개발자 도구 
+ 분산 클라우드 
+ 하이브리드 및 멀티 클라우드
+
+=== [about] https://docs.cloud.google.com/?hl=ko (lang=ko-x-mtfrom-en)
+Google Cloud 문서  |  Google Cloud Documentation 
+ 기본 콘텐츠로 건너뛰기
+ 기술 영역
+ close 
+ AI 및 ML
+ 애플리케이션 개발
+ 애플리케이션 호스팅
+ 컴퓨팅
+ 데이터 분석 및 파이프라인
+ 데이터베이스
+ 분산, 하이브리드, 멀티 클라우드
+ 업종별 솔루션
+ 이전
+ 네트워킹
+ 모니터링 가능성 및 모니터링
+ 보안
+ Storage
+ 크로스 프로덕트 도구
+ close 
+ 액세스 및 리소스 관리
+ 비용 및 사용량 관리
+ 코드형 인프라
+ SDK, 언어, 프레임워크, 도구
+ / 
+ 콘솔
+ English 
+ Deutsch 
+ Español 
+ Español – América Latina 
+ Français 
+ Indonesia 
+ Italiano 
+ Português 
+ Português – Brasil 
+ עברית 
+ 中文 – 简体 
+ 中文 – 繁體 
+ 日本語 
+ 한국어 
+ 로그인 
+ 기술 영역
+ 더보기
+ 크로스 프로덕트 도구
+ 더보기
+ 콘솔
+ AI 및 ML
+ 애플리케이션 개발
+ 애플리케이션 호스팅
+ 컴퓨팅
+ 데이터 분석 및 파이프라인
+ 데이터베이스
+ 분산, 하이브리드, 멀티 클라우드
+ 업종별 솔루션
+ 이전
+ 네트워킹
+ 모니터링 가능성 및 모니터링
+ 보안
+ Storage
+ 액세스 및 리소스 관리
+ 비용 및 사용량 관리
+ 코드형 인프라
+ SDK, 언어, 프레임워크, 도구
+ Google은 AI 기술을 사용하여 콘텐츠를 사용자의 기본 언어로 번역합니다. AI 번역에는 오류가 있을 수 있습니다.
+ Home
+ 컬렉션을 사용해 정리하기
+ 내 환경설정을 기준으로 콘텐츠를 저장하고 분류하세요.
+ Google Cloud 문서
+ / 
+ Google Cloud 시작하기 
+ Google Cloud 개요 
+ $300의 무료 크레딧으로 빌드 시작
+ 20개 이상의 무료 등급 제품으로 다음 프로젝트 시작
+ Cloud 아키텍처 센터 
+ 추천 제품 AI 및 ML 애플리케이션 개발 애플리케이션 호스팅 컴퓨팅 데이터 애널리틱스 데이터베이스 분산, 하이브리드, 멀티 클라우드 업종별 솔루션 마이그레이션 네트워킹 관측 가능성 및 모니터링 보안 스토리지 교차 제품 
+ 언어, 프레임워크, 도구
+ gcloud CLI
+ Python
+ Java
+ Go
+ JavaScript 및 Node.js
+ C# 및 .NET
+ PHP
+ C++
+ Ruby
+ Rust
+ 봄
+ Terraform
+ Prometheus
+ Kubernetes
+ Google Cloud의 새로운 소식
+ Google Cloud 제품에 관한 최신 소식은 문서의 새로운 소식 을 참조하세요.
+ 이벤트 
+ Agents for Impact 해커톤 - Sunnyvale, 2026년 11월 17일
+ 집중적인 실습 스프린트에서 동료 및 Google Cloud 전문가와 협력하여 BigQuery, Gemini 모델, 에이전트 개발 키트를 사용하여 실제 에이전트 AI 솔루션을 빌드하고 배포하세요.
+ Cloud 아키텍처 센터 
+ 클라우드 워크로드에 최적화된 스토리지 전략 설계
+ 워크로드 요구사항을 평가하고 Compute Engine Hyperdisk, Cloud Storage, Managed Lustre, NetApp Volumes에서 최적의 블록, 파일, 객체 스토리지 서비스를 선택합니다.
+ 블로그 
+ AI 코딩 에이전트를 위한 Google Cloud Developer 플러그인 소개
+ Google Cloud용 에이전트 스킬과 Developer Knowledge MCP 서버를 번들로 제공하는 오픈 표준 google-cloud-developer 플러그인을 사용하여 AI 코딩 에이전트를 장착하세요.
+ [[["이해하기 쉬움","easyToUnderstand","thumb-up"],["문제가 해결됨","solvedMyProblem","thumb-up"],["기타","otherUp","thumb-up"]],[["이해하기 어려움","hardToUnderstand","thumb-down"],["잘못된 정보 또는 샘플 코드","incorrectInformationOrSampleCode","thumb-down"],["필요한 정보/샘플이 없음","missingTheInformationSamplesINeed","thumb-down"],["번역 문제","translationIssue","thumb-down"],["기타","otherDown","thumb-down"]],[],[],[]]
+ 제품 및 가격 책정
+ 모든 제품 보기
+ Google Cloud 가격 책정
+ Google Cloud Marketplace
+ 영업팀에 문의
+ 지원
+ 커뮤니티 포럼
+ 지원
+ 출시 노트
+ 시스템 상태
+ 리소스
+ GitHub
+ Google Cloud 시작하기
+ 코드 샘플
+ 클라우드 아키텍처 센터
+ 교육 및 자격증
+ 참여
+ 블로그
+ 이벤트
+ X(트위터)
+ YouTube의 Google Cloud 채널
+ Google Cloud Tech의 YouTube 채널
+ Android
+ Chrome
+ Firebase
+ Google AI
+ Google 정보
+ 개인정보처리방침
+ 사이트 약관
+ Google Cloud 약관
+ Manage cookies
+ Google의 기후 행동 30년: 동참하기
+ Google Cloud 뉴스레터 구독하기 
+ 구독
+ English 
+ Deutsch 
+ Español 
+ Español – América Latina 
+ Français 
+ Indonesia 
+ Italiano 
+ Português 
+ Português – Brasil 
+ עברית 
+ 中文 – 简体 
+ 中文 – 繁體 
+ 日本語 
+ 한국어
+
+=== [pricing2] https://cloud.google.com/products/gemini-enterprise-agent-platform/pricing?hl=ko/ (lang=ko)
+Gemini 플랫폼 가격 책정 | Google Cloud 
+ 페이지 콘텐츠 
+ Gemini 플랫폼 가격 책정
+ 가격은 미국 달러(USD)로 표기됩니다. USD 외의 통화로 지불하는 경우 Cloud Platform SKU 에 해당 통화로 표기된 가격이 적용됩니다.
+ Gemini 플랫폼 가격 책정과 기존 제품의 가격 책정 비교
+ Gemini 플랫폼의 비용은 Gemini 플랫폼이 대체하는 기존 AI Platform 및 AutoML 제품의 비용과 동일하게 유지됩니다. 단, 다음은 제외됩니다.
+ Gemini 플랫폼의 기존 추론과 AutoML Tables 예측은 Gemini 플랫폼의 추론과 AutoML 테이블 형식에 지원되지 않는 더 저렴하고 성능이 떨어지는 머신 유형을 지원했습니다.
+ Gemini 플랫폼의 기존 추론은 Gemini 플랫폼의 추론에서 지원되지 않는 Scale-to-zero 를 지원했습니다.
+ 또한 Gemini 플랫폼은 다음과 같이 비용을 최적화하는 다양한 방법을 제공합니다.
+ 최적화된 TensorFlow 런타임 
+ 공동 호스팅 모델 지원
+ 학습 및 예측에 대한 최소 사용 기간이 없습니다. 대신 30초 단위로 사용 비용이 청구됩니다.
+ Gemini 플랫폼의 생성형 AI 가격 책정
+ Gemini 플랫폼의 생성형 AI 가격 책정 정보는  Gemini 플랫폼의 생성형 AI 가격 책정 을 참조하세요.
+ AutoML 모델 가격 책정
+ Gemini 플랫폼의 AutoML 모델의 경우 다음 세 가지 주요 활동에 대한 비용이 청구됩니다.
+ 모델 학습
+ 엔드포인트에 모델 배포하기
+ 모델을 사용하여 예측
+ Gemini 플랫폼은 Gemini 플랫폼의 AutoML 모델에 사전 정의된 머신 구성을 사용하며 이러한 활동의 시간당 요금에 리소스 사용량이 반영됩니다.
+ 모델 학습에 필요한 시간은 학습 데이터의 규모와 복잡성에 따라 달라집니다. 모델에서 온라인 예측 또는 온라인 설명을 제공하려면 먼저 모델을 배포해야 합니다.
+ 예측이 생성되지 않더라도 엔드포인트에 배포된 각 모델마다 요금을 지불해야 합니다. 추가 요금이 발생하지 않도록 하려면 모델의 배포를 취소해야 합니다. 배포되지 않았거나 배포에 실패한 모델에는 요금이 청구되지 않습니다.
+ 사용된 컴퓨팅 시간에 대해서만 비용을 지불합니다. 따라서 사용자 취소 이외의 다른 이유로 학습에 실패한 경우 해당 시간에 대한 요금은 청구되지 않습니다. 사용자가 작업을 취소하는 경우에는 학습 시간에 해당하는 비용이 청구됩니다.
+ 가격 책정 정보를 보려면 아래에서 모델 유형을 선택하세요.
+ 이미지 데이터 
+ 할인 옵션 표시 
+ 매시간 매시간 
+ 매월 매월 
+ 작업
+ 가격 (분류) (USD)
+ * info 
+ 사용 모델 ID:
+ 7754-699E-0EBF
+ Gemini Enterprise Flexible Savings Plan - 1 Year * (USD) info 
+ 사용 모델 ID:
+ BBB5-D209-3835
+ Gemini Enterprise Flexible Savings Plan - 3 Year * (USD) info 
+ 사용 모델 ID:
+ C109-C9C0-A044
+ 가격 (객체 감지) (USD)
+ * info 
+ 사용 모델 ID:
+ 7754-699E-0EBF
+ Gemini Enterprise Flexible Savings Plan - 1 Year * (USD) info 
+ 사용 모델 ID:
+ BBB5-D209-3835
+ Gemini Enterprise Flexible Savings Plan - 3 Year * (USD) info 
+ 사용 모델 ID:
+ C109-C9C0-A044
+ 교육
+ US$3.465 / 1 hour US$3.1185 / 1 hour US$2.772 / 1 hour US$3.465 / 1 hour US$3.1185 / 1 hour US$2.772 / 1 hour 
+ 학습(에지 기기 전용 모델)
+ US$18.00 / 1 hour US$16.20 / 1 hour US$14.40 / 1 hour US$18.00 / 1 hour US$16.20 / 1 hour US$14.40 / 1 hour 
+ 배포 및 온라인 예측
+ US$1.375 / 1 hour US$1.2375 / 1 hour US$1.10 / 1 hour US$2.002 / 1 hour US$1.8018 / 1 hour US$1.6016 / 1 hour 
+ 일괄 예측
+ US$2.222 / 1 hour US$1.9998 / 1 hour US$1.7776 / 1 hour US$2.222 / 1 hour US$1.9998 / 1 hour US$1.7776 / 1 hour 
+ * 각 소비 모델에는 고유 ID가 있습니다. 소비 모델 할인을 받으려면 선택해야 할 수 있습니다. 자세히 알아보려면 여기 를 클릭하세요.
+ 테이블 형식 데이터 
+ 할인 옵션 표시 
+ 매시간 매시간 
+ 매월 매월 
+ 작업
+ 분류/회귀에 대한 노드 시간당 가격
+ * (USD) info 
+ 사용 모델 ID:
+ 7754-699E-0EBF
+ Gemini Enterprise Flexible Savings Plan - 1 Year * (USD) info 
+ 사용 모델 ID:
+ BBB5-D209-3835
+ Gemini Enterprise Flexible Savings Plan - 3 Year * (USD) info 
+ 사용 모델 ID:
+ C109-C9C0-A044
+ 예측 가격
+ 교육
+ US$21.252 / 1 hour US$19.1268 / 1 hour US$17.0016 / 1 hour Gemini 플랫폼의 예측 을 참조하세요.
+ 추론
+ 커스텀 학습 모델 추론 과 동일한 가격.
+ Gemini 플랫폼은 40개의 n1-highmem-8 머신을 사용하여 일괄 추론을 수행합니다.
+ Gemini 플랫폼의 예측 을 참조하세요.
+ * 각 소비 모델에는 고유 ID가 있습니다. 소비 모델 할인을 받으려면 선택해야 할 수 있습니다. 자세히 알아보려면 여기 를 클릭하세요.
+ Gemini 플랫폼의 설명 가능한 AI 추론 요금 
+ Gemini 플랫폼의 설명 가능한 AI와 연결된 컴퓨팅에는 추론과 동일한 요금이 청구됩니다. 하지만 설명은 일반적인 추론보다 처리 시간이 오래 걸리므로 Gemini 플랫폼에서 설명 가능한 AI를 자동 확장과 함께 과도하게 사용할 경우 많은 노드가 시작되어 추론 요금이 증가할 수 있습니다.
+ Gemini 플랫폼의 예측
+ AutoML 
+ 할인 옵션 표시 
+ 매시간 매시간 
+ 매월 매월 
+ 단계
+ 가격 책정
+ * (USD) info 
+ 사용 모델 ID:
+ 7754-699E-0EBF
+ Gemini Enterprise Flexible Savings Plan - 1 Year * (USD) info 
+ 사용 모델 ID:
+ BBB5-D209-3835
+ Gemini Enterprise Flexible Savings Plan - 3 Year * (USD) info 
+ 사용 모델 ID:
+ C109-C9C0-A044
+ 예측
+ 0 count to 1,000,000 count
+ US$0.20 / 1,000 count, per 1 month / account
+ 1,000,000 count to 50,000,000 count
+ US$0.10 / 1,000 count, per 1 month / account
+ 50,000,000 count and above
+ US$0.02 / 1,000 count, per 
+
+=== [meta] https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/featurestore?hl=ko
+html lang: ko-x-mtfrom-en
+hreflang: de, de-cn, en, en-cn, es-419, es-419-cn, fr, fr-cn, he, he-cn, id, id-cn, it, it-cn, ja, ja-cn, ko, ko-cn, pt-br, pt-br-cn, x-default, zh-hans, zh-hans-cn, zh-hant, zh-hant-cn
+화면에 보이는 언어 이름: 한국어, English, 日本語, 中文, Español, Français, Deutsch, Português, Italiano

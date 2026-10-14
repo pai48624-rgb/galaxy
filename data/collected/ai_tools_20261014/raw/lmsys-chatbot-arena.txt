@@ -1,0 +1,121 @@
+=== [home] https://arena.ai/ (lang=en)
+Arena AI: The Official AI Ranking & LLM Leaderboard 
+ New Chat 
+ Leaderboard New 
+ Search 
+ Follow us for the latest in AI news and advancements For the latest in AI news 
+ Experience the frontier 
+ Experience the frontier 
+ Get started Create a landing page Create a sleek, modern landing page Build a dashboard Turn data into interactive charts Make a game Build a playable browser game Design to Code Upload an image and have AI build it Build a fullstack app Create a templated full-stack app Launch a storefront Create a beautiful online shop 
+ Battle
+ Battle ModeBattle 2 anonymous models Agent ModeBuilt for complex tasks Side by SideCompare 2 models of your choice DirectChat with 1 model at a time Auto 
+ Inputs are processed by third-party AI and responses may be inaccurate.
+
+=== [pricing] https://arena.ai/pricing (lang=en)
+404
+ Sorry, we cannot find the page you are looking for.
+ Start New Chat View Leaderboard 
+ Arena | Benchmark & Compare the Best AI Models
+
+=== [pricing] https://arena.ai/pricing (lang=en)
+404
+ Sorry, we cannot find the page you are looking for.
+ Start New Chat View Leaderboard 
+ Arena | Benchmark & Compare the Best AI Models
+
+=== [pricing] https://arena.ai/plans (lang=en)
+404
+ Sorry, we cannot find the page you are looking for.
+ Start New Chat View Leaderboard 
+ Arena | Benchmark & Compare the Best AI Models
+
+=== [meta] https://arena.ai/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/lm-sys/FastChat
+# FastChat
+| [**Demo**](https://lmarena.ai/) | [**Discord**](https://discord.gg/6GXcFg3TH8) | [**X**](https://x.com/lmsysorg) |
+
+FastChat is an open platform for training, serving, and evaluating large language model based chatbots.
+- FastChat powers Chatbot Arena ([lmarena.ai](https://lmarena.ai)), serving over 10 million chat requests for 70+ LLMs.
+- Chatbot Arena has collected over 1.5M human votes from side-by-side LLM battles to compile an online [LLM Elo leaderboard](https://lmarena.ai/?leaderboard).
+
+FastChat's core features include:
+- The training and evaluation code for state-of-the-art models (e.g., Vicuna, MT-Bench).
+- A distributed multi-model serving system with web UI and OpenAI-compatible RESTful APIs.
+
+## News
+- [2024/03] 🔥 We released Chatbot Arena technical [report](https://arxiv.org/abs/2403.04132).
+- [2023/09] We released **LMSYS-Chat-1M**, a large-scale real-world LLM conversation dataset. Read the [report](https://arxiv.org/abs/2309.11998).
+- [2023/08] We released **Vicuna v1.5** based on Llama 2 with 4K and 16K context lengths. Download [weights](#vicuna-weights).
+- [2023/07] We released **Chatbot Arena Conversations**, a dataset containing 33k conversations with human preferences. Download it [here](https://huggingface.co/datasets/lmsys/chatbot_arena_conversations).
+
+<details>
+<summary>More</summary>
+
+- [2023/08] We released **LongChat v1.5** based on Llama 2 with 32K context lengths. Download [weights](#longchat).
+- [2023/06] We introduced **MT-bench**, a challenging multi-turn question set for evaluating chatbots. Check out the blog [post](https://lmsys.org/blog/2023-06-22-leaderboard/).
+- [2023/06] We introduced **LongChat**, our long-context chatbots and evaluation tools. Check out the blog [post](https://lmsys.org/blog/2023-06-29-longchat/).
+- [2023/05] We introduced **Chatbot Arena** for battles among LLMs. Check out the blog [post](https://lmsys.org/blog/2023-05-03-arena).
+- [2023/03] We released **Vicuna: An Open-Source Chatbot Impressing GPT-4 with 90% ChatGPT Quality**. Check out the blog [post](https://vicuna.lmsys.org).
+
+</details>
+
+<a href="https://lmarena.ai"><img src="assets/demo_narrow.gif" width="70%"></a>
+
+## Contents
+- [Install](#install)
+- [Model Weights](#model-weights)
+- [Inference with Command Line Interface](#inference-with-command-line-interface)
+- [Serving with Web GUI](#serving-with-web-gui)
+- [API](#api)
+- [Evaluation](#evaluation)
+- [Fine-tuning](#fine-tuning)
+- [Citation](#citation)
+
+## Install
+
+### Method 1: With pip
+
+```bash
+pip3 install "fschat[model_worker,webui]"
+```
+
+### Method 2: From source
+
+1. Clone this repository and navigate to the FastChat folder
+```bash
+git clone https://github.com/lm-sys/FastChat.git
+cd FastChat
+```
+
+If you are running on Mac:
+```bash
+brew install rust cmake
+```
+
+2. Install Package
+```bash
+pip3 install --upgrade pip  # enable PEP 660 support
+pip3 install -e ".[model_worker,webui]"
+```
+
+## Model Weights
+### Vicuna Weights
+[Vicuna](https://lmsys.org/blog/2023-03-30-vicuna/) is based on Llama 2 and should be used under Llama's [model license](https://github.com/facebookresearch/llama/blob/main/LICENSE).
+
+You can use the commands below to start chatting. It will automatically download the weights from Hugging Face repos.
+Downloaded weights are stored in a `.cache` folder in the user's home folder (e.g., `~/.cache/huggingface/hub/<model_name>`).
+
+See more command options and how to handle out-of-memory in the "Inference with Command Line Interface" section below.
+
+**NOTE: `transformers>=4.31` is required for 16K versions.**
+
+| Size | Chat Command | Hugging Face Repo |
+| ---  | --- | --- |
+| 7B   | `python3 -m fastchat.serve.cli --model-path lmsys/vicuna-7b-v1.5`  | [lmsys/vicuna-7b-v1.5](https://huggingface.co/lmsys/vicuna-7b-v1.5)   |
+| 7B-16k   | `python3 -m fastchat.serve.cli --model-path lmsys/vicuna-7b-v1.5-16k`  | [lmsys/vicuna-7b-v1.5-16k](https://huggingface.co/lmsys/vicuna-7b-v1.5-16k)   |
+| 13B  | `python3 -m fastchat.serve.cli --model-path lmsys/vicuna-13b-v1.5` | [lmsys/vicuna-13b-v1.5](https://huggingface.co/lmsys/vicuna-13b-v1.5) |
+| 13B-16k  | `python3 -m fastchat.serve.cli --model-path lmsys/vicuna-13b-v1.5-16k` | [lmsys/vicuna

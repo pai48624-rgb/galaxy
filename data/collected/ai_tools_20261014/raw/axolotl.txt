@@ -1,0 +1,235 @@
+=== [home] https://docs.axolotl.ai (lang=en)
+Axolotl 
+ Home 
+ Home 
+ Getting Started 
+ Quickstart 
+ Which Fine-Tuning Method Should I Use? 
+ Installation 
+ Inference and Merging 
+ Support Matrix 
+ Model Guides 
+ K2-Horizon 
+ Nex-N2.5 
+ MiniCPM5 
+ Ling 3.0 
+ Muse Glimmer 
+ North Micro Vision Instruct 
+ Shieldstral 
+ Kimi Linear 
+ Plano Orchestrator 
+ MiMo 
+ InternVL 3.5 
+ PaddleOCR-VL 
+ OLMo 3 
+ Trinity 
+ Arcee AFM 
+ Mistral Medium 3.5 
+ Mistral Small 4 
+ Ministral3 
+ Ministral3 
+ Ministral 3 Thinking 
+ Ministral 3 Vision 
+ Magistral 
+ Magistral 
+ Magistral Thinking 
+ Magistral Vision 
+ Ministral 
+ Mistral Small 3.1/3.2 
+ Voxtral 
+ Devstral 
+ Mistral 7B 
+ Llama 4 
+ Llama 2 
+ Qwen 3.8 Flash Next 
+ Qwen 3.5 
+ Qwen 3 Next 
+ Qwen 3 
+ Gemma 4 
+ Gemma 3n 
+ GLM-4.7-Flash 
+ GLM-4.6V 
+ GLM-4.5-Air 
+ Apertus 
+ GPT-OSS 
+ Seed-OSS 
+ Phi 
+ SmolVLM 2 
+ Granite 4 
+ Liquid Foundation Models 2 
+ Hunyuan 
+ Jamba 
+ Orpheus 
+ Command Line Interface (CLI) 
+ Telemetry 
+ Config Reference 
+ API Reference 
+ Dataset Formats 
+ Pre-training 
+ Instruction Tuning 
+ Conversation 
+ Stepwise Supervised Format 
+ Template-Free 
+ Custom Pre-Tokenized Dataset 
+ Deployments 
+ Docker 
+ Offline and Air-Gapped Deployment 
+ Multi-GPU 
+ Multi Node 
+ Ray Train 
+ SkyPilot 
+ Hugging Face Jobs 
+ Nebius Serverless Jobs 
+ AMD GPUs on HPC Systems 
+ Mac M-series 
+ How To Guides 
+ MultiModal / Vision Language Models (BETA) 
+ RLHF 
+ Native diffusion language-model training 
+ GRPO Training 
+ EBFT Training 
+ vLLM Serving for GRPO Training 
+ Reward Modelling 
+ Learning Rate Groups 
+ LoRA 
+ LoRA Optimizations 
+ Dataset Loading 
+ Quantization Aware Training (QAT) 
+ Quantization with torchao 
+ Exporting to GGUF 
+ NVFP4 MoE LoRA 
+ 1.58-bit Finetuning 
+ Optimizations Guide 
+ Core Concepts 
+ Batch size vs Gradient accumulation 
+ Dataset Preprocessing 
+ Streaming Datasets 
+ Multipack (Sample Packing) 
+ Mixed Precision Training 
+ Optimizers 
+ Attention 
+ Advanced Features 
+ FSDP + QLoRA 
+ PyTorch ao 
+ Custom Integrations 
+ Context Parallelism 
+ Gradient Checkpointing, Activation Offloading, and Layer Offloading 
+ N-D Parallelism (Beta) 
+ MoE Expert Quantization 
+ Troubleshooting 
+ FAQ 
+ Training Stability & Debugging 
+ Debugging 
+ NCCL 
+ On this page
+ 🎉 Latest Updates 
+ ✨ Overview 
+ 🚀 Quick Start - LLM Fine-tuning in Minutes 
+ Google Colab 
+ Installation 
+ Your First Fine-tune 
+ 📚 Documentation 
+ AI Agent Support 
+ 🤝 Getting Help 
+ 🌟 Contributing 
+ 📈 Telemetry 
+ ❤️ Sponsors 
+ 📝 Citing Axolotl 
+ 📜 License 
+ A Free and Open Source LLM Fine-tuning Framework 
+ 🎉 Latest Updates
+ 2026/10:
+ Distributed training improvements keep EP groups node-local when the topology permits, add DeepSpeed Ulysses support through context_parallel_size , and fix expert-LoRA resume and FSDP2 activation checkpointing with LoRA.
+ 2026/09:
+ New model support has been added in Axolotl for MiniCPM5 , Nex-N2.5-mini , Qwen3.6 , Qwen3.8-Flash-Next , and K2 Horizon .
+ CPU-staged FSDP2 QLoRA loading lets you load models larger than a single GPU’s memory without materializing a full quantized replica on each GPU.
+ GGUF export is now available via axolotl export , with optional quantization for deployment with llama.cpp and Ollama.
+ NVFP4 LoRA now supports native TorchAO dense weights and merge-aware training, optimizing against the quantized merged weights for deployment.
+ New training options: MixLoRA adds routed LoRA experts to dense models, and Dynamic Fine-Tuning (DFT) weights the SFT loss by token probability.
+ Ringmaster context parallelism adds Ulysses and combined Ulysses/Ring (USP) support, sample packing, and CP fixes for GDN, KDA, and Mamba/Mamba2 models.
+ Torch all-to-all Expert Parallelism enables MoE training over NVLink or PCIe without requiring DeepEP. Expanded N-D parallelism supports EP with FSDP2, HSDP, and context parallelism, plus FSDP2 + tensor parallelism.
+ Selective activation checkpointing adds rules to save specific projections or large matrix multiplications, with optional CPU offload to tune the memory/recomputation tradeoff.
+ Improved plugin integration includes new cloud provider interfaces for launching training jobs, with support for Nebius Serverless Jobs .
+ 2026/08:
+ New model support has been added in Axolotl for Ling 3.0 , Muse Glimmer , North Micro Vision Instruct and Shieldstral .
+ 2026/07:
+ NVFP4 (4-bit) MoE LoRA training is now supported via ScatterMoE (W4A16) and SonicMoE (W4A4), including adapter merge back into a plain NVFP4 checkpoint.
+ 2026/06:
+ Expert Parallelism (EP) for distributed MoE training via DeepEP, remote training through Tinker-compatible APIs , Context Parallelism for hybrid SSM models (Nemotron-H, Falcon-H1, Bamba), BitNet 1.58-bit fine-tuning, and a multimodal assistant-only loss-masking fix .
+Expand older updates
+ 2026/04:
+ New model support has been added in Axolotl for Mistral Medium 3.5 and Gemma 4 .
+ New RL and kernels: Async GRPO (up to 58% faster steps), Flash Attention 4 , NeMo Gym , and EBFT .
+ Axolotl is now uv-first and has SonicMoE fused LoRA support.
+ 2026/03:
+ New model support has been added in Axolotl for Mistral Small 4 , Qwen3.5, Qwen3.5 MoE , GLM-4.7-Flash , GLM-4.6V , and GLM-4.5-Air .
+ MoE expert quantization support (via quantize_moe_experts: true ) greatly reduces VRAM when training MoE models (FSDP2 compat).
+ 2026/02:
+ ScatterMoE LoRA support. LoRA fine-tuning directly on MoE expert weights using custom Triton kernels.
+ Axolotl now has support for SageAttention and GDPO (Generalized DPO).
+ 2026/01:
+ New integration for EAFT (Entropy-Aware Focal Training), weights loss by entropy of the top-k logit distribution, and Scalable Softmax , improves long context in attention.
+ 2025/12:
+ Axolotl now includes support for Kimi-Linear , Plano-Orchestrator , MiMo , InternVL 3.5 , Olmo3 , Trinity , and Ministral3 .
+ Distributed Muon Optimizer support has been added for FSDP2 pretraining.
+ 2025/10: New model support has been added in Axolotl for: Qwen3 Next , Qwen2.5-vl, Qwen3-vl , Qwen3, Qwen3MoE , Granite 4 , HunYuan , Magistral 2509 , Apertus , and Seed-OSS .
+ 2025/09: Axolotl now has text diffusion training. Read more here .
+ 2025/08: QAT has been updated to include NVFP4 support. See PR .
+ 2025/07:
+ ND Parallelism support has been added into Axolotl. Compose Context Parallelism (CP), Tensor Parallelism (TP), and Fully Sharded Data Parallelism (FSDP) within a single node and across multiple nodes. Check out the blog post for more info.
+ Axolotl adds more models: GPT-OSS , Gemma 3n , Liquid Foundation Model 2 (LFM2) , and Arcee Foundation Models (AFM) .
+ FP8 finetuning with fp8 gather op is now possible in Axolotl via torchao . Get started here !
+ Voxtral , Magistral 1.1 , and Devstral with mistral-common tokenizer support has been integrated in Axolotl!
+ TiledMLP support for single-GPU to multi-GPU training with DDP, DeepSpeed and FSDP support has been added to support Arctic Long Sequence Training. (ALST). See examples for using ALST with Axolotl!
+ 2025/06: Magistral with mistral-common tokenizer support has been added to Axolotl. See docs to start training your own Magistral models with Axolotl!
+ 2025/05: Quantization Aware Training (QAT) support has been added to Axolotl. Explore the docs to learn more!
+ 2025/04: Llama 4 support has been added in Axolotl. See docs to start training your own Llama 4 models with Axolotl’s linearized version!
+ 2025/03: Axolotl has implemented Sequence Parallelism (SP) support. Read the blog and docs to learn how to scale your context length when fine-tuning.
+ 2025/03: (Beta) Fine-tuning Multimoda
+
+=== [meta] https://docs.axolotl.ai
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/axolotl-ai-cloud/axolotl
+<p align="center">
+    <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/axolotl-ai-cloud/axolotl/887513285d98132142bf5db2a74eb5e0928787f1/image/axolotl_logo_digital_white.svg">
+        <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/axolotl-ai-cloud/axolotl/887513285d98132142bf5db2a74eb5e0928787f1/image/axolotl_logo_digital_black.svg">
+        <img alt="Axolotl" src="https://raw.githubusercontent.com/axolotl-ai-cloud/axolotl/887513285d98132142bf5db2a74eb5e0928787f1/image/axolotl_logo_digital_black.svg" width="400" height="104" style="max-width: 100%;">
+    </picture>
+</p>
+  <p align="center">
+      <strong>A Free and Open Source LLM Fine-tuning Framework</strong><br>
+  </p>
+
+<p align="center">
+    <img src="https://img.shields.io/github/license/axolotl-ai-cloud/axolotl.svg?color=blue" alt="GitHub License">
+    <img src="https://github.com/axolotl-ai-cloud/axolotl/actions/workflows/tests.yml/badge.svg" alt="tests">
+    <a href="https://codecov.io/gh/axolotl-ai-cloud/axolotl"><img src="https://codecov.io/gh/axolotl-ai-cloud/axolotl/branch/main/graph/badge.svg" alt="codecov"></a>
+    <a href="https://github.com/axolotl-ai-cloud/axolotl/releases"><img src="https://img.shields.io/github/release/axolotl-ai-cloud/axolotl.svg" alt="Releases"></a>
+    <br/>
+    <a href="https://github.com/axolotl-ai-cloud/axolotl/graphs/contributors"><img src="https://img.shields.io/github/contributors-anon/axolotl-ai-cloud/axolotl?color=yellow&style=flat-square" alt="contributors" style="height: 20px;"></a>
+    <img src="https://img.shields.io/github/stars/axolotl-ai-cloud/axolotl" alt="GitHub Repo stars">
+    <br/>
+    <a href="https://discord.com/invite/HhrNrHJPRb"><img src="https://img.shields.io/badge/discord-7289da.svg?style=flat-square&logo=discord" alt="discord" style="height: 20px;"></a>
+    <a href="https://twitter.com/axolotl_ai"><img src="https://img.shields.io/twitter/follow/axolotl_ai?style=social" alt="twitter" style="height: 20px;"></a>
+    <a href="https://colab.research.google.com/github/axolotl-ai-cloud/axolotl/blob/main/examples/colab-notebooks/colab-axolotl-example.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google-colab" style="height: 20px;"></a>
+    <br/>
+    <img src="https://github.com/axolotl-ai-cloud/axolotl/actions/workflows/docker-e2e.yml/badge.svg" alt="docker-e2e-tests">
+    <img src="https://github.com/axolotl-ai-cloud/axolotl/actions/workflows/tests-nightly.yml/badge.svg" alt="tests-nightly">
+    <img src="https://github.com/axolotl-ai-cloud/axolotl/actions/workflows/multi-gpu-e2e.yml/badge.svg" alt="multigpu-semi-weekly tests">
+</p>
+
+
+## 🎉 Latest Updates
+
+- 2026/10:
+  - [Distributed training improvements](https://github.com/axolotl-ai-cloud/axolotl/pull/4091) keep EP groups node-local when the topology permits, add DeepSpeed Ulysses support through `context_parallel_size`, and fix expert-LoRA resume and FSDP2 activation checkpointing with LoRA.
+- 2026/09:
+  - New model support has been added in Axolotl for [MiniCPM5](https://docs.axolotl.ai/docs/models/minicpm5.html), [Nex-N2.5-mini](https://docs.axolotl.ai/docs/models/nex-n2.5.html), [Qwen3.6](https://docs.axolotl.ai/docs/models/qwen3.5.html), [Qwen3.8-Flash-Next](https://docs.axolotl.ai/docs/models/qwen3.8-flash-next.html), and [K2 Horizon](https://docs.axolotl.ai/docs/models/k2-horizon.html).
+  - [CPU-staged FSDP2 QLoRA loading](https://docs.axolotl.ai/docs/expert_quantization.html#cpu-staged-fsdp2-qlora-loading) lets you load models larger than a single GPU's memory without materializing a full quantized replica on each GPU.
+  - [GGUF export](https://docs.axolotl.ai/docs/export.html) is now available via `axolotl export`, with optional quantization for deployment with llama.cpp and Ollama.
+  - [NVFP4 LoRA](https://docs.axolotl.ai/docs/nvfp4_lora.html) now supports native TorchAO dense weights and merge-aware training, optimizing against the quantized merged weights for deployment.
+  - New training options: [MixLoRA](https://github.com/axolotl-ai-cloud/axolotl/tree/main/src/axolotl/integrations/mixlora) adds routed LoRA experts to 

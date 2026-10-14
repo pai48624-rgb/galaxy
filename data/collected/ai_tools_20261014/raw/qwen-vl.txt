@@ -1,0 +1,209 @@
+=== [home] https://qwenlm.github.io/blog/qwen-vl/ (lang=en)
+Introducing Qwen-VL | Qwen 
+ We have a new blog!
+View this page at qwen.ai .
+ This page will automatically redirect in 5 seconds.
+ If you are not redirected automatically, please click the button below.
+ Go Now 
+ Blog 
+ Publication 
+ About 
+ Try Qwen Chat   
+ Introducing Qwen-VL
+ January 25, 2024  · 12 min · 2505 words · Qwen Team | Translations: 简体中文 
+ Along with the rapid development of our large language model Qwen, we leveraged Qwen’s capabilities and unified multimodal pretraining to address the limitations of multimodal models in generalization, and we opensourced multimodal model Qwen-VL in Sep. 2023. Recently, the Qwen-VL series has undergone a significant upgrade with the launch of two enhanced versions, Qwen-VL-Plus and Qwen-VL-Max. The key technical advancements in these versions include:
+ Substantially boost in image-related reasoning capabilities;
+ Considerable enhancement in recognizing, extracting, and analyzing details within images and texts contained therein;
+ Support for high-definition images with resolutions above one million pixels and images of various aspect ratios.
+ Model Name Model Description 
+ qwen-vl-plus Qwen's Enhanced Large Visual Language Model . Significantly upgraded for detailed recognition capabilities and text recognition abilities, supporting ultra-high pixel resolutions up to millions of pixels and arbitrary aspect ratios for image input. It delivers significant performance across a broad range of visual tasks. 
+ qwen-vl-max Qwen's Most Capable Large Visual Language Model . Compared to the enhanced version, further improvements have been made to visual reasoning and instruction-following capabilities, offering a higher level of visual perception and cognitive understanding. It delivers optimal performance on an even broader range of complex tasks. 
+ Compared to the open-source version of Qwen-VL, these two models perform on par with Gemini Ultra and GPT-4V in multiple text-image multimodal tasks, significantly surpassing the previous best results from open-source models.
+ Notably, Qwen-VL-Max outperforms both GPT-4V from OpenAI and Gemini from Google in tasks on Chinese question answering and Chinese text comprehension. This breakthrough underscores the model’s advanced capabilities and its potential to set new standards in the field of multimodal AI research and application.
+ Model DocVQA
+ Document understanding ChartQA
+ Chart understanding AI2D
+ Science diagrams TextVQA
+ Text reading MMMU
+ College-level problems MathVista
+ Mathematical reasoning MM-Bench-CN
+ Natural image QA in Chinese 
+ Other Best
+ Open-source LVLM 81.6%
+ (CogAgent) 68.4%
+ (CogAgent) 73.7%
+ (Fuyu-Medium) 76.1%
+ (CogAgent) 45.9%
+ (Yi-VL-34B) 36.7%
+ (SPHINX-V2) 72.4%
+ (InternLM-XComposer-VL) 
+ Gemini Pro 88.1% 74.1% 73.9% 74.6% 47.9% 45.2% 74.3% 
+ Gemini Ultra 90.9% 80.8% 1 79.5% 1 82.3% 1 59.4% 1 53.0% 1 - 
+ GPT-4V 88.4% 78.5% 78.2% 78.0% 56.8% 49.9% 73.9% 
+ Qwen-VL-Plus 91.4% 78.1% 75.9% 78.9% 45.2% 43.3% 68.0% 
+ Qwen-VL-Max 93.1% 1 79.8% 2 79.3% 2 79.5% 2 51.4% 3 50.0% 2 75.1% 1 
+ New versions of the Qwen-VL-Plus and Qwen-VL-Max models not only exhibit exceptional benchmark performance but also demonstrate a marked improvement in problem-solving capabilities within real-world scenarios. These advanced models effortlessly engage in dialogue, identify celebrities and landmarks, generate text, and notably, have significantly enhanced their abilities to describe and interpret visual content.
+ Here we present some practical examples:
+ 1. Basic Recognition Capabilities # 
+ The latest Qwen-VL models are now more adept at accurately describing and identifying complex information within images, as well as providing detailed background and answering related questions. For instance, Qwen-VL can recognize not only common objects, but also celebrities and landmarks. Qwen-VL can write poetry in various languages inspired by visuals, and analyze everyday screenshots.
+ Example: celebrity recognition 
+ Next 
+ User
+ who are they?
+ Qwen-VL
+ These are some of the most famous and highest-paid celebrities in the world. From left to right, top to bottom:
+ Justin Bieber (Canadian singer)
+ Lionel Messi (Argentine soccer player)
+ Cristiano Ronaldo (Portuguese soccer player)
+ Elon Musk (South African-born American entrepreneur and businessman)
+ Kylie Jenner (American media personality and socialite)
+ Taylor Swift (American singer-songwriter)
+ Robert Downey Jr. (American actor)
+ Scarlett Johansson (American actress)
+ It’s worth noting that this is just a small sample of the many talented and successful celebrities out there, and that fame and wealth are not the only measures of success or importance.
+ User
+ their chinese name?
+ Qwen-VL
+ Here are the Chinese names of the celebrities mentioned:
+ Justin Bieber: 贾斯汀·比伯
+ Lionel Messi: 莱昂内尔·梅西
+ Cristiano Ronaldo: 克里斯蒂亚诺·罗纳尔多
+ Elon Musk: 埃隆·马斯克
+ Kylie Jenner: 凯莉·詹娜
+ Taylor Swift: 泰勒·斯威夫特
+ Robert Downey Jr.: 小罗伯特·唐尼
+ Scarlett Johansson: 斯嘉丽·约翰逊
+ Note that these are just one possible translation of their names into Chinese, and there may be other variations used in different contexts or regions.
+ Example: landmark recognition 
+ Next 
+ User
+ Where is it in the picture? How did you recognize it?
+ Qwen-VL
+ The picture shows a busy street at night in New York City, USA. The Empire State Building can be seen in the background, which is a distinctive landmark of New York City. Therefore, I recognized it as New York City.
+ Example: poem writing 
+ Next 
+ User
+ Look at pictures and write a poem.
+ Qwen-VL
+ A rocky crag by the sea,
+A place of solitude and mystery.
+The water calm and blue,
+Reflecting the sky above, anew.
+ The mountain stands tall and proud,
+Its peak reaching towards the clouds.
+A symbol of strength and resilience,
+Enduring through time’s relentless persistence.
+ The world around may change and shift,
+But this mountain remains steadfast and uplifted.
+A reminder to us all,
+To stand firm in our own personal call.
+ So let us take a moment to pause,
+And appreciate this natural cause.
+For in its beauty and grandeur,
+We find inspiration and renewal, forever.
+ Example: mobile app screenshot understanding 
+ Next 
+ User
+ Describe the image. 
+ Qwen-VL
+ The image is a screenshot of an app displaying a map of Beijing, China. The map is centered on the Summer Palace and Yuyuantan Park. The app provides directions for driving from Yuyuantan Park to the Summer Palace. It offers two options: one takes 22 minutes and the other takes 25 minutes. The app also indicates that there are local plate restrictions on the route.
+ 2. Visual Agent Capability: The Essential Role of Localization # 
+ Beyond its fundamental capabilities in description and recognition, Qwen-VL also has impressive abilities to pinpoint and query specific elements. For instance, it can accurately highlight the black cars within an image. Moreover, Qwen-VL is also equipped to make judgments, deductions, and decisions based on the prevailing context of a scene.
+ Example: Locate Whatever You Desire 
+ Next 
+ User
+ Locate the red car
+ Qwen-VL
+ The red car is located in the bottom right corner of the image.
+ Example: Contextually Anchored Image Description Generation 
+ Next 
+ User
+ What does the pointed news talk about?
+ Qwen-VL
+ The pointed news is about OpenAI’s chatbot ChatGPT having personalized instructions to store your preferences.
+ Example: Autonomous Driving 
+ Next 
+ User
+ The current vehicle speed is 150km/h. According to the picture, how should the vehicle operate?
+A. To accel
+
+=== [meta] https://qwenlm.github.io/blog/qwen-vl/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: English, 中文, 简体中文
+
+=== [github] https://github.com/QwenLM/Qwen-VL
+<p align="left">
+        <a href="README_CN.md">中文</a>&nbsp ｜ &nbspEnglish&nbsp&nbsp ｜ &nbsp<a href="README_JA.md">日本語</a>&nbsp｜ &nbsp<a href="README_KO.md">한국어</a>&nbsp
+</p>
+<br><br>
+
+<p align="center">
+    <img src="assets/logo.jpg" width="400"/>
+<p>
+<br>
+
+<p align="center">
+  Qwen-VL 
+  <a href="https://huggingface.co/Qwen/Qwen-VL">🤗</a>
+  <a href="https://modelscope.cn/models/qwen/Qwen-VL/summary">🤖</a>&nbsp ｜ 
+  Qwen-VL-Chat 
+  <a href="https://huggingface.co/Qwen/Qwen-VL-Chat">🤗</a>
+  <a href="https://modelscope.cn/models/qwen/Qwen-VL-Chat/summary">🤖</a>&nbsp 
+  (Int4: 
+  <a href="https://huggingface.co/Qwen/Qwen-VL-Chat-Int4">🤗</a> 
+  <a href="https://modelscope.cn/models/qwen/Qwen-VL-Chat-Int4/summary">🤖</a>&nbsp) ｜
+  Qwen-VL-Plus 
+  <a href="https://huggingface.co/spaces/Qwen/Qwen-VL-Plus">🤗</a> 
+  <a href="https://modelscope.cn/studios/qwen/Qwen-VL-Chat-Demo/summary">🤖</a>&nbsp ｜ 
+  Qwen-VL-Max 
+  <a href="https://huggingface.co/spaces/Qwen/Qwen-VL-Max">🤗</a>
+  <a href="https://modelscope.cn/studios/qwen/Qwen-VL-Max/summary">🤖</a>&nbsp
+<br>
+  <a href="https://tongyi.aliyun.com/qianwen">Web</a>&nbsp&nbsp | &nbsp&nbsp
+  <a href="http://ofasys-wlcb.oss-accelerate-overseas.aliyuncs.com/QwenVL/blog/app_qrcode.jpg">APP</a>&nbsp&nbsp | &nbsp&nbsp
+  <a href="https://help.aliyun.com/zh/dashscope/developer-reference/vl-plus-quick-start">API</a>&nbsp&nbsp | &nbsp&nbsp
+  <a href="https://github.com/QwenLM/Qwen/blob/main/assets/wechat.png">WeChat</a>&nbsp&nbsp | &nbsp&nbsp
+  <a href="https://discord.gg/CV4E9rpNSD">Discord</a>&nbsp&nbsp | &nbsp&nbsp
+  <a href="https://arxiv.org/abs/2308.12966">Paper</a>&nbsp&nbsp | &nbsp&nbsp
+  <a href="TUTORIAL.md">Tutorial</a>
+</p>
+<br><br>
+
+---
+## Qwen-VL-Plus & Qwen-VL-Max
+
+Qwen-Vl-Plus and Qwen-VL-Max are the upgraded and latest versions of the Qwen-VL model family, currently supporting access for free through <a href="https://huggingface.co/spaces/Qwen/Qwen-VL-Max">🤗</a>, <a href="https://modelscope.cn/studios/qwen/Qwen-VL-Max/summary">🤖</a>, [Web pages](https://qianwen.aliyun.com), [APP](http://ofasys-wlcb.oss-accelerate-overseas.aliyuncs.com/QwenVL/blog/app_qrcode.jpg) and [APIs](https://help.aliyun.com/zh/dashscope/developer-reference/vl-plus-quick-start/).
+
+| Model name | Model description |
+| --- | --- |
+| Qwen-VL-Plus | Qwen's **Enhanced Large Visual Language Model**. Significantly upgraded for detailed recognition capabilities and text recognition abilities, supporting ultra-high pixel resolutions up to millions of pixels and extreme aspect ratios for image input. It delivers **significant** performance across a broad range of visual tasks. |
+| Qwen-VL-Max | Qwen's **Most Capable Large Visual Language Model**. Compared to the enhanced version, further improvements have been made to visual reasoning and instruction-following capabilities, offering a higher level of visual perception and cognitive understanding. It delivers **optimal** performance on an even broader range of complex tasks. |
+
+The key technical advancements in these versions include:
+- Substantially boost in image-related **reasoning capabilities**;
+- Considerable enhancement in recognizing, extracting, and analyzing **details of images**, especially for text-oriented tasks;
+- Support for **high-definition images** with resolutions above one million pixels and extreme aspect ratios;
+
+These two models not only significantly surpass all previous best results from open-source LVLM models, but also perform on par with Gemini Ultra and GPT-4V in multiple text-image multimodal tasks.
+
+Notably, Qwen-VL-Max outperforms both GPT-4V from OpenAI and Gemini from Google in tasks on Chinese question answering and Chinese text comprehension. This breakthrough underscores the model’s advanced capabilities and its potential to set new standards in the field of multimodal AI research and application.
+
+<table>
+<thead>
+  <tr>
+    <th>Model</th>
+    <th>DocVQA</th>
+    <th>ChartQA</th>
+    <th>AI2D</th>
+    <th>TextVQA</th>
+    <th>MMMU</th>
+    <th>MathVista</th>
+    <th>MM-Bench-CN</th>
+  </tr>
+</thead>
+<tbody align="center">
+  <tr>
+    <td>Other Best<br>Open-source LVLM</td>
+    <td>81.6%<br><sup><sup>(CogAgent)</sup></sup></td>
+    <

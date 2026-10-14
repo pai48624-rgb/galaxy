@@ -1,0 +1,745 @@
+=== [home] https://wandb.ai/site (lang=en-US)
+Weights & Biases: The AI developer platform 
+ Learn More 
+ Learn more 
+ For more information or if you need help  retrieving your data , please contact Weights & Biases Customer Support at  support@wandb.com 
+ Skip to content 
+ Weave 
+ Close Weave 
+ Open Weave 
+ Traces
+ Explore and debug AI applications 
+ Evaluations
+ Rigorous evaluations of AI applications 
+ Playground 
+ Explore prompts and models 
+ Monitors
+ Continuously improve in production 
+ Solutions 
+ Close Solutions 
+ Open Solutions 
+ Use Cases
+ AI governance 
+ Computer vision 
+ Contact centers 
+ Evaluations 
+ Fine-tune LLMs 
+ Physical AI 
+ RAG 
+ Train LLMs 
+ Quant trading 
+ AI governance 
+ Computer vision 
+ Contact centers 
+ Evaluations 
+ Fine-tune LLMs 
+ Physical AI 
+ RAG 
+ Train LLMs 
+ Quant trading 
+ Industries
+ Autonomous Vehicles 
+ Communications 
+ Financial Services 
+ Healthcare & Life Sciences 
+ Public Sector 
+ Scientific Research 
+ Autonomous Vehicles 
+ Communications 
+ Financial Services 
+ Healthcare & Life Sciences 
+ Public Sector 
+ Scientific Research 
+ Case Studies
+ Canva
+ Learn how Canva leverages W&B to deploy models 
+ Microsoft
+ Learn how Microsoft uses W&B for their ML projects 
+ Toyota
+ Learn how Toyota uses W&B for autonomous driving 
+ Enterprise 
+ Close Enterprise 
+ Open Enterprise 
+ Security 
+ Deployment 
+ Performance 
+ Partners 
+ Support 
+ Security 
+ Deployment 
+ Performance 
+ Partners 
+ Support 
+ Resources 
+ Close Resources 
+ Open Resources 
+ AI SideQuest 
+ Blog 
+ Articles 
+ Podcast 
+ Whitepapers 
+ Events & Webinars 
+ Press 
+ AI SideQuest 
+ Blog 
+ Articles 
+ Podcast 
+ Whitepapers 
+ Events & Webinars 
+ Press 
+ Docs 
+ Pricing 
+ Contact 
+ LOG IN 
+ SIGN UP 
+ ko 
+ ja 
+ en 
+ de 
+ AI is
+ easy
+ to 
+ productionize
+ The AI developer platform to build AI agents, applications, 
+and models with confidence
+ W&B Weave: Build agentic AI applications 
+ import weave
+weave.init("quickstart")
+@weave.op()
+def llm_app(prompt):
+ pass # Track LLM calls, document retrieval, agent steps 
+ get started with weave 
+ REQUEST DEMO 
+ The world’s leading AI teams trust Weights & Biases
+ Meet our customers 
+ Now available:
+ Weights & Biases mobile app
+ The first iOS app to monitor AI experiments and track training runs anytime, anywhere.
+ Download now 
+ Compliance-ready for the enterprise
+ Weights & Biases AI development platform is certified under ISO/IEC 27001:2022, ISO/IEC 27017:2015, and ISO/IEC 27018:2019, and is compliant with SOC 2 and HIPAA standards. Our platform also helps customers comply with NIST 800-53 and we are in alignment with GDPR requirements for processing personal information.
+ Learn more about compliance with different deployment options:
+ Multi-tenant | Dedicated 
+ Certified under
+ ISO 27001:2022
+ ISO 27017:2015
+ ISO 27018:2019
+ Compliant with
+ SOC 2
+ HIPAA
+ NIST 800-53
+ GDPR
+ Get started with one line of code 
+ “I love Weave for a number of reasons. The fact that I could just add a library to our code and all of a sudden I’ve got a whole bunch of information about the GenAI portion of our product, in Weights & Biases, which I was already using and very familiar with. All those things that I’m watching for the performance of our AI, I can now report on quickly and easily with Weave.”
+ Mike Maloney, Co-founder and CDO 
+ Neuralift 
+ INTEGRATE QUICKLY 
+ LANGCHAIN 
+ LLAMAINDEX 
+ PyTorch 
+ HF Transformers 
+ Lightning 
+ TensorFlow 
+ Keras 
+ Scikit-LEARN 
+ XGBoost 
+ import openai, weave
+weave.init("weave-intro")
+@weave.op
+def correct_grammar(user_input):
+ client = openai.OpenAI()
+ response = client.chat.completions.create(
+ model="o1-mini",
+ messages=[{
+ "role": "user", 
+ "content": "Correct the grammar:\n\n" + 
+ user_input,
+ }],
+ )
+ return response.choices[0].message.content.strip()
+result = correct_grammar("That was peace of cake!")
+print(result) 
+ import weave
+from langchain_core.prompts import PromptTemplate
+from langchain_openai import ChatOpenAI
+# Initialize Weave with your project name
+weave.init("langchain_demo")
+llm = ChatOpenAI()
+prompt = PromptTemplate.from_template("1 + {number} = ")
+llm_chain = prompt | llm
+output = llm_chain.invoke({"number": 2})
+print(output) 
+ import weave
+from llama_index.core.chat_engine import SimpleChatEngine
+# Initialize Weave with your project name
+weave.init("llamaindex_demo")
+chat_engine = SimpleChatEngine.from_defaults()
+response = chat_engine.chat(
+ "Say something profound and romantic about fourth of July"
+)
+print(response) 
+ import wandb
+# 1. Start a new run
+run = wandb.init(project="gpt5")
+# 2. Save model inputs and hyperparameters
+config = run.config
+config.dropout = 0.01
+# 3. Log gradients and model parameters
+run.watch(model)
+for batch_idx, (data, target) in enumerate(train_loader):
+...
+ if batch_idx % args.log_interval == 0:
+ # 4. Log metrics to visualize performance
+ run.log({"loss": loss}) 
+ import wandb
+‍
+# 1. Define which wandb project to log to and name your run
+run = wandb.init(project="gpt-5",
+run_name="gpt-5-base-high-lr")
+‍
+# 2. Add wandb in your `TrainingArguments`
+args = TrainingArguments(..., report_to="wandb")
+‍
+# 3. W&B logging will begin automatically when your start training your Trainer
+trainer = Trainer(..., args=args)
+trainer.train() 
+ from lightning.pytorch.loggers import WandbLogger
+# initialise the logger
+wandb_logger = WandbLogger(project="llama-4-fine-tune")
+# add configs such as batch size etc to the wandb config
+wandb_logger.experiment.config["batch_size"] = batch_size
+# pass wandb_logger to the Trainer 
+trainer = Trainer(..., logger=wandb_logger)
+# train the model
+trainer.fit(...)
+ import wandb
+# 1. Start a new run
+run = wandb.init(project="gpt4")
+‍
+# 2. Save model inputs and hyperparameters
+config = wandb.config
+config.learning_rate = 0.01
+‍
+# Model training here
+# 3. Log metrics to visualize performance over time
+‍
+with tf.Session() as sess:
+# ...
+wandb.tensorflow.log(tf.summary.merge_all()) 
+ import wandb
+from wandb.keras import (
+ WandbMetricsLogger,
+ WandbModelCheckpoint,
+)
+‍
+# 1. Start a new run
+run = wandb.init(project="gpt-4")
+‍
+# 2. Save model inputs and hyperparameters
+config = wandb.config
+config.learning_rate = 0.01
+... # Define a model
+# 3. Log layer dimensions and metrics
+wandb_callbacks = [
+ WandbMetricsLogger(log_freq=5),
+ WandbModelCheckpoint("models"),
+]
+model.fit(
+ X_train, y_train, validation_data=(X_test, y_test),
+ callbacks=wandb_callbacks,
+) 
+ import wandb
+wandb.init(project="visualize-sklearn")
+‍
+# Model training here
+# Log classifier visualizations
+wandb.sklearn.plot_classifier(clf, X_train, X_test, y_train, y_test, y_pred, y_probas, labels,
+model_name="SVC", feature_names=None)
+‍
+# Log regression visualizations
+wandb.sklearn.plot_regressor(reg, X_train, X_test, y_train, y_test, model_name="Ridge")
+‍
+# Log clustering visualizations
+wandb.sklearn.plot_clusterer(kmeans, X_train, cluster_labels, labels=None, model_name="KMeans") 
+ import wandb
+from wandb.xgboost import wandb_callback
+‍
+# 1. Start a new run
+run = wandb.init(project="visualize-models")
+‍
+# 2. Add the callback
+bst = xgboost.train(param, xg_train, num_round, watchlist, callbacks=[wandb_callback()])
+‍
+# Get predictions
+pred = bst.predict(xg_test) 
+ Weights & Biases is now part of CoreWeave Forge
+ Looking for Weights & Biases models, training, and inference products?
+ Explore CoreWeave Forge to find these capabilities and learn what’s changing.
+ Explore CoreWeave Forge 
+ Read the FAQs 
+ X-twitter 
+ Linkedin-in 
+ Youtube 
+ The Platform
+ Traces 
+ Evaluations 
+ Playground 
+ Agents 
+ Guardrails 
+ Online Evaluations 
+ Models 
+ Experiments 
+ 
+
+=== [pricing] https://coreweave.com/forge-pricing (lang=en)
+CoreWeave Forge Pricing 
+ Announcement
+ Webinar
+ Podcast
+ GTC 2026
+ CoreWeave Forge is here: connect your AI loop and compound every improvement. Read more 
+ ← Main menu
+ CoreWeave Cloud
+ Main menu
+ The CoreWeave Cloud Platform
+ CoreWeave Cloud Platform →
+ The AI cloud purpose-built for training and serving models at scale
+ Why CoreWeave
+ Why CoreWeave
+ What sets our AI cloud apart
+ CoreWeave ARENA
+ Benchmark and showcase AI workloads on CoreWeave
+ CoreWeave Partner Network
+ Integrations, solutions, and expertise to accelerate production AI
+ Global AI data centers
+ Purpose-built AI data centers around the world
+ About us
+ Our company, mission, and leadership
+ CoreWeave Direct-to-Expert
+ Work directly with the engineers behind the platform
+ Trust Center
+ Security on every layer of your compute experience
+ Programs and Services
+ CoreWeave Ventures
+ Backing the next generation of AI companies
+ Physical AI Field Engineering
+ Embedded engineers, building physical AI with your team
+ Academic Research
+ Supporting researchers with access to GPU cloud and AI tooling
+ Zero Egress Migration (0EM)
+ Move your data to CoreWeave with zero egress fees
+ Infrastructure
+ Main menu
+ Infrastructure
+ Compute
+ GPU compute
+ The latest NVIDIA GPUs at cluster scale
+ NVIDIA Vera Rubin
+ NVIDIA Blackwell
+ NVIDIA Hopper
+ CPU compute
+ General-purpose compute for supporting workloads
+ Bare Metal Compute
+ Direct hardware access, no virtualization overhead
+ Networking
+ Networking
+ High-bandwidth, low-latency fabric for AI clusters
+ Storage
+ AI Object Storage
+ Object storage tuned for AI training and inference
+ Dedicated Storage
+ Dedicated VAST clusters for demanding data needs
+ Zero Egress Migration (0EM)
+ Move your data to CoreWeave with zero egress fees
+ Infrastructure Control
+ CoreWeave Kubernetes Service (CKS)
+ Managed Kubernetes built for AI workloads
+ Inference on CKS
+ Serve models on your own CKS clusters
+ Mission Control
+ Mission Control
+ Fleet health, monitoring, and control in one place
+ Fleet Lifecycle Controller
+ Automated lifecycle management for your fleet
+ Node Lifecycle Controller
+ Keep every node healthy and current
+ Observability
+ Metrics, logs, and traces across your clusters
+ Security
+ Protection built into every layer of the stack
+ Tensorizer
+ Load models faster with optimized serialization
+ Infrastructure Pricing › Log in 
+ CoreWeave Forge
+ Main menu
+ CoreWeave Forge
+ CoreWeave Forge →
+ Models, agents, training, and inference
+ Training
+ Weights & Biases Models
+ Track, compare, and reproduce every experiment
+ Serverless SFT
+ Fine-tune open models with nothing to provision
+ Serverless RL
+ Managed reinforcement learning, no stack to operate
+ Model Distillation
+ Preview
+ A smaller model, scored against the one you run
+ Inference
+ Serverless Inference
+ Open models on one API, billed per token
+ Dedicated Inference
+ Your weights on GPUs you choose, managed for you
+ Agent Development
+ Agent Lens
+ Preview
+ Observability that turns agent traces into fixes
+ Sandboxes
+ Isolated execution for agent and RL code
+ Tools
+ ARIA
+ A research agent that analyzes your runs
+ Registry
+ System of record for models, agents, and datasets
+ Notebooks
+ Reactive Python notebooks, connected to your runs
+ Forge Pricing › Log in 
+ Solutions
+ Main menu
+ Solutions by use case
+ Solutions by use case
+ Training
+ AI model training
+ Train large-scale AI models with purpose-built GPU infrastructure
+ Reinforcement learning
+ Post-train and optimize agents using reinforcement learning
+ Agentic AI and Inference
+ Agentic AI
+ Close the loop between training and inference to improve agent reliability
+ AI inference
+ Run low-latency AI inference with high-performance compute
+ Agent development
+ Develop, evaluate, and refine AI agents with confidence
+ Specialized Workloads
+ VFX rendering
+ Accelerate VFX and rendering with scalable GPU power
+ Solutions by industry
+ Federal
+ Secure AI infrastructure for government missions
+ Media and entertainment
+ Rendering and AI pipelines for studios
+ Physical AI
+ Compute for robotics and real-world AI systems
+ Resources
+ Main menu
+ Resources
+ Learn
+ Resource center
+ Explore whitepapers, briefs, videos and more
+ Customer stories
+ See how leading teams build and scale with CoreWeave
+ Webinars and events
+ Join live events and watch on-demand sessions
+ Blog
+ Insights on AI cloud, infrastructure, and innovation
+ Topics
+ Explore foundational concepts in AI, cloud infrastructure, and emerging technologies
+ Newsroom
+ Company news, announcements, and press
+ For Developers
+ Builder resource center
+ Guides, samples, and tools for builders
+ GitHub library
+ Open-source repos, SDKs, and examples
+ Support
+ Documentation
+ Technical documentation and implementation guides
+ Status
+ Real-time platform availability and system updates
+ Direct-to-Expert
+ Work directly with the engineers behind the platform
+ Log in
+ Main menu
+ Log in
+ CoreWeave Forge
+ Models, agents, training, and inference
+ CoreWeave Infrastructure
+ AI Cloud compute, storage, and observability
+ |
+ Sign up 
+ Contact us 
+ Contact us 
+ Clear 
+ Pricing
+ CoreWeave Forge Pricing
+ Free to build with any cloud, model, or framework
+ Free
+ Designed for personal development of AI applications and models
+ $0/mo
+ Get started
+ Features includes:
+ AI application evaluations
+ AI application tracing
+ AI application scorers
+ AI model experiment tracking
+ AI assets registry & lineage tracking
+ Community Support
+ Pro
+ Professionals working to optimize AI applications and models
+ Starts at $60/month, billed monthly
+ Start your 30 day free trial
+ All features from Free, plus:
+ Unlimited teams for collaboration
+ Team-based access controls
+ Service Accounts
+ Priority email & chat support
+ CI/CD automations
+ Slack and email alerts
+ For early-stage teams fewer than 50 employees. Customers who exceed these guidelines will be required to transition to CoreWeave Forge Enterprise.
+ Enterprise
+ Companies prioritizing security and compliance for AI applications and models
+ Custom plans
+ Contact us
+ All features from Pro, plus:
+ HIPAA compliant option
+ Secure private connectivity
+ Customer-managed encryption key
+ Single Sign On
+ Automated user provisioning
+ Custom roles
+ Audit logs
+ Enterprise support package
+ Free forever for academic research
+ Coordinate projects remotely. Unlimited projects, teams, and 200GB free cloud storage.
+ Apply now
+ Free
+ Personal development
+/ small projects
+ Pro
+ Professionals and
+small teams
+ Enterprise
+ Prioritizing security
+and compliance
+ The basics
+ Model seats
+ Train and fine-tune AI models
+ Free
+ Up to 5
+ Pro
+ Up to 10
+ Enterprise
+ Customizable
+ Storage
+ 
+
+=== [about] https://docs.coreweave.com/forge-home (lang=en)
+Forge Home - CoreWeave Docs 
+ Documentation Index
+ Fetch the complete documentation index at: /llms.txt 
+ Use this file to discover all available pages before exploring further.
+ Skip to main content 
+ CoreWeave Docs home page 
+ English 
+ Search CoreWeave docs...
+ ⌘ K 
+ Log In 
+ Log in 
+ Log in 
+ Search... 
+ Navigation 
+ Forge Home
+ Infrastructure 
+ Forge 
+ Reference 
+ Release Notes 
+ Support 
+ Forge Home 
+ What moved in Forge 
+ Where the Weights & Biases docs moved 
+ Platform 
+ Forge 
+ ARIA 
+ Weights & Biases 
+ Post-Training 
+ Agent Lens 
+ Serverless Inference 
+ Serverless Sandbox 
+ Notebooks 
+ Registry 
+ HiveMind Preview 
+ Forge Home
+ Copy MCP Server Copy MCP Server 
+ Overview of CoreWeave Forge products for developing, evaluating, and serving AI models and agents
+ Copy MCP Server Copy MCP Server 
+ If you already use Weights & Biases on Multi-tenant Cloud, your projects, runs, artifacts, and account are available in Forge. 
+ ​ 
+ Develop and evaluate 
+ Track experiments, evaluate and improve agents and LLM applications, prototype in notebooks, and manage models across their lifecycle.
+ Weights & Biases W&B Models for experiment tracking, hyperparameter sweeps, artifacts, reports, and automations, with W&B Weave alongside for LLM and agent evaluation. Explore Weights & Biases ARIA AI research agent that analyzes experiments, explains results, and builds visualizations and reports. Agent Lens Intelligent agent observability and improvement. Notebooks Reactive Python notebooks for exploring data, prototyping model workflows, and analyzing runs and artifacts. Preview. Registry Versioned hub for models and datasets with lineage and deployment handoff. 
+ ​ 
+ Serverless services 
+ Serve, fine-tune, and run models on CoreWeave infrastructure without managing it.
+ Post-Training Post-train and fine-tune LLMs with Serverless RL and SFT, and distill specialized models from real application traffic. Serverless Inference Open-source foundation models through an OpenAI-compatible API, integrated with Weave. Serverless Sandbox On-demand, isolated compute environments you create and discard from Python. 
+ ​ 
+ Resources 
+ Builder Resource Center Explore demos, guides, code, and events for building across CoreWeave products. 
+ Last modified on October 8, 2026
+ Was this page helpful?
+ Yes No
+
+=== [pricing2] https://wandb.ai/site/pricing-privately-hosted/ (lang=en-US)
+Explore Weights & Biases pricing plans 
+ Learn More 
+ Learn more 
+ For more information or if you need help  retrieving your data , please contact Weights & Biases Customer Support at  support@wandb.com 
+ Skip to content 
+ Weave 
+ Close Weave 
+ Open Weave 
+ Traces
+ Explore and debug AI applications 
+ Evaluations
+ Rigorous evaluations of AI applications 
+ Playground 
+ Explore prompts and models 
+ Monitors
+ Continuously improve in production 
+ Solutions 
+ Close Solutions 
+ Open Solutions 
+ Use Cases
+ AI governance 
+ Computer vision 
+ Contact centers 
+ Evaluations 
+ Fine-tune LLMs 
+ Physical AI 
+ RAG 
+ Train LLMs 
+ Quant trading 
+ AI governance 
+ Computer vision 
+ Contact centers 
+ Evaluations 
+ Fine-tune LLMs 
+ Physical AI 
+ RAG 
+ Train LLMs 
+ Quant trading 
+ Industries
+ Autonomous Vehicles 
+ Communications 
+ Financial Services 
+ Healthcare & Life Sciences 
+ Public Sector 
+ Scientific Research 
+ Autonomous Vehicles 
+ Communications 
+ Financial Services 
+ Healthcare & Life Sciences 
+ Public Sector 
+ Scientific Research 
+ Case Studies
+ Canva
+ Learn how Canva leverages W&B to deploy models 
+ Microsoft
+ Learn how Microsoft uses W&B for their ML projects 
+ Toyota
+ Learn how Toyota uses W&B for autonomous driving 
+ Enterprise 
+ Close Enterprise 
+ Open Enterprise 
+ Security 
+ Deployment 
+ Performance 
+ Partners 
+ Support 
+ Security 
+ Deployment 
+ Performance 
+ Partners 
+ Support 
+ Resources 
+ Close Resources 
+ Open Resources 
+ AI SideQuest 
+ Blog 
+ Articles 
+ Podcast 
+ Whitepapers 
+ Events & Webinars 
+ Press 
+ AI SideQuest 
+ Blog 
+ Articles 
+ Podcast 
+ Whitepapers 
+ Events & Webinars 
+ Press 
+ Docs 
+ Pricing 
+ Contact 
+ LOG IN 
+ SIGN UP 
+ ko 
+ ja 
+ en 
+ de 
+ Cloud-hosted pricing has moved to CoreWeave Forge. Learn more 
+ Privately-Hosted Pricing
+ Personal
+ Corporate use is not allowed
+ $0/mo
+ 1
+ 2
+ pip install wandb
+wandb server start 
+ Try now with two lines of code
+ Includes
+ GET STARTED 
+ 1 user seat
+ Experiment tracking
+ Registry & lineage tracking
+ Run a W&B server locally on any machine with Docker and Python installed
+ For personal projects only. Corporate use is not allowed.
+ Advanced Enterprise
+ Maximum control and privacy
+ Custom plan
+ 1
+ 2
+ pip install wandb
+wandb server start 
+ Try with two lines of code & a free Enterprise Trial license 
+ All features from Personal +
+ CONTACT US 
+ Flexible deployment options 
+ HIPAA compliant option
+ Secure private connectivity
+ Customer-managed encryption key
+ Single Sign On
+ Automated user provisioning
+ Custom roles
+ Audit logs
+ Enterprise support package
+ Run a W&B server locally on your own infrastructure with a free enterprise trial license 
+ Free forever for academic research
+ Coordinate projects remotely. Unlimited projects, teams, and 200GB free cloud storage.
+ APPLY NOW 
+ Frequently asked questions
+ What are the system requirements for self-hosting? 
+ To self-host W&B, you’ll need Docker and Python installed on your machine.
+ The server can run on Linux, macOS, or Windows systems that meet these requirements.
+ How do I get started with self-hosting? 
+ To get started with self-hosting, you’ll need to install Docker and Python on your machine.
+ You can then use the command line to start the server.
+ The server can run on Linux, macOS, or Windows systems that meet these requirements.
+ What is the difference between self-hosting and cloud-hosted? 
+ Self-hosting allows you to run Weights & Biases on your own infrastructure, giving you full control over your data and privacy.
+ Cloud-hosted is a fully managed service that provides you with a scalable and reliable platform.
+ How do I manage my da
+
+=== [meta] https://wandb.ai/site
+html lang: en-US
+hreflang: 없음
+화면에 보이는 언어 이름: 한국어, Korean, English, 日本語, Deutsch

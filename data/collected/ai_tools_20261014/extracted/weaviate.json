@@ -1,0 +1,181 @@
+{
+ "company": "Weaviate",
+ "one_liner_ko": "벡터 검색, RAG, 메모리를 하나의 오픈소스 플랫폼으로 제공하는 AI 데이터베이스.",
+ "what_it_does_ko": "Weaviate는 객체와 벡터를 함께 저장해 대규모 시맨틱 검색을 가능하게 하는 클라우드 네이티브 벡터 데이터베이스다. 벡터 유사도 검색에 키워드 필터링, 검색 증강 생성(RAG), 재순위를 하나의 쿼리 인터페이스로 묶는다. 가져올 때 통합 모델(OpenAI, Cohere, HuggingFace 등)로 자동 벡터화하거나 미리 계산한 임베딩을 직접 넣을 수 있다. Docker·Kubernetes로 직접 설치하거나, 같은 기술 위에 만든 완전 관리형 Weaviate Cloud를 쓸 수 있다.",
+ "key_features": [
+  "고차원 벡터 저장·색인·검색",
+  "자연어 질문을 DB 쿼리로 바꾸는 Query Agent",
+  "텍스트·이미지 등 내장 임베딩 생성",
+  "사용자별로 학습·적응하는 개인화 기능 Engram",
+  "벡터+키워드 하이브리드 검색",
+  "멀티테넌시·복제·RBAC",
+  "Python·Go·TypeScript·JavaScript SDK와 GraphQL·REST API"
+ ],
+ "use_cases_ko": [
+  "RAG 시스템",
+  "시맨틱·이미지 검색과 추천 엔진",
+  "챗봇·콘텐츠 분류"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Free: 영구 무료, 사용자당 클러스터 1개, 객체 100,000개·메모리 1GB·디스크 10GB, 컬렉션 1개)",
+  "plans": [
+   {
+    "name": "Free",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "객체 100,000개, 1GB 메모리, 10GB 디스크, 임베딩 2,000 요청/일, Query Agent 1,000 요청/월",
+    "page_lang": "en"
+   },
+   {
+    "name": "Flex",
+    "price": 45,
+    "currency": "USD",
+    "period": "month",
+    "limits": "$45/월부터, 종량제, 공유 클러스터, 99.5% 가동률",
+    "page_lang": "en"
+   },
+   {
+    "name": "Premium",
+    "price": 400,
+    "currency": "USD",
+    "period": "month",
+    "limits": "선불 계약, 월 최소 $400부터(영업 문의), 최대 99.95% 가동률",
+    "page_lang": "en"
+   },
+   {
+    "name": "Weaviate Query Agent",
+    "price": 30,
+    "currency": "USD",
+    "period": "month",
+    "limits": "조직당 월 요금, 4,000 요청 포함, 초과분 종량제",
+    "page_lang": "en"
+   },
+   {
+    "name": "Weaviate Embeddings",
+    "price": 0.025,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "100만 토큰당 $0.025~$0.065(모델별)",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://weaviate.io/pricing"
+ },
+ "open_source": "오픈소스(라이선스 이름은 페이지에 없음)",
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://weaviate.io",
+   "quote": "The AI database developers love | Weaviate"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://weaviate.io",
+   "quote": "Vector search, RAG, and memory - all in one open-source platform."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/weaviate/weaviate",
+   "quote": "is a cloud-native vector database that stores both objects and vectors, enabling semantic search at scale"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/weaviate/weaviate",
+   "quote": "It combines vector similarity search with keyword filtering, retrieval-augmented generation (RAG), and reranking in a single query interface."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.weaviate.io/cloud",
+   "quote": "Weaviate Cloud is built on Weaviate Database. They share the same technology and offer the same great features."
+  },
+  {
+   "field": "key_features",
+   "url": "https://weaviate.io",
+   "quote": "Store, index, and search high-dimensional vectors at any scale."
+  },
+  {
+   "field": "key_features",
+   "url": "https://weaviate.io",
+   "quote": "Ask questions in natural language. Query Agent translates intent into optimized database queries automatically."
+  },
+  {
+   "field": "key_features",
+   "url": "https://weaviate.io",
+   "quote": "Built-in vector generation from text, images, and more."
+  },
+  {
+   "field": "key_features",
+   "url": "https://weaviate.io",
+   "quote": "Create personalized AI experiences that learn and adapt to each user over time."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/weaviate/weaviate",
+   "quote": "Production deployments benefit from built-in multi-tenancy, replication, RBAC authorization"
+  },
+  {
+   "field": "key_features",
+   "url": "https://weaviate.io",
+   "quote": "Use SDKs for Python, Go, TypeScript, or JavaScript, or connect to GraphQL or REST APIs."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/weaviate/weaviate",
+   "quote": "Common use cases include RAG systems, semantic and image search, recommendation engines, chatbots, and content classification."
+  },
+  {
+   "field": "pricing",
+   "url": "https://weaviate.io/pricing",
+   "quote": "✓ 100,000 objects · 1 GB memory · 10 GB disk."
+  },
+  {
+   "field": "pricing",
+   "url": "https://weaviate.io/pricing",
+   "quote": "Starts at $45 /mo"
+  },
+  {
+   "field": "pricing",
+   "url": "https://weaviate.io/pricing",
+   "quote": "$45/month on Flex and from $400/month on Premium"
+  },
+  {
+   "field": "pricing",
+   "url": "https://weaviate.io/pricing",
+   "quote": "$30 / organization · monthly plan\n 4,000 requests included"
+  },
+  {
+   "field": "pricing",
+   "url": "https://weaviate.io/pricing",
+   "quote": "$0.025 / 1M tokens"
+  },
+  {
+   "field": "open_source",
+   "url": "https://weaviate.io",
+   "quote": "Four core capabilities, one unified platform - deployment-agnostic and open source."
+  },
+  {
+   "field": "api",
+   "url": "https://weaviate.io",
+   "quote": "Use SDKs for Python, Go, TypeScript, or JavaScript, or connect to GraphQL or REST APIs."
+  },
+  {
+   "field": "platforms",
+   "url": "https://docs.weaviate.io/cloud",
+   "quote": "Go directly to the Weaviate Cloud console and create your first cluster."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://weaviate.io",
+   "quote": "hreflang: en, x-default"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

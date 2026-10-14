@@ -1,0 +1,90 @@
+{
+ "company": "OpenAI",
+ "one_liner_ko": "영어 음성 인식에서 인간 수준의 견고함과 정확성에 근접한, OpenAI가 훈련한 오픈 소스 음성 인식 신경망.",
+ "what_it_does_ko": "Whisper는 웹에서 모은 68만 시간 분량의 다국어·다중 작업 지도 데이터로 훈련한 자동 음성 인식(ASR) 시스템이다. 인코더-디코더 트랜스포머 구조로 30초 단위 오디오를 처리하며, 다국어 음성 인식·영어로의 음성 번역·언어 식별을 한 모델로 수행한다. 억양·배경 소음·전문 용어에 대한 정확도를 높였다고 소개한다. 6가지 모델 크기(이 중 4가지는 영어 전용 버전도 있음)가 있고 pip로 설치한다. 소개 글은 2022년에 작성됐다.",
+ "key_features": [
+  "68만 시간 다국어 데이터로 훈련한 음성 인식",
+  "다국어 음성 인식",
+  "영어로 음성 번역",
+  "언어 식별",
+  "억양·배경 소음·전문 용어에 강한 인식",
+  "6가지 모델 크기(영어 전용 버전 4종)",
+  "pip로 설치하는 Python 패키지"
+ ],
+ "use_cases_ko": [
+  "개발자가 애플리케이션에 음성 인터페이스 추가"
+ ],
+ "pricing": {
+  "free_tier": null,
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://openai.com/ko-KR/index/whisper/",
+   "quote": "Whisper를 소개합니다 | OpenAI 2022년 9월 21일"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://openai.com/ko-KR/index/whisper/",
+   "quote": "Whisper는 영어 발화 인지에서 인간 수준의 견고함과 정확성에 근접하는, OpenAI가 훈련한 오픈 소스 인공 신경망입니다."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://openai.com/ko-KR/index/whisper/",
+   "quote": "Whisper는 웹에서 여러 언어와 다중 작업에 걸쳐 수집한 68만 시간 분량의 지도 데이터로 훈련된 자동 음성 인식(ASR) 시스템입니다."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://openai.com/ko-KR/index/whisper/",
+   "quote": "Whisper 아키텍처는 단순한 엔드투엔드 접근 방식으로, 인코더-디코더 트랜스포머로서 구현되었습니다."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://openai.com/ko-KR/index/whisper/",
+   "quote": "This post introduced Whisper in 2022."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/openai/whisper",
+   "quote": "a multitasking model that can perform multilingual speech recognition, speech translation, and language identification."
+  },
+  {
+   "field": "key_features",
+   "url": "https://openai.com/ko-KR/index/whisper/",
+   "quote": "억양, 배경 소음 및 기술적 언어에 대한 정확성을 향상했습니다."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/openai/whisper",
+   "quote": "There are six model sizes, four with English-only versions, offering speed and accuracy tradeoffs."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/openai/whisper",
+   "quote": "You can download and install (or update to) the latest release of Whisper with the following command:"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://openai.com/ko-KR/index/whisper/",
+   "quote": "개발자가 음성 인터페이스를 추가하여 애플리케이션의 영역을 확장할 수 있기를 바랍니다."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://openai.com/ko-KR/index/whisper/",
+   "quote": "html lang: ko-KR\nhreflang: am-et, ar, bg-bg, bn-bd"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://openai.com/ko-KR/index/whisper/",
+   "quote": "kk-cyrl, kn-in, ko-kr, lt-lt, lv-lv, mk-mk, ml-in, mn-mn"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

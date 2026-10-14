@@ -1,0 +1,67 @@
+{
+ "company": "Hugging Face",
+ "one_liner_ko": "임베딩·리랭커 모델을 쉽게 계산하고 학습할 수 있게 해 주는 Python 프레임워크다.",
+ "what_it_does_ko": "Sentence Transformers는 최신 임베딩·리랭커 모델로 임베딩을 계산하고 학습하는 프레임워크다. Sentence Transformer로 임베딩, Cross-Encoder(리랭커)로 유사도 점수, Sparse Encoder로 희소 임베딩, Multi-Vector Encoder로 ColBERT 방식 토큰 임베딩을 만들 수 있다. Hugging Face에 15,000개가 넘는 사전학습 모델이 있다. 자신만의 임베딩·리랭커 모델을 학습·파인튜닝할 수도 있다.",
+ "key_features": [
+  "문장 임베딩 계산(Sentence Transformer)",
+  "Cross-Encoder 리랭킹",
+  "Sparse Encoder 희소 임베딩",
+  "Multi-Vector Encoder(ColBERT 방식)",
+  "15,000개 이상 사전학습 모델",
+  "임베딩·리랭커 모델 학습·파인튜닝",
+  "ONNX·OpenVINO 추론 가속"
+ ],
+ "use_cases_ko": [
+  "의미 검색",
+  "의미 유사도 계산",
+  "패러프레이즈 마이닝"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://github.com/huggingface/sentence-transformers",
+   "quote": "github.com/huggingface/sentence-transformers"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/huggingface/sentence-transformers",
+   "quote": "This framework provides an easy method to compute embeddings for accessing, using, and training state-of-the-art embedding and reranker models."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/huggingface/sentence-transformers",
+   "quote": "A wide selection of over [15,000 pre-trained Sentence Transformers models](https://huggingface.co/models?library=sentence-transformers) are available for immediate use on"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/huggingface/sentence-transformers",
+   "quote": "to compute token-level embeddings for ColBERT-style late-interaction retrieval using Multi-Vector Encoder models"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/huggingface/sentence-transformers",
+   "quote": "to generate sparse embeddings using Sparse Encoder models"
+  },
+  {
+   "field": "key_features",
+   "url": "https://sbert.net",
+   "quote": "Speeding up Inference \n PyTorch \n ONNX"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/huggingface/sentence-transformers",
+   "quote": "This unlocks a wide range of applications, including [semantic search]"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

@@ -1,0 +1,124 @@
+=== [github] https://github.com/huggingface/nanotron
+<h1 align="center">⚡️ Nanotron</h1>
+
+<p align="center">
+    <a href="https://github.com/huggingface/nanotron/releases">
+        <img alt="GitHub release" src="https://img.shields.io/github/release/huggingface/nanotron.svg">
+    </a>
+    <a href="https://github.com/huggingface/nanotron/blob/master/LICENSE">
+        <img alt="License" src="https://img.shields.io/github/license/huggingface/nanotron.svg?color=green">
+    </a>
+</p>
+
+<h4 align="center">
+    <p>
+        <a href="#installation">Installation</a> •
+        <a href="#quick-start">Quick Start</a> •
+        <a href="#features">Features</a> •
+        <a href="#benchmarks">Benchmarks</a> •
+        <a href="CONTRIBUTING.md">Contributing</a>
+    <p>
+</h4>
+
+<h3 align="center">
+    <a href="https://huggingface.co/nanotron"><img style="float: middle; padding: 10px 10px 10px 10px;" width="60" height="55" src="https://huggingface.co/datasets/huggingface/brand-assets/resolve/main/hf-logo.png" /></a>
+</h3>
+<h3 align="center">
+<p>Pretraining models made easy
+</h3>
+
+Nanotron is a library for pretraining transformer models. It provides a simple and flexible API to pretrain models on custom datasets. Nanotron is designed to be easy to use, fast, and scalable. It is built with the following principles in mind:
+
+- **Simplicity**: Nanotron is designed to be easy to use. It provides a simple and flexible API to pretrain models on custom datasets.
+- **Performance**: Optimized for speed and scalability, Nanotron uses the latest techniques to train models faster and more efficiently.
+
+📚 **Check out our [Ultrascale Playbook](https://huggingface.co/spaces/nanotron/ultrascale-playbook)** - A comprehensive guide to efficiently scale LLM training with Nanotron!
+
+📝 **AI generated docs thanks to [DeepWiki](https://deepwiki.com/huggingface/nanotron)**
+
+## Installation
+
+To run the code in this project, first create a Python virtual environment using e.g. `uv`:
+
+
+```shell
+uv venv nanotron --python 3.11 && source nanotron/bin/activate && uv pip install --upgrade pip
+```
+
+> [!TIP]
+> For Hugging Face cluster users, add `export UV_LINK_MODE=copy` to your `.bashrc` to suppress cache warnings from `uv`
+
+Next, install Pytorch:
+
+```shell
+uv pip install torch --index-url https://download.pytorch.org/whl/cu124
+```
+
+Then install the core dependencies with:
+
+```shell
+uv pip install -e .
+```
+
+To run the example scripts, install the remaining dependencies as follows:
+
+```shell
+uv pip install datasets transformers datatrove[io] numba wandb
+# Fused kernels
+uv pip install ninja triton "flash-attn>=2.5.0" --no-build-isolation
+```
+
+Next, log into your Hugging Face and Weights and Biases accounts as follows:
+
+```shell
+huggingface-cli login
+wandb login
+```
+
+Finally, check whether your system has Git LFS installed so that you can load and push models/datasets to the Hugging Face Hub:
+
+```shell
+git-lfs --version
+```
+
+If it isn't installed, run:
+
+```shell
+sudo apt-get install git-lfs
+```
+
+
+## Quick Start
+
+### Training a tiny Llama model
+
+The following command will train a tiny Llama model on a single node of 8 x H100s in about 10 minutes:
+
+```shell
+CUDA_DEVICE_MAX_CONNECTIONS=1 torchrun --nproc_per_node=8 run_train.py --config-file examples/config_tiny_llama.yaml
+```
+
+The model will be saved in the `checkpoints` directory as specified in the config file.
+
+> [!NOTE]
+> You can use `examples/config_tiny_llama.py` to generate your own training config
+
+For detailed instructions on training your first model, check out our [Your First Training guide](docs/your-first-training.md). For multi-node training with Slurm, see our [Multi-Node Training guide](docs/multi-node-training.md).
+
+### Run generation from your checkpoint
+
+```shell
+torchrun --nproc_per_node=1 run_generate.py --ckpt-path checkpoints/{checkpoint_number}/ --tp 1 --pp 1
+```
+
+Increase the value of `--tp` (tensor parallel) to accelerate generation with multiple GPUs and use a larger value of `--pp` (pipeline parallel) for very large models.
+
+### Debugging with VSCode
+To debug with VSCode, add the following configuration to your `launch.json` file:
+
+```json
+{
+    "name": "run_train.py",
+    "type": "python",
+    "request": "launch",
+    "program": "torchrun", // or full pa

@@ -1,0 +1,506 @@
+=== [home] https://dlthub.com (lang=en)
+dltHub | The agentic data layer on top of any data warehouse. 
+ Book a demo 
+ Product 
+ Enterprise 
+ Resources 
+ Pricing 
+ Docs 
+ Search Ctrl K 5.8k Book a demo Login 
+ Introducing dltHub agents to keep pipelines healthy Read the launch post 
+ The agentic data layer
+ on top of any data warehouse .
+ dltHub is an AI-native data engineering platform for teams of humans and agents. Your team and their agents generate and manage high-quality data at scale, on infrastructure we run for you.
+ For Decision makers Builders 
+ Stop paying twice for ingestion
+ Today you pay for an ETL tool and for the engineers who build the sources it can't reach. dltHub covers both, on one platform.
+ Book a demo 
+ Build your first dlt pipeline
+ Paste this prompt into Claude, Codex, or Cursor. The agent does the rest.
+ Run uvx dlthub-start@latest to build my first pipeline and run it on dltHub
+ Copy prompt 
+ Used by data teams at
+ Pick a logo to read how they did it, or browse every case study .
+ The dltHub platform
+ One agentic layer, one runtime underneath it
+ Your coding agent builds and fixes pipelines through the AI harness and the context graph. dltHub runs what it writes: scheduled, observable, with secrets and regions handled. It reaches the sources your GUI tool has no connector for, and lands them in the warehouse you already bought.
+ Your coding agent
+ Claude Code, Cursor or Codex
+ operates through ↓ 
+ agentic layer
+ What the agent works through
+ dltHub AI harness → 
+ Agentic primitives to build, run and fix pipelines
+ dltHub context graph
+ Lineage, schema, data quality, governance, run state
+ grounds and runs ↓ 
+ dlt Sources
+ The systems a GUI tool has no connector for
+ Oracle 
+ SAP HANA 
+ IBM DB2 
+ + 10,000 more
+ → dlt pipeline · extract 
+ managed infrastructure
+ What dltHub runs for you
+ Ingestion → 
+ Transformation → 
+ Orchestration → 
+ Managed infrastructure → 
+ → dlt pipeline · load 
+ Warehouse
+ any warehouse, yours
+ Snowflake 
+ Databricks 
+ BigQuery 
+ Microsoft Fabric 
+ Also covered
+ Data quality → Security and compliance → Pricing → 
+ Build, govern, heal and serve data infrastructure for the AI era
+ dltHub is code, so your engineers and their agents extend it to any source. Each part of the platform has its own page with the detail.
+ Build 
+ Learn more → 
+ Your coding agent writes the pipeline, for any REST API, database or file .
+ Runs in 
+ Skills invoked
+ ✓ dlthub-router routed to sql-database 
+ ✓ create-sql-database-pipeline scaffolded oracle_bicc 
+ ✓ setup-secrets wrote the dev profile 
+ → deploy-workspace deploying 
+ Load Oracle BICC into Snowflake, hourly Agent 
+ Govern 
+ Learn more → 
+ Expectations and schema contracts run on the way in, so bad data stops before the warehouse .
+ Checked per dataset, table or row
+ 38 rows held back. Load shipped. 
+ Heal 
+ Learn more → 
+ Runs, schemas and logs on one surface, and a failure reaches its owner with the diagnosis attached .
+ Pipeline Started Duration Rows Status 
+ load_salesforce_objects 06:00 2m 14s 184,220 
+ load_stripe_payouts 06:00 48s 12,004 
+ load_oracle_bicc 06:01 6m 02s – 
+ build_revenue_cdm 06:08 1m 31s 96,412 
+ load_oracle_bicc · column type changed upstream 
+ Serve 
+ Learn more → 
+ Generate the canonical model and keep your dbt project running on the same scheduler .
+ Model generator
+ ✓ annotate-sources 14 tables tagged 
+ ✓ generate-cdm Canonical model in DBML 
+ ✓ create-transformation 9 dbt models written 
+ → incremental-transformation Switching from full refresh 
+ Build a revenue model from these five sources Agent 
+ "What I didn't expect is how much it unblocks the team. A mid-level engineer can spin up a prototype, browse the raw data in dltHub's local DuckDB workspace, validate the SQL schema - all without pulling in a senior. That loop of prototype, inspect, fix, re-run - that's the real unlock."
+ Marcello Victorino
+ Staff Data Engineer, Tasman Analytics
+ Read the Tasman case study 
+ Marcello Victorino
+ Staff Data Engineer, Tasman Analytics
+ Read the Tasman case study 
+ For regulated life sciences · GxP
+ GxP validation that survives your next upgrade.
+ Code-native, test-first ingestion that dltHub runs for you, without freezing versions to stay validated.
+ GxP
+ CSA
+ GAMP 5
+ 21 CFR Part 11
+ EU Annex 11
+ ALCOA+
+ Your git tag is the validated baseline Python in your repo. You choose when to upgrade. 
+ Deterministic by design Same input, same output, on every run. 
+ ALCOA+ evidence built in Lineage, schema contracts and run state, in the catalog. 
+ Scope your GxP POC Explore dltHub for life sciences 
+ Snowflake Industry Competency
+ Healthcare and life sciences data workloads
+ As a simple-to-use Python library, dlt is the first tool that this new wave of people can use. By leveraging this library, we can extend the machine learning revolution into enterprise data.
+ Julien Chaumond
+ CTO/Co-Founder at Hugging Face
+ Python and machine learning under security constraints are key to our success. dlt is a lightweight yet powerful open source tool we can run together with Snowflake. Now anyone who knows Python can self-serve to fulfil their data needs.
+ Maximilian Eber
+ CPTO & Co-Founder at Taktile
+ I am building our internal skills usage leaderboard so we can see how people are using AI and spread what's working. dltHub turns this into a cohesive process without messy scripts to dedupe queries or wrangle intermediate tables. And the best part is anyone on the team can use agents to easily contribute.
+ Nate Sesti
+ Co-Founder & CTO at Continue
+ It's easy to write AI-assisted code and get a prototype. dltHub instead is built for the inspect-validate-debug loop, which is where AI-assisted data engineering actually lives or dies. The first platform I've seen that treats that loop as a design assumption, not a feature.
+ Savin Goyal
+ CTO & Co-Founder at Outerbounds (acquired by Anaconda)
+ The modeling layer is where the real cost lives, and it's where consulting companies like ours have been doing the most repetitive, high-cost manual work. We are excited about the dltHub product vision for the modeling layer because the main challenge in all data projects is how the data is being interpreted.
+ Thomas in't Veld
+ CEO at Tasman Analytics
+ In dltHub, agents propose transformations in Python, dlt.hub.transformation compiles them to SQL through Ibis, and execution stays inside DuckDB. The data doesn't move into Python memory at any step — the same composition pattern Ibis and Arrow are designed around.
+ Wes McKinney
+ Builder of Apache Arrow, pandas, Ibis at Posit
+ Every Ops leader is trying to answer the same question: is my team getting better or worse? I always had good intuition about what data I needed, but never the resources to get it and measure it reliably. dltHub changes the equation: it's the first product I've seen built for operators and their agents, not just fully-staffed enterprise data teams.
+ Jacob Matson
+ Developer Advocate at MotherDuck
+ dltHub and Snowflake deliver a simple, end-to-end pathway for financial institutions to transform raw data into governed analytics and AI-ready datasets without needing a full engineering team. You can pull data from core banking systems, market feeds, and APIs directly into Snowflake.
+ Suraj Rajan
+ Field CTO, Financial Services at Snowflake
+ dltHub lets my agents develop data pipelines locally, test changes quickly and cheaply in CI, and then runs them in the cloud against my largest workloads. It gives them the tools to take care of the knucklehead stuff so that I can
+
+=== [pricing] https://dlthub.com/pricing (lang=en)
+dltHub Pricing 
+ Book a demo 
+ Product 
+ Enterprise 
+ Resources 
+ Pricing 
+ Docs 
+ Search Ctrl K 5.8k Book a demo Login 
+ dltHub Pricing
+ dltHub runs your pipelines in production
+ $12,000 a month with 5,000 credits included, on a 12-month minimum billed monthly. Start with 14 days and $30 in credits, no card required. The dlt library stays Apache 2.0, always.
+ dlt 
+ Open-source ingestion for teams that want full infrastructure ownership.
+ Free
+ Apache 2.0
+ Get started 
+ Open source, code-first ingestion library 
+ Reliable ingestion and loading 
+ Limited verified OSS connectors 
+ AI help and community support 
+ Trusted by
+ dlt Hub 
+ Managed runtime, observability, data quality, and collaboration for production data teams.
+ $12,000
+ per month
+ 12-month minimum, billed monthly
+ Start free trial 
+ 5000 credits / month included 
+ 14-day free trial incl. $30 free credits 
+ Everything in dlt, plus:
+ AI Harness (Claude Code · Codex · Cursor) 
+ Managed runtime for ingestion 
+ Transformations & Data apps 
+ Data quality metrics & checks 
+ Observability dashboard 
+ Collaboration workflows for teams 
+ Migration to dltHub included 
+ Enterprise
+ Custom pricing, governance, and support for security-focused organizations.
+ Custom
+ Contact us 
+ Custom credits and volume pricing 
+ Enterprise security and governance controls 
+ Role-based access control (RBAC) and audit logs 
+ SLA and tailored support options 
+ Custom onboarding and architecture guidance 
+ What each plan includes
+ dlt dltHub Enterprise 
+ dlt
+ Free
+ Apache 2.0
+ Plan and billing
+ Minimum contract n/a 
+ Billing n/a 
+ Included credits per month n/a 
+ Mid-cycle top-ups at volume rates Not included 
+ Unlimited pipelines and notebooks Self-managed 
+ Build and run
+ AI harness: skills, commands and MCP Not included 
+ Managed runtime, patched for you Not included 
+ Cron and event-driven triggers, follow-up chains Not included 
+ Data freshness triggers Not included 
+ Automatic backfilling Not included 
+ Show 2 more 
+ Transform and serve
+ dbt model generator Not included 
+ Canonical model generator Not included 
+ Data apps: marimo and Streamlit Not included 
+ Trust the data
+ Declarative quality checks per dataset, table or row Not included 
+ Schema and data contracts 
+ PII redaction before load 
+ Quarantine failing rows before load (staging destinations) Not included 
+ Observe
+ Runs, schemas and lineage in one dashboard Not included 
+ Stream logs from the CLI or the web UI Not included 
+ Email alerting Not included 
+ Slack alerting and more alert types Not included 
+ Consumption tracking Not included 
+ Access and governance
+ Organisation and workspace roles Not included 
+ Secrets management per profile Not included 
+ Environment variable manager Not included 
+ Choose the region your data plane runs in Not included 
+ Role-based access control (RBAC) Not included 
+ Show 3 more 
+ Feature dlt
+ Free
+ Apache 2.0
+ dltHub
+ $12,000 / month
+ 12-month minimum, billed monthly
+ Enterprise
+ Custom
+ Billed annually
+ Plan and billing 
+ Minimum contract n/a 12 months 12 months 
+ Billing n/a Monthly Monthly or annual 
+ Included credits per month n/a 5,000 Custom 
+ Mid-cycle top-ups at volume rates Not included 
+ Unlimited pipelines and notebooks Self-managed 
+ Build and run 
+ AI harness: skills, commands and MCP Not included 
+ Managed runtime, patched for you Not included 
+ Cron and event-driven triggers, follow-up chains Not included 
+ Data freshness triggers Not included 
+ Automatic backfilling Not included Not included 
+ Show 2 more features 
+ Transform and serve 
+ dbt model generator Not included 
+ Canonical model generator Not included 
+ Data apps: marimo and Streamlit Not included 
+ Trust the data 
+ Declarative quality checks per dataset, table or row Not included Preview Preview 
+ Schema and data contracts 
+ PII redaction before load 
+ Quarantine failing rows before load (staging destinations) Not included Preview Preview 
+ Observe 
+ Runs, schemas and lineage in one dashboard Not included 
+ Stream logs from the CLI or the web UI Not included 
+ Email alerting Not included Not included 
+ Slack alerting and more alert types Not included Not included 
+ Consumption tracking Not included Not included 
+ Access and governance 
+ Organisation and workspace roles Not included 
+ Secrets management per profile Not included 
+ Environment variable manager Not included Not included 
+ Choose the region your data plane runs in Not included 
+ Role-based access control (RBAC) Not included Not included 
+ Show 3 more features 
+ dlt is Apache 2.0 licensed and always free to use
+ Use dlt as your open-source ingestion foundation and move to dltHub when you need managed runtime, observability, and governed collaboration at scale.
+ Explore OSS repo 
+ Apache 2.0 license pip install dlt 
+ Copy 
+ Forever free OSS library 
+ Apache 2.0 licensed for commercial usage 
+ Code-first developer experience 
+ Portable workflows across self-managed and managed runtime 
+ Frequently Asked Questions
+ How much does dltHub cost and what is included? dltHub is $12,000 per month, with 5,000 credits included each month, and includes managed runtime, observability, data quality checks, and collaboration features. Every dltHub subscription starts with a 14-day free trial and $30 in credits, no card required.
+ Can I try dltHub for free? Yes, every dltHub signup starts with a 14-day free trial that includes $30 in credits. No card required up front. Cancel anytime during the trial and you won't be charged.
+ What is a credit? 1 USD credit covers one hour of runtime at the standard rate, for both batch jobs (like data pipelines) and interactive jobs (like notebooks). You pay only for the hours your jobs actually run, never for idle infrastructure. Every sandbox dltHub spins up has at least 2 vCPUs and 4GB of memory. If you need higher CPU or memory limits, talk to us.
+ How does usage pricing work beyond included credits? After your included 5,000 credits each month, additional usage is billed in volume tiers. Every credit in a tier gets that tier's per-credit price:
+ First 100 credits over included: $1.00 / credit
+ Next 100 credits: $0.95 / credit
+ Next 200 credits: $0.90 / credit
+ Next 400 credits: $0.875 / credit
+ Next 800 credits: $0.85 / credit
+ Next 1,600 credits: $0.825 / credit
+ Next 3,200 credits: $0.80 / credit
+ Higher volumes (over 6,400 credits beyond included): contact sales for custom pricing
+ Annual commitments add a further 5% off the per-credit rate. Included credits don’t roll over month-to-month, but purchased bundle credits do. Pipelines do not pause automatically today. 
+ At launch your 
+
+=== [about] https://dlthub.com/about (lang=en)
+About dltHub 
+ Book a demo 
+ Product 
+ Enterprise 
+ Resources 
+ Pricing 
+ Docs 
+ Search Ctrl K 5.8k Book a demo Login 
+ About dltHub
+ About dltHub
+ Building the next generation of AI-native data tooling
+ Agents are authoring entire data systems. The bottleneck is no longer writing pipelines, but understanding, governing, and trusting what they produce.
+ dltHub builds the infrastructure for that. dlt , our open-source Python library, gives agents and developers transparent, composable primitives for data ingestion (schema inference, normalization, incremental loading, data contracts) designed from the ground up for the LLM era. dltHub , our AI-native data engineering platform, extends dlt into a production environment where hard tooling and AI workflows work together: capturing metadata, propagating context, and keeping humans in the loop at every step.
+ dltHub is based in Berlin and San Francisco. It was founded by machine learning and data veterans. We are backed by Bessemer Venture Partners , Foundation Capital , Dig Ventures , and many technical founders from companies such as MotherDuck , Mode , Huggingface , Rasa , Instana , Miro , and Matillion .
+ Our Hubs around the world
+ Our home base is Berlin, but our team spans the globe, with office hubs in San Francisco, Montreal, and Amsterdam. Whether you want to grab a coffee with a local team member, hear more about our product offering and vision for the future of data engineering, or co-organize a meetup, we’d love to connect. Reach out and let’s make it happen.
+ Want to connect?
+ Contact us Events near you 
+ Berlin
+ San Francisco
+ Montreal
+ Amsterdam
+ Berlin
+ San Francisco
+ Montreal
+ Amsterdam
+ Meet the founders
+ Between us, we've spent decades in data engineering, machine learning, and open source. We started dltHub because the tooling data teams deserved simply didn't exist yet, and because we genuinely believe Python practitioners should be empowered to create and manage datasets on their own terms. We've been working together in various constellations for many years, and we still can't wait to build great things together.
+ Matthaus Krzykowski
+ Co-Founder & CEO
+ Marcin Rudolf
+ Co-Founder & CTO
+ Anna Hoffmann
+ Co-Founder & COO
+ Adrian Brudaru
+ Co-Founder & CDO
+ Backed by the best
+ Want to shape how data engineering works?
+ We’re always looking for people who want to make an impact.
+ See our open roles 
+ Book a demo 
+ dlt is the open-source Python library for data pipelines. dlt Hub deploys, monitors, and scales them.
+ ← swipe to explore → 
+ 1 
+ Platform
+ Platform overview 
+ Managed infrastructure 
+ Orchestration 
+ Transformations 
+ Data quality 
+ AI harness 
+ Context 
+ Background agents 
+ Pricing 
+ 2 
+ Enterprise
+ Financial services 
+ Life sciences 
+ Migrations 
+ Support and SLAs 
+ Security 
+ Deployment options 
+ Trust Center 
+ 3 
+ Resources
+ Documentation 
+ Academy 
+ Blog 
+ Blueprints 
+ Events 
+ 4 
+ Customers
+ Case studies 
+ Snowflake 
+ Databricks 
+ Technology partners 
+ 5 
+ Open source
+ dlt library 
+ GitHub 
+ Slack 
+ 6 
+ Company
+ About us 
+ Careers 
+ Contact 
+ 7 
+ Context Index
+ Browse dltHub context for dlt pipelines from any REST API by alphabet.
+ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 
+ © 2026 dltHub
+ Imprint Terms License Privacy Policy DPA Cookies
+
+=== [meta] https://dlthub.com
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/dlt-hub/dlt
+<h1 align="center">
+    <strong>data load tool (dlt) — the open-source Python library that automates all your tedious data loading tasks</strong>
+</h1>
+<p align="center">
+Be it a Google Colab notebook, AWS Lambda function, an Airflow DAG, your local laptop,<br/>or an AI coding agent—<strong>dlt</strong> can be dropped in anywhere.
+</p>
+
+
+<h3 align="center">
+
+🚀 Join our thriving community of likeminded developers and build the future together!
+
+</h3>
+
+<div align="center">
+  <a target="_blank" href="https://dlthub.com/community" style="background:none">
+    <img src="https://img.shields.io/badge/slack-join-dlt.svg?labelColor=191937&color=6F6FF7&logo=slack" style="width: 260px;"  />
+  </a>
+</div>
+<div align="center">
+  <a target="_blank" href="https://pypi.org/project/dlt/" style="background:none">
+    <img src="https://img.shields.io/pypi/v/dlt?labelColor=191937&color=6F6FF7">
+  </a>
+  <a target="_blank" href="https://pypi.org/project/dlt/" style="background:none">
+    <img src="https://img.shields.io/pypi/pyversions/dlt?labelColor=191937&color=6F6FF7">
+  </a>
+  <a target="_blank" href="https://pypi.org/project/dlt/" style="background:none">
+    <img src="https://img.shields.io/pypi/dm/dlt?labelColor=191937&color=6F6FF7">
+  </a>
+</div>
+
+## Installation
+
+dlt supports Python 3.10 through Python 3.14. Note that some optional extras are not yet available for Python 3.14, so support for this version is considered experimental.
+
+```sh
+pip install dlt
+```
+
+Add the extras you need for your sources and destinations, for example:
+
+```sh
+pip install "dlt[duckdb]"        # local DuckDB destination
+pip install "dlt[bigquery]"      # or snowflake, postgres, redshift, databricks, athena, ...
+pip install "dlt[s3]"            # or gs, az for cloud filesystems
+pip install "dlt[sql_database]"  # read from any SQL database
+pip install "dlt[hub]"           # data quality, transformations, and AI (see below)
+```
+
+Prefer [uv](https://docs.astral.sh/uv/)? `uv add "dlt[duckdb]"`.
+
+## Quick Start
+
+Describe an API declaratively and load it into DuckDB — dlt handles requests, pagination, schema inference, and typing for you:
+
+```python
+import dlt
+from dlt.sources.rest_api import rest_api_source
+
+# 1. Describe the API declaratively
+source = rest_api_source({
+    "client": {"base_url": "https://api.spotify.com/v1"},
+    "resources": [
+        {
+          "name": "playlist_tracks",
+          "endpoint": {"path": "playlists/{playlist_id}/tracks"},
+        },
+    ],
+})
+
+# 2. Point a pipeline at any destination
+pipeline = dlt.pipeline(
+    pipeline_name="spotify",
+    destination="duckdb",
+    dataset_name="spotify_data",
+)
+
+# 3. Extract, normalize, and load
+pipeline.run(source)
+
+# 4. ...and read it straight back as a DataFrame
+pipeline.dataset().playlist_tracks.df()
+```
+
+...or load any Python iterable — a [resource](https://dlthub.com/docs/general-usage/resource) is just a generator, and dlt infers the schema, types the columns, and writes the table:
+
+```python
+import dlt
+
+@dlt.resource(table_name="tracks", primary_key="id", write_disposition="merge")
+def tracks():
+    yield {"id": 1, "title": "Yellow",       "artist": "Coldplay",   "streams": 4_200_000_000}
+    yield {"id": 2, "title": "Shape of You", "artist": "Ed Sheeran", "streams": 3_900_000_000}
+
+dlt.pipeline(
+    destination="duckdb",
+    dataset_name="spotify_data",
+).run(
+  source=tracks(),
+)
+```
+
+Check out a basic in **[Colab](https://colab.research.google.com/drive/1NfSB1DpwbbHX9_t5vlalBTf13utwpMGx?usp=sharing)** or a more advanced [Hugging Face demo with Marimo notebooks](https://molab.marimo.io/github/marimo-team/gallery-examples/blob/main/notebooks/external/dlthub-huggingface.py).
+
+## Why dlt
+
+**dlt** loads data from messy, often unstructured sources into well-structured, typed datasets. It's a **library, not a platform** — you `pip install` it into your existing code and keep your workflow and the other tools you already use. No black boxes: clean Pythonic interfaces, human-readable file formats, schemas you can inspect, no hidden side effects.
+
+dlt and its docs are **built from the ground up for LLMs and coding agents**. Pair the typed, declarative primitives below with [dlthub.com/context](

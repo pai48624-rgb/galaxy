@@ -1,0 +1,504 @@
+=== [home] https://www.pinecone.io/ (lang=en)
+The trusted AI knowledge company | Pinecone 
+ Pinecone Bring Your Own Cloud is Now Generally Available - Read the announcement Dismiss 
+ Products 
+ Enterprise Customers Resources 
+ Pricing 
+ Contact Log in Start for free 
+ Select Experience: Builder Business Leader 
+ Build Knowledgeable AI Give agents knowledge knowledge 
+ The trusted AI knowledge platform where fast, accurate retrieval doesn't get more expensive as it scales.
+ Start building Get a demo 
+ Pinecone customers: Adobe, Workday, L’Oréal, Microsoft, Mercado Libre, OpenAI, Cohere, Fox, The Washington Post, Asana, Gong, Delphi, Expensify, Cisco, Zapier, Sanofi, Vanguard. 
+ Get started One API key. Every way you build.
+ Install the plugin in your agent, or call the API directly. Search, upsert, and rerank from the same index.
+ View docs 
+ Claude Code Cursor Copilot Codex Gemini CLI MCP API 
+ 1 # access to official Anthropic marketplace is required 2 claude plugin install pinecone 3 4 # then, inside Claude Code 5 /pinecone:quickstart 
+ Cost-performance at any scale
+ Estimate the cost of your workload.
+ See full pricing 
+ I'm building a RAG pipeline 
+ for a production app 
+ Get an estimate
+ Pinecone Nexus The knowledge engine for agents
+ Explore Nexus → 
+ Compiles enterprise data into governed knowledge once, then serves it through a single query.
+ {lower cost} Knowledge compiled once costs less every time it is served.
+ Across patent search, M&A due diligence, and revenue intelligence, Nexus used 85–97% fewer tokens per query than agentic RAG.
+ Across patent search, M&A due diligence, and revenue intelligence, Nexus used 85–97% fewer tokens per query than agentic RAG.
+ up to 97 %
+ fewer tokens per query than agentic RAG 
+ {faster} A single query returns the answer, no retrieval loop required.
+ In separate benchmark testing, a single query replaced the multi-step retrieval loop and delivered 30x faster time-to-completion than agentic RAG.
+ 30 x
+ faster time-to-completion than agentic RAG 
+ {more accurate} Accuracy improved across all three benchmark domains.
+ Scored by an LLM judge against human-labeled answers, Nexus was 14–94% more accurate than agentic RAG. The largest gain came from revenue-intelligence questions spanning 217 call transcripts.
+ up to 94 %
+ more accurate than agentic RAG 
+ Your indexes, always visible
+ Monitor performance, explore your data, and manage indexes from a clean, fast console — or stay in the terminal. Your call. 
+ app.pinecone.io 
+ Get started 
+ Database 
+ Quickstart
+ Indexes (3)
+ Backups
+ Assistant 
+ Inference 
+ API keys 
+ Manage 
+ Indexes
+ + Create index 
+ Name Status Records Region Type Dimensions 
+ s-cache Ready 55,611 aws us-east-1 Dense 1,536 ··· 
+ product-search Ready 2,418,302 aws us-west-2 Dense 3,072 ··· 
+ user-profiles Ready 847,211 aws eu-west-1 Dense 1,024 ··· 
+ s-cache 
+ Record count 55,611 Region aws us-east-1 Type Dense Host s-cache-vjxlb1i.svc.aped-4627-b74a… 
+ ··· Connect 
+ Browser
+ Metrics
+ Namespaces (4)
+ Imports
+ Configuration
+ Records
+ Upsert record 
+ Namespace cache_bench-test ▾ 
+ Operation Search by ID ▾ 
+ ID entry_01KQJG0RTKR8SF2KHY97XYQAK9 
+ Top K 10 
+ Filter Rerank 
+ Search 
+ Search: 10 results (top_k=10) 1 RUs ⓘ 
+ 1
+ Score
+ 0.9997
+ ···
+ _id: entry_01KQJG0RTKR8SF2KHY97XYQAK9
+ cached_at: 1777663501
+ expires_at: 1777749901
+ hit_count: 0
+ last_hit_at: 0
+ query: “. what is a corporation?”
+ s-cache 
+ Record count 55,611 Region aws us-east-1 Type Dense Host s-cache-a1b2c3d.svc.pinecone.io 
+ ··· Connect 
+ Browser
+ Metrics
+ Namespaces (4)
+ Imports
+ Configuration
+ Metrics
+ All metrics are represented in your local timezone.
+ Updated less than a minute ago. Longer time ranges use lower resolution.
+ 15m 4hrs 12hrs 1d 2d 1w 
+ Read units 
+ Write units 
+ Requests per second 
+Query
+Upsert
+Update
+Delete
+Fetch
+List
+ Request latency 
+ Query Upsert Update Delete Fetch List 
+p50
+p95
+p99
+ Storage size 
+ Record count 
+ Architecture How Pinecone works
+ Read the whitepaper 
+ Pinecone is a fully managed vector database built for AI. Writes are instantly searchable, indexing is automatic, and queries stay fast at any scale. 
+ 01 · WRITE
+ <100ms
+ acknowledgment
+ Acknowledged in under 100ms, searchable within seconds.
+ vector throughput, streaming in
+ 02 · INDEX
+ Automatic
+ no tuning required
+ Algorithms selected per data size, upgraded in the background automatically.
+ index continuously rebalancing
+ 03 · QUERY
+ Consistent
+ at any scale
+ All data searched in parallel. Speed holds steady regardless of scale.
+ p99 latency, improving with scale
+ Enterprise Knowledge your organization can trust
+ Explore Enterprise 
+ Governed access, certified compliance, and guaranteed reliability, so the knowledge layer under your agents holds up under scrutiny, not just load.
+ Governed
+ Encryption at rest and in transit, SSO, RBAC, CMEK, private networking.
+ Compliant
+ SOC 2 Type II, HIPAA, GDPR, and ISO 27001 certified.
+ Reliable
+ Uptime SLAs, support SLAs, and dedicated customer success built in.
+ Start building knowledgeable AI today
+ Create your first index for free, then pay as you go when you're ready to scale.
+ Start building 
+ Get a demo 
+ Subscribe to Pinecone
+ Subscribe 
+ Products Vector Database Dedicated Read Nodes Assistant Documentation Pricing Security Integrations 
+ Resources Community Forum Learning Center Blog Customer Case Studies Status What is a Vector DB? What is RAG? What is Context Engineering? 
+ Company About Partners Careers Newsroom Contact 
+ Legal Customer Terms Website Terms Privacy Cookies Cookie Preferences 
+ © Pinecone Systems, Inc. | San Francisco, CA
+ Pinecone is a registered trademark of Pinecone Systems, Inc.
+
+=== [pricing] https://www.pinecone.io/pricing/ (lang=en)
+Pricing | Pinecone 
+ Pinecone Bring Your Own Cloud is Now Generally Available - Read the announcement Dismiss 
+ Products 
+ Enterprise Customers Resources 
+ Pricing 
+ Contact Log in Start for free 
+ Pricing Start free, scale effortlessly
+ Pinecone runs on fully managed infrastructure that scales with you. Start building today with product and support plans tailored to your needs.
+ ALSO AVAILABLE ON YOUR CLOUD MARKETPLACE
+ AWS 
+ GCP 
+ Microsoft 
+ Starter
+ Builder
+ Standard
+ Enterprise
+ Feature Starter Builder Standard Enterprise 
+ Starter
+ For trying out and for small applications.
+ Start for Free 
+ Free 
+ View included usage 
+ Pinecone Database On-Demand 
+ Pinecone Inference 
+ Pinecone Assistant 
+ Dense, Sparse, and Full-Text Indexes
+ Console Metrics
+ Community Support via Discord 
+ Example Starter Plan workloads 
+ Builder
+ NEW 
+ For solo developers and small teams.
+ Get Started 
+ $20/month flat 
+ Everything in Starter
+ Increased usage limits
+ Choose your cloud and region
+ Multiple projects and users
+ Prometheus and Datadog monitoring
+ Includes Free support 
+ Response SLAs available via Developer or Pro support add-on
+ Standard
+ POPULAR 
+ For production applications at any scale.
+ Start Free Trial 
+ $50/month min. usage You'll be charged a minimum of $50/month. Once your usage exceeds this amount, you'll pay as you go. 
+ 3 week trial includes $300 credits
+ Everything in Builder
+ Pay-as-you-go for Database On-Demand, Inference, and Assistant Usage
+ Choose your cloud and region
+ Dedicated Read Nodes (DRN) 
+ Import from object storage
+ Backup and Restore
+ RBAC
+ SSO (SAML 2.0)
+ HIPAA add-on 
+ Includes Free support 
+ Response SLAs available via Developer or Pro support add-on
+ Enterprise
+ For mission-critical production applications.
+ Get Started Request Trial 
+ $500/month min. usage You'll be charged a minimum of $500/month. Once your usage exceeds this amount, you'll pay as you go. 
+ Everything in Standard
+ 99.95% Uptime SLA
+ Bring Your Own Cloud (BYOC)
+ Private Endpoints
+ Customer Managed Encryption Keys
+ Audit Logs
+ Service Accounts
+ SAML roles
+ SCIM
+ HIPAA Compliance
+ Pro support included
+ Starter
+ For trying out and for small applications.
+ Start for Free 
+ Free 
+ View included usage 
+ Pinecone Database On-Demand 
+ Pinecone Inference 
+ Pinecone Assistant 
+ Dense, Sparse, and Full-Text Indexes
+ Console Metrics
+ Community Support via Discord 
+ Example Starter Plan workloads 
+ Builder
+ NEW 
+ For solo developers and small teams.
+ Get Started 
+ $20/month flat 
+ Everything in Starter
+ Increased usage limits
+ Choose your cloud and region
+ Multiple projects and users
+ Prometheus and Datadog monitoring
+ Includes Free support 
+ Response SLAs available via Developer or Pro support add-on
+ Standard
+ POPULAR 
+ For production applications at any scale.
+ Start Free Trial 
+ $50/month min. usage You'll be charged a minimum of $50/month. Once your usage exceeds this amount, you'll pay as you go. 
+ 3 week trial includes $300 credits
+ Everything in Builder
+ Pay-as-you-go for Database On-Demand, Inference, and Assistant Usage
+ Choose your cloud and region
+ Dedicated Read Nodes (DRN) 
+ Import from object storage
+ Backup and Restore
+ RBAC
+ SSO (SAML 2.0)
+ HIPAA add-on 
+ Includes Free support 
+ Response SLAs available via Developer or Pro support add-on
+ Enterprise
+ For mission-critical production applications.
+ Get Started Request Trial 
+ $500/month min. usage You'll be charged a minimum of $500/month. Once your usage exceeds this amount, you'll pay as you go. 
+ Everything in Standard
+ 99.95% Uptime SLA
+ Bring Your Own Cloud (BYOC)
+ Private Endpoints
+ Customer Managed Encryption Keys
+ Audit Logs
+ Service Accounts
+ SAML roles
+ SCIM
+ HIPAA Compliance
+ Pro support included
+ Estimate your costs with our pricing calculator 
+ Compare Plans 
+ Bring your own cloud
+ For organizations requiring the highest level of security and control
+ Get Started Contact Us for Pricing 
+ Pinecone in your cloud account
+ Zero-access operations – no SSH, VPN, or inbound access required
+ Outbound-only operations with an auditable trail
+ Pro support included
+ Bring-your-own-cloud (BYOC) runs Pinecone in your cloud account and VPC. Pinecone does not need SSH, VPN, or inbound network access to operate the system. You can use public endpoints or private-only connectivity via AWS PrivateLink, GCP Private Service Connect, or Azure Private Link.
+ What you can build on the Starter plan
+ Recommendation engine
+ Given an e-commerce site with:
+ 50K products
+ 10KB metadata per product
+ Using 1024 dimensions embeddings
+ Starter plan gives you:
+ ~ 44K recommendations per day
+ ~ 2K product updates per day
+ Semantic search
+ Given a knowledge base of:
+ ~ 30K documents
+ 20KB document size on average
+ Using 1024 dimensions embeddings
+ Starter plan gives you:
+ ~ 15k searches per day
+ ~ 660 document updates per day
+ Forum answering bot (RAG)
+ Given a user forum with:
+ ~ 10 categories
+ 5KB post size on average
+ Using 1024 dimensions embeddings
+ Starter plan gives you:
+ ~ 130K category-scoped chats per day
+ ~ 3K messages indexed per day
+ Disclaimer: Examples are illustrative only, not quotes or binding offers. Database usage only; excludes Inference (embeddings/reranking) and Assistant usage, as well as initial data import. Subject to change.
+ Explore products
+ Usage-based pricing
+ $50 monthly minimum that's applied to your usage. Anything over $50 is billed pay-as-you-go.
+ Committed Use Contracts
+ The larger your usage commitments, the greater your benefits—unlock bigger discounts and support.
+ Contact Us 
+ Plan Starter Builder Standard Enterprise 
+ Database Features
+ Cloud Availability AWS
+ AWS, Azure, GCP
+ AWS, Azure, GCP
+ AWS, Azure, GCP
+ Region Availability us-east-1
+ All available regions
+ All available regions
+ All available regions
+ Dedicated Read Nodes 
+ Index Types Dense, Sparse, and Full-Text
+ Dense, Sparse, and Full-Text
+ Dense, Sparse, and Full-Text
+ Dense, Sparse, and Full-Text
+ Indexes
+ Up to 5
+ 10 per project
+ 20 per project
+ 200 per project
+ Namespaces per Index 100
+ 1,000
+ 100,000
+ 1,000,000
+ Embedding Models All available models
+ All available models
+ All available models
+ All available models
+ Reranking Models bge-reranker-v2-m3 only
+ bge-reranker-v2-m3 only
+ All available models
+ All available models
+ Console Index Metrics 
+ Prometheus and Datadog Monitoring 
+ Uptime SLA 
+ 99.95%
+ Pricing Dimensions
+ Database
+ Storage Up to 2 GB
+ Up to 10 GB
+ Unlimited
+ $0.33/GB/mo
+ Unlimited
+ $0.33/GB/mo
+ Write Units Up to 2M/mo
+ Up to 5M/mo
+ Unlimited
+ $4-$4.50 per million (varies by cloud and region) 
+ Unlimited
+ $6-$6.75 per million (varies b
+
+=== [about] https://docs.pinecone.io/guides/get-started/overview (lang=en)
+Pinecone Database - Pinecone Docs 
+ Documentation Index
+ Fetch the complete documentation index at: /llms.txt 
+ Use this file to discover all available pages before exploring further.
+ Skip to main content 
+ Pinecone Docs home page 
+ Search...
+ ⌘ K 
+ Docs 
+ Status 
+ Support 
+ Log in 
+ Sign up free 
+ Sign up free 
+ Search... 
+ Navigation 
+ Get started 
+ Pinecone Database
+ Guides 
+ Reference 
+ Examples 
+ Models 
+ Integrations 
+ Admin 
+ Pinecone Database
+ Get started 
+ Overview 
+ Quickstart 
+ Key terms 
+ Architecture 
+ Index data 
+ Overview 
+ Create and configure 
+ Data modeling 
+ Data ingestion 
+ Multitenancy 
+ Adopt the Documents API 
+ Search 
+ Overview 
+ Full-text search 
+ Semantic search 
+ Hybrid search 
+ Sparse-vector search 
+ Filter by metadata 
+ Rerank results 
+ Optimize 
+ Increase relevance 
+ Diagnose poor search results 
+ Increase throughput 
+ Decrease latency 
+ Test at scale 
+ Dedicated read nodes 
+ Manage data 
+ Target an index 
+ Manage indexes 
+ Manage namespaces 
+ Namespace aliases 
+ Manage backups 
+ Documents and records 
+ Manage cost 
+ Understand Pinecone cost 
+ Save on Pinecone costs 
+ Monitor usage and costs 
+ Move to production 
+ Overview 
+ Bring Your Own Cloud (BYOC) 
+ Enforce security 
+ Error handling 
+ Mock the API for testing 
+ Monitor performance 
+ Agents 
+ MCP server 
+ Build a knowledge retrieval agent 
+ Pod-based indexes (legacy) 
+ Overview 
+ Migrate a pod-based index to serverless 
+ Choose a pod type 
+ Create a pod-based index 
+ Manage pod-based indexes 
+ Scale pod-based indexes 
+ Back up and restore 
+ Get started
+ Pinecone Database
+ Copy page Copy page 
+ Pinecone Database is a search engine for AI agents and applications, built for semantic search, knowledge retrieval, and long-term memory at scale.
+ Copy page Copy page 
+ Pinecone Database powers retrieval for AI agents and applications, including search, recommendations, and long-term memory. Each index has a schema that declares the fields you need, such as full-text-search fields, dense vectors, and sparse vectors, so one index can serve whichever retrieval approach a query calls for. 
+ ​ 
+ Get started 
+ Quickstart
+ Pick a search path and run your first search in minutes 
+ Start building 
+ AI coding tools
+ Use Pinecone with Claude Code, Codex, Cursor, and other agentic tools 
+ MCP server
+ Connect any MCP-compatible agent to Pinecone for search and index management 
+ ​ 
+ What you can do 
+ With Pinecone Database, you can: 
+ Serve full-text search , semantic search , sparse-vector search , and hybrid search from one index. To choose an approach, see Search overview .
+ Upsert and query with text instead of vectors. With integrated embedding , Pinecone generates the vectors from your text server-side.
+ Narrow results with metadata filters , then rerank them for relevance.
+ Keep each tenant’s data separate within one index by using namespaces .
+ Scale reads for sustained, high query volumes with dedicated read nodes .
+ Run in production by backing up your indexes and deploying in your own cloud account with Bring Your Own Cloud (BYOC) .
+ ​ 
+ Learn 
+ Key terms
+ Organizations, projects, indexes, namespaces, documents, and records 
+ Data modeling
+ Design the fields your index needs for the searches you’ll run 
+ Search overview
+ Compare search types and choose the right approach for each query 
+ ​ 
+ Resources 
+ API reference
+ Details about the Pinecone APIs, SDKs, and architecture 
+ Examples
+ Notebooks and sample apps with common AI patterns 
+ Models
+ Embedding and reranking models hosted by Pinecone 
+ Integrations
+ Third-party integrations for LangChain, LlamaIndex, 
+
+=== [meta] https://www.pinecone.io/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음

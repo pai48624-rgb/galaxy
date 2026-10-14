@@ -1,0 +1,457 @@
+=== [home] https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B
+HuggingFaceTB/SmolLM2-1.7B · Hugging Face 
+ Hugging Face 
+ Models 
+ Datasets 
+ Spaces 
+ Buckets new 
+ Docs 
+ Enterprise 
+ Pricing 
+ Website 
+ Tasks 
+ HuggingChat 
+ Collections 
+ Languages 
+ Organizations 
+ Community 
+ Blog 
+ Posts 
+ Daily Papers 
+ Hardware 
+ Learn 
+ Discord 
+ Forum 
+ GitHub 
+ Solutions 
+ Team & Enterprise 
+ Hugging Face PRO 
+ Enterprise Support 
+ Inference Providers 
+ Inference Endpoints 
+ Storage Buckets 
+ Log In 
+ Sign Up 
+ ","eos_token":"<|endoftext|>","unk_token":"<|endoftext|>"}},"createdAt":"2024-10-30T22:50:10.000Z","discussionsDisabled":false,"discussionsSorting":"recently-created","downloads":40854,"downloadsAllTime":1616581,"id":"HuggingFaceTB/SmolLM2-1.7B","isLikedByUser":false,"availableInferenceProviders":[],"showHuggingChatEntry":false,"inference":"","lastModified":"2025-02-06T10:31:23.000Z","likes":166,"pipeline_tag":"text-generation","library_name":"transformers","librariesOther":[],"trackDownloads":true,"model-index":null,"evalResults":[{"dataset":{"id":"TIGER-Lab/MMLU-Pro","isBenchmark":true,"task_id":"mmlu_pro"},"value":18.31,"source":{"url":"https://huggingface.co/datasets/evaleval/EEE_datastore/blob/192329fb7d6b15b7b0936a1a58ae862aa7e8ba24/flat/objects/33/c9/33c9180c-621e-40a2-bb6f-02b90ecff1fd.json","name":"EvalEval","isExternal":true},"filename":".eval_results/mmlu_pro.yaml","verified":false,"pullRequest":10,"rank":134,"label":"Mmlu Pro"}],"private":false,"repoType":"model","gated":false,"tags":["transformers","safetensors","llama","text-generation","en","arxiv:2502.02737","license:apache-2.0","eval-results","text-generation-inference","endpoints_compatible","deploy:azure","region:us"],"tag_objs":[{"id":"text-generation","label":"Text Generation","type":"pipeline_tag","subType":"nlp"},{"id":"transformers","label":"Transformers","type":"library"},{"id":"safetensors","label":"Safetensors","type":"library"},{"id":"en","label":"English","type":"language"},{"id":"llama","label":"llama","type":"other","clickable":true},{"id":"eval-results","label":"Eval Results","type":"other","clickable":true},{"id":"text-generation-inference","label":"text-generation-inference","type":"other","clickable":true},{"id":"endpoints_compatible","label":"Inference Endpoints","type":"other","clickable":true},{"id":"arxiv:2502.02737","label":"arxiv:2502.02737","type":"arxiv","extra":{"paperTitle":"SmolLM2: When Smol Goes Big -- Data-Centric Training of a Small Language Model"}},{"id":"license:apache-2.0","label":"apache-2.0","type":"license"},{"id":"deploy:azure","label":"azure","type":"deploy"},{"type":"region","label":"🇺🇸 Region: US","id":"region:us"}],"transformersInfo":{"auto_model":"AutoModelForCausalLM","pipeline_tag":"text-generation","processor":"AutoTokenizer"},"widgetData":[{"text":"Hi, what can you help me with?"},{"text":"What is 84 * 3 / 2?"},{"text":"Tell me an interesting fact about the universe!"},{"text":"Explain quantum computing in simple terms."}],"safetensors":{"parameters":{"BF16":1711376384},"total":1711376384,"sharded":false,"totalFileSize":3422777952},"hasBlockedOids":false,"region":"us","isQuantized":false},"discussionsStats":{"closed":1,"open":10,"total":11},"query":{},"inferenceContextData":{"billableEntities":[],"entityName2Providers":{}},"hasQuantizations":true,"copyToBucketNamespaces":[]}"> 
+ HuggingFaceTB /
+ SmolLM2-1.7B 
+ Like 166 
+ Follow 
+ Hugging Face Smol Models Research 4.15k 
+ Text Generation 
+ Transformers 
+ Safetensors 
+ English 
+ llama 
+ Eval Results 
+ text-generation-inference 
+ arxiv: 2502.02737 
+ License: apache-2.0 
+ Model card Files Files and versions xet 
+ Community 11
+ Deploy 
+ Copy to bucket new 
+ Use this model Instructions to use HuggingFaceTB/SmolLM2-1.7B with libraries, inference providers, notebooks, and local apps. Follow these links to get started.
+ Libraries
+ Transformers How to use HuggingFaceTB/SmolLM2-1.7B with Transformers:
+ # Use a pipeline as a high-level helper
+from transformers import pipeline
+pipe = pipeline("text-generation", model="HuggingFaceTB/SmolLM2-1.7B") # pip install -U transformers accelerate
+# Load model directly
+from transformers import AutoTokenizer, AutoModelForCausalLM
+tokenizer = AutoTokenizer.from_pretrained("HuggingFaceTB/SmolLM2-1.7B")
+model = AutoModelForCausalLM.from_pretrained("HuggingFaceTB/SmolLM2-1.7B", device_map="auto") 
+ Notebooks
+ Google Colab 
+ Kaggle 
+ Local Apps Settings 
+ vLLM How to use HuggingFaceTB/SmolLM2-1.7B with vLLM:
+ Install from pip and serve model
+ # Install vLLM from pip:
+pip install vllm
+# Start the vLLM server:
+vllm serve "HuggingFaceTB/SmolLM2-1.7B"
+# Call the server using curl (OpenAI-compatible API):
+curl -X POST "http://localhost:8000/v1/completions" \
+ -H "Content-Type: application/json" \
+ --data '{
+ "model": "HuggingFaceTB/SmolLM2-1.7B",
+ "prompt": "Once upon a time,",
+ "max_tokens": 512,
+ "temperature": 0.5
+ }' Use Docker
+ docker model run hf.co/HuggingFaceTB/SmolLM2-1.7B 
+ SGLang How to use HuggingFaceTB/SmolLM2-1.7B with SGLang:
+ Install from pip and serve model
+ # Install SGLang from pip:
+pip install sglang
+# Start the SGLang server:
+python3 -m sglang.launch_server \
+ --model-path "HuggingFaceTB/SmolLM2-1.7B" \
+ --host 0.0.0.0 \
+ --port 30000
+# Call the server using curl (OpenAI-compatible API):
+curl -X POST "http://localhost:30000/v1/completions" \
+ -H "Content-Type: application/json" \
+ --data '{
+ "model": "HuggingFaceTB/SmolLM2-1.7B",
+ "prompt": "Once upon a time,",
+ "max_tokens": 512,
+ "temperature": 0.5
+ }' Use Docker images
+ docker run --gpus all \
+ --shm-size 32g \
+ -p 30000:30000 \
+ -v ~/.cache/huggingface:/root/.cache/huggingface \
+ --env "HF_TOKEN=<secret>" \
+ --ipc=host \
+ lmsysorg/sglang:latest \
+ python3 -m sglang.launch_server \
+ --model-path "HuggingFaceTB/SmolLM2-1.7B" \
+ --host 0.0.0.0 \
+ --port 30000
+# Call the server using curl (OpenAI-compatible API):
+curl -X POST "http://localhost:30000/v1/completions" \
+ -H "Content-Type: application/json" \
+ --data '{
+ "model": "HuggingFaceTB/SmolLM2-1.7B",
+ "prompt": "Once upon a time,",
+ "max_tokens": 512,
+ "temperature": 0.5
+ }' 
+ Docker Model Runner How to use HuggingFaceTB/SmolLM2-1.7B with Docker Model Runner:
+ docker model run hf.co/HuggingFaceTB/SmolLM2-1.7B 
+ Browse
+ Quantizations to use this model in llama.cpp , Ollama , LM Studio , or any compatible app.
+ SmolLM2 Table of Contents 
+ Model Summary How to use 
+ Evaluation 
+ Base Pre-Trained Model 
+ Instruction Model 
+ Limitations 
+ Training Model 
+ Hardware 
+ Software 
+ License 
+ Citation 
+ SmolLM2
+ Table of Contents
+ Model Summary 
+ Evaluation 
+ Limitations 
+ Training 
+ License 
+ Citation 
+ Model Summary
+ SmolLM2 is a family of compact language models available in three size: 135M, 360M, and 1.7B parameters. They are capable of solving a wide range of tasks while being lightweight enough to run on-device. More details in our paper: https://arxiv.org/abs/2502.02737v1 
+ The 1.7B variant demonstrates significant advances over its predecessor SmolLM1-1.7B, particularly in instruction following, knowledge, reasoning, and mathematics. It was trained on 11 trillion tokens using a diverse dataset combination: FineWeb-Edu, DCLM, The Stack, along with new mathematics and coding datasets that we curated and will release soon. We developed the instruct version through supervised fine-tuning (SFT) using a combination of public datasets and our own curated datasets. We then applied Direct Preference Optimization (DPO) using UltraFeedback .
+ The instruct model additionally supports tasks such as text rewriting, summarization
+
+=== [pricing] https://huggingface.co/pricing
+Pricing - Hugging Face 
+ Hugging Face 
+ Models 
+ Datasets 
+ Spaces 
+ Buckets new 
+ Docs 
+ Enterprise 
+ Pricing 
+ Website 
+ Tasks 
+ HuggingChat 
+ Collections 
+ Languages 
+ Organizations 
+ Community 
+ Blog 
+ Posts 
+ Daily Papers 
+ Hardware 
+ Learn 
+ Discord 
+ Forum 
+ GitHub 
+ Solutions 
+ Team & Enterprise 
+ Hugging Face PRO 
+ Enterprise Support 
+ Inference Providers 
+ Inference Endpoints 
+ Storage Buckets 
+ Log In 
+ Sign Up 
+ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ 
+ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ 
+ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ 
+ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ 
+ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ 
+ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ 
+ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ 
+ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ 
+ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ 
+ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ 
+ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ 
+ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ 
+ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ 
+ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ 
+ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ 
+ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ 
+ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ 
+ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ 
+ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ 
+ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · 
+
+=== [about] https://huggingface.co/docs
+Hugging Face - Documentation 
+ Hugging Face 
+ Models 
+ Datasets 
+ Spaces 
+ Buckets new 
+ Docs 
+ Enterprise 
+ Pricing 
+ Website 
+ Tasks 
+ HuggingChat 
+ Collections 
+ Languages 
+ Organizations 
+ Community 
+ Blog 
+ Posts 
+ Daily Papers 
+ Hardware 
+ Learn 
+ Discord 
+ Forum 
+ GitHub 
+ Solutions 
+ Team & Enterprise 
+ Hugging Face PRO 
+ Enterprise Support 
+ Inference Providers 
+ Inference Endpoints 
+ Storage Buckets 
+ Log In 
+ Sign Up 
+ Documentation
+ Guides, references, and API docs for the Hugging Face ecosystem.
+ Hub & Client Libraries 
+ Hub
+ Host Git-based models, datasets, and Spaces on the HF Hub
+ Hub Python Library
+ Python client to interact with the Hugging Face Hub
+ CLI
+ Tools for agents and humans to interact with all the Hugging Face services
+ Huggingface.js
+ JavaScript libraries for Hugging Face with built-in TS types
+ Tasks
+ Explore demos, models, and datasets for any ML tasks
+ Dataset viewer
+ API for metadata, stats, and content of HF Hub datasets
+ Deployment & Inference 
+ Inference Providers
+ Call 200k+ models hosted by our 10+ Inference partners
+ Inference Endpoints (dedicated)
+ Deploy models on dedicated & fully managed infrastructure on HF
+ Deploying on AWS
+ Train/deploy models from Hugging Face to AWS with DLCs
+ Text Generation Inference
+ Serve language models with TGI optimized toolkit
+ Text Embeddings Inference
+ Serve embeddings models with TEI optimized toolkit
+ Microsoft Azure
+ Deploy Hugging Face models on Microsoft Azure
+ Google Cloud
+ Train and Deploy Hugging Face models on Google Cloud
+ Core ML Libraries 
+ Transformers
+ State-of-the-art AI models for PyTorch
+ Diffusers
+ State-of-the-art Diffusion models in PyTorch
+ Datasets
+ Access & share datasets for any ML tasks
+ Transformers.js
+ State-of-the-art ML running directly in your browser
+ Tokenizers
+ Fast tokenizers optimized for research & production
+ Evaluate
+ Evaluate and compare models performance
+ timm
+ State-of-the-art vision models: layers, optimizers, and utilities
+ Sentence Transformers
+ Embeddings, Retrieval, and Reranking
+ Kernels
+ Load and run compute kernels from the Hugging Face Hub
+ Training & Optimization 
+ PEFT
+ Parameter-efficient finetuning for large language models
+ Accelerate
+ Train PyTorch models with multi-GPU, TPU, mixed precision
+ Optimum
+ Optimize HF Transformers for faster training/inference
+ AWS Trainium & Inferentia
+ Train/deploy Transformers/Diffusers on AWS
+ Google TPUs
+ Train and Deploy models on Google TPUs via Optimum.
+ TRL
+ Train transformers LMs with reinforcement learning
+ OpenEnv
+ Create and deploy agentic RL execution environments
+ Safetensors
+ Safe way to store/distribute neural network weights
+ Bitsandbytes
+ Optimize and quantize models with bitsandbytes
+ Lighteval
+ All-in-one toolkit to evaluate LLMs across multiple backends
+ Collaboration & Extras 
+ Gradio
+ Build ML demos and web apps with a few lines of Python
+ Trackio
+ A lightweight, local-first, and free experiment tracking Python library
+ smolagents
+ Smol library to build great agents in Python
+ LeRobot
+ Making AI for Robotics more accessible with end-to-end learning
+ Reachy Mini
+ Open-source expressive robot SDK for hackers and AI builders
+ AutoTrain
+ AutoTrain API and UI for seamless model training
+ Chat UI
+ Open source chat frontend powering HuggingChat
+ Leaderboards
+ Create custom Leaderboards on Hugging Face
+ Argilla
+ Collaboration tool for building high-quality datasets
+ Distilabel
+ Framework for synthetic data generation and AI feedback
+ Xet
+ Xet Protocol Specification
+ Community 
+ Blog Learn Discord Forum GitHub 
+ System theme 
+ Company
+ TOS Privacy About Careers 
+
+=== [meta] https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B
+html lang: 없음
+hreflang: 없음
+화면에 보이는 언어 이름: English
+
+=== [github] https://github.com/huggingface/smollm
+# Smol Models 🤏
+
+Welcome to Smol Models, a family of efficient and lightweight AI models from Hugging Face. Our mission is to create fully open powerful yet compact models, for text and vision, that can run effectively on-device while maintaining strong performance.
+
+## [NEW] SmolLM3 (Language Model)
+![image](https://github.com/user-attachments/assets/2bf61ea2-8d2e-426b-ba40-0242d34325d2)
+
+Our 3B model outperforms Llama 3.2 3B and Qwen2.5 3B while staying competitive with larger 4B alternatives (Qwen3 & Gemma3). Beyond the performance numbers, we're sharing exactly how we built it using public datasets and training frameworks.
+
+Ressources:
+- [SmolLM3-Base](https://hf.co/HuggingFaceTB/SmolLM3-3B-Base)
+- [SmolLM3](https://hf.co/HuggingFaceTB/SmolLM3-3B)
+- [blog](https://hf.co/blog/smollm3)
+
+Summary:
+- **3B model** trained on 11T tokens, SoTA at the 3B scale and competitive with 4B models
+- **Fully open model**, open weights + full training details including public data mixture and training configs
+- **Instruct model** with **dual mode reasoning,** supporting think/no_think modes
+- **Multilingual support** for 6 languages: English, French, Spanish, German, Italian, and Portuguese
+- **Long context** up to 128k with NoPE and using YaRN
+
+![image](https://github.com/user-attachments/assets/f1b76d3b-af2b-4218-91b3-4ce815bdf0a8)
+
+## 👁️ SmolVLM (Vision Language Model)
+[SmolVLM](https://huggingface.co/HuggingFaceTB/SmolVLM-Instruct) is our compact multimodal model that can:
+- Process both images and text and perform tasks like visual QA, image description, and visual storytelling
+- Handle multiple images in a single conversation
+- Run efficiently on-device
+
+## Repository Structure
+```
+smollm/
+├── text/               # SmolLM3/2/1 related code and resources
+├── vision/            # SmolVLM related code and resources
+└── tools/             # Shared utilities and inference tools
+    ├── smol_tools/    # Lightweight AI-powered tools
+    ├── smollm_local_inference/
+    └── smolvlm_local_inference/
+```
+
+## Getting Started
+
+### SmolLM3
+```python
+from transformers import AutoModelForCausalLM, AutoTokenizer
+
+model_name = "HuggingFaceTB/SmolLM3-3B"
+device = "cuda"  # for GPU usage or "cpu" for CPU usage
+
+# load the tokenizer and the model
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+model = AutoModelForCausalLM.from_pretrained(
+    model_name,
+).to(device)
+
+# prepare the model input
+prompt = "Give me a brief explanation of gravity in simple terms."
+messages_think = [
+    {"role": "user", "content": prompt}
+]
+
+text = tokenizer.apply_chat_template(
+    messages_think,
+    tokenize=False,
+    add_generation_prompt=True,
+)
+model_inputs = tokenizer([text], return_tensors="pt").to(model.device)
+
+# Generate the output
+generated_ids = model.generate(**model_inputs, max_new_tokens=32768)
+
+# Get and decode the output
+output_ids = generated_ids[0][len(model_inputs.input_ids[0]) :]
+print(tokenizer.decode(output_ids, skip_special_tokens=True))
+```
+
+### SmolVLM
+```python
+from transformers import AutoProcessor, AutoModelForVision2Seq
+
+processor = AutoProcessor.from_pretrained("HuggingFaceTB/SmolVLM-Instruct")
+model = AutoModelForVision2Seq.from_pretrained("HuggingFaceTB/SmolVLM-Instruct")
+
+messages = [
+    {
+        "role": "user",
+        "content": [
+            {"type": "image"},
+            {"type": "text", "text": "What's in this image?"}
+        ]
+    }
+]
+```
+
+## Ecosystem
+<div align="center">
+<img src="https://cdn-uploads.huggingface.co/production/uploads/61c141342aac764ce1654e43/RvHjdlRT5gGQt5mJuhXH9.png" width="700"/>
+</div>
+
+## Resources
+
+### Documentation
+- [SmolLM3 Documentation](text/README.md)
+- [SmolLM2 paper](https://arxiv.org/abs/2502.02737v1)
+- [SmolVLM Documentation](vision/README.md)
+- [Local Inference Guide](tools/README.md)
+
+### Pretrained Models
+- [SmolLM3 Models Collection](https://huggingface.co/collections/HuggingFaceTB/smollm3-686d33c1fdffe8e635317e23)
+- [SmolLM2 Models Collection](https://huggingface.co/collections/HuggingFaceTB/smollm2-6723884218bcda64b34d7db9)
+- [SmolVLM Model](https://huggingface.co/HuggingFaceTB/SmolVLM-Instruct)
+
+### Datasets
+- [SmolLM3 Pretraining dataset](https://huggingface.co/collections/HuggingF

@@ -1,0 +1,724 @@
+=== [home] https://vercel.com/blog/ai-gateway-is-now-generally-available (lang=en)
+AI Gateway: Production-ready reliability for your AI apps - Vercel 
+ Skip to content 
+ Copy Wordmark Copy Logo 
+ Download Brand Assets Brand Guidelines 
+ Products Agent Stack
+ AI SDK 
+ AI Gateway 
+ Sandbox 
+ Passport 
+ Connect 
+ eve 
+ Core Platform
+ Security 
+ Content Delivery 
+ Fluid Compute 
+ Observability 
+ Workflows 
+ CI/CD 
+ Tools
+ Next.js 
+ Vercel Agent 
+ Vercel Plugin 
+ Open Source 
+ Domains ↗ 
+ v0 ↗ 
+ Resources Learn
+ Docs 
+ About 
+ Blog 
+ Changelog 
+ Knowledge Base 
+ Build
+ AI Apps 
+ Web Apps 
+ Marketing Sites 
+ Platforms 
+ Commerce 
+ Explore
+ Customers 
+ Marketplace 
+ Partner Finder 
+ AWS 
+ Community ↗ 
+ Enterprise Pricing 
+ Get a Demo Log In Sign Up 
+ Ask AI Dashboard 
+ Products Agent Stack
+ AI SDK 
+ AI Gateway 
+ Sandbox 
+ Passport 
+ Connect 
+ eve 
+ Core Platform
+ Security 
+ Content Delivery 
+ Fluid Compute 
+ Observability 
+ Workflows 
+ CI/CD 
+ Tools
+ Next.js 
+ Vercel Agent 
+ Vercel Plugin 
+ Open Source 
+ Domains ↗ 
+ v0 ↗ 
+ Resources Learn
+ Docs 
+ About 
+ Blog 
+ Changelog 
+ Knowledge Base 
+ Build
+ AI Apps 
+ Web Apps 
+ Marketing Sites 
+ Platforms 
+ Commerce 
+ Explore
+ Customers 
+ Marketplace 
+ Partner Finder 
+ AWS 
+ Community ↗ 
+ Enterprise 
+ Pricing 
+ Get a Demo Log In Sign Up 
+ AI Gateway: Production-ready reliability for your AI apps
+ Walter Korman , Harpreet Arora 
+ Blog 
+ 21 Aug 2025 
+ 3 min read
+ Copy 
+ Building an AI app can now take just minutes. With developer tools like the AI SDK , teams can build both AI frontends and backends that accept prompts and context, reason with an LLM, call actions, and stream back results.
+ But going to production requires reliability and stability at scale. Teams that connect directly to a single LLM provider for inference create a fragile dependency: if that provider goes down or hits rate limits, so does the app. As AI workloads become mission-critical, the focus shifts from integration to reliability and consistent model access. Fortunately, there's a better way to run.
+ AI Gateway , now generally available, ensures availability when a provider fails, avoiding low rate limits and providing consistent reliability for AI workloads. It's the same system that has powered v0 .app for millions of users, now battle-tested, stable, and ready for production for our customers.
+ Copy link to heading The case for flexibility
+ AI capabilities have grown and changed with incredible speed. Reasoning, barely a concept a year ago, is now a standard capability across models. Tool use and the Model Context Protocol (MCP) went from experiments to widely adopted standards in under a year.
+ An essential tool for success in AI is staying flexible and adapting to the new frontier. Whether AI native or leveraging AI integrations, teams want the ability to use the best model available at any given time while keeping systems composable and avoiding lock-in. 
+ Building in the flexibility to switch between models requires sophisticated engineering. APIs can fail without warning, rate limits vary by provider, and keys must be managed and secured per vendor. Even tracking spend means juggling multiple dashboards with different top-up programs and spend controls. Engineering around these failure modes is time-consuming and slows teams down. 
+ AI Gateway handles this complexity for you so you can scale confidently and quickly.
+ Copy link to heading Great developer experience, trusted infrastructure
+ The AI SDK now sees more than 2 million downloads per week and powers apps like Browserbase and Perplexity. While AI SDK standardized provider APIs and made switching as simple as a single line of code, the harder problem is ensuring availability when a provider fails. The AI Gateway brings the same developer experience together with globally available, production-grade infrastructure.
+ Swap a model string and you’re testing a new provider in seconds:
+ 1 import { streamText } from 'ai' 
+ 2 const result = streamText ( { 
+ 3 model : 'xai/grok-4' , // defaults to Vercel AI Gateway 
+ 4 prompt : 'How does Vercel AI Gateway have no markup on tokens?' 
+ 5 } ) 
+ AI Gateway supports hundreds of models, you can view the library here .
+ With AI Gateway you can use any vendor, any model, through a single API. Built on AI SDK 5, it supports hundreds of models today without requiring you to manage API keys, rate limits, or provider accounts. The Gateway handles authentication, usage tracking, failover, billing, and more.
+ Developers want speed, reliability, and choice. AI Gateway is built for teams creating AI apps, agents, RAG systems, or search and chat experiences who:
+ Evaluate or swap models dynamically
+ Need higher rate limits than a single vendor can provide
+ Want access to new frontier models as soon as they launch
+ Can’t afford a single point of failure
+ Need visibility into model usage and cost without juggling several dashboards
+ Copy link to heading Zero markup, high reliability
+ And all this with zero markup: bring your own keys and contracts, with no added markup on model prices.
+ Just as CDNs transformed networking with redundancy, failover, and optimization, AI Gateway will transform inference reliability for your apps. Vercel's CDN powers trillions of requests a year , and sits at the core of AI Gateway providing sub-20ms latency.
+ Copy link to heading Getting started with AI Gateway
+ The AI Gateway is now generally available . Try it for free , or browse the model library to see supported providers and chat with a model of your choice.
+ Through the AI Gateway, we want to help you build fast, stay reliable, and keep up with the rapid pace of AI innovation without being slowed down by infrastructure, or locked into any one model or provider.
+ Copy link to heading Frequently Asked Questions
+ Can I try the AI Gateway for free? 
+ Yes! When you sign up for a Vercel account, you get $5 of credits every 30 days to try out any model from our model list. We don’t restrict access to premium models. 
+ Note: After you make your first payment, you are considered a paid customer and will no longer receive the free credits.
+ How is the AI Gateway priced? 
+ We offer tokens at list price from the upstream providers with no markup.
+ If you bring your own key, we will not add any markup to your token price (0%).
+ You are responsible for any payment processing fees.
+ Do you have any rate limits? 
+ While the upstream providers may have limits, Vercel doesn’t place any rate limits on your queries.
+ We are constantly working with the upstream providers to get you the maximum limits, throughput and reliability.
+ What models do you support? 
+ We have over a hundred models from a range of providers to give you the maximum flexibility.
+ See the full model list here .
+ Ready to deploy?
+ Start deploying Talk to an expert 
+ Agent Stack
+ AI SDK 
+ AI Gateway 
+ Sandbox 
+ Workflows 
+ Connect New 
+ Passport New 
+ eve New 
+ Core Platform
+ CI/CD 
+ Content Delivery 
+ Fluid Compute 
+ Observability 
+ Security
+ Platform Security 
+ WAF 
+ Bot Management 
+ BotID 
+ Tools
+ Vercel Drop 
+ Vercel Agent 
+ Vercel Plugin 
+ Agent Skills 
+ Domains 
+ v0 
+ Frameworks
+ eve New 
+ Next.js 
+ Nuxt 
+ SvelteKit 
+ Nitro 
+ Turborepo 
+ Tanstack Start 
+ FastAPI 
+ All frameworks 
+ SDKs
+ Vercel SDK 
+ Workflow SDK 
+ Flags SDK 
+ Chat SDK 
+ Queues SDK 
+ Streamdown 
+ Build
+ AI Apps 
+ Web Apps 
+ Marketing Sites 
+ Platforms 
+ Commerce 
+ Platform Engineers 
+ Design Engineers 
+ Learn
+ Docs 
+ Blog 
+ Changelog 
+ Knowledge Base 
+ Academy 
+ Articles 
+ Community 
+ Is Agentic 
+ Explore
+ Customers 
+ Marketplace 
+ Template
+
+=== [pricing] https://vercel.com/pricing (lang=en)
+Vercel Pricing: Hobby, Pro, and Enterprise plans 
+ Skip to content 
+ Copy Wordmark Copy Logo 
+ Download Brand Assets Brand Guidelines 
+ Products Agent Stack
+ AI SDK 
+ AI Gateway 
+ Sandbox 
+ Passport 
+ Connect 
+ eve 
+ Core Platform
+ Security 
+ Content Delivery 
+ Fluid Compute 
+ Observability 
+ Workflows 
+ CI/CD 
+ Tools
+ Next.js 
+ Vercel Agent 
+ Vercel Plugin 
+ Open Source 
+ Domains ↗ 
+ v0 ↗ 
+ Resources Learn
+ Docs 
+ About 
+ Blog 
+ Changelog 
+ Knowledge Base 
+ Build
+ AI Apps 
+ Web Apps 
+ Marketing Sites 
+ Platforms 
+ Commerce 
+ Explore
+ Customers 
+ Marketplace 
+ Partner Finder 
+ AWS 
+ Community ↗ 
+ Enterprise Pricing 
+ Get a Demo Log In Sign Up 
+ Ask AI Dashboard 
+ Products Agent Stack
+ AI SDK 
+ AI Gateway 
+ Sandbox 
+ Passport 
+ Connect 
+ eve 
+ Core Platform
+ Security 
+ Content Delivery 
+ Fluid Compute 
+ Observability 
+ Workflows 
+ CI/CD 
+ Tools
+ Next.js 
+ Vercel Agent 
+ Vercel Plugin 
+ Open Source 
+ Domains ↗ 
+ v0 ↗ 
+ Resources Learn
+ Docs 
+ About 
+ Blog 
+ Changelog 
+ Knowledge Base 
+ Build
+ AI Apps 
+ Web Apps 
+ Marketing Sites 
+ Platforms 
+ Commerce 
+ Explore
+ Customers 
+ Marketplace 
+ Partner Finder 
+ AWS 
+ Community ↗ 
+ Enterprise 
+ Pricing 
+ Get a Demo Log In Sign Up 
+ Scale your app,
+control your costs
+ Hobby 
+ $0 /mo. 
+ The perfect starting place for your web app or personal project.
+ Import your repo, deploy in seconds 
+ Automatic CI/CD 
+ Web Application Firewall 
+ Global, automated CDN 
+ Fluid compute 
+ DDoS Mitigation 
+ Traffic & performance insights 
+ Start deploying
+ Pro Popular 
+ $20 /mo. 
+ Everything you need to build and scale your app.
+ All Hobby features, plus: 
+ $20 of included usage credit 
+ Flat Rate CDN with traffic spike protection 
+ Advanced spend management 
+ Team collaboration & free viewer seats 
+ Cold start prevention 
+ Free custom domain 
+ Start a free trial
+ Enterprise 
+ Custom 
+ Critical security, performance, observability, platform SLAs, and support.
+ All Pro features, plus: 
+ Guest & Team access controls 
+ SCIM & Directory Sync 
+ Managed WAF Rulesets 
+ Multi-region compute & failover 
+ 99.99% SLA 
+ Advanced Support 
+ Get a demo
+ All prices shown are in USD and exclude value-added tax (VAT), goods and services tax (GST), and other applicable taxes. Taxes are calculated based on your billing address and added to your invoice where required by law. Learn more about taxes .
+ Learn about Fluid Compute No idle, no waste
+ Only pay for actual execution time, not idle resources.
+ Learn about Spend Management Control your spending
+ Set a limit, get alerts, and we'll stop usage before you go over budget.
+ Hobby 
+ Pro 
+ Enterprise 
+ Hobby Pro Enterprise 
+ Vercel Delivery Network
+ Ultra-fast, secure by default global application delivery.
+ Vercel Network 
+ Global Points of Presence
+ Vercel Regions
+ Automatic Routing
+ HTTPS Certificates
+ TLS/SSL Encryption
+ Traffic Load Balancing
+ Private Inter-Region Network
+ Automatic Region Failover
+ Configurable Routing 
+ Reverse Proxy
+ Rewrites
+ Redirects
+ Middleware Support
+ CDN Requests 
+ 1M / month included
+ Included in Flat Rate CDN
+ Custom
+ Fast Data Transfer 
+ 100 GB / month included
+ Included in Flat Rate CDN
+ Custom
+ Regional pricing ↗ 
+ Vercel Firewall
+ Customizable security to protect your applications.
+ Web Application Firewall 
+ Custom Firewall Rules
+ Up to 3
+ Up to 40
+ Up to 1,000
+ IP Blocking
+ Up to 3
+ Up to 100
+ Up to 1,000
+ System Bypass Rules
+ —
+ Up to 25
+ Up to 100
+ Firewall Rate Limit Requests 
+ 1M allowed requests / month included
+ Starting at $0.50 per 1M allowed requests
+ Custom
+ OWASP Core Ruleset (managed)
+ —
+ —
+ Custom
+ Bot Management 
+ Automated DDoS Mitigation
+ AI Bots (managed ruleset)
+ Bot Protection (managed ruleset)
+ BotID 
+ Basic checks included
+ $1 per 1,000 Deep Analysis checks
+ Custom
+ Attack Challenge Mode
+ Regional pricing ↗ 
+ Content, Caching & Optimization
+ Store and cache content close to your customers. 
+ Content Delivery 
+ Zero-config CDN cache
+ Automated Compression
+ Background Revalidation
+ Stale-While-Revalidate
+ Incremental Static Regeneration (ISR) 
+ ISR Reads 
+ 1M / month included
+ Starting at $0.40 per 1M
+ Custom
+ ISR Writes 
+ 200k / month included
+ Starting at $4 per 1M
+ Custom
+ Bulk Redirects 
+ 1K included per project
+ $50 / month per 25K redirects
+ Custom
+ Blob 
+ Blob Storage Size 
+ 1 GB / month included
+ $0.023 per GB
+ Custom
+ Blob Simple Operations 
+ 10K / month included
+ $0.40 per 1M
+ Custom
+ Blob Advanced Operations 
+ 2K / month included
+ $5 per 1M
+ Custom
+ Blob Data Transfer 
+ 10 GB / month included
+ Included in Flat Rate CDN
+ Custom
+ Image Optimization 
+ Image Optimization Transformation 
+ 5K / month included
+ Starting at $0.05 per 1K
+ Custom
+ Image Optimization Cache Reads 
+ 300K / month included 
+ Starting at $0.40 per 1M
+ Custom
+ Image Optimization Cache Writes 
+ 100K / month included
+ Starting at $4 per 1M
+ Custom
+ Global Config 
+ Global Config Reads 
+ 100K / month included
+ Starting at $3 per 1M reads
+ Custom
+ Global Config Writes 
+ 100 writes / month included
+ $1 per 100 writes
+ Custom
+ Microfrontends Support 
+ Microfrontends
+ 2 included projects
+ 2 included projects
+ then $250 per additional project
+ Custom
+ Microfrontends Routing
+ 50K routed requests / month included
+ $2 per 1M routed requests
+ Custom
+ Regional pricing ↗ 
+ Vercel Compute
+ Dynamic, scalable functions to power your framework of choice. Now available with Fluid compute with Active CPU pricing .
+ Vercel Functions 
+ Fluid Active CPU 
+ 4 hours / month included
+ Starting at $0.128 per hour
+ Custom
+ Fluid Provisioned Memory 
+ 360 GB-hrs / month included
+ Starting at $0.0106 per GB-hr
+ Custom
+ Function Invocations 
+ 1M / month included
+ Starting at $0.60 per 1M
+ Custom
+ Service Requests Beta 
+ 1M requests / month included
+ Starting at $0.50 per 1M
+ Custom
+ Vercel Sandbox 
+ Sandbox Active CPU 
+ 5 hours / month included
+ Starting at $0.128 per hour
+ Custom
+ Sandbox Provisioned Memory 
+ 420 GB-hrs / month included
+ Starting at $0.0212 per GB-hr
+ Custom
+ Sandbox Creations 
+ 5K / month included
+ Starting at $0.60 per 1M
+ Custom
+ Sandbox Data Transfer 
+ 20 GB / month included
+ Included in Flat Rate CDN
+ Custom
+ Concurrent Sandboxes
+ 10
+ 10K
+ Custom
+ Snapshot Storage 
+ 15 GB
+ Starting at $0.08 per GB-month
+ Custom
+ Vercel Container Registry Image Storage Beta 
+ 10 GB / month included
+ $0.10 per GB-month
+ Custom
+ Fast Origin Transfer 
+ 10 GB / month included
+ Starting at $0.06 per GB
+ Custom
+ Vercel Workflows 
+ Workflow Events
+ 50K events / month included
+ $20 per 1M
+ Custom
+ Workflow Storage Writes
+ 1 GB
+ $0.50 per GB
+ Custom
+ Workflow Storage Retention
+ —
+ $0.50 per GB-month
+ Custom
+ Vercel Queues Beta 
+
+
+=== [about] https://vercel.com/docs (lang=en)
+Vercel Documentation 
+ Skip to content 
+ Copy Wordmark Copy Logo 
+ Download Brand Assets Brand Guidelines 
+ Docs Build Build with AI
+ AI Gateway 
+ AI SDK 
+ Sandbox 
+ Container Registry 
+ Workflow 
+ Vercel Agent 
+ v0 ↗ 
+ Vercel MCP 
+ AI Integrations 
+ Deploy & scale
+ Deployments 
+ CLI 
+ Functions 
+ Delivery Network 
+ Storage 
+ Integrations 
+ Microfrontends 
+ Domains 
+ Operate & protect
+ Firewall 
+ Observability 
+ Feature Flags 
+ Toolbar 
+ Bot Management 
+ BotID 
+ Deployment Protection 
+ Compliance 
+ Learn Resources
+ Changelog ↗ 
+ Blog ↗ 
+ Community ↗ 
+ Knowledge Base 
+ APIs & SDKs 
+ Templates 
+ Getting Started 
+ Ask AI Log In Sign Up 
+ Build Build with AI
+ AI Gateway 
+ AI SDK 
+ Sandbox 
+ Container Registry 
+ Workflow 
+ Vercel Agent 
+ v0 ↗ 
+ Vercel MCP 
+ AI Integrations 
+ Deploy & scale
+ Deployments 
+ CLI 
+ Functions 
+ Delivery Network 
+ Storage 
+ Integrations 
+ Microfrontends 
+ Domains 
+ Operate & protect
+ Firewall 
+ Observability 
+ Feature Flags 
+ Toolbar 
+ Bot Management 
+ BotID 
+ Deployment Protection 
+ Compliance 
+ Learn Resources
+ Changelog ↗ 
+ Blog ↗ 
+ Community ↗ 
+ Knowledge Base 
+ APIs & SDKs 
+ Templates 
+ Getting Started 
+ Ask AI Sign Up Log In 
+ Search Docs ⌘ K 
+ Start
+ Getting started 
+ Fundamentals 
+ Frameworks 
+ Incremental Migration 
+ Production Checklist 
+ Build AI apps
+ AI Gateway 
+ AI SDK 
+ MCP 
+ Vercel Connect 
+ eve beta 
+ Agent Resources 
+ Run agents and backends
+ Functions 
+ Fluid Compute 
+ Routing Middleware 
+ Cron Jobs 
+ Queues beta 
+ Workflows 
+ Sandbox 
+ Container Registry beta 
+ Ship and scale
+ Projects 
+ Git 
+ Drop new 
+ CLI 
+ Monorepos 
+ Builds 
+ Deployments 
+ Domains 
+ Vercel for Platforms 
+ Routing 
+ CDN 
+ Microfrontends 
+ Storage 
+ Integrations 
+ Vercel Agent beta 
+ Services beta 
+ Observe and improve
+ Observability 
+ Vercel Toolbar 
+ Feature Flags 
+ Rolling Releases 
+ Instant Rollback 
+ Secure and govern
+ Firewall 
+ Bot Management 
+ BotID 
+ Deployment Protection 
+ Key Management beta 
+ Passport new 
+ Identity & Access 
+ Networking 
+ Security & Compliance 
+ Manage
+ Pricing 
+ Plans 
+ Spend Management 
+ Limits 
+ Notifications 
+ Support Center 
+ Reference
+ Project Configuration 
+ REST API 
+ Vercel SDK 
+ Build Output API 
+ Webhooks 
+ Marketplace APIs 
+ Checks 
+ Errors 
+ Glossary 
+ Ship anything with Vercel
+ Deploy your first app, set up your coding agent to build and deploy on Vercel, or call any AI model through AI Gateway.
+ Get started Set up your agent Get AI Gateway key 
+ Deploy an app Set up your agent Call a model 
+ terminal 
+ npm i -g vercel 
+ vercel login 
+ vercel 
+ terminal 
+ # Plugin for Claude Code, Codex, Grok Build, Cursor, Copilot, Kimi Code 
+ npx plugins add vercel/vercel-plugin 
+ # Plugin for OpenCode 
+ opencode plugin add github:vercel/vercel-plugin 
+ # Skills for any other agent 
+ npx skills add vercel-labs/agent-skills 
+ # Let your agent manage projects, deployments, and logs 
+ npx -y add-mcp https://mcp.vercel.com -g 
+ # Route your agent's model calls through AI Gateway 
+ npx vercel ai-gateway setup 
+ terminal 
+ # Create an API key and export the key it prints 
+ vercel ai-gateway api-keys create 
+ export AI_GATEWAY_API_KEY = "your-ai-gateway-api-key" 
+ # Call any model through one endpoint 
+ curl https://ai-gateway.vercel.sh/v1/chat/completions \ 
+ -H "Authorization: Bearer $AI_GATEWAY_API_KEY" \ 
+ -H "Content-Type: application/json" \ 
+ -d '{ 
+ "model": "anthropic/claude-opus-5", 
+ "messages": [{ "role": "user", "content": "Why is the sky blue?" }] 
+ }' 
+ Set up your coding agent 
+ Set up the agent you code with, and the platform for the agents you ship. This prompt hands your agent the Ve
+
+=== [meta] https://vercel.com/blog/ai-gateway-is-now-generally-available
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음

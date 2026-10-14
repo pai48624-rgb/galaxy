@@ -1,0 +1,177 @@
+{
+ "company": "Perplexity",
+ "one_liner_ko": "검색·추론·에이전트·시스템 연구로 인터넷과 세상을 탐색하는 방식을 바꾸려는 AI 답변 엔진 회사.",
+ "what_it_does_ko": "Perplexity는 출처 인용이 달린 답변을 주는 AI 검색 서비스를 운영한다. ChatGPT, Gemini, Claude, Nemotron 등 여러 모델을 조합해 질문마다 알맞은 모델을 고른다. Perplexity Computer는 사용자의 도구를 연결해 리서치·생성·자동화 작업을 실행하는 범용 디지털 작업자다. 개발자에게는 Agent API 등 종량제 API를 제공한다. Perplexity Research는 검색·추론·에이전트·시스템 분야 연구를 발행한다.",
+ "key_features": [
+  "모든 답변에 인라인 출처 인용",
+  "심층 리서치",
+  "Perplexity Computer(백그라운드 작업·브라우저 자동화)",
+  "400개 이상 앱 커넥터",
+  "Comet Assistant",
+  "Agent API(여러 회사 모델 접근)"
+ ],
+ "use_cases_ko": [
+  "금융·시장 인텔리전스 리서치(PitchBook·Statista 등 프리미엄 데이터)",
+  "반복 업무를 백그라운드에서 자동 실행",
+  "앱·웹사이트·보고서 생성"
+ ],
+ "pricing": {
+  "free_tier": "있음 (기본 모델, 사용량 제한)",
+  "plans": [
+   {
+    "name": "Free",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "기본 AI 모델, 사용량 제한",
+    "page_lang": "ko-KR"
+   },
+   {
+    "name": "Pro",
+    "price": 17,
+    "currency": "USD",
+    "period": "month",
+    "limits": "연간 청구 시 월 요금, 보너스 크레딧 4,000개",
+    "page_lang": "ko-KR"
+   },
+   {
+    "name": "Max",
+    "price": 167,
+    "currency": "USD",
+    "period": "month",
+    "limits": "연간 청구 시 월 요금, 월 10,000 크레딧·보너스 35,000",
+    "page_lang": "ko-KR"
+   },
+   {
+    "name": "Agent API web_search(standard)",
+    "price": 0.0025,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "호출 1회당, 모델 토큰은 모델별 요금",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://www.perplexity.ai/hub/pricing?p=enterprise"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "API"
+ ],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.perplexity.ai/hub/pricing?p=enterprise",
+   "quote": "Perplexity 요금제: 개인 및 Enterprise용 플랜"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://research.perplexity.ai",
+   "quote": "Perplexity Research는 검색, 추론, 에이전트, 시스템 분야의 첨단 연구를 통해 인터넷과 더 넓은 세상을 탐색하는 방식을 혁신하려는 저희의 미션을 발전시킵니다."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.perplexity.ai/hub/pricing?p=enterprise",
+   "quote": "Perplexity는 ChatGPT, Google Gemini, Anthropic Claude, NVIDIA Nemotron 등 여러 최고의 모델을 오케스트레이션하고 쿼리마다 가장 적합한 모델을 선택합니다."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.perplexity.ai/products/computer",
+   "quote": "Perplexity Computer 는 사용자가 사용하는 것과 동일한 인터페이스를 작동하는 범용 디지털 작업자입니다."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.perplexity.ai/hub/pricing?p=enterprise",
+   "quote": "모든 답변에는 각 주장이 정확히 어디에서 나왔는지 보여주는 인라인 인용이 포함됩니다."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.perplexity.ai/hub/pricing?p=enterprise",
+   "quote": "웹에서 답변 받기 제한적 \n 10배 \n 400개 이상의 앱 커넥터 연결"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.perplexity.ai/products/computer",
+   "quote": "웹을 검색하고, 브라우저 작업을 자동화하고, 데이터를 추출하고, 단일 워크플로에서 결과를 종합하세요."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.perplexity.ai/hub/pricing?p=enterprise",
+   "quote": "Comet Comet Assistant \n Comet Assistant를 구동하는 고급 모델"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.perplexity.ai/docs/getting-started/pricing",
+   "quote": "The Agent API provides access to third-party models from providers including OpenAI, Anthropic, Google, xAI"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.perplexity.ai/hub/pricing?p=enterprise",
+   "quote": "Pro와 Max는 PitchBook, Statista, S&P Capital IQ를 비롯해 금융 및 시장 인텔리전스 작업을 위한 프리미엄 데이터 소스를 추가합니다."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.perplexity.ai/products/computer",
+   "quote": "Computer가 시간이 지나도 자율적이고 지속적으로 실행하는 반복 작업을 설정하세요."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.perplexity.ai/products/computer",
+   "quote": "프로덕션 준비가 된 앱, 웹사이트, 보고서 등을 만드세요."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.perplexity.ai/hub/pricing?p=enterprise",
+   "quote": "$0 /월 \n 일일 사용량이 제한적인 경우에 적합 \n 간단한 질문에 적합"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.perplexity.ai/hub/pricing?p=enterprise",
+   "quote": "$17 /월 \n 연간 청구 시 \n 확장된 Computer 액세스 \n 보너스 크레딧 4,000개"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.perplexity.ai/hub/pricing?p=enterprise",
+   "quote": "$167 /월 \n 연간 청구 시 \n 최대 Computer 사용량 \n 보너스 크레딧 35,000개 \n 월 10,000 크레딧"
+  },
+  {
+   "field": "pricing",
+   "url": "https://docs.perplexity.ai/docs/getting-started/pricing",
+   "quote": "web_search (standard) $0.0025 per invocation"
+  },
+  {
+   "field": "api",
+   "url": "https://docs.perplexity.ai/docs/getting-started/pricing",
+   "quote": "Understand Perplexity API pricing, model rates, request fees, billing setup, and rate-limit references."
+  },
+  {
+   "field": "platforms",
+   "url": "https://docs.perplexity.ai/docs/getting-started/pricing",
+   "quote": "Orchestrator API usage is billed per token at each model’s published rates"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://research.perplexity.ai",
+   "quote": "html lang: ko-KR\nhreflang: ar-sa"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://research.perplexity.ai",
+   "quote": "it, ja, kk, kn, ko, lt, lv, ml, mr, nb"
+  },
+  {
+   "field": "plan_change",
+   "url": "https://docs.perplexity.ai/docs/getting-started/pricing",
+   "quote": "Agent API pricing varies by provider and model, with each provider offering multiple models at different price points."
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "Free/Pro($17)/Max($167, 연간 청구 기준) 구독에 Computer 크레딧이 붙고, 별도로 토큰·도구 호출 단위 종량제 API(Agent·Orchestrator 등)가 있음",
+   "diff": "기존 분류 '프리미엄(무료+유료 구독)'에 없는 종량제 API 과금과 크레딧 구조가 추가로 있음",
+   "url": "https://docs.perplexity.ai/docs/getting-started/pricing"
+  }
+ ]
+}

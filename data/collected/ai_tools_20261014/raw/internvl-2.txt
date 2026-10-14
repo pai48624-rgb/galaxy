@@ -1,0 +1,139 @@
+=== [home] https://internvl.github.io
+InternVL 
+ InternVL: Scaling up Vision Foundation Models and Aligning for Generic Visual-Linguistic Tasks
+ CVPR 2024 (Oral)
+ Zhe Chen ,
+ Jiannan Wu ,
+ Wenhai Wang ,
+ Weijie Su ,
+ Guo Chen ,
+ Sen Xing ,
+ Muyan Zhong ,
+ Qinglong Zhang ,
+ Xizhou Zhu ,
+ Lewei Lu ,
+ Bin Li ,
+ Ping Luo ,
+ Tong Lu ,
+ Yu Qiao ,
+ Jifeng Dai 
+ ▶ OpenGVLab, Shanghai AI Laboratory 
+ ▶ Nanjing University 
+ ▶ The University of Hong Kong 
+ ▶ The Chinese University of Hong Kong 
+ ▶ Tsinghua University 
+ ▶ University of Science and Technology of China 
+ ▶ SenseTime Research 
+ arXiv (InternVL-1.0) 
+ arXiv (InternVL-1.5) 
+ Code 
+ Demo 
+ Model 
+ Slides (Chinese) 
+ Blog 
+ 🚀 [NEW!] We release the InternVL 2.5 , an advanced multimodal large language model (MLLM) series with parameter coverage ranging from 1B to 78B. InternVL2_5-78B is the first open-source MLLMs to achieve over 70% on the MMMU benchmark, matching the performance of leading closed-source commercial models like GPT-4o.
+ We release the InternVL2 series . InternVL2-Pro achieved a 62.0% accuracy on the MMMU benchmark, matching the performance of leading closed-source commercial models like GPT-4o. Other models are available at HF link .
+ Mini-InternVL has been deployed on the demo . Select Mini-InternVL-Chat-2B-V1-5 
+in the demo to experience lightning-fast performance.
+ InternVL-Chat-V1.5 has been released at HF link , approaching the performance of GPT-4V 
+ and Gemini Pro on various benchmarks like MMMU, DocVQA, ChartQA, MathVista, etc.
+ Abstract
+ The exponential growth of large language models (LLMs) has opened up numerous possibilities for multimodal AGI systems. However, the progress in vision and vision-language foundation models, which are also critical elements of multi-modal AGI, has not kept pace with LLMs. In this work, we design a large-scale vision-language foundation model (InternVL), which scales up the vision foundation model to 6 billion parameters and progressively aligns it with the LLM, using web-scale image-text data from various sources. This model can be broadly applied to and achieve state-of-the-art performance on 32 generic visual-linguistic benchmarks including visual perception tasks such as image-level or pixel-level recognition, vision-language tasks such as zero-shot image/video classification, zero-shot image/video-text retrieval, and link with LLMs to create multi-modal dialogue systems. It has powerful visual capabilities and can be a good alternative to the ViT-22B. We hope that our research could contribute to the development of multi-modal large models.
+ Scaling up Vision Foundation Models
+ We implement the vision encoder of InternVL (i.e., InternViT-6B ) with vanilla vision transformer (ViT). To match the scale of LLMs, we scale up the vision encoder to 6 billion parameters, resulting in the InternViT-6B model.
+ To obtain a good trade-off between accuracy, speed, and stability, we conduct a hyperparameter search for InternViT-6B.
+ We vary the model depth within {32, 48, 64, 80} , the head dimension within {64, 128} , and the MLP ratio within {4, 8} . The model width and the head number are calculated based on the given model scale and other hyperparameters.
+ We employ contrastive learning on a 100M subset of the LAION-en dataset to measure the accuracy, speed, and stability of InternViT-6B variants with different configurations.
+ We report the following findings:
+ (1) Speed . For different model settings, when computation is not saturated, the models with smaller depths exhibit faster speed per image.
+ However, as the GPU computation is fully utilized, the speed difference becomes negligible; 
+ (2) Accuracy . With the same number of parameters, the depth, head dimension, and MLP ratio have little impact on the performance.
+ Based on these findings, we identified the most stable configuration for our final model, as shown in the following table. 
+ Aligning for Generic Visual-Linguistic Tasks
+ As shown in Figure 3, the training of InternVL consists of three progressive stages, including vision-language contrastive training, vision-language generative training, and
+supervised fine-tuning. These stages effectively leverage public data from diverse soursota.pngces, ranging from noisy imagetext pairs on the web to high-quality caption, VQA, and multi-modal dialogue datasets.
+ Vision-Language Contrastive Training . 
+ In the first stage, we conduct contrastive learning to align InternViT-6B with a multilingual LLaMA-7B on web-scale, noisy imagetext pairs. The data are all publicly available and comprise multilingual content, including LAION-en, LAION-multi, LAION-COCO, COYO, Wukong, etc.
+ We use the combination of these datasets and filter out some extremely low-quality data to train our model.
+ As summarized in Table 2, the original dataset contains 6.03 billion image-text pairs, and 4.98 billion remains after cleaning. 
+ Vision-Language Generative Training . In the second stage of training, we connect InternViT-6B with QLLaMA
+and adopt a generative training strategy. Specifically, QLLaMA inherits the weights of LLaMA-7B in the first stage.
+We keep both InternViT-6B and QLLaMA frozen and only
+train the newly added learnable queries and cross-attention
+layers with filtered, high-quality data. Table 2 summarizes
+the datasets for the second stage. It can be seen that we further filtered out data with low-quality captions, reducing it
+from 4.98 billion in the first stage to 1.03 billion. 
+ Supervised Fine-tuning . To demonstrate the benefits of InternVL in creating multi-modal dialogue systems, we
+connect it with an off-the-shelf LLM decoder (e.g., Vicuna or InternLM) through an MLP layer, and conduct supervised fine-tuning (SFT).
+ As detailed in Table 3, we collect a wide range of high-quality instruction data, totaling approximately 4 million samples. 
+ Performance
+ Visual Perception Benchmarks
+ Vision-Language Benchmarks
+ Citation
+@inproceedings{chen2024internvl,
+ title={Internvl: Scaling up vision foundation models and aligning for generic visual-linguistic tasks},
+ author={Chen, Zhe and Wu, Jiannan and Wang, Wenhai and Su, Weijie and Chen, Guo and Xing, Sen and Zhong, Muyan and Zhang, Qinglong and Zhu, Xizhou and Lu, Lewei and others},
+ booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+ pages={24185--24198},
+ year={2024}
+}
+ @article{chen2024far,
+ title={How Far Are We to GPT-4V? Closing the Gap to Commercial Multimodal Models with Open-Source Suites},
+ author={Chen, Zhe and Wang, Weiyun and Tian, Hao and Ye, Shenglong and Gao, Zhangwei and Cui, Erfei and Tong, Wenwen and Hu, Kongzhi and Luo, Jiapeng and Ma, Zheng and others},
+ journal={arXiv preprint arXiv:2404.16821},
+ year={2024}
+ }
+ Acknowledgement
+ This website is adapted from Nerfies , licensed under a Creative
+ Commons Attribution-ShareAlike 4.0 International License . We thank the LLaMA team for giving us access to their models, and open-source projects, including Alpaca and Vicuna.
+
+=== [meta] https://internvl.github.io
+html lang: 없음
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/OpenGVLab/InternVL
+<div align="center">
+
+# InternVL Family: Closing the Gap to Commercial Multimodal Models with Open-Source Suites —— A Pioneering Open-Source Alternative to GPT-5
+
+<div align="center">
+  <img width="500" alt="image" src="https://github.com/user-attachments/assets/930e6814-8a9f-43e1-a284-118a5732daa4">
+  <br>
+</div>
+
+[\[🆕 Blog\]](https://internvl.github.io/blog/)
+[\[🤔 FAQs\]](https://internvl.readthedocs.io/en/latest/tutorials/faqs.html)
+[\[🗨️ Chat Demo\]](https://chat.intern-ai.org.cn/)
+[\[📖 Document\]](https://internvl.readthedocs.io/en/latest/)
+[\[🌐 API\]](https://internlm.intern-ai.org.cn/api/document)
+[\[🚀 Quick Start\]](#quick-start-with-huggingface)
+
+[\[🔥 InternVL3.5 Report\]](https://huggingface.co/papers/2508.18265)
+[\[📜 InternVL3.0 Report\]](https://huggingface.co/papers/2504.10479)
+[\[📜 InternVL2.5 MPO\]](https://huggingface.co/papers/2411.10442)
+[\[📜 InternVL2.5 Report\]](https://huggingface.co/papers/2412.05271)
+
+[\[📜 Mini-InternVL Paper\]](https://arxiv.org/abs/2410.16261)
+[\[📜 InternVL2 Blog\]](https://internvl.github.io/blog/2024-07-02-InternVL-2.0/)
+[\[📜 InternVL 1.5 Paper\]](https://huggingface.co/papers/2404.16821)
+[\[📜 InternVL 1.0 Paper\]](https://huggingface.co/papers/2312.14238)
+
+[\[📖 2.0 中文解读\]](https://zhuanlan.zhihu.com/p/706547971)
+[\[📖 1.5 中文解读\]](https://zhuanlan.zhihu.com/p/699439759)
+[\[📖 1.0 中文解读\]](https://zhuanlan.zhihu.com/p/702946079)
+
+[Switch to the Chinese version (切换至中文版)](/README_zh.md)
+
+<a href="https://trendshift.io/repositories/9803" target="_blank"><img src="https://trendshift.io/api/badge/repositories/9803" alt="OpenGVLab%2FInternVL | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+<img height="55" alt="image" src="https://github.com/user-attachments/assets/bd62ab46-f0ea-40c6-ab10-7fde671716cc">
+
+![image/jpg](https://huggingface.co/OpenGVLab/InternVL3_5-241B-A28B/resolve/main/images/performance.jpg)
+
+</div>
+
+## News 🚀🚀🚀
+
+- `2025/08/30`: 🔥 We open-source the training code of [InternVL3_5-GPT-OSS-20B-A4B](https://github.com/OpenGVLab/InternVL/tree/main/internvl_chat_gpt_oss) and CascadeRL, which consists of a [offline RL stage](https://github.com/OpenGVLab/InternVL/blob/main/internvl_chat_gpt_oss/shell/internvl3_5_gpt_oss/internvl3_5_gpt_oss_20b_stage3_mpo.sh) and a [online RL stage](https://github.com/Weiyun1025/verl-internvl). The training data for these two stages ([MMPR-v1.2](https://huggingface.co/datasets/OpenGVLab/MMPR-v1.2) and [MMPR-Tiny](https://huggingface.co/datasets/OpenGVLab/MMPR-Tiny)) are also open-sourced.
+- `2025/08/26`: 🚀 We introduce [InternVL3.5](https://huggingface.co/papers/2508.18265),  a new family of open-source multimodal models that significantly advances versatility, reasoning capability, and inference efficiency along the InternVL series. Our largest model, i.e., [InternVL3.5-241B-A28B](https://huggingface.co/OpenGVLab/InternVL3_5-241B-A28B), attains state-of-the-art results among open-source MLLMs across general multimodal, reasoning, text, and agentic tasks. We also provide a 20B-A4B version (i.e., [InternVL3_5-GPT-OSS-20B-A4B](https://huggingface.co/OpenGVLab/InternVL3_5-GPT-OSS-20B-A4B-Preview)), which is built up on GPT-OSS-20B-A4B. Notably, we provide two model formats: [the GitHub format](https://huggingface.co/OpenGVLab/InternVL3_5-GPT-OSS-20B-A4B-Preview#github-format), consistent with prior releases, and [the HF format](https://huggingface.co/OpenGVLab/InternVL3_5-GPT-OSS-20B-A4B-Preview#huggingface-format), aligned with the official `transformers` standard.
+- `2025/04/17`: We open-source the [data construction pipeline](https://github.com/OpenGVLab/InternVL/tree/main/internvl_chat/tools/reasoning_data_pipeline) and [training scripts](https://github.com/OpenGVLab/InternVL/tree/main/internvl_chat/shell/internvl3.0/mpo) of [MPO](https://huggingface.co/papers/2411.10442) and [VisualPRM](https://huggingface.co/papers/2503.10291). Additionally, the data construction scripts for [MPO](https://github.com/OpenGVLab/InternVL/tree/main/internvl_chat/shell/internvl3.0/mpo_data_construction) and [VisualPRM](https://github.com/OpenGVLab/InternVL/tree/main/internvl_chat/shell/internvl3.0/visualprm_data_construction) are also re

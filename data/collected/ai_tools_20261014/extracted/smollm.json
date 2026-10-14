@@ -1,0 +1,41 @@
+{
+ "company": "Hugging Face",
+ "one_liner_ko": "기기 안에서 돌릴 수 있을 만큼 가벼운 Hugging Face의 소형 언어 모델 제품군.",
+ "what_it_does_ko": "SmolLM2는 1억 3,500만·3억 6,000만·17억 파라미터 세 가지 크기의 소형 언어 모델 제품군이다. 기기 안에서 실행할 수 있을 만큼 가벼우면서 다양한 작업을 처리하도록 만들어졌다. 17억 모델은 11조 토큰으로 학습했으며 지시 따르기·지식·추론·수학이 이전 버전보다 나아졌다. 지시(Instruct) 모델은 글 다시 쓰기·요약 같은 작업도 지원한다. GitHub 저장소에는 후속 SmolLM3(30억)와 시각 언어 모델 SmolVLM도 함께 공개돼 있다.",
+ "key_features": [
+  "1억 3,500만·3억 6,000만·17억 파라미터 세 가지 크기",
+  "기기 내(온디바이스) 실행 가능한 경량 모델",
+  "지시 모델의 글 다시 쓰기·요약 지원",
+  "Transformers·vLLM·SGLang·Docker로 실행",
+  "llama.cpp·Ollama·LM Studio용 양자화 버전 제공",
+  "후속 SmolLM3: 생각/비생각 이중 추론 모드, 최대 128k 컨텍스트",
+  "SmolVLM: 이미지와 텍스트를 함께 처리하는 소형 멀티모달 모델"
+ ],
+ "use_cases_ko": [
+  "개발자가 휴대기기 등 기기 안에서 가벼운 언어 모델 실행",
+  "글 다시 쓰기·요약 같은 텍스트 작업"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "Apache-2.0",
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://github.com/huggingface/smollm", "quote": "Welcome to Smol Models, a family of efficient and lightweight AI models from Hugging Face."},
+  {"field": "one_liner_ko", "url": "https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B", "quote": "SmolLM2 is a family of compact language models available in three size: 135M, 360M, and 1.7B parameters. They are capable of solving a wide range of tasks while being lightweight enough to run on-device."},
+  {"field": "what_it_does_ko", "url": "https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B", "quote": "It was trained on 11 trillion tokens using a diverse dataset combination: FineWeb-Edu, DCLM, The Stack"},
+  {"field": "key_features", "url": "https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B", "quote": "The instruct model additionally supports tasks such as text rewriting, summarization"},
+  {"field": "key_features", "url": "https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B", "quote": "Quantizations to use this model in llama.cpp , Ollama , LM Studio , or any compatible app."},
+  {"field": "key_features", "url": "https://github.com/huggingface/smollm", "quote": "- **Instruct model** with **dual mode reasoning,** supporting think/no_think modes"},
+  {"field": "key_features", "url": "https://github.com/huggingface/smollm", "quote": "- Process both images and text and perform tasks like visual QA, image description, and visual storytelling"},
+  {"field": "use_cases_ko", "url": "https://github.com/huggingface/smollm", "quote": "Our mission is to create fully open powerful yet compact models, for text and vision, that can run effectively on-device while maintaining strong performance."},
+  {"field": "open_source", "url": "https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B", "quote": " License: apache-2.0 "},
+  {"field": "korean_support", "url": "https://github.com/huggingface/smollm", "quote": "- **Multilingual support** for 6 languages: English, French, Spanish, German, Italian, and Portuguese"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

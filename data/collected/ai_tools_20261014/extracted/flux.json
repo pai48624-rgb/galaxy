@@ -1,0 +1,166 @@
+{
+ "company": "Black Forest Labs",
+ "one_liner_ko": "FLUX는 이미지·영상·오디오 생성과 로봇 동작 예측까지 하나의 API로 제공하는 Black Forest Labs의 모델군이다.",
+ "what_it_does_ko": "FLUX 모델은 이미지와 영상을 생성·편집하고 동기화된 오디오를 만들며 로봇 제어에도 쓰인다. 최신 FLUX 3는 이미지·영상·오디오·동작 예측을 하나의 멀티모달 모델로 묶었다. API로 쓰거나, 오픈 웨이트를 받아 자체 인프라에서 파인튜닝·배포하거나, 브라우저 플레이그라운드에서 바로 시험할 수 있다. API는 구독 없이 생성한 만큼만 내는 종량제다.",
+ "key_features": [
+  "텍스트·이미지·키프레임에서 최대 20초 영상 생성",
+  "다국어 음성·효과음 오디오 동시 생성",
+  "정확한 텍스트 렌더링 이미지 생성",
+  "로봇 동작 예측(FLUX 3 Action)",
+  "이미지 편집 도구(아웃페인팅·지우기·가상 피팅)",
+  "오픈 웨이트 자체 배포·파인튜닝",
+  "브라우저 플레이그라운드"
+ ],
+ "use_cases_ko": [
+  "개발자가 API로 이미지·영상 생성 기능을 제품에 통합",
+  "AI 학습용 합성 데이터 생성"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [
+   {
+    "name": "API 종량제 (계산기 기본값)",
+    "price": 0.048,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "이미지 1장당 $0.048(계산기 기본 표시값), 구독·좌석 요금 없음",
+    "page_lang": "en"
+   },
+   {
+    "name": "Open Weights Builder",
+    "price": null,
+    "currency": "USD",
+    "period": "month",
+    "limits": "FLUX.2 [klein] 모델, 월 1만 장, 1개 도메인, 10명 — 가격 표시 없음(Purchase)",
+    "page_lang": "en"
+   },
+   {
+    "name": "Open Weights Platform",
+    "price": null,
+    "currency": "USD",
+    "period": "month",
+    "limits": "FLUX.2 [klein] 9B + [dev], 월 10만 장, 1개 도메인 — 가격 표시 없음(Purchase)",
+    "page_lang": "en"
+   },
+   {
+    "name": "Open Weights Professional",
+    "price": null,
+    "currency": "USD",
+    "period": "month",
+    "limits": "FLUX.2 [dev], 월 10만 장, 최대 3개 도메인 — 영업 문의",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": "USD",
+    "period": null,
+    "limits": "맞춤 볼륨·API+웨이트 묶음 가격 — 영업 문의",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://bfl.ai/pricing/"
+ },
+ "open_source": "오픈 웨이트(비상업 라이선스, 상업용은 유료 라이선스)",
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "API"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://bfl.ai/",
+   "quote": "Black Forest Labs - Frontier AI Lab"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://docs.bfl.ai/quick_start/introduction",
+   "quote": "FLUX models generate and edit images and video, render synchronized audio, and drive robotics."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://bfl.ai/",
+   "quote": "Start in our playground. Integrate via API. Download our models, customize, and deploy anywhere."
+  },
+  {
+   "field": "key_features",
+   "url": "https://bfl.ai/",
+   "quote": "with native audio and up to 20 second clips in a single generation"
+  },
+  {
+   "field": "key_features",
+   "url": "https://bfl.ai/",
+   "quote": "Optional audio. Multilingual speech, effects and ambience generated with the frames."
+  },
+  {
+   "field": "key_features",
+   "url": "https://bfl.ai/",
+   "quote": "highly-accurate text rendering"
+  },
+  {
+   "field": "key_features",
+   "url": "https://bfl.ai/pricing/",
+   "quote": "FLUX Outpainting FLUX Eraser FLUX VTO"
+  },
+  {
+   "field": "key_features",
+   "url": "https://bfl.ai/",
+   "quote": "Run FLUX models on your own infrastructure. Full control over deployment, fine-tuning, and customization."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://bfl.ai/pricing/",
+   "quote": "Rights to use outputs as training data"
+  },
+  {
+   "field": "pricing",
+   "url": "https://bfl.ai/pricing/",
+   "quote": "No subscriptions, no seat fees. Only pay for what you generate."
+  },
+  {
+   "field": "pricing",
+   "url": "https://bfl.ai/pricing/",
+   "quote": "Rate: $0.048 / image \n Images: 1 \n Total Price: $0.048"
+  },
+  {
+   "field": "pricing",
+   "url": "https://bfl.ai/pricing/",
+   "quote": "FLUX.2 [klein] models \n 10K images / month"
+  },
+  {
+   "field": "pricing",
+   "url": "https://bfl.ai/pricing/",
+   "quote": "FLUX.2 [klein] 9B + FLUX.2 [dev]"
+  },
+  {
+   "field": "open_source",
+   "url": "https://bfl.ai/",
+   "quote": "Self-Hosted Terms of Service Non-Commercial License Terms"
+  },
+  {
+   "field": "open_source",
+   "url": "https://bfl.ai/pricing/",
+   "quote": "Deploy and run FLUX models on your own infrastructure."
+  },
+  {
+   "field": "api",
+   "url": "https://bfl.ai/",
+   "quote": "Simple-to-integrate API to access the latest and most powerful FLUX models."
+  },
+  {
+   "field": "platforms",
+   "url": "https://bfl.ai/",
+   "quote": "Experiment with FLUX's most advanced models in your browser."
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "API는 이미지당 종량제, 오픈 웨이트는 Builder·Platform·Professional·Enterprise·Synthetic Data 상업 라이선스 요금제(월 이미지 수·도메인·사용자 수 한도)로 판매",
+   "diff": "기존 분류는 '오픈소스(일부) + API 종량제'뿐이나, 오픈 웨이트 상업 이용에 별도 월 단위 라이선스 요금제가 추가됨",
+   "url": "https://bfl.ai/pricing/"
+  }
+ ]
+}

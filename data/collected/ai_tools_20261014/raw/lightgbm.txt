@@ -1,0 +1,99 @@
+=== [home] https://lightgbm.readthedocs.io/en/stable/ (lang=en)
+Welcome to LightGBM’s documentation! — LightGBM 4.7.0 documentation 
+ Contents: 
+ Installation Guide 
+ Quick Start 
+ Python Quick Start 
+ Features 
+ Experiments 
+ Parameters 
+ Parameters Tuning 
+ C API 
+ Python API 
+ R API 
+ Distributed Learning Guide 
+ GPU Tutorial 
+ Advanced Topics 
+ FAQ 
+ Development Guide 
+ LightGBM 
+ Welcome to LightGBM’s documentation!
+ View page source 
+ Welcome to LightGBM’s documentation!  
+ LightGBM is a gradient boosting framework that uses tree based learning algorithms. It is designed to be distributed and efficient with the following advantages:
+ Faster training speed and higher efficiency.
+ Lower memory usage.
+ Better accuracy.
+ Support of parallel, distributed, and GPU learning.
+ Capable of handling large-scale data.
+ For more details, please refer to Features .
+ Contents: 
+ Installation Guide 
+ Quick Start 
+ Python Quick Start 
+ Features 
+ Experiments 
+ Parameters 
+ Parameters Tuning 
+ C API 
+ Python API 
+ R API 
+ Distributed Learning Guide 
+ GPU Tutorial 
+ Advanced Topics 
+ FAQ 
+ Development Guide 
+ Indices and Tables  
+ Index 
+ Next 
+ © Copyright 2026, Microsoft Corporation.
+ Built with Sphinx using a
+ theme 
+ provided by Read the Docs .
+
+=== [meta] https://lightgbm.readthedocs.io/en/stable/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/lightgbm-org/LightGBM
+<img src=https://github.com/lightgbm-org/LightGBM/blob/main/docs/logo/LightGBM_logo_black_text.svg width=300 />
+
+> [!NOTE]
+> This project moved from `Microsoft/LightGBM` to `lightgbm-org/LightGBM` in March 2026.
+> This repository is still the official LightGBM source code, managed by the same maintainers (including the creator of LightGBM).
+> For details, see https://github.com/lightgbm-org/LightGBM/issues/7187
+
+Light Gradient Boosting Machine
+===============================
+
+[![C++ GitHub Actions Build Status](https://github.com/lightgbm-org/LightGBM/actions/workflows/cpp.yml/badge.svg?branch=main)](https://github.com/lightgbm-org/LightGBM/actions/workflows/cpp.yml)
+[![Python-package GitHub Actions Build Status](https://github.com/lightgbm-org/LightGBM/actions/workflows/python_package.yml/badge.svg?branch=main)](https://github.com/lightgbm-org/LightGBM/actions/workflows/python_package.yml)
+[![R-package GitHub Actions Build Status](https://github.com/lightgbm-org/LightGBM/actions/workflows/r_package.yml/badge.svg?branch=main)](https://github.com/lightgbm-org/LightGBM/actions/workflows/r_package.yml)
+[![CUDA Version GitHub Actions Build Status](https://github.com/lightgbm-org/LightGBM/actions/workflows/cuda.yml/badge.svg?branch=main)](https://github.com/lightgbm-org/LightGBM/actions/workflows/cuda.yml)
+[![SWIG Wrapper GitHub Actions Build Status](https://github.com/lightgbm-org/LightGBM/actions/workflows/swig.yml/badge.svg?branch=main)](https://github.com/lightgbm-org/LightGBM/actions/workflows/swig.yml)
+[![Static Analysis GitHub Actions Build Status](https://github.com/lightgbm-org/LightGBM/actions/workflows/static_analysis.yml/badge.svg?branch=main)](https://github.com/lightgbm-org/LightGBM/actions/workflows/static_analysis.yml)
+[![Appveyor Build Status](https://ci.appveyor.com/api/projects/status/1ys5ot401m0fep6l/branch/main?svg=true)](https://ci.appveyor.com/project/guolinke/lightgbm/branch/main)
+[![Documentation Status](https://readthedocs.org/projects/lightgbm/badge/?version=latest)](https://lightgbm.readthedocs.io/)
+[![Link checks](https://github.com/lightgbm-org/LightGBM/actions/workflows/lychee.yml/badge.svg?branch=main)](https://github.com/lightgbm-org/LightGBM/actions/workflows/lychee.yml)
+[![License](https://img.shields.io/github/license/lightgbm-org/lightgbm.svg)](https://github.com/lightgbm-org/LightGBM/blob/main/LICENSE)
+[![EffVer Versioning](https://img.shields.io/badge/version_scheme-EffVer-0097a7)](https://jacobtomlinson.dev/effver/)
+[![StackOverflow questions](https://img.shields.io/stackexchange/stackoverflow/t/lightgbm?logo=stackoverflow&logoColor=white&label=StackOverflow%20questions)](https://stackoverflow.com/questions/tagged/lightgbm?sort=votes)
+[![Python Versions](https://img.shields.io/pypi/pyversions/lightgbm.svg?logo=python&logoColor=white)](https://pypi.org/project/lightgbm)
+[![PyPI Version](https://img.shields.io/pypi/v/lightgbm.svg?logo=pypi&logoColor=white)](https://pypi.org/project/lightgbm)
+[![conda Version](https://img.shields.io/conda/vn/conda-forge/lightgbm?logo=conda-forge&logoColor=white&label=conda)](https://anaconda.org/conda-forge/lightgbm)
+[![CRAN Version](https://www.r-pkg.org/badges/version/lightgbm)](https://cran.r-project.org/package=lightgbm)
+[![NuGet Version](https://img.shields.io/nuget/v/lightgbm?logo=nuget&logoColor=white)](https://www.nuget.org/packages/LightGBM)
+[![Winget Version](https://img.shields.io/winget/v/Microsoft.LightGBM)](https://github.com/microsoft/winget-pkgs/tree/master/manifests/m/Microsoft/LightGBM)
+
+LightGBM is a gradient boosting framework that uses tree based learning algorithms. It is designed to be distributed and efficient with the following advantages:
+
+- Faster training speed and higher efficiency.
+- Lower memory usage.
+- Better accuracy.
+- Support of parallel, distributed, and GPU learning.
+- Capable of handling large-scale data.
+
+For further details, please refer to [Features](https://github.com/lightgbm-org/LightGBM/blob/main/docs/Features.rst).
+
+Benefiting from these advantages, LightGBM is being widely-used in many [winning solutions](https://github.com/lightgbm-org/LightGBM/blob/main/examples/README.md#machine-learning-challenge-winning-so

@@ -1,0 +1,100 @@
+{
+ "company": "University of Wisconsin-Madison · Microsoft Research 등(연구팀)",
+ "one_liner_ko": "비전 인코더와 LLM(Vicuna)을 연결해 범용 시각·언어 이해를 하는 엔드투엔드 대형 멀티모달 모델.",
+ "what_it_does_ko": "LLaVA(Large Language and Vision Assistant)는 CLIP ViT-L/14 비전 인코더와 Vicuna 언어 모델을 간단한 투영 행렬로 연결해 범용 시각·언어 이해를 하는 대형 멀티모달 모델이다. 언어 전용 GPT-4로 만든 멀티모달 지시 따르기 데이터로 시각 지시 튜닝을 처음 시도했다. 일상 사용자용 시각 채팅과 과학 QA 두 용도로 미세조정했고, GPT-4와 함께 쓰면 Science QA에서 92.53%로 최고 성능을 냈다고 밝힌다. 데이터·모델·코드를 공개하되 연구용으로만 허가한다.",
+ "key_features": [
+  "CLIP ViT-L/14 비전 인코더 + Vicuna LLM 연결",
+  "GPT-4로 만든 158K 멀티모달 지시 데이터(LLaVA-Instruct-150K)",
+  "2단계 지시 튜닝(특징 정렬 사전학습 → 엔드투엔드 미세조정)",
+  "LLaVA-1.5: 11개 벤치마크 최고 성능, 8-A100 노드 하나로 약 1일 학습",
+  "광학 문자 인식(OCR) 예시",
+  "LLaVA-NeXT: 4배 더 많은 픽셀 처리"
+ ],
+ "use_cases_ko": [
+  "일상 사용자용 시각 채팅",
+  "과학 분야 멀티모달 추론(Science QA)"
+ ],
+ "pricing": {
+  "free_tier": null,
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "오픈소스(연구용 한정, 데이터셋 CC BY NC 4.0 — 코드·모델 라이선스 이름은 페이지에 없음)",
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://llava-vl.github.io",
+   "quote": "▶ University of\n Wisconsin-Madison \n ▶ Microsoft Research"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://llava-vl.github.io",
+   "quote": "an end-to-end trained large multimodal model that connects a vision encoder and LLM for general-purpose visual and language understanding."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://llava-vl.github.io",
+   "quote": "LLaVa connects pre-trained CLIP ViT-L/14 visual encoder and large language model Vicuna , using a simple projection matrix."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://llava-vl.github.io",
+   "quote": "We present the first attempt to use language-only GPT-4 to generate multimodal language-image instruction-following data."
+  },
+  {
+   "field": "key_features",
+   "url": "https://llava-vl.github.io",
+   "quote": "collect 158K unique language-image instruction-following samples in total"
+  },
+  {
+   "field": "key_features",
+   "url": "https://llava-vl.github.io",
+   "quote": "Stage 1: Pre-training for Feature Alignment ."
+  },
+  {
+   "field": "key_features",
+   "url": "https://llava-vl.github.io",
+   "quote": "LLaVA-1.5 achieves SoTA on 11 benchmarks, with just simple modifications to the original LLaVA, utilizes all public data, completes training in ~1 day on a single 8-A100 node"
+  },
+  {
+   "field": "key_features",
+   "url": "https://llava-vl.github.io",
+   "quote": "Optical character recognition (OCR)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/haotian-liu/LLaVA",
+   "quote": "It can now process 4x more pixels and perform more tasks/applications than before."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://llava-vl.github.io",
+   "quote": "Visual Chat : LLaVA is fine-tuned on our generated multimodal instruction-following data for daily user-oriented applications."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://llava-vl.github.io",
+   "quote": "Science QA : LLaVA is fine-tuned on this multimodal reasonsing dataset for the science domain."
+  },
+  {
+   "field": "open_source",
+   "url": "https://llava-vl.github.io",
+   "quote": "Open-source . We make GPT-4 generated visual instruction tuning data, our model and code base publicly available."
+  },
+  {
+   "field": "open_source",
+   "url": "https://llava-vl.github.io",
+   "quote": "The data, code and checkpoint is intended and licensed for research use only."
+  },
+  {
+   "field": "open_source",
+   "url": "https://llava-vl.github.io",
+   "quote": "The dataset is CC BY NC 4.0 (allowing only non-commercial use)"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

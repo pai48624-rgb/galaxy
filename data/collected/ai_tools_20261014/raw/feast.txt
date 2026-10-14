@@ -1,0 +1,267 @@
+=== [home] https://feast.dev (lang=en)
+Feast - The Open Source Feature Store for Machine Learning FEAST 
+ RELEASES DOCS BLOG GITHUB COMMUNITY 
+ RELEASES DOCS BLOG GITHUB COMMUNITY 
+ Serving Data for Production AI
+Feast is an open source feature store that delivers structured data to AI and LLM applications at high scale during training and inference
+ Get Started 
+ [ADOPTERS AND CONTRIBUTORS]
+ 293
+ Contributors
+ 12M+
+ Downloads
+ 5.5K
+ Slack Members
+ [USE CASES]
+ SOLVE REAL PROBLEMS
+ Real-Time Recommendations
+ Serve personalized product and content recommendations with real-time user interaction features
+ Fraud Detection
+ Detect fraudulent transactions using historical patterns and real-time behavioral features
+ Risk Scoring
+ Calculate risk scores for financial services using consistent features across training and inference
+ Customer Segmentation
+ Create dynamic customer segments using consistent feature definitions across teams
+ [INTEGRATIONS]
+ CONNECT WITH YOUR STACK
+ OFFLINE STORES
+ ONLINE STORES
+ IKV
+ [GET STARTED]
+ START SERVING IN SECONDS
+ from feast import FeatureStore 
+ # Initialize the feature store 
+ store = FeatureStore( repo_path = "feature_repo" ) 
+ # Get features for training 
+ training_df = store.get_historical_features( 
+ entity_df = training_entities, 
+ features = [ 
+ "customer_stats:daily_transactions" , 
+ "customer_stats:lifetime_value" , 
+ "product_features:price" 
+ ] 
+ ).to_df() 
+ # Get online features for inference 
+ features = store.get_online_features( 
+ features = [ 
+ "customer_stats:daily_transactions" , 
+ "customer_stats:lifetime_value" , 
+ "product_features:price" 
+ ], 
+ entity_rows = [{ "customer_id" : "C123" , "product_id" : "P456" }] 
+ ).to_dict() 
+ # Retrieve your documents using vector similarity search for RAG 
+ features = store.retrieve_online_documents( 
+ features = [ 
+ "corpus:document_id" , 
+ "corpus:chunk_id" , 
+ "corpus:chunk_text" , 
+ "corpus:chunk_embedding" , 
+ ], 
+ query = "What is the biggest city in the USA?" 
+ ).to_dict() 
+ [BLOG POSTS]
+ THE LATEST FROM FEAST
+ Blog
+ Bringing Chronon Features to Feast
+ Use Feast to discover and retrieve Chronon features for training and inference, while Chronon owns computation and serving.
+ Blog
+ Feast Feature and Vector Serving at ScyllaDB Speed
+ Starting with Feast v0.65, a new tighter integration between Feast and ScyllaDB brings vector search support and better performance to the online store. This post covers what changed, why teams outgrow their existing online store, why ScyllaDB fits feature store workloads, and how to configure it in Feast.
+ Blog
+ Fast like a cache, priced like storage: Benchmarking Aerospike on Feast
+ We ran Feast's benchmark harness against Aerospike and compared it with the published Redis and DynamoDB results, sweeping entities per request, features per request, and request rate.
+ [GET STARTED]
+ START BUILDING TODAY
+ Join our Slack
+ Become part of our developer community & get support from the Feast developers
+ Join Community 
+ Docs
+ See our comprehensive documentation and start building with Feast today
+ Read Docs
+
+=== [about] https://docs.feast.dev/ (lang=en)
+Introduction | Feast: the Open Source Feature Store 
+ ⌘ Ctrl k 
+ GitBook Assistant
+ I'm here to help you with the docs.
+ What is this page about? What should I read next? Can you give an example? 
+ ⌘ Ctrl i 
+ AI Based on your context 
+ Send 
+ v0.66-branch 
+ Introduction 
+ Blog 
+ Community & getting help 
+ Roadmap 
+ Changelog 
+ Getting started 
+ Quickstart 
+ GenAI 
+ Architecture 
+ Concepts 
+ Use Cases 
+ Components 
+ Third party integrations 
+ FAQ 
+ Tutorials 
+ Sample use-case tutorials 
+ Building streaming features 
+ Retrieval Augmented Generation (RAG) with Feast 
+ RAG Fine Tuning with Feast and Milvus 
+ MCP - AI Agent Example 
+ Feast-Powered AI Agent 
+ Demo Notebooks 
+ Feature Quality Monitoring Quickstart 
+ How-to Guides 
+ Running Feast with Snowflake/GCP/AWS 
+ Running Feast in production (e.g. on Kubernetes) 
+ Feast on Kubernetes 
+ Feast Production Deployment Topologies 
+ Online Server Performance Tuning 
+ Customizing Feast 
+ Adding or reusing tests 
+ Starting Feast servers in TLS(SSL) Mode 
+ Importing Features from dbt 
+ Entity Key Serialization (v2 to v3) 
+ Feature Quality Monitoring 
+ Reference 
+ Codebase Structure 
+ Type System 
+ Data sources 
+ Offline stores 
+ Online stores 
+ Registries 
+ Providers 
+ 🧠 Compute Engines 
+ Feature repository 
+ Kubernetes auth setup 
+ User token provisioning 
+ Feature servers 
+ [Beta] Web UI 
+ [Beta] On demand feature view 
+ [Alpha] Static Artifacts Loading 
+ [Alpha] Vector Database 
+ [Alpha] OpenAI-Compatible Vector Store API 
+ Data Quality Monitoring 
+ [Deprecated] Data quality monitoring (Great Expectations) 
+ [Alpha] Streaming feature computation with Denormalized 
+ [Alpha] Feature View Versioning 
+ OpenLineage Integration 
+ MLflow Integration 
+ Feast CLI reference 
+ Python API reference 
+ Usage 
+ Project 
+ Contribution process 
+ Development guide 
+ Backwards Compatibility Policy 
+ Versioning policy 
+ Release process 
+ Feast 0.9 vs Feast 0.10+ 
+ Architecture Decision Records 
+ Powered by GitBook 
+ On this page 
+ For the complete documentation index, see llms.txt . This page is also available as Markdown .
+ Ask 
+ On this page 
+ v0.66-branch 
+ Introduction
+ What is Feast? 
+ Feast ( Fea ture St ore) is an open-source feature store that helps teams operate production ML systems at scale by allowing them to define, manage, validate, and serve features for production AI/ML.
+ Feast's feature store is composed of two foundational components: (1) an offline store for historical feature extraction used in model training and (2) an online store for serving features at low-latency in production systems and applications.
+ Feast is a configurable operational data system that re-uses existing infrastructure to manage and serve machine learning features to real-time models. For more details, please review our architecture .
+ Concretely, Feast provides:
+ A Python SDK for programmatically defining features, entities, sources, and (optionally) transformations
+ A Python SDK for reading and writing features to configured offline and online data stores
+ An optional feature server for reading and writing features (useful for non-python languages)
+ A UI for viewing and exploring information about features defined in the project
+ A CLI tool for viewing and updating feature information
+ Feast allows ML platform teams to:
+ Make features consistently available for training and low-latency serving by managing an offline store (to process historical data for scale-out batch scoring or model training), a low-latency online store (to power real-time prediction) , and a battle-tested feature server (to serve pre-computed feat
+
+=== [meta] https://feast.dev
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/feast-dev/feast
+<!--Do not modify this file. It is auto-generated from a template (infra/templates/README.md.jinja2)-->
+
+<p align="center">
+    <a href="https://feast.dev/">
+      <img src="https://raw.githubusercontent.com/feast-dev/feast/master/docs/assets/feast_logo.png" width="550">
+    </a>
+</p>
+<br />
+
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/feast)](https://pypi.org/project/feast/)
+[![GitHub contributors](https://img.shields.io/github/contributors/feast-dev/feast)](https://github.com/feast-dev/feast/graphs/contributors)
+[![unit-tests](https://github.com/feast-dev/feast/actions/workflows/unit_tests.yml/badge.svg?branch=master&event=pull_request)](https://github.com/feast-dev/feast/actions/workflows/unit_tests.yml)
+[![integration-tests-and-build](https://github.com/feast-dev/feast/actions/workflows/master_only.yml/badge.svg?branch=master&event=push)](https://github.com/feast-dev/feast/actions/workflows/master_only.yml)
+[![linter](https://github.com/feast-dev/feast/actions/workflows/linter.yml/badge.svg?branch=master&event=push)](https://github.com/feast-dev/feast/actions/workflows/linter.yml)
+[![Docs Latest](https://img.shields.io/badge/docs-latest-blue.svg)](https://docs.feast.dev/)
+[![Python API](https://img.shields.io/badge/docs-latest-brightgreen.svg)](http://rtd.feast.dev/)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue)](https://github.com/feast-dev/feast/blob/master/LICENSE)
+[![GitHub Release](https://img.shields.io/github/v/release/feast-dev/feast.svg?style=flat&sort=semver&color=blue)](https://github.com/feast-dev/feast/releases)
+
+
+## Join us on Slack!
+👋👋👋 [Come say hi on Slack!](https://slack.feast.dev/)
+
+[Check out our DeepWiki!](https://deepwiki.com/feast-dev/feast)
+
+## Overview
+<a href="https://trendshift.io/repositories/8046" target="_blank"><img src="https://trendshift.io/api/badge/repositories/8046" alt="feast-dev%2Ffeast | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+
+Feast (**Fea**ture **St**ore) is an open source feature store for machine learning. Feast is the fastest path to manage existing infrastructure to productionize analytic data for model training and online inference.
+
+
+Feast allows ML platform teams to:
+
+* **Make features consistently available for training and serving** by managing an _offline store_ (to process historical data for scale-out batch scoring or model training), a low-latency _online store_ (to power real-time prediction)_,_ and a battle-tested _feature server_ (to serve pre-computed features online).
+* **Avoid data leakage** by generating point-in-time correct feature sets so data scientists can focus on feature engineering rather than debugging error-prone dataset joining logic. This ensure that future feature values do not leak to models during training.
+* **Decouple ML from data infrastructure** by providing a single data access layer that abstracts feature storage from feature retrieval, ensuring models remain portable as you move from training models to serving models, from batch models to realtime models, and from one data infra system to another.
+
+Please see our [documentation](https://docs.feast.dev/) for more information about the project.
+
+## 📐 Architecture
+![](https://raw.githubusercontent.com/feast-dev/feast/master/docs/assets/feast_marchitecture.png)
+
+The above architecture is the minimal Feast deployment. Want to run the full Feast on Snowflake/GCP/AWS? Click [here](https://docs.feast.dev/how-to-guides/feast-snowflake-gcp-aws).
+
+## 🐣 Getting Started
+
+### 1. Install Feast
+```commandline
+pip install feast
+```
+
+### 2. Create a feature repository
+```commandline
+feast init my_feature_repo
+cd my_feature_repo/feature_repo
+```
+
+### 3. Register your feature definitions and set up your feature store
+```commandline
+feast apply
+```
+
+### 4. Explore your data in the web UI (experimental)
+
+![Web UI](https://raw.githubusercontent.com/feast-dev/feast/master/ui/sample.png)
+```commandline
+feast ui
+```
+
+### 5. Build a training dataset
+```python
+from feast import FeatureStore
+import pandas as pd
+from datetime import datetime
+
+entity_df = pd.DataFrame.from_dict({
+    "driver_id": [1001, 1002, 1003, 1004],
+    "event_timestamp": [
+    

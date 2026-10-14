@@ -1,0 +1,131 @@
+{
+ "company": "NVIDIA",
+ "one_liner_ko": "전용 커널·효율적 런타임·파이썬 프레임워크로 LLM과 비주얼 생성 모델 추론을 최적화하는 NVIDIA 라이브러리.",
+ "what_it_does_ko": "TensorRT LLM은 자주 쓰는 연산용 전용 커널, 효율적인 런타임, 직접 고치고 확장할 수 있는 파이썬 프레임워크로 LLM과 비주얼 생성 모델의 추론을 최적화한다. LLM API·trtllm-serve 서버·벤치마크 CLI를 제공하고 OpenAI 호환 클라이언트 예제가 있다. 분리형 서빙, 추측 디코딩, KV 캐시 압축·오프로딩, 다중 LoRA, 양자화 등을 지원하며 Blackwell·Hopper용 모델 배포 가이드를 제공한다.",
+ "key_features": [
+  "분리형(Disaggregated) 서빙",
+  "추측 디코딩",
+  "KV 캐시 압축·오프로딩",
+  "다중 LoRA 어댑터 생성",
+  "비주얼 생성 모델 지원(베타)",
+  "trtllm-serve 온라인 서빙(OpenAI 클라이언트 예제)",
+  "trtllm-bench·trtllm-eval CLI",
+  "Prometheus 지표"
+ ],
+ "use_cases_ko": [
+  "Blackwell·Hopper GPU에서 GPT-OSS·Qwen3 등 LLM 배포",
+  "Slurm 클러스터에서 LLM 서빙·벤치마크"
+ ],
+ "pricing": {
+  "free_tier": "불명 (가격 표기 없음)",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "Apache 2.0",
+ "api": "있음",
+ "platforms": [
+  "API",
+  "CLI"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://github.com/NVIDIA/TensorRT-LLM",
+   "quote": "[![license](https://img.shields.io/badge/license-Apache%202-blue)](https://github.com/NVIDIA/TensorRT-LLM/blob/main/LICENSE)"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/NVIDIA/TensorRT-LLM",
+   "quote": "TensorRT LLM optimizes inference for LLMs and Visual Gen models with specialized kernels for common operations, an efficient runtime, and a pythonic framework"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://nvidia.github.io/TensorRT-LLM/",
+   "quote": "LLM API Introduction"
+  },
+  {
+   "field": "key_features",
+   "url": "https://nvidia.github.io/TensorRT-LLM/",
+   "quote": "Disaggregated Serving"
+  },
+  {
+   "field": "key_features",
+   "url": "https://nvidia.github.io/TensorRT-LLM/",
+   "quote": "Speculative Decoding"
+  },
+  {
+   "field": "key_features",
+   "url": "https://nvidia.github.io/TensorRT-LLM/",
+   "quote": "KV Cache Offloading"
+  },
+  {
+   "field": "key_features",
+   "url": "https://nvidia.github.io/TensorRT-LLM/",
+   "quote": "Generate text with multiple LoRA adapters"
+  },
+  {
+   "field": "key_features",
+   "url": "https://nvidia.github.io/TensorRT-LLM/",
+   "quote": "Visual Generation (Beta)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://nvidia.github.io/TensorRT-LLM/",
+   "quote": "Run trtllm-serve with pytorch backend on Slurm"
+  },
+  {
+   "field": "key_features",
+   "url": "https://nvidia.github.io/TensorRT-LLM/",
+   "quote": "trtllm-bench"
+  },
+  {
+   "field": "key_features",
+   "url": "https://nvidia.github.io/TensorRT-LLM/",
+   "quote": "Prometheus Metrics"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://nvidia.github.io/TensorRT-LLM/",
+   "quote": "Deployment Guide for GPT-OSS on TensorRT-LLM - Blackwell Hardware"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://nvidia.github.io/TensorRT-LLM/",
+   "quote": "Deployment Guide for Qwen3 on TensorRT LLM - Blackwell & Hopper Hardware"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://nvidia.github.io/TensorRT-LLM/",
+   "quote": "Run trtllm-bench with pytorch backend on Slurm"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/NVIDIA/TensorRT-LLM",
+   "quote": "[![license](https://img.shields.io/badge/license-Apache%202-blue)]"
+  },
+  {
+   "field": "api",
+   "url": "https://nvidia.github.io/TensorRT-LLM/",
+   "quote": "OpenAI Chat Client"
+  },
+  {
+   "field": "platforms",
+   "url": "https://nvidia.github.io/TensorRT-LLM/",
+   "quote": "CLI Reference"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://nvidia.github.io/TensorRT-LLM/",
+   "quote": "hreflang: 없음"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "Apache 2.0 오픈소스 LLM 추론 라이브러리(직접 설치), 요금 표기 없음",
+   "diff": "기존 '사용량 기반 종량제(클라우드/GPU)'와 반대로 자체 설치형 오픈소스 소프트웨어",
+   "url": "https://github.com/NVIDIA/TensorRT-LLM"
+  }
+ ],
+ "plan_change": []
+}

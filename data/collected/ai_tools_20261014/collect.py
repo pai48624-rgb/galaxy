@@ -333,6 +333,26 @@ def one(tool, br):
     return rec, parts
 
 
+def focus(t, name, n):
+    """긴 요금 문서(회사 공통 요금 문서 등)에서 도구 이름이 나오는 곳 둘레를 남김 — 앞부분만 자르면 해당 도구 요금이 잘림(10/14 Gemma·Veo)."""
+    key = re.sub(r"^(google|meta|microsoft|openai|amazon|aws)\s+", "", name.strip(), flags=re.I)
+    hits = [m.start() for m in re.finditer(re.escape(key), t, re.I)] if len(key) >= 3 else []
+    if not hits:
+        return t
+    keep, spans = [t[:800]], []
+    for h in hits:
+        a, b = max(0, h - 600), min(len(t), h + 1800)
+        if spans and a <= spans[-1][1]:
+            spans[-1] = (spans[-1][0], b)
+        else:
+            spans.append((a, b))
+    for a, b in spans:
+        keep.append("…\n" + t[a:b])
+        if sum(map(len, keep)) > n:
+            break
+    return "\n".join(keep)
+
+
 def save(rec, parts):
     share = {"home": 0.25, "pricing": 0.22, "pricing2": 0.12, "pricing_ko": 0.12, "about": 0.12, "github": 0.14, "meta": 0.03}
     out = []
@@ -340,6 +360,8 @@ def save(rec, parts):
         kind, u, t = p[0], p[1], p[2]
         lang = p[3] if len(p) > 3 else None
         n = int(MAX_RAW * share.get(kind, 0.12))
+        if kind.startswith("pricing") and len(t) > n:
+            t = focus(t, rec.get("name_en") or "", n)
         out.append("=== [%s] %s%s\n%s\n" % (kind, u, " (lang=%s)" % lang if lang else "", t[:n]))
     body = "\n".join(out)[:MAX_RAW]
     with open(os.path.join(RAW, rec["slug"] + ".txt"), "w", encoding="utf-8") as f:

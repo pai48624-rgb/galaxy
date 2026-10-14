@@ -1,0 +1,52 @@
+{
+ "company": "Heurist",
+ "one_liner_ko": "온체인 시장을 위한 에이전트형 금융 정보 서비스이자 AI 경제를 위한 풀스택 인프라.",
+ "what_it_does_ko": "Heurist는 컴퓨팅부터 자본까지 지능형 애플리케이션을 만들고 확장하는 데 필요한 것을 제공하는 AI 경제용 풀스택 인프라라고 소개한다. Heurist Finance는 지갑 보유 종목에 맞춘 일일 브리핑과 질문당 결제하는 심층 리서치를 제공한다. Heurist Mesh는 Web3 데이터·API를 전문 AI 에이전트로 묶은 마켓플레이스로 REST API·MCP·x402 결제를 지원하고, Ask Heurist는 암호화폐 Q&A·리서치 에이전트다. 오픈소스 Heurist Agent Framework로 텔레그램·디스코드·트위터 등에서 동작하는 에이전트를 만들 수 있다.",
+ "key_features": [
+  "지갑 맞춤 일일 브리핑(보유 주식 토큰의 실적·이벤트)",
+  "질문당 결제 심층 리서치(x402)",
+  "기관 애널리스트 절차를 담은 전문 스킬(시장 국면·종목 분석·트레이드 계획 등)",
+  "Heurist Mesh: 30개 이상 암호화폐 분석 전문 에이전트, REST API·MCP·x402",
+  "Ask Heurist: 암호화폐 Q&A·리서치 에이전트(웹·Base App·Farcaster·텔레그램)",
+  "LLM Gateway(채팅 완성·도구 호출·임베딩)",
+  "오픈소스 Heurist Agent Framework(텔레그램·디스코드·트위터·Farcaster·REST API·MCP)"
+ ],
+ "use_cases_ko": [
+  "주식 토큰 보유자가 보유 종목 리서치·브리핑 받기",
+  "AI 에이전트·앱에 암호화폐 전문 지식 붙이기"
+ ],
+ "pricing": {
+  "free_tier": "있음 (코드 'agent'로 Heurist API 키 무료 발급)",
+  "plans": [
+   {"name": "Heurist Finance 심층 리서치", "price": null, "currency": null, "period": "usage", "limits": "질문당 결제(x402, 센트 단위)", "page_lang": "en"}
+  ],
+  "pricing_url": "https://www.heurist.ai/"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["웹", "API"],
+ "korean_support": "불명",
+ "evidence": [
+  {"field": "company", "url": "https://www.heurist.ai/", "quote": "© 2026 Heurist All Rights Reserved"},
+  {"field": "one_liner_ko", "url": "https://www.heurist.ai/", "quote": "Heurist - Agentic Finance for Onchain Markets"},
+  {"field": "what_it_does_ko", "url": "https://docs.heurist.ai/introduction", "quote": "Heurist is the full-stack infrastructure for the AI economy. From compute to capital, we provide everything needed to build, scale, and fund the next generation of intelligent applications."},
+  {"field": "what_it_does_ko", "url": "https://docs.heurist.ai/introduction", "quote": "Heurist Mesh : The marketplace of specialized AI agents."},
+  {"field": "key_features", "url": "https://www.heurist.ai/", "quote": "The daily brief is personalized to your wallet. Earnings, events and moves on the stock tokens you hold."},
+  {"field": "key_features", "url": "https://www.heurist.ai/", "quote": "Research that used to cost a Bloomberg seat, now pay-per-use in cents with x402."},
+  {"field": "key_features", "url": "https://www.heurist.ai/", "quote": "Procedured distilled from institutional analysts."},
+  {"field": "key_features", "url": "https://github.com/heurist-network/heurist-agent-framework", "quote": "Heurist Mesh solves this by providing 30+ specialized AI agents that are experts in crypto analytics"},
+  {"field": "key_features", "url": "https://docs.heurist.ai/introduction", "quote": "Available on Web, Base App, Farcaster, and Telegram."},
+  {"field": "key_features", "url": "https://docs.heurist.ai/introduction", "quote": "Chat Completion Endpoint \n LLM Tool Calling \n Embeddings"},
+  {"field": "key_features", "url": "https://docs.heurist.ai/introduction", "quote": "Heurist Agent Framework : The backbone of our ecosystem - an open-source framework for building AI agents"},
+  {"field": "use_cases_ko", "url": "https://www.heurist.ai/", "quote": "Wall Street's research In your wallet"},
+  {"field": "use_cases_ko", "url": "https://docs.heurist.ai/introduction", "quote": "Equip any agent or any application with crypto expertise with Heurist Mesh."},
+  {"field": "pricing", "url": "https://github.com/heurist-network/heurist-agent-framework", "quote": "Grab a Heurist API Key instantly for free by using the code 'agent' while submitting the form"},
+  {"field": "pricing", "url": "https://www.heurist.ai/", "quote": "Deep research. Paid per question."},
+  {"field": "api", "url": "https://docs.heurist.ai/introduction", "quote": "Access specialized agents via REST APIs and MCP"},
+  {"field": "platforms", "url": "https://github.com/heurist-network/heurist-agent-framework", "quote": "A flexible multi-interface AI agent framework that can interact through various platforms including Telegram, Discord, Twitter, Farcaster, REST API, and MCP."}
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {"official": "공식 페이지는 GPU 클라우드가 아니라 온체인 금융 리서치 에이전트(질문당 x402 결제)와 에이전트 마켓플레이스(Heurist Mesh, API 키·x402 종량 결제)를 내세움", "diff": "기존 분류 '사용량 기반 종량제(클라우드/GPU)'와 종량제라는 점은 같지만, 과금 대상이 GPU 컴퓨팅이 아니라 질문·에이전트 호출 단위의 암호화폐(USDC) 소액 결제임", "url": "https://www.heurist.ai/"}
+ ]
+}

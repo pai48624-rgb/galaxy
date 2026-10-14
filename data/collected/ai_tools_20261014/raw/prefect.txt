@@ -1,0 +1,546 @@
+=== [home] https://www.prefect.io/ (lang=en)
+Prefect - Workflow Orchestration for Data, ML, and Agents 
+ Skip to content 
+ Prefect 
+ Products 
+ Resources 
+ Docs 
+ Customers 
+ Pricing 
+ Log in Book a demo Start free 
+ Start with one flow. Scale to millions. 
+ Durable orchestration for data, ML, and agents.
+ Start free Book a demo with our team 
+ Looking for managed MCP? Visit FastMCP Gateway 
+ Trusted in Production by:
+ Case study → Case study → Case study → Case study → Case study → Case study → Case study → 
+ Case study → 
+ Case study → Case study → Case study → 
+ Case study → Case study → Case study → Case study → Case study → Case study → Case study → 
+ Case study → 
+ Case study → Case study → Case study → 
+ Enterprise Grade SOC 2 Type II HIPAA GDPR Hybrid & VPC 99.9% uptime 
+ One platform from ML to AI 
+ Data pipelines ML Durable execution Agents Enterprise 
+ Data you can depend on
+ Replace brittle cron jobs with pipelines that heal themselves, so your data always arrives on time. 
+ </> flow.py from prefect import flow, task
+ @task(retries=3)
+ def extract(source):
+ ...
+ @flow
+ def daily_revenue_elt():
+ load(transform(extract("warehouse")))
+ Deployments / daily_revenue_elt · k8s-prod Running · 0:00 
+ Success rate
+ 99.2% ▲ +0.3% 
+ Avg duration
+ 1.4s ▼ −0.2s 
+ Runs · 24h
+ 2,182 ▲ +8.4% 
+ p95 latency
+ 4.1s ▲ +0.4s 
+ Task timeline 6 tasks 
+ ingest 3 s 
+ normalize 6 s 
+ validate 5 s 
+ enrich 13 s 
+ score 5 s 
+ load 3 s 
+ 0:00 0:10 0:20 0:30 
+ Teams ship faster on Prefect
+ From startups to enterprises, teams trust Prefect with the workflows their businesses depend on.
+ How Ramp moved critical data workflows to Prefect
+ Watch 
+ How WHOOP cut production incidents by 75%
+ Watch 
+ How Barstool Sports Scaled Media Data Operations with Prefect 
+ Cash App Gains Flexibility in Machine Learning Workflows with Prefect 
+ SpareBank 1 builds a shared data platform for its banks with Prefect 
+ Snorkel AI 
+ How Snorkel AI Reliably Executes Thousands of Daily Workflows with Prefect Open Source 
+ How Kepler Cut Pipeline Delivery from Weeks to Days with Prefect 
+ How Seven.One Entertainment Orchestrates Data Pipelines with Prefect 
+ See all customer stories 
+ Annotate your code.
+ Add @flow to your Python functions for state, logging, and automatic retries. No new framework to learn.
+ etl_pipeline.py 
+ @flow (retries= 3 )
+ def process_data ():
+ data = extract() 
+ transform(data) 
+ load(data) 
+ Our place or yours.
+ Run on managed compute, keep execution inside your own VPC, or anywhere in between. The same code deploys anywhere.
+ deploy daily_revenue
+ Prefect Cloud fully managed 
+ or
+ Your VPC your code never leaves 
+ Runs you can trust.
+ Prefect executes your flows on your infrastructure, retries failures, scales out, and tracks every task, so runs recover on their own.
+ daily-revenue / running 
+ extract 0.3s 
+ transform.map 
+ load 
+ Back to building.
+ Skip building your own cron-and-Slack monitoring stack. One UI shows every run and flags what's late or failed, so you get your engineering hours back.
+ integration-tests 
+ Search workspace ⌘K 
+ Home Runs Assets Flows Deployments Work pools Automations Events Settings Help 
+ Home Past 7 days 
+ Flow Runs 123,066 total 
+ 4,074 
+ 9 
+ 110,923 
+ 1 
+ 8,059 
+ Active Work Pools
+ kubernetes-prd-internal-tools 96.26% completed 
+ managed-work-pool 100% completed 
+ etl_pipeline.py 
+ @flow (retries= 3 )
+ def process_data ():
+ data = extract() 
+ transform(data) 
+ load(data) 
+ deploy daily_revenue
+ Prefect Cloud fully managed 
+ or
+ Your VPC your code never leaves 
+ daily-revenue / running 
+ extract 0.3s 
+ transform.map 
+ load 
+ integration-tests 
+ Search workspace ⌘K 
+ Home Runs Assets Flows Deployments Work pools Automations Events Settings Help 
+ Home Past 7 days 
+ Flow Runs 123,066 total 
+ 4,074 
+ 9 
+ 110,923 
+ 1 
+ 8,059 
+ Active Work Pools
+ kubernetes-prd-internal-tools 96.26% completed 
+ managed-work-pool 100% completed 
+ Annotate your code.
+ Add @flow to your Python functions for state, logging, and automatic retries. No new framework to learn.
+ Next 
+ Never fly blind in production.
+ See every run across all your teams and infrastructure, and catch problems before they spread.
+ Observability Every run, log, and state across all teams, in one view.
+ Scale Thousands of parallel runs, with global concurrency limits.
+ Scheduling Cron, event-driven, and backfills, recovered automatically.
+ integration-tests 
+ Search workspace ⌘K 
+ Home Runs Assets Flows Deployments Work pools Automations Events Settings Help 
+ Deployments / daily-revenue Past 7 days 
+ 2,182
+ Runs
+ <1%
+ Failure rate
+ 2s
+ Duration
+ 0s
+ Lateness
+ 0
+ SLA violations
+ 110MB
+ Max memory
+ revenue-etl Cron Schedule Completed 
+ ml-training Cron Schedule Completed 
+ Run anywhere Kubernetes, ECS, your own VPC, or serverless.
+ Automation & alerts Alerts on failures, SLA misses, and late runs.
+ Priority support A 30-minute response SLA on every enterprise plan.
+ Open source at the core
+ Prefect Cloud runs on the open-source Prefect framework. We also build FastMCP, the open-source framework for building MCP servers that connect agents to your tools and data.
+ Prefect
+ The orchestration layer for workflows
+ Turn any Python function into a durable, observable workflow with one decorator.
+ pipeline.py 
+ from prefect import flow 
+ @flow (retries= 3 ) 
+ def daily_report (): 
+ data = extract()
+ load(transform(data))
+ 6.9M+ /mo 
+ yup, that's us too 
+ FastMCP
+ The context layer for agents
+ Build MCP servers in minutes and connect agents to any system.
+ server.py 
+ from fastmcp import FastMCP 
+ mcp = FastMCP( "agent-tools" ) 
+ @mcp.tool 
+ def search (query): 
+ return db.query(query) 
+ 53M+ /mo 
+ Questions answered
+ What is Prefect? Prefect is a workflow orchestration platform for data, ML, and agents. You write workflows as plain Python, and Prefect runs them durably in production: scheduling, retries, caching, and recovery are part of the platform rather than code you maintain. The open-source framework and Prefect Cloud share the same core engine. 
+ Can my coding agent write Prefect workflows? Yes. A Prefect workflow is ordinary Python with two decorators, so any coding agent that writes Python can produce a working flow, add retries, and deploy it without learning a DSL. Your engineers review and own the result, and the same is true for humans: if you can write a Python function, you can ship a Prefect flow. 
+ How is Prefect different from Airflow? Three differences do most of the work. Workflows are plain Python functions that can branch, loop, and create tasks at runtime, rather than DAGs declared up front. Durable execution is built into the engine, so retries, state, and crash recovery are not code you write. And with Prefect Cloud there is no scheduler for your team to host, upgrade, or page anyone about. 
+ Do I have to run any infrastructure? Only if you want to. Prefect Serverless runs flows on managed compute, so you can start with zero infrastructure. Teams with stricter requirements use the hybrid model instead: lightweight workers inside your environment run your code where your data already lives, while the control plane handles scheduling and visibility. That split is what clears most security reviews. 
+ Is Prefect open source? Yes. The Prefect framework is open source under the Apache 2.0 license, and it is the same engine Prefect Cloud runs. Cloud adds the managed control plane, enterprise authentication, and scale on top; it does not fork the framework. 
+ What does the Dagster Labs acquisition mean for Prefect? Prefect acquire
+
+=== [pricing] https://www.prefect.io/pricing (lang=en)
+Pricing - Prefect Cloud 
+ Skip to content 
+ Prefect 
+ Products 
+ Resources 
+ Docs 
+ Customers 
+ Pricing 
+ Log in Book a demo Start free 
+ Product
+ Prefect Cloud 
+ Prefect Open Source 
+ FastMCP 
+ FastMCP Gateway NEW
+ Pricing 
+ Enterprise 
+ How Prefect Works 
+ Prefect Cloud vs OSS 
+ Prefect vs Airflow 
+ Resources
+ Docs 
+ Agent Setup 
+ Case Studies 
+ Blog 
+ Resources 
+ Changelog 
+ Community 
+ Learn 
+ Support 
+ Cloud Status 
+ Company
+ About 
+ Contact 
+ Careers 
+ Legal 
+ Security 
+ Brand Assets 
+ Open Source Pledge 
+ Social
+ Twitter 
+ GitHub 
+ LinkedIn 
+ YouTube 
+ © Copyright 2026 Prefect Technologies, Inc. All rights reserved.
+ Prefect Cloud 
+ Prefect Pricing
+ Plans that scale with your team and stay predictable as you grow. Start on the free Hobby tier, and add governance and scale when you're ready.
+ Looking for FastMCP Gateway, our managed MCP platform? 
+ Copy page as Markdown · llms.txt 
+ Choose the right plan
+ Hobby
+ Free forever 
+ Deploy workflows instantly. Scale when ready.
+ Workflow scheduling 
+ 2 users 
+ Up to 5 deployments 
+ 500 min of Prefect Serverless 
+ Workflow observability 
+ Logging & alerting 
+ 7 days run retention 
+ Start Deploying 
+ Starter
+ $100 /mo 
+ Bring your own compute. Full infrastructure control.
+ All Hobby features, plus: 
+ 3 users 
+ Up to 20 deployments 
+ 75 hours of Prefect Serverless 
+ Bring your own compute 
+ Webhooks 
+ 1,250 API requests/min 
+ Get Started 
+ Most popular Team
+ $100 /user/mo 
+ Team collaboration with service accounts and audit logs.
+ All Starter features, plus: 
+ 4-8 users 
+ Up to 100 deployments 
+ 225 hours of Prefect Serverless 
+ Service accounts 
+ 24 hour audit log 
+ Get Started 
+ Enterprise
+ Custom 
+ Best-in-class governance, scale, and support.
+ All Team features, plus: 
+ SSO (SAML/OIDC) 
+ RBAC + ACLs 
+ Multiple workspaces 
+ Directory Sync (SCIM) 
+ IP allowlisting & PrivateLink 
+ Unlimited deployments 
+ Talk to Sales 
+ Prefect is used in production at
+ Compare every plan
+ Every feature and limit, side by side.
+ Prefect Cloud plan comparison Feature Hobby Starter Team Enterprise 
+ Overview 
+ Users People with a login to your Prefect account. Each active member counts toward your plan's seats. 2 3 4 5+ 
+ Workspaces An isolated environment for your flows, deployments, and runs, usually one per team or project. 1 1 1 2+ 
+ Deployments A server-side definition of a flow that can be scheduled, triggered, and run remotely. 5 20 100 Unlimited 
+ Billing N/A Monthly Monthly Annual 
+ Work Pools 
+ Prefect Serverless Managed compute run by Prefect, so you can run workflows without hosting your own infrastructure. 
+ Serverless Credits The amount of managed Prefect Serverless compute included with your plan each month. 500 mins/mo 75 hrs/mo 225 hrs/mo Custom 
+ Custom Work Pools Work pools that run on infrastructure you configure, beyond the managed default. 1 3 Unlimited 
+ Platform 
+ Logging & Alerting Capture run logs and get notified when something needs your attention. 
+ Webhooks Trigger Prefect actions from external systems through an HTTP endpoint. 
+ Service Accounts API credentials for automation and CI/CD, separate from individual user logins. 
+ Automations Rules that react to events in your workflows, like sending alerts or triggering runs. 5 10 50 500+ 
+ Security 
+ SSO Single sign-on. Let your team log in through your identity provider (SAML or OIDC). SAML/OIDC 
+ SCIM Automatically provision and remove users by syncing with your identity provider. Available 
+ Audit Log Retention How long Prefect keeps the record of who did what in your account. None None 24 hrs Custom 
+ Run Retention How long the history and logs of your flow runs are kept. 7 days 7 days 14 days Custom 
+ Roles Named sets of permissions you assign to members. Custom 
+ Object-level RBAC Role-based access control applied to specific objects, not just account-wide. 
+ IP Allowlisting Restrict account access to specific IP address ranges. Available 
+ PrivateLink A private network connection between your cloud VPC and Prefect that avoids the public internet. Available 
+ Sandbox Environment A separate environment for testing changes safely before production. Available 
+ Performance 
+ API Rate Limit The maximum number of API requests your account can make per minute. 625/min 1,250/min 2,500/min Custom 
+ Uptime SLA A contractual guarantee of platform availability. None None None 99.9% 
+ Support Channel How you can reach Prefect for help on your plan. Community Community Email +Portal 
+ Startups build on Prefect
+ Eligible startups get credits toward the Team plan through the Prefect Startup Program.
+ Apply now 
+ Enterprise Grade SOC 2 Type II HIPAA GDPR Hybrid & VPC 99.9% uptime 
+ Common questions
+ Start Free.
+Scale when you are ready.
+ Start on the free plan, then upgrade for SSO, governance, and the scale a growing team needs.
+ Start for free Book a demo 
+ Hobby Starter Team Enterprise 
+ Compare every plan
+ Feature comparison for Hobby
+ Overview
+ Feature Hobby 
+ Users 2 
+ Workspaces 1 
+ Deployments 5 
+ Billing N/A 
+ Work Pools
+ Feature Hobby 
+ Prefect Serverless 
+ Serverless Credits 500 mins/mo 
+ Custom Work Pools 
+ Platform
+ Feature Hobby 
+ Logging & Alerting 
+ Webhooks 
+ Service Accounts 
+ Automations 5 
+ Security
+ Feature Hobby 
+ SSO 
+ SCIM 
+ Audit Log Retention None 
+ Run Retention 7 days 
+ Roles 
+ Object-level RBAC 
+ IP Allowlisting 
+ PrivateLink 
+ Sandbox Environment 
+ Performance
+ Feature Hobby 
+ API Rate Limit 625/min 
+ Uptime SLA None 
+ Support Channel Community 
+ How does Prefect's pricing work? 
+ What about usage-based (metered) costs? 
+ Does Prefect offer a free trial for paid plans? 
+ What is included in Prefect's Hobby Tier? 
+ Can I pay annually? 
+ Do you offer discounts for startups or academia? 
+ What payment methods do you accept?
+
+=== [about] https://www.prefect.io/how-it-works (lang=en)
+How Prefect Works | Python Workflow Orchestration 
+ Skip to content 
+ Prefect 
+ Products 
+ Resources 
+ Docs 
+ Customers 
+ Pricing 
+ Log in Book a demo Start free 
+ How Prefect Works
+ Transform Python functions into orchestrated workflows with a single decorator. Your code and data stay in your infrastructure—Prefect manages scheduling, observability, and state.
+ Start free Read the docs 
+ Step 1
+ Transform Python functions into flows
+ Add the @flow decorator to any Python function. No YAML, no complex DSLs—just Python. Your code remains readable and testable while gaining orchestration capabilities.
+ View quickstart guide 
+ 1 
+ @flow 
+ 2 def say_hello (): 
+ 3 for name in [ "Marvin" , "Arthur" , "Ford" ]: 
+ 4 hello(name) 
+ 5 
+ 6 # Your code stays exactly where it is 
+ 7 # No special runtime or proprietary formats 
+ Step 2
+ Deploy from your terminal
+ Deploy workflows from your own infrastructure using the Prefect CLI. You control where code lives and how it runs. Workers execute in your environment with full access to your resources.
+ $ prefect deploy my_flow.py:say_hello
+ Successfully created/updated all deployments!
+ Deployments 
+ ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━┓
+ ┃ Name ┃ Status ┃ Details ┃
+ ┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━┩
+ │ say-hello/my-deployment │ applied │ │
+ └───────────────────────────────────┴─────────┴─────────┘
+ To schedule a run for this deployment, use the following command:
+ $ prefect deployment run 'say-hello/my-deployment'
+ Your workers poll our API—no inbound connections to your network
+ Prefect Cloud's hybrid architecture means your code and data never leave your infrastructure. Workers poll Prefect for scheduled runs, then execute workflows locally with direct access to your databases and services.
+ Prefect Server 
+ Your Network 
+ Control Plane 
+ Metadata 
+ Workers 
+ Data 
+ No inbound connections
+ Your firewall rules stay locked down
+ Data stays local
+ Direct access to your databases
+ Metadata only
+ Logs and state, never your data
+ Step 3
+ Workers execute flows in your environment
+ When it's time to run, workers in your infrastructure gather code, prepare resources, and execute flows. All execution happens locally—Prefect receives only logs and state updates for observability.
+ Flow Execution Logs 
+ INFO | Flow run ' say-hello ' - Created flow run 'grinning-ferret-9l4zf' for flow 'say_hello' 
+ INFO | Flow run ' say-hello ' - Created task run 'hello-0' for task 'hello' 
+ INFO | Flow run ' say-hello ' - Task run 'hello-0' - Starting task run... 
+ INFO | Flow run ' say-hello ' - Task run 'hello-0' - Finished in state Completed() 
+ INFO | Flow run ' say-hello ' - Hello, Marvin 
+ INFO | Flow run ' say-hello ' - Created task run 'hello-1' for task 'hello' 
+ INFO | Flow run ' say-hello ' - Hello, Arthur 
+ INFO | Flow run ' say-hello ' - Created task run 'hello-2' for task 'hello' 
+ INFO | Flow run ' say-hello ' - Hello, Ford 
+ INFO | Flow run ' say-hello ' - Flow run 'grinning-ferret-9l4zf' - Finished in state Completed() 
+ Step 4
+ Break flows into observable tasks
+ Decompose complex workflows into independently tracked tasks using the @task decorator. Get granular observability and retry logic for each step without exposing your data—only execution metadata reaches Prefect.
+ Try Prefect Cloud free 
+ 1 @task ( retries = 3 ) 
+ 2 def hello (name: str ): 
+ 3 print ( f "Hello, { name } " ) 
+ 4 
+ 5 @flow 
+ 6 def say_hello (): 
+ 7 # Each task is independently: 
+ 8 # - Tracked 
+ 9 # - Retried on failure 
+ 10 # - Observable in the UI 
+ 11 for name in [ "Marvin" , "Arthur" , "Ford"
+
+=== [meta] https://www.prefect.io/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/PrefectHQ/prefect
+<p align="center"><img src="https://github.com/PrefectHQ/prefect/assets/3407835/c654cbc6-63e8-4ada-a92a-efd2f8f24b85" width=1000></p>
+
+<p align="center">
+    <a href="https://pypi.org/project/prefect/" alt="PyPI version">
+        <img alt="PyPI" src="https://img.shields.io/pypi/v/prefect?color=0052FF&labelColor=090422" />
+    </a>
+    <a href="https://pypi.org/project/prefect/" alt="PyPI downloads/month">
+        <img alt="Downloads" src="https://img.shields.io/pypi/dm/prefect?color=0052FF&labelColor=090422" />
+    </a>
+    <a href="https://github.com/prefecthq/prefect/" alt="Stars">
+        <img src="https://img.shields.io/github/stars/prefecthq/prefect?color=0052FF&labelColor=090422" />
+    </a>
+    <a href="https://github.com/prefecthq/prefect/pulse" alt="Activity">
+        <img src="https://img.shields.io/github/commit-activity/m/prefecthq/prefect?color=0052FF&labelColor=090422" />
+    </a>
+    <br>
+    <a href="https://prefect.io/slack" alt="Slack">
+        <img src="https://img.shields.io/badge/slack-join_community-red.svg?color=0052FF&labelColor=090422&logo=slack" />
+    </a>
+    <a href="https://www.youtube.com/c/PrefectIO/" alt="YouTube">
+        <img src="https://img.shields.io/badge/youtube-watch_videos-red.svg?color=0052FF&labelColor=090422&logo=youtube" />
+    </a>
+</p>
+
+
+<p align="center">
+    <a href="https://docs.prefect.io/v3/get-started/index?utm_source=oss&utm_medium=oss&utm_campaign=oss_gh_repo&utm_term=none&utm_content=none">
+        Installation
+    </a>
+    ·
+    <a href="https://docs.prefect.io/v3/get-started/quickstart?utm_source=oss&utm_medium=oss&utm_campaign=oss_gh_repo&utm_term=none&utm_content=none">
+        Quickstart
+    </a>
+    ·
+    <a href="https://docs.prefect.io/v3/how-to-guides/workflows/write-and-run?utm_source=oss&utm_medium=oss&utm_campaign=oss_gh_repo&utm_term=none&utm_content=none">
+        Build workflows
+    </a>
+    ·
+    <a href="https://docs.prefect.io/v3/concepts/deployments?utm_source=oss&utm_medium=oss&utm_campaign=oss_gh_repo&utm_term=none&utm_content=none">
+        Deploy workflows
+    </a>
+    ·
+    <a href="https://www.prefect.io/agents">
+        Agent setup
+    </a>
+    ·
+    <a href="https://app.prefect.cloud/?utm_source=oss&utm_medium=oss&utm_campaign=oss_gh_repo&utm_term=none&utm_content=none">
+        Prefect Cloud
+    </a>
+</p>
+
+# Prefect
+
+Prefect is a workflow orchestration framework for building data pipelines in Python.
+It's the simplest way to elevate a script into a production workflow.
+With Prefect, you can build resilient, dynamic data pipelines that react to the world around them and recover from unexpected changes.
+
+With just a few lines of code, data teams can confidently automate any data process with features such as scheduling, caching, retries, and event-based automations.
+
+Workflow activity is tracked and can be monitored with a self-hosted [Prefect server](https://docs.prefect.io/latest/manage/self-host/?utm_source=oss&utm_medium=oss&utm_campaign=oss_gh_repo&utm_term=none&utm_content=none) instance or managed [Prefect Cloud](https://www.prefect.io/cloud-vs-oss?utm_source=oss&utm_medium=oss&utm_campaign=oss_gh_repo&utm_term=none&utm_content=none) dashboard.
+
+> [!TIP]
+> Prefect flows can handle retries, dependencies, and even complex branching logic
+> 
+> [Check our docs](https://docs.prefect.io/v3/get-started/index?utm_source=oss&utm_medium=oss&utm_campaign=oss_gh_repo&utm_term=none&utm_content=none) or see the example below to learn more!
+
+## Getting started
+
+Prefect requires Python 3.11+. To [install the latest version of Prefect](https://docs.prefect.io/v3/get-started/install), run one of the following commands:
+
+```bash
+pip install -U prefect
+```
+
+```bash
+uv add prefect
+```
+
+Then create and run a Python file that uses Prefect `flow` and `task` decorators to orchestrate and observe your workflow - in this case, a simple script that fetches the number of GitHub stars from a repository:
+
+```python
+from prefect import flow, task
+import httpx
+
+
+@task(log_prints=True)
+def get_stars(repo: str):
+    url = f"https://api.github.com/repos/{repo}"
+    count = httpx.get(url).json()["stargazers_count"]
+    print(f"{repo} has {count} stars!")
+
+
+@flow(name="Gi

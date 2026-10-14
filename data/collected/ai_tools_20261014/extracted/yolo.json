@@ -1,0 +1,224 @@
+{
+ "company": "Ultralytics",
+ "one_liner_ko": "이미지·동영상을 실시간으로 빠르고 정확하게 분석하는 Ultralytics의 YOLO 컴퓨터 비전 모델.",
+ "what_it_does_ko": "Ultralytics YOLO는 객체 탐지, 인스턴스·시맨틱 분할, 깊이 추정, 분류, 포즈 추정, 회전 박스(OBB), 추적을 하는 실시간 컴퓨터 비전 모델 계열이다. 하나의 Python 패키지와 CLI로 쓸 수 있고, 최신 YOLO26은 nano 모델 기준 CPU 추론이 최대 43% 빨라졌다. Ultralytics Platform은 같은 모델 위에 데이터 어노테이션, 클라우드 학습, 배포 기능을 더한다. 소프트웨어는 AGPL 3.0이며, 상업용으로는 별도 Enterprise 라이선스를 받는다.",
+ "key_features": [
+  "객체 탐지·인스턴스/시맨틱 분할·깊이 추정·분류·포즈·OBB·추적",
+  "Python 패키지와 CLI로 사용",
+  "ONNX·TensorRT·CoreML 등 22개 형식으로 모델 내보내기",
+  "수동·SAM 3.1·YOLO 스마트 어노테이션",
+  "클라우드 GPU 학습과 원클릭 배포(추론 엔드포인트)",
+  "플랫폼 전체 기능 REST API",
+  "엣지·클라우드·하이브리드 배포"
+ ],
+ "use_cases_ko": [
+  "공장 안전 모니터링",
+  "광산 컨베이어 결함·이상 탐지",
+  "건설 현장 모니터링"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Free $0/월, 일회성 크레딧 $25, 저장소 100GB, 모델 100개)",
+  "plans": [
+   {
+    "name": "Free",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "일회성 크레딧 $25, 저장소 100GB, 동시 학습 3개, 배포 3개, AGPL 3.0",
+    "page_lang": "en"
+   },
+   {
+    "name": "Pro",
+    "price": 29,
+    "currency": "USD",
+    "period": "month",
+    "limits": "사용자당, 월 $30 크레딧, 저장소 500GB, 최대 5명, AGPL 3.0",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": "USD",
+    "period": null,
+    "limits": "맞춤 견적, Enterprise 라이선스 포함, 무제한 저장소",
+    "page_lang": "en"
+   },
+   {
+    "name": "Free",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "일회성 크레딧 $25, 스토리지 100GB, 모델 100개",
+    "page_lang": "ko"
+   },
+   {
+    "name": "Pro",
+    "price": 29,
+    "currency": "USD",
+    "period": "month",
+    "limits": "사용자당/월, 월 크레딧 $30, 팀 최대 5명",
+    "page_lang": "ko"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": "USD",
+    "period": null,
+    "limits": "맞춤, 문의하기",
+    "page_lang": "ko"
+   },
+   {
+    "name": "클라우드 GPU 학습",
+    "price": 0.24,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "시간당 $0.24부터(GPU 26종), 최소 사용량·약정 없음",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://www.ultralytics.com/pricing"
+ },
+ "open_source": "AGPL 3.0",
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "CLI",
+  "API"
+ ],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://github.com/ultralytics/ultralytics",
+   "quote": "[Ultralytics](https://www.ultralytics.com) creates cutting-edge, state-of-the-art (SOTA) [YOLO models]"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.ultralytics.com/yolo",
+   "quote": "Power vision AI solutions with Ultralytics YOLO models, enabling fast and accurate real-time analysis of images and videos through efficient computer vision tasks."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.ultralytics.com/",
+   "quote": "depth estimation, classification, pose estimation, oriented bounding boxes, and tracking, available through one Python package and CLI."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.ultralytics.com/yolo",
+   "quote": "YOLO26 is lighter, smaller, and faster, with the nano variant delivering up to 43% faster CPU inference."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.ultralytics.com/",
+   "quote": "Request an Enterprise License for commercial use at Ultralytics Licensing ."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.ultralytics.com/pricing",
+   "quote": "Export to ONNX, TensorRT, CoreML, LiteRT, NCNN, and 17 more"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.ultralytics.com/pricing",
+   "quote": "Manual, SAM 3.1 & YOLO Smart annotation"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.ultralytics.com/",
+   "quote": "Annotate, train and deploy YOLO models in one click."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.ultralytics.com/pricing",
+   "quote": "Programmatic access to all Platform features for automation and CI/CD"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.ultralytics.com/yolo",
+   "quote": "Bring fast, reliable results to real-time vision AI projects across edge devices, cloud infrastructure, and hybrid systems."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.ultralytics.com/yolo",
+   "quote": "Learn how RTM uses Ultralytics YOLO26 to power 24/7 factory safety monitoring"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.ultralytics.com/yolo",
+   "quote": "SK Godelius detects 3,400 defects on mining conveyors with Ultralytics YOLO"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.ultralytics.com/yolo",
+   "quote": "OnsiteIQ reduces project delays by 20% with Ultralytics YOLO11"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.ultralytics.com/pricing",
+   "quote": "$0 per month \n $25 one-time credits*"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.ultralytics.com/pricing",
+   "quote": "$29 per seat/month \n $30/seat/month in credits"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.ultralytics.com/pricing",
+   "quote": "Commercial licensing and dedicated support"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.ultralytics.com/ko/pricing",
+   "quote": "$29 사용자당/월 \n 사용자당/월 크레딧 $30 \n Free의 모든 기능에 더해:"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.ultralytics.com/ko/pricing",
+   "quote": "$0 월 \n 일회성 크레딧 $25* \n 포함 사항:\n 스토리지 100 GB · 업로드당 10 GB"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.ultralytics.com/pricing",
+   "quote": "26 NVIDIA GPUs starting at $0.24/hr — from Ampere to Blackwell. No markup, no minimums, no commitment."
+  },
+  {
+   "field": "open_source",
+   "url": "https://www.ultralytics.com/pricing",
+   "quote": "Platform plans and Ultralytics software licenses are separate.\n AGPL 3.0 AGPL 3.0 Enterprise"
+  },
+  {
+   "field": "api",
+   "url": "https://www.ultralytics.com/pricing",
+   "quote": "Programmatic access to all Platform features for automation and CI/CD"
+  },
+  {
+   "field": "platforms",
+   "url": "https://docs.ultralytics.com/",
+   "quote": "available through one Python package and CLI"
+  },
+  {
+   "field": "platforms",
+   "url": "https://www.ultralytics.com/yolo",
+   "quote": "Drag and drop an image to see real-time object detection"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.ultralytics.com/yolo",
+   "quote": "hreflang: ar, de, en, es, fr, it, ja, ko, pt, ru, tr, vi, x-default, zh"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.ultralytics.com/ko/pricing",
+   "quote": "컴퓨터 비전 워크플로에 적합한 Platform 요금제를 선택하세요."
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "AGPL 3.0 오픈소스 프레임워크 + Ultralytics Platform 구독(Free $0, Pro 사용자당 $29/월, Enterprise 맞춤) + 상업용 Enterprise 라이선스 별도, GPU 학습 시간당 과금",
+   "diff": "기존 분류는 '오픈소스(무료)'뿐이지만 실제로는 플랫폼 유료 구독과 상업용 라이선스가 따로 있음",
+   "url": "https://www.ultralytics.com/pricing"
+  }
+ ]
+}

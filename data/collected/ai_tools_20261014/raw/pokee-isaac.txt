@@ -1,0 +1,158 @@
+=== [home] https://console.pokee.ai/model (lang=en)
+Pokee Console 
+ Loading page 
+ © 2026 Pokee AI
+ Docs Status Terms Privacy pokee.ai 
+ Pokee-Isaac 28B v0.1 (preview) A 10M-token context efficient agentic model.
+ Isaac reasons, plans, and uses tools across context windows up to 10M tokens, under a compute budget small enough to serve inside a VPC, on customer premises, or on a device. Every figure below was measured by Pokee AI in a single controlled environment, for Isaac and for every baseline alike, unless marked otherwise. Every benchmark below is reported for Pokee-Isaac 28B v0.1 (preview) and its five baselines in the same controlled evaluation environment.
+ Get API key Try in playground Read the docs Read the technical report 
+ Serving api.pokee.ai · Results from Pokee-Isaac 28B v0.1 (preview): A 10M-Token Context Efficient Agentic Model , Pokee AI , September 11, 2026 .
+ Model at a glance
+ 28B parameters The smallest model in the comparison panel, by a wide margin.
+ 10M token context Usable end to end, not merely addressable.
+ $0.15 / $1.00 per 1M in / out Below every baseline that can be bought at this length.
+ Benchmark overview
+ Every benchmark, every model, one table.
+ The full comparison at a glance. Each section below takes one row of this table and shows how the result was reached — where the panel diverges, and where a baseline finishes ahead.
+ API pricing: USD per 1M input / output tokens
+ Pokee-Isaac 28B v0.1 preview compared with five baseline models across every benchmark in the technical report, with long-context pricing availability for each model Benchmark Isaac v0.1 (preview) 28B In/Out $0.15 / $1.00   GPT-5.6 Luna Azure In/Out $0.40 / $1.80 >272K context Gemini 3.5 Flash Lite Vertex AI In/Out $0.30 / $2.50   Claude Haiku 4.5 Bedrock In/Out Not available   Nemotron 3 Super   In/Out Not available   Qwen 3.5 122B   In/Out Not available   
+ Long context 
+ RULER 256K / 512K / 1M ↑ higher is better 93.9 / 94.2 / 95.0 🥇 (best in row) 95.0 / 91.4 / 0.0 * 94.5 / 94.6 / 29.4 * 0.0 / 0.0 / 0.0 96.3 / 95.7 / 91.8 s 0.0 / 0.0 / 0.0 
+ RULER 2M / 4M / 10M ↑ higher is better 95.0 / 94.2 / 94.0 🥇 (best in row) 0.0 / 0.0 / 0.0 0.0 / 0.0 / 0.0 0.0 / 0.0 / 0.0 0.0 / 0.0 / 0.0 0.0 / 0.0 / 0.0 
+ MRCR v2 256K / 512K / 1M, 8 needles ↑ higher is better 0.632 / 0.628 / 0.368 🥇 (best in row) 0.208 / 0.173 / 0.050 0.474 / 0.473 / 0.205 0.000 / 0.000 / 0.000 0.145 / 0.161 / 0.067 0.000 / 0.000 / 0.000 
+ Agentic capabilities 
+ BFCL v4 overall ↑ higher is better 74.81 🥇 (best in row) 70.61 64.85 67.52 33.13 64.88 
+ τ³-bench 4-domain average ↑ higher is better 0.725 🥇 (best in row) 0.527 0.631 0.408 0.426 0.611 
+ Terminal-Bench 2.1 text-only subset ↑ higher is better 77.9% 🥇 (best in row) 69.8% 46.5% 34.9% 24.4% 46.5% 
+ MCP-Atlas claim coverage ↑ higher is better 74.79% 77.90% 🥇 (best in row) 76.67% 56.45% 48.95% 70.24% 
+ Security 
+ DTAP attack success rate (ASR) ↓ lower is better 18.7 🥇 (best in row) 49.2 65.5 37.4 58.2 52.6 
+ DTAP benign success rate (BSR) ↑ higher is better 85.6 🥇 (best in row) 84.9 82.5 70.5 61.0 77.9 
+ 🥇 marks the best value in each row. ASR is attack success rate and is lower-is-safer; BSR is benign task success rate; higher is better for every other benchmark. A 0.0 / 0.000 means the model returned nothing usable at that length. * context-overflow error at 1M. s vendor self-reported, not measured by Pokee — excluded from the row comparison. Every other figure was produced on one installation, for Isaac and each baseline alike.
+ Pricing: Pokee, Luna, and Gemini show the report's long-context list rates. Haiku, Nemotron, and Qwen have no commercially available endpoint beyond 256K, so the report does not quote a long-context rate for them.
+ Long context
+ A window that is usable, not merely advertised.
+ RULER holds task difficulty fixed and scales only the context length, so the curve shows how far a model's usable context tracks its nominal one. Isaac is the only model in the panel that returns a score at every length.
+ RULER score by context length for Pokee-Isaac 28B v0.1 preview and five baseline models Model 256K 512K 1M 2M 4M 10M 
+ Pokee-Isaac 28B v0.1 (preview) 93.9 94.2 95.0 95.0 94.2 94.0 
+ GPT-5.6 Luna ( Azure ) 95.0 91.4 — 0.0, context-overflow error — 0.0, no usable score — 0.0, no usable score — 0.0, no usable score 
+ Gemini 3.5 Flash Lite ( Vertex AI ) 94.5 94.6 29.4 * (context-overflow error) — 0.0, no usable score — 0.0, no usable score — 0.0, no usable score 
+ Claude Haiku 4.5 ( Bedrock ) — 0.0, no usable score — 0.0, no usable score — 0.0, no usable score — 0.0, no usable score — 0.0, no usable score — 0.0, no usable score 
+ Nemotron 3 Super 120B 96.3 (self-reported by vendor) 95.67 (self-reported by vendor) 91.75 (self-reported by vendor) — 0.0, no usable score — 0.0, no usable score — 0.0, no usable score 
+ Qwen 3.5 122B — 0.0, no usable score — 0.0, no usable score — 0.0, no usable score — 0.0, no usable score — 0.0, no usable score — 0.0, no usable score 
+ Pokee-Isaac v0.1 (preview) Baseline Vendor self-reported — No usable score (0.0) 
+ RULER score (%, averaged across task configurations), ten samples per configuration. The 256K and 512K columns average all 13 configurations; common-words extraction is unavailable from 1M onward, so those columns average the remaining 12. * marks a context-overflow error at that length. Nemotron's 256K–1M figures are self-reported by NVIDIA, not measured by Pokee, and are excluded from the comparison.
+ MRCR v2 — interference, not just depth
+ RULER measures how deep a model can reach; MRCR measures whether it can tell several buried targets apart. GPT-5.6 Luna scores 95.0 on RULER at 256K but 0.050 here at 1M — multi-needle disambiguation splits the panel far more sharply than single-target recall does.
+ Leads at every length 
+ 256K
+ + 0.158 vs. next 
+ Isaac v0.1 (preview) 0.632 
+ Gemini 3.5 Flash Lite 0.474 
+ GPT-5.6 Luna 0.208 
+ Nemotron 3 Super 0.145 
+ Claude Haiku 4.5 0.000 
+ Qwen 3.5 122B 0.000 
+ 512K
+ + 0.155 vs. next 
+ Isaac v0.1 (preview) 0.628 
+ Gemini 3.5 Flash Lite 0.473 
+ GPT-5.6 Luna 0.173 
+ Nemotron 3 Super 0.161 
+ Claude Haiku 4.5 0.000 
+ Qwen 3.5 122B 0.000 
+ 1M
+ + 0.163 vs. next 
+ Isaac v0.1 (preview) 0.368 
+ Gemini 3.5 Flash Lite 0.205 
+ Nemotron 3 Super 0.067 
+ GPT-5.6 Luna 0.050 
+ Claude Haiku 4.5 0.000 
+ Qwen 3.5 122B 0.000 
+ MRCR v2 (Multi-Round Co-reference Resolution), 8-needle split, 0–1 scale, all three panels on the same axis. Multiple needles are distributed through a long conversation and the model must retrieve and disambiguate a specified one, so partial recall and cross-needle interference are both penalized. Isaac leads at every measured length, by 0.158 at 256K, 0.155 at 512K, and 0.163 at 1M. A score of 0.000 means the model returned nothing usable at that length. 
+ Agentic capability
+ Four benchmarks, four different facets of agency.
+ Each probes something the others cannot mask: deterministic function calling, sustained multi-turn coherence, execution in a real shell, and discovery across live tool servers. Isaac leads three of the four and places third on the other.
+ BFCL v4
+ Function calling, scored by AST and state-transition matching rather than an LLM judge.
+ 1st of 6 
+ Isaac v0.1 (preview) 74.81 
+ GPT-5.6 Luna 70.61 
+ Claude Haiku 4.5 67.52 
+ Qwen 3.5 122B 64.88 
+ Gemini 3.5 Flash Lite 64.85 
+ Nemotron 3 Super 33.13 
+ Overall score across 5,106 scored entries. Isaac 28B v0.1 (preview) leads the strongest cloud baseline by 4.2 points while staying deployable in boundary. τ³-bench
+ Multi-turn custom
+
+=== [about] https://console.pokee.ai/docs (lang=en)
+API Documentation | Pokee API 
+ Pokee Console 
+ Loading page 
+ © 2026 Pokee AI
+ Docs Status Terms Privacy pokee.ai 
+ OpenAI compatible Pokee-Isaac API
+ Add Pokee's reasoning model to an existing OpenAI client, or call the HTTP API directly. The same API key works for synchronous, streaming, and background completions.
+ Create an API key View quickstart 
+ Overview
+ One API key
+ Authenticate every request with a show-once key created in the developer console.
+ Stream normally
+ Use standard OpenAI chat-completion streaming and SDK response objects.
+ Resume long work
+ Run background completions that can be polled, resumed, or cancelled.
+ The base URL for this environment is https://api.pokee.ai/v1 . The API serves only the documented /v1 endpoints; unknown routes return an OpenAI-shaped 404 error.
+ Quickstart
+ 1 Create a key
+ Sign in, create a key, and copy it immediately. The full key is shown only once.
+ 2 Store it securely
+ Put the key in a server-side secret or environment variable. Do not ship it in browser or mobile code.
+ 3 Make a request
+ Point an OpenAI-compatible client at the Pokee base URL and use model pokee-isaac .
+ Request bodies over 16 MiB require SSE. Set stream: true and send Accept: text/event-stream . See the long-context requirements before sending large prompts.
+ curl Copy 
+ curl https://api.pokee.ai/v1/chat/completions \ 
+ -H "Authorization: Bearer $POKEE_API_KEY " \ 
+ -H "Content-Type: application/json" \ 
+ -d '{ 
+ "model": "pokee-isaac", 
+ "messages": [ 
+ {"role": "user", "content": "Explain why the sky is blue."} 
+ ] 
+ }' 
+ By using api.pokee.ai , you agree to Pokee's Terms of Service and Privacy Policy .
+ Authentication
+ Send your Pokee key as a Bearer token on every API request:
+ HTTP header Copy 
+ Authorization : Bearer pk-... 
+ Keep API keys server-side
+ A Pokee key grants access to your developer balance. Use a backend or trusted runtime for calls from web and mobile products. Revoked keys stop working shortly after revocation.
+ Endpoints
+ Method Path Purpose Auth 
+ GET /v1/models List available models Required 
+ POST /v1/chat/completions Create a completion Required 
+ GET /v1/chat/completions/{id} Poll a background completion Required 
+ GET /v1/chat/completions/{id}?stream=true Resume a background stream Required 
+ POST /v1/chat/completions/{id}/cancel Cancel a background completion Required 
+ GET /v1/health Check API health Public 
+ GET /v1/health?deep=1 Check API and model availability Required 
+ Chat completions
+ Pokee uses the OpenAI Chat Completions request and response format, so you can use the official OpenAI SDK or any compatible client. Requests are sent to Pokee, not OpenAI, through the configured base_url and use the pokee-isaac model.
+ Send an OpenAI-compatible chat-completion body to POST /v1/chat/completions . The fields below are supported along with other compatible chat-completion options.
+ model required 
+ Use pokee-isaac . If omitted, the API selects Pokee-Isaac; another model name returns model_not_found .
+ messages required 
+ An array of chat messages. The request is rejected when this field is missing.
+ stream
+ Set to true for an SSE stream of chat-completion chunks.
+ background
+ Pokee extension. Set to true to make the completion pollable, resumable, and cancellable.
+ max_tokens / max_completion_tokens
+ Either spelling is accepted. Both the default and the maximum are 60,000 output tokens. If both are present, their values must match.
+ Streaming
+ Set stream: true to receive standard OpenAI-compatible chat-completion chunks over Server-Sent Events. Pokee includes a final chunk with t
+
+=== [meta] https://console.pokee.ai/model
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음

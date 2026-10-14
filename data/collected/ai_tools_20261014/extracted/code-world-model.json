@@ -1,0 +1,43 @@
+{
+ "company": "Meta",
+ "one_liner_ko": "코드 생성 연구를 위해 '월드 모델' 개념을 적용한 Meta FAIR의 320억 파라미터 언어 모델.",
+ "what_it_does_ko": "Code World Model(CWM)은 Meta FAIR CodeGen 팀이 만든 320억 파라미터 밀집(dense) 언어 모델로, 코드 생성과 코드 추론 연구를 위한 모델이다. 코드와 명령이 프로그램·시스템 상태를 어떻게 바꾸는지 더 잘 표현하도록, 파이썬 실행 추적과 컨테이너 환경의 에이전트 상호작용 데이터로 중간 학습했다. 검증 가능한 코딩·수학·다중 턴 소프트웨어 엔지니어링 환경에서 다중 작업 강화학습으로 후속 학습했다. 비상업 연구용 라이선스로 공개되며, 연락처 정보 제공에 동의해야 접근할 수 있고 양자화 시 80GB GPU 한 장으로 실행할 수 있다.",
+ "key_features": [
+  "320억 파라미터 밀집 디코더 모델",
+  "파이썬 실행 추적·에이전트 상호작용 데이터로 중간 학습",
+  "코딩·수학·소프트웨어 엔지니어링 다중 작업 강화학습",
+  "사후학습·SFT·사전학습 체크포인트 공개",
+  "양자화 시 80GB GPU 한 장으로 실행",
+  "vLLM·Fastgen 실행 예제"
+ ],
+ "use_cases_ko": [
+  "영어·프로그래밍 언어 기반 코드 합성·이해 비상업 연구"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "CWM License (fair-noncommercial-research-license, 비상업 연구용)",
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://huggingface.co/facebook/cwm", "quote": " Developed by : Meta FAIR CodeGen Team"},
+  {"field": "one_liner_ko", "url": "https://huggingface.co/facebook/cwm", "quote": "CWM is a dense 32-billion-parameter LLM to advance research on code generation with world models."},
+  {"field": "what_it_does_ko", "url": "https://huggingface.co/facebook/cwm", "quote": "we mid-trained CWM on a large number of observation-action trajectories from Python execution traces and agentic interactions in containerized environments."},
+  {"field": "what_it_does_ko", "url": "https://huggingface.co/facebook/cwm", "quote": "You need to agree to share your contact information to access this model "},
+  {"field": "key_features", "url": "https://huggingface.co/facebook/cwm", "quote": "We post-trained with extensive multi-task RL in verifiable coding, math, and multi-turn software engineering environments."},
+  {"field": "key_features", "url": "https://huggingface.co/facebook/cwm", "quote": " GPU Requirements : CWM can be run on a single GPU with 80 GB of VRAM with quantization."},
+  {"field": "key_features", "url": "https://huggingface.co/facebook/cwm", "quote": " SFT model: https://huggingface.co/facebook/cwm-sft "},
+  {"field": "key_features", "url": "https://huggingface.co/facebook/cwm", "quote": "Running CWM Hugging Face: vLLM Example "},
+  {"field": "use_cases_ko", "url": "https://huggingface.co/facebook/cwm", "quote": "CWM is intended for non-commercial research use in English and relevant programming languages. Relevant tasks include code synthesis and understanding."},
+  {"field": "open_source", "url": "https://huggingface.co/facebook/cwm", "quote": " License: fair-noncommercial-research-license "},
+  {"field": "open_source", "url": "https://huggingface.co/facebook/cwm", "quote": "We explicitly release CWM as a research model under a noncommercial research license"},
+  {"field": "korean_support", "url": "https://huggingface.co/facebook/cwm", "quote": "Use in languages other than English. Use in any commercial product or service."}
+ ],
+ "mismatch": [
+  {"official": "CWM은 비상업 연구용 라이선스(fair-noncommercial-research-license)로만 공개되며, 상업 제품·서비스 사용은 금지되고 연락처 제공 동의 후 접근 가능", "diff": "기존 '오픈소스(무료, 가중치/코드 공개)' 분류와 달리 일반 오픈소스가 아니라 상업 이용이 금지된 연구 전용 공개", "url": "https://huggingface.co/facebook/cwm"}
+ ],
+ "plan_change": []
+}

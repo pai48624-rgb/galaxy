@@ -1,0 +1,81 @@
+{
+ "company": "홍콩대학교·Salesforce Research·CMU·워털루대(공동 연구)",
+ "one_liner_ko": "실제 컴퓨터 환경에서 멀티모달 에이전트의 개방형 작업 수행을 평가하는 확장 가능한 환경·벤치마크.",
+ "what_it_does_ko": "OSWorld는 멀티모달 에이전트를 위한 실제 컴퓨터 환경으로, 과제 설정, 실행 기반 평가, 상호작용 학습을 여러 운영체제(Ubuntu·Windows·macOS)에서 지원한다. 이 환경 위에 실제 웹·데스크톱 앱, 파일 입출력, 여러 앱에 걸친 작업으로 구성된 369개 과제 벤치마크를 만들었다. 과제마다 초기 상태 설정과 실행 기반 평가 스크립트가 있어 재현 가능하다. 2025년 OSWorld-Verified로 개선됐고 2026-06-26에 OSWorld 2.0이 나왔다.",
+ "key_features": [
+  "369개 실제 컴퓨터 과제(+Windows 43개)",
+  "Ubuntu·Windows·macOS 지원",
+  "실행 기반 평가 함수 134종",
+  "병렬·헤드리스 실행",
+  "AWS 지원으로 평가 1시간 이내",
+  "OSWorld-Verified·OSWorld 2.0"
+ ],
+ "use_cases_ko": [
+  "연구자가 컴퓨터 사용 에이전트(LLM/VLM) 성능 평가"
+ ],
+ "pricing": {
+  "free_tier": null,
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "웹"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "http://osworld-v1.xlang.ai/",
+   "quote": "1 The University of Hong Kong,"
+  },
+  {
+   "field": "company",
+   "url": "http://osworld-v1.xlang.ai/",
+   "quote": "2 Salesforce Research,"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "http://osworld-v1.xlang.ai/",
+   "quote": "is a first-of-its-kind scalable, real computer environment for multimodal agents"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "http://osworld-v1.xlang.ai/",
+   "quote": "we create a benchmark\n of 369 computer tasks involving real web and desktop apps in open domains"
+  },
+  {
+   "field": "key_features",
+   "url": "http://osworld-v1.xlang.ai/",
+   "quote": "execution-based evaluation, and interactive learning across various operating systems such as Ubuntu,\n Windows, and macOS."
+  },
+  {
+   "field": "key_features",
+   "url": "http://osworld-v1.xlang.ai/",
+   "quote": "Headless operation\n is supported."
+  },
+  {
+   "field": "key_features",
+   "url": "http://osworld-v1.xlang.ai/",
+   "quote": "AWS support reducing evaluation time to within 1 hour"
+  },
+  {
+   "field": "key_features",
+   "url": "http://osworld-v1.xlang.ai/",
+   "quote": "2026-06-26: OSWorld 2.0 is now available!"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "http://osworld-v1.xlang.ai/",
+   "quote": "We adopt state-of-the-art LLM and VLM from open-source representatives"
+  },
+  {
+   "field": "platforms",
+   "url": "http://osworld-v1.xlang.ai/",
+   "quote": "Data Viewer"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

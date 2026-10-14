@@ -1,0 +1,71 @@
+{
+ "company": "Letta",
+ "one_liner_ko": "에이전트의 컨텍스트 엔지니어링 능력을 측정하는 Letta의 Context-Bench 벤치마크.",
+ "what_it_does_ko": "Context-Bench는 Letta Research가 만든 에이전트의 컨텍스트 엔지니어링 능력 벤치마크다. Filesystem Suite는 파일 작업 연결, 개체 관계 추적, 다단계 정보 검색 능력을, Skills Suite는 라이브러리에서 관련 스킬을 찾아 불러와 과제를 끝내는 능력을 평가한다. 채점은 LLM 판정 기준표로 하며, 리더보드에 모델별 점수와 비용을 표시한다. 과제나 모델 기여는 이메일이나 GitHub 이슈로 받는다.",
+ "key_features": [
+  "Filesystem Suite(파일 기반 검색·추론)",
+  "Skills Suite(스킬 탐색·로딩·사용)",
+  "LLM-as-a-judge 기준표 채점",
+  "모델별 점수와 비용 표시",
+  "제공사별 필터",
+  "업데이트 기록"
+ ],
+ "use_cases_ko": [
+  "개발자가 에이전트용 모델 선택 시 컨텍스트 처리 능력 비교"
+ ],
+ "pricing": {
+  "free_tier": null,
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "웹"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://leaderboard.letta.com/",
+   "quote": "Model Leaderboard | Letta"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://leaderboard.letta.com/",
+   "quote": "Context-Bench: A benchmark for agentic context engineering"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://leaderboard.letta.com/",
+   "quote": "Evaluates how well language models can chain file operations, trace entity relationships, and manage multi-step information retrieval."
+  },
+  {
+   "field": "key_features",
+   "url": "https://leaderboard.letta.com/",
+   "quote": "Evalutes how well language models can discover and load relevant skills from a library to complete tasks."
+  },
+  {
+   "field": "key_features",
+   "url": "https://leaderboard.letta.com/",
+   "quote": "LLM-as-a-judge rubric to evaluate the agent's ability to complete tasks"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://leaderboard.letta.com/",
+   "quote": "Interested in contributing a task or model? Email us or open an issue on GitHub."
+  },
+  {
+   "field": "platforms",
+   "url": "https://leaderboard.letta.com/",
+   "quote": "Filesystem Suite Skills Suite Updates"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://leaderboard.letta.com/",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

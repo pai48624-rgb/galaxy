@@ -1,0 +1,253 @@
+=== [home] https://openrlhf.readthedocs.io/en/latest/ (lang=en)
+Welcome to OpenRLHF’s documentation! — OpenRLHF 0.10.2 documentation 
+ OpenRLHF
+ 0.10.2
+ Getting Started 
+ Quick Start 
+ Core Concepts 
+ Architecture Foundation: Ray + vLLM Distribution 
+ Design Paradigm: Agent-Based Execution 
+ Training Guides 
+ RL Training Guide 
+ Supervised & Preference Training (SFT / RM / DPO) 
+ Common CLI Options 
+ Scaling & Operations 
+ Hybrid Engine 
+ Async Training & Partial Rollout 
+ Performance Tuning 
+ Checkpointing 
+ Sequence Parallelism (RingAttention) 
+ Multi-node Training 
+ NVIDIA Docker (Optional) 
+ Troubleshooting 
+ OpenRLHF 
+ Welcome to OpenRLHF’s documentation!
+ View page source 
+ Welcome to OpenRLHF’s documentation!  
+ OpenRLHF is the first high-performance, production-ready open-source RLHF framework that combines a Ray + vLLM distributed architecture with a unified agent-based design paradigm for scalable and extensible reinforcement learning from human feedback.
+ Highlights  
+ Ray + vLLM distributed architecture — scales to 70B+ models. vLLM-accelerated generation
+eliminates the dominant RLHF bottleneck; DeepSpeed ZeRO-3 trains directly from HuggingFace
+checkpoints with no model conversion.
+ Unified agent-based paradigm — token-in-token-out pipeline that decouples execution mode 
+(single-turn / multi-turn) from RL algorithm . Any algorithm pairs with any mode through a
+single shared loss layer.
+ State-of-the-art RL algorithms — PPO, REINFORCE++, REINFORCE++-baseline, GRPO, Dr. GRPO,
+RLOO; switchable with one flag.
+ Hybrid Engine — colocate Actor / Critic / Reward / Reference / vLLM on the same GPUs
+with sleep-mode memory sharing. Highest utilization on small clusters; simplest deployment.
+ Async training & Partial Rollout — overlap rollout with training, and overlap weight sync
+with generation via vLLM pause / resume. Highest throughput when convergence is validated.
+ Single-turn rewards & multi-turn agents — HTTP remote RM, custom Python reward functions
+(Reinforced Fine-Tuning), full multi-turn environments, or wrap vLLM as an OpenAI-compatible
+chat server.
+ Vision-Language Model RLHF (0.10) — train VLMs (e.g., Qwen3.5) end-to-end with image
+inputs through the same agent pipeline.
+ Muon optimizer (new in 0.10.2) — DeepSpeed-native MuonWithAuxAdam for SFT / RM / DPO /
+PPO. Per-entity selection in PPO ( --actor.optim muon with Adam critic is a one-liner).
+Requires DeepSpeed ≥ 0.18.2.
+ Hierarchical CLI (new in 0.10.2) — every flag lives under a named section
+( --ds.* , --vllm.* , --rollout.* , --data.* , --train.* , --eval.* ,
+ --ckpt.* , --logger.* , --algo.* , --actor.* , --critic.* , --ref.* ,
+ --reward.* ). Hierarchy mirrors ownership and is self-documenting at --help .
+ Off-policy correction — TIS / ICEPOP / Seq-Mask-TIS handle vLLM ↔ training log-prob
+mismatches.
+ Production essentials — resumable checkpoints, best-checkpoint tracking, EMA, Wandb /
+TensorBoard logging, SLURM multi-node, LoRA / QLoRA for SFT / RM / DPO.
+ Start here  
+ New users 
+ Quick Start — install + first training run.
+ Mental model 
+ Architecture Foundation: Ray + vLLM Distribution (components) and Design Paradigm: Agent-Based Execution (design).
+ Pick a recipe 
+ RL Training Guide (RL training) or Supervised & Preference Training (SFT / RM / DPO) (SFT / RM / DPO).
+ Look up a flag 
+ Common CLI Options (shared) or the trainer-specific page above.
+ Upgrading from 0.9.x / early 0.10 
+ Flag migration (0.9.x / early 0.10 → 0.10.2) in Common CLI Options .
+ Scale or tune 
+ Hybrid Engine , Async Training & Partial Rollout , Performance Tuning , Multi-node Training .
+ Something broke 
+ Troubleshooting .
+ Resources  
+ GitHub Repository 
+ Technical Report 
+ Slides 
+ vLLM blog: Accelerating RLHF with vLLM 
+ Note
+ This project is under active development.
+ Contents  
+ Getting Started 
+ Quick Start 
+ Installation 
+ A note on the CLI 
+ First run (RLVR with Qwen3-4B) 
+ Prepare datasets 
+ Pretrained models 
+ Typical RLHF workflow 
+ Where to next 
+ Core Concepts 
+ Architecture Foundation: Ray + vLLM Distribution 
+ Why this matters 
+ Core infrastructure components 
+ Execution-time design principles 
+ Key benefits 
+ Design Paradigm: Agent-Based Execution 
+ Why agent-based? 
+ Agent architecture 
+ Core design principles 
+ Execution modes (orthogonal to algorithms) 
+ Pipelines (sync vs. async) 
+ Worked combinations 
+ Mental model in one sentence 
+ How to use 
+ Training Guides 
+ RL Training Guide 
+ Overview 
+ Quick Launch (Ray + vLLM) 
+ Execution Modes 
+ RL Algorithms 
+ Optimizer: Adam or Muon (per entity) 
+ Tuning 
+ Vision-Language Model (VLM) RLHF 
+ Logging & evaluation 
+ Reference scripts 
+ Supervised & Preference Training (SFT / RM / DPO) 
+ Supervised Fine-tuning (SFT) 
+ Reward Model (RM) Training 
+ Direct Preference Optimization (DPO) 
+ Optimizer: Adam or Muon 
+ LoRA / QLoRA 
+ Common CLI Options 
+ Section map 
+ DeepSpeed 
+ vLLM 
+ Rollout / generation 
+ Data 
+ Training 
+ Evaluation 
+ Checkpointing 
+ Logging 
+ Model / entity flags 
+ Optimizer: Adam or Muon 
+ Learning-rate scheduler & gradient clip 
+ LoRA / QLoRA 
+ Long context & checkpointing (dedicated pages) 
+ Flag migration (0.9.x / early 0.10 → 0.10.2) 
+ Scaling & Operations 
+ Hybrid Engine 
+ How sleep mode works 
+ Launch recipe (Qwen3-4B RLVR — math) 
+ Key flags 
+ Memory rule of thumb 
+ Relationship to async training 
+ When not to use Hybrid Engine 
+ Async Training & Partial Rollout 
+ How it works 
+ Flags 
+ Launch recipe (async + partial rollout) 
+ Tuning guide 
+ When not to use async 
+ Performance Tuning 
+ Choosing a deployment mode 
+ Speed knobs 
+ Memory management 
+ Batch size tuning 
+ Long context (>8K tokens) 
+ Checkpointing 
+ Core flags 
+ PPO-only flags 
+ DeepSpeed → Universal conversion 
+ Example: SFT 
+ Example: RL (Ray + vLLM) 
+ Sequence Parallelism (RingAttention) 
+ When to use 
+ Installation 
+ Flags 
+ Examples 
+ Multi-node Training 
+ How to launch Ray PPO on Slurm? 
+ How to launch SFT/RM/DPO training on Slurm? 
+ How to specify a particular node for a model in Ray PPO? 
+ NVIDIA Docker (Optional) 
+ One-Click Installation Script of Nvidia-Docker 
+ Troubleshooting 
+ “argparse: unrecognized arguments” after upgrade 
+ GPU device index / DeepSpeed init errors 
+ Out-of-memory (OOM) 
+ Muon + DeepSpeed compatibility 
+ vLLM hangs / NCCL issues 
+ Ray runtime environment problems 
+ Debug with py-spy (in-container) 
+ Next 
+ © Copyright 2026, OpenRLHF.
+ Built with Sphinx using a
+ theme 
+ provided by Read the Docs .
+
+=== [meta] https://openrlhf.readthedocs.io/en/latest/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/OpenRLHF/OpenRLHF
+<div align="center">
+    <img alt="OpenRLHF logo" src="./docs/logo.png" style="height: 140px;" />
+</div>
+<div align="center">
+<p align="center">
+      <a href="https://github.com/OpenRLHF/OpenRLHF/graphs/contributors">
+        <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/OpenRLHF/OpenRLHF" />
+      </a>
+      <a href="https://github.com/OpenRLHF/OpenRLHF/issues">
+        <img alt="Issues" src="https://img.shields.io/github/issues/OpenRLHF/OpenRLHF?color=0088ff" />
+      </a>
+      <a href="https://github.com/OpenRLHF/OpenRLHF/discussions">
+        <img alt="Issues" src="https://img.shields.io/github/discussions/OpenRLHF/OpenRLHF?color=0088ff" />
+      </a>
+      <a href="https://github.com/OpenRLHF/OpenRLHF/pulls">
+        <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/OpenRLHF/OpenRLHF?color=0088ff" />
+      </a>
+      <a href="https://github.com/OpenRLHF/OpenRLHF/stargazers">
+        <img alt="GitHub stars" src="https://img.shields.io/github/stars/OpenRLHF/OpenRLHF?color=ccf" />
+      </a>
+      <a href="https://deepwiki.com/OpenRLHF/OpenRLHF"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
+      <br>
+      <em>Open-source / Comprehensive / Lightweight / Easy-to-use</em>
+    </p>
+</div>
+
+<hr>
+
+<span>[ English | <a href="README_zh.md">中文</a> | <a href="README_ja.md">日本語</a> ]</span>
+
+OpenRLHF is **the first** high-performance, production-ready open-source RLHF framework that combines **Ray + vLLM distributed architecture** with a **unified agent-based design paradigm** for scalable and extensible reinforcement learning from human feedback.
+
+📚 **Learn More**: [Documentation](https://openrlhf.readthedocs.io/) | [Slides](https://docs.google.com/presentation/d/1JRhB1d7csofx0PIZBmfyBdMluxNd5JLPpUHrrvVhGnk/edit?usp=sharing) | [Technical Report](https://www.researchgate.net/publication/393414548_OpenRLHF_An_Easy-to-use_Scalable_and_High-performance_RLHF_Framework) | [Video](https://www.bilibili.com/video/BV1dv2jBxEQG/)
+
+> 🔥 **New Backend**: [**Molt**](https://github.com/NVIDIA-NeMo/labs-molt) brings an [Automodel](https://github.com/NVIDIA-NeMo/Automodel)-powered backend to OpenRLHF that's **more powerful than DeepSpeed** — scaling RL training to **hundreds of billions of parameters** while keeping the same familiar, elegant OpenRLHF workflow.
+
+## 📖 Table of Contents
+
+- [🗞️ News](#news)
+- [🏗️ Architecture Foundation](#architecture-foundation-ray--vllm-distribution) - Ray + vLLM + DeepSpeed distributed infrastructure
+- [🎯 Design Paradigm](#design-paradigm-agent-based-execution) - Unified agent-based execution pipeline
+- [🚀 RL Algorithms](#state-of-the-art-rl-algorithms) - PPO, REINFORCE++, GRPO, RLOO
+- [📋 Features Overview](#comprehensive-features) - Complete RLHF pipeline capabilities
+- [🎬 Quick Start](#quick-start) - Installation and typical workflow
+- [🎓 Training Guide](#supervised-fine-tuning) - SFT, Reward Model, RL Training
+- [🎯 Single-Turn Agent](#single-turn-agent-reinforced-fine-tuning-with-custom-rewards) - Custom reward functions
+- [🤖 Multi-Turn Agent](#multi-turn-agent-complex-environment-interactions) - Complex environments
+- [🔧 Advanced Topics](#advanced-topics) - LoRA, performance tuning
+
+---
+
+<a id="news"></a>
+## News
+
+<details>
+<summary>Show News</summary>
+
+- [2026/9] OpenRLHF supports [FlashREINFORCE](https://www.alphaxiv.org/abs/2609.flashreinforce-asynchronous-rl-agentic-models) — critic-free, single-rollout asynchronous RL for agentic language models, as a composition of configs (`--algo.advantage.estimator flash_reinforce`, a binary-KL trust region on the vLLM logprobs, sample-mean aggregation). Training script: [train_flash_reinforce_ray_agent_async.sh](./examples/scripts/train_flash_reinforce_ray_agent_async.sh)
+- [2026/4] OpenRLHF 0.10 adds **Multi-Turn VLM RL** — multi-step interactions with images in both prompts and environment feedback (e.g. screenshots). Example: [vlm_multiturn_agent.py](./examples/python/vlm_multiturn_agent.py)
+- [2026/4] OpenRLHF 0.10 adds **VLM (Vision-Language Model) RLHF support** — train VLMs like Qwen3.5 with image inputs end-to-end. Training script: [train_vlm_math_hybrid_engine.sh](./examples/s

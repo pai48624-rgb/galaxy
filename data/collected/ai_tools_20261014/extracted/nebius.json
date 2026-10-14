@@ -1,0 +1,223 @@
+{
+ "company": "Nebius",
+ "one_liner_ko": "실리콘부터 API까지 설계한 클라우드에서 AI를 더 빠르게 만들고 확장하는 AI 클라우드.",
+ "what_it_does_ko": "Nebius AI Cloud는 학습부터 추론까지 AI 워크로드를 위한 클라우드로, 비가상화 GPU와 InfiniBand를 갖춘 맞춤 하드웨어를 몇 분 만에 클러스터로 제공한다고 설명한다. NVIDIA GPU 가상 머신·GPU 클러스터, Slurm(Soperator)·Kubernetes 클러스터, S3 호환 오브젝트 스토리지를 제공한다. MLOps 도구, 서버리스·관리형 추론(Token Factory), MLflow 관리 클러스터와 JupyterLab·vLLM 같은 턴키 애플리케이션도 있다. 가격은 GPU 시간당 온디맨드·약정 할인·선점형(스팟) 요금으로 나뉜다.",
+ "key_features": [
+  "비가상화 NVIDIA GPU와 InfiniBand 클러스터",
+  "Slurm(Soperator)·Kubernetes 클러스터 관리(무료 관리 서비스)",
+  "서버리스 AI 엔드포인트·작업과 관리형 추론(Token Factory)",
+  "S3 호환 오브젝트 스토리지·공유 파일시스템",
+  "MLflow 관리 클러스터",
+  "JupyterLab·vLLM·Open WebUI 등 턴키 애플리케이션",
+  "약정 할인(온디맨드 대비 최대 35%)과 선점형 GPU",
+  "24시간 지원과 무료 PoC"
+ ],
+ "use_cases_ko": [
+  "파운데이션 모델 학습(Shopify·Recraft 사례)",
+  "금융 AI 추론 확장(Revolut 사례: H100 200개+와 Token Factory)",
+  "피지컬 AI·로보틱스 학습 파이프라인(RoboForce 사례)"
+ ],
+ "pricing": {
+  "free_tier": "불명 (프로모 코드로 무료 크레딧 제공 언급, 첫 결제 최소 $25)",
+  "plans": [
+   {
+    "name": "NVIDIA HGX B300",
+    "price": 9.5,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "GPU 시간당 온디맨드",
+    "page_lang": "en"
+   },
+   {
+    "name": "NVIDIA HGX B200",
+    "price": 8.5,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "GPU 시간당 온디맨드",
+    "page_lang": "en"
+   },
+   {
+    "name": "NVIDIA HGX H200",
+    "price": 5.4,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "GPU 시간당 온디맨드",
+    "page_lang": "en"
+   },
+   {
+    "name": "NVIDIA HGX H100",
+    "price": 4.5,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "GPU 시간당 온디맨드",
+    "page_lang": "en"
+   },
+   {
+    "name": "NVIDIA RTX PRO 6000",
+    "price": 1.8,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "GPU 시간당 온디맨드",
+    "page_lang": "en"
+   },
+   {
+    "name": "선점형 HGX H100 (스팟)",
+    "price": 0.79,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "GPU 시간당 최저가, 변동",
+    "page_lang": "en"
+   },
+   {
+    "name": "GB300 NVL72 / GB200 NVL72",
+    "price": null,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "문의",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://nebius.com/prices"
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "웹",
+  "CLI"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://nebius.com/prices",
+   "quote": "NVIDIA GPU Pricing | Nebius AI Cloud"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://nebius.com",
+   "quote": "Build and scale AI faster on a cloud engineered from silicon to API."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://nebius.com",
+   "quote": "Custom hardware with non-virtualized GPUs & InfiniBand — with industry-leading MTBF/MTTR."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://nebius.com",
+   "quote": "Built from the ground-up for AI developers with built-in MLOps tooling, serverless and managed inference."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://nebius.com",
+   "quote": "From zero to clusters in minutes, with built-in repeatability and self-service access."
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.nebius.com/",
+   "quote": "InfiniBand™ networks for high-speed distributed computing"
+  },
+  {
+   "field": "key_features",
+   "url": "https://nebius.com/prices",
+   "quote": "Managed Soperator (Slurm on Kubernetes) **** \n Free"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.nebius.com/",
+   "quote": "Endpoints and jobs that run your containerized AI workloads"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.nebius.com/",
+   "quote": "AWS S3-compatible storage for ML/AI datasets and model artifacts"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.nebius.com/",
+   "quote": "Managed clusters for experiment tracking and model registry"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.nebius.com/",
+   "quote": "Turnkey applications for ML/AI workflows: JupyterLab®, vLLM, Open WebUI, etc."
+  },
+  {
+   "field": "key_features",
+   "url": "https://nebius.com/prices",
+   "quote": "Pay up to 35% less than on-demand rates by reserving large-scale clusters for multiple months."
+  },
+  {
+   "field": "key_features",
+   "url": "https://nebius.com",
+   "quote": "24/7 support by default\n Free white-glove PoC"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://nebius.com",
+   "quote": "Inside Shopify’s AI Foundation Model Training on Nebius"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://nebius.com",
+   "quote": "Running on 200+ NVIDIA H100 GPUs and Nebius Token Factory"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://nebius.com",
+   "quote": "RoboForce runs its Physical AI workflow on Nebius AI Cloud with NVIDIA Blackwell infrastructure"
+  },
+  {
+   "field": "pricing",
+   "url": "https://nebius.com/prices",
+   "quote": "NVIDIA HGX B300\n 24\n 346\n $9.50"
+  },
+  {
+   "field": "pricing",
+   "url": "https://nebius.com/prices",
+   "quote": "NVIDIA HGX B200\n 20\n 224\n $8.50"
+  },
+  {
+   "field": "pricing",
+   "url": "https://nebius.com/prices",
+   "quote": "NVIDIA HGX H200\n 16\n 200\n $5.40"
+  },
+  {
+   "field": "pricing",
+   "url": "https://nebius.com/prices",
+   "quote": "NVIDIA HGX H100\n 16\n 200\n $4.50"
+  },
+  {
+   "field": "pricing",
+   "url": "https://nebius.com/prices",
+   "quote": "NVIDIA RTX PRO 6000\n 24\n 218\n $1.80"
+  },
+  {
+   "field": "pricing",
+   "url": "https://nebius.com/prices",
+   "quote": "NVIDIA HGX H100\n 16\n 200\n from $0.79"
+  },
+  {
+   "field": "pricing",
+   "url": "https://nebius.com/prices",
+   "quote": "A promo code grants you free credits for using Nebius AI Cloud resources."
+  },
+  {
+   "field": "pricing",
+   "url": "https://nebius.com/prices",
+   "quote": "Yes, there is a minimum amount for the first payment, which is $25."
+  },
+  {
+   "field": "platforms",
+   "url": "https://docs.nebius.com/",
+   "quote": "Open web console"
+  },
+  {
+   "field": "platforms",
+   "url": "https://docs.nebius.com/",
+   "quote": "Developer tools"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

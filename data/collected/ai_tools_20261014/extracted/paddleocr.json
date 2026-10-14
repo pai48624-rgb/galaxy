@@ -1,0 +1,132 @@
+{
+ "company": "PaddlePaddle(飞桨) 팀",
+ "one_liner_ko": "PDF 문서와 이미지를 LLM이 바로 쓸 수 있는 구조화 데이터(JSON/Markdown)로 바꾸는 OCR 툴킷·문서 AI 엔진.",
+ "what_it_does_ko": "PaddleOCR은 飞桨(PaddlePaddle) 팀의 오픈소스 OCR·문서 AI 도구로, PDF와 이미지를 JSON·Markdown 같은 구조화 데이터로 변환한다. PP-OCRv6는 단일 모델로 50개 언어 문자 인식을 지원하고, PaddleOCR-VL은 0.9B 초소형 시각 언어 모델로 109개 언어 문서 파싱을 지원한다. PP-StructureV3는 복잡한 PDF·문서 이미지를 원래 구조를 유지한 채 Markdown·JSON으로 바꾸고, PP-ChatOCRv4는 ERNIE 4.5로 핵심 정보를 추출한다. 모델 학습·추론·서비스 배포 도구와 공식 무료 API, MCP·Agent Skills를 제공한다.",
+ "key_features": [
+  "PP-OCRv6: 단일 모델 50개 언어 문자 인식",
+  "PaddleOCR-VL: 0.9B 시각 언어 모델, 109개 언어 문서 파싱",
+  "PP-StructureV3: 복잡한 문서를 구조 유지 Markdown·JSON으로 변환",
+  "PP-ChatOCRv4: ERNIE 4.5 기반 핵심 정보 추출",
+  "공식 API(Python·TypeScript·Go SDK, CLI)",
+  "Android·iOS·브라우저 배포, MCP 서버·Agent Skills"
+ ],
+ "use_cases_ko": [
+  "RAG·에이전트 애플리케이션용 문서 데이터 변환",
+  "대량 PDF 문서 파싱"
+ ],
+ "pricing": {
+  "free_tier": "있음 (공식 사이트 무료 API, 하루 문서 파싱 최대 20,000쪽)",
+  "plans": [
+   {
+    "name": "PaddleOCR 공식 사이트 무료 API",
+    "price": 0,
+    "currency": null,
+    "period": "usage",
+    "limits": "하루 문서 파싱 최대 20,000쪽",
+    "page_lang": "zh"
+   }
+  ],
+  "pricing_url": "http://www.paddleocr.ai/latest/"
+ },
+ "open_source": "Apache 2.0",
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "윈도",
+  "맥",
+  "CLI",
+  "API",
+  "안드로이드",
+  "iOS"
+ ],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "http://www.paddleocr.ai/latest/",
+   "quote": "2025年5月20日，飞桨团队发布 PaddleOCR 3.0"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/PaddlePaddle/PaddleOCR",
+   "quote": "**PaddleOCR converts PDF documents and images into structured, LLM-ready data (JSON/Markdown) with industry-leading accuracy."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/PaddlePaddle/PaddleOCR",
+   "quote": "PaddleOCR is the bedrock for building intelligent RAG and Agentic applications."
+  },
+  {
+   "field": "key_features",
+   "url": "http://www.paddleocr.ai/latest/",
+   "quote": "单模型支持 50 种语言 （中、英、日及 46 种拉丁语系）"
+  },
+  {
+   "field": "key_features",
+   "url": "http://www.paddleocr.ai/latest/",
+   "quote": "PaddleOCR-VL - 通过 0.9B 超紧凑视觉语言模型增强多语种文档解析"
+  },
+  {
+   "field": "key_features",
+   "url": "http://www.paddleocr.ai/latest/",
+   "quote": " 面向文档解析的 SOTA 且资源高效的模型 , 支持 109 种语言"
+  },
+  {
+   "field": "key_features",
+   "url": "http://www.paddleocr.ai/latest/",
+   "quote": "将复杂PDF和文档图像智能转换为保留 原始结构的Markdown文件和JSON 文件"
+  },
+  {
+   "field": "key_features",
+   "url": "http://www.paddleocr.ai/latest/",
+   "quote": " 原生集成ERNIE 4.5，从海量文档中 精准提取关键信息"
+  },
+  {
+   "field": "key_features",
+   "url": "http://www.paddleocr.ai/latest/",
+   "quote": " PaddleOCR 官方 API\n 总览\n Python SDK\n TypeScript SDK\n Go SDK\n CLI"
+  },
+  {
+   "field": "key_features",
+   "url": "http://www.paddleocr.ai/latest/",
+   "quote": " 跨端部署\n Android 部署\n iOS 部署\n 浏览器端部署"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/PaddlePaddle/PaddleOCR",
+   "quote": "trusted by top-tier projects like Dify, RAGFlow, and Cherry Studio"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "http://www.paddleocr.ai/latest/",
+   "quote": " PaddleOCR 官网免费 API 调用现已将每日文档解析上限提升至 20,000 页，支持大批量 PDF 文件解析"
+  },
+  {
+   "field": "pricing",
+   "url": "http://www.paddleocr.ai/latest/",
+   "quote": "PaddleOCR 官网免费 API 调用现已将每日文档解析上限提升至 20,000 页，支持大批量 PDF 文件解析，同时提供 MCP 及 Skills 服务。"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/PaddlePaddle/PaddleOCR",
+   "quote": "[![License](https://img.shields.io/badge/license-Apache_2.0-green)](../LICENSE)"
+  },
+  {
+   "field": "api",
+   "url": "http://www.paddleocr.ai/latest/",
+   "quote": "您可以在 PaddleOCR官网 在线使用或者调用该模型的API。"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/PaddlePaddle/PaddleOCR",
+   "quote": "![os](https://img.shields.io/badge/os-linux%2C%20win%2C%20mac-pink.svg)"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://github.com/PaddlePaddle/PaddleOCR",
+   "quote": "[日本語](./readme/README_ja.md) | [한국어](./readme/README_ko.md)"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

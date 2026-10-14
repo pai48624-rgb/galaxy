@@ -1,0 +1,69 @@
+{
+ "company": null,
+ "one_liner_ko": "OCR 엔진(libtesseract)과 명령줄 프로그램(tesseract)으로 이루어진 오픈소스 문자 인식(OCR) 엔진.",
+ "what_it_does_ko": "Tesseract는 OCR 엔진 라이브러리 libtesseract와 명령줄 프로그램 tesseract를 담은 패키지다. Tesseract 4부터 줄 단위 인식에 초점을 둔 LSTM 신경망 엔진이 추가됐고, Tesseract 3의 레거시 엔진도 계속 지원한다. UTF-8을 지원하고 100개가 넘는 언어를 바로 인식하며, PNG·JPEG·TIFF 등 이미지를 읽어 텍스트·hOCR·PDF·TSV·ALTO·PAGE 형식으로 출력한다. GUI 앱은 포함하지 않으며, 원래 HP에서 개발돼 2005년 오픈소스로 공개됐고 2006~2017년에는 Google이 개발했다.",
+ "key_features": [
+  "LSTM 신경망 기반 OCR 엔진(줄 단위 인식)",
+  "Tesseract 3 레거시 엔진 호환 모드(--oem 0)",
+  "UTF-8 지원, 100개 이상 언어 기본 인식",
+  "PNG·JPEG·TIFF 등 다양한 이미지 입력",
+  "텍스트·hOCR(HTML)·PDF·TSV·ALTO·PAGE 출력",
+  "새 언어 인식 학습 가능"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": null,
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "Apache-2.0",
+ "api": "불명",
+ "platforms": [
+  "CLI"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/tesseract-ocr/tesseract",
+   "quote": "This package contains an **OCR engine** - `libtesseract` and a **command line program** - `tesseract`."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/tesseract-ocr/tesseract",
+   "quote": "Tesseract 4 adds a new neural net (LSTM) based [OCR engine]"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/tesseract-ocr/tesseract",
+   "quote": "In 2005 Tesseract was open sourced by HP. From 2006 until August 2017 it was developed by Google."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/tesseract-ocr/tesseract",
+   "quote": "Tesseract has **unicode (UTF-8) support**, and can **recognize [more than 100 languages]"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/tesseract-ocr/tesseract",
+   "quote": "Tesseract supports **various output formats**: plain text, hOCR (HTML), PDF, invisible-text-only PDF, TSV, ALTO and PAGE."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/tesseract-ocr/tesseract",
+   "quote": "Tesseract **can be trained to recognize other languages**."
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/tesseract-ocr/tesseract",
+   "quote": "[![GitHub license](https://img.shields.io/badge/license-Apache--2.0-blue.svg)]"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/tesseract-ocr/tesseract",
+   "quote": "a **command line program** - `tesseract`"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

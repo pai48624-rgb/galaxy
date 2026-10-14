@@ -1,0 +1,455 @@
+=== [home] https://repoprompt.com/bench (lang=en)
+Repo Bench – Repo Prompt Repo Bench – Repo Prompt 
+ Repo Prompt 
+ Home 
+ Features 
+ Testimonials 
+ Blog 
+ Docs 
+ Download Discord 
+ Repo Bench
+ Measuring large context reasoning, file editing precision, and instruction adherence.
+ Rankings updated every 15 min • Median scores from all model runs submitted by Repo Prompt users 
+ Last updated: 2026. 10. 14. 오후 3:31:57
+ Building Repo Bench: The Story Behind the Benchmark
+ Read the full story → Explore Individual Runs
+ Drill into every benchmark run, compare distributions, and slice by provider.
+ Open Repo Bench Explorer → Ranking mode: Normalized (Median) Max Score 
+ #1 Laguna-S-2.1 Local 
+ 3 runs 
+ 83.82% 22.65–83.82% 
+ #2 tencent/hy3-preview:free OpenRouter 
+ 5 runs 
+ 81.47% 55.59–81.47% 
+ #3 GPT-5.4 Low OpenAI 
+ 2 runs 
+ 76.47% 75–76.47% 
+ #4 Claude Opus 4.7 Anthropic 
+ 8 runs 
+ 75.59% 68.53–80.88% 
+ #5 Kimi 2.6 Moonshot 
+ 3 runs 
+ 75.59% 60.59–75.59% 
+ #6 Claude Opus 4.5 Anthropic 
+ 48 runs 
+ 73.53% 67.65–83.82% 
+ #7 Claude Sonnet 4.5 Anthropic 
+ 38 runs 
+ 73.53% 64.41–80.29% 
+ #8 Z.AI GLM-5 Z.AI 
+ 15 runs 
+ 73.53% 69.71–80% 
+ #9 GPT-5.1 Medium OpenAI 
+ 7 runs 
+ 72.35% 64.71–80% 
+ #10 GPT-5.3 Codex Medium OpenAI 
+ 6 runs 
+ 71.47% 67.35–71.47% 
+ #11 GPT-5.5 Medium OpenAI 
+ 5 runs 
+ 70.88% 70–75% 
+ #12 GPT-5.2 Xhigh OpenAI 
+ 14 runs 
+ 70% 62.94–71.47% 
+ #13 GPT-5.5 Xhigh OpenAI 
+ 9 runs 
+ 70% 68.82–70.88% 
+ #14 GPT-5.2 High OpenAI 
+ 7 runs 
+ 70% 62.65–71.47% 
+ #15 Gemini Pro 3.1 Preview Gemini 
+ 5 runs 
+ 70% 68.82–70.88% 
+ #16 GPT-5.3 Codex High OpenAI 
+ 4 runs 
+ 70% 65.88–70% 
+ #17 GPT-5.2 Codex Xhigh OpenAI 
+ 3 runs 
+ 70% 62.65–70.29% 
+ #18 GPT-5.5 High OpenAI 
+ 3 runs 
+ 70% 62.94–70.88% 
+ #19 GPT-5.4 OpenAI 
+ 3 runs 
+ 70% 70–70% 
+ #20 GPT-5.3 Codex Xhigh OpenAI 
+ 2 runs 
+ 70% 70–70% 
+ #21 GPT-5.2 Med OpenAI 
+ 2 runs 
+ 70% 70–70% 
+ #22 GPT-5.4 Pro OpenAI 
+ 2 runs 
+ 70% 68.82–70% 
+ #23 GPT-5.2 Low OpenAI 
+ 13 runs 
+ 69.71% 62.94–71.47% 
+ #24 GPT-5.1 Low OpenAI 
+ 19 runs 
+ 69.41% 63.24–78.53% 
+ #25 GPT-5.3 Codex Low OpenAI 
+ 6 runs 
+ 69.12% 68.82–72.94% 
+ 218 additional models tested but not shown in top 25
+ * This benchmark does not reflect the coding skills of a model.
+ About Repo Bench
+ Large Context Reasoning
+ Tests the model's ability to maintain understanding and reasoning across extensive codebases with thousands of lines. Evaluates how well models can hold context and make logical connections across distant parts of large files.
+ Instruction Adherence
+ Evaluates how precisely models follow detailed system instructions for formatting, output structure, and task constraints. Measures consistency and accuracy in adhering to complex, multi-step instructions.
+ File Editing Precision
+ Assesses the model's ability to make precise edits to code files while maintaining context and requirements throughout task completion across different programming languages (Go, Swift, TypeScript) and various formatting constraints.
+ Run the Benchmark Yourself
+ The above results were derived from running the official Repo Prompt benchmark within the app. Run it yourself to see how well a model does with Repo Prompt's constraints, and compare results over time.
+ If you're a lab or model provider and would like to get in touch, feel free to reach out to contact@repoprompt.com 
+ Repo Prompt
+ Open-source context engineering and agent orchestration for macOS.
+ Download Discord X 
+ Documentation
+ Installation 
+ Building Context 
+ Workflows 
+ MCP Server 
+ Settings Reference 
+ Helpful Links
+ Repo Prompt 101 
+ Rate Limited Podcast 
+ Classic Edition
+ Classic Edition Repository 
+ (no longer supported)
+ Get Involved
+ Discord 
+ Repository 
+ © 2026 Repo Prompt. All rights reserved.
+ Privacy Policy • Terms & Conditions
+
+=== [about] https://repoprompt.com/docs/#s=overview (lang=en)
+Documentation – Repo Prompt Repo Prompt – Iterate on code with powerful AI 
+ Repo Prompt 
+ Home 
+ Features 
+ Testimonials 
+ Blog 
+ Docs 
+ Download Discord 
+ Copy All Docs 
+ Overview › 
+ Introduction 
+ Installation 
+ Agent Mode › 
+ Overview 
+ Workflow Commands 
+ Skills & Slash Commands 
+ Providers 
+ Sessions & Interface 
+ MCP Server › 
+ Overview 
+ Setup Guide 
+ Tools Reference 
+ App Settings Tool 
+ Transport Modes 
+ Settings & Presets 
+ Connection Management 
+ Workflow Commands 
+ Workflows › 
+ Context Over Convenience 
+ Discovery (Context Builder) 
+ Architectural Planning 
+ MCP Builder Workflow 
+ Orchestration 
+ Model Recommendations 
+ AI Providers › 
+ API Providers 
+ CLI Providers 
+ OpenRouter 
+ Custom Providers 
+ Code Reviews › 
+ Code Reviews & Git 
+ rp-cli › 
+ Command Line Guide 
+ App Settings from the CLI 
+ Reference › 
+ Settings Reference 
+ Keyboard Shortcuts 
+ IDE Mode (Classic Edition) › 
+ Overview 
+ Workflows 
+ Context Overview 
+ Interface Overview 
+ File Selection 
+ First Prompt 
+ Codemaps 
+ Token Management 
+ Presets & Prompts 
+ Changelog › 
+ CE Version 1 
+ Classic Version 2.1 
+ Classic Version 2.0 
+ Classic Version 1.6 
+ Classic Version 1.5 
+ Classic Version 1.4 
+ Classic Version 1.3 
+ Classic Version 1.2 
+ Classic Version 1.1 
+ Classic Version 1.0 
+ Documentation › Overview 
+ Overview 
+ An overview of what Repo Prompt is.
+ In this section
+ Introduction 
+ Installation 
+ Introduction 
+ Repo Prompt is an AI-powered context IDE. It gives you precise control over what a model sees — so you get the best responses from the most powerful reasoning models.
+ Talk to These Docs Open all documentation in an AI assistant for guided help
+ Open in ChatGPT Open in Claude Copy Docs 
+ Why Context Engineering Matters
+ Agents waste context before they start thinking. Their context windows fill with tool calls, duplicate file reads, and irrelevant code — leaving little room for actual reasoning. Repo Prompt solves this by structuring context upfront: the model reasons about the problem from the first token instead of spending its thinking budget on figuring out what to read next.
+ Typical Agent Context ~16% system prompts & tool definitions
+ ~38% wasted on duplicate reads & unrelated code
+ ~16% relevant code (finally)
+ ~14% actual reasoning
+ ~16% missing context the agent never found
+ Repo Prompt Context File tree for project orientation
+ Codemaps for API surface at a glance
+ Complete relevant file contents
+ Git diffs for change awareness
+ Task description — 100% of reasoning spent solving the problem
+ Three Ways to Work
+ Agent Mode Hands off context engineering to your coding agents. The same best practices from the old IDE Mode in the Classic Edition — codemaps, slicing, token budgets — managed by agents (Codex, Claude Code, Cursor, Gemini, OpenCode) on your behalf, with built-in workflows.
+ Built-in MCP Server Any MCP-compatible tool gets access to Repo Prompt's context tools. Claude Code, Cursor, Codex, Gemini CLI, OpenCode — install with one click.
+ IDE Mode (Classic Edition only) Craft precise prompts with full control over file selection, codemaps, and context.
+ How Context Builder Works 
+ Context Builder is a three-stage pipeline that gives your agents the right context, every time. Learn more → 
+ 1. Explore A discovery agent navigates your codebase, reading files and understanding relationships.
+ 2. Curate Relevant files are selected within a token budget, using codemaps and line slices for maximum density.
+ 3. Handoff A structured prompt with curated context is passed to an analysis model for planning, review, or deep Q&A.
+ Built-in W
+
+=== [pricing] https://repoprompt.com/ (lang=en)
+Repo Prompt – The Context IDE for AI Agents Repo Prompt – Iterate on code with powerful AI 
+ Repo Prompt 
+ Home 
+ Features 
+ Testimonials 
+ Blog 
+ Docs 
+ Download Discord 
+ Repo Prompt
+ Curate the right context, run deep analysis, and orchestrate coding agents from one native macOS app.
+ Download Join Discord 
+ Download Repo Prompt
+ Choose the edition that fits your workflow
+ Repo Prompt is now open source. Community Edition is the active home for new development, while Classic remains available for the original manual prompt-building workflow.
+ Active development Free / Open source 
+ Recommended
+ Community Edition
+ Built for modern coding agents. Curate dense, reviewable context, connect MCP clients, and coordinate agent work from a native macOS app.
+ Context Builder, CodeMaps, and reviewable handoffs 
+ MCP and CLI agent integrations 
+ Community-driven development on GitHub 
+ Download latest release View source 
+ Legacy No longer supported 
+ Original workflow
+ Classic
+ The original Repo Prompt experience for selecting files, assembling prompts, and copying them into your AI tool. Keep it for established manual workflows.
+ Manual IDE mode and copy-paste workflow 
+ Archived source available for reference 
+ No future updates or support 
+ Download Classic View archived source 
+ Built in the open. Report issues, contribute improvements, and help shape what Repo Prompt becomes next.
+ Join the Discord community 
+ Orchestration From prompt to verified delivery
+ Plan with a powerful reasoning model, then dispatch sub-agents across providers to implement, each scoped to its own files.
+ Prompt
+ Describe the task
+ Context Builder
+ Curates relevant code
+ Discovery agent 
+ Oracle
+ Drafts execution plan
+ Deep reasoning 
+ Orchestrator decomposes plan into tasks Each sub-agent gets scoped file boundaries 
+ Sequential Deep reasoning model 1. Implement auth service
+ 2. Add API validation
+ 3. Wire up middleware
+ Orchestrator steers between tasks 
+ Plan.md shared source of truth 
+ Parallel OpenCode Explore codebase 
+ Codex Backend logic 
+ Gemini Update configs 
+ Multi-wait : unblocks when first completes 
+ Orchestrator verifies adherence to plan then continues until complete 
+ AGENT MODE A Native Home for Your Coding Agents
+ Run CLI agents with full codebase context, token-efficient MCP tools, and built-in orchestration, all inside a beautiful Mac-native interface.
+ Codex CLI
+ App Server 
+ Claude Code
+ Headless CLI 
+ Gemini CLI
+ Via ACP 
+ OpenCode
+ Via ACP 
+ Launch from Your Personal Agent
+ OpenClaw and other personal agents can launch Repo Prompt's orchestrate workflow via CLI, planning, decomposing, and dispatching sub-agents to complete complex engineering work while you sleep.
+ Workflows
+ Context Builder Workflows
+ Included slash commands you can run from any MCP client
+ 01 Explore
+ Agent navigates codebase
+ 02 Curate
+ Select within token budget
+ Curated Context
+ auth.ts L5-89 
+ api.ts L22-58 
+ useAuth.ts L1-41 
+ Header.tsx L12-67 
+ Sidebar.tsx L1-34 
+ 03 Handoff
+ Structured prompt for analysis
+ /rp-orchestrate Orchestrate
+ Plan, decompose into tasks, and dispatch sub-agents across providers to complete complex work autonomously
+ /rp-review Code Reviews
+ Publishes git diffs alongside codebase context for reviews that understand what changed
+ /rp-refactor Refactor Code
+ Two-pass: analyze for opportunities, then plan implementation preserving behavior
+ /rp-investigate Investigate Issues
+ Systematic exploration with evidence gathering until root cause is found
+ Explore the docs 
+ Stop prompting models directly — orchestrate with Repo Prompt
+ This is from an older Repo Prompt but the basics are still the same.
+ Repo Bench 
+ Measure AI Coding Performance
+ Don't guess which model is best for your codebase. Repo Bench provides data-driven rankings measuring large context reasoning, file editing precision, and instruction adherence.
+ 100s Models Tested 
+ Community Driven Results 
+ Realtime Updates 
+ View Leaderboards 
+ MCP READY Works With Every Agent
+ 15+ token-efficient MCP tools, automated context curation, and multi-agent orchestration. Accessible from any MCP-compatible client.
+ Repo Prompt MCP Server • 15+ tools available • Standard protocol • Future compatible 
+ Claude Code
+ Context Builder & orchestration
+ Cursor
+ Enhanced editing
+ OpenCode
+ Multi-provider agents
+ Gemini CLI
+ Google AI integration
+ Automated Context Curation
+ Context Builder explores your codebase, selects the most relevant files within a token budget, and hands curated context to powerful analysis models.
+ Multi-Agent Orchestration
+ Launch parallel or sequential agent sessions, steer them mid-flight, and let an orchestrator verify the work.
+ Codemaps & Token Efficiency
+ Function signatures via tree-sitter let agents see 10x more files. Slices, codemaps, and full content: the right detail level for every file.
+ Oracle Collaboration
+ Your agent consults powerful reasoning models mid-session. Context Builder finds the answer using your full repo, no manual file selection needed.
+ What are people saying
+ See what developers are saying about RepoPrompt on X (Twitter)
+ mahlen 
+ @mahlenr · Follow 
+ @RepoPrompt is completely changing the way I code and think about workflows.
+Opus 4.5 in Plan mode using RP’s context discovery capabilities with Codex + the ability for it to discuss its implementation with 5.1-High and iterate feels like an insane level up. 
+ 12:43 AM · Dec 3, 2025 
+ 3 
+ Reply 
+ Copy link 
+ Read 1 reply 
+ David Paluy 
+ @dpaluy · Follow 
+ While at the @sfrubyconf , I spoke with many developers about @RepoPrompt and gave a lightning talk on how to use this tool to improve your agentic coding skills.
+I've been using RepoPrompt since GPT-1 Pro, and it's my daily coding tool.
+I do:
+1. Code prompt building
+2. MCP pair   Show more 
+ eric provencher 
+ @pvncher 
+ Thanks to all the new @RepoPrompt pro users for supporting an indie project!
+Black Friday isn’t over yet, so if you’re still on the fence it’s a great time to pick up the app, and join the rp community to raise the ceiling on what you can accomplish with coding agents. 
+ 5:05 AM · Dec 2, 2025 
+ 5 
+ Reply 
+ Copy link 
+ Read 2 replies 
+ Richard Burton 
+ @Ricburton · Follow 
+ Replying to @brian_lovin Have you had a play with @RepoPrompt 
+It’s genuinely mind blowing 
+ 8:25 AM · Nov 15, 2025 
+ 2 
+ Reply 
+ Copy link 
+ Read 1 reply 
+ Mason James 
+ @masonjames · Follow 
+ Eric really cooked with this update. 🙌
+The new Content Builder is a significant level-up on what was already a key part of my development workflow.
+If you haven't tried @RepoPrompt with Codex/CC you are missi
+
+=== [pricing] https://repoprompt.com/ko/pricing (lang=en)
+Page Not Found – Repo Prompt Repo Prompt – Iterate on code with powerful AI 
+ Repo Prompt 
+ Home 
+ Features 
+ Testimonials 
+ Blog 
+ Docs 
+ Download Discord 
+ Page not found
+ The page you’re looking for doesn’t exist. Return to the homepage .
+ Repo Prompt
+ Open-source context engineering and agent orchestration for macOS.
+ Download Discord X 
+ Documentation
+ Installation 
+ Building Context 
+ Workflows 
+ MCP Server 
+ Settings Reference 
+ Helpful Links
+ Repo Prompt 101 
+ Rate Limited Podcast 
+ Classic Edition
+ Classic Edition Repository 
+ (no longer supported)
+ Get Involved
+ Discord 
+ Repository 
+ © 2026 Repo Prompt. All rights reserved.
+ Privacy Policy • Terms & Conditions
+
+=== [pricing] https://repoprompt.com/plans (lang=en)
+Page Not Found – Repo Prompt Repo Prompt – Iterate on code with powerful AI 
+ Repo Prompt 
+ Home 
+ Features 
+ Testimonials 
+ Blog 
+ Docs 
+ Download Discord 
+ Page not found
+ The page you’re looking for doesn’t exist. Return to the homepage .
+ Repo Prompt
+ Open-source context engineering and agent orchestration for macOS.
+ Download Discord X 
+ Documentation
+ Installation 
+ Building Context 
+ Workflows 
+ MCP Server 
+ Settings Reference 
+ Helpful Links
+ Repo Prompt 101 
+ Rate Limited Podcast 
+ Classic Edition
+ Classic Edition Repository 
+ (no longer supported)
+ Get Involved
+ Discord 
+ Repository 
+ © 2026 Repo Prompt. All rights reserved.
+ Privacy Policy • Terms & Conditions
+
+=== [meta] https://repoprompt.com/bench
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음

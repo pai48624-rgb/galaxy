@@ -1,0 +1,104 @@
+{
+ "company": "Jina AI",
+ "one_liner_ko": "검색·RAG·에이전트용 다중모달·다국어·긴 컨텍스트 임베딩 모델과 API를 제공한다.",
+ "what_it_does_ko": "Jina Embeddings는 텍스트·이미지(일부 모델은 오디오·영상)를 고정 길이 벡터로 바꿔 의미 검색·유사도·클러스터링에 쓰게 해 준다. 최신 v5-text는 677M small과 239M nano 두 크기에 32K 컨텍스트, Matryoshka 차원, GGUF/MLX 양자화를 지원한다. v5-omni는 텍스트·이미지·오디오·영상을 하나의 임베딩 공간에 담는다. API는 토큰을 충전해 쓰는 방식이며 AWS·Azure·Google Cloud에서도 배포할 수 있다.",
+ "key_features": [
+  "다국어 텍스트 임베딩(v5-text small·nano)",
+  "텍스트·이미지·오디오·영상 통합 임베딩(v5-omni)",
+  "32K 컨텍스트",
+  "Matryoshka 차원 축소",
+  "GGUF/MLX 양자화로 엣지 배포",
+  "float·binary·base64 출력 형식",
+  "MongoDB·Qdrant·Pinecone·LangChain 등 연동"
+ ],
+ "use_cases_ko": [
+  "검색·RAG 시스템의 검색 품질 향상",
+  "의미 검색·유사도 매칭·클러스터링"
+ ],
+ "pricing": {
+  "free_tier": "있음 (무료 체험, 무료 API 키는 임베딩 500 RPM·2,000,000 TPM)",
+  "plans": [],
+  "pricing_url": "https://jina.ai/embeddings/"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "API"
+ ],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://jina.ai/embeddings/",
+   "quote": "Embedding API - Jina AI \n search reorder"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://jina.ai/embeddings/",
+   "quote": "Top-performing multimodal multilingual long-context embeddings for search, RAG and agent applications."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://jina.ai/embeddings/",
+   "quote": "a 677M small and 239M nano model — with task-specific LoRA adapters, Matryoshka dimensions, 32K context, and GGUF/MLX quantization for edge deployment"
+  },
+  {
+   "field": "key_features",
+   "url": "https://jina.ai/embeddings/",
+   "quote": "Text, image, audio, video — one shared embedding space, two sizes."
+  },
+  {
+   "field": "key_features",
+   "url": "https://jina.ai/embeddings/",
+   "quote": "Choose output format: float (default), binary (compact storage), or base64 (efficient transmission)."
+  },
+  {
+   "field": "key_features",
+   "url": "https://jina.ai/embeddings/",
+   "quote": "Our Embedding API is natively integrated with various renowned databases, vector stores, RAG, and LLMOps frameworks."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://docs.jina.ai/",
+   "quote": "Best for: semantic search, similarity matching, clustering, etc."
+  },
+  {
+   "field": "pricing",
+   "url": "https://jina.ai/embeddings/",
+   "quote": "Try our embedding models to improve your search and RAG systems. Start with a free trial!"
+  },
+  {
+   "field": "pricing",
+   "url": "https://jina.ai/embeddings/",
+   "quote": "The easiest way to access all of our products. Top-up tokens as you go."
+  },
+  {
+   "field": "pricing",
+   "url": "https://jina.ai/embeddings/",
+   "quote": "Embedding API https://api.jina.ai/v1/embeddings Convert text/images to fixed-length vectors block 100 RPM & 100,000 TPM 500 RPM & 2,000,000 TPM"
+  },
+  {
+   "field": "api",
+   "url": "https://docs.jina.ai/",
+   "quote": "Endpoint: https://api.jina.ai/v1/embeddings"
+  },
+  {
+   "field": "platforms",
+   "url": "https://jina.ai/embeddings/",
+   "quote": "Using AWS or Azure? You can deploy our models directly on your company's cloud platform and handle billing through the CSP account."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://jina.ai/embeddings/",
+   "quote": "hreflang: de, en-us, es, fr, it, ja, ko, ru, x-default, zh-cn, zh-tw"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "API는 토큰을 충전해 쓰는 유료 방식(Top-up tokens as you go)이고 무료는 체험 수준이며, 페이지에 오픈소스 라이선스 표기는 없음(open-weight 언급만 있음)",
+   "diff": "기존 분류 '오픈소스(무료, 가중치/코드 공개)'와 달리 공식 페이지의 주 제공 형태는 유료 종량 API",
+   "url": "https://jina.ai/embeddings/"
+  }
+ ],
+ "plan_change": []
+}

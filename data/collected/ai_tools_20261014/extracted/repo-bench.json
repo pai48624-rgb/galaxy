@@ -1,0 +1,48 @@
+{
+ "company": "Repo Prompt",
+ "one_liner_ko": "대규모 컨텍스트 추론, 파일 편집 정밀도, 지시 준수를 측정하는 Repo Prompt의 벤치마크.",
+ "what_it_does_ko": "Repo Bench는 Repo Prompt 사용자들이 제출한 모든 모델 실행 결과의 중앙값으로 모델 순위를 매기며, 15분마다 갱신된다. 대규모 코드베이스에서의 컨텍스트 추론, 상세 지시 준수, Go·Swift·TypeScript 등에서의 파일 편집 정밀도를 평가한다. 결과는 Repo Prompt 앱 안의 공식 벤치마크로 얻은 것이며 사용자가 직접 실행해 볼 수 있다. 다만 이 벤치마크가 모델의 코딩 실력을 반영하지는 않는다고 밝힌다.",
+ "key_features": [
+  "15분마다 갱신되는 모델 순위(중앙값 기준)",
+  "대규모 컨텍스트 추론 평가",
+  "지시 준수 평가",
+  "파일 편집 정밀도 평가(Go·Swift·TypeScript)",
+  "개별 실행 결과를 보는 Repo Bench Explorer",
+  "Repo Prompt 앱에서 직접 벤치마크 실행"
+ ],
+ "use_cases_ko": [
+  "내 코드베이스에 맞는 AI 모델 고르기",
+  "모델 제공사·연구소가 성능 비교"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Repo Prompt Community Edition 무료/오픈소스)",
+  "plans": [
+   {"name": "Community Edition", "price": 0, "currency": null, "period": null, "limits": "무료/오픈소스, macOS 앱", "page_lang": "en"}
+  ],
+  "pricing_url": "https://repoprompt.com/"
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": ["웹", "맥", "CLI"],
+ "korean_support": "불명",
+ "evidence": [
+  {"field": "company", "url": "https://repoprompt.com/bench", "quote": "Repo Bench – Repo Prompt"},
+  {"field": "one_liner_ko", "url": "https://repoprompt.com/bench", "quote": "Measuring large context reasoning, file editing precision, and instruction adherence."},
+  {"field": "what_it_does_ko", "url": "https://repoprompt.com/bench", "quote": "Rankings updated every 15 min • Median scores from all model runs submitted by Repo Prompt users"},
+  {"field": "what_it_does_ko", "url": "https://repoprompt.com/bench", "quote": "* This benchmark does not reflect the coding skills of a model."},
+  {"field": "what_it_does_ko", "url": "https://repoprompt.com/bench", "quote": "The above results were derived from running the official Repo Prompt benchmark within the app."},
+  {"field": "key_features", "url": "https://repoprompt.com/bench", "quote": "across different programming languages (Go, Swift, TypeScript)"},
+  {"field": "key_features", "url": "https://repoprompt.com/bench", "quote": "Large Context Reasoning"},
+  {"field": "key_features", "url": "https://repoprompt.com/bench", "quote": "Instruction Adherence"},
+  {"field": "key_features", "url": "https://repoprompt.com/bench", "quote": "Open Repo Bench Explorer"},
+  {"field": "key_features", "url": "https://repoprompt.com/bench", "quote": "Run the Benchmark Yourself"},
+  {"field": "use_cases_ko", "url": "https://repoprompt.com/", "quote": "Don't guess which model is best for your codebase."},
+  {"field": "use_cases_ko", "url": "https://repoprompt.com/bench", "quote": "If you're a lab or model provider and would like to get in touch"},
+  {"field": "pricing", "url": "https://repoprompt.com/", "quote": "Active development Free / Open source"},
+  {"field": "pricing", "url": "https://repoprompt.com/", "quote": "Repo Prompt is now open source. Community Edition is the active home for new development"},
+  {"field": "platforms", "url": "https://repoprompt.com/", "quote": "Curate the right context, run deep analysis, and orchestrate coding agents from one native macOS app."},
+  {"field": "platforms", "url": "https://repoprompt.com/", "quote": "MCP and CLI agent integrations"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

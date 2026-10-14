@@ -1,55 +1,183 @@
 {
  "company": "ElevenLabs",
- "one_liner_ko": "기업·크리에이터·개발자를 위한 AI 음성 생성 및 음성 에이전트 플랫폼.",
- "what_it_does_ko": "ElevenLabs는 텍스트 음성 변환, 음성 인식, 음성 복제, 대화형 에이전트, 생성형 오디오 등 AI 음성 인프라를 제공한다. 노코드 웹 앱 ElevenCreative에서 보이스오버·음악·더빙·스튜디오 프로젝트를 브라우저로 만들 수 있다. ElevenAgents로 전화·채팅·이메일·WhatsApp에서 동작하는 대화형 에이전트를 구성·배포·모니터링한다. ElevenAPI는 모든 기능을 REST API와 공식 Python·TypeScript SDK로 제공한다.",
+ "one_liner_ko": "음성 생성·음성 에이전트·오디오 API를 제공하는 AI 음성 인프라 플랫폼.",
+ "what_it_does_ko": "ElevenLabs는 텍스트 음성 변환, 음성 인식, 보이스 클로닝, 대화형 에이전트, 생성형 오디오를 제공하는 AI 음성 인프라다. 코딩 없이 쓰는 웹 앱 ElevenCreative에서 내레이션·음악·더빙·효과음을 만들 수 있다. ElevenAgents로 전화·채팅·이메일·WhatsApp에서 응대하는 음성/채팅 에이전트를 구성·배포·모니터링한다. 모든 기능은 ElevenAPI(REST, Python·TypeScript SDK)로도 제공되며, 사용량은 모든 제품이 공유하는 크레딧으로 차감된다.",
  "key_features": [
-  "90개 이상 언어의 표현력 있는 음성 합성(Text to Speech)",
-  "음성 인식(Speech to Text, Scribe 모델)",
-  "음성 복제(Instant/Professional Voice Cloning)와 1만 개 이상 음성 라이브러리",
-  "AI 음악 생성(Eleven Music)",
-  "효과음 생성(Sound Effects)",
-  "자동 더빙·Dubbing Studio",
-  "대화형 음성 에이전트(ElevenAgents) — 전화·채팅·이메일·WhatsApp",
-  "이미지·영상 생성(Veo, Wan, Kling, Seedance 등 모델 활용)"
+  "텍스트 음성 변환(90개 이상 언어)",
+  "음성 인식(Eleven Scribe)",
+  "보이스 클로닝·보이스 디자인, 1만 개 이상 음성 라이브러리",
+  "AI 음악 생성",
+  "효과음(SFX) 생성",
+  "더빙 스튜디오",
+  "대화형 음성·채팅 에이전트(ElevenAgents)",
+  "REST API와 Python·TypeScript SDK"
  ],
  "use_cases_ko": [
-  "크리에이터가 오디오북·팟캐스트·보이스오버 제작",
-  "기업이 고객 상담용 음성 에이전트 운영",
-  "개발자가 자체 앱에 음성 기능을 API로 탑재"
+  "오디오북·팟캐스트 내레이션 제작",
+  "광고·소셜 콘텐츠용 음성·음악 제작",
+  "고객 응대용 음성 에이전트 구축"
  ],
  "pricing": {
-  "free_tier": "있음 (월 10,000 크레딧, 상업 라이선스 없음)",
+  "free_tier": "있음 (월 1만 크레딧, 상업 라이선스 없음)",
   "plans": [
-   {"name": "Free", "price": 0, "currency": "USD", "period": "month", "limits": "월 10k 크레딧, Studio 프로젝트 3개"},
-   {"name": "Starter", "price": 6, "currency": "USD", "period": "month", "limits": "월 30k 크레딧, 상업 라이선스, 즉시 음성 복제"},
-   {"name": "Creator", "price": 22, "currency": "USD", "period": "month", "limits": "월 121k 크레딧, 전문 음성 복제(첫 달 $11)"},
-   {"name": "Pro", "price": 99, "currency": "USD", "period": "month", "limits": "월 600k 크레딧, API 44.1kHz PCM"},
-   {"name": "Scale", "price": 299, "currency": "USD", "period": "month", "limits": "월 1.8M 크레딧, 3석"},
-   {"name": "Business", "price": 990, "currency": "USD", "period": "month", "limits": "월 6M 크레딧, 10석"},
-   {"name": "Enterprise", "price": null, "currency": "USD", "period": null, "limits": "맞춤 가격"}
+   {
+    "name": "Free",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "월 10,000 크레딧",
+    "page_lang": "en"
+   },
+   {
+    "name": "Starter",
+    "price": 6,
+    "currency": "USD",
+    "period": "month",
+    "limits": "월 30,000 크레딧, 상업 라이선스·인스턴트 보이스 클로닝 (페이지 상단엔 첫 달 할인가 표시)",
+    "page_lang": "en"
+   },
+   {
+    "name": "Creator",
+    "price": 22,
+    "currency": "USD",
+    "period": "month",
+    "limits": "월 121,000 크레딧, 첫 달 $11, 프로페셔널 보이스 클로닝",
+    "page_lang": "en"
+   },
+   {
+    "name": "Pro",
+    "price": 99,
+    "currency": "USD",
+    "period": "month",
+    "limits": "월 600,000 크레딧, 192kbps 음질",
+    "page_lang": "en"
+   },
+   {
+    "name": "Scale",
+    "price": 299,
+    "currency": "USD",
+    "period": "month",
+    "limits": "월 1,800,000 크레딧, 3석",
+    "page_lang": "en"
+   },
+   {
+    "name": "Business",
+    "price": 990,
+    "currency": "USD",
+    "period": "month",
+    "limits": "월 6,000,000 크레딧, 10석",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": "USD",
+    "period": "month",
+    "limits": "맞춤 가격",
+    "page_lang": "en"
+   }
   ],
   "pricing_url": "https://elevenlabs.io/pricing"
  },
  "open_source": null,
  "api": "있음",
- "platforms": ["웹", "API"],
+ "platforms": [
+  "웹",
+  "API"
+ ],
  "korean_support": "한국어 입력·출력",
  "evidence": [
-  {"field": "company", "url": "https://elevenlabs.io/docs/overview/intro", "quote": "ElevenLabs provides AI voice infrastructure: text-to-speech, speech-to-text, voice cloning, conversational agents, and generative audio."},
-  {"field": "one_liner_ko", "url": "https://elevenlabs.io", "quote": "Free AI Voice Generator & Voice Agents Platform | ElevenLabs"},
-  {"field": "what_it_does_ko", "url": "https://elevenlabs.io/docs/overview/intro", "quote": "ElevenCreative is a no-code web application where creators, producers, and editors generate voiceovers, music, dubs, and studio projects directly in the browser."},
-  {"field": "what_it_does_ko", "url": "https://elevenlabs.io/docs/overview/intro", "quote": "ElevenAPI exposes every capability as a REST interface with official Python and TypeScript SDKs"},
-  {"field": "key_features", "url": "https://elevenlabs.io", "quote": "Create controllable, expressive speech layered across 90+ languages."},
-  {"field": "key_features", "url": "https://elevenlabs.io", "quote": "Clone your voice, design one from a prompt, or explore 10,000+ voices from the library."},
-  {"field": "key_features", "url": "https://elevenlabs.io", "quote": "Agents listen, read and interact just like humans would across phone, chat, email and WhatsApp."},
-  {"field": "key_features", "url": "https://elevenlabs.io", "quote": "Create or edit images and turn ideas into videos with leading models like Veo, Wan, Kling and Seedance."},
-  {"field": "use_cases_ko", "url": "https://elevenlabs.io", "quote": "Create podcasts, audiobooks and voiceovers in an editor built on all of ElevenLabs’ audio research."},
-  {"field": "use_cases_ko", "url": "https://elevenlabs.io", "quote": "Delivering real-time, multilingual customer support with voice agents"},
-  {"field": "pricing", "url": "https://elevenlabs.io/pricing", "quote": "Monthly price and included credits per plan: Free $0 (10,000 credits); Starter $6 (30,000 credits); Creator $22 (121,000 credits, $11 for the first month); Pro $99 (600,000 credits)"},
-  {"field": "pricing", "url": "https://elevenlabs.io/pricing", "quote": "Scale $299 (1,800,000 credits, 3 seats); Business $990 (6,000,000 credits, 10 seats); Enterprise is custom."},
-  {"field": "api", "url": "https://elevenlabs.io", "quote": "Or build anything with a powerful host of APIs"},
-  {"field": "platforms", "url": "https://elevenlabs.io/docs/overview/intro", "quote": "ElevenCreative is a no-code web application"},
-  {"field": "korean_support", "url": "https://elevenlabs.io", "quote": "Kazakh Kirghiz Korean Latvian"}
+  {
+   "field": "company",
+   "url": "https://elevenlabs.io/docs/overview/intro",
+   "quote": "ElevenLabs provides AI voice infrastructure: text-to-speech, speech-to-text, voice cloning, conversational agents, and generative audio."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://elevenlabs.io",
+   "quote": "Free AI Voice Generator & Voice Agents Platform | ElevenLabs"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://elevenlabs.io/docs/overview/intro",
+   "quote": "ElevenCreative is a no-code web application where creators, producers, and editors generate voiceovers, music, dubs, and studio projects directly in the browser."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://elevenlabs.io/docs/overview/intro",
+   "quote": "ElevenAPI exposes every capability as a REST interface with official Python and TypeScript SDKs"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://elevenlabs.io",
+   "quote": "Agents listen, read and interact just like humans would across phone, chat, email and WhatsApp."
+  },
+  {
+   "field": "key_features",
+   "url": "https://elevenlabs.io",
+   "quote": "Create controllable, expressive speech layered across 90+ languages."
+  },
+  {
+   "field": "key_features",
+   "url": "https://elevenlabs.io",
+   "quote": "Clone your voice, design one from a prompt, or explore 10,000+ voices from the library."
+  },
+  {
+   "field": "key_features",
+   "url": "https://elevenlabs.io",
+   "quote": "Generate studio-quality tracks instantly, any genre, any style, vocals or instrumental."
+  },
+  {
+   "field": "key_features",
+   "url": "https://elevenlabs.io",
+   "quote": "Create custom sound effects, soundscapes and ambient audio or search the SFX library."
+  },
+  {
+   "field": "key_features",
+   "url": "https://elevenlabs.io",
+   "quote": "The most accurate ASR model . Low cost and supporting speaker diarization and character level timestamps."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://elevenlabs.io",
+   "quote": "Expressive voices that bring audiobooks and podcasts to life."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://elevenlabs.io",
+   "quote": "Persuasive voices that drive action and brand recall."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://elevenlabs.io",
+   "quote": "Delivering real-time, multilingual customer support with voice agents"
+  },
+  {
+   "field": "pricing",
+   "url": "https://elevenlabs.io/pricing",
+   "quote": "Monthly price and included credits per plan: Free $0 (10,000 credits); Starter $6 (30,000 credits); Creator $22 (121,000 credits, $11 for the first month); Pro $99 (600,000 credits); Scale $299"
+  },
+  {
+   "field": "pricing",
+   "url": "https://elevenlabs.io/pricing",
+   "quote": "Annual billing works out to two months free — you pay for 10 months (annual price = monthly price × 10)."
+  },
+  {
+   "field": "api",
+   "url": "https://elevenlabs.io/docs/overview/intro",
+   "quote": "ElevenAPI exposes every capability as a REST interface with official Python and TypeScript SDKs"
+  },
+  {
+   "field": "platforms",
+   "url": "https://elevenlabs.io/docs/overview/intro",
+   "quote": "ElevenCreative is a no-code web application"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://elevenlabs.io",
+   "quote": "Kazakh Kirghiz Korean Latvian Lingala"
+  }
  ],
- "mismatch": []
+ "mismatch": [],
+ "plan_change": []
 }

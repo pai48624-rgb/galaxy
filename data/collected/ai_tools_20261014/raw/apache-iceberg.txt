@@ -1,0 +1,870 @@
+=== [home] https://iceberg.apache.org (lang=en)
+Apache Iceberg - Apache Iceberg™ 
+ Apache Iceberg™ 
+ Apache Iceberg™ 
+ Initializing search
+ Home
+ Quickstart
+ Docs
+ Releases
+ Project
+ Community
+ Blog
+ Specification
+ Apache Iceberg™
+ The open table format for analytic datasets.
+ community 
+ github 
+ youtube 
+ slack 
+ What is Apache Iceberg™?
+ Iceberg is a high-performance format for huge analytic tables. Iceberg
+ brings the reliability and simplicity of SQL tables to big data, while
+ making it possible for engines like Spark, Trino, Flink, Presto, Hive
+ and Impala to safely work with the same tables, at the same time.
+ Learn More 
+ Expressive SQL
+ Iceberg supports flexible SQL commands to merge new data, update
+ existing rows, and perform targeted deletes. Iceberg can eagerly
+ rewrite data files for read performance, or it can use delete deltas
+ for faster updates.
+ Learn More 
+ ">MERGE INTO prod.nyc.taxis pt
+ USING (SELECT * FROM staging.nyc.taxis) st
+ ON pt.id = st.id
+ WHEN NOT MATCHED THEN INSERT *;
+ Done! 
+ "> 
+ Full Schema Evolution
+ Schema evolution just works. Adding a column won't bring back
+ "zombie" data. Columns can be renamed and reordered. Best of all,
+ schema changes never require rewriting your table.
+ Learn More 
+ ">ALTER TABLE taxis
+ ALTER COLUMN trip_distance
+ TYPE double;
+ Done! 
+ ">ALTER TABLE taxis
+ ALTER COLUMN trip_distance
+ AFTER fare;
+ Done! 
+ ">ALTER TABLE taxis
+ RENAME COLUMN trip_distance
+ TO distance;
+ Done! 
+ Hidden Partitioning
+ Iceberg handles the tedious and error-prone task of producing
+ partition values for rows in a table and skips unnecessary
+ partitions and files automatically. No extra filters are needed for
+ fast queries, and table layout can be updated as data or queries
+ change.
+ Learn More 
+ Time Travel and Rollback
+ Time-travel enables reproducible queries that use exactly the same
+ table snapshot, or lets users easily examine changes. Version
+ rollback allows users to quickly correct problems by resetting
+ tables to a good state.
+ Learn More 
+ ">SELECT count(*) FROM nyc.taxis
+ 2,853,020 
+ ">SELECT count(*) FROM nyc.taxis FOR VERSION AS OF 2188465307835585443
+ 2,798,371 
+ ">SELECT count(*) FROM nyc.taxis FOR TIMESTAMP AS OF TIMESTAMP '2022-01-01 00:00:00.000000 Z'
+ 2,798,371 
+ Data Compaction
+ Data compaction is supported out-of-the-box and you can choose from
+ different rewrite strategies such as bin-packing or sorting to
+ optimize file layout and size.
+ ">CALL system.rewrite_data_files("nyc.taxis");
+ Apache Iceberg™
+ Home
+ Quickstart
+ Quickstart
+ Spark
+ Flink
+ Hive
+ Docs
+ Docs
+ Java
+ Java
+ Latest (1.12.0)
+ Latest (1.12.0)
+ Introduction
+ Concepts
+ Concepts
+ Tables
+ Tables
+ Branching and Tagging
+ Configuration
+ Encryption
+ Evolution
+ Maintenance
+ Metrics Reporting
+ Partitioning
+ Performance
+ Reliability
+ Schemas
+ Views
+ Views
+ Configuration
+ Catalogs
+ Catalogs
+ REST Catalog Protocol
+ API
+ API
+ Quickstart
+ API
+ File I/O
+ Javadoc
+ Integrations
+ Integrations
+ Apache Spark
+ Apache Spark
+ Getting Started
+ Configuration
+ DDL
+ Procedures
+ Queries
+ Structured Streaming
+ Writes
+ Apache Flink
+ Apache Flink
+ Getting Started
+ Flink Connector
+ Flink DDL
+ Flink Queries
+ Flink Writes
+ Flink TableMaintenance
+ Flink Configuration
+ Kafka Connect
+ Apache Hive
+ Migration
+ Migration
+ Overview
+ Hive Migration
+ Delta Lake Migration
+ Catalogs
+ Catalogs
+ Catalog properties
+ REST Compatible Catalog
+ AWS Glue
+ AWS DynamoDB
+ HadoopCatalog
+ HiveCatalog
+ JDBC
+ Java Custom Catalog
+ Nessie
+ Storage
+ Storage
+ AWS S3
+ Dell ECS
+ Nightly
+ Nightly
+ Introduction
+ Concepts
+ Concepts
+ Tables
+ Tables
+ Branching and Tagging
+ Configuration
+ Encryption
+ Evolution
+ Maintenance
+ Metrics Reporting
+ Partitioning
+ Performance
+ Reliability
+ Schemas
+ Views
+ Views
+ Configuration
+ Catalogs
+ Catalogs
+ REST Catalog Protocol
+ API
+ API
+ Quickstart
+ API
+ File I/O
+ Javadoc
+ Integrations
+ Integrations
+ Apache Spark
+ Apache Spark
+ Getting Started
+ Configuration
+ DDL
+ Procedures
+ Queries
+ Structured Streaming
+ Writes
+ Apache Flink
+ Apache Flink
+ Getting Started
+ Flink Connector
+ Flink DDL
+ Flink Queries
+ Flink Writes
+ Flink TableMaintenance
+ Flink Configuration
+ Kafka Connect
+ Apache Hive
+ Migration
+ Migration
+ Overview
+ Hive Migration
+ Delta Lake Migration
+ Catalogs
+ Catalogs
+ Catalog properties
+ REST Compatible Catalog
+ AWS Glue
+ AWS DynamoDB
+ HadoopCatalog
+ HiveCatalog
+ JDBC
+ Java Custom Catalog
+ Nessie
+ Storage
+ Storage
+ AWS S3
+ Dell ECS
+ Previous
+ Previous
+ 1.11.0
+ 1.11.0
+ Introduction
+ Concepts
+ Concepts
+ Tables
+ Tables
+ Branching and Tagging
+ Configuration
+ Encryption
+ Evolution
+ Maintenance
+ Metrics Reporting
+ Partitioning
+ Performance
+ Reliability
+ Schemas
+ Views
+ Views
+ Configuration
+ API
+ API
+ Quickstart
+ API
+ File I/O
+ Javadoc
+ Integrations
+ Integrations
+ Apache Spark
+ Apache Spark
+ Getting Started
+ Configuration
+ DDL
+ Procedures
+ Queries
+ Structured Streaming
+ Writes
+ Apache Flink
+ Apache Flink
+ Getting Started
+ Flink Connector
+ Flink DDL
+ Flink Queries
+ Flink Writes
+ Flink TableMaintenance
+ Flink Configuration
+ Kafka Connect
+ Apache Hive
+ Migration
+ Migration
+ Overview
+ Hive Migration
+ Delta Lake Migration
+ Catalogs
+ Catalogs
+ Catalog properties
+ AWS Glue
+ AWS DynamoDB
+ HadoopCatalog
+ HiveCatalog
+ JDBC
+ Java Custom Catalog
+ Nessie
+ Storage
+ Storage
+ AWS S3
+ Dell ECS
+ 1.10.2
+ 1.10.2
+ Introduction
+ Concepts
+ Concepts
+ Tables
+ Tables
+ Branching and Tagging
+ Configuration
+ Evolution
+ Maintenance
+ Metrics Reporting
+ Partitioning
+ Performance
+ Reliability
+ Schemas
+ Views
+ Views
+ Configuration
+ API
+ API
+ Quickstart
+ API
+ Javadoc
+ Integrations
+ Integrations
+ Apache Spark
+ Apache Spark
+ Getting Started
+ Configuration
+ DDL
+ Procedures
+ Queries
+ Structured Streaming
+ Writes
+ Apache Flink
+ Apache Flink
+ Flink Getting Started
+ Flink Connector
+ Flink DDL
+ Flink Queries
+ Flink Writes
+ Flink TableMaintenance
+ Flink Configuration
+ Kafka Connect
+ Apache Hive
+ Third-party
+ Third-party
+ Apache Amoro
+ Amazon Athena
+ Amazon Data Firehose
+ Amazon EMR
+ Amazon Redshift
+ Apache Doris
+ Apache Druid
+ BladePipe
+ ClickHouse
+ Daft
+ Databend
+ Dremio
+ DuckDB
+ Estuary
+ Firebolt
+ Google BigQuery
+ Impala
+ Memiiso Debezium
+ OLake
+ Presto
+ Redpanda
+ RisingWave
+ Snowflake
+ Starrocks
+ Tinybird
+ Trino
+ Catalogs
+ Catalogs
+ AWS Glue
+ AWS DynamoDB
+ Java Custom Catalog
+ JDBC
+ Nessie
+ Storage
+ Storage
+ AWS S3
+ Dell ECS
+ 1.10.1
+ 1.10.1
+ Introduction
+ Concepts
+ Concepts
+ Tables
+ Tables
+ Branching and Tagging
+ Configuration
+ Evolution
+ Maintenance
+ Metrics Reporting
+ Partitioning
+ Performance
+ Reliability
+ Schemas
+ Views
+ Views
+ Configuration
+ API
+ API
+ Quickstart
+ API
+ Javadoc
+ Integrations
+ Integrations
+ Apache Spark
+ Apache Spark
+ Getting Started
+ Configuration
+ DDL
+ Procedures
+ Queries
+ Structured Streaming
+ Writes
+ Apache Flink
+ Apache Flink
+ Flink Getting Started
+ Flink Connector
+ Flink DDL
+ Flink Queries
+ Flink Writes
+ Flink TableMaintenance
+ Flink Configuration
+ Kafka Connect
+ Apache Hive
+ Third-party
+ Third-party
+ Apache Amoro
+ Amazon Athena
+ Amazon Data Firehose
+ Amazon EMR
+ Amazon Redshift
+ Apache Doris
+ Apache Druid
+ BladePipe
+ ClickHouse
+ Daft
+ Databend
+ Dremio
+ DuckDB
+ Estuary
+ Firebolt
+ Google BigQuery
+ Impala
+ Memiiso Debezium
+ OLake
+ Presto
+ Redpanda
+ RisingWave
+ Snowflake
+ Starrocks
+ Tinybird
+ Trino
+ Catalogs
+ Catalogs
+ AWS Glue
+ AWS DynamoDB
+ Java Custom Catalog
+ JDBC
+ Nessie
+ Storage
+ Storage
+ AWS S3
+ Dell ECS
+ 1.10.0
+ 1.10.0
+ Introduction
+ Concepts
+ Concepts
+ Tables
+ Tables
+ Branching and Tagging
+ Configuration
+ Evolution
+ Maintenance
+ Metrics Reporting
+ Partitioning
+ Performance
+ Reliability
+ Schemas
+ Views
+ Views
+ Configuration
+ API
+ AP
+
+=== [about] https://iceberg.apache.org/docs/1.4.0/ (lang=en)
+Introduction - Apache Iceberg™ 
+ Skip to content
+ Apache Iceberg™ 
+ Apache Iceberg™ 
+ Initializing search
+ Home
+ Quickstart
+ Docs
+ Releases
+ Project
+ Community
+ Blog
+ Specification
+ Apache Iceberg™
+ Home
+ Quickstart
+ Quickstart
+ Spark
+ Flink
+ Hive
+ Docs
+ Docs
+ Java
+ Java
+ Latest (1.12.0)
+ Latest (1.12.0)
+ Introduction
+ Concepts
+ Concepts
+ Tables
+ Tables
+ Branching and Tagging
+ Configuration
+ Encryption
+ Evolution
+ Maintenance
+ Metrics Reporting
+ Partitioning
+ Performance
+ Reliability
+ Schemas
+ Views
+ Views
+ Configuration
+ Catalogs
+ Catalogs
+ REST Catalog Protocol
+ API
+ API
+ Quickstart
+ API
+ File I/O
+ Javadoc
+ Integrations
+ Integrations
+ Apache Spark
+ Apache Spark
+ Getting Started
+ Configuration
+ DDL
+ Procedures
+ Queries
+ Structured Streaming
+ Writes
+ Apache Flink
+ Apache Flink
+ Getting Started
+ Flink Connector
+ Flink DDL
+ Flink Queries
+ Flink Writes
+ Flink TableMaintenance
+ Flink Configuration
+ Kafka Connect
+ Apache Hive
+ Migration
+ Migration
+ Overview
+ Hive Migration
+ Delta Lake Migration
+ Catalogs
+ Catalogs
+ Catalog properties
+ REST Compatible Catalog
+ AWS Glue
+ AWS DynamoDB
+ HadoopCatalog
+ HiveCatalog
+ JDBC
+ Java Custom Catalog
+ Nessie
+ Storage
+ Storage
+ AWS S3
+ Dell ECS
+ Nightly
+ Nightly
+ Introduction
+ Concepts
+ Concepts
+ Tables
+ Tables
+ Branching and Tagging
+ Configuration
+ Encryption
+ Evolution
+ Maintenance
+ Metrics Reporting
+ Partitioning
+ Performance
+ Reliability
+ Schemas
+ Views
+ Views
+ Configuration
+ Catalogs
+ Catalogs
+ REST Catalog Protocol
+ API
+ API
+ Quickstart
+ API
+ File I/O
+ Javadoc
+ Integrations
+ Integrations
+ Apache Spark
+ Apache Spark
+ Getting Started
+ Configuration
+ DDL
+ Procedures
+ Queries
+ Structured Streaming
+ Writes
+ Apache Flink
+ Apache Flink
+ Getting Started
+ Flink Connector
+ Flink DDL
+ Flink Queries
+ Flink Writes
+ Flink TableMaintenance
+ Flink Configuration
+ Kafka Connect
+ Apache Hive
+ Migration
+ Migration
+ Overview
+ Hive Migration
+ Delta Lake Migration
+ Catalogs
+ Catalogs
+ Catalog properties
+ REST Compatible Catalog
+ AWS Glue
+ AWS DynamoDB
+ HadoopCatalog
+ HiveCatalog
+ JDBC
+ Java Custom Catalog
+ Nessie
+ Storage
+ Storage
+ AWS S3
+ Dell ECS
+ Previous
+ Previous
+ 1.11.0
+ 1.11.0
+ Introduction
+ Concepts
+ Concepts
+ Tables
+ Tables
+ Branching and Tagging
+ Configuration
+ Encryption
+ Evolution
+ Maintenance
+ Metrics Reporting
+ Partitioning
+ Performance
+ Reliability
+ Schemas
+ Views
+ Views
+ Configuration
+ API
+ API
+ Quickstart
+ API
+ File I/O
+ Javadoc
+ Integrations
+ Integrations
+ Apache Spark
+ Apache Spark
+ Getting Started
+ Configuration
+ DDL
+ Procedures
+ Queries
+ Structured Streaming
+ Writes
+ Apache Flink
+ Apache Flink
+ Getting Started
+ Flink Connector
+ Flink DDL
+ Flink Queries
+ Flink Writes
+ Flink TableMaintenance
+ Flink Configuration
+ Kafka Connect
+ Apache Hive
+ Migration
+ Migration
+ Overview
+ Hive Migration
+ Delta Lake Migration
+ Catalogs
+ Catalogs
+ Catalog properties
+ AWS Glue
+ AWS DynamoDB
+ HadoopCatalog
+ HiveCatalog
+ JDBC
+ Java Custom Catalog
+ Nessie
+ Storage
+ Storage
+ AWS S3
+ Dell ECS
+ 1.10.2
+ 1.10.2
+ Introduction
+ Concepts
+ Concepts
+ Tables
+ Tables
+ Branching and Tagging
+ Configuration
+ Evolution
+ Maintenance
+ Metrics Reporting
+ Partitioning
+ Performance
+ Reliability
+ Schemas
+ Views
+ Views
+ Configuration
+ API
+ API
+ Quickstart
+ API
+ Javadoc
+ Integrations
+ Integrations
+ Apache Spark
+ Apache Spark
+ Getting Started
+ Configuration
+ DDL
+ Procedures
+ Queries
+ Structured Streaming
+ Writes
+ Apache Flink
+ Apache Flink
+ Flink Getting Started
+ Flink Connector
+ Flink DDL
+ Flink Queries
+ Flink Writes
+ Flink TableMaintenance
+ Flink Configuration
+ Kafka Connect
+ Apache Hive
+ Third-party
+ Third-party
+ Apache Amoro
+ Amazon Athena
+ Amazo
+
+=== [meta] https://iceberg.apache.org
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/apache/iceberg
+<!--
+  - Licensed to the Apache Software Foundation (ASF) under one
+  - or more contributor license agreements.  See the NOTICE file
+  - distributed with this work for additional information
+  - regarding copyright ownership.  The ASF licenses this file
+  - to you under the Apache License, Version 2.0 (the
+  - "License"); you may not use this file except in compliance
+  - with the License.  You may obtain a copy of the License at
+  -
+  -   http://www.apache.org/licenses/LICENSE-2.0
+  -
+  - Unless required by applicable law or agreed to in writing,
+  - software distributed under the License is distributed on an
+  - "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  - KIND, either express or implied.  See the License for the
+  - specific language governing permissions and limitations
+  - under the License.
+  -->
+
+![Iceberg](https://iceberg.apache.org/assets/images/Iceberg-logo.svg)
+
+[![](https://github.com/apache/iceberg/actions/workflows/java-ci.yml/badge.svg)](https://github.com/apache/iceberg/actions/workflows/java-ci.yml)
+[![Slack](https://img.shields.io/badge/chat-on%20Slack-brightgreen.svg)](https://apache-iceberg.slack.com/)
+
+Iceberg is a high-performance format for huge analytic tables. Iceberg brings the reliability and simplicity of SQL tables to big data, while making it possible for engines like Spark, Trino, Flink, Presto, Hive and Impala to safely work with the same tables, at the same time.
+
+Background and documentation is available at <https://iceberg.apache.org>
+
+
+## Status
+
+Iceberg is under active development at the Apache Software Foundation.
+
+The [Iceberg format specification][iceberg-spec] is stable and new features are added with each version.
+
+The core Java library is located in this repository and is the reference implementation for other libraries.
+
+[Documentation][iceberg-docs] is available for all libraries and integrations.
+
+[iceberg-docs]: https://iceberg.apache.org/docs/latest/
+[iceberg-spec]: https://iceberg.apache.org/spec/
+
+## Collaboration
+
+Iceberg tracks issues in GitHub and prefers to receive contributions as pull requests.
+
+Community discussions happen primarily on the [dev mailing list][dev-list] or on specific issues.
+
+[dev-list]: mailto:dev@iceberg.apache.org
+
+
+### Building
+
+Iceberg is built using Gradle with Java 17 or 21.
+
+* To invoke a build and run tests: `./gradlew build`
+* To skip tests: `./gradlew build -x test -x integrationTest`
+* To fix code style for default versions: `./gradlew spotlessApply`
+* To fix code style for all versions of Spark/Hive/Flink:`./gradlew spotlessApply -DallModules`
+
+Iceberg table support is organized in library modules:
+
+* `iceberg-common` contains utility classes used in other modules
+* `iceberg-api` contains the public Iceberg API
+* `iceberg-core` contains implementations of the Iceberg API and support for Avro data files, **this is what processing engines should depend on**
+* `iceberg-parquet` is an optional module for working with tables backed by Parquet files
+* `iceberg-arrow` is an optional module for reading Parquet into Arrow memory
+* `iceberg-orc` is an optional module for working with tables backed by ORC files
+* `iceberg-hive-metastore` is an implementation of Iceberg tables backed by the Hive metastore Thrift client
+* `iceberg-data` is an optional module for working with tables directly from JVM applications
+
+Iceberg also has modules for adding Iceberg support to processing engines:
+
+* `iceberg-spark` is an implementation of Spark's Datasource V2 API for Iceberg with submodules for each Spark version (use [runtime jars](https://iceberg.apache.org/multi-engine-support/#runtime-jar) for a shaded version to avoid dependency conflicts)
+* `iceberg-flink` contains classes for integrating with Apache Flink (use [iceberg-flink-runtime](https://iceberg.apache.org/multi-engine-support/#runtime-jar) for a shaded version)
+* `iceberg-mr` contains an InputFormat and other classes for integrating with Apache Hive
+
+---
+**NOTE**
+
+The tests require Docker to execute. On macOS (with Docker Desktop), you might need to create a symbolic name to the docker socket in order to be detected by the tests:
+
+```
+sudo ln -s $HOME/.docker/run/docker.sock /var/run/

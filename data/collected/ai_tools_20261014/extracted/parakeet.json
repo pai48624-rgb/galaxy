@@ -1,0 +1,82 @@
+{
+ "company": "NVIDIA",
+ "one_liner_ko": "LLM·멀티모달·음성 AI 모델을 만들고 맞춤화·배포하는 NVIDIA NeMo 프레임워크(수집 페이지에 Parakeet 이름은 없음).",
+ "what_it_does_ko": "수집된 페이지는 Parakeet 개별 페이지가 아니라 NVIDIA NeMo Framework 개요다. NeMo는 연구자와 개발자를 위한 확장형 클라우드 네이티브 생성형 AI 프레임워크로, 음성 인식(ASR)·화자 인식·화자 분리·음성 합성(TTS) 모델의 학습과 맞춤화를 지원한다. 최신 사전 학습 체크포인트와 음성 데이터 처리·분석 도구를 제공하며, 학습한 모델은 NVIDIA Riva로 배포할 수 있다. Python이 주 인터페이스이고 PyTorch 위에 만들어졌다.",
+ "key_features": [
+  "ASR·음성 분류·화자 인식·화자 분리·TTS 모델 학습과 맞춤화",
+  "최신 ASR·TTS 사전 학습 체크포인트",
+  "NeMo Forced Aligner(토큰·단어·구간 타임스탬프)",
+  "Speech Data Processor·Speech Data Explorer",
+  "ASR 모델 비교 도구·ASR 평가기",
+  "NVIDIA Riva로 배포"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": null,
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "Apache 2.0 (NeMo GitHub 저장소; 컨테이너는 NVIDIA AI PRODUCT AGREEMENT)",
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://docs.nvidia.com/nemo-framework/user-guide/latest/overview.html",
+   "quote": "NVIDIA NeMo Framework User Guide"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://docs.nvidia.com/nemo-framework/user-guide/latest/overview.html",
+   "quote": "NVIDIA NeMo Framework is a scalable and cloud-native generative AI framework built for researchers and developers working on Large Language Models, Multimodal, and Speech AI"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.nvidia.com/nemo-framework/user-guide/latest/overview.html",
+   "quote": "NeMo Framework contains everything needed to train and customize speech models ( ASR , Speech Classification , Speaker Recognition , Speaker Diarization , and TTS ) in a reproducible manner."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.nvidia.com/nemo-framework/user-guide/latest/overview.html",
+   "quote": "Pytorch: NeMo Framework is built on top of PyTorch"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.nvidia.com/nemo-framework/user-guide/latest/overview.html",
+   "quote": "NeMo Framework provides state-of-the-art recipes and pre-trained checkpoints of several ASR and TTS models"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.nvidia.com/nemo-framework/user-guide/latest/overview.html",
+   "quote": "NeMo Forced Aligner (NFA) for generating token-, word- and segment-level timestamps"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.nvidia.com/nemo-framework/user-guide/latest/overview.html",
+   "quote": "Speech Data Processor (SDP) , a toolkit for simplifying speech data processing."
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.nvidia.com/nemo-framework/user-guide/latest/overview.html",
+   "quote": "Comparison Tool for ASR Models to compare predictions of different ASR models"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.nvidia.com/nemo-framework/user-guide/latest/overview.html",
+   "quote": "NeMo models that have been trained or customized using the NeMo Framework can be optimized and deployed with NVIDIA Riva ."
+  },
+  {
+   "field": "open_source",
+   "url": "https://docs.nvidia.com/nemo-framework/user-guide/latest/overview.html",
+   "quote": "NeMo Github repo is licensed under the Apache 2.0 license"
+  },
+  {
+   "field": "open_source",
+   "url": "https://docs.nvidia.com/nemo-framework/user-guide/latest/overview.html",
+   "quote": "NeMo Framework is licensed under the NVIDIA AI PRODUCT AGREEMENT ."
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

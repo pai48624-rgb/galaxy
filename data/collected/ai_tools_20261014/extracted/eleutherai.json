@@ -1,0 +1,95 @@
+{
+ "company": "EleutherAI",
+ "one_liner_ko": "오픈 모델·데이터셋·도구를 공개하고 모델의 학습·평가·안전을 연구하는 비영리 AI 연구소.",
+ "what_it_does_ko": "EleutherAI는 비영리 AI 연구소로, 오픈 학습 데이터(The Pile, Common Pile), 학습 프레임워크 GPT-NeoX, 평가 도구 LM Evaluation Harness, 체크포인트까지 공개한 Pythia 모델군을 만든다. 학습 과정에서 모델 내부가 어떻게 발전하는지 연구하고, 공개 가중치 모델에서도 유지되는 안전 기법(Deep Ignorance 등)을 개발한다. 공개 Discord 서버로 연구를 진행하며 SOAR 멘토링 프로그램, EvalEval Coalition 등을 운영한다.",
+ "key_features": [
+  "공개 학습 데이터셋 The Pile·Common Pile",
+  "학습 프레임워크 GPT-NeoX",
+  "오픈 모델 평가 표준 도구 LM Evaluation Harness",
+  "학습 중간 체크포인트와 데이터 순서를 공개한 Pythia 모델군",
+  "사전학습 데이터 필터링으로 미세조정에 강한 안전장치를 만드는 Deep Ignorance",
+  "데이터 기여도 분석 오픈소스 라이브러리 Bergson"
+ ],
+ "use_cases_ko": [
+  "오픈 언어 모델 성능 평가",
+  "대형 연구소 자원이 없는 연구자의 최첨단 연구"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "오픈 라이선스(구체 라이선스 이름은 페이지에 없음)",
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://eleuther.ai/about/",
+   "quote": "EleutherAI is a non-profit AI research lab."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://eleuther.ai/about/",
+   "quote": "We train and release open models, datasets, and tools, and we study how models learn, how to measure them, and how to make open-weight systems safe."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://eleuther.ai/",
+   "quote": "Our datasets include the Pile and the Common Pile. Our training framework is GPT-NeoX and our evaluation framework is the LM Evaluation Harness."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://eleuther.ai/about/",
+   "quote": "EleutherAI operates primarily through our public Discord server"
+  },
+  {
+   "field": "key_features",
+   "url": "https://eleuther.ai/",
+   "quote": "The Pile · The Common Pile"
+  },
+  {
+   "field": "key_features",
+   "url": "https://eleuther.ai/",
+   "quote": "GPT-NeoX · lm-evaluation-harness"
+  },
+  {
+   "field": "key_features",
+   "url": "https://eleuther.ai/",
+   "quote": "the standard tool for evaluating open models"
+  },
+  {
+   "field": "key_features",
+   "url": "https://eleuther.ai/",
+   "quote": "Model suites such as Pythia are released with their training data, code, and intermediate checkpoints."
+  },
+  {
+   "field": "key_features",
+   "url": "https://eleuther.ai/",
+   "quote": "It filters hazardous material out of pretraining data so that the model never learns it"
+  },
+  {
+   "field": "key_features",
+   "url": "https://eleuther.ai/",
+   "quote": "Bergson: An Open Source Library for Data Attribution"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://eleuther.ai/",
+   "quote": "We maintain the Language Model Evaluation Harness, which is the framework behind the Open LLM Leaderboard"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://eleuther.ai/",
+   "quote": "help researchers without frontier-lab resources do frontier work"
+  },
+  {
+   "field": "open_source",
+   "url": "https://eleuther.ai/",
+   "quote": "All of it is openly licensed and in use across the research community."
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

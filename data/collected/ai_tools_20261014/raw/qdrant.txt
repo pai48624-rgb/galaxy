@@ -1,0 +1,560 @@
+=== [home] https://qdrant.tech (lang=en)
+Qdrant - Vector Search Engine Vector Space Stream: a research-first broadcast for engineers. Eight talks on compression, edge, hybrid search, and more. Sept 17. Tune in 
+ Products 
+ Qdrant Vector Search Engine 
+ Qdrant Cloud 
+ Qdrant Hybrid Cloud 
+ Qdrant Enterprise Solutions 
+ Qdrant Cloud Inference 
+ Qdrant Edge (Beta) 
+ Qdrant Serverless (Coming soon) 
+ Solutions Use Cases 
+ RAG 
+ Recommendation Systems 
+ Advanced Search 
+ Data Analysis & Anomaly Detection 
+ AI Agents 
+ Industries
+ E-commerce 
+ Legal Tech 
+ Hospitality & Travel 
+ HR Tech 
+ Healthcare Tech 
+ Developers 
+ Documentation 
+ Community 
+ GitHub 
+ Roadmap 
+ Change Log 
+ Certification 
+ Security 
+ Resources 
+ Benchmarks 
+ Blog 
+ Technical Articles 
+ Events 
+ Demos 
+ Startup Program 
+ Bug Bounty Program 
+ Company 
+ About us 
+ Customers 
+ Partners 
+ Careers 
+ Contact us 
+ Pricing 
+ Log in 
+ Start Free 
+ Products
+Qdrant Vector Search Engine
+Qdrant Cloud
+Qdrant Hybrid Cloud
+Qdrant Enterprise Solutions
+Qdrant Cloud Inference
+Qdrant Edge (Beta)
+Qdrant Serverless (Coming soon)
+ Solutions
+ Use Cases 
+RAG
+Recommendation Systems
+Advanced Search
+Data Analysis & Anomaly Detection
+AI Agents
+ Industries
+E-commerce
+Legal Tech
+Hospitality & Travel
+HR Tech
+Healthcare Tech
+ Developers
+Documentation
+Community
+GitHub
+Roadmap
+Change Log
+Certification
+Security
+ Resources
+Benchmarks
+Blog
+Technical Articles
+Events
+Demos
+Startup Program
+Bug Bounty Program
+ Company
+About us
+Customers
+Partners
+Careers
+Contact us
+ Pricing 
+ Log in
+ Start Free 
+ High-Performance Vector Search at Scale
+ Qdrant helps you build the AI retrieval you want. Ship high performance, full-feature vector search at any scale and with any deployment model.
+ Start Free in Qdrant Cloud 
+ See How It Works 
+ 30k+ GitHub Stars 
+ 60k+ Community Members 
+ Rust Powered 
+ SOC2 & HIPAA compliant 
+ READ CASE STUDY
+ READ CASE STUDY
+ READ CASE STUDY
+ READ CASE STUDY
+ READ CASE STUDY
+ READ CASE STUDY
+ READ CASE STUDY
+ READ CASE STUDY
+ READ CASE STUDY
+ READ CASE STUDY
+ WHY QDRANT? Build for Production-Grade AI Search
+ Engineered for real-time retrieval with the speed, accuracy, and scale that modern AI demands.
+ Start Free in Qdrant Cloud 
+ Expansive Metadata Filters
+ Store metadata in JSON and use advanced filters, such as nested , text , geo , has_vector , and more.
+ Learn About Metadata Filters 
+ Native Hybrid Search (Dense + Sparse)
+ Blend keyword and vector search in one query – use dense or sparse vectors. Supports BM25, SPLADE++, and miniCOIL.
+ Explore Hybrid Search 
+ Built-in Multivector
+ Set new standards for relevance; make the retrieval layer more expressive, flexible, and multimodal with multiple vectors per object.
+ See Documentation 
+ Efficient, One-Stage Filtering
+ Filters are applied during HNSW traversal — no pre- or post-filtering. High recall with low latency, even under complex conditions.
+ See Documentation 
+ Full-Spectrum Reranking
+ Infuse business logic with score boosting, achieve token-level precision with late interaction models (e.g. ColBERT), diversify results with Maximum Marginal Relevance (MMR)
+ See Documentation 
+ One Engine, Endless Applications
+ Powers AI Trip Planner on billions of reviews and images, driving
+ 2-3x revenue. 
+ Powers Breeze AI with real-time, personalized responses and deep contextual
+ awareness . 
+ Powers multi-agent platform with real-time context across
+ 2M+ AI-driven conversations. 
+ Powers Dust's AI agents platform with scalable vector search across
+ 5,000+ data sources. 
+ Powers Lyzr's AI agents, reducing latency by
+ 90% and increasing throughput by 
+ 150% . 
+ Deploy Anywhere at Enterprise Scale
+ Open-source DNA with enterprise-grade security and flexibility — run on-prem, hybrid, edge, or move seamlessly to Qdrant Cloud.
+ Start Free in Qdrant Cloud 
+ Qdrant Cloud
+ Fully managed with high availability and auto-sharding on AWS, GCP, or Azure.
+ Explore Qdrant Cloud 
+ Qdrant Hybrid Cloud
+ Bring your own Kubernetes with decoupled control and data planes. Scale anywhere with full data control.
+ Learn about Hybrid Cloud 
+ Qdrant Private Cloud
+ Maximum control with air-gapped, compliant deployments.
+ Explore Private Cloud 
+ Qdrant Edge (Beta)
+ Lightweight, low-latency vector search close to where data is generated.
+ Discover Qdrant Edge 
+ Enterprise-ready tooling
+ Deploy on any cloud, hybrid, or edge environment with full data control. Choose the setup that fits your infrastructure and scale securely without compromise.
+ Talk to our Team 
+ SOC 2 · GDPR-aligned Options 
+ Prometheus · Grafana · Datadog 
+ SSO (SAML/OIDC) 
+ Multitenancy & Granular RBAC 
+ Private Networking 
+ Zero-downtime upgrades 
+ Backups & Point-in-time restore 
+ Vector-scoped API Keys 
+ Qdrant's technical architecture and performance capabilities have proven to be exactly what we need as we scale our AI-powered features across the platform. They are an ideal partner as we standardize our vector search infrastructure to serve millions of users worldwide.
+ ARCHITECTURE FOR THE AI - NOT KEYWORD - ERA Performance by Design
+ We research, engineer, and optimize each component from first principles for the fastest, most scalable, and most customizable AI retrieval and search engine.
+ Start Free in Qdrant Cloud 
+ Highest‑Performance Vector Search Engine
+ Built entirely in Rust with SIMD and a custom storage engine (Gridstore) — no wrappers, no bolt-ons. Just fast, scalable vector search.
+ Real‑Time Indexing
+ Index new data instantly without rebuilding the entire index. Your vectors are searchable the moment they're added.
+ Memory‑Efficient Storage
+ Store billions of vectors with minimal memory footprint using our optimized storage architecture.
+ Asymmetric, Scalar and Binary Quantization
+ Reduce memory usage by up to 64x while maintaining search quality with advanced quantization techniques.
+ Highest‑Performance Vector Search Engine
+ Built entirely in Rust with SIMD and a custom storage engine (Gridstore) — no wrappers, no bolt-ons. Just fast, scalable vector search.
+ Real‑Time Indexing
+ Index new data instantly without rebuilding the entire index. Your vectors are searchable the moment they're added.
+ Memory‑Efficient Storage
+ Store billions of vectors with minimal memory footprint using our optimized storage architecture.
+ Asymmetric, Scalar and Binary Quantization
+ Reduce memory usage by up to 64x while maintaining search quality with advanced quantization techniques.
+ Engineered for Builders
+ Intuitive APIs and built-in tools — crafted for developers who demand more.
+ Developer friendly APIs
+ Start with a single API call — scale to advanced control over HNSW, hybrid fusion, reranking, and multi-vector retrieval, all via REST, gRPC, or official clients (Python, JavaScript, etc.).
+ Explore the API Docs 
+ Built-In Web UI & Visualizations
+ Explore collections, test vector and metadata queries, apply filters, and inspect results — all from a clean visual interface.
+ Try Web UI 
+ Native Cloud Inference
+ Generate text and image embeddings and run vector search in Qdrant Cloud — no separate pipeline or infrastructure needed.
+ Learn More About Inference 
+ Integrates with leading AI tools & frameworks
+ SOLUTIONS Build AI Search the Way You Want
+ From RAG to AI agents, Qdrant delivers hybrid dense–sparse retrieval with advanced metadata filtering and real-time updates.
+RAG & GenAI
+AI Agents
+Semantic Search
+Recommendation Systems
+Data Analysis & Anomaly Detection 
+ RAG & GenAI
+ Deliver context-rich answers with hybrid dense – sparse retrieval, metadata filters, and fres
+
+=== [pricing] https://qdrant.tech/pricing/ (lang=en)
+Pricing for Cloud and Vector Database Solutions Qdrant 
+ Vector Space Stream: a research-first broadcast for engineers. Eight talks on compression, edge, hybrid search, and more. Sept 17. Tune in 
+ Products 
+ Qdrant Vector Search Engine 
+ Qdrant Cloud 
+ Qdrant Hybrid Cloud 
+ Qdrant Enterprise Solutions 
+ Qdrant Cloud Inference 
+ Qdrant Edge (Beta) 
+ Qdrant Serverless (Coming soon) 
+ Solutions Use Cases 
+ RAG 
+ Recommendation Systems 
+ Advanced Search 
+ Data Analysis & Anomaly Detection 
+ AI Agents 
+ Industries
+ E-commerce 
+ Legal Tech 
+ Hospitality & Travel 
+ HR Tech 
+ Healthcare Tech 
+ Developers 
+ Documentation 
+ Community 
+ GitHub 
+ Roadmap 
+ Change Log 
+ Certification 
+ Security 
+ Resources 
+ Benchmarks 
+ Blog 
+ Technical Articles 
+ Events 
+ Demos 
+ Startup Program 
+ Bug Bounty Program 
+ Company 
+ About us 
+ Customers 
+ Partners 
+ Careers 
+ Contact us 
+ Pricing 
+ Log in 
+ Start Free 
+ Products
+Qdrant Vector Search Engine
+Qdrant Cloud
+Qdrant Hybrid Cloud
+Qdrant Enterprise Solutions
+Qdrant Cloud Inference
+Qdrant Edge (Beta)
+Qdrant Serverless (Coming soon)
+ Solutions
+ Use Cases 
+RAG
+Recommendation Systems
+Advanced Search
+Data Analysis & Anomaly Detection
+AI Agents
+ Industries
+E-commerce
+Legal Tech
+Hospitality & Travel
+HR Tech
+Healthcare Tech
+ Developers
+Documentation
+Community
+GitHub
+Roadmap
+Change Log
+Certification
+Security
+ Resources
+Benchmarks
+Blog
+Technical Articles
+Events
+Demos
+Startup Program
+Bug Bounty Program
+ Company
+About us
+Customers
+Partners
+Careers
+Contact us
+ Pricing 
+ Log in
+ Start Free 
+ Qdrant Cloud Pricing
+ Start free. Scale to production with fully managed vector search. Meet all enterprise security and compliance requirements.
+ Talk to our Team
+ Try our Pricing Calculator 
+Managed
+On-Premise 
+ Free Tier
+ Free forever 
+ For testing, and prototypes
+ Single Node Cluster 
+ 0.5 vCPU / 1GB RAM/ 4 GB Disk. 
+ Free Cloud Inference With Selected Models 
+ Start Free 
+ Standard Tier
+ Usage-based pricing 
+ For production workloads and scaling applications
+ Dedicated Resources 
+ Flexible Vertical and Horizontal Scaling 
+ Highly Available Setups 
+ Backup & Disaster Recovery 
+ Free Tokens for Paid Inference Models 
+ 99.5% Uptime SLA 
+ Subscribe on Marketplace.
+ Deploy on Cloud 
+ Premium Tier
+ Minimum spend required 
+ For enterprises with additional security and compliance needs
+ SSO 
+ Private VPC Links 
+ 99.9% Uptime SLA 
+ Extra Support 
+ Talk to Our Engineers 
+ Hybrid Cloud
+ Runs on 
+ Run managed Qdrant clusters on your own infrastructure using your compute, network and storage.
+ Best for:
+ Local Data Residency 
+ Regulated Workloads 
+ Easy Operations in Your Own Cloud 
+ Benefits:
+ Data Stays in Your Network 
+ Fully Managed Through Qdrant Cloud 
+ Production-Grade Uptime 
+ Talk to Our Engineers 
+ Private Cloud
+ Runs on 
+ Dedicated, isolated deployment for strict security or compliance needs.
+ Best for:
+ Large Enterprises 
+ Sensitive Workloads 
+ Air-Gapped Setups 
+ Benefits:
+ Custom SLAs 
+ Full Isolation 
+ Talk to Our Engineers 
+ Not sure how large your cluster needs to be?
+ Try our 
+ Pricing Calculator 
+ Features by Tier
+OSS
+Free Tier
+Standard Tier
+Premium Tier 
+ OSS
+ Free Tier
+ Standard Tier
+ Premium Tier
+ Features 
+ Cloud Inference
+ Only free and external models 
+ Cloud Providers
+ Depends on chosen infrastructure 
+ AWS, Azure, GCP 
+ AWS, Azure, GCP 
+ AWS, Azure, GCP 
+ Uptime SLA
+ 99.5 
+ Single AZ: 99.9, Multi AZ: 99.95 
+ Automation
+ API, Terraform, Pulumi, CLI 
+ API, Terraform, Pulumi, CLI 
+ API, Terraform, Pulumi, CLI 
+ Vertical Up & Downscaling
+ No resource usage safe guards 
+ Horizontal Up & Downscaling
+ No automated shard rebalancing 
+ Topology Aware Multi AZ Setup
+ Backup & Disaster Recovery
+ Custom automation 
+ Shard Splitting
+ GPU Indexing
+ Support Level
+ Community 
+ Community 
+ Standard 
+ Premium 
+ Support Response Times
+ Best effort 
+ 10x5 
+ 24x7 
+ Encryption at Rest and in Transit
+ Depends on chosen infrastructure 
+ Disk Encryption with Custom Key
+ Depends on chosen infrastructure 
+ (AWS and GCP only) 
+ Private VPC Links
+ N/A 
+ Enterprise SSO Authentication
+ Start Free 
+ Start Free 
+ Deploy on Cloud 
+ Deploy on Cloud 
+ Compare All Features 
+ Enterprise Support Support & Reliability
+Community
+Standard
+Premium
+Enterprise 
+ Community
+ Standard
+ Premium
+ Enterprise
+ Pricing 
+ Price
+ Free 
+ Included with Paid Tier 
+ On Request 
+ On Request 
+ Availability & Uptime 
+ Helpdesk Hours
+ Discord Only 
+ 10h/day (Business Hours) 
+ 24/7, 365 
+ 24/7, 365 
+ Uptime SLA
+ 99.5% 
+ 99.9% (99.95% Multi-AZ) 
+ Custom 
+ Response SLA 
+ Severity 1 (Full service outage)
+ 4h (Business Hours) 
+ 1h (24/7) 
+ Custom 
+ Support Channels 
+ Email / Ticket Portal
+ Private Slack / Discord / Teams
+ Advisory Services 
+ Migration Support
+ Architecture Reviews
+ Performance Consulting
+ Add-Ons 
+ Forward Deployed Engineer
+ Optional 
+ Optional 
+ Infrastructure/Security 
+ SSO
+ VPC Private Links
+ Multi-AZ Deployment
+ Encryption with Shared Keys
+ Talk to Our Team 
+ FAQs
+ What Happens if I Exceed Free Tier Limits?
+ If your data size growth exceeds the Free Tier limits (1GB RAM and 4GB disk), you can easily upgrade to a Standard Tier and scale up your cluster.
+ How Does Qdrant Cloud Pricing Work
+ Qdrant Cloud pricing is based on resource usage, if you have a bigger cluster, you pay for more. The free tier includes 1GB RAM and 4GB disk storage, upgrading will get you a dedicated cluster.
+ Can I Migrate from OSS to Qdrant Cloud?
+ Yes, you can easily migrate your existing Qdrant OSS deployment to Qdrant Cloud. We provide a migration tool and documentation to help you transition smoothly.
+ How Do I Choose Between Free Tier and Standard Tier?
+ The Free Tier is ideal for testing, and prototypes being limited to 1GB RAM and 4GB disk without high availability. Choose the Standard Tier for workloads that require dedicated clusters, higher availability, and advanced features.
+ What's the Difference Between Managed, Hybrid, and Private Cloud?
+ Managed Cloud is fully managed by Qdrant. Hybrid Cloud lets you bring your own infrastructure while using Qdrant's management plane. Private Cloud gives you complete control with on-premise deployment.
+ How Is Billing Calculated Month-to-Month?
+ Billing is calculated based on actual resource usage during the billing period. You're charged for compute (vCPU), memory (GB), storage (GB) consumed by your clusters, storage (GB) consumed by backups, and used inference tokens of paid models. Usage is billed hourly, and you can monitor it through the Qdrant Cloud dashboard.
+ Engines Ready. Awaiting Your Command.
+ Cloud Quickstart - spin up a cluster in seconds.
+ Start Building for Free 
+ Pr
+
+=== [meta] https://qdrant.tech
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/qdrant/qdrant
+<p align="center">
+  <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://github.com/qdrant/qdrant/raw/master/docs/logo-dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="https://github.com/qdrant/qdrant/raw/master/docs/logo-light.svg">
+      <img height="100" alt="Qdrant" src="https://github.com/qdrant/qdrant/raw/master/docs/logo.svg">
+  </picture>
+</p>
+
+<p align="center">
+    <b>Vector Search Engine for the next generation of AI applications</b>
+</p>
+
+<p align=center>
+    <a href="https://github.com/qdrant/qdrant/actions/workflows/rust.yml"><img src="https://img.shields.io/github/actions/workflow/status/qdrant/qdrant/rust.yml?style=flat-square" alt="Tests status"></a>
+    <a href="https://api.qdrant.tech/"><img src="https://img.shields.io/badge/Docs-OpenAPI%203.0-success?style=flat-square" alt="OpenAPI Docs"></a>
+    <a href="https://github.com/qdrant/qdrant/blob/master/LICENSE"><img src="https://img.shields.io/github/license/qdrant/qdrant?style=flat-square" alt="Apache 2.0 License"></a>
+    <a href="https://qdrant.to/discord"><img src="https://img.shields.io/discord/907569970500743200?logo=Discord&style=flat-square&color=7289da" alt="Discord"></a>
+    <a href="https://qdrant.to/roadmap"><img src="https://img.shields.io/badge/Roadmap-2025-bc1439.svg?style=flat-square" alt="Roadmap 2025"></a>
+    <a href="https://cloud.qdrant.io/"><img src="https://img.shields.io/badge/Qdrant-Cloud-24386C.svg?logo=cloud&style=flat-square" alt="Qdrant Cloud"></a>
+</p>
+
+**Qdrant** (read: _quadrant_) is a vector similarity search engine and vector database.
+It provides a production-ready service with a convenient API to store, search, and manage points—vectors with an additional payload.
+Qdrant is tailored for extended filtering support, making it useful for all sorts of neural-network or semantic-based matching, faceted search, and other applications.
+
+Qdrant is written in Rust 🦀, which makes it fast and reliable even under high load. See [benchmarks](https://qdrant.tech/benchmarks/).
+
+With Qdrant, embeddings or neural network encoders can be turned into full-fledged applications for matching, searching, recommending, and much more!
+
+Qdrant is also available as a fully managed **[Qdrant Cloud](https://cloud.qdrant.io/)** ⛅ including a **free tier**.
+
+<p align="center">
+<strong><a href="https://qdrant.tech/documentation/quickstart/">Quick Start</a> • <a href="#agent-skills">Agent Skills</a> • <a href="#clients">Client Libraries</a> • <a href="#demo-projects">Demo Projects</a> • <a href="#integrations">Integrations</a> • <a href="#contacts">Contact</a>
+
+</strong>
+</p>
+
+## Getting Started
+
+### Agent Skills
+
+Qdrant provides a collection of ready-to-use [agent skills](https://github.com/qdrant/skills) that bring Qdrant's vector search capabilities directly into your AI coding assistant. Install these skills to empower your agent in making critical engineering decisions for optimal vector search performance, such as quantization, sharding, tenant isolation, hybrid search, model migration, and more.
+
+### Client-Server
+
+To experience the full power of Qdrant locally, run the container with this command:
+
+```bash
+docker run -p 6333:6333 qdrant/qdrant
+```
+
+Note that this starts an insecure deployment without authentication, open to all network interfaces. Please refer to [secure your instance](https://qdrant.tech/documentation/security/#secure-your-instance).
+
+Now you can connect to the server with any [client](#clients). For example, using Python:
+
+```python
+from qdrant_client import QdrantClient
+
+client = QdrantClient(url="http://localhost:6333")
+```
+
+Before deploying Qdrant to production, be sure to read our [installation](https://qdrant.tech/documentation/installation/) and [security](https://qdrant.tech/documentation/security/) guides.
+
+### Clients
+
+Qdrant offers the following client libraries to help you integrate it into your application stack:
+
+- Official:
+  - [Go client](https://github.com/qdrant/go-client)
+  - [Rust client](https://github.com/qdrant/rust-client)
+  - [JavaScript/TypeScript client](https://github.com/qdrant/qdrant-js)
+  - [Python client](https://github.com/qdrant/qdrant-client)
+  - 

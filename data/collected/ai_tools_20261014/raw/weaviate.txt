@@ -1,0 +1,516 @@
+=== [home] https://weaviate.io (lang=en)
+The AI database developers love | Weaviate 
+ Skip to main content 
+ Inside Weaviate's MCP Ecosystem - Register for the webinar 
+ Product ▼ 
+ Solutions ▼ 
+ Enterprise 
+ Developers ▼ 
+ Company ▼ 
+ Pricing 
+ Contact Log in Try now 
+ ☰ 
+ New Weaviate Engram - Personalized AI experiences Design, build and ship complete AI experiences
+ Vector search, RAG, and memory - all in one open-source platform.
+ Start building Documentation 
+ Trusted By AI Teams
+ Platform Services
+ Everything you need to build with AI
+ Four core capabilities, one unified platform - deployment-agnostic and open source.
+ Vector Database
+ Store, index, and search high-dimensional vectors at any scale. The foundation for search, RAG, and agents.
+ Explore 
+ Query Agent
+ Ask questions in natural language. Query Agent translates intent into optimized database queries automatically.
+ Explore 
+ Embeddings
+ Built-in vector generation from text, images, and more. No external embedding pipeline required.
+ Explore 
+ Engram
+ Create personalized AI experiences that learn and adapt to each user over time.
+ Explore 
+ USE CASES
+ Real stories. Real results.
+ With over 20M open source downloads and thousands of customers, Weaviate is a core piece of the stack for leading startups, scale-ups, and enterprises.
+ RAG
+ “ I need peace of mind. When we are scaling our systems, I don't want to worry about scalability and uptime of our vector database as it serves as a core foundation supporting all our services. ”
+ Dr. Hirak Chhatbar ,
+ Co-Founder and CTO
+ Read Case Study 
+ 200+
+ Hours saved on database maintenance
+ 9B
+ Vectors in production
+ SEARCH
+ “ Weaviate stood out as it’s clearly built for production use, not just testing. It was the only solution with an efficient tenant system that scaled to our workload of tens of thousands of segmented indexes. ”
+ Aaron Edwards ,
+ Founder
+ Read Case Study 
+ 50K+
+ Tenants stored in a single cluster
+ 6.1M+
+ Customer questions answered
+ ENTERPRISE
+ “ Many large banks focus on quick AI wins but there’s a big opportunity to reinvent research workflows from start to finish in an AI-native way. ”
+ Seán Kilgarriff ,
+ Product Lead & Founding Team
+ Read Case Study 
+ 42M
+ Vectors in production
+ 1DAY
+ Enterprise deployment
+ SECURITY
+ “ Before MarvelX, I implemented Weaviate in banking where security was really important. Being able to have trust in something battle-tested is very important. ”
+ Ali el Hassouni ,
+ Founder
+ Read Case Study 
+ 10×
+ Improved processing output
+ 99.9%
+ Faster turnaround
+ RAG
+ “ Accuracy — how good the answer is — is the first thing we want to optimize for. That’s how we found Weaviate. ”
+ Kerry Chang ,
+ Head of Product Engineering
+ Read Case Study 
+ 450+
+ Data types supported
+ 50K+
+ Tenants stored
+ RAG
+ “ I need peace of mind. When we are scaling our systems, I don't want to worry about scalability and uptime of our vector database as it serves as a core foundation supporting all our services. ”
+ Dr. Hirak Chhatbar ,
+ Co-Founder and CTO
+ Read Case Study 
+ 200+
+ Hours saved on database maintenance
+ 9B
+ Vectors in production
+ SEARCH
+ “ Weaviate stood out as it’s clearly built for production use, not just testing. It was the only solution with an efficient tenant system that scaled to our workload of tens of thousands of segmented indexes. ”
+ Aaron Edwards ,
+ Founder
+ Read Case Study 
+ 50K+
+ Tenants stored in a single cluster
+ 6.1M+
+ Customer questions answered
+ ENTERPRISE
+ “ Many large banks focus on quick AI wins but there’s a big opportunity to reinvent research workflows from start to finish in an AI-native way. ”
+ Seán Kilgarriff ,
+ Product Lead & Founding Team
+ Read Case Study 
+ 42M
+ Vectors in production
+ 1DAY
+ Enterprise deployment
+ SECURITY
+ “ Before MarvelX, I implemented Weaviate in banking where security was really important. Being able to have trust in something battle-tested is very important. ”
+ Ali el Hassouni ,
+ Founder
+ Read Case Study 
+ 10×
+ Improved processing output
+ 99.9%
+ Faster turnaround
+ RAG
+ “ Accuracy — how good the answer is — is the first thing we want to optimize for. That’s how we found Weaviate. ”
+ Kerry Chang ,
+ Head of Product Engineering
+ Read Case Study 
+ 450+
+ Data types supported
+ 50K+
+ Tenants stored
+ DEVELOPER EXPERIENCE
+ Production-ready AI applications, faster
+ Spin up a cluster, point it at your data, and go. Weaviate can take care of embeddings, ranking, and auto-scaling so you can ship features, not infrastructure.
+ Quickstart Agent Skills Cloud Console & Tools Deployment Integrations Developer Resources Explore Demos 
+ Quickstart
+ Use SDKs for Python, Go, TypeScript, or JavaScript, or connect to GraphQL or REST APIs.
+ Agent Skills
+ Cloud Console & Tools
+ Deployment
+ Integrations
+ Developer Resources
+ Explore Demos
+ SEARCH VECTORIZE RAG TENANTS INDEX AGENTS 
+ # Select collection 
+ collection = client . collections . get ( "SupportTickets" ) 
+ # Pure vector search 
+ response = collection . query . near_vector ( 
+ near_vector = [ 0.1 , 0.1 , 0.1 ] , 
+ limit = 5 
+ ) 
+ # Semantic search 
+ response = collection . query . near_text ( 
+ query = "login issues after OS upgrade" , 
+ limit = 5 
+ ) 
+ # Hybrid search (vector + keyword) 
+ response = collection . query . hybrid ( 
+ query = "login issues after OS upgrade" , 
+ alpha = 0.75 , 
+ limit = 5 
+ ) 
+ WHY WEAVIATE?
+ Easy start, boundless scale, deploy anywhere
+ One foundation for search, RAG, agents, and everything that comes next.
+ AI-first features under one roof
+ Avoid separate systems and complex data pipelines. Write less custom code and build AI apps faster.
+ Billion-scale architecture
+ Adapt to any workload. Scale seamlessly as you grow up or out, all while optimizing costs.
+ A partner in innovation
+ Fuel your AI products with cutting-edge features and first-class support from our global team of experts.
+ Where the AI builders build
+ Get AI database tutorials, training, courses, resources, and support for builders of all levels.
+ Production-ready for Enterprise
+ Meet enterprise requirements and run securely in our cloud or yours.
+ Security & governance 
+ Global scalability 
+ Multi-tenancy 
+ Observability 
+ High availability 
+ RBAC, SOC 2, and HIPAA 
+ BEFORE WEAVIATE
+ WITH WEAVIATE
+ GET STARTED
+ Let's build together
+ Spin up a cluster, point it at your data, and go. Weaviate can take care of embeddings, ranking, and auto-scaling so you can ship features, not infrastructure.
+ Start with Cloud
+ Free tier 
+ Usage based pricing 
+ Enterprise options 
+ Support 
+ See pricing 
+ Build on your own
+ Sign up for cloud 
+ Create your first dataset 
+ Connect an LLM 
+ Build your AI app 
+ Start building 
+ Get the developer newsletter
+ Product updates, how-tos, community spotlights, and more. Delivered monthly to your inbox.
+ Please provide your email address if you'd like to receive our monthly developer newsletter. You can unsubscribe at any time.
+ Product
+ Vector Database Embeddings Query Agent Integrations Engram Product Previews Shared Cloud Dedicated Cloud Weaviate Assurance DigitalOcean Pricing 
+ Solutions
+ RAG Hybrid Search Agentic AI Cost Performance Optimization Case Studies Weaviate Playground 
+ Developers
+ Weaviate Database Docs Weaviate Cloud Docs Weaviate Deployment Docs Query Agent Docs LLM / Agent guides GitHub Learning Center Blog What is a Vector Database? What is RAG in AI? Academy Knowledge Cards Paper Reviews Podcasts Events & Webinars Weaviate Hero Program Forum 
+ Company
+ Company Careers Remote Playbook Investors Contact Us Partners Overview AWS Google Cloud Snowflak
+
+=== [pricing] https://weaviate.io/pricing (lang=en)
+Vector Database Pricing | Weaviate 
+ Skip to main content 
+ Inside Weaviate's MCP Ecosystem - Register for the webinar 
+ Product ▼ 
+ Solutions ▼ 
+ Enterprise 
+ Developers ▼ 
+ Company ▼ 
+ Pricing 
+ Contact Log in Try now 
+ ☰ 
+ All the power your AI needs,
+without the overhead
+ Flexible deployment options and pricing to meet the needs of every use case.
+ Database Engram 
+ ✦ Always free Free
+ Forever $0 /mo 
+ No credit card required
+ A fully managed AI Database to explore Weaviate features. Easiest way to get started, always free.
+ Start free ✓ Always free — 1 cluster per user, upgrade to paid anytime. 
+ ✓ 100,000 objects · 1 GB memory · 10 GB disk. 
+ ✓ 1 collection, up to 3 tenants. 
+ ✓ Embeddings (2,000 req/day) + Query Agent (1,000 req/mo). 
+ ✓ Basic Support 
+ Flex
+ Starts at $45 /mo 
+ Pay-as-you-go
+ Zero-commitment entry point to experiment and ship quickly. Ideal for prototypes, pilots, small use cases.
+ Upgrade to Flex ✓ Pay-as-you-go, monthly, no commitment. 
+ ✓ Shared cloud cluster with full core DB toolkit + replication. 
+ ✓ Baseline security with RBAC. 
+ ✓ Highly available clusters — 99.5% uptime. 
+ ✓ Query Agent free tier + usage-based; Embeddings usage-based. 
+ ✓ Standard support — next-business-day Sev 1 
+ Premium
+ Dedicated | Shared Contact sales for more information
+ Prepaid contract
+ For teams scaling AI in production who need predictable pricing and enhanced reliability.
+ Contact Sales ✓ Prepaid contract with predictable spend. 
+ ✓ Choice of shared or dedicated deployment. 
+ ✓ Trusted reliability — up to 99.95% uptime. 
+ ✓ Global coverage on AWS, GCP & Azure. 
+ ✓ Query Agent free tier + usage-based; Embeddings usage-based. 
+ ✓ Enterprise support — as fast as 1-hour Sev 1 + dedicated Technical Account Team 
+ Estimate costs with Pricing Calculator
+ Plans
+ Pay-as-you-go with flexible scaling 
+ flex
+ premium
+ Vector Dimensions
+ Number of Objects
+ Object Size
+ Optimization profile
+ Cost Optimized Lower memory footprint and storage cost. Suitable for small or non-latency-sensitive workloads. Vector index HFresh · Compression Auto ✓ Performance Optimized In-memory retrieval balancing speed and search quality. Suitable for most workloads. Vector index HNSW · Compression RQ-8 
+ Learn more about vector index types and compression .
+ Your estimated cost:
+ $ 45 
+ /mo 
+ Get started Contact Sales Team for more information 
+ Database AI Services
+ Native services that run inside Weaviate Cloud — included on every plan, billed by usage.
+ Weaviate Embeddings
+ Access embedding models hosted in Weaviate Cloud. Simple, pay-as-you-go, GPU-powered.
+ SNOWFLAKE ARCTIC-EMBED-M-V1.5
+ $0.025 / 1M tokens 
+ SNOWFLAKE ARCTIC-EMBED-M-V2.0
+ $0.040 / 1M tokens 
+ MODERNVBERT COLMODERNVBERT
+ $0.065 / 1M tokens 
+ Learn more 
+ Weaviate Query Agent
+ Turn natural-language questions into precise Weaviate database operations.
+ Free to try — 1,000 requests / month
+ $30 / organization · monthly plan
+ 4,000 requests included
+ Unlimited additional requests, usage-based
+ Learn more 
+ Compare Database plans
+ Plan Free Flex Premium 
+ Shared Dedicated 
+ Contract 
+ Contract Always free Monthly (Pay-as-you-go) Prepaid Commitment Prepaid Commitment 
+ Core Database 
+ Deployment type Shared Shared Shared Dedicated 
+ Object limit 100,000 Unlimited Unlimited Unlimited 
+ Collection limit 1 1000 1000 1000 
+ Hybrid search ✓ ✓ ✓ ✓ 
+ Backup retention × 7 days 30 days 45 days 
+ Flexible index types × ✓ ✓ ✓ 
+ Vector compression ✓ ✓ ✓ ✓ 
+ HA / replication × ✓ ✓ ✓ 
+ Multi-tenancy ✓ ✓ ✓ ✓ 
+ Security 
+ RBAC ✓ ✓ ✓ ✓ 
+ SSO / SAML × × ✓ ✓ 
+ Bring your own IdP × × × Coming soon 
+ HIPAA compliant × × × ✓ 
+ PrivateLink (AWS) × × × ✓ 
+ Encrypted volumes (customer keys) × × × ✓ 
+ Observability 
+ Metrics endpoint × × ✓ ✓ 
+ Console metrics ✓ ✓ ✓ ✓ 
+ AI Services 
+ Query Agent Free tier Free tier + usage-based Free tier + usage-based Free tier + usage-based 
+ Query Agent rate limits 1,000 req/mo 30,000 req/mo Unlimited Unlimited 
+ Embeddings 2,000 req/day Usage-based Usage-based Coming soon 
+ Support / Onboarding 
+ Email support ✓ ✓ ✓ ✓ 
+ Phone support × × ✓ ✓ 
+ Slack support × × ✓ ✓ 
+ Technical Account Team × × Add-on Add-on 
+ Instructor-led jumpstart training × × Available Available 
+ SLAs 
+ Availability Best effort 99.5% 99.9% 99.95% 
+ Severity 1 response time × 1 business day 4-hours 1-hour 
+ Upgrades 
+ Cluster upgrades Weaviate-managed Weaviate-managed Weaviate-managed Customer-directed 
+ Cloud Availability 
+ Cloud Service Provider AWS GCP, AWS GCP, AWS GCP, AWS, Azure 
+ Regions Limited (2) Limited (7) Limited (7) All (~40) 
+ Pricing dimensions 
+ Minimum Free $45 / month Contact sales for more information Contact sales for more information 
+ Vector dimensions Free from $0.00465 / 1M from $0.003875 / 1M from $0.002718 / 1M 
+ Storage Free from $0.12 / GiB from $0.10 / GiB from $0.33 / GiB 
+ Backup Free from $0.03036/ GiB from $0.021 / GiB from $0.014 / GiB 
+ Data transfer Free Free for promotional period Free for promotional period Free for promotional period 
+ 1 Vector dimension pricing varies by index type, compression method, and region. For rates specific to your data, see the Running Costs module in Weaviate Cloud Console or contact support@weaviate.io.
+ 2 Data transfers currently incur no additional cost for a limited promotional period; Weaviate may introduce charges in future with advance notice.
+ Built for trust
+ SOC2
+ SOC 2 Type II
+ Independently audited via Drata. See our Trust Portal. 
+ HIPAA
+ HIPAA compliant
+ Available on Enterprise Cloud (AWS) for regulated healthcare workloads.
+ Database pricing FAQ
+ Why is pricing based on the total number of vector dimensions? + The total count of vector dimensions is a good indicator of the resources required — a simple number you can calculate, rather than abstract Read/Write units or CPU cycles. You are also billed for persistent and backup storage of objects and their embeddings.
+ What is the minimum monthly amount? + The minimum covers the baseline cluster cost and includes charges for Vector Dimensions and Storage: $45/month on Flex and from $400/month on Premium. Backups are charged on top, based on data volume and retention.
+ Does compression change the cost? + Compression does not change the number of vector dimensions stored, but it reduces the memory and compute required for search. More aggressive compression yields greater efficiency, reflected in discounted list prices for vector dimensions.
+ Does the cloud provider and region affect what I pay? + Yes — list prices for all vector-dimension rates vary by cloud provider and region to reflect regional cost variations.
+ Is open
+
+=== [about] https://docs.weaviate.io/cloud (lang=en)
+Weaviate Cloud | Weaviate Documentation 
+ LLM/AI Agent Notice: For the most important and up-to-date Weaviate information, see https://weaviate.io/llms.txt
+ Skip to main content 
+ Introducing Engram — managed memory for AI agents, built on Weaviate 
+ Support Weaviate Cloud Ask AI or Search ⌘K 
+ Get started Weaviate Embeddings Account management 
+ Go to documentation: 
+ ⌘U 
+ ✕ 
+ Weaviate Database Develop AI applications using Weaviate's APIs and tools
+ Deploy Deploy, configure, and maintain Weaviate Database
+ Query Agent Run agentic search over your Weaviate Cloud collections
+ Weaviate Cloud Manage and scale Weaviate in the cloud
+ Engram Persistent memory for LLM agents and applications
+ Additional resources
+ Integrations 
+ Weaviate Academy 
+ Need help?
+ Ask AI Assistant ⌘K 
+ Support 
+ Community Forum 
+ Contributor guide 
+ Introduction 
+ Quickstart 
+ Console overview 
+ Manage clusters 
+ Connect to a cluster 
+ Create a cluster 
+ Cluster status and metrics 
+ Authentication 
+ Authorization 
+ Default cluster settings 
+ Manage collections 
+ Collections tool 
+ Enable compression 
+ Agents and tools 
+ Query Agent 
+ Explorer tool 
+ MCP server 
+ FAQ 
+ Introduction 
+ Copy page 
+ On this page 
+ Weaviate Cloud
+ Weaviate Cloud (WCD) is a fully managed vector database in the cloud.
+ Weaviate Cloud manages the infrastructure so you can focus on innovation. Use Weaviate Cloud to simplify development and confidently deploy enterprise-ready AI applications.
+ Quickstart
+ Follow the quickstart guide to get started with Weaviate Cloud.
+You can also try to import PDF and CSV/Excel data directly into WCD and query it using the Query Agent .
+ Weaviate Cloud and Weaviate Database ​ 
+ Weaviate is more than just a vector database. Weaviate is a scalable, flexible platform. The core, open-source project offers vector search, keyword, and hybrid search. It has a pluggable architecture to connect with ML models and tools to help you build scalable AI applications.
+ Weaviate Cloud is built on Weaviate Database. They share the same technology and offer the same great features. In addition, Weaviate Cloud handles the work of hosting your Weaviate instance. This gets you up and running fast and lets you focus on your application. Weaviate Cloud takes care of the operational details, so you don't have to.
+ These pages document the Weaviate Cloud user interface (UI) and specific operational features. For information about the Weaviate Database, client APIs, third-party modules, and other features, see the Weaviate documentation site .
+ Weaviate Cloud solutions ​ 
+ You can always contact our sales team to discuss which solution is right for you.
+ Weaviate Cloud offers two types of cloud hosting:
+ Evaluation Development Production 
+ Shared Cloud 
+ Fully-managed SaaS on shared infrastructure
+ Automatic scalability based on vector memory
+ Simple one-click cluster management
+ Consumption-based pricing (vector dimensions, storage, backups)
+ Available across five cloud regions
+ 99.5% - 99.9% uptime SLA
+ Learn about Shared Cloud 
+ Evaluation Development Production 
+ Dedicated Cloud 
+ Dedicated instance with isolated infrastructure
+ Enhanced security and compliance (SOC II, HIPAA)
+ Predictable performance with dedicated resources
+ 99.9% - 99.95% uptime SLA
+ Dedicated Success Manager included
+ 24/7 professional support
+ Learn about Dedicated Cloud 
+ Get started ​ 
+ To get started, visit the following resources:
+ Weaviate Cloud: Console 
+ Go directly to the Weaviate Cloud console and create your first cluster.
+ Weaviate Cloud: Pricing 
+ Check out the available pricing plans for Weav
+
+=== [meta] https://weaviate.io
+html lang: en
+hreflang: en, x-default
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/weaviate/weaviate
+# Weaviate <img alt='Weaviate logo' src='https://weaviate.io/img/site/weaviate-logo-light.png' width='148' align='right' />
+
+[![GitHub Repo stars](https://img.shields.io/github/stars/weaviate/weaviate?style=social)](https://github.com/weaviate/weaviate)
+[![Go Reference](https://pkg.go.dev/badge/github.com/weaviate/weaviate.svg)](https://pkg.go.dev/github.com/weaviate/weaviate)
+[![Build Status](https://github.com/weaviate/weaviate/actions/workflows/.github/workflows/pull_requests.yaml/badge.svg?branch=main)](https://github.com/weaviate/weaviate/actions/workflows/.github/workflows/pull_requests.yaml)
+[![Go Report Card](https://goreportcard.com/badge/github.com/weaviate/weaviate)](https://goreportcard.com/report/github.com/weaviate/weaviate)
+[![Coverage Status](https://codecov.io/gh/weaviate/weaviate/branch/main/graph/badge.svg)](https://codecov.io/gh/weaviate/weaviate)
+
+**Weaviate** is a cloud-native vector database that stores both objects and vectors, enabling semantic search at scale. It combines vector similarity search with keyword filtering, retrieval-augmented generation (RAG), and reranking in a single query interface. Common use cases include RAG systems, semantic and image search, recommendation engines, chatbots, and content classification.
+
+Weaviate supports two approaches to store vectors: automatic vectorization at import using [integrated models](https://docs.weaviate.io/weaviate/model-providers) (OpenAI, Cohere, HuggingFace, and others) or direct import of [pre-computed vector embeddings](https://docs.weaviate.io/weaviate/starter-guides/custom-vectors). Production deployments benefit from built-in multi-tenancy, replication, RBAC authorization, and [many other features](#weaviate-features).
+
+To get started quickly, have a look at one of these tutorials:
+
+- [Quickstart - Weaviate Cloud](https://docs.weaviate.io/weaviate/quickstart)
+- [Quickstart - local Docker instance](https://docs.weaviate.io/weaviate/quickstart/local)
+
+## Installation
+
+Weaviate offers multiple installation and deployment options:
+
+- [Docker](https://docs.weaviate.io/deploy/installation-guides/docker-installation)
+- [Kubernetes](https://docs.weaviate.io/deploy/installation-guides/k8s-installation)
+- [Weaviate Cloud](https://console.weaviate.cloud)
+
+See the [installation docs](https://docs.weaviate.io/deploy) for more deployment options, such as [AWS](https://docs.weaviate.io/deploy/installation-guides/aws-marketplace) and [GCP](https://docs.weaviate.io/deploy/installation-guides/gcp-marketplace).
+
+## Getting started
+
+You can easily start Weaviate and a local vector embedding model with [Docker](https://docs.docker.com/desktop/).
+Create a `docker-compose.yml` file:
+
+```yml
+services:
+  weaviate:
+    image: cr.weaviate.io/semitechnologies/weaviate:1.36.0
+    ports:
+      - "8080:8080"
+      - "50051:50051"
+    environment:
+      ENABLE_MODULES: text2vec-model2vec
+      MODEL2VEC_INFERENCE_API: http://text2vec-model2vec:8080
+
+  # A lightweight embedding model that will generate vectors from objects during import
+  text2vec-model2vec:
+    image: cr.weaviate.io/semitechnologies/model2vec-inference:minishlab-potion-base-32M
+```
+
+Start Weaviate and the embedding service with:
+
+```bash
+docker compose up -d
+```
+
+Install the Python client (or use another [client library](#client-libraries-and-apis)):
+
+```bash
+pip install -U weaviate-client
+```
+
+The following Python example shows how easy it is to populate a Weaviate database with data, create vector embeddings and perform semantic search:
+
+```python
+import weaviate
+from weaviate.classes.config import Configure, DataType, Property
+
+# Connect to Weaviate
+client = weaviate.connect_to_local()
+
+# Create a collection
+client.collections.create(
+    name="Article",
+    properties=[Property(name="content", data_type=DataType.TEXT)],
+    vector_config=Configure.Vectors.text2vec_model2vec(),  # Use a vectorizer to generate embeddings during import
+    # vector_config=Configure.Vectors.self_provided()  # If you want to import your own pre-generated embeddings
+)
+
+# Insert objects and generate embeddings
+articles = client.collections.get("Article")
+articles.data.insert_many(
+    [
+        {"content": "Vector databas

@@ -1,0 +1,87 @@
+{
+ "company": "OpenGVLab, Shanghai AI Laboratory",
+ "one_liner_ko": "비전 파운데이션 모델을 60억 파라미터로 키우고 LLM과 정렬한 오픈소스 멀티모달 대형 언어 모델 계열.",
+ "what_it_does_ko": "InternVL은 비전 인코더(InternViT-6B)를 60억 파라미터로 키우고 웹 규모 이미지-텍스트 데이터로 LLM과 점진적으로 정렬한 비전-언어 파운데이션 모델이다. 32개 범용 시각-언어 벤치마크에서 최고 성능을 냈다고 밝힌다. InternVL2 시리즈의 InternVL2-Pro는 MMMU에서 62.0%를 기록해 GPT-4o 같은 상용 폐쇄 모델 수준이라고 소개하며, 이후 InternVL 2.5·3.0·3.5로 이어졌다. 코드·모델·데모·API 문서를 제공한다.",
+ "key_features": [
+  "60억 파라미터 비전 인코더 InternViT-6B",
+  "대조 학습→생성 학습→지도 미세조정의 3단계 학습",
+  "32개 범용 시각-언어 벤치마크 최고 성능(발표 기준)",
+  "InternVL2-Pro MMMU 62.0%",
+  "1B~78B 파라미터 InternVL 2.5 시리즈",
+  "채팅 데모·API 제공"
+ ],
+ "use_cases_ko": [
+  "멀티모달 대화 시스템 구축"
+ ],
+ "pricing": {
+  "free_tier": null,
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "오픈소스(라이선스 이름은 페이지에 없음)",
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "API"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://internvl.github.io",
+   "quote": "▶ OpenGVLab, Shanghai AI Laboratory"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://internvl.github.io",
+   "quote": "we design a large-scale vision-language foundation model (InternVL), which scales up the vision foundation model to 6 billion parameters and progressively aligns it with the LLM"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://internvl.github.io",
+   "quote": "We release the InternVL2 series . InternVL2-Pro achieved a 62.0% accuracy on the MMMU benchmark, matching the performance of leading closed-source commercial models like GPT-4o."
+  },
+  {
+   "field": "key_features",
+   "url": "https://internvl.github.io",
+   "quote": "we scale up the vision encoder to 6 billion parameters, resulting in the InternViT-6B model."
+  },
+  {
+   "field": "key_features",
+   "url": "https://internvl.github.io",
+   "quote": "the training of InternVL consists of three progressive stages, including vision-language contrastive training, vision-language generative training, and"
+  },
+  {
+   "field": "key_features",
+   "url": "https://internvl.github.io",
+   "quote": "achieve state-of-the-art performance on 32 generic visual-linguistic benchmarks"
+  },
+  {
+   "field": "key_features",
+   "url": "https://internvl.github.io",
+   "quote": "We release the InternVL 2.5 , an advanced multimodal large language model (MLLM) series with parameter coverage ranging from 1B to 78B."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://internvl.github.io",
+   "quote": "To demonstrate the benefits of InternVL in creating multi-modal dialogue systems"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/OpenGVLab/InternVL",
+   "quote": "InternVL Family: Closing the Gap to Commercial Multimodal Models with Open-Source Suites"
+  },
+  {
+   "field": "api",
+   "url": "https://github.com/OpenGVLab/InternVL",
+   "quote": "[\\[🌐 API\\]](https://internlm.intern-ai.org.cn/api/document)"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/OpenGVLab/InternVL",
+   "quote": "[\\[🗨️ Chat Demo\\]](https://chat.intern-ai.org.cn/)"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

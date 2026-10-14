@@ -1,0 +1,32 @@
+{
+ "company": "Liquid AI",
+ "one_liner_ko": "데이터센터 밖 프로세서를 위한 기기 내장형(온디바이스) 파운데이션 모델을 만든다.",
+ "what_it_does_ko": "Liquid AI는 휴대폰·노트북·자동차 등 기기에서 직접 돌아가는 Liquid Foundation Models(LFM)를 만든다. 텍스트·비전·오디오·의사결정 모델 등 여러 모델 계열을 공개했고 llama.cpp·MLX·ONNX·CoreML·vLLM 등 다양한 런타임에서 실행된다. 모델은 LFM Open License로 무료 다운로드·실행·파인튜닝이 가능하며, 연 매출 1천만 달러를 넘는 회사는 상용 라이선스가 필요하다. API 체험과 문서, 파인튜닝 도구(LEAP Finetune)도 제공한다.",
+ "key_features": ["온디바이스용 Liquid Foundation Models(LFM) 57종 공개", "텍스트·비전·오디오·의사결정 모델 계열", "llama.cpp·MLX·ONNX·CoreML·SGLang·vLLM 등 런타임 지원", "32K 토큰 문맥(일부 모델 128K·131K)", "LEAP Finetune·TRL·Unsloth로 파인튜닝", "iOS·안드로이드·데스크톱 앱 내장 가이드"],
+ "use_cases_ko": ["자동차 차량 내 프라이빗 AI(Mercedes-Benz)", "이커머스 대규모 프로덕션 배포(Shopify)", "신약 설계(Insilico)"],
+ "pricing": {"free_tier": "있음 (연 매출 1천만 달러 미만 회사는 상업적 사용 포함 무료, 연구·비영리는 한도 없이 무료)", "plans": [{"name": "Free", "price": 0, "currency": "USD", "period": null, "limits": "연 매출 1천만 달러 미만, 모든 오픈 LFM 다운로드·실행·파인튜닝", "page_lang": "en"}, {"name": "Enterprise", "price": null, "currency": "USD", "period": null, "limits": "연 매출 1천만 달러 초과, 상용 라이선스·SLA, 가격은 영업 문의", "page_lang": "en"}], "pricing_url": "https://www.liquid.ai/pricing"},
+ "open_source": "LFM Open License",
+ "api": "있음",
+ "platforms": ["iOS", "안드로이드", "맥", "API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://www.liquid.ai/pricing", "quote": "Building the fastest, most compute-efficient, and capable foundation models so intelligence can live anywhere."},
+  {"field": "company", "url": "https://www.liquid.ai/", "quote": "Liquid AI | Device-native foundation models."},
+  {"field": "one_liner_ko", "url": "https://www.liquid.ai/", "quote": "Advanced intelligence for processors outside of data centers. Built for the latency, privacy, and hardware constraints of the physical world."},
+  {"field": "what_it_does_ko", "url": "https://docs.liquid.ai/lfm/models/complete-library", "quote": "Liquid Foundation Models (LFMs) are a new class of multimodal architectures built for fast inference and on-device deployment."},
+  {"field": "key_features", "url": "https://www.liquid.ai/", "quote": "llama.cpp, MLX, ONNX, CoreML, SGLang, vLLM"},
+  {"field": "key_features", "url": "https://docs.liquid.ai/lfm/models/complete-library", "quote": "32K token context length for extended conversations and document processing (128K for LFM2.5-8B-A1B, 131K for LFM2.5-24B-A2B)"},
+  {"field": "key_features", "url": "https://docs.liquid.ai/lfm/models/complete-library", "quote": "Trainable via SFT, DPO, VLM, and GRPO workflows with LEAP Finetune , TRL , and Unsloth"},
+  {"field": "key_features", "url": "https://www.liquid.ai/", "quote": "Models \n 57 LFMs shipped \n 51.4M downloads"},
+  {"field": "use_cases_ko", "url": "https://www.liquid.ai/", "quote": "Mercedes scales private in-car AI Insilico designs drugs with LFM2"},
+  {"field": "use_cases_ko", "url": "https://www.liquid.ai/", "quote": "Liquid AI's models are the best for the scaled production deployment - pareto-optimal, beating much larger rivals. That's why we use them at Shopify."},
+  {"field": "pricing", "url": "https://www.liquid.ai/pricing", "quote": "Liquid's foundation models are free to download, run, and fine-tune — including in commercial products — until your company's annual revenue passes $10 million USD."},
+  {"field": "pricing", "url": "https://www.liquid.ai/pricing", "quote": "Pricing is structured around your deployment scale and support needs."},
+  {"field": "open_source", "url": "https://www.liquid.ai/pricing", "quote": "Everything is released under the LFM Open License, which grants broad, royalty-free rights to use, modify, and distribute the models."},
+  {"field": "api", "url": "https://www.liquid.ai/", "quote": "Company \n Try our API \n Device -native foundation models."},
+  {"field": "platforms", "url": "https://docs.liquid.ai/lfm/models/complete-library", "quote": "To embed a model in an iOS, Android, or desktop app, see Build with llama.cpp ."},
+  {"field": "korean_support", "url": "https://www.liquid.ai/", "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [{"official": "오픈 모델은 연 매출 1천만 달러 미만이면 무료, 초과 시 유료 Enterprise 상용 라이선스", "diff": "기존 분류는 '해당없음(연구조직/기업)'이지만 공식 요금 페이지에 무료/Enterprise 요금제가 있음", "url": "https://www.liquid.ai/pricing"}],
+ "plan_change": []
+}

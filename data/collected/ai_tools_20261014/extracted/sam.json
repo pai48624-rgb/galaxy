@@ -1,0 +1,88 @@
+{
+ "company": "Meta (AI at Meta, FAIR)",
+ "one_liner_ko": "클릭·박스·마스크로 이미지와 동영상 속 객체를 골라 분할하는 Meta의 통합 분할 모델 SAM 2.",
+ "what_it_does_ko": "SAM 2는 이미지와 동영상 모두에서 객체를 분할하는 첫 통합 모델로, 클릭·박스·마스크를 입력해 원하는 객체를 선택한다. 세션별 메모리 모듈로 동영상 전 프레임에 걸쳐 객체를 추적하며, 객체가 잠시 가려져도 이전 프레임 정보를 이용한다. 프레임을 하나씩 처리하는 스트리밍 구조로 실시간 상호작용이 가능하다. Meta는 사전 학습 모델과 SA-V 데이터셋, 데모, 코드를 공개했다.",
+ "key_features": [
+  "이미지·동영상 통합 객체 분할",
+  "클릭·박스·마스크 프롬프트로 객체 선택",
+  "메모리 모듈로 동영상 프레임 간 객체 추적",
+  "추가 프롬프트로 마스크 예측 수정",
+  "스트리밍 추론으로 실시간 처리",
+  "학습에 없던 대상에도 강한 제로샷 성능",
+  "SA-V 데이터셋 공개(약 5.1만 개 동영상, 60만+ masklet)",
+  "학습·파인튜닝 코드와 웹 데모 코드 공개"
+ ],
+ "use_cases_ko": [
+  "동영상 생성 모델 등 다른 AI 시스템의 입력으로 써서 정밀 편집"
+ ],
+ "pricing": {
+  "free_tier": null,
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "웹"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://github.com/facebookresearch/sam2",
+   "quote": "**[AI at Meta, FAIR](https://ai.meta.com/research/)**"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://ai.meta.com/research/sam2/",
+   "quote": "SAM 2 is the first unified model for segmenting objects across images and videos. You can use a click, box, or mask as the input to select an object on any image or frame of video."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://ai.meta.com/research/sam2/",
+   "quote": "This allows SAM 2 to track the selected object throughout all video frames, even if the object temporarily disappears from view"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://ai.meta.com/research/sam2/",
+   "quote": "we’re publicly releasing a pretrained Segment Anything 2 model, along with the SA-V dataset, a demo, and code."
+  },
+  {
+   "field": "key_features",
+   "url": "https://ai.meta.com/research/sam2/",
+   "quote": "SAM 2 is designed for efficient video processing with streaming inference to enable real-time, interactive applications."
+  },
+  {
+   "field": "key_features",
+   "url": "https://ai.meta.com/research/sam2/",
+   "quote": "SAM 2 also supports the ability to make corrections in the mask prediction based on additional prompts on any frame."
+  },
+  {
+   "field": "key_features",
+   "url": "https://ai.meta.com/research/sam2/",
+   "quote": "SAM 2 is capable of strong zero-shot performance for objects, images and videos not previously seen during model training"
+  },
+  {
+   "field": "key_features",
+   "url": "https://ai.meta.com/research/sam2/",
+   "quote": "~600K+ masklets collected on ~51K videos"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/facebookresearch/sam2",
+   "quote": "The training (and fine-tuning) code has been released."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://ai.meta.com/research/sam2/",
+   "quote": "could be used as input to other AI systems such as modern video generation models to enable precise editing capabilities."
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/facebookresearch/sam2",
+   "quote": "The frontend + backend code for the SAM 2 web demo has been released."
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

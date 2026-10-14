@@ -1,0 +1,305 @@
+=== [home] https://onnxruntime.ai (lang=en)
+ONNX Runtime | Home 
+ Get Started 
+ Blogs 
+ Docs 
+ Community
+ Models 
+ Roadmap 
+ Events 
+ Testimonials 
+ Youtube 
+ LinkedIn 
+ GitHub 
+ ORT 
+ Skip to main content 
+ Get Started 
+ Blogs 
+ Docs 
+ Community Models 
+ Roadmap 
+ Events 
+ Testimonials 
+ Youtube 
+ LinkedIn 
+ GitHub 
+ Accelerated
+ Edge 
+ Machine Learning
+ Production-grade AI engine to speed up training and inferencing in your existing
+ technology stack.
+ In a rush? Get started easily:
+ pip install onnxruntime 
+ pip install onnxruntime-genai 
+ Interested in using other languages? See the many others we support → 
+ Trusted By
+ Toggle scrolling 
+ Generative AI
+ Integrate the power of Generative AI and Large language Models (LLMs) in your apps and
+ services with ONNX Runtime. No matter what language you develop in or what platform you need
+ to run on, you can make use of state-of-the-art models for image synthesis, text generation,
+ and more.
+ Learn more about ONNX Runtime & Generative AI → 
+ Use ONNX Runtime with your favorite language and get started with the tutorials:
+ Quickstart Tutorials Install ONNX Runtime Hardware acceleration Get started (Docs) 
+ Python
+ C#
+ JS
+ Java
+ C++
+ More.. 
+ import onnxruntime as ort
+ # Load the model and create InferenceSession 
+model_path = "path/to/your/onnx/model" 
+session = ort.InferenceSession(model_path)
+ # "Load and preprocess the input image inputTensor" 
+...
+ # Run inference 
+outputs = session.run( None , { "input" : inputTensor})
+ print (outputs) Python Docs 
+ Videos
+ Check out some of our videos to help you get started!
+ What is ONNX Runtime (ORT)? 
+ Converting Models to ONNX Format 
+ Optimize Training and Inference with ONNX Runtime (ACPT/DeepSpeed) 
+ ONNX Runtime YouTube channel → 
+ Cross-Platform
+ Do you program in Python? C#? C++? Java? JavaScript? Rust? No problem. ONNX Runtime has you
+ covered with support for many languages. And it runs on Linux, Windows, Mac, iOS, Android,
+ and even in web browsers.
+ Performance
+ CPU, GPU, NPU - no matter what hardware you run on, ONNX Runtime optimizes for latency,
+ throughput, memory utilization, and binary size. In addition to excellent out-of-the-box
+ performance for common usage patterns, additional
+ model optimization techniques and runtime configurations are available to further improve performance for specific use cases
+ and models.
+ ONNX Runtime Inferencing
+ ONNX Runtime powers AI in Microsoft products including Windows, Office, Azure Cognitive
+ Services, and Bing, as well as in thousands of other projects across the world. ONNX Runtime is
+ cross-platform, supporting cloud, edge, web, and mobile experiences.
+ Learn more about ONNX Runtime Inferencing → Web Browsers
+ Run PyTorch and other ML models in the web browser with ONNX Runtime Web.
+ Mobile Devices
+ Infuse your Android and iOS mobile apps with AI using ONNX Runtime Mobile.
+ ONNX Runtime Training
+ ONNX Runtime reduces costs for large model training and enables on-device training.
+ Learn more about ONNX Runtime Training → Large Model Training
+ Accelerate training of popular models, including Hugging Face 
+ models like Llama-2-7b and curated models from the
+ Azure AI | Machine Learning Studio model catalog.
+ On-Device Training
+ On-device training with ONNX Runtime lets developers take an inference model and train
+ it locally to deliver a more personalized and privacy-respecting experience for
+ customers.
+ Please help us improve ONNX Runtime by participating in our
+ customer survey . 
+ ONNX Runtime
+Copyright © Microsoft. All rights reserved.
+ Follow us at: 
+ Get Started Install PyTorch 
+ Resources Blogs Tutorials APIs
+
+=== [about] https://onnxruntime.ai/docs/ (lang=en-US)
+ONNX Runtime | onnxruntime Skip to main content Menu Expand (external link) Document Search Copy Copied 
+ ONNX Runtime 
+ Install ONNX Runtime 
+ Get Started Python 
+ C++ 
+ C 
+ C# 
+ Java 
+ JavaScript Web 
+ Node.js binding 
+ React Native 
+ Objective-C 
+ Julia, Ruby and Rust APIs 
+ Windows 
+ Mobile 
+ On-Device Training 
+ Large Model Training 
+ Tutorials API Basics 
+ Accelerate PyTorch PyTorch Inference 
+ Inference on multiple targets 
+ Accelerate PyTorch Training 
+ Accelerate TensorFlow 
+ Accelerate Hugging Face 
+ Deploy on AzureML 
+ Deploy on mobile Object detection and pose estimation with YOLOv8 
+ Mobile image recognition on Android 
+ Improve image resolution on mobile 
+ Mobile objection detection on iOS 
+ ORT Mobile Model Export Helpers 
+ Web Build a web app with ONNX Runtime 
+ The 'env' Flags and Session Options 
+ Using WebGPU 
+ Using WebNN 
+ Working with Large Models 
+ Performance Diagnosis 
+ Deploying ONNX Runtime Web 
+ Troubleshooting 
+ Classify images with ONNX Runtime and Next.js 
+ Custom Excel Functions for BERT Tasks in JavaScript 
+ Deploy on IoT and edge IoT Deployment on Raspberry Pi 
+ Deploy traditional ML 
+ Inference with C# Basic C# Tutorial 
+ Inference BERT NLP with C# 
+ Configure CUDA for GPU with C# 
+ Image recognition with ResNet50v2 in C# 
+ Stable Diffusion with C# 
+ Object detection in C# using OpenVINO 
+ Object detection with Faster RCNN in C# 
+ On-Device Training Building an Android Application 
+ Building an iOS Application 
+ Build ONNX Runtime Build for inferencing 
+ Build for training 
+ Build with different EPs 
+ Build for web 
+ Build for Android 
+ Build for iOS 
+ Custom build 
+ API Docs 
+ Execution Providers NVIDIA - CUDA 
+ NVIDIA - TensorRT 
+ NVIDIA - TensorRT RTX 
+ Intel - OpenVINO™ 
+ Intel - oneDNN 
+ Windows - DirectML 
+ Qualcomm - QNN 
+ Android - NNAPI 
+ Apple - CoreML 
+ XNNPACK 
+ AMD - ROCm 
+ AMD - MIGraphX 
+ AMD - Vitis AI 
+ Cloud - Azure 
+ WebGPU 
+ Community-maintained Arm - ACL 
+ Arm - Arm NN 
+ Apache - TVM 
+ Rockchip - RKNPU 
+ Huawei - CANN 
+ Add a new provider 
+ EP Context Design 
+ Plugin Execution Provider Libraries Usage 
+ Development 
+ Testing 
+ Packaging 
+ Generate API (Preview) Tutorials Phi-3.5 vision tutorial 
+ Phi-3 tutorial 
+ Phi-2 tutorial 
+ Run with LoRA adapters 
+ DeepSeek-R1-Distill tutorial 
+ Run on Snapdragon devices 
+ API docs Python API 
+ C# API 
+ C API 
+ C++ API 
+ Java API 
+ How to Install 
+ Build from source 
+ Build models 
+ Build models for Snapdragon 
+ Troubleshoot 
+ Migrate 
+ Past present share buffer 
+ Reference Config reference 
+ Adapter file spec 
+ Extensions Add Operators 
+ Build 
+ Performance Tune performance Profiling tools 
+ Logging & Tracing 
+ Memory consumption 
+ Thread management 
+ I/O Binding 
+ Troubleshooting 
+ Model optimizations Quantize ONNX models 
+ Float16 and mixed precision models 
+ Graph optimizations 
+ ORT model format 
+ ORT model format runtime optimization 
+ Transformers optimizer 
+ End to end optimization with Olive 
+ Device tensors 
+ Arm® KleidiAI™ software 
+ Ecosystem Azure Container for PyTorch (ACPT) 
+ Reference Releases 
+ Compatibility 
+ Operators Operator kernels 
+ Contrib operators 
+ Custom operators 
+ Reduced operator config file 
+ Architecture 
+ Citing ONNX Runtime 
+ Dependency Management in ONNX Runtime 
+ ONNX Runtime Docs on GitHub 
+ This site uses Just the Docs , a documentation theme for Jekyll. 
+ Search onnxruntime 
+ ONNX Runtime 
+ Install 
+ Get Started 
+ Tutorials 
+ API Docs 
+ YouTube 
+ GitHub 
+ Welcome to ONNX Runtime 
+ ONNX Runtime is a cross-platform machine-learning model accelerator, with a flexible interface to integrate hardware-speci
+
+=== [meta] https://onnxruntime.ai
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/microsoft/onnxruntime
+<p align="center"><img width="50%" src="docs/images/ONNX_Runtime_logo_dark.png" /></p>
+
+**ONNX Runtime is a cross-platform inference and training machine-learning accelerator**.
+
+**ONNX Runtime inference** can enable faster customer experiences and lower costs, supporting models from deep learning frameworks such as PyTorch and TensorFlow/Keras as well as classical machine learning libraries such as scikit-learn, LightGBM, XGBoost, etc. ONNX Runtime is compatible with different hardware, drivers, and operating systems, and provides optimal performance by leveraging hardware accelerators where applicable alongside graph optimizations and transforms. [Learn more &rarr;](https://www.onnxruntime.ai/docs/#onnx-runtime-for-inferencing)
+
+**ONNX Runtime training** can accelerate the model training time on multi-node NVIDIA GPUs for transformer models with a one-line addition for existing PyTorch training scripts. [Learn more &rarr;](https://www.onnxruntime.ai/docs/#onnx-runtime-for-training)
+
+## Get Started & Resources
+
+* **General Information**: [onnxruntime.ai](https://onnxruntime.ai)
+
+* **Usage documentation and tutorials**: [onnxruntime.ai/docs](https://onnxruntime.ai/docs)
+
+* **YouTube video tutorials**: [youtube.com/@ONNXRuntime](https://www.youtube.com/@ONNXRuntime)
+
+* [**Upcoming Release Roadmap**](https://onnxruntime.ai/roadmap)
+
+* **Companion sample repositories**:
+  - ONNX Runtime Inferencing: [microsoft/onnxruntime-inference-examples](https://github.com/microsoft/onnxruntime-inference-examples)
+  - ONNX Runtime Training: [microsoft/onnxruntime-training-examples](https://github.com/microsoft/onnxruntime-training-examples)
+
+* **Plugin EP repositories**:
+  - ONNX Runtime QNN Plugin EP: [onnxruntime/onnxruntime-qnn](https://github.com/onnxruntime/onnxruntime-qnn)
+
+## Releases
+
+The current release and past releases can be found here: https://github.com/microsoft/onnxruntime/releases.
+
+For details on the upcoming release, including release dates, announcements, features, and guidance on submitting feature requests, please visit the release roadmap: https://onnxruntime.ai/roadmap.
+
+## Data/Telemetry
+
+This project may collect usage data and send it to Microsoft to help improve our products and services. See the [privacy statement](docs/Privacy.md) for more details.
+
+## Contributions and Feedback
+
+We welcome contributions! Please see the [contribution guidelines](CONTRIBUTING.md).
+
+For feature requests or bug reports, please file a [GitHub Issue](https://github.com/Microsoft/onnxruntime/issues).
+
+For general discussion or questions, please use [GitHub Discussions](https://github.com/microsoft/onnxruntime/discussions).
+
+## Code of Conduct
+
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
+For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/)
+or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+

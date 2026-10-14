@@ -1,0 +1,372 @@
+=== [home] https://moondream.ai (lang=en)
+Moondream 
+ Moondream 
+ Products 
+ Docs 
+ Playground 
+ Pricing 
+ Blog 
+ 10k Try the model 
+ New Moondream is joining Prime Intellect 
+ State-of-the-art vision for your task. detect · 0.98 
+ Build, fine-tune, and deploy visual AI that works on your real-world edge cases.
+ Try the playground View docs 
+ $ pip install moondream 
+ 5M+ monthly downloads · open weights · commercial use
+ Warehouse App interface Advertising Aircraft ID Scene tagging Warehouse App interface Advertising Aircraft ID Scene tagging Warehouse App interface Advertising Aircraft ID Scene tagging Warehouse App interface Advertising Aircraft ID Scene tagging Warehouse App interface Advertising Aircraft ID Scene tagging 
+ Misoriented box
+ manufacturing / logistics
+ > model . detect ( image, "Misoriented box" ) 
+ { "x_min": 0.70, "y_min": 0.39, "x_max": 0.98, "y_max": 0.61 } 
+ 33 ms · Linux RTX 6000 
+ Moondream 3.1 on Photon, fine-tuned with Lens 
+ 01
+ Step 1 · Try it
+ Try the open models. You might already be done.
+ Moondream might already nail your use case out of the box. The open models are commercially friendly and can run anywhere. Use our playground to try it out or download it and run it yourself.
+ Open playground 
+ No credit card required. $5 in credits added monthly.
+ python # Caption an image in four lines
+ import moondream as md
+ from PIL import Image
+ model = md. vl (api_key= "YOUR_API_KEY" )
+ image = Image. open ( "shelf.jpg" )
+ print(model. caption (image).caption)
+ # → 'A warehouse shelf with six cardboard cartons…' 
+ Moondream 3.1
+ Recommended 
+ Sparse mixture-of-experts architecture with frontier-level visual reasoning, segmentation, and long-context queries.
+ 9B MoE · 2B active
+ Query Caption Detect Point Segment 
+ Model card 
+ Moondream 2
+ Stable 
+ The production workhorse: compact, proven, commercially friendly, and easy to deploy across GPUs, CPUs, and edge devices.
+ 2B dense
+ Query Caption Detect Point Segment 
+ Model card 
+ Moondream 2 0.5B
+ Tiny 
+ A small fine-tuning base for constrained hardware where every megabyte matters.
+ 0.5B dense
+ Query Caption Detect Point Segment 
+ Model card 
+ 02
+ Step 2 · Fine-tune it
+ Need more? Lens gets you to production-grade accuracy.
+ Your data is specific, so the model has to be. Lens is a fine-tuning platform with a simple API. No dataset uploads, no infrastructure, no ML team required.
+ Learn more about Lens Start fine-tuning 
+ Self-serve API
+ A simple hosted API — no hardware to rent or manage. Supports SFT and RL. Vibe-code your fine-tune script in minutes.
+ Tune and go
+ Your fine-tuned model is instantly ready to run on Moondream Cloud or locally with Photon. No cumbersome download or install step.
+ White-glove option
+ Our team handles the labeling protocol, loss design, and evaluation. You keep the weights, the training code, and the data. Unlike ML consulting, you walk away self-sufficient.
+ No massive dataset required
+ Our reinforcement-learning fine-tune API can dramatically improve accuracy with as few as 20 labeled images — not thousands.
+ 03
+ Step 3 · Run it anywhere
+ Fast, efficient, and runs anywhere you need it.
+ Once your model is accurate, performance and cost become the next wall. Photon is the inference engine we built to run Moondream in production. Moondream Cloud and partner clouds give you a hosted path if you want one.
+ Speed
+ Under 500 ms is the difference between a useful answer and a late one. Photon answers a direct query in under 60 ms on an H100, and stays real-time all the way down to Jetson.
+ 59 ms P50 · H100 · batch 1 
+ Cost
+ A VLM running across a fleet of cameras at the wrong efficiency costs thousands a day. Moondream is the lowest-cost VLM we have measured across the inference providers we tested.
+ $0.06 per 1K images, cloud 
+ Flexibility
+ Your deployment story will change. Start in the cloud, move to the edge, or run air-gapped. You pick the hardware. The model and APIs stay the same.
+ 9 benchmarked hardware tiers 
+ Internal benchmark
+ Time per request
+ median of 200 runs · lower is better 
+ Moondream 3.1 + Photon H100 · batch 1 
+ 59 ms baseline 
+ Qwen 3.5 4B + vLLM H100 · batch 1 
+ 73 ms 1.2 × slower 
+ GPT-5.4 Mini OpenAI API 
+ 2.78 s 47 × slower 
+ Gemini 2.5 Flash Google API 
+ 3.79 s 64 × slower 
+ direct-answer query · batch 1 · NVIDIA H100 80GB · 2026-02 build 
+ Photon · hardware
+ Same model, every tier.
+ Moondream 3.1 on Photon, benchmarked from datacenter to Jetson. Latency is the median for a single direct-answer query; throughput is peak sustained requests per second.
+ Hardware P50 latency Peak throughput 
+ NVIDIA B200 Datacenter 49 ms 77.7 req/s 
+ NVIDIA H100 Datacenter 59 ms 58.0 req/s 
+ RTX PRO 6000 Workstation 68 ms 38.8 req/s 
+ NVIDIA L40S Server 99 ms 24.7 req/s 
+ NVIDIA A100 80GB Cloud 136 ms 16.7 req/s 
+ Jetson AGX Thor Edge 246 ms 12.6 req/s 
+ NVIDIA A10 Cloud 280 ms 7.2 req/s 
+ NVIDIA L4 Cloud 317 ms 6.9 req/s 
+ Jetson AGX Orin Edge · Moondream 2 514 ms 4.6 req/s 
+ ChartQA test split · prefix caching enabled · Jetson AGX Orin runs Moondream 2 · full data on GitHub 
+ Available on
+ FAL 
+ Self-hosted 
+ Moondream Cloud 
+ Photon
+ Same code. Edge, workstation, server.
+ Read the Photon docs 
+ python import moondream as md
+ from PIL import Image
+ # Initialize with local GPU inference
+ model = md. vl (api_key= "YOUR_API_KEY" , local= True )
+ # Load an image
+ image = Image. open ( "path/to/image.jpg" )
+ # Generate a caption
+ caption = model. caption (image)[ "caption" ]
+ print ( "Caption:" , caption)
+ 04
+ Step 4 · Keep it running
+ Launch is just the start.
+ One vendor for the full stack. Models drift. Engineers leave. New use cases appear. With stitched-together vendors, nobody owns the outage. On Moondream, we do.
+ Competitor stack
+ Model vendor (weights only)
+ Fine-tuning vendor (your data goes elsewhere)
+ Inference provider (different SLA)
+ Your on-call engineer (owns everything)
+ Moondream
+ Model, weights, and roadmap
+ Lens fine-tuning and evals
+ Photon and Moondream Cloud
+ One team on call, 24/7 on enterprise plans
+ See Plans 
+ The platform
+ Four products that work together. Use one, or all four.
+ 0 1 
+ Open Models
+ The foundation. Free for commercial use. 2B, 1B, and 0.5B checkpoints on Hugging Face.
+ View on Hugging Face 
+ 0 2 
+ Lens
+ Fine-tuning with a simple API. Self-serve or white-glove. You keep the weights.
+ Start fine-tuning 
+ 0 3 
+ Photon
+ Inference engine. Hand-tuned kernels. Mac, Windows, CUDA — Jetson to B200.
+ Run Moondream fast 
+ 0 4 
+ Moondream Cloud
+ Hosted inference. OpenAI-compatible API. Pay per image, no commitment.
+ Get an API key 
+ Moondream is trusted by
+ Every machine will see. 
+ Build with Moondream 3.1 today.
+ Try the playground Talk to us 
+ Moondream 
+ A production vision language model. Built by M87 Labs.
+ Product
+ Open Models Lens Photon Moondream Cloud Plans & support 
+ Developers
+ Docs Playground GitHub Hugging Face 
+ Company
+ About Blog Careers Press Contact 
+ Legal
+ Privacy Terms Model license 
+ © 2026 M87 Labs, Inc. Proudly built in the USA
+
+=== [pricing] https://moondream.ai/pricing (lang=en)
+Pricing | Moondream 
+ Moondream 
+ Products 
+ Docs 
+ Playground 
+ Pricing 
+ Blog 
+ 10k Try the model 
+ Simple pricing for Moondream. 
+ Models and Photon are free. Cloud and Lens are pay-per-token. Paid plans add collaboration and support.
+ Start free Start Team Talk to sales 
+ Pick what you need.
+ Photon
+ Free 
+ The world's fastest VLM inference engine — runs everywhere, from edge to server-class hardware.
+ $ npm install moondream 
+ Learn more about Photon 
+ Models
+ Free 
+ Open and free to use — hosting them as a cloud service requires our license.
+ ..or click here if you really want to download them: Moondream 2 · Moondream 3 (preview) 
+ Cloud
+ Pay per token 
+ Hosted Moondream inference — lightning fast, always on, with HIPAA and SOC 2 available.
+ Moondream 3.1 9B A2B — Real-time
+ $0.30 / 1M input tokens 
+ $1.00 / 1M output tokens 
+ Moondream 3.1 9B A2B — Batch
+ $0.15 / 1M input tokens 
+ $0.50 / 1M output tokens 
+ Moondream 3 Preview — Real-time
+ $0.30 / 1M input tokens 
+ $2.50 / 1M output tokens 
+ Moondream 3 Preview — Batch
+ $0.15 / 1M input tokens 
+ $1.25 / 1M output tokens 
+ Start building 
+ Lens
+ Pay per token 
+ Fine-tune Moondream for your task.
+ Rollouts
+ Same as Cloud inference 
+ Training
+ $0.60 / 1M training tokens 
+ Fine-tune a model 
+ Need collaboration or support?
+ Paid plans add seats, shared resources, billing, and direct support. They do not change token pricing.
+ Free
+ $0 / month 
+ Best for individual developers. 
+ Start free 1 seat
+ Personal workspace
+ Discord support
+ $5/month usage credits
+ Recommended Team
+ $350 / month 
+ or $300 /mo billed annually
+ Best for teams building together. 
+ Start Team 10 seats
+ Shared fine-tunes
+ Shared projects
+ Shared API keys
+ Shared billing
+ Dedicated Slack
+ 1h/month consulting
+ $5/month usage credits
+ Additional seats available. Contact us.
+ Enterprise
+ Custom 
+ Best for larger, regulated, or custom deployments. 
+ Talk to sales Custom seats
+ HIPAA / BAA available
+ Security review
+ Priority support
+ Custom deployment support
+ Custom billing
+ Paid plans do not change Cloud or Lens token pricing.
+ Good to know
+ Every workspace includes $5/month usage credits . 
+ Batch and fine-tune (LoRA) multipliers are the same for every model . 
+ Fine-tuned models use the same inference pricing as base models. 
+ Fine-tunes are unlimited . Usage and rate limits still apply. 
+ Paid plans are for collaboration and support , not cheaper tokens. 
+ Moondream 
+ A production vision language model. Built by M87 Labs.
+ Product
+ Open Models Lens Photon Moondream Cloud Plans & support 
+ Developers
+ Docs Playground GitHub Hugging Face 
+ Company
+ About Blog Careers Press Contact 
+ Legal
+ Privacy Terms Model license 
+ © 2026 M87 Labs, Inc. Proudly built in the USA
+
+=== [about] https://docs.moondream.ai/ (lang=en)
+Overview | Moondream Docs 
+ Skip to main content 
+ Moondream Playground Docs Blog Pricing 
+ Overview 
+ Getting Started 
+ API 
+ OpenAI Compatibility 
+ Streaming 
+ Batch API 
+ Reasoning 
+ Rate Limits 
+ Run Moondream Locally 
+ Speech Transcription 
+ Skills 
+ Finetuning (beta) 
+ Sample Projects 
+ FAQ 
+ Cloud pricing 
+ Overview 
+ On this page 
+ Overview
+ Moondream is an open-weight family of Vision Language Models (VLMs) built for powerful, efficient visual reasoning. The Moondream 3 family uses a mixture-of-experts architecture with grounded visual reasoning, a 32k context window, and native support for multiple vision skills—like pointing, counting, and object detection—all designed with a deployment-friendly ethos.
+ For local inference, Photon exposes Moondream, Qwen, Gemma,
+and speech-to-text models including Whisper, Qwen3-ASR, and Parakeet through
+the Moondream Python package. For hosted inference, choose a model through the
+ Cloud API quickstart .
+ Key stats ​ 
+ 9B total params, 2B active params (maintains similar inference speeds to our previous models)
+ 32k context window (up from 2k)
+ Model Skills ​ 
+ Moondream has built-in vision-specific skills that make it easy to generate specific types of vision outputs (e.g., bounding boxes, or 2D points). These are:
+ Object Detection
+ Pointing and Counting
+ Visual Question Answering
+ Captioning
+ Image Segmentation
+ Performance Benchmarks ​ 
+ Selected benchmark results are shown alongside larger frontier models for
+comparison. Moondream is designed to produce strong results with substantially
+lower inference cost.
+ Task Moondream 3 Preview GPT 5 Gemini 2.5-Flash Claude 4 Sonnet 
+ Object Detection 
+ RefCOCOg 88.6 49.8 75.1 26.2 
+ RefCOCO+ 81.8 46.3 70.2 23.4 
+ RefCOCO 91.1 57.2 75.8 30.1 
+ Counting 
+ CountBenchQA 93.2 89.3 81.2 90.1 
+ Document Understanding 
+ ChartQA 86.6 85* 79.5 74.3* 
+ DocVQA 88.3 89* 94.2 89.5* 
+ Hallucination (higher is better) 
+ POPE 89.0 88.4 88.1 84.6 
+ License ​ 
+ Copyright (c) 2025 M87 Labs, Inc.
+This distribution includes Model Weights licensed under the Business Source License 1.1 with an Additional Use Grant (No Third-Party Service). Commercial hosting or rehosting requires an agreement with contact@m87.ai .
+ Learn more ​ 
+ Try the interactive demo 
+ Full technical specifications for Moondream 3
+ Browse legacy versions of Moondream
+ Get started with our Getting Started guide
+ Edit this page 
+ Next
+ Getting Started
+ Key stats 
+ Model Skills 
+ Performance Benchmarks 
+ License 
+ Learn more
+
+=== [meta] https://moondream.ai
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/m87-labs/moondream
+# 🌔 moondream
+
+a tiny vision language model that kicks ass and runs anywhere
+
+[Website](https://moondream.ai/) | [Demo](https://moondream.ai/playground)
+
+## Examples
+
+| Image                  | Example                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![](assets/demo-1.jpg) | **What is the girl doing?**<br>The girl is sitting at a table and eating a large hamburger.<br><br>**What color is the girl's hair?**<br>The girl's hair is white.                                                                                                                                                                                                                                                                                                                                                                                                    |
+| ![](assets/demo-2.jpg) | **What is this?**<br>This is a computer server rack, which is a device used to store and manage multiple computer servers. The rack is filled with various computer servers, each with their own dedicated space and power supply. The servers are connected to the rack via multiple cables, indicating that they are part of a larger system. The rack is placed on a carpeted floor, and there is a couch nearby, suggesting that the setup is in a living or entertainment area.<br><br>**What is behind the stand?**<br>Behind the stand, there is a brick wall. |
+
+## About
+
+Moondream is a highly efficient open-source vision language model that combines powerful image understanding capabilities with a remarkably small footprint. It's designed to be versatile and accessible, capable of running on a wide range of devices and platforms.
+
+The project offers two model variants:
+
+- **Moondream 2B**: The primary model with 2 billion parameters, offering robust performance for general-purpose image understanding tasks including captioning, visual question answering, and object detection.
+- **Moondream 0.5B**: A compact 500 million parameter model specifically optimized as a distillation target for edge devices, enabling efficient deployment on resource-constrained hardware while maintaining impressive capabilities.
+
+## How to use
+
+Moondream can be run locally, or in the cloud. Please refer to the [Getting Started](https://moondream.ai/c/docs/quickstart) page for details.
+
+## Special thanks
+
+* [Modal](https://modal.com/?utm_source=github&utm_medium=github&utm_campaign=moondream) - Modal lets you run jobs in the cloud, by just writing a few lines of Python. Here's an [example of how to run Moondream on Modal](https://github.com/m87-labs/moondream-examples/tree/main/quickstart/modal).
+

@@ -1,0 +1,88 @@
+{
+ "company": "SWE-bench Team",
+ "one_liner_ko": "실제 GitHub 이슈로 언어 모델·에이전트의 소프트웨어 문제 해결률을 평가하는 벤치마크와 공식 리더보드.",
+ "what_it_does_ko": "SWE-bench는 12개 Python 저장소의 실제 GitHub 이슈 2,294개로 만든 원조 벤치마크이며, 각 항목은 해결한 과제 비율(% Resolved)로 보고된다. 사람이 걸러낸 Verified(500개), 저비용 평가용 Lite(300개), 9개 프로그래밍 언어 42개 저장소의 Multilingual(300개), 시각 요소가 있는 Multimodal(480개), 같은 mini-SWE-agent 환경에서 비교하는 Bash Only 등 여러 리더보드가 있다. 비용 대비 해결률 등 다양한 차트로 결과를 비교할 수 있다.",
+ "key_features": [
+  "원조 SWE-bench(2,294개 과제)",
+  "SWE-bench Verified(사람 검수 500개)",
+  "Lite(300개)·Multilingual(300개, 9개 언어)·Multimodal(480개)",
+  "Bash Only: 같은 mini-SWE-agent 환경에서 비교",
+  "해결률·비용·단계 수 등 결과 비교 차트",
+  "오픈 가중치 모델 선택 필터",
+  "SWE-agent·SWE-smith·SWE-bench CLI 등 관련 도구"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": null,
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.swebench.com/",
+   "quote": "© 2026 SWE-bench Team. All rights reserved."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.swebench.com/",
+   "quote": "The original benchmark: real GitHub issues from 12 Python repositories."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.swebench.com/",
+   "quote": "Each entry reports % Resolved , the percentage of task instances solved."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.swebench.com/",
+   "quote": "Tasks from 42 repositories across 9 programming languages."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.swebench.com/",
+   "quote": "SWE-bench\n 2294 instances \n The original benchmark"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.swebench.com/",
+   "quote": "A human-filtered subset of SWE-bench."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.swebench.com/",
+   "quote": "A subset curated for less costly evaluation."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.swebench.com/",
+   "quote": "Issues described with visual elements."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.swebench.com/",
+   "quote": "The default Verified view: every model in the same mini-SWE-agent environment."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.swebench.com/",
+   "quote": "Resolved vs cost (scatter plot)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.swebench.com/",
+   "quote": "Select all \n Select all (open weights) \n Each entry"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.swebench.com/",
+   "quote": "SWE-agent (legacy) \n SWE-bench CLI \n SWE-ReX"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

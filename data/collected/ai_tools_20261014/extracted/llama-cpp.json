@@ -1,0 +1,109 @@
+{
+ "company": "ggml-org (GitHub 조직)",
+ "one_liner_ko": "C/C++로 구현한 LLM 추론 엔진.",
+ "what_it_does_ko": "llama.cpp는 최소한의 설정으로 다양한 하드웨어에서 LLM(및 VLM) 추론을 최고 수준 성능으로 돌리는 것을 목표로 하는 C/C++ 프로젝트다. 의존성 없는 순수 C/C++ 구현이며 Apple silicon을 중요하게 지원한다. 설치 스크립트·Docker·미리 빌드된 바이너리·소스 빌드로 설치할 수 있고, Hugging Face에서 모델을 바로 받아 실행하거나 OpenAI 호환 API 서버와 내장 웹 UI를 띄울 수 있다.",
+ "key_features": [
+  "의존성 없는 순수 C/C++ 구현",
+  "Apple silicon 우선 지원",
+  "Hugging Face 모델 바로 다운로드·실행(llama cli)",
+  "OpenAI 호환 API 서버(llama serve)",
+  "llama serve 내장 웹 UI",
+  "Docker·미리 빌드된 바이너리·소스 빌드 설치"
+ ],
+ "use_cases_ko": [
+  "로컬 PC나 클라우드에서 LLM·VLM 추론 실행"
+ ],
+ "pricing": {
+  "free_tier": "불명 (가격 표기 없음)",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "MIT",
+ "api": "있음",
+ "platforms": [
+  "CLI",
+  "API",
+  "맥"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://github.com/ggml-org/llama.cpp",
+   "quote": "[ggml](https://github.com/ggml-org/ggml)"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/ggml-org/llama.cpp",
+   "quote": "<b>LLM inference in C/C++</b>"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/ggml-org/llama.cpp",
+   "quote": "The main goal of `llama.cpp` is to enable LLM (and VLM) inference with minimal setup and state-of-the-art performance on"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/ggml-org/llama.cpp",
+   "quote": "Plain C/C++ implementation without any dependencies"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/ggml-org/llama.cpp",
+   "quote": "Apple silicon is a first-class citizen"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/ggml-org/llama.cpp",
+   "quote": "# Download and run a model directly from Hugging Face"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/ggml-org/llama.cpp",
+   "quote": "# Launch OpenAI-compatible API server"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/ggml-org/llama.cpp",
+   "quote": "<i>Built-in web UI against <b>llama serve</b></i>"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/ggml-org/llama.cpp",
+   "quote": "Download pre-built binaries from the [releases page]"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/ggml-org/llama.cpp",
+   "quote": "a wide range of hardware - locally and in the cloud."
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/ggml-org/llama.cpp",
+   "quote": "[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)"
+  },
+  {
+   "field": "api",
+   "url": "https://github.com/ggml-org/llama.cpp",
+   "quote": "[llama-server REST API](https://github.com/ggml-org/llama.cpp/issues/9291)"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/ggml-org/llama.cpp",
+   "quote": "llama cli -hf ggml-org/Qwen3.5-0.8B-GGUF"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/ggml-org/llama.cpp",
+   "quote": "Apple silicon is a first-class citizen"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "MIT 라이선스 오픈소스 C/C++ 추론 엔진, 직접 설치해 로컬·클라우드에서 실행, 요금 표기 없음",
+   "diff": "기존 '사용량 기반 종량제(클라우드/GPU)'와 반대로 자체 설치형 오픈소스 소프트웨어",
+   "url": "https://github.com/ggml-org/llama.cpp"
+  }
+ ],
+ "plan_change": []
+}

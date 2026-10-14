@@ -1,0 +1,662 @@
+=== [home] https://openai.com/ko-KR/index/openai-o3-mini/ (lang=ko-KR)
+OpenAI o3-mini | OpenAI 
+ 메인 콘텐츠로 건너뛰기 리서치 
+ 제품 
+ 비즈니스 
+ 개발자 
+ 회사 
+ 재단 (새 창에서 열기) 
+ 로그인 ChatGPT 사용하기 (새 창에서 열기) 
+ 리서치 
+ 제품 
+ 비즈니스 
+ 개발자 
+ 회사 
+ 재단 (새 창에서 열기) 
+ OpenAI o3-mini | OpenAI 2025년 1월 31일
+ 출시 
+ OpenAI o3‑mini
+ 비용 효율적인 추론의 한계를 넓히다.
+ This post introduced OpenAI o3-mini.
+ The ChatGPT access information reflects the January 2025 launch. o3‑mini is deprecated in the API. See the API deprecation schedule ⁠ (새 창에서 열기) .
+ For the current experience:
+ View current API models (새 창에서 열기) 
+ Try ChatGPT (새 창에서 열기) 
+ 빠르고 강력하며 STEM 추론에 최적화 빠르고 강력하며 STEM 추론에 최적화 
+ 모델 속도 및 성능 
+ 안전 
+ 앞으로 공개될 것들 
+ 빠르고 강력하며 STEM 추론에 최적화 
+ 모델 속도 및 성능 
+ 안전 
+ 앞으로 공개될 것들 
+ 추론 시리즈 중 가장 비용 효율적인 최신 모델인 OpenAI o3‑mini를 출시합니다. 오늘부터 ChatGPT와 API에서 모두 사용할 수 있습니다. 2024년 12월에 사전 공개한 ⁠ 이 강력하고 빠른 모델은 소형 모델이 달성할 수 있는 한계를 뛰어넘었습니다. OpenAI o1‑mini의 저렴한 비용과 짧은 레이턴시를 유지하면서도 특히, 과학, 수학, 코딩에 강한 탁월한 STEM 기능을 제공합니다. 
+ OpenAI o3‑mini는 함수 호출 ⁠ (새 창에서 열기) , 구조화된 출력값 ⁠ (새 창에서 열기) , 개발자 메시지 ⁠ (새 창에서 열기) 등 개발자의 요청이 많았던 기능을 지원하는 OpenAI 최초의 소형 추론 모델로, 즉시 사용할 수 있습니다. OpenAI o1‑mini와 OpenAI o1‑preview와 마찬가지로 o3‑mini는 스트리밍 ⁠ (새 창에서 열기) 을 지원합니다. 또한 개발자는 세 가지 추론 노력 ⁠ (새 창에서 열기) 옵션(낮음, 중간, 높음) 중에서 선택하여 특정 사용 사례에 맞게 최적화할 수 있습니다. 이러한 유연성은 복잡한 문제를 해결할 때 o3‑mini가 “더 열심히 생각”하도록 하거나 레이턴시가 우려되는 경우 속도를 우선시할 수 있습니다. o3‑mini는 비전 기능을 지원하지 않으므로 개발자는 시각적 추론 작업에는 OpenAI o1을 계속 사용해야 합니다. 오늘부터 API 사용 등급 3~5 ⁠ (새 창에서 열기) 의 일부 개발자를 대상으로 채팅 완성 API, 어시스턴트 API, 배치 API에서 o3‑mini를 순차적으로 선보입니다. 
+ ChatGPT Plus, Team, Pro 사용자는 오늘부터 OpenAI o3‑mini에 액세스할 수 있습니다. Enterprise 사용자는 2월부터 액세스할 수 있습니다. 더 높은 요청 제한과 짧은 레이턴시를 제공하는 o3‑mini는 모델 선택기에서 OpenAI o1‑mini를 대체하여 코딩, STEM, 논리적 문제를 해결하는 작업에 매력적인 선택지가 될 것입니다. 이번 업그레이드의 일환으로 Plus와 Team 사용자의 요청 제한을 세 배로 늘려, o1‑mini에서 하루 50건이었던 요청 제한이 o3‑mini의 경우 하루 150건으로 늘어납니다. 또한 이제 o3‑mini는 검색 기능을 함께 사용할 수 있어 관련 웹 소스에 대한 링크가 포함된 최신 답변을 찾을 수 있습니다. 이는 추론 모델 전반에 걸쳐 검색을 통합하기 위해 작업하고 있는 초기 프로토타입입니다. 
+ 오늘부터 무료 플랜 사용자도 메시지 작성기에서 ‘이성’을 선택하거나 응답을 다시 생성하여 OpenAI o3‑mini를 사용해 볼 수 있습니다. ChatGPT에서 무료 사용자가 추론 모델을 사용할 수 있도록 하는 것은 이번이 처음입니다. 
+ 여전히 OpenAI o1을 광범위한 일반 지식 추론 모델로 제공하지만, OpenAI o3‑mini는 정확성과 속도를 요구하는 기술 영역에 특화된 대안이 되어줍니다. ChatGPT에서 o3‑mini는 중간 수준의 추론 노력을 사용하여 속도와 정확성 사이의 균형을 맞춥니다. 모든 유료 사용자는 응답을 생성하는 데 시간이 조금 더 걸리는 더 높은 지능 버전을 사용하기 위해 모델 선택기에서 o3‑mini‑high 를 선택할 수도 있습니다. Pro 사용자는 o3‑mini 와 o3‑mini‑high 에 무제한으로 액세스할 수 있습니다. 
+ 빠르고 강력하며 STEM 추론에 최적화
+ 이전 버전인 OpenAI o1과 마찬가지로 OpenAI o3‑mini는 STEM 추론에 최적화되었습니다. 중간 수준의 추론 노력을 사용했을 때 o3‑mini는 수학, 코딩, 과학 분야에서 성능이 o1과 비슷하지만 응답 속도는 더 빠릅니다. 전문가 테스터들의 평가에서 o3‑mini가 OpenAI o1‑mini보다 더 정확하고 명확한 답변을 제공하고, 더 강력한 추론 능력을 갖췄다는 것이 드러났습니다. 테스터들은 o3‑mini의 응답을 o1‑mini보다 56% 더 선호했으며, 어려운 실제 문제에서 주요 오류가 39% 감소하는 것을 관찰했습니다. 중간 수준의 추론 노력을 사용했을 때 o3‑mini는 AIME와GPQA를 포함한 가장 까다로운 추론 및 지능 평가에서 o1의 성능과 비슷한 것으로 나타났습니다. 
+ Competition Math (AIME 2024)
+ Mathematics : With low reasoning effort, OpenAI o3‑mini achieves comparable performance with OpenAI o1‑mini, while with medium effort, o3‑mini achieves comparable performance with o1. Meanwhile, with high reasoning effort, o3‑mini outperforms both OpenAI o1‑mini and OpenAI o1, where the gray shaded regions show the performance of majority vote (consensus) with 64 samples. 
+ PhD-level Science Questions (GPQA Diamond)
+ PhD-level science : On PhD-level biology, chemistry, and physics questions, with low reasoning effort, OpenAI o3‑mini achieves performance above OpenAI o1‑mini. With high effort, o3‑mini achieves comparable performance with o1. 
+ FrontierMath
+ Research-level mathematics : OpenAI o3‑mini with high reasoning performs better than its predecessor on FrontierMath. On FrontierMath, when prompted to use a Python tool, o3‑mini with high reasoning effort solves over 32% of problems on the first attempt, including more than 28% of the challenging (T3) problems. These numbers are provisional, and the chart above shows performance without tools or a calculator. 
+ Competition Code (Codeforces)
+ Competition coding : On Codeforces competitive programming, OpenAI o3‑mini achieves progressively higher Elo scores with increased reasoning effort, all outperforming o1‑mini. With medium reasoning effort, it matches o1’s performance. 
+ Software Engineering (SWE-bench Verified (n=477))
+ Software engineering : o3‑mini is our highest performing released model on SWEbench-verified. For additional datapoints on SWE-bench Verified results with high reasoning effort, including with the open-source Agentless scaffold (39%) and an internal tools scaffold representing maximum capability elicitation (61%), see our system card⁠ ⁠ as the source of truth. All SWE-bench evaluation runs use a fixed subset of n=477 verified tasks which have been validated on our internal infrastructure. 
+ LiveBench Coding
+ LiveBench coding : OpenAI o3‑mini surpasses o1‑high even at medium reasoning effort, highlighting its efficiency in coding tasks. At high reasoning effort, o3‑mini further extends its lead, achieving significantly stronger performance across key metrics. 
+ 일반 지식
+ General knowledge : o3‑mini outperforms o1‑mini in knowledge evaluations across general knowledge domains. 
+ 인간 선호도 평가
+ Human preference evaluation : Evaluations by external expert testers also show that OpenAI o3‑mini produces more accurate and clearer answers, with stronger reasoning abilities than OpenAI o1‑mini, especially for STEM. Testers preferred o3‑mini's responses to o1‑mini 56% of the time and observed a 39% reduction in major errors on difficult real-world questions. 
+ 모델 속도 및 성능
+ OpenAI o1에 맞먹는 인텔리전스를 갖춘 OpenAI o3‑mini는 더 빠른 성능과 향상된 효율성을 제공합니다. 위에서 강조한 STEM 평가 외에도 o3‑mini는 중간 수준의 추론 노력을 사용할 때 추가적인 수학 및 사실성 평가에서 우수한 결과를 보여줍니다. A/B 테스트에서 o3‑mini의 평균 응답 시간이 7.7초로, 평균 응답 시간이 10.16초인 o1‑mini보다 24% 더 빠르게 응답을 제공했습니다. 
+ Latency comparison between o1-mini and o3-mini (medium)
+ Latency : o3‑mini has an avg 2500ms faster time to first token than o1‑mini. 
+ 안전
+ OpenAI o3‑mini가 안전하게 응답할 수 있도록 훈련하는 데 사용한 핵심 기술 중 하나는 숙고적 정렬 입니다. 이 기술을 사용하여 모델이 사용자의 프롬프트에 답변하기 전에 사람이 작성한 안전 사양에 대해 추론하도록 훈련했습니다. OpenAI o1과 비슷하게 어려운 안전성 및 탈옥 평가에서 o3‑mini가 GPT‑4o를 훨씬 능가하는 것으로 나타났습니다. 모델을 배포하기 전 o1와 동일한 준비, 외부 레드팀 구성, 안전 평가 접근 방식을 사용하여 o3‑mini의 안전 위험 요소를 신중하게 평가했습니다. 얼리 액세스에서 o3‑mini 테스트를 신청해 주신 안전 테스터분들께 감사드립니다. 아래의 평가에 대한 자세한 정보와 잠재적 위험 요소 및 완화 조치의 효과에 대한 포괄적인 설명은 o3‑mini 시스템 카드 에서 확인하실 수 있습니다. 
+ Disallowed content evaluations
+ Jailbreak Evaluations
+ 앞으로 공개될 것들
+ OpenAI o3‑mini의 출시는 비용 효율적인 인텔리전스의 한계를 뛰어넘는다는 OpenAI의 사명에 한 걸음 더 가까워진다는 것을 의미합니다. 낮은 비용을 유지하면서 STEM 영역에 대한 추론을 최적화함으로써 고품질 AI에 대한 접근성을 더욱 높이고 있습니다. 이 모델은 최고 수준의 추론 기능을 유지하면서 GPT‑4 출시 이후 토큰당 가격을 95%까지 낮춰 인텔리전스 비용을 낮추고 있는 OpenAI의 성과를 이어가고 있습니다. AI 도입이 확대됨에 따라 OpenAI는 인텔리전스, 효율성, 안전이 균형을 이루는 모델을 대규모로 구축하여 최전선에서 업계를 선도하기 위해 최선을 다하고 있습니다. 
+ 저자
+ OpenAI
+ 훈련
+ Brian Zhang, Eric Mitchell, Hongyu Ren, Kevin Lu, Max Schwarzer, Michelle Pokrass, Shengjia Zhao, Ted Sanders 
+ 평가
+ Adam Kalai, Alex Tachard Passos, Ben Sokolowsky, Elaine Ya Le, Erik Ritter, Hao Sheng, Hanson Wang, Ilya Kostrikov, James Lee, Johannes Ferstad, Michael Lampe, Prashanth Radhakrishnan, Sean Fitzgerald, Sebastien Bubeck, Yann Dubois, Yu Bai 
+ 프론티어 평가 및 준비
+ Andy Applebaum, Elizabeth Proehl, Evan Mays, Joel Parish, Kevin Liu, Leon Maksin, Leyton Ho, Miles Wang, Michele Wang, Olivia Watkins, Patrick Chao, Samuel Miserendino, Tejal Patwardhan 
+ 엔지니어링
+ Adam Walker, Akshay Nathan, Alyssa Huang, Andy Wang, Ankit Gohel, Ben Eggers, Brian Yu, Bryan Ashley, Callie Riggins Zetino, Chengdu Huang, Christian Hoareau, Davin Bogan, Emily Sokolova, Eric Horacek, Eric Jiang, Felipe Petroski Such, Jonah Cohen, Josh Gross, Justin Becker, Kan Wu, Kevin W
+
+=== [about] https://platform.openai.com/login/ (lang=ko-kr)
+잠시만 기다리십시오… 
+ 확인에 성공했습니다. platform.openai.com 응답을 기다리는 중
+
+=== [pricing] https://chatgpt.com/ko-KR/pricing/ (lang=ko-KR)
+요금제 | ChatGPT 
+ 소개 
+ 기능 ChatGPT Work 
+ 심층 리서치 
+ Dot 
+ Finances 
+ 이미지 
+ 플러그인 
+ 원격 
+ 쇼핑 
+ Slack 및 Teams 
+ Sites 
+ 스페이스 
+ 공부 모드 
+ 음성 
+ 영상 음성 대화 
+ 활용법 ChatGPT 이용 대상
+ 학생 
+ 대학교수 
+ 교사 
+ 과학 및 의학 
+ 부모 
+ 제대 군인 
+ 작업 아이디어
+ 피트니스, 웰니스, 건강 
+ 돈과 재무 
+ 레시피와 요리 
+ 여행 및 탐험 
+ 사용 방법
+ Canva 사용하기 
+ Spotify 사용하기 
+ PowerPoint용 ChatGPT 
+ PDF 사용하기 
+ 프레젠테이션 사용하기 
+ 스프레드시트 사용하기 
+ 대학생을 위한 ChatGPT 
+ Codex 개요 
+ 가격 
+ Enterprise 
+ ChatGPT로 가져오기 
+ 개발자 문서 
+ 이벤트 
+ Business Business
+ 개요 
+ 세일즈 문의 
+ 전자상거래 판매자 
+ AI 솔루션 대상
+ 데이터과학 및 분석 
+ 엔지니어링 
+ 재무 
+ 제품 관리 
+ 영업 마케팅 
+ 가격 개요 
+ Free 
+ Go 
+ Plus 
+ Pro 
+ Business 
+ Enterprise 
+ 교육용 
+ 다운로드 
+ 로그인
+ 무료로 회원 가입
+ 소개 
+ 기능 
+ 활용법 
+ Codex 
+ Business 
+ 가격 
+ 다운로드 
+ ChatGPT
+ 가격
+ 개인·비즈니스·엔터프라이즈용 ChatGPT 플랜 가격을 자세히 비교해 보세요
+ 개인 
+ 비즈니스 및 엔터프라이즈 
+ Free
+ 일상적인 작업을 위한 인텔리전스
+ /월
+ Free 사용하기 
+ GPT-6와 무제한 텍스트 대화
+ 업로드를 포함한 메시지 제한적 이용
+ 이미지 생성 기능 제한적 이용
+ 제한된 음성 채팅
+ 제한적 심층 리서치
+ 제한적 메모리와 컨텍스트
+ 제한적 Codex 이용
+ 데스크톱에서 ChatGPT Work의 제한적 이용
+ 이미 이용 중인 플랜이 있나요? 결제 관련 도움말 ⁠ 을 참조하세요
+무제한 텍스트 대화에는 악용 방지를 위한 제한이 적용됩니다. 자세히 알아보기 ⁠ 
+ Go
+ 이용 범위 확대
+ /월
+ Go 사용하기 
+ Free 플랜의 모든 기능 포함
+ 도구를 사용한 메시지 더 많이 이용
+ 더 높은 업로드 한도
+ 더 높은 이미지 생성 한도
+ 음성 대화 더 많이 이용
+ 더욱 긴 메모리
+ 이 플랜에는 광고가 포함될 수 있습니다. 자세히 알아보기 ⁠ 
+무제한 텍스트 채팅에는 악용 방지를 위한 제한이 적용됩니다. 자세히 알아보기 ⁠ 
+ Plus
+ 고급 인텔리전스로 생산성 향상
+ /월
+ Plus 사용하기 
+ Go 플랜의 모든 기능 포함
+ GPT-6 기반 고급 추론 모델
+ 메시지 및 업로드 한도 확장
+ 더 복잡하고 정확한 이미지 생성
+ 심층 리서치 기능 확장
+ 확장된 메모리와 컨텍스트
+ 프로젝트, 예약 작업, 맞춤형 GPT
+ Codex 사용 한도 확대
+ 데스크톱, 웹, 모바일에서 ChatGPT Work 이용 확대 
+ 신규 기능 조기 체험
+ 한도가 적용됩니다 ⁠ 
+ 전문가급 추론
+ 생산성 극대화
+ From
+ /월
+ Pro 사용하기 
+ Plus 플랜의 모든 기능 포함
+ 3가지 사용량 등급 중 선택
+ GPT-6 Astra 기반의 전문가급 추론
+ 더 오래 이어갈 수 있는 Codex 및 ChatGPT Work 세션
+ 언제나 함께 일하는 에이전트 Dot
+ 무제한 이미지 생성 및 더 빠른 처리 속도
+ 최대 심층 리서치
+ 메모리 및 컨텍스트 최대 한도
+ 프로젝트, 예약 작업, 맞춤형 GPT 기능 확장
+ 신규 기능 리서치 프리뷰
+ 무제한 사용 혜택에는 오남용 방지 정책이 적용됩니다. 자세히 알아보기 ⁠ 
+ 선도적인 기업들이 선택한 ChatGPT
+ 플랜별 기능 비교
+ Free
+ Free 사용하기 
+ Go
+ Go 사용하기 
+ Plus
+ Plus 사용하기 
+ Pro
+ Pro 사용하기 
+ 필수 기능
+ 일상적인 텍스트 대화
+ 무제한* 플랜: Free, 기능: 일상적인 텍스트 대화, 무제한* 
+ 무제한* 플랜: Go, 기능: 일상적인 텍스트 대화, 무제한* 
+ 무제한* 플랜: Plus, 기능: 일상적인 텍스트 대화, 무제한* 
+ 무제한* 플랜: Pro, 기능: 일상적인 텍스트 대화, 무제한* 
+ 채팅 기록
+ 무제한* 플랜: Free, 기능: 채팅 기록, 무제한* 
+ 무제한* 플랜: Go, 기능: 채팅 기록, 무제한* 
+ 무제한* 플랜: Plus, 기능: 채팅 기록, 무제한* 
+ 무제한* 플랜: Pro, 기능: 채팅 기록, 무제한* 
+ 웹 및 모바일(iOS, Android) 액세스
+ 플랜: Free, 기능: 웹 및 모바일(iOS, Android) 액세스, 예 
+ 플랜: Go, 기능: 웹 및 모바일(iOS, Android) 액세스, 예 
+ 플랜: Plus, 기능: 웹 및 모바일(iOS, Android) 액세스, 예 
+ 플랜: Pro, 기능: 웹 및 모바일(iOS, Android) 액세스, 예 
+ 모델
+ GPT-6.1 Sol
+ 플랜: Free, 기능: GPT-6.1 Sol, 아니요 
+ 플랜: Go, 기능: GPT-6.1 Sol, 아니요 
+ 제한적 플랜: Plus, 기능: GPT-6.1 Sol, 제한적 
+ 한도 확장 플랜: Pro, 기능: GPT-6.1 Sol, 한도 확장 
+ GPT-6 Astra
+ 플랜: Free, 기능: GPT-6 Astra, 아니요 
+ 플랜: Go, 기능: GPT-6 Astra, 아니요 
+ 제한적 플랜: Plus, 기능: GPT-6 Astra, 제한적 
+ 한도 확장 플랜: Pro, 기능: GPT-6 Astra, 한도 확장 
+ GPT-6 Sol
+ 플랜: Free, 기능: GPT-6 Sol, 아니요 
+ 플랜: Go, 기능: GPT-6 Sol, 아니요 
+ 제한적 플랜: Plus, 기능: GPT-6 Sol, 제한적 
+ 한도 확장 플랜: Pro, 기능: GPT-6 Sol, 한도 확장 
+ GPT-6 Luna
+ 플랜: Free, 기능: GPT-6 Luna, 예 
+ 플랜: Go, 기능: GPT-6 Luna, 예 
+ 제한적 플랜: Plus, 기능: GPT-6 Luna, 제한적 
+ 한도 확장 플랜: Pro, 기능: GPT-6 Luna, 한도 확장 
+ GPT-5.6 Sol
+ 플랜: Free, 기능: GPT-5.6 Sol, 아니요 
+ 플랜: Go, 기능: GPT-5.6 Sol, 아니요 
+ 한도 확장 플랜: Plus, 기능: GPT-5.6 Sol, 한도 확장 
+ 무제한* 플랜: Pro, 기능: GPT-5.6 Sol, 무제한* 
+ GPT-5.6 Sol Pro
+ 플랜: Free, 기능: GPT-5.6 Sol Pro, 아니요 
+ 플랜: Go, 기능: GPT-5.6 Sol Pro, 아니요 
+ 한도 확장 플랜: Plus, 기능: GPT-5.6 Sol Pro, 한도 확장 
+ 무제한* 플랜: Pro, 기능: GPT-5.6 Sol Pro, 무제한* 
+ GPT-5.6 Terra
+ 데스크톱에서 Work 및 Codex의 제한적 이용 플랜: Free, 기능: GPT-5.6 Terra, 데스크톱에서 Work 및 Codex의 제한적 이용 
+ 데스크톱에서 Work 및 Codex의 제한적 이용 플랜: Go, 기능: GPT-5.6 Terra, 데스크톱에서 Work 및 Codex의 제한적 이용 
+ 한도 확장 플랜: Plus, 기능: GPT-5.6 Terra, 한도 확장 
+ 무제한* 플랜: Pro, 기능: GPT-5.6 Terra, 무제한* 
+ GPT-5.6 Luna
+ 플랜: Free, 기능: GPT-5.6 Luna, 아니요 
+ 플랜: Go, 기능: GPT-5.6 Luna, 아니요 
+ 한도 확장 플랜: Plus, 기능: GPT-5.6 Luna, 한도 확장 
+ 무제한* 플랜: Pro, 기능: GPT-5.6 Luna, 무제한* 
+ GPT-5 Thinking Mini
+ 플랜: Free, 기능: GPT-5 Thinking Mini, 예 
+ 플랜: Go, 기능: GPT-5 Thinking Mini, 예 
+ 한도 확장 플랜: Plus, 기능: GPT-5 Thinking Mini, 한도 확장 
+ 무제한* 플랜: Pro, 기능: GPT-5 Thinking Mini, 무제한* 
+ 레거시 모델
+ 플랜: Free, 기능: 레거시 모델, 아니요 
+ 플랜: Go, 기능: 레거시 모델, 아니요 
+ 플랜: Plus, 기능: 레거시 모델, 예 
+ 플랜: Pro, 기능: 레거시 모델, 예 
+ 응답 속도
+ 대역폭과 가용성에 따라 제한적 플랜: Free, 기능: 응답 속도, 대역폭과 가용성에 따라 제한적 
+ 대역폭과 가용성에 따라 제한적 플랜: Go, 기능: 응답 속도, 대역폭과 가용성에 따라 제한적 
+ 빠름 플랜: Plus, 기능: 응답 속도, 빠름 
+ Ultrafast(지원되는 등급의 경우) 플랜: Pro, 기능: 응답 속도, Ultrafast(지원되는 등급의 경우) 
+ GPT Instant 총 컨텍스트 윈도우
+ 27K 플랜: Free, 기능: GPT Instant 총 컨텍스트 윈도우, 27K 
+ 54K 플랜: Go, 기능: GPT Instant 총 컨텍스트 윈도우, 54K 
+ 54K 플랜: Plus, 기능: GPT Instant 총 컨텍스트 윈도우, 54K 
+ 128K 플랜: Pro, 기능: GPT Instant 총 컨텍스트 윈도우, 128K 
+ GPT Instant 입력값 최대***
+ 약 12페이지 분량의 텍스트 플랜: Free, 기능: GPT Instant 입력값 최대***, 약 12페이지 분량의 텍스트 
+ 약 40페이지 분량의 텍스트 플랜: Go, 기능: GPT Instant 입력값 최대***, 약 40페이지 분량의 텍스트 
+ 약 40페이지 분량의 텍스트 플랜: Plus, 기능: GPT Instant 입력값 최대***, 약 40페이지 분량의 텍스트 
+ 약 250페이지 분량의 텍스트 플랜: Pro, 기능: GPT Instant 입력값 최대***, 약 250페이지 분량의 텍스트 
+ GPT 추론 총 컨텍스트 윈도우
+ 상이 플랜: Free, 기능: GPT 추론 총 컨텍스트 윈도우, 상이 
+ 256K 플랜: Go, 기능: GPT 추론 총 컨텍스트 윈도우, 256K 
+ 256K 플랜: Plus, 기능: GPT 추론 총 컨텍스트 윈도우, 256K 
+ 400K 플랜: Pro, 기능: GPT 추론 총 컨텍스트 윈도우, 400K 
+ GPT 추론 입력값 최대***
+ 상이 플랜: Free, 기능: GPT 추론 입력값 최대***, 상이 
+ 약 320페이지 분량의 텍스트 플랜: Go, 기능: GPT 추론 입력값 최대***, 약 320페이지 분량의 텍스트 
+ 약 320페이지 분량의 텍스트 플랜: Plus, 기능: GPT 추론 입력값 최대***, 약 320페이지 분량의 텍스트 
+ 약 680페이지의 텍스트 플랜: Pro, 기능: GPT 추론 입력값 최대***, 약 680페이지의 텍스트 
+ 모델 개선에 따른 주기적 품질 및 속도 개선
+ 플랜: Free, 기능: 모델 개선에 따른 주기적 품질 및 속도 개선, 예 
+ 플랜: Go, 기능: 모델 개선에 따른 주기적 품질 및 속도 개선, 예 
+ 플랜: Plus, 기능: 모델 개선에 따른 주기적 품질 및 속도 개선, 예 
+ 플랜: Pro, 기능: 모델 개선에 따른 주기적 품질 및 속도 개선, 예 
+ 기능
+ ChatGPT Work
+ 제한됨(데스크톱 앱) 플랜: Free, 기능: ChatGPT Work, 제한됨(데스크톱 앱) 
+ 제한됨(데스크톱 앱) 플랜: Go, 기능: ChatGPT Work, 제한됨(데스크톱 앱) 
+ 데스크톱, 웹 및 모바일 플랜: Plus, 기능: ChatGPT Work, 데스크톱, 웹 및 모바일 
+ 데스크톱, 웹 및 모바일 플랜: Pro, 기능: ChatGPT Work, 데스크톱, 웹 및 모바일 
+ Codex
+ 제한적 플랜: Free, 기능: Codex, 제한적 
+ 제한적 플랜: Go, 기능: Codex, 제한적 
+ 플랜: Plus, 기능: Codex, 예 
+ 한도 확장 플랜: Pro, 기능: Codex, 한도 확장 
+ Dots
+ 플랜: Free, 기능: Dots, 아니요 
+ 플랜: Go, 기능: Dots, 아니요 
+ 플랜: Plus, 기능: Dots, 아니요 
+ 플랜: Pro, 기능: Dots, 예 
+ 플러그인
+ 제한적 플랜: Free, 기능: 플러그인, 제한적 
+ 플랜: Go, 기능: 플러그인, 예 
+ 플랜: Plus, 기능: 플러그인, 예 
+ 플랜: Pro, 기능: 플러그인, 예 
+ 음성
+ 제한적 플랜: Free, 기능: 음성, 제한적 
+ 한도 확장 플랜: Go, 기능: 음성, 한도 확장 
+ 한도 확장 플랜: Plus, 기능: 음성, 한도 확장 
+ 무제한* 플랜: Pro, 기능: 음성, 무제한* 
+ 영상 음성 대화
+ 플랜: Free, 기능: 영상 음성 대화, 아니요 
+ 플랜: Go, 기능: 영상 음성 대화, 예 
+ 플랜: Plus, 기능: 영상 음성 대화, 예 
+ 플랜: Pro, 기능: 영상 음성 대화, 예 
+ Health
+ 플랜: Free, 기능: Health, 예 
+ 플랜: Go, 기능: Health, 예 
+ 플랜: Plus, 기능: Health, 예 
+ 플랜: Pro, 기능: Health, 예 
+ Finances
+ 플랜: Free, 기능: Finances, 예 
+ 플랜: Go, 기능: Finances, 예 
+ 플랜: Plus, 기능: Finances, 예 
+ 플랜: Pro, 기능: Finances, 예 
+ 스킬(베타)
+ 플랜: Free, 기능: 스킬(베타), 예 
+ 플랜: Go, 기능: 스킬(베타), 예 
+ 플랜: Plus, 기능: 스킬(베타), 예 
+ 확장 지원 플랜: Pro, 기능: 스킬(베타), 확장 지원 
+ 메모리
+ 제한적 플랜: Free, 기능
+
+=== [pricing] https://chatgpt.com/ko-KR/pricing/ (lang=ko-KR)
+요금제 | ChatGPT 
+ 소개 
+ 기능 ChatGPT Work 
+ 심층 리서치 
+ Dot 
+ Finances 
+ 이미지 
+ 플러그인 
+ 원격 
+ 쇼핑 
+ Slack 및 Teams 
+ Sites 
+ 스페이스 
+ 공부 모드 
+ 음성 
+ 영상 음성 대화 
+ 활용법 ChatGPT 이용 대상
+ 학생 
+ 대학교수 
+ 교사 
+ 과학 및 의학 
+ 부모 
+ 제대 군인 
+ 작업 아이디어
+ 피트니스, 웰니스, 건강 
+ 돈과 재무 
+ 레시피와 요리 
+ 여행 및 탐험 
+ 사용 방법
+ Canva 사용하기 
+ Spotify 사용하기 
+ PowerPoint용 ChatGPT 
+ PDF 사용하기 
+ 프레젠테이션 사용하기 
+ 스프레드시트 사용하기 
+ 대학생을 위한 ChatGPT 
+ Codex 개요 
+ 가격 
+ Enterprise 
+ ChatGPT로 가져오기 
+ 개발자 문서 
+ 이벤트 
+ Business Business
+ 개요 
+ 세일즈 문의 
+ 전자상거래 판매자 
+ AI 솔루션 대상
+ 데이터과학 및 분석 
+ 엔지니어링 
+ 재무 
+ 제품 관리 
+ 영업 마케팅 
+ 가격 개요 
+ Free 
+ Go 
+ Plus 
+ Pro 
+ Business 
+ Enterprise 
+ 교육용 
+ 다운로드 
+ 로그인
+ 무료로 회원 가입
+ 소개 
+ 기능 
+ 활용법 
+ Codex 
+ Business 
+ 가격 
+ 다운로드 
+ ChatGPT
+ 가격
+ 개인·비즈니스·엔터프라이즈용 ChatGPT 플랜 가격을 자세히 비교해 보세요
+ 개인 
+ 비즈니스 및 엔터프라이즈 
+ Free
+ 일상적인 작업을 위한 인텔리전스
+ /월
+ Free 사용하기 
+ GPT-6와 무제한 텍스트 대화
+ 업로드를 포함한 메시지 제한적 이용
+ 이미지 생성 기능 제한적 이용
+ 제한된 음성 채팅
+ 제한적 심층 리서치
+ 제한적 메모리와 컨텍스트
+ 제한적 Codex 이용
+ 데스크톱에서 ChatGPT Work의 제한적 이용
+ 이미 이용 중인 플랜이 있나요? 결제 관련 도움말 ⁠ 을 참조하세요
+무제한 텍스트 대화에는 악용 방지를 위한 제한이 적용됩니다. 자세히 알아보기 ⁠ 
+ Go
+ 이용 범위 확대
+ /월
+ Go 사용하기 
+ Free 플랜의 모든 기능 포함
+ 도구를 사용한 메시지 더 많이 이용
+ 더 높은 업로드 한도
+ 더 높은 이미지 생성 한도
+ 음성 대화 더 많이 이용
+ 더욱 긴 메모리
+ 이 플랜에는 광고가 포함될 수 있습니다. 자세히 알아보기 ⁠ 
+무제한 텍스트 채팅에는 악용 방지를 위한 제한이 적용됩니다. 자세히 알아보기 ⁠ 
+ Plus
+ 고급 인텔리전스로 생산성 향상
+ /월
+ Plus 사용하기 
+ Go 플랜의 모든 기능 포함
+ GPT-6 기반 고급 추론 모델
+ 메시지 및 업로드 한도 확장
+ 더 복잡하고 정확한 이미지 생성
+ 심층 리서치 기능 확장
+ 확장된 메모리와 컨텍스트
+ 프로젝트, 예약 작업, 맞춤형 GPT
+ Codex 사용 한도 확대
+ 데스크톱, 웹, 모바일에서 ChatGPT Work 이용 확대 
+ 신규 기능 조기 체험
+ 한도가 적용됩니다 ⁠ 
+ 전문가급 추론
+ 생산성 극대화
+ From
+ /월
+ Pro 사용하기 
+ Plus 플랜의 모든 기능 포함
+ 3가지 사용량 등급 중 선택
+ GPT-6 Astra 기반의 전문가급 추론
+ 더 오래 이어갈 수 있는 Codex 및 ChatGPT Work 세션
+ 언제나 함께 일하는 에이전트 Dot
+ 무제한 이미지 생성 및 더 빠른 처리 속도
+ 최대 심층 리서치
+ 메모리 및 컨텍스트 최대 한도
+ 프로젝트, 예약 작업, 맞춤형 GPT 기능 확장
+ 신규 기능 리서치 프리뷰
+ 무제한 사용 혜택에는 오남용 방지 정책이 적용됩니다. 자세히 알아보기 ⁠ 
+ 선도적인 기업들이 선택한 ChatGPT
+ 플랜별 기능 비교
+ Free
+ Free 사용하기 
+ Go
+ Go 사용하기 
+ Plus
+ Plus 사용하기 
+ Pro
+ Pro 사용하기 
+ 필수 기능
+ 일상적인 텍스트 대화
+ 무제한* 플랜: Free, 기능: 일상적인 텍스트 대화, 무제한* 
+ 무제한* 플랜: Go, 기능: 일상적인 텍스트 대화, 무제한* 
+ 무제한* 플랜: Plus, 기능: 일상적인 텍스트 대화, 무제한* 
+ 무제한* 플랜: Pro, 기능: 일상적인 텍스트 대화, 무제한* 
+ 채팅 기록
+ 무제한* 플랜: Free, 기능: 채팅 기록, 무제한* 
+ 무제한* 플랜: Go, 기능: 채팅 기록, 무제한* 
+ 무제한* 플랜: Plus, 기능: 채팅 기록, 무제한* 
+ 무제한* 플랜: Pro, 기능: 채팅 기록, 무제한* 
+ 웹 및 모바일(iOS, Android) 액세스
+ 플랜: Free, 기능: 웹 및 모바일(iOS, Android) 액세스, 예 
+ 플랜: Go, 기능: 웹 및 모바일(iOS, Android) 액세스, 예 
+ 플랜: Plus, 기능: 웹 및 모바일(iOS, Android) 액세스, 예 
+ 플랜: Pro, 기능: 웹 및 모바일(iOS, Android) 액세스, 예 
+ 모델
+ GPT-6.1 Sol
+ 플랜: Free, 기능: GPT-6.1 Sol, 아니요 
+ 플랜: Go, 기능: GPT-6.1 Sol, 아니요 
+ 제한적 플랜: Plus, 기능: GPT-6.1 Sol, 제한적 
+ 한도 확장 플랜: Pro, 기능: GPT-6.1 Sol, 한도 확장 
+ GPT-6 Astra
+ 플랜: Free, 기능: GPT-6 Astra, 아니요 
+ 플랜: Go, 기능: GPT-6 Astra, 아니요 
+ 제한적 플랜: Plus, 기능: GPT-6 Astra, 제한적 
+ 한도 확장 플랜: Pro, 기능: GPT-6 Astra, 한도 확장 
+ GPT-6 Sol
+ 플랜: Free, 기능: GPT-6 Sol, 아니요 
+ 플랜: Go, 기능: GPT-6 Sol, 아니요 
+ 제한적 플랜: Plus, 기능: GPT-6 Sol, 제한적 
+ 한도 확장 플랜: Pro, 기능: GPT-6 Sol, 한도 확장 
+ GPT-6 Luna
+ 플랜: Free, 기능: GPT-6 Luna, 예 
+ 플랜: Go, 기능: GPT-6 Luna, 예 
+ 제한적 플랜: Plus, 기능: GPT-6 Luna, 제한적 
+ 한도 확장 플랜: Pro, 기능: GPT-6 Luna, 한도 확장 
+ GPT-5.6 Sol
+ 플랜: Free, 기능: GPT-5.6 Sol, 아니요 
+ 플랜: Go, 기능: GPT-5.6 Sol, 아니요 
+ 한도 확장 플랜: Plus, 기능: GPT-5.6 Sol, 한도 확장 
+ 무제한* 플랜: Pro, 기능: GPT-5.6 Sol, 무제한* 
+ GPT-5.6 Sol Pro
+ 플랜: Free, 기능: GPT-5.6 Sol Pro, 아니요 
+ 플랜: Go, 기능: GPT-5.6 Sol Pro, 아니요 
+ 한도 확장 플랜: Plus, 기능: GPT-5.6 Sol Pro, 한도 확장 
+ 무제한* 플랜: Pro, 기능: GPT-5.6 Sol Pro, 무제한* 
+ GPT-5.6 Terra
+ 데스크톱에서 Work 및 Codex의 제한적 이용 플랜: Free, 기능: GPT-5.6 Terra, 데스크톱에서 Work 및 Codex의 제한적 이용 
+ 데스크톱에서 Work 및 Codex의 제한적 이용 플랜: Go, 기능: GPT-5.6 Terra, 데스크톱에서 Work 및 Codex의 제한적 이용 
+ 한도 확장 플랜: Plus, 기능: GPT-5.6 Terra, 한도 확장 
+ 무제한* 플랜: Pro, 기능: GPT-5.6 Terra, 무제한* 
+ GPT-5.6 Luna
+ 플랜: Free, 기능: GPT-5.6 Luna, 아니요 
+ 플랜: Go, 기능: GPT-5.6 Luna, 아니요 
+ 한도 확장 플랜: Plus, 기능: GPT-5.6 Luna, 한도 확장 
+ 무제한* 플랜: Pro, 기능: GPT-5.6 Luna, 무제한* 
+ GPT-5 Thinking Mini
+ 플랜: Free, 기능: GPT-5 Thinking Mini, 예 
+ 플랜: Go, 기능: GPT-5 Thinking Mini, 예 
+ 한도 확장 플랜: Plus, 기능: GPT-5 Thinking Mini, 한도 확장 
+ 무제한* 플랜: Pro, 기능: GPT-5 Thinking Mini, 무제한* 
+ 레거시 모델
+ 플랜: Free, 기능: 레거시 모델, 아니요 
+ 플랜: Go, 기능: 레거시 모델, 아니요 
+ 플랜: Plus, 기능: 레거시 모델, 예 
+ 플랜: Pro, 기능: 레거시 모델, 예 
+ 응답 속도
+ 대역폭과 가용성에 따라 제한적 플랜: Free, 기능: 응답 속도, 대역폭과 가용성에 따라 제한적 
+ 대역폭과 가용성에 따라 제한적 플랜: Go, 기능: 응답 속도, 대역폭과 가용성에 따라 제한적 
+ 빠름 플랜: Plus, 기능: 응답 속도, 빠름 
+ Ultrafast(지원되는 등급의 경우) 플랜: Pro, 기능: 응답 속도, Ultrafast(지원되는 등급의 경우) 
+ GPT Instant 총 컨텍스트 윈도우
+ 27K 플랜: Free, 기능: GPT Instant 총 컨텍스트 윈도우, 27K 
+ 54K 플랜: Go, 기능: GPT Instant 총 컨텍스트 윈도우, 54K 
+ 54K 플랜: Plus, 기능: GPT Instant 총 컨텍스트 윈도우, 54K 
+ 128K 플랜: Pro, 기능: GPT Instant 총 컨텍스트 윈도우, 128K 
+ GPT Instant 입력값 최대***
+ 약 12페이지 분량의 텍스트 플랜: Free, 기능: GPT Instant 입력값 최대***, 약 12페이지 분량의 텍스트 
+ 약 40페이지 분량의 텍스트 플랜: Go, 기능: GPT Instant 입력값 최대***, 약 40페이지 분량의 텍스트 
+ 약 40페이지 분량의 텍스트 플랜: Plus, 기능: GPT Instant 입력값 최대***, 약 40페이지 분량의 텍스트 
+ 약 250페이지 분량의 텍스트 플랜: Pro, 기능: GPT Instant 입력값 최대***, 약 250페이지 분량의 텍스트 
+ GPT 추론 총 컨텍스트 윈도우
+ 상이 플랜: Free, 기능: GPT 추론 총 컨텍스트 윈도우, 상이 
+ 256K 플랜: Go, 기능: GPT 추론 총 컨텍스트 윈도우, 256K 
+ 256K 플랜: Plus, 기능: GPT 추론 총 컨텍스트 윈도우, 256K 
+ 400K 플랜: Pro, 기능: GPT 추론 총 컨텍스트 윈도우, 400K 
+ GPT 추론 입력값 최대***
+ 상이 플랜: Free, 기능: GPT 추론 입력값 최대***, 상이 
+ 약 320페이지 분량의 텍스트 플랜: Go, 기능: GPT 추론 입력값 최대***, 약 320페이지 분량의 텍스트 
+ 약 320페이지 분량의 텍스트 플랜: Plus, 기능: GPT 추론 입력값 최대***, 약 320페이지 분량의 텍스트 
+ 약 680페이지의 텍스트 플랜: Pro, 기능: GPT 추론 입력값 최대***, 약 680페이지의 텍스트 
+ 모델 개선에 따른 주기적 품질 및 속도 개선
+ 플랜: Free, 기능: 모델 개선에 따른 주기적 품질 및 속도 개선, 예 
+ 플랜: Go, 기능: 모델 개선에 따른 주기적 품질 및 속도 개선, 예 
+ 플랜: Plus, 기능: 모델 개선에 따른 주기적 품질 및 속도 개선, 예 
+ 플랜: Pro, 기능: 모델 개선에 따른 주기적 품질 및 속도 개선, 예 
+ 기능
+ ChatGPT Work
+ 제한됨(데스크톱 앱) 플랜: Free, 기능: ChatGPT Work, 제한됨(데스크톱 앱) 
+ 제한됨(데스크톱 앱) 플랜: Go, 기능: ChatGPT Work, 제한됨(데스크톱 앱) 
+ 데스크톱, 웹 및 모바일 플랜: Plus, 기능: ChatGPT Work, 데스크톱, 웹 및 모바일 
+ 데스크톱, 웹 및 모바일 플랜: Pro, 기능: ChatGPT Work, 데스크톱, 웹 및 모바일 
+ Codex
+ 제한적 플랜: Free, 기능: Codex, 제한적 
+ 제한적 플랜: Go, 기능: Codex, 제한적 
+ 플랜: Plus, 기능: Codex, 예 
+ 한도 확장 플랜: Pro, 기능: Codex, 한도 확장 
+ Dots
+ 플랜: Free, 기능: Dots, 아니요 
+ 플랜: Go, 기능: Dots, 아니요 
+ 플랜: Plus, 기능: Dots, 아니요 
+ 플랜: Pro, 기능: Dots, 예 
+ 플러그인
+ 제한적 플랜: Free, 기능: 플러그인, 제한적 
+ 플랜: Go, 기능: 플러그인, 예 
+ 플랜: Plus, 기능: 플러그인, 예 
+ 플랜: Pro, 기능: 플러그인, 예 
+ 음성
+ 제한적 플랜: Free, 기능: 음성, 제한적 
+ 한도 확장 플랜: Go, 기능: 음성, 한도 확장 
+ 한도 확장 플랜: Plus, 기능: 음성, 한도 확장 
+ 무제한* 플랜: Pro, 기능: 음성, 무제한* 
+ 영상 음성 대화
+ 플랜: Free, 기능: 영상 음성 대화, 아니요 
+ 플랜: Go, 기능: 영상 음성 대화, 예 
+ 플랜: Plus, 기능: 영상 음성 대화, 예 
+ 플랜: Pro, 기능: 영상 음성 대화, 예 
+ Health
+ 플랜: Free, 기능: Health, 예 
+ 플랜: Go, 기능: Health, 예 
+ 플랜: Plus, 기능: Health, 예 
+ 플랜: Pro, 기능: Health, 예 
+ Finances
+ 플랜: Free, 기능: Finances, 예 
+ 플랜: Go, 기능: Finances, 예 
+ 플랜: Plus, 기능: Finances, 예 
+ 플랜: Pro, 기능: Finances, 예 
+ 스킬(베타)
+ 플랜: Free, 기능: 스킬(베타), 예 
+ 플랜: Go, 기능: 스킬(베타), 예 
+ 플랜: Plus, 기능: 스킬(베타), 예 
+ 확장 지원 플랜: Pro, 기능: 스킬(베타), 확장 지원 
+ 메모리
+ 제한적 플랜: Free, 기능
+
+=== [meta] https://openai.com/ko-KR/index/openai-o3-mini/
+html lang: ko-KR
+hreflang: ca-es, da-dk, de-de, en-us, es-419, es-es, fi-fi, fr-fr, ga-ie, gu-in, hi-in, id-id, it-it, ja-jp, jv-id, ka-ge, kk-cyrl, ko-kr, mn-mn, mt-mt, my-mm, nb-no, nl-nl, pa-in, pl-pl, pt-br, so-dj, sr-rs, sv-se, tr-tr, vi-vn, x-default, zh-hans-cn, zh-hant, zh-hant-hk
+화면에 보이는 언어 이름: 한국어

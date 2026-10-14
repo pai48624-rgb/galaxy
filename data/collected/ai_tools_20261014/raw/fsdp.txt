@@ -1,0 +1,423 @@
+=== [home] https://docs.pytorch.org/docs/2.14/fsdp.html (lang=en)
+FullyShardedDataParallel — PyTorch 2.14 documentation 
+ 새 창에서 열림 외부 웹사이트를 엽니다. 새 창에서 외부 웹사이트를 엽니다. 
+ 이 웹사이트는 분석, 개인화 및 표적 광고뿐만 아니라 필수 사이트 기능을 활성화하기 위해 쿠키와 같은 기술을 활용합니다. 자세한 내용은 다음 링크를 참조하십시오. 개인정보 보호정책 
+ 환경 설정 관리 
+ Skip to main content 
+ Font Awesome fontawesome.com -->Back to top 
+ Font Awesome fontawesome.com -->
+ Ctrl + K 
+ Font Awesome fontawesome.com -->
+ v2.14.0 (stable) 
+ v2.15.0 (unstable) v2.14.0 (stable) v2.13.0 v2.12.0 v2.11.0 v2.10.0 v2.9.1 v2.8.0 v2.7.0 v2.6.0 v2.5.0 v2.4.0 v2.3.0 v2.2.0 v2.1.0 v2.0.0 v1.13 v1.12 v1.11 v1.10 v1.9.1 v1.9.0 v1.8.1 v1.8.0 v1.7.1 v1.7.0 v1.6.0 v1.5.1 v1.5.0 v1.4.0 v1.3.1 v1.3.0 v1.2.0 v1.1.0 v1.0.1 v1.0.0 v0.4.1 v0.4.0 v0.3.1 v0.3.0 v0.2.0 v0.1.12 
+ Install PyTorch  Font Awesome fontawesome.com -->
+ User Guide
+ PyTorch Main Components
+ torch.compiler
+ torch.export
+ Developer Notes
+ Accelerator Integration
+ Reference API
+ torch
+ torch.nn
+ torch.nn.functional
+ torch.Tensor
+ Tensor Attributes
+ Tensor Views
+ Automatic Mixed Precision package - torch.amp
+ Automatic differentiation package - torch.autograd
+ torch.library
+ torch.accelerator
+ torch.cpu
+ torch.cuda
+ Understanding CUDA Memory Usage
+ torch.mps
+ torch.xpu
+ torch.mtia
+ torch.mtia.memory
+ torch.mtia.mtia_graph
+ Meta device
+ torch.backends
+ torch.export
+ Distributed communication package - torch.distributed
+ torch.distributed.tensor
+ Generic Join Context Manager
+ Torch Distributed Elastic
+ FullyShardedDataParallel
+ torch.distributed.fsdp.fully_shard
+ Tensor Parallelism - torch.distributed.tensor.parallel
+ Distributed Optimizers
+ Pipeline Parallelism
+ PyTorch Symmetric Memory
+ Distributed Checkpoint - torch.distributed.checkpoint
+ Probability distributions - torch.distributions
+ torch.compiler API reference
+ torch.fft
+ torch.func
+ torch.futures
+ torch.fx
+ torch.fx.experimental
+ torch.hub
+ torch.linalg
+ torch.monitor
+ torch.signal
+ torch.special
+ torch.overrides
+ torch.nativert
+ torch.package
+ torch.profiler
+ torch.nn.init
+ torch.nn.attention
+ torch.onnx
+ torch.optim
+ Complex Numbers
+ DDP Communication Hooks
+ Quantization
+ Distributed RPC Framework
+ torch.random
+ torch.masked
+ torch.nested
+ torch.Size
+ torch.sparse
+ torch.Storage
+ torch.testing
+ torch.utils
+ Benchmark Utils - torch.utils.benchmark
+ torch.utils.checkpoint
+ torch.utils.cpp_extension
+ torch.utils.data
+ torch.utils.deterministic
+ JIT Utils - torch.utils.jit
+ torch.utils.dlpack
+ torch.utils.mobile_optimizer
+ torch.utils.model_zoo
+ torch.utils.tensorboard
+ torch.utils.module_tracker
+ Type Info
+ torch.config
+ torch.__future__
+ torch._logging
+ Torch Environment Variables
+ Developer Notes
+ Automatic Mixed Precision examples
+ Autograd mechanics
+ Broadcasting semantics
+ CPU threading and TorchScript inference
+ CUDA semantics
+ PyTorch Custom Operators Landing Page
+ Distributed Data Parallel
+ Extending PyTorch
+ Extending torch.func with autograd.Function
+ Frequently Asked Questions
+ Getting Started on Intel GPU
+ Gradcheck mechanics
+ HIP (ROCm) semantics
+ Features for large-scale deployments
+ LibTorch Stable ABI
+ LocalTensor Tutorial: Single-Process SPMD Debugging
+ MKLDNN backend
+ Modules
+ MPS backend
+ Multiprocessing best practices
+ Numerical accuracy
+ Out Notes
+ Reproducibility
+ Serialization semantics
+ TensorIterator (Python)
+ Windows FAQ
+ Community
+ PyTorch Governance | Build + CI
+ PyTorch Contribution Guide
+ PyTorch Design Philosophy
+ PyTorch Governance | Mechanics
+ PyTorch Governance | Maintainers
+ Tutorials  Font Awesome fontawesome.com -->
+ Go to 
+ pytorch.org Font Awesome fontawesome.com --> 
+ Font Awesome fontawesome.com -->
+ Ctrl + K 
+ Font Awesome fontawesome.com -->
+ × 
+ 맞춤검색
+ 정렬 기준
+ Relevance
+ Date
+ Font Awesome fontawesome.com -->
+ Font Awesome fontawesome.com -->
+ Font Awesome fontawesome.com -->
+ Font Awesome fontawesome.com -->
+ X 
+ Font Awesome fontawesome.com -->
+ GitHub 
+ Font Awesome fontawesome.com -->
+ PyTorch Forum 
+ Font Awesome fontawesome.com -->
+ PyPi 
+ Font Awesome fontawesome.com -->
+ v2.14.0 (stable) 
+ v2.15.0 (unstable) v2.14.0 (stable) v2.13.0 v2.12.0 v2.11.0 v2.10.0 v2.9.1 v2.8.0 v2.7.0 v2.6.0 v2.5.0 v2.4.0 v2.3.0 v2.2.0 v2.1.0 v2.0.0 v1.13 v1.12 v1.11 v1.10 v1.9.1 v1.9.0 v1.8.1 v1.8.0 v1.7.1 v1.7.0 v1.6.0 v1.5.1 v1.5.0 v1.4.0 v1.3.1 v1.3.0 v1.2.0 v1.1.0 v1.0.1 v1.0.0 v0.4.1 v0.4.0 v0.3.1 v0.3.0 v0.2.0 v0.1.12 
+ Install PyTorch  Font Awesome fontawesome.com -->
+ User Guide
+ PyTorch Main Components
+ torch.compiler
+ torch.export
+ Developer Notes
+ Accelerator Integration
+ Reference API
+ torch
+ torch.nn
+ torch.nn.functional
+ torch.Tensor
+ Tensor Attributes
+ Tensor Views
+ Automatic Mixed Precision package - torch.amp
+ Automatic differentiation package - torch.autograd
+ torch.library
+ torch.accelerator
+ torch.cpu
+ torch.cuda
+ Understanding CUDA Memory Usage
+ torch.mps
+ torch.xpu
+ torch.mtia
+ torch.mtia.memory
+ torch.mtia.mtia_graph
+ Meta device
+ torch.backends
+ torch.export
+ Distributed communication package - torch.distributed
+ torch.distributed.tensor
+ Generic Join Context Manager
+ Torch Distributed Elastic
+ FullyShardedDataParallel
+ torch.distributed.fsdp.fully_shard
+ Tensor Parallelism - torch.distributed.tensor.parallel
+ Distributed Optimizers
+ Pipeline Parallelism
+ PyTorch Symmetric Memory
+ Distributed Checkpoint - torch.distributed.checkpoint
+ Probability distributions - torch.distributions
+ torch.compiler API reference
+ torch.fft
+ torch.func
+ torch.futures
+ torch.fx
+ torch.fx.experimental
+ torch.hub
+ torch.linalg
+ torch.monitor
+ torch.signal
+ torch.special
+ torch.overrides
+ torch.nativert
+ torch.package
+ torch.profiler
+ torch.nn.init
+ torch.nn.attention
+ torch.onnx
+ torch.optim
+ Complex Numbers
+ DDP Communication Hooks
+ Quantization
+ Distributed RPC Framework
+ torch.random
+ torch.masked
+ torch.nested
+ torch.Size
+ torch.sparse
+ torch.Storage
+ torch.testing
+ torch.utils
+ Benchmark Utils - torch.utils.benchmark
+ torch.utils.checkpoint
+ torch.utils.cpp_extension
+ torch.utils.data
+ torch.utils.deterministic
+ JIT Utils - torch.utils.jit
+ torch.utils.dlpack
+ torch.utils.mobile_optimizer
+ torch.utils.model_zoo
+ torch.utils.tensorboard
+ torch.utils.module_tracker
+ Type Info
+ torch.config
+ torch.__future__
+ torch._logging
+ Torch Environment Variables
+ Developer Notes
+ Automatic Mixed Precision examples
+ Autograd mechanics
+ Broadcasting semantics
+ CPU threading and TorchScript inference
+ CUDA semantics
+ PyTorch Custom Operators Landing Page
+ Distributed Data Parallel
+ Extending PyTorch
+ Extending torch.func with autograd.Function
+ Frequently Asked Questions
+ Getting Started on Intel GPU
+ Gradcheck mechanics
+ HIP (ROCm) semantics
+ Features for large-scale deployments
+ LibTorch Stable ABI
+ LocalTensor Tutorial: Single-Process SPMD Debugging
+ MKLDNN backend
+ Modules
+ MPS backend
+ Multiprocessing best practices
+ Numerical accuracy
+ Out Notes
+ Reproducibility
+ Serialization semantics
+ TensorIterator (Python)
+ Windows FAQ
+ Community
+ PyTorch Governance | Build + CI
+ PyTorch Contribution Guide
+ PyTorch Design Philosophy
+ PyTorch Governance | Mechanics
+ PyTorch Governance | Maintainers
+ Tutorials  Font Awesome fontawesome.com -->
+ Go to 
+ pytorch.org Font Awesome fontawesome.com --> 
+ Font Awesome fontawesome.com -->
+ Ctrl + K 
+ Font Awesome fontawesome.com -->
+ × 
+ 맞춤검색
+ 정렬 기준
+ Relevance
+ Date
+ Font Awesome fontawesome.com -->
+ Font Awesome fontawesome.com -->
+ Font Awesome fontawesome.com -->
+ Font Awesome fontawesome.com -->
+ X 
+ Font Awesome fontawesome.com -->
+ GitHub 
+ Font Awesome fontawesome.com -->
+ PyTorch Forum 
+ Font Awesome fontawesome.com -->
+ PyPi 
+ Section Navigation
+ C++ 
+ Pytho
+
+=== [about] https://docs.pytorch.org/ao/stable/index.html (lang=en)
+Welcome to the torchao Documentation — torchao 0.17 documentation 
+ 새 창에서 열림 외부 웹사이트를 엽니다. 새 창에서 외부 웹사이트를 엽니다. 
+ 이 웹사이트는 분석, 개인화 및 표적 광고뿐만 아니라 필수 사이트 기능을 활성화하기 위해 쿠키와 같은 기술을 활용합니다. 자세한 내용은 다음 링크를 참조하십시오. 개인정보 보호정책 
+ 환경 설정 관리 
+ Skip to main content 
+ Font Awesome fontawesome.com -->Back to top 
+ Font Awesome fontawesome.com -->
+ Ctrl + K 
+ This is documentation for an unstable development version . Switch to stable version 
+ Font Awesome fontawesome.com --> 
+ Font Awesome fontawesome.com -->
+ Choose version 
+ v0.17.0 (unstable) v0.16.0 (stable) 
+ Workflows
+ Quantized Training
+ Quantization-Aware Training (QAT)
+ Quantized Inference
+ API Reference
+ torchao.quantization
+ torchao.quantization.qat
+ torchao.sparsity
+ torchao.float8
+ torchao.core
+ torchao.prototype.quant_logger
+ torchao.prototype.attention (prototype)
+ Tutorials
+ First Quantization Example
+ (Part 1) Pre-training with float8
+ (Part 2) Fine-tuning with QAT, QLoRA, and float8
+ (Part 3) Serving on vLLM, SGLang, ExecuTorch
+ Integration with VLLM: Architecture and Usage Guide
+ Hugging Face Integration
+ Serialization
+ Static Quantization
+ Writing Your Own Quantized Tensor
+ Writing Your Own Quantized Tensor (advanced)
+ MXFP8 Expert Parallel Training
+ Debugging Weights and Activations with quant_logger
+ Contributing
+ Quantization Overview
+ Contributor Guide
+ Sparsity Overview
+ Benchmarking API Guide
+ PT2E Quantization
+ PyTorch 2 Export Post Training Quantization
+ PyTorch 2 Export Quantization-Aware Training (QAT)
+ PyTorch 2 Export Quantization with X86 Backend through Inductor
+ PyTorch 2 Export Quantization with Intel GPU Backend through Inductor
+ PyTorch 2 Export Quantization for OpenVINO torch.compile Backend
+ How to Write a Quantizer for PyTorch 2 Export Quantization
+ Go to 
+ pytorch.org Font Awesome fontawesome.com --> 
+ Font Awesome fontawesome.com -->
+ Ctrl + K 
+ Font Awesome fontawesome.com -->
+ Font Awesome fontawesome.com -->
+ Font Awesome fontawesome.com -->
+ Font Awesome fontawesome.com -->
+ X 
+ Font Awesome fontawesome.com -->
+ GitHub 
+ Font Awesome fontawesome.com -->
+ Discourse 
+ Font Awesome fontawesome.com -->
+ PyPi 
+ Font Awesome fontawesome.com -->
+ Choose version 
+ v0.17.0 (unstable) v0.16.0 (stable) 
+ Workflows
+ Quantized Training
+ Quantization-Aware Training (QAT)
+ Quantized Inference
+ API Reference
+ torchao.quantization
+ torchao.quantization.qat
+ torchao.sparsity
+ torchao.float8
+ torchao.core
+ torchao.prototype.quant_logger
+ torchao.prototype.attention (prototype)
+ Tutorials
+ First Quantization Example
+ (Part 1) Pre-training with float8
+ (Part 2) Fine-tuning with QAT, QLoRA, and float8
+ (Part 3) Serving on vLLM, SGLang, ExecuTorch
+ Integration with VLLM: Architecture and Usage Guide
+ Hugging Face Integration
+ Serialization
+ Static Quantization
+ Writing Your Own Quantized Tensor
+ Writing Your Own Quantized Tensor (advanced)
+ MXFP8 Expert Parallel Training
+ Debugging Weights and Activations with quant_logger
+ Contributing
+ Quantization Overview
+ Contributor Guide
+ Sparsity Overview
+ Benchmarking API Guide
+ PT2E Quantization
+ PyTorch 2 Export Post Training Quantization
+ PyTorch 2 Export Quantization-Aware Training (QAT)
+ PyTorch 2 Export Quantization with X86 Backend through Inductor
+ PyTorch 2 Export Quantization with Intel GPU Backend through Inductor
+ PyTorch 2 Export Quantization for OpenVINO torch.compile Backend
+ How to Write a Quantizer for PyTorch 2 Export Quantization
+ Go to 
+ pytorch.org Font Awesome fontawesome.com --> 
+ Font Awesome fontawesome.com -->
+ Ctrl + K 
+ Font Awesome fontawesome.com -->
+ Font Awesome fontawesome.com -->
+ Font Awesome fontawesom
+
+=== [meta] https://docs.pytorch.org/docs/2.14/fsdp.html
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음

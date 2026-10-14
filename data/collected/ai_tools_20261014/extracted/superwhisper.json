@@ -1,0 +1,157 @@
+{
+ "company": null,
+ "one_liner_ko": "말한 내용을 다듬어진 글로 바꿔 Slack·Gmail 등 어떤 앱에든 넣어주는 AI 음성 받아쓰기 앱.",
+ "what_it_does_ko": "Superwhisper는 음성을 메시지·이메일·메모·코드 등 서식이 갖춰진 텍스트로 바꿔 사용 중인 앱에 넣어준다. macOS·Windows·iOS·Android에서 실행되며, 로컬 음성 모델로 인터넷 없이도 받아쓰기가 된다. 모드별로 어조와 형식을 바꿀 수 있고 GPT·Claude·Llama 등 모델을 골라 쓸 수 있다. 회의 녹음·요약, 파일 전사(Pro), 코딩 에이전트 연동도 지원한다.",
+ "key_features": [
+  "모든 앱에서 음성→텍스트 입력(자동 붙여넣기)",
+  "오프라인 받아쓰기(로컬 음성 모델)",
+  "사용자 어휘(이름·약어·전문용어) 등록",
+  "메시지·이메일 등 기본 모드와 커스텀 모드",
+  "100개 이상 언어 지원, 영어로 번역",
+  "회의 녹음·자동 요약",
+  "오디오·동영상 파일 전사(Pro)",
+  "코딩 에이전트(Cursor, Claude Code 등) 연동, CLI·MCP 서버"
+ ],
+ "use_cases_ko": [
+  "코딩 에이전트에 키보드 없이 음성으로 지시",
+  "회의 녹음과 자동 노트",
+  "메시지·이메일을 말로 빠르게 작성"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Free $0: 모든 앱 받아쓰기, 회의 녹음, Whisper 모델 무제한)",
+  "plans": [
+   {
+    "name": "Free",
+    "price": 0,
+    "currency": "USD",
+    "period": null,
+    "limits": "모든 앱 받아쓰기, 회의 녹음·전사, 100+ 언어, Whisper 모델 무제한",
+    "page_lang": "en"
+   },
+   {
+    "name": "Pro",
+    "price": null,
+    "currency": "USD",
+    "period": "month",
+    "limits": "본문 가격 표기가 '$ 8 49'로 깨져 정확한 금액 불명; 월간·연간(2개월 무료)·평생 선택, 학생 40% 할인, 자체 API 키·파일 전사",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://superwhisper.com"
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "맥",
+  "윈도",
+  "iOS",
+  "안드로이드",
+  "CLI"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://superwhisper.com",
+   "quote": "Turn your voice into polished text. Works in Slack, Gmail and any other site or app."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://superwhisper.com/docs/get-started/introduction",
+   "quote": "Superwhisper turns your voice into clean, formatted text in any app. It runs on macOS, Windows, iOS, and Android."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://superwhisper.com/docs/get-started/introduction",
+   "quote": "Superwhisper works offline. Local voice models transcribe without an internet connection."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://superwhisper.com",
+   "quote": "Choose from top-tier models like GPT, Claude, or Llama to balance speed, accuracy, and complexity."
+  },
+  {
+   "field": "key_features",
+   "url": "https://superwhisper.com",
+   "quote": "Your edited transcript is automatically pasted in the app you're using."
+  },
+  {
+   "field": "key_features",
+   "url": "https://superwhisper.com",
+   "quote": "Enter names, abbreviations, and specialized terms once."
+  },
+  {
+   "field": "key_features",
+   "url": "https://superwhisper.com",
+   "quote": "Predefined modes optimize tone, structure, and formatting."
+  },
+  {
+   "field": "key_features",
+   "url": "https://superwhisper.com",
+   "quote": "Superwhisper supports 100+ languages & dialects."
+  },
+  {
+   "field": "key_features",
+   "url": "https://superwhisper.com",
+   "quote": "Record and digest meetings effortlessly with automatic notes."
+  },
+  {
+   "field": "key_features",
+   "url": "https://superwhisper.com/docs/get-started/introduction",
+   "quote": "Pro feature. Superwhisper transcribes existing audio and video files"
+  },
+  {
+   "field": "key_features",
+   "url": "https://superwhisper.com/docs/get-started/introduction",
+   "quote": "Coding agents \n CLI and MCP server"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://superwhisper.com",
+   "quote": "Use Superwhisper with Cursor, Claude Code, Open Code, Amp, Codex, or any other agentic coding app, without touching your keyboard."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://superwhisper.com",
+   "quote": "Record and digest meetings effortlessly with automatic notes."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://superwhisper.com/docs/get-started/introduction",
+   "quote": "Superwhisper turns your voice into clean, formatted text in any app: messages, emails, notes, and code."
+  },
+  {
+   "field": "pricing",
+   "url": "https://superwhisper.com",
+   "quote": "Monthly Yearly (2 months free) Lifetime (Top choice)"
+  },
+  {
+   "field": "pricing",
+   "url": "https://superwhisper.com",
+   "quote": "Unlimited use of Whisper models"
+  },
+  {
+   "field": "pricing",
+   "url": "https://superwhisper.com",
+   "quote": "Pro\n $ 8 49 \n 40% off for Students /month"
+  },
+  {
+   "field": "platforms",
+   "url": "https://superwhisper.com",
+   "quote": "Available on Mac, Windows, iOS and Android"
+  },
+  {
+   "field": "platforms",
+   "url": "https://superwhisper.com/docs/get-started/introduction",
+   "quote": "Coding agents \n CLI and MCP server"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "Free($0)와 Pro 구독(월간·연간·평생)으로 파는 음성 받아쓰기 앱",
+   "diff": "기존 분류는 '오픈소스(무료) 또는 API 종량제'지만, 공식 페이지에는 오픈소스·종량제 API 언급이 없고 프리미엄 구독 앱임",
+   "url": "https://superwhisper.com"
+  }
+ ],
+ "plan_change": []
+}

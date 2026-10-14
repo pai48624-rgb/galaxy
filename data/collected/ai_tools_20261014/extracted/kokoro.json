@@ -1,0 +1,74 @@
+{
+ "company": null,
+ "one_liner_ko": "Kokoro는 8,200만 파라미터의 가벼운 오픈 웨이트 TTS 모델로, 큰 모델에 견줄 품질을 더 빠르고 싸게 낸다.",
+ "what_it_does_ko": "Kokoro는 8,200만 파라미터의 오픈 웨이트 음성 합성(TTS) 모델이다. 가벼운 구조지만 더 큰 모델과 비슷한 품질을 내면서 훨씬 빠르고 비용 효율적이라고 소개한다. Apache 라이선스 가중치라 상용 환경부터 개인 프로젝트까지 어디든 배포할 수 있다. v1.0은 8개 언어·54개 목소리를 제공하며, 2025년 4월 기준 API 시장 가격은 입력 100만 글자당 1달러 미만이라고 적혀 있다.",
+ "key_features": [
+  "8,200만 파라미터 경량 TTS",
+  "Apache 라이선스 가중치",
+  "v1.0 기준 8개 언어·54개 목소리",
+  "Python 패키지(kokoro)로 실행",
+  "StyleTTS 2·ISTFTNet 기반 구조",
+  "허용 라이선스·비저작권 오디오로만 학습"
+ ],
+ "use_cases_ko": [
+  "상용 서비스부터 개인 프로젝트까지 음성 합성 배포"
+ ],
+ "pricing": {
+  "free_tier": "오픈 웨이트(Apache-2.0) — 공식 요금제 없음, API 시장가는 100만 글자당 $1 미만(외부 제공사 기준)",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "Apache-2.0",
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://huggingface.co/hexgrad/Kokoro-82M",
+   "quote": "Kokoro is an open-weight TTS model with 82 million parameters."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://huggingface.co/hexgrad/Kokoro-82M",
+   "quote": "Despite its lightweight architecture, it delivers comparable quality to larger models while being significantly faster and more cost-efficient."
+  },
+  {
+   "field": "key_features",
+   "url": "https://huggingface.co/hexgrad/Kokoro-82M",
+   "quote": "With Apache-licensed weights, Kokoro can be deployed anywhere from production environments to personal projects."
+  },
+  {
+   "field": "key_features",
+   "url": "https://huggingface.co/hexgrad/Kokoro-82M",
+   "quote": "2025 Jan 27 \n Few hundred hrs \n 8 & 54"
+  },
+  {
+   "field": "key_features",
+   "url": "https://huggingface.co/hexgrad/Kokoro-82M",
+   "quote": "!pip install -q kokoro>= 0.9 .2 soundfile"
+  },
+  {
+   "field": "key_features",
+   "url": "https://huggingface.co/hexgrad/Kokoro-82M",
+   "quote": "Data: Kokoro was trained exclusively on permissive/non-copyrighted audio data and IPA phoneme labels."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://huggingface.co/hexgrad/Kokoro-82M",
+   "quote": "This is an Apache-licensed model, and Kokoro has been deployed in numerous projects and commercial APIs."
+  },
+  {
+   "field": "pricing",
+   "url": "https://huggingface.co/hexgrad/Kokoro-82M",
+   "quote": "As of April 2025, the market rate of Kokoro served over API is under $1 per million characters of text input"
+  },
+  {
+   "field": "open_source",
+   "url": "https://huggingface.co/hexgrad/Kokoro-82M",
+   "quote": "arxiv: 2203.02395 \n License: apache-2.0"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

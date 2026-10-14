@@ -1,0 +1,36 @@
+{
+ "company": "Google Research",
+ "one_liner_ko": "정제하지 않은 10억 개 이상의 이미지·대체텍스트 쌍으로 시각·시각-언어 표현 학습을 확장한 연구(ICML 2021).",
+ "what_it_does_ko": "ALIGN은 Google Research가 ICML 2021에 발표한 논문 'Scaling Up Visual and Vision-Language Representation Learning With Noisy Text Supervision'의 방법이다. 비싼 필터링 없이 모은 10억 개 이상의 이미지-대체텍스트(alt-text) 쌍을 사용해, 단순한 듀얼 인코더가 대조 손실로 이미지와 텍스트 표현을 정렬하도록 학습한다. 데이터 규모가 잡음을 상쇄해 ImageNet·VTAB 분류 전이와 Flickr30K·MSCOCO 검색에서 최고 수준 결과를 냈다고 밝힌다. 학습된 표현으로 텍스트, 텍스트+이미지 질의를 이용한 교차 모달 검색이 가능하다.",
+ "key_features": [
+  "10억 개 이상 이미지-대체텍스트 쌍(잡음 포함 데이터) 학습",
+  "듀얼 인코더 + 대조 손실로 이미지·텍스트 표현 정렬",
+  "ImageNet·VTAB 분류 전이 성능",
+  "Flickr30K·MSCOCO 이미지-텍스트 검색 최고 수준 결과",
+  "텍스트·텍스트+이미지 질의 교차 모달 검색"
+ ],
+ "use_cases_ko": [
+  "텍스트 또는 텍스트+이미지 질의로 이미지 검색(교차 모달 검색)",
+  "이미지 분류 작업으로의 표현 전이"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "불명",
+ "evidence": [
+  {"field": "company", "url": "https://research.google/pubs/scaling-up-visual-and-vision-language-representation-learning-with-noisy-text-supervision/", "quote": "Our teams advance the state of the art through research, systems engineering, and collaboration across Google."},
+  {"field": "one_liner_ko", "url": "https://research.google/pubs/scaling-up-visual-and-vision-language-representation-learning-with-noisy-text-supervision/", "quote": "we leverage a noisy dataset of over one billion image alt-text pairs, obtained without expensive filtering or post-processing steps"},
+  {"field": "what_it_does_ko", "url": "https://research.google/pubs/scaling-up-visual-and-vision-language-representation-learning-with-noisy-text-supervision/", "quote": "A simple dual-encoder architecture learns to align visual and language representations of the image and text pairs using a contrastive loss."},
+  {"field": "what_it_does_ko", "url": "https://research.google/pubs/scaling-up-visual-and-vision-language-representation-learning-with-noisy-text-supervision/", "quote": "Scaling Up Visual and Vision-Language Representation Learning With Noisy Text Supervision"},
+  {"field": "key_features", "url": "https://research.google/pubs/scaling-up-visual-and-vision-language-representation-learning-with-noisy-text-supervision/", "quote": "Our visual representation achieves strong performance when transferred to classification tasks such as ImageNet and VTAB."},
+  {"field": "key_features", "url": "https://research.google/pubs/scaling-up-visual-and-vision-language-representation-learning-with-noisy-text-supervision/", "quote": "The aligned visual and language representations also set new state-of-the-art results on Flickr30K and MSCOCO benchmarks"},
+  {"field": "use_cases_ko", "url": "https://research.google/pubs/scaling-up-visual-and-vision-language-representation-learning-with-noisy-text-supervision/", "quote": "The representations also enable cross-modality search with complex text and text + image queries."}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

@@ -1,0 +1,29 @@
+{
+ "company": "Pleias",
+ "one_liner_ko": "AI 성능을 끌어올리는 데이터 계층을 만든다.",
+ "what_it_does_ko": "Pleias는 기업용 에이전트 AI를 위한 데이터 인프라 계층을 만드는 회사다. 기업 데이터 처리 도구 Stratum과 합성 데이터 생성 도구 Synth, 권리 문제가 정리된 대규모 공개 학습 데이터셋 Common Corpus를 제공한다. 모든 데이터는 출처 추적이 가능하며, 온프레미스나 기기 안에서 실행해 데이터가 외부로 나가지 않게 할 수 있다. 소형 특화 모델 학습 사례(파리 지하철 RATP 등)와 오픈소스 모델·데이터셋 공개도 진행한다.",
+ "key_features": ["Synth: 전문가 수준 추론을 시뮬레이션해 AI 에이전트용 합성 학습 데이터 생성", "Common Corpus: 권리가 정리되고 출처 기반인 2조 토큰 공개 데이터셋", "Stratum: 흩어진 문서를 에이전트용 구조화 데이터로 변환, 개인정보(PII) 방화벽 내장", "전체 온프레미스·온디바이스 배포", "EU AI Act 준수 설계 데이터셋", "Hugging Face에 공개"],
+ "use_cases_ko": ["파리 지하철(RATP) 이용자 메시지의 안전 신호 탐지용 6억 파라미터 특화 모델", "서아프리카 지역 보건 인력용 오프라인 AI 의료 도우미", "척추 치료 전문 AI(SpineDAO 협력)"],
+ "pricing": {"free_tier": "불명", "plans": [], "pricing_url": null},
+ "open_source": null,
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://pleias.ai/about", "quote": "Pleias is building the data infrastructure layer for enterprise agentic AI."},
+  {"field": "one_liner_ko", "url": "https://pleias.ai/", "quote": "We build the data layer that makes your AI outperform"},
+  {"field": "what_it_does_ko", "url": "https://pleias.ai/about", "quote": "Its dual-product stack - Stratum for AI-native enterprise data processing and Synth for synthetic data generation"},
+  {"field": "what_it_does_ko", "url": "https://pleias.ai/about", "quote": "Can run entirely on your own infrastructure - on-premise or on-device. Your data never leaves your walls and never touches an external API."},
+  {"field": "key_features", "url": "https://pleias.ai/", "quote": "We simulate expert-level reasoning and domain-specific processes to generate training data that builds true specialization into your models."},
+  {"field": "key_features", "url": "https://pleias.ai/about", "quote": "Common Corpus - our 2-trillion-token open dataset - is EU AI Act-compliant by construction"},
+  {"field": "key_features", "url": "https://pleias.ai/", "quote": "A built-in privacy firewall handles PII before anything leaves the secure zone. Deployable fully on-premise."},
+  {"field": "key_features", "url": "https://pleias.ai/", "quote": "Turn your messy siloed documents into a single, structured, compliant data asset for your agentic AI workflows."},
+  {"field": "key_features", "url": "https://pleias.ai/", "quote": "Book a demo Explore on HuggingFace"},
+  {"field": "use_cases_ko", "url": "https://pleias.ai/", "quote": "Pleias trained a 600-million-parameter specialized model for RATP to detect and interpret safety signals in Parisian Subway users’ messages"},
+  {"field": "use_cases_ko", "url": "https://pleias.ai/", "quote": "Researchers built an AI medical assistant that works without internet for health workers in rural West Africa."},
+  {"field": "use_cases_ko", "url": "https://pleias.ai/", "quote": "Pleias and SpineDAO are partnering to build AI systems that safely scale expert spine care for back pain"},
+  {"field": "korean_support", "url": "https://pleias.ai/", "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

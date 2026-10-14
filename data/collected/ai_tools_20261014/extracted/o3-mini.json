@@ -1,0 +1,45 @@
+{
+ "company": "OpenAI",
+ "one_liner_ko": "비용 효율적인 추론의 한계를 넓힌, 과학·수학·코딩(STEM)에 강한 OpenAI의 소형 추론 모델.",
+ "what_it_does_ko": "OpenAI o3-mini는 2025년 1월 31일 출시된 OpenAI 추론 시리즈의 비용 효율적인 소형 모델이다. o1-mini의 저렴한 비용과 짧은 레이턴시를 유지하면서 과학·수학·코딩에 강한 STEM 기능을 제공한다고 소개한다. 함수 호출, 구조화된 출력, 개발자 메시지, 스트리밍을 지원하고 추론 노력(낮음·중간·높음)을 고를 수 있으며, 비전 기능은 지원하지 않는다. 출시 당시 ChatGPT와 API에서 모두 제공되었으나, 페이지 상단 안내에 따르면 현재 API에서는 지원 중단(deprecated) 상태다.",
+ "key_features": [
+  "STEM(과학·수학·코딩) 추론에 최적화",
+  "추론 노력 3단계(낮음·중간·높음) 선택",
+  "함수 호출 지원",
+  "구조화된 출력값 지원",
+  "개발자 메시지·스트리밍 지원",
+  "ChatGPT에서 검색 기능과 함께 사용",
+  "o1-mini 대비 평균 응답 24% 빠름"
+ ],
+ "use_cases_ko": [
+  "개발자가 API로 코딩·STEM 추론 작업에 사용",
+  "ChatGPT 사용자가 코딩·STEM·논리 문제 해결에 사용"
+ ],
+ "pricing": {
+  "free_tier": "있음 (ChatGPT 무료 플랜 사용자도 '이성' 선택으로 사용 가능 — 2025년 1월 출시 공지 기준, 가격 페이지에 금액 표시 없음)",
+  "plans": [],
+  "pricing_url": "https://chatgpt.com/ko-KR/pricing/"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["웹", "iOS", "안드로이드", "API"],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {"field": "company", "url": "https://openai.com/ko-KR/index/openai-o3-mini/", "quote": "추론 시리즈 중 가장 비용 효율적인 최신 모델인 OpenAI o3‑mini를 출시합니다. 오늘부터 ChatGPT와 API에서 모두 사용할 수 있습니다."},
+  {"field": "one_liner_ko", "url": "https://openai.com/ko-KR/index/openai-o3-mini/", "quote": "OpenAI o1‑mini의 저렴한 비용과 짧은 레이턴시를 유지하면서도 특히, 과학, 수학, 코딩에 강한 탁월한 STEM 기능을 제공합니다."},
+  {"field": "what_it_does_ko", "url": "https://openai.com/ko-KR/index/openai-o3-mini/", "quote": "The ChatGPT access information reflects the January 2025 launch. o3‑mini is deprecated in the API."},
+  {"field": "what_it_does_ko", "url": "https://openai.com/ko-KR/index/openai-o3-mini/", "quote": "o3‑mini는 비전 기능을 지원하지 않으므로 개발자는 시각적 추론 작업에는 OpenAI o1을 계속 사용해야 합니다."},
+  {"field": "key_features", "url": "https://openai.com/ko-KR/index/openai-o3-mini/", "quote": "또한 개발자는 세 가지 추론 노력 ⁠ (새 창에서 열기) 옵션(낮음, 중간, 높음) 중에서 선택하여 특정 사용 사례에 맞게 최적화할 수 있습니다."},
+  {"field": "key_features", "url": "https://openai.com/ko-KR/index/openai-o3-mini/", "quote": "또한 이제 o3‑mini는 검색 기능을 함께 사용할 수 있어 관련 웹 소스에 대한 링크가 포함된 최신 답변을 찾을 수 있습니다."},
+  {"field": "key_features", "url": "https://openai.com/ko-KR/index/openai-o3-mini/", "quote": "A/B 테스트에서 o3‑mini의 평균 응답 시간이 7.7초로, 평균 응답 시간이 10.16초인 o1‑mini보다 24% 더 빠르게 응답을 제공했습니다."},
+  {"field": "use_cases_ko", "url": "https://openai.com/ko-KR/index/openai-o3-mini/", "quote": "모델 선택기에서 OpenAI o1‑mini를 대체하여 코딩, STEM, 논리적 문제를 해결하는 작업에 매력적인 선택지가 될 것입니다."},
+  {"field": "pricing", "url": "https://openai.com/ko-KR/index/openai-o3-mini/", "quote": "오늘부터 무료 플랜 사용자도 메시지 작성기에서 ‘이성’을 선택하거나 응답을 다시 생성하여 OpenAI o3‑mini를 사용해 볼 수 있습니다."},
+  {"field": "api", "url": "https://openai.com/ko-KR/index/openai-o3-mini/", "quote": "채팅 완성 API, 어시스턴트 API, 배치 API에서 o3‑mini를 순차적으로 선보입니다."},
+  {"field": "platforms", "url": "https://chatgpt.com/ko-KR/pricing/", "quote": "플랜: Free, 기능: 웹 및 모바일(iOS, Android) 액세스, 예"},
+  {"field": "korean_support", "url": "https://openai.com/ko-KR/index/openai-o3-mini/", "quote": "ka-ge, kk-cyrl, ko-kr, mn-mn, mt-mt, my-mm, nb-no, nl-nl"}
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {"official": "o3-mini는 ChatGPT(Free·Plus·Team·Pro 등 플랜)에서 제공되며, 페이지 안내상 현재 API에서는 지원 중단(deprecated) 상태", "diff": "기존 분류 '모델별 상이(오픈웨이트 또는 API 종량제)'와 달리 오픈웨이트가 아니며, API 종량제는 중단되어 사실상 ChatGPT 구독 플랜을 통한 이용 구조", "url": "https://openai.com/ko-KR/index/openai-o3-mini/"}
+ ]
+}

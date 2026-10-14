@@ -1,0 +1,198 @@
+{
+ "company": "Deepgram",
+ "one_liner_ko": "음성 인식(STT)·음성 합성(TTS)·음성 에이전트 API를 제공하는 기업용 음성 AI 플랫폼.",
+ "what_it_does_ko": "Deepgram은 음성 기술을 만드는 연구 중심 AI 회사로, 2015년에 설립됐다. 음성 인식, 음성 합성, 음성 에이전트, 오디오 인텔리전스를 하나의 플랫폼에서 API로 제공한다. Voice Agent API는 STT·TTS·LLM 오케스트레이션을 하나의 API로 묶어 복잡도와 지연, 비용을 줄인다. 실시간 또는 일괄 처리, 클라우드 또는 셀프호스팅으로 쓸 수 있다.",
+ "key_features": [
+  "Flux STT: 턴 감지·끼어들기 처리를 갖춘 대화형 음성 인식",
+  "Flux TTS: 대화 전체의 어조·표현·연속성을 유지하는 음성 합성",
+  "Voice Agent API: STT·TTS·LLM 오케스트레이션 통합",
+  "Audio Intelligence: 대화에서 인사이트 추출",
+  "Nova 모델 45개 이상 언어, 화자 분리·스마트 포매팅·키텀 프롬프트·언어 자동 감지",
+  "민감정보(PII) 자동 제거(Redaction)",
+  "클라우드 또는 셀프호스팅 배포",
+  "자체 데이터로 학습한 맞춤 모델"
+ ],
+ "use_cases_ko": [
+  "음성 에이전트 개발",
+  "컨택센터·음성 분석",
+  "의료·팟캐스트 전사"
+ ],
+ "pricing": {
+  "free_tier": "있음 ($200 무료 크레딧 후 종량제, 카드 불필요)",
+  "plans": [
+   {
+    "name": "Pay As You Go",
+    "price": 0,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "$200 무료 크레딧 후 종량제, 최소 금액·만료 없음",
+    "page_lang": "en"
+   },
+   {
+    "name": "Growth",
+    "price": 4000,
+    "currency": "USD",
+    "period": "year",
+    "limits": "$4K+/년 선불 크레딧, 최대 20% 절약",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": "USD",
+    "period": null,
+    "limits": "영업 문의",
+    "page_lang": "en"
+   },
+   {
+    "name": "Flux English 스트리밍 (Pay As You Go)",
+    "price": 0.0065,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "분당, 한시 할인가(정가 $0.0077/min)",
+    "page_lang": "en"
+   },
+   {
+    "name": "Nova-3 Monolingual 스트리밍 (Pay As You Go)",
+    "price": 0.0048,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "분당, 한시 할인가(정가 $0.0077/min)",
+    "page_lang": "en"
+   },
+   {
+    "name": "Nova-3 Monolingual 녹음 파일 (Pay As You Go)",
+    "price": 0.0043,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "분당",
+    "page_lang": "en"
+   },
+   {
+    "name": "Whisper Large 녹음 파일",
+    "price": 0.0048,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "분당",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://deepgram.com/pricing"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "API"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://deepgram.com/about",
+   "quote": "Deepgram is a research-driven, foundational AI company focused on building voice technology"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://deepgram.com",
+   "quote": "Enterprise Voice AI: STT, TTS & Agent APIs | Deepgram"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://deepgram.com/about",
+   "quote": "Founded in 2015, Deepgram started with machine learning research"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://deepgram.com",
+   "quote": "Deepgram unifies speech-to-text, text-to-speech, and LLM orchestration into a single API, reducing complexity, latency, and cost."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://deepgram.com",
+   "quote": "Available in real time or batch, in the cloud or self-hosted."
+  },
+  {
+   "field": "key_features",
+   "url": "https://deepgram.com",
+   "quote": "Flux STT listens. Flux TTS speaks. The first conversation-aware speech platform built to natively understand turn-taking, handle interruptions, and carry conversational context."
+  },
+  {
+   "field": "key_features",
+   "url": "https://deepgram.com",
+   "quote": "Flux TTS is the first voice model that thinks before it speaks—holding tone, expression, and continuity across an entire conversation."
+  },
+  {
+   "field": "key_features",
+   "url": "https://deepgram.com/pricing",
+   "quote": "Nova models support 45+ languages with advanced capabilities including Speaker Diarization (multi-speaker detection), Smart Formatting for readability"
+  },
+  {
+   "field": "key_features",
+   "url": "https://deepgram.com/pricing",
+   "quote": "Automatically identify and remove sensitive PII such as social security numbers, credit cards, and phone numbers."
+  },
+  {
+   "field": "key_features",
+   "url": "https://deepgram.com/pricing",
+   "quote": "Custom speech-to-text models trained on proprietary or novel datasets"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://deepgram.com",
+   "quote": "carry conversational context. Built for voice agents."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://deepgram.com/about",
+   "quote": "Contact Centers Speech Analytics Conversational AI Podcast Transcription Medical Transcription"
+  },
+  {
+   "field": "pricing",
+   "url": "https://deepgram.com/pricing",
+   "quote": "Free $200 Credit \n then pay-as-you-go"
+  },
+  {
+   "field": "pricing",
+   "url": "https://deepgram.com/pricing",
+   "quote": "No minimums. No expiration. \n No credit card required."
+  },
+  {
+   "field": "pricing",
+   "url": "https://deepgram.com/pricing",
+   "quote": "With pre-paid credits for the year."
+  },
+  {
+   "field": "pricing",
+   "url": "https://deepgram.com/pricing",
+   "quote": "Current price $0.0065/min Regular price $0.0077/min"
+  },
+  {
+   "field": "pricing",
+   "url": "https://deepgram.com/pricing",
+   "quote": "Current price $0.0048/min Regular price $0.0077/min"
+  },
+  {
+   "field": "pricing",
+   "url": "https://deepgram.com/pricing",
+   "quote": "$0.0043/min \n Whisper Large \n $0.0048/min"
+  },
+  {
+   "field": "api",
+   "url": "https://deepgram.com/about",
+   "quote": "Speech-to-text API Text-to-speech API Voice Agent API Audio Intelligence API"
+  },
+  {
+   "field": "platforms",
+   "url": "https://deepgram.com/about",
+   "quote": "Speech-to-text API Text-to-speech API Voice Agent API Audio Intelligence API"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "종량제(Pay As You Go, $200 무료 크레딧) 외에 연 $4K+ 선불 크레딧 Growth 요금제와 Enterprise가 있음",
+   "diff": "기존 분류는 '오픈소스 또는 API 종량제'인데, 오픈소스 언급은 없고 연간 선불 요금제(Growth)가 추가로 있음",
+   "url": "https://deepgram.com/pricing"
+  }
+ ]
+}

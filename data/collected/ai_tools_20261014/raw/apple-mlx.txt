@@ -1,0 +1,467 @@
+=== [home] https://ml-explore.github.io/mlx/build/html/index.html (lang=en)
+MLX — MLX 0.32.3 documentation 
+ Skip to main content 
+ Font Awesome fontawesome.com -->Back to top 
+ Font Awesome fontawesome.com -->
+ Ctrl + K 
+ Font Awesome fontawesome.com -->
+ Font Awesome fontawesome.com -->
+ Search 
+ Ctrl + K 
+ Font Awesome fontawesome.com -->
+ Search 
+ Ctrl + K 
+ Font Awesome fontawesome.com -->
+ Search 
+ Ctrl + K 
+ Install 
+ Build and Install 
+ Usage 
+ Quick Start Guide 
+ Lazy Evaluation 
+ Unified Memory 
+ Indexing Arrays 
+ Writing a Fast KV Cache 
+ Saving and Loading Arrays 
+ Function Transforms 
+ Compilation 
+ Conversion to NumPy and Other Frameworks 
+ Numerical Precision 
+ Environment Variables 
+ Distributed Communication 
+ Using Streams 
+ Exporting Functions 
+ Examples 
+ Linear Regression 
+ Multi-Layer Perceptron 
+ LLM inference 
+ Data Parallelism 
+ Tensor Parallelism 
+ Python API Reference 
+ Array Font Awesome fontawesome.com --> 
+ mlx.core.array 
+ mlx.core.array.astype 
+ mlx.core.array.at 
+ mlx.core.array.item 
+ mlx.core.array.tolist 
+ mlx.core.array.dtype 
+ mlx.core.array.itemsize 
+ mlx.core.array.nbytes 
+ mlx.core.array.ndim 
+ mlx.core.array.shape 
+ mlx.core.array.size 
+ mlx.core.array.real 
+ mlx.core.array.imag 
+ mlx.core.array.abs 
+ mlx.core.array.all 
+ mlx.core.array.any 
+ mlx.core.array.argmax 
+ mlx.core.array.argmin 
+ mlx.core.array.conj 
+ mlx.core.array.cos 
+ mlx.core.array.cummax 
+ mlx.core.array.cummin 
+ mlx.core.array.cumprod 
+ mlx.core.array.cumsum 
+ mlx.core.array.diag 
+ mlx.core.array.diagonal 
+ mlx.core.array.exp 
+ mlx.core.array.flatten 
+ mlx.core.array.log 
+ mlx.core.array.log10 
+ mlx.core.array.log1p 
+ mlx.core.array.log2 
+ mlx.core.array.logcumsumexp 
+ mlx.core.array.logsumexp 
+ mlx.core.array.max 
+ mlx.core.array.mean 
+ mlx.core.array.min 
+ mlx.core.array.moveaxis 
+ mlx.core.array.prod 
+ mlx.core.array.reciprocal 
+ mlx.core.array.reshape 
+ mlx.core.array.round 
+ mlx.core.array.rsqrt 
+ mlx.core.array.sin 
+ mlx.core.array.split 
+ mlx.core.array.sqrt 
+ mlx.core.array.square 
+ mlx.core.array.squeeze 
+ mlx.core.array.std 
+ mlx.core.array.sum 
+ mlx.core.array.swapaxes 
+ mlx.core.array.transpose 
+ mlx.core.array.T 
+ mlx.core.array.var 
+ mlx.core.array.view 
+ Data Types Font Awesome fontawesome.com --> 
+ mlx.core.Dtype 
+ mlx.core.DtypeCategory 
+ mlx.core.issubdtype 
+ mlx.core.finfo 
+ mlx.core.iinfo 
+ Devices and Streams Font Awesome fontawesome.com --> 
+ mlx.core.Device 
+ mlx.core.Stream 
+ mlx.core.ThreadLocalStream 
+ mlx.core.default_device 
+ mlx.core.set_default_device 
+ mlx.core.default_stream 
+ mlx.core.new_stream 
+ mlx.core.new_thread_local_stream 
+ mlx.core.new_thread_unsafe_stream 
+ mlx.core.set_default_stream 
+ mlx.core.stream 
+ mlx.core.synchronize 
+ mlx.core.clear_streams 
+ mlx.core.device_count 
+ mlx.core.device_info 
+ Export Functions Font Awesome fontawesome.com --> 
+ mlx.core.export_function 
+ mlx.core.import_function 
+ mlx.core.exporter 
+ mlx.core.export_to_dot 
+ Operations Font Awesome fontawesome.com --> 
+ mlx.core.abs 
+ mlx.core.add 
+ mlx.core.addmm 
+ mlx.core.all 
+ mlx.core.allclose 
+ mlx.core.any 
+ mlx.core.arange 
+ mlx.core.arccos 
+ mlx.core.arccosh 
+ mlx.core.arcsin 
+ mlx.core.arcsinh 
+ mlx.core.arctan 
+ mlx.core.arctan2 
+ mlx.core.arctanh 
+ mlx.core.argmax 
+ mlx.core.argmin 
+ mlx.core.argpartition 
+ mlx.core.argsort 
+ mlx.core.array_equal 
+ mlx.core.asarray 
+ mlx.core.as_strided 
+ mlx.core.astype 
+ mlx.core.atleast_1d 
+ mlx.core.atleast_2d 
+ mlx.core.atleast_3d 
+ mlx.core.bartlett 
+ mlx.core.bitwise_and 
+ mlx.core.bitwise_invert 
+ mlx.core.bitwise_or 
+ mlx.core.bitwise_xor 
+ mlx.core.blackman 
+ mlx.core.block_masked_mm 
+ mlx.core.broadcast_arrays 
+ mlx.core.broadcast_shapes 
+ mlx.core.broadcast_to 
+ mlx.core.can_cast 
+ mlx.core.ceil 
+ mlx.core.clip 
+ mlx.core.concat 
+ mlx.core.concatenate 
+ mlx.core.contiguous 
+ mlx.core.conj 
+ mlx.core.conjugate 
+ mlx.core.convolve 
+ mlx.core.conv1d 
+ mlx.core.conv2d 
+ mlx.core.conv3d 
+ mlx.core.conv_transpose1d 
+ mlx.core.conv_transpose2d 
+ mlx.core.conv_transpose3d 
+ mlx.core.conv_general 
+ mlx.core.cos 
+ mlx.core.cosh 
+ mlx.core.cummax 
+ mlx.core.cummin 
+ mlx.core.cumprod 
+ mlx.core.cumsum 
+ mlx.core.count_nonzero 
+ mlx.core.degrees 
+ mlx.core.depends 
+ mlx.core.dequantize 
+ mlx.core.diag 
+ mlx.core.diagonal 
+ mlx.core.diff 
+ mlx.core.divide 
+ mlx.core.divmod 
+ mlx.core.einsum 
+ mlx.core.einsum_path 
+ mlx.core.equal 
+ mlx.core.erf 
+ mlx.core.erfinv 
+ mlx.core.exp 
+ mlx.core.expm1 
+ mlx.core.expand_dims 
+ mlx.core.eye 
+ mlx.core.flatten 
+ mlx.core.flip 
+ mlx.core.floor 
+ mlx.core.floor_divide 
+ mlx.core.full 
+ mlx.core.from_dlpack 
+ mlx.core.full_like 
+ mlx.core.from_fp8 
+ mlx.core.gather_mm 
+ mlx.core.gather_qmm 
+ mlx.core.greater 
+ mlx.core.greater_equal 
+ mlx.core.hadamard_transform 
+ mlx.core.hamming 
+ mlx.core.hanning 
+ mlx.core.identity 
+ mlx.core.imag 
+ mlx.core.inner 
+ mlx.core.isdtype 
+ mlx.core.isfinite 
+ mlx.core.isclose 
+ mlx.core.isinf 
+ mlx.core.isnan 
+ mlx.core.isneginf 
+ mlx.core.isposinf 
+ mlx.core.issubdtype 
+ mlx.core.kron 
+ mlx.core.left_shift 
+ mlx.core.less 
+ mlx.core.less_equal 
+ mlx.core.linspace 
+ mlx.core.load 
+ mlx.core.log 
+ mlx.core.log2 
+ mlx.core.log10 
+ mlx.core.log1p 
+ mlx.core.logaddexp 
+ mlx.core.logcumsumexp 
+ mlx.core.logical_not 
+ mlx.core.logical_and 
+ mlx.core.logical_or 
+ mlx.core.logical_xor 
+ mlx.core.logsumexp 
+ mlx.core.matmul 
+ mlx.core.max 
+ mlx.core.maximum 
+ mlx.core.mean 
+ mlx.core.median 
+ mlx.core.meshgrid 
+ mlx.core.min 
+ mlx.core.minimum 
+ mlx.core.moveaxis 
+ mlx.core.multiply 
+ mlx.core.nan_to_num 
+ mlx.core.negative 
+ mlx.core.not_equal 
+ mlx.core.ones 
+ mlx.core.ones_like 
+ mlx.core.outer 
+ mlx.core.partition 
+ mlx.core.pad 
+ mlx.core.permute_dims 
+ mlx.core.positive 
+ mlx.core.power 
+ mlx.core.prod 
+ mlx.core.put_along_axis 
+ mlx.core.quantize 
+ mlx.core.quantized_matmul 
+ mlx.core.qqmm 
+ mlx.core.radians 
+ mlx.core.real 
+ mlx.core.reciprocal 
+ mlx.core.remainder 
+ mlx.core.repeat 
+ mlx.core.reshape 
+ mlx.core.result_type 
+ mlx.core.right_shift 
+ mlx.core.roll 
+ mlx.core.round 
+ mlx.core.rsqrt 
+ mlx.core.save 
+ mlx.core.savez 
+ mlx.core.savez_compressed 
+ mlx.core.save_gguf 
+ mlx.core.save_safetensors 
+ mlx.core.searchsorted 
+ mlx.core.sigmoid 
+ mlx.core.sign 
+ mlx.core.sin 
+ mlx.core.sinh 
+ mlx.core.slice 
+ mlx.core.slice_update 
+ mlx.core.segmented_mm 
+ mlx.core.softmax 
+ mlx.core.sort 
+ mlx.core.split 
+ mlx.core.sqrt 
+ mlx.core.square 
+ mlx.core.squeeze 
+ mlx.core.stack 
+ mlx.core.std 
+ mlx.core.stop_gradient 
+ mlx.core.subtract 
+ mlx.core.sum 
+ mlx.core.swapaxes 
+ mlx.core.take 
+ mlx.core.take_along_axis 
+ mlx.core.tan 
+ mlx.core.tanh 
+ mlx.core.tensordot 
+ mlx.core.tile 
+ mlx.core.topk 
+ mlx.core.to_fp8 
+ mlx.core.trace 
+ mlx.core.transpose 
+ mlx.core.tri 
+ mlx.core.tril 
+ mlx.core.triu 
+ mlx.core.trunc 
+ mlx.core.unflatten 
+ mlx.core.unstack 
+ mlx.core.vecdot 
+ mlx.core.var 
+ mlx.core.view 
+ mlx.core.where 
+ mlx.core.zeros 
+ mlx.core.zeros_like 
+ Random Font Awesome fontawesome.com --> 
+ mlx.core.random.bernoulli 
+ mlx.core.random.categorical 
+ mlx.core.random.gumbel 
+ mlx.core.random.key 
+ mlx.core.random.normal 
+ mlx.core.random.multivariate_normal 
+ mlx.core.random.randint 
+ mlx.core.random.seed 
+ mlx.core.random.split 
+ mlx.core.random.truncated_normal 
+ mlx.core.random.uniform 
+ mlx.core.random.laplace 
+ mlx.core.random.permutation 
+ Transforms Font Awesome fontawesome.com --> 
+ mlx.core.eval 
+ mlx.core.async_eval 
+ mlx.core.compile 
+ mlx.core.checkpoint 
+ mlx.core.custom_function 
+ mlx.core.disable_compile 
+ mlx.core.enable_compile 
+ mlx.core.grad 
+ mlx.core.value_and_grad 
+ mlx.core.jvp
+
+=== [meta] https://ml-explore.github.io/mlx/build/html/index.html
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/ml-explore/mlx
+# MLX
+
+[**Quickstart**](#quickstart) | [**Installation**](#installation) |
+[**Documentation**](https://ml-explore.github.io/mlx/build/html/index.html) |
+[**Examples**](#examples)
+
+[![CircleCI](https://circleci.com/gh/ml-explore/mlx.svg?style=svg)](https://circleci.com/gh/ml-explore/mlx)
+
+MLX is an array framework for machine learning on Apple silicon,
+brought to you by Apple machine learning research.
+
+Some key features of MLX include:
+
+- **Familiar APIs**: MLX has a Python API that closely follows NumPy. MLX
+   also has fully featured C++, [C](https://github.com/ml-explore/mlx-c), and
+   [Swift](https://github.com/ml-explore/mlx-swift/) APIs, which closely mirror
+   the Python API. MLX has higher-level packages like `mlx.nn` and
+   `mlx.optimizers` with APIs that closely follow PyTorch to simplify building
+   more complex models.
+
+- **Composable function transformations**: MLX supports composable function
+  transformations for automatic differentiation, automatic vectorization,
+  and computation graph optimization.
+
+- **Lazy computation**: Computations in MLX are lazy. Arrays are only
+  materialized when needed.
+
+- **Dynamic graph construction**: Computation graphs in MLX are constructed
+  dynamically. Changing the shapes of function arguments does not trigger
+  slow compilations, and debugging is simple and intuitive.
+
+- **Multi-device**: Operations can run on any of the supported devices
+  (currently the CPU and the GPU).
+
+- **Unified memory**: A notable difference from MLX and other frameworks
+  is the *unified memory model*. Arrays in MLX live in shared memory.
+  Operations on MLX arrays can be performed on any of the supported
+  device types without transferring data.
+
+MLX is designed by machine learning researchers for machine learning
+researchers. The framework is intended to be user-friendly, but still efficient
+to train and deploy models. The design of the framework itself is also
+conceptually simple. We intend to make it easy for researchers to extend and
+improve MLX with the goal of quickly exploring new ideas.
+
+The design of MLX is inspired by frameworks like
+[NumPy](https://numpy.org/doc/stable/index.html),
+[PyTorch](https://pytorch.org/), [Jax](https://github.com/google/jax), and
+[ArrayFire](https://arrayfire.org/).
+
+## Examples
+
+The [MLX examples repo](https://github.com/ml-explore/mlx-examples) has a
+variety of examples, including:
+
+- [Transformer language model](https://github.com/ml-explore/mlx-examples/tree/main/transformer_lm) training.
+- Large-scale text generation with
+  [LLaMA](https://github.com/ml-explore/mlx-examples/tree/main/llms/llama) and
+  finetuning with [LoRA](https://github.com/ml-explore/mlx-examples/tree/main/lora).
+- Generating images with [Stable Diffusion](https://github.com/ml-explore/mlx-examples/tree/main/stable_diffusion).
+- Speech recognition with [OpenAI's Whisper](https://github.com/ml-explore/mlx-examples/tree/main/whisper).
+
+## Quickstart
+
+See the [quick start
+guide](https://ml-explore.github.io/mlx/build/html/usage/quick_start.html)
+in the documentation.
+
+## Installation
+
+MLX is available on [PyPI](https://pypi.org/project/mlx/). To install MLX on
+macOS, run:
+
+```bash
+pip install mlx
+```
+
+To install the CUDA backend on Linux, run:
+
+```bash
+pip install mlx[cuda]
+```
+
+To install a CPU-only Linux package, run:
+
+```bash
+pip install mlx[cpu]
+```
+
+Checkout the
+[documentation](https://ml-explore.github.io/mlx/build/html/install.html#)
+for more information on building the C++ and Python APIs from source.
+
+## Contributing
+
+Check out the [contribution guidelines](https://github.com/ml-explore/mlx/tree/main/CONTRIBUTING.md) for more information
+on contributing to MLX. See the
+[docs](https://ml-explore.github.io/mlx/build/html/install.html) for more
+information on building from source, and running tests.
+
+We are grateful for all of [our
+contributors](https://github.com/ml-explore/mlx/tree/main/ACKNOWLEDGMENTS.md#Individual-Contributors). If you contribute
+to MLX and wish to be acknowledged, please add your name to the list in your
+pull request.
+
+## Citing MLX
+
+The MLX software suite was initially developed with equal contribution by Awni
+Hannun, Jagrit Digani, Angelos Katharopoulos, an

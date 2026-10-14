@@ -1,0 +1,433 @@
+=== [home] https://hudi.apache.org (lang=en)
+Apache Hudi | An Open Source Data Lake Platform | Apache Hudi 
+ Skip to main content 
+ ⭐️ If you like Apache Hudi , give it a star on GitHub! ⭐
+ Docs Learn Tutorial Series 
+ Blogs 
+ Talks 
+ Video Guides 
+ FAQ 
+ Tech Specs 
+ Tech Specs (pre-1.0) 
+ Contribute Developer Sync Call 
+ How to Contribute 
+ Developer Setup 
+ RFC Process 
+ Security 
+ Community Get Involved 
+ Community Syncs 
+ Office Hours 
+ Team 
+ Github 
+ Slack 
+ LinkedIn 
+ YouTube 
+ X 
+ Ecosystem Adopters 
+ Roadmap 
+ Integrations 
+ Vendors 
+ Download 
+ Docs 
+ Learn 
+ Contribute 
+ Community 
+ Ecosystem 
+ Download 
+ ← Back to main menu 
+ Apache Hudi TM brings
+ to data lakes
+ Get Started Community 
+ What is Hudi   
+ Apache Hudi is an open data lakehouse platform, built on a high-performance open table format to bring database functionality to your data lakes. Hudi reimagines slow old-school batch data processing with a powerful new incremental processing framework for low latency minute-level analytics.
+ Integrations   
+ Data Streaming
+ Apache Kafka
+ Apache Pulsar
+ Databases
+ PostgreSQL
+ MySQL
+ CDC
+ Debezium
+ Apache Flink CDC
+ File Formats
+ Apache Parquet
+ Apache ORC
+ Apache Avro
+ CSV
+ JSON
+ Lake Storage
+ Apache Hadoop
+ Amazon S3
+ Google Cloud Storage
+ Azure Blob Storage
+ Alibaba Cloud
+ IBM Cloud
+ Oracle Cloud
+ Tencent Cloud
+ MinIO
+ Data Catalogs
+ AWS Glue Data Catalog
+ Google BigQuery
+ Apache Hive Metastore
+ DataHub
+ Apache XTable (Incubating) (For sync)
+ Data Warehouses
+ Amazon Redshift
+ ClickHouse
+ Interactive Analytics
+ Presto
+ Trino
+ Apache Hive
+ AWS Athena
+ Google BigQuery
+ Apache Doris
+ StarRocks
+ Apache Impala
+ Data Processing
+ Apache Spark
+ Apache Flink
+ Databricks
+ AWS EMR
+ Azure HDInsight
+ Onehouse
+ Ray
+ Daft
+ Orchestration
+ dbt
+ Apache Airflow
+ Hudi Features   
+ Mutability support for all workload shapes & sizes
+ Quickly update & delete data with fast, pluggable indexing. This includes database CDC and high-scale streaming data, with best-in-class support for out-of-order records, bursty traffic & data deduplication.
+ Unlock 10x efficiency by incrementally processing new data
+ Replace old-school batch pipelines with incremental streaming on your data lake. Experience faster ingestion and lower processing times for your data pipelines.
+ ACID Transactional guarantees for your data lake
+ Atomic writes, with relational/streaming data consistency models, snapshot isolation and non-blocking concurrency controls tailored for longer-running lake transactions.
+ Analyze historical data with time travel
+ Query historical data with the ability to roll back to a table version; debug data versions to understand what changed over time; audit data changes by viewing the commit history.
+ Interoperable multi-cloud ecosystem support
+ Built on open data formats with extensive ecosystem support across cloud vendor ecosystem, with plug-and-play options for popular data sources & query engines.
+ Automatic table services for a high-performance lakehouse
+ Fully automated table services that continuously schedule & orchestrate clustering, compaction, cleaning, file sizing & indexing to ensure tables are always optimized.
+ Open Data Lakehouse platform to get you going faster
+ Effortlessly build your lakehouse with built-in tools for auto ingestion from services like Debezium and Kafka and auto catalog sync to major cloud engines & more.
+ Query acceleration through multimodal indexes.
+ Experience faster write transactions on huge/wide tables & faster query performance with first-of-its kind multimodal indexing subsystem.
+ Resilient Pipelines with schema evolution & enforcement
+ Easily change the current schema of a Hudi table to adapt to the data that is changing over time and ensure pipeline resilience by failing fast and avoiding data corruption.
+ Why Hudi   
+ The most innovative and completely open data lakehouse platform in the industry!
+ Trusted Platform
+ Battle tested and proven in production in some of the largest data lakes on the planet.
+ Open Source
+ Hudi is a thriving & growing community that is built with contributions from people around the globe.
+ High Performance
+ Hudi's storage format is purpose-built to continuously deliver performance as data scales.
+ Data streams
+ Take advantage of built-in CDC sources and tools for streaming ingestion.
+ Hudi Blogs   
+ Srikanth Mamidala August 26, 2026
+ Beyond Offset Lag: Computing Time in Queue for Apache Hudi Data Lake Pipelines at Petabyte Scale
+ Sivabalan Narayanan August 14, 2026
+ Point Lookups on the Lakehouse: How Hudi Indexes Accelerate Read-Heavy Workloads
+ Sivabalan Narayanan August 13, 2026
+ Apache Hudi vs Apache Iceberg Performance: What Benchmarks Show, and What We Measured
+ Sivabalan Narayanan August 12, 2026
+ Apache Hudi vs Delta Lake for Write-Heavy Workloads
+ Sivabalan Narayanan August 11, 2026
+ Apache Hudi vs Apache Iceberg for Streaming Ingestion
+ Sivabalan Narayanan August 6, 2026
+ Apache Hudi vs Apache Iceberg for CDC Workloads
+ Sivabalan Narayanan August 5, 2026
+ Migrating from Apache Iceberg to Apache Hudi
+ Sivabalan Narayanan August 4, 2026
+ Migrating from Delta Lake to Apache Hudi
+ Sivabalan Narayanan July 30, 2026
+ Migrating from Apache Hive Tables to Apache Hudi
+ Sivabalan Narayanan July 29, 2026
+ Migrating from Parquet to Apache Hudi: A Practical Guide
+ View All 
+ Join our Community   
+ Get technical help, influence the product roadmap & see what’s new with Hudi!
+ Youtube
+ Linkedin
+ GitHub
+ Slack
+ Mailing
+ X
+ About
+ Our Vision 
+ Concepts 
+ Team 
+ Releases 
+ Download 
+ Adopters 
+ Learn
+ Quick Start 
+ Tutorial Series 
+ Blog 
+ Talks 
+ Video Guides 
+ FAQ 
+ Hudi On Cloud
+ AWS 
+ Google Cloud 
+ Alibaba Cloud 
+ Microsoft Azure 
+ Tencent Cloud 
+ IBM Cloud 
+ Oracle Cloud 
+ Community
+ Get Involved 
+ Vendors 
+ Slack 
+ GitHub 
+ X 
+ YouTube 
+ Linkedin 
+ Mailing List 
+ Apache
+ Events 
+ Thanks 
+ License 
+ Security 
+ Privacy 
+ Telemetry 
+ Sponsorship 
+ Foundation 
+ Copyright © 2021 The Apache Software Foundation , Licensed under the Apache License, Version 2.0 . Hudi, Apache and the Apache feather logo are trademarks of The Apache Software Foundation.
+
+=== [about] https://hudi.apache.org/docs/cloud/ (lang=en)
+Cloud Storage | Apache Hudi 
+ Skip to main content 
+ ⭐️ If you like Apache Hudi , give it a star on GitHub! ⭐
+ Docs Learn Tutorial Series 
+ Blogs 
+ Talks 
+ Video Guides 
+ FAQ 
+ Tech Specs 
+ Tech Specs (pre-1.0) 
+ Contribute Developer Sync Call 
+ How to Contribute 
+ Developer Setup 
+ RFC Process 
+ Security 
+ Community Get Involved 
+ Community Syncs 
+ Office Hours 
+ Team 
+ Github 
+ Slack 
+ LinkedIn 
+ YouTube 
+ X 
+ Ecosystem Adopters 
+ Roadmap 
+ Integrations 
+ Vendors 
+ Download 
+ Docs 
+ Learn 
+ Contribute 
+ Community 
+ Ecosystem 
+ Download 
+ ← Back to main menu 
+ Getting Started 
+ Overview 
+ Spark Quick Start 
+ Flink Quick Start 
+ Python/Rust Quick Start 
+ Unstructured Data Quick Start 
+ Docker Demo 
+ Use Cases 
+ Design & Concepts 
+ Ingestion 
+ Writing Tables 
+ Reading Tables 
+ Table Services 
+ Data Catalogs 
+ Platform & Tools 
+ Operating Hudi 
+ Configurations 
+ Basic Configurations 
+ All Configurations 
+ Storage Configurations 
+ Cloud Storage 
+ AWS S3 
+ Google Cloud 
+ Alibaba Cloud 
+ Microsoft Azure 
+ Tencent Cloud 
+ IBM Cloud 
+ Baidu Cloud 
+ JuiceFS 
+ Oracle Cloud Infrastructure 
+ KS3 Filesystem 
+ GooseFS Filesystem 
+ Version 1.2.1 
+ Configurations 
+ Storage Configurations 
+ Cloud Storage 
+ Version: 1.2.1 On this page 
+ Cloud Storage
+ Talking to Cloud Storage ​ 
+ Immaterial of whether RDD/WriteClient APIs or Datasource is used, the following information helps configure access
+to cloud stores.
+ AWS S3 
+Configurations required for S3 and Hudi co-operability.
+ Google Cloud Storage 
+Configurations required for GCS and Hudi co-operability.
+ Alibaba Cloud OSS 
+Configurations required for OSS and Hudi co-operability.
+ Microsoft Azure 
+Configurations required for Azure and Hudi co-operability.
+ Tencent Cloud Object Storage 
+Configurations required for COS and Hudi co-operability.
+ IBM Cloud Object Storage 
+Configurations required for IBM Cloud Object Storage and Hudi co-operability.
+ Baidu Cloud Object Storage 
+Configurations required for BOS and Hudi co-operability.
+ JuiceFS 
+Configurations required for JuiceFS and Hudi co-operability.
+ Oracle Cloud Infrastructure 
+Configurations required for OCI and Hudi co-operability.
+ KS3 File System 
+Configurations required for KS3 FS and Hudi co-operability.
+ Tencent Cloud GooseFS 
+Configurations required for GooseFS and Hudi co-operability.
+ note
+ Many cloud object storage systems like Amazon S3 allow you to set
+lifecycle policies, such as S3 Lifecycle ,
+to manage objects. One of the policies is related to object expiration. If your organisation has configured such policies,
+then please ensure to exclude (or have a longer expiry period) for Hudi tables.
+ Edit this page 
+ Previous
+ All Configurations
+ Next
+ AWS S3
+ Talking to Cloud Storage 
+ About
+ Our Vision 
+ Concepts 
+ Team 
+ Releases 
+ Download 
+ Adopters 
+ Learn
+ Quick Start 
+ Tutorial Series 
+ Blog 
+ Talks 
+ Video Guides 
+ FAQ 
+ Hudi On Cloud
+ AWS 
+ Google Cloud 
+ Alibaba Cloud 
+ Microsoft Azure 
+ Tencent Cloud 
+ IBM Cloud 
+ Oracle Cloud 
+ Community
+ Get Involved 
+ Vendors 
+ Slack 
+ GitHub 
+ X 
+ YouTube 
+ Linkedin 
+ Mailing List 
+ Apache
+ Events 
+ Thanks 
+ License 
+ Security 
+ Privacy 
+ Telemetry 
+ Sponsorship 
+ Foundation 
+ Copyright © 2021 The Apache Software Foundation , Licensed under the Apache License, Version 2.0 . Hudi, Apache and the Apache feather logo are trademarks of The Apache Software Foundation.
+
+=== [meta] https://hudi.apache.org
+html lang: en
+hreflang: en, x-default
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/apache/hudi
+
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+# Apache Hudi
+
+Apache Hudi is an open data lakehouse platform, built on a high-performance open table format 
+to ingest, index, store, serve, transform and manage your data across multiple cloud data environments.
+
+<img src="https://hudi.apache.org/assets/images/hudi-logo-medium.png" alt="Hudi logo" height="80px" align="right" />
+
+<https://hudi.apache.org/>
+
+[![Build](https://github.com/apache/hudi/actions/workflows/bot.yml/badge.svg)](https://github.com/apache/hudi/actions/workflows/bot.yml)
+[![Test](https://dev.azure.com/apachehudi/hudi-oss-ci/_apis/build/status/apachehudi-ci.hudi-mirror?branchName=master)](https://dev.azure.com/apachehudi/hudi-oss-ci/_build/latest?definitionId=5&branchName=master)
+[![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.apache.hudi/hudi/badge.svg)](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.apache.hudi%22)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/apache/hudi)
+[![Join on Slack](https://img.shields.io/badge/slack-%23hudi-72eff8?logo=slack&color=48c628&label=Join%20on%20Slack)](https://join.slack.com/t/apache-hudi/shared_invite/zt-33fabmxb7-Q7QSUtNOHYCwUdYM8LbauA)
+[![Twitter Follow](https://img.shields.io/twitter/follow/ApacheHudi)](https://twitter.com/apachehudi)
+[![Follow Linkedin](https://img.shields.io/badge/apache%E2%80%93hudi-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&label=Follow)](https://www.linkedin.com/company/apache-hudi/?viewAsMember=true)
+
+## Features
+
+Hudi stores all data and metadata on cloud storage in open formats, providing the following features across different aspects.
+
+### Ingestion
+
+* Built-in ingestion tools for Apache Spark/Apache Flink users.
+* Supports half-dozen file formats, database change logs and streaming data systems.
+* Connect sink for Apache Kafka, to bring external data sources.
+
+### Storage
+
+* Optimized storage format, supporting row & columnar data.
+* Timeline metadata to track history of changes
+* Automatically manages file sizes, layout using statistics
+* Savepoints for data versioning and recovery
+* Schema tracking and evolution.
+
+### Indexing
+
+* Scalable indexing subsystem to speed up snapshot queries, maintained automatically by writes.
+* Tracks file listings, column-level and partition-level statistics to help plan queries efficiently.
+* Record-level indexing mechanisms built on row-oriented file formats and bloom filters.
+* Logical partitioning on tables, using expression indexes to decouple from physical partitioning on storage.
+
+### Writing
+
+* Atomically commit data with rollback/restore support.
+* Fast upsert/delete support leveraging record-level indexes.
+* Snapshot isolation between writer & queries.
+* Optimistic concurrency control to implement relational data model, with Read-Modify-Write style consistent writes.
+* Non-blocking concurrency control, to implement streaming data model, with support for out-of-order, late data handling.
+
+### Queries
+
+Hudi supports different types of queries, on top of a single table. 
+
+* **Snapshot Query** - Provides a view of the table, as of the latest committed state, accelerated with indexes as applicable.
+* **Incremental Query** - Provides latest value of records inserted/updated, since a given point in time of the table. Can be used t

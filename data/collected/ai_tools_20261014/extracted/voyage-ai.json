@@ -1,0 +1,93 @@
+{
+ "company": "MongoDB",
+ "one_liner_ko": "MongoDB의 Voyage AI는 비정형 데이터 검색·RAG를 위한 고정밀 임베딩과 리랭커 모델을 제공한다.",
+ "what_it_does_ko": "Voyage AI는 MongoDB 산하에서 고정밀 임베딩과 리랭커를 제공해 검색·RAG 품질을 높인다. 기업 검색 벤치마크 RTEB에서 상위권이라고 밝힌다. 짧은 벡터, 낮은 지연, 최대 32K 토큰 컨텍스트를 강점으로 내세운다. 사용량 기반 종량제로 쓰거나 주요 클라우드·VPC·온프레미스로 배포할 수 있다.",
+ "key_features": [
+  "고정밀 텍스트 임베딩",
+  "리랭커(rerank-3, rerank-3-lite 등)",
+  "멀티모달·컨텍스트 청크 임베딩",
+  "3~8배 짧은 벡터",
+  "32K 토큰 컨텍스트",
+  "벡터DB·LLM과 플러그앤플레이",
+  "AWS·Azure VPC 배포"
+ ],
+ "use_cases_ko": [
+  "RAG 응답 품질 향상",
+  "임베딩 검색 결과 재순위화"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": "https://www.voyageai.com/"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "API"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.voyageai.com/",
+   "quote": "Voyage AI by MongoDB\n Supercharging Search"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.voyageai.com/",
+   "quote": "Build relevant, reliable AI applications with high-precision Voyage AI embeddings and rerankers in the Intelligent Data Platform from MongoDB."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.voyageai.com/",
+   "quote": "Voyage AI models consistently rank atop the Retrieval Text Embedding Benchmark (RTEB)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.voyageai.com/",
+   "quote": "3x-8x shorter vectors ⇒ cheaper vector search and storage"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.voyageai.com/",
+   "quote": "Longest commercial context length available (32K tokens)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.voyageai.com/docs/reranker",
+   "quote": "rerank-3 32,000 Highest accuracy. Recommendation for most applications."
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.voyageai.com/docs/reranker",
+   "quote": "Contextualized Chunk Embeddings"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.voyageai.com/",
+   "quote": "Plug-and-play with any vectorDB and LLM"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.voyageai.com/",
+   "quote": "The pipeline behind higher-quality RAG responses, from unstructured data to factual answers at lower cost."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.voyageai.com/",
+   "quote": "Easy to get started. Pay as you go. Consumption-based pricing."
+  },
+  {
+   "field": "api",
+   "url": "https://docs.voyageai.com/docs/reranker",
+   "quote": "Voyage reranker is accessible in Python through the voyageai package."
+  },
+  {
+   "field": "platforms",
+   "url": "https://www.voyageai.com/",
+   "quote": "Available through all major clouds and data platforms. SaaS and customer tenant deployment (in-VPC)."
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

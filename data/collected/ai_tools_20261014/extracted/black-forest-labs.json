@@ -1,0 +1,221 @@
+{
+ "company": "Black Forest Labs",
+ "one_liner_ko": "이미지·영상·오디오·로봇 행동 예측을 한 모델로 다루는 FLUX를 만드는 프런티어 AI 연구소.",
+ "what_it_does_ko": "Black Forest Labs는 FLUX 모델 제품군을 만든다. 최신 FLUX 3는 이미지·영상·오디오·행동 예측을 하나의 멀티모달 모델로 처리하며, 한 번에 최대 20초 영상과 음성·효과음을 생성한다. FLUX 3 Action은 로봇 제어를 위한 7B 오픈 웨이트 모델이다. 모델은 API(종량제), 자체 인프라용 오픈 웨이트 라이선스, 브라우저 플레이그라운드, 엔터프라이즈 계약으로 제공된다. FLUX.2도 이미지 생성·편집용으로 계속 지원된다.",
+ "key_features": [
+  "한 번에 최대 20초 영상 생성(텍스트·이미지·키프레임에서 시작)",
+  "다국어 음성·효과음·환경음 동시 생성",
+  "정확한 글자 렌더링과 복잡한 프롬프트 처리",
+  "로봇 제어 행동을 예측하는 FLUX 3 Action",
+  "자체 인프라에서 돌리는 오픈 웨이트(파인튜닝·맞춤화)",
+  "브라우저 플레이그라운드",
+  "아웃페인팅·지우기·가상 착용 등 FLUX 도구",
+  "공식 FLUX MCP"
+ ],
+ "use_cases_ko": [
+  "개발자·초기 팀의 API 연동",
+  "기업이 자사 제품에 FLUX API·오픈 웨이트 탑재",
+  "AI 학습용 합성 데이터 생성"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [
+   {
+    "name": "API 종량제(계산기 예시)",
+    "price": 0.048,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "구독·좌석 요금 없음, 이미지 1장 예시 요금이며 모델·해상도마다 다름",
+    "page_lang": "en"
+   },
+   {
+    "name": "Builder (오픈 웨이트 라이선스)",
+    "price": null,
+    "currency": "USD",
+    "period": null,
+    "limits": "FLUX.2 [klein], 월 1만 장, 도메인 1, 사용자 10, 가격 미표기",
+    "page_lang": "en"
+   },
+   {
+    "name": "Platform (오픈 웨이트 라이선스)",
+    "price": null,
+    "currency": "USD",
+    "period": null,
+    "limits": "FLUX.2 [klein] 9B + [dev], 월 10만 장, 도메인 1, 사용자 10, 가격 미표기",
+    "page_lang": "en"
+   },
+   {
+    "name": "Professional (오픈 웨이트 라이선스)",
+    "price": null,
+    "currency": "USD",
+    "period": null,
+    "limits": "FLUX.2 [dev], 월 10만 장, 도메인 3, 영업 문의",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": "USD",
+    "period": null,
+    "limits": "전 모델, 맞춤 물량, API+웨이트 묶음 가격, 영업 문의",
+    "page_lang": "en"
+   },
+   {
+    "name": "Synthetic Data",
+    "price": null,
+    "currency": "USD",
+    "period": null,
+    "limits": "결과물을 학습 데이터로 쓸 권리, 영업 문의",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://bfl.ai/pricing/"
+ },
+ "open_source": "오픈 웨이트(상업 이용은 유료 라이선스, 비상업 라이선스 약관 별도 — 라이선스 이름은 페이지에 없음)",
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "API"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://bfl.ai",
+   "quote": "© 2026 BLACK FOREST LABS."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://bfl.ai",
+   "quote": "One multimodal model for Image Video Audio Action-Prediction"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://bfl.ai",
+   "quote": "Start in our playground. Integrate via API. Download our models, customize, and deploy anywhere."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://bfl.ai",
+   "quote": "An open weights 7B World Action Model that achieves first place on the RoboLab benchmark."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.bfl.ai/quick_start/introduction",
+   "quote": "FLUX.2 remains fully supported for production image generation and editing."
+  },
+  {
+   "field": "key_features",
+   "url": "https://bfl.ai",
+   "quote": "with native audio and up to 20 second clips in a single generation"
+  },
+  {
+   "field": "key_features",
+   "url": "https://bfl.ai",
+   "quote": "Optional audio. Multilingual speech, effects and ambience generated with the frames."
+  },
+  {
+   "field": "key_features",
+   "url": "https://bfl.ai",
+   "quote": "highly-accurate text rendering, and the ability to handle complex prompts"
+  },
+  {
+   "field": "key_features",
+   "url": "https://bfl.ai",
+   "quote": "predict the desired physical outcome visually and as robot control actions"
+  },
+  {
+   "field": "key_features",
+   "url": "https://bfl.ai",
+   "quote": "Run FLUX models on your own infrastructure. Full control over deployment, fine-tuning, and customization."
+  },
+  {
+   "field": "key_features",
+   "url": "https://bfl.ai",
+   "quote": "Experiment with FLUX's most advanced models in your browser."
+  },
+  {
+   "field": "key_features",
+   "url": "https://bfl.ai/pricing/",
+   "quote": "FLUX Outpainting FLUX Eraser FLUX VTO"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.bfl.ai/quick_start/introduction",
+   "quote": "Introducing the official FLUX MCP"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://bfl.ai/pricing/",
+   "quote": "For developers and early-stage teams."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://bfl.ai",
+   "quote": "For larger organizations and their teams looking to add the FLUX API and open weights license to their products and services."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://bfl.ai/pricing/",
+   "quote": "Rights to use outputs as training data"
+  },
+  {
+   "field": "pricing",
+   "url": "https://bfl.ai/pricing/",
+   "quote": "No subscriptions, no seat fees. Only pay for what you generate."
+  },
+  {
+   "field": "pricing",
+   "url": "https://bfl.ai/pricing/",
+   "quote": "Rate: $0.048 / image"
+  },
+  {
+   "field": "pricing",
+   "url": "https://bfl.ai/pricing/",
+   "quote": "10K images / month"
+  },
+  {
+   "field": "pricing",
+   "url": "https://bfl.ai/pricing/",
+   "quote": "100K images / month"
+  },
+  {
+   "field": "pricing",
+   "url": "https://bfl.ai/pricing/",
+   "quote": "Up to 3 domains"
+  },
+  {
+   "field": "pricing",
+   "url": "https://bfl.ai/pricing/",
+   "quote": "API + Weights combo pricing"
+  },
+  {
+   "field": "open_source",
+   "url": "https://bfl.ai",
+   "quote": "Get a License Hugging Face GitHub"
+  },
+  {
+   "field": "open_source",
+   "url": "https://bfl.ai",
+   "quote": "Non-Commercial License Terms"
+  },
+  {
+   "field": "api",
+   "url": "https://bfl.ai",
+   "quote": "Simple-to-integrate API to access the latest and most powerful FLUX models."
+  },
+  {
+   "field": "platforms",
+   "url": "https://bfl.ai",
+   "quote": "Try Playground"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "API는 이미지·영상 생성량 기준 종량제(예: $0.048/이미지), 오픈 웨이트는 Builder·Platform·Professional·Enterprise 유료 라이선스",
+   "diff": "기존 '해당없음(연구조직/기업)'과 달리 공개 유료 요금제(종량제 API·라이선스)가 있음",
+   "url": "https://bfl.ai/pricing/"
+  }
+ ],
+ "plan_change": []
+}

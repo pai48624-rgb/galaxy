@@ -1,0 +1,146 @@
+{
+ "company": "Microsoft",
+ "one_liner_ko": "여러 플랫폼에서 머신러닝 모델의 추론과 학습을 가속하는 엔진.",
+ "what_it_does_ko": "ONNX Runtime은 기존 기술 스택에서 학습과 추론을 빠르게 해 주는 크로스 플랫폼 머신러닝 가속기다. PyTorch·TensorFlow/Keras와 scikit-learn·LightGBM·XGBoost 등의 모델을 지원하고 CPU·GPU·NPU에서 지연·처리량·메모리를 최적화한다. Python·C#·C++·Java·JavaScript·Rust 등 여러 언어와 Linux·Windows·Mac·iOS·Android·웹 브라우저에서 돈다. Windows·Office·Bing 등 Microsoft 제품에도 쓰이며 온디바이스 학습과 생성형 AI(onnxruntime-genai)도 지원한다.",
+ "key_features": [
+  "CPU·GPU·NPU 하드웨어 가속 최적화",
+  "Python·C#·C++·Java·JavaScript·Rust 등 다국어 지원",
+  "웹 브라우저 실행(ONNX Runtime Web)",
+  "안드로이드·iOS 앱용 ONNX Runtime Mobile",
+  "온디바이스 학습",
+  "다중 노드 NVIDIA GPU 대형 모델 학습 가속",
+  "생성형 AI·LLM 통합(onnxruntime-genai)",
+  "CUDA·TensorRT·OpenVINO·DirectML·CoreML 등 실행 제공자"
+ ],
+ "use_cases_ko": [
+  "모바일 앱에 AI 기능 탑재",
+  "브라우저에서 ML 모델 실행",
+  "대형 트랜스포머 모델 학습 시간 단축"
+ ],
+ "pricing": {
+  "free_tier": "불명 (가격 표기 없음)",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "MIT",
+ "api": "있음",
+ "platforms": [
+  "윈도",
+  "맥",
+  "iOS",
+  "안드로이드",
+  "웹",
+  "API"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://onnxruntime.ai",
+   "quote": "Copyright © Microsoft. All rights reserved."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/microsoft/onnxruntime",
+   "quote": "ONNX Runtime is a cross-platform inference and training machine-learning accelerator"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/microsoft/onnxruntime",
+   "quote": "supporting models from deep learning frameworks such as PyTorch and TensorFlow/Keras as well as classical machine learning libraries such as scikit-learn, LightGBM, XGBoost, etc."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://onnxruntime.ai",
+   "quote": "ONNX Runtime powers AI in Microsoft products including Windows, Office, Azure Cognitive"
+  },
+  {
+   "field": "key_features",
+   "url": "https://onnxruntime.ai",
+   "quote": "CPU, GPU, NPU - no matter what hardware you run on, ONNX Runtime optimizes for latency,"
+  },
+  {
+   "field": "key_features",
+   "url": "https://onnxruntime.ai",
+   "quote": "Do you program in Python? C#? C++? Java? JavaScript? Rust? No problem."
+  },
+  {
+   "field": "key_features",
+   "url": "https://onnxruntime.ai",
+   "quote": "Run PyTorch and other ML models in the web browser with ONNX Runtime Web."
+  },
+  {
+   "field": "key_features",
+   "url": "https://onnxruntime.ai",
+   "quote": "Infuse your Android and iOS mobile apps with AI using ONNX Runtime Mobile."
+  },
+  {
+   "field": "key_features",
+   "url": "https://onnxruntime.ai",
+   "quote": "On-device training with ONNX Runtime lets developers take an inference model and train"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/microsoft/onnxruntime",
+   "quote": "can accelerate the model training time on multi-node NVIDIA GPUs for transformer models with a one-line addition for existing PyTorch training scripts."
+  },
+  {
+   "field": "key_features",
+   "url": "https://onnxruntime.ai",
+   "quote": "pip install onnxruntime-genai"
+  },
+  {
+   "field": "key_features",
+   "url": "https://onnxruntime.ai/docs/",
+   "quote": "Execution Providers NVIDIA - CUDA"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://onnxruntime.ai",
+   "quote": "Infuse your Android and iOS mobile apps with AI using ONNX Runtime Mobile."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://onnxruntime.ai",
+   "quote": "Run PyTorch and other ML models in the web browser with ONNX Runtime Web."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/microsoft/onnxruntime",
+   "quote": "can accelerate the model training time on multi-node NVIDIA GPUs for transformer models"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/microsoft/onnxruntime",
+   "quote": "This project is licensed under the [MIT License](LICENSE)."
+  },
+  {
+   "field": "api",
+   "url": "https://onnxruntime.ai/docs/",
+   "quote": "API docs Python API"
+  },
+  {
+   "field": "platforms",
+   "url": "https://onnxruntime.ai",
+   "quote": "And it runs on Linux, Windows, Mac, iOS, Android,"
+  },
+  {
+   "field": "platforms",
+   "url": "https://onnxruntime.ai",
+   "quote": "and even in web browsers."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://onnxruntime.ai",
+   "quote": "hreflang: 없음"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "MIT 라이선스 오픈소스 추론·학습 가속 라이브러리(pip 설치), 요금 표기 없음",
+   "diff": "기존 '사용량 기반 종량제(클라우드/GPU)'와 반대로 자체 설치형 오픈소스 라이브러리",
+   "url": "https://github.com/microsoft/onnxruntime"
+  }
+ ],
+ "plan_change": []
+}

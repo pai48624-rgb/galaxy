@@ -1,0 +1,294 @@
+=== [home] https://nvidia.github.io/TensorRT-LLM/ (lang=en)
+Welcome to TensorRT LLM’s Documentation! — TensorRT LLM 
+ Skip to main content 
+ Back to top 
+ Ctrl + K 
+ TensorRT LLM
+ Choose version 
+ Search 
+ Ctrl + K 
+ System Settings 
+ Light 
+ Dark 
+ Search 
+ Ctrl + K 
+ TensorRT LLM
+ Choose version 
+ System Settings 
+ Light 
+ Dark 
+ Table of Contents
+ Getting Started 
+ Overview 
+ Quick Start Guide 
+ Installation 
+ Installation Guide 
+ Build from Source 
+ Container Images 
+ Supported Hardware 
+ Deployment Guide 
+ LLM Examples 
+ Generate text 
+ Generate text asynchronously 
+ Generate text in streaming 
+ Distributed LLM Generation 
+ Generate text with guided decoding 
+ Control generated text using logits processor 
+ Generate text with multiple LoRA adapters 
+ Sparse Attention 
+ Speculative Decoding 
+ KV Cache Compression 
+ KV Cache Connector 
+ KV Cache Connector under VSWA 
+ KV Cache Offloading 
+ Runtime Configuration Examples 
+ Sampling Techniques Showcase 
+ LMCache KV Cache Connector 
+ Run LLM-API with pytorch backend on Slurm 
+ Run trtllm-bench with pytorch backend on Slurm 
+ Run trtllm-serve with pytorch backend on Slurm 
+ VisualGen Examples 
+ API walkthrough 
+ Online Serving Examples 
+ Aiperf Client 
+ Aiperf Client For Multimodal 
+ Curl Chat Client 
+ Curl Chat Client For Multimodal 
+ Curl Completion Client 
+ Curl Responses Client 
+ Deepseek R1 Reasoning Parser 
+ OpenAI Chat Client 
+ OpenAI Chat Client for Multimodal 
+ OpenAI Completion Client 
+ Openai Completion Client For Lora 
+ OpenAI Completion Client with JSON Schema 
+ OpenAI Responses Client 
+ Prometheus Metrics 
+ Dynamo K8s Example 
+ Model Recipes 
+ Deployment Guide for Nemotron v3 (Ultra & Super) on TensorRT LLM - Blackwell & Hopper Hardware 
+ Deployment Guide for GPT-OSS on TensorRT-LLM - Blackwell Hardware 
+ Deployment Guide for Qwen3 on TensorRT LLM - Blackwell & Hopper Hardware 
+ Deployment Guide for Qwen3.8 MoE and Qwen3.5 MoE on TensorRT LLM - Blackwell Hardware 
+ Deployment Guide for Qwen3.8-Flash-Next on TensorRT LLM - Blackwell Hardware 
+ Deployment Guide for Kimi K3 on TensorRT LLM - Blackwell 
+ Deployment Guide for GLM-5 on TensorRT LLM - Blackwell Hardware 
+ Deployment Guide for GLM-5.3-Flash on TensorRT LLM - Blackwell Hardware 
+ Deployment Guide for MiniMax-M3 on TensorRT LLM 
+ CPU Affinity configuration in TensorRT LLM 
+ Models 
+ Supported Models 
+ Visual Generation (Beta) 
+ Adding a New Model 
+ CLI Reference 
+ trtllm-bench 
+ trtllm-eval 
+ trtllm-serve 
+ trtllm-serve 
+ Run benchmarking with trtllm-serve 
+ API Reference 
+ LLM API Introduction 
+ API Reference 
+ LLM 
+ AsyncLLM 
+ MultimodalEncoder 
+ CompletionOutput 
+ RequestOutput 
+ GuidedDecodingParams 
+ SamplingParams 
+ DisaggregatedParams 
+ ConversationParams 
+ DisaggScheduleStyle 
+ BlockReuseConfig 
+ KvCacheConfig 
+ KVEventsConfig 
+ MambaStateConfig 
+ KvCacheRetentionConfig 
+ CudaGraphConfig 
+ DecodeCudaGraphConfig 
+ EncodeCudaGraphConfig 
+ EncodeExtraInputSpec 
+ MoeConfig 
+ EagleDecodingConfig 
+ Eagle3DecodingConfig 
+ MTPDecodingConfig 
+ SchedulerConfig 
+ CapacitySchedulerPolicy 
+ QuantConfig 
+ QuantAlgo 
+ CalibConfig 
+ RequestError 
+ MpiCommSession 
+ ExtendedRuntimePerfKnobConfig 
+ BatchingType 
+ ContextChunkingPolicy 
+ DynamicBatchConfig 
+ CacheTransceiverConfig 
+ NGramDecodingConfig 
+ PARDDecodingConfig 
+ DFlashDecodingConfig 
+ DSparkDecodingConfig 
+ SADecodingConfig 
+ SAEnhancerConfig 
+ UserProvidedDecodingConfig 
+ TorchCompileConfig 
+ DraftTargetDecodingConfig 
+ LlmArgs 
+ TorchLlmArgs 
+ AutoDecodingConfig 
+ AttentionDpConfig 
+ LoRARequest 
+ SaveHiddenStatesDecodingConfig 
+ RocketSparseAttentionConfig 
+ QSASparseAttentionConfig 
+ ReorderRequestPolicyConfig 
+ DeepSeekSparseAttentionConfig 
+ DeepSeekV4SparseAttentionConfig 
+ MiniMaxM3SparseAttentionConfig 
+ SchedulingParams 
+ SkipSoftmaxAttentionConfig 
+ ColdPageQuantizationCompressionConfig 
+ TriAttentionKvCacheCompressionConfig 
+ PrometheusMetricsConfig 
+ PrefillCudaGraphBackend 
+ ThinkingBudgetLogitsProcessor 
+ add_thinking_budget_logits_processor 
+ MultimodalConfig 
+ Features 
+ Feature Combination Matrix 
+ Multi-Head, Multi-Query, and Group-Query Attention 
+ Disaggregated Serving 
+ Sub-agent Routing 
+ Embeddings (Encoder-Only Models) 
+ KV Cache System 
+ KV Cache Compression 
+ Long Sequences 
+ LoRA (Low-Rank Adaptation) 
+ Multimodal Support in TensorRT LLM 
+ Overlap Scheduler 
+ Paged Attention, IFB, and Request Scheduling 
+ Parallelism in TensorRT LLM 
+ Quantization 
+ Sampling 
+ Additional Outputs 
+ Post-Processing Hook 
+ Guided Decoding 
+ Speculative Decoding 
+ Checkpoint Loading 
+ ModelExpress (MX) Checkpoint Loading 
+ Ray Orchestrator (Prototype) 
+ Torch Compile & Prefill CUDA Graph 
+ Helix Parallelism 
+ KV Cache Connector 
+ Sparse Attention 
+ Visual Generation (Beta) 
+ CUDA Graphs 
+ Quantized Attention 
+ Sparse Attention 
+ Prefix-Tokenization Cache 
+ Developer Guide 
+ Architecture Overview 
+ Performance Analysis 
+ TensorRT LLM Benchmarking 
+ Continuous Integration Overview 
+ Using Dev Containers 
+ LLM API Change Guide 
+ Introduction to KV Cache Transmission 
+ KVCacheManagerV2 Cold-Page Codec Design 
+ KV Cache Compression Development Guide 
+ Sparse Attention Development Guide 
+ Telemetry 
+ Blogs 
+ GVR V2: Self-Sampling and Multi-Thresholding for Faster Exact Top-K 
+ Accelerating Video Generation with GEMM Quantization, Attention Quantization and Skip Softmax Attention in TensorRT-LLM 
+ Evaluating Agentic Serving with Trace Replay and Job-Level Metrics 
+ DeepSeek-V4 on NVIDIA Blackwell: Model-Specific and Agentic-Workload Optimizations in TensorRT LLM 
+ Scaling Video Generation Across NVL72 rack with TensorRT-LLM 
+ MoE as Dense GEMM: Optimizing Low-Latency MoE Inference on NVIDIA Blackwell 
+ Joint Optimization of Agent Applications and TensorRT-LLM 
+ Helix Parallelism in TensorRT-LLM: Scaling Multi-Million-Token Decoding with KV Cache Sharding 
+ Temporal Correlation Meets Sparse Attention: Guess-Verify-Refine Top-K for Blackwell 
+ Tuning CUDA Graph Batch Sizes for Higher Output Throughput 
+ DWDP: Distributed Weight Data Parallelism for High-Performance LLM Inference on NVL72 
+ Optimizing MoE Communication with One-Sided AlltoAll Over NVLink 
+ Sparse Attention in TensorRT LLM 
+ Accelerating Long-Context Inference with Skip Softmax Attention 
+ Optimizing DeepSeek-V3.2 on NVIDIA Blackwell GPUs 
+ Scaling Expert Parallelism in TensorRT LLM (Part 3: Pushing the Performance Boundary) 
+ Inference Time Compute Implementation in TensorRT LLM 
+ Combining Guided Decoding and Speculative Decoding: Making CPU and GPU Cooperate Seamlessly 
+ Running GPT-OSS-120B with Eagle3 Speculative Decoding on GB200/B200 (TensorRT LLM) 
+ ADP Balance Strategy 
+ Running a High Performance GPT-OSS-120B Inference Server with TensorRT LLM 
+ Scaling Expert Parallelism in TensorRT LLM (Part 2: Performance Status and Optimization) 
+ N-Gram Speculative Decoding in TensorRT LLM 
+ How to launch Llama4 Maverick + Eagle3 TensorRT LLM server 
+ Disaggregated Serving in TensorRT LLM 
+ Scaling Expert Parallelism in TensorRT LLM (Part 1: Design and Implementation of Large-scale EP) 
+ Optimizing DeepSeek R1 Throughput on NVIDIA Blackwell GPUs: A Deep Dive for Developers 
+ DeepSeek R1 MTP Implementation and Optimization 
+ Pushing Latency Boundaries: Optimizing DeepSeek-R1 Performance on NVIDIA B200 GPUs 
+ How to get best performance on DeepSeek-R1 in TensorRT LLM 
+ H200 achieves nearly 12,000 tokens/sec on Llama2-13B with TensorRT LLM 
+ New XQA-kernel provides 2.4x more Llama-70B throughput within the same latency budget 
+ H100 has 4.6x A100 Performance in TensorRT LLM, achieving 10,
+
+=== [meta] https://nvidia.github.io/TensorRT-LLM/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/NVIDIA/TensorRT-LLM
+<div align="center">
+
+TensorRT LLM
+===========================
+<h4>TensorRT LLM optimizes inference for LLMs and Visual Gen models with specialized kernels for common operations, an efficient runtime, and a pythonic framework that enables you to customize and extend the system.</h4>
+
+[![Documentation](https://img.shields.io/badge/docs-latest-brightgreen.svg?style=flat)](https://nvidia.github.io/TensorRT-LLM/)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/NVIDIA/TensorRT-LLM)
+[![python](https://img.shields.io/badge/python-3.12-green)](https://www.python.org/downloads/release/python-3123/)
+[![python](https://img.shields.io/badge/python-3.10-green)](https://www.python.org/downloads/release/python-31012/)
+[![cuda](https://img.shields.io/badge/cuda-13.4.1-green)](https://developer.nvidia.com/cuda-downloads)
+[![torch](https://img.shields.io/badge/torch-2.14.0-green)](https://pytorch.org)
+[![version](https://img.shields.io/badge/release-1.4.0rc1-green)](https://github.com/NVIDIA/TensorRT-LLM/blob/main/tensorrt_llm/version.py)
+[![license](https://img.shields.io/badge/license-Apache%202-blue)](https://github.com/NVIDIA/TensorRT-LLM/blob/main/LICENSE)
+
+[Architecture](https://nvidia.github.io/TensorRT-LLM/developer-guide/overview.html)&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;[Performance](https://nvidia.github.io/TensorRT-LLM/developer-guide/perf-overview.html)&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;[Examples](https://nvidia.github.io/TensorRT-LLM/quick-start-guide.html)&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;[Documentation](https://nvidia.github.io/TensorRT-LLM/)&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;[Roadmap](https://github.com/NVIDIA/TensorRT-LLM/issues?q=is%3Aissue%20state%3Aopen%20label%3Aroadmap)
+
+---
+<div align="left">
+
+## Tech Blogs
+
+<!-- Use github markdown link to link for the latest blog since the doc build has not happened yet. When the doc build is updated, it should be updated to the webpage link. -->
+
+* [09/02] Accelerating Video Generation with GEMM Quantization, Attention Quantization and Skip Softmax Attention in TensorRT-LLM
+✨ [➡️ link](https://github.com/NVIDIA/TensorRT-LLM/blob/main/docs/source/blogs/tech_blog/blog28_Accelerating_Video_Generation_with_GEMM_Quantization_Attention_Quantization_and_Skip_Softmax_Attention_in_TensorRT-LLM.md)
+
+* [08/20] Evaluating Agentic Serving with Trace Replay and Job-Level Metrics
+✨ [➡️ link](https://github.com/NVIDIA/TensorRT-LLM/blob/main/docs/source/blogs/tech_blog/blog27_Evaluating_Agentic_Serving_with_Trace_Replay_and_Job_Level_Metrics.md)
+
+* [07/17] DeepSeek-V4 on NVIDIA Blackwell: Model-Specific and Agentic-Workload Optimizations in TensorRT LLM
+✨ [➡️ link](https://github.com/NVIDIA/TensorRT-LLM/blob/main/docs/source/blogs/tech_blog/blog26_DeepSeek_V4_on_NVIDIA_Blackwell_Model_Specific_and_Agentic_Workload_Optimizations_in_TensorRT-LLM.md)
+
+* [07/01] Scaling Video Generation Across NVL72 Rack with TensorRT-LLM
+✨ [➡️ link](https://github.com/NVIDIA/TensorRT-LLM/blob/main/docs/source/blogs/tech_blog/blog25_Scaling_Video_Generation_Across_NVL72_Rack_with_TensorRT-LLM.md)
+
+* [05/15] Joint Optimization of Agent Applications and TensorRT-LLM
+✨ [➡️ link](https://github.com/NVIDIA/TensorRT-LLM/blob/main/docs/source/blogs/tech_blog/blog23_Joint_Optimization_of_Agent_Applications_and_TensorRT-LLM.md)
+
+* [04/03] Tuning CUDA Graph Batch Sizes for Higher Output Throughput
+✨ [➡️ link](https://github.com/NVIDIA/TensorRT-LLM/blob/main/docs/source/blogs/tech_blog/blog20_Tuning_CUDA_Graph_Batch_Sizes_for_Higher_Output_Throughput.md)
+
+* [04/03] DWDP: Distributed Weight Data Parallelism for High-Performance LLM Inference on NVL72
+✨ [➡️ link](https://nvidia.github.io/TensorRT-LLM/blogs/tech_blog/blog19_DWDP_Distributed_Weight_Data_Parallelism_for_High_Performance_LLM_Inference_on_NVL72.html)
+
+
+* [03/16] Optimizing MoE Communication with One-Sided AlltoAll Over NVLink
+✨ [➡️ link](https://nvidia.github.io/TensorRT-LLM/blogs/tech_blog/blog18_Optimizing_MoE_Communication_with_One_Sided_AlltoAll_Over_NVLink.html)
+
+* [03/04] Sparse Attention in TensorRT LLM
+✨ [➡️ link](https://nvidia.github.io/TensorRT-LLM/blogs/tech_blog/blog17_Sparse_Attention_in_TensorRT-LLM.html)
+
+* [02/06] Accelera

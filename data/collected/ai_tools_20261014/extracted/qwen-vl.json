@@ -1,0 +1,119 @@
+{
+ "company": "Qwen Team",
+ "one_liner_ko": "Qwen 대형 언어 모델 기반의 멀티모달(시각-언어) 모델 계열 — 오픈소스 Qwen-VL과 강화판 Qwen-VL-Plus·Max.",
+ "what_it_does_ko": "Qwen-VL은 Qwen 팀이 2023년 9월 오픈소스로 공개한 시각-언어 모델이며, 이후 강화판 Qwen-VL-Plus와 Qwen-VL-Max가 나왔다. 이미지 속 세부 정보와 텍스트를 인식·추출·분석하고, 100만 화소 이상 고해상도 이미지와 다양한 화면비를 지원한다. 인물·랜드마크 인식, 이미지 설명, 시 쓰기, 화면 캡처 이해, 위치 지정 같은 작업을 보여 준다. Plus·Max는 Hugging Face·ModelScope·웹·앱·API로 무료 접근을 지원한다고 밝힌다.",
+ "key_features": [
+  "이미지 기반 추론 능력 강화",
+  "이미지 속 세부 정보·텍스트 인식·추출·분석",
+  "100만 화소 이상 고해상도·다양한 화면비 이미지 지원",
+  "인물·랜드마크 인식",
+  "이미지 속 특정 요소 위치 지정(시각 에이전트)",
+  "중국어 질의응답·텍스트 이해에서 GPT-4V·Gemini 능가(발표 기준)"
+ ],
+ "use_cases_ko": [
+  "앱 화면 캡처 등 일상 스크린샷 분석",
+  "이미지 속 특정 대상 찾기·장면 기반 판단"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Qwen-VL-Plus·Max를 Hugging Face·ModelScope·웹·앱·API로 무료 접근 지원)",
+  "plans": [],
+  "pricing_url": "https://github.com/QwenLM/Qwen-VL"
+ },
+ "open_source": "오픈소스(라이선스 이름은 페이지에 없음)",
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "API"
+ ],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://qwenlm.github.io/blog/qwen-vl/",
+   "quote": "January 25, 2024  · 12 min · 2505 words · Qwen Team"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://qwenlm.github.io/blog/qwen-vl/",
+   "quote": "we opensourced multimodal model Qwen-VL in Sep. 2023."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://qwenlm.github.io/blog/qwen-vl/",
+   "quote": "Recently, the Qwen-VL series has undergone a significant upgrade with the launch of two enhanced versions, Qwen-VL-Plus and Qwen-VL-Max."
+  },
+  {
+   "field": "key_features",
+   "url": "https://qwenlm.github.io/blog/qwen-vl/",
+   "quote": "Substantially boost in image-related reasoning capabilities;"
+  },
+  {
+   "field": "key_features",
+   "url": "https://qwenlm.github.io/blog/qwen-vl/",
+   "quote": "Considerable enhancement in recognizing, extracting, and analyzing details within images and texts contained therein;"
+  },
+  {
+   "field": "key_features",
+   "url": "https://qwenlm.github.io/blog/qwen-vl/",
+   "quote": "Support for high-definition images with resolutions above one million pixels and images of various aspect ratios."
+  },
+  {
+   "field": "key_features",
+   "url": "https://qwenlm.github.io/blog/qwen-vl/",
+   "quote": "For instance, Qwen-VL can recognize not only common objects, but also celebrities and landmarks."
+  },
+  {
+   "field": "key_features",
+   "url": "https://qwenlm.github.io/blog/qwen-vl/",
+   "quote": "Qwen-VL also has impressive abilities to pinpoint and query specific elements."
+  },
+  {
+   "field": "key_features",
+   "url": "https://qwenlm.github.io/blog/qwen-vl/",
+   "quote": "Notably, Qwen-VL-Max outperforms both GPT-4V from OpenAI and Gemini from Google in tasks on Chinese question answering and Chinese text comprehension."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://qwenlm.github.io/blog/qwen-vl/",
+   "quote": "Qwen-VL can write poetry in various languages inspired by visuals, and analyze everyday screenshots."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://qwenlm.github.io/blog/qwen-vl/",
+   "quote": "Moreover, Qwen-VL is also equipped to make judgments, deductions, and decisions based on the prevailing context of a scene."
+  },
+  {
+   "field": "pricing",
+   "url": "https://github.com/QwenLM/Qwen-VL",
+   "quote": "Qwen-Vl-Plus and Qwen-VL-Max are the upgraded and latest versions of the Qwen-VL model family, currently supporting access for free through"
+  },
+  {
+   "field": "open_source",
+   "url": "https://qwenlm.github.io/blog/qwen-vl/",
+   "quote": "Compared to the open-source version of Qwen-VL, these two models perform on par with Gemini Ultra and GPT-4V"
+  },
+  {
+   "field": "api",
+   "url": "https://github.com/QwenLM/Qwen-VL",
+   "quote": "<a href=\"https://help.aliyun.com/zh/dashscope/developer-reference/vl-plus-quick-start\">API</a>"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/QwenLM/Qwen-VL",
+   "quote": "<a href=\"https://tongyi.aliyun.com/qianwen\">Web</a>"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://github.com/QwenLM/Qwen-VL",
+   "quote": "<a href=\"README_JA.md\">日本語</a>&nbsp｜ &nbsp<a href=\"README_KO.md\">한국어</a>"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "오픈소스 Qwen-VL 외에 강화판 Qwen-VL-Plus·Max를 웹·앱·API(Alibaba DashScope)로 제공(현재 무료 접근 지원)",
+   "diff": "기존 '오픈소스(무료, 가중치/코드 공개)'만으로는 Plus·Max의 웹·앱·API 제공 형태가 빠져 있음(Plus·Max는 오픈소스 버전과 구분됨)",
+   "url": "https://github.com/QwenLM/Qwen-VL"
+  }
+ ]
+}

@@ -1,0 +1,96 @@
+{
+ "company": "Reka",
+ "one_liner_ko": "모든 종류의 데이터를 하나의 구조에서 처리·생성하고 실시간으로 돌아가는 옴니 모델을 만드는 AI 연구소(Reka).",
+ "what_it_does_ko": "수집된 공식 페이지는 'Reka Core' 단독 페이지가 아니라 Reka 회사 홈과 Reka API 문서다. Reka는 물리 AI 시대를 위한 모델과 인프라를 만든다고 소개하며, 모든 데이터를 한 구조에서 처리·생성하는 옴니 모델을 실시간으로 돌리는 데 주력한다. Reka API는 Reka 모델과 DeepSeek·GLM·Qwen·Gemma 등 일부 오픈 모델을 하나의 OpenAI 호환 엔드포인트로 제공한다. 대용량 영상을 태깅·검색·클립 생성하는 영상 인프라도 API·MCP·앱으로 제공한다.",
+ "key_features": [
+  "모든 데이터를 한 구조에서 처리·생성하는 옴니 모델",
+  "OpenAI 호환 API 엔드포인트",
+  "이미지·짧은 동영상 입력 지원",
+  "영상 태깅·추론·검색·클립 생성 인프라(API·MCP·앱)",
+  "증류로 종단간 11.8배 가속, 3.5비트 양자화",
+  "모델 학습·맞춤화·배포용 Reka Cloud"
+ ],
+ "use_cases_ko": [
+  "물리 세계에 AI를 적용하는 팀의 모델·인프라·데이터 활용"
+ ],
+ "pricing": {
+  "free_tier": null,
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "API"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://reka.ai",
+   "quote": "©2026 REKA. ALL RIGHTS RESERVED."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://reka.ai",
+   "quote": "Omni models that natively process and generate every kind of data in one architecture — and run in real time."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://reka.ai",
+   "quote": "We’re building models and infrastructure for the physical AI era."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.reka.ai/overview",
+   "quote": "The Reka API serves Reka models and a curated selection of open models, including DeepSeek, GLM, Qwen and Gemma, through one OpenAI-compatible endpoint."
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.reka.ai/overview",
+   "quote": "Point your existing OpenAI client at https://api.reka.ai/v1 , use your Reka API key"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.reka.ai/overview",
+   "quote": "Send images and short videos alongside text."
+  },
+  {
+   "field": "key_features",
+   "url": "https://reka.ai",
+   "quote": "Scalable infrastructure to tag, reason over, search, and clip large volumes of video data. Available via API, MCP, or our app."
+  },
+  {
+   "field": "key_features",
+   "url": "https://reka.ai",
+   "quote": "11.8× faster end to end, holding the quality of the teacher model."
+  },
+  {
+   "field": "key_features",
+   "url": "https://reka.ai",
+   "quote": "3.5-bit weights, near-lossless — the model fits where it has to run."
+  },
+  {
+   "field": "key_features",
+   "url": "https://reka.ai",
+   "quote": "Train, customize, and deploy leading AI models on infrastructure engineered for performance, efficiency, and scale."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://reka.ai",
+   "quote": "Models, infrastructure, and data for teams building into the physical world."
+  },
+  {
+   "field": "api",
+   "url": "https://docs.reka.ai/overview",
+   "quote": "Reka API Documentation | Reka API"
+  },
+  {
+   "field": "platforms",
+   "url": "https://docs.reka.ai/overview",
+   "quote": "curl https://api.reka.ai/v1/chat/completions"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

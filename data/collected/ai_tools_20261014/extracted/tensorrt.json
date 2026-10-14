@@ -1,0 +1,141 @@
+{
+ "company": "NVIDIA",
+ "one_liner_ko": "고성능 딥러닝 추론을 위한 NVIDIA의 개발자 도구 생태계(SDK).",
+ "what_it_does_ko": "NVIDIA TensorRT는 추론 컴파일러·런타임·모델 최적화를 담아 프로덕션 앱의 저지연·고처리량 추론을 돕는 도구 모음이다. CUDA 위에서 주요 프레임워크로 학습한 모델을 최적화하고 저정밀도로 보정해 데이터센터·워크스테이션·노트북·엣지에 배포한다. 양자화·레이어/텐서 융합·커널 튜닝을 쓰며, TensorRT-LLM·Model Optimizer·TensorRT for RTX·TensorRT Cloud가 같은 생태계에 속한다. PyTorch·Hugging Face와 직접 통합되고 ONNX 파서를 제공한다.",
+ "key_features": [
+  "양자화·레이어/텐서 융합·커널 튜닝 추론 최적화",
+  "FP8·FP4·INT8·INT4·AWQ 양자화(Model Optimizer)",
+  "PyTorch·Hugging Face 직접 통합",
+  "ONNX 모델 가져오기 파서",
+  "RTX PC에서 15~30초 엔진 빌드(TensorRT for RTX)",
+  "제한된 파트너용 클라우드 엔진 최적화(TensorRT Cloud)",
+  "CPU 전용 대비 최대 36배 추론 가속(공식 주장)"
+ ],
+ "use_cases_ko": [
+  "영상 분석·음성 AI·추천 시스템 등 프로덕션 추론 배포",
+  "자동차 임베디드용 안전 규격 추론",
+  "RTX PC 앱의 온디바이스 추론"
+ ],
+ "pricing": {
+  "free_tier": "부분 확인 (TensorRT-LLM은 GitHub 무료, Model Optimizer는 NVIDIA PyPI 무료로 명시; TensorRT 본체 가격 표기 없음)",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "윈도",
+  "API"
+ ],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://developer.nvidia.com/tensorrt",
+   "quote": "TensorRT SDK | NVIDIA Developer"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://developer.nvidia.com/tensorrt",
+   "quote": "NVIDIA® TensorRT™ is an ecosystem of tools for developers to achieve high-performance deep learning inference."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://developer.nvidia.com/tensorrt",
+   "quote": "TensorRT includes inference compilers, runtimes, and model optimizations that deliver low latency and high throughput for production applications."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://developer.nvidia.com/tensorrt",
+   "quote": "The TensorRT ecosystem includes the TensorRT compiler, TensorRT-LLM, TensorRT Model Optimizer, TensorRT for RTX, and TensorRT Cloud."
+  },
+  {
+   "field": "key_features",
+   "url": "https://developer.nvidia.com/tensorrt",
+   "quote": "TensorRT optimizes inference using quantization, layer and tensor fusion, and kernel tuning techniques."
+  },
+  {
+   "field": "key_features",
+   "url": "https://developer.nvidia.com/tensorrt",
+   "quote": "FP8, FP4, INT8, INT4, and advanced techniques such as AWQ are supported"
+  },
+  {
+   "field": "key_features",
+   "url": "https://developer.nvidia.com/tensorrt",
+   "quote": "TensorRT integrates directly into PyTorch and Hugging Face to achieve 6X faster inference with a single line of code."
+  },
+  {
+   "field": "key_features",
+   "url": "https://developer.nvidia.com/tensorrt",
+   "quote": "TensorRT provides an ONNX parser to import ONNX models from popular frameworks into TensorRT."
+  },
+  {
+   "field": "key_features",
+   "url": "https://developer.nvidia.com/tensorrt",
+   "quote": "It facilitates faster engine build times within 15 to 30s"
+  },
+  {
+   "field": "key_features",
+   "url": "https://developer.nvidia.com/tensorrt",
+   "quote": "TensorRT Cloud is available with limited access to select partners."
+  },
+  {
+   "field": "key_features",
+   "url": "https://developer.nvidia.com/tensorrt",
+   "quote": "Speed up inference by 36X compared to CPU-only platforms."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://developer.nvidia.com/tensorrt",
+   "quote": "TensorRT provides developers a unified path to deploy intelligent video analytics, speech AI, recommender systems, video conferencing, AI-based cybersecurity, and streaming apps in production."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://developer.nvidia.com/tensorrt",
+   "quote": "Safety-compliant and high-performance inference for Automotive Embedded"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://developer.nvidia.com/tensorrt",
+   "quote": "facilitating apps to build inference engines directly on target RTX PCs during app installation or on first run"
+  },
+  {
+   "field": "pricing",
+   "url": "https://developer.nvidia.com/tensorrt",
+   "quote": "TensorRT-LLM is available for free on GitHub ."
+  },
+  {
+   "field": "pricing",
+   "url": "https://developer.nvidia.com/tensorrt",
+   "quote": "TensorRT Model Optimizer is free on NVIDIA PyPI"
+  },
+  {
+   "field": "api",
+   "url": "https://developer.nvidia.com/tensorrt",
+   "quote": "TensorRT is an ecosystem of APIs for building and deploying high-performance deep learning inference."
+  },
+  {
+   "field": "platforms",
+   "url": "https://docs.nvidia.com/deeplearning/tensorrt/latest/index.html",
+   "quote": "Method 5: Zip File Installation (Windows)"
+  },
+  {
+   "field": "platforms",
+   "url": "https://docs.nvidia.com/deeplearning/tensorrt/latest/index.html",
+   "quote": "Python API Documentation"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://developer.nvidia.com/tensorrt",
+   "quote": "hreflang: en-us, ko-kr, x-default, zh-cn"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "내려받아 설치하는 추론 SDK(관련 도구 TensorRT-LLM·Model Optimizer는 무료 명시), 사용량 요금표 없음",
+   "diff": "기존 '사용량 기반 종량제(클라우드/GPU)'와 달리 클라우드 과금 서비스가 아닌 다운로드형 SDK (TensorRT Cloud는 일부 파트너 한정)",
+   "url": "https://developer.nvidia.com/tensorrt"
+  }
+ ],
+ "plan_change": []
+}

@@ -1,0 +1,403 @@
+=== [home] http://accord-framework.net (lang=en)
+Accord.NET Machine Learning Framework 
+ Toggle navigation 
+ Accord.NET Framework 
+ About 
+ Examples 
+ Publications 
+ Support 
+ Sample apps 
+ Online docs 
+ GitHub Wiki 
+ License 
+ Contribute
+ Report an issue 
+ Donate (Paypal) 
+ How to 
+ Get Started 
+ Mathematics 
+ Classification 
+ Regression 
+ Clustering 
+ Distributions 
+ Hypothesis Tests 
+ Kernel Methods 
+ Image 
+ Audio 
+ Vision 
+ Books 
+ F# for Machine Learning Essentials 
+ Mastering .NET Machine Learning 
+ Machine Learning Projects for .NET Developers 
+ GitHub 
+ v3.8
+ Download Installer 
+ Download Archive 
+ Read the Manual 
+ Consult the .NET API 
+ Fork On GitHub 
+ Machine learning made in a minute 
+ The Accord.NET Framework is a .NET machine learning framework combined
+ with audio and image processing libraries completely written in C#. It is a complete
+ framework for building production-grade computer vision, computer audition, signal
+ processing and statistics applications even for commercial use .
+ A comprehensive set of sample applications 
+ provide a fast start to get up and running quickly, and an extensive documentation and
+ wiki helps fill in
+ the details.
+ Classification .
+ Support Vector Machines
+ , 
+ Logistic Regression
+ , 
+ Decision Trees
+ , 
+ Neural Networks
+ , 
+ Deep Learning (Deep Neural Networks)
+ , 
+ Levenberg-Marquardt with Bayesian Regularization
+ , 
+ Restricted Boltzmann Machines
+ , 
+ Sequence classification
+ , 
+ Hidden Markov Classifiers
+ and 
+ Hidden Conditional Random Fields
+ .
+ Regression .
+ Multiple linear regression
+ , 
+ Multivariate linear regression
+ , 
+ polynomial regression
+ , logarithmic regression. 
+ Logistic regression
+ , 
+ multinomial logistic regression (softmax)
+ and 
+ generalized linear models
+ . 
+ L2-regularized L2-loss logistic regression
+ , 
+ L2-regularized logistic regression
+ , 
+ L1-regularized logistic regression
+ , 
+ L2-regularized logistic regression in the dual form
+ and 
+ regression support vector machines
+ .
+ Clustering .
+ K-Means
+ , 
+ K-Modes
+ , 
+ Mean-Shift
+ , 
+ Gaussian Mixture Models
+ , 
+ Binary Split
+ , 
+ Deep Belief Networks
+ , 
+ Restricted Boltzmann Machines
+ . Clustering algorithms
+ can be applied in arbitrary data, 
+ including images
+ , data tables, videos and 
+ audio
+ .
+ Distributions .
+ Parametric and 
+ non-parametric estimation
+ of more than 40 distributions. 
+ Univariate
+ distributions such as 
+ Normal
+ , 
+ Cauchy
+ , 
+ Hypergeometric
+ , 
+ Poisson
+ , 
+ Bernoulli
+ , and specialized distributions such as
+ the 
+ Kolmogorov-Smirnov
+ , 
+ Nakagami
+ , 
+ Weibull
+ , and 
+ Von-Mises
+ distributions. 
+ Multivariate
+ distributions such as the 
+ multivariate Normal
+ , 
+ Multinomial
+ , 
+ Independent
+ , 
+ Joint
+ and 
+ Mixture distributions
+ .
+ Hypothesis Tests .
+ More than 
+ 35 statistical hypothesis tests
+ , including 
+ one way
+ and 
+ two-way ANOVA tests
+ , non-parametric tests such as the 
+ Kolmogorov-Smirnov test
+ and the 
+ Sign Test for the Median
+ , 
+ contingency table
+ tests such as the 
+ Kappa test
+ , with variations for 
+ multiple tables
+ , as well as the 
+ Bhapkar
+ and 
+ Bowker
+ tests; and the more traditional
+ Chi-Square
+ , 
+ Z
+ , 
+ F
+ , 
+ T
+ and 
+ Wald tests
+ .
+ Kernel Methods .
+ Kernel Support Vector Machines
+ , 
+ Multi-class
+ and 
+ Multi-label machines
+ , 
+ Sequential Minimal Optimization
+ , 
+ Least-Squares Learning
+ , 
+ probabilistic learning
+ , including special methods for
+ linear machines
+ such as LIBLINEAR's methods for 
+ Linear Coordinate Descent
+ , 
+ Linear Newton Method
+ , 
+ Probabilistic Coordinate Descent
+ , 
+ Probabilistic Coordinate Descent in the Dual
+ , 
+ Probabilistic Newton Method for L1 and L2 machines in both the dual and primal formulations
+ .
+ Imaging .
+ Interest and feature point detectors such as 
+ Harris
+ , 
+ FREAK
+ , 
+ SURF
+ , and 
+ FAST
+ . 
+ Grey-level Co-occurrence matrices
+ , 
+ Border following
+ , 
+ Bag-of-Visual-Words (BoW)
+ , 
+ RANSAC-based homography estimation
+ , 
+ integral images
+ , 
+ haralick textural feature extraction
+ ,
+ and dense descriptors such as 
+ histogram of oriented gradients (HOG)
+ and 
+ Local Binary Pattern (LBP)
+ . Several 
+ image filters for image processing applications
+ such as 
+ difference of Gaussians
+ , 
+ Gabor
+ , 
+ Niblack
+ and 
+ Sauvola thresholding
+ .
+ Audio and Signal .
+ Load, parse, save, filter and transform 
+ audio signals
+ , such as applying 
+ audio processing filters
+ in both space and 
+ frequency domain
+ . 
+ WAV files
+ , 
+ audio capture
+ , time-domain filters such as 
+ envelope
+ , 
+ high-pass
+ , 
+ low-pass
+ , 
+ wave rectification
+ filters. Frequency-domain
+ operators such as 
+ differential rectification filter
+ and 
+ comb filter with Dirac's delta functions
+ . Signal generators for 
+ Cosine
+ , 
+ Impulse
+ , 
+ Square
+ signals.
+ Vision .
+ Real-time face detection
+ and 
+ tracking
+ , as well as general methods for 
+ detecting
+ , 
+ tracking
+ and 
+ transforming objects in image streams
+ . Contains 
+ cascade definitions
+ , 
+ Camshift
+ and 
+ Dynamic Template Matching trackers
+ . Includes
+ pre-created classifiers for human faces
+ and some facial features such as
+ noses
+ .
+ Get started now! 
+ Sample applications .
+ Sample applications help you start writing your applications quickly. Just 
+ get one of the sample applications that is closest to your goal
+ , and start
+ from there.
+ Create and test new learning algorithms with ease .
+ Strategy and template method patterns help you swap learning algorithms quickly.
+ Create, build and compare different approaches without delving too deep in code.
+ Check a 
+ list of works that have been made possible with
+ the framework
+ .
+ Ask your questions .
+ Stackoverflow is 
+ continuously monitored for new questions containing the "Accord.NET" tag . Ask your new
+ question and mark it with this tag, and it will be answered in a minute by the framework
+ authors and the user community.
+ Note: If you would like to ask questions concerning the framework
+ itself, such as questions on "why" something was done in a particular way,
+ suggestions and general discussions, do not use Stackoverflow - please refer
+ to the 
+ project's issue tracker and mark your issue with the "question" tag instead. 
+ For bugs and feature requests, please also use 
+ issue tracker . If the project has been useful for you, please
+ consider 
+ helping us improve the wiki . Thanks!
+ Due to popular demand, you can also acquire a non-exclusive license over individual parts
+ of the framework under particular terms. Although the framework is free and will always stay
+ free, some companies may feel safer to use the software if they have signed a proper license
+ agreement allowing them to do so. Please send a mail to 
+ licenses@accord-framework.net
+ if you think your company would fit in this case.
+-->
+ .NET Framework 
+ Windows Phone 
+ Android 
+ iOS 
+ Java 
+ Copyright © 2008-2017
+ Have you found this software useful?
+ Consider donating just US$10 
+ so it can get even better!
+ This software is completely free and will
+ always stay free 
+ . Enjoy!
+ The project also accepts donations in Bitcoins, Ethereum, and
+ Litecoins. Please consider donating so it can be even better!
+ Bitcoin:
+ Other currencies:
+ BTC: 1FC5gxLs2TsvuiHPP1tRLh5mPboQJQghvZ 
+ ETH: 0x36FDA635Ef5773d8B376037D7BAfF22FeB987d92
+ LTC: LNjkZkMdSyncUvg5WnnhDNirdux4Q95gdt
+ All donations are strictly used towards improving the project, such
+ as by hiring more developers to fix issues in the issue tracker .
+ This software is completely free and will always stay free . Enjoy!
+
+=== [meta] http://accord-framework.net
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/accord-net/framework
+# Accord.NET Framework
+
+This project is currently archived. Please fork the project into your own GitHub account if you would like to continue its development.
+
+# Archiving
+
+After 14~15 years of development, the Accord.NET project has finally been archived. I would like to send a big thank you to everyone who has ever comitted, dedicated, or otherwise devoted their time and effort into making this repository better every day. What had started as a project to store knowledge in the form of algorithms and implementations had grown way beyond my expectations since I first joined university and started working on research ~15 years ago.
+
+In the meantime, many things have happened, and the ML landscape had also greatly evolved since then.
+
+However, I pledge you to absolutely not interpret the archiving of this project as a loss. The main goal of this project since day 1 was to crystalize the ML knowledge available at the time in the form of source code and store it under a number of compatible free software licenses. As such, if you would like to, *do not feel afraid of copy and pasting portions of this project into your own implementations*. If I (Cesar De Souza) am the solely implementor of any of the classes you would like to port, I hereby grant you an irrevocable license to do so. If I am not, and the current license of the file you would like to port does not suit your needs, I can help you contact their original developers to help you with the transition.
+
+<pre>
+"We reject kings, presidents and voting.  We
+   believe in rough consensus and running code"
+   -- David Clark
+</pre>
+
+All this said. This has been an amazing ride.
+
+Thanks everyone for their ever growing support all those years.
+
+Let's keep in touch,
+
+Cesar
+
+
+# Previous
+
+[![DOI](https://zenodo.org/badge/3964514.svg)](https://zenodo.org/badge/latestdoi/3964514)
+[![Build status](https://ci.appveyor.com/api/projects/status/ns9h9opjmu8iw3ep?svg=true)](https://ci.appveyor.com/project/cesarsouza/framework)
+[![Build Status](https://travis-ci.org/accord-net/framework.svg?branch=development)](https://travis-ci.org/accord-net/framework)
+[![NuGet Downloads](https://img.shields.io/nuget/dt/Accord.svg)](https://www.nuget.org/packages/Accord/)
+[![License](https://img.shields.io/badge/license-LGPL--2.1-blue.svg)](LICENSE)
+[![NuGet](https://img.shields.io/nuget/v/Accord.svg)](https://www.nuget.org/packages/Accord/)
+[![NuGet Pre Release](https://img.shields.io/nuget/vpre/Accord.svg)](https://www.nuget.org/packages/Accord/)
+
+The Accord.NET project provides machine learning, statistics, artificial intelligence, computer vision and image processing methods to .NET. It can be used on Microsoft Windows, Xamarin, Unity3D, Windows Store applications, Linux or mobile.
+
+After merging with the AForge.NET project, the framework now offers a unified API for learning/training machine learning models that is both easy to use *and* extensible. It is based on the following pattern:
+
+- Choose a [learning algorithm](http://accord-framework.net/docs/html/N_Accord_MachineLearning.htm) that provides a Learn(x, y) or Learn(x) method;
+- [Use the Learn(x, y)](http://accord-framework.net/docs/html/M_Accord_MachineLearning_VectorMachines_Learning_SequentialMinimalOptimization_Learn.htm) to create a [machine learning model](http://accord-framework.net/docs/html/T_Accord_MachineLearning_VectorMachines_SupportVectorMachine.htm) learned from the data; 
+- Use the model's [Transform](http://accord-framework.net/docs/html/M_Accord_MachineLearning_ClassifierBase_2_Transform.htm), [Decide](http://accord-framework.net/docs/html/M_Accord_MachineLearning_ClassifierBase_2_Decide_1.htm), [Scores](http://accord-framework.net/docs/html/M_Accord_MachineLearning_BinaryScoreClassifierBase_1_Scores_3.htm), [Probabilities](http://accord-framework.net/docs/html/M_Accord_MachineLearning_BinaryLikelihoodClassifierBase_1_Probabilities.htm) or [LogLikelihoods](http://accord-framework.net/docs/html/M_Accord_MachineLearning_VectorMachines_SupportVectorMachine_2_LogLikelihood.htm) methods.
+
+For more information, please see the [getting started guide](https://github.com/accord-net/framework/wiki/Getting-started), and check [the class

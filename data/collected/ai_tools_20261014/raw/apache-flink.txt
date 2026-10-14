@@ -1,0 +1,352 @@
+=== [home] https://flink.apache.org (lang=en)
+Apache Flink® — Stateful Computations over Data Streams | Apache Flink 
+ Apache Flink 
+ About 
+ Architecture 
+ Applications 
+ Operations 
+ Use Cases 
+ Powered By 
+ Roadmap 
+ Community & Project Info 
+ Security 
+ Special Thanks 
+ Getting Started 
+ With Flink 
+ With Flink Kubernetes Operator 
+ With Flink CDC 
+ With Flink Agents 
+ With Flink ML 
+ Training Course 
+ With Flink Stateful Functions 
+ Documentation 
+ Flink 2.3 (stable) 
+ Flink 1.20 (LTS) 
+ Flink Master (snapshot) 
+ Kubernetes Operator 1.16 (latest) 
+ Kubernetes Operator Main (snapshot) 
+ CDC 3.7 (stable) 
+ CDC Master (snapshot) 
+ Agents 0.3 (latest) 
+ Agents Main (snapshot) 
+ ML 2.3 (stable) 
+ ML Master (snapshot) 
+ Stateful Functions 3.3 (stable) 
+ Stateful Functions Master (snapshot) 
+ How to Contribute 
+ Overview 
+ Contribute Code 
+ Review Pull Requests 
+ Code Style and Quality Guide 
+ Contribute Documentation 
+ Documentation Style Guide 
+ Contribute to the Website 
+ Getting Help 
+ Flink Blog 
+ Downloads 
+ Apache Flink ® 
+ Stateful Computations over Data Streams
+ Apache Flink is a framework and distributed processing engine for stateful computations over unbounded and bounded data streams. Flink has been designed to run in all common cluster environments, perform computations at in-memory speed and at any scale.
+ Flink Capabilities
+ Correctness guarantees
+ Exactly-once state consistency
+ Event-time processing
+ Sophisticated late data handling
+ Learn More 
+ Layered APIs
+ SQL on Stream & Batch Data
+ DataStream API
+ ProcessFunction (Time & State)
+ Learn More 
+ Operational focus
+ Flexible deployment
+ High-availability setup
+ Savepoints
+ Learn More 
+ Scalability
+ Scale-out architecture
+ Support for very large state
+ Incremental Checkpoints
+ Learn More 
+ Performance
+ Low latency
+ High throughput
+ In-Memory computing
+ Learn More 
+ Use Cases
+ Event Driven Applications
+ An event-driven application is a stateful application that ingests events from one or more event streams and reacts to incoming events by triggering computations, state updates, or external actions.
+ Stream & Batch Analytics
+ Analytical jobs extract information and insight from raw data. Apache Flink supports traditional batch queries on bounded data sets and real-time, continuous queries from unbounded, live data streams.
+ Data Pipelines & ETL
+ Extract-transform-load (ETL) is a common approach to convert and move data between storage systems.
+ Learn more about Flink use cases 
+ Recent Flink blogs
+ Apache Flink CDC 3.7.0 Release Announcement
+ October 10, 2026 - 
+ Xiqian Yu.
+ The Apache Flink Community is excited to announce the release of Flink CDC 3.7.0!
+This release brings AI-powered data processing to Flink CDC pipelines with a pluggable model API, an OpenAI-compatible …
+ Continue reading 
+ Apache Flink Kubernetes Operator 1.16.0 Release Announcement
+ September 15, 2026 - 
+ Dennis-Mircea Ciupitu.
+ The Apache Flink community is excited to announce the release of Flink Kubernetes Operator 1.16.0!
+This release centers on extensibility and documentation: a completely restructured documentation …
+ Continue reading 
+ Flink Community Update for Q2 2026
+ July 30, 2026 - 
+ Sophia Izokun.
+ This is the Flink Community Update for Q2 2026, the first in a new quarterly format. Following a discussion with the dev community, the intention going forward is that these updates will appear …
+ Continue reading 
+ Read more blog posts 
+ flink-packages.org 
+ Apache Software Foundation 
+ License 
+  中文版
+ Security 
+ Donate 
+ Thanks 
+ Flink blog 
+ Github 
+ Twitter 
+ The contents of this website are © 2024 Apache Software Foundation under the terms of the Apache License v2. Apache Flink, Flink, and the Flink logo are either registered trademarks or trademarks of The Apache Software Foundation in the United States and other countries.
+
+=== [about] https://flink.apache.org/how-to-contribute/overview/ (lang=en)
+Overview | Apache Flink 
+ Apache Flink 
+ About 
+ Architecture 
+ Applications 
+ Operations 
+ Use Cases 
+ Powered By 
+ Roadmap 
+ Community & Project Info 
+ Security 
+ Special Thanks 
+ Getting Started 
+ With Flink 
+ With Flink Kubernetes Operator 
+ With Flink CDC 
+ With Flink Agents 
+ With Flink ML 
+ Training Course 
+ With Flink Stateful Functions 
+ Documentation 
+ Flink 2.3 (stable) 
+ Flink 1.20 (LTS) 
+ Flink Master (snapshot) 
+ Kubernetes Operator 1.16 (latest) 
+ Kubernetes Operator Main (snapshot) 
+ CDC 3.7 (stable) 
+ CDC Master (snapshot) 
+ Agents 0.3 (latest) 
+ Agents Main (snapshot) 
+ ML 2.3 (stable) 
+ ML Master (snapshot) 
+ Stateful Functions 3.3 (stable) 
+ Stateful Functions Master (snapshot) 
+ How to Contribute 
+ Overview 
+ Contribute Code 
+ Review Pull Requests 
+ Code Style and Quality Guide 
+ Contribute Documentation 
+ Documentation Style Guide 
+ Contribute to the Website 
+ Getting Help 
+ Flink Blog 
+ Downloads 
+ How To Contribute
+ # 
+ Apache Flink is developed by an open and friendly community. Everybody is cordially welcome to join the community and contribute to Apache Flink. There are several ways to interact with the community and to contribute to Flink including asking questions, filing bug reports, proposing new features, joining discussions on the mailing lists, contributing code or documentation, improving the website, or testing release candidates.
+ What do you want to do?
+ # 
+ Contributing to Apache Flink goes beyond writing code for the project. Below, we list different opportunities to help the project:
+ Area 
+ Further information 
+ Report a Bug 
+ To report a problem with Flink, open Flink’s Jira , log in if necessary, and click on the red Create button at the top. 
+ Please give detailed information about the problem you encountered and, if possible, add a description that helps to reproduce the problem. 
+ Contribute Code 
+ Read the Code Contribution Guide 
+ Help With Code Reviews 
+ Read the Code Review Guide 
+ Help Preparing a Release 
+ Releasing a new version consists of the following steps:
+ Building a new release candidate and starting a vote (usually for 72 hours) on the dev@flink.apache.org list
+ Testing the release candidate and voting (+1 if no issues were found, -1 if the release candidate has issues).
+ Going back to step 1 if the release candidate had issues. Otherwise we publish the release.
+ Read the test procedure for a release .
+ Contribute Documentation 
+ Read the Documentation Contribution Guide 
+ Support Flink Users 
+ Reply to questions on the user mailing list 
+ Reply to Flink related questions on Stack Overflow with the apache-flink , flink-streaming or flink-sql tag
+ Check the latest issues in Jira for tickets which are actually user questions
+ Improve The Website 
+ Read the Website Contribution Guide 
+ Spread the Word About Flink 
+ Organize or attend a Flink Meetup 
+ Contribute to the Flink blog 
+ Share your conference, meetup or blog post on the community@flink.apache.org mailing list , or tweet about it, tagging the @ApacheFlink handle.
+ Any other question? Reach out to the dev@flink.apache.org mailing list to get help!
+ Further reading
+ # 
+ How to become a committer
+ # 
+ Committers are community members that have write access to the project’s repositories, i.e., they can modify the code, documentation, and website by themselves and also accept other contributions.
+ There is no strict protocol for becoming a committer or PMC member. Candidates for new committers are typically people that are active contributors and community members.
+ Candidates for new committers are suggested by current co
+
+=== [meta] https://flink.apache.org
+html lang: en
+hreflang: zh
+화면에 보이는 언어 이름: 中文
+
+=== [github] https://github.com/apache/flink
+# Apache Flink
+
+Apache Flink is an open source stream processing framework with powerful stream- and batch-processing capabilities.
+
+Learn more about Flink at [https://flink.apache.org/](https://flink.apache.org/)
+
+
+### Features
+
+* A streaming-first runtime that supports both batch processing and data streaming programs
+
+* Elegant and fluent APIs in Java
+
+* A runtime that supports very high throughput and low event latency at the same time
+
+* Support for *event time* and *out-of-order* processing in the DataStream API, based on the *Dataflow Model*
+
+* Flexible windowing (time, count, sessions, custom triggers) across different time semantics (event time, processing time)
+
+* Fault-tolerance with *exactly-once* processing guarantees
+
+* Natural back-pressure in streaming programs
+
+* Libraries for Graph processing (batch), Machine Learning (batch), and Complex Event Processing (streaming)
+
+* Custom memory management for efficient and robust switching between in-memory and out-of-core data processing algorithms
+
+* Compatibility layers for Apache Hadoop MapReduce
+
+* Integration with YARN, HDFS, HBase, and other components of the Apache Hadoop ecosystem
+
+
+### Streaming Example
+```java
+// pojo class WordWithCount
+public class WordWithCount {
+    public String word;
+    public int count;
+
+    public WordWithCount() {}
+    
+    public WordWithCount(String word, int count) {
+        this.word = word;
+        this.count = count;
+    }
+}
+
+// main method
+StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
+DataStreamSource<String> text = env.socketTextStream(host, port);
+DataStream<WordWithCount> windowCounts = text
+    .flatMap(
+        (FlatMapFunction<String, String>) (line, collector) 
+            -> Arrays.stream(line.split("\\s")).forEach(collector::collect)
+    ).returns(String.class)
+    .map(word -> new WordWithCount(word, 1)).returns(TypeInformation.of(WordWithCount.class))
+    .keyBy(wordWithCnt -> wordWithCnt.word)
+    .window(TumblingProcessingTimeWindows.of(Duration.ofSeconds(5)))
+    .sum("count").returns(TypeInformation.of(WordWithCount.class));
+
+windowCounts.print();
+env.execute();
+}
+```
+
+### Batch Example
+```java
+// pojo class WordWithCount
+public class WordWithCount {
+    public String word;
+    public int count;
+
+    public WordWithCount() {}
+
+    public WordWithCount(String word, int count) {
+        this.word = word;
+        this.count = count;
+    }
+}
+
+// main method
+StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
+env.setRuntimeMode(RuntimeExecutionMode.BATCH);
+FileSource<String> source = FileSource.forRecordStreamFormat(new TextLineInputFormat(), new Path("MyInput.txt")).build();
+DataStreamSource<String> text = env.fromSource(source, WatermarkStrategy.noWatermarks(), "MySource");
+DataStream<WordWithCount> windowCounts = text
+        .flatMap((FlatMapFunction<String, String>) (line, collector) -> Arrays
+                .stream(line.split("\\s"))
+                .forEach(collector::collect)).returns(String.class)
+        .map(word -> new WordWithCount(word, 1)).returns(TypeInformation.of(WordWithCount.class))
+        .keyBy(wordWithCount -> wordWithCount.word)
+        .sum("count").returns(TypeInformation.of(WordWithCount.class));
+
+windowCounts.print();
+env.execute();
+```
+
+
+
+## Building Apache Flink from Source
+
+Prerequisites for building Flink:
+
+* Unix-like environment (we use Linux, Mac OS X, Cygwin, WSL)
+* Git
+* Maven (we require version 3.9.16)
+* Java (version 11, 17, or 21)
+
+### Basic Build Instructions
+
+First, clone the repository:
+
+```
+git clone https://github.com/apache/flink.git
+cd flink
+```
+
+Then, choose one of the following commands based on your preferred Java version:
+
+**For Java 11**
+
+```
+./mvnw clean package -DskipTests -Djdk11 -Pjava11-target
+```
+
+**For Java 17 (Default)**
+
+```
+./mvnw clean package -DskipTests -Djdk17 -Pjava17-target
+```
+
+**For Java 21**
+
+```
+./mvnw clean package -DskipTests -Djdk21 -Pjava21-target
+```
+
+The build process will take approximately 10 minutes to complete.
+Flink will be installed in `build-target`.
+
+### Notes
+
+* Make sure your JAVA_HOME environment variable points to the correct JDK version
+* The bu

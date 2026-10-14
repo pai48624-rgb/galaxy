@@ -1,0 +1,29 @@
+{
+ "company": "Essential AI",
+ "one_liner_ko": null,
+ "what_it_does_ko": "rnj-1-instruct는 Essential AI가 Hugging Face에 공개한 텍스트 생성(대화형) 모델로, 기반 모델 EssentialAI/rnj-1을 파인튜닝한 것이다. 모델 구조 태그는 gemma3_text이며 Transformers 라이브러리용 safetensors 가중치가 Apache-2.0 라이선스로 공개되어 있다. 대화 템플릿은 스스로를 'Essential AI가 학습한 파운데이션 모델 rnj-1'로 소개하며, Azure 배포 태그가 붙어 있다. 수집된 페이지에는 모델 설명 본문·성능 정보가 포함되어 있지 않다.",
+ "key_features": [
+  "rnj-1 기반 지시(instruct) 파인튜닝 모델",
+  "Transformers·safetensors 가중치 공개",
+  "Azure 배포 지원 태그"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "Apache-2.0",
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "불명",
+ "evidence": [
+  {"field": "company", "url": "https://huggingface.co/EssentialAI/rnj-1-instruct", "quote": "You are rnj-1, a foundation model trained by Essential AI."},
+  {"field": "what_it_does_ko", "url": "https://huggingface.co/EssentialAI/rnj-1-instruct", "quote": "\"gemma3_text\",\"text-generation\",\"conversational\",\"base_model:EssentialAI/rnj-1\",\"base_model:finetune:EssentialAI/rnj-1\""},
+  {"field": "key_features", "url": "https://huggingface.co/EssentialAI/rnj-1-instruct", "quote": "\"pipeline_tag\":\"text-generation\",\"library_name\":\"transformers\""},
+  {"field": "key_features", "url": "https://huggingface.co/EssentialAI/rnj-1-instruct", "quote": "{\"id\":\"deploy:azure\",\"label\":\"azure\",\"type\":\"deploy\"}"},
+  {"field": "open_source", "url": "https://huggingface.co/EssentialAI/rnj-1-instruct", "quote": "{\"id\":\"license:apache-2.0\",\"label\":\"apache-2.0\",\"type\":\"license\"}"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

@@ -1,0 +1,113 @@
+{
+ "company": "Inception",
+ "one_liner_ko": "Mercury는 OpenAI 호환 API로 제공되는 빠른 추론·코드용 확산(diffusion) LLM 모델군이다.",
+ "what_it_does_ko": "Inception의 Mercury 모델은 확산 방식 LLM으로, 낮은 지연시간으로 추론과 코드 생성을 제공한다고 소개한다. API는 OpenAI 호환이라 기존 도구로 바로 쓸 수 있다. 코드용 Mercury Edit 2는 자동완성(FIM)과 다음 편집 제안(Next Edit)을 지원한다. 채팅·도구 호출·구조화 출력용 Mercury 2.5, 음성 에이전트용 Mercury Voice, 분류·점수용 Mercury Decide도 함께 제공된다.",
+ "key_features": [
+  "OpenAI 호환 API",
+  "코드 자동완성(FIM)",
+  "다음 편집 제안(Next Edit)",
+  "스트리밍",
+  "도구 호출(Tool Use)",
+  "구조화 출력",
+  "Cursor·Zed·VS Code 확장 등 연동"
+ ],
+ "use_cases_ko": [
+  "개발자가 에디터에서 코드 자동완성·다음 편집 제안에 사용",
+  "음성 에이전트·고객지원·SQL·코딩 에이전트 구축"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [
+   {
+    "name": "Mercury Edit 2 (입력)",
+    "price": 0.25,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "입력 100만 토큰당 $0.25, 출력 100만 토큰당 $0.75, FIM/NextEdit 32K",
+    "page_lang": "en"
+   },
+   {
+    "name": "Mercury 2 (입력)",
+    "price": 0.25,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "입력 100만 토큰당 $0.25, 출력 $0.75, 컨텍스트 128K",
+    "page_lang": "en"
+   },
+   {
+    "name": "Mercury 2.5 (입력)",
+    "price": 0.2,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "페이지 표기 '$0.20 → $0.04'(입력 100만 토큰), 출력 '$0.75 → $0.15', 컨텍스트 260K",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://docs.inceptionlabs.ai/get-started/models"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "API"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://docs.inceptionlabs.ai/",
+   "quote": "Inception’s Mercury models are diffusion LLMs that deliver frontier-quality reasoning and code generation at a fraction of the latency."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://docs.inceptionlabs.ai/",
+   "quote": "Build with Mercury — the fastest reasoning and code models, served through an OpenAI-compatible API."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.inceptionlabs.ai/get-started/models",
+   "quote": "A code editing LLM for autocomplete (FIM) and next edit suggestions."
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.inceptionlabs.ai/",
+   "quote": "Streaming, tool use, structured outputs, autocomplete (FIM), and next edit."
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.inceptionlabs.ai/",
+   "quote": "Use Mercury in Cursor, Zed, VS Code extensions, LangChain, Vapi, and more."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://docs.inceptionlabs.ai/",
+   "quote": "End-to-end guides for search, customer support, voice, SQL, and coding agents."
+  },
+  {
+   "field": "pricing",
+   "url": "https://docs.inceptionlabs.ai/get-started/models",
+   "quote": "Mercury Edit 2 $0.25 $0.025 $0.75 v1/fim/completions"
+  },
+  {
+   "field": "pricing",
+   "url": "https://docs.inceptionlabs.ai/get-started/models",
+   "quote": "Mercury 2 $0.25 $0.025 $0.75 v1/chat/completions Chat: 128K"
+  },
+  {
+   "field": "pricing",
+   "url": "https://docs.inceptionlabs.ai/get-started/models",
+   "quote": "Mercury 2.5 $0.20 → $0.04 $0.02 → $0.004 $0.75 → $0.15 v1/chat/completions Chat: 260K"
+  },
+  {
+   "field": "api",
+   "url": "https://docs.inceptionlabs.ai/",
+   "quote": "The API is OpenAI-compatible, so you can be up and running in minutes with the tools you already use."
+  },
+  {
+   "field": "platforms",
+   "url": "https://docs.inceptionlabs.ai/get-started/models",
+   "quote": "curl https://api.inceptionlabs.ai/v1/chat/completions"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

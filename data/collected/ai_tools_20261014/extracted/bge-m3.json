@@ -1,0 +1,36 @@
+{
+ "company": "BAAI (FlagOpen)",
+ "one_liner_ko": "검색과 RAG를 위한 원스톱 검색 툴킷 BGE 계열의 임베딩 모델.",
+ "what_it_does_ko": "BGE-M3는 BAAI가 Hugging Face에 공개한 문장 유사도(sentence-similarity)용 임베딩 모델로, sentence-transformers 라이브러리로 쓸 수 있다. 모델 카드에는 MTEB(BRIGHT 등) 검색 벤치마크 평가 결과가 붙어 있고, Hugging Face의 hf-inference 추론 제공자로 바로 호출할 수 있게 표시되어 있다. 관련 GitHub 저장소 FlagEmbedding은 BGE를 '검색과 RAG를 위한 원스톱 검색 툴킷'으로 소개하며 MIT 라이선스 배지를 달고 있다. 수집된 페이지에는 BGE-M3 자체의 기능 설명 본문은 잘려 있다.",
+ "key_features": [
+  "문장 유사도·임베딩용 모델(sentence-similarity)",
+  "sentence-transformers 라이브러리 지원",
+  "Hugging Face hf-inference 추론 제공자로 호출",
+  "MTEB 검색 벤치마크 평가 결과 공개",
+  "FlagEmbedding 툴킷(검색·RAG)과 연동"
+ ],
+ "use_cases_ko": [
+  "검색(Search)과 RAG 시스템의 임베딩"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "MIT (FlagEmbedding 저장소 배지 기준, 모델 카드 라이선스는 수집 페이지에 없음)",
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://huggingface.co/BAAI/bge-m3", "quote": "\"downloadsAllTime\":335182865,\"id\":\"BAAI/bge-m3\""},
+  {"field": "one_liner_ko", "url": "https://github.com/FlagOpen/FlagEmbedding", "quote": "<h1 align=\"center\">⚡️BGE: One-Stop Retrieval Toolkit For Search and RAG</h1>"},
+  {"field": "what_it_does_ko", "url": "https://huggingface.co/BAAI/bge-m3", "quote": "\"pipeline_tag\":\"sentence-similarity\",\"library_name\":\"sentence-transformers\""},
+  {"field": "key_features", "url": "https://huggingface.co/BAAI/bge-m3", "quote": "{\"provider\":\"hf-inference\",\"modelStatus\":\"live\",\"providerStatus\":\"live\",\"providerId\":\"BAAI/bge-m3\",\"task\":\"sentence-similarity\""},
+  {"field": "key_features", "url": "https://huggingface.co/BAAI/bge-m3", "quote": "\"source\":{\"url\":\"https://github.com/embeddings-benchmark/mteb/\",\"name\":\"Obtained using MTEB v2.10.12\""},
+  {"field": "use_cases_ko", "url": "https://github.com/FlagOpen/FlagEmbedding", "quote": "BGE: One-Stop Retrieval Toolkit For Search and RAG"},
+  {"field": "open_source", "url": "https://github.com/FlagOpen/FlagEmbedding", "quote": "<img alt=\"License\" src=\"https://img.shields.io/badge/LICENSE-MIT-green\">"},
+  {"field": "korean_support", "url": "https://github.com/FlagOpen/FlagEmbedding", "quote": "[English](README.md) | [中文](https://github.com/FlagOpen/FlagEmbedding/blob/master/README_zh.md)"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

@@ -1,0 +1,169 @@
+=== [home] https://pleias.ai/ (lang=en)
+Pleias 
+ Products Blog Research About Careers Book a demo 
+ Products
+ Common Corpus Synth Stratum 
+ Blog Research About Careers Book a demo 
+ We build the data layer that makes your AI outperform
+ Book a demo Explore on HuggingFace 
+ Partners & Ecosystem 
+ Our Products 
+ Synth
+ Synthetic Data for AI agents
+ We simulate expert-level reasoning and domain-specific processes to generate training data that builds true specialization into your models. Synth handles the cold start problem, covers the long tail of edge cases through engineered simulations, and runs entirely on-premise to keep sensitive data under your control.
+ Learn more Learn more 
+ Common Corpus
+ Fully Open Data for AI
+ We curate and structure the world's largest rights-cleared and provenance-based dataset for LLMs - government records, legal archives, scientific literature, multilingual sources - so you can plug it directly into your models, RAG pipelines, and MCP servers.
+ Learn more Learn more 
+ Stratum
+ AI-Native Tooling for Agents
+ Turn your messy siloed documents into a single, structured, compliant data asset for your agentic AI workflows. Your AI systems and agents get not only the right information but rich trustworthy context - higher accuracy on a wider range of processes. A built-in privacy firewall handles PII before anything leaves the secure zone. Deployable fully on-premise.
+ Learn more Learn more 
+ Recent Blogs 
+ Blog 
+ An RLM agent for searching Wikidata, and the traces to train on it
+ In partnership with AI-BRIDGES at the Digital Humanities Research Hub, University of London, we are releasing an open recursive harness in which language models search Wikidata through code, instead of pasting graph results into their context. 
+In it, Qwen3.8-27B, an open-weight model served on a single GPU, answers 74 of 100 test questions, the best score in our evaluation, and gpt-6-luna doubles its accuracy on multi-hop questions. Alongside it, we release the 10,235 search traces recorded in the harness, for training smaller models to do the same.
+ Carlos Rosas, Mohamed Chenene, Pierre-Carl Langlais & Anastasia Stasenko 
+ Read post 
+ Blog 
+ Local AI for knowledge work: what small open models can do offline
+ On the occasion of the AI for Good Global Summit in Geneva, we are open-sourcing the models, datasets, and deployment frameworks presented in this post: the reasoning models framework for RAG, our on-device benchmarking harness for cache-augmented generation, and the French-language retrieval pipeline for Raspberry Pi and Android. Everything described here runs fully offline, on hardware costing less than €100.
+ Carlos Rosas & Iaroslav Neverov 
+ Read post 
+ Blog 
+ Telco Common Corpus: an open, verified data commons for telecom AI
+ Today we introduce the Telco Common Corpus - 10B+ tokens of fully open telecommunications data, highlighting, as part of the GSMA Open Telco AI initiative, how the company is helping AI work harder for the telecoms sector.
+ Pleias 
+ Read post 
+ See More Blogs Read More Blogs 
+ Use Cases 
+ Use Case 
+ Sillon: A Specialised 600M Model for Parisian Subway Operator (RATP) 
+ Pleias trained a 600-million-parameter specialized model for RATP to detect and interpret safety signals in Parisian Subway users’ messages - combining a fully synthetic training pipeline and designed for on-premise deployment. 
+After only three months of development, the model, beating closed models 200x times its size, is now in production at RATP’s sovereign infrastructure on Scaleway. 
+ Read case study 
+ Use Case 
+ Building Offline-First AI for Community Health Workers in West Africa
+ Researchers built an AI medical assistant that works without internet for health workers in rural West Africa. It runs on old Android phones and handles local languages to give workers quick treatment guidance.
+ Read case study 
+ Use Case 
+ SpineDAO & Pleias Partnership In Specialised AI For Spine Care
+ Pleias and SpineDAO are partnering to build AI systems that safely scale expert spine care for back pain, the world's leading cause of disability. The project tests whether small, structured-reasoning models can outperform large generic LLMs in high-stakes clinical settings.
+ Read case study 
+ More Use Cases More Use Cases 
+ Research Highlights 
+ Training Data 
+ Training Data It's All Training: A Fully Synthetic Single-Stage Recipe for LLMs
+ Current pre-training datasets are derived from web crawls, with all their issues, and were not designed to support mid- and post-training pipelines--for instance, they contain little explicit reasoning. Thus, many frontier labs have begun to develop their own internal datasets, starting from state-of-the-art models, to augment their pre-training data mix, eg, with reasoning traces to address cold-start problems. While demonstratively effective, none of these datasets are public, and the effect of this so-called synthetic data on knowledge and skill acquisition of language models, including small ones, remains poorly understood. We present SYNTH, the first open-source synthetic corpus derived from 58,698 Wikipedia articles that collapses pre-, mid-, and post-training into a single training stage via structured amplification of curated encyclopedic seeds. We evaluate SYNTH by training a suite of models: a 56M tiny model (Monad), 0.3B-0.6B dense models (Baguettotron), and a 13B / 1B-active MoE. At iso-compute, SYNTH outperforms filtered web data, and our models remain competitive with similarly-sized open-weight baselines. Because SYNTH is back-translated from grounded passages, SYNTH-trained models achieve high factual precision despite 10-140x fewer training tokens, with memorization targeted by the seed corpus. These results show that synthetic datasets, including our SYNTH dataset, are capable of producing competitive generalist models from a fraction of the training data, enabling rapid iteration as the frontier advances. These findings open up possibilities for both generalist models with significantly increased data efficiency, as well as domain-specific models where no instruction or conversational data is available. Finally, we publicly release our SYNTH dataset and the suite of Baguettotron models under a permissive license, thus supporting open-source language model development.
+ Training Data
+ Models
+ open source
+ ICLR Oral 
+ ICLR Oral Common Corpus: The Largest Collection of Ethical Data for LLM Pre-Training
+ Large Language Models (LLMs) are pre-trained on large amounts of data from different sources and domains. Such datasets often contain trillions of tokens, including large portions of copyrighted or proprietary content, which raises questions about the legal use of such models. This underscores the need for truly open pre-training data that complies with data security regulations. In this paper, we introduce Common Corpus, the largest open dataset for LLM pre-training. 
+ ICLR Oral
+ Training Data
+ Open Source
+ Evaluation 
+ Evaluation Bye Bye Perspective API: Lessons for Measurement Infrastructure in NLP, CSS and LLM Evaluation
+ The closure of Perspective API at the end of 2026 discards what has functioned as the de facto standard for automated toxicity measurement in NLP, CSS, and LLM evaluation research. We document the structural dependence that the communities built on this single proprietary tool and discuss how this dependence caused epistemic problems that have affected - and will likely continue to affect - collective research efforts.
+ Evaluation
+ Explore All
+
+=== [about] https://pleias.ai/about (lang=en)
+Pleias 
+ Products Blog Research About Careers Book a demo 
+ Products
+ Common Corpus Synth Stratum 
+ Blog Research About Careers Book a demo 
+ Our mission is to increase data efficiency by the factor of 10^6.
+ Pleias is building the data infrastructure layer for enterprise agentic AI. Efficient, competitive and adapted to entreprise and institutions constraints.
+ Its dual-product stack - Stratum for AI-native enterprise data processing and Synth for synthetic data generation - enables organizations to train and implement language models that rival systems 100× larger. 
+ Our mission is to increase data efficiency by the factor of 10^6.
+ Pleias is building the data infrastructure layer for enterprise agentic AI. Efficient, competitive and adapted to entreprise and institutions constraints.
+ Its dual-product stack - Stratum for AI-native enterprise data processing and Synth for synthetic data generation - enables organizations to train and implement language models that rival systems 100× larger. 
+ What Makes Us Different 
+ Frontier Efficiency
+ +200× more training-efficient. Our engineered data reaches state-of-the-art in ~100B tokens, where raw data needs trillions
+ Designed For Sensitive Use Cases
+ Can run entirely on your own infrastructure - on-premise or on-device. Your data never leaves your walls and never touches an external API.
+ Fully Auditable and Compliant
+ Every data point is rights-cleared and traceable to its source. Common Corpus - our 2-trillion-token open dataset - is EU AI Act-compliant by construction
+ Speed To Production
+ Our data tooling does the slow, messy prep that stalls most projects - so internal AI use cases ship in weeks instead of months.
+ Founding Team 
+ Pierre-Carl Langlais
+ Credentials PhD Information Science
+Sorbonne Center for AI & Sciences Po Médialab
+ Research Interest Data efficiency, digital humanities, AI governance
+ LinkedIn Twitter Email 
+ Ivan Yamshchikov
+ Credentials PhD Financial Mathematics
+Research Professor, CAIRO — THWS; ex-Yandex R&D Lead; ex-ABBYY AI Evangelist
+ Research Interest Language models, AI and creativity, applied mathematics
+ LinkedIn Email 
+ Anastasia Stasenko
+ Credentials PhD Philosophy, ENS Ulm
+Associate Professor at Paris-Dauphine University; ex-Hachette Publishing
+ Research Interest Philosophy of AI, language and cognition, ethics and safety
+ LinkedIn Email 
+ Team
+ Pieter Delobelle
+ Lead AI Scientist
+ PhD, KU Leuven; ex-Aleph Alpha, ex-Apple
+ Hanna Shcharbakova
+ AI Engineer
+ M.Sc. University of Lorraine & Saarland University; B.A. Higher School of Economics
+ Yannick Detrois
+ AI Scientist
+ M.Eng. EPFL
+ Anton Changalidi
+ Lead AI Engineer
+ M.Sc. Maastricht University; B.Eng. ITMO
+ Carlos Rosas
+ Lead Data Scientist
+ PhD candidate, ENS ULM; M.S. Sorbonne Université
+ Pavel Chizhov
+ AI Scientist
+ PhD candidate, THWS; ex-Yandex
+ Mohamed Chenene
+ AI Engineer
+ M.Eng. CentraleSupélec; ex-Engie Research Lab
+ Iaroslav Neverov
+ Full-stack AI Engineer
+ M.Eng. École 42
+ Mathieu Sauser
+ AI engineer
+ M.Eng. EPFL
+ Neil Si Smail
+ AI Engineer
+ M.Eng. CentraleSupélec
+ Noam Fauverte
+ AI engineer
+ M.Eng. Centrale Supélec
+ Kate Pavlova
+ AI Strategy & Enablement Lead
+ MSc Marketing ESCP ; ex-McKinsey, ex-Sephora
+ Amine Rouibi
+ Chief Of Staff
+ M.Eng. Paris-Dauphine University
+ Vaiva Kazanaviciute
+ Full-Stack AI engineer
+ M.Eng. Ecole 42
+ Enrico Milli
+ Full-stack AI Engineer
+ BSc, University of Greenwich
+ Pandora Langlais
+ Data Analyst
+ M.A. École du Louvre
+ Our Partners & Ecosystem 
+ Nvidia Open Source Collaboration (Nemotron-Personas) 
+ Mozilla Local AI Builders 1st Cohort 
+ AI Alliance Open Truste
+
+=== [meta] https://pleias.ai/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음

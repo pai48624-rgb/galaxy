@@ -1,0 +1,319 @@
+=== [home] https://rocm.docs.amd.com/en/latest/ (lang=en)
+AMD ROCm — AMD ROCm 10.1.0 
+ Skip to main content 
+ Back to top 
+ Ctrl + K 
+ ROCm™ Core SDK 10.1.0 
+ Version List 
+ Core SDK 
+ AI Ecosystem 
+ GPU Systems and Infrastructure 
+ Toolkits 
+ AMD Data Science 
+ AMD Finance 
+ AMD Life Science 
+ AMD LLM Extension 
+ AMD Simulation 
+ ROCm.AI 
+ AMD Skills 
+ Hyperloom 
+ ROCm CLI 
+ Blogs 
+ Developer Hub 
+ AMD ROCm 10.1.0
+ Release notes 
+ Transition guide 
+ What is ROCm? 
+ Compatibility matrix 
+ Install 
+ Install ROCm 
+ Prerequisites 
+ Installation 
+ Post-installation 
+ Uninstalling 
+ ROCm Runfile Installer 
+ Build ROCm from source 
+ Install ROCm packages using Spack 
+ Install ROCm with ASAN 
+ Docker containers 
+ Install AI frameworks 
+ PyTorch 
+ JAX 
+ vLLM 
+ SGLang 
+ Components 
+ ROCm Core SDK 
+ Math and compute libraries 
+ Composable Kernel 
+ hipBLAS 
+ hipBLASLt 
+ hipCUB 
+ hipFFT 
+ hipRAND 
+ hipSOLVER 
+ hipSPARSE 
+ hipSPARSELt 
+ libhipcxx 
+ MIOpen 
+ rocBLAS 
+ rocFFT 
+ rocPRIM 
+ rocRAND 
+ rocSOLVER 
+ rocSPARSE 
+ rocThrust 
+ rocWMMA 
+ Communication libraries 
+ RCCL 
+ rocSHMEM 
+ Media and vision libraries 
+ rocDecode 
+ rocJPEG 
+ RPP 
+ Storage libraries 
+ hipFile 
+ Threading libraries 
+ hipThreads 
+ Runtime and compilers 
+ HIP 
+ HIPIFY 
+ LLVM 
+ Profiling and debugging tools 
+ ROCm Compute Profiler (rocprofiler-compute) 
+ ROCm Systems Profiler (rocprofiler-systems) 
+ ROCprofiler-SDK 
+ ROCdbgapi 
+ ROCm Debugger (ROCgdb) 
+ ROCR Debug Agent 
+ Control and monitoring tools 
+ AMD SMI 
+ ROCm Data Center Tool (RDC) 
+ rocminfo 
+ ROCm HPC SDK 
+ Install HPC SDK 
+ ROCm Extras 
+ ROCm Validation Suite (RVS) 
+ TransferBench 
+ ROCm Optiq 
+ Tutorials 
+ AI Developer Hub 
+ ROCm examples 
+ Reference 
+ AMD GPU specifications 
+ AMD GPU architectures 
+ MI350 microarchitecture 
+ CDNA4 ISA reference 
+ CDNA4 white paper 
+ Instinct MI350 Series performance counters 
+ MI300 microarchitecture 
+ CDNA3 ISA reference 
+ CDNA3 white paper 
+ Instinct MI300 and MI200 Series performance counters 
+ MI250 microarchitecture 
+ CDNA2 ISA reference 
+ CDNA2 white paper 
+ MI100 microarchitecture 
+ CDNA1 ISA reference 
+ CDNA1 white paper 
+ RDNA architecture 
+ RDNA 4 ISA reference 
+ RDNA 3.5 ISA reference 
+ RDNA 3 ISA reference 
+ RDNA 2 ISA reference 
+ RDNA ISA reference 
+ GCN and Vega architectures 
+ Vega 7nm (Instinct MI50) ISA reference 
+ Vega (Instinct MI25) ISA reference 
+ GCN 3 ISA reference 
+ AMD GPU system optimization 
+ AMD Instinct GPUs 
+ AMD MI355X 
+ AMD MI350X 
+ AMD MI325X 
+ AMD MI300X 
+ AMD MI300A 
+ AMD MI250 / MI250X 
+ AMD MI210 
+ AMD MI100 
+ AMD Radeon and Ryzen GPUs 
+ RDNA3.5 
+ RDNA2 
+ Common system settings 
+ GPU isolation techniques 
+ BAR access limits 
+ AMD GPU and ROCm components data types and precision support 
+ ROCm libraries graph-safe support 
+ AMD GPU atomics operation support 
+ ROCm environment variables 
+ Set the number of CUs 
+ AMD GPU programming on ROCm 
+ Contribute 
+ Contributing to the ROCm documentation 
+ ROCm documentation toolchain 
+ Building documentation 
+ Providing feedback about the ROCm documentation 
+ ROCm licenses 
+ Repository 
+ Open issue 
+ .md 
+ .pdf 
+ AMD ROCm
+ AMD ROCm # 
+ ROCm is AMD’s open-source GPU computing platform: an end‑to‑end ecosystem of
+compilers, runtimes, and libraries for AI, HPC, and domain‑specific workloads.
+It is open source, cross‑platform (Linux and Windows), and optimized for AMD
+Instinct™, AMD Radeon™, and AMD Ryzen™ AI devices.
+Core SDK
+ The foundational libraries, runtimes, and tools for GPU computing on AMD
+hardware — math and compute libraries, communication primitives, HIP runtime,
+profiling and debugging tools, and more.
+ Install the ROCm Core SDK 
+ ROCm 10.1.0 compatibility 
+ Go to Core SDK docs 
+AI Ecosystem
+ Full-stack documentation and recipes to deploy AI workloads on AMD
+GPUs using popular ROCm-enabled frameworks.
+ Deep learning frameworks
+ PyTorch 
+ JAX 
+ Inference
+ vLLM 
+ SGLang 
+ Go to AI Ecosystem docs 
+GPU Systems and Infrastructure
+ Deployment and operations guidance for AMD Instinct GPUs at scale, including
+AMD GPU Driver installation, cluster management, GPU partitioning, monitoring,
+virtualization, cloud deployments, and containers.
+ AMD GPU Driver (amdgpu) 
+ Network Operator (Kubernetes) 
+ Go to GPU Systems docs 
+Toolkits
+ Open-source collections of ROCm-accelerated libraries for building
+high-performance domain-specific applications.
+ ROCm Data Science 
+ ROCm Finance 
+ ROCm Life Science 
+ ROCm LLMExt 
+ ROCm Simulation 
+ next
+ ROCm Core SDK 10.1.0 release notes
+ so the DOM is not blocked -->
+ Terms and Conditions 
+ ROCm Licenses and Disclaimers 
+ Privacy 
+ Trademarks 
+ Supply Chain Transparency 
+ Fair and Open Competition 
+ UK Tax Strategy 
+ Cookie Policy 
+ Cookie Settings 
+ © 2026 Advanced Micro Devices, Inc 
+ -->
+
+=== [meta] https://rocm.docs.amd.com/en/latest/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/ROCm/legacy-rocm-build
+> [!WARNING]
+> This repository will be deprecated soon. Use
+> [ROCm/TheRock](https://github.com/ROCm/TheRock) moving forward, including
+> for [issues](https://github.com/ROCm/TheRock/issues) and
+> [discussions](https://github.com/ROCm/TheRock/discussions).
+
+<div align="center">
+  <img src="docs/images/amd-rocm-logo.png" width="200px" alt="ROCm logo">
+  <h3 align="center">
+    Open-source software stack for AMD GPU computing
+  </h3>
+  <p align="center">
+    <a href="https://rocm.docs.amd.com/en/latest/">
+      <b>ROCm Core SDK</b>
+    </a>
+    <span> • </span>
+    <a href="https://rocm.docs.amd.com/projects/ai-ecosystem/en/latest/">
+      <b>AI Ecosystem</b>
+    </a>
+    <span> • </span>
+    <a href="https://instinct.docs.amd.com/latest/">
+      <b>GPU Systems and Infrastructure</b>
+    </a>
+    <span> • </span>
+    <a href="https://rocm.blogs.amd.com/">
+      <b>Blogs</b>
+    </a>
+  </p>
+</div>
+
+# AMD ROCm™
+
+ROCm is an open-source software stack of drivers, development tools, and APIs
+that enable GPU programming from low-level kernels to end-user applications. It
+is particularly well-suited to GPU-accelerated high-performance computing (HPC),
+AI, scientific computing, and computer-aided design (CAD).
+
+ROCm is powered by [HIP](https://rocm.docs.amd.com/projects/HIP/en/latest/), a
+C++ runtime API and kernel language that lets developers write portable GPU code
+with an interface similar to NVIDIA CUDA™. It also supports OpenMP and OpenCL,
+and includes the compilers, debuggers, and libraries needed to build and run GPU
+workloads. ROCm integrates with machine learning frameworks such as PyTorch and
+TensorFlow.
+
+## Table of contents
+
+- [Supported hardware and operating systems](#supported-hardware-and-operating-systems)
+- [Quick start](#quick-start)
+  - [Get started with ROCm](#get-started-with-rocm)
+  - [Deep learning frameworks on ROCm](#deep-learning-frameworks-on-rocm)
+- [Core components](#core-components)
+  - [Math and compute libraries](#math-and-compute-libraries)
+  - [Communication libraries](#communication-libraries)
+  - [Runtimes and compilers](#runtimes-and-compilers)
+  - [Profiling and debugging tools](#profiling-and-debugging-tools)
+  - [Control and monitoring tools](#control-and-monitoring-tools)
+  - [Media libraries](#media-libraries)
+  - [Storage](#storage)
+- [ROCm Extras](#rocm-extras)
+- [Release notes](#release-notes)
+- [Licenses](#licenses)
+- [Contribute](#contribute)
+
+---
+
+## Supported hardware and operating systems
+
+Use the [Compatibility matrix](https://rocm.docs.amd.com/en/latest/compatibility/compatibility-matrix.html) for official support across ROCm versions, operating system kernels, and GPU architectures (CDNA/Instinct™, RDNA/Radeon™, and Radeon Pro). Recent releases cover Ubuntu, RHEL, SLES, Oracle Linux, Debian, Rocky Linux, and more. GPU targets include CDNA4, CDNA3, CDNA2, RDNA4, and RDNA3.
+
+---
+
+## Quick start
+
+Follow these instructions to start using ROCm.
+
+### Get started with ROCm
+
+Follow the [ROCm installation guide](https://rocm.docs.amd.com/en/latest/install/rocm.html) to install ROCm on your system.
+
+### Deep learning frameworks on ROCm
+
+See [Install PyTorch for ROCm](https://rocm.docs.amd.com/projects/ai-ecosystem/en/latest/frameworks/pytorch/install.html) or
+[Install JAX for ROCm](https://rocm.docs.amd.com/projects/ai-ecosystem/en/latest/frameworks/jax/install.html) to get started.
+
+To learn more about AI training and inference workloads on ROCm, see the [AI
+Ecosystem](https://rocm.docs.amd.com/projects/ai-ecosystem/en/latest/index.html)
+documentation portal.
+
+---
+
+## Core components
+
+The core ROCm software stack consists of the following components. Most of them
+are divided across the [ROCm Libraries](https://github.com/ROCm/rocm-libraries)
+and [ROCm Systems](https://github.com/ROCm/rocm-systems/) super-repos by domain.
+
+### Math and compute libraries
+
+- [Composable Kernel](https://github.com/ROCm/rocm-libraries/tree/develop/projects/composablekernel)
+- [hipBLAS](https://github.com/ROCm/rocm-libraries/tree/develop/projects/hipblas) and [rocBLAS](https://github.com/ROCm/rocm-libraries/tree/develop/projects/rocblas)
+- [hipBLASLt](https://github.com/ROCm/rocm-libraries/tree/develop/project

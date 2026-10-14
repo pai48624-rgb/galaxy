@@ -1,2 +1,15 @@
 ﻿slug,name_en,status,url,reason
 midjourney,Midjourney,blocked,https://midjourney.com,robots.txt 금지
+tencent-ai-lab,Tencent AI Lab,dead,https://ailab.tencent.com/ailab/en/index/,HTTP 0 ERR <urlopen error [Errno 11004] getaddrinfo failed>
+yandex-research,Yandex Research,dead,https://research.yandex.com,HTTP 504 
+openmmlab,OpenMMLab,dead,https://openmmlab.com,HTTP 0 ERR <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expir
+bigscience,BigScience,dead,https://bigscience.huggingface.co,HTTP 0 ERR <urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1010)>
+livecodebench-pro,LiveCodeBench Pro,dead,https://livecodebenchpro.com/,HTTP 404 
+swe-bench-pro-commercial,SWE-Bench Pro Commercial,dead,https://scale.com/leaderboard/swe_bench_pro_commercial,HTTP 404 
+modu-merge-rate-leaderboard,Modu Merge Rate Leaderboard,blocked,https://www.askmodu.com/rankings,robots.txt 금지
+ray-serve,Ray Serve,blocked,https://docs.ray.io/en/latest/serve,robots.txt 금지
+fivetran,Fivetran,blocked,https://fivetran.com,robots.txt 금지
+dvc,DVC,blocked,https://dvc.org,robots.txt 금지
+github-actions,GitHub Actions,dead,,
+neptune,Neptune,dead,https://neptune.ai,HTTP 0 ERR <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expir
+autogluon,AutoGluon,blocked,https://auto.gluon.ai,robots.txt 금지

@@ -1,0 +1,203 @@
+{
+ "company": "Runpod",
+ "one_liner_ko": "실험·학습·파인튜닝·배포·확장을 한 플랫폼에서 하는 AI 개발자용 GPU 클라우드.",
+ "what_it_does_ko": "Runpod는 AI 개발자를 위한 GPU 클라우드로, 전용 GPU 인스턴스(Pods), API 추론용 서버리스(Serverless), 멀티 노드 작업용 클러스터(Clusters)를 제공한다. B200부터 RTX 4090까지 30종 이상의 GPU를 31개 지역에서 1분 안에 띄울 수 있다고 밝힌다. 서버리스는 작업량에 따라 0개에서 수천 개 워커까지 자동 확장되며 쓰지 않을 때는 비용이 들지 않는다. 오픈소스 모델·템플릿을 배포하는 Hub도 있다.",
+ "key_features": [
+  "31개 글로벌 지역의 온디맨드 GPU(Pods)",
+  "30종 이상 GPU SKU(B200~RTX 4090) 선택",
+  "서버리스 GPU 엔드포인트와 0~수천 워커 자동 확장",
+  "FlashBoot로 200ms 미만 콜드 스타트",
+  "멀티 노드 GPU 클러스터(최대 64 GPU)",
+  "이그레스 요금 없는 영구 네트워크 스토리지",
+  "실시간 로그·모니터링·지표",
+  "오픈소스 모델·템플릿 배포 Hub"
+ ],
+ "use_cases_ko": [
+  "저지연 GPU로 실시간 모델 추론 서비스",
+  "모델 학습·파인튜닝",
+  "AI 에이전트 배포와 자동 확장"
+ ],
+ "pricing": {
+  "free_tier": "불명 ('Get started for free' 문구만 있고 무료 한도 미기재)",
+  "plans": [
+   {
+    "name": "Pods B300",
+    "price": 8.99,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "시간당(/hr), 288GB HBM3e·32 vCPU, 초 단위 표시 선택 가능",
+    "page_lang": "en"
+   },
+   {
+    "name": "Pods H100 SXM",
+    "price": 3.99,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "시간당(/hr), 80GB VRAM",
+    "page_lang": "en"
+   },
+   {
+    "name": "Pods A100 SXM",
+    "price": 1.79,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "시간당(/hr), 80GB VRAM",
+    "page_lang": "en"
+   },
+   {
+    "name": "Pods RTX 4090",
+    "price": 0.89,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "시간당(/hr), 24GB VRAM",
+    "page_lang": "en"
+   },
+   {
+    "name": "Pods RTX A5000",
+    "price": 0.27,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "시간당(/hr), 24GB VRAM (표 최저가)",
+    "page_lang": "en"
+   },
+   {
+    "name": "Serverless H100 (PRO)",
+    "price": 4.79,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "시간당(/hr), 80GB",
+    "page_lang": "en"
+   },
+   {
+    "name": "Serverless 16GB (A4000 등)",
+    "price": 0.58,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "시간당(/hr), 소형 모델용",
+    "page_lang": "en"
+   },
+   {
+    "name": "Clusters H200 SXM",
+    "price": 4.31,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "시간당(/hr), 약정 없음, 최대 64 GPU",
+    "page_lang": "en"
+   },
+   {
+    "name": "Reserved Clusters",
+    "price": null,
+    "currency": "USD",
+    "period": null,
+    "limits": "1~12개월+ 약정, 영업 문의",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://www.runpod.io/pricing"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "API"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.runpod.io/about",
+   "quote": "About Runpod | AI Developer Cloud"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.runpod.io/",
+   "quote": "Experiment, train, fine-tune, deploy, scale on one platform"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.runpod.io/pricing",
+   "quote": "Runpod pricing depends on the GPU workload you run: Pods for dedicated GPU instances, Serverless for API inference, and Clusters for multi-node jobs."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.runpod.io/",
+   "quote": "From B200s to RTX 4090s, Runpod supports over 30 GPU SKUs."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.runpod.io/",
+   "quote": "On-demand GPUs, deployed across 31 global regions."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.runpod.io/",
+   "quote": "FlashBoot eliminates warm-up engineering. Sub-200ms."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.runpod.io/",
+   "quote": "Full AI pipelines, no egress fees."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.runpod.io/",
+   "quote": "Get real-time logs, monitoring, and metrics with no custom frameworks required."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.runpod.io/",
+   "quote": "Deploy open-source AI models and templates on Runpod."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.runpod.io/",
+   "quote": "Serve models in real-time with low-latency GPUs."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.runpod.io/",
+   "quote": "Train models faster with efficient, scalable compute."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.runpod.io/",
+   "quote": "Deploy AI agents that run, react, and scale instantly."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.runpod.io/pricing",
+   "quote": "GPU Cloud Pricing | Per-Second H100, A100, RTX | Runpod"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.runpod.io/pricing",
+   "quote": "Launch multi-GPU clusters in minutes with no commitments. Scale up to 64 GPUs, attach shared storage, and pay only for what you use."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.runpod.io/pricing",
+   "quote": "Save 25% over other Serverless cloud providers on flex workers alone."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.runpod.io/",
+   "quote": "Get started for free"
+  },
+  {
+   "field": "api",
+   "url": "https://www.runpod.io/",
+   "quote": "Run API-based AI workloads with serverless GPU endpoints."
+  },
+  {
+   "field": "platforms",
+   "url": "https://www.runpod.io/",
+   "quote": "Run API-based AI workloads with serverless GPU endpoints."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.runpod.io/",
+   "quote": "hreflang: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

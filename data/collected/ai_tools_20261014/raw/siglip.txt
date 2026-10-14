@@ -1,0 +1,65 @@
+=== [github] https://github.com/google-research/big_vision
+# Big Vision
+
+This codebase is designed for training large-scale vision models using
+[Cloud TPU VMs](https://cloud.google.com/blog/products/compute/introducing-cloud-tpu-vms)
+or GPU machines. It is based on [Jax](https://github.com/jax-ml/jax)/[Flax](https://github.com/google/flax)
+libraries, and uses [tf.data](https://www.tensorflow.org/guide/data) and
+[TensorFlow Datasets](https://www.tensorflow.org/datasets) for scalable and
+reproducible input pipelines.
+
+The open-sourcing of this codebase has two main purposes:
+1. Publishing the code of research projects developed in this codebase (see a
+   list below).
+2. Providing a strong starting point for running large-scale vision experiments
+   on GPU machines and Google Cloud TPUs, which should scale seamlessly and
+   out-of-the box from a single TPU core to a distributed setup with up to 2048
+   TPU cores.
+
+`big_vision` aims to support research projects at Google. We are unlikely to
+work on feature requests or accept external contributions, unless they were
+pre-approved (ask in an issue first). For a well-supported transfer-only
+codebase, see also [vision_transformer](https://github.com/google-research/vision_transformer).
+
+Note that `big_vision` is quite dynamic codebase and, while we intend to keep
+the core code fully-functional at all times, we can not guarantee timely updates
+of the project-specific code that lives in the `.../proj/...` subfolders.
+However, we provide a [table](#project-specific-commits) with last known
+commits where specific projects were known to work.
+
+The following research projects were originally conducted in the `big_vision`
+codebase:
+
+### Architecture research
+
+- [An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale](https://arxiv.org/abs/2010.11929), by
+  Alexey Dosovitskiy*, Lucas Beyer*, Alexander Kolesnikov*, Dirk Weissenborn*,
+  Xiaohua Zhai*, Thomas Unterthiner, Mostafa Dehghani, Matthias Minderer,
+  Georg Heigold, Sylvain Gelly, Jakob Uszkoreit, and Neil Houlsby*
+- [Scaling Vision Transformers](https://arxiv.org/abs/2106.04560), by
+  Xiaohua Zhai*, Alexander Kolesnikov*, Neil Houlsby, and Lucas Beyer*\
+  Resources: [config](big_vision/configs/proj/scaling_laws/train_vit_g.py).
+- [How to train your ViT? Data, Augmentation, and Regularization in Vision Transformers](https://arxiv.org/abs/2106.10270), by
+  Andreas Steiner*, Alexander Kolesnikov*, Xiaohua Zhai*, Ross Wightman,
+  Jakob Uszkoreit, and Lucas Beyer*
+- [MLP-Mixer: An all-MLP Architecture for Vision](https://arxiv.org/abs/2105.01601), by
+  Ilya Tolstikhin*, Neil Houlsby*, Alexander Kolesnikov*, Lucas Beyer*,
+  Xiaohua Zhai, Thomas Unterthiner, Jessica Yung, Andreas Steiner,
+  Daniel Keysers, Jakob Uszkoreit, Mario Lucic, Alexey Dosovitskiy\
+  Resources: [config](big_vision/configs/mlp_mixer_i1k.py).
+- [Better plain ViT baselines for ImageNet-1k](https://arxiv.org/abs/2205.01580), by
+  Lucas Beyer, Xiaohua Zhai, Alexander Kolesnikov\
+  Resources: [config](big_vision/configs/vit_s16_i1k.py)
+- [UViM: A Unified Modeling Approach for Vision with Learned Guiding Codes](https://arxiv.org/abs/2205.10337), by
+  Alexander Kolesnikov^*, André Susano Pinto^*, Lucas Beyer*, Xiaohua Zhai*, Jeremiah Harmsen*, Neil Houlsby*\
+  Resources: [readme](big_vision/configs/proj/uvim/README.md), [configs](big_vision/configs/proj/uvim), [colabs](big_vision/configs/proj/uvim).
+- [FlexiViT: One Model for All Patch Sizes](https://arxiv.org/abs/2212.08013), by
+  Lucas Beyer*, Pavel Izmailov*, Alexander Kolesnikov*, Mathilde Caron*, Simon
+  Kornblith*, Xiaohua Zhai*, Matthias Minderer*, Michael Tschannen*, Ibrahim
+  Alabdulmohsin*, Filip Pavetic*\
+  Resources: [readme](big_vision/configs/proj/flexivit/README.md), [configs](big_vision/configs/proj/flexivit).
+- [Dual PatchNorm](https://arxiv.org/abs/2302.01327), by Manoj Kumar, Mostafa Dehghani, Neil Houlsby.
+- [Getting ViT in Shape: Scaling Laws for Compute-Optimal Model Design](https://arxiv.org/abs/2305.13035), by
+  Ibrahim Alabdulmohsin*, Xiaohua Zhai*, Alexander Kolesnikov, Lucas Beyer*.
+- (partial) [Scaling Vision Transformers to 22 Billion Parameters](https://arxiv.org/abs/2302.05442), by
+  Mostafa Dehghani*, Josip Djolonga*, Basil Mustaf

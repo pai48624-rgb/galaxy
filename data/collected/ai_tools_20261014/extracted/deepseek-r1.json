@@ -1,0 +1,37 @@
+{
+ "company": "DeepSeek",
+ "one_liner_ko": "대규모 강화학습으로 수학·코드·추론에서 OpenAI-o1에 견줄 성능을 내는 DeepSeek의 1세대 추론 모델.",
+ "what_it_does_ko": "DeepSeek-R1은 DeepSeek의 1세대 추론 모델로, 지도 미세조정 없이 강화학습만으로 학습한 DeepSeek-R1-Zero를 바탕으로 콜드 스타트 데이터를 더해 만든 모델이다. 수학·코드·추론 작업에서 OpenAI-o1에 견줄 성능을 낸다고 밝힌다. DeepSeek-R1-Zero, DeepSeek-R1과 Llama·Qwen 기반 증류 모델 6개를 오픈소스로 공개했다. 로컬에서 실행할 수 있으며 채팅 사이트(chat.deepseek.com) 링크도 있다.",
+ "key_features": [
+  "강화학습 기반 사고 사슬(CoT) 추론",
+  "자기 검증·반성·긴 사고 사슬 생성",
+  "수학·코드·추론 작업 성능",
+  "Llama·Qwen 기반 증류 모델 6종 공개",
+  "로컬 실행 가능"
+ ],
+ "use_cases_ko": [
+  "연구자가 강화학습 기반 추론 모델 연구에 활용"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "MIT",
+ "api": "불명",
+ "platforms": ["웹"],
+ "korean_support": "불명",
+ "evidence": [
+  {"field": "company", "url": "https://github.com/deepseek-ai/DeepSeek-R1", "quote": "<a href=\"https://www.deepseek.com/\" target=\"_blank\"><img alt=\"Homepage\""},
+  {"field": "one_liner_ko", "url": "https://github.com/deepseek-ai/DeepSeek-R1", "quote": "We introduce our first-generation reasoning models, DeepSeek-R1-Zero and DeepSeek-R1."},
+  {"field": "what_it_does_ko", "url": "https://github.com/deepseek-ai/DeepSeek-R1", "quote": "DeepSeek-R1 achieves performance comparable to OpenAI-o1 across math, code, and reasoning tasks."},
+  {"field": "key_features", "url": "https://github.com/deepseek-ai/DeepSeek-R1", "quote": "DeepSeek-R1-Zero demonstrates capabilities such as self-verification, reflection, and generating long CoTs"},
+  {"field": "key_features", "url": "https://github.com/deepseek-ai/DeepSeek-R1", "quote": "we have open-sourced DeepSeek-R1-Zero, DeepSeek-R1, and six dense models distilled from DeepSeek-R1 based on Llama and Qwen."},
+  {"field": "key_features", "url": "https://github.com/deepseek-ai/DeepSeek-R1", "quote": "**NOTE: Before running DeepSeek-R1 series models locally, we kindly recommend reviewing the [Usage Recommendation](#usage-recommendations) section.**"},
+  {"field": "use_cases_ko", "url": "https://github.com/deepseek-ai/DeepSeek-R1", "quote": "To support the research community, we have open-sourced DeepSeek-R1-Zero"},
+  {"field": "open_source", "url": "https://github.com/deepseek-ai/DeepSeek-R1", "quote": "src=\"https://img.shields.io/badge/License-MIT-f5de53?&color=f5de53\"/></a>"},
+  {"field": "platforms", "url": "https://github.com/deepseek-ai/DeepSeek-R1", "quote": "<a href=\"https://chat.deepseek.com/\" target=\"_blank\"><img alt=\"Chat\""}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

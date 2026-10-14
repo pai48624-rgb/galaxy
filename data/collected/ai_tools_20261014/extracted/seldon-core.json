@@ -1,0 +1,130 @@
+{
+ "company": "Seldon (현재 TrueFoundry와 결합)",
+ "one_liner_ko": "쿠버네티스에서 AI 시스템을 배포·관리·확장하는 MLOps·LLMOps 프레임워크(Seldon Core 2).",
+ "what_it_does_ko": "Seldon Core 2는 단일 모델부터 모듈형·데이터 중심 애플리케이션까지 쿠버네티스 위에서 배포·관리·확장하는 MLOps·LLMOps 프레임워크다. Kafka 기반 실시간 파이프라인으로 모델·처리 단계·모니터링 요소를 연결한다. 멀티 모델 서빙과 오버커밋으로 인프라 비용을 줄이고, A/B 테스트·카나리·섀도 배포를 지원한다. 홈페이지에 따르면 Seldon은 TrueFoundry의 엔터프라이즈 AI 플랫폼과 결합했다.",
+ "key_features": [
+  "Kafka 실시간 스트리밍 기반 조합형 파이프라인",
+  "모델·구성요소 자동 확장(기본·사용자 정의 로직)",
+  "공유 추론 서버에 여러 모델을 올리는 멀티 모델 서빙",
+  "가용 메모리보다 많은 모델을 배포하는 오버커밋",
+  "A/B 테스트·섀도 배포 실험",
+  "모든 예측 기록·감사 가능한 실시간 관측(Prometheus·Grafana)",
+  "REST·gRPC 지원",
+  "AWS EKS·Azure AKS·GKE·OpenShift 등 클라우드·온프레미스 지원"
+ ],
+ "use_cases_ko": [
+  "AI 플랫폼 엔지니어링 팀의 프로덕션 모델 배포 표준화",
+  "규제 산업의 감사 추적·인증 강화가 필요한 ML·LLM 배포"
+ ],
+ "pricing": {
+  "free_tier": "불명 (오픈소스 구성요소와 유료 Enterprise·모듈이 있다고만 하고 가격 미공개)",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "Business Source License",
+ "api": "있음",
+ "platforms": [
+  "API"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://seldon.io",
+   "quote": "Seldon — Take Control of ML and AI Complexity"
+  },
+  {
+   "field": "company",
+   "url": "https://seldon.io",
+   "quote": "The world's most battle-tested Kubernetes MLOps stack now combines with TrueFoundry's enterprise AI platform"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/SeldonIO/seldon-core",
+   "quote": "Seldon Core 2 is an MLOps and LLMOps framework for deploying, managing and scaling AI systems in Kubernetes"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://seldon.io",
+   "quote": "Connect models, processing steps, custom logic, and monitoring components into real-time Kafka-powered pipelines."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/SeldonIO/seldon-core",
+   "quote": "Deploy composable AI applications, leveraging Kafka for realtime data streaming between components"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/SeldonIO/seldon-core",
+   "quote": "for models and application components based on native or custom logic"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/SeldonIO/seldon-core",
+   "quote": "Save infrastructure costs by consolidating multiple models on shared inference servers"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/SeldonIO/seldon-core",
+   "quote": "Deploy more models than available memory allows, saving infrastructure costs for unused models"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/SeldonIO/seldon-core",
+   "quote": "Route data between candidate models or pipelines, with support for A/B tests and shadow deployments"
+  },
+  {
+   "field": "key_features",
+   "url": "https://seldon.io",
+   "quote": "Every prediction logged and auditable."
+  },
+  {
+   "field": "key_features",
+   "url": "https://seldon.io",
+   "quote": "Tested on AWS EKS, Azure AKS, Google GKE, Alicloud, Digital Ocean, and OpenShift."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://seldon.io",
+   "quote": "Purpose-built for VP Engineering, Chief AI Officers, and AI Platform Architects"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://seldon.io",
+   "quote": "Enhanced authentication, audit trails, and team controls for regulated industries."
+  },
+  {
+   "field": "pricing",
+   "url": "https://seldon.io",
+   "quote": "Budget accurately and only pay for what you need. Seldon's modular design extends to pricing — from open-source to enterprise."
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/SeldonIO/seldon-core",
+   "quote": "Seldon is distributed under the terms of the The Business Source License."
+  },
+  {
+   "field": "api",
+   "url": "https://seldon.io",
+   "quote": "Deploy locally or at enterprise scale with REST and gRPC support for every model type."
+  },
+  {
+   "field": "platforms",
+   "url": "https://seldon.io",
+   "quote": "Deploy locally or at enterprise scale with REST and gRPC support for every model type."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://seldon.io",
+   "quote": "hreflang: 없음"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "쿠버네티스에 직접 설치하는 MLOps 프레임워크(Business Source License) + 유료 Enterprise·모듈, GPU 사용량 요금표 없음",
+   "diff": "기존 '사용량 기반 종량제(클라우드/GPU)'와 달리 GPU 클라우드가 아니라 자체 설치형 소프트웨어이며 요금은 오픈소스~엔터프라이즈 모듈 방식",
+   "url": "https://seldon.io"
+  }
+ ],
+ "plan_change": []
+}

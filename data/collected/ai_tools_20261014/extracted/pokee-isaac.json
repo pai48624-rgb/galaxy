@@ -1,0 +1,47 @@
+{
+ "company": "Pokee AI",
+ "one_liner_ko": "최대 1,000만 토큰 컨텍스트를 처리하는 효율적인 에이전트형 280억 파라미터 모델 Pokee-Isaac 28B v0.1(프리뷰).",
+ "what_it_does_ko": "Pokee-Isaac은 최대 1,000만 토큰 컨텍스트에서 추론·계획·도구 사용을 하는 에이전트형 모델로, VPC·고객 현장·기기 안에서 서비스할 수 있을 만큼 작은 연산 예산을 목표로 한다. 파라미터는 280억 개로 비교 대상 중 가장 작다. RULER·MRCR v2 등 긴 컨텍스트 벤치마크와 BFCL v4·Terminal-Bench 등 에이전트 벤치마크 결과를 공개했다. OpenAI 호환 API(api.pokee.ai)로 제공되며 스트리밍과 백그라운드(폴링·재개·취소) 완성을 지원한다.",
+ "key_features": [
+  "1,000만 토큰 컨텍스트 창",
+  "28B 파라미터, VPC·온프레미스·기기 배포 지향",
+  "추론·계획·도구 사용 에이전트 기능",
+  "OpenAI 호환 Chat Completions API",
+  "스트리밍(SSE)과 백그라운드 완성(폴링·재개·취소)",
+  "플레이그라운드 체험",
+  "최대 출력 60,000 토큰"
+ ],
+ "use_cases_ko": [
+  "기존 OpenAI 클라이언트에 Pokee 추론 모델을 붙여 쓰는 개발자"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [
+   {"name": "Pokee-Isaac API 입력", "price": 0.15, "currency": "USD", "period": "usage", "limits": "100만 입력 토큰당", "page_lang": "en"},
+   {"name": "Pokee-Isaac API 출력", "price": 1.0, "currency": "USD", "period": "usage", "limits": "100만 출력 토큰당", "page_lang": "en"}
+  ],
+  "pricing_url": "https://console.pokee.ai/model"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["웹", "API"],
+ "korean_support": "불명",
+ "evidence": [
+  {"field": "company", "url": "https://console.pokee.ai/model", "quote": "© 2026 Pokee AI"},
+  {"field": "one_liner_ko", "url": "https://console.pokee.ai/model", "quote": "Pokee-Isaac 28B v0.1 (preview) A 10M-token context efficient agentic model."},
+  {"field": "what_it_does_ko", "url": "https://console.pokee.ai/model", "quote": "Isaac reasons, plans, and uses tools across context windows up to 10M tokens, under a compute budget small enough to serve inside a VPC, on customer premises, or on a device."},
+  {"field": "what_it_does_ko", "url": "https://console.pokee.ai/model", "quote": "28B parameters The smallest model in the comparison panel, by a wide margin."},
+  {"field": "what_it_does_ko", "url": "https://console.pokee.ai/docs", "quote": "Run background completions that can be polled, resumed, or cancelled."},
+  {"field": "key_features", "url": "https://console.pokee.ai/model", "quote": "10M token context Usable end to end, not merely addressable."},
+  {"field": "key_features", "url": "https://console.pokee.ai/docs", "quote": "OpenAI compatible Pokee-Isaac API"},
+  {"field": "key_features", "url": "https://console.pokee.ai/docs", "quote": "Set to true for an SSE stream of chat-completion chunks."},
+  {"field": "key_features", "url": "https://console.pokee.ai/model", "quote": "Get API key Try in playground Read the docs Read the technical report"},
+  {"field": "key_features", "url": "https://console.pokee.ai/docs", "quote": "Both the default and the maximum are 60,000 output tokens."},
+  {"field": "use_cases_ko", "url": "https://console.pokee.ai/docs", "quote": "Add Pokee's reasoning model to an existing OpenAI client, or call the HTTP API directly."},
+  {"field": "pricing", "url": "https://console.pokee.ai/model", "quote": "$0.15 / $1.00 per 1M in / out Below every baseline that can be bought at this length."},
+  {"field": "api", "url": "https://console.pokee.ai/docs", "quote": "The base URL for this environment is https://api.pokee.ai/v1 ."},
+  {"field": "platforms", "url": "https://console.pokee.ai/model", "quote": "Get API key Try in playground"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

@@ -1,0 +1,179 @@
+=== [home] https://pulsar.apache.org (lang=en)
+Apache Pulsar 
+ Skip to main content 
+ -->
+ ✨ Apache Pulsar 5.0 is here! ✨
+ Get Started Concepts Quickstart Ecosystem Client Libraries 
+ Docs Features Use Cases Community Welcome Discussions Governance Meet the Community Contribute Contribution Guide Wiki Issue Tracking 
+ Learn Blog Books Case Studies Articles Presentations Events 
+ Download Search 
+ Apache Pulsar™ 
+ Cloud-Native, Distributed Messaging and Streaming 
+ Apache Pulsar is an open-source, distributed messaging and streaming platform built for the cloud. Explore docs
+ Quickstart
+ Pulsar is proven at scale by hundreds of companies of different sizes, serving millions of messages per second.
+ See case studies 
+ What is Pulsar
+ Apache Pulsar is an all-in-one messaging and streaming platform. Messages can be consumed and acknowledged individually or consumed as streams with less than 10ms of latency . Its layered architecture allows rapid scaling across hundreds of nodes, without data reshuffling . Its features include multi-tenancy with resource separation and access control, geo-replication across regions, tiered storage and support for six official client languages. It supports up to one million unique topics and is designed to simplify your application architecture. Pulsar is a Top 10 Apache Software Foundation project and has a vibrant and passionate community and user base spanning small companies and large enterprises.
+ Pulsar features
+ Rapid Horizontal Scalability
+ Scales horizontally to handle the increased load. Its unique design and separate storage layer enable handling the sudden surge in traffic by scaling out in seconds. 
+ Low-latency messaging and streaming
+ Acknowledge messages individually (RabbitMQ style) or cumulative per partition (i.e., offset-like). Enables use cases such as distributed work queues or order-preserving data streams at very large scales (hundreds of nodes) and low latency (<10ms). 
+ Seamless Geo-Replication
+ Protect against complete zone outages using replication across different geographic regions. Flexible and configurable replication strategies across distant Pulsar Clusters. Uniquely supports automatic client failover to healthy clusters. 
+ Multi-tenancy as a first-class citizen
+ Maintain one cluster for your entire organization using tenants. Access control across data and actions using tenant policies. Isolate specific brokers to a tenant when maximum noisy neighbor protection is needed. 
+ Automatic Load Balancing
+ Add or remove nodes and let Pulsar load balance topic bundles automatically. Hot spotted topic bundles are automatically split and evenly distributed across the brokers. 
+ Official multi-language support
+ Officially maintained Pulsar Clients for Java, Go, Python, C++, Node.js, and C#. 
+ Official 3rd party integrations
+ Pulsar has officially maintained connectors with popular 3rd parties: MySQL, Elasticsearch, Cassandra, and more. Allows streaming data in (source) or out (sink). 
+ Serverless Functions
+ Write and deploy functions natively using Pulsar Functions. Process messages using Java, Go, or Python without deploying fully-fledged applications. Kubernetes runtime is bundled. 
+ Supports up to 1M topics
+ Pulsar's unique architecture supports up to 1 million topics in a single cluster. Simplify your own architecture by avoiding multiplexing multiple streams into a single topic. 
+ Explore more features
+ How does Pulsar work
+ Producer & Consumer
+ A Pulsar client contains a consumer and a producer. A producer writes messages on a topic. A consumer reads messages from a topic and acknowledges specific messages or all up to a specific message.
+ Metadata Store
+ Pulsar and BookKeeper use a metadata store to save metadata coordinated between nodes, such as a list of ledgers per topic, segments per ledger, and mapping of topic bundles to a broker. New clusters use Oxia (recommended); Apache ZooKeeper is also supported. It’s a cluster of highly available and replicated servers (usually 3).
+ Pulsar Brokers
+ Topics (i.e., partitions) are divided among Pulsar brokers. A broker receives messages for a topic and appends them to the topic’s active virtual file (a.k.a ledger), hosted on the Bookkeeper cluster. Brokers read messages from the cache (mostly) or BookKeeper and dispatch them to the consumers. Brokers also receive message acknowledgments and persist them to the BookKeeper cluster as well. Brokers are stateless (don't use/need a disk).
+ Apache Bookkeeper
+ Apache BookKeeper is a cluster of nodes called bookies. Each virtual file (a.k.a ledger) is divided into consecutive segments, and each segment is kept on 3 bookies by default (replicated by the client - i.e., the broker). Operators can add bookies rapidly since no data reshuffling (moving) between them is required. They immediately share the incoming write load.
+ Pulsar use cases
+ A combination of unique and common use cases sets Pulsar apart from other message brokers.
+ Pulsar trusted community
+ Join us and start contributing
+ 14800 GitHub View
+ 740 + 
+ Contributors View
+ 10750 + 
+ Slack members Join
+ Pulsar Users
+ Run in production at scale with millions of messages per second across millions of topics, Pulsar is now used by thousands of companies for real-time workloads. See case studies
+ Foundation Events 
+ License Thanks Sponsorship 
+ Security Privacy Contact 
+ The Apache Software Foundation
+ Apache Pulsar is available under the Apache License, version 2.0. Apache Pulsar is an open-source, distributed messaging and streaming platform built for the cloud.
+ Copyright © 2026 The Apache Software Foundation. All Rights Reserved. Apache, Pulsar, Apache Pulsar, and the Apache feather logo are trademarks or registered trademarks of The Apache Software Foundation.
+
+=== [meta] https://pulsar.apache.org
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/apache/pulsar
+<!--
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+
+-->
+
+![logo](https://pulsar.apache.org/img/pulsar.svg)
+
+[![docker pull](https://img.shields.io/docker/pulls/apachepulsar/pulsar-all.svg)](https://hub.docker.com/r/apachepulsar/pulsar)
+[![contributors](https://img.shields.io/github/contributors-anon/apache/pulsar)](https://github.com/apache/pulsar/graphs/contributors)
+[![last commit](https://img.shields.io/github/last-commit/apache/pulsar)](https://github.com/apache/pulsar/commits/master)
+[![release](https://img.shields.io/github/v/release/apache/pulsar?sort=semver)](https://pulsar.apache.org/download/)
+[![downloads](https://img.shields.io/github/downloads/apache/pulsar/total)](https://pulsar.apache.org/download/)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/apache/pulsar)
+
+Pulsar is a distributed pub-sub messaging platform with a very
+flexible messaging model and an intuitive client API.
+
+Learn more about Pulsar at https://pulsar.apache.org
+
+## Main features
+
+- Horizontally scalable (Millions of independent topics and millions
+  of messages published per second)
+- Strong ordering and consistency guarantees
+- Low latency durable storage
+- Topic and queue semantics
+- Load balancer
+- Designed for being deployed as a hosted service:
+  - Multi-tenant
+  - Authentication
+  - Authorization
+  - Quotas
+  - Support mixing very different workloads
+  - Optional hardware isolation
+- Keeps track of consumer cursor position
+- REST API for provisioning, admin and stats
+- Geo replication
+- Transparent handling of partitioned topics
+- Transparent batching of messages
+
+## Repositories
+
+This repository is the main repository of Apache Pulsar. Pulsar PMC also maintains other repositories for
+components in the Pulsar ecosystem, including connectors, adapters, and other language clients.
+
+- [Pulsar Core](https://github.com/apache/pulsar)
+
+### Helm Chart
+
+- [Pulsar Helm Chart](https://github.com/apache/pulsar-helm-chart)
+
+### Ecosystem
+
+- [Pulsar Adapters](https://github.com/apache/pulsar-adapters)
+
+### Clients
+
+- [.NET/C# Client](https://github.com/apache/pulsar-dotpulsar)
+- [C++ Client](https://github.com/apache/pulsar-client-cpp)
+- [Go Client](https://github.com/apache/pulsar-client-go)
+- [NodeJS Client](https://github.com/apache/pulsar-client-node)
+- [Python Client](https://github.com/apache/pulsar-client-python)
+- [Reactive Java Client](https://github.com/apache/pulsar-client-reactive)
+
+### Dashboard & Management Tools
+
+- [Dekaf UI](https://github.com/visortelle/dekaf)
+- [Pulsar Manager](https://github.com/apache/pulsar-manager)
+
+### Website
+
+- [Pulsar Site](https://github.com/apache/pulsar-site)
+
+### CI/CD
+
+- [Pulsar CI](https://github.com/apache/pulsar-test-infra)
+
+### Archived/Halted
+
+- [Pulsar Connectors](https://github.com/apache/pulsar-connectors) (bundled as [pulsar-io](pulsar-io))
+- [Pulsar Translation](https://github.com/apache/pulsar-translation)
+- [Ruby Client](https://github.com/apache/pulsar-client-ruby)
+
+## Pulsar Runtime Java Version Recommendation
+
+> **Note**:
+>
+> When using Java versions, it is recommended to
+> use [a recent version of a particular Java release (17 or 21)](https://adoptium.net/en-GB/temurin/releases?version=21&os=linux&arch=any)
+> with the most recent bug fixes and security patches.
+> For example, the JVM bug [JDK-8351933](https://bugs.openjdk.org/browse/JDK-8351933) can cause stability issues in
+> Pulsar.
+> [JDK-8351933](https://b

@@ -1,57 +1,122 @@
 {
  "company": "Mistral AI",
- "one_liner_ko": "Mistral AI의 최상위(플래그십) 텍스트 생성 모델로, 복잡한 다국어 추론·코드 생성에 쓰인다.",
- "what_it_does_ko": "Mistral Large는 Mistral AI가 내놓은 최상위 텍스트 생성 모델로, 다국어 추론과 텍스트 이해·변환·코드 생성에 쓰인다. 영어·프랑스어·스페인어·독일어·이탈리아어를 기본으로 잘 다루며 32K 토큰 문맥 창을 가진다. 함수 호출과 JSON 출력 모드를 지원해 앱 개발에 연동할 수 있다. la Plateforme(API)와 Azure로 제공되며, 자체 환경 배포도 가능하다고 안내한다.",
+ "one_liner_ko": "Mistral AI의 최상위 텍스트 생성 모델로, 다국어 추론·코드 생성을 API(la Plateforme·Azure)로 제공한다.",
+ "what_it_does_ko": "Mistral Large는 Mistral AI의 플래그십 텍스트 생성 모델로, 다국어 추론·텍스트 이해·변환·코드 생성에 쓰인다. 영어·프랑스어·스페인어·독일어·이탈리아어에 능숙하고 32K 토큰 문맥을 지원한다. 함수 호출과 JSON 출력 모드를 기본 지원한다. Mistral의 la Plateforme와 Microsoft Azure를 통해 API로 제공되며, 민감한 용도에는 모델 가중치를 받아 자체 환경에 배포하는 방식도 문의로 가능하다. API 요금은 입력·출력 토큰 100만 개당으로 매긴다.",
  "key_features": [
-  "복잡한 다국어 추론·텍스트 이해·변환·코드 생성",
-  "영어·프랑스어·스페인어·독일어·이탈리아어 기본 지원",
+  "다국어 추론(영어·프랑스어·스페인어·독일어·이탈리아어)",
   "32K 토큰 문맥 창",
-  "함수 호출(function calling) 기본 지원",
-  "JSON 형식 출력 모드",
-  "la Plateforme API와 Azure AI Studio로 제공",
-  "자체 환경 배포(Self-deployment) 가능"
+  "함수 호출 기본 지원",
+  "JSON 출력 모드",
+  "la Plateforme·Azure를 통한 API 제공",
+  "가중치를 받아 자체 환경에 배포(문의)"
  ],
  "use_cases_ko": [
-  "개발자가 API로 앱·서비스를 만들고 함수 호출로 내부 코드·DB와 연동",
-  "민감한 용도에서 자체 환경에 모델을 배포"
+  "개발자의 다국어 텍스트 이해·변환·코드 생성 앱 개발",
+  "함수 호출로 내부 코드·API·DB와 연동하는 애플리케이션"
  ],
  "pricing": {
-  "free_tier": "있음 (Vibe·Studio 제한 이용: 메시지·웹검색 제한)",
+  "free_tier": "Mistral 전체 Free 플랜(Vibe·Studio 제한 이용)은 있음 — Mistral Large 전용 무료 한도는 페이지에 없음",
   "plans": [
-   {"name": "Mistral Large API", "price": null, "currency": "USD", "period": "사용량", "limits": "입력 100만 토큰당 $0.5, 출력 100만 토큰당 $1.5 (배치 50% 할인)"},
-   {"name": "Free", "price": 0, "currency": "USD", "period": "month", "limits": "메시지·웹검색·코딩 세션 제한"},
-   {"name": "Pro", "price": 14.99, "currency": "USD", "period": "month", "limits": "세금 별도, 공정 사용 한도, 학생 $5.99"},
-   {"name": "Team", "price": 24.99, "currency": "USD", "period": "month", "limits": "사용자당, 사용자당 저장 30GB"},
-   {"name": "Enterprise", "price": null, "currency": null, "period": null, "limits": "문의(맞춤 모델·프라이빗 배포)"}
+   {
+    "name": "Mistral Large API",
+    "price": 0.5,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "입력 100만 토큰당 $0.5, 출력 100만 토큰당 $1.5, 배치 50% 할인",
+    "page_lang": "en"
+   }
   ],
   "pricing_url": "https://mistral.ai/pricing/"
  },
  "open_source": null,
  "api": "있음",
- "platforms": ["웹", "iOS", "안드로이드", "CLI", "API"],
- "korean_support": "불명",
+ "platforms": [
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
  "evidence": [
-  {"field": "company", "url": "https://mistral.ai/news/mistral-large/", "quote": "Mistral AI © 2026"},
-  {"field": "one_liner_ko", "url": "https://mistral.ai/news/mistral-large/", "quote": "Mistral Large is our new cutting-edge text generation model. It reaches top-tier reasoning capabilities."},
-  {"field": "what_it_does_ko", "url": "https://mistral.ai/news/mistral-large/", "quote": "It can be used for complex multilingual reasoning tasks, including text understanding, transformation, and code generation."},
-  {"field": "key_features", "url": "https://mistral.ai/news/mistral-large/", "quote": "It is natively fluent in English, French, Spanish, German, and Italian"},
-  {"field": "key_features", "url": "https://mistral.ai/news/mistral-large/", "quote": "Its 32K tokens context window allows precise information recall from large documents."},
-  {"field": "key_features", "url": "https://mistral.ai/news/mistral-large/", "quote": "It is natively capable of function calling."},
-  {"field": "key_features", "url": "https://mistral.ai/news/mistral-large/", "quote": "JSON format mode forces the language model output to be valid JSON."},
-  {"field": "key_features", "url": "https://mistral.ai/news/mistral-large/", "quote": "Mistral Large is available on la Plateforme and Azure as of today."},
-  {"field": "key_features", "url": "https://mistral.ai/news/mistral-large/", "quote": "Self-deployment : our models can be deployed on your environment for the most sensitive use cases with access to our model weights"},
-  {"field": "use_cases_ko", "url": "https://mistral.ai/news/mistral-large/", "quote": "Function calling lets developers interface Mistral endpoints with a set of their own tools, enabling more complex interactions with internal code, APIs or databases."},
-  {"field": "pricing", "url": "https://mistral.ai/pricing/", "quote": "For example, Mistral Large costs $0.5 /M tokens in and $1.5 /M tokens out. Batch processing, for high-volume work, reduces the price by 50%"},
-  {"field": "pricing", "url": "https://mistral.ai/pricing/", "quote": "Yes, Mistral’s Free plan provides limited access to Vibe"},
-  {"field": "pricing", "url": "https://mistral.ai/pricing/", "quote": "Limited messages and web searches."},
-  {"field": "pricing", "url": "https://mistral.ai/pricing/", "quote": "Verified students can get Mistral Pro for $5.99 / month (normally $14.99)."},
-  {"field": "pricing", "url": "https://mistral.ai/pricing/", "quote": "Secure, collaborative workspace for teams building with AI."},
-  {"field": "pricing", "url": "https://mistral.ai/pricing/", "quote": "$24.99"},
-  {"field": "api", "url": "https://mistral.ai/news/mistral-large/", "quote": "making it the world's second-ranked model generally available through an API"},
-  {"field": "platforms", "url": "https://mistral.ai/pricing/", "quote": "Vibe on mobile (iOS and Android)"},
-  {"field": "platforms", "url": "https://mistral.ai/pricing/", "quote": "All-day coding in the CLI, IDE, or on web."}
+  {
+   "field": "company",
+   "url": "https://mistral.ai/news/mistral-large/",
+   "quote": "Mistral AI © 2026\n English\n English"
+  },
+  {
+   "field": "company",
+   "url": "https://mistral.ai/news/mistral-large/",
+   "quote": "We are releasing Mistral Large , our latest and most advanced language model. Mistral Large is available through la Plateforme."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://mistral.ai/news/mistral-large/",
+   "quote": "Mistral Large is our new cutting-edge text generation model. It reaches top-tier reasoning capabilities."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://mistral.ai/news/mistral-large/",
+   "quote": "It can be used for complex multilingual reasoning tasks, including text understanding, transformation, and code generation."
+  },
+  {
+   "field": "key_features",
+   "url": "https://mistral.ai/news/mistral-large/",
+   "quote": "It is natively fluent in English, French, Spanish, German, and Italian, with a nuanced understanding of grammar and cultural context."
+  },
+  {
+   "field": "key_features",
+   "url": "https://mistral.ai/news/mistral-large/",
+   "quote": "Its 32K tokens context window allows precise information recall from large documents."
+  },
+  {
+   "field": "key_features",
+   "url": "https://mistral.ai/news/mistral-large/",
+   "quote": "JSON format mode forces the language model output to be valid JSON."
+  },
+  {
+   "field": "key_features",
+   "url": "https://mistral.ai/news/mistral-large/",
+   "quote": "Self-deployment : our models can be deployed on your environment for the most sensitive use cases with access to our model weights"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://mistral.ai/news/mistral-large/",
+   "quote": "Function calling lets developers interface Mistral endpoints with a set of their own tools, enabling more complex interactions with internal code, APIs or databases."
+  },
+  {
+   "field": "pricing",
+   "url": "https://mistral.ai/pricing/",
+   "quote": "For example, Mistral Large costs $0.5 /M tokens in and $1.5 /M tokens out. Batch processing, for high-volume work, reduces the price by 50%"
+  },
+  {
+   "field": "pricing",
+   "url": "https://mistral.ai/pricing/",
+   "quote": "Yes, Mistral’s Free plan provides limited access to Vibe , including our latest models, chat, search, creation"
+  },
+  {
+   "field": "api",
+   "url": "https://mistral.ai/news/mistral-large/",
+   "quote": "Mistral Large is available on la Plateforme and Azure as of today."
+  },
+  {
+   "field": "platforms",
+   "url": "https://mistral.ai/news/mistral-large/",
+   "quote": "Azure: Mistral Large is available through Azure AI Studio and Azure Machine Learning , with as seamless a user experience as our APIs."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://mistral.ai/news/mistral-large/",
+   "quote": "hreflang: en, fr, it, x-default\n화면에 보이는 언어 이름: English, Français, Italiano"
+  },
+  {
+   "field": "mismatch",
+   "url": "https://mistral.ai/news/mistral-large/",
+   "quote": "Mistral Small outperforms Mixtral 8x7B and has lower latency, which makes it a refined intermediary solution between our open-weight offering and our flagship model."
+  }
  ],
  "mismatch": [
-  {"official": "Mistral Large는 API로 유료 제공(입력 100만 토큰당 $0.5, 출력 $1.5). 공식 FAQ상 Apache 2.0 오픈 웨이트는 Mistral 7B 같은 모델이고, 상업 배포는 Mistral 라이선스가 필요", "diff": "기존 pricing_policy는 '오픈소스(무료, 가중치/코드 공개)'인데, 페이지에서 Mistral Large는 유료 API·상용 모델로 소개되고 오픈소스라는 근거가 없음", "url": "https://mistral.ai/pricing/"}
- ]
+  {
+   "official": "Mistral Large는 '플래그십' 모델로 la Plateforme·Azure API에서 토큰당 유료(입력 $0.5/M, 출력 $1.5/M)로 제공되며, 공개 글은 이를 별도의 'open-weight' 엔드포인트와 구분함",
+   "diff": "기존 분류 '오픈소스(무료, 가중치/코드 공개)'와 반대 — 공식 페이지 기준 유료 API(종량제) 모델이고 오픈 라이선스 언급 없음(자체 배포는 문의 필요)",
+   "url": "https://mistral.ai/pricing/"
+  }
+ ],
+ "plan_change": []
 }

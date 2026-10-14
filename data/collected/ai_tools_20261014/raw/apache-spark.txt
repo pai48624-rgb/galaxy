@@ -1,0 +1,282 @@
+=== [home] https://spark.apache.org (lang=en)
+Apache Spark™ - Unified Engine for large-scale data analytics
+ Download 
+ Libraries
+ SQL and DataFrames 
+ Spark Connect 
+ Spark Streaming 
+ pandas on Spark 
+ MLlib (machine learning) 
+ GraphX (deprecated) 
+ Third-Party Projects 
+ Documentation
+ Latest Release 
+ Older Versions and Other Resources 
+ Frequently Asked Questions 
+ Examples 
+ Community
+ Mailing Lists & Resources 
+ Contributing to Spark 
+ Improvement Proposals (SPIP) 
+ Issue Tracker 
+ Powered By 
+ Project Committers 
+ Project History 
+ Privacy Policy 
+ Developers
+ Useful Developer Tools 
+ Versioning Policy 
+ Release Process 
+ Security 
+ GitHub
+ spark 
+ spark-connect-go 
+ spark-connect-rust 
+ spark-connect-swift 
+ spark-docker 
+ spark-kubernetes-operator 
+ spark-website 
+ Apache Software Foundation
+ Apache Homepage 
+ License 
+ Sponsorship 
+ Thanks 
+ Event 
+ Unified engine for large-scale data analytics
+ Get Started 
+ What is Apache Spark ™ ?
+ Apache Spark ™ is a multi-language engine for executing data engineering,
+ data science, and machine learning on single-node machines or clusters.
+ Simple.
+Fast.
+Scalable.
+Unified.
+ Key features
+ Batch/streaming data
+ Unify the processing of your data in batches and real-time streaming, using your preferred language: Python, SQL, Scala, Java or R.
+ SQL analytics
+ Execute fast, distributed ANSI SQL queries for dashboarding and ad-hoc reporting. Runs faster than most data warehouses.
+ Data science at scale
+ Perform Exploratory Data Analysis (EDA) on petabyte-scale data without having to resort to downsampling
+ Machine learning
+ Train machine learning algorithms on a laptop and use the same code to scale to fault-tolerant clusters of thousands of machines.
+ Python
+ SQL
+ Scala
+ Java
+ R
+ Run now
+ Install with 'pip'
+ $ pip install pyspark
+ $ pyspark
+ Use the official Docker image
+ $ docker run -it --rm spark:python3 /opt/spark/bin/pyspark
+ QuickStart
+ Machine Learning
+ Analytics & Data Science
+ df = spark . read . json ( "logs.json" ) 
+ df . where ( "age > 21" ). select ( "name.first" ). show () 
+ # Every record contains a label and feature vector
+ df = spark . createDataFrame ( data , [ "label" , "features" ]) 
+ # Split the data into train/test datasets
+ train_df , test_df = df . randomSplit ([. 80 , . 20 ], seed = 42 ) 
+ # Set hyperparameters for the algorithm
+ rf = RandomForestRegressor ( numTrees = 100 ) 
+ # Fit the model to the training data
+ model = rf . fit ( train_df ) 
+ # Generate predictions on the test dataset.
+ model . transform ( test_df ). show () 
+ df = spark . read . csv ( "accounts.csv" , header = True ) 
+ # Select subset of features and filter for balance > 0
+ filtered_df = df . select ( "AccountBalance" , "CountOfDependents" ). filter ( "AccountBalance > 0" ) 
+ # Generate summary statistics
+ filtered_df . summary (). show () 
+ Run now
+ $ docker run -it --rm spark /opt/spark/bin/spark-sql
+ spark-sql>
+ SELECT 
+ name . first AS first_name , 
+ name . last AS last_name , 
+ age 
+ FROM json . `logs.json` 
+ WHERE age > 21 ; 
+ Run now
+ $ docker run -it --rm spark /opt/spark/bin/spark-shell
+ scala>
+ val df = spark . read . json ( "logs.json" ) 
+ df . where ( "age > 21" ) 
+ . select ( "name.first" ). show () 
+ Run now
+ $ docker run -it --rm spark /opt/spark/bin/spark-shell
+ scala>
+ Dataset df = spark . read (). json ( "logs.json" ); 
+ df . where ( "age > 21" ) 
+ . select ( "name.first" ). show (); 
+ Run now
+ $ docker run -it --rm spark:r /opt/spark/bin/sparkR
+ >
+ df <- read.json ( path = "logs.json" ) 
+ df <- filter ( df , df $ age > 21 ) 
+ head ( select ( df , df $ name.first )) 
+ The most widely-used
+ engine for scalable computing
+ Thousands of
+ companies, including 80% of the Fortune 500, use Apache Spark ™ .
+Over 2,000 contributors to
+ the open source project from industry and academia.
+ Ecosystem
+ Apache Spark ™ integrates with your favorite frameworks, helping to scale them to thousands of machines.
+ Data science and Machine learning
+ SQL analytics and BI
+ Storage and Infrastructure
+ Spark SQL engine: under the hood
+ Apache Spark ™ is built on an advanced distributed SQL engine
+ for large-scale data
+ Adaptive Query Execution 
+ Spark SQL adapts the execution plan at runtime, such as automatically setting the number of reducers and join algorithms.
+ Support for ANSI SQL 
+ Use the same SQL you’re already comfortable with.
+ Structured and unstructured data 
+ Spark SQL works on structured tables and unstructured data such as JSON or images.
+ TPC-DS 1TB No-Stats With vs. Without Adaptive Query Execution
+ Accelerates TPC-DS queries up to 8x 
+ Join the community
+ Spark has a thriving open source community, with
+ contributors from around the globe building features, documentation and assisting other users.
+ Mailing list
+ Source code
+ News and events
+ How to contribute
+ Issue tracking
+ Committers
+ Apache Spark, Spark, Apache, the Apache feather logo, and the Apache Spark project logo are either registered trademarks or trademarks of The Apache Software Foundation in the United States and other countries. See guidance on use of Apache Spark trademarks . All other marks mentioned may be trademarks or registered trademarks of their respective owners. Copyright © 2018 The Apache Software Foundation, Licensed under the Apache License, Version 2.0 .
+
+=== [about] https://spark.apache.org/docs/latest/
+Overview - Spark 4.2.0 Documentation 
+ 4.2.0 
+ Overview 
+ Programming Guides 
+ Quick Start 
+ RDDs, Accumulators, Broadcasts Vars 
+ SQL, DataFrames, and Datasets 
+ Structured Streaming 
+ Spark Streaming (DStreams) 
+ MLlib (Machine Learning) 
+ GraphX (Graph Processing) 
+ SparkR (R on Spark) 
+ PySpark (Python on Spark) 
+ Declarative Pipelines 
+ API Docs 
+ Python 
+ Scala 
+ Java 
+ R 
+ SQL, Built-in Functions 
+ Deploying 
+ Overview 
+ Submitting Applications 
+ Spark Standalone 
+ YARN 
+ Kubernetes 
+ More 
+ Configuration 
+ Monitoring 
+ Tuning Guide 
+ Job Scheduling 
+ Security 
+ Hardware Provisioning 
+ Migration Guide 
+ Building Spark 
+ Contributing to Spark 
+ Third Party Projects 
+ v4.2.0 -->
+ Apache Spark - A Unified engine for large-scale data analytics
+ Apache Spark is a unified analytics engine for large-scale data processing.
+ It provides high-level APIs in Java, Scala, Python and R,
+ and an optimized engine that supports general execution graphs.
+ It also supports a rich set of higher-level tools including
+ Spark SQL for SQL and structured data processing,
+ pandas API on Spark for pandas workloads,
+ MLlib for machine learning,
+ GraphX for graph processing,
+ and Structured Streaming 
+ for incremental computation and stream processing.
+ Downloading
+ Get Spark from the downloads page of the project website. This documentation is for Spark version 4.2.0. Spark uses Hadoop’s client libraries for HDFS and YARN. Downloads are pre-packaged for a handful of popular Hadoop versions.
+Users can also download a “Hadoop free” binary and run Spark with any Hadoop version
+ by augmenting Spark’s classpath .
+Scala and Java users can include Spark in their projects using its Maven coordinates and Python users can install Spark from PyPI.
+ If you’d like to build Spark from
+source, visit Building Spark .
+ Spark runs on both Windows and UNIX-like systems (e.g. Linux, Mac OS), and it should run on any platform that runs a supported version of Java. This should include JVMs on x86_64 and ARM64. It’s easy to run locally on one machine — all you need is to have java installed on your system PATH , or the JAVA_HOME environment variable pointing to a Java installation.
+ Spark runs on Java 17/21/25, Scala 2.13, Python 3.10+, and R 4.0+ (Deprecated).
+Java 25 prior to version 25.0.3 support is deprecated as of Spark 4.2.0.
+When using the Scala API, it is necessary for applications to use the same version of Scala that Spark was compiled for. Since Spark 4.0.0, it’s Scala 2.13.
+ Running the Examples and Shell
+ Spark comes with several sample programs. Python, Scala, Java, and R examples are in the
+ examples/src/main directory.
+ To run Spark interactively in a Python interpreter, use
+ bin/pyspark :
+ ./bin/pyspark --master "local[2]"
+ Sample applications are provided in Python. For example:
+ ./bin/spark-submit examples/src/main/python/pi.py 10
+ To run one of the Scala or Java sample programs, use
+ bin/run-example <class> [params] in the top-level Spark directory. (Behind the scenes, this
+invokes the more general
+ spark-submit script for
+launching applications). For example,
+ ./bin/run-example SparkPi 10
+ You can also run Spark interactively through a modified version of the Scala shell. This is a
+great way to learn the framework.
+ ./bin/spark-shell --master "local[2]"
+ The --master option specifies the
+ master URL for a distributed cluster , or local to run
+locally with one thread, or local[N] to run locally with N threads. You should start by using
+ local for testing. For a full list of options, run the Spark shell with the --help option.
+ Since version 1.4, Spark has p
+
+=== [meta] https://spark.apache.org
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/apache/spark
+# Apache Spark
+
+Spark is a unified analytics engine for large-scale data processing. It provides
+high-level APIs in Scala, Java, Python, and R (Deprecated), and an optimized engine that
+supports general computation graphs for data analysis. It also supports a
+rich set of higher-level tools including Spark SQL for SQL and DataFrames,
+pandas API on Spark for pandas workloads, MLlib for machine learning, GraphX for graph processing,
+and Structured Streaming for stream processing.
+
+- Official version: <https://spark.apache.org/>
+- Development version: <https://apache.github.io/spark/>
+
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Maven Central](https://img.shields.io/maven-central/v/org.apache.spark/spark-core_2.13.svg?filter=!*preview*)](https://search.maven.org/search?q=g:org.apache.spark)
+[![Java](https://img.shields.io/badge/Java-17+-orange.svg)](https://adoptium.net/temurin/releases/?version=17)
+[![GitHub Actions Build](https://github.com/apache/spark/actions/workflows/build_main.yml/badge.svg)](https://github.com/apache/spark/actions/workflows/build_main.yml)
+[![PySpark Coverage](https://codecov.io/gh/apache/spark/branch/master/graph/badge.svg)](https://codecov.io/gh/apache/spark)
+[![PyPI Downloads](https://static.pepy.tech/personalized-badge/pyspark?period=month&units=international_system&left_color=black&right_color=orange&left_text=PyPI%20downloads)](https://pypi.org/project/pyspark/)
+
+
+## Online Documentation
+
+You can find the latest Spark documentation, including a programming
+guide, on the [project web page](https://spark.apache.org/documentation.html).
+This README file only contains basic setup instructions.
+
+## Build Pipeline Status
+
+| Branch     | Status                                                                                                                                                                                                          |
+|------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| master     | [![GitHub Actions Build](https://github.com/apache/spark/actions/workflows/release.yml/badge.svg)](https://github.com/apache/spark/actions/workflows/release.yml)                                               |
+|            | [![GitHub Actions Build](https://github.com/apache/spark/actions/workflows/publish_snapshot.yml/badge.svg)](https://github.com/apache/spark/actions/workflows/publish_snapshot.yml)                             |
+|            | [![GitHub Actions Build](https://github.com/apache/spark/actions/workflows/build_infra_images_cache.yml/badge.svg)](https://github.com/apache/spark/actions/workflows/build_infra_images_cache.yml)             |
+|            | [![GitHub Actions Build](https://github.com/apache/spark/actions/workflows/build_java21.yml/badge.svg)](https://github.com/apache/spark/actions/workflows/build_java21.yml)                                     |
+|            | [![GitHub Actions Build](https://github.com/apache/spark/actions/workflows/build_java25.yml/badge.svg)](https://github.com/apache/spark/actions/workflows/build_java25.yml)                                     |
+|            | [![GitHub Actions Build](https://github.com/apache/spark/actions/workflows/build_non_ansi.yml/badge.svg)](https://github.com/apache/spark/actions/workflows/build_non_ansi.yml)                                 |
+|            | [![GitHub Actions Build](https://github.com/apache/spark/actions/workflows/build_codegen_jdk.yml/badge.svg)](https://github.com/apache/spark/actions/workflows/build_codegen_jdk.yml)                           |
+|            | [![GitHub Actions Build](https://github.com/apache/spark/actions/workflows/build_uds.yml/badge.svg)](https://github.com/apache/spark/actions/workflows/build_uds.yml)                                           |
+|            | [![GitHub Actions Build](https://github.com/apache/spark/actions/workflows/build_rockdb_as_ui_backend.yml/badge.svg)](https://github.com/apache/spark/actions/workflows/build_rockdb_as_ui_b

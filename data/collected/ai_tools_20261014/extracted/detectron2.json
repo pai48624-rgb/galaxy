@@ -1,0 +1,80 @@
+{
+ "company": "Facebook AI Research",
+ "one_liner_ko": "최신 객체 탐지·분할 알고리즘을 제공하는 Facebook AI Research의 차세대 라이브러리.",
+ "what_it_does_ko": "Detectron2는 Facebook AI Research가 만든 객체 탐지·분할 라이브러리로, Detectron과 maskrcnn-benchmark의 후속이다. 파놉틱 분할, DensePose, Cascade R-CNN, 회전 바운딩 박스, PointRend 등 기능을 담고 있으며, 그 위에 연구 프로젝트를 쌓는 라이브러리로 쓰인다. 모델을 TorchScript·Caffe2 형식으로 내보내 배포할 수 있고, 학습된 모델을 Model Zoo에서 내려받을 수 있다. Facebook의 여러 컴퓨터 비전 연구와 실서비스에 쓰인다고 밝힌다.",
+ "key_features": [
+  "파놉틱 분할·DensePose·Cascade R-CNN·회전 바운딩 박스·PointRend 등",
+  "TorchScript·Caffe2 형식으로 모델 내보내기(배포)",
+  "빠른 학습 속도",
+  "Model Zoo 기준 결과·학습된 모델 다운로드",
+  "커스텀 데이터셋·데이터 증강·모델 작성 튜토리얼",
+  "Colab 노트북 제공"
+ ],
+ "use_cases_ko": [
+  "컴퓨터 비전 연구 프로젝트의 기반 라이브러리",
+  "Facebook 실서비스 애플리케이션"
+ ],
+ "pricing": {
+  "free_tier": null,
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "Apache 2.0",
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://github.com/facebookresearch/detectron2",
+   "quote": "Detectron2 is Facebook AI Research's next generation library"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/facebookresearch/detectron2",
+   "quote": "that provides state-of-the-art detection and segmentation algorithms."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/facebookresearch/detectron2",
+   "quote": "It supports a number of computer vision research projects and production applications in Facebook."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/facebookresearch/detectron2",
+   "quote": "* Includes new capabilities such as panoptic segmentation, Densepose, Cascade R-CNN, rotated bounding boxes, PointRend,"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/facebookresearch/detectron2",
+   "quote": "* Models can be exported to TorchScript format or Caffe2 format for deployment."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/facebookresearch/detectron2",
+   "quote": "* It [trains much faster](https://detectron2.readthedocs.io/notes/benchmarks.html)."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/facebookresearch/detectron2",
+   "quote": "We provide a large set of baseline results and trained models available for download in the [Detectron2 Model Zoo](MODEL_ZOO.md)."
+  },
+  {
+   "field": "key_features",
+   "url": "https://detectron2.readthedocs.io/en/latest/",
+   "quote": " Use Custom Datasets \n Dataloader \n Data Augmentation"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/facebookresearch/detectron2",
+   "quote": "* Used as a library to support building [research projects](projects/) on top of it."
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/facebookresearch/detectron2",
+   "quote": "Detectron2 is released under the [Apache 2.0 license](LICENSE)."
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

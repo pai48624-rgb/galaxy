@@ -1,0 +1,285 @@
+=== [home] https://huggingface.co/BAAI/bge-m3
+BAAI/bge-m3 · Hugging Face 
+ Hugging Face 
+ Models 
+ Datasets 
+ Spaces 
+ Buckets new 
+ Docs 
+ Enterprise 
+ Pricing 
+ Website 
+ Tasks 
+ HuggingChat 
+ Collections 
+ Languages 
+ Organizations 
+ Community 
+ Blog 
+ Posts 
+ Daily Papers 
+ Hardware 
+ Learn 
+ Discord 
+ Forum 
+ GitHub 
+ Solutions 
+ Team & Enterprise 
+ Hugging Face PRO 
+ Enterprise Support 
+ Inference Providers 
+ Inference Endpoints 
+ Storage Buckets 
+ Log In 
+ Sign Up 
+ ","cls_token":"<s>","eos_token":"</s>","mask_token":{"__type":"AddedToken","content":"<mask>","lstrip":true,"normalized":true,"rstrip":false,"single_word":false},"pad_token":"<pad>","sep_token":"</s>","unk_token":"<unk>"}},"createdAt":"2024-01-27T17:07:29.000Z","discussionsDisabled":false,"discussionsSorting":"recently-created","downloads":32825246,"downloadsAllTime":335182865,"id":"BAAI/bge-m3","isLikedByUser":false,"availableInferenceProviders":[{"provider":"hf-inference","modelStatus":"live","providerStatus":"live","providerId":"BAAI/bge-m3","task":"sentence-similarity","isCheapestPricingOutput":false,"isFastestThroughput":false,"isModelAuthor":false}],"showHuggingChatEntry":false,"inference":"warm","lastModified":"2024-07-03T14:50:10.000Z","likes":3890,"pipeline_tag":"sentence-similarity","library_name":"sentence-transformers","librariesOther":[],"trackDownloads":true,"mask_token":"<mask>","model-index":null,"evalResults":[{"dataset":{"id":"mteb/BRIGHT","isBenchmark":true,"task_id":"BrightAopsRetrieval_default_standard"},"value":4.562,"source":{"url":"https://github.com/embeddings-benchmark/mteb/","name":"Obtained using MTEB v2.10.12","isExternal":true,"author":{"_id":"624bfda5459c48438cc39f80","avatarUrl":"https://cdn-avatars.huggingface.co/v1/production/uploads/5ff5943752c26e9bc240bada/OrZxdlg8doDNO2TZ6Q58G.png","fullname":"Massive Text Embedding Benchmark","name":"mteb","type":"org","isHf":false,"isHfAdmin":false,"isMod":false,"followerCount":1206,"isUserFollowing":false}},"filename":".eval_results/BrightAopsRetrieval.yaml","verified":false,"pullRequest":143,"label":"BrightAopsRetrieval Default Standard","notes":"Obtained using MTEB v2.10.12"},{"dataset":{"id":"mteb/BRIGHT","isBenchmark":true,"task_id":"BrightAopsRetrieval"},"value":4.562,"source":{"url":"https://github.com/embeddings-benchmark/mteb/","name":"Obtained using MTEB v2.10.12","isExternal":true,"author":{"_id":"624bfda5459c48438cc39f80","avatarUrl":"https://cdn-avatars.huggingface.co/v1/production/uploads/5ff5943752c26e9bc240bada/OrZxdlg8doDNO2TZ6Q58G.png","fullname":"Massive Text Embedding Benchmark","name":"mteb","type":"org","isHf":false,"isHfAdmin":false,"isMod":false,"followerCount":1206,"isUserFollowing":false}},"filename":".eval_results/BrightAopsRetrieval.yaml","verified":false,"pullRequest":143,"label":"BrightAopsRetrieval","notes":"Obtained using MTEB v2.10.12"},{"dataset":{"id":"mteb/BRIGHT","isBenchmark":true,"task_id":"BrightBiologyLongRetrieval_default_long"},"value":14.725,"source":{"url":"https://github.com/embeddings-benchmark/mteb/","name":"Obtained using MTEB v2.10.12","isExternal":true,"author":{"_id":"624bfda5459c48438cc39f80","avatarUrl":"https://cdn-avatars.huggingface.co/v1/production/uploads/5ff5943752c26e9bc240bada/OrZxdlg8doDNO2TZ6Q58G.png","fullname":"Massive Text Embedding Benchmark","name":"mteb","type":"org","isHf":false,"isHfAdmin":false,"isMod":false,"followerCount":1206,"isUserFollowing":false}},"filename":".eval_results/BrightBiologyLongRetrieval.yaml","verified":false,"pullRequest":143,"label":"BrightBiologyLongRetrieval Default Long","notes":"Obtained using MTEB v2.10.12"},{"dataset":{"id":"mteb/BRIGHT","isBenchmark":true,"task_id":"BrightBiologyLongRetrieval"},"value":14.725,"source":{"url":"https://github.com/embeddings-benchmark/mteb/","name":"Obtained using MTEB v2.10.12","isExternal":true,"author":{"_id":"624bfda5459c48438cc39f80","avatarUrl":"https://cdn-avatars.huggingface.co/v1/production/uploads/5ff5943752c26e9bc240bada/OrZxdlg8doDNO2TZ6Q58G.png","fullname":"Massive Text Embedding Benchmark","name":"mteb","type":"org","isHf":false,"isHfAdmin":false,"isMod":false,"followerCount":1206,"isUserFollowing":false}},"filename":".eval_results/BrightBiologyLongRetrieval.yaml","verified":false,"pullRequest":143,"label":"BrightBiologyLongRetrieval","notes":"Obtained using MTEB v2.10.12"},{"dataset":{"id":"mteb/BRIGHT","isBenchmark":true,"task_id":"BrightBiologyRetrieval_default_standard"},"value":9.484,"source":{"url":"https://github.com/embeddings-benchmark/mteb/","name":"Obtained using MTEB v2.10.12","isExternal":true,"author":{"_id":"624bfda5459c48438cc39f80","avatarUrl":"https://cdn-avatars.huggingface.co/v1/production/uploads/5ff5943752c26e9bc240bada/OrZxdlg8doDNO2TZ6Q58G.png","fullname":"Massive Text Embedding Benchmark","name":"mteb","type":"org","isHf":false,"isHfAdmin":false,"isMod":false,"followerCount":1206,"isUserFollowing":false}},"filename":".eval_results/BrightBiologyRetrieval.yaml","verified":false,"pullRequest":143,"label":"BrightBiologyRetrieval Default Standard","notes":"Obtained using MTEB v2.10.12"},{"dataset":{"id":"mteb/BRIGHT","isBenchmark":true,"task_id":"BrightBiologyRetrieval"},"value":9.484,"source":{"url":"https://github.com/embeddings-benchmark/mteb/","name":"Obtained using MTEB v2.10.12","isExternal":true,"author":{"_id":"624bfda5459c48438cc39f80","avatarUrl":"https://cdn-avatars.huggingface.co/v1/production/uploads/5ff5943752c26e9bc240bada/OrZxdlg8doDNO2TZ6Q58G.png","fullname":"Massive Text Embedding Benchmark","name":"mteb","type":"org","isHf":false,"isHfAdmin":false,"isMod":false,"followerCount":1206,"isUserFollowing":false}},"filename":".eval_results/BrightBiologyRetrieval.yaml","verified":false,"pullRequest":143,"label":"BrightBiologyRetrieval","notes":"Obtained using MTEB v2.10.12"},{"dataset":{"id":"mteb/BRIGHT","isBenchmark":true,"task_id":"BrightEarthScienceLongRetrieval_default_long"},"value":20.833,"source":{"url":"https://github.com/embeddings-benchmark/mteb/","name":"Obtained using MTEB v2.10.12","isExternal":true,"author":{"_id":"624bfda5459c48438cc39f80","avatarUrl":"https://cdn-avatars.huggingface.co/v1/production/uploads/5ff5943752c26e9bc240bada/OrZxdlg8doDNO2TZ6Q58G.png","fullname":"Massive Text Embedding Benchmark","name":"mteb","type":"org","isHf":false,"isHfAdmin":false,"isMod":false,"followerCount":1206,"isUserFollowing":false}},"filename":".eval_results/BrightEarthScienceLongRetrieval.yaml","verified":false,"pullRequest":143,"label":"BrightEarthScienceLongRetrieval Default Long","notes":"Obtained using MTEB v2.10.12"},{"dataset":{"id":"mteb/BRIGHT","isBenchmark":true,"task_id":"BrightEarthScienceLongRetrieval"},"value":20.833,"source":{"url":"https://github.com/embeddings-benchmark/mteb/","name":"Obtained using MTEB v2.10.12","isExternal":true,"author":{"_id":"624bfda5459c48438cc39f80","avatarUrl":"https://cdn-avatars.huggingface.co/v1/production/uploads/5ff5943752c26e9bc240bada/OrZxdlg8doDNO2TZ6Q58G.png","fullname":"Massive Text Embedding Benchmark","name":"mteb","type":"org","isHf":false,"isHfAdmin":false,"isMod":false,"followerCount":1206,"isUserFollowing":false}},"filename":".eval_results/BrightEarthScienceLongRetrieval.yaml","verified":false,"pullRequest":143,"label":"BrightEarthScienceLongRetrieval","notes":"Obtained using MTEB v2.10.12"},{"dataset":{"id":"mteb/BRIGHT","isBenchmark":true,"task_id":"BrightEarthScienceRetrieval_default_standard"},"value":15.389,"source":{"url":"https://github.com/embeddings-benchmark/mteb/","name":"Obtained using MTEB v2.10.12","isExternal":t
+
+=== [pricing] https://huggingface.co/pricing
+Pricing - Hugging Face 
+ Hugging Face 
+ Models 
+ Datasets 
+ Spaces 
+ Buckets new 
+ Docs 
+ Enterprise 
+ Pricing 
+ Website 
+ Tasks 
+ HuggingChat 
+ Collections 
+ Languages 
+ Organizations 
+ Community 
+ Blog 
+ Posts 
+ Daily Papers 
+ Hardware 
+ Learn 
+ Discord 
+ Forum 
+ GitHub 
+ Solutions 
+ Team & Enterprise 
+ Hugging Face PRO 
+ Enterprise Support 
+ Inference Providers 
+ Inference Endpoints 
+ Storage Buckets 
+ Log In 
+ Sign Up 
+ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ 
+ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ 
+ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ 
+ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ 
+ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ 
+ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ 
+ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ 
+ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ 
+ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ 
+ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ 
+ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ 
+ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ 
+ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ 
+ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ 
+ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ 
+ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ 
+ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ 
+ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ 
+ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ 
+ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · 
+
+=== [about] https://huggingface.co/docs
+Hugging Face - Documentation 
+ Hugging Face 
+ Models 
+ Datasets 
+ Spaces 
+ Buckets new 
+ Docs 
+ Enterprise 
+ Pricing 
+ Website 
+ Tasks 
+ HuggingChat 
+ Collections 
+ Languages 
+ Organizations 
+ Community 
+ Blog 
+ Posts 
+ Daily Papers 
+ Hardware 
+ Learn 
+ Discord 
+ Forum 
+ GitHub 
+ Solutions 
+ Team & Enterprise 
+ Hugging Face PRO 
+ Enterprise Support 
+ Inference Providers 
+ Inference Endpoints 
+ Storage Buckets 
+ Log In 
+ Sign Up 
+ Documentation
+ Guides, references, and API docs for the Hugging Face ecosystem.
+ Hub & Client Libraries 
+ Hub
+ Host Git-based models, datasets, and Spaces on the HF Hub
+ Hub Python Library
+ Python client to interact with the Hugging Face Hub
+ CLI
+ Tools for agents and humans to interact with all the Hugging Face services
+ Huggingface.js
+ JavaScript libraries for Hugging Face with built-in TS types
+ Tasks
+ Explore demos, models, and datasets for any ML tasks
+ Dataset viewer
+ API for metadata, stats, and content of HF Hub datasets
+ Deployment & Inference 
+ Inference Providers
+ Call 200k+ models hosted by our 10+ Inference partners
+ Inference Endpoints (dedicated)
+ Deploy models on dedicated & fully managed infrastructure on HF
+ Deploying on AWS
+ Train/deploy models from Hugging Face to AWS with DLCs
+ Text Generation Inference
+ Serve language models with TGI optimized toolkit
+ Text Embeddings Inference
+ Serve embeddings models with TEI optimized toolkit
+ Microsoft Azure
+ Deploy Hugging Face models on Microsoft Azure
+ Google Cloud
+ Train and Deploy Hugging Face models on Google Cloud
+ Core ML Libraries 
+ Transformers
+ State-of-the-art AI models for PyTorch
+ Diffusers
+ State-of-the-art Diffusion models in PyTorch
+ Datasets
+ Access & share datasets for any ML tasks
+ Transformers.js
+ State-of-the-art ML running directly in your browser
+ Tokenizers
+ Fast tokenizers optimized for research & production
+ Evaluate
+ Evaluate and compare models performance
+ timm
+ State-of-the-art vision models: layers, optimizers, and utilities
+ Sentence Transformers
+ Embeddings, Retrieval, and Reranking
+ Kernels
+ Load and run compute kernels from the Hugging Face Hub
+ Training & Optimization 
+ PEFT
+ Parameter-efficient finetuning for large language models
+ Accelerate
+ Train PyTorch models with multi-GPU, TPU, mixed precision
+ Optimum
+ Optimize HF Transformers for faster training/inference
+ AWS Trainium & Inferentia
+ Train/deploy Transformers/Diffusers on AWS
+ Google TPUs
+ Train and Deploy models on Google TPUs via Optimum.
+ TRL
+ Train transformers LMs with reinforcement learning
+ OpenEnv
+ Create and deploy agentic RL execution environments
+ Safetensors
+ Safe way to store/distribute neural network weights
+ Bitsandbytes
+ Optimize and quantize models with bitsandbytes
+ Lighteval
+ All-in-one toolkit to evaluate LLMs across multiple backends
+ Collaboration & Extras 
+ Gradio
+ Build ML demos and web apps with a few lines of Python
+ Trackio
+ A lightweight, local-first, and free experiment tracking Python library
+ smolagents
+ Smol library to build great agents in Python
+ LeRobot
+ Making AI for Robotics more accessible with end-to-end learning
+ Reachy Mini
+ Open-source expressive robot SDK for hackers and AI builders
+ AutoTrain
+ AutoTrain API and UI for seamless model training
+ Chat UI
+ Open source chat frontend powering HuggingChat
+ Leaderboards
+ Create custom Leaderboards on Hugging Face
+ Argilla
+ Collaboration tool for building high-quality datasets
+ Distilabel
+ Framework for synthetic data generation and AI feedback
+ Xet
+ Xet Protocol Specification
+ Community 
+ Blog Learn Discord Forum GitHub 
+ System theme 
+ Company
+ TOS Privacy About Careers 
+
+=== [meta] https://huggingface.co/BAAI/bge-m3
+html lang: 없음
+hreflang: 없음
+화면에 보이는 언어 이름: English
+
+=== [github] https://github.com/FlagOpen/FlagEmbedding
+[<img src="./imgs/FlagOpen.png">](https://flagopen.baai.ac.cn/)
+
+<h1 align="center">⚡️BGE: One-Stop Retrieval Toolkit For Search and RAG</h1>
+
+![bge_logo](./imgs/bge_logo.jpg)
+
+<p align="center">
+    <a href="https://huggingface.co/collections/BAAI/bge-66797a74476eb1f085c7446d">
+        <img alt="Build" src="https://img.shields.io/badge/BGE_series-🤗-yellow">
+    </a>
+    <a href="https://github.com/FlagOpen/FlagEmbedding">
+            <img alt="Build" src="https://img.shields.io/badge/Contribution-Welcome-blue">
+    </a>
+    <a href="https://github.com/FlagOpen/FlagEmbedding/blob/master/LICENSE">
+        <img alt="License" src="https://img.shields.io/badge/LICENSE-MIT-green">
+    </a>
+    <a href="https://huggingface.co/C-MTEB">
+        <img alt="Build" src="https://img.shields.io/badge/C_MTEB-🤗-yellow">
+    </a>
+    <a href="https://github.com/FlagOpen/FlagEmbedding/tree/master/research/baai_general_embedding">
+        <img alt="Build" src="https://img.shields.io/badge/FlagEmbedding-1.3.0-red">
+    </a>
+</p>
+<h4 align="center">
+    <p>
+        <a href=#news>News</a> |
+        <a href=#installation>Installation</a> |
+        <a href=#quick-start>Quick Start</a> |
+        <a href=#community>Community</a> |
+        <a href="https://github.com/FlagOpen/FlagEmbedding/tree/master/research">Projects</a> |
+        <a href=#model-list>Model List</a> |
+        <a href="#contributors">Contributor</a> |
+        <a href="#citation">Citation</a> |
+        <a href="#license">License</a> 
+    <p>
+</h4>
+
+
+[English](README.md) | [中文](https://github.com/FlagOpen/FlagEmbedding/blob/master/README_zh.md)
+
+
+
+## News
+
+- 3/6/2025: :fire::fire: Introduce **BGE-VL** ([HF repo](https://huggingface.co/collections/BAAI/megapairs-67c6bbe49c15a9e7a7c69d92)), State-Of-The-Art multimodal embedding models to support Any visual search applications (everything, including text-to-image, image-to-text, image&prompt-to-image, text-to-image&text, and more)! They are released under the MIT license and are completely free for both academic and commercial use. We also release **MegaPairs** ([repo](https://github.com/VectorSpaceLab/MegaPairs), [paper](https://arxiv.org/abs/2412.14475)), a massive synthetic dataset which empowers BGE-VL!
+- 12/5/2024: :book: We built the [BGE documentation](https://www.bge-model.com) for centralized BGE information and materials!
+- 10/29/2024: :earth_asia: We created WeChat group for BGE. Scan the [QR code](./imgs/BGE_WeChat_Group.png) to join the group chat! To get the first hand message about our updates and new release, or having any questions or ideas, join us now!
+- <img src="./imgs/BGE_WeChat_Group.png" alt="bge_wechat_group" class="center" width="200">
+
+- 10/22/2024: We release another interesting model: [OmniGen](https://github.com/VectorSpaceLab/OmniGen), which is a unified image generation model supporting various tasks. OmniGen can accomplish complex image generation tasks without the need for additional plugins like ControlNet, IP-Adapter, or auxiliary models such as pose detection and face detection.
+- 9/10/2024: Introducing **MemoRAG**, a step forward towards RAG 2.0 on top of memory-inspired knowledge discovery (repo: https://github.com/qhjqhj00/MemoRAG, paper: https://arxiv.org/pdf/2409.05591v1) 
+- 9/2/2024: Start to maintain the [tutorials](./Tutorials/). The contents within will be actively updated and eariched, stay tuned! :books:
+- 7/26/2024: Release a new embedding model [bge-en-icl](https://huggingface.co/BAAI/bge-en-icl), an embedding model that incorporates in-context learning capabilities, which, by providing task-relevant query-response examples, can encode semantically richer queries, further enhancing the semantic representation ability of the embeddings.
+- 7/26/2024: Release a new embedding model [bge-multilingual-gemma2](https://huggingface.co/BAAI/bge-multilingual-gemma2), a multilingual embedding model based on gemma-2-9b, which supports multiple languages and diverse downstream tasks, achieving new SOTA on multilingual benchmarks (MIRACL, MTEB-fr, and MTEB-pl). 
+- 7/26/2024: Release a new lightweight reranker [bge-reranker-v2.5-gemma2-lightweight](https://huggingface.co/BAAI/bge-reranker-v2.5-gemma2-li

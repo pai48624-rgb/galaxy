@@ -1,0 +1,35 @@
+{
+ "company": "Moonshot AI (moonshotai)",
+ "one_liner_ko": null,
+ "what_it_does_ko": "Kimi-K2.5는 moonshotai가 Hugging Face에 올린 이미지·텍스트 입력 대화형(image-text-to-text) 모델로, Transformers 라이브러리용으로 공개되어 있다. 대화 템플릿에 이미지·영상 입력, 도구 호출, 사고(thinking) 모드 처리가 포함되어 있다. 모델 카드의 평가 결과로 MMLU-Pro 87.1, MMMU-Pro(비전) 78.5, SWE-bench Verified 70.8(high reasoning), AIME 2026 95.83이 표시된다. novita·featherless-ai·deepinfra 등 외부 추론 제공자를 통해서도 호출할 수 있다. 수집된 페이지에는 모델 설명 본문과 라이선스 표기가 보이지 않는다.",
+ "key_features": [
+  "이미지·영상 입력을 받는 멀티모달 대화 모델",
+  "도구 호출(tool calls) 지원",
+  "사고(thinking) 모드 켜고 끄기",
+  "구조화된 출력 지원(추론 제공자 기준)",
+  "SWE-bench Verified 70.8%(high reasoning), MMLU-Pro 87.1"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "불명",
+ "evidence": [
+  {"field": "company", "url": "https://huggingface.co/moonshotai/Kimi-K2.5", "quote": "\"downloadsAllTime\":16084108,\"id\":\"moonshotai/Kimi-K2.5\""},
+  {"field": "what_it_does_ko", "url": "https://huggingface.co/moonshotai/Kimi-K2.5", "quote": "\"pipeline_tag\":\"image-text-to-text\",\"library_name\":\"transformers\""},
+  {"field": "what_it_does_ko", "url": "https://huggingface.co/moonshotai/Kimi-K2.5", "quote": "\"label\":\"Swe Bench Resolved\",\"notes\":\"high reasoning\""},
+  {"field": "what_it_does_ko", "url": "https://huggingface.co/moonshotai/Kimi-K2.5", "quote": "{\"provider\":\"novita\",\"modelStatus\":\"live\",\"providerStatus\":\"live\",\"providerId\":\"moonshotai/kimi-k2.5\""},
+  {"field": "key_features", "url": "https://huggingface.co/moonshotai/Kimi-K2.5", "quote": "{% elif content['type'] == 'video' or content['type']== 'video_url'-%}\\n <|kimi_k25_video_placeholder|>"},
+  {"field": "key_features", "url": "https://huggingface.co/moonshotai/Kimi-K2.5", "quote": "{%- macro render_toolcalls(message) -%}\\n <|tool_calls_section_begin|>"},
+  {"field": "key_features", "url": "https://huggingface.co/moonshotai/Kimi-K2.5", "quote": "{%- if thinking is defined and thinking is false -%}\\n <think></think>{{render_content(message)}}"},
+  {"field": "key_features", "url": "https://huggingface.co/moonshotai/Kimi-K2.5", "quote": "\"features\":{\"structuredOutput\":true,\"toolCalling\":true}"},
+  {"field": "key_features", "url": "https://huggingface.co/moonshotai/Kimi-K2.5", "quote": "{\"dataset\":{\"id\":\"TIGER-Lab/MMLU-Pro\",\"isBenchmark\":true,\"task_id\":\"mmlu_pro\"},\"value\":87.1"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

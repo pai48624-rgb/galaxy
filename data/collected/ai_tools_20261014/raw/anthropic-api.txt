@@ -1,0 +1,1134 @@
+=== [home] https://claude.com/ko/platform/api (lang=ko)
+Claude Platform | Claude by Anthropic 
+ Skip to main content 제품 
+ 제품
+ Claude 
+ Claude Code 
+ @Claude 
+ 특화 기능
+ Claude Security 
+ Claude Science 
+ 기능
+ 아티팩트 
+ 디자인 
+ Connectors 
+ 플러그인 
+ 기술 
+ 확장 프로그램
+ Claude for Chrome 
+ Claude for Microsoft 365 
+ 모델
+ Mythos 
+ Fable 
+ Opus 
+ Sonnet 
+ Haiku 
+ Claude로 가져오기 
+ 앱 다운로드 
+ 로그인 (opens in new tab) 
+ 개발자 
+ 함께 구축하기
+ Claude Code 
+ Claude Platform 
+ 개발자를 위한
+ Claude Academy 
+ 커뮤니티 
+ 개발자 블로그 
+ 개발자 문서 
+ 콘솔 
+ Enterprise 
+ Enterprise
+ 개요 
+ Claude Code for Enterprise 
+ Claude Platform 
+ 사용 사례
+ AI 에이전트 
+ 코딩 
+ 커머스 
+ 부서
+ 고객 지원 
+ 보안 
+ 법률 
+ 영업 
+ 산업
+ 재무 어드바이저 
+ 금융 서비스 
+ 정부 
+ 의료 
+ 고등 교육 
+ K-12 교사 
+ 생명과학 
+ 비영리 단체 
+ 마켓플레이스 둘러보기 
+ 고객 
+ 도입 문의 
+ 리소스 
+ 인사이트
+ 리소스 
+ 아티클 
+ 웨비나 
+ 고객 성공 사례 
+ 마켓플레이스 
+ Anthropic 뉴스 
+ 학습
+ Claude Academy 
+ 강좌 
+ 튜토리얼 
+ 사용 사례 
+ 연결
+ 이벤트 
+ 커뮤니티 
+ 요금제 
+ 개요 
+ API 
+ 로그인 도입 문의 Claude 사용해 보기 
+ Claude Platform 
+ 둘러보기 
+ 이 페이지에 대해 질문하기 
+ 마크다운으로 복사 
+ Claude Platform
+ Claude Platform에서 최첨단 에이전트를 구축하세요
+ 최첨단 모델, 하네스, 컨텍스트 관리, 인프라가 함께 작동하도록 설계되었습니다.
+ 빌드 시작하기 (opens in new tab) 도입 문의 
+ 신뢰하는 기업들 
+ 모든 작업에 적합한 Claude 모델 
+ 일괄 처리로 50% 절약하세요. 더 알아보기 (opens in new tab) 
+ 일괄 처리 
+ Fable 5.1
+ 장기 실행 에이전트를 위한 차세대 인텔리전스
+ 며칠 동안 진행되는 자율 프로젝트 
+ 최첨단 연구를 위한 전문가 수준의 작업 
+ Prompt caching Read $0.25 / MTok 
+ Write $12.50 / MTok 
+ Input $10 / MTok 
+ Output $50 / MTok 
+ Fable 살펴보기 (opens in new tab) 
+ Opus 5.5
+ 에이전틱 코딩(agentic coding) 및 엔터프라이즈 작업을 위한 일일 드라이버
+ 장기간의 코딩 및 대규모 마이그레이션 
+ 엔터프라이즈 도구와 데이터 전반에 걸친 다단계 에이전트 
+ Prompt caching Read $0.20 / MTok 
+ Write $5 / MTok 
+ Input $4 / MTok 
+ Output $20 / MTok 
+ Opus 살펴보기 (opens in new tab) 
+ Sonnet 5.5
+ 코딩 및 에이전트를 위한 고성능 모델
+ 일상적인 코딩 및 개발자 루프 
+ 대규모 고객 대면 에이전트 및 다중 도구 워크플로우 
+ Prompt caching Read $0.10 / MTok 
+ Write $2.50 / MTok 
+ Input $2 / MTok 
+ Output $10 / MTok 
+ Sonnet 살펴보기 (opens in new tab) 
+ Haiku 5.5
+ 가장 빠르고 비용 효율적인 모델
+ 지연 시간에 민감한 실시간 제품 경험 
+ 대규모 다중 모델 시스템 내의 하위 에이전트 
+ Prompt caching Prompts ≤ 100K tokens
+ Read $0.01 / MTok 
+ Write $0.125 / MTok 
+ Prompts > 100K tokens
+ Read $0.05 / MTok 
+ Write $0.625 / MTok 
+ Input Prompts ≤ 100K tokens $0.10 / MTok 
+ Prompts > 100K tokens $0.50 / MTok 
+ Output Prompts ≤ 100K tokens $0.50 / MTok 
+ Prompts > 100K tokens $2.50 / MTok 
+ Haiku 살펴보기 (opens in new tab) 
+ 미국에서 실행해야 하는 워크로드의 경우, 입력 및 출력 토큰 기준 1.1배의 요금으로 미국 전용 추론을 사용할 수 있습니다. 더 알아보기 . 
+ Opus 5.5의 고속 모드를 사용하면 표준 요금의 2배로 최대 2.5배 더 빠른 속도로 이용할 수 있습니다. 더 알아보기 .
+ 프롬프트 캐싱 가격은 5분 TTL을 기준으로 적용됩니다. 확장된 프롬프트 캐싱 에 대해 알아보세요.
+ Claude를 위해 설계된 API 
+ Messages API를 통해 Claude의 최첨단 모델에 액세스하고, 완전한 제어와 맞춤형 설정을 통해 구축할 수 있습니다.
+ 코드 실행
+ API 호출에서 Python 코드를 실행하고, 시각화를 생성하며, 데이터를 분석할 수 있습니다.
+ 구조화된 출력
+ Claude의 응답이 여러분의 JSON 스키마에 부합하도록 설정할 수 있습니다.
+ 도구 사용
+ Claude가 수백 가지 외부 도구 및 API와 상호작용하도록 설정하면 더 폭넓은 작업을 수행할 수 있습니다.
+ 컴퓨터 사용
+ Claude가 브라우저나 데스크톱을 보고 조작하여 API가 없는 애플리케이션의 작업을 자동화할 수 있습니다.
+ 인용
+ 소스 문서를 기반으로 응답을 제공합니다.
+ 파일
+ 대화 간에 문서를 업로드하고 참조할 수 있습니다.
+ 컨텍스트 창
+ 최대 100만 개의 컨텍스트 토큰으로 더 포괄적이고 데이터 집약적인 사용 사례를 실행하세요.
+ 압축
+ 토큰 한도에 근접하면 오래된 컨텍스트를 자동으로 요약합니다.
+ 컨텍스트 편집
+ 도구 호출과 결과를 자동으로 지웁니다.
+ 웹 검색 및 가져오기
+ 웹의 최신 데이터를 Claude로 가져오세요.
+ 고객 사례
+ 500만
+ 매월 고객 비즈니스 워크플로우에서 실행되는 AI 에이전트
+ 10x
+ 프로덕션 에이전트를 더 빠르게 구축하세요
+ BETA Claude Managed Agents로 가장 야심 찬 워크로드를 강화하세요 
+ 장기 실행되는 에이전트를 대규모로 구축하고 배포하세요.
+ 더 알아보기 (opens in new tab) 기능 보기 
+ BETA
+ 모든 에이전트를 위한 내장 기능
+ 멀티 에이전트 오케스트레이션
+ Claude는 다른 에이전트에게 위임하며, 각 에이전트마다 독립적인 컨텍스트 창이 있습니다.
+ 결과
+ 에이전트는 사전 정의된 종료 기준에 따라 반복적으로 작업을 수행하며, 루브릭에 맞춰 자체 작업을 평가합니다.
+ 메모리 도구
+ Claude는 메모리 저장소를 읽고 쓰기 때문에, 세션이 진행될 때마다 점차 개선됩니다.
+ 예약된 배포
+ 에이전트를 일정에 맞춰 실행하면, 직접 실행을 트리거하지 않아도 반복적인 작업이 자동으로 수행됩니다.
+ 자체 호스팅 샌드박스
+ 민감한 파일, 패키지, 서비스를 자체 인프라에 유지하거나, 관리형 공급자를 사용하세요.
+ 꿈꾸기
+ 세션 사이에 Claude는 과거 실행을 되돌아보고, 학습한 내용을 메모리로 체계화합니다.
+ MCP 터널
+ 공개 인터넷에 노출되지 않고도 사설 네트워크의 MCP 서버에 연결할 수 있습니다.
+ 볼트
+ 에이전트 코드에 비밀을 넣지 마세요. 자격 증명을 한 번만 등록하면 여러 세션 동안 다시 사용할 수 있습니다.
+ 설계 기반 보안
+ 자격 증명은 샌드박스 외부에 유지되고, 암호화 기능이 내장되어 있으며, 상태는 자동으로 유지됩니다.
+ 엔드투엔드 관찰 가능
+ 세션 추적은 모든 에이전트가 수행한 작업과 작업 이유를 기록하며, 내장 분석을 통해 에이전트 성능을 개선합니다.
+ Claude를 위해 설계되었습니다
+ 기본 하네스는 Claude에 최적화되어 있습니다. 모델이 개선됨에 따라 귀하의 에이전트도 함께 개선됩니다.
+ 귀하의 시스템과 지식에 연결하세요 
+ Claude의 기능을 확장하고 맞춤화하세요.
+ 모델 컨텍스트 프로토콜(MCP)
+ AI 통합을 위한 개방형 표준을 통해 Claude를 도구와 데이터에 연결하세요.
+ MCP 살펴보기 (opens in new tab) 
+ Skills
+ 사전 구축된 Skills나 맞춤형 Skills를 통해 Claude에게 전문 지식, 절차, 모범 사례를 가르쳐 보세요.
+ 더 알아보기 (opens in new tab) 
+ 메모리 스토어
+ 에이전트는 세션 간에도 기억하며, 메모리 파일을 사용자의 인프라에 유지합니다.
+ 더 알아보기 (opens in new tab) 
+ Claude Marketplace
+ 기존 Anthropic 약정으로 파트너가 제공하는 Claude 기반 솔루션 비용을 결제해 보세요.
+ 파트너 살펴보기 
+ 엔터프라이즈 워크로드를 위해 설계 
+ 사용자 데이터에 대한 제어 기능과 보호 장치.
+ 엔터프라이즈 프론티어 세이프가드
+ 자격을 갖춘 고객에게 Zero Data Retention(ZDR)의 프라이버시 보호와 오용을 탐지하기 위한 최첨단 안전 장치를 제공합니다.
+ 더 알아보기 (opens in new tab) 
+ 상주
+ 클라우드 공급업체에서 데이터가 저장되는 위치와 요청이 처리되는 위치를 선택하세요. 아시아 태평양, 캐나다, 유럽, 미국에 리전이 제공됩니다.
+ 더 알아보기 (opens in new tab) 
+ 데이터는 사용자의 소유로 유지됩니다
+ 기본적으로 Anthropic은 상업적 배포의 고객 데이터를 Claude 학습에 사용하지 않습니다.
+ 신뢰 센터 방문하기 (opens in new tab) 
+ 모든 주요 클라우드 공급업체에서 사용 가능
+ Claude Platform에서 직접 구축하세요. 엔터프라이즈 보안 및 지원이 내장되어 있습니다. 또는 Amazon Web Services, Google Cloud, Microsoft Foundry를 포함한 기존 클라우드에서 Claude를 사용하세요.
+ 비용 및 성능 관리 
+ 문서 보기 (opens in new tab) 
+ 일괄 처리
+ 대규모 요청을 비동기 방식으로 처리하고 비용을 50% 절감할 수 있습니다.
+ 프롬프트 캐싱
+ Claude에 배경 지식과 사례를 제공하면 비용을 최대 90%까지 절감할 수 있습니다.
+ 노력
+ Claude가 작업에 얼마나 열심히 임할지 선택하세요.
+ 어드바이저 전략(베타)
+ 더 빠르고 경제적인 모델은 더 지능적인 모델을 호출하여 계획이나 작업을 평가함으로써 성능을 개선합니다.
+ 일괄 처리
+ Quora의 경우 일괄 처리를 통해 비용을 절감하는 동시에, 실시간으로 처리할 필요가 없는 많은 쿼리를 실행하는 데 따른 복잡성을 줄일 수 있습니다.
+ 자세히 보기 
+ Claude Console로 에이전트를 관찰하고 관리하세요 
+ 분석 기능과 제어 기능이 내장된 명령 센터.
+ 요청을 작성하세요
+ 모든 고객 지원 티켓을 가장 관련성이 높은 카테고리로 분류하세요. 
+선택할 수 있는 카테고리 목록은 다음과 같습니다.
+{{CATEGORY_LIST}}
+지원 티켓의 내용은 다음과 같습니다:
+{{TICKET_CONTENT}}
+ 너는 고객 지원 티켓을 분류하는 데 특화된 AI 어시스턴트야. 너의 임무는 제공된 티켓 내용을 분석한 뒤, 사전 정의된 목록 중 가장 적절한 카테고리에 티켓을 할당하는 거야. 또한 분류 결정에 대한 근거를 제시해야 해.
+ 먼저, 사용 가능한 카테고리를 확인해:
+ <category_list>
+{{CATEGORY_LIST}}
+</category_list>
+ 이제 분류해야 하는 지원 티켓의 내용은 다음과 같아:
+ <ticket_content>
+{{TICKET_CONTENT}}
+</ticket_content>
+ 다음 단계를 따라 작업을 수행해야 해:
+– 티켓 내용을 주의 깊게 읽고 분석한다.
+– 해당 내용이 각 카테고리와 어떻게 연관되는지 고려한다.
+– 티켓에 가장 적합한 카테고리를 선택한다.
+– 추론 프로세스를 자세히 설명한다.
+ 응답에 다음 구조를 사용하세요:
+<classification_analysis>
+ 이 섹션에서는 사고 프로세스를 분석하세요:
+– 티켓 콘텐츠에서 가장 관련성이 높은 부분을 인용하세요.
+– 각 카테고리를 나열하고 티켓 콘텐츠와 어떤 관련이 있는지 기록하세요.
+– 각 카테고리에 대해, 티켓을 해당 카테고리로 분류하는 것에 찬성하고 반대하는 이유를 제시하세요.
+– 가장 가능성이 높은 상위 3개 카테고리를 순위로 지정하세요.
+</classification_analysis>
+ <classification>
+<category>선택한 카테고리를 여기에 기재</category>
+<reasoning>이 카테고리를 선택한 이유를 간략하게 요약하세요</reasoning>
+</classification>
+ 분석은 철저히 하고, 설명은 명확하게 작성해. 너의 목표는 충분한 근거를 바탕으로 정확한 분류를 제시하는 거야.
+ 빌드
+ 프로토타입 프롬프트를 만들고, Skills와 파일을 업로드한 뒤, 에이전트를 구성하세요.
+ 배포
+ 볼트와 메모리가 포함된 호스팅된 환경에서 에이전트를 실행하세요.
+ 모니터링
+ 사용량, 비용, 캐싱, 속도 제한을 모델과 API 키별로 추적하세요.
+ 관리
+ 워크스페이스별로 API 키, 멤버, 토큰 한도, 보안을 제어하세요.
+ 기업들이 Claude Platform을 활용하는 이유를 확인해 보세요 
+ “저희 리서치 제품군의 Claude Fable 5.1은 새로운 최고의 점수를 기록했습니다. 한 작업에서 다른 모델이나 인간 연구자에게서 보았던 것과는 완전히 다른 축의 새로운 솔루션을 제시했으며, 이전의 정체 상태를 훨씬 뛰어넘는 결과를 달성했습니다. 창의적인 문제 해결 능력이 더 뛰어나며, 어려운 문제를 해결하는 데 필요한 번뜩이는 통찰력을 제공합니다.”
+ Marquis Wong, 수석 AI 엔지니어 
+ 원문 보기 
+ "Claude를 선택하겠다는 결정은 전적으로 데이터 중심의 결정이었죠. 여러 모델 제공업체를 대상으로 테스트를 진행했는데, Claude는 사례 해결률과 고객 만족도 점수 측면에서 언제나 최고의 결과를 보여주었습니다."
+ 사례 읽기 
+ Timothy Addison, 엔지니어링 조직 참모 
+ 원문 보기 
+ “Anthropic과의 파트너십은 탁월했습니다. Anthropic의 지침과 지원은 엔지니어링 팀이 모델을 최대한 활용하는 데 도움이 되었습니다."라고 설명했습니다.”
+ 사례 읽기 
+ Joel Hron, CTO 
+ 원문 보기 
+ “개발자들은 실제 소프트웨어 작업을 맡아 완료할 수 있는 에이전트를 원합니다. GitHub Copilot CLI와 VS Code에서 테스트한 결과, Claude Opus 5.5는 측정한 모델 중 가장 적은 토큰과 단계를 사용했습니다. VS Code에서 Opus 5보다 더 많은 터미널 작업을 절반 이하의 단계로 해결했습니다. 개별 작업을 더 효율적으로 처리하는 것 이상, 개발자의 대규모 프로젝트를 더 쉽게 실현 가능하게 지원하고 있습니다.”
+ Mario Rodriguez, 최고 제품 책임자(CPO) 
+ 원문 보기 
+ “Lovable 개발자에게 Opus 5.5는 처음부터 새로 시작하든 라이브 앱을 작업하든 동일한 품질로 더 빠른 빌드를 의미합니다. 컨텍스트를 한 번만 수집하고, 더 적지만 더 완성도 높은 수정을 수행하며, 재시도에 막히지 않고 1/3에서 
+
+=== [pricing] https://claude.com/ko/pricing (lang=ko)
+플랜 및 요금제 | Claude by Anthropic 
+ Skip to main content 제품 
+ 제품
+ Claude 
+ Claude Code 
+ @Claude 
+ 특화 기능
+ Claude Security 
+ Claude Science 
+ 기능
+ 아티팩트 
+ 디자인 
+ Connectors 
+ 플러그인 
+ 기술 
+ 확장 프로그램
+ Claude for Chrome 
+ Claude for Microsoft 365 
+ 모델
+ Mythos 
+ Fable 
+ Opus 
+ Sonnet 
+ Haiku 
+ Claude로 가져오기 
+ 앱 다운로드 
+ 로그인 (opens in new tab) 
+ 개발자 
+ 함께 구축하기
+ Claude Code 
+ Claude Platform 
+ 개발자를 위한
+ Claude Academy 
+ 커뮤니티 
+ 개발자 블로그 
+ 개발자 문서 
+ 콘솔 
+ Enterprise 
+ Enterprise
+ 개요 
+ Claude Code for Enterprise 
+ Claude Platform 
+ 사용 사례
+ AI 에이전트 
+ 코딩 
+ 커머스 
+ 부서
+ 고객 지원 
+ 보안 
+ 법률 
+ 영업 
+ 산업
+ 재무 어드바이저 
+ 금융 서비스 
+ 정부 
+ 의료 
+ 고등 교육 
+ K-12 교사 
+ 생명과학 
+ 비영리 단체 
+ 마켓플레이스 둘러보기 
+ 고객 
+ 도입 문의 
+ 리소스 
+ 인사이트
+ 리소스 
+ 아티클 
+ 웨비나 
+ 고객 성공 사례 
+ 마켓플레이스 
+ Anthropic 뉴스 
+ 학습
+ Claude Academy 
+ 강좌 
+ 튜토리얼 
+ 사용 사례 
+ 연결
+ 이벤트 
+ 커뮤니티 
+ 요금제 
+ 개요 
+ API 
+ 로그인 도입 문의 Claude 사용해 보기 
+ 요금제 
+ 둘러보기 
+ 이 페이지에 대해 질문하기 
+ 마크다운으로 복사 
+최신 뉴스 
+ Claude Cowork가 이제 Claude가 되었습니다.
+ Pro 및 Max에 우선 출시되며, 추후 더 많은 플랜으로 확대될 예정입니다.
+ 변경 사항 읽기 (opens in new tab) 
+ 요금제 
+ 개인 Team & Enterprise API 
+ Free
+ Claude 사용해 보기
+ $0
+ 모두에게 무료
+ Claude 사용해 보기 
+ 웹, 데스크톱, 모바일에서 채팅
+ 웹 검색, 파일 생성 및 코드 실행
+ 대화 간 메모리
+ 앱과 도구 연결
+ 아티팩트 만들기
+ Claude Design, Slides, Docs
+ Pro
+ 일상적인 업무에
+ $17
+ 연간 구독 할인 적용 시 월 요금 (선불 $200 ). 월별 결제 시 $20 .
+ Claude 사용해 보기 
+ Free의 모든 혜택, 추가로:
+ 더 많은 사용량*
+ 작업 위임 및 예약
+ Claude Dashboards(베타)
+ Claude Code
+ Claude Science
+ 프로젝트
+ 더 많은 Claude 모델
+ Chrome 및 Microsoft 365에서 Claude 사용
+ Max
+ 하루 종일 Claude와 함께하는 분들을 위해
+ $100부터
+ 월
+ Claude 사용해 보기 
+ Pro의 모든 혜택, 추가로:
+ Pro보다 5배 또는 20배 더 많은 사용량 선택*
+ 모든 작업에 대한 더 높은 출력 한도
+ 고급 Claude 기능 얼리 액세스
+ 트래픽 급증 시 우선 접근
+ Claude Platform에서 개발할 수 있는 월 $100~$200 API 크레딧 † 
+ 사용 한도 가 적용됩니다. 표시된 가격에는 해당 세금이 포함되지 않습니다. 요금 및 플랜은 Anthropic의 재량에 따라 변경될 수 있습니다.
+ 사용 한도 가 적용됩니다. 요금 및 플랜은 Anthropic의 재량에 따라 변경될 수 있습니다.
+ 플랜별 기능 비교 
+ 검색 
+ Free
+ Claude 사용해 보기 
+ Pro
+ Claude 사용해 보기 
+ Max 5x
+ Claude 사용해 보기 
+ Max 20x
+ Claude 사용해 보기 
+ 기능 및 특징
+ 기능 Free Pro Max 5x Max 20x 
+ @Claude 
+ 아니요 
+ 아니요 
+ 아니요 
+ 아니요 
+ Claude Code 
+ 아니요 
+ 예 
+ 예 
+ 예 
+ Claude Science 
+ 아니요 
+ 예 
+ 예 
+ 예 
+ Claude in Chrome 
+ 아니요 
+ 예 
+ 예 
+ 예 
+ Claude for Microsoft 365 
+ 아니요 
+ 예 
+ 예 
+ 예 
+ Claude for Microsoft Outlook 
+ 아니요 
+ 예 
+ 예 
+ 예 
+ 웹, iOS, Android 및 데스크톱에서 채팅 
+ 예 
+ 예 
+ 예 
+ 예 
+ Claude Design 
+ 예 
+ 예 
+ 예 
+ 예 
+ Claude Slides 
+ 예 
+ 예 
+ 예 
+ 예 
+ Claude Docs 
+ 예 
+ 예 
+ 예 
+ 예 
+ Claude Dashboards(베타) 
+ 아니요 
+ 예 
+ 예 
+ 예 
+ Claude Motion(베타) 
+ 아니요 
+ 아니요 
+ 아니요 
+ 아니요 
+ 웹 검색 기능 
+ 예 
+ 예 
+ 예 
+ 예 
+ 아티팩트 만들기 추가 정보 
+ 예 
+ 예 
+ 예 
+ 예 
+ 데스크톱 확장 프로그램 
+ 예 
+ 예 
+ 예 
+ 예 
+ 음성 모드 
+ 예 
+ 예 
+ 예 
+ 예 
+ 시크릿 채팅 추가 정보 
+ 예 
+ 예 
+ 예 
+ 예 
+ 사용자 환경 설정 
+ 예 
+ 예 
+ 예 
+ 예 
+ 프로젝트 
+ 최대 5 
+ 예 
+ 예 
+ 예 
+ 프로젝트 공유 및 협업 
+ 아니요 
+ 아니요 
+ 아니요 
+ 아니요 
+ 코드 실행으로 파일 생성 및 편집 추가 정보 
+ 예 
+ 예 
+ 예 
+ 예 
+ 리서치 
+ 아니요 
+ 예 
+ 예 
+ 예 
+ 메모리 
+ 예 
+ 예 
+ 예 
+ 예 
+ Skills 추가 정보 
+ 예 
+ 예 
+ 예 
+ 예 
+ 커넥터 추가 정보 
+ 예 
+ 예 
+ 예 
+ 예 
+ 웹 검색 
+ 예 
+ 예 
+ 예 
+ 예 
+ Enterprise 검색 추가 정보 
+ 아니요 
+ 아니요 
+ 아니요 
+ 아니요 
+ 보안 및 관리
+ 기능 Free Pro Max 5x Max 20x 
+ 싱글 사인온(SSO) 및 도메인 캡처 
+ 아니요 
+ 아니요 
+ 아니요 
+ 아니요 
+ 중앙 집중식 청구 및 관리 
+ 아니요 
+ 아니요 
+ 아니요 
+ 아니요 
+ 원격 및 로컬 커넥터에 대한 관리자 제어 
+ 아니요 
+ 아니요 
+ 아니요 
+ 아니요 
+ Claude 데스크톱 앱 Enterprise 배포 
+ 아니요 
+ 아니요 
+ 아니요 
+ 아니요 
+ 역할 기반 접근 제어 
+ 아니요 
+ 아니요 
+ 아니요 
+ 아니요 
+ 도메인 간 ID 관리 시스템(SCIM) 
+ 아니요 
+ 아니요 
+ 아니요 
+ 아니요 
+ 감사 로그 
+ 아니요 
+ 아니요 
+ 아니요 
+ 아니요 
+ 사용량 분석 
+ 아니요 
+ 아니요 
+ 아니요 
+ 아니요 
+ 컴플라이언스 API 
+ 아니요 
+ 아니요 
+ 아니요 
+ 아니요 
+ HIPAA 준수 옵션 
+ 아니요 
+ 아니요 
+ 아니요 
+ 아니요 
+ 맞춤형 데이터 보존 제어 
+ 아니요 
+ 아니요 
+ 아니요 
+ 아니요 
+ 조직 전체 Skills 배포 
+ 아니요 
+ 아니요 
+ 아니요 
+ 아니요 
+ 결제 옵션
+ 기능 Free Pro Max 5x Max 20x 
+ 신용카드 
+ 해당 없음 
+ 예 
+ 예 
+ 예 
+ ACH 
+ 아니요 
+ 아니요 
+ 아니요 
+ 아니요 
+ 청구서 발행 / 후불 조건 
+ 아니요 
+ 아니요 
+ 아니요 
+ 아니요 
+ 결제 주기 
+ 해당 없음 월간 및 연간 월간 월간 
+ 중도 시트 추가 
+ 해당 없음 해당 없음 해당 없음 해당 없음 
+ 모델 및 사용량
+ 기능 Free Pro Max 5x Max 20x 
+ Fable 추가 정보 
+ 아니요 사용 크레딧 주간 한도의 50%* 주간 한도의 50%* 
+ Opus 
+ 아니요 
+ 예 
+ 예 
+ 예 
+ Sonnet 
+ 예 
+ 예 
+ 예 
+ 예 
+ Haiku 
+ 예 
+ 예 
+ 예 
+ 예 
+ 컨텍스트 윈도우 추가 정보 
+ 최대 100만 모델에 따라 다름 최대 100만 모델에 따라 다름 최대 100만 모델에 따라 다름 최대 100만 모델에 따라 다름 
+ 사용 크레딧 추가 정보 
+ 아니요 
+ 예 
+ 예 
+ 예 
+ 신규 월간 API 크레딧 † 
+ 아니요 
+ 아니요 월 $100 월 $200 
+ 트래픽 급증 시 우선 접근 
+ 아니요 
+ 아니요 
+ 예 
+ 예 
+ 사용자 및 조직 수준의 지출 관리 
+ 아니요 
+ 아니요 
+ 아니요 
+ 아니요 
+ 모델 학습 추가 정보 
+ 옵트아웃 옵트아웃 옵트아웃 옵트아웃 
+ Team
+ 2~150명 팀을 위한 플랜
+ Team 플랜 시작하기 
+ 스탠다드 시트
+ 모든 Claude 기능, Pro보다 더 많은 사용량*
+ $20
+ 연간 청구 시 시트당 월 요금. 월간 청구 시 $25 .
+ 프리미엄 시트
+ 스탠다드 시트보다 5배 많은 사용량*
+ $100
+ 연간 청구 시 시트당 월 요금. 월간 청구 시 $125 .
+ Claude Code 및 Claude Cowork
+ Claude Design, Slides, Docs
+ Claude Motion 및 Dashboards(베타)
+ Claude Science
+ Microsoft 365, @Claude 등
+ 조직 전반의 Enterprise 검색
+ 중앙 집중식 청구 및 관리
+ 싱글 사인온(SSO)
+ 원격 및 로컬 커넥터에 대한 관리자 제어
+ Claude 데스크톱 앱 Enterprise 배포
+ 기본적으로 사용자 콘텐츠로 모델 학습 없음
+ 시트 유형 자유롭게 조합
+ 월 최대 $500의 공유 API 크레딧 † 
+ Enterprise
+ 대규모로 운영되는 대기업을 위한
+ Enterprise 플랜 시작하기 구매 전문가와 채팅 
+ 시트 요금 + API 요금으로 청구되는 사용량
+ 월 US$20/시트, 연간 청구. 사용 비용은 모델 및 작업에 따라 달라집니다.
+ 모든 Team 플랜 기능, 추가로:
+ 관리자가 사용자 및 조직 지출 한도 설정
+ 세밀한 권한 설정을 갖춘 역할 기반 액세스
+ 도메인 간 ID 관리 시스템(SCIM)
+ 감사 로그
+ 가시성 및 모니터링을 위한 컴플라이언스 API
+ 맞춤형 데이터 보존 제어
+ 네트워크 수준 접근 제어
+ IP 허용 목록
+ HIPAA 준수 옵션 제공
+ Claude Security(베타)
+ 사용 한도 가 적용됩니다. 표시된 가격에는 해당 세금이 포함되지 않습니다. 요금 및 플랜은 Anthropic의 재량에 따라 변경될 수 있습니다.
+ 사용 한도 가 적용됩니다. 요금 및 플랜은 Anthropic의 재량에 따라 변경될 수 있습니다.
+ 교육 플랜
+ 학생, 교수진, 직원을 포함한 기관 전체를 위한 대학 전용 플랜을 이용하세요.
+ 자세히 알아보기 
+ 학생 및 교직원 접근
+ 할인된 요금으로 모든 대학 구성원에게 포괄적인 접근 제공
+ 학술 연구 및 학습 모드
+ 학생 학습을 위한 전용 API 크레딧 및 교육 기능
+ 교육 및 지원
+ 기관 전체의 성공적인 도입을 위한 리소스
+ 플랜별 기능 비교 
+ 검색 
+ Team
+ 플랜 생성 
+ Enterprise (셀프서비스)
+ 플랜 생성 
+ Enterprise (영업 지원)
+ 영업팀 문의 
+ 기능 및 특징
+ 기능 Team Enterprise (셀프서비스) Enterprise (영업 지원) 
+ @Claude 
+ 예 
+ 예 
+ 예 
+ Claude Code 
+ 예 
+ 예 
+ 예 
+ Claude Science 
+ 예 
+ 예 
+ 예 
+ Claude Security 추가 정보 
+ 아니요 
+ 예 
+ 예 
+ Claude in Chrome 
+ 예 
+ 예 
+ 예 
+ Claude for Microsoft 365 
+ 예 
+ 예 
+ 예 
+ Claude for Microsoft Outlook 
+ 예 
+ 예 
+ 예 
+ 웹, iOS, Android 및 데스크톱에서 채팅 
+ 예 
+ 예 
+ 예 
+ Claude Design 추가 정보 
+ 예 
+ 예 
+ 예 
+ Claude Slides 추가 정보 
+ 예 
+ 예 
+ 예 
+ Claude Docs 추가 정보 
+ 예 
+ 예 
+ 예 
+ Claude Dashboards(베타) 추가 정보 
+ 예 
+ 예 
+ 예 
+ Claude Motion(베타) 추가 정보 
+ 예 
+ 예 
+ 예 
+ 웹 검색 기능 
+ 예 
+ 예 
+ 예 
+ 아티팩트 만들기 추가 정보 
+ 예 
+ 예 
+ 예 
+ 데스크톱 확장 프로그램 
+ 예 
+ 예 
+ 예 
+ 음성 모드 
+ 예 
+ 예 
+ 예 
+ 시크릿 채팅 추가 정보 
+ 예 
+ 예 
+ 예 
+ 사용자 환경 설정 
+ 예 
+ 예 
+ 예 
+ 프로젝트 
+ 예 
+ 예 
+ 예 
+ 프로젝트 공유 및 협업 
+ 예 
+ 예 
+ 예 
+ 코드 실행으로 파일 생성 및 편집 추가 정보 
+ 예 
+ 예 
+ 예 
+ 리서치 
+ 예 
+ 예 
+ 예 
+ 메모리 
+ 예 
+ 예 
+ 예 
+ Skills 추가 정보 
+ 예 
+ 예 
+ 예 
+ 커넥터 추가 정보 
+ 예 
+ 예 
+ 예 
+ 웹 검색 
+ 예 
+ 예 
+ 예 
+ Enterprise 검색 추가 정보 
+ 예 
+ 예 
+ 예 
+ 보안 및 관리
+ 기능 Team Enterprise (셀프서비스) Enterprise (영업 지원) 
+ 싱글 사인온(SSO) 
+ 예 
+ 예 
+ 예 
+ 도메인 인증 
+ 예 
+ 예 
+ 예 
+ 조직 생성 제한 추가 정보 
+ 예 
+ 예 
+ 예 
+ 도메인을 사용하는 계정 마이그레이션 추가 정보 
+ 아니요 
+ 예 
+ 예 
+ 중앙 집중식 청구 및 관리 
+ 예 
+ 예 
+ 예 
+ 원격 및 로컬 커넥터에 대한 관리자 제어 
+ 예 
+ 예 
+ 예 
+ Claude 데스크톱 앱 Enterprise 배포 
+ 예 
+ 예 
+ 예 
+ 사용량 분석 
+ 예 
+ 예 
+ 예 
+ 조직 전체 Skills 배포 
+ 예 
+ 예 
+ 예 
+ 도메인 캡처 
+ 아니요 
+ 예 
+ 예 
+ 역할 기반 접근 제어 
+ 아니요 
+ 예 
+ 예 
+ 도메인 간 ID 관리 시스템(SCIM) 
+ 아니요 
+ 예 
+ 예 
+ 감사 로그 
+ 아니요 
+ 예 
+ 예 
+ 컴플라이언스 API 
+ 아니요 
+ 예 
+ 예 
+ 맞춤형
+
+=== [about] https://platform.claude.com/login?utm_source=claude&amp;utm_medium=ref_codr&amp;utm_campaign=dev_acq_gl_cl1p_web_landing_swe_en_signup-platform-bau&amp;utm_content=tri_txt_hero/ (lang=ko-KR)
+Sign in | Claude Platform 
+ 쿠키 설정
+ 당사는 서비스를 제공 및 개선하고, 사이트 이용 현황을 분석하며, 동의하시는 경우 이용 경험을 맞춤화 또는 개인화하고 서비스를 마케팅하기 위해 쿠키를 사용합니다. 쿠키 정책은 여기 (새 탭에서 열림) 에서 확인하실 수 있습니다.
+ 맞춤설정 쿠키 설정 사용자 지정 거부 모든 쿠키 거부 수락 모든 쿠키 허용 
+ Claude Console 
+ 개발자 문서 API 레퍼런스 쿡북 빠른 시작 도입 문의 
+ Claude Console 
+ 개발자 문서 API 레퍼런스 쿡북 빠른 시작 도입 문의 
+ © 2026 ANTHROPIC PBC
+ 제품
+ Claude 
+ Claude Code 
+ Claude Code for Enterprise 
+ @Claude 
+ Claude Design 
+ Claude Science 
+ Claude Security 
+ 앱 다운로드 
+ 요금 
+ 로그인 
+ 기능
+ Claude in Chrome 
+ Claude for Slack 
+ Claude for Microsoft 365 
+ Skills 
+ 모델
+ Mythos 
+ Fable 
+ Opus 
+ Sonnet 
+ Haiku 
+ 솔루션
+ AI 에이전트 
+ 코드 현대화 
+ 코딩 
+ 커머스 
+ 고객 지원 
+ 사이버 보안 
+ Enterprise 
+ 금융 서비스 
+ 정부 
+ 헬스케어 
+ 고등 교육 
+ K-12 교사 
+ 법적 고지 
+ 생명과학 
+ 비영리 단체 
+ 소규모 비즈니스 
+ Claude Platform
+ 개요 
+ 개발자 문서 
+ 요금 
+ 생태계 
+ 마켓플레이스 
+ Claude on AWS 
+ Google Cloud의 Vertex AI 
+ Microsoft Foundry 
+ 지역 규정 준수 
+ 콘솔 로그인 
+ 리소스
+ 블로그 
+ Claude 파트너 네트워크 
+ 커뮤니티 
+ 커넥터 
+ 강좌 
+ 고객 사례 
+ Anthropic의 엔지니어링 
+ 이벤트 
+ 플러그인 
+ Claude 기반 
+ 서비스 파트너 
+ 튜토리얼 
+ 사용 사례 
+ 회사
+ Anthropic 
+ 채용 
+ 경제의 미래 
+ 리서치 
+ Anthropic 소식 
+ Responsible Scaling Policy 
+ 보안 및 규정 준수 
+ 투명성 
+ 프로그램
+ 스타트업 
+ 과학자 
+ 도움말 및 보안
+ 가용성 
+ 파일 확인 
+ 상태 
+ 고객지원 센터 
+ 약관 및 정책
+ 개인정보 보호 선택 
+ 개인정보처리방침 
+ 책임 있는 공개 정책 
+ 서비스 이용약관: 상업용 
+ 서비스 이용약관: 소비자 
+ 서비스 이용약관: 미국 K-12 
+ 데이터 처리 계약: 미국 K-12 
+ 사용 정책 
+ 제품
+ Claude 
+ Claude Code 
+ Claude Code for Enterprise 
+ @Claude 
+ Claude Design 
+ Claude Science 
+ Claude Security 
+ 앱 다운로드 
+ 요금 
+ 로그인 
+ 기능
+ Claude in Chrome 
+ Claude for Slack 
+ Claude for Microsoft 365 
+ Skills 
+ 모델
+ Mythos 
+ Fable 
+ Opus 
+ Sonnet 
+ Haiku 
+ 솔루션
+ AI 에이전트 
+ 코드 현대화 
+ 코딩 
+ 커머스 
+ 고객 지원 
+ 사이버 보안 
+ Enterprise 
+ 금융 서비스 
+ 정부 
+ 헬스케어 
+ 고등 교육 
+ K-12 교사 
+ 법적 고지 
+ 생명과학 
+ 비영리 단체 
+ 소규모 비즈니스 
+ Claude Platform
+ 개요 
+ 개발자 문서 
+ 요금 
+ 생태계 
+ 마켓플레이스 
+ Claude on AWS 
+ Google Cloud의 Vertex AI 
+ Microsoft Foundry 
+ 지역 규정 준수 
+ 콘솔 로그인 
+ 리소스
+ 블로그 
+ Claude 파트너 네트워크 
+ 커뮤니티 
+ 커넥터 
+ 강좌 
+ 고객 사례 
+ Anthropic의 엔지니어링 
+ 이벤트 
+ 플러그인 
+ Claude 기반 
+ 서비스 파트너 
+ 튜토리얼 
+ 사용 사례 
+ 회사
+ Anthropic 
+ 채용 
+ 경제의 미래 
+ 리서치 
+ Anthropic 소식 
+ Responsible Scaling Policy 
+ 보안 및 규정 준수 
+ 투명성 
+ 프로그램
+ 스타트업 
+ 과학자 
+ 도움말 및 보안
+ 가용성 
+ 파일 확인 
+ 상태 
+ 고객지원 센터 
+ 약관 및 정책
+ 개인정보 보호 선택 
+ 개인정보처리방침 
+ 책임 있는 공개 정책 
+ 서비스 이용약관: 상업용 
+ 서비스 이용약관: 소비자 
+ 서비스 이용약관: 미국 K-12 
+ 데이터 처리 계약: 미국 K-12 
+ 사용 정책 
+ © 2026 ANTHROPIC PBC
+ Claude Platform에서 개발하기
+ 최첨단 Claude 모델과 관리형 에이전트 인프라로 에이전트와 애플리케이션을 만드세요.
+ Google로 계속하기 
+ 또는
+ 이메일로 계속하기 SSO로 계속하기 
+ By continuing, you agree to Anthropic’s Commercial Terms (새 탭에서 열림) and Usage Policy (새 탭에서 열림) , and acknowledge our Privacy Policy (새 탭에서 열림) .
+ Claude API로 구축하는 기업
+
+=== [meta] https://claude.com/ko/platform/api
+html lang: ko
+hreflang: de, en, es, fr, it, ja, ko, x-default
+화면에 보이는 언어 이름: 한국어, English, 日本語, Español, Français, Deutsch, Italiano

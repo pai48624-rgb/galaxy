@@ -1,0 +1,100 @@
+=== [github] https://github.com/DorothyDUUU/SWE-Dev
+![logo](assets/logo.png)
+
+# 💻 SWE‑Dev: Evaluating and Training Autonomous Feature‑Driven Software Development
+
+[![project](https://img.shields.io/badge/project-Page-blue)](https://dorothyduuu.github.io/SWE-Dev/)
+[![arXiv](https://img.shields.io/badge/arXiv-2505.16975-b31b1b.svg)](https://arxiv.org/abs/2505.16975)
+[![License](https://img.shields.io/badge/license-Apache%202.0-green.svg)](LICENSE)
+[![DockerHub](https://img.shields.io/badge/DockerHub-repository-blue.svg)](https://hub.docker.com/repository/docker/dorothyduuu/swe-dev/general)
+
+
+> 🎯 **SWE‑Dev** is the **first large‑scale benchmark and training corpus** for **feature‑driven development (FDD)** — the real‑world task of adding new functionality to existing codebases.
+> It ships **14 000 training** and **500 test** tasks, each with a **runnable environment** and **developer‑written unit tests**, enabling both *supervised fine‑tuning* and *reinforcement learning from executable rewards*.
+
+![📄 Dataset Overview](assets/overview.jpg)
+
+---
+
+## ✨ Highlights
+
+* 🌍 **Real‑world FDD tasks** drawn from mature open‑source projects.
+* ⚙️ **End‑to‑end reproducibility** – every task bundles source, deps, Dockerfile & tests.
+* 🤖 **RL‑ready** – deterministic pass/fail reward signals from pytest.
+* 💪 **Challenging** – Claude‑3.7‑Sonnet reaches only **22.45 % Pass\@3** on the *hard* split.
+* 📈 **Effective for model improvement** – fine‑tuning a 7 B model on SWE‑Dev yields GPT‑4o‑level performance on hard split.
+
+---
+
+## 🚀 Getting Started
+
+### 1. 🛠️ Installation
+
+```bash
+conda create -n swe-dev python=3.12.0
+
+# bleeding‑edge
+git clone [https://github.com/DorothyDUUU/SWE-Dev-dataset.git](https://github.com/DorothyDUUU/SWE-Dev-dataset.git)
+cd SWE-Dev-dataset
+pip install -r requirements.txt
+
+```bash
+conda create -n swe-dev python=3.12.0
+
+# bleeding‑edge
+git clone https://github.com/DorothyDUUU/SWE-Dev-dataset.git
+cd SWE-Dev-dataset
+pip install -r requirements.txt
+```
+### 2. 📥 Download the dataset & Build evaluation enviornment
+**Download dataset:**
+```bash
+python dataset/download_data.py --dest ./data
+```
+
+The script organises the dataset as:
+```
+data/
+ ├── train/
+ │   ├── level1/
+ │   ├── level2/
+ │   └── level3/
+ └── test/
+     ├── Easy/
+     └── Hard/
+```
+
+**Docker Installation:**
+Train set and test set are originated from different packages, thus the packages are installed in different docker images.
+
+Test docker: (Need at least 10GB storage space for docker image)
+```bash
+python download_docker.py --split test
+```
+Train docker: (Need at least 100GB storage space for docker image) 
+```bash
+python download_docker.py --split train
+```
+**Docker Image for each sample:**
+The docker image for each sample is the `f"{package_name}-image"`, `package_name` is the value of `package_name` in sample metadata.
+
+For instance, the image name for `data/test/advertools-test_ad_create-level1-metadata.json`, which `package_name` is `advertools`, the docker image for this sample is `advertools-image`.
+
+**Build evaluation API:**
+For further usage for RL training, we wrapped the docker test in an API server, which could conviniently build in latter use.
+
+### 3. ⏱️ Quick Inference
+**Single Agent Inference**
+If you want to test on your own model, you can use the following command:
+```bash
+bash SWE-Dev-dataset/infer/single/run.sh
+```
+
+**Multi-Agent Inference**
+We also integrate 10 Multi-Agent Systems inference in the [MASLab](https://github.com/MASWorks/MASLab) framework for SWE-Dev Dataset. Please refer to `infer/MAS/README-MAS.md`.
+
+| No. | Methodology                                                                                     | Venue        | Role    | Topo.   | Tool | Generalization    |
+|:---:|:------------------------------------------------------------------------------------------------|:------------:|:-------:|:-------:|:----:|:-----------------:|
+| 1   | [Reflexion](https://arxiv.org/abs/2303.11366)                                                   | NeurIPS 2023 | Fixed   | Fixed   | No   | Yes               |
+| 2   | [Self-Consistency](https://arxiv.org/abs/2203.11171)                                            | ICLR 2024    | Fixed   | Fixed   | No   | Yes               |
+| 3   | [LLM Deba

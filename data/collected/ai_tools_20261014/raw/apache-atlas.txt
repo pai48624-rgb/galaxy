@@ -1,0 +1,410 @@
+=== [home] https://atlas.apache.org/#/ (lang=en)
+Apache Atlas – Data Governance and Metadata framework for Hadoop 
+ Overview 
+ Documentation 
+ Features 
+ High Level Architecture 
+ Type System 
+ Glossary 
+ Classification Propagation 
+ Notifications 
+ High Availability 
+ Business Metadata 
+ Search 
+ Basic Search 
+ Advanced Search 
+ Relationship Search 
+ Hooks 
+ HBase 
+ Hive 
+ Sqoop 
+ Storm 
+ Kafka 
+ Falcon 
+ Couchbase 
+ Import/Export 
+ Import API 
+ Import API Options 
+ Import Entity Transforms 
+ Import Export API 
+ Export API 
+ Export HDFS API 
+ Export Import Audits 
+ Incremental Export 
+ Security 
+ Security Details 
+ Authentication 
+ Authorization Model 
+ Atlas Simple Authorizer 
+ Atlas Ranger Authorizer 
+ Setup 
+ Quick Start 
+ Configuration 
+ Build Instruction 
+ Installation Instruction 
+ REST API 
+ Tools 
+ Atlas Repair Index 
+ Trino Extractor 
+ Misc 
+ Atlas Server 
+ Replicated Attributes 
+ Soft Reference 
+ Downloads 
+ Download 
+ Whats New 
+ WhatsNew-2.5 
+ WhatsNew-2.4 
+ WhatsNew-2.3 
+ WhatsNew-2.2 
+ WhatsNew-2.1 
+ WhatsNew-2.0 
+ WhatsNew-1.0 
+ Migration 
+ Migration-0.8 to 1.0 
+ For Developers 
+ Eclipse Setup 
+ Project Info 
+ Project Information 
+ Mailing Lists 
+ Team List 
+ Issue Tracking 
+ License 
+ Source Repository 
+ ASF 
+ Versions 2.5.0
+ 2.4.0
+ 2.3.0
+ 2.2.0
+ 2.1.0
+ 2.0.0
+ 1.2.0
+ 1.1.0
+ 1.0.0
+ 0.8.4
+ 0.8.3
+ 0.8.2
+ 0.8.1
+ 0.8-incubating
+ 0.7.1-incubating
+ 0.7-incubating
+ 0.6-incubating
+ 0.5-incubating
+ Overview
+ Atlas is a scalable and extensible set of core foundational governance services – enabling
+enterprises to effectively and efficiently meet their compliance requirements within Hadoop and
+allows integration with the whole enterprise data ecosystem.
+ Apache Atlas provides open metadata management and governance capabilities for organizations
+to build a catalog of their data assets, classify and govern these assets and provide collaboration
+capabilities around these data assets for data scientists, analysts and the data governance team.
+ Features
+ Metadata types & instances
+ Pre-defined types for various Hadoop and non-Hadoop metadata
+ Ability to define new types for the metadata to be managed
+ Types can have primitive attributes, complex attributes, object references; can inherit from other types
+ Instances of types, called entities, capture metadata object details and their relationships
+ REST APIs to work with types and instances allow easier integration
+ Classification
+ Ability to dynamically create classifications - like PII, EXPIRES_ON, DATA_QUALITY, SENSITIVE
+ Classifications can include attributes - like expiry_date attribute in EXPIRES_ON classification
+ Entities can be associated with multiple classifications, enabling easier discovery and security enforcement
+ Propagation of classifications via lineage - automatically ensures that classifications follow the data as it goes through various processing
+ Lineage
+ Intuitive UI to view lineage of data as it moves through various processes
+ REST APIs to access and update lineage
+ Search/Discovery
+ Intuitive UI to search entities by type, classification, attribute value or free-text
+ Rich REST APIs to search by complex criteria
+ SQL like query language to search entities - Domain Specific Language (DSL)
+ Security & Data Masking
+ Fine-grained security for metadata access, enabling controls on access to entity instances and operations like add/update/remove classifications
+ Integration with Apache Ranger enables authorization/data-masking on data access based on classifications associated with entities in Apache Atlas. For example: who can access data classified as PII, SENSITIVE
+ customer-service users can only see last 4 digits of columns classified as NATIONAL_ID
+ Getting Started
+ What's new in Apache Atlas 2.5? 
+ Build & Install 
+ Quick Start 
+ API Documentation
+ REST API Documentation 
+ Export & Import REST API Documentation 
+ Legacy API Documentation 
+ Developer Setup Documentation
+ Developer Setup: Eclipse 
+ Copyright © 2011-2018 The Apache Software Foundation. Licensed under the Apache License, Version 2.0 .Apache Atlas, Atlas, Apache, the Apache feather logo are trademarks of the Apache Software Foundation .All other marks mentioned may be trademarks or registered trademarks of their respective owners.
+
+=== [about] https://atlas.apache.org/api/v2/index.html (lang=en)
+Atlas REST API 
+ Toggle navigation 
+ Atlas REST API 
+ Resources 
+ Data Types 
+ Resources 
+ JSON 
+ XML 
+ Back to Top 
+ Home 
+ Atlas exposes a variety of REST endpoints to work with types, entities, lineage and data discovery.
+ Resources
+ There is a WADL document available that describes the resources API.
+ You may also enjoy the interactive interface provided for this API by Swagger .
+ Try it out! 
+ name 
+ path 
+ methods 
+ description 
+ DiscoveryREST 
+ /v2/search/attribute 
+ /v2/search/basic 
+ /v2/search/dsl 
+ /v2/search/fulltext 
+ /v2/search/quick 
+ /v2/search/relations 
+ /v2/search/relationship 
+ /v2/search/saved 
+ /v2/search/suggestions 
+ /v2/search/download/status 
+ /v2/search/download/{filename} 
+ /v2/search/saved/{guid} 
+ /v2/search/saved/{name} 
+ /v2/search/basic/download/create_file 
+ /v2/search/dsl/download/create_file 
+ /v2/search/saved/execute/{name} 
+ /v2/search/saved/execute/guid/{guid} 
+ GET 
+ GET POST 
+ GET 
+ GET 
+ GET POST 
+ GET POST 
+ GET 
+ GET POST PUT 
+ GET 
+ GET 
+ GET 
+ DELETE 
+ GET 
+ POST 
+ POST 
+ GET 
+ GET 
+ REST interface for data discovery using dsl or full text search 
+ EntityREST 
+ /v2/entity 
+ /v2/entity/bulk 
+ /v2/entity/bulk/classification 
+ /v2/entity/bulk/headers 
+ /v2/entity/bulk/setClassifications 
+ /v2/entity/businessmetadata/import 
+ /v2/entity/guid/{guid} 
+ /v2/entity/{guid}/audit 
+ /v2/entity/businessmetadata/import/template 
+ /v2/entity/guid/{guid}/businessmetadata 
+ /v2/entity/guid/{guid}/classifications 
+ /v2/entity/guid/{guid}/header 
+ /v2/entity/guid/{guid}/labels 
+ /v2/entity/uniqueAttribute/type/{typeName} 
+ /v2/entity/bulk/uniqueAttribute/type/{typeName} 
+ /v2/entity/guid/{guid}/businessmetadata/{bmName} 
+ /v2/entity/guid/{guid}/classification/{classificationName} 
+ /v2/entity/uniqueAttribute/type/{typeName}/classifications 
+ /v2/entity/uniqueAttribute/type/{typeName}/header 
+ /v2/entity/uniqueAttribute/type/{typeName}/labels 
+ /v2/entity/uniqueAttribute/type/{typeName}/classification/{classificationName} 
+ POST 
+ DELETE GET POST 
+ POST 
+ GET 
+ POST 
+ POST 
+ DELETE GET PUT 
+ GET 
+ GET 
+ DELETE POST 
+ GET POST PUT 
+ GET 
+ DELETE POST PUT 
+ DELETE GET PUT 
+ GET 
+ DELETE POST 
+ DELETE GET 
+ POST PUT 
+ GET 
+ DELETE POST PUT 
+ DELETE 
+ REST for a single entity 
+ GlossaryREST 
+ /v2/glossary 
+ /v2/glossary/categories 
+ /v2/glossary/category 
+ /v2/glossary/import 
+ /v2/glossary/term 
+ /v2/glossary/terms 
+ /v2/glossary/{glossaryGuid} 
+ /v2/glossary/category/{categoryGuid} 
+ /v2/glossary/import/template 
+ /v2/glossary/term/{termGuid} 
+ /v2/glossary/{glossaryGuid}/categories 
+ /v2/glossary/{glossaryGuid}/detailed 
+ /v2/glossary/{glossaryGuid}/partial 
+ /v2/glossary/{glossaryGuid}/terms 
+ /v2/glossary/category/{categoryGuid}/partial 
+ /v2/glossary/category/{categoryGuid}/related 
+ /v2/glossary/category/{categoryGuid}/terms 
+ /v2/glossary/term/{termGuid}/partial 
+ /v2/glossary/terms/{termGuid}/assignedEntities 
+ /v2/glossary/terms/{termGuid}/related 
+ /v2/glossary/{glossaryGuid}/categories/headers 
+ /v2/glossary/{glossaryGuid}/terms/headers 
+ GET POST 
+ POST 
+ POST 
+ POST 
+ POST 
+ POST 
+ DELETE GET PUT 
+ DELETE GET PUT 
+ GET 
+ DELETE GET PUT 
+ GET 
+ GET 
+ PUT 
+ GET 
+ PUT 
+ GET 
+ GET 
+ PUT 
+ DELETE GET POST PUT 
+ GET 
+ GET 
+ GET 
+ IndexRecoveryREST 
+ /v2/indexrecovery 
+ /v2/indexrecovery/start 
+ GET 
+ POST 
+ LineageREST 
+ /v2/lineage/{guid} 
+ /v2/lineage/uniqueAttribute/type/{typeName} 
+ GET POST 
+ GET 
+ REST interface for an entity's lineage information 
+ NotificationREST 
+ /v2/notification/topic/{topicName} 
+ POST 
+ RelationshipREST 
+ /v2/relationship 
+ /v2/relationship/guid/{guid} 
+ POST PUT 
+ DELETE G
+
+=== [meta] https://atlas.apache.org/#/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/apache/atlas
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+  http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+
+Apache Atlas Overview
+=====================
+[![License](https://img.shields.io/:license-Apache%202-green.svg)](https://www.apache.org/licenses/LICENSE-2.0.txt)
+[![PyPI Downloads](https://static.pepy.tech/personalized-badge/apache-atlas?period=month&units=international_system&left_color=black&right_color=orange&left_text=PyPI%20downloads)](https://pypi.org/project/apache-atlas/)
+[![Documentation](https://img.shields.io/badge/docs-apache.org-blue.svg)](https://atlas.apache.org)
+[![Wiki](https://img.shields.io/badge/atlas-wiki-orange)](https://cwiki.apache.org/confluence/display/ATLAS/)
+
+Apache Atlas framework is an extensible set of core
+foundational governance services – enabling enterprises to effectively and
+efficiently meet their compliance requirements within Hadoop and allows
+integration with the whole enterprise data ecosystem.
+
+This will provide true visibility in Hadoop by using both a prescriptive
+and forensic model, along with technical and operational audit as well as
+lineage enriched by business taxonomical metadata.  It also enables any
+metadata consumer to work inter-operably without discrete interfaces to
+each other -- the metadata store is common.
+
+The metadata veracity is maintained by leveraging Apache Ranger to prevent
+non-authorized access paths to data at runtime.
+Security is both role based (RBAC) and attribute based (ABAC).
+
+
+
+#### NOTE
+Apache Atlas allows contributions via pull requests (PRs) on GitHub. Alternatively, use [this](https://reviews.apache.org) to submit changes for review using the Review Board.
+Also create a [atlas jira](https://issues.apache.org/jira/browse/ATLAS) to go along with the review and mention it in the pull request/review board review.
+
+
+Building Atlas in Docker
+=============
+
+Instructions to build and run atlas in docker: `dev-support/atlas-docker/README.md`
+
+Regular Build Process
+=============
+
+1. Get Atlas sources to your local directory, for example with following commands
+   ```
+   cd <your-local-directory>
+   git clone https://github.com/apache/atlas.git
+   cd atlas
+   
+   # Checkout the branch or tag you would like to build
+
+   # to checkout a branch
+   git checkout <branch>
+
+   # to checkout a tag
+   git checkout tags/<tag>
+   ```
+
+2. Execute the following commands to build Apache Atlas
+   ```
+   export MAVEN_OPTS="-Xms2g -Xmx2g"
+   ```
+- Apache Atlas supports building with **Java 8**, **Java 11**, and **Java 17**. Set the appropriate `JAVA_HOME` and `MAVEN_OPTS` before building.
+
+- **For Java 8 / Java 11:**
+  ```bash
+  export MAVEN_OPTS="-Xms2g -Xmx2g"
+  ```
+
+- **For Java 17:**
+  ```bash
+  export MAVEN_OPTS="--add-opens=java.base/java.lang=ALL-UNNAMED \
+  --add-opens=java.base/java.lang.reflect=ALL-UNNAMED \
+  --add-opens=java.base/java.nio=ALL-UNNAMED \
+  --add-opens=java.base/java.net=ALL-UNNAMED \
+  -Xms2g -Xmx2g"
+  ```
+
+- After setting the correct `MAVEN_OPTS`, run:
+   ```bash
+    mvn clean install
+    mvn clean package -Pdist
+   ```
+
+3. After above build commands successfully complete, you should see the following files
+   ```
+   distro/target/apache-atlas-<version>-bin.tar.gz
+   distro/target/apache-atlas-<version>-hbase-hook.tar.gz
+   distro/target/apache-atlas-<version>-hive-hook.tar.gz
+   distro/target/apache-atlas-<version>-impala-hook.tar.gz
+   distro/target/apache-atlas-<version>-kafka-hook.tar.gz
+   distro/target/apache-atlas-<version>-server.tar.gz
+   distro/target/apache-atlas-<version>-sources.tar.gz
+ 

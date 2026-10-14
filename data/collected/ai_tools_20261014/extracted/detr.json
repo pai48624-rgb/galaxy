@@ -1,0 +1,72 @@
+{
+ "company": "Facebook AI (facebookresearch)",
+ "one_liner_ko": "복잡한 수작업 객체 탐지 파이프라인을 트랜스포머로 대체한 엔드투엔드 객체 탐지 모델(DETR)의 PyTorch 학습 코드·사전학습 모델.",
+ "what_it_does_ko": "DETR(DEtection TRansformer)은 객체 탐지를 직접적인 집합 예측 문제로 다루는 모델로, 이분 매칭으로 고유 예측을 강제하는 집합 기반 전역 손실과 트랜스포머 인코더-디코더 구조로 이뤄진다. 학습된 소수의 객체 쿼리로 객체 간 관계와 이미지 전체 맥락을 추론해 최종 예측을 병렬로 낸다. ResNet-50 기반에서 Faster R-CNN과 같은 COCO 42 AP를 절반의 연산량으로 낸다고 밝힌다. 저장소는 PyTorch 학습 코드와 사전학습 모델, Colab 노트북, Detectron2 래퍼를 제공한다.",
+ "key_features": [
+  "트랜스포머 인코더-디코더 기반 엔드투엔드 객체 탐지",
+  "이분 매칭 기반 집합 손실",
+  "COCO 42 AP(ResNet-50, Faster R-CNN 대비 절반 연산량)",
+  "PyTorch 50줄로 추론",
+  "DETR·DETR-DC5 사전학습 모델(Model Zoo)",
+  "Detectron2 래퍼 제공"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": null,
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "공개 코드·사전학습 모델(라이선스 이름은 페이지에 없음)",
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://github.com/facebookresearch/detr",
+   "quote": "See our [blog post](https://ai.facebook.com/blog/end-to-end-object-detection-with-transformers/)"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/facebookresearch/detr",
+   "quote": "We replace the full complex hand-crafted object detection pipeline with a Transformer"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/facebookresearch/detr",
+   "quote": "DETR approaches object detection as a direct set prediction problem. It consists of a set-based global loss, which forces unique predictions via bipartite matching, and a Transformer encoder-decoder"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/facebookresearch/detr",
+   "quote": "DETR reasons about the relations of the objects and the global image context to directly output the final set of predictions in parallel."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/facebookresearch/detr",
+   "quote": "and match Faster R-CNN with a ResNet-50, obtaining **42 AP** on COCO using half the computation power (FLOPs)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/facebookresearch/detr",
+   "quote": "Inference in 50 lines of PyTorch."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/facebookresearch/detr",
+   "quote": "We provide baseline DETR and DETR-DC5 models, and plan to include more in future."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/facebookresearch/detr",
+   "quote": "Additionnally, we provide a Detectron2 wrapper in the d2/ folder."
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/facebookresearch/detr",
+   "quote": "PyTorch training code and pretrained models for **DETR** (**DE**tection **TR**ansformer)."
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

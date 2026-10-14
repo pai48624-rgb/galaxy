@@ -1,0 +1,560 @@
+=== [home] https://replicate.com (lang=en)
+Replicate - Run AI with an API 
+ Wan 3.0 is 30% off this week 
+ Explore Pricing Enterprise Docs Blog Sign in Try for free 
+ Menu 
+ Explore Pricing Enterprise Docs Blog Sign in Try for free Compare models in the Playground 
+ Run AI 
+with an API .
+ Run and fine-tune models. Deploy custom models. All with one line of code. 
+ Get started for free 
+ Node Python HTTP 
+ import Replicate from "replicate" ; 
+ const replicate = new Replicate ({ auth : process. env . REPLICATE_API_TOKEN }) const model = 
+ const input = { prompt : 
+ }; const [output] = await replicate. run (model, { input }); console . log (output); 
+ A poolside patio at sunset with vintage lounge chairs .
+ black-forest-labs/flux-2-pro 
+ A soft armchair shaped like a peeled banana .
+ google/nano-banana-pro 
+ A woman relaxing in a french bookstore .
+ bytedance/seedream-4 
+ A futuristic robot looking into the distance .
+ black-forest-labs/flux-pro 
+ An abstract painting of a sunrise .
+ black-forest-labs/flux-pro 
+ With Replicate you can 
+ Generate images Generate speech Generate music Restore images Generate videos from images Caption Images Large Language Models (LLMs) 
+ google / nano-banana-2 
+ Google's fast image generation model with conversational editing, multi-image fusion, and character consistency
+ 20.9M runs
+ Official
+ recraft-ai / recraft-v4-styles-pro-svg 
+ Recraft V4 Styles Pro SVG generates high-quality editable vector images that match a reusable style or attached reference images.
+ 260 runs
+ Official
+ google / imagen-4-ultra 
+ Use this ultra version of Imagen 4 when quality matters more than speed and cost
+ 1.8M runs
+ Official
+ openai / gpt-image-2 
+ OpenAI's state-of-the-art image generation model. Create and edit images from text with strong instruction following, sharp text rendering, and detailed editing.
+ 31.6M runs
+ Official
+ black-forest-labs / flux-2-flex 
+ Max-quality image generation and editing with support for ten reference images
+ 492K runs
+ Official
+ openai / gpt-image-1.5 
+ OpenAI's latest image generation model with better instruction following and adherence to prompts
+ 16.1M runs
+ Official
+ bytedance / seedream-5-lite 
+ Seedream 5.0 lite: image generation with built-in reasoning, example-based editing, and deep domain knowledge
+ 3.5M runs
+ Official
+ black-forest-labs / flux-2-max 
+ The highest fidelity image model from Black Forest Labs
+ 4.2M runs
+ Official
+ google / nano-banana-2 
+ Google's fast image generation model with conversational editing, multi-image fusion, and character consistency
+ 20.9M runs
+ Official
+ recraft-ai / recraft-v4-styles-pro-svg 
+ Recraft V4 Styles Pro SVG generates high-quality editable vector images that match a reusable style or attached reference images.
+ 260 runs
+ Official
+ google / imagen-4-ultra 
+ Use this ultra version of Imagen 4 when quality matters more than speed and cost
+ 1.8M runs
+ Official
+ openai / gpt-image-2 
+ OpenAI's state-of-the-art image generation model. Create and edit images from text with strong instruction following, sharp text rendering, and detailed editing.
+ 31.6M runs
+ Official
+ black-forest-labs / flux-2-flex 
+ Max-quality image generation and editing with support for ten reference images
+ 492K runs
+ Official
+ openai / gpt-image-1.5 
+ OpenAI's latest image generation model with better instruction following and adherence to prompts
+ 16.1M runs
+ Official
+ bytedance / seedream-5-lite 
+ Seedream 5.0 lite: image generation with built-in reasoning, example-based editing, and deep domain knowledge
+ 3.5M runs
+ Official
+ black-forest-labs / flux-2-max 
+ The highest fidelity image model from Black Forest Labs
+ 4.2M runs
+ Official
+fermatresearch
+meta
+laion-ai
+vaibhavs10
+prompthero
+stability-ai
+google-research
+jbilcke
+microsoft
+tomasmcm
+pollinations
+pixray
+tstramer
+mcai
+pagebrain
+lucataco
+zylim0702
+fermatresearch
+laion-ai
+prompthero
+google-research
+microsoft
+pollinations
+tstramer
+pagebrain
+zylim0702
+meta
+vaibhavs10
+stability-ai
+jbilcke
+tomasmcm
+pixray
+mcai
+lucataco
+ Thousands of models contributed by our community
+ All the latest models are on Replicate. They’re not just demos — they all actually work and have production-ready APIs.
+ AI shouldn’t be locked up inside academic papers and demos. Make it real by pushing it to Replicate.
+ Explore models 
+ Push a model 
+ google / nano-banana-2.1 
+ Google's latest fast image generation model with sharp text rendering, conversational editing, multi-image fusion, and up to 4K output
+ 88.5K runs
+ Official
+ prunaai / p-video-2-pro 
+ Pruna's highest-quality video model. Generate video from text or images with speed and quality modes, first- and last-frame control, and durations up to 15 seconds.
+ 356.1K runs
+ Official
+ alibaba / wan-3 
+ Wan 3.0 generates video from a text prompt or a starting image, with cinematic motion and support for 480p, 720p, and 1080p output up to 30 seconds.
+ 32.5K runs
+ Official
+ bytedance / seedance-2.5 
+ ByteDance's flagship multimodal video model with native audio, native 30-second generation, and large multimodal reference sets.
+ 239.9K runs
+ Official
+ krea / krea-2-medium 
+ Foundation image model from Krea, tuned for expressive illustration, anime, and painterly styles. Fast and consistent across artistic directions.
+ 37.3K runs
+ Official
+ inworld / realtime-tts-2 
+ Most expressive text-to-speech model from Inworld, with natural-language steering, real-time latency, and multilingual support across 100+ languages.
+ 91.1K runs
+ Official
+ google / nano-banana-2.1 
+ Google's latest fast image generation model with sharp text rendering, conversational editing, multi-image fusion, and up to 4K output
+ 88.5K runs
+ Official
+ prunaai / p-video-2-pro 
+ Pruna's highest-quality video model. Generate video from text or images with speed and quality modes, first- and last-frame control, and durations up to 15 seconds.
+ 356.1K runs
+ Official
+ alibaba / wan-3 
+ Wan 3.0 generates video from a text prompt or a starting image, with cinematic motion and support for 480p, 720p, and 1080p output up to 30 seconds.
+ 32.5K runs
+ Official
+ bytedance / seedance-2.5 
+ ByteDance's flagship multimodal video model with native audio, native 30-second generation, and large multimodal reference sets.
+ 239.9K runs
+ Official
+ krea / krea-2-medium 
+ Foundation image model from Krea, tuned for expressive illustration, anime, and painterly styles. Fast and consistent across artistic directions.
+ 37.3K runs
+ Official
+ inworld / realtime-tts-2 
+ Most expressive text-to-speech model from Inworld, with natural-language steering, real-time latency, and multilingual support across 100+ languages.
+ 91.1K runs
+ Official
+ openai / gpt-image-2 
+ OpenAI's state-of-the-art image generation model. Create and edit images from text with strong instruction following, sharp text rendering, and detailed editing.
+ 31.6M runs
+ Official
+ anthropic / claude-opus-4.7 
+ Anthropic's most capable model with a step-change improvement in agentic coding, better vision, and stronger multi-step reasoning
+ 546.9K runs
+ Official
+ minimax / music-2.6 
+ Generate full-length songs or instrumentals from a text prompt, with optional auto-generated lyrics
+ 65.1K runs
+ Official
+ bytedance / seedream-5-lite 
+ Seedream 5.0 lite: image generation with built-in reasoning, example-based editing, and deep domain knowledge
+ 3.5M runs
+ Official
+ xai / grok-imagine-video 
+ Generate videos using xAI's Grok Imagine Video model
+ 2M runs
+ Official
+ black-forest-labs / flux-2-max 
+ The highest fidelity image model from Black Forest Labs
+ 4.2M runs
+ Of
+
+=== [pricing] https://replicate.com/pricing/ (lang=en)
+Pricing – Replicate 
+ Wan 3.0 is 30% off this week 
+ Explore Pricing Enterprise Docs Blog Sign in Try for free 
+ Menu 
+ Explore Pricing Enterprise Docs Blog Sign in Try for free Compare models in the Playground 
+ Pricing
+ You only pay for what you use on Replicate. Some models are billed by hardware and time, others by input and output.
+ Public models 
+ Thousands of open-source machine learning models have been contributed by our community and more are added every day. We also host a wide variety of proprietary models.
+ Most models are billed by the time they take to run. The price-per-second varies according to the hardware in use. When running or training one of these public models, you only pay for the time it takes to process your request.
+ Some models are billed by input and output. We've included some examples below.
+ You'll find estimates for how much any model will cost you on the model's page.
+ black-forest-labs / flux-1.1-pro
+ Faster, better FLUX Pro. Text-to-image model with excellent image quality, prompt adherence, and output diversity.
+ $0.04 / output image 
+ black-forest-labs / flux-dev
+ A 12 billion parameter rectified flow transformer capable of generating images from text descriptions
+ $0.025 / output image 
+ black-forest-labs / flux-schnell
+ The fastest image generation model tailored for local development and personal use
+ $3.00 / thousand output images 
+ deepseek-ai / deepseek-r1
+ A reasoning model trained with reinforcement learning, on par with OpenAI o1
+ $0.01 / thousand output tokens 
+ $3.75 / million input tokens 
+ ideogram-ai / ideogram-v3-quality
+ The highest quality Ideogram v3 model. v3 creates images with stunning realism, creative designs, and consistent styles
+ $0.09 / output image 
+ recraft-ai / recraft-v3
+ Recraft V3 (code-named red_panda) is a text-to-image model with the ability to generate long texts, and images in a wide list of styles. As of today, it is SOTA in image generation, proven by the Text-to-Image Benchmark by Artificial Analysis
+ $0.04 / output image 
+ wavespeedai / wan-2.1-i2v-480p
+ Accelerated inference for Wan 2.1 14B image to video, a comprehensive and open suite of video foundation models that pushes the boundaries of video generation.
+ $0.09 / second of output video 
+ wavespeedai / wan-2.1-i2v-720p
+ Accelerated inference for Wan 2.1 14B image to video with high resolution, a comprehensive and open suite of video foundation models that pushes the boundaries of video generation.
+ $0.25 / second of output video 
+ Private models 
+ You aren't limited to the public models on Replicate: you can deploy your own custom models using Cog , our open-source tool for packaging machine learning models.
+ Unlike public models, most private models (with the exception of fast booting fine-tunes ) run on dedicated hardware so you don't have to share a queue with anyone else. This means you pay for all the time instances of the model are online: the time they spend setting up; the time they spend idle, waiting for requests; and the time they spend active, processing your requests. If you get a ton of traffic, we automatically scale up and down to handle the demand.
+ For fast booting fine-tunes you'll only be billed for the time the model is active and processing your requests, so you won't pay for idle time like with other private models. Fast booting fine-tunes are labeled as such in the model's version list.
+ Hardware pricing 
+ CPU (Small) 
+ cpu-small 
+ $ 0.000025 /sec
+ $ 0.09 /hr 
+ GPU - CPU 1x GPU RAM - RAM 2GB 
+ CPU 
+ cpu 
+ $ 0.000100 /sec
+ $ 0.36 /hr 
+ GPU - CPU 4x GPU RAM - RAM 8GB 
+ Nvidia A100 (80GB) GPU 
+ gpu-a100-large 
+ $ 0.001400 /sec
+ $ 5.04 /hr 
+ GPU 1x CPU 10x GPU RAM 80GB RAM 144GB 
+ 2x Nvidia A100 (80GB) GPU 
+ gpu-a100-large-2x 
+ $ 0.002800 /sec
+ $ 10.08 /hr 
+ GPU 2x CPU 20x GPU RAM 160GB RAM 288GB 
+ Nvidia H100 GPU 
+ gpu-h100 
+ $ 0.001525 /sec
+ $ 5.49 /hr 
+ GPU 1x CPU 13x GPU RAM 80GB RAM 144GB 
+ Nvidia L40S GPU 
+ gpu-l40s 
+ $ 0.000975 /sec
+ $ 3.51 /hr 
+ GPU 1x CPU 10x GPU RAM 48GB RAM 65GB 
+ 2x Nvidia L40S GPU 
+ gpu-l40s-2x 
+ $ 0.001950 /sec
+ $ 7.02 /hr 
+ GPU 2x CPU 20x GPU RAM 96GB RAM 144GB 
+ Nvidia T4 GPU 
+ gpu-t4 
+ $ 0.000225 /sec
+ $ 0.81 /hr 
+ GPU 1x CPU 4x GPU RAM 16GB RAM 16GB 
+ Additional hardware
+ 4x Nvidia A100 (80GB) GPU 
+ gpu-a100-large-4x 
+ $ 0.005600 /sec
+ $ 20.16 /hr 
+ Additional Multi-GPU A100 capacity is available with committed spend contracts.
+ 8x Nvidia A100 (80GB) GPU 
+ gpu-a100-large-8x 
+ $ 0.011200 /sec
+ $ 40.32 /hr 
+ Additional Multi-GPU A100 capacity is available with committed spend contracts.
+ 2x Nvidia H100 GPU 
+ gpu-h100-2x 
+ $ 0.003050 /sec
+ $ 10.98 /hr 
+ Additional Multi-GPU H100 capacity is available with committed spend contracts.
+ 4x Nvidia H100 GPU 
+ gpu-h100-4x 
+ $ 0.006100 /sec
+ $ 21.96 /hr 
+ Additional Multi-GPU H100 capacity is available with committed spend contracts.
+ 8x Nvidia H100 GPU 
+ gpu-h100-8x 
+ $ 0.012200 /sec
+ $ 43.92 /hr 
+ Additional Multi-GPU H100 capacity is available with committed spend contracts.
+ Nvidia H200 GPU 
+ gpu-h200 
+ $ 0.001525 /sec
+ $ 5.49 /hr 
+ H200 capacity is available with committed spend contracts.
+ 2x Nvidia H200 GPU 
+ gpu-h200-2x 
+ $ 0.003050 /sec
+ $ 10.98 /hr 
+ Additional Multi-GPU H200 capacity is available with committed spend contracts.
+ 4x Nvidia H200 GPU 
+ gpu-h200-4x 
+ $ 0.006100 /sec
+ $ 21.96 /hr 
+ Additional Multi-GPU H200 capacity is available with committed spend contracts.
+ 8x Nvidia H200 GPU 
+ gpu-h200-8x 
+ $ 0.012200 /sec
+ $ 43.92 /hr 
+ Additional Multi-GPU H200 capacity is available with committed spend contracts.
+ 4x Nvidia L40S GPU 
+ gpu-l40s-4x 
+ $ 0.003900 /sec
+ $ 14.04 /hr 
+ Additional Multi-GPU L40S capacity is available with committed spend contracts.
+ 8x Nvidia L40S GPU 
+ gpu-l40s-8x 
+ $ 0.007800 /sec
+ $ 28.08 /hr 
+ Additional Multi-GPU L40S capacity is available with committed spend contracts.
+ Hardware Price GPU CPU GPU RAM RAM 
+ CPU (Small) 
+ cpu-small $ 0.000025 /sec
+ $ 0.09 /hr - 1x - 2GB 
+ CPU 
+ cpu $ 0.000100 /sec
+ $ 0.36 /hr - 4x - 8GB 
+ Nvidia A100 (80GB) GPU 
+ gpu-a100-large $ 0.001400 /sec
+ $ 5.04 /hr 1x 10x 80GB 144GB 
+ 2x Nvidia A100 (80GB) GPU 
+ gpu-a100-large-2x $ 0.002800 /sec
+ $ 10.08 /hr 2x 20x 160GB 288GB 
+ Nvidia H100 GPU 
+ gpu-h100 $ 0.001525 /sec
+ $ 5.49 /hr 1x 13x 80GB 144GB 
+ Nvidia L40S GPU 
+ gpu-l40s $ 0.000975 /sec
+ $ 3.51 /hr 1x 10x 48GB 65GB 
+ 2x Nvidia L40S GPU 
+ gpu-l40s-2x $ 0.001950 /sec
+ $ 7.02 /hr 2x 20x 96GB 144GB 
+ Nvidia T4 GPU 
+ gpu-t4 $ 0.000225 /sec
+ $ 0.81 /hr 1x 4x 16GB 16GB 
+ Additional hardware 
+ 4x Nvidia A100 (80GB) GPU 
+ gpu-a100-large-4x $ 0.005600 /sec
+ $ 20.16 /hr Additional M
+
+=== [about] https://replicate.com/docs/ (lang=en)
+Documentation – Replicate 
+ Docs 
+ Docs
+ Get started
+ Collapse sidebar
+ Run a model from Node.js 
+ Run a model from Google Colab 
+ Run a model from Python 
+ Fine-tune an image model 
+ Deploy a custom model 
+ Guides
+ Run models
+ Build a website with vinext 
+ Build a website with Next.js 
+ Build a Discord bot with Python 
+ Build an app with SwiftUI 
+ Make art with Stable Diffusion 
+ Upscale images with AI models 
+ Build models
+ Publish using GitHub Actions 
+ Set up a CI/CD pipeline 
+ Push your own model 
+ Push a Transformers model 
+ Push a Diffusers model 
+ Optimize models with Pruna 
+ Get a GPU on Brev 
+ Get a GPU on Lambda Labs 
+ Best practices for Replicate models 
+ Optimize with torch.compile 
+ Go deeper
+ Cache images with Cloudflare 
+ Get started with ComfyUI 
+ Use realtime speech with OpenAI 
+ Handle webhooks with Val Town 
+ Working with LoRAs 
+ Topics
+ Models
+ About models 
+ Run a model 
+ Create a model 
+ Publish a model 
+ Model versions 
+ Model hardware 
+ Official models 
+ Community models 
+ Private and public models 
+ Training destinations 
+ Delete a model 
+ Secrets 
+ Predictions
+ About predictions 
+ Create a prediction 
+ Input files 
+ Output files 
+ Prediction lifecycle 
+ Share a prediction 
+ Rate limits 
+ Safety checking 
+ Data retention 
+ Secrets 
+ Streaming output 
+ Deployments
+ About deployments 
+ Create a deployment 
+ View deployments 
+ Monitor a deployment 
+ Delete a deployment 
+ Webhooks
+ About webhooks 
+ Set up webhooks 
+ Receive webhooks 
+ Verify webhooks 
+ Test your webhook code 
+ Organizations
+ About organizations 
+ Security
+ API tokens 
+ Billing
+ About billing 
+ Prepaid credit 
+ Site policy
+ About subprocessors 
+ Reference
+ How does Replicate work? 
+ Agent skills 
+ MCP server 
+ Client libraries 
+ HTTP API 
+ OpenAPI schema 
+ llms.txt 
+ Error codes 
+ Open source 
+ Search documentation 
+ Get started
+ Collapse sidebar
+ Run a model from Node.js 
+ Run a model from Google Colab 
+ Run a model from Python 
+ Fine-tune an image model 
+ Deploy a custom model 
+ Guides
+ Run models
+ Build a website with vinext 
+ Build a website with Next.js 
+ Build a Discord bot with Python 
+ Build an app with SwiftUI 
+ Make art with Stable Diffusion 
+ Upscale images with AI models 
+ Build models
+ Publish using GitHub Actions 
+ Set up a CI/CD pipeline 
+ Push your own model 
+ Push a Transformers model 
+ Push a Diffusers model 
+ Optimize models with Pruna 
+ Get a GPU on Brev 
+ Get a GPU on Lambda Labs 
+ Best practices for Replicate models 
+ Optimize with torch.compile 
+ Go deeper
+ Cache images with Cloudflare 
+ Get started with ComfyUI 
+ Use realtime speech with OpenAI 
+ Handle webhooks with Val Town 
+ Working with LoRAs 
+ Topics
+ Models
+ About models 
+ Run a model 
+ Create a model 
+ Publish a model 
+ Model versions 
+ Model hardware 
+ Official models 
+ Community models 
+ Private and public models 
+ Training destinations 
+ Delete a model 
+ Secrets 
+ Predictions
+ About predictions 
+ Create a prediction 
+ Input files 
+ Output files 
+ Prediction lifecycle 
+ Share a prediction 
+ Rate limits 
+ Safety checking 
+ Data retention 
+ Secrets 
+ Streaming output 
+ Deployments
+ About deployments 
+ Create a deployment 
+ View deployments 
+ Monitor a deployment 
+ Delete a deployment 
+ Webhooks
+ About webhooks 
+ Set up webhooks 
+ Receive webhooks 
+ Verify webhooks 
+ Test your webhook code 
+ Organizations
+ About organizations 
+ Security
+ API tokens 
+ Billing
+ About billing 
+ Prepaid credit 
+ Site policy
+ About subprocessors 
+ Reference
+ How does Replicate work? 
+ Agent skills 
+ MCP server 
+ Client libraries 
+ HTTP API 
+ OpenAPI schema 
+ llms.txt 
+ Error codes 
+ Open s
+
+=== [meta] https://replicate.com
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음

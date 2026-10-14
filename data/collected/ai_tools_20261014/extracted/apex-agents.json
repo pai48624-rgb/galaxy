@@ -1,0 +1,82 @@
+{
+ "company": "Mercor",
+ "one_liner_ko": "프런티어 AI 에이전트가 전문 서비스 직무의 긴 다중 앱 작업을 수행할 수 있는지 측정하는 APEX-Agents 지수.",
+ "what_it_does_ko": "APEX-Agents는 투자은행 애널리스트, 경영 컨설턴트, 기업 변호사의 실제 업무로 AI 에이전트를 평가하는 벤치마크다. 업계 전문가가 만든 31개 '월드'에 240개 과제와 채점 기준표가 있고, 에이전트는 사람이 쓰는 소프트웨어로 과제를 수행한다. 전문가가 쓴 채점 기준과 LM 판정자로 평균 점수(Mean Score)와 Pass@1을 매긴다. 데이터셋과 실행·평가 인프라 Archipelago가 오픈소스로 공개돼 있으며, 전체 과제는 비공개로 유지된다.",
+ "key_features": [
+  "31개 월드·240개 과제·채점 기준표",
+  "투자은행·컨설팅·법률 3개 직무 평가",
+  "Mean Score·Pass@1 지표",
+  "직무별 상위 모델 표시",
+  "공개 평가 하네스(GitHub)·샘플 과제(HuggingFace)",
+  "Archipelago 실행·평가 인프라"
+ ],
+ "use_cases_ko": [
+  "AI 연구자가 전문 업무용 에이전트 성능 비교",
+  "기업이 학습용 데이터 라이선스 구매"
+ ],
+ "pricing": {
+  "free_tier": null,
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "오픈소스(라이선스 이름 미표기)",
+ "api": "불명",
+ "platforms": [
+  "웹"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.mercor.com/apex/apex-agents-leaderboard/",
+   "quote": "AI Agent Benchmarks & Leaderboards: APEX-Agents | Mercor"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.mercor.com/apex/apex-agents-leaderboard/",
+   "quote": "measures whether frontier AI agents can execute long-horizon, cross-application tasks across three jobs in professional services."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.mercor.com/apex/apex-agents-leaderboard/",
+   "quote": "There are 31 worlds in APEX-agents, comprising 240 tasks and grading rubrics."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.mercor.com/apex/apex-agents-leaderboard/",
+   "quote": "Model outputs are graded using expert-authored rubrics with an LM judge."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.mercor.com/apex/apex-agents-leaderboard/",
+   "quote": "The eval harness is published on GitHub and sample tasks are on HuggingFace"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.mercor.com/apex/apex-agents-leaderboard/",
+   "quote": "investment banking analysts, management consultants, and corporate lawyers"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.mercor.com/apex/apex-agents-leaderboard/",
+   "quote": "Can I license APEX-Agents data for training? Yes."
+  },
+  {
+   "field": "open_source",
+   "url": "https://www.mercor.com/apex/apex-agents-leaderboard/",
+   "quote": "The entire APEX-agents dataset is available open-source, along with Archipelago"
+  },
+  {
+   "field": "platforms",
+   "url": "https://www.mercor.com/apex/apex-agents-leaderboard/",
+   "quote": "The APEX-Agents leaderboard"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.mercor.com/apex/apex-agents-leaderboard/",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

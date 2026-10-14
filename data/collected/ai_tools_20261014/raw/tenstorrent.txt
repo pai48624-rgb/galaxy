@@ -1,0 +1,232 @@
+=== [home] https://tenstorrent.com (lang=ko)
+Tenstorrent 
+ Skip to main content 제품 
+ 소프트웨어 
+ 솔루션 
+ 지원 
+ 회사 
+ 채용 
+ 개발자 
+ EN JA KO ZH 
+ EN JA KO ZH 
+ Some tracking technologies are important for the correct functioning of our websites and are always on. By clicking "Allow All" you are also directing us to use optional tracking technologies. Privacy Notice .
+ Customize Allow All Only Necessary 
+ Introducing
+ Tenstorrent Galaxy™ superclusters
+ TT-Deploy를 시청하고 업계 최고의 벤치마크를 기록하며 대규모로 배포된 Tenstorrent Galaxy™ Blackhole에 대해 자세히 알아보세요.
+ LLM Solutions AI Video Solutions 
+ 모든 규모를 위한 컴퓨팅.
+ Cards
+ 기존 시스템에 추가하거나 나만의 리그를 구성해 보세요. 패시브, 액티브 및 수랭식 쿨링 옵션이 제공됩니다.
+ 999달러(USD)부터
+ Buy Blackhole® 
+ Workstations
+ Whisper급의 정숙함과 수냉식 쿨링을 갖춰, 최대 1,200억 개의 파라미터를 가진 모델을 책상에서 바로 구동할 수 있습니다.
+ 9,999달러(USD)부터
+ Buy TT-QuietBox® 
+ Servers
+ 프로덕션용 AI를 위한 주권형 스케일아웃 서버.
+ 70,000달러(USD)부터
+ Explore Tenstorrent Galaxy™ 
+ 특정 워크로드를 위한 유연한 IP
+ 특정 벤더에 종속되지 않고, 검증된 성능과 유연성을 갖춘 IP를 활용하여 비즈니스의 성장을 가속화하세요.
+ 지금 라이선스 구매하기 IP 살펴보기 
+ 뉴스 속의 Tenstorrent
+ 더 읽기 
+ Announcements
+ Newsroom
+ Vayavya Labs and Tenstorrent Partner to Accelerate RISC-V Hardware and Software Development Through Virtual Platform Modeling
+ Oct 8, 2026
+ Newsroom
+ Announcements
+ Tenstorrent and Smallest.ai Partner to Bring Production-Grade Voice AI On-Prem
+ Oct 2, 2026
+ Newsroom
+ Announcements
+ ai& and Tenstorrent Launch JapanFold, Bringing Open-Source, Sovereign Drug Discovery to Japan
+ Sep 3, 2026
+ TT-Forge (베타) 설치
+ Tenstorrent 하드웨어용 모델 컴파일
+ TT-Forge™는 Tenstorrent의 MLIR 기반 오픈 소스 컴파일러로, 기존 AI 소프트웨어 스택 위에 구축되었으며 PyTorch, JAX, ONNX 등과 호환되도록 설계되었습니다. TT-Forge™는 현재 퍼블릭 베타 버전으로 공개되어 피드백을 기다리고 있습니다. PR을 제출하거나 Discord 대화에 참여해 보세요.
+ 문서 읽기 tt-forge repo 
+ 우리와 함께 열린 미래를 만들어가세요
+ AIは、かつてコンピューティングを支配していた法則を変えつつあります。私たちのIPは透明で、アーキテクチャはオープン、ソフトウェアはオープンソースです。だからこそ、編集・選択・フォークし、シリコンの未来を自分のものにできます。
+ Enter 
+ 개발자 커뮤니티에 참여하세요
+ 최신 정보를 확인하고, 궁금한 점을 문의하며, 오픈 소스 저장소들을 살펴보세요.
+ Join Discord Check out GitHub 
+ 바운티 프로그램의 최신 기여 항목
+ 우리와 함께 열린 미래를 만들어가세요. 버그를 수정하고, 기능을 추가하고, 보상을 받으세요.
+ View all 
+ Sep 29
+ Fix fused scale-mask softmax tile-padding leakage at non-32 widths
+easy
+ Sep 28
+ Fix u32-to-fp32 double rounding in typecast
+medium
+ Sep 28
+ Improve div_no_nan accuracy to 1 ULP
+medium
+ Sep 28
+ Improve BF16 reciprocal rounding on Wormhole
+medium
+ Sep 16
+ SFPLOADMACRO produces wrong results under coverage instrumentation (Reciprocal fails 46/153 on Blackhole)
+medium
+ Sep 11
+ ttnn.quantize/requantize uint8 lower-bound saturation
+easy
+ Tenstorrent의 최신 소식을 받아보세요.
+ 제출 
+ 지원 비전 채용 
+ 뉴스룸 자주 묻는 질문 
+ 약관 개인 정보 품질 특허 상표 문의하기 쿠키 개인정보 설정
+
+=== [about] https://docs.tenstorrent.com/ (lang=en)
+Tenstorrent — Home 1.0 documentation 
+ DOCUMENTATION 
+ Get Started 
+ Overview 
+ Installing Tenstorrent Software 
+ Manual Installation 
+ Deploy LLMs 
+ Learn by Building 
+ Software 
+ TT-Forge 
+ TT-XLA 
+ TT-NN 
+ TT-Lang 
+ TT-MLIR 
+ TT-Metalium 
+ Cloud-Native Support 
+ Hardware 
+ Blackhole 
+ Blackhole® PCIe Cards 
+ TT-QuietBox 
+ TT-QuietBox 2 
+ Galaxy® (Blackhole) 
+ Wormhole 
+ Wormhole™ PCIe Cards 
+ TT-QuietBox 
+ TT-LoudBox™ 
+ Galaxy® (Wormhole) 
+ Tools 
+ TT-Inference-Server 
+ TT-Studio 
+ TT-SMI 
+ TT-Toplike 
+ TT-NN Visualizer 
+ TT-Topology 
+ TT-VSCode-Toolkit 
+ TT-Blacksmith 
+ Resources 
+ Request Support 
+ Developer Hub 
+ Join our Discord 
+ FAQ 
+ Search 
+ ⌘K 
+ Explore 
+ Github
+ Ask AI
+ Search
+ Start typing to search the documentation.
+ Type a question above and press Enter — or jump right in: 
+ How to debug TT-Forge compile errors? 
+ How to set up Tenstorrent Cloud SSH? 
+ TT-Metalium vs TT-NN: what's the difference? 
+ How to daisy-chain Wormhole devices? 
+ Home
+ Get Started 
+ Overview 
+ Installing Tenstorrent Software 
+ Manual Installation 
+ Deploy LLMs 
+ Learn by Building 
+ Hardware 
+ Overview 
+ Cards 
+ Blackhole® PCIe Cards 
+ Wormhole™ PCIe Cards 
+ Systems 
+ TT-QuietBox 2 (Blackhole) 
+ TT-QuietBox (Blackhole) 
+ TT-QuietBox (Wormhole) 
+ TT-LoudBox (Wormhole) 
+ Tenstorrent Galaxy (Blackhole) 
+ Tenstorrent Galaxy (Wormhole) 
+ Software 
+ Overview 
+ TT-Forge™ 
+ TT-Forge-ONNX 
+ TT-Blacksmith 
+ TT-XLA 
+ TT-NN™ 
+ TT-Lang™ 
+ TT-MLIR™ 
+ TT-Metalium™ 
+ Cloud-Native Support 
+ Tools 
+ Support 
+ Support & FAQ 
+ Legal 
+ Bounty Program Terms 
+ OS & Model Terms 
+ Trademarks and Legal Notice 
+ Home 
+ Tenstorrent
+ View page source 
+ Tenstorrent  
+ Tenstorrent
+Documentation
+ No hardware yet? Get access to Tenstorrent silicon right in your browser with
+ Tenstorrent Cloud Console 
+ Ask anything about Tenstorrent hardware and software 
+ Search 
+ ⌘K 
+ Get Started 
+ Installing Tenstorrent Software
+ Set up drivers, firmware, and the TT-Metalium environment on your Tenstorrent hardware, then verify your install.
+ TT-VSCode-Toolkit 
+ Learn by Building
+ Get hands-on with a guided learning path — from making your first inference to building full applications with LLMs.
+ Popular Destinations
+ TT-Studio
+ Point-and-click web UI for deploying and interacting with models.
+ TT-Inference-Server
+ Deploy and serve models — the canonical source for validated model support.
+ TT-Metalium
+ Low-level C++ SDK for writing custom kernels on Tensix cores.
+ Get Started → 
+ Overview
+ How TT-Forge, TT-NN, and TT-Metalium fit together — and which to use when.
+ Installing Tenstorrent Software
+ Install drivers, firmware, and the TT-Metalium environment, then verify your setup.
+ Manual Installation
+ Manually install system dependencies, drivers, and the software stack step by step.
+ Deploy LLMs
+ Stand up an OpenAI-compatible inference server for high-throughput LLM serving.
+ Learn by Building
+ Get hands-on with guided, end-to-end lessons in the TT-VSCode-Toolkit.
+ Software → 
+ TT-Forge™
+ End-to-end MLIR compiler. Compile models from PyTorch, JAX, and ONNX.
+ TT-XLA
+ PJRT-based frontend for running JAX and OpenXLA models on Tenstorrent hardware.
+ TT-NN™
+ High-level Python API of pre-optimized neural-network operations.
+ TT-Lang™
+ Python DSL for authoring fused custom operations.
+ TT-MLIR™
+ MLIR-based backend compiler infrastructure that lowers models onto Tenstorrent hardware.
+ TT-Metalium™
+ Low-level C++ SDK for writing custom kernels on Tensix cores.
+ Cloud-Native Support
+ Run Tenstorrent accelerators on Kubernetes — install, configure, and operate the device stack.
+ Hardware → 
+ Blackhol
+
+=== [meta] https://tenstorrent.com
+html lang: ko
+hreflang: en, ja, ko, x-default, zh
+화면에 보이는 언어 이름: 없음

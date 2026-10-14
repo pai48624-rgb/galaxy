@@ -1,0 +1,182 @@
+=== [home] https://sakana.ai (lang=en)
+Sakana AI — Building Frontier AI in Japan 
+ of index.html (English) and ja/index.html.
+ 1. hreflang links so search engines pair the two versions of the home page.
+ 2. A small inline script, run before anything is painted, that opens the right language:
+ - a choice made with the header switch (localStorage "sakana-lang") always wins;
+ - otherwise a browser whose first preferred language is Japanese is sent from / to /ja/;
+ - visitors who open /ja/ directly stay there (they followed a Japanese link on purpose).
+ The site is static (GitHub Pages), so this cannot be done from the Accept-Language header on the server.
+ Switch markup: _includes/home/lang-switch.html Choice is stored by: _includes/home/scripts.html
+-->
+ English 
+ | 
+ 日本語 
+ Research
+ Research
+ Read our latest research 
+ Recursive Self-Improvement Lab 
+ Frontier Intelligence Group 
+ Solutions
+ Solutions
+ Finance 
+ Defense/Intelligence 
+ Products
+ Products
+ Sakana Fugu LLM orchestrating frontier models for complex tasks 
+ Sakana Namazu LLM specialized in Japanese 
+ Sakana Marlin Analyst research reports, on demand 
+ Sakana Translate Translate and proofread with Namazu 
+ Sakana Chat AI chat featuring Fugu and Namazu 
+ Careers
+ Careers
+ Research / Product / GTM / Corporate 
+ Applied Team 特設採用ページ 
+ About Sakana AI
+ About Sakana AI
+ Blog 
+ Corporate Info 
+ Contact Us 
+ : p5.js appends its canvas to the first on the page, and the
+ fish canvas must live inside the hero (not in the content wrapper below). -->
+ Building Frontier AI in Japan
+ Talk to our team 
+ Try Sakana Chat 
+ Scroll 
+ Products 
+ Frontier AI the world can rely on
+ Sakana Fugu
+ One model that orchestrates the world's best LLMs
+ Pareto Frontier Orchestrate models to push the Pareto Frontier of cost vs performance.
+ Resilience Keeps running if a closed model becomes unavailable.
+ Built for agentic chatbots Their variety of tasks is exactly Fugu's strength.
+ Fugu Ultra Maximum performance 
+ Fugu Cyber Best at cybersecurity 
+ Fugu Max Pareto Frontier 
+ Learn more 
+ Try in Sakana Chat 
+ Sakana Namazu
+ The best LLM for Japanese, at a reasonable price
+ A showcase of our post-training process, with web search and code execution built in.
+ Learn more 
+ Try in Sakana Chat 
+ Sakana Marlin
+ The ultimate solution for strategic decision-making
+ An autonomous research agent that reasons for hours and returns analyst-grade strategy reports for M&A consultants, strategy departments, and think tanks.
+ Learn more 
+ Sakana Translate
+ Best-in-class for conversational and polite Japanese
+ Built on Namazu. Translate and proofread across Japanese, English, and Chinese, with the right register from casual to formal.
+ Try Sakana Translate 
+ block, keep the finance-first order, set its data-sector (finance / defense), and add a 640px JPEG thumbnail under
+ /assets/home/solutions/ (sips -Z 640 -s format jpeg --out ).
+ Sector filter buttons (All / Finance / Defense & Intelligence): styles in styles.html, behaviour in scripts.html.
+ Shared styles: _includes/home/styles.html Arrow behaviour: _includes/home/scripts.html
+-->
+ Solutions 
+ From first pilot to full-scale rollout
+ Our Applied team works as an extension of yours: scoping the use case with your experts, then building
+ and evaluating the system until it holds up in the field. That is how we work with MUFG Bank ,
+ SMBC Group and Daiwa Securities Group in finance, and with the
+ Ministry of Defense , ATLA and the Ministry of Internal Affairs and
+ Communications in defense and intelligence.
+ Selected case studies (Japanese)
+ All 
+ Finance 
+ Defense & Intelligence 
+ Finance Mar 2026 
+ AI Lending Expert with MUFG Bank
+ Built under a multiyear partnership, now being validated on live loan cases.
+ Finance Apr 2026 
+ Proposal generation for SMBC Group
+ A jointly developed application in which multiple AI agents draft client proposals.
+ Finance Aug 2026 
+ Wealth management AI with Daiwa Securities Group
+ The joint project enters its full-scale phase with AI support for wealth management.
+ Defense & Intelligence Apr 2026 
+ Countering disinformation for MIC
+ Technology that maps the information space and counters false and misleading information, built within an MIC program.
+ Defense & Intelligence Aug 2026 
+ Integrated analysis for the Ministry of Defense
+ Contracted to study and demonstrate the AI capabilities that integrated analysis requires.
+ Defense & Intelligence Mar 2026 
+ Commissioned research from ATLA
+ Research for the Defense Innovation Science and Technology Institute on combining AI technologies for reporting, information integration and resource allocation.
+ Talk to our team 
+ block and add a 640px JPEG thumbnail under /assets/home/research/
+ (sips -Z 640 -s format jpeg --out ). Cards from the two research groups carry an "RSI"
+ or "FIG" pill (the RSI Lab page and the FIG announcement post each list their work); the groups
+ themselves are the ghost buttons under the row.
+ Shared styles: _includes/home/styles.html Arrow behaviour: _includes/home/scripts.html
+-->
+ Research 
+ Towards the next AI paradigm
+ Our work on evolution, collective intelligence, and self-improving systems appears at ICLR, NeurIPS,
+ and in Nature, and ships in our products.
+ Selected work
+ Nature 2026 RSI 
+ The AI Scientist
+ Towards fully automated AI research, published in Nature.
+ ICLR 2026 
+ Trinity
+ An evolved coordinator that hands each step of a task to the right model. The first paper behind Sakana Fugu.
+ ICLR 2026 
+ The Conductor
+ Learning to orchestrate agents in natural language. The second paper behind Sakana Fugu.
+ NeurIPS 2025 Spotlight 
+ AB-MCTS
+ Inference-time scaling and collective intelligence for frontier AI.
+ 2025 RSI 
+ The Darwin Gödel Machine
+ AI that improves itself by rewriting its own code.
+ NeurIPS 2025 Spotlight FIG 
+ Continuous Thought Machines
+ A new neural architecture that uses time to think.
+ ICML 2026 FIG 
+ Sparser, Faster, Lighter Transformers
+ Reshaping sparsity to fit the GPU makes LLMs faster and lighter. With NVIDIA.
+ 2025 Open source RSI 
+ ShinkaEvolve
+ Evolving new algorithms with LLMs, orders of magnitude more efficiently.
+ GECCO 2026 FIG 
+ The AI Picbreeder Experiment
+ Can AI agents be creative when nobody tells them what to create?
+ Nature Communications FIG 
+ Smart Cellular Bricks
+ Towards collective intelligence for the physical world.
+ Read our latest research 
+ Recursive Self-Improvement Lab (RSI) 
+ Frontier Intelligence Group (FIG) 
+ Build frontier AI in Japan with us
+ We are hiring across Research, Product, Corporate and Enterprise Solutions (Applied Team).
+ Research, Product, GTM & Corporate roles 
+ Applied Team roles (Japanese) 
+ Building Frontier AI in Japan
+ Products
+ Sakana Fugu 
+ Sakana Namazu 
+ Sakana Marlin 
+ Sakana Translate 
+ Sakana Chat 
+ Developer console 
+ Solutions
+ Finance 
+ Defense & Intelligence 
+ Research
+ Research blog 
+ Recursive Self-Improvement Lab 
+ Frontier Intelligence Group 
+ Company
+ Blog 
+ Corporate info 
+ Partnerships 
+ Careers 
+ Applied Team Careers (Japanese) 
+ Contact us 
+ Tokyo, Japan 
+ © 2026 Sakana AI 株式会社
+
+=== [meta] https://sakana.ai
+html lang: en
+hreflang: en, ja, x-default
+화면에 보이는 언어 이름: English, 日本語

@@ -1,0 +1,149 @@
+{
+ "company": "Microsoft",
+ "one_liner_ko": "미리 빌드된·사용자 정의 가능한 다국어 음성 AI 모델로 앱과 에이전트에 음성 기능을 넣는 Azure 서비스.",
+ "what_it_does_ko": "Azure 음성은 Foundry Tools(이전 Azure AI 서비스)의 일부로, 음성 텍스트 변환·텍스트 음성 변환·번역·화자 인식 API를 제공한다. 이전 이름은 Azure AI 음성이다. C#·C++·Java 등 여러 언어 SDK로 쓸 수 있고, 클라우드나 컨테이너로 에지에 배포할 수 있다. 요금은 사전 비용 없이 오디오 시간·문자 수·트랜잭션 수에 따른 종량제다.",
+ "key_features": [
+  "음성 텍스트 변환(100개 이상 언어 오디오 캡션)",
+  "텍스트 음성 변환, 사용자 지정 신경망 음성",
+  "실시간 음성 번역",
+  "화자 인식",
+  "Voice Live API로 AI 에이전트에 음성 통합",
+  "미리 빌드된·맞춤형 아바타",
+  "Embedded Speech(연결이 없는 장치에서 동작)",
+  "OpenAI Whisper 모델 사용 가능"
+ ],
+ "use_cases_ko": [
+  "콜센터·회의 대화 기록",
+  "음성 지원 AI 에이전트 구축",
+  "통화 녹음 사후 분석"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Azure 최대 30일 무료 체험)",
+  "plans": [
+   {
+    "name": "종량제",
+    "price": null,
+    "currency": null,
+    "period": "usage",
+    "limits": "사전 비용 없음; 오디오 시간(STT·번역)·문자 수(TTS)·트랜잭션 수(화자 인식) 기준, 구체 단가는 페이지에 없음",
+    "page_lang": "ko-KR"
+   }
+  ],
+  "pricing_url": "https://azure.microsoft.com/ko-kr/products/ai-foundry/tools/speech"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "API"
+ ],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://azure.microsoft.com/ko-kr/products/ai-foundry/tools/speech",
+   "quote": "Foundry Tools의 Azure 음성 | Microsoft Azure"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://azure.microsoft.com/ko-kr/products/ai-foundry/tools/speech",
+   "quote": "미리 빌드된 사용자 정의 가능한 다국어 음성 AI 모델로 앱과 에이전트에 활력을 불어넣으세요."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://azure.microsoft.com/ko-kr/products/ai-foundry/tools/speech",
+   "quote": "Azure 음성은 Foundry Tools(이전의 Azure AI 서비스)의 일부로, 음성 텍스트 변환, 텍스트 음성 변환, 번역, 화자 인식 API를 제공합니다."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://azure.microsoft.com/ko-kr/products/ai-foundry/tools/speech",
+   "quote": "이러한 기능은 C#, C++ 및 Java를 비롯한 여러 프로그래밍 언어로 SDK를 통해 제공됩니"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://azure.microsoft.com/ko-kr/products/ai-foundry/tools/speech",
+   "quote": "클라우드에 앱을 배포하거나 컨테이너를 사용하여 에지에 배포하세요."
+  },
+  {
+   "field": "key_features",
+   "url": "https://azure.microsoft.com/ko-kr/products/ai-foundry/tools/speech",
+   "quote": "100개 이상의 언어로 된 오디오 캡션으로 전 세계에 진출하세요."
+  },
+  {
+   "field": "key_features",
+   "url": "https://azure.microsoft.com/ko-kr/products/ai-foundry/tools/speech",
+   "quote": "사용자 지정 신경망 음성을 사용하여 자연스러운 음성을 빌드하세요."
+  },
+  {
+   "field": "key_features",
+   "url": "https://azure.microsoft.com/ko-kr/products/ai-foundry/tools/speech",
+   "quote": "오디오 스트림의 실시간 다국어 음성 변환 및 음성 텍스트 변환 대화 내용 기록을 사용하도록 설정합니다."
+  },
+  {
+   "field": "key_features",
+   "url": "https://azure.microsoft.com/ko-kr/products/ai-foundry/tools/speech",
+   "quote": "맞춤형 대화 내용 기록, 음성, 아바타를 포함한 엔드투엔드 음성으로 AI 에이전트를 사용하세요."
+  },
+  {
+   "field": "key_features",
+   "url": "https://azure.microsoft.com/ko-kr/products/ai-foundry/tools/speech",
+   "quote": "자연스러운 목소리를 가진 미리 빌드된 아바타 또는 맞춤형 아바타를 사용하여 브랜드에 생명을 불어넣으세요."
+  },
+  {
+   "field": "key_features",
+   "url": "https://azure.microsoft.com/ko-kr/products/ai-foundry/tools/speech",
+   "quote": "Embedded Speech를 사용하여 클라우드 연결이 간헐적이거나 사용할 수 없는 장치 음성 변환 및 텍스트 음성 변환 시나리오를 지원하세요."
+  },
+  {
+   "field": "key_features",
+   "url": "https://azure.microsoft.com/ko-kr/products/ai-foundry/tools/speech",
+   "quote": "최신 OpenAI Whisper 모델을 사용하여 콜 센터를 혁신하세요."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://azure.microsoft.com/ko-kr/products/ai-foundry/tools/speech",
+   "quote": "콜 센터 또는 모임 대화를 기록합니다. 100개 이상의 언어로 된 오디오 캡션"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://azure.microsoft.com/ko-kr/products/ai-foundry/tools/speech",
+   "quote": "기본 모델과 맞춤형 오디오 입력 및 출력 모델을 사용하여 음성으로 에이전트를 구동하세요."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://azure.microsoft.com/ko-kr/products/ai-foundry/tools/speech",
+   "quote": "오디오 또는 화상 통화 녹음/녹화를 분석하여 심층적인 인사이트를 얻으세요."
+  },
+  {
+   "field": "pricing",
+   "url": "https://azure.microsoft.com/ko-kr/products/ai-foundry/tools/speech",
+   "quote": "사전 투자 비용 없이 사용한 만큼만 요금을 지불하세요. Azure 음성 종량제 가격은 다음을 기준으로 합니다."
+  },
+  {
+   "field": "pricing",
+   "url": "https://azure.microsoft.com/ko-kr/products/ai-foundry/tools/speech",
+   "quote": "종량제 요금을 사용하거나 Azure를 최대 30일 동안 무료로 체험해 보세요."
+  },
+  {
+   "field": "api",
+   "url": "https://azure.microsoft.com/ko-kr/products/ai-foundry/tools/speech",
+   "quote": "음성 텍스트 변환, 텍스트 음성 변환, 번역, 화자 인식 API를 제공합니다."
+  },
+  {
+   "field": "platforms",
+   "url": "https://azure.microsoft.com/ko-kr/products/ai-foundry/tools/speech",
+   "quote": "음성 텍스트 변환, 텍스트 음성 변환, 번역, 화자 인식 API를 제공합니다."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://azure.microsoft.com/ko-kr/products/ai-foundry/tools/speech",
+   "quote": "html lang: ko-KR\nhreflang: cs-cz, da-dk, de-de, en-au, en-ca, en-gb"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://azure.microsoft.com/ko-kr/products/ai-foundry/tools/speech",
+   "quote": "ja-jp, ko-kr, nb-no, nl-nl, pl-pl, pt-br, pt-pt, ru-ru, sv-se, tr-tr, x-default, zh-cn, zh-tw\n화면에 보이는 언어 이름: 한국어"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

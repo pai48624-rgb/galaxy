@@ -1,0 +1,26 @@
+{
+ "company": "Kyutai",
+ "one_liner_ko": "오픈 사이언스로 범용 인공지능을 만들고 대중화하는 것을 목표로 하는 파리 기반 AI 연구소.",
+ "what_it_does_ko": "파리에 있는 오픈 사이언스 AI 연구소로, 여러 입력 모달리티를 통합하는 효율적인 모델을 만들고 논문·튜토리얼·데모·오픈소스로 공개한다. 음성 대화 시스템 Moshi, 실시간 음성 번역 Hibiki-Zero, 텍스트 LLM에 음성을 붙이는 Unmute, CPU에서 돌아가는 다국어 TTS인 Pocket TTS 등을 공개했다. 비전 분야에서는 MoshiVis·CASA와 실시간 멀티플레이어 월드 모델 MIRA를, 언어 분야에서는 2B 파라미터 다국어 LLM Helium 1을 내놓았다.",
+ "key_features": ["음성 네이티브 실시간 대화 모델 Moshi", "실시간 음성-음성 번역 모델 Hibiki-Zero", "어떤 텍스트 LLM에도 실시간 음성을 붙이는 Unmute", "CPU에서 실시간보다 빠른 1억 파라미터 다국어 TTS(Pocket TTS) 오픈소스", "음악을 여러 악기 MIDI로 받아쓰는 MuScriptor", "실시간 멀티플레이어 월드 모델 MIRA", "2B 파라미터 다국어 LLM Helium 1"],
+ "use_cases_ko": ["루게릭병(샤르코병) 환자에게 목소리를 주는 오픈소스 도구 Invincible Voice", "저사양 기기에 음성 기능 추가(Pocket TTS)"],
+ "pricing": {"free_tier": "불명", "plans": [], "pricing_url": null},
+ "open_source": null,
+ "api": "불명",
+ "platforms": ["웹"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://kyutai.org", "quote": "Kyutai is funded by Iliad Group, CMA CGM Group and Schmidt Sciences."},
+  {"field": "one_liner_ko", "url": "https://kyutai.org", "quote": "BUILD AND DEMOCRATIZE \nARTIFICIAL GENERAL INTELLIGENCE \nTHROUGH OPEN SCIENCE \nAI RESEARCH LAB BASED IN PARIS"},
+  {"field": "what_it_does_ko", "url": "https://kyutai.org", "quote": "we make our research accessible to as many people as possible through scientific publications and tutorials, demos, and open-sourcing."},
+  {"field": "key_features", "url": "https://kyutai.org", "quote": "Moshi is the first speech-native dialogue system, unveiled during our keynote"},
+  {"field": "key_features", "url": "https://kyutai.org", "quote": "We recently open-sourced Pocket TTS , our 100M-parameter multilingual TTS which runs on CPU faster than real-time"},
+  {"field": "key_features", "url": "https://kyutai.org", "quote": "Unmute Give any text LLM real-time a voice, instantly."},
+  {"field": "key_features", "url": "https://kyutai.org", "quote": "Helium 1 , our modular and multilingual 2B-parameter LLM"},
+  {"field": "use_cases_ko", "url": "https://kyutai.org", "quote": "an open-source tool leveraging our speech-to-text and text-to-speech models to give a voice to people suffering from Charcot's disease."},
+  {"field": "platforms", "url": "https://kyutai.org", "quote": "// TRY OUR DEMOS · MULTIMODAL, STREAMING, REAL-TIME"},
+  {"field": "korean_support", "url": "https://kyutai.org", "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

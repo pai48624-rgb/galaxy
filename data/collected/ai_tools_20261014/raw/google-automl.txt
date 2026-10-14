@@ -1,0 +1,707 @@
+=== [home] https://cloud.google.com/products/gemini-enterprise-agent-platform (lang=ko)
+Gemini Enterprise Agent Platform(이전 명칭: Vertex AI) | Google Cloud 
+ 페이지 콘텐츠 
+ 에이전트 플랫폼에서 Gemini 사용해 보기 
+ 문서 
+ 샘플 코드 및 노트북 
+ 출시 노트 
+ 익숙하게 즐겨 사용하는 Vertex AI의 모든 기능을 이제 Gemini Enterprise Agent Platform에서 사용할 수 있습니다. 공지 블로그에서 자세히 알아보세요.
+ Gemini Enterprise 에이전트 플랫폼 
+ 엔터프라이즈용 에이전트 혁신, 빌드, 배포
+ Gemini Enterprise Agent Platform은 개발자가 에이전트를 빌드, 확장, 제어, 최적화할 수 있는 Google Cloud의 포괄적인 플랫폼입니다. 기술팀이 엔터프라이즈 애플리케이션과 워크플로를 강력한 에이전트 시스템으로 혁신할 수 있는 에이전트를 빌드할 수 있는 단일 목적지입니다.
+ 신규 고객에게는 최대 $300의 무료 크레딧이 제공 되어 Agent Platform 및 기타 Google Cloud 제품을 사용해 볼 수 있습니다. 
+ Agent Platform 무료로 사용해 보기 
+ 영업팀에 문의 
+ 제품 특징
+ 통합 데이터 및 AI로 에이전트 개발 가속화
+ Gemini로 생성형 AI 앱을 빠르게 빌드하세요 
+ 단일 플랫폼에서 ML 모델 학습, 테스트, 조정
+ 토큰맥싱부터 ROI까지: AI에서 가장 많은 ROI를 달성하고 있는 기업을 살펴보고 참고할 만한 전략을 알아보세요.
+ 보고서 읽기 
+ 기능
+ 엔터프라이즈급 AI 에이전트 빌드, 확장, 제어, 최적화
+ Agent Platform 은 기업이 엔터프라이즈 데이터에 기반한 엔터프라이즈급 에이전트를 신속하게 빌드, 확장, 제어, 최적화할 수 있도록 지원하는 Google Cloud의 개방적이고 포괄적인 플랫폼입니다. 애플리케이션과 워크플로를 전 세계 규모로 강력하고 안정적인 에이전트 시스템으로 전환하는 데 필요한 풀 스택 기반과 광범위한 개발자 선택권을 제공합니다.
+ Agent Platform에서 조직으로 에이전트 확장
+ Gemini Enterprise 앱을 사용하여 커스텀 빌드 에이전트를 안전하게 등록, 관리, 제어하세요.
+ Gemini Enterprise 앱에 대해 알아보기 
+ 에이전트 기반 개발 및 워크플로
+ Agent Platform을 통해 지금 이용 가능한 Google Antigravity는 에이전트를 조종, 맞춤설정, 조정할 수 있는 중앙 집중식 앱을 제공합니다. 여러 에이전트를 배포하여 제품 출시와 같은 전체 워크플로를 동시에 실행할 수 있습니다. 웹사이트용 코드 생성, 브랜드 애셋 제작, 고객 이메일 작성을 자동화할 수 있습니다. Antigravity를 다운로드 하고 기존 Google Cloud 사용자 인증 정보를 사용하여 데스크톱 애플리케이션 또는 Antigravity CLI 에 로그인하세요.
+ 200개 이상의 Google 및 서드 파티 AI 모델과 도구
+ Model Garden 에서 Gemini 3.7 Flash와 같은 Google의 최신 멀티모달 모델, Anthropic의 Claude 모델군과 같은 서드 파티 모델, Gemma 와 같은 개방형 모델 중에서 선택할 수 있습니다. 또한 다양한 조정 옵션 으로 사용 사례에 맞게 모델을 맞춤설정할 수 있습니다.
+ Google Cloud의 모델 평가 서비스 는 생성형 AI 모델을 객관적이고 데이터 기반으로 평가할 수 있는 엔터프라이즈급 도구를 제공합니다.
+ 등록하여 AI 에이전트로 비용 절감과 수익 창출이라는 두 가지 목표를 어떻게 달성할 수 있는지 알아보세요
+ 개방형 및 통합형 AI Platform
+ 데이터 과학자는 Agent Platform 도구를 사용하여 ML 모델의 학습, 조정, 배포 속도를 높일 수 있습니다.
+ 원하는 Colab Enterprise 또는 Workbench를 포함한 Agent Platform 노트북 은 기본적으로 BigQuery 와 통합되어 모든 데이터 및 AI 워크로드를 아우르는 단일 표시 경로를 제공합니다.
+ Agent Platform Training 과 예측 을 사용하면 선택한 오픈소스 프레임워크 및 최적화된 AI 인프라 로 학습 시간을 줄이고 모델을 프로덕션에 쉽게 배포할 수 있습니다.
+ 예측 및 생성형 AI를 위한 MLOps
+ Agent Platform은 데이터 과학자와 ML 엔지니어가 ML 프로젝트를 자동화, 표준화, 관리할 수 있도록 특화된 MLOps 도구 를 제공합니다.
+ 모듈식 도구는 팀 간 협업과 전체 개발 수명 주기 전반에서 모델을 개선하는 데 도움이 됩니다. 모델 평가 를 통해 사용 사례에 가장 적합한 모델을 파악하고, Pipelines 로 워크플로를 조정하며, Model Registry 로 모든 모델을 관리하고, Feature Store 를 통해 ML 특성을 서빙, 공유, 재사용하며, 모델의 입력 편향과 드리프트를 모니터링 할 수 있습니다.
+ Agent Platform을 사용한 MLOps: 모델 평가
+ 무료 교육 
+ 시작하기 
+ 모든 특징 보기 
+ 작동 방식
+ Agent Platform은 에이전트 빌드, 모델 학습 및 배포를 위한 여러 옵션을 제공합니다.
+ Agent Platform 을 사용하면 하나의 통합 플랫폼에서 엔터프라이즈급 에이전트를 빌드, 확장, 제어, 최적화할 수 있습니다.
+ Agent Studio 를 사용하면 Gemini 3 를 포함한 대규모 생성형 AI 모델에 액세스할 수 있으므로 AI 기반 애플리케이션에 사용할 수 있도록 평가, 조정, 배포할 수 있습니다.
+ Model Garden 을 사용하면 Agent Platform에서 검색, 테스트, 맞춤설정, 배포하고 오픈소스(OSS) 모델 및 애셋을 선택할 수 있습니다.
+ 커스텀 학습 을 사용하면 선호하는 ML 프레임워크 사용, 자체 학습 코드 작성, 하이퍼파라미터 조정 옵션 선택 등 학습 프로세스를 완벽하게 제어할 수 있습니다.
+ 문서 보기 
+ 일반적인 용도
+ AI 에이전트 빌드 및 배포 
+ 튜토리얼, 빠른 시작, 실습
+ Agent Platform으로 고급 AI 기능 활용
+ 사용자 규모에 맞게 확장되는 플랫폼에서 프로덕션에 즉시 사용 가능한 생성형 AI 에이전트와 애플리케이션을 빌드하세요. Google Cloud의 Agent Platform은 AI 모델과 애플리케이션을 개발하고 배포할 수 있는 안전한 환경 을 제공합니다.
+ 개발자에게 Agent Platform은 에이전트 개발 키트(ADK) 와 같은 프레임워크를 사용하여 정교한 에이전트를 빌드, 맞춤설정, 미세 조정 할 수 있는 고급 플랫폼으로 남아 있습니다.
+ 문서 보기 
+ Agent Platform에서 사용 가능한 모델 보기
+ 기술 청사진을 포함한 101가지 실제 생성형 AI 사용 사례 
+ Agent Studio에서 에이전트 설계 
+ 이 Codelab 을 시작하고 지금 바로 첫 번째 AI 애플리케이션을 빌드하세요.
+ 튜토리얼, 빠른 시작, 실습
+ Agent Platform으로 고급 AI 기능 활용
+ 사용자 규모에 맞게 확장되는 플랫폼에서 프로덕션에 즉시 사용 가능한 생성형 AI 에이전트와 애플리케이션을 빌드하세요. Google Cloud의 Agent Platform은 AI 모델과 애플리케이션을 개발하고 배포할 수 있는 안전한 환경 을 제공합니다.
+ 개발자에게 Agent Platform은 에이전트 개발 키트(ADK) 와 같은 프레임워크를 사용하여 정교한 에이전트를 빌드, 맞춤설정, 미세 조정 할 수 있는 고급 플랫폼으로 남아 있습니다.
+ 문서 보기 
+ Agent Platform에서 사용 가능한 모델 보기
+ 기술 청사진을 포함한 101가지 실제 생성형 AI 사용 사례 
+ Agent Studio에서 에이전트 설계 
+ 이 Codelab 을 시작하고 지금 바로 첫 번째 AI 애플리케이션을 빌드하세요.
+ Gemini 모델로 빌드
+ 튜토리얼, 빠른 시작, 실습
+ 코드 샘플
+ Agent Studio로 빌드 시작하기
+ Agent Studio를 사용하면 자연어, 코드, 이미지 또는 동영상을 사용해 Gemini 모델의 프롬프트를 설계, 테스트, 관리할 수 있습니다. 이미지에서 텍스트를 추출하는 샘플 프롬프트 를 사용해 보고, HTML로 예시 이미지를 만들고, 업로드된 이미지 또는 동영상에 대한 답변을 생성해 보세요.
+ API 키 를 사용하여 Agent Platform의 Gemini를 테스트할 수도 있습니다.
+ Agent Platform에서 Gemini 사용해 보기 
+ Agent Platform Gemini API 설정
+ Gemini 모델로 빌드하기 위한 가이드 및 예시 
+ 추천 Gemini 모델
+ Agent Platform의 Gemini API를 통해 Gemini 모델에 액세스
+ Python, JavaScript, Java, Go, Curl용 코드 샘플 보기
+ Python 
+ Python 
+ JavaScript 
+ Java 
+ Go 
+ Curl 
+ 로드 중...
+ from google import genai
+client = genai.Client()
+response = client.models.generate_content(
+ model="gemini-2.5-flash",
+ contents="Explain how AI works in a few words",
+)
+print(response.text) 
+ content_copy 
+ 코드 샘플 더보기 
+ Agent Platform Gemini API 설정
+ 멀티모달 디자인 권장사항 알아보기
+ 샘플 코드 및 노트북의 저장소 
+ 튜토리얼, 빠른 시작, 실습
+ Agent Studio로 빌드 시작하기
+ Agent Studio를 사용하면 자연어, 코드, 이미지 또는 동영상을 사용해 Gemini 모델의 프롬프트를 설계, 테스트, 관리할 수 있습니다. 이미지에서 텍스트를 추출하는 샘플 프롬프트 를 사용해 보고, HTML로 예시 이미지를 만들고, 업로드된 이미지 또는 동영상에 대한 답변을 생성해 보세요.
+ API 키 를 사용하여 Agent Platform의 Gemini를 테스트할 수도 있습니다.
+ Agent Platform에서 Gemini 사용해 보기 
+ Agent Platform Gemini API 설정
+ Gemini 모델로 빌드하기 위한 가이드 및 예시 
+ 추천 Gemini 모델
+ 코드 샘플
+ Agent Platform의 Gemini API를 통해 Gemini 모델에 액세스
+ Python, JavaScript, Java, Go, Curl용 코드 샘플 보기
+ Python 
+ Python 
+ JavaScript 
+ Java 
+ Go 
+ Curl 
+ 로드 중...
+ from google import genai
+client = genai.Client()
+response = client.models.generate_content(
+ model="gemini-2.5-flash",
+ contents="Explain how AI works in a few words",
+)
+print(response.text) 
+ content_copy 
+ 코드 샘플 더보기 
+ Agent Platform Gemini API 설정
+ 멀티모달 디자인 권장사항 알아보기
+ 샘플 코드 및 노트북의 저장소 
+ 데이터 추출, 요약, 분류
+ 튜토리얼, 빠른 시작, 실습
+ 생성형 AI를 통한 요약, 분류, 추출
+ Agent Platform의 생성형 AI 지원으로 작업을 원하는 만큼 처리하기 위한 텍스트 프롬프트를 만드는 방법을 알아봅니다. 가장 일반적인 작업으로는 분류, 요약, 추출이 있습니다. Agent Platform의 Gemini를 사용하면 구조와 형식 측면에서 유연하게 프롬프트를 설계할 수 있습니다.
+ 텍스트 프롬프트 설계 문서 보기 
+ 프롬프트 작성 전략 개요
+ Agent Studio의 AI 기반 프롬프트 작성 도구 에 대해 알아보기
+ 모든 생성형 AI 프롬프트 샘플 보기
+ 튜토리얼, 빠른 시작, 실습
+ 생성형 AI를 통한 요약, 분류, 추출
+ Agent Platform의 생성형 AI 지원으로 작업을 원하는 만큼 처리하기 위한 텍스트 프롬프트를 만드는 방법을 알아봅니다. 가장 일반적인 작업으로는 분류, 요약, 추출이 있습니다. Agent Platform의 Gemini를 사용하면 구조와 형식 측면에서 유연하게 프롬프트를 설계할 수 있습니다.
+ 텍스트 프롬프트 설계 문서 보기 
+ 프롬프트 작성 전략 개요
+ Agent Studio의 AI 기반 프롬프트 작성 도구 에 대해 알아보기
+ 모든 생성형 AI 프롬프트 샘플 보기
+ 프로덕션 사용을 위한 모델 배포
+ 튜토리얼, 빠른 시작, 실습
+ 일괄 또는 온라인 예측을 위한 배포
+ 모델을 사용하여 실제 문제를 해결할 준비가 되었다면 모델을 Model Registry에 등록하고 Agent Platform Prediction 서비스를 사용하여 일괄 및 온라인 예측을 수행하세요. 
+ ML 모델에서 예측을 가져오는 방법 알아보기 
+ Agent Platform Predictions Codelab 실습하기
+ 커스텀 예측 루틴 으로 모델 서빙 간소화
+ 예측 및 설명에 사전 빌드된 컨테이너 사용
+ 노트북 코드부터 배포된 모델까지 살펴볼 수 있는 동영상 시리즈인 프로토타입부터 프로덕션까지 를 시청하세요.
+ 튜토리얼, 빠른 시작, 실습
+ 일괄 또는 온라인 예측을 위한 배포
+ 모델을 사용하여 실제 문제를 해결할 준비가 되었다면 모델을 Model Registry에 등록하고 Agent Platform Prediction 서비스를 사용하여 일괄 및 온라인 예측을 수행하세요. 
+ ML 모델에서 예측을 가져오는 방법 알아보기 
+ Agent Platform Predictions Codelab 실습하기
+ 커스텀 예측 루틴 으로 모델 서빙 간소화
+ 예측 및 설명에 사전 빌드된 컨테이너 사용
+ 노트북 코드부터 배포된 모델까지 살펴볼 수 있는 동영상 시리즈인 프로토타입부터 프로덕션까지 를 시청하세요.
+ 커스텀 모델 학습
+ 튜토리얼, 빠른 시작, 실습
+ 커스텀 모델 학습 개요 및 문서
+ Agent Platform의 커스텀 학습 워크플로, 커스텀 학습의 이점, 사용 가능한 다양한 학습 옵션에 대한 개요를 확인하세요. 또한 이 페이지에서는 데이터 준비부터 예측까지 ML 학습 워크플로와 관련된 모든 단계를 자세히 설명합니다.
+ 개요 문서 보기 
+ 커스텀 학습 초보자 가이드 
+ Agent Platform 및 Python SDK 를 사용하여 모델 학습
+ Agent Platform에서 머신러닝 솔루션을 빌드 및 배포 하는 방법 알아보기
+ Agent Platform에서 커스텀 모델을 학습시키는 데 필요한 단계에 대한 둘러보기 동영상 보기
+ 튜토리얼, 빠른 시작, 실습
+ 커스텀 모델 학습 개요 및 문서
+ Agent Platform의 커스텀 학습 워크플로, 커스텀 학습의 이점, 사용 가능한 다양한 학습 옵션에 대한 개요를 확인하세요. 또한 이 페이지에서는 데이터 준비부터 예측까지 ML 학습 워크플로와 관련된 모든 단계를 자세히 설명합니다.
+ 개요 문서 보기 
+ 커스텀 학습 초보자 가이드 
+ Agent Platform 및 Python SDK 를 사용하여 모델 학습
+ Agent Platform에서 머신러닝 솔루션을 빌드 및 배포 하는 방법 알아보기
+ Agent Platform에서 커스텀 모델을 학습시키는 데 필요한 단계에 대한 둘러보기 동영상 보기
+ 가격 책정
+ Agent Platform 가격 책정 방식 사용된 Agent
+
+=== [pricing] https://cloud.google.com/pricing (lang=ko)
+가격 책정 개요 | Google Cloud 
+ Google Cloud 가격 책정
+ Google Cloud의 투명하고 혁신적인 가격 책정 방식으로 비용을 절감해 보세요. 가격 계산기 로 비용을 예상해 보거나 Google에 문의하여 조직에 대한 견적을 받아보세요.
+ 견적 요청 
+ 무료로 시작하기 
+ 워크로드 무료로 실행해 보기
+ 계정을 만들어 실제 시나리오에서 Google Cloud 제품 실적을 평가하세요. 신규 고객에게는 Google에서 추천하는 사전 빌드된 솔루션 을 포함하여 워크로드를 실행, 테스트, 배포하는 데 사용할 수 있는 $300의 무료 크레딧 이 제공됩니다. 모든 고객이 월간 사용량 한도까지 20개 이상의 제품을 무료 로 사용할 수 있습니다.
+ $300
+ 무료 크레딧 
+ 20+
+ 무료 제품
+ 사용한 만큼만 비용 지불
+ Google Cloud의 사용한 만큼만 지불 가격 책정 구조를 사용하면 사용한 서비스에 대한 요금만 지불하면 됩니다. 선불 비용은 없으며, 해지 수수료가 부과되지 않습니다. 가격은 제품 및 사용량에 따라 다릅니다( 자세한 가격 목록 보기 ).
+ 워크로드 비용 최대 57% 절감하기
+ Google Cloud를 사용하면 월별 사용량에 기초한 자동 절약과 할인된 가격에 리소스 비용 선불 결제를 통해 다른 제공업체를 사용할 때보다 비용을 절감할 수 있습니다. 예를 들어 머신 유형 또는 GPU와 같은 Compute Engine 리소스에 약정 사용 할인을 적용하여 최대 57%를 절약 할 수 있습니다.
+ 2:48 
+ 현재의 비용 추세와 예상 비용 파악
+ 지속적인 지출 관리
+ 예산, 알림, 할당량 한도, 기타 무료 비용 관리 도구로 지출을 관리 하세요. 활용 가능한 AI 기반 지능형 추천과 비용 추세 및 예상 비용을 보여주는 커스텀 대시보드로 비용을 최적화 하세요. 
+ 연중무휴 무료 결제 지원 으로 도와드리겠습니다.
+ 비용 예측 
+ 가격 계산기 로 위치, 워크로드, 기타 변수에 따라 비용이 어떻게 달라지는지 알아보세요. 또는 영업 담당자 에게 문의하여 커스텀 견적을 받으세요.
+ 0:46 
+ 4:01 
+ 무료 크레딧 받기
+ 아이디어 구상부터 출시 이후까지 Google과 함께 빌드하고 Google의 최고의 서비스를 이용하세요. 스타트업은 Google for Startups Cloud Program 을 통해 최대 $350,000의 Cloud 크레딧을 받아 맞춤 지원 및 솔루션을 통해 계속해서 확장할 수 있습니다.
+ 지금 신청하기 
+ 더 자세한 안내가 필요하신가요? Google에서 지원해 드립니다.
+ 마이그레이션 평가: 마이그레이션 비용을 예측해 보고 엔드 투 엔드 계획을 세워 보세요.
+ 무료 마이그레이션 평가 요청 
+ 비용 최적화 전략으로 전반적인 클라우드 지출을 줄이는 5가지 방법을 알아보세요.
+ 백서 다운로드 
+ 전문 컨설턴트와 협력하여 구현, 마이그레이션 등의 지원을 받으세요.
+ 모든 예산에 맞는 파트너 찾기 
+ 다음 단계 수행
+ 해결해야 하는 문제를 알려주세요. 가장 적합한 솔루션을 찾을 수 있도록 Google Cloud 전문가가 도와드립니다.
+ 영업팀에 문의 
+ 신뢰할 수 있는 파트너 지원
+ 파트너 찾기 
+ Google Cloud 사용 시작하기
+ 무료로 사용해 보기 
+ 계속 탐색
+ 모든 제품 보기 
+ menu 
+ 개요 솔루션 제품 가격 책정 리소스 Docs 지원 문의하기 
+  
+ Docs 지원 
+ 콘솔 로그인 
+ 무료로 시작하기 
+ 무료로 시작하기 
+ 문의하기 
+ close 디지털 혁신 가속화
+ 디지털 혁신을 이제 막 시작한 기업이든 이미 일정 수준에 도달한 기업이든 Google Cloud를 사용하면 가장 까다로운 도전과제를 해결할 수 있습니다.
+ 자세히 알아보기
+ 주요 이점
+ Google Cloud를 선택해야 하는 이유
+ 기업들이 Google을 선택하는 주요 이유
+ AI 및 에이전트
+ 엔터프라이즈 지원 AI를 활용하세요.
+ 멀티 클라우드
+ 어디서나 필요한 앱을 실행
+ 글로벌 인프라
+ Google과 동일한 인프라를 기반으로 빌드
+ 데이터 클라우드
+ 통합 데이터를 통한 더욱 스마트한 결정
+ 최신 인프라 클라우드
+ 차세대 클라우드 인프라입니다.
+ 보안
+ 사용자, 데이터, 앱을 보호하세요.
+ 생산성 및 공동작업
+ AI 지원 앱으로 팀과 소통
+ 보고서 및 통계
+ 경영진 통계
+ 최고 책임자의 관점에 맞게 선별됩니다.
+ 애널리스트 보고서
+ Google에 대한 업계 분석가들의 평가
+ 백서
+ 인기 백서 탐색 및 다운로드
+ 고객 사례
+ 우수사례 및 동영상 살펴보기
+ close 업종별 솔루션 
+ 애플리케이션 현대화 
+ 인공지능 
+ API 및 애플리케이션 
+ 데이터 분석 
+ 데이터베이스 
+ 인프라 
+ 생산성 및 공동작업 
+ 보안 
+ 스타트업 및 SMB 
+ 모든 솔루션 보기 
+ 업종별 솔루션
+ 비용 절감, 운영 민첩성 향상, 새로운 시장 기회 포착
+ 소매업
+ 소매 가치 사슬을 위한 분석 및 공동작업 도구
+ 소비재
+ 소비재 디지털 혁신 및 브랜드 성장 솔루션
+ 금융 서비스
+ 금융 서비스를 위한 컴퓨팅, 데이터 관리, 분석 도구
+ 의료 및 생명과학
+ 대규모의 연구 진행 및 의료 혁신 지원
+ 미디어 및 엔터테인먼트
+ 콘텐츠 제작 및 배포 작업을 위한 솔루션
+ 전자통신
+ 5G 배포 및 수익 창출을 위한 하이브리드 및 멀티 클라우드 서비스
+ 게임
+ 게임을 더욱 빠르게 빌드하고 확장할 수 있는 AI 기반 솔루션
+ 제조업
+ 제조업 가치 사슬을 최적화하는 마이그레이션 및 AI 도구
+ 공급망 및 물류
+ 공급망 및 물류 운영 전반에서 지속 가능하고 효율적이며 복원력이 우수한 데이터 기반 운영을 지원합니다.
+ 정부 기관
+ 정부 기관을 위한 데이터 스토리지, AI, 분석 솔루션
+ 교육
+ 더 적극적인 학습 경험을 제공하는 교육 도구
+ 원하는 내용을 찾을 수 없으신가요?
+ 모든 업종별 솔루션 보기
+ 애플리케이션 현대화
+ 소프트웨어 관행과 기능을 평가, 계획, 구현, 측정하여 조직의 비즈니스 애플리케이션 포트폴리오를 현대화하고 단순화합니다.
+ CAMP
+ DORA를 사용하여 소프트웨어 배포 기능을 개선하는 프로그램
+ 기존 애플리케이션 현대화
+ 기존 워크로드의 클라우드 마이그레이션을 분석 및 분류하고 시작합니다.
+ PaaS에서 마이그레이션: Cloud Foundry, OpenShift
+ 기존 컨테이너를 Google의 관리형 컨테이너 서비스로 이동하기 위한 도구입니다.
+ 메인프레임에서 마이그레이션
+ 메인프레임 앱을 클라우드로 이전하기 위한 자동화된 도구 및 처방적 안내입니다.
+ 소프트웨어 배포 현대화
+ 내부 루프 생산성, CI/CD, S3C 등 소프트웨어 공급망 권장사항입니다.
+ DevOps 권장사항
+ 조직에서 DevOps를 구현하기 위한 프로세스 및 리소스
+ SRE 원칙
+ 조직에 사이트 안정성 엔지니어링(SRE)을 채택하기 위한 도구 및 리소스
+ 플랫폼 엔지니어링
+ IDP를 빌드, 관리, 확장하기 위한 포괄적인 관리형 서비스 제품군과 최적의 경로를 제공합니다.
+ 멀티 클라우드를 위한 설계
+ 여러 클라우드에서 일관된 플랫폼으로 워크로드를 관리합니다.
+ 인공지능
+ AI 및 머신러닝을 사용하여 비즈니스에 인텔리전스 및 효율성 추가
+ Gemini Enterprise for Customer Experience
+ 고객 수명 주기 전반에서 사용 가능한 에이전트를 빌드하고 관리할 수 있습니다.
+ Gemini Enterprise
+ 조직 전체를 위한 통합 에이전트형 포트폴리오입니다.
+ AI Commerce Search
+ 소매업체를 위한 Google 품질 수준의 검색 및 제품 추천
+ Gemini 기반 Google Cloud
+ 애플리케이션 개발, 코딩 등을 위한 AI 어시스턴트입니다.
+ 물리적 AI
+ 차세대 로봇, 자율 주행 차량, 산업용 기기, 기계를 시뮬레이션하고 학습시키고 작동시킵니다.
+ API 및 애플리케이션
+ API, 앱, 자동화를 사용하여 코딩 없이도 혁신 속도 향상
+ API를 사용한 새 비즈니스 채널
+ 개발자 및 파트너 생태계의 조성과 지원
+ API를 사용한 기존 애플리케이션 활용
+ 기존 앱을 확장하고 현대화하는 클라우드 서비스
+ Open Banking APIx
+ 오픈 뱅킹 규정 준수 API의 보안 전송 간소화 및 가속화
+ 데이터 분석
+ 분석을 대폭 간소화하는 완전 관리형 서버리스 분석 플랫폼으로 규모에 상관없이 데이터에서 빠르게 유용한 정보 파악
+ 데이터 마이그레이션
+ AI 기반 마이그레이션 서비스로 데이터 웨어하우스 및 데이터 레이크를 마이그레이션하고 현대화하세요.
+ 데이터 레이크하우스
+ 고성능 개방형 데이터 레이크하우스로 멀티모달 데이터를 통합하고 제어하세요.
+ 실시간 분석
+ 이벤트 스트림 수집, 처리, 분석을 통해 유용한 정보 파악
+ 마케팅 분석
+ 고객 데이터 수집, 분석, 활성화를 위한 솔루션
+ 데이터 세트
+ Google, 공공부문, 상용 공급업체 제공 데이터로 분석 및 AI 이니셔티브 강화
+ 비즈니스 인텔리전스
+ BI 스택을 현대화하고 풍부한 데이터 환경을 만들기 위한 솔루션
+ 데이터 분석 에이전트
+ 데이터 수명 주기를 위한 기본 제공 에이전트와 자체 에이전트를 빌드할 수 있는 도구입니다.
+ 지리 공간 분석
+ 지리 공간 사용 사례를 대규모로 해결할 수 있는 포괄적인 플랫폼입니다.
+ 데이터 과학
+ 데이터 과학을 빌드, 관리, 확장하기 위한 관리형 서비스 및 통합 워크플로입니다.
+ 데이터베이스
+ 보안, 안정성, 고가용성, 완전 관리형 데이터 서비스로 기업 데이터를 마이그레이션하고 관리
+ 데이터베이스 마이그레이션
+ 데이터베이스 마이그레이션 수명 주기를 간소화하는 가이드 및 도구
+ 데이터베이스 현대화
+ 운영 데이터베이스 인프라 현대화를 위한 업그레이드
+ 게임용 데이터베이스
+ Google Cloud 데이터베이스로 글로벌 실시간 게임 빌드
+ Google Cloud 데이터베이스
+ 데이터를 마이그레이션, 관리, 현대화하는 데이터베이스 서비스
+ Oracle 워크로드를 Google Cloud로 마이그레이션
+ Oracle 워크로드의 재호스팅, 플랫폼 변경, 재작성
+ 오픈소스 데이터베이스
+ 엔터프라이즈급 지원을 제공하는 완전 관리형 오픈소스 데이터베이스
+ Google Cloud 기반 SQL Server
+ Google Cloud에서 SQL Server 가상 머신을 실행하는 옵션
+ 데이터베이스를 위한 Gemini
+ AI를 사용하여 데이터베이스 개발 및 관리를 강화하세요.
+ 인프라
+ SAP, VMware, Windows, Oracle, 기타 워크로드를 위한 솔루션으로 빠르게 마이그레이션
+ 애플리케이션 마이그레이션
+ 클라우드로 이전하기 위한 검색 및 분석 도구
+ Google Cloud 기반 SAP
+ SAP 애플리케이션 및 SAP HANA 실행을 위한 인증
+ 고성능 컴퓨팅
+ 모든 워크로드를 지원하는 컴퓨팅, 스토리지, 네트워킹 옵션
+ Google Cloud에서 Windows 실행
+ Windows 워크로드 실행을 위한 도구 및 파트너
+ 데이터 센터 마이그레이션
+ VM, 앱, 데이터베이스 등을 위한 마이그레이션 솔루션
+ Active Assist
+ 클라우드 리소스의 자동 최적화 및 보안 강화
+ 가상 데스크톱
+ 데스크톱 및 애플리케이션용 원격 근무 솔루션(VDI 및 DaaS)
+ Rapid Migration and Modernization Program
+ 클라우드로 간편하게 이전할 수 있게 해주는 엔드 투 엔드 마이그레이션 프로그램
+ 백업 및 재해 복구
+ 비즈니스 연속성 니즈를 충족하는지 확인
+ Google Cloud 기반 Red Hat
+ Google과 Red Hat은 기존 온프렘 및 커스텀 애플리케이션을 위한 엔터프라이즈급 플랫폼을 제공합니다.
+ 교차 클라우드 네트워크
+ 하이브리드 및 멀티 클라우드 네트워킹을 간소화하고 워크로드, 데이터, 사용자를 보호하세요.
+ 생산성 및 공동작업
+ 영향력을 발휘하기 위해 빌드된 인간 중심 설계의 솔루션으로 팀의 공동작업 방식을 변경
+ Google Workspace
+ 기업용 공동작업 및 생산성 도구
+ Google Workspace Essentials
+ 팀을 위한 안전한 화상 회의와 현대적 공동작업 도구
+ Cloud ID
+ IT 관리자가 사용자 기기와 앱을 관리할 수 있는 통합 플랫폼
+ Chrome Enterprise
+ 비즈니스용 ChromeOS, Chrome 브라우저, Chrome 기기
+ 보안
+ 온라인 위협을 감지, 조사, 대응하여 비즈니스 보호
+ 에이전트형 SOC
+ AI 에이전트를 통해 더욱 우수한 보안 성과를 제공합니다.
+ 웹 앱 및 API 보호
+ 웹 애플리케이션 및 API에 대한 위협 및 사기 방지
+ 보안 및 복원력 프레임워크
+ 보안 및 복원력 수명 주기의 각 단계에 대한 솔루션
+ 코드형 위험 및 규정 준수(RCaC)
+ 자동화를 통해 거버넌스, 위험, 규정 준수 기능을 현대화하는 솔루션
+ 소프트웨어 공급망 보안
+ 엔드 투 엔드 소프트웨어 공급망 보안 개선을 위한 솔루션
+ Security Foundation
+ 강력한 보안 상황을 달성하는 데 도움이 되는 추천 제품
+ 스타트업 및 SMB
+ 맞춤형 솔루션과 프로그램을 통해 스타트업 및 SMB 성장 가속화
+ 스타트업 프로그램
+ 스타트업의 역량을 한 단계 끌어올리기 위한 재무, 비즈니스, 기술 지원 받기
+ 중소기업
+ 웹 호스팅, 앱 개발, AI, 분석을 위한 솔루션 살펴보기
+ Software as a Service
+ 더욱 우수한 SaaS 제품을 빌드하고 효율적으로 확장하며 비즈니스 성장 도모
+ close 추천 제품 
+ AI 및 머신러닝 
+ 비즈니스 인텔리전스 
+ 컴퓨팅 
+ 컨테이너 
+ 데이터 분석 
+ 데이터베이스 
+ 개발자 도구 
+ 분산 클라우드 
+ 하이브리드 및 멀티 클라우드
+
+=== [about] https://docs.cloud.google.com/?hl=ko (lang=ko-x-mtfrom-en)
+Google Cloud 문서  |  Google Cloud Documentation 
+ 기본 콘텐츠로 건너뛰기
+ 기술 영역
+ close 
+ AI 및 ML
+ 애플리케이션 개발
+ 애플리케이션 호스팅
+ 컴퓨팅
+ 데이터 분석 및 파이프라인
+ 데이터베이스
+ 분산, 하이브리드, 멀티 클라우드
+ 업종별 솔루션
+ 이전
+ 네트워킹
+ 모니터링 가능성 및 모니터링
+ 보안
+ Storage
+ 크로스 프로덕트 도구
+ close 
+ 액세스 및 리소스 관리
+ 비용 및 사용량 관리
+ 코드형 인프라
+ SDK, 언어, 프레임워크, 도구
+ / 
+ 콘솔
+ English 
+ Deutsch 
+ Español 
+ Español – América Latina 
+ Français 
+ Indonesia 
+ Italiano 
+ Português 
+ Português – Brasil 
+ עברית 
+ 中文 – 简体 
+ 中文 – 繁體 
+ 日本語 
+ 한국어 
+ 로그인 
+ 기술 영역
+ 더보기
+ 크로스 프로덕트 도구
+ 더보기
+ 콘솔
+ AI 및 ML
+ 애플리케이션 개발
+ 애플리케이션 호스팅
+ 컴퓨팅
+ 데이터 분석 및 파이프라인
+ 데이터베이스
+ 분산, 하이브리드, 멀티 클라우드
+ 업종별 솔루션
+ 이전
+ 네트워킹
+ 모니터링 가능성 및 모니터링
+ 보안
+ Storage
+ 액세스 및 리소스 관리
+ 비용 및 사용량 관리
+ 코드형 인프라
+ SDK, 언어, 프레임워크, 도구
+ Google은 AI 기술을 사용하여 콘텐츠를 사용자의 기본 언어로 번역합니다. AI 번역에는 오류가 있을 수 있습니다.
+ Home
+ 컬렉션을 사용해 정리하기
+ 내 환경설정을 기준으로 콘텐츠를 저장하고 분류하세요.
+ Google Cloud 문서
+ / 
+ Google Cloud 시작하기 
+ Google Cloud 개요 
+ $300의 무료 크레딧으로 빌드 시작
+ 20개 이상의 무료 등급 제품으로 다음 프로젝트 시작
+ Cloud 아키텍처 센터 
+ 추천 제품 AI 및 ML 애플리케이션 개발 애플리케이션 호스팅 컴퓨팅 데이터 애널리틱스 데이터베이스 분산, 하이브리드, 멀티 클라우드 업종별 솔루션 마이그레이션 네트워킹 관측 가능성 및 모니터링 보안 스토리지 교차 제품 
+ 언어, 프레임워크, 도구
+ gcloud CLI
+ Python
+ Java
+ Go
+ JavaScript 및 Node.js
+ C# 및 .NET
+ PHP
+ C++
+ Ruby
+ Rust
+ 봄
+ Terraform
+ Prometheus
+ Kubernetes
+ Google Cloud의 새로운 소식
+ Google Cloud 제품에 관한 최신 소식은 문서의 새로운 소식 을 참조하세요.
+ 이벤트 
+ Agents for Impact 해커톤 - Sunnyvale, 2026년 11월 17일
+ 집중적인 실습 스프린트에서 동료 및 Google Cloud 전문가와 협력하여 BigQuery, Gemini 모델, 에이전트 개발 키트를 사용하여 실제 에이전트 AI 솔루션을 빌드하고 배포하세요.
+ Cloud 아키텍처 센터 
+ 클라우드 워크로드에 최적화된 스토리지 전략 설계
+ 워크로드 요구사항을 평가하고 Compute Engine Hyperdisk, Cloud Storage, Managed Lustre, NetApp Volumes에서 최적의 블록, 파일, 객체 스토리지 서비스를 선택합니다.
+ 블로그 
+ AI 코딩 에이전트를 위한 Google Cloud Developer 플러그인 소개
+ Google Cloud용 에이전트 스킬과 Developer Knowledge MCP 서버를 번들로 제공하는 오픈 표준 google-cloud-developer 플러그인을 사용하여 AI 코딩 에이전트를 장착하세요.
+ [[["이해하기 쉬움","easyToUnderstand","thumb-up"],["문제가 해결됨","solvedMyProblem","thumb-up"],["기타","otherUp","thumb-up"]],[["이해하기 어려움","hardToUnderstand","thumb-down"],["잘못된 정보 또는 샘플 코드","incorrectInformationOrSampleCode","thumb-down"],["필요한 정보/샘플이 없음","missingTheInformationSamplesINeed","thumb-down"],["번역 문제","translationIssue","thumb-down"],["기타","otherDown","thumb-down"]],[],[],[]]
+ 제품 및 가격 책정
+ 모든 제품 보기
+ Google Cloud 가격 책정
+ Google Cloud Marketplace
+ 영업팀에 문의
+ 지원
+ 커뮤니티 포럼
+ 지원
+ 출시 노트
+ 시스템 상태
+ 리소스
+ GitHub
+ Google Cloud 시작하기
+ 코드 샘플
+ 클라우드 아키텍처 센터
+ 교육 및 자격증
+ 참여
+ 블로그
+ 이벤트
+ X(트위터)
+ YouTube의 Google Cloud 채널
+ Google Cloud Tech의 YouTube 채널
+ Android
+ Chrome
+ Firebase
+ Google AI
+ Google 정보
+ 개인정보처리방침
+ 사이트 약관
+ Google Cloud 약관
+ Manage cookies
+ Google의 기후 행동 30년: 동참하기
+ Google Cloud 뉴스레터 구독하기 
+ 구독
+ English 
+ Deutsch 
+ Español 
+ Español – América Latina 
+ Français 
+ Indonesia 
+ Italiano 
+ Português 
+ Português – Brasil 
+ עברית 
+ 中文 – 简体 
+ 中文 – 繁體 
+ 日本語 
+ 한국어
+
+=== [pricing2] https://cloud.google.com/sql/pricing (lang=ko)
+Cloud SQL 가격 책정 | Google Cloud 
+ 페이지 콘텐츠 
+ Cloud SQL 가격 책정
+ 계정을 만들어 실제 시나리오에서 Cloud SQL이 수행되는 방식을 평가할 수 있습니다. 신규 고객에게는 워크로드를 실행, 테스트, 배포하기 위해 Cloud SQL에 사용할 수 있는 $300의 무료 크레딧이 제공됩니다. 업그레이드하지 않으면 비용이 청구되지 않습니다.
+ 무료로 Cloud SQL 사용해 보기 에 등록하세요.
+ 이 페이지에는 Cloud SQL의 가격 정보가 나와 있습니다.
+ Cloud SQL은 Enterprise와 Enterprise Plus의  두 가지 버전 을 제공합니다. 이러한 버전은 다양한 수준의 가용성, 성능, 데이터 보호를 제공합니다. 각 버전의 vCPU 및 메모리 가격은 다릅니다. Cloud SQL Enterprise 버전과 Cloud SQL Enterprise Plus 버전은 MySQL용 Cloud SQL, PostgreSQL용 Cloud SQL, SQL Server용 Cloud SQL에서 지원됩니다.
+ Cloud SQL 가격은 다음 인스턴스 유형에 따라 다릅니다.
+ MySQL 및 PostgreSQL 
+ SQL Server 
+ MySQL 및 PostgreSQL 가격 책정
+ Cloud SQL 가격은 다음 요금으로 구성됩니다.
+ CPU 및 메모리 가격 책정 
+ 스토리지 및 네트워킹 가격 책정 
+ 인스턴스 가격 책정 
+ Cloud DNS 가격 책정 
+ 연장 지원 가격 
+ CPU 및 메모리 가격 책정
+ 전용 코어 인스턴스의 경우 원하는 CPU 수와 메모리 양(Enterprise 버전의 경우 CPU는 최대 96개, 메모리는 최대 624GiB, Enterprise Plus 버전의 경우 CPU는 최대 128개, 메모리는 최대 864GiB)을 선택합니다. SQL Server 인스턴스용 Cloud SQL Enterprise Plus 버전의 경우 성능 최적화 머신 (최대 128개의 CPU와 864GiB의 메모리)과 메모리 최적화 머신 (최대 16개의 CPU와 512GiB의 메모리) 중에서 선택할 수도 있습니다. CPU 및 메모리 가격은 인스턴스가 위치한 리전에 따라 다릅니다. 가격표의 드롭다운 메뉴에서 리전을 선택하세요.
+ 읽기 복제본 및 장애 조치 복제본은 독립 실행형 인스턴스와 동일한 요금이 부과됩니다.
+ HA  가격은 고가용성을 위해 구성된 인스턴스(리전 인스턴스라고도 함)에 적용됩니다.  고가용성 자세히 알아보기 
+ Cloud SQL은 또한 1년 또는 3년 기간 동안 특정 리전의 데이터베이스 인스턴스를 계속 사용하겠다는 약정의 대가로 대폭 할인된 가격을 제공하는 약정 사용 할인 (CUD)을 제공합니다. 이 페이지의 가격표에서 CUD 가격은 약정으로 표시됩니다. 이러한 약정에 대한 자세한 내용은 약정 사용 할인 을 참조하세요.
+ 아래 표에서 다음을 의미합니다.
+ 드롭다운 메뉴에서 리전을 선택하여 해당 리전의 가격 확인
+ 슬라이더를 사용하여  월별  또는  시간별  가격 선택
+ 종량제, 1년, 3년 약정의 가격 책정 비교
+ Enterprise 버전 - 범용 머신 시리즈
+ Iowa (us-central1) 
+ Johannesburg (africa-south1) 
+ Taiwan (asia-east1) 
+ Hong Kong (asia-east2) 
+ Tokyo (asia-northeast1) 
+ Osaka (asia-northeast2) 
+ Seoul (asia-northeast3) 
+ Mumbai (asia-south1) 
+ Delhi (asia-south2) 
+ Singapore (asia-southeast1) 
+ Jakarta (asia-southeast2) 
+ Bangkok (asia-southeast3) 
+ Sydney (australia-southeast1) 
+ Melbourne (australia-southeast2) 
+ Warsaw (europe-central2) 
+ Finland (europe-north1) 
+ Stockholm (europe-north2) 
+ Madrid (europe-southwest1) 
+ Belgium (europe-west1) 
+ Berlin (europe-west10) 
+ Turin (europe-west12) 
+ London (europe-west2) 
+ Frankfurt (europe-west3) 
+ Netherlands (europe-west4) 
+ Zurich (europe-west6) 
+ Milan (europe-west8) 
+ Paris (europe-west9) 
+ Doha (me-central1) 
+ Dammam (me-central2) 
+ Tel Aviv (me-west1) 
+ Montreal (northamerica-northeast1) 
+ Toronto (northamerica-northeast2) 
+ Mexico (northamerica-south1) 
+ Sao Paulo (southamerica-east1) 
+ Santiago (southamerica-west1) 
+ Iowa (us-central1) 
+ South Carolina (us-east1) 
+ Northern Virginia (us-east4) 
+ Columbus (us-east5) 
+ Alabama (us-east7) 
+ Dallas (us-south1) 
+ Oregon (us-west1) 
+ Los Angeles (us-west2) 
+ Salt Lake City (us-west3) 
+ Las Vegas (us-west4) 
+ Phoenix (us-west8) 
+ 할인 옵션 표시 
+ 매시간 매시간 
+ 매월 매월 
+ 가격(USD)
+ * info 
+ 사용 모델 ID:
+ 7754-699E-0EBF
+ Cloud SQL CUD - 1 Year * (USD) info 
+ 사용 모델 ID:
+ 61F8-639B-D89C
+ Cloud SQL CUD - 3 Year * (USD) info 
+ 사용 모델 ID:
+ 52FB-D69D-95BE
+ vCPUs
+ US$0.0413 / 1 hour US$0.030975 / 1 hour US$0.019824 / 1 hour 
+ 메모리
+ US$0.007 / 1 gibibyte hour US$0.00525 / 1 gibibyte hour US$0.00336 / 1 gibibyte hour 
+ HA vCPU
+ US$0.0826 / 1 hour US$0.06195 / 1 hour US$0.039648 / 1 hour 
+ HA 메모리
+ US$0.014 / 1 gibibyte hour US$0.0105 / 1 gibibyte hour US$0.00672 / 1 gibibyte hour 
+ * 각 소비 모델에는 고유 ID가 있습니다. 소비 모델 할인을 받으려면 선택해야 할 수 있습니다. 자세히 알아보려면 여기 를 클릭하세요.
+ USD 외의 통화로 지불하는 경우 Cloud Platform SKU 에 해당 통화로 표기된 가격이 적용됩니다.
+ Enterprise Edition - N4 머신 시리즈
+ Iowa (us-central1) 
+ Johannesburg (africa-south1) 
+ Taiwan (asia-east1) 
+ Hong Kong (asia-east2) 
+ Tokyo (asia-northeast1) 
+ Osaka (asia-northeast2) 
+ Seoul (asi
+
+=== [meta] https://cloud.google.com/products/gemini-enterprise-agent-platform
+html lang: ko
+hreflang: de, en, es, es-419, fr, id, it, ja, ko, pt-br, x-default, zh-hans, zh-hant
+화면에 보이는 언어 이름: 한국어, English, 日本語, 中文, 简体中文, 繁體中文, Español, Français, Deutsch, Português, Italiano

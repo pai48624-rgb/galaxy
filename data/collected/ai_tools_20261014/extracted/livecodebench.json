@@ -1,0 +1,58 @@
+{
+ "company": null,
+ "one_liner_ko": "기간을 정해 그 기간에 나온 문제만으로 오염 없이 코드 생성 능력을 평가하는 LiveCodeBench 리더보드.",
+ "what_it_does_ko": "LiveCodeBench 리더보드는 정해진 기간에 나온 문제로 모델의 코드 능력을 평가해 데이터 오염 없는 종합 평가를 내세운다. 현재 기간(2024-08-01~2025-05-01)에는 454개 문제가 선택되며 시작·끝 날짜를 바꿔 기간을 조정할 수 있다. 모델별 Pass@1과 쉬움·보통·어려움 난이도별 점수를 보여 준다.",
+ "key_features": [
+  "기간(시간 창) 조정으로 문제 범위 변경",
+  "Pass@1 순위",
+  "Easy·Medium·Hard 난이도별 점수",
+  "이전 버전(release_v5) 리더보드",
+  "GSO 리더보드 별도 제공"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": null,
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "웹"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://livecodebench.github.io/leaderboard.html",
+   "quote": "LiveCodeBench Leaderboard - Holistic and Contamination Free Evaluation"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://livecodebench.github.io/leaderboard.html",
+   "quote": "454 problems selected in the current time window ( 8/1/2024 to 5/1/2025 ). You can adjust the start or end date to change the time window."
+  },
+  {
+   "field": "key_features",
+   "url": "https://livecodebench.github.io/leaderboard.html",
+   "quote": "Check out the previous version (release_v5) of the leaderboard."
+  },
+  {
+   "field": "key_features",
+   "url": "https://livecodebench.github.io/leaderboard.html",
+   "quote": "GSO Leaderboard"
+  },
+  {
+   "field": "platforms",
+   "url": "https://livecodebench.github.io/leaderboard.html",
+   "quote": "LiveCodeBench Leaderboard"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://livecodebench.github.io/leaderboard.html",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

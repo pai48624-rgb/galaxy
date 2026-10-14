@@ -1,0 +1,35 @@
+{
+ "company": "Zilliz (주요 기여사, LF AI & Data Foundation 산하 프로젝트)",
+ "one_liner_ko": "AI 애플리케이션용으로 대규모 확장을 목표로 만든 고성능 벡터 데이터베이스.",
+ "what_it_does_ko": "Milvus는 텍스트·이미지·멀티모달 같은 대량의 비정형 데이터를 정리하고 검색해 AI 애플리케이션을 뒷받침하는 벡터 데이터베이스다. Go와 C++로 작성되었고 CPU/GPU 하드웨어 가속을 쓴다. 완전 분산·K8s 네이티브 구조로 수평 확장하며 수십억 벡터에서 수만 건의 검색 쿼리를 처리하고 실시간 스트리밍 업데이트를 지원한다. 단일 머신용 Standalone 모드와 pip로 설치하는 경량판 Milvus Lite도 있다. Zilliz Cloud에서 완전 관리형 서비스(Serverless·Dedicated·BYOC)로도 제공된다.",
+ "key_features": [
+  "CPU/GPU 하드웨어 가속 벡터 검색",
+  "완전 분산·K8s 네이티브 구조로 수평 확장",
+  "실시간 스트리밍 업데이트로 데이터 최신 유지",
+  "단일 머신 배포용 Standalone 모드",
+  "pip로 설치하는 경량판 Milvus Lite",
+  "Python SDK pymilvus(MilvusClient)",
+  "Zilliz Cloud 완전 관리형(Serverless·Dedicated·BYOC)"
+ ],
+ "use_cases_ko": [],
+ "pricing": {"free_tier": "Zilliz Cloud 무료 체험 가능(한도 불명)", "plans": [], "pricing_url": null},
+ "open_source": "Apache 2.0",
+ "api": "있음",
+ "platforms": ["API"],
+ "korean_support": "불명",
+ "evidence": [
+  {"field": "company", "url": "https://github.com/milvus-io/milvus", "quote": "with Zilliz as its major contributor"},
+  {"field": "one_liner_ko", "url": "https://github.com/milvus-io/milvus", "quote": "is a high-performance vector database built for scale"},
+  {"field": "what_it_does_ko", "url": "https://github.com/milvus-io/milvus", "quote": "It powers AI applications by efficiently organizing and searching vast amounts of unstructured data, such as text, images, and multi-modal information."},
+  {"field": "what_it_does_ko", "url": "https://github.com/milvus-io/milvus", "quote": "Written in Go and C++, Milvus implements hardware acceleration for CPU/GPU to achieve best-in-class vector search performance."},
+  {"field": "key_features", "url": "https://github.com/milvus-io/milvus", "quote": "handle tens of thousands of search queries on billions of vectors, and keep data fresh with real-time streaming updates"},
+  {"field": "key_features", "url": "https://github.com/milvus-io/milvus", "quote": "is a lightweight version good for quickstart in python with `pip install`."},
+  {"field": "key_features", "url": "https://github.com/milvus-io/milvus", "quote": "Milvus is available as a fully managed service on Zilliz Cloud"},
+  {"field": "pricing", "url": "https://github.com/milvus-io/milvus", "quote": "for free. Milvus is available as a fully managed service on Zilliz Cloud"},
+  {"field": "open_source", "url": "https://github.com/milvus-io/milvus", "quote": "distributed with [Apache 2.0](https://github.com/milvus-io/milvus/blob/master/LICENSE) License"},
+  {"field": "api", "url": "https://github.com/milvus-io/milvus", "quote": "This installs `pymilvus`, the Python SDK for Milvus."},
+  {"field": "platforms", "url": "https://github.com/milvus-io/milvus", "quote": "This installs `pymilvus`, the Python SDK for Milvus."}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

@@ -1,0 +1,63 @@
+{
+ "company": "Pinecone Systems, Inc.",
+ "one_liner_ko": "규모가 커져도 빠르고 정확한 검색 비용이 늘지 않는 것을 내세운 AI 지식 플랫폼(완전 관리형 벡터 데이터베이스).",
+ "what_it_does_ko": "Pinecone은 AI용으로 만든 완전 관리형 벡터 데이터베이스로, 쓰기는 곧바로 검색 가능해지고 인덱싱은 자동이며 규모와 관계없이 쿼리 속도를 유지한다고 소개한다. Pinecone Database는 AI 에이전트·애플리케이션의 시맨틱 검색, 지식 검색, 장기 메모리를 위한 검색 엔진이다. 한 인덱스에서 전문(full-text)·시맨틱·희소 벡터·하이브리드 검색을 제공하고, 서버 측 통합 임베딩으로 벡터 대신 텍스트로 업서트·쿼리할 수 있다. 에이전트용 지식 엔진 Pinecone Nexus와 Assistant, Inference 제품도 있다.",
+ "key_features": [
+  "한 인덱스에서 전문·시맨틱·희소 벡터·하이브리드 검색",
+  "통합 임베딩으로 텍스트를 바로 업서트·쿼리",
+  "메타데이터 필터와 재순위(rerank)",
+  "네임스페이스로 테넌트별 데이터 분리",
+  "대량 읽기용 Dedicated Read Nodes",
+  "백업과 자체 클라우드 배포(BYOC)",
+  "MCP 서버·Claude Code 등 AI 코딩 도구 연동",
+  "SSO·RBAC·CMEK·프라이빗 네트워킹, SOC 2 Type II·HIPAA·GDPR·ISO 27001 인증"
+ ],
+ "use_cases_ko": [
+  "프로덕션 앱의 RAG 파이프라인 구축",
+  "이커머스 추천 엔진",
+  "지식베이스 시맨틱 검색·포럼 답변 봇"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Starter: 무료, 인덱스 최대 5개, 저장 최대 2GB, 쓰기 최대 2M/월, us-east-1만)",
+  "plans": [
+   {"name": "Starter", "price": 0, "currency": "USD", "period": "month", "limits": "인덱스 최대 5개, 저장 2GB, 쓰기 2M/월", "page_lang": "en"},
+   {"name": "Builder", "price": 20, "currency": "USD", "period": "month", "limits": "정액, 인덱스 프로젝트당 10개, 저장 10GB, 쓰기 5M/월", "page_lang": "en"},
+   {"name": "Standard", "price": 50, "currency": "USD", "period": "month", "limits": "월 최소 사용액 $50, 초과분 종량제, 저장 $0.33/GB/월, 3주 체험 $300 크레딧", "page_lang": "en"},
+   {"name": "Enterprise", "price": 500, "currency": "USD", "period": "month", "limits": "월 최소 사용액 $500, 초과분 종량제, 99.95% 가동률 SLA", "page_lang": "en"},
+   {"name": "Bring your own cloud", "price": null, "currency": "USD", "period": "usage", "limits": "가격 문의", "page_lang": "en"}
+  ],
+  "pricing_url": "https://www.pinecone.io/pricing/"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["웹", "API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://www.pinecone.io/", "quote": "© Pinecone Systems, Inc. | San Francisco, CA"},
+  {"field": "one_liner_ko", "url": "https://www.pinecone.io/", "quote": "The trusted AI knowledge platform where fast, accurate retrieval doesn't get more expensive as it scales."},
+  {"field": "what_it_does_ko", "url": "https://www.pinecone.io/", "quote": "Pinecone is a fully managed vector database built for AI. Writes are instantly searchable, indexing is automatic, and queries stay fast at any scale."},
+  {"field": "what_it_does_ko", "url": "https://docs.pinecone.io/guides/get-started/overview", "quote": "Pinecone Database is a search engine for AI agents and applications, built for semantic search, knowledge retrieval, and long-term memory at scale."},
+  {"field": "key_features", "url": "https://docs.pinecone.io/guides/get-started/overview", "quote": "Serve full-text search , semantic search , sparse-vector search , and hybrid search from one index."},
+  {"field": "key_features", "url": "https://docs.pinecone.io/guides/get-started/overview", "quote": "Upsert and query with text instead of vectors."},
+  {"field": "key_features", "url": "https://docs.pinecone.io/guides/get-started/overview", "quote": "Narrow results with metadata filters , then rerank them for relevance."},
+  {"field": "key_features", "url": "https://docs.pinecone.io/guides/get-started/overview", "quote": "Keep each tenant’s data separate within one index by using namespaces ."},
+  {"field": "key_features", "url": "https://docs.pinecone.io/guides/get-started/overview", "quote": "Scale reads for sustained, high query volumes with dedicated read nodes ."},
+  {"field": "key_features", "url": "https://docs.pinecone.io/guides/get-started/overview", "quote": "Connect any MCP-compatible agent to Pinecone for search and index management"},
+  {"field": "key_features", "url": "https://www.pinecone.io/", "quote": "SOC 2 Type II, HIPAA, GDPR, and ISO 27001 certified."},
+  {"field": "use_cases_ko", "url": "https://www.pinecone.io/", "quote": "I'm building a RAG pipeline"},
+  {"field": "use_cases_ko", "url": "https://www.pinecone.io/pricing/", "quote": "Recommendation engine\n Given an e-commerce site with:"},
+  {"field": "use_cases_ko", "url": "https://www.pinecone.io/pricing/", "quote": "Forum answering bot (RAG)"},
+  {"field": "pricing", "url": "https://www.pinecone.io/pricing/", "quote": "For solo developers and small teams.\n Get Started \n $20/month flat"},
+  {"field": "pricing", "url": "https://www.pinecone.io/pricing/", "quote": "$50/month min. usage You'll be charged a minimum of $50/month. Once your usage exceeds this amount, you'll pay as you go."},
+  {"field": "pricing", "url": "https://www.pinecone.io/pricing/", "quote": "$500/month min. usage You'll be charged a minimum of $500/month."},
+  {"field": "pricing", "url": "https://www.pinecone.io/pricing/", "quote": "Storage Up to 2 GB"},
+  {"field": "pricing", "url": "https://www.pinecone.io/pricing/", "quote": "Get Started Contact Us for Pricing"},
+  {"field": "api", "url": "https://www.pinecone.io/", "quote": "Install the plugin in your agent, or call the API directly."},
+  {"field": "platforms", "url": "https://www.pinecone.io/", "quote": "Monitor performance, explore your data, and manage indexes from a clean, fast console — or stay in the terminal."},
+  {"field": "korean_support", "url": "https://www.pinecone.io/", "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [
+  {"official": "Pinecone은 완전 관리형 벡터 데이터베이스이며 공식 페이지에 오픈소스·자체 설치 언급이 없음(Starter 무료 + 유료 요금제)", "diff": "기존 분류 '오픈소스 + 클라우드 매니지드 유료 플랜'의 '오픈소스' 부분을 공식 페이지에서 확인할 수 없음 — 관리형 SaaS 프리미엄 구조", "url": "https://www.pinecone.io/"}
+ ],
+ "plan_change": []
+}

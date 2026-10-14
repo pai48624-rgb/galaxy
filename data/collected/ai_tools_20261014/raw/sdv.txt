@@ -1,0 +1,462 @@
+=== [home] https://datacebo.com/sdv-dev/ (lang=en)
+SDV — The Open Source Synthetic Data Vault | DataCebo 
+ DataCebo, Inc. (“we”, “us” or “our”) is committed to respecting your privacy. This cookie statement explains our practices regarding the use of cookies on our website at https://datacebo.com/ and all of its sub-domains (collectively, the “Site”). We may use cookies, pixels, beacons, or other web tracking technologies to track the amount of time spent on our Site, the things you clicked on, and whether or not certain content was viewed. We use this data to operate and improve our Site and services. We may work with a third party to collect and process this information for us. We are not currently using targeting or functional cookies on our Site. We may use third parties, such as Google Analytics or other analytics providers, to analyze traffic to our Site. Google Analytics does not create individual profiles for visitors and only collects aggregate data. To disable Google Analytics, please download the browser add-on for the deactivation of Google Analytics provided by Google at http://tools.google.com/dlpage/gaoptout?hl=en . To learn more about privacy and Google Analytics, please consult the Google Analytics overview provided by Google at http://www.google.com/intl/en/analytics/privacyoverview.html .
+ Accept
+ Decline 
+ Customers 
+ Customer stories
+ Successful stories and deployments with SDV
+ Ready to get started? Try it out 
+ Product 
+ The Synthetic Data Vault
+ SDV Community
+ Our open core synthetic data platform trusted by 100+ F500
+ SDV Enterprise
+ Leading synthetic data platform for complex enterprise data
+ SDMetrics
+ An open source synthetic data evaluation platform
+ SDGym
+ Benchmarking platform for synthetic data generators
+ Reversible Data Transforms
+ Reversible transforms built for synthetic data
+ Bundles
+ Constraint Augmented Generation
+ Apply complex multi-table logic with CAG
+ Differential Privacy
+ Create synthetic data with differential privacy guarantees
+ Targeted Sampling
+ Create targeted synthetic data
+ XSynthesizers
+ Boost synthetic data quality with advanced synthesizers
+ Pricing
+ SDV Plans
+ Flexible, scalable pricing
+ Integrations
+ AI Connectors
+ Integrate SDV with your database: metadata, import, export
+ Ready to get started? Try it out 
+ Solutions 
+ Use AI-generated synthetic data for
+ Software Testing
+ Boost developer productivity with access to realistic test data
+ Simulating Scenarios
+ Generate scenarios for AI models and agents
+ Training AI Models
+ Overcome the shortage of data to train your AI models
+ Sharing Data
+ Share data externally to enhance collaboration outcomes
+ Solution accelerators
+ AI Connectors
+ Integrate SDV with your database: metadata, import, export
+ Constraint Augmented Generation
+ Apply complex multi-table logic with CAG
+ Differential Privacy
+ Create synthetic data with differential privacy guarantees
+ Targeted Sampling
+ Create targeted synthetic data
+ XSynthesizers
+ Boost synthetic data quality with advanced synthesizers
+ Ready to get started? Try it out 
+ Resources 
+ Learning
+ DataCebo hub
+ Access resources to accelerate your synthetic data journey
+ Blog
+ Insights on synthetic data, our products and industry news
+ Basetransformer
+ Engineering perspectives from the core SDV team
+ Research
+ Our pioneering research on synthetic data and its use cases
+ Customer stories
+ Successful stories and deployments with SDV
+ SDV Docs
+ Documentation and demos to learn more about SDV
+ News and events
+ Newsroom
+ Our latest media coverage and expert industry insights
+ Announcements
+ Our latest announcements about product and company
+ Get help
+ Support
+ Access docs, case studies, and learning resources
+ Licenses
+ See terms, conditions, and licensing for SDV products
+ Release notes
+ Explore the newest features in SDV Enterprise
+ DataCebo Forum
+ Discuss SDV features, ask questions, and receive help
+ Ready to get started? Try it out 
+ Pricing 
+ Contact 
+ Log in 
+ Get Started 
+ Ready to get started? Try it out 
+ Community
+ Join the DataCebo Forum Get started 
+ Single Table
+ Learn a tabular model to synthesize rows in a table
+ Multi Table
+ Learn a relational data model to synthesize multiple, related tables
+ Sequential Table
+ Learn a sequential or time series model to synthesize new events
+ The SDV ecosystem
+ Public, Source-Available Libraries
+ The SDV is an overall ecosystem for synthetic data models, benchmarks, and metrics. Explore publicly available libraries supporting the SDV. Each can be used as standalone packages for particular needs.
+ Modeling Modeling 
+ Benchmarking Benchmarking 
+ Metrics Metrics 
+ Copulas
+ Models & generates tabular data with classic statistical methods. Uses multivariate copulas.
+ Github 
+ Docs 
+ 3.86M downloads
+ CTGAN
+ Models & generates tabular data with Deep Learning. Offers CTGAN and TVAE models.
+ Github 
+ 1.35M downloads
+ DeepEcho
+ Models & generates time series data with a mix of classic statistical models and Deep Learning.
+ Github 
+ 350K downloads
+ RDT
+ Discovers properties & transforms data for data science use. Reverses the transforms to reproduce realistic data.
+ Github 
+ Docs 
+ 8.06M downloads
+ Synthetic Data Vault
+ Generates synthetic data across single table, relational, and time series data. Supports multiple models & evaluations.
+ Github 
+ Docs 
+ 4.13M downloads
+ The Synthetic data vault
+ What can you use synthetic data for?
+ Use a synthetic data in place of real data for added protection, or use it in addition to your real data as an enhancement.
+ Test Software
+ Expand Access
+ Pilot New Products
+ Augment Data
+ Plan Scenarios
+ The Synthetic Data Vault in numbers 
+ Learn more 
+ Visualize
+ Downloads
+ SDV case studies 
+ Synthetic data helps banks detect money laundering without compromising privacy
+ Learn more 
+ MAPFRE: improving detection of homeowner insurance fraud by 31 percent with synthetic data
+ Learn more 
+ Latest news and updates
+ News How “AI powered” synthetic data boosts software engineering 
+ Announcements Introducing AI Connectors 
+ Announcements Introducing Constraint-Augmented Generation (CAG) 
+ Blog How ING Belgium Uses DataCebo’s SDV Enterprise to Create Synthetic Data for 100x the Test Coverage 
+ News DataCebo Creates Synthetic Enterprise Data With Actually Useful Generative AI 
+ News What is synthetic data — and how can it help you competitively? 
+ Quick start
+ Try it out now
+ Quickly discover SDV with just a few lines of code!
+ Install SDV 
+ from sdv.datasets.demo import download_demo
+from sdv.single_table import GaussianCopulaSynthesizer
+real_data, metadata = download_demo(
+ 'single_table', 'fake_hotel_guests')
+synthesizer = GaussianCopulaSynthesizer(metadata)
+synthesizer.fit(real_data)
+synthetic_data = synthesizer.sample(num_rows=10) from sdv . datasets . demo import download_demo
+ from sdv . single_table import GaussianCopulaSynthesizer
+real_data , metadata = download_demo ( 
+ 'single_table' , 'fake_hotel_guests' ) 
+synthesizer = GaussianCopulaSynthesizer ( metadata ) 
+synthesizer . fit ( real_data ) 
+synthetic_data = synthesizer . sample ( num_rows = 10 ) 
+ Follow us
+ Join our Community
+ Chat with developers across the world. Stay up-to-date with the latest features, blogs, and news.
+ DataCebo Forum
+ Discuss SDV features, ask questions, and receive help.
+ Join the DataCebo Forum 
+ Github
+ SDV is publicly available.
+ Follow us on Github 
+ Linkedin
+ Connect with DataCebo on LinkedIn.
+ Follow us on Linkedin 
+ Make synthetic data a reality
+ Solutions
+ Use AI-generated synthetic data for
+ Software Testing 
+ Simulating 
+
+=== [pricing] https://datacebo.com/pricing/ (lang=en)
+Pricing | DataCebo Announcement 
+ Introducing generative relational models and launching SDV 2.0 Read more 
+ Customers 
+ Customer stories
+ Successful stories and deployments with SDV
+ Ready to get started? Try it out 
+ Product 
+ The Synthetic Data Vault
+ SDV Community
+ Our open core synthetic data platform trusted by 100+ F500
+ SDV Enterprise
+ Leading synthetic data platform for complex enterprise data
+ SDMetrics
+ An open source synthetic data evaluation platform
+ SDGym
+ Benchmarking platform for synthetic data generators
+ Reversible Data Transforms
+ Reversible transforms built for synthetic data
+ Bundles
+ Constraint Augmented Generation
+ Apply complex multi-table logic with CAG
+ Differential Privacy
+ Create synthetic data with differential privacy guarantees
+ Targeted Sampling
+ Create targeted synthetic data
+ XSynthesizers
+ Boost synthetic data quality with advanced synthesizers
+ Pricing
+ SDV Plans
+ Flexible, scalable pricing
+ Integrations
+ AI Connectors
+ Integrate SDV with your database: metadata, import, export
+ Ready to get started? Try it out 
+ Solutions 
+ Use AI-generated synthetic data for
+ Software Testing
+ Boost developer productivity with access to realistic test data
+ Simulating Scenarios
+ Generate scenarios for AI models and agents
+ Training AI Models
+ Overcome the shortage of data to train your AI models
+ Sharing Data
+ Share data externally to enhance collaboration outcomes
+ Solution accelerators
+ AI Connectors
+ Integrate SDV with your database: metadata, import, export
+ Constraint Augmented Generation
+ Apply complex multi-table logic with CAG
+ Differential Privacy
+ Create synthetic data with differential privacy guarantees
+ Targeted Sampling
+ Create targeted synthetic data
+ XSynthesizers
+ Boost synthetic data quality with advanced synthesizers
+ Ready to get started? Try it out 
+ Resources 
+ Learning
+ DataCebo hub
+ Access resources to accelerate your synthetic data journey
+ Blog
+ Insights on synthetic data, our products and industry news
+ Basetransformer
+ Engineering perspectives from the core SDV team
+ Research
+ Our pioneering research on synthetic data and its use cases
+ Customer stories
+ Successful stories and deployments with SDV
+ SDV Docs
+ Documentation and demos to learn more about SDV
+ News and events
+ Newsroom
+ Our latest media coverage and expert industry insights
+ Announcements
+ Our latest announcements about product and company
+ Get help
+ Support
+ Access docs, case studies, and learning resources
+ Licenses
+ See terms, conditions, and licensing for SDV products
+ Release notes
+ Explore the newest features in SDV Enterprise
+ DataCebo Forum
+ Discuss SDV features, ask questions, and receive help
+ Ready to get started? Try it out 
+ Pricing 
+ Contact 
+ Log in 
+ Get Started 
+ Ready to get started? Try it out 
+ SDV Pricing
+ Explore SDV Community for free
+ SDV Community
+ No cost 
+ A platform to get your synthetic data journey started.
+ Try Now 
+ Modeling ability
+ 5 data types
+ 5 basic constraints
+ 9 models
+ Integrations
+ Native support for CSV and Excel files
+ Support for local filetypes 
+ Support
+ Support via DataCebo Forum 
+ Limited commercial use:
+ Business Source License 
+ Start with SDV Enterprise
+ SDV Enterprise Base
+ $500 /mo + usage 
+ per user 
+ Low-cost entry point. Save with usage-based pricing and prove ROI.
+ Get Started 
+ Modeling ability
+ 12+ models
+ 10+ data types 
+ Integrations
+ AI Connectors available as add-on bundle 
+ Support
+ Dedicated support via DataCebo Forum 
+ Terms & Conditions:
+ Operations License 
+ Add SDV Bundles
+ SDV Bundles
+ $250 /mo /bundle + usage 
+ per user 
+ Customize your SDV Enterprise plan with add-on bundles.
+ Get Started 
+ Synthetic data accelerators
+ Constraint Augmented Generation 
+ XSynthesizers 
+ Targeted Sampling 
+ Differential Privacy 
+ Integrations
+ AI Connectors with access to 5+ database connectors and support for on-demand connectors
+ Support
+ Dedicated support via DataCebo Forum 
+ Terms & Conditions:
+ Operations License 
+ Usage-Based Pricing
+ Pay as you go! With our usage-based pricing, only pay for the synthetic data that you create. 
+Set a spending cap to manage your monthly cost.
+ Get Started 
+ Explore SDV Bundles
+ SDV Enterprise users have the option to purchase optional add-ons called SDV Bundles .
+ Bundles allow you to access additional features for specific needs.
+ AI Connectors
+ Directly integrate SDV with your database. Includes metadata, data import, and synthetic data export.
+ Turn enterprise databases into synthetic databases with minimal setup.
+ AI Connectors
+ Directly integrate SDV with your database. Includes metadata, data import, and synthetic data export.
+ Explore more 
+ Automatic Schema Discovery
+ Detects tables, keys, constraints, relationships, and lineage.
+ End-to-End Data Movement
+ Imports training data and exports synthetic database clones.
+ CAG
+ Use Constraint Augmented Generation (CAG) to apply complex logic between multiple tables.
+ Generate synthetic data that preserves hidden business rules and remains valid by design.
+ CAG
+ Use Constraint Augmented Generation (CAG) to apply complex logic between multiple tables.
+ Explore more 
+ Automatic Rule Detection
+ Discovers hidden constraints, relationships, and business logic.
+ Validity Enforcement
+ Ensures generated data follows rules during sampling.
+ Differential Privacy 
+ Transform and create synthetic data with differential privacy guarantees.
+ Protect sensitive information with provable privacy guarantees built into model training.
+ Differential Privacy 
+ Transform and create synthetic data with differential privacy guarantees.
+ Explore more 
+ Privacy-Utility Controls
+ Tune the balance between privacy protection and data usefulness.
+ Privacy Risk Testing
+ Evaluate models against simulated privacy attacks before deployment.
+ Cost Calculator
+ Estimate your maximum monthly cost per user.
+ Number of Bundles
+ Each bundle costs an additional $ 250 /month/user.
+ Bundles add extra functionality to SDV Enterprise base
+ Maximum Usage Cap (USD)
+ Set your monthly usage cap
+ $ 
+ Your Estimated Maximum Monthly Cost
+ This is the maximum you will pay in a month.
+ Monthly Subscription
+ Base price ($500) + 1 bundle(s) ($250 each)
+ $ 750.00
+ Monthly Usage (Maximum Cap)
+ Your set usage cap
+ $ 100
+ Total Estimated Maximum Cost
+ Subscription + Usage
+ $ 850
+ per month (USD)
+ You will only be charged for actual usage up to the maximum cap you set.
+ Frequently Asked Questions
+ We want you to find the plan that is best aligned with your requirements. Below are some common Q&A that might be helpful.
+ How can I confirm whether my usage is permitted?
+ To ensure a pla
+
+=== [meta] https://datacebo.com/sdv-dev/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/sdv-dev/SDV
+<div align="center">
+<br/>
+<p align="center">
+    <i>This repository is part of <a href="https://sdv.dev">The Synthetic Data Vault Project</a>, a project from <a href="https://datacebo.com">DataCebo</a>.</i>
+</p>
+
+[![Dev Status](https://img.shields.io/badge/Dev%20Status-5%20--%20Production%2fStable-green)](https://pypi.org/search/?c=Development+Status+%3A%3A+5+-+Production%2FStable)
+[![PyPi Shield](https://img.shields.io/pypi/v/SDV.svg)](https://pypi.python.org/pypi/SDV)
+[![Unit Tests](https://github.com/sdv-dev/SDV/actions/workflows/unit.yml/badge.svg?branch=main)](https://github.com/sdv-dev/SDV/actions/workflows/unit.yml?query=branch%3Amain)
+[![Integration Tests](https://github.com/sdv-dev/SDV/actions/workflows/integration.yml/badge.svg?branch=main)](https://github.com/sdv-dev/SDV/actions/workflows/integration.yml?query=branch%3Amain)
+[![Coverage Status](https://codecov.io/gh/sdv-dev/SDV/branch/main/graph/badge.svg)](https://codecov.io/gh/sdv-dev/SDV)
+[![Downloads](https://static.pepy.tech/personalized-badge/sdv?period=total&units=international_system&left_color=grey&right_color=blue&left_text=Downloads)](https://pepy.tech/project/sdv)
+[![Colab](https://img.shields.io/badge/Tutorials-Try%20now!-orange?logo=googlecolab)](https://docs.sdv.dev/sdv/demos)
+[![Forum](https://img.shields.io/badge/Forum-Join%20now!-36C5F0)](https://forum.datacebo.com)
+
+<div align="left">
+<br/>
+<p align="center">
+<a href="https://github.com/sdv-dev/SDV">
+<img align="center" width=40% src="https://github.com/sdv-dev/SDV/blob/stable/docs/images/SDV-logo.png"></img>
+</a>
+</p>
+</div>
+
+</div>
+
+# Overview
+
+The **Synthetic Data Vault** (SDV) is a Python library designed to be your one-stop shop for
+creating tabular synthetic data. The SDV uses a variety of machine learning algorithms to learn
+patterns from your real data and emulate them in synthetic data.
+
+## Features
+:brain: **Create synthetic data using machine learning.** The SDV offers multiple models, ranging
+from classical statistical methods (GaussianCopula) to deep learning methods (CTGAN). Generate
+data for single tables, multiple connected tables or sequential tables.
+
+:bar_chart: **Evaluate and visualize data.** Compare the synthetic data to the real data against a
+variety of measures. Diagnose problems and generate a quality report to get more insights.
+
+:arrows_counterclockwise: **Preprocess, anonymize and define constraints.** Control data
+processing to improve the quality of synthetic data, choose from different types of anonymization
+and define business rules in the form of logical constraints.
+
+| Important Links                               |                                                                                                     |
+| --------------------------------------------- | ----------------------------------------------------------------------------------------------------|
+| [![][Colab Logo] **Tutorials**][Tutorials]    | Get some hands-on experience with the SDV. Launch the tutorial notebooks and run the code yourself. |
+| :book: **[Docs]**                             | Learn how to use the SDV library with user guides and API references.                               |
+| :orange_book: **[Blog]**                      | Get more insights about using the SDV, deploying models and our synthetic data community.           |
+| :busts_in_silhouette: **[DataCebo Forum]**    | Discuss SDV features, ask questions, and receive help     .                                         |
+| :computer: **[Website]**                      | Check out the SDV website for more information about the project.                                   |
+
+[Website]: https://sdv.dev
+[Blog]: https://datacebo.com/blog
+[Docs]: https://bit.ly/sdv-docs
+[Repository]: https://github.com/sdv-dev/SDV
+[License]: https://github.com/sdv-dev/SDV/blob/main/LICENSE
+[Development Status]: https://pypi.org/search/?c=Development+Status+%3A%3A+5+-+Production%2FStable
+[DataCebo Forum]: https://forum.datacebo.com
+[Colab Logo]: https://github.com/sdv-dev/SDV/blob/stable/docs/images/google_colab.png
+[Tutorials]: https://docs.sdv.dev/sdv/demos
+
+# Install
+The SDV is publicly available under the [Business Source License](https://

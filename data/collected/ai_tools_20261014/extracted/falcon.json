@@ -1,43 +1,86 @@
 {
  "company": "Technology Innovation Institute (TII)",
- "one_liner_ko": "아랍에미리트 기술혁신연구소(TII)가 공개하는 오픈소스·오픈 액세스 대규모 언어모델(LLM) 제품군.",
- "what_it_does_ko": "Falcon은 TII가 만든 생성형 대규모 언어모델 시리즈로, Falcon-H1·Falcon-E·Falcon 3·Falcon Mamba 7B·Falcon 2·180B·40B 등 여러 크기의 모델과 REFINEDWEB 데이터셋으로 구성된다. 페이지에 따르면 모든 Falcon 모델을 오픈소스 또는 오픈 액세스로 공개하며, Falcon 180B는 연구·상업용 오픈 액세스 모델이다. 이미지 이해(Falcon Perception), 수학·코딩 추론(Falcon H1R 7B), 아랍어 특화(Falcon Arabic, Falcon-H1-Arabic) 모델도 있다. Falcon 3는 노트북 같은 가벼운 환경에서도 실행되도록 설계됐다고 소개한다.",
+ "one_liner_ko": "아부다비 기술혁신연구소(TII)가 만든, 누구나 쓸 수 있게 공개한 오픈소스 대형 언어 모델 제품군.",
+ "what_it_does_ko": "Falcon은 아랍에미리트 Technology Innovation Institute(TII)의 대형 언어 모델 제품군이다. 최신 Falcon-H1·Falcon-E는 트랜스포머와 Mamba를 결합한 하이브리드 구조로 효율을 높였다. Falcon 3는 텍스트뿐 아니라 이미지·영상·오디오를 처리하고 노트북 같은 가벼운 환경에서도 돌아간다. 아랍어 특화 모델(Falcon Arabic, Falcon-H1-Arabic)과 이미지 이해 모델 Falcon Perception도 있다. Falcon 180B·40B는 연구·상업용으로 공개됐다.",
  "key_features": [
-  "Transformer와 Mamba를 결합한 하이브리드 구조(Falcon-H1)",
-  "수학·코딩·논리 추론에 특화된 7B 모델(Falcon H1R 7B)",
-  "자연어 프롬프트로 이미지를 이해하는 멀티모달 모델(Falcon Perception)",
-  "아랍어 표준어·방언 특화 모델(Falcon Arabic, Falcon-H1-Arabic)",
-  "텍스트·이미지에 더해 영상·음성 데이터 처리(Falcon 3)",
-  "노트북 등 가벼운 인프라에서 실행 가능(Falcon 3)",
-  "상태공간 언어모델(SSLM) 구조의 Falcon Mamba 7B",
-  "학습용 REFINEDWEB 데이터셋 공개"
+  "트랜스포머+Mamba 하이브리드 구조의 Falcon-H1",
+  "수학·코딩 추론 특화 7B 모델 Falcon H1R",
+  "이미지·영상·오디오까지 처리하는 Falcon 3",
+  "노트북 같은 가벼운 환경에서도 실행",
+  "아랍어·방언 특화 Falcon Arabic",
+  "자연어로 이미지를 이해하는 Falcon Perception",
+  "상태공간 언어모델 Falcon Mamba 7B"
  ],
  "use_cases_ko": [
-  "연구자·기업이 연구 및 상업 용도로 모델을 내려받아 사용(Falcon 180B·40B)",
-  "아랍어권 서비스용 언어 AI 구축"
+  "연구·상업용 언어 모델 활용",
+  "아랍어권 서비스용 언어 AI"
  ],
- "pricing": {"free_tier": "불명", "plans": [], "pricing_url": null},
- "open_source": "오픈소스·오픈 액세스 (라이선스 이름은 페이지에 없음, 모델별 약관 별도)",
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "오픈소스(라이선스 이름은 페이지에 없음)",
  "api": "불명",
  "platforms": [],
  "korean_support": "불명",
  "evidence": [
-  {"field": "company", "url": "https://falconllm.tii.ae", "quote": "The Technology Innovation Institute (TII), a leading global scientific research center and the applied research pillar of Abu Dhabi"},
-  {"field": "one_liner_ko", "url": "https://falconllm.tii.ae", "quote": "That is why we decided to open source or open access all our Falcon models ."},
-  {"field": "what_it_does_ko", "url": "https://falconllm.tii.ae", "quote": "Falcon LLM is a generative large language model (LLM) that helps advance applications and use cases to future-proof our world."},
-  {"field": "what_it_does_ko", "url": "https://falconllm.tii.ae", "quote": "We launched our latest Falcon 180B LLM as an open access model for research and commercial use."},
-  {"field": "key_features", "url": "https://falconllm.tii.ae", "quote": "The unique hybrid architecture of Falcon-H1 (based on Transformer and Mamba architecture) gives you"},
-  {"field": "key_features", "url": "https://falconllm.tii.ae", "quote": "Falcon H1R 7B: Advanced reasoning capabilities in mathematics, coding, logic and instruction-following in a highly efficient 7B model."},
-  {"field": "key_features", "url": "https://falconllm.tii.ae", "quote": "Falcon Perception is a multimodal AI model that enables systems to see, read, and understand images using natural language prompts."},
-  {"field": "key_features", "url": "https://falconllm.tii.ae", "quote": "Built for the Modern Standard Arabic and dialects, Falcon Arabic brings advanced language AI to the Arabic-speaking world."},
-  {"field": "key_features", "url": "https://falconllm.tii.ae", "quote": "for the first time in the Falcon series – video and audio data."},
-  {"field": "key_features", "url": "https://falconllm.tii.ae", "quote": "Falcon 3 can run on light infrastructures, even laptops, without sacrificing performance"},
-  {"field": "key_features", "url": "https://falconllm.tii.ae", "quote": "Falcon Mamba 7B is the first open source released State Space Language Model (SSLM)"},
-  {"field": "key_features", "url": "https://falconllm.tii.ae", "quote": "as well as our high-quality REFINEDWEB dataset, form a suite of offerings."},
-  {"field": "use_cases_ko", "url": "https://falconllm.tii.ae", "quote": "Falcon 40B was the first home-grown open source, large language model (LLM) to be released with weights for research and commercial use."},
-  {"field": "use_cases_ko", "url": "https://falconllm.tii.ae", "quote": "Falcon Arabic brings advanced language AI to the Arabic-speaking world"},
-  {"field": "open_source", "url": "https://falconllm.tii.ae", "quote": "That is why we decided to open source or open access all our Falcon models ."},
-  {"field": "open_source", "url": "https://falconllm.tii.ae", "quote": "Explore the Falcon model family and the terms that govern how each model can be downloaded, used and deployed."}
+  {
+   "field": "company",
+   "url": "https://falconllm.tii.ae",
+   "quote": "Introducing the Technology Innovation Institute’s Falcon Perception Making Advanced AI accessible and Available to Everyone, Everywhere"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://falconllm.tii.ae",
+   "quote": "This latest iteration of TII’s open-source large language model series aims to democratize access to AI"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://falconllm.tii.ae",
+   "quote": "The unique hybrid architecture of Falcon-H1 (based on Transformer and Mamba architecture) gives you..."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://falconllm.tii.ae",
+   "quote": "Falcon 3 can run on light infrastructures, even laptops, without sacrificing performance"
+  },
+  {
+   "field": "key_features",
+   "url": "https://falconllm.tii.ae",
+   "quote": "Falcon H1R 7B: Advanced reasoning capabilities in mathematics, coding, logic and instruction-following in a highly efficient 7B model."
+  },
+  {
+   "field": "key_features",
+   "url": "https://falconllm.tii.ae",
+   "quote": "enabling the models to process not only text but also images, and – for the first time in the Falcon series – video and audio data."
+  },
+  {
+   "field": "key_features",
+   "url": "https://falconllm.tii.ae",
+   "quote": "Falcon Perception is a multimodal AI model that enables systems to see, read, and understand images using natural language prompts."
+  },
+  {
+   "field": "key_features",
+   "url": "https://falconllm.tii.ae",
+   "quote": "Built for the Modern Standard Arabic and dialects, Falcon Arabic brings advanced language AI to the Arabic-speaking world"
+  },
+  {
+   "field": "key_features",
+   "url": "https://falconllm.tii.ae",
+   "quote": "Falcon Mamba 7B is the first open source released State Space Language Model (SSLM)"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://falconllm.tii.ae",
+   "quote": "It's currently at the top of the Hugging Face Leaderboard for pre-trained Open Large Language Models and is available for both research and commercial use"
+  },
+  {
+   "field": "open_source",
+   "url": "https://falconllm.tii.ae",
+   "quote": "was the first home-grown open source, large language model (LLM) to be released with weights for research and commercial use."
+  }
  ],
- "mismatch": []
+ "mismatch": [],
+ "plan_change": []
 }

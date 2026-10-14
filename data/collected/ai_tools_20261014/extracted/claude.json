@@ -1,0 +1,61 @@
+{
+ "company": "Anthropic PBC",
+ "one_liner_ko": "안전을 최우선에 둔 AI 연구와 제품을 만드는 Anthropic의 AI 어시스턴트 Claude.",
+ "what_it_does_ko": "Claude는 Anthropic이 만든 AI 어시스턴트로 웹·데스크톱·모바일에서 채팅할 수 있다. 웹 검색, 파일 생성과 코드 실행, 대화 간 메모리, 앱·도구 연결, 아티팩트 만들기를 지원한다. 유료 플랜에서는 Claude Code, Claude Science, 프로젝트, Chrome·Microsoft 365 연동 등을 쓸 수 있다. Mythos·Fable·Opus·Sonnet·Haiku 모델군을 제공하며 개발자는 Claude Platform과 콘솔로 API를 쓴다.",
+ "key_features": [
+  "웹·데스크톱·모바일 채팅",
+  "웹 검색, 파일 생성 및 코드 실행",
+  "대화 간 메모리와 앱·도구 연결(커넥터)",
+  "아티팩트 만들기, Claude Design·Slides·Docs",
+  "Claude Code(코딩 도구)",
+  "Chrome 및 Microsoft 365에서 Claude 사용",
+  "음성 모드·리서치·Skills",
+  "Team·Enterprise용 SSO·감사 로그·SCIM 등 관리 기능"
+ ],
+ "use_cases_ko": [
+  "개인의 일상 업무(Pro: 일상적인 업무에)",
+  "2~150명 팀의 협업(Team 플랜)",
+  "대기업의 대규모 운영(Enterprise 플랜)"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Free $0, Sonnet·Haiku, 프로젝트 최대 5개)",
+  "plans": [
+   {"name": "Free", "price": 0, "currency": "USD", "period": "month", "limits": "모두에게 무료, 사용 한도 적용", "page_lang": "ko"},
+   {"name": "Pro", "price": 20, "currency": "USD", "period": "month", "limits": "월별 결제 $20, 연간 구독 시 월 $17(선불 $200)", "page_lang": "ko"},
+   {"name": "Pro (연간)", "price": 200, "currency": "USD", "period": "year", "limits": "선불 $200, 월 $17 상당", "page_lang": "ko"},
+   {"name": "Max", "price": 100, "currency": "USD", "period": "month", "limits": "$100부터, Pro보다 5배(Max 5x) 또는 20배(Max 20x) 사용량, 월 $100~$200 API 크레딧", "page_lang": "ko"},
+   {"name": "Team 스탠다드 시트", "price": 25, "currency": "USD", "period": "month", "limits": "시트당 월간 청구 $25, 연간 청구 시 $20, 2~150명", "page_lang": "ko"},
+   {"name": "Team 프리미엄 시트", "price": 125, "currency": "USD", "period": "month", "limits": "시트당 월간 청구 $125, 연간 청구 시 $100, 스탠다드보다 5배 사용량", "page_lang": "ko"},
+   {"name": "Enterprise", "price": 20, "currency": "USD", "period": "month", "limits": "시트당 월 $20(연간 청구) + API 요금으로 청구되는 사용량", "page_lang": "ko"}
+  ],
+  "pricing_url": "https://claude.com/ko/pricing"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["웹", "iOS", "안드로이드", "API"],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {"field": "company", "url": "https://www.anthropic.com/", "quote": "© 2026 Anthropic PBC"},
+  {"field": "one_liner_ko", "url": "https://www.anthropic.com/", "quote": "AI research and products that put safety at the frontier"},
+  {"field": "what_it_does_ko", "url": "https://claude.com/ko/pricing", "quote": "웹, 데스크톱, 모바일에서 채팅\n 웹 검색, 파일 생성 및 코드 실행\n 대화 간 메모리\n 앱과 도구 연결\n 아티팩트 만들기"},
+  {"field": "what_it_does_ko", "url": "https://www.anthropic.com/", "quote": "Models\n Mythos\n Fable\n Opus\n Sonnet\n Haiku"},
+  {"field": "key_features", "url": "https://claude.com/ko/pricing", "quote": "Claude Code\n Claude Science\n 프로젝트\n 더 많은 Claude 모델\n Chrome 및 Microsoft 365에서 Claude 사용"},
+  {"field": "key_features", "url": "https://claude.com/ko/pricing", "quote": "Claude Design, Slides, Docs"},
+  {"field": "key_features", "url": "https://claude.com/ko/pricing", "quote": "음성 모드"},
+  {"field": "key_features", "url": "https://claude.com/ko/pricing", "quote": "도메인 간 ID 관리 시스템(SCIM)"},
+  {"field": "use_cases_ko", "url": "https://claude.com/ko/pricing", "quote": "Pro\n 일상적인 업무에"},
+  {"field": "use_cases_ko", "url": "https://claude.com/ko/pricing", "quote": "2~150명 팀을 위한 플랜"},
+  {"field": "use_cases_ko", "url": "https://claude.com/ko/pricing", "quote": "대규모로 운영되는 대기업을 위한"},
+  {"field": "pricing", "url": "https://claude.com/ko/pricing", "quote": "$0\n 모두에게 무료"},
+  {"field": "pricing", "url": "https://claude.com/ko/pricing", "quote": "$17\n 연간 구독 할인 적용 시 월 요금 (선불 $200 ). 월별 결제 시 $20 ."},
+  {"field": "pricing", "url": "https://claude.com/ko/pricing", "quote": "$100부터\n 월"},
+  {"field": "pricing", "url": "https://claude.com/ko/pricing", "quote": "$20\n 연간 청구 시 시트당 월 요금. 월간 청구 시 $25 ."},
+  {"field": "pricing", "url": "https://claude.com/ko/pricing", "quote": "$100\n 연간 청구 시 시트당 월 요금. 월간 청구 시 $125 ."},
+  {"field": "pricing", "url": "https://claude.com/ko/pricing", "quote": "월 US$20/시트, 연간 청구. 사용 비용은 모델 및 작업에 따라 달라집니다."},
+  {"field": "api", "url": "https://claude.com/ko/pricing", "quote": "Claude Platform에서 개발할 수 있는 월 $100~$200 API 크레딧"},
+  {"field": "platforms", "url": "https://claude.com/ko/pricing", "quote": "웹, iOS, Android 및 데스크톱에서 채팅"},
+  {"field": "korean_support", "url": "https://claude.com/ko/pricing", "quote": "플랜 및 요금제 | Claude by Anthropic"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

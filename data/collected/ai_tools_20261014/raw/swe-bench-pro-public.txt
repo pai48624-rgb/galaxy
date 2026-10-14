@@ -1,0 +1,68 @@
+=== [home] https://labs.scale.com/leaderboard/swe_bench_pro (lang=en)
+SWE-Bench Pro Leaderboard AI Coding Benchmark | Scale 
+ [PAPERS] [BLOG] [LEADERBOARDS] ⌘K ⌘K 
+ Agentic 
+ Safety 
+ Frontier 
+ Legacy 
+ SWE-Bench Pro 
+ Humanity's Last Exam 
+ Humanity's Last Exam (Text Only) 
+ Adversarial Robustness 
+ Agentic Tool Use (Chat) 
+ Agentic Tool Use (Enterprise) 
+ Humanity's Last Exam (Preview) 
+ Humanity's Last Exam Text Only (Preview) 
+ Instruction Following 
+ Arabic 
+ Chinese 
+ Coding 
+ Japanese 
+ Korean 
+ Math 
+ Spanish 
+ 2026 Scale AI. All rights reserved.
+ SWE-Bench Pro
+ Evaluating challenging long-horizon software engineering tasks in public open source repositories
+ GitHub Dataset 
+ SWE-Bench Pro is a benchmark designed to provide a rigorous and realistic evaluation of AI agents for software engineering. It was developed to address several limitations in existing benchmarks by tackling four key challenges:
+ Data Contamination : Models have likely seen the evaluation code during training, making it hard to know if they are problem-solving or recalling a memorized solution.
+ Limited Task Diversity : Many benchmarks fail to capture the full spectrum of real-world software challenges and instead focus on simple utility libraries.
+ Oversimplified Problems : Ambiguous or underspecified issues are often removed from benchmarks, which doesn't reflect a real developer's workflow.
+ Unreliable and Irreproducible Testing : Inconsistent setups make it difficult to know if a solution truly works or if the environment is just configured incorrectly.
+ SWE-Bench Pro addresses these gaps by sourcing tasks from diverse and complex codebases, including consumer applications, B2B services, and developer tools. To reduce contamination risk, the public and held-out OSS subsets use strong copyleft licenses (e.g., GPL). The private subset consists of proprietary codebases from startup partners. 
+ The benchmark is significantly more challenging than its predecessors; top models score around 23% on the SWE-Bench Pro public set, compared to 70%+ on SWE-Bench Verified. This provides a more accurate measure of an agent’s true problem-solving capabilities in environments that mirror professional software development.
+ Resources: 
+ Read the paper 
+ Check out the GitHub 
+ View trajectories 
+ Methodology
+ Each problem in SWE-Bench Pro is created using a four-stage workflow:
+ Sourcing : Repositories are selected from a curated set of public and private repositories
+ Environment Creation : Professional engineers build reproducible Docker-based environments, integrating all dependencies and build tools to ensure the codebase and tests run out-of-the-box.
+ Harvesting : Problems are extracted via commit scraping. Pairs of consecutive commits are retained if they (a) fix a bug or introduce a feature, (b) demonstrate a fail-to-pass transition for new tests, and (c) include pass-to-pass tests confirming unrelated functionality remains intact.
+ Augmentation : Human experts organize unstructured commits and issue metadata into two artifacts: a problem statement and a requirements brief with an optional interface. These provide sufficient context to reproduce the gold patch without prescribing an implementation. We employ three human-in-the-loop checkpoints: (1) manual environment construction, (2) human augmentation of the issue description, requirements, and interface, and (3) human verification of tests (relevance and flakiness).
+ Primary Metric: Resolve Rate
+ The primary metric is Resolve Rate, which is the percentage of tasks an agent successfully resolves. A task is marked as "resolved" only if a submitted code patch satisfies two strict conditions within the evaluation environment:
+ Issue Resolution: The patch must fix the specific bug or implement the feature. This is verified when the new "fail-to-pass" tests, which fail on the original code, now pass.
+ No Regressions: The patch must not break any existing functionality. This is verified when all pre-existing "pass-to-pass" tests continue to pass after the patch is applied.
+ Dataset Design
+ The dataset is guided by four foundational principles:
+ Non-Contamination by Design: The benchmark is constructed from GPL-style copyleft repositories and private proprietary codebases, creating legal and access barriers that reduce the likelihood of contamination. This licensing model makes it improbable that the code was included in proprietary training corpora, reducing the risk of data leakage and enforcing true generalization.
+ Diverse and Industrially-Relevant Tasks : Problems come from consumer-facing apps, B2B platforms, and developer tools, requiring reasoning across varied architectures and development patterns.
+ Balanced and Challenging Construction : Each repository contributes 50–100+ problems, with reference solutions requiring medium-to-large modifications (averaging 107.4 lines of code across 4.1 files). This prevents overfitting and ensures non-trivial problem-solving.
+ Human-Augmented Problem Specification: Instead of discarding under-specified issues, human experts refine them to add context and clarify requirements. This preserves the original technical challenge while ensuring solvability.
+ Dataset Summary
+ SWE-Bench Pro is a large-scale benchmark containing 1865 total tasks across 41 professional repositories. The benchmark is composed of three distinct subsets:
+ The Public Set: This set contains 731 instances and serves as the main public-facing benchmark. It is sourced exclusively from publicly available, open-source repositories that use strong copyleft licenses such as GPL. This licensing strategy acts as a legal deterrent against the code's inclusion in model training data, ensuring the benchmark is contamination-resistant by design. Performance on this dataset is tracked on the Public Leaderboard.
+ The Private Set: A first-of-its-kind collection, this set includes 276 instances sourced from 18 private, proprietary codebases from startups. These codebases were acquired through partnerships and are not publicly accessible. This set is designed as the ultimate test of generalization on complex, industrial-grade code that is not publicly accessible and is unlikely to have been included in model training data. Results from this challenging dataset are reported on a separate Leaderboard.
+ The Held-out Set: The largest of the three, this private set contains 858 instances. Similar to the public set, it is sourced from a separate group of public repositories with copyleft licenses. This entire dataset is held-out for future analysis and internal evaluations. Therefore, the results for this set will not be published on the public leaderboards.
+ Distributions in the public set of SWE-Bench Pro. The benchmark contains complex, long-horizon tasks requiring edits across multiple files and repositories. (1) Lines of code changed per solution patch. (2) Distribution of tasks across source repositories. (3) Number of files modified per task. (4) Distribution of tasks across source repositories, including categories spanning bug fixes, feature requests, optimizations, security updates, and UI/UX changes. 
+ Results: SWE-Bench Verified vs. SWE-Bench Pro
+ We ran frontier models on Pro using the SWE-Agent scaffold and here’s what we found (all charts reflect the public dataset):
+ Massive Performance Drop on SWE-Bench Pro: A major finding is the significant drop in performance for all models when moving from the SWE-Bench Verified benchmark to the more challenging SWE-Bench Pro. While most top models score over 70% on
+
+=== [meta] https://labs.scale.com/leaderboard/swe_bench_pro
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: Korean

@@ -1,0 +1,45 @@
+{
+ "company": "Google",
+ "one_liner_ko": "어떤 아이디어든 실현하도록 돕는 구글의 가장 지능적인 모델로, 에이전트형 워크플로와 코딩에 강하다.",
+ "what_it_does_ko": "Gemini 3는 구글이 2025년 11월 18일 소개한 모델로, 최첨단 추론을 바탕으로 주요 AI 벤치마크에서 이전 버전보다 뛰어난 결과를 낸다고 밝힌다. Gemini 3 Pro는 코딩에서 2.5 Pro를 넘어서며 에이전트형 워크플로와 복잡한 제로샷 작업에 강하다. Google AI Studio와 Vertex AI의 Gemini API로 프리뷰 제공되며, Google Antigravity·Gemini CLI·Android Studio 등 개발 도구에서도 쓸 수 있다. 셸 명령을 제안하는 클라이언트 측 bash 도구도 함께 공개되었다.",
+ "key_features": [
+  "에이전트형 코딩(Terminal-Bench 2.0 54.2%)",
+  "자연어 프롬프트로 앱을 만드는 바이브 코딩",
+  "멀티모달 이해·시각·공간 추론",
+  "Google Antigravity 에이전트 개발 플랫폼과 연동",
+  "Gemini CLI·Android Studio 등 개발 도구에서 사용",
+  "셸 명령을 제안하는 클라이언트 측 bash 도구"
+ ],
+ "use_cases_ko": [
+  "개발자가 에이전트·코딩 워크플로에 적용",
+  "바이브 코더가 자연어로 앱 제작"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Google AI Studio에서 사용량 제한과 함께 무료)",
+  "plans": [
+   {"name": "Gemini 3 Pro 프리뷰 입력 (프롬프트 200k 토큰 이하)", "price": 2, "currency": "USD", "period": "usage", "limits": "입력 100만 토큰당", "page_lang": "en-us"},
+   {"name": "Gemini 3 Pro 프리뷰 출력 (프롬프트 200k 토큰 이하)", "price": 12, "currency": "USD", "period": "usage", "limits": "출력 100만 토큰당", "page_lang": "en-us"}
+  ],
+  "pricing_url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-3-developers/"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["웹", "API"],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {"field": "company", "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-3-developers/", "quote": "Google is launching Gemini 3 Pro, their most intelligent model, which outperforms previous versions in AI benchmarks and coding tasks."},
+  {"field": "one_liner_ko", "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-3-developers/", "quote": "Today we are introducing Gemini 3, our most intelligent model that can help bring any idea to life."},
+  {"field": "what_it_does_ko", "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-3-developers/", "quote": "It also surpasses 2.5 Pro at coding, mastering both agentic workflows and complex zero-shot tasks."},
+  {"field": "key_features", "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-3-developers/", "quote": "Gemini 3 Pro scores 54.2% points on Terminal-Bench 2.0, which tests a model’s tool use ability to operate a computer via terminal."},
+  {"field": "key_features", "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-3-developers/", "quote": "Gemini 3 Pro excels in multimodal understanding, visual reasoning, and spatial reasoning for various applications."},
+  {"field": "key_features", "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-3-developers/", "quote": "With Gemini 3, we are releasing a client-side bash tool that empowers the model to propose shell commands as part of agentic workflows"},
+  {"field": "use_cases_ko", "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-3-developers/", "quote": "The model unlocks \"vibe coding,\" letting you create apps from natural language prompts in Google AI Studio."},
+  {"field": "pricing", "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-3-developers/", "quote": "It’s available in preview at $2/million input tokens and $12/million output tokens for prompts 200k tokens or less through the Gemini API"},
+  {"field": "pricing", "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-3-developers/", "quote": "is available, with rate limits, free of charge in Google AI Studio"},
+  {"field": "api", "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-3-developers/", "quote": "You can use Gemini 3 Pro in Google AI Studio, Vertex AI, and developer tools like Google Antigravity."},
+  {"field": "platforms", "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-3-developers/", "quote": "You can access it through the Gemini API in Google AI Studio and Vertex AI, or try the Google Antigravity platform for agentic development."},
+  {"field": "korean_support", "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-3-developers/", "quote": "화면에 보이는 언어 이름: 한국어, English, 日本語, 中文, Español, Français"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

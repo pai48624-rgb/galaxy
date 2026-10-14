@@ -1,0 +1,446 @@
+=== [home] https://docs.pytorch.org/serve/ (lang=en)
+TorchServe — PyTorch/Serve master documentation 
+ -->
+ Learn
+ Get Started 
+ Run PyTorch locally or get started quickly with one of the supported cloud platforms
+ Tutorials 
+ Whats new in PyTorch tutorials
+ Learn the Basics 
+ Familiarize yourself with PyTorch concepts and modules
+ PyTorch Recipes 
+ Bite-size, ready-to-deploy PyTorch code examples
+ Intro to PyTorch - YouTube Series 
+ Master PyTorch basics with our engaging YouTube tutorial series
+ Ecosystem
+ Tools 
+ Learn about the tools and frameworks in the PyTorch Ecosystem
+ Community 
+ Join the PyTorch developer community to contribute, learn, and get your questions answered
+ Forums 
+ A place to discuss PyTorch code, issues, install, research
+ Developer Resources 
+ Find resources and get questions answered
+ Contributor Awards - 2024 
+ Award winners announced at this year's PyTorch Conference
+ Edge
+ About PyTorch Edge 
+ Build innovative and privacy-aware AI experiences for edge devices
+ ExecuTorch 
+ End-to-end solution for enabling on-device inference capabilities across mobile and edge devices
+ ExecuTorch Docs 
+ Docs
+ PyTorch 
+ Explore the documentation for comprehensive guidance on how to use PyTorch
+ PyTorch Domains 
+ Read the PyTorch Domains documentation to learn more about domain-specific libraries
+ Blogs & News 
+ PyTorch Blog 
+ Catch up on the latest technical news and happenings
+ Community Blog 
+ Stories from the PyTorch ecosystem
+ Videos 
+ Learn about the latest PyTorch tutorials, new, and more 
+ Community Stories 
+ Learn how our community solves real, everyday machine learning problems with PyTorch
+ Events 
+ Find events, webinars, and podcasts
+ Newsletter 
+ Stay up-to-date with the latest updates
+ About
+ PyTorch Foundation 
+ Learn more about the PyTorch Foundation
+ Governing Board 
+ Cloud Credit Program 
+ Technical Advisory Council 
+ Staff 
+ Contact Us 
+ Become a Member
+ --->
+ Table of Contents 
+ master 
+ Contents: 
+ TorchServe 
+ Troubleshooting Guide 
+ Performance Guide 
+ Batch Inference with TorchServe 
+ Code Coverage 
+ Advanced configuration 
+ Custom Service 
+ TorchServe default inference handlers 
+ Logging in Torchserve 
+ TorchServe Metrics 
+ Model Zoo 
+ Request Envelopes 
+ Running TorchServe 
+ TorchServe model snapshot 
+ TorchServe on Windows 
+ TorchServe on Windows Subsystem for Linux (WSL) 
+ Torchserve Use Cases 
+ TorchServe Workflows 
+ Serving large models with Torchserve 
+ FAQ’S 
+ Hardware Support: 
+ AMD Support 
+ Apple Silicon Support 
+ TorchServe on linux aarch64 - Experimental 
+ Running TorchServe with NVIDIA MPS 
+ Intel Extension for PyTorch 
+ Service APIs: 
+ TorchServe gRPC API 
+ Inference API 
+ Management API 
+ Metrics API 
+ TorchServe REST API 
+ Workflow Inference API 
+ Management API 
+ Developer APIs: 
+ ts package 
+ ts.torch_handler.request_envelope package 
+ ts.torch_handler package 
+ ts.metrics package 
+ ts.model_service package 
+ ts.protocol package 
+ serve 
+ Docs
+ >
+ TorchServe
+ Shortcuts
+ TorchServe ¶ 
+ ⚠️ Notice: Limited Maintenance 
+ This project is no longer actively maintained. While existing releases remain available, there are no planned updates, bug fixes, new features, or security patches. Users should be aware that vulnerabilities may not be addressed.
+ TorchServe is a performant, flexible and easy to use tool for serving PyTorch models in production.
+ What’s going on in TorchServe?
+ High performance Llama 2 deployments with AWS Inferentia2 using TorchServe 
+ Naver Case Study: Transition From High-Cost GPUs to Intel CPUs and oneAPI powered Software with performance 
+ Run multiple generative AI models on GPU using Amazon SageMaker multi-model endpoints with TorchServe and save up to 75% in inference costs 
+ Deploying your Generative AI model in only four steps with Vertex AI and PyTorch 
+ PyTorch Model Serving on Google Cloud TPUv5 
+ Monitoring using Datadog 
+ Torchserve Performance Tuning, Animated Drawings Case-Study 
+ Walmart Search: Serving Models at a Scale on TorchServe 
+ Scaling inference on CPU with TorchServe 
+ TorchServe C++ backend 
+ TorchServe with Intel® Extension for PyTorch* 
+ Grokking Intel CPU PyTorch performance from first principles: a TorchServe case study 
+ Grokking Intel CPU PyTorch performance from first principles( Part 2): a TorchServe case study 
+ Case Study: Amazon Ads Uses PyTorch and AWS Inferentia to Scale Models for Ads Processing 
+ Optimize your inference jobs using dynamic batch inference with TorchServe on Amazon SageMaker 
+ Using AI to bring children’s drawings to life 
+ Model Serving in PyTorch 
+ Evolution of Cresta’s machine learning architecture: Migration to AWS and PyTorch 
+ Explain Like I’m 5: TorchServe 
+ How to Serve PyTorch Models with TorchServe 
+ How to deploy PyTorch models on Vertex AI 
+ Quantitative Comparison of Serving Platforms 
+ All
+ TorchServe Quick Start
+ Topics: Quick Start 
+ Learn how to install TorchServe and serve models.
+ Running TorchServe
+ Topics: Running TorchServe 
+ Indepth explanation of how to run TorchServe
+ Why TorchServe
+ Topics: Examples 
+ Various TorchServe use cases
+ TorchServe GenAI Use Cases
+ Topics: Use Cases 
+ Showcasing GenAI deployment scenarios and use cases
+ Performance
+ Topics: Performance,Troubleshooting 
+ Guides and best practices on how to improve perfromance when working with TorchServe
+ Metrics
+ Topics: Metrics,Performance,Troubleshooting 
+ Collecting and viewing Torcherve metrics
+ Large Model Inference
+ Topics: Large-Models,Performance 
+ Serving Large Models with TorchServe
+ Troubleshooting
+ Topics: Troubleshooting,Performance 
+ Various updates on Torcherve and use cases.
+ TorchServe Security Policy
+ Topics: Security 
+ Security Policy
+ FAQs
+ Topics: FAQS 
+ Various frequently asked questions.
+ Next 
+ Previous 
+ © Copyright 2020, PyTorch Serve Contributors.
+ Built with Sphinx using a theme provided by Read the Docs .
+ TorchServe 
+ Docs
+ Access comprehensive developer documentation for PyTorch
+ View Docs 
+ Tutorials
+ Get in-depth tutorials for beginners and advanced developers
+ View Tutorials 
+ Resources
+ Find development resources and get your questions answered
+ View Resources 
+ PyTorch 
+ Get Started 
+ Features 
+ Ecosystem 
+ Blog 
+ Contributing 
+ Resources 
+ Tutorials 
+ Docs 
+ Discuss 
+ Github Issues 
+ Brand Guidelines 
+ Stay up to date
+ Facebook 
+ Twitter 
+ YouTube 
+ LinkedIn 
+ PyTorch Podcasts
+ Spotify 
+ Apple 
+ Google 
+ Amazon 
+ Terms 
+ |
+ Privacy 
+ © Copyright The Linux Foundation. The PyTorch Foundation is a project of The Linux Foundation.
+ For web site terms of use, trademark policy and other policies applicable to The PyTorch Foundation please see
+ www.linuxfoundation.org/policies/ . The PyTorch Foundation supports the PyTorch open source
+ project, which has been established as PyTorch Project a Series of LF Projects, LLC. For policies applicable to the PyTorch Project a Series of LF Projects, LLC,
+ please see www.lfprojects.org/policies/ .
+ To analyze traffic and optimize your experience, we serve cookies on this site. By clicking or navigating, you agree to allow our usage of cookies. As the current maintainers of this site, Facebook’s Cookies Policy applies. Learn more, including about available controls: Cookies Policy .
+ Learn 
+ Get Started 
+ Tutorials 
+ Learn the Basics 
+ PyTorch Recipes 
+ Introduction to PyTorch - YouTube Series 
+ Ecosystem 
+ Tools 
+ Community 
+ Forums 
+ Developer Resources 
+ Contributor Awards - 2024 
+ Edge 
+ About PyTorch Edge 
+ ExecuTorch 
+ ExecuTorch Documentation 
+ Docs 
+ PyTorch 
+ PyTorch Domains 
+ Blog & News 
+ PyTorch Blog 
+ Community Blog 
+ Vi
+
+=== [about] https://pytorch.org/features/ (lang=en-US)
+End-to-end Machine Learning Framework - PyTorch 
+ Skip to main content 
+ Join us at PyTorch Conference North America · Oct 20-21 · San Jose, CA 
+ Search 
+ Close Search 
+ search 
+ Menu 
+ Learn 
+ Get Started 
+ Tutorials 
+ Learn the Basics 
+ PyTorch Recipes 
+ Intro to PyTorch – YouTube Series 
+ Videos 
+ PyTorch Certification 
+ Community 
+ Landscape 
+ Join the Ecosystem 
+ Community Hub 
+ Forums 
+ Developer Resources 
+ Events 
+ Working Groups 
+ Meeting Calendar 
+ Contributor Awards 
+ Ambassadors 
+ Projects 
+ PyTorch 
+ Executorch 
+ vLLM 
+ DeepSpeed 
+ Ray 
+ Helion 
+ Safetensors 
+ Host Your Project 
+ Docs 
+ PyTorch 
+ Domains 
+ Blog & News 
+ Blog 
+ Announcements 
+ Case Studies 
+ Newsletter 
+ About 
+ PyTorch Foundation 
+ Members 
+ Governing Board 
+ Technical Advisory Council 
+ Cloud Credit Program 
+ Staff 
+ Contact 
+ Brand Guidelines 
+ JOIN 
+ search 
+ End-to-end Machine Learning Framework
+ PyTorch enables fast, flexible experimentation and efficient production through a user-friendly front-end, distributed training, and ecosystem of tools and libraries.
+ Get Started 
+import torch 
+class MyModule(torch.nn.Module): 
+ def __init__(self, N, M): 
+ super(MyModule, self).__init__() 
+ self.weight = torch.nn.Parameter(torch.rand(N, M)) 
+ def forward(self, input): 
+ if input.sum() > 0: 
+ output = self.weight.mv(input) 
+ else: 
+ output = self.weight + input 
+ return output 
+ # Compile the model code to a static representation 
+ my_script_module = torch.jit.script(MyModule(3, 4)) 
+ # Save the compiled code and model data so it can be loaded elsewhere 
+ my_script_module.save("my_script_module.pt") 
+ Production Ready
+ With TorchScript, PyTorch provides ease-of-use and flexibility in eager mode, while seamlessly transitioning to graph mode for speed, optimization, and functionality in C++ runtime environments.
+ TorchServe
+ TorchServe is an easy to use tool for deploying PyTorch models at scale. It is cloud and environment agnostic and supports features such as multi-model serving, logging, metrics and the creation of RESTful endpoints for application integration.
+## Convert the model from PyTorch to TorchServe format 
+torch-model-archiver --model-name densenet161 \ 
+--version 1.0 --model-file serve/examples/image_classifier/densenet_161/model.py \ 
+--serialized-file densenet161-8d451a50.pth \ 
+--extra-files serve/examples/image_classifier/index_to_name.json \ 
+--handler image_classifier 
+## Host your PyTorch model 
+torchserve --start --model-store model_store --models densenet161=densenet161.mar 
+import torch.distributed as dist 
+from torch.nn.parallel import DistributedDataParallel 
+dist.init_process_group(backend='gloo') 
+model = DistributedDataParallel(model) 
+ Distributed Training
+ Optimize performance in both research and production by taking advantage of native support for asynchronous execution of collective operations and peer-to-peer communication that is accessible from Python and C++.
+ Mobile (Experimental)
+ PyTorch supports an end-to-end workflow from Python to deployment on iOS and Android. It extends the PyTorch API to cover common preprocessing and integration tasks needed for incorporating ML in mobile applications.
+## Save your model 
+torch.jit.script(model).save("my_mobile_model.pt") 
+## iOS prebuilt binary 
+pod ‘LibTorch’ 
+## Android prebuilt binary 
+implementation 'org.pytorch:pytorch_android:1.3.0' 
+## Run your model (Android example) 
+Tensor input = Tensor.fromBlob(data, new long[]{1, data.length}); 
+IValue output = module.forward(IValue.tensor(input)); 
+float[] scores = output.getTensor().getDataAsFloatArray(); 
+import torchvision.model
+
+=== [meta] https://docs.pytorch.org/serve/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/pytorch/serve
+<font size="5"> ⚠️ Notice: Limited Maintenance </font>
+
+This project is no longer actively maintained. While existing releases remain available, there are no planned updates, bug fixes, new features, or security patches. Users should be aware that vulnerabilities may not be addressed.
+
+# ❗ANNOUNCEMENT: Security Changes❗
+TorchServe now enforces token authorization enabled and model API control disabled by default. These security features are intended to address the concern of unauthorized API calls and to prevent potential malicious code from being introduced to the model server. Refer the following documentation for more information: [Token Authorization](https://github.com/pytorch/serve/blob/master/docs/token_authorization_api.md), [Model API control](https://github.com/pytorch/serve/blob/master/docs/model_api_control.md)
+
+# TorchServe
+
+
+![Nightly build](https://github.com/pytorch/serve/actions/workflows/torchserve-nightly-build.yml/badge.svg)
+![Docker Nightly build](https://github.com/pytorch/serve/actions/workflows/docker-nightly-build.yml/badge.svg)
+![Benchmark Nightly](https://github.com/pytorch/serve/actions/workflows/benchmark_nightly.yml/badge.svg)
+![Docker Regression Nightly](https://github.com/pytorch/serve/actions/workflows/regression_tests_docker.yml/badge.svg)
+![KServe Regression Nightly](https://github.com/pytorch/serve/actions/workflows/kserve_cpu_tests.yml/badge.svg)
+![Kubernetes Regression Nightly](https://github.com/pytorch/serve/actions/workflows/kubernetes_tests.yml/badge.svg)
+
+TorchServe is a flexible and easy-to-use tool for serving and scaling PyTorch models in production.
+
+Requires python >= 3.8
+
+```bash
+curl http://127.0.0.1:8080/predictions/bert -T input.txt
+```
+### 🚀 Quick start with TorchServe
+
+```bash
+# Install dependencies
+python ./ts_scripts/install_dependencies.py
+
+# Include dependencies for accelerator support with the relevant optional flags
+python ./ts_scripts/install_dependencies.py --rocm=rocm61
+python ./ts_scripts/install_dependencies.py --cuda=cu121
+
+# Latest release
+pip install torchserve torch-model-archiver torch-workflow-archiver
+
+# Nightly build
+pip install torchserve-nightly torch-model-archiver-nightly torch-workflow-archiver-nightly
+```
+
+### 🚀 Quick start with TorchServe (conda)
+
+```bash
+# Install dependencies
+python ./ts_scripts/install_dependencies.py
+
+# Include depeendencies for accelerator support with the relevant optional flags
+python ./ts_scripts/install_dependencies.py --rocm=rocm61
+python ./ts_scripts/install_dependencies.py --cuda=cu121
+
+# Latest release
+conda install -c pytorch torchserve torch-model-archiver torch-workflow-archiver
+
+# Nightly build
+conda install -c pytorch-nightly torchserve torch-model-archiver torch-workflow-archiver
+```
+
+[Getting started guide](docs/getting_started.md)
+
+### 🐳 Quick Start with Docker
+
+```bash
+# Latest release
+docker pull pytorch/torchserve
+
+# Nightly build
+docker pull pytorch/torchserve-nightly
+```
+
+Refer to [torchserve docker](docker/README.md) for details.
+
+### 🤖 Quick Start LLM Deployment
+
+#### VLLM Engine
+```bash
+# Make sure to install torchserve with pip or conda as described above and login with `huggingface-cli login`
+python -m ts.llm_launcher --model_id meta-llama/Llama-3.2-3B-Instruct --disable_token_auth
+
+# Try it out
+curl -X POST -d '{"model":"meta-llama/Llama-3.2-3B-Instruct", "prompt":"Hello, my name is", "max_tokens": 200}' --header "Content-Type: application/json" "http://localhost:8080/predictions/model/1.0/v1/completions"
+```
+
+#### TRT-LLM Engine
+```bash
+# Make sure to install torchserve with python venv as described above and login with `huggingface-cli login`
+# pip install -U --use-deprecated=legacy-resolver -r requirements/trt_llm.txt
+python -m ts.llm_launcher --model_id meta-llama/Meta-Llama-3.1-8B-Instruct --engine trt_llm --disable_token_auth
+
+# Try it out
+curl -X POST -d '{"prompt":"count from 1 to 9 in french ", "max_tokens": 100}' --header "Content-Type: application/json" "http://localhost:8080/predictions/model"
+```
+
+### 🚢 Quick Start LLM Deployment with Docker
+
+```bash
+#export token=<HUGGINGFACE_HUB_TOKEN>
+docker build --pull . -f docker/Dockerfile.vllm -t ts/vllm
+
+docker run --rm -ti --shm-size 10g --

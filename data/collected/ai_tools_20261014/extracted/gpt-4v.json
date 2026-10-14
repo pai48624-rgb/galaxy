@@ -1,0 +1,126 @@
+{
+ "company": "OpenAI",
+ "one_liner_ko": "사용자가 준 이미지 입력을 GPT-4가 분석하도록 지시할 수 있게 한 기능(GPT-4 with vision).",
+ "what_it_does_ko": "GPT-4V(GPT-4 with vision)는 사용자가 제공한 이미지 입력을 GPT-4가 분석하도록 지시할 수 있게 하는 기능으로, OpenAI가 2023년 9월 25일 시스템 카드와 함께 공개했다. 이미지 같은 추가 모달리티를 대형 언어 모델에 통합해 언어 전용 시스템보다 넓은 작업을 풀 수 있게 하는 것이 목표다. 수집된 페이지는 시스템 카드로, GPT-4V의 안전성 평가·준비·완화 작업을 다룬다.",
+ "key_features": [
+  "사용자가 제공한 이미지 입력 분석",
+  "이미지 입력에 대한 안전성 평가·완화 작업(시스템 카드)"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": "있음 (Free ₩0/월: 이미지 생성 기능 제한적 이용 등)",
+  "plans": [
+   {
+    "name": "Free",
+    "price": 0,
+    "currency": "KRW",
+    "period": "month",
+    "limits": "메시지·이미지 생성·음성·심층 리서치 제한적",
+    "page_lang": "ko-KR"
+   },
+   {
+    "name": "Go",
+    "price": 13000,
+    "currency": "KRW",
+    "period": "month",
+    "limits": "더 높은 업로드·이미지 생성 한도, 광고 포함 가능",
+    "page_lang": "ko-KR"
+   },
+   {
+    "name": "Plus",
+    "price": 29000,
+    "currency": "KRW",
+    "period": "month",
+    "limits": "더 복잡하고 정확한 이미지 생성, 한도 확장",
+    "page_lang": "ko-KR"
+   },
+   {
+    "name": "Pro",
+    "price": 159000,
+    "currency": "KRW",
+    "period": "month",
+    "limits": "'From' 표기(3가지 사용량 등급), 무제한 이미지 생성",
+    "page_lang": "ko-KR"
+   }
+  ],
+  "pricing_url": "https://chatgpt.com/ko-KR/pricing/"
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "웹",
+  "iOS",
+  "안드로이드"
+ ],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://openai.com/index/gpt-4v-system-card/",
+   "quote": "GPT-4V(ision) system card | OpenAI September 25, 2023"
+  },
+  {
+   "field": "company",
+   "url": "https://openai.com/ko-KR/about/",
+   "quote": " 소개\n OpenAI는 AI 리서치 및 배포 회사입니다."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://openai.com/index/gpt-4v-system-card/",
+   "quote": "enables users to instruct GPT‑4 to analyze image inputs provided by the user, and is the latest capability we are making broadly available."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://openai.com/index/gpt-4v-system-card/",
+   "quote": "Incorporating additional modalities (such as image inputs) into large language models (LLMs) is viewed by some as a key frontier in artificial intelligence research and development."
+  },
+  {
+   "field": "key_features",
+   "url": "https://openai.com/index/gpt-4v-system-card/",
+   "quote": "here we dive deeper into the evaluations, preparation, and mitigation work done specifically for image inputs."
+  },
+  {
+   "field": "pricing",
+   "url": "https://chatgpt.com/ko-KR/pricing/",
+   "quote": " Free\n ChatGPT를 체험해 보기에 적합\n ₩0 /월"
+  },
+  {
+   "field": "pricing",
+   "url": "https://chatgpt.com/ko-KR/pricing/",
+   "quote": "무제한 텍스트 대화에는 악용 방지를 위한 제한이 적용됩니다. 자세히 알아보기 ⁠ \n Go\n 더 긴 대화에 적합\n ₩13,000 /월"
+  },
+  {
+   "field": "pricing",
+   "url": "https://chatgpt.com/ko-KR/pricing/",
+   "quote": " Plus\n 고차원적인 작업과 생산성 향상에 최적\n ₩29,000 /월"
+  },
+  {
+   "field": "pricing",
+   "url": "https://chatgpt.com/ko-KR/pricing/",
+   "quote": " 전문가급 추론\n 생산성 극대화\n From\n ₩159,000 /월"
+  },
+  {
+   "field": "pricing",
+   "url": "https://chatgpt.com/ko-KR/pricing/",
+   "quote": " 언제나 함께 일하는 에이전트 Dot\n 무제한 이미지 생성 및 더 빠른 처리 속도"
+  },
+  {
+   "field": "platforms",
+   "url": "https://chatgpt.com/ko-KR/pricing/",
+   "quote": "플랜: Free, 기능: 웹 및 모바일(iOS, Android) 액세스, 예"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://openai.com/ko-KR/about/",
+   "quote": "OpenAI는 AI 리서치 및 배포 회사입니다. OpenAI의 사명 인류 전체가 범용 인공지능의 이점을 누리게 하는 것입니다."
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "수집된 공식 요금 페이지는 ChatGPT 구독(Free ₩0, Go ₩13,000, Plus ₩29,000, Pro ₩159,000부터/월)뿐이며 오픈소스·API 종량제 근거는 없음",
+   "diff": "기존 '오픈소스(무료) 또는 API 종량제'와 달리 ChatGPT 구독 요금제 구조로 제공(시스템 카드 페이지엔 가격 없음)",
+   "url": "https://chatgpt.com/ko-KR/pricing/"
+  }
+ ]
+}

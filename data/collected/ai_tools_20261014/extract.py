@@ -84,12 +84,33 @@ def build():
                 dropped.append({"field": f, "why": "근거 없음 → 불명"})
                 v = EMPTY[f]
             rec[f] = v
+        if rec.get("korean_support") == "불명" and os.path.exists(rp):
+            # 같은 기준으로 맞추기(데스크톱 지시: 정말 확인 못 했을 때만 불명) — 언어 선택이 아예 없고 html lang 이 ko 가 아니며
+            # 본문에 한글이 거의 없는 한 언어 사이트는 '없음(영어 등만)', 근거는 [meta] 의 html lang 줄
+            raw_txt = open(rp, encoding="utf-8").read()
+            m = re.search(r"(?m)^html lang: (\S+)$", raw_txt)
+            hl = re.search(r"(?m)^hreflang: (.*)$", raw_txt)
+            words = re.search(r"(?m)^화면에 보이는 언어 이름: (.*)$", raw_txt)
+            body = re.sub(r"(?ms)^=== \[meta\].*", "", raw_txt)
+            hangul = len(re.findall(r"[가-힣]", body)) / max(1, len(body))
+            if m and m.group(1) != "없음" and not m.group(1).lower().startswith("ko") and hl and "ko" not in hl.group(1).lower() and words \
+                    and not re.search(r"한국어|Korean", words.group(1)) and hangul < 0.01:
+                rec["korean_support"] = "없음(영어 등만)"
+                ev_ok.append({"field": "korean_support", "url": fr.get("final_url"), "quote": m.group(0),
+                              "rule": "언어 선택 없음·html lang 비한국어·본문 한글 1% 미만 → 같은 기준으로 맞춤(extract.py)"})
         pr_pages = [x for x in fr.get("pages", []) if x["kind"].startswith("pricing") and x.get("has_price")]
         if isinstance(rec.get("pricing"), dict):
             rec["pricing"]["확인일"] = fr["checked_at"][:10]
             rec["pricing"]["pricing_src"] = "; ".join("%s ← %s" % (x["url"], x.get("src") or "") for x in pr_pages) or None
             if is_empty("pricing", rec["pricing"]):
                 rec["pricing"]["pricing_unknown_reason"] = unknown_reason(fr)
+            elif rec["pricing"].get("plans"):
+                # 요금 페이지에 도구 이름이 없으면 그 도구 자체 요금이 아니라 상위·관련 제품 요금(예: GPT-4o → ChatGPT 구독)
+                key = re.sub(r"^(google|meta|microsoft|openai|amazon|aws)\s+", "", fr["name_en"].strip(), flags=re.I).lower()
+                raw_txt = open(rp, encoding="utf-8").read() if os.path.exists(rp) else ""
+                secs = re.split(r"(?m)^=== \[", raw_txt)
+                ptxt = " ".join(x for x in secs if x.startswith("pricing")).lower()
+                rec["pricing"]["scope"] = "직접" if key and key in ptxt else "확인 필요: 요금 페이지에 도구 이름 없음(상위·관련 제품 요금일 수 있음)"
         gh = fr.get("github")
         rec["github"] = {"stars": gh.get("stars"), "license": gh.get("license"), "last_commit": gh.get("last_commit")} if gh and gh.get("stars") is not None else None
         if rec["github"] and not rec.get("open_source") and gh.get("license") and gh["license"] != "NOASSERTION":

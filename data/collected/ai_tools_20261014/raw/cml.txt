@@ -1,0 +1,460 @@
+=== [home] https://cml.dev (lang=en)
+CML · Continuous Machine Learning 🚀 DataChain Open-Source Release. Star us on !
+ by iterative.ai 
+ Use Cases Docs Blog Install Install CML as a package
+ Copied!
+ npm i -g @dvcorg/cml Copy Code
+ More in documentation OK 
+ More Tools 🔗 
+ DataChain 
+ Wrangle unstructured data in Python using AI helpers at scale
+ DataChain Studio 
+ Track experiments and share insights from ML projects
+ Continuous Machine Learning (CML) is CI/CD for Machine Learning Projects
+ Get Started Download We’re on GitHub 
+ GitLab GitHub Bitbucket 
+ GitFlow for data science
+ Use GitLab, GitHub, or Bitbucket to manage ML experiments, track who trained ML models or modified data and when. Codify data and models with DVC instead of pushing to your Git repo.
+ Auto reports for ML experiments
+ Auto-generate reports with metrics and plots in each Git Pull Request. Rigorous engineering practices help your team make informed, data-driven decisions.
+ No additional services
+ Build your own ML platform using just GitHub or GitLab and your favorite cloud services: AWS, Azure, GCP, or Kubernetes. No databases, services or complex setup needed.
+ CML Use Cases
+ The simplest case of using CML, and a clear way for any user to get started, is to generate a simple report. Add the following .yaml to your project repository and commit to get started
+ GitLab GitHub Bitbucket 
+ First CML Report DVC Tensorboard CML Runner Cloud Runner Cloud GPU .gitlab-ci.yml
+ train-and-report: 
+ image: iterativeai/cml:0-dvc2-base1 
+ script: 
+ - pip install -r requirements.txt 
+ - python train.py # generate plot.png 
+ # Create CML report 
+ - cat metrics.txt >> report.md 
+ - echo '![](./plot.png "Confusion Matrix")' >> report.md 
+ - cml comment create report.md 
+ GitLab Copy 
+ CML Report
+ .github/workflows/cml.yaml
+ name: CML 
+ on: [push] 
+ jobs: 
+ train-and-report: 
+ runs-on: ubuntu-latest 
+ container: docker://ghcr.io/iterative/cml:0-dvc2-base1 
+ steps: 
+ - uses: actions/checkout@v3 
+ - run: | 
+ pip install -r requirements.txt 
+ python train.py # generate plot.png 
+ # Create CML report 
+ cat metrics.txt >> report.md 
+ echo '![](./plot.png "Confusion Matrix")' >> report.md 
+ cml comment create report.md 
+ env: 
+ REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+ GitHub Copy 
+ CML Report
+ bitbucket-pipelines.yml
+ image: iterativeai/cml:0-dvc2-base1 
+ pipelines: 
+ default: 
+ - step: 
+ name: Train and Report 
+ script: 
+ - pip install -r requirements.txt 
+ - python train.py # generate plot.png 
+ # Create CML report 
+ - cat metrics.txt >> report.md 
+ - echo '![](./plot.png "Confusion Matrix")' >> report.md 
+ - cml comment create report.md 
+ Bitbucket Copy 
+ CML Report
+ .gitlab-ci.yml
+ train-and-report: 
+ image: iterativeai/cml:0-dvc2-base1 
+ script: 
+ - dvc pull data 
+ - pip install -r requirements.txt 
+ - dvc repro 
+ # Compare metrics to main 
+ - git fetch --depth=1 origin main:main 
+ - dvc metrics diff --show-md main >> report.md 
+ # Plot training loss function diff 
+ - dvc plots diff 
+ --target loss.csv --show-vega main > vega.json 
+ - vl2png vega.json > plot.png 
+ - echo '![](./plot.png "Training Loss")' >> report.md 
+ # Post CML report as a comment in GitLab 
+ - cml comment create report.md 
+ GitLab Copy 
+ CML Report
+ .github/workflows/cml.yaml
+ name: CML & DVC 
+ on: [push] 
+ jobs: 
+ train-and-report: 
+ runs-on: ubuntu-latest 
+ steps: 
+ - uses: actions/checkout@v3 
+ - uses: actions/setup-python@v4 
+ with: 
+ python-version: '3.x' 
+ - uses: iterative/setup-cml@v1 
+ - uses: iterative/setup-dvc@v1 
+ - name: Train model 
+ env: 
+ AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }} 
+ AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }} 
+ run: | 
+ dvc pull data 
+ pip install -r requirements.txt 
+ dvc repro 
+ - name: Create CML report 
+ run: | 
+ # Compare metrics to main 
+ git fetch --depth=1 origin main:main 
+ dvc metrics diff --show-md main >> report.md 
+ # Plot training loss function diff 
+ dvc plots diff \ 
+ --target loss.csv --show-vega main > vega.json 
+ vl2png vega.json > plot.png 
+ echo '![](./plot.png "Training Loss")' >> report.md 
+ cml comment create report.md 
+ env: 
+ REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+ GitHub Copy 
+ CML Report
+ bitbucket-pipelines.yml
+ image: iterativeai/cml:0-dvc2-base1 
+ pipelines: 
+ default: 
+ - step: 
+ name: Train model 
+ script: 
+ - dvc pull data 
+ - pip install -r requirements.txt 
+ - dvc repro 
+ - step: 
+ name: Create CML report 
+ script: 
+ # Compare metrics to main 
+ - git fetch --depth=1 origin main:main 
+ - dvc metrics diff --show-md main >> report.md 
+ # Plot training loss function diff 
+ - dvc plots diff 
+ --target loss.csv --show-vega main > vega.json 
+ - vl2png vega.json > plot.png 
+ - echo '![](./plot.png "Training Loss")' >> report.md 
+ # Post CML report as a comment in Bitbucket 
+ - cml comment create report.md 
+ Bitbucket Copy 
+ CML Report
+ .gitlab-ci.yml
+ train-and-report: 
+ image: iterativeai/cml:0-dvc2-base1 
+ script: 
+ - pip install -r requirements.txt 
+ - cml tensorboard connect 
+ --logdir=./logs 
+ --name="Go to tensorboard" 
+ --md >> report.md 
+ - cml comment create report.md 
+ - python train.py # generate ./logs 
+ GitLab Copy 
+ CML Report
+ .github/workflows/cml.yaml
+ name: CML & TensorBoard 
+ on: [push] 
+ jobs: 
+ train-and-report: 
+ runs-on: ubuntu-latest 
+ container: docker://ghcr.io/iterative/cml:0-dvc2-base1 
+ steps: 
+ - uses: actions/checkout@v3 
+ - name: Train and Report 
+ env: 
+ REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+ TB_CREDENTIALS: ${{ secrets.TB_CREDENTIALS }} 
+ run: | 
+ pip install -r requirements.txt 
+ cml tensorboard connect \ 
+ --logdir=./logs \ 
+ --name="Go to tensorboard" \ 
+ --md >> report.md 
+ cml comment create report.md 
+ python train.py # generate ./logs 
+ GitHub Copy 
+ CML Report
+ bitbucket-pipelines.yml
+ image: iterativeai/cml:0-dvc2-base1 
+ pipelines: 
+ default: 
+ - step: 
+ name: Train and Report 
+ script: 
+ - pip install -r requirements.txt 
+ - cml tensorboard connect 
+ --logdir=./logs 
+ --name="Go to tensorboard" 
+ --md >> report.md 
+ - cml comment create report.md 
+ - python train.py # generate ./logs 
+ Bitbucket Copy 
+ CML Report
+ .gitlab-ci.yml
+ launch-runner: 
+ image: iterativeai/cml:0-dvc2-base1 
+ script: 
+ # Supports AWS, Azure, GCP, K8s 
+ - cml runner launch 
+ --cloud=aws 
+ --cloud-region=us-west 
+ --cloud-type=m5.2xlarge 
+ --cloud-spot 
+ --labels=cml-runner 
+ train-and-report: 
+ tags: [cml-runner] 
+ needs: [launch-runner] 
+ image: iterativeai/cml:0-dvc2-base1 
+ script: 
+ - pip install -r requirements.txt 
+ - python train.py # generate plot.png 
+ - echo "## Report from your EC2 instance" >> report.md 
+ - cat metrics.txt >> report.md 
+ - echo '![](./plot.png "Confusion Matrix")' >> report.md 
+ - cml comment create report.md 
+ GitLab Copy 
+ CML Report
+ .github/workflows/cml.yaml
+ name: CML 
+ on: [push] 
+ jobs: 
+ launch-runner: 
+ runs-on: ubuntu-latest 
+ steps: 
+ - uses: actions/checkout@v3 
+ - uses: iterative/setup-cml@v1 
+ - name: Deploy runner on AWS EC2 
+ # Supports AWS, Azure, GCP, K8s 
+ env: 
+ REPO_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }} 
+ AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }} 
+ AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }} 
+ run: | 
+ cml runner launch \ 
+ --cloud=aws \ 
+ --cloud-region=us-west \ 
+ --cloud-type=m5.2xlarge \ 
+ --labels=cml-runner 
+ train-and-report: 
+ runs-on: [self-hosted, cml-runner] 
+ needs: launch-runner 
+ timeout-minutes: 50400 # 35 days 
+ container: docker://iterativeai/cml:0-dvc2-base1 
+ steps: 
+ - uses: actions/checkout@v3 
+ - name: Train and Report 
+ run: | 
+ pip install -r requirements.tx
+
+=== [about] https://cml.dev/doc (lang=en)
+Home | CML by iterative.ai 
+ Use Cases Docs Blog Install Install CML as a package
+ Copied!
+ npm i -g @dvcorg/cml Copy Code
+ More in documentation OK 
+ More Tools 🔗 
+ DataChain 
+ Wrangle unstructured data in Python using AI helpers at scale
+ DataChain Studio 
+ Track experiments and share insights from ML projects
+ by iterative.ai 
+ Use Cases 
+ Doc 
+ Install 
+ Support
+ E-Mail 
+ GitHub 
+ Discord 
+ Twitter 
+ All Tools
+ Studio 
+ DVC 
+ CML 
+ MLEM 
+ VS Code Extension 
+ Get started 
+ Home Get Started GitHub GitLab Bitbucket 
+ Usage CML with DVC Self-hosted Runners Command Reference ci runner pr comment check workflow tensorboard 
+ Install as a Package Contributing CML Core Project Docs and Website 
+ Edit on GitHub CML Documentation 
+ Continuous Machine Learning (CML) is an open-source tool for implementing
+continuous integration & delivery (CI/CD) in machine learning projects. Use it
+to automate parts of your development workflow, including model training and
+evaluation, comparing ML experiments across your project history, and monitoring
+changing datasets.
+ Get Started
+ Step-by-step introduction to basic CML features using our repository templates
+ Usage
+ Learn more about CML and setup your own repositories
+ CML with DVC
+ Bring data to your CML runner with DVC
+ Self-hosted Runners
+ Use your own (cloud or on-premise) runners with CML
+ ✅ Please join our community or use the
+ support channels if you have any questions or need
+specific help. We are very responsive ⚡.
+ ✅ Check out our GitHub repository and give
+us a ⭐ if you like the project!
+ ✅ Contribute to CML on GitHub or help us
+improve this documentation 🙏.
+ CML principles 
+ GitFlow for data science. Use GitLab or GitHub to manage ML experiments,
+track who trained ML models, or modified data and when. Codify data and models
+with DVC instead of pushing to a Git repo.
+ Auto reports for ML experiments. Auto-generate reports with metrics and
+plots in each Git Pull Request. Rigorous engineering practices help your team
+make informed, data-driven decisions.
+ No additional services. Build your own ML platform using just GitHub or
+GitLab and your favorite cloud providers : AWS, Azure, GCP, or Kubernetes. No
+databases, services or complex setup needed
+ Prev Next 
+ Content
+ CML principles 
+ 🐛 Found an issue? Let us know! Or fix it:
+ Edit on GitHub 
+ ❓ Have a question? Join our chat, we will help you:
+ Discord Chat 
+ About
+ Use cases 
+ Docs 
+ Blog 
+ GitHub 
+ Community
+ Twitter 
+ Youtube 
+ Linkedin 
+ Discord 
+ More Tools
+ 🔗 DataChain 
+ DataChain Studio 
+ By iterative.ai - An open platform to operationalize AI
+
+=== [meta] https://cml.dev
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/iterative/cml
+<p align="center">
+  <img src="https://static.iterative.ai/img/cml/title_strip_trim.png" width=400>
+</p>
+
+[![GHA](https://img.shields.io/github/v/tag/iterative/setup-cml?label=GitHub%20Actions&logo=GitHub)](https://github.com/iterative/setup-cml)
+[![npm](https://img.shields.io/npm/v/@dvcorg/cml?logo=npm)](https://www.npmjs.com/package/@dvcorg/cml)
+
+**What is CML?** Continuous Machine Learning (CML) is an open-source CLI tool
+for implementing continuous integration & delivery (CI/CD) with a focus on
+MLOps. Use it to automate development workflows — including machine
+provisioning, model training and evaluation, comparing ML experiments across
+project history, and monitoring changing datasets.
+
+CML can help train and evaluate models — and then generate a visual report with
+results and metrics — automatically on every pull request.
+
+![](https://static.iterative.ai/img/cml/github_cloud_case_lessshadow.png) _An
+example report for a
+[neural style transfer model](https://github.com/iterative/cml_cloud_case)._
+
+CML principles:
+
+- **[GitFlow](https://nvie.com/posts/a-successful-git-branching-model) for data
+  science.** Use GitLab or GitHub to manage ML experiments, track who trained ML
+  models or modified data and when. Codify data and models with
+  [DVC](#using-cml-with-dvc) instead of pushing to a Git repo.
+- **Auto reports for ML experiments.** Auto-generate reports with metrics and
+  plots in each Git pull request. Rigorous engineering practices help your team
+  make informed, data-driven decisions.
+- **No additional services.** Build your own ML platform using GitLab,
+  Bitbucket, or GitHub. Optionally, use
+  [cloud storage](#configuring-cloud-storage-providers) as well as either
+  self-hosted or cloud runners (such as AWS EC2 or Azure). No databases,
+  services or complex setup needed.
+
+:question: Need help? Just want to chat about continuous integration for ML?
+[Visit our Discord channel!](https://discord.gg/bzA6uY7)
+
+:play_or_pause_button: Check out our
+[YouTube video series](https://www.youtube.com/playlist?list=PL7WG7YrwYcnDBDuCkFbcyjnZQrdskFsBz)
+for hands-on MLOps tutorials using CML!
+
+## Table of Contents
+
+1. [Setup (GitLab, GitHub, Bitbucket)](#setup)
+2. [Usage](#usage)
+3. [Getting started (tutorial)](#getting-started)
+4. [Using CML with DVC](#using-cml-with-dvc)
+5. [Advanced Setup (Self-hosted, local package)](#advanced-setup)
+6. [Example projects](#see-also)
+
+## Setup
+
+You'll need a GitLab, GitHub, or Bitbucket account to begin. Users may wish to
+familiarize themselves with [Github Actions](https://help.github.com/en/actions)
+or
+[GitLab CI/CD](https://about.gitlab.com/stages-devops-lifecycle/continuous-integration).
+Here, will discuss the GitHub use case.
+
+### GitLab
+
+Please see our docs on
+[CML with GitLab CI/CD](https://github.com/iterative/cml/wiki/CML-with-GitLab)
+and in particular the
+[personal access token](https://github.com/iterative/cml/wiki/CML-with-GitLab#variables)
+requirement.
+
+### Bitbucket
+
+Please see our docs on
+[CML with Bitbucket Cloud](https://cml.dev/doc/usage?tab=Bitbucket).
+
+### GitHub
+
+The key file in any CML project is `.github/workflows/cml.yaml`:
+
+```yaml
+name: your-workflow-name
+on: [push]
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    # optionally use a convenient Ubuntu LTS + DVC + CML image
+    # container: ghcr.io/iterative/cml:0-dvc2-base1
+    steps:
+      - uses: actions/checkout@v3
+      # may need to setup NodeJS & Python3 on e.g. self-hosted
+      # - uses: actions/setup-node@v3
+      #   with:
+      #     node-version: '16'
+      # - uses: actions/setup-python@v4
+      #   with:
+      #     python-version: '3.x'
+      - uses: iterative/setup-cml@v1
+      - name: Train model
+        run: |
+          # Your ML workflow goes here
+          pip install -r requirements.txt
+          python train.py
+      - name: Write CML report
+        env:
+          REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Post reports as comments in GitHub PRs
+          cat results.txt >> report.md
+          cml comment create report.md
+```
+
+## Usage
+
+We helpfully provide CML and other useful libraries pre-installed on our
+[custom Docker images](https://github.com/iterative/cml/blob/mains/Doc

@@ -1,0 +1,183 @@
+{
+ "company": "Cohere",
+ "one_liner_ko": "Cohere의 시맨틱 표현(임베딩) 모델 계열로, 최신 버전은 프런티어 임베딩 모델 Embed 5다.",
+ "what_it_does_ko": "Embed는 Cohere가 제공하는 시맨틱 표현 모델로, Command(생성)·Rerank(검색 최적화)와 함께 Cohere 모델 라인업에 속한다. 블로그에서 새 프런티어 임베딩 모델 계열 Embed 5를 소개하며, 가격 페이지에는 Embed 5 Fast와 Embed 5 Pro가 나온다. API의 /EMBED 엔드포인트로 쓸 수 있고, 전용 완전관리형 추론 플랫폼 Model Vault에서 인스턴스 단위로 배포할 수도 있다. 트라이얼 API 키는 무료(사용량 제한·상업적 사용 불가)이고 프로덕션 키는 종량제로 과금된다.",
+ "key_features": [
+  "시맨틱 표현(임베딩) 모델",
+  "Embed 5 Fast·Embed 5 Pro 두 종류",
+  "API /EMBED 엔드포인트",
+  "Model Vault 전용 완전관리형 배포(멀티테넌시 없음)",
+  "프라이빗 배포(온프레미스 또는 격리된 VPC)",
+  "SOC2·GDPR·ISO 27001 등 보안·규정 준수"
+ ],
+ "use_cases_ko": [
+  "기업 고급 검색 시스템 구축",
+  "검색 결과 품질 개선(Draftwise 사례: 30% 향상)"
+ ],
+ "pricing": {
+  "free_tier": "있음 (트라이얼 API 키 무료 — 사용량 제한, 프로덕션·상업적 사용 불가)",
+  "plans": [
+   {
+    "name": "Model Vault Embed 5 Fast 소형 (시간 단위)",
+    "price": 3,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "인스턴스당 시간당 요금",
+    "page_lang": "ko"
+   },
+   {
+    "name": "Model Vault Embed 5 Fast 소형 (월 단위)",
+    "price": 2000,
+    "currency": "USD",
+    "period": "month",
+    "limits": "인스턴스당 월별 요금",
+    "page_lang": "ko"
+   },
+   {
+    "name": "Model Vault Embed 5 Fast 중간 (시간 단위)",
+    "price": 5,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "인스턴스당 시간당 요금",
+    "page_lang": "ko"
+   },
+   {
+    "name": "Model Vault Embed 5 Fast 중간 (월 단위)",
+    "price": 3250,
+    "currency": "USD",
+    "period": "month",
+    "limits": "인스턴스당 월별 요금",
+    "page_lang": "ko"
+   },
+   {
+    "name": "Model Vault Embed 5 Pro 소형 (시간 단위)",
+    "price": 3,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "인스턴스당 시간당 요금",
+    "page_lang": "ko"
+   },
+   {
+    "name": "Model Vault Embed 5 Pro 소형 (월 단위)",
+    "price": 2000,
+    "currency": "USD",
+    "period": "month",
+    "limits": "인스턴스당 월별 요금",
+    "page_lang": "ko"
+   },
+   {
+    "name": "Model Vault Embed 5 Pro 중간 (시간 단위)",
+    "price": 5,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "인스턴스당 시간당 요금",
+    "page_lang": "ko"
+   },
+   {
+    "name": "Model Vault Embed 5 Pro 중간 (월 단위)",
+    "price": 3250,
+    "currency": "USD",
+    "period": "month",
+    "limits": "인스턴스당 월별 요금",
+    "page_lang": "ko"
+   }
+  ],
+  "pricing_url": "https://cohere.com/ko/pricing"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "API"
+ ],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://cohere.com/ko",
+   "quote": "엔터프라이즈 AI: 프라이빗, 보안, 맞춤형 | Cohere"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://cohere.com/ko",
+   "quote": "Introducing Embed 5—A new family of frontier embedding models"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://cohere.com/ko",
+   "quote": "Command\n 생성형 언어 모델\n Transcribe\n 신규\n 음성 인식 모델"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://cohere.com/ko",
+   "quote": "Embed\n 시맨틱 표현 모델\n Rerank\n 검색 최적화 모델"
+  },
+  {
+   "field": "key_features",
+   "url": "https://cohere.com/ko/pricing",
+   "quote": "Model Vault는 Cohere 모델을 안전하게 대규모로 실행하고 성능을 보장하는 전용 완전 관리형 플랫폼입니다."
+  },
+  {
+   "field": "key_features",
+   "url": "https://cohere.com/ko/pricing",
+   "quote": "완전 관리형 모델 배포\n 공유 리소스 또는 멀티테넌시 오버헤드 없음"
+  },
+  {
+   "field": "key_features",
+   "url": "https://cohere.com/ko",
+   "quote": "프라이빗 배포\n 온프레미스 또는 격리된 VPC\n 보안\n 데이터 보호의 모든 단계"
+  },
+  {
+   "field": "key_features",
+   "url": "https://cohere.com/ko",
+   "quote": "SOC2\n GDPR\n CCPA\n ISO 27001\n Cyber Essentials"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://cohere.com/ko",
+   "quote": "Draftwise가 Cohere를 통합해 검색 결과 품질을 30% 향상한 방법"
+  },
+  {
+   "field": "pricing",
+   "url": "https://cohere.com/ko/pricing",
+   "quote": "Embed 5 Fast \n 소형\n $3.00\n $2,000\n Embed 5 Fast \n 중간\n $5.00\n $3,250"
+  },
+  {
+   "field": "pricing",
+   "url": "https://cohere.com/ko/pricing",
+   "quote": "Embed 5 Pro \n 소형\n $3.00\n $2,000\n Embed 5 Pro \n 중간\n $5.00\n $3,250"
+  },
+  {
+   "field": "pricing",
+   "url": "https://cohere.com/ko/pricing",
+   "quote": "트라이얼 API 키를 사용한 API 호출은 무료입니다. 하지만 트라이얼 키는 사용량이 제한되며, 프로덕션 또는 상업적 목적으로 사용할 수 없습니다."
+  },
+  {
+   "field": "pricing",
+   "url": "https://cohere.com/ko/pricing",
+   "quote": "요금은 선택한 모델과 성능 계층에 따라 인스턴스별로 결정됩니다. 청구는 시간별 또는 장기 약정(월별 또는 연별)으로 계산할 수 있습니다."
+  },
+  {
+   "field": "api",
+   "url": "https://docs.cohere.com/",
+   "quote": "Our endpoints offer different ways to interact with our models and offer additional value on top of them\n /CHAT \n /EMBED"
+  },
+  {
+   "field": "platforms",
+   "url": "https://docs.cohere.com/",
+   "quote": "Integrate natural language processing and generation into your products with a few lines of code."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://cohere.com/ko",
+   "quote": "화면에 보이는 언어 이름: 한국어, English, 日本語, Français, Deutsch"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "프로덕션 API 키 종량제 외에, Model Vault 전용 배포를 인스턴스당 시간당($3~$5) 또는 월별($2,000~$3,250) 요금으로 판매(연 약정도 가능)",
+   "diff": "기존 분류 '모델별 상이(오픈웨이트 또는 API 종량제)'와 달리 오픈웨이트 언급이 없고, 토큰 종량제가 아닌 인스턴스 단위 시간·월 요금 구조가 추가되어 있음",
+   "url": "https://cohere.com/ko/pricing"
+  }
+ ]
+}

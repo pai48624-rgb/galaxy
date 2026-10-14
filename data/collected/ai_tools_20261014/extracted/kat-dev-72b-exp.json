@@ -1,0 +1,34 @@
+{
+ "company": "Kwaipilot",
+ "one_liner_ko": null,
+ "what_it_does_ko": "KAT-Dev-72B-Exp는 Kwaipilot이 Hugging Face에 공개한 약 727억 파라미터(BF16)의 텍스트 생성(대화형) 모델로, qwen2 구조 태그가 붙어 있다. Apache-2.0 라이선스로 가중치가 공개되어 있으며 Transformers 라이브러리로 바로 불러 쓸 수 있다. vLLM·SGLang 서버나 Docker로 직접 띄워 OpenAI 호환 API 형태로 호출하는 사용법이 안내되어 있다. 수집된 페이지에는 모델 설명 본문(성능·용도)이 포함되어 있지 않다.",
+ "key_features": [
+  "약 727억(72.7B) 파라미터, BF16 safetensors 가중치 공개",
+  "Transformers 라이브러리로 로드",
+  "vLLM으로 서빙 시 OpenAI 호환 API 호출",
+  "SGLang·Docker 실행 지원",
+  "도구 호출(function call) 대화 템플릿 포함"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "Apache-2.0",
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "불명",
+ "evidence": [
+  {"field": "company", "url": "https://huggingface.co/Kwaipilot/KAT-Dev-72B-Exp", "quote": "Kwaipilot /\n KAT-Dev-72B-Exp \n Like 158"},
+  {"field": "what_it_does_ko", "url": "https://huggingface.co/Kwaipilot/KAT-Dev-72B-Exp", "quote": "\"safetensors\":{\"parameters\":{\"BF16\":72706203648},\"total\":72706203648"},
+  {"field": "what_it_does_ko", "url": "https://huggingface.co/Kwaipilot/KAT-Dev-72B-Exp", "quote": "Text Generation \n Transformers \n Safetensors \n qwen2 \n conversational"},
+  {"field": "key_features", "url": "https://huggingface.co/Kwaipilot/KAT-Dev-72B-Exp", "quote": "pipe = pipeline(\"text-generation\", model=\"Kwaipilot/KAT-Dev-72B-Exp\")"},
+  {"field": "key_features", "url": "https://huggingface.co/Kwaipilot/KAT-Dev-72B-Exp", "quote": "# Call the server using curl (OpenAI-compatible API):"},
+  {"field": "key_features", "url": "https://huggingface.co/Kwaipilot/KAT-Dev-72B-Exp", "quote": "docker model run hf.co/Kwaipilot/KAT-Dev-72B-Exp \n SGLang How to use Kwaipilot/KAT-Dev-72B-Exp with SGLang:"},
+  {"field": "key_features", "url": "https://huggingface.co/Kwaipilot/KAT-Dev-72B-Exp", "quote": "You may call one or more functions to assist with the user query."},
+  {"field": "open_source", "url": "https://huggingface.co/Kwaipilot/KAT-Dev-72B-Exp", "quote": "License: apache-2.0 \n Model card Files Files and versions"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

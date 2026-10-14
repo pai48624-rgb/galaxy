@@ -1,0 +1,151 @@
+=== [home] https://horovod.ai (lang=en-US)
+Horovod 
+ Skip to main content 
+ Search 
+ Close Search 
+ search 
+ Menu 
+ Quick Start 
+ Docs 
+ GitHub 
+ search 
+ Horovod is a distributed deep learning training framework for PyTorch, TensorFlow, Keras and Apache MXNet.
+ Horovod was originally developed by Uber to make distributed deep learning fast and easy to use, bringing model training time down from days and weeks to hours and minutes. With Horovod, an existing training script can be scaled up to run on hundreds of GPUs in just a few lines of Python code. Horovod can be installed on-premise or run out-of-the-box in cloud platforms, including AWS , Azure , and Databricks . Horovod can additionally run on top of Apache Spark, making it possible to unify data processing and model training into a single pipeline. Once Horovod has been configured, the same infrastructure can be used to train models with any framework, making it easy to switch between PyTorch, TensorFlow, MXNet, and future frameworks as machine learning tech stacks continue to evolve.
+ Get Started 
+ Join the Conversation 
+ Fast
+ Scale up to hundreds of GPUs with upwards of 90% scaling efficiency.
+ Easy
+ Start scaling your model training with just a few lines of Python code.
+ Portable
+ Runs the same for PyTorch, TensorFlow, Keras, and MXNet; on premise, in the cloud, and on Apache Spark.
+ Open Source
+ Horovod is an open source project as part of the LF AI Foundation . We invite you to come join our community on GitHub as both a user and a contributor to Horovod’s development. We look forward to your contributions!
+ Join the Conversation
+ Horovod maintains the following mailing lists. You are invited to join any the meet your interests:
+ Horovod-Announce : Stay up to date with the latest Horovod developments.
+ Horovod-Technical-Discuss : Discuss the technical details and direction of Horovod.
+ Horovod-TSC : Project governance and organization announcements.
+ Copyright © 2024 Horovod The Linux Foundation® . All rights reserved. The Linux Foundation has registered trademarks and uses trademarks. For a list of trademarks of The Linux Foundation, please see our Trademark Usage page. Linux is a registered trademark of Linus Torvalds. Privacy Policy and Terms of Use .
+ Close Menu 
+ Quick Start 
+ Docs 
+ GitHub
+
+=== [meta] https://horovod.ai
+html lang: en-US
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/horovod/horovod
+.. raw:: html
+
+    <p>Due to inactivity, this project was archived in September 2026. The contents will remain available for historical purposes.</p>
+    <p align="center"><img src="https://user-images.githubusercontent.com/16640218/34506318-84d0c06c-efe0-11e7-8831-0425772ed8f2.png" alt="Logo" width="200"/></p>
+    <br/>
+
+
+Horovod (inactive)
+==================
+
+.. raw:: html
+
+   <div align="center">
+
+.. image:: https://badge.fury.io/py/horovod.svg
+   :target: https://badge.fury.io/py/horovod
+   :alt: PyPI Version
+
+.. image:: https://badge.buildkite.com/6f976bc161c69d9960fc00de01b69deb6199b25680a09e5e26.svg?branch=master
+   :target: https://buildkite.com/horovod/horovod
+   :alt: Build Status
+
+.. image:: https://readthedocs.org/projects/horovod/badge/?version=latest
+   :target: https://horovod.readthedocs.io/en/latest/
+   :alt: Documentation Status
+
+.. image:: https://img.shields.io/badge/slack-chat-green.svg?logo=slack
+   :target: https://forms.gle/cPGvty5hp31tGfg79
+   :alt: Slack
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div align="center">
+
+.. image:: https://img.shields.io/badge/License-Apache%202.0-blue.svg
+   :target: https://img.shields.io/badge/License-Apache%202.0-blue.svg
+   :alt: License
+
+.. image:: https://app.fossa.com/api/projects/git%2Bgithub.com%2Fhorovod%2Fhorovod.svg?type=shield
+   :target: https://app.fossa.com/projects/git%2Bgithub.com%2Fhorovod%2Fhorovod?ref=badge_shield
+   :alt: FOSSA Status
+
+.. image:: https://bestpractices.coreinfrastructure.org/projects/2373/badge
+   :target: https://bestpractices.coreinfrastructure.org/projects/2373
+   :alt: CII Best Practices
+
+.. image:: https://pepy.tech/badge/horovod
+   :target: https://pepy.tech/project/horovod
+   :alt: Downloads
+
+.. raw:: html
+
+   </div>
+
+.. inclusion-marker-start-do-not-remove
+
+|
+
+Horovod is a distributed deep learning training framework for TensorFlow, Keras, PyTorch, and Apache MXNet.
+The goal of Horovod is to make distributed deep learning fast and easy to use.
+
+
+.. raw:: html
+
+   <p><img src="https://raw.githubusercontent.com/lfai/artwork/master/lfaidata-assets/lfaidata-project-badge/graduate/color/lfaidata-project-badge-graduate-color.png" alt="LF AI & Data" width="200"/></p>
+
+
+Horovod is hosted by the `LF AI & Data Foundation <https://lfdl.io>`_ (LF AI & Data). If you are a company that is deeply
+committed to using open source technologies in artificial intelligence, machine, and deep learning, and want to support
+the communities of open source projects in these domains, consider joining the LF AI & Data Foundation. For details
+about who's involved and how Horovod plays a role, read the Linux Foundation `announcement <https://lfdl.io/press/2018/12/13/lf-deep-learning-welcomes-horovod-distributed-training-framework-as-newest-project/>`_.
+
+|
+
+.. contents::
+
+|
+
+Documentation
+-------------
+
+- `Latest Release <https://horovod.readthedocs.io/en/stable>`_
+- `master <https://horovod.readthedocs.io/en/latest>`_
+
+|
+
+Why Horovod?
+------------
+The primary motivation for this project is to make it easy to take a single-GPU training script and successfully scale
+it to train across many GPUs in parallel. This has two aspects:
+
+1. How much modification does one have to make to a program to make it distributed, and how easy is it to run it?
+2. How much faster would it run in distributed mode?
+
+Internally at Uber we found the MPI model to be much more straightforward and require far less code changes than previous
+solutions such as Distributed TensorFlow with parameter servers. Once a training script has been written for scale with
+Horovod, it can run on a single-GPU, multiple-GPUs, or even multiple hosts without any further code changes.
+See the `Usage <#usage>`__ section for more details.
+
+In addition to being easy to use, Horovod is fast. Below is a chart representing the benchmark that was done on 128
+servers with 4 Pascal GPUs each connected by RoCE-capable 25 Gbit/s network:
+
+.. image:: https://user-images.githubusercontent.com/16640218/38965607-bf5c46ca-4332-11e8-895a-b9c137e86013.png
+   :alt: 512-GPU Benchmark
+
+Horovod achieves 90% scaling efficiency for both Inception V3 and ResNet-101, and 68% scaling efficiency for VGG-16.
+See `Benchmarks <

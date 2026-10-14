@@ -1,0 +1,699 @@
+=== [home] https://www.ultralytics.com/yolo (lang=en)
+Discover Ultralytics YOLO models | State-of-the-Art Computer Vision 
+ Ultralytics YOLO27: Coming soon. Join the waitlist. 
+ Products 
+ Solutions 
+ Resources 
+ Company 
+ Pricing 
+ Licensing 
+ Menu Select language GitHub repository Switch apps License YOLO 
+ Ultralytics YOLO Ultralytics YOLO models
+ Power vision AI solutions with Ultralytics YOLO models, enabling fast and accurate real-time analysis of images and videos through efficient computer vision tasks.
+ License YOLO Get started 
+ Trusted by the world's leading organizations
+ Try YOLO26 Inference
+ Drag and drop an image to see real-time object detection
+ Input
+ Upload an image or select an example to test YOLO26n . Predict Docs 
+ Live Demo Image Webcam 
+ Drop an image here
+ or click to browse
+ Supports JPEG, PNG, WebP, AVIF, HEIC, JP2, TIFF, BMP & more (max 10MB)
+ Or try an example 
+ Confidence 
+ 0.25 
+ IoU 
+ 0.70 
+ Image Size 
+ 640 
+ Results Response Docs 
+ Prediction results will appear here.
+ Deploy your model to get a dedicated inference endpoint with API key authentication — then replace the placeholder URL and key below with your deployment values. Deploy docs 
+ Python JavaScript cURL 
+ Deploy 
+ import requests
+# Deployment URL and API key
+url = "https://your-deployment-url.run.app/predict"
+api_key = "YOUR_API_KEY"
+# Optional inference parameters (conf, iou, imgsz)
+args = {"conf": 0.25, "iou": 0.7, "imgsz": 640}
+with open("image.jpg", "rb") as f:
+ response = requests.post(
+ url,
+ headers={"Authorization": f"Bearer {api_key}"},
+ data=args,
+ files={"file": f},
+ )
+print(response.json()) 
+ Our models' impact
+ Streamline processes across industries with our cutting-edge vision AI models. Speed, accuracy and ease-of-use powered by Ultralytics.
+ — GitHub stars 
+ — Downloads 
+ — Ultralytics YOLO usages / day 
+ — Open-source contributors 
+ The evolution of YOLO models
+ From the original YOLO architecture to Ultralytics YOLO26, the model family has continued to improve real-time computer vision workflows.
+ 2015 
+ YOLO
+ Developed by Joseph Redmon and team.
+ 2016 
+ YOLOv2
+ Created by Joseph Redmon and Ali Farhadi.
+ 2018 
+ YOLOv3 
+ Developed by Joseph Redmon and Ali Farhadi.
+ 2018 
+ YOLOv4 
+ Developed by Alexey Bochkovskiy and team.
+ 2020 
+ Ultralytics YOLOv5 
+ YOLOv5 redefined object detection with fast, accurate performance and a user-friendly PyTorch implementation.
+ 2022 
+ YOLOv6 
+ Introduced by Meituan and team.
+ 2022 
+ YOLOv7 
+ Released by Chien-Yao Wang and team.
+ 2023 
+ Ultralytics YOLOv8 
+ YOLOv8 expanded support to instance segmentation, classification, pose estimation, and other core vision tasks.
+ 2024 
+ YOLOv9 
+ Developed by Chien-Yao Wang and team.
+ 2024 
+ YOLOv10 
+ Designed by Ao Wang for Tsinghua University.
+ 2024 
+ Ultralytics YOLO11 
+ YOLO11 improved accuracy, precision, and speed while preserving the familiar Ultralytics workflow.
+ 2026 
+ Ultralytics YOLO26 
+ YOLO26 is lighter, smaller, and faster, with the nano variant delivering up to 43% faster CPU inference.
+ Ultralytics YOLO models at a glance
+ Compare recent Ultralytics YOLO model families across speed, accuracy, and supported vision tasks.
+ Features 
+ Speed Image processing time
+ 0.54 ms 0.47 ms 0.56 ms 0.67 ms 0.62 ms 
+ Accuracy mAP50-95
+ 34.3% 37.3% 39.5% 40.9% 42.3% 
+ Object detection 
+ Instance segmentation - 
+ Semantic segmentation - - 
+ Depth estimation - - - 
+ Image classification - 
+ Pose estimation - 
+ OBB detection - 
+ License YOLO 
+ Security & compliance Enterprise-grade security, certified
+ Independently certified and audited, so your data stays protected in transit and at rest.
+ License YOLO View security details 
+ SOC 2 Type I
+ Attested against AICPA Security, Availability, and Confidentiality TSC
+ ISO 27001:2022
+ Certified information security management system
+ Encryption
+ Data encrypted in transit and at rest, across all storage and transport
+ GDPR & CCPA
+ Aligned with global data protection regulations
+ Why choose Ultralytics YOLO?
+ Optimized for edge and cloud deployment
+ Bring fast, reliable results to real-time vision AI projects across edge devices, cloud infrastructure, and hybrid systems.
+ Seamless integration with built-in security
+ Integrate YOLO models across platforms and devices while keeping data local and workflows protected.
+ Clear licensing and compliance
+ Choose from academic, open-source, and enterprise licensing paths to match your deployment needs.
+ Backed by a global community
+ Dedicated support channels, active forums, and regular updates give teams the resources they need to succeed.
+ State-of-the-art accuracy and efficiency
+ Ultralytics keeps improving model performance through research focused on accuracy, efficiency, and streamlined deployment.
+ See our models in action
+ RTM cuts inference cost 28% with Ultralytics YOLO26
+ Learn how RTM uses Ultralytics YOLO26 to power 24/7 factory safety monitoring, cutting inference cost 28% on hardware manufacturers already own.
+ Learn more 
+ SK Godelius detects 3,400 defects on mining conveyors with Ultralytics YOLO
+ Learn how SK Godelius uses Ultralytics YOLO to automate defect and anomaly detection, helping mining plants boost safety and streamline workflow.
+ Learn more 
+ Camerite cuts development time 25.2% with Ultralytics YOLO
+ Learn how Camerite uses Ultralytics YOLO to automate video monitoring, cutting development time and helping cities shift to proactive security.
+ Learn more 
+ OnsiteIQ reduces project delays by 20% with Ultralytics YOLO11
+ Discover how OnsiteIQ uses Ultralytics YOLO11 to monitor construction sites, cutting project delays 20% and resolving disputes 3x faster.
+ Learn more 
+ mtrail's TrainVision cuts rail data collection time by close to 100%
+ Explore how mtrail's TrainVision uses Ultralytics YOLO to automate rail data collection, cutting time up to 100% and errors by 90%.
+ Learn more 
+ Glacier Robotics reduced PET leakage by 70% across US recycling facilities
+ See how Glacier Robotics uses Ultralytics YOLO11 to reduce PET leakage by 70%, improve recycling accuracy, and automate waste sorting.
+ Learn more 
+ SOHGA cuts parking monitoring time by 30% with Ultralytics YOLO
+ Learn how SOHGA's MEGURU system uses Ultralytics YOLO26 to automate parking lot patrols, reduce patrol time by 30%, and improve safety.
+ Learn more 
+ Scaleout cuts model updates from weeks to hours with Ultralytics YOLO
+ Discover how Scaleout uses Ultralytics YOLO and federated learning to fine-tune AI models on edge devices while keeping sensitive data secure.
+ Learn more 
+ RapiD Engineering deploys seafood quality control 1 week faster with Ultralytics YOLO
+ See how RapiD Engineering uses Ultralytics YOLO to automate salmon inspection, detect defects in real time, and save a week of engineering work.
+ Learn more 
+ Project Ocean Oasis advances reef conservation with Ultralytics YOLO
+ Discover how Project Ocean Oasis uses Ultralytics YOLO, edge AI, and autonomous monitoring systems to scale reef conservation and ocean intelligence.
+ Learn more 
+ Volley powers 250+ on-court AI trainers with Ultralytics YOLO
+ "What's really nice is that the model performs really well in real time on edge hardware on the trainer, and we can use the same model in the cloud to run the exact same flow."
+ Learn more 
+ WG Tech Solutions cuts safety violations by 28% with Ultralytics YOLO and Axelera’s AI Accelerator
+ Learn how WG Tech Solutions managed to reduce safety violations in manufacturing by 28% leveraging Ultralytics YOLO and Axelera’s AI Accelerator
+ Learn more 
+ Stride delivers
+
+=== [pricing] https://www.ultralytics.com/pricing (lang=en)
+Pricing | Ultralytics 
+ Ultralytics YOLO27: Coming soon. Join the waitlist. 
+ Products 
+ Solutions 
+ Resources 
+ Company 
+ Pricing 
+ Licensing 
+ Menu Select language GitHub repository Switch apps License YOLO 
+ Ultralytics Platform pricing
+ Choose a Platform plan for your computer vision workflow. Software licensing is separate.
+ Get started Get a quote 
+ Available Plans
+ Compare Platform features, limits, and licensing.
+ Monthly Yearly Save 17% 
+ Free
+ AGPL 3.0 License 
+ Build and explore with no subscription fee
+ $0 per month 
+ $25 one-time credits* 
+ What's included:
+ 100 GB storage · 10 GB per upload 
+ 100 models 
+ 3 concurrent cloud training jobs 
+ 3 cloud deployments 
+ Unlimited public/private projects and datasets 
+ Model export to all 22 formats 
+ Manual, SAM 3.1 & YOLO Smart annotation 
+ 24 cloud GPU types including 5090, H100 & H200 
+ Community support 
+ Get started 
+ Recommended 
+ Pro
+ AGPL 3.0 License 
+ Scale with higher limits and monthly credits
+ $29 per seat/month 
+ $30/seat/month in credits 
+ All features in Free, plus:
+ 500 GB storage · 20 GB per upload 
+ Google Cloud Storage , Amazon S3 & Azure Blob Storage datasets 
+ 500 models 
+ 10 concurrent cloud training jobs 
+ 10 cloud deployments 
+ Team collaboration (up to 5 members) 
+ 26 cloud GPU types including B200 & B300 
+ Priority support 
+ Start Pro 
+ Enterprise
+ Enterprise License 
+ Commercial licensing and dedicated support
+ Custom contact us 
+ Custom credits 
+ All features in Pro, plus:
+ Ultralytics Enterprise License included 
+ Unlimited storage · 50 GB per upload 
+ Unlimited models & deployments 
+ Unlimited concurrent cloud training jobs 
+ Custom team capacity 
+ Dedicated onboarding & support 
+ Enterprise SSO/SAML 
+ On Premise data & compute available 
+ Custom SLAs on top of ISO 27001 & SOC 2 compliance 
+ Get a quote 
+ Quick check: answer 3 questions to get a recommendation.
+ Step 1 of 4 25 % 
+ x 
+ How are you using Ultralytics?
+ Personal project or open-sourcing your work Production or for-profit use 
+ Train on the Best GPUs for Less
+ 26 NVIDIA GPUs starting at $0.24/hr — from Ampere to Blackwell. No markup, no minimums, no commitment.
+ Ampere 
+ Proven data center and workstation GPUs
+ RTX A4500 20 GB 
+ $ 0.25 /hr 
+ RTX A5000 24 GB 
+ $ 0.27 /hr 
+ A40 48 GB 
+ $ 0.44 /hr 
+ RTX 3090 24 GB 
+ $ 0.46 /hr 
+ RTX A6000 48 GB 
+ $ 0.49 /hr 
+ A100 PCIe 80 GB 
+ $ 1.39 /hr 
+ A100 SXM 80 GB 
+ $ 1.49 /hr 
+ Ada 
+ Efficient inference and real-time AI
+ RTX 2000 Ada 16 GB 
+ $ 0.24 /hr 
+ RTX 4000 Ada 20 GB 
+ $ 0.26 /hr 
+ L4 24 GB 
+ $ 0.39 /hr 
+ RTX 4090 24 GB 
+ $ 0.69 /hr 
+ RTX 6000 Ada 48 GB 
+ $ 0.77 /hr 
+ L40S 48 GB 
+ $ 0.86 /hr 
+ L40 48 GB 
+ $ 0.99 /hr 
+ Hopper 
+ Purpose-built for large-scale training
+ H100 PCIe 80 GB 
+ $ 2.89 /hr 
+ H100 NVL 94 GB 
+ $ 3.19 /hr 
+ H100 SXM 80 GB 
+ $ 3.29 /hr 
+ H200 NVL 143 GB 
+ $ 3.39 /hr 
+ H200 SXM 141 GB 
+ $ 4.39 /hr 
+ Blackwell New 
+ Latest generation, maximum performance
+ RTX PRO 4000 24 GB 
+ $ 0.57 /hr 
+ RTX PRO 4500 32 GB 
+ $ 0.64 /hr 
+ RTX PRO 5000 48 GB 
+ $ 0.96 /hr 
+ RTX 5090 32 GB 
+ $ 0.99 /hr 
+ RTX PRO 6000 96 GB 
+ $ 2.09 /hr 
+ B200 180 GB 
+ $ 5.89 /hr 
+ B300 288 GB 
+ $ 7.39 /hr 
+ Trusted by industry leaders
+ Detailed Feature Comparison
+ A complete breakdown of what's included in each plan.
+ Free $0 per month
+ Recommended 
+ Pro $29 per seat/month
+ Enterprise Custom
+ Usage Limits 
+ Storage 
+ Store datasets, model weights, and training artifacts
+ 100 GB 500 GB Unlimited 
+ Dataset Upload 
+ Maximum file size for a single dataset upload (ZIP, TAR, or NDJSON)
+ 10 GB 20 GB 50 GB 
+ Google Cloud Storage Datasets 
+ Train on data in your own GCS buckets without uploading a copy
+ - 
+ Amazon S3 Datasets 
+ Train on data in your own S3 buckets without uploading a copy
+ - 
+ Azure Blob Storage Datasets 
+ Train on data in your own Azure Blob Storage containers without uploading a copy
+ - 
+ Projects & Datasets 
+ Organize your work into projects with multiple datasets and models
+ Unlimited Unlimited Unlimited 
+ Models 
+ Train, import, and manage computer vision models
+ 100 500 Unlimited 
+ Concurrent Cloud Trainings 
+ Run multiple training jobs simultaneously in the cloud
+ 3 10 Unlimited 
+ Cloud Deployments 
+ Deploy models as scalable inference endpoints
+ 3 10 Unlimited 
+ Training & Inference 
+ Cloud GPU Types 
+ Choose from a wide range of GPU types for cloud training and export
+ 24 GPUs ($0.24-$4.39/hr) 26 GPUs ($0.24-$7.39/hr) 26 GPUs ($0.24-$7.39/hr) 
+ Best GPUs (B200, B300) 
+ Access to the latest B200 and B300 GPUs for maximum training performance
+ - 
+ Remote Training 
+ Train on your own hardware while streaming metrics to Platform
+ Model Export Formats 
+ Export to ONNX, TensorRT, CoreML, LiteRT, NCNN, and 17 more
+ All 22 All 22 All 22 
+ Global Deployment Regions 
+ Deploy models to edge locations worldwide for low-latency inference
+ 42 42 42 
+ Data & Annotation 
+ Manual Annotation 
+ Label images across all 6 task types: detect, instance segment, semantic segment, classify, pose, OBB
+ SAM 3.1 Smart Annotation 
+ Click-to-segment with Segment Anything Model for faster labeling
+ YOLO Smart Annotation 
+ Automatically label datasets using your trained YOLO models
+ Monitoring & API 
+ Monitoring Dashboard 
+ Track endpoint requests, latency, errors, and logs; dedicated endpoints also include live prediction statistics
+ REST API 
+ Programmatic access to all Platform features for automation and CI/CD
+ Collaboration & Support 
+ Team Members 
+ Invite collaborators to your workspace with shared resources
+ 1 Up to 5 Custom 
+ Support 
+ Get help when you need it, from community forums to dedicated contacts
+ Community Priority Dedicated onboarding and support 
+ YOLO Framework 
+ Access to the Ultralytics YOLO open-source framework and models
+ Full open-source Full open-source Full framework 
+ Enterprise models 
+ Ultralytics YOLO Enterprise models pretrained on the Ultralytics Enterprise Dataset
+ - - Soon 
+ Security & Governance 
+ SSO / SAML 
+ Single sign-on integration with your identity provider
+ - - 
+ Role-Based Access Control 
+ Owner, Admin, Editor, and Viewer roles for workspace members
+ - 
+ On Premise 
+ Keep dataset ingest and training on your own hardware
+ - - 
+ ISO 27001 & SOC 2 Compliance 
+ ISO/IEC 27001:2022 certified and SOC 2 Type I audited on every plan; Enterprise adds custom SLAs
+ Included + custom SLAs 
+ Licensing 
+ Software license 
+ Platform plans and Ultralytics software licenses are separate.
+ AGPL 3.0 AGPL 3.0 Enterprise 
+ Explore solutions
+ Computer vision in sports
+ Discover how Ultralytics YOLO powers sports vision with player and ball tracking, performance analytics, coaching insights, and a
+
+=== [about] https://docs.ultralytics.com/ (lang=en)
+YOLO Object Detection & Segmentation | Ultralytics 
+ Ultralytics YOLO27: Coming soon. Join the waitlist. 
+ Skip to main content 
+ Search... 
+ Home 
+ Quickstart 
+ Home Overview 
+ Quickstart 
+ Usage 
+ YOLO27 (Coming Soon) 
+ YOLO26 🚀 
+ Modes 
+ Tasks 
+ Models 
+ Compare 
+ Datasets 
+ Solutions 
+ Guides 
+ Integrations 
+ Platform 
+ Rust Inference 
+ Reference 
+ Help 
+ Get Started
+ Annotate, train and deploy YOLO models in one click.
+ Cloud training
+ Dataset annotation
+ One-click inference
+ $ 25 free credits with work email 
+ Get Started Sign in 
+ Loading Please wait 
+ Toggle Sidebar 
+ Docs 
+ Select language GitHub repository Switch apps Get Started 
+ 中文 ·
+ 한국어 ·
+ 日本語 ·
+ Русский ·
+ Deutsch ·
+ Français ·
+ Español ·
+ Português ·
+ Türkçe ·
+ Tiếng Việt ·
+ العربية 
+ Ultralytics YOLO Docs # 
+ Ultralytics YOLO is a family of real-time computer vision models for object detection, instance segmentation, semantic segmentation, depth estimation, classification, pose estimation, oriented bounding boxes, and tracking, available through one Python package and CLI. YOLO26 is built on deep learning and computer vision advancements, featuring optional NMS-free end-to-end inference and optimized edge deployment. Its streamlined design makes it suitable for various applications and easily adaptable to different hardware platforms, from edge devices to cloud APIs. For stable production workloads, both YOLO26 and YOLO11 are recommended.
+ Explore the Ultralytics Docs, a comprehensive resource covering the YOLO package and CLI as well as the Ultralytics Platform , which adds data annotation, cloud training, and deployment on top of the same models. Whether you are a seasoned machine learning practitioner or new to the field, these resources help you get the most out of YOLO in your projects.
+ Request an Enterprise License for commercial use at Ultralytics Licensing .
+ YOLO27 is coming soon 
+ Explore the YOLO27 preview , including architecture details, preliminary benchmarks, and examples for use after release. Models are undergoing final R&D for an anticipated launch later this year; they are not yet available, and no launch date is set.
+ 🚀 New: Monocular Depth Estimation 
+ Turn a single photo into a depth map, a distance in meters for every pixel.
+ Learn more 
+ Get Started in Two Commands # 
+ # Install the ultralytics package from PyPI
+pip install ultralytics
+# Detect objects in an image with a pretrained YOLO26 model
+yolo predict model=yolo26n.pt source='https://github.com/ultralytics/assets/releases/download/v0.0.0/bus.jpg' 
+ The model weights and the example image download automatically, and the annotated result is saved to the directory the command prints, runs/detect/predict on a first run.
+ See the Quickstart guide for every installation method and your first prediction.
+ What Do You Want to Do? # 
+ Train a model on your own dataset
+ Fine-tune a pretrained YOLO26 model on your own dataset, tuning augmentation and hyperparameters for multi-GPU training
+ Train a custom model 
+ Run a model on your images or video
+ Load a pretrained model and get bounding boxes, masks, or keypoints in a few lines of Python or a single CLI command
+ Predict on new data 
+ Track objects across video frames
+ Track objects with persistent IDs using TrackTrack (default), BoT-SORT, ByteTrack, OC-SORT, Deep OC-SORT, or FastTracker
+ Multi-object tracking 
+ Run a ready-made vision application
+ Ready-made vision apps for object counting, heatmaps, queue management, security alarms, and workouts, no training required
+ Explore Solutions 
+ Deploy your model
+ Export trained models to ONNX, Tensor
+
+=== [pricing_ko] https://www.ultralytics.com/ko/pricing (lang=ko)
+요금 | Ultralytics 
+ Ultralytics YOLO27: 곧 출시됩니다. 대기자 명단에 등록하세요. 
+ 제품 
+ 솔루션 
+ 리소스 
+ 회사 
+ 요금 
+ 라이선싱 
+ 메뉴 언어 선택 GitHub repository 앱 전환 YOLO 라이선스 받기 
+ Ultralytics Platform 요금
+ 컴퓨터 비전 워크플로에 적합한 Platform 요금제를 선택하세요. 소프트웨어 라이선스는 별도입니다.
+ 시작하기 견적 받기 
+ 이용 가능한 요금제
+ Platform 기능, 제한 사항 및 라이선스를 비교하세요.
+ 월간 연간 17% 절약 
+ Free
+ AGPL 3.0 라이선스 
+ 구독료 없이 제작하고 탐색하세요
+ $0 월 
+ 일회성 크레딧 $25* 
+ 포함 사항:
+ 스토리지 100 GB · 업로드당 10 GB 
+ 모델 100개 
+ 동시 클라우드 학습 작업 3개 
+ 클라우드 배포 3개 
+ 공개/비공개 프로젝트 및 데이터셋 무제한 
+ 22개 형식 모두로 모델 내보내기 
+ 수동, SAM 3.1 및 YOLO Smart 어노테이션 
+ 5090, H100 및 H200을 포함한 24종의 클라우드 GPU 
+ 커뮤니티 지원 
+ 시작하기 
+ Recommended 
+ Pro
+ AGPL 3.0 라이선스 
+ 더 높은 한도와 월간 크레딧으로 규모를 확장하세요
+ $29 사용자당/월 
+ 사용자당/월 크레딧 $30 
+ Free의 모든 기능에 더해:
+ 스토리지 500 GB · 업로드당 20 GB 
+ Google Cloud Storage , Amazon S3 및 Azure Blob Storage 데이터셋 
+ 모델 500개 
+ 동시 클라우드 학습 작업 10개 
+ 클라우드 배포 10개 
+ 팀 협업(최대 5명) 
+ B200 및 B300을 포함한 26종의 클라우드 GPU 
+ 우선 지원 
+ Pro 시작하기 
+ Enterprise
+ Enterprise 라이선스 
+ 상업용 라이선스 및 전담 지원
+ Custom 문의하기 
+ 맞춤형 크레딧 
+ Pro의 모든 기능에 더해:
+ Ultralytics Enterprise License 포함 
+ 스토리지 무제한 · 업로드당 50 GB 
+ 모델 및 배포 무제한 
+ 동시 클라우드 학습 작업 무제한 
+ 팀 규모 맞춤 설정 
+ 전담 온보딩 및 지원 
+ 엔터프라이즈 SSO/SAML 
+ 온프레미스 데이터 및 컴퓨팅 이용 가능 
+ ISO 27001 및 SOC 2 규정 준수 를 기반으로 맞춤형 SLA 제공 
+ 견적 받기 
+ 빠른 확인: 3개의 질문에 답변하면 권장 사항을 확인할 수 있습니다.
+ 단계 1 중 4 25 % 
+ x 
+ Ultralytics를 어떻게 사용하시나요?
+ 개인 프로젝트 또는 작업물을 오픈소스로 공개하는 경우 프로덕션 또는 영리 목적의 사용 
+ 최고의 GPU를 더 저렴하게 사용해 학습하세요
+ Ampere부터 Blackwell까지 26종의 NVIDIA GPU를 시간당 $0.24부터 이용할 수 있습니다. 추가 비용이나 최소 사용량, 약정이 없습니다.
+ Ampere 
+ 검증된 데이터센터 및 워크스테이션 GPU
+ RTX A4500 20 GB 
+ $ 0.25 /hr 
+ RTX A5000 24 GB 
+ $ 0.27 /hr 
+ A40 48 GB 
+ $ 0.44 /hr 
+ RTX 3090 24 GB 
+ $ 0.46 /hr 
+ RTX A6000 48 GB 
+ $ 0.49 /hr 
+ A100 PCIe 80 GB 
+ $ 1.39 /hr 
+ A100 SXM 80 GB 
+ $ 1.49 /hr 
+ Ada 
+ 효율적인 추론 및 실시간 AI
+ RTX 2000 Ada 16 GB 
+ $ 0.24 /hr 
+ RTX 4000 Ada 20 GB 
+ $ 0.26 /hr 
+ L4 24 GB 
+ $ 0.39 /hr 
+ RTX 4090 24 GB 
+ $ 0.69 /hr 
+ RTX 6000 Ada 48 GB 
+ $ 0.77 /hr 
+ L40S 48 GB 
+ $ 0.86 /hr 
+ L40 48 GB 
+ $ 0.99 /hr 
+ Hopper 
+ 대규모 학습에 최적화된 설계
+ H100 PCIe 80 GB 
+ $ 2.89 /hr 
+ H100 NVL 94 GB 
+ $ 3.19 /hr 
+ H100 SXM 80 GB 
+ $ 3.29 /hr 
+ H200 NVL 143 GB 
+ $ 3.39 /hr 
+ H200 SXM 141 GB 
+ $ 4.39 /hr 
+ Blackwell 신규 
+ 최신 세대, 최고의 성능
+ RTX PRO 4000 24 GB 
+ $ 0.57 /hr 
+ RTX PRO 4500 32 GB 
+ $ 0.64 /hr 
+ RTX PRO 5000 48 GB 
+ $ 0.96 /hr 
+ RTX 5090 32 GB 
+ $ 0.99 /hr 
+ RTX PRO 6000 96 GB 
+ $ 2.09 /hr 
+ B200 180 GB 
+ $ 5.89 /hr 
+ B300 288 GB 
+ $ 7.39 /hr 
+ 업계 선도 기업들이 신뢰합니다
+ 상세 기능 비교
+ 각 요금제에 포함된 항목을 빠짐없이 확인하세요.
+ Free $0 월
+ 권장 
+ Pro $29 사용자당/월
+ Enterprise Custom 문의하기
+ 사용량 한도 
+ 스토리지 
+ 데이터셋, 모델 가중치 및 학습 산출물을 저장합니다
+ 100 GB 500 GB 무제한 
+ 데이터셋 업로드 
+ 단일 데이터셋 업로드의 최대 파일 크기(ZIP, TAR 또는 NDJSON)
+ 10 GB 20 GB 50 GB 
+ Google Cloud Storage 데이터셋 
+ 사본을 업로드하지 않고 자체 GCS 버킷의 데이터로 학습합니다
+ - 
+ Amazon S3 데이터셋 
+ 사본을 업로드하지 않고 자체 S3 버킷의 데이터로 학습합니다
+ - 
+ Azure Blob Storage 데이터셋 
+ 사본을 업로드하지 않고 자체 Azure Blob Storage 컨테이너의 데이터로 학습합니다
+ - 
+ 프로젝트 및 데이터셋 
+ 여러 데이터셋과 모델을 포함하는 프로젝트로 작업을 체계적으로 관리합니다
+ 무제한 무제한 무제한 
+ 모델 
+ 컴퓨터 비전 모델을 학습하고, 가져오고, 관리합니다
+ 100 500 무제한 
+ 동시 클라우드 학습 
+ 클라우드에서 여러 학습 작업을 동시에 실행합니다
+ 3 10 무제한 
+ 클라우드 배포 
+ 확장 가능한 추론 엔드포인트로 모델을 배포합니다
+ 3 10 무제한 
+ 학습 및 추론 
+ 클라우드 GPU 유형 
+ 클라우드 학습 및 내보내기에 적합한 다양한 GPU 유형 중에서 선택하세요
+ GPU 24종($0.24~$4.39/시간) GPU 26종($0.24~$7.39/시간) GPU 26종($0.24~$7.39/시간) 
+ 최고급 GPU(B200, B300) 
+ 최고의 학습 성능을 위한 최신 B200 및 B300 GPU 이용
+ - 
+ 원격 학습 
+ 자체 하드웨어에서 학습하면서 Platform으로 메트릭 스트리밍
+ 모델 내보내기 형식 
+ ONNX, TensorRT, CoreML, LiteRT, NCNN 및 그 외 17개 형식으로 내보내기
+ 전체 22개 전체 22개 전체 22개 
+ 글로벌 배포 지역 
+ 낮은 지연 시간의 추론을 위해 전 세계 엣지 위치에 모델 배포
+ 42 42 42 
+ 데이터 및 어노테이션 
+ 수동 어노테이션 
+ 6가지 작업 유형 모두에서 이미지에 라벨 지정: 탐지, 인스턴스 분할, 시맨틱 분할, 분류, 포즈, OBB
+ SAM 3.1 스마트 어노테이션 
+ Segment Anything Model을 사용한 클릭 방식 분할로 더 빠르게 라벨 지정
+ YOLO 스마트 어노테이션 
+ 
+
+=== [meta] https://www.ultralytics.com/yolo
+html lang: en
+hreflang: ar, de, en, es, fr, it, ja, ko, pt, ru, tr, vi, x-default, zh
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/ultralytics/ultralytics
+<div align="center">
+  <p>
+    <a href="https://www.ultralytics.com/yolo/yolo27?utm_source=github&utm_medium=social&utm_campaign=yolo27-launch-2026&utm_content=banner" target="_blank">
+      <img width="100%" src="https://raw.githubusercontent.com/ultralytics/assets/main/yolov8/banner-yolov8.png" alt="Ultralytics YOLO banner"></a>
+  </p>
+
+[中文](https://docs.ultralytics.com/zh) | [한국어](https://docs.ultralytics.com/ko) | [日本語](https://docs.ultralytics.com/ja) | [Русский](https://docs.ultralytics.com/ru) | [Deutsch](https://docs.ultralytics.com/de) | [Français](https://docs.ultralytics.com/fr) | [Español](https://docs.ultralytics.com/es) | [Português](https://docs.ultralytics.com/pt) | [Türkçe](https://docs.ultralytics.com/tr) | [Tiếng Việt](https://docs.ultralytics.com/vi) | [العربية](https://docs.ultralytics.com/ar) <br>
+
+<div>
+    <a href="https://github.com/ultralytics/ultralytics/actions/workflows/ci.yml"><img src="https://github.com/ultralytics/ultralytics/actions/workflows/ci.yml/badge.svg" alt="Ultralytics CI"></a>
+    <a href="https://clickpy.clickhouse.com/dashboard/ultralytics"><img src="https://static.pepy.tech/badge/ultralytics" alt="Ultralytics Downloads"></a>
+    <a href="https://discord.com/invite/ultralytics"><img alt="Ultralytics Discord" src="https://img.shields.io/discord/1089800235347353640?logo=discord&logoColor=white&label=Discord&color=blue"></a>
+    <a href="https://community.ultralytics.com"><img alt="Ultralytics Forums" src="https://img.shields.io/discourse/users?server=https%3A%2F%2Fcommunity.ultralytics.com&logo=discourse&label=Forums&color=blue"></a>
+    <a href="https://www.reddit.com/r/ultralytics/"><img alt="Ultralytics Reddit" src="https://img.shields.io/reddit/subreddit-subscribers/ultralytics?style=flat&logo=reddit&logoColor=white&label=Reddit&color=blue"></a>
+    <br>
+    <a href="https://console.paperspace.com/github/ultralytics/ultralytics"><img src="https://assets.paperspace.io/img/gradient-badge.svg" alt="Run Ultralytics on Gradient"></a>
+    <a href="https://colab.research.google.com/github/ultralytics/ultralytics/blob/main/examples/tutorial.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open Ultralytics In Colab"></a>
+    <a href="https://www.kaggle.com/models/ultralytics/yolo26"><img src="https://kaggle.com/static/images/open-in-kaggle.svg" alt="Open Ultralytics In Kaggle"></a>
+    <a href="https://mybinder.org/v2/gh/ultralytics/ultralytics/HEAD?labpath=examples%2Ftutorial.ipynb"><img src="https://mybinder.org/badge_logo.svg" alt="Open Ultralytics In Binder"></a>
+</div>
+</div>
+<br>
+
+<div align="center">
+  <a href="https://trendshift.io/repositories/1556?utm_source=repository-badge&amp;utm_medium=badge&amp;utm_campaign=badge-repository-1556" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/repositories/1556" alt="ultralytics%2Fultralytics | Trendshift" width="250" height="55"/></a>
+</div>
+<br>
+
+[Ultralytics](https://www.ultralytics.com) creates cutting-edge, state-of-the-art (SOTA) [YOLO models](https://www.ultralytics.com/yolo) built on years of foundational research in computer vision and AI. Constantly updated for performance and flexibility, our models are **fast**, **accurate**, and **easy to use**. They excel at [object detection](https://docs.ultralytics.com/tasks/detect), [instance segmentation](https://docs.ultralytics.com/tasks/segment), [semantic segmentation](https://docs.ultralytics.com/tasks/semantic), [depth estimation](https://docs.ultralytics.com/tasks/depth), [image classification](https://docs.ultralytics.com/tasks/classify), [pose estimation](https://docs.ultralytics.com/tasks/pose), and [oriented object detection](https://docs.ultralytics.com/tasks/obb) tasks, and can [track](https://docs.ultralytics.com/modes/track) detected objects across video frames.
+
+Find detailed documentation in the [Ultralytics Docs](https://docs.ultralytics.com). Get support via [GitHub Issues](https://github.com/ultralytics/ultralytics/issues/new/choose). Join discussions on [Discord](https://discord.com/invite/ultralytics), [Reddit](https://www.reddit.com/r/ultralytics/), and the [Ultralytics Community Forums](https://c

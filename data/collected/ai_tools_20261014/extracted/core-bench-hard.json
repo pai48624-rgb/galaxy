@@ -1,0 +1,77 @@
+{
+ "company": "HAL",
+ "one_liner_ko": "AI 에이전트가 발표된 과학 논문의 결과를 계산으로 재현하는 능력을 평가하는 CORE-Bench의 최고 난이도(Hard) 리더보드.",
+ "what_it_does_ko": "CORE-Bench는 에이전트가 발표된 과학 논문의 결과를 계산적으로 재현하는 능력을 평가한다. Hard 단계에서는 논문의 코드베이스만 주어지고, 에이전트가 라이브러리와 의존성을 설치하고 코드를 실행한 뒤 출력과 그림을 읽고 논문에 대한 질문에 답해야 한다. 논문 90편(공개 테스트 세트 45편)으로 구성되며 3개 스캐폴드·27개 모델로 49건을 평가했다. 현재 HAL 리더보드는 새 모델 업데이트를 멈추고 에이전트 신뢰성 측정에 집중하고 있다.",
+ "key_features": [
+  "실제 출판 논문 기반 과제",
+  "코드 이해·의존성 관리·결과 해석을 함께 평가",
+  "쉬움~어려움 3단계 난이도",
+  "논문 90편, 공개 테스트 세트 45편",
+  "49건 평가(3개 스캐폴드, 27개 모델)",
+  "모델별 정확도·비용 표시"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": null,
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://hal.cs.princeton.edu/corebench_hard",
+   "quote": "HAL: CORE-Bench Hard Leaderboard"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://hal.cs.princeton.edu/corebench_hard",
+   "quote": "CORE-Bench evaluates the ability of agents to computationally reproduce the results of published scientific papers."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://hal.cs.princeton.edu/corebench_hard",
+   "quote": "In CORE-Bench Hard , the agent is only given the codebase of the paper and must install all libraries and dependencies, run the code"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://hal.cs.princeton.edu/corebench_hard",
+   "quote": "Note: We have paused updating HAL leaderboard with new models and are currently focusing on measuring reliability in AI agents."
+  },
+  {
+   "field": "key_features",
+   "url": "https://hal.cs.princeton.edu/corebench_hard",
+   "quote": "Tasks are based on actual published scientific papers, requiring agents to understand and reproduce real research."
+  },
+  {
+   "field": "key_features",
+   "url": "https://hal.cs.princeton.edu/corebench_hard",
+   "quote": "Tests multiple capabilities: code understanding, dependency management, and scientific result interpretation."
+  },
+  {
+   "field": "key_features",
+   "url": "https://hal.cs.princeton.edu/corebench_hard",
+   "quote": "Tasks range from interpreting results (Easy) to full paper reproduction (Hard)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://hal.cs.princeton.edu/corebench_hard",
+   "quote": "Scientific Papers\n 45\n Papers in Public Test Set"
+  },
+  {
+   "field": "key_features",
+   "url": "https://hal.cs.princeton.edu/corebench_hard",
+   "quote": "Evaluations (3 scaffolds, 27 models)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://hal.cs.princeton.edu/corebench_hard",
+   "quote": "Costs are currently calculated without accounting for caching benefits."
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

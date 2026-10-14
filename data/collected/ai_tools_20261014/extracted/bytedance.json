@@ -1,0 +1,169 @@
+{
+ "company": "北京火山引擎科技有限公司 (火山引擎, Volcengine)",
+ "one_liner_ko": "모델·도구·애플리케이션부터 클라우드 기반까지 기업 AI를 한곳에서 구축하는 바이트댄스 계열 'AI 클라우드' 화산엔진.",
+ "what_it_does_ko": "화산엔진(火山引擎)은 스스로를 '당신의 AI 클라우드'로 소개하며, 모델·도구·애플리케이션·클라우드 기반을 한곳에서 제공해 기업 AI 구축을 돕는다. 바이트댄스가 자체 개발한 豆包(Doubao) 대모델을 火山方舟(Ark) 원스톱 대모델 서비스 플랫폼과 API·CLI로 제공한다. 언어·영상 생성·이미지 생성·음성 인식 모델을 토큰·장·시간 단위 종량제로 판매하며, Agent Plan·Coding Plan 같은 구독형 상품도 메뉴에 있다. TRAE CN, AgentKit, HiAgent 등 에이전트·코딩 도구와 일반 클라우드(서버·스토리지·DB)도 함께 제공한다.",
+ "key_features": [
+  "豆包(Doubao) 대모델 Evolving — 코딩·에이전트 시나리오 중심",
+  "火山方舟 원스톱 대모델 서비스 플랫폼",
+  "방주(Ark) CLI로 터미널·에이전트에서 바로 시작",
+  "영상 생성(Seedance)·이미지 생성·음성 인식 모델",
+  "TRAE CN으로 바이브 코딩 전 과정",
+  "기업용 AI 에이전트 플랫폼 AgentKit·HiAgent",
+  "클라우드 서버·객체 스토리지·DB 등 클라우드 인프라"
+ ],
+ "use_cases_ko": [
+  "기업이 대모델·에이전트를 구축·배포",
+  "개발자가 TRAE로 바이브 코딩",
+  "AI 숏드라마·광고 크리에이티브 생성"
+ ],
+ "pricing": {
+  "free_tier": "있음 (豆包 모델별 50만 토큰 무료 추론 한도)",
+  "plans": [
+   {
+    "name": "Doubao-Seed-Evolving 추론 입력",
+    "price": 0.006,
+    "currency": "CNY",
+    "period": "usage",
+    "limits": "1천 토큰당, 컨텍스트 0-256k",
+    "page_lang": "zh"
+   },
+   {
+    "name": "Doubao-Seed-Evolving 추론 출력",
+    "price": 0.03,
+    "currency": "CNY",
+    "period": "usage",
+    "limits": "1천 토큰당, 컨텍스트 0-256k",
+    "page_lang": "zh"
+   },
+   {
+    "name": "Doubao-Seed-Evolving 캐시 적중",
+    "price": 0.0012,
+    "currency": "CNY",
+    "period": "usage",
+    "limits": "1천 토큰당",
+    "page_lang": "zh"
+   },
+   {
+    "name": "Doubao-Seed-Evolving 캐시 저장",
+    "price": 1.7e-05,
+    "currency": "CNY",
+    "period": "usage",
+    "limits": "1천 토큰·시간당",
+    "page_lang": "zh"
+   },
+   {
+    "name": "豆包大模型 Evolving 추론 입력 (홈 표기)",
+    "price": 6,
+    "currency": "CNY",
+    "period": "usage",
+    "limits": "100만 토큰당",
+    "page_lang": "zh"
+   },
+   {
+    "name": "豆包大模型 Evolving 추론 출력 (홈 표기)",
+    "price": 30,
+    "currency": "CNY",
+    "period": "usage",
+    "limits": "100만 토큰당",
+    "page_lang": "zh"
+   },
+   {
+    "name": "方舟 Agent Plan",
+    "price": 9.9,
+    "currency": "CNY",
+    "period": "month",
+    "limits": "첫 달 9.9위안부터(프로모션 표기)",
+    "page_lang": "zh"
+   }
+  ],
+  "pricing_url": "https://www.volcengine.com/pricing?product=ark_subscription&tab=2"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "CLI",
+  "API"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.volcengine.com/pricing?product=ark_subscription&tab=2",
+   "quote": "© 北京火山引擎科技有限公司 2026 版权所有 代理域名注册服务机构：新网数码"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.volcengine.com/",
+   "quote": "火山引擎 你的AI云\n 模型、工具、应用到云底座，企业 AI 一站构建"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.volcengine.com/",
+   "quote": "豆包大模型\n HOT \n 字节跳动自研大模型\n 查看详情 豆包大模型 剧创 Agent"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.volcengine.com/pricing?product=ark_subscription&tab=2",
+   "quote": "火山方舟 Agent Plan \n 火山方舟 Coding Plan"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.volcengine.com/",
+   "quote": "豆包大模型 Evolving\n 持续更新 聚焦 Coding & Agent 场景"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.volcengine.com/",
+   "quote": "通过 火山方舟 开启一站式大模型服务\n 通过方舟 CLI 在终端或 Agent 中快速开始"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.volcengine.com/",
+   "quote": "多场景 AI Agent，驱动效率跃升 \n 覆盖开发、安全、运营与创作全流程，加速业务落地"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.volcengine.com/",
+   "quote": "用 TRAE 实现 Vibe Coding 全流程 \n 用 联网问答 Agent 构建 chatbot"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.volcengine.com/pricing?product=ark_subscription&tab=2",
+   "quote": "按tokens使用量（输入文本+输出文本）计费，每小时出账，按量后付费。豆包模型分别提供50万tokens免费推理额度"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.volcengine.com/pricing?product=ark_subscription&tab=2",
+   "quote": "Doubao_Seed_Evolving单次输入\n 0-256k\n 推理（输入）\n 0.006"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.volcengine.com/",
+   "quote": "推理输入 6.00 元/百万tokens \n 推理输出 30.00 元/百万tokens"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.volcengine.com/",
+   "quote": "方舟 Agent Plan 首月 9.9 元起\n 企业级 AI Agent 平台"
+  },
+  {
+   "field": "api",
+   "url": "https://www.volcengine.com/",
+   "quote": "npm i @volcengine/ark-cli@latest -g \n 获取 API KEY"
+  },
+  {
+   "field": "platforms",
+   "url": "https://www.volcengine.com/",
+   "quote": "通过 火山方舟 开启一站式大模型服务\n 通过方舟 CLI 在终端或 Agent 中快速开始"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "토큰 종량제 외에 火山方舟 Agent Plan·Coding Plan 구독형 상품(Agent Plan 첫 달 9.9위안부터)을 함께 판매",
+   "diff": "기존 분류 '모델별 상이(오픈웨이트 또는 API 종량제)'에 없는 구독형 요금제가 추가되어 있음. 또한 수집 페이지에는 Doubao-Seed-Code 모델명이 직접 나오지 않음",
+   "url": "https://www.volcengine.com/pricing?product=ark_subscription&tab=2"
+  }
+ ]
+}

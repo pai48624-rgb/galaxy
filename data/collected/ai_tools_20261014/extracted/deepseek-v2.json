@@ -1,0 +1,50 @@
+{
+ "company": "DeepSeek",
+ "one_liner_ko": "경제적인 학습과 효율적인 추론이 특징인 강력한 전문가 혼합(MoE) 언어 모델 DeepSeek-V2.",
+ "what_it_does_ko": "DeepSeek-V2는 총 2,360억 개 파라미터 중 토큰마다 210억 개만 활성화하는 전문가 혼합(MoE) 언어 모델이다. DeepSeek 67B보다 성능이 강하면서 학습 비용을 42.5% 줄이고 KV 캐시를 93.3% 줄이며 최대 생성 처리량을 5.76배로 높였다. 8.1조 토큰의 고품질 말뭉치로 사전학습한 뒤 지도 미세조정(SFT)과 강화학습을 거쳤다. GitHub 저장소에서 모델 다운로드·평가 결과·API 플랫폼 안내를 제공한다. DeepSeek 공식 사이트는 현재 웹 채팅·앱·API 플랫폼을 운영하며 최신 모델은 DeepSeek-V4.1-Flash다.",
+ "key_features": [
+  "MoE 구조: 총 236B 파라미터, 토큰당 21B 활성화",
+  "학습 비용 42.5% 절감, KV 캐시 93.3% 감소",
+  "최대 생성 처리량 5.76배",
+  "8.1조 토큰 사전학습 + SFT·강화학습",
+  "모델 다운로드 제공",
+  "공식 API 플랫폼(최신 모델: JSON 출력·도구 호출·1M 컨텍스트)"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [
+   {"name": "API deepseek-flash (DeepSeek-V4.1-Flash) 입력(캐시 미스)", "price": 0.3, "currency": "USD", "period": "usage", "limits": "100만 토큰당, 피크 $0.3 / 오프피크 $0.15", "page_lang": "en"},
+   {"name": "API deepseek-flash (DeepSeek-V4.1-Flash) 출력", "price": 1.2, "currency": "USD", "period": "usage", "limits": "100만 토큰당, 피크 $1.2 / 오프피크 $0.6", "page_lang": "en"},
+   {"name": "API deepseek-v4-pro 입력(캐시 미스)", "price": 1.32, "currency": "USD", "period": "usage", "limits": "100만 토큰당, 피크 $1.32 / 오프피크 $0.66", "page_lang": "en"},
+   {"name": "API deepseek-v4-pro 출력", "price": 3.96, "currency": "USD", "period": "usage", "limits": "100만 토큰당, 피크 $3.96 / 오프피크 $1.98", "page_lang": "en"}
+  ],
+  "pricing_url": "https://api-docs.deepseek.com/quick_start/pricing/"
+ },
+ "open_source": "코드 MIT / 모델 DeepSeek Model Agreement",
+ "api": "있음",
+ "platforms": ["웹", "API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://deepseek.com/en/", "quote": "© 2026 DeepSeek. All rights reserved."},
+  {"field": "one_liner_ko", "url": "https://github.com/deepseek-ai/DeepSeek-V2", "quote": "DeepSeek-V2:  A Strong, Economical, and Efficient Mixture-of-Experts Language Model"},
+  {"field": "what_it_does_ko", "url": "https://github.com/deepseek-ai/DeepSeek-V2", "quote": "It comprises 236B total parameters, of which 21B are activated for each token."},
+  {"field": "what_it_does_ko", "url": "https://github.com/deepseek-ai/DeepSeek-V2", "quote": "saves 42.5% of training costs, reduces the KV cache by 93.3%, and boosts the maximum generation throughput to 5.76 times."},
+  {"field": "what_it_does_ko", "url": "https://deepseek.com/en/", "quote": "The official version of DeepSeek-V4.1-Flash has been released"},
+  {"field": "key_features", "url": "https://github.com/deepseek-ai/DeepSeek-V2", "quote": "We pretrained DeepSeek-V2 on a diverse and high-quality corpus comprising 8.1 trillion tokens."},
+  {"field": "key_features", "url": "https://github.com/deepseek-ai/DeepSeek-V2", "quote": "<a href=\"#2-model-downloads\">Model Download</a>"},
+  {"field": "key_features", "url": "https://api-docs.deepseek.com/quick_start/pricing/", "quote": "CONTEXT LENGTH 1M"},
+  {"field": "key_features", "url": "https://api-docs.deepseek.com/quick_start/pricing/", "quote": "FEATURES Json Output ✓ ✓ \n Tool Calls ✓ ✓"},
+  {"field": "pricing", "url": "https://api-docs.deepseek.com/quick_start/pricing/", "quote": "1M INPUT TOKENS\n(CACHE MISS) OFF-PEAK $0.15 $0.66 \n PEAK $0.3 $1.32 \n 1M OUTPUT TOKENS OFF-PEAK $0.6 $1.98 \n PEAK $1.2 $3.96"},
+  {"field": "pricing", "url": "https://api-docs.deepseek.com/quick_start/pricing/", "quote": "MODEL VERSION DeepSeek-V4.1-Flash DeepSeek-V4-Pro-0813"},
+  {"field": "open_source", "url": "https://github.com/deepseek-ai/DeepSeek-V2", "quote": "<img alt=\"Code License\" src=\"https://img.shields.io/badge/Code_License-MIT-f5de53"},
+  {"field": "open_source", "url": "https://github.com/deepseek-ai/DeepSeek-V2", "quote": "<img alt=\"Model License\" src=\"https://img.shields.io/badge/Model_License-Model_Agreement-f5de53"},
+  {"field": "api", "url": "https://deepseek.com/en/", "quote": "DeepSeek Web DeepSeek Harness API Platform API Docs Downloads Join Us"},
+  {"field": "platforms", "url": "https://deepseek.com/en/", "quote": "Chat with DeepSeek API Platform Harness Desktop"},
+  {"field": "korean_support", "url": "https://deepseek.com/en/", "quote": "hreflang: en-us, x-default, zh-cn"}
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {"official": "DeepSeek-V2 가중치는 공개(코드 MIT, 모델 Model Agreement)지만, 공식 사이트는 최신 모델(V4.1-Flash, V4-Pro)을 100만 토큰당 종량제 API로 판매(피크·오프피크 차등)", "diff": "기존 분류는 '오픈소스(무료)'만 있으나 공식 API 종량제가 추가로 있음. 단 API 가격은 V2가 아닌 최신 모델 기준", "url": "https://api-docs.deepseek.com/quick_start/pricing/"}
+ ]
+}

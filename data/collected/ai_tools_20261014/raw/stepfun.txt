@@ -1,0 +1,77 @@
+=== [home] https://platform.stepfun.ai/
+StepFun Open Platform 
+ Meet our new flagship model 
+ Open Platform Models 
+ Docs Developer Center 
+ Step Plan Step Code 
+ AI Studio StepFun 
+ Sign In 
+ Step 5 Preview 
+ Advancing the Pareto Frontier
+ Get API Key Read Docs 
+ StepAudio 3 TTS 
+ Text-to-Speech for Natural Voice Generation
+ Try in Studio Read Docs 
+ StepAudio 3 ASR 
+ Speech-to-Text for Audio Transcription
+ Try in Studio Read Docs 
+ Step 5 Preview 
+ Advancing the Pareto Frontier
+ Get API Key Read Docs 
+ Partner with us to accelerate AI application rollout
+ Models overview
+ Step 5 Preview
+ A new-generation frontier model built for real-world tasks
+ Step 3.7 Flash Step 3.5 Flash Explore Step 5 Preview 
+ StepAudio 3
+ A family of models for speech recognition, real-time interaction, voice and music generation
+ StepAudio 3 Realtime Real-time voice interaction StepAudio 3 TTS Speech synthesis StepAudio 3 Gen Voice generation StepAudio 3 Music Music generation StepAudio 3 ASR Speech recognition View all voice models 
+ Make your first call in three steps
+ Get started API documentation 
+ Python cURL 
+ from openai import OpenAI 
+ client = OpenAI( 
+ api_key = "YOUR_STEP_API_KEY" , 
+ base_url = "https://api.stepfun.ai/v1" , 
+ ) 
+ response = client.chat.completions.create( 
+ model = "YOUR_MODEL_ID" , 
+ messages = [ 
+ { "role" : "user" , "content" : "Hello, please introduce yourself in one sentence." } 
+ ], 
+ ) 
+ print (response.choices[ 0 ].message.content) 
+ Other ways to build
+ Step Plan subscription
+ One subscription for building with StepFun-from coding to agentic workflows
+ Explore Step Plan 
+ Studio, no code required
+ Try models straight in the browser, then wire up the API once you know it works
+ Explore Studio 
+ Next steps for building
+ Developer Program
+ Tokens and technical support for independent developers and early-stage teams
+ Builder Program 
+ Technical Support
+ Developer community, enterprise enquiries, and rate-limit increase requests
+ platform@stepfun.com 
+ Discord community
+ X account
+ Get API key now
+ Sign up and call every public model,usage-based billing
+ Get API key 
+ Scale up for everyone
+ Platform support 
+ Models
+ Frontier AI Step 5 Preview Step 3.7 Flash Step 3.5 Flash 
+ Voice StepAudio 3 Realtime StepAudio 3 TTS StepAudio 3 Gen StepAudio 3 Music StepAudio 3 ASR 
+ Products
+ AI Studio API Platform 
+ Developers
+ Documentation Builder Program Partner with us Join the developer community 
+ Copyright © 2023 StepFun Inc.
+
+=== [meta] https://platform.stepfun.ai/
+html lang: 없음
+hreflang: 없음
+화면에 보이는 언어 이름: 없음

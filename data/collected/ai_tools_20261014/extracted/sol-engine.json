@@ -1,0 +1,89 @@
+{
+ "company": "NVIDIA Research (Efficient AI Team & Singapore Lab)",
+ "one_liner_ko": "캐시·희소 어텐션·토큰 가지치기·양자화·커널 융합을 묶어 비디오 확산 모델 추론을 가속하는 학습 불필요 프레임워크.",
+ "what_it_does_ko": "Sol Video Inference Engine은 추가 학습 없이 비디오 확산 모델 추론을 가속하는 에이전트 기반 프레임워크다. 캐시, 희소 어텐션, 토큰 가지치기, 양자화, 커널 융합 다섯 기법을 모델·하드웨어·서빙 설정마다 맞춘 배포용 스택으로 조합한다. 기법별 스킬 에이전트가 적용 가능성을 시험하고 통합 에이전트가 후보를 묶으며 사람 검증자가 효율·품질을 피드백한다. Cosmos3-Super·LTX-2.3·SANA-Video에서 화질 손실을 거의 없이 2배 이상 종단 간 속도 향상을 냈다고 밝힌다.",
+ "key_features": [
+  "추가 학습 없는(training-free) 가속",
+  "캐시·희소 어텐션·토큰 가지치기·양자화·커널 융합 풀스택 조합",
+  "모델×하드웨어×설정별 맞춤 가속",
+  "병렬 스킬 에이전트와 전역 통합기",
+  "2~3배 종단 간 속도 향상(데모 기준 SGLang 대비 2.27~2.77배)"
+ ],
+ "use_cases_ko": [
+  "Cosmos3-Super·LTX-2.3·SANA-Video 같은 비디오 생성 모델의 추론 지연 단축"
+ ],
+ "pricing": {
+  "free_tier": "불명 (가격 표기 없음)",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://nvlabs.github.io/Sana/Sol-Engine/",
+   "quote": "NVIDIA Research, Efficient AI Team & Singapore Lab."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://nvlabs.github.io/Sana/Sol-Engine/",
+   "quote": "A training-free acceleration framework that composes cache, sparse attention, token pruning, quantization, and kernel fusion into deployment-ready stacks for video diffusion inference."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://nvlabs.github.io/Sana/Sol-Engine/",
+   "quote": "Parallel skill agents test technique applicability, an agent integrator composes selected candidates into a deployment stack, and a human validator provides efficiency-quality feedback."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://nvlabs.github.io/Sana/Sol-Engine/",
+   "quote": "the framework delivers more than 2× end-to-end speedup while maintaining near-lossless visual quality."
+  },
+  {
+   "field": "key_features",
+   "url": "https://nvlabs.github.io/Sana/Sol-Engine/",
+   "quote": "Cache, sparse attention, token pruning, quantization, and kernel fusion"
+  },
+  {
+   "field": "key_features",
+   "url": "https://nvlabs.github.io/Sana/Sol-Engine/",
+   "quote": "Model × hardware × configuration aware acceleration"
+  },
+  {
+   "field": "key_features",
+   "url": "https://nvlabs.github.io/Sana/Sol-Engine/",
+   "quote": "Parallel skill agents with global integration"
+  },
+  {
+   "field": "key_features",
+   "url": "https://nvlabs.github.io/Sana/Sol-Engine/",
+   "quote": "2×–3× end-to-end speedup"
+  },
+  {
+   "field": "key_features",
+   "url": "https://nvlabs.github.io/Sana/Sol-Engine/",
+   "quote": "Sol-Engine · 2.77×"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://nvlabs.github.io/Sana/Sol-Engine/",
+   "quote": "The full framework substantially reduces latency across Cosmos3-Super, LTX-2.3, and SANA-Video while preserving perceptual quality."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://nvlabs.github.io/Sana/Sol-Engine/",
+   "quote": "hreflang: 없음"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "NVIDIA 연구팀의 연구용 가속 프레임워크(논문·코드 링크 공개), 요금 표기 없음",
+   "diff": "기존 '사용량 기반 종량제(클라우드/GPU)'와 달리 과금 서비스가 아닌 연구 공개 코드",
+   "url": "https://nvlabs.github.io/Sana/Sol-Engine/"
+  }
+ ],
+ "plan_change": []
+}

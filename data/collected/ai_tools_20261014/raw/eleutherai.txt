@@ -1,0 +1,167 @@
+=== [home] https://eleuther.ai/ (lang=en)
+EleutherAI 
+ About 
+ EleutherAI 
+ About 
+ Staff 
+ Research 
+ Open Source AI 
+ Open Models & Infrastructure 
+ Training Data 
+ Multilingual NLP 
+ Science 
+ Interpretability Over Time 
+ Evaluation 
+ AI for Science 
+ Safety 
+ Open-Weight Safety 
+ Behavioral Safety 
+ Privacy and Security 
+ Papers 
+ Community 
+ Blog 
+ About 
+ Staff 
+ Research 
+ Research areas 
+ Open Models & Infrastructure 
+ Training Data 
+ Multilingual NLP 
+ Interpretability Over Time 
+ Evaluation 
+ AI for Science 
+ Open-Weight Safety 
+ Behavioral Safety 
+ Privacy and Security 
+ Papers 
+ Community 
+ Blog 
+ Independent AI Research,
+Done in the Open
+ We build open-source AI infrastructure, pioneer interpretability and open-weight safety, and help researchers without frontier-lab resources do frontier work.
+ 200+ 
+ Publications 
+ 62,000+ 
+ Citations 
+ 154M+ 
+ Model Downloads 
+ Join the community 
+ Explore our research 
+ Latest
+ Blog 
+ What We Learned Trying to Catch AI Liars: An Aletheia's Quest Retrospective 
+ August 25, 2026
+ Blog 
+ FineBooks: are open OCR models good enough to unlock historical knowledge? 
+ August 10, 2026
+ Blog 
+ A Dynamical Model of AI Governability 
+ July 13, 2026
+ News 
+ A Short Retrospective on the EleutherAI Summer of Open AI Research 
+ May 18, 2026
+ Focus Areas
+ Open Models and Tools: what we release at each layer 
+ Data Openly licensed 
+ The Pile · The Common Pile 
+ Code Open source 
+ GPT-NeoX · lm-evaluation-harness 
+ Models Public, with checkpoints 
+ Pythia · GPT-NeoX-20B · Comma 
+ Open Models and Tools → 
+ Open research on large models requires open training data, open training and evaluation code, and models whose full development is public. We have built all three since 2020.
+ Our datasets include the Pile and the Common Pile. Our training framework is GPT-NeoX and our evaluation framework is the LM Evaluation Harness. Model suites such as Pythia are released with their training data, code, and intermediate checkpoints. All of it is openly licensed and in use across the research community.
+ Datasets → 
+ Code → 
+ Models → 
+ Interpretability Over Time → 
+ Most interpretability research studies a finished model. We study how model internals develop over the course of training, and we have argued that a science of AI must study training dynamics rather than only the final artifact.
+ The Pythia suite was built for this purpose. It provides checkpoints throughout training together with the exact data each checkpoint had seen, and it is now widely used in research on learning dynamics, memorization, and how capabilities form.
+ Pythia → 
+ Don't Just Fix It in Post → 
+ Open-Weight Safety → 
+ Once model weights are public, safeguards cannot rely on API monitoring or on post-training methods that fine-tuning can remove. We work on safety methods that remain effective when anyone can inspect and modify the model, which in practice means intervening in the training data and the training process.
+ Deep Ignorance is one such method. It filters hazardous material out of pretraining data so that the model never learns it, and the resulting safeguard is substantially more resistant to adversarial fine-tuning than post-training alternatives. With FAR.AI we co-organize the Open-Weight Pretraining Safety Accelerator, which gives researchers access to the pretraining runs needed to test interventions of this kind at scale.
+ Deep Ignorance → 
+ Development Cheatsheet → 
+ Evaluation → 
+ We maintain the Language Model Evaluation Harness, which is the framework behind the Open LLM Leaderboard and the standard tool for evaluating open models. Maintaining it has shown us how much reported numbers depend on details of prompting, scoring, and implementation.
+ We also study evaluation itself. This includes when benchmarks saturate and stop distinguishing between models, how the age of a benchmark affects comparisons across models, and how results should be reported so that they can be compared across groups. Through the EvalEval Coalition, which we co-founded with Hugging Face and the University of Edinburgh, we work on shared evaluation infrastructure with other institutions.
+ LM Evaluation Harness → 
+ Benchmark Saturation → 
+ EvalEval Coalition → 
+ Recent Papers
+ Paper 
+ Bergson: An Open Source Library for Data Attribution
+ EMNLP System Demonstrations · October 24, 2026
+ Paper 
+ Don't Just "Fix it in Post'': A Science of AI Must Study Learning Dynamics
+ ICML · July 10, 2026
+ Paper 
+ Deep Ignorance: Filtering Pretraining Data Builds Tamper-Resistant Safeguards into Open-Weight LLMs
+ ICLR · April 23, 2026
+ Paper 
+ The Common Pile v0.1: An 8TB Dataset of Public Domain and Openly Licensed Text
+ NeurIPS Datasets and Benchmarks · December 2, 2025
+ EleutherAI 
+ Website licensed under CC BY 4.0
+
+=== [about] https://eleuther.ai/about/ (lang=en)
+About EleutherAI | EleutherAI 
+ About 
+ EleutherAI 
+ About 
+ Staff 
+ Research 
+ Open Source AI 
+ Open Models & Infrastructure 
+ Training Data 
+ Multilingual NLP 
+ Science 
+ Interpretability Over Time 
+ Evaluation 
+ AI for Science 
+ Safety 
+ Open-Weight Safety 
+ Behavioral Safety 
+ Privacy and Security 
+ Papers 
+ Community 
+ Blog 
+ About 
+ Staff 
+ Research 
+ Research areas 
+ Open Models & Infrastructure 
+ Training Data 
+ Multilingual NLP 
+ Interpretability Over Time 
+ Evaluation 
+ AI for Science 
+ Open-Weight Safety 
+ Behavioral Safety 
+ Privacy and Security 
+ Papers 
+ Community 
+ Blog 
+ About EleutherAI
+ EleutherAI is a non-profit AI research lab. We train and release open models, datasets, and tools, and we study how models learn, how to measure them, and how to make open-weight systems safe.
+ EleutherAI
+ EleutherAI is a non-profit research institute with 15 full- and part-time staff, who work alongside a dozen or so regular volunteers and external collaborators. Our current work falls into three groups, described in detail on the research pages :
+ Open Source AI . We build the open infrastructure the field runs on: openly licensed training corpora such as the Common Pile, the GPT-NeoX training framework, and model suites like Pythia released with their checkpoints and data order.
+ Science . We study how models learn, how their internal structures develop, and how to evaluate them. We also build models, datasets, and tools for scientific work, including mathematical reasoning and protein structure prediction.
+ Safety . We develop safeguards for open-weight models that survive fine-tuning and other white-box access, and we study behavioral failures such as deception, sycophancy, and evaluation awareness.
+ We also run programs for the wider community: the Summer of Open AI Research ( SOAR ), our annual mentored research program; the EvalEval Coalition, which we co-founded with Hugging Face and the University of Edinburgh; and the Open-Weight Pretraining Safety Accelerator, with FAR.AI.
+ EleutherAI operates primarily through our public Discord server , where we discuss research in the field and coordinate our projects. We embrace an open and collaborative research model, and our Discord server does not strongly differentiate between employees, volunteers, and collaborators at other institutions. However, our community specifically caters to researchers and research-level discussion, and we ask that people interested in learning about AI research primarily observe.
+ Our Mission
+ The development of transformer-based language models has supercharged interest in large-scale machine learning research. Unfortunately, due to the high costs and unusual skill set required to advance in the field, the world of large-scale AI research today is dominated by a few large technology companies and start-ups.
+ At EleutherAI, we believe that these technologies are both highly promising and potentially dangerous. However, we firmly do not believe that decisions about the future of these technologies should be restricted to the employees of a handful of companies that develop them for profit. Research into interpretability and alignment is of utmost importance for AI governance. As increasingly powerful machine learning systems are being developed and deployed, it is crucial that independent researchers are able to study them.
+ We therefore seek to:
+ Advance research on the interpretability and alignment of open-source foundation models;
+ Ensure that the ability to study foundation models is not restricted to a handful of companies;
+ Educate people about t
+
+=== [meta] https://eleuther.ai/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음

@@ -1,0 +1,295 @@
+=== [home] http://osworld-v1.xlang.ai/
+OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments 
+ More Research
+ Spider
+ UnifiedSKG
+ IC-DST
+ Selective Annotation
+ Binder
+ DS-1000
+ Instructor
+ Text2Reward
+ OpenAgents
+ Lemur-70B
+ ARKS
+ BRIGHT
+ Spider2-V
+ OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments
+ Tianbao Xie 1 , 
+ Danyang Zhang 1 , 
+ Jixuan Chen 1 , 
+ Xiaochuan Li 1 , 
+ Siheng Zhao 1 , 
+ Ruisheng
+ Cao 1 , 
+ Toh Jing Hua 1 , 
+ Zhoujun Cheng 1 , 
+ Dongchan
+ Shin 1 , 
+ Fangyu Lei 1 , 
+ Yitao Liu 1 , 
+ Yiheng Xu 1 , 
+ Shuyan Zhou 3 , 
+ Silvio Savarese 2 , 
+ Caiming Xiong 2 , 
+ Victor Zhong 4 , 
+ Tao Yu 1 
+ 1 The University of Hong Kong, 
+ 2 Salesforce Research, 
+ 3 Carnegie Mellon University, 
+ 4 University of Waterloo 
+ 2026-06-26: OSWorld 2.0 is now available! Please visit OSWorld 2.0 for the latest version. 
+ -->
+ 2025-07-28: Major Upgrade! OSWorld has been enhanced and is now OSWorld-Verified with comprehensive improvements : fixed community-reported examples , AWS support reducing evaluation time to within 1 hour , and updated benchmark results . See the verified benchmark results in the Benchmark section below. Please compare your OSWorld results with the new benchmark results when running the latest version.
+ -->
+ -->
+ -->
+ -->
+ -->
+ Paper -->
+ -->
+ -->
+ Paper 
+ -->
+ -->
+ -->
+ -->
+ -->
+ Video -->
+ -->
+ -->
+ Code 
+ Doc 
+ Data 
+ Data Viewer 
+ Slides 
+ Twitter 
+ Discord 
+ **OSWorld** is a first-of-its-kind scalable, real computer environment for multimodal agents,
+ supporting task setup, execution-based evaluation, and interactive learning across operating systems.
+ It can serve as a unified environment for evaluating open-ended computer tasks that involve arbitrary
+ apps (e.g., task examples in the above Fig). We also create a benchmark of 369 real-world computer
+ tasks in **OSWorld** with reliable, reproducible setup and evaluation scripts. *Note: 8 Google Drive tasks may require manual configuration or can be excluded (361 tasks) due to network dependencies.*
+ Abstract
+ Autonomous agents that accomplish complex computer tasks with minimal human
+ interventions have the potential to transform human-computer interaction, significantly enhancing
+ accessibility and productivity. However, existing benchmarks
+ either lack an interactive environment or are limited to environments specific to
+ certain applications or domains, failing to reflect the diverse and complex nature of real-world computer
+ use, thereby limiting the scope of tasks and agent
+ scalability. To address this issue, we introduce **OSWorld**, the first-of-its-kind
+ scalable, real computer environment for multimodal agents, supporting task setup,
+ execution-based evaluation, and interactive learning across various operating systems such as Ubuntu,
+ Windows, and macOS. **OSWorld** can serve as a unified,
+ integrated computer environment for assessing open-ended computer tasks that
+ involve arbitrary applications. Building upon **OSWorld**, we create a benchmark
+ of 369 computer tasks involving real web and desktop apps in open domains, OS
+ file I/O, and workflows spanning multiple applications (note: 8 Google Drive tasks may require manual setup or can be excluded for a 361-task evaluation). Each task example is
+ derived from real-world computer use cases and includes a detailed initial state
+ setup configuration and a custom execution-based evaluation script for reliable,
+ reproducible evaluation. Extensive evaluation of state-of-the-art LLM/VLM-based
+ agents on **OSWorld** reveals significant deficiencies in their ability to serve as
+ computer assistants. While humans can accomplish over 72.36% of the tasks, the
+ best model achieves only 12.24% success, primarily struggling with GUI grounding
+ and operational knowledge. Comprehensive analysis using **OSWorld** provides
+ valuable insights for developing multimodal generalist agents that were not possible with previous
+ benchmarks.
+ OSWorld Environment Infrastructure
+ The **OSWorld** environment uses a configuration file for
+ initializing tasks *(highlighted in red)*, agent interaction, post-processing upon agent
+ completion *(highlighted in orange)*, retrieving files and information *(highlighted in yellow)*, and
+ executing the evaluation function *(highlighted in green)*. The corresponding configuration items are
+ highlighted in colors that match their respective components within the environment. Environments
+ can run in parallel on a single host machine for learning or evaluation purposes. Headless operation
+ is supported. 
+ Data Statistics and Comparison
+ Below we present an overview of the main statistics of **OSWorld**, showcasing the outline and a broad spectrum
+ of tasks. **OSWorld** contains a total of 369 tasks (and an additional 43 tasks on Windows for
+ analysis). 
+ Key statistics of
+ OSWorld .
+ The "Supp. tasks" refers to the Windows-based tasks, that could
+ only be used after
+ activation due to copyright restrictions.
+ Distribution of task instructions in OSWorld 
+ based on the app domains and operation
+ types to showcase the content intuitively.
+ We make a comparison of **OSWorld** against some other different benchmarks for digital agents as
+ presented below. 
+ **The columns
+ indicate:** whether they provide a controllable executable environment *(Control. Exec. Env.)*, the
+ ease of adding new tasks involving arbitrary applications in open domains *(Environment Scalability)*,
+ support for multimodal agent evaluation *(Multimodal Support)*, support for and inclusion of cross-app
+ tasks *(Cross-App)*, capability to start tasks from an intermediate initial state *(Intermediate Init. State)*,
+ and the number of execution-based evaluation functions *(# Exec.-based Eval. Func.)*. 
+ OSWorld 
+ # Instances 
+(# Templates) 
+ 369 
+ Control. 
+Exec. Env. 
+ Computer 
+ Environment Scalability? 
+ ✔️ 
+ Multimodal 
+ Support? 
+ ✔️ 
+ Cross-App? 
+ ✔️ 
+ Intermediate
+ Init. State? 
+ ✔️
+ # Exec.-based
+ Eval. Func. 
+ 134
+ GAIA 
+ Mind2Web 
+ WebLINX 
+ PixelHelp 
+ MetaGUI 
+ AitW 
+ OmniAct 
+ ScreenAgent 
+ AgentBench 
+ InterCode 
+ MiniWoB++ 
+ WebShop 
+ WebArena 
+ VisualWebArena 
+ WorkArena 
+ WikiHow 
+ AssistGUI 
+ 466
+ 2350 
+ 2337 
+ 187 
+ 1125 
+ 30k 
+ 9802 
+ 70 
+ 1091 
+ 1350(3) 
+ 125 
+ 12k(1) 
+ 812(241) 
+ 910(314) 
+ 23k(29) 
+ 150(16) 
+ 100 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ Multi-isolated 
+ Code 
+ Web 
+ Web 
+ Web 
+ Web 
+ Web 
+ Mobile 
+ ❌ 
+ - 
+ - 
+ - 
+ - 
+ - 
+ - 
+ - 
+ - 
+ ❌
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌
+ ✔️ 
+ ✔️ 
+ ✔️ 
+ ✔️ 
+ ✔️ 
+ ✔️ 
+ ✔️ 
+ ❌ 
+ ❌ 
+ ✔️ 
+ ✔️ 
+ ✔️ 
+ ✔️ 
+ ✔️ 
+ ✔️ 
+ ✔️ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ✔️ 
+ ✔️ 
+ ❌
+ ❌ 
+ ✔️ 
+ ✔️ 
+ ✔️ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ❌ 
+ ✔️ 
+ ❌ 
+ ✔️ 
+ 0 
+ 0 
+ 0 
+ 0 
+ 0 
+ 0 
+ 0 
+ 0 
+ 7 
+ 3 
+ 125 
+ 1 
+ 5 
+ 6 
+ 7 
+ 16 
+ 2 
+ Benchmark
+ We adopt state-of-the-art LLM and VLM from open-source representatives such as UI-TARS, Agent-S, Qwen, Mixtral and
+ CogAgent, and closed-source ones from Operator, GPT, Gemini, and Claude families on **OSWorld**, as LLM and VLM agent
+ baselines. We also explore methods such as the Set-of-Marks aided
+ approach, which has been demonstrated to improve spatial capabilities for visual
+ reasoning.
+ **We are actively updating the benchmark with new LLMs, VLMs and methods. Pull requests welcomed!**
+ Important Notice: Google Drive Tasks
+ (2025-07-28) 
+ OSWorld contains 8 Google Drive-related tasks that may encounter setup issues during task initialization due to IP changes or other network-related factors, even when following our co
+
+=== [meta] http://osworld-v1.xlang.ai/
+html lang: 없음
+hreflang: 없음
+화면에 보이는 언어 이름: 없음

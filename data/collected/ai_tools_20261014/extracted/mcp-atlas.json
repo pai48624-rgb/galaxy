@@ -1,0 +1,81 @@
+{
+ "company": "Scale AI",
+ "one_liner_ko": "MCP(Model Context Protocol)를 통한 실제 도구 사용 능력을 평가하는 MCP Atlas 리더보드.",
+ "what_it_does_ko": "MCP-Atlas는 언어모델이 MCP로 실제 도구를 얼마나 잘 쓰는지 평가한다. 사람이 쓴 1,000개 과제(공개 500·비공개 500)가 실제 MCP 서버 36개와 도구 220개에 걸쳐 있고, 과제마다 도구 호출 3~6번이 필요하다. 모델은 방해 도구가 섞인 목록에서 맞는 도구를 찾고, 올바른 인자로 호출하고, 오류에서 회복해 최종 답을 내야 한다. 정답을 주장(claim) 단위로 나눠 LLM 판정자가 채점하며 커버리지 75% 이상이면 통과로 본다.",
+ "key_features": [
+  "1,000개 과제(공개 500·비공개 500)",
+  "실제 MCP 서버 36개·도구 220개(Docker)",
+  "방해(distractor) 도구 포함 도구 노출",
+  "주장 단위 LLM 판정 채점·통과율 지표",
+  "과제당 최대 100회 도구 호출 예산",
+  "논문·HuggingFace 데이터셋·GitHub 하네스 공개"
+ ],
+ "use_cases_ko": [
+  "모델 개발자가 도구 사용 에이전트 성능 비교"
+ ],
+ "pricing": {
+  "free_tier": null,
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "오픈소스(라이선스 이름 미표기)",
+ "api": "불명",
+ "platforms": [
+  "웹"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://labs.scale.com/leaderboard/mcp_atlas",
+   "quote": "2026 Scale AI. All rights reserved."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://labs.scale.com/leaderboard/mcp_atlas",
+   "quote": "Evaluating real-world tool use through the Model Context Protocol (MCP)"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://labs.scale.com/leaderboard/mcp_atlas",
+   "quote": "The MCP-Atlas dataset consists of 1,000 human-authored tasks, spanning 36 real MCP servers and 220 tools ."
+  },
+  {
+   "field": "key_features",
+   "url": "https://labs.scale.com/leaderboard/mcp_atlas",
+   "quote": "Tasks run against real MCP servers hosted in Docker containers, not mocked endpoints or simulations."
+  },
+  {
+   "field": "key_features",
+   "url": "https://labs.scale.com/leaderboard/mcp_atlas",
+   "quote": "A task passes if the model achieves a coverage score of 75% or higher."
+  },
+  {
+   "field": "key_features",
+   "url": "https://labs.scale.com/leaderboard/mcp_atlas",
+   "quote": "replaced it with a tool call budget of 100 max tool calls per task"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://labs.scale.com/leaderboard/mcp_atlas",
+   "quote": "This benchmark targets a core deployment gap"
+  },
+  {
+   "field": "open_source",
+   "url": "https://labs.scale.com/leaderboard/mcp_atlas",
+   "quote": "This leaderboard is part of the open-source MCP-Atlas release:"
+  },
+  {
+   "field": "platforms",
+   "url": "https://labs.scale.com/leaderboard/mcp_atlas",
+   "quote": "Scale Labs Leaderboard: MCP Atlas"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://labs.scale.com/leaderboard/mcp_atlas",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

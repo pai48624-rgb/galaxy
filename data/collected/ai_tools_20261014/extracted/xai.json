@@ -1,0 +1,228 @@
+{
+ "company": "SpaceXAI LLC (사이트 표기 SpaceXSI)",
+ "one_liner_ko": "추론·코드·음성·이미지·영상을 다루는 프런티어 AI 모델 Grok을 만들고 하나의 API로 제공하는 회사.",
+ "what_it_does_ko": "Grok 모델(최신 Grok 4.7)을 만들고 텍스트·코드·음성·이미지·영상을 하나의 통합 API로 제공한다. 소비자용으로 Chat, Build(코딩), Imagine(이미지·영상), Voice, Bot 제품과 iOS·Android 앱, X 안의 Grok을 운영한다. 개인 구독은 Free부터 Ultra까지 단계별로 나뉘며 Grok과 Cursor 사용량을 하나의 풀로 공유한다. API는 종량제이고, 기업은 맞춤 한도·SSO·데이터 저장 위치 옵션을 영업팀과 계약한다.",
+ "key_features": [
+  "텍스트·코드·음성·이미지·영상을 하나로 묶은 통합 API",
+  "코딩 에이전트 Grok Build",
+  "AI 이미지·영상 생성(Imagine)",
+  "음성 대 음성·텍스트 음성 변환·음성 인식 API",
+  "함수 호출·웹 검색·X 검색·코드 실행 도구",
+  "OpenAI SDK 호환 엔드포인트",
+  "팀용 공유 AI 동료 Team Bots"
+ ],
+ "use_cases_ko": [
+  "개발자가 Grok 모델로 AI 제품 출시",
+  "기업 고객지원 확장(Grok Bot)",
+  "새 AI 사용자·매일 에이전트 쓰는 사용자·파워 유저의 개인 구독"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Free $0/월, 채팅·에이전트 요청 제한)",
+  "plans": [
+   {
+    "name": "Free",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "AI 사용량 제한(채팅·에이전트 요청 제한)",
+    "page_lang": "en"
+   },
+   {
+    "name": "Plus",
+    "price": 8,
+    "currency": "USD",
+    "period": "month",
+    "limits": "공유 AI 사용량 풀, Grok Chat·Voice·Imagine·Build, API 접근, Cursor",
+    "page_lang": "en"
+   },
+   {
+    "name": "Premium",
+    "price": 30,
+    "currency": "USD",
+    "period": "month",
+    "limits": "Plus 대비 4배 사용량, Grok Bot, 최신 모델",
+    "page_lang": "en"
+   },
+   {
+    "name": "Super",
+    "price": 100,
+    "currency": "USD",
+    "period": "month",
+    "limits": "Plus 대비 15배 사용량, 피크 시간 우선 접근",
+    "page_lang": "en"
+   },
+   {
+    "name": "Ultra",
+    "price": 200,
+    "currency": "USD",
+    "period": "month",
+    "limits": "Plus 대비 50배 사용량",
+    "page_lang": "en"
+   },
+   {
+    "name": "Teams",
+    "price": 30,
+    "currency": "USD",
+    "period": "month",
+    "limits": "사용자당 월 $30부터, 사용량 풀·팀 관리",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": "USD",
+    "period": "month",
+    "limits": "맞춤 가격(영업 문의)",
+    "page_lang": "en"
+   },
+   {
+    "name": "API",
+    "price": null,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "종량제, 사용량에 따라 한도 자동 증가",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://x.ai/pricing"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "iOS",
+  "안드로이드",
+  "API"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://x.ai/",
+   "quote": "© 2026 SpaceXAI LLC"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://x.ai/",
+   "quote": "Reasoning, code, voice, images, and video. Trained on the world"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://x.ai/",
+   "quote": "Text, code, voice, images, and video — all through a single unified API."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://x.ai/",
+   "quote": "New Meet Grok 4.7 · Our new model"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://x.ai/pricing",
+   "quote": "Every tier includes a pool of AI usage shared across Grok and Cursor."
+  },
+  {
+   "field": "key_features",
+   "url": "https://x.ai/pricing",
+   "quote": "Grok Chat, Voice, Imagine, and Build"
+  },
+  {
+   "field": "key_features",
+   "url": "https://x.ai/pricing",
+   "quote": "Make stunning AI images & videos"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.x.ai/overview",
+   "quote": "Speech to Speech"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.x.ai/overview",
+   "quote": "Function Calling"
+  },
+  {
+   "field": "key_features",
+   "url": "https://x.ai/",
+   "quote": "baseURL: \"https://api.x.ai/v1\""
+  },
+  {
+   "field": "key_features",
+   "url": "https://x.ai/",
+   "quote": "Team Bots: shared AI teammates that learn as they work"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://x.ai/",
+   "quote": "Launch your AI-powered product with:"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://x.ai/",
+   "quote": "How SpaceXSI is using Grok Bot to scale customer support"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://x.ai/pricing",
+   "quote": "We recommend Premium for new AI users, Super for daily agent users, and Ultra for power users."
+  },
+  {
+   "field": "pricing",
+   "url": "https://x.ai/pricing",
+   "quote": "One subscription. Access to everything."
+  },
+  {
+   "field": "pricing",
+   "url": "https://x.ai/pricing",
+   "quote": "Teams $30+/user/month Get Teams"
+  },
+  {
+   "field": "pricing",
+   "url": "https://x.ai/pricing",
+   "quote": "Super $100/month Get Super"
+  },
+  {
+   "field": "pricing",
+   "url": "https://x.ai/pricing",
+   "quote": "Ultra $200/month Get Ultra"
+  },
+  {
+   "field": "pricing",
+   "url": "https://x.ai/pricing",
+   "quote": "Premium $30/month Get Premium"
+  },
+  {
+   "field": "pricing",
+   "url": "https://x.ai/pricing",
+   "quote": "Plus $8/month Get Plus"
+  },
+  {
+   "field": "pricing",
+   "url": "https://x.ai/pricing",
+   "quote": "Free $0/month Get started"
+  },
+  {
+   "field": "pricing",
+   "url": "https://x.ai/",
+   "quote": "Usage-based pricing"
+  },
+  {
+   "field": "api",
+   "url": "https://x.ai/",
+   "quote": "Get API Access View Documentation"
+  },
+  {
+   "field": "platforms",
+   "url": "https://x.ai/",
+   "quote": "Download grok.com iOS Android Grok on X"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "X Subscription 하나로 X 기능·Grok·Cursor 사용량을 묶음: Free $0 / Plus $8 / Premium $30 / Super $100 / Ultra $200 / Teams $30+/사용자, API는 종량제",
+   "diff": "기존 'X Premium 포함' 표기와 달리 요금제가 Plus·Premium·Super·Ultra 단계로 개편되고 Cursor 사용량까지 같은 구독 풀에 묶임",
+   "url": "https://x.ai/pricing"
+  }
+ ]
+}

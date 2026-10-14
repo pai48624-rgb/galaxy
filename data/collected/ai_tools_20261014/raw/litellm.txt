@@ -1,0 +1,564 @@
+=== [home] https://www.litellm.ai/ (lang=en)
+LiteLLM — Open-Source AI Gateway & LLM Proxy 
+ See how AT&T cut coding costs by 56% with LiteLLM.
+ Read here 
+ Hiring 
+ AI Gateway Docs Product
+ AI Gateway
+ One API for 100+ LLMs, with spend tracking, auth, and guardrails.
+ Models
+ Pricing, context windows, and providers for every model.
+ litellm sdk
+ Python SDK to call 100+ LLMs in the OpenAI format.
+ liteagents SDK
+ Agent SDK that routes every turn to the right model, across providers.
+ Careers Blog 
+ ★ 58.8k
+ Get started Try Enterprise 
+ The AI Gateway
+ for platform teams 
+ Put your full AI stack behind one key. See who is driving spend, cap it before it runs, and send each request to the model that should handle it.
+ Get started Talk to sales 
+ Open source. Self-hosted.
+ Your AI App
+ Humans
+ Agents
+ Machines
+ AI GATEWAY
+ Optimization
+ Observability
+ Routing
+ Governance
+ LLMs
+ MCPs
+ Agents
+ Quick start macOS & Linux Windows Python SDK 
+ $ curl -fsSL https://raw.githubusercontent.com/BerriAI/litellm/main/scripts/quickstart.sh | sh Copied 
+ Testimonial 
+ Testimonial 
+ “LiteLLM gives NVIDIA engineers a single, consistent way to access more than 100 AI model endpoints .”
+ Ajay Dogra Product, NVIDIA 
+ Testimonial 
+ Testimonial 
+ “LiteLLM streamlines the complexities of managing multiple LLM models.”
+ Mark Koltnuk Principal Architect, Lemonade 
+ Testimonial 
+ Testimonial 
+ “LiteLLM has let my team provide the latest LLM models to our users, usually within a day of them being released… it has saved us months of work .”
+ David Leen Staff Software Engineer, Netflix 
+ Testimonial 
+ Testimonial 
+ “If we decide to switch the backend model, it’s a simple configuration update in the gateway; no code changes, procurement cycles, or repetitive security reviews required.”
+ Dennis Henry Productivity Architect, Okta 
+ Testimonial 
+ Testimonial 
+ “After the company began using router provider LiteLLM, the costs of some advanced AI tasks such as coding fell by as much as 56% .”
+ Mark Austin VP, AT&T Data Office 
+ Why LiteLLM
+ Give your whole org access to every model, agent, and MCP , then see, control, and optimize every request.
+ 01
+ Access: Give your whole company every model.
+ Put every model, agent, and MCP behind one API and one login. We handle key management and work with the secret manager you already run, so platform teams open access to the whole org without becoming the bottleneck, and developers build in minutes, not a procurement cycle.
+ One OpenAI-compatible API to 140+ providers and 1,800+ models. Swap models without changing app code.
+ One login with SSO , scoped by team, project, or app.
+ Day-zero support for new models , so developers get the latest the day it ships.
+ Reach agents and MCP servers through the same gateway, not just LLMs.
+ Bring your own internal, fine-tuned, and self-hosted models behind the same key.
+ Keys Create Key Endpoints Models Teams Team Members MCP AI Hub 
+ Virtual Keys Ask AI Export 
+ + Create New Key Showing 1–6 of 6 Filters 
+ Key Team Last Active Spend / Budget 
+ acme-prod-gateway Active sk-…9f2A platform-eng 2 min ago $4,182.55 / $10,000 
+ wayne-data-science Active sk-…Tt09 data-science 3 min ago $6,740.15 / $12,000 
+ hooli-data-squad Active sk-…Pq77 ai-gateway just now $3,301.42 / $8,000 
+ globex-genai-platform Active sk-…7b01 ml-platform 5 min ago $1,905.20 / $5,000 
+ ci-eval-runner Rate-limited sk-…Hh55 infra 7 min ago $58.44 / $250 
+ umbrella-eng-sandbox Expired sk-…WW21 security 38 min ago $121.87 / $500 
+ Rows per page: 6 Page 1 of 1 
+ Key Ownership
+ Owned By You Service Account Another User Agent New 
+ Organization All Organizations 
+ Team Search or select a team 
+ Key Details
+ * Key Name e.g. prod-gateway-key 
+ Models Select models 
+ Leave empty to allow access to all models
+ Key Type AI APIs 
+ Optional Settings 
+ Cancel Create Key 
+ Team: All Teams View: All 8 deployments 
+ Public Name Provider Mode Input / Output Health 
+ gpt-5 openai/gpt-5 OpenAI Chat $1.25 / $10 Healthy 
+ gpt-5-mini openai/gpt-5-mini OpenAI Chat $0.25 / $2 Healthy 
+ claude-opus-4-8 anthropic/claude-opus-4-8 Anthropic Chat $5 / $25 Healthy 
+ claude-sonnet-4-5 anthropic/claude-sonnet-4-5 Anthropic Chat $3 / $15 Healthy 
+ gemini-2.5-pro vertex_ai/gemini-2.5-pro Vertex AI Chat $1.25 / $10 Healthy 
+ llama-4-maverick bedrock/llama-4-maverick Bedrock Chat $0.35 / $1.40 Healthy 
+ text-embedding-3-large openai/text-embedding-3-large OpenAI Embedding $0.13 / — Healthy 
+ claude-opus-4-8 (global) anthropic/claude-opus-4-1 Anthropic Chat $5 / $25 Degraded 
+ Group by: Provider 6 providers · 15 models 
+ Anthropic — Bedrock claude-opus-4-8, claude-sonnet-4-5, claude-haiku-4-5 bedrock 3 
+ Anthropic — Global claude-opus-4-8, claude-opus-4-1-20250805 global 2 
+ OpenAI gpt-5, gpt-5-mini, gpt-5.5-pro, text-embedding-3-large direct 4 
+ Vertex AI gemini-2.5-pro, gemini-2.5-flash google 2 
+ Bedrock / Cloudflare llama-4-maverick, mistral-large router 2 
+ R Routers prod-router (load-balanced), cheap-fallback fallback 2 
+ + Create Team Showing 1–7 of 7 Org: All 
+ Team Members Models Keys Spend / Budget 
+ P platform-eng team-2f9a… 12 All 8 $18.3K / $40K 
+ D data-science team-71c4… 9 6 5 $6.7K / $12K 
+ A ai-gateway team-08be… 6 All 4 $3.3K / $8K 
+ M ml-platform team-5d20… 8 4 6 $1.9K / $5K 
+ S support-ai team-9a11… 4 3 3 $2.6K / ∞ 
+ S security team-c7f3… 5 2 2 $0.1K / $0.5K 
+ R research team-3b8d… 3 All 2 $0.4K / $2K 
+ P platform-eng team-2f9a03c1… Active Edit Team 
+ Spend
+ $18,309
+ Budget
+ $40,000
+ Members
+ 12
+ Keys
+ 8
+ Models All Proxy Models 
+ Rate Limits TPM 2,000,000 · RPM 10,000 
+ Guardrails pii-masking prompt-injection secret-detection 
+ Object Permissions Vector Stores · 2 MCP Servers · 3 
+ Organization acme-inc 
+ + Add Member 7 members Team: platform-eng 
+ Member Team Role Last Active 
+ AR Ana Rivera a.rivera@acme.io Admin 2 min ago 
+ JM Jae Mora j.mora@acme.io Member 18 min ago 
+ SP Sam Patel s.patel@acme.io Member 1 hr ago 
+ KS Kir Singh k.singh@acme.io Member 3 hr ago 
+ DV DevOps Bot devops@acme.io Admin just now 
+ CI ci-eval-runner service account Service 7 min ago 
+ LC Lee Chen l.chen@acme.io Member 5 hr ago 
+ Team: All Access Group: All 6 servers 
+ github-mcp SSE 
+ https://mcp.acme.io/github
+ 14 tools platform 
+ jira-mcp SSE 
+ https://mcp.acme.io/jira
+ 9 tools product 
+ confluence-mcp HTTP 
+ https://mcp.acme.io/confluence
+ 6 tools product 
+ gitlab-mcp SSE 
+ https://mcp.acme.io/gitlab
+ 11 tools platform 
+ S sentry-mcp HTTP 
+ https://mcp.acme.io/sentry
+ 7 tools sre 
+ S slack-mcp SSE 
+ https://mcp.acme.io/slack
+ 5 tools general 
+ Models MCP Skills Provider: All 
+ Model Provider Mode Context In / Out 
+ gpt-5 OpenAI Chat 400K $1.25 / $10 
+ claude-opus-4-8 Anthropic Chat 200K $5 / $25 
+ claude-sonnet-4-5 Anthropic Chat 200K $3 / $15 
+ gemini-2.5-pro Vertex AI Chat 1M $1.25 / $10 
+ llama-4-maverick Bedrock Chat 128K $0.35 / $1.40 
+ mistral-large Cloudflare Chat 128K $2 / $6 
+ text-embedding-3-large OpenAI Embedding 8K $0.13 / — 
+ 02
+ Key Policies Model Activity Guardrails Audit Logs Monitor Request Logs 
+ Key — Guardrails & Limits Ask AI Export 
+ Rate Limits & Budgets
+ TPM Limit 2,000,000 
+ RPM Limit 10,000 
+ Max Budget $10,000 / month 
+ Per-tag budgets: prod $6K · staging $2K · eval $500
+ Guardrails & Policies
+ Guardrails pii-masking prompt-injection secret-detection 
+ Access Groups prod-gateway, internal-tools 
+ Pass-through Routes Add /v1/messages, /v1/embeddings 
+ Advanced Policies · logging, fallbacks, model aliases 
+ Cancel Save Settings 
+ Range: Last 7 days Team: All Teams 1.24M requests 
+ Requests
+ 1.24M
+ Success
+
+=== [pricing] https://models.litellm.ai/ (lang=en)
+LiteLLM Model Catalog: AI Model Pricing & Context Windows 
+ Models Endpoints & Providers Cookbook Guardrails 
+ Request All models Docs 
+ Open-source AI Gateway · 61K+ GitHub stars
+ The Most Comprehensive
+AI Model Catalog
+ Compare pricing, context windows, and features for 1,429 models across 97 providers . Powered by LiteLLM's open-source price file, updated several times a day.
+ View on GitHub Read the Docs 
+ Gateway SDK 
+ Quick Start macOS & Linux macOS/Linux Windows 
+ irm https://raw.githubusercontent.com/BerriAI/litellm/main/scripts/quickstart.ps1 | iex Copy 
+ Copy agent prompt 
+ Trusted by leading teams
+ 1,429
+ Models
+ 4,083
+ Price listings
+ 97
+ Providers with pricing
+ 10 h ago
+ Prices updated
+ ⌘K 
+ All Providers 
+ Min Input Tokens 
+ Min Output Tokens 
+ 4,083 models Names and release dates via models.dev 
+ Model Released
+ ↑ Context
+ ↑ Input cost
+ ↑ Output cost
+ ↑ Cache read
+ ↑ Cache write
+ ↑ 
+ A
+ Mai Image 2.6 Image Gen 
+ azure_ai/MAI-Image-2.6 
+ Oct 2026 32K $8.00/M $38.00/M — — 
+ A
+ Mai Image 2.6 Flash Image Gen 
+ azure_ai/MAI-Image-2.6-Flash 
+ Oct 2026 32K $2.50/M $19.00/M — — 
+ S
+ Extract Chat 
+ scaledown/extract 
+ Oct 2026 — $0.05/M $0.00/M — — 
+ S
+ Summarize Chat 
+ scaledown/summarize 
+ Oct 2026 — $0.05/M $0.00/M — — 
+ G
+ Gemini 4 Argon Chat 
+ gemini/gemini-4-argon 
+ Oct 2026 1M $2.00/M $10.00/M $0.10/M — 
+ V
+ Gemini 4 Argon Chat 
+ vertex_ai/gemini-4-argon 
+ Oct 2026 1M $2.00/M $10.00/M $0.10/M — 
+ G
+ Gemini 4 Argon Chat 
+ github_copilot/gemini-4-argon 
+ Oct 2026 200K $2.00/M $10.00/M $0.10/M — 
+ M
+ Muse Wonder Chat 
+ meta/muse-wonder-1.0 
+ Oct 2026 1M $4.00/M $20.00/M $0.20/M — 
+ G
+ Claude Haiku 5.5 Chat 
+ github_copilot/claude-haiku-5.5 
+ Oct 2026 128K $0.10/M $0.50/M $0.01/M $0.13/M 
+ A
+ Claude Haiku 5.5 Chat 
+ claude-haiku-5-5 
+ Oct 2026 1M $0.10/M $0.50/M $0.01/M $0.13/M 
+ B
+ Claude Haiku 5.5 Chat 
+ bedrock_mantle/anthropic.claude-haiku-5-5 
+ Oct 2026 1M $0.11/M $0.55/M $0.01/M $0.14/M 
+ B
+ Claude Haiku 5.5 Chat 
+ bedrock_mantle/us-gov-west-1/anthropic.claude-haiku-5-5 
+ Oct 2026 1M $0.12/M $0.60/M $0.01/M $0.15/M 
+ B
+ Claude Haiku 5.5 Chat 
+ anthropic.claude-haiku-5-5 
+ Oct 2026 1M $0.10/M $0.50/M $0.01/M $0.13/M 
+ B
+ Claude Haiku 5.5 (APAC) Chat 
+ apac.anthropic.claude-haiku-5-5 
+ Oct 2026 1M $0.11/M $0.55/M $0.01/M $0.14/M 
+ B
+ Claude Haiku 5.5 (AU) Chat 
+ au.anthropic.claude-haiku-5-5 
+ Oct 2026 1M $0.11/M $0.55/M $0.01/M $0.14/M 
+ A
+ Claude Haiku 5.5 Chat 
+ azure_ai/claude-haiku-5-5 
+ Oct 2026 1M $0.10/M $0.50/M $0.01/M $0.13/M 
+ B
+ Claude Haiku 5.5 Chat 
+ bedrock/us-gov-east-1/anthropic.claude-haiku-5-5 
+ Oct 2026 1M $0.12/M $0.60/M $0.01/M $0.15/M 
+ B
+ Claude Haiku 5.5 Chat 
+ bedrock/us-gov-west-1/anthropic.claude-haiku-5-5 
+ Oct 2026 1M $0.12/M $0.60/M $0.01/M $0.15/M 
+ B
+ Claude Haiku 5.5 (EU) Chat 
+ eu.anthropic.claude-haiku-5-5 
+ Oct 2026 1M $0.11/M $0.55/M $0.01/M $0.14/M 
+ B
+ Claude Haiku 5.5 (Global) Chat 
+ global.anthropic.claude-haiku-5-5 
+ Oct 2026 1M $0.10/M $0.50/M $0.01/M $0.13/M 
+ B
+ Claude Haiku 5.5 (JP) Chat 
+ jp.anthropic.claude-haiku-5-5 
+ Oct 2026 1M $0.11/M $0.55/M $0.01/M $0.14/M 
+ P
+ Claude Haiku 5.5 responses 
+ perplexity/anthropic/claude-haiku-5-5 
+ Oct 2026 — $0.10/M $0.50/M $0.01/M — 
+ B
+ Claude Haiku 5.5 (US-GOV) Chat 
+ us-gov.anthropic.claude-haiku-5-5 
+ Oct 2026 1M $0.12/M $0.60/M $0.01/M $0.15/M 
+ B
+ Claude Haiku 5.5 (US) Chat 
+ us.anthropic.claude-haiku-5-5 
+ Oct 2026 1M $0.11/M $0.55/M $0.01/M $0.14/M 
+ V
+ Claude Haiku 5.5 Chat 
+ vertex_ai/claude-haiku-5-5 
+ Oct 2026 1M $0.10/M $0.50/M $0.01/M $0.13/M 
+ V
+ Claude Haiku 5.5 Chat 
+ vertex_ai/claude-haiku-5-5@default 
+ Oct 2026 1M $0.10/M $0.50/M $0.01/M $0.13/M 
+ M
+ Mistral Large 4 Chat 
+ mistral/mistral-large-4 
+ Oct 2026 1M $0.68/M $2.09/M $0.07/M — 
+ M
+ Mistral Large 4 Chat 
+ mistral/mistral-large-4-0 
+ Oct 2026 1M $0.68/M $2.09/M $0.07/M — 
+ G
+ Nano Banana 2.1 Image Gen 
+ gemini/gemini-nano-banana-2.1 
+ Oct 2026 131K $1.50/M $0.03/img — — 
+ V
+ Nano Banana 2.1 Image Gen 
+ vertex_ai/gemini-nano-banana-2.1 
+ Oct 2026 131K $0.00168/img $0.03/img — — 
+ V
+ Nano Banana 2.1 Image Gen 
+ vertex_ai/gemini-nano-banana-2.1 
+ Oct 2026 131K $0.00168/img $0.03/img — — 
+ X
+ Grok Imagine Video 1.5 Lite video_generation 
+ xai/grok-imagine-video-1.5-lite 
+ Oct 2026 — — $0.02/s — — 
+ C
+ Embed 5 Pro Embedding 
+ cohere/embed-v5.0-pro 
+ Sep 2026 128K $0.12/M $0.00/M — — 
+ C
+ Embed 5 Fast Embedding 
+ cohere/embed-v5.0-fast 
+ Sep 2026 128K $0.08/M $0.00/M — — 
+ V
+ Voyage Rerank 3 Rerank 
+ voyage/rerank-3 
+ Sep 2026 32K $0.05/M $0.00/M — — 
+ V
+ Voyage Rerank 3 Lite Rerank 
+ voyage/rerank-3-lite 
+ Sep 2026 32K $0.02/M $0.00/M — — 
+ A
+ GPT-6.1 Sol Chat 
+ azure_ai/gpt-6.1-sol 
+ Sep 2026 922K $2.00/M $10.00/M $0.10/M $2.50/M 
+ Az
+ GPT-6.1 Sol Chat 
+ azure/gpt-6.1-sol 
+ Sep 2026 922K $2.00/M $10.00/M $0.10/M $2.50/M 
+ Az
+ GPT-6.1 Sol Chat 
+ azure/gpt-6.1-sol-2026-09-29 
+ Sep 2026 922K $2.00/M $10.00/M $0.10/M $2.50/M 
+ Az
+ GPT-6.1 Sol Chat 
+ azure/us/gpt-6.1-sol 
+ Sep 2026 922K $2.20/M $11.00/M $0.11/M $2.75/M 
+ Az
+ GPT-6.1 Sol Chat 
+ azure/eu/gpt-6.1-sol 
+ Sep 2026 922K $2.40/M $12.00/M $0.12/M $3.00/M 
+ Az
+ GPT-6.1 Sol Chat 
+ azure/apac/gpt-6.1-sol 
+ Sep 2026 922K $2.40/M $12.00/M $0.12/M $3.00/M 
+ G
+ GPT-6.1 Sol responses 
+ github_copilot/gpt-6.1-sol 
+ Sep 2026 272K — — — — 
+ C
+ GPT-6.1 Sol responses 
+ chatgpt/gpt-6.1-sol 
+ Sep 2026 922K — — — — 
+ P
+ GPT-6.1 Sol responses 
+ perplexity/openai/gpt-6.1-sol 
+ Sep 2026 — $2.00/M $10.00/M $0.10/M — 
+ O
+ GPT-6.1 Sol Chat 
+ gpt-6.1-sol 
+ Sep 2026 922K $2.00/M $10.00/M $0.10/M $2.50/M 
+ B
+ GPT-6.1 Sol (Global) Chat 
+ global.openai.gpt-6.1-sol 
+ Sep 2026 1M $2.00/M $10.00/M $0.10/M $2.50/M 
+ B
+ GPT-6.1 Sol responses 
+ bedrock_mantle/openai.gpt-6.1-sol 
+ Sep 2026 1M $2.20/M $11.00/M $0.11/M $2.75/M 
+ B
+ GPT-6.1 Sol (US) Chat 
+ us.openai.gpt-6.1-sol 
+ Sep 2026 1M $2.20/M $11.00/M $0.11/M $2.75/M 
+ A
+ Claude Sonnet 5.5 Chat 
+ claude-sonnet-5-5 
+ Sep 2026 1M $2.00/M $10.00/M $0.10/M $2.50/M 
+ G
+ Claude Sonnet 5.5 Chat 
+ github_copilot/claude-sonnet-5.5 
+ Sep 2026 200K — — — — 
+ B
+ Claude Sonnet 5.5 Chat 
+ bedrock_mantle/anthropic.claude-sonnet-5-5 
+ Sep 2026 1M $2.20/M $11.00/M $0.11/M $2.75/M 
+ B
+ Claude Sonnet 5.5 Chat 
+ bedrock_mantle/us-gov-west-1/anthropic.claude-sonnet-5-5 
+ Sep 2026 1M $2.40/M $12.00/M $0.12/M $3.00/M 
+ B
+ Claude Sonnet 5.5 Chat 
+ anthropic.claude-sonnet-5-5 
+ Sep 2026 1M $2.00/M $10.00/M $0.10/M $2.50/M 
+ B
+ Claude Sonnet 5.5 (APAC) Chat 
+ apac.anthropic.claude-sonnet-5-5 
+ Sep 2026 1M $2.20/M $11.00/M $0.11/M $2.75/M 
+ B
+ Claude Sonnet 5.5 (AU) Chat 
+ au.anthropic.claude-sonnet-5-5 
+ Sep 2026 1M $2.20/M $11.00/M $0.11/M $2.75/M 
+ A
+ Cla
+
+=== [about] https://docs.litellm.ai/ (lang=en)
+LiteLLM documentation | liteLLM 
+ Skip to main content 
+ Decisions API is here. Call Jev, Clef or any decision model through one /v1/decisions endpoint. → 
+ Docs 
+ Home Home Get started with LiteLLM 
+ Build
+ AI Gateway Route, control, and observe LLM traffic MCP Gateway Give agents governed access to tools Agent Gateway Register and invoke A2A agents Auto Router Send each request to the best model Python SDK Call 100+ LLMs with one interface 
+ Monitor
+ Lens Trace agent swarms and find what to improve AI Gateway - Logging & Observability Logs, spend, and callbacks for every request Self-Hosted Coding Agents
+ Moyai Open source coding agent for background work 
+ Docs Integrations Enterprise Learn Changelog Blog Rust 
+ Trust Center 
+ Search for anything... Ctrl K 
+ The most widely used open‑source AI gateway.
+ LiteLLM is one gateway for all your models, tools, and agents. It gives one API to 100+ LLM providers, MCP tools, and A2A agents. It controls keys and budgets, and it records the cost of each request.
+ Developer
+ Coding agent
+ Your app
+ LiteLLM 
+ LLM APIs +100 
+ MCP tools any MCP 
+ A2A agents any A2A 
+ Gateway SDK 
+ Quick Start macOS & Linux macOS/Linux Windows 
+ curl -fsSL https://raw.githubusercontent.com/BerriAI/litellm/main/scripts/quickstart.sh | sh Copy 
+ Copy agent prompt 
+ Do you use a coding agent? Copy the agent prompt of a product below. You can also start from Agent resources and llms.txt . Why developers love LiteLLM
+ Python SDK Use one Python function for 100+ LLM providers.
+ The completion() function uses the same arguments for OpenAI, Anthropic, Bedrock, and 100+ other providers. It always gives the result in the OpenAI format. To use a different model, you replace one string. The SDK also gives streaming, retries, fallbacks, and the cost of each call. SDK quickstart → Supported providers → 
+ from litellm import completion 
+ messages = [ { "role" : "user" , "content" : "Hello" } ] 
+ completion ( model = "openai/gpt-5.6-terra" , messages = messages ) 
+ completion ( model = "anthropic/claude-sonnet-5" , messages = messages ) 
+ AI Gateway One endpoint for all models, with keys, budgets, and costs for each team.
+ Apps in all programming languages send requests to the gateway in the OpenAI format. Each app or person gets a virtual key with a budget and a rate limit. The gateway records each request and its cost. Your provider keys stay in the gateway. Gateway quickstart → Virtual keys and budgets → 
+ curl http://localhost:4000/v1/chat/completions \ 
+ -H "Authorization: Bearer sk-<virtual-key>" \ 
+ -H "Content-Type: application/json" \ 
+ -d '{"model": "gpt-5.6-terra", 
+ "messages": [{"role": "user", "content": "Hello"}]}' 
+ Built on the gateway
+ When your apps call the gateway, the same deployment can also give MCP tools and agents to your apps. It can select the correct model for each request. You can operate it from your terminal or from your coding agent. Tools and agents MCP Gateway Make all MCP tools available from one endpoint.
+ Add MCP servers to the gateway one time. You do not connect them to each app. Select which keys and teams can use each server. MCP server Search team Support team 
+ GitHub allowed no access 
+ Jira allowed allowed 
+ Read the guide Copy agent prompt 
+ Agent Gateway Send agent-to-agent calls through the gateway.
+ Register your A2A agents on the gateway. Each call to these agents then uses a virtual key and shows in your logs with its cost. Only the teams that you select can call these agents. POST /a2a/support-agent search-team logged 
+ POST /a2a/billing-agent search-team not allowed 
+ Read the 
+
+=== [meta] https://www.litellm.ai/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/BerriAI/litellm
+<h1 align="center">
+        🚅 LiteLLM
+    </h1>
+    <p align="center">
+        <p align="center">LiteLLM AI Gateway
+        </p>
+        <p align="center">Open Source AI Gateway for 100+ LLMs. Self-hosted. Enterprise-ready. Call any LLM in OpenAI format.</p>
+        <p align="center">
+        <a href="https://render.com/deploy?repo=https://github.com/BerriAI/litellm" target="_blank" rel="nofollow"><img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render" height="40"></a>
+        <a href="https://railway.com/deploy/RhvhdC?referralCode=7mRv9K&utm_medium=integration&utm_source=template&utm_campaign=generic"><img src="https://railway.com/button.svg" alt="Deploy on Railway" height="40"></a>
+        <a href="https://console.aws.amazon.com/cloudshell/home" target="_blank" rel="nofollow"><img src="./.github/deploy-on-aws.png" alt="Deploy on AWS" height="40"></a>
+        <a href="https://ssh.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2FBerriAI%2Fterraform-google-litellm&cloudshell_git_branch=v1.105.0&cloudshell_workspace=examples%2Fdefault&cloudshell_tutorial=TUTORIAL.md&cloudshell_image=gcr.io/ds-artifacts-cloudshell/deploystack_custom_image&shellonly=true" target="_blank" rel="nofollow"><img src="./.github/deploy-on-gcp.png" alt="Deploy on GCP" height="40"></a>
+        </p>
+    </p>
+<h4 align="center"><a href="https://docs.litellm.ai/docs/simple_proxy" target="_blank">LiteLLM Proxy Server (AI Gateway)</a> | <a href="https://docs.litellm.ai/docs/enterprise#hosted-litellm-proxy" target="_blank"> Hosted Proxy</a> | <a href="https://litellm.ai/enterprise"target="_blank">Enterprise Tier</a> | <a href="https://www.litellm.ai/ai-gateway" target="_blank">Website</a></h4>
+<h4 align="center">
+    <a href="https://pypi.org/project/litellm/" target="_blank">
+        <img src="https://img.shields.io/pypi/v/litellm.svg" alt="PyPI Version">
+    </a>
+    <a href="https://github.com/BerriAI/litellm" target="_blank">
+        <img src="https://img.shields.io/github/stars/BerriAI/litellm.svg?style=social" alt="GitHub Stars">
+    </a>
+    <a href="https://www.ycombinator.com/companies/berriai">
+        <img src="https://img.shields.io/badge/Y%20Combinator-W23-orange?style=flat-square" alt="Y Combinator W23">
+    </a>
+    <a href="https://wa.link/huol9n">
+        <img src="https://img.shields.io/static/v1?label=Chat%20on&message=WhatsApp&color=success&logo=WhatsApp&style=flat-square" alt="Whatsapp">
+    </a>
+    <a href="https://discord.gg/wuPM9dRgDw">
+        <img src="https://img.shields.io/static/v1?label=Chat%20on&message=Discord&color=blue&logo=Discord&style=flat-square" alt="Discord">
+    </a>
+    <a href="https://www.litellm.ai/support">
+        <img src="https://img.shields.io/static/v1?label=Chat%20on&message=Slack&color=black&logo=Slack&style=flat-square" alt="Slack">
+    </a>
+    <a href="https://codspeed.io/BerriAI/litellm?utm_source=badge">
+        <img src="https://img.shields.io/endpoint?url=https://codspeed.io/badge.json" alt="CodSpeed"/>
+    </a>
+</h4>
+
+<img alt="LiteLLM AI Gateway" src="https://github.com/user-attachments/assets/c5ee0412-6fb5-4fb6-ab5b-bafae4209ca6" />
+
+---
+
+## What is LiteLLM
+
+LiteLLM is an open source AI Gateway that gives you a single, unified interface to call 100+ LLM providers — OpenAI, Anthropic, Gemini, Bedrock, Azure, and more — using the OpenAI format.
+
+Use it as a **Python SDK** for direct library integration, or deploy the **AI Gateway (Proxy Server)** as a centralized service for your team or organization.
+
+[**Jump to LiteLLM Proxy (LLM Gateway) Docs**](https://docs.litellm.ai/docs/simple_proxy) <br>
+[**Jump to Supported LLM Providers**](https://docs.litellm.ai/docs/providers)
+
+---
+
+## Why LiteLLM
+
+Managing LLM calls across providers gets complicated fast — different SDKs, auth patterns, request formats, and error types for every model. LiteLLM removes that friction:
+
+- **Unified API** — one interface for 100+ LLMs, no provider-specific SDK juggling
+- **Drop-in OpenAI compatibility** — swap providers without rewriting your code
+- **Production-ready gateway** — virtual keys, spend tracking, guardrails, load balancing, and an admin dashboar

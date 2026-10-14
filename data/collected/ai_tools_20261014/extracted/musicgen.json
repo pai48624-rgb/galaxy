@@ -1,0 +1,71 @@
+{
+ "company": "Meta (Meta AI)",
+ "one_liner_ko": "사용자가 입력한 텍스트로 다양하고 긴 음악을 만드는 텍스트-음악 생성 모델(AudioCraft 구성 요소).",
+ "what_it_does_ko": "MusicGen은 Meta AI의 오디오 생성 연구 코드베이스 AudioCraft에 들어 있는 텍스트-음악 생성 모델로, 사용자가 준 텍스트로 다양하고 긴 음악 샘플을 만든다. 압축된 이산 음악 토큰 흐름 위에서 동작하는 단일 자기회귀 언어 모델이며, EnCodec 신경 오디오 코덱으로 원시 파형에서 토큰을 얻는다. AudioCraft는 PyTorch 라이브러리로 MusicGen의 추론·학습 코드를 함께 제공한다.",
+ "key_features": [
+  "텍스트로 음악 생성",
+  "단일 자기회귀 언어 모델 + 토큰 인터리빙 패턴",
+  "EnCodec 신경 오디오 코덱으로 오디오 토큰화",
+  "추론·학습 코드 제공(PyTorch 라이브러리 AudioCraft)",
+  "텍스트+스타일 기반 MusicGen Style 포함"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": null,
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "코드 MIT / 모델 가중치 CC-BY-NC 4.0",
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://audiocraft.metademolab.com",
+   "quote": " AudioCraft \n Research By Meta AI"
+  },
+  {
+   "field": "company",
+   "url": "https://audiocraft.metademolab.com",
+   "quote": " Privacy Policy \n Terms \n Github \n ©2023 Meta"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://audiocraft.metademolab.com",
+   "quote": "MusicGen produces diverse and long music samples from user provided text inputs."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://audiocraft.metademolab.com",
+   "quote": "Both MusicGen and AudioGen consist of a single autoregressive Language Model (LM) that operates over streams of compressed discrete music representation, i.e., tokens."
+  },
+  {
+   "field": "key_features",
+   "url": "https://audiocraft.metademolab.com",
+   "quote": "Our models leverage the EnCodec neural audio codec to learn the discrete audio tokens from the raw waveform."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/facebookresearch/audiocraft",
+   "quote": "AudioCraft is a PyTorch library for deep learning research on audio generation. AudioCraft contains inference and training code"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/facebookresearch/audiocraft",
+   "quote": "* [MusicGen Style](./docs/MUSICGEN_STYLE.md): A state-of-the-art text-and-style-to-music model."
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/facebookresearch/audiocraft",
+   "quote": "* The code in this repository is released under the MIT license as found in the [LICENSE file](LICENSE)."
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/facebookresearch/audiocraft",
+   "quote": "* The models weights in this repository are released under the CC-BY-NC 4.0 license"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

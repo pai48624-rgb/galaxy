@@ -1,0 +1,310 @@
+=== [home] https://www.hopsworks.ai/ (lang=en)
+Hopsworks - The AI Lakehouse for Real-Time ML 
+ Product 
+ Pricing Blog Dictionary Resources 
+ News 
+ Start Free 
+ { 5 } what's in the box → 
+ Build, deploy, and maintain
+ AI systems at any scale
+ The full ML lifecycle in one platform: train, deploy, monitor. Claude Code and Codex inside, from prototype to production.
+ › Run ⏎ 
+ Start Building Free Book a Demo 
+ Feature Store
+ The backbone of production ML
+ <1ms
+ LATENCY
+ Central repository for feature data with sub-millisecond retrieval. Reuse features across models - Meta reports their top 100 features are used in over 100 models.
+ Sub-millisecond - Powered by RonDB 
+ AI Lakehouse
+ Your data, your formats, AI-ready
+ 9-45x
+ FASTER READS
+ Work directly with Iceberg, Delta, and Hudi tables. Python-native query engine with faster reads than Databricks or Sagemaker.
+ Open formats - Delta, Iceberg, Hudi 
+ MLOps Platform
+ From experiment to production
+ 10x
+ FASTER DEPLOYMENT
+ Complete lifecycle management for your ML models. Experiment tracking, model registry, and deployment pipelines in one unified platform.
+ End-to-End - Train, deploy, monitor 
+ Trusted by leading AI teams
+ Built for Quality
+ Instant Data, Infinite Compute.
+ Real-time AI
+ Sub-millisecond latency with RonDB - the fastest open-source key-value store. SIGMOD 2024 benchmarks show 10x lower latency than Sagemaker and Vertex.
+ 80%
+ cost reduction
+ by reusing features and streamlining development
+ Feature Freshness
+ Millisecond latency for end-to-end data retrieval with the best-in-class feature store .
+ GPUs at Any Scale
+ GPU and compute management for LLMs and other ML models . Maximize GPU utilization with smart scheduling and quota management. Train at scale with Ray, serve with KServe/vLLM.
+ The AI Lakehouse
+ Work directly with Delta, Iceberg, and Hudi tables. No migrations, no conversions.
+ Modular & Scalable
+ Spark, Flink, Pandas, DuckDB - use any framework. Start small, scale to petabytes.
+ Sovereign AI
+ Air-gapped, on-premises, hybrid. Full control over your data and AI operations.
+ Customer Stories
+ See how leading teams build AI with Hopsworks
+ Zalando
+ Europe's largest online fashion platform reveals how they built a mission-critical ML infrastructure using Hopsworks to power real-time personalization across 25 countries and 50 million customers.
+ Clicklease
+ Learn how Clicklease revolutionized their micro-lease approval system using Hopsworks Feature Store - going from a messy microservice architecture with training-production skew to a streamlined ML platform powering real-time fraud detection and credit decisioning.
+ O'Reilly Media 
+ Building Machine Learning Systems
+ Batch, Real-Time, and LLM Systems
+ Learn how to build production ML systems with a unified architecture. From feature pipelines to real-time inference and LLM applications.
+ FREE DIGITAL COPY 
+ Get the Book 
+ Get Started with Tutorials
+ Production-ready examples to kickstart your AI projects.
+ Batch AI Systems
+ Feature pipelines, training pipelines, and batch inference for fraud detection, churn prediction, and more.
+ Real-Time AI Systems
+ Online inference with sub-millisecond feature retrieval. Credit card fraud, real-time recommendations.
+ LLM AI Systems
+ RAG pipelines, embedding management, and LLM-powered applications with feature store integration.
+ Browse All Tutorials 
+ Ready to get started?
+ Join teams building production ML systems with Hopsworks.
+ Start Free Contact Sales 
+ The AI Lakehouse
+ 🇸🇪 🇪🇺 
+ Product
+ AI Lakehouse Feature Store MLOps Integrations 
+ Industries
+ Financial Services Retail & E-commerce Government & Defense 
+ Learn
+ Blog Dictionary Academy Events Research Papers 
+ Company
+ About Us Customers News Pricing FAQ Contact Security & Compliance Documentation 
+ © 2026 Hopsworks AB. All rights reserved.
+ Terms Privacy Cookies
+
+=== [pricing] https://www.hopsworks.ai/pricing (lang=en)
+Pricing | Hopsworks 
+ Product 
+ Pricing Blog Dictionary Resources 
+ News 
+ Start Free 
+ Pricing
+ The AI Lakehouse - Feature Store, Model Registry, Model Serving
+ Most Popular Free
+ $0
+ Get started with no credit card required.
+ Start Free 1 project included 
+ Feature Store + Model Registry 
+ No credit card required 
+ Community support 
+ Upgrade anytime 
+ SaaS
+ Pay as you go
+ Scale up with usage-based pricing.
+ Start Now Unlimited projects 
+ Feature Store + Model Registry 
+ Model Serving 
+ Pay only for what you use 
+ Community support 
+ Platform SLA 
+ Enterprise
+ Custom
+ Dedicated support and custom deployments.
+ Book a Demo All SaaS features 
+ On-premise & air-gapped 
+ Dedicated support team 
+ Custom integrations 
+ SLA guaranteed 
+ Hopsworks K8s Installer
+ Deploy Hopsworks on your Kubernetes cluster with a single command. Supports AWS EKS, Google GKE, Azure AKS, and OVHCloud.
+ Bash
+ bash -c "$(curl -fsSL https://raw.githubusercontent.com/logicalclocks/hopsworks-k8s-installer/master/hopsworks-install.sh)" 
+ Python
+ python3 -c "$(curl -fsSL https://raw.githubusercontent.com/logicalclocks/hopsworks-k8s-installer/master/hopsworks-install.py)" 
+ Requirements
+ Platforms: AWS (EKS), Google Cloud (GKE), Azure (AKS), OVHCloud
+ Kubernetes: Version 1.27.0 or higher
+ Nodes: Minimum 4-5 nodes recommended
+ Tools: kubectl, helm, cloud CLI (aws/gcloud/az)
+ View on GitHub → 
+ Questions?
+ Talk to our team to find the right deployment option for you.
+ Contact Sales 
+ The AI Lakehouse
+ 🇸🇪 🇪🇺 
+ Product
+ AI Lakehouse Feature Store MLOps Integrations 
+ Industries
+ Financial Services Retail & E-commerce Government & Defense 
+ Learn
+ Blog Dictionary Academy Events Research Papers 
+ Company
+ About Us Customers News Pricing FAQ Contact Security & Compliance Documentation 
+ © 2026 Hopsworks AB. All rights reserved.
+ Terms Privacy Cookies
+
+=== [about] https://docs.hopsworks.ai/latest/ (lang=en)
+Hopsworks Documentation - Hopsworks Documentation Skip to content 
+ You're not viewing the latest version of the documentation. Click here to go to latest. 
+ Hopsworks Documentation 
+ Hopsworks Documentation 
+ Initializing search 
+ logicalclocks/hopsworks-api 
+ Hopsworks Documentation 
+ logicalclocks/hopsworks-api 
+ Home Home Table of contents Your first feature vector, in three steps 
+ Where Hopsworks runs 
+ One architecture, three pipelines 
+ Find your path 
+ By task 
+ Getting Started ↗ 
+ Concepts 
+ Guides 
+ Administration 
+ Python API 
+ Java API 
+ Reference 
+ Docs for AI agents 
+ Table of contents Your first feature vector, in three steps 
+ Where Hopsworks runs 
+ One architecture, three pipelines 
+ Find your path 
+ By task 
+ Hopsworks Documentation
+ Build, deploy & maintain AI systems # 
+ Features, training data, models and inference on one governed platform.
+ Your first feature vector, in three steps # 
+ Install the client, connect to a project with an API key , write a feature group and read a feature vector back.
+ 01 Install and connect Install the client and sign in to a feature store. 02 Write features Create a feature group and write data to the feature store. 03 Read online Read a feature vector back from the online store. 
+ Python CLI 
+ uv venv && source .venv/bin/activate
+ uv pip install "hopsworks[python]" 
+ hops setup # opens a browser, picks a project, caches the key 
+ python # opens the interpreter, the Python lines below go there or in a notebook 
+ import hopsworks 
+ project = hopsworks . login () # uses the key hops setup cached, else prompts 
+ fs = project . get_feature_store () 
+ uv venv && source .venv/bin/activate
+ uv pip install "hopsworks[python]" 
+ hops setup # opens a browser, picks a project, caches the key 
+ hops fg list
+ Python CLI 
+ import pandas as pd 
+ df = pd . DataFrame ( 
+ { 
+ "cc_num" : [ 4467360740682089 ], 
+ "amount" : [ 12.5 ], 
+ "event_time" : pd . to_datetime ([ "2026-01-01T00:00:00Z" ]), 
+ } 
+ ) 
+ fg = fs . get_or_create_feature_group ( 
+ name = "transactions" , 
+ version = 1 , 
+ primary_key = [ "cc_num" ], 
+ event_time = "event_time" , 
+ online_enabled = True , 
+ ) 
+ fg . insert ( df ) 
+ hops fg create transactions --version 1 --primary-key cc_num \ 
+ --features "cc_num:bigint,amount:double" --online
+ echo '[{"cc_num": 4467360740682089, "amount": 12.5}]' | hops fg insert transactions --version 1 
+ Python CLI 
+ fv = fs . get_or_create_feature_view ( 
+ name = "transactions_view" , 
+ version = 1 , 
+ query = fg . select_all (), 
+ ) 
+ fv . get_feature_vector ( entry = { "cc_num" : 4467360740682089 }) 
+ hops fv create transactions_view --version 1 --feature-group transactions
+ hops fv get transactions_view --version 1 --entry "cc_num=4467360740682089" 
+ Next: create a feature group , create a feature view , retrieve feature vectors , or browse the Python API .
+ Where Hopsworks runs # 
+ Use the managed SaaS 
+ Sign in to the Hopsworks serverless app and create a project. Nothing to install, free tier available.
+ Open run.hopsworks.ai ↗ 
+ Deploy on your cloud or on-prem 
+ Managed Kubernetes on AWS, Azure or GCP, or an air-gapped data centre. Talk to us to size and install it.
+ Contact Hopsworks ↗ · Deployment options 
+ One architecture, three pipelines # 
+ Independent feature, training and inference pipelines , connected by a shared feature store and model registry.
+ Find your path # 
+ Developer
+ Client installation 
+ Python, SageMaker, Kubeflow 
+ Create a feature group 
+ Python API reference 
+ Data scientist
+ Feature views 
+ Training data 
+ Model serving 
+ Platform engineer
+ Jobs 
+ Airflow 
+ Python e
+
+=== [meta] https://www.hopsworks.ai/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/logicalclocks/hopsworks
+<p align="center">
+    <a href="https://hopsworks.ai">
+        <img src="https://uploads-ssl.webflow.com/5f6353590bb01cacbcecfbac/6202a13e7cafec5553703f6b_logo.svg" width="55%" >
+    </a>
+</p>
+<br />
+
+<p align="center">
+    <a href="https://hopsworks.ai" alt="hopsworks.ai">
+        <img src="https://img.shields.io/badge/hopsworks-ai-brightgreen" /></a>
+     <a href="https://app.hopsworks.ai" alt="app">
+        <img src="https://img.shields.io/badge/Hopsworks-app-green" /></a>    
+    <a href="https://docs.hopsworks.ai" alt="docs.hopsworks.ai">
+        <img src="https://img.shields.io/badge/hopsworks-docs-orange" /></a>
+    <a href="https://community.hopsworks.ai" alt="community.hopsworks.ai">
+        <img src="https://img.shields.io/badge/hopsworks-community-blueviolet" /></a>
+    <a href="https://twitter.com/hopsworks" alt="Hopsworks Twitter">
+        <img src="https://img.shields.io/badge/hopsworks-twitter-blue" /></a>
+    <a href="https://bit.ly/publichopsworks" alt="Hopsworks Slack">
+        <img src="https://img.shields.io/static/v1?label=Hopsworks&message=Slack&color=36C5F0" /></a>
+</p>
+
+# Quick Install
+Get up and running with a single command:
+```bash
+curl -O https://raw.githubusercontent.com/logicalclocks/hopsworks-k8s-installer/master/install-hopsworks.py
+python3 install-hopsworks.py
+```
+
+
+<a name="what"></a>
+# What is Hopsworks?
+
+Hopsworks is a **Real-Time AI Lakehouse** for ML with a **Python-centric Feature Store** and MLOps capabilities. Hopsworks is a modular platform. You can use it as a standalone Feature Store, you can use it to manage, govern, and serve your models, and you can even use it to develop and operate feature pipelines and training pipelines. Hopsworks brings collaboration for ML teams, providing a secure, governed platform for developing, managing, and sharing ML assets - features, models, training data, batch scoring data, logs, and more.
+<br />
+<p align="center" style="background-color:white; border-radius:4px;">
+<img src="https://uploads-ssl.webflow.com/5f6353590bb01cacbcecfbac/62f21c38bc47b2d313fbf76d_Marchitecture%20-%20readme.svg" width="90%">
+</p>
+<br />
+
+<a name="quick"></a>
+# 🚀 Quickstart
+
+## **APP - Serverless (beta)**
+### → **Go to [app.hopsworks.ai](https://app.hopsworks.ai)**
+Hopsworks is available as a serverless app, simply head to [app.hopsworks.ai](https://app.hopsworks.ai) and register with your **Gmail** or **Github** accounts. You will then be able to run a tutorial or access Hopsworks directly and try yourself. This is the preferred way to first experience the platform before diving into more advanced uses and installation requirements. 
+
+## **Azure, AWS & GCP**
+[Managed Hopsworks](https://managed.hopsworks.ai) is our platform for running Hopsworks and the Feature Store in the cloud and integrates directly with the customer AWS/Azure/GCP environment. It also integrates seamlessly with third party platforms such as Databricks, SageMaker and KubeFlow.
+
+If you wish to run Hopsworks on your Azure, AWS or GCP environment, follow one of the following guides in our documentation:
+- [AWS Guide](https://docs.hopsworks.ai/latest/setup_installation/aws/getting_started/#step-1-connecting-your-aws-account)
+- [Azure Guide](https://docs.hopsworks.ai/latest/setup_installation/azure/getting_started/#step-1-connecting-your-azure-account)
+- [GCP Guide](https://docs.hopsworks.ai/latest/setup_installation/gcp/getting_started/#step-1-connecting-your-gcp-account)
+
+## **Installer - On-premise**
+It is possible to use Hopsworks on-premises, which means that companies can run their machine learning workloads on their own hardware and infrastructure, rather than relying on a cloud provider. This can provide greater flexibility, control, and cost savings, as well as enabling companies to meet specific compliance and security requirements.
+
+Working on-premises with Hopsworks typically involves collaboration with the Hopsworks engineering teams, as each infrastructure is unique and requires a tailored approach to deployment and configuration. The process begins with an assessment of the company's existing infrastructure and requirements, including network topology, security policies, and hardware specif

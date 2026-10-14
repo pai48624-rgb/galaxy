@@ -1,0 +1,27 @@
+{
+ "company": "intfloat",
+ "one_liner_ko": null,
+ "what_it_does_ko": "e5-mistral-7b-instruct는 intfloat 계정이 Hugging Face에 공개한 특징 추출(feature-extraction)용 텍스트 임베딩 모델로, sentence-transformers와 transformers 라이브러리로 쓸 수 있다. 모델 카드에는 MTEB 벤치마크(중국어 C-MTEB 포함)의 STS·분류·검색 평가 결과가 실려 있다. 수집된 페이지에는 모델 설명 본문과 라이선스 표기가 보이지 않는다.",
+ "key_features": [
+  "텍스트 임베딩(feature-extraction) 모델",
+  "sentence-transformers·transformers 라이브러리 지원",
+  "MTEB·C-MTEB 벤치마크 평가 결과 공개"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "불명",
+ "evidence": [
+  {"field": "company", "url": "https://huggingface.co/intfloat/e5-mistral-7b-instruct", "quote": "intfloat/e5-mistral-7b-instruct · Hugging Face"},
+  {"field": "what_it_does_ko", "url": "https://huggingface.co/intfloat/e5-mistral-7b-instruct", "quote": "\"pipeline_tag\":\"feature-extraction\",\"library_name\":\"sentence-transformers\",\"librariesOther\":[\"transformers\"]"},
+  {"field": "key_features", "url": "https://huggingface.co/intfloat/e5-mistral-7b-instruct", "quote": "{\"task\":{\"type\":\"STS\"},\"dataset\":{\"type\":\"C-MTEB/AFQMC\",\"name\":\"MTEB AFQMC\""}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

@@ -1,0 +1,526 @@
+=== [home] https://www.trychroma.com/ (lang=en)
+Chroma - open-source search infrastructure for AI 
+ Products 
+ Products
+ Sync Database Agent 
+ Docs Research Resources 
+ Resources
+ Use cases Updates Videos Changelog Discord GitHub Support Hidden
+ Pricing 27k Log in Sign up 
+ Open-source search infrastructure for AI
+ Fast, serverless, and scalable infrastructure supporting vector, full-text, regex, and metadata search. Built on object storage and trusted by millions of developers. Open-source Apache 2.0.
+ Start free on Cloud Read the docs 
+ Or, get started locally .
+ Read case study →
+ Read case study →
+ Agent Search 
+ AI App
+ Ask a question
+ What can I build with Chroma? Who else uses Chroma? How does Chroma scale? 
+ knowledge_base 
+ Chroma 
+ knowledge_base - 1,277,467 records 
+ awaiting query input
+ 15M+ monthly downloads
+ Apache 2.0 
+ 27k Github stars
+ Low latency search
+ Fast queries over billions of multi-tenant indexes.
+ Up to 10x cheaper
+ Built on object storage with automatic data tiering.
+ No engineering ops
+ Scales with your data and traffic. SOC 2 Type II.
+ Features
+ ◇ Sparse vector search
+ Lexical search (BM25, SPLADE)
+ ◆ Vector search
+ Semantic similarity search
+ ● Full-text search
+ Trigram and regex search
+ ◐ Metadata search
+ Filtering and faceted search
+ ◊ Forking
+ Dataset versioning, A/B testing, and roll-outs
+ ▣ CLI
+ Command-line tools for development
+ TypeScript Python Rust 
+ Copy 
+ // configure client and collection for sparse embeddings (BM25, SPLADE) 
+ // Add documents with sparse embeddings (BM25) 
+ await collection. add ({ 
+ ids: [ "id1" , "id2" ], 
+ documents: [ "Document about databases" , "ML tutorial" ] 
+ }) 
+ // Query with sparse vector 
+ const sparseRank = Knn ({ query: "ML" , key: "sparse_embedding" }); 
+ // Build and execute search 
+ const search = new Search () 
+ . rank (sparseRank) 
+ . limit ( 10 ) 
+ . select ( K . DOCUMENT , K . SCORE ); 
+ const results = await collection. search (search); 
+ Terminal Output
+ $ node sparse-search.js
+Connecting to Chroma...
+✓ Connected successfully
+Creating collection 'my_collection'...
+✓ Collection created
+Adding documents with sparse embeddings (BM25)...
+✓ Added 2 documents
+Querying with sparse vector...
+✓ Query completed in 18ms
+Results (ranked by BM25 score):
+[
+ {
+ id: "id1",
+ document: "Document about databases",
+ score: 0.87,
+ metadata: {}
+ },
+ {
+ id: "id2",
+ document: "ML tutorial",
+ score: 0.45,
+ metadata: {}
+ }
+] 
+ Performance
+ Fast search over billions of multi-tenant indexes
+ Chroma's indexes are built and optimized for object-storage offering unparalleled cost and performance. State-of-the-art vector, full-text, and regex search.
+ Latency
+ Query Latency
+ @384 dim at 100k vectors
+ Warm 
+ Cold 
+ p50
+ 20ms 
+ 650ms 
+ p90
+ 27ms 
+ 1.2s 
+ p99
+ 57ms 
+ 1.5s 
+ Contact us to run a POC for your specific workload. 
+Dedicated clusters can be scaled to your specific requirements.
+ Technical specs
+ Write throughput (per collection) 30 MB/s (2000+ QPS) 
+ Concurrent reads (per collection) 10 (200+ QPS) 
+ Collections per database 1M 
+ Records per collection 5M 
+ Recall 90-100% 
+ Zero-ops infra
+ ┌───────────────────────────────┐
+│ Query Layer │
+│ Fast memory cache (hot) │
+│ SSD cache (warm) │
+└───────────────────────────────┘
+↕ Intelligent tiering
+┌───────────────────────────────┐
+│ Storage Layer │
+│ S3 / GCS (cold) │
+│ • All vectors │
+│ • All metadata │
+│ • All indexes │
+└───────────────────────────────┘
+ Unlike legacy search systems, Chroma is a database you'll want to be on-call for.
+ ✓ Auto-scales with usage 
+ ✓ No manual tuning 
+ ✓ Serverless pricing 
+ Chroma takes full advantage of object storage with automatic query-aware data tiering and caching.
+ ✓ Vectors are large: 1GB text → 15GB of vectors 
+ ✓ Memory is expensive: $5/GB/mo 
+ ✓ Object storage is not: $0.02/GB/mo 
+ Enterprise
+ Chroma brings the security, compliance, education and operational model enterprises need with our Apache 2.0 architecture.
+ BYOC in your VPC, multi-cloud/multi-region replication, point-in-time-recovery ensure a resilient and scalable search system with the same 0-ops story as Cloud.
+ Learn more Contact us
+ Hidden
+ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+ ▓░ ░▓
+ ▓░ ┌──────────── YOUR VPC ─────────────┐ ░▓
+ ▓░ │ │ ░▓
+ ▓░ │ █ DATA PLANE █ │ ░▓
+ ▓░ │ │ ░▓
+ ▓░ │ Your data, your cloud │ ░▓
+ ▓░ │ │ ░▓
+ ▓░ │ │ ░▓
+ ▓░ └───────────────────────────────────┘ ░▓
+ ▓░ │ ░▓
+ ▓░ │ ░▓
+ ▓░ ▼ ░▓
+ ▓░ ═════════════════════════════════════ ░▓
+ ▓░ ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ ░▓
+ ▓░ ░▓
+ ▓░ ┌────────── CHROMA VPC ─────────────┐ ░▓
+ ▓░ │ │ ░▓
+ ▓░ │ █ CONTROL PLANE █ │ ░▓
+ ▓░ │ │ ░▓
+ ▓░ │ Managed by Chroma │ ░▓
+ ▓░ │ Monitoring, backups, ops │ ░▓
+ ▓░ │ │ ░▓
+ ▓░ └───────────────────────────────────┘ ░▓
+ ▓░ ░▓
+ ▓░ ✓ BYOC in your VPC ░▓
+ ▓░ ✓ Multi-region replication ░▓
+ ▓░ ✓ 0-ops management ░▓
+ ▓░ ░▓
+ ▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓
+ ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+ [▶] Videos
+ Deep dive: Using Reranking to improve search results
+ 15:23 
+ Chroma Context-1
+ 13:20 
+ Lexical Search in Chroma
+ 4:41 
+ Schema() and Search() APIs
+ 9:02 
+ Context Engineering Episode 3 - Lance Martin - LangChain
+ 1:02:36 
+ Beyond The Embedding: Vector Indexing
+ 11:26 
+ Long live Context Engineering
+ 57:00 
+ Context Rot
+ 7:55 
+ Context Engineering: The Outer Loop 
+ 23:43 
+ Context Engineering for Engineers 
+ 11:16 
+ Reliability at Scale
+ 26:30 
+ Context Engineering with DSPy
+ 12:46 
+ See more
+ Visit our YouTube channel →
+ [●] Open source community
+ Open-source databases give your team the control and flexibility to build exactly what you need. No licensing limits, no vendor lock-in, just reliable performance backed by a large community.
+ Github → Chroma has over 26k GitHub stars and is used in over 90k other open-source codebases on GitHub. It is downloaded over 11M times a month.
+ Discord → Join the Discord to see what people are building!
+ Social → Find the greater community on X and YouTube. 
+ Run Chroma OSS → Run Chroma on your own infrastructure with our open-source deployment guides.
+ [◆] Support
+ Open-source → Join our 10K person strong Discord community to get fast and expert help from the open-source community.
+ All plans → Helpful support direct from engineers on the Chroma team
+ Pro plan → Direct Slack communication for fast support and help designing and iterating your search system.
+ Enterprise plan → Customized SLAs ensure your team gets 24/7 assistance.
+ [▲] Research
+ Our research spans both basic and applied research for search, retrieval, agents, and context engineering.
+ Context-1
+ Training a self-editing search agent.
+ Context Rot
+ How increasing input tokens impacts LLM performance.
+ Generative Benchmarking
+ New methods for evaluating retrieval systems.
+ Chunking Strategies
+ Evaluating chunking strategies in retrieval for AI.
+ Embedding Adapters
+ Lightweight transforms to boost embedding accuracy.
+ [■] Updates
+ Chroma's project is rapidly improving. Here are the latest updates.
+ Chroma Cloud Sync
+ Serverless data ingestion for Chroma Cloud.
+ Mar 2026 
+ Metadata Arrays
+ Store arrays of strings, numbers, and booleans in metadata.
+ Feb 2026 
+ Indexing Status
+ Monitor real-time indexing progress of your collections.
+ Jan 2026 
+ Read Level
+ Control read consistency with index-only or full read modes.
+ Jan 2026 
+ Private Networking
+ Secure connectivity with AWS PrivateLink support.
+ Jan 2026 
+ GroupBy
+ Group and aggregate search results by metadata keys.
+ Jan 2026 
+ Customer-Managed Encryption Keys
+ Encrypt your data with your own encryption keys.
+ Dec 2025 
+ Chro
+
+=== [pricing] https://www.trychroma.com/pricing/ (lang=en)
+Pricing - Chroma 
+ Products 
+ Products
+ Sync Database Agent 
+ Docs Research Resources 
+ Resources
+ Use cases Updates Videos Changelog Discord GitHub Support Hidden
+ Pricing 27k Log in Sign up 
+ Simple, usage-based pricing. Just like the rest of Chroma Cloud.
+ Chroma Cloud enables fast, scalable, & serverless vector, full-text, and metadata search across terabytes of data. The open-source search infrastructure for AI.
+ Get started for free 
+ Usage-based pricing
+ Starter plan per month + $5 in free credits 
+ $0 
+ Write per GiB written 
+ $2.50 
+ Storage per GiB per month 
+ $0.33 
+ Query per TiB queried 
+ $0.0075 
+ Network per GiB returned 
+ $0.09 
+ Pricing calculator
+ Usage Parameters Vector: 1536 
+ Doc: 8192  bytes 
+ Metadata: 64  bytes 
+ Collections 
+ × 500 
+ Written $2.50/GiB 
+ 1.0M docs ( 13GiB ) $34 
+ Stored $0.33/GiB 
+ 6.0M docs ( 80GiB ) $27 
+ Queried $0.0075/TiB 
+ +0.09/GiB out 
+ 10.0M queries ( 4qps ) $19 
+ Usage total per month $79 
+ Plans
+ Starter
+ $0 /month 
+ + usage
+ Get up and running quickly. Free credits then usage-based pricing.
+ Sign up 
+ $0 + usage
+ 10 databases
+ 10 team members
+ Community Slack
+ Team
+ $250 /month 
+ + usage
+ Scale your production use cases. $100 credits then usage-based pricing.
+ Get started 
+ $250 + usage
+ 100 databases
+ 30 team members
+ Slack support
+ SOC II
+ Volume-based discounts
+ Enterprise
+ Custom
+ For organizations prioritizing security, scale, support, and confidence.
+ Get in touch Hidden
+ Custom pricing
+ Unlimited databases
+ Unlimited team members
+ Dedicated support
+ Single tenant clusters
+ BYOC clusters
+ SLAs
+ Pricing FAQs
+ Do unused credits rollover to the next month?
+ What payment methods do you accept?
+ Can I change my plan in the middle of a billing cycle?
+ What happens if I exceed my plan's usage limits?
+ Can I export my data if I decide to leave?
+ Do unused credits rollover to the next month?
+ Yes, in most cases your credits do not expire. The $100 of included usage in the Team plan does not rollover.
+ What payment methods do you accept?
+ Currently Chroma accepts credit card for Starter and Team plans. Enterprise plans have configurable billing methods.
+ Can I change my plan in the middle of a billing cycle?
+ Your plan change will be pro-rated to the calendar month. This applies to downgrades and upgrades.
+ What happens if I exceed my plan's usage limits?
+ There are 2 kinds of usage-limits. Customer set usage limits and Chroma set usage limits. Both result in a pausing of the service until the limit is changed.
+ Can I export my data if I decide to leave?
+ Chroma is an open-source product and egressing your data is easy.
+ Learn more on the Cloud documentation -> 
+ © 2026
+ Product
+ Database Sync Enterprise Package Search MCP Docs Status Contact 
+ Follow
+ GitHub X YouTube 
+ Company
+ About Changelog Careers 
+ Legal
+ Privacy Terms Security DPA
+
+=== [about] https://docs.trychroma.com/docs/overview/introduction (lang=en)
+Introduction - Chroma Docs 
+ Documentation Index
+ Fetch the complete documentation index at: /llms.txt 
+ Use this file to discover all available pages before exploring further.
+ Skip to main content 
+ Chroma Docs home page 
+ Search...
+ ⌘ K Ask Assistant ⌘ I 
+ 27k 
+ 11k 
+ 29k 
+ Dashboard 
+ Dashboard 
+ Search... 
+ Navigation 
+ Overview 
+ Introduction
+ Docs 
+ Chroma Cloud 
+ Guides 
+ Integrations 
+ Reference 
+ Overview 
+ Introduction 
+ Getting Started 
+ Run Chroma 
+ Chroma Clients 
+ Client-Server Mode 
+ Collections 
+ Manage Collections 
+ Add Data 
+ Update Data 
+ Conditional Transactions 
+ Delete Data 
+ Configure Collections 
+ Querying Collections 
+ Query and Get 
+ Metadata Filtering 
+ Full Text Search 
+ Embeddings 
+ Embedding Functions 
+ Multimodal Embeddings 
+ CLI 
+ Installing the CLI 
+ Run a Chroma Server 
+ Data Management 
+ Cloud 
+ Other 
+ Other 
+ Open Source 
+ Migration 
+ Troubleshooting 
+ Overview
+ Introduction
+ Copy page Copy page 
+ Chroma is the open-source data infrastructure for AI. It comes with everything you need to get started built-in.
+ Copy page Copy page 
+ Chroma gives you everything you need for retrieval: store embeddings with metadata, search with dense and sparse vectors, filter by metadata, and retrieve across text, images, and more. 
+ ​ 
+ What Chroma Offers 
+ Document Storage
+ Store documents and metadata. 
+ Embeddings
+ Use any embedding model. OpenAI, Cohere, Hugging Face, sentence-transformers, and more. 
+ Vector Search
+ Dense, sparse, and hybrid search. Query by similarity and combine multiple search strategies. 
+ Full-Text & Regex Search
+ Keyword and regex search over your data without embeddings. 
+ Metadata Filtering
+ Filter results at query time by metadata conditions. 
+ Multi-Modal Retrieval
+ Index and search images, audio, and other modalities alongside text. 
+ ​ 
+ Quickstart 
+ Getting Started with the Chroma SDK
+ Create a self-hosted or cloud database and add data to it using the Chroma SDK. 
+ Create a Chroma Cloud Database
+ Create a scalable, zero-ops Chroma Cloud database to store your AI data. 
+ ​ 
+ Example Projects 
+ Agentic Search
+ Build agents that iteratively search and refine results for complex queries. 
+ Code Search
+ Index codebases to power coding agents using AST-aware chunking. 
+ ​ 
+ Open Source 
+ Chroma is licensed under Apache 2.0 . Run it locally, self-host, or use Chroma Cloud for a managed, serverless experience. 
+ Was this page helpful?
+ Yes No 
+ Suggest edits 
+ Getting Started
+ Next 
+ Chroma Docs home page github x discord youtube 
+ Enterprise Pricing Changelog 
+ github x discord youtube 
+ github x discord youtube 
+ Assistant 
+ Responses are generated using AI and may contain mistakes.
+ Contact support
+
+=== [meta] https://www.trychroma.com/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/chroma-core/chroma
+![Chroma](./docs/assets/chroma-wordmark-color.png#gh-light-mode-only)
+![Chroma](./docs/assets/chroma-wordmark-white.png#gh-dark-mode-only)
+
+<p align="center">
+    <b>Chroma - the open-source data infrastructure for AI</b>. <br />
+</p>
+
+<p align="center">
+  <a href="https://discord.gg/MMeYNTmh3x" target="_blank">
+      <img src="https://img.shields.io/discord/1073293645303795742?cacheSeconds=3600" alt="Discord">
+  </a> |
+  <a href="https://github.com/chroma-core/chroma/blob/master/LICENSE" target="_blank">
+      <img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg" alt="License">
+  </a> |
+  <a href="https://docs.trychroma.com/" target="_blank">
+      Docs
+  </a> |
+  <a href="https://www.trychroma.com/" target="_blank">
+      Homepage
+  </a>
+</p>
+
+```bash
+pip install chromadb # python client
+# for javascript, npm install chromadb!
+# for client-server mode, chroma run --path /chroma_db_path
+```
+
+## Chroma Cloud
+
+Our hosted service, Chroma Cloud, powers serverless vector, hybrid, and full-text search. It's extremely fast, cost-effective, scalable and painless. Create a DB and try it out in under 30 seconds with $5 of free credits.
+
+[Get started with Chroma Cloud](https://trychroma.com/signup)
+
+## API
+
+The core API is only 4 functions (run our [💡 Google Colab](https://colab.research.google.com/drive/1QEzFyqnoFxq7LUGyP1vzR4iLt9PpCDXv?usp=sharing)):
+
+```python
+import chromadb
+# setup Chroma in-memory, for easy prototyping. Can add persistence easily!
+client = chromadb.Client()
+
+# Create collection. get_collection, get_or_create_collection, delete_collection also available!
+collection = client.create_collection("all-my-documents")
+
+# Add docs to the collection. Can also update and delete. Row-based API coming soon!
+collection.add(
+    documents=["This is document1", "This is document2"], # we handle tokenization, embedding, and indexing automatically. You can skip that and add your own embeddings as well
+    metadatas=[{"source": "notion"}, {"source": "google-docs"}], # filter on these!
+    ids=["doc1", "doc2"], # unique for each doc
+)
+
+# Query/search 2 most similar results. You can also .get by id
+results = collection.query(
+    query_texts=["This is a query document"],
+    n_results=2,
+    # where={"metadata_field": "is_equal_to_this"}, # optional filter
+    # where_document={"$contains":"search_string"}  # optional filter
+)
+```
+
+Learn about all features on our [Docs](https://docs.trychroma.com)
+
+## Get involved
+
+Chroma is a rapidly developing project. We welcome PR contributors and ideas for how to improve the project.
+- [Join the conversation on Discord](https://discord.com/invite/chromadb) - `#contributing` channel
+- [Review the 🛣️ Roadmap and contribute your ideas](https://docs.trychroma.com/docs/overview/oss#roadmap)
+- [Grab an issue and open a PR](https://github.com/chroma-core/chroma/issues) - [`Good first issue tag`](https://github.com/chroma-core/chroma/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
+- [Read our contributing guide](https://docs.trychroma.com/docs/overview/oss#contributing)
+
+**Release Cadence**
+We currently release new tagged versions of the `pypi` and `npm` packages on Mondays. Hotfixes go out at any time during the week.
+
+## License
+
+[Apache 2.0](./LICENSE)
+

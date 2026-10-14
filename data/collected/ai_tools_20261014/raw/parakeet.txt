@@ -1,0 +1,303 @@
+=== [home] https://docs.nvidia.com/nemo-framework/user-guide/latest/overview.html (lang=en)
+Overview — NVIDIA NeMo Framework User Guide 
+ Skip to main content 
+ Back to top 
+ Ctrl + K 
+ Try our new NeMo Assist to chat with the NeMo Framework docs and code. We value your feedback to the chatbot responses to help us improve!
+ NVIDIA NeMo Framework User Guide
+ Choose version 
+ Search 
+ Ctrl + K 
+ Search 
+ Ctrl + K 
+ NVIDIA NeMo Framework User Guide
+ Choose version 
+ Table of Contents
+ NeMo Framework 
+ Overview 
+ Releases 
+ Software Component Versions 
+ Changelog 
+ Known Issues 
+ Library Documentation 
+ Overview 
+ NeMo 
+ Introduction 
+ NeMo Fundamentals 
+ Tutorials 
+ Mixed Precision Training 
+ Parallelisms 
+ Mixture of Experts 
+ Optimizations 
+ Attention Optimizations 
+ Activation Recomputation 
+ Communication Overlap 
+ CPU Offloading 
+ Checkpoints 
+ NeMo Distributed Checkpoint User Guide 
+ Converting from Megatron-LM 
+ NeMo APIs 
+ NeMo Models 
+ Neural Modules 
+ Experiment Manager 
+ Neural Types 
+ Adapters 
+ Adapter Components 
+ Adapters API 
+ NeMo Core APIs 
+ NeMo Common Collection API 
+ Callbacks 
+ Losses 
+ Metrics 
+ Tokenizers 
+ Data 
+ S3 Checkpointing 
+ NeMo ASR API 
+ NeMo TTS API 
+ NeMo Collections 
+ Automatic Speech Recognition (ASR) 
+ Models 
+ Datasets 
+ ASR Language Modeling and Customization 
+ Checkpoints 
+ Scores 
+ NeMo ASR Configuration Files 
+ NeMo ASR API 
+ All Checkpoints 
+ Example With MCV 
+ Speech Classification 
+ Models 
+ Datasets 
+ Checkpoints 
+ NeMo Speech Classification Configuration Files 
+ Resource and Documentation Guide 
+ Speaker Recognition (SR) 
+ Models 
+ NeMo Speaker Recognition Configuration Files 
+ Datasets 
+ Checkpoints 
+ NeMo Speaker Recognition API 
+ Resource and Documentation Guide 
+ Speaker Diarization 
+ Models 
+ Datasets 
+ Checkpoints 
+ End-to-End Speaker Diarization Configuration Files 
+ NeMo Speaker Diarization API 
+ Resource and Documentation Guide 
+ Speech Self-Supervised Learning 
+ Models 
+ Datasets 
+ Checkpoints 
+ NeMo SSL Configuration Files 
+ NeMo SSL collection API 
+ Resources and Documentation 
+ Speech Intent Classification and Slot Filling 
+ Models 
+ Datasets 
+ Checkpoints 
+ NeMo Speech Intent Classification and Slot Filling Configuration Files 
+ NeMo Speech Intent Classification and Slot Filling collection API 
+ Resources and Documentation 
+ SpeechLM2 
+ Models 
+ Datasets 
+ Configuration Files 
+ Training and Scaling 
+ Text-to-Speech (TTS) 
+ Models 
+ Data Preprocessing 
+ Checkpoints 
+ NeMo TTS Configuration Files 
+ Grapheme-to-Phoneme Models 
+ Magpie-TTS 
+ Magpie-TTS Preference Optimization 
+ Magpie-TTS Longform Inference 
+ Speech and Audio Processing 
+ Models 
+ Datasets 
+ Checkpoints 
+ NeMo Audio Configuration Files 
+ NeMo Audio API 
+ Speech AI Tools 
+ NeMo Forced Aligner (NFA) 
+ Dataset Creation Tool Based on CTC-Segmentation 
+ Speech Data Explorer 
+ Comparison tool for ASR Models 
+ ASR Evaluator 
+ Speech Data Processor 
+ NeMo AutoModel 
+ NeMo Curator 
+ NeMo Evaluator 
+ NeMo Export and Deploy 
+ NeMo Megatron Bridge 
+ NeMo RL 
+ NeMo Run 
+ Getting Started 
+ Tutorials 
+ Model Optimization 
+ Quantization 
+ Pruning 
+ Distillation 
+ Speculative Decoding 
+ Models 
+ Speech AI Models 
+ Magpie-TTS 
+ Magpie-TTS Preference Optimization 
+ Magpie-TTS Longform Inference 
+ Overview 
+ Is this page helpful? 
+ Overview # 
+ NVIDIA NeMo Framework is a scalable and cloud-native generative AI framework built for researchers and developers working on Large Language Models, Multimodal, and Speech AI (e.g. Automatic Speech Recognition and Text-to-Speech ). It enables users to efficiently create, customize, and deploy new generative AI models by leveraging existing code and pre-trained model checkpoints.
+ Important
+ This page is focused on Speech AI, for LLM/VLM/Diffusion models support, please refer to the NeMo Framework documentation.
+For the NeMo Framework container, starting with 26.02, refer to Megatron-Bridge’s documentation and release notes .
+ Speech AI # 
+ Developing conversational AI models is a complex process that involves defining, constructing, and training models within particular domains. This process typically requires several iterations to reach a high level of accuracy. It often involves multiple iterations to achieve high accuracy, fine-tuning on various tasks and domain-specific data, ensuring training performance, and preparing models for inference deployment.
+ NeMo Framework provides support for the training and customization of Speech AI models. This includes tasks like Automatic Speech Recognition (ASR) and Text-To-Speech (TTS) synthesis. It offers a smooth transition to enterprise-level production deployment with NVIDIA Riva . To assist developers and researchers, NeMo Framework includes state-of-the-art pre-trained checkpoints, tools for reproducible speech data processing, and features for interactive exploration and analysis of speech datasets. The components of the NeMo Framework for Speech AI are as follows:
+ Training and Customization NeMo Framework contains everything needed to train and customize speech models ( ASR , Speech Classification , Speaker Recognition , Speaker Diarization , and TTS ) in a reproducible manner.
+ SOTA Pre-trained Models NeMo Framework provides state-of-the-art recipes and pre-trained checkpoints of several ASR and TTS models, as well as instructions on how to load them.
+ Speech Tools NeMo Framework provides a set of tools useful for developing ASR and TTS models, including:
+ NeMo Forced Aligner (NFA) for generating token-, word- and segment-level timestamps of speech in audio using NeMo’s CTC-based Automatic Speech Recognition models.
+ Speech Data Processor (SDP) , a toolkit for simplifying speech data processing. It allows you to represent data processing operations in a config file, minimizing boilerplate code, and allowing reproducibility and shareability.
+ Speech Data Explorer (SDE) , a Dash-based web application for interactive exploration and analysis of speech datasets.
+ Dataset creation tool which provides functionality to align long audio files with the corresponding transcripts and split them into shorter fragments that are suitable for Automatic Speech Recognition (ASR) model training.
+ Comparison Tool for ASR Models to compare predictions of different ASR models at word accuracy and utterance level.
+ ASR Evaluator for evaluating the performance of ASR models and other features such as Voice Activity Detection.
+ Text Normalization Tool for converting text from the written form to the spoken form and vice versa (e.g. “31st” vs “thirty first”).
+ Path to Deployment NeMo models that have been trained or customized using the NeMo Framework can be optimized and deployed with NVIDIA Riva . Riva provides containers and Helm charts specifically designed to automate the steps for push-button deployment.
+ Getting Started with Speech AI
+ Quickstart Guide 
+ Tutorial Notebooks 
+ Other Resources # 
+ GitHub Repos # 
+ NVIDIA-NeMo : The main repository for the NeMo Framework
+ Getting Help # 
+ Engage with the NeMo community, ask questions, get support, or report bugs.
+ NeMo Discussions 
+ NeMo Issues 
+ Programming Languages and Frameworks # 
+ Python: The main interface to use NeMo Framework
+ Pytorch: NeMo Framework is built on top of PyTorch
+ Licenses # 
+ NeMo Github repo is licensed under the Apache 2.0 license 
+ NeMo Framework is licensed under the NVIDIA AI PRODUCT AGREEMENT . By pulling and using the container, you accept the terms and conditions of this license.
+ The NeMo Framework container contains Llama materials governed by the Meta Llama3 Community License Agreement .
+ prev
+
+=== [about] https://www.nvidia.com/en-us/security/ (lang=en-us)
+NVIDIA Product Security | NVIDIA 
+ Skip to main content 
+ Main Menu 
+ Products
+ Cloud Services 
+ Creating 
+ Data Center 
+ Embedded Systems 
+ Gaming 
+ Graphics Cards and Desktops 
+ Laptops 
+ Networking 
+ Professional Workstations 
+ Software 
+ Tools 
+ Cloud Services 
+ DGX Cloud 
+ NVIDIA’s AI factory in the cloud
+ NVIDIA APIs 
+ Explore, test, and deploy AI models and agents
+ Private Registry 
+ Guide for using NVIDIA NGC private registry with GPU cloud
+ NVIDIA NGC 
+ Accelerated, containerized AI models and SDKs
+ DSX Platform 
+ Build AI factories optimized for lowest cost tokens per megawatt
+ Virtual GPU 
+ Virtual solutions for scalable, high-performance computing
+ Creating 
+ NVIDIA Studio 
+ High performance GeForce RTX PCs, purpose-built for creators
+ NVIDIA Broadcast App 
+ AI-enhanced voice and video for next-level streams, videos, and calls
+ NVIDIA App and Studio Drivers 
+ Optimize gaming, streaming, and AI-powered creativity
+ RTX AI PCs 
+ AI PCs for gaming, creating, productivity and development
+ RTX Remix 
+ Create RTX remasters of classic games with open-source AI
+ Project G-Assist 
+ AI assistant to optimize and control your GeForce RTX PC
+ Data Center 
+ Overview 
+ Modernizing data centers with AI and accelerated computing
+ DGX Platform 
+ Enterprise AI factory for model development and deployment
+ Grace CPU 
+ Architecture for data centers that transform data into intelligence
+ HGX Platform 
+ A supercomputer purpose-built for AI and HPC
+ IGX Platform 
+ Advanced functional safety and security for edge AI
+ MGX Platform 
+ Accelerated computing with modular servers
+ OVX Systems 
+ Scalable data center infrastructure for high-performance AI
+ DSX Platform 
+ Build AI factories optimized for lowest cost tokens per megawatt
+ Embedded Systems 
+ Jetson 
+ Leading platform for autonomous machines and embedded applications
+ DRIVE AGX 
+ Powerful in-vehicle computing for AI-driven autonomous vehicle systems
+ IGX Platform 
+ Advanced functional safety and security for edge AI
+ Gaming 
+ GeForce 
+ Explore graphics cards, gaming solutions, AI technology, and more
+ GeForce Graphics Cards 
+ RTX graphics cards bring game-changing AI capabilities
+ Gaming Laptops 
+ Thinnest and longest lasting RTX laptops, optimized by Max-Q
+ G-SYNC Monitors 
+ Smooth, tear-free gaming with NVIDIA G-SYNC monitors
+ DLSS 
+ Neural rendering tech boosts FPS and enhances image quality
+ Reflex 
+ Ultimate responsiveness for faster reactions and better aim
+ RTX Remix 
+ Create RTX remasters of classic games with open-source AI
+ Project G-Assist 
+ AI assistant to optimize and control your GeForce RTX PC
+ GeForce NOW Cloud Gaming 
+ RTX-powered cloud gaming. Choose from 3 memberships
+ NVIDIA App and Game Ready Drivers 
+ Optimize gaming, streaming, and AI-powered creativity
+ NVIDIA Broadcast App 
+ AI-enhanced voice and video for next-level streams, videos, and calls
+ SHIELD TV 
+ World-class streaming media performance
+ Graphics Cards and Desktops 
+ GeForce RTX 
+ RTX graphics cards and desktops bring game-changing AI capabilities
+ RTX PRO 
+ Accelerating professional AI, graphics, rendering and compute workloads
+ RTX Spark 
+ Slim, powerful laptops and compact desktops for AI, creation, and gaming
+ RTX AI PCs 
+ AI PCs for gaming, creating, productivity and development
+ DGX Spark 
+ A Grace Blackwell AI supercomputer on your desk
+ Laptops 
+ GeForce Laptops 
+ GPU-powered laptops for gamers and creators
+ RTX Spark 
+ Slim, powerful laptops and compact desktops for AI, creation, and gaming
+ Studio Laptops 
+ High performance laptops purpose-built for creators
+ RTX PRO Laptops 
+ Accelerate professional 
+
+=== [meta] https://docs.nvidia.com/nemo-framework/user-guide/latest/overview.html
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음

@@ -1,0 +1,43 @@
+{
+ "company": "Microsoft (Ollama 라이브러리 페이지 기준)",
+ "one_liner_ko": "Microsoft가 만든 3B(Mini)·14B(Medium) 크기의 가볍고 최신 성능을 갖춘 오픈 모델 제품군 Phi-3.",
+ "what_it_does_ko": "Phi-3는 Microsoft가 개발한 오픈 AI 모델 제품군으로, Ollama 라이브러리에서 3.8B(Mini)와 14B(Medium) 크기를 받아 로컬에서 실행할 수 있다. Phi-3 Mini는 합성 데이터와 걸러낸 공개 웹 데이터로 학습하고 지도 미세조정(SFT)과 직접 선호 최적화(DPO)를 거쳤다. 4K와 128K 컨텍스트 버전이 있다. 메모리·연산이 제한된 환경, 지연에 민감한 상황, 수학·논리 추론, 긴 컨텍스트가 필요한 애플리케이션용으로 설계되었다.",
+ "key_features": [
+  "Phi-3 Mini(3.8B)·Phi-3 Medium(14B)",
+  "4K·128K 컨텍스트 창 버전",
+  "SFT·DPO 후처리 학습",
+  "Ollama CLI(ollama run phi3)로 로컬 실행",
+  "로컬 REST API·Python·JavaScript 라이브러리로 호출"
+ ],
+ "use_cases_ko": [
+  "메모리·연산이 제한된 환경의 애플리케이션",
+  "지연 시간에 민감한 서비스",
+  "수학·논리 추론이 필요한 작업"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["CLI", "API", "맥", "윈도"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://ollama.com/library/phi3", "quote": "Phi-3 is a family of open AI models developed by Microsoft."},
+  {"field": "one_liner_ko", "url": "https://ollama.com/library/phi3", "quote": "Phi-3 is a family of lightweight 3B (Mini) and 14B (Medium) state-of-the-art open models by Microsoft."},
+  {"field": "what_it_does_ko", "url": "https://ollama.com/library/phi3", "quote": "Phi-3 Mini is a 3.8B parameters, lightweight, state-of-the-art open model trained with the Phi-3 datasets that includes both synthetic data and the filtered publicly available websites data"},
+  {"field": "what_it_does_ko", "url": "https://ollama.com/library/phi3", "quote": "The model has underwent a post-training process that incorporates both supervised fine-tuning and direct preference optimization"},
+  {"field": "key_features", "url": "https://ollama.com/library/phi3", "quote": "Phi-3 Mini – 3B parameters – ollama run phi3:mini"},
+  {"field": "key_features", "url": "https://ollama.com/library/phi3", "quote": "Phi-3 Medium – 14B parameters – ollama run phi3:medium"},
+  {"field": "key_features", "url": "https://ollama.com/library/phi3", "quote": "128k ollama run phi3:medium-128k"},
+  {"field": "key_features", "url": "https://ollama.com/library/phi3", "quote": "curl http://localhost:11434/api/chat"},
+  {"field": "use_cases_ko", "url": "https://ollama.com/library/phi3", "quote": "1) memory/compute constrained environments\n 2) latency bound scenarios\n 3) strong reasoning (especially math and logic)"},
+  {"field": "api", "url": "https://docs.ollama.com/", "quote": "API reference — use Ollama’s API or compatible OpenAI and Anthropic clients."},
+  {"field": "platforms", "url": "https://docs.ollama.com/", "quote": "CLI Reference \n Modelfile Reference \n Context length \n Linux \n macOS \n Windows"},
+  {"field": "korean_support", "url": "https://ollama.com/library/phi3", "quote": "The model is intended for commercial and research use in English."},
+  {"field": "korean_support", "url": "https://ollama.com/library/phi3", "quote": "Languages other than English will experience worse performance."}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

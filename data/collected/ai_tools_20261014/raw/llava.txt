@@ -1,0 +1,146 @@
+=== [home] https://llava-vl.github.io
+LLaVA 
+ LLaVA: L arge L anguage a nd V ision A ssistant 
+ Visual Instruction Tuning
+ NeurIPS 2023 (Oral)
+ Haotian Liu * ,
+ Chunyuan Li * ,
+ Qingyang Wu ,
+ Yong Jae
+ Lee 
+ ▶ University of
+ Wisconsin-Madison 
+ ▶ Microsoft Research 
+ ▶ Columbia
+ University 
+ * Equal Contribution 
+ Improved Baselines with Visual Instruction Fine-tuning
+ Haotian Liu * ,
+ Chunyuan Li * ,
+ Yuheng Li ,
+ Yong Jae
+ Lee 
+ ▶ University of
+ Wisconsin-Madison 
+ ▶ Microsoft Research 
+ -->
+ arXiv 
+ arXiv (LLaVA-1.5) 
+ Code 
+ Demo 
+ Dataset 
+ Model 
+ Video 
+ -->
+ 🔥 [NEW!] LLaVA-1.5 achieves SoTA on 11 benchmarks, with just simple modifications to the original LLaVA, utilizes all public data, completes training in ~1 day on a single 8-A100 node, and surpasses methods that use billion-scale data.
+ LLaVA represents a novel end-to-end trained large multimodal model that combines a vision encoder and Vicuna
+ for general-purpose visual and language understanding,
+ achieving impressive chat capabilities mimicking spirits of the multimodal GPT-4 and setting a new state-of-the-art accuracy on Science QA.
+ Abstract
+ Instruction tuning large language models (LLMs) using machine-generated instruction-following data has improved zero-shot capabilities on new tasks in the language domain, but the idea is less explored in the multimodal field.
+ Multimodal Instruct Data . We present the first attempt to use language-only GPT-4 to generate multimodal language-image instruction-following data. 
+ LLaVA Model . We introduce LLaVA ( L arge L anguage- a nd- V ision A ssistant) , an end-to-end trained large multimodal model that connects a vision encoder and LLM for general-purpose visual and language understanding.
+ Performance . Our early experiments show that LLaVA demonstrates impressive multimodel chat abilities, sometimes exhibiting the behaviors of multimodal GPT-4 on unseen images/instructions, and yields a 85.1% relative score compared with GPT-4 on a synthetic multimodal instruction-following dataset.
+ When fine-tuned on Science QA , the synergy of LLaVA and GPT-4 achieves a new state-of-the-art accuracy of 92.53%.
+ Open-source . We make GPT-4 generated visual instruction tuning data, our model and code base publicly available.
+ Multimodal Instrucion-Following Data
+ Based on the COCO dataset, we interact with language-only GPT-4, and collect 158K unique language-image instruction-following samples in total, including 58K in conversations, 23K in detailed description, and 77k in complex reasoning, respectively. Please check out ``LLaVA-Instruct-150K''' on 
+ [HuggingFace Dataset] .
+ Data file name 
+ File Size 
+ Sample Size 
+ conversation_58k.json 
+ 126 MB 
+ 58K 
+ detail_23k.json 
+ 20.5 MB 
+ 23K 
+ complex_reasoning_77k.json 
+ 79.6 MB 
+ 77K 
+ For each subset, we visualize the root noun-verb pairs for the instruction and response. For each chart, please click the link for the interactive page to check out the noun-verb pairs whose frequency is higher the given number. 
+ Instruction: Conversation [ 0 , 20 , 50 ]
+ Instruction: Detailed Description [ 0 ]
+ Instruction: Complex Reasoning [ 0 , 20 , 50 ]
+ Response: Conversation [ 0 , 20 , 50 ]
+ Response: Detailed Description [ 0 , 20 , 50 ]
+ Response: Complex Reasoning [ 0 , 20 , 50 ]
+ LLaVA: Large Language-and-Vision Assistant
+ LLaVa connects pre-trained CLIP ViT-L/14 visual encoder and large language model Vicuna , using a simple projection matrix. We consider a two-stage instruction-tuning procedure:
+ Stage 1: Pre-training for Feature Alignment . Only the projection matrix is updated, based on a subset of CC3M. 
+ Stage 2: Fine-tuning End-to-End . Both the projection matrix and LLM are updated for two different use senarios: 
+ Visual Chat : LLaVA is fine-tuned on our generated multimodal instruction-following data for daily user-oriented applications. 
+ Science QA : LLaVA is fine-tuned on this multimodal reasonsing dataset for the science domain. 
+ Please check out our 
+ [Model Zoo] .
+ Performance
+ Visual Chat: Towards building multimodal GPT-4 level chatbot 
+ An evaluation dataset with 30 unseen images is constructed: each image is assocaited with three types of instructions: conversation, detailed description and complex reasoning. This leads to 90 new language-image instructions, on which we test LLaVA and GPT-4, and use GPT-4 to rate their responses from score 1 to 10. The summed score and relative score per type is reported. Overall, LLaVA achieves 85.1% relative score compared with GPT-4, indicating the effectinvess of the proposed self-instruct method in multimodal settings 
+ Science QA: New SoTA with the synergy of LLaVA with GPT-4
+ LLaVA alones achieve 90.92%. We use the text-only GPT-4 as the judge, to predict the final answer based on its own previous answers and the LLaVA answers. This "GPT-4 as judge" scheme yields a new SOTA 92.53%. 
+ Examples on Visual Instruction Following
+ Visual Reasoning on two examples from OpenAI GPT-4 Technical Report 
+ Optical character recognition (OCR) 
+ Who's GPT-4's favorite? Battles between State-of-the-Art Chatbots
+ -->
+ keyboard_arrow_left 
+ keyboard_arrow_right 
+ Description: Monalisa is a famous painting by Leonardo da Vinci. 
+ -->
+ BibTeX
+ @misc{liu2023improvedllava,
+ author={Liu, Haotian and Li, Chunyuan and Li, Yuheng and Lee, Yong Jae},
+ title={Improved Baselines with Visual Instruction Tuning}, 
+ publisher={arXiv:2310.03744},
+ year={2023},
+ }
+ @inproceedings{liu2023llava,
+ author = {Liu, Haotian and Li, Chunyuan and Wu, Qingyang and Lee, Yong Jae},
+ title = {Visual Instruction Tuning},
+ booktitle = {NeurIPS},
+ year = {2023}
+ }
+ Acknowledgement
+ This website is adapted from Nerfies , licensed under a Creative
+ Commons Attribution-ShareAlike 4.0 International License . We thank the LLaMA team for giving us access to their models, and open-source projects, including Alpaca and Vicuna.
+ Usage and License Notices : The data, code and checkpoint is intended and licensed for research use only. They are also restricted to uses that follow the license agreement of CLIP, LLaMA, Vicuna and GPT-4. The dataset is CC BY NC 4.0 (allowing only non-commercial use) and models trained using the dataset should not be used outside of research purposes.
+ Related Links: 
+ [REACT] 
+ [GLIGEN] 
+ [Computer Vision in the Wild (CVinW)] 
+ [Insutrction Tuning with GPT-4]
+
+=== [meta] https://llava-vl.github.io
+html lang: 없음
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/haotian-liu/LLaVA
+# 🌋 LLaVA: Large Language and Vision Assistant
+
+*Visual instruction tuning towards large language and vision models with GPT-4 level capabilities.*
+
+[📢 [LLaVA-NeXT Blog](https://llava-vl.github.io/blog/2024-01-30-llava-next/)] [[Project Page](https://llava-vl.github.io/)] [[Demo](https://llava.hliu.cc/)]  [[Data](https://github.com/haotian-liu/LLaVA/blob/main/docs/Data.md)] [[Model Zoo](https://github.com/haotian-liu/LLaVA/blob/main/docs/MODEL_ZOO.md)]
+
+🤝Community Contributions: [[llama.cpp](https://github.com/ggerganov/llama.cpp/pull/3436)] [[Colab](https://github.com/camenduru/LLaVA-colab)] [[🤗Space](https://huggingface.co/spaces/badayvedat/LLaVA)] [[Replicate](https://replicate.com/yorickvp/llava-13b)] [[AutoGen](https://github.com/microsoft/autogen/blob/main/notebook/agentchat_lmm_llava.ipynb)]  [[BakLLaVA](https://github.com/SkunkworksAI/BakLLaVA)]
+
+**Improved Baselines with Visual Instruction Tuning** [[Paper](https://arxiv.org/abs/2310.03744)] [[HF](https://huggingface.co/papers/2310.03744)] <br>
+[Haotian Liu](https://hliu.cc), [Chunyuan Li](https://chunyuan.li/), [Yuheng Li](https://yuheng-li.github.io/), [Yong Jae Lee](https://pages.cs.wisc.edu/~yongjaelee/)
+
+**Visual Instruction Tuning** (NeurIPS 2023, **Oral**) [[Paper](https://arxiv.org/abs/2304.08485)] [[HF](https://huggingface.co/papers/2304.08485)] <br>
+[Haotian Liu*](https://hliu.cc), [Chunyuan Li*](https://chunyuan.li/), [Qingyang Wu](https://scholar.google.ca/citations?user=HDiw-TsAAAAJ&hl=en/), [Yong Jae Lee](https://pages.cs.wisc.edu/~yongjaelee/) (*Equal Contribution)
+
+<!--p align="center">
+    <a href="https://llava.hliu.cc/"><img src="images/llava_logo.png" width="50%"></a> <br>
+    Generated by <a href="https://gligen.github.io/">GLIGEN</a> via "a cute lava llama with glasses" and box prompt
+</p-->
+
+
+## Release
+
+- [2024/05/10] 🔥 **LLaVA-NeXT** (Stronger) models are released, stronger LMM with support of LLama-3 (8B) and Qwen-1.5 (72B/110B). [[Blog](https://llava-vl.github.io/blog/2024-05-10-llava-next-stronger-llms/)] [[Checkpoints](https://huggingface.co/collections/lmms-lab/llava-next-6623288e2d61edba3ddbf5ff)] [[Demo](https://llava-next.lmms-lab.com/)] [[Code](https://github.com/LLaVA-VL/LLaVA-NeXT/)] 
+- [2024/05/10] 🔥 **LLaVA-NeXT** (Video) is released. The image-only-trained LLaVA-NeXT model is surprisingly strong on video tasks with zero-shot modality transfer. DPO training with AI feedback on videos can yield significant improvement. [[Blog](https://llava-vl.github.io/blog/2024-04-30-llava-next-video/)] [[Checkpoints](https://huggingface.co/collections/lmms-lab/llava-next-video-661e86f5e8dabc3ff793c944)] [[Code](https://github.com/LLaVA-VL/LLaVA-NeXT/)]
+- [03/10] Releasing **LMMs-Eval**, a highly efficient evaluation pipeline we used when developing LLaVA-NeXT. It supports the evaluation of LMMs on dozens of public datasets and allows new dataset onboarding, making the dev of new LMMs much faster. [[Blog](https://lmms-lab.github.io/lmms-eval-blog/lmms-eval-0.1/)] [[Codebase](https://github.com/EvolvingLMMs-Lab/lmms-eval)]
+- [1/30] 🔥 **LLaVA-NeXT** (LLaVA-1.6) is out! With additional scaling to LLaVA-1.5, LLaVA-NeXT-34B outperforms Gemini Pro on some benchmarks. It can now process 4x more pixels and perform more tasks/applications than before. Check out the [blog post](https://llava-vl.github.io/blog/2024-01-30-llava-next/), and explore the [demo](https://llava.hliu.cc/)! Models are available in [Model Zoo](https://github.com/haotian-liu/LLaVA/blob/main/docs/MODEL_ZOO.md). Training/eval data and scripts coming soon.
+- [11/10] [LLaVA-Plus](https://llava-vl.github.io/llava-plus/) is released: Learning to Use Tools for Creating Multimodal Agents, with LLaVA-Plus (LLaVA that Plug and Learn to Use Skills). [[Project Page](https://llava-vl.github.io/llava-plus/)] [[Demo](https://llavaplus.ngrok.io/)] [[Code](https://github.com/LLaVA-VL/LLaVA-Plus-Codebase)] [[Paper](https://arxiv.org/abs/2311.05437)]
+- [11/2] [LLaVA-Interactive](https://llava-vl.github.io/llava-interactive/) is released: Experience the future of human-AI multimodal interaction with an all-in-one demo for Image Chat, Segmentation, Generation and Editing. [[Project Page](https://llava

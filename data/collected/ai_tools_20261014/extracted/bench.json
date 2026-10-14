@@ -1,0 +1,76 @@
+{
+ "company": "Sierra",
+ "one_liner_ko": "AI 에이전트가 실제 업무 과제를 믿을 만하게 끝내는지 대화·도구 호출·정책 준수로 평가하는 τ-bench.",
+ "what_it_does_ko": "τ-bench는 에이전트가 사용자와 대화하고, 도구를 호출하고, 지식을 검색하고, 정책을 지키는 능력을 기업 도메인에서 텍스트와 음성으로 평가한다. 원래 버전은 소매·항공 도메인에서 가상 사용자와 대화하며 검증 가능한 DB 결과로 채점했고, τ²-bench는 통신 도메인과 사용자도 행동하는 이중 제어를 더했다. τ³-bench는 약 700개 문서 지식 기반을 쓰는 은행 도메인과 실시간 음성 평가를 추가했다. 새 τ^τ-bench는 코딩 에이전트가 고객 서비스 에이전트를 만들 수 있는지 평가한다.",
+ "key_features": [
+  "τ³-Banking(지식 검색) 리더보드",
+  "τ³-Voice(실시간 음성) 평가",
+  "τ²-bench 소매·항공·통신",
+  "pass^k 신뢰도 지표",
+  "시각화 도구(Visualizer)",
+  "결과 제출"
+ ],
+ "use_cases_ko": [
+  "고객 서비스 에이전트 개발자가 모델 신뢰도 비교"
+ ],
+ "pricing": {
+  "free_tier": null,
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "웹"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://taubench.com",
+   "quote": "from Sierra"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://taubench.com",
+   "quote": "Can AI agents reliably complete real-world tasks?"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://taubench.com",
+   "quote": "τ-bench measures how well agents converse with users, call tools, retrieve knowledge, and follow policy across enterprise domains — in text and voice."
+  },
+  {
+   "field": "key_features",
+   "url": "https://taubench.com",
+   "quote": "Knowledge-intensive tasks: agents retrieve and reason over a realistic knowledge base of ~700 documents"
+  },
+  {
+   "field": "key_features",
+   "url": "https://taubench.com",
+   "quote": "scored against verifiable database outcomes with the pass k reliability metric."
+  },
+  {
+   "field": "key_features",
+   "url": "https://taubench.com",
+   "quote": "Visualizer Blog Community GitHub Submit Results"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://taubench.com",
+   "quote": "can coding agents build the customer-service agents τ-bench evaluates?"
+  },
+  {
+   "field": "platforms",
+   "url": "https://taubench.com",
+   "quote": "View Full Leaderboard →"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://taubench.com",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

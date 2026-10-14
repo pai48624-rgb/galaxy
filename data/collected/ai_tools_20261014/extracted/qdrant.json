@@ -1,0 +1,60 @@
+{
+ "company": "Qdrant",
+ "one_liner_ko": "어떤 배포 방식·규모에서도 고성능 벡터 검색을 제공하는 벡터 검색 엔진이자 벡터 데이터베이스.",
+ "what_it_does_ko": "Qdrant는 벡터와 추가 페이로드(포인트)를 저장·검색·관리하는 API를 갖춘 벡터 유사도 검색 엔진이자 벡터 데이터베이스다. 확장된 필터링 지원으로 신경망·시맨틱 기반 매칭, 패싯 검색 등에 쓸 수 있다. Rust로 작성되어 높은 부하에서도 빠르고 안정적이라고 소개한다. 오픈소스로 직접 설치하거나 완전 관리형 Qdrant Cloud(무료 티어 포함), Hybrid Cloud, Private Cloud, Edge(베타)로 배포할 수 있다.",
+ "key_features": [
+  "JSON 메타데이터 고급 필터(nested·text·geo 등)",
+  "밀집+희소 벡터 네이티브 하이브리드 검색(BM25, SPLADE++, miniCOIL)",
+  "객체당 여러 벡터를 쓰는 멀티벡터",
+  "HNSW 탐색 중 적용되는 1단계 필터링",
+  "점수 부스팅·ColBERT·MMR 재순위",
+  "비대칭·스칼라·바이너리 양자화로 메모리 최대 64배 절감",
+  "REST·gRPC API와 Python·JavaScript 등 공식 클라이언트",
+  "내장 웹 UI와 Qdrant Cloud 임베딩 추론"
+ ],
+ "use_cases_ko": [
+  "RAG·생성형 AI 검색",
+  "추천 시스템",
+  "데이터 분석·이상 탐지"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Free Tier 영구 무료: 단일 노드 0.5 vCPU / 1GB RAM / 4GB 디스크)",
+  "plans": [
+   {"name": "Free Tier", "price": 0, "currency": null, "period": "month", "limits": "단일 노드 0.5 vCPU / 1GB RAM / 4GB 디스크, 테스트·프로토타입용", "page_lang": "en"},
+   {"name": "Standard Tier", "price": null, "currency": null, "period": "usage", "limits": "사용량 기반(vCPU·메모리·스토리지·백업·추론 토큰, 시간 단위 과금), 99.5% SLA", "page_lang": "en"},
+   {"name": "Premium Tier", "price": null, "currency": null, "period": "usage", "limits": "최소 지출액 필요, SSO·프라이빗 VPC 링크, 99.9% SLA", "page_lang": "en"},
+   {"name": "Hybrid Cloud", "price": null, "currency": null, "period": "usage", "limits": "자체 인프라에서 관리형 클러스터, 가격 문의", "page_lang": "en"},
+   {"name": "Private Cloud", "price": null, "currency": null, "period": "usage", "limits": "격리·에어갭 배포, 가격 문의", "page_lang": "en"}
+  ],
+  "pricing_url": "https://qdrant.tech/pricing/"
+ },
+ "open_source": "Apache 2.0",
+ "api": "있음",
+ "platforms": ["웹", "CLI", "API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://qdrant.tech", "quote": "Qdrant - Vector Search Engine"},
+  {"field": "one_liner_ko", "url": "https://qdrant.tech", "quote": "Ship high performance, full-feature vector search at any scale and with any deployment model."},
+  {"field": "what_it_does_ko", "url": "https://github.com/qdrant/qdrant", "quote": "is a vector similarity search engine and vector database."},
+  {"field": "what_it_does_ko", "url": "https://github.com/qdrant/qdrant", "quote": "Qdrant is tailored for extended filtering support, making it useful for all sorts of neural-network or semantic-based matching, faceted search, and other applications."},
+  {"field": "what_it_does_ko", "url": "https://qdrant.tech", "quote": "Open-source DNA with enterprise-grade security and flexibility — run on-prem, hybrid, edge, or move seamlessly to Qdrant Cloud."},
+  {"field": "key_features", "url": "https://qdrant.tech", "quote": "Store metadata in JSON and use advanced filters, such as nested , text , geo , has_vector , and more."},
+  {"field": "key_features", "url": "https://qdrant.tech", "quote": "Supports BM25, SPLADE++, and miniCOIL."},
+  {"field": "key_features", "url": "https://qdrant.tech", "quote": "Filters are applied during HNSW traversal — no pre- or post-filtering."},
+  {"field": "key_features", "url": "https://qdrant.tech", "quote": "Reduce memory usage by up to 64x while maintaining search quality with advanced quantization techniques."},
+  {"field": "key_features", "url": "https://qdrant.tech", "quote": "all via REST, gRPC, or official clients (Python, JavaScript, etc.)."},
+  {"field": "key_features", "url": "https://qdrant.tech", "quote": "Built-In Web UI & Visualizations"},
+  {"field": "key_features", "url": "https://qdrant.tech", "quote": "with multiple vectors per object"},
+  {"field": "use_cases_ko", "url": "https://qdrant.tech", "quote": "RAG & GenAI\nAI Agents\nSemantic Search\nRecommendation Systems\nData Analysis & Anomaly Detection"},
+  {"field": "pricing", "url": "https://qdrant.tech/pricing/", "quote": "0.5 vCPU / 1GB RAM/ 4 GB Disk."},
+  {"field": "pricing", "url": "https://qdrant.tech/pricing/", "quote": "Standard Tier\n Usage-based pricing"},
+  {"field": "pricing", "url": "https://qdrant.tech/pricing/", "quote": "Premium Tier\n Minimum spend required"},
+  {"field": "pricing", "url": "https://qdrant.tech/pricing/", "quote": "Usage is billed hourly, and you can monitor it through the Qdrant Cloud dashboard."},
+  {"field": "open_source", "url": "https://github.com/qdrant/qdrant", "quote": "alt=\"Apache 2.0 License\""},
+  {"field": "api", "url": "https://github.com/qdrant/qdrant", "quote": "It provides a production-ready service with a convenient API to store, search, and manage points"},
+  {"field": "platforms", "url": "https://qdrant.tech/pricing/", "quote": "API, Terraform, Pulumi, CLI"},
+  {"field": "korean_support", "url": "https://qdrant.tech", "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

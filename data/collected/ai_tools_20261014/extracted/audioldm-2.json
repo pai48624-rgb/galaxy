@@ -1,0 +1,76 @@
+{
+ "company": "University of Surrey(CVSSP)·ByteDance(SAMI)",
+ "one_liner_ko": "AudioLDM 2는 음성·음악·효과음을 같은 방식으로 생성하는 잠재 확산 기반 오디오 생성 모델이다.",
+ "what_it_does_ko": "AudioLDM 2는 음성, 음악, 효과음 생성을 하나의 학습 방식으로 다루는 프레임워크다. 오디오를 'language of audio(LOA)'라는 공통 표현으로 바꾸고, GPT-2로 다른 모달리티를 LOA로 옮긴 뒤 잠재 확산 모델로 오디오를 만든다. 텍스트-오디오·텍스트-음악에서 SOTA, 텍스트-음성에서 경쟁력 있는 성능을 냈다고 밝힌다. GitHub 코드로 명령줄이나 Gradio 웹앱에서 실행할 수 있다.",
+ "key_features": [
+  "텍스트-오디오(효과음) 생성",
+  "텍스트-음악 생성",
+  "텍스트-음성 생성",
+  "초해상도·인페인팅",
+  "48kHz 고음질 체크포인트",
+  "명령줄(audioldm2) 실행",
+  "Gradio 웹앱",
+  "Diffusers 라이브러리 연동"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "CLI"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://audioldm.github.io/audioldm2/",
+   "quote": "1 CVSSP, University of Surrey, Guildford, UK"
+  },
+  {
+   "field": "company",
+   "url": "https://audioldm.github.io/audioldm2/",
+   "quote": "2 Speech, Audio & Music Intelligence (SAMI), ByteDance"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://audioldm.github.io/audioldm2/",
+   "quote": "this paper proposes a framework that utilizes the same learning method for speech, music, and sound effect generation."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://audioldm.github.io/audioldm2/",
+   "quote": "AudioLDM 2 achieves state-of-the-art performance in text-to-audio and text-to-music generation, while also delivering competitive results in text-to-speech generation"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/haoheliu/AudioLDM2",
+   "quote": "This repo currently support Text-to-Audio (including Music), Text-to-Speech Generation and Super Resolution Inpainting."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/haoheliu/AudioLDM2",
+   "quote": "**48kHz AudioLDM model**: Now we support high-fidelity audio generation!"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/haoheliu/AudioLDM2",
+   "quote": "Start the web application (powered by Gradio)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/haoheliu/AudioLDM2",
+   "quote": "Integration with the Diffusers library"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/haoheliu/AudioLDM2",
+   "quote": "Generate sound effect or Music based on a text prompt"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

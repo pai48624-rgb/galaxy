@@ -1,0 +1,63 @@
+{
+ "company": "Google DeepMind",
+ "one_liner_ko": "적은 예시만으로 여러 멀티모달 작업을 푸는 단일 시각 언어 모델(VLM).",
+ "what_it_does_ko": "Flamingo는 DeepMind가 2022년 4월 논문 사전공개본으로 소개한 단일 시각 언어 모델로, 이미지·동영상·텍스트가 섞인 프롬프트를 입력받아 언어로 답을 출력한다. 작업별 예시 몇 개만 프롬프트에 넣으면 추가 학습 없이 새 작업을 풀 수 있는 퓨샷 학습에서 최고 성능을 냈다고 밝힌다. 연구한 16개 작업에서 작업당 예시 4개만으로 기존 퓨샷 방식을 모두 앞섰다. 따로 사전학습해 고정한 대형 언어 모델(Chinchilla 70B)과 시각 표현 사이에 새 구조를 넣어 결합했고, 최종 모델은 80B 파라미터다.",
+ "key_features": [
+  "이미지·동영상·텍스트가 섞인 프롬프트 입력, 텍스트 출력",
+  "추가 학습 없이 몇 개 예시로 새 작업 수행(퓨샷 학습)",
+  "16개 멀티모달 작업에서 기존 퓨샷 방식 능가",
+  "Chinchilla 70B 언어 모델 기반 80B 파라미터 VLM",
+  "웹에서 모은 대규모 멀티모달 데이터로 학습(머신러닝용 라벨 데이터 미사용)"
+ ],
+ "use_cases_ko": [
+  "비전문가가 새 시각 작업에 정확한 시각 언어 모델을 빠르게 적용"
+ ],
+ "pricing": {
+  "free_tier": null,
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://deepmind.google/blog/tackling-multiple-tasks-with-a-single-visual-language-model/",
+   "quote": "Tackling multiple tasks with a single visual language model — Google DeepMind"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://deepmind.google/blog/tackling-multiple-tasks-with-a-single-visual-language-model/",
+   "quote": "we introduce Flamingo, a single visual language model (VLM) that sets a new state of the art in few-shot learning on a wide range of open-ended multimodal tasks."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://deepmind.google/blog/tackling-multiple-tasks-with-a-single-visual-language-model/",
+   "quote": "taking as input a prompt consisting of interleaved images, videos, and text and then output associated language."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://deepmind.google/blog/tackling-multiple-tasks-with-a-single-visual-language-model/",
+   "quote": "to train our final Flamingo model, an 80B parameter VLM."
+  },
+  {
+   "field": "key_features",
+   "url": "https://deepmind.google/blog/tackling-multiple-tasks-with-a-single-visual-language-model/",
+   "quote": "On the 16 tasks we studied, Flamingo beats all previous few-shot learning approaches when given as few as four examples per task."
+  },
+  {
+   "field": "key_features",
+   "url": "https://deepmind.google/blog/tackling-multiple-tasks-with-a-single-visual-language-model/",
+   "quote": "Then it is trained on a mixture of complementary large-scale multimodal data coming only from the web, without using any data annotated for machine learning purposes."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://deepmind.google/blog/tackling-multiple-tasks-with-a-single-visual-language-model/",
+   "quote": "This should allow non-expert people to quickly and easily use accurate visual language models on new tasks at hand."
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

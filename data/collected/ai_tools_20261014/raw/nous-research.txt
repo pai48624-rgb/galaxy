@@ -1,0 +1,166 @@
+=== [home] https://nousresearch.com (lang=en)
+Nous Research 
+ Nous Hermes 
+ Community Portal 
+ Nous Hermes 
+ Community Portal 
+ Hermes : About Nous Toggle ⌘ K Open Source • MIT License Open Source · MIT License 
+ Nous Research Nous Research 
+ Nous Research is a pioneer in open AI training and research. We created Hermes Agent, the most widely used open source agent harness in the world.
+ We are on a mission to create and proliferate open access to intelligence.
+ Read Mission The Internet's Own AI 
+ The Internet's Own AI 
+ Open Source Leading the American Open Source Movement
+ We train models, build agents, and develop infrastructure to accelerate adoption of open intelligence globally.
+ Mission Advancing Human Rights and Freedoms
+ We believe that powerful AI should be in the hands of the many rather than the privileged few. Our aim is to create and democratize access to the world's best intelligence.
+ Research Understanding the Intelligence Frontier
+ Our primary research focus areas include agents, model architecture, data synthesis, fine-tuning, and reasoning, all aimed at advancing our understanding of models and how they can benefit humanity.
+ Elevate your soul.md
+ Hermes Agent Hermes Agent 
+ The self-improving AI agent built by Nous Research. The only agent with a built-in learning loop — creates skills from experience, The self-improving AI agent built by Nous Research. The only agent with a built-in learning loop: creates skills from experience, 
+ improves them during use, nudges itself to persist knowledge, and builds a deepening model of who you are across sessions. improves them during use, nudges itself to persist knowledge, and builds a deepening model of who you are across sessions. 
+ Learn more About hermes Install Hermes 
+ TUI TUI Terminal Velocity
+ Install via terminal Install via terminal 
+ Desktop GUI Hermes Application
+ Get Hermes Desktop Download for Mac / Windows / Linux 
+ Portal Portal Nous Portal
+ Power your Hermes Power your Hermes 
+ Announcements
+ @NousResearch An agent with swag
+ Oct 14, 2026 
+ @NousResearch Hermes Agent is yours
+ Oct 11, 2026 
+ @NousResearch Wild MISSINGNO. appeared!
+A coding and agentic reasoning model that is highly token efficient, free for a limited time on Nous Portal
+Try it out in your Hermes Agent today
+ Oct 10, 2026 
+ @NousResearch Slight Correction: Step 5 Preview's final score on Hermes Index has been updated to 32.83, slightly behind GPT-6 Luna (33.89) and GLM 5.3 Flash (34.95)
+Learn more @ portal.nousresearch.com/bench
+ Oct 9, 2026 
+ @NousResearch Step 5 Preview from @StepFun_ai is free on Nous Portal for the next week
+600B total / 27B active MoE, 1M context, with vision
+Step 5 Preview scored 33.89 on Hermes Index, the same score as GPT-6 Luna
+ Oct 9, 2026 
+ @NousResearch Hemres Agnet
+ Oct 9, 2026 
+ @NousResearch Hermes Agent is now live (and featured) in the @Microsoft Store for seamless one-click install.
+More updates for the Windows ecosystem coming soon!
+ Oct 8, 2026 
+ @NousResearch asus.com/blog/asus-proa…
+ Oct 8, 2026 
+ @NousResearch Advancing our mission to deliver ubiquitous powerful agents to everyone, Hermes Agent is on the new ASUS ProArt RTX Spark PCs: MuseTree and ComfyUI integrations plus local model support on up to 128 GB of unified memory.
+A complete creative stack that runs on your own machine. x.com/ASUS/status/21…
+ Oct 8, 2026 
+ @NousResearch 
+ Oct 8, 2026 
+ 10 announcements loaded 
+ The Internet's Own AI
+ © 2026, Nous Research, Inc.
+ Terms | Privacy 
+ MIT License · 2026
+ Nous Research Nous Research 
+ The Internet's Own AI .
+ Research
+ Nous
+ Research 
+ Releases 
+ Careers 
+ Blog 
+ Shop 
+ Contact 
+ Products
+ Hermes
+ Agent 
+ Business 
+ Enterprise 
+ Via Terminal 
+ For Mac OS 
+ For Windows 
+ For Linux 
+ In the Cloud 
+ Resources
+ Community
+ Go to Discord 
+ Go to Github 
+ Go to x.com 
+ Go to Youtube 
+ Platform
+ Portal
+ Create account 
+ Sign in 
+ Plans 
+ © 2026, Nous Research, Inc.
+ Open Source
+ MIT License
+ Terms | Privacy
+
+=== [about] https://hermes-agent.nousresearch.com/docs (lang=en)
+Hermes Agent Documentation | Hermes Agent 
+ Skip to main content 
+ Hermes Agent Docs Skills Plugins Download 
+ English English 
+ 简体中文 
+ Home GitHub Discord 
+ Search 
+ User Stories & Use Cases 
+ Browse Skills 
+ Browse Plugins 
+ Getting Started 
+ Using Hermes 
+ Features 
+ Messaging Platforms 
+ Integrations 
+ Guides & Tutorials 
+ Developer Guide 
+ Reference 
+ Hermes Agent
+ The self-improving AI agent built by Nous Research . The only agent with a built-in learning loop — it creates skills from experience, improves them during use, nudges itself to persist knowledge, and builds a deepening model of who you are across sessions.
+ Get Started →
+ Explore Bot Mode
+ Download Desktop
+ View on GitHub
+ Install ​ 
+ Windows or macOS ​ 
+ To easily install the command-line and desktop applications, download the Hermes Desktop installer from our website and run it.
+ Without Hermes Desktop: ​ 
+ For a command-line only install without Hermes Desktop, run:
+ For aarch64 Android devices, use the separate Termux APT guide .
+ Linux / macOS / WSL2 ​ 
+ curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash 
+ Windows (native) ​ 
+ Run in powershell:
+ iex (irm https://hermes-agent.nousresearch.com/install.ps1) 
+ See the full Installation Guide for what the installer does, installation ownership and data locations, and Windows-specific notes. For the complete platform support matrix, see Platform Support .
+ Fastest path to a working agent
+ After installing, run hermes setup --portal — one OAuth covers a model plus all four Tool Gateway tools (web search, image generation, TTS, browser). See Nous Portal .
+ What is Hermes Agent? ​ 
+ It's not a coding copilot tethered to an IDE or a chatbot wrapper around a single API. It's an autonomous agent that gets more capable the longer it runs. It lives wherever you put it — a $5 VPS, a GPU cluster, or serverless infrastructure (Daytona, Modal) that costs nearly nothing when idle. Talk to it from Telegram while it works on a cloud VM you never SSH into yourself. It's not tied to your laptop.
+ Quick Links ​ 
+ 🚀 Installation Install in 60 seconds on Linux, macOS, WSL2, native Windows, Nix & NixOS or Android 
+ 📖 Quickstart Tutorial Your first conversation and key features to try 
+ 🗺️ Learning Path Find the right docs for your experience level 
+ ⚙️ Configuration Config file, providers, models, and options 
+ 💬 Messaging Gateway Set up Telegram, Discord, Slack, WhatsApp, Teams, or more 
+ 🤖 Bot Mode Named Bots with their own model, memory, skills, routines, and chats 
+ 🔧 Tools & Toolsets 60+ built-in tools and how to configure them 
+ 🧠 Memory System Persistent memory that grows across sessions 
+ 📚 Skills System Procedural memory the agent creates and reuses 
+ 🔌 MCP Integration Connect to MCP servers, filter their tools, and extend Hermes safely 
+ 🧭 Use MCP with Hermes Practical MCP setup patterns, examples, and tutorials 
+ 🎙️ Voice Mode Real-time voice interaction in CLI, Telegram, Discord, and Discord VC 
+ 🗣️ Use Voice Mode with Hermes Hands-on setup and usage patterns for Hermes voice workflows 
+ 🎭 Personality & SOUL.md Define Hermes' default voice with a global SOUL.md 
+ 📄 Context Files Project context files that shape every conversation 
+ 🔒 Security Command approval, authorization, container isolation 
+ 💡 Tips & Best Practices Quick wins to get the most out of Hermes 
+ 🏗️ Architecture How it works under the hood 
+ ❓ FAQ & Troubleshooting Common questions and solutions 
+ Key Features ​ 
+ A closed learning loop — Agent-curated memory with periodic nudges, autonomous skill creation, skill self-improvement during use, FTS
+
+=== [meta] https://nousresearch.com
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음

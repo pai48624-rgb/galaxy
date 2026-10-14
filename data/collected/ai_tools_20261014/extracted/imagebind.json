@@ -1,0 +1,87 @@
+{
+ "company": "Meta",
+ "one_liner_ko": "ImageBind는 이미지·영상·오디오·텍스트·깊이·열화상·IMU 6가지 모달리티를 하나의 임베딩 공간으로 묶는 Meta AI의 모델이다.",
+ "what_it_does_ko": "ImageBind는 명시적 지도 없이 6가지 모달리티의 데이터를 하나의 임베딩 공간으로 연결하는 모델이다. 이를 통해 오디오 기반 검색, 교차 모달 검색, 모달리티 산술, 교차 모달 생성이 가능하다고 소개한다. 모달리티 간 zero-shot 인식에서 새로운 SOTA를 달성했다고 밝힌다. GitHub에서 PyTorch 구현과 사전학습 모델을 제공한다.",
+ "key_features": [
+  "6가지 모달리티 공동 임베딩",
+  "교차 모달 검색",
+  "오디오 기반 검색",
+  "모달리티 산술 조합",
+  "zero-shot·few-shot 인식",
+  "PyTorch 구현·사전학습 체크포인트 공개",
+  "웹 데모"
+ ],
+ "use_cases_ko": [
+  "연구자가 이미지·텍스트·오디오 간 특징을 추출·비교"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "CC-BY-NC 4.0",
+ "api": "불명",
+ "platforms": [
+  "웹"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://imagebind.metademolab.com/",
+   "quote": "ImageBind by Meta AI \n ImageBind\n Research by Meta AI"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://imagebind.metademolab.com/",
+   "quote": "Introducing ImageBind, the first AI model capable of binding data from six modalities at once, without the need for explicit supervision."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://imagebind.metademolab.com/",
+   "quote": "enabling audio-based search, cross-modal search, multimodal arithmetic, and cross-modal generation."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://imagebind.metademolab.com/",
+   "quote": "The open source ImageBind model achieves a new SOTA performance on emergent zero-shot recognition tasks across modalities"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/facebookresearch/ImageBind",
+   "quote": "ImageBind learns a joint embedding across six different modalities - images, text, audio, depth, thermal, and IMU data."
+  },
+  {
+   "field": "key_features",
+   "url": "https://imagebind.metademolab.com/",
+   "quote": "Enabling zero-shot and few-shot recognition"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/facebookresearch/ImageBind",
+   "quote": "PyTorch implementation and pretrained models for ImageBind."
+  },
+  {
+   "field": "key_features",
+   "url": "https://imagebind.metademolab.com/",
+   "quote": "Explore the demo to see ImageBind's capabilities across image, audio and text modalities."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/facebookresearch/ImageBind",
+   "quote": "Extract and compare features across modalities (e.g. Image, Text and Audio)."
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/facebookresearch/ImageBind",
+   "quote": "ImageBind code and model weights are released under the CC-BY-NC 4.0 license."
+  },
+  {
+   "field": "platforms",
+   "url": "https://imagebind.metademolab.com/",
+   "quote": "Explore the demo to see ImageBind"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

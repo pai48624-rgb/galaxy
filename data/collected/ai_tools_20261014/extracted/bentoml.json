@@ -1,0 +1,49 @@
+{
+ "company": "Bento (BentoML)",
+ "one_liner_ko": "어떤 모델이든 어떤 클라우드에서든 배포·확장할 수 있는 AI 추론 플랫폼과 오픈소스 모델 서빙 프레임워크.",
+ "what_it_does_ko": "BentoML은 AI 시스템을 어떤 모델·어떤 클라우드에서든 배포하고 확장하는 통합 추론 플랫폼이다. 오픈소스 BentoML은 모델 추론 스크립트를 몇 줄의 코드로 REST API 서버로 만들고 Docker 이미지를 자동 생성하는 파이썬 라이브러리다. 상용 Bento Inference Platform은 배포 자동화·관측·접근 제어·자동 확장·콜드 스타트 가속 등을 제공하며, 자체 클라우드(BYOC)·온프레미스·Kubernetes 또는 Bento Cloud의 GPU에서 실행할 수 있다.",
+ "key_features": [
+  "오픈 모델 카탈로그(Llama 4·DeepSeek·Qwen·GPT-OSS·Flux 등) 몇 번 클릭으로 배포",
+  "모든 아키텍처·프레임워크 커스텀 모델 서빙(vLLM·TRT-LLM·SGLang·PyTorch 등)",
+  "트래픽 기반 자동 확장·제로 스케일·빠른 콜드 스타트",
+  "자체 클라우드(BYOC)·온프레미스·Kubernetes·Bento Cloud 배포",
+  "LLM Gateway: 모든 LLM 제공자용 통합 API",
+  "카나리·섀도·A/B 테스트와 롤백 버전 관리",
+  "동적 배칭·모델 병렬화·멀티모델 파이프라인",
+  "Docker 이미지 자동 생성"
+ ],
+ "use_cases_ko": [
+  "챗봇·추천 등 1초 미만 지연이 필요한 AI 기능 서빙",
+  "대규모 배치 추론",
+  "오픈소스 LLM으로 OpenAI 호환 엔드포인트·RAG 시스템 배포"
+ ],
+ "pricing": {"free_tier": "불명", "plans": [], "pricing_url": null},
+ "open_source": "Apache-2.0",
+ "api": "있음",
+ "platforms": ["웹", "CLI", "API"],
+ "korean_support": "불명",
+ "evidence": [
+  {"field": "company", "url": "https://bentoml.com", "quote": "Bento: Run Inference at Scale"},
+  {"field": "one_liner_ko", "url": "https://docs.bentoml.com/en/latest/", "quote": "BentoML is a Unified Inference Platform for deploying and scaling AI systems with any model, on any cloud."},
+  {"field": "what_it_does_ko", "url": "https://github.com/bentoml/BentoML", "quote": "BentoML is a Python library for building online serving systems optimized for AI apps and model inference."},
+  {"field": "what_it_does_ko", "url": "https://github.com/bentoml/BentoML", "quote": "Turn any model inference script into a REST API server with just a few lines of code and standard Python type hints."},
+  {"field": "what_it_does_ko", "url": "https://bentoml.com", "quote": "A complete platform for managing, monitoring, and optimizing Al model inference."},
+  {"field": "key_features", "url": "https://bentoml.com", "quote": "Deploy popular open-source models with a few clicks."},
+  {"field": "key_features", "url": "https://bentoml.com", "quote": "Deploy models of any architecture, framework, or modality with full customization."},
+  {"field": "key_features", "url": "https://bentoml.com", "quote": "Cold-start acceleration"},
+  {"field": "key_features", "url": "https://bentoml.com", "quote": "Scaling-to-zero"},
+  {"field": "key_features", "url": "https://bentoml.com", "quote": "Bring Your Own Cloud"},
+  {"field": "key_features", "url": "https://bentoml.com", "quote": "One unified API for all LLMs, giving you centralized cost control and optimization"},
+  {"field": "key_features", "url": "https://bentoml.com", "quote": "Version control with rollbacks, plus canary, shadow, and A/B testing for faster, safer releases"},
+  {"field": "key_features", "url": "https://github.com/bentoml/BentoML", "quote": "dynamic batching, model parallelism, multi-stage pipeline and multi-model inference-graph orchestration"},
+  {"field": "key_features", "url": "https://github.com/bentoml/BentoML", "quote": "BentoML automatically generates Docker images"},
+  {"field": "use_cases_ko", "url": "https://bentoml.com", "quote": "For chatbots, recommendations, and other sub-second latency AI features."},
+  {"field": "use_cases_ko", "url": "https://bentoml.com", "quote": "Batch and process large datasets while minimizing compute overhead."},
+  {"field": "use_cases_ko", "url": "https://docs.bentoml.com/en/latest/", "quote": "Serve large language models with OpenAI-compatible APIs and vLLM inference backend."},
+  {"field": "open_source", "url": "https://github.com/bentoml/BentoML", "quote": "[![License: Apache-2.0]"},
+  {"field": "api", "url": "https://docs.bentoml.com/en/latest/", "quote": "BentoCloud API"},
+  {"field": "platforms", "url": "https://docs.bentoml.com/en/latest/", "quote": "BentoCloud CLI"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

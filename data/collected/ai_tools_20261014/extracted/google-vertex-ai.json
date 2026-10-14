@@ -1,0 +1,152 @@
+{
+ "company": "Google Cloud",
+ "one_liner_ko": "엔터프라이즈용 AI 에이전트를 빌드·확장·제어·최적화하는 Google Cloud 플랫폼(Gemini Enterprise Agent Platform, 이전 명칭 Vertex AI).",
+ "what_it_does_ko": "Vertex AI는 이제 Gemini Enterprise Agent Platform이라는 이름으로 바뀌었고, Vertex AI의 모든 기능을 이 플랫폼에서 쓸 수 있다. 개발자가 엔터프라이즈 데이터에 기반한 에이전트를 빌드·확장·제어·최적화하는 Google Cloud의 종합 플랫폼이다. Model Garden에서 Gemini, Anthropic Claude 같은 서드 파티 모델, Gemma 같은 개방형 모델 등 200개 이상의 모델·도구를 고르고 조정할 수 있다. 데이터 과학자를 위해 노트북(Colab Enterprise·Workbench), 커스텀 학습·예측, MLOps 도구도 제공한다.",
+ "key_features": [
+  "Model Garden: 200개 이상의 Google·서드 파티·개방형 모델과 도구",
+  "Agent Studio: Gemini 프롬프트 설계·테스트·관리",
+  "에이전트 개발 키트(ADK)로 에이전트 빌드·미세 조정",
+  "Google Antigravity로 여러 에이전트 조종·조정",
+  "BigQuery와 통합된 Colab Enterprise·Workbench 노트북",
+  "커스텀 학습과 일괄·온라인 예측",
+  "MLOps: 모델 평가·Pipelines·Model Registry·Feature Store·드리프트 모니터링"
+ ],
+ "use_cases_ko": [
+  "기업 애플리케이션·워크플로를 에이전트 시스템으로 전환",
+  "생성형 AI로 요약·분류·추출",
+  "커스텀 ML 모델 학습과 프로덕션 예측 배포"
+ ],
+ "pricing": {
+  "free_tier": "있음 (신규 고객 최대 $300 무료 크레딧, 20개 이상 제품 월 한도 내 무료)",
+  "plans": [
+   {
+    "name": "신규 고객 무료 크레딧",
+    "price": 300,
+    "currency": "USD",
+    "period": "one-time",
+    "limits": "Agent Platform 및 기타 Google Cloud 제품에 사용",
+    "page_lang": "ko"
+   },
+   {
+    "name": "사용한 만큼 지불",
+    "price": null,
+    "currency": null,
+    "period": "usage",
+    "limits": "선불·해지 수수료 없음, 제품·사용량별 상이",
+    "page_lang": "ko"
+   }
+  ],
+  "pricing_url": "https://cloud.google.com/pricing"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "API"
+ ],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://cloud.google.com/products/gemini-enterprise-agent-platform",
+   "quote": "Gemini Enterprise Agent Platform(이전 명칭: Vertex AI) | Google Cloud"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://cloud.google.com/products/gemini-enterprise-agent-platform",
+   "quote": "엔터프라이즈용 에이전트 혁신, 빌드, 배포"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://cloud.google.com/products/gemini-enterprise-agent-platform",
+   "quote": "익숙하게 즐겨 사용하는 Vertex AI의 모든 기능을 이제 Gemini Enterprise Agent Platform에서 사용할 수 있습니다."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://cloud.google.com/products/gemini-enterprise-agent-platform",
+   "quote": "Gemini Enterprise Agent Platform은 개발자가 에이전트를 빌드, 확장, 제어, 최적화할 수 있는 Google Cloud의 포괄적인 플랫폼입니다."
+  },
+  {
+   "field": "key_features",
+   "url": "https://cloud.google.com/products/gemini-enterprise-agent-platform",
+   "quote": "200개 이상의 Google 및 서드 파티 AI 모델과 도구"
+  },
+  {
+   "field": "key_features",
+   "url": "https://cloud.google.com/products/gemini-enterprise-agent-platform",
+   "quote": "Agent Studio를 사용하면 자연어, 코드, 이미지 또는 동영상을 사용해 Gemini 모델의 프롬프트를 설계, 테스트, 관리할 수 있습니다."
+  },
+  {
+   "field": "key_features",
+   "url": "https://cloud.google.com/products/gemini-enterprise-agent-platform",
+   "quote": "에이전트 개발 키트(ADK) 와 같은 프레임워크를 사용하여 정교한 에이전트를 빌드, 맞춤설정, 미세 조정 할 수 있는"
+  },
+  {
+   "field": "key_features",
+   "url": "https://cloud.google.com/products/gemini-enterprise-agent-platform",
+   "quote": "Google Antigravity는 에이전트를 조종, 맞춤설정, 조정할 수 있는 중앙 집중식 앱을 제공합니다."
+  },
+  {
+   "field": "key_features",
+   "url": "https://cloud.google.com/products/gemini-enterprise-agent-platform",
+   "quote": "원하는 Colab Enterprise 또는 Workbench를 포함한 Agent Platform 노트북 은 기본적으로 BigQuery 와 통합되어"
+  },
+  {
+   "field": "key_features",
+   "url": "https://cloud.google.com/products/gemini-enterprise-agent-platform",
+   "quote": "Agent Platform Prediction 서비스를 사용하여 일괄 및 온라인 예측을 수행하세요."
+  },
+  {
+   "field": "key_features",
+   "url": "https://cloud.google.com/products/gemini-enterprise-agent-platform",
+   "quote": "Pipelines 로 워크플로를 조정하며, Model Registry 로 모든 모델을 관리하고, Feature Store 를 통해 ML 특성을 서빙, 공유, 재사용하며"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://cloud.google.com/products/gemini-enterprise-agent-platform",
+   "quote": "기술팀이 엔터프라이즈 애플리케이션과 워크플로를 강력한 에이전트 시스템으로 혁신할 수 있는 에이전트를 빌드할 수 있는 단일 목적지입니다."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://cloud.google.com/products/gemini-enterprise-agent-platform",
+   "quote": "가장 일반적인 작업으로는 분류, 요약, 추출이 있습니다."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://cloud.google.com/products/gemini-enterprise-agent-platform",
+   "quote": "Agent Platform 및 Python SDK 를 사용하여 모델 학습"
+  },
+  {
+   "field": "pricing",
+   "url": "https://cloud.google.com/products/gemini-enterprise-agent-platform",
+   "quote": "신규 고객에게는 최대 $300의 무료 크레딧이 제공 되어 Agent Platform 및 기타 Google Cloud 제품을 사용해 볼 수 있습니다."
+  },
+  {
+   "field": "pricing",
+   "url": "https://cloud.google.com/pricing",
+   "quote": "모든 고객이 월간 사용량 한도까지 20개 이상의 제품을 무료 로"
+  },
+  {
+   "field": "pricing",
+   "url": "https://cloud.google.com/pricing",
+   "quote": "선불 비용은 없으며, 해지 수수료가 부과되지 않습니다. 가격은 제품 및 사용량에 따라 다릅니다"
+  },
+  {
+   "field": "api",
+   "url": "https://cloud.google.com/products/gemini-enterprise-agent-platform",
+   "quote": "Agent Platform의 Gemini API를 통해 Gemini 모델에 액세스"
+  },
+  {
+   "field": "platforms",
+   "url": "https://cloud.google.com/products/gemini-enterprise-agent-platform",
+   "quote": "Python, JavaScript, Java, Go, Curl용 코드 샘플 보기"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://cloud.google.com/products/gemini-enterprise-agent-platform",
+   "quote": "화면에 보이는 언어 이름: 한국어, English, 日本語"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

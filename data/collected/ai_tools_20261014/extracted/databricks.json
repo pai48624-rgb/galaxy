@@ -1,0 +1,273 @@
+{
+ "company": "Databricks",
+ "one_liner_ko": "분석·운영 워크로드를 하나의 개방형·통제된 기반에서 돌리는 통합 데이터·AI 플랫폼.",
+ "what_it_does_ko": "Databricks는 데이터, 분석, AI를 하나로 묶은 통합 플랫폼으로 BI·AI 애플리케이션 구축, 데이터 스트리밍·분석, 일상 운영 처리를 데이터 복사 없이 할 수 있게 한다. 서버리스 Postgres인 Lakebase, 데이터 기반 AI 에이전트를 만드는 Agent Bricks, 자연어 분석 Genie, 통합 거버넌스 Unity Catalog, 배치·스트리밍 ETL용 Lakeflow 등을 제공한다. 요금은 선불 없이 쓴 만큼 초 단위로 내는 방식이며 약정 사용 계약 시 할인이 있다.",
+ "key_features": [
+  "레이크하우스와 통합된 서버리스 Postgres 데이터베이스 Lakebase",
+  "데이터에 기반한 프로덕션용 AI 에이전트 구축(Agent Bricks)",
+  "자연어 대시보드 생성·대화형 분석 Genie(AI/BI)",
+  "데이터·모델·대시보드·에이전트 통합 거버넌스(Unity Catalog)",
+  "배치·스트리밍 ETL 파이프라인(Lakeflow)",
+  "SQL 분석용 서버리스 데이터 웨어하우스",
+  "모델 서빙·파운데이션 모델 서빙·AI 검색 등 AI 제품군"
+ ],
+ "use_cases_ko": [
+  "데이터 레이크에서 SQL로 BI 리포트·분석·시각화",
+  "자사 데이터에 기반한 AI 에이전트·앱 구축",
+  "배치·스트리밍 데이터 파이프라인 구축·오케스트레이션"
+ ],
+ "pricing": {
+  "free_tier": "있음 (무료 체험·신용카드 불필요, 학습용 Free Edition; Genie는 무료 사용량 초과분부터 과금)",
+  "plans": [
+   {
+    "name": "Data Engineering",
+    "price": 0.15,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "부터(Starting at), DBU당",
+    "page_lang": "en-US"
+   },
+   {
+    "name": "Data Warehousing",
+    "price": 0.22,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "부터, DBU당",
+    "page_lang": "en-US"
+   },
+   {
+    "name": "Interactive workloads",
+    "price": 0.4,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "부터, DBU당",
+    "page_lang": "en-US"
+   },
+   {
+    "name": "Operational Database",
+    "price": 0.069,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "부터, CU당",
+    "page_lang": "en-US"
+   },
+   {
+    "name": "Artificial Intelligence",
+    "price": 0.07,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "부터, DBU당",
+    "page_lang": "en-US"
+   },
+   {
+    "name": "Genie",
+    "price": 0.07,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "부터, DBU당, 무료 사용량 초과분",
+    "page_lang": "en-US"
+   },
+   {
+    "name": "Committed Use Contracts",
+    "price": null,
+    "currency": null,
+    "period": null,
+    "limits": "약정 사용량에 따른 할인, 문의",
+    "page_lang": "en-US"
+   },
+   {
+    "name": "데이터 엔지니어링",
+    "price": 0.15,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "부터, DBU당",
+    "page_lang": "ko-KR"
+   },
+   {
+    "name": "데이터 웨어하우징",
+    "price": 0.22,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "부터, DBU당",
+    "page_lang": "ko-KR"
+   },
+   {
+    "name": "대화형 워크로드",
+    "price": 0.4,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "부터, DBU당",
+    "page_lang": "ko-KR"
+   },
+   {
+    "name": "운영 데이터베이스",
+    "price": 0.069,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "부터, 한국어 페이지는 DBU당으로 표기",
+    "page_lang": "ko-KR"
+   },
+   {
+    "name": "인공지능",
+    "price": 0.07,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "부터, DBU당",
+    "page_lang": "ko-KR"
+   },
+   {
+    "name": "Genie",
+    "price": 0.07,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "부터, DBU당, 무료 사용량 초과",
+    "page_lang": "ko-KR"
+   }
+  ],
+  "pricing_url": "https://www.databricks.com/product/pricing"
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.databricks.com/",
+   "quote": "Databricks: Leading Data and AI Platform for Enterprises"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.databricks.com/",
+   "quote": "Databricks is a unified data and AI platform that runs both analytical and operational workloads on one open, governed foundation."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.databricks.com/",
+   "quote": "It enables organizations to build BI and AI applications, stream and analyze data, and process daily operations with consistent security, performance, and governance"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.databricks.com/product/pricing",
+   "quote": "Databricks offers you a pay-as-you-go approach with no up-front costs. Only pay for the products you use at per second granularity."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.databricks.com/",
+   "quote": "The first serverless Postgres database integrated with the lakehouse, built for the AI era."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.databricks.com/",
+   "quote": "Build high-quality, production-ready AI agents grounded in your data."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.databricks.com/",
+   "quote": "From natural language dashboard creation to deep conversational analytics with Genie"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.databricks.com/",
+   "quote": "Maintain compliance across data, models, dashboards and agents."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.databricks.com/",
+   "quote": "Build reliable ETL pipelines for batch and streaming with Lakeflow."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.databricks.com/",
+   "quote": "Data Warehousing Serverless data warehouse for SQL analytics"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.databricks.com/product/pricing",
+   "quote": "Foundation Model Serving"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.databricks.com/product/pricing",
+   "quote": "Run SQL queries for BI reporting, analytics and visualization to get timely insights from data lakes."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.databricks.com/",
+   "quote": "Build AI agents that work in the real world"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.databricks.com/product/pricing",
+   "quote": "Orchestrate data processing, machine learning and analytics pipelines; Build streaming and batch pipelines"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.databricks.com/",
+   "quote": "Get started with Databricks for free. No credit card required."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.databricks.com/",
+   "quote": "Free Edition Learn professional Data and AI tools for free"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.databricks.com/product/pricing",
+   "quote": "Starting at $0.15 / DBU"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.databricks.com/product/pricing",
+   "quote": "Starting at $0.22 / DBU"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.databricks.com/product/pricing",
+   "quote": "Starting at $0.40 / DBU"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.databricks.com/product/pricing",
+   "quote": "Starting at $0.069 / CU"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.databricks.com/product/pricing",
+   "quote": "Starting at $0.07 / DBU beyond free usage"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.databricks.com/product/pricing",
+   "quote": "Databricks offers you opportunities to access discounts and other benefits when you commit to certain levels of usage."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.databricks.com/kr/product/pricing",
+   "quote": "Starting at $0.069 / DBU"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.databricks.com/kr/product/pricing",
+   "quote": "Starting at $0.07 / DBU 무료 사용량 초과"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.databricks.com/",
+   "quote": "hreflang: de, en, es-419, fr, it, ja, ko, pt-br, x-default"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.databricks.com/kr/product/pricing",
+   "quote": "Databricks 가격: 데이터 및 AI 솔루션을 위한 유연한 요금제"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "제품별 DBU(또는 CU) 단가 종량제(데이터 엔지니어링 $0.15/DBU부터 등) + 약정 사용 계약 할인 + 무료 체험·Free Edition",
+   "diff": "기존 분류는 '클라우드/GPU 사용량 종량제'지만 실제 과금 단위는 GPU 시간이 아니라 제품별 DBU 단가이며 약정 계약 할인 구조가 따로 있음",
+   "url": "https://www.databricks.com/product/pricing"
+  }
+ ]
+}

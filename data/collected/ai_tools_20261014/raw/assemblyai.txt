@@ -1,0 +1,492 @@
+=== [home] https://www.assemblyai.com/ (lang=en)
+AssemblyAI | AI models to transcribe and understand speech 
+New
+Voice Standard Bench: 50+ LLMs ranked on real voice tasks
+Learn more
+ x 
+ Close menu 
+ Products platform
+ Platform overview
+ Models, APIs, and infrastructure in one place. Build voice into any product, on any stack.
+ transcribe
+ Pre-recorded Speech-to-Text API Realtime Speech-to-Text API Sync Speech-to-Text API 
+ understand
+ Speech Understanding API Guardrails and Safety LLM Gateway 
+ interact
+ Voice Agent API Dictation API Text-to-Speech API coming soon 
+ inference
+ Self Hosted Voice AI Cloud 
+ use cases
+ Voice Agents AI Notetakers Call Analytics Medical Transcription Dictation Agent Assist AI Scribes 
+ languages
+ English Spanish Portuguese French German Russian Hindi Dutch Japanese Italian All 99 Languages 
+ Enterprise Customers customers
+ All customer stories
+ Top Voice AI companies are building with Assembly.
+ customers
+ All Stories Zoom Siro 
+ Developers developers
+ Documentation
+ Everything you need to integrate, build, and ship with AssemblyAI — from API reference to step-by-step guides.
+ resources
+ Documentation API Reference Cookbooks Support Changelog Status 
+ Resources Latest Release
+ Dictation API
+ The first API built for dictation. Your users speak, and it returns text that is ready to send: filler gone, self-corrections resolved, names spelled right.
+ resources
+ Blog Partners Research Benchmarks Security 
+ Playground Pricing 
+Contact us
+ Get started Log in 
+ Products Enterprise Customers Developers Resources Playground Pricing 
+Contact us
+ Log in Get started 
+Get started
+ platform
+ Platform overview
+ Models, APIs, and infrastructure in one place. Build voice into any product, on any stack.
+ transcribe
+ Pre-recorded Speech-to-Text API Realtime Speech-to-Text API Sync Speech-to-Text API 
+ understand
+ Speech Understanding API Guardrails and Safety LLM Gateway 
+ interact
+ Voice Agent API Dictation API Text-to-Speech API coming soon 
+ inference
+ Self Hosted Voice AI Cloud 
+ use cases
+ Voice Agents AI Notetakers Call Analytics Medical Transcription Dictation Agent Assist AI Scribes 
+ languages
+ English Spanish Portuguese French German Russian Hindi Dutch Japanese Italian All 99 Languages 
+ customers
+ All customer stories
+ Top Voice AI companies are building with Assembly.
+ See all stories 
+ Zoom leverages AssemblyAI to help advance its AI research and development.
+ Read the story 
+ Siro achieves a 90% reduction in customer complaints and support tickets.
+ Watch the video 
+ resources
+ Documentation API Reference Cookbooks Support Changelog Status 
+ Latest Release
+ Dictation API
+ The first API built for dictation. Your users speak, and it returns text that is ready to send: filler gone, self-corrections resolved, names spelled right.
+ Learn more 
+ resources
+ Blog Partners Research Benchmarks Security 
+ Close menu 
+ Products platform
+ Platform overview
+ Models, APIs, and infrastructure in one place. Build voice into any product, on any stack.
+ transcribe
+ Pre-recorded Speech-to-Text API Realtime Speech-to-Text API Sync Speech-to-Text API 
+ understand
+ Speech Understanding API Guardrails and Safety LLM Gateway 
+ interact
+ Voice Agent API Dictation API Text-to-Speech API coming soon 
+ inference
+ Self Hosted Voice AI Cloud 
+ use cases
+ Voice Agents AI Notetakers Call Analytics Medical Transcription Dictation Agent Assist AI Scribes 
+ languages
+ English Spanish Portuguese French German Russian Hindi Dutch Japanese Italian All 99 Languages 
+ Enterprise Customers customers
+ All customer stories
+ Top Voice AI companies are building with Assembly.
+ customers
+ All Stories Zoom Siro 
+ Developers developers
+ Documentation
+ Everything you need to integrate, build, and ship with AssemblyAI — from API reference to step-by-step guides.
+ resources
+ Documentation API Reference Cookbooks Support Changelog Status 
+ Resources Latest Release
+ Dictation API
+ The first API built for dictation. Your users speak, and it returns text that is ready to send: filler gone, self-corrections resolved, names spelled right.
+ resources
+ Blog Partners Research Benchmarks Security 
+ Playground Pricing 
+Contact us
+ Get started Log in 
+ Products Enterprise Customers Developers Resources Playground Pricing 
+Contact us
+ Log in Get started 
+Get started
+ platform
+ Platform overview
+ Models, APIs, and infrastructure in one place. Build voice into any product, on any stack.
+ transcribe
+ Pre-recorded Speech-to-Text API Realtime Speech-to-Text API Sync Speech-to-Text API 
+ understand
+ Speech Understanding API Guardrails and Safety LLM Gateway 
+ interact
+ Voice Agent API Dictation API Text-to-Speech API coming soon 
+ inference
+ Self Hosted Voice AI Cloud 
+ use cases
+ Voice Agents AI Notetakers Call Analytics Medical Transcription Dictation Agent Assist AI Scribes 
+ languages
+ English Spanish Portuguese French German Russian Hindi Dutch Japanese Italian All 99 Languages 
+ customers
+ All customer stories
+ Top Voice AI companies are building with Assembly.
+ See all stories 
+ Zoom leverages AssemblyAI to help advance its AI research and development.
+ Read the story 
+ Siro achieves a 90% reduction in customer complaints and support tickets.
+ Watch the video 
+ resources
+ Documentation API Reference Cookbooks Support Changelog Status 
+ Latest Release
+ Dictation API
+ The first API built for dictation. Your users speak, and it returns text that is ready to send: filler gone, self-corrections resolved, names spelled right.
+ Learn more 
+ resources
+ Blog Partners Research Benchmarks Security 
+ Voice AI infrastructure for builders 
+ Sign up free Contact sales 
+ Trusted by millions of developers, AssemblyAI delivers industry-leading pre-recorded and real-time speech-to-text and voice agent APIs. 
+ transcribe understand interact 
+ Pre-recorded Speech-to-Text API Realtime Speech-to-Text API Sync Speech-to-Text API 
+ Record
+ Try your own voice 
+ Universal-3.5 Pro
+ Your transcriptions will show here...
+ Code
+ import assemblyai as aai
+ from assemblyai.streaming.v3 import (
+ StreamingClient,
+ StreamingClientOptions,
+ StreamingEvents,
+ StreamingParameters,
+ TurnEvent,
+)
+ def on_turn(self, event: TurnEvent):
+ print( f"{event.transcript} ({event.end_of_turn})" )
+client = StreamingClient(
+ StreamingClientOptions(
+ api_key=API_KEY,
+ api_host= "streaming.assemblyai.com" ,
+ )
+)
+client.on(StreamingEvents.Turn, on_turn)
+client.connect(
+ StreamingParameters(
+ speech_model= "universal-3-5-pro" ,
+ sample_rate= 16000 ,
+ continuous_partials= True ,
+ )
+)
+ try :
+ client.stream(aai.extras.MicrophoneStream(sample_rate= 16000 ))
+ finally :
+ client.disconnect(terminate= True ) 
+ Copy code 
+ 36% 
+ improvement in close rate 
+ See case study 
+ “The new Universal-3.5 Pro speech model from AssemblyAI is best so far in terms of accuracy, latency, and language switching.” 
+ 80% 
+ increase in customer satisfaction 
+ “Assembly has saved us countless hours managing models, and provided exceptional accuracy.” 
+ 36% 
+ improvement in close rate 
+ See case study 
+ “The new Universal-3.5 Pro speech model from AssemblyAI is best so far in terms of accuracy, latency, and language switching.” 
+ 80% 
+ increase in customer satisfaction 
+ “Assembly has saved us countless hours managing models, and provided exceptional accuracy.” 
+ Platform Everything you need to build with Voice AI.
+ Transcribe speech with unmatched accuracy 
+ Understand context, intent, and meaning 
+ Power agentic workflows in real time 
+ Scale securely, from MVP to production 
+ Pre-recorded Speech-to-Text API
+ Get clean, customi
+
+=== [pricing] https://www.assemblyai.com/pricing/ (lang=en)
+AssemblyAI | Pricing | Production-ready AI Models 
+New
+Voice Standard Bench: 50+ LLMs ranked on real voice tasks
+Learn more
+ x 
+ Close menu 
+ Products platform
+ Platform overview
+ Models, APIs, and infrastructure in one place. Build voice into any product, on any stack.
+ transcribe
+ Pre-recorded Speech-to-Text API Realtime Speech-to-Text API Sync Speech-to-Text API 
+ understand
+ Speech Understanding API Guardrails and Safety LLM Gateway 
+ interact
+ Voice Agent API Dictation API Text-to-Speech API coming soon 
+ inference
+ Self Hosted Voice AI Cloud 
+ use cases
+ Voice Agents AI Notetakers Call Analytics Medical Transcription Dictation Agent Assist AI Scribes 
+ languages
+ English Spanish Portuguese French German Russian Hindi Dutch Japanese Italian All 99 Languages 
+ Enterprise Customers customers
+ All customer stories
+ Top Voice AI companies are building with Assembly.
+ customers
+ All Stories Zoom Siro 
+ Developers developers
+ Documentation
+ Everything you need to integrate, build, and ship with AssemblyAI — from API reference to step-by-step guides.
+ resources
+ Documentation API Reference Cookbooks Support Changelog Status 
+ Resources Latest Release
+ Dictation API
+ The first API built for dictation. Your users speak, and it returns text that is ready to send: filler gone, self-corrections resolved, names spelled right.
+ resources
+ Blog Partners Research Benchmarks Security 
+ Playground Pricing 
+Contact us
+ Get started Log in 
+ Products Enterprise Customers Developers Resources Playground Pricing 
+Contact us
+ Log in Get started 
+Get started
+ platform
+ Platform overview
+ Models, APIs, and infrastructure in one place. Build voice into any product, on any stack.
+ transcribe
+ Pre-recorded Speech-to-Text API Realtime Speech-to-Text API Sync Speech-to-Text API 
+ understand
+ Speech Understanding API Guardrails and Safety LLM Gateway 
+ interact
+ Voice Agent API Dictation API Text-to-Speech API coming soon 
+ inference
+ Self Hosted Voice AI Cloud 
+ use cases
+ Voice Agents AI Notetakers Call Analytics Medical Transcription Dictation Agent Assist AI Scribes 
+ languages
+ English Spanish Portuguese French German Russian Hindi Dutch Japanese Italian All 99 Languages 
+ customers
+ All customer stories
+ Top Voice AI companies are building with Assembly.
+ See all stories 
+ Zoom leverages AssemblyAI to help advance its AI research and development.
+ Read the story 
+ Siro achieves a 90% reduction in customer complaints and support tickets.
+ Watch the video 
+ resources
+ Documentation API Reference Cookbooks Support Changelog Status 
+ Latest Release
+ Dictation API
+ The first API built for dictation. Your users speak, and it returns text that is ready to send: filler gone, self-corrections resolved, names spelled right.
+ Learn more 
+ resources
+ Blog Partners Research Benchmarks Security 
+ Close menu 
+ Products platform
+ Platform overview
+ Models, APIs, and infrastructure in one place. Build voice into any product, on any stack.
+ transcribe
+ Pre-recorded Speech-to-Text API Realtime Speech-to-Text API Sync Speech-to-Text API 
+ understand
+ Speech Understanding API Guardrails and Safety LLM Gateway 
+ interact
+ Voice Agent API Dictation API Text-to-Speech API coming soon 
+ inference
+ Self Hosted Voice AI Cloud 
+ use cases
+ Voice Agents AI Notetakers Call Analytics Medical Transcription Dictation Agent Assist AI Scribes 
+ languages
+ English Spanish Portuguese French German Russian Hindi Dutch Japanese Italian All 99 Languages 
+ Enterprise Customers customers
+ All customer stories
+ Top Voice AI companies are building with Assembly.
+ customers
+ All Stories Zoom Siro 
+ Developers developers
+ Documentation
+ Everything you need to integrate, build, and ship with AssemblyAI — from API reference to step-by-step guides.
+ resources
+ Documentation API Reference Cookbooks Support Changelog Status 
+ Resources Latest Release
+ Dictation API
+ The first API built for dictation. Your users speak, and it returns text that is ready to send: filler gone, self-corrections resolved, names spelled right.
+ resources
+ Blog Partners Research Benchmarks Security 
+ Playground Pricing 
+Contact us
+ Get started Log in 
+ Products Enterprise Customers Developers Resources Playground Pricing 
+Contact us
+ Log in Get started 
+Get started
+ platform
+ Platform overview
+ Models, APIs, and infrastructure in one place. Build voice into any product, on any stack.
+ transcribe
+ Pre-recorded Speech-to-Text API Realtime Speech-to-Text API Sync Speech-to-Text API 
+ understand
+ Speech Understanding API Guardrails and Safety LLM Gateway 
+ interact
+ Voice Agent API Dictation API Text-to-Speech API coming soon 
+ inference
+ Self Hosted Voice AI Cloud 
+ use cases
+ Voice Agents AI Notetakers Call Analytics Medical Transcription Dictation Agent Assist AI Scribes 
+ languages
+ English Spanish Portuguese French German Russian Hindi Dutch Japanese Italian All 99 Languages 
+ customers
+ All customer stories
+ Top Voice AI companies are building with Assembly.
+ See all stories 
+ Zoom leverages AssemblyAI to help advance its AI research and development.
+ Read the story 
+ Siro achieves a 90% reduction in customer complaints and support tickets.
+ Watch the video 
+ resources
+ Documentation API Reference Cookbooks Support Changelog Status 
+ Latest Release
+ Dictation API
+ The first API built for dictation. Your users speak, and it returns text that is ready to send: filler gone, self-corrections resolved, names spelled right.
+ Learn more 
+ resources
+ Blog Partners Research Benchmarks Security 
+ Pricing built for innovation 
+ Try our API for free Contact sales 
+ Start free, pay-as-you-go after that – no commitments required. 
+ transcribe 
+ Pre-recorded Speech-to-Text API Realtime Speech-to-Text API Sync Speech-to-Text API 
+ understand 
+ Speech Understanding API Guardrails LLM Gateway 
+ build 
+ Voice Agent API Dictation API 
+ Pre-recorded Speech-to-Text API
+ Build Voice AI on the most accurate Speech-to-Text with language detection, formatting, filler words, keyterms prompting, custom spelling, word-level timestamps, and more.
+ Models Add-On Features 
+ Models Pay as you go Custom 
+ Universal-3.5 Pro 
+ The most accurate async speech-to-text model that transcribes every conversation exactly as it's heard – works across 18 languages, with native code switching and our most accurate speaker diarization yet.
+ $0.21 /hr Get custom rate limits, enhanced concurrency, and enterprise-grade flexibility tailored to your AI workloads.
+ Contact us 
+ Universal-2 
+ Our highly accurate speech-to-text model trained on over 12.5 million hours of audio data. Supports 99 languages. Exceptional accur
+
+=== [about] https://www.assemblyai.com/docs/ (lang=en)
+AssemblyAI Documentation 
+ Documentation Index
+ Fetch the complete documentation index at: /docs/llms.txt 
+ Use this file to discover all available pages before exploring further.
+ Skip to main content 
+ New Universal-3.5 Pro is here. Learn more: Async · Realtime 
+ AssemblyAI home page 
+ Search...
+ ⌘ K Ask Assistant ⌘ I 
+ Playground 
+ Changelog 
+ Sign In 
+ Sign In 
+ Search... 
+ Navigation 
+ Getting started 
+ AssemblyAI Documentation
+ Overview 
+ Pre-recorded STT 
+ Real-time STT 
+ Sync STT 
+ Dictation API 
+ Voice Agent API 
+ Speech Understanding 
+ Guardrails 
+ LLM Gateway 
+ FAQ 
+ Getting started 
+ Overview 
+ Build with SDKs 
+ Build with AI agents 
+ Build with integrations 
+ Build & Evaluate 
+ Models 
+ Evaluate model accuracy 
+ End-to-end examples 
+ Administration 
+ Account Management 
+ Single Sign-On 
+ Billing and Pricing 
+ Trust & security 
+ Trust center 
+ Security overview 
+ Data Controls 
+ Data retention and model training 
+ On this page 
+ Choose how you build 
+ Getting started
+ AssemblyAI Documentation
+ Copy page Copy page 
+ Build with our Voice AI Infrastructure
+ Copy page Copy page 
+ AssemblyAI provides Voice AI infrastructure: pre-recorded speech-to-text, streaming speech-to-text, synchronous speech-to-text, voice agent orchestration, speech understanding, guardrails and LLM access. 
+ This breaks down into a few core APIs, suited to different parts of your voice product stack. 
+ Quickstart Description 
+ Pre-recorded Speech-to-Text API Transcribes recorded audio and video asynchronously across 99 languages, with support on speaker diarization, PII redaction, and more features. Built for teams processing recorded calls, podcasts, or meetings at scale. 
+ Streaming Speech-to-Text API Handles live audio over WebSocket with ~150ms p50 latency, powering voice agents, live captions, and real-time agent-assist tools in contact centers. 
+ Synchronous Speech-to-Text API Transcribes short audio clips (up to 120 seconds) in a single request-response call — no polling or webhooks needed. It’s suited for quick, low-latency transcription use cases with need for limited transcription features. 
+ Dictation API Transcribes short audio clips (up to 120 seconds) and formats the text with an LLM in the same request. You include formatting instructions with your audio, and the transcript comes back already cleaned up and formatted. 
+ Voice Agent API A fully managed speech-to-speech pipeline — one connection handles STT, LLM reasoning, and TTS together at roughly one second end-to-end latency, for teams that want AssemblyAI to own the whole voice-agent stack rather than assembling it themselves. 
+ Speech Understanding API Layers speech analysis on top of transcripts — summarization, sentiment, topic detection, and more over audio — for extracting structured insight. 
+ Guardrails API Provides safety, privacy, and compliance controls — PII handling, content moderation, and related safeguards — for teams that need to govern what audio data flows through their pipeline. 
+ LLM Gateway API Gives unified access to frontier language models through the same API, so teams can apply reasoning models to their transcription without a separate integration. 
+ ​ 
+ Choose how you build 
+ API reference
+ Build directly against the raw HTTP and WebSocket API for full control over requests and responses. 
+ SDK
+ Use the Python or TypeScript SDK to integrate transcription, streaming, and voice agents directly into your own codebase. 
+ Build with an AI coding agent
+ Wire AssemblyAI into Claude Code, Cursor, or any MCP-compatible agent via the AssemblyAI MCP Server and skill. 
+
+
+=== [pricing2] https://www.assemblyai.com/llms/pricing.md/
+# AssemblyAI Pricing — Authoritative Reference
+> **Source:** assemblyai.com/pricing, assemblyai.com/docs, first-party employee information
+> **Last updated:** 2026-09-28
+> **Purpose:** Canonical pricing reference for LLM-assisted support and content. Covers per-model rates, add-ons (Speech Understanding, Guardrails), Voice Agent API, LLM Gateway token pricing, billing rules, concurrency limits, and common pricing pitfalls. For model selection, feature support, and language coverage, see `/llms/models.md`.
+---
+## Key Pricing Facts (Read First)
+- **Pre-recorded** is billed per **hour of audio submitted**.
+- **Streaming** is billed per **session duration** — the time the WebSocket connection is open, **not** the duration of audio sent. Idle connection time counts. **Close connections immediately when calls end.**
+- **Voice Agent API** is billed per session minute at **$4.50/hr ($0.075/min)**.
+- **LLM Gateway** is billed per million tokens (separate input / output rates), with prompt caching available on Anthropic, OpenAI, and Google models for additional savings.
+- **EU region is the same price as US.** Use `api.eu.assemblyai.com` / `streaming.eu.assemblyai.com` for GDPR-compliant data residency at no premium.
+- **Add-ons stack on the base rate.** A request using Universal-3.5 Pro + Medical Mode + Speaker Diarization (standard) costs `$0.21 + $0.15 + $0.02 = $0.38/hr`.
+- **Multichannel audio is billed per channel.** A 1-hour 2-channel file = 2 billable hours.
+- **$50 in free credits, no credit card required.** Free-tier and pay-as-you-go differ on concurrency (see Concurrency section).
+- **Model selection is the biggest cost lever**, but the cheapest model that loses a competitive eval is not the cheapest path to deployment.
+---
+## Pre-Recorded (Async) Rate Card
+| Model | API value | Price |
+|---|---|---|
+| Universal-3.5 Pro | `universal-3-5-pro` | **$0.21/hr** |
+| Universal-2 | `universal-2` | **$0.15/hr** |
+| SLAM-1 (deprecated) | `slam-1` | — (do not use; migrate to `universal-3-5-pro`) |
+Legacy values `best` and `nano` are deprecated and route to `universal-3-5-pro` and `universal-2` respectively. Do not rely on default model selection — defaults can differ between free-tier and paid accounts.
+---
+## Streaming (Real-Time) Rate Card
+| Model | API value (v3) | Price |
+|---|---|---|
+| Universal-3.6 Pro Realtime | `universal-3-6-pro` | **$0.45/hr** base |
+| Universal-Streaming English | `universal-streaming-english` | **$0.15/hr** |
+| Universal-Streaming Multilingual | `universal-streaming-multilingual` | **$0.15/hr** |
+> **Streaming billing reminder:** session duration, not audio duration. A WebSocket open for 60 minutes with 30 minutes of audio sent is billed for 60 minutes.
+> **Streaming endpoint:** `wss://streaming.assemblyai.com/v3/ws`. The old v2 endpoint (`wss://api.assemblyai.com/v2/realtime/ws`) is inactive.
+---
+## Voice Agent API Rate Card
+**Launched:** April 2026 (formerly Speech-to-Speech API)
+**Docs:** https://www.assemblyai.com/docs/voice-agents/voice-agent-api
+**WebSocket endpoint:** `wss://agents.assemblyai.com/v1/ws`
+**Architecture:** Cascaded STT (`universal-3-6-pro`) + LLM (LLM Gateway) + TTS over self-hosted LiveKit, in a single WebSocket. PCI-certified.
+| Product | Price |
+|---|---|
+| Voice Agent API | **$4.50/hr** ($0.075/min) |
+Voice Agent API pricing is all-inclusive of STT, LLM reasoning, TTS, turn detection, interruption handling, and tool calling — billed at a single per-minute rate. There is no separate add-on cost for the underlying components when used through the Voice Agent API.
+Twilio SIP integration comi
+
+=== [meta] https://www.assemblyai.com/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: English

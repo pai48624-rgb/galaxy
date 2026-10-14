@@ -1,0 +1,97 @@
+{
+ "company": "NVIDIA",
+ "one_liner_ko": "트랜스포머 모델을 대규모로 학습하기 위한 GPU 최적화 라이브러리.",
+ "what_it_does_ko": "이 저장소는 Megatron-LM과 Megatron Core 두 부분으로 이뤄진다. Megatron-LM은 Megatron Core에 미리 구성된 학습 스크립트를 더한 참고 예제로 연구팀·분산 학습 학습용·빠른 실험에 맞다. Megatron Core는 트랜스포머 구성 요소, 고급 병렬화(TP·PP·DP·EP·CP), 혼합 정밀도(FP16·BF16·FP8·FP4)를 제공하는 조합형 라이브러리다. Megatron Bridge로 Hugging Face와 체크포인트를 양방향 변환할 수 있고 PyPI(megatron-core)로 설치한다.",
+ "key_features": [
+  "TP·PP·DP·EP·CP 고급 병렬화 전략",
+  "FP16·BF16·FP8·FP4 혼합 정밀도",
+  "미리 구성된 학습 스크립트(Megatron-LM)",
+  "Hugging Face ↔ Megatron 체크포인트 양방향 변환(Megatron Bridge)",
+  "MoE 모델 대규모 학습 최적화",
+  "Muon 등 새 옵티마이저 지원",
+  "PyPI 설치(megatron-core)"
+ ],
+ "use_cases_ko": [
+  "연구팀의 분산 학습 실험",
+  "프레임워크 개발자·ML 엔지니어의 맞춤 학습 파이프라인 구축"
+ ],
+ "pricing": {
+  "free_tier": "불명 (가격 표기 없음)",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "Apache",
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://github.com/NVIDIA/Megatron-LM",
+   "quote": "git clone https://github.com/NVIDIA/Megatron-LM.git"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/NVIDIA/Megatron-LM",
+   "quote": "GPU-optimized library for training transformer models at scale"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/NVIDIA/Megatron-LM",
+   "quote": "is a reference example that includes Megatron Core plus pre-configured training scripts, ideal for research teams, learning distributed training, and quick experimentation."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/NVIDIA/Megatron-LM",
+   "quote": "is a composable library with GPU-optimized building blocks for custom training frameworks."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/NVIDIA/Megatron-LM",
+   "quote": "advanced parallelism strategies (TP, PP, DP, EP, and CP)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/NVIDIA/Megatron-LM",
+   "quote": "mixed precision support (FP16, BF16, FP8, and FP4)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/NVIDIA/Megatron-LM",
+   "quote": "provides bidirectional Hugging Face ↔ Megatron checkpoint conversion with production-ready recipes."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/NVIDIA/Megatron-LM",
+   "quote": "Scalable Training of Mixture-of-Experts Models with Megatron Core"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/NVIDIA/Megatron-LM",
+   "quote": "Muon and other emerging optimizers are now supported in Megatron Core"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/NVIDIA/Megatron-LM",
+   "quote": "uv pip install megatron-core"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/NVIDIA/Megatron-LM",
+   "quote": "ideal for framework developers and ML engineers building custom training pipelines."
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/NVIDIA/Megatron-LM",
+   "quote": "[![license](https://img.shields.io/badge/license-Apache-blue)](./LICENSE)"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "Apache 라이선스 오픈소스 학습 라이브러리, PyPI·소스로 설치, 요금 표기 없음",
+   "diff": "기존 '사용량 기반 종량제(클라우드/GPU)'와 반대로 자체 설치형 오픈소스 라이브러리",
+   "url": "https://github.com/NVIDIA/Megatron-LM"
+  }
+ ],
+ "plan_change": []
+}

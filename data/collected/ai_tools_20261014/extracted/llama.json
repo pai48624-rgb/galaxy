@@ -1,0 +1,48 @@
+{
+ "company": "Meta",
+ "one_liner_ko": "개인·창작자·연구자·모든 규모의 기업이 쓸 수 있도록 가중치를 공개한 Meta의 대형 언어 모델 Llama(현재 공식 개발자 사이트는 Muse 모델 중심).",
+ "what_it_does_ko": "Llama 2 저장소는 70억~700억 파라미터의 사전학습·미세조정 Llama 언어 모델 가중치와 시작 코드를 공개했으며, 라이선스에 동의하면 Meta 웹사이트나 Hugging Face에서 받을 수 있다. 이 저장소는 Llama 3.1 출시와 함께 폐기(deprecated)되었고 llama-models·PurpleLlama·llama-toolchain 등 여러 저장소로 나뉘었다. Llama 공식 주소가 연결되는 Meta 개발자 사이트(dev.meta.ai)는 현재 Muse Wonder·Muse Spark 등 Muse 모델과 Meta Model API, 터미널용 코딩 에이전트 Muse Code를 중심으로 소개하며 Llama는 문서·GitHub 링크로만 남아 있다.",
+ "key_features": [
+  "Llama 2 모델 가중치·시작 코드 공개(7B~70B)",
+  "Meta 웹사이트·Hugging Face에서 라이선스 동의 후 다운로드",
+  "Llama Stack 관련 저장소(llama-models, PurpleLlama, llama-toolchain 등)",
+  "Meta Model API(Muse 모델 추론 플랫폼, OpenAI SDK 호환)",
+  "Muse Code: 터미널용 멀티 에이전트 코딩 도구",
+  "오픈 가중치 모델 Muse Glimmer(Hugging Face 공개)"
+ ],
+ "use_cases_ko": [
+  "개인·창작자·연구자·기업이 LLM으로 실험하고 아이디어 확장",
+  "개발자가 Meta Model API로 자체 앱·에이전트 구축"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["API", "CLI", "맥", "윈도"],
+ "korean_support": "불명",
+ "evidence": [
+  {"field": "company", "url": "https://dev.meta.ai/", "quote": "Products & Solutions for AI Developers | Meta"},
+  {"field": "one_liner_ko", "url": "https://github.com/meta-llama/llama", "quote": "Llama 2 is now accessible to individuals, creators, researchers, and businesses of all sizes so that they can experiment, innovate, and scale their ideas responsibly."},
+  {"field": "one_liner_ko", "url": "https://dev.meta.ai/", "quote": "Your next build starts with Muse."},
+  {"field": "what_it_does_ko", "url": "https://github.com/meta-llama/llama", "quote": "This release includes model weights and starting code for pre-trained and fine-tuned Llama language models — ranging from 7B to 70B parameters."},
+  {"field": "what_it_does_ko", "url": "https://github.com/meta-llama/llama", "quote": "As part of the Llama 3.1 release, we’ve consolidated GitHub repos and added some additional repos"},
+  {"field": "what_it_does_ko", "url": "https://dev.meta.ai/docs/overview", "quote": "Meta Model API is the inference platform for the latest models from Meta including Muse Wonder and Muse Spark, and Muse Code is a coding agent built for Muse Spark."},
+  {"field": "key_features", "url": "https://github.com/meta-llama/llama", "quote": "We are also providing downloads on [Hugging Face](https://huggingface.co/meta-llama). You can request access to the models by acknowledging the license"},
+  {"field": "key_features", "url": "https://github.com/meta-llama/llama", "quote": "Central repo for the foundation models including basic utilities, model cards, license and use policies"},
+  {"field": "key_features", "url": "https://dev.meta.ai/", "quote": "Point your existing OpenAI SDK compatible client at Meta Model API."},
+  {"field": "key_features", "url": "https://dev.meta.ai/", "quote": "Multi-agent coding in your terminal."},
+  {"field": "key_features", "url": "https://dev.meta.ai/", "quote": "Built to enable always-on, local agents, available on Hugging Face."},
+  {"field": "use_cases_ko", "url": "https://github.com/meta-llama/llama", "quote": "Llama 2 is now accessible to individuals, creators, researchers, and businesses of all sizes"},
+  {"field": "use_cases_ko", "url": "https://dev.meta.ai/docs/overview", "quote": "Call the API to build your own app or agent, or run Muse Code for a ready-made agent in your terminal"},
+  {"field": "api", "url": "https://dev.meta.ai/", "quote": "Meta Model API Direct, self-serve and affordable access to Muse models."},
+  {"field": "platforms", "url": "https://dev.meta.ai/", "quote": "Mac Windows ← → to navigate"},
+  {"field": "platforms", "url": "https://dev.meta.ai/", "quote": "curl -fsSL https://dev.meta.ai/install.sh | bash"}
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {"official": "Llama 공식 주소가 Meta 개발자 사이트(dev.meta.ai)로 연결되며, 이 사이트는 Muse 모델 유료 API(Meta Model API)와 Muse Code 구독을 중심으로 소개함. Llama GitHub 저장소(Llama 2)는 폐기 표시", "diff": "기존 분류는 '오픈소스(무료, 라이선스 조건부)'이나 공식 사이트의 주력은 Llama가 아닌 Muse 모델 API·구독으로 바뀜. 가격 수치는 받은 본문에 없음", "url": "https://dev.meta.ai/"}
+ ]
+}

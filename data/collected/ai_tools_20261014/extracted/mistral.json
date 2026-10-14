@@ -1,0 +1,68 @@
+{
+ "company": "Mistral AI",
+ "one_liner_ko": "기업이 직접 소유할 수 있는 프런티어 오픈 모델을 내세우는 '소버린 AI' 기업 Mistral.",
+ "what_it_does_ko": "Mistral은 프런티어·특화 오픈 가중치 모델을 만들고, 기업이 그대로 쓰거나 Forge로 자사 데이터에 맞춰 맞춤화하게 한다. Studio로 에이전트와 애플리케이션을 만들고 관리하며, Vibe는 연구·코딩·일상 업무에 AI를 가져오는 통합 에이전트다. 온프레미스·VPC 또는 Mistral 인프라에서 실행할 수 있고 지역 내 추론과 전용 GPU 용량을 제공한다. 에너지·제조·금융·공공 부문 고객을 두고 있다.",
+ "key_features": [
+  "오픈 가중치 모델(Mistral Large 4, Medium 3.5, Small 4, Voxtral 등)",
+  "Forge: 자사 데이터로 모델 맞춤화",
+  "Studio: 개발자 콘솔·Mistral API·플레이그라운드·에이전트",
+  "Vibe: 웹·모바일·CLI·IDE용 생산성·코딩 에이전트",
+  "온프레미스·VPC 배포, 지역 내 추론·전용 GPU 컴퓨트",
+  "커넥터·커스텀 MCP 커넥터·작업 예약·이미지 생성",
+  "OCR 문서 인식 서비스"
+ ],
+ "use_cases_ko": [
+  "은행의 KYC 절차를 몇 주에서 며칠로 단축(BNP Paribas)",
+  "제조사의 하위 시스템 오류 식별 70% 가속(ASML)",
+  "특허청의 음성 받아쓰기를 며칠에서 몇 분으로 단축(유럽특허청)"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Free: 메시지·웹 검색·코딩 세션 제한, Studio 이용 가능)",
+  "plans": [
+   {"name": "Free", "price": 0, "currency": "USD", "period": "month", "limits": "메시지·웹 검색 제한, 코딩 세션 제한, 커넥터 100개 이상", "page_lang": "en"},
+   {"name": "Pro (Education plan, 학생)", "price": 14.99, "currency": "USD", "period": "month", "limits": "인증된 학생 최대 12개월, 세금 별도; 일반 Pro 가격은 받은 본문에서 확인 안 됨", "page_lang": "en"},
+   {"name": "Team", "price": 24.99, "currency": "USD", "period": "month", "limits": "사용자당 월, 사용자당 저장 30GB, 도메인 인증·데이터 내보내기", "page_lang": "en"},
+   {"name": "Enterprise", "price": null, "currency": "USD", "period": null, "limits": "맞춤 모델·에이전트·워크플로, 감사 로그, SAML SSO, 화이트 라벨; 문의", "page_lang": "en"},
+   {"name": "API 종량제(PAYG) 크레딧", "price": null, "currency": "USD", "period": "usage", "limits": "플랜 한도 초과분을 API 요금으로 지불", "page_lang": "en"}
+  ],
+  "pricing_url": "https://mistral.ai/pricing/"
+ },
+ "open_source": "모델별 상이 (Apache 2.0, Modified MIT 등)",
+ "api": "있음",
+ "platforms": ["웹", "iOS", "안드로이드", "CLI", "API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://mistral.ai", "quote": "Mistral AI © 2026"},
+  {"field": "one_liner_ko", "url": "https://mistral.ai", "quote": "Mistral | #1 in Sovereign AI: Frontier Open Models You Own"},
+  {"field": "what_it_does_ko", "url": "https://mistral.ai", "quote": "Start with Mistral’s frontier and specialist open-weight models. Use them as they are, or make them specific to your organization."},
+  {"field": "what_it_does_ko", "url": "https://mistral.ai", "quote": "Build, govern and improve agents and applications with Studio. Vibe brings that AI into research, coding, and everyday tasks."},
+  {"field": "what_it_does_ko", "url": "https://mistral.ai", "quote": "Run on-prem, in your VPC, or have us run it for you. Keep inference in-region and reserve dedicated GPU capacity"},
+  {"field": "key_features", "url": "https://docs.mistral.ai/", "quote": "A state-of-the-art, open-weight, general-purpose multimodal model."},
+  {"field": "key_features", "url": "https://mistral.ai", "quote": "Customize models around your data, use cases, and requirements with Forge."},
+  {"field": "key_features", "url": "https://docs.mistral.ai/", "quote": "The developer console and the Mistral API. Keys, the Playground, evaluations, agents, and SDKs to ship applications."},
+  {"field": "key_features", "url": "https://docs.mistral.ai/", "quote": "The unified agent for productivity and coding. Chat with it on the web or mobile, or run it in your terminal and editor."},
+  {"field": "key_features", "url": "https://mistral.ai/pricing/", "quote": "Custom MCP connectors (beta) \n Connect to any remote MCP server of choice."},
+  {"field": "key_features", "url": "https://docs.mistral.ai/", "quote": "Our latest OCR service with paragraph-level bounding boxes"},
+  {"field": "use_cases_ko", "url": "https://mistral.ai", "quote": "BNP Paribas is speeding up the KYC process from weeks to days."},
+  {"field": "use_cases_ko", "url": "https://mistral.ai", "quote": "ASML is identifying sub-system errors 70% faster."},
+  {"field": "use_cases_ko", "url": "https://mistral.ai", "quote": "The European Patent Office is cutting transcription from days to minutes."},
+  {"field": "pricing", "url": "https://mistral.ai/pricing/", "quote": "Limited messages and web searches.\n Limited coding sessions."},
+  {"field": "pricing", "url": "https://mistral.ai/pricing/", "quote": "$14.99 \n /mo"},
+  {"field": "pricing", "url": "https://mistral.ai/pricing/", "quote": "Valid for a maximum of 12 months for verified students at accredited higher institutions"},
+  {"field": "pricing", "url": "https://mistral.ai/pricing/", "quote": "$24.99 \n /user/mo"},
+  {"field": "pricing", "url": "https://mistral.ai/pricing/", "quote": "Private deployments powered by custom models, UI, and tools."},
+  {"field": "pricing", "url": "https://mistral.ai/pricing/", "quote": "Keep going past your plan limit by paying only for what you use beyond it at API rate."},
+  {"field": "pricing", "url": "https://mistral.ai/pricing/", "quote": "Yes, Mistral’s Free plan provides limited access to Vibe"},
+  {"field": "open_source", "url": "https://docs.mistral.ai/", "quote": "Mistral Medium 3.5\n Modified MIT"},
+  {"field": "open_source", "url": "https://docs.mistral.ai/", "quote": "Mistral Small 4\n Apache 2.0"},
+  {"field": "api", "url": "https://docs.mistral.ai/", "quote": "Install the SDK, set your API key, and get a model response."},
+  {"field": "platforms", "url": "https://mistral.ai/pricing/", "quote": "Vibe on mobile (iOS and Android)"},
+  {"field": "platforms", "url": "https://mistral.ai/pricing/", "quote": "Terminal-native coding agent powered by Devstral for autonomous software engineering tasks."},
+  {"field": "platforms", "url": "https://mistral.ai/pricing/", "quote": "Vibe in your browser: run long-horizon work and code tasks from a chat interface."},
+  {"field": "korean_support", "url": "https://mistral.ai", "quote": "hreflang: en, fr, it, x-default"}
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {"official": "Vibe 구독 요금제 Free / Pro(학생 $14.99/월) / Team($24.99/사용자/월) / Enterprise(문의) + 한도 초과분 API 종량제 크레딧", "diff": "기존 분류 '오픈소스(무료) + API 종량제'에 없는 월 구독 요금제(Vibe Pro·Team)가 있음", "url": "https://mistral.ai/pricing/"}
+ ]
+}

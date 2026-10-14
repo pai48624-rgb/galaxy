@@ -1,0 +1,122 @@
+{
+ "company": "Microsoft (AI at Scale 이니셔티브)",
+ "one_liner_ko": "대규모 딥러닝 학습을 빠르고 크게 해 주는 최적화 라이브러리.",
+ "what_it_does_ko": "DeepSpeed는 ZeRO, 3D 병렬화, DeepSpeed-MoE, ZeRO-Infinity 등 시스템 혁신으로 대규모 딥러닝 학습을 효과적·효율적으로 만드는 라이브러리다. MT-530B·BLOOM 같은 대형 언어 모델 학습에 쓰였다고 밝힌다. Transformers·Accelerate·Lightning·MosaicML 등 인기 오픈소스 프레임워크와 통합돼 있고, Microsoft의 AI at Scale 이니셔티브의 핵심 부분이다. 학습 외에 추론 관련 튜토리얼(MoE 추론, 자동 텐서 병렬)도 있다.",
+ "key_features": [
+  "ZeRO·ZeRO++·ZeRO-Offload 메모리 최적화",
+  "파이프라인 병렬화",
+  "자동 텐서 병렬화(학습·추론)",
+  "DeepSpeed MoE(전문가 혼합)",
+  "자동 튜닝(Autotuning)",
+  "Flops 프로파일러",
+  "수백만 토큰 장문 학습(ALST)"
+ ],
+ "use_cases_ko": [
+  "수십억~수천억 파라미터 언어 모델 학습",
+  "Hugging Face Transformers·Lightning 학습에 DeepSpeed 결합"
+ ],
+ "pricing": {
+  "free_tier": "불명 (가격 표기 없음)",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "Apache 2.0",
+ "api": "있음",
+ "platforms": [],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.deepspeed.ai/",
+   "quote": "AI at Scale initiative to enable next-generation AI capabilities at scale."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.deepspeed.ai/",
+   "quote": "Extreme Speed and Scale for DL Training"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.deepspeed.ai/",
+   "quote": "These innovations include ZeRO, 3D-Parallelism, DeepSpeed-MoE, ZeRO-Infinity, etc."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.deepspeed.ai/",
+   "quote": "such as MT-530B and BLOOM"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.deepspeed.ai/",
+   "quote": "ZeRO-Offload"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.deepspeed.ai/",
+   "quote": "Pipeline Parallelism"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.deepspeed.ai/",
+   "quote": "Automatic Tensor Parallelism (Training)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.deepspeed.ai/",
+   "quote": "Mixture of Experts (DeepSpeed MoE)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.deepspeed.ai/",
+   "quote": "Autotuning"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.deepspeed.ai/",
+   "quote": "Flops Profiler"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.deepspeed.ai/",
+   "quote": "Arctic Long Sequence Training (ALST) for HF Transformers integration"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.deepspeed.ai/",
+   "quote": "DeepSpeed has been used to train many different large-scale models."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.deepspeed.ai/",
+   "quote": "Transformers with DeepSpeed"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.deepspeed.ai/",
+   "quote": "Lightning with DeepSpeed"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/deepspeedai/DeepSpeed",
+   "quote": "[![License Apache 2.0](https://badgen.net/badge/license/apache2.0/blue)]"
+  },
+  {
+   "field": "api",
+   "url": "https://github.com/deepspeedai/DeepSpeed",
+   "quote": "DeepSpeed Core API updates: PyTorch-style backward and low-precision master states"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.deepspeed.ai/",
+   "quote": "hreflang: 없음"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "Apache 2.0 오픈소스 학습 최적화 라이브러리(PyPI), 요금 표기 없음",
+   "diff": "기존 '사용량 기반 종량제(클라우드/GPU)'와 반대로 자체 설치형 오픈소스 라이브러리",
+   "url": "https://github.com/deepspeedai/DeepSpeed"
+  }
+ ],
+ "plan_change": []
+}

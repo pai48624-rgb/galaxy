@@ -1,0 +1,450 @@
+=== [home] https://bentoml.com (lang=en)
+Bento: Run Inference at Scale 
+ Product 
+ Bento Inference Platform 
+ Full control without the complexity. Self-host anywhere. Serve any model. Optimize for performance.
+ Book a Demo 
+ BentoML Open-Source 
+ The most flexible way to serve AI/ML models and custom inference pipelines in production
+ GitHub 
+ Pricing 
+ Docs 
+ Learn 
+ Blog 
+ LLM Inference Handbook 
+ LLM Performance Explorer 
+ Featured Examples 
+ Customers 
+ Log In 
+ Sign Up Sign Up 
+ Product 
+ Bento Inference Platform 
+ BentoML Open-Source 
+ Pricing 
+ Docs 
+ Learn 
+ Blog 
+ LLM Inference Handbook 
+ LLM Performance Explorer 
+ Featured Examples 
+ Customers 
+ Log In
+ Sign Up
+ Inference On Your Terms 
+ Inference Platform built for speed and control . Deploy any model anywhere, with tailored optimization, efficient scaling, and streamlined operations.
+ Start Building
+ Get a Demo
+ Start Building
+ Get a Demo
+ Trusted by the best AI teams
+ Scale Inference, Without Complexity
+ A complete platform that simplifies inference infrastructure while giving you full control over your deployment.
+ Deploy Any Model
+ Open Model Catalog
+ Deploy popular open-source models with a few clicks.
+ Llama 4 
+ DeepSeek 
+ Ling/Ring 
+ Flux 
+ Qwen 
+ GPT-OSS 
+ Custom Models
+ Unified framework for packaging and deploying models of any architecture, framework, or modality.
+ Fine-tuned open-source models 
+ Your custom models 
+ Manage Inference
+ Bento Inference Platform 
+ A complete platform for managing, monitoring, and optimizing Al model inference.
+ Deployment automation and CI/CD 
+ Comprehensive observability 
+ Fine-grained access control 
+ Resource and quota tracking 
+ Performance tuning 
+ Scale Efficiently
+ Bento Compute Engine 
+ Intelligent resource management for optimal compute utilization.
+ Cross-region scaling 
+ Elastic auto-scaling 
+ Cold-start acceleration 
+ Multi-cloud compute orchestration 
+ Scaling-to-zero 
+ Orchestrate Compute
+ Your Cloud
+ Complete control over your infrastructure and deployment environment.
+ Bring Your Own Cloud 
+ On-Prem 
+ Kubernetes 
+ Bento Cloud 
+ Access to cutting-edge GPU hardware without the procurement hassle.
+ Nvidia GPUs 
+ AMD GPUs 
+ B200 
+ H100 
+ MI300X 
+ More... 
+ Any Open Models
+ Build and launch faster than ever - easily run and scale any model with unified deployment across frameworks.
+ Open Source Model Launcher
+ Pre-optimized models for inference with day 1 access to newly released models.
+ Llama 4 
+ DeepSeek 
+ GPT-OSS 
+ Ling/Ring 
+ Flux 
+ Qwen 
+ Custom Model Serving
+ Deploy models of any architecture, framework, or modality with full customization.
+ vLLM 
+ TRT-LLM 
+ JAX 
+ SGLang 
+ PyTorch 
+ Transformers 
+ vllm_image = bentoml . images . Image ( python_version = '3.11' ) . system_packages ( 'curl' , 'git' ) . requirements_file ( 'requirements.txt' ) 
+ @bentoml . service ( 
+ image = vllm_image , 
+ resources = { 'gpu' : 1 , 'gpu_type' : 'nvidia-h100' } , 
+ ) 
+ class VLLM : 
+ model = bentoml . models . HuggingFaceModel ( "meta-llama/Meta-Llama-3.1-8B-Instruct" ) 
+ def __init__ ( self ) - > None : 
+ . . . 
+ @bentoml . api 
+ async def generate ( 
+ self , 
+ prompt : str , 
+ max_tokens : typing_extensions . Annotated [ 
+ int , annotated_types . Ge ( 128 ) , annotated_types . Le ( MAX_TOKENS ) 
+ ] = MAX_TOKENS , 
+ ) - > typing . AsyncGenerator [ str , None ] : 
+ . . . 
+ Production-Ready Inference, Now
+ A complete platform that simplifies inference infrastructure while giving you full control over your deployment.
+ Tailored Optimization 
+ Tailored Optimization 
+ Smart Scaling 
+ Smart Scaling 
+ Advanced Serving Patterns 
+ Advanced Serving Patterns 
+ Tailored Optimization
+ Bento’s inference stack is built for easy customization. Tune every layer of your deployment to balance speed, cost, and quality for your use case.
+ Optimize for your goals
+ Automatically find the optimal configuration based on your latency, throughput, or cost requirements.
+ Advanced performance tuning
+ Fine-tune every component to squeeze maximum efficiency from your hardware.
+ Distributed LLM inference
+ Run large models across multiple GPUs for faster, scalable inference.
+ Smart Scaling
+ AI inference workloads have unique scaling patterns that differ from traditional microservices. Our intelligent scaling adapts to inference-specific metrics and patterns for optimal resource utilization.
+ Auto-scale based on traffic
+ Intelligent scaling that adapts to demand patterns.
+ Blazing fast cold start
+ Ultra-fast initialization for responsive scaling.
+ Inference-specific metrics
+ Specialized scaling for auto-regressive models.
+ Advanced Serving Patterns
+ Choose the right serving architecture for your specific use case. From real-time interactions to large-scale batch processing, optimize your deployment for maximum efficiency.
+ Interactive applications
+ For chatbots, recommendations, and other sub-second latency AI features.
+ Async long-running tasks
+ Handle long-running AI tasks that don’t need instant results.
+ Large-scale batch inference
+ Batch and process large datasets while minimizing compute overhead.
+ Orchestrate complex workflows
+ Chain multiple models for advanced RAG and compound AI systems.
+ Faster Path to Production AI
+ Everything developers need to build, ship, and scale AI inference.
+ Dev Codespace
+ Iterate in the cloud as fast as you do locally
+ From local edits to instant cloud GPU runs in seconds
+ LLM Gateway
+ Unified interface for all LLM providers
+ One unified API for all LLMs, giving you centralized cost control and optimization
+ Streamlined Operations
+ Complete deployment lifecycle management
+ Version control with rollbacks, plus canary, shadow, and A/B testing for faster, safer releases
+ Full Observability
+ Comprehensive monitoring and insights
+ Track compute and performance, monitor LLM-specific metrics, and stay on top of system health
+ Built For Enterprise
+ Enterprise-grade security, compliance, and operational capabilities for mission-critical AI deployments.
+ Self-hosted Anywhere
+ Deploy on any cloud or on-premises
+ Reliability
+ Infrastructure you can count on
+ Performance SLAs
+ 24/7 monitoring
+ Uptime guarantee
+ Automatic failover
+ Forward Deployed Engineering
+ Dedicated technical experts for your team
+ Inference optimization research
+ Use case specific optimizations
+ Training & knowledge sharing
+ Continuous benchmarking
+ Data Sovereignty
+ Full control over your data
+ In Their Words
+ Hear from the teams who have transformed their AI/ML operations with BentoML.
+ Customers 
+ BentoML enables our Data Science and Engineering teams to work independently, without the need for constant coordination. This allows us to build and deploy AI services with incredible efficiency while giving the ML Engineering team the flexibility to refactor when needed. What used to take days, now takes just hours.
+ Michael Misiewicz
+ Director of Data Science
+ BentoML's infrastructure gave us the platform we needed to launch our initial product and scale it without hiring any infrastructure engineers. Features like scale-to-zero and BYOC have saved us a considerable amount of money.
+ Patric Fulop
+ CTO, Neurolabs
+ With BentoML, we've been able to swiftly test new Al services based on the latest models, with the option to scale them up rapidly.
+ Massimiliano Ungheretti
+ Staff Data Scientist
+ Ready to accelerate your AI inference? 
+ Talk to our engineers to discuss how we can help build an inference solution that’s faster, more cost-efficient, and tailored to your needs.
+ Book a Demo
+ Our Blog
+ All articles 
+ Models Models 
+ The Best Open
+
+=== [about] https://docs.bentoml.com/en/latest/ (lang=en)
+BentoML 
+ Menu 
+ Expand 
+ Light mode 
+ Dark mode 
+ Auto light/dark, in light mode 
+ Auto light/dark, in dark mode 
+ Hide navigation sidebar
+ Hide table of contents sidebar
+ Skip to content 
+ Toggle site navigation sidebar
+ BentoML
+ Toggle Light / Dark / Auto color theme
+ Toggle table of contents sidebar
+ BentoML 
+ Get Started 
+ Hello world 
+ Adaptive batching 
+ Model composition 
+ Async task queues 
+ Packaging for deployment 
+ Cloud deployment 
+ Agent skills 
+ Learn by Examples 
+ Overview 
+ LLM inference: vLLM 
+ Agent: Function calling 
+ Agent: LangGraph 
+ LLM safety: ShieldGemma 
+ RAG: Document ingestion and search 
+ Stable Diffusion XL Turbo 
+ ComfyUI: Deploy workflows as APIs 
+ ControlNet 
+ MLflow 
+ XGBoost 
+ Build with BentoML 
+ Create online API Services 
+ Define input and output types 
+ Load and manage models 
+ Work with GPUs 
+ Call an API endpoint 
+ Parallelize requests handling 
+ Define the runtime environment 
+ Run distributed Services 
+ Configure template arguments 
+ Configure lifecycle hooks 
+ Mount ASGI applications 
+ Stream responses 
+ Define a WebSocket endpoint 
+ Add a UI with Gradio 
+ Observability Toggle navigation of Observability
+ Monitoring 
+ Logging 
+ Metrics 
+ Tracing 
+ Customize error responses 
+ Test API endpoints 
+ Scale with BentoCloud 
+ Deployment Toggle navigation of Deployment
+ Create Deployments 
+ Configure Deployments 
+ Manage Deployments 
+ Call Deployment endpoints 
+ Create canary Deployments 
+ Sandboxes 
+ Batch inference jobs 
+ Build CI/CD pipelines 
+ Scaling Toggle navigation of Scaling
+ Concurrency and autoscaling 
+ Scale across multiple regions with Gateways 
+ Manage secrets 
+ Manage API tokens 
+ Develop with Codespaces 
+ Administering Toggle navigation of Administering
+ Manage users 
+ Split staging and production environments 
+ Bring Your Own Cloud 
+ Configure standby instances 
+ References 
+ BentoML Toggle navigation of BentoML
+ Bento and model APIs 
+ BentoML SDK 
+ Bento build options 
+ BentoML CLI 
+ Client API 
+ Framework APIs Toggle navigation of Framework APIs
+ Diffusers 
+ ONNX 
+ Scikit-Learn 
+ Transformers 
+ Flax 
+ TensorFlow 
+ TorchScript 
+ XGBoost 
+ Picklable Model 
+ PyTorch 
+ LightGBM 
+ MLflow 
+ CatBoost 
+ fast.ai 
+ EasyOCR 
+ Keras 
+ Ray 
+ Detectron 
+ Configurations 
+ Batch inference 
+ Exceptions 
+ Container APIs 
+ Types 
+ BentoCloud Toggle navigation of BentoCloud
+ Deployment details 
+ BentoCloud CLI 
+ BentoCloud API 
+ Back to top 
+ View this page 
+ Edit this page 
+ Toggle Light / Dark / Auto color theme
+ Toggle table of contents sidebar
+ BentoML Documentation ¶ 
+ BentoML is a Unified Inference Platform for deploying and scaling AI systems with any model, on any cloud.
+ Featured examples ¶ 
+ Deploy an open-source LLM endpoint 
+ Serve large language models with OpenAI-compatible APIs and vLLM inference backend.
+ LLM inference: vLLM 
+ Document Q&A with RAG 
+ Deploy private RAG systems with open-source embedding and large language models.
+ RAG: Document ingestion and search 
+ Serve diffusion models 
+ Deploy image generation APIs with flexible customization and optimized batch processing.
+ Stable Diffusion XL Turbo 
+ Deploy ComfyUI pipelines 
+ Automate reproducible workflows with queued execution using ComfyUI pipelines.
+ ComfyUI: Deploy workflows as APIs 
+ Build a phone calling agent 
+ Build a phone calling agent with end-to-end streaming capabilities using open-source models and Twilio.
+ https://github.com/bentoml/BentoTwilioConversationRelay 
+ LLM safety: ShieldGemma 
+ Protect your LLM API endpoint from harmful input using Google’s safety content moderation model.
+ LLM safety: ShieldGemma 
+
+
+=== [meta] https://bentoml.com
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/bentoml/BentoML
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/bentoml/BentoML/assets/489344/d3e6c95d-d224-49a5-9cff-0789f094e127">
+    <source media="(prefers-color-scheme: light)" srcset="https://github.com/bentoml/BentoML/assets/489344/de4da660-6aeb-4e5a-bf76-b7177435444d">
+    <img alt="BentoML: Unified Model Serving Framework" src="https://github.com/bentoml/BentoML/assets/489344/de4da660-6aeb-4e5a-bf76-b7177435444d" width="370" style="max-width: 100%;">
+</picture>
+
+## Unified Model Serving Framework
+
+🍱 Build model inference APIs and multi-model serving systems with any open-source or custom AI models. 👉 [Join our forum](https://forum.modular.com/c/bento/31)!
+
+[![License: Apache-2.0](https://img.shields.io/badge/License-Apache%202-green.svg)](https://github.com/bentoml/BentoML?tab=Apache-2.0-1-ov-file)
+[![Releases](https://img.shields.io/github/v/release/bentoml/bentoml.svg)](https://github.com/bentoml/bentoml/releases)
+[![CI](https://github.com/bentoml/bentoml/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/bentoml/BentoML/actions/workflows/ci.yml?query=branch%3Amain)
+[![Twitter](https://badgen.net/badge/icon/@bentomlai/1DA1F2?icon=twitter&label=Follow)](https://twitter.com/bentomlai)
+
+## What is BentoML?
+
+BentoML is a Python library for building online serving systems optimized for AI apps and model inference.
+
+- **🍱 Easily build APIs for Any AI/ML Model.** Turn any model inference script into a REST API server with just a few lines of code and standard Python type hints.
+- **🐳 Docker Containers made simple.** No more dependency hell! Manage your environments, dependencies and model versions with a simple config file. BentoML automatically generates Docker images, ensures reproducibility, and simplifies how you deploy to different environments.
+- **🧭 Maximize CPU/GPU utilization.** Build high performance inference APIs leveraging built-in serving optimization features like dynamic batching, model parallelism, multi-stage pipeline and multi-model inference-graph orchestration.
+- **👩‍💻 Fully customizable.** Easily implement your own APIs or task queues, with custom business logic, model inference and multi-model composition. Supports any ML framework, modality, and inference runtime.
+- **🚀 Ready for Production.** Develop, run and debug locally. Seamlessly deploy to production with Docker containers or [BentoCloud](https://www.bentoml.com/).
+
+## Getting started
+
+Install BentoML:
+
+```
+# Requires Python≥3.9
+pip install -U bentoml
+```
+
+Define APIs in a `service.py` file.
+
+```python
+import bentoml
+
+@bentoml.service(
+    image=bentoml.images.Image(python_version="3.11").python_packages("torch", "transformers"),
+)
+class Summarization:
+    def __init__(self) -> None:
+        import torch
+        from transformers import pipeline
+
+        device = "cuda" if torch.cuda.is_available() else "cpu"
+        self.pipeline = pipeline('summarization', device=device)
+
+    @bentoml.api(batchable=True)
+    def summarize(self, texts: list[str]) -> list[str]:
+        results = self.pipeline(texts)
+        return [item['summary_text'] for item in results]
+```
+
+### 💻 Run locally
+
+Install PyTorch and Transformers packages to your Python virtual environment.
+
+```bash
+pip install torch transformers  # additional dependencies for local run
+```
+
+Run the service code locally (serving at http://localhost:3000 by default):
+
+```bash
+bentoml serve
+```
+
+You should expect to see the following output.
+
+```
+[INFO] [cli] Starting production HTTP BentoServer from "service:Summarization" listening on http://localhost:3000 (Press CTRL+C to quit)
+[INFO] [entry_service:Summarization:1] Service Summarization initialized
+```
+
+Now you can run inference from your browser at http://localhost:3000 or with a Python script:
+
+```python
+import bentoml
+
+with bentoml.SyncHTTPClient('http://localhost:3000') as client:
+    summarized_text: str = client.summarize([bentoml.__doc__])[0]
+    print(f"Result: {summarized_text}")
+```
+
+### 🐳 Deploy using Docker
+
+Run `bentoml build` to package necessary code, models, dependency configs into a Bento - the standardized deployable artifact in BentoML:
+
+```bash
+bentoml build
+```
+
+Ensure [Docker](

@@ -1,0 +1,185 @@
+{
+ "company": "Anysphere, Inc.",
+ "one_liner_ko": "Cursor에서 지연 낮은 에이전트 코딩을 위해 만든, 동급 모델보다 4배 빠른 Cursor의 첫 자체 코딩 모델.",
+ "what_it_does_ko": "Composer는 Cursor 2.0과 함께 공개된 Cursor의 첫 코딩 모델로, 동급 모델보다 4배 빠르고 대부분의 상호작용을 30초 안에 끝낸다고 소개한다. 코드베이스 전체 시맨틱 검색을 포함한 도구 세트로 학습해 대규모 코드베이스를 이해하고 작업하는 능력이 좋다. Cursor 2.0은 파일이 아니라 에이전트 중심 인터페이스로 바뀌었고, git worktree나 원격 머신으로 여러 에이전트를 병렬 실행할 수 있다. 문서의 모델 목록에는 Composer 2.5(기본 컨텍스트 200k)가 올라 있다.",
+ "key_features": [
+  "동급 모델 대비 4배 빠른 코딩 모델",
+  "대부분의 상호작용을 30초 이내 완료",
+  "코드베이스 전체 시맨틱 검색 도구로 학습",
+  "에이전트 중심 멀티 에이전트 인터페이스(Cursor 2.0)",
+  "git worktree·원격 머신 기반 병렬 에이전트 실행",
+  "에이전트 변경 사항 검토·테스트 개선"
+ ],
+ "use_cases_ko": [
+  "개발자가 여러 단계 코딩 작업을 에이전트에 맡기고 빠르게 반복",
+  "대규모 코드베이스 이해·작업"
+ ],
+ "pricing": {
+  "free_tier": "있음 (무료 $0/월: 에이전트·Chat 요청 횟수 제한)",
+  "plans": [
+   {
+    "name": "무료",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "에이전트 요청·Chat 요청 횟수 제한",
+    "page_lang": "ko"
+   },
+   {
+    "name": "Plus",
+    "price": 8,
+    "currency": "USD",
+    "period": "month",
+    "limits": "입문용 공유 AI 사용량 풀, Grok 모델만 사용 가능",
+    "page_lang": "ko"
+   },
+   {
+    "name": "Premium",
+    "price": 30,
+    "currency": "USD",
+    "period": "month",
+    "limits": "Plus의 4배 사용량, 클라우드 Agent·자동화, 타사 모델은 API 정가 별도",
+    "page_lang": "ko"
+   },
+   {
+    "name": "Super",
+    "price": 100,
+    "currency": "USD",
+    "period": "month",
+    "limits": "Plus의 15배 사용량, 피크 시간대 우선 접근",
+    "page_lang": "ko"
+   },
+   {
+    "name": "Ultra",
+    "price": 200,
+    "currency": "USD",
+    "period": "month",
+    "limits": "Plus의 50배 사용량, 모든 제품·모델 최우선 접근",
+    "page_lang": "ko"
+   },
+   {
+    "name": "Teams",
+    "price": 30,
+    "currency": "USD",
+    "period": "month",
+    "limits": "사용자당 월 $30부터, 중앙 청구·SSO·사용량 분석",
+    "page_lang": "ko"
+   },
+   {
+    "name": "기업",
+    "price": null,
+    "currency": null,
+    "period": null,
+    "limits": "맞춤형, 영업팀 문의",
+    "page_lang": "ko"
+   }
+  ],
+  "pricing_url": "https://cursor.com/ko/pricing"
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "CLI"
+ ],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://cursor.com/ko/blog/2-0",
+   "quote": "© 2026 Anysphere, Inc."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://cursor.com/ko/blog/2-0",
+   "quote": "Composer는 동급 수준의 모델보다 4배 빠른 최첨단 모델입니다."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://cursor.com/ko/blog/2-0",
+   "quote": "이 모델은 Cursor에서 지연이 낮은 Agent 기반 코딩을 위해 설계되었으며, 대부분의 상호작용을 30초 이내에 완료합니다."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://cursor.com/ko/blog/2-0",
+   "quote": "Composer는 코드베이스 전체를 아우르는 시맨틱 검색을 포함한 강력한 도구 세트로 학습 되었으며"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://cursor.com/docs",
+   "quote": " Composer 2.5 \n 200k - "
+  },
+  {
+   "field": "key_features",
+   "url": "https://cursor.com/ko/blog/2-0",
+   "quote": "이제 인터페이스는 파일이 아니라 에이전트를 중심으로 처음부터 다시 설계되어, 더 집중된 환경을 제공합니다."
+  },
+  {
+   "field": "key_features",
+   "url": "https://cursor.com/ko/blog/2-0",
+   "quote": "Cursor 2.0은 git worktree 또는 원격 머신을 기반으로, 여러 에이전트를 서로 간섭 없이 병렬로 실행할 수 있도록 설계되었습니다."
+  },
+  {
+   "field": "key_features",
+   "url": "https://cursor.com/ko/blog/2-0",
+   "quote": "코드 리뷰와 변경 사항 테스트라는 두 가지 새로운 병목 지점이 나타나는 것을 확인했습니다."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://cursor.com/ko/blog/2-0",
+   "quote": "여러 단계를 거치는 코딩 작업을 맡길 수 있을 만큼 신뢰했습니다."
+  },
+  {
+   "field": "pricing",
+   "url": "https://cursor.com/ko/pricing",
+   "quote": " Plus $8 /월 "
+  },
+  {
+   "field": "pricing",
+   "url": "https://cursor.com/ko/pricing",
+   "quote": " Ultra $200 /월 "
+  },
+  {
+   "field": "pricing",
+   "url": "https://cursor.com/ko/pricing",
+   "quote": " Teams $30 +/사용자/월 "
+  },
+  {
+   "field": "pricing",
+   "url": "https://cursor.com/ko/pricing",
+   "quote": " 제한된 에이전트 요청 횟수 "
+  },
+  {
+   "field": "pricing",
+   "url": "https://cursor.com/ko/pricing",
+   "quote": " 사용량 제한적 기본 Plus의 4배 Plus의 15배 Plus의 50배 Plus의 4-50배 공유 "
+  },
+  {
+   "field": "pricing",
+   "url": "https://cursor.com/ko/pricing",
+   "quote": " *이 플랜에서는 Grok 모델만 사용 가능합니다"
+  },
+  {
+   "field": "pricing",
+   "url": "https://cursor.com/ko/pricing",
+   "quote": "구독은 X Subscription Corp.에서만 직접 판매합니다."
+  },
+  {
+   "field": "platforms",
+   "url": "https://cursor.com/docs",
+   "quote": "Cursor Docs — Agent, Rules, MCP, Skills & CLI "
+  },
+  {
+   "field": "korean_support",
+   "url": "https://cursor.com/ko/blog/2-0",
+   "quote": "hreflang: de, en-us, es, fr, hi, ja, ko, pt-br, zh, zh-hant"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "Composer는 Cursor 안에서 쓰는 자체 모델이며, Cursor 요금제(무료·Plus $8·Premium $30·Super $100·Ultra $200·Teams $30/사용자)가 Grok·X 혜택과 묶인 공유 AI 사용량 풀 구독이고 X Subscription Corp.가 판매",
+   "diff": "기존 '모델별 상이(오픈웨이트 또는 API 종량제)'와 달리 Cursor 월 구독(다른 회사 X/Grok 구독과 묶임) 안에서 사용하는 구조",
+   "url": "https://cursor.com/ko/pricing"
+  }
+ ]
+}

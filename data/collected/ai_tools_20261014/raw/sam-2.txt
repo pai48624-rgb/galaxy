@@ -1,0 +1,198 @@
+=== [home] https://ai.meta.com/research/sam2/ (lang=en)
+Meta Segment Anything Model 2 
+ Products 
+ AI Research 
+ Resources 
+ About 
+ AI Developers 
+ Try Muse 
+ Key capabilities
+ Segment any object, now in any video or image
+ SAM 2 is the first unified model for segmenting objects across images and videos. You can use a click, box, or mask as the input to select an object on any image or frame of video.
+ Read the research paper 
+ Select objects and make adjustments across video frames
+ Using SAM 2, you can select one or multiple objects in a video frame. Use additional prompts to refine the model predictions.
+ Robust segmentation, even in 
+unfamiliar videos
+ SAM 2 is capable of strong zero-shot performance for objects, images and videos not previously seen during model training, enabling use in a wide range of real-world applications.
+ Real-time interactivity and results
+ SAM 2 is designed for efficient video processing with streaming inference to enable real-time, interactive applications.
+ State-of-the-art performance for object segmentation
+ SAM 2 outperforms the best models in the field for object segmentation in videos and images. 
+ Highlights
+ SAM 2 improves on SAM for segmentation in images
+ SAM 2 outperforms existing video object segmentation models, especially for tracking parts
+ SAM 2 requires less interaction time than existing interactive video segmentation methods
+ Try it yourself
+ Track an object across any video interactively with as little as a single click on one frame, and create fun effects.
+ Try the demo 
+ Our approach
+ The next generation of Meta Segment Anything
+ SAM 2 brings state-of-the-art video and image segmentation capabilities into a single model, while preserving a simple design and fast inference speed.
+ Model architecture
+ Meta Segment Anything Model 2 design
+ The SAM 2 model extends the promptable capability of SAM to the video domain by adding a per session memory module that captures information about the target object in the video. This allows SAM 2 to track the selected object throughout all video frames, even if the object temporarily disappears from view, as the model has context of the object from previous frames. SAM 2 also supports the ability to make corrections in the mask prediction based on additional prompts on any frame. 
+ SAM 2’s streaming architecture—which processes video frames one at a time—is also a natural generalization of SAM to the video domain. When SAM 2 is applied to images, the memory module is empty and the model behaves like SAM.
+ The Segment Anything Video Dataset
+ A large and diverse video segmentation dataset
+ SAM 2 was trained on a large and diverse set of videos and masklets (object masks over time), created by applying SAM 2 interactively in a model in the loop data-engine. The training data includes the SA-V dataset, which we are open sourcing.
+ Please email support@segment-anything.com with any issues or questions regarding the SA-V dataset.
+ Explore the dataset 
+ Highlights
+ ~600K+ masklets collected on ~51K videos
+ Geographically diverse, real world scenarios collected across 47 countries
+ Annotations include whole objects, parts, and challenging occlusions
+ Access our research
+ Open innovation
+ To enable the research community to build upon this work, we’re publicly releasing a pretrained Segment Anything 2 model, along with the SA-V dataset, a demo, and code.
+ Download the model 
+ Highlights
+ We are providing transparency into the SAM 2 training data 
+ We prioritized geographic diversity in the SA-V dataset for real-world representation
+ We conducted a fairness evaluation of SAM 2
+ Potential model applications
+ SAM 2 can be used by itself, or as part of a larger system with other models in future work to enable novel experiences. 
+ Download the model 
+ Extensible outputs
+ The video object segmentation outputs from SAM 2 could be used as input to other AI systems such as modern video generation models to enable precise editing capabilities.
+ Extensible inputs 
+ SAM 2 can be extended to take other types of input prompts such as in the future enabling creative ways of interacting with objects in real-time or live video.
+ Explore additional resources
+ Read the AI at Meta blog
+ Read the research paper
+ Download the dataset
+ Explore the dataset
+ Download the model
+ Try the demo
+ Meta AI 
+ Assistant 
+ Media Generation 
+ Vibes 
+ Muse 
+ Agent 
+ AI agents explained 
+ What is agentic AI 
+ Agentic AI examples 
+ AI Research 
+ Overview 
+ Projects 
+ Resources & tools 
+ Publications 
+ GitHub 
+ Resources
+ Blog 
+ Learning Hub 
+ Demos 
+ About 
+ Overview 
+ Open Source 
+ Careers 
+ Meta AI
+ Meta AI Assistant Media Generation Vibes 
+ Muse
+ Muse Agent AI agents explained What is agentic AI Agentic AI examples 
+ AI Research
+ AI Research Overview Projects Resources & tools Publications GitHub 
+ Resources
+ Blog Learning Hub Demos 
+ About
+ About Overview Open Source Careers 
+ Privacy Policy 
+ Terms 
+ Cookies 
+ Meta © 2026
+
+=== [about] https://ai.meta.com/about/ (lang=en)
+About Us - AI at Meta 
+ Skip to main content 
+ Muse Your personal AI agent 
+ Download 
+ Products 
+ AI Research 
+ Resources 
+ About 
+ AI Developers 
+ Try Muse 
+ ABOUT AI AT META 
+ Advancing AI for a connected world
+ Pushing the boundaries of AI through research, infrastructure and product innovation
+ We’re driven to build incredible things that connect people in inspiring ways. Because we can’t truly advance groundbreaking AI alone, we share our research and engage with the AI community to advance the science, together.
+ Whether it be in AI Infrastructure, Generative AI, NLP, Computer Vision or other core areas of AI, our focus is to connect people in inspiring ways through collaborative, responsible AI innovation.
+ THE WORK WE DO 
+ Turning ideas into innovation, together
+ We’re actively building remarkable things in key areas of AI that are shaping an AI-driven future. A future we aim to enhance through our many, diverse fundamental and applied research projects. 
+ SAM 2 is a segmentation model that enables fast, precise selection of any object in any video or image. 
+ Segment Anything 2
+ DINOv3 scales self-supervised learning (SSL) for images to produce our strongest universal vision backbones. 
+ DINOv3
+ V-JEPA 2 is the first world model trained on video that achieves state-of-the-art visual understanding and prediction. 
+ V-JEPA 2
+ Movie Gen is the most advanced family of media foundation AI models empowering immersive storytelling. 
+ Movie Gen
+ INNOVATING RESPONSIBILITY 
+ Our goal is to build AI responsibly, 
+for everyone
+ Our commitment to responsible AI is driven by the belief that everyone should have equitable access to information, services, and opportunities. 
+ The responsible approach we’re taking to generative AI
+ Learn more
+ We’re exploring and discovering the frontier of AI along with everyone else. So we too need guidance as we maneuver through its many possibilities. By listening to subject matter experts, policymakers and people with lived experiences, we aim to be proactive in the 
+ We’re exploring and discovering the frontier of AI along with everyone else. So we too need guidance as we maneuver through its many possibilities. By listening to subject matter experts, policymakers and people with lived experiences, we aim to be proactive in the promotion and advancement of responsible design and operation of AI systems. As we do so, we adhere to our organization’s core principles: Privacy & Security, Fairness & Inclusion, Robustness & Safety, Transparency & Control, Accountability & Governance. 
+ promotion and advancement of responsible design and operation of AI systems. As we do so, we adhere to our organization’s core principles: Privacy & Security, Fairness & Inclusion, Robustness & Safety, Transparency & Control, Accountability & Governance. 
+ PEOPLE AND CULTURE 
+ Freedom to explore and apply AI at scale
+ Open positions 
+ KEY PRINCIPLES 
+ Openness
+ We believe the latest advancements in AI should be published and shared for the community to learn from and build upon. 
+ Collaboration
+ We collaborate openly with internal and external partners to share knowledge and cultivate diverse perspectives. 
+ Excellence
+ There’s no shortage of new possibilities to explore in AI. While our researchers focus on what they believe will have the most positive impact on people and society, our engineers are working to deliver meaningful advancements in products and experiences for all people. 
+ Scale
+ To bring the benefits of AI to more people and improve accessibility, our research must account for both large scale data and computat
+
+=== [meta] https://ai.meta.com/research/sam2/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/facebookresearch/sam2
+# SAM 2: Segment Anything in Images and Videos
+
+**[AI at Meta, FAIR](https://ai.meta.com/research/)**
+
+[Nikhila Ravi](https://nikhilaravi.com/), [Valentin Gabeur](https://gabeur.github.io/), [Yuan-Ting Hu](https://scholar.google.com/citations?user=E8DVVYQAAAAJ&hl=en), [Ronghang Hu](https://ronghanghu.com/), [Chaitanya Ryali](https://scholar.google.com/citations?user=4LWx24UAAAAJ&hl=en), [Tengyu Ma](https://scholar.google.com/citations?user=VeTSl0wAAAAJ&hl=en), [Haitham Khedr](https://hkhedr.com/), [Roman Rädle](https://scholar.google.de/citations?user=Tpt57v0AAAAJ&hl=en), [Chloe Rolland](https://scholar.google.com/citations?hl=fr&user=n-SnMhoAAAAJ), [Laura Gustafson](https://scholar.google.com/citations?user=c8IpF9gAAAAJ&hl=en), [Eric Mintun](https://ericmintun.github.io/), [Junting Pan](https://junting.github.io/), [Kalyan Vasudev Alwala](https://scholar.google.co.in/citations?user=m34oaWEAAAAJ&hl=en), [Nicolas Carion](https://www.nicolascarion.com/), [Chao-Yuan Wu](https://chaoyuan.org/), [Ross Girshick](https://www.rossgirshick.info/), [Piotr Dollár](https://pdollar.github.io/), [Christoph Feichtenhofer](https://feichtenhofer.github.io/)
+
+[[`Paper`](https://ai.meta.com/research/publications/sam-2-segment-anything-in-images-and-videos/)] [[`Project`](https://ai.meta.com/sam2)] [[`Demo`](https://sam2.metademolab.com/)] [[`Dataset`](https://ai.meta.com/datasets/segment-anything-video)] [[`Blog`](https://ai.meta.com/blog/segment-anything-2)] [[`BibTeX`](#citing-sam-2)]
+
+![SAM 2 architecture](assets/model_diagram.png?raw=true)
+
+**Segment Anything Model 2 (SAM 2)** is a foundation model towards solving promptable visual segmentation in images and videos. We extend SAM to video by considering images as a video with a single frame. The model design is a simple transformer architecture with streaming memory for real-time video processing. We build a model-in-the-loop data engine, which improves model and data via user interaction, to collect [**our SA-V dataset**](https://ai.meta.com/datasets/segment-anything-video), the largest video segmentation dataset to date. SAM 2 trained on our data provides strong performance across a wide range of tasks and visual domains.
+
+![SA-V dataset](assets/sa_v_dataset.jpg?raw=true)
+
+## Latest updates
+
+**12/11/2024 -- full model compilation for a major VOS speedup and a new `SAM2VideoPredictor` to better handle multi-object tracking**
+
+- We now support `torch.compile` of the entire SAM 2 model on videos, which can be turned on by setting `vos_optimized=True` in `build_sam2_video_predictor`, leading to a major speedup for VOS inference.
+- We update the implementation of `SAM2VideoPredictor` to support independent per-object inference, allowing us to relax the assumption of prompting for multi-object tracking and adding new objects after tracking starts.
+- See [`RELEASE_NOTES.md`](RELEASE_NOTES.md) for full details.
+
+**09/30/2024 -- SAM 2.1 Developer Suite (new checkpoints, training code, web demo) is released**
+
+- A new suite of improved model checkpoints (denoted as **SAM 2.1**) are released. See [Model Description](#model-description) for details.
+  * To use the new SAM 2.1 checkpoints, you need the latest model code from this repo. If you have installed an earlier version of this repo, please first uninstall the previous version via `pip uninstall SAM-2`, pull the latest code from this repo (with `git pull`), and then reinstall the repo following [Installation](#installation) below.
+- The training (and fine-tuning) code has been released. See [`training/README.md`](training/README.md) on how to get started.
+- The frontend + backend code for the SAM 2 web demo has been released. See [`demo/README.md`](demo/README.md) for details.
+
+## Installation
+
+SAM 2 needs to be installed first before use. The code requires `python>=3.10`, as well as `torch>=2.5.1` and `torchvision>=0.20.1`. Please follow the instructions [here](https://pytorch.org/get-started/locally/) to install both PyTorch and TorchVision dependencies. You can install SAM 2 on a GPU machine using:
+
+```bash
+git clone https://github.com/facebookresearch/sam2.git && cd sam2
+
+pip install -e .
+```
+If you are installing on Windows, it's strongl

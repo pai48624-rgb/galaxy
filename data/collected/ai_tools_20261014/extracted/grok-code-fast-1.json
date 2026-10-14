@@ -1,0 +1,181 @@
+{
+ "company": "SpaceXAI LLC (xAI)",
+ "one_liner_ko": "에이전트형 코딩에 뛰어난, 빠르고 경제적인 xAI의 추론 모델.",
+ "what_it_does_ko": "grok-code-fast-1은 2025년 8월 28일 발표된 코딩 특화 추론 모델로, 새 모델 구조로 처음부터 만들고 프로그래밍 관련 데이터로 사전학습했다고 소개한다. grep·터미널·파일 편집 같은 도구 사용에 능숙해 IDE와 에이전트 코딩 플랫폼에서 쓰기 좋도록 다듬었다. TypeScript·Python·Java·Rust·C++·Go에 특히 강하며 SWE-Bench-Verified에서 70.8%를 기록했다고 밝힌다. xAI API로 일반 제공되며, GitHub Copilot·Cursor·Cline 등 출시 파트너에서 한시적으로 무료 제공되었다.",
+ "key_features": [
+  "에이전트형 코딩에 최적화된 추론 모델",
+  "grep·터미널·파일 편집 등 도구 호출에 능숙",
+  "빠른 응답 속도와 90% 이상 프롬프트 캐시 적중",
+  "TypeScript·Python·Java·Rust·C++·Go에 강함",
+  "SWE-Bench-Verified 70.8%",
+  "GitHub Copilot·Cursor·Cline 등 IDE 파트너 연동"
+ ],
+ "use_cases_ko": [
+  "개발자가 IDE에서 일상 코딩 작업 처리",
+  "제로부터 프로젝트 구축·코드베이스 질의·버그 수정"
+ ],
+ "pricing": {
+  "free_tier": "있음 (출시 파트너에서 한시적 무료; Grok Free 요금제 $0/월)",
+  "plans": [
+   {
+    "name": "API 입력",
+    "price": 0.2,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "입력 100만 토큰당",
+    "page_lang": "en"
+   },
+   {
+    "name": "API 출력",
+    "price": 1.5,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "출력 100만 토큰당",
+    "page_lang": "en"
+   },
+   {
+    "name": "API 캐시 입력",
+    "price": 0.02,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "캐시 입력 100만 토큰당",
+    "page_lang": "en"
+   },
+   {
+    "name": "Grok Free",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "제한적 사용",
+    "page_lang": "en"
+   },
+   {
+    "name": "Grok Plus",
+    "price": 8,
+    "currency": "USD",
+    "period": "month",
+    "limits": "공유 사용량 풀, Grok API 접근·Cursor 포함",
+    "page_lang": "en"
+   },
+   {
+    "name": "Grok Premium",
+    "price": 30,
+    "currency": "USD",
+    "period": "month",
+    "limits": "Plus 대비 4배 사용량",
+    "page_lang": "en"
+   },
+   {
+    "name": "Grok Super",
+    "price": 100,
+    "currency": "USD",
+    "period": "month",
+    "limits": "Plus 대비 15배 사용량",
+    "page_lang": "en"
+   },
+   {
+    "name": "Grok Ultra",
+    "price": 200,
+    "currency": "USD",
+    "period": "month",
+    "limits": "Plus 대비 50배 사용량",
+    "page_lang": "en"
+   },
+   {
+    "name": "Teams",
+    "price": 30,
+    "currency": "USD",
+    "period": "month",
+    "limits": "사용자당 $30부터",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://x.ai/news/grok-code-fast-1"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "API"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://x.ai/news/grok-code-fast-1",
+   "quote": "© 2026 SpaceXAI LLC \n Built with Grok"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://x.ai/news/grok-code-fast-1",
+   "quote": "We're thrilled to introduce grok-code-fast-1, a speedy and economical reasoning model that excels at agentic coding."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://x.ai/news/grok-code-fast-1",
+   "quote": "We built grok-code-fast-1 from scratch, starting with a brand-new model architecture."
+  },
+  {
+   "field": "key_features",
+   "url": "https://x.ai/news/grok-code-fast-1",
+   "quote": "grok-code-fast-1 has mastered the use of common tools like grep, terminal, and file editing, and thus should feel right at home in your favorite IDE."
+  },
+  {
+   "field": "key_features",
+   "url": "https://x.ai/news/grok-code-fast-1",
+   "quote": "is particularly adept at TypeScript, Python, Java, Rust, C++, and Go."
+  },
+  {
+   "field": "key_features",
+   "url": "https://x.ai/news/grok-code-fast-1",
+   "quote": "On the full subset of SWE-Bench-Verified, grok-code-fast-1 scored 70.8% using our own internal harness."
+  },
+  {
+   "field": "key_features",
+   "url": "https://x.ai/news/grok-code-fast-1",
+   "quote": "regularly achieving cache hit rates above 90% when used with our launch partners."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://x.ai/news/grok-code-fast-1",
+   "quote": "ranging from building zero-to-one projects and providing insightful answers to codebase questions to performing surgical bug fixes."
+  },
+  {
+   "field": "pricing",
+   "url": "https://x.ai/news/grok-code-fast-1",
+   "quote": "The model is generally available via the xAI API, priced at $0.20 / 1M input tokens, $1.50 / 1M output tokens, and $0.02 / 1M cached input tokens."
+  },
+  {
+   "field": "pricing",
+   "url": "https://x.ai/news/grok-code-fast-1",
+   "quote": "We've teamed up with select launch partners to offer grok-code-fast-1 for free for a limited time"
+  },
+  {
+   "field": "pricing",
+   "url": "https://x.ai/pricing",
+   "quote": "Free $0/month Get started \n Plus $8/month Get Plus \n Premium $30/month Get Premium \n Super $100/month Get Super \n Ultra $200/month Get Ultra \n Teams $30+/user/month Get Teams"
+  },
+  {
+   "field": "pricing",
+   "url": "https://x.ai/pricing",
+   "quote": "Grok Chat, Voice, Imagine, and Build \n Grok API access \n Cursor"
+  },
+  {
+   "field": "api",
+   "url": "https://x.ai/news/grok-code-fast-1",
+   "quote": "The model is generally available via the xAI API"
+  },
+  {
+   "field": "platforms",
+   "url": "https://x.ai/news/grok-code-fast-1",
+   "quote": "The model is generally available via the xAI API, priced at $0.20 / 1M input tokens"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "API 종량제($0.20/$1.50/$0.02 per 1M) 외에 Grok 구독(Plus $8~Ultra $200/월, Teams $30+/사용자/월)에 Grok API 접근·Cursor가 포함됨",
+   "diff": "기존 분류 '모델별 상이(오픈웨이트 또는 API 종량제)'와 달리 오픈웨이트가 아니고, Grok 구독 요금제와 묶여 있음",
+   "url": "https://x.ai/pricing"
+  }
+ ]
+}

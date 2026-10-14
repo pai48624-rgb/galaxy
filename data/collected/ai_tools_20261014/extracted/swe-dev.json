@@ -1,0 +1,72 @@
+{
+ "company": null,
+ "one_liner_ko": "기존 코드베이스에 새 기능을 추가하는 '기능 중심 개발'을 평가·학습하는 첫 대규모 벤치마크·학습 데이터셋.",
+ "what_it_does_ko": "SWE-Dev는 기능 중심 개발(FDD) 과제를 위한 벤치마크이자 학습 말뭉치로, 학습 과제 14,000개와 테스트 과제 500개를 제공한다. 각 과제에는 실행 가능한 환경과 개발자가 작성한 단위 테스트가 들어 있어 지도 미세조정과 실행 보상 기반 강화학습에 쓸 수 있다. 과제마다 소스·의존성·Dockerfile·테스트가 묶여 재현할 수 있고, pytest 통과/실패로 보상 신호를 준다. 단일 에이전트와 MASLab 기반 다중 에이전트 추론 스크립트도 포함한다.",
+ "key_features": [
+  "학습 14,000개·테스트 500개 과제",
+  "실행 가능한 Docker 환경·단위 테스트 동봉",
+  "pytest 기반 강화학습용 보상 신호",
+  "Easy/Hard 난이도 분할",
+  "강화학습용 평가 API 서버",
+  "단일·다중 에이전트 추론 스크립트(MASLab 10종)"
+ ],
+ "use_cases_ko": [
+  "연구자가 코딩 모델을 미세조정·강화학습으로 훈련",
+  "모델의 기능 추가 개발 능력 평가"
+ ],
+ "pricing": {
+  "free_tier": null,
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "Apache 2.0",
+ "api": "불명",
+ "platforms": [
+  "CLI"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/DorothyDUUU/SWE-Dev",
+   "quote": "is the **first large‑scale benchmark and training corpus** for **feature‑driven development (FDD)**"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/DorothyDUUU/SWE-Dev",
+   "quote": "training** and **500 test** tasks, each with a **runnable environment** and **developer‑written unit tests**"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/DorothyDUUU/SWE-Dev",
+   "quote": "**End‑to‑end reproducibility** – every task bundles source, deps, Dockerfile & tests."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/DorothyDUUU/SWE-Dev",
+   "quote": "**RL‑ready** – deterministic pass/fail reward signals from pytest."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/DorothyDUUU/SWE-Dev",
+   "quote": "We also integrate 10 Multi-Agent Systems inference in the [MASLab]"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/DorothyDUUU/SWE-Dev",
+   "quote": "enabling both *supervised fine‑tuning* and *reinforcement learning from executable rewards*."
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/DorothyDUUU/SWE-Dev",
+   "quote": "[![License](https://img.shields.io/badge/license-Apache%202.0-green.svg)](LICENSE)"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/DorothyDUUU/SWE-Dev",
+   "quote": "python dataset/download_data.py --dest ./data"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

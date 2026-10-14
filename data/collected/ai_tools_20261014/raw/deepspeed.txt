@@ -1,0 +1,318 @@
+=== [home] https://www.deepspeed.ai/ (lang=en)
+Latest News - DeepSpeed 
+ Skip links
+ Skip to primary navigation 
+ Skip to content 
+ Skip to footer 
+ You are using an outdated browser. Please upgrade your browser to improve your experience.
+ DeepSpeed
+ -->
+ Getting Started 
+ Blog 
+ Tutorials 
+ Documentation 
+ GitHub 
+ Toggle search 
+ Toggle menu 
+ Toggle Menu 
+ Training 
+ Inference 
+ Science 
+ Getting Started 
+ ds_config 
+ Autotuning 
+ Batch size 
+ Optimizer 
+ FP16 
+ BFLOAT16 
+ ZeRO optimizations 
+ Logging 
+ Flops Profiler 
+ Monitoring 
+ Communication Logging 
+ Data Efficiency 
+ Tutorials 
+ Getting started 
+ Getting started on Azure 
+ Accelerator Abstraction 
+ Accelerator Setup Guides 
+ Automatic Tensor Parallelism (Inference) 
+ Automatic Tensor Parallelism (Training) 
+ Autotuning 
+ BingBertSQuAD Fine-tuning 
+ BERT Pre-training 
+ CIFAR-10 
+ Data Efficiency 
+ DeepNVMe 
+ Domino 
+ DS4Sci_EvoformerAttention 
+ Flops Profiler 
+ PyTorch Profiler 
+ GAN 
+ Inference 
+ Learning Rate Range Test 
+ Megatron-LM GPT2 
+ Mixture of Experts (DeepSpeed MoE) 
+ MoE for NLG 
+ MoE Inference 
+ Monitoring 
+ Communication Logging 
+ One-Cycle Schedule 
+ Pipeline Parallelism 
+ Transformer Kernel 
+ Arctic Long Sequence Training (ALST) for HF Transformers integration 
+ ZeRO-Offload 
+ ZeRO 
+ ZeRO++ 
+ Contributing 
+ Latest News
+ Contents
+ Extreme Speed and Scale for DL Training 
+ DeepSpeed Adoption 
+ Contributing 
+ Contributor License Agreement 
+ Code of Conduct 
+ Publications 
+ Videos 
+ [2026/05] Using Muon Optimizer with DeepSpeed 
+ [2026/05] System DMA (SDMA) for ZeRO-3: offload collectives off compute units on AMD GPUs for better overlap 
+ [2025/12] DeepSpeed Core API updates: PyTorch-style backward and low-precision master states 
+ [2025/10] SuperOffload: Unleashing the Power of Large-Scale LLM Training on Superchips 
+ [2025/10] Study of ZenFlow and ZeRO offload performance with DeepSpeed CPU core binding 
+ More news 
+ [2025/08] ZenFlow: Stall-Free Offloading Engine for LLM Training 
+ [2025/06] Arctic Long Sequence Training (ALST) with DeepSpeed: Scalable And Efficient Training For Multi-Million Token Sequences 
+ [2025/04] DeepCompile: Unlocking Compiler Optimization for Distributed Training 
+ Extreme Speed and Scale for DL Training
+ DeepSpeed enabled the world’s most powerful language models (at the time of this writing) such as MT-530B and BLOOM . DeepSpeed offers a confluence of system innovations , that has made large scale DL training effective, and efficient, greatly improved ease of use, and redefined the DL training landscape in terms of scale that is possible. These innovations include ZeRO, 3D-Parallelism, DeepSpeed-MoE, ZeRO-Infinity, etc.
+ DeepSpeed Adoption
+ DeepSpeed has been used to train many different large-scale models. Below is a list of several examples that we are aware of (if you’d like to include your model please submit a PR):
+ Megatron-Turing NLG (530B) 
+ Jurassic-1 (178B) 
+ BLOOM (176B) 
+ GLM (130B) 
+ YaLM (100B) 
+ GPT-NeoX (20B) 
+ AlexaTM (20B) 
+ Turing NLG (17B 
+ METRO-LM (5.4B) 
+ DeepSpeed has been integrated with several different popular open-source DL frameworks such as:
+ Documentation 
+ Transformers with DeepSpeed 
+ Accelerate with DeepSpeed 
+ Lightning with DeepSpeed 
+ MosaicML with DeepSpeed 
+ DeepSpeed is an integral part of Microsoft’s AI at Scale initiative to enable next-generation AI capabilities at scale.
+ Contributing
+ DeepSpeed welcomes your contributions! Please see our
+ contributing guide for more details on formatting, testing,
+etc.
+ Contributor License Agreement
+ This project welcomes contributions and suggestions. Most contributions require you to
+agree to a Developer Certificate of Origin (DCO)[https://wiki.linuxfoundation.org/dco]
+stating that they agree to the terms published at https://developercertificate.org for
+that particular contribution.
+ DCOs are per-commit, so each commit needs to be signed off. These can be signed in
+the commit by adding the -s flag. DCO enforcement can also be signed off in the PR
+itself by clicking on the DCO enforcement check.
+ Code of Conduct
+ This project has adopted the Microsoft Open Source Code of
+Conduct . For more information see the
+ Code of Conduct FAQ or contact
+ opencode@microsoft.com with any additional questions or
+comments.
+ Publications
+ Samyam Rajbhandari, Jeff Rasley, Olatunji Ruwase, Yuxiong He. (2019) ZeRO: memory optimizations toward training trillion parameter models. arXiv:1910.02054 and In Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis (SC ‘20) .
+ Jeff Rasley, Samyam Rajbhandari, Olatunji Ruwase, and Yuxiong He. (2020) DeepSpeed: System Optimizations Enable Training Deep Learning Models with Over 100 Billion Parameters. In Proceedings of the 26th ACM SIGKDD International Conference on Knowledge Discovery & Data Mining (KDD ‘20, Tutorial) .
+ Minjia Zhang, Yuxiong He. (2020) Accelerating Training of Transformer-Based Language Models with Progressive Layer Dropping. arXiv:2010.13369 and NeurIPS 2020 .
+ Jie Ren, Samyam Rajbhandari, Reza Yazdani Aminabadi, Olatunji Ruwase, Shuangyan Yang, Minjia Zhang, Dong Li, Yuxiong He. (2021) ZeRO-Offload: Democratizing Billion-Scale Model Training. arXiv:2101.06840 and USENIX ATC 2021 . [paper] [slides] [blog] 
+ Hanlin Tang, Shaoduo Gan, Ammar Ahmad Awan, Samyam Rajbhandari, Conglong Li, Xiangru Lian, Ji Liu, Ce Zhang, Yuxiong He. (2021) 1-bit Adam: Communication Efficient Large-Scale Training with Adam’s Convergence Speed. arXiv:2102.02888 and ICML 2021 .
+ Samyam Rajbhandari, Olatunji Ruwase, Jeff Rasley, Shaden Smith, Yuxiong He. (2021) ZeRO-Infinity: Breaking the GPU Memory Wall for Extreme Scale Deep Learning. arXiv:2104.07857 and SC 2021 . [paper] [slides] [blog] 
+ Conglong Li, Ammar Ahmad Awan, Hanlin Tang, Samyam Rajbhandari, Yuxiong He. (2021) 1-bit LAMB: Communication Efficient Large-Scale Large-Batch Training with LAMB’s Convergence Speed. arXiv:2104.06069 and HiPC 2022 .
+ Conglong Li, Minjia Zhang, Yuxiong He. (2021) The Stability-Efficiency Dilemma: Investigating Sequence Length Warmup for Training GPT Models. arXiv:2108.06084 and NeurIPS 2022 .
+ Yucheng Lu, Conglong Li, Minjia Zhang, Christopher De Sa, Yuxiong He. (2022) Maximizing Communication Efficiency for Large-scale Training via 0/1 Adam. arXiv:2202.06009 .
+ Samyam Rajbhandari, Conglong Li, Zhewei Yao, Minjia Zhang, Reza Yazdani Aminabadi, Ammar Ahmad Awan, Jeff Rasley, Yuxiong He. (2022) DeepSpeed-MoE: Advancing Mixture-of-Experts Inference and Training to Power Next-Generation AI Scale arXiv:2201.05596 and ICML 2022 . [pdf] [slides] [blog] 
+ Shaden Smith, Mostofa Patwary, Brandon Norick, Patrick LeGresley, Samyam Rajbhandari, Jared Casper, Zhun Liu, Shrimai Prabhumoye, George Zerveas, Vijay Korthikanti, Elton Zhang, Rewon Child, Reza Yazdani Aminabadi, Julie Bernauer, Xia Song, Mohammad Shoeybi, Yuxiong He, Michael Houston, Saurabh Tiwary, Bryan Catanzaro. (2022) Using DeepSpeed and Megatron to Train Megatron-Turing NLG 530B, A Large-Scale Generative Language Model arXiv:2201.11990 .
+ Xiaoxia Wu, Zhewei Yao, Minjia Zhang, Conglong Li, Yuxiong He. (2022) Extreme Compression for Pre-trained Transformers Made Simple and Efficient. arXiv:2206.01859 and NeurIPS 2022 .
+ Zhewei Yao, Reza Yazdani Aminabadi, Minjia Zhang, Xiaoxia Wu, Conglong Li, Yuxiong He. (2022) ZeroQuant: Efficient and Affordable Post-Training Quantization for Large-Scale Transformers. arXiv:2206.01861 and NeurIPS 2022 [slides] [blog] 
+ Reza Yazdani Aminabadi, Samyam Rajbhandari, Minjia Zhang, Ammar Ahma
+
+=== [about] https://www.deepspeed.ai/docs/config-json/ (lang=en)
+DeepSpeed Configuration JSON - DeepSpeed 
+ Skip links
+ Skip to primary navigation 
+ Skip to content 
+ Skip to footer 
+ You are using an outdated browser. Please upgrade your browser to improve your experience.
+ DeepSpeed
+ -->
+ Getting Started 
+ Blog 
+ Tutorials 
+ Documentation 
+ GitHub 
+ Toggle search 
+ Toggle menu 
+ Home 
+ / 
+ Docs 
+ / 
+ DeepSpeed Configuration JSON
+ Toggle Menu 
+ Training 
+ Inference 
+ Science 
+ Getting Started 
+ ds_config 
+ Autotuning 
+ Batch size 
+ Optimizer 
+ FP16 
+ BFLOAT16 
+ ZeRO optimizations 
+ Logging 
+ Flops Profiler 
+ Monitoring 
+ Communication Logging 
+ Data Efficiency 
+ Tutorials 
+ Getting started 
+ Getting started on Azure 
+ Accelerator Abstraction 
+ Accelerator Setup Guides 
+ Automatic Tensor Parallelism (Inference) 
+ Automatic Tensor Parallelism (Training) 
+ Autotuning 
+ BingBertSQuAD Fine-tuning 
+ BERT Pre-training 
+ CIFAR-10 
+ Data Efficiency 
+ DeepNVMe 
+ Domino 
+ DS4Sci_EvoformerAttention 
+ Flops Profiler 
+ PyTorch Profiler 
+ GAN 
+ Inference 
+ Learning Rate Range Test 
+ Megatron-LM GPT2 
+ Mixture of Experts (DeepSpeed MoE) 
+ MoE for NLG 
+ MoE Inference 
+ Monitoring 
+ Communication Logging 
+ One-Cycle Schedule 
+ Pipeline Parallelism 
+ Transformer Kernel 
+ Arctic Long Sequence Training (ALST) for HF Transformers integration 
+ ZeRO-Offload 
+ ZeRO 
+ ZeRO++ 
+ Contributing 
+ DeepSpeed Configuration JSON
+ Contents
+ Batch Size Related Parameters 
+ Optimizer Parameters 
+ Per-head Muon 
+ Scheduler Parameters 
+ Communication options 
+ FP16 training options 
+ BFLOAT16 training options 
+ PyTorch Automatic Mixed Precision (torch.autocast) training options 
+ Gradient Clipping 
+ ZeRO Optimizations for FP16 Training 
+ Parameter offloading 
+ Optimizer offloading 
+ Asynchronous I/O 
+ Tensor Parallel (AutoTP) 
+ Hybrid Engine 
+ Expert Parallel (AutoEP) 
+ Custom Model Example 
+ Preset Override Example 
+ Python cyclic garbage collection 
+ Logging 
+ Autotuning 
+ Flops Profiler 
+ Activation Checkpointing 
+ Data Efficiency 
+ Monitoring Module 
+ Communication Logging 
+ Checkpoint options 
+ AutoSP options 
+ AutoTP options 
+ DeepCompile activation offload 
+ Data Type options 
+ Batch Size Related Parameters
+ Note: train_batch_size must be equal to train_micro_batch_size_per_gpu * gradient_accumulation_steps * number of GPUs. For simplicity, you can choose to only specify two of the three parameters, the last one will be inferred automatically by DeepSpeed.
+ train_batch_size : [integer]
+ Value 
+ Example 
+ The effective training batch size. This is the amount of data samples that leads to one step of model update. train_batch_size is aggregated by the batch size that a single GPU processes in one forward/backward pass (a.k.a., train_micro_batch_size_per_gpu ), the gradient accumulation steps (a.k.a., gradient_accumulation_steps ), and the number of GPUs. Can be omitted if both train_micro_batch_size_per_gpu and gradient_accumulation_steps are provided. 
+ 32 
+ train_micro_batch_size_per_gpu : [integer]
+ Description 
+ Default 
+ Batch size to be processed by one GPU in one step (without gradient accumulation). Can be omitted if both train_batch_size and gradient_accumulation_steps are provided. 
+ train_batch_size value 
+ gradient_accumulation_steps : [integer]
+ Description 
+ Default 
+ Number of training steps to accumulate gradients before averaging and applying them. This feature is sometimes useful to improve scalability since it results in less frequent communication of gradients between steps. Another impact of this feature is the ability to train with larger batch sizes per GPU. Can be omitted if both train_batch_size and train_
+
+=== [meta] https://www.deepspeed.ai/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/deepspeedai/DeepSpeed
+[![License Apache 2.0](https://badgen.net/badge/license/apache2.0/blue)](https://github.com/deepspeedai/DeepSpeed/blob/master/LICENSE)
+[![PyPI version](https://badge.fury.io/py/deepspeed.svg)](https://pypi.org/project/deepspeed/)
+[![Downloads](https://static.pepy.tech/badge/deepspeed)](https://pepy.tech/project/deepspeed)
+[![Build](https://badgen.net/badge/build/check-status/blue)](#build-pipeline-status)
+[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/9530/badge)](https://www.bestpractices.dev/projects/9530)
+[![Twitter](https://img.shields.io/twitter/follow/DeepSpeedAI)](https://twitter.com/intent/follow?screen_name=DeepSpeedAI)
+[![Japanese Twitter](https://img.shields.io/badge/%E6%97%A5%E6%9C%AC%E8%AA%9ETwitter-%40DeepSpeedAI_JP-blue)](https://twitter.com/DeepSpeedAI_JP)
+[![Chinese Zhihu](https://img.shields.io/badge/%E7%9F%A5%E4%B9%8E-%E5%BE%AE%E8%BD%AFDeepSpeed-blue)](https://www.zhihu.com/people/deepspeed)
+[![Slack](https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white)](https://join.slack.com/t/deepspeedworkspace/shared_invite/zt-3a8pjd8dd-PCj2hMvR4Y2syPwVnjEoww)
+
+
+<div align="center">
+ <img src="docs/assets/images/DeepSpeed_light.svg#gh-light-mode-only" width="400px">
+ <img src="docs/assets/images/DeepSpeed_dark_transparent.svg#gh-dark-mode-only" width="400px">
+</div>
+
+<p align="center">
+  <b>English</b> · <a href="README.zh.md">简体中文</a>
+</p>
+
+
+## Office Hours
+
+DeepSpeed hosts regular office hours on the last Tuesday of each month at 12:00 America/New_York to discuss development plans, features, etc.  This meeting is public for anyone to join and ask questions.
+The meeting is hosted on Zoom and can be joined [here](https://zoom-lfx.platform.linuxfoundation.org/meeting/93902569995?password=7d9c4fc9-3efa-4715-88f0-df8a6deb008b).
+
+## Latest News
+
+* [2026/05] [Using Muon Optimizer with DeepSpeed](https://github.com/deepspeedai/DeepSpeed/blob/master/blogs/muon-optimizer/README.md)
+
+* [2026/05] [System DMA (SDMA) for ZeRO-3: offload collectives off compute units on AMD GPUs for better overlap](https://github.com/deepspeedai/DeepSpeed/blob/master/examples/sdma_allgather/README.md)
+
+* [2026/03] DeepSpeed Team gave a tutorial at ASPLOS 2026 titled ["Building Efficient Large-Scale Model Systems with DeepSpeed: From Open-Source Foundations to Emerging Research" ](https://supercomputing-system-ai-lab.github.io/events/asplos2026-llm-tutorial/index.html)
+
+* [2026/03] [Our SuperOffload work received an Honorable Mention for the ASPLOS 2026 Best Paper Award](https://dl.acm.org/doi/10.1145/3760250.3762217)
+
+* [2025/12] [DeepSpeed Core API updates: PyTorch-style backward and low-precision master states](https://github.com/deepspeedai/DeepSpeed/blob/master/blogs/core_api_update/README.md)
+
+* [2025/11] [DeepSpeed ZeRO++ powers large-scale distillation training of LLMs for Recommendation Systems at LinkedIn](https://aclanthology.org/2025.emnlp-industry.119/)
+
+* [2025/10] We hosted the [Ray x DeepSpeed Meetup](https://luma.com/3wctqteh) at Anyscale. We shared our most recent work on SuperOffload, ZenFlow, Muon Optimizer Support, Arctic Long Sequence Training and DeepCompile. Please find the meetup slides [here](https://docs.google.com/presentation/d/1eM3mY6oW9GYkRy1Xz0iOnbbEr5T1t0JJXOM5BKtR-Ks/edit?slide=id.g38615d6b4c2_0_87#slide=id.g38615d6b4c2_0_87).
+
+* [2025/10] [SuperOffload: Unleashing the Power of Large-Scale LLM Training on Superchips](https://pytorch.org/blog/superoffload-unleashing-the-power-of-large-scale-llm-training-on-superchips/)
+
+* [2025/10] [Study of ZenFlow and ZeRO offload performance with DeepSpeed CPU core binding](https://github.com/deepspeedai/DeepSpeed/blob/master/blogs/zenflow-corebinding/README.md)
+
+* [2025/08] [ZenFlow: Stall-Free Offloading Engine for LLM Training](https://pytorch.org/blog/zenflow-stall-free-offloading-engine-for-llm-training/)
+
+* [2025/06] [Arctic Long Sequence Training (ALST) with DeepSpeed: Scalable And Efficient Training For Multi-Million Token Sequences](https://www.snowflake.com/en/engineering-blog/arctic-long-sequence-training-multi-million-token-ai/)
+
+* [2025/06] [DeepNVMe: Affordable I/O scaling for Deep Learning Applications](https

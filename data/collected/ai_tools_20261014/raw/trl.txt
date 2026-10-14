@@ -1,0 +1,439 @@
+=== [home] https://huggingface.co/docs/trl/index
+TRL - Transformers Reinforcement Learning · Hugging Face 
+ Hugging Face 
+ Models 
+ Datasets 
+ Spaces 
+ Buckets new 
+ Docs 
+ Enterprise 
+ Pricing 
+ Website 
+ Tasks 
+ HuggingChat 
+ Collections 
+ Languages 
+ Organizations 
+ Community 
+ Blog 
+ Posts 
+ Daily Papers 
+ Hardware 
+ Learn 
+ Discord 
+ Forum 
+ GitHub 
+ Solutions 
+ Team & Enterprise 
+ Hugging Face PRO 
+ Enterprise Support 
+ Inference Providers 
+ Inference Endpoints 
+ Storage Buckets 
+ Log In 
+ Sign Up 
+ TRL documentation
+ TRL - Transformers Reinforcement Learning
+ TRL
+ 🏡 View all docs AWS Trainium & Inferentia Accelerate Argilla AutoTrain Bitsandbytes CLI Chat UI Dataset viewer Datasets Deploying on AWS Diffusers Distilabel Evaluate Google Cloud Google TPUs Gradio Hub Hub Python Library Huggingface.js Inference Endpoints (dedicated) Inference Providers Kernels LeRobot Leaderboards Lighteval Microsoft Azure OpenEnv Optimum PEFT Reachy Mini Safetensors Sentence Transformers TRL Tasks Text Embeddings Inference Text Generation Inference Tokenizers Trackio Transformers Transformers.js Xet smolagents timm 
+ Search documentation
+ main v1.15.0 v1.14.2 v1.13.0 v1.12.0 v1.11.0 v1.10.0 v1.9.2 v1.8.0 v1.7.1 v1.6.0 v1.5.1 v1.4.0 v1.3.0 v1.2.0 v1.1.0 v1.0.0 v0.29.1 v0.28.0 v0.27.2 v0.26.2 v0.25.1 v0.24.0 v0.23.1 v0.22.2 v0.21.0 v0.20.0 v0.19.1 v0.18.1 v0.17.0 v0.16.1 v0.15.2 v0.14.0 v0.13.0 v0.12.2 v0.11.4 v0.10.1 v0.9.6 v0.8.6 v0.7.11 v0.6.0 v0.5.0 v0.4.7 v0.3.1 v0.2.1 v0.1.1 EN 
+ Getting started 
+ TRL Installation Quickstart Usage Stats Collection 
+ Conceptual Guides 
+ Chat Templates Dataset Formats Paper Index 
+ Trainers 
+ Distillation DPO GRPO KTO Reward RLOO SFT 
+ How-to guides 
+ Command Line Interface (CLI) Training using Jobs Customizing the Training Reducing Memory Usage Speeding Up Training Distributing Training Training Beyond 1M Tokens Using Trained Models 
+ Integrations 
+ DeepSpeed Harbor Kernels Hub OpenEnv OpenReward PEFT RapidFire AI Trackio Unsloth vLLM 
+ Examples 
+ Example Overview Community Tutorials LoRA Without Regret 
+ API 
+ Utilities 
+ Chat Template Utilities Data Utilities Script Utilities 
+ Callbacks Reward Functions 
+ Experimental 
+ Join the Hugging Face community
+ and get access to the augmented documentation experience
+ Collaborate on models, datasets and Spaces
+ Faster examples with accelerated inference
+ Switch between documentation themes
+ Sign Up to get started
+ Copy page 
+ TRL - Transformers Reinforcement Learning 
+ TRL is a full stack library where we provide a set of tools to train transformer language models with methods like Supervised Fine-Tuning (SFT), Group Relative Policy Optimization (GRPO), Direct Preference Optimization (DPO), Reward Modeling, and more.
+The library is integrated with 🤗 transformers .
+ 🎉 What’s New 
+ ⚡ Up to 6.9× longer sequences on the same GPU: SFT, DPO, KTO, GRPO and RLOO now score tokens with a fused LM head by default . At 8k tokens that is 52% to 82% less peak VRAM.
+ Taxonomy 
+ Below is an overview of TRL trainers, organized by maturity and method type.
+ Online methods 
+ GRPOTrainer 
+ RLOOTrainer 
+ Reward modeling 
+ RewardTrainer 
+ Offline methods 
+ SFTTrainer 
+ DPOTrainer 
+ KTOTrainer 
+ Knowledge distillation 
+ DistillationTrainer 
+ Experimental 
+ Online methods 
+ A2POTrainer 
+ AsyncGRPOTrainer 
+ GMPOTrainer 
+ OnlineDPOTrainer 
+ Offline methods 
+ BEMA for Reference Model 
+ CPOTrainer 
+ ORPOTrainer 
+ TPOTrainer 
+ Knowledge distillation 
+ AsyncDistillationTrainer 
+ GKDTrainer 
+ GOLDTrainer 
+ IWOPDTrainer 
+ SDFTTrainer 
+ SDPOTrainer 
+ SSDTrainer 
+ You can also explore TRL-related models, datasets, and demos in the TRL Hugging Face organization .
+ Learn 
+ Learn post-training with TRL and other libraries in 🤗 smol course .
+ Contents 
+ The documentation is organized into the following sections:
+ Getting Started : installation and quickstart guide.
+ Conceptual Guides : dataset formats, training FAQ, and understanding logs.
+ How-to Guides : reducing memory usage, speeding up training, distributing training, etc.
+ Integrations : DeepSpeed, PEFT, etc.
+ Examples : example overview, community tutorials, etc.
+ API : trainers, utils, etc.
+ Blog posts 
+ Published on May 27, 2026
+ Shipping a Trillion Parameters With a Hub Bucket: Delta Weight Sync in TRL
+ Published on March 31, 2026
+ TRL v1: Post-Training Library That Holds When the Field Invalidates Its Own Assumptions
+ Published on March 10, 2026
+ Keep the Tokens Flowing: Lessons from 16 Open-Source RL Libraries
+ Published on March 9, 2026
+ Ulysses Sequence Parallelism: Training with Million-Token Contexts
+ Published October 23, 2025
+ Building the Open Agent Ecosystem Together: Introducing OpenEnv
+ Published on August 7, 2025
+ Vision Language Model Alignment in TRL ⚡️
+ Published on June 3, 2025
+ NO GPU left behind: Unlocking Efficiency with Co-located vLLM in TRL
+ Published on May 25, 2025
+ 🐯 Liger GRPO meets TRL
+ Published on January 28, 2025
+ Open-R1: a fully open reproduction of DeepSeek-R1
+ Published on July 10, 2024
+ Preference Optimization for Vision Language Models with TRL
+ Published on June 12, 2024
+ Putting RL back in RLHF
+ Published on January 10, 2024
+ Make LLM Fine-tuning 2x faster with Unsloth and 🤗 TRL
+ Published on September 29, 2023
+ Finetune Stable Diffusion Models with DDPO via TRL
+ Published on August 8, 2023
+ Fine-tune Llama 2 with DPO
+ Published on April 5, 2023
+ StackLLaMA: A hands-on guide to train LLaMA with RLHF
+ Published on March 9, 2023
+ Fine-tuning 20B LLMs with RLHF on a 24GB consumer GPU
+ Published on December 9, 2022
+ Illustrating Reinforcement Learning from Human Feedback
+ Talks 
+ Talk given on October 30, 2025
+ Fine tuning with TRL
+ Update on GitHub 
+ Installation → 
+ TR L - Transformers Reinforcement Learning 🎉 What’s New Taxonomy Online methods Reward modeling Offline methods Knowledge distillation Experimental Online methods Offline methods Knowledge distillation Learn Contents Blog posts Talks
+
+=== [pricing] https://huggingface.co/pricing
+Pricing - Hugging Face 
+ Hugging Face 
+ Models 
+ Datasets 
+ Spaces 
+ Buckets new 
+ Docs 
+ Enterprise 
+ Pricing 
+ Website 
+ Tasks 
+ HuggingChat 
+ Collections 
+ Languages 
+ Organizations 
+ Community 
+ Blog 
+ Posts 
+ Daily Papers 
+ Hardware 
+ Learn 
+ Discord 
+ Forum 
+ GitHub 
+ Solutions 
+ Team & Enterprise 
+ Hugging Face PRO 
+ Enterprise Support 
+ Inference Providers 
+ Inference Endpoints 
+ Storage Buckets 
+ Log In 
+ Sign Up 
+ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ 
+ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ 
+ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ 
+ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ 
+ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ 
+ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ 
+ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ 
+ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ 
+ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ 
+ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ 
+ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ 
+ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ 
+ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ 
+ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ 
+ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ 
+ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ 
+ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ 
+ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ 
+ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ 
+ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · 
+
+=== [about] https://huggingface.co/docs
+Hugging Face - Documentation 
+ Hugging Face 
+ Models 
+ Datasets 
+ Spaces 
+ Buckets new 
+ Docs 
+ Enterprise 
+ Pricing 
+ Website 
+ Tasks 
+ HuggingChat 
+ Collections 
+ Languages 
+ Organizations 
+ Community 
+ Blog 
+ Posts 
+ Daily Papers 
+ Hardware 
+ Learn 
+ Discord 
+ Forum 
+ GitHub 
+ Solutions 
+ Team & Enterprise 
+ Hugging Face PRO 
+ Enterprise Support 
+ Inference Providers 
+ Inference Endpoints 
+ Storage Buckets 
+ Log In 
+ Sign Up 
+ Documentation
+ Guides, references, and API docs for the Hugging Face ecosystem.
+ Hub & Client Libraries 
+ Hub
+ Host Git-based models, datasets, and Spaces on the HF Hub
+ Hub Python Library
+ Python client to interact with the Hugging Face Hub
+ CLI
+ Tools for agents and humans to interact with all the Hugging Face services
+ Huggingface.js
+ JavaScript libraries for Hugging Face with built-in TS types
+ Tasks
+ Explore demos, models, and datasets for any ML tasks
+ Dataset viewer
+ API for metadata, stats, and content of HF Hub datasets
+ Deployment & Inference 
+ Inference Providers
+ Call 200k+ models hosted by our 10+ Inference partners
+ Inference Endpoints (dedicated)
+ Deploy models on dedicated & fully managed infrastructure on HF
+ Deploying on AWS
+ Train/deploy models from Hugging Face to AWS with DLCs
+ Text Generation Inference
+ Serve language models with TGI optimized toolkit
+ Text Embeddings Inference
+ Serve embeddings models with TEI optimized toolkit
+ Microsoft Azure
+ Deploy Hugging Face models on Microsoft Azure
+ Google Cloud
+ Train and Deploy Hugging Face models on Google Cloud
+ Core ML Libraries 
+ Transformers
+ State-of-the-art AI models for PyTorch
+ Diffusers
+ State-of-the-art Diffusion models in PyTorch
+ Datasets
+ Access & share datasets for any ML tasks
+ Transformers.js
+ State-of-the-art ML running directly in your browser
+ Tokenizers
+ Fast tokenizers optimized for research & production
+ Evaluate
+ Evaluate and compare models performance
+ timm
+ State-of-the-art vision models: layers, optimizers, and utilities
+ Sentence Transformers
+ Embeddings, Retrieval, and Reranking
+ Kernels
+ Load and run compute kernels from the Hugging Face Hub
+ Training & Optimization 
+ PEFT
+ Parameter-efficient finetuning for large language models
+ Accelerate
+ Train PyTorch models with multi-GPU, TPU, mixed precision
+ Optimum
+ Optimize HF Transformers for faster training/inference
+ AWS Trainium & Inferentia
+ Train/deploy Transformers/Diffusers on AWS
+ Google TPUs
+ Train and Deploy models on Google TPUs via Optimum.
+ TRL
+ Train transformers LMs with reinforcement learning
+ OpenEnv
+ Create and deploy agentic RL execution environments
+ Safetensors
+ Safe way to store/distribute neural network weights
+ Bitsandbytes
+ Optimize and quantize models with bitsandbytes
+ Lighteval
+ All-in-one toolkit to evaluate LLMs across multiple backends
+ Collaboration & Extras 
+ Gradio
+ Build ML demos and web apps with a few lines of Python
+ Trackio
+ A lightweight, local-first, and free experiment tracking Python library
+ smolagents
+ Smol library to build great agents in Python
+ LeRobot
+ Making AI for Robotics more accessible with end-to-end learning
+ Reachy Mini
+ Open-source expressive robot SDK for hackers and AI builders
+ AutoTrain
+ AutoTrain API and UI for seamless model training
+ Chat UI
+ Open source chat frontend powering HuggingChat
+ Leaderboards
+ Create custom Leaderboards on Hugging Face
+ Argilla
+ Collaboration tool for building high-quality datasets
+ Distilabel
+ Framework for synthetic data generation and AI feedback
+ Xet
+ Xet Protocol Specification
+ Community 
+ Blog Learn Discord Forum GitHub 
+ System theme 
+ Company
+ TOS Privacy About Careers 
+
+=== [meta] https://huggingface.co/docs/trl/index
+html lang: 없음
+hreflang: en, x-default
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/huggingface/trl
+# TRL - Transformers Reinforcement Learning
+
+<div style="text-align: center">
+    <picture>
+        <source media="(prefers-color-scheme: light)" srcset="https://huggingface.co/datasets/trl-lib/documentation-images/resolve/main/trl_banner_light.png">
+        <img src="https://huggingface.co/datasets/trl-lib/documentation-images/resolve/main/trl_banner_dark.png" alt="TRL Banner">
+    </picture>
+</div>
+
+<hr> <br>
+
+<h3 align="center">
+    <p>A comprehensive library to post-train foundation models</p>
+</h3>
+
+<p align="center">
+    <a href="https://github.com/huggingface/trl/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/github/license/huggingface/trl.svg?color=blue"></a>
+    <a href="https://huggingface.co/docs/trl/index"><img alt="Documentation" src="https://img.shields.io/website?label=documentation&url=https%3A%2F%2Fhuggingface.co%2Fdocs%2Ftrl%2Findex&down_color=red&down_message=offline&up_color=blue&up_message=online"></a>
+    <a href="https://github.com/huggingface/trl/releases"><img alt="GitHub release" src="https://img.shields.io/github/release/huggingface/trl.svg"></a>
+    <a href="https://huggingface.co/trl-lib"><img alt="Hugging Face Hub" src="https://img.shields.io/badge/🤗%20Hub-trl--lib-yellow"></a>
+</p>
+
+## 🎉 What's New
+
+**⚡ Up to 6.9× longer sequences on the same GPU:** SFT, DPO, KTO, GRPO and RLOO now score tokens with a [fused LM head](https://huggingface.co/docs/trl/reducing_memory_usage) **by default**. At 8k tokens that is 52% to 82% less peak VRAM.
+
+## Overview
+
+TRL is a cutting-edge library designed for post-training foundation models using advanced techniques like Supervised Fine-Tuning (SFT), Group Relative Policy Optimization (GRPO), and Direct Preference Optimization (DPO). Built on top of the [🤗 Transformers](https://github.com/huggingface/transformers) ecosystem, TRL supports a variety of model architectures and modalities, and can be scaled-up across various hardware setups.
+
+## Highlights
+
+- **Trainers**: Various fine-tuning methods are easily accessible via trainers like [`SFTTrainer`](https://huggingface.co/docs/trl/sft_trainer), [`GRPOTrainer`](https://huggingface.co/docs/trl/grpo_trainer), [`DPOTrainer`](https://huggingface.co/docs/trl/dpo_trainer), [`KTOTrainer`](https://huggingface.co/docs/trl/kto_trainer) and more.
+
+- **Efficient and scalable**:
+  - Leverages [🤗 Accelerate](https://github.com/huggingface/accelerate) to scale from single GPU to multi-node clusters using methods like [DDP](https://pytorch.org/tutorials/intermediate/ddp_tutorial.html) and [DeepSpeed](https://github.com/deepspeedai/DeepSpeed).
+  - Full integration with [🤗 PEFT](https://github.com/huggingface/peft) enables training on large models with modest hardware via quantization and LoRA/QLoRA.
+  - Integrates [🦥 Unsloth](https://github.com/unslothai/unsloth) for accelerating training using optimized kernels.
+
+- **Command Line Interface (CLI)**: A simple interface lets you fine-tune with models without needing to write code.
+
+## Installation
+
+### Python Package
+
+Install the library using `pip`:
+
+```bash
+pip install trl
+```
+
+### From source
+
+If you want to use the latest features before an official release, you can install TRL from source:
+
+```bash
+pip install git+https://github.com/huggingface/trl.git
+```
+
+### Repository
+
+If you want to use the examples you can clone the repository with the following command:
+
+```bash
+git clone https://github.com/huggingface/trl.git
+```
+
+## Quick Start
+
+For more flexibility and control over training, TRL provides dedicated trainer classes to post-train language models or PEFT adapters on a custom dataset. Each trainer in TRL is a light wrapper around the 🤗 Transformers trainer and natively supports distributed training methods like DDP, DeepSpeed ZeRO, and FSDP.
+
+### `SFTTrainer`
+
+Here is a basic example of how to use the [`SFTTrainer`](https://huggingface.co/docs/trl/sft_trainer):
+
+```python
+from trl import SFTTrainer
+from datasets import load_dataset
+
+dataset = load_dataset("trl-lib/Capybara", split="train")
+
+trainer = SFTTrainer(
+    model="Qwen/Qwen2.5-0.5B",
+    train_dataset=dataset,
+)
+trainer.train()
+```
+
+### `GRPOTrainer`
+
+[`GRPOTrainer`](https://huggingface.co/doc

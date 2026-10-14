@@ -1,0 +1,167 @@
+=== [home] https://automl.github.io/auto-sklearn/master/
+auto-sklearn — AutoSklearn 0.15.0 documentation 
+ auto-sklearn 
+ 0.15.0 
+ Start 
+ Releases 
+ Installation 
+ Manual 
+ Examples 
+ API 
+ Extending 
+ FAQ 
+ auto-sklearn 
+ Example 
+ Manual 
+ Additional Material 
+ License 
+ Citing auto-sklearn 
+ Contributing 
+ auto-sklearn ¶ 
+ auto-sklearn is an automated machine learning toolkit and a drop-in
+replacement for a scikit-learn estimator:
+ import autosklearn.classification 
+ cls = autosklearn . classification . AutoSklearnClassifier () 
+ cls . fit ( X_train , y_train ) 
+ predictions = cls . predict ( X_test ) 
+ auto-sklearn frees a machine learning user from algorithm selection and
+hyperparameter tuning. It leverages recent advantages in Bayesian
+optimization , meta-learning and ensemble construction . Learn more about
+the technology behind auto-sklearn by reading our paper published at
+ NeurIPS 2015 
+.
+ NEW: Text feature support
+ Auto-sklearn now supports text features, check our new example:
+ Text preprocessing 
+ Example ¶ 
+ import autosklearn.classification 
+ import sklearn.model_selection 
+ import sklearn.datasets 
+ import sklearn.metrics 
+ if __name__ == "__main__" : 
+ X , y = sklearn . datasets . load_digits ( return_X_y = True ) 
+ X_train , X_test , y_train , y_test = \
+ sklearn . model_selection . train_test_split ( X , y , random_state = 1 ) 
+ automl = autosklearn . classification . AutoSklearnClassifier () 
+ automl . fit ( X_train , y_train ) 
+ y_hat = automl . predict ( X_test ) 
+ print ( "Accuracy score" , sklearn . metrics . accuracy_score ( y_test , y_hat )) 
+ This will run for one hour and should result in an accuracy above 0.98.
+ Manual ¶ 
+ Installation 
+ Manual 
+ APIs 
+ Extending auto-sklearn 
+ FAQ 
+ Additional Material ¶ 
+ We provide slides and notebooks from talks and tutorials here:
+ auto-sklearn-talks 
+ License ¶ 
+ auto-sklearn is licensed the same way as scikit-learn ,
+namely the 3-clause BSD license.
+ Citing auto-sklearn ¶ 
+ If you use auto-sklearn in a scientific publication, we would appreciate a
+reference to the following paper:
+ Efficient and Robust Automated Machine Learning ,
+Feurer et al. , Advances in Neural Information Processing Systems 28 (NIPS 2015).
+ Bibtex entry:
+ @inproceedings { feurer - neurips15a , 
+ title = { Efficient and Robust Automated Machine Learning }, 
+ author = { Feurer , Matthias and Klein , Aaron and Eggensperger , Katharina and Springenberg , Jost and Blum , Manuel and Hutter , Frank }, 
+ booktitle = { Advances in Neural Information Processing Systems 28 ( 2015 )}, 
+ pages = { 2962 -- 2970 }, 
+ year = { 2015 } 
+ } 
+ If you are using Auto-sklearn 2.0, please also cite
+ Auto-Sklearn 2.0: Hands-free AutoML via Meta-Learning , Feurer et al. , (arXiv, 2020).
+ Bibtex entry:
+ @article { feurer - arxiv20a , 
+ title = { Auto - Sklearn 2.0 : Hands - free AutoML via Meta - Learning }, 
+ author = { Feurer , Matthias and Eggensperger , Katharina and Falkner , Stefan and Lindauer , Marius and Hutter , Frank }, 
+ journal = { arXiv : 2007.04074 [ cs . LG ]}, 
+ year = { 2020 }, 
+ } 
+ Contributing ¶ 
+ We appreciate all contribution to auto-sklearn, from bug reports and
+documentation to new features. If you want to contribute to the code, you can
+pick an issue from the issue tracker .
+ Check out our contribution guide on github if you want to know more!
+We’ve catered it for both new and experienced contributers.
+ Note
+ To avoid spending time on duplicate work or features that are unlikely to
+get merged, it is highly advised that you contact the developers
+by opening a github issue before starting to work.
+ Back to top 
+ Source 
+ © Copyright 2014-2022, Machine Learning Professorship Freiburg.
+ Created using Sphinx 4.2.0.
+
+=== [meta] https://automl.github.io/auto-sklearn/master/
+html lang: 없음
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/automl/auto-sklearn
+# auto-sklearn
+
+**auto-sklearn** is an automated machine learning toolkit and a drop-in replacement for a [scikit-learn](https://scikit-learn.org) estimator.
+
+Find the documentation **[here](https://automl.github.io/auto-sklearn/)**. Quick links:
+  * [Installation Guide](https://automl.github.io/auto-sklearn/master/installation.html)
+  * [Releases](https://automl.github.io/auto-sklearn/master/releases.html)
+  * [Manual](https://automl.github.io/auto-sklearn/master/manual.html)
+  * [Examples](https://automl.github.io/auto-sklearn/master/examples/index.html)
+  * [API](https://automl.github.io/auto-sklearn/master/api.html)
+
+## auto-sklearn in one image
+
+![image](doc/images/askl_pipeline.png)
+
+## auto-sklearn in four lines of code
+
+```python
+import autosklearn.classification
+cls = autosklearn.classification.AutoSklearnClassifier()
+cls.fit(X_train, y_train)
+predictions = cls.predict(X_test)
+```
+
+## Relevant publications
+
+If you use auto-sklearn in scientific publications, we would appreciate citations.
+
+**Efficient and Robust Automated Machine Learning**
+*Matthias Feurer, Aaron Klein, Katharina Eggensperger, Jost Springenberg, Manuel Blum and Frank Hutter*
+Advances in Neural Information Processing Systems 28 (2015)
+
+[Link](https://papers.neurips.cc/paper/5872-efficient-and-robust-automated-machine-learning.pdf) to publication.
+```
+@inproceedings{feurer-neurips15a,
+    title     = {Efficient and Robust Automated Machine Learning},
+    author    = {Feurer, Matthias and Klein, Aaron and Eggensperger, Katharina and Springenberg, Jost and Blum, Manuel and Hutter, Frank},
+    booktitle = {Advances in Neural Information Processing Systems 28 (2015)},
+    pages     = {2962--2970},
+    year      = {2015}
+}
+```
+
+----------------------------------------
+
+**Auto-Sklearn 2.0: The Next Generation**
+*Matthias Feurer, Katharina Eggensperger, Stefan Falkner, Marius Lindauer and Frank Hutter**
+arXiv:2007.04074 [cs.LG], 2020
+
+[Link](https://arxiv.org/abs/2007.04074) to publication.
+```
+@article{feurer-arxiv20a,
+    title     = {Auto-Sklearn 2.0: Hands-free AutoML via Meta-Learning},
+    author    = {Feurer, Matthias and Eggensperger, Katharina and Falkner, Stefan and Lindauer, Marius and Hutter, Frank},
+    booktitle = {arXiv:2007.04074 [cs.LG]},
+    year      = {2020}
+}
+```
+
+----------------------------------------
+
+Also, have a look at the blog on [automl.org](https://automl.org) where we regularly release blogposts.
+

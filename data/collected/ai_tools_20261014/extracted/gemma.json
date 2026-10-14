@@ -1,42 +1,82 @@
 {
  "company": "Google DeepMind",
- "one_liner_ko": "Google DeepMind가 공개하는 가장 강력한 오픈 모델 제품군으로, 클라우드부터 노트북·휴대폰까지 어디서나 돌아가는 AI 앱을 만들 수 있게 한다.",
- "what_it_does_ko": "Gemma는 Google DeepMind의 오픈 모델 시리즈로, 개발자가 클라우드 서버·노트북·휴대폰 등 원하는 곳에서 실행되는 AI 앱을 만들도록 돕는다. 최신 Gemma 4는 고급 추론과 에이전트 워크플로를 목표로 하며, 모바일·IoT용 E2B·E4B와 PC용 12B·26B·31B 크기가 있다. 의료(MedGemma), 번역(TranslateGemma, 55개 언어), 임베딩(EmbeddingGemma), 안전 분류(ShieldGemma 2) 등 용도별 변형 모델도 있다. Kaggle·Hugging Face·Ollama·PyTorch·Google Cloud 등에서 쓸 수 있고 Google AI Studio에서 체험할 수 있다.",
+ "one_liner_ko": "구글 딥마인드가 공개한, 클라우드 서버부터 노트북·휴대폰까지 어디서나 돌릴 수 있는 가장 강력한 오픈 모델 제품군.",
+ "what_it_does_ko": "Gemma는 Google DeepMind의 오픈 모델 제품군이다. 개발자가 클라우드 서버, 노트북, 휴대폰 등 사용자가 필요한 곳에서 실행되는 AI 앱을 만들 수 있게 한다. 최신 Gemma 4는 고급 추론과 에이전트형 워크플로를 목표로 하며, 모바일·IoT용 E2B·E4B와 개인용 컴퓨터용 12B·26B·31B 크기가 있다. 의료(MedGemma), 번역(TranslateGemma), 임베딩(EmbeddingGemma), 안전 분류(ShieldGemma 2) 같은 공식 변형 모델도 함께 제공된다.",
  "key_features": [
-  "고급 추론·에이전트 워크플로용 Gemma 4",
-  "모바일·IoT 기기용 경량 모델(E2B·E4B)",
-  "개인 PC용 12B·26B·31B 모델",
-  "55개 언어 번역 모델(TranslateGemma)",
-  "의료 텍스트·이미지 이해 모델(MedGemma)",
-  "기기 내 임베딩 모델(EmbeddingGemma)",
-  "정책 위반 콘텐츠 탐지 분류 모델(ShieldGemma 2)",
-  "Kaggle·Hugging Face·Ollama·PyTorch 등 연동"
+  "Gemma 4: 고급 추론·에이전트형 워크플로용 오픈 모델",
+  "모바일·IoT 기기용 경량 크기(E2B·E4B)",
+  "개인용 컴퓨터에서 도는 12B·26B·31B 크기",
+  "55개 언어 번역 모델 TranslateGemma",
+  "의료 텍스트·영상 이해 모델 MedGemma",
+  "정책 위반 콘텐츠 분류 모델 ShieldGemma 2",
+  "온디바이스 임베딩 모델 EmbeddingGemma",
+  "Google AI Studio에서 바로 사용해 보기"
  ],
  "use_cases_ko": [
-  "개발자가 클라우드·노트북·휴대폰에서 실행되는 AI 앱 개발",
-  "의료 AI 개발(MedGemma)",
-  "인터넷 없는 환경의 교육용 오프라인 AI(사례 소개)"
+  "개발자가 클라우드·노트북·휴대폰에서 도는 AI 앱 개발",
+  "의료 영상·텍스트 이해 연구(MedGemma)"
  ],
- "pricing": {"free_tier": "불명", "plans": [], "pricing_url": null},
- "open_source": "오픈 모델 (라이선스 이름은 페이지에 없음)",
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "오픈 모델(라이선스 이름은 페이지에 없음)",
  "api": "불명",
  "platforms": [],
  "korean_support": "불명",
  "evidence": [
-  {"field": "company", "url": "https://deepmind.google/models/gemma/", "quote": "Gemma — Google DeepMind Skip to main content"},
-  {"field": "one_liner_ko", "url": "https://deepmind.google/models/gemma/", "quote": "Our most advanced open models help developers create AI applications that run wherever users need them — from cloud servers to laptops and even phones."},
-  {"field": "what_it_does_ko", "url": "https://deepmind.google/models/gemma/", "quote": "Our most advanced open models help developers create AI applications that run wherever users need them"},
-  {"field": "key_features", "url": "https://deepmind.google/models/gemma/", "quote": "Byte for byte, the most capable open models. Purpose-built for advanced reasoning and agentic workflows"},
-  {"field": "key_features", "url": "https://deepmind.google/models/gemma/", "quote": "E2B & E4B\n Maximum compute and memory efficiency\n A new level of intelligence for mobile and IoT devices"},
-  {"field": "key_features", "url": "https://deepmind.google/models/gemma/", "quote": "12B, 26B, 31B\n Advanced reasoning\n Frontier intelligence on personal computers"},
-  {"field": "key_features", "url": "https://deepmind.google/models/gemma/", "quote": "A collection of translation models to help people communicate across 55 languages"},
-  {"field": "key_features", "url": "https://deepmind.google/models/gemma/", "quote": "A collection of models trained for medical text and image comprehension"},
-  {"field": "key_features", "url": "https://deepmind.google/models/gemma/", "quote": "The best-in-class open model for on-device embeddings"},
-  {"field": "key_features", "url": "https://deepmind.google/models/gemma/", "quote": "A modular classifier model for detecting policy-violating content and upholding safety standards"},
-  {"field": "key_features", "url": "https://deepmind.google/models/gemma/", "quote": "Platforms and integrations\n Kaggle\n Hugging Face\n Keras\n Ollama\n PyTorch"},
-  {"field": "use_cases_ko", "url": "https://deepmind.google/models/gemma/", "quote": "Our most capable open models for health AI development"},
-  {"field": "use_cases_ko", "url": "https://deepmind.google/models/gemma/", "quote": "Lentera runs an offline AI microserver for educators and students"},
-  {"field": "open_source", "url": "https://deepmind.google/models/gemma/", "quote": "Gemma\n Our most capable open models"}
+  {
+   "field": "company",
+   "url": "https://deepmind.google/models/gemma/",
+   "quote": "Gemma — Google DeepMind Skip to main content"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://deepmind.google/models/gemma/",
+   "quote": "Our most advanced open models help developers create AI applications that run wherever users need them — from cloud servers to laptops and even phones."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://deepmind.google/models/gemma/",
+   "quote": "Byte for byte, the most capable open models. Purpose-built for advanced reasoning and agentic workflows"
+  },
+  {
+   "field": "key_features",
+   "url": "https://deepmind.google/models/gemma/",
+   "quote": "A collection of translation models to help people communicate across 55 languages"
+  },
+  {
+   "field": "key_features",
+   "url": "https://deepmind.google/models/gemma/",
+   "quote": "A modular classifier model for detecting policy-violating content and upholding safety standards"
+  },
+  {
+   "field": "key_features",
+   "url": "https://deepmind.google/models/gemma/",
+   "quote": "A collection of models trained for medical text and image comprehension"
+  },
+  {
+   "field": "key_features",
+   "url": "https://deepmind.google/models/gemma/",
+   "quote": "The best-in-class open model for on-device embeddings"
+  },
+  {
+   "field": "key_features",
+   "url": "https://deepmind.google/models/gemma/",
+   "quote": "A new level of intelligence for mobile and IoT devices"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://deepmind.google/models/gemma/",
+   "quote": "Our most advanced open models help developers create AI applications that run wherever users need them"
+  },
+  {
+   "field": "open_source",
+   "url": "https://deepmind.google/models/gemma/",
+   "quote": "Our most advanced open models help developers create AI applications"
+  }
  ],
- "mismatch": []
+ "mismatch": [],
+ "plan_change": []
 }

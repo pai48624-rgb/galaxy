@@ -1,0 +1,121 @@
+=== [home] https://microsoft.github.io/FLAML/ (lang=en)
+AutoML & Tuning | FLAML 
+ Skip to main content 
+ FLAML Docs SDK Blog FAQ 
+ GitHub 🌜 
+ 🌞 
+ ctrl K 
+ FLAML
+ A Fast Library for Automated Machine Learning & Tuning
+ FLAML Getting Started - 5min ⏱️ 
+ Find Quality Model at Your Fingertips
+ FLAML finds accurate models or configurations with low computational resources for common ML/AI tasks. It frees users from selecting models and hyperparameters for training or inference, with smooth customizability.
+ Adapt Large Language Models to Your Needs
+ By automatically adapting LLMs to applications, FLAML maximizes the benefits of expensive LLMs and reduces monetary costs. FLAML enables users to build and use intelligent adaptive AI agents with minimal effort.
+ Tune It Fast, Tune It As You Like
+ FLAML offers a fast auto-tuning tool powered by a novel cost-effective tuning approach. It is capable of handling large search spaces with heterogeneous evaluation costs and complex constraints/guidance/early stopping.
+ Community
+ Discord 
+ Copyright © 2026 FLAML Authors. Built with Docusaurus.
+
+=== [about] https://microsoft.github.io/FLAML/docs/FAQ/ (lang=en)
+Frequently Asked Questions | FLAML 
+ Skip to main content 
+ FLAML Docs SDK Blog FAQ 
+ GitHub 🌜 
+ 🌞 
+ ctrl K 
+ On this page 
+ Frequently Asked Questions
+ Guidelines on how to set a hyperparameter search space ​ 
+ Guidelines on parallel vs seqential tuning ​ 
+ Guidelines on creating and tuning a custom estimator ​ 
+ About low_cost_partial_config in tune . ​ 
+ Definition and purpose: The low_cost_partial_config is a dictionary of subset of the hyperparameter coordinates whose value corresponds to a configuration with known low-cost (i.e., low computation cost for training the corresponding model). The concept of low/high-cost is meaningful in the case where a subset of the hyperparameters to tune directly affects the computation cost for training the model. For example, n_estimators and max_leaves are known to affect the training cost of tree-based learners. We call this subset of hyperparameters, cost-related hyperparameters . In such scenarios, if you are aware of low-cost configurations for the cost-related hyperparameters, you are recommended to set them as the low_cost_partial_config . Using the tree-based method example again, since we know that small n_estimators and max_leaves generally correspond to simpler models and thus lower cost, we set {'n_estimators': 4, 'max_leaves': 4} as the low_cost_partial_config by default (note that 4 is the lower bound of search space for these two hyperparameters), e.g., in LGBM . Configuring low_cost_partial_config helps the search algorithms make more cost-efficient choices.
+In AutoML, the low_cost_init_value in search_space() function for each estimator serves the same role.
+ Usage in practice: It is recommended to configure it if there are cost-related hyperparameters in your tuning task and you happen to know the low-cost values for them, but it is not required (It is fine to leave it the default value, i.e., None ).
+ How does it work: low_cost_partial_config if configured, will be used as an initial point of the search. It also affects the search trajectory. For more details about how does it play a role in the search algorithms, please refer to the papers about the search algorithms used: Section 2 of Frugal Optimization for Cost-related Hyperparameters (CFO) and Section 3 of Economical Hyperparameter Optimization with Blended Search Strategy (BlendSearch) .
+ How does FLAML handle missing values? ​ 
+ FLAML automatically preprocesses missing values in the input data through its DataTransformer class (for classification/regression tasks) and DataTransformerTS class (for time series tasks). The preprocessing behavior differs based on the column type:
+ Automatic Missing Value Preprocessing: 
+ FLAML performs the following preprocessing automatically when you call AutoML.fit() :
+ Numerical/Continuous Columns : Missing values (NaN) in numerical columns are imputed using sklearn.impute.SimpleImputer with the median strategy . This preprocessing is applied in the DataTransformer.fit_transform() method (see flaml/automl/data.py lines 357-369 and flaml/automl/time_series/ts_data.py lines 429-440).
+ Categorical Columns : Missing values in categorical columns (object, category, or string dtypes) are filled with a special placeholder value "__NAN__" , which is treated as a distinct category.
+ Example of automatic preprocessing: 
+ from flaml import AutoML 
+ import pandas as pd 
+ import numpy as np 
+ # Data with missing values 
+ X_train = pd . DataFrame ( 
+ { 
+ "num_feature" : [ 1.0 , 2.0 , np . nan , 4.0 , 5.0 ] , 
+ "cat_feature" : [ "A" , "B" , None , "A" , "B" ] , 
+ } 
+ ) 
+ y_train = [ 0 , 1 , 0 , 1 , 
+
+=== [meta] https://microsoft.github.io/FLAML/
+html lang: en
+hreflang: en, x-default
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/microsoft/FLAML
+[![PyPI version](https://badge.fury.io/py/FLAML.svg)](https://badge.fury.io/py/FLAML)
+![Conda version](https://img.shields.io/conda/vn/conda-forge/flaml)
+[![Build](https://github.com/microsoft/FLAML/actions/workflows/python-package.yml/badge.svg)](https://github.com/microsoft/FLAML/actions/workflows/python-package.yml)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/FLAML)](https://pypi.org/project/FLAML/)
+[![Downloads](https://pepy.tech/badge/flaml)](https://pepy.tech/project/flaml)
+[![](https://img.shields.io/discord/1025786666260111483?logo=discord&style=flat)](https://discord.gg/Cppx2vSPVP)
+
+<!-- [![Join the chat at https://gitter.im/FLAMLer/community](https://badges.gitter.im/FLAMLer/community.svg)](https://gitter.im/FLAMLer/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) -->
+
+# A Fast Library for Automated Machine Learning & Tuning
+
+<p align="center">
+    <img src="https://github.com/microsoft/FLAML/blob/main/website/static/img/flaml.svg"  width=200>
+    <br>
+</p>
+
+<p align="center">
+  <b>English</b> · <a href="https://github.com/microsoft/FLAML/blob/main/README.zh.md">简体中文</a>
+</p>
+
+:fire: FLAML supports AutoML and Hyperparameter Tuning in [Microsoft Fabric Data Science](https://learn.microsoft.com/en-us/fabric/data-science/automated-machine-learning-fabric). In addition, we've introduced Python 3.11+ support, along with a range of new estimators, and comprehensive integration with MLflow—thanks to contributions from the Microsoft Fabric product team.
+
+:fire: Heads-up: [AutoGen](https://microsoft.github.io/autogen/) has moved to a dedicated [GitHub repository](https://github.com/microsoft/autogen). FLAML no longer includes the `autogen` module—please use AutoGen directly.
+
+## What is FLAML
+
+FLAML is a lightweight Python library for efficient automation of machine
+learning and AI operations. It automates workflow based on large language models, machine learning models, etc.
+and optimizes their performance.
+
+- FLAML enables economical automation and tuning for ML/AI workflows, including model selection and hyperparameter optimization under resource constraints.
+- For common machine learning tasks like classification and regression, it quickly finds quality models for user-provided data with low computational resources. It is easy to customize or extend. Users can find their desired customizability from a smooth range.
+- It supports fast and economical automatic tuning (e.g., inference hyperparameters for foundation models, configurations in MLOps/LMOps workflows, pipelines, mathematical/statistical models, algorithms, computing experiments, software configurations), capable of handling large search space with heterogeneous evaluation cost and complex constraints/guidance/early stopping.
+
+FLAML is powered by a series of [research studies](https://microsoft.github.io/FLAML/docs/Research/) from Microsoft Research and collaborators such as Penn State University, Stevens Institute of Technology, University of Washington, and University of Waterloo.
+
+FLAML has a .NET implementation in [ML.NET](http://dot.net/ml), an open-source, cross-platform machine learning framework for .NET.
+
+## Installation
+
+The latest version of FLAML requires **Python >= 3.10 and < 3.14**. While other Python versions may work for core components, full model support is not guaranteed. FLAML can be installed via `pip`:
+
+```bash
+pip install flaml
+```
+
+Minimal dependencies are installed without extra options. You can install extra options based on the feature you need. For example, use the following to install the dependencies needed by the [`automl`](https://microsoft.github.io/FLAML/docs/Use-Cases/Task-Oriented-AutoML) module.
+
+```bash
+pip install "flaml[automl]"
+```
+
+Find more options in [Installation](https://microsoft.github.io/FLAML/docs/Installation).
+Each of the [`notebook examples`](https://github.com/microsoft/FLAML/tree/main/notebook) may require a specific option to be installed.
+
+## Quickstart
+
+- With three lines of code, you can start using this economical and fast
+  AutoML engine as a [scikit-learn style estimator](https://microsoft.github.io/FLAML/docs/Use-Cases/Task-Oriented-AutoML).

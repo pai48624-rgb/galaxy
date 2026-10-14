@@ -1,0 +1,39 @@
+{
+ "company": "Qwen Team",
+ "one_liner_ko": "강화학습을 확장해 320억 파라미터로 DeepSeek-R1에 견줄 성능을 낸 Qwen의 공개 추론 모델.",
+ "what_it_does_ko": "QwQ-32B는 Qwen 팀이 강화학습(RL) 확장을 연구해 만든 320억 파라미터 추론 모델로, 6,710억 파라미터의 DeepSeek-R1과 비슷한 성능을 낸다고 밝힌다. 수학 문제는 정확도 검증기로, 코드는 실행 서버로 정답 여부를 확인하는 결과 기반 보상으로 학습했다. 도구를 쓰면서 환경 피드백에 맞춰 추론을 조정하는 에이전트 기능도 넣었다. Hugging Face와 ModelScope에 Apache 2.0 라이선스로 가중치가 공개돼 있고 Qwen Chat과 Alibaba Cloud DashScope API로도 쓸 수 있다.",
+ "key_features": [
+  "320억 파라미터로 DeepSeek-R1급 추론 성능",
+  "수학 추론·코딩·일반 문제 해결",
+  "결과 기반 보상의 강화학습 확장",
+  "도구 사용·환경 피드백 기반 에이전트 기능",
+  "Hugging Face Transformers로 실행",
+  "DashScope API(OpenAI 호환) 제공"
+ ],
+ "use_cases_ko": [
+  "개발자가 Transformers 또는 DashScope API로 추론 모델 사용"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "Apache-2.0",
+ "api": "있음",
+ "platforms": ["웹", "API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://qwenlm.github.io/blog/qwq-32b/", "quote": "QwQ-32B: Embracing the Power of Reinforcement Learning | Qwen "},
+  {"field": "one_liner_ko", "url": "https://qwenlm.github.io/blog/qwq-32b/", "quote": "We are excited to introduce QwQ-32B, a model with 32 billion parameters that achieves performance comparable to DeepSeek-R1, which boasts 671 billion parameters (with 37 billion activated)."},
+  {"field": "what_it_does_ko", "url": "https://qwenlm.github.io/blog/qwq-32b/", "quote": "we utilized an accuracy verifier for math problems to ensure the correctness of final solutions and a code execution server"},
+  {"field": "key_features", "url": "https://qwenlm.github.io/blog/qwq-32b/", "quote": "QwQ-32B is evaluated across a range of benchmarks designed to assess its mathematical reasoning, coding proficiency, and general problem-solving capabilities."},
+  {"field": "key_features", "url": "https://qwenlm.github.io/blog/qwq-32b/", "quote": "Furthermore, we have integrated agent-related capabilities into the reasoning model, enabling it to think critically while utilizing tools"},
+  {"field": "use_cases_ko", "url": "https://qwenlm.github.io/blog/qwq-32b/", "quote": "Below are brief examples demonstrating how to use QwQ-32B via Hugging Face Transformers and Alibaba Cloud DashScope API."},
+  {"field": "open_source", "url": "https://qwenlm.github.io/blog/qwq-32b/", "quote": "QwQ-32B is open-weight in Hugging Face and ModelScope under the Apache 2.0 license and is accessible via Qwen Chat ."},
+  {"field": "api", "url": "https://qwenlm.github.io/blog/qwq-32b/", "quote": "base_url = \"https://dashscope.aliyuncs.com/compatible-mode/v1\" "},
+  {"field": "platforms", "url": "https://qwenlm.github.io/blog/qwq-32b/", "quote": " Try Qwen Chat "},
+  {"field": "korean_support", "url": "https://qwenlm.github.io/blog/qwq-32b/", "quote": "화면에 보이는 언어 이름: 中文, 简体中文"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

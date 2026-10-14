@@ -1,29 +1,54 @@
 {
  "company": null,
- "one_liner_ko": null,
- "what_it_does_ko": "뤼튼 홈 화면에는 채팅, AI 탐지방어, 유튜브 요약, 실시간 녹음 메뉴와 블로그·자기소개서 도구가 보인다. 글자 수를 세며 내용을 바꾸거나 요약하는 입력 화면이 있고, 대화 언어·요약 언어로 한국어를 고를 수 있다. 화면에 GPT-5 모델 이름이 표시된다. 받은 본문이 짧아(239자) 그 밖의 설명은 확인되지 않는다.",
+ "one_liner_ko": "채팅·유튜브 요약·실시간 녹음·AI 탐지방어 등 도구를 모아 둔 한국어 AI 서비스 '뤼튼'.",
+ "what_it_does_ko": "뤼튼은 한국어 화면의 AI 서비스로, 홈 화면에 채팅, AI 탐지방어, 유튜브 요약, 실시간 녹음 도구가 있다. 로그인 후 파일이나 사진을 첨부할 수 있고, 글을 요약하는 기능이 있다. 화면에 GPT-5 모델 표시와 블로그·자기소개서 메뉴가 보인다.",
  "key_features": [
   "AI 채팅",
   "AI 탐지방어",
   "유튜브 요약",
   "실시간 녹음",
-  "블로그·자기소개서 작성 도구",
-  "글 요약·변경(최대 2000자 입력)"
+  "파일·사진 첨부(로그인 후)",
+  "블로그·자기소개서 작성 메뉴"
  ],
  "use_cases_ko": [],
- "pricing": {"free_tier": "불명", "plans": [], "pricing_url": null},
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
  "open_source": null,
  "api": "불명",
- "platforms": ["웹"],
+ "platforms": [
+  "웹"
+ ],
  "korean_support": "UI 한국어",
  "evidence": [
-  {"field": "what_it_does_ko", "url": "https://wrtn.ai/", "quote": "채팅\n AI 탐지방어\n 유튜브 요약\n 실시간 녹음"},
-  {"field": "what_it_does_ko", "url": "https://wrtn.ai/", "quote": "대화 언어 한국어"},
-  {"field": "key_features", "url": "https://wrtn.ai/", "quote": "채팅\n AI 탐지방어\n 유튜브 요약\n 실시간 녹음"},
-  {"field": "key_features", "url": "https://wrtn.ai/", "quote": "GPT-5\n 블로그\n 자기소개서"},
-  {"field": "key_features", "url": "https://wrtn.ai/", "quote": "0 / 2000\n 변경하기 \n 변경된 내용\n 요약하기"},
-  {"field": "platforms", "url": "https://wrtn.ai/", "quote": "무료로 회원가입 로그인"},
-  {"field": "korean_support", "url": "https://wrtn.ai/", "quote": "고객센터 이용약관 개인정보처리방침 청소년 보호정책"}
+  {
+   "field": "one_liner_ko",
+   "url": "https://wrtn.ai/",
+   "quote": "채팅\n AI 탐지방어\n 유튜브 요약\n 실시간 녹음\n 로그인 후 파일 또는 사진을 첨부해 주세요"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://wrtn.ai/",
+   "quote": "로그인 후 파일 또는 사진을 첨부해 주세요 \n 역할 \n 기본"
+  },
+  {
+   "field": "key_features",
+   "url": "https://wrtn.ai/",
+   "quote": "요약하기 \n 대화 언어 한국어 \n 요약 언어\n 한국어 \n GPT-5\n 블로그\n 자기소개서"
+  },
+  {
+   "field": "platforms",
+   "url": "https://wrtn.ai/",
+   "quote": "=== [home] https://wrtn.ai/ (lang=ko-KR)"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://wrtn.ai/",
+   "quote": "html lang: ko-KR\nhreflang: 없음\n화면에 보이는 언어 이름: 한국어"
+  }
  ],
- "mismatch": []
+ "mismatch": [],
+ "plan_change": []
 }

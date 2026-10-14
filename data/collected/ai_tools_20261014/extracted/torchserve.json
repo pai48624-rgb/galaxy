@@ -1,0 +1,137 @@
+{
+ "company": "PyTorch Serve Contributors (PyTorch 프로젝트)",
+ "one_liner_ko": "PyTorch 모델을 프로덕션에서 서빙·확장하는 도구.",
+ "what_it_does_ko": "TorchServe는 PyTorch 모델을 프로덕션에서 서빙하고 확장하는 도구로, 클라우드·환경에 구애받지 않고 멀티 모델 서빙, 로깅, 지표, RESTful 엔드포인트를 지원한다. pip·conda·Docker로 설치하며 vLLM·TRT-LLM 엔진으로 LLM을 배포하는 빠른 시작 방법도 있다. 기본으로 토큰 인증이 켜지고 모델 API 제어는 꺼져 있다. 다만 공식 문서에 따르면 현재 적극적으로 유지보수되지 않아 업데이트·버그 수정·보안 패치 계획이 없다.",
+ "key_features": [
+  "멀티 모델 서빙·로깅·지표",
+  "RESTful 엔드포인트와 gRPC API",
+  "추론·관리·지표 API",
+  "기본 토큰 인증·모델 API 제어",
+  "vLLM·TRT-LLM 엔진 기반 LLM 배포",
+  "배치 추론·워크플로",
+  "Docker 이미지 제공"
+ ],
+ "use_cases_ko": [
+  "생성형 AI 모델 배포",
+  "대형 모델 서빙"
+ ],
+ "pricing": {
+  "free_tier": "불명 (가격 표기 없음)",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "윈도",
+  "맥",
+  "CLI",
+  "API"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://docs.pytorch.org/serve/",
+   "quote": "© Copyright 2020, PyTorch Serve Contributors."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/pytorch/serve",
+   "quote": "TorchServe is a flexible and easy-to-use tool for serving and scaling PyTorch models in production."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://pytorch.org/features/",
+   "quote": "It is cloud and environment agnostic and supports features such as multi-model serving, logging, metrics and the creation of RESTful endpoints for application integration."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.pytorch.org/serve/",
+   "quote": "This project is no longer actively maintained. While existing releases remain available, there are no planned updates, bug fixes, new features, or security patches."
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.pytorch.org/serve/",
+   "quote": "TorchServe gRPC API"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.pytorch.org/serve/",
+   "quote": "Inference API"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/pytorch/serve",
+   "quote": "TorchServe now enforces token authorization enabled and model API control disabled by default."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/pytorch/serve",
+   "quote": "#### VLLM Engine"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/pytorch/serve",
+   "quote": "#### TRT-LLM Engine"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.pytorch.org/serve/",
+   "quote": "Batch Inference with TorchServe"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.pytorch.org/serve/",
+   "quote": "TorchServe Workflows"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/pytorch/serve",
+   "quote": "docker pull pytorch/torchserve"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://docs.pytorch.org/serve/",
+   "quote": "Showcasing GenAI deployment scenarios and use cases"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://docs.pytorch.org/serve/",
+   "quote": "Serving Large Models with TorchServe"
+  },
+  {
+   "field": "api",
+   "url": "https://docs.pytorch.org/serve/",
+   "quote": "TorchServe REST API"
+  },
+  {
+   "field": "platforms",
+   "url": "https://docs.pytorch.org/serve/",
+   "quote": "TorchServe on Windows"
+  },
+  {
+   "field": "platforms",
+   "url": "https://docs.pytorch.org/serve/",
+   "quote": "Apple Silicon Support"
+  },
+  {
+   "field": "platforms",
+   "url": "https://pytorch.org/features/",
+   "quote": "torchserve --start --model-store model_store --models densenet161=densenet161.mar"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://docs.pytorch.org/serve/",
+   "quote": "hreflang: 없음"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "pip·conda·Docker로 직접 설치하는 모델 서빙 도구, 유료 요금제·GPU 요금표 없음(현재 유지보수 제한)",
+   "diff": "기존 '사용량 기반 종량제(클라우드/GPU)'와 달리 클라우드 과금 서비스가 아닌 자체 설치형 소프트웨어",
+   "url": "https://docs.pytorch.org/serve/"
+  }
+ ],
+ "plan_change": []
+}

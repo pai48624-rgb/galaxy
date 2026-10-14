@@ -1,0 +1,638 @@
+=== [home] https://www.runpod.io/ (lang=en)
+The AI Developer Cloud | Runpod 
+ Kimi K3 is now available on Runpod
+ Skip to main content Product
+ Pods
+ On-demand GPUs, deployed across 31 global regions.
+ Serverless
+ Run API-based AI workloads with serverless GPU endpoints.
+ Clusters
+ Run multi-node GPU clusters for distributed AI workloads.
+ Hub
+ Deploy open-source AI models and templates on Runpod.
+ Deployments Models
+ Manage your or our compute from one unified control plane
+ Use Cases
+ Inference
+ Serve models in real-time with low-latency GPUs.
+ Agents
+ Deploy AI agents that run, react, and scale instantly.
+ Fine-Tuning
+ Train models faster with efficient, scalable compute.
+ Compute-Heavy Tasks
+ Process massive workloads with zero bottlenecks.
+ Resources
+ Case Studies
+ Loved by leaders. But don’t just take it from us.
+ Articles
+ In-depth perspectives, ideas, and updates from our team.
+ Reports
+ Data on AI compute, GPU usage, and infrastructure trends.
+ Press
+ Company news and media coverage.
+ Blog
+ Our team’s insights on building better and scaling smarter.
+ Company
+ About
+ Redefining cloud compute with speed, scale, and innovation.
+ Partner
+ Bring enterprise-grade GPU infrastructure to your customers.
+ Careers
+ Join our mission to build the launchpad for AI apps.
+ Docs Pricing Enterprise 
+ Contact Sales Sign in Get Started 
+ Prefer to call? Call +1 (888) 478-6012 
+ 4.6 The AI Developer Cloud
+ Experiment, train, fine-tune, deploy, scale on one platform
+ Get started for free 
+ 1M+ developers on Runpod, and the cloud we're building next.
+ Updated September 27, 2026
+ Read what's next 
+ What’s new
+ Performing your first LLM fine-tune on Runpod with Axolotl, and how to host it after
+ October 12, 2026 
+ You can teach an open-weight LLM to text like a specific persona: their slang, their reply length, their humor, even how they write in a roleplay scene, creative writing exercise, or chatbot customer interactions. All it takes is some chat logs (synthetic or real), a few hours of data prep, and a single GPU pod. This guide walks through the whole process on Runpod with Axolotl, from raw messages to a model you can chat with in SillyTavern, KoboldCpp, or text-generation-webui, using two base models: a 27B Qwen model and the 128B Mistral Medium 3.5.‍ Everything here was tested end to end, and every error we hit along the way is in the Troubleshooting section, so you shouldn't get stuck where we did.
+ Read blog 
+ Global Volumes are now in beta for Serverless endpoints
+ October 8, 2026 
+ Attach a Global Volume to a Runpod Serverless endpoint and your workers start in any data center with your GPU types. Store model weights once, read anywhere.
+ Read blog 
+ Fall 2026 State of AI Compute
+ Insights from the latest data around AI deployment, infrastructure demand, and model scaling trends.
+ Read the report 
+ Solution
+ One platform. Full lifecycle.
+ Go from experiment to production without replatforming. Pods, Serverless, and Clusters, all in one account.
+ Launch a GPU pod in seconds.
+ Spin up a fully-loaded, GPU-enabled environment in under a minute. From B200s to RTX 4090s, Runpod supports over 30 GPU SKUs.
+ Deploy globally with a few clicks.
+ Run workloads across 31 global regions worldwide, with low-latency performance and global reliability.
+ Scale on autopilot with Serverless.
+ From 0 to thousands of compute workers, adapting to your workload in real time, only paying for what you use.
+ Go from experiment to production in one flow.
+ One account. No migrations between stages.
+ Get Started 
+ Spin up
+ GPU environment in under 30 seconds. 30+ GPU SKUs, 31 global regions.
+ Build
+ Train models, fine-tune, process data. Your containers, your framework, your code.
+ Deploy
+ Write your handler. Push to Serverless. Live inference endpoint, auto-scaling, zero idle cost.
+ Scale
+ 0 to hundreds of concurrent workers in under 250ms.
+ Enterprise grade uptime.
+ Runpod handles failovers, ensuring your workloads run smoothly, even when resources don’t.
+ Managed orchestration.
+ Runpod Serverless queues and distributes tasks seamlessly, saving you from building orchestration systems.
+ Real-time logs.
+ Get real-time logs, monitoring, and metrics with no custom frameworks required.
+ Features
+ Production inference without the warm-up tax.
+ Most serverless GPU options make you choose: pay for idle capacity, or eat cold-start latency. Runpod Serverless does neither. Scatter Lab handles 1,000+ inference requests per second on Runpod, at nearly half the cost of major cloud providers.
+ Try serverless 
+ Autoscale in seconds
+ 0 to thousands of workers. Automatically. No config files.
+ Learn about autoscaling 
+ Sub-200ms cold starts
+ FlashBoot eliminates warm-up engineering. Sub-200ms.
+ Discover FlashBoot 
+ Zero idle cost
+ Your endpoint costs nothing when it's not running.
+ Learn about serverless pricing 
+ Persistent network storage
+ Full AI pipelines, no egress fees.
+ Learn about network storage 
+ Case Studies
+ In production. At scale.
+ See what our customers are building.
+ "We didn't seriously evaluate other alternatives before committing to Runpod. We found their approach interesting from the beginning, particularly the ease of integration, and we haven't had a reason to switch since."
+ Read case study 
+ "AWS is very reliable and has everything we need, but it is way more expensive than Runpod. With Runpod, we can choose the right card for the job."
+ Read case study 
+ "Runpod is easily one of the most scalable tools that we use in our infrastructure."
+ Read case study 
+ "What's happened is, moving to Runpod, Botto has a better GPU, better graphic models and better resources, but it also costs less. That's something I didn't expect we were going to have."
+ Read case study 
+ "You guys have genuinely changed the scope of what we've been able to attempt."
+ Read case study 
+ "All of these projects, the renders for AMD, the Coca-Cola builds, that has to do with scalability. If we can't scale, we can't deliver. Runpod makes that possible."
+ Read case study 
+ Play Video 
+ "Runpod has changed the way we ship because we no longer have to wonder if we have access to GPUs. We've saved probably 90% on our infrastructure bill, mainly because we can use bursty compute whenever we need it."
+ Read case study 
+ Play Video 
+ "Runpod has allowed the team to focus more on the features that are core to our product and that are within our skill set, rather than spending time focusing on infrastructure, which can sometimes be a bit of a distraction.”
+ Read case study 
+ "Runpod helped us scale the part of our platform that drives creation. That’s what fuels the rest, image generation, sharing, remixing. It starts with training."
+ Read case study 
+ Play Video 
+ "Runpod allowed us to reliably handle scaling from zero to over 1,000 requests per second in our live application."
+ Read case study 
+ Play Video 
+ "Runpod has allowed us to focus entirely on growth and product development without us having to worry about the GPU infrastructure at all."
+ Read case study 
+ "We could stop worrying about infrastructure and go back to building. That’s the real win.”
+ Read case study 
+ “The main value proposition for us was the flexibility Runpod offered. We were able to scale up effortlessly to meet the demand at launch.”
+ Read case study 
+ "After migration, we were able to cut down our server costs from thousands of dollars per day to only hundreds."
+ Read case study 
+ Runpod’s scalable GPU infrastructure gave us the flexibility we needed to match customer traffic and model com
+
+=== [pricing] https://www.runpod.io/pricing (lang=en)
+GPU Cloud Pricing | Per-Second H100, A100, RTX | Runpod 
+ Kimi K3 is now available on Runpod
+ Skip to main content Product
+ Pods
+ On-demand GPUs, deployed across 31 global regions.
+ Serverless
+ Run API-based AI workloads with serverless GPU endpoints.
+ Clusters
+ Run multi-node GPU clusters for distributed AI workloads.
+ Hub
+ Deploy open-source AI models and templates on Runpod.
+ Deployments Models
+ Manage your or our compute from one unified control plane
+ Use Cases
+ Inference
+ Serve models in real-time with low-latency GPUs.
+ Agents
+ Deploy AI agents that run, react, and scale instantly.
+ Fine-Tuning
+ Train models faster with efficient, scalable compute.
+ Compute-Heavy Tasks
+ Process massive workloads with zero bottlenecks.
+ Resources
+ Case Studies
+ Loved by leaders. But don’t just take it from us.
+ Articles
+ In-depth perspectives, ideas, and updates from our team.
+ Reports
+ Data on AI compute, GPU usage, and infrastructure trends.
+ Press
+ Company news and media coverage.
+ Blog
+ Our team’s insights on building better and scaling smarter.
+ Company
+ About
+ Redefining cloud compute with speed, scale, and innovation.
+ Partner
+ Bring enterprise-grade GPU infrastructure to your customers.
+ Careers
+ Join our mission to build the launchpad for AI apps.
+ Docs Pricing Enterprise 
+ Contact Sales Sign in Get Started 
+ Prefer to call? Call +1 (888) 478-6012 
+ GPU Pricing
+ GPU Cloud Pricing
+ Updated October 8, 2026
+ Runpod pricing depends on the GPU workload you run: Pods for dedicated GPU instances, Serverless for API inference, and Clusters for multi-node jobs.
+‍
+ Get Started 
+For reserved capacity and contract pricing, 
+speak to our enterprise sales team.
+‍
+ Talk to Sales 
+ Pods
+ Thousands of GPUs across 30+ regions. Simple pricing plans for teams of all sizes, designed to scale with you.
+ Get started 
+ GPU
+ Community Cloud 
+ Secure Cloud 
+ Per hour 
+ Per second 
+ >80GB VRAM
+ B300
+ 288 GB HBM3e
+ 251 GB RAM
+ 32
+ vCPUs
+ $ 8.99 /hr 
+ 288 GB HBM3e
+ 251 GB RAM
+ 32  vCPUs 
+ Deploy B300 
+ H200
+ 141 GB VRAM
+ 276 GB RAM
+ 24
+ vCPUs
+ $ 5.29 /hr 
+ 141 GB VRAM
+ 276 GB RAM
+ 24  vCPUs 
+ Deploy H200 
+ B200
+ 180 GB VRAM
+ 283 GB RAM
+ 28
+ vCPUs
+ $ 7.99 /hr 
+ 180 GB VRAM
+ 283 GB RAM
+ 28  vCPUs 
+ Deploy B200 
+ RTX Pro 6000
+ 96 GB VRAM
+ 188 GB RAM
+ 16
+ vCPUs
+ $ 2.49 /hr 
+ 96 GB VRAM
+ 188 GB RAM
+ 16  vCPUs 
+ Deploy RTX Pro 6000 
+ H100 NVL
+ 94 GB VRAM
+ 94 GB RAM
+ 16
+ vCPUs
+ $ 3.19 /hr 
+ 94 GB VRAM
+ 94 GB RAM
+ 16  vCPUs 
+ Deploy H100 NVL 
+ 80GB VRAM
+ H100 PCIe
+ 80 GB VRAM
+ 188 GB RAM
+ 16
+ vCPUs
+ $ 2.89 /hr 
+ 80 GB VRAM
+ 188 GB RAM
+ 16  vCPUs 
+ Deploy H100 PCIe 
+ H100 SXM
+ 80 GB VRAM
+ 125 GB RAM
+ 20
+ vCPUs
+ $ 3.99 /hr 
+ 80 GB VRAM
+ 125 GB RAM
+ 20  vCPUs 
+ Deploy H100 SXM 
+ A100 PCIe
+ 80 GB VRAM
+ 117 GB RAM
+ 8
+ vCPUs
+ $ 1.79 /hr 
+ 80 GB VRAM
+ 117 GB RAM
+ 8  vCPUs 
+ Deploy A100 PCIe 
+ A100 SXM
+ 80 GB VRAM
+ 125 GB RAM
+ 16
+ vCPUs
+ $ 1.79 /hr 
+ 80 GB VRAM
+ 125 GB RAM
+ 16  vCPUs 
+ Deploy A100 SXM 
+ 48GB VRAM
+ Pro 6000 MIG 48GB
+ 48 GB VRAM
+ 62 GB RAM
+ 8
+ vCPUs
+ $ 1.29 /hr 
+ 48 GB VRAM
+ 62 GB RAM
+ 8  vCPUs 
+ Deploy Pro 6000 MIG 48GB 
+ L40S
+ 48 GB VRAM
+ 94 GB RAM
+ 16
+ vCPUs
+ $ 1.09 /hr 
+ 48 GB VRAM
+ 94 GB RAM
+ 16  vCPUs 
+ Deploy L40S 
+ RTX 6000 Ada
+ 48 GB VRAM
+ 167 GB RAM
+ 10
+ vCPUs
+ $ 0.99 /hr 
+ 48 GB VRAM
+ 167 GB RAM
+ 10  vCPUs 
+ Deploy RTX 6000 Ada 
+ A40
+ 48 GB VRAM
+ 50 GB RAM
+ 9
+ vCPUs
+ $ 0.59 /hr 
+ 48 GB VRAM
+ 50 GB RAM
+ 9  vCPUs 
+ Deploy A40 
+ L40
+ 48 GB VRAM
+ 94 GB RAM
+ 8
+ vCPUs
+ $ 0.82 /hr 
+ 48 GB VRAM
+ 94 GB RAM
+ 8  vCPUs 
+ Deploy L40 
+ RTX A6000
+ 48 GB VRAM
+ 50 GB RAM
+ 9
+ vCPUs
+ $ 0.59 /hr 
+ 48 GB VRAM
+ 50 GB RAM
+ 9  vCPUs 
+ Deploy RTX A6000 
+ 32GB VRAM
+ RTX 5090
+ 32 GB VRAM
+ 35 GB RAM
+ 9
+ vCPUs
+ $ 1.19 /hr 
+ 32 GB VRAM
+ 35 GB RAM
+ 9  vCPUs 
+ Deploy RTX 5090 
+ 24GB VRAM
+ Pro 6000 MIG 24GB
+ 24 GB VRAM
+ 31 GB RAM
+ 4
+ vCPUs
+ $ 0.69 /hr 
+ 24 GB VRAM
+ 31 GB RAM
+ 4  vCPUs 
+ Deploy Pro 6000 MIG 24GB 
+ L4
+ 24 GB VRAM
+ 50 GB RAM
+ 12
+ vCPUs
+ $ 0.59 /hr 
+ 24 GB VRAM
+ 50 GB RAM
+ 12  vCPUs 
+ Deploy L4 
+ RTX 3090
+ 24 GB VRAM
+ 125 GB RAM
+ 16
+ vCPUs
+ $ 0.5 /hr 
+ 24 GB VRAM
+ 125 GB RAM
+ 16  vCPUs 
+ Deploy RTX 3090 
+ RTX 4090
+ 24 GB VRAM
+ 41 GB RAM
+ 6
+ vCPUs
+ $ 0.89 /hr 
+ 24 GB VRAM
+ 41 GB RAM
+ 6  vCPUs 
+ Deploy RTX 4090 
+ RTX A5000
+ 24 GB VRAM
+ 25 GB RAM
+ 9
+ vCPUs
+ $ 0.27 /hr 
+ 24 GB VRAM
+ 25 GB RAM
+ 9  vCPUs 
+ Deploy RTX A5000 
+ Thank you! Your submission has been received!
+ Oops! Something went wrong while submitting the form.
+ Serverless
+ Cost effective for every inference workload. Save 25% over other Serverless cloud providers on flex workers alone.
+ Get started 
+ GPU
+ Per hour 
+ Per second 
+ Workers
+ 280
+ GB
+ B300
+ Maximum throughput for big models.
+ $
+ 9.98 /hr
+ 180
+ GB
+ B200
+ Maximum throughput for big models.
+ $
+ 8.64 /hr
+ 141
+ GB
+ H200
+ Extreme throughput for big models.
+ $
+ 5.93 /hr
+ 96
+ GB
+ RTX 6000 Pro
+ PRO
+ High throughput for large model inference workloads.
+ $
+ 3.49 /hr
+ 80
+ GB
+ H100
+ PRO
+ Extreme throughput for big models.
+ $
+ 4.79 /hr
+ 80
+ GB
+ A100
+ High throughput GPU, yet still very cost-effective.
+ $
+ 2.72 /hr
+ 48
+ GB
+ L40, L40S, 6000 Ada, MIG 48GB
+ PRO
+ Extreme inference throughput on LLMs like Llama 3 7B.
+ $
+ 1.75 /hr
+ 48
+ GB
+ A6000, A40
+ A cost-effective option for running big models.
+ $
+ 1.22 /hr
+ 32
+ GB
+ 5090
+ PRO
+ Extreme throughput for small-to-medium models.
+ $
+ 1.58 /hr
+ 32
+ GB
+ RTX PRO 4500 Blackwell
+ Cost-effective Blackwell inference for 32GB workloads.
+ $
+ 1.15 /hr
+ 24
+ GB
+ 4090
+ PRO
+ Extreme throughput for small-to-medium models.
+ $
+ 1.10 /hr
+ 24
+ GB
+ L4, A5000, 3090, MIG 24GB
+ Great for small-to-medium sized inference workloads.
+ $
+ 0.69 /hr
+ 16
+ GB
+ A4000, A4500, RTX 4000, RTX 2000
+ The most cost-effective for small models.
+ $
+ 0.58 /hr
+ Thank you! Your submission has been received!
+ Oops! Something went wrong while submitting the form.
+ Clusters
+ Launch multi-GPU clusters in minutes with no commitments. Scale up to 64 GPUs, attach shared storage, and pay only for what you use.
+ Get started 
+ GPU
+ Per hour 
+ Per second 
+ H200 SXM
+ $
+ 4.31 /hr
+ H200 SXM 
+ A100 SXM
+ $
+ 1.79 /hr
+ A100 SXM 
+ L40S
+ Contact sales
+ L40S 
+ H100 SXM
+ Contact sales
+ H100 SXM 
+ B200
+ Contact sales
+ B200 
+ Thank you! Your submission has been received!
+ Oops! Something went wrong while submitting the form.
+ Reserved Clusters
+ Dedicated GPU clusters with guaranteed availability, custom configurations, SLA-backed uptime, and discounted rates for enterprises scaling to 10,000+ GPUs.
+ Talk to an engineer 
+ GPU
+ 1mo 
+ 3mo 
+ 6mo 
+ 12mo 
+ 12mo+ 
+ H200 SXM
+ Contact sales
+ H200 SXM 
+ A100 SXM
+ Contact sales
+ A100 SXM 
+ L40S
+ Contact sales
+ L40S 
+ H100 SXM
+ Contact sales
+ H100 SXM 
+ B200
+ Contact sales
+ B200 
+ Thank you! Your sub
+
+=== [about] https://www.runpod.io/about (lang=en)
+About Runpod | AI Developer Cloud 
+ Kimi K3 is now available on Runpod
+ Skip to main content Product
+ Pods
+ On-demand GPUs, deployed across 31 global regions.
+ Serverless
+ Run API-based AI workloads with serverless GPU endpoints.
+ Clusters
+ Run multi-node GPU clusters for distributed AI workloads.
+ Hub
+ Deploy open-source AI models and templates on Runpod.
+ Deployments Models
+ Manage your or our compute from one unified control plane
+ Use Cases
+ Inference
+ Serve models in real-time with low-latency GPUs.
+ Agents
+ Deploy AI agents that run, react, and scale instantly.
+ Fine-Tuning
+ Train models faster with efficient, scalable compute.
+ Compute-Heavy Tasks
+ Process massive workloads with zero bottlenecks.
+ Resources
+ Case Studies
+ Loved by leaders. But don’t just take it from us.
+ Articles
+ In-depth perspectives, ideas, and updates from our team.
+ Reports
+ Data on AI compute, GPU usage, and infrastructure trends.
+ Press
+ Company news and media coverage.
+ Blog
+ Our team’s insights on building better and scaling smarter.
+ Company
+ About
+ Redefining cloud compute with speed, scale, and innovation.
+ Partner
+ Bring enterprise-grade GPU infrastructure to your customers.
+ Careers
+ Join our mission to build the launchpad for AI apps.
+ Docs Pricing Enterprise 
+ Contact Sales Sign in Get Started 
+ Prefer to call? Call +1 (888) 478-6012 
+ About
+ Built for developers, by developers.
+ Updated September 13, 2026
+ Join the team of people redefining the future of cloud computing.
+ Some of the most important companies of this decade will be built on Runpod.
+ We aim to create the foundational platform for developers to build and run custom AI systems that scale.
+ Give a sh*t
+ We work with people who care about our customers and each other.
+ Look in the mirror
+ We deeply reflect on our own actions and seek to better ourselves.
+ Choose courage over comfort
+ We tackle hard truths and tough situations directly, even when it makes us uncomfortable.
+ Our guiding virtues.
+ These values don't just define us; they are us. As we evolve, we will continue to let our brand reflect who we truly are, growing richer over time and earning deeper value and trust.
+ Unlike our products, which will adapt and change, our brand's core identity will remain consistent, changing only with deliberate effort and broad consensus.
+ Careers at Runpod.
+ If our vision speaks to you, and you’re passionate about building tools that push the boundaries of AI, come join us.
+ See open roles 
+ We wear multiple hats.
+ Our sales team has a strong technical background. Our eng team has an exceptional eye for product. Our datacenter operations team has a strong sales background. Whether you're doing engineering, sales, operations, design, or product, you should be comfortable wearing more than one hat at a time.
+ We are customer-obsessed.
+ 1M+ Developers rely on us to run their workloads. Many of them use Runpod for their production environments. That's a huge responsibility that we don't take lightly. We are constantly talking to our customers to understand what we can do to level up our platform.
+ We contribute cross-functionally.
+ If you think there's a better way of doing X, even if it doesn't directly fall under your function, you should voice that to the team. The most important products we've built have stemmed from conversations between non-overlapping teams, like ML + Sales, Customer Support + Product, and Datacenter Operations + Accounting.
+ We are agile.
+ At this stage, we need to move quickly. The faster we can ship products that delight our customers, the more successful they will be
+
+=== [meta] https://www.runpod.io/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음

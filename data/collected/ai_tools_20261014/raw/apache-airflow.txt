@@ -1,0 +1,236 @@
+=== [home] https://airflow.apache.org (lang=en)
+Apache Airflow 
+ Skip to main content 
+ Community
+ Meetups
+ Documentation
+ Registry
+ Use Cases
+ Announcements
+ Blog
+ Airflow Survey 2025
+ Ecosystem
+ Community
+ Meetups
+ Documentation
+ Registry
+ Use Cases
+ Announcements
+ Blog
+ Airflow Survey 2025
+ Ecosystem
+ Apache Airflow®
+ Apache Airflow® is a platform created by the community to programmatically author, schedule and monitor
+ workflows.
+ Install Airflow 
+ Principles
+ Scalable
+ Apache Airflow® has a modular architecture and uses a message queue to orchestrate an arbitrary number of workers. Airflow™ is ready to scale to infinity.
+ Dynamic
+ Apache Airflow® pipelines are defined in Python, allowing for dynamic pipeline generation. This allows for writing code that instantiates pipelines dynamically.
+ Extensible
+ Easily define your own operators and extend libraries to fit the level of abstraction that suits your environment.
+ Elegant
+ Apache Airflow® pipelines are lean and explicit. Parametrization is built into its core using the powerful Jinja templating engine.
+ Features
+ Pure Python
+ No more command-line or XML black-magic! Use standard Python features to create your workflows, including date time formats for scheduling and loops to dynamically generate tasks. This allows you to maintain full flexibility when building your workflows.
+ Useful UI
+ Monitor, schedule and manage your workflows via a robust and modern web application. No need to learn old, cron-like interfaces. You always have full insight into the status and logs of completed and ongoing tasks.
+ Robust Integrations
+ Apache Airflow® provides many plug-and-play operators that are ready to execute your tasks on Google Cloud Platform, Amazon Web Services, Microsoft Azure and many other third-party services. This makes Airflow easy to apply to current infrastructure and extend to next-gen technologies.
+ Easy to Use
+ Anyone with Python knowledge can deploy a workflow. Apache Airflow® does not limit the scope of your pipelines; you can use it to build ML models, transfer data, manage your infrastructure, and more.
+ Open Source
+ Wherever you want to share your improvement you can do this by opening a PR. It’s simple as that, no barriers, no prolonged procedures. Airflow has many active users who willingly share their experiences. Have any questions? Check out our buzzing slack.
+ Integrations
+ Search integrations 
+ Loading..
+ Show more 
+ From the Blog
+ Jul 6, 2026
+ Apache Airflow 3.3.0: Stateful Tasks and Multi-Language Support 
+ We’re proud to announce the release of Apache Airflow 3.3.0! Where 3.2 brought precision to data with asset partitioning, 3.3 gives …
+ Apr 15, 2026
+ Agentic Workloads on Airflow: Observable, Retryable, and Auditable by Design 
+ A question like “How does AI tool usage vary across Airflow versions?” has a natural SQL shape: one cross-tabulation, one …
+ Apr 15, 2026
+ Ask Your Survey Anything: Building AI Analysis Pipelines with Airflow 3 
+ The 2025 Airflow Community Survey collected responses from nearly 6,000 practitioners across 168 questions. You can open a spreadsheet and …
+ Visit the Blog 
+ Suggest a change on this page 
+ Want to be a part of Apache Airflow? 
+ Join community 
+ © The Apache Software Foundation 2026 
+ License 
+ Donate 
+ Events 
+ Thanks 
+ Security 
+ Privacy 
+ Code of Conduct 
+ English 
+ Apache Airflow, Apache, Airflow, the Airflow logo, and the Apache logo are either registered trademarks or trademarks of
+ The Apache Software Foundation .
+ All other products or name brands are trademarks of their respective holders, including The Apache Software Foundation.
+
+=== [about] https://airflow.apache.org/docs/ (lang=en)
+Documentation | Apache Airflow 
+ Skip to main content 
+ Community
+ Meetups
+ Documentation
+ Registry
+ Use Cases
+ Announcements
+ Blog
+ Airflow Survey 2025
+ Ecosystem
+ Community
+ Meetups
+ Documentation
+ Registry
+ Use Cases
+ Announcements
+ Blog
+ Airflow Survey 2025
+ Ecosystem
+ Documentation
+ Apache Airflow® 
+ Apache Airflow Core, which includes webserver, scheduler, CLI and other components that are needed for minimal Airflow installation.
+ Read Apache Airflow documentation » 
+ Apache Airflow CTL (airflowctl) 
+ Apache Airflow CTL (airflowctl) is a command-line interface (CLI) for Apache Airflow that interacts exclusively with the Airflow REST API. It provides a secure, auditable, and consistent way to manage Airflow deployments — without direct access to the metadata database.
+ Read airflowctl documentation » 
+ Apache Airflow Mypy plugins 
+ Apache Airflow Mypy provides optional, independently versioned plugins that improve static type checking
+for Dags, custom operators, hooks, typed decorators, and task outputs.
+ Read Apache Airflow Mypy documentation » 
+ Task SDK 
+ The Task SDK provides python-native interfaces for defining DAGs,
+executing tasks in isolated subprocesses and interacting with Airflow resources
+(e.g., Connections, Variables, XComs, Metrics, Logs, and OpenLineage events) at runtime. The goal of task-sdk is to decouple DAG authoring from Airflow internals (Scheduler, API Server, etc.), providing a forward-compatible, stable interface for writing and maintaining DAGs across Airflow versions.
+ Read Task SDK documentation » 
+ Docker stack 
+ Airflow has an official Dockerfile and Docker image published in DockerHub as a convenience package for
+installation. You can extend and customize the image according to your requirements and use it in
+your own deployments.
+ Read Docker stack documentation » 
+ Helm Chart 
+ Airflow has an official Helm Chart that will help you set up your own Airflow on a cloud/on-prem Kubernetes environment and leverage its scalable nature to support a large group of users. Thanks to Kubernetes, we are not tied to a specific cloud provider.
+ Read Helm Chart documentation » 
+ Python API Client 
+ Airflow releases official Python API client that can be used to easily interact with Airflow REST API from Python code.
+ See the client repository 
+ Providers packages 
+ Providers packages include integrations with third party projects. They are versioned and released independently of the Apache Airflow core.
+ Read Providers documentation » 
+ Active providers
+ Airbyte 
+ Akeyless 
+ Alibaba 
+ Amazon 
+ Anthropic 
+ Apache Arrow 
+ Apache Beam 
+ Apache Cassandra 
+ Apache Drill 
+ Apache Druid 
+ Apache Flink 
+ Apache HDFS 
+ Apache Hive 
+ Apache Iceberg 
+ Apache Impala 
+ Apache Kafka 
+ Apache Kylin 
+ Apache Livy 
+ Apache Pig 
+ Apache Pinot 
+ Apache Spark 
+ Apache Tinkerpop 
+ Apprise 
+ ArangoDB 
+ Asana 
+ Atlassian Jira 
+ Celery 
+ ClickHouse 
+ Cloudant 
+ CNCF Kubernetes 
+ Cohere 
+ Common AI 
+ Common Compat 
+ Common IO 
+ Common Messaging 
+ Common SQL 
+ Databricks 
+ Datadog 
+ dbt Cloud 
+ Dingding 
+ Discord 
+ Docker 
+ Edge3 
+ Elasticsearch 
+ Exasol 
+ FAB (Flask-AppBuilder) 
+ Facebook 
+ File Transfer Protocol (FTP) 
+ Git 
+ GitHub 
+ Google 
+ gRPC 
+ Hashicorp 
+ Hypertext Transfer Protocol (HTTP) 
+ IBM Cloudant 
+ Influx DB 
+ Informatica 
+ Internet Message Access Protocol (IMAP) 
+ Java Database Connectivity (JDBC) 
+ Jenkins 
+ Keycloak 
+ Microsoft Azure 
+ Microsoft SQL Server (MSSQL) 
+ Microsoft PowerShell Remoting Protocol (PSRP) 
+ Microsoft Windows Remote Management (WinRM) 
+ MongoDB 
+ MySQL 
+ Neo4j 
+ ODBC 
+ OpenAI 
+ OpenFaaS 
+ OpenLin
+
+=== [meta] https://airflow.apache.org
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: English
+
+=== [github] https://github.com/apache/airflow
+<!--
+ Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements.  See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License.  You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied.  See the License for the
+ specific language governing permissions and limitations
+ under the License.
+-->
+
+<!-- START Apache Airflow, please keep comment here to allow auto update of PyPI readme.md -->
+# Apache Airflow
+
+| Category   | Badges                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+|------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| License    | [![License](https://img.shields.io/:license-Apache%202-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0.txt)                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| PyPI       | [![PyPI version](https://badge.fury.io/py/apache-airflow.svg)](https://badge.fury.io/py/apache-airflow) [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/apache-airflow.svg)](https://pypi.org/project/apache-airflow/) [![PyPI - Downloads](https://img.shields.io/pypi/dm/apache-airflow)](https://pypi.org/project/apache-airflow/)                                                                                                                                                                               |
+| Containers | [![Docker Pulls](https://img.shields.io/docker/pulls/apache/airflow.svg)](https://hub.docker.com/r/apache/airflow) [![Docker Stars](https://img.shields.io/docker/stars/apache/airflow.svg)](https://hub.docker.com/r/apache/airflow) [![Artifact HUB](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/apache-airflow)](https://artifacthub.io/packages/search?repo=apache-airflow)                                                                                                                      |
+| Community  | [![Contributors](https://img.shields.io/github/contributors/apache/airflow)](https://github.com/apache/airflow/graphs/contributors) [![Slack Status](https://img.shields.io/badge/slack-join_chat-white.svg?logo=slack&style=social)](https://s.apache.org/airflow-slack) ![Commit Activity](https://img.shields.io/github/commit-activity/m/apache/airflow) [![LFX Health Score](https://insights.linuxfoundation.org/api/badge/health-score?project=apache-airflow)](https://insights.linuxfoundation.org/project/apache-airflow)  |
+| Dev tools  | [![prek](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/j178/prek/

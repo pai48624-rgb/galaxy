@@ -1,61 +1,210 @@
 {
  "company": "네오사피엔스 주식회사 (Neosapience, Inc.)",
- "one_liner_ko": "감정까지 자연스럽게 표현하는 사람 같은 AI 목소리로 콘텐츠를 만드는 텍스트 음성 변환(TTS) 서비스.",
- "what_it_does_ko": "타입캐스트는 AI 기술로 자연스러운 음성 내레이션을 만드는 텍스트 음성 변환(TTS) 플랫폼이다. 700개 이상의 AI 보이스와 문맥을 읽어 감정을 자동으로 입히는 스마트 이모션, 보이스 클로닝을 제공한다. AI 보이스 생성과 비디오 편집, 자동 자막 생성을 한 곳에서 할 수 있다. 개발자용 TTS API(스트리밍·타임스탬프·퀵 클로닝)와 여러 언어 SDK, CLI, 노코드 연동(Zapier·n8n 등)도 제공한다.",
+ "one_liner_ko": "감정까지 자연스럽게 표현하는 AI 목소리로 콘텐츠를 만드는 텍스트 음성 변환(TTS) 플랫폼.",
+ "what_it_does_ko": "타입캐스트는 네오사피엔스의 AI 음성 생성·텍스트 음성 변환 플랫폼이다. 700개 이상의 AI 보이스로 대본 하나에서 다양한 콘텐츠를 만들 수 있고, 문맥을 읽어 감정을 자동으로 넣는 스마트 이모션 기능이 있다. 보이스 클로닝, 비디오 편집, 자동 자막, AI 토킹 아바타도 제공한다. 개발자용 TTS API는 35개 이상 언어·600개 이상 보이스, 스트리밍(응답 170ms)과 여러 언어 SDK·CLI를 지원한다. 웹 스튜디오 요금제와 API 요금제는 따로 구독한다.",
  "key_features": [
-  "700개 이상 AI 보이스(성우·내레이터·아나운서 등)",
-  "문맥을 읽어 감정을 자동으로 입히는 스마트 이모션",
-  "짧은 음성 샘플로 커스텀 보이스를 만드는 보이스 클로닝",
-  "35개 이상 언어 음성 생성(ssfm-v30 모델 기준)",
+  "700개 이상의 AI 보이스(성우·내레이터·아나운서 등)",
+  "문맥에 맞게 감정을 자동으로 넣는 스마트 이모션",
+  "짧은 샘플로 내 목소리를 만드는 보이스 클로닝",
+  "AI 보이스 생성+비디오 편집+자동 자막",
+  "35개 이상 언어 지원(API, ssfm-v30 기준)",
   "응답 170ms 스트리밍 TTS API",
-  "자막·립싱크용 타임스탬프 TTS",
-  "AI 보이스 생성·비디오 편집·자동 자막을 한 번에",
-  "Python·JavaScript 등 SDK, CLI, Zapier·n8n 노코드 연동"
+  "Python·JavaScript 등 SDK와 Cast CLI, Zapier·n8n 연동",
+  "AI 토킹 아바타"
  ],
  "use_cases_ko": [
-  "마케터가 광고 캠페인·온드미디어 콘텐츠 제작",
-  "기업 HR이 구성원 교육 콘텐츠 제작",
-  "개발자가 웹·앱·게임·이러닝 서비스에 음성 기능 연동"
+  "광고·온드미디어 콘텐츠 제작",
+  "사내 교육·HR 콘텐츠 제작",
+  "대화형 에이전트·챗봇에 음성 연동(API)"
  ],
  "pricing": {
-  "free_tier": "있음 (API 무료 플랜: 매월 15,000 크레딧, 상업 이용 불가·출처 표기 필수)",
+  "free_tier": "있음 (스튜디오: 최초 3,000 크레딧·약 5분, 출처 표기 필수 / API: 월 15,000 크레딧, 상업 이용 불가)",
   "plans": [
-   {"name": "API 무료", "price": 0, "currency": "USD", "period": "month", "limits": "매월 15,000 크레딧, 동시 호출 2, 상업 이용 불가"},
-   {"name": "API 라이트", "price": 15, "currency": "USD", "period": "month", "limits": "매월 200,000 크레딧, 동시 호출 5, 초과분 자동 결제"},
-   {"name": "API 플러스", "price": 280, "currency": "USD", "period": "month", "limits": "매월 4,000,000 크레딧, 동시 호출 15"},
-   {"name": "API 엔터프라이즈", "price": null, "currency": null, "period": null, "limits": "커스텀(문의)"}
+   {
+    "name": "무료(스튜디오)",
+    "price": 0,
+    "currency": "KRW",
+    "period": "month",
+    "limits": "최초 3,000 크레딧(약 5분), 출처 표기 필수",
+    "page_lang": "ko"
+   },
+   {
+    "name": "베이직(스튜디오)",
+    "price": 9900,
+    "currency": "KRW",
+    "period": "month",
+    "limits": "월 30,000 크레딧(약 60분), 상업적 사용 가능, 연 ₩106,800",
+    "page_lang": "ko"
+   },
+   {
+    "name": "플러스(스튜디오)",
+    "price": 29000,
+    "currency": "KRW",
+    "period": "month",
+    "limits": "월 40,000 크레딧(약 80분), 속도 조절, 4K, 연 ₩312,000",
+    "page_lang": "ko"
+   },
+   {
+    "name": "프로(스튜디오)",
+    "price": 39000,
+    "currency": "KRW",
+    "period": "month",
+    "limits": "월 75,000 크레딧(약 150분), 스마트 이모션, 클로닝 2개, 연 ₩420,000",
+    "page_lang": "ko"
+   },
+   {
+    "name": "비즈니스(스튜디오)",
+    "price": 99000,
+    "currency": "KRW",
+    "period": "month",
+    "limits": "월 200,000 크레딧(약 410분), 클로닝 10개, 연 ₩1,068,000",
+    "page_lang": "ko"
+   },
+   {
+    "name": "API 무료",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "월 15,000 크레딧, 동시 호출 2, 상업 이용 불가",
+    "page_lang": "ko"
+   },
+   {
+    "name": "API 라이트",
+    "price": 15,
+    "currency": "USD",
+    "period": "month",
+    "limits": "월 200,000 크레딧, 초과분 $0.09/1,000 크레딧, 동시 호출 5",
+    "page_lang": "ko"
+   },
+   {
+    "name": "API 플러스",
+    "price": 280,
+    "currency": "USD",
+    "period": "month",
+    "limits": "월 4,000,000 크레딧, 초과분 $0.08/1,000 크레딧, 동시 호출 15",
+    "page_lang": "ko"
+   }
   ],
-  "pricing_url": "https://typecast.ai/kr/pricing/api/"
+  "pricing_url": "https://typecast.ai/kr/pricing/"
  },
  "open_source": null,
  "api": "있음",
- "platforms": ["웹", "API", "CLI"],
+ "platforms": [
+  "웹",
+  "iOS",
+  "안드로이드",
+  "API",
+  "CLI"
+ ],
  "korean_support": "UI 한국어",
  "evidence": [
-  {"field": "company", "url": "https://typecast.ai/kr/", "quote": "네오사피엔스 주식회사"},
-  {"field": "company", "url": "https://typecast.ai/kr/", "quote": "Copyright © 2026 Neosapience, Inc. All Rights Reserved"},
-  {"field": "one_liner_ko", "url": "https://typecast.ai/kr/", "quote": "타입캐스트에서 원하는 AI 목소리를 찾아 쉽고 간단하게"},
-  {"field": "one_liner_ko", "url": "https://typecast.ai/kr/", "quote": "감정까지 자연스러운\n사람 같은 AI 목소리"},
-  {"field": "what_it_does_ko", "url": "https://typecast.ai/docs/ko/overview", "quote": "타입캐스트는 AI 기술을 활용하여 자연스러운 음성 내레이션을 생성할 수 있는 텍스트 음성 변환(TTS) 플랫폼입니다."},
-  {"field": "key_features", "url": "https://typecast.ai/kr/", "quote": "AI 성우, 내레이터, 아나운서 등 700개 이상의 AI 보이스 중 원하는 보이스를"},
-  {"field": "key_features", "url": "https://typecast.ai/kr/", "quote": "감정까지 알아서 입력하는 Smart Emotion"},
-  {"field": "key_features", "url": "https://typecast.ai/docs/ko/overview", "quote": "퀵 클로닝 짧은 오디오 샘플로 커스텀 보이스를 만들고, 기본 보이스와 동일하게 TTS 요청에 사용할 수 있습니다."},
-  {"field": "key_features", "url": "https://typecast.ai/docs/ko/overview", "quote": "35+개 언어 지원 ssfm-v30 모델 기준 한국어, 영어, 일본어, 중국어, 스페인어, 베트남어 등 35+개 언어로 음성을 생성할 수 있습니다."},
-  {"field": "key_features", "url": "https://typecast.ai/kr/", "quote": "응답속도 170ms의 스트리밍 TTS API를 제공합니다."},
-  {"field": "key_features", "url": "https://typecast.ai/docs/ko/overview", "quote": "Timestamp TTS 단어 또는 문자 단위 정렬 데이터를 함께 받아 자막, 가라오케 하이라이트, 립싱크를 구현합니다."},
-  {"field": "key_features", "url": "https://typecast.ai/kr/", "quote": "AI 보이스 생성과 비디오 편집, 그리고\n자동 자막 생성까지 다양한 기능을 활용 가능"},
-  {"field": "key_features", "url": "https://typecast.ai/kr/", "quote": "Python, JavaScript SDK와 CLI는 물론,\nZapier, n8n 등 노코드 자동화 툴까지 다양한 연동을 지원해요"},
-  {"field": "use_cases_ko", "url": "https://typecast.ai/kr/", "quote": "타입캐스트를 사용해서 온드미디어와 광고 캠페인 콘텐츠를 제작하고 있어요."},
-  {"field": "use_cases_ko", "url": "https://typecast.ai/kr/", "quote": "조직 구성원 교육도를 높일 방법을 찾던 도중에 타입캐스트를 도입하여"},
-  {"field": "use_cases_ko", "url": "https://typecast.ai/kr/pricing/api/", "quote": "웹사이트, 앱, 게임, 팟캐스트, 이러닝 등 다양한 환경에서 SSFM 3.0 모델 기반의 자연스럽고 감정 있는 음성을 구현할 수 있어요."},
-  {"field": "pricing", "url": "https://typecast.ai/kr/pricing/api/", "quote": "무료 \n $0 \n/ 월 \n 시작하기 \n 매월 15,000 크레딧 제공 \n 동시 호출 한도: 2"},
-  {"field": "pricing", "url": "https://typecast.ai/kr/pricing/api/", "quote": "무료 플랜을 통해 생성한 음성은 상업적 목적으로 이용할 수 없으며, 반드시 출처를 표기해야 합니다."},
-  {"field": "pricing", "url": "https://typecast.ai/kr/pricing/api/", "quote": "라이트 \n $15 \n/ 월 \n 구독하기 \n 매월 200,000 크레딧 제공"},
-  {"field": "pricing", "url": "https://typecast.ai/kr/pricing/api/", "quote": "플러스 \n $280 \n/ 월 \n 구독하기 \n 매월 4,000,000 크레딧 제공"},
-  {"field": "pricing", "url": "https://typecast.ai/kr/pricing/api/", "quote": "엔터프라이즈 \n 커스텀 \n 기업 도입 문의"},
-  {"field": "api", "url": "https://typecast.ai/docs/ko/overview", "quote": "타입캐스트 API는 완성형 오디오 생성, 실시간 재생, 자막 타이밍, 커스텀 보이스 생성을 지원합니다."},
-  {"field": "platforms", "url": "https://typecast.ai/docs/ko/overview", "quote": "Typecast API, SDK, 연동 도구와 Cast CLI를 사용해 자연스러운 음성 경험을 구축하세요."},
-  {"field": "korean_support", "url": "https://typecast.ai/kr/", "quote": "타입캐스트 소개 API & Enterprise API 소개"}
+  {
+   "field": "company",
+   "url": "https://typecast.ai/kr/",
+   "quote": "Copyright © 2026 Neosapience, Inc. All Rights Reserved"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://typecast.ai/docs/ko/overview",
+   "quote": "타입캐스트는 AI 기술을 활용하여 자연스러운 음성 내레이션을 생성할 수 있는 텍스트 음성 변환(TTS) 플랫폼입니다."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://typecast.ai/kr/pricing/api/",
+   "quote": "네, 별개입니다. 웹 서비스(스튜디오) 플랜과 API 플랜은 각각 별도로 구독하며, 사용량과 결제도 독립적으로 관리됩니다."
+  },
+  {
+   "field": "key_features",
+   "url": "https://typecast.ai/kr/",
+   "quote": "AI 성우, 내레이터, 아나운서 등 700개 이상의 AI 보이스 중 원하는 보이스를"
+  },
+  {
+   "field": "key_features",
+   "url": "https://typecast.ai/kr/",
+   "quote": "AI가 앞뒤 맥락을 읽어 자동으로 어울리는 감정을 표현해줘요."
+  },
+  {
+   "field": "key_features",
+   "url": "https://typecast.ai/docs/ko/overview",
+   "quote": "퀵 클로닝 짧은 오디오 샘플로 커스텀 보이스를 만들고, 기본 보이스와 동일하게 TTS 요청에 사용할 수 있습니다."
+  },
+  {
+   "field": "key_features",
+   "url": "https://typecast.ai/kr/",
+   "quote": "AI 보이스 생성과 비디오 편집, 그리고\n자동 자막 생성까지 다양한 기능을 활용 가능"
+  },
+  {
+   "field": "key_features",
+   "url": "https://typecast.ai/docs/ko/overview",
+   "quote": "35+개 언어 지원 ssfm-v30 모델 기준 한국어, 영어, 일본어, 중국어, 스페인어, 베트남어 등 35+개 언어로 음성을 생성할 수 있습니다."
+  },
+  {
+   "field": "key_features",
+   "url": "https://typecast.ai/kr/",
+   "quote": "응답속도 170ms의 스트리밍 TTS API를 제공합니다."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://typecast.ai/kr/",
+   "quote": "“타입캐스트를 사용해서 온드미디어와 광고 캠페인 콘텐츠를 제작하고 있어요."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://typecast.ai/kr/",
+   "quote": "대화형 에이전트, 챗봇까지 끊김 없이 이어지는 진짜 '실시간' 서비스를 만드세요."
+  },
+  {
+   "field": "pricing",
+   "url": "https://typecast.ai/kr/pricing/",
+   "quote": "음성 생성과 재생 은 모든 플랜에서 무료 이며, 음성 다운로드 시에만 플랜별 다운로드 시간이 차감 됩니다."
+  },
+  {
+   "field": "pricing",
+   "url": "https://typecast.ai/kr/pricing/",
+   "quote": "무료 플랜으로 다운로드한 콘텐츠는 반드시 출처를 표기해야 합니다."
+  },
+  {
+   "field": "pricing",
+   "url": "https://typecast.ai/kr/pricing/api/",
+   "quote": "무료 플랜을 통해 생성한 음성은 상업적 목적으로 이용할 수 없으며, 반드시 출처를 표기해야 합니다."
+  },
+  {
+   "field": "pricing",
+   "url": "https://typecast.ai/kr/pricing/api/",
+   "quote": "추가 사용량은 라이트 플랜은 $9(100,000 크레딧), 플러스 플랜은 $100(1,250,000 크레딧) 단위로 자동 결제됩니다."
+  },
+  {
+   "field": "api",
+   "url": "https://typecast.ai/kr/pricing/api/",
+   "quote": "타입캐스트 TTS API는 600개 이상의 개성 있는 AI 보이스를 서비스에 바로 연동할 수 있는 TTS(Text To Speech) API입니다."
+  },
+  {
+   "field": "platforms",
+   "url": "https://typecast.ai/kr/pricing/",
+   "quote": "앱(iOS/Android)에서 결제한 플랜은 웹에서 변경할 수 없습니다."
+  },
+  {
+   "field": "platforms",
+   "url": "https://typecast.ai/docs/ko/overview",
+   "quote": "Typecast API, SDK, 연동 도구와 Cast CLI를 사용해 자연스러운 음성 경험을 구축하세요."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://typecast.ai/kr/",
+   "quote": "html lang: ko\nhreflang: en-us, ko-kr, x-default\n화면에 보이는 언어 이름: 한국어, English"
+  },
+  {
+   "field": "plan_change",
+   "url": "https://typecast.ai/kr/pricing/api/",
+   "quote": "스튜디오 API AI 음성을 서비스·시스템에 연동하는 API 고객을 위한 플랜입니다."
+  }
  ],
- "mismatch": []
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "웹 스튜디오 플랜(KRW, 무료~비즈니스 ₩99,000/월)과 별개로 API 플랜(USD, 무료·라이트 $15·플러스 $280/월 + 초과분 자동 종량 결제)이 따로 있음",
+   "diff": "분류(프리미엄)는 같지만 스튜디오 구독과 API 구독이 분리돼 있고, API는 '월 구독+초과분 종량제' 구조",
+   "url": "https://typecast.ai/kr/pricing/api/"
+  }
+ ]
 }

@@ -1,0 +1,72 @@
+{
+ "company": null,
+ "one_liner_ko": "스타일 확산과 대형 음성 언어 모델 기반 적대적 학습으로 사람 수준 음성 합성을 노리는 TTS 모델.",
+ "what_it_does_ko": "StyleTTS 2는 스타일 확산(style diffusion)과 대형 사전학습 음성 언어 모델(SLM)을 이용한 적대적 학습으로 사람 수준의 텍스트 음성 변환(TTS)을 목표로 하는 연구 모델이다. 스타일을 확산 모델의 잠재 변수로 다뤄 참조 음성 없이도 텍스트에 맞는 스타일을 생성한다. 단일 화자(LJSpeech)·다중 화자(VCTK)·제로샷 화자 적응(LibriTTS)·긴 낭독 등의 샘플을 공개하며, 학습·추론 코드와 사전학습 모델, 새 화자 미세조정 스크립트를 GitHub에 제공한다.",
+ "key_features": [
+  "참조 음성 없이 텍스트에 맞는 말투 스타일 생성(스타일 확산)",
+  "WavLM 등 대형 음성 언어 모델을 판별기로 쓰는 적대적 학습",
+  "제로샷 화자 적응 — VALL-E보다 250배 적은 데이터로 유사한 일반화",
+  "긴 문단 낭독(롱폼 내레이션)",
+  "기본 다중 화자 모델로 새 화자 미세조정 스크립트 제공",
+  "학습·추론 코드와 사전학습 모델 공개"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": null,
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "공개 코드(라이선스 이름은 페이지에 없음)",
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://styletts2.github.io",
+   "quote": "we present StyleTTS 2, a text-to-speech (TTS) model that leverages style diffusion and adversarial training with large speech language models (SLMs) to achieve human-level TTS synthesis."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://styletts2.github.io",
+   "quote": "to generate the most suitable style for the text without requiring reference speech"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://styletts2.github.io",
+   "quote": "4. Zero-shot Speaker Adaptation (LibriTTS)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://styletts2.github.io",
+   "quote": "we employ large pre-trained SLMs, such as WavLM, as discrimi"
+  },
+  {
+   "field": "key_features",
+   "url": "https://styletts2.github.io",
+   "quote": "It is noteworthy that our model matches the generalization capabilities of VALL-E, including maintaining the acoustic environment and speaker's emotion, but with 250x less data."
+  },
+  {
+   "field": "key_features",
+   "url": "https://styletts2.github.io",
+   "quote": "Our model exhibits robustness against OOD texts in longform narration."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/yl4579/StyleTTS2",
+   "quote": "- [x] Add a finetuning script for new speakers with base pre-trained multispeaker models"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/yl4579/StyleTTS2",
+   "quote": "- [x] Finish demo code for multispeaker model and upload pre-trained models"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/yl4579/StyleTTS2",
+   "quote": "git clone https://github.com/yl4579/StyleTTS2.git"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

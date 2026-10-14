@@ -1,0 +1,29 @@
+{
+ "company": "IBM Research",
+ "one_liner_ko": "기업 규모에서 생성형 AI를 안전하고 효율적으로 쓰도록 오픈소스 데이터 도구와 멀티모달 모델을 설계하는 IBM의 연구 조직.",
+ "what_it_does_ko": "IBM Research는 데이터를 준비·보호·활용하는 오픈소스 도구와 멀티모달 모델, AI와 상호작용하는 새 기술을 연구한다. 언어·코드·시계열·지리공간 모델 계열인 Granite를 Hugging Face에서 내려받거나 무료로 대화해 볼 수 있게 제공한다. 최신 Granite 4.2는 3B·8B·30B 크기의 추론 언어 모델로 Apache 2.0 라이선스로 공개되었다. 전 세계 3,000명 이상의 연구자가 기업·기관과 협업한다.",
+ "key_features": ["Granite 언어·코드·시계열·지리공간 모델 계열 Hugging Face 공개", "Granite 무료 체험(대화)", "Granite 4.2: 3B·8B·30B 추론 모델, 내장 chain-of-thought", "생각 모드 전환(전체·비사고·저노력)", "추론 기반 도구 호출(에이전트용)", "128K 문맥(30B는 512K 확장)", "Ollama·vLLM·LM Studio로 실행"],
+ "use_cases_ko": ["기업 에이전트용 추론 모델(Granite 4.2)", "엣지·자원 제한 환경 배포(granite-4.2-3b)"],
+ "pricing": {"free_tier": "있음 (Granite 무료 체험·모델 다운로드)", "plans": [], "pricing_url": null},
+ "open_source": "Apache 2.0",
+ "api": "불명",
+ "platforms": ["웹"],
+ "korean_support": "한국어 입력·출력",
+ "evidence": [
+  {"field": "company", "url": "https://research.ibm.com/artificial-intelligence", "quote": "With over 3,000 researchers across the globe, IBM Research has a long pedigree of turning fundamental research into world-altering technology."},
+  {"field": "one_liner_ko", "url": "https://research.ibm.com/artificial-intelligence", "quote": "IBM Research is designing powerful new ways to support the future of business, with open-source tools to prepare, secure, and use data, along with best-in-class multimodal models"},
+  {"field": "what_it_does_ko", "url": "https://research.ibm.com/artificial-intelligence", "quote": "Explore our family of language, code, time series, and geospatial models."},
+  {"field": "key_features", "url": "https://research.ibm.com/artificial-intelligence", "quote": "Download Granite on Hugging Face \n Explore our family of language, code, time series, and geospatial models."},
+  {"field": "key_features", "url": "https://www.ibm.com/granite/docs/models/granite4-2", "quote": "Dense reasoning language model family in 3B, 8B, and 30B sizes with built-in chain-of-thought thinking, flexible thinking modes, and reasoning-augmented tool calling."},
+  {"field": "key_features", "url": "https://www.ibm.com/granite/docs/models/granite4-2", "quote": "All models natively support a 128K context window (with long-context extension to 512K on the 30B model)"},
+  {"field": "key_features", "url": "https://www.ibm.com/granite/docs/models/granite4-2", "quote": "Run Granite \n Ollama \n vLLM (Containerized) \n LM Studio"},
+  {"field": "use_cases_ko", "url": "https://research.ibm.com/artificial-intelligence", "quote": "Granite 4.2 brings native reasoning to enterprise agents"},
+  {"field": "use_cases_ko", "url": "https://www.ibm.com/granite/docs/models/granite4-2", "quote": "granite-4.2-3b : Compact reasoning model optimized for edge deployment and resource-constrained environments"},
+  {"field": "pricing", "url": "https://research.ibm.com/artificial-intelligence", "quote": "Try Granite for Free \n Chat with a Granite model and learn how it can be used across a variety of applications."},
+  {"field": "open_source", "url": "https://www.ibm.com/granite/docs/models/granite4-2", "quote": "are released under the Apache 2.0 license with cryptographic signatures, ISO certification, and full transparency disclosures, enabling unrestricted commercial and academic use."},
+  {"field": "platforms", "url": "https://research.ibm.com/artificial-intelligence", "quote": "Try Granite for Free \n Chat with a Granite model"},
+  {"field": "korean_support", "url": "https://www.ibm.com/granite/docs/models/granite4-2", "quote": "Granite 4.2 is tested across English, German, Spanish, French, Japanese, Portuguese, Arabic, Czech, Italian, Korean, Dutch, and Chinese."}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

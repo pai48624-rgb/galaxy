@@ -1,0 +1,76 @@
+{
+ "company": "Scale AI",
+ "one_liner_ko": "공개 오픈소스 저장소의 어렵고 긴 소프트웨어 엔지니어링 과제로 AI 에이전트를 평가하는 SWE-Bench Pro 공개 리더보드.",
+ "what_it_does_ko": "SWE-Bench Pro는 데이터 오염, 과제 다양성 부족, 지나치게 단순한 문제, 재현 불가 테스트 같은 기존 벤치마크의 한계를 보완하려고 만든 소프트웨어 엔지니어링 벤치마크다. 41개 저장소의 과제 1,865개 중 공개 세트 731개가 공개 리더보드에 쓰이며, 오염을 줄이려고 GPL 같은 강한 카피레프트 라이선스 저장소에서 과제를 가져왔다. 전문 엔지니어가 Docker 기반 재현 환경을 만들고 사람이 문제 설명과 요구사항을 보강한다. 순위 지표는 새 테스트 통과와 기존 테스트 유지 두 조건을 모두 만족한 과제 비율(Resolve Rate)이다.",
+ "key_features": [
+  "공개 세트 731개 과제(전체 1,865개, 41개 저장소)",
+  "카피레프트(GPL) 저장소로 데이터 오염 억제",
+  "Docker 기반 재현 환경",
+  "사람이 보강한 문제 설명·요구사항",
+  "Resolve Rate(회귀 없는 해결률) 지표",
+  "스타트업 비공개 코드 세트 별도 리더보드"
+ ],
+ "use_cases_ko": [
+  "코딩 에이전트의 실전형 문제 해결 능력 비교"
+ ],
+ "pricing": {
+  "free_tier": null,
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "웹"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://labs.scale.com/leaderboard/swe_bench_pro",
+   "quote": "2026 Scale AI. All rights reserved."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://labs.scale.com/leaderboard/swe_bench_pro",
+   "quote": "Evaluating challenging long-horizon software engineering tasks in public open source repositories"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://labs.scale.com/leaderboard/swe_bench_pro",
+   "quote": "SWE-Bench Pro is a large-scale benchmark containing 1865 total tasks across 41 professional repositories."
+  },
+  {
+   "field": "key_features",
+   "url": "https://labs.scale.com/leaderboard/swe_bench_pro",
+   "quote": "The Public Set: This set contains 731 instances and serves as the main public-facing benchmark."
+  },
+  {
+   "field": "key_features",
+   "url": "https://labs.scale.com/leaderboard/swe_bench_pro",
+   "quote": "Professional engineers build reproducible Docker-based environments"
+  },
+  {
+   "field": "key_features",
+   "url": "https://labs.scale.com/leaderboard/swe_bench_pro",
+   "quote": "The primary metric is Resolve Rate, which is the percentage of tasks an agent successfully resolves."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://labs.scale.com/leaderboard/swe_bench_pro",
+   "quote": "This provides a more accurate measure of an agent’s true problem-solving capabilities"
+  },
+  {
+   "field": "platforms",
+   "url": "https://labs.scale.com/leaderboard/swe_bench_pro",
+   "quote": "SWE-Bench Pro Leaderboard AI Coding Benchmark | Scale"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://labs.scale.com/leaderboard/swe_bench_pro",
+   "quote": "html lang: en\nhreflang: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

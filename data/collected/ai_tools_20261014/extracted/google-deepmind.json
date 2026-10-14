@@ -1,0 +1,161 @@
+{
+ "company": "Google DeepMind",
+ "one_liner_ko": "인류에 도움이 되도록 책임 있게 AI를 만드는 것을 사명으로 하는 구글의 AI 연구소로, Gemini 등 모델을 개발한다.",
+ "what_it_does_ko": "Google DeepMind는 Gemini, Gemini Omni, Nano Banana, Veo, Lyria, Genie 3, Gemini Robotics, 오픈 모델 Gemma 등 AI 모델을 개발한다. AlphaFold·AlphaGenome·WeatherNext 등 과학 연구 성과도 낸다. 모델은 Gemini 앱, Google AI Studio, Gemini API 등에서 쓸 수 있다. Gemini Developer API는 무료 등급과 종량제 유료 등급, Enterprise로 나뉜다.",
+ "key_features": [
+  "Gemini 모델(에이전트 구축)",
+  "Nano Banana 이미지 생성·편집",
+  "Veo 오디오 포함 동영상 생성",
+  "Lyria 음악 생성",
+  "Gemini Audio 실시간 오디오",
+  "Gemma 오픈 모델",
+  "AlphaFold 단백질 구조 예측"
+ ],
+ "use_cases_ko": [
+  "개발자가 Gemini API로 에이전트·앱 개발",
+  "연구자가 AI로 과학 발견(Gemini for Science)"
+ ],
+ "pricing": {
+  "free_tier": "있음 (특정 모델 제한 접근, 무료 입력·출력 토큰, 콘텐츠가 Google 제품 개선에 사용됨)",
+  "plans": [
+   {
+    "name": "무료",
+    "price": 0,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "특정 모델만, 콘텐츠가 제품 개선에 사용됨",
+    "page_lang": "ko-x-mtfrom-en"
+   },
+   {
+    "name": "유료 - Gemini 4 Argon 표준",
+    "price": 2,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "입력 100만 토큰당 $2(2026-12-01부터 $4), 출력 $10(이후 $20)",
+    "page_lang": "ko-x-mtfrom-en"
+   },
+   {
+    "name": "유료 - Gemini 3.8 Flash 표준",
+    "price": 0.75,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "입력 100만 토큰당 $0.75(2027-01-01부터 $1.50), 출력 $3.75(이후 $7.50)",
+    "page_lang": "ko-x-mtfrom-en"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": "USD",
+    "period": null,
+    "limits": "Gemini Enterprise Agent Platform, 영업 문의",
+    "page_lang": "ko-x-mtfrom-en"
+   }
+  ],
+  "pricing_url": "https://ai.google.dev/gemini-api/docs/pricing?hl=ko"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "API"
+ ],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://deepmind.google",
+   "quote": "About Google DeepMind"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://deepmind.google",
+   "quote": "Our mission is to build AI responsibly to benefit humanity"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://deepmind.google",
+   "quote": "Specialized models\n Veo\n Generate cinematic video with audio\n Genie 3"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://deepmind.google",
+   "quote": "AlphaFold\n Predict protein structures with high accuracy\n AlphaGenome"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://deepmind.google",
+   "quote": "Products and apps\n Gemini app\n Chat with Gemini\n Google AI Studio"
+  },
+  {
+   "field": "key_features",
+   "url": "https://deepmind.google",
+   "quote": "Gemini\n Build intelligent agents\n Gemini Omni\n Create anything from anything\n Nano Banana\n Create and edit detailed images"
+  },
+  {
+   "field": "key_features",
+   "url": "https://deepmind.google",
+   "quote": "Lyria\n Generate high fidelity music and audio"
+  },
+  {
+   "field": "key_features",
+   "url": "https://deepmind.google",
+   "quote": "Gemini Audio\n Talk, create and control audio"
+  },
+  {
+   "field": "key_features",
+   "url": "https://deepmind.google",
+   "quote": "Gemma\n Build responsible AI applications at scale"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://ai.google.dev/gemini-api/docs/pricing?hl=ko",
+   "quote": "Gemini API를 처음 사용하는 개발자와 소규모 프로젝트에 적합합니다."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://deepmind.google",
+   "quote": "Gemini for Science\n Powering scientific discovery with AI"
+  },
+  {
+   "field": "pricing",
+   "url": "https://ai.google.dev/gemini-api/docs/pricing?hl=ko",
+   "quote": "check_circle 특정 모델에 대한 제한된 액세스\n check_circle 무료 입력 및 출력 토큰"
+  },
+  {
+   "field": "pricing",
+   "url": "https://ai.google.dev/gemini-api/docs/pricing?hl=ko",
+   "quote": "2026년 11월 30일까지 2달러.\n2026년 12월 1일부터 4달러."
+  },
+  {
+   "field": "pricing",
+   "url": "https://ai.google.dev/gemini-api/docs/pricing?hl=ko",
+   "quote": "2026년 11월 30일까지 10달러.\n2026년 12월 1일부터 20달러."
+  },
+  {
+   "field": "pricing",
+   "url": "https://ai.google.dev/gemini-api/docs/pricing?hl=ko",
+   "quote": "2026년 12월 31일까지 $0.75\n2027년 1월 1일부터$1.50"
+  },
+  {
+   "field": "pricing",
+   "url": "https://ai.google.dev/gemini-api/docs/pricing?hl=ko",
+   "quote": "엔터프라이즈 배포의 경우 Gemini Enterprise Agent Platform 으로 구동됩니다."
+  },
+  {
+   "field": "api",
+   "url": "https://ai.google.dev/gemini-api/docs/pricing?hl=ko",
+   "quote": "Gemini Developer API 가격 책정"
+  },
+  {
+   "field": "platforms",
+   "url": "https://deepmind.google",
+   "quote": "Gemini Audio\n Advanced real-time audio models, built on Gemini\n Try it in\n Google AI Studio\n Gemini API"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://ai.google.dev/gemini-api/docs/pricing?hl=ko",
+   "quote": "Google은 AI 기술을 사용하여 콘텐츠를 사용자의 기본 언어로 번역합니다."
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

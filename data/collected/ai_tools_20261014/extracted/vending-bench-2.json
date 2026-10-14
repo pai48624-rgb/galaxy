@@ -1,0 +1,76 @@
+{
+ "company": "Andon Labs",
+ "one_liner_ko": "AI 모델이 1년간 가상 자판기 사업을 운영한 뒤 잔고로 장기 일관성을 평가하는 벤치마크.",
+ "what_it_does_ko": "Vending-Bench 2는 AI 모델이 긴 기간 사업을 운영하는 능력을 재는 벤치마크다. 모델은 시작 잔고 500달러로 1년간 가상 자판기 사업을 운영하고 연말 은행 잔고로 점수를 받는다. 인터넷으로 공급업체를 찾고 이메일로 주문하며, 악의적 공급업체·협상·배송 지연·환불 요구 같은 현실적 변수를 다뤄야 한다. 경쟁 요소를 더한 다중 에이전트 버전 Vending-Bench Arena도 있다.",
+ "key_features": [
+  "1년 시뮬레이션·연말 잔고 점수",
+  "악의적 공급업체·협상·배송 지연 등 현실 변수",
+  "출시일 대비 성능 추세",
+  "실행 비용 대비 점수",
+  "Vending-Bench Arena(다중 에이전트 경쟁)",
+  "메모·알림 등 계획 도구"
+ ],
+ "use_cases_ko": [
+  "연구자가 모델의 장기 일관성·사업 운영 능력 비교"
+ ],
+ "pricing": {
+  "free_tier": null,
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "웹"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://andonlabs.com/evals/vending-bench-2",
+   "quote": "Vending-Bench 2 | Andon Labs"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://andonlabs.com/evals/vending-bench-2",
+   "quote": "Models are tasked with running a simulated vending machine business over a year and scored on their bank account balance at the end."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://andonlabs.com/evals/vending-bench-2",
+   "quote": "Models are tasked with making as much money as possible managing their vending business given a $500 starting balance."
+  },
+  {
+   "field": "key_features",
+   "url": "https://andonlabs.com/evals/vending-bench-2",
+   "quote": "Suppliers may be adversarial and actively try to exploit the agent"
+  },
+  {
+   "field": "key_features",
+   "url": "https://andonlabs.com/evals/vending-bench-2",
+   "quote": "It's our first multi-agent eval, where all participating agents manage their own vending machine at the same location."
+  },
+  {
+   "field": "key_features",
+   "url": "https://andonlabs.com/evals/vending-bench-2",
+   "quote": "Score vs. mean cost per run using each LLM provider’s API to run Vending-Bench 2."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://andonlabs.com/evals/vending-bench-2",
+   "quote": "This is what Vending-Bench 2 measures: the ability of models to stay coherent and successfully manage a simulated business over the course of a year."
+  },
+  {
+   "field": "platforms",
+   "url": "https://andonlabs.com/evals/vending-bench-2",
+   "quote": "Current leaderboard"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://andonlabs.com/evals/vending-bench-2",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

@@ -1,0 +1,105 @@
+=== [home] https://labs.scale.com/leaderboard/mcp_atlas (lang=en)
+Scale Labs Leaderboard: MCP Atlas 
+ [PAPERS] [BLOG] [LEADERBOARDS] ⌘K ⌘K 
+ Agentic 
+ DrugDiscoveryBench 
+ SWE Atlas - Refactoring 
+ SWE Atlas - Test Writing 
+ SWE Atlas - Codebase QnA 
+ HiL-Bench (Human-in-Loop Benchmark) 
+ MCP Atlas 
+ SWE-Bench Pro V2 
+ Remote Labor Index (RLI) 
+ Safety 
+ Frontier 
+ Legacy 
+ 2026 Scale AI. All rights reserved.
+ MCP Atlas
+ Evaluating real-world tool use through the Model Context Protocol (MCP)
+ Open-Source Dataset 
+ Key Metrics at a Glance
+ 83.6% Top Pass Rate | 1,000 Tasks (500 public + 500 private) | 36 MCP Servers | 220 Tools | 3–6 Tool Calls/Task 
+ In April 2026, Scale updated the MCP-Atlas evaluation, upgrading the scoring judge and adding retry handling for transient tool errors. In addition, we also moved away from the previous 20 turn limit for the eval, and replaced it with a tool call budget of 100 max tool calls per task. We believe this config gives the models sufficient room to execute tool calls to complete the task. More importantly, it standardizes the eval harness for reasoning models and models that may prefer parallel v/s sequential tool calling per each turn. 
+ We re-scored all leaderboard models. All scores here use the updated evaluation methodology. 
+ Introduction
+ MCP-Atlas evaluates how well language models handle real-world tool use through the Model Context Protocol (MCP) . Unlike benchmarks that focus on simple function calling, small tool sets, or simulated APIs, MCP-Atlas measures performance on realistic, multi-step workflows where models must:
+ discover the right tools from a noisy tool menu,
+ call tools with correct parameters and types,
+ recover from errors,
+ and synthesize tool outputs into an accurate final answer.
+ This benchmark targets a core deployment gap: models can be strong at reasoning and conversation, but still fail at reliable end-to-end tool use . Even the best-performing models still fail a large fraction of tasks, leaving meaningful headroom for improvement. The Scale Research team published the paper , the dataset on HuggingFace, and the code repository on GitHub.
+ Release Artifacts
+ This leaderboard is part of the open-source MCP-Atlas release:
+ Paper: benchmark design, scoring methodology, and baseline results
+ Dataset (Hugging Face): 500-task public subset 
+ Environment + harness (GitHub): containerized setup that runs the real MCP servers and enforces controlled tool exposure
+ The other 500 tasks are held out to preserve leaderboard integrity and reduce overfitting.
+ Dataset Overview
+ Scale and Composition
+ The MCP-Atlas dataset consists of 1,000 human-authored tasks, spanning 36 real MCP servers and 220 tools . The public leaderboard subset contains 500 tasks , designed to be representative of the full benchmark. Each task is written to require real tool use and to reflect realistic “agent” workflows:
+ 3–6 tool calls per task
+ Cross-server orchestration is required for the vast majority of tasks
+ Approximately one-third of tasks include conditional branching, where later actions depend on earlier tool outputs
+ MCP Server Distribution
+ The evaluation covers MCP servers across several broad buckets:
+ Category Representative servers (examples) Description 
+ ENV-BASIC brave_search, ddg_search, exa, weather, google-maps, fetch Search, fetch data, maps, and weather. 
+ ENV-ANALYTICS mongodb, airtable, calculator Query and aggregate structured data. 
+ ENV-PRODUCTIVITY filesystem, notion, slack, google-workspace, arxiv, pubmed Work with files, notes, email, and docs. 
+ ENV-FINANCIAL twelvedata, alchemy Manipulate financial data. 
+ ENV-CODING git, github, mcp-code-executor, cli-mcp-server, e2b-server Manage repos and run code. 
+ Tool Exposure and Distractors
+ To prevent brute-force tool calling and to stress tool discovery, each task exposes a limited tool surface:
+ 10–25 tools exposed per task
+ typically 3–7 required tools
+ plus 5–10 plausible distractors
+ Distractors are typically sampled from the same servers to ensure that success depends on accurate discovery and parameterization rather than simple server name recognition. This directly tests tool discovery capabilities that prior work identifies as a primary failure mode. 
+ MCP Environment
+ Tasks run against real MCP servers hosted in Docker containers, not mocked endpoints or simulations. This ensures models face authentic challenges including actual API latency, real error messages, and genuine data formats.
+ Infrastructure: 
+ Containerized environment with the benchmark’s MCP servers
+ Per-task controlled tool exposure (targets + distractors)
+ Execution trace logging to support diagnostic analysis
+ State and Time-Invariance: 
+ For stateful tools (e.g., docs/databases/files), the environment is seeded with fixed datasets so tasks remain time-invariant and reproducible.
+ Evaluation Methodology
+ Task Design Principles
+ Every task is designed to be solvable only through tool use:
+ Tool-dependent: cannot be answered correctly from parametric knowledge alone
+ Time-invariant: stable ground-truth answers over time
+ Unambiguous: a single correct outcome, verifiable by claims
+ A typical task might ask: 
+ “ Look up Microsoft's IPO price in 1986, find the IPO prices of Apple, Amazon, and Google, then calculate which company had the lowest IPO price and by what percentage it was lower than the highest .”
+ This requires data retrieval via financial tools and search engines followed by arithmetic computation – all common in real applications but challenging to orchestrate correctly.
+ Please scroll to the bottom for an actual task from the dataset with evaluations on 2 sample models.
+ Scoring Framework
+ MCP-Atlas uses an evaluation approach that prioritizes end-task success while capturing diagnostic information about tool use patterns.
+ Pass Rate
+ The metric that determines leaderboard ranking is the pass rate - the percentage of all tasks where the model produces a sufficiently correct final answer.
+ We evaluate the model's response against a ground-truth answer that is split into a list of claims for easier verification via an LLM judge. To allow partial credit, each claim can be given a score of 1, 0.5 or 0.
+ 1.0 : Fully correct
+ 0.5 : Partially correct
+ 0 : Incorrect or missing
+ We define coverage as the average claim score for the task. For example, if a ground-truth answer contains 4 claims and the model's response receives scores of [1, 0.5, 0.5, 0], its coverage would be:
+ (1 + 0.5 + 0.5 + 0) / 4 = 50% 
+ A task passes if the model achieves a coverage score of 75% or higher. 
+ Since 50% < 75%, this task would be marked as failed .
+ We evaluated each model in its default configuration without adding any behavior-shaping system prompt. Each leaderboard model was provided with the user prompt and the associated set of tools as input.
+ Judging Protocol
+ We score each task by decomposing the ground-truth answer into constituent claims and evaluating the model’s final response against those claims.
+ Judge model. Gemini-2.5-Pro, temperature 0.0.
+ One judgment per claim . For a task with N claims, the judge runs N times.
+ What the judge sees. 
+ The original task prompt
+ The task’s claim (one at a time)
+ The final answer from the model being evaluated
+ The claim’s scoring rubric (0 / 0.5 / 1 guidance)
+ What the judge returns. 
+ A categorization in { incorrect , partially_correct , correct } for each claim, which is converted into a numerical value mapping to { 0 , 0.5 , 1 }
+ A brief, free-text justification for the score
+ Aggregation to 
+
+=== [meta] https://labs.scale.com/leaderboard/mcp_atlas
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음

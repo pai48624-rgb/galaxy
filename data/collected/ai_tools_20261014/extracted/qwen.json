@@ -1,0 +1,42 @@
+{
+ "company": "Qwen Team",
+ "one_liner_ko": "언어·이미지·안전 모델 등을 공개하는 Qwen 팀의 대규모 언어 모델 제품군(Qwen3).",
+ "what_it_does_ko": "Qwen은 Qwen 팀이 만드는 대규모 언어 모델 제품군으로, 최신 Qwen3-2507은 Instruct와 Thinking 두 가지 변형과 235B-A22B·30B-A3B·4B 세 가지 크기로 나왔다. 지시 따르기·논리 추론·수학·과학·코딩·도구 사용 능력이 개선됐고 256K 토큰 긴 문맥을 이해하며 100만 토큰까지 늘릴 수 있다. 체크포인트는 Hugging Face와 ModelScope에서 받을 수 있고, llama.cpp·Ollama·LM Studio로 로컬 실행하거나 SGLang·vLLM·TGI로 배포할 수 있다. 블로그에는 이미지 생성 모델 Qwen-Image, 이미지 편집 Qwen-Image-Edit, 안전 분류 모델 Qwen3Guard, 번역 모델 Qwen-MT도 소개돼 있다.",
+ "key_features": [
+  "Qwen3-Instruct-2507·Qwen3-Thinking-2507 두 가지 변형",
+  "256K 토큰 긴 문맥 이해, 최대 100만 토큰 확장",
+  "llama.cpp·Ollama·LM Studio 로컬 실행",
+  "GPTQ·AWQ·GGUF 양자화 안내",
+  "Qwen-Image 이미지 생성·Qwen-Image-Edit 이미지 편집",
+  "Qwen3Guard 프롬프트·응답 안전 분류",
+  "Qwen-MT 92개 언어 번역(Qwen API)"
+ ],
+ "use_cases_ko": [
+  "개발자가 Qwen 모델을 로컬 또는 대규모 추론 서버로 배포",
+  "RAG·에이전트 등 응용 프레임워크에서 Qwen 활용"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["웹", "API"],
+ "korean_support": "불명",
+ "evidence": [
+  {"field": "company", "url": "https://qwenlm.github.io", "quote": "Qwen Team Qwen-Image-Edit: Image Editing with Higher Quality and Efficiency"},
+  {"field": "one_liner_ko", "url": "https://github.com/QwenLM/Qwen3", "quote": "We are excited to announce the release of Qwen3, the latest addition to the Qwen family of large language models."},
+  {"field": "what_it_does_ko", "url": "https://github.com/QwenLM/Qwen3", "quote": "in two variants, Qwen3-Instruct-2507 and Qwen3-Thinking-2507, and three sizes, 235B-A22B, 30B-A3B, and 4B."},
+  {"field": "key_features", "url": "https://github.com/QwenLM/Qwen3", "quote": "- **Enhanced capabilities** in **256K-token long-context understanding**, extendable up to **1 million tokens**."},
+  {"field": "key_features", "url": "https://github.com/QwenLM/Qwen3", "quote": "- Run Locally: the instructions for running LLM locally on CPU and GPU, with frameworks like llama.cpp, Ollama, and LM Studio;"},
+  {"field": "key_features", "url": "https://github.com/QwenLM/Qwen3", "quote": "- Quantization: the practice of quantizing LLMs with GPTQ, AWQ, as well as the guidance for how to make high-quality quantized GGUF files;"},
+  {"field": "key_features", "url": "https://qwenlm.github.io", "quote": "We are thrilled to release Qwen-Image, a 20B MMDiT image foundation model that achieves significant advances in complex text rendering and precise image editing."},
+  {"field": "key_features", "url": "https://qwenlm.github.io", "quote": "Multilingual Support for 92 Languages: Qwen-MT enables high-quality translation across 92 major official languages and prominent dialects"},
+  {"field": "use_cases_ko", "url": "https://github.com/QwenLM/Qwen3", "quote": "- Framework: the usage of Qwen with frameworks for application, e.g., RAG, Agent, etc."},
+  {"field": "api", "url": "https://qwenlm.github.io", "quote": "Here we introduce the latest update of Qwen-MT (qwen-mt-turbo) via Qwen API."},
+  {"field": "platforms", "url": "https://qwenlm.github.io", "quote": "To try the latest model, feel free to visit Qwen Chat and choose “Image Generation”."}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

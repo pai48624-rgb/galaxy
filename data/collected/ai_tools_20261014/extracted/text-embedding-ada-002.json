@@ -1,0 +1,76 @@
+{
+ "company": "OpenAI",
+ "one_liner_ko": "text-embedding-ada-002는 텍스트 검색·유사도·코드 검색용 5개 모델을 하나로 합친 OpenAI 임베딩 모델이다.",
+ "what_it_does_ko": "text-embedding-ada-002는 텍스트 검색, 텍스트 유사도, 코드 검색용 5개 모델을 대체하는 단일 임베딩 모델이다. 컨텍스트 길이가 2048에서 8192로 4배 늘었고 임베딩 차원은 1536이다. 같은 크기의 이전 모델보다 가격을 90% 낮췄다고 밝힌다. /embeddings 엔드포인트로 호출한다(2022년 12월 15일 발표 글 기준).",
+ "key_features": [
+  "텍스트 검색·유사도·코드 검색 통합 모델",
+  "8192 토큰 컨텍스트",
+  "1536차원 임베딩",
+  "/embeddings API 엔드포인트",
+  "이전 모델 대비 가격 인하"
+ ],
+ "use_cases_ko": [
+  "콘텐츠 개인화·추천·검색",
+  "영업 메시지와 고객 프로필 매칭"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://openai.com/index/new-and-improved-embedding-model/",
+   "quote": "New and improved embedding model | OpenAI"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://openai.com/index/new-and-improved-embedding-model/",
+   "quote": "replaces five separate models for text search, text similarity, and code search"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://openai.com/index/new-and-improved-embedding-model/",
+   "quote": "The context length of the new model is increased by a factor of four, from 2048 to 8192"
+  },
+  {
+   "field": "key_features",
+   "url": "https://openai.com/index/new-and-improved-embedding-model/",
+   "quote": "The new embeddings have only 1536 dimensions"
+  },
+  {
+   "field": "key_features",
+   "url": "https://openai.com/index/new-and-improved-embedding-model/",
+   "quote": "We have reduced the price of new embedding models by 90% compared to old models of the same size."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://openai.com/index/new-and-improved-embedding-model/",
+   "quote": "many applications have incorporated embeddings to personalize, recommend, and search"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://openai.com/index/new-and-improved-embedding-model/",
+   "quote": "is a sales outreach product that uses embeddings to match the right sales pitch to the right customers"
+  },
+  {
+   "field": "api",
+   "url": "https://openai.com/index/new-and-improved-embedding-model/",
+   "quote": "endpoint for the new model with two lines of code using our"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://openai.com/index/new-and-improved-embedding-model/",
+   "quote": "hreflang: ca-es, en-us, es-419, es-es, ga-ie, gu-in, ja-jp, jv-id, ka-ge, kk-cyrl, mn-mn, mt-mt, my-mm, pa-in, so-dj, sr-rs, x-default"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

@@ -1,0 +1,169 @@
+{
+ "company": "Google DeepMind",
+ "one_liner_ko": "Google DeepMind의 Gemini 모델 계열(현재 대표 모델 Gemini 4 Argon) — 어려운 문제를 풀기 위한 차세대 프런티어 모델.",
+ "what_it_does_ko": "수집된 공식 페이지는 'Gemini Pro Vision' 단독 페이지가 아니라 Gemini 모델 계열 전체 페이지다. 현재 대표 모델 Gemini 4 Argon은 과학·수학·로보틱스·사이버 보안 등 어려운 문제와 장기 소프트웨어 엔지니어링 작업용으로 소개된다. Gemini 앱, Google AI Studio, Google Antigravity에서 써 볼 수 있고, 개발자는 Gemini Developer API로 사용한다. API 요금은 무료 등급·유료(종량제)·Enterprise로 나뉜다.",
+ "key_features": [
+  "원시 영상을 물리적으로 정확한 시뮬레이션으로 변환(로보틱스)",
+  "취약점 수정 벤치마크 CWE-Bench 공동 1위(68%)",
+  "장기 소프트웨어 엔지니어링 작업 지원",
+  "Gemini 앱·Google AI Studio·Google Antigravity에서 사용",
+  "API 컨텍스트 캐싱·Batch API(비용 50% 절감)",
+  "Google 검색·Google 지도 그라운딩(월 5,000회 무료)"
+ ],
+ "use_cases_ko": [
+  "연구자·엔지니어·보안 전문가의 과학·수학·로보틱스·사이버 방어 문제 해결",
+  "개발자의 대규모 코드 리팩터링·성능 최적화"
+ ],
+ "pricing": {
+  "free_tier": "있음 (특정 모델 제한적 접근, 무료 입력·출력 토큰, 콘텐츠가 Google 제품 개선에 사용됨)",
+  "plans": [
+   {
+    "name": "Gemini 4 Argon 입력(표준)",
+    "price": 2,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "토큰 100만 개당, 2026-11-30까지(12-01부터 4달러), 무료 등급 사용 불가",
+    "page_lang": "ko-x-mtfrom-en"
+   },
+   {
+    "name": "Gemini 4 Argon 출력(표준, 사고 토큰 포함)",
+    "price": 10,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "토큰 100만 개당, 2026-11-30까지(12-01부터 20달러)",
+    "page_lang": "ko-x-mtfrom-en"
+   },
+   {
+    "name": "Gemini 3.8 Flash 입력(표준)",
+    "price": 0.75,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "토큰 100만 개당, 2026-12-31까지(2027-01-01부터 1.50달러), 무료 등급 무료",
+    "page_lang": "ko-x-mtfrom-en"
+   },
+   {
+    "name": "Gemini 3.8 Flash 출력(표준, 사고 토큰 포함)",
+    "price": 3.75,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "토큰 100만 개당, 2026-12-31까지(2027-01-01부터 7.50달러)",
+    "page_lang": "ko-x-mtfrom-en"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "영업팀 문의, Gemini Enterprise Agent Platform",
+    "page_lang": "ko-x-mtfrom-en"
+   }
+  ],
+  "pricing_url": "https://ai.google.dev/gemini-api/docs/pricing?hl=ko"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "API"
+ ],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://deepmind.google/models/gemini/",
+   "quote": "Gemini — Google DeepMind Skip to main content"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://deepmind.google/models/gemini/",
+   "quote": "Our next era of frontier intelligence, built to solve your hardest problems"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://deepmind.google/models/gemini/",
+   "quote": "Across Google and our early access partners, Argon is quickly becoming the preferred model for engineers tackling long-horizon software engineering."
+  },
+  {
+   "field": "key_features",
+   "url": "https://deepmind.google/models/gemini/",
+   "quote": "Argon autonomously turns raw video to a physics-accurate simulation"
+  },
+  {
+   "field": "key_features",
+   "url": "https://deepmind.google/models/gemini/",
+   "quote": "Argon ties for #1 on CWE-Bench (68%) for vulnerability remediation"
+  },
+  {
+   "field": "key_features",
+   "url": "https://deepmind.google/models/gemini/",
+   "quote": " Try in Gemini\n Try in Google AI Studio\n Try in Google Antigravity"
+  },
+  {
+   "field": "key_features",
+   "url": "https://ai.google.dev/gemini-api/docs/pricing?hl=ko",
+   "quote": "check_circle Batch API (비용 50% 절감)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://ai.google.dev/gemini-api/docs/pricing?hl=ko",
+   "quote": "월 5,000회의 무료 검색 요청 (모든 Gemini 3 이상 모델에서 공유), 이후 요청 1,000회당 $14"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://deepmind.google/models/gemini/",
+   "quote": "Researchers, engineers, and security specialists are pairing with Argon to push the boundaries of science, math, robotics and cyber defense."
+  },
+  {
+   "field": "pricing",
+   "url": "https://ai.google.dev/gemini-api/docs/pricing?hl=ko",
+   "quote": "넉넉한 한도로 무료로 빌드를 시작한 다음 프로덕션에 즉시 사용 가능한 애플리케이션에 대해 선불 후 사용한 만큼만 지불하는 가격 책정으로 확장하세요."
+  },
+  {
+   "field": "pricing",
+   "url": "https://ai.google.dev/gemini-api/docs/pricing?hl=ko",
+   "quote": "check_circle 특정 모델에 대한 제한된 액세스\n check_circle 무료 입력 및 출력 토큰"
+  },
+  {
+   "field": "pricing",
+   "url": "https://ai.google.dev/gemini-api/docs/pricing?hl=ko",
+   "quote": " 사용 불가 \n 2026년 11월 30일까지 2달러.\n2026년 12월 1일부터 4달러."
+  },
+  {
+   "field": "pricing",
+   "url": "https://ai.google.dev/gemini-api/docs/pricing?hl=ko",
+   "quote": " 사용 불가 \n 2026년 11월 30일까지 10달러.\n2026년 12월 1일부터 20달러."
+  },
+  {
+   "field": "pricing",
+   "url": "https://ai.google.dev/gemini-api/docs/pricing?hl=ko",
+   "quote": " 무료 \n 2026년 12월 31일까지 $0.75\n2027년 1월 1일부터$1.50"
+  },
+  {
+   "field": "pricing",
+   "url": "https://ai.google.dev/gemini-api/docs/pricing?hl=ko",
+   "quote": " 무료 \n 2026년 12월 31일까지는 $3.75입니다."
+  },
+  {
+   "field": "pricing",
+   "url": "https://ai.google.dev/gemini-api/docs/pricing?hl=ko",
+   "quote": "엔터프라이즈 배포의 경우 Gemini Enterprise Agent Platform 으로 구동됩니다."
+  },
+  {
+   "field": "api",
+   "url": "https://ai.google.dev/gemini-api/docs/pricing?hl=ko",
+   "quote": "Gemini API를 처음 사용하는 개발자와 소규모 프로젝트에 적합합니다."
+  },
+  {
+   "field": "platforms",
+   "url": "https://ai.google.dev/gemini-api/docs/pricing?hl=ko",
+   "quote": "check_circle Google AI Studio 액세스"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://ai.google.dev/gemini-api/docs/pricing?hl=ko",
+   "quote": " 中文 – 繁體 \n 日本語 \n 한국어 \n API 키 가져오기"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

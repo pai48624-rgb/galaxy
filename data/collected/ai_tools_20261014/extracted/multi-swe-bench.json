@@ -1,0 +1,66 @@
+{
+ "company": "ByteDance(연락처 도메인 기준)",
+ "one_liner_ko": "여러 프로그래밍 언어에서 LLM의 이슈 해결 능력을 평가하는 다국어 벤치마크.",
+ "what_it_does_ko": "Multi-SWE-bench는 여러 프로그래밍 언어에서 LLM의 이슈 해결 능력을 평가하는 벤치마크다. Java·TypeScript·JavaScript·Go·Rust·C·C++ 7개 언어의 이슈 해결 과제 1,632개로 구성된다. 프로젝트 자체 테스트 결과를 PR 이후 동작과 비교해 채점하며, 리더보드는 언어·난이도별 해결 비율을 보여 준다. flash·mini 버전도 있고 연구 목적 전용이다.",
+ "key_features": [
+  "7개 언어 1,632개 이슈 해결 과제",
+  "언어별·난이도별(쉬움·보통·어려움) % Resolved",
+  "팀이 재현 확인한 제출 표시(Checked)",
+  "오픈소스 코드 제출 표시(Open)",
+  "Multi-SWE-bench flash·mini 버전",
+  "로그·궤적 링크 제공"
+ ],
+ "use_cases_ko": [
+  "연구자가 다국어 이슈 해결 능력 비교(연구 목적)"
+ ],
+ "pricing": {
+  "free_tier": null,
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "웹"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://multi-swe-bench.github.io/#/",
+   "quote": "Correspondence to: zandaoguang@bytedance.com and shen.kai@bytedance.com"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://multi-swe-bench.github.io/#/",
+   "quote": "Multi-SWE-Bench is a benchmark for evaluating the issue-resolving capabilities of LLMs across multiple programming languages."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://multi-swe-bench.github.io/#/",
+   "quote": "The dataset consists of 1,632 issue-resolving tasks spanning 7 programming languages: Java, TypeScript, JavaScript, Go, Rust, C, and C++."
+  },
+  {
+   "field": "key_features",
+   "url": "https://multi-swe-bench.github.io/#/",
+   "quote": "Checked indicates that we, the Multi-SWE-bench team, received access to the system and were able to reproduce the patch generations."
+  },
+  {
+   "field": "key_features",
+   "url": "https://multi-swe-bench.github.io/#/",
+   "quote": "Multi-SWE-bench flash"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://multi-swe-bench.github.io/#/",
+   "quote": "Disclaimer: Multi-SWE-bench is for research purposes only."
+  },
+  {
+   "field": "platforms",
+   "url": "https://multi-swe-bench.github.io/#/",
+   "quote": "A Multilingual Benchmark for Issue Resolving"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

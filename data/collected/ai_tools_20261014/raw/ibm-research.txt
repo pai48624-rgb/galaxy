@@ -1,0 +1,202 @@
+=== [home] https://research.ibm.com/artificial-intelligence (lang=en-US)
+Artificial Intelligence - IBM Research What’s Next in AI
+is generative computing 
+ Large language models are revolutionizing the world, but today, delivering them safely and efficiently at the scale enterprise needs is difficult. IBM Research is designing powerful new ways to support the future of business, with open-source tools to prepare, secure, and use data, along with best-in-class multimodal models, and technology that redefines how we interact with AI systems. Generative computing is how we move beyond AI prompting to AI programming.
+ Featured topics:
+ Generative AI
+ Trustworthy AI
+ Human-Centered AI
+ See all topics 
+ Our work
+ Making AI-driven chip design affordable with open agent factories and distributed inference at scale 
+ News
+ Peter Hess
+ 13 Oct 2026 
+ AI 
+ AI Hardware 
+ Generative AI 
+ Logic Scaling 
+ How distributed inference keeps large AI models moving 
+ Explainer
+ Peter Hess
+ 12 Oct 2026 
+ AI 
+ AI for Code 
+ Generative AI 
+ Open Source 
+ Demonstrating a theoretical separation between quantum computers and large language models 
+ Research
+ Srinivasan Arunachalam, Arkopal Dutt, Hari Krovi, Rik Sengupta, and Ryan Mandelbaum
+ 15 Sep 2026 
+ AI 
+ Computer Science 
+ Quantum 
+ A rough guide for going back to the Moon 
+ Release
+ Kim Martineau
+ 10 Sep 2026 
+ Accelerated Discovery 
+ AI 
+ Algorithms 
+ How llm-d makes the most of the hardware you already have 
+ News
+ Peter Hess
+ 08 Sep 2026 
+ AI 
+ AI for Code 
+ Generative AI 
+ Hybrid Cloud 
+ Hybrid Cloud Platform 
+ Open Source 
+ Scaling AI 
+ Granite 4.2 brings native reasoning to enterprise agents 
+ Release
+ Mike Murphy and Kim Martineau
+ 25 Aug 2026 
+ AI 
+ See more of our work on AI 
+ Tools + code
+ Download Granite on Hugging Face 
+ Explore our family of language, code, time series, and geospatial models.
+ Download models
+ Try Granite for Free 
+ Chat with a Granite model and learn how it can be used across a variety of applications.
+ View project →
+ Read Granite Documentation 
+ Learn how to access, run, and start using the Granite family of AI models.
+ View project →
+ Publication collections
+ ICML 2026 
+ 40
+ International Conference on Machine Learning
+ 06 Jul
+ ACL 2026 
+ 25
+ Annual Meeting of the Association for Computational Linguistics
+ 02 Jul
+ ICLR 2026 
+ 40
+ International Conference on Learning Representations
+ 23 Apr
+ ICSE 2026 
+ 17
+ ACM/IEEE International Conference on Software Engineering
+ 12 Apr
+ Topics
+ Adversarial Robustness and Privacy 
+ AI for Asset Management 
+ AI for Business Automation 
+ AI for Code 
+ AI for Supply Chain 
+ AI Testing 
+ Automated AI 
+ Causality 
+ Computer Vision 
+ Conversational AI 
+ Explainable AI 
+ Fairness, Accountability, Transparency 
+ Foundation Models 
+ Generative AI 
+ Granite 
+ Human-Centered AI 
+ Knowledge and Reasoning 
+ Machine Learning 
+ Natural Language Processing 
+ Neuro-symbolic AI 
+ Speech 
+ Trustworthy AI 
+ Trustworthy Generation 
+ Uncertainty Quantification 
+ Projects
+ Deep Search 
+ IBM Safer Materials Advisor 
+ Finding AI-based solutions to address challenges around materials of concern and their replacement.
+ View more projects 
+ Home 
+ ↳ AI 
+ Overview Our work Tools + code Publications Topics Projects Collaborate 
+ Overview 
+ Our work 
+ Tools + code 
+ Publications 
+ Topics 
+ Projects 
+ Collaborate 
+ Collaborate with us
+ With over 3,000 researchers across the globe, IBM Research has a long pedigree of turning fundamental research into world-altering technology. Learn more about the ways that we collaborate with businesses and organizations across the globe to help solve their most pressing needs faster.
+ MIT-IBM Watson AI Lab 
+ AI Hardware Center
+
+=== [about] https://www.ibm.com/granite/docs/models/granite4-2 (lang=en)
+Granite 4.2 | IBM Granite 
+ Skip to main content 
+ ⚠️ This documentation site is no longer being updated. For the latest Granite documentation and models, see Hugging Face and GitHub .
+ Docs Cookbooks Playground ↗ 
+ Download Granite 
+ Models 
+ Granite 4.2 
+ Granite 4.1 
+ Granite 4.0 
+ Granite Docling 
+ Granite Vision 
+ Granite Speech 
+ Granite Guardian 
+ Granite Embedding 
+ Granite Time Series 
+ Run Granite 
+ Ollama 
+ vLLM (Containerized) 
+ LM Studio 
+ Partners 
+ Model Standards 
+ Naming Guidance 
+ Signature Verification 
+ Responsible AI 
+ Responsible AI 
+ Trust 
+ Models 
+ Granite 4.2 
+ On this page 
+ Granite 4.2
+ Dense reasoning language model family in 3B, 8B, and 30B sizes with built-in chain-of-thought thinking, flexible thinking modes, and reasoning-augmented tool calling.
+ Model Collection 
+ View the full Granite 4.2 collection on Hugging Face
+ GitHub Organization 
+ Granite models and documentation
+ Overview ​ 
+ Granite 4.2 is a family of dense reasoning language models available in three sizes: 3B, 8B, and 30B parameters. Granite 4.2 introduces native reasoning (thinking) capabilities, allowing models to perform step-by-step chain-of-thought reasoning before producing final answers. This significantly improves performance on complex math, coding, multi-step logic, and agentic tool-calling tasks.
+ Model Variants ​ 
+ granite-4.2-3b : Compact reasoning model optimized for edge deployment and resource-constrained environments
+ granite-4.2-8b : Balanced reasoning model for general-purpose enterprise applications
+ granite-4.2-30b : Flagship reasoning model for complex reasoning and specialized tasks
+ All models natively support a 128K context window (with long-context extension to 512K on the 30B model) and are released under the Apache 2.0 license with cryptographic signatures, ISO certification, and full transparency disclosures, enabling unrestricted commercial and academic use.
+ Key Capabilities ​ 
+ Built-in Reasoning : Granite 4.2 features native chain-of-thought reasoning inside <think>...</think> tags, significantly improving performance on math, coding, and complex multi-step problems.
+ Flexible Thinking Modes : Seamlessly switch between full thinking (default), non-thinking, and low-effort modes within a single model, allowing users to balance depth vs. latency on a per-query basis.
+ Reasoning-Augmented Tool Calling : The model reasons about which tools to invoke and why before making the call, producing more accurate function calls for agentic workflows.
+ Multilingual Dialog : Granite 4.2 is tested across English, German, Spanish, French, Japanese, Portuguese, Arabic, Czech, Italian, Korean, Dutch, and Chinese.
+ Getting Started ​ 
+ First, install the required libraries:
+ pip install torch torchvision torchaudio 
+ pip install accelerate 
+ pip install transformers 
+ Generation ​ 
+ This is a simple example of how to use the Granite-4.2-30B model in thinking mode:
+ import torch 
+ from transformers import AutoModelForCausalLM , AutoTokenizer 
+ model_path = "ibm-granite/granite-4.2-30b" 
+ tokenizer = AutoTokenizer . from_pretrained ( model_path ) 
+ # drop device_map if running on CPU 
+ model = AutoModelForCausalLM . from_pretrained ( model_path , device_map = "cuda" , torch_dtype = torch . bfloat16 ) 
+ model . eval ( ) 
+ # change input text as desired 
+ messages = [ 
+ { "role" : "user" , "content" : "How many r's are in the word 'strawberry'?" } , 
+ ] 
+ text = tokenizer . apply_chat_template ( messages , tokenize = False , add_generation_prompt = True , enable_thinking = True ) 
+ inputs = tokenizer ( text , return_tensors = "pt" 
+
+=== [meta] https://research.ibm.com/artificial-intelligence
+html lang: en-US
+hreflang: 없음
+화면에 보이는 언어 이름: 없음

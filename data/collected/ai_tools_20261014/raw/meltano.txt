@@ -1,0 +1,567 @@
+=== [home] https://meltano.com (lang=en)
+Meltano: Dependable Data by Default Product The only EL tool built for data engineers
+ No more point-and-click-and-cross-your-fingers. Build data pipelines that fit exactly to your needs.
+ Overview
+ The only EL tool built for data engineers
+ Your data stack as code 
+ Release management and governance built on Git and GitHub workflows.
+ Model
+ Your data stack as code, with Git-based governance
+ Extract and load from 600+ sources
+ Pre-built connectors for SaaS apps, APIs, files, and databases, via UI, CLI, API, or AI.
+ Extract & Load
+ 600+ connectors via UI, CLI, API, or AI
+ Transform with dbt™ and Elementary
+ Data models and validation, configured and version-controlled in your Meltano project.
+ Transform
+ dbt™ and Elementary, version-controlled
+ Dependable data for analytics 
+ Feed any BI tool or semantic layer, with built-in support for running notebooks.
+ Analytics & Notebooks
+ Dependable data for BI, semantic layers, and notebooks
+ Orchestrate every pipeline
+ Built-in orchestration on Meltano Cloud, with schedules, triggers and retries.
+ Orchestrate
+ Schedules, triggers and retries, built in
+ Connectors 
+ Pricing 
+ Connectors Connectors 
+ 600+ connectors for sources and destinations
+ Connectors
+ 600+ sources and destinations
+ Pricing Pricing 
+ Meltano is an open source project by Matatika
+ Pricing
+ Open source and free to use, with paid support options
+ Resources Meltano at a glance 
+ Learn how to use Meltano, how Meltano is built, and where to get started
+ Documentation
+ Learn how to use Meltano and where to get started
+ Join the Melty Crew!
+ Join 5,500+ data professionals on Slack and GitHub
+ Community
+ Join 5,500+ data professionals on Slack and GitHub
+ The latest in Meltano & data engineering
+ Meltano updates, data engineering trends, tutorials, and other data musings
+ Blog
+ Stay up to date on Meltano & data engineering
+ Data Matas Podcasts 
+ Conversations with data engineers and practitioners
+ Podcasts
+ Conversations with data engineers and practitioners
+ Success stories
+ Real-world stories from teams building with Meltano
+ Case Studies
+ See how customers use Matatika in production
+ Build a connector for any data source
+ The Meltano SDK lets you easily built Singer connectors for custom, niche, and internal sources
+ SDK
+ Build a connector for any data source under the sun
+ Integrate any existing data tool for any data source
+ The Meltano EDK is the fastest way to build custom extensions and utilities for Meltano.
+ EDK
+ Integrate any existing data tool for any data source
+ The joy of creating
+ Everything you need and more to move, transform, and explore your data. Connectors for 600+ sources and destinations.
+ Meltano Hub
+ Connectors for 600+ sources and destinations
+ Company About Meltano
+ Meltano is an open source project by Matatika
+ About
+ Meltano is an open source project by Matatika
+ Contact Us 
+ Book a demo 
+ OPEN 
+ Dependable data by
+ default 
+ Meltano is an ETL platform built on open-source foundations, 
+ engineered by experts for cloud scale, efficiency, and reliability.
+ Book a demo 
+ Loved by data teams
+ Reduce 
+ cost 
+ Pay for the workloads you actually run. Costs stay predictable as data volumes grow, whether you self-manage Meltano or use a managed orchestrator.
+ Learn more 
+ Increase 
+ efficiency 
+ Build, adjust, and debug connectors directly. You are not blocked by ticket queues, and support is available when you need it, not as a gatekeeper.
+ Learn more 
+ Centralize 
+ movement 
+ Run all pipelines in one place, across databases, files, SaaS tools, internal systems, and workflows like dbt.
+ Learn more 
+ Remove 
+ constraints 
+ Add new sources, apply transformations before the warehouse, adjust connectors, and let teams contribute pipelines without artificial limits.
+ Learn more 
+ M ELTANO
+Model
+ Meltano Models your data stack as code and provides built-in release management and governance using Git and GitHub workflows.
+ Implement controlled CI/CD pipelines for developing, testing, and promoting pipeline changes with full traceability and auditability.
+ Enforce strong governance and security with isolated customer environments, secure credential storage and encrypted data transfer.
+ Named Meltano environments, local development environments and deployment management into development and production workspaces are just some of the ways we help you make your data reliable by default. 
+ Learn more 
+ UI CLI AI API Code 
+ CLI 
+ # Model your environments as code 
+ meltano environment add dev 
+ meltano environment add prod 
+ # Build and test against dev 
+ meltano --environment = dev run tap-salesforce target-snowflake 
+ # Promote through a reviewed pull request 
+ git switch -c salesforce-pipeline 
+ git commit -am "Add Salesforce pipeline" 
+ gh pr create --base main --fill 
+ # Once merged, the same project runs in prod 
+ meltano --environment = prod run tap-salesforce target-snowflake 
+ Claude 
+ Promote this week's changes from dev to production.
+ Used Meltano Cloud
+ list_workspaces 
+ get_workspace_repository 
+ publish_changes 
+ Acme (dev) deploys from develop and Acme (prod) from main . PR #42 merged develop into main this morning, approved and passing CI.
+ I've published main at 4f2c9e1 to Acme (prod) . Every promotion is a reviewed commit, so it's auditable and easy to roll back.
+ Reply to Claude… 
+ API 
+ API = https://app.meltano.com/api 
+ AUTH = "Authorization: Bearer $MELTANO_TOKEN " 
+ # Deploy the latest commit of your workspace repo 
+ curl -X POST -H " $AUTH " \ 
+ $API /workspaces/ $WORKSPACE_ID /deployments 
+ # 202 Accepted 
+ # {"id": "8b0e2f4c-…", "status": "QUEUED", …} 
+ meltano.yml 
+ default_environment : dev 
+ environments : 
+ - name : dev 
+ config : 
+ plugins : 
+ loaders : 
+ - name : target - snowflake 
+ config : 
+ default_target_schema : dev_$ { USER } 
+ - name : prod 
+ config : 
+ plugins : 
+ loaders : 
+ - name : target - snowflake 
+ config : 
+ default_target_schema : analytics 
+ plugins : 
+ extractors : 
+ - name : tap - salesforce 
+ variant : meltanolabs 
+ config : 
+ # Secrets come from the environment, never from Git 
+ client_secret : $SALESFORCE_CLIENT_SECRET 
+ M EL TANO
+ Extract and Load
+ Meltano supports 600+ pre-built connectors, making it straightforward for data teams to extract and load data via the UI, CLI, API, or AI.
+ Connect and ingest data from SaaS applications, REST APIs, semi-structured data (JSON and XML), and relational databases.
+ Choose your replication strategy: full, incremental, or log-based. Batch or near real-time. Configured in code.
+ Built-in idempotency keeps your pipelines consistent and self-correcting. Backfills are simple. Duplicates are handled automatically.
+ Meltano Hub Meltano SDK 
+ UI CLI AI API Code 
+ CLI 
+ meltano add tap-postgres 
+ meltano add target-snowflake 
+ meltano config set tap-postgres sqlalchemy_url postgresql://warehouse:warehouse@localhost:5432/warehouse 
+ meltano run tap-postgres target-snowflake 
+ Claude 
+ Sync our Salesforce deals into Snowflake every hour.
+ Used Meltano Cloud
+ find_connector 
+ add_connector 
+ create_pipeline 
+ run_pipeline 
+ Done. I added the Salesforce connector, selected the Account and Opportunity streams, and scheduled salesforce-to-snowflake to run hourly.
+ The first run finished in 2m 14s and loaded 48,312 rows. Later runs are incremental.
+ Reply to Claude… 
+ API 
+ API = https://app.meltano.com/api 
+ AUTH = "Authorization: Bearer $MELTANO_TOKEN " 
+ PIPELINES = $API /workspaces/ $WORKSPACE_ID /pipelines 
+ # Initialise a pipeline, then create it with its 
+
+=== [pricing] https://meltano.com/pricing (lang=en)
+Meltano Pricing Product The only EL tool built for data engineers
+ No more point-and-click-and-cross-your-fingers. Build data pipelines that fit exactly to your needs.
+ Overview
+ The only EL tool built for data engineers
+ Your data stack as code 
+ Release management and governance built on Git and GitHub workflows.
+ Model
+ Your data stack as code, with Git-based governance
+ Extract and load from 600+ sources
+ Pre-built connectors for SaaS apps, APIs, files, and databases, via UI, CLI, API, or AI.
+ Extract & Load
+ 600+ connectors via UI, CLI, API, or AI
+ Transform with dbt™ and Elementary
+ Data models and validation, configured and version-controlled in your Meltano project.
+ Transform
+ dbt™ and Elementary, version-controlled
+ Dependable data for analytics 
+ Feed any BI tool or semantic layer, with built-in support for running notebooks.
+ Analytics & Notebooks
+ Dependable data for BI, semantic layers, and notebooks
+ Orchestrate every pipeline
+ Built-in orchestration on Meltano Cloud, with schedules, triggers and retries.
+ Orchestrate
+ Schedules, triggers and retries, built in
+ Connectors 
+ Pricing 
+ Connectors Connectors 
+ 600+ connectors for sources and destinations
+ Connectors
+ 600+ sources and destinations
+ Pricing Pricing 
+ Meltano is an open source project by Matatika
+ Pricing
+ Open source and free to use, with paid support options
+ Resources Meltano at a glance 
+ Learn how to use Meltano, how Meltano is built, and where to get started
+ Documentation
+ Learn how to use Meltano and where to get started
+ Join the Melty Crew!
+ Join 5,500+ data professionals on Slack and GitHub
+ Community
+ Join 5,500+ data professionals on Slack and GitHub
+ The latest in Meltano & data engineering
+ Meltano updates, data engineering trends, tutorials, and other data musings
+ Blog
+ Stay up to date on Meltano & data engineering
+ Data Matas Podcasts 
+ Conversations with data engineers and practitioners
+ Podcasts
+ Conversations with data engineers and practitioners
+ Success stories
+ Real-world stories from teams building with Meltano
+ Case Studies
+ See how customers use Matatika in production
+ Build a connector for any data source
+ The Meltano SDK lets you easily built Singer connectors for custom, niche, and internal sources
+ SDK
+ Build a connector for any data source under the sun
+ Integrate any existing data tool for any data source
+ The Meltano EDK is the fastest way to build custom extensions and utilities for Meltano.
+ EDK
+ Integrate any existing data tool for any data source
+ The joy of creating
+ Everything you need and more to move, transform, and explore your data. Connectors for 600+ sources and destinations.
+ Meltano Hub
+ Connectors for 600+ sources and destinations
+ Company About Meltano
+ Meltano is an open source project by Matatika
+ About
+ Meltano is an open source project by Matatika
+ Contact Us 
+ Book a demo 
+ Your data bill shouldn't keep growing.
+Pay for compute. Not rows.
+ Starter
+ Get your first managed pipelines running in hours, not weeks.
+ 200 compute hours / mo 
+ Managed infrastructure 
+ 25 workspaces 
+ Unlimited users 
+ 600+ connectors 
+ Reverse ETL included 
+ AI Data engineer agent 
+ Direct access to Meltano Engineers via Slack 
+ Enterprise security 
+ Best in class SLA 
+ Growth
+ Scale pipelines with real engineering support baked in.
+ 2,000 compute hours / mo 
+ 10x more than Starter 
+ Everything in Starter 
+ 100 workspaces 
+ 8 hours of engineering on demand/mo 
+ Shared account management 
+ Add on: Cost monitoring workspace 
+ Most popular 
+ Scale
+ Dedicated support. Full platform access. Nothing held back.
+ 5,000 compute hours / mo 
+ 25x more than Starter 
+ Everything in Growth 
+ Unlimited workspaces 
+ 15 hours of engineering on demand/mo 
+ Dedicated account management 
+ Cost monitoring workspace included 
+ Enterprise
+ Truly custom. For organisations with serious data at scale.
+ Unlimited compute hours / mo 
+ No limits 
+ Everything in Scale 
+ Custom connectors 
+ Custom hours of engineering on demand/mo 
+ Custom SLA 
+ Start with any plan
+ We'd love to understand your requirements and get you started on what fits you the best!
+ Get Started with Meltano 
+ Why growing teams are
+switching to Meltano
+ AI, UI, API and CLI
+ access for data teams to extract and load data
+ 600+
+ Connectors across sources and destinations
+ Upto 7X
+ Reported cost reduction
+ Self-hosted 
+ Meltano Open
+ Run on your own setup. Perfect for testing things out, but not really suited for production teams unless you have a dedicated DevOps crew.
+ Explore docs 
+ Compare with Fivetran
+ If you're on Fivetran, use our savings estimator tool to see how much you can save with Meltano!
+ Calculate my savings 
+ Answers to all your questions
+ What is a compute hour, and how do I know how many I need? A compute hour is the time Meltano's managed infrastructure spends actively running your pipelines, extracting data from a source, loading it to a destination, or transforming it. A connector that takes 30 minutes to sync and runs twice a day uses about 30 hours a month. Most small teams with 5–10 connectors syncing daily fall comfortably within the Starter tier (200 hrs/mo). If you're unsure, book a demo and our team will estimate your footprint before you commit.
+ What's the difference between Meltano Cloud and Open? Meltano Open is the self-hosted, open-source version, you get 600+ connectors and Git-native pipelines, but you manage your own infrastructure, monitoring, and uptime. Meltano Cloud (Starter, Growth, Scale and Enterprise) is fully managed offering where Meltano runs the infrastructure, handles scaling, monitors pipeline health, and provides engineering support depending on your plan. Open is great for experimentation, but Cloud is built for production teams.
+ Can I switch plans as my data needs grow? Yes. Plans are designed to scale with you. From Starter through Enterprise, each tier unlocks more compute hours, more workspaces, and higher levels of engineering support. You can upgrade at any point and your existing pipelines, connectors, and configurations carry over without migration.
+ What does "engineering on demand" actually mean? Growth includes 8 hours/month and Scale includes 15 hours/month of direct access to Meltano's engineering team. You can use these hours to get help building custom connectors, debugging pipeline failures, optimising sync performance, or reviewing your architecture. It's embedded engineering support, not a support ticket queue.
+ How does Meltano's pricing compare to tools like Fivetran? Fivetran and similar tools price based on Monthly Active Rows (MAR), meaning your bill grows 
+
+=== [about] https://docs.meltano.com/ (lang=en)
+Meltano Documentation 
+ Skip to main content 
+ Docs 
+ Platform Connectors Releases 
+ Search 
+ Explore using Meltano
+ Open
+ The open-source, self-hosted foundation of Meltano. Own every part of your data infrastructure, on your own servers, free forever. Best for teams with DevOps capacity who want full control with zero vendor dependency.
+ ✓ You host and manage everything on your own servers
+ ✓ Access to 600+ built-in connectors
+ ✓ Free, you pay only for your own infra
+ Get Started 
+ Cloud
+ A fully managed hosted service built on top of Meltano Open. Pipelines, workspaces, secrets, and monitoring are all handled for you. No infrastructure to provision, patch, or maintain. Best for data teams who want to move fast without managing the plumbing.
+ ✓ Meltano hosts, scales, and maintains everything for you
+ ✓ Access to 600+ built-in and custom connectors
+ ✓ Paid plans based on compute hours
+ ✓ Built-in pipeline monitoring and alerts
+ Get Started 
+ Reference
+ Browse the full Meltano reference documentation — CLI commands, settings, plugin definition syntax, and more.
+ View Reference 
+ Meltano Hub
+ Explore the library of 600+ connectors and tools within the Meltano ecosystem.
+ Go to Hub 
+ SDK
+ Build your own Meltano connector to move data from any source to any destination.
+ Go to SDK 
+ SDK in Action
+ Explore many of the connectors built with the Meltano SDK in their home on GitHub: Meltano Labs.
+ View Examples 
+ Meltano gives data engineers 
+ control and visibility 
+ of their pipelines
+ No more black box. Let your creativity flow.
+ Extractors
+ Loaders
+ SaaS API 
+ Database 
+ File 
+ Custom Source 
+ Database 
+ Vector DB 
+ Data Warehouse 
+ Data Lake 
+ Find Out More!
+ Visit Our Blog
+ Join Our Slack Community
+ Meltano
+ Overview 
+ Blogs 
+ Case Studies 
+ Data Matas Podcast 
+ Community
+ Slack 
+ MeltanoLabs 
+ Meltano Hub 
+ Get Help
+ Contact 
+ StackOverflow 
+ Copyright © 2026 Matatika Limited.
+
+=== [pricing2] https://meltano.com/pricingcalculator (lang=en)
+Product The only EL tool built for data engineers
+ No more point-and-click-and-cross-your-fingers. Build data pipelines that fit exactly to your needs.
+ Overview
+ The only EL tool built for data engineers
+ Your data stack as code 
+ Release management and governance built on Git and GitHub workflows.
+ Model
+ Your data stack as code, with Git-based governance
+ Extract and load from 600+ sources
+ Pre-built connectors for SaaS apps, APIs, files, and databases, via UI, CLI, API, or AI.
+ Extract & Load
+ 600+ connectors via UI, CLI, API, or AI
+ Transform with dbt™ and Elementary
+ Data models and validation, configured and version-controlled in your Meltano project.
+ Transform
+ dbt™ and Elementary, version-controlled
+ Dependable data for analytics 
+ Feed any BI tool or semantic layer, with built-in support for running notebooks.
+ Analytics & Notebooks
+ Dependable data for BI, semantic layers, and notebooks
+ Orchestrate every pipeline
+ Built-in orchestration on Meltano Cloud, with schedules, triggers and retries.
+ Orchestrate
+ Schedules, triggers and retries, built in
+ Connectors 
+ Pricing 
+ Connectors Connectors 
+ 600+ connectors for sources and destinations
+ Connectors
+ 600+ sources and destinations
+ Pricing Pricing 
+ Meltano is an open source project by Matatika
+ Pricing
+ Open source and free to use, with paid support options
+ Resources Meltano at a glance 
+ Learn how to use Meltano, how Meltano is built, and where to get started
+ Documentation
+ Learn how to use Meltano and where to get started
+ Join the Melty Crew!
+ Join 5,500+ data professionals on Slack and GitHub
+ Community
+ Join 5,500+ data professionals on Slack and GitHub
+ The latest in Meltano & data engineering
+ Meltano updates, data engineering trends, tutorials, and other data musings
+ Blog
+ Stay up to date on Meltano & data engineering
+ Data Matas Podcasts 
+ Conversations with data engineers and practitioners
+ Podcasts
+ Conversations with data engineers and practitioners
+ Success stories
+ Real-world stories from teams building with Meltano
+ Case Studies
+ See how customers use Matatika in production
+ Build a connector for any data source
+ The Meltano SDK lets you easily built Singer connectors for custom, niche, and internal sources
+ SDK
+ Build a connector for any data source under the sun
+ Integrate any existing data tool for any data source
+ The Meltano EDK is the fastest way to build custom extensions and utilities for Meltano.
+ EDK
+ Integrate any existing data tool for any data source
+ The joy of creating
+ Everything you need and more to move, transform, and explore your data. Connectors for 600+ sources and destinations.
+ Meltano Hub
+ Connectors for 600+ sources and destinations
+ Company About Meltano
+ Meltano is an open source project by Matatika
+ About
+ Meltano is an open source project by Matatika
+ Contact Us 
+ Book a demo 
+ Explore how much you can save by switching to Meltano
+ Select your data sources and configure sync settings to see how much you can save with Meltano
+ Fivetran connectors 
+ Add a connector 
+ Add a connector to calculate your savings
+ Savings with Meltano when compared to Fivetran
+ Your savings will show up here
+ Get a detailed cost saving analysis Get in touch 
+ Meltano Savings Report
+ Generated on 14 October 2026
+ 0 %
+ Estimated total savings when you switch to Meltano from Fivetran
+ Schedule a discovery call today on meltano.com to get started.
+ Connector Name
+ Type
+ Frequency
+ MAR
+ Fivetran cost
+ Meltano savings
+ Total cost (Monthly)
+ $0
+ ~ 0 %
+ Savings estimates are based on connector type and sync frequency. Actuals may vary.
+Contact Meltano for 
+
+=== [meta] https://meltano.com
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/meltano/meltano
+<div align="center">
+  <picture align="center" width="600">
+    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/dbeb107f-20ad-43d0-af9c-f51b97f95e04">
+    <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/d15ec5e3-65e9-4c5a-ab13-019c00d97d28">
+  <img alt="Meltano Logo" src="https://github.com/user-attachments/assets/d15ec5e3-65e9-4c5a-ab13-019c00d97d28" width="600"/>
+  </picture>
+</div>
+
+<h1 align="center">The declarative code-first data integration engine</h1>
+<h3 align="center">Say goodbye to writing, maintaining, and scaling your own API integrations.<br>Unlock 600+ APIs and DBs and realize your wildest data and ML-powered product ideas.</h3>
+
+<div align="center">
+<a href="https://meltano.com/demo">
+<img alt="Try codespaces" src="https://img.shields.io/static/v1?label=&message=Try%20live%20demo%20with%20Codespaces&color=02a5a5&style=for-the-badge&logo=github"/>
+</a>
+</div>
+
+---
+
+<div align="center">
+<a href="https://meltano.com/slack">
+<img alt="Meltano Community Slack" src="https://img.shields.io/badge/Slack-Join%20the%20Community-blue?logo=slack&labelColor=471E80&color=110B1E"/>
+</a>
+<a href="https://docs.meltano.com/">
+<img alt="Docs" src="https://img.shields.io/website?down_color=red&down_message=offline&label=Docs&up_color=blue&up_message=online&url=https%3A%2F%2Fdocs.meltano.com%2F&labelColor=471E80&color=110B1E"/>
+</a>
+<a href="https://pypi.org/project/meltano/">
+<img alt="Meltano Python Package Version" src="https://img.shields.io/pypi/v/meltano?label=Version&labelColor=471E80&color=110B1E"/>
+</a>
+<a href="https://github.com/meltano/meltano/graphs/contributors">
+<img alt="GitHub contributors" src="https://img.shields.io/github/contributors/meltano/meltano?label=Contributors&labelColor=471E80&color=110B1E"/>
+</a>
+<a href="https://github.com/meltano/meltano/blob/main/LICENSE">
+<img alt="GitHub" src="https://img.shields.io/github/license/meltano/meltano?label=License&labelColor=471E80&color=110B1E"/>
+</a>
+</div>
+
+<div align="center">
+<a href="https://pypi.org/project/meltano/">
+<img alt="Supported Python Versions" src="https://img.shields.io/pypi/pyversions/meltano?label=Python&labelColor=471E80&color=110B1E"/>
+</a>
+<a href="https://pypi.org/project/meltano/">
+<img alt="Monthly PyPI Downloads" src="https://img.shields.io/pypi/dm/meltano?label=PyPI%20Downloads&labelColor=471E80&color=110B1E"/>
+</a>
+<a href="https://hub.docker.com/r/meltano/meltano">
+<img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/meltano/meltano?label=Docker%20Pulls&labelColor=471E80&color=110B1E"/>
+</a>
+</div>
+
+<div align="center">
+<a href="https://libraries.io/pypi/meltano/sourcerank">
+<img alt="Libraries.io SourceRank" src="https://img.shields.io/librariesio/sourcerank/pypi/meltano?label=SourceRank&labelColor=471E80&color=110B1E"/>
+</a>
+<a href="https://libraries.io/pypi/meltano">
+<img alt="Libraries.io dependency status for latest release" src="https://img.shields.io/librariesio/release/pypi/meltano?label=Dependencies&labelColor=471E80&color=110B1E"/>
+</a>
+<a href="https://github.com/meltano/meltano/blob/main/CONTRIBUTORS.md">
+<img alt="All Contributors" src="https://img.shields.io/github/all-contributors/meltano/meltano?label=All%20Contributors&labelColor=471E80&color=110B1E"/>
+</a>
+</div>
+
+<div align="center">
+<a href="https://github.com/meltano/meltano/actions/workflows/test.yml?query=branch%3Amain">
+<img alt="GitHub Actions Workflow Status" src="https://img.shields.io/github/actions/workflow/status/meltano/meltano/test.yml?label=Tests&labelColor=471E80&color=110B1E">
+</a>
+<a href="https://codecov.io/github/meltano/meltano">
+<img alt="Codecov" src="https://img.shields.io/codecov/c/github/meltano/meltano?label=Coverage&labelColor=471E80&color=110B1E">
+</a>
+</div>
+
+## Integrations
+
+[Meltano Hub](https://hub.meltano.com/) is the single source of truth to find any Meltano plugins as well as [Singer](https://singer.io/) taps and targets. Users are also able to add more plugins to the Hub and have them immediately discoverable and usable within Meltano. The Hub is lovingly curated by Meltano and the wider Meltano community.
+
+## Installati

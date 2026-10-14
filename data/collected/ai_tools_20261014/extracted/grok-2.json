@@ -1,0 +1,63 @@
+{
+ "company": "SpaceXAI LLC (SpaceXSI)",
+ "one_liner_ko": "채팅·검색·추론·생성을 한곳에서 하고 지금 일어나는 일을 반영해 답하는, 모두에게 유용한 AI 챗봇 Grok.",
+ "what_it_does_ko": "Grok은 글쓰기·리서치·요약 등 일상 업무를 돕는 AI 어시스턴트로, 단계별 추론을 보여 주고 같은 대화에서 이미지·영상·코드를 만든다. 웹과 𝕏를 실시간 검색해 출처를 인용하며 최신 소식을 반영한다. 여러 에이전트가 병렬로 하위 문제를 푸는 멀티 에이전트 모드, 저지연 음성 대화, 파일·PDF 분석을 지원한다. 같은 모델을 텍스트·비전·음성·이미지·영상 API로 개발자에게 제공한다.",
+ "key_features": [
+  "실시간 웹·𝕏 검색과 출처 인용",
+  "단계별 심층 추론",
+  "멀티 에이전트 모드(병렬 에이전트)",
+  "Grok Imagine 이미지·영상 생성(최대 15초 영상)",
+  "저지연 음성 대화",
+  "파일·PDF 분석과 비전 이해",
+  "대화 간 메모리·캔버스·맞춤 지시",
+  "텍스트·비전·음성·이미지·영상 API"
+ ],
+ "use_cases_ko": [
+  "일상 업무의 글쓰기·리서치·빠른 요약",
+  "속보·트렌드 실시간 파악",
+  "개발자의 Grok 모델 기반 앱 구축"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Free $0/월, 채팅·에이전트 요청 제한)",
+  "plans": [
+   {"name": "Free", "price": 0, "currency": "USD", "period": "month", "limits": "채팅·에이전트 요청 제한, 𝕏 게시·답글·팔로우", "page_lang": "en"},
+   {"name": "Plus", "price": 8, "currency": "USD", "period": "month", "limits": "공유 AI 사용량, Grok Chat·Voice·Imagine·Build, Grok API 접근, Cursor, 𝕏 프리미엄 체크마크", "page_lang": "en"},
+   {"name": "Premium", "price": 30, "currency": "USD", "period": "month", "limits": "Plus 대비 4배 사용량, Grok Bot, 최신 모델", "page_lang": "en"},
+   {"name": "Super", "price": 100, "currency": "USD", "period": "month", "limits": "Plus 대비 15배 사용량, 피크 시간 우선 접근", "page_lang": "en"},
+   {"name": "Ultra", "price": 200, "currency": "USD", "period": "month", "limits": "Plus 대비 50배 사용량", "page_lang": "en"},
+   {"name": "Teams", "price": 30, "currency": "USD", "period": "month", "limits": "사용자당 월 $30부터, Plus 대비 4~50배", "page_lang": "en"},
+   {"name": "Enterprise", "price": null, "currency": "USD", "period": null, "limits": "맞춤 요금, 영업 문의(공유 사용량, SSO·SCIM, 볼륨 할인)", "page_lang": "en"}
+  ],
+  "pricing_url": "https://x.ai/pricing"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["웹", "iOS", "안드로이드", "API"],
+ "korean_support": "불명",
+ "evidence": [
+  {"field": "company", "url": "https://x.ai/grok", "quote": "© 2026 SpaceXAI LLC"},
+  {"field": "one_liner_ko", "url": "https://x.ai/grok", "quote": "Chat, search, reason, and create — all in one place.\nAnswers with what's happening now and speaks your language."},
+  {"field": "what_it_does_ko", "url": "https://x.ai/grok", "quote": "A useful assistant for everyday work — writing, research, and quick recaps."},
+  {"field": "what_it_does_ko", "url": "https://x.ai/grok", "quote": "Searches the web and 𝕏 live, so answers always reflect what's happening right now"},
+  {"field": "what_it_does_ko", "url": "https://x.ai/grok", "quote": "Access the same models through our API — text, vision, voice, images, and video."},
+  {"field": "key_features", "url": "https://x.ai/grok", "quote": "Multiple agents work in parallel for deeper answers on the hardest questions."},
+  {"field": "key_features", "url": "https://x.ai/grok", "quote": "Text-to-video up to 15 seconds at 720p"},
+  {"field": "key_features", "url": "https://x.ai/grok", "quote": "Natural back-and-forth with sub-second latency"},
+  {"field": "key_features", "url": "https://x.ai/grok", "quote": "Upload documents and get instant summaries"},
+  {"field": "key_features", "url": "https://x.ai/grok", "quote": "Remembers your preferences and past conversations"},
+  {"field": "key_features", "url": "https://x.ai/grok", "quote": "Step-by-step thinking you can follow and verify"},
+  {"field": "use_cases_ko", "url": "https://x.ai/grok", "quote": "Real-time 𝕏 integration for breaking news and trends"},
+  {"field": "use_cases_ko", "url": "https://x.ai/grok", "quote": "A useful assistant for everyday work — writing, research, and quick recaps."},
+  {"field": "use_cases_ko", "url": "https://x.ai/grok", "quote": "Building on Grok?"},
+  {"field": "pricing", "url": "https://x.ai/pricing", "quote": "Free $0/month Get started \n Plus $8/month Get Plus \n Premium $30/month Get Premium \n Super $100/month Get Super \n Ultra $200/month Get Ultra \n Teams $30+/user/month Get Teams \n Enterprise Custom Contact Sales"},
+  {"field": "pricing", "url": "https://x.ai/pricing", "quote": "Limited Chat requests \n Limited agent requests"},
+  {"field": "pricing", "url": "https://x.ai/pricing", "quote": "Grok Chat, Voice, Imagine, and Build \n Grok API access \n Cursor"},
+  {"field": "pricing", "url": "https://x.ai/pricing", "quote": "Every tier includes a pool of AI usage shared across Grok and Cursor."},
+  {"field": "api", "url": "https://docs.x.ai/overview", "quote": "Intelligent, fast, and cost-effective models across code, text, voice, image, and video."},
+  {"field": "platforms", "url": "https://x.ai/grok", "quote": "Available on Web , iOS and Android"}
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {"official": "Free($0) / Plus($8) / Premium($30) / Super($100) / Ultra($200) / Teams($30+/사용자) / Enterprise; 한 구독으로 Grok·𝕏 프리미엄 기능·Cursor 사용량을 공유 풀로 묶음, 유료 플랜에 Grok API 접근 포함", "diff": "기존 분류 '구독형(X 구독 포함) + API 종량제'와 달리 무료 플랜이 있고, 구독이 Cursor(코딩 도구)와도 묶이며 5단계 개인 요금제로 재편됨", "url": "https://x.ai/pricing"}
+ ]
+}

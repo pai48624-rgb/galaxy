@@ -1,0 +1,150 @@
+{
+ "company": "AI21",
+ "one_liner_ko": "기업용 AI 시스템과 파운데이션 모델을 개발하는 회사로, 토큰 비용을 줄이는 게이트웨이와 맞춤 모델을 제공한다.",
+ "what_it_does_ko": "AI21은 기업용 AI 시스템과 파운데이션 모델을 개발한다. Intelligent Gateway는 기존 에이전트가 바꿔 끼우기만 하면 되는 엔드포인트로, 라우팅·캐싱·압축으로 토큰 비용과 낭비를 줄인다. 작업량이 정해지면 작은 오픈 모델을 고객 작업에 맞게 튜닝한 전용 모델을 만들어 준다. Jamba Mini·Jamba Large 파운데이션 모델을 API로 종량제 판매한다.",
+ "key_features": [
+  "Intelligent Gateway(라우팅·캐싱·압축으로 토큰 비용 절감)",
+  "Harness Optimization(비공개 평가 기반 설정 탐색, 출시 예정)",
+  "전용 모델(작은 오픈 모델을 고객 작업에 맞게 튜닝)",
+  "Jamba Mini·Jamba Large 파운데이션 모델",
+  "파운데이션 모델 API·SDK",
+  "프라이빗 클라우드 호스팅(Custom Plan)"
+ ],
+ "use_cases_ko": [
+  "기업 팀이 기존 AI 에이전트의 토큰 지출을 줄임",
+  "기업이 자사 작업에 맞춘 전용 소형 모델을 소유"
+ ],
+ "pricing": {
+  "free_tier": "있음 (무료 체험: 7일간 $10 크레딧, 카드 불필요)",
+  "plans": [
+   {
+    "name": "Free Trial",
+    "price": 0,
+    "currency": "USD",
+    "period": "one-time",
+    "limits": "7일간 $10 크레딧",
+    "page_lang": "en-US"
+   },
+   {
+    "name": "Pay As You Go - Jamba Mini",
+    "price": 0.2,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "입력 100만 토큰당 $0.2, 출력 100만 토큰당 $0.4",
+    "page_lang": "en-US"
+   },
+   {
+    "name": "Pay As You Go - Jamba Large",
+    "price": 2,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "입력 100만 토큰당 $2, 출력 100만 토큰당 $8",
+    "page_lang": "en-US"
+   },
+   {
+    "name": "Custom Plan",
+    "price": null,
+    "currency": "USD",
+    "period": "month",
+    "limits": "영업 문의: 볼륨 할인·프리미엄 API 한도·프라이빗 클라우드",
+    "page_lang": "en-US"
+   }
+  ],
+  "pricing_url": "https://www.ai21.com/pricing/"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "API"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.ai21.com/about/",
+   "quote": "AI21 is pioneering the development of enterprise AI Systems and Foundation Models."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.ai21.com",
+   "quote": "drop-in endpoint that automatically reduces token cost and waste, without sacrificing frontier quality."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.ai21.com",
+   "quote": "Point your existing agent at the Gateway. Routing, caching, and compaction start working on live traffic after just a two-line setup."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.ai21.com",
+   "quote": "AI21 tunes small open models to match frontier quality on your workloads"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.ai21.com",
+   "quote": "Surfaces the best harness configuration by searching against your own private evals.\n coming soon"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.ai21.com/pricing/",
+   "quote": "Foundation model APIs & SDK"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.ai21.com/pricing/",
+   "quote": "Jamba Large\n The most powerful and efficient long context model"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.ai21.com/pricing/",
+   "quote": "Private cloud hosting"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.ai21.com",
+   "quote": "Drop-in endpoint that reduces token waste based on your agent traffic, not just per-token pricing."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.ai21.com",
+   "quote": "we distill a dedicated model on them. You get the same accuracy as a larger frontier model"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.ai21.com/pricing/",
+   "quote": "Start with a free trial, no credit card required, then pay based on usage."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.ai21.com/pricing/",
+   "quote": "Free Trial \n $10 credits for 7 days."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.ai21.com/pricing/",
+   "quote": "$0.2 / 1M input tokens\n$0.4 / 1M output tokens"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.ai21.com/pricing/",
+   "quote": "$2 / 1M input tokens\n$8 / 1M output tokens"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.ai21.com/pricing/",
+   "quote": "For companies looking to scale and those that require custom implementation or dedicated support."
+  },
+  {
+   "field": "api",
+   "url": "https://www.ai21.com/pricing/",
+   "quote": "Foundation model APIs & SDK"
+  },
+  {
+   "field": "platforms",
+   "url": "https://www.ai21.com/pricing/",
+   "quote": "Foundation model APIs & SDK"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

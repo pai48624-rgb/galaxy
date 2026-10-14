@@ -1,0 +1,228 @@
+=== [home] https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct
+Qwen/Qwen3-Coder-480B-A35B-Instruct · Hugging Face 
+ Hugging Face 
+ Models 
+ Datasets 
+ Spaces 
+ Buckets new 
+ Docs 
+ Enterprise 
+ Pricing 
+ Website 
+ Tasks 
+ HuggingChat 
+ Collections 
+ Languages 
+ Organizations 
+ Community 
+ Blog 
+ Posts 
+ Daily Papers 
+ Hardware 
+ Learn 
+ Discord 
+ Forum 
+ GitHub 
+ Solutions 
+ Team & Enterprise 
+ Hugging Face PRO 
+ Enterprise Support 
+ Inference Providers 
+ Inference Endpoints 
+ Storage Buckets 
+ Log In 
+ Sign Up 
+ ' ~ (json_dict[json_key] | tojson | safe) ~ '</' ~ json_key ~ '>' }}\n {%- else %}\n {{-'\\n<' ~ json_key ~ '>' ~ (json_dict[json_key] | string) ~ '</' ~ json_key ~ '>' }}\n {%- endif %}\n {%- endfor %}\n {%- endif %}\n{% endmacro %}\n\n{%- if messages[0][\"role\"] == \"system\" %}\n {%- set system_message = messages[0][\"content\"] %}\n {%- set loop_messages = messages[1:] %}\n{%- else %}\n {%- set loop_messages = messages %}\n{%- endif %}\n\n{%- if not tools is defined %}\n {%- set tools = [] %}\n{%- endif %}\n\n{%- if system_message is defined %}\n {{- \"<|im_start|>system\\n\" + system_message }}\n{%- else %}\n {%- if tools is iterable and tools | length > 0 %}\n {{- \"<|im_start|>system\\nYou are Qwen, a helpful AI assistant that can interact with a computer to solve tasks.\" }}\n {%- endif %}\n{%- endif %}\n{%- if tools is iterable and tools | length > 0 %}\n {{- \"\\n\\n# Tools\\n\\nYou have access to the following functions:\\n\\n\" }}\n {{- \"<tools>\" }}\n {%- for tool in tools %}\n {%- if tool.function is defined %}\n {%- set tool = tool.function %}\n {%- endif %}\n {{- \"\\n<function>\\n<name>\" ~ tool.name ~ \"</name>\" }}\n {%- if tool.description is defined %}\n {{- '\\n<description>' ~ (tool.description | trim) ~ '</description>' }}\n {%- endif %}\n {{- '\\n<parameters>' }}\n {%- if tool.parameters is defined and tool.parameters is mapping and tool.parameters.properties is defined and tool.parameters.properties is mapping %}\n {%- for param_name, param_fields in tool.parameters.properties|items %}\n {{- '\\n<parameter>' }}\n {{- '\\n<name>' ~ param_name ~ '</name>' }}\n {%- if param_fields.type is defined %}\n {{- '\\n<type>' ~ (param_fields.type | string) ~ '</type>' }}\n {%- endif %}\n {%- if param_fields.description is defined %}\n {{- '\\n<description>' ~ (param_fields.description | trim) ~ '</description>' }}\n {%- endif %}\n {%- set handled_keys = ['name', 'type', 'description'] %}\n {{- render_extra_keys(param_fields, handled_keys) }}\n {{- '\\n</parameter>' }}\n {%- endfor %}\n {%- endif %}\n {% set handled_keys = ['type', 'properties'] %}\n {{- render_extra_keys(tool.parameters, handled_keys) }}\n {{- '\\n</parameters>' }}\n {%- set handled_keys = ['type', 'name', 'description', 'parameters'] %}\n {{- render_extra_keys(tool, handled_keys) }}\n {{- '\\n</function>' }}\n {%- endfor %}\n {{- \"\\n</tools>\" }}\n {{- '\\n\\nIf you choose to call a function ONLY reply in the following format with NO suffix:\\n\\n<tool_call>\\n<function=example_function_name>\\n<parameter=example_parameter_1>\\nvalue_1\\n</parameter>\\n<parameter=example_parameter_2>\\nThis is the value for the second parameter\\nthat can span\\nmultiple lines\\n</parameter>\\n</function>\\n</tool_call>\\n\\n<IMPORTANT>\\nReminder:\\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\\n- Required parameters MUST be specified\\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\\n</IMPORTANT>' }}\n{%- endif %}\n{%- if system_message is defined %}\n {{- '<|im_end|>\\n' }}\n{%- else %}\n {%- if tools is iterable and tools | length > 0 %}\n {{- '<|im_end|>\\n' }}\n {%- endif %}\n{%- endif %}\n{%- for message in loop_messages %}\n {%- if message.role == \"assistant\" and message.tool_calls is defined and message.tool_calls is iterable and message.tool_calls | length > 0 %}\n {{- '<|im_start|>' + message.role }}\n {%- if message.content is defined and message.content is string and message.content | trim | length > 0 %}\n {{- '\\n' + message.content | trim + '\\n' }}\n {%- endif %}\n {%- for tool_call in message.tool_calls %}\n {%- if tool_call.function is defined %}\n {%- set tool_call = tool_call.function %}\n {%- endif %}\n {{- '\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n {%- if tool_call.arguments is defined %}\n {%- for args_name, args_value in tool_call.arguments|items %}\n {{- '<parameter=' + args_name + '>\\n' }}\n {%- set args_value = args_value | tojson | safe if args_value is mapping or (args_value is sequence and args_value is not string) else args_value | string %}\n {{- args_value }}\n {{- '\\n</parameter>\\n' }}\n {%- endfor %}\n {%- endif %}\n {{- '</function>\\n</tool_call>' }}\n {%- endfor %}\n {{- '<|im_end|>\\n' }}\n {%- elif message.role == \"user\" or message.role == \"system\" or message.role == \"assistant\" %}\n {{- '<|im_start|>' + message.role + '\\n' + message.content + '<|im_end|>' + '\\n' }}\n {%- elif message.role == \"tool\" %}\n {%- if loop.previtem and loop.previtem.role != \"tool\" %}\n {{- '<|im_start|>user\\n' }}\n {%- endif %}\n {{- '<tool_response>\\n' }}\n {{- message.content }}\n {{- '\\n</tool_response>\\n' }}\n {%- if not loop.last and loop.nextitem.role != \"tool\" %}\n {{- '<|im_end|>\\n' }}\n {%- elif loop.last %}\n {{- '<|im_end|>\\n' }}\n {%- endif %}\n {%- else %}\n {{- '<|im_start|>' + message.role + '\\n' + message.content + '<|im_end|>\\n' }}\n {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n {{- '<|im_start|>assistant\\n' }}\n{%- endif %}\n","eos_token":"<|im_end|>","pad_token":"<|endoftext|>","unk_token":null},"chat_template_jinja":"{% macro render_extra_keys(json_dict, handled_keys) %}\n {%- if json_dict is mapping %}\n {%- for json_key in json_dict if json_key not in handled_keys %}\n {%- if json_dict[json_key] is mapping or (json_dict[json_key] is sequence and json_dict[json_key] is not string) %}\n {{- '\\n<' ~ json_key ~ '>' ~ (json_dict[json_key] | tojson | safe) ~ '</' ~ json_key ~ '>' }}\n {%- else %}\n {{-'\\n<' ~ json_key ~ '>' ~ (json_dict[json_key] | string) ~ '</' ~ json_key ~ '>' }}\n {%- endif %}\n {%- endfor %}\n {%- endif %}\n{% endmacro %}\n\n{%- if messages[0][\"role\"] == \"system\" %}\n {%- set system_message = messages[0][\"content\"] %}\n {%- set loop_messages = messages[1:] %}\n{%- else %}\n {%- set loop_messages = messages %}\n{%- endif %}\n\n{%- if not tools is defined %}\n {%- set tools = [] %}\n{%- endif %}\n\n{%- if system_message is defined %}\n {{- \"<|im_start|>system\\n\" + system_message }}\n{%- else %}\n {%- if tools is iterable and tools | length > 0 %}\n {{- \"<|im_start|>system\\nYou are Qwen, a helpful AI assistant that can interact with a computer to solve tasks.\" }}\n {%- endif %}\n{%- endif %}\n{%- if tools is iterable and tools | length > 0 %}\n {{- \"\\n\\n# Tools\\n\\nYou have access to the following functions:\\n\\n\" }}\n {{- \"<tools>\" }}\n {%- for tool in tools %}\n {%- if tool.function is defined %}\n {%- set tool = tool.function %}\n {%- endif %}\n {{- \"\\n<function>\\n<name>\" ~ tool.name ~ \"</name>\" }}\n {%- if tool.description is defined %}\n {{- '\\n<description>' ~ (tool.description | trim) ~ '</description>' }}\n {%- endif %}\n {{- '\\n<parameters>' }}\n {%- if tool.parameters is 
+
+=== [pricing] https://huggingface.co/pricing
+Pricing - Hugging Face 
+ Hugging Face 
+ Models 
+ Datasets 
+ Spaces 
+ Buckets new 
+ Docs 
+ Enterprise 
+ Pricing 
+ Website 
+ Tasks 
+ HuggingChat 
+ Collections 
+ Languages 
+ Organizations 
+ Community 
+ Blog 
+ Posts 
+ Daily Papers 
+ Hardware 
+ Learn 
+ Discord 
+ Forum 
+ GitHub 
+ Solutions 
+ Team & Enterprise 
+ Hugging Face PRO 
+ Enterprise Support 
+ Inference Providers 
+ Inference Endpoints 
+ Storage Buckets 
+ Log In 
+ Sign Up 
+ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ 
+ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ 
+ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ 
+ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ 
+ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ 
+ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ 
+ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ 
+ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ 
+ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ 
+ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ 
+ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ 
+ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ 
+ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ 
+ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ 
+ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ 
+ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ 
+ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ 
+ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ 
+ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ 
+ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · 
+
+=== [about] https://huggingface.co/docs
+Hugging Face - Documentation 
+ Hugging Face 
+ Models 
+ Datasets 
+ Spaces 
+ Buckets new 
+ Docs 
+ Enterprise 
+ Pricing 
+ Website 
+ Tasks 
+ HuggingChat 
+ Collections 
+ Languages 
+ Organizations 
+ Community 
+ Blog 
+ Posts 
+ Daily Papers 
+ Hardware 
+ Learn 
+ Discord 
+ Forum 
+ GitHub 
+ Solutions 
+ Team & Enterprise 
+ Hugging Face PRO 
+ Enterprise Support 
+ Inference Providers 
+ Inference Endpoints 
+ Storage Buckets 
+ Log In 
+ Sign Up 
+ Documentation
+ Guides, references, and API docs for the Hugging Face ecosystem.
+ Hub & Client Libraries 
+ Hub
+ Host Git-based models, datasets, and Spaces on the HF Hub
+ Hub Python Library
+ Python client to interact with the Hugging Face Hub
+ CLI
+ Tools for agents and humans to interact with all the Hugging Face services
+ Huggingface.js
+ JavaScript libraries for Hugging Face with built-in TS types
+ Tasks
+ Explore demos, models, and datasets for any ML tasks
+ Dataset viewer
+ API for metadata, stats, and content of HF Hub datasets
+ Deployment & Inference 
+ Inference Providers
+ Call 200k+ models hosted by our 10+ Inference partners
+ Inference Endpoints (dedicated)
+ Deploy models on dedicated & fully managed infrastructure on HF
+ Deploying on AWS
+ Train/deploy models from Hugging Face to AWS with DLCs
+ Text Generation Inference
+ Serve language models with TGI optimized toolkit
+ Text Embeddings Inference
+ Serve embeddings models with TEI optimized toolkit
+ Microsoft Azure
+ Deploy Hugging Face models on Microsoft Azure
+ Google Cloud
+ Train and Deploy Hugging Face models on Google Cloud
+ Core ML Libraries 
+ Transformers
+ State-of-the-art AI models for PyTorch
+ Diffusers
+ State-of-the-art Diffusion models in PyTorch
+ Datasets
+ Access & share datasets for any ML tasks
+ Transformers.js
+ State-of-the-art ML running directly in your browser
+ Tokenizers
+ Fast tokenizers optimized for research & production
+ Evaluate
+ Evaluate and compare models performance
+ timm
+ State-of-the-art vision models: layers, optimizers, and utilities
+ Sentence Transformers
+ Embeddings, Retrieval, and Reranking
+ Kernels
+ Load and run compute kernels from the Hugging Face Hub
+ Training & Optimization 
+ PEFT
+ Parameter-efficient finetuning for large language models
+ Accelerate
+ Train PyTorch models with multi-GPU, TPU, mixed precision
+ Optimum
+ Optimize HF Transformers for faster training/inference
+ AWS Trainium & Inferentia
+ Train/deploy Transformers/Diffusers on AWS
+ Google TPUs
+ Train and Deploy models on Google TPUs via Optimum.
+ TRL
+ Train transformers LMs with reinforcement learning
+ OpenEnv
+ Create and deploy agentic RL execution environments
+ Safetensors
+ Safe way to store/distribute neural network weights
+ Bitsandbytes
+ Optimize and quantize models with bitsandbytes
+ Lighteval
+ All-in-one toolkit to evaluate LLMs across multiple backends
+ Collaboration & Extras 
+ Gradio
+ Build ML demos and web apps with a few lines of Python
+ Trackio
+ A lightweight, local-first, and free experiment tracking Python library
+ smolagents
+ Smol library to build great agents in Python
+ LeRobot
+ Making AI for Robotics more accessible with end-to-end learning
+ Reachy Mini
+ Open-source expressive robot SDK for hackers and AI builders
+ AutoTrain
+ AutoTrain API and UI for seamless model training
+ Chat UI
+ Open source chat frontend powering HuggingChat
+ Leaderboards
+ Create custom Leaderboards on Hugging Face
+ Argilla
+ Collaboration tool for building high-quality datasets
+ Distilabel
+ Framework for synthetic data generation and AI feedback
+ Xet
+ Xet Protocol Specification
+ Community 
+ Blog Learn Discord Forum GitHub 
+ System theme 
+ Company
+ TOS Privacy About Careers 
+
+=== [meta] https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct
+html lang: 없음
+hreflang: 없음
+화면에 보이는 언어 이름: 없음

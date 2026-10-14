@@ -1,0 +1,259 @@
+=== [home] https://reka.ai (lang=en-US)
+Reka 
+ Reka.ai
+ NEWS
+ Working Notes
+ Careers
+ REQUEST A DEMO
+ Reka.ai
+ REQUEST A DEMO
+ [ AI RESEARCH LAB ]
+ We’re building models and infrastructure for the physical AI era.
+ We’re building models and infrastructure for the physical AI era.
+ We’re building models and infrastructure for the physical AI era.
+ Omni models that natively process and generate every kind of data in one architecture — and run in real time.
+ Omni models that natively process and generate every kind of data in one architecture — and run in real time.
+ Omni models that natively process and generate every kind of data in one architecture — and run in real time.
+ REQUEST A DEMO
+ READ THE RESEARCH
+ [ THE STACK ]
+ Models, infrastructure, and the data behind them.
+ Models, infrastructure, and the data behind them.
+ Models, infrastructure, and the data behind them.
+ [ RESEARCH ] → 
+ Research and development of foundational intelligence for the physical world.
+ [ REKA CLOUD ] → 
+ Train, customize, and deploy leading AI models on infrastructure engineered for performance, efficiency, and scale.
+ [ VIDEO INFRASTRUCTURE ] → 
+ Scalable infrastructure to tag, reason over, search, and clip large volumes of video data. Available via API, MCP, or our app.
+ Claru 
+ [ DATA INFRASTRUCTURE ] → 
+ The training data behind frontier AI — egocentric video, robotics trajectories, world-model footage, and expert human judgment at scale.
+ [ REAL TIME ]
+ The same ten seconds, four different questions.
+ The same ten seconds, four different questions.
+ The same ten seconds, four different questions.
+ Detection is where most models stop. The work is everything after it.
+ Detection is where most models stop. The work is everything after it.
+ Detect Relate Search Act 
+ cam 11 · aisle 4 · 1600×900 
+ ● REC · CAM 11 · AISLE 4 
+ Every object in frame, with a class and a confidence — and the box stays on the vehicle while it moves. The part every model can do.
+ [ RESEARCH ]
+ Making them run in real time.
+ Making them run in real time.
+ Making them run in real time.
+ Scaling up an omni model is one problem. Getting it inside a twenty-four frames-per-second budget, on hardware that already exists, is the other.
+ Scaling up an omni model is one problem. Getting it inside a twenty-four frames-per-second budget, on hardware that already exists, is the other.
+ Distilled Undistilled 
+ one frame at 24 fps — 41.6 ms 
+ 41.6 ms ▼ 
+ Reka, distilled 37.6 ms · 4.0 ms spare 
+ Everything left of the line happens inside a single frame, with four milliseconds to spare.
+ Distillation
+ Distillation
+ Distillation
+ 11.8× faster end to end, holding the quality of the teacher model.
+ Quantization
+ Quantization
+ Quantization
+ 3.5-bit weights, near-lossless — the model fits where it has to run.
+ Reinforcement
+ Reinforcement
+ Reinforcement
+ Large-scale RL against the task you actually have, not a benchmark.
+ Build on Reka.
+ Build on Reka.
+ Build on Reka.
+ Models, infrastructure, and data for teams building into the physical world.
+ Models, infrastructure, and data for teams building into the physical world.
+ REQUEST A DEMO
+ READ THE RESEARCH
+ ECOSYSTEM
+ Vision
+ Labs
+ Infer
+ Claru
+ Resources
+ Reka Latest
+ Labs Research
+ Documentation
+ Responsible AI Ethics
+ Company
+ Careers
+ Trust Center
+ Help and Support
+ Follow our socials
+ ©2026 REKA. ALL RIGHTS RESERVED. 
+ Terms and Conditions
+ Privacy and Security
+ ECOSYSTEM
+ Vision
+ Labs
+ Infer
+ Claru
+ Resources
+ Reka Latest
+ Labs Research
+ Documentation
+ Responsible AI Ethics
+ Company
+ Careers
+ Trust Center
+ Help and Support
+ Follow our socials
+ ©2026 REKA. ALL RIGHTS RESERVED. 
+ Terms and Conditions
+ Privacy and Security
+ ECOSYSTEM
+ Vision
+ Labs
+ Infer
+ Claru
+ Resources
+ Reka Latest
+ Labs Research
+ Documentation
+ Responsible AI Ethics
+ Company
+ Careers
+ Trust Center
+ Help and Support
+ Follow our socials
+ ©2026 REKA. ALL RIGHTS RESERVED. 
+ Terms and Conditions
+ Privacy and Security
+
+=== [about] https://docs.reka.ai/overview (lang=en)
+Reka API Documentation | Reka API For AI agents: a documentation index is available at the root level at /llms.txt. Append /llms.txt to any URL for a page-level index, or .md for the markdown version of any page.
+ Search / 
+ Ask AI 
+ Discord Get API Key 
+ Skip to navigation On this page
+ Chat Completions 
+ Vision APIs 
+ Support 
+ Scroll to top 
+ Getting Started 
+ Reka API Documentation
+ Copy page 
+ The Reka API serves Reka models and a curated selection of open models, including DeepSeek, GLM, Qwen and Gemma, through one OpenAI-compatible endpoint. You choose the model for each request, and Reka runs it on infrastructure it operates, from the API to the GPUs.
+ Point your existing OpenAI client at https://api.reka.ai/v1 , use your Reka API key, and pick a model from the model list .
+ First API call 
+ curl https://api.reka.ai/v1/chat/completions \ 
+ -H " Authorization: Bearer $REKA_API_KEY " \ 
+ -H " Content-Type: application/json " \ 
+ -d ' { 
+ "model": "reka-flash-3", 
+ "messages": [{"role": "user", "content": "Why is the sky blue?"}] 
+ } ' 
+ Get started 
+ Chat Completions
+ Chat
+ Multi-turn chat, structured outputs, streaming and tools.
+ Images and video
+ Send images and short videos alongside text.
+ Models
+ Model IDs, context lengths and capabilities.
+ API reference
+ Every request and response field.
+ Vision APIs
+ Reka Vision
+ Upload, search and chat over a video library.
+ Support
+ Discord
+ Real-time chat & support.
+ System Status
+ Check the status of Reka services.
+ Was this page helpful? Yes No 
+ Quickstart
+ Next Built with 
+ DesktopMenu) --> Getting Started 
+ Overview 
+ Quickstart 
+ Errors 
+ Pricing 
+ Chat Completions 
+ Overview 
+ Images and Video 
+ Models 
+ Run Locally 
+ API Reference 
+ Vision APIs 
+ Vision 
+ Resources 
+ FAQs 
+ System Status 
+ Overview 
+ Quickstart 
+ Errors 
+ Pricing 
+ Overview 
+ Images and Video 
+ Models 
+ Run Locally 
+ Create Chat Completion 
+ List Models 
+ Overview 
+ Errors 
+ Rate Limits 
+ Pricing 
+ MCP Server 
+ Video Management 
+ Video Group Management 
+ Video Features 
+ Video Search 
+ Video Chat 
+ Video Insights 
+ YouTube Automations 
+ Clip Generation 
+ Metadata Tagging 
+ Image Management 
+ Image Search 
+ Upload Video 
+ List Videos 
+ Get Video 
+ Update Video 
+ Delete Video 
+ Create Video Group 
+ List Video Groups 
+ Get Video Group 
+ Update Video Group 
+ Delete Video Group 
+ List Group Videos 
+ Move Videos to Group 
+ Get Feature Catalog 
+ Plan Features 
+ Trigger Transcript 
+ Trigger Captions 
+ Trigger Embeddings 
+ Trigger Objects 
+ Search Videos 
+ Chat with Videos 
+ List Captions 
+ List Transcript 
+ List Scenes 
+ List Objects 
+ Segment Video 
+ Create YouTube Automation 
+ List YouTube Automations 
+ Get YouTube Automation 
+ Update YouTube Automation 
+ Delete YouTube Automation 
+ Quick Tag Video 
+ Indexed Tag Video 
+ Create Clips 
+ List Clips 
+ Get Clip Status 
+ Delete Clip 
+ Upload Images 
+ Get Image 
+ List Images 
+ Delete Image 
+ Search Images 
+ FAQs
+
+=== [meta] https://reka.ai
+html lang: en-US
+hreflang: 없음
+화면에 보이는 언어 이름: 없음

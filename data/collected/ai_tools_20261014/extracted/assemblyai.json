@@ -1,0 +1,184 @@
+{
+ "company": "AssemblyAI",
+ "one_liner_ko": "음성을 받아쓰고 이해하는 AI 모델을 API로 제공하는 음성 AI 인프라.",
+ "what_it_does_ko": "AssemblyAI는 녹음 파일·실시간·동기 방식의 음성 인식(STT) API와 음성 에이전트 API를 제공한다. 녹음 파일 STT는 99개 언어를 지원하고 화자 분리·개인정보 마스킹 등을 제공하며, 스트리밍 STT는 WebSocket으로 약 150ms(p50) 지연을 낸다. 요약·감정·주제 감지 같은 음성 이해, 개인정보·콘텐츠 관리용 가드레일, 여러 LLM을 같은 API로 쓰는 LLM Gateway도 있다. Python·TypeScript SDK와 MCP 서버로 연동할 수 있다.",
+ "key_features": [
+  "녹음 파일 STT API(99개 언어, 화자 분리, PII 마스킹)",
+  "실시간 스트리밍 STT(약 150ms p50 지연)",
+  "동기 STT(120초 이하 짧은 오디오)",
+  "Dictation API(받아쓰기 후 LLM으로 서식 정리)",
+  "Voice Agent API(STT·LLM·TTS 통합 음성 에이전트)",
+  "Speech Understanding(요약·감정·주제 감지)",
+  "Guardrails(PII 처리·콘텐츠 관리)",
+  "LLM Gateway(여러 LLM을 같은 API로)"
+ ],
+ "use_cases_ko": [
+  "음성 에이전트 구축",
+  "AI 회의록·통화 분석",
+  "의료 전사"
+ ],
+ "pricing": {
+  "free_tier": "있음 ($50 무료 크레딧, 카드 불필요)",
+  "plans": [
+   {
+    "name": "Universal-3.5 Pro (녹음 파일)",
+    "price": 0.21,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "오디오 시간당, 18개 언어",
+    "page_lang": "en"
+   },
+   {
+    "name": "Universal-2 (녹음 파일)",
+    "price": 0.15,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "오디오 시간당, 99개 언어",
+    "page_lang": null
+   },
+   {
+    "name": "Universal-3.6 Pro Realtime (스트리밍)",
+    "price": 0.45,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "세션 시간당 기본 요금",
+    "page_lang": null
+   },
+   {
+    "name": "Universal-Streaming English/Multilingual",
+    "price": 0.15,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "세션 시간당",
+    "page_lang": null
+   },
+   {
+    "name": "Voice Agent API",
+    "price": 4.5,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "세션 시간당($0.075/분), STT·LLM·TTS 포함",
+    "page_lang": null
+   },
+   {
+    "name": "Custom",
+    "price": null,
+    "currency": "USD",
+    "period": null,
+    "limits": "맞춤 한도·동시성, 영업 문의",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://www.assemblyai.com/pricing/"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "API"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.assemblyai.com/",
+   "quote": "AssemblyAI | AI models to transcribe and understand speech"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.assemblyai.com/",
+   "quote": "Trusted by millions of developers, AssemblyAI delivers industry-leading pre-recorded and real-time speech-to-text and voice agent APIs."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.assemblyai.com/docs/",
+   "quote": "AssemblyAI provides Voice AI infrastructure: pre-recorded speech-to-text, streaming speech-to-text, synchronous speech-to-text, voice agent orchestration"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.assemblyai.com/docs/",
+   "quote": "Use the Python or TypeScript SDK to integrate transcription, streaming, and voice agents directly into your own codebase."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.assemblyai.com/docs/",
+   "quote": "Transcribes recorded audio and video asynchronously across 99 languages, with support on speaker diarization, PII redaction, and more features."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.assemblyai.com/docs/",
+   "quote": "Handles live audio over WebSocket with ~150ms p50 latency"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.assemblyai.com/docs/",
+   "quote": "Transcribes short audio clips (up to 120 seconds) and formats the text with an LLM in the same request."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.assemblyai.com/docs/",
+   "quote": "A fully managed speech-to-speech pipeline — one connection handles STT, LLM reasoning, and TTS together"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.assemblyai.com/docs/",
+   "quote": "summarization, sentiment, topic detection, and more over audio"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.assemblyai.com/docs/",
+   "quote": "Gives unified access to frontier language models through the same API"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.assemblyai.com/",
+   "quote": "Voice Agents AI Notetakers Call Analytics Medical Transcription Dictation Agent Assist AI Scribes"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.assemblyai.com/llms/pricing.md/",
+   "quote": "**$50 in free credits, no credit card required.**"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.assemblyai.com/pricing/",
+   "quote": "Start free, pay-as-you-go after that – no commitments required."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.assemblyai.com/pricing/",
+   "quote": "$0.21 /hr Get custom rate limits, enhanced concurrency"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.assemblyai.com/llms/pricing.md/",
+   "quote": "| Universal-2 | `universal-2` | **$0.15/hr** |"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.assemblyai.com/llms/pricing.md/",
+   "quote": "| Universal-3.6 Pro Realtime | `universal-3-6-pro` | **$0.45/hr** base |"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.assemblyai.com/llms/pricing.md/",
+   "quote": "| Universal-Streaming English | `universal-streaming-english` | **$0.15/hr** |"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.assemblyai.com/llms/pricing.md/",
+   "quote": "**Voice Agent API** is billed per session minute at **$4.50/hr ($0.075/min)**."
+  },
+  {
+   "field": "api",
+   "url": "https://www.assemblyai.com/docs/",
+   "quote": "Build directly against the raw HTTP and WebSocket API for full control over requests and responses."
+  },
+  {
+   "field": "platforms",
+   "url": "https://www.assemblyai.com/docs/",
+   "quote": "Build directly against the raw HTTP and WebSocket API for full control over requests and responses."
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

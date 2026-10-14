@@ -1,0 +1,192 @@
+{
+ "company": "CoreWeave",
+ "one_liner_ko": "대규모 모델 학습·서빙을 위해 만든 AI 전용 클라우드(The essential cloud for AI).",
+ "what_it_does_ko": "CoreWeave는 가장 복잡한 AI 워크로드를 출시 가능한 제품으로 만드는 통합 AI 클라우드 플랫폼이다. 인프라 측면에서는 최신 NVIDIA GPU 클러스터, 베어메탈 컴퓨트, AI용 오브젝트 스토리지, AI 워크로드용 관리형 Kubernetes(CKS), Mission Control 모니터링을 제공한다. CoreWeave Forge는 Weights & Biases 실험 추적, 서버리스 SFT·RL 미세 조정, 토큰 단위 과금 서버리스 추론, 에이전트 관측(Agent Lens), 샌드박스 등 모델·에이전트 개선 루프 도구를 제공한다.",
+ "key_features": [
+  "NVIDIA Vera Rubin·Blackwell·Hopper GPU 클러스터",
+  "베어메탈 컴퓨트(가상화 오버헤드 없음)",
+  "CoreWeave Kubernetes Service(CKS)",
+  "AI 오브젝트 스토리지와 송신료 없는 데이터 이전(0EM)",
+  "Weights & Biases Models 실험 추적",
+  "서버리스 SFT·RL 미세 조정",
+  "서버리스 추론: 오픈 모델을 OpenAI 호환 API로, 토큰 단위 과금",
+  "Agent Lens 에이전트 관측과 격리 샌드박스"
+ ],
+ "use_cases_ko": [
+  "대규모 AI 모델 학습",
+  "저지연 AI 추론",
+  "VFX 렌더링"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [
+   {
+    "name": "NVIDIA GB200 NVL72 (온디맨드)",
+    "price": 42.0,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "시간당, GPU 4개, 북미 리전",
+    "page_lang": "en"
+   },
+   {
+    "name": "NVIDIA GB200 NVL72 (추론 단일 GPU)",
+    "price": 10.5,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "시간당",
+    "page_lang": "en"
+   },
+   {
+    "name": "NVIDIA HGX B200 (온디맨드)",
+    "price": 68.8,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "시간당, GPU 8개",
+    "page_lang": "en"
+   },
+   {
+    "name": "NVIDIA HGX B200 (스팟)",
+    "price": 34.11,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "시간당, GPU 8개",
+    "page_lang": "en"
+   },
+   {
+    "name": "NVIDIA HGX B300 (스팟)",
+    "price": 35.84,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "시간당, GPU 8개, 온디맨드는 영업 문의",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://coreweave.com/pricing"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "API"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://coreweave.com",
+   "quote": "The Essential Cloud for AI | CoreWeave"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://coreweave.com",
+   "quote": "The AI cloud purpose-built for training and serving models at scale"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://coreweave.com",
+   "quote": "One AI Cloud platform, fully integrated, built to turn every pioneers’ most complex AI workloads into shipped products"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://coreweave.com",
+   "quote": "One unified platform: Forge to accelerate the loop, Infrastructure to power it"
+  },
+  {
+   "field": "key_features",
+   "url": "https://coreweave.com",
+   "quote": "NVIDIA Vera Rubin\n NVIDIA Blackwell\n NVIDIA Hopper"
+  },
+  {
+   "field": "key_features",
+   "url": "https://coreweave.com",
+   "quote": "Direct hardware access, no virtualization overhead"
+  },
+  {
+   "field": "key_features",
+   "url": "https://coreweave.com",
+   "quote": "Managed Kubernetes built for AI workloads"
+  },
+  {
+   "field": "key_features",
+   "url": "https://coreweave.com",
+   "quote": "Move your data to CoreWeave with zero egress fees"
+  },
+  {
+   "field": "key_features",
+   "url": "https://coreweave.com",
+   "quote": "Track, compare, and reproduce every experiment"
+  },
+  {
+   "field": "key_features",
+   "url": "https://coreweave.com",
+   "quote": "Fine-tune open models with nothing to provision"
+  },
+  {
+   "field": "key_features",
+   "url": "https://coreweave.com",
+   "quote": "Open models on one API, billed per token"
+  },
+  {
+   "field": "key_features",
+   "url": "https://coreweave.com",
+   "quote": "Observability that turns agent traces into fixes"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://coreweave.com",
+   "quote": "Train large-scale AI models with purpose-built GPU infrastructure"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://coreweave.com",
+   "quote": "Run low-latency AI inference with high-performance compute"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://coreweave.com",
+   "quote": "Accelerate VFX and rendering with scalable GPU power"
+  },
+  {
+   "field": "pricing",
+   "url": "https://coreweave.com/pricing",
+   "quote": "On-Demand Price: $42.00 / Hour"
+  },
+  {
+   "field": "pricing",
+   "url": "https://coreweave.com/pricing",
+   "quote": "Inference Single CPU Price: $10.50 / Hour"
+  },
+  {
+   "field": "pricing",
+   "url": "https://coreweave.com/pricing",
+   "quote": "On-Demand Price: $68.80 / Hour"
+  },
+  {
+   "field": "pricing",
+   "url": "https://coreweave.com/pricing",
+   "quote": "Spot Price: $35.84 / Hour"
+  },
+  {
+   "field": "pricing",
+   "url": "https://coreweave.com/pricing",
+   "quote": "Spot Price: $34.11 / Hour"
+  },
+  {
+   "field": "pricing",
+   "url": "https://coreweave.com/pricing",
+   "quote": "Quickly spin-up burst On-Demand or Spot capacity—with the flexibility of great pricing."
+  },
+  {
+   "field": "api",
+   "url": "https://docs.coreweave.com/",
+   "quote": "Open-source foundation models through an OpenAI-compatible API, integrated with Weave."
+  },
+  {
+   "field": "platforms",
+   "url": "https://docs.coreweave.com/",
+   "quote": "Learn how to deploy, manage, and observe your workloads on CoreWeave."
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

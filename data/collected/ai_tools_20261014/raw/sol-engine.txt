@@ -1,0 +1,139 @@
+=== [home] https://nvlabs.github.io/Sana/Sol-Engine/ (lang=en)
+Sol Video Inference Engine | Agent-Native Full-Stack Acceleration 
+ Sol Video Inference Engine Abstract Demos BibTeX 
+ Sol Video Inference Engine
+ Agent-Native Full-Stack Acceleration Framework for Efficient Video Generation 
+ A training-free acceleration framework that composes cache, sparse attention, token pruning, quantization, and kernel fusion into deployment-ready stacks for video diffusion inference.
+ NVIDIA SANA Team * 
+ Codex * 
+ GPT-Image2
+ Human authors: Yitong Li, Junsong Chen, Haopeng Li, Haozhe Liu, Jincheng Yu, Ligeng Zhu, Ping Luo, Song Han, Enze Xie. 
+ NVIDIA Research, Efficient AI Team & Singapore Lab. 
+ Paper Code MiniMax H3 H3 Super Acceleration Sol-H3 Sol-H3-Spark LTX-2.5 
+ LTX-2.3 Progress Demo
+ Key features
+ Instance specificity
+ Model × hardware × configuration aware acceleration
+ The framework optimizes each concrete deployment instance rather than assuming a single transferable acceleration recipe.
+ Full-stack techniques
+ Cache, sparse attention, token pruning, quantization, and kernel fusion
+ Sol Video Inference Engine organizes five broadly applicable acceleration techniques into a deployment-ready full-stack framework.
+ Local-to-global workflow
+ Parallel skill agents with global integration
+ Per-technique local tuning provides strong starting points that are later composed through a global integrator and validation loop.
+ Efficiency gains
+ 2×–3× end-to-end speedup
+ The full framework substantially reduces latency across Cosmos3-Super, LTX-2.3, and SANA-Video while preserving perceptual quality.
+ Abstract
+ Sol Video Inference Engine is a training-free, agent-native acceleration framework for video diffusion inference that composes cache, sparse attention, token pruning, quantization, and kernel fusion into deployment-ready stacks tailored to each model, hardware target, and serving configuration. Across Cosmos3-Super, LTX-2.3, and SANA-Video, the framework delivers more than 2× end-to-end speedup while maintaining near-lossless visual quality.
+ Efficiency at a glance
+ Sol Video Inference Engine exposes each technique as a bounded design space. Parallel skill agents test technique applicability, an agent integrator composes selected candidates into a deployment stack, and a human validator provides efficiency-quality feedback. 
+ Demos
+ Cosmos3-Super
+ SGLang · 1×
+ Sol-Engine · 2.27×
+ SGLang · 1×
+ Sol-Engine · 2.27×
+ SGLang · 1×
+ Sol-Engine · 2.27×
+ SGLang · 1×
+ Sol-Engine · 2.27×
+ SGLang · 1×
+ Sol-Engine · 2.27×
+ SGLang · 1×
+ Sol-Engine · 2.27×
+ SGLang · 1×
+ Sol-Engine · 2.27×
+ SGLang · 1×
+ Sol-Engine · 2.27×
+ LTX-2.3
+ SGLang · 1×
+ Sol-Engine · 2.38×
+ SGLang · 1×
+ Sol-Engine · 2.38×
+ SGLang · 1×
+ Sol-Engine · 2.38×
+ SGLang · 1×
+ Sol-Engine · 2.38×
+ SGLang · 1×
+ Sol-Engine · 2.38×
+ SGLang · 1×
+ Sol-Engine · 2.38×
+ SGLang · 1×
+ Sol-Engine · 2.38×
+ SGLang · 1×
+ Sol-Engine · 2.38×
+ SANA-Video
+ SGLang · 1×
+ Sol-Engine · 2.77×
+ SGLang · 1×
+ Sol-Engine · 2.77×
+ SGLang · 1×
+ Sol-Engine · 2.77×
+ SGLang · 1×
+ Sol-Engine · 2.77×
+ SGLang · 1×
+ Sol-Engine · 2.77×
+ SGLang · 1×
+ Sol-Engine · 2.77×
+ SGLang · 1×
+ Sol-Engine · 2.77×
+ SGLang · 1×
+ Sol-Engine · 2.77×
+ BibTeX
+ Copy BibTeX @misc{li2026solvideoinferenceengine,
+ title={Sol Video Inference Engine: Agent-Native Full-Stack Acceleration Framework for Efficient Video Generation},
+ author={Yitong Li and Junsong Chen and Haopeng Li and Haozhe Liu and Jincheng Yu and Ligeng Zhu and Ping Luo and Song Han and Enze Xie},
+ year={2026},
+ eprint={2606.23743},
+ archivePrefix={arXiv},
+ primaryClass={cs.CV},
+ url={https://arxiv.org/abs/2606.23743}
+}
+
+=== [meta] https://nvlabs.github.io/Sana/Sol-Engine/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/NVlabs/Sana
+<p align="center" style="border-radius: 10px">
+  <img src="https://huggingface.co/datasets/Efficient-Large-Model/Sana-assets/resolve/main/asset/logo.png" width="35%" alt="logo"/>
+</p>
+
+<h3 align="center">
+<a href="https://nvlabs.github.io/Sana/docs/"><b>📚 Docs</b></a> | <a href="https://nvlabs.github.io/Sana/"><b>SANA</b></a> | <a href="https://nvlabs.github.io/Sana/Sana-1.5/"><b>SANA-1.5</b></a> | <a href="https://nvlabs.github.io/Sana/Sprint/"><b>SANA-Sprint</b></a> | <a href="https://nvlabs.github.io/Sana/Video/"><b>SANA-Video</b></a> | <a href="https://nvlabs.github.io/Sana/Video2/"><b>SANA-Video 2.0</b></a> | <a href="https://nvlabs.github.io/Sana/WM/"><b>SANA-WM</b></a> | <a href="https://nvlabs.github.io/Sana/Streaming/"><b>SANA-Streaming</b></a> | <a href="https://nvlabs.github.io/Sana/Sol-RL/"><b>Sol-RL</b></a>
+
+<a href="https://nv-sana.mit.edu/"><b>Demo</b></a> | <a href="https://huggingface.co/spaces/Efficient-Large-Model/sana-video2-5b-720p-demo"><b>🎬 SANA-Video 2.0 Demo</b></a> | <a href="https://huggingface.co/collections/Efficient-Large-Model/sana"><b>🤗 HuggingFace</b></a> | <a href="https://github.com/lawrence-cj/ComfyUI_ExtraModels"><b>ComfyUI</b></a> | <a href="https://github.com/sgl-project/sglang"><b>SGLang</b></a> | <a href="https://github.com/nvidia-cosmos/cosmos-rl/blob/main/examples/sana.md"><b>Cosmos-RL</b></a>
+
+</h3>
+
+<p align="center">
+  <a href="https://nv-sana.mit.edu/"><img src="https://img.shields.io/static/v1?label=Demo:6x3090&message=SANA&color=yellow"></a> &ensp;
+  <a href="https://nv-sana.mit.edu/4bit/"><img src="https://img.shields.io/static/v1?label=Demo:1x3090&message=4bit&color=yellow"></a> &ensp;
+  <a href="https://nv-sana.mit.edu/ctrlnet/"><img src="https://img.shields.io/static/v1?label=Demo:1x3090&message=ControlNet&color=yellow"></a> &ensp;
+  <a href="https://nv-sana.mit.edu/sprint/"><img src="https://img.shields.io/static/v1?label=Demo:1x3090&message=SANA-Sprint&color=yellow"></a> &ensp;
+  <a href="https://huggingface.co/spaces/Efficient-Large-Model/SanaSprint"><img src="https://img.shields.io/static/v1?label=Huggingface%20Demo&message=SANA-Sprint&color=yellow"></a> &ensp;
+  <a href="https://huggingface.co/spaces/Efficient-Large-Model/sana-video2-5b-720p-demo"><img src="https://img.shields.io/static/v1?label=Huggingface%20Demo&message=SANA-Video%202.0&color=76B900"></a> &ensp;
+</p>
+
+<p align="center">
+  <a href="https://replicate.com/chenxwh/sana"><img src="https://img.shields.io/static/v1?label=API:H100&message=Replicate&color=pink"></a> &ensp;
+  <a href="https://discord.gg/rde6eaE5Ta"><img src="https://img.shields.io/static/v1?label=Discuss&message=Discord&color=purple&logo=discord"></a> &ensp;
+  <a href="https://sana-wm.reactor.inc/"><img src="https://img.shields.io/static/v1?label=Reactor%20Demo&message=SANA-WM&color=yellow"></a> &ensp;
+  <a href="https://sana-streaming.reactor.inc/"><img src="https://img.shields.io/static/v1?label=Reactor%20Demo&message=SANA-Streaming&color=yellow"></a> &ensp;
+</p>
+
+<p align="center">
+  <a href="https://github.com/NVlabs/Sana/tree/sol-engine">
+    <img src="asset/sol-engine-branch-banner.svg" width="100%" alt="Open the Sol-Engine inference engine branch"/>
+  </a>
+</p>
+
+<h4 align="center">ICLR 2025 Oral | ICML 2025 | ICCV 2025 Highlight | ICLR 2026 Oral </h4>
+
+**SANA** is an efficiency-oriented codebase for high-resolution image and video generation, providing complete training and inference pipelines. This repository contains code for [SANA](https://nvlabs.github.io/Sana/), [SANA-1.5](https://nvlabs.github.io/Sana/Sana-1.5/), [SANA-Sprint](https://nvlabs.github.io/Sana/Sprint/), [SANA-Video](https://nvlabs.github.io/Sana/Video/), [SANA-Video 2.0](https://nvlabs.github.io/Sana/Video2/), [SANA-WM](https://nvlabs.github.io/Sana/WM/), [SANA-Streaming](https://nvlabs.github.io/Sana/Streaming/), and [Sol-RL](https://nvlabs.github.io/Sana/Sol-RL/). More details can be found in our [📚 documentation](https://nvlabs.github.io/Sana/docs/).
+
+Join our [Discord](https://discord.gg/rde6eaE5Ta) to engage in discussions with the community! If you have any questions, run into issues, or are interested in contributing, don't hesitate to reach out!
+
+<p align="

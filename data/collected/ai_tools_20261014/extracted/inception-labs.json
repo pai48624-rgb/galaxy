@@ -1,0 +1,144 @@
+{
+ "company": "Inception",
+ "one_liner_ko": "자기회귀 대신 확산(diffusion) 방식으로 토큰을 병렬 생성하는 빠른 LLM Mercury를 만드는 회사.",
+ "what_it_does_ko": "Inception은 확산 방식으로 동작하는 차세대 대형 언어 모델 Mercury를 만들고 배포한다. 토큰을 병렬로 생성해 첫 토큰까지 300ms 미만, 5~7배 높은 처리량, 작업당 최대 70% 낮은 비용을 내세운다. 출력 형식·제약을 세밀하게 제어할 수 있다고 설명한다. Mercury 2.5, Mercury Voice, Mercury Router를 API로 제공한다.",
+ "key_features": [
+  "확산 LLM(토큰 병렬 생성)",
+  "첫 토큰 300ms 미만·5~7배 처리량",
+  "Mercury 2.5 추론 LLM",
+  "Mercury Voice(음성 에이전트용, TTFT 170ms 미만)",
+  "Mercury Router(프롬프트 분류·모델 라우팅)",
+  "스키마·의미 제약 준수 출력 제어"
+ ],
+ "use_cases_ko": [
+  "코딩·업무 워크플로 자동화 에이전트",
+  "고객 지원·번역 등 실시간 음성",
+  "코드 자동완성·편집"
+ ],
+ "pricing": {
+  "free_tier": "있음 (무료 체험 문구, 한도 불명)",
+  "plans": [
+   {
+    "name": "Mercury 2.5",
+    "price": 0.2,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "입력 100만 토큰당 $0.20, 출력 $0.75",
+    "page_lang": "en"
+   },
+   {
+    "name": "Mercury Voice",
+    "price": 0.4,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "입력 100만 토큰당 $0.40, 출력 $1.50",
+    "page_lang": "en"
+   },
+   {
+    "name": "Mercury Router",
+    "price": null,
+    "currency": "USD",
+    "period": null,
+    "limits": "영업 문의",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://www.inceptionlabs.ai/"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "API"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.inceptionlabs.ai/",
+   "quote": "Inception builds and deploys next"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.inceptionlabs.ai/",
+   "quote": "Mercury diffusion LLMs (dLLMs) generate tokens in parallel, increasing speed and maximizing GPU efficiency."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.inceptionlabs.ai/",
+   "quote": "Mercury is a new class of diffusion LLMs that matches the quality of speed optimized frontier models, with sub-300ms time to first token, 5-7x higher throughput, and up to 70% lower cost per task."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.inceptionlabs.ai/",
+   "quote": "allowing adherence to specific schemas and semantic constraints."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.inceptionlabs.ai/",
+   "quote": "Optimized for voice agents , delivers time-to-first-token (TTFT) under 170ms."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.inceptionlabs.ai/",
+   "quote": "Classify incoming prompts and route tasks to the best models according to quality , speed, and cost."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.inceptionlabs.ai/",
+   "quote": "Our most intelligent reasoning LLM , at our lowest price."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.inceptionlabs.ai/",
+   "quote": "Automate complex coding and other business workflows with with ultra-responsive AI."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.inceptionlabs.ai/",
+   "quote": "Engage naturally with AI in voice-powered workflows like customer support, translation, and immersive gaming."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.inceptionlabs.ai/",
+   "quote": "Stay in-the-flow with responsive autocomplete, intelligent tab suggestions, and fast chat responses."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.inceptionlabs.ai/",
+   "quote": "Try it now for free"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.inceptionlabs.ai/",
+   "quote": "Input $0.20 per 1M tokens\n Output $0.75 per 1M tokens"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.inceptionlabs.ai/",
+   "quote": "Input $0.40 per 1M tokens\n Output $1.50 per 1M tokens"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.inceptionlabs.ai/",
+   "quote": "Mercury Router\n Contact sales"
+  },
+  {
+   "field": "api",
+   "url": "https://www.inceptionlabs.ai/",
+   "quote": "Early Access\n Read API Docs"
+  },
+  {
+   "field": "platforms",
+   "url": "https://www.inceptionlabs.ai/",
+   "quote": "Try API"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "Mercury 2.5(입력 $0.20/출력 $0.75 per 1M), Mercury Voice($0.40/$1.50) 등 토큰 단위 API 요금을 공개",
+   "diff": "기존 분류는 '해당없음(연구조직/기업)'이지만 실제로는 유료 API 종량제 상품이 있음",
+   "url": "https://www.inceptionlabs.ai/"
+  }
+ ],
+ "plan_change": []
+}

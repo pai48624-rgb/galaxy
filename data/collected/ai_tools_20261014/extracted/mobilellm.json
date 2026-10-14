@@ -1,0 +1,37 @@
+{
+ "company": "facebookresearch (Meta)",
+ "one_liner_ko": "기기 내(온디바이스) 사용을 위해 최적화한 10억 파라미터 미만 언어 모델 MobileLLM의 학습 코드 저장소.",
+ "what_it_does_ko": "MobileLLM은 10억 개 미만 파라미터로 고품질 LLM을 만들기 위해 SwiGLU 활성화 함수, 깊고 얇은 구조, 임베딩 공유, 그룹 쿼리 어텐션을 결합한 모델이다. MobileLLM-125M/350M은 이전 같은 크기 최고 모델보다 제로샷 상식 추론에서 정확도가 2.7%/4.3% 높다. 600M/1B/1.5B로 확장해도 최고 수준 결과를 보였다. 후속작 MobileLLM-R1과 R1.5는 수학·코딩 추론 모델로, 코드·모델·데이터·학습 레시피를 모두 공개했다. 모델은 HuggingFace에서 받을 수 있다.",
+ "key_features": [
+  "10억 파라미터 미만 온디바이스용 언어 모델",
+  "SwiGLU·깊고 얇은 구조·임베딩 공유·그룹 쿼리 어텐션",
+  "125M·350M·600M·1B·1.5B 크기",
+  "MobileLLM-R1·R1.5 수학·코딩 추론 모델",
+  "학습 코드(pretrain.sh)와 평가 스크립트 제공",
+  "HuggingFace 모델 공개"
+ ],
+ "use_cases_ko": [
+  "연구자가 소형 LLM을 직접 사전학습·평가"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "불명",
+ "evidence": [
+  {"field": "company", "url": "https://github.com/facebookresearch/MobileLLM", "quote": "MobileLLM models are publicly available on [HuggingFace](https://huggingface.co/collections/facebook/mobilellm-6722be18cb86c20ebe113e95)"},
+  {"field": "one_liner_ko", "url": "https://github.com/facebookresearch/MobileLLM", "quote": "MobileLLM: Optimizing Sub-billion Parameter Language Models for On-Device Use Cases"},
+  {"field": "what_it_does_ko", "url": "https://github.com/facebookresearch/MobileLLM", "quote": "We integrated (1) SwiGLU activation function, (2) deep and thin architectures, (3) embedding sharing, (4) grouped-query attention to build MobileLLM."},
+  {"field": "what_it_does_ko", "url": "https://github.com/facebookresearch/MobileLLM", "quote": "MobileLLM-125M/350M attains a remarkable 2.7%/4.3% accuracy boost over preceding 125M/350M SoTA models on zero-shot commonsense reasoning tasks."},
+  {"field": "key_features", "url": "https://github.com/facebookresearch/MobileLLM", "quote": "with SoTA results for MobileLLM-600M/1B/1.5B."},
+  {"field": "key_features", "url": "https://github.com/facebookresearch/MobileLLM", "quote": "All code, models, data, and training recipes are released."},
+  {"field": "key_features", "url": "https://github.com/facebookresearch/MobileLLM", "quote": "The script `pretrain.sh` is provided to initiate training on a 1x8 node setup using torchrun."},
+  {"field": "use_cases_ko", "url": "https://github.com/facebookresearch/MobileLLM", "quote": "This repository contains the training code of MobileLLM"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

@@ -1,0 +1,136 @@
+=== [home] https://www.mercor.com/apex/apex-agents-leaderboard/ (lang=en)
+AI Agent Benchmarks & Leaderboards: APEX-Agents | Mercor 
+ Research Enterprise Experts Company Log in 
+ Home 
+ APEX 
+ APEX-Agents 
+ Research 
+ Enterprise 
+ Experts 
+ Company 
+ The AI Productivity Index for Agents
+ The AI Productivity Index for Agents (APEX-Agents) measures whether frontier AI agents can execute long-horizon, cross-application tasks across three jobs in professional services.
+ Get in touch Read research 
+ The APEX-Agents leaderboard
+ We created APEX-Agents to evaluate agents on the real day-to-day work of professionals: investment banking analysts, management consultants, and corporate lawyers. The tasks require agents to reason, demonstrate advanced knowledge, use multiple applications, and plan over long horizons. 
+APEX-Agents was built in three steps. First, industry professionals created a data-rich world, based on a unique project scenario. Second, they created realistic, challenging tasks using the files from within the world. Third, we gave agents access so they could execute the tasks (with all of the software that a human would use). 
+There are 31 worlds in APEX-agents, comprising 240 tasks and grading rubrics. The entire APEX-agents dataset is available open-source, along with Archipelago, our infra service for executing and evaluating agent trajectories. 
+ Pass@1 Mean Score Blog Paper Data Code Sample task 
+ Model
+ Score
+ Gemini 4 Argon High 
+ 82.4 % ± 4.3 % 
+ Sonnet 5.5 Max 
+ 2 efforts 
+ 75.5 % ± 4.7 % 
+ Sonnet 5.5 Max 
+ 75.5 % ± 4.7 % 
+ Sonnet 5.5 Medium 
+ 44.6 % ± 5.6 % 
+ Opus 5.5 Max 
+ 2 efforts 
+ 73.5 % ± 4.9 % 
+ Opus 5.5 Max 
+ 73.5 % ± 4.9 % 
+ Opus 5.5 Medium 
+ 52.5 % ± 5.6 % 
+ Fable 5.1 Max 
+ 2 efforts 
+ 68.6 % ± 4.9 % 
+ Fable 5.1 Max 
+ 68.6 % ± 4.9 % 
+ Fable 5.1 High 
+ 59.7 % ± 5.6 % 
+ Gemini 3.7 Flash High 
+ 67.8 % ± 5.1 % 
+ 0 %
+ 10 %
+ 20 %
+ 30 %
+ 40 %
+ 50 %
+ 60 %
+ 70 %
+ 80 %
+ 90 %
+ 100 %
+ View results for all models 
+ Pass Pass@1 
+ Jobs evaluated in APEX-Agents
+ Corporate Lawyer 
+ Drafts and reviews contracts, conducts legal research, and advises clients on regulatory and transactional matters. Collaborates with partners on litigation, mergers and acquisitions, and compliance while managing heavy workloads across cases.
+ Experts from Latham & Watkins, Skadden, Cravath
+ View more
+ Gemini 4 Argon 
+ Gemini 4 Argon
+ 76.7 %
+ 76.7 %
+ GPT-6 Astra 
+ GPT-6 Astra
+ 73.4 %
+ 73.4 %
+ Fable 5.1 
+ Fable 5.1
+ 71.9 %
+ 71.9 %
+ Management Consultant 
+ Analyzes industries, evaluates markets, and builds strategic or financial models to guide client decisions. Work often includes preparing presentations, drafting reports, and synthesizing research into actionable recommendations.
+ Experts from McKinsey, BCG, Deloitte, Accenture, EY
+ View more
+ Gemini 4 Argon 
+ Gemini 4 Argon
+ 88.4 %
+ 88.4 %
+ Opus 5.5 
+ Opus 5.5
+ 80.0 %
+ 80.0 %
+ Sonnet 5.5 
+ Sonnet 5.5
+ 79.7 %
+ 79.7 %
+ Investment Banking Analyst 
+ Builds financial models, values companies, and prepares pitch materials for potential deals. Responsibilities include conducting industry research, supporting transaction execution, and producing client-ready presentations under tight deadlines.
+ Experts from Goldman Sachs, Morgan Stanley, JPMorgan, Barclays
+ View more
+ Gemini 4 Argon 
+ Gemini 4 Argon
+ 81.9 %
+ 81.9 %
+ Sonnet 5.5 
+ Sonnet 5.5
+ 77.2 %
+ 77.2 %
+ Gemini 3.7 Flash 
+ Gemini 3.7 Flash
+ 71.3 %
+ 71.3 %
+ Frequently Asked Questions
+ What is the APEX-Agents benchmark and how does it work? The Mercor AI Productivity Index (APEX) is a family of benchmarks that measure how effectively AI models and agents perform economically valuable tasks. APEX-Agents evaluates long-horizon, multi-step workflows across high-value sectors, like corporate law, investment banking, and management consulting. It was developed in collaboration with Box and Harvey.
+ Which AI model scores highest on APEX-Agents? Rankings can change whenever a frontier model is released. New models are evaluated on APEX-Agents, APEX-SWE, APEX-Accounting and APEX-1 when they ship.
+ Who writes the APEX-Agents tasks? Practicing professionals from leading firms that the tasks simulate, including attorneys from Latham & Watkins, Skadden, and Cravath; consultants from McKinsey and BCG; and bankers from Goldman Sachs, Morgan Stanley, and JPMorgan.
+ How are AI models evaluated on APEX-Agents? APEX-Agents evaluates the quality of completed work. Model outputs are graded using expert-authored rubrics with an LM judge.
+ What do Mean Score and Pass@1 measure? Mean Score measures the average percentage of criteria that are passed for all tasks in the benchmark. It is the primary metric used to rank the APEX-Agents leaderboard. Pass@1 measures the percentage of tasks that an agent successfully completes on a single attempt (i.e., scores 100% on the rubric). Together, they capture models’ overall capability and end-to-end task reliability.
+ Can I reproduce APEX-Agents results myself? Yes, on the open subset. The eval harness is published on GitHub and sample tasks are on HuggingFace, so you can run the same scoring pipeline against your own model. The full task set stays private so that models can't be trained on it.
+ Can I license APEX-Agents data for training? Yes. Mercor licenses off-the-shelf datasets built by the same expert network. 50,000+ tasks across 30+ domains, with samples available the same day. Learn more about off-the-shelf data .
+ APEX NEWSLETTER
+ The latest on frontier AI performance, straight to your inbox.
+ New benchmarks, leaderboard shifts, and research from the APEX team.
+ Email address Subscribe 
+ By subscribing you agree to receive updates from Mercor.
+Unsubscribe anytime.
+ Experts
+ Find work Explore listings Help center Resources Stories 
+ Research
+ APEX Benchmarks APEX-Agents APEX-Accounting APEX-SWE Off-the-shelf data 
+ Enterprise
+ Enterprise AI Human data Data monetization Robotics Contact sales 
+ Company
+ Mission Careers Security Newsroom Blog 
+ © 2026 Mercor Terms of Service Privacy Notice Your Privacy Choices 
+ San Francisco, CA
+
+=== [meta] https://www.mercor.com/apex/apex-agents-leaderboard/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음

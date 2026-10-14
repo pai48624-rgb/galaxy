@@ -1,0 +1,396 @@
+=== [home] https://sbert.net (lang=en)
+SentenceTransformers Documentation — Sentence Transformers documentation 
+ Getting Started 
+ Installation 
+ Install with uv 
+ Install with pip 
+ Install with Conda 
+ Install from Source 
+ Editable Install 
+ Install PyTorch with CUDA support 
+ Quickstart 
+ Sentence Transformer 
+ Cross Encoder 
+ Sparse Encoder 
+ Multi-Vector Encoder 
+ Next Steps 
+ Migration Guide 
+ Migrating from v5.x to v6.x 
+ Breaking changes 
+ Migrating from PyLate 
+ Migrating from colpali-engine 
+ Smaller changes 
+ Migrating from v5.x to v5.4+ 
+ Updated import paths 
+ Renamed methods and parameters 
+ CrossEncoder.max_length property renamed to max_seq_length 
+ Trainer tokenizer parameter renamed to processing_class 
+ tokenizer_kwargs renamed to processor_kwargs 
+ CrossEncoder API changes 
+ Removed tags parameter from push_to_hub 
+ Default pooling for CausalLM models 
+ Changes for custom module and loss authors 
+ Migrating from v4.x to v5.x 
+ Migration for model.encode 
+ Migration for Asym to Router 
+ Migration of advanced usage 
+ Migrating from v3.x to v4.x 
+ Migration for parameters on CrossEncoder initialization and methods 
+ Migration for specific parameters from CrossEncoder.fit 
+ Migration for CrossEncoder evaluators 
+ Migrating from v2.x to v3.x 
+ Migration for specific parameters from SentenceTransformer.fit 
+ Migration for custom Datasets and DataLoaders used in SentenceTransformer.fit 
+ Sentence Transformer 
+ Usage 
+ Input Formats 
+ Input representations 
+ Text 
+ Images 
+ Audio 
+ Video 
+ Chat messages 
+ Combining modalities 
+ Processing options 
+ Single inputs, batches, and pairs 
+ Computing Embeddings 
+ Initializing a Sentence Transformer Model 
+ Calculating Embeddings 
+ Prompt Templates 
+ Input Sequence Length 
+ Multi-Process / Multi-GPU Encoding 
+ Semantic Textual Similarity 
+ Similarity Calculation 
+ Semantic Search 
+ Background 
+ Symmetric vs. Asymmetric Semantic Search 
+ Manual Implementation 
+ Optimized Implementation 
+ Speed Optimization 
+ Elasticsearch 
+ OpenSearch 
+ Approximate Nearest Neighbor 
+ Retrieve & Re-Rank 
+ Examples 
+ Retrieve & Re-Rank 
+ Retrieve & Re-Rank Pipeline 
+ Retrieval: Bi-Encoder 
+ Re-Ranker: Cross-Encoder 
+ Example Scripts 
+ Pre-trained Bi-Encoders (Retrieval) 
+ Pre-trained Cross-Encoders (Re-Ranker) 
+ Clustering 
+ k-Means 
+ Agglomerative Clustering 
+ Fast Clustering 
+ Topic Modeling 
+ Paraphrase Mining 
+ paraphrase_mining() 
+ Translated Sentence Mining 
+ Margin Based Mining 
+ Examples 
+ Image Search 
+ Installation 
+ Usage 
+ Examples 
+ Embedding Quantization 
+ Binary Quantization 
+ Scalar (int8) Quantization 
+ Additional extensions 
+ Demo 
+ Try it yourself 
+ Creating Custom Models 
+ Modular Architecture 
+ Sentence Transformer Model from a Transformers Model 
+ Advanced: Custom Modules 
+ Evaluation with MTEB 
+ Installation 
+ Evaluation 
+ Additional Arguments 
+ Results Handling 
+ Leaderboard Submission 
+ Pretrained Models 
+ Original Models 
+ Semantic Search Models 
+ Multi-QA Models 
+ MSMARCO Passage Models 
+ Multilingual Models 
+ Semantic Similarity Models 
+ Bitext Mining 
+ Multimodal Models 
+ Image & Text Models 
+ Audio & Video Models 
+ INSTRUCTOR models 
+ Scientific Similarity Models 
+ Speeding up Inference 
+ PyTorch 
+ ONNX 
+ Optimizing ONNX Models 
+ Quantizing ONNX Models 
+ OpenVINO 
+ Quantizing OpenVINO Models 
+ Benchmarks 
+ Recommendations 
+ User Interface 
+ Training Overview 
+ Why Finetune? 
+ Training Components 
+ Model 
+ Dataset 
+ Dataset Format 
+ Multimodal Datasets 
+ Loss Function 
+ Training Arguments 
+ Evaluator 
+ Trainer 
+ Callbacks 
+ Multi-Dataset Training 
+ Deprecated Training 
+ Best Base Embedding Models 
+ Comparisons with CrossEncoder Training 
+ End-to-End Example 
+ Dataset Overview 
+ Multimodal Datasets 
+ Accepted column types 
+ Cross-modal dataset example 
+ Automatic preprocessing 
+ Datasets on the Hugging Face Hub 
+ Pre-existing Datasets 
+ Loss Overview 
+ Loss Table 
+ Loss modifiers 
+ Regularization 
+ Distillation 
+ Commonly used Loss Functions 
+ Custom Loss Functions 
+ Training Examples 
+ Semantic Textual Similarity 
+ Training data 
+ Loss Function 
+ Natural Language Inference 
+ Data 
+ SoftmaxLoss 
+ MultipleNegativesRankingLoss 
+ Paraphrase Data 
+ Pre-Trained Models 
+ Quora Duplicate Questions 
+ Training 
+ MultipleNegativesRankingLoss 
+ Pretrained Models 
+ MS MARCO 
+ Bi-Encoder 
+ Matryoshka Embeddings 
+ Use Cases 
+ Results 
+ Training 
+ Inference 
+ Code Examples 
+ Adaptive Layers 
+ Use Cases 
+ Results 
+ Training 
+ Inference 
+ Code Examples 
+ Multilingual Models 
+ Extend your own models 
+ Training 
+ Datasets 
+ Sources for Training Data 
+ Evaluation 
+ Available Pre-trained Models 
+ Usage 
+ Performance 
+ Citation 
+ Model Distillation 
+ Knowledge Distillation 
+ Speed - Performance Trade-Off 
+ Dimensionality Reduction 
+ Quantization 
+ Augmented SBERT 
+ Motivation 
+ Extend to your own datasets 
+ Methodology 
+ Scenario 1: Limited or small annotated datasets (few labeled sentence-pairs) 
+ Scenario 2: No annotated datasets (Only unlabeled sentence-pairs) 
+ Training 
+ Citation 
+ Training with Prompts 
+ What are Prompts? 
+ Why would we train with Prompts? 
+ How do we train with Prompts? 
+ Training with PEFT Adapters 
+ Compatibility Methods 
+ Adding a New Adapter 
+ Loading a Pretrained Adapter 
+ Training Script 
+ Training with Unsloth 
+ Examples in this repository 
+ Unsloth Colab notebooks 
+ Fine-tuning via FastSentenceTransformer 
+ Inference and deployment 
+ Benchmarks 
+ Multimodal Training 
+ Supported Input Types 
+ Training 
+ References 
+ Unsupervised Learning 
+ TSDAE 
+ SimCSE 
+ CT 
+ CT (In-Batch Negative Sampling) 
+ Masked Language Model (MLM) 
+ GenQ 
+ GPL 
+ Performance Comparison 
+ Domain Adaptation 
+ Domain Adaptation vs. Unsupervised Learning 
+ Adaptive Pre-Training 
+ GPL: Generative Pseudo-Labeling 
+ Hyperparameter Optimization 
+ HPO Components 
+ Putting It All Together 
+ Example Scripts 
+ Distributed Training 
+ Comparison 
+ FSDP 
+ Cross Encoder 
+ Usage 
+ Input Formats 
+ Input representations 
+ Text 
+ Images 
+ Audio 
+ Video 
+ Chat messages 
+ Combining modalities 
+ Processing options 
+ Single inputs, batches, and pairs 
+ Cross-Encoder vs Bi-Encoder 
+ Cross-Encoder vs. Bi-Encoder 
+ When to use Cross- / Bi-Encoders? 
+ Cross-Encoders Usage 
+ Combining Bi- and Cross-Encoders 
+ Training Cross-Encoders 
+ Retrieve & Re-Rank 
+ Retrieve & Re-Rank Pipeline 
+ Retrieval: Bi-Encoder 
+ Re-Ranker: Cross-Encoder 
+ Example Scripts 
+ Pre-trained Bi-Encoders (Retrieval) 
+ Pre-trained Cross-Encoders (Re-Ranker) 
+ Creating Custom Models 
+ Modular Architecture 
+ Advanced: Custom Modules 
+ Pretrained Models 
+ MS MARCO 
+ SQuAD (QNLI) 
+ STSbenchmark 
+ Quora Duplicate Questions 
+ NLI 
+ Multimodal Rerankers 
+ Community Models 
+ Speeding up Inference 
+ PyTorch 
+ ONNX 
+ Optimizing ONNX Models 
+ Quantizing ONNX Models 
+ OpenVINO 
+ Quantizing OpenVINO Models 
+ Benchmarks 
+ Recommendations 
+ User Interface 
+ Training Overview 
+ Why Finetune? 
+ Training Components 
+ Model 
+ Dataset 
+ Dataset Format 
+ Multimodal Datasets 
+ Hard Negatives Mining 
+ Loss Function 
+ Training Arguments 
+ Evaluator 
+ Trainer 
+ Callbacks 
+ Multi-Dataset Training 
+ Training Tips 
+ Deprecated Training 
+ Comparisons with SentenceTransformer Training 
+ End-to-End Example 
+ Dataset Overview 
+ Multimodal Datasets 
+ Accepted column types 
+ Cross-modal dataset example 
+ Automatic preprocessing 
+ Datasets on the Hugging Face Hub 
+ Pre-existing Datasets 
+ Loss Overview 
+ Loss Table 
+ Distillation 
+ Commonly used Loss Functions 
+ Custom Loss Functions 
+ Training Examples 
+ Semantic Textual Similarity 
+ Trainin
+
+=== [meta] https://sbert.net
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/huggingface/sentence-transformers
+<!--- BADGES: START --->
+
+[![HF Models](https://img.shields.io/badge/%F0%9F%A4%97-models-yellow)](https://huggingface.co/models?library=sentence-transformers)
+[![GitHub - License](https://img.shields.io/github/license/huggingface/sentence-transformers?logo=github&style=flat&color=green)][#github-license]
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/sentence-transformers?logo=pypi&style=flat&color=blue)][#pypi-package]
+[![PyPI - Package Version](https://img.shields.io/pypi/v/sentence-transformers?logo=pypi&style=flat&color=orange)][#pypi-package]
+[![Docs - GitHub.io](https://img.shields.io/static/v1?logo=github&style=flat&color=pink&label=docs&message=sentence-transformers)][#docs-package]
+
+<!-- [![PyPI - Downloads](https://img.shields.io/pypi/dm/sentence-transformers?logo=pypi&style=flat&color=green)][#pypi-package] -->
+
+<!--- BADGES: END --->
+
+# Sentence Transformers: Embeddings, Retrieval, and Reranking
+
+This framework provides an easy method to compute embeddings for accessing, using, and training state-of-the-art embedding and reranker models. It can be used to compute embeddings using Sentence Transformer models ([quickstart](https://sbert.net/docs/quickstart.html#sentence-transformer)), to calculate similarity scores using Cross-Encoder (a.k.a. reranker) models ([quickstart](https://sbert.net/docs/quickstart.html#cross-encoder)), to generate sparse embeddings using Sparse Encoder models ([quickstart](https://sbert.net/docs/quickstart.html#sparse-encoder)) or to compute token-level embeddings for ColBERT-style late-interaction retrieval using Multi-Vector Encoder models ([quickstart](https://sbert.net/docs/quickstart.html#multi-vector-encoder)). This unlocks a wide range of applications, including [semantic search](https://sbert.net/examples/applications/semantic-search/README.html), [semantic textual similarity](https://sbert.net/docs/sentence_transformer/usage/semantic_textual_similarity.html), and [paraphrase mining](https://sbert.net/examples/applications/paraphrase-mining/README.html).
+
+A wide selection of over [15,000 pre-trained Sentence Transformers models](https://huggingface.co/models?library=sentence-transformers) are available for immediate use on 🤗 Hugging Face, including many of the state-of-the-art models from the [Massive Text Embeddings Benchmark (MTEB) leaderboard](https://huggingface.co/spaces/mteb/leaderboard). Additionally, it is easy to train or finetune your own [embedding models](https://sbert.net/docs/sentence_transformer/training_overview.html), [reranker models](https://sbert.net/docs/cross_encoder/training_overview.html), [sparse encoder models](https://sbert.net/docs/sparse_encoder/training_overview.html) or [multi-vector encoder models](https://sbert.net/docs/multi_vector_encoder/training_overview.html) using Sentence Transformers, enabling you to create custom models for your specific use cases.
+
+For the **full documentation**, see **[www.SBERT.net](https://www.sbert.net)**.
+
+## Installation
+
+We recommend **Python 3.10+**, **[PyTorch 2.2+](https://pytorch.org/get-started/locally/)**, and **[transformers v5.0+](https://github.com/huggingface/transformers)**.
+
+```
+pip install -U sentence-transformers
+```
+
+See [Installation](https://www.sbert.net/docs/installation.html) in the docs for uv, conda, source, and editable installs, CUDA setup, and extras (`[image]`, `[audio]`, `[video]`, `[train]`, `[onnx]`, `[openvino]`, `[dev]`).
+
+## Getting Started
+
+See [Quickstart](https://www.sbert.net/docs/quickstart.html) in our documentation.
+
+Log in with `hf auth login` for higher Hugging Face Hub rate limits and access to private or gated models your account can read. See the [login instructions](https://www.sbert.net/docs/installation.html#log-in-to-hugging-face).
+
+### Embedding Models
+
+First download a pretrained embedding a.k.a. Sentence Transformer model.
+
+```python
+from sentence_transformers import SentenceTransformer
+
+model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
+```
+
+Then provide some texts to the model.
+
+```python
+sentences = [
+    "The weather is lovely today.",
+    "It's so sunny outside!",
+    "He drove to the stadium.",
+]
+embeddings = model.encode

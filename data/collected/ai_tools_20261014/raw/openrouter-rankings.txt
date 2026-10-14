@@ -1,0 +1,492 @@
+=== [home] https://openrouter.ai/rankings (lang=en-US)
+LLM Rankings | OpenRouter 
+ Skip to content 
+ Search ⌘ K 
+ Dashboard Models Benchmarks Chat Chat Rankings Apps Ori Pricing Docs 
+ Models 
+ Rankings 
+ Ori 
+ Benchmarks Chat Chat Pricing Docs 
+ Sign Up 
+ Sign Up 
+ ElevenLabs launch offer: every ElevenLabs model is 50% off through October 19, 2026. See ElevenLabs models 
+ Dismiss 
+ Top Models Leaderboard Top models by task Cost per session Market Share Benchmarks Fastest models Languages Programming Domain Context Length Tool Calls Images Top Apps 
+ Top Models 
+ Rankings data by OpenRouter is licensed under CC BY 4.0 . Reuse and republish it with attribution. The Data API docs cover the citation format and JSON access to these datasets.
+ Footer
+ © 2026 OpenRouter, Inc
+ Product
+ Chat 
+ Rankings 
+ Benchmarks 
+ Apps 
+ Discover 
+ Models 
+ Ori 
+ Collections 
+ Providers 
+ Tools 
+ Pricing 
+ Business 
+ Enterprise 
+ Labs 
+ Company
+ About 
+ Blog 
+ Careers Hiring
+ Privacy 
+ Terms of Service 
+ Trust Center 
+ Support 
+ Works With OR 
+ Data 
+ Brand 
+ Developer
+ Documentation 
+ API Reference 
+ Developer Platform 
+ Status 
+ AI Site Map 
+ Connect
+ Discord 
+ GitHub 
+ LinkedIn 
+ X 
+ YouTube 
+ Top Models Leaderboard Top models by task Cost per session Market Share Benchmarks Fastest models Languages Programming Domain Context Length Tool Calls Images Top Apps 
+ Top Models 
+ AI Model Rankings
+ Live LLM rankings by real-world usage. Models are ranked by tokens processed through the OpenRouter API by millions of developers. View all text models 
+ Usage data through Oct 13, 2026 
+ Top Models 
+ Weekly usage of models across OpenRouter
+ Top models by task 
+ Each task’s leading models, ranked by share of spend on OpenRouter 
+ Share of spend 
+ Cost per session 
+ What one coding-agent session typically costs (paid usage), by session length 
+ Benchmarks 
+ Top models on OpenRouter by Artificial Analysis Intelligence Index 
+ View all benchmarks 
+ Weighted Avg Input Price Intelligence Index Score 
+ Show Pareto 
+ TOP 20 PLOTTED SEARCH TO PIN UP TO 5 Find a model… 
+ 1 .
+ Claude Opus 5.5 (Max, Default Fallback) by anthropic 
+ 57.6
+ 2 .
+ Claude Sonnet 5.5 (Max, Default Fallback) by anthropic 
+ 56.0
+ 3 .
+ Claude Fable 5.1 (Max, Default Fallback) by anthropic 
+ 53.4
+ 4 .
+ Qwen3.8 Max by qwen 
+ 53.4
+ 5 .
+ GPT-6 Astra (Max) by openai 
+ 52.7
+ 6 .
+ Gemini 4 Argon (High) by google 
+ 52.6
+ 7 .
+ GPT-6.1 Sol (Max) by openai 
+ 51.8
+ 8 .
+ Claude Opus 5 (Max) by anthropic 
+ 50.8
+ 9 .
+ Claude Fable 5 (Max, Opus 4.8 Fallback) by anthropic 
+ 49.6
+ 10 .
+ Muse Spark 1.3 (Max) by meta 
+ 48.1
+ Show more 
+ Domain 
+ Compare models by the subject area of requests on OpenRouter 
+ Top Apps 
+ Today 
+ Explore apps and agents opting into usage tracking by category
+ Browse the new Apps & Agents directory to explore by category, discover trending tools, and see detailed usage stats.
+ Browse apps 
+ 1 .
+ Hermes Agent Hermes Agent is an open-source, self-improving AI agent by Nous Research that runs persistently with memory across sessions, and builds reusable skills from experience. It comes with 40+ built-in tools, including web search, browser automation, and vision, plus scheduled automations and subagents. 
+ 1.92T tokens 
+ 2 .
+ Claude Code Claude Code is Anthropic's agentic coding tool that reads your entire codebase, plans and executes changes across files, runs tests, and iterates on failures, all from natural language prompts. 
+ 1.5T tokens 
+ 3 .
+ Kilo Code Kilo Code is an open-source AI coding agent that works across VS Code, JetBrains, and CLI to help developers ship code faster with agentic workflows. 
+ 951B tokens 
+ 4 .
+ Cline Cline is an open-source AI coding agent that lives inside your IDE, autonomously exploring your codebase, editing files, running terminal commands, and using browser automation. 
+ 624B tokens 
+ 5 .
+ OpenClaw OpenClaw is an open-source AI agent that connects to your messaging apps and takes real actions on your behalf, from running commands and browsing the web to managing files and sending emails. 
+ 475B tokens 
+ 6 .
+ pi There are many coding agents, but this one is yours. 
+ 450B tokens 
+ 7 .
+ Freebuff Powerful coding models, funded by ads 
+ 409B tokens 
+ 8 .
+ omp new 
+ 331B tokens 
+ 9 .
+ Codex A coding agent that helps you build and ship with AI 
+ 191B tokens 
+ 10 .
+ DeepSeek Harness new 
+ 189B tokens 
+ How these rankings are measured
+ What is measured
+ Each model is ranked by the number of tokens it processed through the OpenRouter API, counting both prompt and completion tokens. Usage is aggregated into daily buckets in UTC and totalled per model variant, so variants of the same model, such as a free variant, are ranked separately. Requests that a user or app keeps private are excluded before aggregation.
+ Selection period
+ Today, This Week, and This Month each cover a trailing window of one day, seven days, and thirty days, ending with the most recent complete daily bucket. Trending compares the trailing seven days with the seven days before it and ranks models by the percentage change in tokens, including only models with at least one million tokens in the current window so that a small base cannot produce a large percentage. New models with no prior week are listed first, up to five of them.
+ Freshness
+ The date above the rankings is the newest usage bucket the leaderboard is computed from, not the time the page was rendered or deployed, so it advances only when new usage data is aggregated.
+ How to read these rankings
+ These rankings show traffic routed through OpenRouter. The Top Models chart and the LLM Leaderboard rank models by tokens processed, while the Market Share chart counts requests. None of them measures users or spend. Models differ in verbosity and tokenization, so a higher token total shows how much a model is used, not which model is best for a task. They do not rank models by accuracy, reasoning ability, or benchmark performance. The Benchmarks section ranks those using scores from Artificial Analysis and Design Arena, plus benchmarks such as GPQA Diamond that OpenRouter runs itself and reports as median accuracy across providers. For coding, compare the Artificial Analysis Coding Index there with the Programming section, which ranks models by tokens on a sample of requests in a chosen language, such as Python. The Top Models chart names the nine most-used models in each period and groups the rest as Others. The Market Share chart shows each model author's share of text requests on OpenRouter, with the remaining authors grouped as Others.
+ Rankings data by OpenRouter is licensed under CC BY 4.0 . Reuse and republish it with attribution. The Data API docs cover the citation format and JSON access to these datasets.
+ Model rankings by tokens processed Rank Model Author tokens processed Change 
+ 1 DeepSeek V4.1 Flash deepseek 40.5T tokens +37% 
+ 2 Step 5 Preview stepfun 15.1T tokens new 
+ 3 GLM 5.3 Flash z-ai 12.9T tokens +26% 
+ 4 MiMo-V2.6-Flash xiaomi 11.6T tokens +18% 
+ 5 Hy4 preview tencent 8.13T tokens +27% 
+ 6 Nemotron 3 Ultra (free) nvidia 7.38T tokens +30% 
+ 7 GPT-6 Luna openai 7.1T tokens +10% 
+ 8 Claude Opus 5.5 anthropic 5.64T tokens +93% 
+ 9 DeepSeek V4 Flash 0731 deepseek 4.42T tokens -24% 
+ 10 GLM 5.3 z-ai 4.18T tokens +36% 
+ 1 .
+ DeepSeek V4.1 Flash by deepseek 
+ 40.5T tokens
+ 37% 
+ 2 .
+ Step 5 Preview by stepfun 
+ 15.1T tokens
+ new
+ 3 .
+ GLM 5.3 Flash by z-ai 
+ 12.9T tokens
+ 26% 
+ 4 .
+ MiMo-V2.6-Flash by xiaomi 
+ 11.6T tokens
+ 18% 
+ 5 .
+ Hy4 preview by tencent 
+ 8.13T tokens
+ 27% 
+ 6 .
+ Nemotron 3 Ultra (free
+
+=== [pricing] https://openrouter.ai/pricing/ (lang=en-US)
+Pricing | OpenRouter 
+ Skip to content 
+ Search ⌘ K 
+ Dashboard Models Benchmarks Chat Chat Rankings Apps Ori Pricing Docs 
+ Models 
+ Rankings 
+ Ori 
+ Benchmarks Chat Chat Pricing Docs 
+ Sign Up 
+ Sign Up 
+ ElevenLabs launch offer: every ElevenLabs model is 50% off through October 19, 2026. See ElevenLabs models 
+ Dismiss 
+ OpenRouter pricing 
+ Pricing
+ Plans for indie hackers, AI native startups, growing teams, and enterprises
+ Get started Talk to sales 
+ Free Standard Business Enterprise 
+ Feature Free 
+ Platform fees N/A 
+ Models Explore all models → 25+ free models 
+ Providers Explore all models → 4 free providers 
+ Chat and API Access Try chat now → Yes 
+ Activity logs & export Yes 
+ Auto-routing, preferred vendor selections Learn more → No 
+ Budgets & Spend Controls No 
+ Advanced notifications Learn more → No 
+ Prompt Caching Learn more → No 
+ Management API key Learn more → No 
+ Admin Controls Enterprise features → No 
+ Data Policy-Based Routing Model & provider policies No 
+ EU in-region routing Learn more → No 
+ US in-region routing Learn more → No 
+ Workload Identity Federation Learn more → No 
+ Workspace limit Learn more → 5 
+ DPA Via Terms of Service 
+ Managed Policy Enforcement No 
+ SSO/SAML No 
+ Contractual SLAs No 
+ Payment options No 
+ BYOK Limits Learn more → No 
+ Rate limits 50 requests/day 
+ Support Community support 
+ Get started for free 
+ Free Standard Pay-as-you-go Business Pay-as-you-go Enterprise 
+ Get started for free Get started Upgrade to Business Contact sales 
+ Platform fees Free N/A Standard 5.5% Business 8% Enterprise Fee discounts available 
+ Models Explore all models → Free 25+ free models Standard 500+ models Business 500+ models Enterprise 500+ models 
+ Providers Explore all models → Free 4 free providers Standard 80+ providers Business 80+ providers Enterprise 80+ providers 
+ Chat and API Access Try chat now → Free Yes Standard Yes Business Yes Enterprise Yes 
+ Activity logs & export Free Yes Standard Yes Business Yes Enterprise Yes 
+ Auto-routing, preferred vendor selections Learn more → Free No Standard Yes Business Yes Enterprise Yes 
+ Budgets & Spend Controls Free No Standard Yes Business Yes Enterprise Yes 
+ Advanced notifications Learn more → Free No Standard No Business Yes Enterprise Yes 
+ Prompt Caching Learn more → Free No Standard Yes Business Yes Enterprise Yes 
+ Management API key Learn more → Free No Standard Yes Business Yes Enterprise Yes 
+ Admin Controls Enterprise features → Free No Standard Yes Business Yes Enterprise Yes 
+ Data Policy-Based Routing Model & provider policies Free No Standard Yes Business Yes Enterprise Yes 
+ EU in-region routing Learn more → Free No Standard No Business Yes Enterprise Yes 
+ US in-region routing Learn more → Free No Standard No Business Yes Enterprise Yes 
+ Workload Identity Federation Learn more → Free No Standard No Business Yes Enterprise Yes 
+ Workspace limit Learn more → Free 5 Standard 5 Business 1,000 Enterprise Custom 
+ DPA Free Via Terms of Service Standard Via Terms of Service Business Via Terms of Service, signed copy on request Enterprise Customizations available 
+ Managed Policy Enforcement Free No Standard No Business No Enterprise Yes 
+ SSO/SAML Free No Standard No Business No Enterprise Yes 
+ Contractual SLAs Free No Standard No Business No Enterprise Yes 
+ Payment options Free No Standard Credit card, crypto & more Business Credit card, crypto & more Enterprise Invoicing options 
+ BYOK Limits Learn more → Free No Standard $25,000 of list price inference / month with no fees, 5% fee after Business $25,000 of list price inference / month with no fees, 5% fee after Enterprise Custom 
+ Rate limits Free 50 requests/day Standard Passthrough from the provider(s) Business Passthrough from the provider(s) Enterprise Higher allowances available 
+ Support Free Community support Standard Email support Business Email support Enterprise Dedicated support team 
+ Frequently Asked Questions
+ Billing and Pricing
+ How are tokens billed? 
+ Do you mark up provider pricing? 
+ How is billing structured for Standard, Business, Enterprise and BYOK? 
+ Are failed or fallback attempts billed? 
+ Do you offer volume discounts or annual plans? 
+ Are streaming responses billed differently? 
+ What payment methods do you accept? 
+ Are taxes (VAT/GST) included in prices? 
+ Is there a minimum spend or lock-in on Standard? 
+ What does the Business plan fee apply to? 
+ Do I need to talk to sales to upgrade to Business? 
+ Usage and Rate Limits
+ Do you enforce rate limits? 
+ Can I separate environments (dev/staging/production)? 
+ Do you enforce platform rate limits? 
+ Routing and Latency
+ Can I make sure to send API requests in specific regions? 
+ Does routing affect latency? 
+ What happens if a model is deprecated or pricing changes? 
+ Can I pin specific model versions? 
+ Privacy and Security
+ Do you train on customer data? 
+ Do you support SSO? 
+ Models and Features
+ How do I migrate from OpenAI/Anthropic? 
+ Do you support function calling/tools? 
+ Reliability and Uptime
+ What happens if a provider is down or a model errors? 
+ Where can I check uptime and incidents? 
+ Support
+ What does the Enterprise dedicated support team include? 
+ Ready to get started?
+ Join thousands of developers building with OpenRouter
+ Sign up for free Contact sales 
+ Footer
+ © 2026 OpenRouter, Inc
+ Product
+ Chat 
+ Rankings 
+ Benchmarks 
+ Apps 
+ Discover 
+ Models 
+ Ori 
+ Collections 
+ Providers 
+ Tools 
+ Pricing 
+ Business 
+ Enterprise 
+ Labs 
+ Company
+ About 
+ Blog 
+ Careers Hiring
+ Privacy 
+ Terms of Service 
+ Trust Center 
+ Support 
+ Works With OR 
+ Data 
+ Brand 
+ Developer
+ Documentation 
+ API Reference 
+ Developer Platform 
+ Status 
+ AI Site Map 
+ Connect
+ Discord 
+ GitHub 
+ LinkedIn 
+ X 
+ YouTube 
+ Sign Up 
+ Sign Up
+
+=== [about] https://openrouter.ai/docs/quickstart (lang=en)
+OpenRouter Quickstart Guide 
+ Documentation Index
+ Fetch the complete documentation index at: /docs/llms.txt 
+ Use this file to discover all available pages before exploring further.
+ Skip to main content 
+ OpenRouter | Documentation home page 
+ Search...
+ ⌘ K Ask Assistant ⌘ I 
+ Models 
+ Benchmarks 
+ Chat 
+ Rankings 
+ Apps 
+ Ori 
+ Pricing 
+ Sign In 
+ Sign In 
+ Search... 
+ Navigation 
+ Overview 
+ Quickstart
+ Docs 
+ API Reference 
+ Client SDKs 
+ Agent SDK 
+ Cookbook 
+ Overview 
+ Quickstart 
+ Principles 
+ Models 
+ Multimodal 
+ FAQ 
+ Report Feedback 
+ Models & Routing 
+ Model Fallbacks 
+ Provider Selection 
+ Auto Exacto 
+ Private Models 
+ Model Variants 
+ Routers 
+ Tool Calling 
+ Client Tools 
+ Server Tools 
+ Plugins 
+ Features 
+ Workspaces 
+ Notifications 
+ Files Beta 
+ Containers Beta 
+ Presets 
+ Custom Classifiers 
+ Response Caching 
+ Structured Outputs 
+ Message Transforms 
+ Zero Completion Insurance 
+ App Attribution 
+ Batch 
+ Guardrails 
+ Service Tiers 
+ Router Metadata 
+ Observability 
+ Logs 
+ Activity 
+ Input & Output Logging 
+ Broadcast 
+ Authentication 
+ OAuth 
+ Workload Identity 
+ Management API Keys 
+ Security settings 
+ BYOK 
+ Single Sign-On (SSO) 
+ SCIM Group Mappings 
+ Ori 
+ Ori 
+ Ori Eval 
+ Ori Harness 
+ File Writing 
+ Ori Configuration 
+ Chatting with Interns 
+ Vault Secrets for Interns 
+ Changelog 
+ Developer Tools 
+ MCP 
+ Terraform Provider 
+ Stripe Projects 
+ Privacy 
+ Data Collection 
+ Provider Logging 
+ ZDR 
+ In-Region Routing 
+ Sovereign AI 
+ Best Practices 
+ Latency and Performance 
+ Prompt Caching 
+ Spend Controls 
+ Capping Shared Agent Keys 
+ Uptime Optimization 
+ Reasoning Tokens 
+ Providers 
+ Integration 
+ Traffic Routing 
+ Community 
+ Frameworks and Integrations Overview 
+ Awesome OpenRouter 
+ Effect AI SDK 
+ Arize AX 
+ LangChain 
+ LiveKit 
+ Langfuse 
+ Mastra 
+ OpenAI SDK 
+ Anthropic Agent SDK 
+ PydanticAI 
+ Render 
+ Replit 
+ TanStack AI 
+ Jev (TypeSafe) 
+ Jev Tutorial 
+ Multimodal Decisions 
+ TypeSafe SDK (Jev) 
+ Vercel AI SDK 
+ Xcode 
+ Zapier 
+ Infisical 
+ On this page 
+ Using the OpenRouter API 
+ Using the Client SDKs 
+ Using the Agent SDK 
+ Using the OpenAI SDK 
+ Using third-party SDKs 
+ Building with an AI assistant 
+ Overview
+ Quickstart
+ Copy page Copy page 
+ Get started with OpenRouter
+ Copy page Copy page 
+ OpenRouter gives you access to hundreds of AI models through a single API endpoint. It handles fallbacks automatically and picks the most cost-effective option for each request. 
+ There are three ways to integrate with OpenRouter, depending on how much control you want: 
+ Approach Best for 
+ API Full control, any language, no dependencies 
+ Client SDKs Type-safe model calls with minimal overhead 
+ Agent SDK Building agents with tool use, loops, and state 
+ Read github.com/OpenRouterTeam/skills/tree/main/skills/create-agent-tui and follow the instructions to build an agent using OpenRouter. 
+ Looking for information about free models and rate limits? Please see the FAQ 
+ In the examples below, the OpenRouter-specific headers are optional. Setting them allows your app to appear on the OpenRouter leaderboards. For detailed information about app attribution, see our App Attribution guide . 
+ ​ 
+ Using the OpenRouter API 
+ The most direct way to use OpenRouter. Send standard HTTP requests to the /api/v1/chat/completions endpoint. It works with any language or framework. 
+ You can use the interactive Request Builder to generate OpenRouter API requests in the language of your choice. 
+ The examples below use ~openai/gpt-sol-latest , a latest alias that always resolves to the newest model in the OpenAI GP
+
+=== [meta] https://openrouter.ai/rankings
+html lang: en-US
+hreflang: 없음
+화면에 보이는 언어 이름: 없음

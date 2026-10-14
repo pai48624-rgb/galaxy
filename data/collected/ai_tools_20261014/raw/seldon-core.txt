@@ -1,0 +1,219 @@
+=== [home] https://seldon.io (lang=en)
+Seldon — Take Control of ML and AI Complexity 
+ Products 
+ Platform 
+ Integrations 
+ Docs 
+ Resources 
+ Documentation 
+ Get Started 
+ Seldon is now
+ TrueFoundry 
+ The world's most battle-tested Kubernetes MLOps stack now combines with TrueFoundry's enterprise AI platform — giving you a single, cloud-agnostic foundation from real-time inference to Agentic AI.
+ Read the Announcement → 
+ Trusted by the world's most innovative teams building real-time ML and AI · 25,000+ MLOps professionals
+ iris-pipeline.yaml — live 
+ Inference pipeline • running
+ model_request
+ → 
+ feature_transform
+ iris_classifier
+ → 
+ prediction
+ outlier_detector
+ → 
+ alibi_explain
+ 2M+
+ Installs
+ 40+
+ Backends
+ 10yr
+ Production
+ Better together
+ Kubernetes-first, cloud-agnostic, developer-native — unlocking the next generation of enterprise AI.
+ Read technical documentation → 
+ 🤖 Agentic AI
+ Move beyond static ML models. Deploy autonomous AI agents that reason, plan, and act in enterprise workflows — without ripping out your Kubernetes infrastructure.
+ ☸️ Kubernetes-native, everywhere
+ A shared architectural north star. Portable, scalable, and secure deployment across any cloud or on-premise environment. No vendor lock-in — ever.
+ 🚀 Accelerated path forward
+ Existing Seldon enterprise customers get a clear, low-risk path to Agentic and Composite AI. TrueFoundry reduced enterprise deployment timelines by 50%+ for global F500 firms.
+ Top 4 Open-Source AI Deployment Tool 2026 Independent ranking — Seldon 
+ Seldon is trusted by the world's most innovative teams building real-time machine learning and AI
+ Capital One 
+ Covea 
+ AstraZeneca 
+ GSK 
+ Aselsan 
+ Noda 
+ Cambridge University 
+ Products
+ The complete MLOps toolkit
+ From open-source inference serving to enterprise governance — Seldon covers the full production ML lifecycle. Ranked #4 best open-source AI deployment tool of 2026.
+ Open Source 
+ A modular, data-centric framework for deploying and scaling ML and LLMOps in production. Kubernetes-native with real-time Kafka data pipelines.
+ Explore Core 2 
+ Open Source 
+ A lightweight inference server that receives input data, runs it through trained models, and returns predictions. Fully compatible with the Open Inference Protocol.
+ Explore MLServer 
+ Module 
+ Deploy GenAI workflows with observability, prompt orchestration, and production-ready scaling. Built-in and configurable guardrails for responsible LLM deployment.
+ Explore LLM Module 
+ Enterprise 
+ Comprehensive oversight and governance for ML and LLM deployments. Enhanced authentication, audit trails, and team controls for regulated industries.
+ Explore Enterprise 
+ Module 
+ Optimize production classification and regression models with real-time quality insights. Detect performance degradation before it impacts business outcomes.
+ Explore MPM 
+ Open Source 
+ Outlier, adversarial, and drift detectors alongside global, local, black-box, and white-box explanation methods. Trusted by regulated industries worldwide.
+ Explore Alibi 
+ Platform capabilities
+ Built for the realities of production ML
+ Seldon Core 2 is designed around the operational challenges AI Platform Engineering teams face once models leave the notebook — real-time inference, observability, and compliance at scale.
+ 🔧
+ Model deployment at any scale
+ Orchestrate ML components as Kubernetes microservices. Deploy locally or at enterprise scale with REST and gRPC support for every model type.
+ 🔗
+ Composable data-centric pipelines
+ Connect models, processing steps, custom logic, and monitoring components into real-time Kafka-powered pipelines. Every byte of data is observable.
+ 🧪
+ A/B tests and canary deployments
+ Run routing experiments in production — A/B tests, canary deployments, multi-armed bandits. Promote winners without downtime.
+ 📈
+ Real-time observability
+ Every prediction logged and auditable. Monitor data pipelines, model performance, and deployments with Prometheus, Grafana, and custom dashboards.
+ 💰
+ Multi-model serving and overcommit
+ Consolidate models onto shared inference servers. LRU memory swapping provisions more models than hardware allows — cutting GPU costs significantly.
+ ☁️
+ Cloud-agnostic, on-premise ready
+ Tested on AWS EKS, Azure AKS, Google GKE, Alicloud, Digital Ocean, and OpenShift. Your data stays wherever you need it.
+ Deploy in minutes
+ Standardized inference.
+Any model type.
+ One Kubernetes manifest. Automatic inference server selection, scaling, monitoring, and audit logging — all built in.
+ View install guide 
+ sklearn-iris-pipeline.yaml 
+ # Deploy a Scikit-learn model 
+ apiVersion : mlops.seldon.io/v1alpha1
+ kind : Model
+ metadata :
+ name : iris
+ spec :
+ storageUri : "gs://seldon-models/scv2/iris-sklearn" 
+ requirements : [ sklearn ]
+ memory : 100Ki 
+ ---
+# Wire it into an observable pipeline 
+ apiVersion : mlops.seldon.io/v1alpha1
+ kind : Pipeline
+ metadata :
+ name : iris-pipeline
+ spec :
+ steps :
+ - name : iris
+ - name : outlier-detector
+ output :
+ steps : [iris] 
+ Why Seldon
+ Production AI at enterprise scale
+ Purpose-built for VP Engineering, Chief AI Officers, and AI Platform Architects who need more than a model server — governance, explainability, and zero vendor lock-in.
+ 🔓 Avoid Lock-In
+ Deploy and scale any AI model across any cloud or on-premise. Never limited by vendor lock-in or integration gaps.
+ 🚀 From POC to Production
+ Seldon Core 2 standardizes complex AI deployments with Kubernetes-native pipelines, making ML and GenAI production-ready out of the box.
+ 🛡️ Trust Every AI Decision
+ Real-time monitoring, drift detection, and explainability so your AI systems stay transparent, reliable, and compliant at scale.
+ 💰 Cut Costs, Not Performance
+ Multi-model serving and overcommit consolidate workloads to slash infrastructure cost while keeping latency low and throughput high.
+ 🧪 Model Experimentation
+ A/B testing to shadow deployments — simple, scalable, and disruption-free for seamless real-time machine learning.
+ 🧩 Modular Architecture
+ Budget accurately and only pay for what you need. Seldon's modular design extends to pricing — from open-source to enterprise.
+ Integrations
+ Fits into your existing stack
+ Seldon integrates with the tools your team already uses — from CI/CD to monitoring, storage to service mesh.
+ Prometheus Grafana Kafka 
+ Jaeger Elasticsearch Triton Inference 
+ MLflow Weights & Biases Istio 
+ Envoy ArgoCD Flux 
+ AWS EKS Azure AKS Google GKE 
+ OpenShift Hugging Face LangSmith 
+ rclone (40+ backends) Open Inference Protocol 
+ Databricks Digital Ocean 
+ Documentation
+ All Seldon products, one place
+ The full ecosystem is documented at docs.seldon.ai — from quickstart to advanced production patterns.
+ Product Description Type Docs 
+ Seldon Core 2 Kubernetes-native MLOps and LLMOps framework — the core deployment engine. Open Source docs → 
+ MLServer Lightweight multi-framework inference server with REST/gRPC and Open Inference Protocol. Open Source docs → 
+ LLM Module GenAI deployment with prompt orchestration, observability, and guardrails. Module docs → 
+ Alibi Detect Outlier, adversarial, and drift detection — broad coverage of model and data types. Open Source docs → 
+ Alibi Explain Model inspection and explanation — local, global, black-box, and white-box methods. Open Source docs → 
+ MPM Module Model Performance Metrics — production quality insights for classification and regression. Module docs → 
+ Enterprise Platform Oversight, governance, enhanced authentication, and audit for ML and LLM at scale. Enterp
+
+=== [meta] https://seldon.io
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/SeldonIO/seldon-core
+<div align="center">
+
+ <a href="https://www.seldon.io/solutions/core/">
+  <img alt="Core 2 Logo" src="/.images/core-2-logo.png" alt="Core 2 Logo" style="max-width: 100%; height: auto; width: 400px;">
+ </a>
+</div>
+
+# Deploy Modular, Data-centric AI applications at scale
+
+##  💡 About
+Seldon Core 2 is an MLOps and LLMOps framework for deploying, managing and scaling AI systems in Kubernetes - from singular models, to modular and data-centric applications. With Core 2 you can deploy in a standardized way across a wide range of model types, on-prem or in any cloud, and production-ready out of the box. 
+
+</br>
+ <div align="center">
+   <a href="https://www.youtube.com/watch?v=ar5lSG_idh4">
+     <img src="/.images/Core-intro-thumbnail.png" alt="Introductory Youtube Video" style="max-width: 100%; width: 500px; height: auto;">
+   </a>
+ </div>
+</br>
+
+To reach out to Seldon regarding commercial use, visit our [website](https://www.seldon.io/).
+
+## 📚 Documentation  
+
+The Seldon Core 2 Docs can be found [here](https://docs.seldon.ai/seldon-core-2). For most specific sections, see here:
+
+<p align="center">
+  <a href="https://docs.seldon.ai/seldon-core-2/installation/installation">🔧 Installation</a>  &nbsp • &nbsp
+  <a href="https://docs.seldon.ai/seldon-core-2/user-guide/servers"> ⛽ Servers</a>  &nbsp • &nbsp
+  <a href="https://docs.seldon.ai/seldon-core-2/user-guide/models">🤖 Models</a>  &nbsp •  &nbsp
+  <a href="https://docs.seldon.ai/seldon-core-2/user-guide/pipelines"> 🔗 Pipelines</a>  &nbsp • &nbsp
+  <a href="https://docs.seldon.ai/seldon-core-2/user-guide/experiment">🧑‍🔬 Experiments</a>  &nbsp • &nbsp
+  <a href="https://docs.seldon.ai/seldon-core-2/user-guide/performance-tuning">📊 Performance Tuning</a>  
+</p>
+
+## 🧩 Features
+
+ * **Pipelines**: Deploy composable AI applications, leveraging Kafka for realtime data streaming between components
+ * **Autoscaling** for models and application components based on native or custom logic
+ * **Multi-Model Serving**: Save infrastructure costs by consolidating multiple models on shared inference servers
+ * **Overcommit**: Deploy more models than available memory allows, saving infrastructure costs for unused models
+ * **Experiments**: Route data between candidate models or pipelines, with support for A/B tests and shadow deployments
+ * **Custom Components**: Implement custom logic, drift & outlier detection, LLMs and more through plug-and-play integrate with the rest of Seldon's ecosytem of ML/AI products!
+ 
+## 🔬 Research
+
+These features are influenced by our position paper on the next generation of ML model serving frameworks: 
+
+👉 [Desiderata for next generation of ML model serving](http://arxiv.org/abs/2210.14665)
+
+## 📜 License
+
+Seldon is distributed under the terms of the The Business Source License. A complete version of the license is available in the [LICENSE file](LICENSE) in this repository. Any contribution made to this project will be licensed under the Business Source License.
+
+
+
+

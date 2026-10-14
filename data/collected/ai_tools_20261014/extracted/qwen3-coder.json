@@ -1,0 +1,26 @@
+{
+ "company": "Qwen",
+ "one_liner_ko": null,
+ "what_it_does_ko": "수집된 Hugging Face 페이지(Qwen/Qwen3-Coder-480B-A35B-Instruct)에는 대화 템플릿(chat template) 코드만 담겨 있고 모델 설명·라이선스·성능 정보는 잘려 있다. 템플릿의 기본 시스템 문구는 이 모델을 '컴퓨터와 상호작용해 작업을 해결할 수 있는' 도우미로 정의하며, 함수(도구) 호출 형식을 정의한다.",
+ "key_features": [
+  "도구(함수) 호출 형식 내장 대화 템플릿",
+  "컴퓨터와 상호작용해 작업을 해결하는 에이전트형 동작 전제"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "불명",
+ "evidence": [
+  {"field": "company", "url": "https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct", "quote": "Qwen/Qwen3-Coder-480B-A35B-Instruct · Hugging Face"},
+  {"field": "what_it_does_ko", "url": "https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct", "quote": "You are Qwen, a helpful AI assistant that can interact with a computer to solve tasks."},
+  {"field": "key_features", "url": "https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct", "quote": "If you choose to call a function ONLY reply in the following format with NO suffix:"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

@@ -1,0 +1,211 @@
+=== [home] https://styletts2.github.io
+Audio Samples from StyleTTS 2 
+ Audio Samples from "StyleTTS 2: Towards Human-Level Text-to-Speech through Style Diffusion and Adversarial Training with Large Speech Language Models"
+ [arXiv] 
+ [GitHub Repo] 
+ Abstract: In this paper, we present StyleTTS 2, a text-to-speech (TTS) model that leverages style diffusion and adversarial training with large speech language models (SLMs) to achieve human-level TTS synthesis. StyleTTS 2 differs from its predecessor by modeling styles as a latent random variable through diffusion models to generate the most suitable style for the text without requiring reference speech, achieving efficient latent diffusion while benefiting from the diverse speech synthesis offered by diffusion models. Furthermore, we employ large pre-trained SLMs, such as WavLM, as discriminators with our novel differentiable duration modeling for end-to-end training, resulting in improved speech naturalness. StyleTTS 2 surpasses human recordings on the single-speaker LJSpeech dataset and matches it on the multispeaker VCTK dataset as judged by native English speakers. Moreover, when trained on the LibriTTS dataset, our model outperforms previous publicly available models for zero-shot speaker adaptation. This work achieves the first human-level TTS synthesis on both single and multispeaker datasets, showcasing the potential of style diffusion and adversarial training with large SLMs. 
+ StyleTTS 2 
+ JETS 
+ VITS 
+ StyleTTS 
+ This page contains a set of audio samples in support of the paper. Some examples are randomly selected directly from the sets we used for evaluation. 
+ All utterances were unseen during training, and some were selected to match demo samples of non-public models (e.g. NaturalSpeech 1 & 2 or Vall-E) for comparison purposes. 
+ For more samples, you can download our metadata that contains all audios used for evaluations and the survey results here .
+ Contents
+ 1. Single-Speaker (LJSpeech, In-Distribution Texts) 
+ 2. Single-Speaker (LJSpeech, Out-Of-Distribution Texts) 
+ 3. Multi-Speaker (VCTK) 
+ 4. Zero-shot Speaker Adaptation (LibriTTS) 
+ 5. Longform Narration 
+ 6. Speech Expressiveness 
+ 7. Speech Diversity 
+ 8. Ablation Study 
+ 1. Single-Speaker (LJSpeech, In-Distribution Texts)
+ Text: After the construction and action of the machine had been explained, the doctor asked the governor what kind of men he had commanded at Goree, 
+ Ground Truth 
+ StyleTTS 2 
+ NaturalSpeech 
+ JETS 
+ VITS 
+ StyleTTS 
+ Text: The lax discipline maintained in Newgate was still further deteriorated by the presence of two other classes of prisoners who ought never to have been inmates of such a jail. 
+ Ground Truth 
+ StyleTTS 2 
+ NaturalSpeech 
+ JETS 
+ VITS 
+ StyleTTS 
+ Text: Maltby and Co. would issue warrants on them deliverable to the importer, and the goods were then passed to be stored in neighboring warehouses. 
+ Ground Truth 
+ StyleTTS 2 
+ NaturalSpeech 
+ JETS 
+ VITS 
+ StyleTTS 
+ Text: and gave the garnish for the common side at that sum, which is five shillings more than Mr. Neild says was extorted on the common side. 
+ Ground Truth 
+ StyleTTS 2 
+ NaturalSpeech 
+ JETS 
+ VITS 
+ StyleTTS 
+ ---> 
+ Text: it is not possible to state with scientific certainty that a particular small group of fibers come from a certain piece of clothing. 
+ Ground Truth 
+ StyleTTS 2 
+ NaturalSpeech 
+ JETS 
+ VITS 
+ StyleTTS 
+ 2. Single-Speaker (LJSpeech, Out-Of-Distribution Texts)
+ This section contains OOD samples with ground truth audios taken from LibriVox . All the 40 clips used in our experiment can be downloaded here . Note the sample quality difference between this section and previous section. 
+ Text: Then leaving the corpse within the house they go themselves to and fro about the city and beat themselves, with their garments bound up by a girdle 
+ Ground Truth 
+ StyleTTS 2 
+ JETS 
+ VITS 
+ StyleTTS 
+ Text: Write your name and address clearly. Mail a note and a duplicate list at the time you send the box. 
+ Ground Truth 
+ StyleTTS 2 
+ JETS 
+ VITS 
+ StyleTTS 
+ Text: Indeed, she is said to have angled with Napoleonic strategy for that same offer, and to have won it only after a sharp struggle of wits. 
+ Ground Truth 
+ StyleTTS 2 
+ JETS 
+ VITS 
+ StyleTTS 
+ Text: All authorities save one seem to agree that this verb is a pure Americanism, and that it is derived from the name of Charles Lynch, a Virginia justice of the peace, 
+ Ground Truth 
+ StyleTTS 2 
+ JETS 
+ VITS 
+ StyleTTS 
+ ---> 
+ Text: not as a lifeless thing, but with the same enjoyment of rest as gladdened the hearts of the two beings, who, with gratitude and love 
+ Ground Truth 
+ StyleTTS 2 
+ JETS 
+ VITS 
+ StyleTTS 
+ 3. Multi-Speaker (VCTK)
+ This section contains samples from our multi-speaker VCTK model, alongside the reference audios that were used to generate these samples. Note that StyleTTS 2 faithfully replicates the speaking styles (e.g., background noise, pitch tone, voice etc.) of the reference audios, making it more similar to the reference than the ground truth. 
+ Text
+ Since then physicists have found that it is not reflection, but refraction by the raindrops which causes the rainbows. 
+ Six spoons of fresh snow peas, five thick slabs of blue cheese, and maybe a snack for her brother Bob. 
+ She can scoop these things into three red bags, and we will go meet her Wednesday at the train station. 
+ Jim Wallace, the justice minister, acknowledged that prisoner numbers were a concern. 
+ Ground Truth 
+ Reference 
+ StyleTTS 2 
+ VITS 
+ 4. Zero-shot Speaker Adaptation (LibriTTS)
+ This section contains samples from our multi-speaker LibriTTS model. For each model, the size of the training set is provided. Note that all speakers are unseen during the training process. 
+ Text
+ Yea, his honourable worship is within, but he hath a godly minister or two with him, and likewise a leech. 
+ Thus did this humane and right minded father comfort his unhappy daughter, and her mother embracing her again, did all she could to soothe her feelings. 
+ And lay me down in my cold bed and leave my shining lot. 
+ The army found the people in poverty and left them in comparative wealth. 
+ Ground Truth 
+ Reference 
+ StyleTTS 2 (~245 Hours) 
+ VALL-E (~60k Hours) 
+ NaturalSpeech 2 (~44k Hours) 
+ StyleTTS (~245 Hours) 
+ VITS (~245 Hours) 
+ YourTTS (~300 Hours) 
+ It is noteworthy that our model matches the generalization capabilities of VALL-E, including maintaining the acoustic environment and speaker's emotion, but with 250x less data. The subsequent samples are sourced from the official VALL-E demo page. 
+ Acoustic Environment Maintenance
+ Text: As friends thing I definitely I've got more male friends. 
+ Reference 
+ StyleTTS 2 
+ VALL-E 
+ Ground Truth 
+ Text: Everything is run by computer but you got to know how to think before you can do a computer. 
+ Reference 
+ StyleTTS 2 
+ VALL-E 
+ Ground Truth 
+ Text: Then out in LA you guys got a whole another ball game within California to worry about. 
+ Reference 
+ StyleTTS 2 
+ VALL-E 
+ Ground Truth 
+ Speaker’s Emotion Maintenance
+ We have to reduce the number of plastic bags. 
+ Emotion
+ Anger
+ Sleepy
+ Amused
+ Disgusted
+ Reference 
+ StyleTTS 2 
+ Vall-E 
+ 5. Longform Narration
+ We provide one example of long paragraph synthesized using Algorithm 1 described in Appendix B. Our model exhibits robustness against OOD texts in longform narration.
+ The paragraph is the Fresh and Preserved Fruit for the Market chapter of Canned Fruit, Preserves, and Jellies: Household Methods of Preparation by Maria Parloa
+
+=== [meta] https://styletts2.github.io
+html lang: 없음
+hreflang: 없음
+화면에 보이는 언어 이름: English
+
+=== [github] https://github.com/yl4579/StyleTTS2
+# StyleTTS 2: Towards Human-Level Text-to-Speech through Style Diffusion and Adversarial Training with Large Speech Language Models
+
+### Yinghao Aaron Li, Cong Han, Vinay S. Raghavan, Gavin Mischler, Nima Mesgarani
+
+> In this paper, we present StyleTTS 2, a text-to-speech (TTS) model that leverages style diffusion and adversarial training with large speech language models (SLMs) to achieve human-level TTS synthesis. StyleTTS 2 differs from its predecessor by modeling styles as a latent random variable through diffusion models to generate the most suitable style for the text without requiring reference speech, achieving efficient latent diffusion while benefiting from the diverse speech synthesis offered by diffusion models. Furthermore, we employ large pre-trained SLMs, such as WavLM, as discriminators with our novel differentiable duration modeling for end-to-end training, resulting in improved speech naturalness. StyleTTS 2 surpasses human recordings on the single-speaker LJSpeech dataset and matches it on the multispeaker VCTK dataset as judged by native English speakers. Moreover, when trained on the LibriTTS dataset, our model outperforms previous publicly available models for zero-shot speaker adaptation. This work achieves the first human-level TTS synthesis on both single and multispeaker datasets, showcasing the potential of style diffusion and adversarial training with large SLMs.
+
+Paper: [https://arxiv.org/abs/2306.07691](https://arxiv.org/abs/2306.07691)
+
+Audio samples: [https://styletts2.github.io/](https://styletts2.github.io/)
+
+Online demo: [Hugging Face](https://huggingface.co/spaces/styletts2/styletts2) (thank [@fakerybakery](https://github.com/fakerybakery) for the wonderful online demo)
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yl4579/StyleTTS2/blob/main/) [![Discord](https://img.shields.io/discord/1197679063150637117?logo=discord&logoColor=white&label=Join%20our%20Community)](https://discord.gg/ha8sxdG2K4)
+
+## TODO
+- [x] Training and inference demo code for single-speaker models (LJSpeech)
+- [x] Test training code for multi-speaker models (VCTK and LibriTTS)
+- [x] Finish demo code for multispeaker model and upload pre-trained models
+- [x] Add a finetuning script for new speakers with base pre-trained multispeaker models
+- [ ] Fix DDP (accelerator) for `train_second.py` **(I have tried everything I could to fix this but had no success, so if you are willing to help, please see [#7](https://github.com/yl4579/StyleTTS2/issues/7))**
+
+## Pre-requisites
+1. Python >= 3.7
+2. Clone this repository:
+```bash
+git clone https://github.com/yl4579/StyleTTS2.git
+cd StyleTTS2
+```
+3. Install python requirements: 
+```bash
+pip install -r requirements.txt
+```
+On Windows add:
+```bash
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118 -U
+```
+Also install phonemizer and espeak if you want to run the demo:
+```bash
+pip install phonemizer
+sudo apt-get install espeak-ng
+```
+4. Download and extract the [LJSpeech dataset](https://keithito.com/LJ-Speech-Dataset/), unzip to the data folder and upsample the data to 24 kHz. The text aligner and pitch extractor are pre-trained on 24 kHz data, but you can easily change the preprocessing and re-train them using your own preprocessing. 
+For LibriTTS, you will need to combine train-clean-360 with train-clean-100 and rename the folder train-clean-460 (see [val_list_libritts.txt](https://github.com/yl4579/StyleTTS/blob/main/Data/val_list_libritts.txt) as an example).
+
+## Training
+First stage training:
+```bash
+accelerate launch train_first.py --config_path ./Configs/config.yml
+```
+Second stage training **(DDP version not working, so the current version uses DP, again see [#7](https://github.com/yl4579/StyleTTS2/issues/7) if you want to help)**:
+```bash
+python train_second.py --config_path ./Configs/config.yml
+```
+You can run both consecutively and it will train both the first and second stages. The model will be saved in the format "epoch_1st_%05d.pth" and "epoch_2nd_%05d.pth". Checkpoints and Tensorboard logs will be saved at `log_dir`. 
+
+The data list format needs to be `filen

@@ -1,5 +1,26 @@
 ﻿slug,name_en,기존_pricing_policy,공식_페이지,차이,근거_url
-mistral-large,Mistral Large,"오픈소스(무료, 가중치/코드 공개)","Mistral Large는 API로 유료 제공(입력 100만 토큰당 $0.5, 출력 $1.5). 공식 FAQ상 Apache 2.0 오픈 웨이트는 Mistral 7B 같은 모델이고, 상업 배포는 Mistral 라이선스가 필요","기존 pricing_policy는 '오픈소스(무료, 가중치/코드 공개)'인데, 페이지에서 Mistral Large는 유료 API·상용 모델로 소개되고 오픈소스라는 근거가 없음",https://mistral.ai/pricing/
-notion-ai,Notion AI,애드온(월 구독),"Notion AI는 Business·Enterprise 요금제에 포함되고, 다른 요금제는 제한 체험만 제공. 별도 애드온은 Custom Agents용 Notion 크레딧($10/1,000 크레딧)뿐",기존 '애드온(월 구독)'과 달리 Notion AI 자체는 별도 월 구독 애드온이 아니라 상위 요금제 번들,https://www.notion.com/product/ai
-ollama,ollama,사용량 기반 종량제(클라우드/GPU),"무료 플랜(로컬 실행 무제한·스타터 크레딧)과 Pro $20·Max $100·Team $500 월 구독이 있고, 초과분만 크레딧 종량제",기존 '사용량 기반 종량제'만으로는 무료 로컬 사용과 월 구독 플랜이 빠져 있음,https://ollama.com/pricing
-pictory,Pictory,프리미엄(무료+유료 구독),상시 무료 플랜 없이 14일 무료 체험 후 Starter $29/월부터 유료,기존 '프리미엄(무료+유료 구독)'과 달리 영구 무료 플랜이 보이지 않음(무료 체험만),https://pictory.ai/pricing/?nav=mega
+mistral-large,Mistral Large,"오픈소스(무료, 가중치/코드 공개)","Mistral Large는 '플래그십' 모델로 la Plateforme·Azure API에서 토큰당 유료(입력 $0.5/M, 출력 $1.5/M)로 제공되며, 공개 글은 이를 별도의 'open-weight' 엔드포인트와 구분함","기존 분류 '오픈소스(무료, 가중치/코드 공개)'와 반대 — 공식 페이지 기준 유료 API(종량제) 모델이고 오픈 라이선스 언급 없음(자체 배포는 문의 필요)",https://mistral.ai/pricing/
+inception-labs,Inception Labs,해당없음(연구조직/기업),"Mercury 2.5(입력 $0.20/출력 $0.75 per 1M), Mercury Voice($0.40/$1.50) 등 토큰 단위 API 요금을 공개",기존 분류는 '해당없음(연구조직/기업)'이지만 실제로는 유료 API 종량제 상품이 있음,https://www.inceptionlabs.ai/
+minimax,MiniMax,해당없음(연구조직/기업),"MiniMax Design 유료 멤버십(Starter/Plus/Pro, 월간·연간)과 크레딧 충전 판매, API 제공",기존 분류 '해당없음(연구조직/기업)'과 달리 공식 페이지에 유료 구독·크레딧 요금이 있음,https://design.minimax.io/media-plan/subscribe
+stepfun,StepFun,해당없음(연구조직/기업),공개 모델 전체를 사용량 기반 과금 API로 제공하고 Step Plan 구독 상품이 있음,기존 분류 '해당없음(연구조직/기업)'과 달리 유료 API(종량제)와 구독 상품이 공식 페이지에 있음,https://platform.stepfun.ai/
+black-forest-labs,Black Forest Labs,해당없음(연구조직/기업),"API는 이미지·영상 생성량 기준 종량제(예: $0.048/이미지), 오픈 웨이트는 Builder·Platform·Professional·Enterprise 유료 라이선스",기존 '해당없음(연구조직/기업)'과 달리 공개 유료 요금제(종량제 API·라이선스)가 있음,https://bfl.ai/pricing/
+databricks-mosaic,Databricks Mosaic,해당없음(연구조직/기업),Databricks 플랫폼은 선불 없는 종량제(DBU당 $0.07~$0.40부터)와 약정 할인 계약으로 판매,기존 '해당없음(연구조직/기업)'과 달리 공개 유료 종량제 요금이 있음,https://www.databricks.com/product/pricing
+liquid-ai,Liquid AI,해당없음(연구조직/기업),"오픈 모델은 연 매출 1천만 달러 미만이면 무료, 초과 시 유료 Enterprise 상용 라이선스",기존 분류는 '해당없음(연구조직/기업)'이지만 공식 요금 페이지에 무료/Enterprise 요금제가 있음,https://www.liquid.ai/pricing
+moondream,moondream,해당없음(연구조직/기업),"Cloud·Lens는 토큰당 유료, Free/Team($350/월)/Enterprise 요금제가 있는 상용 서비스",기존 분류 '해당없음(연구조직/기업)'과 달리 공식 요금 페이지에 유료 요금제가 있음,https://moondream.ai/pricing
+prime-intellect,Prime Intellect,해당없음(연구조직/기업),GPU 온디맨드 시간당 과금(H100 $2.43/시간 등)·추론 API·호스팅 학습을 파는 상용 플랫폼,기존 분류 '해당없음(연구조직/기업)'과 달리 공식 페이지에 유료 컴퓨트 가격이 있음,https://www.primeintellect.ai
+gemini-thinking,Gemini Thinking,"오픈소스(무료, 가중치/코드 공개)","Gemini는 Gemini Developer API로 토큰당 과금(무료 등급+유료 등급+Enterprise)되는 모델이며, 가중치·라이선스 공개 내용은 페이지에 없음","기존 '오픈소스(무료, 가중치/코드 공개)' 분류와 반대로 유료 API 종량제임",https://ai.google.dev/gemini-api/docs/pricing?hl=ko
+code-world-model,Code World Model,"오픈소스(무료, 가중치/코드 공개)","CWM은 비상업 연구용 라이선스(fair-noncommercial-research-license)로만 공개되며, 상업 제품·서비스 사용은 금지되고 연락처 제공 동의 후 접근 가능","기존 '오픈소스(무료, 가중치/코드 공개)' 분류와 달리 일반 오픈소스가 아니라 상업 이용이 금지된 연구 전용 공개",https://huggingface.co/facebook/cwm
+jina-embeddings,Jina Embeddings,"오픈소스(무료, 가중치/코드 공개)","API는 토큰을 충전해 쓰는 유료 방식(Top-up tokens as you go)이고 무료는 체험 수준이며, 페이지에 오픈소스 라이선스 표기는 없음(open-weight 언급만 있음)","기존 분류 '오픈소스(무료, 가중치/코드 공개)'와 달리 공식 페이지의 주 제공 형태는 유료 종량 API",https://jina.ai/embeddings/
+superwhisper,superwhisper,오픈소스(무료) 또는 API 종량제,Free($0)와 Pro 구독(월간·연간·평생)으로 파는 음성 받아쓰기 앱,"기존 분류는 '오픈소스(무료) 또는 API 종량제'지만, 공식 페이지에는 오픈소스·종량제 API 언급이 없고 프리미엄 구독 앱임",https://superwhisper.com
+seldon-core,Seldon Core,사용량 기반 종량제(클라우드/GPU),"쿠버네티스에 직접 설치하는 MLOps 프레임워크(Business Source License) + 유료 Enterprise·모듈, GPU 사용량 요금표 없음",기존 '사용량 기반 종량제(클라우드/GPU)'와 달리 GPU 클라우드가 아니라 자체 설치형 소프트웨어이며 요금은 오픈소스~엔터프라이즈 모듈 방식,https://seldon.io
+llama-cpp,llama.cpp,사용량 기반 종량제(클라우드/GPU),"MIT 라이선스 오픈소스 C/C++ 추론 엔진, 직접 설치해 로컬·클라우드에서 실행, 요금 표기 없음",기존 '사용량 기반 종량제(클라우드/GPU)'와 반대로 자체 설치형 오픈소스 소프트웨어,https://github.com/ggml-org/llama.cpp
+triton,Triton,사용량 기반 종량제(클라우드/GPU),"BSD-3 오픈소스 추론 서버(GitHub·NGC 배포) + 유료 NVIDIA AI Enterprise(가격 미기재), GPU 사용량 요금표 없음",기존 '사용량 기반 종량제(클라우드/GPU)'와 달리 자체 설치형 오픈소스 소프트웨어와 엔터프라이즈 라이선스 구매 방식,https://developer.nvidia.com/dynamo-triton
+torchserve,TorchServe,사용량 기반 종량제(클라우드/GPU),"pip·conda·Docker로 직접 설치하는 모델 서빙 도구, 유료 요금제·GPU 요금표 없음(현재 유지보수 제한)",기존 '사용량 기반 종량제(클라우드/GPU)'와 달리 클라우드 과금 서비스가 아닌 자체 설치형 소프트웨어,https://docs.pytorch.org/serve/
+onnx-runtime,ONNX Runtime,사용량 기반 종량제(클라우드/GPU),"MIT 라이선스 오픈소스 추론·학습 가속 라이브러리(pip 설치), 요금 표기 없음",기존 '사용량 기반 종량제(클라우드/GPU)'와 반대로 자체 설치형 오픈소스 라이브러리,https://github.com/microsoft/onnxruntime
+tensorrt,TensorRT,사용량 기반 종량제(클라우드/GPU),"내려받아 설치하는 추론 SDK(관련 도구 TensorRT-LLM·Model Optimizer는 무료 명시), 사용량 요금표 없음",기존 '사용량 기반 종량제(클라우드/GPU)'와 달리 클라우드 과금 서비스가 아닌 다운로드형 SDK (TensorRT Cloud는 일부 파트너 한정),https://developer.nvidia.com/tensorrt
+sol-engine,Sol Engine,사용량 기반 종량제(클라우드/GPU),"NVIDIA 연구팀의 연구용 가속 프레임워크(논문·코드 링크 공개), 요금 표기 없음",기존 '사용량 기반 종량제(클라우드/GPU)'와 달리 과금 서비스가 아닌 연구 공개 코드,https://nvlabs.github.io/Sana/Sol-Engine/
+vllm,vLLM,사용량 기반 종량제(클라우드/GPU),"커뮤니티 오픈소스 LLM 서빙 라이브러리(uv·pip 설치, 후원금으로 운영), 요금 표기 없음",기존 '사용량 기반 종량제(클라우드/GPU)'와 반대로 자체 설치형 오픈소스 소프트웨어,https://github.com/vllm-project/vllm
+tensorrt-llm,TensorRT-LLM,사용량 기반 종량제(클라우드/GPU),"Apache 2.0 오픈소스 LLM 추론 라이브러리(직접 설치), 요금 표기 없음",기존 '사용량 기반 종량제(클라우드/GPU)'와 반대로 자체 설치형 오픈소스 소프트웨어,https://github.com/NVIDIA/TensorRT-LLM
+deepspeed,DeepSpeed,사용량 기반 종량제(클라우드/GPU),"Apache 2.0 오픈소스 학습 최적화 라이브러리(PyPI), 요금 표기 없음",기존 '사용량 기반 종량제(클라우드/GPU)'와 반대로 자체 설치형 오픈소스 라이브러리,https://github.com/deepspeedai/DeepSpeed
+megatron-lm,Megatron-LM,사용량 기반 종량제(클라우드/GPU),"Apache 라이선스 오픈소스 학습 라이브러리, PyPI·소스로 설치, 요금 표기 없음",기존 '사용량 기반 종량제(클라우드/GPU)'와 반대로 자체 설치형 오픈소스 라이브러리,https://github.com/NVIDIA/Megatron-LM
+horovod,Horovod,사용량 기반 종량제(클라우드/GPU),"Apache 2.0 오픈소스 분산 학습 프레임워크(LF AI & Data), 직접 설치, 요금 표기 없음 — 2026년 9월 보관 처리",기존 '사용량 기반 종량제(클라우드/GPU)'와 반대로 자체 설치형 오픈소스 소프트웨어,https://horovod.ai

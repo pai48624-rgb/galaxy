@@ -1,0 +1,55 @@
+{
+ "company": "Microsoft",
+ "one_liner_ko": "엔드투엔드 기계 학습 수명 주기에 엔터프라이즈급 AI 서비스를 제공하는 Microsoft Azure의 ML 플랫폼.",
+ "what_it_does_ko": "Azure Machine Learning은 중요 비즈니스용 ML 모델을 대규모로 빌드·학습·배포하는 클라우드 서비스다. 데이터 준비, 자동화된 ML, 모델 카탈로그를 통한 기본 모델 미세 조정·배포, 프롬프트 흐름, 관리 엔드포인트, MLOps 기능을 제공한다. 서비스 자체는 추가 비용 없이 쓰고, 모델 학습·추론에 쓴 컴퓨팅 리소스에만 요금이 붙는다. 보안·규정 준수와 책임 있는 AI 도구도 기본으로 포함한다.",
+ "key_features": [
+  "Apache Spark 클러스터 기반 데이터 준비(Microsoft Fabric 연동)",
+  "자동화된 ML(분류·회귀·비전·자연어 처리)",
+  "모델 카탈로그(Microsoft·OpenAI·Hugging Face·Meta·Cohere 등 기본 모델 미세 조정·배포)",
+  "프롬프트 흐름으로 언어 모델 워크플로 설계·평가·배포",
+  "관리 엔드포인트로 모델 배포·안전한 롤아웃",
+  "CI/CD 기반 MLOps 파이프라인",
+  "최신 GPU·InfiniBand AI 인프라",
+  "책임 있는 AI(공정성 평가·해석 기능)"
+ ],
+ "use_cases_ko": [
+  "대규모 고객 데이터로 맞춤 제안 ML 솔루션 구축(Marks & Spencer 사례)",
+  "분산 데이터 세트에서 모델 학습(Swift 사례)",
+  "노코드 자동 ML로 분류 모델 학습"
+ ],
+ "pricing": {
+  "free_tier": "불명 (Azure 전체로는 무료 평가판 언급, Azure ML 자체는 추가 비용 없음·컴퓨팅만 과금)",
+  "plans": [
+   {"name": "Azure Machine Learning (사용량 기반)", "price": 0, "currency": null, "period": "usage", "limits": "서비스 자체 추가 비용 없음, 학습·추론에 쓴 컴퓨팅(CPU·GPU)만 과금", "page_lang": "ko-KR"}
+  ],
+  "pricing_url": "https://azure.microsoft.com/ko-kr/products/machine-learning"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["웹", "API"],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {"field": "company", "url": "https://azure.microsoft.com/ko-kr/products/machine-learning", "quote": "Azure Machine Learning - ML as a Service | Microsoft Azure"},
+  {"field": "one_liner_ko", "url": "https://azure.microsoft.com/ko-kr/products/machine-learning", "quote": "엔드투엔드 ML(기계 학습) 수명 주기에 엔터프라이즈급 AI 서비스를 사용하세요."},
+  {"field": "what_it_does_ko", "url": "https://azure.microsoft.com/ko-kr/products/machine-learning", "quote": "중요 비즈니스용 ML 모델을 대규모로 빌드"},
+  {"field": "what_it_does_ko", "url": "https://azure.microsoft.com/ko-kr/products/machine-learning", "quote": "추가 비용 없이 Azure Machine Learning을 사용합니다. 요금은 모델 학습 또는 유추 중에 사용된 기본 컴퓨팅 리소스에만 적용됩니다."},
+  {"field": "key_features", "url": "https://azure.microsoft.com/ko-kr/products/machine-learning", "quote": "Apache Spark 클러스터에서"},
+  {"field": "key_features", "url": "https://azure.microsoft.com/ko-kr/products/machine-learning", "quote": "분류, 회귀, 비전 및 자연어 처리를 비롯한 작업에 대한 정확한 기계 학습 모델을 신속하게 만듭니다."},
+  {"field": "key_features", "url": "https://azure.microsoft.com/ko-kr/products/machine-learning", "quote": "모델 카탈로그를 사용하여 Microsoft, OpenAI, Hugging Face, Meta, Cohere 등에서 기본 모델을 검색, 미세 조정 및 배포할 수 있습니다."},
+  {"field": "key_features", "url": "https://azure.microsoft.com/ko-kr/products/machine-learning", "quote": "프롬프트 흐름을 사용하여 언어 모델 워크플로를 디자인, 생성, 평가 및 배포합니다."},
+  {"field": "key_features", "url": "https://azure.microsoft.com/ko-kr/products/machine-learning", "quote": "모델 배포 및 점수 매기기를 조작하고, 메트릭을 기록하며, 안전한 모델 롤아웃을 수행합니다."},
+  {"field": "key_features", "url": "https://azure.microsoft.com/ko-kr/products/machine-learning", "quote": "CI/CD(연속 통합 및 지속적인 업데이트)를 사용하여 엔드투엔드 파이프라인을 재현하고 워크플로를 자동화합니다."},
+  {"field": "key_features", "url": "https://azure.microsoft.com/ko-kr/products/machine-learning", "quote": "최신 GPU와 InfiniBand 네트워킹을 결합하도록 특별히 설계된 AI 인프라를 활용합니다."},
+  {"field": "key_features", "url": "https://azure.microsoft.com/ko-kr/products/machine-learning", "quote": "해석 기능이 있는 책임 있는 AI 솔루션을 빌드합니다."},
+  {"field": "use_cases_ko", "url": "https://azure.microsoft.com/ko-kr/products/machine-learning", "quote": "고객에게 적합한 제안과 전반적으로 더 나은 서비스를 제공할 수 있는 기계 학습 솔루션을 구축할 수 있습니다."},
+  {"field": "use_cases_ko", "url": "https://azure.microsoft.com/ko-kr/products/machine-learning", "quote": "Azure Machine Learning을 사용하여 여러 분산 데이터 세트에서 모델을 학습시킬 수 있습니다."},
+  {"field": "use_cases_ko", "url": "https://azure.microsoft.com/ko-kr/products/machine-learning", "quote": "Azure Machine Learning 스튜디오에서 노코드 자동화된 기계 학습을 사용하여 분류 모델을 학습시킵니다."},
+  {"field": "pricing", "url": "https://azure.microsoft.com/ko-kr/products/machine-learning", "quote": "사전 투자 비용 없이 필요한 만큼만 요금 지불"},
+  {"field": "pricing", "url": "https://azure.microsoft.com/ko-kr/pricing/", "quote": "사용 중인 클라우드 리소스에 대해서만 요금을 지불하고 성장함에 따라 확장할 수 있는 무료 평가판 또는 사용량 기반 가격 책정 모델을 시작하세요."},
+  {"field": "api", "url": "https://azure.microsoft.com/ko-kr/products/machine-learning", "quote": "Python SDK를 사용하여 프로덕션 기계 학습 파이프라인을 만듭니다."},
+  {"field": "platforms", "url": "https://azure.microsoft.com/ko-kr/products/machine-learning", "quote": "Azure 시작하기 스튜디오에서 시작"},
+  {"field": "korean_support", "url": "https://azure.microsoft.com/ko-kr/products/machine-learning", "quote": "화면에 보이는 언어 이름: 한국어"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}
