@@ -54,10 +54,10 @@ import { R } from '~/lib/routes';
 </PageLayout>
 
 <script>
-  type Row = { n: string; e: string; k?: string; c: number; d: string; s?: string };
+  import { norm } from '~/lib/search-norm';
+  type Row = { n: string; e: string; k?: string; a?: string; c: number; d: string; s?: string };
   type Index = { date: string; n: number; cats: string[]; tools: Row[] };
   const PAGE = 60;
-  const norm = (s: string) => (s || '').toLowerCase().replace(/\s+/g, '');
   const fill = (s: string, v: Record<string, string | number>) => s.replace(/\{(\w+)\}/g, (_, k) => String(v[k] ?? ''));
 
   class AiSearchPage extends HTMLElement {
@@ -98,8 +98,8 @@ import { R } from '~/lib/routes';
         const q = norm(raw.trim());
         const idx = this.idx || (await load);
         if (!q) { this.hits = []; render(); status.textContent = fill(T.idle, { n: idx.n }); return; }
-        const name = (r: Row) => norm(r.n).startsWith(q) || norm(r.e).startsWith(q) || norm(r.k || '').startsWith(q);
-        const inName = (r: Row) => norm(r.n).includes(q) || norm(r.e).includes(q) || norm(r.k || '').includes(q);
+        const name = (r: Row) => norm(r.n).startsWith(q) || norm(r.e).startsWith(q) || norm(r.k || '').startsWith(q) || (r.a || '').split(' ').some((x) => norm(x).startsWith(q));
+        const inName = (r: Row) => norm(r.n).includes(q) || norm(r.e).includes(q) || norm(r.k || '').includes(q) || norm(r.a || '').includes(q);
         const inRest = (r: Row) => norm(idx.cats[r.c] || '').includes(q) || norm(r.d).includes(q);
         const a: Row[] = [], b: Row[] = [], c: Row[] = [];
         for (const r of idx.tools) { if (name(r)) a.push(r); else if (inName(r)) b.push(r); else if (inRest(r)) c.push(r); }

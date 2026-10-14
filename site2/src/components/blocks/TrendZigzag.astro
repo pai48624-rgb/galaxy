@@ -1,0 +1,95 @@
+---
+// AI 트렌드 목록 — 번갈아 배치(2026-10-14 사용자 시안: 번호+제목+요약+날짜·분류 / 사진 카드, 줄마다 좌우 바뀜).
+// 껍데기만 시안을 따르고 색·글꼴은 사이트 토큰. 사진 = 글 본문 첫 그림, 없으면 대표 태그를 넣은 사이트 색 상자.
+// 빌드 때 정적으로 그리고, 한국어판은 열릴 때 /api/trend/latest 로 새 글을 같은 모양으로 다시 그림(조회수는 세지 않으므로 표시 안 함).
+import { R } from '~/lib/routes';
+import { TREND_API } from '~/config';
+import { fmtDate } from '~/utils/utils';
+import type { TrendPost } from '~/lib/data';
+import { tx, trendEn } from '~/i18n/tr';
+import { ui } from '~/i18n/ui';
+export interface Props { posts: TrendPost[]; lang?: 'ko' | 'en' }
+const { posts, lang = 'ko' } = Astro.props;
+const empty = ui(lang).home.noPosts;
+const badge = ui(lang).trend.koreanBadge;
+const tagOf = (p: TrendPost) => (lang === 'en' ? p.tags.find((t) => /^[A-Za-z]/.test(t)) : p.tags[0]) || '';
+---
+
+<trend-zigzag data-api={lang === 'en' ? '' : TREND_API} data-lang={lang}>
+  <ol class="list-none p-0 m-0 tz-list" data-list>
+    {posts.length ? posts.map((p, i) => {
+      const href = R.trendPost(p.id, lang);
+      const title = (lang === 'en' && trendEn(p.id)?.title) || tx(p.title, lang);
+      const tag = tagOf(p);
+      return (
+        <li class:list={['tz-row', i % 2 ? 'tz-flip' : '']}>
+          <a href={href} class="tz-text group" hreflang={lang === 'en' && !trendEn(p.id) ? 'ko' : undefined}>
+            <div class="flex gap-3 items-start">
+              <span class="tz-num">{i + 1}</span>
+              <b class="tz-title group-hover:text-link">{title}</b>
+            </div>
+            <p class="tz-sum">{tx(p.summary, lang)}</p>
+            <div class="tz-meta">
+              <span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M16 3v4M8 3v4M4 11h16"/></svg>{fmtDate(p.created_at, lang)}</span>
+              {tag && <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l3 3h7a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2"/></svg>{tag}</span>}
+              {badge && !trendEn(p.id) && <span class="tz-badge">{badge}</span>}
+            </div>
+          </a>
+          <a href={href} class="tz-pic" tabindex="-1" aria-hidden="true">
+            {p.img ? <img src={p.img} alt="" loading={i < 2 ? 'eager' : 'lazy'} decoding="async" /> : <span class="tz-ph"><i>✦</i><b>{tag || 'AI'}</b></span>}
+          </a>
+        </li>
+      );
+    }) : <li class="py-4 text-muted">{empty}</li>}
+  </ol>
+</trend-zigzag>
+
+<style is:global>
+  .tz-row { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.25rem; align-items: center; padding: 1.75rem 0; border-bottom: 1px solid rgb(30 41 59); }
+  .tz-row:last-child { border-bottom: 0; }
+  @media (min-width: 768px) {
+    .tz-row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 2.5rem; }
+    .tz-row.tz-flip .tz-text { order: 2; }
+  }
+  .tz-text { display: block; min-width: 0; }
+  .tz-num { font-family: Georgia, 'Times New Roman', serif; font-size: 2.6rem; line-height: .9; font-weight: 700; color: var(--aw-color-primary); opacity: .85; flex: none; }
+  .tz-title { display: block; font-size: 1.3rem; line-height: 1.45; font-weight: 700; color: var(--aw-color-text-heading); word-break: keep-all; }
+  .tz-sum { word-break: keep-all; margin-top: .85rem; color: var(--aw-color-text-muted); line-height: 1.75; }
+  .tz-meta { margin-top: 1rem; display: flex; flex-wrap: wrap; gap: .4rem 1rem; font-size: .8rem; color: var(--aw-color-text-muted); }
+  .tz-meta > span { display: inline-flex; align-items: center; gap: .35rem; }
+  .tz-meta svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .tz-badge { border: 1px solid rgb(71 85 105); border-radius: 999px; padding: 0 .5rem; font-size: 11px; }
+  .tz-pic { display: block; min-width: 0; border: 1px solid rgb(51 65 85); border-radius: 1rem; padding: .5rem; background: rgb(15 23 42 / .4); transition: border-color .15s; }
+  .tz-pic:hover { border-color: rgb(var(--aw-color-primary-rgb, 124 108 240) / .7); }
+  .tz-pic img, .tz-ph { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: .75rem; }
+  .tz-pic img { object-fit: contain; background: rgb(2 6 23); }  /* 글 첫 그림은 글자 띠(3:1)가 많아 자르지 않고 통째로 */
+  .tz-ph { display: grid; place-items: center; align-content: center; gap: .4rem; background: radial-gradient(circle at 30% 25%, rgb(124 108 240 / .35), transparent 55%), radial-gradient(circle at 75% 80%, rgb(56 189 248 / .18), transparent 50%), rgb(2 6 23); color: var(--aw-color-text-heading); text-align: center; padding: 1rem; }
+  .tz-ph i { font-style: normal; font-size: 1.6rem; color: var(--aw-color-primary); }
+  .tz-ph b { font-size: 1.35rem; font-weight: 700; word-break: keep-all; }
+</style>
+
+<script>
+  class TrendZigzag extends HTMLElement {
+    async connectedCallback() {
+      const api = this.dataset.api, list = this.querySelector('[data-list]') as HTMLElement | null;
+      if (!api || !list) return;
+      try {
+        const r = await fetch(api, { cache: 'default' });
+        if (!r.ok) return;
+        const posts = ((await r.json()).posts || []) as any[];
+        if (!posts.length) return;
+        const esc = (s: string) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]!));
+        const fmt = (iso: string) => { const d = new Date(new Date(iso).getTime() + 9 * 3600e3); return `${d.getUTCFullYear()}년 ${d.getUTCMonth() + 1}월 ${d.getUTCDate()}일`; };
+        // 아이콘·모양은 빌드 때 그린 첫 줄에서 그대로 복사(모양 한 곳)
+        const cal = list.querySelector('.tz-meta span svg')?.outerHTML || '';
+        const fold = list.querySelectorAll('.tz-meta span svg')[1]?.outerHTML || '';
+        list.innerHTML = posts.map((p, i) => {
+          const href = `/trend/${p.id}`, tag = (p.tags || [])[0] || '';
+          const img = /^https:/.test(p.img || '') ? `<img src="${esc(p.img)}" alt="" loading="${i < 2 ? 'eager' : 'lazy'}" decoding="async">` : `<span class="tz-ph"><i>✦</i><b>${esc(tag || 'AI')}</b></span>`;
+          return `<li class="tz-row${i % 2 ? ' tz-flip' : ''}"><a href="${href}" class="tz-text group"><div class="flex gap-3 items-start"><span class="tz-num">${i + 1}</span><b class="tz-title group-hover:text-link">${esc(p.title)}</b></div><p class="tz-sum">${esc(p.summary)}</p><div class="tz-meta"><span>${cal}${fmt(p.created_at)}</span>${tag ? `<span>${fold}${esc(tag)}</span>` : ''}</div></a><a href="${href}" class="tz-pic" tabindex="-1" aria-hidden="true">${img}</a></li>`;
+        }).join('');
+      } catch (e) { /* 실패하면 빌드 때 목록 그대로 */ }
+    }
+  }
+  if (!customElements.get('trend-zigzag')) customElements.define('trend-zigzag', TrendZigzag);
+</script>

@@ -9,7 +9,6 @@ const { d, class: className = '', lang = 'ko' } = Astro.props;
 const groups = [
   // 머리줄(3D 지도·홈·트렌드·목록·분야·여행·게시판)과 겹치지 않는 것만 — 2026-10-14 사용자 "왼쪽 중복 너무 많다"
   { title: '더 보기', en: 'More', items: [[R.combos(), 'AI 조합 추천', 'tabler:puzzle', '686', 'AI Combos'], [R.pricing(), '요금제별 AI', 'tabler:coin', '', 'Pricing'], [R.rank(), '가장 밝은 별', 'tabler:trophy', '10', 'Brightest stars'], [R.search(), 'AI 검색', 'tabler:search', '', 'Search']] },
-  { title: '내 계정', en: 'Account', items: [[R.login(), '로그인', 'tabler:login', '', 'Sign in']] },
 ];
 const link = 'flex items-center gap-2 rounded-md px-2.5 py-1.5 text-sm text-default hover:bg-slate-800 hover:text-link';
 const here = Astro.url.pathname.replace(/^\/en(?=\/)/, '');  // 영어판도 같은 칸을 "지금 화면"으로

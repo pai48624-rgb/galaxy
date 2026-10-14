@@ -1,4 +1,5 @@
 ---
+import Card from '~/components/ui/Card.astro';
 // 분야 페이지(/category/<slug>/) 21쪽 — 기존 renderCategory 와 같은 내용. 영어판 /en/category/<slug>/ 는 이 파일을 lang="en" 으로
 import PageLayout from '~/layouts/PageLayout.astro';
 import Breadcrumbs from '~/components/common/Breadcrumbs.astro';
@@ -23,20 +24,21 @@ import { R } from '~/lib/routes';
 ---
 
 <PageLayout metadata={{ title: U.pTitle(cn, list.length), description: clip(U.pDesc(cn, list.length, list.slice(0, 6).map((t) => toolName(t, lang)).join(', ')), 155), canonical: R.category(lang, c.slug), lang }}>
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 py-7 md:py-9">
+  <div class="max-w-[1320px] mx-auto px-4 sm:px-6 py-7 md:py-9">
     <Breadcrumbs items={[{ text: T.common.aiList, href: R.ai(lang) }, { text: T.common.fields, href: R.category(lang) }, { text: cn }]} class="mb-3" />
     <h1 class="text-2xl md:text-3xl font-bold leading-tighter tracking-tighter font-heading text-heading">{U.pH1(cn, list.length)}</h1>
     <p class="mt-2 text-base text-muted text-pretty">{U.pLead(c.name_en)}</p>
-    <ul class="divide-y divide-slate-800 mt-8">
+    <!-- AI 목록 = 분야 목록(/category/)과 같은 카드 상자(10/14 사용자). 카드 전체가 링크, 아래 줄에 가는 곳 표시 -->
+    <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 mt-8">
       {list.map((t) => (
-        <li class="py-3">
-          <a href={lp(toolHref(t), lang)} class="font-bold text-heading hover:text-link">{toolName(t, lang)}</a>
-          {pages.has(t.slug) && <span class="ml-2 text-xs text-link">{T.common.detail}</span>}
-          {t.pricing && <span class="ml-2 text-xs text-muted">· {toolPricing(t.pricing, lang)}</span>}
-          <small class="block text-sm text-muted mt-0.5">{toolDesc(t, lang)}</small>
-        </li>
+        <Card href={lp(toolHref(t), lang)} class="flex flex-col">
+          <span class="text-xs text-link">{t.pricing ? toolPricing(t.pricing, lang) : ' '}</span>
+          <h3 class="text-lg font-bold text-heading mt-1">{toolName(t, lang)}</h3>
+          <p class="text-sm text-muted mt-2 flex-1">{toolDesc(t, lang)}</p>
+          <span class:list={['text-xs mt-3', pages.has(t.slug) ? 'text-link font-semibold' : 'text-muted']}>{pages.has(t.slug) ? T.common.cardDetail : T.common.cardMap} →</span>
+        </Card>
       ))}
-    </ul>
+    </div>
     <SectionHead title={U.others} href={R.category(lang)} more={T.common.seeAllMore} />
     <div class="flex flex-wrap gap-2">
       {others.map((x) => <a href={R.category(lang, x.slug)} class="rounded-full border border-slate-700 px-3.5 py-1.5 text-sm hover:border-primary hover:text-link transition">{catLabel(x, lang)} <span class="text-muted">{x.n}</span></a>)}

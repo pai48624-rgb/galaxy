@@ -3,7 +3,7 @@
 // 원본: ../data/ai_combos.json(686) · ai_enrichment.json(731) · ai_landscape.json(731) · ai_top_rank.json(10) · ai_top10_relations.json(10) · dist/data/ai_pages.json(74)
 import { readFileSync, existsSync, mkdirSync, writeFileSync, statSync } from 'node:fs';
 import { join } from 'node:path';
-import { loadTools, toolIndex, aiPageSlugs, combos, top10Relations, brightestStars, categories, GALAXY_ROOT, type Tool } from '~/lib/data';
+import { searchAlias, loadTools, toolIndex, aiPageSlugs, combos, top10Relations, brightestStars, categories, GALAXY_ROOT, type Tool } from '~/lib/data';
 import { clip } from '~/utils/utils';
 
 /** 자료 정리일(화면 출처 표기용) — 자료 파일 수정일 중 가장 최근 날짜(KST) */
@@ -186,7 +186,7 @@ export function searchIndex2() {
   const ci = new Map(cats.map((c, i) => [c, i]));
   return {
     date: dataDate(), n: tools.length, cats,
-    tools: tools.map((t) => ({ n: t.name_ko || t.name, e: t.name_en, c: ci.get(t.category)!, d: clip(t.desc_ko, 60), ...(pages().has(t.slug) ? { s: t.slug } : {}) })),
+    tools: tools.map((t) => ({ n: t.name_ko || t.name, e: t.name_en, c: ci.get(t.category)!, d: clip(t.desc_ko, 60), ...(searchAlias(t.slug) ? { a: searchAlias(t.slug) } : {}), ...(pages().has(t.slug) ? { s: t.slug } : {}) })),
   };
 }
 /** 빌드 때 public/data/search-index.json 을 다시 쓴다(검색 화면 frontmatter 에서 호출). 되돌려주는 값은 쓴 바이트 수. */

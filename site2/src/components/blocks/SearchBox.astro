@@ -25,7 +25,8 @@ import { R } from '~/lib/routes';
 </ai-search>
 
 <script>
-  type Row = { n: string; e: string; s: string; c: string; k?: string; p: number };
+  import { norm } from '~/lib/search-norm';
+  type Row = { n: string; e: string; s: string; c: string; k?: string; a?: string; p: number };
   let index: Row[] | null = null;
   let loading: Promise<Row[]> | null = null;
   const load = () => (loading ||= fetch('/search-index.json').then((r) => r.json()).then((d) => (index = d)));
@@ -58,11 +59,12 @@ import { R } from '~/lib/routes';
         input.setAttribute('aria-expanded', String(items.length > 0));
       };
       const search = async () => {
-        const q = input.value.trim().toLowerCase();
+        const q = norm(input.value);
         if (!q) return close();
         const rows = index || (await load());
-        const starts = rows.filter((r) => r.n.toLowerCase().startsWith(q) || r.e.toLowerCase().startsWith(q));
-        const incl = rows.filter((r) => !starts.includes(r) && (r.n.toLowerCase().includes(q) || r.e.toLowerCase().includes(q)));
+        const al = (r: Row) => (r.a || '').split(' ');
+        const starts = rows.filter((r) => norm(r.n).startsWith(q) || norm(r.e).startsWith(q) || al(r).some((x) => norm(x).startsWith(q)));
+        const incl = rows.filter((r) => !starts.includes(r) && (norm(r.n).includes(q) || norm(r.e).includes(q) || norm(r.a).includes(q)));
         items = [...starts, ...incl].slice(0, 8); active = -1; render();
       };
       input.addEventListener('focus', () => { load(); });

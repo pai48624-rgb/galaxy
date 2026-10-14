@@ -248,18 +248,20 @@ export function koreaArticles(today = kstToday()): KoreaArticle[] {
 // ---- AI 트렌드 글(빌드 때 Supabase 공개 읽기 — 워커 trendList 와 같은 조회) ----
 const UPSTREAM = 'https://urflispegkzouclljxzg.supabase.co';
 const ANON_KEY = 'sb_publishable_MtDGFqdSWe09vUXg2ALtqw_5p1gZVCr'; // 기존 index.html·gen-seo-pages.mjs 에 있는 공개 키
-export interface TrendPost { id: number; title: string; tags: string[]; created_at: string; summary: string }
+export interface TrendPost { id: number; title: string; tags: string[]; created_at: string; summary: string; img?: string }
+/** 글 본문의 첫 그림(https만) — 목록 사진 칸용 */
+export const firstImg = (html?: string) => { const m = String(html || '').match(/<img[^>]+src="(https:[^"]+)"/i); return m ? m[1] : undefined; };
 const summary = (body: string, n: number) => { const s = String(body || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim(); return s.length > n ? s.slice(0, n - 1) + '…' : s; };
 let _trend: TrendPost[] | null = null;
 export async function trendPosts(): Promise<TrendPost[]> {
   if (_trend) return _trend;
   try {
-    const r = await fetch(`${UPSTREAM}/rest/v1/board_posts?select=id,title,body,tags,created_at&board=eq.ai_trend&hidden=eq.false&order=created_at.desc&limit=100`, {
+    const r = await fetch(`${UPSTREAM}/rest/v1/board_posts?select=id,title,body,body_html,tags,created_at&board=eq.ai_trend&hidden=eq.false&order=created_at.desc&limit=100`, {
       headers: { apikey: ANON_KEY, Authorization: `Bearer ${ANON_KEY}` },
     });
     if (!r.ok) throw new Error(String(r.status));
     const rows = (await r.json()) as any[];
-    _trend = rows.map((p) => ({ id: p.id, title: p.title, tags: p.tags || [], created_at: p.created_at, summary: summary(p.body, 120) }));
+    _trend = rows.map((p) => ({ id: p.id, title: p.title, tags: p.tags || [], created_at: p.created_at, summary: summary(p.body, 120), img: firstImg(p.body_html) }));
   } catch (e) {
     console.warn('[site2] 트렌드 글 목록을 못 읽음(빌드는 계속):', (e as Error).message);
     _trend = [];
@@ -293,7 +295,13 @@ async function _homeData(): Promise<HomeData> {
 }
 
 // ---- 검색 자동완성 색인(/search-index.json): 이름 731개 + 안내 페이지 유무 ----
+// 검색 별칭(src/data/search-aliases.json, 흔히 부르는 이름 → slug)
+let _alias: Record<string, string[]> | null = null;
+export function searchAlias(slug: string): string {
+  if (!_alias) { const f = join(GALAXY_ROOT, 'site2', 'src', 'data', 'search-aliases.json'); _alias = existsSync(f) ? JSON.parse(readFileSync(f, 'utf8')) : {}; }
+  const v = (_alias as any)[slug]; return Array.isArray(v) ? v.join(' ') : '';
+}
 export function searchIndex() {
   const pages = new Set(aiPageSlugs());
-  return loadTools().map((t) => ({ n: t.name, e: t.name_en, s: t.slug, c: t.category, k: t.category_en, p: pages.has(t.slug) ? 1 : 0 }));  // k = 분야 영어(영어판 자동완성)
+  return loadTools().map((t) => ({ n: t.name, e: t.name_en, s: t.slug, c: t.category, k: t.category_en, p: pages.has(t.slug) ? 1 : 0, ...(searchAlias(t.slug) ? { a: searchAlias(t.slug) } : {}) }));  // a = 별칭, k = 분야 영어(영어판 자동완성)
 }

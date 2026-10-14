@@ -3,6 +3,7 @@
 // 영어판: 이름=name_en, 설명=desc_en, 요금 정책·상세=번역 캐시, 주소=/en/…
 import type { PricingRow } from '~/lib/data2';
 import { ui } from '~/i18n/ui';
+import { R } from '~/lib/routes';
 import { lp, tx, toolName, toolDesc, toolCat, type Lang } from '~/i18n/tr';
 export interface Props { r: PricingRow; lang?: Lang }
 const { r, lang = 'ko' } = Astro.props;
@@ -15,7 +16,7 @@ const policy = tx(r.policy, lang), detail = tx(r.detail, lang);
   <div class="flex flex-wrap items-baseline gap-x-2 gap-y-0.5 min-w-0">
     <a href={lp(r.href, lang)} class="font-bold text-heading hover:text-link break-words">{toolName(r.t, lang)}</a>
     {lang === 'ko' && r.t.name_ko && r.t.name_en !== r.t.name && <span class="text-xs text-muted break-words">{r.t.name_en}</span>}
-    {r.hasPage && <span class="text-xs text-link">{T.common.detail}</span>}
+    {r.hasPage && <a href={R.ai(lang, r.t.slug)} class="text-xs text-link hover:underline">{T.common.detail}</a>}
     {r.catHref ? <a href={lp(r.catHref, lang)} class="text-xs text-muted hover:text-link">· {toolCat(r.t, lang)}</a> : <span class="text-xs text-muted">· {toolCat(r.t, lang)}</span>}
   </div>
   {desc && <p class="text-sm text-muted break-words">{desc}</p>}

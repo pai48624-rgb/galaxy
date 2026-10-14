@@ -360,8 +360,8 @@ function trendSide(more) {
 // /api/trend/latest — 공통 껍데기(chrome.js)가 "이번 주 신호" 띠·최신 글 칸을 채울 때 씀. 5분 캐시.
 async function trendLatest() {
   let posts = [];
-  try { posts = await sbGet("board_posts?select=id,title,body,tags,created_at&board=eq.ai_trend&hidden=eq.false&order=created_at.desc&limit=12"); } catch (e) {}
-  const out = posts.map((p) => ({ id: p.id, title: p.title, tags: p.tags || [], created_at: p.created_at, summary: summary(p.body, 120) }));
+  try { posts = await sbGet("board_posts?select=id,title,body,body_html,tags,created_at&board=eq.ai_trend&hidden=eq.false&order=created_at.desc&limit=12"); } catch (e) {}
+  const out = posts.map((p) => { const m = String(p.body_html || "").match(/<img[^>]+src="(https:[^"]+)"/i); return { id: p.id, title: p.title, tags: p.tags || [], created_at: p.created_at, summary: summary(p.body, 120), ...(m ? { img: m[1] } : {}) }; });  // img = 본문 첫 그림(목록 사진 칸, 10/14)
   return new Response(JSON.stringify({ posts: out, total: out.length }), { headers: { "content-type": "application/json; charset=utf-8", "cache-control": "public, max-age=300", "access-control-allow-origin": "*" } });
 }
 

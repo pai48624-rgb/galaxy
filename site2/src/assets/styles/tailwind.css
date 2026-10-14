@@ -159,3 +159,6 @@ html {
   color: var(--shiki-dark) !important;
   background-color: var(--shiki-dark-bg) !important;
 }
+
+/* 버튼에 손 모양 커서(Tailwind 4 기본값은 화살표) — 로그인 G/K/N·채팅·언어 등 모든 버튼(10/14 사용자) */
+button:not(:disabled), [role="button"], summary, label[for] { cursor: pointer; }

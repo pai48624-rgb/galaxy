@@ -8,7 +8,7 @@ const ko = {
   common: {
     seeAll: '전체 보기', seeAllMore: '모두 보기', fieldAll: '분야 전체', more: '더 보기', less: '접기',
     openMap: '지도 열기', mapAll: '3D 지도에서 전체 보기', map3d: '3D 지도', trendPosts: 'AI 트렌드 글',
-    rss: 'RSS 구독', subscribeTitle: '새 글 받아 보기', openMapCard: '3D 성단 지도 열기', detail: '자세히', guide: '안내',
+    rss: 'RSS 구독', subscribeTitle: '새 글 받아 보기', openMapCard: '3D 성단 지도 열기', detail: '자세히', guide: '안내', cardDetail: '자세히 보기', cardMap: '3D 지도에서 보기',
     official: '공식 사이트', aiList: 'AI 목록', fields: '분야', count: (n: number) => `${n}개`, times: (n: number) => `${n}회`,
     source: '출처', dataDate: '자료 정리일', search: 'AI 검색', combos: 'AI 조합 추천', pricing: '요금제별 AI', rank: '가장 밝은 별 순위',
     freeStart: '무료로 시작하는 AI', findOnMap: '지도에서 찾기',
@@ -177,7 +177,7 @@ const en: Dict = {
   common: {
     seeAll: 'See all', seeAllMore: 'See all', fieldAll: 'Whole field', more: 'Show more', less: 'Show less',
     openMap: 'Open the map', mapAll: 'See everything on the 3D map', map3d: '3D map', trendPosts: 'AI trend posts',
-    rss: 'Subscribe via RSS', subscribeTitle: 'Get new posts', openMapCard: 'Open the 3D galaxy map', detail: 'Guide', guide: 'guide',
+    rss: 'Subscribe via RSS', subscribeTitle: 'Get new posts', openMapCard: 'Open the 3D galaxy map', detail: 'Guide', guide: 'guide', cardDetail: 'Read the guide', cardMap: 'View on the 3D map',
     official: 'Official site', aiList: 'AI tools', fields: 'Fields', count: (n: number) => `${n}`, times: (n: number) => `${n}×`,
     source: 'Source', dataDate: 'Data compiled', search: 'AI search', combos: 'AI combos', pricing: 'AI by pricing', rank: 'Brightest stars ranking',
     freeStart: 'AI you can start for free', findOnMap: 'Find on the map',
