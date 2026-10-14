@@ -23,7 +23,7 @@ def hangul_left(text):
 
 def status(url):
     try:
-        with urllib.request.urlopen(urllib.request.Request(url), timeout=20) as r:
+        with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (site2-qa)"}), timeout=20) as r:
             return r.status
     except urllib.error.HTTPError as e:
         return e.code
@@ -75,10 +75,10 @@ with sync_playwright() as p:
         # 영어 목록 카드 → 영어 글
         for i in IDS:
             page.goto(f"{BASE}/en/trend/", wait_until="networkidle")
-            loc = page.locator(f'trend-list a[href="/en/trend/{i}/"]').first
+            loc = page.locator(f'trend-zigzag a.tz-text[href="/en/trend/{i}/"]').first
             if not loc.count():
                 log(f"/en/trend/ 카드 {i}", False, "카드 없음"); continue
-            title = loc.locator("b").inner_text()
+            title = loc.locator("b.tz-title").inner_text()
             loc.click(); page.wait_for_load_state("networkidle"); time.sleep(0.3)
             land = page.evaluate("location.pathname"); lang = page.evaluate("document.documentElement.lang")
             log(f"/en/trend/ 카드 '{title[:50]}' 클릭", land == f"/en/trend/{i}/" and lang == "en", f"→ {land} lang={lang}")

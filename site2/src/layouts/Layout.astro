@@ -37,12 +37,15 @@ const lang = metadata.lang || 'ko';
     document.querySelectorAll("input[type=search]").forEach(function(i){i.placeholder=l==="en"?"Search AI tools":"AI 이름 검색";});
     document.querySelectorAll("a[data-lang]").forEach(function(a){var on=a.getAttribute("data-lang")===l; a.classList.toggle("bg-primary",on); a.classList.toggle("text-white",on); a.classList.toggle("font-semibold",on); a.classList.toggle("text-muted",!on);});
   }
-  if(lang!==page){
+  /* 본문의 다른 언어 링크(예: 영어 글의 'Read the Korean original', hreflang 표시)를 직접 누른 경우엔 그 한 번만 넘기지 않음 — 언어 기억은 그대로(10/14 버그: 눌러도 영어 글로 되돌아옴) */
+  var skip=""; try{ skip=sessionStorage.getItem("galaxyLangSkip")||""; sessionStorage.removeItem("galaxyLangSkip"); }catch(e){}
+  if(lang!==page && skip!==location.pathname){
     var alt=document.querySelector('link[rel=alternate][hreflang="'+lang+'"]');
     if(alt){ try{ var u=new URL(alt.getAttribute("href"),location.href); if(u.pathname!==location.pathname){ location.replace(u.pathname+(location.search||u.search)+location.hash); return;  /* 검색어(?q=)·로그인 복귀 해시(#access_token)도 그대로 가져감 */ } }catch(e){} }
   }
   apply(lang);  /* 영어 페이지의 왼쪽 메뉴 등 기본이 한국어인 문구도 고른 언어로 */
   document.addEventListener("click",function(ev){var a=ev.target.closest&&ev.target.closest("a[data-lang]"); if(a) set(a.getAttribute("data-lang"));},true);
+  document.addEventListener("click",function(ev){var a=ev.target.closest&&ev.target.closest("a[hreflang]:not([data-lang])"); if(!a||a.getAttribute("hreflang")===lang) return; try{ sessionStorage.setItem("galaxyLangSkip",new URL(a.getAttribute("href"),location.href).pathname); }catch(e){}},true);
 })();
     </script>
     <Intersect />

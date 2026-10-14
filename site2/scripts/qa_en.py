@@ -32,7 +32,7 @@ def hangul_left(text):
 
 def status(url):
     try:
-        with urllib.request.urlopen(urllib.request.Request(url), timeout=20) as r:
+        with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (site2-qa)"}), timeout=20) as r:
             return r.status
     except urllib.error.HTTPError as e:
         return e.code

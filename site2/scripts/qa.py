@@ -24,7 +24,7 @@ SKIP_LINK = re.compile(r"^(https?:|mailto:|tel:|#|javascript:)|^/map/app/|^/gala
 
 def head(url):
     try:
-        req = urllib.request.Request(url, method="GET")
+        req = urllib.request.Request(url, method="GET", headers={"User-Agent": "Mozilla/5.0 (site2-qa)"})
         with urllib.request.urlopen(req, timeout=20) as r:
             return r.status
     except urllib.error.HTTPError as e:
