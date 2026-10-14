@@ -1,0 +1,1135 @@
+{
+ "generated": "2026-10-14",
+ "source": "/30_data/raw/galaxy_ai_tools_20261014",
+ "rule": {
+  "minWhat": 150,
+  "minFeatures": 5,
+  "minEvidence": 8
+ },
+ "count": 19,
+ "eligible": 17,
+ "tools": {
+  "falcon": {
+   "name_en": "Falcon",
+   "checked": "2026-10-14",
+   "company": "Technology Innovation Institute (TII)",
+   "one_liner": "아랍에미리트 기술혁신연구소(TII)가 공개하는 오픈소스·오픈 액세스 대규모 언어모델(LLM) 제품군.",
+   "what": "Falcon은 TII가 만든 생성형 대규모 언어모델 시리즈로, Falcon-H1·Falcon-E·Falcon 3·Falcon Mamba 7B·Falcon 2·180B·40B 등 여러 크기의 모델과 REFINEDWEB 데이터셋으로 구성된다. 페이지에 따르면 모든 Falcon 모델을 오픈소스 또는 오픈 액세스로 공개하며, Falcon 180B는 연구·상업용 오픈 액세스 모델이다. 이미지 이해(Falcon Perception), 수학·코딩 추론(Falcon H1R 7B), 아랍어 특화(Falcon Arabic, Falcon-H1-Arabic) 모델도 있다. Falcon 3는 노트북 같은 가벼운 환경에서도 실행되도록 설계됐다고 소개한다.",
+   "features": [
+    "Transformer와 Mamba를 결합한 하이브리드 구조(Falcon-H1)",
+    "수학·코딩·논리 추론에 특화된 7B 모델(Falcon H1R 7B)",
+    "자연어 프롬프트로 이미지를 이해하는 멀티모달 모델(Falcon Perception)",
+    "아랍어 표준어·방언 특화 모델(Falcon Arabic, Falcon-H1-Arabic)",
+    "텍스트·이미지에 더해 영상·음성 데이터 처리(Falcon 3)",
+    "노트북 등 가벼운 인프라에서 실행 가능(Falcon 3)",
+    "상태공간 언어모델(SSLM) 구조의 Falcon Mamba 7B",
+    "학습용 REFINEDWEB 데이터셋 공개"
+   ],
+   "uses": [
+    "연구자·기업이 연구 및 상업 용도로 모델을 내려받아 사용(Falcon 180B·40B)",
+    "아랍어권 서비스용 언어 AI 구축"
+   ],
+   "free": null,
+   "plans": [],
+   "pricing_url": null,
+   "open_source": "오픈소스·오픈 액세스 (라이선스 이름은 페이지에 없음, 모델별 약관 별도)",
+   "api": null,
+   "platforms": [],
+   "korean": null,
+   "github": null,
+   "sources": [
+    "https://falconllm.tii.ae"
+   ],
+   "eligible": true
+  },
+  "hugging-face": {
+   "name_en": "Hugging Face",
+   "checked": "2026-10-14",
+   "company": "Hugging Face",
+   "one_liner": "머신러닝 커뮤니티가 모델·데이터셋·애플리케이션을 함께 만드는 협업 플랫폼.",
+   "what": "Hugging Face는 머신러닝 커뮤니티가 모델, 데이터셋, 애플리케이션(Spaces)을 올리고 함께 작업하는 플랫폼이다. 공개 모델·데이터셋·앱은 무제한으로 호스팅할 수 있으며 200만 개 이상의 모델과 50만 개 이상의 데이터셋을 둘러볼 수 있다. Transformers, Diffusers, Datasets 등 오픈소스 ML 라이브러리를 만든다. 유료로 팀·기업용 플랫폼, 추론 엔드포인트와 GPU 컴퓨팅을 제공한다.",
+   "features": [
+    "모델·데이터셋·Spaces 호스팅(Git 기반 Hub)",
+    "200만 개 이상 모델, 50만 개 이상 데이터셋 탐색",
+    "Inference Providers — 여러 제공사 모델을 하나의 API로 호출",
+    "Inference Endpoints — 전용 관리형 인프라에 모델 배포",
+    "Transformers·Diffusers·Datasets 등 오픈소스 라이브러리",
+    "HuggingChat 채팅 서비스",
+    "Team & Enterprise — SSO·감사 로그·리소스 그룹"
+   ],
+   "uses": [
+    "개발자·연구자가 모델·데이터셋을 공유하고 ML 포트폴리오 구축",
+    "팀이 보안·권한 관리가 필요한 AI 개발",
+    "모델을 GPU 인프라에 배포해 서비스"
+   ],
+   "free": "있음 (공개 모델·데이터셋·앱 무제한 호스팅)",
+   "plans": [
+    {
+     "name": "Team & Enterprise",
+     "price": 20,
+     "currency": "USD",
+     "period": "month",
+     "limits": "사용자당 시작가, SSO·감사 로그"
+    },
+    {
+     "name": "Compute (GPU)",
+     "price": 0.6,
+     "currency": "USD",
+     "period": "hour",
+     "limits": "GPU 시간당 시작가"
+    }
+   ],
+   "pricing_url": "https://huggingface.co/pricing",
+   "open_source": null,
+   "api": "있음",
+   "platforms": [
+    "웹",
+    "API",
+    "CLI"
+   ],
+   "korean": null,
+   "github": null,
+   "sources": [
+    "https://huggingface.co",
+    "https://huggingface.co/docs"
+   ],
+   "eligible": true
+  },
+  "mistral-large": {
+   "name_en": "Mistral Large",
+   "checked": "2026-10-14",
+   "company": "Mistral AI",
+   "one_liner": "Mistral AI의 최상위(플래그십) 텍스트 생성 모델로, 복잡한 다국어 추론·코드 생성에 쓰인다.",
+   "what": "Mistral Large는 Mistral AI가 내놓은 최상위 텍스트 생성 모델로, 다국어 추론과 텍스트 이해·변환·코드 생성에 쓰인다. 영어·프랑스어·스페인어·독일어·이탈리아어를 기본으로 잘 다루며 32K 토큰 문맥 창을 가진다. 함수 호출과 JSON 출력 모드를 지원해 앱 개발에 연동할 수 있다. la Plateforme(API)와 Azure로 제공되며, 자체 환경 배포도 가능하다고 안내한다.",
+   "features": [
+    "복잡한 다국어 추론·텍스트 이해·변환·코드 생성",
+    "영어·프랑스어·스페인어·독일어·이탈리아어 기본 지원",
+    "32K 토큰 문맥 창",
+    "함수 호출(function calling) 기본 지원",
+    "JSON 형식 출력 모드",
+    "la Plateforme API와 Azure AI Studio로 제공",
+    "자체 환경 배포(Self-deployment) 가능"
+   ],
+   "uses": [
+    "개발자가 API로 앱·서비스를 만들고 함수 호출로 내부 코드·DB와 연동",
+    "민감한 용도에서 자체 환경에 모델을 배포"
+   ],
+   "free": "있음 (Vibe·Studio 제한 이용: 메시지·웹검색 제한)",
+   "plans": [
+    {
+     "name": "Mistral Large API",
+     "price": null,
+     "currency": "USD",
+     "period": "사용량",
+     "limits": "입력 100만 토큰당 $0.5, 출력 100만 토큰당 $1.5 (배치 50% 할인)"
+    },
+    {
+     "name": "Free",
+     "price": 0,
+     "currency": "USD",
+     "period": "month",
+     "limits": "메시지·웹검색·코딩 세션 제한"
+    },
+    {
+     "name": "Pro",
+     "price": 14.99,
+     "currency": "USD",
+     "period": "month",
+     "limits": "세금 별도, 공정 사용 한도, 학생 $5.99"
+    },
+    {
+     "name": "Team",
+     "price": 24.99,
+     "currency": "USD",
+     "period": "month",
+     "limits": "사용자당, 사용자당 저장 30GB"
+    },
+    {
+     "name": "Enterprise",
+     "price": null,
+     "currency": null,
+     "period": null,
+     "limits": "문의(맞춤 모델·프라이빗 배포)"
+    }
+   ],
+   "pricing_url": "https://mistral.ai/pricing/",
+   "open_source": null,
+   "api": "있음",
+   "platforms": [
+    "웹",
+    "iOS",
+    "안드로이드",
+    "CLI",
+    "API"
+   ],
+   "korean": null,
+   "github": null,
+   "sources": [
+    "https://mistral.ai/news/mistral-large/",
+    "https://mistral.ai/pricing/"
+   ],
+   "eligible": true
+  },
+  "notion-ai": {
+   "name_en": "Notion AI",
+   "checked": "2026-10-14",
+   "company": "Notion Labs, Inc.",
+   "one_liner": "질문에 답하고 업무 우선순위를 정하고 보고서를 쓰는, 24시간 일하는 Notion 안의 AI 팀.",
+   "what": "Notion AI는 Notion의 페이지·문서·작업·데이터베이스 안에서 바로 일하는 내장 AI 팀원이다. 워크스페이스와 연결된 앱의 맥락을 활용해 Notion Agent가 페이지·데이터베이스를 만들고 고치는 등 여러 단계 작업을 처리한다. Custom Agents는 트리거나 일정에 맞춰 반복 업무를 자동으로 수행한다. Enterprise Search로 Slack·Google Drive·GitHub 등 연결된 앱을 가로질러 검색하고, AI Meeting Notes로 회의를 전사·요약한다.",
+   "features": [
+    "Notion Agent — 워크스페이스 맥락으로 여러 단계 작업 수행",
+    "Custom Agents — 일정·트리거 기반 반복 업무 자동화",
+    "Enterprise Search — Slack·Google Drive·GitHub 등 연결 앱 통합 검색",
+    "AI Meeting Notes — 회의 자동 전사·요약",
+    "Research Mode — 웹·워크스페이스 기반 상세 보고서 생성",
+    "데이터베이스 Autofill·AI 블록으로 글쓰기",
+    "모델·제공사 전환(Model agnostic)"
+   ],
+   "uses": [
+    "팀이 주간 보고 자동화",
+    "Slack에서 고객 지원 티켓 처리",
+    "제품 피드백 분류"
+   ],
+   "free": "있음 (Notion AI 제한 체험만)",
+   "plans": [
+    {
+     "name": "Free",
+     "price": 0,
+     "currency": "KRW",
+     "period": "month",
+     "limits": "AI 체험만, 파일 업로드 5MB"
+    },
+    {
+     "name": "Plus",
+     "price": 14000,
+     "currency": "KRW",
+     "period": "month",
+     "limits": "멤버당, AI는 체험만"
+    },
+    {
+     "name": "Business",
+     "price": 30000,
+     "currency": "KRW",
+     "period": "month",
+     "limits": "멤버당, Notion Agent·회의록·Enterprise Search 포함"
+    },
+    {
+     "name": "Enterprise",
+     "price": null,
+     "currency": "KRW",
+     "period": null,
+     "limits": "맞춤 가격, LLM 데이터 보존 0"
+    },
+    {
+     "name": "Notion credits(Custom Agents 애드온)",
+     "price": 10,
+     "currency": "USD",
+     "period": "month",
+     "limits": "1,000 크레딧당"
+    }
+   ],
+   "pricing_url": "https://www.notion.com/pricing",
+   "open_source": null,
+   "api": null,
+   "platforms": [
+    "데스크톱",
+    "모바일"
+   ],
+   "korean": "UI 한국어",
+   "github": null,
+   "sources": [
+    "https://www.notion.com/product/ai",
+    "https://www.notion.com/pricing"
+   ],
+   "eligible": true
+  },
+  "cursor": {
+   "name_en": "Cursor",
+   "checked": "2026-10-14",
+   "company": "Anysphere, Inc.",
+   "one_liner": "대담한 소프트웨어를 만드는 AI 코딩 에이전트.",
+   "what": "Cursor는 에디터 안에서 직접 코딩부터 에이전트 기반 코딩까지 지원하는 AI 코딩 도구다. 에이전트가 자체 컴퓨터에서 기능을 처음부터 끝까지 만들고 테스트·데모까지 진행하며 여러 작업을 병렬로 실행한다. 터미널(CLI), Slack, GitHub PR 리뷰 등 여러 환경에서 같은 에이전트를 쓸 수 있다. OpenAI, Anthropic, Gemini, SpaceXAI, Cursor의 최신 모델 중에서 골라 쓸 수 있다.",
+   "features": [
+    "데스크톱 에디터에서 직접 코딩과 에이전트 코딩",
+    "자율적으로 병렬 실행되는 클라우드 에이전트",
+    "터미널·스크립트에서 쓰는 Cursor CLI",
+    "Slack·GitHub·Linear·JetBrains IDE 연동",
+    "Bugbot을 통한 AI 코드 리뷰",
+    "여러 회사 최신 모델 선택(OpenAI, Anthropic, Gemini 등)",
+    "Privacy Mode(코드 데이터 학습 미사용)"
+   ],
+   "uses": [
+    "개발자가 기능 구현을 에이전트에 위임",
+    "팀이 GitHub PR 리뷰를 자동화",
+    "대규모 조직이 보안 통제 하에 개발 가속"
+   ],
+   "free": "있음 (제한된 에이전트·Chat 요청)",
+   "plans": [
+    {
+     "name": "무료",
+     "price": 0,
+     "currency": "USD",
+     "period": "month",
+     "limits": "제한된 에이전트 요청 횟수"
+    },
+    {
+     "name": "Plus",
+     "price": 8,
+     "currency": "USD",
+     "period": "month",
+     "limits": "Grok 모델만 사용 가능"
+    },
+    {
+     "name": "Premium",
+     "price": 30,
+     "currency": "USD",
+     "period": "month",
+     "limits": "Plus 대비 4배 사용량, 클라우드 에이전트"
+    },
+    {
+     "name": "Super",
+     "price": 100,
+     "currency": "USD",
+     "period": "month",
+     "limits": "Plus 대비 15배 사용량"
+    },
+    {
+     "name": "Ultra",
+     "price": 200,
+     "currency": "USD",
+     "period": "month",
+     "limits": "Plus 대비 50배 사용량"
+    },
+    {
+     "name": "Teams",
+     "price": 30,
+     "currency": "USD",
+     "period": "month",
+     "limits": "사용자당, SSO·중앙 청구"
+    },
+    {
+     "name": "기업",
+     "price": null,
+     "currency": "USD",
+     "period": null,
+     "limits": "맞춤형"
+    }
+   ],
+   "pricing_url": "https://cursor.com/ko/pricing",
+   "open_source": null,
+   "api": null,
+   "platforms": [
+    "맥",
+    "CLI",
+    "웹"
+   ],
+   "korean": "UI 한국어",
+   "github": null,
+   "sources": [
+    "https://cursor.com/",
+    "https://cursor.com/ko/product",
+    "https://cursor.com/ko/pricing"
+   ],
+   "eligible": true
+  },
+  "ollama": {
+   "name_en": "ollama",
+   "checked": "2026-10-14",
+   "company": "Ollama",
+   "one_liner": "최신 오픈 모델을 내 컴퓨터(로컬)나 클라우드에서 개인정보 걱정 없이 실행하는 가장 인기 있는 방법.",
+   "what": "Ollama는 오픈 모델을 내 컴퓨터에 내려받아 실행하거나, 로컬 GPU 없이 클라우드 모델로 실행하게 해 준다. 데스크톱 앱이나 코딩 에이전트에서 오픈 모델을 쓰거나, 자체 애플리케이션에 붙일 수 있다. 로컬에서 모델을 실행하고 관리하는 REST API와 Python·JavaScript 라이브러리를 제공하며 OpenAI·Anthropic 호환 클라이언트도 지원한다. 프롬프트와 응답 데이터는 저장하거나 학습에 쓰지 않는다고 밝힌다.",
+   "features": [
+    "오픈 모델을 내 컴퓨터에서 실행(로컬 실행은 무제한)",
+    "로컬 GPU 없이 쓰는 클라우드 모델",
+    "모델 실행·관리용 REST API",
+    "OpenAI·Anthropic 호환 API",
+    "Python·JavaScript 라이브러리",
+    "Claude Code·Codex·Copilot CLI 등 코딩 에이전트 연동(ollama launch)",
+    "코딩·비전·임베딩·추론 모델 라이브러리"
+   ],
+   "uses": [
+    "개발자가 오픈 모델을 자기 애플리케이션에 내장",
+    "터미널에서 코딩 에이전트를 오픈 모델로 실행",
+    "팀이 오픈 모델 사용량·결제를 공동 관리"
+   ],
+   "free": "있음 (로컬 실행 무제한, 클라우드는 스타터 크레딧·동시 요청 1개)",
+   "plans": [
+    {
+     "name": "Free",
+     "price": 0,
+     "currency": "USD",
+     "period": "month",
+     "limits": "로컬 실행, 스타터 모델·크레딧"
+    },
+    {
+     "name": "Pro",
+     "price": 20,
+     "currency": "USD",
+     "period": "month",
+     "limits": "월 $60 사용 크레딧, 동시 요청 3개 (연 $200)"
+    },
+    {
+     "name": "Max",
+     "price": 100,
+     "currency": "USD",
+     "period": "month",
+     "limits": "월 $300 사용 크레딧, 동시 요청 10개"
+    },
+    {
+     "name": "Team",
+     "price": 500,
+     "currency": "USD",
+     "period": "month",
+     "limits": "사용자 무제한, 월 $1,000 공유 크레딧"
+    },
+    {
+     "name": "Enterprise",
+     "price": null,
+     "currency": "USD",
+     "period": null,
+     "limits": "맞춤"
+    }
+   ],
+   "pricing_url": "https://ollama.com/pricing",
+   "open_source": "MIT",
+   "api": "있음",
+   "platforms": [
+    "맥",
+    "윈도",
+    "리눅스",
+    "Docker",
+    "CLI",
+    "API"
+   ],
+   "korean": null,
+   "github": {
+    "stars": 183075,
+    "license": "MIT"
+   },
+   "sources": [
+    "https://ollama.com",
+    "https://docs.ollama.com",
+    "https://github.com/ollama/ollama",
+    "https://ollama.com/pricing"
+   ],
+   "eligible": true
+  },
+  "langchain": {
+   "name_en": "LangChain",
+   "checked": "2026-10-14",
+   "company": "LangChain",
+   "one_liner": "에이전트와 LLM 기반 애플리케이션을 만드는 오픈소스 프레임워크이자, 에이전트 개발 전 과정을 지원하는 LangSmith 플랫폼.",
+   "what": "LangChain은 상호 운용 가능한 구성 요소와 외부 연동을 엮어 에이전트·LLM 앱을 만드는 프레임워크다. 모델·임베딩·벡터 저장소 등에 표준 인터페이스를 제공해 모델을 쉽게 바꿔 끼울 수 있다. 같은 회사의 LangSmith는 프레임워크와 무관하게 에이전트를 테스트·배포·모니터링·개선하는 유료 플랫폼이다. LangGraph(저수준 제어)와 Deep Agents(장시간 자율 에이전트) 같은 오픈소스 프레임워크도 함께 제공한다.",
+   "features": [
+    "어떤 모델 제공사와도 쓰는 에이전트 프레임워크(langchain)",
+    "저수준 제어용 LangGraph, 장시간 자율 에이전트용 Deep Agents",
+    "모델·도구·벡터 저장소 등 방대한 연동 라이브러리",
+    "LangSmith 추적(Tracing)·평가(Evals)로 에이전트 디버깅",
+    "LangSmith Deployment — 장시간·상태 유지 에이전트 배포",
+    "격리된 샌드박스에서 에이전트 생성 코드 실행",
+    "LLM Gateway — 비용 한도·모델 폴백·민감정보 가리기",
+    "코드 없이 에이전트를 만드는 LangSmith Fleet"
+   ],
+   "uses": [
+    "개발자가 LLM 앱·에이전트를 빠르게 시제품화",
+    "기업이 운영 중인 에이전트 품질을 추적·평가",
+    "고객 상담 AI 어시스턴트 구축(예: 처리 시간 단축 사례)"
+   ],
+   "free": "있음 (LangSmith Developer: 1석, 월 5k 기본 트레이스)",
+   "plans": [
+    {
+     "name": "Developer",
+     "price": 0,
+     "currency": "USD",
+     "period": "month",
+     "limits": "1석, 월 5k 트레이스 후 종량제"
+    },
+    {
+     "name": "Plus",
+     "price": 39,
+     "currency": "USD",
+     "period": "month",
+     "limits": "석당, 월 10k 트레이스, 서버리스 배포 1개 포함"
+    },
+    {
+     "name": "Enterprise",
+     "price": null,
+     "currency": "USD",
+     "period": null,
+     "limits": "맞춤 가격, 셀프호스팅·하이브리드"
+    }
+   ],
+   "pricing_url": "https://www.langchain.com/pricing",
+   "open_source": "MIT",
+   "api": "있음",
+   "platforms": [
+    "API",
+    "CLI"
+   ],
+   "korean": null,
+   "github": {
+    "stars": 147810,
+    "license": "MIT"
+   },
+   "sources": [
+    "https://www.langchain.com/pricing",
+    "https://github.com/langchain-ai/langchain",
+    "https://docs.langchain.com/",
+    "https://www.langchain.com/"
+   ],
+   "eligible": true
+  },
+  "runway": {
+   "name_en": "Runway",
+   "checked": "2026-10-14",
+   "company": "Runway AI, Inc.",
+   "one_liner": "영상·이미지·오디오를 한 작업공간에서 생성·편집하는 클라우드 기반 AI 크리에이티브 플랫폼.",
+   "what": "Runway는 세상을 이해·시뮬레이션하는 '실세계 지능' 모델을 만들고 그 위에 Creative·Dev·Robotics 세 플랫폼을 운영한다. Runway Creative는 영상·이미지·오디오를 한 작업공간에서 생성·편집하는 클라우드 도구다. Runway Dev는 Runway와 다른 연구소 모델을 API로 쓰는 개발자 플랫폼이다. 자체 영상 모델 Gen-4.5와 Seedance·Kling·Nano Banana Pro 등 외부 모델을 함께 쓸 수 있다.",
+   "features": [
+    "자체 영상 생성 모델 Gen-4.5",
+    "영상 속 한 프레임을 고치면 나머지에 적용하는 Aleph 2.0 편집",
+    "대화만으로 영상을 처음부터 끝까지 만드는 Runway Agent",
+    "음악·음성·효과음 생성",
+    "여러 모델을 잇는 노드 기반 워크플로",
+    "Premiere Pro·After Effects 플러그인",
+    "Claude·ChatGPT 등 에이전트와 연결하는 Runway MCP",
+    "4K 업스케일링"
+   ],
+   "uses": [
+    "광고·VFX·게임 업계의 영상 제작",
+    "개인·팀 크리에이터의 영상·이미지 생성",
+    "개발자가 API로 영상·이미지 모델을 서비스에 연동"
+   ],
+   "free": "있음 (1회 지급 125 크레딧, 저장 5GB)",
+   "plans": [
+    {
+     "name": "Free",
+     "price": 0,
+     "currency": "USD",
+     "period": "month",
+     "limits": "1회 125 크레딧, 5GB"
+    },
+    {
+     "name": "Standard",
+     "price": 12,
+     "currency": "USD",
+     "period": "month",
+     "limits": "연간 결제 기준(월 결제 $15), 월 625 크레딧, 워터마크 없음, 20GB"
+    },
+    {
+     "name": "Pro",
+     "price": 28,
+     "currency": "USD",
+     "period": "month",
+     "limits": "연간 결제 기준(월 결제 $35), 월 2250 크레딧, 100GB"
+    },
+    {
+     "name": "Max",
+     "price": 76,
+     "currency": "USD",
+     "period": "month",
+     "limits": "연간 결제 기준(월 결제 $95), 월 9500 크레딧, 1개월 이월, 500GB"
+    }
+   ],
+   "pricing_url": "https://runway.com/pricing",
+   "open_source": null,
+   "api": "있음",
+   "platforms": [
+    "웹",
+    "iOS",
+    "안드로이드",
+    "API"
+   ],
+   "korean": null,
+   "github": null,
+   "sources": [
+    "https://runway.com/",
+    "https://runway.com/product",
+    "https://runway.com/pricing"
+   ],
+   "eligible": true
+  },
+  "elevenlabs": {
+   "name_en": "ElevenLabs",
+   "checked": "2026-10-14",
+   "company": "ElevenLabs",
+   "one_liner": "기업·크리에이터·개발자를 위한 AI 음성 생성 및 음성 에이전트 플랫폼.",
+   "what": "ElevenLabs는 텍스트 음성 변환, 음성 인식, 음성 복제, 대화형 에이전트, 생성형 오디오 등 AI 음성 인프라를 제공한다. 노코드 웹 앱 ElevenCreative에서 보이스오버·음악·더빙·스튜디오 프로젝트를 브라우저로 만들 수 있다. ElevenAgents로 전화·채팅·이메일·WhatsApp에서 동작하는 대화형 에이전트를 구성·배포·모니터링한다. ElevenAPI는 모든 기능을 REST API와 공식 Python·TypeScript SDK로 제공한다.",
+   "features": [
+    "90개 이상 언어의 표현력 있는 음성 합성(Text to Speech)",
+    "음성 인식(Speech to Text, Scribe 모델)",
+    "음성 복제(Instant/Professional Voice Cloning)와 1만 개 이상 음성 라이브러리",
+    "AI 음악 생성(Eleven Music)",
+    "효과음 생성(Sound Effects)",
+    "자동 더빙·Dubbing Studio",
+    "대화형 음성 에이전트(ElevenAgents) — 전화·채팅·이메일·WhatsApp",
+    "이미지·영상 생성(Veo, Wan, Kling, Seedance 등 모델 활용)"
+   ],
+   "uses": [
+    "크리에이터가 오디오북·팟캐스트·보이스오버 제작",
+    "기업이 고객 상담용 음성 에이전트 운영",
+    "개발자가 자체 앱에 음성 기능을 API로 탑재"
+   ],
+   "free": "있음 (월 10,000 크레딧, 상업 라이선스 없음)",
+   "plans": [
+    {
+     "name": "Free",
+     "price": 0,
+     "currency": "USD",
+     "period": "month",
+     "limits": "월 10k 크레딧, Studio 프로젝트 3개"
+    },
+    {
+     "name": "Starter",
+     "price": 6,
+     "currency": "USD",
+     "period": "month",
+     "limits": "월 30k 크레딧, 상업 라이선스, 즉시 음성 복제"
+    },
+    {
+     "name": "Creator",
+     "price": 22,
+     "currency": "USD",
+     "period": "month",
+     "limits": "월 121k 크레딧, 전문 음성 복제(첫 달 $11)"
+    },
+    {
+     "name": "Pro",
+     "price": 99,
+     "currency": "USD",
+     "period": "month",
+     "limits": "월 600k 크레딧, API 44.1kHz PCM"
+    },
+    {
+     "name": "Scale",
+     "price": 299,
+     "currency": "USD",
+     "period": "month",
+     "limits": "월 1.8M 크레딧, 3석"
+    },
+    {
+     "name": "Business",
+     "price": 990,
+     "currency": "USD",
+     "period": "month",
+     "limits": "월 6M 크레딧, 10석"
+    },
+    {
+     "name": "Enterprise",
+     "price": null,
+     "currency": "USD",
+     "period": null,
+     "limits": "맞춤 가격"
+    }
+   ],
+   "pricing_url": "https://elevenlabs.io/pricing",
+   "open_source": null,
+   "api": "있음",
+   "platforms": [
+    "웹",
+    "API"
+   ],
+   "korean": "한국어 입력·출력",
+   "github": null,
+   "sources": [
+    "https://elevenlabs.io/docs/overview/intro",
+    "https://elevenlabs.io",
+    "https://elevenlabs.io/pricing"
+   ],
+   "eligible": true
+  },
+  "suno": {
+   "name_en": "Suno",
+   "checked": "2026-10-14",
+   "company": "Suno, Inc.",
+   "one_liner": "간단한 프롬프트만으로 상상하는 노래를 만드는 AI 음악 생성 서비스.",
+   "what": "Suno는 장르·분위기·주제나 직접 쓴 가사를 입력하면 보컬·가사·편곡까지 갖춘 완성곡을 1분 안에 만들어 주는 AI 음악 생성기다. 브라우저용 DAW인 Suno Studio에서 곡을 편집·믹싱할 수 있다. 내 목소리를 녹음해 노래하게 하는 Voices, 스템 분리, 리믹스, 내 녹음으로 맞춤 모델 학습 기능이 있다. 웹·iOS·안드로이드에서 쓸 수 있으며, 유료 구독자가 만든 곡은 상업적 이용이 가능하다고 안내한다.",
+   "features": [
+    "텍스트 프롬프트로 보컬·가사·편곡이 포함된 완성곡 생성",
+    "브라우저 기반 DAW Suno Studio(MIDI·이펙트·자동화)",
+    "내 목소리로 노래 만들기(Voices)",
+    "스템 분리(보컬·악기 트랙 분리)",
+    "리믹스(스타일·가사 변경, 내 녹음 기반 재구성)",
+    "내 녹음으로 맞춤 모델 학습(Custom models)",
+    "장르·분위기별 음악 라이브러리"
+   ],
+   "uses": [
+    "크리에이터가 유튜브·팟캐스트·광고용 배경음악 제작",
+    "음악 경험이 없는 사람부터 프로 프로듀서까지 곡 작업",
+    "앨범 발매 등 상업적 음원 제작(유료 구독 시)"
+   ],
+   "free": "있음 (하루 50 크레딧, 상업적 권리 없음, 무료 모델만)",
+   "plans": [
+    {
+     "name": "Free",
+     "price": 0,
+     "currency": "USD",
+     "period": "month",
+     "limits": "하루 50 크레딧, 상업적 권리 없음"
+    },
+    {
+     "name": "Pro",
+     "price": 8,
+     "currency": "USD",
+     "period": "month",
+     "limits": "월 2,500 크레딧, 월 20곡 다운로드, 상업적 이용 권리 (연간 결제 시 표시 가격으로 보임)"
+    },
+    {
+     "name": "Premier",
+     "price": 24,
+     "currency": "USD",
+     "period": "month",
+     "limits": "월 10,000 크레딧, 월 60곡 다운로드, Suno Studio (연간 결제 시 표시 가격으로 보임)"
+    }
+   ],
+   "pricing_url": "https://suno.com/pricing",
+   "open_source": null,
+   "api": null,
+   "platforms": [
+    "웹",
+    "iOS",
+    "안드로이드"
+   ],
+   "korean": "UI 한국어",
+   "github": null,
+   "sources": [
+    "https://suno.com",
+    "https://suno.com/pricing",
+    "https://suno.com/about"
+   ],
+   "eligible": true
+  },
+  "perplexity": {
+   "name_en": "Perplexity",
+   "checked": "2026-10-14",
+   "company": "Perplexity AI, Inc.",
+   "one_liner": "가장 신뢰할 수 있는 출처에서 빠르고 정확한 답변을 찾아 주는 AI 검색 서비스.",
+   "what": "Perplexity는 질문을 입력하면 신뢰할 수 있는 출처에서 빠르고 정확한 답변을 찾아 준다. Computer 기능에 프로젝트를 맡기면 완성도 높은 결과물을 받아볼 수 있다. 화면에는 자동화, 아티팩트, 프로젝트, 커넥터(@ 입력) 메뉴가 있다.",
+   "features": [
+    "출처 기반 AI 검색",
+    "Computer — 프로젝트·업무를 맡겨 결과물 받기",
+    "자동화",
+    "아티팩트",
+    "프로젝트·세션 관리",
+    "@로 커넥터 호출",
+    "모델 선택"
+   ],
+   "uses": [],
+   "free": null,
+   "plans": [],
+   "pricing_url": null,
+   "open_source": null,
+   "api": null,
+   "platforms": [
+    "웹"
+   ],
+   "korean": "UI 한국어",
+   "github": null,
+   "sources": [
+    "https://www.perplexity.ai/"
+   ],
+   "eligible": false
+  },
+  "vrew": {
+   "name_en": "Vrew",
+   "checked": "2026-10-14",
+   "company": "(주)보이저엑스 (VoyagerX, Inc.)",
+   "one_liner": "누구나 쉽고 즐겁게 영상을 편집할 수 있게 돕는 AI 영상 편집 프로그램.",
+   "what": "Vrew는 음성 인식으로 자막을 자동 생성하고, 인식된 글을 문서처럼 고치며 컷 편집을 하는 AI 영상 편집 프로그램이다. 500여 개 AI 목소리, 상업적으로 쓸 수 있는 무료 이미지·영상·배경음악을 제공한다. 한 문장을 넣으면 대본·이미지·음성까지 만들어 주는 '텍스트로 비디오 만들기', PDF로 비디오 만들기, 100개 이상 언어 번역 자막 기능도 있다. 맥·윈도우·우분투를 지원하고 웹에서도 체험할 수 있다.",
+   "features": [
+    "음성 인식으로 자막 자동 생성",
+    "자막 글을 보며 하는 컷 편집(문서처럼 편집)",
+    "무음 구간 자동 감지·삭제",
+    "500여 개 AI 목소리",
+    "텍스트로 비디오 만들기(대본·이미지·음성 자동 생성)",
+    "PDF 내용을 자막·나레이션 영상으로 변환",
+    "100개 이상 언어 번역 자막",
+    "상업적으로 쓸 수 있는 무료 이미지·영상·배경음악·효과음"
+   ],
+   "uses": [
+    "긴 스트리밍·팟캐스트 방송을 짧은 영상으로 만들어 여러 플랫폼에 업로드",
+    "인터뷰 녹취를 음성 인식으로 스크립트화·요약",
+    "블로그 글을 AI 목소리와 무료 소스로 영상 콘텐츠로 제작"
+   ],
+   "free": "있음 (Free 플랜 '평생', 세부 한도는 페이지에 없음)",
+   "plans": [
+    {
+     "name": "Free",
+     "price": 0,
+     "currency": "USD",
+     "period": "forever",
+     "limits": "크레딧 사용(세부 한도 페이지에 표시 안 됨)"
+    },
+    {
+     "name": "Light",
+     "price": null,
+     "currency": "USD",
+     "period": "year",
+     "limits": "가격이 받은 본문에 표시되지 않음"
+    },
+    {
+     "name": "Standard",
+     "price": null,
+     "currency": "USD",
+     "period": "year",
+     "limits": "가격이 받은 본문에 표시되지 않음"
+    },
+    {
+     "name": "Business",
+     "price": null,
+     "currency": "USD",
+     "period": "year",
+     "limits": "가격이 받은 본문에 표시되지 않음"
+    }
+   ],
+   "pricing_url": "https://vrew.ai/ko/payment/pricepolicy",
+   "open_source": null,
+   "api": null,
+   "platforms": [
+    "웹",
+    "윈도",
+    "맥",
+    "리눅스(우분투)"
+   ],
+   "korean": "UI 한국어",
+   "github": null,
+   "sources": [
+    "https://vrew.ai/ko/",
+    "https://vrew.ai/ko/payment/pricepolicy"
+   ],
+   "eligible": true
+  },
+  "capcut": {
+   "name_en": "CapCut",
+   "checked": "2026-10-14",
+   "company": null,
+   "one_liner": "누구나 쓸 수 있는 AI 기반 사진·영상 편집기로, 유튜브·인스타그램용 콘텐츠 제작에 필요한 기능을 모아 놓았다.",
+   "what": "CapCut은 AI 기능을 갖춘 사진·영상 편집기로 데스크톱·온라인·모바일·태블릿(Pad) 버전이 있다. 텍스트·이미지·키프레임으로 영상을 만드는 AI 영상 생성, 텍스트·참고 이미지로 이미지를 만드는 AI 이미지 생성, 텍스트 음성 변환을 제공한다. 자동 자막, 배경 제거, 화질 개선, 소음 제거 같은 편집 도구와 릴스·틱톡용 템플릿도 있다. 한국어 요금 페이지 기준으로 무료 플랜과 Pro·Ultra·Teams 유료 플랜이 있다.",
+   "features": [
+    "텍스트·이미지·키프레임으로 영상 만드는 AI 영상 생성",
+    "텍스트·참고 이미지로 AI 이미지 생성",
+    "자연스러운 AI 음성의 텍스트 음성 변환(TTS)",
+    "여러 언어 자동 자막 생성",
+    "이미지·영상 배경 제거",
+    "노이즈 제거·음성 보정",
+    "릴스·틱톡·비즈니스용 템플릿",
+    "긴 영상을 짧은 영상으로 자동 변환"
+   ],
+   "uses": [
+    "크리에이터가 유튜브·인스타그램·틱톡용 숏폼 콘텐츠 제작",
+    "마케터가 광고·홍보 영상과 소셜 미디어 디자인 제작",
+    "상품 사진 배경 제거 등 이미지 편집"
+   ],
+   "free": "있음 (KRW 0, 무료 템플릿·기본 편집 도구)",
+   "plans": [
+    {
+     "name": "무료",
+     "price": 0,
+     "currency": "KRW",
+     "period": "month",
+     "limits": "무료 템플릿, 기본 편집 도구"
+    },
+    {
+     "name": "Pro",
+     "price": 25000,
+     "currency": "KRW",
+     "period": "month",
+     "limits": "월간 AI 크레딧 700, 저장 1TB"
+    },
+    {
+     "name": "Ultra",
+     "price": 112000,
+     "currency": "KRW",
+     "period": "month",
+     "limits": "월간 AI 크레딧 8645, 저장 1TB"
+    },
+    {
+     "name": "Teams",
+     "price": 11950,
+     "currency": "KRW",
+     "period": "month",
+     "limits": "시트당 가격, 시트당 AI 크레딧 700, 브랜드 키트"
+    }
+   ],
+   "pricing_url": "https://www.capcut.com/ko-kr/pricing/",
+   "open_source": null,
+   "api": null,
+   "platforms": [
+    "웹",
+    "데스크톱",
+    "모바일",
+    "태블릿"
+   ],
+   "korean": "UI 한국어",
+   "github": null,
+   "sources": [
+    "https://www.capcut.com",
+    "https://www.capcut.com/ko-kr/pricing/"
+   ],
+   "eligible": true
+  },
+  "wrtn": {
+   "name_en": "Wrtn",
+   "checked": "2026-10-14",
+   "company": null,
+   "one_liner": null,
+   "what": "뤼튼 홈 화면에는 채팅, AI 탐지방어, 유튜브 요약, 실시간 녹음 메뉴와 블로그·자기소개서 도구가 보인다. 글자 수를 세며 내용을 바꾸거나 요약하는 입력 화면이 있고, 대화 언어·요약 언어로 한국어를 고를 수 있다. 화면에 GPT-5 모델 이름이 표시된다. 받은 본문이 짧아(239자) 그 밖의 설명은 확인되지 않는다.",
+   "features": [
+    "AI 채팅",
+    "AI 탐지방어",
+    "유튜브 요약",
+    "실시간 녹음",
+    "블로그·자기소개서 작성 도구",
+    "글 요약·변경(최대 2000자 입력)"
+   ],
+   "uses": [],
+   "free": null,
+   "plans": [],
+   "pricing_url": null,
+   "open_source": null,
+   "api": null,
+   "platforms": [
+    "웹"
+   ],
+   "korean": "UI 한국어",
+   "github": null,
+   "sources": [
+    "https://wrtn.ai/"
+   ],
+   "eligible": false
+  },
+  "fooocus": {
+   "name_en": "Fooocus",
+   "checked": "2026-10-14",
+   "company": null,
+   "one_liner": "Stable Diffusion XL 기반으로, 복잡한 조정 없이 프롬프트만으로 이미지를 만드는 오프라인·무료 오픈소스 이미지 생성 소프트웨어.",
+   "what": "Fooocus는 Gradio 기반의 이미지 생성 소프트웨어로, 오프라인에서 무료로 동작하는 오픈소스다. 수동 조정 없이 프롬프트와 이미지에만 집중하도록 설계됐고, 오프라인 GPT-2 기반 프롬프트 처리 엔진을 갖췄다. 설치는 다운로드부터 첫 이미지 생성까지 클릭 3번 미만으로 단순화했으며 최소 GPU 메모리는 4GB(Nvidia)다. 현재는 버그 수정만 하는 제한적 장기 지원(LTS) 상태이며 새 모델 구조로 옮길 계획은 없다고 밝힌다.",
+   "features": [
+    "프롬프트 조정 없이 고품질 텍스트→이미지 생성",
+    "이미지 변형(Vary Subtle/Strong)과 업스케일(1.5x/2x)",
+    "자체 알고리즘의 인페인트·아웃페인트",
+    "이미지 프롬프트(이미지를 입력으로 사용)",
+    "스타일·품질·가이던스 등 고급 설정",
+    "Civitai의 SDXL 모델 지원"
+   ],
+   "uses": [],
+   "free": "있음 (완전 무료, 오프라인)",
+   "plans": [],
+   "pricing_url": null,
+   "open_source": "오픈소스(라이선스명 본문 미기재)",
+   "api": null,
+   "platforms": [
+    "로컬 설치(오프라인)"
+   ],
+   "korean": null,
+   "github": {
+    "stars": 53395,
+    "license": "GPL-3.0"
+   },
+   "sources": [
+    "https://github.com/lllyasviel/Fooocus"
+   ],
+   "eligible": true
+  },
+  "pictory": {
+   "name_en": "Pictory",
+   "checked": "2026-10-14",
+   "company": "Pictory",
+   "one_liner": "텍스트·블로그·스크립트·PPT·이미지·URL 등을 몇 분 만에 전문적인 영상으로 바꿔 주는 AI 영상 제작 도구.",
+   "what": "Pictory는 텍스트, 블로그, 스크립트, 아이디어, PPT, 이미지, 화면 녹화, URL, 기존 영상을 자동 편집·자막·AI 음성·AI 아바타·템플릿을 붙여 영상으로 만든다. 내용을 이해해 구조를 잡고 알맞은 영상 소재를 찾아 장면을 구성한다. 브랜드 글꼴·색·로고를 적용하고 자막·전환·레이아웃을 조정할 수 있다. PDF 문서를 요약해 문서 속 차트·이미지를 재사용한 영상도 만들며 브라우저에서 동작한다.",
+   "features": [
+    "텍스트·스크립트·블로그를 영상으로 변환(Text to Video)",
+    "URL·PPT·PDF·오디오를 영상으로 변환",
+    "AI Studio — 프롬프트로 이미지·영상 클립 생성",
+    "이미지를 움직이는 영상으로(Image to Video)",
+    "AI 아바타와 음성 복제",
+    "자동 자막·캡션, 텍스트로 영상 편집",
+    "브랜드 키트(글꼴·색·로고) 적용",
+    "Make·Zapier 연동과 크롬 확장"
+   ],
+   "uses": [
+    "마케터가 광고·소셜 영상 대량 제작",
+    "교육 담당자가 문서·PPT로 교육 영상 제작",
+    "크리에이터가 긴 스크립트를 짧은 소셜 클립으로 재가공"
+   ],
+   "free": "없음 (14일 무료 체험만)",
+   "plans": [
+    {
+     "name": "Starter",
+     "price": 29,
+     "currency": "USD",
+     "period": "month",
+     "limits": "1인, 월 200분 영상, 5GB (연간 결제 시 월 $25)"
+    },
+    {
+     "name": "Professional",
+     "price": 59,
+     "currency": "USD",
+     "period": "month",
+     "limits": "1인, 월 600분 영상, 20GB, 음성 복제 (연간 결제 시 월 $35)"
+    },
+    {
+     "name": "Team",
+     "price": 199,
+     "currency": "USD",
+     "period": "month",
+     "limits": "3인 이상, 월 1,800분, 100GB (연간 결제 시 월 $119)"
+    },
+    {
+     "name": "Enterprise",
+     "price": null,
+     "currency": "USD",
+     "period": null,
+     "limits": "10인 이상, 맞춤"
+    }
+   ],
+   "pricing_url": "https://pictory.ai/pricing/?nav=mega",
+   "open_source": null,
+   "api": "있음",
+   "platforms": [
+    "웹",
+    "API"
+   ],
+   "korean": null,
+   "github": null,
+   "sources": [
+    "https://pictory.ai",
+    "https://pictory.ai/doc-to-video",
+    "https://pictory.ai/pricing/?nav=mega"
+   ],
+   "eligible": true
+  },
+  "typecast": {
+   "name_en": "Typecast",
+   "checked": "2026-10-14",
+   "company": "네오사피엔스 주식회사 (Neosapience, Inc.)",
+   "one_liner": "감정까지 자연스럽게 표현하는 사람 같은 AI 목소리로 콘텐츠를 만드는 텍스트 음성 변환(TTS) 서비스.",
+   "what": "타입캐스트는 AI 기술로 자연스러운 음성 내레이션을 만드는 텍스트 음성 변환(TTS) 플랫폼이다. 700개 이상의 AI 보이스와 문맥을 읽어 감정을 자동으로 입히는 스마트 이모션, 보이스 클로닝을 제공한다. AI 보이스 생성과 비디오 편집, 자동 자막 생성을 한 곳에서 할 수 있다. 개발자용 TTS API(스트리밍·타임스탬프·퀵 클로닝)와 여러 언어 SDK, CLI, 노코드 연동(Zapier·n8n 등)도 제공한다.",
+   "features": [
+    "700개 이상 AI 보이스(성우·내레이터·아나운서 등)",
+    "문맥을 읽어 감정을 자동으로 입히는 스마트 이모션",
+    "짧은 음성 샘플로 커스텀 보이스를 만드는 보이스 클로닝",
+    "35개 이상 언어 음성 생성(ssfm-v30 모델 기준)",
+    "응답 170ms 스트리밍 TTS API",
+    "자막·립싱크용 타임스탬프 TTS",
+    "AI 보이스 생성·비디오 편집·자동 자막을 한 번에",
+    "Python·JavaScript 등 SDK, CLI, Zapier·n8n 노코드 연동"
+   ],
+   "uses": [
+    "마케터가 광고 캠페인·온드미디어 콘텐츠 제작",
+    "기업 HR이 구성원 교육 콘텐츠 제작",
+    "개발자가 웹·앱·게임·이러닝 서비스에 음성 기능 연동"
+   ],
+   "free": "있음 (API 무료 플랜: 매월 15,000 크레딧, 상업 이용 불가·출처 표기 필수)",
+   "plans": [
+    {
+     "name": "API 무료",
+     "price": 0,
+     "currency": "USD",
+     "period": "month",
+     "limits": "매월 15,000 크레딧, 동시 호출 2, 상업 이용 불가"
+    },
+    {
+     "name": "API 라이트",
+     "price": 15,
+     "currency": "USD",
+     "period": "month",
+     "limits": "매월 200,000 크레딧, 동시 호출 5, 초과분 자동 결제"
+    },
+    {
+     "name": "API 플러스",
+     "price": 280,
+     "currency": "USD",
+     "period": "month",
+     "limits": "매월 4,000,000 크레딧, 동시 호출 15"
+    },
+    {
+     "name": "API 엔터프라이즈",
+     "price": null,
+     "currency": null,
+     "period": null,
+     "limits": "커스텀(문의)"
+    }
+   ],
+   "pricing_url": "https://typecast.ai/kr/pricing/api/",
+   "open_source": null,
+   "api": "있음",
+   "platforms": [
+    "웹",
+    "API",
+    "CLI"
+   ],
+   "korean": "UI 한국어",
+   "github": null,
+   "sources": [
+    "https://typecast.ai/kr/",
+    "https://typecast.ai/docs/ko/overview",
+    "https://typecast.ai/kr/pricing/api/"
+   ],
+   "eligible": true
+  },
+  "gemma": {
+   "name_en": "Gemma",
+   "checked": "2026-10-14",
+   "company": "Google DeepMind",
+   "one_liner": "Google DeepMind가 공개하는 가장 강력한 오픈 모델 제품군으로, 클라우드부터 노트북·휴대폰까지 어디서나 돌아가는 AI 앱을 만들 수 있게 한다.",
+   "what": "Gemma는 Google DeepMind의 오픈 모델 시리즈로, 개발자가 클라우드 서버·노트북·휴대폰 등 원하는 곳에서 실행되는 AI 앱을 만들도록 돕는다. 최신 Gemma 4는 고급 추론과 에이전트 워크플로를 목표로 하며, 모바일·IoT용 E2B·E4B와 PC용 12B·26B·31B 크기가 있다. 의료(MedGemma), 번역(TranslateGemma, 55개 언어), 임베딩(EmbeddingGemma), 안전 분류(ShieldGemma 2) 등 용도별 변형 모델도 있다. Kaggle·Hugging Face·Ollama·PyTorch·Google Cloud 등에서 쓸 수 있고 Google AI Studio에서 체험할 수 있다.",
+   "features": [
+    "고급 추론·에이전트 워크플로용 Gemma 4",
+    "모바일·IoT 기기용 경량 모델(E2B·E4B)",
+    "개인 PC용 12B·26B·31B 모델",
+    "55개 언어 번역 모델(TranslateGemma)",
+    "의료 텍스트·이미지 이해 모델(MedGemma)",
+    "기기 내 임베딩 모델(EmbeddingGemma)",
+    "정책 위반 콘텐츠 탐지 분류 모델(ShieldGemma 2)",
+    "Kaggle·Hugging Face·Ollama·PyTorch 등 연동"
+   ],
+   "uses": [
+    "개발자가 클라우드·노트북·휴대폰에서 실행되는 AI 앱 개발",
+    "의료 AI 개발(MedGemma)",
+    "인터넷 없는 환경의 교육용 오프라인 AI(사례 소개)"
+   ],
+   "free": null,
+   "plans": [],
+   "pricing_url": null,
+   "open_source": "오픈 모델 (라이선스 이름은 페이지에 없음)",
+   "api": null,
+   "platforms": [],
+   "korean": null,
+   "github": null,
+   "sources": [
+    "https://deepmind.google/models/gemma/"
+   ],
+   "eligible": true
+  },
+  "google-veo": {
+   "name_en": "Google Veo",
+   "checked": "2026-10-14",
+   "company": "Google DeepMind",
+   "one_liner": "영상과 소리를 함께 만들어 내는 Google DeepMind의 대표 영상 생성 모델로, 영화 제작자·스토리텔러를 위해 설계됐다.",
+   "what": "Veo는 Google DeepMind의 영상 생성 모델로, 최신 버전은 Veo 3.1이다. 텍스트 지시를 따라 영상을 만들면서 효과음·주변 소음·대사까지 오디오를 함께 생성한다. 실제 물리·사실감 표현과 지시 충실도가 개선됐고, 확장 영상과 더 세밀한 창작 제어를 제공한다고 소개한다. Gemini 앱과 Google Flow에서 써 볼 수 있다.",
+   "features": [
+    "영상과 오디오(효과음·주변 소음·대사) 동시 생성",
+    "실제 물리 표현으로 높아진 사실감",
+    "프롬프트 지시를 더 정확히 따르는 생성",
+    "오디오까지 포함한 창작 제어·일관성",
+    "확장(긴) 영상 생성"
+   ],
+   "uses": [
+    "영화 제작자·스토리텔러의 영상 제작"
+   ],
+   "free": null,
+   "plans": [],
+   "pricing_url": null,
+   "open_source": null,
+   "api": null,
+   "platforms": [],
+   "korean": null,
+   "github": null,
+   "sources": [
+    "https://deepmind.google/models/veo/"
+   ],
+   "eligible": true
+  }
+ }
+}

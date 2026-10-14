@@ -41,7 +41,32 @@ if (lang === 'en') {
   if (alts.length) faq.push([U.faqAlt(name), U.faqAltA(alts.slice(0, 4).map(N).join(', '))]);
 }
 const me = cmp.find((x) => x.t.slug === t.slug);
+// 공식 자료(2026-10-14): 있으면 설명·기능·요금은 공식 페이지 내용으로, 없으면 예전 자료 그대로
+const off = officialOf(t.slug);
+const offPrice = !!off && (!!off.free || off.plans.length > 0);
+const money = (v: any, cur: string | null) => {
+  if (v == null || v === '') return U.custom;
+  const n = Number(v); if (!Number.isFinite(n)) return String(v);
+  if (cur === 'KRW') return lang === 'en' ? `₩${n.toLocaleString('en-US')}` : `${n.toLocaleString('ko-KR')}원`;
+  if (cur === 'USD') return `$${n.toLocaleString('en-US')}`;
+  if (cur === 'EUR') return `€${n.toLocaleString('en-US')}`;
+  return `${n.toLocaleString(lang === 'en' ? 'en-US' : 'ko-KR')}${cur ? ' ' + cur : ''}`;
+};
+const per = (pd: string | null) => (pd === 'month' ? `/${U.perMonth}` : pd === 'year' ? `/${U.perYear}` : '');
+const facts: Array<[string, string]> = off ? ([
+  [U.fCompany, lang === 'en' && /[가-힣]/.test(off.company || '') ? ((off.company || '').match(/\(([^()]*[A-Za-z][^()]*)\)\s*$/)?.[1] || tx(off.company || '', lang)) : off.company || ''], [U.fKorean, off.korean ? tx(off.korean, lang) : ''], [U.fApi, off.api ? tx(off.api, lang) : ''],
+  [U.fPlatforms, off.platforms.map((x) => tx(x, lang)).join(', ')], [U.fOpen, off.open_source ? tx(off.open_source, lang) : ''],
+  [U.fGithub, off.github ? [off.github.stars != null ? U.stars(off.github.stars) : '', off.github.license || ''].filter(Boolean).join(' · ') : ''],
+] as Array<[string, string]>).filter(([, v]) => v) : [];
+// 영어 FAQ도 공식 자료 기준(한국어는 data.ts toolPage 가 같은 규칙으로 만듦)
+if (off && lang === 'en') {
+  const freeA = U.faqFreeA(tx(off.free || '', lang) || off.plans.map((x) => `${tx(x.name, lang)} ${money(x.price, x.currency)}${per(x.period)}`).join(', '));
+  const i = faq.findIndex((f) => f[0] === U.faqFree(name));
+  if (offPrice) { if (i >= 0) faq[i] = [U.faqFree(name), freeA]; else faq.unshift([U.faqFree(name), freeA]); }
+  if (off.korean) faq.push([U.faqKo(name), tx(off.korean, lang)]);
+}
 import { R } from '~/lib/routes';
+import { officialOf } from '~/lib/data';
 ---
 
 <PageLayout metadata={{ title, description, canonical, lang }}>
@@ -61,7 +86,30 @@ import { R } from '~/lib/routes';
         </Card>
       )}
 
-      {(t.key_features.length || t.long_desc_ko) && (
+      {facts.length > 0 && (
+        <Card class="mt-6">
+          <h3 class="text-sm font-bold text-muted mb-2">{U.facts}</h3>
+          <dl class="grid gap-x-6 gap-y-2 sm:grid-cols-2 text-sm">
+            {facts.map(([k, v]) => <div class="flex gap-3 min-w-0"><dt class="text-muted shrink-0 w-24">{k}</dt><dd class="text-default min-w-0">{v}</dd></div>)}
+          </dl>
+        </Card>
+      )}
+
+      {off && off.what ? (
+        <section class="mt-8">
+          <h2 class="text-xl font-bold text-heading mb-3">{U.what(name)}</h2>
+          <Card>
+            <p class="text-default">{tx(off.what, lang)}</p>
+            {off.features.length > 0 && <ul class="list-disc pl-5 mt-3 space-y-1 text-default">{off.features.map((f) => <li>{tx(f, lang)}</li>)}</ul>}
+          </Card>
+          {off.uses.length > 0 && (
+            <>
+              <h3 class="text-lg font-bold text-heading mt-6 mb-3">{U.uses(name)}</h3>
+              <ul class="grid gap-3 sm:grid-cols-2 text-default">{off.uses.map((u) => <li class="rounded-md border border-slate-800 p-4">{tx(u, lang)}</li>)}</ul>
+            </>
+          )}
+        </section>
+      ) : (t.key_features.length || t.long_desc_ko) && (
         <section class="mt-8">
           <h2 class="text-xl font-bold text-heading mb-3">{U.what(name)}</h2>
           <Card>
@@ -71,7 +119,25 @@ import { R } from '~/lib/routes';
         </section>
       )}
 
-      {(t.pricing_policy || t.pricing_detail) && (
+      {offPrice && off ? (
+        <section class="mt-8">
+          <h2 class="text-xl font-bold text-heading mb-3">{U.price}</h2>
+          <Card class="overflow-x-auto">
+            {off.free && <p class="text-default"><b class="text-heading">{U.free}</b> — {tx(off.free, lang)}</p>}
+            {off.plans.length > 0 && (
+              <table class="w-full text-sm min-w-[460px] mt-3">
+                <thead><tr class="text-left text-muted text-xs">{U.plansTh.map((h) => <th class="pb-2 pr-3">{h}</th>)}</tr></thead>
+                <tbody class="divide-y divide-slate-800">
+                  {off.plans.map((x) => (
+                    <tr><td class="py-2 pr-3 font-semibold text-heading">{tx(x.name, lang)}</td><td class="py-2 pr-3 tabular-nums whitespace-nowrap">{money(x.price, x.currency)}{x.price != null ? per(x.period) : ''}</td><td class="py-2 text-default">{x.limits ? tx(x.limits, lang) : '-'}</td></tr>
+                  ))}
+                </tbody>
+              </table>
+            )}
+            <p class="mt-3 text-sm text-muted">{U.checked(off.checked)}{off.pricing_url && <> · <a href={off.pricing_url} rel="noopener nofollow" target="_blank" class="text-link hover:underline">{U.pricingPage}</a></>}</p>
+          </Card>
+        </section>
+      ) : (t.pricing_policy || t.pricing_detail) && (
         <section class="mt-8">
           <h2 class="text-xl font-bold text-heading mb-3">{U.price}</h2>
           <Card>
@@ -154,6 +220,14 @@ import { R } from '~/lib/routes';
 
       {faq.length > 0 && (
         <FAQs title={U.faq} items={faq.map(([q, a]) => ({ title: q, description: a }))} schema classes={{ container: 'max-w-none px-0 md:px-0 py-6 md:py-6 lg:py-6', headline: { container: 'text-left md:mx-0 mb-4 md:mb-4', title: 'text-2xl md:text-2xl' } }} />
+      )}
+
+      {off && off.sources.length > 0 && (
+        <section class="mt-8 text-sm">
+          <h3 class="font-bold text-muted mb-2">{U.sources}</h3>
+          <ul class="space-y-1 break-all">{off.sources.map((u) => <li><a href={u} rel="noopener nofollow" target="_blank" class="text-link hover:underline">{u}</a></li>)}</ul>
+          <p class="mt-2 text-muted">{U.checked(off.checked)}</p>
+        </section>
       )}
 
       <div class="flex flex-wrap gap-3 mt-8">

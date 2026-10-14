@@ -2,6 +2,7 @@
 // 1) sitemap-index.xml 에 워커가 만드는 트렌드 글 사이트맵(/sitemap-trend.xml) 추가
 // 2) 검색엔진에 이미 등록된 옛 사이트맵 이름 유지: sitemap.xml(=색인 목록), sitemap-ai.xml(AI·분야·조합·요금·순위), sitemap-korea.xml(한국 여행)
 // 3) 옛 소개 글 /galaxy_saas/* (정적 HTML, astro 사이트맵에 안 잡힘)를 sitemap-ai.xml 에 포함
+// 4) 3D 지도가 읽는 상세 페이지 목록(dist/data/ai_pages.json)에 공식 자료로 새로 열린 페이지를 합침(2026-10-14, 기준은 ../scripts/import-official-tools.mjs)
 // 주소는 .env PUBLIC_SITE_URL 한 곳에서.
 import { readFileSync, writeFileSync, existsSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
@@ -31,3 +32,16 @@ if (!idx.includes('sitemap-ai.xml')) idx = idx.replace('</sitemapindex>', `<site
 writeFileSync(idxF, idx);
 writeFileSync(join(DIST, 'sitemap.xml'), idx);  // 옛 sitemap.xml 주소 = 같은 색인 목록
 console.log(`[postbuild] 사이트맵: ai ${ai.length} · korea ${korea.length} · galaxy_saas ${saas.length} · sitemap.xml=색인 목록`);
+
+// 4) 상세 페이지 목록 합치기 — 지도 앱의 '자세히' 링크가 새 페이지를 알도록. 실제로 만들어진 페이지만 넣음.
+{
+  const pagesF = join(DIST, 'data', 'ai_pages.json'), offF = join(dirname(ROOT), 'data', 'ai_official.json');
+  if (existsSync(pagesF) && existsSync(offF)) {
+    const base = JSON.parse(readFileSync(pagesF, 'utf8'));
+    const extra = Object.entries(JSON.parse(readFileSync(offF, 'utf8')).tools || {}).filter(([, o]) => o.eligible).map(([s]) => s)
+      .filter((s) => existsSync(join(DIST, 'ai', s, 'index.html')));
+    const all = [...new Set([...base, ...extra])];
+    writeFileSync(pagesF, JSON.stringify(all));
+    console.log(`[postbuild] 상세 페이지 목록 ${base.length} → ${all.length}(공식 자료로 +${all.length - base.length})`);
+  }
+}

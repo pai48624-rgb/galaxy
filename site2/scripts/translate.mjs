@@ -38,7 +38,15 @@ function collectTools() {
     ...L.filter((r) => !r.desc_en).map((r) => r.desc_ko), // 영어 설명이 없을 때만
     ...L.filter((r) => !r.category_en).map((r) => r.category),
     ...L.filter((r) => r.subcategory && !r.subcategory_en).map((r) => r.subcategory),
+    ...collectOfficial(),
   ]);
+}
+// 공식 자료(2026-10-14, data/ai_official.json) — 상세 페이지에 보이는 칸만
+function collectOfficial() {
+  if (!existsSync(join(ROOT, 'data/ai_official.json'))) return [];
+  const O = Object.values(readJson('data/ai_official.json').tools || {});
+  return O.flatMap((o) => [o.what, o.free, o.korean, o.api, o.open_source, ...(o.features || []), ...(o.uses || []), ...(o.platforms || []),
+    ...(o.plans || []).flatMap((x) => [x.name, x.limits])]);
 }
 function collectCombos() {
   const C = readJson('data/ai_combos.json');

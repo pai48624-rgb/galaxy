@@ -105,7 +105,28 @@ export function loadTools(): Tool[] {
   return _tools;
 }
 
-export const aiPageSlugs = (): string[] => readJson<string[]>('dist/data/ai_pages.json', []);
+// ---- 공식 자료(2026-10-14, 노트북 수집 → scripts/import-official-tools.mjs → data/ai_official.json) ----
+export interface Official {
+  name_en: string; checked: string; company: string | null; one_liner: string | null; what: string | null;
+  features: string[]; uses: string[]; free: string | null;
+  plans: Array<{ name: string; price: number | string | null; currency: string | null; period: string | null; limits: string | null }>;
+  pricing_url: string | null; open_source: string | null; api: string | null; platforms: string[]; korean: string | null;
+  github: { stars: number | null; license: string | null } | null; sources: string[]; eligible: boolean;
+}
+let _official: Record<string, Official> | null = null;
+export const officialOf = (slug: string): Official | null => {
+  if (!_official) _official = readJson<{ tools?: Record<string, Official> }>('data/ai_official.json', {}).tools || {};
+  return _official[slug] || null;
+};
+// 상세 페이지 = 옛 생성기가 고른 74개(dist/data/ai_pages.json) + 공식 자료가 기준을 넘은 도구(기준은 import-official-tools.mjs 한 곳)
+let _pages: string[] | null = null;
+export const aiPageSlugs = (): string[] => {
+  if (_pages) return _pages;
+  const base = readJson<string[]>('dist/data/ai_pages.json', []);
+  const extra = Object.entries(readJson<{ tools?: Record<string, Official> }>('data/ai_official.json', {}).tools || {}).filter(([, o]) => o.eligible).map(([s]) => s);
+  _pages = [...new Set([...base, ...extra])];
+  return _pages;
+};
 export const combos = () => readJson<any[]>('data/ai_combos.json', []);
 export const topRank = () => readJson<any[]>('data/ai_top_rank.json', []);
 export const top10Relations = () => readJson<any[]>('data/ai_top10_relations.json', []);
@@ -204,6 +225,18 @@ export function toolPage(slug: string): ToolPage | null {
     faq.push([`${t.name}, 무엇과 함께 쓰면 좋나요?`, `지도에 정리된 조합 기준으로 '${myCombos[0].title_ko}'처럼 ${members.filter((m) => m.slug !== t.slug).map((m) => m.name).slice(0, 3).join(', ')} 등과 함께 쓰는 흐름이 있어요.`]);
   }
   if (alts.length) faq.push([`${t.name} 대신 쓸 수 있는 AI는?`, `같은 일을 하는 도구로 ${alts.slice(0, 4).map((a) => a.name).join(', ')} 등이 지도에 연결돼 있어요.`]);
+  // 공식 자료가 있으면 무료 질문은 공식 페이지 내용으로, 한국어 질문 추가(2026-10-14)
+  const off = officialOf(slug);
+  if (off) {
+    const freeQ = `${t.name}, 무료로 쓸 수 있나요?`;
+    // 금액은 요금표와 같은 모양(25,000원·$20)
+    const won = (v: any, cur: string | null) => { const n = Number(v); if (v == null || v === '' || !Number.isFinite(n)) return ''; return cur === 'KRW' ? `${n.toLocaleString('ko-KR')}원` : cur === 'USD' ? `$${n.toLocaleString('en-US')}` : cur === 'EUR' ? `€${n.toLocaleString('en-US')}` : `${n.toLocaleString('ko-KR')}${cur ? ' ' + cur : ''}`; };
+    const plans = off.plans.map((x) => [x.name, won(x.price, x.currency)].filter(Boolean).join(' ')).join(', ');
+    const ans = off.free || plans ? `${off.free ? off.free + '.' : ''}${plans ? ` 요금제: ${plans}.` : ''} 공식 페이지 확인일 ${off.checked} 기준이며, 결제 전 공식 사이트에서 다시 확인하세요.`.trim() : '';
+    const i = faq.findIndex((f) => f[0] === freeQ);
+    if (ans) { if (i >= 0) faq[i] = [freeQ, ans]; else faq.unshift([freeQ, ans]); }
+    if (off.korean) faq.push([`${t.name}, 한국어로 쓸 수 있나요?`, `공식 페이지 기준: ${off.korean}.`]);
+  }
   return {
     t, display: displayName(t), rank: c.rankOf.get(slug) || null, combos: myCombos, alts, groups: c.groupsOf.get(slug) || [],
     cmp: cmpTools.length >= 2 ? cmpTools.map((x) => ({ t: x, combos: nCombo(x), links: nLink(x) })) : [],
