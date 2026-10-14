@@ -30,7 +30,7 @@ const T = ui(lang).home;
     )}
     <!-- 2026-10-14 사용자: C의 가로 순위 칩을 오늘의 흐름 위에, 세로 순위 상자·숫자 띠는 삭제 -->
     <RankBox d={d} row lang={lang} class="mt-6" />
-    <LatestTrend d={d} limit={6} grid cols={2} title={T.flow} lang={lang} class="mt-6" />  <!-- 2026-10-14 사용자: 카드 2열(왼쪽·오른쪽) -->
+    <LatestTrend d={d} limit={2} grid cols={2} title={T.flow} lang={lang} class="mt-6" />  <!-- 2026-10-14 사용자: 카드 2열(왼쪽·오른쪽) / 10-15: 2개만 고정(나머지는 전체 보기) -->
     <KoreaLatest d={d} limit={4} cols={4} lang={lang} class="mt-8" />
     <CategoryChips d={d} show={10} lang={lang} class="mt-8" />
     <Intro d={d} lang={lang} class="mt-8" />
