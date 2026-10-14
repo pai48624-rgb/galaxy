@@ -35,6 +35,17 @@ KIND = [("pricing", r"pricing|/plans?\b|/price|요금|가격|subscribe|/premium|
         ("about", r"/about|/features?|/product|/docs?\b|documentation|/overview|/platform|/how-it-works|소개|기능")]
 BLOCK_HINT = r"captcha|cf-chl|cloudflare ray id|access denied|attention required|are you a robot|verify you are human|enable javascript and cookies"
 
+PRICE_RE = re.compile(r"(US\$|\$|₩|€|£|¥)\s?\d|\d[\d,.]*\s?(원|USD|KRW|EUR|달러)")
+PRICE_JS = r"(US\$|\$|₩|€|£|¥)\s?\d|\d[\d,.]*\s?(원|USD|KRW|EUR)"
+PRICE_WAIT_JS = "t => new RegExp(t).test(document.body.innerText.replace(/US\\$\\s*-/g, ''))"
+# 2단계 보완 1: 큰 회사 아래 모델은 그 회사 공식 요금 문서(어디서 찾았는지 pages[].src 와 pricing_url 에 남김)
+PRICING_OVERRIDE = {"gemma": "https://ai.google.dev/gemini-api/docs/pricing",
+                    "google-veo": "https://ai.google.dev/gemini-api/docs/pricing"}
+COMPANY_PRICING = [(r"(^|\.)deepmind\.google$", "https://ai.google.dev/gemini-api/docs/pricing")]
+GUESS_PATHS = ["/pricing", "/ko/pricing", "/plans", "/pricing/ko"]
+LANG_WORDS = ["한국어", "Korean", "English", "日本語", "中文", "简体中文", "繁體中文", "Español", "Français", "Deutsch", "Português",
+              "Italiano", "Русский", "Tiếng Việt", "ภาษาไทย", "Bahasa Indonesia", "हिन्दी", "Türkçe", "Polski", "Nederlands", "العربية"]
+
 _dom_lock = threading.Lock()
 _dom_last = {}
 _robots = {}
@@ -135,7 +146,7 @@ class Browser:
     def __init__(self):
         self.p = self.b = None
 
-    def get(self, u):
+    def get(self, u, wait_price=False):
         if self.b is None:
             from playwright.sync_api import sync_playwright
             self.p = sync_playwright().start()
@@ -148,6 +159,11 @@ class Browser:
                 pg.wait_for_load_state("networkidle", timeout=8000)
             except Exception:
                 pass
+            if wait_price:   # 2단계 보완 2: 앱형 요금 화면 — 가격 숫자가 나타날 때까지 최대 10초
+                try:
+                    pg.wait_for_function(PRICE_WAIT_JS, arg=PRICE_JS, timeout=10000)
+                except Exception:
+                    pass
             return (r.status if r else 0), pg.url, pg.content()
         except Exception as e:
             return 0, u, "ERR " + str(e)[:150]
@@ -162,6 +178,26 @@ class Browser:
                 self.p.stop()
         except Exception:
             pass
+
+
+def has_price(t):
+    return bool(PRICE_RE.search(re.sub(r"US\$\s*-", "", t or "")))
+
+
+def lang_meta(body):
+    """페이지 언어 정보(인용할 수 있게 raw 에도 적음): html lang · hreflang 목록 · 화면에 보이는 언어 이름 · 한국어판 주소."""
+    body = body or ""
+    m = re.search(r'(?is)<html[^>]*\blang=["\']?([\w-]+)', body)
+    hl = sorted(set(x.lower() for x in re.findall(r'(?is)hreflang=["\']([\w-]+)["\']', body)))
+    txt = text_of(body)
+    words = [w for w in LANG_WORDS if w in txt]
+    ko = None
+    for tag in re.findall(r"(?is)<link[^>]+>", body):
+        if re.search(r'hreflang=["\']ko', tag, re.I):
+            h = re.search(r'href=["\']([^"\']+)', tag)
+            ko = h.group(1) if h else None
+            break
+    return {"html_lang": m.group(1) if m else None, "hreflang": hl, "lang_words": words, "ko_href": ko}
 
 
 def links(body, base):
@@ -196,6 +232,31 @@ def github_info(gh_url):
         return {"repo": "%s/%s" % (o, r), "status": "오류 " + str(e)[:80]}
 
 
+def fetch_page(rec, parts, br, kind, u, src, need_price=False):
+    """한 페이지 받기(robots 지킴). 요금 쪽은 가격이 비면 크롬으로 열고 숫자가 뜰 때까지 최대 10초(보완 2). 받으면 True."""
+    if not allowed(u):
+        rec["pages"].append({"kind": kind, "url": u, "http": None, "skip": "robots", "src": src})
+        return False
+    s3, f3, b3 = get(u)
+    rec["requests"] += 1
+    is_price = kind.startswith("pricing")
+    t3 = text_of(b3)
+    weak = s3 in (0, 403) or (s3 == 200 and (len(t3) < 800 or (is_price and not has_price(t3))))
+    used = False
+    if weak:
+        s4, f4, b4 = br.get(u, wait_price=is_price)
+        rec["requests"] += 1
+        t4 = text_of(b4)
+        if s4 and (len(t4) > len(t3) or (is_price and has_price(t4) and not has_price(t3))):
+            s3, f3, b3, t3, used = s4, f4, b4, t4, True
+    lm = lang_meta(b3)
+    rec["pages"].append({"kind": kind, "url": f3, "http": s3, "chars": len(t3), "browser": used, "src": src,
+                         "lang": lm["html_lang"], "ko_href": lm["ko_href"], "has_price": has_price(t3) if is_price else None})
+    if s3 == 200 and t3:
+        parts.append((kind, f3, t3, lm["html_lang"]))
+    return s3 == 200 and bool(t3) and (not need_price or has_price(t3))
+
+
 def one(tool, br):
     slug, url = tool["slug"], tool["url"]
     rec = {"slug": slug, "name_en": tool["name_en"], "checked_at": now(), "input_url": url, "pages": [], "requests": 0}
@@ -221,33 +282,51 @@ def one(tool, br):
         else:
             rec.update(status="redirect" if host(final) != host(url) else "ok", final_url=final)
             rec["pages"].append({"kind": "home", "url": final, "http": st, "chars": len(t), "browser": used_browser})
-            parts.append(("home", final, t))
+            parts.append(("home", final, t, lang_meta(body)["html_lang"]))
+            rec["home_lang"] = lang_meta(body)
             cand = links(body, final)
+            extra_pricing = None
             for kind, pat in KIND:
-                pick = next((u for u, lab in cand if re.search(pat, u, re.I)), None) or \
-                       next((u for u, lab in cand if re.search(pat, lab, re.I)), None)
+                by_url = sorted({u.rstrip("/") + "/" for u, lab in cand if re.search(pat, u, re.I)}, key=lambda u: (len(urllib.parse.urlsplit(u).path), u))
+                pick = (by_url[0] if by_url else None) or next((u for u, lab in cand if re.search(pat, lab, re.I)), None)
+                src = "홈 링크"
+                if kind == "pricing" and len(by_url) > 1 and slug not in PRICING_OVERRIDE:
+                    extra_pricing = by_url[1]   # 두 번째 요금 페이지(요금 찾기 시도 3회 안에서)
+                if kind == "pricing" and slug in PRICING_OVERRIDE:
+                    pick, src = PRICING_OVERRIDE[slug], "회사 공식 요금 문서"
                 if not pick or pick.rstrip("/") == final.rstrip("/") or any(p["url"] == pick for p in rec["pages"]):
                     continue
-                if not allowed(pick):
-                    rec["pages"].append({"kind": kind, "url": pick, "http": None, "skip": "robots"})
-                    continue
-                s3, f3, b3 = get(pick)
-                rec["requests"] += 1
-                if s3 in (0, 403) or (s3 == 200 and len(text_of(b3)) < 800):
-                    s4, f4, b4 = br.get(pick)
-                    rec["requests"] += 1
-                    if s4 and len(text_of(b4)) > len(text_of(b3)):
-                        s3, f3, b3 = s4, f4, b4
-                t3 = text_of(b3)
-                rec["pages"].append({"kind": kind, "url": f3, "http": s3, "chars": len(t3)})
-                if s3 == 200 and t3:
-                    parts.append((kind, f3, t3))
+                fetch_page(rec, parts, br, kind, pick, src)
+            if extra_pricing and not any(p["url"].rstrip("/") == extra_pricing.rstrip("/") for p in rec["pages"]):
+                fetch_page(rec, parts, br, "pricing2", extra_pricing, "홈 링크(두 번째 요금 페이지)")
+            if not any(p["kind"] == "pricing" and p.get("has_price") for p in rec["pages"]):
+                # 보완 1: 요금 링크가 없거나 가격이 없으면 회사 공식 요금 문서 → 같은 도메인 추측 주소(따로 3회까지)
+                tries = [(u, "회사 공식 요금 문서") for pat, u in COMPANY_PRICING if re.search(pat, host(final))]
+                sp = urllib.parse.urlsplit(final)
+                tries += [("%s://%s%s" % (sp.scheme, sp.netloc, g), "추측 주소 " + g) for g in GUESS_PATHS]
+                n_try = 0
+                for u, src in tries:
+                    if n_try >= 3:
+                        break
+                    if any(p["url"].rstrip("/") == u.rstrip("/") for p in rec["pages"]):
+                        continue
+                    n_try += 1
+                    if fetch_page(rec, parts, br, "pricing", u, src, need_price=True):
+                        break
+            pr = next((p for p in rec["pages"] if p["kind"] == "pricing" and p.get("has_price")), None) or \
+                 next((p for p in rec["pages"] if p["kind"] == "pricing" and p.get("chars")), None)
+            if pr and (pr.get("lang") or "")[:2] != "ko" and pr.get("ko_href"):
+                # 보완 4: 한국어 요금 페이지(원화)가 따로 있으면 같이 받기(둘 다 남김)
+                fetch_page(rec, parts, br, "pricing_ko", urllib.parse.urljoin(pr["url"], pr["ko_href"]), "요금 페이지의 한국어판(hreflang)")
+            hm = rec["home_lang"]
+            parts.append(("meta", final, "html lang: %s\nhreflang: %s\n화면에 보이는 언어 이름: %s" % (
+                hm["html_lang"] or "없음", ", ".join(hm["hreflang"]) or "없음", ", ".join(hm["lang_words"]) or "없음"), None))
     if gh:
         g = github_info(gh)
         rec["requests"] += 3
         rec["github"] = {k: v for k, v in (g or {}).items() if k != "readme"}
         if g and g.get("readme"):
-            parts.append(("github", g.get("url") or gh, g["readme"]))
+            parts.append(("github", g.get("url") or gh, g["readme"], None))
             rec["pages"].append({"kind": "github", "url": g.get("url") or gh, "http": 200, "chars": len(g["readme"])})
         if "status" not in rec:
             rec.update(status="ok" if g and g.get("stars") is not None else "dead", final_url=g.get("url") if g else gh)
@@ -255,12 +334,14 @@ def one(tool, br):
 
 
 def save(rec, parts):
-    budget, out = MAX_RAW, []
-    share = {"home": 0.4, "pricing": 0.3, "about": 0.15, "github": 0.15}
-    for kind, u, t in parts:
-        n = int(MAX_RAW * share.get(kind, 0.15))
-        out.append("=== [%s] %s\n%s\n" % (kind, u, t[:n]))
-    body = "\n".join(out)[:budget]
+    share = {"home": 0.25, "pricing": 0.22, "pricing2": 0.12, "pricing_ko": 0.12, "about": 0.12, "github": 0.14, "meta": 0.03}
+    out = []
+    for p in parts:
+        kind, u, t = p[0], p[1], p[2]
+        lang = p[3] if len(p) > 3 else None
+        n = int(MAX_RAW * share.get(kind, 0.12))
+        out.append("=== [%s] %s%s\n%s\n" % (kind, u, " (lang=%s)" % lang if lang else "", t[:n]))
+    body = "\n".join(out)[:MAX_RAW]
     with open(os.path.join(RAW, rec["slug"] + ".txt"), "w", encoding="utf-8") as f:
         f.write(body)
     with _write:
@@ -318,5 +399,10 @@ def status():
 if __name__ == "__main__":
     if sys.argv[1] == "fetch":
         fetch(sys.argv[2:] or None)
+    elif sys.argv[1] == "refetch":   # 2단계: 지정 slug 를 fetch.jsonl 에서 빼고 다시 받기
+        want = set(sys.argv[2:])
+        keep = [l for l in open(FETCH, encoding="utf-8") if json.loads(l)["slug"] not in want]
+        open(FETCH, "w", encoding="utf-8").writelines(keep)
+        fetch(list(want))
     else:
         status()
