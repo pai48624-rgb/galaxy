@@ -452,6 +452,57 @@ async function rssFeed(request, env) {
   return new Response(xml, { headers: { "content-type": "application/rss+xml; charset=utf-8", "cache-control": "public, max-age=600" } });
 }
 
+
+// ==== §PAGES: 공장이 올린 화면(한국 여행 글 등) — 배포 없이 바로 보이게 (2026-10-14) ====
+// 공장(common_prj)이 로컬 빌드한 완성 화면을 POST /api/pages 로 보내면 DB 함수 factory_page 가 토큰(해시)을 확인해 site_pages 에 저장.
+// 방문자가 /korea/…, /en/korea/…, /sitemap-korea.xml 을 열면 저장된 화면이 있으면 그것을, 없거나 DB 오류면 원래 정적 파일을 보여 줌.
+// 틀은 site2 Astro 컴포넌트 하나(KoreaArticle) — 워커는 완성된 HTML을 그대로 내보내기만 함. 표: scripts/migrate_site_pages.sql
+const PAGE_RE = /^\/(en\/)?korea\/([a-z0-9][a-z0-9-]{0,80}\/)?$/;
+
+function pagePath(pathname) {
+  if (pathname === "/sitemap-korea.xml") return pathname;
+  const p = pathname.endsWith("/") ? pathname : pathname + "/";
+  return PAGE_RE.test(p) ? p : null;
+}
+
+async function receivePage(request) {
+  if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: CORS });
+  if (request.method !== "POST") return json({ ok: false, msg: "POST only" }, 405);
+  const token = (request.headers.get("Authorization") || "").replace(/^Bearer\s+/i, "").trim();
+  if (!token) return json({ ok: false, msg: "토큰 없음" }, 401);
+  let p;
+  try { p = await request.json(); } catch (e) { return json({ ok: false, msg: "JSON 형식 아님" }, 400); }
+  if (!p?.path || !p?.html) return json({ ok: false, msg: "path, html 필요" }, 400);
+  const r = await fetch(`${UPSTREAM}/rest/v1/rpc/factory_page`, {
+    method: "POST",
+    headers: { apikey: ANON_KEY, Authorization: `Bearer ${ANON_KEY}`, "content-type": "application/json" },
+    body: JSON.stringify({ p_token: token, p_path: String(p.path), p_html: String(p.html), p_content_type: p.content_type || null, p_source: p.source || null }),
+  });
+  const res = await r.json().catch(() => ({}));
+  if (!r.ok) {
+    const msg = String(res?.message || "");
+    return json({ ok: false, msg: msg.includes("bad_token") ? "토큰이 맞지 않음" : (msg || `저장 실패 ${r.status}`) }, msg.includes("bad_token") ? 401 : 400);
+  }
+  // 새로 올린 화면이 바로 보이게 캐시 비움
+  try { await caches.default.delete(new Request(`${SITE}${p.path}`)); } catch (e) {}
+  return json({ ok: true, path: p.path, url: `${SITE}${p.path}` });
+}
+
+async function storedPage(path, request) {
+  const key = new Request(`${SITE}${path}`);
+  try {
+    const hit = await caches.default.match(key);
+    if (hit) return hit;
+    const rows = await sbGet(`site_pages?path=eq.${encodeURIComponent(path)}&select=html,content_type,updated_at`);
+    if (!rows?.length) return null;
+    const res = new Response(rows[0].html, { headers: { "content-type": rows[0].content_type, "cache-control": "public, max-age=300", "x-galaxy-page": "factory " + rows[0].updated_at } });
+    try { await caches.default.put(key, res.clone()); } catch (e) {}
+    return res;
+  } catch (e) {
+    return null; // DB가 안 되면 정적 파일로
+  }
+}
+
 export default {
   async fetch(request, env) {
     if (new URL(request.url).pathname === "/rss.xml") return rssFeed(request, env);
@@ -459,6 +510,7 @@ export default {
     if (url.pathname === "/api/auth/naver/start") return naverStart(request, url, env);
     if (url.pathname === "/api/auth/naver/callback") return naverCallback(request, url, env);
     if (url.pathname === "/api/posts") return receivePost(request, env);
+    if (url.pathname === "/api/pages") return receivePage(request);
     if (url.pathname === "/api/trend/latest") return trendLatest();
     /* /trend/ 목록은 site2 정적 페이지가 그림 */
     const tm = url.pathname.match(/^\/trend\/(\d+)\/?$/);
@@ -470,6 +522,10 @@ export default {
         status: 200,
         headers: { "content-type": "text/html; charset=utf-8" },
       });
+    }
+    if (request.method === "GET" || request.method === "HEAD") {
+      const pp = pagePath(url.pathname);
+      if (pp) { const page = await storedPage(pp, request); if (page) return page; }
     }
     return env.ASSETS.fetch(request);
   },

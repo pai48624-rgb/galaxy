@@ -269,7 +269,7 @@ export function koreaArticles(today = kstToday()): KoreaArticle[] {
     const d = join(dir, slug);
     if (!existsSync(join(d, 'meta.json'))) continue;
     const m = JSON.parse(readFileSync(join(d, 'meta.json'), 'utf8')) as KoreaMeta;
-    if (m.publish > today || m.hidden) continue; // 예약 글은 그 날부터
+    if ((m.publish > today && !process.env.SITE2_SHOW_SCHEDULED) || m.hidden) continue; // 예약 글은 그 날부터(로컬 미리보기 빌드 dist-preview 만 SITE2_SHOW_SCHEDULED=1 로 미리 보임 — 배포 폴더 dist 엔 안 들어감)
     const html = { ko: readFileSync(join(d, 'ko.html'), 'utf8'), en: readFileSync(join(d, 'en.html'), 'utf8') };
     if (textLen(html.ko) < 900 || textLen(html.en) < 1800) continue; // gen-korea-pages.mjs 최소 분량 규칙
     out.push({ m, html });
