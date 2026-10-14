@@ -13,6 +13,8 @@ const { posts, lang = 'ko' } = Astro.props;
 const empty = ui(lang).home.noPosts;
 const badge = ui(lang).trend.koreanBadge;
 const tagOf = (p: TrendPost) => (lang === 'en' ? p.tags.find((t) => /^[A-Za-z]/.test(t)) : p.tags[0]) || '';
+// 글자 카드 위 작은 분류(그림 속 '# AI 도구별 리뷰' 자리): 'AI 도구 리뷰' 태그가 있으면 그것, 없으면 대표 태그
+const kickerOf = (p: TrendPost) => (lang === 'en' ? p.tags.find((t) => /^[ -~]+$/.test(t)) : p.tags.find((t) => t === 'AI 도구 리뷰') || tagOf(p)) || 'AI';
 ---
 
 <trend-zigzag data-api={lang === 'en' ? '' : TREND_API} data-lang={lang}>
@@ -36,7 +38,9 @@ const tagOf = (p: TrendPost) => (lang === 'en' ? p.tags.find((t) => /^[A-Za-z]/.
             </div>
           </a>
           <a href={href} class="tz-pic" tabindex="-1" aria-hidden="true">
-            {p.img ? <img src={p.img} alt="" loading={i < 2 ? 'eager' : 'lazy'} decoding="async" /> : <span class="tz-ph"><i>✦</i><b>{tag || 'AI'}</b></span>}
+            {p.img
+              ? <span class="tz-ph tz-band"><small># {kickerOf(p)}</small><b>{title}</b><em></em><i>&lt;/&gt;</i></span>
+              : <span class="tz-ph"><i>✦</i><b>{tag || 'AI'}</b></span>}
           </a>
         </li>
       );
@@ -61,9 +65,9 @@ const tagOf = (p: TrendPost) => (lang === 'en' ? p.tags.find((t) => /^[A-Za-z]/.
   .tz-badge { border: 1px solid rgb(71 85 105); border-radius: 999px; padding: 0 .5rem; font-size: 11px; }
   .tz-pic { display: block; min-width: 0; border: 1px solid rgb(51 65 85); border-radius: 1rem; padding: .5rem; background: rgb(15 23 42 / .4); transition: border-color .15s; }
   .tz-pic:hover { border-color: rgb(var(--aw-color-primary-rgb, 124 108 240) / .7); }
-  .tz-pic img, .tz-ph { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: .75rem; }
-  /* 사진 칸 배경 = 밤하늘(별 3겹 + 성운, CSS만 — 외부 그림 없음). 글 첫 그림은 글자 띠(3:1)라 자르지 않고 이 위에 통째로(10/14 사용자) */
-  .tz-pic img, .tz-ph {
+  .tz-ph { display: block; width: 100%; aspect-ratio: 16 / 10; border-radius: .75rem; }
+  /* 사진 칸 배경 = 밤하늘(별 + 성운, CSS만 — 외부 그림 없음). 글 첫 그림(글자 띠)은 띠 배경이 남아 쓰지 않고, 같은 배치를 글자로 이 위에 바로 그림(10/14 사용자 "별 배경만") */
+  .tz-ph {
     background:
       radial-gradient(1px 1px at 12% 18%, #fff 50%, transparent 51%), radial-gradient(1px 1px at 27% 72%, #fff 50%, transparent 51%),
       radial-gradient(1.5px 1.5px at 41% 33%, #e0e7ff 50%, transparent 51%), radial-gradient(1px 1px at 58% 84%, #fff 50%, transparent 51%),
@@ -77,10 +81,15 @@ const tagOf = (p: TrendPost) => (lang === 'en' ? p.tags.find((t) => /^[A-Za-z]/.
       radial-gradient(ellipse 40% 30% at 45% 50%, rgb(236 72 153 / .10), transparent 70%),
       linear-gradient(180deg, #050816 0%, #0a0f2c 55%, #060818 100%);
   }
-  .tz-pic img { object-fit: contain; }
   .tz-ph { display: grid; place-items: center; align-content: center; gap: .4rem; color: var(--aw-color-text-heading); text-align: center; padding: 1rem; }
   .tz-ph i { font-style: normal; font-size: 1.6rem; color: var(--aw-color-primary); }
   .tz-ph b { font-size: 1.35rem; font-weight: 700; word-break: keep-all; }
+  .tz-band { position: relative; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; text-align: left; gap: .55rem; padding: 1.5rem 4.5rem 1.5rem 1.75rem; }
+  .tz-band small { font-size: .72rem; font-weight: 700; letter-spacing: .04em; color: rgb(125 211 252); }
+  .tz-band b { font-size: 1.2rem; line-height: 1.45; color: #fff; text-shadow: 0 1px 12px rgb(5 8 22 / .9); }
+  .tz-band em { display: block; width: 2.4rem; height: 3px; border-radius: 2px; background: linear-gradient(90deg, rgb(56 189 248), rgb(124 108 240)); }
+  .tz-band i { position: absolute; right: 1.5rem; top: 50%; transform: translateY(-50%); font-size: 1.5rem; font-weight: 700; color: rgb(139 124 246); }
+  @media (max-width: 480px) { .tz-band { padding: 1rem 3.5rem 1rem 1.25rem; } .tz-band b { font-size: 1.05rem; } .tz-band i { right: 1rem; font-size: 1.25rem; } }
 </style>
 
 <script>
@@ -100,7 +109,8 @@ const tagOf = (p: TrendPost) => (lang === 'en' ? p.tags.find((t) => /^[A-Za-z]/.
         const fold = list.querySelectorAll('.tz-meta span svg')[1]?.outerHTML || '';
         list.innerHTML = posts.map((p, i) => {
           const href = `/trend/${p.id}`, tag = (p.tags || [])[0] || '';
-          const img = /^https:/.test(p.img || '') ? `<img src="${esc(p.img)}" alt="" loading="${i < 2 ? 'eager' : 'lazy'}" decoding="async">` : `<span class="tz-ph"><i>✦</i><b>${esc(tag || 'AI')}</b></span>`;
+          const kicker = (p.tags || []).find((t: string) => t === 'AI 도구 리뷰') || tag || 'AI';
+          const img = p.img ? `<span class="tz-ph tz-band"><small># ${esc(kicker)}</small><b>${esc(p.title)}</b><em></em><i>&lt;/&gt;</i></span>` : `<span class="tz-ph"><i>✦</i><b>${esc(tag || 'AI')}</b></span>`;
           return `<li class="tz-row${i % 2 ? ' tz-flip' : ''}"><a href="${href}" class="tz-text group"><div class="flex gap-3 items-start"><span class="tz-num">${i + 1}</span><b class="tz-title group-hover:text-link">${esc(p.title)}</b></div><p class="tz-sum">${esc(p.summary)}</p><div class="tz-meta"><span>${cal}${fmt(p.created_at)}</span>${tag ? `<span>${fold}${esc(tag)}</span>` : ''}</div></a><a href="${href}" class="tz-pic" tabindex="-1" aria-hidden="true">${img}</a></li>`;
         }).join('');
       } catch (e) { /* 실패하면 빌드 때 목록 그대로 */ }
