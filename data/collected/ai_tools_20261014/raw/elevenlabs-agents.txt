@@ -1,0 +1,675 @@
+=== [home] https://elevenlabs.io/agents (lang=en)
+Deploy AI Agents in Minutes, Not Months | Chat & Voice &)]:tw-overflow-x-hidden"> 
+ strong]:tw-font-normal tw-text-gray-600"> Introducing Eleven v4 Meet Eleven v4, our most emotive model yet. 
+ Discover 
+ Skip to content 
+ Products
+ Solutions
+ Customers
+ Resources
+ Enterprise
+ Pricing
+ Log in Sign up 
+ Contact sales Log in 
+ ElevenAgents
+ Platform
+ Solutions
+ Docs
+ Customers
+ Pricing
+ Menu
+ ElevenAgents
+ ElevenAgents
+ Platform
+ Solutions
+ Docs
+ Customers
+ Pricing
+ Talk to sales 
+ Create an AI Agent 
+ Conversational agents that feel human 
+ Talk to sales Create an AI agent 
+ Configure, deploy and monitor natural, human-sounding agents in 90+ languages with leading accuracy and ultra-low latency across voice, chat, and email.
+ Appointment Scheduling
+ Create your own agent 
+ Invoice Management
+ Create your own agent 
+ Purchase Assistance
+ Create your own agent 
+ Account Support
+ Create your own agent 
+ Trusted by leading enterprises
+ Read all stories 
+ Twilio
+ The Walt Disney Studios
+ KPN
+ Stripe is now an ElevenLabs customer
+ Telus
+ Cisco
+ Epic games uses ElevenLabs
+ Nvidia
+ Revolut
+ Meta
+ Zoom
+ Square + ElevenLabs partnership
+ Ramp
+ IBM
+ Deutsche Telekom
+ Klarna
+ Harvey
+ Salesforce + ElevenLabs
+ Voice and chat agents built to improve support, sales and operational outcomes
+ Improve customer experience
+ Resolve inbound support end to end, at lower cost per resolution. Customers get instant answers; your team focuses on what needs a human.
+ Drive growth across the funnel
+ Qualify leads, recover abandoned carts, and run outbound at scale. Conversational agents convert at rates digital flows can’t match.
+ Increase efficiency
+ Automate scheduling, reminders, collections, and internal ops. Reach thousands in hours and free your team for higher-impact work.
+ 10M+ conversations per week delivering results
+ View case studies 
+ :focus-visible]:tw-outline-focus tw-rounded-sm">
+ :focus-visible]:tw-outline-focus tw-rounded-sm"> In the contact center, the only moment you have to foster trust is when you say hello. Given the state-of-the-art voice quality that ElevenLabs has, customers will give us a chance.
+ Sahil Sakhuja
+ Head of AI Products, Deutsche Telekom
+ The future belongs to agentic states. Our partnership with ElevenLabs gives our digital services a human voice and makes them more accessible to everyone.
+ Mykhailo Fedorov
+ Minister of Digital Transformation of Ukraine
+ Empathetic tone and a human-like feel are super important in support. We want to ensure that our customers feel understood and not processed.
+ Jannes Koopmann
+ Sr. AI Business Owner at 3Shape
+ Deutsche Telekom brought AI to customer support
+ Read story 
+ Read story 
+ Configure, deploy and improve - across every channel, from one platform
+ Design your ideal agent experience
+ Configure voice, language, knowledge base, system prompt, and workflows, then connect to the tools your team already uses - all from one place.
+ Triage Agent 
+ Triage Agent / Main 
+ Meet customers where they are
+ ElevenAgents keeps full context - customers never repeat themselves across phone, web, WhatsApp, SMS, and email.
+ Voice
+ Chat
+ Deploy with confidence
+ Define guardrails, run simulations, and validate agent behavior with automated tests - before anything reaches a customer.
+ Hey! Can you tell what’s the best stock I could invest in today?
+ Request blocked by guardrail
+ Sorry John, I'm unfortunately unable to give financial advice, but I can help with account queries if you have a question about that?
+ Measure performance and improve outcomes
+ Track success rates, CSAT, language usage and more with built-in analytics - or dig deeper with full transcripts, conversation history, and debug logs.
+ Resolution Rate
+ 83.4%
+ 100%
+ 50%
+ 0%
+ *]:tw-pointer-events-none"> 
+ V1: 
+ 87.37%
+ V2: 
+ 61.71%
+ 17 Aug
+ 24 Aug
+ Average CSAT Rating
+ 4.6
+ 5.0
+ 4.0
+ 3.0
+ 2.0
+ 1.0
+ 0.0
+ *]:tw-pointer-events-none"> 
+ 17 Aug
+ 24 Aug
+ Most Used Languages
+ English
+ 8,529
+ Spanish
+ 3,324
+ French
+ 2,551
+ Italian
+ 1,492
+ German
+ 1,209
+ Portuguese
+ 798
+ Japanese
+ 543
+ Overall Success Rate
+ 62.1%
+ 100%
+ 50%
+ 0%
+ *]:tw-pointer-events-none"> 
+ 17 Aug
+ 24 Aug
+ ElevenAgents gives you a single platform to deploy AI agents at scale - configure how your agent thinks and speaks, meet customers on every channel, enforce guardrails, and track performance over time.
+ Expressive Mode for Agents 
+ Getting started with Agents 
+ Workflow templates 
+ Customer Stories 
+ Dozens of integrations with the tools you already use
+ Explore integrations 
+ Zapier 
+ Salesforce 
+ Stripe 
+ Hubspot 
+ Shopify 
+ Zendesk 
+ Genesys 
+ Twilio 
+ Amazon Connect 
+ ElevenAgents extend across every function and use case
+ Clone agent 
+ Support
+ Sales
+ Operations
+ Marketing
+ Talent
+ Support
+ Resolve & triage issues
+ Clone agent 
+ Order Support
+ Order status & tracking
+ Triage Agent
+ Route & prioritize tickets
+ Front Desk Agent
+ Inbound call handling
+ FAQ Agent
+ Knowledge base lookup
+ Clone agent 
+ Host and store data on your terms, anywhere
+ Agents for Enterprise 
+ SOC 2 Type II 
+ ISO 27001 
+ Regional Data Residency 
+ Zero Retention Mode 
+ On-prem options 
+ ISO 42001 
+ AIUC-1 
+ HIPAA compliant 
+ PCI DSS Level 1 
+ See all certifications 
+ Get started with ElevenAgents today
+ Create your Agent
+ Build your first agent in minutes - no engineering required.
+ 15 minutes included for free 
+ Calls and text messages 
+ Commercial License included 
+ 17k+ voices across 90+ languages 
+ Sign up 
+ ElevenAgents for Enterprise
+ Deploy at scale with the compliance, support, and security you need.
+ Forward Deployed Engineers 
+ Enterprise data protection 
+ Data residency in US, EU, and India 
+ SLA, SSO, and enterprise access controls 
+ Contact us 
+ ElevenAgent APIs and SDKs
+ Add voice and chat agents to your product with a few lines of code.
+ Native SDKs for web and mobile 
+ WebSocket and REST APIs 
+ LLM-agnostic - bring your own model 
+ Community of 100k+ developers 
+ View docs 
+ :focus-visible]:tw-outline-focus tw-shadow-sm tw-ring tw-isolate" style="border-top-left-radius:1.25rem;border-top-right-radius:0;border-bottom-right-radius:0;border-bottom-left-radius:0"> 
+ import { ElevenLabsClient } from "@elevenlabs/elevenlabs-js" ;
+ import "dotenv/config" ;
+ const elevenlabs = new ElevenLabsClient();
+ const agent = await elevenlabs.conversationalAi.agents.create({
+ name: "My voice agent" ,
+ tags: [ "support" ], // List of tags to help classify and filter the agent 
+ Latest stories
+ All stories 
+ :focus-visible]:tw-outline-focus tw-rounded-sm"> 
+ ElevenLabs and Deutsche Telekom unveil the world’s first network-integrated AI call assistant 
+ Category Customer Stories Date Mar 2, 2026 
+ Klarna reduces Time to Resolution by 10X with ElevenAgents 
+ Category Customer Stories Date Feb 11, 2026 
+ Meesho delivers real-time, multilingual customer support with voice agents 
+ Category Customer Stories Date Jul 17, 2025 
+ Frequently asked questions
+ What channels can I deploy agents on?
+ ElevenAgents runs across all voice and digital channels - telephony, web, mobile, WhatsApp, SMS, email, and chat - with native connectors for tools like Twilio, Genesys, Zendesk, and Salesforce. Embed the web widget with one line of HTML and manage every channel from a single place.
+ Which languages and voices does ElevenAgents support?
+ Agents speak 90+ languages and can switch between them mid-conversation. Choose from over 16,000 voices in our Voice Library, or clone and design your own to match your brand. Because we build our own voice models, your
+
+=== [pricing] https://elevenlabs.io/pricing (lang=en)
+ElevenLabs Pricing for Creators & Businesses of All Sizes &)]:tw-overflow-x-hidden"> 
+ strong]:tw-font-normal tw-text-gray-600"> Introducing Eleven v4 Meet Eleven v4, our most emotive model yet. 
+ Discover 
+ Skip to content 
+ Products
+ Solutions
+ Customers
+ Resources
+ Enterprise
+ Pricing
+ Log in Sign up 
+ Contact sales Log in 
+ Sign up 
+ Flexible pricing for your needs
+ ElevenCreative
+ Creative
+ ElevenAgents
+ Agents
+ ElevenAPI
+ API
+ ElevenCreative
+ Creative
+ ElevenAgents
+ Agents
+ ElevenAPI
+ API
+ Monthly billing Monthly billing Yearly billing 
+ Free
+ $0 per month 
+ Build for free 
+ Text to Speech 
+ Speech to Text 
+ Sound Effects 
+ Voice Design 
+ Music 
+ Productions 
+ Image 
+ 3 Projects in Studio 
+ 10k credits per month 
+ Starter
+ Until Oct 18 
+ $6 First month 83% off 
+ $1 per month 
+ Choose Starter 
+ Everything in free, plus 
+ Commercial License 
+ Instant Voice Cloning 
+ 20 Projects in Studio 
+ Music commercial use 
+ Dubbing Studio 
+ Image & Video 
+ 30k credits per month 
+ Creator
+ Popular
+ $22 First month 50% off 
+ $11 per month 
+ Choose Creator 
+ Everything in Starter, plus 
+ Professional Voice Cloning 
+ Additional Credits 
+ 121k credits per month 
+ Pro
+ $99 per month 
+ Choose Pro 
+ Everything in Creator, plus 
+ 44.1kHz PCM audio output via API 
+ 192kbps quality audio 
+ 600k credits per month 
+ For
+Businesses
+ Scale
+ $299 per month 
+ Choose Scale 
+ Everything in Pro, plus 
+ 3 Workspace seats 
+ Team Collaboration 
+ 3 Professional Voice Clones 
+ 1.8M credits per month 
+ 3 seats
+ Business
+ $990 per month 
+ Choose Business 
+ Everything in Scale, plus 
+ Low-latency TTS as low as 5c/minute 
+ 10 Professional Voice Clones 
+ 10 Workspace seats 
+ 6M credits per month 
+ 10 seats
+ Enterprise
+ Custom pricing 
+ Contact us 
+ Everything in Business, plus 
+ Custom terms & assurance around DPA/SLAs 
+ BAAs for HIPAA customers 
+ Custom SSO 
+ More seats and voices 
+ Elevated concurrency limits 
+ Fully managed dubbing with Productions 
+ Significant discounts at scale 
+ Priority support 
+ Custom number of credits and seats
+ Prices exclude all taxes, levies and duties.
+ Calculate your costs based on your usage needs
+ Monthly billing Monthly billing Yearly billing 
+ Startup Grants Program
+ Build intelligent, real-time conversational AI agents into your new product or startup for free with an ElevenLabs Grant.
+ 12 Months free
+ To build, launch & test
+ 33M Characters
+ Valid for 12 months
+ Learn more 
+ Compare plans
+ Text to Speech
+ Speech to Text
+ Voice Changer
+ Sound Effects
+ Voice Isolator
+ Music
+ Image & Video
+ Automatic Dubbing
+ Dubbing Studio
+ Voices
+ Studio
+ Productions
+ Free 
+ Starter 
+ Creator 
+ Pro 
+ Scale 
+ Business 
+ Free
+ Free Starter Creator Pro Scale Business 
+ Text to Speech (UI)
+ Minutes included
+ Extra minute
+ Commercial use
+ Eleven v3 model
+ Languages
+ Custom voice slots
+ Instant Voice Cloning
+ Professional Voice Cloning
+ Audio quality
+ WAV / PCM 44.1 kHz
+ Concurrent requests
+ ~ 10
+ ~ $0.36 
+ 74
+ 3
+ 128 kbps, 44.1kHz
+ 2
+ ~ 30
+ ~ $0.20 
+ 74
+ 10
+ 128 kbps, 44.1kHz
+ 3
+ ~ 121
+ ~ $0.18 
+ 74
+ 30
+ 1
+ 128 & 192 kbps, 44.1kHz
+ 5
+ ~ 600
+ ~ $0.17 
+ 74
+ 160
+ 1
+ 128 & 192 kbps, 44.1kHz
+ 10
+ ~ 1,800
+ ~ $0.17 
+ 74
+ 660
+ 3
+ 128 & 192 kbps, 44.1kHz
+ 15
+ ~ 6,000
+ ~ $0.17 
+ 74
+ 2,200
+ 10
+ 128 & 192 kbps, 44.1kHz
+ 25
+ FAQs
+ How much does each plan cost and what is included?
+ Monthly price and included credits per plan: Free $0 (10,000 credits); Starter $6 (30,000 credits); Creator $22 (121,000 credits, $11 for the first month); Pro $99 (600,000 credits); Scale $299 (1,800,000 credits, 3 seats); Business $990 (6,000,000 credits, 10 seats); Enterprise is custom. Credits are shared across every product — see the per-product credit costs below.
+ How do text characters and credits work?
+ Each text character you generate consumes credits, with the exact cost depending on the model used. For V2 Multilingual models, 1 text character equals 1 credit. For V2 Flash/Turbo English and V2.5 Flash/Turbo Multilingual models, discounted pricing applies for API usage, costing between 0.5 and 1 credit per character.
+ How many credits does each product use?
+ All products draw from one shared monthly credit pool, so the same credits can be spent on any of them and using one leaves fewer for the others. Approximate credit costs are: Text to Speech 1 credit per character; Speech to Text 330 credits per minute; Eleven Music 900 credits per minute; Sound Effects 200 credits per generation; Voice Changer and Voice Isolator 1,000 credits per minute; and Dubbing 2,000 credits per minute (automatic with watermark), 3,000 (automatic without watermark), 5,000 (Dubbing Studio with watermark) or 10,000 (Dubbing Studio without watermark).
+ When do my credits reset, and do unused credits roll over?
+ Your credit allowance resets at the start of each billing cycle, which begins on the day you subscribed. Unused credits roll over for up to two months — up to 2× your monthly quota — so your balance can reach at most 3× your monthly quota (this month's allotment plus up to two months of rollover), as long as you maintain an active paid subscription and do not downgrade or cancel. Downgrading or cancelling forfeits unused credits at the end of the cycle. Rollover does not apply to the Free plan. Pay-as-you-go top-up credits are separate and are not subject to this rollover cap. When your subscription renews, you receive a new monthly allotment of credits.
+ Do you offer annual billing, and what does it cost?
+ Yes. Annual billing works out to two months free — you pay for 10 months (annual price = monthly price × 10). The equivalent monthly price on an annual plan is $5 for Starter, $18.33 for Creator, $82.50 for Pro, $249.17 for Scale, and $825 for Business.
+ Is there a limit on how many credits I can use in a single request?
+ Yes. There is a maximum number of credits that can be used in a single generation request. The limit depends on whether you are on the Free tier or a paid subscription.
+ Am I charged for every generation?
+ Credits are charged per generation request, not per download. If you are not satisfied with the output, a limited number of free regenerations may be available as long as the content and certain settings do not change. Whether a regeneration is free is indicated before generating.
+ What happens if I upgrade, downgrade, or cancel my subscription?
+ If you upgrade to a higher plan, any unused credits from your previous plan will roll over into the next billing cycle. If you downgrade or cancel your subscription, your subscription will remain active until the end of the current billing cycle. After that, your account will b
+
+=== [about] https://elevenlabs.io/about (lang=en)
+AI research and products that reimagine human-technology &)]:tw-overflow-x-hidden"> 
+ strong]:tw-font-normal tw-text-gray-600"> Introducing Eleven v4 Meet Eleven v4, our most emotive model yet. 
+ Discover 
+ Skip to content 
+ Products
+ Solutions
+ Customers
+ Resources
+ Enterprise
+ Pricing
+ Log in Sign up 
+ Contact sales Log in 
+ Sign up 
+ About
+ AI research and products that transform how we interact with technology
+ We’re backed by leading names
+ ElevenLabs is an AI research and product company transforming the way we interact with technology.
+ We want to make communication and creation seamless. We started by building with the first human-like voice model. Now we’ve expanded well beyond voice.
+ Our work focuses on three platforms:
+ ElevenAgents lets businesses build and deploy AI voice and chat agents for customer support, sales, and more. It includes the integrations, workflows, testing, monitoring, and reliability needed to run conversational AI in production at scale. This is all powered by our real-time Text to Speech and Speech to Text models.
+ ElevenCreative empowers creators and marketers to generate and edit speech, music, sound effects, images, and video across more than 90 languages. Tools include Text to Speech, Speech to Text, Voice Cloning, Voice Design, AI Dubbing, and the all-in-one Studio. 
+ ElevenAPI gives developers access to our leading AI audio foundation models, with low-latency streaming and SDKs for building voice into any product.
+ Our goal is to put state-of-the-art voice AI in the hands of those using it to improve their communities. We provide free licenses to those who need it most through the ElevenLabs Impact Program . This includes individuals with accessibility needs and nonprofit organizations across healthcare, education, and culture.
+ At ElevenLabs, AI safety is inseparable from innovation. Our dedicated safety team combines members of our research, engineering, and policy teams. We deploy a comprehensive set of safeguards in a multi-layered defense system to prevent, detect, enforce, and inform misuse.
+ Everything we do is the result of the creativity and commitment of our team. These are builders doing the best work of their lives. We are researchers, engineers, and operators. Award-winning scientists, dedicated creatives, and ex-founders. If you want to work hard and create lasting positive impact, we want to hear from you .
+ Latest updates
+ View all 
+ :focus-visible]:tw-outline-focus tw-rounded-sm"> 
+ Baroness Campbell gives the UK Parliament’s first ever AI-voiced speech with ElevenLabs 
+ Category Company Date Oct 13, 2026 
+ ElevenLabs launches in Singapore 
+ Category Company Date Oct 8, 2026 
+ ElevenLabs is now FedRAMP 20x Class A certified 
+ Category Company Date Oct 1, 2026 
+ ElevenLabs launches in the Netherlands 
+ Category Company Date Oct 1, 2026 
+ ElevenLabs valuation increases to $22 billion fueled by enterprise demand for conversational agents 
+ Category Company Date Sep 30, 2026 
+ ElevenLabs launches in Belgium 
+ Category Company Date Sep 30, 2026 
+ Universal Music Group and ElevenLabs announce multi-year strategic agreement 
+ Category Company Date Sep 10, 2026 
+ Ethan Tandowsky joins ElevenLabs as Chief Financial Officer 
+ Category Company Date Sep 8, 2026 
+ Ashley Kramer joins ElevenLabs as Chief Revenue Officer 
+ Category Company Date Sep 2, 2026 
+ Strengthening and protecting elections 
+ Category Company Date Jul 24, 2026 
+ ElevenLabs is launching in Canada 
+ Category Company Date Jul 7, 2026 
+ ElevenLabs releases The Odyssey audiobook narrated by Sir Michael Caine's AI voice 
+ Cat
+
+=== [pricing2] https://elevenlabs.io/pricing/agents (lang=en)
+ElevenAgents Pricing for creators and businesses of all sizes &)]:tw-overflow-x-hidden"> 
+ strong]:tw-font-normal tw-text-gray-600"> Introducing Eleven v4 Meet Eleven v4, our most emotive model yet. 
+ Discover 
+ Skip to content 
+ Products
+ Solutions
+ Customers
+ Resources
+ Enterprise
+ Pricing
+ Log in Sign up 
+ Contact sales Log in 
+ Sign up 
+ Flexible pricing for your needs
+ ElevenCreative
+ Creative
+ ElevenAgents
+ Agents
+ ElevenAPI
+ API
+ ElevenCreative
+ Creative
+ ElevenAgents
+ Agents
+ ElevenAPI
+ API
+ Monthly billing Monthly billing Yearly billing 
+ Free
+ $0 per month 
+ Build for free 
+ 15 minutes of calls included 
+ 4 Concurrent Calls 
+ Workflow Builder 
+ Knowledge Base 
+ Multilingual 
+ Widget 
+ Starter
+ Until Oct 18 
+ $6 First month 83% off 
+ $1 per month 
+ Choose Starter 
+ Everything in free, plus 
+ 75 minutes of calls included 
+ 6 Concurrent Calls 
+ Text messages 
+ Commercial License 
+ Creator
+ Popular
+ $22 First month 50% off 
+ $11 per month 
+ Choose Creator 
+ Everything in Starter, plus 
+ 275 minutes of calls included 
+ 10 Concurrent Calls 
+ Additional Minutes 
+ Pro
+ $99 per month 
+ Choose Pro 
+ Everything in Creator, plus 
+ 1,238 minutes of calls included 
+ 20 Concurrent Calls 
+ For
+Businesses
+ Scale
+ $299 per month 
+ Choose Scale 
+ Everything in Pro, plus 
+ 3,738 minutes of calls included 
+ 30 Concurrent Calls 
+ 3 Workspace Seats 
+ Business
+ $990 per month 
+ Choose Business 
+ Everything in Scale, plus 
+ 12,375 minutes of calls included 
+ 40 Concurrent Calls 
+ 10 Workspace seats 
+ 10 Professional Voice Clones 
+ Enterprise
+ Custom pricing 
+ Contact us 
+ Everything in Business, plus 
+ Elevated concurrency limits 
+ Custom terms & assurance around DPA/SLAs 
+ BAAs for HIPAA customers 
+ Custom SSO 
+ More seats and voices 
+ Significant discounts at scale 
+ Priority support 
+ Prices exclude all taxes, levies and duties.
+ Calculate your costs based on your usage needs
+ Lovable
+ Synthesia
+ Stripe
+ Perplexity
+ Twilio
+ Startup Grants Program
+ Build intelligent, real-time conversational AI agents into your new product or startup for free with an ElevenLabs Grant.
+ Learn more 
+ 12 Months free
+ To build, launch & test
+ 33M Characters
+ Valid for 12 months
+ ElevenAgents pricing
+ Monthly billing Monthly billing Yearly billing 
+ Free / Pay as you go Free / Pay as you go Starter Creator Pro Scale Business 
+ Free / Pay as you go
+ Starter
+ $6 per month , first month $1
+ Creator
+ $22 per month , first month $11
+ Pro
+ $99 per month
+ Scale
+ $299 per month
+ Business
+ $990 per month
+ ElevenLabs Hosting
+ Included Call (per minute)
+ Additional Call (per minute)
+ Text message (per message)
+ Burst pricing (per minute)
+ Concurrent Calls
+ 15 min
+ $0.080 
+ $0.003 
+ $0.160 
+ 4
+ 75 min
+ $0.080 
+ $0.003 
+ $0.160 
+ 6
+ 275 min
+ $0.080 
+ $0.003 
+ $0.160 
+ 10
+ 1,238 min
+ $0.080 
+ $0.003 
+ $0.160 
+ 20
+ 3,738 min
+ $0.080 
+ $0.003 
+ $0.160 
+ 30
+ 12,375 min
+ $0.080 
+ $0.003 
+ $0.160 
+ 40
+ External Providers
+ LLM
+ Telephony Provider
+ Based on usage and varies by model. 
+ At cost
+ Based on usage and varies by model. 
+ At cost
+ Based on usage and varies by model. 
+ At cost
+ Based on usage and varies by model. 
+ At cost
+ Based on usage and varies by model. 
+ At cost
+ Based on usage and varies by model. 
+ At cost
+ Included Features
+ Text to Speech
+ Speech to Text
+ Knowledge Bases
+ RAG
+ Telephony
+ FAQs
+ How much do ElevenAgents plans cost per minute, and what is included?
+ ElevenAgents plans are billed by call minutes, not by the shared credit pool. Included call minutes and concurrent calls per plan: Free 15 minutes / 4 concurrent calls; Starter 75 minutes / 6; Creator 275 minut
+
+=== [meta] https://elevenlabs.io/agents
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: English, Deutsch

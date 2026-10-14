@@ -1,0 +1,142 @@
+{
+ "company": "Exo Labs",
+ "one_liner_ko": "내가 가진 기기들을 하나의 클러스터로 묶어 프런티어 AI 모델을 로컬에서 돌리는 오픈소스 소프트웨어.",
+ "what_it_does_ko": "Exo는 여러 기기를 하나의 로컬 AI 클러스터로 연결하는 오픈소스 소프트웨어이고, Exo Labs는 이를 만드는 회사다. Thunderbolt나 USB-C로 기기를 연결하면 모델을 여러 기기에 나눠 올리고 실행 설정을 자동으로 최적화한다. OpenAI Chat Completions·Responses, Claude Messages, Ollama 형식의 API로 접속할 수 있다. Apple 실리콘 Mac에서 돌아가며 Linux는 소스로 설치할 수 있고, 모델을 받아 두면 오프라인으로도 쓸 수 있다.",
+ "key_features": [
+  "기기 자동 탐색",
+  "Thunderbolt 5 기반 RDMA(기기 간 지연 99% 감소)",
+  "토폴로지 인식 자동 병렬화",
+  "텐서 병렬(2대 최대 1.8배, 4대 최대 3.2배 속도)",
+  "MLX 추론 백엔드",
+  "OpenAI·Claude Messages·Ollama 호환 API",
+  "Hugging Face 커스텀 모델 로드",
+  "클러스터 관리·채팅 대시보드"
+ ],
+ "use_cases_ko": [
+  "개인·팀이 Mac Studio 등 보유 기기로 큰 모델을 로컬 실행",
+  "Claude Code·OpenAI Codex 같은 코딩 에이전트에 로컬 모델 연결",
+  "기업이 자체 인프라에서 로컬 AI 운영(Exo for Business)"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "Apache-2.0",
+ "api": "있음",
+ "platforms": [
+  "맥",
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://exolabs.net",
+   "quote": "Exo Labs is the company behind exo and local.ai."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://exolabs.net",
+   "quote": "Exo connects your devices into a powerful cluster."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://exolabs.net",
+   "quote": "Exo is the open-source software that connects your devices into a local AI cluster."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://exolabs.net",
+   "quote": "Exo distributes a model across your devices and optimizes runtime parameters for turnkey simplicity."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://exolabs.net",
+   "quote": "Connect through familiar API formats: OpenAI Chat Completions, Responses, Claude Messages, and Ollama."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://exolabs.net",
+   "quote": "Linux installations are also available from source."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/exo-explore/exo",
+   "quote": "**Automatic Device Discovery**"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/exo-explore/exo",
+   "quote": "enabling 99% reduction in latency between devices"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/exo-explore/exo",
+   "quote": "**Topology-Aware Auto Parallel**"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/exo-explore/exo",
+   "quote": "for up to 1.8x speedup on 2 devices and 3.2x speedup on 4 devices"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/exo-explore/exo",
+   "quote": "exo uses [MLX](https://github.com/ml-explore/mlx) as an inference backend"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/exo-explore/exo",
+   "quote": "Load custom models from HuggingFace hub"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/exo-explore/exo",
+   "quote": "exo includes a built-in dashboard for managing your cluster and chatting with models."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://exolabs.net",
+   "quote": "Run open models in the harness you already love."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://exolabs.net",
+   "quote": "Claude Code OpenAI Codex Hermes Agent OpenCode"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://exolabs.net",
+   "quote": "Explore running Exo on your own infrastructure."
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/exo-explore/exo",
+   "quote": "<a href=\"https://www.apache.org/licenses/LICENSE-2.0.html\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://img.shields.io/badge/License-Apache2.0-blue.svg\" alt=\"License: Apache-2.0\"></a>"
+  },
+  {
+   "field": "api",
+   "url": "https://github.com/exo-explore/exo",
+   "quote": "Compatible with OpenAI Chat Completions API, Claude Messages API, OpenAI Responses API, and Ollama API"
+  },
+  {
+   "field": "platforms",
+   "url": "https://exolabs.net",
+   "quote": "Exo runs on Apple silicon Macs, including Mac Studio, Mac mini, and MacBook Pro."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://exolabs.net",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "Apache-2.0 오픈소스 소프트웨어로, 사용자가 가진 기기에서 로컬 추론",
+   "diff": "기존 분류는 '사용량 기반 종량제(클라우드/GPU)'이나 공식 페이지는 자기 하드웨어에서 돌리는 오픈소스이며 사용량 과금 언급 없음(기업용은 문의)",
+   "url": "https://github.com/exo-explore/exo"
+  }
+ ],
+ "plan_change": []
+}

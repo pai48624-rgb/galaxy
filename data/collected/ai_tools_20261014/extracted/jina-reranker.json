@@ -1,0 +1,122 @@
+{
+ "company": "Jina AI",
+ "one_liner_ko": "검색 관련성과 RAG 정확도를 높여 주는 리랭커 API.",
+ "what_it_does_ko": "Jina Reranker는 임베딩이나 BM25로 먼저 찾은 검색 결과를 받아 질의 의도에 더 맞게 다시 정렬하는 API다. 최신 jina-reranker-v3.5는 0.6B 파라미터 다국어 listwise 리랭커로 131K 컨텍스트를 지원한다. 멀티모달 다국어 문서 리랭커 m0도 있고, v2는 100개 이상 언어 검색·함수 호출·코드 검색·표 데이터 순위를 지원한다. API 구독(토큰 충전) 또는 AWS·Azure 등 클라우드 마켓을 통해 구매할 수 있다.",
+ "key_features": [
+  "jina-reranker-v3.5: 0.6B 다국어 listwise 리랭커, 131K 컨텍스트",
+  "m0: 멀티모달 다국어 시각 문서 리랭커",
+  "100개 이상 언어에서 질의 언어와 무관한 문서 검색(v2)",
+  "자연어 질의로 함수·코드 스니펫 순위화(v2)",
+  "표·구조화 데이터 순위화로 SQL 생성 전 스키마 선택(v2)",
+  "AWS SageMaker·Microsoft Azure 등 클라우드 배포",
+  "분당 요청·토큰 기준 요청 한도(RPM·TPM)"
+ ],
+ "use_cases_ko": [
+  "검색 시스템·RAG의 결과 재정렬",
+  "에이전트형 RAG에서 함수·코드 검색"
+ ],
+ "pricing": {
+  "free_tier": "있음 (무료로 시작, 한도 불명)",
+  "plans": [
+   {
+    "name": "Jina Search Foundation API 토큰 충전",
+    "price": null,
+    "currency": null,
+    "period": "usage",
+    "limits": "토큰 선불 충전, 지역에 따라 USD·EUR 등으로 과금",
+    "page_lang": "en-US"
+   }
+  ],
+  "pricing_url": "https://jina.ai/reranker/"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "API"
+ ],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://jina.ai/reranker/",
+   "quote": "Reranker API - Jina AI"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://jina.ai/reranker/",
+   "quote": "Maximize the search relevancy and RAG accuracy with our cutting-edge reranker API."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://jina.ai/reranker/",
+   "quote": "and reevaluates them to ensure they align more closely with the user's intent."
+  },
+  {
+   "field": "key_features",
+   "url": "https://jina.ai/reranker/",
+   "quote": "jina-reranker-v3.5 is a 0.6B parameter multilingual listwise reranker with a 131K context window."
+  },
+  {
+   "field": "key_features",
+   "url": "https://jina.ai/reranker/",
+   "quote": "Our new multimodal multilingual reranker for retrieving visual documents across multiple languages"
+  },
+  {
+   "field": "key_features",
+   "url": "https://jina.ai/reranker/",
+   "quote": "Reranker v2 enables document retrieval in over 100 languages, regardless of the query language."
+  },
+  {
+   "field": "key_features",
+   "url": "https://jina.ai/reranker/",
+   "quote": "Reranker v2 ranks code snippets and function signatures based on natural language queries, ideal for Agentic RAG applications."
+  },
+  {
+   "field": "key_features",
+   "url": "https://jina.ai/reranker/",
+   "quote": "Reranker v2 ranks the most relevant tables based on natural language queries"
+  },
+  {
+   "field": "key_features",
+   "url": "https://jina.ai/reranker/",
+   "quote": "Using AWS or Azure? You can deploy our models directly on your company's cloud platform and handle billing through the CSP account."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://jina.ai/reranker/",
+   "quote": "function-calling support, multilingual retrieval across more than 100 languages, and code search"
+  },
+  {
+   "field": "pricing",
+   "url": "https://jina.ai/reranker/",
+   "quote": "Try our cutting-edge reranker API to maximize your search relevancy and RAG accuracy. Starting for free!"
+  },
+  {
+   "field": "pricing",
+   "url": "https://jina.ai/reranker/",
+   "quote": "The easiest way to access all of our products. Top-up tokens as you go."
+  },
+  {
+   "field": "pricing",
+   "url": "https://jina.ai/reranker/",
+   "quote": "Depending on your location, you may be charged in USD, EUR, or other currencies. Taxes may apply."
+  },
+  {
+   "field": "api",
+   "url": "https://jina.ai/reranker/",
+   "quote": "curl \"https://api.jina.ai/v1/rerank\""
+  },
+  {
+   "field": "platforms",
+   "url": "https://jina.ai/reranker/",
+   "quote": "Subscribe to our API or purchase through cloud providers."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://jina.ai/reranker/",
+   "quote": "hreflang: de, en-us, es, fr, it, ja, ko, ru, x-default, zh-cn, zh-tw"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

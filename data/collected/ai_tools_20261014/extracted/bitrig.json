@@ -1,0 +1,146 @@
+{
+ "company": "Bitrig",
+ "one_liner_ko": "AI로 네이티브 Swift 앱을 만들어 App Store까지 출시하게 해 주는 맥용 앱.",
+ "what_it_does_ko": "Bitrig는 AI로 네이티브 Swift 앱을 만들고 출시하는 맥 앱이다. 만들고 싶은 것을 설명하면 App Store에 낼 수 있는 실제 Swift 코드로 바꿔 준다. 실제 Xcode 프로젝트를 Xcode 도구 전체와 최신 SDK로 빌드하며 iPhone·iPad·Mac·Apple Watch·Apple TV·Vision Pro를 지원한다. Claude Code·Codex로 동작하고, 이미 쓰는 Claude·ChatGPT 구독을 연결해 쓸 수 있다. Apple SwiftUI 팀 공동 개발자들이 만들었다.",
+ "key_features": [
+  "설명만으로 Swift 앱 코드 생성",
+  "Claude Code·Codex 기반 에이전트",
+  "사실적인 3D 기기 모양의 내장 시뮬레이터",
+  "기존 Claude·ChatGPT 구독 연결(토큰 요금 대신)",
+  "실제 Xcode 프로젝트로 언제든 Xcode에서 열기",
+  "위젯·라이브 액티비티·Siri·단축어 연동",
+  "GitHub 연동",
+  "TestFlight·App Store 업로드·등록 관리"
+ ],
+ "use_cases_ko": [
+  "설명만으로 네이티브 iOS 앱을 만들어 App Store에 출시"
+ ],
+ "pricing": {
+  "free_tier": "있음 (하루 메시지 10개, 월 최대 60 크레딧)",
+  "plans": [
+   {
+    "name": "Free",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "하루 메시지 10개, AI 구독 또는 월 최대 60 크레딧",
+    "page_lang": "en"
+   },
+   {
+    "name": "Pro",
+    "price": 15,
+    "currency": "USD",
+    "period": "month",
+    "limits": "하루 메시지 무제한, TestFlight·App Store 배포. AI 구독 필요",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://bitrig.com/pricing"
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "맥"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://bitrig.com/about",
+   "quote": "Bitrig is built by co-creators and longtime members of Apple’s SwiftUI team."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://bitrig.com/",
+   "quote": "Build and ship native Swift apps with AI"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://bitrig.com/pricing",
+   "quote": "Bitrig is a Mac app for building and shipping native Swift apps with AI."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://bitrig.com/pricing",
+   "quote": "supports every Apple platform: iPhone, iPad, Mac, Apple Watch, Apple TV, and Vision Pro."
+  },
+  {
+   "field": "key_features",
+   "url": "https://bitrig.com/",
+   "quote": "Describe what you want to build, and Bitrig turns it into real Swift code you can ship to the App Store."
+  },
+  {
+   "field": "key_features",
+   "url": "https://bitrig.com/",
+   "quote": "Powered by Claude Code and Codex, using the latest models from Anthropic and OpenAI."
+  },
+  {
+   "field": "key_features",
+   "url": "https://bitrig.com/",
+   "quote": "Bitrig automatically runs your app framed in a photorealistic 3D device."
+  },
+  {
+   "field": "key_features",
+   "url": "https://bitrig.com/",
+   "quote": "Connect the Claude or ChatGPT subscription you already have."
+  },
+  {
+   "field": "key_features",
+   "url": "https://bitrig.com/",
+   "quote": "Real Xcode projects, built with the full toolchain and latest SDKs. Open in Xcode anytime."
+  },
+  {
+   "field": "key_features",
+   "url": "https://bitrig.com/",
+   "quote": "Build Widgets, Live Activities, and Controls. Integrate with Shortcuts, Siri, and Spotlight."
+  },
+  {
+   "field": "key_features",
+   "url": "https://bitrig.com/",
+   "quote": "Make changes and contribute them back through the GitHub workflow your team already uses."
+  },
+  {
+   "field": "key_features",
+   "url": "https://bitrig.com/",
+   "quote": "Create your app record, upload builds, and manage your App Store listing."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://bitrig.com/",
+   "quote": "Describe what you want to build, and Bitrig turns it into real Swift code you can ship to the App Store."
+  },
+  {
+   "field": "pricing",
+   "url": "https://bitrig.com/pricing",
+   "quote": "10 daily messages"
+  },
+  {
+   "field": "pricing",
+   "url": "https://bitrig.com/pricing",
+   "quote": "Use a Claude, ChatGPT, or other AI subscription and up to 60 monthly credits."
+  },
+  {
+   "field": "pricing",
+   "url": "https://bitrig.com/pricing",
+   "quote": "Pro plan requires an AI subscription."
+  },
+  {
+   "field": "platforms",
+   "url": "https://bitrig.com/",
+   "quote": "Requires macOS 15+ and Apple silicon"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://bitrig.com/",
+   "quote": "hreflang: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "Free $0(하루 10메시지)·Pro 월 $15, 모든 요금제가 사용자의 Claude·ChatGPT 등 AI 구독(또는 크레딧)을 따로 요구하는 맥 앱",
+   "diff": "자체 구독만으로 끝나지 않고 다른 회사 AI 구독과 묶임. 기존 설명(휴대폰에서 휴대폰 앱 제작)과 달리 현재 공식 페이지는 맥 앱",
+   "url": "https://bitrig.com/pricing"
+  }
+ ]
+}

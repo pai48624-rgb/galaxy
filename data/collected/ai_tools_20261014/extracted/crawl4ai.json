@@ -1,0 +1,36 @@
+{
+ "company": "Crawl4AI",
+ "one_liner_ko": "어떤 웹사이트든 LLM이 바로 쓸 수 있는 깔끔한 마크다운으로 바꿔 주는 오픈소스 웹 크롤러로, 호스팅형 API도 제공한다.",
+ "what_it_does_ko": "Crawl4AI는 웹사이트를 RAG·AI 에이전트·데이터 파이프라인용 마크다운으로 바꿔 주는 오픈소스 웹 크롤러·스크레이퍼다. 직접 설치해 무료로 쓰거나, 키 하나로 호스팅형 클라우드 API를 쓸 수 있다. 클라우드 API는 페이지를 마크다운으로 가져오기, 자연어 요청으로 JSON 추출, 웹 검색, 구글 검색결과(SERP) 데이터화, 출처가 붙은 답변을 제공한다. Claude Code, Codex, Cursor 같은 에이전트에 MCP로 연결할 수 있다.",
+ "key_features": ["/scrape: 페이지를 깔끔한 마크다운으로 변환", "/extract: 자연어 요청으로 JSON 레코드 추출(선택자 불필요)", "/search: 웹 검색 결과를 JSON으로", "/serp: 구글 검색결과 페이지를 데이터로(베타)", "/answer: 출처가 붙은 답변(실험적)", "MCP 서버로 코딩 에이전트 연결", "딥 크롤링·적응형 크롤링·안티봇 대응(라이브러리)", "pip 설치 자체 호스팅"],
+ "use_cases_ko": ["RAG·AI 에이전트·데이터 파이프라인에 넣을 웹 데이터 준비", "검색 순위 추적(SERP)"],
+ "pricing": {"free_tier": "있음 (오픈소스 무료, 클라우드는 시작 시 2,000크레딧·분당 10회·동시 2개)", "plans": [
+  {"name": "Free", "price": 0, "currency": "USD", "period": "one-time", "limits": "2,000크레딧 시작, 분당 10회, 동시 2개", "page_lang": "en"},
+  {"name": "Starter", "price": 10, "currency": "USD", "period": "usage", "limits": "$10·$25·$100 크레딧 팩, 분당 120회, 동시 10개, 크레딧 만료 없음", "page_lang": "en"},
+  {"name": "Builder", "price": null, "currency": "USD", "period": "month", "limits": "출시 예정(Coming soon), 월 500,000크레딧", "page_lang": "en"},
+  {"name": "Enterprise", "price": null, "currency": "USD", "period": null, "limits": "문의", "page_lang": "en"}
+ ], "pricing_url": "https://crawl4ai.com"},
+ "open_source": "Apache-2.0",
+ "api": "있음",
+ "platforms": ["API", "CLI"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://docs.crawl4ai.com/", "quote": "Crawl4AI: the open-source web crawler for LLMs and AI agents"},
+  {"field": "one_liner_ko", "url": "https://docs.crawl4ai.com/", "quote": "Crawl4AI turns any website into clean, LLM-ready Markdown for RAG, AI agents and data pipelines."},
+  {"field": "what_it_does_ko", "url": "https://docs.crawl4ai.com/", "quote": "Run the open-source web crawler and scraper yourself, free forever, or use it hosted with one key"},
+  {"field": "key_features", "url": "https://crawl4ai.com", "quote": "/extract URL + a plain-English ask → typed JSON records. No selectors."},
+  {"field": "key_features", "url": "https://crawl4ai.com", "quote": "/serp query → Google's results page as data: true ranks, every block, localised to a place. For rank tracking."},
+  {"field": "key_features", "url": "https://crawl4ai.com", "quote": "/answer a question → a direct answer with its sources. Experimental."},
+  {"field": "key_features", "url": "https://crawl4ai.com", "quote": "It's Apache-2.0. pip install crawl4ai , point it at your own boxes and proxies."},
+  {"field": "use_cases_ko", "url": "https://docs.crawl4ai.com/", "quote": "clean, LLM-ready Markdown for RAG, AI agents and data pipelines."},
+  {"field": "pricing", "url": "https://crawl4ai.com", "quote": "Prototypes and side projects. 2,000 credits to start, 10 a minute, 2 at a time."},
+  {"field": "pricing", "url": "https://crawl4ai.com", "quote": "Pay as you go. 120 a minute, 10 at a time, 50,000 credits a month. Credit never expires."},
+  {"field": "pricing", "url": "https://crawl4ai.com", "quote": "$ 10 · $ 25 · $ 100 credit packs"},
+  {"field": "open_source", "url": "https://crawl4ai.com", "quote": "license Apache-2.0"},
+  {"field": "api", "url": "https://crawl4ai.com", "quote": "Finally, your favorite open-source crawler is now a hosted API."},
+  {"field": "platforms", "url": "https://docs.crawl4ai.com/", "quote": "Command Line Interface"},
+  {"field": "korean_support", "url": "https://crawl4ai.com", "quote": "화면에 보이는 언어 이름: English"}
+ ],
+ "mismatch": [{"official": "본체는 Apache-2.0 오픈소스로 '영원히 무료', 별도로 호스팅 API를 크레딧 팩(종량제)으로 판매", "diff": "기존 '프리미엄(무료+유료 구독)'은 오픈소스 성격을 빠뜨렸고, 유료도 구독이 아닌 크레딧 팩(월 구독 Builder는 출시 예정)이라 '오픈소스 + 프리미엄 혼합'에 가까움", "url": "https://crawl4ai.com"}],
+ "plan_change": []
+}

@@ -1,0 +1,130 @@
+{
+ "company": "Augment Code",
+ "one_liner_ko": "조직 규모의 에이전트형 소프트웨어 개발 — 상시 가동되는 '소프트웨어 팩토리'를 만드는 플랫폼 Cosmos.",
+ "what_it_does_ko": "Augment Code는 기업용 AI 네이티브 코딩 플랫폼으로, 코딩 에이전트와 코드베이스 이해(Context Engine), 자동화를 제공한다. Cosmos는 티켓→코드→리뷰→배포→모니터링으로 이어지는 루프를 에이전트가 맡고 사람은 품질 관문에서 승인하게 한다. GitHub·GitLab·Slack·Linear·Jira 트리거와 관리형 클라우드 샌드박스 또는 자체 머신에서 실행한다. 터미널용 Auggie CLI와 VS Code·JetBrains 확장도 있다.",
+ "key_features": [
+  "Cosmos 에이전트 오케스트레이션 플랫폼",
+  "Context Engine(코드베이스 이해)",
+  "코드 리뷰·티켓→PR·취약점 수정·장애 대응 루프",
+  "Auggie CLI",
+  "GitHub·GitLab·Slack·Linear·Jira 트리거",
+  "MCP·네이티브 도구",
+  "VS Code·JetBrains 확장"
+ ],
+ "use_cases_ko": [
+  "모든 PR 1차 리뷰",
+  "티켓을 받아 PR까지 작성",
+  "CVE 알림부터 수정 패치까지"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [
+   {
+    "name": "Standard",
+    "price": 20,
+    "currency": "USD",
+    "period": "month",
+    "limits": "팀 정액(좌석 요금 없음), 최대 50석, 월 $20 사용량 포함",
+    "page_lang": "en"
+   },
+   {
+    "name": "Business",
+    "price": 100,
+    "currency": "USD",
+    "period": "month",
+    "limits": "팀 정액, 최대 50석, 월 $100 사용량 포함",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": null,
+    "period": null,
+    "limits": "맞춤",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://www.augmentcode.com/pricing"
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "CLI"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.augmentcode.com/",
+   "quote": "Latest Augment Code Joins Harness: Advancing the Autonomous SDLC"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.augmentcode.com/",
+   "quote": "Augment Code: Agentic software development at organizational scale"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.augmentcode.com/introduction",
+   "quote": "Augment Code is the AI-native coding platform built for enterprise-grade software engineering."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.augmentcode.com/",
+   "quote": "Native triggers for GitHub, GitLab, Slack, Linear, Jira, schedules, and typed webhooks for the rest of your stack."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.augmentcode.com/",
+   "quote": "Cosmos is the platform for building an always-on software delivery system that moves work from spec to verification."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/augmentcode/auggie",
+   "quote": "agentic coding CLI that runs in your terminal"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.augmentcode.com/introduction",
+   "quote": "Looking for Augment for your favorite IDE? See documentation for Visual Studio Code or JetBrains IDEs ."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.augmentcode.com/",
+   "quote": "Every PR gets a substantive first-pass review within minutes."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.augmentcode.com/pricing",
+   "quote": "One flat price for your whole team, up to 50 seats with $20 of usage included every month."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.augmentcode.com/pricing",
+   "quote": "One flat price for your whole team, up to 50 seats with $100 of usage included every month."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.augmentcode.com/pricing",
+   "quote": "Service fee : a flat 40% fee on LLM usage (no fee on compute)"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/augmentcode/auggie",
+   "quote": "npm install -g @augmentcode/auggie@latest"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.augmentcode.com/",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: English"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "Standard $20/월·Business $100/월 팀 정액(최대 50석, 좌석 요금 없음) + 사용량 포함, 초과분 종량제(LLM 사용량에 40% 수수료)",
+   "diff": "개인 구독이 아니라 팀 정액 + 달러 사용량 풀 구조, 무료 요금제는 페이지에 없음",
+   "url": "https://www.augmentcode.com/pricing"
+  }
+ ]
+}

@@ -1,0 +1,57 @@
+{
+ "company": "Traceloop",
+ "one_liner_ko": "평가와 모니터링을 지속적인 피드백 루프로 묶어 릴리스마다 LLM 앱 품질을 높이는 LLM 신뢰성 플랫폼.",
+ "what_it_does_ko": "Traceloop은 LLM 출력의 품질을 자동으로 모니터링하고, 모델·프롬프트 변경을 디버그하고 테스트하도록 돕는다. OpenTelemetry 기반이며 오픈소스 SDK인 OpenLLMetry를 앱에 설치하거나 Traceloop Hub를 LLM 호출의 프록시로 쓴다. 충실도·관련성·안전성 같은 내장 지표로 실제 데이터를 자동 점검하고, 사용자가 직접 주석을 달아 맞춤 평가기를 학습시킬 수 있다. 클라우드, 온프레미스, 에어갭 환경에 배포할 수 있다.",
+ "key_features": [
+  "코드 한 줄로 프롬프트·응답·지연 실시간 추적",
+  "충실도·관련성·안전성 내장 품질 지표 자동 실행",
+  "예시 주석으로 맞춤 평가기 학습",
+  "PR마다·실시간 자동 평가(CI/CD 연동)",
+  "모델 품질 실시간 알림(모니터)",
+  "프롬프트 관리",
+  "OpenLLMetry SDK(Python·TypeScript·Go·Ruby)와 Hub 게이트웨이",
+  "온프레미스·에어갭 배포"
+ ],
+ "use_cases_ko": [
+  "모델 품질 저하(드리프트)를 운영 전에 포착",
+  "모델·프롬프트 변경을 점진적으로 배포",
+  "운영 이슈를 IDE에서 디버그·재실행"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Free Forever: 월 50K spans, 최대 5석, 24시간 보관)",
+  "plans": [
+   {"name": "Free Forever", "price": 0, "currency": "USD", "period": "month", "limits": "월 50K spans, 최대 5석, 24시간 데이터 보관", "page_lang": "en"},
+   {"name": "Enterprise", "price": null, "currency": "USD", "period": "month", "limits": "문의(Let's chat), 월 50K spans 초과, 좌석 무제한, 맞춤 보관, 온프레미스 옵션", "page_lang": "en"}
+  ],
+  "pricing_url": "https://traceloop.com/pricing/"
+ },
+ "open_source": "Apache-2.0 (OpenLLMetry SDK)",
+ "api": "있음",
+ "platforms": ["웹", "API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://traceloop.com", "quote": "© 2026 Traceloop"},
+  {"field": "one_liner_ko", "url": "https://traceloop.com", "quote": "Traceloop turns evals and monitors into a continuous feedback loop - so every release gets better"},
+  {"field": "what_it_does_ko", "url": "https://www.traceloop.com/docs/", "quote": "Traceloop automatically monitors the quality of your LLM outputs. It helps you to debug and test changes to your models and prompts."},
+  {"field": "what_it_does_ko", "url": "https://www.traceloop.com/docs/", "quote": "You can install the OpenLLMetry SDK in your application, or use Traceloop Hub as a smart proxy to all your LLM calls."},
+  {"field": "what_it_does_ko", "url": "https://traceloop.com", "quote": "Traceloop runs trusted checks like faithfulness, relevance, and safety using built-in metrics"},
+  {"field": "what_it_does_ko", "url": "https://traceloop.com", "quote": "Deploy Traceloop in the cloud, on-prem, or air-gapped."},
+  {"field": "key_features", "url": "https://traceloop.com", "quote": "Just one line of code gets you live visibility into prompts, responses, latency, and more"},
+  {"field": "key_features", "url": "https://traceloop.com", "quote": "annotate real examples, and train a custom evaluator that scores output the way you would."},
+  {"field": "key_features", "url": "https://traceloop.com", "quote": "whether it’s on every pull request or in real time as your app runs."},
+  {"field": "key_features", "url": "https://www.traceloop.com/docs/", "quote": "Get real-time alerts about your model’s quality"},
+  {"field": "key_features", "url": "https://traceloop.com/pricing/", "quote": "CI/CD integration\n Prompt Management"},
+  {"field": "key_features", "url": "https://traceloop.com", "quote": "Connect your LLMs in Python, TypeScript, Go, or Ruby using OpenLLMetry or our native OpenTelemetry-based gateway, Hub ."},
+  {"field": "use_cases_ko", "url": "https://traceloop.com", "quote": "Traceloop catches the failures before they hit production."},
+  {"field": "use_cases_ko", "url": "https://www.traceloop.com/docs/", "quote": "Gradually rollout changes to models and prompts"},
+  {"field": "use_cases_ko", "url": "https://www.traceloop.com/docs/", "quote": "Debug and re-run issues from production in your IDE"},
+  {"field": "pricing", "url": "https://traceloop.com/pricing/", "quote": "$0 / mo\n Up to 50K spans / month\n Up to 5 Seats\n 24 Hours Data Retention"},
+  {"field": "pricing", "url": "https://traceloop.com/pricing/", "quote": "Let's chat\n >50K spans / month\n Unlimited Seats\n Custom Data Retention"},
+  {"field": "open_source", "url": "https://traceloop.com/pricing/", "quote": "OpenLLMetry is Apache-2.0 licensed and you can use it for free"},
+  {"field": "api", "url": "https://www.traceloop.com/docs/", "quote": "Dashboard API"},
+  {"field": "platforms", "url": "https://traceloop.com/pricing/", "quote": "Monitoring Dashboard\n Evaluation Dashboard"},
+  {"field": "korean_support", "url": "https://traceloop.com", "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

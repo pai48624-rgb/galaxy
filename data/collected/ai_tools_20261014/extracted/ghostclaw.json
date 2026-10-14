@@ -1,0 +1,51 @@
+{
+ "company": "GhostClaw (오픈소스 프로젝트)",
+ "one_liner_ko": "남는 컴퓨터를 통째로 맡겨 AI 에이전트가 텔레그램 지시로 자유롭게 일하게 하는, 컨테이너를 걷어 낸 NanoClaw 포크.",
+ "what_it_does_ko": "GhostClaw는 NanoClaw에서 컨테이너를 걷어 내고 전체 시스템 접근을 허용한 베어메탈 포크로, 텔레그램을 기본 창구로 쓰는 개인 AI 에이전트다. 동료에게 하듯 텔레그램으로 메시지·음성·사진을 보내면 bash·파일·웹 검색·이메일을 써서 일을 처리한다. 아침 브리핑·밤샘 리서치 같은 예약 작업을 돌리고, 마크다운 파일로 된 스킬로 기능을 추가한다. Anthropic API 키로 동작하며 localhost:3333에 내장 대시보드(Mission Control)가 있다.",
+ "key_features": [
+  "텔레그램 중심 대화(음성 메모·사진·그룹 채팅)",
+  "샌드박스 없는 전체 기기 접근(bash·파일·웹 검색·이메일)",
+  "예약 작업(아침 브리핑·밤샘 리서치·cron)",
+  "마크다운 파일 스킬로 Gmail·음성·PR 감시 등 추가",
+  "텔레그램에서 /model로 Sonnet·Opus·Haiku 전환",
+  "내장 대시보드 Mission Control(실시간 로그·작업)",
+  "/budget으로 일일 지출 상한 설정",
+  "Perplexity 기반 웹 리서치"
+ ],
+ "use_cases_ko": [
+  "개인 개발자가 남는 컴퓨터에 에이전트를 두고 일 맡기기",
+  "PR의 CI 실패·미응답 리뷰 감시와 밤샘 작업 자동 실행"
+ ],
+ "pricing": {
+  "free_tier": "있음 (MIT 오픈소스, Anthropic API 사용료는 별도)",
+  "plans": [],
+  "pricing_url": "https://www.ghostclaw.io/"
+ },
+ "open_source": "MIT",
+ "api": "불명",
+ "platforms": ["맥", "CLI"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://www.ghostclaw.io/", "quote": "GhostClaw — give it a machine, let it roam"},
+  {"field": "one_liner_ko", "url": "https://www.ghostclaw.io/", "quote": "A bare-metal fork of NanoClaw — containers stripped, full system access, Telegram-first. Give your spare computer its own accounts and let an AI agent run wild."},
+  {"field": "what_it_does_ko", "url": "https://www.ghostclaw.io/", "quote": "DM it like a co-worker. Voice notes, photos, group chats. No app to install."},
+  {"field": "what_it_does_ko", "url": "https://github.com/b1rdmania/ghostclaw", "quote": "From v0.8.0 onwards GhostClaw runs on the Anthropic API (`ANTHROPIC_API_KEY`) only"},
+  {"field": "what_it_does_ko", "url": "https://www.ghostclaw.io/", "quote": "Mission Control — built-in dashboard at localhost:3333. Real-time logs, tasks, chats, and research."},
+  {"field": "key_features", "url": "https://www.ghostclaw.io/", "quote": "Bash, files, web search, email. No sandbox. No permission prompts."},
+  {"field": "key_features", "url": "https://www.ghostclaw.io/", "quote": "Morning briefings, overnight research, cron jobs. Works while you sleep."},
+  {"field": "key_features", "url": "https://www.ghostclaw.io/", "quote": "Add Gmail, voice, PR monitoring via markdown files. No code changes."},
+  {"field": "key_features", "url": "https://www.ghostclaw.io/", "quote": "Switch between Sonnet, Opus, Haiku from Telegram. Just type /model."},
+  {"field": "key_features", "url": "https://github.com/b1rdmania/ghostclaw", "quote": "Every turn writes a `usage_events` row and `/budget` lets you cap daily spend."},
+  {"field": "key_features", "url": "https://github.com/b1rdmania/ghostclaw", "quote": "**Web research** — Perplexity-powered search and deep research."},
+  {"field": "key_features", "url": "https://www.ghostclaw.io/", "quote": "Telegram-first\n DM it like a co-worker."},
+  {"field": "use_cases_ko", "url": "https://github.com/b1rdmania/ghostclaw", "quote": "| **Best for** | Solo devs, tinkerers, personal agents | Teams, enterprises | Security-first setups |"},
+  {"field": "use_cases_ko", "url": "https://www.ghostclaw.io/", "quote": "Monitors PRs for failing CI and unanswered reviews. Fixes what it can."},
+  {"field": "pricing", "url": "https://www.ghostclaw.io/", "quote": "MIT licence. Fork it. Customise it. It runs on your hardware — it's yours."},
+  {"field": "pricing", "url": "https://github.com/b1rdmania/ghostclaw", "quote": "**Requirements:** Node.js 20+, [Anthropic API key](https://console.anthropic.com/settings/keys), macOS or Linux, Telegram account."},
+  {"field": "open_source", "url": "https://www.ghostclaw.io/", "quote": "449 tests passing · MIT licence"},
+  {"field": "platforms", "url": "https://www.ghostclaw.io/", "quote": "$ curl -fsSL https://ghostclaw.io/install.sh | bash \n Node.js 20+ \n Anthropic API key \n macOS or Linux"},
+  {"field": "korean_support", "url": "https://www.ghostclaw.io/", "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [{"official": "MIT 오픈소스로 자기 기기에서 실행, Anthropic API 키 사용료만 들고 자체 유료 구독 안내 없음", "diff": "기존 '프리미엄(무료+유료 구독)' 분류와 달리 유료 구독이 확인되지 않음(오픈소스)", "url": "https://www.ghostclaw.io/"}],
+ "plan_change": []
+}

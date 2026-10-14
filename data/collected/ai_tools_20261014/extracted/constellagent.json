@@ -1,0 +1,113 @@
+{
+ "company": null,
+ "one_liner_ko": "Claude Code 작업 공간 수십 개를 병렬로 돌리는 무료 오픈소스 macOS 앱.",
+ "what_it_does_ko": "Constellagent는 여러 AI 에이전트를 병렬로 돌리는 macOS 데스크톱 앱이다. 에이전트마다 자기 터미널·편집기·git worktree를 한 창 안에서 받는다. 프로젝트는 git 저장소에 대응하고, 작업 공간마다 격리된 worktree 브랜치를 쓴다. diff와 PR 상태를 확인해 병합하고, cron 예약 자동화로 에이전트를 계속 돌린다.",
+ "key_features": [
+  "병렬 작업 공간(작업 공간마다 터미널·파일·git 브랜치)",
+  "xterm.js 기반 GPU 렌더링 터미널",
+  "브랜치·파일 상태·GitHub PR 배지",
+  "cron 예약 자동화(템플릿)",
+  "Monaco 편집기·diff 뷰어",
+  "45개 이상 단축키의 키보드 중심 조작",
+  "절전·복귀 시 놓친 자동화 1회 보충 실행"
+ ],
+ "use_cases_ko": [
+  "여러 Claude Code 세션에 브랜치·작업을 하나씩 맡겨 병렬 개발"
+ ],
+ "pricing": {
+  "free_tier": "있음 (무료 오픈소스)",
+  "plans": [],
+  "pricing_url": "https://constellagent.vercel.app/"
+ },
+ "open_source": "오픈소스(라이선스 이름은 받은 본문에 없음)",
+ "api": "불명",
+ "platforms": [
+  "맥"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://constellagent.vercel.app/",
+   "quote": "Run dozens of Claude Code workspaces in parallel. Give each one a branch, a task, and let them rip."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/owengretzinger/constellagent",
+   "quote": "A macOS desktop app for running multiple AI agents in parallel. Each agent gets its own terminal, editor, and git worktree, all in one window."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://constellagent.vercel.app/",
+   "quote": "Group related workspaces. Each project maps to a git repo with isolated worktree branches."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://constellagent.vercel.app/",
+   "quote": "See diffs, check PR status, and merge. Automations keep agents running while you sleep."
+  },
+  {
+   "field": "key_features",
+   "url": "https://constellagent.vercel.app/",
+   "quote": "Run multiple Claude Code sessions simultaneously. Each workspace gets its own terminal, files, and git branch."
+  },
+  {
+   "field": "key_features",
+   "url": "https://constellagent.vercel.app/",
+   "quote": "Full xterm.js terminal emulation with GPU rendering."
+  },
+  {
+   "field": "key_features",
+   "url": "https://constellagent.vercel.app/",
+   "quote": "Live branch detection, file status, and GitHub PR badges."
+  },
+  {
+   "field": "key_features",
+   "url": "https://constellagent.vercel.app/",
+   "quote": "Set agents on a cron schedule with templates."
+  },
+  {
+   "field": "key_features",
+   "url": "https://constellagent.vercel.app/",
+   "quote": "Monaco editor with syntax highlighting. Context-collapsing diff viewer to review what your agents changed."
+  },
+  {
+   "field": "key_features",
+   "url": "https://constellagent.vercel.app/",
+   "quote": "45+ shortcuts. Quick Open, workspace switching, font scaling."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/owengretzinger/constellagent",
+   "quote": "Sleep/wake recovery for automations (coalesces missed runs while app stays open)"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://constellagent.vercel.app/",
+   "quote": "Launch parallel Claude Code sessions. Each agent gets its own terminal, branch, and context."
+  },
+  {
+   "field": "pricing",
+   "url": "https://constellagent.vercel.app/",
+   "quote": "Free and open source"
+  },
+  {
+   "field": "open_source",
+   "url": "https://constellagent.vercel.app/",
+   "quote": "Free and open source"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/owengretzinger/constellagent",
+   "quote": "Requires macOS and [Bun](https://bun.sh)."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://constellagent.vercel.app/",
+   "quote": "hreflang: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [],
+ "note": "공식 페이지에 유료(프리미엄) 요금제 언급 없음 — 기존 분류 '오픈소스 + 프리미엄 혼합'과 달리 무료 오픈소스로만 보임(사람 확인 권장)."
+}

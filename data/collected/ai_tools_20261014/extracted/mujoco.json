@@ -1,0 +1,141 @@
+{
+ "company": "Google DeepMind",
+ "one_liner_ko": "로보틱스·생체역학·그래픽·애니메이션 등 빠르고 정확한 시뮬레이션이 필요한 분야를 위한 무료 오픈소스 물리 엔진.",
+ "what_it_does_ko": "MuJoCo(Multi-Joint dynamics with Contact)는 연구·개발용 범용 물리 엔진이다. 처음부터 모델 기반 최적화, 특히 접촉을 통한 최적화를 위해 설계된 시뮬레이터다. 최적 제어, 상태 추정, 시스템 식별, 자동 기구 설계 같은 계산 집약적 기법을 접촉이 많은 복잡한 시스템에 적용할 수 있게 한다. C API와 파이썬 바인딩, Unity 플러그인을 제공하며 OpenGL 기반 GUI로 3D 시각화를 지원한다.",
+ "key_features": [
+  "일반화 좌표계 시뮬레이션으로 관절 위반 방지",
+  "접촉이 있어도 잘 정의되는 역동역학",
+  "소프트 접촉·제한·마찰 등 제약 조건",
+  "입자계·천·로프·연체 시뮬레이션",
+  "모터·실린더·근육·힘줄 등 액추에이터",
+  "XML 모델 형식(MJCF)과 내장 모델 컴파일러",
+  "OpenGL 기반 대화형 3D 시각화 GUI",
+  "파이썬 바인딩과 Unity 플러그인"
+ ],
+ "use_cases_ko": [
+  "실제 로봇 배포 전 제어 방식 테스트·검증",
+  "최적 제어·상태 추정·시스템 식별 연구",
+  "과학 시각화·가상 환경·애니메이션·게임"
+ ],
+ "pricing": {
+  "free_tier": "있음 (무료 오픈소스)",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "오픈소스(라이선스명 페이지에 없음)",
+ "api": "있음",
+ "platforms": [
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://mujoco.org",
+   "quote": "MuJoCo is a trademark of Google DeepMind"
+  },
+  {
+   "field": "company",
+   "url": "https://github.com/google-deepmind/mujoco",
+   "quote": "This repository is maintained by [Google DeepMind]"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://mujoco.org",
+   "quote": "MuJoCo is a free and open source physics engine that aims to facilitate research and"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://mujoco.org",
+   "quote": "designed from the ground up for the purpose of model-based optimization, and in particular optimization through contacts."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/google-deepmind/mujoco",
+   "quote": "We also provide [Python bindings] and a plug-in for the [Unity] game engine."
+  },
+  {
+   "field": "key_features",
+   "url": "https://mujoco.org",
+   "quote": "Simulation in generalized coordinates, avoiding joint violations"
+  },
+  {
+   "field": "key_features",
+   "url": "https://mujoco.org",
+   "quote": "Inverse dynamics that are well-defined even in the presence of contacts"
+  },
+  {
+   "field": "key_features",
+   "url": "https://mujoco.org",
+   "quote": "Constraints include soft contacts, limits, dry friction, equality constraints"
+  },
+  {
+   "field": "key_features",
+   "url": "https://mujoco.org",
+   "quote": "Simulation of particle systems, cloth, rope and soft objects"
+  },
+  {
+   "field": "key_features",
+   "url": "https://mujoco.org",
+   "quote": "Actuators including motors, cylinders, muscles, tendons, slider-cranks"
+  },
+  {
+   "field": "key_features",
+   "url": "https://mujoco.org",
+   "quote": "Intuitive XML model format (called MJCF) and built-in model compiler"
+  },
+  {
+   "field": "key_features",
+   "url": "https://mujoco.org",
+   "quote": "Cross-platform GUI with interactive 3D visualization in OpenGL"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://mujoco.org",
+   "quote": "testing and validation of control schemes before deployment on physical robots"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://mujoco.org",
+   "quote": "optimal control, physically-consistent state estimation, system identification"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://mujoco.org",
+   "quote": "virtual environments, animation and gaming"
+  },
+  {
+   "field": "pricing",
+   "url": "https://mujoco.org",
+   "quote": "MuJoCo is a free and open source physics engine"
+  },
+  {
+   "field": "open_source",
+   "url": "https://mujoco.org",
+   "quote": "MuJoCo is a free and open source physics engine"
+  },
+  {
+   "field": "api",
+   "url": "https://github.com/google-deepmind/mujoco",
+   "quote": "MuJoCo has a C API and is intended for researchers and developers."
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/google-deepmind/mujoco",
+   "quote": "MuJoCo has a C API and is intended for researchers and developers."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://mujoco.org",
+   "quote": "html lang: en"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "MuJoCo는 무료 오픈소스 물리 엔진",
+   "diff": "기존 '연구/엔터프라이즈(가격 비공개)'와 달리 무료 오픈소스",
+   "url": "https://mujoco.org"
+  }
+ ],
+ "plan_change": []
+}

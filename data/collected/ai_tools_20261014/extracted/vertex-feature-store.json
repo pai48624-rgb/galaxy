@@ -1,0 +1,75 @@
+{
+ "company": "Google Cloud",
+ "one_liner_ko": "Google Cloud Gemini Enterprise Agent Platform(옛 Vertex AI)의 기능(피처) 관리 서비스",
+ "what_it_does_ko": "수집된 문서 페이지는 'Gemini Enterprise Agent Platform의 기능 관리 소개' 문서로, 본문 대부분이 메뉴라 기능 설명은 거의 확인되지 않는다. Google Cloud 가격 정책은 선불·해지 수수료 없는 사용량 기반이며 신규 고객에게 $300 무료 크레딧을 준다. 피처 스토어 자체의 요금표는 수집 페이지에 없다.",
+ "key_features": [],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": "있음 (신규 고객 $300 무료 크레딧, Google Cloud 공통)",
+  "plans": [
+   {
+    "name": "사용한 만큼만 비용 지불(Google Cloud 공통)",
+    "price": null,
+    "currency": null,
+    "period": "usage",
+    "limits": "선불·해지 수수료 없음, 피처 스토어 단가는 미수집",
+    "page_lang": "ko"
+   }
+  ],
+  "pricing_url": "https://cloud.google.com/pricing?hl=ko/"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/featurestore?hl=ko",
+   "quote": "Google Cloud Documentation"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/featurestore?hl=ko",
+   "quote": "Gemini Enterprise Agent Platform의 기능 관리 소개"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/featurestore?hl=ko",
+   "quote": "Gemini Enterprise Agent Platform의 기능 관리 소개"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://cloud.google.com/pricing?hl=ko/",
+   "quote": "선불 비용은 없으며, 해지 수수료가 부과되지 않습니다."
+  },
+  {
+   "field": "pricing",
+   "url": "https://cloud.google.com/pricing?hl=ko/",
+   "quote": "$300의 무료 크레딧"
+  },
+  {
+   "field": "pricing",
+   "url": "https://cloud.google.com/pricing?hl=ko/",
+   "quote": "Google Cloud의 사용한 만큼만 지불 가격 책정 구조를 사용하면 사용한 서비스에 대한 요금만 지불하면 됩니다."
+  },
+  {
+   "field": "api",
+   "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/featurestore?hl=ko",
+   "quote": "API 참조 문서"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/featurestore?hl=ko",
+   "quote": "html lang: ko-x-mtfrom-en"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "Google Cloud 관리형 서비스, 사용량 기반 과금($300 신규 크레딧), 오픈소스 언급 없음",
+   "diff": "기존 분류 '오픈소스 + 클라우드 매니지드 유료 플랜'과 달리 오픈소스가 아닌 클라우드 전용 종량제 서비스로 보임",
+   "url": "https://cloud.google.com/pricing?hl=ko/"
+  }
+ ],
+ "plan_change": []
+}

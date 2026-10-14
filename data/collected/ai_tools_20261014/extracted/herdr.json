@@ -1,0 +1,130 @@
+{
+ "company": "Herdr, Inc.",
+ "one_liner_ko": "코딩 에이전트가 머무는 실행 환경 — 어디서든 돌리고 켜 둔 채 떠날 수 있다.",
+ "what_it_does_ko": "Herdr는 여러 프로젝트의 코딩 에이전트를 각자의 터미널에서 돌리는 실행 환경(터미널 멀티플렉서)이다. 백그라운드 서버 안에 터미널이 살아 있어 노트북을 닫거나 연결이 끊겨도 에이전트가 계속 일하고, 재시작하면 화면 배치와 세션을 되살린다. 모든 패널을 읽어 에이전트를 작업 중·막힘·대기로 표시하며, SSH로 여러 머신을 한 화면에 묶는다. 에이전트를 감싸거나 대체하지 않고 터미널만 맡는다.",
+ "key_features": [
+  "클라이언트를 닫아도 백그라운드 서버에서 터미널 유지",
+  "재시작 후 화면 배치·지원 에이전트 세션 복원",
+  "에이전트마다 작업 중·막힘·대기 상태 표시",
+  "에이전트가 직접 쓰는 CLI·소켓 API",
+  "SSH로 여러 머신을 한 창에",
+  "tmux식 단축키와 마우스 모두 지원",
+  "플러그인 마켓",
+  "Rust 단일 바이너리(Electron 아님)"
+ ],
+ "use_cases_ko": [
+  "노트북·데스크톱·임대 서버에 흩어진 에이전트를 한곳에서 관리"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "Apache-2.0",
+ "api": "있음",
+ "platforms": [
+  "맥",
+  "윈도",
+  "CLI"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://herdr.dev",
+   "quote": "© 2026 Herdr, Inc."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://herdr.dev",
+   "quote": "Run them anywhere. Leave them running."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://herdr.dev",
+   "quote": "However many you run, across however many projects, each in its own terminal. Walk away and they keep working."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://herdr.dev",
+   "quote": "It's a server running in the background, and the terminals live inside it."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://herdr.dev",
+   "quote": "Herdr reads every pane and marks each agent working, blocked or idle."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://herdr.dev",
+   "quote": "Herdr doesn't wrap them or replace them, it just owns their terminals"
+  },
+  {
+   "field": "key_features",
+   "url": "https://herdr.dev",
+   "quote": "Close the lid or drop the network and the agents keep working; restart the machine and Herdr brings the layout back and resumes their sessions."
+  },
+  {
+   "field": "key_features",
+   "url": "https://herdr.dev",
+   "quote": "Herdr reads every pane and marks each agent working, blocked or idle."
+  },
+  {
+   "field": "key_features",
+   "url": "https://herdr.dev",
+   "quote": "The CLI and the socket API are the same surface agents drive."
+  },
+  {
+   "field": "key_features",
+   "url": "https://herdr.dev",
+   "quote": "Add them over SSH and their workspaces and agents sit alongside your local ones."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/herdrdev/herdr",
+   "quote": "tmux-style prefix keys *and* click, drag, split."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/herdrdev/herdr",
+   "quote": "**plugins** — extend panes and workflows."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/herdrdev/herdr",
+   "quote": "**one rust binary, no electron**"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://herdr.dev",
+   "quote": "Your laptop, the desktop upstairs, a server you rent."
+  },
+  {
+   "field": "open_source",
+   "url": "https://herdr.dev",
+   "quote": "macOS · Linux · Windows · Apache 2.0"
+  },
+  {
+   "field": "api",
+   "url": "https://herdr.dev",
+   "quote": "The CLI and the socket API are the same surface agents drive."
+  },
+  {
+   "field": "platforms",
+   "url": "https://herdr.dev",
+   "quote": "one binary for macOS, Linux, and Windows."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://herdr.dev",
+   "quote": "html lang: en"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://herdr.dev",
+   "quote": "hreflang: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

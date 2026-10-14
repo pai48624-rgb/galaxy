@@ -1,0 +1,139 @@
+{
+ "company": "Anything",
+ "one_liner_ko": "말로 설명하면 코드로 된 모바일 앱·웹사이트·도구를 만들어 주는 AI 앱 빌더",
+ "what_it_does_ko": "Anything은 대화로 모바일 앱과 웹 앱을 만드는 AI 에이전트다. 프롬프트를 코드로 바꾸고, 앱을 탐색하며 빠르게 수정하고, 오류를 스스로 찾아 고친다. 앱마다 개발·운영용 Postgres 데이터베이스, Stripe 결제, 로그인 인증, 파일 업로드, 수백 개 통합 기능이 키 설정 없이 들어 있다. iOS·안드로이드 앱을 만들어 원클릭으로 App Store에 올리고, 웹사이트는 무료 또는 사용자 도메인으로 바로 공개할 수 있다.",
+ "key_features": [
+  "프롬프트로 앱 코드 생성·수정, 오류 자동 감지·수정",
+  "앱마다 즉시 쓰는 Postgres 데이터베이스(앱당 1GB 이상 무료)",
+  "키 설정 없는 Stripe 결제(구독·일회성)",
+  "이메일·Google·FB·X 등 로그인 인증",
+  "GPT-5·Claude·Gemini 등 AI 모델을 프롬프트 한 번으로 추가",
+  "Resend·Zapier·Google Maps 등 수백 개 API 통합",
+  "iOS·안드로이드 앱 생성과 원클릭 App Store 제출",
+  "Max: 여러 에이전트 병렬 실행, 자동 테스트"
+ ],
+ "use_cases_ko": [
+  "코딩 경험 없는 창업자가 아이디어를 앱으로 검증·출시",
+  "모바일 앱과 웹 앱을 같은 백엔드로 함께 만들기"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Free 요금제 존재, 한도는 페이지에 없음)",
+  "plans": [
+   {
+    "name": "Pro 20k",
+    "price": 19,
+    "currency": "USD",
+    "period": "month",
+    "limits": "월 20K 크레딧, 비공개 프로젝트, 브랜딩 제거, 사용자 도메인 (페이지에 'Save $60' 표기, 월/연 결제 기준 불명)",
+    "page_lang": "en"
+   },
+   {
+    "name": "Max",
+    "price": 199,
+    "currency": "USD",
+    "period": "month",
+    "limits": "월 200K(표기 220K) 크레딧, 에이전트 병렬 실행, 자동 테스트, 우선 지원 (페이지에 'Save $480' 표기)",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://www.createanything.com/pricing"
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "웹",
+  "iOS",
+  "안드로이드",
+  "CLI"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.createanything.com/",
+   "quote": "© 2026 Anything"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.createanything.com/",
+   "quote": "Turn your words into mobile apps, sites, tools, and products - built with code."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.createanything.com/docs/welcome",
+   "quote": "Anything is an AI agent that builds mobile apps and web apps from a conversation."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.createanything.com/",
+   "quote": "Anything automatically detects and fixes errors on its own."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.createanything.com/",
+   "quote": "All apps come with an instant dev and production Postgres database. No set up needed and 1GB+ free per app."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.createanything.com/",
+   "quote": "Collect subscription or one time payments in your app in minutes with Stripe. No keys or set up required."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.createanything.com/",
+   "quote": "Let people securely sign up with email/password, Google, FB, X, and more."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.createanything.com/",
+   "quote": "100s of useful APIs and libraries, from Resend to Zapier to Google Maps, built in."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.createanything.com/pricing",
+   "quote": "Build faster—run multiple agents at once"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.createanything.com/",
+   "quote": "As a non technical founder, it has been immensely helpful in validating both design & product"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.createanything.com/",
+   "quote": "Build mobile + web apps powered by the same backend."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.createanything.com/pricing",
+   "quote": "Everything in Free, plus:"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.createanything.com/pricing",
+   "quote": "$19/mo\n Save $60\n 20K credits / mo"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.createanything.com/pricing",
+   "quote": "$199/mo\n Save $480\n 200K 220K credits / mo"
+  },
+  {
+   "field": "platforms",
+   "url": "https://www.createanything.com/",
+   "quote": "Create iOS and Android apps in minutes."
+  },
+  {
+   "field": "platforms",
+   "url": "https://www.createanything.com/docs/welcome",
+   "quote": "API / CLI (for agents)"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.createanything.com/",
+   "quote": "화면에 보이는 언어 이름: English"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

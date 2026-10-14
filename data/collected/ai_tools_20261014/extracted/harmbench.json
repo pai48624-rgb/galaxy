@@ -1,0 +1,113 @@
+{
+ "company": "The HarmBench Team",
+ "one_liner_ko": "자동화된 레드티밍과 LLM의 견고한 거절 능력을 평가하는 표준화된 오픈소스 평가 프레임워크.",
+ "what_it_does_ko": "HarmBench는 자동화된 레드티밍 방법을 엄밀하게 평가하기 위한 표준화된 평가 프레임워크다. 레드티밍 방법을 여러 LLM에 대해 평가하거나, 반대로 LLM을 여러 레드티밍 방법에 대해 평가하는 두 가지 방식으로 쓸 수 있다. 18개 레드티밍 방법과 33개 대상 LLM·방어 기법을 대규모로 비교했다. LLM의 견고성을 높이는 효율적인 적대적 학습 방법도 함께 제시한다.",
+ "key_features": [
+  "레드티밍 방법을 LLM 집합에 대해 평가",
+  "LLM을 레드티밍 방법 집합에 대해 평가",
+  "테스트 케이스 생성→응답 생성→응답 평가의 평가 파이프라인",
+  "파이프라인 자동 실행 도구 run_pipeline.py",
+  "transformers 호환 LLM·폐쇄형 API·멀티모달 모델 지원",
+  "적대적 학습 코드와 모델 제공"
+ ],
+ "use_cases_ko": [
+  "연구자가 자동화 레드티밍 기법의 성능을 비교",
+  "LLM 개발자가 모델의 공격 견고성을 평가"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "오픈소스 (라이선스 이름은 페이지에 없음)",
+ "api": "불명",
+ "platforms": [
+  "CLI"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.harmbench.org/",
+   "quote": "The HarmBench Team"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/centerforaisafety/HarmBench",
+   "quote": "A fast, scalable, and open-source framework for evaluating automated red teaming methods and LLM attacks/defenses"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.harmbench.org/",
+   "quote": "we introduce HarmBench, a standardized evaluation framework for automated red teaming"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/centerforaisafety/HarmBench",
+   "quote": "we conduct a large-scale comparison of $18$ red teaming methods and $33$ target LLMs and defenses"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.harmbench.org/",
+   "quote": "We also introduce a highly efficient adversarial training method that greatly enhances LLM robustness across a wide range of attacks"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.harmbench.org/",
+   "quote": "(1) evaluating red teaming methods against a set of LLMs, and (2) evaluating LLMs against a set of red teaming methods"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/centerforaisafety/HarmBench",
+   "quote": "(1) generating test cases, (1.5) merging test cases, (2) generating completions, (3) evaluating completions"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/centerforaisafety/HarmBench",
+   "quote": "A higher-level run_pipeline.py utility that automates parts of the pipeline"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/centerforaisafety/HarmBench",
+   "quote": "HarmBench has out-of-the-box support for transformers-compatible LLMs, numerous closed-source APIs, and several multimodal models"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/centerforaisafety/HarmBench",
+   "quote": "HarmBench 1.0: adversarial training code+model, precomputed test cases"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.harmbench.org/",
+   "quote": "There are two primary ways to use HarmBench"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/centerforaisafety/HarmBench",
+   "quote": "open-source framework for evaluating automated red teaming methods"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/centerforaisafety/HarmBench",
+   "quote": "pip install -r requirements.txt"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.harmbench.org/",
+   "quote": "html lang: en"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.harmbench.org/",
+   "quote": "hreflang: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "연구용 오픈소스 평가 프레임워크(논문·GitHub 공개), 요금 페이지는 비어 있음",
+   "diff": "기존 분류의 '엔터프라이즈 유료 플랜'이 공식 페이지에서 확인되지 않음",
+   "url": "https://github.com/centerforaisafety/HarmBench"
+  }
+ ]
+}

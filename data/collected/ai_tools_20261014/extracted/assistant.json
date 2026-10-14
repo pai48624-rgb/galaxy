@@ -1,0 +1,98 @@
+{
+ "company": null,
+ "one_liner_ko": "패널 기반 플러그인 시스템과 멀티 에이전트 CLI 연동, 텍스트·음성 UI를 갖춘 개인 AI 어시스턴트(실험적 개인 소프트웨어).",
+ "what_it_does_ko": "assistant는 패널 기반 플러그인 시스템을 가진 개인 AI 어시스턴트다. 플러그인이 패널과 작업을 정의해 에이전트들이 목록·메모 등 워크플로에서 협업한다. Claude·Codex·Pi 같은 CLI 에이전트를 연동하고, MCP로 도구를 붙이며, 크론 기반 예약 세션을 지원한다. 개인 소프트웨어를 교육 목적으로 공유한 실험적 프로젝트라 안정성·지원을 기대하지 말라고 적혀 있다.",
+ "key_features": [
+  "스트리밍 텍스트 채팅",
+  "브라우저 음성 인식 입력·TTS 음성 출력",
+  "CLI 에이전트 연동(Claude, Codex, Pi)",
+  "크론 기반 예약 세션",
+  "목록·메모용 패널 플러그인",
+  "MCP 도구 연동",
+  "여러 브라우저 창이 세션 공유"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "웹",
+  "CLI"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/kcosr/assistant",
+   "quote": "A personal AI assistant with a panel-based plugin system, multi-agent CLI integrations, and text/voice UI."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/kcosr/assistant",
+   "quote": "Plugins define panels and operations so agents can collaborate on lists, notes, and other workflows"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/kcosr/assistant",
+   "quote": "This is personal software shared with the community for educational purposes."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/kcosr/assistant",
+   "quote": "**Text chat** with streaming responses"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/kcosr/assistant",
+   "quote": "**Voice input** using browser-based speech recognition (Web Speech API)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/kcosr/assistant",
+   "quote": "**CLI agent integrations** (Claude, Codex, Pi) alongside built-in providers"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/kcosr/assistant",
+   "quote": "**Scheduled sessions** for cron-driven CLI runs"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/kcosr/assistant",
+   "quote": "**Panel plugins** for lists, notes, and custom workflows"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/kcosr/assistant",
+   "quote": "**Tool integration** via MCP (Model Context Protocol) over stdio"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/kcosr/assistant",
+   "quote": "**Multi-client support** – multiple browser windows can share a session"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/kcosr/assistant",
+   "quote": "# Open http://localhost:3000 in your browser"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/kcosr/assistant",
+   "quote": "**CLI agent integrations**"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "개인이 공개한 실험적 GitHub 소프트웨어, 직접 설치(npm)해 실행, 유료 요금제 언급 없음",
+   "diff": "기존 분류 '프리미엄(무료+유료 구독)'과 달리 유료 구독 없는 자체 설치형",
+   "url": "https://github.com/kcosr/assistant"
+  }
+ ],
+ "plan_change": [],
+ "note": "README 앞부분만 수집됨. 라이선스 이름 미확인(목차에만 License). 회사 없음(개인 저장소). [meta] 없음 → 한국어 불명."
+}

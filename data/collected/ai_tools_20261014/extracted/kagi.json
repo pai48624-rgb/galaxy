@@ -1,0 +1,41 @@
+{
+ "company": "Kagi",
+ "one_liner_ko": "광고 없이 개인정보를 100% 존중하며, 비상업 색인과 개인화 검색으로 결과를 보강하는 고품질 검색 엔진.",
+ "what_it_does_ko": "Kagi는 개인정보를 100% 존중하는 유료 검색 엔진으로, 비상업 색인과 개인화 검색으로 결과를 보강한다. 검색 외에 Kagi Assistant·리서치 어시스턴트·사용자 지정 어시스턴트 같은 AI 기능과 Translate·Maps·News·Summarize 도구를 제공한다. Lenses·Bangs·결과 필터 등으로 검색을 사용자에 맞게 조정할 수 있다. 개발자용으로 Search API·Extract API와 호스팅 MCP 서버도 제공한다.",
+ "key_features": [
+  "광고 없는 개인정보 보호 검색(Privacy Pass·Tor 접속 지원)",
+  "Kagi Assistant·리서치 어시스턴트·사용자 지정 어시스턴트",
+  "Lenses·Bangs·결과 필터·개인화 결과",
+  "Quick Answer와 페이지 내용 질문",
+  "Kagi Translate·Maps·News·Summarize",
+  "AI 이미지 제외 필터",
+  "Search API·Extract API와 호스팅 MCP 서버"
+ ],
+ "use_cases_ko": [],
+ "pricing": {"free_tier": "불명", "plans": [], "pricing_url": null},
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["웹", "API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://help.kagi.com/kagi/", "quote": "Welcome to Kagi Search Help!"},
+  {"field": "one_liner_ko", "url": "https://help.kagi.com/kagi/", "quote": "Kagi is a high quality, 100% privacy-respecting search engine with results augmented by non-commercial indexes and personalized searches."},
+  {"field": "what_it_does_ko", "url": "https://help.kagi.com/kagi/", "quote": "Kagi Research Assistants"},
+  {"field": "what_it_does_ko", "url": "https://kagi.com/api/docs/openapi", "quote": "The Kagi API provides programmatic access to data that powers our search results & more."},
+  {"field": "key_features", "url": "https://help.kagi.com/kagi/", "quote": "Kagi Privacy Pass"},
+  {"field": "key_features", "url": "https://help.kagi.com/kagi/", "quote": "Using Kagi with Tor"},
+  {"field": "key_features", "url": "https://help.kagi.com/kagi/", "quote": "Custom Assistants"},
+  {"field": "key_features", "url": "https://help.kagi.com/kagi/", "quote": "Ask Questions about a Page"},
+  {"field": "key_features", "url": "https://help.kagi.com/kagi/", "quote": "Kagi Translate"},
+  {"field": "key_features", "url": "https://help.kagi.com/kagi/", "quote": "Exclude AI Images"},
+  {"field": "key_features", "url": "https://help.kagi.com/kagi/", "quote": "Website Info & Personalized Results"},
+  {"field": "key_features", "url": "https://kagi.com/api/docs/openapi", "quote": "We offer a hosted MCP server at: https://mcp.kagi.com/mcp"},
+  {"field": "api", "url": "https://kagi.com/api/docs/openapi", "quote": "Production api endpoint"},
+  {"field": "platforms", "url": "https://help.kagi.com/kagi/", "quote": "Set Kagi as Your Default Search Engine"},
+  {"field": "platforms", "url": "https://kagi.com/api/docs/openapi", "quote": "https://kagi.com/api/v1"},
+  {"field": "korean_support", "url": "https://help.kagi.com/kagi/", "quote": "화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [],
+ "plan_change": [],
+ "note": "수집 본문이 도움말 목차와 API 문서뿐이라 요금(Plan Types·Ultimate·Family·Team 항목 이름만 보임) 확인 못 함"
+}

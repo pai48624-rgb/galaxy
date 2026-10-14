@@ -1,0 +1,313 @@
+=== [home] https://aider.chat (lang=en)
+Aider - AI Pair Programming in Your Terminal 
+ aider 
+ Features 
+ Getting Started 
+ Documentation 
+ Discord 
+ GitHub 
+ AI pair programming in your terminal
+ Aider lets you pair program with LLMs to start
+ a new project or build on your existing
+ codebase.
+ Get Started 
+ Documentation 
+ Your browser does not support the video tag.
+ ⭐ GitHub Stars 
+ 44K 
+ 📦 Installs 
+ 6.8M 
+ 📈 Tokens/week 
+ 15B 
+ 🔄 Singularity 
+ 88% 
+ Features
+ Cloud and local LLMs
+ Aider works best with Claude 3.7 Sonnet, DeepSeek R1 & Chat V3, OpenAI o1, o3-mini & GPT-4o, but can connect to almost any LLM, including local models.
+ Maps your codebase
+ Aider makes a map of your entire codebase,
+ which helps it work well in larger projects.
+ 100+ code languages
+ Aider works with most popular programming
+ languages: python, javascript, rust, ruby, go, cpp,
+ php, html, css, and dozens more.
+ Git integration
+ Aider automatically commits changes with
+ sensible commit messages.
+ Use familiar git tools to easily
+ diff, manage and undo AI changes.
+ In your IDE
+ Use aider from within your favorite IDE or editor.
+ Ask for changes by adding comments to
+ your code and aider will get to work.
+ Images & web pages
+ Add images and web pages to the chat to
+ provide visual context, screenshots, reference docs,
+ etc.
+ Voice-to-code
+ Speak with aider about your code! Request new features, 
+ test cases or bug fixes using your voice and let aider
+ implement the changes.
+ Linting & testing
+ Automatically lint and test your code every time aider makes changes.
+ Aider can fix problems detected by your linters and test suites.
+ Copy/paste to web chat
+ Aider works best with LLM APIs,
+ but it can also work an LLM via its web chat interface.
+ Aider streamlines copy/pasting code
+ back and forth with a browser.
+ Getting Started
+ python -m pip install aider-install
+aider-install
+# Change directory into your codebase
+cd /to/your/project
+# DeepSeek
+aider --model deepseek --api-key deepseek=<key>
+# Claude 3.7 Sonnet
+aider --model sonnet --api-key anthropic=<key>
+# o3-mini
+aider --model o3-mini --api-key openai=<key> 
+ Want more details?
+ Installation Guide 
+ Usage Guide 
+ Kind Words From Users
+ More Information
+ Documentation
+ Everything you need to get started and make the most of Aider
+ Installation Guide 
+ Usage Guide 
+ Tutorial Videos 
+ Connecting to LLMs 
+ Configuration Options 
+ Troubleshooting 
+ FAQ 
+ Community & Resources
+ Connect with other users and find additional resources
+ LLM Leaderboards 
+ GitHub Repository 
+ Discord Community 
+ Release notes 
+ Blog 
+ Documentation 
+ GitHub 
+ Discord 
+ Blog
+
+=== [about] https://aider.chat/docs/ (lang=en-US)
+Aider Documentation | aider 
+ Skip to main content 
+ Menu 
+ Expand 
+ (external link) 
+ Document 
+ Search 
+ Copy 
+ Copied 
+ aider
+ Installation Optional steps 
+ Aider with docker 
+ GitHub Codespaces 
+ Replit 
+ Usage Tips 
+ In-chat commands 
+ Chat modes 
+ Tutorial videos 
+ Voice-to-code with aider 
+ Images & web pages 
+ Prompt caching 
+ Aider in your IDE 
+ Notifications 
+ Aider in your browser 
+ Specifying coding conventions 
+ Copy/paste with web chat 
+ Linting and testing 
+ Editing config & text files 
+ Connecting to LLMs OpenAI 
+ Anthropic 
+ Gemini 
+ GROQ 
+ LM Studio 
+ xAI 
+ Azure 
+ Cohere 
+ DeepSeek 
+ Ollama 
+ OpenAI compatible APIs 
+ OpenRouter 
+ GitHub Copilot 
+ Vertex AI 
+ Amazon Bedrock 
+ Other LLMs 
+ Model warnings 
+ Configuration API Keys 
+ Options reference 
+ YAML config file 
+ Config with .env 
+ Editor configuration 
+ Reasoning models 
+ Advanced model settings 
+ Model Aliases 
+ Troubleshooting File editing problems 
+ Model warnings 
+ Token limits 
+ Aider not found 
+ Dependency versions 
+ Models and API keys 
+ Using /help 
+ Screen recordings Add language support via tree-sitter-language-pack 
+ Add –auto-accept-architect feature 
+ Don’t /drop read-only files added at launch 
+ Warn when users apply unsupported reasoning settings 
+ Example chat transcripts Create a simple flask app with aider 
+ Modify an open source 2048 game with aider 
+ A complex multi-file change, with debugging 
+ Create a “black box” test case 
+ Automatically update docs with aider 
+ Build pong with aider and pygame. 
+ Complete a css exercise with aider 
+ Download, analyze and plot US Census data 
+ Editing an asciinema cast file with aider 
+ Hello aider! 
+ Honor the NO_COLOR environment variable 
+ Improve css styling of chat transcripts 
+ Semantic search & replace code with aider 
+ More info Git integration 
+ Supported languages 
+ Repository map 
+ Scripting aider 
+ Infinite output 
+ Edit formats 
+ Analytics 
+ Privacy policy 
+ FAQ 
+ Release history 
+ Aider LLM Leaderboards Code editing leaderboard 
+ Refactoring leaderboard 
+ Scores by release date 
+ Benchmark notes 
+ Contributing results 
+ Aider blog 
+ GitHub
+ Discord
+ Aider is AI pair programming in your terminal.
+ Aider is on
+ GitHub 
+ and
+ Discord .
+ GitHub
+ Discord
+ Blog
+ Aider Documentation
+ Aider is AI pair programming in your terminal. This documentation will help you get the most out of aider.
+ Installation — How to install and get started pair programming with aider. 
+ Optional steps 
+ Aider with docker 
+ GitHub Codespaces 
+ Replit 
+ Usage — How to use aider to pair program with AI and edit code in your local git repo. 
+ Tips — Tips for AI pair programming with aider. 
+ In-chat commands — Control aider with in-chat commands like /add, /model, etc. 
+ Chat modes — Using the code, architect, ask and help chat modes. 
+ Tutorial videos — Intro and tutorial videos made by aider users. 
+ Voice-to-code with aider — Speak with aider about your code! 
+ Images & web pages — Add images and web pages to the aider coding chat. 
+ Prompt caching — Aider supports prompt caching for cost savings and faster coding. 
+ Aider in your IDE — Aider can watch your files and respond to AI comments you add in your favorite IDE or text editor. 
+ Notifications — Aider can notify you when it's waiting for your input. 
+ Aider in your browser — Aider can run in your browser, not just on the command line. 
+ Specifying coding conventions — Tell aider to follow your coding conventions when it works on your code. 
+ Copy/paste with web chat — Aider works with LLM web chat UIs 
+ Linting and testing — Automatically fix linting and testing e
+
+=== [meta] https://aider.chat
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/Aider-AI/aider
+<p align="center">
+    <a href="https://aider.chat/"><img src="https://aider.chat/assets/logo.svg" alt="Aider Logo" width="300"></a>
+</p>
+
+<h1 align="center">
+AI Pair Programming in Your Terminal
+</h1>
+
+
+<p align="center">
+Aider lets you pair program with LLMs to start a new project or build on your existing codebase. 
+</p>
+
+<p align="center">
+  <img
+    src="https://aider.chat/assets/screencast.svg"
+    alt="aider screencast"
+  >
+</p>
+
+<p align="center">
+<!--[[[cog
+from scripts.homepage import get_badges_md
+text = get_badges_md()
+cog.out(text)
+]]]-->
+  <a href="https://github.com/Aider-AI/aider/stargazers"><img alt="GitHub Stars" title="Total number of GitHub stars the Aider project has received"
+src="https://img.shields.io/github/stars/Aider-AI/aider?style=flat-square&logo=github&color=f1c40f&labelColor=555555"/></a>
+  <a href="https://pypi.org/project/aider-chat/"><img alt="PyPI Downloads" title="Total number of installations via pip from PyPI"
+src="https://img.shields.io/badge/📦%20Installs-6.8M-2ecc71?style=flat-square&labelColor=555555"/></a>
+  <img alt="Tokens per week" title="Number of tokens processed weekly by Aider users"
+src="https://img.shields.io/badge/📈%20Tokens%2Fweek-15B-3498db?style=flat-square&labelColor=555555"/>
+  <a href="https://openrouter.ai/#options-menu"><img alt="OpenRouter Ranking" title="Aider's ranking among applications on the OpenRouter platform"
+src="https://img.shields.io/badge/🏆%20OpenRouter-Top%2020-9b59b6?style=flat-square&labelColor=555555"/></a>
+  <a href="https://aider.chat/HISTORY.html"><img alt="Singularity" title="Percentage of the new code in Aider's last release written by Aider itself"
+src="https://img.shields.io/badge/🔄%20Singularity-88%25-e74c3c?style=flat-square&labelColor=555555"/></a>
+<!--[[[end]]]-->  
+</p>
+
+## Features
+
+### [Cloud and local LLMs](https://aider.chat/docs/llms.html)
+
+<a href="https://aider.chat/docs/llms.html"><img src="https://aider.chat/assets/icons/brain.svg" width="32" height="32" align="left" valign="middle" style="margin-right:10px"></a>
+Aider works best with Claude 3.7 Sonnet, DeepSeek R1 & Chat V3, OpenAI o1, o3-mini & GPT-4o, but can connect to almost any LLM, including local models.
+
+<br>
+
+### [Maps your codebase](https://aider.chat/docs/repomap.html)
+
+<a href="https://aider.chat/docs/repomap.html"><img src="https://aider.chat/assets/icons/map-outline.svg" width="32" height="32" align="left" valign="middle" style="margin-right:10px"></a>
+Aider makes a map of your entire codebase, which helps it work well in larger projects.
+
+<br>
+
+### [100+ code languages](https://aider.chat/docs/languages.html)
+
+<a href="https://aider.chat/docs/languages.html"><img src="https://aider.chat/assets/icons/code-tags.svg" width="32" height="32" align="left" valign="middle" style="margin-right:10px"></a>
+Aider works with most popular programming languages: python, javascript, rust, ruby, go, cpp, php, html, css, and dozens more.
+
+<br>
+
+### [Git integration](https://aider.chat/docs/git.html)
+
+<a href="https://aider.chat/docs/git.html"><img src="https://aider.chat/assets/icons/source-branch.svg" width="32" height="32" align="left" valign="middle" style="margin-right:10px"></a>
+Aider automatically commits changes with sensible commit messages. Use familiar git tools to easily diff, manage and undo AI changes.
+
+<br>
+
+### [Use in your IDE](https://aider.chat/docs/usage/watch.html)
+
+<a href="https://aider.chat/docs/usage/watch.html"><img src="https://aider.chat/assets/icons/monitor.svg" width="32" height="32" align="left" valign="middle" style="margin-right:10px"></a>
+Use aider from within your favorite IDE or editor. Ask for changes by adding comments to your code and aider will get to work.
+
+<br>
+
+### [Images & web pages](https://aider.chat/docs/usage/images-urls.html)
+
+<a href="https://aider.chat/docs/usage/images-urls.html"><img src="https://aider.chat/assets/icons/image-multiple.svg" width="32" height="32" align="left" valign="middle" style="margin-right:10px"></a>
+Add images and web pages to the chat to provide visual context, screenshots, reference docs, etc.
+
+<br>
+
+### [Voice-to-code](https://aider.chat/docs/usage/voice.html)
+
+<a href="https://aider.chat/docs/usage/vo

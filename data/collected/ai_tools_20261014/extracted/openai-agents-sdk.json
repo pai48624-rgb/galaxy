@@ -1,0 +1,129 @@
+{
+ "company": "OpenAI",
+ "one_liner_ko": "추상화를 최소화한 가벼운 패키지로 에이전트형 AI 앱과 멀티 에이전트 워크플로를 만드는 OpenAI의 Python SDK.",
+ "what_it_does_ko": "OpenAI Agents SDK는 적은 추상화로 에이전트형 AI 앱을 만드는 가벼운 패키지로, 이전 실험 프로젝트 Swarm을 실서비스용으로 업그레이드한 것이다. 지시·도구를 갖춘 에이전트, 다른 에이전트에 작업을 넘기는 핸드오프, 입력·출력을 검증하는 가드레일이라는 소수의 기본 요소로 구성된다. 내장 추적(tracing)으로 에이전트 흐름을 시각화·디버그·평가할 수 있다. OpenAI Responses·Chat Completions API뿐 아니라 100개 이상의 다른 LLM도 지원한다.",
+ "key_features": [
+  "지시·도구·가드레일·핸드오프를 갖춘 에이전트와 내장 루프",
+  "격리된 작업공간에서 실행하는 샌드박스 에이전트",
+  "실시간 음성 에이전트·음성 파이프라인(STT→에이전트→TTS)",
+  "에이전트를 도구로 쓰기·핸드오프로 작업 위임",
+  "입력 검증·안전 점검 가드레일",
+  "Python 함수를 도구로 바꾸는 함수 도구·MCP 도구 호출",
+  "세션 기반 대화 기록 관리",
+  "내장 추적(tracing)과 사람 개입"
+ ],
+ "use_cases_ko": [
+  "실제 격리된 작업공간에서 코딩·리뷰·문서 에이전트 실행",
+  "음성 에이전트 구축"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "API"
+ ],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://github.com/openai/openai-agents-python",
+   "quote": "https://cdn.openai.com/API/docs/images/orchestration.png"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://openai.github.io/openai-agents-python/",
+   "quote": "The OpenAI Agents SDK enables you to build agentic AI apps in a lightweight, easy-to-use package with very few abstractions."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://openai.github.io/openai-agents-python/",
+   "quote": "It's a production-ready upgrade of our previous experimentation for agents, Swarm ."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://openai.github.io/openai-agents-python/",
+   "quote": "Guardrails , which enable validation of agent inputs and outputs"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://openai.github.io/openai-agents-python/",
+   "quote": "the SDK comes with built-in tracing that lets you visualize and debug your agentic flows"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/openai/openai-agents-python",
+   "quote": "It is provider-agnostic, supporting the OpenAI Responses and Chat Completions APIs, as well as 100+ other LLMs."
+  },
+  {
+   "field": "key_features",
+   "url": "https://openai.github.io/openai-agents-python/",
+   "quote": "Agents : Build agents with instructions, tools, guardrails, handoffs, and a built-in loop that continues until the task is complete."
+  },
+  {
+   "field": "key_features",
+   "url": "https://openai.github.io/openai-agents-python/",
+   "quote": "Sandbox agents : Run specialists inside real isolated workspaces."
+  },
+  {
+   "field": "key_features",
+   "url": "https://openai.github.io/openai-agents-python/",
+   "quote": "Voice agents : Build voice pipelines that combine speech-to-text, an agent workflow, and text-to-speech."
+  },
+  {
+   "field": "key_features",
+   "url": "https://openai.github.io/openai-agents-python/",
+   "quote": "Agents as tools / Handoffs : A powerful mechanism for coordinating and delegating work across multiple agents."
+  },
+  {
+   "field": "key_features",
+   "url": "https://openai.github.io/openai-agents-python/",
+   "quote": "Guardrails : Run input validation and safety checks in parallel with agent execution"
+  },
+  {
+   "field": "key_features",
+   "url": "https://openai.github.io/openai-agents-python/",
+   "quote": "Function tools : Turn any Python function into a tool with automatic schema generation and Pydantic-powered validation."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/openai/openai-agents-python",
+   "quote": "Automatic conversation history management across agent runs"
+  },
+  {
+   "field": "key_features",
+   "url": "https://openai.github.io/openai-agents-python/",
+   "quote": "Human in the loop : Built-in mechanisms for involving humans during agent runs."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://openai.github.io/openai-agents-python/",
+   "quote": "Run a coding, review, or document agent inside a real isolated workspace"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://openai.github.io/openai-agents-python/",
+   "quote": "Realtime agents : Build powerful voice agents"
+  },
+  {
+   "field": "api",
+   "url": "https://openai.github.io/openai-agents-python/",
+   "quote": "API Reference"
+  },
+  {
+   "field": "platforms",
+   "url": "https://openai.github.io/openai-agents-python/",
+   "quote": "pip install openai-agents"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://openai.github.io/openai-agents-python/",
+   "quote": "hreflang: en, ja, ko, zh\n화면에 보이는 언어 이름: 한국어, English, 日本語, 中文, 简体中文"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

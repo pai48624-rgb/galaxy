@@ -1,0 +1,88 @@
+{
+ "company": null,
+ "one_liner_ko": "여러 AI 코딩 도우미의 지시문(규칙)을 한곳에서 관리해 각 도구 설정 파일로 자동 배포하는 CLI.",
+ "what_it_does_ko": "Ruler는 .ruler/ 폴더의 마크다운 파일 하나로 모든 AI 에이전트 지시문을 관리하고, GitHub Copilot·Claude Code·Codex CLI 등 각 에이전트의 설정 파일로 자동 배포한다. 중첩된 .ruler/ 폴더로 구성 요소별 지시문을 둘 수 있다. MCP 서버 설정도 함께 배포하고, 생성된 설정 파일을 .gitignore에 자동 추가한다. 현재 베타 연구 미리보기 단계다.",
+ "key_features": [
+  "중앙 규칙 관리(.ruler/ 마크다운)",
+  "중첩 규칙 로딩",
+  "지원 에이전트 설정 파일로 자동 배포",
+  "ruler.toml로 대상 에이전트 지정",
+  "MCP 서버 설정 전파",
+  ".gitignore 자동화",
+  "간단한 CLI"
+ ],
+ "use_cases_ko": [
+  "여러 AI 코딩 도구를 쓰는 팀의 지시문 일원화"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "MIT",
+ "api": "불명",
+ "platforms": [
+  "CLI"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/intellectronica/ruler",
+   "quote": "Ruler: Centralise Your AI Coding Assistant Instructions"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/intellectronica/ruler",
+   "quote": "Ruler solves this by providing a **single source of truth** for all your AI agent instructions, automatically distributing them to the right configuration files."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/intellectronica/ruler",
+   "quote": "> **Beta Research Preview**\n>\n> - Please test this version carefully"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/intellectronica/ruler",
+   "quote": "**Centralised Rule Management**: Store all AI instructions in a dedicated `.ruler/` directory using Markdown files"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/intellectronica/ruler",
+   "quote": "**MCP Server Propagation**: Manage and distribute Model Context Protocol (MCP) server settings"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/intellectronica/ruler",
+   "quote": "**`.gitignore` Automation**: Keeps generated agent config files out of version control automatically"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/intellectronica/ruler",
+   "quote": "Managing instructions across multiple AI coding tools becomes complex as your team grows."
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/intellectronica/ruler",
+   "quote": "img.shields.io/badge/License-MIT-yellow.svg\" alt=\"License: MIT\""
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/intellectronica/ruler",
+   "quote": "**Simple CLI**: Easy-to-use commands for initialising and applying configurations"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://agentic-ventures.com/",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "공식 GitHub에 MIT 라이선스 오픈소스 CLI(npm 배포)로 나와 있고, 등록된 홈·가격 주소(agentic-ventures.com)는 강의 사이트·로그인 화면뿐이라 Ruler 유료 요금제가 보이지 않음",
+   "diff": "기존 분류는 '프리미엄(무료+유료 구독)'이지만 확인된 것은 MIT 오픈소스 도구뿐",
+   "url": "https://github.com/intellectronica/ruler"
+  }
+ ],
+ "plan_change": []
+}

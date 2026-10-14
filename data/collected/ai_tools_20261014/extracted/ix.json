@@ -1,0 +1,89 @@
+{
+ "company": null,
+ "one_liner_ko": "자율·반자율 LLM 에이전트와 워크플로를 설계하고 배포하는 플랫폼.",
+ "what_it_does_ko": "IX는 LLM 기반 자율·반자율 에이전트와 워크플로를 설계·배포하는 플랫폼이다. 노코드 에디터에서 노드를 그래프로 연결해 에이전트를 만들고, 에디터 안 채팅으로 바로 시험한다. 여러 에이전트가 병렬로 돌며 서로 소통하고, 채팅방에서 @멘션으로 특정 에이전트에게 일을 맡길 수 있다. 에이전트 실행 백엔드는 Docker와 Celery 메시지 큐로 수평 확장된다.",
+ "key_features": [
+  "노드를 연결해 에이전트를 만드는 노코드 에디터",
+  "여러 에이전트가 함께하는 채팅(중재 에이전트가 업무 분배)",
+  "@멘션·산출물 자동완성 스마트 입력",
+  "메시지 큐 기반 에이전트 워커 수평 확장",
+  "LangChain 컴포넌트 설정 계층",
+  "OpenAI 모델 지원(Google PaLM·Anthropic·Llama는 실험적)"
+ ],
+ "use_cases_ko": [
+  "QA 챗봇·리서치 도우미 제작",
+  "코드 생성",
+  "데이터 추출·분석·증강"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "CLI"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/kreneskyp/ix",
+   "quote": "IX is a platform for designing and deploying autonomous and [semi]-autonomous LLM powered agents and workflows."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/kreneskyp/ix",
+   "quote": "Agents created with the platform can automate a wide variety of tasks, while running in parallel and communicating with each other."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/kreneskyp/ix",
+   "quote": "The agent runner backend is dockerized and is triggered with a celery message queue."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/kreneskyp/ix",
+   "quote": "No-code editor for creating and testing agents."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/kreneskyp/ix",
+   "quote": "By default it includes the IX moderator agent, which delegates tasks to other agents."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/kreneskyp/ix",
+   "quote": "The smart input bar auto-completes agent `@mentions` and file & data `{artifacts}` created by tasks."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/kreneskyp/ix",
+   "quote": "This allows the backend to scale horizontally to support a fleet of agents running in parallel."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/kreneskyp/ix",
+   "quote": "IX implements a component config layer that maps LangChain components to the configuration graph."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/kreneskyp/ix",
+   "quote": "Google PaLM (Experimental)"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/kreneskyp/ix",
+   "quote": "- QA chat bots - Code generation - Data extraction - Data analysis - Data augmentation - Research assistants"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/kreneskyp/ix",
+   "quote": "The quickest way to start IX is with the agent-ix CLI."
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [],
+ "note": "GitHub README만 있음(홈·요금·라이선스 정보 없음)."
+}

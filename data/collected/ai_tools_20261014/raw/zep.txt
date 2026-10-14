@@ -1,0 +1,494 @@
+=== [home] https://www.getzep.com (lang=en)
+Zep | The unified context layer for enterprise data 
+ We're hiring! Come build with us → 
+ Platform 
+ Solutions 
+ Enterprise Pricing Developers 
+ Resources 
+ Company 
+ Log in Sign up Request a Demo 
+ Reliable agents need the right context
+ Zep unifies business data, documents, and conversations into shared, governed context so agents can complete tasks correctly.
+ Request a Demo 
+ Project Users Graphs Batches Playground Webhooks MCP Server Account Documentation Feedback Dashboard voyager-prod 
+ Ask AI DC
+ Graphs agent_voyager agent_voyager
+ Agent Production agent for enterprise accounts: renewals, procurement, and support.
+ Entities 1,782 +42 in last 24h 
+ Facts 9,156 +188 in last 24h 
+ Episodes 2,449 Last 7d 
+ Last updated 3s ago Live ingestion 
+ Entity Types 6 
+ Document
+ Event
+ Location
+ Observation
+ Organization
+ Person
+ All 
+ Show Episodes 
+ Teams that use Zep
+ Teams that use Zep
+ Why Zep 
+ Give every agent governed context at a fraction of the token cost
+ Zep builds governed context from across your business and returns only what each task depends on.
+ 01 Unify business context
+ Every agent works from the same context, built from your business data, documents, and conversations.
+ 02 Secure your agents’ access
+ Policies decide what context each agent can retrieve, and every request is logged.
+ 03 Cut token use by 90%
+ Zep returns the facts a task depends on, where tool calling pulls whole records from each system.
+ Platform Turn your business data 
+into context your agents can use
+ Unified context 
+ How Zep works
+ Zep ingests data from across your business, builds a Context Graph for each user, customer, account, or domain, and retrieves the context each task needs.
+ 1 Ingest Send data from across your business
+ Each record keeps a link to its source.
+ Business data
+ Documents
+ Conversations
+ 2 Build Build a Context Graph for each user, account, or domain
+ Facts are dated and updated as your data changes.
+ 3 Retrieve Retrieve the context each task depends on
+ Filtered by policy and returned in one call.
+ Policy filter
+ context_response.py ••• 
+ Account: Acme 
+ Renewal: October 31 
+ SSO setup is blocked. 
+ Confirm SSO setup 
+ before renewal. 
+ Context graphs at scale 
+ The Context Lake
+ The Context Lake unifies enterprise data into millions of Context Graphs, managed and governed as one system. It runs on Konig, Zep’s graph database service.
+ Learn about the Context Lake 
+ Context Lake 1,402,891 active graphs 
+ Type Subject Entities Facts Updated 
+ User user_8a32e1f9 247 1,204 2m 
+ Org customer_acme_co 89 412 14s 
+ Agent agent_voyager 1,820 9,330 now 
+ Domain domain_billing 64 218 5m 
+ User user_d72b40c1 186 731 1m 
+ Org customer_initech 142 603 38s 
+ Agent agent_atlas_v3 2,447 10,580 12s 
+ Domain domain_pricing 31 127 8m 
+ Access control Retention Provenance Audit 
+ Retrieval latency · p95
+ 10K 148 ms 
+ 100K 152 ms 
+ 1M 156 ms 
+ 10M 161 ms 
+ 100M 168 ms 
+ Retrieval under 200ms
+ Zep retrieves context in under 200 milliseconds, regardless of graph size or count.
+ Governance in the data layer
+ Zep enforces access and retention policies across graphs and records query activity for audit—all within the data layer.
+ Learn more 
+ Acme is migrating to Entra ID .
+ ↓ traced_from Slack message priya.shah · 2026-03-09 
+“We’re moving from Okta to Entra ID this quarter.”
+ Trace facts to sources
+ Trace each fact to the source it came from, and audit any answer back to its origin.
+ Use cases 
+ Solutions built with Zep
+ Enterprise context graphs
+ Unify knowledge about customers, projects, and business domains into shared context for agents across your organization.
+ Agent memory
+ Give agents context from past conversations, user activity, and changing preferences.
+ Learn about agent memory 
+ Customer and account context
+ Unify account records, conversations, and events so agents understand each customer’s situation.
+ Recognition 
+ Context infrastructure for the enterprise.
+ Read the report 
+ S&P Global Market Intelligence Zep tackles agent memory limitations through its temporal context graph.
+ S&P Global Market Intelligence · April 2026
+ “ We can easily see Zep becoming a de facto partner in this layer of the enterprise agent stack. ” — Melissa Incera, S&P Global Market Intelligence 
+ Enterprise Built for the enterprise
+ Shared context, governed access
+ Share context across your organization while controlling what each user and agent can access.
+ Access control Attribute-based access control
+ Use attributes to control what context each agent can access and what it can do with it.
+ Retention Retention policies
+ Data expires on the schedule you set. Legal hold blocks deletion when compliance requires it.
+ Audit trail
+ 22:14 /graph/search 200 115ms 
+ 22:11 /entity/search 403 4ms 
+ 22:09 /graph/search 200 110ms 
+ Audit Audit and API logs
+ Detailed logs of every request and access decision, ready for audit.
+ More accurate. Faster. Fewer tokens
+ Agent context and memory systems often trade accuracy, latency, and token use against each other. Zep leads on all three.
+ LoCoMo 94.7% accuracy 
+ Retrieval latency 155 ms 
+ Context size 5,760 tokens 
+ LongMemEval 90.2% accuracy 
+ Retrieval latency 162 ms 
+ Context size 4,408 tokens 
+ Read the methods and results 
+ Monitor Zep activity
+ Monitor data ingestion, context retrieval, latency, and errors across your projects.
+ Analytics
+ Usage, latency, and reliability for your account.
+ All Projects ▾ Last 30 days ▾ 
+ Episodes Added 1.4M 
+ Episodes Processing 847 
+ Graphs Processing 12 
+ Graphs Created 24.7K 
+ Users Created 18.3K 
+ Avg Latency 187 ms 
+ Error Rate 0.41% 
+ Graphs Created New graphs over time.
+ Users Created New users over time.
+ Episodes Added New episodes over time.
+ Retrieval Activity Context retrieval and graph search requests.
+ Choose where to deploy Zep
+ Zep Cloud, Zep Cloud with your own encryption keys, or a deployment in your VPC.
+ Managed Cloud
+ Use Zep's managed service. No infrastructure to run. Start in minutes.
+ SOC 2 Type II
+ HIPAA BAA
+ BYOK Cloud + Your Own Keys
+ Use Zep's managed service with your own encryption keys. You control the keys that encrypt data at rest.
+ SOC 2 Type II
+ HIPAA BAA
+ BYOC Bring Your Own Cloud
+ Deploy Zep inside your VPC. Your network, your perimeter, your compliance boundary.
+ Contact Sales 
+ Learn more about Enterprise Security and compliance 
+ Customers 
+ What teams are saying
+ Voices from the teams running Zep in production.
+ “ Zep is one of the most exciting things I've seen for real-world agent use cases in a long time. ” Ken Collins 
+ VP of Product, Torq and GenAI Expert
+ “ Unlike other systems that only retrieve static documents, Zep uses a temporal knowledge graph to combine conversations and structured business data, keeping track of how things change over time. ” Lior Sinclair 
+ Founder/CEO, AlphaSignal
+ “ Zep AI was instrumental in enabling the Sidekick's personalized experience through dynamic memory retrieval. ” Mark Losey 
+ CTO at Flockx
+ “ By organizing memories into structured episodes and extracting key insights, it builds smarter, more intuitive AI agents that revolutionize how businesses harness intelligence. ” Vijay Morampudi 
+ Senior Director - AI CoE, Axtria
+ Start building with Zep
+ Start Building Contact Sales 
+ Latest from the Zep blog
+ View all posts 
+ Governance and security Sep 02, 2026 Defending Agent Memory Against Poisoning
+ One poisoned message, web page, or document can shape every later session that reads the same memory. Persistent memory makes prom
+
+=== [pricing] https://www.getzep.com/pricing/ (lang=en)
+Pricing | Zep 
+ We're hiring! Come build with us → 
+ Platform 
+ Solutions 
+ Enterprise Pricing Developers 
+ Resources 
+ Company 
+ Log in Sign up Request a Demo 
+ Zep plans 
+ Pricing
+ Self-serve plans are credit based. Enterprise plans add governance, deployment options, and negotiated rates.
+ Request a Demo Start Building 
+ Enterprise plans
+ Enterprise plans combine governed context and deployment flexibility with custom credits, negotiated rates, and a guaranteed SLA.
+ Contact Sales View deployment options 
+ Custom credits with negotiated rates 
+ Guaranteed rate limits with SLA 
+ Unlimited projects 
+ Custom Memory MCP Server seats 
+ SOC 2 Type II and HIPAA BAA 
+ Audit and API logs kept for 1-year 
+ Slack/Teams support and dedicated account manager 
+ Deploy anywhere
+ Cloud Your VPC 
+ Self-serve plans
+ Fast growing venture-capital funded startup? Get Zep Enterprise at an emerging company price. 
+ Annual Save 17% Monthly 
+ Flex
+ $125 / month 
+ billed monthly
+ 50,000 credits included. Then $25 / 10,000 credits.
+ Get started 
+ Includes
+ 50,000 credits per month Auto top-up at 20%. 30-day rollover. 
+ 600 requests per minute 
+ 5 projects 
+ 5 Memory MCP Server seats 
+ 10 custom entity & edge types 
+ API logs (1 day) 
+ Unlimited memories, retrieval & users 
+ Flex Plus
+ $375 / month 
+ billed monthly
+ 200,000 credits included. Then $75 / 40,000 credits.
+ Get started 
+ Includes
+ 200,000 credits per month Auto top-up at 20%. 60-day rollover. 
+ 1,000 requests per minute 
+ 10 projects 
+ 15 Memory MCP Server seats 
+ Observations 
+ 20 custom entity & edge types 
+ Custom extraction instructions 
+ Webhooks 
+ Analytics 
+ API logs (7 days) 
+ Unlimited memories, retrieval & users 
+ Prototyping? Start free with 10,000 credits a month. Limits apply .
+ Teams that use Zep
+ Teams that use Zep
+ One unit. Every operation 
+ How credits work
+ Each Episode you send uses credits based on its size.
+ Memory, retrieval, storage, and users are unmetered.
+ 1 credit per Episode up to 350 bytes; +1 credit per additional 350 bytes (or part). ⅛ credit per webhook invocation, where available. 0 credits for retrieval, storage, threads, users, and graph storage. 
+ Estimate your monthly spend Recommended: Flex 
+ Episodes / month 15,000 
+ 0 250k 500k 750k 1M 
+ Average Episode size 700 bytes · 2 credits ea. 
+ 100 B 1 kB 2 kB 3 kB 3.5 kB 
+ Webhook invocations / month 20,000 
+ 0 1M 2M 3M 5M 
+ Credits / month 33k 32,500 credits 
+ Estimated cost $ 125 / month On the Flex plan 
+ Compare plans
+ All limits, features, and security baselines across Flex, Flex Plus, and Enterprise.
+ Flex $125 / month Flex Plus $375 / month Enterprise Custom 
+ Usage 
+ Included credits / month 50,000 200,000 Custom 
+ Overage rate $25 / 10k credits $75 / 40k credits Negotiated 
+ Auto top-up at 20% 10k credits ($25) 40k credits ($75) Custom 
+ Credit rollover 30 days 60 days Custom 
+ Free trial credits 10,000 / mo 10,000 / mo Custom 
+ Limits 
+ Requests per minute 600 1,000 Guaranteed, custom 
+ Projects 5 10 Unlimited 
+ Memory MCP Server Seats 5 15 Custom 
+ Custom entity & edge types 10 20 20 
+ Memories, retrieval & users Unlimited Unlimited Unlimited 
+ Features 
+ Context Graph + temporal memory 
+ Observations — 
+ Custom extraction instructions — 
+ Webhooks — 
+ Analytics — 
+ Security & support 
+ SOC 2 Type II — — 
+ HIPAA BAA — — 
+ API logs retention 1 day 7 days 1 year 
+ Audit logs — — 
+ DPA (EU customers) — — 
+ Support Community Priority Slack/Teams · dedicated AM 
+ Deployment Cloud Cloud Cloud · Cloud + BYOK · BYOC 
+ Choose where to deploy Zep
+ Zep Cloud, Zep Cloud with your own encryption keys, or a deployment in your VPC.
+ Managed Cloud
+ Use Zep's managed service. No infrastructure to run. Start in minutes.
+ SOC 2 Type II
+ HIPAA BAA
+ BYOK Cloud + Your Own Keys
+ Use Zep's managed service with your own encryption keys. You control the keys that encrypt data at rest.
+ SOC 2 Type II
+ HIPAA BAA
+ BYOC Bring Your Own Cloud
+ Deploy Zep inside your VPC. Your network, your perimeter, your compliance boundary.
+ Contact Sales 
+ Learn more about Enterprise Security and compliance 
+ Recognition 
+ Context infrastructure for the enterprise.
+ Read the report 
+ S&P Global Market Intelligence Zep tackles agent memory limitations through its temporal context graph.
+ S&P Global Market Intelligence · April 2026
+ “ We can easily see Zep becoming a de facto partner in this layer of the enterprise agent stack. ” — Melissa Incera, S&P Global Market Intelligence 
+ FAQ 
+ Frequently asked questions
+ Quick answers on credits, Episodes, security, and what’s included on each plan.
+ Don’t see your question?
+ Contact sales 
+ How credits work Credits are consumed based on the size of each Episode you send to Zep. Episodes up to 350 bytes use 1 credit ; each additional 350 bytes (or part thereof) uses another credit.
+ Where available, webhook invocations consume 1/8 of a credit each.
+ Flex and Flex Plus automatically top up your credits when your balance drops below 20% . Flex adds 10,000 credits ($25) ; Flex Plus adds 40,000 credits ($75) .
+ Flex credits roll over for 30 days ; Flex Plus credits roll over for 60 days . Free plan credits do not roll over.
+ What is an Episode? An Episode is any single data object you send to Zep — a chat message, JSON payload, or block of text.
+ Credit cost scales with Episode size. Episodes up to 350 bytes use 1 credit ; each additional 350 bytes (or part thereof) uses another credit. A 640-byte Episode uses 2 credits ; a 1,200-byte Episode uses 4 credits .
+ Are we charged for ingestion or storage? You are charged for ingestion and processing of Episodes. You are not charged for storage of messages or data.
+ How are rate limits calculated? Each plan tier has a base rate limit, with Free being the lowest. Free and Flex Plan customers may see rate limits lowered depending on service usage. Enterprise plans have committed, guaranteed rate limits.
+ What are the Free plan limits? · 10,000 credits per month. No rollover or auto-topup.
+ · 2 projects, 1 Memory MCP Server seat, 5 custom entity & edge types.
+ · Variable rate limits, depending on service-wide load.
+ · Lower priority Episode processing.
+ · Feature availability and service levels may change over time.
+ Is Zep SOC 2 Type II certified? Yes. Zep is SOC 2 Type II certified. Review controls and live compliance status on the Trust Center .
+ Can Zep sign a HIPAA BAA? Yes. HIPAA BAAs are available with the Enterprise plan.
+ We're an EU company. Will you sign a DPA? Yes. Zep signs Data Processing Agreements with EU customers and customers with EU presence.
+ Contact the Zep team
+ Start with a self-service pl
+
+=== [about] https://www.getzep.com/about/ (lang=en)
+About | Zep 
+ We're hiring! Come build with us → 
+ Platform 
+ Solutions 
+ Enterprise Pricing Developers 
+ Resources 
+ Company 
+ Log in Sign up Request a Demo 
+ About Zep 
+ The Context Lake
+for AI agents
+ Infrastructure that connects, governs, and serves the context agents need to complete tasks correctly.
+ Project
+ Users
+ Graphs
+ Batches
+ Playground
+ Webhooks
+ Account
+ Documentation
+ Feedback
+ Dashboard voyager-prod ▾ 
+ Graphs › agent_voyager
+ agent_voyager AGENT 
+ Production agent across deal-flow, portfolio review, and weekly insights.
+ Entities 24,582 +42 in last 24h 
+ Facts 111,561 +188 in last 24h 
+ Episodes 12,814 Last 7d 
+ Last ingest 2m ago Live 
+ Document Event Location Observation Organization Person 
+ Teams that use Zep
+ Teams that use Zep
+ Our mission 
+ Context across every user, every domain, every agent
+ Agents are limited by the context available to them. Most agents see only the conversation in front of them — not the user, the business, or the work that came before.
+ Zep changes that. We build the infrastructure that lets agents remember and reason across every source they touch: chat, documents, events, business data. The Context Lake is governed and temporal, and scales to millions of context graphs per deployment.
+ Backed by leading investors 
+ Plus angels at industry-leading companies including Vercel, Google, and Airtable.
+ Recognition 
+ Context infrastructure for the enterprise.
+ Read the report 
+ S&P Global Market Intelligence Zep tackles agent memory limitations through its temporal context graph.
+ S&P Global Market Intelligence · April 2026
+ “ We can easily see Zep becoming a de facto partner in this layer of the enterprise agent stack. ” — Melissa Incera, S&P Global Market Intelligence 
+ The unified context layer for enterprise data.
+ Platform
+ Context Lake 
+ Konig 
+ Graphiti 
+ Solutions
+ Context graphs 
+ Agent memory 
+ Account context 
+ Developers
+ Documentation 
+ API Reference 
+ Blog 
+ Resources
+ Research 
+ S&P Global Market Intelligence coverage 
+ Trust Center 
+ Context Engineering 
+ AI Agents Guides 
+ Buy vs. Build: Agent Memory 
+ Enterprise
+ Overview 
+ Deployment 
+ Security and compliance 
+ Zep vs
+ Mem0 Alternative 
+ Letta Alternative 
+ AWS AgentCore Alternative 
+ Vertex AI Memory Bank Alternative 
+ Cognee Alternative 
+ Supermemory Alternative 
+ Company
+ About 
+ Careers 
+ Pricing 
+ Contact 
+ © 2026 Zep AI, Inc. All rights reserved.
+ Privacy policy 
+ Terms of service 
+ Website terms
+
+=== [meta] https://www.getzep.com
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/getzep/graphiti
+<p align="center">
+  <a href="https://www.getzep.com/">
+    <img src="https://github.com/user-attachments/assets/119c5682-9654-4257-8922-56b7cb8ffd73" width="150" alt="Zep Logo">
+  </a>
+</p>
+
+<h1 align="center">
+Graphiti
+</h1>
+<h2 align="center">A Framework for Building Temporal Knowledge Graphs</h2>
+
+<div align="center">
+
+[![Lint](https://github.com/getzep/Graphiti/actions/workflows/lint.yml/badge.svg?style=flat)](https://github.com/getzep/Graphiti/actions/workflows/lint.yml)
+[![Unit Tests](https://github.com/getzep/Graphiti/actions/workflows/unit_tests.yml/badge.svg)](https://github.com/getzep/Graphiti/actions/workflows/unit_tests.yml)
+[![MyPy Check](https://github.com/getzep/Graphiti/actions/workflows/typecheck.yml/badge.svg)](https://github.com/getzep/Graphiti/actions/workflows/typecheck.yml)
+
+[![GitHub Repo stars](https://img.shields.io/github/stars/getzep/graphiti)](https://github.com/getzep/graphiti/stargazers)
+[![arXiv](https://img.shields.io/badge/arXiv-2501.13956-b31b1b.svg?style=flat)](https://arxiv.org/abs/2501.13956)
+[![Release](https://img.shields.io/github/v/release/getzep/graphiti?style=flat&label=Release&color=limegreen)](https://github.com/getzep/graphiti/releases)
+
+</div>
+<div align="center">
+
+<a href="https://trendshift.io/repositories/12986" target="_blank"><img src="https://trendshift.io/api/badge/repositories/12986" alt="getzep%2Fgraphiti | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+
+</div>
+
+> [!NOTE]
+> **We're Hiring!** Build context graphs that power reliable, personalized, fast production AI agents.
+> Come build with us — we're hiring Engineers and Developer Relations folks. [View open roles](https://www.getzep.com/careers/).
+
+⭐ *Help us reach more developers and grow the Graphiti community. Star this repo!*
+
+&nbsp;
+
+Graphiti is a framework for building and querying temporal context graphs for AI agents. Unlike static knowledge graphs,
+Graphiti's context graphs track how facts change over time, maintain provenance to source data, and support both
+prescribed and learned ontology — making them purpose-built for agents operating on evolving, real-world data.
+
+Unlike traditional retrieval-augmented generation (RAG) methods, Graphiti continuously integrates user interactions,
+structured and unstructured enterprise data, and external information into a coherent, queryable graph. The framework
+supports incremental data updates, efficient retrieval, and precise historical queries without requiring complete graph
+recomputation, making it suitable for developing interactive, context-aware AI applications.
+
+Use Graphiti to:
+
+- Build temporal knowledge graphs that evolve with every interaction — tracking what's true now and what was true before.
+- Represent rich, structured context instead of flat document chunks or raw event streams.
+- Query across time, meaning, and relationships with hybrid retrieval (semantic + keyword + graph traversal).
+
+&nbsp;
+
+<p align="center">
+    <img src="images/graphiti-graph-intro.gif" alt="Graphiti temporal walkthrough" width="700px">
+</p>
+
+&nbsp;
+
+## What is a Context Graph?
+
+A **context graph** is a temporal graph of entities, relationships, and facts — like *"Kendra loves Adidas shoes (as of
+March 2026)."* Unlike traditional knowledge graphs, each fact in a context graph has a validity window: when it became
+true, and when (if ever) it was superseded. Entities evolve over time with updated summaries. Everything traces back to
+**episodes** — the raw data that produced it.
+
+What makes Graphiti unique is its ability to autonomously build context graphs from unstructured and structured data,
+handling changing relationships while preserving full temporal history.
+
+A context graph contains:
+
+| Component | What it stores |
+|-----------|---------------|
+| **Entities** (nodes) | People, products, policies, concepts — with summaries that evolve over time |
+| **Facts / Relationships** (edges) | Triplets (Entity → Relationship → Entity) with temporal validity windows |
+| **Episodes** (provenance) | Raw data as ingested — the ground truth stream. Every derived fact traces back here |
+| **Custom Types** (ontology) | Developer-defined entity and edge type

@@ -1,0 +1,32 @@
+{
+ "company": null,
+ "one_liner_ko": "서로 내부를 드러내지 않는 에이전트 애플리케이션 간의 통신과 상호운용을 가능하게 하는 오픈 프로토콜.",
+ "what_it_does_ko": "Agent2Agent(A2A) 프로토콜은 서로 다른 회사가 서로 다른 프레임워크로 만들어 별도 서버에서 돌리는 생성형 AI 에이전트들이 도구가 아닌 에이전트로서 효과적으로 소통·협업하게 하려는 오픈 프로토콜이다. 에이전트를 위한 공통 언어를 제공하는 것을 목표로 한다. A2A로 에이전트는 서로의 기능을 발견하고, 상호작용 방식(텍스트·양식·미디어)을 협상하며, 장시간 작업에서 안전하게 협업할 수 있다. 내부 상태·메모리·도구를 노출하지 않고 동작한다. 저장소는 Apache 2.0 라이선스 배지와 PyPI a2a-sdk 패키지 배지를 달고 있다.",
+ "key_features": [
+  "에이전트 간 기능 발견(Discover)",
+  "상호작용 방식 협상(텍스트·양식·미디어)",
+  "장시간 작업에서의 안전한 협업",
+  "내부 상태·메모리·도구를 노출하지 않고 동작",
+  "Python SDK(a2a-sdk) 배포"
+ ],
+ "use_cases_ko": [
+  "서로 다른 프레임워크·회사·서버의 AI 에이전트를 연결해 협업시키기"
+ ],
+ "pricing": {"free_tier": "불명", "plans": [], "pricing_url": null},
+ "open_source": "Apache-2.0",
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {"field": "one_liner_ko", "url": "https://github.com/a2aproject/A2A", "quote": "**An open protocol enabling communication and interoperability between opaque agentic applications.**"},
+  {"field": "what_it_does_ko", "url": "https://github.com/a2aproject/A2A", "quote": "enabling gen AI agents, built on diverse frameworks by different companies running on separate servers, to communicate and collaborate effectively - as agents, not just as tools."},
+  {"field": "key_features", "url": "https://github.com/a2aproject/A2A", "quote": "- Negotiate interaction modalities (text, forms, media)."},
+  {"field": "key_features", "url": "https://github.com/a2aproject/A2A", "quote": "- Operate without exposing their internal state, memory, or tools."},
+  {"field": "key_features", "url": "https://github.com/a2aproject/A2A", "quote": "[![PyPI - Version](https://img.shields.io/pypi/v/a2a-sdk)](https://pypi.org/project/a2a-sdk)"},
+  {"field": "use_cases_ko", "url": "https://github.com/a2aproject/A2A", "quote": "A2A aims to provide a common language for agents, fostering a more interconnected, powerful, and innovative AI ecosystem."},
+  {"field": "open_source", "url": "https://github.com/a2aproject/A2A", "quote": "[![Apache License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)"},
+  {"field": "korean_support", "url": "https://github.com/a2aproject/A2A", "quote": "<a href=\"https://openaitx.github.io/view.html?user=a2aproject&project=A2A&lang=ko\">한국어</a>"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

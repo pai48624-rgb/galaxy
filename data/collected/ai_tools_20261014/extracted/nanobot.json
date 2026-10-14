@@ -1,0 +1,46 @@
+{
+ "company": "HKUDS",
+ "one_liner_ko": "파이썬으로 만든 초경량 오픈소스 자체 호스팅 개인 AI 에이전트 프레임워크.",
+ "what_it_does_ko": "nanobot은 파이썬으로 작성된 초경량 오픈소스 개인 AI 에이전트 프레임워크로, 직접 설치해 운영한다. 브라우저·터미널·채팅 앱에서 쓰며 파일 작업, 선호 기억, 작업 예약을 할 수 있다. 지원되는 모델 제공자나 로컬 모델 서버를 연결해 AI를 공급한다. 텔레그램·디스코드·슬랙·위챗·이메일 등 여러 채널에 연결되고, PDF·워드·엑셀·파워포인트 파일을 읽어 보고서 요약 같은 작업을 한다.",
+ "key_features": [
+  "브라우저 WebUI·터미널에서 실행",
+  "텔레그램·디스코드·슬랙·위챗·이메일·Mattermost·Linear 등 채널 연결",
+  "PDF·Word·Excel·PowerPoint 파일 읽기",
+  "선호 기억과 작업 예약",
+  "모델 제공자·대체 모델·Langfuse·MCP·웹 도구 설정",
+  "파이썬 SDK와 HTTP Agent API",
+  "클라우드 배포·서비스 상시 실행"
+ ],
+ "use_cases_ko": [
+  "채팅 앱에서 쓰는 자체 호스팅 개인 AI 비서",
+  "보고서 파일 요약"
+ ],
+ "pricing": {"free_tier": "불명", "plans": [], "pricing_url": null},
+ "open_source": "MIT",
+ "api": "있음",
+ "platforms": ["웹", "CLI", "API"],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {"field": "company", "url": "https://github.com/HKUDS/nanobot", "quote": "<a href=\"https://github.com/HKUDS/nanobot\"><img src=\"https://img.shields.io/github/stars/HKUDS/nanobot?style=flat&logo=github\" alt=\"GitHub stars\"></a>"},
+  {"field": "one_liner_ko", "url": "https://github.com/HKUDS/nanobot", "quote": "**nanobot** is an ultra-lightweight, open-source, self-hosted personal AI agent framework written in Python."},
+  {"field": "what_it_does_ko", "url": "https://github.com/HKUDS/nanobot", "quote": "Use it in a browser, terminal, or chat app to work with files, remember preferences, and schedule tasks. Connect a supported model provider or local model server to supply the AI."},
+  {"field": "what_it_does_ko", "url": "https://github.com/HKUDS/nanobot", "quote": "read PDF, Word (`.docx`), Excel (`.xlsx`), and PowerPoint (`.pptx`) files with built-in file tools, for tasks such as summarizing reports"},
+  {"field": "key_features", "url": "https://github.com/HKUDS/nanobot", "quote": "run in a browser WebUI or terminal"},
+  {"field": "key_features", "url": "https://github.com/HKUDS/nanobot", "quote": "connect to Telegram, Discord, Slack, WeChat, Email, Mattermost, Linear, and other channels"},
+  {"field": "key_features", "url": "https://github.com/HKUDS/nanobot", "quote": "read PDF, Word (`.docx`), Excel (`.xlsx`), and PowerPoint (`.pptx`) files with built-in file tools"},
+  {"field": "key_features", "url": "https://github.com/HKUDS/nanobot", "quote": "work with files, remember preferences, and schedule tasks"},
+  {"field": "key_features", "url": "https://github.com/HKUDS/nanobot", "quote": "| Configure providers, fallback models, Langfuse, MCP, web tools, or security |"},
+  {"field": "key_features", "url": "https://github.com/HKUDS/nanobot", "quote": "| Integrate from Python or HTTP | [Python SDK](./docs/python-sdk.md) or [Agent API](./docs/openai-api.md) |"},
+  {"field": "key_features", "url": "https://github.com/HKUDS/nanobot", "quote": "| Deploy to the cloud or keep nanobot running as a service | [Deployment](./docs/deployment.md) |"},
+  {"field": "use_cases_ko", "url": "https://github.com/HKUDS/nanobot", "quote": "| Connect Telegram, Discord, WeChat, Slack, Email, Mattermost, Linear, or another channel |"},
+  {"field": "use_cases_ko", "url": "https://github.com/HKUDS/nanobot", "quote": "for tasks such as summarizing reports"},
+  {"field": "open_source", "url": "https://github.com/HKUDS/nanobot", "quote": "<a href=\"./LICENSE\"><img src=\"https://img.shields.io/github/license/HKUDS/nanobot\" alt=\"MIT License\"></a>"},
+  {"field": "api", "url": "https://github.com/HKUDS/nanobot", "quote": "| Integrate from Python or HTTP | [Python SDK](./docs/python-sdk.md) or [Agent API](./docs/openai-api.md) |"},
+  {"field": "platforms", "url": "https://github.com/HKUDS/nanobot", "quote": "| Open the bundled browser UI | [WebUI](#-webui) |"},
+  {"field": "platforms", "url": "https://github.com/HKUDS/nanobot", "quote": "run in a browser WebUI or terminal"},
+  {"field": "korean_support", "url": "https://github.com/HKUDS/nanobot", "quote": "<a href=\"https://nanobot.wiki/ko/docs/latest/getting-started/nanobot-overview\">한국어</a>"}
+ ],
+ "mismatch": [{"official": "MIT 오픈소스 자체 호스팅 프레임워크, 요금제 안내 없음", "diff": "기존 '프리미엄(무료+유료 구독)' 분류와 달리 유료 구독이 확인되지 않음(오픈소스)", "url": "https://github.com/HKUDS/nanobot"}],
+ "plan_change": [],
+ "note": "[meta] 구간 없음. 한국어는 공식 문서 사이트(nanobot.wiki) 언어 선택에 한국어가 있는 것으로 판단(WebUI 자체 한국어 여부는 미확인)."
+}

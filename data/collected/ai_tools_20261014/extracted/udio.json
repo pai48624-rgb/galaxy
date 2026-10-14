@@ -1,0 +1,36 @@
+{
+ "company": "Udio",
+ "one_liner_ko": "글로 묘사만 하면 원하는 노래를 만들어 주는 AI 음악 생성 서비스다.",
+ "what_it_does_ko": "Udio는 주제·장르 등 간단한 텍스트 프롬프트로 전문가 수준의 곡을 만들어 준다. 곡 연장(Extend)·부분 수정(Inpaint)·리믹스·오디오 업로드 같은 AI 편집 도구를 제공한다. 만든 곡을 Udio에 공개하고 다른 창작자를 팔로우하는 커뮤니티 기능도 있다.",
+ "key_features": ["텍스트 프롬프트로 곡 생성", "곡 연장·리믹스", "음악·가사 편집", "직접 만든 오디오 업로드", "스타일(음악 레퍼런스) 활용·블렌드", "Udio 보이스 라이브러리·내 보이스 저장", "커버 아트 생성·업로드", "곡 공개·공유 커뮤니티"],
+ "use_cases_ko": ["일반인: 데이트·파티·명상 등 상황별 맞춤 음악 만들기", "프로 뮤지션·아마추어: 제작 과정에서 음악 아이디어 구현"],
+ "pricing": {"free_tier": "있음 (하루 10크레딧·월 100크레딧, 하루 풀길이 곡 3개)", "plans": [
+  {"name": "Free", "price": 0, "currency": "USD", "period": "month", "limits": "하루 10크레딧, 월 100크레딧", "page_lang": "en"},
+  {"name": "Standard", "price": 10, "currency": "USD", "period": "month", "limits": "월 2400크레딧, 동시 6곡", "page_lang": "en"},
+  {"name": "Standard", "price": 8, "currency": "USD", "period": "month(연간 결제)", "limits": "연 $96 청구", "page_lang": "en"},
+  {"name": "Pro", "price": 30, "currency": "USD", "period": "month", "limits": "월 6000크레딧, 동시 10곡", "page_lang": "en"},
+  {"name": "Pro", "price": 24, "currency": "USD", "period": "month(연간 결제)", "limits": "연 $288 청구", "page_lang": "en"},
+  {"name": "100 credits", "price": 3, "currency": "USD", "period": "one-time", "limits": "추가 크레딧 100", "page_lang": "en"},
+  {"name": "1000 credits", "price": 25, "currency": "USD", "period": "one-time", "limits": "추가 크레딧 1000", "page_lang": "en"}
+ ], "pricing_url": "https://www.udio.com/pricing"},
+ "open_source": null,
+ "api": "불명",
+ "platforms": ["웹"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://www.udio.com/about-us", "quote": "Udio builds AI tools to enable the next generation of music creators."},
+  {"field": "one_liner_ko", "url": "https://www.udio.com/", "quote": "If you can describe it in text, you can now express it in music."},
+  {"field": "what_it_does_ko", "url": "https://www.udio.com/about-us", "quote": "udio.com allows users to create music from simple text prompts by specifying topics, genres, and other descriptors which are then transformed into professional quality tracks."},
+  {"field": "key_features", "url": "https://www.udio.com/", "quote": "Extend Inpaint Remix Upload Song"},
+  {"field": "key_features", "url": "https://www.udio.com/pricing", "quote": "Unlock Voice Control, edit your music and lyrics, generate songs from uploaded audio files, use existing songs as a style reference, upload custom cover art, and more"},
+  {"field": "use_cases_ko", "url": "https://www.udio.com/", "quote": "Professional musicians and passionate amateurs use Udio in their production process."},
+  {"field": "use_cases_ko", "url": "https://www.udio.com/", "quote": "a ballad for a romantic date, a banger for a night out with friends, a lo-fi track for meditation"},
+  {"field": "pricing", "url": "https://www.udio.com/pricing", "quote": "10 credits per day and 100 credits per month (no rollovers)"},
+  {"field": "pricing", "url": "https://www.udio.com/pricing", "quote": "$96 billed annually"},
+  {"field": "pricing", "url": "https://www.udio.com/pricing", "quote": "Purchase 100 credits - $3.00 Purchase 1000 credits - $25.00"},
+  {"field": "platforms", "url": "https://www.udio.com/", "quote": "Udio | AI Music Generator - Official Website"},
+  {"field": "korean_support", "url": "https://www.udio.com/", "quote": "html lang: en"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

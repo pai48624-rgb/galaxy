@@ -1,0 +1,38 @@
+{
+ "company": "Meta",
+ "one_liner_ko": "사람-AI 대화용으로 만든, LLM 기반 입력·출력 안전 장치 모델.",
+ "what_it_does_ko": "Llama Guard는 사람-AI 대화 사용 사례를 위한 LLM 기반 입력·출력 안전 장치 모델이다. 안전 위험 분류 체계를 갖추고 LLM 프롬프트를 분류(프롬프트 분류)하고 그 프롬프트에 대한 LLM 응답도 분류(응답 분류)한다. 수집한 데이터셋으로 지시 튜닝한 Llama2-7b 모델이며, OpenAI Moderation Evaluation·ToxicChat 같은 벤치마크에서 기존 콘텐츠 검수 도구와 같거나 더 나은 성능을 보였다고 논문은 밝힌다. 다중 클래스 분류와 이진 판정 점수를 만들고, 분류 범주를 사용 사례에 맞게 바꾸거나 제로샷·퓨샷으로 다른 분류 체계를 쓸 수 있다. Meta는 모델 가중치를 공개한다고 밝혔다(2023-12-07 논문 페이지 기준).",
+ "key_features": [
+  "프롬프트 분류(입력 검사)",
+  "응답 분류(출력 검사)",
+  "안전 위험 분류 체계",
+  "다중 클래스 분류·이진 판정 점수",
+  "분류 범주 맞춤 조정",
+  "제로샷·퓨샷 프롬프팅으로 다른 분류 체계 사용",
+  "모델 가중치 공개"
+ ],
+ "use_cases_ko": [
+  "사람-AI 대화에서 프롬프트·응답의 안전 위험 검사(콘텐츠 검수)",
+  "연구자가 AI 안전용으로 모델을 추가 개발·조정하기"
+ ],
+ "pricing": {"free_tier": "불명", "plans": [], "pricing_url": null},
+ "open_source": null,
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://ai.meta.com/research/publications/llama-guard-llm-based-input-output-safeguard-for-human-ai-conversations/", "quote": "Llama Guard: LLM-based Input-Output Safeguard for Human-AI Conversations | Research - AI at Meta"},
+  {"field": "one_liner_ko", "url": "https://ai.meta.com/research/publications/llama-guard-llm-based-input-output-safeguard-for-human-ai-conversations/", "quote": "We introduce Llama Guard, an LLM-based input-output safeguard model geared towards Human-AI conversation use cases."},
+  {"field": "what_it_does_ko", "url": "https://ai.meta.com/research/publications/llama-guard-llm-based-input-output-safeguard-for-human-ai-conversations/", "quote": "Llama Guard, a Llama2-7b model that is instruction-tuned on our collected dataset"},
+  {"field": "what_it_does_ko", "url": "https://ai.meta.com/research/publications/llama-guard-llm-based-input-output-safeguard-for-human-ai-conversations/", "quote": "where its performance matches or exceeds that of currently available content moderation tools."},
+  {"field": "key_features", "url": "https://ai.meta.com/research/publications/llama-guard-llm-based-input-output-safeguard-for-human-ai-conversations/", "quote": "Our model incorporates a safety risk taxonomy, a valuable tool for categorizing a specific set of safety risks found in LLM prompts (i.e., prompt classification)."},
+  {"field": "key_features", "url": "https://ai.meta.com/research/publications/llama-guard-llm-based-input-output-safeguard-for-human-ai-conversations/", "quote": "a process we refer to as response classification."},
+  {"field": "key_features", "url": "https://ai.meta.com/research/publications/llama-guard-llm-based-input-output-safeguard-for-human-ai-conversations/", "quote": "Llama Guard functions as a language model, carrying out multi-class classification and generating binary decision scores."},
+  {"field": "key_features", "url": "https://ai.meta.com/research/publications/llama-guard-llm-based-input-output-safeguard-for-human-ai-conversations/", "quote": "enabling the adjustment of taxonomy categories to align with specific use cases, and facilitating zero-shot or few-shot prompting with diverse taxonomies at the input."},
+  {"field": "key_features", "url": "https://ai.meta.com/research/publications/llama-guard-llm-based-input-output-safeguard-for-human-ai-conversations/", "quote": "We are making Llama Guard model weights available"},
+  {"field": "use_cases_ko", "url": "https://ai.meta.com/research/publications/llama-guard-llm-based-input-output-safeguard-for-human-ai-conversations/", "quote": "we encourage researchers to further develop and adapt them to meet the evolving needs of the community for AI safety."},
+  {"field": "korean_support", "url": "https://ai.meta.com/research/publications/llama-guard-llm-based-input-output-safeguard-for-human-ai-conversations/", "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

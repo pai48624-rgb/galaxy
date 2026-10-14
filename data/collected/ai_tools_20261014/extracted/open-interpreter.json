@@ -1,0 +1,95 @@
+{
+ "company": null,
+ "one_liner_ko": "저비용·오픈 웨이트 모델에 맞춰 만든 오픈소스 터미널 코딩 에이전트(데스크톱 앱도 제공).",
+ "what_it_does_ko": "Open Interpreter는 터미널에 사는 코딩 에이전트로, 프로젝트를 열고 interpreter를 입력하면 파일 읽기·코드 수정·명령 실행을 하고 샌드박스를 벗어날 때는 먼저 묻는다. Kimi, Qwen, DeepSeek 등 오픈 모델별 전용 하네스를 제공하며 OpenAI, Bedrock, Ollama, LM Studio 등 여러 공급자를 지원한다. macOS·Linux·Windows에서 OS 수준 샌드박스를 기본으로 쓰고, OpenAI Codex를 포크해 AGENTS.md·Skills·MCP 설정을 그대로 이어 쓴다. 별도의 데스크톱 앱은 Word·Excel·PDF·브라우저를 넘나드는 사무 작업을 대신한다.",
+ "key_features": [
+  "오픈 모델별 하네스(Kimi·Qwen·DeepSeek 등)와 하네스 에뮬레이션",
+  "OS 수준 샌드박스와 승인 정책",
+  "AGENTS.md·Skills·MCP 지원(Codex 포크)",
+  "여러 세션 동시 실행(resume·fork)",
+  "ACP 호환 에디터 지원과 Codex SDK 호환",
+  "문서·스프레드시트·브라우저 작업용 데스크톱 앱"
+ ],
+ "use_cases_ko": [
+  "개발자가 저비용 모델로 터미널 코딩 작업",
+  "금융·법무·운영·리서치 지식 노동자가 앱·파일 간 정보 이동 작업을 맡김"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "Apache 2.0",
+ "api": "불명",
+ "platforms": [
+  "CLI",
+  "맥",
+  "윈도"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.openinterpreter.com/",
+   "quote": "The open source terminal agent. Built for the next generation of low-cost models."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.openinterpreter.com/",
+   "quote": "A coding agent that lives in your terminal. Open a project, type `interpreter`, and it can read files, edit code, run commands, and ask before it escalates beyond the current sandbox."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.openinterpreter.com/",
+   "quote": "Open Interpreter ships model-specific harnesses for Kimi, Qwen, DeepSeek, and other open models."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.openinterpreter.com/",
+   "quote": "The agent edits files and runs commands inside an OS-level sandbox on macOS, Linux, and Windows."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.openinterpreter.com/",
+   "quote": "As a fork of Codex, Open Interpreter inherits your existing agent setup—including AGENTS.md instructions, skills, MCP servers, and project configuration."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/openinterpreter/openinterpreter",
+   "quote": "Open Interpreter works in [ACP-compatible editors and clients]"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.openinterpreter.com/",
+   "quote": "The desktop app brings the same agentic workflow to Word, Excel, PDFs, browsers, and local files."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.openinterpreter.com/docs/desktop",
+   "quote": "Knowledge workers in finance, legal, ops, research, and support who spend hours each week moving information between apps."
+  },
+  {
+   "field": "open_source",
+   "url": "https://www.openinterpreter.com/",
+   "quote": "Yes. Open Interpreter is open source under the Apache 2.0 License."
+  },
+  {
+   "field": "platforms",
+   "url": "https://www.openinterpreter.com/",
+   "quote": "inside an OS-level sandbox on macOS, Linux, and Windows"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.openinterpreter.com/",
+   "quote": "화면에 보이는 언어 이름: English, 日本語, 中文, Español, Français, Deutsch, Português"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "Apache 2.0 오픈소스 터미널 에이전트, 자기 API 키·로컬 모델 사용 가능(요금표 없음)",
+   "diff": "기존 '프리미엄(무료+유료 구독)'과 달리 공식 페이지에서 유료 구독 요금제는 확인되지 않음",
+   "url": "https://www.openinterpreter.com/"
+  }
+ ],
+ "plan_change": []
+}

@@ -1,0 +1,182 @@
+{
+ "company": "ElevenLabs",
+ "one_liner_ko": "짧은 음성 샘플을 올려 내 목소리와 똑같이 들리는 복제 음성을 만들고, 텍스트를 그 목소리로 읽게 하는 기능",
+ "what_it_does_ko": "ElevenLabs 음성 복제는 짧은 음성 샘플을 업로드해 텍스트를 내 목소리로 자연스럽게 읽어 주는 기능이다. 몇 초 분량 샘플로 바로 만드는 즉석 음성 복제(IVC)와, 30분 이상의 깨끗한 녹음으로 원본과 거의 구분이 안 되는 모델을 학습하는 전문 음성 복제(PVC)가 있다. 복제된 음성은 32개 이상 언어를 자동으로 말하며, 속도·에너지·감정 등을 조절할 수 있다. 웹·모바일과 API·SDK로 쓸 수 있다.",
+ "key_features": [
+  "10초 녹음으로 만드는 즉석 음성 복제(IVC)",
+  "30분 이상 녹음으로 학습하는 전문 음성 복제(PVC)",
+  "복제 음성의 32개 이상 언어 자동 지원",
+  "속도·에너지·명료도·감정 조절",
+  "음성 데이터 암호화·무단 사용 보호",
+  "Studio에서 내레이션·오디오북 제작",
+  "음성 복제 API·SDK"
+ ],
+ "use_cases_ko": [
+  "작가·출판사의 오디오북 내레이션",
+  "유튜브·SNS·마케팅 영상 보이스오버",
+  "게임 캐릭터 대사 대량 생성"
+ ],
+ "pricing": {
+  "free_tier": "있음 (월 10k 크레딧, Studio 프로젝트 3개, 상업 이용 불가)",
+  "plans": [
+   {
+    "name": "Free",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "월 10k 크레딧",
+    "page_lang": "en"
+   },
+   {
+    "name": "Starter",
+    "price": 6,
+    "currency": "USD",
+    "period": "month",
+    "limits": "월 30k 크레딧, 상업 라이선스, 즉석 음성 복제(첫 달 $1 할인)",
+    "page_lang": "en"
+   },
+   {
+    "name": "Creator",
+    "price": 22,
+    "currency": "USD",
+    "period": "month",
+    "limits": "월 121k 크레딧, 전문 음성 복제(첫 달 $11)",
+    "page_lang": "en"
+   },
+   {
+    "name": "Pro",
+    "price": 99,
+    "currency": "USD",
+    "period": "month",
+    "limits": "월 600k 크레딧, API 44.1kHz PCM 출력",
+    "page_lang": "en"
+   },
+   {
+    "name": "Scale",
+    "price": 299,
+    "currency": "USD",
+    "period": "month",
+    "limits": "월 1.8M 크레딧, 3석, 전문 음성 복제 3개",
+    "page_lang": "en"
+   },
+   {
+    "name": "Business",
+    "price": 990,
+    "currency": "USD",
+    "period": "month",
+    "limits": "월 6M 크레딧, 10석, 전문 음성 복제 10개",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": null,
+    "period": null,
+    "limits": "맞춤 가격, 문의",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://elevenlabs.io/pricing"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "API"
+ ],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://elevenlabs.io/about",
+   "quote": "ElevenLabs is an AI research and product company transforming the way we interact with technology."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://elevenlabs.io/voice-cloning",
+   "quote": "Create a replica of your voice that sounds like you"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://elevenlabs.io/voice-cloning",
+   "quote": "Upload a short audio sample and generate natural-sounding speech from text for voiceovers, ads, podcasts, and more - all in your own voice."
+  },
+  {
+   "field": "key_features",
+   "url": "https://elevenlabs.io/voice-cloning",
+   "quote": "Create a lifelike voice in moments using just a 10-second recording."
+  },
+  {
+   "field": "key_features",
+   "url": "https://elevenlabs.io/voice-cloning",
+   "quote": "Requires 30+ minutes of clean audio samples"
+  },
+  {
+   "field": "key_features",
+   "url": "https://elevenlabs.io/voice-cloning",
+   "quote": "Generated voice clones can automatically speak 32+ languages."
+  },
+  {
+   "field": "key_features",
+   "url": "https://elevenlabs.io/voice-cloning",
+   "quote": "Adjust pacing, energy, clarity, and emotion to craft your vocal style."
+  },
+  {
+   "field": "key_features",
+   "url": "https://elevenlabs.io/voice-cloning",
+   "quote": "Your voice data is encrypted and protected from unauthorized use."
+  },
+  {
+   "field": "key_features",
+   "url": "https://elevenlabs.io/voice-cloning",
+   "quote": "Create speech narrated in your own voice, or use it in Studio to create voiceovers, audiobooks and more."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://elevenlabs.io/voice-cloning",
+   "quote": "Authors and publishers use professional voice cloning to create high-quality audiobook narration without expensive studio sessions."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://elevenlabs.io/voice-cloning",
+   "quote": "Game developers generate character dialogue at scale."
+  },
+  {
+   "field": "platforms",
+   "url": "https://elevenlabs.io/voice-cloning",
+   "quote": "Available on the web, mobile and via APIs or SDKs"
+  },
+  {
+   "field": "api",
+   "url": "https://elevenlabs.io/about",
+   "quote": "ElevenAPI gives developers access to our leading AI audio foundation models, with low-latency streaming and SDKs for building voice into any product."
+  },
+  {
+   "field": "pricing",
+   "url": "https://elevenlabs.io/pricing",
+   "quote": "Free $0 (10,000 credits); Starter $6 (30,000 credits); Creator $22 (121,000 credits, $11 for the first month); Pro $99 (600,000 credits); Scale $299 (1,800,000 credits, 3 seats); Business $990 (6,000,000 credits, 10 seats); Enterprise is custom."
+  },
+  {
+   "field": "pricing",
+   "url": "https://elevenlabs.io/pricing",
+   "quote": "$6 First month 83% off \n $1 per month"
+  },
+  {
+   "field": "pricing",
+   "url": "https://elevenlabs.io/pricing",
+   "quote": "Everything in Starter, plus \n Professional Voice Cloning"
+  },
+  {
+   "field": "pricing",
+   "url": "https://elevenlabs.io/pricing",
+   "quote": "Prices exclude all taxes, levies and duties."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://elevenlabs.io/voice-cloning",
+   "quote": "화면에 보이는 언어 이름: Korean, English"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

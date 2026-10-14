@@ -1,0 +1,139 @@
+{
+ "company": "OpenMined Foundation (비영리)",
+ "one_liner_ko": "데이터 과학자가 보낸 계산을 데이터 소유자가 자기 개인 데이터에서 실행해 주는 프라이버시 보존 분석 도구.",
+ "what_it_does_ko": "PySyft는 데이터 과학자가 계산을 제출하면 데이터 소유자가 자신의 비공개 데이터에서 실행해 주는 도구로, 조직이 이미 쓰는 Google Drive·Microsoft 365 같은 클라우드 저장소를 통해 동작한다. 비공개 데이터는 소유자의 컴퓨터를 떠나지 않고 승인된 결과만 공유된다. 개발 주체 OpenMined는 데이터를 옮기지 않고 사일로 간 보안 계산을 조율하는 연합 AI 네트워크 Syft를 만드는 비영리 커뮤니티다. 엔클레이브 안에서의 이중 맹검 LLM 평가 같은 튜토리얼도 제공한다.",
+ "key_features": [
+  "비공개 데이터는 소유자 기기에 두고 승인된 결과만 공유",
+  "전송 방식 독립(현재 Google Drive)",
+  "오프라인 우선, 재연결 시 동기화",
+  "협업자별 명시적 승인",
+  "샌드박스 Python 가상환경에서 격리 실행",
+  "모의 데이터/실제 데이터 분리 공유"
+ ],
+ "use_cases_ko": [
+  "외부 감사자가 모델·사용자 데이터를 보지 않고 AI 감사",
+  "비공개 모델을 비공개 벤치마크로 평가(이중 맹검)",
+  "원본을 모으지 않는 공동 유전체 연구"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "Apache 2.0",
+ "api": "있음",
+ "platforms": [
+  "CLI"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://openmined.org",
+   "quote": "© 2026 OpenMined Foundation"
+  },
+  {
+   "field": "company",
+   "url": "https://openmined.org",
+   "quote": "OpenMined is a 501(c)(3) non-profit foundation"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/OpenMined/PySyft",
+   "quote": "PySyft lets data scientists submit computations which are run by data owners on private data"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/OpenMined/PySyft",
+   "quote": "all through cloud storage their organizations already use (Google Drive, Microsoft 365, etc.). No new infrastructure required."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://openmined.org",
+   "quote": "The network coordinates secure, governed computation across silos"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/OpenMined/PySyft",
+   "quote": "Double blind LLM evals in enclaves"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/OpenMined/PySyft",
+   "quote": "Private data never leaves the data owner's machine; only approved results are shared"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/OpenMined/PySyft",
+   "quote": "Works over Google Drive today, extensible to any file-based transport"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/OpenMined/PySyft",
+   "quote": "Full functionality even when peers are offline; changes sync when connectivity resumes"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/OpenMined/PySyft",
+   "quote": "Data owners must approve each collaborator before any data flows"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/OpenMined/PySyft",
+   "quote": "Jobs run in sandboxed Python virtual environments with controlled access to private data"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/OpenMined/PySyft",
+   "quote": "Data scientists explore mock data, then submit jobs that run on the real thing"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://openmined.org",
+   "quote": "Enable third-party AI audits without exposing proprietary models or user data."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/OpenMined/PySyft",
+   "quote": "a researcher evaluates a private model on a private benchmark inside an enclave"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://openmined.org",
+   "quote": "Run collaborative genomic research without ever centralizing raw data."
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/OpenMined/PySyft",
+   "quote": "[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]"
+  },
+  {
+   "field": "api",
+   "url": "https://github.com/OpenMined/PySyft",
+   "quote": "[API Reference](https://github.com/OpenMined/PySyft/blob/dev/docs/API.md)"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/OpenMined/PySyft",
+   "quote": "`syft` is the sync engine (`import syft as sy`)"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://openmined.org",
+   "quote": "html lang: en"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://openmined.org",
+   "quote": "hreflang: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "Apache 2.0 오픈소스, 비영리 재단이 기부로 운영하며 유료 플랜 안내 없음",
+   "diff": "기존 분류의 '엔터프라이즈 유료 플랜'이 공식 페이지에서 확인되지 않음",
+   "url": "https://openmined.org"
+  }
+ ]
+}

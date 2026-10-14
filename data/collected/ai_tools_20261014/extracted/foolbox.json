@@ -1,0 +1,33 @@
+{
+ "company": null,
+ "one_liner_ko": "신경망을 속이는 적대적 예제를 만들어 머신러닝 모델의 견고성을 벤치마크하는 파이썬 도구.",
+ "what_it_does_ko": "Foolbox는 심층 신경망 같은 머신러닝 모델에 적대적 공격을 쉽게 실행할 수 있게 해 주는 파이썬 라이브러리다. Foolbox 3는 EagerPy 위에 처음부터 다시 작성되어 PyTorch·TensorFlow·JAX 모델에서 네이티브로 동작한다. 그래디언트 기반 화이트박스 공격과 결정·점수 기반 블랙박스 공격을 폭넓게 제공한다. 타입 주석으로 실행 전에 버그를 잡을 수 있다. pip로 설치한다.",
+ "key_features": [
+  "PyTorch·TensorFlow·JAX 네이티브 지원(EagerPy 기반)",
+  "그래디언트 기반 화이트박스 공격",
+  "결정·점수 기반 블랙박스 공격",
+  "배치 지원",
+  "타입 검사(타입 주석)",
+  "모델 zoo(모델·가중치 가져오기)"
+ ],
+ "use_cases_ko": [
+  "머신러닝 모델의 견고성을 적대적 공격으로 벤치마크하기"
+ ],
+ "pricing": {"free_tier": "불명", "plans": [], "pricing_url": null},
+ "open_source": null,
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "one_liner_ko", "url": "https://foolbox.readthedocs.io/en/stable/", "quote": "Foolbox is a Python toolbox to create adversarial examples that fool neural networks."},
+  {"field": "what_it_does_ko", "url": "https://github.com/bethgelab/foolbox", "quote": "is a **Python library** that lets you easily run adversarial attacks against machine learning models like deep neural networks."},
+  {"field": "key_features", "url": "https://github.com/bethgelab/foolbox", "quote": "- **Native Performance**: Foolbox 3 is built on top of EagerPy and runs natively in PyTorch, TensorFlow, and JAX and comes with real batch support."},
+  {"field": "key_features", "url": "https://foolbox.readthedocs.io/en/stable/", "quote": "both gradient-based white-box attacks as well as decision-based and score-based black-box attacks."},
+  {"field": "key_features", "url": "https://github.com/bethgelab/foolbox", "quote": "- **Type Checking**: Catch bugs before running your code thanks to extensive type annotations in Foolbox."},
+  {"field": "key_features", "url": "https://foolbox.readthedocs.io/en/stable/", "quote": "foolbox.zoo \n Get Model \n Fetch Weights"},
+  {"field": "use_cases_ko", "url": "https://github.com/bethgelab/foolbox", "quote": "Foolbox: Fast adversarial attacks to benchmark the robustness of machine learning models in PyTorch, TensorFlow, and JAX"},
+  {"field": "korean_support", "url": "https://foolbox.readthedocs.io/en/stable/", "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

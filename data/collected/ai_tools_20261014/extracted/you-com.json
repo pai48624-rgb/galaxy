@@ -1,0 +1,69 @@
+{
+ "company": "You.com",
+ "one_liner_ko": "AI 에이전트와 LLM을 위해 웹 검색·본문 추출·근거 있는 답변을 제공하는 웹 검색 API.",
+ "what_it_does_ko": "You.com은 AI 에이전트와 LLM에 실시간 웹 데이터를 공급하는 API 모음을 제공한다. Web Search API는 웹·뉴스 검색 결과를, Contents API는 주어진 URL을 깔끔한 Markdown·HTML로 돌려준다. Answer API는 질문 하나로 출처가 달린 답을 만들고, Research API는 여러 번 검색하고 전체 페이지를 읽어 교차 확인하는 다단계 리서치를 한다. 금융 질문에 맞춘 Finance Research API와 MCP 서버도 있다.",
+ "key_features": [
+  "실시간 웹·뉴스 검색 Web Search API (p50 약 0.4초)",
+  "URL을 Markdown·HTML로 바꿔 주는 Contents API",
+  "출처가 달린 답변을 한 번에 주는 Answer API",
+  "5단계 깊이 조절이 되는 다단계 Research API",
+  "금융·시장 분석용 Finance Research API",
+  "MCP 서버·에이전트 스킬",
+  "데이터 무보존(ZDR)·SOC 2·DPA 대응"
+ ],
+ "use_cases_ko": [
+  "RAG용으로 LLM에 실시간 웹 콘텐츠 공급",
+  "실적 요약·경쟁사 비교·10-K 분석 같은 금융 리서치",
+  "질문 하나로 출처 달린 답변 생성"
+ ],
+ "pricing": {
+  "free_tier": "있음 (MCP로 하루 100회 Web Search 무료, API 키·계정·카드 불필요)",
+  "plans": [
+   {"name": "Free", "price": 0, "currency": "USD", "period": "usage", "limits": "MCP로 하루 100회 Web Search", "page_lang": "en"},
+   {"name": "Pay as you go", "price": null, "currency": "USD", "period": "usage", "limits": "최소 금액·좌석·플랫폼 수수료 없음, 전체 엔드포인트", "page_lang": "en"},
+   {"name": "Enterprise", "price": null, "currency": "USD", "period": null, "limits": "맞춤 견적, 맞춤 QPS·SLA", "page_lang": "en"},
+   {"name": "Web Search API Standard", "price": 5, "currency": "USD", "period": "usage", "limits": "1천 호출당 $5", "page_lang": "en"},
+   {"name": "Contents API", "price": 1, "currency": "USD", "period": "usage", "limits": "1천 페이지당 $1", "page_lang": "en"},
+   {"name": "Answer API", "price": 5, "currency": "USD", "period": "usage", "limits": "1천 호출당 $5", "page_lang": "en"},
+   {"name": "Research Lite~Frontier", "price": 12, "currency": "USD", "period": "usage", "limits": "1천 호출당 $12(Lite)~$1,200(Frontier)", "page_lang": "en"},
+   {"name": "Finance Research Deep/Exhaustive", "price": 110, "currency": "USD", "period": "usage", "limits": "1천 호출당 $110(Deep)·$500(Exhaustive)", "page_lang": "en"}
+  ],
+  "pricing_url": "https://you.com/pricing"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["API", "웹"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://you.com", "quote": "© 2026 You.com / All rights reserved"},
+  {"field": "one_liner_ko", "url": "https://you.com", "quote": "Search the web, extract clean content, and generate grounded answers for your agents and LLMs"},
+  {"field": "what_it_does_ko", "url": "https://you.com/pricing", "quote": "Give it URLs you already have, get back clean Markdown or HTML per page."},
+  {"field": "what_it_does_ko", "url": "https://you.com/pricing", "quote": "One call turns a question into a cited answer with the sources it used."},
+  {"field": "what_it_does_ko", "url": "https://you.com/pricing", "quote": "It plans, searches repeatedly, reads full pages, and cross-references before answering."},
+  {"field": "key_features", "url": "https://you.com/pricing", "quote": "Real-time web and news results, optimized for programmatic access in AI applications."},
+  {"field": "key_features", "url": "https://you.com/pricing", "quote": "One research_effort parameter tunes cost and depth across five levels:"},
+  {"field": "key_features", "url": "https://you.com/pricing", "quote": "The Research engine tuned for financial questions, at the same price and latency."},
+  {"field": "key_features", "url": "https://you.com", "quote": "Web Search API Contents API Answer API Research API Finance Research API"},
+  {"field": "key_features", "url": "https://you.com", "quote": "MCP server"},
+  {"field": "key_features", "url": "https://you.com/pricing", "quote": "Zero Data Retention, SOC 2, DPA-ready"},
+  {"field": "key_features", "url": "https://you.com/pricing", "quote": "p50 ~0.4s"},
+  {"field": "use_cases_ko", "url": "https://you.com/pricing", "quote": "You keep full control of synthesis — ideal for RAG."},
+  {"field": "use_cases_ko", "url": "https://you.com/pricing", "quote": "Full 10-K analysis, due diligence, and cross-market research."},
+  {"field": "use_cases_ko", "url": "https://you.com/pricing", "quote": "Earnings summaries, competitive benchmarking, and multi-quarter trends."},
+  {"field": "pricing", "url": "https://you.com/pricing", "quote": "No API key, no account, no credit card"},
+  {"field": "pricing", "url": "https://you.com/pricing", "quote": "100 Web Search API queries/day via MCP"},
+  {"field": "pricing", "url": "https://you.com/pricing", "quote": "No minimums, no seats, no platform fee"},
+  {"field": "pricing", "url": "https://you.com/pricing", "quote": "Custom QPS and dedicated capacity"},
+  {"field": "pricing", "url": "https://you.com/pricing", "quote": "Simple factual lookups in a single pass. No structured output."},
+  {"field": "pricing", "url": "https://you.com/pricing", "quote": "$1,200\n /1k calls"},
+  {"field": "pricing", "url": "https://you.com/pricing", "quote": "$110\n /1k calls"},
+  {"field": "pricing", "url": "https://you.com/pricing", "quote": "$10 free credit = 2,000 searches"},
+  {"field": "api", "url": "https://you.com", "quote": "from youdotcom import You"},
+  {"field": "platforms", "url": "https://you.com/about", "quote": "Sign in to Chat Platform"},
+  {"field": "korean_support", "url": "https://you.com", "quote": "화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {"official": "MCP 무료(하루 100회) + 호출당 종량제(Pay as you go) + Enterprise 맞춤", "diff": "기존 '무료+유료 구독'과 달리 구독 요금제 없이 API 호출당 과금 구조", "url": "https://you.com/pricing"}
+ ]
+}

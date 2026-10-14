@@ -1,0 +1,140 @@
+{
+ "company": "SGLang Team (LMSYS)",
+ "one_liner_ko": "LLM과 멀티모달 모델을 위한 고성능 서빙(추론) 프레임워크.",
+ "what_it_does_ko": "SGLang은 대형언어모델·비전언어모델·디퓨전 모델을 위한 오픈소스 추론 프레임워크로, 에이전트 작업·대규모 서빙·RL 롤아웃에 최적화돼 있다. 단일 GPU부터 분산 클러스터까지 저지연·고처리량 서빙을 목표로 한다. pip나 Docker로 설치해 명령 하나로 서버를 띄우고 OpenAI 호환 엔드포인트로 호출한다. 비영리 오픈소스 조직 LMSYS 산하에서 운영되며 전 세계 40만 개 이상 GPU에서 쓰인다고 밝힌다. 공식 사이트의 가격 페이지는 404(없음)였다.",
+ "key_features": [
+  "Prefill/Decode 분리, 추측 디코딩, 각종 병렬화, 제로 오버헤드 스케줄러",
+  "RadixAttention·프리픽스 캐싱",
+  "OpenAI 호환 엔드포인트",
+  "NVIDIA·AMD GPU, TPU, Ascend NPU, Intel, Apple Silicon 등 폭넓은 하드웨어 지원",
+  "DeepSeek·Qwen·Llama 등 다양한 오픈 모델 지원",
+  "SGLang Diffusion 내장(이미지·비디오 생성)",
+  "빔 서치 지원"
+ ],
+ "use_cases_ko": [
+  "대규모 프로덕션 LLM 서빙",
+  "강화학습(RL) 롤아웃·에이전트 워크로드"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "Apache 2.0",
+ "api": "있음",
+ "platforms": [
+  "CLI",
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.sglang.io/",
+   "quote": "© 2026 SGLang Team. All rights reserved."
+  },
+  {
+   "field": "company",
+   "url": "https://docs.sglang.io/",
+   "quote": "It is hosted under the non-profit open-source organization LMSYS ."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.sglang.io/",
+   "quote": "High-Performance Serving Framework for LLMs and Multimodal Models"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/sgl-project/sglang",
+   "quote": "SGLang is an open-source inference framework for large language, vision-language, and diffusion models, optimized for agentic workloads, large-scale serving, and RL rollouts."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.sglang.io/",
+   "quote": "Use standard OpenAI-compatible endpoints to interact with your model."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.sglang.io/",
+   "quote": "SGLang powers large-scale production deployments, generating trillions of tokens each day across more than 400,000 GPUs worldwide."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.sglang.io/pricing",
+   "quote": "404\n Page Not Found\n Sorry, the page you are looking for doesn't exist."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.sglang.io/",
+   "quote": "Incorporates disaggregated prefill/decode, speculative decoding, parallelisms, a zero-overhead scheduler, and optimized GPU kernels."
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.sglang.io/",
+   "quote": "Designed for low-latency, high-throughput inference with RadixAttention, prefix caching, and multi-GPU parallelism."
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.sglang.io/",
+   "quote": "including NVIDIA, AMD, Intel Xeon, Google TPU, Ascend NPU, and Moore Threads MUSA accelerators."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/sgl-project/sglang",
+   "quote": "SGLang supports a wide range of GPUs, TPUs, NPUs, CPUs, and Apple Silicon platforms."
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.sglang.io/",
+   "quote": "Broad support for Llama, Qwen, DeepSeek, and more."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/sgl-project/sglang",
+   "quote": "is its built-in image and video generation engine"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.sglang.io/",
+   "quote": "SGLang can now do beam search."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.sglang.io/",
+   "quote": "Built for large-scale deployments, delivering reliable, low-latency, high-throughput serving from a single GPU to distributed clusters."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://docs.sglang.io/",
+   "quote": "integrated with major RL frameworks"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/sgl-project/sglang",
+   "quote": "<a href=\"LICENSE\"><img src=\"https://img.shields.io/badge/License-Apache%202.0-green?style=flat&amp;labelColor=555555\" alt=\"License: Apache 2.0\"></a>"
+  },
+  {
+   "field": "api",
+   "url": "https://www.sglang.io/",
+   "quote": "Use standard OpenAI-compatible endpoints to interact with your model."
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/sgl-project/sglang",
+   "quote": "docker pull lmsysorg/sglang:latest"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.sglang.io/",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "Apache 2.0 오픈소스 추론 프레임워크(pip·Docker로 직접 설치), 가격 페이지는 404로 유료 요금제 없음",
+   "diff": "기존 분류는 '사용량 기반 종량제(클라우드/GPU)'이나 공식 페이지는 무료 오픈소스 소프트웨어로만 소개",
+   "url": "https://github.com/sgl-project/sglang"
+  }
+ ],
+ "plan_change": []
+}

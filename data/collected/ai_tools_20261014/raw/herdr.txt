@@ -1,0 +1,471 @@
+=== [home] https://herdr.dev (lang=en)
+Herdr: the runtime coding agents run on 
+ herdr 
+ Docs 
+ Plugins 
+ Blog 
+ Compare 
+ 43,762 
+ ink 
+ paper 
+ Install 
+ Docs 
+ Plugins 
+ Blog 
+ Compare 
+ @herdrdev 
+ Discord 
+ Ground 
+ ink 
+ paper 
+ We raised $6M. We’re hiring ↗ 
+ the agent runtime
+ Run them anywhere. Leave them running.
+ Herdr is where your coding agents live. However many you run, across however many projects, each in its own terminal. Walk away and they keep working. Come back from any machine and they're where you left them. 
+ $ curl -fsSL https://herdr.dev/install.sh | sh 
+ copy 
+ macOS · Linux · Windows · Apache 2.0  —  windows, homebrew, nix and manual install → 
+ New Connecting the machines → 
+ 43,762 
+ github stars 
+ 1,483,305 
+ installs to date
+ 1,696 
+ community plugins
+ 22 
+ agent CLIs detected
+ the herd, from a client that isn't there 
+ click an agent 
+ spaces
+ herdr master 
+ web-dashboard feat/usage-charts 
+ data-pipeline backfill/events-v2 
+ agents grouped 
+ ● herdr working · claude 
+ ○ explore idle · opencode 
+ ◉ web-dashboard blocked · claude 
+ ● data-pipeline done · codex 
+ opencode herdr + 
+ ▐▛███▜▌
+▝▜█████▛▘
+ ▘▘ ▝▝ 
+ Claude Code v2.1.198 
+ Fable 5 with high effort · Claude Max
+ ~/Projects/herdr/website
+ ❯ make the herdr.dev hero mock look exactly like real claude code
+ ● Ha. I read the real pane over the socket — the mock was on v2.1.168, Claude Code is v2.1.198 now. Missing the logo block and the whole rate-limit row.
+ ● Plan:
+   · index.html — swap ✻ for the real ▐▛███▜▌ mark, bump the version
+   · css/style.css — coral bypass line, add the 5h / Week bars
+ ❯ perfect. and make the dialogue about this, obviously
+ ⠋ Baking… ( 13m 36s · esc to interrupt) 
+ ❯ 
+    ~/Projects/herdr/website > master * ↑1 > ctx ──────── 3% 31k/1M 
+    ⏵⏵ bypass permissions on (shift+tab to cycle) 
+ ~/Projects/herdr master 
+ ❯ bun run dev
+ $ node scripts/prepare-docs.mjs && astro dev
+ 02:10:44 [types] Generated 0ms
+ 02:10:44 [content] Synced content
+ astro v5.18.1 ready in 668 ms
+ ┃ Local   http://localhost:4321/ 
+ Network  use --host to expose
+ 02:10:44 watching for file changes... 
+ + Thought: 468ms
+ → Read src/main.rs
+ + Thought: 292ms
+ This is src/main.rs — the entry point for herdr . Here's what it does:
+ 1. Arg parsing — session::configure_from_args , then remote args for the SSH bridge.
+ 2. Subcommand dispatch — server , client , update — each returns early.
+ 3. Session mode — auto_detect_launch() connects to a running server or spawns one.
+   Build · MiMo V2.5 Free · 16.6s
+ Build · MiMo V2.5 Free OpenCode Zen
+ 25.2K (13%)  ctrl+p commands 
+ claude dev server + 
+ ▐▛███▜▌
+▝▜█████▛▘
+ ▘▘ ▝▝ 
+ Claude Code v2.1.198 
+ Fable 5 with high effort · Claude Max
+ ~/Projects/web-dashboard
+ ❯ finish the usage chart and ship it to staging
+ ● Wrote src/components/UsageChart.tsx — stacked area, empty state, and the tooltip you asked for.
+ ● Typecheck and build are clean, 41.2 kB gzipped. Ready to push to staging.
+ Bash command 
+ bunx wrangler deploy --env staging
+ Deploy the dashboard to the staging environment
+ Do you want to proceed?
+ ❯ 1. Yes
+   2. No, and tell Claude what to do differently (esc)
+ ~/Projects/web-dashboard feat/usage-charts 
+ ❯ bun run dev
+ VITE v6.3.1 ready in 412 ms
+ Local http://localhost:5173/ 
+ 02:30:58 hmr update /src/components/UsageChart.tsx
+ 02:31:04 hmr update /src/styles/chart.css
+ 02:31:09 page reload src/routes/usage.tsx
+ 02:31:15 WARN chunk "charts" is 512 kB after minification
+ 02:31:18 hmr update /src/components/UsageChart.tsx
+ 02:31:24 hmr update /src/components/Tooltip.tsx
+ 02:31:33 ✓ built in 1.94s
+ codex backfill + 
+ • Explored 
+   └ Read jobs/backfill_events.py
+ • Ran 
+   └ uv run pytest tests/test_backfill.py
+   └ 14 passed · 0 failed · 41.3s
+ • Checkpointing works, so the job resumes from the last committed offset instead of restarting. The backfill in the next tab has been running for six hours and is unaffected by your laptop.
+ • Next I can add the p95 lag alert to the nightly run. Want that?
+ › 
+ gpt-5.5 medium · ~/data-pipeline · backfill/events-v2 · Context 6% used
+ ~/data-pipeline backfill/events-v2 
+ ❯ uv run jobs/backfill_events.py --from 2024-01-01
+ connected · batch size 5,000 · checkpoint every 60s
+ 02:28:41 batch 4,102 ok 20,510,000 rows 
+ 02:29:03 batch 4,103 ok checkpoint written 
+ 02:29:25 batch 4,104 ok 
+ 02:30:07 batch 4,105 ok 
+ 02:30:18 WARN upstream throttled, retrying in 2s
+ 02:30:42 batch 4,106 ok checkpoint written 
+ 02:31:09 elapsed 6h 12m · 68% complete · eta 2h 54m 
+ The whole herd in one terminal. Click the sidebar, it's a real layout.
+ Three workspaces, four agents, two of them mid-task. Nobody is attached to any of it right now. 
+ 01 
+ Always running.  → 
+ Herdr isn't an app you keep open. It's a server running in the background, and the terminals live inside it. Close the lid or drop the network and the agents keep working; restart the machine and Herdr brings the layout back and resumes their sessions.
+ herdr-server up 
+ 3 workspaces · 4 agents · nobody attached
+ 02 
+ You never hunt for the stuck one.  → 
+ Herdr reads every pane and marks each agent working, blocked or idle. When one stops and needs an answer it says so, so you don't go pane by pane looking for whoever is waiting on you.
+ web-dashboard blocked 
+ herdr working 
+ data-pipeline idle 
+ 03 
+ Agent-native.  → 
+ The CLI and the socket API are the same surface agents drive. They split panes, start each other, prompt each other, and wait until another agent is genuinely blocked instead of firing keystrokes and hoping.
+ $ 
+ 04 
+ Runs what you already run.  → 
+ Claude Code, Codex, Cursor, opencode, Grok and the rest. Herdr doesn't wrap them or replace them, it just owns their terminals — one binary for macOS, Linux, and Windows.
+ Claude Code 
+ Codex 
+ Pi 
+ opencode 
+ Cursor 
+ Grok 
+ Copilot 
+ Hermes 
+ 22 agents detected out of the box
+ 05 
+ All your machines. One Herdr.  → 
+ Your laptop, the desktop upstairs, a server you rent. Add them over SSH and their workspaces and agents sit alongside your local ones. Switch machines without opening another client. Disconnect and they keep working.
+ $ herdr machine add workbox 
+ local connected 
+ workbox connected 
+ Herdr Cloud coming soon 
+ Same machines. No SSH setup.
+ Connect your own machines to Herdr without configuring SSH. We're building it next.
+ Join the waitlist → 
+ Give them somewhere to live.
+ One command, and nothing else about your setup changes — the agent CLIs you already run keep working exactly as they did, except now they don't stop when you do.
+ $ curl -fsSL https://herdr.dev/install.sh | sh 
+ copy 
+ Windows: irm https://herdr.dev/install.ps1 | iex  —  endpoint-protected install · all install methods → 
+ docs 
+ plugins 
+ blog 
+ compare 
+ built in the terminal · © 2026 Herdr, Inc. 
+ v0.9.4 · Apache 2.0 
+ [email protected]
+
+=== [about] https://herdr.dev/docs/ (lang=en)
+Herdr documentation | herdr 
+ Skip to content herdr Docs Plugins Blog 
+ Documentation version Latest 0.9.4 Preview 0.9.3 0.9.2 0.9.1 0.9.0 0.8.2 0.8.0 0.7.5 0.7.4 0.7.3 0.7.2 0.7.1 0.7.0 0.6.10 0.6.9 0.6.8 0.6.7 0.6.6 0.6.5 0.6.4 0.6.3 0.6.2 0.6.1 0.6.0 0.5.12 0.5.11 Search Ctrl K Cancel 
+ GitHub 
+ Select theme Dark Light Auto Select language English 日本語 简体中文 
+ Herdr documentation
+ Install, learn, and configure Herdr. Start on the path that matches you — no multiplexer experience required.
+ Install Herdr Quick start 
+ Pick your path
+ Section titled “Pick your path” 
+ New to terminal multiplexers? 
+ You don’t need to learn shortcuts to start. Herdr is mouse-first: click panes, drag borders, split and switch from right-click menus.
+ Quick start → 
+ Coming from tmux or zellij? 
+ You already know the model. The prefix is ctrl+b , panes persist, detach and reattach work the way you expect.
+ Concepts → · Keybindings → 
+ Or let your agent introduce you
+ Section titled “Or let your agent introduce you” 
+ If you already run an AI coding agent, let it handle the onboarding. Paste this prompt:
+ Help me understand and set up Herdr. Read https://herdr.dev/agent-guide.md first, then walk me through it step by step. 
+ The guide covers Herdr’s concepts, setup, configuration, and common fixes, so your agent can answer from the docs instead of improvising.
+ Core guides
+ Section titled “Core guides” 
+ Agents 
+ See supported agents, detection behavior, integrations, custom labels, and direct attach.
+ Understand agents → 
+ Connecting machines 
+ Keep Local and saved SSH machines in one window, with a combined agent list and independent reconnects.
+ Connect your machines → 
+ Session state 
+ Understand detach, restart restore, pane history replay, native agent resume, and live handoff.
+ Compare state paths → 
+ Configuration 
+ Configure keybindings, themes, sidebar behavior, notifications, scrollback, and advanced options.
+ Configure Herdr → 
+ API 
+ Control Herdr from scripts, tools, and agents through the CLI and local socket API.
+ Read the API guide → 
+ Plugins 
+ Author local executable workflow plugins with manifest actions and event hooks.
+ Write a plugin → 
+ Marketplace 
+ Share plugins from GitHub today and tag your repo to be listed when the marketplace launches.
+ Publish a plugin → 
+ Edit page 
+ Next Install
+
+=== [pricing] https://herdr.dev/pricing (lang=en)
+Herdr: the runtime coding agents run on 
+ herdr 
+ Docs 
+ Plugins 
+ Blog 
+ Compare 
+ 43,762 
+ ink 
+ paper 
+ Install 
+ Docs 
+ Plugins 
+ Blog 
+ Compare 
+ @herdrdev 
+ Discord 
+ Ground 
+ ink 
+ paper 
+ We raised $6M. We’re hiring ↗ 
+ the agent runtime
+ Run them anywhere. Leave them running.
+ Herdr is where your coding agents live. However many you run, across however many projects, each in its own terminal. Walk away and they keep working. Come back from any machine and they're where you left them. 
+ $ curl -fsSL https://herdr.dev/install.sh | sh 
+ copy 
+ macOS · Linux · Windows · Apache 2.0  —  windows, homebrew, nix and manual install → 
+ New Connecting the machines → 
+ 43,762 
+ github stars 
+ 1,483,305 
+ installs to date
+ 1,696 
+ community plugins
+ 22 
+ agent CLIs detected
+ the herd, from a client that isn't there 
+ click an agent 
+ spaces
+ herdr master 
+ web-dashboard feat/usage-charts 
+ data-pipeline backfill/events-v2 
+ agents grouped 
+ ● herdr working · claude 
+ ○ explore idle · opencode 
+ ◉ web-dashboard blocked · claude 
+ ● data-pipeline done · codex 
+ opencode herdr + 
+ ▐▛███▜▌
+▝▜█████▛▘
+ ▘▘ ▝▝ 
+ Claude Code v2.1.198 
+ Fable 5 with high effort · Claude Max
+ ~/Projects/herdr/website
+ ❯ make the herdr.dev hero mock look exactly like real claude code
+ ● Ha. I read the real pane over the socket — the mock was on v2.1.168, Claude Code is v2.1.198 now. Missing the logo block and the whole rate-limit row.
+ ● Plan:
+   · index.html — swap ✻ for the real ▐▛███▜▌ mark, bump the version
+   · css/style.css — coral bypass line, add the 5h / Week bars
+ ❯ perfect. and make the dialogue about this, obviously
+ ⠋ Baking… ( 13m 36s · esc to interrupt) 
+ ❯ 
+    ~/Projects/herdr/website > master * ↑1 > ctx ──────── 3% 31k/1M 
+    ⏵⏵ bypass permissions on (shift+tab to cycle) 
+ ~/Projects/herdr master 
+ ❯ bun run dev
+ $ node scripts/prepare-docs.mjs && astro dev
+ 02:10:44 [types] Generated 0ms
+ 02:10:44 [content] Synced content
+ astro v5.18.1 ready in 668 ms
+ ┃ Local   http://localhost:4321/ 
+ Network  use --host to expose
+ 02:10:44 watching for file changes... 
+ + Thought: 468ms
+ → Read src/main.rs
+ + Thought: 292ms
+ This is src/main.rs — the entry point for herdr . Here's what it does:
+ 1. Arg parsing — session::configure_from_args , then remote args for the SSH bridge.
+ 2. Subcommand dispatch — server , client , update — each returns early.
+ 3. Session mode — auto_detect_launch() connects to a running server or spawns one.
+   Build · MiMo V2.5 Free · 16.6s
+ Build · MiMo V2.5 Free OpenCode Zen
+ 25.2K (13%)  ctrl+p commands 
+ claude dev server + 
+ ▐▛███▜▌
+▝▜█████▛▘
+ ▘▘ ▝▝ 
+ Claude Code v2.1.198 
+ Fable 5 with high effort · Claude Max
+ ~/Projects/web-dashboard
+ ❯ finish the usage chart and ship it to staging
+ ● Wrote src/components/UsageChart.tsx — stacked area, empty state, and the tooltip you asked for.
+ ● Typecheck and build are clean, 41.2 kB gzipped. Ready to push to staging.
+ Bash command 
+ bunx wrangler deploy --env staging
+ Deploy the dashboard to the staging environment
+ Do you want to proceed?
+ ❯ 1. Yes
+   2. No, and tell Claude what to do differently (esc)
+ ~/Projects/web-dashboard feat/usage-charts 
+ ❯ bun run dev
+ VITE v6.3.1 ready in 412 ms
+ Local http://localhost:5173/ 
+ 02:30:58 hmr update /src/components/UsageChart.tsx
+ 02:31:04 hmr update /src/styles/chart.css
+ 02:31:09 page reload src/routes/usage.tsx
+ 02:31:15 WARN chunk "charts" is 512 kB after minification
+ 02:31:18 hmr update /src/components/UsageChart.tsx
+ 02:31:24 hmr update /src/components/Tooltip.tsx
+ 02:31:33 ✓ built in 1.94s
+ codex backfill + 
+ • Explored 
+   └ Read jobs/backfill_events.py
+ • Ran 
+   └ uv run pytest tests/test_backfill.py
+   └ 14 passed · 0 failed · 41.3s
+ • Checkpointing works, so the job resumes from the last committed offset instead of restarting. The backfill in the next tab has been running for six hours and is unaffected by your laptop.
+ • Next I can add the p95 lag alert to the nightly run. Want that?
+ › 
+ gpt-5.5 medium · ~/data-pipeline · backfill/events-v2 · Context 6% used
+ ~/data-pipeline backfill/events-v2 
+ ❯ uv run jobs/backfill_events.py --from 2024-01-01
+ connected · batch size 5,000 · checkpoint every 60s
+ 02:28:41 batch 4,102 ok 20,510,000 rows 
+ 02:29:03 batch 4,103 ok checkpoint written 
+ 02:29:25 batch 4,104 ok 
+ 02:30:07 batch 4,105 ok 
+ 02:30:18 WARN upstream throttled, retrying in 2s
+ 02:30:42 batch 4,106 ok checkpoint written 
+ 02:31:09 elapsed 6h 12m · 68% complete · eta 2h 54m 
+ The whole herd in one terminal. Click the sidebar, it's a real layout.
+ Three workspaces, four agents, two of them mid-task. Nobody is attached to any of it right now. 
+ 01 
+ Always running.  → 
+ Herdr isn't an app you keep open. It's a server running in the background, and the terminals live inside it. Close the lid or drop the network and the agents keep working; restart the machine and Herdr brings the layout back and resumes their sessions.
+ herdr-server up 
+ 3 workspaces · 4 agents · nobody attached
+ 02 
+ You never hunt for the stuck one.  → 
+ Herdr reads every pane and marks each agent working, blocked or idle. When one stops and needs an answer it says so, so you don't go pane by pane looking for whoever is waiting on you.
+ web-dashboard blocked 
+ herdr working 
+ data-pipeline idle 
+ 03 
+ Agent-native.  → 
+ The CLI and the socket API are the same surface agents drive. They split panes, start each other, prompt each other, and wait until another agent is genuinely blocked instead of firing keystrokes and hoping.
+ $ 
+ 04 
+ Runs what you already run.  → 
+ Claude Code, Codex, Cursor, opencode, Grok and the rest. Herdr doesn't wrap them or replace them, it just owns their terminals — one binary for macOS, Linux, and Windows.
+ Claude Code 
+ Codex 
+ Pi 
+ opencode 
+ Cursor 
+ Grok 
+ Copilot 
+ Hermes 
+ 22 agents detected out of the box
+ 05 
+ All your machines. One Herdr.  → 
+ Your laptop, the desktop upstairs, a server you rent. Add them over SSH and their workspaces and agents sit alongside your local ones. Switch machines without opening another client. Disconnect and they keep working.
+ $ herdr machine add workbox 
+ local connected 
+ workbox connected 
+ Herdr Cloud coming soon 
+ Same machines. No SSH setup.
+ Connect your own machines to Herdr without configuring SSH. We're building it next.
+ Join the waitlist → 
+ Give them somewhere to live.
+ One command, and nothing else about your setup changes — the agent CLIs you already run keep working exactly as they did, except now they don't stop when you do.
+ $ curl -fsSL https://herdr.dev/install.sh | sh 
+ copy 
+ Windows: irm https://herdr.dev/install.p
+
+=== [meta] https://herdr.dev
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/herdrdev/herdr
+# herdr
+
+
+<p align="center">
+  <img src="assets/logo.png" alt="herdr" width="100" />
+</p>
+
+<p align="center">
+  <a href="https://herdr.dev">herdr.dev</a> · <a href="#install">install</a> · <a href="https://herdr.dev/docs/quick-start/">quick start</a> · <a href="https://herdr.dev/docs/">docs</a>
+</p>
+
+<p align="center">
+  English · <a href="README.zh-CN.md">简体中文</a>
+</p>
+
+<p align="center">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-666666?labelColor=333333" alt="Apache 2.0 license" /></a>
+  <a href="https://github.com/herdrdev/herdr/releases"><img src="https://img.shields.io/github/downloads/herdrdev/herdr/total?labelColor=333333&color=666666" alt="total GitHub release downloads" /></a>
+  <a href="https://github.com/herdrdev/herdr/stargazers"><img src="https://img.shields.io/github/stars/herdrdev/herdr?labelColor=333333&color=666666&logo=github" alt="GitHub stars" /></a>
+  <a href="https://github.com/herdrdev/herdr/releases/latest"><img src="https://img.shields.io/github/v/release/herdrdev/herdr?label=release&labelColor=333333&color=666666" alt="latest stable release" /></a>
+  <a href="https://formulae.brew.sh/formula/herdr"><img src="https://img.shields.io/homebrew/v/herdr?label=homebrew&labelColor=333333&color=666666" alt="Homebrew version" /></a>
+  <a href="https://x.com/herdrdev"><img src="https://img.shields.io/badge/follow-%40herdrdev-000000?logo=x&logoColor=white" alt="follow @herdrdev on X" /></a>
+</p>
+
+---
+
+https://github.com/user-attachments/assets/043ec09f-4bdd-41d5-aee0-8fda6b83e267
+
+**the runtime your coding agents live on.**
+
+- **detach without stopping work** — herdr keeps terminals running in a background server when you close the client or lose your SSH connection. after a server or machine restart, herdr restores the saved layout and can resume supported agent sessions; the original processes do not survive. [session state →](https://herdr.dev/docs/session-state/)
+- **several machines, one window** — keep local work and saved ssh machines together, with a combined agent list and independent reconnects. [remote machines →](https://herdr.dev/docs/connecting-machines/)
+- **never hunt for the stuck one** — every pane is marked working, blocked, or idle. when an agent stops and needs an answer, herdr says so.
+- **agent-native** — agents drive herdr through the cli and socket api: they can spawn panes, prompt each other, and wait until another agent is genuinely blocked. [agent skill →](https://herdr.dev/docs/agent-skill/)
+- **runs what you already run** — claude code, codex, cursor, opencode, grok and the rest. herdr doesn't wrap or replace them; it owns their terminals. building an agent? [add herdr support →](https://herdr.dev/docs/add-herdr-support/)
+- **keyboard and mouse, both first-class** — tmux-style prefix keys *and* click, drag, split. pick per moment, not per tool.
+- **plugins** — extend panes and workflows. [browse the marketplace →](https://herdr.dev/plugins/)
+- **one rust binary, no electron** — runs in whatever terminal you already use.
+
+---
+
+## install
+
+```bash
+curl -fsSL https://herdr.dev/install.sh | sh
+```
+
+or `brew install herdr` · `mise use -g herdr` · windows: `powershell -ExecutionPolicy Bypass -c "irm https://herdr.dev/install.ps1 | iex"` · [endpoint-protected Windows](https://herdr.dev/docs/windows-beta/) · [binaries](https://github.com/herdrdev/herdr/releases)
+
+then start it where the work lives:
+
+```bash
+herdr
+```
+
+run your agents, split panes, walk away. `ctrl+b q` detaches, `herdr` reattaches. [quick start →](https://herdr.dev/docs/quick-start/)
+
+## docs
+
+everything lives at [herdr.dev/docs](https://herdr.dev/docs/): [quick start](https://herdr.dev/docs/quick-start/) · [concepts](https://herdr.dev/docs/concepts/) · [supported agents](https://herdr.dev/docs/agents/) · [keyboard](https://herdr.dev/docs/keyboard/) · [configuration](https://herdr.dev/docs/configuration/) · [session state](https://herdr.dev/docs/session-state/) · [connecting machines](https://herdr.dev/docs/connecting-machines/) · [remote](https://herdr.dev/docs/persistence-remote/) · [integrations](https://herdr.dev/docs/integrations/) · [add herdr support to your agent](https://herd

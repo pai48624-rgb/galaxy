@@ -1,0 +1,125 @@
+{
+ "company": null,
+ "one_liner_ko": "여러 AI 코딩 에이전트를 한 화면에서 배치·감시·디버그하는 무료 오픈소스 데스크톱 앱.",
+ "what_it_does_ko": "Dorothy는 Claude Code·Codex·Gemini·Grok과 로컬 에이전트를 지휘하는 데스크톱 앱이다. 여러 프로젝트에서 10개 이상의 에이전트를 동시에 돌리고, 슈퍼 에이전트(오케스트레이터)가 MCP 도구로 다른 에이전트에 일을 나눠 준다. 칸반 보드로 작업을 관리하며 에이전트가 스킬에 따라 작업을 가져간다. GitHub·JIRA·Telegram·Slack을 연결해 자동화하고 cron 예약 작업을 돌린다.",
+ "key_features": [
+  "슈퍼 에이전트(오케스트레이터)가 다른 에이전트에 작업 위임",
+  "여러 에이전트를 나란히 돌리는 멀티 에이전트 터미널",
+  "드래그앤드롭 칸반 보드·스킬 기반 자동 배정",
+  "3D 에이전트 월드(애니메이션 사무실)",
+  "skills.sh 스킬 원클릭 설치",
+  "GitHub·JIRA·Telegram·Slack 자동화",
+  "Claude Code 사용량(토큰·비용) 추적",
+  "cron 예약 작업"
+ ],
+ "use_cases_ko": [
+  "GitHub PR·이슈 등 외부 이벤트에 에이전트를 자동으로 붙이기",
+  "Telegram·Slack으로 원격에서 에이전트 관리"
+ ],
+ "pricing": {
+  "free_tier": "있음 (무료, 계정 불필요)",
+  "plans": [],
+  "pricing_url": "https://dorothyai.app"
+ },
+ "open_source": "오픈소스(라이선스 이름은 받은 본문에 없음)",
+ "api": "불명",
+ "platforms": [
+  "맥"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/Charlie85270/Dorothy",
+   "quote": "Deploy, monitor, and debug — all from one delightful interface. Free and open source."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/Charlie85270/Dorothy",
+   "quote": "A beautiful desktop app to orchestrate your [Claude Code](https://claude.ai/code) ,[Codex](https://chatgpt.com/codex), [Gemini](https://geminicli.com/), [Grok](https://x.ai/cli) and local agents."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/Charlie85270/Dorothy",
+   "quote": "**Run 10+ agents simultaneously** across different projects and codebases"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/Charlie85270/Dorothy",
+   "quote": "**Delegate and coordinate** — a Super Agent orchestrates other agents via MCP tools"
+  },
+  {
+   "field": "key_features",
+   "url": "https://dorothyai.app",
+   "quote": "An orchestrator that coordinates all your agents. Give it a task and watch it delegate."
+  },
+  {
+   "field": "key_features",
+   "url": "https://dorothyai.app",
+   "quote": "Run multiple AI agents side-by-side with full interactive terminal access."
+  },
+  {
+   "field": "key_features",
+   "url": "https://dorothyai.app",
+   "quote": "Visual task management with drag-and-drop. Agents auto-pick work by skill."
+  },
+  {
+   "field": "key_features",
+   "url": "https://dorothyai.app",
+   "quote": "Watch your agents in a fun animated 3D office."
+  },
+  {
+   "field": "key_features",
+   "url": "https://dorothyai.app",
+   "quote": "Install community skills from skills.sh with one click."
+  },
+  {
+   "field": "key_features",
+   "url": "https://dorothyai.app",
+   "quote": "Connect GitHub, JIRA, Telegram, and Slack. Agents process items automatically."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/Charlie85270/Dorothy",
+   "quote": "Monitor Claude Code API usage across all agents — token consumption, conversation history, cost tracking, and activity patterns."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/Charlie85270/Dorothy",
+   "quote": "**Schedule recurring work** — cron-based tasks that run autonomously"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/Charlie85270/Dorothy",
+   "quote": "**Automate agent workflows** — trigger agents on GitHub PRs, issues, and external events"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/Charlie85270/Dorothy",
+   "quote": "**Control from anywhere** — Telegram and Slack integration for remote management"
+  },
+  {
+   "field": "pricing",
+   "url": "https://dorothyai.app",
+   "quote": "Free forever Open source No account"
+  },
+  {
+   "field": "open_source",
+   "url": "https://dorothyai.app",
+   "quote": "Free, open source, no account needed."
+  },
+  {
+   "field": "platforms",
+   "url": "https://dorothyai.app",
+   "quote": "Download for macOS"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://dorothyai.app",
+   "quote": "hreflang: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [],
+ "note": "공식 페이지는 'Free forever'만 표기, 유료(프리미엄) 요금제 언급 없음 — 기존 분류와 차이 사람 확인 권장."
+}

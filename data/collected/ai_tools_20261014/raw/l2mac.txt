@@ -1,0 +1,89 @@
+=== [home] https://samholt.github.io/L2MAC/ (lang=en-US)
+L2MAC 
+ Skip to content L2MAC 
+ Search K 
+ Main Navigation Docs Mission Gallery 
+ Appearance
+ L2MAC 
+ The LLM Automatic Computer Framework
+ A collaborative LLM-based framework for complex tasks, bypassing the fixed context limit of LLMs
+ Get Started 
+ Gallery of Examples 
+ Multi-Agent Collaboration
+ Harness multiple LLM agents operating in tandem to perform complex tasks, bypassing the fixed context limits of individual models.
+ Extensive Output Generation
+ Generate extensive outputs like complete codebases or entire books, all from a single prompt, powered by our innovative LLM Automatic Computer.
+ Advanced Memory Handling
+ Utilize advanced memory systems that allow agents to store, recall, and utilize past interactions and outputs, enhancing consistency and depth in task handling.
+ Self-Generating Prompt Programs
+ Automatically generate and execute sequential prompt programs that guide LLM agents through complex tasks, eliminating the need for manual intervention.
+ Tool Integration and Error Handling
+ Incorporate external tools for syntax checking and test running of code, ensuring high-quality and error-free outputs.
+ Customizable Task Execution
+ Adapt the framework to various domains by customizing the task execution steps, ensuring versatility and broad applicability.
+ Released under the MIT License.
+ Copyright © 2023-present Sam Holt
+
+=== [meta] https://samholt.github.io/L2MAC/
+html lang: en-US
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/samholt/L2MAC
+
+# L2MAC: The Large Language Model Automatic Computer Framework
+
+<p align="center">
+<a href=""><img src="docs/public/l2mac-icon-white.png" alt="L2MAC logo: The first practical LLM-based general-purpose stored-program automatic computer (von Neumann architecture) framework, an LLMbased multi-agent system, for extensive and consistent output generation." width="150px"></a>
+</p>
+
+<p align="center">
+<b>Pioneering the first practical LLM-based general-purpose stored-program automatic computer (von Neumann architecture) framework in an LLM-based multi-agent system, for solving complex tasks through generating extensive and consistent outputs, unbounded by the LLMs fixed context window constraint.</b>
+</p>
+
+<p align="center">
+<a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT"></a>
+<a href="docs/guide/roadmap.md"><img src="https://img.shields.io/badge/ROADMAP-blue" alt="roadmap"></a>
+<a href="https://discord.gg/z27CxnwdhY"><img src="https://dcbadge.vercel.app/api/server/z27CxnwdhY?style=flat" alt="Discord Follow"></a>
+</p>
+
+## News
+🌟 May. 7 - 11th, 2024: We will present L2MAC at the International Conference on Learning Representations (ICLR) 2024. Come meet us at ICLR in Vienna Austria! Please reach out to me at sih31 (at) cam.ac.uk so we can meet, virtual meetings accepted as well!
+
+🌟 April. 23, 2024: L2MAC is fully open-sourced with the initial version released.
+
+🚀 Jan. 16, 2024: The paper [L2MAC: Large Language Model Automatic Computer for Extensive Code Generation
+](https://arxiv.org/abs/2310.02003) is accepted for presentation at ICLR 2024!
+
+## LLM-Automatic Computer (L2MAC) framework excels at solving large complex tasks, such as being state-of-the-art for generating large codebases, or it can even write entire books, all of which bypass the traditional constraints of the LLMs fixed context window constraint.
+
+* LLM-Automatic Computer can take a **one line input prompt** and generate an extensive and large output, for example generating an entire complex codebase.
+  * Internally, the LLM-Automatic Computer uses a **prompt-program** which is a series of prompts, each providing a instruction step to execute. Unless explicitly given, the **prompt-program** is self generated (bootstrapped) and executed. Specifically each instruction step of the **prompt-program** is loaded into a new LLM agent to execute, whose context is managed by a control unit and is provided with tools so that it can read and write to a persistent memory, here a file store, which contains the final and intermediate outputs. This enables it to automatically execute general-purpose prompt programs to solve complex tasks, that require extensive cohesive outputs, where the output is unbounded and not constrained by the LLMs underlying context window constraint.
+  
+![BlockDiagram](docs/public/l2mac-block-diagram.png)
+<p align="center">LLM-Automatic Computer (L2MAC) instantiation for coding a large complex codebase for an entire application based on a <b>single user prompt</b>. Here we provide L2MAC with additional tools to check for any syntax errors within the code and run any unit tests if they exist.</p>
+
+## Get Started
+
+### Installation
+
+> Ensure that Python 3.7+ is installed on your system. You can check this by using: `python --version`.
+> You can use conda like this: `conda create -n l2mac python=3.9 && conda activate l2mac`
+
+```bash
+pip install --upgrade l2mac
+# or `pip install --upgrade git+https://github.com/samholt/l2mac`
+# or `git clone https://github.com/samholt/l2mac && cd l2mac && pip install --upgrade -e .`
+```
+
+For detailed installation guidance, please refer to [installation](https://samholt.github.io/L2MAC/guide/get_started/installation.html#install-stable-version)
+
+### Configuration
+
+You can init the config of L2MAC by running the following command, or manually create `~/.L2MAC/config.yaml` file:
+```bash
+# Check https://samholt.github.io/L2MAC/guide/get_started/configuration.html for more details
+l2mac --init-config ""  # it will create ~/.l2mac/config.yaml, just modify it to your needs
+```
+
+You can configure `~/.l2mac/config.yaml` according to the [example](https://gi

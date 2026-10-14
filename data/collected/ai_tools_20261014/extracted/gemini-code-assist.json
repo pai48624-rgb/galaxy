@@ -1,0 +1,55 @@
+{
+ "company": "Google",
+ "one_liner_ko": "Gemini 3와 100만 토큰 컨텍스트로 소프트웨어 개발 전 과정을 돕는 기업용 AI 코딩 도우미·에이전트.",
+ "what_it_does_ko": "Gemini Code Assist(Standard·Enterprise)는 기업용 생성형 AI 코딩 도우미로, 소프트웨어 개발 전 과정의 작업을 에이전트와 함께 처리한다. VS Code·JetBrains IDE 등에서 코드를 작성하는 동안 자동 완성하고 코드 블록·함수를 생성하며, 자연어 채팅으로 코딩 질문에 답한다. 에이전트 모드(미리보기)는 여러 파일 수정, 프로젝트 전체 맥락, MCP 연동을 지원하고, 터미널에서는 오픈소스 Gemini CLI를 쓸 수 있다. 조직의 비공개 코드베이스로 맞춤화할 수 있고, 고객 코드는 공유 모델 학습에 쓰지 않는다고 밝힌다. 개인용 무료 등급은 2026년 6월 18일 Antigravity로 대체됐다고 안내한다.",
+ "key_features": [
+  "IDE 코드 자동 완성·코드 블록 생성(VS Code·JetBrains 등)",
+  "자연어 코딩 채팅",
+  "에이전트 모드(여러 파일 수정·MCP 연동, 미리보기)",
+  "터미널용 오픈소스 Gemini CLI",
+  "조직 비공개 코드베이스 기반 맞춤화",
+  "사용량 지표 대시보드",
+  "Apigee API 개발·Firebase 앱 개발·BigQuery 지원",
+  "출처 인용 표시와 IP 면책"
+ ],
+ "use_cases_ko": [
+  "기업 개발팀의 소프트웨어 개발 전 과정 보조",
+  "Apigee에서 기업 표준에 맞는 API 명세 작성",
+  "Firebase에서 앱 설계·코드 생성·크래시 분석"
+ ],
+ "pricing": {
+  "free_tier": "불명 (개인용 무료 등급은 2026-06-18 Antigravity로 대체됐다는 안내만 있음)",
+  "plans": [
+   {"name": "Standard", "price": null, "currency": null, "period": null, "limits": "가격 표시 없음", "page_lang": "ko"},
+   {"name": "Enterprise", "price": null, "currency": null, "period": null, "limits": "가격 표시 없음, 코드 맞춤화 등", "page_lang": "ko"}
+  ],
+  "pricing_url": "https://codeassist.google/products/business"
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": ["CLI"],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {"field": "company", "url": "https://codeassist.google/products/business", "quote": "Gemini Code Assist uses large language models (LLMs) from Google."},
+  {"field": "one_liner_ko", "url": "https://codeassist.google/products/business", "quote": "Secure generative AI coding assistance and agents to help you with tasks across the Software Development Lifecycle, with Gemini 3 and a 1M token context window."},
+  {"field": "what_it_does_ko", "url": "https://codeassist.google/products/business", "quote": "Gemini Code Assist completes your code as you write, and generates whole code blocks or functions on demand."},
+  {"field": "what_it_does_ko", "url": "https://codeassist.google/products/business", "quote": "Unpaid tier (Gemini Code Assist for individuals) and Google One users only : Gemini CLI and Gemini Code Assist IDE extensions were replaced by Antigravity CLI and Antigravity on June 18th 2026."},
+  {"field": "what_it_does_ko", "url": "https://codeassist.google/products/business", "quote": "Our data governance policy helps ensure customer code, customers' inputs, as well as the recommendations generated will not be used to train any shared models"},
+  {"field": "key_features", "url": "https://codeassist.google/products/business", "quote": "Code assistance is available in many popular IDEs, such as Visual Studio Code , JetBrains IDEs (IntelliJ, PyCharm, GoLand, WebStorm, and more)"},
+  {"field": "key_features", "url": "https://codeassist.google/products/business", "quote": "Through a natural language chat interface, you can quickly chat with Gemini"},
+  {"field": "key_features", "url": "https://codeassist.google/products/business", "quote": "with support for multiple file edits, full project context, built-in tools, and integration with ecosystem tools using MCP"},
+  {"field": "key_features", "url": "https://codeassist.google/products/business", "quote": "Gemini Code Assist gives you access to Gemini CLI , an open source AI agent that brings the power of Gemini directly into your terminal."},
+  {"field": "key_features", "url": "https://codeassist.google/products/business", "quote": "Customize Gemini Code Assist using your organization’s private codebases for more tailored assistance."},
+  {"field": "key_features", "url": "https://codeassist.google/products/business", "quote": "Metrics and observability logging along with a dashboard to monitor daily active use"},
+  {"field": "key_features", "url": "https://codeassist.google/products/business", "quote": "Gemini Code Assist provides source citation so that code suggestions are automatically flagged"},
+  {"field": "use_cases_ko", "url": "https://codeassist.google/products/business", "quote": "Using Gemini Code Assist in Apigee , you can create APIs consistent with your enterprise standards without specialized expertise."},
+  {"field": "use_cases_ko", "url": "https://codeassist.google/products/business", "quote": "Chat with Gemini to plan and design your application, generate code, troubleshoot issues"},
+  {"field": "use_cases_ko", "url": "https://codeassist.google/products/business", "quote": "AI-assisted development for your business"},
+  {"field": "pricing", "url": "https://codeassist.google/products/business", "quote": "Gemini Code Assist Standard and Enterprise"},
+  {"field": "pricing", "url": "https://codeassist.google/products/business", "quote": "Buy Code Assist"},
+  {"field": "platforms", "url": "https://github.com/google-gemini/gemini-cli", "quote": "npm install -g @google/gemini-cli"},
+  {"field": "korean_support", "url": "https://codeassist.google/products/business", "quote": "hreflang: de, en, es, es-419, fr, id, it, ja, ko, pt-br, x-default, zh-hans, zh-hant"}
+ ],
+ "mismatch": [{"official": "개인용 무료 등급(Gemini Code Assist for individuals)의 CLI·IDE 확장은 2026-06-18 Antigravity로 대체, 이 페이지는 유료 Standard·Enterprise만 안내", "diff": "기존 '프리미엄(무료+유료 구독)'과 달리 Code Assist 자체의 무료 등급이 종료된 것으로 보임", "url": "https://codeassist.google/products/business"}],
+ "plan_change": []
+}

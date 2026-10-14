@@ -1,0 +1,130 @@
+{
+ "company": "Open Robotics",
+ "one_liner_ko": "로봇 애플리케이션을 만드는 데 쓰는 오픈소스 소프트웨어 라이브러리·도구 모음(Robot Operating System).",
+ "what_it_does_ko": "ROS(Robot Operating System)는 로봇 애플리케이션 개발을 돕는 소프트웨어 라이브러리와 도구 모음으로 전부 오픈소스다. 드라이버부터 최신 알고리즘, 개발 도구까지 제공한다. 최신 장기지원(LTS) 버전 Lyrical Luth는 2031년까지 지원되며 Ubuntu 26.04와 Windows 11을 대상으로 한다. 비영리 Open Source Robotics Foundation과 기여자들의 지원으로 운영되며, 빌드 팜에서 수만 개의 바이너리 패키지를 제공한다.",
+ "key_features": [
+  "2031년까지 지원되는 ROS 2 LTS 릴리스(Lyrical Luth)",
+  "특정 작업용 코드 묶음인 ROS 패키지와 패키지 색인",
+  "로봇 내비게이션·산업용 팔 제어·실시간 제어·임베디드 개발 패키지",
+  "CLI 도구와 클라이언트 라이브러리",
+  "ROS Docker 이미지",
+  "수만 개의 최신 바이너리 패키지 제공"
+ ],
+ "use_cases_ko": [
+  "로봇 프로젝트의 드라이버·알고리즘·개발 도구 기반",
+  "로봇 내비게이션·산업용 팔 제어 개발"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "오픈소스(라이선스명 페이지에 없음)",
+ "api": "있음",
+ "platforms": [
+  "리눅스(Ubuntu)",
+  "윈도",
+  "CLI"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.ros.org",
+   "quote": "Brought to you by Open Robotics"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/ros2/ros2",
+   "quote": "The Robot Operating System (ROS) is a set of software libraries and tools that help you build robot applications."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/ros2/ros2",
+   "quote": "From drivers to state-of-the-art algorithms, and with powerful developer tools, ROS has what you need for your next robotics project."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.ros.org",
+   "quote": "Lyrical Luth is our latest ROS 2 long-term release with support until 2031"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.ros.org/",
+   "quote": "providing tens of thousands of up-to-date ROS binary packages"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.ros.org",
+   "quote": "Lyrical Luth is our latest ROS 2 long-term release with support until 2031"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.ros.org/",
+   "quote": "ROS packages are collections of ROS code that allow you to accomplish particular tasks."
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.ros.org/",
+   "quote": "robot navigation , industrial arm control , real-time control , and embedded systems development"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.ros.org/",
+   "quote": "Our CLI Tools"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.ros.org/",
+   "quote": "ROS Docker Images"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.ros.org/",
+   "quote": "providing tens of thousands of up-to-date ROS binary packages"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/ros2/ros2",
+   "quote": "From drivers to state-of-the-art algorithms, and with powerful developer tools, ROS has what you need for your next robotics project."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://docs.ros.org/",
+   "quote": "robot navigation , industrial arm control , real-time control , and embedded systems development"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/ros2/ros2",
+   "quote": "And it's all open source."
+  },
+  {
+   "field": "api",
+   "url": "https://docs.ros.org/",
+   "quote": "API Reference for ROS Packages"
+  },
+  {
+   "field": "platforms",
+   "url": "https://www.ros.org",
+   "quote": "targeted at Ubuntu 26.04 (Resolute) and Windows 11"
+  },
+  {
+   "field": "platforms",
+   "url": "https://docs.ros.org/",
+   "quote": "Our CLI Tools"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.ros.org",
+   "quote": "html lang: en"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "ROS는 전부 오픈소스인 로봇 소프트웨어 라이브러리·도구 모음(비영리 재단 지원)",
+   "diff": "기존 '연구/엔터프라이즈(가격 비공개)'와 달리 공개 오픈소스",
+   "url": "https://github.com/ros2/ros2"
+  }
+ ],
+ "plan_change": []
+}

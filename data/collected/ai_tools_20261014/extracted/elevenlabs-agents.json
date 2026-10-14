@@ -1,0 +1,212 @@
+{
+ "company": "ElevenLabs",
+ "one_liner_ko": "90개 이상 언어로 음성·채팅·이메일에서 사람처럼 말하는 대화형 AI 에이전트를 설정·배포·모니터링하는 플랫폼",
+ "what_it_does_ko": "ElevenAgents는 ElevenLabs의 음성·채팅 AI 에이전트 플랫폼으로, 고객 지원·영업·운영 업무용 에이전트를 만들어 운영한다. 음성, 언어, 지식 베이스, 시스템 프롬프트, 워크플로를 한곳에서 설정하고 기존 도구와 연결한다. 전화·웹·WhatsApp·SMS·이메일 채널에서 맥락을 유지하며, 가드레일·시뮬레이션·자동 테스트로 배포 전 검증하고 내장 분석으로 성과를 추적한다. 웹·모바일 SDK와 WebSocket·REST API도 제공한다.",
+ "key_features": [
+  "음성·언어·지식 베이스·시스템 프롬프트·워크플로를 한곳에서 설정",
+  "전화·웹·WhatsApp·SMS·이메일 등 여러 채널에서 맥락 유지",
+  "가드레일·시뮬레이션·자동 테스트로 배포 전 검증",
+  "성공률·CSAT·언어 사용 등 내장 분석과 전체 대화 기록·디버그 로그",
+  "90개 이상 언어, 대화 중 언어 전환, 보이스 라이브러리·음성 복제",
+  "Zapier·Salesforce·Stripe·Hubspot·Zendesk·Twilio 등 연동",
+  "웹·모바일 네이티브 SDK, WebSocket·REST API, 원하는 LLM 사용"
+ ],
+ "use_cases_ko": [
+  "고객 지원 문의를 처음부터 끝까지 자동 해결",
+  "리드 검증·장바구니 이탈 회복·아웃바운드 영업",
+  "예약·알림·수금·내부 운영 자동화"
+ ],
+ "pricing": {
+  "free_tier": "있음 (월 15분 통화, 동시 통화 4)",
+  "plans": [
+   {
+    "name": "Free",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "통화 15분 포함, 동시 통화 4, 워크플로 빌더·지식 베이스·위젯",
+    "page_lang": "en"
+   },
+   {
+    "name": "Starter",
+    "price": 6,
+    "currency": "USD",
+    "period": "month",
+    "limits": "통화 75분, 동시 통화 6, 상업 라이선스 (첫 달 $1 할인 표기)",
+    "page_lang": "en"
+   },
+   {
+    "name": "Creator",
+    "price": 22,
+    "currency": "USD",
+    "period": "month",
+    "limits": "통화 275분, 동시 통화 10, 추가 분 구매 (첫 달 $11)",
+    "page_lang": "en"
+   },
+   {
+    "name": "Pro",
+    "price": 99,
+    "currency": "USD",
+    "period": "month",
+    "limits": "통화 1,238분, 동시 통화 20",
+    "page_lang": "en"
+   },
+   {
+    "name": "Scale",
+    "price": 299,
+    "currency": "USD",
+    "period": "month",
+    "limits": "통화 3,738분, 동시 통화 30, 좌석 3",
+    "page_lang": "en"
+   },
+   {
+    "name": "Business",
+    "price": 990,
+    "currency": "USD",
+    "period": "month",
+    "limits": "통화 12,375분, 동시 통화 40, 좌석 10",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": "USD",
+    "period": "month",
+    "limits": "맞춤 가격",
+    "page_lang": "en"
+   },
+   {
+    "name": "추가 통화(분당)",
+    "price": 0.08,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "포함 분 초과 시 분당 $0.080, 문자 메시지 건당 $0.003, LLM·전화망 비용 별도(원가)",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://elevenlabs.io/pricing/agents"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "iOS",
+  "안드로이드",
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://elevenlabs.io/about",
+   "quote": "ElevenLabs is an AI research and product company transforming the way we interact with technology."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://elevenlabs.io/agents",
+   "quote": "Configure, deploy and monitor natural, human-sounding agents in 90+ languages with leading accuracy and ultra-low latency across voice, chat, and email."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://elevenlabs.io/about",
+   "quote": "ElevenAgents lets businesses build and deploy AI voice and chat agents for customer support, sales, and more."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://elevenlabs.io/agents",
+   "quote": "Configure voice, language, knowledge base, system prompt, and workflows, then connect to the tools your team already uses - all from one place."
+  },
+  {
+   "field": "key_features",
+   "url": "https://elevenlabs.io/agents",
+   "quote": "ElevenAgents keeps full context - customers never repeat themselves across phone, web, WhatsApp, SMS, and email."
+  },
+  {
+   "field": "key_features",
+   "url": "https://elevenlabs.io/agents",
+   "quote": "Define guardrails, run simulations, and validate agent behavior with automated tests - before anything reaches a customer."
+  },
+  {
+   "field": "key_features",
+   "url": "https://elevenlabs.io/agents",
+   "quote": "Track success rates, CSAT, language usage and more with built-in analytics"
+  },
+  {
+   "field": "key_features",
+   "url": "https://elevenlabs.io/agents",
+   "quote": "Agents speak 90+ languages and can switch between them mid-conversation."
+  },
+  {
+   "field": "key_features",
+   "url": "https://elevenlabs.io/agents",
+   "quote": "Native SDKs for web and mobile"
+  },
+  {
+   "field": "key_features",
+   "url": "https://elevenlabs.io/agents",
+   "quote": "LLM-agnostic - bring your own model"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://elevenlabs.io/agents",
+   "quote": "Resolve inbound support end to end, at lower cost per resolution."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://elevenlabs.io/agents",
+   "quote": "Qualify leads, recover abandoned carts, and run outbound at scale."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://elevenlabs.io/agents",
+   "quote": "Automate scheduling, reminders, collections, and internal ops."
+  },
+  {
+   "field": "pricing",
+   "url": "https://elevenlabs.io/pricing/agents",
+   "quote": "15 minutes of calls included \n 4 Concurrent Calls"
+  },
+  {
+   "field": "pricing",
+   "url": "https://elevenlabs.io/pricing/agents",
+   "quote": "$22 per month , first month $11"
+  },
+  {
+   "field": "pricing",
+   "url": "https://elevenlabs.io/pricing/agents",
+   "quote": "1,238 minutes of calls included"
+  },
+  {
+   "field": "pricing",
+   "url": "https://elevenlabs.io/pricing/agents",
+   "quote": "12,375 minutes of calls included"
+  },
+  {
+   "field": "pricing",
+   "url": "https://elevenlabs.io/pricing/agents",
+   "quote": "ElevenAgents plans are billed by call minutes, not by the shared credit pool."
+  },
+  {
+   "field": "pricing",
+   "url": "https://elevenlabs.io/pricing/agents",
+   "quote": "$6 per month , first month $1"
+  },
+  {
+   "field": "api",
+   "url": "https://elevenlabs.io/agents",
+   "quote": "WebSocket and REST APIs"
+  },
+  {
+   "field": "platforms",
+   "url": "https://elevenlabs.io/agents",
+   "quote": "Native SDKs for web and mobile"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://elevenlabs.io/agents",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: English, Deutsch"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

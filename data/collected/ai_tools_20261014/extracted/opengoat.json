@@ -1,0 +1,43 @@
+{
+ "company": "OpenGoat",
+ "one_liner_ko": "CEO·관리자·전문가 에이전트를 고용해 목표를 주면 회사처럼 일하는, OpenClaw 기반 오픈소스 자율 AI 조직 도구.",
+ "what_it_does_ko": "OpenGoat는 OpenClaw 위에서 AI 에이전트들로 자동화된 조직을 만들고 운영하게 해 준다. 에이전트에게 역할과 상하 관계를 주고, 조직의 비전·미션·가치를 정의할 수 있다. 관리자는 작업을 나눠 위임하고 전문가는 실제 일을 하며, 개발자 에이전트는 Claude Code·Codex·Cursor 등 여러 런타임에서 돌릴 수 있다. 대시보드에서 조직도·에이전트 세션·작업·로그를 보며 진행 상황을 따라간다.",
+ "key_features": [
+  "에이전트의 역할·조직 비전·미션·가치 정의",
+  "관리자와 보고 대상이 있는 계층 구조",
+  "관리자는 OpenClaw, 전문가는 Claude Code·Codex·Cursor·OpenCode·Lovable에서 실행",
+  "조직도·에이전트 세션을 보여 주는 대시보드",
+  "작업 생성·배정·상태 관리",
+  "CLI 우선, Docker 지원, ACP 지원",
+  "스킬 설치"
+ ],
+ "use_cases_ko": [
+  "프로젝트 아이디어를 주고 AI 팀이 계획·작업 분배·실행하게 하기",
+  "CTO·엔지니어·디자이너 에이전트로 개발 로드맵 수립과 구현 맡기기"
+ ],
+ "pricing": {"free_tier": "있음 (오픈소스, 구독 없음)", "plans": [], "pricing_url": "https://opengoat.ai/pricing"},
+ "open_source": "MIT",
+ "api": "불명",
+ "platforms": ["웹", "CLI"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://opengoat.ai", "quote": "OpenGoat | Autonomous AI Organizations"},
+  {"field": "one_liner_ko", "url": "https://opengoat.ai", "quote": "Hire a CEO, managers, and specialists. Give them a goal. Let them"},
+  {"field": "what_it_does_ko", "url": "https://docs.opengoat.ai/", "quote": "Build and run automated organizations of AI agents on top of OpenClaw."},
+  {"field": "what_it_does_ko", "url": "https://docs.opengoat.ai/", "quote": "Organization Chart : the hierarchical chart of your organization"},
+  {"field": "key_features", "url": "https://opengoat.ai", "quote": "Agents don't only shape their SOUL , but also their ROLE , and the organization's VISION , MISSION , and VALUES ."},
+  {"field": "key_features", "url": "https://opengoat.ai", "quote": "Managers run on OpenClaw, specialists can run on Claude Code, Codex,"},
+  {"field": "key_features", "url": "https://opengoat.ai", "quote": "Managers break down tasks and delegate, specialists do the work."},
+  {"field": "key_features", "url": "https://opengoat.ai", "quote": "CLI-first OpenClaw-first runtime ACP support Docker-ready"},
+  {"field": "key_features", "url": "https://github.com/marian2js/opengoat", "quote": "opengoat task create --title \"Ship auth\""},
+  {"field": "key_features", "url": "https://github.com/marian2js/opengoat", "quote": "opengoat skill install og-boards --from /path/to/skill"},
+  {"field": "use_cases_ko", "url": "https://docs.opengoat.ai/", "quote": "The Goat will ask you about your project, will plan it, and break it down into smaller tasks."},
+  {"field": "use_cases_ko", "url": "https://github.com/marian2js/opengoat", "quote": "opengoat agent cto --message \"Plan the Q2 engineering roadmap and split it into streams.\""},
+  {"field": "pricing", "url": "https://opengoat.ai/pricing", "quote": "No subscriptions. No hosted lock-in. Just your organization, your"},
+  {"field": "open_source", "url": "https://opengoat.ai", "quote": "OpenGoat is MIT licensed and built in the open."},
+  {"field": "platforms", "url": "https://docs.opengoat.ai/", "quote": "Then open http://127.0.0.1:19123 ."},
+  {"field": "korean_support", "url": "https://opengoat.ai", "quote": "html lang: en"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

@@ -1,0 +1,97 @@
+{
+ "company": null,
+ "one_liner_ko": "AI 코딩 에이전트에게 디자인 어휘와 전문성을 주어 'AI 티 나는' 화면을 자랑할 만한 인터페이스로 바꿔 주는 디자인 스킬",
+ "what_it_does_ko": "Impeccable은 AI 코딩 에이전트용 디자인 가이드 스킬로, 처음부터 화면을 만들거나 기존 화면을 개선하고 디자인 시스템을 지키도록 돕는다. 스킬 1개와 명령 24개(polish, audit, critique, distill, animate 등), 브라우저 실시간 반복 수정, AI가 만든 프론트엔드의 흔한 실수를 잡는 결정적 검사 규칙 59개를 제공한다. /impeccable init으로 제품 정보(PRODUCT.md)를 기록해 이후 명령이 활용한다. Codex CLI, Claude Code, GitHub Copilot, Cursor, Gemini CLI 등 여러 코딩 도구에 설치한다.",
+ "key_features": [
+  "명령 24개: polish·audit·critique·distill·animate·bolder·quieter 등 공통 디자인 어휘",
+  "결정적 검사 규칙 59개 + LLM 비평 검사(CLI·브라우저 확장은 LLM·API 키 없이 실행)",
+  "/impeccable init으로 PRODUCT.md에 제품·대상·목표 기록",
+  "/impeccable live: 브라우저에서 요소 변형을 비교하며 반복 수정",
+  "기존 코드에서 DESIGN.md 생성, 컴포넌트·토큰을 디자인 시스템으로 추출",
+  "harden: 오류 처리·i18n·텍스트 넘침·예외 상황 보강"
+ ],
+ "use_cases_ko": [
+  "AI 코딩 도구로 새 페이지(예: 가입 페이지)를 디자인부터 구현까지 만들기",
+  "기존 페이지(예: 요금 페이지)를 다듬거나 출시 전 점검하기"
+ ],
+ "pricing": {
+  "free_tier": null,
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "CLI"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://impeccable.style",
+   "quote": "Turn AI slop into interfaces you’re proud to ship. Impeccable gives your agent the design expertise to build from scratch, improve what you have, and stay true to your design system."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/pbakaus/impeccable",
+   "quote": "Design guidance for AI coding agents. 1 skill, 24 commands, live browser iteration, and 59 deterministic detector rules for AI-generated frontend design."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://impeccable.style",
+   "quote": "Codex CLI · Claude Code · GitHub Copilot · Cursor · Gemini CLI · Grok Build · Antigravity · OpenCode · Pi · Hermes Agent"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/pbakaus/impeccable",
+   "quote": "A shared design vocabulary with your AI: `polish`, `audit`, `critique`, `distill`, `animate`, `bolder`, `quieter`, and more."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/pbakaus/impeccable",
+   "quote": "The CLI and browser extension run the deterministic rules with no LLM and no API key."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/pbakaus/impeccable",
+   "quote": "`/impeccable init` records durable product truth in `PRODUCT.md`"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/pbakaus/impeccable",
+   "quote": "Visual variant mode: iterate on elements in the browser"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/pbakaus/impeccable",
+   "quote": "Generate root DESIGN.md from existing project code"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/pbakaus/impeccable",
+   "quote": "Error handling, i18n, text overflow, edge cases"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://impeccable.style/docs/",
+   "quote": "/impeccable design a signup page for our monthly book club"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://impeccable.style/docs/",
+   "quote": "/impeccable polish the pricing page"
+  },
+  {
+   "field": "platforms",
+   "url": "https://impeccable.style/docs/",
+   "quote": "npx impeccable install"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://impeccable.style",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

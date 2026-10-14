@@ -1,0 +1,60 @@
+{
+ "company": "Elastic (Elasticsearch B.V.)",
+ "one_liner_ko": "속도·규모·AI 애플리케이션을 위해 만든 오픈소스 분산 검색·분석 엔진.",
+ "what_it_does_ko": "Elasticsearch는 속도와 규모, AI 애플리케이션을 위해 만든 오픈소스 분산 검색·분석 엔진이다. 검색 플랫폼으로서 정형·비정형·벡터 데이터를 실시간으로 저장하고, 빠른 하이브리드·벡터 검색과 관측·보안 분석을 제공한다. Lucene 기반으로 밀리초 단위 검색을 내세우며 Elastic의 오픈 Stack 플랫폼의 기반이다. Elastic Cloud Serverless·Hosted로 쓰거나 직접 내려받아 자체 운영할 수 있다.",
+ "key_features": [
+  "정형·비정형·벡터 데이터를 한곳에 저장하는 데이터스토어",
+  "텍스트·이미지·멀티모달 벡터 데이터베이스",
+  "실시간 데이터 분석 엔진",
+  "전문 검색·필터·벡터·스코어링을 갖춘 검색 엔진",
+  "지오 거리·폴리곤·육각형 공간 분석",
+  "데이터 옆에서 Jina AI 모델과 LLM을 돌리는 추론 서비스",
+  "Kibana 대시보드와 Elastic Agent Builder"
+ ],
+ "use_cases_ko": [
+  "검색 증강 생성(RAG)·벡터 검색",
+  "전문 검색(이커머스·고객지원 검색)",
+  "로그·메트릭·애플리케이션 성능 모니터링·보안 로그"
+ ],
+ "pricing": {
+  "free_tier": "자체 운영판 무료 내려받기, 클라우드는 무료 체험(체험 후 'Free and open - Basic' 라이선스)",
+  "plans": [
+   {"name": "Elastic Cloud Serverless", "price": null, "currency": null, "period": "usage", "limits": "가격 숫자는 받은 본문에 없음, 무료 체험", "page_lang": "en"},
+   {"name": "Elastic Cloud Hosted", "price": null, "currency": null, "period": null, "limits": "가격 숫자는 받은 본문에 없음, 무료 체험", "page_lang": "en"},
+   {"name": "Self-managed", "price": null, "currency": null, "period": null, "limits": "가격 숫자는 받은 본문에 없음", "page_lang": "en"}
+  ],
+  "pricing_url": "https://www.elastic.co/pricing/"
+ },
+ "open_source": "오픈소스(무료 'Free and open - Basic' 라이선스, 정확한 라이선스 이름은 페이지에 없음)",
+ "api": "있음",
+ "platforms": ["웹", "API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://www.elastic.co/docs", "quote": "© 2026 Elasticsearch B.V. All Rights Reserved."},
+  {"field": "one_liner_ko", "url": "https://www.elastic.co/elasticsearch", "quote": "Elasticsearch is an open source, distributed search and analytics engine built for speed, scale, and AI applications."},
+  {"field": "what_it_does_ko", "url": "https://www.elastic.co/elasticsearch", "quote": "it stores structured, unstructured, and vector data in real time — delivering fast hybrid and vector search, powering observability and security analytics"},
+  {"field": "what_it_does_ko", "url": "https://github.com/elastic/elasticsearch", "quote": "Elasticsearch is the foundation of Elastic's open Stack platform."},
+  {"field": "what_it_does_ko", "url": "https://www.elastic.co/elasticsearch", "quote": "Millisecond-latency search, powered by Lucene ."},
+  {"field": "key_features", "url": "https://www.elastic.co/elasticsearch", "quote": "Structured, unstructured, and vectors — all under one roof with efficient columnar storage."},
+  {"field": "key_features", "url": "https://www.elastic.co/elasticsearch", "quote": "Text, image, and multi-modal vectors — all in one API."},
+  {"field": "key_features", "url": "https://www.elastic.co/elasticsearch", "quote": "Real-time data analytics move with speed to aggregate and transform even high-cardinality data instantly."},
+  {"field": "key_features", "url": "https://www.elastic.co/elasticsearch", "quote": "Full-text, filters, vectors, and scoring."},
+  {"field": "key_features", "url": "https://www.elastic.co/elasticsearch", "quote": "Search it, shape it, and show it off with geo-distance, polygons, and hexagonal spatial analytics."},
+  {"field": "key_features", "url": "https://www.elastic.co/elasticsearch", "quote": "Run Jina AI's high-performance models alongside frontier LLMs, right where your data lives"},
+  {"field": "key_features", "url": "https://www.elastic.co/elasticsearch", "quote": "Explore, visualize, and build dashboards using data stored in Elasticsearch"},
+  {"field": "use_cases_ko", "url": "https://github.com/elastic/elasticsearch", "quote": "Use cases enabled by Elasticsearch include:"},
+  {"field": "use_cases_ko", "url": "https://github.com/elastic/elasticsearch", "quote": "* Application performance monitoring (APM)\n* Security logs"},
+  {"field": "use_cases_ko", "url": "https://www.elastic.co/elasticsearch", "quote": "Improve customers' search experience and drive conversion"},
+  {"field": "pricing", "url": "https://www.elastic.co/pricing/", "quote": "Elastic Cloud makes it easy to launch and scale Search, Observability, and Security with flexible hosted and serverless options."},
+  {"field": "pricing", "url": "https://www.elastic.co/pricing/", "quote": "Serverless Hosted Self-managed"},
+  {"field": "pricing", "url": "https://www.elastic.co/elasticsearch", "quote": "Download Elasticsearch now to get started for free"},
+  {"field": "pricing", "url": "https://github.com/elastic/elasticsearch", "quote": "After the trial period, the license reverts to *Free and open - Basic*."},
+  {"field": "open_source", "url": "https://www.elastic.co/elasticsearch", "quote": "OPEN SOURCE SEARCH, ANALYTICS, AND AI PLATFORM"},
+  {"field": "open_source", "url": "https://github.com/elastic/elasticsearch", "quote": "After the trial period, the license reverts to *Free and open - Basic*."},
+  {"field": "api", "url": "https://www.elastic.co/elasticsearch", "quote": "A distributed, RESTful search and analytics engine"},
+  {"field": "platforms", "url": "https://www.elastic.co/docs", "quote": "Browse the Elasticsearch client libraries for Java, .Net, Python, and more."},
+  {"field": "korean_support", "url": "https://www.elastic.co/elasticsearch", "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

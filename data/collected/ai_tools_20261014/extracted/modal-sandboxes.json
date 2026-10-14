@@ -1,0 +1,196 @@
+{
+ "company": "Modal",
+ "one_liner_ko": "코딩 에이전트·강화학습 롤아웃·신뢰할 수 없는 코드를 위한 고성능 격리 샌드박스.",
+ "what_it_does_ko": "Modal Sandboxes는 에이전트에게 필요한 컴퓨터를 대규모로 제공하는 격리 실행 환경이다. 1분 안에 100만 개 이상의 샌드박스를 띄울 수 있고, 원하는 이미지와 의존성을 코드로 정의한다. 외부 통신(egress)을 잠가 재현 가능하고 격리된 환경을 유지하며, 파일시스템 스냅샷으로 상태를 저장하고 이어서 실행한다. 사용한 만큼 초 단위로 과금하는 서버리스 방식이다.",
+ "key_features": [
+  "1분 안에 100만 개+ 샌드박스 병렬 생성",
+  "실행 환경·의존성을 코드로 정의",
+  "롤아웃별 외부 통신(egress) 제한",
+  "파일시스템 스냅샷 저장·즉시 재개",
+  "대형 커스텀 이미지에서도 1초 미만 콜드 스타트",
+  "CPU·메모리 탄력적 자동 할당"
+ ],
+ "use_cases_ko": [
+  "강화학습 롤아웃의 보상 계산을 위한 일회용 격리 샌드박스",
+  "코딩 에이전트가 생성한 코드 실행",
+  "AI 생성 코드의 안전한 실행"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Starter: 월 $30 무료 크레딧)",
+  "plans": [
+   {
+    "name": "Sandbox CPU",
+    "price": 0.1419,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "물리 코어(2 vCPU 상당)당 시간당, 컨테이너당 최소 0.125코어",
+    "page_lang": "en"
+   },
+   {
+    "name": "Sandbox Memory",
+    "price": 0.024,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "GiB당 시간당",
+    "page_lang": "en"
+   },
+   {
+    "name": "Starter",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "+ 컴퓨트 사용료, 월 $30 크레딧, 좌석 3, 컨테이너 100, GPU 동시 10",
+    "page_lang": "en"
+   },
+   {
+    "name": "Team",
+    "price": 250,
+    "currency": "USD",
+    "period": "month",
+    "limits": "+ 컴퓨트 사용료, 월 $100 크레딧, 좌석 무제한, 컨테이너 5000, GPU 동시 50",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": "USD",
+    "period": "month",
+    "limits": "맞춤(Custom), 볼륨 할인, Okta SSO·HIPAA",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://modal.com/pricing"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://modal.com/products/sandboxes",
+   "quote": "Sandboxes: Isolated environments for reinforcement learning and AI agents | Modal"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://modal.com/products/sandboxes",
+   "quote": "Isolated environments for coding agents, RL rollouts, and untrusted code"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://modal.com/products/sandboxes",
+   "quote": "High performance sandboxes designed to give agents the computers they need"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://modal.com/docs/guide",
+   "quote": "You get full serverless execution and pricing because we host everything and charge per second of usage."
+  },
+  {
+   "field": "key_features",
+   "url": "https://modal.com/products/sandboxes",
+   "quote": "1M+ sandboxes in under a minute"
+  },
+  {
+   "field": "key_features",
+   "url": "https://modal.com/products/sandboxes",
+   "quote": "Programmatically define your exact rollout environment and dependencies."
+  },
+  {
+   "field": "key_features",
+   "url": "https://modal.com/products/sandboxes",
+   "quote": "Lock each rollout's egress, keeping rollout environments reproducible and contained."
+  },
+  {
+   "field": "key_features",
+   "url": "https://modal.com/products/sandboxes",
+   "quote": "Snapshot full or partial filesystems to save state and resume instantly later."
+  },
+  {
+   "field": "key_features",
+   "url": "https://modal.com/products/sandboxes",
+   "quote": "Sub-second cold-starts even on custom and large images."
+  },
+  {
+   "field": "key_features",
+   "url": "https://modal.com/products/sandboxes",
+   "quote": "Elastically scale both CPU and Memory as needed"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://modal.com/products/sandboxes",
+   "quote": "Each rollout gets its own isolated, disposable sandbox"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://modal.com/products/sandboxes",
+   "quote": "The fast, reliable computer your coding agent needs to do its best work."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://modal.com/docs/guide",
+   "quote": "Spin up thousands of isolated and secure Sandboxes to execute AI generated code"
+  },
+  {
+   "field": "pricing",
+   "url": "https://modal.com/products/sandboxes",
+   "quote": "$ 0.1419 0 . 1 4 1 9 / core / h"
+  },
+  {
+   "field": "pricing",
+   "url": "https://modal.com/products/sandboxes",
+   "quote": "$ 0.0240 0 . 0 2 4 0 / GiB / h"
+  },
+  {
+   "field": "pricing",
+   "url": "https://modal.com/pricing",
+   "quote": "$0 + compute / month"
+  },
+  {
+   "field": "pricing",
+   "url": "https://modal.com/pricing",
+   "quote": "$30 / month free credits"
+  },
+  {
+   "field": "pricing",
+   "url": "https://modal.com/pricing",
+   "quote": "$250 + compute / month"
+  },
+  {
+   "field": "pricing",
+   "url": "https://modal.com/pricing",
+   "quote": "Audit logs, Okta SSO, and HIPAA"
+  },
+  {
+   "field": "api",
+   "url": "https://modal.com/products/sandboxes",
+   "quote": "modal.Sandbox.create(app=app)"
+  },
+  {
+   "field": "platforms",
+   "url": "https://modal.com/products/sandboxes",
+   "quote": "Playground Explore Modal in the browser"
+  },
+  {
+   "field": "platforms",
+   "url": "https://modal.com/products/sandboxes",
+   "quote": "modal.Sandbox.create(app=app)"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://modal.com/products/sandboxes",
+   "quote": "html lang: en"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "초 단위 종량제에 더해 Starter($0 + 컴퓨트, 월 $30 크레딧)·Team($250/월 + 컴퓨트)·Enterprise(맞춤) 요금제",
+   "diff": "순수 사용량 기반이 아니라 월 기본료가 있는 Team 구독 요금제가 있음. 공식 페이지에 오픈소스 언급은 없음",
+   "url": "https://modal.com/pricing"
+  }
+ ]
+}

@@ -1,0 +1,141 @@
+{
+ "company": "NVIDIA",
+ "one_liner_ko": "로봇 정책을 대규모로 학습시키는 GPU 가속 오픈소스 로봇 학습 시뮬레이션 프레임워크.",
+ "what_it_does_ko": "Isaac Lab은 로봇 정책을 대규모로 학습시키기 위한 GPU 가속 오픈소스 시뮬레이션 프레임워크다. 휴머노이드, 매니퓰레이터, 자율이동로봇(AMR) 등 다양한 형태의 로봇에 쓸 수 있고 모방학습과 강화학습을 모두 지원한다. Newton, PhysX, Warp, MuJoCo 같은 물리 엔진으로 확장할 수 있으며 Isaac Sim 위에 만들어졌다. Isaac Gym의 후속이며 NVIDIA Isaac GR00T 플랫폼의 기반 로봇 학습 프레임워크다.",
+ "key_features": [
+  "모방학습·강화학습 모두 지원",
+  "16종+ 로봇 모델과 30개+ 바로 학습 가능한 환경",
+  "Newton·PhysX 등 고충실도 물리로 Sim-to-Real 격차 축소",
+  "여러 카메라 입력을 합치는 타일 렌더링",
+  "멀티 GPU·멀티 노드 학습 확장",
+  "RGB/깊이/분할 카메라·IMU·접촉 센서 시뮬레이션",
+  "시뮬레이션 정책 평가용 Isaac Lab-Arena"
+ ],
+ "use_cases_ko": [
+  "강화학습·모방학습·모션 플래닝 등 로봇 연구",
+  "휴머노이드·매니퓰레이터·AMR 정책 학습",
+  "시뮬레이션에서 학습한 정책의 실제 로봇 이전(sim-to-real)"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "BSD-3-Clause",
+ "api": "불명",
+ "platforms": [
+  "리눅스",
+  "윈도"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://developer.nvidia.com/isaac/lab",
+   "quote": "Isaac Lab | NVIDIA Developer"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://developer.nvidia.com/isaac/lab",
+   "quote": "is an open-source, GPU-accelerated, agent-ready simulation framework for robot learning designed to train robot policies at scale."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://developer.nvidia.com/isaac/lab",
+   "quote": "including humanoid robots , manipulators, and autonomous mobile robots (AMRs)"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://developer.nvidia.com/isaac/lab",
+   "quote": "It supports both imitation and reinforcement learning methods."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://developer.nvidia.com/isaac/lab",
+   "quote": "Isaac Lab is also the foundational robot learning framework of the NVIDIA Isaac GR00T platform ."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://developer.nvidia.com/isaac/lab",
+   "quote": "the natural successor to Isaac Gym"
+  },
+  {
+   "field": "key_features",
+   "url": "https://developer.nvidia.com/isaac/lab",
+   "quote": "It supports both imitation and reinforcement learning methods."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/isaac-sim/IsaacLab",
+   "quote": "with more than 16 commonly available models"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/isaac-sim/IsaacLab",
+   "quote": "Ready-to-train implementations of more than 30 environments"
+  },
+  {
+   "field": "key_features",
+   "url": "https://developer.nvidia.com/isaac/lab",
+   "quote": "Train policies with higher-fidelity physics using Newton, PhysX, or any physics engine"
+  },
+  {
+   "field": "key_features",
+   "url": "https://developer.nvidia.com/isaac/lab",
+   "quote": "Tiled rendering reduces rendering time by consolidating input from multiple cameras into a single large image."
+  },
+  {
+   "field": "key_features",
+   "url": "https://developer.nvidia.com/isaac/lab",
+   "quote": "Scale up training of cross-embodied models for complex reinforcement learning environments across multiple GPUs and nodes."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/isaac-sim/IsaacLab",
+   "quote": "RGB/depth/segmentation cameras, camera annotations, IMU, contact sensors, ray casters."
+  },
+  {
+   "field": "key_features",
+   "url": "https://developer.nvidia.com/isaac/lab",
+   "quote": "is an open-source framework for scalable policy evaluation in simulation."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/isaac-sim/IsaacLab",
+   "quote": "designed to unify and simplify robotics research workflows"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/isaac-sim/IsaacLab",
+   "quote": "making it an ideal choice for sim-to-real"
+  },
+  {
+   "field": "open_source",
+   "url": "https://developer.nvidia.com/isaac/lab",
+   "quote": "open-sourced under the BSD-3-Clause license"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/isaac-sim/IsaacLab",
+   "quote": "platform-linux--64-orange.svg"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/isaac-sim/IsaacLab",
+   "quote": "platform-windows--64-orange.svg"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://developer.nvidia.com/isaac/lab",
+   "quote": "hreflang: en-us, x-default, zh-cn"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "Isaac Lab은 BSD-3-Clause 라이선스의 오픈소스 프레임워크",
+   "diff": "기존 '연구/엔터프라이즈(가격 비공개)'와 달리 공개 오픈소스",
+   "url": "https://developer.nvidia.com/isaac/lab"
+  }
+ ],
+ "plan_change": []
+}

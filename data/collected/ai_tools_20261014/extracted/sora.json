@@ -1,0 +1,24 @@
+{
+ "company": "OpenAI",
+ "one_liner_ko": "Sora 웹·앱 서비스는 2026년 4월 26일 종료되었고, Sora API도 2026년 9월 24일 종료 예정이다",
+ "what_it_does_ko": "공식 도움말에 따르면 Sora 웹과 앱 서비스는 2026년 4월 26일에 종료되었다. Sora API는 2026년 9월 24일에 종료될 예정이다. 사용자는 sora.chatgpt.com/sunset 에서 만든 콘텐츠를 내보낼 수 있고, 종료 및 내보내기 기간 이후 Sora 관련 데이터는 영구 삭제된다. 구매한 ChatGPT/Sora 크레딧은 Codex에서 계속 쓸 수 있다.",
+ "key_features": [],
+ "use_cases_ko": [],
+ "pricing": {"free_tier": null, "plans": [], "pricing_url": null},
+ "open_source": null,
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {"field": "company", "url": "https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation", "quote": "What to know about the Sora discontinuation | OpenAI Help Center"},
+  {"field": "one_liner_ko", "url": "https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation", "quote": "The Sora web and app experiences were discontinued on April 26, 2026."},
+  {"field": "what_it_does_ko", "url": "https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation", "quote": "The Sora API will be discontinued on September 24, 2026."},
+  {"field": "what_it_does_ko", "url": "https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation", "quote": "Note that any purchased ChatGPT/Sora credits can still be used for Codex, if you so choose."},
+  {"field": "korean_support", "url": "https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation", "quote": "kn-in, ko-kr, lt-lt"}
+ ],
+ "mismatch": [
+  {"official": "Sora 웹·앱은 2026-04-26 종료, API는 2026-09-24 종료 예정", "diff": "기존 '프리미엄(무료+유료 구독)' 분류와 달리 서비스 자체가 종료됨", "url": "https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation"}
+ ],
+ "plan_change": [],
+ "note": "공식 페이지는 서비스 종료 안내뿐. korean_support는 도움말 페이지 hreflang(ko-kr) 기준이며 제품 화면 기준 아님."
+}

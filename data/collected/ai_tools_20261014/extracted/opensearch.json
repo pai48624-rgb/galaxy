@@ -1,0 +1,48 @@
+{
+ "company": "OpenSearch Software Foundation (The Linux Foundation 프로젝트)",
+ "one_liner_ko": "AI 기반 검색과 관측(observability)을 위한 Apache 2.0 오픈소스 검색·분석 엔진.",
+ "what_it_does_ko": "OpenSearch는 데이터를 수집·검색·시각화·분석하는 커뮤니티 주도 오픈소스 검색·분석 제품군이다. 데이터 저장소이자 검색 엔진(OpenSearch), 시각화·UI(OpenSearch Dashboards), 서버 측 데이터 수집기(Data Prepper)로 구성되며 플러그인으로 검색·분석·관측·보안·머신러닝 기능을 넓힐 수 있다. Apache Lucene 위에 만들어졌고, 2021년 1월 Elasticsearch와 Kibana의 오픈소스 포크로 발표되었다. 2024년 9월 Linux Foundation 산하 OpenSearch Software Foundation이 만들어졌다.",
+ "key_features": [
+  "Apache Lucene 기반 검색·분석 엔진(OpenSearch Core)",
+  "데이터 시각화·탐색 도구 OpenSearch Dashboards",
+  "수집 데이터 가공·집계용 Data Prepper",
+  "AI·머신러닝용 벡터 엔진(벡터 검색)",
+  "이상 탐지",
+  "로그 분석·관측 스택",
+  "보안 분석·위협 인텔리전스·이벤트 상관 분석",
+  "언어별 클라이언트 API와 마이그레이션 도구"
+ ],
+ "use_cases_ko": [
+  "이커머스·기업·문서 검색 구축",
+  "애플리케이션·인프라 문제 파악(로그 분석·성능 모니터링)",
+  "실시간 보안 위협 탐지·대응"
+ ],
+ "pricing": {"free_tier": "오픈소스(Apache 2.0) — 공식 페이지에 유료 요금제 없음", "plans": [], "pricing_url": null},
+ "open_source": "Apache 2.0",
+ "api": "있음",
+ "platforms": ["API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://opensearch.org", "quote": "The OpenSearch Software Foundation is the exciting next chapter for the OpenSearch Project, formed in September 2024."},
+  {"field": "one_liner_ko", "url": "https://opensearch.org", "quote": "The open engine for AI-powered search and observability"},
+  {"field": "what_it_does_ko", "url": "https://opensearch.org/about/", "quote": "OpenSearch consists of a data store and search engine (OpenSearch), a visualization and user interface (OpenSearch Dashboards), and a server-side data collector (Data Prepper)."},
+  {"field": "what_it_does_ko", "url": "https://opensearch.org/about/", "quote": "as an open-source fork of Elasticsearch and Kibana"},
+  {"field": "key_features", "url": "https://opensearch.org", "quote": "OpenSearch is a powerful search and analytics engine built on Apache Lucene."},
+  {"field": "key_features", "url": "https://opensearch.org", "quote": "Power machine learning and generative AI applications with a high-performance database designed for the way AI understands data."},
+  {"field": "key_features", "url": "https://opensearch.org", "quote": "A server-side data collector designed to enrich, transform, and aggregate data for downstream analytics with Opensearch."},
+  {"field": "key_features", "url": "https://opensearch.org", "quote": "Threat Intelligence \n Event Correlation"},
+  {"field": "key_features", "url": "https://opensearch.org", "quote": "Clients Interact with OpenSearch from your application using language APIs."},
+  {"field": "use_cases_ko", "url": "https://opensearch.org", "quote": "Identify and resolve issues across your applications and infrastructure."},
+  {"field": "use_cases_ko", "url": "https://opensearch.org", "quote": "Detect and respond to security threats in real time."},
+  {"field": "use_cases_ko", "url": "https://opensearch.org", "quote": "Enterprise search \n Document search"},
+  {"field": "pricing", "url": "https://opensearch.org", "quote": "OpenSearch is open source that stays open: vendor-neutral, fully Apache 2.0 licensed from ingest to dashboard"},
+  {"field": "open_source", "url": "https://github.com/opensearch-project/OpenSearch", "quote": "This project is licensed under the [Apache v2.0 License](LICENSE.txt)."},
+  {"field": "api", "url": "https://opensearch.org", "quote": "Clients Interact with OpenSearch from your application using language APIs."},
+  {"field": "platforms", "url": "https://opensearch.org", "quote": "Clients Interact with OpenSearch from your application using language APIs."},
+  {"field": "korean_support", "url": "https://opensearch.org", "quote": "html lang: en-US\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [
+  {"official": "Linux Foundation 산하 벤더 중립 프로젝트로 전 구성요소가 Apache 2.0 오픈소스, 공식 사이트에 자체 유료 클라우드 요금제 없음(외부 솔루션 제공사 안내만)", "diff": "기존 분류의 '클라우드 매니지드 유료 플랜'이 공식 페이지에 없음 — 순수 오픈소스", "url": "https://opensearch.org"}
+ ],
+ "plan_change": []
+}

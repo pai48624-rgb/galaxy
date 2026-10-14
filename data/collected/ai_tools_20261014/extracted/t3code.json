@@ -1,0 +1,122 @@
+{
+ "company": null,
+ "one_liner_ko": "Claude Code·Codex·Cursor 등 여러 코딩 에이전트를 한 화면에서 지휘하는 오픈소스 컨트롤 플레인.",
+ "what_it_does_ko": "T3 Code는 내 컴퓨터의 에이전트를 조종하는 '에이전트 하네스 컨트롤 화면'이다. Claude Code·Codex·Cursor·Grok Build·OpenCode·Antigravity를 내 구독 그대로 연결해 쓴다. 모바일 앱(iOS·안드로이드)·웹 앱·Electron 데스크톱 앱으로 원격에서도 조종한다. 아무것도 팔지 않는다고 밝히며, 전체를 포크해 쓸 수 있게 공개했다.",
+ "key_features": [
+  "Claude Code·Codex·Antigravity·OpenCode·Cursor·Grok을 한 화면에서",
+  "자기 구독 그대로 사용",
+  "iOS·안드로이드 모바일 앱으로 원격 조종",
+  "t3 명령으로 서버+로컬 웹 앱 실행, 백그라운드 서비스 설치",
+  "MCP로 외부 에이전트 연결",
+  "권한 모드·프로젝트 설정·소스 관리 연동"
+ ],
+ "use_cases_ko": [
+  "휴대폰으로 원격에서 내 컴퓨터의 코딩 에이전트 작업 지휘"
+ ],
+ "pricing": {
+  "free_tier": "있음 (판매하는 것 없음, 자기 구독 사용)",
+  "plans": [],
+  "pricing_url": "https://github.com/pingdotgg/t3code"
+ },
+ "open_source": "오픈소스(라이선스 이름은 받은 본문에 없음)",
+ "api": "불명",
+ "platforms": [
+  "맥",
+  "윈도",
+  "웹",
+  "iOS",
+  "안드로이드",
+  "CLI"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://t3.codes",
+   "quote": "The open-source control plane for coding agents."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/pingdotgg/t3code",
+   "quote": "T3 Code is an \"agent harness control surface\"."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/pingdotgg/t3code",
+   "quote": "Works with your subscriptions on Claude Code, Codex, Cursor, Grok Build, OpenCode, and Google Antigravity."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/pingdotgg/t3code",
+   "quote": "If we ever go the wrong direction, we want you to have everything you need to fork and build the editor that you want."
+  },
+  {
+   "field": "key_features",
+   "url": "https://t3.codes",
+   "quote": "Orchestrate Claude Code, Codex, Antigravity, OpenCode, Cursor, and Grok from one surface. Bring your own subscription."
+  },
+  {
+   "field": "key_features",
+   "url": "https://t3.codes",
+   "quote": "Also on your phone: iOS · Android"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/pingdotgg/t3code",
+   "quote": "Then run `t3` to start the server and open the local web app. `t3 service install` keeps it running in the background"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/pingdotgg/t3code",
+   "quote": "Connect Claude Code, Codex, ChatGPT and other agents over MCP"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/pingdotgg/t3code",
+   "quote": "[Permission modes](./docs/user/permission-modes.md)"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/pingdotgg/t3code",
+   "quote": "Remote access from a phone or another machine"
+  },
+  {
+   "field": "pricing",
+   "url": "https://github.com/pingdotgg/t3code",
+   "quote": "## \"Wait, what are you selling me?\"\n\nNothing."
+  },
+  {
+   "field": "open_source",
+   "url": "https://t3.codes",
+   "quote": "The open-source control plane for coding agents."
+  },
+  {
+   "field": "platforms",
+   "url": "https://t3.codes",
+   "quote": "Download for macOS"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/pingdotgg/t3code",
+   "quote": "winget install T3Tools.T3Code"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/pingdotgg/t3code",
+   "quote": "[web app](https://app.t3.codes)"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/pingdotgg/t3code",
+   "quote": "curl -fsSL https://t3.codes/install.sh | sh"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://t3.codes",
+   "quote": "hreflang: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [],
+ "note": "요금 페이지 없음, '판매하는 것 없음'이라고만 밝힘. 리눅스(.deb·AUR)도 지원."
+}

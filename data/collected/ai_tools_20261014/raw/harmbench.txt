@@ -1,0 +1,162 @@
+=== [home] https://www.harmbench.org/ (lang=en)
+HarmBench About 
+ Playground 
+ Results 
+ Explore 
+ Paper 
+ GitHub 
+ HarmBench: A Standardized Evaluation Framework for Automated Red Teaming and Robust Refusal 
+ The HarmBench Team 
+ What is HarmBench?
+ Automated red teaming holds substantial promise for uncovering and mitigating the risks associated with the malicious use of large language models (LLMs), yet the field lacks a standardized evaluation framework to rigorously assess these methods. To address this issue, we introduce HarmBench, a standardized evaluation framework for automated red teaming. We identify key considerations previously unaccounted for in red teaming evaluations and systematically design HarmBench to meet these criteria. Using HarmBench, we conduct a large-scale comparison of red teaming methods and target LLMs and defenses, yielding novel insights. We also introduce a highly efficient adversarial training method that greatly enhances LLM robustness across a wide range of attacks, demonstrating how HarmBench enables codevelopment of attacks and defenses.
+ ` 
+ There are two primary ways to use HarmBench: (1) evaluating red teaming methods against a set of LLMs, and (2) evaluating LLMs against a set of red teaming methods. These use cases are both supported by the same evaluation pipeline, illustrated above.
+ Citation:
+ @article{mazeika2024harmbench,
+ title={HarmBench: A Standardized Evaluation Framework for Automated Red Teaming and Robust Refusal},
+ author={Mantas Mazeika and Long Phan and Xuwang Yin and Andy Zou and Zifan Wang and Norman Mu and Elham Sakhaee and Nathaniel Li and Steven Basart and Bo Li and David Forsyth and Dan Hendrycks},
+ year={2024},
+ eprint={2402.04249},
+ archivePrefix={arXiv},
+ primaryClass={cs.LG}
+ }
+
+=== [about] https://www.harmbench.org/about/ (lang=en)
+HarmBench About 
+ Playground 
+ Results 
+ Explore 
+ Paper 
+ GitHub 
+ HarmBench: A Standardized Evaluation Framework for Automated Red Teaming and Robust Refusal 
+ The HarmBench Team 
+ What is HarmBench?
+ Automated red teaming holds substantial promise for uncovering and mitigating the risks associated with the malicious use of large language models (LLMs), yet the field lacks a standardized evaluation framework to rigorously assess these methods. To address this issue, we introduce HarmBench, a standardized evaluation framework for automated red teaming. We identify key considerations previously unaccounted for in red teaming evaluations and systematically design HarmBench to meet these criteria. Using HarmBench, we conduct a large-scale comparison of red teaming methods and target LLMs and defenses, yielding novel insights. We also introduce a highly efficient adversarial training method that greatly enhances LLM robustness across a wide range of attacks, demonstrating how HarmBench enables codevelopment of attacks and defenses.
+ ` 
+ There are two primary ways to use HarmBench: (1) evaluating red teaming methods against a set of LLMs, and (2) evaluating LLMs against a set of red teaming methods. These use cases are both supported by the same evaluation pipeline, illustrated above.
+ Citation:
+ @article{mazeika2024harmbench,
+ title={HarmBench: A Standardized Evaluation Framework for Automated Red Teaming and Robust Refusal},
+ author={Mantas Mazeika and Long Phan and Xuwang Yin and Andy Zou and Zifan Wang and Norman Mu and Elham Sakhaee and Nathaniel Li and Steven Basart and Bo Li and David Forsyth and Dan Hendrycks},
+ year={2024},
+ eprint={2402.04249},
+ archivePrefix={arXiv},
+ primaryClass={cs.LG}
+ }
+
+=== [pricing] https://www.harmbench.org/pricing (lang=en)
+HarmBench About 
+ Playground 
+ Results 
+ Explore 
+ Paper 
+ GitHub
+
+=== [pricing] https://www.harmbench.org/ko/pricing (lang=en)
+HarmBench About 
+ Playground 
+ Results 
+ Explore 
+ Paper 
+ GitHub
+
+=== [pricing] https://www.harmbench.org/plans (lang=en)
+HarmBench About 
+ Playground 
+ Results 
+ Explore 
+ Paper 
+ GitHub
+
+=== [meta] https://www.harmbench.org/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/centerforaisafety/HarmBench
+<p align="center">
+
+<img src="assets/harmbench_splash.png" alt="HarmBench"/>
+
+</p>
+
+<div align="center">
+
+# 🗡️ HarmBench: A Standardized Evaluation Framework for Automated Red Teaming and Robust Refusal 🛡️
+
+</div>
+
+<div align="center">
+
+
+</div>
+
+
+#### A fast, scalable, and open-source framework for evaluating automated red teaming methods and LLM attacks/defenses
+
+
+<!-- Three language version (Eng/Chinese/Japanese)  -->
+
+
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+## Table of Contents
+
+- [📰 Latest News 📰](#-latest-news-)
+- [🗡️ What is HarmBench 🛡️](#%EF%B8%8F-what-is-harmbench-%EF%B8%8F)
+- [🌐 Overview 🌐](#-overview-)
+- [☕ Quick Start ☕](#-quick-start-)
+  - [⚙️ Installation](#%EF%B8%8F-installation)
+  - [🛠️ Running the Evaluation Pipeline](#%EF%B8%8F-running-the-evaluation-pipeline)
+  - [➕ Using your own models in HarmBench](#➕-using-your-own-models-in-harmbench)
+  - [➕ Using your own red teaming methods in HarmBench](#➕-using-your-own-red-teaming-methods-in-harmbench)
+- [🤗 Classifiers](#-classifiers)
+- [⚓ Documentation ⚓](#-documentation-)
+- [🌱 HarmBench's Roadmap 🌱](#-harmbench-roadmap-)
+- [🙏 Acknowledgement and Citation 🙏](#-acknowledgements-and-citation-)
+
+<!-- markdown-toc end -->
+
+## 📰 Latest News 📰
+
+* ***[2024/02/26] 🚀 [HarmBench 1.0: adversarial training code+model, precomputed test cases, and various improvements](https://github.com/centerforaisafety/HarmBench/pull/19)*** 🚀
+* ***[2024/02/06] 🚀 [Initial release of HarmBench with 33 evaluated LLMs and 18 red teaming methods]()*** 🚀
+
+
+## 🗡️ What is HarmBench 🛡️
+
+Automated red teaming holds substantial promise for uncovering and mitigating the risks associated with the malicious use of large language models (LLMs), yet the field lacks a standardized evaluation framework to rigorously assess these methods. To address this issue, we introduce HarmBench, a standardized evaluation framework for automated red teaming. We identify key considerations previously unaccounted for in red teaming evaluations and systematically design HarmBench to meet these criteria. Using HarmBench, we conduct a large-scale comparison of $18$ red teaming methods and $33$ target LLMs and defenses, yielding novel insights. We also introduce a highly efficient adversarial training method that greatly enhances LLM robustness across a wide range of attacks, demonstrating how HarmBench enables codevelopment of attacks and defenses.
+
+## 🌐 Overview 🌐
+<div align="center">
+
+<img src="assets/eval_pipeline-1.png" alt="HarmBench Evaluation Pipeline"/>
+
+</div>
+
+There are two primary ways to use HarmBench: (1) evaluating red teaming methods against a set of LLMs, and (2) evaluating LLMs against a set of red teaming methods. These use cases are both supported by the same evaluation pipeline, illustrated above. The process for running this evaluation pipeline is described below in the Quick Start section and in the [evaluation pipeline docs](./docs/evaluation_pipeline.md)
+
+HarmBench has out-of-the-box support for transformers-compatible LLMs, numerous closed-source APIs, and several multimodal models. To add new red teaming methods and models that aren't compatible with transformers, it may help to learn more about how the codebase is structured. We provide a set of docs to help with more advanced usage.
+
+
+## ☕ Quick Start ☕
+
+
+### ⚙️ Installation
+
+```bash
+git clone https://github.com/centerforaisafety/HarmBench.git
+cd HarmBench
+pip install -r requirements.txt
+python -m spacy download en_core_web_sm
+```
+
+### 🛠️ Running The Evaluation Pipeline
+The HarmBench evaluation pipeline consists of three steps (with an optional merging step), shown in the figure above: (1) generating test cases, (1.5) merging test cases, (2) generating completions, (3) evaluating completions. We provide two ways of running the evaluation pipeline:
+- A higher-level run_pipeline.py utility that automates parts of the pipeline
+- Scripts for running individual steps of the pipeline manually
+
+#### Using run_pipeline.py
+The easiest way to run the evaluation pipeline is with `./scripts/run_pipeline.py`. Examples are given below.
+```bash
+# Run GCG against all compatible models using a SLURM cluster
+python

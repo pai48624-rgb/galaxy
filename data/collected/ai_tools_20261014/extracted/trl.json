@@ -1,0 +1,94 @@
+{
+ "company": "Hugging Face",
+ "one_liner_ko": "SFT·GRPO·DPO·보상 모델링 등으로 트랜스포머 언어 모델을 사후 학습하는 풀스택 라이브러리.",
+ "what_it_does_ko": "TRL은 지도 미세조정(SFT), GRPO, DPO, 보상 모델링 등의 방법으로 트랜스포머 언어 모델을 학습시키는 도구 모음 라이브러리로, 🤗 transformers와 통합되어 있다. SFTTrainer·GRPOTrainer·DPOTrainer·KTOTrainer 같은 트레이너로 각 방법을 쓸 수 있다. Accelerate로 단일 GPU에서 멀티 노드 클러스터까지 확장하고, PEFT 통합으로 양자화·LoRA/QLoRA를 써서 적은 하드웨어로 큰 모델을 학습한다. 코드를 쓰지 않고 파인튜닝하는 CLI도 제공한다.",
+ "key_features": [
+  "SFT·GRPO·DPO·KTO·RLOO·보상·증류 트레이너",
+  "같은 GPU에서 최대 6.9배 긴 시퀀스(fused LM head)",
+  "Accelerate로 단일 GPU~멀티 노드 확장(DDP·DeepSpeed)",
+  "PEFT 통합으로 양자화·LoRA/QLoRA 학습",
+  "Unsloth 통합으로 학습 가속",
+  "코드 없이 파인튜닝하는 CLI"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "공개 코드(라이선스 이름은 페이지에 없음)",
+ "api": "불명",
+ "platforms": [
+  "CLI"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://huggingface.co/docs/trl/index",
+   "quote": "TRL - Transformers Reinforcement Learning · Hugging Face"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://huggingface.co/docs/trl/index",
+   "quote": "TRL is a full stack library where we provide a set of tools to train transformer language models"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://huggingface.co/docs/trl/index",
+   "quote": "with methods like Supervised Fine-Tuning (SFT), Group Relative Policy Optimization (GRPO), Direct Preference Optimization (DPO), Reward Modeling, and more."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/huggingface/trl",
+   "quote": "Full integration with [🤗 PEFT](https://github.com/huggingface/peft) enables training on large models with modest hardware via quantization and LoRA/QLoRA."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/huggingface/trl",
+   "quote": "Various fine-tuning methods are easily accessible via trainers like"
+  },
+  {
+   "field": "key_features",
+   "url": "https://huggingface.co/docs/trl/index",
+   "quote": "Up to 6.9× longer sequences on the same GPU"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/huggingface/trl",
+   "quote": "to scale from single GPU to multi-node clusters using methods like"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/huggingface/trl",
+   "quote": "enables training on large models with modest hardware via quantization and LoRA/QLoRA."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/huggingface/trl",
+   "quote": "for accelerating training using optimized kernels."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/huggingface/trl",
+   "quote": "A simple interface lets you fine-tune with models without needing to write code."
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/huggingface/trl",
+   "quote": "pip install git+https://github.com/huggingface/trl.git"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/huggingface/trl",
+   "quote": "**Command Line Interface (CLI)**: A simple interface lets you fine-tune with models without needing to write code."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://huggingface.co/docs/trl/index",
+   "quote": "html lang: 없음\nhreflang: en, x-default\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

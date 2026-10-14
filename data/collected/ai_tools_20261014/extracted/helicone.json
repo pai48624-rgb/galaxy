@@ -1,0 +1,62 @@
+{
+ "company": "Helicone, Inc (Mintlify에 합류)",
+ "one_liner_ko": "AI 엔지니어를 위한 AI 게이트웨이이자 LLM 관측(observability) 플랫폼.",
+ "what_it_does_ko": "Helicone은 AI 앱의 요청을 라우팅·디버깅·분석하는 AI 게이트웨이 겸 LLM 관측 플랫폼이다. OpenAI 호환 통합 API 하나로 OpenAI·Anthropic·Google 등 100개 이상 모델에 접근하며 지능형 라우팅과 자동 대체(fallback)를 제공한다. 코드 한 줄로 모든 요청을 기록하고 에이전트·챗봇의 트레이스와 세션을 살펴보며 비용·지연·품질 지표를 추적한다. 프롬프트 버전 관리, 플레이그라운드, 데이터셋, 캐싱, 속도 제한, 알림 기능을 갖췄고 셀프 호스팅 문서도 있다.",
+ "key_features": [
+  "OpenAI 호환 AI 게이트웨이로 100개 이상 모델 접근(라우팅·자동 대체)",
+  "코드 한 줄로 요청 기록",
+  "에이전트 트레이스·세션 검사와 디버깅",
+  "비용·지연·품질 지표 추적, PostHog 내보내기",
+  "운영 데이터 기반 프롬프트 버전 관리와 배포",
+  "플레이그라운드에서 프롬프트 테스트",
+  "캐싱·속도 제한·알림·리포트·HQL",
+  "SOC 2·GDPR 준수"
+ ],
+ "use_cases_ko": [
+  "AI 기업이 LLM 앱을 라우팅·디버깅·분석",
+  "에이전트·챗봇·문서 처리 파이프라인의 트레이스 점검"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Hobby 무료: 월 요청 10,000건, 저장 1GB, 1좌석·1조직, 보관 7일)",
+  "plans": [
+   {"name": "Hobby", "price": 0, "currency": "USD", "period": "month", "limits": "월 요청 10,000건, 저장 1GB, 1좌석·1조직", "page_lang": "en"},
+   {"name": "Pro", "price": 79, "currency": "USD", "period": "month", "limits": "좌석 무제한, 알림·리포트, HQL; 사용량 기반 요금 추가; 7일 무료 체험", "page_lang": "en"},
+   {"name": "Team", "price": 799, "currency": "USD", "period": "month", "limits": "조직 5개, SOC-2·HIPAA, 전용 Slack; 사용량 기반 요금 추가; 7일 무료 체험", "page_lang": "en"},
+   {"name": "Enterprise", "price": null, "currency": "USD", "period": "month", "limits": "맞춤 패키지, SAML SSO, 온프레미스 배포", "page_lang": "en"}
+  ],
+  "pricing_url": "https://www.helicone.ai/pricing"
+ },
+ "open_source": "오픈소스(라이선스 이름 미표기)",
+ "api": "있음",
+ "platforms": ["웹", "API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://www.helicone.ai/", "quote": "© 2025 Helicone, Inc"},
+  {"field": "company", "url": "https://www.helicone.ai/", "quote": "Helicone Joins Mintlify"},
+  {"field": "one_liner_ko", "url": "https://github.com/Helicone/helicone", "quote": "Helicone is an AI Gateway & LLM Observability Platform for AI Engineers"},
+  {"field": "what_it_does_ko", "url": "https://www.helicone.ai/", "quote": "The world's fastest-growing AI companies rely on Helicone\nto route, debug, and analyze their applications."},
+  {"field": "what_it_does_ko", "url": "https://docs.helicone.ai/getting-started/quick-start", "quote": "Helicone’s AI Gateway is an OpenAI-compatible, unified API with access to 100+ models, including OpenAI, Anthropic, Vertex, Groq, and more."},
+  {"field": "what_it_does_ko", "url": "https://docs.helicone.ai/getting-started/quick-start", "quote": "Self-Hosting"},
+  {"field": "key_features", "url": "https://github.com/Helicone/helicone", "quote": "Access 100+ AI models with 1 API key through the OpenAI API with intelligent routing and automatic fallbacks."},
+  {"field": "key_features", "url": "https://github.com/Helicone/helicone", "quote": "One-line of code to log all your requests from"},
+  {"field": "key_features", "url": "https://github.com/Helicone/helicone", "quote": "Inspect and debug traces & [sessions]"},
+  {"field": "key_features", "url": "https://github.com/Helicone/helicone", "quote": "Export to [PostHog]"},
+  {"field": "key_features", "url": "https://github.com/Helicone/helicone", "quote": "using production data. Deploy prompts through the AI Gateway without code changes."},
+  {"field": "key_features", "url": "https://github.com/Helicone/helicone", "quote": "Rapidly test and iterate on prompts, sessions and traces in our UI."},
+  {"field": "key_features", "url": "https://www.helicone.ai/pricing", "quote": "Caching \n Rate limits \n Automatic fallbacks"},
+  {"field": "key_features", "url": "https://github.com/Helicone/helicone", "quote": "**Enterprise Ready**: SOC 2 and GDPR compliant"},
+  {"field": "use_cases_ko", "url": "https://www.helicone.ai/", "quote": "to route, debug, and analyze their applications."},
+  {"field": "use_cases_ko", "url": "https://github.com/Helicone/helicone", "quote": "for agents, chatbots, document processing pipelines, and more"},
+  {"field": "pricing", "url": "https://www.helicone.ai/pricing", "quote": "Hobby\n Free\n Kickstart your AI project.\n 10,000 free requests\n 1 GB storage\n 1 seat, 1 organization"},
+  {"field": "pricing", "url": "https://www.helicone.ai/pricing", "quote": "$79\n per month\n For growing teams."},
+  {"field": "pricing", "url": "https://www.helicone.ai/pricing", "quote": "$799\n per month\n For scaling companies."},
+  {"field": "pricing", "url": "https://www.helicone.ai/pricing", "quote": "* Usage-based pricing applies\n 7-day free trial"},
+  {"field": "pricing", "url": "https://www.helicone.ai/pricing", "quote": "Custom MSA\n SAML SSO\n On-prem deployment"},
+  {"field": "open_source", "url": "https://www.helicone.ai/pricing", "quote": "Short answer: Helicone gives you more provider flexibility, is open-source, and scales more cost-effectively."},
+  {"field": "api", "url": "https://www.helicone.ai/pricing", "quote": "API access 10 calls/min"},
+  {"field": "platforms", "url": "https://www.helicone.ai/", "quote": "Dashboard\n Requests \n Segments \n Sessions"},
+  {"field": "korean_support", "url": "https://www.helicone.ai/", "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

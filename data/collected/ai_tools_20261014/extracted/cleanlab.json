@@ -1,0 +1,49 @@
+{
+ "company": "Cleanlab Inc. (Handshake AI에 인수됨)",
+ "one_liner_ko": "모든 AI 에이전트의 잘못된 응답을 찾아내고 고쳐, 고객에게 AI 실수가 닿지 않게 하는 플랫폼",
+ "what_it_does_ko": "Cleanlab은 AI 에이전트의 잘못된 응답을 실시간으로 감지하고 바로잡아 안전·규정·신뢰 기준을 맞추게 해 준다. 환각, 검색 오류, 문서 공백, 정책 위반, 악의적 사용 등에 대한 가드레일을 제공한다. 비개발 팀도 사람이 개입하는 흐름으로 AI 응답과 지식 베이스를 고칠 수 있다. 기존 시스템을 바꾸지 않는 독립 계층으로 VPC나 SaaS로 배포된다. 별도로 ML 데이터셋의 라벨 오류·이상치·중복 등을 자동으로 찾는 오픈소스 Python 라이브러리도 있다.",
+ "key_features": [
+  "AI 응답 실시간 오류 감지(환각·검색 오류·정책 위반 등 가드레일)",
+  "실시간 신뢰 점수",
+  "비개발자도 쓰는 사람 개입(human-in-the-loop) 응답·지식 베이스 수정 흐름",
+  "AI에서 사람 상담원으로의 원활한 전환",
+  "VPC 또는 SaaS 배포, 기존 스택 변경 불필요",
+  "오픈소스 라이브러리: 데이터셋의 라벨 오류·이상치·중복 자동 감지",
+  "다중 주석자 데이터의 합의·주석자 품질 추정, 능동 학습용 재라벨 대상 제안"
+ ],
+ "use_cases_ko": [
+  "고객지원 팀이 브랜드 위험 없이 AI 상담 에이전트 운영",
+  "사내 직원용 AI 에이전트를 빠르게 안전하게 배포",
+  "ML 엔지니어가 지저분한 실제 데이터셋을 정리해 모델 성능 향상"
+ ],
+ "pricing": {"free_tier": "불명", "plans": [], "pricing_url": null},
+ "open_source": "오픈소스(라이선스 이름은 받은 본문에 없음)",
+ "api": "불명",
+ "platforms": ["웹", "윈도", "맥"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://cleanlab.ai", "quote": "© 2024 Cleanlab Inc."},
+  {"field": "company", "url": "https://cleanlab.ai", "quote": "Cleanlab has been acquired by Handshake AI."},
+  {"field": "one_liner_ko", "url": "https://cleanlab.ai", "quote": "Keep AI mistakes away from your customers."},
+  {"field": "one_liner_ko", "url": "https://cleanlab.ai", "quote": "Detect and remediate incorrect responses from any AI Agent"},
+  {"field": "what_it_does_ko", "url": "https://cleanlab.ai", "quote": "guardrails for hallucinations, retrieval errors, documentation gaps, policy violations, malicious use, and more."},
+  {"field": "what_it_does_ko", "url": "https://cleanlab.ai", "quote": "It deploys as an independent layer that adds safety, control, and trust without requiring changes to your existing stack."},
+  {"field": "what_it_does_ko", "url": "https://github.com/cleanlab/cleanlab", "quote": "Cleanlab’s open-source library helps you **clean** data and **lab**els by automatically detecting issues in a ML dataset."},
+  {"field": "key_features", "url": "https://cleanlab.ai", "quote": "Catch AI mistakes in real time"},
+  {"field": "key_features", "url": "https://cleanlab.ai", "quote": "Mitigates AI failures with real-time trust scores and guardrails."},
+  {"field": "key_features", "url": "https://cleanlab.ai", "quote": "Empower non-technical teams with the fastest human-in-the-loop workflow to control and improve AI responses"},
+  {"field": "key_features", "url": "https://cleanlab.ai", "quote": "Escalates smoothly from AI to human support."},
+  {"field": "key_features", "url": "https://cleanlab.ai", "quote": "Deploy privately within your own cloud to maintain full control."},
+  {"field": "key_features", "url": "https://github.com/cleanlab/cleanlab", "quote": "detect data issues (outliers, duplicates, label errors, etc)"},
+  {"field": "key_features", "url": "https://github.com/cleanlab/cleanlab", "quote": "infer consensus + annotator-quality for multi-annotator data"},
+  {"field": "use_cases_ko", "url": "https://cleanlab.ai", "quote": "Cleanlab helps customer support teams deploy trustworthy AI that delivers results without compromising user experience."},
+  {"field": "use_cases_ko", "url": "https://cleanlab.ai", "quote": "Build AI Agents that your team can trust."},
+  {"field": "use_cases_ko", "url": "https://github.com/cleanlab/cleanlab", "quote": "To facilitate **machine learning with messy, real-world data**"},
+  {"field": "open_source", "url": "https://github.com/cleanlab/cleanlab", "quote": "## Run cleanlab open-source"},
+  {"field": "platforms", "url": "https://github.com/cleanlab/cleanlab", "quote": "This cleanlab package runs on Python 3.10+ and supports Linux, macOS, as well as Windows."},
+  {"field": "platforms", "url": "https://cleanlab.ai", "quote": "Secure, seamless access without managing any infrastructure."},
+  {"field": "korean_support", "url": "https://cleanlab.ai", "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

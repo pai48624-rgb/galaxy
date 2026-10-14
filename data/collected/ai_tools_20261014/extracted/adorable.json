@@ -1,0 +1,95 @@
+{
+ "company": null,
+ "one_liner_ko": "원하는 것을 설명하면 실시간 미리보기·터미널·원클릭 게시까지 갖춰 앱을 만들어 주는 오픈소스 AI 앱 빌더.",
+ "what_it_does_ko": "Adorable은 오픈소스 AI 앱 빌더로, 원하는 것을 설명하면 실시간으로 앱을 만든다. 프로젝트마다 Freestyle VM 두 대(에이전트가 고치는 개발 VM, 완성 앱을 서비스하는 운영 VM)를 쓴다. VM이 계속 유지되어 코드·패키지·터미널·대화 기록이 그대로 남는다. 직접 실행하려면 Freestyle API 키와 LLM 키가 필요하다.",
+ "key_features": [
+  "실제 리눅스 VM에서 코드를 쓰고 실행하는 대화형 앱 제작",
+  "실시간 미리보기·여러 터미널",
+  "게시와 스냅샷 기반 롤백",
+  "프로젝트 상태·대화 기록 영구 보존",
+  "공개 GitHub 저장소에서 프로젝트 시작",
+  "OpenAI·Anthropic 지원"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": "있음 (오픈소스 직접 실행, Freestyle·LLM API 키 필요)",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "오픈소스(라이선스 이름은 받아 둔 본문에 없음)",
+ "api": "불명",
+ "platforms": [
+  "웹"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/freestyle-sh/Adorable",
+   "quote": "An open-source AI app builder. Describe what you want, and Adorable builds it for you in real time — complete with a live preview, terminal, and one-click publishing."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/freestyle-sh/Adorable",
+   "quote": "Every project is a pair of [Freestyle](https://freestyle.sh) VMs"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/freestyle-sh/Adorable",
+   "quote": "The VMs are permanent, so a project's code, installed packages, terminal sessions and history are simply still there when you come back."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/freestyle-sh/Adorable",
+   "quote": ".env needs a Freestyle API key, plus an LLM key"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/freestyle-sh/Adorable",
+   "quote": "Chat with an AI that writes, edits, and runs code inside a real Linux VM"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/freestyle-sh/Adorable",
+   "quote": "Watch the app update as it is built, and open as many shells on the VM as you want"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/freestyle-sh/Adorable",
+   "quote": "every release keeps a snapshot to roll back to"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/freestyle-sh/Adorable",
+   "quote": "Start a project from any public repository"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/freestyle-sh/Adorable",
+   "quote": "with OpenAI and Anthropic support"
+  },
+  {
+   "field": "pricing",
+   "url": "https://github.com/freestyle-sh/Adorable",
+   "quote": ".env needs a Freestyle API key, plus an LLM key (or add one in the UI)"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/freestyle-sh/Adorable",
+   "quote": "An open-source AI app builder."
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/freestyle-sh/Adorable",
+   "quote": "Open [http://localhost:3000](http://localhost:3000) to start building."
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "GitHub 공개 오픈소스, 직접 설치·실행(Freestyle API 키와 LLM 키 필요), 구독 요금제 안내 없음",
+   "diff": "기존 분류 '프리미엄(무료+유료 구독)'과 달리 페이지에는 유료 구독이 없고 오픈소스 셀프호스팅 + 외부 API 사용료 구조",
+   "url": "https://github.com/freestyle-sh/Adorable"
+  }
+ ],
+ "plan_change": []
+}

@@ -1,0 +1,183 @@
+=== [home] https://supacode.sh (lang=en)
+Supacode 
+ supacode 
+ Pricing My license Docs GitHub 
+ The command center for coding agents.
+ Run 50+ coding agents in parallel. Blazing fast, source available, native macOS app built on libghostty.
+ Download for macOS or $ brew install supacode Requires macOS 26 Tahoe 
+ Actual screenshot of using supacode to develop supacode
+ Built different
+ macOS Fully native
+ Built on libghostty. No Electron, no web wrappers. Pure macOS performance you can feel in every keystroke.
+ BYOA Bring your own agents
+ Run Claude Code, Codex, Opencode — any CLI agent, no translation layer. Your terminal, your rules.
+ Git Worktree isolation
+ Every agent gets its own git worktree. No conflicts, no stepping on toes. True parallel development.
+ GitHub GitHub native
+ Open PRs, review CI checks, resolve conflicts — all without leaving the terminal.
+ Source Source available
+ Read the code, report issues, and contribute on GitHub.
+ Scale 50+ agents
+ Run dozens of coding agents simultaneously. Each in its own isolated environment, all under one roof.
+ Buy once. Use forever.
+ A lifetime license with unlimited local worktree creations and one year of updates. No subscription, no automatic renewal.
+ Basic
+ $ 99 USD / license 
+ One person on one Mac.
+ Buy Basic 
+ Standard
+ $ 129 USD / license 
+ One person on two Macs.
+ $198 Save 35% compared with two Basic licenses.
+ Buy Standard 
+ Basic and Standard
+ Move between Macs by deactivating a previous Mac
+ Optional $59 renewal for the whole license
+ Team
+ $ 79 USD / seat 
+ One Mac per seat, minimum 3 seats.
+ Buy Team 
+ Team portal for seat assignment and reassignment
+ Each seat gets its own license key
+ Optional renewal through support
+ Licensing questions
+ Need help? [email protected] 
+ Manage an existing license 
+ What counts toward the free trial? Your first five successful local worktree creations across all repositories on this Mac. Deleting a worktree does not reset the count. Failed creations do not count, and SSH worktree creation stays free.
+ What happens after five creations? Supacode asks for a license before creating another local worktree. Your existing worktrees and terminals remain usable. If you already use Supacode, you get five additional local creations when you first install the licensed version.
+ How do I activate or move my license? For Basic and Standard, we email your license key after checkout. Paste it into Settings → License. Basic allows one active Mac and Standard allows two, both for one person. Team buyers use the license portal to assign seats and email each person their own key for one Mac. Deactivate a Mac in Settings → License to free its place; Team owners can also reassign seats in the portal.
+ Do I have to renew? No. Keep using the versions you own forever. Your purchase includes one year of updates. Basic and Standard can renew for $59 USD per license for another year, with no automatic renewal. Contact support for Team update renewals. Basic and Standard owners can download included versions from the license portal.
+ Can I work offline? Activation needs an internet connection. Every plan can use its saved license offline for versions it owns. Transfers, refunds, and other license changes take effect on a Mac after its next successful license refresh.
+ Supacode 
+ Terms Refunds Privacy GitHub Releases Docs @khoiracle
+
+=== [about] https://docs.supacode.sh/ (lang=en)
+Supacode Docs 
+ Supacode 
+ Supacode 
+ Search ⌘ K 
+ Home Getting Started Installation Your First Repository Your First Worktree 
+ Worktree Repository Commands Repository Settings 
+ Keyboard Shortcuts Terminal Command Palette GitHub GitHub CLI Integration Pull Requests and CI 
+ Configuration Settings and Storage Updates 
+ Reference Tips FAQ Privacy 
+ Supacode Docs 
+ Supacode Docs
+ Run terminal-first coding workflows across isolated git worktrees on macOS
+ Supacode is a native macOS app for running terminal-based coding workflows across multiple git worktrees. It combines repository management, a Ghostty-backed terminal, GitHub CLI integration, and per-repository automation in one window.
+ Core workflow 
+ Install Supacode 
+ Add a repository 
+ Create a worktree 
+ Open it in your editor or use the built-in terminal
+ Configure your repo workflow 
+ What Supacode covers 
+ repositories and worktrees
+ A built-in terminal with tabs, splits, search, and notifications
+ GitHub CLI integration and PR / CI workflows 
+ Repository settings , repository commands , and local storage 
+ Good first reads 
+ Installation 
+ Your First Repository 
+ Your First Worktree 
+ Repository Commands 
+ FAQ 
+ A good mental model 
+ Supacode is best thought of as a worktree command center:
+ repositories are the top-level container
+ worktrees are the unit of parallel work
+ the terminal is where the work happens
+ GitHub integration adds PR and CI awareness without replacing gh 
+ On this page
+ Core workflow What Supacode covers Good first reads A good mental model
+
+=== [meta] https://supacode.sh
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/supabitapp/supacode
+# Supacode
+
+**A native macOS command center for running coding agents in parallel.**
+
+Run several coding agents side by side from one window: each task gets its own git worktree and
+its own real terminal. Sessions persist in the background, so quitting the app or dropping an SSH
+connection loses nothing.
+
+[supacode.sh](https://supacode.sh)
+
+<img width="3180" height="1788" alt="Supacode screenshot" src="https://github.com/user-attachments/assets/72a8dc95-020a-4dc2-9010-ba1adc9518ba" />
+
+## Features
+
+### Worktree-first workflow
+
+Each task gets its own git worktree and terminal, so agents run in parallel without colliding.
+Create one from the sidebar, a hotkey, the command palette, the CLI, or a deeplink. The sidebar
+refreshes branch, file, and pull request state live, nests rows by branch, and hoists the
+worktrees that need you (an agent awaiting input, a running script) to the top. Pin, archive,
+auto-delete after N days, and jump to any with ⌃1 to ⌃9.
+
+### Background session persistence
+
+Sessions run inside [zmx](https://zmx.sh), a lightweight session daemon, not as children of the
+app. Quit and relaunch, and every session reattaches exactly where you left it, scrollback
+included. On by default; a quit option tears everything down when you want a clean start.
+
+### Remote SSH repositories (Beta)
+
+Point Supacode at a repository on a remote host over SSH and it manages that repo's worktrees
+like a local one. Every git probe and the terminal share one multiplexed SSH connection, so you
+authenticate (or touch your security key) once. When the host has zmx, remote sessions survive
+dropped connections and laptop sleep: the connection retries and reattaches instead of
+restarting. Beta, with some local-only features reduced.
+
+### Folders and repositories
+
+Git repositories and plain folders are both first-class in the sidebar. A folder gets a real
+persistent terminal rooted there, with the same tabs, scripts, pinning, and appearance as a repo,
+minus the git-only tools. You can also clone a remote URL straight into a folder.
+
+### Coding agent presence
+
+Supacode detects the agent in each pane and shows a live badge: busy, awaiting input, or idle. It
+supports the common agents (Claude, Codex, Copilot) through hooks it installs, works locally and
+over SSH, and drives notifications so you know the moment an agent needs you.
+
+### The CLI and deeplinks
+
+Drive the app from any terminal, script, or other tool. The `supacode` CLI manages worktrees,
+tabs, splits, and repos, and every session exports its repo, worktree, tab, and surface IDs, so
+commands default to the session you run them in. Deeplinks (`supacode://...`) mirror the CLI, so
+you can bind an action to a hotkey or fire it from another app.
+
+### More
+
+- **A real terminal.** libghostty renders every session, with tabs, horizontal and vertical
+  splits, per-surface backgrounds, and theme sync with the app's appearance.
+- **Command palette.** Fuzzy-search and run any action without the mouse: jump to a worktree, open
+  or clone a repo, manage worktrees, run scripts, and drive the full set of pull request actions.
+- **Pull request tracking.** With GitHub integration on, each worktree's PR state, checks, and
+  merge readiness show in the sidebar and refresh live, with configurable merge strategy.
+- **Notifications and bells.** In-app and optional system notifications, a selectable sound,
+  per-surface muting, and an option to float a notified worktree to the top.
+- **Custom scripts.** Named commands with an icon and tint, per repository or global, that run in
+  their own tab and appear in the Script Menu, the palette, and as deeplinks. Repositories also
+  get setup and archive scripts.
+- **Auto-updates** through Sparkle, with a selectable update channel.
+
+## Requirements
+
+- macOS 26.0+
+- [mise](https://mise.jdx.dev/) for the pinned toolchain. Add `~/.local/bin` to your `PATH`.
+- git submodules: `git submodule update --init --recursive`
+- **Xcode 26.3** if you are on macOS 26.4+ (see [below](#building-on-macos-264-tahoe)).
+
+## Quick start
+
+```bash
+git clone --recursive git@github.com:supabitapp/supacode.git
+cd supacode
+mise install
+make doctor    # check every build prerequisite and print 

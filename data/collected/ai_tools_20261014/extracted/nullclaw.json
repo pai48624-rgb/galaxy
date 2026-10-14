@@ -1,0 +1,43 @@
+{
+ "company": null,
+ "one_liner_ko": "의존성 없는 단일 실행 파일로 돌아가는 고성능 자율 AI 에이전트 런타임.",
+ "what_it_does_ko": "NullClaw는 Zig로 만든 의존성 없는 단일 바이너리 형태의 자율 AI 에이전트 실행 엔진이다. 모델 공급자·도구·메모리·멀티채널 게이트웨이를 내장해 에이전트를 로컬에서 돌리거나 운영 환경에 배포할 수 있다. 터미널 모드로 사람이 지켜보며 대화형으로 쓰거나, 게이트웨이 모드로 사람 감독 없이 백그라운드 작업을 처리할 수 있다. NullHub 생태계와 묶으면 브라우저 대시보드에서 실시간 스트리밍과 승인을 할 수 있다.",
+ "key_features": [
+  "OpenRouter·OpenAI 호환 API·사용자 지정 엔드포인트를 지원하는 모델 멀티플렉서",
+  "셸·파일·검색 도구 내장, 자동 승인·거부 목록과 샌드박스",
+  "터미널·WebSocket·헤드리스 게이트웨이 채널",
+  "컨텍스트 자동 압축과 재시작 후 세션 저장·복원",
+  "678KB 정적 바이너리, 약 1MB 메모리, 2ms 미만 기동",
+  "50개 이상 공급자·19개 채널·35개 이상 도구·MCP·서브에이전트"
+ ],
+ "use_cases_ko": [
+  "개발자가 터미널에서 코드 리팩터링·테스트 실행·PR 생성을 대화형으로 맡김",
+  "오케스트레이터(NullBoiler)에서 작업을 받아 사람 감독 없이 백그라운드로 실행",
+  "팀이 NullHub 대시보드로 도구 실행 타임라인을 보며 시각적으로 승인"
+ ],
+ "pricing": {"free_tier": "불명", "plans": [], "pricing_url": null},
+ "open_source": "MIT",
+ "api": "불명",
+ "platforms": ["CLI", "웹"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "one_liner_ko", "url": "https://nullclaw.io", "quote": "The High-Performance Autonomous AI Agent Runtime"},
+  {"field": "what_it_does_ko", "url": "https://nullclaw.io", "quote": "Zero-dependency, single-binary execution engine for autonomous AI agents."},
+  {"field": "what_it_does_ko", "url": "https://nullclaw.io", "quote": "Features integrated providers, tools, memory, and a multi-channel gateway"},
+  {"field": "key_features", "url": "https://nullclaw.io", "quote": "High-throughput model abstraction layer supporting OpenRouter,"},
+  {"field": "key_features", "url": "https://nullclaw.io", "quote": "Configurable auto-approve and deny lists"},
+  {"field": "key_features", "url": "https://nullclaw.io", "quote": "Terminal, WebSocket, and headless gateway modes for seamless integration"},
+  {"field": "key_features", "url": "https://nullclaw.io", "quote": "Session save/restore across restarts"},
+  {"field": "key_features", "url": "https://github.com/nullclaw/nullclaw", "quote": "678 KB binary. ~1 MB RAM. Boots in <2 ms. Runs on anything with a CPU."},
+  {"field": "key_features", "url": "https://github.com/nullclaw/nullclaw", "quote": "50+ providers, 19 channels, 35+ tools, 10 memory engines, multi-layer sandbox, tunnels, hardware peripherals, MCP, subagents, streaming, voice"},
+  {"field": "use_cases_ko", "url": "https://nullclaw.io", "quote": "Launch NullClaw in terminal mode to refactor code, execute tests, and"},
+  {"field": "use_cases_ko", "url": "https://nullclaw.io", "quote": "Deploy NullClaw in gateway mode and dispatch automated task assignments"},
+  {"field": "use_cases_ko", "url": "https://nullclaw.io", "quote": "Ideal for teams requiring a comprehensive visual operator dashboard."},
+  {"field": "open_source", "url": "https://github.com/nullclaw/nullclaw", "quote": "alt=\"License: MIT\""},
+  {"field": "platforms", "url": "https://nullclaw.io", "quote": "dual operator surface"},
+  {"field": "platforms", "url": "https://nullclaw.io", "quote": "top-level CLI commands"},
+  {"field": "korean_support", "url": "https://nullclaw.io", "quote": "화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

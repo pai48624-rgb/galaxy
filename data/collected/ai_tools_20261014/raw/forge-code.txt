@@ -1,0 +1,285 @@
+=== [home] https://forgecode.dev (lang=en)
+ForgeCode: your software factory 
+ Skip to content 
+ About us 
+ Book a demo 
+ Your software factory.
+It never clocks out
+ Bugs, forum posts, Slack, alerts or a prompt start work; it lands on your board as a tested change, ready to ship.
+ Book a demo 
+ A 
+ Rate limiter rewrite (5 of 5) 
+ All issues Open Search issues 
+ Issue Status Priority Runs Updated 
+ LRK-412 Token bucket store on Redis with per-key TTL Done High Idle 02:14 
+ LRK-413 Middleware: 429 with Retry-After and RateLimit-* headers In Progress High Running now 
+ LRK-414 Per-tenant overrides read from the plans table In Progress Medium Running now 
+ LRK-415 Load test: 12k rps burst, p99 under 40 ms To Do Medium Blocked by 413 01:52 
+ LRK-416 Docs: rate limits page and SDK retry examples To Do Low Idle 01:52 
+ + Add issue
+ LRK-413 Middleware: 429 with Retry-After x 
+ Claude Sonnet 4.5 expert lrk-413 Run 
+ larkspur-cloud-1 2 agents running 1 command running K for commands 
+ Set it up once. It keeps shipping
+ What a normal day looks like, three months after setup.
+ up 94 days since setup 212 missions 1,486 PRs merged 
+ 09:14 Tue 
+ 09:14 Priya mentions @ForgeCode in a Slack thread 
+ 09:16 Mission opens, splits into 5 issues 
+ 11:40 LRK-413: tests fail, agent reworks, tests pass 
+ 14:05 Factory crashes (node OOM), restarts itself, runs resume from checkpoint 
+ 18:32 PR #1187 lands back in the same thread 
+ 02:10 Production alert: RCA, PR, explanation for the dev. Automations nudge and remind 
+ 07:00 Morning board: 5 done, 1 in review with staged demo, video proof and 6 checks passed 
+ 07:05 Weekly executive summary lands in #eng-leads. Day 95 starts 
+ Priya mentions @ForgeCode in a Slack thread
+ P 
+ Larkspur ▾ 
+ Threads Activity 
+ Channels
+ # general # api-platform # billing-oncall # deploys # incidents Direct messages
+ P Priya Raghunathan D Dev Malhotra ForgeCode # api-platform Rate limits, gateway, public API D Dev Malhotra 9:02 AM Gateway p99 back to normal after the 08:00 spike.
+ P Priya Raghunathan 9:14 AM Rate limiter is still the old in-memory one...
+ 1 reply Last reply 9:16 AM 
+ Message #api-platform
+ Thread # api-platform ✕ 
+ P Priya Raghunathan 9:14 AM Rate limiter is still the old in-memory one, so it resets on every deploy and customers on the Scale plan keep hitting 429s at 08:00 UTC. @ForgeCode rewrite it on Redis, keep the public headers, per-tenant overrides from the plans table, and load test it before you open a PR.
+ 👀 2 ✅ 1 
+ 1 reply
+ ForgeCode APP 9:16 AM On it. Opened mission LRK-410 on larkspur-cloud-1 with 5 issues. I will report back in this thread when a PR is ready.
+ Reply...
+ Rate limiter rewrite for the public API (5 of 5) 
+ All issues Open Search issues 
+ Issue Status Priority Runs Updated 
+ LRK-412 Token bucket store on Redis with per-key TTL In Progress High Running 09:16 
+ LRK-413 Middleware: 429 with Retry-After and RateLimit-* headers In Progress High Running 09:16 
+ LRK-414 Per-tenant overrides read from the plans table In Progress Medium Running 09:16 
+ LRK-415 Load test: 12k rps burst, p99 under 40 ms To Do Medium Blocked by 412, 413 09:16 
+ LRK-416 Docs: rate limits page and SDK retry examples To Do Low Idle 09:16 
+ + Add issue
+ Rate limiter rewrite (5 of 5) 
+ All issues Open 
+ LRK-412 Token bucket store Done 
+ LRK-413 Middleware: 429 + headers In Progress 
+ LRK-414 Per-tenant overrides In Progress 
+ LRK-415 Load test 12k rps To Do 
+ LRK-416 Docs and SDK retries To Do 
+ LRK-413 Middleware: 429 with Retry-After x 
+ skill loaded .agents/skills/api-middleware/SKILL.md
+ exec cargo test -p gateway rate_limit
+ FAIL test_retry_after_is_whole_seconds: expected "2", got "1.4"
+ agent Retry-After must be an integer per RFC 9110. Rounding up in headers.rs and adding a regression test.
+ exec cargo test -p gateway rate_limit
+ PASS 14 passed, 0 failed in 3.2s
+ exec cargo clippy --all-targets -D warnings
+ PASS 0 warnings
+ review adversarial reviewer: no findings
+ Claude Sonnet 4.5 expert lrk-413 Run 
+ Factories 3 
+ Search factories
+ Selected (1)
+ larkspur-cloud-1 Cloud factory, medium. 2 runs active, 4h 49m uptime 
+ online 
+ Online ( 2 )
+ larkspur-cloud-2 Cloud factory, small. Idle, paused since 11:20 
+ online 
+ larkspur-aws-eu Your cloud (BYOC): AWS eu-west-1. Idle 
+ online 
+ Offline ( 0 )
+ 14:05:12 larkspur-cloud-1 crashed: node OOM during cargo test (LRK-414). Status: offline.
+ 14:05:14 supervisor: restarting factory from image, no human action.
+ 14:06:40 larkspur-cloud-1 online. LRK-413 resumed from checkpoint 118, LRK-414 from checkpoint 97.
+ 14:06:41 0 lines of work lost. Nobody was paged.
+ Larkspur ▾ 
+ Threads Activity 
+ Channels
+ # general # api-platform # billing-oncall # deploys # incidents Direct messages
+ P Priya Raghunathan D Dev Malhotra ForgeCode # api-platform Rate limits, gateway, public API D Dev Malhotra 9:02 AM Gateway p99 back to normal after the 08:00 spike.
+ P Priya Raghunathan 9:14 AM Rate limiter is still the old in-memory one...
+ 2 replies Last reply 6:32 PM 
+ Message #api-platform
+ Thread # api-platform ✕ 
+ P Priya Raghunathan 9:14 AM Rate limiter is still the old in-memory one... rewrite it on Redis, keep the public headers, per-tenant overrides, load test before you open a PR.
+ 👀 2 ✅ 1 
+ 2 replies
+ ForgeCode APP 6:32 PM PR #1187 is ready for review. 4 of 5 issues done; LRK-416 (docs) is open in review for you.
+ Redis token bucket with per-key TTL, 0 allocations on the hot path
+ 429 responses carry Retry-After (integer seconds) and RateLimit-Limit / Remaining / Reset
+ Tenant overrides read from plans.rate_limit_rps , cached 30s
+ Load test: 12,400 rps burst for 5 min, p99 31 ms, 0 dropped
+ 31 files, +1,412 / -688. Tests 212 passed. Clippy clean. Reviewer agent: 2 findings fixed before opening. Merge policy for this repo is ask me , so #1187 waits for you. Want a walkthrough of the Redis bucket before you review? Reply here and I will post one.
+ 🎉 3 👀 1 
+ Reply...
+ Automations (7) 
+ All 7 Triggers 4 Watchers 3 Search automations 
+ Title Trigger Last run Next run 
+ Production alert: open incident, find root cause, open PR alert sentry prod 02:10 on alert 
+ Nudge stalled issues: rerun from checkpoint after 6h idle watch: issue idle 6h 03:35 on stall 
+ Remind reviewer when a PR waits more than 8h watch: PR waiting 8h 07:00 on wait 
+ GitHub bug report: triage, reproduce, open issue github issues Mon 16:48 on event 
+ Forum post tagged bug: reproduce and reply forum discourse Mon 11:02 on post 
+ Slack message in #api-platform slack @ForgeCode 09:14 on message 
+ Nightly flaky test sweep, escalate if above 1% schedule 02:00 02:00 Thu 02:00 
+ 02:10 alert: NullPointer in billing/invoice.rs:212 , 38 events in 4 min. LRK-419 opened.
+ 02:33 RCA: refunded invoices have no customer since PR #1174 dropped the join. PR #1188 opened; merge policy merge when gates pass for hotfix/*: merged 02:41.
+ 02:44 posted for Dev Okonkwo (owns billing): what changed, why, and how to verify.
+ Rate limiter rewrite for the public API (6 of 6) 
+ All issues Open Search issues 
+ Issue Status Priority Runs Updated 
+ LRK-412 Token bucket store on Redis with per-key TTL Done High Idle 11:02 
+ LRK-413 Middleware: 429 with Retry-After and RateLimit-* headers Done High Idle 12:48 
+ LRK-414 Per-tenant overrides read from the plans table Done Medium Idle 15:20 
+ LRK-415 Load test: 12k rps burst, p99 under 40 ms Done Medium Idle 18:19 
+ LRK-416 Docs: rate limits page and SDK retry examples In Review Low Idle 18:31 
+ LRK-419 Incident: NullPointer in billing/invoice.rs (alert). PR #1188 merged by factor
+
+=== [about] https://forgecode.dev/about/ (lang=en)
+About ForgeCode: the problem we solve and our vision 
+ Skip to content 
+ About us 
+ Book a demo 
+ About ForgeCode
+ The problem 
+ Developers got faster. Delivery didn't
+ Three 2026 reports, three ways of measuring it.
+ 79% agree 
+ “individual developer productivity has improved with AI, but the overall software delivery process has not accelerated at the same pace” 
+ GitLab, AI Accountability Report, June 2026 Harris Poll, 1,528 developers and tech buyers 
+ +15% feature branches −7% main branch 
+ “Throughput on the main branch, however, declined 7% from last year” 
+ CircleCI, 2026 State of Software Delivery, Feb 2026 28M+ CI workflows, median team 
+ +65% AI usage +7.76% PR throughput 
+ “AI adoption is up 65%. Throughput moved less than 8%.” 
+ DX, AI and Engineering Velocity, April 2026 400+ companies, median PR throughput 
+ The vision 
+ From dev productivity to org throughput
+ Speed of experimentation is the only lasting advantage a business has.
+ Today Engineers carry the whole SDLC
+ Tests, releases, upgrades and incidents queue up behind the same people writing the code.
+ Next The loop runs itself, in plain sight
+ Checks, rollouts and production monitoring run continuously inside the guardrails your team sets. Live dashboards and executive summaries show where every piece of work stands.
+ The goal The whole org moves as one
+ A new way to build software: product, engineering and leadership work from the same picture, and the organisation ships at its full throughput.
+ Builds, tests and ships around the clock.
+ Product
+ How it works 
+ Your terms 
+ Use cases 
+ Company
+ About us 
+ Book a demo 
+ © 2026 ForgeCode
+
+=== [meta] https://forgecode.dev
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/tailcallhq/forgecode
+<h1 align="center">⚒️ Forge: AI-Enhanced Terminal Development Environment</h1>
+<p align="center">A comprehensive coding agent that integrates AI capabilities with your development environment</p>
+
+<p align="center"><code>curl -fsSL https://forgecode.dev/cli | sh</code></p>
+
+[![CI Status](https://img.shields.io/github/actions/workflow/status/tailcallhq/forgecode/ci.yml?style=for-the-badge)](https://github.com/tailcallhq/forgecode/actions)
+[![GitHub Release](https://img.shields.io/github/v/release/tailcallhq/forgecode?style=for-the-badge)](https://github.com/tailcallhq/forgecode/releases)
+[![Discord](https://img.shields.io/discord/1044859667798568962?style=for-the-badge&cacheSeconds=120&logo=discord)](https://discord.gg/kRZBPpkgwq)
+[![CLA assistant](https://cla-assistant.io/readme/badge/tailcallhq/forgecode?style=for-the-badge)](https://cla-assistant.io/tailcallhq/forgecode)
+
+![Code-Forge Demo](https://assets.antinomy.ai/images/forge_demo_2x.gif)
+
+---
+
+<details>
+<summary><strong>Table&nbsp;of&nbsp;Contents</strong></summary>
+
+- [Quickstart](#quickstart)
+- [Usage Examples](#usage-examples)
+- [Why Forge?](#why-forge)
+- [How Forge Works: Three Modes](#how-forge-works-three-modes)
+  - [Interactive Mode (TUI)](#interactive-mode-tui)
+  - [One-Shot CLI Mode](#one-shot-cli-mode)
+  - [ZSH Plugin Mode (`:` prefix)](#zsh-plugin-mode--prefix)
+- [ZSH Plugin: The `:` Prefix System](#zsh-plugin-the--prefix-system)
+  - [Agents](#agents)
+  - [Sending Prompts](#sending-prompts)
+  - [Attaching Files](#attaching-files)
+  - [Conversation Management](#conversation-management)
+  - [Git Integration](#git-integration)
+  - [Shell Command Tools](#shell-command-tools)
+  - [Session & Configuration](#session--configuration)
+  - [Skills](#skills)
+  - [Customizing Agent Behavior](#customizing-agent-behavior)
+  - [Semantic Search (Workspace)](#semantic-search-workspace)
+  - [Quick Reference: All `:` Commands](#quick-reference-all--commands)
+- [Command-Line Options](#command-line-options)
+- [Advanced Configuration](#advanced-configuration)
+  - [Provider Configuration](#provider-configuration)
+    - [Managing Provider Credentials](#managing-provider-credentials)
+    - [Deprecated: Environment Variables](#deprecated-environment-variables)
+  - [forge.yaml Configuration Options](#forgeyaml-configuration-options)
+  - [Environment Variables](#environment-variables)
+  - [MCP Configuration](#mcp-configuration)
+  - [Example Use Cases](#example-use-cases)
+  - [Usage in Multi-Agent Workflows](#usage-in-multi-agent-workflows)
+- [Documentation](#documentation)
+- [Community](#community)
+- [Support Us](#support-us)
+
+</details>
+
+---
+
+## Quickstart
+
+To get started with Forge, run the command below:
+
+```bash
+curl -fsSL https://forgecode.dev/cli | sh
+```
+
+On first run, Forge will guide you through setting up your AI provider credentials using the interactive login flow. Alternatively, you can configure providers beforehand:
+
+```bash
+# Configure your provider credentials interactively
+forge provider login
+
+# Then start Forge
+forge
+```
+That's it! Forge is now ready to assist you with your development tasks.
+
+## Usage Examples
+
+Forge can be used in different ways depending on your needs. Here are some common usage patterns:
+
+<details>
+<summary><strong>Code Understanding</strong></summary>
+
+```
+> Can you explain how the authentication system works in this codebase?
+```
+
+Forge will analyze your project's structure, identify authentication-related files, and provide a detailed explanation of the authentication flow, including the relationships between different components.
+
+</details>
+
+<details>
+<summary><strong>Implementing New Features</strong></summary>
+
+```
+> I need to add a dark mode toggle to our React application. How should I approach this?
+```
+
+Forge will suggest the best approach based on your current codebase, explain the steps needed, and even scaffold the necessary components and styles for you.
+
+</details>
+
+<details>
+<summary><strong>Debugging Assistance</strong></summary>
+
+```
+> I'm getting this error: "TypeError: Cannot read property 'map' of undefined". What might be causing it?
+```
+
+Forge will analyze the error, suggest potential causes based on your code, and prop

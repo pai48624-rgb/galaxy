@@ -1,0 +1,305 @@
+=== [home] https://nanoclaw.dev (lang=en)
+NanoClaw - Secure AI Agent for WhatsApp, Telegram & More 
+Meet NanoCo, maintainers of NanoClaw: we raised $12M to give every member of your team a professional assistant →
+ Features Philosophy Quick Start FAQ Docs Skills Blog 
+ English en English Español Français Deutsch Português Italiano Nederlands Русский 中文 日本語 한국어 العربية עברית हिन्दी Türkçe Українська Polski 
+ 30.9k+ Stars 
+ Features Philosophy Quick Start FAQ Docs Skills Blog 
+ NanoClaw 
+ Your personal AI agent. Secure. Lightweight. Yours. 
+ The official website for NanoClaw, the secure personal AI agent. NanoClaw runs securely in containers, built to be understood and customized for your own needs. 
+ Get Started Join Discord 
+ 30.9k+ stars on GitHub 
+ Why NanoClaw?
+ NanoClaw delivers the same core functionality in a codebase you can actually understand. 
+ OpenClaw 
+ Runtime TypeScript files 200 3,680 
+ Runtime TypeScript lines ~29,300 434,453 
+ Direct runtime dependencies 12 70 
+ Manual config files 0 53 
+ Time to understand An afternoon 1–2 weeks 
+ Security model OS container isolation Application-level checks 
+ Architecture Single process + isolated containers Single process, shared memory 
+ What It Supports
+ A small core. Add only the channels, providers, and tools you choose. 
+ 💬
+ Multi-channel messaging 
+ WhatsApp, Telegram, Slack, Discord, Signal, and more. Add only the channels you use, then run one or many at the same time.
+ 🔒
+ Container isolation 
+ Every agent session runs in an isolated Docker container on macOS, Linux, or Windows through WSL2.
+ 🔀
+ Flexible isolation V2 
+ Connect each channel to its own agent for full privacy, share one agent across many channels for unified memory, or fold multiple channels into a single shared session. Pick per channel.
+ 🧠
+ Per-agent workspace 
+ Each agent group keeps its own instructions, memory, credentials, and allowed mounts. Every active session gets a separate container.
+ ⏰
+ Scheduled tasks 
+ Scheduled jobs run with the provider you choose and message you back. Morning briefings, weekly reviews, and more.
+ 🧩
+ Skills over features 
+ Add a channel, provider, or tool with a skill. Your fork keeps only the integrations you choose.
+ ✨
+ AI-native, hybrid by design 
+ The installer handles the happy path. When something needs judgment, your coding agent takes over. No dashboard required — describe the problem in chat.
+ 🔑
+ Credential security 
+ By default, agents never hold raw API keys. Outbound requests route through OneCLI's Agent Vault, which injects credentials at request time and enforces per-agent policies and rate limits.
+ Architecture
+ One Node host. One Docker container per active session. A pair of SQLite queues moves messages across the boundary. 
+ Messaging Apps
+ WhatsApp, Slack, …
+ Router
+ inbound.db
+ Container
+ Bun + selected provider
+ Delivery
+ outbound.db
+ Back to channel
+ streamed reply
+ Single host process
+ One Node host routes every message to the right session, writes it to inbound.db, and wakes its container. No microservices. No message brokers.
+ Per-session containers
+ Every active session runs in its own container with its own message databases. Sessions in one agent group share that group's workspace and memory; separate groups do not.
+ Credential isolation
+ By default, outbound HTTPS routes through OneCLI's Agent Vault, which injects credentials at request time and enforces per-agent policies and rate limits. Agents never hold raw API keys.
+ Self-registering extensions
+ Channels and providers register themselves. Add one with a skill; leave the rest out of your fork.
+ Key files
+ src/index.ts — Entry point — DB init, channel adapters, delivery polls, sweep 
+ src/container-runner.ts — Starts each session container and connects its provider and credentials 
+ src/router.ts — Inbound routing: messaging group → agent group → session → inbound.db 
+ src/delivery.ts — Polls outbound.db, delivers via adapter, handles system actions 
+ src/db/ — Central DB — users, roles, agent groups, messaging groups, wiring, migrations 
+ src/host-sweep.ts — 60s sweep — stale detection, due-message wake, recurrence 
+ Philosophy
+ The principles that shape every NanoClaw decision. 
+ 🔍
+ Small enough to understand
+ One host process. No microservices. Small enough to trace a message from the channel to the agent and back.
+ 🛡️
+ Secure by isolation
+ Agents run in Linux containers and can only see what's explicitly mounted. Bash access is safe because commands run inside the container, not on your host.
+ 👤
+ Built for the individual user
+ NanoClaw isn't a monolithic framework; it's software that fits each user's exact needs. Instead of becoming bloatware, it's designed to be bespoke. Fork it and have your coding agent shape it to you.
+ 🤖
+ AI-native, hybrid by design
+ The install and onboarding flow is scripted, fast, and deterministic. When a step needs judgment — a failed install, a guided decision, a customization — your coding agent can take over.
+ 🧩
+ Skills over features
+ The core carries the registry and infrastructure, not every channel or provider. Add only what you need with a skill, and keep the rest out of your fork.
+ ⚡
+ Choose your provider
+ Claude is the default. Choose Codex during setup, or add OpenCode or Ollama later. Each agent group can use a different provider.
+ Get Started with NanoClaw in 3 Lines
+ Clone NanoClaw, enter the directory, and run the install script. 
+ Terminal 
+ $ git clone https://github.com/nanocoai/nanoclaw.git nanoclaw-v2 
+ $ cd nanoclaw-v2 
+ $ bash nanoclaw.sh 
+ nanoclaw.sh walks you from a fresh machine to an agent you can message. It installs what you need, asks whether Claude or Codex should power the first agent, protects the credential with OneCLI, and pairs your first channel. 
+ Requirements
+ macOS, Linux, or Windows (WSL2) Node.js 20+ & pnpm 10+ Claude or Codex credential Docker (Desktop or Engine) 
+ In the News
+ FAQ
+ What is NanoClaw?
+ NanoClaw is a lightweight, open-source personal AI agent that runs on your own machine. It connects to the messaging apps you choose, runs every active session inside an isolated Docker container, and routes credentials through OneCLI's Agent Vault by default so agents never hold raw API keys. Claude is the default provider; Codex, OpenCode, and Ollama can be configured per agent group. 
+ How is NanoClaw different from OpenClaw?
+ NanoClaw keeps one Node.js host process and a focused, auditable codebase, then runs every active agent session behind OS-level container isolation. Channels and alternative providers are installed as skills, so your fork carries only the integrations you choose. 
+ Is NanoClaw secure?
+ Security is a core design principle. Every active session runs in its own unprivileged Docker container and sees only the files you give it. By default, credentials stay in OneCLI's Agent Vault and never enter the container. Egress lockdown, mount rules, sender policies, and human approvals can narrow the blast radius further. 
+ Do I need to know how to code to use NanoClaw?
+ No. Run bash nanoclaw.sh and the installer handles dependencies, provider credentials, containers, and pairing your first channel. For later changes, a coding agent such as Claude Code, Codex, or OpenCode can apply NanoClaw's skills. Comfort with a terminal and git clone is expected. 
+ Is NanoClaw free?
+ NanoClaw is free and open source under the MIT license. Your agent provider may charge for model usage: Claude accepts an API key or Claude subscription, Codex accepts a ChatGPT subscription or OpenAI API key, a
+
+=== [about] https://docs.nanoclaw.dev/introduction (lang=en)
+What is NanoClaw? - NanoClaw 
+ Documentation Index
+ Fetch the complete documentation index at: /llms.txt 
+ Use this file to discover all available pages before exploring further.
+ Skip to main content 
+ Join the Discord community — get help, share what you're building, or just say hi.
+ NanoClaw home page 
+ Search NanoClaw docs...
+ ⌘ K Ask Assistant ⌘ I 
+ nanocoai/nanoclaw 
+ nanocoai/nanoclaw 
+ Search... 
+ Navigation 
+ Get started 
+ What is NanoClaw?
+ Documentation 
+ Reference 
+Changelog 
+ Get started 
+ Introduction UPDATED 
+ Quick start UPDATED 
+ Installation 
+ Migrate from v1 or OpenClaw 
+ Channels 
+ Channels overview 
+ WhatsApp 
+ Telegram 
+ Discord 
+ Slack UPDATED 
+ Mattermost 
+ Signal 
+ iMessage 
+ Microsoft Teams UPDATED 
+ Dial 
+ CLI channel 
+ More channels 
+ Operate 
+ Configuration UPDATED 
+ The ncl admin CLI 
+ Credentials UPDATED 
+ Credential gateways NEW 
+ Hardening 
+ Hardened runtime 
+ Upgrading 
+ Uninstall NanoClaw 
+ Troubleshooting 
+ Build with agents 
+ Your first agent 
+ Customize an agent 
+ Schedule recurring work 
+ Build a multi-agent team 
+ Templates 
+ Getting started with a template UPDATED 
+ Templates 
+ Using a template UPDATED 
+ Updating a stamped agent 
+ Building a template 
+ Submitting a template 
+ Extend 
+ Skills: how NanoClaw extends itself 
+ Give agents tools 
+ Agent providers UPDATED 
+ Agent self-modification 
+ Writing skills 
+ Understand 
+ Architecture 
+ Entity model 
+ Agent memory 
+ Isolation levels UPDATED 
+ Container lifecycle UPDATED 
+ Security model 
+ Contributing to NanoClaw 
+ Changelog 
+ Releases 
+ Docs updates 
+ On this page 
+ What can it do? 
+ What does running it involve? 
+ Choose where to begin 
+ Under the hood, briefly 
+ Source and community 
+ Get started
+ What is NanoClaw?
+ Copy page Copy page 
+ An AI assistant you run on your own computer and message from the apps you use. Start with a conversation, then give it a job.
+ Copy page Copy page 
+ NanoClaw is an AI assistant you run on your own computer. You can talk to it in the terminal or connect a messaging app such as Telegram, WhatsApp, Discord, or Slack. 
+ Ask for help in ordinary language: plan a meal, research a topic, or remember a preference. You can start with a general assistant or choose a prebuilt one for a particular job. 
+ You
+ Help me plan three dinners for this week. I’d like to keep the cooking simple.
+ Your assistant
+ Let’s start with how many people you’re cooking for. How many should the meals serve?
+ Example conversation, shown as an illustration. Your assistant's replies will vary.
+ ​ 
+ What can it do? 
+ Start with a task that would make your day easier: 
+ Research a topic. Ask for sources and a short summary. Claude agents have web search and page-reading tools available.
+ Remember preferences. Tell your assistant how you like answers or what you are working on. Each agent has its own memory .
+ Handle recurring work. Ask for a reminder or a regular update. Connect a messaging app to receive notifications on your phone; see Scheduled tasks .
+ Work with files. Give the assistant a task involving files it can access. Its working files live in a separate workspace; see Customization for sharing folders and setting instructions.
+ The tools and connections you choose affect what your assistant can do. Some tasks need access to another account or service. You can add more capabilities later, including a team of assistants . 
+ ​ 
+ What does running it involve? 
+ NanoClaw runs on a computer you manage. This is what self-hosted means: you install it and keep that computer running when you want the assistant to respond. 
+ You’ll need a sup
+
+=== [meta] https://nanoclaw.dev
+html lang: en
+hreflang: ar, de, en, es, fr, he, hi, it, ja, ko, nl, pl, pt, ru, tr, uk, x-default, zh
+화면에 보이는 언어 이름: 한국어, English, 日本語, 中文, Español, Français, Deutsch, Português, Italiano, Русский, हिन्दी, Türkçe, Polski, Nederlands, العربية
+
+=== [github] https://github.com/nanocoai/nanoclaw
+<p align="center">
+  <img src="assets/nanoclaw-logo.png" alt="NanoClaw" width="400">
+</p>
+
+<p align="center">
+  An AI assistant that runs agents securely in their own containers. Lightweight, built to be easily understood and completely customized for your needs.
+</p>
+
+<p align="center">
+  <a href="https://nanoclaw.dev">nanoclaw.dev</a>&nbsp; • &nbsp;
+  <a href="https://docs.nanoclaw.dev">docs</a>&nbsp; • &nbsp;
+  <a href="README_zh.md">中文</a>&nbsp; • &nbsp;
+  <a href="README_ja.md">日本語</a>&nbsp; • &nbsp;
+  <a href="README_ko.md">한국어</a>&nbsp; • &nbsp;
+  <a href="https://discord.gg/VDdww8qS42"><img src="https://img.shields.io/discord/1470188214710046894?label=Discord&logo=discord&v=2" alt="Discord" valign="middle"></a>&nbsp; • &nbsp;
+  <a href="repo-tokens"><img src="repo-tokens/badge.svg" alt="repo tokens" valign="middle"></a>
+</p>
+
+---
+
+<div align="center">
+
+### <img src="https://img.shields.io/badge/NEW!-2EB67D?style=for-the-badge" alt="NEW!" valign="middle"> Agents in Slack: one app per agent <img src="assets/slack-icon.svg" alt="" width="22" valign="middle">
+
+Setup provisions each agent its own Slack app: manifest, avatar, and workspace install, no tokens to paste.
+Spawn teammates from chat: every one gets its own bot identity, container, and memory, with shared rooms and canvases.
+
+[![Quick Start](https://img.shields.io/badge/Quick%20Start%20%E2%86%92-4A154B?style=for-the-badge)](#quick-start)
+
+</div>
+
+---
+
+## Why I Built NanoClaw
+
+[OpenClaw](https://github.com/openclaw/openclaw) is an impressive project, but I wouldn't have been able to sleep if I had given complex software I didn't understand full access to my life. OpenClaw has nearly half a million lines of code, 53 config files, and 70+ dependencies. Its security is at the application level (allowlists, pairing codes) rather than true OS-level isolation. Everything runs in one Node process with shared memory.
+
+NanoClaw provides that same core functionality, but in a codebase small enough to understand: one process and a handful of files. Agents run in their own Linux containers with filesystem isolation, not merely behind permission checks.
+
+## Quick Start
+
+```bash
+git clone https://github.com/nanocoai/nanoclaw.git nanoclaw-v2
+cd nanoclaw-v2
+bash nanoclaw.sh
+```
+
+`nanoclaw.sh` walks you from a fresh machine to a named agent you can message. It installs Node, pnpm, and Docker if missing, installs a credential gateway and registers your Anthropic credential with it, builds the agent container, and pairs your first channel (Slack, Telegram, Discord, WhatsApp, iMessage, or a local CLI). If a step fails, Claude Code is invoked automatically to diagnose and resume from where it broke.
+
+<details>
+<summary><strong>Migrating from NanoClaw v1?</strong></summary>
+
+Run from a fresh v2 checkout next to your v1 install:
+
+```bash
+git clone https://github.com/nanocoai/nanoclaw.git nanoclaw-v2
+cd nanoclaw-v2
+bash migrate-v2.sh
+```
+
+`migrate-v2.sh` finds your v1 install (sibling directory, or `NANOCLAW_V1_PATH=/path/to/nanoclaw`), migrates state into the v2 checkout, then `exec`s into Claude Code to finish the parts that need judgment (owner seeding, shared-memory migration, fork-customisation replay).
+
+Run the script directly, not from inside a Claude session — the deterministic side needs interactive prompts and real shell I/O for Node/pnpm bootstrap, Docker, the credential gateway, and the container build.
+
+**What it does:** merges `.env`, seeds the v2 DB from `registered_groups`, copies group folders + session data + scheduled tasks, installs the channel adapters you select, copies channel auth state (including the Baileys keystore for WhatsApp — LID mapping is now resolved per-message by the Baileys v7 adapter, not migrated), builds the agent container.
+
+**What it doesn't:** flip the system service. Pick *"switch to v2"* at the prompt, or do it manually after testing — your v1 install is left untouched.
+
+See [docs/v1-to-v2-changes.md](docs/v1-to-v2-changes.md) for what's different and [docs/migration-dev.md](docs/migration-dev.md) for development notes.
+
+</details>
+
+## Philosophy
+
+**Small enough to understand.** One process, a few source files and no microservices. If you wa

@@ -1,0 +1,89 @@
+{
+ "company": "OpenBMB",
+ "one_liner_ko": "LLM 에이전트들이 대화로 협업해 소프트웨어를 설계·코딩·테스트하는 프레임워크로, 2.0에서는 코딩 없이 멀티 에이전트를 구성하는 플랫폼(DevAll)이 되었다.",
+ "what_it_does_ko": "ChatDev는 대형 언어모델로 움직이는 전문 에이전트들이 채팅 체인으로 무엇을, 어떻게 소통할지 안내받으며 설계·코딩·테스트 단계에 참여하는 채팅 기반 소프트웨어 개발 프레임워크다. 1.0(레거시)은 CEO·CTO·프로그래머 같은 에이전트가 참여하는 가상 소프트웨어 회사로 개발 전 과정을 자동화한다. 2.0(DevAll)은 간단한 설정만으로 에이전트·워크플로·작업을 정의해 멀티 에이전트 시스템을 만들고 실행하는 노코드 플랫폼이다. 관련 논문은 ACL 2024에 채택되었다.",
+ "key_features": [
+  "채팅 체인으로 에이전트 간 소통 방식 안내",
+  "설계·코딩·테스트 단계에 에이전트 참여",
+  "코딩 없는 멀티 에이전트 구성(ChatDev 2.0 DevAll)",
+  "CEO·CTO·프로그래머 역할 에이전트의 가상 소프트웨어 회사(1.0)",
+  "방향성 비순환 그래프 기반 협업 네트워크 MacNet(macnet 브랜치)"
+ ],
+ "use_cases_ko": [
+  "소프트웨어 개발 전 과정(설계·코딩·테스트·문서화) 자동화",
+  "데이터 시각화·3D 생성·딥 리서치 같은 복합 시나리오 오케스트레이션"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://github.com/OpenBMB/ChatDev",
+   "quote": "# ChatDev 2.0 - DevAll"
+  },
+  {
+   "field": "company",
+   "url": "https://github.com/OpenBMB/ChatDev",
+   "quote": "https://github.com/OpenBMB/ChatDev/tree/chatdev1.0"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://arxiv.org/abs/2307.07924",
+   "quote": "we introduce ChatDev, a chat-powered software development framework in which specialized agents driven by large language models (LLMs) are guided in what to communicate (via chat chain)"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/OpenBMB/ChatDev",
+   "quote": "A Zero-Code Multi-Agent Platform for Developing Everything"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://arxiv.org/abs/2307.07924",
+   "quote": "These agents actively contribute to the design, coding, and testing phases through unified language-based communication"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/OpenBMB/ChatDev",
+   "quote": "It utilizes various intelligent agents (e.g., CEO, CTO, Programmer) participating in specialized functional seminars to automate the entire software development life cycle"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://arxiv.org/abs/2307.07924",
+   "quote": "Accepted to ACL 2024"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/OpenBMB/ChatDev",
+   "quote": "No coding is required—users can define agents, workflows, and tasks to orchestrate complex scenarios such as data visualization, 3D generation, and deep research."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/OpenBMB/ChatDev",
+   "quote": "which utilize directed acyclic graphs to facilitate effective task-oriented collaboration among agents through linguistic interactions"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/OpenBMB/ChatDev",
+   "quote": "automate the entire software development life cycle—including designing, coding, testing, and documenting"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://github.com/OpenBMB/ChatDev",
+   "quote": "【<a href=\"./README.md\">English</a> | <a href=\"./README-zh.md\">简体中文</a>】"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://arxiv.org/abs/2307.07924",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

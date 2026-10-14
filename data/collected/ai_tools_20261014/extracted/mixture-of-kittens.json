@@ -1,0 +1,42 @@
+{
+ "company": "Cursor (Anysphere, Inc.)",
+ "one_liner_ko": "NVL72용으로 통신과 계산을 커널 하나로 합친, Cursor가 오픈소스로 공개한 결정적 MoE 학습 메가커널.",
+ "what_it_does_ko": "Mixture-of-Kittens(MoK)는 NVL72용으로 처음부터 설계한 완전 결정적 MoE(전문가 혼합) 학습 메가커널이다. MoE 층의 모든 통신과 계산을 단일 커널로 합쳐 GPU 간 통신과 계산을 겹치고 CPU-GPU 동기화를 없앤다. BF16과 MXFP8을 지원하고 순전파·역전파를 모두 다루며, Cursor의 코딩 모델 Composer의 실제 학습에 쓰인다. 공개 기준 구현 대비 MXFP8 순전파가 최대 2.37배 빠르고, 실제 학습 스택에서 초당 토큰 수가 1.41배 늘었다고 밝힌다.",
+ "key_features": [
+  "MoE 통신과 계산을 단일 커널로 융합",
+  "완전 결정적(deterministic) 동작",
+  "링 토큰 버퍼로 CPU-GPU 동기화 제거",
+  "BF16·MXFP8 지원, 순전파·역전파 모두 처리",
+  "DeepSeek-V3 방식 MoE 층 대상",
+  "공개 기준 대비 MXFP8 순전파 최대 2.37배 성능",
+  "벤치마크 코드 공개"
+ ],
+ "use_cases_ko": [
+  "NVL72 랙에서 MoE 모델 대규모 학습 가속"
+ ],
+ "pricing": {"free_tier": "불명", "plans": [], "pricing_url": null},
+ "open_source": "오픈소스(라이선스 이름 미표기)",
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {"field": "company", "url": "https://github.com/cursor/mixture-of-kittens", "quote": "powers production training of Composer at Cursor"},
+  {"field": "company", "url": "https://cursor.com/ko/pricing", "quote": "© 2026 Anysphere, Inc."},
+  {"field": "one_liner_ko", "url": "https://cursor.com/ko/blog/mixture-of-kittens", "quote": "We're open-sourcing Mixture-of-Kittens, a deterministic MoE training megakernel for NVL72s that fuses communication and computation into a single kernel."},
+  {"field": "what_it_does_ko", "url": "https://github.com/cursor/mixture-of-kittens", "quote": "It supports BF16 and MXFP8, covers both forward and backward passes, and powers production training of Composer at Cursor."},
+  {"field": "what_it_does_ko", "url": "https://cursor.com/ko/blog/mixture-of-kittens", "quote": "In our production training stack across several NVL72 racks, MoK increased end-to-end tokens per second by 1.41x."},
+  {"field": "key_features", "url": "https://github.com/cursor/mixture-of-kittens", "quote": "MoK fuses all MoE computation and communication into a single kernel, overlapping compute and inter-GPU networking at configurable granularity, and fully eliminates CPU-GPU synchronization."},
+  {"field": "key_features", "url": "https://cursor.com/ko/blog/mixture-of-kittens", "quote": "MoK fuses all MoE communication and computation into a single kernel, is fully deterministic"},
+  {"field": "key_features", "url": "https://cursor.com/ko/blog/mixture-of-kittens", "quote": "eliminated CPU-GPU synchronization with ring token buffers"},
+  {"field": "key_features", "url": "https://cursor.com/ko/blog/mixture-of-kittens", "quote": "MoK targets DeepSeek-V3 (DSV3)-style MoE layers"},
+  {"field": "key_features", "url": "https://cursor.com/ko/blog/mixture-of-kittens", "quote": "Mixture-of-Kittens achieves up to 2.37x higher MXFP8 forward throughput than the fastest public baseline on GB300 NVL72s"},
+  {"field": "key_features", "url": "https://github.com/cursor/mixture-of-kittens", "quote": "with all benchmark code available in [`benchmarks`](./benchmarks)"},
+  {"field": "use_cases_ko", "url": "https://cursor.com/ko/blog/mixture-of-kittens", "quote": "It now powers Composer training across tens of thousands of GPUs."},
+  {"field": "open_source", "url": "https://cursor.com/ko/blog/mixture-of-kittens", "quote": "Today, we're open-sourcing Mixture-of-Kittens (MoK) , our production MoE training megakernel for NVL72s"},
+  {"field": "korean_support", "url": "https://cursor.com/ko/blog/mixture-of-kittens", "quote": "hreflang: de, en-us, es, fr, hi, ja, ko, pt-br, zh, zh-hant"}
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {"official": "받아 둔 요금 페이지(cursor.com/ko/pricing)는 MoK가 아니라 Cursor 제품 요금제(무료 $0, Plus $8, Premium $30, Super $100, Ultra $200/월, Teams $30+/사용자/월)이며 Grok·X 구독과 묶여 있음. MoK 자체 요금 정보는 없음", "diff": "기존 분류 '오픈소스 + 클라우드 매니지드 유료 플랜'의 매니지드 유료 플랜이 MoK에 있다는 근거가 페이지에 없음. 요금 페이지는 모회사 제품(Cursor·Grok 묶음)의 것", "url": "https://cursor.com/ko/pricing"}
+ ]
+}

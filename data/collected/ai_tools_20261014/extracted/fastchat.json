@@ -1,0 +1,94 @@
+{
+ "company": "LMSYS",
+ "one_liner_ko": "대형언어모델 챗봇을 학습·서빙·평가하는 공개 플랫폼.",
+ "what_it_does_ko": "FastChat은 LLM 기반 챗봇의 학습, 서빙, 평가를 위한 공개 플랫폼이다. Vicuna, MT-Bench 같은 모델의 학습·평가 코드와, 웹 UI 및 OpenAI 호환 RESTful API를 갖춘 분산 다중 모델 서빙 시스템을 핵심 기능으로 든다. Chatbot Arena를 구동하며 70개 이상 LLM에 대해 1,000만 건 이상의 채팅 요청을 처리했다고 밝힌다. pip 또는 소스로 설치하고 명령줄로 모델과 대화할 수 있다.",
+ "key_features": [
+  "Vicuna·MT-Bench 등 학습·평가 코드",
+  "웹 UI와 OpenAI 호환 RESTful API를 갖춘 분산 다중 모델 서빙",
+  "명령줄(CLI) 추론",
+  "웹 GUI 서빙",
+  "파인튜닝",
+  "Chatbot Arena 구동"
+ ],
+ "use_cases_ko": [
+  "여러 LLM을 나란히 비교하는 Chatbot Arena 같은 서비스 운영",
+  "챗봇 모델 학습과 MT-Bench 평가"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "CLI",
+  "API"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://github.com/lm-sys/FastChat",
+   "quote": "https://lmsys.org/blog/2023-06-22-leaderboard/"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/lm-sys/FastChat",
+   "quote": "FastChat is an open platform for training, serving, and evaluating large language model based chatbots."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/lm-sys/FastChat",
+   "quote": "FastChat powers Chatbot Arena ([lmarena.ai](https://lmarena.ai)), serving over 10 million chat requests for 70+ LLMs."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/lm-sys/FastChat",
+   "quote": "The training and evaluation code for state-of-the-art models (e.g., Vicuna, MT-Bench)."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/lm-sys/FastChat",
+   "quote": "A distributed multi-model serving system with web UI and OpenAI-compatible RESTful APIs."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/lm-sys/FastChat",
+   "quote": "[Inference with Command Line Interface](#inference-with-command-line-interface)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/lm-sys/FastChat",
+   "quote": "[Serving with Web GUI](#serving-with-web-gui)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/lm-sys/FastChat",
+   "quote": "- [Fine-tuning](#fine-tuning)\n- [Citation](#citation)"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/lm-sys/FastChat",
+   "quote": "Chatbot Arena has collected over 1.5M human votes from side-by-side LLM battles"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/lm-sys/FastChat",
+   "quote": "We introduced **MT-bench**, a challenging multi-turn question set for evaluating chatbots."
+  },
+  {
+   "field": "api",
+   "url": "https://github.com/lm-sys/FastChat",
+   "quote": "OpenAI-compatible RESTful APIs"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/lm-sys/FastChat",
+   "quote": "python3 -m fastchat.serve.cli --model-path lmsys/vicuna-7b-v1.5"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

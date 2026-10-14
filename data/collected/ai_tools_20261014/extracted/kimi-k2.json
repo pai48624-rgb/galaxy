@@ -1,13 +1,13 @@
 {
- "company": "Moonshot AI (moonshotai)",
- "one_liner_ko": null,
- "what_it_does_ko": "Kimi-K2.5는 moonshotai가 Hugging Face에 올린 이미지·텍스트 입력 대화형(image-text-to-text) 모델로, Transformers 라이브러리용으로 공개되어 있다. 대화 템플릿에 이미지·영상 입력, 도구 호출, 사고(thinking) 모드 처리가 포함되어 있다. 모델 카드의 평가 결과로 MMLU-Pro 87.1, MMMU-Pro(비전) 78.5, SWE-bench Verified 70.8(high reasoning), AIME 2026 95.83이 표시된다. novita·featherless-ai·deepinfra 등 외부 추론 제공자를 통해서도 호출할 수 있다. 수집된 페이지에는 모델 설명 본문과 라이선스 표기가 보이지 않는다.",
+ "company": "moonshotai (Hugging Face 조직명)",
+ "one_liner_ko": "moonshotai가 Hugging Face에 공개한 이미지·텍스트 입력 대화 모델 Kimi-K2.5.",
+ "what_it_does_ko": "Kimi-K2.5는 moonshotai가 Hugging Face에 올린 image-text-to-text 모델로, transformers 라이브러리로 쓸 수 있다. 채팅 템플릿에 이미지·영상 입력 자리가 있다. Hugging Face Inference Providers(novita, featherless-ai, deepinfra)를 통해 호출할 수 있고, 일부 제공사에서 구조화 출력과 도구 호출을 지원한다.",
  "key_features": [
-  "이미지·영상 입력을 받는 멀티모달 대화 모델",
-  "도구 호출(tool calls) 지원",
-  "사고(thinking) 모드 켜고 끄기",
-  "구조화된 출력 지원(추론 제공자 기준)",
-  "SWE-bench Verified 70.8%(high reasoning), MMLU-Pro 87.1"
+  "이미지·텍스트 입력 → 텍스트 출력",
+  "영상 입력(채팅 템플릿)",
+  "구조화 출력·도구 호출(제공사 기준)",
+  "transformers 라이브러리 지원",
+  "Hugging Face Inference Providers로 호출"
  ],
  "use_cases_ko": [],
  "pricing": {
@@ -16,20 +16,54 @@
   "pricing_url": null
  },
  "open_source": null,
- "api": "불명",
- "platforms": [],
- "korean_support": "불명",
+ "api": "있음",
+ "platforms": [
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
  "evidence": [
-  {"field": "company", "url": "https://huggingface.co/moonshotai/Kimi-K2.5", "quote": "\"downloadsAllTime\":16084108,\"id\":\"moonshotai/Kimi-K2.5\""},
-  {"field": "what_it_does_ko", "url": "https://huggingface.co/moonshotai/Kimi-K2.5", "quote": "\"pipeline_tag\":\"image-text-to-text\",\"library_name\":\"transformers\""},
-  {"field": "what_it_does_ko", "url": "https://huggingface.co/moonshotai/Kimi-K2.5", "quote": "\"label\":\"Swe Bench Resolved\",\"notes\":\"high reasoning\""},
-  {"field": "what_it_does_ko", "url": "https://huggingface.co/moonshotai/Kimi-K2.5", "quote": "{\"provider\":\"novita\",\"modelStatus\":\"live\",\"providerStatus\":\"live\",\"providerId\":\"moonshotai/kimi-k2.5\""},
-  {"field": "key_features", "url": "https://huggingface.co/moonshotai/Kimi-K2.5", "quote": "{% elif content['type'] == 'video' or content['type']== 'video_url'-%}\\n <|kimi_k25_video_placeholder|>"},
-  {"field": "key_features", "url": "https://huggingface.co/moonshotai/Kimi-K2.5", "quote": "{%- macro render_toolcalls(message) -%}\\n <|tool_calls_section_begin|>"},
-  {"field": "key_features", "url": "https://huggingface.co/moonshotai/Kimi-K2.5", "quote": "{%- if thinking is defined and thinking is false -%}\\n <think></think>{{render_content(message)}}"},
-  {"field": "key_features", "url": "https://huggingface.co/moonshotai/Kimi-K2.5", "quote": "\"features\":{\"structuredOutput\":true,\"toolCalling\":true}"},
-  {"field": "key_features", "url": "https://huggingface.co/moonshotai/Kimi-K2.5", "quote": "{\"dataset\":{\"id\":\"TIGER-Lab/MMLU-Pro\",\"isBenchmark\":true,\"task_id\":\"mmlu_pro\"},\"value\":87.1"}
+  {
+   "field": "company",
+   "url": "https://huggingface.co/moonshotai/Kimi-K2.5",
+   "quote": "\"downloadsAllTime\":16084108,\"id\":\"moonshotai/Kimi-K2.5\""
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://huggingface.co/moonshotai/Kimi-K2.5",
+   "quote": "\"pipeline_tag\":\"image-text-to-text\",\"library_name\":\"transformers\""
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://huggingface.co/moonshotai/Kimi-K2.5",
+   "quote": "\"pipeline_tag\":\"image-text-to-text\",\"library_name\":\"transformers\""
+  },
+  {
+   "field": "key_features",
+   "url": "https://huggingface.co/moonshotai/Kimi-K2.5",
+   "quote": "content['type'] == 'video' or content['type']== 'video_url'"
+  },
+  {
+   "field": "key_features",
+   "url": "https://huggingface.co/moonshotai/Kimi-K2.5",
+   "quote": "\"features\":{\"structuredOutput\":true,\"toolCalling\":true}"
+  },
+  {
+   "field": "api",
+   "url": "https://huggingface.co/moonshotai/Kimi-K2.5",
+   "quote": "\"availableInferenceProviders\":[{\"provider\":\"novita\",\"modelStatus\":\"live\""
+  },
+  {
+   "field": "platforms",
+   "url": "https://huggingface.co/moonshotai/Kimi-K2.5",
+   "quote": "\"availableInferenceProviders\":[{\"provider\":\"novita\",\"modelStatus\":\"live\""
+  },
+  {
+   "field": "korean_support",
+   "url": "https://huggingface.co/moonshotai/Kimi-K2.5",
+   "quote": "=== [meta] https://huggingface.co/moonshotai/Kimi-K2.5\nhtml lang: 없음\nhreflang: 없음"
+  }
  ],
  "mismatch": [],
- "plan_change": []
+ "plan_change": [],
+ "note": "모델 페이지 본문이 채팅 템플릿·메타데이터 JSON뿐이고 잘려 있어 라이선스 태그가 보이지 않음 → open_source null. pricing 구간은 Hugging Face 플랫폼 요금 페이지(장식 기호뿐). 제공사 pricingOutput 3·2.25 는 단위·통화 없어 기록 안 함."
 }

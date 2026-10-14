@@ -1,0 +1,118 @@
+=== [home] https://continue.dev (lang=en)
+Continue (acquired by Cursor) 
+ Blog Docs Sign in 
+ Thank you
+ Continue has joined Cursor
+ Continue was acquired by Cursor . Our mission was always to ensure developers are amplified, not automated, and that commitment carries on in the work ahead.
+ It was an honor to build with the Continue community. Thank you to each and every one of you who helped us create a pioneering open-source coding agent.
+ What we built together pushed the boundaries of what AI developer tooling could be, and our open-source codebase remains freely available as a foundation for others.
+ FAQs
+ Is the open source still available? 
+ What happened to my data? 
+ What about my subscription?
+
+=== [about] https://docs.continue.dev/ (lang=en)
+What is Continue? | Continue Docs 
+ Search... ⌘ K 
+ Docs Blog 
+ IDE Extensions CLI 
+ Getting Started
+ Install Quick Start Customization Overview 
+ Features
+ Agent 
+ Chat 
+ Autocomplete 
+ Edit 
+ Customize
+ Customization Overview Models MCP servers Rules Prompts Model Providers 
+ Model Roles 
+ Deep Dives 
+ Reference
+ config.yaml Reference Migrating Config to YAML Continue Documentation MCP Server config.json Reference (Deprecated) Context Providers (Deprecated) @Codebase (Deprecated) @Docs (Deprecated) 
+ Guides
+ How to Understand Configuration Configuring Models, Rules, and Tools Codebase and Documentation Awareness Using Plan Mode with Continue Using Ollama with Continue: A Developer's Guide Using Instinct with Ollama in Continue How to Run Continue Without Internet How to Build Custom Code RAG How to Self-Host a Model 
+ Help
+ FAQs Troubleshooting 
+ What is Continue?
+ Copy page 
+ Open source AI code assistant for VS Code and JetBrains
+ Continue enables developers to create, share, and use custom AI code agents with our open source VS Code and JetBrains extensions. 
+ Key Features 
+ Agent mode to work on development tasks together with AI
+ Chat mode to ask general questions and clarify code sections
+ Edit mode to modify code sections without leaving your current file
+ Autocomplete to receive inline code suggestions as you type
+ Continue CLI (cn) for terminal-native AI coding assistance
+ On this page
+ Key Features
+
+=== [meta] https://continue.dev
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/continuedev/continue
+<h1 align="center">Continue</h1>
+
+<p align="center">Pioneering open-source coding agent</p>
+
+<div align="center">
+
+<a href="https://opensource.org/licenses/Apache-2.0"><img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg" /></a>
+<a href="https://docs.continue.dev"><img src="https://img.shields.io/badge/Docs-docs.continue.dev-blue" /></a>
+<a href="https://github.com/continuedev/continue/releases"><img src="https://img.shields.io/badge/Changelog-GitHub_Releases-blue" /></a>
+
+</div>
+
+<p align="center">
+  <img src="media/github-readme.png" alt="Banner" />
+</p>
+
+## What is Continue?
+
+> _Note: The `continuedev/continue` repository is no longer actively maintained and is read-only for all users._
+
+Continue is a coding agent available as a [CLI](#cli), [VS Code extension](#vs-code), and [JetBrains plugin](#jetbrains).
+
+## Documentation
+
+To learn how to configure Continue, how it works, and how to customize it, check out the [Continue Docs](https://docs.continue.dev).
+
+## Final 2.0.0 Release
+
+We polished Continue and did a final 2.0.0 release of the VS Code extension, CLI, and JetBrains plugin.
+
+This included removing anonymous telemetry, pulling out authentication, squashing bugs, and more.
+
+### VS Code
+
+[![VS Code Marketplace](https://img.shields.io/badge/VS_Code_Marketplace-007ACC?logo=visualstudiocode&logoColor=white)](https://marketplace.visualstudio.com/items?itemName=Continue.continue) [![OpenVSX Registry](https://img.shields.io/badge/OpenVSX_Registry-C160EF?logo=eclipseide&logoColor=white)](https://open-vsx.org/extension/Continue/continue) [![View source](https://img.shields.io/badge/View_source-181717?logo=github&logoColor=white)](extensions/vscode)
+
+### CLI
+
+[![npm](https://img.shields.io/badge/npm-CB3837?logo=npm&logoColor=white)](https://www.npmjs.com/package/@continuedev/cli) [![View source](https://img.shields.io/badge/View_source-181717?logo=github&logoColor=white)](extensions/cli)
+
+### JetBrains
+
+> _Note: We recommend using the Continue CLI instead of the JetBrains plugin._
+
+[![GitHub Releases](https://img.shields.io/badge/GitHub_Releases-181717?logo=github&logoColor=white)](https://github.com/continuedev/continue/releases) [![View source](https://img.shields.io/badge/View_source-181717?logo=github&logoColor=white)](extensions/intellij)
+
+## Contributors
+
+Thank you to the entire Continue community for helping us create a pioneering coding agent.
+
+What we built together pushed the boundaries of what AI developer tooling could be.
+
+We hope this codebase continues to serve as a foundation for others.
+
+## Code friends
+
+<a href="https://github.com/continuedev/continue/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=continuedev/continue&max=500" />
+</a>
+
+## License
+
+Apache 2.0 © 2023-2026 Continue Dev, Inc.
+

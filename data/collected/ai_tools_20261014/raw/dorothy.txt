@@ -1,0 +1,159 @@
+=== [home] https://dorothyai.app (lang=en)
+Dorothy - Your AI Agents, Perfectly Managed 
+ Features Preview Download 
+ Download 
+ Your AI Agents
+ Perfectly
+Managed.
+ AI agents are powerful but they can quickly become overwhelming.
+Dorothy is here to keep everything under control.
+ Download for Mac Learn more 
+ Free forever Open source No account 
+ Multi-Agent Management Super Agent Orchestrator Kanban Task Board 3D Agent World Skills & Plugins GitHub & JIRA Automations Telegram & Slack Bots Usage Analytics Multi-Agent Management Super Agent Orchestrator Kanban Task Board 3D Agent World Skills & Plugins GitHub & JIRA Automations Telegram & Slack Bots Usage Analytics 
+ What's inside
+ Everything you need
+ 01 Super Agent
+ An orchestrator that coordinates all your agents. Give it a task and watch it delegate.
+ 02 Multi-Agent Terminal
+ Run multiple AI agents side-by-side with full interactive terminal access.
+ 03 Kanban Board
+ Visual task management with drag-and-drop. Agents auto-pick work by skill.
+ 04 3D Agent World
+ Watch your agents in a fun animated 3D office. Because why not.
+ 05 Skills & Plugins
+ Install community skills from skills.sh with one click. Hundreds available.
+ 06 Automations
+ Connect GitHub, JIRA, Telegram, and Slack. Agents process items automatically.
+ Multi-provider
+ Works with your favorite AI
+ Dorothy supports multiple AI coding agents. Run them side-by-side, mix and match per project.
+ Claude
+ Anthropic
+ Codex
+ OpenAI
+ Gemini
+ Google
+ Ollama
+ Local LLMs
+ See it in action
+ A peek inside Dorothy
+ Dorothy 
+ “Dorothy makes managing AI agents a breeze!” — A Happy Developer
+ Ready to meet Dorothy?
+ Free, open source, no account needed. Download and start managing your AI agents today.
+ Download for macOS 
+ X / Twitter GitHub Issues skills.sh 
+ Made with ♥ for the AI agents community
+
+=== [meta] https://dorothyai.app
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/Charlie85270/Dorothy
+# Dorothy
+
+![Dorothy](screenshots/background-2.png)
+
+A beautiful desktop app to orchestrate your [Claude Code](https://claude.ai/code) ,[Codex](https://chatgpt.com/codex), [Gemini](https://geminicli.com/), [Grok](https://x.ai/cli) and local agents. Deploy, monitor, and debug — all from one delightful interface. Free and open source.
+
+![Dorothy Dashboard](screenshots/0.png)
+
+## Table of Contents
+
+- [Why Dorothy](#why-dorothy)
+- [Core Features](#core-features)
+- [Automations](#automations)
+- [Kanban Task Management](#kanban-task-management)
+- [Scheduled Tasks](#scheduled-tasks)
+- [Remote Control](#remote-control)
+- [Vault](#vault)
+- [SocialData (Twitter/X)](#socialdata-twitterx)
+- [Google Workspace](#google-workspace)
+- [MCP Servers & Tools](#mcp-servers--tools)
+- [Installation](#installation)
+- [Architecture](#architecture)
+- [Project Structure](#project-structure)
+- [Tech Stack](#tech-stack)
+- [Configuration & Storage](#configuration--storage)
+- [Development](#development)
+- [Contributing](#contributing)
+- [License](#license)
+
+---
+
+## Why Dorothy
+
+AI CLI tools are powerful — but it runs one agent at a time, in one terminal. Dorothy removes that limitation:
+
+- **Run 10+ agents simultaneously** across different projects and codebases
+- **Automate agent workflows** — trigger agents on GitHub PRs, issues, and external events
+- **Delegate and coordinate** — a Super Agent orchestrates other agents via MCP tools
+- **Manage tasks visually** — Kanban board with automatic agent assignment
+- **Schedule recurring work** — cron-based tasks that run autonomously
+- **Control from anywhere** — Telegram and Slack integration for remote management
+
+---
+
+## Core Features
+
+### Parallel Agent Management
+
+Run multiple agents simultaneously, each in its own isolated PTY terminal session. Agents operate independently across different projects, codebases, and tasks.
+
+![Agents View](screenshots/agetns.png)
+
+**Capabilities:**
+- Spawn unlimited concurrent agents across multiple projects
+- Each agent runs in an isolated terminal with full PTY support
+- Assign skills, model selection (sonnet, opus, haiku), and project context per agent
+- Send interactive input to any running agent in real-time
+- Real-time terminal output streaming per agent
+- Agent lifecycle management: `idle` → `running` → `completed` / `error` / `waiting`
+- Secondary project paths via `--add-dir` for multi-repo context
+- Git worktree support for branch-isolated development
+- Persistent agent state across app restarts
+- Autonomous execution mode (`--dangerously-skip-permissions`) for unattended operation
+
+### Super Agent (Orchestrator)
+
+A meta-agent that programmatically controls all other agents. Give it a high-level task and it delegates, monitors, and coordinates the work across your agent pool.
+
+![Super Agent](screenshots/super-agent.png)
+
+- Creates, starts, and stops agents programmatically via MCP tools
+- Delegates tasks based on agent capabilities and assigned skills
+- Monitors progress, captures output, and handles errors
+- Responds to Telegram and Slack messages for remote orchestration
+- Can spin up temporary agents for one-off tasks and clean them up after
+
+### Usage Tracking
+
+Monitor Claude Code API usage across all agents — token consumption, conversation history, cost tracking, and activity patterns.
+
+![Usage Stats](screenshots/stats.png)
+
+### Skills & Plugin System
+
+Extend agent capabilities with skills from [skills.sh](https://skills.sh) and the built-in plugin marketplace.
+
+![Skills Management](screenshots/skills.png)
+
+- **Code Intelligence**: LSP plugins for TypeScript, Python, Rust, Go, and more
+- **External Integrations**: GitHub, GitLab, Jira, Figma, Slack, Vercel
+- **Development Workflows**: Commit commands, PR review tools
+- Install skills per-agent for specialized task handling
+
+### Settings Management
+
+Configure Claude Code settings directly — permissions, environment variables, hooks, and model defaults.
+
+---
+
+## Automations
+
+Automations poll external sources, detect new or updated items, and spawn Claude agents to process each item autonomously. This enables fully automated CI/CD-like workflows powered by AI.
+
+### Supported Sources
+
+| Source | Status | Polli

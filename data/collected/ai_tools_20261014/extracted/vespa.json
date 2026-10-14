@@ -1,0 +1,47 @@
+{
+ "company": "Vespa.ai AS",
+ "one_liner_ko": "검색·랭킹·머신러닝 추론·실시간 업데이트를 한 플랫폼에서 제공하는 AI 검색 플랫폼.",
+ "what_it_does_ko": "Vespa는 검색, 랭킹, 머신러닝 추론, 실시간 업데이트를 한 플랫폼에 담아 검색·AI 애플리케이션을 만들게 해 준다. 벡터·텐서·텍스트·정형 데이터를 질의·정리·추론할 수 있고, 계속 바뀌는 수십억 건 데이터에서 초당 수천 쿼리를 100ms 미만 지연으로 처리한다고 소개한다. 대용량 데이터를 여러 노드에 분산해 병렬로 평가하는 작업을 고가용성·고성능으로 대신 수행한다. Vespa Cloud에 배포하거나 직접 설치해 운영할 수 있다.",
+ "key_features": [
+  "벡터·텍스트·정형 검색",
+  "분산 머신러닝 랭킹(TensorFlow·ONNX·XGBoost·LightGBM 모델)",
+  "하이브리드 검색·관련성 모델·멀티벡터를 쓰는 RAG",
+  "개인 데이터용 스트리밍 검색 모드",
+  "자동 확장과 지속 배포·업그레이드",
+  "강한 보안의 완전 관리형 클라우드",
+  "자체 클라우드 배포(Enclave: AWS·Azure·GCP)"
+ ],
+ "use_cases_ko": [
+  "검색 애플리케이션과 생성형 AI(RAG)",
+  "추천·개인화·광고 타기팅",
+  "이커머스 등 반정형 내비게이션"
+ ],
+ "pricing": {"free_tier": "무료 체험 있음(한도 불명)", "plans": [], "pricing_url": "https://vespa.ai/pricing/"},
+ "open_source": "Apache 2.0",
+ "api": "있음",
+ "platforms": ["웹", "API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://vespa.ai/pricing/", "quote": "© 2026. Vespa.ai AS. All Rights Reserved"},
+  {"field": "one_liner_ko", "url": "https://vespa.ai", "quote": "Build search and AI applications with retrieval, ranking, machine learning inference, and real-time updates in one platform."},
+  {"field": "what_it_does_ko", "url": "https://vespa.ai", "quote": "Vespa lets you query, organize, and make inferences in vectors, tensors, text and structured data. Scale to billions of constantly changing data items, thousands of queries per second with latencies below 100 milliseconds."},
+  {"field": "what_it_does_ko", "url": "https://github.com/vespa-engine/vespa", "quote": "Vespa is a platform that performs these operations for you with high availability and performance."},
+  {"field": "what_it_does_ko", "url": "https://github.com/vespa-engine/vespa", "quote": "or run your own Vespa instance"},
+  {"field": "key_features", "url": "https://vespa.ai", "quote": "Vector, text and structured search\n Distributed machine-learned ranking"},
+  {"field": "key_features", "url": "https://docs.vespa.ai/", "quote": "Using ONNX models \n Using XGBoost models \n Using LightGBM models"},
+  {"field": "key_features", "url": "https://vespa.ai", "quote": "This takes much more than vector similarity—hybrid search, relevance models, and multi-vector representations."},
+  {"field": "key_features", "url": "https://vespa.ai", "quote": "Vespa provides a special mode – streaming search – which delivers all the industry-leading features of Vespa for personal/private search 20x cheaper than with indexing."},
+  {"field": "key_features", "url": "https://vespa.ai", "quote": "Infinite automated scalability\n Continous deployment & upgrades\n Fully managed, with strong security"},
+  {"field": "key_features", "url": "https://docs.vespa.ai/", "quote": "Enclave: Bring your own cloud"},
+  {"field": "use_cases_ko", "url": "https://vespa.ai", "quote": "Recommendation, personalization and ad targeting systems combine retrieval of eligible content with machine-learned model evaluation to select the best data items."},
+  {"field": "use_cases_ko", "url": "https://vespa.ai", "quote": "Generative AI (RAG)"},
+  {"field": "use_cases_ko", "url": "https://vespa.ai", "quote": "Applications like e-commerce use a combination of structured data and text+images"},
+  {"field": "pricing", "url": "https://github.com/vespa-engine/vespa", "quote": "Run applications in the cloud for free: [vespa.ai/free-trial](https://vespa.ai/free-trial/)"},
+  {"field": "open_source", "url": "https://github.com/vespa-engine/vespa", "quote": "All the content in this repository is licensed under the Apache 2.0 license."},
+  {"field": "api", "url": "https://github.com/vespa-engine/vespa", "quote": "[Vespa APIs](https://docs.vespa.ai/en/api.html) is useful to understand how to interface with Vespa"},
+  {"field": "platforms", "url": "https://github.com/vespa-engine/vespa", "quote": "Deploy your Vespa applications to the cloud service: [console.vespa-cloud.com](https://console.vespa-cloud.com/)"},
+  {"field": "korean_support", "url": "https://vespa.ai", "quote": "html lang: en-GB\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

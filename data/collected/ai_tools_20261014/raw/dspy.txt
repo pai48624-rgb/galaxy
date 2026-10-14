@@ -1,0 +1,541 @@
+=== [home] https://dspy.ai/current/ (lang=en)
+Overview - DSPy 
+ Skip to content 
+ DSPy 
+ Overview 
+ Search 
+ Current Current 
+ 3.4.1 3.4 
+ 3.4.0 
+ 3.4.0b1 
+ 3.3.1 3.3 
+ 3.3.0 
+ 3.2.1 3.2 
+ 3.2.0 
+ 3.1.3 3.1 
+ 3.1.2 
+ 3.1.1 
+ 3.1.0 
+ 3.0.4 3.0 
+ 3.0.3 
+ 3.0.2 
+ 3.0.1 
+ 3.0.0 
+ stanfordnlp/dspy 3.4.1
+ 38.6k
+ 3.4k
+ Overview 
+ Getting Started 
+ Diving Deeper 
+ Tutorials 
+ API Reference 
+ Community 
+ FAQ 
+ DSPy 
+ stanfordnlp/dspy 3.4.1
+ 38.6k
+ 3.4k
+ Overview 
+ Getting Started Getting Started Program, don't prompt 
+ Setting up DSPy 
+ Your first program 
+ Expanding signatures 
+ Class-based signatures 
+ Changing modules 
+ Tools with ReAct 
+ Composing modules 
+ Metrics 
+ GEPA optimization 
+ Saving and loading 
+ Where to go next 
+ Diving Deeper Diving Deeper Signatures in depth 
+ Modules: composing your own 
+ Built-in module variants 
+ RLM: exploring large contexts with code 
+ Flex: optimizable module code 
+ Tools and MCP 
+ ReAct and ReActV2 
+ Metrics and evaluation 
+ Optimizers: choosing one 
+ GEPA in depth 
+ BootstrapFewShot family 
+ Adapters: how signatures become prompts 
+ Settings and context() 
+ Saving and loading 
+ Tutorials 
+ Tutorials Build AI Programs with DSPy 
+ Build AI Programs with DSPy Managing Conversation History 
+ Building AI Agents with DSPy 
+ Building AI Applications by Customizing DSPy Modules 
+ Retrieval-Augmented Generation (RAG) 
+ Building RAG as Agent 
+ Entity Extraction 
+ Classification 
+ Decision-Making with Jev Types 
+ Multi-Hop RAG 
+ Privacy-Conscious Delegation 
+ Program Of Thought 
+ Image Generation Prompt iteration 
+ Audio 
+ Optimize AI Programs with DSPy 
+ Optimize AI Programs with DSPy Math Reasoning 
+ Classification Finetuning 
+ Advanced Tool Use 
+ Finetuning Agents 
+ Reflective Prompt Evolution with dspy.GEPA 
+ Reflective Prompt Evolution with dspy.GEPA GEPA for AIME (Math) 
+ GEPA for Structured Information Extraction for Enterprise Tasks 
+ GEPA for Privacy-Conscious Delegation 
+ GEPA for Code Backdoor Classification (AI control) 
+ Experimental RL Optimization for DSPy 
+ Experimental RL Optimization for DSPy RL for Privacy-Conscious Delegation 
+ RL for Multi-Hop Research 
+ Tools, Development, and Deployment 
+ Tools, Development, and Deployment Use MCP in DSPy 
+ Custom LM Engines 
+ Output Refinement 
+ Saving and Loading 
+ Cache 
+ Deployment 
+ Debugging & Observability 
+ Tracking DSPy Optimizers 
+ Streaming 
+ Async 
+ Real-World Examples 
+ Real-World Examples Generating llms.txt 
+ Memory-Enabled ReAct Agents 
+ Financial Analysis with Yahoo Finance 
+ Email Information Extraction 
+ Code Generation for Unfamiliar Libraries 
+ Building a Creative Text-Based AI Game 
+ API Reference 
+ API Reference Adapters 
+ Adapters Adapter 
+ ChatAdapter 
+ XMLAdapter 
+ JSONAdapter 
+ TwoStepAdapter 
+ Evaluation 
+ Evaluation CompleteAndGrounded 
+ Evaluate 
+ EvaluationResult 
+ SemanticF1 
+ answer_exact_match 
+ answer_passage_match 
+ Experimental 
+ Experimental Citations 
+ Decision types and System One models 
+ Document 
+ ReAnchor 
+ Models 
+ Models BaseLM 
+ Embedder 
+ LM 
+ Modules 
+ Modules BestOfN 
+ ChainOfThought 
+ CodeAct 
+ Flex 
+ Module 
+ MultiChainComparison 
+ Parallel 
+ Predict 
+ ProgramOfThought 
+ ReAct 
+ ReActV2 
+ Refine 
+ RLM 
+ Optimizers 
+ Optimizers GEPA GEPA 1. GEPA Overview 
+ 2. GEPA Advanced 
+ BetterTogether 
+ BootstrapFewShot 
+ BootstrapFewShotWithRandomSearch 
+ BootstrapFinetune 
+ BootstrapRS 
+ COPRO 
+ Ensemble 
+ InferRules 
+ KNN 
+ KNNFewShot 
+ LabeledFewShot 
+ MIPROv2 
+ SIMBA 
+ Primitives 
+ Primitives Audio 
+ Code 
+ Example 
+ History 
+ Image 
+ Prediction 
+ Tool 
+ ToolCalls 
+ Signatures 
+ Signatures InputField 
+ OutputField 
+ Signature 
+ Tools 
+ Tools ColBERTv2 
+ Embeddings 
+ LocalInterpreter 
+ PythonInterpreter 
+ Utils 
+ Utils Errors 
+ configure 
+ context 
+ StatusMessage 
+ StatusMessageProvider 
+ StreamListener 
+ asyncify 
+ configure_cache 
+ disable_litellm_logging 
+ disable_logging 
+ enable_litellm_logging 
+ enable_logging 
+ inspect_history 
+ load 
+ streamify 
+ Community Community Use Cases 
+ Built with DSPy 
+ Resources 
+ Contributing 
+ Normalized LM API Migration 
+ FAQ FAQ FAQ 
+ Cheatsheet 
+ DSPy 3.4.1 — PythonInterpreter improvements, faster GEPA, and MCP v2 compatibility · learn more → 
+ Program , don’t prompt,
+your LLMs. 
+ DSPy is a Python framework for building AI systems. Express your tasks as structured signatures, not prompts, to produce maintainable, modular, and optimizable programs. 
+ $ pip install -U dspy Getting Started → 
+ python ≥ 3.10 MIT license Stanford NLP github.com/stanfordnlp/dspy 
+ Change LLM Add a Field Make it an Agent 
+ extract_events.py 
+ 1 2 3 4 5 6 7 8 9 10 
+ lm = dspy. LM ( "openai/gpt-5.4-nano" )
+ class ExtractEvent (dspy.Signature):
+ """Extract event details from an email.""" 
+ email: str = dspy. InputField ()
+ event_name: str = dspy. OutputField ()
+ date: str = dspy. OutputField ()
+ extract = dspy. Predict (ExtractEvent)
+ extract(email=inbox_message)
+ output
+ Prediction(
+ event_name= "Team Offsite" ,
+ date= "Thursday, June 5" 
+ )
+ 5.3M+
+ monthly downloads
+ 471+
+ contributors
+ 39k
+ github stars
+ in production at
+ Compose programs with reusable primitives . 
+ Signatures
+ Declare your task.
+ Define your task as typed inputs and outputs instead of managing messy prompts. Portable, maintainable, and easy to iterate on. 
+ Learn about Signatures → 
+ class Triage (dspy.Signature):
+ """Route a support ticket.""" 
+ ticket: str = dspy. InputField ()
+ urgency: Literal [ "low" , "high" ] = dspy. OutputField ()
+ team: str = dspy. OutputField ()
+ Modules
+ Same interface, different strategy.
+ Modules control how your signature executes. Reason, run ensembles, use tools, add a REPL, and more without rewriting your task. 
+ Explore Modules → 
+ # Direct completion 
+ classify = dspy. Predict (Triage)
+ # Add step-by-step reasoning 
+ classify = dspy. ChainOfThought (Triage)
+ # Add tools and a reasoning loop 
+ classify = dspy. ReAct (Triage, tools=[search])
+ Optimizers
+ Compile your program against a metric.
+ Give DSPy examples and a scoring function. It tunes your prompts automatically until quality converges. 
+ Try Optimizers → 
+ tp = dspy. GEPA (
+ metric=semantic_f1,
+ auto= "medium" )
+ opt = tp. compile (rag, trainset)
+ # Before: 0.41 F1 
+ # After: 0.63 F1 
+ opt. save ( "rag.v2.json" )
+ Define a task. Grow it into a system. 
+ Extract Agent Pipeline Multimodal Optimize 
+ class Extract (dspy.Signature):
+ """Extract contact info.""" 
+ message: str = dspy. InputField ()
+ name: str = dspy. OutputField ()
+ email: Optional [ str ] = dspy. OutputField ()
+ intent: Literal [
+ "meeting" , "intro" , "follow-up" 
+ ] = dspy. OutputField ()
+ extract = dspy. Predict (Extract)
+ extract(message= "I'm Sarah" 
+ "(sarah@acme.co). Meet Thursday?" )
+ output stdout 
+ Prediction(
+ name= "Sarah" ,
+ email= "sarah@acme.co" ,
+ intent= "meeting" 
+ )
+ def search (query: str ) -> list [ str ]:
+ """Search a knowledge base.""" 
+ return kb.query(query, k= 3 )
+ def calc (expr: str ) -> float :
+ """Evaluate a math expression.""" 
+ return dspy. PythonInterpreter ({}).execute(expr)
+ agent = dspy. ReAct (
+ "question -> answer" ,
+ tools=[search, calc])
+ agent(question= "GDP per capita of France?" )
+ output stdout 
+ # thought 1: I need France's GDP and population. 
+ # action 1: search("France GDP") → ... 
+ # thought 2: Now divide GDP by population. 
+ # action 2: calc("3.13e12 / 68e6") → 46029.4 
+ Prediction(answer= "$46,029" )
+ class FactCheck (dspy.Module):
+ def __init__ (self):
+ self.find = dspy. ChainOfThought (
+ "article -> claims: list[str]" )
+ self.verify = dspy. ChainOfThought (
+ "claim, source -> verdict" )
+ d
+
+=== [about] https://dspy.ai/current/api/optimizers/GEPA/overview/ (lang=en)
+1. GEPA Overview - DSPy 
+ Skip to content 
+ DSPy.LM improvements: we've added a typed BaseLM that will become the default interface. Read the plan and share feedback 
+ DSPy 
+ 1. GEPA Overview 
+ Search 
+ stanfordnlp/dspy 
+ Overview 
+ Getting Started 
+ Diving Deeper 
+ Tutorials 
+ API Reference 
+ Community 
+ FAQ 
+ DSPy 
+ stanfordnlp/dspy 
+ Overview 
+ Getting Started Getting Started Program, don't prompt 
+ Setting up DSPy 
+ Your first program 
+ Expanding signatures 
+ Class-based signatures 
+ Changing modules 
+ Tools with ReAct 
+ Composing modules 
+ Metrics 
+ GEPA optimization 
+ Saving and loading 
+ Where to go next 
+ Diving Deeper Diving Deeper Signatures in depth 
+ Modules: composing your own 
+ Built-in module variants 
+ RLM: exploring large contexts with code 
+ Flex: optimizable module code 
+ Tools and MCP 
+ ReAct and ReActV2 
+ Metrics and evaluation 
+ Optimizers: choosing one 
+ GEPA in depth 
+ BootstrapFewShot family 
+ Adapters: how signatures become prompts 
+ Settings and context() 
+ Saving and loading 
+ Tutorials 
+ Tutorials Build AI Programs with DSPy 
+ Build AI Programs with DSPy Managing Conversation History 
+ Building AI Agents with DSPy 
+ Building AI Applications by Customizing DSPy Modules 
+ Retrieval-Augmented Generation (RAG) 
+ Building RAG as Agent 
+ Entity Extraction 
+ Classification 
+ Decision-Making with Jev Types 
+ Multi-Hop RAG 
+ Privacy-Conscious Delegation 
+ Program Of Thought 
+ Image Generation Prompt iteration 
+ Audio 
+ Optimize AI Programs with DSPy 
+ Optimize AI Programs with DSPy Math Reasoning 
+ Classification Finetuning 
+ Advanced Tool Use 
+ Finetuning Agents 
+ Reflective Prompt Evolution with dspy.GEPA 
+ Reflective Prompt Evolution with dspy.GEPA GEPA for AIME (Math) 
+ GEPA for Structured Information Extraction for Enterprise Tasks 
+ GEPA for Privacy-Conscious Delegation 
+ GEPA for Code Backdoor Classification (AI control) 
+ Experimental RL Optimization for DSPy 
+ Experimental RL Optimization for DSPy RL for Privacy-Conscious Delegation 
+ RL for Multi-Hop Research 
+ Tools, Development, and Deployment 
+ Tools, Development, and Deployment Use MCP in DSPy 
+ Custom LM Engines 
+ Output Refinement 
+ Saving and Loading 
+ Cache 
+ Deployment 
+ Debugging & Observability 
+ Tracking DSPy Optimizers 
+ Streaming 
+ Async 
+ Real-World Examples 
+ Real-World Examples Generating llms.txt 
+ Memory-Enabled ReAct Agents 
+ Financial Analysis with Yahoo Finance 
+ Email Information Extraction 
+ Code Generation for Unfamiliar Libraries 
+ Building a Creative Text-Based AI Game 
+ API Reference 
+ API Reference Adapters 
+ Adapters Adapter 
+ ChatAdapter 
+ XMLAdapter 
+ JSONAdapter 
+ TwoStepAdapter 
+ Evaluation 
+ Evaluation CompleteAndGrounded 
+ Evaluate 
+ EvaluationResult 
+ SemanticF1 
+ answer_exact_match 
+ answer_passage_match 
+ Experimental 
+ Experimental Citations 
+ Decision types and System One models 
+ Document 
+ ReAnchor 
+ Models 
+ Models BaseLM 
+ Embedder 
+ LM 
+ Modules 
+ Modules BestOfN 
+ ChainOfThought 
+ CodeAct 
+ Flex 
+ Module 
+ MultiChainComparison 
+ Parallel 
+ Predict 
+ ProgramOfThought 
+ ReAct 
+ ReActV2 
+ Refine 
+ RLM 
+ Optimizers 
+ Optimizers GEPA GEPA 1. GEPA Overview 1. GEPA Overview On this page GEPA Methods: 
+ GEPAFeedbackMetric Methods: 
+ DspyGEPAResult Attributes 
+ Methods: 
+ Usage Examples Inference-Time Search 
+ Objective-Aware Frontier Tracking 
+ How Does GEPA Work? 1. Reflective Prompt Mutation 
+ 2. Rich Textual Feedback as Optimization Signal 
+ 3. Pareto-based Candidate Selection 
+ Algorithm Summary 
+ Implementing Feedback Metrics Examples 
+ Custom Instruction Proposal 
+ Further Reading 
+ 2. GEPA Advanced 
+ BetterTog
+
+=== [meta] https://dspy.ai/current/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/stanfordnlp/dspy
+<p align="center">
+  <img align="center" src="docs/docs/static/img/dspy_logo.png" width="460px" />
+</p>
+<p align="left">
+
+
+## DSPy: _Programming_—not prompting—Foundation Models
+
+**Documentation:** [DSPy Docs](https://dspy.ai/)
+
+[![PyPI Downloads](https://static.pepy.tech/personalized-badge/dspy?period=monthly)](https://pepy.tech/projects/dspy)
+
+
+----
+
+DSPy is the framework for _programming—rather than prompting—language models_. It allows you to iterate fast on **building modular AI systems** and offers algorithms for **optimizing their prompts and weights**, whether you're building simple classifiers, sophisticated RAG pipelines, or Agent loops.
+
+DSPy stands for Declarative Self-improving Python. Instead of brittle prompts, you write compositional _Python code_ and use DSPy to **teach your LM to deliver high-quality outputs**. Learn more via our [official documentation site](https://dspy.ai/) or meet the community, seek help, or start contributing via this GitHub repo and our [Discord server](https://discord.gg/XCGy2WDCQB).
+
+
+## Documentation: [dspy.ai](https://dspy.ai)
+
+
+**Please go to the [DSPy Docs at dspy.ai](https://dspy.ai)**
+
+
+## Installation
+
+
+```bash
+pip install dspy
+```
+
+To install the very latest from `main`:
+
+```bash
+pip install git+https://github.com/stanfordnlp/dspy.git
+```
+
+
+
+
+## 📜 Citation & Reading More
+
+If you're looking to understand the framework, please go to the [DSPy Docs at dspy.ai](https://dspy.ai).
+
+If you're looking to understand the underlying research, this is a set of our papers:
+
+**[Jul'25] [GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning](https://arxiv.org/abs/2507.19457)**       
+**[Jun'24] [Optimizing Instructions and Demonstrations for Multi-Stage Language Model Programs](https://arxiv.org/abs/2406.11695)**       
+**[Oct'23] [DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines](https://arxiv.org/abs/2310.03714)**     
+[Jul'24] [Fine-Tuning and Prompt Optimization: Two Great Steps that Work Better Together](https://arxiv.org/abs/2407.10930)     
+[Jun'24] [Prompts as Auto-Optimized Training Hyperparameters](https://arxiv.org/abs/2406.11706)    
+[Feb'24] [Assisting in Writing Wikipedia-like Articles From Scratch with Large Language Models](https://arxiv.org/abs/2402.14207)         
+[Jan'24] [In-Context Learning for Extreme Multi-Label Classification](https://arxiv.org/abs/2401.12178)       
+[Dec'23] [DSPy Assertions: Computational Constraints for Self-Refining Language Model Pipelines](https://arxiv.org/abs/2312.13382)   
+[Dec'22] [Demonstrate-Search-Predict: Composing Retrieval & Language Models for Knowledge-Intensive NLP](https://arxiv.org/abs/2212.14024.pdf)
+
+To stay up to date or learn more, follow [@DSPyOSS](https://twitter.com/DSPyOSS) on Twitter or the DSPy page on LinkedIn.
+
+The **DSPy** logo is designed by **Chuyi Zhang**.
+
+If you use DSPy or DSP in a research paper, please cite our work as follows:
+
+```
+@inproceedings{khattab2024dspy,
+  title={DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines},
+  author={Khattab, Omar and Singhvi, Arnav and Maheshwari, Paridhi and Zhang, Zhiyuan and Santhanam, Keshav and Vardhamanan, Sri and Haq, Saiful and Sharma, Ashutosh and Joshi, Thomas T. and Moazam, Hanna and Miller, Heather and Zaharia, Matei and Potts, Christopher},
+  journal={The Twelfth International Conference on Learning Representations},
+  year={2024}
+}
+@article{khattab2022demonstrate,
+  title={Demonstrate-Search-Predict: Composing Retrieval and Language Models for Knowledge-Intensive {NLP}},
+  author={Khattab, Omar and Santhanam, Keshav and Li, Xiang Lisa and Hall, David and Liang, Percy and Potts, Christopher and Zaharia, Matei},
+  journal={arXiv preprint arXiv:2212.14024},
+  year={2022}
+}
+```
+
+<!-- You can also read more about the evolution of the framework from Demonstrate-Search-Predict to DSPy:
+
+* [**DSPy Assertions: Computational Constraints for Self-Refining Language Model Pipelines**](https://arxiv.org/abs/2312.13382)   (Academic Paper, Dec 2023) 
+* [**DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines**](https://arxiv.org/abs/2310.03714) (Academic Paper, Oct 2023) 
+

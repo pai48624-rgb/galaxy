@@ -1,0 +1,442 @@
+=== [home] https://www.humanlayer.dev/ (lang=en)
+HumanLayer - The multiplayer control plane for your software factory 
+ The Multiplayer Coding Agent Workspace 
+ HumanLayer is a multiplayer coding agent IDE and cloud that works seamlessly from your workstation to anywhere you want to run background agents.
+ It brings agent sessions, plan artifacts, and code diffs together in one place for your team to collaborate and ship.
+ HumanLayer ships composable pieces to meet software factory builders where they already are . Bring your own compute, development environment, and agent harness, or run the HumanLayer stack on your workstation or remote workers.
+ Download ⌘+Enter Linux/Windows install instructions 
+ $ brew trust humanlayer/humanlayer 
+ $ brew install humanlayer/humanlayer/humanlayer 
+ Trusted by engineers at
+ Multiplayer Coding Agent IDE + Cloud 
+ Bring agent sessions, plan artifacts, and code diffs together so your team can collaborate and ship.
+ The Platform
+ Everything you need to ship
+ A complete AI coding environment — from tasks and artifacts to cloud-scale agent orchestration.
+ ENG-1234 · Auth refactor 
+ ● RUNNING Design discussion 
+ DONE Research auth patterns 
+ IDLE Structure outline 
+ DRAFT Implement JWT 
+ Tasks Group your Sessions and Artifacts
+ Tasks group agent sessions, artifacts, and worktrees in one workspace that you can collaborate on with your whole team.
+ QRDSPI · task #1234 
+ ✓ Q
+ ✓ R
+ D
+ S
+ P
+ I
+ ▮ DESIGN synthesizing inputs… 
+ Cutting-edge workflows
+ The team that brought you context engineering brings frontier AI coding techniques and makes them shareable and collaborative. Battle-tested for solving large problems in million-LOC enterprise codebases.
+ Artifacts 
+ ARTIFACTS
+ SUMMARY
+ ● research.md 
+ ● design.md 
+ ● structure.md 
+ ● mockup.html 
+ ● plan.md 
+ Every artifact in one place
+ Research, designs, plans, mockups. Versioned, shareable, and tied to the task.
+ design.md 
+ ## Summary
+ ## Approach
+ K
+ ★
+ S
+ Comment-driven refinement
+ Humans and Agents collaborating on design docs. Catch mistakes before 2,000 lines of code.
+ session · running 
+ ✓ Edit auth.ts 
+ function refresh(token) {
+ return fetch(URL, {...})
+ return mutex.run(() => {
+ return fetch(URL, {...})
+ })
+ }
+ Full session visibility
+ You can’t do advanced context engineering without staying in touch with your context. HumanLayer optimizes for high-level orchestration, while letting you drill into every thinking message, every subagent tool call, and every code change.
+ real-time topology 
+ ☁ cloud daemon
+ 📱 mobile
+ HumanLayer API
+ 💻 coworker
+ 💻 your workstation
+ UI
+ local daemon
+ ● 
+ From your laptop to the cloud
+ A local daemon runs many Agent sessions in parallel on your laptop. Spin up cloud daemons for long-running work. Everything syncs through the HumanLayer API — same UI on web, desktop, or phone, with your teammates one tab away. Agents keep working even if you close your laptop.
+ workspace 
+ › jump to session_ 
+ New task task ⌘N 
+ Jump to session nav ⌘K 
+ Open artifact doc ⌘⇧A 
+ Send to agent action ⌘⏎ 
+ Comment on selection collab ⌘/ 
+ Superhuman for claude code
+ Jump between tasks, sessions, and artifacts with a keystroke. A command palette for every action.
+ Multiplayer Coding Agent IDE + Cloud 
+ Tasks / ENG-1234 Auth middleware refactor 
+ Tasks
+ Auth middleware refactor
+ API rate limiting
+ User dashboard redesign
+ Database migration v2
+ Search relevance tuning
+ Sentry alert routing
+ Feature flag cleanup
+ + New Task N 
+ Task Name SHARED WITH ORG ENG-1234 
+ Auth middleware refactor — token refresh improvements
+ /Users/dev/projects/platform-api 
+ Create Session C Create Design Discussion → 
+ Status
+ Session
+ Updated
+ DONE 
+ Research authentication patterns Research 
+ 10m ago
+ ● RUNNING 
+ Design discussion: token refresh strategy Design 
+ 2m ago
+ IDLE 
+ Structure outline: middleware module Structure 
+ 15m ago
+ IDLE 
+ Implementation plan: JWT validator Plan 
+ 20m ago
+ DRAFT 
+ Implement JWT validation middleware Implementation 
+ 1m ago
+ ARTIFACTS
+ SUMMARY
+ AUTO
+ ● research.md 
+ 2 
+ ● design-discussion.md 
+ 5 
+ ● structure-outline.md 
+ ● mockup.html 
+ 1 
+ ● implementation-plan.md 
+ 3 
+ ] next tab
+ TASK
+ 01 / 08
+ Tasks Group your Sessions and Artifacts
+ Tasks group agent sessions, artifacts, and worktrees in one workspace that you can collaborate on with your whole team.
+ ↓ Scroll to explore
+ Watch the Demo 
+ Do not outsource the thinking 
+ Ensure alignment at every step and put engineers in the driver's seat for code quality and architecture.
+ Structured workflows give the agent every opportunity to show you what it's wrong about before moving to implementation.
+ QRSPI
+ A workflow that earns trust
+ Six phases that turn fuzzy intent into shipped code, with checkpoints your team can verify.
+ Q
+ 01 Questions
+ Generate clarifying questions before any code is written.
+ R
+ 02 Research
+ Map the codebase, dependencies, and surrounding patterns.
+ D
+ 03 Design
+ Draft a design doc your team can comment on, in real-time.
+ S
+ 04 Structure
+ Break the design into phased, verifiable implementation steps.
+ P
+ 05 Plan
+ Detailed plan with file paths, test cases, and acceptance criteria.
+ I
+ 06 Implement
+ Execute with continuous feedback. No 2,000-line surprises.
+ Do not outsource the thinking. 
+Every phase is a place to push back.
+ ✓ Questions
+ ✓ Research
+ ▮ Design
+ Structure
+ Plan
+ Implement
+ Technical Design: Human + Agent Collaboration
+ Gathering codebase context and research findings...
+ Codebase 
+ src/
+ index.ts
+ app.tsx
+ lib/
+ utils.ts
+ api.ts
+ components/
+ Button.tsx
+ Agent 
+ ▮ Design Doc
+ ## Summary
+ ## Approach
+ You
+ Developer
+ Product Manager
+ Tech Lead
+ Agent
+ ↓ Scroll to see the workflow
+ Comment-Driven Design Reviews 
+ Inline comments on design documents. Your whole team — humans and Agents — collaborating in real-time. Catch mistakes before they become 2,000 lines of code.
+ Why not just use a Notion or Google Doc? Because there, your design doc is disconnected from the work. In HumanLayer, comments and decisions feed straight back to the agents — the doc is the interface to the code, not a separate artifact you hope someone reads before shipping.
+ Design Review
+ Catch mistakes before code
+ Your whole team — humans and Agents — commenting on the design before a single line is written.
+ DESIGN sidebar.md 
+ K
+ S
+ A
+ ## Summary
+ ## Approach
+ K
+ Kyle ✓ resolved 
+ This separation is causing the S/shift+S hotkey conflict. Can we share the same pure component?
+ Agent ✓ resolved 
+ Good catch — updated the design to use a shared SidebarWidget with configurable tabs.
+ S
+ Sarah ✓ resolved 
+ Can we move the sidebar to the left? Matches our other pages, puts navigation closer to the cursor.
+ A
+ Alex ✓ resolved 
+ We need to call the API for spline reticulation — widget can’t compute that locally.
+ Agent ✓ resolved 
+ Right — adding a SplineAPI call between setActiveTab and persist.
+ A
+ Alex ✓ resolved 
+ +1, this matches the session detail pattern. LGTM to proceed!
+ Design Review 0 / 7 resolved 
+ Team opens the design document...
+ DESIGN sidebar-consolidation.md 
+ Summary
+ Consolidate task and session sidebars into a shared component.
+ Task view should use the same multi-tab sidebar pattern as session view.
+ Persist per-task UI state (open, selected artifact, active tab) to localStorage.
+ Current State
+ - TaskDetailSidebarPanel: artifact viewer only, no tabs
+ - ConnectedSidebarWidget: multi-tab (minimap, artifacts, todos, summary, tips)
+ - S/shift+S cycles TaskDetailWidget tabs (NOT sidebar) — causes hotkey conflict
+ - Opening artifac
+
+=== [pricing] https://www.humanlayer.dev/ (lang=en)
+HumanLayer - The multiplayer control plane for your software factory 
+ The Multiplayer Coding Agent Workspace 
+ HumanLayer is a multiplayer coding agent IDE and cloud that works seamlessly from your workstation to anywhere you want to run background agents.
+ It brings agent sessions, plan artifacts, and code diffs together in one place for your team to collaborate and ship.
+ HumanLayer ships composable pieces to meet software factory builders where they already are . Bring your own compute, development environment, and agent harness, or run the HumanLayer stack on your workstation or remote workers.
+ Download ⌘+Enter Linux/Windows install instructions 
+ $ brew trust humanlayer/humanlayer 
+ $ brew install humanlayer/humanlayer/humanlayer 
+ Trusted by engineers at
+ Multiplayer Coding Agent IDE + Cloud 
+ Bring agent sessions, plan artifacts, and code diffs together so your team can collaborate and ship.
+ The Platform
+ Everything you need to ship
+ A complete AI coding environment — from tasks and artifacts to cloud-scale agent orchestration.
+ ENG-1234 · Auth refactor 
+ ● RUNNING Design discussion 
+ DONE Research auth patterns 
+ IDLE Structure outline 
+ DRAFT Implement JWT 
+ Tasks Group your Sessions and Artifacts
+ Tasks group agent sessions, artifacts, and worktrees in one workspace that you can collaborate on with your whole team.
+ QRDSPI · task #1234 
+ ✓ Q
+ ✓ R
+ D
+ S
+ P
+ I
+ ▮ DESIGN synthesizing inputs… 
+ Cutting-edge workflows
+ The team that brought you context engineering brings frontier AI coding techniques and makes them shareable and collaborative. Battle-tested for solving large problems in million-LOC enterprise codebases.
+ Artifacts 
+ ARTIFACTS
+ SUMMARY
+ ● research.md 
+ ● design.md 
+ ● structure.md 
+ ● mockup.html 
+ ● plan.md 
+ Every artifact in one place
+ Research, designs, plans, mockups. Versioned, shareable, and tied to the task.
+ design.md 
+ ## Summary
+ ## Approach
+ K
+ ★
+ S
+ Comment-driven refinement
+ Humans and Agents collaborating on design docs. Catch mistakes before 2,000 lines of code.
+ session · running 
+ ✓ Edit auth.ts 
+ function refresh(token) {
+ return fetch(URL, {...})
+ return mutex.run(() => {
+ return fetch(URL, {...})
+ })
+ }
+ Full session visibility
+ You can’t do advanced context engineering without staying in touch with your context. HumanLayer optimizes for high-level orchestration, while letting you drill into every thinking message, every subagent tool call, and every code change.
+ real-time topology 
+ ☁ cloud daemon
+ 📱 mobile
+ HumanLayer API
+ 💻 coworker
+ 💻 your workstation
+ UI
+ local daemon
+ ● 
+ From your laptop to the cloud
+ A local daemon runs many Agent sessions in parallel on your laptop. Spin up cloud daemons for long-running work. Everything syncs through the HumanLayer API — same UI on web, desktop, or phone, with your teammates one tab away. Agents keep working even if you close your laptop.
+ workspace 
+ › jump to session_ 
+ New task task ⌘N 
+ Jump to session nav ⌘K 
+ Open artifact doc ⌘⇧A 
+ Send to agent action ⌘⏎ 
+ Comment on selection collab ⌘/ 
+ Superhuman for claude code
+ Jump between tasks, sessions, and artifacts with a keystroke. A command palette for every action.
+ Multiplayer Coding Agent IDE + Cloud 
+ Tasks / ENG-1234 Auth middleware refactor 
+ Tasks
+ Auth middleware refactor
+ API rate limiting
+ User dashboard redesign
+ Database migration v2
+ Search relevance tuning
+ Sentry alert routing
+ Feature flag cleanup
+ + New Task N 
+ Task Name SHARED WITH ORG ENG-1234 
+ Auth middleware refactor — token refresh improvements
+ /Users/dev/projects/platform-api 
+ Create Session C Create Design Discussion → 
+ Status
+ Session
+ Updated
+ DONE 
+ Research authentication patterns Research 
+ 10m ago
+ ● RUNNING 
+ Design discussion: token refresh strategy Design 
+ 2m ago
+ IDLE 
+ Structure outline: middleware module Structure 
+ 15m ago
+ IDLE 
+ Implementation plan: JWT validator Plan 
+ 20m ago
+ DRAFT 
+ Implement JWT validation middleware Implementation 
+ 1m ago
+ ARTIFACTS
+ SUMMARY
+ AUTO
+ ● research.md 
+ 2 
+ ● design-discussion.md 
+ 5 
+ ● structure-outline.md 
+ ● mockup.html 
+ 1 
+ ● implementation-plan.md 
+ 3 
+ ] next tab
+ TASK
+ 01 / 08
+ Tasks Group your Sessions and Artifacts
+ Tasks group agent sessions, artifacts, and worktrees in one workspace that you can collaborate on with your whole team.
+ ↓ Scroll to explore
+ Watch the Demo 
+ Do not outsource the thinking 
+ Ensure alignment at every step and put engineers in the driver's seat for code quality and architecture.
+ Structured workflows give the agent every opportunity to show you what it's wrong about before moving to implementation.
+ QRSPI
+ A workflow that earns trust
+ Six phases that turn fuzzy intent into shipped code, with checkpoints your team can verify.
+ Q
+ 01 Questions
+ Generate clarifying questions before any code is written.
+ R
+ 02 Research
+ Map the codebase, dependencies, and surrounding patterns.
+ D
+ 03 Design
+ Draft a design doc your team can comment on, in real-time.
+ S
+ 04 Structure
+ Break the design into phased, verifiable implementation steps.
+ P
+ 05 Plan
+ Detailed plan with file paths, test cases, and acceptance criteria.
+ I
+ 06 Implement
+ Execute with continuous feedback. No 2,000-line surprises.
+ Do not outsource the thinking. 
+Every phase is a place to push back.
+ ✓ Questions
+ ✓ Research
+ ▮ Design
+ Structure
+ Plan
+ Implement
+ Technical Design: Human + Agent Collaboration
+ Gathering codebase context and research findings...
+ Codebase 
+ src/
+ index.ts
+ app.tsx
+ lib/
+ utils.ts
+ api.ts
+ components/
+ Button.tsx
+ Agent 
+ ▮ Design Doc
+ ## Summary
+ ## Approach
+ You
+ Developer
+ Product Manager
+ Tech Lead
+ Agent
+ ↓ Scroll to see the workflow
+ Comment-Driven Design Reviews 
+ Inline comments on design documents. Your whole team — humans and Agents — collaborating in real-time. Catch mistakes before they become 2,000 lines of code.
+ Why not just use a Notion or Google Doc? Because there, your design doc is disconnected from the work. In HumanLayer, comments and decisions feed straight back to the agents — the doc is the interface to the code, not a separate artifact you hope someone reads before shipping.
+ Design Review
+ Catch mistakes before code
+ Your whole team — humans and Agents — commenting on the design before a single line is written.
+ DESIGN sidebar.md 
+ K
+ S
+ A
+ ## Summary
+ ## Approach
+ K
+ Kyle ✓ resolved 
+ This separation is causing the S/shift+S hotkey conflict. Can we share the same pure component?
+ Agent ✓ resolved 
+ Good catch — updated the design to use a shared SidebarWidget with configurable tabs.
+ S
+ Sarah ✓ resolved 
+ Can we move the sidebar to the left? Matches our other pa
+
+=== [meta] https://www.humanlayer.dev/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/humanlayer/humanlayer
+## HumanLayer
+
+public issues repo for humanlayer - the code here is pretty much all deprecated - you can try the rebuild of humanlayer at https://humanlayer.com - thanks for all your support - dex
+

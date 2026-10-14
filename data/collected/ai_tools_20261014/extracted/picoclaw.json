@@ -1,0 +1,49 @@
+{
+ "company": "Sipeed",
+ "one_liner_ko": "Go로 작성되어 10달러짜리 하드웨어에서도 10MB 미만 메모리로 돌아가는 초경량 개인 AI 비서.",
+ "what_it_does_ko": "PicoClaw는 Go로 작성된 초경량 개인 AI 비서다. 10달러짜리 Raspberry Pi부터 클라우드 서버까지 어떤 기기에든 단일 바이너리로 배포하며, 10MB 미만 RAM과 1초 미만 시작 시간으로 동작한다. Telegram·Discord·Slack·DingTalk·Feishu·WeCom·LINE·QQ 등 16개 이상의 채팅 채널에 연결되고, OpenAI·Claude·DeepSeek 등 여러 LLM 제공자를 설정 하나로 바꿔 쓸 수 있다. 자체 호스팅이라 대화 기록과 설정이 기기에 남는다. Sipeed가 시작한 독립 오픈소스 프로젝트다.",
+ "key_features": [
+  "10MB 미만 RAM, 1초 미만 시작의 단일 바이너리",
+  "Raspberry Pi·RISC-V·ARM64·x86_64·Android·Docker 지원",
+  "16개 이상 채팅 채널(Telegram·Discord·Slack·LINE·QQ 등)",
+  "여러 LLM 제공자 지원(OpenAI·Claude·DeepSeek·Gemini·Ollama 등)",
+  "자체 호스팅·데이터 로컬 보관",
+  "예약 명령·cron 자동화",
+  "웹 검색·장기 메모리",
+  "게이트웨이 모드(MCP·REST API)"
+ ],
+ "use_cases_ko": [
+  "저가 하드웨어에서 개인 비서(일정·자동화) 운영",
+  "민감한 업무 데이터를 로컬에서 분석",
+  "논문 요약·질의응답 등 조사·학습"
+ ],
+ "pricing": {"free_tier": "있음 (오픈소스 무료, LLM API 사용료만 본인 부담)", "plans": [], "pricing_url": "https://picoclaw.io"},
+ "open_source": "MIT",
+ "api": "있음",
+ "platforms": ["안드로이드", "CLI", "API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://picoclaw.io", "quote": "PicoClaw is open-source software by Sipeed"},
+  {"field": "one_liner_ko", "url": "https://picoclaw.io", "quote": "Single binary · <10MB RAM · 1s startup · Runs on $10 hardware"},
+  {"field": "what_it_does_ko", "url": "https://picoclaw.io", "quote": "PicoClaw is an ultra-lightweight personal AI assistant written in Go. Deploy a single binary on any device — from a $10 Raspberry Pi to a cloud server"},
+  {"field": "what_it_does_ko", "url": "https://picoclaw.io", "quote": "It connects to LLM providers (OpenAI, Claude, DeepSeek, etc.) via API, but all conversation history and configuration remain local."},
+  {"field": "key_features", "url": "https://picoclaw.io", "quote": "Raspberry Pi, RISC-V, ARM64, x86_64, Android (APK or Termux), Docker — one binary covers all platforms."},
+  {"field": "key_features", "url": "https://picoclaw.io", "quote": "Telegram, Discord, Slack, DingTalk, Feishu, WeCom, LINE, QQ and more."},
+  {"field": "key_features", "url": "https://picoclaw.io", "quote": "OpenAI, Claude, DeepSeek, Doubao and more. Switch providers freely with a single config change."},
+  {"field": "key_features", "url": "https://picoclaw.io", "quote": "Your data stays on your device. No cloud dependency."},
+  {"field": "key_features", "url": "https://picoclaw.io", "quote": "Manage tasks with scheduled commands, cron automation, and multi-platform bot integration"},
+  {"field": "key_features", "url": "https://picoclaw.io", "quote": "Built-in web search and long-term memory for context continuity."},
+  {"field": "use_cases_ko", "url": "https://picoclaw.io", "quote": "Analyze sensitive business data locally."},
+  {"field": "use_cases_ko", "url": "https://picoclaw.io", "quote": "Summarize papers, answer questions, and organize knowledge."},
+  {"field": "use_cases_ko", "url": "https://picoclaw.io", "quote": "$9.9 LicheeRV-Nano Minimal Home Assistant"},
+  {"field": "pricing", "url": "https://picoclaw.io", "quote": "The software is free. You only pay for the LLM API usage (e.g., OpenAI, Claude) based on your own consumption."},
+  {"field": "open_source", "url": "https://github.com/sipeed/picoclaw", "quote": "<img src=\"https://img.shields.io/badge/license-MIT-green\" alt=\"License\">"},
+  {"field": "api", "url": "https://picoclaw.io", "quote": "Gateway mode turns PicoClaw into an AI backend. Connect any chat platform via MCP protocol and REST API."},
+  {"field": "platforms", "url": "https://picoclaw.io", "quote": "On Android, just download and install the APK — no root or special setup needed. You can also run PicoClaw via Termux if you prefer the command-line approach."},
+  {"field": "korean_support", "url": "https://picoclaw.io", "quote": "hreflang: en, x-default, zh"}
+ ],
+ "mismatch": [
+  {"official": "MIT 오픈소스 무료 소프트웨어, LLM API 사용료만 본인 부담", "diff": "기존 분류는 '프리미엄(무료+유료 구독)'이지만 공식 페이지에는 유료 구독이 없음", "url": "https://picoclaw.io"}
+ ],
+ "plan_change": []
+}

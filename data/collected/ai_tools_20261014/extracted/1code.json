@@ -1,0 +1,122 @@
+{
+ "company": "21st.dev",
+ "one_liner_ko": "Claude Code·Codex 등 코딩 에이전트를 로컬이나 클라우드에서 돌리는 오픈소스 코딩 에이전트 클라이언트.",
+ "what_it_does_ko": "1Code는 Claude Code와 Codex 등 코딩 에이전트를 한 앱에서 돌리는 오픈소스 클라이언트다. 채팅마다 독립된 git worktree에서 실행되어 메인 브랜치를 건드리지 않는다. Cursor 같은 데스크톱 화면에서 diff 미리보기, 내장 git 클라이언트, 실시간 도구 실행 표시를 제공한다. 노트북을 닫아도 클라우드 샌드박스에서 백그라운드 에이전트가 계속 돈다. 저장소는 2026년 7월 7일 소유자가 보관(archive) 처리해 읽기 전용이다.",
+ "key_features": [
+  "Claude Code·Codex 멀티 에이전트를 한 앱에서 전환",
+  "채팅마다 독립 git worktree 격리",
+  "클라우드 샌드박스 백그라운드 에이전트",
+  "diff 미리보기·내장 git 클라이언트(PR 생성·푸시)",
+  "칸반 보드로 에이전트 세션 시각화",
+  "GitHub·Linear·Slack 트리거 자동화",
+  "API 한 번 호출로 에이전트 실행",
+  "자기 API 키 사용(BYOK)"
+ ],
+ "use_cases_ko": [
+  "메인 브랜치를 건드리지 않고 여러 에이전트 작업을 worktree별로 병렬 실행",
+  "노트북을 닫은 동안 클라우드에서 에이전트를 계속 돌리고 휴대폰(PWA)으로 확인"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "Apache-2.0",
+ "api": "있음",
+ "platforms": [
+  "맥",
+  "웹",
+  "윈도"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://github.com/21st-dev/1code",
+   "quote": "By 21st.dev team"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/21st-dev/1code",
+   "quote": "Open-source coding agent client. Run Claude Code, Codex, and more - locally or in the cloud."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/21st-dev/1code",
+   "quote": "Each chat session runs in its own isolated worktree"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/21st-dev/1code",
+   "quote": "Cursor-like UI with diff previews, built-in git client, and the ability to see changes before they land."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/21st-dev/1code",
+   "quote": "This repository was archived by the owner on Jul 7, 2026. It is now read-only."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/21st-dev/1code",
+   "quote": "Multi-Agent Support - Claude Code and Codex in one app, switch instantly"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/21st-dev/1code",
+   "quote": "Background Agents - Cloud sandboxes that run when your laptop sleeps"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/21st-dev/1code",
+   "quote": "Built-in Git Client - Visual staging, diffs, PR creation, push to GitHub"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/21st-dev/1code",
+   "quote": "Kanban Board - Visualize agent sessions"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/21st-dev/1code",
+   "quote": "Automations - Trigger agents from GitHub, Linear, Slack, or manually from git events"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/21st-dev/1code",
+   "quote": "Custom Models & Providers (BYOK) - Bring your own API keys"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/21st-dev/1code",
+   "quote": "Run agents locally, in worktrees, in background - without touching main branch."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/21st-dev/1code",
+   "quote": "PWA - Start and monitor background agents from your phone"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/21st-dev/1code",
+   "quote": "Apache-2.0 license"
+  },
+  {
+   "field": "api",
+   "url": "https://github.com/21st-dev/1code",
+   "quote": "API - Run agents programmatically with a single API call"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/21st-dev/1code",
+   "quote": "Cross Platform - macOS desktop, web app, Windows and Linux"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://github.com/21st-dev/1code",
+   "quote": "hreflang: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [],
+ "note": "받아 둔 pricing·about·pricing2 구간은 GitHub 자체 요금·문서 페이지라 1code 가격이 아님 → 요금 불명. 저장소는 2026-07-07 보관(archive)됨."
+}

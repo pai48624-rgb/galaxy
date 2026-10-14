@@ -1,0 +1,60 @@
+{
+ "company": "Pika",
+ "one_liner_ko": "영상·이미지·오디오 제작 앱과 여러 생성 모델을 한곳에 모은 크리에이티브용 AI 플랫폼.",
+ "what_it_does_ko": "Pika는 Seedance 2.5, Pika 2.5, GPT Image 2.5, Nano Banana 2 등 여러 생성 모델 위에 목적별 제작 앱을 올린 AI 크리에이티브 플랫폼이다. Video Studio로 짧은 클립부터 30초 멀티샷 영상까지 만들고, 영상 늘리기·색보정·이미지 편집·캐릭터 만들기를 할 수 있다. Pika Soundtrack은 영상 동작에 맞춰 음악·환경음·효과음을 입히고, Pika Speech로 음성을 만든다. Product Ad 앱은 제품 이미지와 요청 내용으로 광고 영상을 만든다. 개발자에게는 Pika API Club 멤버십으로 API를 제공한다.",
+ "key_features": [
+  "Video Studio: 최대 30초 멀티샷 영상 생성",
+  "Extend Video: 프레임을 생성해 영상 늘리기",
+  "Color Grade: 사진·영상 색보정",
+  "Pika Soundtrack: 영상에 맞춘 음악·효과음 생성",
+  "Edit Image·Character Studio·Product Shot",
+  "Product Ad: 제품 이미지로 광고 영상 제작",
+  "여러 외부 모델(Seedance 2.5, Nano Banana 2, ElevenLabs 등) 사용",
+  "Pika API Club(API 멤버십)"
+ ],
+ "use_cases_ko": [
+  "광고 크리에이티브·마케터의 제품 광고 영상 제작",
+  "편집자의 색보정·SNS용 음성 추가",
+  "영화 제작자의 레퍼런스 기반 영상 제작"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Free: 월 0 크레딧, 크레딧 팩 구매로만 사용, 상업적 라이선스 없음)",
+  "plans": [
+   {"name": "Free", "price": 0, "currency": "USD", "period": "month", "limits": "월 0 크레딧(팩 구매만), 상업적 라이선스 없음", "page_lang": "en"},
+   {"name": "Starter", "price": 10, "currency": "USD", "period": "month", "limits": "월 900 크레딧, 상업적 라이선스 없음 (연간 결제 시 $8/월)", "page_lang": "en"},
+   {"name": "Creator", "price": 35, "currency": "USD", "period": "month", "limits": "월 3,150 크레딧, 상업적 라이선스 (연간 결제 시 $28/월)", "page_lang": "en"},
+   {"name": "Fancy", "price": 95, "currency": "USD", "period": "month", "limits": "월 8,550 크레딧부터($95–$880), 무제한 병렬·우선 대기열 (연간 $76–$704/월)", "page_lang": "en"},
+   {"name": "Enterprise", "price": null, "currency": null, "period": null, "limits": "맞춤 크레딧, 영업 문의", "page_lang": "en"},
+   {"name": "크레딧 팩", "price": 25, "currency": "USD", "period": "one-time", "limits": "$25에 1,500 크레딧부터 $1,000에 66,000 크레딧까지, 구매 후 365일 유효", "page_lang": "en"}
+  ],
+  "pricing_url": "https://pika.art/pricing"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["웹", "iOS", "API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://pika.art", "quote": "© 2026 Pika. All rights reserved."},
+  {"field": "one_liner_ko", "url": "https://pika.art", "quote": "The new Pika brings video, image, and sound creation into one place, with the world’s leading gen media models underneath and focused creative apps on top."},
+  {"field": "what_it_does_ko", "url": "https://pika.art", "quote": "Generate anything from a short clip to a 30-second multi-shot masterpiece."},
+  {"field": "what_it_does_ko", "url": "https://create.pika.art/apps/product-ad", "quote": "The Pika Product Ad app takes any image of your product, combines that with your brief, and turns it into a stunning, market-ready video."},
+  {"field": "key_features", "url": "https://pika.art", "quote": "Make any clip longer than its original by generating extra frames"},
+  {"field": "key_features", "url": "https://pika.art", "quote": "Adjust the color, contrast, and mood of any photo or clip."},
+  {"field": "key_features", "url": "https://pika.art", "quote": "Scores any clip to picture—music, ambience and foley matched to the action."},
+  {"field": "key_features", "url": "https://pika.art", "quote": "Create styled images of your product without a photoshoot."},
+  {"field": "key_features", "url": "https://pika.art", "quote": "A membership program that provides access to top gen media models at previously impossible prices, all through one API"},
+  {"field": "use_cases_ko", "url": "https://pika.art", "quote": " Ad Creatives Editors Marketers Filmmakers "},
+  {"field": "use_cases_ko", "url": "https://pika.art", "quote": "Add VO for social"},
+  {"field": "pricing", "url": "https://pika.art/pricing", "quote": " 0 credits / month · packs only "},
+  {"field": "pricing", "url": "https://pika.art/pricing", "quote": " Price / mo $0 $10 $35 $95–$880 "},
+  {"field": "pricing", "url": "https://pika.art/pricing", "quote": " Price / mo (annual, –20%) $0 $8 $28 $76–$704 "},
+  {"field": "pricing", "url": "https://pika.art/pricing", "quote": "Credits you buy as top-ups carry over and expire 365 days after purchase."},
+  {"field": "api", "url": "https://pika.art", "quote": " Pika API Club "},
+  {"field": "platforms", "url": "https://pika.art/pricing", "quote": "They can’t be used with the API, MCP, iOS app, or old.pika.art."},
+  {"field": "korean_support", "url": "https://pika.art", "quote": "html lang: en"}
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {"official": "Free 요금제는 월 0 크레딧이라 크레딧 팩($25~)을 사야 생성 가능, 유료는 Starter $10·Creator $35·Fancy $95~$880 구독", "diff": "무료 요금제가 있지만 무료 크레딧이 없어 사실상 구독 또는 크레딧 팩 구매 구조", "url": "https://pika.art/pricing"}
+ ]
+}

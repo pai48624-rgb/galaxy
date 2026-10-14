@@ -1,0 +1,40 @@
+{
+ "company": "HKUDS",
+ "one_liner_ko": "OpenClaw를 AI 동료로 만들어, AI 에이전트가 실제 직무 과제를 해서 돈을 벌고 자기 토큰 비용을 내며 살아남는지 겨루는 경제성 벤치마크.",
+ "what_it_does_ko": "ClawWork는 AI 비서를 실제 업무를 해내는 AI 동료로 바꾸는 것을 목표로 한 프로젝트다. GDPVal 데이터셋의 전문 직무 과제를 수행해 수입을 얻고, 자기 토큰 사용료를 내며 지급 능력을 유지해야 하는 실세계 경제 시험을 제공한다. 작업 품질·비용 효율·장기 생존을 측정하며, GLM·Kimi·Qwen 등 여러 모델이 맞붙는 경쟁 무대를 지원한다. nanobot과 연동되고 결과를 보는 대시보드가 있다.",
+ "key_features": [
+  "GDPVal 220개 과제 기반 경제성 벤치마크",
+  "에이전트가 토큰 비용을 스스로 내는 경제적 생존 시험",
+  "작업 품질·비용 효율·장기 생존 측정",
+  "여러 AI 모델 간 경쟁(GLM·Kimi·Qwen 등)",
+  "API 응답 기반 토큰 비용 추적",
+  "nanobot 연동(/clawwork 명령, 44개 직업 자동 분류)",
+  "결과 대시보드"
+ ],
+ "use_cases_ko": [
+  "여러 AI 모델의 실제 업무 성과·비용 효율 비교"
+ ],
+ "pricing": {"free_tier": "불명", "plans": [], "pricing_url": null},
+ "open_source": "MIT",
+ "api": "불명",
+ "platforms": ["CLI"],
+ "korean_support": "불명",
+ "evidence": [
+  {"field": "company", "url": "https://github.com/HKUDS/ClawWork", "quote": "<a href=\"https://hkuds.github.io/ClawWork/\">🔴 Watch AI Coworkers Earn Money from Real-Life Tasks</a>"},
+  {"field": "one_liner_ko", "url": "https://github.com/HKUDS/ClawWork", "quote": "<h1>ClawWork: OpenClaw as Your AI Coworker</h1>"},
+  {"field": "one_liner_ko", "url": "https://github.com/HKUDS/ClawWork", "quote": "pay for their own token usage, and maintain economic solvency."},
+  {"field": "what_it_does_ko", "url": "https://github.com/HKUDS/ClawWork", "quote": "Transforms AI assistants into true AI coworkers that complete real work tasks and create genuine economic value."},
+  {"field": "what_it_does_ko", "url": "https://github.com/HKUDS/ClawWork", "quote": "Real-world economic testing system where AI agents must earn income by completing professional tasks from the [GDPVal]"},
+  {"field": "what_it_does_ko", "url": "https://github.com/HKUDS/ClawWork", "quote": "Measures what truly matters in production environments: **work quality**, **cost efficiency**, and **long-term survival**"},
+  {"field": "key_features", "url": "https://github.com/HKUDS/ClawWork", "quote": "badge/dataset-GDPVal%20220%20tasks-orange"},
+  {"field": "key_features", "url": "https://github.com/HKUDS/ClawWork", "quote": "Supports different AI models (GLM, Kimi, Qwen, etc.) competing head-to-head"},
+  {"field": "key_features", "url": "https://github.com/HKUDS/ClawWork", "quote": "Token costs are now read directly from various API responses (including thinking tokens) instead of estimation."},
+  {"field": "key_features", "url": "https://github.com/HKUDS/ClawWork", "quote": "New /clawwork command for on-demand paid tasks. Features automatic classification across 44 occupations with BLS wage pricing"},
+  {"field": "key_features", "url": "https://github.com/HKUDS/ClawWork", "quote": "clone locally and run ./start_dashboard.sh (the dashboard reads directly from local files for immediate updates)"},
+  {"field": "use_cases_ko", "url": "https://github.com/HKUDS/ClawWork", "quote": "Supports different AI models (GLM, Kimi, Qwen, etc.) competing head-to-head to determine the ultimate \"AI worker champion\""},
+  {"field": "open_source", "url": "https://github.com/HKUDS/ClawWork", "quote": "<img src=\"https://img.shields.io/badge/license-MIT-green\" alt=\"License\">"},
+  {"field": "platforms", "url": "https://github.com/HKUDS/ClawWork", "quote": "Try locally: python -m clawmode_integration.cli agent."}
+ ],
+ "mismatch": [{"official": "MIT 오픈소스 연구용 벤치마크 저장소, 요금제 안내 없음", "diff": "기존 '프리미엄(무료+유료 구독)' 분류와 달리 유료 구독이 확인되지 않음(오픈소스)", "url": "https://github.com/HKUDS/ClawWork"}],
+ "plan_change": []
+}

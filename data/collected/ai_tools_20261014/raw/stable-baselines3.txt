@@ -1,0 +1,292 @@
+=== [home] https://stable-baselines3.readthedocs.io/en/master/ (lang=en)
+Stable-Baselines3 Docs - Reliable Reinforcement Learning Implementations — Stable Baselines3 2.9.2a0 documentation 
+ Stable Baselines3
+ User Guide 
+ Installation 
+ Getting Started 
+ Reinforcement Learning Tips and Tricks 
+ Reinforcement Learning Resources 
+ RL Algorithms 
+ Examples 
+ Vectorized Environments 
+ Policy Networks 
+ Using Custom Environments 
+ Callbacks 
+ Tensorboard Integration 
+ Integrations 
+ RL Baselines3 Zoo 
+ SB3 Contrib 
+ Stable Baselines Jax (SBX) 
+ Plotting 
+ Imitation Learning 
+ Migrating from Stable-Baselines 
+ Dealing with NaNs and infs 
+ Developer Guide 
+ On saving and loading 
+ Exporting models 
+ RL Algorithms 
+ Base RL Class 
+ A2C 
+ DDPG 
+ DQN 
+ HER 
+ PPO 
+ SAC 
+ TD3 
+ Common 
+ Atari Wrappers 
+ Environments Utils 
+ Custom Environments 
+ Probability Distributions 
+ Evaluation Helper 
+ Gym Environment Checker 
+ Monitor Wrapper 
+ Logger 
+ Action Noise 
+ Utils 
+ Misc 
+ Changelog 
+ Projects 
+ Stable Baselines3 
+ Stable-Baselines3 Docs - Reliable Reinforcement Learning Implementations
+ View page source 
+ Stable-Baselines3 Docs - Reliable Reinforcement Learning Implementations  
+ Stable Baselines3 (SB3) is a set of reliable implementations of reinforcement learning algorithms in PyTorch.
+It is the next major version of Stable Baselines .
+ GitHub repository: https://github.com/DLR-RM/stable-baselines3 
+ Paper: https://jmlr.org/papers/volume22/20-1364/20-1364.pdf 
+ RL Baselines3 Zoo (training framework for SB3): https://github.com/DLR-RM/rl-baselines3-zoo 
+ RL Baselines3 Zoo provides a collection of pre-trained agents, scripts for training, evaluating agents, tuning hyperparameters, plotting results, and recording videos.
+ SB3 Contrib (experimental RL code, latest algorithms): https://github.com/Stable-Baselines-Team/stable-baselines3-contrib 
+ SBX (SB3 + Jax): https://github.com/araffin/sbx 
+ Main Features  
+ Unified structure for all algorithms
+ PEP 8 compliant (unified code style)
+ Documented functions and classes
+ Tests, high code coverage, and type hints
+ Clean code
+ TensorBoard support
+ The performance of each algorithm was tested (see Results section in their respective page)
+ User Guide 
+ Installation 
+ Prerequisites 
+ Bleeding-edge version 
+ Development version 
+ Using Docker Images 
+ Getting Started 
+ Reinforcement Learning Tips and Tricks 
+ General advice when using Reinforcement Learning 
+ Which algorithm should I use? 
+ Tips and Tricks when creating a custom environment 
+ Tips and Tricks when implementing an RL algorithm 
+ Reinforcement Learning Resources 
+ RL Algorithms 
+ Reproducibility 
+ Training exceeds total_timesteps 
+ Examples 
+ Try it online with Colab Notebooks! 
+ Basic Usage: Training, Saving, Loading 
+ Multiprocessing: Unleashing the Power of Vectorized Environments 
+ Multiprocessing with off-policy algorithms 
+ Dict Observations 
+ Callbacks: Monitoring Training 
+ Callbacks: Evaluate Agent Performance 
+ Atari Games 
+ PyBullet: Normalizing input features 
+ Hindsight Experience Replay (HER) 
+ Learning Rate Schedule 
+ Advanced Saving and Loading 
+ Accessing and modifying model parameters 
+ SB3 with Isaac Lab, Brax, Procgen, EnvPool 
+ SB3 with DeepMind Control (dm_control) 
+ Record a Video 
+ Compiling models 
+ Bonus: Make a GIF of a Trained Agent 
+ Vectorized Environments 
+ VecEnv API vs Gym API 
+ Modifying Vectorized Environments Attributes 
+ Vectorized Environments Wrappers 
+ VecEnv 
+ DummyVecEnv 
+ SubprocVecEnv 
+ Wrappers 
+ Policy Networks 
+ SB3 Policy 
+ Default Network Architecture 
+ Custom Network Architecture 
+ Custom Feature Extractor 
+ Multiple Inputs and Dictionary Observations 
+ On-Policy Algorithms 
+ Off-Policy Algorithms 
+ Using Custom Environments 
+ Callbacks 
+ Custom Callback 
+ Event Callback 
+ Callback Collection 
+ Tensorboard Integration 
+ Basic Usage 
+ Logging More Values 
+ Logging Images 
+ Logging Figures/Plots 
+ Logging Videos 
+ Logging Hyperparameters 
+ Directly Accessing The Summary Writer 
+ Integrations 
+ Weights & Biases 
+ Hugging Face 🤗 
+ MLflow 
+ RL Baselines3 Zoo 
+ Installation 
+ Train an Agent 
+ Enjoy a Trained Agent 
+ Hyperparameter Optimization 
+ Colab Notebook: Try it Online! 
+ SB3 Contrib 
+ Why create this repository? 
+ Stable Baselines Jax (SBX) 
+ Plotting 
+ Recommended Approach: RL Baselines3 Zoo Plotting 
+ Real-Time Monitoring 
+ Monitor File Format 
+ Basic SB3 Plotting (Simple Use Cases) 
+ Imitation Learning 
+ Migrating from Stable-Baselines 
+ Overview 
+ How to migrate? 
+ Breaking Changes 
+ New Features (SB3 vs SB2) 
+ Dealing with NaNs and infs 
+ How and why? 
+ Anomaly detection with PyTorch 
+ Numpy parameters 
+ VecCheckNan Wrapper 
+ RL Model hyperparameters 
+ Missing values from datasets 
+ Developer Guide 
+ Algorithms Structure 
+ Where to start? 
+ Pre-Processing 
+ Policy Structure 
+ Probability distributions 
+ State-Dependent Exploration 
+ Misc 
+ On saving and loading 
+ Zip-archive 
+ Exporting models 
+ Background 
+ Export to ONNX 
+ Trace/Export to C++ 
+ Export to ONNX-JS / ONNX Runtime Web 
+ Export to TensorFlow.js 
+ Export to TFLite / Coral (Edge TPU) 
+ Manual export 
+ SBX (SB3 + Jax) Export 
+ RL Algorithms 
+ Base RL Class 
+ A2C 
+ DDPG 
+ DQN 
+ HER 
+ PPO 
+ SAC 
+ TD3 
+ Common 
+ Atari Wrappers 
+ Environments Utils 
+ Custom Environments 
+ Probability Distributions 
+ Evaluation Helper 
+ Gym Environment Checker 
+ Monitor Wrapper 
+ Logger 
+ Action Noise 
+ Utils 
+ Misc 
+ Changelog 
+ Projects 
+ Citing Stable Baselines3  
+ To cite this project in publications:
+ @article { stable-baselines3 , 
+ author = {Antonin Raffin and Ashley Hill and Adam Gleave and Anssi Kanervisto and Maximilian Ernestus and Noah Dormann} , 
+ title = {Stable-Baselines3: Reliable Reinforcement Learning Implementations} , 
+ journal = {Journal of Machine Learning Research} , 
+ year = {2021} , 
+ volume = {22} , 
+ number = {268} , 
+ pages = {1-8} , 
+ url = {https://jmlr.org/papers/v22/20-1364.html} 
+ } 
+ Note: If you need to refer to a specific version of SB3, you can also use the Zenodo DOI .
+ Contributing  
+ For anyone interested in making the RL baselines better, there are still some improvements
+that need to be done.
+You can check issues in the repository .
+ If you want to contribute, please read CONTRIBUTING.md first.
+ Indices and tables  
+ Index 
+ Search Page 
+ Module Index 
+ Next 
+ © Copyright 2021-2026, Stable Baselines3.
+ Built with Sphinx using a
+ theme 
+ provided by Read the Docs .
+
+=== [meta] https://stable-baselines3.readthedocs.io/en/master/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/DLR-RM/stable-baselines3
+<!-- [![pipeline status](https://gitlab.com/araffin/stable-baselines3/badges/master/pipeline.svg)](https://gitlab.com/araffin/stable-baselines3/-/commits/master) -->
+[![CI](https://github.com/DLR-RM/stable-baselines3/workflows/CI/badge.svg)](https://github.com/DLR-RM/stable-baselines3/actions/workflows/ci.yml)
+[![Documentation Status](https://readthedocs.org/projects/stable-baselines/badge/?version=master)](https://stable-baselines3.readthedocs.io/en/master/?badge=master) [![coverage report](https://gitlab.com/araffin/stable-baselines3/badges/master/coverage.svg)](https://github.com/DLR-RM/stable-baselines3/actions/workflows/ci.yml)
+[![codestyle](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+
+# Stable Baselines3
+
+<img src="docs/\_static/img/logo.png" align="right" width="40%"/>
+
+Stable Baselines3 (SB3) is a set of reliable implementations of reinforcement learning algorithms in PyTorch. It is the next major version of [Stable Baselines](https://github.com/hill-a/stable-baselines).
+
+You can read a detailed presentation of Stable Baselines3 in the [v1.0 blog post](https://araffin.github.io/post/sb3/) or our [JMLR paper](https://jmlr.org/papers/volume22/20-1364/20-1364.pdf).
+
+
+These algorithms will make it easier for the research community and industry to replicate, refine, and identify new ideas, and will create good baselines to build projects on top of. We expect these tools will be used as a base around which new ideas can be added, and as a tool for comparing a new approach against existing ones. We also hope that the simplicity of these tools will allow beginners to experiment with a more advanced toolset, without being buried in implementation details.
+
+**Note: Despite its simplicity of use, Stable Baselines3 (SB3) assumes you have some knowledge about Reinforcement Learning (RL).** You should not utilize this library without some practice. To that extent, we provide good resources in the [documentation](https://stable-baselines3.readthedocs.io/en/master/guide/rl.html) to get started with RL.
+
+## Main Features
+
+**The performance of each algorithm was tested** (see *Results* section in their respective page).
+You can take a look at the issues [#48](https://github.com/DLR-RM/stable-baselines3/issues/48) and [#49](https://github.com/DLR-RM/stable-baselines3/issues/49) for more details.
+
+We also provide detailed logs and reports on the [OpenRL Benchmark](https://wandb.ai/openrlbenchmark/sb3) platform.
+
+
+| **Features**                | **Stable-Baselines3** |
+| --------------------------- | ----------------------|
+| State of the art RL methods | :heavy_check_mark: |
+| Documentation               | :heavy_check_mark: |
+| Custom environments         | :heavy_check_mark: |
+| Custom policies             | :heavy_check_mark: |
+| Common interface            | :heavy_check_mark: |
+| `Dict` observation space support  | :heavy_check_mark: |
+| Ipython / Notebook friendly | :heavy_check_mark: |
+| Tensorboard support         | :heavy_check_mark: |
+| PEP8 code style             | :heavy_check_mark: |
+| Custom callback             | :heavy_check_mark: |
+| High code coverage          | :heavy_check_mark: |
+| Type hints                  | :heavy_check_mark: |
+
+
+### Planned features
+
+Since most of the features from the [original roadmap](https://github.com/DLR-RM/stable-baselines3/issues/1) have been implemented, there are no major changes planned for SB3; it is now *stable*.
+If you want to contribute, you can search in the issues for the ones where [help is welcomed](https://github.com/DLR-RM/stable-baselines3/labels/help%20wanted) and the other [proposed enhancements](https://github.com/DLR-RM/stable-baselines3/labels/enhancement).
+
+While SB3 development is now focused on bug fixes and maintenance (doc update, user experience, ...), there is more active development going on in the associated repositories:
+- newer algorithms are regularly added to the [SB3 Contrib](https://github.com/Stable-Baselines-Team/stable-baselines3-contrib) repository
+- faster variants are developed in the [SBX (SB3 + Jax)](https://github.com/araffin/sbx) repository
+- the training framework for SB3, the RL Zoo, has an a

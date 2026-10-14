@@ -1,0 +1,105 @@
+{
+ "company": null,
+ "one_liner_ko": "무료 오픈소스 LLM 파인튜닝 프레임워크.",
+ "what_it_does_ko": "Axolotl은 무료 오픈소스 LLM 파인튜닝 프레임워크다. LoRA·QLoRA, 양자화 인지 학습(QAT), GRPO 같은 강화학습, 텍스트 확산 학습 등을 지원한다. 멀티 GPU·멀티 노드에서 FSDP2, 컨텍스트·텐서·전문가 병렬화를 조합해 큰 모델을 학습할 수 있다. 학습한 모델을 GGUF로 내보내 llama.cpp·Ollama에 배포할 수 있다.",
+ "key_features": [
+  "LoRA·QLoRA 파인튜닝(단일 GPU 메모리보다 큰 모델의 FSDP2 QLoRA 로딩)",
+  "양자화 인지 학습(QAT)",
+  "GRPO 등 강화학습(비동기 GRPO)",
+  "N-D 병렬화(컨텍스트·텐서·FSDP 조합)",
+  "텍스트 확산 모델 학습",
+  "GGUF 내보내기(llama.cpp·Ollama 배포)",
+  "신규 모델 지원 수시 추가"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": "있음 (무료 오픈소스)",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "오픈소스(라이선스 이름은 페이지에 없음)",
+ "api": "불명",
+ "platforms": [
+  "CLI"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://docs.axolotl.ai",
+   "quote": "A Free and Open Source LLM Fine-tuning Framework"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.axolotl.ai",
+   "quote": "Quantization Aware Training (QAT) support has been added to Axolotl."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.axolotl.ai",
+   "quote": "ND Parallelism support has been added into Axolotl."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.axolotl.ai",
+   "quote": "GGUF export is now available via axolotl export , with optional quantization for deployment with llama.cpp and Ollama."
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.axolotl.ai",
+   "quote": "CPU-staged FSDP2 QLoRA loading lets you load models larger than a single GPU’s memory"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.axolotl.ai",
+   "quote": "Quantization Aware Training (QAT) support has been added to Axolotl."
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.axolotl.ai",
+   "quote": "New RL and kernels: Async GRPO (up to 58% faster steps)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.axolotl.ai",
+   "quote": "Compose Context Parallelism (CP), Tensor Parallelism (TP), and Fully Sharded Data Parallelism (FSDP)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.axolotl.ai",
+   "quote": "Axolotl now has text diffusion training."
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.axolotl.ai",
+   "quote": "GGUF export is now available via axolotl export , with optional quantization for deployment with llama.cpp and Ollama."
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.axolotl.ai",
+   "quote": "New model support has been added in Axolotl for MiniCPM5"
+  },
+  {
+   "field": "pricing",
+   "url": "https://github.com/axolotl-ai-cloud/axolotl",
+   "quote": "<strong>A Free and Open Source LLM Fine-tuning Framework</strong>"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/axolotl-ai-cloud/axolotl",
+   "quote": "<strong>A Free and Open Source LLM Fine-tuning Framework</strong>"
+  },
+  {
+   "field": "platforms",
+   "url": "https://docs.axolotl.ai",
+   "quote": "GGUF export is now available via axolotl export"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://docs.axolotl.ai",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

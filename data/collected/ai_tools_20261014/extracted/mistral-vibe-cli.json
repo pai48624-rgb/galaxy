@@ -1,0 +1,90 @@
+{
+ "company": "Mistral AI",
+ "one_liner_ko": "Mistral 모델로 동작하는 Mistral의 오픈소스 명령줄 코딩 도우미.",
+ "what_it_does_ko": "Mistral Vibe는 Mistral 모델로 동작하는 명령줄 코딩 도우미로, 자연어로 코드베이스를 탐색·수정할 수 있는 대화형 인터페이스를 제공한다. 파일 읽기·쓰기·패치, 셸 명령 실행, grep 기반 코드 검색, 할 일 목록 관리, 서브에이전트 위임 같은 도구를 갖췄다. 프로젝트 위치·Git 브랜치·최근 커밋 기록을 자동으로 에이전트에 제공한다. Windows에서도 동작하지만 공식 지원 대상은 UNIX 환경이다.",
+ "key_features": [
+  "대화형 채팅 에이전트(복잡한 작업 분해)",
+  "파일 읽기·쓰기·패치 도구",
+  "셸 명령 실행",
+  "grep(ripgrep) 코드 검색",
+  "todo 목록으로 작업 추적",
+  "서브에이전트에 병렬 작업 위임",
+  "Git 브랜치·커밋 기록 자동 제공",
+  "@로 이미지 첨부"
+ ],
+ "use_cases_ko": [
+  "개발자가 자연어로 프로젝트를 탐색·수정"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "오픈소스(라이선스 이름은 수집 본문에 없음)",
+ "api": "불명",
+ "platforms": [
+  "CLI",
+  "맥",
+  "윈도"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://github.com/mistralai/mistral-vibe",
+   "quote": "Mistral Vibe is a command-line coding assistant powered by Mistral's models."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/mistralai/mistral-vibe",
+   "quote": "**Mistral's open-source CLI coding assistant.**"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/mistralai/mistral-vibe",
+   "quote": "It provides a conversational interface to your codebase, allowing you to use natural language to explore, modify, and interact with your projects through a powerful set of tools."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/mistralai/mistral-vibe",
+   "quote": "**Interactive Chat**: A conversational AI agent that understands your requests and breaks down complex tasks."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/mistralai/mistral-vibe",
+   "quote": "Read, write, and patch files (`read`, `write_file`, `edit`)."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/mistralai/mistral-vibe",
+   "quote": "Delegate tasks to subagents for parallel work (`task`)."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/mistralai/mistral-vibe",
+   "quote": "**Project-Aware Context**: Vibe automatically provides your project's location, Git branch, and recent commit history to the agent"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/mistralai/mistral-vibe",
+   "quote": "allowing you to use natural language to explore, modify, and interact with your projects"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/mistralai/mistral-vibe",
+   "quote": "**Mistral's open-source CLI coding assistant.**"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/mistralai/mistral-vibe",
+   "quote": "Mistral Vibe works on Windows, but we officially support and target UNIX environments."
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/mistralai/mistral-vibe",
+   "quote": "**Linux and macOS**"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

@@ -1,0 +1,55 @@
+{
+ "company": "Google",
+ "one_liner_ko": "전문가든 초보자든 ML 모델을 쉽게 빌드하고 배포할 수 있게 해 주는 엔드 투 엔드 오픈소스 머신러닝 플랫폼.",
+ "what_it_does_ko": "TensorFlow는 머신러닝을 위한 엔드 투 엔드 오픈소스 플랫폼으로, 도구·라이브러리·커뮤니티 리소스 생태계를 갖추고 있다. 원래 Google Brain의 Machine Intelligence 팀 연구자·엔지니어가 개발했다. 상위 수준 Keras API로 모델을 만들고 학습시키며, Distribution Strategy API로 서로 다른 하드웨어에서 분산 학습을 할 수 있다. 서버·에지 기기·웹 어디서나 모델을 학습·배포할 수 있고, TFX(프로덕션 파이프라인), TensorFlow Lite(모바일·에지), TensorFlow.js(자바스크립트)를 제공한다.",
+ "key_features": [
+  "상위 수준 Keras API(tf.keras)로 모델 빌드·학습",
+  "Distribution Strategy API 분산 학습",
+  "TFX 프로덕션 ML 파이프라인",
+  "TensorFlow Lite/LiteRT로 모바일·에지 배포",
+  "TensorFlow.js로 브라우저·Node.js에서 학습·실행",
+  "tf.data 입력 파이프라인",
+  "TensorBoard 시각화·추적",
+  "선행 학습 모델·데이터 세트(Kaggle Models, TensorFlow Datasets)"
+ ],
+ "use_cases_ko": [
+  "연구자의 최첨단 모델 실험",
+  "개발자의 ML 기반 애플리케이션 빌드·배포",
+  "강화 학습 기반 추천 시스템 구축(Spotify 사례)"
+ ],
+ "pricing": {
+  "free_tier": "불명 (받은 본문에 요금 정보 없음, 오픈소스 라이브러리)",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "오픈소스(라이선스 이름은 받은 본문에 없음)",
+ "api": "있음",
+ "platforms": ["윈도", "맥", "iOS", "안드로이드", "API"],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {"field": "company", "url": "https://github.com/tensorflow/tensorflow", "quote": "the Machine Intelligence team at Google Brain to conduct research in machine"},
+  {"field": "one_liner_ko", "url": "https://www.tensorflow.org/about?hl=ko/", "quote": "전문가이든 초보자이든, TensorFlow는 ML 모델을 쉽게 빌드 및 배포할 수 있게 해주는 엔드 투 엔드 플랫폼입니다."},
+  {"field": "what_it_does_ko", "url": "https://github.com/tensorflow/tensorflow", "quote": "is an end-to-end open source platform\nfor machine learning."},
+  {"field": "what_it_does_ko", "url": "https://www.tensorflow.org/about?hl=ko/", "quote": "상위 수준의 Keras API를 사용하여 모델을 빌드하고 학습시키세요."},
+  {"field": "what_it_does_ko", "url": "https://www.tensorflow.org/about?hl=ko/", "quote": "서버, 에지 기기 또는 웹 등 어디서나 TensorFlow를 사용하면 언어나 플랫폼에 관계없이 모델을 쉽게 학습시키고 배포할 수 있습니다."},
+  {"field": "key_features", "url": "https://www.tensorflow.org/about?hl=ko/", "quote": "서로 다른 하드웨어 구성에서 분산 학습을 진행하려면 Distribution Strategy API를 사용하세요."},
+  {"field": "key_features", "url": "https://www.tensorflow.org/about?hl=ko/", "quote": "전체 프로덕션 ML 파이프라인이 필요한 경우 TFX를 사용하세요. 모바일 및 에지 기기에서 추론을 실행하려면 TensorFlow Lite를 사용하세요."},
+  {"field": "key_features", "url": "https://www.tensorflow.org/?hl=ko", "quote": "Train and run models directly in the browser using JavaScript or Node.js."},
+  {"field": "key_features", "url": "https://www.tensorflow.org/?hl=ko", "quote": "Preprocess data and create input pipelines for ML models."},
+  {"field": "key_features", "url": "https://www.tensorflow.org/?hl=ko", "quote": "Visualize and track development of ML models."},
+  {"field": "key_features", "url": "https://www.tensorflow.org/?hl=ko", "quote": "Find pre-trained models ready for fine-tuning and deployment."},
+  {"field": "use_cases_ko", "url": "https://github.com/tensorflow/tensorflow", "quote": "researchers push the state-of-the-art in ML and developers easily build and\ndeploy ML-powered applications."},
+  {"field": "use_cases_ko", "url": "https://www.tensorflow.org/?hl=ko", "quote": "강화 학습 기반 추천 시스템 빌드"},
+  {"field": "pricing", "url": "https://www.tensorflow.org/?hl=ko", "quote": "핵심 오픈소스 ML 라이브러리"},
+  {"field": "open_source", "url": "https://github.com/tensorflow/tensorflow", "quote": "is an end-to-end open source platform\nfor machine learning."},
+  {"field": "api", "url": "https://github.com/tensorflow/tensorflow", "quote": "TensorFlow provides stable [Python](https://www.tensorflow.org/api_docs/python)\nand [C++](https://www.tensorflow.org/api_docs/cc) APIs"},
+  {"field": "platforms", "url": "https://github.com/tensorflow/tensorflow", "quote": "Other devices (DirectX and MacOS-metal) are supported using"},
+  {"field": "platforms", "url": "https://github.com/tensorflow/tensorflow", "quote": "[CUDA-enabled GPU cards](https://www.tensorflow.org/install/gpu) *(Ubuntu and\nWindows)*"},
+  {"field": "platforms", "url": "https://www.tensorflow.org/?hl=ko", "quote": "Deploy ML on mobile and edge devices such as Android, iOS, Raspberry Pi, and Edge TPU."},
+  {"field": "korean_support", "url": "https://www.tensorflow.org/?hl=ko", "quote": "html lang: ko\nhreflang: en, es-419, fr, ja, ko, pt-br, x-default, zh-hans, zh-hant"}
+ ],
+ "mismatch": [
+  {"official": "공식 페이지는 TensorFlow를 오픈소스 ML 라이브러리·플랫폼으로만 소개하고, 받은 본문에 요금제나 관리형 클라우드 유료 플랜이 없음(요금 구간은 뉴스레터 페이지)", "diff": "기존 분류 '오픈소스 + 클라우드 매니지드 유료 플랜'의 유료 관리형 플랜을 공식 페이지에서 확인할 수 없음 — 무료 오픈소스로 보는 게 맞을 가능성", "url": "https://www.tensorflow.org/?hl=ko"}
+ ],
+ "plan_change": []
+}

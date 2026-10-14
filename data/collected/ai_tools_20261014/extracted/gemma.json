@@ -1,30 +1,43 @@
 {
  "company": "Google DeepMind",
- "one_liner_ko": "구글 딥마인드가 공개한, 클라우드 서버부터 노트북·휴대폰까지 어디서나 돌릴 수 있는 가장 강력한 오픈 모델 제품군.",
- "what_it_does_ko": "Gemma는 Google DeepMind의 오픈 모델 제품군이다. 개발자가 클라우드 서버, 노트북, 휴대폰 등 사용자가 필요한 곳에서 실행되는 AI 앱을 만들 수 있게 한다. 최신 Gemma 4는 고급 추론과 에이전트형 워크플로를 목표로 하며, 모바일·IoT용 E2B·E4B와 개인용 컴퓨터용 12B·26B·31B 크기가 있다. 의료(MedGemma), 번역(TranslateGemma), 임베딩(EmbeddingGemma), 안전 분류(ShieldGemma 2) 같은 공식 변형 모델도 함께 제공된다.",
+ "one_liner_ko": "Google DeepMind의 가장 뛰어난 개방형(오픈) 모델 제품군.",
+ "what_it_does_ko": "Gemma는 Google DeepMind가 공개한 개방형 모델 제품군으로, 클라우드 서버부터 노트북·휴대폰까지 사용자가 필요한 곳에서 돌아가는 AI 애플리케이션을 만들 수 있게 한다고 소개한다. 최신 Gemma 4는 고급 추론과 에이전트형 워크플로용으로 만들어졌고, 모바일·IoT용 E2B·E4B와 개인용 컴퓨터용 12B·26B·31B 크기가 있다. 번역(TranslateGemma), 의료(MedGemma), 임베딩(EmbeddingGemma), 함수 호출(FunctionGemma) 등 파생 모델도 있다. Gemini API 가격표에서 Gemma 4는 무료 등급에서 무료이며 유료 등급은 제공되지 않는다.",
  "key_features": [
-  "Gemma 4: 고급 추론·에이전트형 워크플로용 오픈 모델",
-  "모바일·IoT 기기용 경량 크기(E2B·E4B)",
-  "개인용 컴퓨터에서 도는 12B·26B·31B 크기",
-  "55개 언어 번역 모델 TranslateGemma",
-  "의료 텍스트·영상 이해 모델 MedGemma",
-  "정책 위반 콘텐츠 분류 모델 ShieldGemma 2",
-  "온디바이스 임베딩 모델 EmbeddingGemma",
-  "Google AI Studio에서 바로 사용해 보기"
+  "고급 추론·에이전트형 워크플로용 Gemma 4",
+  "모바일·IoT용 소형 모델(E2B·E4B)",
+  "개인용 컴퓨터용 12B·26B·31B 모델",
+  "멀티 토큰 예측 드래프터로 빠른 추론",
+  "모바일·노트북용 모델 압축(Gemma 4 QAT)",
+  "55개 언어 번역 모델(TranslateGemma)",
+  "엣지용 함수 호출(FunctionGemma)",
+  "Google AI Studio에서 사용해 보기"
  ],
  "use_cases_ko": [
-  "개발자가 클라우드·노트북·휴대폰에서 도는 AI 앱 개발",
-  "의료 영상·텍스트 이해 연구(MedGemma)"
+  "클라우드·노트북·휴대폰에서 돌아가는 AI 앱 개발",
+  "모바일·IoT 기기용 온디바이스 AI",
+  "의료 영상 해석 등 헬스 AI 개발(MedGemma)"
  ],
  "pricing": {
-  "free_tier": "불명",
-  "plans": [],
-  "pricing_url": null
+  "free_tier": "있음 (Gemini API 무료 등급에서 Gemma 4 입력·출력·컨텍스트 캐싱 무료; 유료 등급은 사용 불가)",
+  "plans": [
+   {
+    "name": "Gemma 4 (Gemini API 무료 등급)",
+    "price": 0,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "입력·출력·컨텍스트 캐싱 무료, 조정·Google 검색 그라운딩 사용 불가, 유료 등급 사용 불가",
+    "page_lang": "ko-x-mtfrom-en"
+   }
+  ],
+  "pricing_url": "https://ai.google.dev/gemini-api/docs/pricing?hl=ko"
  },
- "open_source": "오픈 모델(라이선스 이름은 페이지에 없음)",
- "api": "불명",
- "platforms": [],
- "korean_support": "불명",
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
  "evidence": [
   {
    "field": "company",
@@ -34,12 +47,27 @@
   {
    "field": "one_liner_ko",
    "url": "https://deepmind.google/models/gemma/",
-   "quote": "Our most advanced open models help developers create AI applications that run wherever users need them — from cloud servers to laptops and even phones."
+   "quote": "Gemma\n Our most capable open models\n Learn more"
   },
   {
    "field": "what_it_does_ko",
    "url": "https://deepmind.google/models/gemma/",
+   "quote": "Our most advanced open models help developers create AI applications that run wherever users need them — from cloud servers to laptops and even phones."
+  },
+  {
+   "field": "key_features",
+   "url": "https://deepmind.google/models/gemma/",
    "quote": "Byte for byte, the most capable open models. Purpose-built for advanced reasoning and agentic workflows"
+  },
+  {
+   "field": "key_features",
+   "url": "https://deepmind.google/models/gemma/",
+   "quote": "A new level of intelligence for mobile and IoT devices"
+  },
+  {
+   "field": "key_features",
+   "url": "https://deepmind.google/models/gemma/",
+   "quote": "Faster inference with multi-token prediction drafters"
   },
   {
    "field": "key_features",
@@ -49,34 +77,40 @@
   {
    "field": "key_features",
    "url": "https://deepmind.google/models/gemma/",
-   "quote": "A modular classifier model for detecting policy-violating content and upholding safety standards"
-  },
-  {
-   "field": "key_features",
-   "url": "https://deepmind.google/models/gemma/",
-   "quote": "A collection of models trained for medical text and image comprehension"
-  },
-  {
-   "field": "key_features",
-   "url": "https://deepmind.google/models/gemma/",
-   "quote": "The best-in-class open model for on-device embeddings"
-  },
-  {
-   "field": "key_features",
-   "url": "https://deepmind.google/models/gemma/",
-   "quote": "A new level of intelligence for mobile and IoT devices"
+   "quote": "Bringing bespoke function calling to the edge"
   },
   {
    "field": "use_cases_ko",
    "url": "https://deepmind.google/models/gemma/",
-   "quote": "Our most advanced open models help developers create AI applications that run wherever users need them"
+   "quote": "Our most capable open models for health AI development"
   },
   {
-   "field": "open_source",
+   "field": "pricing",
+   "url": "https://ai.google.dev/gemini-api/docs/pricing?hl=ko",
+   "quote": "Gemma 4 \n Gemini 모델에 사용된 것과 동일한 기술로 빌드된 최첨단 경량 개방형 모델입니다."
+  },
+  {
+   "field": "pricing",
+   "url": "https://ai.google.dev/gemini-api/docs/pricing?hl=ko",
+   "quote": "가격 입력 \n 무료 \n 사용 불가 \n 출력 가격 \n 무료 \n 사용 불가 \n 컨텍스트 캐싱 가격"
+  },
+  {
+   "field": "api",
+   "url": "https://ai.google.dev/gemini-api/docs/pricing?hl=ko",
+   "quote": "Gemma 4 \n Gemini 모델에 사용된 것과 동일한 기술로 빌드된 최첨단 경량 개방형 모델입니다."
+  },
+  {
+   "field": "platforms",
    "url": "https://deepmind.google/models/gemma/",
-   "quote": "Our most advanced open models help developers create AI applications"
+   "quote": "Our most capable open models\n Learn more\n Try in Google AI Studio"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://deepmind.google/models/gemma/",
+   "quote": "hreflang: 없음\n화면에 보이는 언어 이름: 없음"
   }
  ],
  "mismatch": [],
- "plan_change": []
+ "plan_change": [],
+ "note": "홈은 '개방형 모델(open models)'이라고만 하고 라이선스 이름은 없음 → open_source null. 가격은 Gemini API 가격 문서 중 Gemma 4 항목만 기록. 가격 문서는 한국어 선택지가 있지만 Gemma 홈 자체는 영어 한 언어."
 }

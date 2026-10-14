@@ -1,0 +1,247 @@
+=== [home] https://www.openinterpreter.com/ (lang=en)
+Open Interpreter | Coding agent for open models 
+ Open Interpreter is back. Read the launch post 
+ Home Products 
+ Docs 
+ Blog GitHub Select language English Español Français Deutsch Português 中文 日本語 Install CLI 
+ Terminal Agent Desktop App Terminal Agent Docs Desktop App Docs Blog GitHub Language Select language English Español Français Deutsch Português 中文 日本語 
+ The open source terminal agent. Built for the next generation of low-cost models. 
+ irm https://www.openinterpreter.com/install.ps1 | iex Copy 
+ Built for the next generation of models.
+ Optimized for low-cost and open-weight models.
+ Tuned for low cost models.
+ Open Interpreter ships model-specific harnesses for Kimi, Qwen, DeepSeek, and other open models. The agent loop is shaped around what each model is actually good at, not flattened into one generic interface.
+ See what providers we support Learn about harness emulation 
+ interpreter 
+ $ interpreter
+ › /model 
+ Select provider and model
+ Kimi kimi-k2
+ Qwen qwen3-coder
+ DeepSeek deepseek-v3
+ Sandboxed by default.
+ The agent edits files and runs commands inside an OS-level sandbox on macOS, Linux, and Windows. Reads, writes, and network are gated, and anything outside the workspace needs an explicit approval.
+ Learn more about sandboxing 
+ interpreter 
+ $ interpreter --sandbox workspace-write
+ > fix the failing auth tests 
+ read allowed: ./src ./tests
+ network blocked until approved
+ approve: pnpm test (y/n)
+ --sandbox /permissions approvals 
+ Skills, MCPs, and more.
+ As a fork of Codex, Open Interpreter inherits your existing agent setup—including AGENTS.md instructions, skills, MCP servers, and project configuration.
+ Read the docs 
+ interpreter 
+ $ interpreter
+ › /init 
+ Create AGENTS.md with project guidance
+ › /skills
+ Inspect available skills
+ › /mcp
+ /init /skills /mcp 
+ FAQ
+ What is Open Interpreter? A coding agent that lives in your terminal. Open a project, type `interpreter`, and it can read files, edit code, run commands, and ask before it escalates beyond the current sandbox. Getting started Interactive mode 
+ Which models can I use? Built-in providers include OpenAI, Amazon Bedrock, Ollama, and LM Studio.
+ The generated provider catalog includes hosted providers such as Anthropic, OpenRouter, DeepSeek, Moonshot/Kimi, Z.ai, Alibaba/Qwen, Groq, and others.
+ Custom providers can use Responses-compatible, OpenAI-compatible chat, or Anthropic Messages-compatible wire APIs.
+ Harness modes can shape requests for Claude Code, Kimi CLI, Qwen Code, DeepSeek TUI, SWE-agent, or a minimal chat-tool surface.
+ Providers Harness 
+ How does the sandbox work? Sandbox mode and approval policy are separate controls. Permission profiles can allow read-only work, workspace writes, or full access; network starts disabled in permission profiles unless you enable it. When a command or tool needs approval, the TUI shows the request before it runs. Sandbox & approvals Permissions 
+ Can I run multiple sessions at once? Yes. Open one terminal tab per coding session, then use `/resume`, `/fork`, or `/side` inside the TUI, or `interpreter resume` and `interpreter fork` from the shell. Interactive mode Sessions 
+ How do AGENTS.md, skills, and MCP fit in? Use AGENTS.md for stable project instructions, skills for repeatable procedures, and MCP servers for explicit external tools such as issue trackers, private docs, databases, or internal CLIs. AGENTS.md Skills MCP 
+ Is it really open source? Yes. Open Interpreter is open source under the Apache 2.0 License. The terminal product is a fork of Codex and keeps the Codex terminal surface while staying provider agnostic. Project license Migration 
+ Is my code private? Local models stay on your machine. If you use your own API key, requests go directly from your device to that provider — not through our servers. If you use hosted models, your requests are routed through our servers and logged for up to 30 days; see our Privacy Policy . Privacy policy Providers 
+ Not a developer?
+ The desktop app brings the same agentic workflow to Word, Excel, PDFs, browsers, and local files.
+ Learn about our new desktop app 
+ Watch video 
+ Latest writing
+ View all posts 
+ July 13, 2026
+ Open Interpreter
+ Low-cost models, model-specific harnesses, and sandboxed work.
+ Developer docs
+ Getting started
+ Install Open Interpreter, open a project, pick a model, and run your first session.
+ Developer docs
+ Providers and models
+ Connect OpenAI, Anthropic, Kimi, Qwen, DeepSeek, Z.ai, or any OpenAI-compatible provider.
+ Try Open Interpreter
+ irm https://www.openinterpreter.com/install.ps1 | iex Copy 
+ © 2026 Open Interpreter
+ Product
+ Terminal Agent Desktop App Blog 
+ Docs
+ Desktop docs Terminal docs Install Providers 
+ Community
+ GitHub Discord Twitter 
+ Company
+ Contact Privacy Editor source 
+ Theme
+
+=== [about] https://www.openinterpreter.com/docs/desktop (lang=en)
+Home Products 
+ Docs 
+ Blog GitHub Terminal Agent Desktop App Terminal Agent Docs Desktop App Docs Blog GitHub Get started
+ Desktop app Install Your first task Connect a model 
+ Use cases
+ Overview Legal Finance and accounting Sales and customer success Healthcare Research and analysis Real estate Operations and admin Consulting 
+ How-tos
+ Forms from documents Spreadsheets and data Document review Browser workflows Email and messaging Research and notes 
+ Concepts
+ Workspaces Approvals and safety Profiles Skills Voice mode Subagents 
+ Connect
+ MCP servers Integrations 
+ More
+ Privacy Troubleshooting FAQ 
+ Language 
+ Search... ⌘ K 
+ Ask AI ⌘ I Download 
+ Get started
+ Desktop app Install Your first task Connect a model 
+ Use cases
+ Overview Legal Finance and accounting Sales and customer success Healthcare Research and analysis Real estate Operations and admin Consulting 
+ How-tos
+ Forms from documents Spreadsheets and data Document review Browser workflows Email and messaging Research and notes 
+ Concepts
+ Workspaces Approvals and safety Profiles Skills Voice mode Subagents 
+ Connect
+ MCP servers Integrations 
+ More
+ Privacy Troubleshooting FAQ 
+ Get started with Interpreter
+ Interpreter is a desktop agent for work that crosses apps, files, browser tabs, spreadsheets, PDFs, and documents. It opens the apps you already use, reads the files you point at, and gets work done on your computer while you watch (or step away).
+ Get help from the team 
+ Who it is for
+ Knowledge workers in finance, legal, ops, research, and support who spend hours each week moving information between apps. You stay in control: Interpreter pauses for review before anything that submits, sends, deletes, or overwrites.
+ What it can do
+ Read and edit files in a workspace you choose — PDFs, DOCX, spreadsheets, plain text, images.
+ Open and operate desktop apps the way you do: clicks, typing, menus, dialogs.
+ Run web tasks across portals, dashboards, CRMs, and internal tools.
+ Extract structured data from documents and write it into the format you need.
+ Use your voice for hands-free instructions and follow-ups.
+ Plug into your stack through MCP servers and built-in integrations.
+ Where to start
+ If you have not installed it yet, start with Install . If you have, jump to Your first task and pick one concrete workflow to try.
+ Want a feel for what it is good at before you start? Browse use cases by industry — each industry page has real workflows with the apps they touch and the exact instruction to type.
+ Keep control
+ Interpreter is most useful when you give it a narrow workspace, a clear output, and explicit review points before irreversible actions. Approvals and safety covers how to set that up so the agent moves fast without surprising you.
+ Connect these docs to my agent 
+ Install Give feedback 
+ Copy page Scroll to top Open in chat 
+ © 2026 Open Interpreter
+ Product
+ Terminal Agent Desktop App Blog 
+ Docs
+ Desktop docs Terminal docs Install Providers 
+ Community
+ GitHub Discord Twitter 
+ Company
+ Contact Privacy Editor source 
+ Theme
+ Desktop documentation | Open Interpreter
+
+=== [meta] https://www.openinterpreter.com/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: English, 日本語, 中文, Español, Français, Deutsch, Português
+
+=== [github] https://github.com/openinterpreter/openinterpreter
+<h1 align="center">Open Interpreter</h1>
+
+<p align="center">A coding agent optimized for low-cost models. <a href="https://www.openinterpreter.com/blog/open-interpreter?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=readme&amp;utm_content=hero_text"><strong>Blog post ↗</strong></a></p>
+
+<p align="center">
+  <b>English</b> • <a href="README_ES.md">Español</a> • <a href="README_ZH.md">简体中文</a> • <a href="README_JA.md">日本語</a>
+</p>
+
+<p align="center">
+  <a href="https://discord.gg/Hvz9Axh84z"><img alt="Discord" src="https://img.shields.io/discord/1146610656779440188?style=flat-square&label=Discord" /></a>
+  <a href="https://www.openinterpreter.com/docs/terminal?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=readme&amp;utm_content=docs_badge"><img alt="Documentation" src="https://img.shields.io/badge/Documentation-white?style=flat-square" /></a>
+  <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/License-Apache--2.0-white?style=flat-square" /></a>
+</p>
+
+> [!NOTE]
+> **Today: Kimi K3 is here.** We have reimplemented the provider-recommended
+> [Kimi Code](https://www.kimi.com/coding/en) harness in Rust, giving you
+> maximum K3 performance with a Codex-like interface.
+> [**Kimi Docs →**](https://www.openinterpreter.com/docs/terminal/kimi-k3?utm_source=github&utm_medium=referral&utm_campaign=readme&utm_content=kimi_k3_note)
+
+<br>
+
+<p align="center">
+  <a href="https://www.openinterpreter.com/blog/open-interpreter?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=readme&amp;utm_content=hero_image">
+    <img alt="Open Interpreter running in a terminal" src="docs-site/assets/open-interpreter-terminal-hero.png" width="100%" />
+  </a>
+</p>
+
+## Installation
+
+macOS and Linux:
+
+```bash
+curl -fsSL https://www.openinterpreter.com/install | sh
+```
+
+Windows:
+
+```powershell
+irm https://www.openinterpreter.com/install.ps1 | iex
+```
+
+Then type `i` or `interpreter` in your terminal to start a session.
+
+## Harness Emulation
+
+Open Interpreter is a fork of OpenAI's Codex, with a focus on emulating the agent harness that gets the best performance out of low-cost models.
+
+Use `/harness` to switch the active harness:
+
+```text
+> /harness
+
+native
+claude-code
+claude-code-bare
+zcode
+kimi-code
+kimi-cli
+qwen-code
+deepseek-tui
+swe-agent
+minimal
+```
+
+Read more in the [harness docs](https://www.openinterpreter.com/docs/terminal/harness?utm_source=github&utm_medium=referral&utm_campaign=readme&utm_content=harness_docs) and [provider setup guides](https://www.openinterpreter.com/docs/terminal/providers?utm_source=github&utm_medium=referral&utm_campaign=readme&utm_content=provider_guides).
+
+## ACP compatible, Codex compatible
+
+Open Interpreter works in [ACP-compatible editors and clients](https://agentclientprotocol.com/get-started/clients). Configure the client to launch `interpreter acp`; see the [ACP guide](https://www.openinterpreter.com/docs/terminal/acp) for examples.
+
+Already building with OpenAI's Codex SDK? Keep the SDK and make a one-line
+binary override:
+
+```diff
+-const codex = new Codex();
++const codex = new Codex({ codexPathOverride: "interpreter" });
+```
+
+Open Interpreter speaks the same Codex exec protocol. See the [SDK guide](https://www.openinterpreter.com/docs/terminal/sdk) and run `scripts/test-codex-sdk-compat.sh` for a local, provider-free compatibility check.
+
+Want a small browser UI over raw Open Interpreter? Start with the
+[local streaming web chat guide](docs/streaming-web-chat.md). For a complete
+desktop, browser, or headless client, use
+[Interpreter Workstation](https://github.com/openinterpreter/interpreter-workstation).
+
+## Portable by default
+
+Open Interpreter should fit into your existing agent setup instead of trapping
+it in an Open Interpreter-only format. The product goal is to prefer shared,
+tool-neutral standards and directories, keep user-authored data in readable
+files, and make moving to or from another compatible agent straightforward.
+
+Today that includes repository `AGENTS.md`, shared `.agents/skills` directories,
+MCP, ACP, and the Codex exec protocol. Product-specific storage under
+`~/.openinterpreter` is reserved for configuration and runtime state that does
+not yet ha

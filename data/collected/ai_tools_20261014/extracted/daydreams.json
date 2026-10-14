@@ -1,0 +1,124 @@
+{
+ "company": "Daydreams Systems",
+ "one_liner_ko": "자율 에이전트를 위한 시장·결제 레일·라우팅·정산 등 '에이전트 커머스' 인프라를 만드는 회사(기존 에이전트 프레임워크는 핵심에서 빠짐).",
+ "what_it_does_ko": "Daydreams는 자율 에이전트를 위한 커머스 인프라(시장, 결제 레일, 라우팅, 정산)를 만든다. Task Market에서는 요청자가 USDC를 에스크로로 맡겨 작업을 올리면 에이전트들이 경쟁해 수행하고, 채택된 결과에만 대금이 지급된다. Lucid Agents는 TypeScript 함수를 x402 결제를 받는 유료 API로 만드는 프레임워크이며, Dreams Router는 여러 AI 모델을 하나의 API로 쓰고 USDC 소액결제로 사용량만큼 내는 게이트웨이다. GitHub의 기존 Daydreams 에이전트 프레임워크는 더 이상 핵심 초점이 아니라고 공지되어 있다.",
+ "key_features": [
+  "USDC 에스크로 기반 작업 시장 Task Market(현상금·클레임·피치·벤치마크·경매 5가지 방식)",
+  "TypeScript 함수를 유료 API로 만드는 Lucid Agents SDK",
+  "x402·MPP·USDC 에이전트 결제",
+  "결제를 요청에 붙여 정산을 통일하는 Dreams Router",
+  "OpenAI·Anthropic·Google·Groq·xAI 모델을 한 API로(OpenAI 호환)",
+  "조합 가능한 컨텍스트 구조의 TypeScript 에이전트 프레임워크(구 버전)"
+ ],
+ "use_cases_ko": [
+  "작업을 맡기고 여러 에이전트의 결과 중 채택한 것에만 지급",
+  "에이전트 개발자가 작업 시장에서 일을 수주하고 USDC로 정산받기",
+  "개발자가 TypeScript 기능을 유료 API로 판매"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "MIT",
+ "api": "있음",
+ "platforms": [
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.daydreams.systems/",
+   "quote": "© 2026 Daydreams Systems. All rights reserved."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.daydreams.systems/",
+   "quote": "Daydreams builds commerce infrastructure for autonomous agents: markets, payment rails, routing, and settlement."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.daydreams.systems/",
+   "quote": "Escrow USDC once, route the brief across autonomous workers, and compare bids, pitches, proofs, and submissions live — then pay only the accepted result."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.daydreams.systems/",
+   "quote": "A framework for building, packaging, and monetizing agents that can expose capabilities and accept payment."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/daydreamsai/daydreams",
+   "quote": "This agent framework is no longer the core focus as features are already obsolete."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.daydreams.systems/",
+   "quote": "Many workers attempt the work; one result is paid out."
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.daydreams.systems/",
+   "quote": "Turn any TypeScript function into a paid API."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.daydreams.systems/",
+   "quote": "Agents discover a paid capability, choose a payment path, and carry settlement with the request."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.daydreams.systems/",
+   "quote": "The routing layer that keeps payment attached to requests and normalizes settlement across commerce flows."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/daydreamsai/daydreams",
+   "quote": "**Universal Access** - OpenAI, Anthropic, Google, Groq, xAI, and more"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/daydreamsai/daydreams",
+   "quote": "Daydreams is the **first AI framework with composable contexts**"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.daydreams.systems/",
+   "quote": "Wire any agent into the marketplace. Bid, claim, and ship funded work — every accepted result settles in USDC to your wallet, onchain, no invoices."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://docs.daydreams.systems/",
+   "quote": "Define a typed capability, advertise one clear price, and receive x402 payments."
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/daydreamsai/daydreams",
+   "quote": "https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square"
+  },
+  {
+   "field": "api",
+   "url": "https://github.com/daydreamsai/daydreams",
+   "quote": "Access any AI model through one API with built-in authentication and payments"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/daydreamsai/daydreams",
+   "quote": "**OpenAI Compatible** - Works with existing OpenAI SDK clients"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.daydreams.systems/",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "회사 핵심이 에이전트 커머스(Task Market USDC 에스크로, Dreams Router 요청당 USDC 소액결제, $DREAMS 토큰)로 바뀌었고 기존 프레임워크는 핵심이 아니라고 공지",
+   "diff": "기존 분류는 오픈소스 프레임워크(무료)이나, 현재 주력은 사용량 기반 유료 결제·라우팅 서비스(README 예시: 요청당 USDC 소액결제, 구독 없음)",
+   "url": "https://www.daydreams.systems/"
+  }
+ ]
+}

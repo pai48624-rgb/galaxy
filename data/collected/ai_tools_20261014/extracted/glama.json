@@ -1,0 +1,39 @@
+{
+ "company": null,
+ "one_liner_ko": "9만 7천여 개의 오픈소스 MCP 서버를 모은 레지스트리이자, MCP를 기본 지원하는 올인원 AI 작업공간.",
+ "what_it_does_ko": "Glama 레지스트리는 97,619개의 MCP 서버를 언어(Python·TypeScript), 실행 방식(원격·로컬·하이브리드), 분야(개발 도구·검색·금융·데이터베이스 등)별로 찾아볼 수 있게 정리한다. 관련도·최근 사용량·npm/PyPI 주간 다운로드·GitHub 별 수 등으로 정렬하고, 서버마다 라이선스·품질·유지보수 등급과 라이선스를 표시한다. MCP 디렉터리용 API(GET /v1/servers)를 제공한다. 가입 페이지에서는 Glama를 ChatGPT 같은 채팅 경험, 5,000개 이상 서버에 대한 MCP 기본 지원, 맞춤 프롬프트 에이전트 생성을 갖춘 올인원 AI 작업공간으로 소개한다.",
+ "key_features": [
+  "97,619개 MCP 서버 레지스트리(분야·언어·실행 방식별 분류)",
+  "딥 서치와 다양한 정렬(최근 사용량·npm/PyPI 다운로드·GitHub 별)",
+  "서버별 라이선스·품질·유지보수 등급 표시",
+  "MCP 디렉터리 API(GET /v1/servers)",
+  "MCP 커넥터·도구·클라이언트·Inspector 메뉴",
+  "ChatGPT 같은 채팅과 맞춤 프롬프트 에이전트 생성(AI 작업공간)"
+ ],
+ "use_cases_ko": [
+  "필요한 MCP 서버를 분야·인기도·품질로 찾아 고르기"
+ ],
+ "pricing": {"free_tier": "불명", "plans": [], "pricing_url": null},
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["웹", "API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "one_liner_ko", "url": "https://glama.ai/mcp/servers", "quote": "Open-Source MCP Servers – 97,619 in the Glama Registry | Glama"},
+  {"field": "one_liner_ko", "url": "https://glama.ai/sign-up?returnPath=%2Fsettings%2Fworkspace%2Fsubscription", "quote": "Sign Up | Glama All-in-one AI workspace"},
+  {"field": "what_it_does_ko", "url": "https://glama.ai/mcp/servers", "quote": "97,619 servers. Updated 2026-10-14 06:47"},
+  {"field": "what_it_does_ko", "url": "https://glama.ai/sign-up?returnPath=%2Fsettings%2Fworkspace%2Fsubscription", "quote": "Native MCP support with access to 5,000+ servers."},
+  {"field": "key_features", "url": "https://glama.ai/mcp/servers", "quote": "Weekly npm Downloads ↓"},
+  {"field": "key_features", "url": "https://glama.ai/mcp/servers", "quote": "Deep Search"},
+  {"field": "key_features", "url": "https://glama.ai/mcp/servers", "quote": "GET /v1/servers – MCP directory API reference"},
+  {"field": "key_features", "url": "https://glama.ai/mcp/servers", "quote": "Glama Servers Connectors Tools Clients Inspector New Chat Sign Up"},
+  {"field": "key_features", "url": "https://glama.ai/sign-up?returnPath=%2Fsettings%2Fworkspace%2Fsubscription", "quote": "Create specialized agents with custom prompts."},
+  {"field": "key_features", "url": "https://glama.ai/sign-up?returnPath=%2Fsettings%2Fworkspace%2Fsubscription", "quote": "A ChatGPT-like chat experience for talking with AI."},
+  {"field": "use_cases_ko", "url": "https://glama.ai/mcp/servers", "quote": "Search Relevance ↓"},
+  {"field": "api", "url": "https://glama.ai/mcp/servers", "quote": "GET /v1/servers – MCP directory API reference"},
+  {"field": "platforms", "url": "https://glama.ai/mcp/servers", "quote": "GET /v1/servers – MCP directory API reference"},
+  {"field": "korean_support", "url": "https://glama.ai/mcp/servers", "quote": "html lang: en-US"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

@@ -1,0 +1,199 @@
+{
+ "company": null,
+ "one_liner_ko": "코딩 에이전트 50개 이상을 병렬로 돌리는 libghostty 기반 네이티브 macOS 커맨드 센터.",
+ "what_it_does_ko": "Supacode는 여러 git worktree에서 터미널 기반 코딩 작업을 돌리는 네이티브 macOS 앱이다. 작업마다 자기 git worktree와 실제 터미널을 받아 에이전트가 서로 충돌 없이 병렬로 돈다. 세션은 백그라운드에서 유지돼 앱을 끄거나 SSH 연결이 끊겨도 그대로 이어진다. GitHub CLI 연동으로 PR·CI 상태를 보고, 소스는 공개(source available)지만 유료 영구 라이선스로 판매한다.",
+ "key_features": [
+  "작업마다 git worktree·터미널(worktree 중심 흐름)",
+  "zmx 기반 백그라운드 세션 유지",
+  "SSH 원격 저장소(베타)",
+  "에이전트 상태 배지(바쁨·입력 대기·유휴)와 알림",
+  "supacode CLI·딥링크",
+  "libghostty 터미널(탭·분할)",
+  "PR 상태·체크·병합 가능 여부 표시"
+ ],
+ "use_cases_ko": [
+  "여러 코딩 에이전트를 worktree별로 나눠 동시에 돌리며 PR·CI까지 관리"
+ ],
+ "pricing": {
+  "free_tier": "체험판 있음 (로컬 worktree 생성 처음 5회, SSH worktree 생성은 무료)",
+  "plans": [
+   {
+    "name": "Basic",
+    "price": 99,
+    "currency": "USD",
+    "period": "one-time",
+    "limits": "1인·Mac 1대, 영구 라이선스+1년 업데이트",
+    "page_lang": "en"
+   },
+   {
+    "name": "Standard",
+    "price": 129,
+    "currency": "USD",
+    "period": "one-time",
+    "limits": "1인·Mac 2대, 영구 라이선스+1년 업데이트",
+    "page_lang": "en"
+   },
+   {
+    "name": "Team",
+    "price": 79,
+    "currency": "USD",
+    "period": "one-time",
+    "limits": "좌석당, 좌석마다 Mac 1대, 최소 3좌석",
+    "page_lang": "en"
+   },
+   {
+    "name": "갱신(Basic·Standard)",
+    "price": 59,
+    "currency": "USD",
+    "period": "year",
+    "limits": "선택, 1년 업데이트 연장, 자동 갱신 없음",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://supacode.sh"
+ },
+ "open_source": "소스 공개(source available, 라이선스 이름은 받은 본문에 없음)",
+ "api": "불명",
+ "platforms": [
+  "맥",
+  "CLI"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://supacode.sh",
+   "quote": "Run 50+ coding agents in parallel. Blazing fast, source available, native macOS app built on libghostty."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.supacode.sh/",
+   "quote": "Supacode is a native macOS app for running terminal-based coding workflows across multiple git worktrees."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/supabitapp/supacode",
+   "quote": "Run several coding agents side by side from one window: each task gets its own git worktree and"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/supabitapp/supacode",
+   "quote": "Sessions persist in the background, so quitting the app or dropping an SSH"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://supacode.sh",
+   "quote": "Buy once. Use forever."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/supabitapp/supacode",
+   "quote": "### Worktree-first workflow"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/supabitapp/supacode",
+   "quote": "Sessions run inside [zmx](https://zmx.sh), a lightweight session daemon, not as children of the"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/supabitapp/supacode",
+   "quote": "### Remote SSH repositories (Beta)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/supabitapp/supacode",
+   "quote": "Supacode detects the agent in each pane and shows a live badge: busy, awaiting input, or idle."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/supabitapp/supacode",
+   "quote": "The `supacode` CLI manages worktrees,"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/supabitapp/supacode",
+   "quote": "libghostty renders every session, with tabs, horizontal and vertical"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/supabitapp/supacode",
+   "quote": "With GitHub integration on, each worktree's PR state, checks, and"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://supacode.sh",
+   "quote": "Run dozens of coding agents simultaneously. Each in its own isolated environment, all under one roof."
+  },
+  {
+   "field": "pricing",
+   "url": "https://supacode.sh",
+   "quote": "Your first five successful local worktree creations across all repositories on this Mac."
+  },
+  {
+   "field": "pricing",
+   "url": "https://supacode.sh",
+   "quote": "SSH worktree creation stays free"
+  },
+  {
+   "field": "pricing",
+   "url": "https://supacode.sh",
+   "quote": "$ 99 USD / license \n One person on one Mac."
+  },
+  {
+   "field": "pricing",
+   "url": "https://supacode.sh",
+   "quote": "$ 129 USD / license \n One person on two Macs."
+  },
+  {
+   "field": "pricing",
+   "url": "https://supacode.sh",
+   "quote": "$ 79 USD / seat \n One Mac per seat, minimum 3 seats."
+  },
+  {
+   "field": "pricing",
+   "url": "https://supacode.sh",
+   "quote": "Basic and Standard can renew for $59 USD per license for another year, with no automatic renewal."
+  },
+  {
+   "field": "pricing",
+   "url": "https://supacode.sh",
+   "quote": "A lifetime license with unlimited local worktree creations and one year of updates. No subscription, no automatic renewal."
+  },
+  {
+   "field": "open_source",
+   "url": "https://supacode.sh",
+   "quote": "Read the code, report issues, and contribute on GitHub."
+  },
+  {
+   "field": "platforms",
+   "url": "https://supacode.sh",
+   "quote": "Requires macOS 26 Tahoe"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/supabitapp/supacode",
+   "quote": "Drive the app from any terminal, script, or other tool."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://supacode.sh",
+   "quote": "hreflang: 없음"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "소스 공개(source available) + 유료 영구 라이선스(Basic $99·Standard $129·Team $79/좌석), 무료는 로컬 worktree 5회 체험뿐",
+   "diff": "기존 '오픈소스 + 프리미엄 혼합'과 달리 오픈소스라는 표기가 없고(source available) 무료 버전이 아닌 체험판 후 유료 구매 구조",
+   "url": "https://supacode.sh"
+  }
+ ],
+ "plan_change": [
+  {
+   "official": "구독 없는 1회 구매 영구 라이선스(1년 업데이트 포함), 선택 갱신 $59/년",
+   "diff": "월 구독형 프리미엄이 아니라 1회 구매+선택 갱신 구조",
+   "url": "https://supacode.sh"
+  }
+ ],
+ "note": "Team 좌석 가격($79/seat)의 기간 표기는 페이지에 없음 — 영구 라이선스 문맥으로 one-time 처리, 사람 확인 권장."
+}

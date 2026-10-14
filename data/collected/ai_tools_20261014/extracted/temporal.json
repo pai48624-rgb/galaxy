@@ -1,0 +1,230 @@
+{
+ "company": "Temporal Technologies",
+ "one_liner_ko": "장애가 나도 멈춘 지점부터 정확히 이어서 실행되는 애플리케이션을 만드는 오픈소스 내구 실행 플랫폼.",
+ "what_it_does_ko": "Temporal은 개발자가 확장 가능하고 안정적인 애플리케이션을 만들게 하는 내구 실행 플랫폼이다. 워크플로는 단계마다 상태를 자동으로 저장해 장애가 나면 멈춘 곳부터 다시 이어간다. 실패하기 쉬운 API 호출 등은 자동 재시도·복구되는 Activity로 처리한다. 오픈소스(MIT)로 직접 호스팅하거나 Temporal Cloud에 맡길 수 있다.",
+ "key_features": [
+  "단계마다 상태를 자동 저장하는 Workflow",
+  "자동 재시도·복구되는 Activity",
+  "몇 달씩 잠드는 내구 타이머와 크론 스케줄",
+  "실행 중 Signal·Query·Update로 읽기·변경",
+  "Worker Versioning으로 안전한 배포",
+  "OpenAI Agents SDK·Google ADK를 내구 Activity로 실행",
+  "Go·Java·Python·TypeScript·.NET·PHP·Ruby·Rust SDK"
+ ],
+ "use_cases_ko": [
+  "장애에 강한 AI 에이전트·MCP·학습 파이프라인",
+  "금액 단위까지 정확한 거래 원장",
+  "리드 배분·온보딩 등 고객 확보 흐름"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Temporal Cloud 90일간 $150 크레딧, 오픈소스 자체 호스팅 무료)",
+  "plans": [
+   {
+    "name": "Pay-As-You-Go",
+    "price": 50,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "100만 액션당 $50부터, 월 기본료 없음",
+    "page_lang": "en"
+   },
+   {
+    "name": "Volume Discounts",
+    "price": 25,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "셀프서비스 최저 100만 액션당 $25",
+    "page_lang": "en"
+   },
+   {
+    "name": "Active Storage",
+    "price": 0.042,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "GB·시간당",
+    "page_lang": "en"
+   },
+   {
+    "name": "Retained Storage",
+    "price": 0.00105,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "GB·시간당",
+    "page_lang": "en"
+   },
+   {
+    "name": "Business (지원 애드온)",
+    "price": 500,
+    "currency": "USD",
+    "period": "month",
+    "limits": "월 $500 또는 사용량의 10% 중 큰 금액, 2.5M 액션 포함",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise and Mission Critical",
+    "price": null,
+    "currency": "USD",
+    "period": "month",
+    "limits": "영업 문의, 10M 액션 포함",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://temporal.io/pricing"
+ },
+ "open_source": "MIT",
+ "api": "있음",
+ "platforms": [
+  "API",
+  "CLI",
+  "웹"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://temporal.io",
+   "quote": "2026 © Temporal Technologies. All Rights Reserved."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/temporalio/temporal",
+   "quote": "Temporal is a durable execution platform that enables developers to build scalable applications"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://docs.temporal.io/",
+   "quote": "guaranteeing that applications resume exactly where they left off after crashes"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://temporal.io",
+   "quote": "Temporal Workflows automatically capture state at every step"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://temporal.io",
+   "quote": "Temporal treats these interactions as Activities: functions that retry automatically and recover seamlessly."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://temporal.io",
+   "quote": "Temporal is an open-source project that you are free to use and host in your own environment."
+  },
+  {
+   "field": "key_features",
+   "url": "https://temporal.io",
+   "quote": "Temporal Workflows automatically capture state at every step"
+  },
+  {
+   "field": "key_features",
+   "url": "https://temporal.io",
+   "quote": "Temporal treats these interactions as Activities: functions that retry automatically and recover seamlessly."
+  },
+  {
+   "field": "key_features",
+   "url": "https://temporal.io/pricing",
+   "quote": "Durable Timers that sleep for months, cron Schedules with backfill, and Continue-As-New."
+  },
+  {
+   "field": "key_features",
+   "url": "https://temporal.io/pricing",
+   "quote": "Signals, Queries, and Updates to read and mutate mid-flight"
+  },
+  {
+   "field": "key_features",
+   "url": "https://temporal.io/pricing",
+   "quote": "Worker Versioning pins Workflows to their version"
+  },
+  {
+   "field": "key_features",
+   "url": "https://temporal.io/pricing",
+   "quote": "OpenAI Agents SDK and Google ADK run LLM and tool calls as durable Activities."
+  },
+  {
+   "field": "key_features",
+   "url": "https://temporal.io/pricing",
+   "quote": "Go, Java, Python, TypeScript, .NET, PHP, Ruby, Rust"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://temporal.io",
+   "quote": "Develop agents that survive real-world chaos, reliable MCP & orchestrate training pipelines."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://temporal.io",
+   "quote": "Track transactions with code you can trust down to the last cent."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://temporal.io",
+   "quote": "Route leads, onboard users, and engage customers without dropped steps or hacks."
+  },
+  {
+   "field": "pricing",
+   "url": "https://temporal.io/pricing",
+   "quote": "Free $150 credits for 90 days"
+  },
+  {
+   "field": "pricing",
+   "url": "https://temporal.io/pricing",
+   "quote": "$50 per million actions"
+  },
+  {
+   "field": "pricing",
+   "url": "https://temporal.io/pricing",
+   "quote": "$25 per million actions"
+  },
+  {
+   "field": "pricing",
+   "url": "https://temporal.io/pricing",
+   "quote": "$0.042/GBhr Active Storage"
+  },
+  {
+   "field": "pricing",
+   "url": "https://temporal.io/pricing",
+   "quote": "$0.00105/GBhr Retained Storage"
+  },
+  {
+   "field": "pricing",
+   "url": "https://temporal.io/pricing",
+   "quote": "Price: Greater of $500/mo or 10% of usage"
+  },
+  {
+   "field": "pricing",
+   "url": "https://temporal.io",
+   "quote": "Temporal is an open-source project that you are free to use and host in your own environment."
+  },
+  {
+   "field": "open_source",
+   "url": "https://temporal.io",
+   "quote": "MIT-licensed, built in the open, and backed by a thriving developer community."
+  },
+  {
+   "field": "api",
+   "url": "https://temporal.io/pricing",
+   "quote": "API Keys"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/temporalio/temporal",
+   "quote": "to interact with the running Temporal server."
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/temporalio/temporal",
+   "quote": "Try [Temporal Web UI]"
+  },
+  {
+   "field": "platforms",
+   "url": "https://temporal.io/pricing",
+   "quote": "API Keys"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://temporal.io",
+   "quote": "html lang: en"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

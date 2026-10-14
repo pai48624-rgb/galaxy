@@ -1,0 +1,47 @@
+{
+ "company": "EleutherAI",
+ "one_liner_ko": "생성형 언어 모델을 수많은 평가 과제로 시험하는 통합 프레임워크.",
+ "what_it_does_ko": "Language Model Evaluation Harness는 생성형 언어 모델을 많은 평가 과제로 테스트하는 통합 프레임워크다. 60개 이상의 표준 학술 벤치마크와 수백 개의 하위 과제·변형을 구현해 두었다. transformers, GPT-NeoX, Megatron-DeepSpeed로 불러온 모델과 vLLM·SGLang, OpenAI 호환 API로 호스팅한 모델을 평가할 수 있다. CLI 하위 명령(run, ls, validate)과 YAML 설정 파일을 지원한다.",
+ "key_features": [
+  "60개 이상 표준 학술 벤치마크와 수백 개 하위 과제",
+  "transformers·GPT-NeoX·Megatron-DeepSpeed 모델 지원",
+  "vLLM·SGLang 백엔드 지원",
+  "API 모델 평가(배치·비동기 요청)",
+  "설정 기반 과제 생성과 Jinja2 프롬프트 설계",
+  "Open LLM Leaderboard 과제 묶음",
+  "CLI 하위 명령(run·ls·validate)과 YAML 설정",
+  "플러그인으로 모델 백엔드·필터·지표 등록"
+ ],
+ "use_cases_ko": [
+  "여러 학술 벤치마크로 언어 모델 성능 비교 평가"
+ ],
+ "pricing": {
+  "free_tier": "불명 (받은 본문에 요금 정보 없음)",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "오픈소스(라이선스 이름은 받은 본문에 없음)",
+ "api": "불명",
+ "platforms": ["CLI"],
+ "korean_support": "불명",
+ "evidence": [
+  {"field": "company", "url": "https://github.com/EleutherAI/lm-evaluation-harness", "quote": "or in the [EleutherAI discord](https://discord.gg/eleutherai)!"},
+  {"field": "one_liner_ko", "url": "https://github.com/EleutherAI/lm-evaluation-harness", "quote": "This project provides a unified framework to test generative language models on a large number of different evaluation tasks."},
+  {"field": "what_it_does_ko", "url": "https://github.com/EleutherAI/lm-evaluation-harness", "quote": "Over 60 standard academic benchmarks for LLMs, with hundreds of subtasks and variants implemented."},
+  {"field": "what_it_does_ko", "url": "https://github.com/EleutherAI/lm-evaluation-harness", "quote": "we recommend using VLLM's OpenAI-compliant API to host the model, and use the `local-completions` model type to evaluate the model."},
+  {"field": "key_features", "url": "https://github.com/EleutherAI/lm-evaluation-harness", "quote": "[GPT-NeoX](https://github.com/EleutherAI/gpt-neox), and [Megatron-DeepSpeed](https://github.com/microsoft/Megatron-DeepSpeed/)"},
+  {"field": "key_features", "url": "https://github.com/EleutherAI/lm-evaluation-harness", "quote": "[2025/02] Added [SGLang](https://docs.sglang.ai/) support!"},
+  {"field": "key_features", "url": "https://github.com/EleutherAI/lm-evaluation-harness", "quote": "introducing support for batched and async requests"},
+  {"field": "key_features", "url": "https://github.com/EleutherAI/lm-evaluation-harness", "quote": "Support for Jinja2 prompt design, easy modification of prompts + prompt imports from Promptsource"},
+  {"field": "key_features", "url": "https://github.com/EleutherAI/lm-evaluation-harness", "quote": "New Open LLM Leaderboard tasks have been added !"},
+  {"field": "key_features", "url": "https://github.com/EleutherAI/lm-evaluation-harness", "quote": "**CLI refactored** with subcommands (`run`, `ls`, `validate`) and YAML config file support via `--config`."},
+  {"field": "key_features", "url": "https://github.com/EleutherAI/lm-evaluation-harness", "quote": "model backends, filters, metrics and aggregations can now be registered from your own package instead of forking"},
+  {"field": "use_cases_ko", "url": "https://github.com/EleutherAI/lm-evaluation-harness", "quote": "Over 60 standard academic benchmarks for LLMs"},
+  {"field": "open_source", "url": "https://github.com/EleutherAI/lm-evaluation-harness", "quote": "ask questions, either in issues or PRs on GitHub"},
+  {"field": "platforms", "url": "https://github.com/EleutherAI/lm-evaluation-harness", "quote": "**CLI refactored** with subcommands"}
+ ],
+ "mismatch": [
+  {"official": "GitHub에 공개된 평가 프레임워크(pip 설치 라이브러리·CLI)만 있고, 받은 본문에 유료 플랜이나 관리형 클라우드 언급 없음", "diff": "기존 분류 '오픈소스 + 클라우드 매니지드 유료 플랜'의 유료 관리형 플랜이 공식 페이지에서 확인되지 않음 — 무료 오픈소스 도구로 보임", "url": "https://github.com/EleutherAI/lm-evaluation-harness"}
+ ],
+ "plan_change": []
+}

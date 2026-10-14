@@ -1,0 +1,90 @@
+{
+ "company": null,
+ "one_liner_ko": "원하는 언어 모델이 도구를 써서 실제 GitHub 저장소 이슈를 스스로 고치게 하는 연구용 에이전트(현재 유지보수 전용, mini-swe-agent 권장).",
+ "what_it_does_ko": "SWE-agent는 GPT-4o나 Claude Sonnet 4 같은 모델이 도구를 자율적으로 사용해 실제 GitHub 저장소의 이슈를 고치거나, 보안 취약점을 찾거나, 사용자 정의 작업을 하게 한다. 단일 yaml 파일로 설정하며 연구용으로 단순하고 고치기 쉽게 설계됐다. 프린스턴대와 스탠퍼드대 연구자들이 만들고 관리한다. 현재는 유지보수 전용 모드이며 개발진은 mini-swe-agent 사용을 권장한다.",
+ "key_features": [
+  "GitHub 이슈 자동 수정",
+  "사이버보안 취약점 탐색(EnIGMA 모드)",
+  "단일 yaml 파일 설정",
+  "사용자 정의 도구 추가",
+  "배치 모드·SWE-bench 벤치마크",
+  "궤적(Trajectory) 검사기",
+  "브라우저(GitHub Codespaces)에서 실행"
+ ],
+ "use_cases_ko": [
+  "실제 GitHub 저장소 이슈 수정",
+  "CTF 등 공격 보안 과제 풀이",
+  "코딩 에이전트 연구"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "CLI",
+  "웹"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://swe-agent.com/latest/",
+   "quote": "SWE-agent is now in maintenance-only mode."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://swe-agent.com/latest/",
+   "quote": "SWE-agent is built and maintained by researchers from Princeton University and Stanford University."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/SWE-agent/SWE-agent",
+   "quote": "SWE-agent enables your language model of choice (e.g. GPT-4o or Claude Sonnet 4) to autonomously use tools to"
+  },
+  {
+   "field": "key_features",
+   "url": "https://swe-agent.com/latest/",
+   "quote": "Configurable & fully documented : Governed by a single yaml file"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/SWE-agent/SWE-agent",
+   "quote": "is a mode for solving offensive cybersecurity (capture the flag) challenges."
+  },
+  {
+   "field": "key_features",
+   "url": "https://swe-agent.com/latest/",
+   "quote": "Adding custom tools\n What's next?"
+  },
+  {
+   "field": "key_features",
+   "url": "https://swe-agent.com/latest/",
+   "quote": "Trajectory inspector\n Batch mode\n Competitive runs"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://swe-agent.com/latest/",
+   "quote": "Made for research : Simple & hackable by design"
+  },
+  {
+   "field": "platforms",
+   "url": "https://swe-agent.com/latest/",
+   "quote": "Hello world\n Command line basics\n Solving coding challenges"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/SWE-agent/SWE-agent",
+   "quote": "Try SWE-agent in your browser: [![Open in GitHub Codespaces]"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://swe-agent.com/latest/",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

@@ -1,0 +1,116 @@
+{
+ "company": "AgentScope 팀 (agentscope-ai)",
+ "one_liner_ko": "에이전트를 개발·평가·호스팅·진화시키는 오픈소스 스택과 그 위의 응용 앱 모음.",
+ "what_it_does_ko": "AgentScope는 에이전트 개발·평가·호스팅·진화를 위한 오픈소스 스택이다. 핵심인 AgentScope 2.0은 멀티테넌트·멀티세션 관리와 분산 배포를 기본으로 하는 운영용 에이전트 프레임워크다. 도구별 검토·사람 개입 권한·샌드박스의 3중 보호, 미들웨어로 런타임 동작 수정, 문맥 압축·장기 메모리를 지원한다. Java·TypeScript 프레임워크와 메모리(ReMe)·평가(OpenJudge)·강화 파인튜닝(Trinity-RFT) 프로젝트, 개인 비서(QwenPaw) 같은 앱이 함께 있다.",
+ "key_features": [
+  "ReAct 추론 에이전트와 사람 개입(human-in-the-loop)",
+  "파이썬 함수·MCP·스킬을 묶는 툴킷",
+  "문맥 압축·장기 메모리(Mem0·ReMe 연동)",
+  "로컬·Docker·E2B·K8s 샌드박스 격리",
+  "멀티테넌트·멀티세션 Agent as Service 백엔드",
+  "Java·TypeScript 프레임워크",
+  "WebRTC 실시간 음성 대화(실험적)"
+ ],
+ "use_cases_ko": [
+  "기업용 운영 에이전트 백엔드 구축·분산 배포",
+  "개인 AI 비서를 내 기기나 클라우드에 설치(QwenPaw)"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "Apache-2.0",
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://agentscope.io",
+   "quote": "Built with care by the AgentScope team"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://agentscope.io",
+   "quote": "The open-source stack for developing, evaluating, hosting, and evolving agents"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.agentscope.io/en/versions/2.0.9",
+   "quote": "AgentScope 2.0 is a production-ready agent framework built for security, efficiency, flexibility, and completeness"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.agentscope.io/en/versions/2.0.9",
+   "quote": "Triple-layer protection via tool-specific review, human-in-the-loop permissions, and sandboxing."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.agentscope.io/en/versions/2.0.9",
+   "quote": "Non-invasive modification of agent runtime behavior via agent and tool middleware."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://agentscope.io",
+   "quote": "Flexible, scalable framework for reinforcement fine-tuning of LLMs."
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.agentscope.io/en/versions/2.0.9",
+   "quote": "Autonomous agent with ReAct reasoning and tool execution. Built-in human-in-the-loop oversight"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.agentscope.io/en/versions/2.0.9",
+   "quote": "Agent self-managed tool system with Python functions, MCP and skills integration."
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.agentscope.io/en/versions/2.0.9",
+   "quote": "Third-party integration with Mem0, ReMe and other vector databases."
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.agentscope.io/en/versions/2.0.9",
+   "quote": "Tool execution in isolated environments (local filesystem, Docker, E2B, K8s, etc.)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.agentscope.io/en/versions/2.0.9",
+   "quote": "One-click start of a production-ready backend with multi-tenant, multi-session management and distributed deployment"
+  },
+  {
+   "field": "key_features",
+   "url": "https://agentscope.io",
+   "quote": "TypeScript agent framework — born for agent systems."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/agentscope-ai/agentscope",
+   "quote": "Agent service supports realtime voice conversations over WebRTC"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://docs.agentscope.io/en/versions/2.0.9",
+   "quote": "From reasoning agent to enterprise deployment, AgentScope covers the full agent development lifecycle."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://agentscope.io",
+   "quote": "Personal AI assistant — easy to install on your machine or the cloud."
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/agentscope-ai/agentscope",
+   "quote": "src=\"https://img.shields.io/badge/license-Apache--2.0-black\""
+  },
+  {
+   "field": "korean_support",
+   "url": "https://agentscope.io",
+   "quote": "hreflang: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

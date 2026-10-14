@@ -1,0 +1,176 @@
+=== [home] https://zclaw.dev (lang=en)
+zclaw - Field Guide 
+ zclaw
+ Field Guide
+ Chapter 0 · Overview 
+ Chapter 1 · Getting Started 
+ Chapter 2 · Tool Surface 
+ Chapter 3 · Runtime Anatomy 
+ Chapter 4 · Security & Ops 
+ Chapter 5 · Build Your Own Tool 
+ Chapter 6 · Local Dev & Hacking 
+ Chapter 7 · Use Cases 
+ Chapter 8 · Local Admin Console 
+ Chapter 9 · Changelog 
+ Practical notes for building, flashing, and operating zclaw in the field.
+ zclaw docs
+ ☰ 
+ chapter 0
+ The 888 KiB Assistant
+ zclaw is an ESP32-resident AI agent written in C. It runs as a practical assistant over Telegram or host relay, with scheduling, GPIO control, memory, and a tight firmware budget.
+ Enjoy with zclaw
+ "Remind me in 20 minutes."
+ "Water the plants every day at 8:15."
+ "Set GPIO 5 high."
+ "Remember that my office sensor is on GPIO 4."
+ You send plain language, zclaw maps to tool calls, firmware executes on silicon.
+ You: In 20 minutes, check the garage sensor
+Agent: Created schedule #7: once in 20 min -> check the garage sensor 
+ Tested targets: ESP32-C3, ESP32-S3, ESP32-C6, ESP32-WROOM. Other ESPs should work fine. 
+ What "888 KiB" Means
+ The 888 KiB target is an all-in firmware cap, not just zclaw application logic. It includes app code plus ESP-IDF/FreeRTOS runtime, Wi-Fi/networking, TLS/crypto, and cert bundle overhead.
+ Current default esp32 build (grouped image bytes from idf.py -B build size-components ):
+ Layer Size Share 
+ zclaw app logic ( libmain.a ) 39,276 bytes (~38.4 KiB) ~4.6% 
+ Wi-Fi + networking stack 378,624 bytes (~369.8 KiB) ~44.4% 
+ TLS/crypto stack 134,923 bytes (~131.8 KiB) ~15.8% 
+ Cert bundle + app metadata 98,425 bytes (~96.1 KiB) ~11.5% 
+ Other ESP-IDF/runtime/drivers/libc 201,786 bytes (~197.1 KiB) ~23.7% 
+ Total image size from this build is 853,034 bytes ; padded zclaw.bin is 853,184 bytes (~833.2 KiB), leaving 56,128 bytes (~54.8 KiB) under the 888 KiB cap.
+ Read This Manual In Order
+ Chapter 1 · Getting Started 
+ Bootstrap install, flash, provision, and first successful boot. 
+ Chapter 2 · Tool Surface 
+ Current built-in tools and scheduling behavior, including one-shot jobs. 
+ Chapter 3 · Runtime Anatomy 
+ Task model, queues, LLM path, and practical constraints. 
+ Chapter 4 · Security & Ops 
+ Safety defaults, flash encryption, and production handling guidance. 
+ Chapter 5 · Build Your Own Tool 
+ Design, create, validate, and maintain custom natural-language tools. 
+ Chapter 6 · Local Dev & Hacking 
+ Practical local iteration loops, provisioning profiles, and debug workflows. 
+ Chapter 7 · Use Cases 
+ Useful and playful ideas that are only practical when the assistant lives on your device. 
+ Chapter 8 · Local Admin Console 
+ USB-local recovery and bring-up commands that work without Wi-Fi or the LLM. 
+ Chapter 9 · Changelog 
+ Release notes and a timeline of what changed across versions. 
+ Project Character
+ Language/runtime: C + ESP-IDF + FreeRTOS.
+ LLM backends: Anthropic, OpenAI, OpenRouter, Ollama (custom endpoint).
+ Interface: Telegram and optional host web relay.
+ Recovery plane: USB local admin commands keep the board operable in safe mode and before network bring-up.
+ Philosophy: ship useful automation under strict resource bounds.
+ Source of truth remains code + root README. This site is the human-facing layer built for readability.
+
+=== [meta] https://zclaw.dev
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/tnm/zclaw
+# zclaw
+
+<img
+  src="docs/images/lobster_xiao_cropped_left.png"
+  alt="Lobster soldering a Seeed Studio XIAO ESP32-C3"
+  height="200"
+  align="right"
+/>
+
+The smallest possible AI personal assistant for ESP32.
+
+zclaw is written in C and runs on ESP32 boards with a strict all-in firmware budget target of **<= 888 KiB** on the default build. It supports scheduled tasks, GPIO control, persistent memory, and custom tool composition through natural language.
+
+The **888 KiB** cap is all-in firmware size, not just app code.
+It includes `zclaw` logic plus ESP-IDF/FreeRTOS runtime, Wi-Fi/networking, TLS/crypto, and cert bundle overhead.
+
+Fun to use, fun to hack on.
+<br clear="right" />
+
+## Full Documentation
+
+Use the docs site for complete guides and reference.
+
+- [Full documentation](https://zclaw.dev)
+- [Local Admin Console](https://zclaw.dev/local-admin.html)
+- [Use cases: useful + fun](https://zclaw.dev/use-cases.html)
+- [Changelog (web)](https://zclaw.dev/changelog.html)
+- [Complete README (verbatim)](https://zclaw.dev/reference/README_COMPLETE.md)
+
+
+## Quick Start
+
+One-line bootstrap (macOS/Linux):
+
+```bash
+bash <(curl -fsSL https://raw.githubusercontent.com/tnm/zclaw/main/scripts/bootstrap.sh)
+```
+
+Already cloned?
+
+```bash
+./install.sh
+```
+
+Non-interactive install:
+
+```bash
+./install.sh -y
+```
+
+<details>
+<summary>Setup notes</summary>
+
+- `bootstrap.sh` clones/updates the repo and then runs `./install.sh`. You can inspect/verify the bootstrap flow first (including `ZCLAW_BOOTSTRAP_SHA256` integrity checks); see the [Getting Started docs](https://zclaw.dev/getting-started.html).
+- Linux dependency installs auto-detect `apt-get`, `pacman`, `dnf`, or `zypper` during `install.sh` runs.
+- In non-interactive mode, unanswered install prompts default to `no` unless you pass `-y` (or saved preferences/explicit flags apply).
+- For encrypted credentials in flash, use secure mode (`--flash-mode secure` in install flow, or `./scripts/flash-secure.sh` directly).
+- After flashing, provision WiFi + LLM credentials with `./scripts/provision.sh`.
+- You can re-run either `./scripts/provision.sh` or `./scripts/provision-dev.sh` at any time (no reflash required) to update runtime credentials: WiFi SSID/password, LLM backend/model/API key (or Ollama API URL), and Telegram token/chat ID allowlist.
+- Default LLM rate limits are `100/hour` and `1000/day`; change compile-time limits in `main/config.h` (`RATELIMIT_*`).
+- Quick validation path: run `./scripts/web-relay.sh` and send a test message to confirm the device can answer.
+- If serial port is busy, run `./scripts/release-port.sh` and retry.
+- For repeat local reprovisioning without retyping secrets, use `./scripts/provision-dev.sh` with a local profile file (`provision-dev.sh` wraps `provision.sh --yes`).
+
+</details>
+
+## Highlights
+
+- Chat via Telegram or hosted web relay
+- Timezone-aware schedules (`daily`, `periodic`, and one-shot `once`)
+- Built-in + user-defined tools
+- For brand-new built-in capabilities, add a firmware tool (C handler + registry entry) via the Build Your Own Tool docs.
+- Runtime diagnostics via `get_diagnostics` (quick/runtime/memory/rates/time/all scopes)
+- GPIO, DHT, and I2C control with guardrails (including `gpio_read_all`, `i2c_scan`, `i2c_read`/`i2c_write`, and `dht_read`)
+- USB local admin console for recovery, safe mode, and pre-network bring-up
+- Persistent memory across reboots
+- Persona options: `neutral`, `friendly`, `technical`, `witty`
+- Provider support for Anthropic, OpenAI, OpenRouter, and Ollama (custom endpoint)
+
+## Hardware
+
+Tested targets: **ESP32**, **ESP32-C3**, **ESP32-S3**, and **ESP32-C6**.
+Classic **ESP32-WROOM/ESP32 DevKit** boards are supported.
+Test reports for other ESP32 variants are very welcome!
+
+Recommended starter board: [Seeed XIAO ESP32-C3](https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html)
+
+## Local Dev & Hacking
+
+Typical fast loop:
+
+```bash
+./scripts/test.sh host
+./scripts/build.sh
+./scripts/flash.sh --kill-monitor /dev/cu.usbmodem1101
+./scripts/provision-dev.sh --port /dev/cu.usbmodem1101
+./scripts/monitor.sh /dev/cu.usbmodem1101
+```
+
+Profile setup once, then re-use:
+
+```bash
+./scripts/provision-dev.sh --write-template
+# edit

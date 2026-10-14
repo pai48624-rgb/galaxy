@@ -1,0 +1,195 @@
+=== [home] https://codeassist.google/products/business (lang=ko)
+Gemini Code Assist for teams and businesses 
+ close menu 
+ For Business 
+ FAQ 
+ Documentation 
+ 페이지 콘텐츠 
+ Documentation 
+ Release notes 
+ Gemini for Google Cloud 
+ Unpaid tier (Gemini Code Assist for individuals) and Google One users only : Gemini CLI and Gemini Code Assist IDE extensions were replaced by Antigravity CLI and Antigravity on June 18th 2026. Please migrate to avoid disruption. Learn more here .
+ Gemini Code Assist Standard and Enterprise
+ AI-assisted development for your business
+ Secure generative AI coding assistance and agents to help you with tasks across the Software Development Lifecycle, with Gemini 3 and a 1M token context window.
+ Try it now 
+ Buy Code Assist 
+ Want to talk with our sales team? Fill out this form to get contacted 
+ Product highlights
+ Get to know Gemini Code Assist Enterprise
+ 0:50
+ 기능
+ Build with Gemini 3
+ Gemini 3 is our most intelligent model that can help bring any idea to life. It is available to all Gemini Code Assist Standard and Enterprise subscribers who are in the Preview release channel .
+ AI assistance at terminal
+ Gemini Code Assist gives you access to Gemini CLI , an open source AI agent that brings the power of Gemini directly into your terminal. Gemini CLI provides powerful AI capabilities, from code understanding and file manipulation to command execution and dynamic troubleshooting, offering a fundamental update to your command line experience.
+ Agents for development tasks
+ Gemini Code Assist's agent mode , currently in preview, pairs you with agents capable of performing a wide range of tasks across the software development lifecycle. It expands the capabilities of simple command-response interactions inside chat, with support for multiple file edits, full project context, built-in tools, and integration with ecosystem tools using MCP, all while incorporating Human in the Loop (HiTL) for needed oversight.
+ AI code assistance
+ Gemini Code Assist completes your code as you write, and generates whole code blocks or functions on demand. Code assistance is available in many popular IDEs, such as Visual Studio Code , JetBrains IDEs (IntelliJ, PyCharm, GoLand, WebStorm, and more), Cloud Workstations , Cloud Shell Editor , and supports most programming languages , including Java, JavaScript, Python, C, C++, Go, PHP, and SQL.
+ Natural language chat
+ Through a natural language chat interface, you can quickly chat with Gemini Code Assist to get answers to your coding questions, or receive guidance on coding best practices. Chat is available in all supported IDEs.
+ Usage metrics
+ Metrics and observability logging along with a dashboard to monitor daily active use, chat exposures, code suggestions, acceptance rates, and lines of code accepted.
+ Measuring the impact of Gemini Code Assist in your business
+ Read the blog 
+ Code customization
+ Customize Gemini Code Assist using your organization’s private codebases for more tailored assistance. Your developers can get code suggestions more pertinent to your private codebases.
+ Local codebase awareness
+ Gemini Code Assist generates code that’s more relevant to your application by grounding responses with context from your local codebase and current development session. Perform large-scale changes to your codebase, including adding new features, updating cross-file dependencies, helping with version upgrades, comprehensive code reviews, and more.
+ Code transformation
+ Gemini Code Assist comes with contextual  smart actions and smart commands , quick shortcuts to automate tasks such as fix code errors, generation, and code explanation. You can also just select your code and use natural language to quickly take action on the code selected. Because these smart actions and commands are available right in the IDE, it minimizes the context switching of copying/pasting, making the user experience much smoother for developers. Additionally Gemini is in your IDE, it has the context of all your files, and can assist you in a more personalized way.
+ API development 
+ Using Gemini Code Assist in Apigee , you can create APIs consistent with your enterprise standards without specialized expertise. If an existing API specification in API Hub doesn’t meet your requirements, you can create a new one with just a prompt. Gemini Code Assist considers artifacts such as your security schemas or API objects in API Hub, and uses them to suggest a specification tailored to your enterprise, saving time in review cycles and development. Furthermore, Gemini assists you to easily spin up a mock server for simulating real-world behavior and to build a proxy from your specification. This feature is currently in preview.
+ App development in Firebase
+ Gemini Code Assist provides access to Gemini in Firebase , which is integrated within the Firebase console to help streamline your development process. Chat with Gemini to plan and design your application, generate code, troubleshoot issues, and get recommendations based on best practices. Get insights into your app's crashes with AI assistance in Crashlytics, which provides crash summaries, possible root causes, and suggested fixes.
+ Gemini and Firebase
+ 10:59
+ BigQuery data insights
+ Unlock deeper insights from your data with a library of queries generated from the metadata of your tables.
+ App integration and workflow automation
+ Using Gemini Code Assist in Application Integration , you can build end-to-end automation flows from prompts or one-click suggestions. Using the prompts and existing enterprise assets like APIs or applications, Gemini Code Assist suggests multiple flows tailored for your use case. Automatically create variables, preconfigure tasks, and complete documentation in accordance with your enterprise context. Get suggested optimizations and extend existing flows in a single click, to significantly reduce your maintenance efforts.
+ Gemini Cloud Assist 
+ Gain access to the premium paid features of Gemini Cloud Assist , such as Application Design Center for AI-assisted infrastructure design, and Investigations for AI-assisted troubleshooting and issue resolution. Currently available at no charge during preview.
+ Enterprise security and privacy
+ Our data governance policy helps ensure customer code, customers' inputs, as well as the recommendations generated will not be used to train any shared models nor used to develop any products. Customers control and own their data and IP. Gemini Code Assist also comes with security features like Private Google Access, VPC Service Controls , and Enterprise Access Controls with granular IAM permissions to help enterprises adopt AI assistance at scale without compromising on security and privacy.
+ Respect intellectual property 
+ Gemini Code Assist provides source citation so that code suggestions are automatically flagged when directly quoting at length from a source to help enterprises comply with license requirements. Google’s IP indemnification policy  helps protect Gemini Code Assist licensed users from potential legal ramifications concerning copyright infringements.
+ Industry certificates
+ Gemini Code Assist has achieved multiple industry certifications such as SOC 1/2/3, ISO/IEC 27001 (Information Security Management), 27017 (Cloud Security), 27018 (Protection of PII), and 27701 (Privacy Information Management). More details are at Certifications and security for Gemini .
+ 모든 특징 보기 
+ 작동 방식
+ Gemini Code Assist uses large language models (LLMs) from Google. The LLMs are fine-tuned with billions
+
+=== [meta] https://codeassist.google/products/business
+html lang: ko
+hreflang: de, en, es, es-419, fr, id, it, ja, ko, pt-br, x-default, zh-hans, zh-hant
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/google-gemini/gemini-cli
+# Gemini CLI
+
+[![Gemini CLI CI](https://github.com/google-gemini/gemini-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/google-gemini/gemini-cli/actions/workflows/ci.yml)
+[![Gemini CLI E2E (Chained)](https://github.com/google-gemini/gemini-cli/actions/workflows/chained_e2e.yml/badge.svg)](https://github.com/google-gemini/gemini-cli/actions/workflows/chained_e2e.yml)
+[![Version](https://img.shields.io/npm/v/@google/gemini-cli)](https://www.npmjs.com/package/@google/gemini-cli)
+[![License](https://img.shields.io/github/license/google-gemini/gemini-cli)](https://github.com/google-gemini/gemini-cli/blob/main/LICENSE)
+[![View Code Wiki](https://assets.codewiki.google/readme-badge/static.svg)](https://codewiki.google/github.com/google-gemini/gemini-cli?utm_source=badge&utm_medium=github&utm_campaign=github.com/google-gemini/gemini-cli)
+
+![Gemini CLI Screenshot](/docs/assets/gemini-screenshot.png)
+
+Gemini CLI is an open-source AI agent that brings the power of Gemini directly
+into your terminal. It provides lightweight access to Gemini, giving you the
+most direct path from your prompt to our model.
+
+Learn all about Gemini CLI in our [documentation](https://geminicli.com/docs/).
+
+## 🚀 Why Gemini CLI?
+
+- **🎯 Free tier**: 60 requests/min and 1,000 requests/day with personal Google
+  account.
+- **🧠 Powerful Gemini 3 models**: Access to improved reasoning and 1M token
+  context window.
+- **🔧 Built-in tools**: Google Search grounding, file operations, shell
+  commands, web fetching.
+- **🔌 Extensible**: MCP (Model Context Protocol) support for custom
+  integrations.
+- **💻 Terminal-first**: Designed for developers who live in the command line.
+- **🛡️ Open source**: Apache 2.0 licensed.
+
+## 📦 Installation
+
+See
+[Gemini CLI installation, execution, and releases](https://www.geminicli.com/docs/get-started/installation)
+for recommended system specifications and a detailed installation guide.
+
+### Quick Install
+
+#### Run instantly with npx
+
+```bash
+# Using npx (no installation required)
+npx @google/gemini-cli
+```
+
+#### Install globally with npm
+
+```bash
+npm install -g @google/gemini-cli
+```
+
+#### Install globally with Homebrew (macOS/Linux)
+
+```bash
+brew install gemini-cli
+```
+
+#### Install globally with MacPorts (macOS)
+
+```bash
+sudo port install gemini-cli
+```
+
+#### Install with Anaconda (for restricted environments)
+
+```bash
+# Create and activate a new environment
+conda create -y -n gemini_env -c conda-forge nodejs
+conda activate gemini_env
+
+# Install Gemini CLI globally via npm (inside the environment)
+npm install -g @google/gemini-cli
+```
+
+## Release Channels
+
+See [Releases](https://www.geminicli.com/docs/changelogs) for more details.
+
+### Preview
+
+New preview releases will be published each week at UTC 23:59 on Tuesdays. These
+releases will not have been fully vetted and may contain regressions or other
+outstanding issues. Please help us test and install with `preview` tag.
+
+```bash
+npm install -g @google/gemini-cli@preview
+```
+
+### Stable
+
+- New stable releases will be published each week at UTC 20:00 on Tuesdays, this
+  will be the full promotion of last week's `preview` release + any bug fixes
+  and validations. Use `latest` tag.
+
+```bash
+npm install -g @google/gemini-cli@latest
+```
+
+### Nightly
+
+- New releases will be published each day at UTC 00:00. This will be all changes
+  from the main branch as represented at time of release. It should be assumed
+  there are pending validations and issues. Use `nightly` tag.
+
+```bash
+npm install -g @google/gemini-cli@nightly
+```
+
+## 📋 Key Features
+
+### Code Understanding & Generation
+
+- Query and edit large codebases
+- Generate new apps from PDFs, images, or sketches using multimodal capabilities
+- Debug issues and troubleshoot with natural language
+
+### Automation & Integration
+
+- Automate operational tasks like querying pull requests or handling complex
+  rebases
+- Use MCP servers to connect new capabilities, including
+  [media generation with Imagen, Veo or Lyria](https://github.com/GoogleCloudPlatform/vertex-ai-creative-studio/tree/main/experiments/mcp-genmedia)
+- Run non-interactively in scripts for workflow automation
+
+### Advanced Capabilities
+
+- Ground your queries with buil

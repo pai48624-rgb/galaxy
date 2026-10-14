@@ -1,0 +1,154 @@
+{
+ "company": "Moonshot AI(月之暗面)",
+ "one_liner_ko": "Kimi K3 모델을 쓰는 AI 코딩 에이전트이자 CLI 도구로, 데스크톱·CLI·IDE 플러그인에서 쓸 수 있다.",
+ "what_it_does_ko": "Kimi Code는 Kimi K3를 탑재한 AI 코딩 에이전트·CLI 도구다. 데스크톱 앱, 터미널(CLI), IDE 플러그인을 지원해 여러 개발 흐름에 맞춰 쓸 수 있다. 코드 작성·수정(기능 구현, 버그 수정, 리팩터링), 코드베이스 검색·분석, 테스트·빌드·스크립트 실행과 결과 확인, 웹 검색을 할 수 있다고 소개한다. Kimi 회원 요금제(Kimi Code Plan)에 포함되어 쓰며, 하나의 구독으로 모든 단말에서 쓴다고 한다.",
+ "key_features": [
+  "Kimi K3 모델 탑재(최대 1M 컨텍스트)",
+  "데스크톱·CLI·IDE 플러그인 지원",
+  "코드 작성·수정·버그 수정·리팩터링",
+  "코드베이스 검색·읽기·분석",
+  "테스트·빌드·스크립트 실행 및 결과 검증",
+  "웹 검색과 웹페이지 읽기"
+ ],
+ "use_cases_ko": [
+  "개발자가 터미널·IDE에서 기능 구현·버그 수정·리팩터링을 맡김"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Free $0, 단 Kimi Code 호출은 유료 요금제 표에만 표시)",
+  "plans": [
+   {
+    "name": "Free",
+    "price": 0,
+    "currency": "USD",
+    "period": "year",
+    "limits": "Agent 작업 병렬 1개, 프로젝트 2개, 저장 500MB",
+    "page_lang": "zh-CN"
+   },
+   {
+    "name": "Plus",
+    "price": 15,
+    "currency": "USD",
+    "period": "month(연간 결제)",
+    "limits": "연간 $180(월 결제 표기가 $19), Kimi Code 호출 가능",
+    "page_lang": "zh-CN"
+   },
+   {
+    "name": "Pro",
+    "price": 31,
+    "currency": "USD",
+    "period": "month(연간 결제)",
+    "limits": "연간 $372(월 결제 표기가 $39), Agent 한도 2배",
+    "page_lang": "zh-CN"
+   },
+   {
+    "name": "Max",
+    "price": 79,
+    "currency": "USD",
+    "period": "month(연간 결제)",
+    "limits": "연간 $948(월 결제 표기가 $99), Agent 한도 5배",
+    "page_lang": "zh-CN"
+   },
+   {
+    "name": "Ultra",
+    "price": 159,
+    "currency": "USD",
+    "period": "month(연간 결제)",
+    "limits": "연간 $1,908(월 결제 표기가 $199), Agent 한도 10배",
+    "page_lang": "zh-CN"
+   }
+  ],
+  "pricing_url": "https://www.kimi.com/membership/pricing/"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "CLI",
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.kimi.com/code",
+   "quote": "我是 Kimi Code ，一个运行在你电脑上的 AI 编程助手 ，由月之暗面（Moonshot AI）开发 。"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.kimi.com/code",
+   "quote": "Kimi Code - 搭载 Kimi K3 的 AI 编程 Agent 与 CLI 工具"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.kimi.com/code",
+   "quote": "Kimi Code 现已覆盖桌面端、CLI 与 IDE 插件，轻松兼容各类开发流程，"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.kimi.com/code",
+   "quote": "写代码、改代码 ：实现新功能、修 bug、重构"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.kimi.com/code",
+   "quote": "跑命令 ：执行测试、构建、脚本，并验证结果"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.kimi.com/code",
+   "quote": "查资料 ：联网搜索最新信息，或读取网页内容"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.kimi.com/code",
+   "quote": "读懂代码库 ：搜索、阅读、分析现有代码"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.kimi.com/membership/pricing/",
+   "quote": "$ 15 / 月 $19 \n 按年计费 $180"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.kimi.com/membership/pricing/",
+   "quote": "$ 31 / 月 $39 \n 按年计费 $372"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.kimi.com/membership/pricing/",
+   "quote": "$ 79 / 月 $99 \n 按年计费 $948"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.kimi.com/membership/pricing/",
+   "quote": "$ 159 / 月 $199 \n 按年计费 $1,908"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.kimi.com/membership/pricing/",
+   "quote": "Free\n $0\n Plus\n $180 / 年"
+  },
+  {
+   "field": "api",
+   "url": "https://platform.kimi.com/",
+   "quote": "自助充值 按量付费\n 适合个人开发者&中小团队"
+  },
+  {
+   "field": "platforms",
+   "url": "https://www.kimi.com/code",
+   "quote": "Kimi Code 现已覆盖桌面端、CLI 与 IDE 插件"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.kimi.com/code",
+   "quote": "hreflang: en, x-default, zh"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "Kimi Code는 Kimi 회원 요금제(Plus $15~Ultra $159/월, 연간 결제 기준)에 묶여 제공되며 Kimi Code 호출은 유료 요금제 열에만 표시",
+   "diff": "독립 구독이 아니라 Kimi 전체 회원 구독(Agent·문서·웹사이트 배포 등)에 포함되는 구조",
+   "url": "https://www.kimi.com/membership/pricing/"
+  }
+ ]
+}

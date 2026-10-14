@@ -1,10 +1,10 @@
 {
- "company": "Qwen",
- "one_liner_ko": null,
- "what_it_does_ko": "수집된 Hugging Face 페이지(Qwen/Qwen3-Coder-480B-A35B-Instruct)에는 대화 템플릿(chat template) 코드만 담겨 있고 모델 설명·라이선스·성능 정보는 잘려 있다. 템플릿의 기본 시스템 문구는 이 모델을 '컴퓨터와 상호작용해 작업을 해결할 수 있는' 도우미로 정의하며, 함수(도구) 호출 형식을 정의한다.",
+ "company": "Qwen (Hugging Face 조직명)",
+ "one_liner_ko": "컴퓨터와 상호작용하며 작업을 해결하도록 설계된 Qwen의 코딩용 모델(Qwen3-Coder-480B-A35B-Instruct).",
+ "what_it_does_ko": "Qwen3-Coder-480B-A35B-Instruct는 Qwen이 Hugging Face에 올린 모델이다. 받아 둔 본문은 채팅 템플릿뿐이며, 기본 시스템 문구는 '컴퓨터와 상호작용해 작업을 해결하는 AI 도우미'이고 함수(도구) 호출 형식을 정의한다.",
  "key_features": [
-  "도구(함수) 호출 형식 내장 대화 템플릿",
-  "컴퓨터와 상호작용해 작업을 해결하는 에이전트형 동작 전제"
+  "함수(도구) 호출",
+  "컴퓨터와 상호작용하는 작업 해결(기본 시스템 문구)"
  ],
  "use_cases_ko": [],
  "pricing": {
@@ -15,12 +15,35 @@
  "open_source": null,
  "api": "불명",
  "platforms": [],
- "korean_support": "불명",
+ "korean_support": "없음(영어 등만)",
  "evidence": [
-  {"field": "company", "url": "https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct", "quote": "Qwen/Qwen3-Coder-480B-A35B-Instruct · Hugging Face"},
-  {"field": "what_it_does_ko", "url": "https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct", "quote": "You are Qwen, a helpful AI assistant that can interact with a computer to solve tasks."},
-  {"field": "key_features", "url": "https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct", "quote": "If you choose to call a function ONLY reply in the following format with NO suffix:"}
+  {
+   "field": "company",
+   "url": "https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct",
+   "quote": "=== [meta] https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct",
+   "quote": "You are Qwen, a helpful AI assistant that can interact with a computer to solve tasks."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct",
+   "quote": "You are Qwen, a helpful AI assistant that can interact with a computer to solve tasks."
+  },
+  {
+   "field": "key_features",
+   "url": "https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct",
+   "quote": "You have access to the following functions:"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct",
+   "quote": "=== [meta] https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct\nhtml lang: 없음\nhreflang: 없음"
+  }
  ],
  "mismatch": [],
- "plan_change": []
+ "plan_change": [],
+ "note": "모델 페이지 본문이 채팅 템플릿 일부뿐(설명·라이선스·제공사 정보 없음) → 대부분 불명. pricing 구간은 Hugging Face 플랫폼 요금 페이지(장식 기호뿐). 사람 확인 필요."
 }

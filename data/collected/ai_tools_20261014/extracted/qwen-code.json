@@ -1,0 +1,90 @@
+{
+ "company": "QwenLM",
+ "one_liner_ko": "터미널·에디터·데스크톱·브라우저·채팅에서 쓰는 오픈소스 AI 코딩 에이전트.",
+ "what_it_does_ko": "Qwen Code는 터미널, 에디터, 데스크톱, 브라우저, 채팅에서 쓰는 오픈소스 AI 코딩 에이전트다. Auto-Memory, Auto-Skills, 서브에이전트, 에이전트 팀, MCP를 기본으로 갖췄다. OpenAI, Anthropic, Gemini, Qwen API와 제3자 공급자, Ollama·vLLM 로컬 모델을 지원하며 실행 중에 바꿀 수 있다. IDE 플러그인, 데스크톱 앱, 웹 UI, SDK와 Telegram·DingTalk·WeChat·Feishu 채팅 연동을 제공한다.",
+ "key_features": [
+  "Auto-Memory·Auto-Skills",
+  "서브에이전트·에이전트 팀",
+  "MCP 지원",
+  "OpenAI·Anthropic·Gemini·Qwen API와 로컬 모델(Ollama·vLLM)",
+  "IDE 플러그인·데스크톱 앱·웹 UI·SDK",
+  "Telegram·DingTalk·WeChat·Feishu 채팅 연동"
+ ],
+ "use_cases_ko": [
+  "개발자가 저장소 설명·작업 시작점 파악 등 코딩 도움을 받음"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "오픈소스(라이선스 이름은 수집 본문에 없음)",
+ "api": "불명",
+ "platforms": [
+  "CLI",
+  "웹",
+  "맥",
+  "윈도"
+ ],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://github.com/QwenLM/qwen-code",
+   "quote": "https://github.com/QwenLM/qwen-code"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/QwenLM/qwen-code",
+   "quote": "**The open-source AI coding agent for your terminal, editor, desktop, browser, and chat.**"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/QwenLM/qwen-code",
+   "quote": "**Agentic out of the box** — Auto-Memory, Auto-Skills, SubAgents, Agent Teams, and MCP. Dynamic workflows, zero setup."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/QwenLM/qwen-code",
+   "quote": "**Multi-protocol** — Supports OpenAI, Anthropic, Gemini, and Qwen APIs. Any third-party provider or local model (Ollama / vLLM). Switch at runtime."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/QwenLM/qwen-code",
+   "quote": "**Beyond the terminal** — IDE plugins, Desktop app, Web UI, SDKs, and chat integrations (Telegram / DingTalk / WeChat / Feishu)."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/QwenLM/qwen-code",
+   "quote": "Explain this repository and show me where to start."
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/QwenLM/qwen-code",
+   "quote": "**Open-source, inside and out** — The framework and the Qwen models are open-source."
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/QwenLM/qwen-code",
+   "quote": "**Linux / macOS:**"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/QwenLM/qwen-code",
+   "quote": "**Windows:**"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://github.com/QwenLM/qwen-code",
+   "quote": "<a href=\"https://qwenlm.github.io/qwen-code-docs/ko/users/overview\">한국어</a>"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "프레임워크와 Qwen 모델 모두 오픈소스, 여러 API·로컬 모델 사용(요금표 없음)",
+   "diff": "기존 '프리미엄(무료+유료 구독)'과 달리 공식 페이지에서 유료 구독 요금제는 확인되지 않음",
+   "url": "https://github.com/QwenLM/qwen-code"
+  }
+ ],
+ "plan_change": []
+}

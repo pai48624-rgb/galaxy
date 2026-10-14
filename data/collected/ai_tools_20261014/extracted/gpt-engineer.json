@@ -1,0 +1,56 @@
+{
+ "company": "Lovable",
+ "one_liner_ko": "등록 주소(gptengineer.app)는 현재 Lovable로 이어지며, 채팅만으로 웹사이트·웹 앱을 만들어 주는 AI 소프트웨어 엔지니어다(gpt-engineer 자체는 자연어로 소프트웨어를 지정하면 AI가 코드를 쓰는 실험용 CLI).",
+ "what_it_does_ko": "gpt-engineer는 자연어로 소프트웨어를 설명하면 AI가 코드를 작성·실행하고, 개선 요청도 반영하는 코드 생성 실험 플랫폼(CLI)이다. 저장소는 관리형 서비스로 발전한 버전으로 gptengineer.app을 안내하며, 이 주소는 현재 Lovable로 연결된다. Lovable은 기술 지식 없이 채팅만으로 웹사이트와 웹 앱을 만들고, 호스팅·SSL·인증·결제·연동 같은 인프라를 대신 처리한다. 코드와 데이터의 소유권은 사용자에게 있다.",
+ "key_features": [
+  "채팅으로 웹사이트·웹 앱 생성(Lovable)",
+  "호스팅·SSL·백엔드 인프라 자동 처리",
+  "200개 넘는 국가·지역의 현지 결제·통화 변환·세금 처리",
+  "자동 보안 스캔과 감사 로그",
+  "기존 도구와 연결하는 커넥터·MCP 서버",
+  "자연어 프롬프트 파일로 새 코드 생성·기존 코드 개선(gpt-engineer CLI)",
+  "자체 에이전트를 공개 데이터셋으로 벤치마크(bench)"
+ ],
+ "use_cases_ko": [
+  "사내 도구·프로토타입·웹사이트를 직접 만들기",
+  "기업 부서가 SaaS 대신 맞춤 소프트웨어를 만들어 운영"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Free $0, 하루 빌드 크레딧 5개·월 최대 30개, 월 Cloud 크레딧 20개)",
+  "plans": [
+   {"name": "Free", "price": 0, "currency": "USD", "period": "month", "limits": "하루 빌드 크레딧 5개(월 최대 30개), lovable.app 도메인 5개", "page_lang": "ko"},
+   {"name": "Pro", "price": 25, "currency": "USD", "period": "month", "limits": "월 100 Pro 크레딧, 사용자 지정 도메인, 이메일 지원", "page_lang": "ko"},
+   {"name": "Business", "price": 50, "currency": "USD", "period": "month", "limits": "월 100 비즈니스 크레딧, 팀 워크스페이스, SSO, 우선 지원", "page_lang": "ko"},
+   {"name": "Enterprise", "price": null, "currency": "USD", "period": null, "limits": "규모 기반 가격, SCIM·감사 로그·맞춤 SLA", "page_lang": "ko"}
+  ],
+  "pricing_url": "https://lovable.dev/ko/pricing"
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": ["웹", "CLI"],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {"field": "company", "url": "https://lovable.dev/ko/", "quote": "App & Website Builder | Build Software in Minutes | Lovable"},
+  {"field": "one_liner_ko", "url": "https://lovable.dev/ko/pricing", "quote": "Lovable은 누구나 웹사이트와 웹 앱을 만들 수 있도록 도와주는 AI 소프트웨어 엔지니어예요. 기술 지식 없이도 채팅만으로 웹사이트와 웹 앱을 즉시 만들 수 있어요."},
+  {"field": "one_liner_ko", "url": "https://github.com/AntonOsika/gpt-engineer", "quote": "If you are looking for the evolution that is an opinionated, managed service – check out gptengineer.app."},
+  {"field": "what_it_does_ko", "url": "https://github.com/AntonOsika/gpt-engineer", "quote": "Sit back and watch as an AI writes and executes the code"},
+  {"field": "what_it_does_ko", "url": "https://lovable.dev/ko/", "quote": "Lovable이 호스팅, SSL, 백엔드 인프라를 맡아요. 코드와 데이터의 소유권은 언제나 여러분에게 있어요."},
+  {"field": "key_features", "url": "https://lovable.dev/ko/", "quote": "호스팅과 인증부터 결제와 연동까지, Lovable이 전체 인프라를 알아서 처리해요."},
+  {"field": "key_features", "url": "https://lovable.dev/ko/", "quote": "200개가 넘는 국가와 지역에서 현지 결제, 통화 변환, 세금 규정 준수를 대신 처리해요."},
+  {"field": "key_features", "url": "https://lovable.dev/ko/", "quote": "자동 스캔과 감사 로그로 보안 및 규정 준수 요건을 충족하세요."},
+  {"field": "key_features", "url": "https://lovable.dev/ko/", "quote": "기술 스택을 연결하고 이미 사용하는 도구에서 바로 만들어보세요."},
+  {"field": "key_features", "url": "https://github.com/AntonOsika/gpt-engineer", "quote": "Run `gpte <project_dir> -i` with a relative path to your folder"},
+  {"field": "key_features", "url": "https://github.com/AntonOsika/gpt-engineer", "quote": "gpt-engineer installs the binary 'bench', which gives you a simple interface for benchmarking your own agent implementations against popular public datasets."},
+  {"field": "use_cases_ko", "url": "https://lovable.dev/ko/", "quote": "새로운 제품, 사내 도구, 회사 전체를 현실로 만들어 보세요."},
+  {"field": "use_cases_ko", "url": "https://lovable.dev/ko/", "quote": "The Scion Group은 전사적으로 Lovable을 도입해, 모든 부서가 업무 흐름을 간소화하는 맞춤 도구를 직접 만들고 있어요."},
+  {"field": "pricing", "url": "https://lovable.dev/ko/pricing", "quote": "Free 플랜에는 매일 제공되는 빌드 크레딧 5개(월 최대 30개)와 매월 제공되는 Cloud 크레딧 20개가 포함돼요."},
+  {"field": "pricing", "url": "https://lovable.dev/ko/pricing", "quote": "100 Pro 크레딧"},
+  {"field": "pricing", "url": "https://lovable.dev/ko/pricing", "quote": "100 비즈니스 크레딧"},
+  {"field": "pricing", "url": "https://lovable.dev/ko/pricing", "quote": "규모 기반 가격 무제한 사용자"},
+  {"field": "platforms", "url": "https://lovable.dev/ko/", "quote": "웹, 데스크톱, 모바일에서 또는 즐겨 쓰는 도구와 플랫폼에서 프로젝트를 만들고 관리하세요."},
+  {"field": "platforms", "url": "https://github.com/AntonOsika/gpt-engineer", "quote": "Run `gpte <project_dir>` with a relative path to your folder"},
+  {"field": "korean_support", "url": "https://lovable.dev/ko/", "quote": "hreflang: de, en, es, fr, hi, id, it, ja, ko, pt-br, th, x-default"}
+ ],
+ "mismatch": [{"official": "등록 주소 gptengineer.app은 Lovable(유료 크레딧 구독 앱 빌더: Free $0, Pro $25/월, Business $50/월, Enterprise)로 연결됨", "diff": "기존 '오픈소스(무료)' 분류와 달리 공식 사이트 제품은 유료 구독 서비스이고, 원래 gpt-engineer 저장소의 라이선스 이름도 받은 페이지에 적혀 있지 않음", "url": "https://lovable.dev/ko/pricing"}],
+ "plan_change": []
+}

@@ -1,0 +1,40 @@
+{
+ "company": "zai-org (모델 배포 계정 THUDM)",
+ "one_liner_ko": "텍스트·이미지로 영상을 만들고 영상을 이어 붙이는 오픈소스 영상 생성 모델 CogVideoX 시리즈의 코드 저장소",
+ "what_it_does_ko": "CogVideo·CogVideoX 저장소는 오픈소스 영상 생성 모델 CogVideoX 시리즈의 코드와 모델을 제공한다. 이 시리즈는 텍스트→영상 생성, 영상 이어 만들기, 이미지→영상 생성 세 가지 작업을 지원한다. CogVideoX1.5-5B는 더 높은 해상도의 10초 영상을 지원하며, I2V 모델은 이미지를 배경 입력으로 받아 프롬프트와 결합한 영상을 만든다. diffusers 기반 LoRA 미세조정 코드와 Hugging Face·ModelScope 온라인 체험 공간도 제공한다.",
+ "key_features": [
+  "텍스트→영상, 영상 이어 만들기, 이미지→영상 생성",
+  "CogVideoX1.5-5B: 더 높은 해상도의 10초 영상",
+  "CogVideoX1.5-5B-I2V: 임의 해상도 이미지→영상",
+  "diffusers 기반 LoRA 미세조정(적은 GPU 메모리)",
+  "DDIM Inverse 지원",
+  "Hugging Face Space·ModelScope에서 온라인 체험",
+  "CogKit 미세조정·추론 프레임워크"
+ ],
+ "use_cases_ko": [
+  "연구자·개발자가 오픈소스 영상 생성 모델을 직접 실행·미세조정"
+ ],
+ "pricing": {"free_tier": "있음 (오픈소스 모델, 온라인 체험 공간)", "plans": [], "pricing_url": null},
+ "open_source": "오픈소스(라이선스 이름은 받은 본문에 없음)",
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://github.com/zai-org/CogVideo", "quote": "https://github.com/zai-org/CogVideo"},
+  {"field": "company", "url": "https://github.com/zai-org/CogVideo", "quote": "https://huggingface.co/spaces/THUDM/CogVideoX-5B"},
+  {"field": "one_liner_ko", "url": "https://github.com/zai-org/CogVideo", "quote": "CogVideoX1.5 is an upgraded version of the open-source model CogVideoX."},
+  {"field": "what_it_does_ko", "url": "https://github.com/zai-org/CogVideo", "quote": "the CogVideoX series models now support three tasks: text-to-video generation, video\n  continuation, and image-to-video generation."},
+  {"field": "what_it_does_ko", "url": "https://github.com/zai-org/CogVideo", "quote": "The CogVideoX1.5-5B series supports 10-second videos with higher resolution, and CogVideoX1.5-5B-I2V supports video generation at any resolution."},
+  {"field": "what_it_does_ko", "url": "https://github.com/zai-org/CogVideo", "quote": "This model can take an image as a background input and generate a video combined with prompt words"},
+  {"field": "key_features", "url": "https://github.com/zai-org/CogVideo", "quote": "We have updated the code for `Lora` fine-tuning based on the `diffusers` version model, which uses less GPU memory."},
+  {"field": "key_features", "url": "https://github.com/zai-org/CogVideo", "quote": "DDIM Inverse is now supported in `CogVideoX-5B` and `CogVideoX1.5-5B`."},
+  {"field": "key_features", "url": "https://github.com/zai-org/CogVideo", "quote": "a fine-tuning and inference framework for the **CogView4** and **CogVideoX** series"},
+  {"field": "key_features", "url": "https://github.com/zai-org/CogVideo", "quote": "Experience the CogVideoX-5B model online at"},
+  {"field": "use_cases_ko", "url": "https://github.com/zai-org/CogVideo", "quote": "This toolkit allows you to fully explore and utilize our multimodal generation models."},
+  {"field": "pricing", "url": "https://github.com/zai-org/CogVideo", "quote": "open-sourced a larger model in the CogVideoX series, **CogVideoX-5B**"},
+  {"field": "open_source", "url": "https://github.com/zai-org/CogVideo", "quote": "We have open-sourced the CogVideoX series image-to-video model **CogVideoX-5B-I2V**."},
+  {"field": "korean_support", "url": "https://github.com/zai-org/CogVideo", "quote": "[中文阅读](./README_zh.md)\n\n[日本語で読む](./README_ja.md)"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

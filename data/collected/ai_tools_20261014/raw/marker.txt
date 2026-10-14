@@ -1,0 +1,61 @@
+=== [github] https://github.com/datalab-to/marker
+<p align="center">
+  <img src="data/images/datalab-logo.png" alt="Datalab Logo" width="150"/>
+</p>
+<h1 align="center">Datalab</h1>
+<p align="center">
+  <strong>State of the Art models for Document Intelligence</strong>
+</p>
+<p align="center">
+  <a href="https://www.apache.org/licenses/LICENSE-2.0"><img src="https://img.shields.io/badge/Code%20License-Apache%202.0-green.svg" alt="Code License"></a>
+  <a href="https://www.datalab.to/pricing"><img src="https://img.shields.io/badge/Model%20License-OpenRAIL--M-blue.svg" alt="Model License"></a>
+  <a href="https://discord.gg/KuZwXNGnfH"><img src="https://img.shields.io/badge/Discord-Join%20us-5865F2?logo=discord&logoColor=white" alt="Discord"></a>
+</p>
+<p align="center">
+  <a href="https://www.datalab.to"><img src="https://img.shields.io/badge/Homepage-datalab.to-blue" alt="Homepage"></a>
+  <a href="https://documentation.datalab.to"><img src="https://img.shields.io/badge/Docs-Read%20the%20docs-blue" alt="Docs"></a>
+  <a href="https://www.datalab.to/playground"><img src="https://img.shields.io/badge/Playground-Try%20it-orange" alt="Public Playground"></a>
+</p>
+
+<hr/>
+
+# Marker
+
+Marker converts documents to markdown, JSON, chunks, and HTML quickly and accurately.
+
+- Converts PDF, image, PPTX, DOCX, XLSX, HTML, EPUB files in all languages
+- Formats tables, forms, equations, inline math, links, references, and code blocks
+- Extracts and saves images
+- Removes headers/footers/other artifacts
+- Extensible with your own formatting and logic
+- Optionally boost accuracy with LLMs (and your own prompt)
+- Works on GPU, CPU, or MPS
+
+## Try Datalab's Managed Platform
+
+Our managed platform runs a version of our latest open source model, [Chandra](https://github.com/datalab-to/chandra) — higher accuracy than Marker, with zero data retention by default, SOC 2 Type 2, and custom BAAs.
+
+If you have high volume workloads, we offer a batch processing service that has processed 1B+ pages per week — we manage the infrastructure so your workloads finish on time.
+
+Get started with **$5 in free credits** — [sign up](https://www.datalab.to/?utm_source=gh-marker).
+
+## Performance
+
+<img src="data/images/olmocr_bench.png" width="800px"/>
+
+We measure marker on [olmocr-bench](https://github.com/allenai/olmocr/tree/main/olmocr/bench), a third-party benchmark of 1,403 PDFs with tests covering math, tables, multi-column layout, scans, and hard edge cases.  Balanced mode scores **76.0%** overall — **83.5%** on born-digital PDFs — ahead of MinerU and docling and within range of much larger VLMs, while fast mode runs the layout + text-layer path far cheaper (and a no-OCR mode goes faster still).  Scores are the olmocr-bench overall (macro-average across the 8 categories).
+
+<img src="data/images/olmocr_digital.png" width="700px"/>
+
+See [below](#benchmarks) for the full per-category scores, the competitive comparison, and instructions on how to run your own benchmarks.
+
+## Hybrid Mode
+
+For the highest accuracy, pass the `--use_llm` flag to use an LLM alongside marker.  This will do things like merge tables across pages, handle inline math, format tables properly, and extract values from forms.  It works with Gemini, Claude, OpenAI-compatible, Azure, Vertex, OpenRouter, or Ollama models.  By default, it uses `gemini-3.5-flash`.  See [below](#llm-services) for details.
+
+## Examples
+
+| PDF | File type | Markdown                                                                                                                     | JSON                                                                                                   |
+|-----|-----------|------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
+| [Think Python](https://greenteapress.com/thinkpython/thinkpython.pdf) | Textbook | [View](https://github.com/VikParuchuri/marker/blob/master/data/examples/markdown/thinkpython/thinkpython.md)                 | [View](https://github.com/VikParuchuri/marker/blob/master/data/examples/json/thinkpython.json)         |
+| [Switch Transformers](https:/

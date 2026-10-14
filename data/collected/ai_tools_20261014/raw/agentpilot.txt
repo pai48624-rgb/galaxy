@@ -1,0 +1,125 @@
+=== [home] https://agentpilot.ai/cgi-sys/suspendedpage.cgi
+Account Suspended 
+ Account Suspended
+ This Account has been suspended.
+ Contact your hosting provider for more information.
+
+=== [pricing] https://agentpilot.ai/cgi-sys/suspendedpage.cgi
+Account Suspended 
+ Account Suspended
+ This Account has been suspended.
+ Contact your hosting provider for more information.
+
+=== [pricing] https://agentpilot.ai/cgi-sys/suspendedpage.cgi
+Account Suspended 
+ Account Suspended
+ This Account has been suspended.
+ Contact your hosting provider for more information.
+
+=== [pricing] https://agentpilot.ai/cgi-sys/suspendedpage.cgi
+Account Suspended 
+ Account Suspended
+ This Account has been suspended.
+ Contact your hosting provider for more information.
+
+=== [meta] https://agentpilot.ai/cgi-sys/suspendedpage.cgi
+html lang: 없음
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/jbexta/AgentPilot
+<h1 align="center">💬 Agent Pilot</h1>
+
+<p align="center">️
+  <img src="docs/demo.png" width="600px" alt="AgentPilot desktop demo" />
+<br><br>
+A versatile workflow automation system. Create, organize, and execute complex AI-driven tasks.
+Agent Pilot provides a seamless experience, whether you want to chat with a single LLM or a complex multi-member workflow.
+<br><br>
+With an intuitive and feature-rich interface, you can effortlessly design AI workflows and chat with them in real-time.
+Branching chats are supported, allowing flexible interactions and iterative refinement.
+<br><br>
+Agent Pilot offers generative and customizable UI, allowing creation of custom pages and hierarchical configs.
+This flexibility gives you the freedom to design an interface that aligns with your specific needs and effortlessly integrate into your workflows.
+<br><br>
+The system supports scheduled and recurring workflows that can be set to run based on natural language expressions of time, enabling automation that ranges from every second to every leap year.
+</p>
+
+<div align="center">
+
+[![Discord](https://img.shields.io/discord/1169291612816420896?style=flat)](https://discord.gg/ge2ZzDGu9e)
+[![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/AgentPilotAI)](https://twitter.com/AgentPilotAI)
+</div>
+
+<p align="center">
+  <img src="docs/demo.gif" align="center" height="255px" alt="AgentPilot gif demo" style="margin-right: 20px;" />
+  <img src="docs/Screenshot3.png" align="center" height="250px" alt="AgentPilot gif demo" style="margin-right: 20px;" />
+  <img src="docs/Screenshot1.png" align="center" height="250px" alt="AgentPilot gif demo" style="margin-right: 20px;" />
+</p>
+<p align="center">
+  <img src="docs/Screenshot2.png" align="center" height="250px" alt="AgentPilot gif demo" style="margin-right: 20px;" />
+  <img src="docs/Screenshot4.png" align="center" height="250px" alt="AgentPilot gif demo" style="margin-right: 20px;" />
+</p>
+
+## Quickstart
+
+### Binaries
+<table>
+  <tr>
+	<th>Platform</th>
+	<th>Downloads</th>
+  </tr>
+  <tr>
+	<td><b>Linux</b></td>
+	<td>
+<b><a href="https://sourceforge.net/projects/agentpilot/files/v0.5.1/AgentPilot_0.5.1_Linux.tar.gz/download" target="_blank">AgentPilot_0.5.1_Linux.tar.gz</a></b><br>
+<b>MD5:</b>  e74e736e3efbd459b411ecffc45e936e<br>
+<b>SHA1:</b> 93b12bd208095f8d8b34395446de23d233a1baed<br>
+	</td>
+  </tr>
+  <tr>
+	<td><b>Windows</b></td>
+	<td>
+<b><a href="https://sourceforge.net/projects/agentpilot/files/v0.5.1/AgentPilot_0.5.1_Windows.zip/download" target="_blank">AgentPilot_0.5.1_Windows.zip</a></b><br>
+<b>MD5:</b> 17079a8f2faf9683c59d11d0b67a8092<br>
+<b>SHA1:</b> c5a30c02f17782ead98c24098e874c9ba2edc950<br>
+	</td>
+  </tr>
+  <tr>
+	<td><b>Mac Intel</b></td>
+	<td>
+<b><a href="https://sourceforge.net/projects/agentpilot/files/v0.5.1/AgentPilot_0.5.1_Mac_Intel.tar.gz/download" target="_blank">AgentPilot_0.5.1_Mac_Intel.tar.gz</a></b><br>
+<b>MD5:</b> 2e1e03e5305ea279df1b76d1a8074cb7<br>
+<b>SHA1:</b> 9369152f1b69ff2a4ca476ecf1b377b5ce0e072b<br>
+	</td>
+  </tr>
+</table>
+
+
+Building from source: [How to build from source](docs/guides/how_to_build.md) <br>
+
+> [!TIP]
+> You can migrate your old database to the new version by replacing your executable with the new one before starting the application.
+
+## Features
+
+###  👤 Create Agents
+Create new agents, edit their configuration and organise them into folders.<br>
+Multi-member workflows can be saved as a single agent and nested infinitely.
+
+### 📝 Manage Chats
+View, continue and delete previous workflow chats and organise them into folders.<br>
+
+### 🌱 Branching Workflows
+Messages, tools and code can be edited and re-run, allowing a more practical way to chat with your workflow.<br>
+Branching works with all plugins and multi-member chats.<br>
+
+### 👥 Graph Workflows
+Seamlessly add other members or blocks to a workflow and configure how they interact with each other.<br>
+Members aligned vertically are executed in parallel.
+
+Available members:
+- **User** - This is you and will await your input.
+- **Agent** - Gets an LLM response with integrated tools and messages.
+- **Text** - A simple text block that can nest other blocks.
+- **Code** - Gets the output of any given c

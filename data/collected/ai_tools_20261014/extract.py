@@ -15,6 +15,7 @@ RAW = os.path.join(HERE, "raw")
 EXT = os.path.join(HERE, "extracted")
 FIELDS = ["company", "one_liner_ko", "what_it_does_ko", "key_features", "use_cases_ko", "pricing", "open_source", "api",
           "platforms", "korean_support"]
+BOT_RE = r"(?i)잠시만 기다리십시오|보안 확인 수행 중|just a moment|verify you are human|checking your browser|attention required|enable javascript and cookies"
 KO4 = ("UI 한국어", "한국어 입력·출력", "없음(영어 등만)", "불명")
 EMPTY = {"company": None, "one_liner_ko": None, "what_it_does_ko": None, "key_features": [], "use_cases_ko": [],
          "pricing": {"free_tier": "불명", "plans": [], "pricing_url": None}, "open_source": None, "api": "불명",
@@ -66,6 +67,13 @@ def build():
         rawq = squash(open(rp, encoding="utf-8").read()) if os.path.exists(rp) else ""
         rec = {"slug": slug, "name_en": fr["name_en"], "checked_at": fr["checked_at"],
                "status": "%s %s" % (fr["status"], fr.get("final_url") or "")}
+        home = ""
+        if os.path.exists(rp):
+            hm = re.search(r"(?s)^=== \[home\][^\n]*\n(.{0,600})", open(rp, encoding="utf-8").read())
+            home = hm.group(1) if hm else ""
+        if re.search(BOT_RE, home) or re.search(r"/login|/signin|/auth", fr.get("final_url") or ""):
+            # 홈이 봇 확인·로그인 화면 — 넘지 않음(우회 금지), 상태에 표시
+            rec["status_note"] = "홈이 봇 확인·로그인 화면(넘지 않음)"
         e = json.load(open(p, encoding="utf-8")) if os.path.exists(p) else {}
         ev_ok, dropped = [], []
         for ev in e.get("evidence") or []:
@@ -140,6 +148,7 @@ def build():
             w.writerows(rows)
     ko = {k: sum(1 for r in out if r.get("korean_support") == k) for k in KO4}
     priced = sum(1 for r in out if not is_empty("pricing", r.get("pricing")))
+    print("홈이 봇 확인·로그인 화면: %d" % sum(1 for r in out if r.get("status_note")))
     print("도구 %d · 정리 있음 %d · 요금 확인 %d · 한국어 %s · mismatch %d · changed %d · failed %d · 되돌린 값 %d"
           % (len(out), st["정리 있음"], priced, ko, len(mism), len(chg), len(failed), st["되돌림"]))
 

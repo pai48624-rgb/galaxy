@@ -1,0 +1,89 @@
+{
+ "company": "Tencent·베이징대학교 공동 개발",
+ "one_liner_ko": "파라미터 서버 방식의 고성능 분산 머신러닝·그래프 컴퓨팅 플랫폼",
+ "what_it_does_ko": "Angel은 파라미터 서버 철학에 기반한 분산 머신러닝·그래프 컴퓨팅 플랫폼으로, 텐센트 빅데이터에 맞춰 성능을 조정했다. 복잡한 모델의 파라미터를 여러 파라미터 서버 노드에 나눠 저장하고 효율적인 모델 업데이트 인터페이스로 여러 알고리즘을 구현한다. Java와 Scala로 개발됐고 Yarn에서 실행되며, PS Service 추상화로 Spark on Angel을 지원한다.",
+ "key_features": [
+  "파라미터 서버 기반 분산 학습",
+  "고차원 모델 처리",
+  "Yarn에서 실행",
+  "Spark on Angel 지원",
+  "LR·SVM·FM·KMeans·GBDT·LDA 등 알고리즘",
+  "유연한 동기화 일관성 모델"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "Apache 2.0",
+ "api": "있음",
+ "platforms": [
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://github.com/Angel-ML/angel",
+   "quote": "Angel is jointly developed by Tencent and Peking University"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/Angel-ML/angel",
+   "quote": "is a high-performance distributed machine learning and graph computing platform based on the philosophy of Parameter Server"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/Angel-ML/angel",
+   "quote": "partitions parameters of complex models into multiple parameter-server nodes"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/Angel-ML/angel",
+   "quote": "It supports running on **Yarn**."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/Angel-ML/angel",
+   "quote": "With **PS Service** abstraction, it supports **Spark on Angel**."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/Angel-ML/angel",
+   "quote": "demonstrating increasing advantage in handling higher dimension model"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/Angel-ML/angel",
+   "quote": "[Logistic Regression(LR)](./docs/algo/lr_on_angel_en.md)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/Angel-ML/angel",
+   "quote": "as well as flexible consistency model for synchronization"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/Angel-ML/angel",
+   "quote": "license-Apache2.0-brightgreen"
+  },
+  {
+   "field": "api",
+   "url": "https://github.com/Angel-ML/angel",
+   "quote": "[Core API](./docs/apis/core_api_en.md)"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/Angel-ML/angel",
+   "quote": "[Core API](./docs/apis/core_api_en.md)"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://github.com/Angel-ML/angel",
+   "quote": "[(ZH-CN Version)](./README_CN.md)"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

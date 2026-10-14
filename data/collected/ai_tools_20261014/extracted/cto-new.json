@@ -1,0 +1,55 @@
+{
+ "company": "Engine Labs",
+ "one_liner_ko": "AI와 대화하며 사업을 시작하거나 키울 수 있는, 광고 기반 평생 무료 AI 비즈니스 빌더.",
+ "what_it_does_ko": "cto.new는 AI와 채팅하는 방식으로 회사를 시작하거나 기존 사업을 키우도록 돕는 서비스다. 에이전시, 도급 사업, 기술 회사 등 다양한 사업을 AI로 만들고 운영할 수 있다고 소개한다. 여러 에이전트로 이뤄진 팀, 웹 검색·이메일·일정 기능, MCP·스킬 연동을 제공하며 클라우드 샌드박스에서 동작한다. 완성된 AI 팀을 고용하거나 자기 팀을 판매할 수 있는 마켓플레이스가 있다. 광고로 운영되는 무료 요금제는 카드·API 키 없이 쓰고 한도가 매일 초기화되며, 선택형 Premium이 있다.",
+ "key_features": [
+  "AI 채팅으로 사업 구축·운영",
+  "Anthropic·OpenAI 등 최신 AI 모델",
+  "빠르고 안전한 클라우드 샌드박스",
+  "멀티 에이전트 팀",
+  "웹 검색·이메일·일정 기능 내장",
+  "Linear·Sentry·Vercel·Notion 등 MCP 연동",
+  "완성형 AI 팀 고용·판매 마켓플레이스"
+ ],
+ "use_cases_ko": [
+  "새 회사를 AI로 시작하거나 기존 사업에 활용",
+  "SaaS를 만드는 엔지니어링 팀, 캠페인을 짜는 마케팅 팀 같은 완성형 AI 팀 고용",
+  "지역 업체용 웹사이트 제작"
+ ],
+ "pricing": {
+  "free_tier": "있음 (평생 무료, 광고 기반, 카드·API 키 불필요, 한도 매일 초기화)",
+  "plans": [
+   {"name": "Free forever", "price": 0, "currency": "USD", "period": "month", "limits": "광고 기반, 한도 매일 초기화, AI 비즈니스·에이전트 채팅 무제한", "page_lang": "en"},
+   {"name": "Premium", "price": 20, "currency": "USD", "period": "불명", "limits": "$20부터, Pro 에이전트 기능, Premium 모델", "page_lang": "en"}
+  ],
+  "pricing_url": "https://cto.new/pricing/"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["웹"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://cto.new", "quote": "Engine Labs"},
+  {"field": "one_liner_ko", "url": "https://cto.new", "quote": "cto - Build businesses with AI. Free forever."},
+  {"field": "one_liner_ko", "url": "https://cto.new", "quote": "Start or grow your company by chatting with AI."},
+  {"field": "what_it_does_ko", "url": "https://docs.cto.new/essentials/overview", "quote": "Whether it’s an agency, a contracting business, a technology company, or something else, cto can help."},
+  {"field": "what_it_does_ko", "url": "https://cto.new", "quote": "A marketplace to hire ready-made AI teams, or list your own team for sale."},
+  {"field": "key_features", "url": "https://cto.new", "quote": "Latest AI models from Anthropic, OpenAI and more"},
+  {"field": "key_features", "url": "https://cto.new", "quote": "Fast & secure cloud sandboxes"},
+  {"field": "key_features", "url": "https://cto.new", "quote": "Multi-agent teams"},
+  {"field": "key_features", "url": "https://cto.new", "quote": "Web browsing, emails, scheduling, and more built-in"},
+  {"field": "key_features", "url": "https://cto.new", "quote": "Linear, Sentry, Vercel, Notion & more"},
+  {"field": "use_cases_ko", "url": "https://cto.new", "quote": "A full-stack engineering team that builds, tests, and ships SaaS products."},
+  {"field": "use_cases_ko", "url": "https://cto.new", "quote": "A marketing team that plans campaigns, writes copy, and analyzes results."},
+  {"field": "use_cases_ko", "url": "https://cto.new", "quote": "Website Creation for local businesses"},
+  {"field": "pricing", "url": "https://cto.new", "quote": "Ad-supported"},
+  {"field": "pricing", "url": "https://cto.new", "quote": "Limits reset daily"},
+  {"field": "pricing", "url": "https://cto.new/pricing/", "quote": "Go free forever No credit card or API keys required."},
+  {"field": "pricing", "url": "https://cto.new/pricing/", "quote": "Go Premium from $20"},
+  {"field": "api", "url": "https://cto.new/pricing/", "quote": "API and MCP Integrations Free"},
+  {"field": "platforms", "url": "https://cto.new", "quote": "Sign up for free Sign in"},
+  {"field": "korean_support", "url": "https://cto.new", "quote": "html lang: en"}
+ ],
+ "mismatch": [],
+ "plan_change": [{"official": "광고 기반 평생 무료 + 선택형 Premium($20부터)", "diff": "무료가 광고 지원 방식이고 한도가 매일 초기화되는 구조", "url": "https://cto.new"}]
+}

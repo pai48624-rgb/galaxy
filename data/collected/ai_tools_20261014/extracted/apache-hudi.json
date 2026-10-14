@@ -1,0 +1,118 @@
+{
+ "company": "The Apache Software Foundation",
+ "one_liner_ko": "고성능 개방형 테이블 형식 위에 데이터 레이크에 데이터베이스 기능을 더하는 오픈 데이터 레이크하우스 플랫폼.",
+ "what_it_does_ko": "Apache Hudi는 고성능 개방형 테이블 형식을 기반으로 데이터 레이크에 데이터베이스 기능을 제공하는 오픈 데이터 레이크하우스 플랫폼이다. 느린 배치 처리를 증분 처리 프레임워크로 바꿔 분 단위 저지연 분석을 가능하게 한다. 빠른 인덱싱으로 업데이트·삭제를 지원하고, ACID 트랜잭션·타임 트래블·스키마 진화를 제공한다. Spark·Flink·Trino 등 엔진과 S3·GCS 등 클라우드 스토리지와 연동된다.",
+ "key_features": [
+  "빠른 업서트·삭제를 위한 플러그형 인덱싱",
+  "증분 처리로 배치 파이프라인 대체",
+  "ACID 트랜잭션과 스냅샷 격리",
+  "타임 트래블과 테이블 버전 롤백",
+  "클러스터링·컴팩션 등 자동 테이블 서비스",
+  "멀티모달 인덱스로 쿼리 가속",
+  "스키마 진화·강제"
+ ],
+ "use_cases_ko": [
+  "데이터베이스 CDC·대규모 스트리밍 데이터를 데이터 레이크에 반영",
+  "데이터 변경 이력 감사와 과거 버전 조회",
+  "멀티 클라우드 레이크하우스 구축"
+ ],
+ "pricing": {
+  "free_tier": "오픈소스(Apache 2.0) — 요금제 안내 없음",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "Apache License 2.0",
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://hudi.apache.org",
+   "quote": "Copyright © 2021 The Apache Software Foundation , Licensed under the Apache License, Version 2.0 ."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://hudi.apache.org",
+   "quote": "Apache Hudi is an open data lakehouse platform, built on a high-performance open table format to bring database functionality to your data lakes."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://hudi.apache.org",
+   "quote": "Hudi reimagines slow old-school batch data processing with a powerful new incremental processing framework for low latency minute-level analytics."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/apache/hudi",
+   "quote": "to ingest, index, store, serve, transform and manage your data across multiple cloud data environments."
+  },
+  {
+   "field": "key_features",
+   "url": "https://hudi.apache.org",
+   "quote": "Quickly update & delete data with fast, pluggable indexing."
+  },
+  {
+   "field": "key_features",
+   "url": "https://hudi.apache.org",
+   "quote": "Replace old-school batch pipelines with incremental streaming on your data lake."
+  },
+  {
+   "field": "key_features",
+   "url": "https://hudi.apache.org",
+   "quote": "Atomic writes, with relational/streaming data consistency models, snapshot isolation and non-blocking concurrency controls"
+  },
+  {
+   "field": "key_features",
+   "url": "https://hudi.apache.org",
+   "quote": "Query historical data with the ability to roll back to a table version"
+  },
+  {
+   "field": "key_features",
+   "url": "https://hudi.apache.org",
+   "quote": "Fully automated table services that continuously schedule & orchestrate clustering, compaction, cleaning, file sizing & indexing"
+  },
+  {
+   "field": "key_features",
+   "url": "https://hudi.apache.org",
+   "quote": "Query acceleration through multimodal indexes."
+  },
+  {
+   "field": "key_features",
+   "url": "https://hudi.apache.org",
+   "quote": "Resilient Pipelines with schema evolution & enforcement"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://hudi.apache.org",
+   "quote": "This includes database CDC and high-scale streaming data, with best-in-class support for out-of-order records"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://hudi.apache.org",
+   "quote": "audit data changes by viewing the commit history."
+  },
+  {
+   "field": "pricing",
+   "url": "https://hudi.apache.org",
+   "quote": "Copyright © 2021 The Apache Software Foundation , Licensed under the Apache License, Version 2.0 ."
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/apache/hudi",
+   "quote": "The ASF licenses this file to You under the Apache License, Version 2.0"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://hudi.apache.org",
+   "quote": "html lang: en\nhreflang: en, x-default\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "Apache License 2.0 오픈소스 프로젝트(ASF)로, 공식 페이지에 자체 유료 요금제·관리형 클라우드 안내가 없음(외부 벤더 목록만 있음)",
+   "diff": "기존 분류는 '오픈소스 + 클라우드 매니지드 유료 플랜'이나 공식 페이지에는 유료 플랜이 없음(순수 오픈소스)",
+   "url": "https://hudi.apache.org"
+  }
+ ],
+ "plan_change": []
+}

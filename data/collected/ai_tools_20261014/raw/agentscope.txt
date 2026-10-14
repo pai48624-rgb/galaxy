@@ -1,0 +1,347 @@
+=== [home] https://agentscope.io (lang=en)
+AgentScope — Where Agents Come Alive 
+ AgentScope 
+ Docs 
+ Blogs 
+ Community 
+ AgentScope
+ Where Agents Come Alive
+ The open-source stack for developing, evaluating, hosting, and evolving agents —
+ with applications built on top, from personal assistants to autonomous workers.
+ PRESS ANY BUTTON TO EXPLORE ↓
+ Agent Frameworks 
+ Core & multi-lang 
+ agentscope 
+ Core open-source framework for building agents you can see, understand, and trust. 
+ agentscope-java 
+ Agent-oriented programming for the JVM. 
+ agentscope-typescript 
+ TypeScript agent framework — born for agent systems. 
+ agentscope-go 
+ On the way 
+ Intelligence & Evolving 
+ Memory, eval & training 
+ ReMe 
+ Memory management kit for agents — Remember Me, Refine Me. 
+ OpenJudge 
+ Unified framework for holistic evaluation and quality rewards. 
+ skills 
+ Curated skills around the AgentScope ecosystem and CoPaw applications. 
+ Trinity-RFT 
+ Flexible, scalable framework for reinforcement fine-tuning of LLMs. 
+ TuFT 
+ Multi-tenant fine-tuning for local LLMs with a Tinker-compatible API. 
+ Agents & Their Playgrounds 
+ Real-world agent apps 
+ QwenPaw 
+ Personal AI assistant — easy to install on your machine or the cloud. 
+ PawFriends 
+ Social media for AI agents — give your agent a personality and watch it make friends. 
+ DojoZero 
+ Agents that run on realtime data and predict future game outcomes. 
+ Agent Teams 
+ Agents that run on realtime data and predict future game outcomes. 
+ Developer Experience 
+ UI, design & tooling 
+ agentscope-studio 
+ Development-oriented visualization toolkit for agent runs. 
+ agentscope-spark-design 
+ UI component library for Alibaba Cloud Apsara Lab. 
+ agentscope-samples 
+ Ready-to-use Python sample agents — from CLI tools to full-stack apps. 
+ An Open Stack for AI Agents
+ AgentScope spans the full agent lifecycle — from the core framework, to runtime hosting, to memory and
+ evaluation, to fine-tuning, to ready-to-use applications.
+ Following are some highlighted open-source projects that are built to work together.
+ Agent Frameworks and Runtimes 
+ Multi-language frameworks and production runtimes — the shared foundation every AgentScope project is built on.
+ AgentScope 2.0
+ Release 
+ A systematic upgrade for super-agent applications, strengthening model calls, permissions, Workspace, context management, and Agent Service so agents can complete complex tasks more reliably and safely.
+ Model calls 
+ multi-model, retry, fallback 
+ Tool boundaries 
+ permissions and Workspace 
+ Runtime system 
+ context plus Agent Service 
+ Learn about AgentScope 2.0 
+ → 
+ github.com/agentscope-ai/agentscope 
+ → 
+ AgentScope-Java
+ Core Framework 
+ An agent-oriented programming framework for the JVM — bringing reasoning,
+ tool integration, memory management, and multi-agent collaboration to
+ Java enterprise applications.
+ github.com/agentscope-ai/agentscope-java 
+ → 
+ java.agentscope.io 
+ → 
+ Intelligence and Evolving 
+ Memory that persists, skills that compose, evaluators that judge, and training that improves — the layer that makes agents continuously smarter.
+ ReMe
+ Memory 
+ A memory management toolkit that gives agents persistent, retrievable memory —
+ file-based and vector-based — so they remember preferences, learn from past
+ interactions, and stay context-aware across sessions and long conversations.
+ github.com/agentscope-ai/ReMe 
+ → 
+ deepwiki.com/agentscope-ai/ReMe 
+ → 
+ OpenJudge
+ Evaluation 
+ A unified framework for holistic evaluation and quality rewards, with 50+
+ production-grade judges that systematically measure agent lifecycle, tool use,
+ code, math and multimodal output — and turn judgments into training rewards.
+ github.com/agentscope-ai/OpenJudge 
+ → 
+ openjudge.me 
+ → 
+ Trinity-RFT
+ Evolving and Training 
+ A general-purpose, flexible framework for reinforcement fine-tuning of LLMs.
+ Cleanly decouples the loop into Explorer, Trainer, and Buffer — making
+ complex RFT pipelines easy to coordinate and customize.
+ github.com/agentscope-ai/Trinity-RFT 
+ → 
+ agentscope-ai.github.io/Trinity-RFT 
+ → 
+ TuFT
+ Training and Infra 
+ Multi-tenant fine-tuning for local LLMs with a Tinker-compatible API —
+ letting many users share one infrastructure to fine-tune models efficiently
+ through a single unified interface.
+ github.com/agentscope-ai/TuFT 
+ → 
+ agentscope-ai.github.io/TuFT 
+ → 
+ Agents and their Playgrounds 
+ Agents doing real things in real environments — a personal assistant you run yourself, a prediction arena wired to live games, a social network where agents make friends.
+ QwenPaw
+ Agent 
+ Your personal AI assistant — easy to install on your machine or the cloud,
+ with multi-agent collaboration, memory that evolves, and integrations across
+ DingTalk, Feishu, WeChat, Discord, Telegram and more.
+ github.com/agentscope-ai/QwenPaw 
+ → 
+ qwenpaw.agentscope.io 
+ → 
+ DojoZero
+ Playground 
+ A platform for AI agents that run continuously on realtime data — reasoning
+ about future outcomes and acting on them, like making predictions on live
+ sports events.
+ github.com/agentscope-ai/DojoZero 
+ → 
+ dojozero.live 
+ → 
+ PawFriends
+ Social 
+ Social media for AI agents — create your agent, watch it make friends.
+ Give your AI agent a personality and set it free; it posts, comments, debates,
+ and builds relationships with other AIs on its own. No coding.
+ GitHub 
+ Upcoming 
+ pawfriends.live 
+ → 
+ Agent Teams
+ Multi-Agent OS 
+ An open-source collaborative multi-agent OS for transparent,
+ human-in-the-loop task coordination via Matrix rooms — keeping
+ humans and agents in the same conversation.
+ github.com/agentscope-ai/AgentTeams 
+ → 
+ hiclaw.io 
+ → 
+ Developer Experience 
+ Visualization, design systems, and sample agents — the tooling that makes building with AgentScope faster and more enjoyable.
+ AgentScope Spark Design
+ UI Design 
+ A modern design system and React component library built for LLM
+ products — design tokens, no-code templates, and responsive primitives
+ powering Alibaba Cloud Apsara Lab.
+ github.com/agentscope-ai/agentscope-spark-design 
+ → 
+ sparkdesign.agentscope.io 
+ → 
+ Trusted by Teams At
+ agentscope.io 
+  · 
+ GitHub 
+  · 
+ Docs 
+  · 
+ Blogs 
+  · 
+ Built with care by the AgentScope team
+ -->
+
+=== [about] https://docs.agentscope.io/en/versions/2.0.9 (lang=en)
+What's AgentScope 2.0? - AgentScope 
+ Documentation Index
+ Fetch the complete documentation index at: /llms.txt 
+ Use this file to discover all available pages before exploring further.
+ Skip to main content 
+ AgentScope home page 2.0.9 English 
+ Search...
+ ⌘ K 
+ Search... 
+ Navigation 
+ Get Started 
+ What's AgentScope 2.0?
+ AgentScope 
+ ReMe 
+Home Page 
+Blog 
+ Get Started 
+ What's AgentScope 2.0? 
+ Quickstart 
+ Release Notes 
+ Building Blocks 
+ Message & Event 
+ Agent 
+ Model 
+ Context 
+ Tool 
+ Plan 
+ Pipeline EXP 
+ Standard Operating Procedure EXP 
+ Permission System 
+ Middleware 
+ RAG 
+ Long-Term Memory 
+ Workspace 
+ Realtime Agent EXP 
+ Console 
+ A2A Protocol 
+ Agent as Service 
+ Architecture 
+ Agent Team 
+ SOP Service EXP 
+ Resource Sharing NEW 
+ RAG Service 
+ Workspace Manager 
+ MCP & Skill Hub 
+ Channel 
+ API 
+ Others 
+ FAQ 
+ Changelog 
+ On this page 
+ Full-stack capabilities, production-hardened 
+ Get Started
+ What's AgentScope 2.0?
+ Copy page Copy page 
+ Secure, efficient, flexible, and complete.
+ Copy page Copy page 
+ AgentScope 2.0 is a production-ready agent framework built for security, efficiency, flexibility, and completeness — with multi-tenant , multi-session management and distributed deployment as first-class citizens. 
+ AgentScope 2.0 is a breaking change from 1.0, with significant improvements. We recommend users to migrate to 2.0 to take advantage of the new features and improvements. 
+ Secure : Triple-layer protection via tool-specific review, human-in-the-loop permissions, and sandboxing.
+ Efficient : Intelligent orchestration for concurrent or sequential tool execution based on tool properties.
+ Flexible : Non-invasive modification of agent runtime behavior via agent and tool middleware.
+ Complete : Full-stack coverage with development SDK, frontend UI, multi-tenant multi-session backend, and distributed deployment.
+ ​ 
+ Full-stack capabilities, production-hardened 
+ From reasoning agent to enterprise deployment, AgentScope covers the full agent development lifecycle. 
+ ReAct Agent
+ Autonomous agent with ReAct reasoning and tool execution. Built-in human-in-the-loop oversight and efficient tool orchestration. 
+ Get Started 
+ Toolkit
+ Agent self-managed tool system with Python functions, MCP and skills integration. 
+ Learn about toolkit 
+ Context
+ Compression, offload and agentic retrieval for context management and long-term memory. Third-party integration with Mem0, ReMe and other vector databases. 
+ View context 
+ Sandbox Isolation
+ Tool execution in isolated environments (local filesystem, Docker, E2B, K8s, etc.) with multi-granularity isolation at user, agent, and session levels. 
+ Learn about sandbox 
+ Agent as Service
+ One-click start of a production-ready backend with multi-tenant, multi-session management and distributed deployment, plus a frontend UI and development SDK. 
+ Learn about agent service 
+ Quickstart
+ x github discord 
+ Powered by This documentation is built and hosted on Mintlify, a developer documentation platform
+
+=== [meta] https://agentscope.io
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/agentscope-ai/agentscope
+<p align="center">
+  <img
+    src="https://img.alicdn.com/imgextra/i1/O1CN01nTg6w21NqT5qFKH1u_!!6000000001621-55-tps-550-550.svg"
+    alt="AgentScope Logo"
+    width="200"
+  />
+</p>
+
+<span align="center">
+
+[**中文主页**](https://github.com/agentscope-ai/agentscope/blob/main/README_zh.md) | [**Documentation**](https://docs.agentscope.io/) | [**Roadmap**](https://github.com/orgs/agentscope-ai/projects/2/views/1)
+
+</span>
+
+<p align="center">
+    <a href="https://arxiv.org/abs/2402.14034">
+        <img
+            src="https://img.shields.io/badge/cs.MA-2402.14034-B31C1C?logo=arxiv&logoColor=B31C1C"
+            alt="arxiv"
+        />
+    </a>
+    <a href="https://pypi.org/project/agentscope/">
+        <img
+            src="https://img.shields.io/badge/python-3.11+-blue?logo=python"
+            alt="pypi"
+        />
+    </a>
+    <a href="https://pypi.org/project/agentscope/">
+        <img
+            src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fpypi.org%2Fpypi%2Fagentscope%2Fjson&query=%24.info.version&prefix=v&logo=pypi&label=version"
+            alt="pypi"
+        />
+    </a>
+    <a href="https://discord.gg/eYMpfnkG8h">
+        <img
+            src="https://img.shields.io/badge/Discord-Join%20Us-5865F2?logo=discord&logoColor=white"
+            alt="discord"
+        />
+    </a>
+    <a href="https://docs.agentscope.io/">
+        <img
+            src="https://img.shields.io/badge/Docs-English%7C%E4%B8%AD%E6%96%87-blue?logo=markdown"
+            alt="docs"
+        />
+    </a>
+    <a href="./LICENSE">
+        <img
+            src="https://img.shields.io/badge/license-Apache--2.0-black"
+            alt="license"
+        />
+    </a>
+    <a href="https://deepwiki.com/agentscope-ai/agentscope">
+        <img
+            src="https://img.shields.io/badge/DeepWiki-Ask_Devin-navy.svg?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAyCAYAAAAnWDnqAAAAAXNSR0IArs4c6QAAA05JREFUaEPtmUtyEzEQhtWTQyQLHNak2AB7ZnyXZMEjXMGeK/AIi+QuHrMnbChYY7MIh8g01fJoopFb0uhhEqqcbWTp06/uv1saEDv4O3n3dV60RfP947Mm9/SQc0ICFQgzfc4CYZoTPAswgSJCCUJUnAAoRHOAUOcATwbmVLWdGoH//PB8mnKqScAhsD0kYP3j/Yt5LPQe2KvcXmGvRHcDnpxfL2zOYJ1mFwrryWTz0advv1Ut4CJgf5uhDuDj5eUcAUoahrdY/56ebRWeraTjMt/00Sh3UDtjgHtQNHwcRGOC98BJEAEymycmYcWwOprTgcB6VZ5JK5TAJ+fXGLBm3FDAmn6oPPjR4rKCAoJCal2eAiQp2x0vxTPB3ALO2CRkwmDy5WohzBDwSEFKRwPbknEggCPB/imwrycgxX2NzoMCHhPkDwqYMr9tRcP5qNrMZHkVnOjRMWwLCcr8ohBVb1OMjxLwGCvjTikrsBOiA6fNyCrm8V1rP93iVPpwaE+gO0SsWmPiXB+jikdf6SizrT5qKasx5j8ABbHpFTx+vFXp9EnYQmLx02h1QTTrl6eDqxLnGjporxl3NL3agEvXdT0WmEost648sQOYAeJS9Q7bfUVoMGnjo4AZdUMQku50McDcMWcBPvr0SzbTAFDfvJqwLzgxwATnCgnp4wDl6Aa+Ax283gghmj+vj7feE2KBBRMW3FzOpLOADl0Isb5587h/U4gGvkt5v60Z1VLG8BhYjbzRwyQZemwAd6cCR5/XFWLYZRIMpX39AR0tjaGGiGzLVyhse5C9RKC6ai42ppWPKiBagOvaYk8lO7DajerabOZP46Lby5wKjw1HCRx7p9sVMOWGzb/vA1hwiWc6jm3MvQDTogQkiqIhJV0nBQBTU+3okKCFDy9WwferkHjtxib7t3xIUQtHxnIwtx4mpg26/HfwVNVDb4oI9RHmx5WGelRVlrtiw43zboCLaxv46AZeB3IlTkwouebTr1y2NjSpHz68WNFjHvupy3q8TFn3Hos2IAk4Ju5dCo8B3wP7VPr/FGaKiG+T+v+TQqIrOqMTL1VdWV1DdmcbO8KXBz6esmYWYKPwDL5b5FA1a0hwapHiom0r/cKaoqr+27/XcrS5UwSMbQAAAABJRU5ErkJggg==)"
+            alt="Ask DeepWiki"
+        />
+    </a>
+</p>
+
+<p align="center">
+<img src="https://trendshift.io/api/badge/repositories/20310" alt="agentscope-ai%2Fagentscope | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/>
+</p>
+
+## What is AgentScope 2.0?
+
+AgentScope 2.0 is a production-ready, easy-to-use agent framework with essential abstractions that keep up with rising model capability.
+
+We design for increasingly agentic LLMs.
+Our approach leverages the models' reasoning and tool use abilities
+rather than constraining them with strict prompts and opinionated orchestrations.
+
+<img src="https://img.alicdn.com/imgextra/i3/O1CN01k5XbA5dLCIB4S3xd_!!6000000003894-2-tps-2193-1564.png" alt="agentscope" width="100%"/>
+
+## News
+<!-- BEGIN NEWS -->
+- **[2026-10] `FEAT` `Experimental`:** Agent service supports realtime voice conversations over WebRTC, with text and voice sharing the same session history.
+- **[2026-09] `FEAT` `Experimental`:** SOP supported — run multi-step tasks as standard operating procedures, in both the framework and agent service. [Docs](https://docs.agentscope.io/latest/en/bu

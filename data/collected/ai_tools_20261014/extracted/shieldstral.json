@@ -1,0 +1,40 @@
+{
+ "company": "Mistral",
+ "one_liner_ko": "텍스트 안전성에서 최대 7배 큰 모델과 맞먹고 멀티모달 검수에서 최고 성능을 낸, 정책에 맞춰 바뀌는 3B 오픈 웨이트 멀티모달 안전 분류기.",
+ "what_it_does_ko": "Shieldstral은 콘텐츠 검수를 정책 적응형 질의응답 문제로 다루는 3B 오픈 웨이트 멀티모달 안전 분류기다. 추론 시점에 평범한 말로 쓴 정책(질문)을 받아 다시 학습하지 않고도 텍스트와 이미지의 안전성을 하나의 인터페이스로 평가한다. 지시·질문·문서 세 부분으로 요청을 받아 yes/no 로짓을 정규화해 연속적인 안전 점수를 돌려준다. 프롬프트 분류, 응답 검수, 거절 탐지, 유해성 탐지를 한 문제로 통합한다. Apache 2.0으로 공개되며 16GB NVIDIA GPU 한 장에서 돌아간다.",
+ "key_features": [
+  "추론 시점에 평문 정책 입력(재학습 불필요)",
+  "텍스트·이미지·텍스트+이미지 통합 검수",
+  "보정된 연속 안전 점수(yes/no 확률)",
+  "프롬프트 분류·응답 검수·거절 탐지·유해성 탐지 통합",
+  "16GB GPU 한 장에서 동작하는 3B 모델",
+  "Apache 2.0 오픈 웨이트"
+ ],
+ "use_cases_ko": [
+  "모델을 출시하는 제품에서 서비스·대상에 맞는 정책으로 콘텐츠 검수하기",
+  "어시스턴트가 요청을 거절했는지 판별하기"
+ ],
+ "pricing": {"free_tier": "있음 (Apache 2.0 오픈 웨이트 공개 다운로드)", "plans": [], "pricing_url": "https://mistral.ai/news/shieldstral/"},
+ "open_source": "Apache-2.0",
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://mistral.ai/news/shieldstral/", "quote": "Introducing Shieldstral. | Mistral"},
+  {"field": "one_liner_ko", "url": "https://mistral.ai/news/shieldstral/", "quote": "A 3B open-weights, policy-adaptive multimodal safety classifier that matches models up to 7x its size on text safety and sets a new state of the art on multimodal moderation."},
+  {"field": "what_it_does_ko", "url": "https://mistral.ai/news/shieldstral/", "quote": "Unlike traditional guardrail models, it accepts plain-language policies at inference time, unifying text and image safety evaluation without retraining."},
+  {"field": "what_it_does_ko", "url": "https://mistral.ai/news/shieldstral/", "quote": "running efficiently on a single 16GB NVIDIA GPU."},
+  {"field": "key_features", "url": "https://mistral.ai/news/shieldstral/", "quote": "Policies are supplied as free-form queries and re-targeted at inference time, without retraining."},
+  {"field": "key_features", "url": "https://mistral.ai/news/shieldstral/", "quote": "a single natural-language interface covers text, image, and text+image content across prompts, responses, and prompt–response pairs."},
+  {"field": "key_features", "url": "https://mistral.ai/news/shieldstral/", "quote": "Continuous safety score — returns a calibrated yes / no probability from a single forward pass"},
+  {"field": "key_features", "url": "https://mistral.ai/news/shieldstral/", "quote": "it unifies prompt classification, response moderation, refusal detection, and toxicity detection into a single problem"},
+  {"field": "key_features", "url": "https://mistral.ai/news/shieldstral/", "quote": "a 3B model that runs on a single 16GB GPU"},
+  {"field": "use_cases_ko", "url": "https://mistral.ai/news/shieldstral/", "quote": "Every product that ships a model needs to answer questions like these — but the right answer depends on the product, the audience, and the moment."},
+  {"field": "use_cases_ko", "url": "https://mistral.ai/news/shieldstral/", "quote": "Did the assistant refuse the request?"},
+  {"field": "pricing", "url": "https://mistral.ai/news/shieldstral/", "quote": "today we're releasing Shieldstral as open weights under Apache 2.0, available for download here"},
+  {"field": "open_source", "url": "https://mistral.ai/news/shieldstral/", "quote": "Open — Apache 2.0 weights."},
+  {"field": "korean_support", "url": "https://mistral.ai/news/shieldstral/", "quote": "hreflang: en, fr, it, x-default"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

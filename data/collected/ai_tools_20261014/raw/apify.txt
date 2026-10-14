@@ -1,0 +1,756 @@
+=== [home] https://apify.com (lang=en)
+Apify: Marketplace of ready-to-run tools for AI 
+ Skip to content Get started
+ Log in 
+ Product
+ Back
+ Start here!
+ Ready-to-run tools for your AI agents and apps. Just pick one and go.
+ Browse 86,693 Actors 
+ Apify platform
+ Apify Store
+ Actors for any job on the web
+ Actors
+ Build and run serverless programs
+ Integrations
+ Connect with apps and services
+ MCP
+ Give your AI access to Actors
+ Anti-blocking
+ Anti-blocking
+ Scrape without getting blocked
+ Proxy
+ Rotate scraper IP addresses
+ Open source
+ Crawlee
+ Web scraping and crawling library
+ Solutions
+ Back
+ MCP server configuration
+ Configure your Apify MCP server with Actors and tools for seamless integration with MCP clients.
+ Start building 
+ Apify for
+ Enterprise
+ Startups
+ Universities
+ Nonprofits
+ Use cases
+ Data for generative AI
+ Data for AI agents
+ Lead generation
+ Market research
+ View more →
+ Consulting
+ Professional services
+ Apify Partners
+ Developers
+ Back
+ Documentation
+ Full reference for the Apify platform
+ Get started
+ Actor templates
+ Python, JavaScript, and TypeScript
+ Web scraping academy
+ Courses for beginners and experts
+ Monetize your code
+ Publish your Actors and get paid
+ Learn
+ API reference
+ CLI
+ SDK
+ MCP
+ Crawlee
+ Earn from your code
+ $1.6M paid out last month. Many developers earn over $3k.
+ Start earning now 
+ Resources
+ Back
+ Help and support
+ Advice and answers about Apify
+ Actor ideas
+ Get inspired to build Actors
+ Changelog
+ See what’s new on Apify
+ Customer stories
+ Find out how others use Apify
+ Company
+ About Apify
+ Contact us
+ Blog
+ Live events
+ Doing Good
+ Jobs
+ We're hiring!
+ Join our Discord
+ Talk to other builders 
+ Pricing
+ Contact sales
+ 86,690 tools for your AI
+ Apify is a marketplace of ready-to-run tools for AI. Get real-time web data, track competitors,
+ generate leads, monitor social media, and integrate your apps and agents.
+ Find your Actor Find Copy setup for AI Popular Actors
+ TikTok Scraper
+ clockworks / tiktok-scraper
+ Extract data from TikTok videos, hashtags, and users. Use URLs or search queries to scrape TikTok profiles, hashtags, posts, URLs, shares, followers, hearts, names, video, and music-related data. Export scraped data, run the scraper via API, schedule and monitor runs or integrate with other tools.
+ Clockworks
+ 325K
+ 4.8
+ (369)
+ Google Maps Scraper
+ compass / crawler-google-places
+ Extract data from thousands of Google Maps locations and businesses, including reviews, reviewer details, images, contact info, including full name, email, and job title, opening hours, prices & more. Export data, run via API, schedule and monitor runs, or integrate with other tools.
+ Compass
+ 645K
+ 4.7
+ (1,815)
+ Instagram Scraper
+ apify / instagram-scraper
+ Extract Instagram posts, reels, profiles, places, hashtags, carousels, and comments. Get data from Instagram using one or more Instagram URLs or search queries: content, context, metrics, metadata. Export scraped data, run the scraper via API, schedule and monitor runs or integrate with other tools.
+ Apify
+ 427K
+ 4.7
+ (601)
+ Website Content Crawler
+ apify / website-content-crawler
+ Crawl websites and extract text content to feed AI models, LLM applications, vector databases, or RAG pipelines. The Actor supports rich formatting using Markdown, cleans the HTML, downloads files, and integrates well with 🦜🔗 LangChain, LlamaIndex, and the wider LLM ecosystem.
+ Apify
+ 168K
+ 4.6
+ (235)
+ E-commerce Scraping Tool
+ apify / e-commerce-scraping-tool
+ Scrape data from e-commerce websites with E-commerce Scraping Tool. Scrape almost any retail site in minutes, extract e-commerce data and use it to monitor price details over time or compare different e-commerce sites’ offerings.
+ Apify
+ 15K
+ 4.3
+ (54)
+ Facebook Posts Scraper
+ apify / facebook-posts-scraper
+ Extract posts, videos, and engagement metrics from Facebook pages. Get text captions, reactions, video transcripts, images, external links, collaborators, and more from Facebook pages and profiles. Export ad data, schedule runs via API, and integrate with other tools or AI workflows.
+ Apify
+ 122K
+ 4.7
+ (236)
+ TikTok Scraper
+ clockworks / tiktok-scraper
+ Extract data from TikTok videos, hashtags, and users. Use URLs or search queries to scrape TikTok profiles, hashtags, posts, URLs, shares, followers, hearts, names, video, and music-related data. Export scraped data, run the scraper via API, schedule and monitor runs or integrate with other tools.
+ Clockworks
+ 325K
+ 4.8
+ (369)
+ Google Maps Scraper
+ compass / crawler-google-places
+ Extract data from thousands of Google Maps locations and businesses, including reviews, reviewer details, images, contact info, including full name, email, and job title, opening hours, prices & more. Export data, run via API, schedule and monitor runs, or integrate with other tools.
+ Compass
+ 645K
+ 4.7
+ (1,815)
+ Instagram Scraper
+ apify / instagram-scraper
+ Extract Instagram posts, reels, profiles, places, hashtags, carousels, and comments. Get data from Instagram using one or more Instagram URLs or search queries: content, context, metrics, metadata. Export scraped data, run the scraper via API, schedule and monitor runs or integrate with other tools.
+ Apify
+ 427K
+ 4.7
+ (601)
+ Website Content Crawler
+ apify / website-content-crawler
+ Crawl websites and extract text content to feed AI models, LLM applications, vector databases, or RAG pipelines. The Actor supports rich formatting using Markdown, cleans the HTML, downloads files, and integrates well with 🦜🔗 LangChain, LlamaIndex, and the wider LLM ecosystem.
+ Apify
+ 168K
+ 4.6
+ (235)
+ E-commerce Scraping Tool
+ apify / e-commerce-scraping-tool
+ Scrape data from e-commerce websites with E-commerce Scraping Tool. Scrape almost any retail site in minutes, extract e-commerce data and use it to monitor price details over time or compare different e-commerce sites’ offerings.
+ Apify
+ 15K
+ 4.3
+ (54)
+ Facebook Posts Scraper
+ apify / facebook-posts-scraper
+ Extract posts, videos, and engagement metrics from Facebook pages. Get text captions, reactions, video transcripts, images, external links, collaborators, and more from Facebook pages and profiles. Export ad data, schedule runs via API, and integrate with other tools or AI workflows.
+ Apify
+ 122K
+ 4.7
+ (236)
+ Browse Apify Store 
+ Easily connect with your AI agents
+ One step. Connect your agent to Apify via our MCP, CLI or Skills.
+ MCP CLI Skills 
+ { 
+ "mcpServers" : { 
+ "apify" : { 
+ "type" : "http" , 
+ "url" : "https://mcp.apify.com" 
+ } 
+ } 
+ } 
+ Add this to your MCP client's config file.
+ View the MCP guide 
+ Agent onboarding. Are you an AI agent? Fetch our quickstart to get started.
+ cURL 
+ curl -s https://apify.com/agents.md 
+ Read the quickstart 
+ Trusted by global technology leaders
+ Find an Actor or build your own
+ Thousands of pre-built Actors
+ Feed your AI, generate leads, track prices. Whatever the job on the web, there's an Actor for it.
+ Visit Apify Store 
+ Build and deploy your own
+ Have a new use case? Start building new Actors with our code templates and extensive guides.
+ Start building 
+ Or we can build it for you
+ Rely on our experts to build and maintain custom Actors for you.
+ Learn more 
+ Build, deploy, and scale your own Actors
+ Open-source tools
+ Proxies
+ Unblocking
+ Cloud deployment
+ Monitoring
+ Data processing
+ We love open source
+ Apify works great with both Python and JavaScript, as well as Playwright, Puppeteer, Selenium, Scrapy, and Crawlee - our own web crawling and browser automation library.
+ Star 26,145 
+ JavaScript
+
+=== [pricing] https://apify.com/pricing (lang=en)
+Apify pricing - flexible plan + pay as you go · Apify 
+ Skip to content Get started
+ Log in 
+ Product
+ Back
+ Start here!
+ Ready-to-run tools for your AI agents and apps. Just pick one and go.
+ Browse 86,693 Actors 
+ Apify platform
+ Apify Store
+ Actors for any job on the web
+ Actors
+ Build and run serverless programs
+ Integrations
+ Connect with apps and services
+ MCP
+ Give your AI access to Actors
+ Anti-blocking
+ Anti-blocking
+ Scrape without getting blocked
+ Proxy
+ Rotate scraper IP addresses
+ Open source
+ Crawlee
+ Web scraping and crawling library
+ Solutions
+ Back
+ MCP server configuration
+ Configure your Apify MCP server with Actors and tools for seamless integration with MCP clients.
+ Start building 
+ Apify for
+ Enterprise
+ Startups
+ Universities
+ Nonprofits
+ Use cases
+ Data for generative AI
+ Data for AI agents
+ Lead generation
+ Market research
+ View more →
+ Consulting
+ Professional services
+ Apify Partners
+ Developers
+ Back
+ Documentation
+ Full reference for the Apify platform
+ Get started
+ Actor templates
+ Python, JavaScript, and TypeScript
+ Web scraping academy
+ Courses for beginners and experts
+ Monetize your code
+ Publish your Actors and get paid
+ Learn
+ API reference
+ CLI
+ SDK
+ MCP
+ Crawlee
+ Earn from your code
+ $1.6M paid out last month. Many developers earn over $3k.
+ Start earning now 
+ Resources
+ Back
+ Help and support
+ Advice and answers about Apify
+ Actor ideas
+ Get inspired to build Actors
+ Changelog
+ See what’s new on Apify
+ Customer stories
+ Find out how others use Apify
+ Company
+ About Apify
+ Contact us
+ Blog
+ Live events
+ Doing Good
+ Jobs
+ We're hiring!
+ Join our Discord
+ Talk to other builders 
+ Pricing
+ Contact sales
+ New
+ We're live on x402
+ New
+ We're live on x402. Agents can now run Actors and pay per run
+ Flexible plan + pay as you go
+ Bill monthly
+ -10% Bill annually
+ Free
+ $0
+ $5 to spend in Apify Store or on your own Actors
+ $0.2 per compute unit
+ Community support
+ No Apify Store discount
+ Start for free No credit card required.
+ Starter
+ $19
+ / month + pay as you go
+ $19 to spend in Apify Store or on your own Actors
+ $0.2 per compute unit
+ Chat support
+ Bronze Apify Store discount
+ Choose plan 
+ Scale
+ $199
+ / month + pay as you go
+ $199 to spend in Apify Store or on your own Actors
+ $0.16 per compute unit
+ Priority chat support
+ Silver Apify Store discount
+ Choose plan 
+ Business
+ $999
+ / month + pay as you go
+ $999 to spend in Apify Store or on your own Actors
+ $0.13 per compute unit
+ Account manager
+ Gold Apify Store discount
+ Choose plan 
+ Need a custom plan?
+ Custom scraping solutions
+ Scalable pricing
+ SLAs with guaranteed data
+ Dedicated team of experts
+ Talk to us 
+ See all features and compare plans
+ How pricing works
+ Every Actor in Apify Store uses one of these pricing models.
+ Pay per event
+ Pay per usage
+ Pay per event + usage
+ Build your own
+ Enjoy $500 worth of free usage to build your own Actors and AI agents along with other benefits for 6 months.
+ Learn more 
+ Be flexible with add-ons
+ Add-on
+ $5 / run
+ Concurrent runs
+ Allows multiple instances of an Actor to run simultaneously, enabling faster task processing and efficient resource use.
+ Add to plan 
+ Add-on
+ $1 / GB
+ Actor RAM
+ The memory allocated to an Actor while it runs. More memory lets an Actor process more data and run faster.
+ Add to plan 
+ Add-on
+ from $0.6 / IP
+ Datacenter proxy
+ Fast, cost-effective non-residential IPs from data centers, ideal for scraping less-protected websites and automation tasks.
+ Add to plan 
+ Add-on
+ $150 / hour
+ Personal training
+ Personal training support or guidance to help you use the platform, optimize Actors, and achieve specific goals.
+ Add to plan 
+ 2x leads
+ to drive business
+ 28M+ AI chats
+ resolved for Intercom Fin
+ 800+ retailers
+ monitored across the EU for compliance
+ Free
+ Starter
+ Scale
+ Business
+ Enterprise
+ Free
+ $0
+ Start for free 
+ Free
+ Start for free Starter
+ Choose plan Scale
+ Choose plan Business
+ Choose plan Enterprise
+ Talk to us 
+ Prepaid usage
+ to spend in Apify Store or on platform usage
+ $5 / month 
+ $19 / month 
+ + pay as you go
+ $199 / month 
+ + pay as you go
+ $999 / month 
+ + pay as you go
+ Unlimited
+ Actor runs
+ Compute units (CU)
+ 1 GB of RAM/hour
+ $0.2 / CU
+ $0.2 / CU
+ $0.16 / CU
+ $0.13 / CU
+ Custom
+ Actor RAM
+ 16 GB 
+ 64 GB 
+ 256 GB 
+ 512 GB 
+ Custom
+ Max concurrent runs
+ 5 
+ 32 
+ 128 
+ 256 
+ Custom
+ Apify Store pricing
+ Discount
+ -
+ Bronze 
+ Silver 
+ Gold 
+ Custom
+ Proxy
+ Residential proxies
+ $8 / GB
+ $8 / GB
+ $7.5 / GB
+ $7 / GB
+ Custom
+ Datacenter proxies
+ 5 IPs included
+ 30 IPs included then $1 / IP
+ 200 IPs included then $0.8 / IP
+ 500 IPs included then $0.6 / IP
+ Custom
+ Google SERP proxies
+ $2.5 / 1,000 SERPs
+ $2.5 / 1,000 SERPs
+ $2 / 1,000 SERPs
+ $1.7 / 1,000 SERPs
+ Custom
+ Unblocker
+ $1.5 / 1,000 requests
+ $1.5 / 1,000 requests
+ $1.25 / 1,000 requests
+ $1 / 1,000 requests
+ Custom
+ Other
+ Personal tech training
+ -
+ $150 / hour
+ 1 hour / quarter
+ 1 hour / month
+ Custom
+ Support level
+ Community 
+ Chat 
+ Priority chat 
+ Account manager 
+ Custom
+ Single sign-on (SSO)
+ -
+ -
+ -
+ -
+ Storage
+ Dataset
+ Timed storage
+ 1,000 GB-hours
+ $1.00 
+ $1.00 
+ $0.90 
+ $0.80 
+ Custom
+ 1,000 reads
+ $0.0004 
+ $0.0004 
+ $0.00036 
+ $0.00032 
+ Custom
+ 1,000 writes
+ $0.005 
+ $0.005 
+ $0.0045 
+ $0.004 
+ Custom
+ Key-value store
+ Timed storage
+ 1,000 GB-hours
+ $1.00 
+ $1.00 
+ $0.90 
+ $0.80 
+ Custom
+ 1,000 reads
+ $0.005 
+ $0.005 
+ $0.0045 
+ $0.004 
+ Custom
+ 1,000 writes
+ $0.05 
+ $0.05 
+ $0.045 
+ $0.04 
+ Custom
+ 1,000 lists
+ $0.05 
+ $0.05 
+ $0.045 
+ $0.04 
+ Custom
+ Request queue
+ Timed storage
+ 1,000 GB-hours
+ $4.00 
+ $4.00 
+ $3.60 
+ $3.20 
+ Custom
+ 1,000 reads
+ $0.004 
+ $0.004 
+ $0.0036 
+ $0.0032 
+ Custom
+ 1,000 writes
+ $0.01 
+ $0.01 
+ $0.009 
+ $0.008 
+ Custom
+ Data transfer
+ External/GB
+ $0.20 
+ $0.20 
+ $0.19 
+ $0.18 
+ Custom
+ Internal/GB
+ $0.05 
+ $0.05 
+ $0.045 
+ $0.04 
+ Custom
+ Apify for
+ Startups
+ Encouraging startups to grow by making use of online data at scale.
+ Read more 
+ Universities
+ We hope to see future generations take advantage of the vast amount of data available online.
+ Read more 
+ Nonprofits
+ We believe that online data can help your organization have more impact.
+ Read more 
+ Frequently asked questions 
+ Got questions? We're glad to hear that because we have answers.
+ What is the prepaid platform usage, and how much do I need?
+ The Apify platform has a number of services that are charged based on usages, such as Actors, proxies, data transfer, and storage. See pricing for the full list of platform services.
+ Each subscription plan comes with a certain amount of prepaid platform usage that is used to pay for
+
+=== [about] https://docs.apify.com/ (lang=en)
+Apify Documentation 
+ Skip to main content 
+ Get started 
+ Get started Actors Storage Proxy Account Integrations Security 
+ Academy API API reference Client for JavaScript Client for Python Client for Go Client for PHP Client for Java Client for .NET Client for Rust 
+ SDK SDK for JavaScript SDK for Python 
+ CLI Installation Quick start Command reference 
+ For AI agents 
+ Apify Documentation
+ Learn how to put the web to work.
+ Getting started
+ Apify is all about Actors—a new way to package your code to make it easy to share, integrate, and build upon.
+ What is an Actor
+ Run an existing Actor
+ Develop your own Actor
+ Publish and monetize your Actor
+ Platform
+ The full reference of the Apify platform.
+ Actors
+ Develop, run, and share web scraping and automation tools in the cloud.
+ Storage
+ Store files and results of your web scraping jobs, and export it to various formats.
+ Proxy
+ Avoid blocking by smartly rotating datacenter and residential IP addresses.
+ Schedules
+ Automatically start Actors and saved tasks at specific times.
+ Integrations
+ Connect Actors with your favorite web apps and cloud services.
+ Monitoring
+ Check the performance of your Actors, validate data quality, and receive alerts.
+ Collaboration
+ Share Actors with other people, manage your organizations and permissions.
+ Security
+ Learn about Apify platform security and data protection.
+ MCP
+ Discover and use Actors with AI agents and LLMs via Apify MCP server.
+ Apify API
+ Interact with the Apify platform from your applications.
+ API client for JavaScript API client for Python API reference 
+ Apify SDK
+ Software toolkits for developing new Actors.
+ SDK for JavaScript SDK for Python 
+ Apify CLI
+ Control the Apify platform from terminal or shell scripts.
+ CLI reference 
+ Apify Academy
+ Free practical courses on web scraping and the Apify platform. Go from beginner to expert, all in one place.
+ Web scraping for beginners
+ Learn the basics of web scraping and how to develop your own scraper.
+ Introduction to the Apify platform
+ Learn the basics of the Apify platform and how to use it for your scraping projects.
+ API scraping
+ Learn how to efficiently extract data from web pages' APIs.
+ Anti-scraping protections
+ Understand the various anti-scraping measures and how to avoid them.
+ Advanced web scraping
+ Learn how to extract data from more complicated websites.
+ Deploying your code to Apify
+ Learn how to easily move your existing projects to the Apify platform.
+ Go to Academy 
+ Open-source tools
+ Crawlee
+ Web crawling, scraping, and browser automation library for Node.js and Python with autoscaling and proxies.
+ Star 
+ Fingerprint Suite
+ Toolkit for generating and injecting realistic browser fingerprints into Playwright and Puppeteer.
+ Star 
+ impit
+ Rust-based HTTP client with browser impersonation. Bindings for Node.js, Python, and CLI.
+ Star 
+ mcpc
+ CLI client for the Model Context Protocol (MCP) for server exploration, scripting, and code mode.
+ Star 
+ proxy-chain
+ Node.js proxy server with SSL, authentication, and upstream proxy chaining.
+ Star 
+ Actor whitepaper
+ Open specification for Actors, the serverless microapps at the core of the Apify platform.
+ Follow Apify on GitHub 
+ Actor templates
+ Create new web scraping projects using ready-made templates for various programming languages and scraping libraries.
+ Browse all templates 
+ Community & Help
+ Discord
+ Join our community to get news and connect with other Apify developers.
+ Support
+ Find answers to common questions or get help from the Apify support team.
+ More reading
+ Blog
+ Company and product updates, tips and
+
+=== [meta] https://apify.com
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/apify/crawlee
+<h1 align="center">
+    <a href="https://crawlee.dev">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/apify/crawlee/master/website/static/img/crawlee-dark.svg?sanitize=true" />
+          <img alt="Crawlee" src="https://raw.githubusercontent.com/apify/crawlee/master/website/static/img/crawlee-light.svg?sanitize=true" width="500" />
+        </picture>
+    </a>
+    <br />
+    <small>A web scraping and browser automation library</small>
+</h1>
+
+<p align="center">
+    <a href="https://trendshift.io/repositories/5179" target="_blank"><img src="https://trendshift.io/api/badge/repositories/5179" alt="apify%2Fcrawlee | Trendshift" width="250" height="55"/></a>
+</p>
+
+<p align="center">
+    <a href="https://www.npmjs.com/package/@crawlee/core" rel="nofollow"><img src="https://img.shields.io/npm/v/@crawlee/core.svg" alt="NPM latest version" data-canonical-src="https://img.shields.io/npm/v/@crawlee/core/next.svg" /></a>
+    <a href="https://www.npmjs.com/package/@crawlee/core" rel="nofollow"><img src="https://img.shields.io/npm/dm/@crawlee/core.svg" alt="Downloads" data-canonical-src="https://img.shields.io/npm/dm/@crawlee/core.svg" /></a>
+    <a href="https://discord.gg/jyEM2PRvMU" rel="nofollow"><img src="https://img.shields.io/discord/801163717915574323?label=discord" alt="Chat on discord" data-canonical-src="https://img.shields.io/discord/801163717915574323?label=discord" /></a>
+    <a href="https://github.com/apify/crawlee/actions/workflows/test-ci.yml"><img src="https://github.com/apify/crawlee/actions/workflows/test-ci.yml/badge.svg?branch=master" alt="Build Status" /></a>
+</p>
+
+Crawlee covers your crawling and scraping end-to-end and **helps you build reliable scrapers. Fast.**
+
+Your crawlers will appear human-like and fly under the radar of modern bot protections even with the default configuration. Crawlee gives you the tools to crawl the web for links, scrape data, and store it to disk or cloud while staying configurable to suit your project's needs.
+
+Crawlee is available as the [`crawlee`](https://www.npmjs.com/package/crawlee) NPM package.
+
+> 👉 **View full documentation, guides and examples on the [Crawlee project website](https://crawlee.dev)** 👈
+
+> Do you prefer 🐍 Python instead of JavaScript? [👉 Checkout Crawlee for Python 👈](https://github.com/apify/crawlee-python).
+
+## Installation
+
+We recommend visiting the [Introduction tutorial](https://crawlee.dev/js/docs/introduction) in Crawlee documentation for more information.
+
+> Crawlee requires **Node.js 22.13 or higher**.
+
+### With Crawlee CLI
+
+The fastest way to try Crawlee out is to use the **Crawlee CLI** and choose the **Getting started example**. The CLI will install all the necessary dependencies and add boilerplate code for you to play with.
+
+```bash
+npx crawlee create my-crawler
+```
+
+```bash
+cd my-crawler
+npm start
+```
+
+### Manual installation
+If you prefer adding Crawlee **into your own project**, try the example below. Because it uses `PlaywrightCrawler` we also need to install [Playwright](https://playwright.dev). It's not bundled with Crawlee to reduce install size.
+
+```bash
+npm install crawlee playwright
+```
+
+```js
+import { PlaywrightCrawler, Dataset } from 'crawlee';
+
+// PlaywrightCrawler crawls the web using a headless
+// browser controlled by the Playwright library.
+const crawler = new PlaywrightCrawler({
+    // Use the requestHandler to process each of the crawled pages.
+    async requestHandler({ request, page, enqueueLinks, log }) {
+        const title = await page.title();
+        log.info(`Title of ${request.loadedUrl} is '${title}'`);
+
+        // Save results as JSON to ./storage/datasets/default
+        await Dataset.pushData({ title, url: request.loadedUrl });
+
+        // Extract links from the current page
+        // and add them to the crawling queue.
+        await enqueueLinks();
+    },
+    // Uncomment this option to see the browser window.
+    // headless: false,
+});
+
+// Add first URL to the queue and start the crawl.
+await crawler.run(['https://crawlee.dev']);
+```
+
+By default, Crawlee stores data to `./storage` in the current working directory. You can override this directory v

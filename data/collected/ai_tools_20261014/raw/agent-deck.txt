@@ -1,0 +1,100 @@
+=== [home] https://discord.com/invite/e4xSs6NBN8 (lang=ko)
+Discord 
+ ashesh (asheshgoplani) 님이 초대함:
+ Agent Deck
+ 49명 온라인 
+ 멤버 367명 
+ 별명 
+ 다른 회원에게 표시되는 이름이에요. 특수 문자와 이모지를 사용할 수 있어요.
+ 생년월일 
+ 년 
+ 년, 년
+ 월 
+ 월, 월
+ 일 
+ 일, 일
+ "계정 만들기"를 클릭하면 Discord의 이용 약관 에 동의하며 개인정보 보호 정책 을 읽었음을 확인하는 것으로 간주됩니다.
+ 계정 만들기 
+ 이미 계정이 있나요? 로그인하세요 
+ ,
+ ,
+ 반응
+ 공식 메시지
+ 클릭해서 이미지 다이얼로그 열기
+
+=== [meta] https://discord.com/invite/e4xSs6NBN8
+html lang: ko
+hreflang: ar, bg, cs, da, de, el, en-gb, en-us, es-419, es-es, fi, fr, he, hi, hr, hu, id, it, ja, ko, lt, nl, no, pl, pt-br, ro, ru, sv-se, th, tr, uk, vi, zh-cn, zh-tw
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/asheshgoplani/agent-deck
+<div align="center">
+
+<!-- Status Grid Logo -->
+<img src="site/logo.svg" alt="Agent Deck Logo" width="120">
+
+# Agent Deck
+
+**Your AI agent command center**
+
+[![GitHub Stars](https://img.shields.io/github/stars/asheshgoplani/agent-deck?style=for-the-badge&logo=github&color=yellow&labelColor=1a1b26)](https://github.com/asheshgoplani/agent-deck/stargazers)
+[![Downloads](https://img.shields.io/github/downloads/asheshgoplani/agent-deck/total?style=for-the-badge&logo=github&color=bb9af7&labelColor=1a1b26)](https://github.com/asheshgoplani/agent-deck/releases)
+[![Go Version](https://img.shields.io/badge/Go-1.26.9-00ADD8?style=for-the-badge&logo=go&labelColor=1a1b26)](https://go.dev)
+[![License](https://img.shields.io/badge/License-MIT-9ece6a?style=for-the-badge&labelColor=1a1b26)](LICENSE)
+[![Platform](https://img.shields.io/badge/Platform-macOS%20%7C%20Linux%20%7C%20WSL-7aa2f7?style=for-the-badge&labelColor=1a1b26)](https://github.com/asheshgoplani/agent-deck)
+[![Latest Release](https://img.shields.io/github/v/release/asheshgoplani/agent-deck?style=for-the-badge&color=e0af68&labelColor=1a1b26)](https://github.com/asheshgoplani/agent-deck/releases)
+[![Discord](https://img.shields.io/discord/1469423271144587379?style=for-the-badge&logo=discord&logoColor=white&label=Discord&color=5865F2&labelColor=1a1b26)](https://discord.gg/e4xSs6NBN8)
+
+[Install](#installation) . [Quick Start](#quick-start) . [Features](#features) . [Conductor](#conductor) . [Docs](#documentation) . [Discord](https://discord.gg/e4xSs6NBN8) . [FAQ](#faq)
+
+</div>
+
+**Agent Deck is mission control for your AI coding agents.** Running Claude Code on ten projects, OpenCode on five more, another agent somewhere in the background? One terminal shows every session — running, waiting, or done — and one keystroke switches between them. Groups, search, forking, git worktrees, cost tracking, and a phone-controlled [conductor](#conductor) keep a whole fleet manageable.
+
+https://github.com/user-attachments/assets/e4f55917-435c-45ba-92cc-89737d0d1401
+
+## Contributing: start here
+
+agent-deck is actively maintained by [Ashesh](https://github.com/asheshgoplani), and it welcomes both contributors and co-maintainers. PRs here don't sit: every incoming PR is validated (applied, built, tested) within about a day, and good ones merge in the next release batch. Recent releases have shipped dozens of community fixes.
+
+Beyond one-off PRs, we're looking for 1-2 regular co-maintainers: people who want to own an area (a tool integration, the TUI, the web view, CI) and help triage and review. The validation pipeline does the heavy lifting; maintainers steer.
+
+To get started:
+
+1. Read [CONTRIBUTING.md](CONTRIBUTING.md): how the pipeline works, what makes a PR land fast, and the house rules.
+2. Contributing with an AI agent? Point it at [.github/INTAKE.md](.github/INTAKE.md), the machine-readable intake spec — or the [agent-deck-contributor skill](.github/skills/agent-deck-contributor), which walks an agent (or you) through building, testing, and shaping a clean PR.
+3. Comment on an issue before starting work so we can tell you if someone (human or agent) is already on it.
+4. Look for issues labeled [`good first issue`](https://github.com/asheshgoplani/agent-deck/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22): curated to be small and self-contained.
+
+If you've had a couple of PRs land here and want to help steer, open an issue titled "maintainer: your area". We'd love the help.
+
+Looking for something specific to work on? [docs/ROADMAP.md](docs/ROADMAP.md) lists ideas and follow-ups that are real but not yet scheduled.
+
+If you've had a couple of PRs land here and want to help steer, say so on #1650 or open an issue titled "maintainer: your area". We'd love the help.
+
+## Installation
+
+**Works on:** macOS, Linux, Windows (WSL)
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/asheshgoplani/agent-deck/main/install.sh | bash
+```
+
+Then run: `agent-deck`
+
+<details>
+<summary>Other install methods</summary>
+
+**Homebrew**
+```bash
+brew install asheshgoplani/tap/agent-deck
+```
+
+**Go**
+```bash
+go install github.com/asheshgoplani/agent-deck/cmd/agent-deck@latest
+```
+
+**From Source**
+```bash
+

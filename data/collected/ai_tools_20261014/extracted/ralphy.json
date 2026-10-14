@@ -1,0 +1,33 @@
+{
+ "company": null,
+ "one_liner_ko": "작업이 끝날 때까지 AI 에이전트를 반복 실행하는 자율 AI 코딩 루프.",
+ "what_it_does_ko": "Ralphy는 AI 코딩 에이전트에게 작업을 맡겨 끝날 때까지 돌리는 자율 코딩 루프 도구다. 한 가지 작업을 바로 지시하거나 PRD 파일의 작업 목록을 차례로 처리할 수 있다. Claude Code·OpenCode·Cursor·Codex·Qwen-Code·Factory Droid·GitHub Copilot·Gemini CLI를 엔진으로 고를 수 있다. 여러 에이전트를 병렬로 돌릴 때는 에이전트마다 별도 worktree와 브랜치를 준다.",
+ "key_features": [
+  "단일 작업 모드와 PRD 작업 목록 모드",
+  "Claude Code·Cursor·Codex·Gemini CLI 등 여러 AI 엔진 선택",
+  "프로젝트 규칙·건드리면 안 되는 경로를 config.yaml에 저장",
+  "Markdown·YAML·JSON·GitHub 이슈를 작업 출처로 사용",
+  "에이전트마다 독립 worktree·브랜치로 병렬 실행",
+  "엔진별 모델 지정과 추가 인자 전달"
+ ],
+ "use_cases_ko": [],
+ "pricing": {"free_tier": "불명", "plans": [], "pricing_url": null},
+ "open_source": null,
+ "api": "불명",
+ "platforms": ["CLI"],
+ "korean_support": "불명",
+ "evidence": [
+  {"field": "one_liner_ko", "url": "https://github.com/michaelshimeles/ralphy", "quote": "Autonomous AI coding loop. Runs AI agents on tasks until done."},
+  {"field": "what_it_does_ko", "url": "https://github.com/michaelshimeles/ralphy", "quote": "**Task list** - work through a PRD:"},
+  {"field": "what_it_does_ko", "url": "https://github.com/michaelshimeles/ralphy", "quote": "Each agent gets isolated worktree + branch:"},
+  {"field": "key_features", "url": "https://github.com/michaelshimeles/ralphy", "quote": "**Single task** - just tell it what to do:"},
+  {"field": "key_features", "url": "https://github.com/michaelshimeles/ralphy", "quote": "ralphy --gemini     # Gemini CLI"},
+  {"field": "key_features", "url": "https://github.com/michaelshimeles/ralphy", "quote": "Optional. Stores rules the AI must follow."},
+  {"field": "key_features", "url": "https://github.com/michaelshimeles/ralphy", "quote": "ralphy --github owner/repo --github-label \"ready\""},
+  {"field": "key_features", "url": "https://github.com/michaelshimeles/ralphy", "quote": "ralphy --parallel --max-parallel 5 # 5 agents"},
+  {"field": "key_features", "url": "https://github.com/michaelshimeles/ralphy", "quote": "Override the default model for any engine:"},
+  {"field": "platforms", "url": "https://github.com/michaelshimeles/ralphy", "quote": "npm install -g ralphy-cli"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

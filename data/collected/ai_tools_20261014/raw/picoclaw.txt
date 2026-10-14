@@ -1,0 +1,230 @@
+=== [home] https://picoclaw.io (lang=en)
+PicoClaw — Ultra-Lightweight AI Assistant in Go for Raspberry Pi, Linux & RISC-V 
+ PicoClaw Download Changelog Blog Docs GitHub 
+ EN 中文 
+ Ultra-Lightweight AI Assistant Written in Go
+ Single binary · <10MB RAM · 1s startup · Runs on $10 hardware
+ Download PicoClaw View on GitHub 
+ <10MB Memory 
+ <1s Boot Time 
+ 16+ Channels 
+ $10 Min Hardware 
+ PicoClaw Chat Online 
+ Type a message...
+ What is PicoClaw?
+ PicoClaw is an ultra-lightweight personal AI assistant written in Go. Deploy a single binary on any device — from a $10 Raspberry Pi to a cloud server — and get a fully functional AI assistant with less than 10MB of RAM and under 1 second startup time. 99% smaller and 400x faster than comparable solutions.
+ ⚡
+ Ultra-Lightweight
+ <10MB RAM footprint. Single self-contained binary with zero external dependencies. Runs on $10 hardware.
+ 🚀
+ 400x Faster Startup
+ Boots in under 1 second even on a 0.6GHz single-core processor. Written in Go for maximum efficiency.
+ 🌐
+ Run Anywhere
+ Raspberry Pi, RISC-V, ARM64, x86_64, Android (APK or Termux), Docker — one binary covers all platforms.
+ 💬
+ 16+ Chat Channels
+ Telegram, Discord, Slack, DingTalk, Feishu, WeCom, LINE, QQ and more. Connect your AI to any platform.
+ 🤖
+ Multi-LLM Support
+ OpenAI, Claude, DeepSeek, Doubao and more. Switch providers freely with a single config change.
+ 🔒
+ Self-Hosted & Private
+ Your data stays on your device. No cloud dependency. Full control over your AI assistant.
+ Learn More
+ Installation Guide Supported LLM Providers Supported Chat Channels Run on Android Docker Deployment Security & Sandbox 
+ See PicoClaw in Action
+ From coding to research, PicoClaw handles it all — on any hardware.
+ PicoClaw code assistant demo Full-Stack Engineer Mode
+ Develop · Deploy · Scale
+ PicoClaw scheduling and memory demo Logging & Planning
+ Schedule · Automate · Remember
+ PicoClaw web search demo Web Search & Learning
+ Discover · Insights · Trends
+ Runs on Anything
+ From $10 RISC-V boards to Raspberry Pi to Android phones — one binary, all platforms.
+ $9.9 LicheeRV-Nano Minimal Home Assistant $30 NanoKVM Server Operations $50 MaixCAM Smart Surveillance 
+ PicoClaw vs Alternatives
+ Rewritten in Go for 10x performance. See how PicoClaw compares.
+ Metric OpenClaw NanoBot PicoClaw 
+ Language TypeScript Python Go 
+ Memory Usage >100MB >100MB <10MB 
+ Startup Time >30s >30s <1s 
+ Min Hardware Cost ~$50 ~$50 ~$10 
+ Built for Real-World Applications
+ From personal productivity to professional workflows, PicoClaw adapts to your needs.
+ 💻
+ Code Assistant
+ Local code completion, debugging, and documentation generation. Keep proprietary code private while getting AI assistance.
+ ✍️
+ Content Creation
+ Write blog posts, emails, and documents with AI. All drafts and ideas stay on your device, fully private.
+ 📊
+ Data Analysis
+ Analyze sensitive business data locally. No data leaves your infrastructure, ensuring complete confidentiality.
+ 📅
+ Personal Assistant
+ Manage tasks with scheduled commands, cron automation, and multi-platform bot integration in your daily workflow.
+ 📚
+ Research & Learning
+ Summarize papers, answer questions, and organize knowledge. Built-in web search and long-term memory for context continuity.
+ 🔌
+ API & Integration
+ Gateway mode turns PicoClaw into an AI backend. Connect any chat platform via MCP protocol and REST API.
+ Frequently Asked Questions
+ What is PicoClaw? PicoClaw is an ultra-lightweight personal AI assistant written in Go. It deploys as a single binary with less than 10MB memory usage, supports 16+ chat platforms (Telegram, Discord, Slack, QQ, DingTalk, etc.), and runs on everything from a $10 Raspberry Pi to cloud servers.
+ How is PicoClaw different from ChatGPT or other AI assistants? PicoClaw is self-hosted — your data stays on your device. It connects to LLM providers (OpenAI, Claude, DeepSeek, etc.) via API, but all conversation history and configuration remain local. It's also designed for ultra-low resource environments that cloud-based solutions can't serve.
+ What hardware do I need to run PicoClaw? Minimum: any device with 64MB RAM and an internet connection for LLM API calls. Recommended: 512MB RAM. PicoClaw runs on x86_64, ARM64, ARMv7, ARMv6, RISC-V, and MIPS architectures. A $10 Raspberry Pi Zero works perfectly.
+ Which LLM providers does PicoClaw support? OpenAI (GPT-4o, o1), Anthropic (Claude), DeepSeek, Google Gemini, Mistral, Volcengine (Doubao), Qwen, Minimax, Moonshot (Kimi), Cerebras, Perplexity, Ollama (local), and any OpenAI-compatible API.
+ Can I run PicoClaw on my phone? Yes! On Android, just download and install the APK — no root or special setup needed. You can also run PicoClaw via Termux if you prefer the command-line approach. See the Android guide for details.
+ Is PicoClaw free and open source? Yes, PicoClaw is fully open source under the MIT-compatible license. The software is free. You only pay for the LLM API usage (e.g., OpenAI, Claude) based on your own consumption.
+ Stay Connected
+ Subscribe for news and product updates.
+ Global · Google Form
+ International users can subscribe via Google Forms.
+ Subscribe via Google Form Mainland China · Feishu
+ 中国大陆用户可通过飞书表单订阅。
+ Subscribe via Feishu 
+ Join the Community
+ WeChat Group
+ Scan QR code to join the WeChat group.
+ Follow Us
+ X / Twitter  @picoclaw 小红书 微信公众号 
+ 扫码关注公众号
+ Discord Community
+ Join our Discord server for discussions and support.
+ Join Discord Join Dev Group
+ Submit a PR, then apply to join the developer group:
+ China: Add WeChat group owner, send [Join PicoClaw Dev Group] + GitHub ID + PR #
+ International: Email support@sipeed.com with [Join PicoClaw Dev Group] + GitHub ID + PR #
+ Home · Download · Changelog · Blog · GitHub · Docs · All Releases · Issues · Site Source 
+@picoclaw
+ · 小红书 · Discord 
+ PicoClaw is open-source software by Sipeed
+
+=== [about] https://docs.picoclaw.io/ (lang=en-US)
+PicoClaw 
+ Skip to main content 
+ PicoClaw Docs 
+ Website GitHub English English 
+ 中文 
+ Português (Brasil) 
+ PicoClaw
+ Ultra-Efficient AI Assistant in Go
+ $10 Hardware 
+ <10MB RAM Usage 
+ <1s Boot Time 
+ 400x Faster Startup 
+ Get Started GitHub Discord 
+ 🪶
+ Ultra-Lightweight
+ Less than 10MB memory footprint — 99% smaller than comparable solutions.
+ 💰
+ Minimal Cost
+ Runs on $10 hardware. 98% cheaper than a Mac mini.
+ ⚡️
+ Lightning Fast
+ 400x faster startup. Boots in under 1 second even on a 0.6GHz single core.
+ 🌍
+ True Portability
+ Single self-contained binary for RISC-V, ARM64, and x86_64.
+ 💬
+ Multi-Channel
+ Connect via Telegram, Discord, Slack, DingTalk, Feishu, WeCom, LINE, QQ and more.
+ 🤖
+ AI-Bootstrapped
+ 95% agent-generated core with human-in-the-loop refinement.
+ Join the Community
+ WeChat Group
+ 💬 Discord GitHub Discussions Sipeed GitHub Sipeed Twitter 
+ Docs
+ Getting Started 
+ Configuration 
+ Chat Channels 
+ Community
+ Discord 
+ GitHub Issues 
+ GitHub Discussions 
+ More
+ Roadmap 
+ Contributing 
+ Releases 
+ Sipeed GitHub 
+ Sipeed Twitter 
+ Copyright © 2026 Sipeed. Built with Docusaurus.
+
+=== [meta] https://picoclaw.io
+html lang: en
+hreflang: en, x-default, zh
+화면에 보이는 언어 이름: 中文
+
+=== [github] https://github.com/sipeed/picoclaw
+<div align="center">
+<img src="assets/logo.webp" alt="PicoClaw" width="512">
+
+<h1>PicoClaw: Ultra-Efficient AI Assistant in Go</h1>
+
+<h3>$10 Hardware · 10MB RAM · ms Boot · Let's Go, PicoClaw!</h3>
+  <p>
+    <img src="https://img.shields.io/badge/Go-1.25+-00ADD8?style=flat&logo=go&logoColor=white" alt="Go">
+    <img src="https://img.shields.io/badge/Arch-x86__64%2C%20ARM64%2C%20MIPS%2C%20RISC--V%2C%20LoongArch-blue" alt="Hardware">
+    <img src="https://img.shields.io/badge/license-MIT-green" alt="License">
+    <br>
+    <a href="https://picoclaw.io"><img src="https://img.shields.io/badge/Website-picoclaw.io-blue?style=flat&logo=google-chrome&logoColor=white" alt="Website"></a>
+    <a href="https://docs.picoclaw.io/"><img src="https://img.shields.io/badge/Docs-Official-007acc?style=flat&logo=read-the-docs&logoColor=white" alt="Docs"></a>
+    <a href="https://deepwiki.com/sipeed/picoclaw"><img src="https://img.shields.io/badge/Wiki-DeepWiki-FFA500?style=flat&logo=wikipedia&logoColor=white" alt="Wiki"></a>
+    <br>
+    <a href="https://x.com/SipeedIO"><img src="https://img.shields.io/badge/X_(Twitter)-SipeedIO-black?style=flat&logo=x&logoColor=white" alt="Twitter"></a>
+    <a href="./assets/wechat.png"><img src="https://img.shields.io/badge/WeChat-Group-41d56b?style=flat&logo=wechat&logoColor=white"></a>
+    <a href="https://discord.gg/V4sAZ9XWpN"><img src="https://img.shields.io/badge/Discord-Community-4c60eb?style=flat&logo=discord&logoColor=white" alt="Discord"></a>
+  </p>
+
+[中文](docs/project/README.zh.md) | [日本語](docs/project/README.ja.md) | [한국어](docs/project/README.ko.md) | [Português](docs/project/README.pt-br.md) | [Tiếng Việt](docs/project/README.vi.md) | [Français](docs/project/README.fr.md) | [Italiano](docs/project/README.it.md) | [Bahasa Indonesia](docs/project/README.id.md) | [Malay](docs/project/README.ms.md) | **English**
+
+</div>
+
+---
+
+> **PicoClaw** is an independent open-source project initiated by [Sipeed](https://sipeed.com), written entirely in **Go** from scratch — not a fork of OpenClaw, NanoBot, or any other project.
+
+**PicoClaw** is an ultra-lightweight personal AI assistant inspired by [NanoBot](https://github.com/HKUDS/nanobot). It was rebuilt from the ground up in **Go** through a "self-bootstrapping" process — the AI Agent itself drove the architecture migration and code optimization.
+
+**Runs on $10 hardware with <10MB RAM** — that's 99% less memory than OpenClaw and 98% cheaper than a Mac mini!
+
+<table align="center">
+<tr align="center">
+<td align="center" valign="top">
+<p align="center">
+<img src="assets/picoclaw_mem.gif" width="360" height="240">
+</p>
+</td>
+<td align="center" valign="top">
+<p align="center">
+<img src="assets/licheervnano.png" width="400" height="240">
+</p>
+</td>
+</tr>
+</table>
+
+> [!CAUTION]
+> **Security Notice**
+>
+> * **NO CRYPTO:** PicoClaw has **not** issued any official tokens or cryptocurrency. All claims on `pump.fun` or other trading platforms are **scams**.
+> * **OFFICIAL DOMAIN:** The **ONLY** official website is **[picoclaw.io](https://picoclaw.io)**, and company website is **[sipeed.com](https://sipeed.com)**
+> * **BEWARE:** Many `.ai/.org/.com/.net/...` domains have been registered by third parties. Do not trust them.
+> * **NOTE:** PicoClaw is in early rapid development. There may be unresolved security issues. Do not deploy to production before v1.0.
+> * **NOTE:** PicoClaw has recently merged many PRs. Recent builds may use 10-20MB RAM. Resource optimization is planned after feature stabilization.
+
+## 📢 News
+
+2026-05-11 🛒 **LicheeRV-Claw on AliExpress!** You can now purchase LicheeRV-Claw from [AliExpress](https://www.aliexpress.com/item/1005006519668532.html), making it easier to try PicoClaw on compact RISC-V hardware.
+
+<p align="center">
+  <a href="https://www.aliexpress.com/item/1005006519668532.html">
+    <img src="assets/licheerv-claw.jpg" alt="LicheeRV-Claw on AliExpress" width="520">
+  </a>
+</p>
+
+2026-05-28 🚀 **v0.2.9 Released!** MCP server management in Web UI, configurable Sogou-backed web search, tool feedback animation in channels, `pretty_print` and `disable_escape_html` defaults, and numerous bug fixes across providers and channels.
+
+2026-05-14 🚀 **v0.2

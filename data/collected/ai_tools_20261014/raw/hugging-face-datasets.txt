@@ -1,0 +1,320 @@
+=== [home] https://huggingface.co/docs/datasets/index
+Datasets · Hugging Face 
+ Hugging Face 
+ Models 
+ Datasets 
+ Spaces 
+ Buckets new 
+ Docs 
+ Enterprise 
+ Pricing 
+ Website 
+ Tasks 
+ HuggingChat 
+ Collections 
+ Languages 
+ Organizations 
+ Community 
+ Blog 
+ Posts 
+ Daily Papers 
+ Hardware 
+ Learn 
+ Discord 
+ Forum 
+ GitHub 
+ Solutions 
+ Team & Enterprise 
+ Hugging Face PRO 
+ Enterprise Support 
+ Inference Providers 
+ Inference Endpoints 
+ Storage Buckets 
+ Log In 
+ Sign Up 
+ Datasets documentation
+ Datasets
+ Datasets
+ 🏡 View all docs AWS Trainium & Inferentia Accelerate Argilla AutoTrain Bitsandbytes CLI Chat UI Dataset viewer Datasets Deploying on AWS Diffusers Distilabel Evaluate Google Cloud Google TPUs Gradio Hub Hub Python Library Huggingface.js Inference Endpoints (dedicated) Inference Providers Kernels LeRobot Leaderboards Lighteval Microsoft Azure OpenEnv Optimum PEFT Reachy Mini Safetensors Sentence Transformers TRL Tasks Text Embeddings Inference Text Generation Inference Tokenizers Trackio Transformers Transformers.js Xet smolagents timm 
+ Search documentation
+ main v4.8.4 v4.7.0 v4.6.1 v4.5.0 v4.4.2 v4.3.0 v4.2.0 v4.1.1 v4.0.0 v3.6.0 v3.5.1 v3.4.1 v3.3.2 v3.2.0 v3.1.0 v3.0.2 v2.21.0 v2.20.0 v2.19.0 v2.18.0 v2.17.1 v2.16.1 v2.15.0 v2.14.7 v2.13.2 v2.12.0 v2.11.0 v2.10.0 v2.9.0 v2.8.0 v2.7.1 v2.6.2 v2.5.2 v2.4.0 v2.3.2 v2.2.1 v2.1.0 v2.0.0 v1.18.3 v1.17.0 v1.16.1 v1.15.1 v1.14.0 v1.13.3 v1.12.1 v1.11.0 v1.10.2 v1.9.0 v1.8.0 v1.7.0 v1.6.2 v1.5.0 v1.4.1 v1.3.0 v1.2.1 v1.1.3 v1.0.2 v0.4.0 v0.3.0 EN 
+ Get started 
+ 🤗 Datasets Quickstart Installation 
+ Tutorials 
+ Overview Load a dataset from the Hub Know your dataset Preprocess Create a dataset Share a dataset to the Hub 
+ How-to guides 
+ Overview General usage 
+ Load Process Stream Use with PyTorch Use with TensorFlow Use with NumPy Use with JAX Use with Pandas Use with Polars Use with PyArrow Use with Spark Cache management Cloud storage Search index CLI Troubleshooting 
+ Audio 
+ Load audio data Process audio data Create an audio dataset 
+ Vision 
+ Load image data Process image data Create an image dataset Depth estimation Image classification Semantic segmentation Object detection Load video data Create a video dataset Load document data Create a document dataset Create a medical imaging dataset 
+ Text 
+ Load text data Process text data 
+ Tabular 
+ Load tabular data 
+ Dataset repository 
+ Share Create a dataset card Structure your repository 
+ Conceptual guides 
+ Datasets 🤝 Arrow The cache Dataset or IterableDataset Dataset features Build and load Batch mapping 
+ Reference 
+ Main classes Builder classes Loading methods Table Classes Utilities 
+ Join the Hugging Face community
+ and get access to the augmented documentation experience
+ Collaborate on models, datasets and Spaces
+ Faster examples with accelerated inference
+ Switch between documentation themes
+ Sign Up to get started
+ Copy page 
+ Datasets 
+ 🤗 Datasets is a library for easily accessing and sharing AI datasets for Audio, Computer Vision, and Natural Language Processing (NLP) tasks.
+ Load a dataset in a single line of code, and use our powerful data processing and streaming methods to quickly get your dataset ready for training in a deep learning model. Backed by the Apache Arrow format, process large datasets with zero-copy reads without any memory constraints for optimal speed and efficiency. We also feature a deep integration with the Hugging Face Hub , allowing you to easily load and share a dataset with the wider machine learning community.
+ Find your dataset today on the Hugging Face Hub , and take an in-depth look inside of it with the live viewer.
+ Tutorials
+ Learn the basics and become familiar with loading, accessing, and processing a dataset. Start here if you are using 🤗 Datasets for the first time!
+ How-to guides
+ Practical guides to help you achieve a specific goal. Take a look at these guides to learn how to use 🤗 Datasets to solve real-world problems.
+ Conceptual guides
+ High-level explanations for building a better understanding about important topics such as the underlying data format, the cache, and how datasets are generated.
+ Reference
+ Technical descriptions of how 🤗 Datasets classes and methods work.
+ Update on GitHub 
+ Quickstart → 
+ Datasets
+
+=== [pricing] https://huggingface.co/pricing
+Pricing - Hugging Face 
+ Hugging Face 
+ Models 
+ Datasets 
+ Spaces 
+ Buckets new 
+ Docs 
+ Enterprise 
+ Pricing 
+ Website 
+ Tasks 
+ HuggingChat 
+ Collections 
+ Languages 
+ Organizations 
+ Community 
+ Blog 
+ Posts 
+ Daily Papers 
+ Hardware 
+ Learn 
+ Discord 
+ Forum 
+ GitHub 
+ Solutions 
+ Team & Enterprise 
+ Hugging Face PRO 
+ Enterprise Support 
+ Inference Providers 
+ Inference Endpoints 
+ Storage Buckets 
+ Log In 
+ Sign Up 
+ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ 
+ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ 
+ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ 
+ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ 
+ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ 
+ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ 
+ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ 
+ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ 
+ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ 
+ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ 
+ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ 
+ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ 
+ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ 
+ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ 
+ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ 
+ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ 
+ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ ✳ ⟡ · ◎ ✦ · ⟡ ✳ · ◎ ✧ · ⟡ ✳ → · ◎ ✦ ⟡ · ✳ ✧ · ◎ ⟡ ✳ 
+ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ · ◎ ✦ · ⟡ · ✳ ◎ · ✧ ⟡ · ✳ ◎ · → ✦ · ⟡ ✳ · ◎ ✧ · ✳ ⟡ ◎ 
+ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ ⟡ · ✳ ✦ · ⟡ ✧ · ◎ ✳ ⟡ · ✦ ✧ · ⟡ ✳ · → ◎ ⟡ · ✦ ✳ ✧ 
+ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · ⟡ ◎ · ✳ ⟡ · ✧ ✦ · ✳ ◎ ⟡ · ✧ → · ✦ ⟡ ✳ · ◎ ✧ ⟡ ✦ · 
+
+=== [about] https://huggingface.co/docs
+Hugging Face - Documentation 
+ Hugging Face 
+ Models 
+ Datasets 
+ Spaces 
+ Buckets new 
+ Docs 
+ Enterprise 
+ Pricing 
+ Website 
+ Tasks 
+ HuggingChat 
+ Collections 
+ Languages 
+ Organizations 
+ Community 
+ Blog 
+ Posts 
+ Daily Papers 
+ Hardware 
+ Learn 
+ Discord 
+ Forum 
+ GitHub 
+ Solutions 
+ Team & Enterprise 
+ Hugging Face PRO 
+ Enterprise Support 
+ Inference Providers 
+ Inference Endpoints 
+ Storage Buckets 
+ Log In 
+ Sign Up 
+ Documentation
+ Guides, references, and API docs for the Hugging Face ecosystem.
+ Hub & Client Libraries 
+ Hub
+ Host Git-based models, datasets, and Spaces on the HF Hub
+ Hub Python Library
+ Python client to interact with the Hugging Face Hub
+ CLI
+ Tools for agents and humans to interact with all the Hugging Face services
+ Huggingface.js
+ JavaScript libraries for Hugging Face with built-in TS types
+ Tasks
+ Explore demos, models, and datasets for any ML tasks
+ Dataset viewer
+ API for metadata, stats, and content of HF Hub datasets
+ Deployment & Inference 
+ Inference Providers
+ Call 200k+ models hosted by our 10+ Inference partners
+ Inference Endpoints (dedicated)
+ Deploy models on dedicated & fully managed infrastructure on HF
+ Deploying on AWS
+ Train/deploy models from Hugging Face to AWS with DLCs
+ Text Generation Inference
+ Serve language models with TGI optimized toolkit
+ Text Embeddings Inference
+ Serve embeddings models with TEI optimized toolkit
+ Microsoft Azure
+ Deploy Hugging Face models on Microsoft Azure
+ Google Cloud
+ Train and Deploy Hugging Face models on Google Cloud
+ Core ML Libraries 
+ Transformers
+ State-of-the-art AI models for PyTorch
+ Diffusers
+ State-of-the-art Diffusion models in PyTorch
+ Datasets
+ Access & share datasets for any ML tasks
+ Transformers.js
+ State-of-the-art ML running directly in your browser
+ Tokenizers
+ Fast tokenizers optimized for research & production
+ Evaluate
+ Evaluate and compare models performance
+ timm
+ State-of-the-art vision models: layers, optimizers, and utilities
+ Sentence Transformers
+ Embeddings, Retrieval, and Reranking
+ Kernels
+ Load and run compute kernels from the Hugging Face Hub
+ Training & Optimization 
+ PEFT
+ Parameter-efficient finetuning for large language models
+ Accelerate
+ Train PyTorch models with multi-GPU, TPU, mixed precision
+ Optimum
+ Optimize HF Transformers for faster training/inference
+ AWS Trainium & Inferentia
+ Train/deploy Transformers/Diffusers on AWS
+ Google TPUs
+ Train and Deploy models on Google TPUs via Optimum.
+ TRL
+ Train transformers LMs with reinforcement learning
+ OpenEnv
+ Create and deploy agentic RL execution environments
+ Safetensors
+ Safe way to store/distribute neural network weights
+ Bitsandbytes
+ Optimize and quantize models with bitsandbytes
+ Lighteval
+ All-in-one toolkit to evaluate LLMs across multiple backends
+ Collaboration & Extras 
+ Gradio
+ Build ML demos and web apps with a few lines of Python
+ Trackio
+ A lightweight, local-first, and free experiment tracking Python library
+ smolagents
+ Smol library to build great agents in Python
+ LeRobot
+ Making AI for Robotics more accessible with end-to-end learning
+ Reachy Mini
+ Open-source expressive robot SDK for hackers and AI builders
+ AutoTrain
+ AutoTrain API and UI for seamless model training
+ Chat UI
+ Open source chat frontend powering HuggingChat
+ Leaderboards
+ Create custom Leaderboards on Hugging Face
+ Argilla
+ Collaboration tool for building high-quality datasets
+ Distilabel
+ Framework for synthetic data generation and AI feedback
+ Xet
+ Xet Protocol Specification
+ Community 
+ Blog Learn Discord Forum GitHub 
+ System theme 
+ Company
+ TOS Privacy About Careers 
+
+=== [meta] https://huggingface.co/docs/datasets/index
+html lang: 없음
+hreflang: en, x-default
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/huggingface/datasets
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://huggingface.co/datasets/huggingface/documentation-images/raw/main/datasets-logo-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://huggingface.co/datasets/huggingface/documentation-images/raw/main/datasets-logo-light.svg">
+    <img alt="Hugging Face Datasets Library" src="https://huggingface.co/datasets/huggingface/documentation-images/raw/main/datasets-logo-light.svg" width="352" height="59" style="max-width: 100%;">
+  </picture>
+  <br/>
+  <br/>
+</p>
+
+<p align="center">
+    <a href="https://github.com/huggingface/datasets/actions/workflows/ci.yml?query=branch%3Amain"><img alt="Build" src="https://github.com/huggingface/datasets/actions/workflows/ci.yml/badge.svg?branch=main"></a>
+    <a href="https://github.com/huggingface/datasets/blob/main/LICENSE"><img alt="GitHub" src="https://img.shields.io/github/license/huggingface/datasets.svg?color=blue"></a>
+    <a href="https://huggingface.co/docs/datasets/index.html"><img alt="Documentation" src="https://img.shields.io/website/http/huggingface.co/docs/datasets/index.html.svg?down_color=red&down_message=offline&up_message=online"></a>
+    <a href="https://github.com/huggingface/datasets/releases"><img alt="GitHub release" src="https://img.shields.io/github/release/huggingface/datasets.svg"></a>
+    <a href="https://huggingface.co/datasets/"><img alt="Number of datasets" src="https://img.shields.io/endpoint?url=https://huggingface.co/api/shields/datasets&color=brightgreen"></a>
+    <a href="CODE_OF_CONDUCT.md"><img alt="Contributor Covenant" src="https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg"></a>
+    <a href="https://zenodo.org/badge/latestdoi/250213286"><img src="https://zenodo.org/badge/250213286.svg" alt="DOI"></a>
+</p>
+
+🤗 Datasets is a lightweight library providing **two** main features:
+
+- **one-line dataloaders for many public datasets**: one-liners to download and pre-process any of the ![number of datasets](https://img.shields.io/endpoint?url=https://huggingface.co/api/shields/datasets&color=brightgreen) major public datasets (image datasets, audio datasets, text datasets in 467 languages and dialects, 3D medical images, video datasets, agent traces, etc.) provided on the [HuggingFace Datasets Hub](https://huggingface.co/datasets). With a simple command like `squad_dataset = load_dataset("rajpurkar/squad")`, get any of these datasets ready to use in a dataloader for training/evaluating a ML model (Numpy/Pandas/PyTorch/TensorFlow/JAX/Polars),
+- **efficient data pre-processing**: simple, fast and reproducible data pre-processing for the public datasets as well as your own local datasets in CSV, JSON, JSONL, Parquet, HDF5, XML, text, PNG, JPEG, WAV, MP3, PDF, NIfTI, and more. With simple commands like `processed_dataset = dataset.map(process_example)`, efficiently prepare the dataset for inspection and ML model evaluation and training.
+
+[🎓 **Documentation**](https://huggingface.co/docs/datasets/) [🔎 **Find a dataset in the Hub**](https://huggingface.co/datasets) [🌟 **Share a dataset on the Hub**](https://huggingface.co/docs/datasets/share)
+
+<h3 align="center">
+    <a href="https://hf.co/course"><img src="https://raw.githubusercontent.com/huggingface/datasets/main/docs/source/imgs/course_banner.png"></a>
+</h3>
+
+# 🚀 Key Features
+
+🤗 Datasets is designed to let the community easily add and share new datasets, and provides powerful capabilities for data manipulation:
+
+| Feature | Description |
+|---------|-------------|
+| 📦 **One-line dataset loading** | Load AI-ready datasets from the [Hugging Face Hub](https://huggingface.co/datasets) or local files with `load_dataset()` |
+| 🔍 **Multiple formats** | Native support for CSV, JSON, JSONL, Parquet, Arrow, XML, Text, Webdataset, and more |
+| 🖼️ **Multi-modal data** | Built-in support for text, audio, image, video, PDF, and NIfTI (3D medical) data |
+| 🚀 **Streaming mode** | Stream datasets without downloading — iterate over data on-the-fly with `streaming=True` (now up to **100x faster** with Xet backend) |
+| 💾 **HF Storage Buckets** | Read and write directly from/to [Hugging Face Storage Buc

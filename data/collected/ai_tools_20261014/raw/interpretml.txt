@@ -1,0 +1,259 @@
+=== [home] https://interpret.ml (lang=en)
+InterpretML 
+ Documentation
+ Contribute 
+ GitHub 
+ Understand Models.
+Build Responsibly.
+ A toolkit to help understand models and enable responsible machine learning
+ Get Started 
+ Learn More 
+ State-of-the-art techniques to explain model behavior
+ Comprehensive support for multiple types of models and algorithms, during training and inferencing
+ Community driven open source toolkit
+ Why InterpretML?
+ Model Interpretability
+ Model interpretability helps developers, data scientists and business stakeholders in the organization gain a comprehensive understanding of their machine learning models. It can also be used to debug models, explain predictions and enable auditing to meet compliance with regulatory requirements.
+ Ease of use
+ Access state-of-the-art interpretability techniques through an open unified API set and rich visualizations.
+ Flexible and customizable
+ Understand models using a wide range of explainers and techniques using interactive visuals. Choose your algorithm and easily experiment with combinations of algorithms.
+ Comprehensive capabilities
+ Explore model attributes such as performance, global and local features and compare multiple models simultaneously. Run what-if analysis as you manipulate data and view the impact on the model.
+ Types of Models Supported
+ Glass-Box
+ Black-Box
+ Glass-box models are interpretable due to their structure. Examples include: Explainable Boosting Machines (EBM), Linear models, and decision trees.
+Glass-box models produce lossless explanations and are editable by domain experts.
+ Black-box models are challenging to understand, for example deep neural networks. Black-box explainers can analyze the relationship between input features and output predictions to interpret models. Examples include LIME and SHAP.
+ Wide Variety of Techniques
+ Global
+ Explore overall model behavior and find top features affecting model predictions using global feature importance
+ Local
+ Explain an individual prediction and find features contributing to it using local feature importance
+ Subset
+ Explain a subset of predictions using group feature importance
+ Feature Impact
+ See how changes to input features impact predictions with techniques like what-if analysis
+ What You Can Do With InterpretML
+ Explore Your Data and Model Performance
+ Understand how model performance changes for different subsets of data and compare multiple models
+ Explore model errors
+ Analyze dataset statistics and distributions
+ Gain Model Understanding
+ Explore global and local explanations
+ Filter data to observe global and local feature importance
+ Run what-if analysis to see how model explanations change if you edit datapoints’ features
+ Who Can Benefit from InterpretML?
+ Data Scientists
+ Understand models, debug or uncover issues and explain your model to other stakeholders.
+ Auditors
+ Validate a model before it is deployed and audit it post-deployment.
+ Business Leaders
+ Understand how models behave, in order to provide transparency about predictions to customers.
+ Researchers
+ Easily integrate with new interpretability techniques and compare against other algorithms.
+ Getting Started
+ Install InterpretML 
+ Contribute to InterpretML
+ We encourage you to join the effort and contribute feedback, algorithms, ideas and more, so we can evolve the toolkit together!
+ Contribute 
+ Resources
+ Learn More About InterpretML
+ InterpretML documentation
+ Interpretability for Tabular Data
+ Counterfactual Example Analysis
+ Contact Us
+ Copyright © 2023 The InterpretML Contributors
+ GitHub
+
+=== [about] https://interpret.ml/docs/ (lang=en)
+Getting Started — InterpretML documentation 
+ Skip to main content 
+ Back to top 
+ Ctrl + K 
+ Getting Started
+ API Reference 
+ interpret.glassbox 
+ ExplainableBoostingClassifier 
+ ExplainableBoostingRegressor 
+ APLRRegressor 
+ APLRClassifier 
+ LogisticRegression 
+ LinearRegression 
+ ClassificationTree 
+ RegressionTree 
+ merge_ebms 
+ interpret.blackbox 
+ ShapKernel 
+ LimeTabular 
+ PartialDependence 
+ MorrisSensitivity 
+ interpret.greybox 
+ ShapTree 
+ interpret.perf 
+ RegressionPerf 
+ ROC 
+ PR 
+ interpret.data 
+ ClassHistogram 
+ Marginal 
+ interpret.privacy 
+ DPExplainableBoostingClassifier 
+ DPExplainableBoostingRegressor 
+ interpret.utils 
+ link_func 
+ inv_link 
+ measure_interactions 
+ purify 
+ interpret.develop 
+ debug_mode 
+ show 
+ show_link 
+ set_show_addr 
+ get_show_addr 
+ preserve 
+ shutdown_show_server 
+ init_show_server 
+ status_show_server 
+ set_visualize_provider 
+ get_visualize_provider 
+ Algorithms 
+ Glassbox Models 
+ Explainable Boosting Machine 
+ Automatic Piecewise Linear Regression (APLR) 
+ Linear Model 
+ Decision Tree 
+ Blackbox Explainers 
+ Shapley Additive Explanations 
+ Local Interpretable Model-agnostic Explanations 
+ Partial Dependence Plot 
+ Morris Sensitivity Analysis 
+ Differentially Private Models 
+ Differentially Private EBMs 
+ Hyperparameters 
+ EBM internals 
+ EBM Internals - Regression 
+ EBM Internals - Binary classification 
+ EBM Internals - Multiclass 
+ Visualizations 
+ Deployments 
+ Development 
+ Installation 
+ Logging and Debugging 
+ What the FAQ 
+ Examples 
+ Interpretable Classification 
+ Interpretable Regression 
+ Smoothing EBMs 
+ Explain Blackbox Classifiers 
+ Explain Blackbox Regressors 
+ Merging EBMs 
+ Custom Interactions 
+ Differential Privacy 
+ Group Importances 
+ Prototype Selection 
+ .ipynb 
+ .pdf 
+ Getting Started
+ Getting Started # 
+ Installation
+ Interpret is supported across Windows, Mac and Linux on Python 3.5+
+pip 
+ pip install interpret
+conda 
+ conda install -c conda-forge interpret
+source 
+ git clone interpretml/interpret.git && cd interpret/scripts && make install
+ InterpretML supports training interpretable models ( glassbox ), as well as explaining existing ML pipelines ( blackbox ).
+Let’s walk through an example of each using the UCI adult income classification dataset.
+ Download and Prepare Data
+ First, we will load the data into a standard pandas dataframe or a numpy array, and create a train / test split. There’s no special preprocessing necessary to use your data with InterpretML.
+ import numpy as np 
+ import pandas as pd 
+ from sklearn.model_selection import train_test_split 
+ df = pd . read_csv ( 
+ "https://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data" , 
+ header = None ) 
+ df . columns = [ 
+ "Age" , "WorkClass" , "fnlwgt" , "Education" , "EducationNum" , 
+ "MaritalStatus" , "Occupation" , "Relationship" , "Race" , "Gender" , 
+ "CapitalGain" , "CapitalLoss" , "HoursPerWeek" , "NativeCountry" , "Income" 
+ ] 
+ X = df . iloc [:, : - 1 ] 
+ y = ( df . iloc [:, - 1 ] == " >50K" ) . astype ( int ) 
+ seed = 42 
+ np . random . seed ( seed ) 
+ X_train , X_test , y_train , y_test = train_test_split ( X , y , test_size = 0.20 , random_state = seed ) 
+ Train a Glassbox Model
+ Glassbox models are designed to be completely interpretable, and often provide similar accuracy to state-of-the-art methods.
+ InterpretML lets you train many of the latest glassbox models with the familiar scikit-learn interface.
+ from interpret.glassbox import ExplainableBoostingClassifier 
+ ebm = ExplainableBoostingClassifier () 
+ ebm . fit ( X_train , y_train ) 
+ ExplainableBoostingClassifier(
+
+=== [meta] https://interpret.ml
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/interpretml/interpret
+# InterpretML
+
+<a href="https://githubtocolab.com/interpretml/interpret/blob/main/docs/interpret/python/examples/interpretable-classification.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/interpretml/interpret/main?labpath=docs%2Finterpret%2Fpython%2Fexamples%2Finterpretable-classification.ipynb)
+![License](https://img.shields.io/github/license/interpretml/interpret.svg?style=flat-square)
+![Python Version](https://img.shields.io/pypi/pyversions/interpret.svg?style=flat-square)
+![Package Version](https://img.shields.io/pypi/v/interpret.svg?style=flat-square)
+![Conda](https://img.shields.io/conda/v/conda-forge/interpret)
+![Build Status](https://github.com/interpretml/interpret/actions/workflows/ci.yml/badge.svg?branch=main)
+[![codecov](https://codecov.io/github/interpretml/interpret/branch/main/graph/badge.svg?token=aPlXLsPEZD)](https://codecov.io/github/interpretml/interpret)
+![Maintenance](https://img.shields.io/maintenance/yes/2099?style=flat-square)
+<br/>
+> ### In the beginning machines learned in darkness, and data scientists struggled in the void to explain them. 
+> ### Let there be light.
+
+InterpretML is an open-source package that incorporates state-of-the-art machine learning interpretability techniques under one roof. With this package, you can train interpretable glassbox models and explain blackbox systems. InterpretML helps you understand your model's global behavior, or understand the reasons behind individual predictions.
+
+Interpretability is essential for:
+- Model debugging - Why did my model make this mistake?
+- Feature Engineering - How can I improve my model?
+- Detecting fairness issues - Does my model discriminate?
+- Human-AI cooperation - How can I understand and trust the model's decisions?
+- Regulatory compliance - Does my model satisfy legal requirements?
+- High-risk applications - Healthcare, finance, judicial, ...
+
+![](https://github.com/interpretml/interpretml.github.io/blob/master/interpret-highlight.gif)
+
+# Installation
+
+Python 3.10+ | Linux, Mac, Windows
+```sh
+pip install interpret
+# OR
+conda install -c conda-forge interpret
+```
+
+# Introducing the Explainable Boosting Machine (EBM)
+
+EBM is an interpretable model developed at Microsoft Research<sup>[*](#citations)</sup>. It uses modern machine learning techniques like bagging, gradient boosting, and automatic interaction detection to breathe new life into traditional GAMs (Generalized Additive Models). This makes EBMs as accurate as state-of-the-art techniques like random forests and gradient boosted trees. However, unlike these blackbox models, EBMs produce exact explanations and are editable by domain experts.
+
+| Dataset/AUROC | Domain  | Logistic Regression | Random Forest | XGBoost         | Explainable Boosting Machine |
+|---------------|---------|:-------------------:|:-------------:|:---------------:|:----------------------------:|
+| Adult Income  | Finance | .907±.003           | .903±.002     | .927±.001       | **_.928±.002_**              |
+| Heart Disease | Medical | .895±.030           | .890±.008     | .851±.018       | **_.898±.013_**              |
+| Breast Cancer | Medical | **_.995±.005_**     | .992±.009     | .992±.010       | **_.995±.006_**              |
+| Telecom Churn | Business| .849±.005           | .824±.004     | .828±.010       | **_.852±.006_**              |
+| Credit Fraud  | Security| .979±.002           | .950±.007     | **_.981±.003_** | **_.981±.003_**              |
+
+[*Notebook for reproducing table*](https://nbviewer.jupyter.org/github/interpretml/interpret/blob/main/docs/benchmarks/ebm-classification-comparison.ipynb)
+
+# Supported Techniques
+
+| Interpretability Technique  | Type               |
+|-----------------------------|--------------------|
+| [Explainable Boosting](https://interpret.ml/docs/ebm.html)        | glassbox model     |
+| [APLR](https://interpret.ml/docs/aplr.html)                       | glassbox model     |
+| [Decision Tree](https://interpret.ml/docs/dt.html)                | glassbox model     |
+| [Decision Rule List](https://interpret.ml/docs/dr.html)         

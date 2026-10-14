@@ -1,0 +1,97 @@
+{
+ "company": null,
+ "one_liner_ko": "Claude Code·GitHub Copilot 등 여러 AI 코딩 에이전트를 조율하고 작업 상태를 영구 보관하는 멀티 에이전트 작업공간 관리자.",
+ "what_it_does_ko": "Gas Town은 Claude Code, GitHub Copilot, Codex, Gemini 등 여러 AI 코딩 에이전트가 각기 다른 작업을 하도록 조율하는 작업공간 관리자다. 에이전트가 재시작해도 맥락을 잃지 않도록 작업 상태를 git 기반 훅(Hooks)에 보관한다. 'Mayor'라는 Claude Code 인스턴스가 총괄 코디네이터 역할을 하며, 프로젝트는 Rig 단위로, 작업자 에이전트는 Polecat으로 관리한다. 20~30개 에이전트까지 무리 없이 확장된다고 밝힌다.",
+ "key_features": [
+  "git worktree 기반 영구 작업 저장소(Hooks)",
+  "에이전트 간 메일함·신원·인계 기능 내장",
+  "총괄 AI 코디네이터 Mayor",
+  "Beads 원장 기반 git 이슈 추적",
+  "TOML 수식으로 정의하는 다단계 워크플로 템플릿(Molecules)",
+  "Witness·Deacon·Dogs 3단계 감시 시스템",
+  "병합 요청을 묶어 검증 후 main에 병합하는 Refinery"
+ ],
+ "use_cases_ko": [
+  "여러 AI 코딩 에이전트를 여러 프로젝트에 동시에 투입해 작업 관리"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "CLI"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/gastownhall/gastown",
+   "quote": "Multi-agent orchestration system for Claude Code, GitHub Copilot, and other AI agents with persistent work tracking"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/gastownhall/gastown",
+   "quote": "Gas Town is a workspace manager that lets you coordinate multiple AI coding agents (Claude Code, GitHub Copilot, Codex, Gemini, and others) working on different tasks."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/gastownhall/gastown",
+   "quote": "Instead of losing context when agents restart, Gas Town persists work state in git-backed hooks"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/gastownhall/gastown",
+   "quote": "The Mayor is a Claude Code instance with full context about your workspace, projects, and agents."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/gastownhall/gastown",
+   "quote": "Scale comfortably to 20-30 agents"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/gastownhall/gastown",
+   "quote": "Git worktree-based persistent storage for agent work. Survives crashes and restarts."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/gastownhall/gastown",
+   "quote": "Built-in mailboxes, identities, and handoffs"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/gastownhall/gastown",
+   "quote": "Git-backed issue tracking system that stores work state as structured data."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/gastownhall/gastown",
+   "quote": "Formulas (TOML definitions) are instantiated as molecules with tracked steps."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/gastownhall/gastown",
+   "quote": "A three-tier watchdog system keeps agents healthy"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/gastownhall/gastown",
+   "quote": "the Refinery batches merge requests, runs verification gates, and merges to main using a Bors-style bisecting queue"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/gastownhall/gastown",
+   "quote": "coordinate multiple AI coding agents (Claude Code, GitHub Copilot, Codex, Gemini, and others) working on different tasks"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/gastownhall/gastown",
+   "quote": "Commands like `gt sling` and `gt convoy` accept these IDs to reference specific work items."
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

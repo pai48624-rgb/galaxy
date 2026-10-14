@@ -1,0 +1,102 @@
+{
+ "company": null,
+ "one_liner_ko": "에이전트를 일급 요소로 삼아 멀티 에이전트 협업으로 LLM 앱을 만드는 가볍고 확장 가능한 Python 프레임워크(CMU·UW-Madison 연구진).",
+ "what_it_does_ko": "Langroid는 에이전트를 일급 요소로, 멀티 에이전트 프로그래밍을 핵심 설계 원칙으로 삼은 Python LLM 앱 프레임워크다. 에이전트에 LLM·벡터 저장소·도구를 붙이고 작업(Task)을 맡기면 메시지를 주고받으며 협업해 문제를 푼다. 액터 프레임워크에서 영감을 받았으며 계층적·재귀적 작업 위임으로 멀티 에이전트 상호작용을 조율한다. LangChain 등 다른 LLM 프레임워크를 쓰지 않고 사실상 모든 LLM과 동작하며, MCP 서버 도구도 쓸 수 있다.",
+ "key_features": [
+  "LLM 대화 상태·벡터 저장소·도구를 담는 에이전트(일급 요소)",
+  "계층적·재귀적 작업 위임을 조율하는 Task",
+  "로컬/오픈·원격/상용 등 사실상 모든 LLM 지원",
+  "Redis 기반 프롬프트·응답 캐싱",
+  "Qdrant·Chroma·LanceDB·Milvus 벡터 저장소",
+  "MCP 도구 어댑터",
+  "Claude Code 플러그인 제공"
+ ],
+ "use_cases_ko": [
+  "보안 취약점을 찾아 수정하는 AI 에이전트를 실서비스에 적용(Nullify 사례)"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/langroid/langroid",
+   "quote": "`Langroid` is an intuitive, lightweight, extensible and principled\nPython framework to easily build LLM-powered applications, from CMU and UW-Madison researchers."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://langroid.github.io/langroid/",
+   "quote": "Langroid is the first Python LLM-application framework that was explicitly \ndesigned with Agents as first-class citizens, and Multi-Agent Programming \nas the core design principle."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/langroid/langroid",
+   "quote": "You set up Agents, equip them with optional components (LLM, \nvector-store and tools/functions), assign them tasks, and have them \ncollaboratively solve a problem by exchanging messages."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://langroid.github.io/langroid/",
+   "quote": "orchestrates multi-agent interactions via hierarchical, recursive"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/langroid/langroid",
+   "quote": "it does not use `Langchain`, or any other LLM framework"
+  },
+  {
+   "field": "key_features",
+   "url": "https://langroid.github.io/langroid/",
+   "quote": "Agents as first-class citizens: The Agent class encapsulates LLM conversation state,"
+  },
+  {
+   "field": "key_features",
+   "url": "https://langroid.github.io/langroid/",
+   "quote": "Langroid works with practically any LLM, local/open or remote/proprietary/API-based"
+  },
+  {
+   "field": "key_features",
+   "url": "https://langroid.github.io/langroid/",
+   "quote": "Caching of LLM prompts, responses: Langroid by default uses Redis for caching."
+  },
+  {
+   "field": "key_features",
+   "url": "https://langroid.github.io/langroid/",
+   "quote": "Vector-stores : Qdrant , Chroma , LanceDB , and Milvus are currently supported."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/langroid/langroid",
+   "quote": "MCP Support: Allow any LLM-Agent to leverage MCP Servers via Langroid's simple"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/langroid/langroid",
+   "quote": "A Claude Code [plugin](#claude-code-plugin-optional) is available"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/langroid/langroid",
+   "quote": "It finds, prioritizes and fixes vulnerabilities. We have internally adapted Langroid's multi-agent orchestration framework in production"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/langroid/langroid",
+   "quote": "https://pypi.org/project/langroid/"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://langroid.github.io/langroid/",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

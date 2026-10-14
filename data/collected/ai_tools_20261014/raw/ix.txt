@@ -1,0 +1,127 @@
+=== [github] https://github.com/kreneskyp/ix
+# iX - Autonomous GPT-4 Agent Platform
+
+[![Unit Tests](https://img.shields.io/github/actions/workflow/status/kreneskyp/ix/test.yml)](https://github.com/kreneskyp/ix/actions/workflows/test.yml)
+[![Discord Server](https://dcbadge.vercel.app/api/server/jtrMKxzZZQ)](https://discord.gg/jtrMKxzZZQ)
+[![Twitter Follow](https://img.shields.io/twitter/follow/kreneskyp?style=social)](https://twitter.com/kreneskyp)
+
+<div>
+<img align="left" src="ix_350.png" alt="midjourney prompt: The ninth planet around the sun">
+<p>
+<br>
+<br>
+<br>
+<br>
+Amidst the swirling sands of the cosmos, Ix stands as an enigmatic jewel, 
+where the brilliance of human ingenuity dances on the edge of forbidden 
+knowledge, casting a shadow of intrigue over the galaxy.
+
+\- Atreides Scribe, The Chronicles of Ixian Innovation
+<p>
+</div>
+<div>
+<br>
+<br>
+<br>
+<br>
+<br>
+</div>
+
+
+## 🌌 About
+<div>
+IX is a platform for designing and deploying autonomous and [semi]-autonomous LLM powered agents and workflows. IX
+provides a flexible and scalable solution for delegating tasks to AI powered agents. Agents created with the platform
+can automate a wide variety of tasks, while running in parallel and communicating with each other.
+<br>
+</div>
+
+##### Build AI powered workflows:
+- QA chat bots
+- Code generation
+- Data extraction
+- Data analysis
+- Data augmentation
+- Research assistants
+
+## Key Features
+
+### 🧠 Models
+  - OpenAI
+  - Google PaLM (Experimental)
+  - Anthropic (Experimental)
+  - Llama (Experimental)
+
+### ⚒️ No-code Agent Editor
+No-code editor for creating and testing agents. The editor provides an interface to drop and connect nodes into a graph
+representing the cognitive logic of an agent. Chat is embedded in the editor to allow for rapid testing and debugging.
+
+https://github.com/kreneskyp/ix/assets/68635/f43923b9-7bce-4b64-b30e-3204eb1673e4
+
+### 💬 Multi-Agent Chat interface
+Create your own teams of agents and interact with them through a single interface. Chat room support multiple agents.
+By default it includes the IX moderator agent, which delegates tasks to other agents. You can `@mention` specific 
+agents to complete the tasks.
+
+
+https://github.com/kreneskyp/ix/assets/68635/d1418c23-afb5-4aed-91c7-bf99b1c165d5
+
+
+### 💡 Smart Input 
+The smart input bar auto-completes agent `@mentions` and file & data `{artifacts}` created by tasks.
+
+https://github.com/kreneskyp/ix/assets/68635/27cf7085-7349-4641-9327-d31a3041a94c
+
+
+### ⚡ Message Queue Drive Agent Workers
+The agent runner backend is dockerized and is triggered with a celery message queue. This allows the backend to scale
+horizontally to support a fleet of agents running in parallel.
+
+![WorkerScalingTest_V3](https://github.com/kreneskyp/ix/assets/68635/bac934be-01c6-4882-bcfc-73a5ee85aa1e)
+
+
+### ⚙️ Component Config Layer
+
+IX implements a component config layer that maps LangChain components to the configuration graph. The config layer
+powers a number of other systems and features. For example, component field and connector definitions are used to
+render nodes and forms dynamically in the no-code editor. 
+
+
+## 🛠️ Getting Started
+
+##### Prerequisites
+<details> 
+  <summary>Windows Linux Subsystem (windows only)</summary> 
+  <ol>
+      <li>Open powershell</li>
+      <li>run `wsl --install` to install and/or activate WSL</li>
+  </ol>
+</details>
+<details> 
+  <summary>Docker</summary>
+  Install Docker Desktop for your OS:<br/>
+  <A href="https://www.docker.com/products/docker-desktop/">https://www.docker.com/products/docker-desktop/</A>
+
+  Detailed install instructions:
+  <ul>
+    <li><a href="https://docs.docker.com/desktop/install/mac-install/">Mac</a></li>
+    <li><a href="https://docs.docker.com/desktop/install/windows-install/">Windows</a></li>
+  </ul>
+</details>
+<details> 
+  <summary>Python</summary> 
+  Python 3.8 or higher is required for the CLI. The app python version is managed by the image.
+</details>
+
+
+### Agent-IX CLI
+
+The quickest way to start IX is with the agent-ix CLI. The CLI starts a preconfigured docker cluster with 
+docker-compose. It downloads the required images automatically and starts the app cluster.
+
+```bash
+pip install agent-ix
+ix up
+```
+
+Scale agent workers with the `scale` command. Each worker wi

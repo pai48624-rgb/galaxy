@@ -1,0 +1,540 @@
+=== [home] https://www.ragas.io/ (lang=en)
+Ragas 
+ user@ragas ~ % pip install ragas
+ Collecting ragas ... 
+ Docs Blog Github Community Careers 3 Contact Us 
+ ragas
+ ~ pip install ragas
+ features
+ Metrics 
+ automatic metrics that helps you understand the performance and robustness of your LLM application
+ Synthetic evaluation data 
+ synthetically generate high quality and diverse evaluation data customised for your requirements.
+ Online Monitoring 
+ evaluate and ensure the quality of your LLM application in production. Use insights to improve your application.
+ ragas in your stack
+ About Us
+ We are a group of passionate individuals who are leveraging cutting-edge research and pragmatic engineering practices to empower the visionaries who are redefining the possibilities of LLMs, with the right tools.
+ Founders
+ Shahul
+ Applied AI research
+Kaggle GM
+ Jithin James
+ chief maintainer
+previously @ BentoML
+ For support or questions regarding ragas please join discord as questions in #questions chatroom.
+ For enterprise features and collaborations email us or talk to founders 
+ engineers rely on ragas 
+ still not convinced?
+ LlamaIndex 🦙 
+ @ llama_index · Follow 
+ LlamaIndex + RAGAs Cookbook 🧑‍🍳
+The first step to building any advanced RAG application is defining quality metrics, and RAGAs ( @Shahules786 ) is a popular framework to comprehensively evaluate a RAG app component-wise and e2e.
+Metrics: Context relevance/recall/precision, 
+ 1:53 AM · Feb 16, 2024 
+ 205 
+ Reply 
+ Copy link 
+ Read more on X 
+ LangChain 
+ @ LangChainAI · Follow 
+ Webinar on evaluating RAG systems going live in 5 minutes!
+Excited to be joined by the RAGAS team
+ crowdcast.io/c/bnx91nz59cqq 
+ Harrison Chase 
+ @ hwchase17 
+ 💪RAGAS is an awesome open-source framework for evaluating RAG systems
+🤝We recently integrated LangSmith <> RAGAS for optimal ease of evaluation
+🎥We're also doing a webinar on RAG evaluation with them in 5 minutes!!!
+Link to webinar and blog 👇 
+ 3:55 PM · Aug 24, 2023 
+ 13 
+ Reply 
+ Copy link 
+ Read more on X 
+ swyx 🇸🇬 sg! 
+ @ swyx · Follow 
+ Congrats to @shahules786 for creating the only RAG framework directly recommended by openai at devday
+Thought leadership is the art of nailing the highest order bit 
+ Harrison Chase 
+ @ hwchase17 
+ Great overview of RAGAS!
+We also did a webinar with them 2 weeks ago - check it out for more insights of how to evaluate RAG systems!
+ youtube.com/watch?v=fWC4Vx… 
+ 6:14 PM · Nov 14, 2023 
+ 140 
+ Reply 
+ Copy link 
+ Read 3 replies 
+ Connor Shorten 
+ @ CShorten30 · Follow 
+ RAGAS 🤝 Weaviate!
+New podcast tomorrow, some awesome background info below! 👇 
+ Erika Shorten 
+ @ eshorten300 
+ RAG evaluation is the next step once your pipeline is set ☝️
+There are four new metrics based on LLM evaluation that are setting the standard: 1. Faithfulness, 2. Answer relevancy, 3. Context precision, and 4. Context recall (Ragas score)
+The visual below illustrates prompting 
+ 12:05 AM · Nov 20, 2023 
+ 44 
+ Reply 
+ Copy link 
+ Read 1 reply 
+ Harrison Chase 
+ @ hwchase17 · Follow 
+ 💪RAGAS is an awesome open-source framework for evaluating RAG systems
+🤝We recently integrated LangSmith <> RAGAS for optimal ease of evaluation
+🎥We're also doing a webinar on RAG evaluation with them in 5 minutes!!!
+Link to webinar and blog 👇 
+ 3:55 PM · Aug 24, 2023 
+ 85 
+ Reply 
+ Copy link 
+ Read 2 replies 
+ virat 
+ @ virattt · Follow 
+ I am blown away by RAGAS
+With 10 lines of code, I created a question + answer dataset of Airbnb's latest annual report (10-K).
+The dataset has 3 parts:
+• questions
+• contexts
+• ground truth answers
+Next step: Evaluate how well various LLMs perform RAG on financial 
+ 6:52 PM · Mar 3, 2024 
+ 412 
+ Reply 
+ Copy link 
+ Read 12 replies 
+ LlamaIndex 🦙 
+ @ llama_index · Follow 
+ LlamaIndex + RAGAs Cookbook 🧑‍🍳
+The first step to building any advanced RAG application is defining quality metrics, and RAGAs ( @Shahules786 ) is a popular framework to comprehensively evaluate a RAG app component-wise and e2e.
+Metrics: Context relevance/recall/precision, 
+ 1:53 AM · Feb 16, 2024 
+ 205 
+ Reply 
+ Copy link 
+ Read more on X 
+ LangChain 
+ @ LangChainAI · Follow 
+ Webinar on evaluating RAG systems going live in 5 minutes!
+Excited to be joined by the RAGAS team
+ crowdcast.io/c/bnx91nz59cqq 
+ Harrison Chase 
+ @ hwchase17 
+ 💪RAGAS is an awesome open-source framework for evaluating RAG systems
+🤝We recently integrated LangSmith <> RAGAS for optimal ease of evaluation
+🎥We're also doing a webinar on RAG evaluation with them in 5 minutes!!!
+Link to webinar and blog 👇 
+ 3:55 PM · Aug 24, 2023 
+ 13 
+ Reply 
+ Copy link 
+ Read more on X 
+ swyx 🇸🇬 sg! 
+ @ swyx · Follow 
+ Congrats to @shahules786 for creating the only RAG framework directly recommended by openai at devday
+Thought leadership is the art of nailing the highest order bit 
+ Harrison Chase 
+ @ hwchase17 
+ Great overview of RAGAS!
+We also did a webinar with them 2 weeks ago - check it out for more insights of how to evaluate RAG systems!
+ youtube.com/watch?v=fWC4Vx… 
+ 6:14 PM · Nov 14, 2023 
+ 140 
+ Reply 
+ Copy link 
+ Read 3 replies 
+ Connor Shorten 
+ @ CShorten30 · Follow 
+ RAGAS 🤝 Weaviate!
+New podcast tomorrow, some awesome background info below! 👇 
+ Erika Shorten 
+ @ eshorten300 
+ RAG evaluation is the next step once your pipeline is set ☝️
+There are four new metrics based on LLM evaluation that are setting the standard: 1. Faithfulness, 2. Answer relevancy, 3. Context precision, and 4. Context recall (Ragas score)
+The visual below illustrates prompting 
+ 12:05 AM · Nov 20, 2023 
+ 44 
+ Reply 
+ Copy link 
+ Read 1 reply 
+ Harrison Chase 
+ @ hwchase17 · Follow 
+ 💪RAGAS is an awesome open-source framework for evaluating RAG systems
+🤝We recently integrated LangSmith <> RAGAS for optimal ease of evaluation
+🎥We're also doing a webinar on RAG evaluation with them in 5 minutes!!!
+Link to webinar and blog 👇 
+ 3:55 PM · Aug 24, 2023 
+ 85 
+ Reply 
+ Copy link 
+ Read 2 replies 
+ virat 
+ @ virattt · Follow 
+ I am blown away by RAGAS
+With 10 lines of code, I created a question + answer dataset of Airbnb's latest annual report (10-K).
+The dataset has 3 parts:
+• questions
+• contexts
+• ground truth answers
+Next step: Evaluate how well various LLMs perform RAG on financial 
+ 6:52 PM · Mar 3, 2024 
+ 412 
+ Reply 
+ Copy link 
+ Read 12 replies 
+ Careers
+ We are a small team focused on innovating on state of the art research in AI to provide value to our users. We are always in lookout for passionate individuals who shares similar vision.
+ Write to us on team@vibrantlabs.com. We are looking to hearing from you.
+ ragas is backed by
+ founders@vibrantlabs.com
+
+=== [about] https://docs.ragas.io/en/stable/ (lang=en)
+Ragas 
+ Skip to content
+ Ragas Office Hours - If you need help setting up Evals for your AI application, sign up for our
+ Office Hours here .
+ Ragas
+ Initializing search
+ vibrantlabsai/ragas
+ 🚀 Get Started
+ 📚 Core Concepts
+ 🛠️ How-to Guides
+ 📖 References
+ ❤️ Community
+ Ragas
+ vibrantlabsai/ragas
+ Table of contents
+ Why Ragas?
+ Key Features
+ Want help improving your AI application using evals?
+ 🚀 Get Started
+ 🚀 Get Started
+ Installation
+ Quick Start
+ Tutorials
+ Tutorials
+ Evaluate a prompt
+ Evaluate a simple RAG system
+ Evaluate an AI Workflow
+ Evaluate an AI Agent
+ 📚 Core Concepts
+ 📚 Core Concepts
+ Experimentation
+ Datasets
+ Metrics
+ Metrics
+ Overview
+ Available Metrics
+ Available Metrics
+ Retrieval Augmented Generation
+ Retrieval Augmented Generation
+ Context Precision
+ Context Recall
+ Context Entities Recall
+ Noise Sensitivity
+ Response Relevancy
+ Faithfulness
+ Nvidia Metrics
+ Nvidia Metrics
+ Answer Accuracy
+ Context Relevance
+ Response Groundedness
+ Agents or Tool Use Cases
+ Agents or Tool Use Cases
+ Agentic or Tool use
+ Topic Adherence
+ Tool Call Accuracy
+ Tool Call F1
+ Agent Goal Accuracy
+ Natural Language Comparison
+ Natural Language Comparison
+ Factual Correctness
+ Semantic Similarity
+ Traditional non LLM metrics
+ Traditional non LLM metrics
+ Traditional NLP Metrics
+ Non LLM String Similarity
+ BLEU Score
+ CHRF Score
+ ROUGE Score
+ String Presence
+ Exact Match
+ SQL
+ SQL
+ SQL
+ Execution based Datacompy Score
+ SQL Query Equivalence
+ General Purpose
+ General Purpose
+ General Purpose Metrics
+ Aspect Critic
+ Simple Criteria Scoring
+ Rubrics Based Scoring
+ Instance Specific Rubrics Scoring
+ Other Tasks
+ Other Tasks
+ Summarization
+ Test Data Generation
+ Test Data Generation
+ RAG
+ RAG
+ Testset Generation for RAG
+ KG Building
+ Scenario Generation
+ Agents or tool use
+ Agents or tool use
+ Testset Generation for Agents or Tool use cases
+ Components
+ Components
+ General
+ General
+ Prompt
+ Evaluation
+ Evaluation
+ Evaluation Sample
+ Evaluation Dataset
+ 🛠️ How-to Guides
+ 🛠️ How-to Guides
+ Customizations
+ Customizations
+ General
+ General
+ Customise models
+ Run Config
+ Caching
+ Cancelling Tasks
+ LLM Adapters
+ Metrics
+ Metrics
+ Modify Prompts
+ Adapt Metrics to Languages
+ Train and Align Metrics
+ Testset Generation
+ Testset Generation
+ Non-English Testset Generation
+ Persona Generation
+ Custom Single-hop Query
+ Custom Multi-hop Query
+ Using Pre-chunked Data
+ Optimizers
+ Optimizers
+ Applications
+ Applications
+ Prompt Evaluation
+ Prompt Evaluation
+ Iterate and Improve Prompts
+ Systematic Prompt Optimization
+ Metrics
+ Metrics
+ Cost Analysis
+ Evaluating Multi-turn Conversations
+ Evaluations with Vertex AI models
+ Testset Generation
+ Testset Generation
+ Single-hop Query Testset
+ Benchmarking
+ Benchmarking
+ Evaluate a New LLM
+ Agent Evaluation
+ Agent Evaluation
+ Evaluate a Text-to-SQL Agent
+ Align an LLM as a Judge
+ RAG Evaluation
+ RAG Evaluation
+ Evaluate and Improve a RAG App
+ CLI
+ CLI
+ RAG Evaluation
+ Improve RAG
+ Integrations
+ Integrations
+ Observability
+ Observability
+ Arize
+ LangSmith
+ LLM Providers
+ LLM Providers
+ Amazon Bedrock
+ Google Gemini
+ OCI Gen AI
+ Frameworks
+ Frameworks
+ AG-UI
+ Griptape
+ Haystack
+ LangChain
+ LangGraph
+ LlamaIndex
+ LlamaIndex Agents
+ LlamaStack
+ R2R
+ Swarm
+ Migrations
+ Migrations
+ From v0.1 to v0.2
+ From v0.3 to v0.4
+ 📖 References
+ 📖 References
+ Core
+ Core
+ Prompt
+ LLMs
+ Embeddings
+ Tokenizers
+ RunConfig
+ Executor
+ Cache
+ Optimizers
+ Evaluation
+ Evaluation
+ Schemas
+ Metrics
+ evaluate()
+ aevaluate()
+ Testset Generation
+ Testset Generation
+ Schemas
+ Graph
+ Transforms
+ Synthesizers
+ Generation
+ Integrations
+ ❤️ Community
+ Table
+
+=== [meta] https://www.ragas.io/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/vibrantlabsai/ragas
+<h1 align="center">
+  <img style="vertical-align:middle" height="200"
+  src="https://raw.githubusercontent.com/vibrantlabsai/ragas/main/docs/_static/imgs/logo.png">
+</h1>
+<p align="center">
+  <i>Supercharge Your LLM Application Evaluations 🚀</i>
+</p>
+
+<p align="center">
+    <a href="https://github.com/vibrantlabsai/ragas/releases">
+        <img alt="Latest release" src="https://img.shields.io/github/release/vibrantlabsai/ragas.svg">
+    </a>
+    <a href="https://www.python.org/">
+        <img alt="Made with Python" src="https://img.shields.io/badge/Made%20with-Python-1f425f.svg?color=purple">
+    </a>
+    <a href="https://github.com/vibrantlabsai/ragas/blob/master/LICENSE">
+        <img alt="License Apache-2.0" src="https://img.shields.io/github/license/vibrantlabsai/ragas.svg?color=green">
+    </a>
+    <a href="https://pypi.org/project/ragas/">
+        <img alt="Ragas Downloads per month" src="https://static.pepy.tech/badge/ragas/month">
+    </a>
+    <a href="https://discord.gg/5djav8GGNZ">
+        <img alt="Join Ragas community on Discord" src="https://img.shields.io/discord/1119637219561451644">
+    </a>
+    <a target="_blank" href="https://deepwiki.com/vibrantlabsai/ragas">
+      <img 
+        src="https://devin.ai/assets/deepwiki-badge.png" 
+        alt="Ask DeepWiki.com" 
+        height="20" 
+      />
+    </a>
+</p>
+
+<h4 align="center">
+    <p>
+        <a href="https://docs.ragas.io/">Documentation</a> |
+        <a href="#fire-quickstart">Quick start</a> |
+        <a href="https://discord.gg/5djav8GGNZ">Join Discord</a> |
+        <a href="https://blog.ragas.io/">Blog</a> |
+        <a href="https://newsletter.ragas.io/">NewsLetter</a> |
+        <a href="https://www.ragas.io/careers">Careers</a>
+    <p>
+</h4>
+
+Objective metrics, intelligent test generation, and data-driven insights for LLM apps
+
+Ragas is your ultimate toolkit for evaluating and optimizing Large Language Model (LLM) applications. Say goodbye to time-consuming, subjective assessments and hello to data-driven, efficient evaluation workflows.
+Don't have a test dataset ready? We also do production-aligned test set generation.
+
+## Key Features
+
+- 🎯 Objective Metrics: Evaluate your LLM applications with precision using both LLM-based and traditional metrics.
+- 🧪 Test Data Generation: Automatically create comprehensive test datasets covering a wide range of scenarios.
+- 🔗 Seamless Integrations: Works flawlessly with popular LLM frameworks like LangChain and major observability tools.
+- 📊 Build feedback loops: Leverage production data to continually improve your LLM applications.
+
+## :shield: Installation
+
+Pypi:
+
+```bash
+pip install ragas
+```
+
+Alternatively, from source:
+
+```bash
+pip install git+https://github.com/vibrantlabsai/ragas
+```
+
+## :fire: Quickstart
+
+### Clone a Complete Example Project
+
+The fastest way to get started is to use the `ragas quickstart` command:
+
+```bash
+# List available templates
+ragas quickstart
+
+# Create a RAG evaluation project
+ragas quickstart rag_eval
+
+# Specify where you want to create it.
+ragas quickstart rag_eval -o ./my-project
+```
+
+Available templates:
+- `rag_eval` - Evaluate RAG systems
+
+Coming Soon:
+- `agent_evals` - Evaluate AI agents
+- `benchmark_llm` - Benchmark and compare LLMs
+- `prompt_evals` - Evaluate prompt variations
+- `workflow_eval` - Evaluate complex workflows
+
+### Evaluate your LLM App
+
+`ragas` comes with pre-built metrics for common evaluation tasks. For example, Aspect Critique evaluates any aspect of your output using `DiscreteMetric`:
+
+```python
+import asyncio
+from openai import AsyncOpenAI
+from ragas.metrics import DiscreteMetric
+from ragas.llms import llm_factory
+
+# Setup your LLM
+client = AsyncOpenAI()
+llm = llm_factory("gpt-4o", client=client)
+
+# Create a custom aspect evaluator
+metric = DiscreteMetric(
+    name="summary_accuracy",
+    allowed_values=["accurate", "inaccurate"],
+    prompt="""Evaluate if the summary is accurate and captures key information.
+
+Response: {response}
+
+Answer with only 'accurate' or 'inaccurate'."""
+)
+
+# Score your application's output
+async def main():
+    score = await metric.ascore(
+        llm=llm,
+        response="The summary of the text is..."
+    )
+    print(f"Score: {s

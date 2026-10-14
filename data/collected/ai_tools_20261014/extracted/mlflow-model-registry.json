@@ -1,0 +1,104 @@
+{
+ "company": "MLflow Project (LF Projects, LLC)",
+ "one_liner_ko": "머신러닝 모델의 전체 수명주기를 함께 관리하는 중앙 모델 저장소·API·UI",
+ "what_it_does_ko": "MLflow Model Registry는 ML 모델의 전체 수명주기를 협업으로 관리하는 중앙 모델 저장소, API 모음, UI다. 어떤 실험·실행이 모델을 만들었는지(계보), 버전, 별칭, 메타데이터 태그, 주석을 관리한다. 오픈소스 MLflow와 Databricks 같은 관리형 플랫폼 양쪽에서 쓸 수 있다. 별칭(@champion 등)으로 운영 트래픽에 쓸 모델 버전을 바꿔 배포 흐름을 관리한다.",
+ "key_features": [
+  "모델 버전 자동 추적·롤백",
+  "모델 계보(실행·노트북 연결) 추적",
+  "모델 별칭(@champion 등)",
+  "키-값 태그와 Markdown 주석",
+  "Python API와 UI로 모델 등록",
+  "관리형 백엔드에서 역할 기반 접근 제어"
+ ],
+ "use_cases_ko": [
+  "모델을 스테이징·운영 환경으로 승격 관리",
+  "ML 플랫폼 팀의 모델 거버넌스"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "오픈소스(라이선스 이름 미표기)",
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "CLI",
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://mlflow.org/docs/2.0.1/",
+   "quote": "© MLflow Project, a Series of LF Projects, LLC. All rights reserved."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://mlflow.org/docs/latest/ml/model-registry/",
+   "quote": "The MLflow Model Registry is a centralized model store, set of APIs and a UI designed to"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://mlflow.org/docs/latest/ml/model-registry/",
+   "quote": "It provides lineage (i.e., which"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://mlflow.org/docs/latest/ml/model-registry/",
+   "quote": "The MLflow Model Registry is available in both open-source (OSS) MLflow and managed platforms like Databricks."
+  },
+  {
+   "field": "key_features",
+   "url": "https://mlflow.org/docs/latest/ml/model-registry/",
+   "quote": "The registry automatically tracks versions of each model, allowing teams to compare iterations, roll back to previous states"
+  },
+  {
+   "field": "key_features",
+   "url": "https://mlflow.org/docs/latest/ml/model-registry/",
+   "quote": "Model aliases allow you to assign a mutable, named reference to a particular version of a registered model."
+  },
+  {
+   "field": "key_features",
+   "url": "https://mlflow.org/docs/latest/ml/model-registry/",
+   "quote": "Tags are key-value pairs that you associate with registered models and model versions"
+  },
+  {
+   "field": "key_features",
+   "url": "https://mlflow.org/docs/latest/ml/model-registry/",
+   "quote": "role-based access controls (when used with a backend like Databricks or a managed MLflow service)"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://mlflow.org/docs/latest/ml/model-registry/",
+   "quote": "promoting models to experimental, staging, or production environments in a controlled and auditable way."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://mlflow.org/docs/latest/ml/model-registry/",
+   "quote": "Governance and Compliance"
+  },
+  {
+   "field": "open_source",
+   "url": "https://mlflow.org/docs/2.0.1/",
+   "quote": "MLflow is an open source platform for managing the end-to-end machine learning lifecycle."
+  },
+  {
+   "field": "api",
+   "url": "https://mlflow.org/docs/2.0.1/",
+   "quote": "since all functions are accessible through a REST API"
+  },
+  {
+   "field": "platforms",
+   "url": "https://mlflow.org/docs/2.0.1/",
+   "quote": "and CLI . For convenience, the project also includes a Python API , R API ,"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://mlflow.org/docs/latest/ml/model-registry/",
+   "quote": "hreflang: en, x-default"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

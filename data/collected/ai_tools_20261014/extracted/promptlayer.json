@@ -1,0 +1,199 @@
+{
+ "company": "PromptLayer",
+ "one_liner_ko": "AI 엔지니어링 팀을 위한 프롬프트 관리·평가·관측(observability) 협업 플랫폼.",
+ "what_it_does_ko": "PromptLayer는 AI 엔지니어링 팀을 위한 협업 계층으로, 프롬프트 CMS·평가 도구·관측 스택을 제공한다. 코드 배포 없이 대시보드에서 프롬프트를 시각적으로 편집·버전 관리·테스트·배포할 수 있어 비개발 도메인 전문가도 참여한다. 운영 추적(trace)을 프롬프트 버전과 연결해 비용·지연·토큰 사용량을 보고, 데이터셋 기반 테스트·사람 검토·자동 채점으로 변경 전에 평가한다. 에이전트 워크플로의 도구 호출 추적과 다단계 실행 평가도 지원한다.",
+ "key_features": [
+  "노코드 프롬프트 편집기와 프롬프트 레지스트리(버전 관리·비교·롤백)",
+  "프롬프트 A/B 테스트와 점진 배포",
+  "과거 데이터 백테스트·회귀 테스트·모델 비교 평가",
+  "비용·지연·토큰 사용량 관측",
+  "에이전트 워크플로 버전 관리와 도구 호출 추적",
+  "REST API·SDK·웹훅·OpenTelemetry",
+  "SOC 2 Type 2·HIPAA·GDPR 준수"
+ ],
+ "use_cases_ko": [
+  "비개발 콘텐츠팀이 언어 학습 앱 프롬프트를 직접 개선",
+  "이커머스 고객지원 AI의 프롬프트 개선·회귀 평가",
+  "영업 아웃바운드 메일 초안 작성 에이전트"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Free $0: 사용자 5명, 월 2.5k 요청, 워크스페이스 1개, 월 250 평가 셀 실행, 데이터셋 10MB)",
+  "plans": [
+   {
+    "name": "Free",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "사용자 5명, 월 2.5k 요청, 워크스페이스 1, 월 250 평가 셀 실행, 데이터셋 10MB",
+    "page_lang": "en"
+   },
+   {
+    "name": "Pro",
+    "price": 49,
+    "currency": "USD",
+    "period": "month",
+    "limits": "Free 한도 + 플레이그라운드·워크스페이스 무제한, 데이터셋 150MB, 초과 건당 $0.003",
+    "page_lang": "en"
+   },
+   {
+    "name": "Team",
+    "price": 500,
+    "currency": "USD",
+    "period": "month",
+    "limits": "사용자 25명, 월 100k+ 요청, 월 7.5k+ 평가 셀 실행, 데이터셋 1GB, 초과 건당 $0.002",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": "USD",
+    "period": "month",
+    "limits": "맞춤 가격·한도, RBAC, 배포 승인, BAA 포함 HIPAA, 자체 호스팅 옵션",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://www.promptlayer.com/pricing/"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.promptlayer.com/pricing/",
+   "quote": "PromptLayer © 2026"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.promptlayer.com/",
+   "quote": "The collaboration layer for AI engineering teams"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.promptlayer.com/",
+   "quote": "The prompt CMS, eval harness, and observability stack you'd build eventually — shipped today."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.promptlayer.com/",
+   "quote": "Visually edit, version, test, and deploy prompts without waiting for an application redeploy."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.promptlayer.com/",
+   "quote": "Connect production traces to prompt versions, inspect failures, and track cost, latency, and token usage."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.promptlayer.com/",
+   "quote": "Run dataset-backed tests, human review, and automated graders before prompt or workflow changes reach production."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.promptlayer.com/",
+   "quote": "Update and test prompts directly from the dashboard."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.promptlayer.com/",
+   "quote": "Comment, write notes, diff versions, and roll back changes."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.promptlayer.com/",
+   "quote": "Release new prompt versions gradually and compare metrics."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.promptlayer.com/",
+   "quote": "See how new prompt versions fare against historical data."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.promptlayer.com/",
+   "quote": "Trigger evals to run every time a prompt is updated."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.promptlayer.com/",
+   "quote": "Jump into traces to see exactly how each step behaved in production."
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.promptlayer.com/overview",
+   "quote": "SDKs Release Labels Webhooks OpenTelemetry Self-hosting MCP API Reference Changelog"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.promptlayer.com/",
+   "quote": "We maintain SOC 2 Type 2, HIPAA, and GDPR compliance."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.promptlayer.com/",
+   "quote": "Speak uses PromptLayer to help non-technical teams iterate on prompts, evaluate lesson quality, and ship better language learning experiences faster."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.promptlayer.com/",
+   "quote": "Gorgias uses PromptLayer to refine prompts, replay edge cases, run regression evals, and review live traffic for AI support."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.promptlayer.com/",
+   "quote": "We use PromptLayer internally to qualify new signups, research accounts, and draft personalized outbound emails with agents."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.promptlayer.com/pricing/",
+   "quote": "Free\n for hackers\n $0\n per month\n 5 Users \n 2.5k/month Requests \n 1 Workspace \n 250/month Eval Cell Executions \n 10MB max per Dataset"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.promptlayer.com/pricing/",
+   "quote": "Pro\n for small teams\n $49\n per month"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.promptlayer.com/pricing/",
+   "quote": "Unlimited Playgrounds \n Unlimited Workspaces \n 150MB max per Dataset \n Pay-as-you-go ($0.003 per txn)"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.promptlayer.com/pricing/",
+   "quote": "Team\n for growing teams\n $500\n per month\n 25 Users \n 100k+/month Requests"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.promptlayer.com/pricing/",
+   "quote": "Enterprise\n Custom\n Custom limits on everything"
+  },
+  {
+   "field": "api",
+   "url": "https://docs.promptlayer.com/overview",
+   "quote": "REST API"
+  },
+  {
+   "field": "platforms",
+   "url": "https://www.promptlayer.com/pricing/",
+   "quote": "PromptLayer Free, Pro, and Team is Cloud-hosted in the US."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.promptlayer.com/",
+   "quote": "hreflang: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "SaaS 구독 Free $0 / Pro $49 / Team $500 (월) + Enterprise 맞춤, 한도 초과 시 건당 과금($0.003·$0.002), Enterprise는 자체 호스팅 가능",
+   "diff": "기존 분류는 '오픈소스 + 클라우드 유료 플랜'이나 공식 페이지에는 오픈소스 언급이 없고 구독+초과 종량 과금 구조",
+   "url": "https://www.promptlayer.com/pricing/"
+  }
+ ]
+}

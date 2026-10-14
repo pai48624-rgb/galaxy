@@ -1,0 +1,147 @@
+{
+ "company": "OpenHands",
+ "one_liner_ko": "에이전트 기반 소프트웨어 개발을 위한 오픈 플랫폼.",
+ "what_it_does_ko": "OpenHands는 코딩 에이전트로 PR 리뷰, CI 실패 수정, 이슈 분류, QA, 장애 조사 같은 반복 개발 업무를 자동화한다. GitHub·Slack·Jira·Linear·일정에서 작업을 시작시키고 MCP로 내부 도구를 연결한다. Claude Code·Codex·Gemini CLI 등 다른 에이전트와 여러 모델을 로컬·클라우드·VPC에서 돌릴 수 있다. 오픈소스판은 로컬 웹 GUI·CLI·SDK를 제공하고, 클라우드판은 호스팅 실행과 연동 기능을 더한다.",
+ "key_features": [
+  "PR 리뷰·CI 실패 자동 수정",
+  "이슈 분류·초안 PR 작성",
+  "GitHub·Slack·Jira·Linear 트리거 자동화",
+  "MCP로 내부 도구 연결",
+  "여러 에이전트·모델 선택(모델 무관)",
+  "웹 GUI·터미널 UI·CLI",
+  "Software Agent SDK·Agent Server(REST·WebSocket API)"
+ ],
+ "use_cases_ko": [
+  "PR 리뷰와 CI 실패 수정 자동화",
+  "장애 조사와 수정안 제안",
+  "의존성 업데이트·릴리스 노트 같은 반복 작업"
+ ],
+ "pricing": {
+  "free_tier": "있음 (오픈소스 로컬판 무료, 클라우드 Individual 무료·하루 대화 10개, LLM은 원가 종량제 또는 자체 키)",
+  "plans": [
+   {
+    "name": "Open Source (Local)",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "1명, 하루 대화 무제한, 로컬 실행",
+    "page_lang": "en"
+   },
+   {
+    "name": "Individual (SaaS)",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "1명, 하루 대화 10개, BYOK 또는 OpenHands LLM 원가 종량제",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": null,
+    "period": null,
+    "limits": "맞춤 가격, SaaS 또는 자체 호스팅, 사용자 무제한",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://www.openhands.dev/pricing"
+ },
+ "open_source": "MIT",
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "CLI",
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.openhands.dev/pricing",
+   "quote": "Welcome to OpenHands, a community focused on AI-driven development"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.openhands.dev/",
+   "quote": "The open platform for agentic software development"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.openhands.dev/",
+   "quote": "Use Claude Code, Codex, Gemini CLI, OpenHands, or your own stack."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.openhands.dev/pricing",
+   "quote": "our open source options include a local Web GUI, a CLI, and a Software Agent SDK."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.openhands.dev/",
+   "quote": "Review changes, catch issues, fix failed checks, and open follow-up PRs automatically."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.openhands.dev/",
+   "quote": "Trigger work from GitHub, Slack, Jira, Linear, and more. Use MCP to connect internal tools, APIs, and data sources"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.openhands.dev/overview/introduction",
+   "quote": "exposes agent execution, conversations, tools, and workspaces through REST and WebSocket APIs."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.openhands.dev/",
+   "quote": "Pull together alerts, logs, and recent changes, then investigate the issue and propose a patch"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.openhands.dev/",
+   "quote": "Handle dependency updates, QA sweeps, release notes, and other scheduled work even when laptops are closed."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.openhands.dev/pricing",
+   "quote": "Bring your own key or use our providers at-cost"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.openhands.dev/pricing",
+   "quote": "Max Daily Conversations\n Unlimited\n 10\n Unlimited"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.openhands.dev/pricing",
+   "quote": "Enterprise\n Custom pricing\n Full control and support."
+  },
+  {
+   "field": "open_source",
+   "url": "https://www.openhands.dev/pricing",
+   "quote": "OpenHands Open Source is a full, MIT licensed version of OpenHands"
+  },
+  {
+   "field": "api",
+   "url": "https://www.openhands.dev/pricing",
+   "quote": "API support for automation and scripting"
+  },
+  {
+   "field": "platforms",
+   "url": "https://www.openhands.dev/pricing",
+   "quote": "Web-based GUI, Terminal UI, and CLI"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.openhands.dev/",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "개인용은 오픈소스 무료·클라우드 Individual 무료(LLM은 원가 종량제 또는 자체 키), 유료는 맞춤 가격 Enterprise뿐",
+   "diff": "개인용 유료 구독 요금제가 없고 LLM 사용량 종량제 + 기업 맞춤 계약 구조",
+   "url": "https://www.openhands.dev/pricing"
+  }
+ ]
+}

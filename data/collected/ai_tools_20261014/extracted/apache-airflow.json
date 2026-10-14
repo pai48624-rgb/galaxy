@@ -1,0 +1,114 @@
+{
+ "company": "The Apache Software Foundation",
+ "one_liner_ko": "워크플로를 코드로 작성·예약·모니터링하는, 커뮤니티가 만든 플랫폼.",
+ "what_it_does_ko": "Apache Airflow는 워크플로를 프로그래밍 방식으로 작성·예약·모니터링하는 플랫폼이다. 파이프라인을 파이썬으로 정의해 동적으로 생성할 수 있고, 메시지 큐로 여러 워커를 조율하는 모듈형 구조로 확장된다. 웹 UI로 워크플로 상태와 로그를 보고 관리하며, GCP·AWS·Azure 등에서 작업을 실행하는 연산자(operator) 통합을 제공한다. 공식 Docker 이미지, Helm 차트, REST API 기반 CLI(airflowctl), 파이썬 API 클라이언트를 제공한다.",
+ "key_features": [
+  "순수 파이썬으로 동적 파이프라인 정의",
+  "웹 UI로 워크플로 모니터링·예약·관리",
+  "GCP·AWS·Azure 등 외부 서비스용 플러그앤플레이 연산자",
+  "메시지 큐 기반 워커 확장",
+  "Jinja 템플릿 매개변수화",
+  "REST API 기반 CLI(airflowctl)·파이썬 API 클라이언트",
+  "공식 Docker 이미지·Helm 차트(쿠버네티스)"
+ ],
+ "use_cases_ko": [
+  "파이썬 사용자가 ML 모델 구축·데이터 전송·인프라 관리 워크플로 자동화"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "Apache-2.0",
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "CLI",
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://airflow.apache.org",
+   "quote": "© The Apache Software Foundation 2026"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://airflow.apache.org",
+   "quote": "Apache Airflow® is a platform created by the community to programmatically author, schedule and monitor"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://airflow.apache.org",
+   "quote": "Apache Airflow® pipelines are defined in Python, allowing for dynamic pipeline generation."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://airflow.apache.org",
+   "quote": "has a modular architecture and uses a message queue to orchestrate an arbitrary number of workers"
+  },
+  {
+   "field": "key_features",
+   "url": "https://airflow.apache.org",
+   "quote": "Use standard Python features to create your workflows"
+  },
+  {
+   "field": "key_features",
+   "url": "https://airflow.apache.org",
+   "quote": "Monitor, schedule and manage your workflows via a robust and modern web application."
+  },
+  {
+   "field": "key_features",
+   "url": "https://airflow.apache.org",
+   "quote": "provides many plug-and-play operators that are ready to execute your tasks on Google Cloud Platform, Amazon Web Services, Microsoft Azure"
+  },
+  {
+   "field": "key_features",
+   "url": "https://airflow.apache.org",
+   "quote": "Parametrization is built into its core using the powerful Jinja templating engine."
+  },
+  {
+   "field": "key_features",
+   "url": "https://airflow.apache.org/docs/",
+   "quote": "is a command-line interface (CLI) for Apache Airflow that interacts exclusively with the Airflow REST API."
+  },
+  {
+   "field": "key_features",
+   "url": "https://airflow.apache.org/docs/",
+   "quote": "Airflow has an official Helm Chart that will help you set up your own Airflow on a cloud/on-prem Kubernetes environment"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://airflow.apache.org",
+   "quote": "you can use it to build ML models, transfer data, manage your infrastructure, and more."
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/apache/airflow",
+   "quote": "to you under the Apache License, Version 2.0 (the"
+  },
+  {
+   "field": "api",
+   "url": "https://airflow.apache.org/docs/",
+   "quote": "Airflow releases official Python API client that can be used to easily interact with Airflow REST API from Python code."
+  },
+  {
+   "field": "platforms",
+   "url": "https://airflow.apache.org",
+   "quote": "Monitor, schedule and manage your workflows via a robust and modern web application."
+  },
+  {
+   "field": "platforms",
+   "url": "https://airflow.apache.org/docs/",
+   "quote": "is a command-line interface (CLI) for Apache Airflow that interacts exclusively with the Airflow REST API."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://airflow.apache.org",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: English"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

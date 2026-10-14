@@ -1,0 +1,119 @@
+{
+ "company": "Apple (Apple machine learning research)",
+ "one_liner_ko": "Apple 실리콘에서 머신러닝을 하기 위한 배열(array) 프레임워크.",
+ "what_it_does_ko": "MLX는 Apple 머신러닝 연구팀이 만든 Apple 실리콘용 머신러닝 배열 프레임워크다. NumPy와 비슷한 Python API와 C++·C·Swift API를 제공하고, mlx.nn·mlx.optimizers 같은 상위 패키지는 PyTorch와 비슷하게 쓸 수 있다. 연산은 지연(lazy) 실행되고 계산 그래프는 동적으로 만들어지며, 배열이 공유(통합) 메모리에 있어 CPU·GPU 사이 데이터 이동 없이 연산한다. macOS에서는 pip로 설치하며 Linux용 CUDA 백엔드·CPU 전용 패키지도 있다.",
+ "key_features": [
+  "NumPy와 비슷한 Python API + C++·C·Swift API",
+  "PyTorch와 비슷한 mlx.nn·mlx.optimizers",
+  "자동 미분·자동 벡터화 등 조합 가능한 함수 변환",
+  "지연(lazy) 연산",
+  "동적 계산 그래프",
+  "CPU·GPU 멀티 디바이스",
+  "통합 메모리 모델",
+  "Linux용 CUDA 백엔드"
+ ],
+ "use_cases_ko": [
+  "머신러닝 연구자가 Apple 실리콘에서 모델을 학습·배포",
+  "트랜스포머 언어모델 학습, LLaMA 텍스트 생성·LoRA 파인튜닝, Stable Diffusion 이미지 생성, Whisper 음성 인식 예제"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "맥"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://github.com/ml-explore/mlx",
+   "quote": "brought to you by Apple machine learning research."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/ml-explore/mlx",
+   "quote": "MLX is an array framework for machine learning on Apple silicon,"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/ml-explore/mlx",
+   "quote": "MLX has a Python API that closely follows NumPy."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/ml-explore/mlx",
+   "quote": "Arrays in MLX live in shared memory."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/ml-explore/mlx",
+   "quote": "To install the CUDA backend on Linux, run:"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/ml-explore/mlx",
+   "quote": "**Familiar APIs**: MLX has a Python API that closely follows NumPy."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/ml-explore/mlx",
+   "quote": "**Composable function transformations**: MLX supports composable function"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/ml-explore/mlx",
+   "quote": "**Lazy computation**: Computations in MLX are lazy."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/ml-explore/mlx",
+   "quote": "**Dynamic graph construction**: Computation graphs in MLX are constructed"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/ml-explore/mlx",
+   "quote": "**Multi-device**: Operations can run on any of the supported devices"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/ml-explore/mlx",
+   "quote": "**Unified memory**: A notable difference from MLX and other frameworks"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/ml-explore/mlx",
+   "quote": "pip install mlx[cuda]"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/ml-explore/mlx",
+   "quote": "MLX is designed by machine learning researchers for machine learning"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/ml-explore/mlx",
+   "quote": "Generating images with [Stable Diffusion]"
+  },
+  {
+   "field": "api",
+   "url": "https://github.com/ml-explore/mlx",
+   "quote": "MLX has a Python API that closely follows NumPy."
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/ml-explore/mlx",
+   "quote": "MLX is available on [PyPI](https://pypi.org/project/mlx/). To install MLX on\nmacOS, run:"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://ml-explore.github.io/mlx/build/html/index.html",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

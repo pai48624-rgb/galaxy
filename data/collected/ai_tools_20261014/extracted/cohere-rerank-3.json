@@ -1,0 +1,107 @@
+{
+ "company": "Cohere",
+ "one_liner_ko": "정밀한 결과 순위 매기기로 기업 검색·검색(retrieval)을 다듬는 리랭크 모델.",
+ "what_it_does_ko": "Cohere Rerank는 검색 결과 중 가장 관련 있는 문서만 RAG 파이프라인과 에이전트 워크플로에 넘겨 토큰 사용과 지연을 줄이고 정확도를 높인다. 교차 어텐션(cross-attention)으로 세밀하게 순위를 매긴다. Rerank 3는 Microsoft Azure AI에서도 제공된다고 소개되며, API의 /rerank 엔드포인트로 쓸 수 있다. 가격은 공개 숫자 없이 영업 문의 방식이다.",
+ "key_features": [
+  "RAG·에이전트 워크플로에 가장 관련 있는 문서만 전달",
+  "교차 어텐션 기반 세밀한 순위화",
+  "AI 에이전트에 더 간결하고 관련성 높은 맥락 제공",
+  "기업 규모의 정확한 검색 순위",
+  "Microsoft Azure AI에서 Rerank 3 제공",
+  "온프렘·격리 VPC 프라이빗 배포"
+ ],
+ "use_cases_ko": [
+  "AI 에이전트 맥락 최적화",
+  "RAG 정확도 향상",
+  "기업 검색 품질 업그레이드"
+ ],
+ "pricing": {
+  "free_tier": null,
+  "plans": [
+   {
+    "name": "엔터프라이즈(영업 문의)",
+    "price": null,
+    "currency": null,
+    "period": null,
+    "limits": "가격 숫자 공개 안 됨",
+    "page_lang": "en-US"
+   }
+  ],
+  "pricing_url": "https://cohere.com/pricing"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "API"
+ ],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://cohere.com/rerank",
+   "quote": "Rerank | Boost Enterprise Search and Retrieval | Cohere"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://cohere.com/rerank",
+   "quote": "Refine your enterprise search and retrieval with precise result ranking"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://cohere.com/rerank",
+   "quote": "Rerank passes only the most relevant documents into your RAG pipeline and agentic workflows — reducing token use, minimizing latency, and boosting accuracy."
+  },
+  {
+   "field": "key_features",
+   "url": "https://cohere.com/rerank",
+   "quote": "Applies cross-attention for fine-grained ranking"
+  },
+  {
+   "field": "key_features",
+   "url": "https://cohere.com/rerank",
+   "quote": "Guide AI agents with leaner, more relevant context — minimizing trace bloat and improving task execution."
+  },
+  {
+   "field": "key_features",
+   "url": "https://cohere.com/rerank",
+   "quote": "Rerank delivers accurate retrieval ranking at enterprise scale."
+  },
+  {
+   "field": "key_features",
+   "url": "https://cohere.com/rerank",
+   "quote": "Introducing Rerank 3 on Microsoft Azure AI"
+  },
+  {
+   "field": "key_features",
+   "url": "https://cohere.com/rerank",
+   "quote": "Private Deployments\n On-prem or isolated VPCs"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://cohere.com/rerank",
+   "quote": "AI Agents RAG Accuracy Upgraded Search"
+  },
+  {
+   "field": "pricing",
+   "url": "https://cohere.com/pricing",
+   "quote": "Move from proof of concept into production with our enterprise-ready AI solutions — private, secure, and built to work with your existing systems.\n Contact sales"
+  },
+  {
+   "field": "api",
+   "url": "https://docs.cohere.com/",
+   "quote": "Our endpoints offer different ways to interact with our models and offer additional value on top of them"
+  },
+  {
+   "field": "platforms",
+   "url": "https://docs.cohere.com/",
+   "quote": "/CHAT \n /EMBED \n /RERANK"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://cohere.com/rerank",
+   "quote": "화면에 보이는 언어 이름: 한국어, English, 日本語, Français, Deutsch"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

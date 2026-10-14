@@ -1,0 +1,74 @@
+=== [github] https://github.com/stanford-futuredata/ColBERT
+<p align="center">
+  <img align="center" src="docs/images/colbertofficial.png" width="430px" />
+</p>
+<p align="left">
+
+# ColBERT (v2)
+
+### ColBERT is a _fast_ and _accurate_ retrieval model, enabling scalable BERT-based search over large text collections in tens of milliseconds.
+
+[<img align="center" src="https://colab.research.google.com/assets/colab-badge.svg" />](https://colab.research.google.com/github/stanford-futuredata/ColBERT/blob/main/docs/intro2new.ipynb)
+
+
+<p align="center">
+  <img align="center" src="docs/images/ColBERT-Framework-MaxSim-W370px.png" />
+</p>
+<p align="center">
+  <b>Figure 1:</b> ColBERT's late interaction, efficiently scoring the fine-grained similarity between a queries and a passage.
+</p>
+
+As Figure 1 illustrates, ColBERT relies on fine-grained **contextual late interaction**: it encodes each passage into a **matrix** of token-level embeddings (shown above in blue). Then at search time, it embeds every query into another matrix (shown in green) and efficiently finds passages that contextually match the query using scalable vector-similarity (`MaxSim`) operators.
+
+These rich interactions allow ColBERT to surpass the quality of _single-vector_ representation models, while scaling efficiently to large corpora.
+
+
+#### You can read more in our papers:
+
+* [**ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT**](https://arxiv.org/abs/2004.12832) (SIGIR'20).
+* [**Relevance-guided Supervision for OpenQA with ColBERT**](https://arxiv.org/abs/2007.00814) (TACL'21).
+* [**Baleen: Robust Multi-Hop Reasoning at Scale via Condensed Retrieval**](https://arxiv.org/abs/2101.00436) (NeurIPS'21).
+* [**ColBERTv2: Effective and Efficient Retrieval via Lightweight Late Interaction**](https://arxiv.org/abs/2112.01488) (NAACL'22).
+* [**PLAID: An Efficient Engine for Late Interaction Retrieval**](https://arxiv.org/abs/2205.09707) (CIKM'22).
+* [**Moving Beyond Downstream Task Accuracy for Information Retrieval Benchmarking**](https://arxiv.org/abs/2212.01340) (ACL'23 Findings).
+* [**UDAPDR: Unsupervised Domain Adaptation via LLM Prompting and Distillation of Rerankers**](https://arxiv.org/abs/2303.00807) (EMNLP'23).
+
+----
+
+## 🚨 **Announcements** 
+
+* (1/28/24) One of the easiest ways to use ColBERT in applications nowadays is the semi-official, fast-growing [RAGatouille](https://github.com/bclavie/ragatouille) library.
+* (1/29/23) We have merged a new index updater feature and support for additional Hugging Face models! These are in beta so please give us feedback as you try them out.
+* (1/24/23) If you're looking for the **DSPy** framework for composing retrievers like ColBERTv2 and LLMs, it's at: https://github.com/stanfordnlp/dspy
+
+----
+
+## ColBERTv1
+
+The ColBERTv1 code from the SIGIR'20 paper is in the [`colbertv1` branch](https://github.com/stanford-futuredata/ColBERT/tree/colbertv1). See [here](#branches) for more information on other branches.
+
+
+## Installation
+
+(Update: nowadays you can typically do `pip install colbert-ai[torch,faiss-gpu]` to get things up and running, but if you face issues conda is always more reliable for `faiss` and `torch`.)
+
+ColBERT requires Python 3.7+ and Pytorch 1.9+ and uses the [Hugging Face Transformers](https://github.com/huggingface/transformers) library.
+
+We strongly recommend creating a conda environment using the commands below. (If you don't have conda, follow the official [conda installation guide](https://docs.anaconda.com/anaconda/install/linux/#installation).)
+
+We have also included a new environment file specifically for CPU-only environments (`conda_env_cpu.yml`), but note that if you are testing CPU execution on a machine that includes GPUs you might need to specify `CUDA_VISIBLE_DEVICES=""` as part of your command. Note that a GPU is required for training and indexing.
+
+```
+conda env create -f conda_env[_cpu].yml
+conda activate colbert
+```
+
+If you face any problems, please [open a new issue](https://github.com/stanford-futuredata/ColBERT/issues) and we'll help you promptly!
+
+
+
+## Overview
+
+Using ColBERT on a dataset typically involves the following steps.
+
+**Step 0: Preprocess your collection.** At its simplest, ColBERT works wit

@@ -1,0 +1,97 @@
+{
+ "company": null,
+ "one_liner_ko": "PostgreSQL에서 쓰는 오픈소스 벡터 유사도 검색 확장.",
+ "what_it_does_ko": "pgvector는 벡터를 다른 데이터와 함께 Postgres에 저장하고 정확·근사 최근접 이웃 검색을 하게 해 주는 확장이다. 단정밀도·반정밀도·이진·희소 벡터와 L2, 내적, 코사인, L1, 해밍, 자카드 거리를 지원한다. Postgres 클라이언트가 있는 모든 언어에서 쓸 수 있고, ACID·시점 복구·JOIN 등 Postgres 기능을 그대로 누린다. 벡터가 많으면 양자화로 확장할 수 있다.",
+ "key_features": [
+  "정확·근사 최근접 이웃 검색",
+  "단정밀도·반정밀도·이진·희소 벡터",
+  "L2·내적·코사인·L1·해밍·자카드 거리",
+  "Postgres 클라이언트가 있는 모든 언어 지원",
+  "ACID·시점 복구·JOIN 등 Postgres 기능",
+  "양자화로 대규모 확장",
+  "COPY로 대량 적재·업서트"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": null,
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "오픈소스(라이선스 이름은 페이지에 없음)",
+ "api": "불명",
+ "platforms": [
+  "리눅스",
+  "맥",
+  "윈도"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/pgvector/pgvector",
+   "quote": "Open-source vector similarity search for Postgres"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/pgvector/pgvector",
+   "quote": "Store your vectors with the rest of your data. Supports:"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/pgvector/pgvector",
+   "quote": "Plus [ACID](https://en.wikipedia.org/wiki/ACID) compliance, point-in-time recovery, JOINs"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/pgvector/pgvector",
+   "quote": "- exact and approximate nearest neighbor search"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/pgvector/pgvector",
+   "quote": "- single-precision, half-precision, binary, and sparse vectors"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/pgvector/pgvector",
+   "quote": "- L2 distance, inner product, cosine distance, L1 distance, Hamming distance, and Jaccard distance"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/pgvector/pgvector",
+   "quote": "- any [language](#languages) with a Postgres client"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/pgvector/pgvector",
+   "quote": "Have a lot of vectors? Use [quantization](#scaling) to scale"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/pgvector/pgvector",
+   "quote": "Or load vectors in bulk using `COPY`"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/pgvector/pgvector",
+   "quote": "Open-source vector similarity search for Postgres"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/pgvector/pgvector",
+   "quote": "Compile and install the extension (supports Postgres 13+)"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/pgvector/pgvector",
+   "quote": "### Linux and Mac"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/pgvector/pgvector",
+   "quote": "### Windows"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

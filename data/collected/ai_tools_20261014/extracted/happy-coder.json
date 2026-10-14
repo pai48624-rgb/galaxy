@@ -1,0 +1,133 @@
+{
+ "company": "Happy Engineering",
+ "one_liner_ko": "이미 쓰는 구독으로 Claude·Codex·Grok을 한 앱에서 지휘하는 무료 오픈소스 하네스(휴대폰에서도 이어서 작업).",
+ "what_it_does_ko": "Happy는 Claude·Codex·Grok을 한 앱에서 지휘하는 오픈소스 하네스로, 이미 결제 중인 구독으로 로그인해 쓴다. 내 하드웨어에서 돌고, 같은 세션을 종단간 암호화된 모바일 앱에서 이어 볼 수 있다. 팀 서버를 띄워 여러 사람이 같은 프로젝트·세션을 공유할 수 있다. 원래의 Happy CLI(Happy Coder)는 유지보수 모드로 남아 있고 새 기능은 데스크톱 앱에 들어간다.",
+ "key_features": [
+  "여러 공급자 모델을 한 앱에서, 하위 에이전트 위임",
+  "기존 Claude·Codex·Grok 구독 재사용",
+  "종단간 암호화 모바일 앱",
+  "팀 서버로 멀티플레이어 협업",
+  "터미널에서 happy claude / happy codex로 시작해 휴대폰에서 재개",
+  "음성 코딩·푸시 알림"
+ ],
+ "use_cases_ko": [
+  "집 밖에서 휴대폰으로 코딩 작업을 걸어 두고 돌아와 PR 리뷰",
+  "프런트엔드·백엔드를 각각 다른 Claude Code 인스턴스에 맡겨 병렬 작업"
+ ],
+ "pricing": {
+  "free_tier": "있음 (무료 오픈소스, 핵심 앱 사용료·구독 없음)",
+  "plans": [],
+  "pricing_url": "https://happy.engineering"
+ },
+ "open_source": "MIT",
+ "api": "불명",
+ "platforms": [
+  "맥",
+  "윈도",
+  "iOS",
+  "안드로이드",
+  "웹",
+  "CLI"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://happy.engineering",
+   "quote": "© 2026 Happy Engineering"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://happy.engineering",
+   "quote": "Orchestrate Claude, Codex and Grok in one app"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://happy.engineering",
+   "quote": "Sign in with the Claude, Codex, and Grok subscriptions you already pay for. Happy adds a harness, not another bill."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://happy.engineering",
+   "quote": "Left your desk? The same sessions are already on your phone, and what moves between your devices is encrypted."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://happy.engineering",
+   "quote": "Deploy a team server and work together."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://happy.engineering/docs/",
+   "quote": "is in maintenance mode: it keeps working and still gets critical fixes, but new features ship in the Happy desktop app"
+  },
+  {
+   "field": "key_features",
+   "url": "https://happy.engineering",
+   "quote": "Give every task the model that fits, and delegate to subagents on any of them."
+  },
+  {
+   "field": "key_features",
+   "url": "https://happy.engineering",
+   "quote": "End-to-end encrypted mobile app"
+  },
+  {
+   "field": "key_features",
+   "url": "https://happy.engineering",
+   "quote": "Natively multiplayer"
+  },
+  {
+   "field": "key_features",
+   "url": "https://happy.engineering",
+   "quote": "Start Claude Code or Codex in your terminal. Resume that session or start a new one from your phone."
+  },
+  {
+   "field": "key_features",
+   "url": "https://happy.engineering/docs/",
+   "quote": "Voice Coding"
+  },
+  {
+   "field": "key_features",
+   "url": "https://happy.engineering/docs/",
+   "quote": "Push Notifications"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://happy.engineering/docs/",
+   "quote": "Leave the house, fire off coding tasks and"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://happy.engineering/docs/",
+   "quote": "Have one working on your frontend while another handles backend tasks."
+  },
+  {
+   "field": "pricing",
+   "url": "https://happy.engineering/docs/",
+   "quote": "there are no usage fees or subscriptions for the core app. Happy Coder is free and open source."
+  },
+  {
+   "field": "open_source",
+   "url": "https://happy.engineering",
+   "quote": "3 / Open source MIT"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/slopus/happy",
+   "quote": "The mobile app (iOS, Android, web), the original CLI, and the relay server"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/slopus/happy",
+   "quote": "The desktop app for macOS, Windows, and Linux"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://happy.engineering",
+   "quote": "hreflang: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [],
+ "note": "Happy Coder(원래 CLI)는 유지보수 모드, 현재 주력은 Happy 데스크톱 앱(같은 회사·같은 저장소 계열). 유료 요금제 언급 없음."
+}

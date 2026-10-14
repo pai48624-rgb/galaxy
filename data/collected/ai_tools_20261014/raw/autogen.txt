@@ -1,0 +1,193 @@
+=== [home] https://microsoft.github.io/autogen/stable/ (lang=en)
+AutoGen — AutoGen 
+ Skip to main content 
+ Font Awesome fontawesome.com -->Back to top 
+ Font Awesome fontawesome.com -->
+ Ctrl + K 
+ This is documentation for version stable . Switch to stable version 
+ Font Awesome fontawesome.com --> 
+ Font Awesome fontawesome.com -->
+ 0.7.5 (stable) 
+ dev (main) 0.7.5 (stable) 0.7.4 0.7.3 0.7.2 0.7.1 0.6.4 0.6.2 0.6.1 0.5.7 0.5.6 0.5.5 0.5.4 0.5.3 0.5.2 0.5.1 0.4.9 0.4.8 0.4.7 0.4.6 0.4.5 0.4.4 0.4.3 0.4.2 0.4.1 0.4.0 0.2 
+ AgentChat
+ Core
+ Extensions
+ Studio
+ API Reference
+ .NET
+ More
+ 0.2 Docs
+ Font Awesome fontawesome.com -->
+ Search 
+ Ctrl + K 
+ Font Awesome fontawesome.com -->
+ Font Awesome fontawesome.com -->
+ Font Awesome fontawesome.com -->
+ Font Awesome fontawesome.com -->
+ GitHub 
+ Font Awesome fontawesome.com -->
+ Discord 
+ Font Awesome fontawesome.com -->
+ Twitter 
+ Font Awesome fontawesome.com -->
+ Search 
+ Ctrl + K 
+ AgentChat
+ Core
+ Extensions
+ Studio
+ API Reference
+ .NET
+ 0.2 Docs
+ Font Awesome fontawesome.com -->
+ Font Awesome fontawesome.com -->
+ Font Awesome fontawesome.com -->
+ Font Awesome fontawesome.com -->
+ GitHub 
+ Font Awesome fontawesome.com -->
+ Discord 
+ Font Awesome fontawesome.com -->
+ Twitter 
+ AutoGen # 
+AutoGen
+A framework for building AI agents and applications
+ Font Awesome fontawesome.com --> Studio 
+ An web-based UI for prototyping with agents without writing code.
+Built on AgentChat.
+ pip install -U autogenstudio
+autogenstudio ui --port 8080 --appdir ./myapp
+ Start here if you are new to AutoGen and want to prototype with agents without writing code. 
+ Get Started 
+ Font Awesome fontawesome.com --> AgentChat
+A programming framework for building conversational single and multi-agent applications.
+Built on Core. Requires Python 3.10+.
+ # pip install -U "autogen-agentchat" "autogen-ext[openai]" 
+ import asyncio 
+ from autogen_agentchat.agents import AssistantAgent 
+ from autogen_ext.models.openai import OpenAIChatCompletionClient 
+ async def main () -> None : 
+ agent = AssistantAgent ( "assistant" , OpenAIChatCompletionClient ( model = "gpt-4o" )) 
+ print ( await agent . run ( task = "Say 'Hello World!'" )) 
+ asyncio . run ( main ()) 
+ Start here if you are prototyping with agents using Python. Migrating from AutoGen 0.2? . 
+ Get Started 
+ Font Awesome fontawesome.com --> Core 
+ An event-driven programming framework for building scalable multi-agent AI systems. Example scenarios:
+ Deterministic and dynamic agentic workflows for business processes.
+ Research on multi-agent collaboration.
+ Distributed agents for multi-language applications.
+ Start here if you are getting serious about building multi-agent systems. 
+ Get Started 
+ Font Awesome fontawesome.com --> Extensions 
+ Implementations of Core and AgentChat components that interface with external services or other libraries.
+You can find and use community extensions or create your own. Examples of built-in extensions:
+ McpWorkbench for using Model-Context Protocol (MCP) servers.
+ OpenAIAssistantAgent for using Assistant API.
+ DockerCommandLineCodeExecutor for running model-generated code in a Docker container.
+ GrpcWorkerAgentRuntime for distributed agents.
+ Discover Community Extensions 
+ Create New Extension 
+ next
+ AgentChat
+ Font Awesome fontawesome.com -->
+ so the DOM is not blocked -->
+ © Copyright 2024, Microsoft.
+ Privacy Policy | Consumer Health Privacy 
+ Built with the PyData Sphinx Theme 0.16.0.
+
+=== [meta] https://microsoft.github.io/autogen/stable/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/microsoft/autogen
+<a name="readme-top"></a>
+
+<div align="center">
+<img src="https://microsoft.github.io/autogen/0.2/img/ag.svg" alt="AutoGen Logo" width="100">
+
+[![Twitter](https://img.shields.io/twitter/url/https/twitter.com/cloudposse.svg?style=social&label=Follow%20%40pyautogen)](https://twitter.com/pyautogen)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Company?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/company/105812540)
+[![Discord](https://img.shields.io/badge/discord-chat-green?logo=discord)](https://aka.ms/autogen-discord)
+[![Documentation](https://img.shields.io/badge/Documentation-AutoGen-blue?logo=read-the-docs)](https://microsoft.github.io/autogen/)
+[![Blog](https://img.shields.io/badge/Blog-AutoGen-blue?logo=blogger)](https://devblogs.microsoft.com/autogen/)
+
+</div>
+
+# AutoGen [![Maintenance Mode](https://img.shields.io/badge/status-maintenance%20mode-orange)](https://github.com/microsoft/agent-framework)
+
+**AutoGen** is a framework for creating multi-agent AI applications that can act autonomously or work alongside humans.
+
+> [!CAUTION]
+> **⚠️ Maintenance Mode**
+>
+> AutoGen is now in maintenance mode. It will not receive new features or enhancements and is community managed going forward.
+>
+> New users should start with [Microsoft Agent Framework](https://github.com/microsoft/agent-framework). Existing users are encouraged to migrate using the [AutoGen → Microsoft Agent Framework migration guide](https://learn.microsoft.com/en-us/agent-framework/migration-guide/from-autogen/).
+>
+> Microsoft Agent Framework (MAF) is the enterprise‑ready successor to AutoGen. Microsoft Agent FrameworkAF in now available as a production-ready release: stable APIs, and a commitment to long-term support. Whether you're building a single assistant or orchestrating a fleet of specialized agents, Microsoft Agent Framework 1.0 gives you enterprise-grade multi-agent orchestration, multi-provider model support, and cross-runtime interoperability via A2A and MCP.
+
+## Installation
+
+AutoGen requires **Python 3.10 or later**.
+
+```bash
+# Install AgentChat and OpenAI client from Extensions
+pip install -U "autogen-agentchat" "autogen-ext[openai]"
+```
+
+The current stable version can be found in the [releases](https://github.com/microsoft/autogen/releases). If you are upgrading from AutoGen v0.2, please refer to the [Migration Guide](https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/migration-guide.html) for detailed instructions on how to update your code and configurations.
+
+```bash
+# Install AutoGen Studio for no-code GUI
+pip install -U "autogenstudio"
+```
+
+## Quickstart
+
+The following samples call OpenAI API, so you first need to create an account and export your key as `export OPENAI_API_KEY="sk-..."`.
+
+### Hello World
+
+Create an assistant agent using OpenAI's GPT-4o model. See [other supported models](https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/tutorial/models.html).
+
+```python
+import asyncio
+from autogen_agentchat.agents import AssistantAgent
+from autogen_ext.models.openai import OpenAIChatCompletionClient
+
+async def main() -> None:
+    model_client = OpenAIChatCompletionClient(model="gpt-4.1")
+    agent = AssistantAgent("assistant", model_client=model_client)
+    print(await agent.run(task="Say 'Hello World!'"))
+    await model_client.close()
+
+asyncio.run(main())
+```
+
+### MCP Server
+
+Create a web browsing assistant agent that uses the Playwright MCP server.
+
+```python
+# First run `npm install -g @playwright/mcp@latest` to install the MCP server.
+import asyncio
+from autogen_agentchat.agents import AssistantAgent
+from autogen_agentchat.ui import Console
+from autogen_ext.models.openai import OpenAIChatCompletionClient
+from autogen_ext.tools.mcp import McpWorkbench, StdioServerParams
+
+
+async def main() -> None:
+    model_client = OpenAIChatCompletionClient(model="gpt-4.1")
+    server_params = StdioServerParams(
+        command="npx",
+        args=[
+            "@playwright/mcp@latest",
+            "--headless",
+        ],
+    )
+    async with McpWorkbench(server_params) as mcp:
+        agent = AssistantAgent(
+            "web_browsing_assistant",
+            model_client=mo

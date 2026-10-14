@@ -1,0 +1,55 @@
+{
+ "company": "Stability AI",
+ "one_liner_ko": "텍스트 프롬프트로 음악·오디오를 생성하는 Stability AI의 웹 앱 겸 DAW 플러그인",
+ "what_it_does_ko": "Stable Audio는 장르·악기·분위기·BPM 등을 적은 프롬프트로 음악 트랙을 생성하는 서비스다. 모든 요금제에서 Stable Audio 웹 앱과 DAW 플러그인을 쓸 수 있다. 전체 믹스 생성과 멀티트랙 생성을 지원하며 유료 요금제는 최대 6분 길이까지 만들 수 있다. 연 매출 100만 달러 이상 기업에는 자체 인프라 배포 라이선스와 모델 맞춤 튜닝을 제공한다.",
+ "key_features": [
+  "프롬프트(장르·악기·분위기·BPM)로 음악 생성",
+  "Stable Audio 웹 앱",
+  "Stable Audio DAW 플러그인",
+  "전체 믹스 생성과 멀티트랙 생성",
+  "유료 요금제에서 최대 6분 길이 생성",
+  "기업용 자체 인프라 배포 라이선스 및 모델 미세조정"
+ ],
+ "use_cases_ko": [
+  "작곡 초기 아이디어·변주를 탐색하는 창작자",
+  "많은 작업을 소화하는 크리에이터·스튜디오",
+  "오디오 모델을 자체 인프라에 배포하려는 기업"
+ ],
+ "pricing": {
+  "free_tier": "있음 (월 50크레딧, 약 12회 전체 믹스 생성, 개인·비상업용)",
+  "plans": [
+   {"name": "Free", "price": 0, "currency": "USD", "period": "month", "limits": "월 50크레딧, 비상업용", "page_lang": "en"},
+   {"name": "Solo", "price": 12, "currency": "USD", "period": "month", "limits": "월 660크레딧(약 165회 전체 믹스), 최대 6분, 상업 라이선스", "page_lang": "en"},
+   {"name": "Session", "price": 30, "currency": "USD", "period": "month", "limits": "월 1,800크레딧(약 450회), 상업 라이선스", "page_lang": "en"},
+   {"name": "Producer", "price": 90, "currency": "USD", "period": "month", "limits": "월 6,000크레딧(약 1,500회), 상업 라이선스", "page_lang": "en"},
+   {"name": "Studio", "price": 199, "currency": "USD", "period": "month", "limits": "월 14,000크레딧(약 3,500회), 상업 라이선스", "page_lang": "en"},
+   {"name": "Enterprise", "price": null, "currency": null, "period": null, "limits": "연 매출 100만 달러 이상 기업, 자체 인프라 배포, 문의", "page_lang": "en"}
+  ],
+  "pricing_url": "https://stableaudio.com/pricing"
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": ["웹"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://stableaudio.com/pricing", "quote": "by Stability AI ©2026 - All rights reserved"},
+  {"field": "one_liner_ko", "url": "https://stableaudio.com/pricing", "quote": "All plans come with full access to the Stable Audio web app and the Stable Audio DAW plugin."},
+  {"field": "what_it_does_ko", "url": "https://stableaudio.com/", "quote": "TrackType: Music, VocalType: Instrumental, Genre: Synthwave, Genre: Tech House"},
+  {"field": "what_it_does_ko", "url": "https://stableaudio.com/pricing", "quote": "For enterprises with annual revenue over $1M interested in deploying our audio models on your own infrastructure"},
+  {"field": "key_features", "url": "https://stableaudio.com/pricing", "quote": "About 165 full-mix generations or 110 multi-track generations a month, any length up to 6 minutes"},
+  {"field": "key_features", "url": "https://stableaudio.com/pricing", "quote": "Customization: Work with our Audio Research team to fine-tune Stable Audio models for your sound guidelines."},
+  {"field": "use_cases_ko", "url": "https://stableaudio.com/pricing", "quote": "Explore prompts, variations, and early concepts"},
+  {"field": "use_cases_ko", "url": "https://stableaudio.com/pricing", "quote": "For prolific creators, studios, and collaborators"},
+  {"field": "pricing", "url": "https://stableaudio.com/pricing", "quote": "Free\n $0\n 50 credits a month"},
+  {"field": "pricing", "url": "https://stableaudio.com/pricing", "quote": "Personal, non-commercial use"},
+  {"field": "pricing", "url": "https://stableaudio.com/pricing", "quote": "Solo\n $12/mo"},
+  {"field": "pricing", "url": "https://stableaudio.com/pricing", "quote": "$30/mo"},
+  {"field": "pricing", "url": "https://stableaudio.com/pricing", "quote": "Producer\n $90/mo"},
+  {"field": "pricing", "url": "https://stableaudio.com/pricing", "quote": "Studio\n $199/mo"},
+  {"field": "pricing", "url": "https://stableaudio.com/pricing", "quote": "14,000 credits/mo"},
+  {"field": "platforms", "url": "https://stableaudio.com/pricing", "quote": "full access to the Stable Audio web app"},
+  {"field": "korean_support", "url": "https://stableaudio.com/", "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

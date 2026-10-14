@@ -1,0 +1,366 @@
+=== [home] https://supermemory.ai (lang=en)
+supermemory — Memory and continual learning for agents Skip to content Human Agent 
+ Menu Close Home Product Blog Changelog Pricing Research Docs Console Mission What we do In production Writing Careers Introducing supermemory Read the post ↗ supermemory is building the default engine for memory and continual learning for agents.
+ Available through our API, plugins, and MCP.
+ Build with supermemory Talk to sales 
+ Copy setup prompt Setup prompt copied Open the setup prompt in an assistant Open in
+ ChatGPT 
+ Claude 
+ Cursor 
+ Grok 
+ Works with
+ The path to useful AI is to scale in-context continuous learning that works with any model, any harness , and for all the varieties of use cases. As open-source model adoption grows and the world becomes even more multi-model , learning and memory should be separated from the model providers and be highly interoperable (hence in-context!).
+ Intelligence is no longer a constraint. 
+ Pre-training and post-training, scaling on data and compute, will continue to push models’ intelligence, but will not enable them to learn and improve in real time.
+ We build all the hard infrastructure parts of a scalable memory system, with dense, interconnected, growing learnings , and an understanding of time.
+ Our model learner-1 helps any model continuously improve by extracting and dreaming on the context of any user, task, or tenant, and putting it on our vector-graph database. This is then brought to the model by injecting tokens into its context in real time.
+ supermemory 
+ files chats urls raw data learner-1 memory db v12 v13 update merge infer forget prior memories in context prior memories inject via hooks your agent's context or 
+ Figure 1. Raw data enters supermemory. learner-1 updates, merges, infers and forgets against the memory db, and the result is injected into your agent’s context. What we do
+ Memory that keeps learning. learner-1 extracts and dreams on the context of every user, task, and tenant, stores it in a vector-graph database, and brings it back to the model by injecting tokens into its context in real time. 
+ Any model, any harness. Learning and memory live outside the model providers, so they carry across models and harnesses and stay interoperable, in context, and yours. 
+ The hard infrastructure, done. Dense, interconnected, growing learnings with an understanding of time, already serving 100k+ organizations and over a trillion tokens a month. 
+ Scale and Enterprise include advanced document extraction for PDFs, with OCR and descriptions of figures and diagrams. Free, Pro and Max keep standard PDF extraction. Explore document support .
+ Read more about the specifics → 
+ In production
+ Our promise is the best memory for agents: the kind people feel , not just the kind that tops a benchmark.
+ Recall latency per query, on production traffic Server time, then end-to-end time, in milliseconds Operation Server End to end 
+ Search 187 ms 356 ms 
+ Profile 166 ms 248 ms 
+ Tokens processed per month 1T + 
+ Organizations tens of millions of end users 100k + 
+ Independent benchmarks SWE-ContextBench, February 2026 “Supermemory performs best overall , achieving FAIL_TO_PASS test rate of 55.95% and the highest resolution rate of 30.30% .” Read the paper ↗ How we compare to Mem0 → 
+ Public benchmarks State of the art on LongMemEval, LoCoMo and ConvoMem #1 
+ See the research ↗ 
+ Our benchmarks Cost per question $7.79 64% cheaper 
+ Questions answered 81 % up from 69% 
+ Figure 1 · xAFS cost curve
+ Per-question token cost vs. corpus size
+ All Claude Code Codex 
+ Markdown memory supermemory 
+ Per-question token cost across 5 to 9,988 files (log scale). Markdown memory grows ~7× over the range; supermemory grows ~4×. The 299-file corpus is a notable outlier where Markdown memory thrashes. n = 220 (fs) + 220 (smfs) trials · smfs.ai/research/runs 
+ The research runs ↗ 
+ “Reduced avg response time from 40s → 12s . Using about 40–50% fewer tokens .”
+ Founder, Chatarmin · on X ↗ 
+ supermemory runs everywhere, even in air-gapped environments.
+ We build all the critical infrastructure ourselves. Which means we can deploy it wherever your data lives.
+ Talk to us for your deployment requirements ↗ In your data center
+ 001 
+ In your VPC
+ 002 
+ On your laptop
+ 003 
+ Enterprise security.
+ supermemory is SOC 2 certified, HIPAA compliant and GDPR aligned. We will sign your contracts and DPA, and deploy air-gapped where the data cannot leave at all.
+ Trust center ↗ Self-hosting in the docs ↗ 
+ Running memory in production?
+ If your agents already depend on it, they should be running on the engine the benchmarks and the numbers above describe. Any model, any harness, through our API, plugins and MCP.
+ Build with supermemory Writing
+ 01 How AI memory actually works. A beginner's guide 
+ 02 We're open sourcing the company brain. Here's how we designed the multiplayer harness 
+ 03 Jev changes a lot in memory & context engineering. Here's exactly how. 
+ Read the blog ↗ 
+ Careers
+ We’re a small team based in San Francisco, building the memory layer for every model and every harness. If that is the problem you want to spend the next few years on, we would like to hear from you.
+ See open roles ↗ 
+ The default engine for memory and continual learning for agents.
+ San Francisco 
+ Product Product 
+ Pricing 
+ Changelog 
+ vs Mem0 
+ Docs 
+ Console 
+ Company Blog 
+ Research 
+ Careers 
+ Talk to sales 
+ Connect X 
+ GitHub 
+ LinkedIn 
+ Reddit 
+ Discord 
+ © 2026 supermemory Privacy 
+ Terms 
+ Responsible disclosure 
+ Cookie settings 
+ Status Back to top ↑ 
+ Reference 01 One of the things missing from today’s systems is the ability to online learn and continually learn. So, you know, we train these systems, we balance them, we post-train them, and then they don’t continue to learn out in the world like we would . Demis Hassabis · CEO of Google DeepMind Reference 02 AI will transform every industry, power every company, and be built by every country. Open models strengthen safety and cybersecurity, accelerate innovation and diffusion, and enable sovereign AI. The world needs both frontier closed models and frontier open models. Jensen Huang · CEO of NVIDIA ARC-AGI-3 leaderboard 
+ Score vs. cost per task · ARC Prize, verified A memory graph 
+ Every learning links to the entities, sources, and moments around it, and the graph grows with use Token share on OpenRouter By lab · past week Loading live data…
+ Optional cookies for analytics, ads/referrals, company insights and embedded content. Your choice. Details 
+ Preferences Accept all 
+ YOUR PRIVACY × 
+ Your cookies. Your call.
+ Keep it essential, or choose what you’re comfortable sharing. The site works either way.
+ Essential
+ Always on 
+ Remember your privacy choices and keep the site secure. These don’t require consent.
+ Site analytics 
+ Page views, clicks, and performance help us improve the site. No session recordings.
+ PostHog · Storage details First-party cookie: 180 days. Local and session storage for visitor and session identifiers. Privacy details 
+ Ads & referrals 
+ Measure Reddit campaigns and credit partners for referrals. Reddit may use visit data to personalise ads.
+ Reddit Pixel · Dub · Storage details Reddit identifiers: 90 days. Dub referral cookie: 60 days. Privacy details 
+ Company insights 
+ Snitcher uses your IP address, page visits, and device information to identify the business visiting us.
+ Snitcher · Storage details Browser/device identifier: up to 1 year. Visit session: 30 minutes after ac
+
+=== [pricing] https://supermemory.ai/pricing/ (lang=en)
+Pricing — supermemory Skip to content Human Agent 
+ Menu Close Home Product Blog Changelog Pricing Research Docs Console Plans Enterprise Rate card Startups and research Questions Pay for what you use. Credits included on every plan. 
+ Every plan comes with a monthly balance of credits. Calls draw from it at the same rates whichever plan you are on, and only unique content is ever billed.
+ Tried almost everything — structured memory files, qmd etc. The only thing that works reliably is supermemory.
+ Not facing any memory issues after setting it up.
+ Harshil Mathur Founder, Razorpay We just ditched RAG completely and went memory only through supermemory.
+ Reduced avg response time from 40s → 12s. Using about 40–50% fewer tokens.
+ Armin Daryabegi Founder, Chatarmin supermemory let us scale usage without losing the thread of every conversation.
+ Max Peters Founder, Adapta 
+ 100B+ tokens a month 187ms median recall 
+ Plans
+ Pro
+ $19 per month 
+ Get Pro $20 included per month 
+ For developers building with AI memory.
+ Everything in Free, plus
+ Auto top-up with configurable purchase limits 
+ 3 team seats, unlimited end users 
+ Priority support 
+ Max
+ Popular 
+ $100 per month 
+ Get Max $130 included per month 
+ For developers who need more headroom than Pro.
+ Everything in Pro, plus
+ 6.5× the credits of Pro 
+ Gmail connector 
+ Scale
+ $399 per month 
+ Get Scale $600 included per month 
+ For teams and production workloads.
+ Everything in Max, plus
+ Advanced document extraction for PDFs 
+ S3 and web crawler connectors 
+ Unlimited team seats, per-tag access 
+ Dedicated support 
+ SOC 2 · HIPAA BAA · self-hosted option 
+ Free
+ $0 per month · $5 of credits included, renewed every month
+ Start free 
+ Enterprise
+ Custom deployments with dedicated engineering.
+ For organizations with committed spend, custom deployments and their own security requirements. Unlimited usage, metered your way.
+ Talk to sales 
+ Security and compliance
+ Air-gapped self-hosting or a dedicated managed instance 
+ SOC 2 · HIPAA · GDPR 
+ Custom contracts and DPA 
+ SSO and custom integrations 
+ Enterprise MCP 
+ Scale and performance
+ Unlimited usage on committed-spend pricing 
+ Advanced document extraction for PDFs 
+ Custom metering and billing 
+ Custom rate limits and throughput 
+ Dedicated infrastructure 
+ Support
+ Dedicated account manager 
+ Forward-deployed engineer 
+ 1:1 onboarding and integration 
+ Uptime SLA 
+ Priority Slack channel 
+ Rate card
+ Billed in SM tokens, the unique tokens we actually ingest. Repeats and unchanged content are free, and the rates are the same on every plan.
+ Meter Rate 
+ Memory A memory graph per user: profiles and fact hierarchies that agents learn from in real time. Powered by our own model. Plain text $5 / 1M SM tokens 
+ Rich content $10 / 1M SM tokens 
+ SuperRAG Multimodal extraction, contextual chunking and retrieval. No embeddings or vectors to manage. Also available as a filesystem. smfs.ai Text $1 / 1M SM tokens 
+ Rich: images, PDFs, audio, video $2 / 1M SM tokens 
+ Search and traversal Semantic search and graph traversal across stored content, in one call. 187ms median server time, built for agent loops. Per query $5 / 1M queries 
+ Operations Re-ranking, aggregation, query rewriting and other building blocks for richer queries. Per operation $100 / 1M operations 
+ Startups and research
+ The Scale plan free for three months for qualifying early-stage startups and academic research teams, with its included usage and dedicated support.
+ Apply ↗ 
+ Questions
+ How does the credit balance work? Every plan comes with a monthly dollar balance. Each API call, whether storing memories, searching or indexing, draws from that balance at the rates above. Top-ups add to it whenever you like. 
+ What is an SM token? SM tokens measure billable content processed during ingestion. Supported updates to the same document bill the net-new token delta; search and other operations are metered separately. 
+ What happens if I store the same content twice? For supported updates using the same customId within the same organization, unchanged content is not billed again on the token meter. New content and separately metered operations can still incur charges. A new document identity or a full replacement can change how ingestion is billed. 
+ Do unused credits roll over? Subscription credits reset monthly. Credits you buy as a top-up never expire; they stay in your balance until you use them. 
+ What happens when I run out? Usage requires an available credit balance. You can purchase additional credits in the console. Paid plans also offer automatic top-ups with configurable purchase limits. These limits control automatic credit purchases; they are not a cap on your total invoice. 
+ Which plans include advanced document extraction? Scale and Enterprise include advanced PDF extraction: page-by-page OCR with descriptions of figures and diagrams alongside the text. It is selected automatically based on your organization's plan, with standard extraction as a fallback if needed. Free, Pro and Max continue to support standard PDF extraction, including OCR for scans. This plan distinction applies to PDFs, not every supported file type. 
+ Can I self-host? Self-hosted deployments are available on Scale and Enterprise. Enterprise also supports fully air-gapped deployments, where LLM inference may be the only outbound call, or none at all. 
+ Do you offer startup or research credits? Yes. Qualifying early-stage startups and academic research teams get the Scale plan free for three months, including its included usage, plus dedicated support. 
+ Start building with supermemory.
+ Memory and continual learning for any model, any harness. Available through our API, plugins, and MCP.
+ Build with supermemory The default engine for memory and continual learning for agents.
+ San Francisco 
+ Product Product 
+ Pricing 
+ Changelog 
+ vs Mem0 
+ Docs 
+ Console 
+ Company Blog 
+ Research 
+ Careers 
+ Talk to sales 
+ Connect X 
+ GitHub 
+ LinkedIn 
+ Reddit 
+ Discord 
+ © 2026 supermemory Privacy 
+ Terms 
+ Responsible disclosure 
+ Cookie settings 
+ Status Back to top ↑ 
+ Optional cookies for analytics, ads/referrals, company insights and embedded content. Your choice. Details 
+ Preferences Accept all 
+ YOUR PRIVACY × 
+ Your cookies. Your call.
+ Keep it essential, or choose what you’re comfortable sharing. The site works either way.
+ Essential
+ Always on 
+ Remember your privacy choices and keep the site secure. These don’t require consent.
+ Site analytics 
+ Page views, clicks, and performance help us improve the site. No session recordings.
+ Po
+
+=== [about] https://supermemory.ai/docs (lang=en)
+Introduction - supermemory | Memory API for the AI era 
+ Documentation Index
+ Fetch the complete documentation index at: /docs/llms.txt 
+ Use this file to discover all available pages before exploring further.
+ Skip to main content 
+ v3 and v4 are deprecated and will be shut down on December 31, 2026. Move to v5 before then. Read the migration guide .
+ supermemory | Memory API for the AI era home page 
+ Search...
+ ⌘ K Ask Assistant ⌘ I 
+ Changelog 
+ Support 
+ Dashboard 
+ Dashboard 
+ Search... 
+ Navigation 
+ Introduction
+ Overview 
+ Developer platform 
+ Plugins and MCP 
+ Memory and continual learning for the world’s best agents. 
+ Supermemory gives your agent long-term memory of every user. Paste one prompt into your coding agent and it wires memory into your project. 
+ Read the quickstart 
+ Platform
+ Choose how you use supermemory
+ Start with the path that fits your app and your team.
+ Products
+ Explore features
+ Browse memory, retrieval, profiles, and connectors.
+ Assistant 
+ Responses are generated using AI and may contain mistakes.
+ Suggestions
+ User profiles and tool use together for multimodal use cases I am building XYZ. how do I use user profiles with the python SDK? 
+ Contact support
+
+=== [meta] https://supermemory.ai
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/supermemoryai/supermemory
+<p align="center">
+  <picture>
+    <source srcset="apps/web/public/logo-fullmark.svg" media="(prefers-color-scheme: dark)">
+    <source srcset="apps/web/public/logo-light-fullmark.svg" media="(prefers-color-scheme: light)">
+    <img src="apps/web/public/logo-fullmark.svg" alt="Supermemory" width="400" />
+  </picture>
+</p>
+
+<p align="center">
+  <strong>State-of-the-art memory and context engine for AI.</strong>
+</p>
+
+<p align="center">
+  <a href="https://supermemory.ai/docs">Docs</a> ·
+  <a href="https://supermemory.ai/docs/quickstart">Quickstart</a> ·
+  <a href="https://supermemory.ai/docs/self-hosting/overview">Self-host</a> ·
+  <a href="https://console.supermemory.ai">Dashboard</a> ·
+  <a href="https://supermemory.link/discord">Discord</a>
+</p>
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/supermemory"><img src="https://img.shields.io/npm/v/supermemory?style=flat-square&color=blue" alt="npm" /></a>
+  <a href="https://pypi.org/project/supermemory/"><img src="https://img.shields.io/pypi/v/supermemory?style=flat-square&color=blue" alt="pypi" /></a>
+  <a href="https://supermemory.ai/docs"><img src="https://img.shields.io/badge/docs-supermemory.ai-blue?style=flat-square" alt="docs" /></a>
+</p>
+
+<p align="center">
+  <strong>English</strong> · <a href="README.zh-CN.md">简体中文</a>
+</p>
+
+<p align="center">
+  <strong>#1 on every major AI memory benchmark — <a href="https://github.com/xiaowu0162/LongMemEval">LongMemEval</a>, <a href="https://github.com/snap-research/locomo">LoCoMo</a>, and <a href="https://github.com/Salesforce/ConvoMem">ConvoMem</a>.</strong><br/>
+  <strong>95% Recall@15 with a 99.4% context reduction · ~50ms user profiles.</strong><br/>
+  <a href="https://supermemory.ai/research">Read the research →</a>
+</p>
+
+---
+
+Supermemory is the memory and context layer for AI. **#1 on [LongMemEval](https://github.com/xiaowu0162/LongMemEval), [LoCoMo](https://github.com/snap-research/locomo), and [ConvoMem](https://github.com/Salesforce/ConvoMem)** — the three major benchmarks for AI memory. 
+
+We are a research lab building the engine, plugins and tools around it.
+
+Your AI forgets everything between conversations. Supermemory fixes that.
+
+It automatically learns from conversations, extracts facts, builds user profiles, handles knowledge updates and contradictions, forgets expired information, and delivers the right context at the right time. Full RAG, connectors, file processing — the entire context stack, one system.
+
+| | |
+|---|---|
+| 🧠 **Memory** | Extracts facts from conversations. Handles temporal changes, contradictions, and automatic forgetting. |
+| 👤 **User Profiles** | Auto-maintained user context — stable facts + recent activity. One call, ~50ms. |
+| 🔍 **Hybrid Search** | RAG + Memory in a single query. Knowledge base docs and personalized context together. |
+| 🔌 **Connectors** | Google Drive · Gmail · Notion · OneDrive · GitHub — auto-sync with real-time webhooks. |
+| 📄 **Multi-modal Extractors** | PDFs, images (OCR), videos (transcription), code (AST-aware chunking). Upload and it works. |
+
+All of this is in our single memory structure and ontology. 
+
+<img width="1414" height="937" alt="image" src="https://github.com/user-attachments/assets/8863b6d9-c043-4c75-b200-4f1759e7edaf" />
+
+
+---
+
+## Use Supermemory
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+<h3>🧑‍💻 I use AI tools</h3>
+
+Give Claude Code, Muse Code, Cursor, Codex and OpenCode **persistent memory across every conversation** with a plugin or the MCP server.
+
+Your AI remembers your preferences, projects, past discussions — and gets smarter over time.
+
+**[→ Jump to User setup](#give-your-ai-memory)**
+
+</td>
+<td width="50%" valign="top">
+
+<h3>🔧 I'm building AI products</h3>
+
+Add memory, RAG, user profiles, and connectors to your agents and apps with **a single API**.
+
+No vector DB config. No embedding pipelines. No chunking strategies.
+
+**[→ Jump to developer quickstart](#build-with-supermemory-api)**
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top">
+
+<h3>🖥️ I want to run it myself</h3>
+
+State-of-the-art memory, on your machine. **One binary. Zero config.** Bring any model — or run fully offline with Ollama.
+
+```bash
+curl -fsSL https://supermemory.ai

@@ -1,0 +1,45 @@
+{
+ "company": "Guardrails AI",
+ "one_liner_ko": "어떤 LLM·배포 환경에서든 생성형 AI를 만들고 관리·확장하는 가드레일 프레임워크를 내세운 AI 신뢰성 플랫폼.",
+ "what_it_does_ko": "Guardrails는 신뢰할 수 있는 AI 애플리케이션을 만들도록 돕는 파이썬 프레임워크다. 애플리케이션 안에서 입력·출력 가드(Guard)를 실행해 특정 유형의 위험을 탐지·정량화·완화하고, LLM에서 구조화된 데이터를 생성하도록 돕는다. Guardrails Hub에는 '밸리데이터'라 부르는 위험 측정 도구가 미리 만들어져 있어 여러 개를 묶어 LLM 입출력을 가로챌 수 있다. 회사 홈페이지는 합성 데이터 시뮬레이션(Snowglobe), 평가 데이터셋 생성, 정책 위반·환각·데이터 유출을 막는 런타임 가드레일을 함께 소개한다. 홈페이지 상단에 'Guardrails AI joins Harvey' 공지가 있고, 저장소에는 호스팅 원격 추론 중단(2026-08-25 예정) 안내가 있다.",
+ "key_features": [
+  "입력·출력 가드로 위험 탐지·정량화·완화",
+  "LLM 구조화 데이터 생성",
+  "Guardrails Hub 밸리데이터 모음",
+  "런타임 가드레일(정책 위반·환각·데이터 유출 차단)",
+  "엣지 케이스 평가 데이터셋 생성",
+  "대규모 합성 데이터 시뮬레이션(Snowglobe)",
+  "Guardrails Index 벤치마크"
+ ],
+ "use_cases_ko": [
+  "LLM 출력이 사용자에게 가기 전에 나쁜 출력을 차단하기",
+  "에이전트가 실패하는 지점을 미리 찾기",
+  "파인튜닝·증류·프롬프트 최적화용 합성 데이터 만들기"
+ ],
+ "pricing": {"free_tier": "불명", "plans": [], "pricing_url": null},
+ "open_source": "Apache-2.0",
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://guardrailsai.com", "quote": "@Guardrails AI 2025. All rights reserved."},
+  {"field": "one_liner_ko", "url": "https://guardrailsai.com", "quote": "The guardrails framework for building, governing, and scaling production GenAI across any LLM and deployment environment."},
+  {"field": "what_it_does_ko", "url": "https://github.com/guardrails-ai/guardrails", "quote": "Guardrails is a Python framework that helps build reliable AI applications by performing two key functions:"},
+  {"field": "what_it_does_ko", "url": "https://guardrailsai.com", "quote": "Guardrails AI joins Harvey"},
+  {"field": "what_it_does_ko", "url": "https://github.com/guardrails-ai/guardrails", "quote": "Guardrails is discontinuing its hosted remote inferencing."},
+  {"field": "key_features", "url": "https://github.com/guardrails-ai/guardrails", "quote": "Guardrails runs Input/Output Guards in your application that detect, quantify and mitigate the presence of specific types of risks."},
+  {"field": "key_features", "url": "https://github.com/guardrails-ai/guardrails", "quote": "2. Guardrails help you generate structured data from LLMs."},
+  {"field": "key_features", "url": "https://github.com/guardrails-ai/guardrails", "quote": "Guardrails Hub is a collection of pre-built measures of specific types of risks (called 'validators')."},
+  {"field": "key_features", "url": "https://guardrailsai.com", "quote": "Deploy runtime guardrails that detect policy violations, hallucinations, and data leakage."},
+  {"field": "key_features", "url": "https://guardrailsai.com", "quote": "Generate dynamic eval datasets targeting edge cases and risky outcomes."},
+  {"field": "key_features", "url": "https://guardrailsai.com", "quote": "Simulate large-scale, realistic datasets for fine-tuning, distillation, and prompt optimization."},
+  {"field": "key_features", "url": "https://github.com/guardrails-ai/guardrails", "quote": "We just launched Guardrails Index -- the first of its kind benchmark comparing the performance and latency of 24 guardrails"},
+  {"field": "use_cases_ko", "url": "https://guardrailsai.com", "quote": "Block bad outputs before they reach users."},
+  {"field": "use_cases_ko", "url": "https://guardrailsai.com", "quote": "Find Where Your Agent Breaks"},
+  {"field": "use_cases_ko", "url": "https://guardrailsai.com", "quote": "Train on Data You Don't Have Yet"},
+  {"field": "open_source", "url": "https://github.com/guardrails-ai/guardrails", "quote": "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"},
+  {"field": "korean_support", "url": "https://guardrailsai.com", "quote": "html lang: en-US\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

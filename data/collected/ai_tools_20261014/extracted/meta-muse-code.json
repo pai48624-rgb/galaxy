@@ -1,0 +1,104 @@
+{
+ "company": "Meta",
+ "one_liner_ko": "Meta의 새 모델 Muse Spark 1.2로 동작하는 터미널 코딩 에이전트(베타).",
+ "what_it_does_ko": "Muse Code는 Muse Spark 1.2 모델로 동작하는 터미널 코딩 에이전트로, 현재 베타로 공개됐다. 큰 저장소에서 변경 계획, 코드 작성, 결과 검증까지 복잡한 소프트웨어 작업을 맡는다. 세션 내내 살아 있는 비동기 백그라운드 에이전트(하위 에이전트)들이 주 에이전트를 도와 중복 조사를 줄인다. 모든 모델 호출·도구 실행·승인·수정을 로컬 이벤트 로그에 기록해, 충돌 후에도 멈춘 지점에서 정확히 이어서 장시간 작업을 할 수 있다. /plan, /grill, /goal 같은 기본 스킬이 들어 있다.",
+ "key_features": [
+  "큰 저장소에서 계획·코드 작성·검증",
+  "세션 내내 유지되는 비동기 백그라운드 에이전트",
+  "로컬 이벤트 로그로 충돌 후 정확한 재개",
+  "기본 스킬 /plan·/grill·/goal",
+  "영상 입력을 해석해 웹페이지 제작·브라우저 검증",
+  "Muse Spark 1.2와 공동 학습된 도구 세트"
+ ],
+ "use_cases_ko": [
+  "큰 저장소의 복잡한 소프트웨어 엔지니어링 작업",
+  "참고 영상으로 웹페이지를 만들고 브라우저에서 검증",
+  "GPU 커널 반복 최적화 같은 장시간 작업"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "맥",
+  "CLI"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
+   "quote": "Meta © 2026"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
+   "quote": "We're excited to release Muse Code (beta), a terminal coding agent powered by Muse Spark 1.2, our newest model."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
+   "quote": "Muse Code takes on complex software engineering tasks across large repositories: planning changes, writing code, and validating the results."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
+   "quote": "This single source of truth makes the runtime replay-exact and restart-safe: after a crash, the agent can resume precisely where it stopped."
+  },
+  {
+   "field": "key_features",
+   "url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
+   "quote": "These specialized background agents remain active throughout each session, rather than being spawned for individual tasks, helping avoid redundant information gathering."
+  },
+  {
+   "field": "key_features",
+   "url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
+   "quote": "Muse Code uses a local event log in which every model call, tool run, approval, and edit is appended."
+  },
+  {
+   "field": "key_features",
+   "url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
+   "quote": "/plan turns a task into an approval-gated plan, /grill stress-tests that plan until it holds up, and /goal works toward successful completion of the specified objective."
+  },
+  {
+   "field": "key_features",
+   "url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
+   "quote": "Muse Code rebuilds a luxury vacation rental booking page from a reference video and validates the finished site in a browser."
+  },
+  {
+   "field": "key_features",
+   "url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
+   "quote": "We co-trained Muse Spark 1.2 with Muse Code to ensure the model exhibits its best performance and coding usability when paired together."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
+   "quote": "Muse Code takes on complex software engineering tasks across large repositories"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
+   "quote": "Muse Code rebuilds a luxury vacation rental booking page from a reference video and validates the finished site in a browser."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
+   "quote": "We tested the model's ability to iteratively optimize GPU kernels over 1,000+ tool calls (up to 24 hours)."
+  },
+  {
+   "field": "platforms",
+   "url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
+   "quote": "Install Muse Code on macOS or Linux:"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
+   "quote": "html lang: en-US"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

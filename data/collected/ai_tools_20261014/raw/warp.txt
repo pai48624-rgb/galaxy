@@ -1,0 +1,538 @@
+=== [home] https://www.warp.dev/ (lang=en)
+Warp — Open Infrastructure for Cloud Software Factories 
+ warp · home · 2026
+ warp · home · 2026
+ products nav/ products 3 links 
+ warp factories Run fleets of coding agents across your SDLC warp terminal A modern terminal for agentic coding warp agent cli A powerful coding agent that works in any terminal 
+ solutions nav/ solutions 7 links 
+ Use Cases
+ code review First-pass review on every PR bug investigation Reproduce bugs and route fixes refactors & migration Scope, migrate, and validate changes incident response Investigate alerts and summarize next steps 
+ Industry
+ financial services Secure, compliant AI development insurance Modernize policy & claims systems telecommunications Scale with your network 
+ resources nav/ resources 15 links 
+ Developers
+ docs API docs and guides github Star Warp and explore the source blog News and product updates community Get help and connect agent kits Pre-built agent gallery events Webinars and sessions changelog What's new in Warp roadmap See what we're building next support Help and issue tracking 
+ Company
+ about Our mission and team how we work Our culture and values careers Join the team at Warp press Media coverage and press kit research Reports and insights newsroom Announcements and press releases 
+ enterprise nav/ enterprise 2 links 
+ overview Secure, compliant agentic development for your org customers Teams shipping faster with Warp 
+ pricing 
+ Sign In 
+ book a demo get started get started 2 options 
+ build your software factory Run fleets of coding agents across your SDLC download warp terminal A modern terminal designed for working with agents 
+ [ C ] Configuration [ S ] SDLC [ Q ] Quality loop [ E ] Enterprise [ L ] Layers [ G ] Governance [ F ] FAQ 
+ get started 
+ Open infrastructure for cloud software factories
+ build on Warp: factories as code, any model or harness, with evals, benchmarks, and self-improvement built in.
+ get started download warp terminal 
+ >_ [ fig. 1 — the factory ] ⌗ 
+ [ fig. t4 · the factory ] 8 × 28 · live 
+ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ ▩ 
+ ▩ queued ■ working ▨ waiting □ shipped 
+ 224 tasks · 0 active · 1,422 PRs shipped
+ trusted by 800k+ devs at
+ Livestream Livestream Case Study Launch Partner Course Partner Case Study 
+ Livestream Livestream Case Study Launch Partner Course Partner Case Study 
+ configuration Your software factory, defined in code.
+ Factories-as-code allows for a versioned and measured approach to optimizing costs and performance of your factories.
+ learn more 
+ Definition Agents Automations Runners Skills Webhooks Scorers Benchmarks The Factory definition is the shared foundation for every agent. It connects repositories, credentials, work sources, and cloud access, then sets the execution choices agents inherit.
+ >_ [ fig. 1 — factory definition files ] ⌗ 
+ agents/ 
+ automations/ 
+ runners/ 
+ skills/ 
+ webhooks/ 
+ scorers/ 
+ benchmarks/ 
+ factory.yaml 
+ factory.yaml yaml 
+ 1 schemaVersion : v1alpha1 
+ 2 name : web-server-factory 
+ 3 description : Autonomous software-development factory for a web application. 
+ 4 alias : web-factory The alias is the Foreman’s @-mention handle in Slack and Linear, so teammates can route work to the Factory by name. It can differ from the Factory name. 
+ 5 repositories : 6 - owner : acme 7 name : web-server 8 - owner : acme 9 name : web-client Repositories define where Factory agents can work. Each run checks out the relevant code on its execution host so agents can inspect and change it. 
+ 10 secrets : 11 - DEPLOY_API_TOKEN Secrets give agents protected credentials for the tools and services they need. Values are encrypted at rest and injected as environment variables only during runs. 
+ 12 mcpServers : 13 sentry : 14 warpId : YOUR_MCP_SERVER_ID MCP servers connect every agent to shared tools such as Sentry or internal services. Each named connection references a centrally managed server. 
+ 15 cloudProviders : 16 aws : 17 roleArn : arn:aws:iam::123456789012:role/factory-agent Cloud providers securely connect Factory agents to cloud accounts and resources for infrastructure work. Federated access lets runs assume an AWS role or use a GCP identity without embedding long-lived cloud keys in the definition. 
+ 18 integrations : 19 - type : slack 20 - type : linear Integrations connect the Factory to work sources such as Slack and to Linear or Jira for task tracking, so the Foreman can coordinate work where your team already works. 
+ 21 agentDefaults : 22 model : auto 23 runner : standard Agent defaults establish the model or harness, runner, and environment that roles inherit, while specialized agents can override those choices when needed. 
+ SDLC coverage Beyond CI/CD to automating the whole SDLC
+ defined in code, built for scale, and easy to deploy.
+ 01 opinionated, but flexible
+ set up your first factory in 5 minutes, build it out over time.
+ >_ [ fig. 2 · quickstart ] ⌗ 
+ 02 factories as code
+ repos, agents, models, permissions, and checkpoints in one definition.
+ >_ [ fig. 2 · factory.yaml ] ⌗ 
+ 03 API, CLI, SDK and MCP
+ built as a platform, not a vertical product or AI teammate.
+ >_ [ fig. 2 · API / CLI / SDK / MCP ] ⌗ 
+ 04 integrations
+ work flows in from chat, tickets, and source control; status flows back to where it started.
+ >_ [ fig. 2 · integrations ] ⌗ 
+ 05 any surface
+ watch, steer, and hand off runs from web, mobile, terminal, or IDE.
+ >_ [ fig. 2 · any surface ] ⌗ 
+ 06 evals, self-improvement, and memory
+ every run is scored; observer agents open PRs against your factory config to improve it.
+ >_ [ fig. 2 · self-improvement ] ⌗ 
+ >_ [ fig. 2 · quickstart ] ⌗ 
+ >_ [ fig. 2 · factory.yaml ] ⌗ 
+ >_ [ fig. 2 · API / CLI / SDK / MCP ] ⌗ 
+ >_ [ fig. 2 · integrations ] ⌗ 
+ >_ [ fig. 2 · any surface ] ⌗ 
+ >_ [ fig. 2 · self-improvement ] ⌗ 
+ quality loop Baked-in measurement and self-improvement
+ evals, benchmarks, and self-improvement loops drive measurable gains.
+ >_ [ fig. 4 · quality loop · sample run ] ⌗ 
+ [ fig. t5 · quality loop · sample run ] 1 ink · scrub to read 
+ EVAL pass 
+ Evals on your own work
+ 96%   
+ 8/13 07:03 fail 0.4 
+ 8/13 07:02 pass 0.8 
+ 8/13 07:02 pass 0.8 
+ BENCH best 
+ Benchmarks across models
+ 1.00x   
+ Claude Fable 5 pass 1.00x 
+ GPT-5.6 Sol pass 0.94x 
+ Gemini 3.6 Flash fail 0.89x 
+ LOOP auto-fix 
+ Self-improvement loops
+ +3.7   
+ memory updated pass +0.2 
+ prompts tuned pass +3.2% 
+ regression caught fail -0.4 
+ case study Cutting our cost per PR from $80 to $30
+ How we used Warp Factories Benchmarks to test models on our own engineering tasks and optimize for cost without sacrificing quality.
+ read case study 
+ enterprise ready Warp is enterprise ready
+ Run agents confidently with guardrails in place, centrally configured agent access, and centrally managed permissions.
+ Rectangle Health uses Warp to build a self-improving AI teammate
+ Rectangle Health turned a senior engineer's side project into Rex, a self-improving AI teammate built on Oz that now writes 54% of its own code.
+ read the story 
+ Docker uses Warp to reduce onboarding time and give every engineer a shared source of trut
+
+=== [pricing] https://www.warp.dev/pricing (lang=en)
+Pricing | Warp 
+ Products Warp Factories
+ Run fleets of coding agents across your SDLC
+ Warp Terminal
+ A modern terminal for agentic coding
+ Warp Agent CLI
+ A powerful coding agent that works in any terminal
+ Solutions Use Cases 
+ Code Review First-pass review on every PR 
+ Bug Investigation Reproduce bugs and route fixes 
+ Refactors & Migration Scope, migrate, and validate changes 
+ Incident Response Investigate alerts and summarize next steps 
+ Industry 
+ Financial Services Secure, compliant AI development 
+ Insurance Modernize policy & claims systems 
+ Telecommunications Scale with your network 
+ Resources Developers 
+ Docs API docs and guides 
+ GitHub Star Warp and explore the source 
+ Blog News and product updates 
+ Community Get help and connect 
+ Agent Kits Pre-built agent gallery 
+ Events Webinars and sessions 
+ Changelog What's new in Warp 
+ Roadmap See what we're building next 
+ Support Help and issue tracking 
+ Company 
+ About Our mission and team 
+ How We Work Our culture and values 
+ Careers Join the team at Warp 
+ Press Media coverage and press kit 
+ Research Reports and insights 
+ Newsroom Announcements and press releases 
+ Enterprise Overview
+ Secure, compliant agentic development for your org
+ Customers
+ Teams shipping faster with Warp
+ Pricing 
+ Sign In 
+ Book a demo Get Started 
+ Products Warp Factories
+ Run fleets of coding agents across your SDLC
+ Warp Terminal
+ A modern terminal for agentic coding
+ Warp Agent CLI
+ A powerful coding agent that works in any terminal
+ Solutions Use Cases 
+ Code Review First-pass review on every PR 
+ Bug Investigation Reproduce bugs and route fixes 
+ Refactors & Migration Scope, migrate, and validate changes 
+ Incident Response Investigate alerts and summarize next steps 
+ Industry 
+ Financial Services Secure, compliant AI development 
+ Insurance Modernize policy & claims systems 
+ Telecommunications Scale with your network 
+ Resources Developers 
+ Docs API docs and guides 
+ GitHub Star Warp and explore the source 
+ Blog News and product updates 
+ Community Get help and connect 
+ Agent Kits Pre-built agent gallery 
+ Events Webinars and sessions 
+ Changelog What's new in Warp 
+ Roadmap See what we're building next 
+ Support Help and issue tracking 
+ Company 
+ About Our mission and team 
+ How We Work Our culture and values 
+ Careers Join the team at Warp 
+ Press Media coverage and press kit 
+ Research Reports and insights 
+ Newsroom Announcements and press releases 
+ Enterprise Overview
+ Secure, compliant agentic development for your org
+ Customers
+ Teams shipping faster with Warp
+ Pricing Sign In 
+ Book a demo Get Started 
+ Warp Terminal and agents Warp Factories Automated software delivery 
+ Pricing for Warp
+ Free
+ $0 /month 
+ For developers who want Warp’s modern terminal with the flexibility to use Warp’s AI or bring their own.
+ Download Now 
+ Includes core terminal features
+ ○ State-of-the-art modern terminal
+ ○ Warp Agent CLI access 
+ ○ Additional agent usage at pay-as-you-go rates 
+ ○ Bring your own AI inference* 
+ ○ Limited cloud agents access 
+ ○ Use any harness in the cloud (beta) 
+ ○ Individually configured data controls 
+ ○ Limited Warp Drive and collaboration feature access 
+ ○ Limited cloud conversation storage 
+ Purchase additional agent usage 
+ Build
+ Recommended
+ Monthly Annual 
+ Monthly plan
+ $20 /month 
+ For developers who want flexible access to AI that scales with their usage
+ Start Today 
+ Everything in Free, plus:
+ ○ $20 of agent usage included each month at API rates 
+ ○ Full Warp Agent access (frontier and open-source models from OpenAI, Anthropic, z.ai, and more) 
+ ○ Add-on agent usage, auto-reload, and team-wide spend cap 
+ ○ Extended cloud agents access
+ ○ Highest codebase indexing limits
+ ○ Unlimited Warp Drive objects and collaboration
+ ○ Unlimited cloud conversation storage 
+ ○ Private email support
+ Purchase additional agent usage 
+ Max
+ Monthly Annual 
+ Monthly plan
+ $200 /month 
+ For developers who need maximum AI capacity with all the flexibility of Build
+ Start Today 
+ Everything in Build, plus:
+ ○ $200 of agent usage included each month (10× Build) 
+ ○ Add-on agent usage, auto-reload, and team-wide spend cap 
+ Purchase additional agent usage 
+ Business
+ Monthly Annual 
+ Monthly plan
+ $50 /user /month 
+ For teams scaling AI-powered development (up to 25 seats)
+ Start Today 
+ Everything in Build, plus:
+ ○ $20 of agent usage included per seat each month at API rates 
+ ○ Team usage metrics 
+ ○ Admin-configurable data controls 
+ ○ Bring your own API keys and custom inference endpoints 
+ ○ SAML-based SSO
+ Purchase additional agent usage 
+ Enterprise
+ Custom 
+ For organizations needing advanced control, security, and scale
+ Contact Sales 
+ Everything in Business, plus:
+ ○ Unlimited seats
+ ○ Custom shared usage pools and terms 
+ ○ Advanced spend controls 
+ ○ Enterprise admin controls 
+ ○ Enterprise data governance 
+ ○ Enterprise Analytics API 
+ ○ Multi-admin support 
+ ○ Route inference through your own cloud (BYOLLM) 
+ ○ Self-hosted cloud agents on your infrastructure 
+ ○ Custom codebase indexing 
+ ○ Cross-harness agent memory (Research Preview) 
+ ○ White-glove onboarding and implementation engineer support 
+ ○ Dedicated account manager and a shared Slack channel with your team 
+ Free
+ $0 /month 
+ For developers who want Warp’s modern terminal with the flexibility to use Warp’s AI or bring their own.
+ Download Now 
+ Includes core terminal features
+ ○ State-of-the-art modern terminal
+ ○ Warp Agent CLI access 
+ ○ Additional agent usage at pay-as-you-go rates 
+ ○ Bring your own AI inference* 
+ ○ Limited cloud agents access 
+ ○ Use any harness in the cloud (beta) 
+ ○ Individually configured data controls 
+ ○ Limited Warp Drive and collaboration feature access 
+ ○ Limited cloud conversation storage 
+ Purchase additional agent usage 
+ Build
+ Recommended
+ Monthly Annual 
+ Annual plan
+ $18 /month 
+ For developers who want flexible access to AI that scales with their usage
+ Start Today 
+ Everything in Free, plus:
+ ○ $20 of agent usage included each month at API rates 
+ ○ Full Warp Agent access (frontier and open-source models from OpenAI, Anthropic, z.ai, and more) 
+ ○ Add-on agent usage, auto-reload, and team-wide spend cap 
+ ○ Extended cloud agents access
+ ○ Highest codebase indexing limits
+ ○ Unlimited Warp Drive objects and collaboration
+ ○ Unlimited cloud conversation storage 
+ ○ Private email support
+ Purchase additional agent usage 
+ Max
+ Monthly Annual 
+ Annual plan
+ $180 /month 
+ For developers who need maximum AI capacity with all the flexibility of Build
+ Start Today 
+ Everything in Build, plus:
+
+
+=== [about] https://docs.warp.dev/ (lang=en)
+Warp products and getting started | Warp ` we shipped) can
+ leave `history.scrollRestoration` stuck at `'manual'` in a tab's session,
+ which would make the main-window scroll jump to the top on back/forward.
+--> Skip to content For the complete documentation in markdown, see llms.txt . Markdown versions of each page are available by appending .md to any URL.
+ Warp 
+ Terminal 
+ Agents 
+ Factories Early Access 
+ Automation Platform 
+ Changelog 
+ Support 
+ Enterprise 
+ Guides 
+ GitHub 
+ Select theme Dark Light Auto 
+ Search Ctrl K Cancel 
+ Ask Connect with MCP 
+ Ask a question
+ What do you want to know about Warp?
+ Powered by kapa.ai 
+ Protected by reCAPTCHA 
+ # Preloads Expressive Code assets for the Kapa chat panel 
+ Terminal
+ Agents
+ Factories Early Access 
+ Automation Platform
+ Changelog
+ Support
+ Enterprise
+ Guides
+ Getting started Warp products 
+ Quickstart 
+ Installation and setup 
+ Coding in Warp 
+ Customizing Warp 
+ Migrate to Warp Overview 
+ Migrate to Warp from Claude Code 
+ Migrate to Warp from Cursor 
+ Migrate to Warp from Ghostty 
+ Migrate to Warp from iTerm2 
+ Migrate to Warp from macOS Terminal 
+ Migrate to Warp from VS Code terminal 
+ Migrate to Warp from Windows Terminal 
+ Supported shells 
+ Keyboard shortcuts 
+ Terminal Blocks Overview 
+ Block basics 
+ Block actions 
+ Block sharing 
+ Block find 
+ Block filtering 
+ Background blocks 
+ Sticky Command Header 
+ Modern text editing Overview 
+ Alias expansion 
+ Command inspector 
+ Syntax & error highlighting 
+ Vim keybindings 
+ Command entry Overview 
+ Command corrections 
+ Command search 
+ Command history 
+ Synchronized inputs 
+ YAML workflows 
+ Command completions Overview 
+ Tab completions 
+ Autosuggestions 
+ Windows and Tabs Overview 
+ Tabs 
+ Vertical Tabs 
+ Split panes 
+ Tab Configs 
+ Configurable toolbar 
+ Global hotkey 
+ Launch Configurations (Legacy) 
+ Sessions Overview 
+ Session navigation 
+ Session restoration 
+ Terminal appearance Overview 
+ Themes 
+ Custom themes 
+ Prompt 
+ Input position 
+ Text, fonts, & cursor 
+ Size, opacity, & blurring 
+ Pane dimming & focus 
+ Blocks behavior 
+ Tabs behavior 
+ Custom app icons 
+ Settings file Overview 
+ All settings reference 
+ File locations 
+ Warpify overview Overview 
+ Warpify subshells 
+ SSH with Warp features 
+ More Features Overview 
+ Accessibility 
+ Files, links, & scripts 
+ Markdown viewer 
+ Working directory 
+ Text selection 
+ Full-screen apps 
+ Desktop notifications 
+ Audible terminal bell 
+ Settings Sync (Beta) 
+ Terminal quit warning 
+ Warp URI scheme 
+ Warp for Linux 
+ Command Palette 
+ Terminal comparisons Overview 
+ Performance benchmarks 
+ Terminal features 
+ Terminal integrations 
+ Code Code overview 
+ Built-in code editor Overview 
+ Language Server Protocol (LSP) 
+ File Tree (Project Explorer) 
+ Find & replace 
+ Code editor Vim keybindings 
+ Code Review panel 
+ Git Worktrees 
+ Feature support over SSH 
+ Knowledge and collaboration Warp Drive overview Overview 
+ Notebooks 
+ Workflows 
+ Prompts 
+ Environment variables 
+ AI-Integrated Objects 
+ Warp Drive on the web 
+ Agent Mode context 
+ Team management 
+ Team Admin Panel 
+ Session sharing 
+ GitHub 
+ Select theme Dark Light Auto 
+ "` once typed) and
+ surfaces the ⌘+I (Ctrl+I on Windows/Linux) shortcut. Clicking
+ it routes the query into the Kapa Ask chat panel.
+ - Keyboard-hint strip (↑↓ Navigate · ↵ Select · Esc Close)
+ hidden under 50rem.
+ 2. Arrow key navigation through results with visible selection
+ state. Enter opens the selected result. Ask AI is the LAST
+ navigable item, so arrow-down past the last doc result lands
+ on it.
+ 3. Breadcrumb row injected a
+
+=== [meta] https://www.warp.dev/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/warpdotdev/warp
+<a href="https://www.warp.dev">
+    <img width="1024" alt="Warp Agentic Development Environment product preview" src="https://github.com/user-attachments/assets/9976b2da-2edd-4604-a36c-8fd53719c6d4" />
+</a>
+&nbsp;
+<p align="center">
+  <a href="https://warp.dev/factories"><img height="20" alt="Built with Warp" src="https://raw.githubusercontent.com/warpdotdev/brand-assets/main/Github/Built-With-Warp-Export@2x.png" /></a>
+</p>
+
+<p align="center">
+  <a href="https://www.warp.dev">Website</a>
+  ·
+  <a href="https://www.warp.dev/code">Code</a>
+  ·
+  <a href="https://www.warp.dev/agents">Agents</a>
+  ·
+  <a href="https://www.warp.dev/terminal">Terminal</a>
+  ·
+  <a href="https://www.warp.dev/drive">Drive</a>
+  ·
+  <a href="https://docs.warp.dev">Docs</a>
+  ·
+  <a href="https://www.warp.dev/blog/how-warp-works">How Warp Works</a>
+</p>
+
+> [!NOTE]
+> OpenAI is the founding sponsor of the new, open-source Warp repository, and the new agentic management workflows are powered by GPT models.
+
+<h1></h1>
+
+## About
+
+[Warp](https://www.warp.dev) is an agentic development environment, born out of the terminal. Use Warp's built-in coding agent, or bring your own CLI agent (Claude Code, Codex, Gemini CLI, and others).
+
+## Installation
+
+You can [download Warp](https://www.warp.dev/download) and [read our docs](https://docs.warp.dev/) for platform-specific instructions.
+
+## Warp Contributions Overview Dashboard
+
+Explore [build.warp.dev](https://build.warp.dev) to:
+- Watch thousands of [Warp Factory](warp.dev/factories) agents triage issues, write specs, implement changes, and review PRs
+- View top contributors and in-flight features
+- Track your own issues with GitHub sign-in
+- Click into active agent sessions in a web-compiled Warp terminal
+
+## Automate development with Warp Factories
+
+This repository is driven by [Warp Factories](https://warp.dev/factories): open, flexible infrastructure for teams to build cloud software factories of their own.
+
+Warp Factories are defined in code and easy to deploy on any model or harness, with evals, benchmarks, and self-improvement built in. [Get early access](https://warp.dev/factories) or [book a demo](https://warp.dev/get-started) for a tailored walk-through of the platform. Eligible teams can receive up to $10,000 in free factory usage.
+
+## Licensing
+
+Warp's UI framework (the `warpui_core` and `warpui` crates) are licensed under the [MIT license](LICENSE-MIT).
+
+The rest of the code in this repository is licensed under the [AGPL v3](LICENSE-AGPL).
+
+## Open Source & Contributing
+
+Warp's client codebase is open source and lives in this repository. We welcome community contributions and have designed a lightweight workflow to help new contributors get started. For the full contribution flow, read our [CONTRIBUTING.md](CONTRIBUTING.md) guide.
+
+> [!TIP]
+> **Chat with contributors and the Warp team** in the [`#oss-contributors`](https://warpcommunity.slack.com/archives/C0B0LM8N4DB) Slack channel — a good place for ad-hoc questions, design discussion, and pairing with maintainers. New here? [Join the Warp Slack community](https://go.warp.dev/join-preview) first, then jump into `#oss-contributors`.
+
+### Issue to PR
+
+Before filing, [search existing issues](https://github.com/warpdotdev/warp/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc) for your bug or feature request. If nothing exists, [file an issue](https://github.com/warpdotdev/warp/issues/new/choose) using our templates. Security vulnerabilities should be reported privately as described in [CONTRIBUTING.md](CONTRIBUTING.md#reporting-security-issues).
+
+Once filed, a Warp maintainer reviews the issue and may apply a readiness label: [`ready-to-spec`](https://github.com/warpdotdev/warp/issues?q=is%3Aissue+is%3Aopen+label%3Aready-to-spec) signals the design is open for contributors to spec out, and [`ready-to-implement`](https://github.com/warpdotdev/warp/issues?q=is%3Aissue+is%3Aopen+label%3Aready-to-implement) signals the design is settled and code PRs are welcome. Anyone can pick up a labeled issue — mention **@oss-maintainers** on an issue if you'd like it considered for a readiness label.
+
+### Building the Repo Locally
+
+To build and run Warp from

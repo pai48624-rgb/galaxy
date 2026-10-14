@@ -1,0 +1,56 @@
+{
+ "company": "Explosion (spaCy 제작사)",
+ "one_liner_ko": "spaCy 제작사가 만든, 직접 스크립트로 확장할 수 있는 AI·머신러닝·NLP용 주석(라벨링) 도구",
+ "what_it_does_ko": "Prodigy는 머신러닝 모델의 학습·평가 데이터를 만드는 내려받아 쓰는 개발자 도구로, 웹 애플리케이션이 포함된 Python 패키지다. 실제 예시로 분류 체계를 정의하고 모델의 도움을 받아 주석을 달고, 그 결과로 모델을 학습·평가할 수 있다. 자신의 컴퓨터에서만 실행되어 외부 서버로 데이터를 보내지 않으며, 만든 모델도 사용자 소유다. Python 함수로 데이터 흐름과 주석 화면을 원하는 대로 바꿀 수 있다.",
+ "key_features": [
+  "개체명 인식·텍스트 분류·품사 태깅·의존 구문 분석 등 내장 주석 레시피",
+  "텍스트·이미지·오디오·비디오 등 23가지 주석 화면",
+  "개체명 인식·텍스트 분류 등을 위한 능동 학습 모델",
+  "Python 함수로 만드는 맞춤 레시피와 맞춤 HTML·JavaScript 화면",
+  "주석 결과로 모델 학습·평가(prodigy train)",
+  "인터넷 없이 자체 하드웨어에서 실행, 데이터가 외부로 나가지 않음",
+  "SQLite·MySQL·PostgreSQL 저장, JSON 내보내기",
+  "LLM을 활용한 주석·프롬프트 개발"
+ ],
+ "use_cases_ko": [
+  "데이터 과학자가 자체 NLP 모델의 학습·평가 데이터를 직접 만들기",
+  "보안이 엄격한 금융·의료·법률 조직이 내부에서 데이터 주석",
+  "언론·연구 기관의 인용문 추출·문서 분류 같은 정보 추출"
+ ],
+ "pricing": {
+  "free_tier": "없음 (기업·단체 대상 호스팅 체험판은 문의)",
+  "plans": [
+   {"name": "Personal", "price": 390, "currency": "USD", "period": "one-time", "limits": "평생 라이선스, 12개월 무료 업그레이드, 개인 명의, 세금 별도", "page_lang": null},
+   {"name": "Company", "price": 490, "currency": "USD", "period": "one-time", "limits": "좌석당 가격, 5좌석 단위 판매, 평생 라이선스, 12개월 무료 업그레이드, SSO, 세금 별도", "page_lang": null}
+  ],
+  "pricing_url": "https://prodi.gy/buy"
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": ["윈도", "맥", "CLI", "웹"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://prodi.gy/buy", "quote": "Just email us at contact@explosion.ai ."},
+  {"field": "one_liner_ko", "url": "https://prodi.gy", "quote": "Prodigy · An annotation tool for AI, Machine Learning & NLP"},
+  {"field": "what_it_does_ko", "url": "https://prodi.gy", "quote": "Prodigy is a downloadable developer tool for creating training and evaluation data for machine learning models."},
+  {"field": "what_it_does_ko", "url": "https://prodi.gy", "quote": "Prodigy is a Python package and library that includes a web application."},
+  {"field": "what_it_does_ko", "url": "https://prodi.gy", "quote": "The models you produce are yours as well, with absolutely no lock-in."},
+  {"field": "key_features", "url": "https://prodi.gy/buy", "quote": "Customizable web application with 23 annotation interfaces for text, images, audio, video, relations, multiple-choice, HTML, conflict resolution and more."},
+  {"field": "key_features", "url": "https://prodi.gy/buy", "quote": "Active learning models for named entity recognition , text classification , part-of-speech tagging and dependency parsing."},
+  {"field": "key_features", "url": "https://prodi.gy/buy", "quote": "Cloud-free: Prodigy works offline on your own hardware. No data ever needs to leave your servers."},
+  {"field": "key_features", "url": "https://prodi.gy/buy", "quote": "including SQLite, MySQL and PostgreSQL, and export to JSON."},
+  {"field": "key_features", "url": "https://prodi.gy", "quote": "You can customize Prodigy with your own Python functions, and mix and match frontend components to make your own annotation experience."},
+  {"field": "key_features", "url": "https://prodi.gy", "quote": "Prompt Engineering Develop better LLM prompts"},
+  {"field": "use_cases_ko", "url": "https://prodi.gy", "quote": "Prodigy runs entirely under your control, making it suitable for even the strictest privacy requirements."},
+  {"field": "use_cases_ko", "url": "https://prodi.gy", "quote": "How the Guardian approaches quote extraction from news articles with spaCy and Prodigy"},
+  {"field": "pricing", "url": "https://prodi.gy/buy", "quote": "$ 390 USD per lifetime license (excl. tax)"},
+  {"field": "pricing", "url": "https://prodi.gy/buy", "quote": "$ 490 USD per seat, in packs of 5 seats (excl. tax)"},
+  {"field": "pricing", "url": "https://prodi.gy/buy", "quote": "Please note that we’re only able to offer hosted trials to companies and organizations, not individuals."},
+  {"field": "platforms", "url": "https://prodi.gy/buy", "quote": "Prodigy installer for Python 3.8+ on macOS, Linux and Windows."},
+  {"field": "korean_support", "url": "https://prodi.gy", "quote": "html lang: 없음\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [
+  {"official": "개인 $390, 회사 좌석당 $490(5좌석 단위)의 평생 라이선스 가격이 공개되어 있고 바로 구매 가능", "diff": "기존 분류 '엔터프라이즈(가격 문의)'와 달리 가격이 공개된 일회성 구매(평생 라이선스) 제품", "url": "https://prodi.gy/buy"}
+ ],
+ "plan_change": []
+}

@@ -1,0 +1,41 @@
+{
+ "company": "Stanford NLP",
+ "one_liner_ko": "프롬프트 대신 프로그래밍으로 LLM을 다루는, AI 시스템 구축용 Python 프레임워크.",
+ "what_it_does_ko": "DSPy는 AI 시스템을 만드는 Python 프레임워크로, 작업을 프롬프트가 아닌 구조화된 시그니처(타입 있는 입력·출력)로 표현해 유지보수·모듈화·최적화가 쉬운 프로그램을 만든다. 모듈은 같은 시그니처를 직접 예측·단계별 추론(ChainOfThought)·도구와 추론 루프(ReAct) 등 다른 전략으로 실행하게 한다. 옵티마이저는 예시와 점수 함수를 받아 품질이 수렴할 때까지 프롬프트를 자동 조정하며, 프롬프트와 가중치 최적화 알고리즘을 제공한다. 간단한 분류기부터 RAG 파이프라인·에이전트 루프까지 쓸 수 있고, MIT 라이선스로 pip로 설치한다.",
+ "key_features": [
+  "타입 있는 입력·출력으로 작업을 선언하는 시그니처",
+  "Predict·ChainOfThought·ReAct 등 실행 전략을 바꾸는 모듈",
+  "지표 기반으로 프롬프트를 자동 조정하는 옵티마이저(GEPA·MIPROv2·BootstrapFewShot 등)",
+  "프롬프트와 가중치(파인튜닝) 최적화",
+  "도구 사용과 MCP 연동",
+  "스트리밍·비동기·캐시·배포·디버깅/관측성 지원",
+  "저장·불러오기"
+ ],
+ "use_cases_ko": [
+  "간단한 분류기, 정교한 RAG 파이프라인, 에이전트 루프 구축",
+  "이메일 등에서 정보·엔티티 추출"
+ ],
+ "pricing": {"free_tier": "불명", "plans": [], "pricing_url": null},
+ "open_source": "MIT",
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://dspy.ai/current/", "quote": "python ≥ 3.10 MIT license Stanford NLP github.com/stanfordnlp/dspy"},
+  {"field": "one_liner_ko", "url": "https://dspy.ai/current/", "quote": "DSPy is a Python framework for building AI systems."},
+  {"field": "what_it_does_ko", "url": "https://dspy.ai/current/", "quote": "Express your tasks as structured signatures, not prompts, to produce maintainable, modular, and optimizable programs."},
+  {"field": "what_it_does_ko", "url": "https://dspy.ai/current/", "quote": "Give DSPy examples and a scoring function. It tunes your prompts automatically until quality converges."},
+  {"field": "key_features", "url": "https://dspy.ai/current/", "quote": "Define your task as typed inputs and outputs instead of managing messy prompts."},
+  {"field": "key_features", "url": "https://dspy.ai/current/", "quote": "Modules control how your signature executes. Reason, run ensembles, use tools, add a REPL, and more without rewriting your task."},
+  {"field": "key_features", "url": "https://github.com/stanfordnlp/dspy", "quote": "offers algorithms for **optimizing their prompts and weights**"},
+  {"field": "key_features", "url": "https://dspy.ai/current/", "quote": "Use MCP in DSPy"},
+  {"field": "key_features", "url": "https://dspy.ai/current/", "quote": "Debugging & Observability"},
+  {"field": "key_features", "url": "https://dspy.ai/current/", "quote": "MIPROv2"},
+  {"field": "use_cases_ko", "url": "https://github.com/stanfordnlp/dspy", "quote": "whether you're building simple classifiers, sophisticated RAG pipelines, or Agent loops."},
+  {"field": "use_cases_ko", "url": "https://dspy.ai/current/", "quote": "Email Information Extraction"},
+  {"field": "open_source", "url": "https://dspy.ai/current/", "quote": "python ≥ 3.10 MIT license Stanford NLP"},
+  {"field": "korean_support", "url": "https://dspy.ai/current/", "quote": "html lang: en"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

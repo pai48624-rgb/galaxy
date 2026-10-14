@@ -1,0 +1,121 @@
+{
+ "company": null,
+ "one_liner_ko": "AI 코딩 에이전트마다 자기 git worktree를 줘서 병렬로 돌리는 관제 앱.",
+ "what_it_does_ko": "VibeTree는 병렬 AI 코딩 에이전트를 위한 관제 도구다. 작업마다 자기 브랜치와 유지되는 터미널을 가진 격리된 git worktree를 주고, 에이전트를 worktree 하나에 하나씩 돌린다. 모든 에이전트를 한눈에 보고 브랜치별 diff를 리뷰하며 실패한 실험은 클릭 한 번으로 버린다. 데스크톱 앱으로 쓰거나 서버를 띄워 휴대폰 등 브라우저에서 조종한다.",
+ "key_features": [
+  "작업마다 격리된 worktree·브랜치·터미널",
+  "Claude Code·Codex CLI·Gemini CLI·Aider·opencode 등 어떤 CLI든",
+  "새로고침·재연결에도 유지되는 세션",
+  "에이전트 상태(작업 중·대기·완료) 보기와 알림음",
+  "터미널 옆 diff 리뷰, 메모를 다음 프롬프트로 전송",
+  "개발 서버 URL 자동 감지·브라우저 미리보기",
+  "worktree 생성·삭제 훅",
+  "QR 페어링 휴대폰 접속(설치형 웹 앱)"
+ ],
+ "use_cases_ko": [
+  "여러 에이전트를 브랜치별로 나눠 돌리고 브랜치마다 리뷰·병합"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "MIT",
+ "api": "불명",
+ "platforms": [
+  "맥",
+  "윈도",
+  "웹"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/sahithvibudhi/vibe-tree",
+   "quote": "**Run every AI coding agent in its own git worktree, in parallel.**"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/sahithvibudhi/vibe-tree",
+   "quote": "VibeTree is mission control for parallel AI coding agents."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/sahithvibudhi/vibe-tree",
+   "quote": "Run one agent per worktree, watch them all at once, review each branch's diff, and throw away failed experiments with one click."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/sahithvibudhi/vibe-tree",
+   "quote": "Use it as a desktop app, or run the server and drive your agents from any browser, including your phone."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/sahithvibudhi/vibe-tree",
+   "quote": "| Parallel worktrees | One isolated checkout, branch, and terminal per task |"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/sahithvibudhi/vibe-tree",
+   "quote": "Works with Claude Code, OpenAI Codex CLI, Gemini CLI, Aider, opencode, and any other terminal program."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/sahithvibudhi/vibe-tree",
+   "quote": "| Persistent sessions | Terminals keep running and scrollback survives reloads and reconnects |"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/sahithvibudhi/vibe-tree",
+   "quote": "| Fleet status | See which agents are working, waiting, or done; a ding when one needs you |"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/sahithvibudhi/vibe-tree",
+   "quote": "| Changes view | Review the diff beside the terminal and send a note back as the agent's next prompt |"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/sahithvibudhi/vibe-tree",
+   "quote": "| Browser preview | Dev server URLs are detected and opened next to the terminal |"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/sahithvibudhi/vibe-tree",
+   "quote": "| Lifecycle hooks | Run your own scripts when worktrees are created or removed |"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/sahithvibudhi/vibe-tree",
+   "quote": "| Phone access | Installable web app with QR pairing; check the fleet from anywhere on your network |"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/sahithvibudhi/vibe-tree",
+   "quote": "Every conversation maps to one reviewable diff; review and merge per branch"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/sahithvibudhi/vibe-tree",
+   "quote": "[![License: MIT]"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/sahithvibudhi/vibe-tree",
+   "quote": "Or download the dmg from the [latest release]"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/sahithvibudhi/vibe-tree",
+   "quote": "### Windows and Linux"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/sahithvibudhi/vibe-tree",
+   "quote": "pnpm dev:all        # server + web; scan the QR code with your phone"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [],
+ "note": "GitHub README만 받음(홈·요금 페이지 없음). 요금 표기 없음. 리눅스도 지원."
+}

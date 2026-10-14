@@ -1,0 +1,117 @@
+{
+ "company": "OpenDP (Harvard 기반 커뮤니티)",
+ "one_liner_ko": "민감한 개인 데이터의 통계 분석을 위한 신뢰할 수 있는 오픈소스 차등 프라이버시 도구를 만드는 커뮤니티 프로젝트.",
+ "what_it_does_ko": "OpenDP는 민감한 개인 데이터를 통계적으로 분석하기 위한 오픈소스 도구를 만드는 커뮤니티 활동이다. 데이터에 담긴 개인에게는 차등 프라이버시의 엄격한 보호를, 연구자에게는 통계적으로 타당한 분석 방법을 제공한다. OpenDP 라이브러리는 차등 프라이버시 정의를 따르는 통계 알고리즘 모음으로 Rust로 구현되었고 Python·R 바인딩을 제공한다. 아직 개발 중이며 새 버전을 자주 낸다고 밝힌다.",
+ "key_features": [
+  "차등 프라이버시를 지키는 모듈형 통계 알고리즘 모음",
+  "여러 프라이버시 모델로 프라이버시 보존 계산 앱 구축",
+  "Rust 구현, Python·R 바인딩",
+  "pip / R 패키지로 설치",
+  "사용자 가이드·Python API 문서 제공"
+ ],
+ "use_cases_ko": [
+  "연구자가 기밀 데이터를 차등 프라이버시로 분석",
+  "데이터 공유가 필요한 기관의 프라이버시 보존 적용"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "MIT",
+ "api": "있음",
+ "platforms": [
+  "CLI"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://opendp.org",
+   "quote": "Copyright © 2026 The President and Fellows of Harvard College"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://opendp.org",
+   "quote": "OpenDP is a community effort to build trustworthy, open-source software tools for statistical analysis of sensitive private data."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://opendp.org",
+   "quote": "for the individuals who may be represented in confidential data"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/opendp/opendp",
+   "quote": "OpenDP is implemented in Rust, with bindings for easy use from Python and R."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/opendp/opendp",
+   "quote": "OpenDP is under development, and we expect to [release new versions]"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/opendp/opendp",
+   "quote": "The OpenDP Library is a modular collection of statistical algorithms that adhere to the definition of"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/opendp/opendp",
+   "quote": "It can be used to build applications of privacy-preserving computations, using a number of different models of privacy."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/opendp/opendp",
+   "quote": "$ pip install opendp"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/opendp/opendp",
+   "quote": "* [Python API Docs]"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://opendp.org",
+   "quote": "statistically valid methods of analysis for researchers who study the data"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://opendp.org",
+   "quote": "Do you have data to share or an application that can benefit from differential privacy? We can help."
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/opendp/opendp",
+   "quote": "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]"
+  },
+  {
+   "field": "api",
+   "url": "https://github.com/opendp/opendp",
+   "quote": "[Python API Docs]"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/opendp/opendp",
+   "quote": "$ pip install opendp"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://opendp.org",
+   "quote": "html lang: en-US"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://opendp.org",
+   "quote": "hreflang: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "MIT 라이선스 오픈소스 라이브러리, 커뮤니티·후원 기반이며 유료 플랜 안내 없음",
+   "diff": "기존 분류의 '엔터프라이즈 유료 플랜'이 공식 페이지에서 확인되지 않음",
+   "url": "https://opendp.org"
+  }
+ ]
+}

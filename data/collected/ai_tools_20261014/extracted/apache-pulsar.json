@@ -1,0 +1,48 @@
+{
+ "company": "Apache Software Foundation",
+ "one_liner_ko": "클라우드용으로 만든 오픈소스 분산 메시징·스트리밍 플랫폼.",
+ "what_it_does_ko": "Apache Pulsar는 클라우드용으로 만든 올인원 오픈소스 분산 메시징·스트리밍 플랫폼이다. 메시지를 개별로 소비·확인하거나 10ms 미만 지연의 스트림으로 소비할 수 있다. 계층형 구조로 데이터 재배치 없이 수백 노드까지 빠르게 확장하며, 멀티테넌시·지역 간 복제·계층형 스토리지와 6개 공식 클라이언트 언어를 지원한다. 단일 클러스터에서 최대 100만 개 토픽을 지원하며 Apache Software Foundation 상위 10개 프로젝트 중 하나다.",
+ "key_features": [
+  "별도 스토리지 계층으로 빠른 수평 확장",
+  "개별·누적 확인을 지원하는 저지연(<10ms) 메시징·스트리밍",
+  "지역 간 복제와 자동 클라이언트 장애 조치",
+  "테넌트 정책 기반 멀티테넌시",
+  "자동 부하 분산",
+  "Java·Go·Python·C++·Node.js·C# 공식 클라이언트",
+  "MySQL·Elasticsearch·Cassandra 등 공식 커넥터",
+  "Pulsar Functions 서버리스 함수, 클러스터당 최대 100만 토픽"
+ ],
+ "use_cases_ko": [
+  "분산 작업 큐",
+  "대규모 순서 보장 데이터 스트림"
+ ],
+ "pricing": {"free_tier": "오픈소스(Apache 2.0) — 공식 페이지에 유료 요금제 없음", "plans": [], "pricing_url": null},
+ "open_source": "Apache 2.0",
+ "api": "있음",
+ "platforms": ["API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://pulsar.apache.org", "quote": "Copyright © 2026 The Apache Software Foundation. All Rights Reserved."},
+  {"field": "one_liner_ko", "url": "https://pulsar.apache.org", "quote": "Apache Pulsar is an open-source, distributed messaging and streaming platform built for the cloud."},
+  {"field": "what_it_does_ko", "url": "https://pulsar.apache.org", "quote": "Messages can be consumed and acknowledged individually or consumed as streams with less than 10ms of latency ."},
+  {"field": "what_it_does_ko", "url": "https://pulsar.apache.org", "quote": "Its features include multi-tenancy with resource separation and access control, geo-replication across regions, tiered storage and support for six official client languages."},
+  {"field": "what_it_does_ko", "url": "https://pulsar.apache.org", "quote": "Pulsar is a Top 10 Apache Software Foundation project"},
+  {"field": "key_features", "url": "https://pulsar.apache.org", "quote": "Its unique design and separate storage layer enable handling the sudden surge in traffic by scaling out in seconds."},
+  {"field": "key_features", "url": "https://pulsar.apache.org", "quote": "Uniquely supports automatic client failover to healthy clusters."},
+  {"field": "key_features", "url": "https://pulsar.apache.org", "quote": "Maintain one cluster for your entire organization using tenants."},
+  {"field": "key_features", "url": "https://pulsar.apache.org", "quote": "Add or remove nodes and let Pulsar load balance topic bundles automatically."},
+  {"field": "key_features", "url": "https://pulsar.apache.org", "quote": "Officially maintained Pulsar Clients for Java, Go, Python, C++, Node.js, and C#."},
+  {"field": "key_features", "url": "https://pulsar.apache.org", "quote": "Pulsar has officially maintained connectors with popular 3rd parties: MySQL, Elasticsearch, Cassandra, and more."},
+  {"field": "key_features", "url": "https://pulsar.apache.org", "quote": "Write and deploy functions natively using Pulsar Functions."},
+  {"field": "use_cases_ko", "url": "https://pulsar.apache.org", "quote": "Enables use cases such as distributed work queues or order-preserving data streams at very large scales"},
+  {"field": "pricing", "url": "https://pulsar.apache.org", "quote": "Apache Pulsar is available under the Apache License, version 2.0."},
+  {"field": "open_source", "url": "https://pulsar.apache.org", "quote": "Apache Pulsar is available under the Apache License, version 2.0."},
+  {"field": "api", "url": "https://github.com/apache/pulsar", "quote": "- REST API for provisioning, admin and stats"},
+  {"field": "platforms", "url": "https://github.com/apache/pulsar", "quote": "- REST API for provisioning, admin and stats"},
+  {"field": "korean_support", "url": "https://pulsar.apache.org", "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [
+  {"official": "Apache License 2.0 오픈소스 ASF 프로젝트로, 공식 사이트에 자체 클라우드 매니지드 유료 요금제가 없음", "diff": "기존 분류의 '클라우드 매니지드 유료 플랜'을 공식 페이지에서 확인할 수 없음 — 순수 오픈소스", "url": "https://pulsar.apache.org"}
+ ],
+ "plan_change": []
+}

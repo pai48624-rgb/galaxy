@@ -1,0 +1,108 @@
+=== [github] https://github.com/Michaelliv/mercury
+<p align="center">
+  <img src="assets/logo-with-text.svg" alt="Mercury" height="120" />
+</p>
+
+<p align="center">
+  <em>There are many claws, but this one is mine.</em>
+</p>
+
+<p align="center">
+  <a href="https://github.com/Michaelliv/mercury"><img alt="GitHub" src="https://img.shields.io/badge/github-mercury-181717?style=flat-square&logo=github" /></a>
+  <a href="https://www.npmjs.com/package/mercury-ai"><img alt="npm" src="https://img.shields.io/npm/v/mercury-ai?style=flat-square&logo=npm" /></a>
+</p>
+
+Mercury is a personal AI assistant that lives where you chat. It connects to WhatsApp, Slack, and Discord, runs [pi](https://github.com/badlogic/pi) as a sandboxed subprocess, and deploys as a single Docker container.
+
+---
+
+## Quick Start
+
+```bash
+npm install -g mercury-ai
+mkdir my-assistant && cd my-assistant
+mercury init
+```
+
+Configure `.env`:
+
+```bash
+MERCURY_BOT_USERNAME=Mercury
+MERCURY_TRIGGER_PATTERNS=@Mercury,Mercury
+MERCURY_MODEL_PROVIDER=anthropic
+MERCURY_ENABLE_WHATSAPP=true
+```
+
+Authenticate:
+
+```bash
+mercury auth login anthropic    # OAuth (opens browser)
+mercury auth whatsapp           # WhatsApp QR code
+```
+
+Build and start:
+
+```bash
+mercury build                   # Build Docker image with extensions
+mercury start                   # Start container
+mercury logs -f                 # View logs
+```
+
+Pair via WhatsApp DM:
+
+```bash
+mercury pair                    # Show pairing code
+# Send "/pair <CODE>" in a WhatsApp DM → grants admin
+# Send "/pair <CODE>" in a group → activates the bot there
+```
+
+---
+
+## How It Works
+
+```
+┌──────────────────────────────────────────────────────────────────┐
+│                        Docker Container                          │
+│                                                                  │
+│   ┌──────────┐  ┌─────────┐  ┌─────────┐  ┌───────┐              │
+│   │ WhatsApp │  │  Slack  │  │ Discord │  │  API  │              │
+│   │ Adapter  │  │ Adapter │  │ Adapter │  │ /chat │              │
+│   └────┬─────┘  └─────┬───┘  └────┬────┘  └────┬──┘              │
+│        └──────────────┴───────────┴────────────┘                 │
+│                           │                                      │
+│              ┌────────────▼────────────┐                         │
+│              │         Ingress         │                         │
+│              │  pairing · commands ·   │                         │
+│              │  ambient · routing      │                         │
+│              └────────────┬────────────┘                         │
+│                           │                                      │
+│              ┌────────────▼────────────┐                         │
+│              │        Policy           │                         │
+│              │  triggers · permissions │                         │
+│              │  mutes · rate limits    │                         │
+│              └────────────┬────────────┘                         │
+│                           │                                      │
+│              ┌────────────▼────────────┐                         │
+│              │        Runtime          │                         │
+│              │  messages · hooks ·     │                         │
+│              │  RBAC env · history     │                         │
+│              └────────────┬────────────┘                         │
+│                           │                                      │
+│              ┌────────────▼────────────┐     ┌───────────────┐   │
+│              │   pi subprocess         │────▶│   SQLite DB   │   │
+│              │   (sandboxed)           │     │   messages,   │   │
+│              │   mrctl · extensions    │     │   tasks,      │   │
+│              └─────────────────────────┘     │   roles, ...  │   │
+│                                              └───────────────┘   │
+└──────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## Features
+
+| Feature | Description | Docs |
+|---------|-------------|------|
+| **Multi-platform** | WhatsApp, Slack, Discord, or CLI-only | [pipeline](docs/pipeline.md) |
+| **API key auth** | All endpoints require Bearer token | [auth](docs/auth/overview.md) |
+| **Pairing** | DM pa

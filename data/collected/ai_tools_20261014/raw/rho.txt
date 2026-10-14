@@ -1,0 +1,325 @@
+=== [home] https://rhobot.dev (lang=en)
+rho -- a persistent AI agent 
+ rho
+ persistent ai agent
+ features 
+ setup 
+ email 
+ source 
+ v0.1 // open source // local-first
+ an ai agent that persists .
+memory. heartbeat. action.
+ rho runs on your device -- phone, laptop, server. it remembers across
+ sessions, checks in on a schedule, and acts when you're not looking.
+ not a chat window. not a cloud service. a process that stays running.
+ $ 
+ curl -fsSL https://rhobot.dev/install | bash 
+ click to copy 
+ requires termux on android, or node.js + tmux on macos/linux
+ 0:rho* 
+ 1:work 
+ "rho" 0:bash 
+ android/termux
+ macos
+ linux
+ iphone (via ssh)
+ // features
+ what it does
+ memory 
+ learnings and preferences persist across sessions. your agent remembers corrections, patterns, and context. consolidates daily. 
+ heartbeat 
+ periodic autonomous check-ins. reads your checklist, runs scheduled tasks, monitors what matters. configurable interval. 
+ device control 
+ on android with tasker: read screens, tap buttons, open apps, type text. your phone becomes an agent platform. 
+ brain 
+ structured knowledge store. not chat logs -- core knowledge, memories, context, archives. 
+ extensions 
+ typescript extensions loaded at runtime. memory viewer, usage tracking, web search, tasker bridge. write your own. 
+ local-first 
+ data stays on your device. no cloud for your memories. bring your own llm provider. you own everything. 
+ // setup
+ running in five minutes
+ install 
+ one command. installs runtime, extensions, skills, brain scaffold. works on termux, macos, linux. 
+ login 
+ use your existing claude pro, chatgpt plus, or gemini subscription. no api keys. no surprise bills. 
+ configure 
+ edit RHO.md -- your checklist. edit SOUL.md -- your agent's personality. both are just markdown. 
+ run 
+ rho starts a tmux session. talk to it or let the heartbeat handle things. it runs until you stop it. 
+ // cost
+ what it costs to run
+ llm provider 
+ $0 extra -- uses your existing subscription 
+ heartbeat (48 check-ins/day) 
+ ~$0.05/day with smart routing 
+ hosting (android) 
+ $0 -- runs on your phone 
+ hosting (iphone via ssh) 
+ $0-5/mo -- free with oracle cloud 
+ comparable agent services 
+ $20-50/month 
+ // skills
+ built-in capabilities
+ skill platform 
+ notification all 
+ clipboard all 
+ open-url all 
+ text-to-speech all 
+ code-assist all 
+ web-search all 
+ sms android 
+ camera android 
+ location android 
+ contacts android 
+ speech-to-text android 
+ screen-control android + tasker 
+ get started
+ --> source on github 
+ --> installation docs 
+ --> @tau_rho_ai on x 
+ rho // mit license // 2025 
+ terms 
+ privacy 
+ refunds 
+ github 
+ x
+
+=== [pricing] https://rhobot.dev/pricing (lang=en)
+rho -- a persistent AI agent 
+ rho
+ persistent ai agent
+ features 
+ setup 
+ email 
+ source 
+ v0.1 // open source // local-first
+ an ai agent that persists .
+memory. heartbeat. action.
+ rho runs on your device -- phone, laptop, server. it remembers across
+ sessions, checks in on a schedule, and acts when you're not looking.
+ not a chat window. not a cloud service. a process that stays running.
+ $ 
+ curl -fsSL https://rhobot.dev/install | bash 
+ click to copy 
+ requires termux on android, or node.js + tmux on macos/linux
+ 0:rho* 
+ 1:work 
+ "rho" 0:bash 
+ android/termux
+ macos
+ linux
+ iphone (via ssh)
+ // features
+ what it does
+ memory 
+ learnings and preferences persist across sessions. your agent remembers corrections, patterns, and context. consolidates daily. 
+ heartbeat 
+ periodic autonomous check-ins. reads your checklist, runs scheduled tasks, monitors what matters. configurable interval. 
+ device control 
+ on android with tasker: read screens, tap buttons, open apps, type text. your phone becomes an agent platform. 
+ brain 
+ structured knowledge store. not chat logs -- core knowledge, memories, context, archives. 
+ extensions 
+ typescript extensions loaded at runtime. memory viewer, usage tracking, web search, tasker bridge. write your own. 
+ local-first 
+ data stays on your device. no cloud for your memories. bring your own llm provider. you own everything. 
+ // setup
+ running in five minutes
+ install 
+ one command. installs runtime, extensions, skills, brain scaffold. works on termux, macos, linux. 
+ login 
+ use your existing claude pro, chatgpt plus, or gemini subscription. no api keys. no surprise bills. 
+ configure 
+ edit RHO.md -- your checklist. edit SOUL.md -- your agent's personality. both are just markdown. 
+ run 
+ rho starts a tmux session. talk to it or let the heartbeat handle things. it runs until you stop it. 
+ // cost
+ what it costs to run
+ llm provider 
+ $0 extra -- uses your existing subscription 
+ heartbeat (48 check-ins/day) 
+ ~$0.05/day with smart routing 
+ hosting (android) 
+ $0 -- runs on your phone 
+ hosting (iphone via ssh) 
+ $0-5/mo -- free with oracle cloud 
+ comparable agent services 
+ $20-50/month 
+ // skills
+ built-in capabilities
+ skill platform 
+ notification all 
+ clipboard all 
+ open-url all 
+ text-to-speech all 
+ code-assist all 
+ web-search all 
+ sms android 
+ camera android 
+ location android 
+ contacts android 
+ speech-to-text android 
+ screen-control android + tasker 
+ get started
+ --> source on github 
+ --> installation docs 
+ --> @tau_rho_ai on x 
+ rho // mit license // 2025 
+ terms 
+ privacy 
+ refunds 
+ github 
+ x
+
+=== [meta] https://rhobot.dev
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/mikeyobrien/rho
+# rho
+
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/mikeyobrien/rho)
+[![@tau_rho_ai](https://img.shields.io/badge/@tau__rho__ai-000000?logo=x)](https://x.com/tau_rho_ai)
+
+An always-on personal AI operator that:
+- stays running in the background,
+- remembers context across sessions,
+- and checks in proactively on a schedule.
+
+Runs on **macOS**, **Linux**, and **Android** (plus **iPhone/iPad via SSH**).
+
+<p align="center">
+  <img alt="rho web ui" src="docs/web-ui-hero.jpg" />
+</p>
+
+Built on [pi coding agent](https://github.com/badlogic/pi-mono).
+
+<details>
+<summary><b>Terminal demo</b></summary>
+
+![Rho demo](docs/demo.gif)
+
+</details>
+
+---
+
+## Why rho
+
+Most AI tools are stateless chat tabs. rho is built for ongoing operation.
+
+- **Persistent memory**: durable context across sessions
+- **Memory observability**: inspect, search, and edit what the agent has learned
+- **Proactive heartbeat**: check-ins every 30m by default
+- **Local-first state**: your memory and config stay on your machine
+- **BYO model/provider**: use your own pi/provider setup
+- **Multi-surface control**: terminal, web UI, Telegram, and agent email
+
+---
+
+## 2-minute quick start (recommended)
+
+Prerequisites: **Node.js 18+**, **tmux**, **git**
+
+```bash
+npm install -g @rhobot-dev/rho
+rho init && rho sync
+rho login && rho start
+rho
+```
+
+That gives you:
+- initialized config in `~/.rho/`
+- authenticated provider access via pi
+- background heartbeat daemon
+- an attached interactive session
+
+### First 5 minutes
+
+Run these after install:
+
+```bash
+rho status                # daemon + module health
+/rho status               # heartbeat status (inside session)
+/rho now                  # trigger immediate check-in
+/brain                    # open memory viewer
+/vault inbox              # see captured knowledge items
+```
+
+---
+
+## Web UI (first-class, built in)
+
+rho includes a browser workspace for day-to-day operation:
+
+- chat with real-time streaming responses
+- session browsing + forking from any message
+- memory management (`/brain` entries)
+- task management
+- config editing (`~/.rho/init.toml`)
+- line-level code review at `/review`
+
+### Lightweight + performant by design
+
+- **No-build web split**: server logic in `web/*.ts`, browser runtime in `web/public/js/*.js` (no frontend bundler/transpile pipeline).
+- **Lean server runtime**: Hono-based routes with response compression enabled.
+- **Low-latency updates**: live RPC/WebSocket streaming for chat responses.
+- **Push over poll where possible**: server emits `sessions_changed` UI events; client updates immediately.
+- **Idle-aware behavior**: polling pauses when the tab is hidden or user is idle, then resumes on activity.
+- **Render throttling for streams**: markdown updates are debounced (150ms) to reduce UI churn during rapid token deltas.
+- **Session metadata caching**: session info is cached by file `mtime` to avoid unnecessary re-reads.
+
+```bash
+rho web
+rho web --port 4000
+rho web --open
+```
+
+Then open `http://localhost:3141` (or your host IP).
+
+### Positioning vs OpenClaw / nanobot
+
+| Project | Web experience emphasis |
+|---|---|
+| **rho** | Built-in operator workspace with stronger memory observability and a lightweight no-build stack (chat, learned-memory inspection/editing, tasks, config, review) |
+| **OpenClaw** | Strong Gateway Control UI + WebChat control plane |
+| **nanobot** | README primarily emphasizes CLI + channel gateway flows |
+
+---
+
+## Install alternatives
+
+<details>
+<summary><b>pi package install</b></summary>
+
+```bash
+pi install npm:@rhobot-dev/rho
+rho init && rho sync
+rho login && rho start
+```
+
+</details>
+
+<details>
+<summary><b>macOS / Linux (installer script)</b></summary>
+
+```bash
+git clone https://github.com/mikeyobrien/rho.git ~/.rho/project
+cd ~/.rho/project && ./install.sh
+```
+
+The installer checks missing dependencies and supports NixOS.
+
+</details>
+
+<details>
+<summary><b>Android (Termux)</b></summary>
+
+Install [Termux](https://f-droid.org/packages/com.termux/) and [Termux:API](https://f-droid.org/packages/com.termux.api/) from F-Droid, then:
+
+```bash
+curl -fsSL https://rhobot.dev/install | bash
+```
+
+If Termux can't build the optional `node-pty` native module, r

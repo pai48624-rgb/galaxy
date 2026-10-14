@@ -1,0 +1,113 @@
+{
+ "company": null,
+ "one_liner_ko": "AI로 사람의 능력을 높이기 위한 오픈소스 프레임워크로, 실제 업무별 프롬프트(패턴)를 정리해 쓰게 한다.",
+ "what_it_does_ko": "fabric은 AI로 사람을 보강하기 위한 오픈소스 프레임워크다. AI의 문제는 능력이 아니라 일상에 통합하기 어렵다는 점이라고 보고, AI의 기본 단위인 프롬프트를 실제 업무별로 만들고 모으고 정리한다. 정리한 프롬프트는 좋아하는 도구에서 쓰거나 명령줄에서 fabric 자체를 화면으로 쓸 수 있다. REST API 서버도 제공한다.",
+ "key_features": [
+  "업무별 프롬프트(패턴) 정리·수집",
+  "명령줄(CLI)에서 직접 사용",
+  "사용자 맞춤 패턴",
+  "REST API 서버",
+  "여러 AI 백엔드 지원(Anthropic·OpenAI Codex·Azure AI Gateway 등)"
+ ],
+ "use_cases_ko": [
+  "자주 쓰는 AI 작업(요약 등)을 프롬프트로 정리해 명령줄에서 실행"
+ ],
+ "pricing": {
+  "free_tier": "있음 (MIT 오픈소스)",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "MIT",
+ "api": "있음",
+ "platforms": [
+  "CLI",
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/danielmiessler/Fabric",
+   "quote": "is an open-source framework for augmenting humans using AI."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/danielmiessler/Fabric",
+   "quote": "In other words, AI doesn't have a capabilities problem—it has an <em>integration</em> problem."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/danielmiessler/Fabric",
+   "quote": "Fabric organizes prompts by real-world task, allowing people to create, collect, and organize their most important AI solutions in a single place for use in their favorite tools."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/danielmiessler/Fabric",
+   "quote": "And if you're command-line focused, you can use Fabric itself as the interface!"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/danielmiessler/Fabric",
+   "quote": "Fabric was created to address this by creating and organizing the fundamental units of AI—the prompts themselves!"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/danielmiessler/Fabric",
+   "quote": "[Custom Patterns](#custom-patterns)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/danielmiessler/Fabric",
+   "quote": "[REST API](#rest-api-server)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/danielmiessler/Fabric",
+   "quote": "Fabric now supports using OpenAI Codex (with your OpenAI subscription) as a backend!"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/danielmiessler/Fabric",
+   "quote": "Added Azure AI Gateway plugin supporting multiple backends (AWS Bedrock, Azure OpenAI, Google Vertex AI)"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/danielmiessler/Fabric",
+   "quote": "Screenshot of fabric](./docs/images/fabric-summarize.png)"
+  },
+  {
+   "field": "pricing",
+   "url": "https://github.com/danielmiessler/Fabric",
+   "quote": "[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/danielmiessler/Fabric",
+   "quote": "[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)"
+  },
+  {
+   "field": "api",
+   "url": "https://github.com/danielmiessler/Fabric",
+   "quote": "[REST API](#rest-api-server)"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/danielmiessler/Fabric",
+   "quote": "if you're command-line focused, you can use Fabric itself as the interface!"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://github.com/danielmiessler/Fabric",
+   "quote": "<a href=\"README.ar.md\">العربية</a> · <a href=\"README.zh.md\">中文</a>"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "MIT 라이선스 오픈소스 프레임워크(GitHub), 유료 요금제 언급 없음",
+   "diff": "기존 '프리미엄(무료+유료 구독)'과 달리 공식 저장소에는 유료 구독이 없고 MIT 오픈소스",
+   "url": "https://github.com/danielmiessler/Fabric"
+  }
+ ],
+ "plan_change": [],
+ "note": "GitHub README만 있음. 한국어 판단은 README 언어 목록(English·العربية·中文) 기준."
+}

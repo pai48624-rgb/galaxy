@@ -1,0 +1,140 @@
+{
+ "company": "OpenMetadata (관리형 서비스: Collate)",
+ "one_liner_ko": "사람·AI 어시스턴트·에이전트를 위한 오픈소스 컨텍스트 계층(데이터 카탈로그·메타데이터 관리).",
+ "what_it_does_ko": "OpenMetadata는 기술 메타데이터, 비즈니스 의미, 조직의 기억을 하나의 지식 그래프로 묶어 사람과 AI 에이전트가 같은 기반에서 데이터를 이해하게 하는 오픈소스 플랫폼이다. 품질 신호, 컬럼 단위 계보, 소유권, 용어집, 분류, 데이터 계약, 데이터 제품을 연결한다. 130개 이상의 커넥터, 시맨틱 검색, API·SDK, MCP 서버를 제공한다. 자체 배포 외에 Collate를 통한 관리형 서비스와 무료 SaaS가 있다.",
+ "key_features": [
+  "130개 이상 데이터 서비스 커넥터",
+  "메타데이터 지식 그래프(컨텍스트·온톨로지·메모리)",
+  "컬럼 단위 계보",
+  "데이터 품질·관찰과 코드형 품질 검사",
+  "데이터 계약과 거버넌스",
+  "MCP 서버와 AI SDK",
+  "JSON Schema 기반 API 우선 설계"
+ ],
+ "use_cases_ko": [
+  "AI 에이전트에 신뢰할 수 있는 데이터 컨텍스트 제공",
+  "데이터 카탈로그로 탐색·계보·거버넌스 관리",
+  "비즈니스 사용자와 기술 사용자의 데이터 협업"
+ ],
+ "pricing": {
+  "free_tier": "있음 (무료 SaaS: 자기 데이터로 쓰는 무료 클라우드 서비스, 자체 배포 가능)",
+  "plans": [
+   {
+    "name": "Free SaaS",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "자기 데이터로 쓰는 무료 OpenMetadata 클라우드 서비스",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://open-metadata.org"
+ },
+ "open_source": "오픈소스(라이선스 이름은 페이지에 없음)",
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "CLI",
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://docs.open-metadata.org/v2.0.x",
+   "quote": "©2026 OpenMetadata. All rights reserved."
+  },
+  {
+   "field": "company",
+   "url": "https://open-metadata.org",
+   "quote": "Managed service via Collate — Get started free →"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://open-metadata.org",
+   "quote": "The #1 open context layer for"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://open-metadata.org",
+   "quote": "Unify technical context, business semantics, and organizational memory into one graph — so AI agents and humans reason from the same trusted foundation."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/open-metadata/OpenMetadata",
+   "quote": "With **130+ connectors**, open metadata standards, semantic search, APIs, SDKs, and an MCP server"
+  },
+  {
+   "field": "key_features",
+   "url": "https://open-metadata.org",
+   "quote": "OpenMetadata's ingestion framework supports connectors for 130+ data services, with more added every release."
+  },
+  {
+   "field": "key_features",
+   "url": "https://open-metadata.org",
+   "quote": "MCP server for direct agent-to-context integration"
+  },
+  {
+   "field": "key_features",
+   "url": "https://open-metadata.org",
+   "quote": "AI SDK lets external agents call OpenMetadata capabilities programmatically"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.open-metadata.org/v2.0.x",
+   "quote": "Manage data quality checks using version-controlled configurations."
+  },
+  {
+   "field": "key_features",
+   "url": "https://open-metadata.org",
+   "quote": "OpenMetadata's schema-first architecture — with 700+ open specifications in JSON Schema and RDF/JSON-LD — makes metadata programmable and extensible."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/open-metadata/OpenMetadata",
+   "quote": "data quality signals, lineage, column-level lineage, ownership"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://open-metadata.org",
+   "quote": "Give your AI agents trusted, understood data"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://open-metadata.org",
+   "quote": "OpenMetadata helps us to reduce the gap between business users and technical users."
+  },
+  {
+   "field": "pricing",
+   "url": "https://open-metadata.org",
+   "quote": "Free OpenMetadata cloud service with your own data"
+  },
+  {
+   "field": "pricing",
+   "url": "https://open-metadata.org",
+   "quote": "Deploy OpenMetadata in your own environment"
+  },
+  {
+   "field": "open_source",
+   "url": "https://open-metadata.org",
+   "quote": "OpenMetadata is the #1 open-source project for AI context, data cataloging, and metadata management."
+  },
+  {
+   "field": "api",
+   "url": "https://open-metadata.org",
+   "quote": "API-first and schema-first, by design"
+  },
+  {
+   "field": "platforms",
+   "url": "https://docs.open-metadata.org/v2.0.x",
+   "quote": "Build and embed custom AI agents with programmatic access to OpenMetadata through MCP tools across Python, TypeScript, Java, and CLI."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://open-metadata.org",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

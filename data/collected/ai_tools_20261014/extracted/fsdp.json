@@ -1,0 +1,47 @@
+{
+ "company": "PyTorch",
+ "one_liner_ko": "PyTorch 분산 패키지(torch.distributed)에 들어 있는 완전 샤딩 데이터 병렬(FullyShardedDataParallel) 기능.",
+ "what_it_does_ko": "PyTorch 2.14 공식 문서의 FullyShardedDataParallel 항목이다. 문서 목차상 분산 통신 패키지(torch.distributed) 아래에 torch.distributed.fsdp.fully_shard, 텐서 병렬, 파이프라인 병렬, 분산 체크포인트와 함께 정리돼 있다. 수집된 본문에는 메뉴만 있고 기능 설명은 담기지 않았다.",
+ "key_features": [
+  "torch.distributed.fsdp.fully_shard API"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://docs.pytorch.org/docs/2.14/fsdp.html",
+   "quote": "FullyShardedDataParallel — PyTorch 2.14 documentation"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://docs.pytorch.org/docs/2.14/fsdp.html",
+   "quote": "Distributed communication package - torch.distributed"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.pytorch.org/docs/2.14/fsdp.html",
+   "quote": "FullyShardedDataParallel\n torch.distributed.fsdp.fully_shard\n Tensor Parallelism - torch.distributed.tensor.parallel"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.pytorch.org/docs/2.14/fsdp.html",
+   "quote": "torch.distributed.fsdp.fully_shard"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://docs.pytorch.org/docs/2.14/fsdp.html",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

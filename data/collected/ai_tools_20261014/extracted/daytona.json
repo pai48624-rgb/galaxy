@@ -1,0 +1,219 @@
+{
+ "company": "Daytona Platforms Inc.",
+ "one_liner_ko": "AI가 생성한 코드를 안전하게 실행하는 탄력적 샌드박스 인프라.",
+ "what_it_does_ko": "Daytona는 AI가 생성한 코드를 실행하는 안전하고 탄력적인 인프라다. 샌드박스는 전용 커널·파일시스템·네트워크와 할당된 vCPU·RAM·디스크를 갖춘 완전 격리된 컴퓨터다. 코드에서 실행까지 90ms 미만으로 샌드박스를 만들고 대규모 병렬 실행을 지원한다. 에이전트와 개발자는 SDK·API·CLI로 샌드박스를 다루며, 스냅샷으로 세션 간 상태를 유지한다.",
+ "key_features": [
+  "90ms 미만 샌드박스 생성",
+  "격리 환경에서 코드·명령 실행과 실시간 출력 스트리밍",
+  "세밀한 권한 제어가 있는 파일 시스템 작업",
+  "Git 기본 연동과 자격 증명 처리",
+  "다국어 LSP(언어 서버) 지원",
+  "세션 간 상태를 유지하는 스냅샷",
+  "에이전트의 컴퓨터 사용(Computer Use)",
+  "Python·TypeScript·Ruby·Go·Java SDK"
+ ],
+ "use_cases_ko": [
+  "병렬 환경에서 AI 평가(evals) 확장",
+  "신뢰할 수 없는 코드를 격리 실행하는 코드 인터프리터",
+  "코딩 에이전트 실행"
+ ],
+ "pricing": {
+  "free_tier": "있음 ($200 무료 컴퓨팅 포함, 스토리지 5GiB 무료, 카드 없이 무료 체험)",
+  "plans": [
+   {
+    "name": "vCPU",
+    "price": 0.0504,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "시간당, 초 단위 과금",
+    "page_lang": null
+   },
+   {
+    "name": "Memory",
+    "price": 0.0162,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "GiB당 시간당",
+    "page_lang": null
+   },
+   {
+    "name": "Storage",
+    "price": 0.000108,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "GiB당 시간당, 첫 5GiB 무료",
+    "page_lang": null
+   },
+   {
+    "name": "Windows OS",
+    "price": 0.0858,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "vCPU당 시간당",
+    "page_lang": null
+   },
+   {
+    "name": "GPU Nvidia H100 (On-demand)",
+    "price": 3.95,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "시간당",
+    "page_lang": null
+   },
+   {
+    "name": "GPU Nvidia H100 (Preemptible)",
+    "price": 2.27,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "시간당",
+    "page_lang": null
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "영업 문의, 더 큰 한도·SSO·감사 로그·BYOC",
+    "page_lang": null
+   }
+  ],
+  "pricing_url": "https://www.daytona.io/pricing"
+ },
+ "open_source": "오픈소스(라이선스명 페이지에 없음, 2026-06부터 공개 저장소 유지보수 중단)",
+ "api": "있음",
+ "platforms": [
+  "API",
+  "CLI"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.daytona.io/pricing",
+   "quote": "© 2026 Daytona PlatformS Inc."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.daytona.io/docs/",
+   "quote": "Daytona is a secure and elastic infrastructure for running AI-generated code."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.daytona.io/docs/",
+   "quote": "Daytona provides full composable computers — sandboxes — with complete isolation"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.daytona.io/docs/",
+   "quote": "Agents and developers interact with sandboxes programmatically using the SDKs, API, and CLI."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.daytona.io",
+   "quote": "Sub 90ms sandbox creation from code to execution."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.daytona.io",
+   "quote": "Execute code and commands in isolated envs with real-time output streaming."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.daytona.io",
+   "quote": "Manage sandboxes with full CRUD operations and granular permission controls."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.daytona.io",
+   "quote": "Native Git operations and secure credential handling."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.daytona.io",
+   "quote": "Language server features with multi-language completion and real-time analysis."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.daytona.io/docs/",
+   "quote": "Our stateful environment snapshots enable persistent agent operations across sessions"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.daytona.io",
+   "quote": "Let Your Agent Use the Computer Like a Human Would."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.daytona.io",
+   "quote": "Scale evals across parallel environments with reproducible snapshot states."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.daytona.io",
+   "quote": "Run untrusted code in isolated environments with real-time output streaming."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.daytona.io",
+   "quote": "Execute AI agents code with RESTful API and state persistence across parallel runs."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.daytona.io/pricing",
+   "quote": "$200 in free compute included."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.daytona.io/pricing",
+   "quote": "$0.0504/h"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.daytona.io/pricing",
+   "quote": "* Price per GiB after first 5 free"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.daytona.io/pricing",
+   "quote": "Sign up for a free trial - no credit card required"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.daytona.io/pricing",
+   "quote": "Designed for businesses that need larger limits, SSO, audit logs, or BYOC"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/daytonaio/daytona",
+   "quote": "It remains public and free to use, fork, and build on under the"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/daytonaio/daytona",
+   "quote": "As of June 2026, Daytona's core development has moved to a private codebase."
+  },
+  {
+   "field": "api",
+   "url": "https://www.daytona.io/docs/",
+   "quote": "Agents and developers interact with sandboxes programmatically using the SDKs, API, and CLI."
+  },
+  {
+   "field": "platforms",
+   "url": "https://www.daytona.io/docs/",
+   "quote": "Agents and developers interact with sandboxes programmatically using the SDKs, API, and CLI."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.daytona.io",
+   "quote": "hreflang: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "2026년 6월부터 핵심 개발이 비공개 코드베이스로 이전, 공개 저장소는 더 이상 업데이트 없음. 클라우드는 $200 무료 크레딧 + 초 단위 종량제",
+   "diff": "기존 '오픈소스 + 사용량 기반 유료 클라우드' 중 오픈소스 부분이 사실상 동결(유지보수 중단)됨",
+   "url": "https://github.com/daytonaio/daytona"
+  }
+ ]
+}

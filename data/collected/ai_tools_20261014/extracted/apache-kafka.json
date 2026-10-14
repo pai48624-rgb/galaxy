@@ -1,0 +1,47 @@
+{
+ "company": "Apache Software Foundation",
+ "one_liner_ko": "고성능 데이터 파이프라인·스트리밍 분석·데이터 통합·핵심 업무 애플리케이션에 쓰이는 오픈소스 분산 이벤트 스트리밍 플랫폼.",
+ "what_it_does_ko": "Apache Kafka는 수천 개 기업이 고성능 데이터 파이프라인, 스트리밍 분석, 데이터 통합, 핵심 업무 애플리케이션에 쓰는 오픈소스 분산 이벤트 스트리밍 플랫폼이다. 머신 클러스터로 최저 2ms 지연의 메시지 전달을 하고, 분산·내구성·내결함성 클러스터에 데이터 스트림을 안전하게 저장한다. 조인·집계·필터·변환 같은 스트림 처리를 내장하며 Connect 인터페이스로 수백 가지 이벤트 소스·싱크와 연동한다. Apache Software Foundation에서 가장 활발한 5개 프로젝트 중 하나다.",
+ "key_features": [
+  "최저 2ms 지연의 높은 처리량",
+  "브로커 수천 대·하루 수조 건 메시지까지 확장",
+  "분산·내구성·내결함성 영구 저장",
+  "가용 영역·지역 간 고가용성",
+  "이벤트 시간·exactly-once 기반 내장 스트림 처리",
+  "Postgres·JMS·Elasticsearch·AWS S3 등과 연결하는 Kafka Connect",
+  "다양한 프로그래밍 언어 클라이언트 라이브러리"
+ ],
+ "use_cases_ko": [
+  "고성능 데이터 파이프라인과 데이터 통합",
+  "스트리밍 분석",
+  "순서 보장·메시지 무손실이 필요한 핵심 업무 애플리케이션"
+ ],
+ "pricing": {"free_tier": "오픈소스 — 공식 페이지에 유료 요금제 없음", "plans": [], "pricing_url": null},
+ "open_source": "오픈소스(소프트웨어 라이선스 이름은 받은 본문에 없음, 웹사이트 콘텐츠는 Apache License v2)",
+ "api": "있음",
+ "platforms": ["API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://kafka.apache.org", "quote": "Apache Kafka, Kafka, and the Kafka logo are either registered trademarks or trademarks of The Apache Software Foundation"},
+  {"field": "one_liner_ko", "url": "https://kafka.apache.org", "quote": "Apache Kafka is an open-source distributed event streaming platform used by thousands of companies for high-performance data pipelines, streaming analytics, data integration, and mission-critical applications."},
+  {"field": "what_it_does_ko", "url": "https://kafka.apache.org", "quote": "Store streams of data safely in a distributed, durable, fault-tolerant cluster."},
+  {"field": "what_it_does_ko", "url": "https://kafka.apache.org", "quote": "Kafka is one of the five most active projects of the Apache Software Foundation"},
+  {"field": "key_features", "url": "https://kafka.apache.org", "quote": "Deliver messages at network limited throughput using a cluster of machines with latencies as low as 2ms."},
+  {"field": "key_features", "url": "https://kafka.apache.org", "quote": "Scale production clusters up to a thousand brokers, trillions of messages per day"},
+  {"field": "key_features", "url": "https://kafka.apache.org", "quote": "Stretch clusters efficiently over availability zones or connect separate clusters across geographic regions."},
+  {"field": "key_features", "url": "https://kafka.apache.org", "quote": "Process streams of events with joins, aggregations, filters, transformations, and more, using event-time and exactly-once processing."},
+  {"field": "key_features", "url": "https://kafka.apache.org", "quote": "Kafka’s out-of-the-box Connect interface integrates with hundreds of event sources and event sinks including Postgres, JMS, Elasticsearch, AWS S3, and more."},
+  {"field": "key_features", "url": "https://kafka.apache.org", "quote": "Read, write and process streams of events in a vast array of programming languages."},
+  {"field": "use_cases_ko", "url": "https://kafka.apache.org", "quote": "Support mission-critical use cases with guaranteed ordering, zero message loss, and efficient exactly-once processing."},
+  {"field": "use_cases_ko", "url": "https://kafka.apache.org", "quote": "high-performance data pipelines, streaming analytics, data integration"},
+  {"field": "pricing", "url": "https://kafka.apache.org", "quote": "Apache Kafka is an open-source distributed event streaming platform"},
+  {"field": "open_source", "url": "https://kafka.apache.org", "quote": "Apache Kafka is an open-source distributed event streaming platform"},
+  {"field": "api", "url": "https://kafka.apache.org", "quote": "Docs Key Concepts \n APIs"},
+  {"field": "platforms", "url": "https://kafka.apache.org", "quote": "Read, write and process streams of events in a vast array of programming languages."},
+  {"field": "korean_support", "url": "https://kafka.apache.org", "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [
+  {"official": "ASF 오픈소스 프로젝트로, 공식 사이트에 자체 클라우드 매니지드 유료 요금제가 없음", "diff": "기존 분류의 '클라우드 매니지드 유료 플랜'을 공식 페이지에서 확인할 수 없음 — 순수 오픈소스", "url": "https://kafka.apache.org"}
+ ],
+ "plan_change": []
+}

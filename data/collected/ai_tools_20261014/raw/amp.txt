@@ -1,0 +1,244 @@
+=== [home] https://ampcode.com/ (lang=en)
+Amp: Coding agent and dev environment built for the frontier 
+ Return to Amp 
+ Chronicle Docs Models Pricing About Sign In Start 
+ Juggle less Juggle less Ship more Agents that keep going Share with teammates Send prompt, close laptop Continue from your phone Continue while you sleep Forget worktrees Juggle less 
+ When you give every agent its own orb everything changes. Run agents anywhere and they keep working after you close
+ your laptop.
+ Start → 
+ Amp is the frontier agent and development environment that lets you build from
+ anywhere. 
+ Working Day to Day in Amp
+ Watch Thorsten Build in Amp 
+ 0:16 An agent that wakes itself to check production 
+ 4:07 Send a screen recording of a flicker 
+ 8:14 Ship Changes and watch the rollout 
+ 11:46 Grant an orb production access from the terminal 
+ 16:24 Ask for screenshot proof 
+ 22:52 Cut a release, email the user, close the bug 
+ 00:00 / 26:05 Introduction 1× 
+ Chapters Transcript 
+ 00:00 Introduction 
+ 00:15 Monitor a Performance Rollout 
+ 02:03 Review the amp clone Fix 
+ 03:51 Fix Puck Flicker from a Video 
+ 05:55 Dictate a Rollout Prompt 
+ 07:45 Test and Ship in a Portal 
+ 09:38 Read the Canary Results 
+ 11:45 Grant Production Access 
+ 12:47 Check In on Threads 
+ 16:14 Ask for Proof 
+ 17:00 Post to Slack with MCP 
+ 18:31 Verify a Runner Refactor 
+ 21:48 Close the amp clone Bug 
+ 23:20 Reply to Slack Feedback 
+ 24:27 Wrap Up 
+ Transcript 00:00 Introduction 
+ 00:00 Hey there, Thorsten from Amp here. I thought, I'm just going to record a quick video and show you how I work in Amp day-to-day. This is what I do. Like this is actual work. So, I was about to send this prompt and I thought, no, no, no, I'm going to show this. 
+ 00:15 Monitor a Performance Rollout 
+ 00:16 So here I'm working on performance improvements. I had a huge thread going that has been shipping production improvements, and then monitoring it. And, you know, you can see here, it uses automations to wake itself up. 35 minutes ago, did a wake up, then it worked. It said both fixes are now live. It compared the numbers. No fleet-wide fleet win visible yet, and I said, 'Hey, check now,' because it says, 'Hey, the next schedule fires.' So I said, like, 'Hey, check now.' It did, it checked. It has access to our production logs. You can see here Google Cloud Grants. We use OIDC, so each Orb has access to production, and we can grant them access or revoke it. And this found out that, well, we have a clear winner here, right? Confirmed fleet-wide win steady state window, boom, boom, boom. So, it used a bunch of canaries, which are things that I shipped yesterday, which are real agents or threads in production that we can use to debug production issues. 
+ 01:16 So, here, I said, 'Awesome. How often is that used?' And I can say, 'Does this run on every turn when the agent does a turn?' And then, what I wanted to show you, and I guess, okay, two things. One is, I want like a celebratory canary image. And then the other thing is, look, it says, 'Found along the way, worth a follow-up. A handful of active threads do this, which is an internal method.' And I noticed like, this is one of those that I wrote by hand back months ago, and it says they dominate this, and they're all unrelated. They likely trigger, 'Is it tool progress events that drive...' Want me to spin up an Orb? So I'm going to do this, hit R, and then say, 'Yes, do that.' And now I'm going to submit this. 
+ 02:03 Review the amp clone Fix 
+ 02:03 And now, as you can see, I have a bunch of other threads running here. So let's take a look at those, right? 
+ 02:10 Here, this is unread. This started from a bug report. We can see what happened here. So a user reported that amp clone, so basically in Amp, when you create a new project, let me show you this. You create a new project, you can say start from scratch, and then that repo is hosted by Amp. And then you can clone this project by running amp clone. And a user who's using Nix wanted to do this, and says, 'Blah, blah, blah, amp clone tried, Git exited, couldn't unlock config file.' And we basically threw a dumb error, and I asked Amp to fix it. And then it tried to update something with Home Manager in the documentation and whatnot. 
+ 02:51 So now I'm just going to look at what it did here. So here, apparently it added this little helper, credential helper, it added a test for those. And then we can look here, ensure Git, so here it uses this helper, the repository was cloned. So here it basically fixes the error message, which is, you know, we had like an internal—we didn't do a good error message. So now I'm going to say, okay, 'Summarize the fix for me, please.' I mean here it says like it treats it as best-effort, passes an empty helper followed by Amp's helper directly to the clone command. If the global setup fails, cloning continues, and Amp prints the original Git error. So I can say, 'So do we only show a better error message, or do we actually change behavior?' 
+ 03:51 Fix Puck Flicker from a Video 
+ 03:50 Let's check what happened here. So I have an experimental version of Puck, which is this, where you have multiple Puck conversations. And if you look at this, that seems flickery. Like look at this. That sucks. So what I did was I recorded a video of this. Here, look at this. And I send it to Amp. And I said look, like this is basically what I just showed you. And I sent this video to Amp, and I said look, this is flickery, moving the cursor feels a bit glitchy. Yes, blah, blah, blah. And then it says, 'It's also the tooltips that make it seem glitchy.' That's what I wrote, right, because what it says was, well, the archive button was removing the hover highlight, which is a different thing that was going on, right? Like if you look at this, like this, you know, this is the row highlight, and if you hover this, it removes this, so that feels glitchy. But that's not really it yet, right? So I said, 'It's also the tooltips that make it seem glitchy. You hover first over archive.' And then it says, 'I'll check, blah, blah, blah.' 'I agree. I added a 500.' And now I'm going to say—oh, by the way, this here is a little experimental feature, Recap. People like it, so maybe we should—we can start a thread and maybe promote it as like a thing that people can activate in the experimental features. Let's do this after this. Okay, so, 'Can I try this out? Can you create a Storybook and start it in a Portal so that I can test what it feels like?' 
+ 05:27 I think that whole feature, that sidebar in Puck, that's still behind a feature flag, so I could ship this to production and just ask it like, 'Hey, let me know once it's live in production.' And then I could check it in production, but I think, in this case, it's a frontend-only change. I'll just ask it to whip up a Storybook thing. Okay, apparently we already have one. That's great. And it's going to start it up in a Portal, and then in the Portal, I can try it out. 
+ 05:52 So let's do this other thing. 
+ 05:55 Dictate a Rollout Prompt 
+ 05:55 So let's start this. So while this is working here, we using High, which is GPT-6. No big science behind this decision. The only thing is, I've been kind of falling in love with Fable 5.1, but I don't need a lot of creativity here. I don't need like that little sparkle of something else, so I'm just going to set it to High. And then, because you know, what we want to do is a mechanical change. We have this Recap feature and we want to offer it to users 
+
+=== [pricing] https://ampcode.com/pricing (lang=en)
+Pricing — Amp 
+ Return to Amp 
+ Chronicle Docs Models Pricing About Sign In Start 
+ Pricing
+ Start free. Scale your orbs and team.
+ Hobby
+ Free 
+ svg]:size-5 new-badge relative isolate shrink-0 overflow-hidden rounded-full border-transparent font-semibold text-white uppercase px-3.5 py-1.5 text-lg leading-6"> New 
+ All product features, and:
+ Pay-as-you-go for orbs Or use your own runners for free
+ Use tokens from anywhere Use your ChatGPT, Claude & other subs
+ Bring your own keys (BYOK)
+ No Amp token fees or limits
+ Public/private repositories 
+ Sign Up 
+ Individual
+ $20 ∕ mo. 
+ Megawatt Gigawatt 
+ All product features, and:
+ 45,000 minutes of orbin' time 
+ Use tokens from anywhere Use your ChatGPT, Claude & other subs
+ Bring your own keys (BYOK)
+ No Amp token fees or limits svg]:size-4 new-badge relative isolate shrink-0 overflow-hidden rounded-full border-transparent font-semibold text-white uppercase px-2"> New 
+ Unlimited public/private repositories 
+ Use your own domains for portals
+ Free orbin' time sticker pack
+ Get Megawatt 
+ Teams
+ No extra charge 
+ svg]:size-5 new-badge relative isolate shrink-0 overflow-hidden rounded-full border-transparent font-semibold text-white uppercase px-3.5 py-1.5 text-lg leading-6"> New 
+ For teams of any size:
+ Members can be on different tiers: Hobby, Megawatt, or Gigawatt 
+ Team thread sharing, multiplayer, and permissions
+ Shared portals, plugins, and skills
+ User management, controls, and analytics
+ Shared billing and pooled credits 
+ SAML/OIDC SSO 
+ Use your own domains for portals 
+ Use tokens from anywhere Use your ChatGPT, Claude & other subs
+ Bring your own keys (BYOK)
+ No Amp token fees or limits
+ Shared BYOK & model routing
+ Create a Workspace 
+ Enterprise
+ Custom 
+ All Individual and Teams features, and:
+ Pooled credits only, no paid user seats
+ SCIM user directory sync
+ Spend limits and reporting
+ Audit logs and network/MCP access controls
+ IP allowlisting and regional endpoints
+ Higher resource quotas and rate limits
+ Priority support, invoicing, and custom terms
+ Forward-Deployed Engineering help available 
+ Contact Us 
+ Questions & Answers
+ Can I use Amp without a monthly tier? What am I paying for? What is an orb, and how do orb minutes work? Are there any fees for using my own subscriptions or keys? Does creating a workspace cost extra? What happens when my orb minutes run out? How do I cancel? Is there an Education Discount? What kinds of data retention and security commitments do I get? 
+ Other questions?
+ For general help with Amp, post on X and mention @AmpCode , or email amp-devs@ampcode.com .
+ All Systems Operational 
+ Security 
+ Privacy Policy 
+ Terms of Service 
+ Product
+ Download App 
+ Start 
+ Sign In 
+ Docs 
+ What Are Orbs? 
+ Models 
+ Resources
+ About 
+ Chronicle 
+ Pricing 
+ Podcast 
+ Press Kit 
+ Guides
+ How to Build an Agent 
+ Context Management 
+ Community
+ 𝕏 @ampcode 
+ Amp Insiders 
+ YouTube 
+ . Layers appended to (bits-ui portals
+ such as menus and dialogs, toasts, drag previews) would otherwise toggle the app
+ root's :last-child state, and WebKit then restyles the entire app subtree on every
+ open and close (tens of ms on a long thread). With this stable tail element only
+ the tail's state changes, which is free. -->
+
+=== [about] https://ampcode.com/docs (lang=en)
+Introduction | Amp Docs 
+ Docs Chronicle Using Amp Search docs... Ctrl+K Sign In 
+ Get Started
+ Introduction 
+ The Dial 
+ Modes & Models 
+ Prompting 
+ Designing UI 
+ Tools 
+ Projects 
+ GitHub & Git 
+ Threads 
+ Pricing 
+ Orbs
+ Overview 
+ Getting Started 
+ Customizing Orbs 
+ Shipping Changes 
+ Sizes & Costs 
+ Handling Secrets 
+ Files & Attachments 
+ Portals 
+ Agent to Agent 
+ Automations 
+ Event-Driven Orbs 
+ Desktop 
+ CLI
+ Getting Started 
+ Keybindings 
+ Execute Mode 
+ Spawning Orbs 
+ Clone Repositories 
+ Streaming JSON 
+ Configuration 
+ Runners 
+ Cross-Client Access 
+ macOS & iOS
+ Getting Started 
+ Use Your Mac as a Runner 
+ Puck
+ Meet Puck 
+ Slack Integration 
+ Collaborate
+ Workspaces 
+ Groups 
+ Multiplayer 
+ Space 
+ Customize
+ Plugins 
+ Decision Models 
+ Global Plugins & Skills 
+ Skills 
+ MCP 
+ AGENTS.md 
+ Model Routing 
+ Reference
+ SDK 
+ Plugin API 
+ API 
+ Support
+ Getting Help 
+ Bug Reports & Diagnostics 
+ Enterprise
+ MCP Registry Allowlist 
+ Thread Visibility 
+ Workspace Entitlements 
+ Allowed Models 
+ Minimal Data Retention 
+ *:first-child:not(:last-child):not(:has(+[role=separator]))]:rounded-r-none [&>*:last-child:not(:first-child):not([role=separator]+*)]:rounded-l-none [&>*:not(:first-child):not(:last-child):not([role=separator]):not([role=separator]+*):not(:has(+[role=separator]))]:rounded-none [&>*:not(:first-child)]:-ml-px [&>[role=separator]]:-ml-0.5 [&>[role=separator]+*]:ml-0 [&>*:focus-visible]:relative [&>*:focus-visible]:z-10 overflow-hidden rounded-sm bg-background shadow-floating-control" role="group" aria-label="Page Markdown actions"> Copy Page 
+ Introduction
+ Amp is a coding agent and development environment built for the frontier.
+ Multi-Model: GPT-5.6, Claude Fable 5.1, fast models. Amp uses them all, for what each model is
+best at.
+ Orbs: Machines that Amp creates per thread, with your code, tools, and plugins already set
+up. Send a prompt, close your laptop, and the agent keeps working.
+ Everywhere: Start an orb from your iPhone, check on it from your Mac, and follow up in
+the TUI. The apps notify you when a thread is ready for your next message.
+ Opinionated: You’re always using the good parts of Amp. If we don’t use and love a feature,
+we kill it.
+ On the Frontier: Amp goes where the models take it. No backward compatibility, no legacy
+features.
+ Threads: You can save and share your interactions with Amp.
+ Want to go much deeper? Follow along on our Raising an Agent podcast and the Chronicle time capsules where we share what we’re learning as we build Amp. 
+ Quickstart
+ 1 Sign Up Create your account and sign in to Amp. 
+ 2 Sign in with ChatGPT Optional Use your ChatGPT Plus or Pro subscription for OpenAI models in Amp. 
+ 3 Add Your Code Create a project from a Git repository, or start without one. 
+ 4 Run an Agent in an Orb Give Amp a task in a fresh cloud environment with your project ready. 
+ 5 Get the macOS & iOS Apps Install Amp on your Mac, iPhone, and iPad to follow your agents anywhere. 
+ 6 Use Amp on the CLI Install Amp and work with it from your terminal. 
+ Prefer to watch first? The first episode of Orbs from Zero goes from a GitHub repository to an
+agent working in an orb:
+ Screencast · Orbs from Zero · Episode 1 · 14:38 Get Started in Orbs Create a project from a GitHub repository, let Amp prepare it for orbs, and watch the first orb set up, run and snapshot the app. 
+ Explore
+ Amp is the same agent and the same threads everywhere. Pick where you want to work:
+ Web. ampcode.com needs no install. Start a thread, and Amp works in an orb , a machine it creates for that thread.
+ Mac, iPhone, and i
+
+=== [meta] https://ampcode.com/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음

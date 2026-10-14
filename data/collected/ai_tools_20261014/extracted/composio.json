@@ -1,0 +1,58 @@
+{
+ "company": "Composio",
+ "one_liner_ko": "AI 에이전트에 1,500개 이상 앱에 대한 안전한 접근(도구·인증·실행)을 몇 분 만에 제공하는 플랫폼.",
+ "what_it_does_ko": "Composio는 AI와 앱 사이에서 요청을 실제 작업으로 바꿔 주는 서비스로, Claude·ChatGPT·Codex 등 이미 쓰는 AI나 자체 하네스를 Gmail·Slack·Notion 등 1,500개 이상 앱에 연결한다. 작업에 필요한 도구만 카탈로그에서 찾아 불러와 컨텍스트 낭비를 줄이고, 앱을 한 번 클릭으로 연결하며 앱이 바뀌어도 연결을 유지한다. 사용자별 OAuth·API 키·토큰 관리, 앱 이벤트 트리거, 연결 계정이 미리 붙은 샌드박스를 제공한다. TypeScript·Python SDK, CLI, 호스팅 MCP 엔드포인트(MCP 게이트웨이)로 쓸 수 있다.",
+ "key_features": [
+  "1,500개 이상 앱용 도구·툴킷",
+  "의도 기반 도구 검색으로 필요한 도구만 불러오기(컨텍스트 절약)",
+  "사용자별 OAuth·API 키·토큰 관리와 자동 갱신",
+  "앱 이벤트 구독 트리거",
+  "연결 계정이 준비된 코드 실행 샌드박스",
+  "TypeScript·Python SDK와 CLI, OpenAI Agents·Claude Agent SDK·LangChain 등 어댑터",
+  "모든 도구를 하나로 묶는 관리형 MCP 게이트웨이",
+  "기업용 SSO·거버넌스·감사 통제"
+ ],
+ "use_cases_ko": [
+  "Claude·ChatGPT를 업무 앱에 연결해 영업·마케팅·고객지원 작업 자동화",
+  "개발자가 도구·인증 인프라를 붙여 에이전트 제품 출시",
+  "코딩 에이전트(Claude Code·Codex·Cursor)에 도구·인증 추가"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Hobby: 월 100,000 도구 호출, 50,000 트리거, 팀원 3명)",
+  "plans": [
+   {"name": "Hobby", "price": 0, "currency": "USD", "period": "month", "limits": "월 100,000 도구 호출, 신용카드 불필요", "page_lang": "en"}
+  ],
+  "pricing_url": "https://composio.dev/pricing"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["웹", "CLI", "API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://github.com/ComposioHQ/composio", "quote": "This is the Composio SDK monorepo."},
+  {"field": "one_liner_ko", "url": "https://composio.dev", "quote": "Give your AI secure access to 1,500+ apps in minutes"},
+  {"field": "what_it_does_ko", "url": "https://composio.dev", "quote": "Composio sits between your AI and your apps, turning your requests into actions."},
+  {"field": "what_it_does_ko", "url": "https://composio.dev", "quote": "Composio finds the right actions across 1,500+ apps, connects each app in a click, and keeps connections working as those apps change."},
+  {"field": "key_features", "url": "https://composio.dev", "quote": "Composio searches the full catalogue and loads only what your task needs, then suggests a plan and adds guardrails."},
+  {"field": "key_features", "url": "https://docs.composio.dev/docs?cta_placement=composio-platform-card%2F", "quote": "OAuth, API keys, and tokens scoped to each user and refreshed automatically."},
+  {"field": "key_features", "url": "https://docs.composio.dev/docs?cta_placement=composio-platform-card%2F", "quote": "Subscribe to events from any toolkit and route them straight to your agent."},
+  {"field": "key_features", "url": "https://docs.composio.dev/docs?cta_placement=composio-platform-card%2F", "quote": "A sandbox pre-wired with your user's connected accounts and 1,600+ tools."},
+  {"field": "key_features", "url": "https://github.com/ComposioHQ/composio", "quote": "**Provider adapters** for OpenAI Agents, Claude Agent SDK, Vercel AI SDK, LangChain"},
+  {"field": "key_features", "url": "https://composio.dev", "quote": "MCP GATEWAY One managed MCP endpoint for all your tools and agents"},
+  {"field": "key_features", "url": "https://composio.dev", "quote": "ENTERPRISE SSO, governance, and audit controls for deploying agents org-wide"},
+  {"field": "use_cases_ko", "url": "https://composio.dev", "quote": "OFFICE WORK Connect Claude or ChatGPT to the apps you already use — Gmail, Slack, Notion, Calendar, and 1,500+ more."},
+  {"field": "use_cases_ko", "url": "https://composio.dev", "quote": "DEVELOPER PLATFORM SDKs, tool execution, and auth infrastructure to ship agents"},
+  {"field": "use_cases_ko", "url": "https://composio.dev", "quote": "CLI One command to add tools and auth to your coding agent"},
+  {"field": "pricing", "url": "https://composio.dev/pricing", "quote": "Start for free. Then pay as you go."},
+  {"field": "pricing", "url": "https://composio.dev/pricing", "quote": "100,000 tool calls, 50,000 triggers, and 3 team members included free each month."},
+  {"field": "pricing", "url": "https://composio.dev/pricing", "quote": "No credit card required"},
+  {"field": "api", "url": "https://docs.composio.dev/docs?cta_placement=composio-platform-card%2F", "quote": "Every endpoint, with cURL."},
+  {"field": "platforms", "url": "https://github.com/ComposioHQ/composio", "quote": "**[`composio` CLI](ts/packages/cli)**: search, execute, and script tools from your shell"},
+  {"field": "korean_support", "url": "https://composio.dev", "quote": "html lang: en"},
+  {"field": "mismatch", "url": "https://composio.dev/pricing", "quote": "Easily scale when you need more."}
+ ],
+ "mismatch": [
+  {"official": "무료(Hobby, 월 10만 도구 호출) 후 종량제로 과금하는 상업용 관리형 플랫폼(SDK·MCP 게이트웨이·엔터프라이즈 제공). 수집 페이지에 오픈소스 라이선스 표기 없음", "diff": "기존 분류 '오픈소스(무료, 표준/규격)'와 달리 표준·규격이 아닌 유료 종량제 상용 서비스", "url": "https://composio.dev/pricing"}
+ ],
+ "plan_change": []
+}

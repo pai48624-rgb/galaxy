@@ -1,0 +1,250 @@
+=== [home] https://hermes-agent.nousresearch.com (lang=en)
+Hermes Agent — Open-Source AI Agent That Grows With You | Nous Research 
+ Nous Hermes Docs 
+ Hermes Agent Community Portal Install 
+ Install Hermes 
+ Nous Hermes Docs 
+ Community Portal Install Hermes 
+ Install Hermes 
+ The Agent That Grows With You 
+ Download desktop app Deploy to the cloud 
+ Install via terminal
+ : macOS : : Linux : : Windows : 
+ curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash 
+ Hermes Desktop App
+ Available across all computers.
+ macOS 12+
+ Mac OS
+ Download desktop app 
+ Windows 10/11
+ Windows
+ Download desktop app 
+ Any distro
+ Linux
+ Install via terminal 
+ Features
+ #1 Connect
+ Lives Everywhere
+ Telegram, Discord, Slack, WhatsApp, Signal, Email, CLI — and a growing list of platforms. One agent, one memory, every surface.
+ #2 Remember
+ Persistent Memory
+ It learns your projects, auto-generates skills, and never forgets how it solved a problem.
+ #3 Schedule
+ Focused Automation
+ Natural-language scheduling for reports, backups, and briefings — running unattended through the gateway, focused every time.
+ #4 Delegate
+ Tasks Multiplied
+ Isolated subagents with their own conversations, terminals, and Python RPC scripts for zero-context-cost pipelines.
+ #5 Search
+ Browse the Web
+ Web search, browser automation, vision, image generation, text-to-speech, and multi-model reasoning.
+ #6 Experiment
+ Isolated Sandboxing
+ Five backends — local, Docker, SSH, Singularity, Modal — with container hardening and namespace isolation.
+ FAQs
+ View Docs 
+ How does pricing work? 
+ Hermes Agent is free and open source under the MIT license. Model providers and optional hosted services have their own pricing. You can use your own provider or connect to Nous Portal for model and tool credits; cloud hosting is optional.
+ How do I get started? 
+ Download Hermes Desktop for macOS or Windows, or use the terminal installation command above. Follow the setup steps to connect a model provider, then start a conversation. For an always-on hosted agent, choose Deploy in the cloud.
+ How do I chat with my agent? 
+ Use Hermes Desktop or the terminal, or connect a messaging platform such as Telegram, Discord, Slack, WhatsApp, Signal, or email. The documentation walks you through configuring each integration.
+ Does my agent keep its data between sessions? 
+ Yes. Hermes stores conversations, memories, and skills so you can return to your work in a later session. Keep a backup of your Hermes data directory when moving to another computer.
+ What happens when I stop my agent? 
+ Stopping a local agent ends its running process, but does not delete its saved conversations, memories, or skills. Start it again to continue. Tasks that need an active agent will not run while it is stopped; hosted agents are managed separately in Nous Portal.
+ Free Plus Super Ultra 
+ Nous Portal
+ Create an account Sign in 
+ All paid tiers include monthly credits for use in Hermes Agent, access to 200+ cutting-edge models and built-in tool use
+ Free 
+ $0
+ Get Started
+ Free models only 
+ Standard rate limits 
+ $0 monthly credits 
+ Free Hermes 
+ Plus 10% Bonus 
+ $20
+ Per month
+ 200+ Models 
+ Hosted tool usage 
+ High rate limits 
+ $22.00 monthly credits — 10% bonus 
+ $10.00 rollover cap 
+ Release Hermes // most popular 
+ Super 10% Bonus 
+ $100
+ Per month
+ 200+ Models 
+ Hosted tool usage 
+ High rate limits 
+ $110.00 monthly credits — 10% bonus 
+ $50.00 rollover cap 
+ Liberate Hermes 
+ Ultra 10% Bonus 
+ $200
+ Per month
+ 200+ Models 
+ Hosted tool usage 
+ High rate limits 
+ $220.00 monthly credits — 10% bonus 
+ $100.00 rollover cap 
+ Unleash Hermes 
+ Current plans and billing details in Nous Portal 
+ Hermes Hermes 
+ The Internet's Own AI
+ © 2026, Nous Research, Inc.
+ Terms | Privacy 
+ MIT License · 2026
+ Nous Research Nous Research 
+ The Internet's Own AI .
+ Research
+ Nous
+ Research 
+ Releases 
+ Careers 
+ Blog 
+ Shop 
+ Contact 
+ Products
+ Hermes
+ Agent 
+ Business 
+ Enterprise 
+ Via Terminal 
+ For Mac OS 
+ For Windows 
+ For Linux 
+ In the Cloud 
+ Resources
+ Community
+ Go to Discord 
+ Go to Github 
+ Go to x.com 
+ Go to Youtube 
+ Platform
+ Portal
+ Create account 
+ Sign in 
+ Plans 
+ © 2026, Nous Research, Inc.
+ Open Source
+ MIT License
+ Terms | Privacy
+
+=== [about] https://hermes-agent.nousresearch.com/docs (lang=en)
+Hermes Agent Documentation | Hermes Agent 
+ Skip to main content 
+ Hermes Agent Docs Skills Plugins Download 
+ English English 
+ 简体中文 
+ Home GitHub Discord 
+ Search 
+ User Stories & Use Cases 
+ Browse Skills 
+ Browse Plugins 
+ Getting Started 
+ Using Hermes 
+ Features 
+ Messaging Platforms 
+ Integrations 
+ Guides & Tutorials 
+ Developer Guide 
+ Reference 
+ Hermes Agent
+ The self-improving AI agent built by Nous Research . The only agent with a built-in learning loop — it creates skills from experience, improves them during use, nudges itself to persist knowledge, and builds a deepening model of who you are across sessions.
+ Get Started →
+ Explore Bot Mode
+ Download Desktop
+ View on GitHub
+ Install ​ 
+ Windows or macOS ​ 
+ To easily install the command-line and desktop applications, download the Hermes Desktop installer from our website and run it.
+ Without Hermes Desktop: ​ 
+ For a command-line only install without Hermes Desktop, run:
+ For aarch64 Android devices, use the separate Termux APT guide .
+ Linux / macOS / WSL2 ​ 
+ curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash 
+ Windows (native) ​ 
+ Run in powershell:
+ iex (irm https://hermes-agent.nousresearch.com/install.ps1) 
+ See the full Installation Guide for what the installer does, installation ownership and data locations, and Windows-specific notes. For the complete platform support matrix, see Platform Support .
+ Fastest path to a working agent
+ After installing, run hermes setup --portal — one OAuth covers a model plus all four Tool Gateway tools (web search, image generation, TTS, browser). See Nous Portal .
+ What is Hermes Agent? ​ 
+ It's not a coding copilot tethered to an IDE or a chatbot wrapper around a single API. It's an autonomous agent that gets more capable the longer it runs. It lives wherever you put it — a $5 VPS, a GPU cluster, or serverless infrastructure (Daytona, Modal) that costs nearly nothing when idle. Talk to it from Telegram while it works on a cloud VM you never SSH into yourself. It's not tied to your laptop.
+ Quick Links ​ 
+ 🚀 Installation Install in 60 seconds on Linux, macOS, WSL2, native Windows, Nix & NixOS or Android 
+ 📖 Quickstart Tutorial Your first conversation and key features to try 
+ 🗺️ Learning Path Find the right docs for your experience level 
+ ⚙️ Configuration Config file, providers, models, and options 
+ 💬 Messaging Gateway Set up Telegram, Discord, Slack, WhatsApp, Teams, or more 
+ 🤖 Bot Mode Named Bots with their own model, memory, skills, routines, and chats 
+ 🔧 Tools & Toolsets 60+ built-in tools and how to configure them 
+ 🧠 Memory System Persistent memory that grows across sessions 
+ 📚 Skills System Procedural memory the agent creates and reuses 
+ 🔌 MCP Integration Connect to MCP servers, filter their tools, and extend Hermes safely 
+ 🧭 Use MCP with Hermes Practical MCP setup patterns, examples, and tutorials 
+ 🎙️ Voice Mode Real-time voice interaction in CLI, Telegram, Discord, and Discord VC 
+ 🗣️ Use Voice Mode with Hermes Hands-on setup and usage patterns for Hermes voice workflows 
+ 🎭 Personality & SOUL.md Define Hermes' default voice with a global SOUL.md 
+ 📄 Context Files Project context files that shape every conversation 
+ 🔒 Security Command approval, authorization, container isolation 
+ 💡 Tips & Best Practices Quick wins to get the most out of Hermes 
+ 🏗️ Architecture How it works under the hood 
+ ❓ FAQ & Troubleshooting Common questions and solutions 
+ Key Features ​ 
+ A closed learning loop — Agent-curated memory with periodic nudges, autonomous skill creation, skill self-improvement during use, FTS
+
+=== [meta] https://hermes-agent.nousresearch.com
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/NousResearch/hermes-agent
+<p align="center">
+  <img src="assets/banner.png" alt="Hermes Agent" width="100%">
+</p>
+
+# Hermes Agent ☤
+<p align="center">
+  <a href="https://hermes-agent.nousresearch.com/">Hermes Agent</a> | <a href="https://hermes-agent.nousresearch.com/">Hermes Desktop</a>
+</p>
+<p align="center">
+  <a href="https://hermes-agent.nousresearch.com/docs/"><img src="https://img.shields.io/badge/Docs-hermes--agent.nousresearch.com-FFD700?style=for-the-badge" alt="Documentation"></a>
+  <a href="https://discord.gg/NousResearch"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"></a>
+  <a href="https://github.com/NousResearch/hermes-agent/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License: MIT"></a>
+  <a href="https://nousresearch.com"><img src="https://img.shields.io/badge/Built%20by-Nous%20Research-blueviolet?style=for-the-badge" alt="Built by Nous Research"></a>
+  <a href="README.zh-CN.md"><img src="https://img.shields.io/badge/Lang-中文-red?style=for-the-badge" alt="中文"></a>
+  <a href="README.ur-pk.md"><img src="https://img.shields.io/badge/Lang-اردو-green?style=for-the-badge" alt="اردو"></a>
+  <a href="README.es.md"><img src="https://img.shields.io/badge/Lang-Español-orange?style=for-the-badge" alt="Español"></a>
+</p>
+
+**The self-improving AI agent built by [Nous Research](https://nousresearch.com).** It's the only agent with a built-in learning loop — it creates skills from experience, improves them during use, nudges itself to persist knowledge, searches its own past conversations, and builds a deepening model of who you are across sessions. Run it on a $5 VPS, a GPU cluster, or serverless infrastructure that costs nearly nothing when idle. It's not tied to your laptop — talk to it from Telegram while it works on a cloud VM.
+
+Use any model you want — [Nous Portal](https://portal.nousresearch.com), OpenRouter, OpenAI, your own endpoint, and [many others](https://hermes-agent.nousresearch.com/docs/integrations/providers). Switch with `hermes model` — no code changes, no lock-in.
+
+<table>
+<tr><td><b>A real terminal interface</b></td><td>Full TUI with multiline editing, slash-command autocomplete, conversation history, interrupt-and-redirect, and streaming tool output.</td></tr>
+<tr><td><b>Lives where you do</b></td><td>Telegram, Discord, Slack, WhatsApp, Signal, and CLI — all from a single gateway process. Voice memo transcription, cross-platform conversation continuity.</td></tr>
+<tr><td><b>A closed learning loop</b></td><td>Agent-curated memory with periodic nudges. Autonomous skill creation after complex tasks. Skills self-improve during use. FTS5 session search with LLM summarization for cross-session recall. <a href="https://github.com/plastic-labs/honcho">Honcho</a> dialectic user modeling. Compatible with the <a href="https://agentskills.io">agentskills.io</a> open standard.</td></tr>
+<tr><td><b>Scheduled automations</b></td><td>Built-in cron scheduler with delivery to any platform. Daily reports, nightly backups, weekly audits — all in natural language, running unattended.</td></tr>
+<tr><td><b>Delegates and parallelizes</b></td><td>Spawn isolated subagents for parallel workstreams. Write Python scripts that call tools via RPC, collapsing multi-step pipelines into zero-context-cost turns.</td></tr>
+<tr><td><b>Runs anywhere, not just your laptop</b></td><td>Seven terminal backends — local, Docker, SSH, Singularity, Modal, Daytona, and Vercel Sandbox. Daytona and Modal offer serverless persistence — your agent's environment hibernates when idle and wakes on demand, costing nearly nothing between sessions. Run it on a $5 VPS or a GPU cluster.</td></tr>
+<tr><td><b>Research-ready</b></td><td>Batch trajectory generation, trajectory compression for training the next generation of tool-calling models.</td></tr>
+</table>
+
+---
+
+## Quick Install
+
+### Linux, macOS, WSL2
+
+```bash
+curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash
+```
+
+### Windows (native, PowerShell)
+
+> **Heads up:** Native Windows runs Hermes without WSL — CLI, gateway, TUI, and tools all work natively. If you'd rather use WSL2, the Linux/

@@ -1,0 +1,51 @@
+{
+ "company": "Apache Software Foundation",
+ "one_liner_ko": "무한·유한 데이터 스트림에 대한 상태 기반(stateful) 연산을 위한 프레임워크이자 분산 처리 엔진.",
+ "what_it_does_ko": "Apache Flink는 무한(unbounded)·유한(bounded) 데이터 스트림에 대한 상태 기반 연산을 수행하는 프레임워크이자 분산 처리 엔진이다. 일반적인 클러스터 환경 어디서나 돌도록 설계되었고 인메모리 속도와 어떤 규모로든 연산한다. 스트림 처리를 우선하는 런타임에서 배치와 스트리밍 프로그램을 모두 지원하며 exactly-once 처리 보장을 제공한다. Kubernetes Operator, CDC, Agents, ML, Stateful Functions 같은 하위 프로젝트도 있다.",
+ "key_features": [
+  "exactly-once 상태 일관성과 이벤트 시간 처리",
+  "늦게 도착한 데이터 처리",
+  "스트림·배치 데이터용 SQL, DataStream API, ProcessFunction",
+  "세이브포인트·고가용성 구성",
+  "매우 큰 상태 지원과 증분 체크포인트",
+  "낮은 지연·높은 처리량의 인메모리 연산",
+  "시간·개수·세션 등 유연한 윈도우",
+  "YARN·HDFS·HBase 등 Hadoop 생태계 연동"
+ ],
+ "use_cases_ko": [
+  "이벤트 기반 애플리케이션",
+  "스트림·배치 분석",
+  "데이터 파이프라인과 ETL"
+ ],
+ "pricing": {"free_tier": "오픈소스 — 공식 페이지에 유료 요금제 없음", "plans": [], "pricing_url": null},
+ "open_source": "오픈소스(소프트웨어 라이선스 이름은 받은 본문에 없음, 웹사이트 콘텐츠는 Apache License v2)",
+ "api": "있음",
+ "platforms": ["API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://flink.apache.org", "quote": "Apache Flink, Flink, and the Flink logo are either registered trademarks or trademarks of The Apache Software Foundation"},
+  {"field": "one_liner_ko", "url": "https://flink.apache.org", "quote": "Apache Flink is a framework and distributed processing engine for stateful computations over unbounded and bounded data streams."},
+  {"field": "what_it_does_ko", "url": "https://flink.apache.org", "quote": "Flink has been designed to run in all common cluster environments, perform computations at in-memory speed and at any scale."},
+  {"field": "what_it_does_ko", "url": "https://github.com/apache/flink", "quote": "A streaming-first runtime that supports both batch processing and data streaming programs"},
+  {"field": "key_features", "url": "https://flink.apache.org", "quote": "Exactly-once state consistency\n Event-time processing\n Sophisticated late data handling"},
+  {"field": "key_features", "url": "https://flink.apache.org", "quote": "SQL on Stream & Batch Data\n DataStream API\n ProcessFunction (Time & State)"},
+  {"field": "key_features", "url": "https://flink.apache.org", "quote": "High-availability setup\n Savepoints"},
+  {"field": "key_features", "url": "https://flink.apache.org", "quote": "Support for very large state\n Incremental Checkpoints"},
+  {"field": "key_features", "url": "https://flink.apache.org", "quote": "Low latency\n High throughput\n In-Memory computing"},
+  {"field": "key_features", "url": "https://github.com/apache/flink", "quote": "Flexible windowing (time, count, sessions, custom triggers)"},
+  {"field": "key_features", "url": "https://github.com/apache/flink", "quote": "Integration with YARN, HDFS, HBase, and other components of the Apache Hadoop ecosystem"},
+  {"field": "use_cases_ko", "url": "https://flink.apache.org", "quote": "Event Driven Applications"},
+  {"field": "use_cases_ko", "url": "https://flink.apache.org", "quote": "Stream & Batch Analytics"},
+  {"field": "use_cases_ko", "url": "https://flink.apache.org", "quote": "Data Pipelines & ETL"},
+  {"field": "pricing", "url": "https://github.com/apache/flink", "quote": "Apache Flink is an open source stream processing framework with powerful stream- and batch-processing capabilities."},
+  {"field": "open_source", "url": "https://github.com/apache/flink", "quote": "Apache Flink is an open source stream processing framework"},
+  {"field": "open_source", "url": "https://flink.apache.org", "quote": "The contents of this website are © 2024 Apache Software Foundation under the terms of the Apache License v2."},
+  {"field": "api", "url": "https://github.com/apache/flink", "quote": "Elegant and fluent APIs in Java"},
+  {"field": "platforms", "url": "https://flink.apache.org", "quote": "SQL on Stream & Batch Data\n DataStream API"},
+  {"field": "korean_support", "url": "https://flink.apache.org", "quote": "hreflang: zh\n화면에 보이는 언어 이름: 中文"}
+ ],
+ "mismatch": [
+  {"official": "ASF 오픈소스 프로젝트로, 공식 사이트·저장소에 자체 클라우드 매니지드 유료 요금제가 없음", "diff": "기존 분류의 '클라우드 매니지드 유료 플랜'을 공식 페이지에서 확인할 수 없음 — 순수 오픈소스", "url": "https://flink.apache.org"}
+ ],
+ "plan_change": []
+}

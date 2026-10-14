@@ -1,0 +1,43 @@
+{
+ "company": null,
+ "one_liner_ko": "예측 데이터 분석을 위한 간단하고 효율적인 파이썬 머신러닝 도구 모음.",
+ "what_it_does_ko": "scikit-learn은 파이썬용 머신러닝 라이브러리로, 예측 데이터 분석을 위한 간단하고 효율적인 도구를 제공한다. NumPy, SciPy, matplotlib 위에 만들어졌고 BSD 라이선스의 오픈소스로 상업적으로도 쓸 수 있다. 분류·회귀·군집·차원 축소·모델 선택·전처리 기능을 갖췄다. 오픈소스 머신러닝을 지지하는 조직과 개인의 후원으로 개발되며, Probabl이 기업용 솔루션과 서비스를 제공한다.",
+ "key_features": [
+  "분류(그래디언트 부스팅·최근접 이웃·랜덤 포레스트·로지스틱 회귀 등)",
+  "회귀(릿지 등)",
+  "군집(k-Means·HDBSCAN·계층적 군집)",
+  "차원 축소(PCA·특성 선택·NMF)",
+  "모델 선택(그리드 탐색·교차 검증·지표)",
+  "전처리와 특성 추출"
+ ],
+ "use_cases_ko": [
+  "스팸 탐지·이미지 인식 같은 분류",
+  "약물 반응·주가 같은 연속값 예측",
+  "고객 세분화 같은 군집 분석"
+ ],
+ "pricing": {"free_tier": "있음 (BSD 라이선스 오픈소스, 상업적 사용 가능)", "plans": [], "pricing_url": null},
+ "open_source": "BSD",
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "one_liner_ko", "url": "http://scikit-learn.org/stable/", "quote": "Simple and efficient tools for predictive data analysis"},
+  {"field": "what_it_does_ko", "url": "http://scikit-learn.org/stable/", "quote": "Built on NumPy, SciPy, and matplotlib"},
+  {"field": "what_it_does_ko", "url": "http://scikit-learn.org/stable/", "quote": "scikit-learn is made possible by the support of organizations and"},
+  {"field": "what_it_does_ko", "url": "http://scikit-learn.org/stable/", "quote": "Probabl: Enterprise-grade solutions and services"},
+  {"field": "key_features", "url": "http://scikit-learn.org/stable/", "quote": "Identifying which category an object belongs to."},
+  {"field": "key_features", "url": "http://scikit-learn.org/stable/", "quote": "Predicting a continuous-valued attribute associated with an object."},
+  {"field": "key_features", "url": "http://scikit-learn.org/stable/", "quote": "Automatic grouping of similar objects into sets."},
+  {"field": "key_features", "url": "http://scikit-learn.org/stable/", "quote": "Reducing the number of random variables to consider."},
+  {"field": "key_features", "url": "http://scikit-learn.org/stable/", "quote": "Comparing, validating and choosing parameters and models."},
+  {"field": "key_features", "url": "http://scikit-learn.org/stable/", "quote": "Feature extraction and normalization."},
+  {"field": "use_cases_ko", "url": "http://scikit-learn.org/stable/", "quote": "Applications: Spam detection, image recognition."},
+  {"field": "use_cases_ko", "url": "http://scikit-learn.org/stable/", "quote": "Applications: Drug response, stock prices."},
+  {"field": "use_cases_ko", "url": "http://scikit-learn.org/stable/", "quote": "Applications: Customer segmentation, grouping experiment outcomes."},
+  {"field": "pricing", "url": "http://scikit-learn.org/stable/", "quote": "Open source, commercially usable - BSD license"},
+  {"field": "open_source", "url": "http://scikit-learn.org/stable/", "quote": "Open source, commercially usable - BSD license"},
+  {"field": "korean_support", "url": "http://scikit-learn.org/stable/", "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

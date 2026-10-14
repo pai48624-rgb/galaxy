@@ -1,0 +1,501 @@
+=== [home] https://www.dench.com/claw (lang=en)
+DenchClaw | Dench AI CRM 
+ We recommend using dench.com over DenchClaw. Go to dench.com 
+ Dench Claw 
+ ⌘ K ★ 2k+ Talk to Sales 
+ ██████╗ ███████╗███╗ ██╗ ██████╗██╗ ██╗ ██████╗██╗ █████╗ ██╗ ██╗
+██╔══██╗██╔════╝████╗ ██║██╔════╝██║ ██║██╔════╝██║ ██╔══██╗██║ ██║
+██║ ██║█████╗ ██╔██╗ ██║██║ ███████║██║ ██║ ███████║██║ █╗ ██║
+██║ ██║██╔══╝ ██║╚██╗██║██║ ██╔══██║██║ ██║ ██╔══██║██║███╗██║
+██████╔╝███████╗██║ ╚████║╚██████╗██║ ██║╚██████╗███████╗██║ ██║╚███╔███╔╝
+╚═════╝ ╚══════╝╚═╝ ╚═══╝ ╚═════╝╚═╝ ╚═╝ ╚═════╝╚══════╝╚═╝ ╚═╝ ╚══╝╚══╝ 
+ AI CRM, hosted locally on your Mac.
+Built on OpenClaw.
+ $ npx denchclaw 
+ opens at localhost:3100 
+ workspace founders 
+ denchclaw.sh 
+ Workspace
+ DenchClaw
+ Search files... 
+ companies table 
+ contact table 
+ customer table 
+ founders table 
+ Tmp denchclaw-ad 
+ superbowl-ad 
+ workspace.duckdb 
+ AGENTS 
+ IDENTITY 
+ denchclaw_superbowl_ad... 
+ SOUL 
+ TOOLS 
+ USER 
+ Skills 
+ Memories 
+ Routines 
+ Founders
+ YC Winter 2026 batch founders
+ Search founders... 
+ 200 entries 18 fields 1 relation 
+ Columns Add 
+ FULL NAME COMPANY (companies) LINKEDIN NOTES EDUCATION 
+ Veer Shah Cumulus Labs https://linkedin.com/in/veer-shah-62... Veer studied Computer Science at the Univ... University of Wi... 
+ Leo Gierhake Laurence https://linkedin.com/in/leo-gierhake-... Researcher at Jump Trading, building quan... ETH Zurich 
+ Vincent Chen Panta https://linkedin.com/in/zihong-chen Founder @ Panta (S24). Building a comme... BU 
+ Omar Elamin Caretta https://www.linkedin.com/in/omarelamin Co-Founder & CTO of Caretta. Ex-TU Delft. ... --- 
+ Oncel Ozgul Patientdesk.ai https://www.linkedin.com/in/oncelozgul Co-founder @ Patientdesk.ai --- 
+ Oded Falik Strand AI https://www.linkedin.com/in/oded-falik/ Cofounder & CTO at Strand AI --- 
+ Vincent Jeltsch sitefire https://www.linkedin.com/in/vincent-jeltsch/ Co-Founder & CTO @sitefire.ai I ran a mak... BU 
+ Berke Argin Compresr https://www.linkedin.com/in/arginberke/ CAIO @ compresr.ai. On a mission to make ... --- 
+ Henry Birge-Lee Crosslayer Labs https://www.linkedin.com/in/henry-birge-le... I am am innovator in web and network secu... --- 
+ Jordon Kashanchi Visibl Semiconductors https://www.linkedin.com/in/jordon-kashan... Co-founder & CTO of Visibl Semiconductor... UT Austin 
+ Ian Wang Axis https://www.linkedin.com/in/ian-wang-m1n1 Yale '25 Interested in trading stuff Yale 
+ Kayra Bahadir Caretta https://www.linkedin.com/in/kayrabahadir Co-founder & CEO of Caretta (S24) --- 
+ Paul Grech OctaPulse https://www.linkedin.com/in/paul-l-grech-b... Building the future of autonomous aquacult... BU 
+ Rushil Agarwal Human Archive https://www.linkedin.com/in/rushilagarwal2... building multimodal real-world datasets for ... UC Berkeley 
+ Owen Botkin Forum https://www.linkedin.com/in/owen-botkin Co-founder of Forum. Prev L/S equities @ ... --- 
+ Vansh Ramani RamAIn https://www.linkedin.com/in/ramanivansh/ Pursuing CS at IIT Delhi. Former researcher... Carnegie Mellon 
+ Arne Strickmann Emdash https://www.linkedin.com/in/arnestrickmann Co-Founder of Emdash (S24). Prev. Thrive... --- 
+ Zinny Weli RoboDock https://www.linkedin.com/in/zinnyweli Zinny Weli is co-founder and CEO of Robo... Stanford; Univer... 
+ Elvin Fu CodeWisp https://www.linkedin.com/in/fuelvin/ Making games since age 10. Built mobile an... BU 
+ Filip Balucha Terminal Use https://www.linkedin.com/in/filip-balucha/ Enabling long-running background agents... --- 
+ Chat: founders Streaming... 
+ Message DenchClaw...
+ Integrations
+ Import your data from anywhere
+ Contacts, notes, documents, CRM records — bring everything into one workspace.
+ Google Drive 
+ Notion 
+ Salesforce 
+ HubSpot 
+ Gmail 
+ Calendar 
+ Obsidian 
+ Slack 
+ LinkedIn 
+ Asana 
+ Monday 
+ ClickUp 
+ PostHog 
+ Sheets 
+ Apple Notes 
+ GitHub 
+ + 50 more integrations via Skills Store
+ Use Cases
+ One prompt for anything
+ Type what you need in plain English.
+ Find Leads Enrich Data Send Outreach Analyze Automate 
+ “ 
+ Running ... 
+ Scraping YC directory and LinkedIn — 127 matches 
+ VS
+ Veer Shah
+ Founder & CEO · Cumulus Labs
+ 98% 
+ EZ
+ Emily Zhang
+ Co-founder & CTO · Nexus AI
+ 95% 
+ MJ
+ Marcus Johnson
+ Founder · DataForge
+ 93% 
+ SC
+ Sarah Chen
+ CEO · Quantum Labs
+ 91% 
+ AP
+ Alex Park
+ Co-founder · Synthetics.io
+ 88% 
+ Capabilities
+ Not just chat — full autonomy
+ DenchClaw doesn't just answer questions. It takes action — browsing the web, querying databases, writing code, and managing your pipeline.
+ Uses Your Chrome Profile
+ Unlike other AI tools, DenchClaw uses your existing Chrome profile — all your auth sessions, cookies, and history. It logs into LinkedIn, scrapes YC batches, and sends messages as you.
+ // DenchClaw detects your active Chrome profile
+ ✓ Found Chrome profile: Default 
+ ✓ Auth sessions: LinkedIn, Gmail, GitHub, Twitter 
+ ✓ Cookies synced — no login needed
+ // Browsing as you...
+ → Opening linkedin.com/in/veer-shah
+ → Sending connection request + message
+ ✓ Connection request sent to Veer Shah 
+ Chat with Your Database
+ Ask questions in plain English — DenchClaw translates to SQL, queries your DuckDB, and returns structured results. Like having a data analyst on speed dial.
+ How many founders have we contacted from YC S24?
+ SELECT "Status", COUNT(*) as count
+ FROM v_founders GROUP BY "Status";
+ You've contacted 67 of 200 founders. 31 are qualified, 13 converted. Reply rate is 34% .
+ Coding Agent with Diffs
+ DenchClaw doesn't just talk — it writes code. Review changes in a rich diff viewer before applying. Like Cursor, but for your whole system.
+ src/config/channels.ts +3 -1 
+ 14 channels: { 
+ 15 − whatsapp: { enabled: false }, 
+ 15 + whatsapp: { enabled: true }, 
+ 16 + telegram: { enabled: true }, 
+ 17 + slack: { enabled: true }, 
+ 18 }, 
+ Your Second Brain
+ DenchClaw has full access to your Mac — files, apps, documents. It remembers context across sessions, learns your preferences, and proactively handles tasks.
+ Memory 
+ Kumar prefers Anthropic Claude for complex tasks, GPT-4o for quick responses
+ YC S24 outreach campaign: 200 founders, 67 contacted, focus on AI/ML companies
+ Follow-up sequence: LinkedIn → Email → 2nd email (3 day intervals)
+ Prefers Soya VF for headings, Inter for body text
+ Analytics
+ See everything at a glance
+ Ask “show me pipeline analytics” and get interactive charts generated from your live data.
+ Outreach Activity
+ Live 
+ LinkedIn Email 
+ Pipeline Breakdown
+ 200 leads 
+ 200 total 
+ New 89 
+ Contacted 67 
+ Qualified 31 
+ Converted 13 
+ Conversion Funnel
+ All time 
+ New 
+ 89 
+ Contacted 75 % 
+ 67 
+ Qualified 46 % 
+ 31 
+ Converted 42 % 
+ 13 
+ Overall conversion 15 % 
+ Pipeline
+ Track every conversation
+ Drag-and-drop kanban boards auto-update as leads reply. DenchClaw moves cards through your pipeline automatically.
+ Sales Pipeline — YC S24 Outreach Drag cards between columns 
+ New Lead 3 
+ V Veer Shah 
+ 2mo 
+ H Henry Birge-Lee 
+ 2mo 
+ R Rushil Agarwal 
+ 2mo 
+ Add calculation 
+ Contacted 2 
+ L Leo Gierhake 
+ 2mo 
+ B Berke Argin 
+ 3mo 
+ Add calculation 
+ Replied 1 
+ V Vincent Chen 
+ 3mo 
+ Add calculation 
+ Qualified 2 
+ A Arne Strickmann 
+ 3mo 
+ V Vincent Jeltsch 
+ 3mo 
+ Add calculation 
+ Knowledge & Automation
+ Documents, Reports & Routines
+ Rich markdown documents with embedded live charts. Scheduled automations that run in the background.
+ weekly-report.md 
+ Weekly Pipeline Report
+ Auto-generated every Monday at 9:00 AM
+ This week we added 23 new leads to the pipeline. Outreach response rate improved to 34% , up from 28% last week.
+ report-json — Deal Pipeline Li
+
+=== [pricing] https://www.dench.com/pricing (lang=en)
+Pricing | Dench AI CRM 
+ Dench Cloud 
+ Solutions 
+ Integrations Security 
+Pricing 
+ ⌘ K ★ 2k+ Talk to Sales 
+ Pricing
+ Pay for people.
+ Agents are free. 
+ Every model, every agent, and the follow-ups around your inbox, calendar, and CRM. Per seat. Cancel anytime.
+ Billing cycle Monthly Annually Save 16% 
+ The old way
+ Human assistant
+ $8,000 / month 
+ Plus benefits, equipment, and onboarding.
+ Months of ramp-up time 
+ Replies in hours, not seconds 
+ One task in flight at a time 
+ Business-hours coverage only 
+ Out on weekends and sick days 
+ Hire on LinkedIn 
+ Dench Cloud
+ Recommended 
+ Max
+ $99 / seat / month 
+ 3 days free. Billed monthly.
+ Get Max $200 AI credits per workspace each month, every model on tap 
+ Agents for CRM, support, finance, and meeting prep 
+ Built-in CRM with a headless API 
+ Overnight automations 
+ iMessage, Slack, email, and SMS 
+ Five connected mailboxes 
+ Sandbox computer use 
+ 1,500+ apps 
+ White-glove partnership
+ Enterprise
+ $1,500 / month 
+ Starting price. We roll Dench out for you, from zero AI to agents running your daily workflows.
+ Everything in Max, org-wide 
+ Dedicated success manager 
+ Full AI consultancy, make your company AI-Native 
+ We do your setups, migrations, and data imports 
+ Managed newsletter and outreach campaigns 
+ Pooled usage with bonus credits 
+ HIPAA BAA, SSO, SCIM, and audit logs 
+ Talk to sales 
+ Free for AI agents
+ Copy agent prompt 
+ The 2026 CRM buyer’s guide.
+ How 5 leading CRMs stack up on what AI can actually do, what it costs, and how fast you are live.
+ Read the buyer’s guide 
+ The workspace for you and the AI agents you already use.
+ Star ★ 2k+ Y Backed by Y Combinator 
+ Use Cases 
+ Lead Qualification Agent 
+ Lead Generation Agent 
+ Call Analysis Agent 
+ Meeting Prep Agent 
+ Data Analysis Agent 
+ CRM Agent 
+ SEO Automation 
+ Ad Campaign Management 
+ Content Creation 
+ Shopify Stores 
+ Support Agent 
+ Competitor Analysis 
+ Roles 
+ Marketing 
+ Sales 
+ Operations 
+ Engineering 
+ Support 
+ Pricing 
+ · Docs 
+ · Blog 
+ · Support 
+ · GitHub 
+ · Discord 
+ · Y Combinator 
+ Privacy Policy 
+ · Terms of Service 
+ · Data Processing Addendum 
+ · Subprocessors 
+ · Cookie Policy 
+ · Acceptable Use Policy 
+ Illustrated San Francisco Bay scene with the Golden Gate Bridge and a sailboat. 
+ Find, reach, and close customers autonomously. Built in San Francisco. 
+ Get started 
+ © 2026 Merse Originals, Inc. · San Francisco, CA
+
+=== [about] https://www.dench.com/docs (lang=en)
+Dench: the AI workspace for AI agents - Dench Docs 
+ Documentation Index
+ Fetch the complete documentation index at: /docs/llms.txt 
+ Use this file to discover all available pages before exploring further.
+ Skip to main content 
+ Dench Docs home page 
+ Search...
+ ⌘ K 
+ Support 
+ Dashboard 
+ Dashboard 
+ Search... 
+ Navigation 
+ Start 
+ Dench: the AI workspace for AI agents
+ Guides 
+ API Reference 
+ Start 
+ Dench: the AI workspace for AI agents 
+ Quickstart: connect an agent to Dench 
+ Dench agent skill instructions 
+ Core 
+ Dench CRM: objects, fields, and queries 
+ CRM analytics dashboards, KPIs, and charts 
+ Threaded CRM comments and activity feed 
+ Notifications, mentions, and email digests 
+ Workspace members, profiles, and presence 
+ Connect external tools and integrations 
+ Human approvals for agent actions 
+ Agent memory for durable knowledge 
+ Billing, AI credits, and plan tiers 
+ CLI 
+ Dench CLI: drive your workspace from the terminal 
+ Dench CLI command reference 
+ Control a cloud browser from the Dench CLI 
+ API 
+ Dench HTTP API: endpoints, auth, and usage 
+ Authenticate to the Dench API 
+ On this page 
+ Connect an agent 
+ What’s inside 
+ Two ways to drive it 
+ Start here 
+ Start
+ Dench: the AI workspace for AI agents
+ Dench is the shared workspace for AI agents: one CRM, memory, approvals desk, integrations, and routines, with an API and CLI your agents drive.
+ Dench is a workspace for the AI agents you already use. Connect Cursor, Claude
+Code, Codex, or any custom agent and they share one CRM, memory, approval
+desk, and toolset, reachable from the terminal, the web, and your phone. 
+ ​ 
+ Connect an agent 
+ Cursor
+ Claude Code
+ Codex
+ Custom
+ npx -y -p @dench.com/cli dench signin --kind cursor --name "Cursor Agent - Project" 
+ npx -y -p @dench.com/cli dench signin --kind claude_code --name "Claude Code - Project" 
+ npx -y -p @dench.com/cli dench signin --kind codex --name "Codex - Project" 
+ npx -y -p @dench.com/cli dench signin --kind other --name "AI Agent - Project" 
+ Approve the printed link, then verify: 
+ npx -y -p @dench.com/cli dench context --json 
+ npx -y -p @dench.com/cli dench crm entries list task --json 
+ ​ 
+ What’s inside 
+ CRM
+ People, companies, tasks, and any custom object. Relations, enums, batch
+writes, queries, and aggregates. 
+ Integrations
+ GitHub, Gmail, Stripe, Linear, Slack, and more, brokered through Dench with
+policy and approvals. 
+ Approvals
+ Humans decide. Agents request, record evidence, and wait for a yes before
+risky actions. 
+ Memory
+ Durable facts, decisions, and preferences your agents can search across
+sessions. 
+ Routines
+ Schedule recurring agent runs with cron, intervals, or one-shot timers. 
+ Chat & Agents
+ Spawn chat-turn workflows, follow live streams, and nest agents from the
+CLI or API. 
+ ​ 
+ Two ways to drive it 
+ CLI
+ The agent-facing interface. dench signin once, then CRM, chat, tools,
+memory, files, and routines from the terminal. 
+ API
+ Every server-backed command has a /api/v1 endpoint with an interactive
+playground. Use it from CI, services, or any HTTP client. 
+ ​ 
+ Start here 
+ Quickstart
+ Connect your first agent in under five minutes. 
+ Agent skill
+ The instructions agents read to set Dench up themselves. 
+ Quickstart: connect an agent to Dench
+ Next 
+ x github linkedin discord website 
+ Powered by This documentation is built and hosted on Mintlify, a developer documentation platform
+
+=== [meta] https://www.dench.com/claw
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: English
+
+=== [github] https://github.com/DenchHQ/DenchClaw
+<p align="center">
+  <a href="https://denchclaw.com">
+    <img src="assets/denchclaw-hero.png" alt="DenchClaw — AI CRM, hosted locally on your Mac. Built on OpenClaw." width="680" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/denchclaw"><img src="https://img.shields.io/npm/v/denchclaw?style=for-the-badge&color=000" alt="npm version"></a>&nbsp;
+  <a href="https://discord.gg/PDFXNVQj9n"><img src="https://img.shields.io/discord/1456350064065904867?label=Discord&logo=discord&logoColor=white&color=5865F2&style=for-the-badge" alt="Discord"></a>&nbsp;
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" alt="MIT License"></a>
+</p>
+
+<p align="center">
+  <a href="https://denchclaw.com">Website</a> · <a href="https://discord.gg/PDFXNVQj9n">Discord</a> · <a href="https://skills.sh">Skills Store</a> · <a href="https://www.youtube.com/watch?v=pfACTbc3Bh4&t=44s">Demo Video</a>
+</p>
+
+<br />
+
+<p align="center">
+  <a href="https://denchclaw.com">
+    <img src="assets/denchclaw-app.png" alt="DenchClaw Web UI — workspace, object tables, and AI chat" width="780" />
+  </a>
+  <br />
+  <a href="https://www.youtube.com/watch?v=pfACTbc3Bh4&t=44s">Demo Video</a> · <a href="https://discord.gg/PDFXNVQj9n">Join our Discord Server</a>
+</p>
+
+<br />
+
+## Install
+
+### Are you an AI agent reading this? In that case, use the prompt below to setup DenchClaw.
+
+```
+Install DenchClaw (an OpenClaw CRM Framwork) by running "npx denchclaw bootstrap", when it asks to update OpenClaw, update it as DenchClaw requires up to date OpenClaw. When it asks for my Dench API Key, help me fetch it from dench.com/api and set it up. Remember that DenchClaw creates a new OpenClaw Gateway (~/.openclaw-dench) on port 19001 by default, and a new main agent in that gateway working in ~/.openclaw-dench/workspace directory (Separate from the usual non-DenchClaw OpenClaw gateway that usually sits in ~/.openclaw). All DenchClaw config sits in ~/.openclaw-dench/openclaw.json. Remember that anytime you interface with DenchClaw using openclaw commands, you must use "openclaw --profile dench" as a prefix, for example, to restart gateway, run "openclaw --profile dench gateway restart". After everything is setup, DenchClaw will be accessible at localhost:3100 by default. If for some reason that Port 19001 and 3100 or those ranges are taken, make sure to kill those ports/processes and then retry npx denchclaw bootstrap. Also, sometimes if the Web UI on port 3100 crashes, just run "npx denchclaw update" to boot it back up. Remember to refer to https://github.com/DenchHQ/DenchClaw (DenchClaw's official GitHub Repository) for more information.
+```
+
+### Manual Install
+
+**Node 22+ required.**
+
+```bash
+npx denchclaw@latest bootstrap
+```
+
+Opens at `localhost:3100` after completing onboarding wizard.
+
+---
+
+## Commands
+
+```bash
+npx denchclaw@latest bootstrap # runs onboarding again for openclaw --profile dench
+npx denchclaw@latest update # updates denchclaw web-runtime with current settings as is
+npx denchclaw restart # restarts denchclaw web server
+npx denchclaw start # starts denchclaw web server
+npx denchclaw stop # stops denchclaw web server
+
+# some examples
+openclaw --profile dench <any openclaw command>
+openclaw --profile dench gateway restart
+
+openclaw --profile dench config set gateway.port 19001
+openclaw --profile dench gateway install --force --port 19001
+openclaw --profile dench gateway restart
+openclaw --profile dench uninstall
+```
+
+### Daemonless / Docker
+
+For containers or environments without systemd/launchd, set the environment variable once:
+
+```bash
+export DENCHCLAW_DAEMONLESS=1
+```
+
+This skips all gateway daemon management (install/start/stop/restart) and launchd LaunchAgent installation across all commands. You must start the gateway yourself as a foreground process:
+
+```bash
+openclaw --profile dench gateway --port 19001
+```
+
+Alternatively, pass `--skip-daemon-install` to individual commands:
+
+```bash
+npx denchclaw bootstrap --skip-daemon-install
+npx denchclaw update --skip-daemon-install
+npx denchclaw start --skip-daemon-install
+```
+
+---
+
+## Troubleshooting
+
+### `pairing required`
+
+If the Control UI or CLI

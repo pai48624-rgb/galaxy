@@ -1,0 +1,89 @@
+{
+ "company": null,
+ "one_liner_ko": "여러 코딩 에이전트와 모델 제공사를 한곳에서 관리하는 로컬 모델 게이트웨이.",
+ "what_it_does_ko": "Claude Code Router(CCR)는 코딩 에이전트용 로컬 모델 게이트웨이이자 제어판이다. Claude Code·Codex 등 여러 에이전트와 호환 API 클라이언트에 하나의 고정 로컬 엔드포인트를 주고, 그 뒤의 제공사·모델·계정·라우팅 규칙을 한곳에서 관리한다. 요청을 라우팅·장애 전환·확장하고 기록을 볼 수 있다.",
+ "key_features": [
+  "클라이언트마다 따로 하던 모델 설정을 한곳에서 관리",
+  "작업 흐름을 바꾸지 않고 제공사·모델 전환",
+  "재시도·자격증명 풀·키 교체·순서별 대체 모델로 요청 유지",
+  "Fusion vision·웹 검색·MCP 도구·ToolHub로 기존 모델에 기능 추가",
+  "요청 로그·지연시간·토큰 사용량·비용 추정·계정 상태 확인",
+  "OpenAI·Anthropic·Gemini·OpenRouter·DeepSeek 등 다수 제공사 지원"
+ ],
+ "use_cases_ko": [
+  "여러 코딩 에이전트를 쓰는 개발자가 모델 설정을 클라이언트별로 따로 관리하지 않고 통합"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/musistudio/claude-code-router",
+   "quote": "### Manage every agent and provider from one place."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/musistudio/claude-code-router",
+   "quote": "Claude Code Router (CCR) is a local model gateway and control plane for coding agents."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/musistudio/claude-code-router",
+   "quote": "route, fail over, extend, and observe every request from one app"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/musistudio/claude-code-router",
+   "quote": "**Manage all agents and providers together** instead of maintaining a separate model configuration for every client."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/musistudio/claude-code-router",
+   "quote": "**Switch providers or models without changing your workflow**"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/musistudio/claude-code-router",
+   "quote": "**Keep requests running** with retries, credential pools, key rotation, and ordered fallback models."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/musistudio/claude-code-router",
+   "quote": "**Add capabilities to existing models** with Fusion vision, web search, MCP tools, and ToolHub."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/musistudio/claude-code-router",
+   "quote": "through request logs, resolved routes, latency, token usage, cost estimates, and account status."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/musistudio/claude-code-router",
+   "quote": "CCR supports OpenAI Chat / Responses, Anthropic Messages, Gemini Generate Content / Interactions, OpenRouter, DeepSeek"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/musistudio/claude-code-router",
+   "quote": "instead of maintaining a separate model configuration for every client."
+  },
+  {
+   "field": "api",
+   "url": "https://github.com/musistudio/claude-code-router",
+   "quote": "compatible API clients **one stable local endpoint**"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://github.com/musistudio/claude-code-router",
+   "quote": "<a href=\"README_zh.md\"><img alt=\"Chinese README\""
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

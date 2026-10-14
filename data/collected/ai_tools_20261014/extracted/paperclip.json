@@ -1,0 +1,41 @@
+{
+ "company": "Paperclip",
+ "one_liner_ko": "업무용 AI 에이전트 팀을 관리하는 앱이자, AI 에이전트 팀을 위한 오픈소스 오케스트레이션 도구.",
+ "what_it_does_ko": "Paperclip은 Node.js 서버와 React UI로 이루어져, 여러 AI 에이전트를 한 팀처럼 묶어 사업을 운영하게 해 준다. 사용자는 자기 에이전트를 가져와 목표를 주고, 작업과 비용을 하나의 대시보드에서 추적한다. 겉보기엔 작업 관리 도구지만 안쪽에는 조직도·예산·거버넌스·목표 정렬·에이전트 협업 기능이 있다. 에이전트마다 모델과 하네스를 따로 고를 수 있고, 작업·스킬·권한·이력은 한곳에 모인다.",
+ "key_features": [
+  "조직도·예산·거버넌스·목표 정렬·에이전트 협업",
+  "작업·비용을 하나의 대시보드에서 추적",
+  "에이전트별 모델·하네스 선택",
+  "OpenClaw·Claude Code·Codex·Cursor·Gemini CLI 등과 연동",
+  "외부 서비스 연결(앱 연동·모델 제공자·채팅 채널) 커넥터",
+  "컨트롤 플레인 API와 CLI, 플러그인 SDK",
+  "노트북·Docker·서버에 직접 설치해 실행"
+ ],
+ "use_cases_ko": [
+  "AI 에이전트들로 개발·콘텐츠·마케팅·QA·리서치 등 사업 업무를 자율 운영하려는 사람",
+  "사업 목표를 정하고 CEO·CTO·엔지니어 역할 에이전트를 '고용'해 예산을 정하고 대시보드로 감시"
+ ],
+ "pricing": {"free_tier": null, "plans": [], "pricing_url": null},
+ "open_source": "MIT",
+ "api": "있음",
+ "platforms": ["웹", "CLI", "API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://paperclip.ing", "quote": "Paperclip is the app people use to manage AI agents for work."},
+  {"field": "one_liner_ko", "url": "https://github.com/paperclipai/paperclip", "quote": "Open-source orchestration for teams of AI agents."},
+  {"field": "what_it_does_ko", "url": "https://github.com/paperclipai/paperclip", "quote": "Paperclip is a Node.js server and React UI that orchestrates a team of AI agents to run a business. Bring your own agents, assign goals, and track work and costs from one dashboard."},
+  {"field": "what_it_does_ko", "url": "https://github.com/paperclipai/paperclip", "quote": "It looks like a task manager. Under the hood: org charts, budgets, governance, goal alignment, and agent coordination."},
+  {"field": "key_features", "url": "https://github.com/paperclipai/paperclip", "quote": "Choose models and harnesses per agent while keeping your team's tasks, skills, permissions, and history in one place."},
+  {"field": "key_features", "url": "https://docs.paperclip.ing/", "quote": "Connect outside services to your agents: app integrations, model providers, and chat channels"},
+  {"field": "key_features", "url": "https://docs.paperclip.ing/", "quote": "Connect any agent runtime — Claude, Codex, Gemini, or your own HTTP service."},
+  {"field": "key_features", "url": "https://docs.paperclip.ing/", "quote": "Run Paperclip on your laptop, in Docker, or on a server — with secrets and Tailscale."},
+  {"field": "use_cases_ko", "url": "https://paperclip.ing", "quote": "Great for orchestrating a bunch of agents to do dev, content, social, marketing, qa, research, outreach, and anything else for an autonomous biz."},
+  {"field": "use_cases_ko", "url": "https://github.com/paperclipai/paperclip", "quote": "Review strategy. Set budgets. Hit go. Monitor from the dashboard."},
+  {"field": "open_source", "url": "https://docs.paperclip.ing/", "quote": "© 2026 Paperclip. Open source under MIT."},
+  {"field": "api", "url": "https://docs.paperclip.ing/", "quote": "Every endpoint on the control plane: companies, agents, issues, approvals, costs."},
+  {"field": "platforms", "url": "https://docs.paperclip.ing/", "quote": "Complete command-line reference: local setup, identity, and every control-plane command family."},
+  {"field": "korean_support", "url": "https://paperclip.ing", "quote": "html lang: en"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

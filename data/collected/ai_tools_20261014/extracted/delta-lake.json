@@ -1,0 +1,131 @@
+{
+ "company": "Delta Lake (LF Projects, LLC)",
+ "one_liner_ko": "Spark·Flink·Trino 등 여러 엔진으로 레이크하우스를 만들 수 있게 하는 오픈소스 스토리지 프레임워크.",
+ "what_it_does_ko": "Delta Lake는 데이터 레이크 위에 레이크하우스 아키텍처를 만들게 해 주는 오픈소스 프로젝트다. S3·ADLS·GCS·HDFS 같은 기존 데이터 레이크에서 ACID 트랜잭션과 확장 가능한 메타데이터 처리를 제공하고, 스트리밍과 배치 처리를 통합한다. 타임 트래블, 스키마 강제, 병합·업데이트·삭제를 지원한다. UniForm으로 Iceberg·Hudi 클라이언트에서도 Delta 테이블을 읽을 수 있으며, 리눅스 재단 산하의 독립 프로젝트다.",
+ "key_features": [
+  "ACID 트랜잭션(직렬화 격리)",
+  "페타바이트 규모 확장형 메타데이터",
+  "타임 트래블(이전 버전 접근·되돌리기)",
+  "배치·스트리밍 통합",
+  "스키마 진화·강제",
+  "감사 기록(Audit History)",
+  "SQL·Scala/Java·Python으로 병합·업데이트·삭제",
+  "UniForm으로 Iceberg·Hudi 호환"
+ ],
+ "use_cases_ko": [
+  "기존 데이터 레이크 위에 레이크하우스 구축",
+  "CDC·SCD 등 업서트·삭제 작업",
+  "감사·롤백·재현 가능한 머신러닝 실험"
+ ],
+ "pricing": {
+  "free_tier": "오픈소스(Apache 2.0) — 요금제 안내 없음",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "Apache 2.0",
+ "api": "있음",
+ "platforms": [
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://delta.io",
+   "quote": "Copyright © 2026 Delta Lake, a series of LF Projects,"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/delta-io/delta",
+   "quote": "Delta Lake is an open-source storage framework that enables building a [Lakehouse architecture]"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.delta.io/",
+   "quote": "Delta Lake provides ACID transactions , scalable metadata handling, and unifies streaming and batch data processing on top of existing data lakes, such as S3, ADLS, GCS, and HDFS."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://delta.io",
+   "quote": "aka UniForm, you can read now Delta tables with Iceberg and Hudi clients."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://delta.io",
+   "quote": "Delta Lake is an independent open-source project and not controlled by"
+  },
+  {
+   "field": "key_features",
+   "url": "https://delta.io",
+   "quote": "Protect your data with serializability, the strongest level of isolation"
+  },
+  {
+   "field": "key_features",
+   "url": "https://delta.io",
+   "quote": "Handle petabyte-scale tables with billions of partitions and files with ease"
+  },
+  {
+   "field": "key_features",
+   "url": "https://delta.io",
+   "quote": "Access/revert to earlier versions of data for audits, rollbacks, or reproduce"
+  },
+  {
+   "field": "key_features",
+   "url": "https://delta.io",
+   "quote": "SQL, Scala/Java and Python APIs to merge, update and delete datasets"
+  },
+  {
+   "field": "key_features",
+   "url": "https://delta.io",
+   "quote": "Delta Lake log all change details providing a fill audit trail"
+  },
+  {
+   "field": "key_features",
+   "url": "https://delta.io",
+   "quote": "Prevent bad data from causing data corruption"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://docs.delta.io/",
+   "quote": "Supports merge, update and delete operations to enable complex use cases like change-data-capture, slowly-changing-dimension (SCD) operations"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://docs.delta.io/",
+   "quote": "Data versioning enables rollbacks, full historical audit trails, and reproducible machine learning experiments."
+  },
+  {
+   "field": "pricing",
+   "url": "https://github.com/delta-io/delta",
+   "quote": "[![License](https://img.shields.io/badge/license-Apache%202-brightgreen.svg)]"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/delta-io/delta",
+   "quote": "[![License](https://img.shields.io/badge/license-Apache%202-brightgreen.svg)]"
+  },
+  {
+   "field": "api",
+   "url": "https://github.com/delta-io/delta",
+   "quote": "* [Scala API docs](https://docs.delta.io/latest/delta-apidoc.html)"
+  },
+  {
+   "field": "platforms",
+   "url": "https://delta.io",
+   "quote": "Google BigQuery, Athena, Redshift, Databricks, Azure Fabric and APIs for"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://delta.io",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "리눅스 재단 산하 Apache 2.0 오픈소스 프로젝트로, 공식 페이지에 자체 유료 요금제·관리형 클라우드 안내가 없음",
+   "diff": "기존 분류는 '오픈소스 + 클라우드 매니지드 유료 플랜'이나 공식 페이지에는 유료 플랜이 없음(순수 오픈소스)",
+   "url": "https://delta.io"
+  }
+ ],
+ "plan_change": []
+}

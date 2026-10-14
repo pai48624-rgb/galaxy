@@ -1,0 +1,43 @@
+{
+ "company": "aiming-lab",
+ "one_liner_ko": "대화만 하면 에이전트가 스스로 메타 학습해 진화하는 프레임워크(GPU 불필요).",
+ "what_it_does_ko": "MetaClaw는 실제 사용 중 대화에서 에이전트가 스킬을 쌓고 강화학습(RL)으로 발전하게 하는 오픈소스 프로젝트다. 기본 auto 모드는 스킬 학습과 예약된 RL 훈련을 함께 돌리며, 느린 RL 업데이트는 수면 시간·유휴 시간·구글 캘린더 회의 시간에만 실행된다. 사용자·프로젝트별 세션 간 메모리를 저장해 관련 사실과 선호를 프롬프트에 자동으로 넣는다. OpenClaw 확장으로 설치할 수 있고 IronClaw·PicoClaw·ZeroClaw·CoPaw·NanoClaw·NemoClaw도 지원한다.",
+ "key_features": [
+  "대화 기반 스킬 진화(Skills 모드)",
+  "RL 훈련 모드(Tinker·MinT 백엔드)",
+  "유휴·수면·회의 시간에만 도는 지속 메타 학습",
+  "세션 간 사용자·프로젝트 메모리(Contexture 계층)",
+  "OpenClaw 원클릭 플러그인",
+  "여러 Claw 계열 에이전트 지원",
+  "OpenRouter LLM 플랫폼 지원",
+  "metaclaw setup·start 두 명령으로 실행"
+ ],
+ "use_cases_ko": [
+  "OpenClaw 등 에이전트를 사용하면서 스스로 개선되게 하기"
+ ],
+ "pricing": {"free_tier": "불명", "plans": [], "pricing_url": null},
+ "open_source": "MIT",
+ "api": "불명",
+ "platforms": ["CLI"],
+ "korean_support": "불명",
+ "evidence": [
+  {"field": "company", "url": "https://github.com/aiming-lab/MetaClaw", "quote": "<a href=\"https://github.com/aiming-lab/MetaClaw\"><img src=\"https://img.shields.io/badge/github-MetaClaw-181717"},
+  {"field": "one_liner_ko", "url": "https://github.com/aiming-lab/MetaClaw", "quote": "# Just talk to your agent — it learns and *EVOLVES*."},
+  {"field": "one_liner_ko", "url": "https://github.com/aiming-lab/MetaClaw", "quote": "Meta-learn and evolve your 🦞 from every conversation in the wild. No GPU required."},
+  {"field": "what_it_does_ko", "url": "https://github.com/aiming-lab/MetaClaw", "quote": "metaclaw start              # default: auto mode — skills + scheduled RL training"},
+  {"field": "what_it_does_ko", "url": "https://github.com/aiming-lab/MetaClaw", "quote": "slow RL updates now only run during sleep hours, idle time, or Google Calendar meetings."},
+  {"field": "what_it_does_ko", "url": "https://github.com/aiming-lab/MetaClaw", "quote": "Contexture layer: MetaClaw now persists cross-session memory for users and projects. Relevant facts, preferences, and project history are automatically retrieved and injected into prompts."},
+  {"field": "what_it_does_ko", "url": "https://github.com/aiming-lab/MetaClaw", "quote": "Multi-claw support: IronClaw, PicoClaw, ZeroClaw, CoPaw, NanoClaw, and NemoClaw now supported alongside OpenClaw."},
+  {"field": "key_features", "url": "https://github.com/aiming-lab/MetaClaw", "quote": "metaclaw start --mode skills_only  # skills only, no RL (no Tinker needed)"},
+  {"field": "key_features", "url": "https://github.com/aiming-lab/MetaClaw", "quote": "MinT backend support: RL training now works with both Tinker and MinT."},
+  {"field": "key_features", "url": "https://github.com/aiming-lab/MetaClaw", "quote": "One-click OpenClaw plugin: MetaClaw now ships as a native OpenClaw extension"},
+  {"field": "key_features", "url": "https://github.com/aiming-lab/MetaClaw", "quote": "Added OpenRouter as a supported LLM platform."},
+  {"field": "key_features", "url": "https://github.com/aiming-lab/MetaClaw", "quote": "metaclaw setup              # one-time config wizard"},
+  {"field": "use_cases_ko", "url": "https://github.com/aiming-lab/MetaClaw", "quote": "drop the folder into OpenClaw's extensions, run one command, and everything is set up automatically."},
+  {"field": "open_source", "url": "https://github.com/aiming-lab/MetaClaw", "quote": "<a href=\"LICENSE\"><img src=\"https://img.shields.io/badge/License-MIT-green?style=flat&labelColor=555\" alt=\"License MIT\"></a>"},
+  {"field": "platforms", "url": "https://github.com/aiming-lab/MetaClaw", "quote": "### Two commands. That's it."}
+ ],
+ "mismatch": [{"official": "MIT 오픈소스 연구 프로젝트(기술 보고서 공개), 요금제 안내 없음", "diff": "기존 '프리미엄(무료+유료 구독)' 분류와 달리 유료 구독이 확인되지 않음(오픈소스)", "url": "https://github.com/aiming-lab/MetaClaw"}],
+ "plan_change": [],
+ "note": "공식 사이트 없이 GitHub 본문만 있음. README 한국어 번역 링크는 있으나 [meta] 구간이 없어 한국어 지원은 불명으로 둠."
+}

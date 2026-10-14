@@ -1,0 +1,131 @@
+{
+ "company": "Cerebras",
+ "one_liner_ko": "GPU 시스템보다 최대 30배 빠르다고 내세우는 AI 추론 클라우드·API.",
+ "what_it_does_ko": "Cerebras Inference는 자체 웨이퍼 스케일 엔진(WSE) 칩으로 돌아가는 추론 클라우드다. OpenAI API 호환이라 코드 두 군데만 바꿔 쓸 수 있고, 모델 카탈로그의 주요 모델을 빠르게 실행한다. 가입 후 무료 체험 크레딧으로 시작해 Developer(토큰당 종량제)나 Enterprise로 확장하며, AWS Marketplace·OpenRouter·Hugging Face·Vercel 같은 파트너를 통해서도 접근할 수 있다.",
+ "key_features": [
+  "OpenAI API 호환(코드 2곳 변경)",
+  "웨이퍼 스케일 엔진 기반 초고속 추론",
+  "모델 카탈로그",
+  "Developer 등급: 무료 대비 10배 높은 한도·우선 처리",
+  "Enterprise: 최고 처리량·전용 큐·커스텀 가중치·가동시간 보장",
+  "파트너 API(AWS Marketplace, OpenRouter, Hugging Face, Vercel) 경유 이용"
+ ],
+ "use_cases_ko": [
+  "코딩·리서치·음성·자동화 등 에이전트형 제품 개발"
+ ],
+ "pricing": {
+  "free_tier": "있음 ($5 무료 크레딧, 결제수단 등록 필요, 활성화 후 30일 만료, 프로덕션용 아님)",
+  "plans": [
+   {
+    "name": "Free Trial",
+    "price": 0,
+    "currency": "USD",
+    "period": "one-time",
+    "limits": "$5 프로모션 크레딧, 30일 후 만료, 개발·평가용",
+    "page_lang": "en"
+   },
+   {
+    "name": "Developer",
+    "price": 10,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "$10부터 충전, 토큰당 종량제, 무료 대비 10배 한도",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": null,
+    "period": null,
+    "limits": "영업 문의, 전용 큐·커스텀 가중치·가동시간 보장",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://www.cerebras.ai/pricing"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.cerebras.ai/pricing",
+   "quote": "© 2026 Cerebras."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.cerebras.ai/inference",
+   "quote": "Fastest AI Inference Cloud and API | Cerebras"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.cerebras.ai/inference",
+   "quote": "The Cerebras Wafer-Scale Engine is purpose-built for ultra-fast AI. It is 58x larger than GPUs."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.cerebras.ai/pricing",
+   "quote": "Get access to Cerebras Inference through our partner APIs"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.cerebras.ai/inference",
+   "quote": "OpenAI API compatibility lets developers build on Cerebras with just two code changes."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.cerebras.ai/inference",
+   "quote": "Run leading models without waiting on slow GPU inference"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.cerebras.ai/inference",
+   "quote": "Production-scale inference for high-volume applications. Get the highest throughput, dedicated queue priority, custom model weights, uptime guarantees, and dedicated support."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.cerebras.ai/pricing",
+   "quote": "Connect to Cerebras inference through OpenRouter and run models seamlessly via an intuitive, unified API."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.cerebras.ai/inference",
+   "quote": "build more interactive, intelligent products across coding, research, voice, automation, and more agentic use cases."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.cerebras.ai/inference",
+   "quote": "Get started with $5 in free credit after creating an account."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.cerebras.ai/inference",
+   "quote": "Self-serve pay-per-token pricing for higher-volume builders. Add funds starting at $10, get 10x higher rate limits than Free, and run with higher priority processing."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.cerebras.ai/pricing",
+   "quote": "Add a valid payment method to receive a one-time $5 promotional credit. The credit expires 30 days after activation."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.cerebras.ai/pricing",
+   "quote": "For development, evaluation, and experimentation; not intended for production use."
+  },
+  {
+   "field": "api",
+   "url": "https://www.cerebras.ai/inference",
+   "quote": "Get API Key"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.cerebras.ai/inference",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

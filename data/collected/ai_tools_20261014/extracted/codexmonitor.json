@@ -1,0 +1,110 @@
+{
+ "company": null,
+ "one_liner_ko": "여러 프로젝트에 걸쳐 여러 Codex 에이전트를 지휘하는 데스크톱 커맨드 센터.",
+ "what_it_does_ko": "CodexMonitor는 로컬 작업 공간 여러 곳에서 여러 Codex 에이전트를 지휘하는 Tauri 앱이다. 작업 공간마다 codex app-server를 띄워 스레드를 이어가고, 승인 처리와 모델·접근 모드 선택을 한 화면에서 한다. 브랜치별 worktree로 변경을 격리하고, diff·로그·GitHub 이슈와 PR을 앱 안에서 본다. OpenAI와 무관한 독립 서드파티 앱이며 베타 기간에는 보증 없이 제공된다.",
+ "key_features": [
+  "작업 공간 추가·유지·재연결과 최근 활동 대시보드",
+  "스레드 시작·재개·승인 처리",
+  "브랜치별 worktree 에이전트",
+  "diff·로그·브랜치 제어·GitHub 이슈/PR(gh 연동)",
+  "모델·추론 강도·접근 모드 선택",
+  "스킬·프롬프트·파일 자동완성",
+  "Whisper 받아쓰기(누르고 말하기)",
+  "원격 백엔드(데몬) 모드"
+ ],
+ "use_cases_ko": [
+  "여러 저장소를 오가며 Codex 에이전트로 빌드·리뷰·배포"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "맥",
+  "윈도"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.codexmonitor.app",
+   "quote": "Orchestrate any number of Codex agents across any number of projects in a beautifully crafted"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/Dimillian/CodexMonitor",
+   "quote": "CodexMonitor is a Tauri app for orchestrating multiple Codex agents across local workspaces."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.codexmonitor.app",
+   "quote": "Codex Monitor runs one shared Codex app-server and restores your threads across workspaces."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.codexmonitor.app",
+   "quote": "Codex Monitor is an independent third-party application and is not affiliated with, endorsed by,"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.codexmonitor.app",
+   "quote": "Add, persist, and reconnect workspaces with a live dashboard of recent activity."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.codexmonitor.app",
+   "quote": "Start threads, resume history, and handle approvals without leaving the main view."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.codexmonitor.app",
+   "quote": "Spin up per-branch worktrees for isolated changes and clean reviews."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.codexmonitor.app",
+   "quote": "Diffs, logs, branch controls, and Issues via gh built right in."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.codexmonitor.app",
+   "quote": "Pick models, tune reasoning effort, and lock in access modes per run."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.codexmonitor.app",
+   "quote": "Autocomplete skills, prompts, and file tokens in the composer."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/Dimillian/CodexMonitor",
+   "quote": "Dictation with hold-to-talk shortcuts and live waveform (Whisper)."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/Dimillian/CodexMonitor",
+   "quote": "Optional remote backend (daemon) mode for running Codex on another machine."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.codexmonitor.app",
+   "quote": "Build, review, and ship across multiple repos without losing context."
+  },
+  {
+   "field": "platforms",
+   "url": "https://www.codexmonitor.app",
+   "quote": "macOS + Windows + Linux"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.codexmonitor.app",
+   "quote": "hreflang: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [],
+ "note": "요금·라이선스 정보 없음. iOS 지원은 진행 중(WIP)이라 플랫폼에서 뺌. 리눅스도 지원(목록 항목 없음)."
+}

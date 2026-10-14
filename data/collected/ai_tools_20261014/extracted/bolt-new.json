@@ -1,0 +1,173 @@
+{
+ "company": "StackBlitz",
+ "one_liner_ko": "AI와 대화하며 웹사이트·앱·프로토타입을 브라우저에서 바로 만들고 배포하는 AI 빌더",
+ "what_it_does_ko": "Bolt.new는 브라우저에서 풀스택 앱을 프롬프트로 만들고 실행·수정·배포하는 AI 웹 개발 에이전트다. StackBlitz의 WebContainers 기반 브라우저 개발 환경에서 npm 패키지 설치, Node.js 서버 실행, 외부 API 연동을 할 수 있다. 작업마다 알맞은 모델로 자동 연결하고 자동 테스트·리팩터링으로 오류를 줄인다. Bolt Cloud가 호스팅·데이터베이스·인증·SEO·분석·사용자 도메인을 제공하며, 앱 공개 전 보안 검토도 해 준다.",
+ "key_features": [
+  "채팅으로 웹사이트·앱·슬라이드·프로토타입 생성",
+  "작업별 모델 자동 선택(Bolt Agent Standard·Max)",
+  "자동 테스트·리팩터링으로 오류 감소",
+  "Bolt Cloud: 호스팅·무제한 데이터베이스·사용자 관리·인증",
+  "SEO 최적화, 분석이 있는 호스팅과 사용자 도메인",
+  "Figma·GitHub·팀 템플릿에서 시작",
+  "보안 에이전트의 앱 공개 전 자동 보안 검토·수정",
+  "브라우저 내 격리된 WebContainer 실행"
+ ],
+ "use_cases_ko": [
+  "제품 관리자가 몇 시간 안에 프로토타입을 만들어 팀과 검증",
+  "창업자가 랜딩 페이지부터 제품까지 빠르게 출시",
+  "마케터가 SEO·호스팅이 포함된 캠페인 페이지 제작"
+ ],
+ "pricing": {
+  "free_tier": "있음 (하루 30만 토큰, 월 100만 토큰, Bolt 브랜딩, 파일 업로드 10MB)",
+  "plans": [
+   {
+    "name": "Free",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "하루 30만·월 100만 토큰, 웹 요청 최대 33.3만",
+    "page_lang": "en"
+   },
+   {
+    "name": "Pro",
+    "price": 25,
+    "currency": "USD",
+    "period": "month",
+    "limits": "월 1,000만 토큰부터, 일일 한도 없음, 미사용 토큰 이월, 사용자 도메인",
+    "page_lang": "en"
+   },
+   {
+    "name": "Teams",
+    "price": 30,
+    "currency": "USD",
+    "period": "month(멤버당)",
+    "limits": "Pro 전부 + 중앙 결제·관리자 기능·비공개 NPM 레지스트리",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": "USD",
+    "period": "month",
+    "limits": "맞춤 가격, SSO·감사 로그·24/7 지원",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://bolt.new/pricing/"
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "웹"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://github.com/stackblitz/bolt.new",
+   "quote": "Bolt.new integrates cutting-edge AI models with an in-browser development environment powered by **StackBlitz’s WebContainers**."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://bolt.new/",
+   "quote": "Create stunning apps & websites by chatting with AI."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/stackblitz/bolt.new",
+   "quote": "Bolt.new is an AI-powered web development agent that allows you to prompt, run, edit, and deploy full-stack applications directly from your browser—no local setup required."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/stackblitz/bolt.new",
+   "quote": "Install and run npm tools and libraries (like Vite, Next.js, and more)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://bolt.new/",
+   "quote": "Bolt automatically routes to the right model for each task, balancing quality and cost."
+  },
+  {
+   "field": "key_features",
+   "url": "https://bolt.new/",
+   "quote": "Bolt automatically tests, refactors, and iterates reducing errors so you keep building instead of fixing."
+  },
+  {
+   "field": "key_features",
+   "url": "https://bolt.new/",
+   "quote": "Bolt Cloud gives you enterprise-grade backend infrastructure including hosting, databases, integrations and more."
+  },
+  {
+   "field": "key_features",
+   "url": "https://bolt.new/",
+   "quote": "Hosting with analytics & custom domains"
+  },
+  {
+   "field": "key_features",
+   "url": "https://bolt.new/",
+   "quote": "Figma GitHub Team template"
+  },
+  {
+   "field": "key_features",
+   "url": "https://bolt.new/platform/security",
+   "quote": "Turn it on once and Bolt reviews every app before it goes live."
+  },
+  {
+   "field": "key_features",
+   "url": "https://bolt.new/platform/security",
+   "quote": "Bolt executes your project client-side, inside your browser, in an isolated WebContainer environment."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://bolt.new/",
+   "quote": "Go from insight to prototype in hours and test ideas with your team before the day is over."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://bolt.new/",
+   "quote": "Launch a full business in days, not months."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://bolt.new/",
+   "quote": "Spin up high-performing campaign pages in hours, with SEO and hosting built in."
+  },
+  {
+   "field": "pricing",
+   "url": "https://bolt.new/pricing/",
+   "quote": "Free plans have a 300,000 token daily limit and 1 million token monthly limit."
+  },
+  {
+   "field": "pricing",
+   "url": "https://bolt.new/pricing/",
+   "quote": "Pro $25 per month billed monthly"
+  },
+  {
+   "field": "pricing",
+   "url": "https://bolt.new/pricing/",
+   "quote": "$30 per month and member billed monthly"
+  },
+  {
+   "field": "pricing",
+   "url": "https://bolt.new/pricing/",
+   "quote": "Start at 10M tokens per month"
+  },
+  {
+   "field": "pricing",
+   "url": "https://bolt.new/pricing/",
+   "quote": "Enterprise Custom"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/stackblitz/bolt.new",
+   "quote": "Bolt.new: AI-Powered Full-Stack Web Development in the Browser"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://bolt.new/",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

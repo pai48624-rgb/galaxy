@@ -1,0 +1,107 @@
+{
+ "company": null,
+ "one_liner_ko": "LLM의 고정된 컨텍스트 한계를 넘어 한 줄 프롬프트로 대규모 코드베이스나 책 한 권 같은 방대한 결과물을 만드는 LLM 자동 컴퓨터 프레임워크.",
+ "what_it_does_ko": "L2MAC은 LLM 기반 멀티 에이전트 시스템으로 구현한 범용 저장 프로그램 방식 '자동 컴퓨터' 프레임워크다. 한 줄 입력 프롬프트로 복잡한 코드베이스 전체 같은 방대한 결과를 생성한다. 내부적으로 일련의 지시 단계로 된 프롬프트 프로그램을 스스로 생성해 실행하며, 각 단계는 새 LLM 에이전트가 맡고 제어 장치가 컨텍스트를 관리한다. 에이전트는 파일 저장소 형태의 영구 메모리를 읽고 쓰며, 문법 검사·단위 테스트 실행 도구를 쓸 수 있다. 관련 논문은 ICLR 2024에 채택되었다.",
+ "key_features": [
+  "여러 LLM 에이전트 협업으로 컨텍스트 한계 우회",
+  "한 프롬프트로 코드베이스·책 같은 대규모 출력 생성",
+  "과거 상호작용과 출력을 저장·활용하는 메모리",
+  "순차 프롬프트 프로그램 자동 생성·실행",
+  "문법 검사·테스트 실행 도구 연동",
+  "작업 실행 단계 맞춤 설정"
+ ],
+ "use_cases_ko": [
+  "한 줄 프롬프트로 앱 전체 코드베이스 생성",
+  "책 한 권 분량의 글 작성"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "MIT",
+ "api": "불명",
+ "platforms": [
+  "CLI"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://samholt.github.io/L2MAC/",
+   "quote": "A collaborative LLM-based framework for complex tasks, bypassing the fixed context limit of LLMs"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/samholt/L2MAC",
+   "quote": "Pioneering the first practical LLM-based general-purpose stored-program automatic computer (von Neumann architecture) framework in an LLM-based multi-agent system"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/samholt/L2MAC",
+   "quote": "LLM-Automatic Computer can take a **one line input prompt** and generate an extensive and large output, for example generating an entire complex codebase."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/samholt/L2MAC",
+   "quote": "each instruction step of the **prompt-program** is loaded into a new LLM agent to execute, whose context is managed by a control unit"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/samholt/L2MAC",
+   "quote": "is accepted for presentation at ICLR 2024!"
+  },
+  {
+   "field": "key_features",
+   "url": "https://samholt.github.io/L2MAC/",
+   "quote": "Harness multiple LLM agents operating in tandem to perform complex tasks, bypassing the fixed context limits of individual models."
+  },
+  {
+   "field": "key_features",
+   "url": "https://samholt.github.io/L2MAC/",
+   "quote": "Generate extensive outputs like complete codebases or entire books, all from a single prompt"
+  },
+  {
+   "field": "key_features",
+   "url": "https://samholt.github.io/L2MAC/",
+   "quote": "Utilize advanced memory systems that allow agents to store, recall, and utilize past interactions and outputs"
+  },
+  {
+   "field": "key_features",
+   "url": "https://samholt.github.io/L2MAC/",
+   "quote": "Automatically generate and execute sequential prompt programs that guide LLM agents through complex tasks"
+  },
+  {
+   "field": "key_features",
+   "url": "https://samholt.github.io/L2MAC/",
+   "quote": "Incorporate external tools for syntax checking and test running of code"
+  },
+  {
+   "field": "key_features",
+   "url": "https://samholt.github.io/L2MAC/",
+   "quote": "Adapt the framework to various domains by customizing the task execution steps"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/samholt/L2MAC",
+   "quote": "such as being state-of-the-art for generating large codebases, or it can even write entire books"
+  },
+  {
+   "field": "open_source",
+   "url": "https://samholt.github.io/L2MAC/",
+   "quote": "Released under the MIT License."
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/samholt/L2MAC",
+   "quote": "l2mac --init-config \"\""
+  },
+  {
+   "field": "korean_support",
+   "url": "https://samholt.github.io/L2MAC/",
+   "quote": "html lang: en-US\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

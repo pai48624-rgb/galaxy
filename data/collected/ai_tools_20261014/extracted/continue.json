@@ -1,0 +1,95 @@
+{
+ "company": "Continue Dev, Inc.",
+ "one_liner_ko": "VS Code·JetBrains용 오픈소스 AI 코드 도우미였으나, Cursor에 인수되어 저장소는 더 이상 관리되지 않음.",
+ "what_it_does_ko": "Continue는 오픈소스 VS Code·JetBrains 확장과 CLI로 맞춤 AI 코드 에이전트를 만들고 공유해 쓰게 하는 도구였다. 에이전트 모드, 채팅, 파일 안 코드 편집, 입력 중 자동완성을 제공했다. Continue는 Cursor에 인수됐고, 마지막 2.0.0 릴리스 뒤 GitHub 저장소는 읽기 전용이 됐다. 오픈소스 코드는 계속 자유롭게 공개돼 있다.",
+ "key_features": [
+  "에이전트 모드",
+  "채팅 모드",
+  "편집 모드(현재 파일 안 수정)",
+  "인라인 자동완성",
+  "Continue CLI(cn)",
+  "모델·MCP 서버·규칙·프롬프트 사용자 설정"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "Apache 2.0",
+ "api": "불명",
+ "platforms": [
+  "CLI"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://github.com/continuedev/continue",
+   "quote": "Apache 2.0 © 2023-2026 Continue Dev, Inc."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://docs.continue.dev/",
+   "quote": "Open source AI code assistant for VS Code and JetBrains"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://continue.dev",
+   "quote": "Continue was acquired by Cursor ."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.continue.dev/",
+   "quote": "Continue enables developers to create, share, and use custom AI code agents with our open source VS Code and JetBrains extensions."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/continuedev/continue",
+   "quote": "The `continuedev/continue` repository is no longer actively maintained and is read-only for all users."
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.continue.dev/",
+   "quote": "Agent mode to work on development tasks together with AI"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.continue.dev/",
+   "quote": "Autocomplete to receive inline code suggestions as you type"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.continue.dev/",
+   "quote": "Continue CLI (cn) for terminal-native AI coding assistance"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.continue.dev/",
+   "quote": "Customization Overview Models MCP servers Rules Prompts"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/continuedev/continue",
+   "quote": "Apache 2.0 © 2023-2026 Continue Dev, Inc."
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/continuedev/continue",
+   "quote": "Continue is a coding agent available as a [CLI](#cli), [VS Code extension](#vs-code), and [JetBrains plugin](#jetbrains)."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://continue.dev",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "Continue는 Cursor에 인수됐고 저장소는 읽기 전용(더 이상 관리 안 함), 가격 페이지 없음",
+   "diff": "기존 분류는 '프리미엄(무료+유료 구독)'이지만 현재 유료 구독을 파는 서비스로 운영되지 않음",
+   "url": "https://continue.dev"
+  }
+ ],
+ "plan_change": []
+}

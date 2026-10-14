@@ -1,0 +1,85 @@
+{
+ "company": "Anthropic",
+ "one_liner_ko": "Anthropic의 Claude용 스킬 저장소(anthropics/skills)에 포함된 스킬로, 저장소는 미술 등 창작 응용 스킬을 포함(이 스킬 고유 설명은 수집 본문에 없음).",
+ "what_it_does_ko": "스킬은 Claude가 특정 작업을 반복 가능하게 잘 하도록 동적으로 불러오는 지침·스크립트·자료 폴더이며, 각 스킬은 SKILL.md 파일이 든 독립 폴더로 되어 있다. 수집된 본문은 저장소 전체 README라서 이 스킬만의 설명은 없다. Claude Code에서는 플러그인 마켓플레이스로 설치하고, Claude.ai 유료 플랜과 Claude API에서도 쓸 수 있다. 저장소의 스킬은 시연·교육용이며 실제 Claude 동작과 다를 수 있다고 밝힌다.",
+ "key_features": [
+  "Claude가 동적으로 불러오는 지침·스크립트·자료 폴더(SKILL.md)",
+  "Claude Code 플러그인 마켓플레이스 설치(/plugin install)",
+  "example-skills 플러그인 세트로 설치 가능"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": "불명 (저장소 공개, Claude.ai에서는 유료 플랜에서 사용 가능)",
+  "plans": [],
+  "pricing_url": "https://github.com/anthropics/skills"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "CLI",
+  "API"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://github.com/anthropics/skills",
+   "quote": "This repository contains Anthropic's implementation of skills for Claude."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/anthropics/skills",
+   "quote": "Skills are folders of instructions, scripts, and resources that Claude loads dynamically to improve performance on specialized tasks."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/anthropics/skills",
+   "quote": "Each skill is self-contained in its own folder with a `SKILL.md` file containing the instructions and metadata that Claude uses."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/anthropics/skills",
+   "quote": "**These skills are provided for demonstration and educational purposes only.**"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/anthropics/skills",
+   "quote": "/plugin marketplace add anthropics/skills"
+  },
+  {
+   "field": "pricing",
+   "url": "https://github.com/anthropics/skills",
+   "quote": "These example skills are all already available to paid plans in Claude.ai."
+  },
+  {
+   "field": "api",
+   "url": "https://github.com/anthropics/skills",
+   "quote": "You can use Anthropic's pre-built skills, and upload custom skills, via the Claude API."
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/anthropics/skills",
+   "quote": "# Try in Claude Code, Claude.ai, and the API"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/anthropics/skills",
+   "quote": "/plugin install example-skills@anthropic-agent-skills"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/anthropics/skills",
+   "quote": "These skills range from creative applications (art, music, design)"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "저장소 README 기준 Claude.ai에서는 유료 플랜에 포함되어 제공",
+   "diff": "기존 분류 '오픈소스(무료)'와 달리 Claude.ai 사용은 Anthropic 유료 구독과 묶여 있음",
+   "url": "https://github.com/anthropics/skills"
+  }
+ ],
+ "note": "raw 본문이 anthropics/skills 저장소 전체 README뿐이라 이 스킬 고유의 설명·라이선스가 없음. README는 '많은 스킬이 Apache 2.0'이라고만 해서 이 스킬의 라이선스는 확인 불가(사람 확인 필요)."
+}

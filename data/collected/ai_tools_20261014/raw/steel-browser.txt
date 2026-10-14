@@ -1,0 +1,493 @@
+=== [home] https://steel.dev (lang=en)
+Steel | Open-source Browser Infrastructure for AI Agents 
+ Announcing a new face for our brand 
+ Browser infra Pricing Resources FAQs 
+ Blog 
+ Changelog 
+ Brand assets 
+ Leaderboard (opens in a new tab) 
+ GitHub (opens in a new tab) 
+ Cookbook (opens in a new tab) 
+ Status (opens in a new tab) 
+ Docs (opens in a new tab) Steel Browser on GitHub, 7.8K stars (opens in a new tab) Contact Sales C Sign in S 
+ Browser infra Pricing Resources FAQs 
+ Blog 
+ Changelog 
+ Brand assets 
+ Leaderboard (opens in a new tab) 
+ GitHub (opens in a new tab) 
+ Cookbook (opens in a new tab) 
+ Status (opens in a new tab) 
+ Docs (opens in a new tab) Contact Sales Sign in 
+ Give your AI agents
+a browser
+that works. 
+ Steel is an API that lets you control fleets of browsers. Spin up thousands of sessions on the web. 
+ Start for free S Copied agent prompt Copy Copied agent prompt 
+ Search the web for this week's biggest AI agent launches and summarize each one.
+ Starting browser session ready
+ steelnews.com/latest 200
+ steelagents.com/launches 200
+ Extracted 14 launches 
+ Wrote summary.md 4.2 KB
+ my-agent ▸ Search the web for this week's biggest AI agent launches and summarize each one. 
+ Starting browser session ready 
+ steelnews.com/latest 200 
+ steelagents.com/launches 200 
+ Extracted 14 launches 
+ Wrote summary.md 4.2 KB 
+ my-agent ▸ 
+ my-agent ▸ 
+ AI agent 
+ AI agent 
+ Loved by 30,000+ engineers at
+ Readwise 
+ Zo Computer 
+ Avoca 
+ Profound 
+ Octogen 
+ Clamo 
+ Atoms 
+ Melrose 
+ Fluencify 
+ Rho 
+ Provizual 
+ Zingage 
+ Cognizant 
+ Nimbus 
+ Navattic 
+ Magical 
+ Steel runs millions of browser sessions every week. 
+ Every one a real browser, started in under a second and released when the work is done, at whatever scale your agents run. 
+ AI agent 
+ AI agent 
+ AI agent 
+ AI agent 
+ AI agent 
+ Browser Hours Served 1,500,000+
+ Sessions Served 35,000,000+
+ Tokens Scraped 4 Trillion+
+ What people build on Steel
+ From scrape jobs at scale to agents that work the web on their own, teams run whatever needs a real browser on Steel.
+ AI Agents Foundational Model Training AI Shopping Assistants Web Scraping RPA Software Sales Automation QA Software Customer Service Agents Deep Research Price Monitoring Form Filling Travel Booking 
+ Give agents a real browser to navigate, click and type through the web, then hand back what they found. Gather fresh, clean web data at scale to train and evaluate models. Search stores, compare prices and fill a cart on a shopper's behalf. Pull structured data from any site, logins and JavaScript included, without running a fleet of your own. Automate the clicks and forms people repeat every day in web apps with no API. Research accounts, enrich leads and keep the CRM current, straight from the source. Run end-to-end tests in real browsers and catch what breaks before your users do. Resolve tickets end to end: look up orders, update accounts and follow up in the tools support already uses. Read dozens of sources in parallel and come back with an answer and its citations. Track prices and stock across retailers, on a schedule or the moment they change. Complete applications, sign-ups and checkouts from the data you already have. Search flights and hotels across sites and book the one that fits. 
+ Give agents a real browser to navigate, click and type through the web, then hand back what they found. 
+ AI Agents
+ Give agents a real browser to navigate, click and type through the web, then hand back what they found.
+ Foundational Model Training
+ Gather fresh, clean web data at scale to train and evaluate models.
+ AI Shopping Assistants
+ Search stores, compare prices and fill a cart on a shopper's behalf.
+ Web Scraping
+ Pull structured data from any site, logins and JavaScript included, without running a fleet of your own.
+ RPA Software
+ Automate the clicks and forms people repeat every day in web apps with no API.
+ Sales Automation
+ Research accounts, enrich leads and keep the CRM current, straight from the source.
+ QA Software
+ Run end-to-end tests in real browsers and catch what breaks before your users do.
+ Customer Service Agents
+ Resolve tickets end to end: look up orders, update accounts and follow up in the tools support already uses.
+ Deep Research
+ Read dozens of sources in parallel and come back with an answer and its citations.
+ Price Monitoring
+ Track prices and stock across retailers, on a schedule or the moment they change.
+ Form Filling
+ Complete applications, sign-ups and checkouts from the data you already have.
+ Travel Booking
+ Search flights and hotels across sites and book the one that fits.
+ AI Agents were never meant to browse the web.
+Steel enables your Agents to browse like humans.
+ Control and start sessions with Sessions API A real browser, one API call. 
+ Start a session in <1s
+ A fresh browser ready before your agent asks twice.
+ Puppeteer in one line
+ Point your existing script at Steel and it runs.
+ Resume any session
+ Pick up with the same cookies, tabs and state.
+ Read Sessions API docs 
+ import Steel from "steel-sdk" ; 
+ const client = new Steel(); 
+ const session = await client.sessions.create({ 
+ solveCaptcha: true , 
+ useProxy: true , 
+ }); 
+ - const browser = await puppeteer.launch(); 
+ + const browser = await puppeteer.connect({ 
+ + browserWSEndpoint: `wss://connect.steel.dev 
+ + ?apiKey=${KEY}&sessionId=${session.id}` , 
+ + }); 
+ const context = await client.sessions.context(session.id); 
+ // Tomorrow, signed in as it was 
+ const next = await client.sessions.create({ 
+ sessionContext: context, 
+ timeout: 24 * 60 * 60 * 1000 , 
+ }); 
+ World-class observability Know what your agents are doing at all times. 
+ Readable traces
+ Every run as plain steps, for people and agents.
+ In the UI or the API
+ Watch a run visually, or read it back as text.
+ Live session viewer
+ View session recordings in full fidelity.
+ Read Traces docs 
+ Clicked "Add to cart" 
+ 12:04:19
+ Selected size "9" 
+ 12:04:16
+ Clicked "Trail Runner 2" 
+ 12:04:13
+ Typed "trail shoes" 
+ 12:04:10
+ Navigated to shop.example.com 
+ 12:04:07
+ Give agents profiles Consistent profiles across thousands of runs. 
+ An account per agent
+ Each agent signs in as itself, run after run.
+ Signed in across runs
+ Logins and history carry over between runs.
+ Read Profiles docs 
+ Pick up whenever needed Help your agent whenever it's stuck. 
+ 1080p live viewer
+ Every session recorded at full resolution.
+ Humans take over
+ Step in for 2FA, payments or anything unsure.
+ Agents pick back up
+ Hand control back and the run carries on.
+ Session replays
+ Play a run back once it is done.
+ Read Human-in-the-loop docs 
+ Run Steel from your CLI Cloud browsers, one command away. 
+ One CLI for browsers
+ Start, steer and stop cloud browsers from a shell.
+ Stealth and proxies
+ Stealth sessions behind proxies, CAPTCHAs solved.
+ Screenshots and PDFs
+ Captured as evidence of every run you make.
+ Agent-ready commands
+ The same commands, for agents, via the skill.
+ $ curl -fsS https://setup.steel.dev | sh 
+ $ npm install - g @ steel - dev / cli 
+ added 1 package in 2s
+ $ steel login 
+ Logged in to Steel
+ $ steel browser start 
+ Session started
+ $ curl - fsS https :// setup . steel . dev | sh 
+ Installed the Steel CLI
+ $ steel browser navigate https :// news . ycombinator . com 
+ $ steel browser live 
+ Live view open in your browser
+ Build with SDKs for your stack and the agents you already use
+ Use Steel's Python and Node.js SDKs or its REST API in the stack you have. Coding agents set Steel up for you and browse th
+
+=== [pricing] https://steel.dev/pricing (lang=en)
+Steel | Pricing 
+ Browser infra Pricing Resources FAQs 
+ Blog 
+ Changelog 
+ Brand assets 
+ Leaderboard (opens in a new tab) 
+ GitHub (opens in a new tab) 
+ Cookbook (opens in a new tab) 
+ Status (opens in a new tab) 
+ Docs (opens in a new tab) Steel Browser on GitHub, 7.8K stars (opens in a new tab) Contact Sales C Sign in S 
+ Browser infra Pricing Resources FAQs 
+ Blog 
+ Changelog 
+ Brand assets 
+ Leaderboard (opens in a new tab) 
+ GitHub (opens in a new tab) 
+ Cookbook (opens in a new tab) 
+ Status (opens in a new tab) 
+ Docs (opens in a new tab) Contact Sales Sign in 
+ Pricing
+ Start for free and pay only for what runs. Move up when your agents go to production.
+ Launch
+ $0 per month + usage 
+ Start for free with $30 of credits, and pay only for what your agents run.
+ Start with $30 free credits Included usage: $30 of credits, one time
+ 10 concurrent browser sessions
+ Sessions up to 15 minutes
+ Up to 3 seats
+ Email and community support
+ No credit card needed
+ Scale
+ Popular 
+ $250 per month + usage 
+ Production capacity, stable identity, dedicated support.
+ Start scaling Included usage: $100 of credits every month
+ 100 concurrent browser sessions
+ Sessions up to 1 hour
+ Dedicated IPs at $5 each
+ Dedicated Slack channel
+ SSO + HIPAA-ready BAA
+ Enterprise
+ Custom per month + usage 
+ Your hardest workloads, with guarantees: custom rates, security and support.
+ Contact sales Included usage: Custom usage credits
+ 1,000+ concurrent sessions
+ Stealth browser
+ Reserve browser pools
+ Sessions up to 24 hours
+ Support and uptime SLAs
+ Compare plans
+ Every rate, limit and feature, plan by plan.
+ Included usage Included usage Launch Scale Enterprise 
+ Free usage credits $30 (one time) $100 / month Custom 
+ Rates Rates Launch Scale Enterprise 
+ Browser hours $0.10 $0.08 Custom 
+ Proxy bandwidth $10/GB $6/GB Custom 
+ CAPTCHA solves $3/1k $1/1k Custom 
+ Browser tools (/scrape) $5/1k $5/1k Custom 
+ Features Features Launch Scale Enterprise 
+ Concurrent browser sessions 10 100 1,000+ 
+ Stealth browser – Not included – Not included Included 
+ Dedicated IPs – Not included $5/IP Custom 
+ Max session time 15 minutes 1 hour Up to 24 hours 
+ Number of seats Up to 3 Unlimited Unlimited 
+ Reserve browser pools – Not included – Not included Included 
+ Limits Limits Launch Scale Enterprise 
+ Requests per minute 60 600 Custom 
+ Data retention 7 days 14 days Custom 
+ Support Support Launch Scale Enterprise 
+ Email support Included Included Included 
+ Community support Included Included Included 
+ Dedicated Slack channel – Not included Included Included 
+ 911 email – Not included – Not included Included 
+ Support and uptime SLAs – Not included – Not included Included 
+ Security Security Launch Scale Enterprise 
+ Enterprise SSO – Not included Included Included 
+ HIPAA-ready BAA – Not included Included Included 
+ We believe the future of browser automation is open source.
+ Steel Browser is built in the open on GitHub. 
+ Run it yourself, read every line, and help shape what comes next. 
+ Start Free S View GitHub repository G 
+ Product
+ Sessions 
+ Profiles 
+ Files 
+ Extensions 
+ Credentials API 
+ Developers
+ Documentation 
+ SDKs 
+ Steel Skills 
+ REST API 
+ Self-hosting 
+ Status 
+ Resources
+ Blog 
+ Brand 
+ Changelog 
+ Community 
+ Help & support 
+ Legal & privacy
+ Terms 
+ Privacy 
+ Security 
+ Cookie settings 
+ Color theme
+
+=== [about] https://docs.steel.dev/ (lang=en)
+Steel Docs 
+ Search... 
+ Overview 
+ Integrations 
+ Cookbook 
+ Changelog 
+ API Reference 
+ 7.8k 
+ Search... 
+ Sign in 
+ Overview 
+ Changelog 
+ Topics 
+ Contribute 
+ Coding agents 
+ Frameworks 
+ Browser libraries 
+ Computer use 
+ Protocols 
+ Steel Documentation
+ Steel is the open-source browser API for AI agents — managed cloud browsers with stealth, residential proxies, CAPTCHA solving, persistent profiles, session replays, and agent observability. Use these docs to create cloud browser sessions and connect your automation tools.
+ Getting started and APIs
+ Get Started with CLI + Agent Skill
+ Install Steel CLI and the steel-browser skill so your agent can control a browser.
+ $ curl -fsS https://setup.steel.dev | sh 
+ Sessions API
+ Explore API endpoints for managing Steel Sessions.
+ API
+ Sessions
+ Captchas API
+ Explore API endpoints for managing Steel Captchas.
+ API
+ Captchas
+ Extensions API
+ Explore API endpoints for building on Steel.
+ API
+ Extensions
+ Credentials API
+ Explore API endpoints for managing Steel Credentials.
+ API
+ Credentials
+ Files API
+ Explore API Endpoints for managing Files on Steel.
+ API
+ Files
+ Integrations 
+ Gemini Computer Use
+ Use Gemini Computer Use with Steel Browser.
+ Claude Computer Use
+ Use Claude Computer Use with Steel Browser.
+ OpenAI Computer Use
+ Use OpenAI Computer Use with Steel Browser.
+ Browser-Use
+ Use Browser-Use to interact with a Steel browser.
+ Magnitude
+ Use Magnitude with Steel Browser.
+ CrewAI
+ Learn how to use CrewAI with Steel Browser.
+ Libraries & SDKs 
+ Steel Typescript SDK
+ Typescript SDK for building applications on Steel.
+ Steel Python SDK
+ Python SDK for building applications on Steel.
+ Steel Rust SDK
+ Rust SDK for building applications on Steel.
+ Steel Go SDK
+ Go SDK for building applications on Steel.
+ Resources 
+ API Reference
+ View the Steel API reference.
+ Instructions for AI Agents
+ Point your agent to docs.steel.dev/llms.txt for a fast start with Steel.
+
+=== [pricing2] https://steel.dev/blog/pricing-update (lang=en)
+Steel | Simpler pricing, built for how agents run 
+ Browser infra Pricing Resources FAQs 
+ Blog 
+ Changelog 
+ Brand assets 
+ Leaderboard (opens in a new tab) 
+ GitHub (opens in a new tab) 
+ Cookbook (opens in a new tab) 
+ Status (opens in a new tab) 
+ Docs (opens in a new tab) Steel Browser on GitHub, 7.8K stars (opens in a new tab) Contact Sales C Sign in S 
+ Browser infra Pricing Resources FAQs 
+ Blog 
+ Changelog 
+ Brand assets 
+ Leaderboard (opens in a new tab) 
+ GitHub (opens in a new tab) 
+ Cookbook (opens in a new tab) 
+ Status (opens in a new tab) 
+ Docs (opens in a new tab) Contact Sales Sign in 
+ Jun 26, 2026 / 3 min read / Hussien Hussien 
+ Simpler pricing, built for how agents run
+ Steel pricing now has Launch, Scale, and Enterprise plans with metered browser rates, usage credits, visible usage, and plan limits for agent workloads.
+ Launch Week v3 -> Day 05 / 05
+ Today we're launching simpler pricing: three plans on one metering model, rates you can read before an agent runs, and a dashboard that shows where every dollar goes.
+ It's the biggest change to how Steel is priced since we started.
+ The old pricing got in the way of the one thing agents are for: doing the work. Anti-bot, the part that makes Steel useful, was locked behind a monthly subscription. So the builder pointing an agent at a task couldn't watch it work before paying for it. And the fixed bundles underneath never matched how agents run, with usage that spikes one week and goes quiet the next.
+ Here's the moment it used to break. You send an agent to do a job for you, and partway through it hits a CAPTCHA. On the old plan, solving it meant upgrading before you'd seen the workflow run, so you closed the tab. Now Launch gives you $30 in credits to try Steel without a subscription. If your agent needs CAPTCHA solving, you unlock it with a $10 deposit, and your credits cover the work. You prove Steel works on your hardest use case before committing.
+ One customer put it plainly: "I didn't want another subscription. I just want to pay for what I use." This is us agreeing.
+ So we rebuilt it.
+ You pay for what you run.
+ Pricing closes Launch Week v3. After Stealth Browser for runtime, Dedicated IPs for identity, Rust and Go SDKs for backend services, and Atlas for deep research. Pricing has to keep up.
+ The new pricing model
+ The base meters (browser hours, proxy bandwidth, CAPTCHA solves, and /scrape ) are all on the pricing page .
+ The limits are visible: Launch starts with 10 concurrent browser sessions, 15-minute max sessions, up to 3 seats, 60 requests per minute, and 7-day data retention. Scale moves to 100 concurrent sessions, 1-hour sessions, unlimited seats, 600 requests per minute, 14-day retention, dedicated support, Enterprise SSO, and Dedicated IPs at $5 / IP . Enterprise is custom, with 1,000+ concurrent sessions, sessions up to 24 hours, reserved browser pools, Stealth Browser, custom Dedicated IP pricing, and support and uptime SLAs.
+ Usage credit is explicit
+ Launch includes a one-time $30 usage credit, valid for 90 days. Scale includes $100 in usage credit each month. Enterprise is custom.
+ You see the credit up front, then monitor it. Browser hours and proxy bandwidth each show up as their own meter.
+ A real usage dashboard
+ When the spend is real, you want to see it. The dashboard breaks it down by meter: session time, proxy bandwidth, CAPTCHA solves, and your remaining balance. No waiting for an invoice to find out where the money went. Top up credits, or turn on auto top-up so a run never stalls for lack of balance.
+ Why we priced it this way
+
+
+=== [meta] https://steel.dev
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/steel-dev/steel-browser
+<br />
+<p align="center">
+<a href="https://steel.dev">
+  <img src="images/steel_header_logo.png" alt="Steel Logo" width="100">
+</a>
+</p>
+
+
+
+<h3 align="center"><b>Steel</b></h3>
+<p align="center">
+    <b>The open-source browser API for AI agents & apps.</b> <br />
+    The best way to build live web agents and browser automation tools.
+</p>
+
+<div align="center">
+
+[![Commit Activity](https://img.shields.io/github/commit-activity/m/steel-dev/steel-browser?color=yellow)](https://github.com/steel-dev/steel-browser/commits/main)
+[![License](https://img.shields.io/github/license/steel-dev/steel-browser?color=yellow)](https://github.com/steel-dev/steel-browser/blob/main/LICENSE)
+[![Discord](https://img.shields.io/discord/1285696350117167226?label=discord)](https://discord.gg/steel-dev)
+[![Twitter Follow](https://img.shields.io/twitter/follow/steeldotdev)](https://twitter.com/steeldotdev)
+[![GitHub stars](https://img.shields.io/github/stars/steel-dev/steel-browser)](https://github.com/steel-dev/steel-browser)
+
+</div>
+
+<h4 align="center">
+    <a href="https://app.steel.dev/sign-up" target="_blank">
+      Get Started
+  </a>  ·
+    <a href="https://docs.steel.dev/" target="_blank">
+      Documentation
+  </a>  ·
+  <a href="https://steel.dev/" target="_blank">
+      Website
+  </a> ·
+  <a href="https://github.com/steel-dev/steel-cookbook" target="_blank">
+      Cookbook
+  </a>
+</h4>
+
+<p align="center">
+  <img src="images/demo.gif" alt="Steel Demo" width="600">
+</p>
+
+## ✨ Highlights
+
+[Steel.dev](https://steel.dev) is an open-source browser API that makes it easy to build AI apps and agents that interact with the web. Instead of building automation infrastructure from scratch, you can focus on your AI application while Steel handles the complexity.
+
+Under the hood, it manages sessions, pages, and browser processes, allowing you to perform complex browsing tasks programmatically without any of the headaches:
+- **Full Browser Control**: Uses Puppeteer and CDP for complete control over Chrome instances -- allowing you to connect using Puppeteer, Playwright, or Selenium.
+- **Session Management**: Maintains browser state, cookies, and local storage across requests
+- **Proxy Support**: Built-in proxy chain management for IP rotation
+- **Extension Support**: Load custom Chrome extensions for enhanced functionality
+- **Debugging Tools**: Built-in request logging and a UI to view/debug sessions with
+- **Anti-Detection**: Includes stealth plugins and fingerprint management
+- **Resource Management**: Automatic cleanup and browser lifecycle management
+- **Browser Tools**: Exposes APIs to quick convert pages to markdown, readability, screenshots, or PDFs.
+
+
+For detailed API documentation and examples, check out our [API reference](https://docs.steel.dev/api-reference) or explore the Swagger UI directly at `http://0.0.0.0:3000/documentation`.
+
+> Steel is in public beta and evolving every day. Your suggestions, ideas, and reported bugs help us immensely. Do not hesitate to join in the conversation on [Discord](https://discord.gg/steel-dev) or raise a GitHub issue. We read everything, respond to most, and love you.
+
+If you love open-source, AI, and dev tools, [we're hiring across the stack](https://jobs.ashbyhq.com/steel)!
+
+### Make sure to give us a star ⭐
+
+<img width="200" alt="Start us on Github!" src="images/star_img.png">
+
+## 🛠️ Getting Started
+The easiest way to get started with Steel is by creating a [Steel Cloud](https://app.steel.dev) account. Otherwise, you can deploy this Steel browser instance to a cloud provider or run it locally.
+
+## ⚡ Quick Deploy
+If you're looking to deploy to a cloud provider, we've got you covered.
+
+| Deployment methods | Link |
+| -------------------- | ----- |
+| Pre-built Docker Image (combined API + UI) | [![Deploy with Github Container Registry](https://img.shields.io/badge/GHCR-478CFF?style=for-the-badge&labelColor=478CFF&logo=github&logoColor=white)](https://github.com/steel-dev/steel-browser/pkgs/container/steel-browser) |
+| 1-click deploy to Railway | [![Deploy on Railway](https://img.shields.io/badge/Railway-B039CB?style=for-the-badge&labelColor=B039CB&logo=railway&logoColor=white)](https://railway.app/deploy/stee

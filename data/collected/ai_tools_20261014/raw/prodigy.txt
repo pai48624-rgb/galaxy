@@ -1,0 +1,267 @@
+=== [home] https://prodi.gy
+Prodigy · An annotation tool for AI, Machine Learning & NLP 
+ 💥 Try our new tool for agentic NLP development! 
+ Get Prodigy 
+ Documentation 
+ Features Information Extraction Get structured data from text
+ Language Model Training Train and fine-tune models
+ Computer Vision Classify and segment images
+ Audio & Video Classify and segment AV data
+ Prompt Engineering Develop better LLM prompts
+ Custom Workflows Fully customize your experience
+ Industries Banking & Finance Financial data, risk assessment and market analysis
+ Healthcare & Biomedical Medical documents, clinical notes and pharmaceutical data
+ Media & Content Creation Multi-media data, archives and user-generated content
+ Legal & Insurance Legislative text, contracts, regulation and compliance
+ Conversation & Insights Dialog systems, user interactions and actionable insights
+ Research & Education Academic papers, corpus creation and educational data
+ Demo 
+ Blog 
+ Support 
+ Search 
+ Build AI systems that 
+do exactly what you want
+ A modern data development experience 
+from the makers of 
+ prodigy ner.llm.correct news_articles ./config.cfg ./news.jsonl 
+ This live demo requires JavaScript to be enabled. Kim Miller Developer
+ GPT-4 API
+ Efficiently define, train and evaluate
+ Prodigy is an extensible annotation tool that gives you a new way to build custom AI systems. Define your classification scheme with real-world examples rather than just prompts, and let powerful models assist – no machine learning experience required.
+ prodigy train ./information_extraction --ner news_ner --textcat news_textcat =========== Training pipeline =========== 48% | ████████████████ 
+ Information Extraction Type model
+ Size 436 MB 
+ Speed 2k words/second 
+ Accuracy 92.84 F-score
+ Directory ~/data/models 
+ Alex Smith Engineer
+ Take back control 
+ Prodigy runs entirely under your control, making it suitable for even the strictest privacy requirements. You can download it and run it locally right out of the box, or adapt it to serve your infrastructure needs. The models you produce are yours as well, with absolutely no lock-in.
+ recipe.py
+ @prodigy . recipe ( 
+ "my_custom_recipe" 
+ dataset = Arg ( help = "dataset to save answers to" ) , 
+ source = Arg ( "--source" , help = "data to load" ) , 
+ label = Arg ( "--label" , "-l" , help = "comma-separated label(s)" ) , 
+ ) 
+ def recipe ( dataset : str , source : str , dataset : List [ str ] ) : 
+ . . . 
+ Terminal
+ prodigy my_custom_recipe annotations ./samples.jsonl --label PERSON,PRODUCT 
+ Jamie Davis Developer
+ Built for customization and extension
+ Prodigy lets you define fully custom data feeds and interfaces, letting the computer work instead of the human. By breaking down tasks into smaller pieces and automating whatever you can, you can make annotation over 10× as efficient .
+ Documentation 
+ Downloadable developer tool and library
+ Create, review and train from your annotations
+ Runs entirely on your own machines
+ Powerful built-in workflows
+ Read more Pricing 
+ Lifetime license, pay once, use forever
+ Flexible options for individuals and teams
+ Full privacy, no data leaves your servers
+ Download and install like any other library
+ Get Prodigy 
+ Real-world case studies
+ How S&P Global makes markets more transparent with spaCy and Prodigy in a high-security environment 
+ How the Guardian approaches quote extraction from news articles with spaCy and Prodigy 
+ How Nesta processes 7m job ads to shed light on the UK’s labor market with spaCy and Prodigy 
+ How Love Without Sound helps music industry law firms recover millions with spaCy and Prodigy 
+ How Posh deploys a customized Prodigy cloud service to build financial chatbots for banking conversations 
+ What others say
+ Christopher Ewen
+ Senior Product Manager
+ Having a small model makes it much easier to achieve our strict inference SLAs. The system is much less operationally complex because the model is so efficient. Prodigy lets us automate as much as possible and focus on valuable decisions and less clicking. 
+ Andy Halterman
+ Researcher
+ A lack of labeled data held geoparsing back for years. It took a week to fix that with Prodigy.
+ India Kerle
+ Data Scientist
+ Our current work on measuring the greenness of jobs at the skill-, occupation- and industry-level relied heavily on Prodigy’s flexible custom recipes to incorporate Large Language Models (LLMs) in the labeling process. 
+ Anna Vissens
+ Lead Data Scientist
+ The principle of human-in-the-loop machine learning is everywhere in journalism. For our AI projects, our data science team developed a fully customized hybrid rules and model-based annotation workflow with Prodigy. 
+ Cheyanne Baird
+ NLP Research Scientist
+ Prodigy’s design aspect was key. [With my previous annotation tools], I would get a lot of feedback from annotators, saying “it’s really hard, because I have to scroll and scroll and scroll to see the labels. There’s too many labels. There’s too many options.” When I was looking at Prodigy I liked it because you could customize it. 
+ Raphael Cohen
+ Head of Research
+ Prodigy is by far the best ROI we had on any tool!
+ Daniel Bourke
+ Founder
+ We love Prodigy! I've tried many data labelling tools and chose Prodigy specifically for the simplicity. Image folder plus text file to database is perfect for our needs. If a model is one of our main products, good data is basically the same as good code.
+ Antonio Polo de Alvarado
+ ML Engineer
+ I have been working with Prodigy these last few weeks and I can say that it is probably (if not the best) one of the best NLP tools.
+ Rebecca Bilbro
+ Founder & CTO
+ Prodigy’s interface is incredibly intuitive! It elevates data labeling to a first-order concern in the ML workflow, enables us to collaborate on measures of inter-rater reliability and makes the labeling options super unambiguous for data annotators.
+ User Survey Participant
+ ML Engineer
+ I really love being able to do almost everything in Python, it means that team members with no front end experience can create tasks super easily.
+ Jordan Davis
+ Founder
+ What I love about Prodigy is that it makes it really easy to try out ideas. You often don't know whether something works until you try it. Prodigy lets me iterate on my label schemes and definitions, and build much better models this way. 
+ Frequently Asked Questions
+ Any other questions that are not covered here? Email us !
+ What makes Prodigy different from other annotation solutions? Prodigy is a downloadable developer tool for creating training and evaluation data for machine learning models. You can use Prodigy to build custom AI systems specific to your use case that you can own and control. Prodigy is a Python package and library that includes a web application. You can customize Prodigy with your own Python functions, and mix and match frontend components to make your own annotation experience.
+ Prodigy integrates tighly with spaCy, but can also be used with any other libraries and tools. The library includes a range of pre-built workflows and command-line commands for various common tasks, and components for implementing your own workflow scripts. Your scripts can specify how the data is loaded and saved and even define custom HTML and JavaScript. The web application is optimized for fast, intuitive and efficient annotation.
+ Is our data really private? How does it work? Prodigy runs entirely on your own machines and never “phones home” or connects to our or any third-party servers. Once installed, you can eve
+
+=== [pricing] https://prodi.gy/buy
+Get Prodigy · Prodigy · An annotation tool for AI, Machine Learning & NLP 
+ 💥 Try our new tool for agentic NLP development! 
+ Get Prodigy 
+ Documentation 
+ Features Information Extraction Get structured data from text
+ Language Model Training Train and fine-tune models
+ Computer Vision Classify and segment images
+ Audio & Video Classify and segment AV data
+ Prompt Engineering Develop better LLM prompts
+ Custom Workflows Fully customize your experience
+ Industries Banking & Finance Financial data, risk assessment and market analysis
+ Healthcare & Biomedical Medical documents, clinical notes and pharmaceutical data
+ Media & Content Creation Multi-media data, archives and user-generated content
+ Legal & Insurance Legislative text, contracts, regulation and compliance
+ Conversation & Insights Dialog systems, user interactions and actionable insights
+ Research & Education Academic papers, corpus creation and educational data
+ Demo 
+ Blog 
+ Support 
+ Search 
+ Get Prodigy
+ Join over 10,000 developers and researchers 
+who are already using Prodigy for radically efficent
+machine teaching and annotation.
+ Personal
+ freelancer, indie developer, hobbyist
+ lifetime license (own forever)
+ 12 months of free upgrades
+ Prodigy installer, web application and plugins
+ basic HTTP authentication
+ community forum support
+ unlimited personal and professional use
+ license issued to you personally
+ $ 390 USD per lifetime license (excl. tax)
+ Buy now Already have a personal license? Get 12 months of upgrades 
+ Company
+ startup, data science team, enterprise
+ lifetime license (own forever)
+ 12 months of free upgrades
+ Prodigy installer, web application and plugins
+ HTTP auth and SSO with OpenID Connect
+ priority forum and email support
+ seats are transferrable within the company
+ license issued to your company
+ $ 490 USD per seat, in packs of 5 seats (excl. tax)
+ Buy now Already have a company pack? Get 12 months of upgrades 
+ What’s included 
+ Prodigy installer for Python 3.8+ on macOS, Linux and Windows.
+ Standalone, self-hosted annotation back-end with pluggable architecture.
+ Built-in annotation recipes for a wide range of machine learning tasks , including named entity recognition, span categorization, text classification, part-of-speech tagging, dependency parsing, coreference resolution, computer vision, audio and video annotation, transcription, speaker diarization, training and evaluation, and more. 
+ Customizable web application with 23 annotation interfaces for text, images, audio, video, relations, multiple-choice, HTML, conflict resolution and more.
+ Active learning models for named entity recognition , text classification , part-of-speech tagging and dependency parsing.
+ Extensive documentation and access to the Prodigy Support Forum .
+ Plugins for additional features , including third-party integrations, APIs and PDF processing.
+ Cloud-free: Prodigy works offline on your own hardware. No data ever needs to leave your servers.
+ No lock-in: fully open and extensible data formats and storage solutions , including SQLite, MySQL and PostgreSQL, and export to JSON.
+ Lifetime license: buy once, keep forever and receive 12 months of free upgrades.
+ Want a demo? 
+ Want to give Prodigy a spin before you buy? You can try out all the annotation interfaces in our online demo . The documentation pages also have many rendered examples of possible configurations that you can explore.
+ Real-world case studies
+ How S&P Global makes markets more transparent with spaCy and Prodigy in a high-security environment 
+ How the Guardian approaches quote extraction from news articles with spaCy and Prodigy 
+ How Nesta processes 7m job ads to shed light on the UK’s labor market with spaCy and Prodigy 
+ How Love Without Sound helps music industry law firms recover millions with spaCy and Prodigy 
+ How Posh deploys a customized Prodigy cloud service to build financial chatbots for banking conversations 
+ Frequently Asked Questions
+ Any other questions that are not covered here? Email us !
+ Do you offer a trial version? Prodigy runs entirely on your own hardware and never phones home or connects to our servers. We typically do trials by hosting a VM that you can log in to. This gives you the full experience of the tool, including the scriptable back-end, and also makes it easy for us to log in and help if you get stuck. For especially privacy-sensitive use cases, we can also set up a trial license agreement and ship you an installer. If you’re interested, get in touch ! Please note that we’re only able to offer hosted trials to companies and organizations, not individuals.
+ My upgrades or downloads expired. How can I get the latest version? If the 12 months of upgrades included in your order expired, you can add another year of upgrades via the online store. Just click “Already have a personal/company license?” below the “Buy now” button above and make sure to enter your previous order ID (starting with #EX...) at checkout. Please allow up to 24 hours for your license key to be activated for the new versions.
+ You can update your license at any time. If your upgrades already expired, they will start again for a year once your purchase has been activated. If your upgrades haven't expired yet, another year is added after the expiration date. Your Prodigy license is a lifetime license, so you'll never lose access to the versions originally included in your order.
+ Important note on download links
+If you ordered Prodigy before v1.11.0 (August 2021), note that we have since switched over to hosting our own PyPi download server , which makes the downloads easier and more consistent. This means that your previous download link will have become inactive and you can now download Prodigy using your license key. See the installation docs for how to download the Prodigy via pip install . If you forgot your order ID or license key, email us with as many details as possible about your order so we can track it down for you.
+ Can I send you a purchase order and receive an invoice? Sure! For company licenses we support purchases via purchase order and you’ll then receive an invoice that you can pay via credit card, PayPal or bank transfer. Instead of sending a formal purchase oder, you can also request an invoice via email. We’re also already set up with most of the popular software resellers. Just email us at contact@explosion.ai .
+ Can I order Prodigy via a software reseller? Yes, we’re already set up and regularly work with many popular international software resellers, including SHI , SoftwareOne , QBS Software and more. Even if we
+
+=== [about] https://prodi.gy/docs
+Prodigy – everything you need to know · Prodigy · An annotation tool for AI, Machine Learning & NLP 
+ 💥 Try our new tool for agentic NLP development! 
+ Get Prodigy 
+ Documentation 
+ Features Information Extraction Get structured data from text
+ Language Model Training Train and fine-tune models
+ Computer Vision Classify and segment images
+ Audio & Video Classify and segment AV data
+ Prompt Engineering Develop better LLM prompts
+ Custom Workflows Fully customize your experience
+ Industries Banking & Finance Financial data, risk assessment and market analysis
+ Healthcare & Biomedical Medical documents, clinical notes and pharmaceutical data
+ Media & Content Creation Multi-media data, archives and user-generated content
+ Legal & Insurance Legislative text, contracts, regulation and compliance
+ Conversation & Insights Dialog systems, user interactions and actionable insights
+ Research & Education Academic papers, corpus creation and educational data
+ Demo 
+ Blog 
+ Support 
+ Search 
+ Get Started
+ Prodigy 101 First Steps 
+ Recipes & Data Flow 
+ Glossary 
+ Installation & Setup 
+ Changelog 
+ Usage
+ Named Entity Recognition 
+ Span Categorization 
+ Text Classification 
+ Dependencies & Relations 
+ Computer Vision 
+ Audio & Video 
+ Task Routing 
+ Large Language Models 
+ Review 
+ Custom Recipes 
+ Custom Interfaces 
+ Metrics 
+ Deployment 
+ API
+ Recipes 
+ Annotation Interfaces 
+ Web Application 
+ Loaders & Input Data 
+ Components & Functions 
+ Database 
+ Plugins
+ Open Source Plugins 
+ Single Sign-on (SSO) 
+ Modal 
+ DSPy 
+ Select page... Get Started › Prodigy 101 Get Started › Installation & Setup Get Started › Changelog Usage › Named Entity Recognition Usage › Span Categorization Usage › Text Classification Usage › Dependencies & Relations Usage › Computer Vision Usage › Audio & Video Usage › Task Routing Usage › Large Language Models Usage › Review Usage › Custom Recipes Usage › Custom Interfaces Usage › Metrics Usage › Deployment API › Recipes API › Annotation Interfaces API › Web Application API › Loaders & Input Data API › Components & Functions API › Database Plugins › Open Source Plugins Plugins › Single Sign-on (SSO) Plugins › Modal Plugins › DSPy 
+ Prodigy – everything you need to know 
+ Prodigy is a modern annotation tool for creating training and evaluation
+data for machine learning models. You can also use Prodigy to help you inspect
+and clean your data, do error analysis and develop rule-based systems to use in
+combination with your statistical models.
+ The Python library includes a range of pre-built workflows and command-line
+commands for various tasks, and well-documented components for implementing your
+own workflow scripts. Your scripts can specify how the data is loaded and saved,
+change which questions are asked in the annotation interface, and can even
+define custom HTML and JavaScript to change the behavior of the front-end. The
+web application is optimized for fast, intuitive and efficient annotation .
+ Prodigy’s mission is to help you do more of all those manual or semi-automatic
+processes that we all know we don’t do enough of. To most data scientists, the
+advice to spend more time looking at your data is sort of like the advice to
+floss or get more sleep: it’s easy to recognize that it’s sound advice, but not
+always easy to put into practice. Prodigy helps by giving you a practical,
+flexible tool that fits easily into your workflow. With concrete steps to
+follow instead of a vague goal, annotation and data inspection will change from
+something you should do, to something you will do.
+ Try the live demo 
+ Get Prodigy 
+ What P
+
+=== [meta] https://prodi.gy
+html lang: 없음
+hreflang: 없음
+화면에 보이는 언어 이름: 없음

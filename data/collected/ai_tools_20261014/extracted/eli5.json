@@ -1,0 +1,90 @@
+{
+ "company": null,
+ "one_liner_ko": "여러 머신러닝 모델을 하나의 API로 시각화·디버깅하고 예측을 설명하는 파이썬 라이브러리.",
+ "what_it_does_ko": "ELI5는 머신러닝 분류기를 디버깅하고 예측을 설명하는 파이썬 패키지다. scikit-learn·XGBoost·LightGBM·CatBoost·Keras 등 여러 프레임워크를 기본 지원한다. 블랙박스 모델은 LIME 기반 TextExplainer와 순열 중요도(Permutation importance)로 살펴볼 수 있다. 설명 결과를 콘솔 텍스트·HTML·pandas DataFrame·JSON 등으로 내보낼 수 있다.",
+ "key_features": [
+  "scikit-learn 선형 모델 가중치·예측 설명, 결정 트리 출력",
+  "XGBoost·LightGBM·CatBoost 특징 중요도 표시",
+  "Keras 이미지 분류기 Grad-CAM 시각화",
+  "OpenAI 클라이언트로 LLM 예측의 토큰 확률 설명",
+  "LIME 기반 TextExplainer로 텍스트 분류기 설명",
+  "순열 중요도로 블랙박스 모델 특징 중요도 계산",
+  "텍스트·HTML·DataFrame·JSON 출력"
+ ],
+ "use_cases_ko": [
+  "scikit-learn 텍스트 분류 파이프라인 디버깅"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "MIT",
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://eli5.readthedocs.io/en/latest/",
+   "quote": "ELI5 is a Python library which allows to visualize and debug\nvarious Machine Learning models using unified API."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/eli5-org/eli5",
+   "quote": "ELI5 is a Python package which helps to debug machine learning\nclassifiers and explain their predictions."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/eli5-org/eli5",
+   "quote": "Explanation and formatting are separated; you can get text-based explanation"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/eli5-org/eli5",
+   "quote": "Currently ELI5 allows to explain weights and predictions\n  of scikit-learn linear classifiers and regressors"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/eli5-org/eli5",
+   "quote": "xgboost_ - show feature importances and explain predictions of XGBClassifier,"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/eli5-org/eli5",
+   "quote": "Keras_ - explain predictions of image classifiers via Grad-CAM visualizations."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/eli5-org/eli5",
+   "quote": "ELI5 allows to explain LLM predictions with token probabilities."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/eli5-org/eli5",
+   "quote": "TextExplainer_ allows to explain predictions\n  of any text classifier using LIME_ algorithm"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/eli5-org/eli5",
+   "quote": "method can be used to compute feature importances\n  for black box estimators."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://eli5.readthedocs.io/en/latest/",
+   "quote": "Debugging scikit-learn text classification pipeline"
+  },
+  {
+   "field": "open_source",
+   "url": "https://eli5.readthedocs.io/en/latest/",
+   "quote": "License is MIT."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://eli5.readthedocs.io/en/latest/",
+   "quote": "hreflang: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

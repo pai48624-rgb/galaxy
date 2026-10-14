@@ -1,0 +1,32 @@
+{
+ "company": null,
+ "one_liner_ko": "대규모 텍스트 모음에서 수십 밀리초 안에 BERT 기반 검색을 가능하게 하는 빠르고 정확한 검색 모델.",
+ "what_it_does_ko": "ColBERT는 세밀한 문맥적 후기 상호작용(late interaction)에 기반한 검색 모델이다. 각 문단을 토큰 단위 임베딩 행렬로 인코딩하고, 검색 시 질의도 행렬로 임베딩한 뒤 확장 가능한 벡터 유사도(MaxSim) 연산자로 문맥상 맞는 문단을 찾는다. 이를 통해 단일 벡터 표현 모델보다 높은 품질을 내면서 대규모 말뭉치로 효율적으로 확장된다고 설명한다. Python 3.7+와 PyTorch 1.9+, Hugging Face Transformers를 사용하며 pip로 설치할 수 있고, 학습과 색인에는 GPU가 필요하다.",
+ "key_features": [
+  "토큰 단위 임베딩 행렬을 쓰는 문맥적 후기 상호작용(late interaction)",
+  "MaxSim 벡터 유사도 연산자로 빠른 검색",
+  "대규모 말뭉치로 확장 가능한 검색",
+  "색인 업데이트 기능(베타)",
+  "추가 Hugging Face 모델 지원(베타)",
+  "pip(colbert-ai) 또는 conda 환경으로 설치, CPU 전용 환경 파일 제공"
+ ],
+ "use_cases_ko": [
+  "대규모 텍스트 모음에 대한 BERT 기반 검색"
+ ],
+ "pricing": {"free_tier": "불명", "plans": [], "pricing_url": null},
+ "open_source": null,
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "불명",
+ "evidence": [
+  {"field": "one_liner_ko", "url": "https://github.com/stanford-futuredata/ColBERT", "quote": "enabling scalable BERT-based search over large text collections in tens of milliseconds."},
+  {"field": "what_it_does_ko", "url": "https://github.com/stanford-futuredata/ColBERT", "quote": "it encodes each passage into a **matrix** of token-level embeddings"},
+  {"field": "what_it_does_ko", "url": "https://github.com/stanford-futuredata/ColBERT", "quote": "ColBERT requires Python 3.7+ and Pytorch 1.9+ and uses the [Hugging Face Transformers]"},
+  {"field": "key_features", "url": "https://github.com/stanford-futuredata/ColBERT", "quote": "efficiently finds passages that contextually match the query using scalable vector-similarity (`MaxSim`) operators."},
+  {"field": "key_features", "url": "https://github.com/stanford-futuredata/ColBERT", "quote": "We have merged a new index updater feature and support for additional Hugging Face models! These are in beta"},
+  {"field": "key_features", "url": "https://github.com/stanford-futuredata/ColBERT", "quote": "nowadays you can typically do `pip install colbert-ai[torch,faiss-gpu]`"},
+  {"field": "use_cases_ko", "url": "https://github.com/stanford-futuredata/ColBERT", "quote": "These rich interactions allow ColBERT to surpass the quality of _single-vector_ representation models, while scaling efficiently to large corpora."}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

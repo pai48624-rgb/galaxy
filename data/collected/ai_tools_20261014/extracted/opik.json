@@ -1,0 +1,63 @@
+{
+ "company": "Comet ML, Inc.",
+ "one_liner_ko": "에이전트의 모든 단계를 기록하고 자동 평가 워크플로로 개발·테스트·운영 전반의 오류를 찾아 고치는 AI 관측성·평가 플랫폼.",
+ "what_it_does_ko": "Opik은 Comet이 만든 오픈소스 LLM 관측성·평가 플랫폼으로, AI 에이전트 트레이싱, LLM 평가, 프롬프트 관리, 운영 모니터링을 제공한다. 사용자 상호작용부터 컨텍스트 검색, 도구 호출까지 에이전트의 모든 단계를 기록한다. 30개 이상의 지표로 LLM-as-a-judge 평가를 하고, 운영 트레이스를 실시간으로 평가해 기준에 어긋나면 알린다. 핵심 기능은 오픈소스로 무료 제공되며 GitHub에서 받아 로컬에서 실행할 수 있다.",
+ "key_features": [
+  "에이전트 트레이싱·디버깅(트레이스 시각화)",
+  "30개 이상 지표의 LLM-as-a-judge 평가",
+  "Test Suites·평문 assertion으로 pass/fail 테스트",
+  "Ollie 코딩 어시스턴트가 트레이스 분석 후 코드 수정 구현",
+  "Agent Playground로 에이전트 전체 시험",
+  "6가지 프롬프트 최적화 알고리즘(Prompt Optimizer)",
+  "운영 모니터링·가드레일(PII 노출 차단)",
+  "Cost Intelligence로 코딩 에이전트 비용 추적"
+ ],
+ "use_cases_ko": [
+  "에이전트를 프로토타입에서 운영까지 확장하며 오류 추적·수정",
+  "엔지니어링 팀의 Claude Code·Codex 사용량과 비용 추적",
+  "운영 트레이스 실시간 평가와 알림"
+ ],
+ "pricing": {
+  "free_tier": "있음 (오픈소스 무료 + Free Cloud: 팀원 10명, 월 25k spans, 60일 보관)",
+  "plans": [
+   {"name": "Open Source", "price": 0, "currency": "USD", "period": "month", "limits": "직접 설치·운영, 전체 관측성·테스트 기능", "page_lang": "en-US"},
+   {"name": "Free Cloud", "price": 0, "currency": "USD", "period": "month", "limits": "팀원 최대 10명, 월 25k spans, 60일 데이터 보관", "page_lang": "en-US"},
+   {"name": "Pro Cloud", "price": 19, "currency": "USD", "period": "month", "limits": "팀원 최대 50명, 월 100k spans, 60일 데이터 보관", "page_lang": "en-US"},
+   {"name": "Enterprise", "price": null, "currency": "USD", "period": "month", "limits": "맞춤, 팀원 무제한, SSO, 유연한 배포", "page_lang": "en-US"}
+  ],
+  "pricing_url": "https://www.comet.com/site/pricing/"
+ },
+ "open_source": "Apache-2.0",
+ "api": "있음",
+ "platforms": ["웹", "API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://www.comet.com:443/site/products/opik/", "quote": "©2026 Comet ML, Inc. – All Rights Reserved"},
+  {"field": "one_liner_ko", "url": "https://www.comet.com:443/site/products/opik/", "quote": "with automated eval workflows to find and fix errors across development, testing, and production."},
+  {"field": "what_it_does_ko", "url": "https://github.com/comet-ml/opik", "quote": "Opik is the open-source LLM observability and evaluation platform for AI agent tracing, LLM evaluation, prompt management, and production monitoring."},
+  {"field": "what_it_does_ko", "url": "https://www.comet.com:443/site/products/opik/", "quote": "Opik logs every step your agent takes, from user interactions to context retrieval and tool calls"},
+  {"field": "what_it_does_ko", "url": "https://www.comet.com:443/site/products/opik/", "quote": "Evaluate production traces in real time and get alerted if a user interaction fails your test criteria."},
+  {"field": "what_it_does_ko", "url": "https://www.comet.com:443/site/products/opik/", "quote": "You can download the code from GitHub and run it locally"},
+  {"field": "key_features", "url": "https://www.comet.com:443/site/products/opik/", "quote": "Capture, visualize, and understand every action your agent takes."},
+  {"field": "key_features", "url": "https://www.comet.com:443/site/products/opik/", "quote": "Score performance with 30+ metrics for answer relevance, context precision, task completion, hallucination, and more."},
+  {"field": "key_features", "url": "https://www.comet.com:443/site/products/opik/", "quote": "Define rules for what your agent should and shouldn’t do, and get clear pass/fail results."},
+  {"field": "key_features", "url": "https://www.comet.com:443/site/products/opik/", "quote": "Opik’s powerful coding assistant analyzes your traces, suggests fixes, and implements them in your development code"},
+  {"field": "key_features", "url": "https://www.comet.com:443/site/products/opik/", "quote": "Agent Playground: Test Agents End-to-End"},
+  {"field": "key_features", "url": "https://www.comet.com:443/site/products/opik/", "quote": "Choose from six advanced prompt optimization algorithms"},
+  {"field": "key_features", "url": "https://www.comet.com:443/site/products/opik/", "quote": "Apply guardrails to proactively block content and policy violations and protect against PII exposure"},
+  {"field": "key_features", "url": "https://www.comet.com:443/site/products/opik/", "quote": "Use Cost Intelligence in Opik to track coding agent usage and cost across engineering teams."},
+  {"field": "use_cases_ko", "url": "https://www.comet.com:443/site/products/opik/", "quote": "Opik lets you confidently scale agents from prototype to production."},
+  {"field": "use_cases_ko", "url": "https://www.comet.com:443/site/products/opik/", "quote": "See how every developer and team is using Claude Code and Codex in a single view, updated in real time."},
+  {"field": "pricing", "url": "https://www.comet.com/site/pricing/", "quote": "Download, install, & run Opik your way\n $0"},
+  {"field": "pricing", "url": "https://www.comet.com/site/pricing/", "quote": "Up to 10 team members\n 25k spans per month\n 60-day data retention"},
+  {"field": "pricing", "url": "https://www.comet.com/site/pricing/", "quote": "$19 \n Per month"},
+  {"field": "pricing", "url": "https://www.comet.com/site/pricing/", "quote": "Up to 50 team members\n 100k spans per month"},
+  {"field": "pricing", "url": "https://www.comet.com/site/pricing/", "quote": "Custom \n Contact Us \n Unlimited team members"},
+  {"field": "open_source", "url": "https://github.com/comet-ml/opik", "quote": "Apache-2.0 licensed, free to self-host the full platform"},
+  {"field": "api", "url": "https://www.comet.com/docs/v2/", "quote": "REST API REST API Overview Read Endpoints Write Endpoints"},
+  {"field": "platforms", "url": "https://www.comet.com:443/site/products/opik/", "quote": "Create Free Account"},
+  {"field": "korean_support", "url": "https://www.comet.com:443/site/products/opik/", "quote": "html lang: en-US\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

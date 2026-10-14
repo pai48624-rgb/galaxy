@@ -1,0 +1,59 @@
+{
+ "company": "Krea",
+ "one_liner_ko": "누구나 최신 AI 모델로 이미지·영상을 만들거나 API로 앱에 연동할 수 있는 AI 크리에이티브 도구.",
+ "what_it_does_ko": "Krea는 텍스트·이미지로 이미지, 영상, 3D 객체를 생성하는 AI 크리에이티브 플랫폼이다. 입력하거나 그리는 대로 이미지를 실시간 생성하고, 업스케일·배경 제거·영상 스타일 변환 등 편집 기능을 제공한다. 자체 이미지 모델 Krea 2와 여러 외부 이미지·영상 모델을 쓰며, LoRA 학습으로 캐릭터·스타일·사물을 개인화할 수 있다. Krea Nodes로 모델과 단계를 연결한 워크플로를 만들고 App Builder로 재사용 앱으로 만들 수 있다. Photoshop·Premiere Pro·Blender 등 플러그인과 REST API를 제공하며, 자체 모델을 자사 인프라에 설치하는 라이선스도 판매한다.",
+ "key_features": [
+  "실시간 이미지 생성",
+  "텍스트·이미지로 영상·3D 객체 생성",
+  "이미지·영상 LoRA 미세조정",
+  "업스케일·배경 제거·영상 스타일 변환",
+  "Krea Nodes 워크플로 편집기와 App Builder",
+  "Krea Agent: 여러 모델로 계획·생성·반복",
+  "Photoshop·After Effects·Premiere Pro·DaVinci Resolve·Blender·ChatGPT 플러그인",
+  "REST API"
+ ],
+ "use_cases_ko": [
+  "크리에이터·에이전시·스튜디오의 이미지·영상 제작",
+  "개발자의 API 기반 이미지·영상 기능 연동",
+  "팀이 Krea 모델을 자체 인프라에 설치해 내부·마케팅 시각물 제작"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Free $0: 하루 100 units, 카드 불필요)",
+  "plans": [
+   {"name": "Free", "price": 0, "currency": "USD", "period": "month", "limits": "하루 100 units, 이미지 동시 1, 영상 동시 0", "page_lang": "en"},
+   {"name": "Basic", "price": 5, "currency": "USD", "period": "month", "limits": "월 5,000 units (페이지에 $9와 $5/month 함께 표기, 연간 40% 할인 표시)", "page_lang": "en"},
+   {"name": "Maker (모델 라이선스)", "price": 1000, "currency": "USD", "period": "month", "limits": "모델당, 자체 호스팅, 월 1만 장, 1개 도메인, 10명", "page_lang": "en"},
+   {"name": "Enterprise (모델 라이선스)", "price": null, "currency": null, "period": null, "limits": "맞춤 가격", "page_lang": "en"}
+  ],
+  "pricing_url": "https://www.krea.ai/pricing"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["웹", "API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://www.krea.ai/docs/", "quote": "Krea docs: AI image and video tools plus developer API"},
+  {"field": "one_liner_ko", "url": "https://www.krea.ai/docs/", "quote": "AI-powered creative tools for everyone. Generate stunning images and videos with cutting-edge AI models, or integrate our API into your applications."},
+  {"field": "what_it_does_ko", "url": "https://www.krea.ai/docs/", "quote": "Our first foundation image model. Trained from scratch for full creative control"},
+  {"field": "what_it_does_ko", "url": "https://www.krea.ai/pricing", "quote": "Generate images in real-time as you type or draw."},
+  {"field": "what_it_does_ko", "url": "https://www.krea.ai/open-source-pricing", "quote": "Self-hosted, commercial, with full IP protection"},
+  {"field": "key_features", "url": "https://www.krea.ai/pricing", "quote": " Image LoRA Finetuning "},
+  {"field": "key_features", "url": "https://www.krea.ai/pricing", "quote": " Image to 3D Object "},
+  {"field": "key_features", "url": "https://www.krea.ai/pricing", "quote": "Build workflow-based creations by connecting models, prompts, and processing steps in a visual editor."},
+  {"field": "key_features", "url": "https://www.krea.ai/pricing", "quote": "Brief the Agent once. It plans, generates, and iterates across models for you."},
+  {"field": "key_features", "url": "https://www.krea.ai/pricing", "quote": "Generate and edit images in Photoshop."},
+  {"field": "key_features", "url": "https://www.krea.ai/pricing", "quote": " Video Style Transfer "},
+  {"field": "use_cases_ko", "url": "https://www.krea.ai/pricing", "quote": "Trusted by 40M subscribers: creatives, enterprises, agencies, and studios"},
+  {"field": "use_cases_ko", "url": "https://www.krea.ai/open-source-pricing", "quote": "ideal for teams creating internal and marketing visuals"},
+  {"field": "pricing", "url": "https://www.krea.ai/pricing", "quote": " 100 units /day "},
+  {"field": "pricing", "url": "https://www.krea.ai/pricing", "quote": " 5,000 units /month "},
+  {"field": "pricing", "url": "https://www.krea.ai/pricing", "quote": " $5 /month "},
+  {"field": "pricing", "url": "https://www.krea.ai/pricing", "quote": "Save 40% on yearly plans"},
+  {"field": "pricing", "url": "https://www.krea.ai/open-source-pricing", "quote": " $1,000 /mo per model "},
+  {"field": "api", "url": "https://www.krea.ai/docs/", "quote": "Build powerful applications with Krea’s API. Access all our AI models with simple REST endpoints."},
+  {"field": "platforms", "url": "https://www.krea.ai/pricing", "quote": "Image Generator Video Generator Upscaler API MCP Pricing Enterprise"},
+  {"field": "korean_support", "url": "https://www.krea.ai", "quote": "html lang: en"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

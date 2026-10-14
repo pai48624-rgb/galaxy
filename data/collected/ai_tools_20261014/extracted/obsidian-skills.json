@@ -1,0 +1,79 @@
+{
+ "company": null,
+ "one_liner_ko": "Obsidian과 함께 쓰는 에이전트 스킬 모음(Agent Skills 규격)",
+ "what_it_does_ko": "Obsidian용 에이전트 스킬 모음으로, Agent Skills 규격을 따라 Claude Code, Codex, OpenCode 같은 스킬 지원 에이전트에서 쓸 수 있다. Obsidian 마크다운·Bases·JSON Canvas 파일 작성과 편집, Obsidian CLI로 보관함 다루기, 웹 페이지에서 깔끔한 마크다운 추출 등의 스킬을 담았다. 플러그인 마켓플레이스, npx skills, 수동 복사로 설치한다.",
+ "key_features": [
+  "obsidian-markdown: 위키링크·임베드·콜아웃·속성 등 Obsidian 마크다운 작성·편집",
+  "obsidian-bases: Obsidian Bases(.base) 뷰·필터·수식 작성·편집",
+  "json-canvas: JSON Canvas(.canvas) 노드·연결 작성·편집",
+  "obsidian-cli: Obsidian CLI로 보관함 조작, 플러그인·테마 개발",
+  "defuddle: 웹 페이지에서 잡동사니를 뺀 마크다운 추출(토큰 절약)",
+  "knap: JSON·CSV 데이터로 마크다운 템플릿 렌더링·일괄 파일 생성"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": null,
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "CLI"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/kepano/obsidian-skills",
+   "quote": "Agent Skills for use with Obsidian."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/kepano/obsidian-skills",
+   "quote": "These skills follow the [Agent Skills specification](https://agentskills.io/specification) so they can be used by any skills-compatible agent, including Claude Code, Codex, and Open Code."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/kepano/obsidian-skills",
+   "quote": "npx skills add https://github.com/kepano/obsidian-skills"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/kepano/obsidian-skills",
+   "quote": "with wikilinks, embeds, callouts, properties, and other Obsidian-specific syntax"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/kepano/obsidian-skills",
+   "quote": "(`.base`) with views, filters, formulas, and summaries"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/kepano/obsidian-skills",
+   "quote": "(`.canvas`) with nodes, edges, groups, and connections"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/kepano/obsidian-skills",
+   "quote": "including plugin and theme development"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/kepano/obsidian-skills",
+   "quote": "removing clutter to save tokens"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/kepano/obsidian-skills",
+   "quote": "Render Markdown templates from JSON or CSV data"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/kepano/obsidian-skills",
+   "quote": "/plugin install obsidian@obsidian-skills"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

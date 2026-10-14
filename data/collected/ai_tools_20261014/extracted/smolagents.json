@@ -1,0 +1,42 @@
+{
+ "company": "Hugging Face",
+ "one_liner_ko": "몇 줄의 코드로 에이전트를 만들고 실행할 수 있게 해 주는 오픈소스 파이썬 라이브러리.",
+ "what_it_does_ko": "smolagents는 몇 줄의 코드로 에이전트를 만들고 실행하도록 설계된 오픈소스 파이썬 라이브러리다. 에이전트 로직이 약 천 줄 정도로 작고 추상화를 최소화했다. CodeAgent는 행동을 코드로 작성해 도구를 부르거나 계산을 하며, 보안을 위해 Modal·Blaxel·E2B·Docker 샌드박스에서 실행할 수 있다. Hub 모델, OpenAI·Anthropic 등 API, 로컬 Transformers·Ollama 모델 등 어떤 LLM과도 함께 쓸 수 있다.",
+ "key_features": [
+  "행동을 코드로 쓰는 CodeAgent 우선 지원",
+  "JSON/텍스트 방식 도구 호출 에이전트(ToolCallingAgent)",
+  "Modal·Blaxel·E2B·Docker 샌드박스 실행",
+  "Hub에 에이전트·도구 공유·불러오기",
+  "모델 무관(Hub 추론 제공자, LiteLLM, Transformers, Ollama)",
+  "텍스트 외 이미지·영상·오디오 입력 지원",
+  "MCP 서버·LangChain·Hub Space 도구 사용",
+  "CLI 도구(smolagent, webagent)"
+ ],
+ "use_cases_ko": [
+  "스스로 고쳐 가며 SQL을 만드는 Text-to-SQL 에이전트",
+  "지식 베이스를 다루는 에이전트형 RAG",
+  "비전 모델로 웹 브라우저 에이전트 만들기"
+ ],
+ "pricing": {"free_tier": null, "plans": [], "pricing_url": null},
+ "open_source": "Apache-2.0",
+ "api": "불명",
+ "platforms": ["CLI"],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {"field": "company", "url": "https://huggingface.co/docs/smolagents/index", "quote": "smolagents · Hugging Face"},
+  {"field": "one_liner_ko", "url": "https://huggingface.co/docs/smolagents/index", "quote": "smolagents is an open-source Python library designed to make it extremely easy to build and run agents using just a few lines of code."},
+  {"field": "what_it_does_ko", "url": "https://huggingface.co/docs/smolagents/index", "quote": "The logic for agents fits in ~thousand lines of code. We kept abstractions to their minimal shape above raw code!"},
+  {"field": "what_it_does_ko", "url": "https://huggingface.co/docs/smolagents/index", "quote": "To make it secure, we support executing in sandboxed environment via Modal , Blaxel , E2B , or Docker."},
+  {"field": "key_features", "url": "https://huggingface.co/docs/smolagents/index", "quote": "ToolCallingAgent supports usual JSON/text-based tool-calling for scenarios where that paradigm is preferred."},
+  {"field": "key_features", "url": "https://huggingface.co/docs/smolagents/index", "quote": "Seamlessly share and load agents and tools to/from the Hub as Gradio Spaces."},
+  {"field": "key_features", "url": "https://huggingface.co/docs/smolagents/index", "quote": "Beyond text, agents can handle vision, video, and audio inputs"},
+  {"field": "key_features", "url": "https://huggingface.co/docs/smolagents/index", "quote": "You can use tools from any MCP server , from LangChain , you can even use a Hub Space as a tool."},
+  {"field": "key_features", "url": "https://huggingface.co/docs/smolagents/index", "quote": "Comes with command-line utilities (smolagent, webagent) for quickly running agents without writing boilerplate code."},
+  {"field": "use_cases_ko", "url": "https://huggingface.co/docs/smolagents/index", "quote": "Self-correcting Text-to-SQL Master your knowledge base with agentic RAG Orchestrate a multi-agent system Build a web browser agent using vision models"},
+  {"field": "open_source", "url": "https://github.com/huggingface/smolagents", "quote": "Licensed under the Apache License, Version 2.0 (the \"License\");"},
+  {"field": "platforms", "url": "https://huggingface.co/docs/smolagents/index", "quote": "CLI Tools : Comes with command-line utilities"},
+  {"field": "korean_support", "url": "https://huggingface.co/docs/smolagents/index", "quote": "hreflang: en, hi, ko, x-default, zh"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

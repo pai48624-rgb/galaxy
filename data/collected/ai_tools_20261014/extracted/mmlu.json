@@ -1,0 +1,36 @@
+{
+ "company": null,
+ "one_liner_ko": "논문 'Measuring Massive Multitask Language Understanding'(ICLR 2021)의 저장소로, 대규모 다분야 언어 이해 시험과 평가 코드를 제공한다.",
+ "what_it_does_ko": "이 저장소는 ICLR 2021 논문 'Measuring Massive Multitask Language Understanding'의 저장소다. OpenAI API 평가 코드가 들어 있고, 시험 데이터는 따로 내려받을 수 있다. 인문학·사회과학·STEM·기타 분야별 점수와 평균으로 모델을 비교하는 리더보드를 싣고 있으며, 모델을 추가하려면 연락하거나 풀 리퀘스트를 보내면 된다.",
+ "key_features": [
+  "다분야 언어 이해 시험 데이터 다운로드",
+  "OpenAI API 평가 코드",
+  "인문학·사회과학·STEM·기타 분야별 점수 리더보드",
+  "풀 리퀘스트로 리더보드에 모델 추가"
+ ],
+ "use_cases_ko": [
+  "언어 모델의 다분야 지식·이해 능력 비교 평가"
+ ],
+ "pricing": {
+  "free_tier": "불명 (받은 본문에 요금 정보 없음, 시험 데이터 다운로드 제공)",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "불명",
+ "evidence": [
+  {"field": "one_liner_ko", "url": "https://github.com/hendrycks/test", "quote": "# Measuring Massive Multitask Language Understanding"},
+  {"field": "what_it_does_ko", "url": "https://github.com/hendrycks/test", "quote": "This repository contains OpenAI API evaluation code, and the test is available for download"},
+  {"field": "what_it_does_ko", "url": "https://github.com/hendrycks/test", "quote": "If you want to have your model added to the leaderboard, please reach out to us or submit a pull request."},
+  {"field": "key_features", "url": "https://github.com/hendrycks/test", "quote": "|                Model               | Authors |  Humanities |  Social Sciences  | STEM | Other | Average |"},
+  {"field": "key_features", "url": "https://github.com/hendrycks/test", "quote": "This repository contains OpenAI API evaluation code"},
+  {"field": "use_cases_ko", "url": "https://github.com/hendrycks/test", "quote": "## Test Leaderboard"},
+  {"field": "pricing", "url": "https://github.com/hendrycks/test", "quote": "the test is available for download"}
+ ],
+ "mismatch": [
+  {"official": "논문용 벤치마크 저장소(평가 코드·시험 데이터 다운로드·리더보드)뿐이고 유료 플랜·관리형 클라우드 언급 없음", "diff": "기존 분류 '오픈소스 + 클라우드 매니지드 유료 플랜'과 달리 판매 상품이 아닌 학술 벤치마크로 보임", "url": "https://github.com/hendrycks/test"}
+ ],
+ "plan_change": []
+}

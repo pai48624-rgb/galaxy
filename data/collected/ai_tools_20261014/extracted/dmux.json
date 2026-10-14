@@ -1,0 +1,44 @@
+{
+ "company": null,
+ "one_liner_ko": "tmux와 git worktree로 여러 AI 코딩 에이전트를 격리된 작업 공간에서 병렬로 돌리는 도구.",
+ "what_it_does_ko": "dmux는 tmux와 git worktree를 이용해 여러 코딩 에이전트와 셸 창을 병렬로 실행한다. 작업마다 tmux 창을 만들고 창마다 별도 worktree와 브랜치를 줘서 에이전트끼리 충돌 없이 일한다. 작업이 끝나면 창 메뉴에서 메인 브랜치로 병합하거나 GitHub PR을 만들 수 있다. 브랜치·커밋 메시지·창 이름을 AI로 자동으로 붙이고, macOS에서는 백그라운드 창이 주의가 필요할 때 알림을 보낸다.",
+ "key_features": [
+  "작업 창마다 독립 git worktree·브랜치로 격리",
+  "Claude Code·Codex·OpenCode·Gemini CLI·Cursor CLI 등 다수 에이전트 지원",
+  "한 프롬프트에 여러 에이전트를 골라 동시에 실행",
+  "브랜치·커밋 메시지·창 이름 AI 자동 작명",
+  "완료 후 메인 브랜치 병합 또는 GitHub PR 생성",
+  "worktree별 읽기 전용 파일 브라우저",
+  "한 세션에서 여러 프로젝트 관리",
+  "macOS 백그라운드 창 알림"
+ ],
+ "use_cases_ko": [
+  "개발자가 여러 AI 코딩 에이전트를 충돌 없이 병렬로 돌리고 결과를 병합"
+ ],
+ "pricing": {"free_tier": "불명", "plans": [], "pricing_url": null},
+ "open_source": null,
+ "api": "불명",
+ "platforms": ["CLI", "맥"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "one_liner_ko", "url": "https://dmux.ai/", "quote": "Manage multiple AI coding agents in isolated git worktrees. Branch, develop, and merge — all in parallel."},
+  {"field": "what_it_does_ko", "url": "https://dmux.ai/", "quote": "dmux runs multiple coding agents and shell panes in parallel using tmux and git worktrees."},
+  {"field": "what_it_does_ko", "url": "https://github.com/standardagents/dmux", "quote": "Every pane gets its own git worktree and branch so agents work in complete isolation."},
+  {"field": "what_it_does_ko", "url": "https://github.com/standardagents/dmux", "quote": "choose Merge to bring it back into your main branch, or Create GitHub PR to push the branch and file a pull request"},
+  {"field": "key_features", "url": "https://github.com/standardagents/dmux", "quote": "**Worktree isolation** &mdash; each pane is a full working copy, no conflicts between agents"},
+  {"field": "key_features", "url": "https://github.com/standardagents/dmux", "quote": "Claude Code, Codex, OpenCode, Cline CLI, Gemini CLI, Qwen CLI, Amp CLI, pi CLI, Cursor CLI, Copilot CLI, and Crush CLI"},
+  {"field": "key_features", "url": "https://github.com/standardagents/dmux", "quote": "**Multi-select launches** &mdash; choose any combination of enabled agents per prompt"},
+  {"field": "key_features", "url": "https://github.com/standardagents/dmux", "quote": "**AI naming** &mdash; branches, commit messages, and active terminal panes named automatically"},
+  {"field": "key_features", "url": "https://dmux.ai/", "quote": "f Open a read-only file browser for the selected pane's worktree"},
+  {"field": "key_features", "url": "https://dmux.ai/", "quote": "Multiple projects can be attached to one session via multi-project support"},
+  {"field": "key_features", "url": "https://dmux.ai/", "quote": "On macOS, dmux can launch its native helper automatically and deliver background attention notifications."},
+  {"field": "use_cases_ko", "url": "https://dmux.ai/", "quote": "dmux is built around three core concepts: projects, panes, and worktrees. Understanding how they interact will help you get the most out of parallel development."},
+  {"field": "platforms", "url": "https://dmux.ai/", "quote": "npm -g i dmux"},
+  {"field": "platforms", "url": "https://dmux.ai/", "quote": "On macOS, background panes can send native notifications"},
+  {"field": "korean_support", "url": "https://dmux.ai/", "quote": "화면에 보이는 언어 이름: 없음"},
+  {"field": "korean_support", "url": "https://github.com/standardagents/dmux", "quote": "<a href=\"./README.ja.md\">日本語</a>"}
+ ],
+ "mismatch": [],
+ "plan_change": [],
+ "note": "pricing·plans 주소(/pricing, /ko/pricing, /plans)는 모두 문서 홈과 같은 본문이라 요금 정보 없음"
+}

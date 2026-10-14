@@ -1,0 +1,59 @@
+{
+ "company": "Kling AI Pte. Ltd.",
+ "one_liner_ko": "차세대 AI 영상·이미지 생성 도구.",
+ "what_it_does_ko": "Kling AI는 텍스트·이미지로 영상과 이미지를 만드는 생성형 AI 서비스다. Kling 4.0 영상 모델은 안정적인 동적 움직임과 오디오가 함께 나오는 영상을 내세우고, Kling Image 3.0은 네이티브 4K 이미지와 일관된 스타일의 시리즈 이미지 생성을 지원한다. Canvas에서 에이전트와 아이디어 회의·대본 작성·스토리보드 생성·후반 편집을 노드 방식으로 한곳에서 진행한다. MCP/CLI로 에이전트가 영상을 대량 생성하게 할 수 있고, 영상·이미지 API를 선불 패키지로 판매한다.",
+ "key_features": [
+  "Kling 4.0 영상 생성(오디오 포함)",
+  "Kling Image 3.0: 네이티브 4K·시리즈 이미지 생성",
+  "Canvas: 에이전트와 대본·스토리보드·영상 제작, 노드 편집",
+  "MCP/CLI로 영상 대량 생성",
+  "모션 컨트롤·아바타·립싱크·영상 효과",
+  "영상·이미지 API(선불 패키지)",
+  "전자상거래용 의류·상품 영상 솔루션"
+ ],
+ "use_cases_ko": [
+  "광고·마케팅 영상과 브랜드 필름 제작",
+  "전자상거래 패션 모델 착용 영상·상품 영상 제작",
+  "영화·뮤직비디오 제작"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [
+   {"name": "Video API Standard Package 1", "price": 700, "currency": "USD", "period": "one-time", "limits": "5000 units, 180일 유효, 동시 20 (Kling 4.0 미지원)", "page_lang": "en"},
+   {"name": "Video API Standard Package 2", "price": 2100, "currency": "USD", "period": "one-time", "limits": "15000 units, 180일 유효", "page_lang": "en"},
+   {"name": "Video API Standard Package 3~5", "price": 3780, "currency": "USD", "period": "one-time", "limits": "30000 units부터, 10% 할인($3780~$7560), 180일 유효", "page_lang": "en"},
+   {"name": "Image API Standard Package 1", "price": 350, "currency": "USD", "period": "one-time", "limits": "100000 units, 180일 유효, 동시 9", "page_lang": "en"},
+   {"name": "Image API Standard Package 2", "price": 1050, "currency": "USD", "period": "one-time", "limits": "300000 units, 180일 유효", "page_lang": "en"},
+   {"name": "Custom Package", "price": null, "currency": null, "period": null, "limits": "대량 구매 문의", "page_lang": "en"}
+  ],
+  "pricing_url": "https://kling.ai/dev/pricing/"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["웹", "API", "CLI"],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {"field": "company", "url": "https://kling.ai/docs/user-policy/", "quote": "constitute a legally binding contract between you and Kling AI Pte. Ltd. and its affiliates"},
+  {"field": "one_liner_ko", "url": "https://kling.ai/", "quote": "Kling AI: Next-Gen AI Video & Image Generator"},
+  {"field": "what_it_does_ko", "url": "https://kling.ai/", "quote": "Stable Dynamic Motions and an immersive audio-visual experience, taking video generation to professional-grade production."},
+  {"field": "what_it_does_ko", "url": "https://kling.ai/", "quote": "Generate stunning native 4K visuals with fine textures and sharp, lifelike details."},
+  {"field": "key_features", "url": "https://kling.ai/", "quote": "Brainstorm with your Agent, write scripts, and generate images, videos, and storyboards"},
+  {"field": "key_features", "url": "https://kling.ai/", "quote": "Let Your Agent Power Kling, Turn Ideas into Videos at Scale"},
+  {"field": "key_features", "url": "https://kling.ai/dev/pricing/", "quote": "Supports Text-to-Video, Image-to-Video, Multi-image-to-Video, Multi-element Video Editing, Video Extension, Avatar, Lip Sync, Video Effects, Text-to-Audio, and Video-to-Audio"},
+  {"field": "key_features", "url": "https://kling.ai/dev/pricing/", "quote": " AI Apparel Replicator"},
+  {"field": "key_features", "url": "https://kling.ai/", "quote": "Supports multiple ways to generate image series, with coherent storytelling and a consistent visual style."},
+  {"field": "use_cases_ko", "url": "https://kling.ai/", "quote": "Advertising & Marketing Film & Video Music Videos E-Commerce Smart Devices"},
+  {"field": "use_cases_ko", "url": "https://kling.ai/", "quote": "For e-commerce fashion, generate on-model showcases, styling content, and engaging product videos"},
+  {"field": "pricing", "url": "https://kling.ai/dev/pricing/", "quote": "180-day validity, no rollover or extension"},
+  {"field": "pricing", "url": "https://kling.ai/dev/pricing/", "quote": "These plans currently don't support Kling 4.0."},
+  {"field": "pricing", "url": "https://kling.ai/dev/pricing/", "quote": " $0.14 per unit "},
+  {"field": "pricing", "url": "https://kling.ai/dev/pricing/", "quote": " $0.0035 per unit "},
+  {"field": "pricing", "url": "https://kling.ai/dev/pricing/", "quote": " 10% off, discounted unit price $0.126 "},
+  {"field": "api", "url": "https://kling.ai/dev/pricing/", "quote": "Kling API Pricing | AI Video & Image Generation Costs"},
+  {"field": "platforms", "url": "https://kling.ai/", "quote": " MCP / CLI"},
+  {"field": "korean_support", "url": "https://kling.ai/", "quote": "hreflang: ar, de, en, es, fil, fr, hi, id, it, ja, ko, ms, nl, pl, pt, ru, th, tr, uk, vi, x-default, zh-cn"}
+ ],
+ "mismatch": [],
+ "plan_change": [],
+ "note": "받아 둔 가격 페이지는 API 선불 패키지 전용이라 일반 사용자(Creative Studio) 구독 요금·무료 여부는 확인 못 함."
+}

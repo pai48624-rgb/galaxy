@@ -1,0 +1,166 @@
+{
+ "company": "Reducto, Inc.",
+ "one_liner_ko": "기업 수준 성능이 필요한 AI 팀을 위해 문서를 데이터로 바꿔 주는 에이전트형 문서 플랫폼.",
+ "what_it_does_ko": "Reducto는 문서 파싱·추출·분할·분류·편집을 하나로 묶어 문서를 구조화되고 인용 가능한 데이터로 바꾸는 플랫폼이다. 자체 파싱 모델 r-1은 레이아웃·표·서식을 함께 이해하고 바운딩 박스 인용을 제공한다. 개발자용 API·SDK, 코드 없이 파이프라인을 만드는 Reducto Studio, CLI, MCP 서버를 제공한다. SOC 2·HIPAA를 지원하며 VPC·온프레미스·망분리 배포도 가능하다.",
+ "key_features": [
+  "Parse r-1: 표·서식·레이아웃 인식 파싱과 바운딩 박스 인용",
+  "Extract: 스키마 단위 구조화 데이터 추출",
+  "Split: 여러 문서가 합쳐진 파일 자동 분리",
+  "Edit: 빈칸·표·체크박스 자동 채우기",
+  "100개 이상 언어 다국어 파싱",
+  "스캔·팩스·손글씨 OCR",
+  "노코드 Reducto Studio·CLI·MCP 서버"
+ ],
+ "use_cases_ko": [
+  "투자 자료·대형 스프레드시트·SEC 공시에서 금융 정보 추출",
+  "금융·의료·보험·법률 문서 처리"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Standard 플랜 $150 무료 사용분)",
+  "plans": [
+   {
+    "name": "Standard",
+    "price": 0,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "$150 무료 사용분 후 표준 요율, Studio 좌석 최대 5개",
+    "page_lang": "en"
+   },
+   {
+    "name": "Standard - r-1 Parse",
+    "price": 10,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "1,000쪽당",
+    "page_lang": "en"
+   },
+   {
+    "name": "Standard - Extract",
+    "price": 20,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "1,000쪽당(파싱 포함)",
+    "page_lang": "en"
+   },
+   {
+    "name": "Growth",
+    "price": null,
+    "currency": "USD",
+    "period": null,
+    "limits": "맞춤 가격, 볼륨 할인, Studio 좌석 무제한",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": "USD",
+    "period": null,
+    "limits": "맞춤 가격, VPC·온프렘 배포, SSO",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://reducto.ai/pricing/"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "CLI",
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://reducto.ai/pricing/",
+   "quote": "Reducto, Inc. © 2026"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://reducto.ai",
+   "quote": "The agentic document platform for leading AI teams who demand enterprise performance at scale."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://reducto.ai/about/",
+   "quote": "The platform brings together parsing, extraction, splitting, classification, and editing so teams can turn documents into structured, citation-ready data and complete document workflows."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://reducto.ai/about/",
+   "quote": "The platform includes the Reducto API and SDKs for developers, Reducto Studio for building and deploying document pipelines without code, a CLI for terminal workflows, and an MCP server"
+  },
+  {
+   "field": "key_features",
+   "url": "https://reducto.ai",
+   "quote": "Reducto parse r-1 reads documents like a human would—capturing complex layouts, tables, and formatting with high accuracy and bounding-box citations."
+  },
+  {
+   "field": "key_features",
+   "url": "https://reducto.ai",
+   "quote": "Extract structured data directly from documents with schema-level precision."
+  },
+  {
+   "field": "key_features",
+   "url": "https://reducto.ai",
+   "quote": "Automatically separate multi-document files or long forms into individually useful units."
+  },
+  {
+   "field": "key_features",
+   "url": "https://reducto.ai",
+   "quote": "Fill in detected blanks, tables, and checkboxes with supplied data."
+  },
+  {
+   "field": "key_features",
+   "url": "https://reducto.ai",
+   "quote": "Multilingual parsing across 100+ languages, including mixed-language docs."
+  },
+  {
+   "field": "key_features",
+   "url": "https://reducto.ai",
+   "quote": "OCR for scanned pages, faxes, and handwritten content—accurate even with low quality."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://reducto.ai",
+   "quote": "Extract key insights from investor decks, huge spreadsheets, dense pitch materials, and SEC filings."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://reducto.ai",
+   "quote": "Trusted across industries where accuracy matters—finance, healthcare, legal, and more."
+  },
+  {
+   "field": "pricing",
+   "url": "https://reducto.ai/pricing/",
+   "quote": "Pay-as-you-go for early-stage teams\n Free $150 in free usage"
+  },
+  {
+   "field": "pricing",
+   "url": "https://reducto.ai/pricing/",
+   "quote": "Standard rates start at $10 per 1,000 pages for r-1 Parse and $20 per 1,000 pages for Extract, with parsing included."
+  },
+  {
+   "field": "pricing",
+   "url": "https://reducto.ai/pricing/",
+   "quote": "Growth\n Built for scaling teams\n Custom pricing"
+  },
+  {
+   "field": "api",
+   "url": "https://reducto.ai",
+   "quote": "A toolbox of flexible APIs for all your needs."
+  },
+  {
+   "field": "platforms",
+   "url": "https://reducto.ai/about/",
+   "quote": "a CLI for terminal workflows"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://reducto.ai",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: English"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

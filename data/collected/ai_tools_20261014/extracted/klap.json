@@ -1,0 +1,63 @@
+{
+ "company": "ZIGG SAS (Klap 상호로 운영)",
+ "one_liner_ko": "긴 영상을 클릭 한 번으로 바이럴 틱톡·릴스·쇼츠로 바꿔 주는 AI 도구",
+ "what_it_does_ko": "Klap은 긴 영상을 올리거나 유튜브 링크를 붙여 넣으면 AI가 가장 흥미로운 주제를 찾아 세로형 짧은 클립 여러 개로 편집해 준다. 지능형 프레이밍과 얼굴 인식으로 장면을 재구성하고 반응형 자막을 넣으며, 클립마다 바이럴 가능성 점수를 매긴다. 만든 클립은 고해상도로 내보내거나 틱톡·유튜브·인스타그램·링크드인에 바로 게시·예약할 수 있다. 말하는 영상(팟캐스트·인터뷰·교육 영상 등)에 가장 잘 맞으며, API로도 같은 기능을 쓸 수 있다.",
+ "key_features": [
+  "AI 편집: 영상에서 핵심 주제를 뽑아 여러 개의 바이럴 클립으로 자동 편집",
+  "AI Reframe 2: 장면 분석 후 분할 화면·화면 녹화·게임 등 레이아웃 자동 적용",
+  "바이럴 가능성 점수",
+  "디자인된 자막과 추천 게시 문구",
+  "글꼴·색상·로고·프레이밍 등 브랜드 맞춤 설정",
+  "틱톡·유튜브·인스타그램·링크드인 직접 게시·예약",
+  "52개 언어 편집·전사",
+  "API·MCP 서버, Zapier·Make·n8n 연동"
+ ],
+ "use_cases_ko": [
+  "크리에이터가 유튜브 영상을 릴스·틱톡·쇼츠로 재가공해 매일 게시",
+  "팟캐스트·인터뷰·교육 영상 제작자의 짧은 클립 제작",
+  "개발자가 API로 롱폼→쇼츠 생성 자동화"
+ ],
+ "pricing": {
+  "free_tier": "있음 (영상 1개 무료 생성)",
+  "plans": [
+   {"name": "Basic", "price": 14, "currency": "USD", "period": "month(연간 결제)", "limits": "월 100클립", "page_lang": "en"},
+   {"name": "Pro", "price": 39, "currency": "USD", "period": "month(연간 결제)", "limits": "월 300클립", "page_lang": "en"},
+   {"name": "Pro+", "price": 94, "currency": "USD", "period": "month(연간 결제)", "limits": "월 1000클립, 팀용", "page_lang": "en"},
+   {"name": "Klap Pro (홈 FAQ 표기)", "price": 29, "currency": "USD", "period": "month", "limits": "홈페이지 FAQ의 금액으로 요금 페이지 표기와 다름", "page_lang": "en"}
+  ],
+  "pricing_url": "https://klap.app/pricing"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["웹", "API"],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {"field": "company", "url": "https://klap.app", "quote": "ZIGG SAS doing business as Klap"},
+  {"field": "one_liner_ko", "url": "https://klap.app", "quote": "Create TikToks, Reels, Shorts from your long videos in just one click."},
+  {"field": "what_it_does_ko", "url": "https://klap.app", "quote": "Once you upload a video, Klap uses artificial intelligence (AI) to identify the most interesting topics. Using intelligent framing and facial recognition to create responsive subtitles, it then converts these topics into shorter clips."},
+  {"field": "what_it_does_ko", "url": "https://klap.app", "quote": "Klap works for all different kinds of videos, but it works best for videos that incorporate speaking"},
+  {"field": "what_it_does_ko", "url": "https://docs.klap.app/", "quote": "Get ready-to-publish short-form videos from long videos using AI programmatically."},
+  {"field": "key_features", "url": "https://klap.app", "quote": "AI extracts the best topics from your YouTube video and automatically edits them into many viral-worthy clips."},
+  {"field": "key_features", "url": "https://klap.app", "quote": "It analyzes your scenes and applies the perfect layout—Split Screen, Screencasts, Gaming, and more"},
+  {"field": "key_features", "url": "https://klap.app", "quote": "Our AI-powered tool will create engaging video clips and score their potential to go viral."},
+  {"field": "key_features", "url": "https://klap.app", "quote": "Keep your followers engaged with beautifully designed subtitles and recommended captions to help it go viral."},
+  {"field": "key_features", "url": "https://klap.app", "quote": "Fully customize everything to fit the unique needs of your brand: like fonts, colors, logos, and framing."},
+  {"field": "key_features", "url": "https://klap.app", "quote": "Directly share your new video clips on your social media channels (TikTok, YouTube, Instagram, and LinkedIn) and schedule them"},
+  {"field": "key_features", "url": "https://klap.app", "quote": "Klap edits and transcribes videos in 52 languages"},
+  {"field": "key_features", "url": "https://klap.app", "quote": "API MCP server Integrations Zapier Make n8n"},
+  {"field": "use_cases_ko", "url": "https://klap.app", "quote": "Expand the reach of your long form content with Klap’s one-click solution: turning Youtube videos into multiple Reels, TikToks, and Shorts."},
+  {"field": "use_cases_ko", "url": "https://klap.app", "quote": "like podcasts, interviews, educational videos, product reviews, trainings, and more."},
+  {"field": "use_cases_ko", "url": "https://docs.klap.app/", "quote": "Generate Shorts : Extract viral shorts from long videos"},
+  {"field": "pricing", "url": "https://klap.app", "quote": "You can try out Klap and create 1 video for free. Once you decide you like it, you can upgrade to Klap Pro for just $29/month."},
+  {"field": "pricing", "url": "https://klap.app/pricing", "quote": "100 clips /mo \n $14 /mo \n Billed yearly"},
+  {"field": "pricing", "url": "https://klap.app/pricing", "quote": "300 clips /mo \n $39 /mo \n Billed yearly"},
+  {"field": "pricing", "url": "https://klap.app/pricing", "quote": "1000 clips /mo \n $94 /mo \n Billed yearly"},
+  {"field": "api", "url": "https://docs.klap.app/", "quote": "Base URL : The API requests should be made to https://api.klap.app/v2 ."},
+  {"field": "platforms", "url": "https://docs.klap.app/", "quote": "To use the Klap API, you need an API key which can be obtained in your Klap account"},
+  {"field": "platforms", "url": "https://klap.app", "quote": "Drop a file or paste a link from YouTube"},
+  {"field": "korean_support", "url": "https://klap.app", "quote": "화면에 보이는 언어 이름: Korean, English"},
+  {"field": "korean_support", "url": "https://klap.app", "quote": "Kannada, Kazakh, Korean, Latvian"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

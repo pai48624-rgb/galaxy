@@ -1,0 +1,691 @@
+=== [home] https://github.com/21st-dev/1code (lang=en)
+GitHub - 21st-dev/1code: Orchestration layer for coding agents (Claude Code, Codex) · GitHub 
+ Skip to content 
+ Navigation Menu
+ Sign in Appearance settings
+ Platform AI CODE CREATION GitHub Copilot Write better code with AI 
+ GitHub Copilot app Direct agents from issue to merge 
+ MCP Registry Integrate external tools 
+ DEVELOPER WORKFLOWS Actions Automate any workflow 
+ Codespaces Instant dev environments 
+ Issues Plan and track work 
+ Code Review Manage code changes 
+ Code Quality Enforce quality at merge 
+ APPLICATION SECURITY GitHub Advanced Security Find and fix vulnerabilities 
+ Code security Secure your code as you build 
+ Secret protection Stop leaks before they start 
+ EXPLORE Why GitHub 
+ Documentation 
+ Blog 
+ Changelog 
+ Marketplace 
+ View all features 
+ Solutions BY COMPANY SIZE Enterprises 
+ Small and medium teams 
+ Startups 
+ Nonprofits 
+ BY USE CASE App Modernization 
+ DevSecOps 
+ DevOps 
+ CI/CD 
+ View all use cases 
+ BY INDUSTRY Healthcare 
+ Financial services 
+ Manufacturing 
+ Government 
+ View all industries 
+ View all solutions 
+ Resources EXPLORE BY TOPIC AI 
+ Software Development 
+ DevOps 
+ Security 
+ View all topics 
+ EXPLORE BY TYPE Customer stories 
+ Events & webinars 
+ Ebooks & reports 
+ Business insights 
+ GitHub Skills 
+ SUPPORT & SERVICES Documentation 
+ Customer support 
+ Community forum 
+ Trust center 
+ Partners 
+ View all resources 
+ Open Source COMMUNITY GitHub Sponsors Fund open source developers 
+ PROGRAMS Security Lab 
+ Maintainer Community 
+ GitHub Stars 
+ Archive Program 
+ REPOSITORIES Topics 
+ Trending 
+ Collections 
+ Enterprise ENTERPRISE SOLUTIONS Enterprise platform AI-powered developer platform 
+ AVAILABLE ADD-ONS GitHub Advanced Security Enterprise-grade security features 
+ Copilot for Business Enterprise-grade AI features 
+ Premium Support Enterprise-grade 24/7 support 
+ Pricing 
+ Search / 
+ Sign in 
+ Sign up Appearance settings
+ You signed in with another tab or window. Reload to refresh your session. 
+ You signed out in another tab or window. Reload to refresh your session. 
+ You switched accounts on another tab or window. Reload to refresh your session. 
+ Dismiss alert 
+ {{ message }}
+ This repository was archived by the owner on Jul 7, 2026. It is now read-only.
+ 21st-dev 
+ 1code 
+ Repository navigation
+ Code 
+ Issues 26  ( 26 ) 
+ Pull requests 19  ( 19 ) 
+ Actions 
+ Projects 
+ Security and quality 
+ Insights 
+ More items 
+ 1code 
+ Public archive 
+ Notifications You must be signed in to change notification settings 
+ Fork 608  ( 608 ) 
+ Star 5.6k  ( 5.6k ) You must be signed in to star a repository 
+ About 
+ Orchestration layer for coding agents (Claude Code, Codex)
+ 1code.dev 
+ Resources 
+ Readme 
+ Apache-2.0 license 
+ Contributing 
+ Contributing 
+ Activity 
+ Custom properties 
+ Stars 
+ 5.6k stars 
+ Watchers 
+ 37 watching 
+ Forks 
+ 608 forks 
+ Report repository 
+ main 
+ Branches Tags 
+ Go to file 
+ Code Open more actions menu 
+ Latest commit
+ History
+ 103 Commits 
+ 103 Commits 
+ Folders and files
+ Name Name Last commit message 
+ Last commit date 
+ assets 
+ assets 
+ build 
+ build 
+ drizzle 
+ drizzle 
+ openspec 
+ openspec 
+ resources/ cli 
+ resources/ cli 
+ scripts 
+ scripts 
+ src 
+ src 
+ .env.example 
+ .env.example 
+ .gitignore 
+ .gitignore 
+ AGENTS.md 
+ AGENTS.md 
+ CLAUDE.md 
+ CLAUDE.md 
+ CONTRIBUTING.md 
+ CONTRIBUTING.md 
+ LICENSE 
+ LICENSE 
+ README.md 
+ README.md 
+ bun.lock 
+ bun.lock 
+ bun.lockb 
+ bun.lockb 
+ drizzle.config.ts 
+ drizzle.config.ts 
+ electron-builder.yml 
+ electron-builder.yml 
+ electron-shim.js 
+ electron-shim.js 
+ electron.vite.config.ts 
+ electron.vite.config.ts 
+ package.json 
+ package.json 
+ postcss.config.js 
+ postcss.config.js 
+ tailwind.config.js 
+ tailwind.config.js 
+ tsconfig.json 
+ tsconfig.json 
+ View all files 
+ Repository files navigation
+ README 
+ Contributing 
+ Apache-2.0 license 
+ More items 
+ 1Code
+ 1Code.dev 
+ Open-source coding agent client. Run Claude Code, Codex, and more - locally or in the cloud.
+ By 21st.dev team
+ Highlights
+ Multi-Agent Support - Claude Code and Codex in one app, switch instantly
+ Visual UI - Cursor-like desktop app with diff previews and real-time tool execution
+ Custom Models & Providers (BYOK) - Bring your own API keys
+ Git Worktree Isolation - Each chat runs in its own isolated worktree
+ Background Agents - Cloud sandboxes that run when your laptop sleeps
+ Live Browser Previews - Preview dev branches in a real browser
+ Kanban Board - Visualize agent sessions
+ Built-in Git Client - Visual staging, diffs, PR creation, push to GitHub
+ File Viewer - File preview with Cmd+P search and image viewer
+ Integrated Terminal - Sidebar or bottom panel with Cmd+J toggle
+ Model Selector - Switch between models and providers
+ MCP & Plugins - Server management, plugin marketplace, rich tool display
+ Automations - Trigger agents from GitHub, Linear, Slack, or manually from git events
+ Chat Forking - Fork a sub-chat from any assistant message
+ Message Queue - Queue prompts while an agent is working
+ API - Run agents programmatically with a single API call
+ Voice Input - Hold-to-talk dictation
+ Plan Mode - Structured plans with markdown preview
+ Extended Thinking - Enabled by default with visual UX
+ Skills & Slash Commands - Custom skills and slash commands
+ Custom Sub-agents - Visual task display in sidebar
+ Memory - CLAUDE.md and AGENTS.md support
+ PWA - Start and monitor background agents from your phone
+ Cross Platform - macOS desktop, web app, Windows and Linux
+ Features
+ Run coding agents the right way
+ Run agents locally, in worktrees, in background - without touching main branch.
+ Git Worktree Isolation - Each chat session runs in its own isolated worktree
+ Background Execution - Run agents in background while you continue working
+ Local-first - All code stays on your machine, no cloud sync required
+ Branch Safety - Never accidentally commit to main branch
+ Shared Terminals - Share terminal sessions across local-mode workspaces
+ UI that finally respects your code
+ Cursor-like UI with diff previews, built-in git client, and the ability to see changes before they land.
+ Diff Previews - See exactly what changes the agent is making in real-time
+ Built-in Git Client - Stage, commit, push to GitHub, and manage branches without leaving the app
+ Git Activity Badges - See git operations directly on agent messages
+ Rollback - Roll back changes from any user message bubble
+ Real-time Tool Execution - See bash commands, file edits, and web searches as they happen
+ File Viewer - File preview with Cmd+P search, syntax highlighting, and image viewer
+ Chat Forking - Fork a sub-chat from any assistant message to explore alternatives
+ Chat Export - Export conversations for sharing or archival
+ File Mentions - Reference files directly in chat with @ mentions
+ Message Queue - Queue up prompts while an agent is working
+ Plan mode that actually helps you think
+ The agent asks clarifying questions, builds structured plans, and shows clean markdown preview - all before execution.
+ Clarifying Questions - The agent asks what it needs to know before starting
+ Structured Plans - See step-by-step breakdown of what will happen
+ Clean Markdown Preview - Review plans in readable format
+ Review Before Execution - Approve or modify the plan before the agent acts
+ Extended Thinking - Enabled by default with visual thinking gradient
+ Sub-agents - Visual task list for sub-agents in the details sidebar
+ Background agents that never sleep
+ Close your laptop. Your agents keep running in isolated
+
+=== [pricing] https://github.com/pricing/ (lang=en)
+GitHub · Plans & pricing for every developer and team · GitHub 
+ Skip to content 
+ Navigation Menu
+ Sign in 
+ Platform AI CODE CREATION GitHub Copilot Write better code with AI 
+ GitHub Copilot app Direct agents from issue to merge 
+ MCP Registry Integrate external tools 
+ DEVELOPER WORKFLOWS Actions Automate any workflow 
+ Codespaces Instant dev environments 
+ Issues Plan and track work 
+ Code Review Manage code changes 
+ Code Quality Enforce quality at merge 
+ APPLICATION SECURITY GitHub Advanced Security Find and fix vulnerabilities 
+ Code security Secure your code as you build 
+ Secret protection Stop leaks before they start 
+ EXPLORE Why GitHub 
+ Documentation 
+ Blog 
+ Changelog 
+ Marketplace 
+ View all features 
+ Solutions BY COMPANY SIZE Enterprises 
+ Small and medium teams 
+ Startups 
+ Nonprofits 
+ BY USE CASE App Modernization 
+ DevSecOps 
+ DevOps 
+ CI/CD 
+ View all use cases 
+ BY INDUSTRY Healthcare 
+ Financial services 
+ Manufacturing 
+ Government 
+ View all industries 
+ View all solutions 
+ Resources EXPLORE BY TOPIC AI 
+ Software Development 
+ DevOps 
+ Security 
+ View all topics 
+ EXPLORE BY TYPE Customer stories 
+ Events & webinars 
+ Ebooks & reports 
+ Business insights 
+ GitHub Skills 
+ SUPPORT & SERVICES Documentation 
+ Customer support 
+ Community forum 
+ Trust center 
+ Partners 
+ View all resources 
+ Open Source COMMUNITY GitHub Sponsors Fund open source developers 
+ PROGRAMS Security Lab 
+ Maintainer Community 
+ GitHub Stars 
+ Archive Program 
+ REPOSITORIES Topics 
+ Trending 
+ Collections 
+ Enterprise ENTERPRISE SOLUTIONS Enterprise platform AI-powered developer platform 
+ AVAILABLE ADD-ONS GitHub Advanced Security Enterprise-grade security features 
+ Copilot for Business Enterprise-grade AI features 
+ Premium Support Enterprise-grade 24/7 support 
+ Pricing 
+ Search / 
+ Sign in 
+ Sign up 
+ You signed in with another tab or window. Reload to refresh your session. 
+ You signed out in another tab or window. Reload to refresh your session. 
+ You switched accounts on another tab or window. Reload to refresh your session. 
+ Dismiss alert 
+ {{ message }}
+ Try GitHub, the complete developer platform
+ We get it, there's a lot you can do with GitHub.
+ That’s why we've packed all of it into a single risk-free trial that includes GitHub Enterprise, Copilot,
+ and Advanced Security.
+ Start free for 30 days 
+ Free
+ The basics for individuals 
+and organizations
+ $ 
+ 0 
+ USD 
+ per month
+ $ 
+ 0 
+ USD 
+ per month
+ forever
+ Join for free
+ Unlimited public/private repositories
+ Host open source projects in public GitHub repositories, accessible via web or command line. Public repositories are accessible to anyone at GitHub.com.
+ Uh oh!
+ There was an error while loading. Please reload this page .
+ Dependabot security and version updates
+ Keep projects secure by automatically opening pull requests to update vulnerable dependencies and keep them up to date.
+ Uh oh!
+ There was an error while loading. Please reload this page .
+ 2,000 CI/CD minutes/month
+ Free for public repositories
+ Use execution minutes with GitHub Actions to automate your software development workflows. Write tasks and combine them to build, test, and deploy any code project on GitHub.
+ Uh oh!
+ There was an error while loading. Please reload this page .
+ 500MB of Packages storage
+ Free for public repositories
+ Host your own software packages or use them as dependencies in other projects. Both private and public hosting available.
+ Uh oh!
+ There was an error while loading. Please reload this page .
+ Issues & Projects
+ Give your developers flexible features for project management that adapts to any team, project, and workflow — all alongside your code.
+ Uh oh!
+ There was an error while loading. Please reload this page .
+ Community support
+ Get help with most of your GitHub questions and issues in our Community Forum.
+ Uh oh!
+ There was an error while loading. Please reload this page .
+ Featured add-ons
+ GitHub Codespaces Access
+ With GitHub Codespaces , get an instant dev environment in the cloud, so you can code anywhere on any device.
+ Uh oh!
+ There was an error while loading. Please reload this page .
+ Show features 
+ Most popular
+ Team
+ Advanced collaboration for 
+individuals and organizations
+ $ 
+ 4 
+ USD 
+ per user/month
+ $ 
+ 4 
+ USD 
+ per user/month
+ for the first 12 months * 
+ Continue with Team
+ Everything included in Free, plus...
+ Access to GitHub Codespaces
+ Blazing fast cloud developer environments with flexible compute and pre-configured containers, developers can code, collaborate, and debug from any browser. Pay only for what you use with compute fees starting at $0.18/hr and storage fees at $0.07/GB per month.
+ Uh oh!
+ There was an error while loading. Please reload this page .
+ Repository rules
+ Enforce restrictions on how code branches and tags are merged across your organization, including requiring reviews by selected collaborators, or allowing only specific contributors to work on a particular branch.
+ Uh oh!
+ There was an error while loading. Please reload this page .
+ Multiple reviewers in pull requests
+ Assign multiple users or a team to review a pull request.
+ Uh oh!
+ There was an error while loading. Please reload this page .
+ Draft pull requests
+ Easily discuss and collaborate on pull requests before submitting to formal review.
+ Uh oh!
+ There was an error while loading. Please reload this page .
+ Code owners
+ Automatically request reviews—or require approval—by selected contributors when changes are made to sections of code that they own.
+ Uh oh!
+ There was an error while loading. Please reload this page .
+ Required reviewers
+ Ensure that pull requests have a specific number of approving reviews before collaborators can make changes to a protected branch.
+ Uh oh!
+ There was an error while loading. Please reload this page .
+ Pages and Wikis
+ Host documentation and simple websites for your project in a wiki format that contributors can easily edit either on the web or command line.
+ Uh oh!
+ There was an error while loading. Please reload this page .
+ Environment deployment branches and secrets
+ A job cannot access secrets that are defined in an environment unless it is running on the specified branch.
+ Uh oh!
+ There was an error while loading. Please reload this page .
+ 3,000 CI/CD minutes/month
+ Free for public repositories
+ Use execution minutes with GitHub Actions to automate your software development workflows. Write tasks and combine them to build, test, and deploy any code project on GitHub.
+ Uh oh!
+ There was an error while loading. Please reload this page .
+ 2GB of Packages storag
+
+=== [about] https://docs.github.com/ko (lang=ko)
+GitHub Docs Skip to main content 
+ Skip to content 
+ GitHub Docs 
+ Copilot에 검색하거나 질문하기 / 
+ 메뉴 
+ GitHub 문서
+ GitHub 여정의 모든 위치에 대한 도움말입니다.
+ 무엇이든 검색... / 
+ 모든 문서
+ 시작하기
+ 시작하기 
+ 마이그레이션 
+ 계정 및 프로필 
+ 구독 및 알림 
+ 인증 
+ 청구 및 결제 
+ 사이트 정책 
+ 공동 코딩
+ Codespaces 
+ 리포지토리 
+ 끌어오기 요청 
+ GitHub Discussions 
+ Integrations 
+ GitHub Copilot
+ GitHub Copilot 
+ 요금제 
+ Copilot cloud agent 
+ 자습서 
+ GitHub Copilot 활용 안내서 
+ 사용자 지정 라이브러리 
+ Copilot CLI 
+ CI/CD 및 DevOps
+ GitHub Actions 
+ GitHub Packages 
+ GitHub Pages 
+ 보안 및 코드 품질
+ 보안 및 코드 품질 
+ 비밀 보호 
+ 코드 취약성 찾기 및 수정 
+ 공급망 보안 
+ 품질 코드 유지 관리 
+ 확장 가능한 보안 
+ 클라이언트 앱
+ GitHub CLI 
+ GitHub 모바일 
+ GitHub Desktop 
+ 프로젝트 관리
+ GitHub Issues 
+ Projects 
+ GitHub 검색 
+ 엔터프라이즈 및 팀
+ 조직 
+ 확장 가능한 보안 
+ 엔터프라이즈 온보딩 
+ 엔터프라이즈 관리자 
+ 개발자
+ 앱 
+ REST API 
+ GraphQL API 
+ 웹후크 
+ 커뮤니티
+ 커뮤니티 빌드 
+ GitHub Sponsors 
+ GitHub Education 
+ 비영리 단체를 위한 GitHub 
+ GitHub 지원 
+ GitHub Docs에 기여 
+ 추가 문서
+ CodeQL query writing 
+ Electron 
+ npm 
+ GitHub Well-Architected 
+ 이 콘텐츠 중 일부는 기계 또는 AI로 번역되었을 수 있습니다.
+ 맨 위로 이동 
+ 도움말 및 지원 
+ 이 문서가 도움이 되었나요?
+ 예 아니요 
+ 계속 도움이 필요하세요?
+ GitHub 커뮤니티에 문의 고객 지원 문의 전문가 서비스 블로그 
+ GitHub Inc. © 2026 사용 약관 개인 정보 보호 상태 가격 책정
+
+=== [pricing2] https://github.com/enterprise/premium-support/ (lang=en)
+GitHub Premium Support · GitHub 
+ Skip to content 
+ Navigation Menu
+ Sign in 
+ Platform AI CODE CREATION GitHub Copilot Write better code with AI 
+ GitHub Copilot app Direct agents from issue to merge 
+ MCP Registry Integrate external tools 
+ DEVELOPER WORKFLOWS Actions Automate any workflow 
+ Codespaces Instant dev environments 
+ Issues Plan and track work 
+ Code Review Manage code changes 
+ Code Quality Enforce quality at merge 
+ APPLICATION SECURITY GitHub Advanced Security Find and fix vulnerabilities 
+ Code security Secure your code as you build 
+ Secret protection Stop leaks before they start 
+ EXPLORE Why GitHub 
+ Documentation 
+ Blog 
+ Changelog 
+ Marketplace 
+ View all features 
+ Solutions BY COMPANY SIZE Enterprises 
+ Small and medium teams 
+ Startups 
+ Nonprofits 
+ BY USE CASE App Modernization 
+ DevSecOps 
+ DevOps 
+ CI/CD 
+ View all use cases 
+ BY INDUSTRY Healthcare 
+ Financial services 
+ Manufacturing 
+ Government 
+ View all industries 
+ View all solutions 
+ Resources EXPLORE BY TOPIC AI 
+ Software Development 
+ DevOps 
+ Security 
+ View all topics 
+ EXPLORE BY TYPE Customer stories 
+ Events & webinars 
+ Ebooks & reports 
+ Business insights 
+ GitHub Skills 
+ SUPPORT & SERVICES Documentation 
+ Customer support 
+ Community forum 
+ Trust center 
+ Partners 
+ View all resources 
+ Open Source COMMUNITY GitHub Sponsors Fund open source developers 
+ PROGRAMS Security Lab 
+ Maintainer Community 
+ GitHub Stars 
+ Archive Program 
+ REPOSITORIES Topics 
+ Trending 
+ Collections 
+ Enterprise ENTERPRISE SOLUTIONS Enterprise platform AI-powered developer platform 
+ AVAILABLE ADD-ONS GitHub Advanced Security Enterprise-grade security features 
+ Copilot for Business Enterprise-grade AI features 
+ Premium Support Enterprise-grade 24/7 support 
+ Pricing 
+ Search / 
+ Sign in 
+ Sign up 
+ You signed in with another tab or window. Reload to refresh your session. 
+ You signed out in another tab or window. Reload to refresh your session. 
+ You switched accounts on another tab or window. Reload to refresh your session. 
+ Dismiss alert 
+ {{ message }}
+ Enterprise 
+ Advanced Security 
+ Premium Support 
+ Get 24/7 support for your business with GitHub Premium Support
+ Protect your business and manage IT health with a comprehensive support plan.
+ Drive operational efficiency and boost uptime with dedicated GitHub experts.
+ Empower your team and meet your goals with the resources to maximize your investment.
+ Get a quote
+ Looking for general support questions? Contact GitHub Support. 
+ Already an existing customer?
+ Upgrade to GitHub Premium Support to drive impact quickly.
+ Experience faster responses 24/7 to maximize your uptime
+ Receive expert support in one central location
+ Get a dedicated engineer who knows your account
+ Discover all features
+ Get GitHub Premium Support with your Microsoft Unified Support plan.
+ Provide your team with convenient, self-service tools
+ Ensure the reliability of your environment
+ Accelerate your goals with best-in-class support
+ Check your benefits
+ Not a GitHub Enterprise customer yet?
+ Learn more about GitHub Premium Support and GitHub Premium Plus Support to discover the plan that’s right for you.
+ Get a quote
+ Why choose GitHub Premium Support?
+ “ 
+ At TSIA , we're seeing technology leaders take an active role in helping their customers adopt new technologies. GitHub is demonstrating a thoughtful, deliberate approach to creating compelling service offerings.
+ With three tiers of service options, GitHub Premium Support provides customers with smart services at the right time to drive business goals, while simplifying
+
+=== [meta] https://github.com/21st-dev/1code
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/21st-dev/1code
+# 1Code
+
+[1Code.dev](https://1code.dev)
+
+Open-source coding agent client. Run Claude Code, Codex, and more - locally or in the cloud.
+
+By [21st.dev](https://21st.dev) team
+
+## Highlights
+
+- **Multi-Agent Support** - Claude Code and Codex in one app, switch instantly
+- **Visual UI** - Cursor-like desktop app with diff previews and real-time tool execution
+- **Custom Models & Providers (BYOK)** - Bring your own API keys
+- **Git Worktree Isolation** - Each chat runs in its own isolated worktree
+- **Background Agents** - Cloud sandboxes that run when your laptop sleeps
+- **Live Browser Previews** - Preview dev branches in a real browser
+- **Kanban Board** - Visualize agent sessions
+- **Built-in Git Client** - Visual staging, diffs, PR creation, push to GitHub
+- **File Viewer** - File preview with Cmd+P search and image viewer
+- **Integrated Terminal** - Sidebar or bottom panel with Cmd+J toggle
+- **Model Selector** - Switch between models and providers
+- **MCP & Plugins** - Server management, plugin marketplace, rich tool display
+- **Automations** - Trigger agents from GitHub, Linear, Slack, or manually from git events
+- **Chat Forking** - Fork a sub-chat from any assistant message
+- **Message Queue** - Queue prompts while an agent is working
+- **API** - Run agents programmatically with a single API call
+- **Voice Input** - Hold-to-talk dictation
+- **Plan Mode** - Structured plans with markdown preview
+- **Extended Thinking** - Enabled by default with visual UX
+- **Skills & Slash Commands** - Custom skills and slash commands
+- **Custom Sub-agents** - Visual task display in sidebar
+- **Memory** - CLAUDE.md and AGENTS.md support
+- **PWA** - Start and monitor background agents from your phone
+- **Cross Platform** - macOS desktop, web app, Windows and Linux
+
+## Features
+
+### Run coding agents the right way
+
+Run agents locally, in worktrees, in background - without touching main branch.
+
+![Worktree Demo](assets/worktree.gif)
+
+- **Git Worktree Isolation** - Each chat session runs in its own isolated worktree
+- **Background Execution** - Run agents in background while you continue working
+- **Local-first** - All code stays on your machine, no cloud sync required
+- **Branch Safety** - Never accidentally commit to main branch
+- **Shared Terminals** - Share terminal sessions across local-mode workspaces
+
+---
+
+### UI that finally respects your code
+
+Cursor-like UI with diff previews, built-in git client, and the ability to see changes before they land.
+
+![Cursor UI Demo](assets/cursor-ui.gif)
+
+- **Diff Previews** - See exactly what changes the agent is making in real-time
+- **Built-in Git Client** - Stage, commit, push to GitHub, and manage branches without leaving the app
+- **Git Activity Badges** - See git operations directly on agent messages
+- **Rollback** - Roll back changes from any user message bubble
+- **Real-time Tool Execution** - See bash commands, file edits, and web searches as they happen
+- **File Viewer** - File preview with Cmd+P search, syntax highlighting, and image viewer
+- **Chat Forking** - Fork a sub-chat from any assistant message to explore alternatives
+- **Chat Export** - Export conversations for sharing or archival
+- **File Mentions** - Reference files directly in chat with @ mentions
+- **Message Queue** - Queue up prompts while an agent is working
+
+---
+
+### Plan mode that actually helps you think
+
+The agent asks clarifying questions, builds structured plans, and shows clean markdown preview - all before execution.
+
+![Plan Mode Demo](assets/plan-mode.gif)
+
+- **Clarifying Questions** - The agent asks what it needs to know before starting
+- **Structured Plans** - See step-by-step breakdown of what will happen
+- **Clean Markdown Preview** - Review plans in readable format
+- **Review Before Execution** - Approve or modify the plan before the agent acts
+- **Extended Thinking** - Enabled by default with visual thinking gradient
+- **Sub-agents** - Visual task list for sub-agents in the details sidebar
+
+---
+
+### Background agents that never sleep
+
+Close your laptop. Your agents keep running in isolated cloud sandboxes with live browser previews.
+
+- **Runs When You Sleep** - Background agents continue working even when y

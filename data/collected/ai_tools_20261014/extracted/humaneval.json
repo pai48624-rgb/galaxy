@@ -1,0 +1,42 @@
+{
+ "company": "OpenAI",
+ "one_liner_ko": "논문 'Evaluating Large Language Models Trained on Code'에서 소개한 HumanEval 문제 풀이 데이터셋용 평가 하네스.",
+ "what_it_does_ko": "HumanEval은 손으로 작성한 평가 세트로, 이 저장소는 HumanEval 문제 데이터셋을 위한 평가 하네스를 제공한다. 사용자가 모델로 생성한 코드 완성 결과를 JSON Lines 형식으로 저장하면 evaluate_functional_correctness 명령이 테스트를 돌려 pass@1·pass@10·pass@100 같은 지표를 계산한다. 각 결과에는 통과·시간 초과·실패 여부가 기록된다. 신뢰할 수 없는 모델 생성 코드를 실행하므로 보안 샌드박스 밖에서 쓰지 말라고 강하게 권고한다.",
+ "key_features": [
+  "손으로 작성한 코드 생성 평가 문제 세트",
+  "JSON Lines 형식의 생성 결과 입력",
+  "evaluate_functional_correctness 명령으로 기능 정확성 평가",
+  "pass@k 지표 계산(k 값 지정 가능)",
+  "결과별 통과·시간 초과·실패 기록"
+ ],
+ "use_cases_ko": [
+  "코드로 학습한 언어 모델의 코드 생성 능력 평가"
+ ],
+ "pricing": {
+  "free_tier": "불명 (받은 본문에 요금 정보 없음)",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "공개 코드(라이선스 이름은 받은 본문에 없음)",
+ "api": "불명",
+ "platforms": ["CLI"],
+ "korean_support": "불명",
+ "evidence": [
+  {"field": "company", "url": "https://github.com/openai/human-eval", "quote": "$ git clone https://github.com/openai/human-eval"},
+  {"field": "one_liner_ko", "url": "https://github.com/openai/human-eval", "quote": "This is an evaluation harness for the HumanEval problem solving dataset"},
+  {"field": "what_it_does_ko", "url": "https://github.com/openai/human-eval", "quote": "# HumanEval: Hand-Written Evaluation Set"},
+  {"field": "what_it_does_ko", "url": "https://github.com/openai/human-eval", "quote": "This program exists to run untrusted model-generated code. Users are strongly\nencouraged not to do so outside of a robust security sandbox."},
+  {"field": "key_features", "url": "https://github.com/openai/human-eval", "quote": "generate samples\nand save them in the following JSON Lines (jsonl) format"},
+  {"field": "key_features", "url": "https://github.com/openai/human-eval", "quote": "$ evaluate_functional_correctness samples.jsonl"},
+  {"field": "key_features", "url": "https://github.com/openai/human-eval", "quote": "{'pass@1': ..., 'pass@10': ..., 'pass@100': ...}"},
+  {"field": "key_features", "url": "https://github.com/openai/human-eval", "quote": "To\nevaluate with other k values, pass `--k=<comma-separated-values-here>`."},
+  {"field": "key_features", "url": "https://github.com/openai/human-eval", "quote": "`passed` along with the execution `result` which is one of \"passed\", \"timed\nout\", or \"failed\"."},
+  {"field": "use_cases_ko", "url": "https://github.com/openai/human-eval", "quote": "described in the paper \"[Evaluating Large Language Models Trained on\nCode](https://arxiv.org/abs/2107.03374)\"."},
+  {"field": "open_source", "url": "https://github.com/openai/human-eval", "quote": "Check out and install this repository:"},
+  {"field": "platforms", "url": "https://github.com/openai/human-eval", "quote": "$ evaluate_functional_correctness --help"}
+ ],
+ "mismatch": [
+  {"official": "GitHub에 공개된 벤치마크 데이터셋·평가 하네스 코드뿐이고 유료 플랜·관리형 클라우드 언급 없음", "diff": "기존 분류 '오픈소스 + 클라우드 매니지드 유료 플랜'과 달리 판매 상품이 아닌 무료 공개 벤치마크로 보임", "url": "https://github.com/openai/human-eval"}
+ ],
+ "plan_change": []
+}

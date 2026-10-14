@@ -1,0 +1,104 @@
+{
+ "company": "Anannas",
+ "one_liner_ko": "하나의 API로 여러 LLM에 접속하게 해 주는 통합 게이트웨이.",
+ "what_it_does_ko": "Anannas는 여러 LLM 제공사를 하나의 게이트웨이와 대시보드로 묶어 준다. 장애에 강한 라우팅, 비용 관리, 사용량 분석을 제공한다. OpenAI 호환 API라 OpenAI SDK의 base_url만 바꿔 쓸 수 있다. 자기 제공사 키를 쓰는 BYOK도 지원한다.",
+ "key_features": [
+  "여러 LLM을 하나의 API로 사용",
+  "하나의 대시보드에서 모든 모델 관리",
+  "쿼리 라우팅·출력 비교",
+  "비용 관리·사용량 분석",
+  "OpenAI 호환 API",
+  "BYOK(자기 API 키 사용)",
+  "도구 호출·구조화 출력·이미지·오디오·PDF 입력"
+ ],
+ "use_cases_ko": [
+  "개발 팀이 여러 LLM을 한 API로 연결해 비용을 줄이고 확장"
+ ],
+ "pricing": {
+  "free_tier": "있음 (BYOK 시 월 100만 요청 무료)",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://anannas.ai/",
+   "quote": "Anannas - Single API to access any model"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://anannas.ai/",
+   "quote": "Single API to access any LLM"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://anannas.ai/",
+   "quote": "Seamlessly connect to multiple models through a single gateway with failproof routing, cost control, and instant usage insights."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.anannas.ai/quickstart",
+   "quote": "Anannas provides a unified OpenAI-compatible API for accessing multiple LLM providers."
+  },
+  {
+   "field": "key_features",
+   "url": "https://anannas.ai/",
+   "quote": "Bring together different LLM providers under one intuitive interface — no more switching platforms."
+  },
+  {
+   "field": "key_features",
+   "url": "https://anannas.ai/",
+   "quote": "Easily route queries, compare outputs side by side with clarity, and confidently select the most suitable model for each task."
+  },
+  {
+   "field": "key_features",
+   "url": "https://anannas.ai/",
+   "quote": "Track detailed usage, monitor spending across providers, and optimize model performance and efficiency in real time."
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.anannas.ai/quickstart",
+   "quote": "Bring Your Own Keys (BYOK) — use your own provider API keys with Anannas."
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.anannas.ai/quickstart",
+   "quote": "Structured Outputs"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://anannas.ai/",
+   "quote": "Use smart routing to cut costs, improve performance, and scale AI across your team."
+  },
+  {
+   "field": "pricing",
+   "url": "https://anannas.ai/",
+   "quote": "BYOK and get 1M free requests/month!"
+  },
+  {
+   "field": "api",
+   "url": "https://docs.anannas.ai/quickstart",
+   "quote": "The Anannas API endpoint is https://api.anannas.ai/v1 and uses standard HTTP POST requests with JSON payloads."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://anannas.ai/",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "요금 페이지 본문이 비어 있고, 홈에 모델별 토큰 단가(입력·출력)와 BYOK 월 100만 요청 무료만 표시",
+   "diff": "구독 요금제가 아니라 모델별 사용량(토큰) 과금 구조로 보임",
+   "url": "https://anannas.ai/"
+  }
+ ]
+}

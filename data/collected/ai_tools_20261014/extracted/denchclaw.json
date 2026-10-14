@@ -1,0 +1,61 @@
+{
+ "company": "Dench (Merse Originals, Inc.)",
+ "one_liner_ko": "OpenClaw 기반으로 맥에서 로컬로 돌아가는 AI CRM.",
+ "what_it_does_ko": "DenchClaw는 OpenClaw 위에 만든 AI CRM으로, 사용자의 맥에서 로컬로 실행되고 localhost:3100의 웹 화면으로 쓴다. 평범한 영어로 요청하면 리드 찾기·데이터 보강·아웃리치 발송·분석·자동화를 수행한다. 사용자의 크롬 프로필(로그인 세션·쿠키)을 그대로 써서 웹을 탐색하고, 자연어 질문을 SQL로 바꿔 DuckDB를 조회한다. 칸반 파이프라인, 분석 차트, 예약 자동화와 보고서 작성, 세션 간 메모리를 제공한다. 공식 페이지는 DenchClaw보다 호스팅형 dench.com 사용을 권한다.",
+ "key_features": [
+  "자연어 요청으로 리드 찾기·데이터 보강·아웃리치·분석",
+  "사용자 크롬 프로필을 이용한 웹 자동 조작",
+  "자연어→SQL로 DuckDB 조회",
+  "변경 내용 diff를 보여 주는 코딩 에이전트",
+  "세션 간 메모리와 선호 학습",
+  "자동 갱신 칸반 영업 파이프라인·분석 차트",
+  "Google Drive·Notion·Salesforce·HubSpot·Gmail 등 데이터 가져오기",
+  "예약 자동화(루틴)와 보고서 문서"
+ ],
+ "use_cases_ko": [
+  "영업팀의 리드 발굴·아웃리치 자동화",
+  "고객 데이터베이스에 자연어로 질문해 파이프라인 현황 파악"
+ ],
+ "pricing": {
+  "free_tier": "있음 (DenchClaw는 MIT 오픈소스로 로컬 설치; 유료는 호스팅형 Dench Cloud, Max 3일 무료 체험)",
+  "plans": [
+   {"name": "Dench Cloud Max", "price": 99, "currency": "USD", "period": "month(좌석당)", "limits": "워크스페이스당 월 $200 AI 크레딧, CRM·지원·재무·회의 준비 에이전트, 헤드리스 API CRM, 메일함 5개, 1,500+ 앱, 3일 무료", "page_lang": "en"},
+   {"name": "Enterprise", "price": 1500, "currency": "USD", "period": "month", "limits": "시작가; Max 전체 조직 적용, 전담 매니저, 설정·이전 대행, HIPAA BAA·SSO·SCIM·감사 로그", "page_lang": "en"}
+  ],
+  "pricing_url": "https://www.dench.com/pricing"
+ },
+ "open_source": "MIT",
+ "api": "있음",
+ "platforms": ["맥", "CLI", "웹"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://www.dench.com/pricing", "quote": "© 2026 Merse Originals, Inc. · San Francisco, CA"},
+  {"field": "company", "url": "https://www.dench.com/claw", "quote": "DenchClaw | Dench AI CRM"},
+  {"field": "one_liner_ko", "url": "https://www.dench.com/claw", "quote": "AI CRM, hosted locally on your Mac.\nBuilt on OpenClaw."},
+  {"field": "what_it_does_ko", "url": "https://www.dench.com/claw", "quote": "$ npx denchclaw \n opens at localhost:3100"},
+  {"field": "what_it_does_ko", "url": "https://www.dench.com/claw", "quote": "DenchClaw doesn't just answer questions. It takes action — browsing the web, querying databases, writing code, and managing your pipeline."},
+  {"field": "what_it_does_ko", "url": "https://www.dench.com/claw", "quote": "We recommend using dench.com over DenchClaw. Go to dench.com"},
+  {"field": "key_features", "url": "https://www.dench.com/claw", "quote": "Find Leads Enrich Data Send Outreach Analyze Automate"},
+  {"field": "key_features", "url": "https://www.dench.com/claw", "quote": "Unlike other AI tools, DenchClaw uses your existing Chrome profile — all your auth sessions, cookies, and history."},
+  {"field": "key_features", "url": "https://www.dench.com/claw", "quote": "Ask questions in plain English — DenchClaw translates to SQL, queries your DuckDB, and returns structured results."},
+  {"field": "key_features", "url": "https://www.dench.com/claw", "quote": "DenchClaw doesn't just talk — it writes code. Review changes in a rich diff viewer before applying."},
+  {"field": "key_features", "url": "https://www.dench.com/claw", "quote": "It remembers context across sessions, learns your preferences, and proactively handles tasks."},
+  {"field": "key_features", "url": "https://www.dench.com/claw", "quote": "Drag-and-drop kanban boards auto-update as leads reply. DenchClaw moves cards through your pipeline automatically."},
+  {"field": "key_features", "url": "https://www.dench.com/claw", "quote": "Contacts, notes, documents, CRM records — bring everything into one workspace."},
+  {"field": "key_features", "url": "https://www.dench.com/claw", "quote": "Rich markdown documents with embedded live charts. Scheduled automations that run in the background."},
+  {"field": "use_cases_ko", "url": "https://www.dench.com/claw", "quote": "It logs into LinkedIn, scrapes YC batches, and sends messages as you."},
+  {"field": "use_cases_ko", "url": "https://www.dench.com/claw", "quote": "How many founders have we contacted from YC S24?"},
+  {"field": "pricing", "url": "https://www.dench.com/pricing", "quote": "Max\n $99 / seat / month \n 3 days free. Billed monthly."},
+  {"field": "pricing", "url": "https://www.dench.com/pricing", "quote": "$200 AI credits per workspace each month, every model on tap"},
+  {"field": "pricing", "url": "https://www.dench.com/pricing", "quote": "Enterprise\n $1,500 / month \n Starting price."},
+  {"field": "pricing", "url": "https://www.dench.com/pricing", "quote": "Pay for people.\n Agents are free."},
+  {"field": "open_source", "url": "https://github.com/DenchHQ/DenchClaw", "quote": "<a href=\"LICENSE\"><img src=\"https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge\" alt=\"MIT License\"></a>"},
+  {"field": "api", "url": "https://www.dench.com/docs", "quote": "Every server-backed command has a /api/v1 endpoint with an interactive\nplayground."},
+  {"field": "platforms", "url": "https://www.dench.com/claw", "quote": "AI CRM, hosted locally on your Mac."},
+  {"field": "platforms", "url": "https://github.com/DenchHQ/DenchClaw", "quote": "npx denchclaw restart # restarts denchclaw web server"},
+  {"field": "korean_support", "url": "https://www.dench.com/claw", "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: English"}
+ ],
+ "mismatch": [],
+ "plan_change": [{"official": "DenchClaw 자체는 MIT 오픈소스 로컬 설치형. 유료는 호스팅형 Dench Cloud로 Max 좌석당 월 $99(3일 무료)·Enterprise 월 $1,500부터", "diff": "무료판과 유료 구독이 같은 제품의 등급이 아니라, 오픈소스 DenchClaw와 별도 호스팅 서비스(Dench Cloud)로 나뉨. 공식 페이지도 dench.com 사용을 권함", "url": "https://www.dench.com/pricing"}],
+ "note": "요금 페이지는 DenchClaw가 아니라 Dench Cloud(dench.com) 요금. 연간 결제 16% 할인 표기 있음(연간 금액은 본문에 없음)."
+}

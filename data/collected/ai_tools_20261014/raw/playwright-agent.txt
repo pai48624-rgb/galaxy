@@ -1,0 +1,166 @@
+=== [home] https://playwright.dev (lang=en)
+Fast and reliable end-to-end testing for modern web apps | Playwright 
+ Skip to main content 
+ Playwright Docs MCP CLI API Node.js Node.js Python Java .NET 
+ Search 
+ Playwright enables reliable web automation for testing, scripting, and AI agents.
+ One API to drive Chromium, Firefox, and WebKit — in your tests, your scripts, and your agent workflows. Available for TypeScript , Python , .NET , and Java . Get started Star 97k+ 
+ Playwright Test
+ Full-featured test runner with auto-waiting, assertions, tracing, and parallelism across Chromium, Firefox, and WebKit.
+ npm init playwright@latest Testing documentation 
+ Playwright CLI
+ Token-efficient browser automation for coding agents like Claude Code and GitHub Copilot. Skill-based workflows without large context overhead.
+ npm i -g @playwright/cli@latest CLI documentation 
+ Playwright MCP
+ Model Context Protocol server that gives AI agents full browser control through structured accessibility snapshots.
+ npx @playwright/mcp@latest MCP documentation 
+ Built for testing
+ Auto-wait and web-first assertions
+ Playwright waits for elements to be actionable before performing actions. Assertions automatically retry until conditions are met. No artificial timeouts, no flaky tests. Test isolation
+ Each test gets a fresh browser context — equivalent to a brand new browser profile. Full isolation with near-zero overhead. Save authentication state once and reuse it across tests.
+ Resilient locators
+ Find elements with selectors that mirror how users see the page: getByRole , getByLabel , getByPlaceholder , getByTestId . No brittle CSS paths. Parallelism and sharding
+ Tests run in parallel by default across all configured browsers. Shard across multiple machines for faster CI. Full cross-browser coverage on every commit.
+ Built for AI agents
+ Accessibility snapshots, not screenshots
+ Agents interact with pages through structured accessibility trees — element roles, names, and refs. Deterministic and unambiguous, no vision models required. MCP server
+ Drop-in Model Context Protocol server for VS Code, Cursor, Claude Desktop, Windsurf, and any MCP client. Full browser control through standard tool calls.
+ CLI for coding agents
+ Token-efficient command-line interface with installable skills. Purpose-built for Claude Code, GitHub Copilot, and similar coding agents that need to balance browser automation with large codebases. Session monitoring
+ Visual dashboard with live screencast previews of all running browser sessions. Click any session to zoom in and take control.
+ Powerful tooling
+ Test generator 
+ Record your actions in the browser and Playwright writes the test code. Generate assertions from the recording toolbar. Pick locators by clicking on elements.
+ Trace Viewer 
+ Full timeline of test execution with DOM snapshots, network requests, console logs, and screenshots at every step. Investigate failures without re-running.
+ VS Code extension 
+ Run, debug, and generate tests directly in the editor. Set breakpoints, live-inspect locators in the browser, and view full execution traces in the sidebar.
+ Any browser. Any platform. Chromium, Firefox, and WebKit on Linux, macOS, and Windows. Headless and headed. Also available for Python , .NET , and Java .
+ Chosen by companies and open source projects
+ Learn
+ Getting started Playwright Training Learn Videos Feature Videos 
+ Community
+ Stack Overflow Discord X LinkedIn 
+ More
+ GitHub YouTube Blog Ambassadors Microsoft Privacy Statement 
+ Copyright © 2026 Microsoft
+
+=== [meta] https://playwright.dev
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/microsoft/playwright
+# 🎭 Playwright
+
+[![npm version](https://img.shields.io/npm/v/playwright.svg)](https://www.npmjs.com/package/playwright) <!-- GEN:chromium-version-badge -->[![Chromium version](https://img.shields.io/badge/chromium-156.0.8078.12-blue.svg?logo=google-chrome)](https://www.chromium.org/Home)<!-- GEN:stop --> <!-- GEN:firefox-version-badge -->[![Firefox version](https://img.shields.io/badge/firefox-157.0-blue.svg?logo=firefoxbrowser)](https://www.mozilla.org/en-US/firefox/new/)<!-- GEN:stop --> <!-- GEN:webkit-version-badge -->[![WebKit version](https://img.shields.io/badge/webkit-27.2-blue.svg?logo=safari)](https://webkit.org/)<!-- GEN:stop --> [![Join Discord](https://img.shields.io/badge/join-discord-informational)](https://aka.ms/playwright/discord)
+
+## [Documentation](https://playwright.dev) | [API reference](https://playwright.dev/docs/api/class-playwright)
+
+Playwright is a framework for web automation and testing. It drives Chromium, Firefox, and WebKit with a single API — in your tests, in your scripts, and as a tool for AI agents.
+
+## Get Started
+
+Choose the path that fits your workflow:
+
+| | Best for | Install |
+|---|---|---|
+| **[Playwright Test](#playwright-test)** | End-to-end testing | `npm init playwright@latest` |
+| **[Playwright CLI](#playwright-cli)** | Coding agents (Claude Code, Copilot) | `npm i -g @playwright/cli@latest` |
+| **[Playwright MCP](#playwright-mcp)** | AI agents and LLM-driven automation | `npx @playwright/mcp@latest` |
+| **[Playwright Library](#playwright-library)** | Browser automation scripts | `npm i playwright` |
+| **[VS Code Extension](#vs-code-extension)** | Test authoring and debugging in VS Code | [Install from Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-playwright.playwright) |
+
+---
+
+## Playwright Test
+
+Playwright Test is a full-featured test runner built for end-to-end testing. It runs tests across Chromium, Firefox, and WebKit with full browser isolation, auto-waiting, and web-first assertions.
+
+### Install
+
+```bash
+npm init playwright@latest
+```
+
+Or add manually:
+
+```bash
+npm i -D @playwright/test
+npx playwright install
+```
+
+### Write a test
+
+```TypeScript
+import { test, expect } from '@playwright/test';
+
+test('has title', async ({ page }) => {
+  await page.goto('https://playwright.dev/');
+  await expect(page).toHaveTitle(/Playwright/);
+});
+
+test('get started link', async ({ page }) => {
+  await page.goto('https://playwright.dev/');
+  await page.getByRole('link', { name: 'Get started' }).click();
+  await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
+});
+```
+
+### Run tests
+
+```bash
+npx playwright test
+```
+
+Tests run in parallel across all configured browsers, in headless mode by default. Each test gets a fresh browser context — full isolation with near-zero overhead.
+
+### Key capabilities
+
+**Auto-wait and web-first assertions.** No artificial timeouts. Playwright waits for elements to be actionable, and assertions automatically retry until conditions are met.
+
+**Locators.** Find elements with resilient locators that mirror how users see the page:
+
+```TypeScript
+page.getByRole('button', { name: 'Submit' })
+page.getByLabel('Email')
+page.getByPlaceholder('Search...')
+page.getByTestId('login-form')
+```
+
+**Test isolation.** Each test runs in its own browser context — equivalent to a fresh browser profile. Save authentication state once and reuse it across tests:
+
+```TypeScript
+// Save state after login
+await page.context().storageState({ path: 'auth.json' });
+
+// Reuse in other tests
+test.use({ storageState: 'auth.json' });
+```
+
+**Tracing.** Capture execution traces, screenshots, and videos on failure. Inspect every action, DOM snapshot, network request, and console message in the [Trace Viewer](https://playwright.dev/docs/trace-viewer):
+
+```TypeScript
+// playwright.config.ts
+export default defineConfig({
+  use: {
+    trace: 'on-first-retry',
+  },
+});
+```
+
+```bash
+npx playwright show-trace trace.zip
+```
+
+<!-- TODO: screenshot of trace viewer -->
+
+**Parallelism.** Tests run in parallel by default across all configured browsers.
+
+[Full testing documentation](https://playwright.dev/docs/intro)
+
+---
+
+## Playwright CLI
+
+[Playwright CLI](htt

@@ -1,0 +1,39 @@
+{
+ "company": "NVIDIA",
+ "one_liner_ko": "모델이나 시스템의 보안을 점검하는 오픈소스 LLM 취약점 스캐너.",
+ "what_it_does_ko": "garak은 LLM이 원치 않는 방식으로 실패하게 만들 수 있는지 점검하는 LLM 취약점 스캐너다. 환각, 데이터 유출, 프롬프트 인젝션, 허위 정보, 유해 생성, 탈옥 등 여러 약점을 탐색한다. 정적·동적·적응형 프로브를 조합하며, 챗봇이나 모델을 스캔하면 잘 동작하는 부분과 공격에 취약한 부분을 담은 전체 보고서를 준다. 명령줄 도구이며 NVIDIA와 커뮤니티가 함께 업데이트하는 오픈소스다.",
+ "key_features": [
+  "환각·데이터 유출·프롬프트 인젝션·허위 정보·유해 생성·탈옥 탐지 프로브",
+  "정적·동적·적응형 프로브 조합",
+  "취약점 탐지기(detectors)",
+  "자동 레드팀(auto red-team)",
+  "스캔 결과 전체 보고서",
+  "Hugging Face·OpenAI API·AWS Bedrock·litellm·REST·gguf 모델 지원"
+ ],
+ "use_cases_ko": [
+  "LLM·챗봇의 보안 취약점을 스캔해 평가하기",
+  "LLM 레드팀 테스트"
+ ],
+ "pricing": {"free_tier": "있음 (무료 도구)", "plans": [], "pricing_url": "https://github.com/NVIDIA/garak"},
+ "open_source": "Apache-2.0",
+ "api": "불명",
+ "platforms": ["CLI"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://garak.ai", "quote": "garak is currently backed by NVIDIA and will continue to be"},
+  {"field": "one_liner_ko", "url": "https://garak.ai", "quote": "garak is an LLM vulnerability scanner. \n Use it to assess a model or system's security."},
+  {"field": "what_it_does_ko", "url": "https://github.com/NVIDIA/garak", "quote": "`garak` probes for hallucination, data leakage, prompt injection, misinformation, toxicity generation, jailbreaks, and many other weaknesses."},
+  {"field": "what_it_does_ko", "url": "https://docs.garak.ai/garak", "quote": "You get a full report detailing everything that worked and everything that could do with improvement."},
+  {"field": "key_features", "url": "https://github.com/NVIDIA/garak", "quote": "It combines static, dynamic, and adaptive probes to explore this."},
+  {"field": "key_features", "url": "https://docs.garak.ai/garak", "quote": "🔎 Understanding detectors"},
+  {"field": "key_features", "url": "https://docs.garak.ai/garak", "quote": "🪖 garak's auto red-team"},
+  {"field": "key_features", "url": "https://github.com/NVIDIA/garak", "quote": "* [aws bedrock](https://aws.amazon.com/bedrock/) foundation models"},
+  {"field": "use_cases_ko", "url": "https://docs.garak.ai/garak", "quote": "With garak, you can scan a chatbot or model and quickly discover where it's working well, and where it's vulnerable to attack."},
+  {"field": "pricing", "url": "https://github.com/NVIDIA/garak", "quote": "`garak`'s a free tool."},
+  {"field": "open_source", "url": "https://github.com/NVIDIA/garak", "quote": "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"},
+  {"field": "platforms", "url": "https://github.com/NVIDIA/garak", "quote": "`garak` is a command-line tool. It's developed in Linux and OSX."},
+  {"field": "korean_support", "url": "https://garak.ai", "quote": "html lang: 없음\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

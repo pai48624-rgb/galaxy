@@ -1,0 +1,205 @@
+{
+ "company": "n8n",
+ "one_liner_ko": "보고 통제할 수 있는 AI 에이전트·워크플로를 시각적으로 만들고 코드로 깊게 다루는 AI 워크플로 자동화 플랫폼",
+ "what_it_does_ko": "n8n은 AI 기능과 업무 프로세스 자동화를 결합한 페어코드(fair-code) 라이선스 워크플로 자동화 도구다. 시각적 캔버스와 JavaScript·Python 코드를 함께 써서 에이전트와 워크플로를 만들고, 에이전트의 추론 단계를 캔버스에서 추적한다. 자체 서버(온프레미스·에어갭 포함)나 n8n 클라우드에 배포하며, 수백~천여 개 연동과 MCP를 지원한다. 요금은 단계 수와 관계없이 월 워크플로 실행 횟수 기준이다.",
+ "key_features": [
+  "시각적 빌더 + 어디서나 JavaScript·Python 코드 단계",
+  "멀티 에이전트·RAG, 클라우드·오프라인 모델 교체, MCP 연결",
+  "사람 승인(human-in-the-loop)·가드레일·평가",
+  "Docker로 자체 호스팅(온프레미스·에어갭) 또는 호스팅 버전",
+  "단일 단계 재실행, 데이터 재생·모의, 로그 보기",
+  "SSO SAML·LDAP, 암호화 비밀 저장소, Git 버전 관리, RBAC, 감사 로그",
+  "1,500개 이상 연동과 9,000개 이상 템플릿(GitHub 기준)"
+ ],
+ "use_cases_ko": [
+  "IT 운영팀의 신규 직원 온보딩 자동화",
+  "보안 운영팀의 보안 사고 티켓 보강",
+  "영업팀의 리뷰 기반 고객 인사이트 생성"
+ ],
+ "pricing": {
+  "free_tier": "있음 (자체 호스팅 Community Edition 무료, 클라우드는 무료 체험)",
+  "plans": [
+   {
+    "name": "Starter",
+    "price": 20,
+    "currency": "EUR",
+    "period": "month(연간 결제)",
+    "limits": "월 2.5K 워크플로 실행, 동시 실행 5, n8n 호스팅",
+    "page_lang": "en"
+   },
+   {
+    "name": "Pro",
+    "price": 50,
+    "currency": "EUR",
+    "period": "month(연간 결제)",
+    "limits": "월 10K 실행, 동시 실행 최대 50, n8n 호스팅",
+    "page_lang": "en"
+   },
+   {
+    "name": "Business",
+    "price": 667,
+    "currency": "EUR",
+    "period": "month(연간 결제)",
+    "limits": "월 40K 실행, SSO·LDAP, Git 버전 관리, 자체 호스팅",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": "EUR",
+    "period": "month",
+    "limits": "맞춤 실행 수, 영업 문의",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://n8n.io/pricing/"
+ },
+ "open_source": "Sustainable Use License + n8n Enterprise License (fair-code, 소스 공개)",
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "CLI",
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://docs.n8n.io/",
+   "quote": "© 2026 n8n | All rights reserved"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://n8n.io/",
+   "quote": "AI agents and workflows you can see and control"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://n8n.io/",
+   "quote": "Build visually, go deep with code, connect to anything."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.n8n.io/",
+   "quote": "n8n is a fair-code licensed workflow automation tool that combines AI features with business process automation."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://n8n.io/",
+   "quote": "Every step of your agents' reasoning, traceable on the canvas. Deploy on your infrastructure or ours."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://n8n.io/pricing/",
+   "quote": "Pricing based on monthly workflow executions, regardless of complexity."
+  },
+  {
+   "field": "key_features",
+   "url": "https://n8n.io/",
+   "quote": "Write JavaScript or Python anywhere in your workflow."
+  },
+  {
+   "field": "key_features",
+   "url": "https://n8n.io/",
+   "quote": "Handle multi-agent setups and RAG systems. Swap cloud or offline models without rebuilding your workflows."
+  },
+  {
+   "field": "key_features",
+   "url": "https://n8n.io/",
+   "quote": "Human-in-the-loop, guardrails, evaluations"
+  },
+  {
+   "field": "key_features",
+   "url": "https://n8n.io/",
+   "quote": "Protect your data by deploying on-prem, air-gapped if you need it."
+  },
+  {
+   "field": "key_features",
+   "url": "https://n8n.io/",
+   "quote": "Re-run single steps , not your entire workflow"
+  },
+  {
+   "field": "key_features",
+   "url": "https://n8n.io/",
+   "quote": "Fully on-prem option, SSO SAML, and LDAP, encrypted secret stores, version control, RBAC permissions."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/n8n-io/n8n",
+   "quote": "1500+ integrations and 9,000+ workflow [templates]"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://n8n.io/",
+   "quote": "On-board new employees"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://n8n.io/",
+   "quote": "Enrich security incident tickets"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://n8n.io/",
+   "quote": "Generate customer insights from reviews"
+  },
+  {
+   "field": "pricing",
+   "url": "https://n8n.io/pricing/",
+   "quote": "20€ /mo, billed annually"
+  },
+  {
+   "field": "pricing",
+   "url": "https://n8n.io/pricing/",
+   "quote": "50€ /mo, billed annually"
+  },
+  {
+   "field": "pricing",
+   "url": "https://n8n.io/pricing/",
+   "quote": "667€ /mo, billed annually"
+  },
+  {
+   "field": "pricing",
+   "url": "https://n8n.io/pricing/",
+   "quote": "A standard, self-hosted version of n8n is available on GitHub."
+  },
+  {
+   "field": "pricing",
+   "url": "https://n8n.io/pricing/",
+   "quote": "workflow executions with unlimited steps"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/n8n-io/n8n",
+   "quote": "n8n is [fair-code](https://faircode.io) distributed under the [Sustainable Use License]"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/n8n-io/n8n",
+   "quote": "and [n8n Enterprise License]"
+  },
+  {
+   "field": "api",
+   "url": "https://n8n.io/pricing/",
+   "quote": "Control n8n via API"
+  },
+  {
+   "field": "platforms",
+   "url": "https://n8n.io/pricing/",
+   "quote": "Control n8n via CLI"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://n8n.io/",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "무료는 자체 호스팅 Community Edition, 클라우드는 무료 체험 후 Starter 20€/Pro 50€/Business 667€(연간 결제 월 환산, 실행 횟수 기준)",
+   "diff": "클라우드 상시 무료 등급 없이 체험판만 있고, 무료 사용은 자체 호스팅 판으로 나뉨, 가격은 EUR·실행 횟수 기준",
+   "url": "https://n8n.io/pricing/"
+  }
+ ]
+}

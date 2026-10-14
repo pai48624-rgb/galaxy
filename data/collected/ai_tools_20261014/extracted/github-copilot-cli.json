@@ -1,0 +1,44 @@
+{
+ "company": "GitHub, Inc.",
+ "one_liner_ko": "GitHub Copilot 코딩 에이전트를 터미널에서 바로 쓰게 해 주는 명령줄 도구.",
+ "what_it_does_ko": "GitHub Copilot CLI는 코드와 GitHub 맥락을 이해하는 AI 에이전트와 터미널에서 로컬로 함께 작업하게 해 준다. 기존 GitHub 계정으로 인증해 자연어로 저장소·이슈·풀 리퀘스트에 접근한다. 복잡한 작업을 계획·실행하며 코드를 빌드·수정·디버그·리팩터링하고, 모든 동작은 실행 전에 미리 보여 주고 승인을 받는다. GitHub MCP 서버가 기본 탑재되고 사용자 MCP 서버도 추가할 수 있다. 기존 Copilot Pro·Pro+·Business·Enterprise 요금제로 사용한다.",
+ "key_features": [
+  "터미널에서 Copilot 코딩 에이전트 사용",
+  "자연어로 저장소·이슈·PR 접근(GitHub 계정 인증)",
+  "빌드·수정·디버그·리팩터링 등 복잡한 작업 계획·실행",
+  "GitHub MCP 서버 기본 탑재·사용자 MCP 서버 확장",
+  "모든 동작 실행 전 미리보기·명시적 승인"
+ ],
+ "use_cases_ko": [
+  "새 코드베이스 탐색",
+  "이슈에 적힌 기능 구현",
+  "로컬 디버깅"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [
+   {"name": "Copilot Pro / Pro+ / Business / Enterprise", "price": null, "currency": null, "period": null, "limits": "기존 Copilot 요금제로 사용, 가격은 페이지에 없음", "page_lang": "en-US"}
+  ],
+  "pricing_url": "https://github.blog/changelog/2025-09-25-github-copilot-cli-is-now-in-public-preview/"
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": ["CLI"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://github.blog/changelog/2025-09-25-github-copilot-cli-is-now-in-public-preview/", "quote": "© 2026 GitHub, Inc."},
+  {"field": "one_liner_ko", "url": "https://github.blog/changelog/2025-09-25-github-copilot-cli-is-now-in-public-preview/", "quote": "We’re bringing the power of GitHub Copilot coding agent directly to your terminal."},
+  {"field": "what_it_does_ko", "url": "https://github.blog/changelog/2025-09-25-github-copilot-cli-is-now-in-public-preview/", "quote": "With GitHub Copilot CLI, you can work locally and synchronously with an AI agent that understands your code and GitHub context."},
+  {"field": "key_features", "url": "https://github.blog/changelog/2025-09-25-github-copilot-cli-is-now-in-public-preview/", "quote": "Terminal-native development: Work with Copilot coding agent directly in your command line"},
+  {"field": "key_features", "url": "https://github.blog/changelog/2025-09-25-github-copilot-cli-is-now-in-public-preview/", "quote": "Access your repositories, issues, and pull requests using natural language, all authenticated with your existing GitHub account."},
+  {"field": "key_features", "url": "https://github.blog/changelog/2025-09-25-github-copilot-cli-is-now-in-public-preview/", "quote": "Agentic capabilities: Build, edit, debug, and refactor code with an AI collaborator that can plan and execute complex tasks."},
+  {"field": "key_features", "url": "https://github.blog/changelog/2025-09-25-github-copilot-cli-is-now-in-public-preview/", "quote": "the coding agent ships with GitHub’s MCP server by default and supports custom MCP servers to extend capabilities."},
+  {"field": "key_features", "url": "https://github.blog/changelog/2025-09-25-github-copilot-cli-is-now-in-public-preview/", "quote": "Full control: Preview every action before execution — nothing happens without your explicit approval."},
+  {"field": "use_cases_ko", "url": "https://github.blog/changelog/2025-09-25-github-copilot-cli-is-now-in-public-preview/", "quote": "Whether you’re exploring a new codebase, implementing features from issues, or debugging locally"},
+  {"field": "pricing", "url": "https://github.blog/changelog/2025-09-25-github-copilot-cli-is-now-in-public-preview/", "quote": "Start building with your existing Copilot Pro, Pro+, Business, or Enterprise plan."},
+  {"field": "platforms", "url": "https://github.blog/changelog/2025-09-25-github-copilot-cli-is-now-in-public-preview/", "quote": "Install via npm: npm install -g @github/copilot"},
+  {"field": "korean_support", "url": "https://github.blog/changelog/2025-09-25-github-copilot-cli-is-now-in-public-preview/", "quote": "html lang: en-US"}
+ ],
+ "mismatch": [],
+ "plan_change": [{"official": "별도 요금 없이 기존 Copilot Pro·Pro+·Business·Enterprise 요금제로 사용", "diff": "독립 구독이 아니라 GitHub Copilot 구독에 묶인 기능", "url": "https://github.blog/changelog/2025-09-25-github-copilot-cli-is-now-in-public-preview/"}]
+}

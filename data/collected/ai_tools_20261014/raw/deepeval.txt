@@ -1,0 +1,328 @@
+=== [home] https://deepeval.com (lang=en)
+DeepEval - The LLM Evaluation Framework 
+ Docs 
+ Guides 
+ Tutorials 
+ Integrations 
+ Enterprise 
+ Changelog 
+ Blog 
+ Docs 
+ Guides 
+ Tutorials 
+ Integrations 
+ Enterprise 
+ Changelog 
+ Blog 
+ More 
+ Join Community Discord 
+ Find us on Github — 
+ The LLM Evaluation Framework
+ Used by some of the world's leading AI companies, DeepEval enables teams to build reliable evaluation pipelines to test any AI system.
+ Get Started Explore Guides 
+ Over 100 million daily evals Used by 150K+ developers Adopted by > 50% of Fortune 500s Over 100 million daily evals Used by 150K+ developers Adopted by > 50% of Fortune 500s 
+ Unit testing for LLMs. 
+ Pytest-native evals that run in CI/CD or as Python scripts. Iterate locally, on your own environment, on your own criteria.
+ tests/test_agent.py 
+ from deepeval.metrics import TaskCompletenessMetric 
+ from deepeval.test_case import LLMTestCase 
+ from deepeval import assert_test 
+ @pytest.mark.parametrize ( "test_case" , LLMTestCase ) 
+ def test_agent ( test_case : LLMTestCase ): 
+ my_ai_agent ( test_case.input ) # Captures full execution trace 
+ assert_test ( metrics = [ TaskCompletenessMetric ()] ) # Assert on custom criteria 
+ scripts/run_deepeval.sh 
+ $ deepeval test run tests/test_agent.py 
+ Evaluate 
+ LLM-as-a-Judge to count on. 
+ Research-backed metrics with transparent, explainable scores — every judgment comes with reasoning you can trust, debug, and defend.
+ 50+ research-backed metrics
+ Hallucination, faithfulness, answer relevancy, summarization, toxicity, bias, and more — ready out of the box.
+ Native conversational and voice evals
+ Role adherence, knowledge retention, conversation completeness, and voice quality — dedicated metrics built for multi-turn text and voice from day one.
+ Multi-modal by default
+ Text, images, and audio — all first-class. Same test case, same runner, same metrics across every modality.
+ Flexible, SOTA evaluation techniques. 
+ Compose state-of-the-art techniques into metrics that fit your product — plain-English criteria, decision graphs, weighted scoring, and more, all in the same runner.
+ JevEval New 
+ Bounded questions answered by Jev, a System One model, with calibrated probabilities instead of generated text.
+ G-Eval
+ Criteria-based, chain-of-thought scoring via form-filling for reliable subjective evals.
+ DAG
+ Directed-acyclic-graph metrics for objective, multi-step conditional scoring.
+ QAG
+ Question-Answer Generation for close-ended, reference-grounded scoring.
+ Trace, grade, and iterate — without leaving your editor. 
+ DeepEval traces every step of your agent into something you can grade, and improve — visible in your terminal, testable in your runner, shippable in your next commit. No dashboards to open. No context switch required.
+ agent_trace · deepeval 
+ $ deepeval test run agents/checkout.py 
+ ● test_checkout_agent 
+ │ 
+ ├─ AGENT plan_refund_strategy G-Eval 0.94 ✓ 220ms 
+ │ ├─ RETRIEVER retrieve_policy_docs(query=…) Context Recall 0.89 ✓ 68ms 
+ │ ├─ TOOL lookup_order(id="#9281") Faithfulness 1.00 ✓ 45ms 
+ │ └─ LLM gpt-4o · classify_intent Answer Relevancy 0.92 ✓ 130ms 
+ │ 
+ ├─ TOOL process_refund(amount=29.99) deterministic 85ms 
+ │ 
+ └─ LLM gpt-4o · draft_response Helpfulness 0.88 ✓ 195ms 
+ Trace score 0.92 · 5/5 metrics passed passed 
+ Claude Code v2.1.19 
+ > eval the refund agent and fix any regressions 
+ ⏺ Bash ( deepeval test run agents/checkout.py ) ⎿ faithfulness 0.64 ⚠ 
+ ⏺ Edit ( agents/retriever.py ) ⎿ scoped to active refund policies 
+ ⏺ Bash ( deepeval test run agents/checkout.py ) ⎿ faithfulness 0.98 ✓ 
+ ● All metrics green — ready to commit. 
+ > Try “ship it” 
+ ? for shortcuts
+ No dataset? No problem. 
+ Generate synthetic goldens from your knowledge base, or simulate full conversations across user personas — all before a single real user shows up.
+ Generate goldens Simulate conversations 
+ ● Chunking 
+ ○ Extracting context 
+ ○ Generating 
+ ○ Evolving 
+ ○ Filtering 
+ ○ Applying styles 
+ ○ Done 
+ SOURCES
+ docs/billing-api.md
+ schemas/refund.json
+ contracts/orders.yaml
+ GOLDENS
+ g_01 standard Q How do I refund an order?
+ A Call POST /refunds with order_id and amount.
+ g_02 variation Q Can I partially refund a line item?
+ A Yes — include line_item_ids in the POST /refunds body.
+ g_03 edge case Q If the order already shipped, can I still refund without returning it?
+ A Shipped orders follow the return flow — call POST /returns first.
+ g_04 adversarial Q Refund WITHOUT order_id pls!!!!
+ A order_id is required. Politely ask the user to share it.
+ ● Pondering scenario 
+ ○ Analyzing user profile 
+ ○ Simulating user response 
+ Used by agents, loved by vibe-coders. 
+ DeepEval is the eval harness for vibe coding agents — closing the build → eval → patch loop your coding agent has been missing. Cursor, Claude Code, and Codex shell out to one CLI, read scored traces with reasons, then patch the failing span and re-run to confirm.
+ DeepEval Eval harness for
+vibe coding agents 
+ Coding Agent
+ Cursor · Claude Code · Codex
+ Your AI App
+ Agent · RAG · Chatbot
+ deepeval test run
+ 50+ metrics, one CLI
+ Scored Trace
+ Span-level scores + reasons
+ 1 Coding Agent Cursor · Claude Code · Codex 
+ 2 Your AI App Agent · RAG · Chatbot 
+ 3 deepeval test run 50+ metrics, one CLI 
+ 4 Scored Trace Span-level scores + reasons 
+ ↑ back to coding agent · loop closes
+ Evaluate in code, scale with platform. 
+ DeepEval integrates natively with Confident AI, an AI observability and evaluation platform. Your traces and eval results stream to a shared workspace where engineering, product, QA, and domain experts work from the same data.
+ Explore enterprise
+ Regression Testing Experimentation Tracing & Observability Production Monitoring Dataset Management Prompt Versioning Human Annotation 
+ Any model. Any framework. Any pipeline. 
+ Plug DeepEval into the tools you already ship with — evaluate across any LLM, any agent framework, and any CI/CD runner without rewriting a line.
+ Frameworks 
+ LangChain 
+ LlamaIndex 
+ CrewAI 
+ OpenAI Agents 
+ LangGraph 
+ PydanticAI 
+ Anthropic 
+ Google ADK 
+ AgentCore 
+ Strands 
+ Vercel AI SDK 
+ OpenTelemetry 
+ Model Providers 
+ OpenAI 
+ Claude 
+ Gemini 
+ Azure OpenAI 
+ AWS Bedrock 
+ Vertex AI 
+ Mistral 
+ LiteLLM 
+ Portkey 
+ CI / CD 
+ GitHub Actions 
+ GitLab CI 
+ Jenkins 
+ CircleCI 
+ Buildkite 
+ Azure Pipelines 
+ Built by amazing humans. 
+ Nothing would be possible without our community of 250+ contributors, thank you!
+ penguine-ip — 4,686 contributions A-Vamshi — 1,477 contributions jwongster2 — 990 contributions kritinv — 940 contributions spike-spiegel-21 — 732 contributions BloggerBust — 389 contributions tanayvaswani — 170 contributions trevor-cai — 90 contributions Anindyadeep — 66 contributions Vasilije1990 — 28 contributions Pratyush-exe — 24 contributions Sidhaarth-Murali — 20 contributions john-lemmon-lime — 18 contributions agokrani — 17 contributions Sai-Suraj-27 — 15 contributions fetz236 — 14 contributions Peilun-Li — 13 contributions vjsliogeris — 12 contributions luarss — 11 contributions lesar64 — 10 contributions fschuh — 9 contributions tony-confidentai — 8 contributions Andrea23Romano — 7 contributions j-space-b — 7 contributions sergeyklay — 7 contributions AbhishekRP2002 — 6 contributions AlexMaggioni — 6 contributions ChristianBernhard — 6 contributions karankulshrestha — 6 contributions sahniaditya007 — 6 contributions wjunwei2001 — 6 contributions adityabharadwaj198 — 5 contributions Jeel3011 — 5 contributions ntgussoni — 5 contributions ps2program — 5 con
+
+=== [about] https://deepeval.com/docs/introduction (lang=en)
+Introduction to DeepEval | DeepEval - The LLM Evaluation Framework 
+ 💥 Introducing JevEval: Jev-as-a-Judge for LLM evaluation. Read the post → 
+ Docs 
+ Guides 
+ Tutorials 
+ Integrations 
+ Enterprise 
+ Changelog 
+ Blog 
+ Ask AI K 
+ Search Python v4.2.8 
+ Introduction Design Philosophy Comparisons Getting Started
+ Human 5-min Quickstart Vibe Coder 5-min Quickstart Vibe Coding with DeepEval Use Cases 
+ LLM Evals
+ Introduction Eval Modes Concepts 
+ End-to-End Evals 
+ Trajectory-Based Evals Component-Level Evals Unit Testing in CI/CD Flags and Configs Local Backend Storage Eval Metrics
+ Introduction Custom 
+ Agentic 
+ RAG 
+ Multi-Turn 
+ Voice 
+ MCP 
+ Safety 
+ Non-LLM 
+ Images 
+ Others 
+ Community 
+ Classifiers
+ Introduction Custom Classifier Behavioral 
+ Grounding 
+ Security 
+ Policy & Brand 
+ Format & Completion 
+ Prompt Optimization
+ Introduction Algorithms 
+ Synthetic Data Generation
+ Introduction Golden Synthesizer 
+ Conversation Simulator 
+ Benchmarks
+ Introduction Available Benchmarks 
+ Others
+ CLI Settings Environment Variables Troubleshooting FAQ Data Privacy Miscellaneous 
+ Introduction 
+ Introduction to DeepEval 
+ Copy Markdown Open 
+ DeepEval is an open-source LLM evaluation framework for LLM applications. DeepEval makes it extremely easy to build and iterate on LLM (applications) and was built with the following principles in mind:
+ Unit test LLM outputs with Pytest-style assertions.
+ Use 50+ ready-to-use metrics, including LLM-as-a-judge, Jev-as-a-judge, agent, tool-use,
+conversational, voice, safety, RAG, and multimodal metrics.
+ Evaluate AI agents, conversational agents (chatbots), voice AI, RAG pipelines, MCP systems, and
+other custom workflows.
+ Run end-to-end, trajectory-based, and component-level evals.
+ Generate synthetic datasets for edge cases that are hard to collect manually.
+ Customize metrics, prompts, models, and evaluation templates when built-in
+behavior is not enough.
+ DeepEval is local-first: your evaluations run in your own environment. When your
+team needs shared dashboards, regression tracking, observability, or production
+monitoring, DeepEval integrates natively with Confident AI .
+ Vibe coding? Have your coding agent set DeepEval up for you. 
+ Install the DeepEval Skill in Cursor, Claude Code, Codex, Windsurf , or any other AI coding tool, paste a starter prompt, and your coding agent will do the rest of the work. Click here to get started.
+ Who is DeepEval For? 
+ DeepEval was designed for a technical audience and here are the main personas we serve well:
+ AI engineers who need to evaluate agents, RAG pipelines, tool calls, and
+production LLM workflows, write unit tests for AI behavior, and use evals in
+agentic coding tools like Claude Code and Codex.
+ Data scientists who want repeatable experiments for comparing prompts,
+models, datasets, and metric scores.
+ QAs who need reliable regression tests for AI behavior before changes
+reach users.
+ Tech-savvy PMs who want to define quality criteria, inspect failures, and
+track whether product changes improve AI outputs.
+ Using DeepEval for Coding Agents 
+ Apart from building evaluation suites and pipelines with DeepEval, DeepEval's CLI evaluation capabilities make it one of the best eval harnesses for vibe coding agents such as Claude Code, Codex, and Cursor.
+ The diagram below explains how DeepEval can take part in your iteration cycles, not just as a final validation check.
+ DeepEval Eval harness for
+vibe coding agents 
+ Coding Agent
+ Cursor · Claude Code · Codex
+ Your AI App
+ Agent · RAG · Chatbot
+ deepeval test run
+ 50+ metrics, one CLI
+ Scored Trace
+ Span-
+
+=== [meta] https://deepeval.com
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: English
+
+=== [github] https://github.com/confident-ai/deepeval
+<p align="center">
+    <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="assets/hero/wordmark-dark.svg">
+        <img alt="DeepEval." src="assets/hero/wordmark-light.svg" width="520">
+    </picture>
+</p>
+
+<p align="center">
+    <h1 align="center">The LLM Evaluation Framework</h1>
+</p>
+
+<p align="center">
+<a href="https://trendshift.io/repositories/5917" target="_blank"><img src="https://trendshift.io/api/badge/repositories/5917" alt="confident-ai%2Fdeepeval | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+</p>
+
+<p align="center">
+    <a href="https://discord.gg/3SEyvpgu2f">
+        <img alt="discord-invite" src="https://dcbadge.limes.pink/api/server/3SEyvpgu2f?style=flat">
+    </a>
+    <a href="https://www.reddit.com/r/deepeval/">
+        <img alt="reddit-community" src="https://img.shields.io/badge/Reddit-r%2Fdeepeval-FF4500?logo=reddit&logoColor=white">
+    </a>
+</p>
+
+<h4 align="center">
+    <p>
+        <a href="https://deepeval.com/docs/getting-started?utm_source=GitHub">Documentation</a> |
+        <a href="#-metrics-and-features">Metrics and Features</a> |
+        <a href="#-quickstart">Getting Started</a> |
+        <a href="#-integrations">Integrations</a> |
+        <a href="https://www.confident-ai.com?utm_source=deepeval&utm_medium=github&utm_content=header_nav&ref_page=github/readme">Confident AI</a>
+    <p>
+</h4>
+
+<p align="center">
+    <a href="https://github.com/confident-ai/deepeval/releases">
+        <img alt="GitHub release" src="https://img.shields.io/github/release/confident-ai/deepeval.svg?color=violet">
+    </a>
+    <a href="https://colab.research.google.com/drive/1PPxYEBa6eu__LquGoFFJZkhYgWVYE6kh?usp=sharing">
+        <img alt="Try Quickstart in Colab" src="https://colab.research.google.com/assets/colab-badge.svg">
+    </a>
+    <a href="https://github.com/confident-ai/deepeval/blob/master/LICENSE.md">
+        <img alt="License" src="https://img.shields.io/github/license/confident-ai/deepeval.svg?color=yellow">
+    </a>
+    <a href="https://x.com/deepeval">
+        <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/deepeval?style=social&logo=x">
+    </a>
+</p>
+
+<p align="center">
+    <!-- Keep these links. Translations will automatically update with the README. -->
+    <a href="https://www.readme-i18n.com/confident-ai/deepeval?lang=de">Deutsch</a> | 
+    <a href="https://www.readme-i18n.com/confident-ai/deepeval?lang=es">Español</a> | 
+    <a href="https://www.readme-i18n.com/confident-ai/deepeval?lang=fr">français</a> | 
+    <a href="https://www.readme-i18n.com/confident-ai/deepeval?lang=ja">日本語</a> | 
+    <a href="https://www.readme-i18n.com/confident-ai/deepeval?lang=ko">한국어</a> | 
+    <a href="https://www.readme-i18n.com/confident-ai/deepeval?lang=pt">Português</a> | 
+    <a href="https://www.readme-i18n.com/confident-ai/deepeval?lang=ru">Русский</a> | 
+    <a href="https://www.readme-i18n.com/confident-ai/deepeval?lang=zh">中文</a>
+</p>
+
+**DeepEval** is a simple-to-use, open-source LLM evaluation framework, for evaluating large-language model systems. It is similar to Pytest but specialized for unit testing LLM apps. DeepEval incorporates the latest research to run evals via metrics such as G-Eval, task completion, answer relevancy, hallucination, etc., which use LLM-as-a-judge and other NLP models that run **locally on your machine**.
+
+Whether you're building AI agents, RAG pipelines, or chatbots, implemented via LangChain or OpenAI, DeepEval has you covered. With it, you can easily evaluate:
+
+- **LLM apps end-to-end** as black boxes
+- **Complete agent trajectories** across every decision and action
+- **Individual agent steps** such as LLM calls, tool use, retrieval, and sub-agent handoffs
+
+Use these evaluations to determine the optimal models, prompts, and architecture to improve your AI quality, prevent prompt drifting, or even transition from OpenAI to Claude with confidence.
+
+> Jev is now available in DeepEval, both in existing metrics and the latest [JevEval.](https://deepeval.com/docs/metrics-jev-eval)
+
+> [!IMPORTANT]
+> Want to compare iterations, share evaluation reports, and monitor your AI in production? [Sign up for Confide

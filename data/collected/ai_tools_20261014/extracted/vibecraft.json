@@ -1,0 +1,100 @@
+{
+ "company": null,
+ "one_liner_ko": "AI 코딩 에이전트를 실시간 전략(RTS) 게임처럼 관리하는 작업 공간.",
+ "what_it_does_ko": "VibeCraft는 로컬 코딩 작업 흐름을 시각적 전략 게임으로 바꾼 작업 공간이다. 에이전트·폴더·터미널·브라우저가 하나의 무한 캔버스 위에 놓인다. Claude·Codex 에이전트를 유닛처럼 생성해 프로젝트 폴더에 붙여 작업을 시키고, 폴더에서 git worktree 작업을 실행한다. 엔티티를 선택하면 HUD에 상태와 가능한 동작이 표시된다.",
+ "key_features": [
+  "Claude·Codex 에이전트를 유닛으로 생성",
+  "에이전트를 프로젝트 폴더에 붙여 맥락 안에서 작업",
+  "에이전트·작업 공간별 터미널",
+  "여러 프로젝트를 한 캔버스에",
+  "폴더 엔티티에서 git worktree 생성·동기화·병합",
+  "내장 브라우저 패널",
+  "에이전트 상태 색 표시"
+ ],
+ "use_cases_ko": [
+  "두 에이전트를 서로 다른 프로젝트 폴더에 붙여 기능 작업 병렬 진행",
+  "앱 터미널·문서 브라우저 패널을 옆에 두고 에이전트로 빠르게 수정 반복"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "맥",
+  "윈도"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/rayzhudev/vibecraft",
+   "quote": "**An RTS-style workspace for managing AI coding agents.**"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/rayzhudev/vibecraft",
+   "quote": "VibeCraft turns your local coding workflow into a visual strategy game: agents, folders, terminals, and browsers all live on one shared canvas."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/rayzhudev/vibecraft",
+   "quote": "Spawn Claude and Codex agents as units"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/rayzhudev/vibecraft",
+   "quote": "When you select an entity, the HUD shows:"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/rayzhudev/vibecraft",
+   "quote": "Attach agents to project folders and run tasks in context"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/rayzhudev/vibecraft",
+   "quote": "Open terminals for each agent and workspace"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/rayzhudev/vibecraft",
+   "quote": "Keep multiple projects visible in one place"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/rayzhudev/vibecraft",
+   "quote": "Use folder git worktree actions to create/sync/merge worktrees"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/rayzhudev/vibecraft",
+   "quote": "**Browser panels**: embedded web views for docs/tools"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/rayzhudev/vibecraft",
+   "quote": "### Agent Status Colors"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/rayzhudev/vibecraft",
+   "quote": "Attach each one to a different project folder"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/rayzhudev/vibecraft",
+   "quote": "Keep docs/reference open in a browser panel"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/rayzhudev/vibecraft",
+   "quote": "- macOS, Windows, or Linux"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [],
+ "note": "GitHub README만 받음. 라이선스는 'See LICENSE'로만 적혀 이름 불명. 요금 표기 없음. 리눅스도 지원."
+}

@@ -1,0 +1,39 @@
+{
+ "company": "Stanford CRFM",
+ "one_liner_ko": "생의학 문헌으로 학습해 의료 질의응답 성능을 끌어올린 27억 파라미터 언어 모델.",
+ "what_it_does_ko": "BioMedLM은 Stanford CRFM이 MosaicML과 함께 만든 27억 파라미터 GPT 계열 언어 모델로, 생의학 초록과 논문만으로 학습했다(이전 이름 PubMedGPT). PubMed 초록으로 학습한 전용 토크나이저를 써서 생의학 용어를 통째로 하나의 토큰으로 다룬다. 미세조정 후 MedQA 생의학 질의응답에서 50.3% 정확도로 당시 최고 성능을 냈고, PubMedQA·BioASQ에서도 경쟁력 있는 결과를 보였다. 커뮤니티에 공개됐으며, 텍스트 생성 기능은 연구용일 뿐 실서비스용이 아니라고 밝힌다.",
+ "key_features": [
+  "27억 파라미터 GPT-2 구조의 자기회귀 언어 모델",
+  "PubMed 초록·논문(The Pile)만으로 학습",
+  "PubMed 초록으로 학습한 생의학 전용 토크나이저",
+  "MedQA 50.3%로 당시 최고 성능",
+  "PubMedQA·BioASQ 질의응답 미세조정 결과 공개"
+ ],
+ "use_cases_ko": [
+  "연구자가 생의학 NLP 응용과 도메인 특화 모델 학습 방법을 연구"
+ ],
+ "pricing": {"free_tier": "불명", "plans": [], "pricing_url": null},
+ "open_source": null,
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://crfm.stanford.edu/2022/12/15/biomedlm.html", "quote": "We partnered with MosaicML to build BioMedLM"},
+  {"field": "company", "url": "https://crfm.stanford.edu/2022/12/15/biomedlm.html", "quote": "Stanford CRFM has recently been studying domain-specific foundation models"},
+  {"field": "one_liner_ko", "url": "https://crfm.stanford.edu/2022/12/15/biomedlm.html", "quote": "We introduce a new 2.7B parameter language model trained on biomedical literature which delivers an improved state of the art for medical question answering."},
+  {"field": "what_it_does_ko", "url": "https://crfm.stanford.edu/2022/12/15/biomedlm.html", "quote": "(Note: This model was previously known as PubMedGPT.)"},
+  {"field": "what_it_does_ko", "url": "https://crfm.stanford.edu/2022/12/15/biomedlm.html", "quote": "Today we are excited to make this model available to the community."},
+  {"field": "what_it_does_ko", "url": "https://crfm.stanford.edu/2022/12/15/biomedlm.html", "quote": "this model’s generation capabilities are only for research purposes and not suitable for production"},
+  {"field": "key_features", "url": "https://crfm.stanford.edu/2022/12/15/biomedlm.html", "quote": "BioMedLM is an autoregressive language model with 2.7B parameters. It uses the standard GPT-2 architecture"},
+  {"field": "key_features", "url": "https://crfm.stanford.edu/2022/12/15/biomedlm.html", "quote": "BioMedLM was trained on all the PubMed abstracts and full documents from The Pile ."},
+  {"field": "key_features", "url": "https://crfm.stanford.edu/2022/12/15/biomedlm.html", "quote": "The model uses a custom tokenizer trained on the PubMed Abstracts."},
+  {"field": "key_features", "url": "https://crfm.stanford.edu/2022/12/15/biomedlm.html", "quote": "including a new state of the art performance of 50.3% accuracy on the MedQA biomedical question answering task"},
+  {"field": "key_features", "url": "https://crfm.stanford.edu/2022/12/15/biomedlm.html", "quote": "We focused on 3 common biomedical NLP QA tasks: MedQA , PubMedQA , and BioASQ ."},
+  {"field": "use_cases_ko", "url": "https://crfm.stanford.edu/2022/12/15/biomedlm.html", "quote": "we hope to advance both the development of biomedical NLP applications and best practices for responsibly training and utilizing domain-specific language models"},
+  {"field": "korean_support", "url": "https://crfm.stanford.edu/2022/12/15/biomedlm.html", "quote": "화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [
+  {"official": "Stanford CRFM 연구용 모델로 커뮤니티에 공개, 생성 기능은 연구 목적 전용(실서비스 부적합)", "diff": "기존 '엔터프라이즈(가격 문의)'와 달리 판매 제품이 아닌 공개 연구 모델", "url": "https://crfm.stanford.edu/2022/12/15/biomedlm.html"}
+ ],
+ "plan_change": []
+}

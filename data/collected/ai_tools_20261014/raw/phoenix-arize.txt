@@ -1,0 +1,695 @@
+=== [home] https://arize.com/phoenix/ (lang=en-US)
+Arize Phoenix: Open-Source LLM Observability & Agent Evaluation 
+ {
+ this.showMobileNavigation = false;
+ this.secondaryMobileNavigation = null;
+ });
+ this.$watch('showMobileNavigation', value => {
+ document.body.classList.toggle('overflow-hidden', value);
+ });
+ }
+ }"
+ class="wrapper dark [color-scheme:dark]">
+ Visit brand hub 
+ { if (!$el.contains(document.activeElement)) closeDropdown() }, 10)"
+ @mouseenter="openDropdown()"
+ @mouseleave="closeDropdown()"
+ @resize.window.debounce.100ms="measure()">
+ Arize AX 
+ { if (!$el.contains(document.activeElement)) closeDropdown() }, 10)"
+ @mouseenter="openDropdown()"
+ @mouseleave="closeDropdown()"
+ @resize.window.debounce.100ms="measure()">
+ Phoenix OSS 
+ { if (!$el.contains(document.activeElement)) closeDropdown() }, 10)"
+ @mouseenter="openDropdown()"
+ @mouseleave="closeDropdown()"
+ @resize.window.debounce.100ms="measure()">
+ Docs 
+ Docs
+ Phoenix OSS 
+ Open-source observability and evals 
+ Arize AX 
+ Managed AI engineering platform 
+ { if (!$el.contains(document.activeElement)) closeDropdown() }, 10)"
+ @mouseenter="openDropdown()"
+ @mouseleave="closeDropdown()"
+ @resize.window.debounce.100ms="measure()">
+ Learn 
+ Start here
+ Blog 
+ AI engineering best practices 
+ Video tutorials 
+ Hands-on product walkthroughs 
+ Build your playbook
+ Resources 
+ Guides, templates, and reports 
+ Glossary 
+ Learn AI engineering terminology 
+ Courses & certifications 
+ Build practical AI engineering skills 
+ See it in production
+ Customers 
+ How teams ship production AI 
+ Events 
+ Live and on-demand events 
+ Community 
+ Connect with AI engineers 
+ { if (!$el.contains(document.activeElement)) closeDropdown() }, 10)"
+ @mouseenter="openDropdown()"
+ @mouseleave="closeDropdown()"
+ @resize.window.debounce.100ms="measure()">
+ Company 
+ Company
+ About 
+ We power the future of AI 
+ Careers 
+ Join a world class team 
+ Partners 
+ Partner with us 
+ Press 
+ Updates from the newsroom 
+ Security 
+ We take your trust seriously 
+ { if (!$el.contains(document.activeElement)) closeDropdown() }, 10)"
+ @mouseenter="openDropdown()"
+ @mouseleave="closeDropdown()"
+ @resize.window.debounce.100ms="measure()">
+ Pricing 
+ ... 
+ AX sign in 
+ AX sign up 
+ Looking for Phoenix Cloud?
+ Arize AX 
+ Back 
+ Phoenix OSS
+ Docs 
+ Join us on Slack 
+ AX sign in
+ AX sign up
+ Looking for Phoenix Cloud?
+ Open-source
+AI observability &
+evaluation
+ Trace, evaluate, and improve AI agents with Phoenix. Run locally or self-host in your environment.
+ Self-host 
+ AX Cloud 
+ start free
+no credit card required
+ Get Started Locally
+ $ 
+ uvx arize-phoenix serve 
+ Add Tracing using a Coding Agent
+ npx 
+ install 
+ What does this run? 
+ Setup guide
+ → 
+ Trusted by Builders
+ Join thousands of developers who ship AI with confidence.
+ ★ ... GitHub Stars 
+ 3M+ Downloads 
+ 3M+
+ Downloads Monthly
+ 10k+
+ GitHub Stars
+ 7k+
+ Community
+ 22M+
+ OTEL Instrumentation Monthly Downloads
+ We are in an exciting time for AI technology including LLMs. We will need better tools to understand and monitor an LLM’s decision making. With Phoenix, Arize is offering an open source way to do exactly just that in a nifty library.
+ Erick Siavichay
+ Project Mentor, Inspirit AI
+ I always get asked what my favorite Open Source eval tool is. The most impressive one thus far to me is Phoenix.
+ Hamel Husain
+ Founder, Parlance Labs
+ As LLM-powered applications increase in sophistication and new use cases emerge, deeper capabilities around LLM observability are needed to help debug and troubleshoot. We’re pleased to see this open-source solution from Arize, along with a one-click integration to LlamaIndex, and recommend any AI engineers or developers building with LlamaIndex check it out.
+ Jerry Liu
+ CEO and Co-Founder, LlamaIndex
+ This is something that I was wanting to build at some point in the future, so I’m really happy to not have to build it. This is amazing.
+ Tom Matthews
+ Machine Learning Engineer at Unitary.ai
+ Arize’s Phoenix tool uses one LLM to evaluate another for relevance, toxicity, and quality of responses. The tool uses ‘Traces’ to record the paths taken by LLM requests (made by an application or end user) as they propagate through multiple steps. An accompanying OpenInference specification uses telemetry data to understand the execution of LLMs and the surrounding application context. In short, it’s possible to figure out where an LLM workflow broke or troubleshoot problems related to retrieval and tool execution.
+ Lucas Mearian
+ Senior Reporter, ComputerWorld
+ Large language models…remain susceptible to hallucination — in other words, producing false or misleading results. Phoenix, announced today at Arize AI’s Observe 2023 summit, targets this exact problem by visualizing complex LLM decision-making and flagging when and where models fail, go wrong, give poor responses or incorrectly generalize.
+ Shubham Sharma
+ VentureBeat
+ Phoenix is a much-appreciated advancement in model observability and production. The integration of observability utilities directly into the development process not only saves time but encourages model development and production teams to actively think about model use and ongoing improvements before releasing to production. This is a big win for management of the model lifecycle.
+ Christopher Brown
+ CEO and Co-Founder of Decision Patterns and a former UC Berkeley Computer Science lecturer
+ Phoenix integrated into our team’s existing data science workflows and enabled the exploration of unstructured text data to identify root causes of unexpected user inputs, problematic LLM responses, and gaps in our knowledge base.
+ Yuki Waka
+ Application Developer, Klick
+ Customers 
+ AI Engineers & Fortune 500 alike
+ AI Engineering Agent 
+ Talk with your traces
+ Investigate issues, add annotations, run experiments, and more.
+ Learn about PXI → 
+ Tracing 
+ Get visibility into your agents
+ Without tracing, you’re flying blind. Phoenix shows every step your agent takes so you know what went wrong.
+ Start tracing → 
+ Evaluation 
+ Measure and improve agent quality
+ Build evals that score outputs and catch issues before they reach your users.
+ Build your first Eval → 
+ Iteration 
+ Test changes with evidence
+ Create datasets from traces, run experiments, and ship improvements.
+ Open the Prompt IDE → 
+ Agent Integrations 
+ Agent Native
+ npx skills add Arize-ai/phoenix
+ Build automations using coding agents so you can focus on the things that matter.
+ Connect your agents → 
+ Why do I need phoenix? 
+ A systematic way to improve AI quality
+ OBSERVE
+ ANNOTATE
+ HYPOTHESIZE
+ EXPERIMENT
+ MEASURE
+ OBSERVE
+ 1 
+ Why did my agent respond like that? Trace every step: prompts, retrievals, tool calls, outputs.
+ TRACING → 
+ ANNOTATE
+ 2 
+ Mark what worked. Flag what broke. Add labels with human review or LLM-as-judge.
+ ANNOTATIONS → 
+ HYPOTHESIZE
+ 3 
+ Find the pattern. Is it the prompt? The retrieval? The model? Form a hypothesis about what to change.
+ DATASETS → 
+ EXPERIMENT
+ 4 
+ Test your hypothesis. Make a change, run it under the same conditions, and benchmark performance.
+ EXPERIMENTS → 
+ MEASURE
+ 5 
+ Score output across cost, latency, and performance. Ship only what improves quality.
+ EVALUATIONS → 
+ Ask Another Question
+ Why did my agent respond like that? Trace every step: prompts, retrievals, tool calls, outputs.
+ OSS Core. 
+ Built by Engineers for builders like you.
+ ... 
+ Own your AI Stack
+ Privacy
+ Privacy
+ Your traces stay in your environment. Self-host Phoenix and keep sensitive data on your own infrastructure.
+ OS
+
+=== [pricing] https://arize.com/pricing/ (lang=en-US)
+Arize AX Pricing: AI agent observability and evaluation - Arize AI 
+ {
+ this.showMobileNavigation = false;
+ this.secondaryMobileNavigation = null;
+ });
+ this.$watch('showMobileNavigation', value => {
+ document.body.classList.toggle('overflow-hidden', value);
+ });
+ }
+ }"
+ class="wrapper ">
+ Visit brand hub 
+ { if (!$el.contains(document.activeElement)) closeDropdown() }, 10)"
+ @mouseenter="openDropdown()"
+ @mouseleave="closeDropdown()"
+ @resize.window.debounce.100ms="measure()">
+ Arize AX 
+ { if (!$el.contains(document.activeElement)) closeDropdown() }, 10)"
+ @mouseenter="openDropdown()"
+ @mouseleave="closeDropdown()"
+ @resize.window.debounce.100ms="measure()">
+ Phoenix OSS 
+ { if (!$el.contains(document.activeElement)) closeDropdown() }, 10)"
+ @mouseenter="openDropdown()"
+ @mouseleave="closeDropdown()"
+ @resize.window.debounce.100ms="measure()">
+ Docs 
+ Docs
+ Arize AX 
+ Managed AI engineering platform 
+ Phoenix OSS 
+ Open-source observability and evals 
+ { if (!$el.contains(document.activeElement)) closeDropdown() }, 10)"
+ @mouseenter="openDropdown()"
+ @mouseleave="closeDropdown()"
+ @resize.window.debounce.100ms="measure()">
+ Learn 
+ Start here
+ Blog 
+ AI engineering best practices 
+ Video tutorials 
+ Hands-on product walkthroughs 
+ Build your playbook
+ Resources 
+ Guides, templates, and reports 
+ Glossary 
+ Learn AI engineering terminology 
+ Courses & certifications 
+ Build practical AI engineering skills 
+ See it in production
+ Customers 
+ How teams ship production AI 
+ Events 
+ Live and on-demand events 
+ Community 
+ Connect with AI engineers 
+ { if (!$el.contains(document.activeElement)) closeDropdown() }, 10)"
+ @mouseenter="openDropdown()"
+ @mouseleave="closeDropdown()"
+ @resize.window.debounce.100ms="measure()">
+ Company 
+ Company
+ About 
+ We power the future of AI 
+ Careers 
+ Join a world class team 
+ Partners 
+ Partner with us 
+ Press 
+ Updates from the newsroom 
+ Security 
+ We take your trust seriously 
+ { if (!$el.contains(document.activeElement)) closeDropdown() }, 10)"
+ @mouseenter="openDropdown()"
+ @mouseleave="closeDropdown()"
+ @resize.window.debounce.100ms="measure()">
+ Pricing 
+ Sign in 
+ Try Arize AX 
+ Book a Demo 
+ Arize AX 
+ Back 
+ Phoenix OSS 
+ Back 
+ Docs 
+ Back 
+ Docs
+ Arize AX 
+ Managed AI engineering platform 
+ Phoenix OSS 
+ Open-source observability and evals 
+ Learn 
+ Back 
+ Start here
+ Blog 
+ AI engineering best practices 
+ Video tutorials 
+ Hands-on product walkthroughs 
+ Build your playbook
+ Resources 
+ Guides, templates, and reports 
+ Glossary 
+ Learn AI engineering terminology 
+ Courses & certifications 
+ Build practical AI engineering skills 
+ See it in production
+ Customers 
+ How teams ship production AI 
+ Events 
+ Live and on-demand events 
+ Community 
+ Connect with AI engineers 
+ Company 
+ Back 
+ Company
+ About 
+ We power the future of AI 
+ Careers 
+ Join a world class team 
+ Partners 
+ Partner with us 
+ Press 
+ Updates from the newsroom 
+ Security 
+ We take your trust seriously 
+ Pricing 
+ Back 
+ Sign up 
+ Book a demo 
+ Pricing
+ AX Free
+ For builders
+ Free 
+ Start for free 
+ No credit card required 
+ Signal
+ 10 issues per month 
+ Trace spans
+ 25k spans per month 
+ Ingestion volume
+ 1 GB per month 
+ Retention
+ 15 days 
+ Deployment
+ SaaS 
+ Users
+ Unlimited 
+ Evals
+ Unlimited 
+ AX Pro
+ For AI-native teams
+ $50 
+ per month 
+ Sign up 
+ Signal
+ 25 issues per month 
+ Trace spans
+ 50k spans per month 
+ Ingestion volume
+ 10 GB per month 
+ Retention
+ 30 days 
+ Deployment
+ SaaS 
+ Users
+ Unlimited 
+ Evals
+ Unlimited 
+ AX Enterprise
+ For teams with scaled AI use cases
+ Custom 
+ Request demo 
+ Signal
+ Unlimited 
+ Trace spans
+ Custom 
+ Ingestion Volume
+ Custom 
+ Retention
+ Custom 
+ Deployment
+ SaaS or Self-Hosted 
+ Users
+ Unlimited 
+ Evals
+ Unlimited 
+ Startup pricing available 
+ Powering the world’s leading AI teams
+ svg]:h-[16px] md:[&>svg]:h-[23px] [&>svg]:w-auto"> 
+ svg]:h-[16px] md:[&>svg]:h-[23px] [&>svg]:w-auto"> 
+ svg]:h-[16px] md:[&>svg]:h-[23px] [&>svg]:w-auto"> 
+ svg]:h-[16px] md:[&>svg]:h-[23px] [&>svg]:w-auto"> 
+ svg]:h-[16px] md:[&>svg]:h-[23px] [&>svg]:w-auto"> 
+ svg]:h-[16px] md:[&>svg]:h-[23px] [&>svg]:w-auto"> 
+ svg]:h-[16px] md:[&>svg]:h-[23px] [&>svg]:w-auto"> 
+ svg]:h-[16px] md:[&>svg]:h-[23px] [&>svg]:w-auto"> 
+ svg]:h-[16px] md:[&>svg]:h-[23px] [&>svg]:w-auto"> 
+ svg]:h-[16px] md:[&>svg]:h-[23px] [&>svg]:w-auto"> 
+ svg]:h-[16px] md:[&>svg]:h-[23px] [&>svg]:w-auto"> 
+ svg]:h-[16px] md:[&>svg]:h-[23px] [&>svg]:w-auto"> 
+ svg]:h-[16px] md:[&>svg]:h-[23px] [&>svg]:w-auto"> 
+ svg]:h-[16px] md:[&>svg]:h-[23px] [&>svg]:w-auto"> 
+ svg]:h-[16px] md:[&>svg]:h-[23px] [&>svg]:w-auto"> 
+ svg]:h-[16px] md:[&>svg]:h-[23px] [&>svg]:w-auto"> 
+ See full capabilities 
+ AX Free
+ For builders 
+ $0 
+ Start for free 
+ AX Pro
+ For AI-native teams 
+ $50/mo 
+ Sign up 
+ AX Enterprise
+ For custom plans 
+ Request demo 
+ Core Platform
+ Signal  
+ Custom Managed Agents  
+ - 
+ - 
+ Span volume 
+ Included 25k/month 
+ Included 50k/month 
+ Custom 
+ Storage (GB) 
+ 1 GB 
+ 10 GB 
+ Custom 
+ Retention 
+ 15 days 
+ 30 days 
+ Custom 
+ Projects 
+ - 
+ - 
+ Custom 
+ Users 
+ Unlimited 
+ Unlimited 
+ Unlimited 
+ Evaluations 
+ Unlimited 
+ Unlimited 
+ Unlimited 
+ Experiments 
+ Unlimited 
+ Unlimited 
+ Unlimited 
+ Human annotations 
+ Unlimited 
+ Unlimited 
+ Unlimited 
+ Labeling queues 
+ Unlimited 
+ Unlimited 
+ Unlimited 
+ Data Fabric  
+ - 
+ - 
+ Deployment 
+ SaaS 
+ SaaS 
+ SaaS or Self-Hosted 
+ Agents
+ Alyx  
+ Signal  
+ 10 issues / mo 
+ 25 issues / mo 
+ Unlimited 
+ Custom Managed Agents  
+ - 
+ - 
+ Repo Access  
+ - 
+ - 
+ Unlimited 
+ Customize AI Provider 
+ Arize-managed 
+ Arize-managed 
+ Bring your own key + Arize-managed 
+ Swarm observability across managed and third-party agents  
+ - 
+ - 
+ Observability
+ OpenTelemetry compliant 
+ Token, latency, and cost tracking 
+ Session support 
+ Multi-modal tracing support (image, voice, pdf) 
+ Data Fabric  
+ - 
+ - 
+ Agent trajectory visualizations (path and graph) 
+ Custom dashboards 
+ Custom metrics 
+ Custom monitors 
+ Custom views on traces 
+ Evaluation
+ Online evals on traces/spans 
+ Unlimited 
+ Unlimited 
+ Unlimited 
+ Offline evals on datasets & experiments 
+ Unlimited 
+ Unlimited 
+ Unlimited 
+ Custom code evaluators 
+ - 
+ - 
+ Align evaluators  
+ Trace Evals: Evaluate agent trajectories  
+ Session Evals: Evaluate multi-turn conversations  
+ Agent as a judge  
+ Agent Experimentation: Run your agent in playground  
+ Multi-modal evaluation (image, voice, pdf) 
+ Human annotations and feedback 
+ Labeling queues 
+ Experimentation
+ Playgrounds 
+ Unlimited 
+ Unlimited 
+ Unlimited 
+ Datasets 
+ Unlimited 
+ Unlimited 
+ Unlimited 
+ Experiments 
+ Unlimited 
+ 
+
+=== [about] https://arize.com/about/ (lang=en-US)
+About Arize AI | Founders, Team, Awards & AI Infra & Ethics Alliance 
+ {
+ this.showMobileNavigation = false;
+ this.secondaryMobileNavigation = null;
+ });
+ this.$watch('showMobileNavigation', value => {
+ document.body.classList.toggle('overflow-hidden', value);
+ });
+ }
+ }"
+ class="wrapper ">
+ Visit brand hub 
+ { if (!$el.contains(document.activeElement)) closeDropdown() }, 10)"
+ @mouseenter="openDropdown()"
+ @mouseleave="closeDropdown()"
+ @resize.window.debounce.100ms="measure()">
+ Arize AX 
+ { if (!$el.contains(document.activeElement)) closeDropdown() }, 10)"
+ @mouseenter="openDropdown()"
+ @mouseleave="closeDropdown()"
+ @resize.window.debounce.100ms="measure()">
+ Phoenix OSS 
+ { if (!$el.contains(document.activeElement)) closeDropdown() }, 10)"
+ @mouseenter="openDropdown()"
+ @mouseleave="closeDropdown()"
+ @resize.window.debounce.100ms="measure()">
+ Docs 
+ Docs
+ Arize AX 
+ Managed AI engineering platform 
+ Phoenix OSS 
+ Open-source observability and evals 
+ { if (!$el.contains(document.activeElement)) closeDropdown() }, 10)"
+ @mouseenter="openDropdown()"
+ @mouseleave="closeDropdown()"
+ @resize.window.debounce.100ms="measure()">
+ Learn 
+ Start here
+ Blog 
+ AI engineering best practices 
+ Video tutorials 
+ Hands-on product walkthroughs 
+ Build your playbook
+ Resources 
+ Guides, templates, and reports 
+ Glossary 
+ Learn AI engineering terminology 
+ Courses & certifications 
+ Build practical AI engineering skills 
+ See it in production
+ Customers 
+ How teams ship production AI 
+ Events 
+ Live and on-demand events 
+ Community 
+ Connect with AI engineers 
+ { if (!$el.contains(document.activeElement)) closeDropdown() }, 10)"
+ @mouseenter="openDropdown()"
+ @mouseleave="closeDropdown()"
+ @resize.window.debounce.100ms="measure()">
+ Company 
+ Company
+ About 
+ We power the future of AI 
+ Careers 
+ Join a world class team 
+ Partners 
+ Partner with us 
+ Press 
+ Updates from the newsroom 
+ Security 
+ We take your trust seriously 
+ { if (!$el.contains(document.activeElement)) closeDropdown() }, 10)"
+ @mouseenter="openDropdown()"
+ @mouseleave="closeDropdown()"
+ @resize.window.debounce.100ms="measure()">
+ Pricing 
+ Sign in 
+ Try Arize AX 
+ Book a Demo 
+ Arize AX 
+ Back 
+ Phoenix OSS 
+ Back 
+ Docs 
+ Back 
+ Docs
+ Arize AX 
+ Managed AI engineering platform 
+ Phoenix OSS 
+ Open-source observability and evals 
+ Learn 
+ Back 
+ Start here
+ Blog 
+ AI engineering best practices 
+ Video tutorials 
+ Hands-on product walkthroughs 
+ Build your playbook
+ Resources 
+ Guides, templates, and reports 
+ Glossary 
+ Learn AI engineering terminology 
+ Courses & certifications 
+ Build practical AI engineering skills 
+ See it in production
+ Customers 
+ How teams ship production AI 
+ Events 
+ Live and on-demand events 
+ Community 
+ Connect with AI engineers 
+ Company 
+ Back 
+ Company
+ About 
+ We power the future of AI 
+ Careers 
+ Join a world class team 
+ Partners 
+ Partner with us 
+ Press 
+ Updates from the newsroom 
+ Security 
+ We take your trust seriously 
+ Pricing 
+ Back 
+ Sign up 
+ Book a demo 
+ About Arize 
+ We make AI work
+ We are a team of engineers, researchers, and builders passionate about making AI work in the real world. If you’re building the future of AI, let’s talk.
+ Backed by
+ svg]:h-[16px] md:[&>svg]:h-[23px] [&>svg]:w-auto"> 
+ svg]:h-[16px] md:[&>svg]:h-[23px] [&>svg]:w-auto"> 
+ svg]:h-[16px] md:[&>svg]:h-[23px] [&>svg]:w-auto"> 
+ svg]:h-[16px] md:[&>svg]:h-[23px] [&>svg]:w-auto"> 
+ svg]:h-[16px] md:[&>svg]:h-[23px] [&>svg]:w-auto"> 
+ svg]:h-[16px] md:[&>svg]:h-[23px] [&>svg]:w-auto"> 
+ svg]:h-[16px] md:[&>svg]:h-[23px] [&>svg]:w-auto"> 
+ svg]:h-[16px] md:[&>
+
+=== [meta] https://arize.com/phoenix/
+html lang: en-US
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/Arize-ai/phoenix
+<p align="center">
+    <a target="_blank" href="https://phoenix.arize.com" style="background:none">
+        <img alt="phoenix banner" src="https://github.com/Arize-ai/phoenix-assets/blob/main/images/socal/github-large-banner-phoenix-v2.jpg?raw=true" width="auto" height="auto"></img>
+    </a>
+    <br/>
+    <br/>
+    <b>🇺🇸 English</b> • <a href="docs/i18n/README.zh.md">🇨🇳 中文</a> • <a href="docs/i18n/README.zh-TW.md">🇹🇼 繁體中文</a> • <a href="docs/i18n/README.ja.md">🇯🇵 日本語</a> • <a href="docs/i18n/README.pt-PT.md">🇵🇹 Português</a> • <a href="docs/i18n/README.pt-BR.md">🇧🇷 Português</a> • <a href="docs/i18n/README.ko.md">🇰🇷 한국어</a> • <a href="docs/i18n/README.es.md">🇪🇸 Español</a> • <a href="docs/i18n/README.de.md">🇩🇪 Deutsch</a> • <a href="docs/i18n/README.fr.md">🇫🇷 Français</a> • <a href="docs/i18n/README.he.md">🇮🇱 עברית</a> • <a href="docs/i18n/README.ar.md">🇸🇦 العربية</a> • <a href="docs/i18n/README.ru.md">🇷🇺 Русский</a> • <a href="docs/i18n/README.pl.md">🇵🇱 Polski</a> • <a href="docs/i18n/README.cs.md">🇨🇿 Čeština</a> • <a href="docs/i18n/README.nl.md">🇳🇱 Nederlands</a> • <a href="docs/i18n/README.tr.md">🇹🇷 Türkçe</a> • <a href="docs/i18n/README.uk.md">🇺🇦 Українська</a> • <a href="docs/i18n/README.vi.md">🇻🇳 Tiếng Việt</a> • <a href="docs/i18n/README.tl.md">🇵🇭 Tagalog</a> • <a href="docs/i18n/README.id.md">🇮🇩 Indonesia</a> • <a href="docs/i18n/README.th.md">🇹🇭 ไทย</a> • <a href="docs/i18n/README.hi.md">🇮🇳 हिन्दी</a> • <a href="docs/i18n/README.bn.md">🇧🇩 বাংলা</a> • <a href="docs/i18n/README.ur.md">🇵🇰 اردو</a> • <a href="docs/i18n/README.ro.md">🇷🇴 Română</a> • <a href="docs/i18n/README.sv.md">🇸🇪 Svenska</a> • <a href="docs/i18n/README.it.md">🇮🇹 Italiano</a> • <a href="docs/i18n/README.el.md">🇬🇷 Ελληνικά</a> • <a href="docs/i18n/README.hu.md">🇭🇺 Magyar</a> • <a href="docs/i18n/README.fi.md">🇫🇮 Suomi</a> • <a href="docs/i18n/README.da.md">🇩🇰 Dansk</a> • <a href="docs/i18n/README.no.md">🇳🇴 Norsk</a>
+    <br/>
+    <br/>
+    <a href="https://arize.com/docs/phoenix/">
+        <img src="https://img.shields.io/static/v1?message=Docs&logo=data:image/png;base64,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

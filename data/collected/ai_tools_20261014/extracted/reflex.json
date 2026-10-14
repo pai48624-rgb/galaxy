@@ -1,0 +1,190 @@
+{
+ "company": "Reflex",
+ "one_liner_ko": "회사가 사던 소프트웨어를 직접 만들도록, AI로 업무용 앱·에이전트·워크플로를 만들고 테스트·배포하는 플랫폼(순수 Python 기반)",
+ "what_it_does_ko": "Reflex는 회사의 업무 흐름·데이터·요구사항을 실제 운영 소프트웨어로 바꾸는 플랫폼이다. AI Builder가 앱을 먼저 계획한 뒤 실제 라우트·상태·화면을 만들고 넘기기 전에 테스트를 돌린다. 데이터베이스·모델·API·인증 등 기존 시스템과 연결하고, Reflex Cloud나 자체 클라우드·온프레미스에 배포할 수 있다. 바탕이 되는 Reflex 프레임워크는 프론트엔드와 백엔드를 모두 순수 Python으로 작성하는 오픈소스(Apache 2.0) 라이브러리다.",
+ "key_features": [
+  "대화형 AI Builder로 앱 생성·수정(계획→구현→테스트)",
+  "AI 보조 테스트(pytest·브라우저·UI)",
+  "데이터베이스·모델·API·인증 통합",
+  "Reflex Cloud 관리형 호스팅 또는 자체 클라우드·온프레미스 배포",
+  "앱 코드 다운로드와 GitHub 저장소 동기화",
+  "MCP + Skills로 AI 코딩 에이전트 연결",
+  "보안·성능 스캐너(베타)",
+  "순수 Python 풀스택 웹 프레임워크(오픈소스)"
+ ],
+ "use_cases_ko": [
+  "기업이 사내 도구·대시보드·포털을 만들어 SaaS 대체",
+  "금융·제조·의료 등 업종별 업무 앱 구축",
+  "Python 개발자가 JavaScript 없이 풀스택 웹 앱 개발"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Reflex Cloud 앱 1개 게시, AI 생성·호스팅 제한적 무료 사용량, 공개 앱만)",
+  "plans": [
+   {
+    "name": "Free",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "앱 1개, 제한적 사용량(주기적 충전), 공개 앱·공개 GitHub 저장소",
+    "page_lang": "en"
+   },
+   {
+    "name": "Pro",
+    "price": 25,
+    "currency": "USD",
+    "period": "month",
+    "limits": "AI 생성·호스팅 월 $25 사용량, 여러 앱, 비공개 앱, 사용자 도메인",
+    "page_lang": "en"
+   },
+   {
+    "name": "Pro",
+    "price": 50,
+    "currency": "USD",
+    "period": "month",
+    "limits": "월 $50 사용량",
+    "page_lang": "en"
+   },
+   {
+    "name": "Pro",
+    "price": 100,
+    "currency": "USD",
+    "period": "month",
+    "limits": "월 $100 사용량",
+    "page_lang": "en"
+   },
+   {
+    "name": "Pro",
+    "price": 200,
+    "currency": "USD",
+    "period": "month",
+    "limits": "월 $200 사용량",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": "USD",
+    "period": "month",
+    "limits": "맞춤 가격, 자체 Google Cloud 배포, SSO/SAML, 감사 로그",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://reflex.dev/pricing/"
+ },
+ "open_source": "Apache 2.0",
+ "api": "불명",
+ "platforms": [
+  "웹",
+  "CLI"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://reflex.dev/",
+   "quote": "Reflex · The AI-native enterprise operating layer"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://reflex.dev/",
+   "quote": "Build, test, and ship your company's apps, agents, and workflows."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://reflex.dev/",
+   "quote": "Reflex turns your workflows, data, and requirements into production software that maximizes AI's potential in your business, no matter what you use today."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/reflex-dev/reflex",
+   "quote": "Reflex is a library to build full-stack web apps in pure Python."
+  },
+  {
+   "field": "key_features",
+   "url": "https://reflex.dev/",
+   "quote": "Plans the application before it writes"
+  },
+  {
+   "field": "key_features",
+   "url": "https://reflex.dev/pricing/",
+   "quote": "AI-assisted testing (pytest, browser, UI) Generate and run pytest, browser, and UI tests while building."
+  },
+  {
+   "field": "key_features",
+   "url": "https://reflex.dev/",
+   "quote": "Databases, models, APIs, and auth"
+  },
+  {
+   "field": "key_features",
+   "url": "https://reflex.dev/",
+   "quote": "Run applications on Reflex Cloud, in your own cloud account, or on-premises."
+  },
+  {
+   "field": "key_features",
+   "url": "https://reflex.dev/pricing/",
+   "quote": "Download app code Export the complete Reflex application source code at any time."
+  },
+  {
+   "field": "key_features",
+   "url": "https://reflex.dev/pricing/",
+   "quote": "Build with MCP + Skills Connect AI coding agents to Reflex tools and reusable skills through MCP."
+  },
+  {
+   "field": "key_features",
+   "url": "https://reflex.dev/pricing/",
+   "quote": "Security scanner Beta Scan application code for common security risks before deployment."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://reflex.dev/",
+   "quote": "Build and update business applications and dashboards with AI, from internal tools to in-house replacements for the SaaS applications you use."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://reflex.dev/",
+   "quote": "Finance Manufacturing Public Sector Technology Healthcare Consulting"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/reflex-dev/reflex",
+   "quote": "Write your app's frontend and backend all in Python, no need to learn Javascript."
+  },
+  {
+   "field": "pricing",
+   "url": "https://reflex.dev/pricing/",
+   "quote": "Publish 1 app on Reflex Cloud"
+  },
+  {
+   "field": "pricing",
+   "url": "https://reflex.dev/pricing/",
+   "quote": "Limited free usage for AI generation and hosting Refills periodically"
+  },
+  {
+   "field": "pricing",
+   "url": "https://reflex.dev/pricing/",
+   "quote": "$ 25 /month $ 25 per month"
+  },
+  {
+   "field": "pricing",
+   "url": "https://reflex.dev/pricing/",
+   "quote": "Limited; refills periodically $25 / $50 / $100 / $200 per month Custom"
+  },
+  {
+   "field": "open_source",
+   "url": "https://reflex.dev/pricing/",
+   "quote": "Reflex Framework (open source, Apache 2.0)"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/reflex-dev/reflex",
+   "quote": "uv run reflex init"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://reflex.dev/",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

@@ -1,0 +1,83 @@
+{
+ "company": null,
+ "one_liner_ko": "AI 자율 에이전트와 인지 아키텍처를 빠르게 만들고 시험하는 로우코드 프레임워크.",
+ "what_it_does_ko": "AgentForge는 AI 기반 자율 에이전트와 인지 아키텍처를 빠르게 개발·테스트·반복하기 위한 로우코드 프레임워크다. 에이전트(Agents), 선언형 Cogs, 선택형 메모리(Memory)를 핵심 개념으로 단순 실행부터 다중 에이전트 오케스트레이션까지 지원한다. OpenAI·Gemini·Claude와 Ollama·LMStudio 로컬 모델을 쓸 수 있고, 에이전트마다 다른 모델을 지정할 수 있다. YAML 파일로 에이전트·워크플로·페르소나를 정의한다.",
+ "key_features": [
+  "YAML로 다중 에이전트 워크플로를 짜는 선언형 Cogs",
+  "YAML 프롬프트 템플릿으로 에이전트 정의",
+  "에이전트·Cog에 문맥 메모리 통합",
+  "페르소나 YAML로 정체성·말투 설정",
+  "에이전트별로 다른 LLM 사용(LLM 무관)",
+  "재시작 없이 프롬프트 실시간 수정",
+  "Ollama·LMStudio 로컬 모델 지원"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "GNU General Public License v3.0",
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/DataBassGit/AgentForge",
+   "quote": "is a low-code framework for rapid development, testing, and iteration of AI-powered autonomous agents and cognitive architectures."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/DataBassGit/AgentForge",
+   "quote": "support both simple first runs and sophisticated multi-agent orchestration."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/DataBassGit/AgentForge",
+   "quote": "AgentForge lets you run different models for different agents as needed."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/DataBassGit/AgentForge",
+   "quote": "Orchestrate multi-agent workflows, branching logic, and memory using simple YAML files."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/DataBassGit/AgentForge",
+   "quote": "Define agents using YAML prompt templates and configuration."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/DataBassGit/AgentForge",
+   "quote": "Add contextual memory to agents and cogs for coherent, context-aware interactions."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/DataBassGit/AgentForge",
+   "quote": "Configure agent identity, style, and context using persona YAML files."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/DataBassGit/AgentForge",
+   "quote": "Run different agents with different LLMs as needed."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/DataBassGit/AgentForge",
+   "quote": "Modify prompts in real-time without restarting the system."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/DataBassGit/AgentForge",
+   "quote": "Leverage local models through [Ollama](https://ollama.com) and [LMStudio](https://lmstudio.ai)."
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/DataBassGit/AgentForge",
+   "quote": "This project is licensed under the **GNU General Public License v3.0**."
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

@@ -1,0 +1,335 @@
+=== [home] https://textattack.readthedocs.io/en/master/ (lang=en)
+TextAttack Documentation — TextAttack 0.3.11 documentation 
+ TextAttack
+ Get Started 
+ Basic-Introduction 
+ What is TextAttack? 
+ Where should I start? 
+ NLP Attacks 
+ Data Augmentation 
+ Features 
+ Installation 
+ Install with pip 
+ Install from Source 
+ Optional Dependencies 
+ FAQ on installation 
+ Command-Line Usage 
+ Data Augmentation with textattack augment 
+ Adversarial Attacks with textattack attack 
+ Training Models with textattack train 
+ Available Models 
+ TextAttack Models 
+ transformers Models 
+ Evaluating Models with textattack eval 
+ Other Commands 
+ Checkpoints and textattack attack-resume 
+ Listing features with textattack list 
+ Examining datasets with textattack peek-dataset 
+ Quick API Usage 
+ Attacking a BERT model 
+ Attacking a single example 
+ FAQ 
+ Via Slack: Where to Ask Questions: 
+ Via CLI: --help 
+ Via our papers: More details on results 
+ Via readthedocs: More details on APIs 
+ More Concrete Questions: 
+ 0. For many of the dependent library issues, the following command is the first you could try: 
+ 1. How to Train 
+ 2. Use Custom Models 
+ Model from a file 
+ 3. Use Custom Datasets 
+ From a file 
+ Dataset loading via other mechanism, see: more details at here 
+ Custom Dataset via AttackedText class 
+ 4. Benchmarking Attacks 
+ 5. Create Custom or New Attacks 
+ 6. The attacking is too slow 
+ Recipes 
+ Attack Recipes CommandLine Use 
+ Help: textattack --help 
+ Running Attacks: textattack attack --help 
+ Attacks and Papers Implemented (”Attack Recipes”): textattack attack --recipe [recipe_name] 
+ Recipe Usage Examples 
+ Attack Recipes API 
+ Attacks on classification models 
+ A2T (A2T: Attack for Adversarial Training Recipe) 
+ Alzantot Genetic Algorithm 
+ Faster Alzantot Genetic Algorithm 
+ BAE (BAE: BERT-Based Adversarial Examples) 
+ BERT-Attack: 
+ CheckList: 
+ DeepWordBug 
+ HotFlip 
+ Improved Genetic Algorithm 
+ Input Reduction 
+ Kuleshov2017 
+ Particle Swarm Optimization 
+ PWWS 
+ TextFooler (Is BERT Really Robust?) 
+ TextBugger 
+ CLARE Recipe 
+ Pruthi2019: Combating with Robust Word Recognition 
+ LEAP 
+ Attacks on sequence-to-sequence models 
+ MORPHEUS2020 
+ Seq2Sick 
+ General 
+ Imperceptible Perturbations Algorithm 
+ Multi-lingual attacks 
+ Attack French Recipe 
+ Attack Spanish Recipe 
+ Attack Chinese Recipe 
+ Augmenter Recipes CommandLine Use 
+ Augmenting Text: textattack augment 
+ Augmentation Command-Line Interface 
+ Augmenter Recipes API 
+ Augmenter Recipes: 
+ TextAttack Model Zoo 
+ Available Models 
+ TextAttack Models 
+ transformers Models 
+ Evaluation Results of Available Models 
+ LSTM 
+ wordCNN 
+ albert-base-v2 
+ bert-base-uncased 
+ distilbert-base-cased 
+ distilbert-base-uncased 
+ roberta-base 
+ xlnet-base-cased 
+ How we have trained the TextAttack Models 
+ Training details for each TextAttack Model 
+ More details on TextAttack fine-tuned NLP models (details on target NLP task, input type, output type, SOTA results on paperswithcode; model card on huggingface): 
+ Using TextAttack 
+ What is an adversarial attack in NLP? 
+ Terminology 
+ Adversarial Examples in NLP 
+ Generating adversarial examples with TextAttack 
+ The future of adversarial attacks in NLP 
+ How to Cite TextAttack 
+ Main Paper: TextAttack: A Framework for Adversarial Attacks, Data Augmentation, and Adversarial Training in NLP 
+ Our Github on TextAttack: https://github.com/QData/TextAttack 
+ Our Analysis paper: Reevaluating Adversarial Examples in Natural Language 
+ Our Github on Reevaluation: Reevaluating-NLP-Adversarial-Examples Github 
+ Our Analysis paper: Searching for a Search Method: Benchmarking Search Algorithms for Generating NLP Adversarial Examples 
+ Our Github on benchmarking: TextAttack-Search-Benchmark Github 
+ Our defense paper: Title: “Towards Improving Adversarial Training of NLP Models” 
+ Code is available 
+ Citations: 
+ Our extended use case paper: “Expanding Scope: Adapting English Adversarial Attacks to Chinese” 
+ Abstract: 
+ Venue: 
+ Tutorial code: 
+ Citations: 
+ Four Components of TextAttack Attacks 
+ Goal Functions 
+ Constraints 
+ Transformations 
+ Search Methods 
+ On Benchmarking Attack Recipes 
+ Four components in Attack Recipes we have implemented 
+ Benchmarking Search Algorithms for Generating NLP Adversarial Examples 
+ Title: Searching for a Search Method: Benchmarking Search Algorithms for Generating NLP Adversarial Examples 
+ Our search benchmarking result Github 
+ Our benchmarking results on comparing search methods used in the past attacks. 
+ Benchmarking Attack Recipes 
+ On Quality of Generated Adversarial Examples and How to Set Attack Contraints 
+ Title: Reevaluating Adversarial Examples in Natural Language 
+ Our Github on Reevaluation: Reevaluating-NLP-Adversarial-Examples Github 
+ Some of our evaluation results on quality of two SOTA attack recipes 
+ Some of our evaluation results on how to set constraints to evaluate NLP model’s adversarial robustness 
+ Making Vanilla Adversarial Training of NLP Models Feasible! 
+ Title: Towards Improving Adversarial Training of NLP Models 
+ Video recording of this talk: https://underline.io/events/192/sessions/7928/lecture/38377-towards-improving-adversarial-training-of-nlp-models 
+ Code is available 
+ Citations: 
+ A2T Attack Recipe 
+ Lessons learned in designing TextAttack 
+ Presentations on TextAttack 
+ 2020: Jack Morris’ summary tutorial talk on TextAttack 
+ 2021: Dr. Qi’s summary tutorial talk on TextAttack 
+ Challenges in Design 
+ Our design tips 
+ TextAttack flowchart 
+ More Details in Reference 
+ TextAttack Extended Functions (Multilingual) 
+ Textattack Supports Multiple Model Types besides huggingface models and our textattack models: 
+ Multilingual Supports 
+ User defined custom inputs and models 
+ Custom Datasets: Dataset from a file 
+ Custom Model: from a file 
+ User defined Custom attack components 
+ Visulizing TextAttack generated Examples; 
+ How can I contribute to TextAttack? 
+ Slack Channel 
+ Ways to contribute 
+ Submitting a new issue or feature request 
+ Found a bug? 
+ Do you want to add your model? 
+ Do you want a new feature: a component, a recipe, or something else? 
+ Start contributing! (Pull Requests) 
+ Checklist 
+ Tests 
+ This guide was heavily inspired by the awesome transformers guide to contributing 
+ Notebook Tutorials 
+ Tutorial 0: TextAttack End-To-End (Train, Eval, Attack) 
+ Training 
+ Evaluation 
+ Attack 
+ Conclusion 
+ Bonus 
+ Tutorial 1: Transformations 
+ Goal function 
+ Search method 
+ Transformation 
+ Constraints 
+ A custom transformation 
+ Banana word swap 
+ Using our transformation 
+ Creating the goal function, model, and dataset 
+ Creating the attack 
+ Using the attack 
+ Visualizing attack results 
+ Conclusion 
+ Bonus: Attacking Custom Samples 
+ Tutorial 2: Constraints 
+ Classes of constraints 
+ A new constraint 
+ A custom constraint 
+ NLTK and Named Entity Recognition 
+ NLTK NER Example 
+ Caching with @functools.lru_cache 
+ Putting it all together: getting a list of Named Entity Labels from a sentence 
+ Creating our NamedEntityConstraint 
+ Testing our constraint 
+ Conclusion 
+ Tutorial 3: Augmentation 
+ Creating an Augmenter 
+ Pre-built Augmentation Recipes 
+ Conclusion 
+ Tutorial 4: Custom Word Embeddings 
+ Importing the Model 
+ Creating A Custom Dataset 
+ Creating An Attack 
+ Attack Results With Custom Dataset 
+ Creating A Custom Word Embedding 
+ Attack Results With Custom Dataset and Word Embedding 
+ Tutorial 5: Attacking TensorFlow models 
+ Run textattack on a trained tensorflow model: 
+ First: Training 
+ Attacking 
+ Conclusion 
+ Tutorial 6: Attac
+
+=== [meta] https://textattack.readthedocs.io/en/master/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: English
+
+=== [github] https://github.com/QData/TextAttack
+<h1 align="center">TextAttack 🐙</h1>
+
+<p align="center">Generating adversarial examples for NLP models</p>
+
+<p align="center">
+  <a href="https://textattack.readthedocs.io/">[TextAttack Documentation on ReadTheDocs]</a>
+  <br> <br>
+  <a href="#about">About</a> •
+  <a href="#setup">Setup</a> •
+  <a href="#usage">Usage</a> •
+  <a href="#design">Design</a>
+  <br> <br>
+  <a target="_blank">
+    <img src="https://github.com/QData/TextAttack/workflows/Github%20PyTest/badge.svg" alt="Github Runner Covergae Status">
+  </a>
+  <a href="https://badge.fury.io/py/textattack">
+    <img src="https://badge.fury.io/py/textattack.svg" alt="PyPI version" height="18">
+  </a>
+</p>
+
+<img src="https://jxmo.io/files/textattack.gif" alt="TextAttack Demo GIF" style="display: block; margin: 0 auto;" />
+
+## About
+
+TextAttack is a Python framework for adversarial attacks, data augmentation, and model training in NLP.
+
+> If you're looking for information about TextAttack's menagerie of pre-trained models, you might want the [TextAttack Model Zoo](https://textattack.readthedocs.io/en/latest/3recipes/models.html) page.
+
+## Slack Channel
+
+For help and realtime updates related to TextAttack, please [join the TextAttack Slack](https://join.slack.com/t/textattack/shared_invite/zt-huomtd9z-KqdHBPPu2rOP~Z8q3~urgg)!
+
+### _Why TextAttack?_
+
+There are lots of reasons to use TextAttack:
+
+1. **Understand NLP models better** by running different adversarial attacks on them and examining the output
+2. **Research and develop different NLP adversarial attacks** using the TextAttack framework and library of components
+3. **Augment your dataset** to increase model generalization and robustness downstream
+4. **Train NLP models** using just a single command (all downloads included!)
+
+## Setup
+
+### Installation
+
+You should be running Python 3.6+ to use this package. A CUDA-compatible GPU is optional but will greatly improve code speed. TextAttack is available through pip:
+
+```bash
+pip install textattack
+```
+
+Once TextAttack is installed, you can run it via command-line (`textattack ...`)
+or via python module (`python -m textattack ...`).
+
+> **Tip**: TextAttack downloads files to `~/.cache/textattack/` by default. This includes pretrained models,
+> dataset samples, and the configuration file `config.yaml`. To change the cache path, set the
+> environment variable `TA_CACHE_DIR`. (for example: `TA_CACHE_DIR=/tmp/ textattack attack ...`).
+
+## Usage
+
+### Help: `textattack --help`
+
+TextAttack's main features can all be accessed via the `textattack` command. Two very
+common commands are `textattack attack <args>`, and `textattack augment <args>`. You can see more
+information about all commands using
+
+```bash
+textattack --help
+```
+
+or a specific command using, for example,
+
+```bash
+textattack attack --help
+```
+
+The [`examples/`](examples/) folder includes scripts showing common TextAttack usage for training models, running attacks, and augmenting a CSV file.
+
+The [documentation website](https://textattack.readthedocs.io/en/latest) contains walkthroughs explaining basic usage of TextAttack, including building a custom transformation and a custom constraint..
+
+### Running Attacks: `textattack attack --help`
+
+The easiest way to try out an attack is via the command-line interface, `textattack attack`.
+
+> **Tip:** If your machine has multiple GPUs, you can distribute the attack across them using the `--parallel` option. For some attacks, this can really help performance. (If you want to attack Keras models in parallel, please check out `examples/attack/attack_keras_parallel.py` instead)
+
+Here are some concrete examples:
+
+_TextFooler on BERT trained on the MR sentiment classification dataset_:
+
+```bash
+textattack attack --recipe textfooler --model bert-base-uncased-mr --num-examples 100
+```
+
+_DeepWordBug on DistilBERT trained on the Quora Question Pairs paraphrase identification dataset_:
+
+```bash
+textattack attack --model distilbert-base-uncased-cola --recipe deepwordbug --num-examples 100
+```
+
+_Beam search with beam width 4 and word embedding transformation and untargeted goal function on an LSTM_:
+
+```bash
+textattack attack --model lstm-mr --num-examples 20 \
+ --search-method beam-sea

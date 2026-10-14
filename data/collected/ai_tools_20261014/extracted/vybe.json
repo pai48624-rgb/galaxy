@@ -1,0 +1,157 @@
+{
+ "company": "Vybe, Inc.",
+ "one_liner_ko": "슬랙 안에서 팀 전체가 함께 쓰는 보안·협업형 AI 에이전트를 제공하고, 말로 설명하면 사내 도구 앱을 만들어 주는 플랫폼.",
+ "what_it_does_ko": "Vybe는 회사에 슬랙 안에서 함께 쓰는 AI 에이전트를 제공한다. 에이전트마다 자체 기억·스킬·권한을 갖고, OpenAI·Anthropic·Google 등의 모델을 골라 쓴다. 문서에 따르면 Vybe는 사내 도구를 만드는 AI 플랫폼으로, 필요한 것을 평범한 말로 설명하면 데이터베이스·연동·배포까지 갖춘 앱을 만든다. 만들어진 앱은 자체 PostgreSQL 데이터베이스를 가진 Next.js 15 풀스택 앱이다.",
+ "key_features": [
+  "슬랙 공유 채널에서 팀 전체와 일하는 에이전트",
+  "에이전트별 기억·스킬·권한",
+  "OpenAI·Anthropic·Google 등 모델 선택",
+  "3,200개 이상 앱 연동",
+  "예약 작업·정기 루틴",
+  "사내 도구 앱 생성(DB·연동·배포 포함)",
+  "SOC 2 Type II·SAML SSO"
+ ],
+ "use_cases_ko": [
+  "운영팀: KPI 대시보드·업무 흐름 관리 도구 제작",
+  "엔지니어링팀: 관리자 패널·데이터 탐색기 제작"
+ ],
+ "pricing": {
+  "free_tier": "있음 (매월 $10 상당 1,000 크레딧, 이월 없음)",
+  "plans": [
+   {
+    "name": "Free",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "매월 1,000 크레딧($10), 미사용분 이월 없음",
+    "page_lang": "en"
+   },
+   {
+    "name": "Starter",
+    "price": 20,
+    "currency": "USD",
+    "period": "month",
+    "limits": "월 2,000 크레딧, 크레딧당 $0.01 충전",
+    "page_lang": "en"
+   },
+   {
+    "name": "Pro",
+    "price": 50,
+    "currency": "USD",
+    "period": "month",
+    "limits": "월 5,000 크레딧",
+    "page_lang": "en"
+   },
+   {
+    "name": "Team",
+    "price": 100,
+    "currency": "USD",
+    "period": "month",
+    "limits": "월 10,000 크레딧",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": "USD",
+    "period": "month",
+    "limits": "맞춤 견적, 크레딧 무제한·SSO·BYOK",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://www.vybe.build/pricing"
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.vybe.build/pricing",
+   "quote": "Vybe, Inc. © 2026"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.vybe.build/",
+   "quote": "Vybe gives your company secure, collaborative AI agents in Slack, at 10× lower cost."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://docs.vybe.build/",
+   "quote": "Build internal tools with AI — describe what you need and Vybe builds it for you"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.vybe.build/",
+   "quote": "Vybe is an AI-powered platform for building internal tools."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.vybe.build/",
+   "quote": "Vybe apps are full-stack Next.js 15 applications with their own PostgreSQL database"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.vybe.build/",
+   "quote": "One agent works with your whole team in shared channels."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.vybe.build/",
+   "quote": "Each agent has its own memory, skills and permissions."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.vybe.build/",
+   "quote": "Choose from every cutting-edge model by OpenAI, Anthropic, Google and more."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.vybe.build/",
+   "quote": "Integrations : Connects to 3,200+ apps ."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.vybe.build/",
+   "quote": "Plan tasks for later or set routines that run on their own."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.vybe.build/",
+   "quote": "SOC 2 Type II"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://docs.vybe.build/",
+   "quote": "Operations teams Build dashboards to track KPIs, manage workflows, and triage issues"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://docs.vybe.build/",
+   "quote": "Engineering teams Spin up admin panels, data explorers, and internal APIs"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.vybe.build/pricing",
+   "quote": "You get $10 in credits (1,000 credits) every month for free, with no credit card required."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.vybe.build/pricing",
+   "quote": "10,000 credits every month"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.vybe.build/pricing",
+   "quote": "Top up anytime at $0.01 per credit"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.vybe.build/",
+   "quote": "hreflang: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

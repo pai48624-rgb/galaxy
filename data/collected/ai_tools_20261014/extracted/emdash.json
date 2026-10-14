@@ -1,0 +1,131 @@
+{
+ "company": "General Action",
+ "one_liner_ko": "코딩 에이전트를 병렬로 돌리고 반복 작업 예약·앱 미리보기·리뷰를 한곳에서 하는 오픈소스 에이전트 개발 환경(ADE).",
+ "what_it_does_ko": "Emdash(YC W26)는 Claude Code·Codex 같은 코딩 에이전트를 병렬로 돌리는 무료 오픈소스 데스크톱 앱이다. 작업마다 자기 Git worktree에서 에이전트가 돌아 여러 수정·기능을 동시에 시도하고 diff를 리뷰해 병합한다. Linear·Jira·GitHub 등에서 이슈를 바로 에이전트에 넘기고, 반복 에이전트 실행을 예약한다. 로컬 프로젝트뿐 아니라 SSH로 원격 머신에서도 에이전트를 돌린다.",
+ "key_features": [
+  "작업마다 별도 worktree에서 병렬 에이전트",
+  "반복 에이전트 실행 예약(자동화)",
+  "앱 안 브라우저로 미리보기",
+  "34개 CLI 기반 에이전트 지원",
+  "Linear·Jira·GitHub·Notion·Asana 이슈 연동",
+  "SSH 원격 개발",
+  "프롬프트·스킬·MCP 서버 라이브러리",
+  "diff·PR·CI 체크 확인"
+ ],
+ "use_cases_ko": [
+  "버그 점검·릴리스 준비·리뷰 같은 반복 작업을 에이전트 예약 실행으로 자동화",
+  "개발 서버·클라우드 VM·GPU 머신에서 SSH로 에이전트 실행"
+ ],
+ "pricing": {
+  "free_tier": "있음 (무료)",
+  "plans": [],
+  "pricing_url": "https://emdash.com/"
+ },
+ "open_source": "Apache 2.0",
+ "api": "불명",
+ "platforms": [
+  "맥",
+  "윈도"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://emdash.com/",
+   "quote": "General Action © 2026"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://emdash.com/",
+   "quote": "Run agents in parallel, schedule repeat work, preview apps in the built-in browser, and manage prompts, skills, and MCP tools from one place."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://emdash.com/",
+   "quote": "Emdash (YC W26) is a free, open-source agentic development environment"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/generalaction/emdash",
+   "quote": "Each task runs in its own Git worktree, so you can explore multiple fixes or features at once"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/generalaction/emdash",
+   "quote": "It works with local projects and remote machines over SSH."
+  },
+  {
+   "field": "key_features",
+   "url": "https://emdash.com/docs",
+   "quote": "Parallel agents : Run multiple agents simultaneously, each in its own worktree"
+  },
+  {
+   "field": "key_features",
+   "url": "https://emdash.com/docs",
+   "quote": "Automations : Schedule recurring agent runs with history, reruns, and reviewable tasks"
+  },
+  {
+   "field": "key_features",
+   "url": "https://emdash.com/docs",
+   "quote": "In-app browser : Preview local dev servers and public pages without leaving a task"
+  },
+  {
+   "field": "key_features",
+   "url": "https://emdash.com/docs",
+   "quote": "Provider support : Use any of 34 CLI-based agents"
+  },
+  {
+   "field": "key_features",
+   "url": "https://emdash.com/docs",
+   "quote": "Issue integration : Pull tasks directly from Linear, Jira, GitHub, Notion, Asana, and more"
+  },
+  {
+   "field": "key_features",
+   "url": "https://emdash.com/docs",
+   "quote": "Remote development : Run coding agents on remote machines or provisioned workspaces"
+  },
+  {
+   "field": "key_features",
+   "url": "https://emdash.com/docs",
+   "quote": "Library : Manage reusable prompts, MCP servers, and skills for your agents"
+  },
+  {
+   "field": "key_features",
+   "url": "https://emdash.com/",
+   "quote": "Inspect changes, commit, push, open pull requests, and monitor CI without switching tools."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://emdash.com/",
+   "quote": "Automate bug sweeps, release prep, reviews, and checks."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://emdash.com/",
+   "quote": "Connect over SSH to your dev server, cloud VM, or GPU box."
+  },
+  {
+   "field": "pricing",
+   "url": "https://emdash.com/",
+   "quote": "Emdash (YC W26) is a free, open-source agentic development environment"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/generalaction/emdash",
+   "quote": "[![Apache 2.0 License]"
+  },
+  {
+   "field": "platforms",
+   "url": "https://emdash.com/",
+   "quote": "Use any coding agent — no lock-in. On macOS, Windows, and Linux."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://emdash.com/",
+   "quote": "hreflang: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [],
+ "note": "메뉴에 Cloud·Enterprise 항목은 있으나 받은 본문에 가격 없음. 리눅스도 지원(목록 항목 없음)."
+}

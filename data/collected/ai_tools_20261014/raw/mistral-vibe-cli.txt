@@ -1,0 +1,108 @@
+=== [github] https://github.com/mistralai/mistral-vibe
+# Mistral Vibe
+
+[![PyPI Version](https://img.shields.io/pypi/v/mistral-vibe)](https://pypi.org/project/mistral-vibe)
+[![Python Version](https://img.shields.io/badge/python-3.12%2B-blue)](https://www.python.org/downloads/release/python-3120/)
+[![CI Status](https://github.com/mistralai/mistral-vibe/actions/workflows/ci.yml/badge.svg)](https://github.com/mistralai/mistral-vibe/actions/workflows/ci.yml)
+[![License](https://img.shields.io/github/license/mistralai/mistral-vibe)](https://github.com/mistralai/mistral-vibe/blob/main/LICENSE)
+
+```
+██████████████████░░
+██████████████████░░
+████  ██████  ████░░
+████    ██    ████░░
+████          ████░░
+████  ██  ██  ████░░
+██      ██      ██░░
+██████████████████░░
+██████████████████░░
+```
+
+**Mistral's open-source CLI coding assistant.**
+
+Mistral Vibe is a command-line coding assistant powered by Mistral's models. It provides a conversational interface to your codebase, allowing you to use natural language to explore, modify, and interact with your projects through a powerful set of tools.
+
+> [!WARNING]
+> Mistral Vibe works on Windows, but we officially support and target UNIX environments.
+
+### One-line install (recommended)
+
+**Linux and macOS**
+
+```bash
+curl -LsSf https://mistral.ai/vibe/install.sh | bash
+```
+
+**Windows**
+
+First, install uv
+
+```bash
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+
+Then, use uv command below.
+
+### Using uv
+
+```bash
+uv tool install mistral-vibe
+```
+
+### Using pip
+
+```bash
+pip install mistral-vibe
+```
+
+## Table of Contents
+
+- [Features](#features)
+  - [Built-in Agents](#built-in-agents)
+  - [Subagents and Task Delegation](#subagents-and-task-delegation)
+  - [Interactive User Questions](#interactive-user-questions)
+- [Terminal Requirements](#terminal-requirements)
+- [Quick Start](#quick-start)
+- [Usage](#usage)
+  - [Interactive Mode](#interactive-mode)
+  - [Trust Folder System](#trust-folder-system)
+  - [Programmatic Mode](#programmatic-mode)
+  - [TUI Implementations](#tui-implementations)
+- [Voice Mode](#voice-mode)
+- [Slash Commands](#slash-commands)
+  - [Built-in Slash Commands](#built-in-slash-commands)
+  - [Custom Slash Commands via Skills](#custom-slash-commands-via-skills)
+- [Skills System](#skills-system)
+  - [Creating Skills](#creating-skills)
+  - [Skill Discovery](#skill-discovery)
+  - [Managing Skills](#managing-skills)
+- [Configuration](#configuration)
+  - [Configuration File Location](#configuration-file-location)
+  - [API Key Configuration](#api-key-configuration)
+  - [OpenTelemetry Tracing](#opentelemetry-tracing)
+  - [Custom System Prompts](#custom-system-prompts)
+  - [Custom Agent Configurations](#custom-agent-configurations)
+  - [Tool Management](#tool-management)
+  - [MCP Server Configuration](#mcp-server-configuration)
+  - [Session Management](#session-management)
+  - [Update Settings](#update-settings)
+  - [Custom Vibe Home Directory](#custom-vibe-home-directory)
+- [Editors/IDEs](#editorsides)
+- [Resources](#resources)
+- [Data collection & usage](#data-collection--usage)
+- [License](#license)
+
+## Features
+
+- **Interactive Chat**: A conversational AI agent that understands your requests and breaks down complex tasks.
+- **Powerful Toolset**: A suite of tools for file manipulation, code searching, version control, and command execution, right from the chat prompt.
+  - Read, write, and patch files (`read`, `write_file`, `edit`).
+  - Execute shell commands, with managed shell sessions, polling, and stdin helpers available during rollout.
+  - Recursively search code with `grep` (with `ripgrep` support).
+  - Manage a `todo` list to track the agent's work.
+  - Ask interactive questions to gather user input (`ask_user_question`).
+  - Delegate tasks to subagents for parallel work (`task`).
+- **Project-Aware Context**: Vibe automatically provides your project's location, Git branch, and recent commit history to the agent, improving its understanding of your codebase.
+- **Advanced CLI Experience**: Built with modern libraries for a smooth and efficient workflow.
+  - Autocompletion for slash commands (`/`) and file paths (`@`).
+  - Image attachments via `@` mentions — `.png`, `.jpg`, `.jpeg`, `.gif`, `.webp`

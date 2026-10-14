@@ -1,0 +1,35 @@
+{
+ "company": "Vivy Technologies Co., Limited",
+ "one_liner_ko": "브랜치마다 에이전트·터미널·브라우저를 나란히 띄워 병렬 개발을 하게 해 주는 macOS용 작업 공간 앱이다.",
+ "what_it_does_ko": "Aizen은 macOS용 에이전트 중심 개발 작업 공간으로, 프로젝트나 브랜치마다 별도의 터미널·파일·브라우저·에이전트·상태를 가진 환경을 만들어 준다. Claude, Codex, Gemini 등 ACP 에이전트를 작업 환경 안에서 실행하고 앱 안의 마켓플레이스에서 MCP 서버를 추가할 수 있다. GPU 가속 터미널, Git 스테이징·커밋·diff·PR 리뷰, GitHub Actions·GitLab CI 확인을 한곳에서 제공한다. 코드는 GPL-3.0으로 공개돼 있고 핵심 기능은 무료다.",
+ "key_features": ["프로젝트·브랜치별 독립 환경(Git worktree 등)", "ACP 에이전트 실행(Claude, Codex, OpenCode, Gemini 등)", "앱 내 MCP 서버 마켓플레이스", "libghostty 기반 GPU 가속 터미널·tmux 세션 유지", "Git 조작·diff·PR 리뷰", "GitHub Actions·GitLab CI 확인", "내장 파일 탐색기·브라우저", "Xcode 빌드 연동·CLI 동반 도구"],
+ "use_cases_ko": ["여러 브랜치·프로젝트를 오가며 병렬 개발", "여러 에이전트를 다른 환경에서 동시에 실행", "인라인 diff로 풀 리퀘스트 리뷰"],
+ "pricing": {"free_tier": "있음 (핵심 작업 공간 전체 무료)", "plans": [
+  {"name": "Free", "price": 0, "currency": "USD", "period": "month", "limits": "핵심 기능 전체, 무제한 워크스페이스", "page_lang": "en"},
+  {"name": "Pro", "price": 5.99, "currency": "USD", "period": "month", "limits": "우선 지원, 향후 유료 추가 기능", "page_lang": "en"},
+  {"name": "Pro", "price": 59, "currency": "USD", "period": "year", "limits": "연간 결제", "page_lang": "en"},
+  {"name": "Lifetime", "price": 179, "currency": "USD", "period": "one-time", "limits": "평생 우선 지원", "page_lang": "en"}
+ ], "pricing_url": "https://aizen.win/pricing"},
+ "open_source": "GPL-3.0",
+ "api": "불명",
+ "platforms": ["맥", "CLI"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://aizen.win", "quote": "© 2026 Vivy Technologies Co., Limited"},
+  {"field": "one_liner_ko", "url": "https://aizen.win", "quote": "A macOS workspace for parallel development. Run agents, terminals, and browsers side by side across every branch."},
+  {"field": "what_it_does_ko", "url": "https://github.com/vivy-company/aizen", "quote": "Each environment keeps its own terminal, files, browser, agent sessions, Git context, and review state in one place."},
+  {"field": "key_features", "url": "https://aizen.win", "quote": "Run Claude, Codex, OpenCode, Gemini, and other ACP agents. Add MCP servers per agent from inside the app."},
+  {"field": "key_features", "url": "https://aizen.win", "quote": "GPU-accelerated terminal powered by libghostty with split panes, presets, themes, and optional tmux persistence."},
+  {"field": "key_features", "url": "https://aizen.win", "quote": "Stage, commit, diff, review pull requests, and keep GitHub Actions or GitLab CI runs within reach."},
+  {"field": "use_cases_ko", "url": "https://aizen.win", "quote": "Run multiple agents in parallel across different environments."},
+  {"field": "use_cases_ko", "url": "https://aizen.win", "quote": "Review pull requests with inline diffs, file browser, and terminal access in the same environment."},
+  {"field": "pricing", "url": "https://aizen.win/pricing", "quote": "Pro is $5.99/mo or $59/yr. Lifetime is $179."},
+  {"field": "pricing", "url": "https://aizen.win/pricing", "quote": "The full core workspace, free forever"},
+  {"field": "open_source", "url": "https://aizen.win", "quote": "The code is public under GPL-3.0, inspectable, and developed in the open."},
+  {"field": "platforms", "url": "https://aizen.win", "quote": "Available now on macOS . Apple Silicon only."},
+  {"field": "platforms", "url": "https://github.com/vivy-company/aizen", "quote": "**CLI companion** — Open projects, manage workspaces, and attach to persistent terminals with `aizen`"},
+  {"field": "korean_support", "url": "https://aizen.win", "quote": "html lang: en"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

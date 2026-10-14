@@ -1,0 +1,110 @@
+{
+ "company": null,
+ "one_liner_ko": "C#으로 작성된 .NET용 머신러닝 프레임워크(오디오·이미지 처리 포함), 현재 보관(archived) 상태",
+ "what_it_does_ko": "Accord.NET은 오디오·이미지 처리 라이브러리를 합친 .NET 머신러닝 프레임워크로 전부 C#으로 작성됐다. 분류·회귀·군집·분포 추정·가설검정·커널 방법·영상·오디오 신호·컴퓨터 비전 기능을 제공한다. 샘플 애플리케이션과 문서·위키를 제공하며 소프트웨어는 완전 무료라고 밝힌다. GitHub 저장소는 현재 보관(archived) 상태다.",
+ "key_features": [
+  "분류(SVM, 로지스틱 회귀, 결정트리, 신경망 등)",
+  "회귀·군집(K-Means, GMM 등)",
+  "40개 이상 확률분포 추정",
+  "35개 이상 통계 가설검정",
+  "이미지 특징점 검출·필터",
+  "오디오 신호 처리",
+  "실시간 얼굴 검출·추적"
+ ],
+ "use_cases_ko": [
+  "컴퓨터 비전·컴퓨터 오디션·신호 처리·통계 애플리케이션 개발(상업용 포함)"
+ ],
+ "pricing": {
+  "free_tier": "있음 (완전 무료, 기부 받음)",
+  "plans": [],
+  "pricing_url": "http://accord-framework.net"
+ },
+ "open_source": "LGPL-2.1",
+ "api": "있음",
+ "platforms": [
+  "윈도",
+  "리눅스",
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "http://accord-framework.net",
+   "quote": "The Accord.NET Framework is a .NET machine learning framework combined"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/accord-net/framework",
+   "quote": "This project is currently archived."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "http://accord-framework.net",
+   "quote": "with audio and image processing libraries completely written in C#."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/accord-net/framework",
+   "quote": "This project is currently archived."
+  },
+  {
+   "field": "key_features",
+   "url": "http://accord-framework.net",
+   "quote": "35 statistical hypothesis tests"
+  },
+  {
+   "field": "key_features",
+   "url": "http://accord-framework.net",
+   "quote": "of more than 40 distributions."
+  },
+  {
+   "field": "key_features",
+   "url": "http://accord-framework.net",
+   "quote": "Real-time face detection"
+  },
+  {
+   "field": "key_features",
+   "url": "http://accord-framework.net",
+   "quote": "Support Vector Machines"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "http://accord-framework.net",
+   "quote": "framework for building production-grade computer vision, computer audition, signal"
+  },
+  {
+   "field": "pricing",
+   "url": "http://accord-framework.net",
+   "quote": "This software is completely free and will always stay free . Enjoy!"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/accord-net/framework",
+   "quote": "license-LGPL--2.1-blue"
+  },
+  {
+   "field": "api",
+   "url": "http://accord-framework.net",
+   "quote": "Consult the .NET API"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/accord-net/framework",
+   "quote": "It can be used on Microsoft Windows, Xamarin, Unity3D, Windows Store applications, Linux or mobile."
+  },
+  {
+   "field": "korean_support",
+   "url": "http://accord-framework.net",
+   "quote": "html lang: en"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "소프트웨어는 완전 무료이며 앞으로도 무료(기부만 받음), 프로젝트는 보관 상태",
+   "diff": "기존 분류의 '클라우드 매니지드 유료 플랜'이 공식 페이지에 없음 — 순수 무료 오픈소스 라이브러리",
+   "url": "http://accord-framework.net"
+  }
+ ],
+ "plan_change": []
+}

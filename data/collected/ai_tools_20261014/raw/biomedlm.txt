@@ -1,0 +1,153 @@
+=== [home] https://crfm.stanford.edu/2022/12/15/biomedlm.html (lang=en)
+Stanford CRFM 
+ People 
+ Report 
+ Research 
+ HELM 
+ Levanter 
+ FMTI 
+ Openness 
+ Ecosystem Graphs 
+ Policy 
+ Blog 
+ BioMedLM
+ Authors: 
+ Elliot Bolton and 
+ David Hall and 
+ Michihiro Yasunaga and 
+ Tony Lee and 
+ Chris Manning and 
+ Percy Liang 
+ We introduce a new 2.7B parameter language model trained on biomedical literature which delivers an improved state of the art for medical question answering. (Note: This model was previously known as PubMedGPT.)
+ Introduction 
+ Stanford CRFM has recently been studying domain-specific foundation models, i.e. models that are trained exclusively, or nearly exclusively, on data from a particular subdomain such as medicine or law. We believe this investigation will allow us to better understand how data composition impacts foundation models and produce more accurate and efficient systems for domain-specific downstream tasks.
+ We partnered with MosaicML to build BioMedLM , a new language model trained exclusively on biomedical abstracts and papers. This GPT-style model can achieve strong results on a variety of biomedical NLP tasks, including a new state of the art performance of 50.3% accuracy on the MedQA biomedical question answering task.
+ Today we are excited to make this model available to the community. As an autoregressive language model, BioMedLM is also capable of natural language generation. However, we have only begun to explore the generation capabilities and limitations of this model, and we emphasize that this model’s generation capabilities are only for research purposes and not suitable for production. In releasing this model, we hope to advance both the development of biomedical NLP applications and best practices for responsibly training and utilizing domain-specific language models; issues of reliability, truthfulness, and explainability are top of mind for us. We hope lessons learned from training this biomedical model can be applied to other domains such as law or finance.
+ Model Architecture 
+ BioMedLM is an autoregressive language model with 2.7B parameters. It uses the standard GPT-2 architecture with the following settings:
+ Parameter 
+ Value 
+ hidden size 
+ 2560 
+ heads 
+ 20 
+ layers 
+ 32 
+ vocab size 
+ 28896 
+ sequence length 
+ 1024 
+ The model uses a custom tokenizer trained on the PubMed Abstracts. When building domain specific models we have found it important to use a tokenizer trained on in-domain text to maximize performance on downstream tasks. A key benefit is that common biomedical terms are represented as entire tokens.
+ For instance, all of these following terms are tokenized into single tokens by the biomedical tokenizer and multiple tokens by the standard GPT-2 tokenizer:
+ Word 
+ Tokenization 
+ chromatography 
+ chrom/atography 
+ cytotoxicity 
+ cyt/ot/oxicity 
+ Immunohistochemistry 
+ Imm/un/oh/ist/ochemistry 
+ photosynthesis 
+ photos/ynthesis 
+ probiotic 
+ prob/iotic 
+ This allows the model to encode information about these concepts in their individual token representations rather than spread out across subword tokens like “oh” shared with many other terms.
+ The model code used during training was modified to utilize Flash Attention (Dao et al. 2022). This was an important modification which nearly halves total training time, making training a model of this scale possible for our team.
+ Training 
+ BioMedLM was trained on all the PubMed abstracts and full documents from The Pile .
+ The model was trained on MosaicML Cloud , a platform designed for large workloads like LLMs. Using the Composer training library and PyTorch FSDP , it was easy to enable multi-node training across 128 A100-40GB GPUs, and the total run was completed in ~6.25 days. For more details on how we engineered and orchestrated training, see MosaicML’s companion blog post .
+ The model was trained with batch size=1024 and sequence length=1024 for 300B tokens using Decoupled AdamW with the following settings:
+ Parameter 
+ Value 
+ lr 
+ 1.6e-4 
+ eps 
+ 1e-8 
+ betas 
+ [0.9, 0.95] 
+ weight decay 
+ 1.6e-5 
+ The training process was very smooth and did not suffer from any divergences.
+ As we were preparing the training run, we were unsure of the benefits of training out to 300B tokens for language model perplexity and downstream task performance. While most models of this scale (e.g. GPT Neo 2.7B) are trained to 300-400B tokens, the datasets those models use are vastly larger than PubMed. For instance, The Pile is 8x the size of its PubMed subcorpora.
+ Fortunately, we did continue to see steady perplexity improvements on the validation and training sets for the entirety of training, and preliminary experiments showed improved downstream task performance as we trained out to the full 300B tokens. Our takeaway from this was that it was indeed worth it to train for the full 300B tokens, even though this represented dramatically more passes through the data than comparable models.
+ Question Answering 
+ With a fully trained model in hand, we began exploring its capabilities in the biomedical QA space. We focused on 3 common biomedical NLP QA tasks: MedQA , PubMedQA , and BioASQ . MedQA multiple choice questions are derived from online practice exams from the USMLE, the standardized exam used to license doctors in the United States. PubMedQA and BioASQ offer up a passage and ask yes/no/maybe questions based on the passage. The PubMedQA and BioASQ contexts are derived from PubMed abstracts, with questions and answers developed by domain experts.
+ After full fine-tuning for a small number of epochs, our model is able to achieve competitive results with other state of the art systems, including setting a new state of the art for the MedQA task of 50.3%.
+ MedQA 
+ PubMedQA (no answer) 
+ BioASQ 
+ BioMedLM 
+ 50.3 
+ 74.4 
+ 95.7 
+ DRAGON 
+ 47.5 
+ 73.4 
+ 96.4 
+ BioLinkBERT 
+ 45.1 
+ 72.4 
+ 94.9 
+ Galactica* 
+ 44.4 
+ 77.6 
+ 94.3 
+ PubMedBERT 
+ 38.1 
+ 55.8 
+ 87.5 
+ GPT Neo 2.7B 
+ 33.3 
+ 65.2 
+ 68.3 
+ * - zero shot
+ For each task, our model was fine-tuned with the standard Hugging Face defaults for AdamW using the following hyperparameters:
+ Batch size 
+ Epochs 
+ Learning rate 
+ BioASQ 
+ 8 
+ 10 
+ 5e-06 
+ MedQA 
+ 8 
+ 10 
+ 2e-06 
+ PubMedQA 
+ 8 
+ 20 
+ 2e-06 
+ Most of the other competitive systems on these tasks differ from BioMedLM in several ways.
+ Model 
+ Scale 
+ Bi-Directional 
+ Extra Data 
+ Lowercased tokenizer 
+ BioMedLM 
+ 2.7B 
+ DRAGON 
+ 360M 
+ yes 
+ yes 
+ yes 
+ BioLinkBERT 
+ 340M 
+ yes 
+ yes 
+ yes 
+ Galactica 
+ 120B 
+ PubMedBERT 
+ 300M 
+ yes 
+ yes 
+ GPT Neo 2.7B 
+ 2.7B 
+ DRAGON and BioLinkBERT are bidirectional systems that leverage additional data (e.g. knowledge graphs, link structure in PubMed). PubMedBERT is a BERT-style model trained on PubMed. Galactica is a GPT-style model trained on scientific literature, while GPT Neo 2.7B is a GPT-style model trained on the Pile (which contains PubMed).
+ On the one hand BioMedLM has a large advantage in terms of number of parameters versus the smaller bidirectional systems. But there are also other structural disadvantages: it is unidirectional, it does not have access to the richer data used by the other systems, and it does not lowercase the text. In other domains, one may not have access to specialized data like the document link structure and knowledge graphs used by BioLinkBERT and DRAGON. Ultimately these competing systems represent complementary ways to achieve strong performance on domain specific downstream tasks.
+ Galactica, which is 44x the size of our model and trained on a larger scie
+
+=== [meta] https://crfm.stanford.edu/2022/12/15/biomedlm.html
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음

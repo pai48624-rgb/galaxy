@@ -1,0 +1,646 @@
+=== [home] https://langroid.github.io/langroid/ (lang=en)
+langroid 
+ Skip to content
+ langroid
+ Home
+ Initializing search
+ langroid/langroid
+ Home
+ Blog
+ Getting Started
+ FAQ
+ Notes-Updates
+ Examples
+ Tutorials
+ Code/API Docs
+ langroid
+ langroid/langroid
+ Home
+ Home
+ Table of contents
+ The LLM Opportunity
+ Langroid's Multi-Agent Programming Framework
+ Highlights
+ Blog
+ Getting Started
+ Getting Started
+ Setup
+ LLM interaction
+ Simple Chat Agent
+ Task Delegation
+ Two Agent Chat
+ Three Agent Chat
+ Agent with Tools/Functions
+ Three Agents, with Routing
+ Agent with Retrieval
+ FAQ
+ Notes-Updates
+ Notes-Updates
+ Overview
+ XML-based Tools
+ Async Streaming
+ Knowledge Graphs
+ Gemini LLMs, Embeddings, Vertex AI
+ LLM-based Pdf Parsing
+ Large Tool Results
+ GLHF.chat Support
+ Structured Output
+ Tool Handlers
+ Task Termination
+ Chat History Snapshots
+ Tool-Origin Taint Tracking
+ Tool Handler Resolution
+ Message Routing
+ OpenAIAssistant Removal
+ Llama.cpp Embeddings
+ Azure OpenAI models
+ Custom Azure OpenAI client
+ Enriching Chunks for Retrieval
+ Reasoning Content
+ None Content in LLM Messages
+ Weaviate
+ Handling LLM Non-Tool Messages
+ PGVector
+ Milvus
+ Pinecone
+ Tavily Search Tool
+ Seltz Search Tool
+ SerpApi Search Tool
+ Twitter Search via Xquik MCP
+ Web Research via Baizhi MCP
+ Marker Pdf Parser
+ URLLoader
+ Spider Cloud Crawler
+ Crawl4AI Crawler
+ LangDB AI Gateway
+ Portkey AI Gateway
+ Markitdown Parsers
+ LiteLLM Proxy
+ Chunking
+ Image, PDF Input
+ MCP Tools
+ Code-Injection Protection
+ TaskTool
+ Local Qdrant VectorDB Cleanup
+ OpenAI HTTP Client Configuration
+ OpenAI Client Caching
+ Rotating API Keys
+ Pro-active Rate Limiting
+ Cross-Encoder Reranking
+ Task Logs
+ Pydantic v2 Migration
+ Markdown, HTML Parsing
+ Context-Overflow Handling
+ Batch Processing
+ Attachment Token Preflight
+ Vector-Store Env Prefixes
+ Quiet Mode
+ Examples
+ Examples
+ Guide
+ Hierarchical Agent Computation
+ Demos
+ Demos
+ Audience Targeting
+ Tutorials
+ Tutorials
+ Langroid Tour
+ Supported LLMs
+ Local LLM Setup
+ Non-OpenAI LLMs
+ SQLChatAgent
+ LLM Usage Options
+ Code/API Docs
+ Code/API Docs
+ langroid
+ langroid
+ agent
+ agent
+ base
+ batch
+ callbacks
+ callbacks
+ chainlit
+ chat_agent
+ chat_document
+ done_sequence_parser
+ special
+ special
+ arangodb
+ arangodb
+ aql_validator
+ arangodb_agent
+ system_messages
+ tools
+ utils
+ doc_chat_agent
+ lance_doc_chat_agent
+ lance_rag
+ lance_rag
+ critic_agent
+ lance_rag_task
+ query_planner_agent
+ lance_tools
+ neo4j
+ neo4j
+ csv_kg_chat
+ cypher_validator
+ neo4j_chat_agent
+ system_messages
+ tools
+ relevance_extractor_agent
+ retriever_agent
+ sql
+ sql
+ sql_chat_agent
+ utils
+ utils
+ description_extractors
+ populate_metadata
+ system_message
+ tools
+ table_chat_agent
+ task
+ tool_message
+ tools
+ tools
+ duckduckgo_search_tool
+ exa_search_tool
+ file_tools
+ google_search_tool
+ mcp
+ mcp
+ decorators
+ fastmcp_client
+ metaphor_search_tool
+ orchestration
+ recipient_tool
+ retrieval_tool
+ rewind_tool
+ segment_extract_tool
+ seltz_search_tool
+ serpapi_search_tool
+ task_tool
+ tavily_search_tool
+ xml_tool_message
+ cachedb
+ cachedb
+ base
+ redis_cachedb
+ embedding_models
+ embedding_models
+ base
+ models
+ protoc
+ protoc
+ embeddings_pb2
+ embeddings_pb2_grpc
+ remote_embeds
+ exceptions
+ language_models
+ language_models
+ azure_openai
+ base
+ client_cache
+ config
+ httpx_compat
+ mock_lm
+ model_info
+ openai_gpt
+ prompt_formatter
+ prompt_formatter
+ base
+ hf_formatter
+ llama2_formatter
+ provider_params
+ rate_limiter
+ utils
+ mytypes
+ parsing
+ parsing
+ agent_chats
+ code_parser
+ document_parser
+ document_url
+ file_attachment
+ md_parser
+ para_sentence_split
+ parse_json
+ parser
+ pdf_utils
+ repo_loader
+ routing
+ search
+ spider
+ table_loader
+ url_loader
+ urls
+ utils
+ web_search
+ prompts
+ prompts
+ dialog
+ prompts_config
+ templates
+ pydantic_v1
+ pydantic_v1
+ main
+ utils
+ utils
+ algorithms
+ algorithms
+ graph
+ configuration
+ constants
+ git_utils
+ globals
+ html_logger
+ logging
+ object_registry
+ output
+ output
+ citations
+ printing
+ status
+ pandas_utils
+ pydantic_utils
+ system
+ types
+ vector_store
+ vector_store
+ base
+ chromadb
+ lancedb
+ meilisearch
+ milvusdb
+ pineconedb
+ postgres
+ qdrantdb
+ weaviatedb
+ Table of contents
+ The LLM Opportunity
+ Langroid's Multi-Agent Programming Framework
+ Highlights
+ Langroid: Harness LLMs with Multi-Agent Programming ¶ 
+ The LLM Opportunity ¶ 
+ Given the remarkable abilities of recent Large Language Models (LLMs), there
+is an unprecedented opportunity to build intelligent applications powered by
+this transformative technology. The top question for any enterprise is: how
+best to harness the power of LLMs for complex applications? For technical and
+practical reasons, building LLM-powered applications is not as simple as
+throwing a task at an LLM-system and expecting it to do it.
+ Langroid's Multi-Agent Programming Framework ¶ 
+ Effectively leveraging LLMs at scale requires a principled programming 
+framework . In particular, there is often a need to maintain multiple LLM 
+conversations, each instructed in different ways, and "responsible" for 
+different aspects of a task.
+ An agent is a convenient abstraction that encapsulates LLM conversation 
+state, along with access to long-term memory (vector-stores) and tools (a.k.a functions 
+or plugins). Thus a Multi-Agent Programming framework is a natural fit 
+for complex LLM-based applications.
+ Langroid is the first Python LLM-application framework that was explicitly 
+designed with Agents as first-class citizens, and Multi-Agent Programming 
+as the core design principle. The framework is inspired by ideas from the 
+ Actor Framework .
+ Langroid allows an intuitive definition of agents, tasks and task-delegation 
+among agents. There is a principled mechanism to orchestrate multi-agent 
+collaboration. Agents act as message-transformers, and take turns responding to (and
+transforming) the current message. The architecture is lightweight, transparent, 
+flexible, and allows other types of orchestration to be implemented; see the (WIP) 
+ langroid architecture document .
+Besides Agents, Langroid also provides simple ways to directly interact with LLMs and vector-stores. See the Langroid quick-tour .
+ Highlights ¶ 
+ Agents as first-class citizens: The Agent class encapsulates LLM conversation state,
+ and optionally a vector-store and tools. Agents are a core abstraction in Langroid; 
+ Agents act as message transformers , and by default provide 3 responder methods, one corresponding to each 
+ entity: LLM, Agent, User. 
+ Tasks: A Task class wraps an Agent, gives the agent instructions (or roles, or goals),
+ manages iteration over an Agent's responder methods,
+ and orchestrates multi-agent interactions via hierarchical, recursive
+ task-delegation. The Task.run() method has the same
+ type-signature as an Agent's responder's methods, and this is key to how
+ a task of an agent can delegate to other sub-tasks: from the point of view of a Task,
+ sub-tasks are simply additional responders, to be used in a round-robin fashion
+ after the agent's own responders.
+ Modularity, Reusabilily, Loose coupling: The Agent and Task abstractions allow users to design
+ Agents with specific skills, wrap them in Tasks, and combine tasks in a flexible way.
+ LLM Support : Langroid works with practically any LLM, local/open or remote/proprietary/API-based, via a variety of libraries and providers. See guides to using local LLMs and non-OpenAI LLMs . See Supported LLMs .
+ Caching of LLM prompts, responses: Langroid by default uses Redis for caching. 
+ Vector-stores : Qdrant , Chroma , LanceDB , and Milvus are currently supported.
+ Vector stores allow fo
+
+=== [about] https://langroid.github.io/langroid/notes/overview/ (lang=en)
+Overview - langroid 
+ langroid
+ Overview
+ Initializing search
+ langroid/langroid
+ Home
+ Blog
+ Getting Started
+ FAQ
+ Notes-Updates
+ Examples
+ Tutorials
+ Code/API Docs
+ langroid
+ langroid/langroid
+ Home
+ Blog
+ Getting Started
+ Getting Started
+ Setup
+ LLM interaction
+ Simple Chat Agent
+ Task Delegation
+ Two Agent Chat
+ Three Agent Chat
+ Agent with Tools/Functions
+ Three Agents, with Routing
+ Agent with Retrieval
+ FAQ
+ Notes-Updates
+ Notes-Updates
+ Overview
+ XML-based Tools
+ Async Streaming
+ Knowledge Graphs
+ Gemini LLMs, Embeddings, Vertex AI
+ LLM-based Pdf Parsing
+ Large Tool Results
+ GLHF.chat Support
+ Structured Output
+ Tool Handlers
+ Task Termination
+ Chat History Snapshots
+ Tool-Origin Taint Tracking
+ Tool Handler Resolution
+ Message Routing
+ OpenAIAssistant Removal
+ Llama.cpp Embeddings
+ Azure OpenAI models
+ Custom Azure OpenAI client
+ Enriching Chunks for Retrieval
+ Reasoning Content
+ None Content in LLM Messages
+ Weaviate
+ Handling LLM Non-Tool Messages
+ PGVector
+ Milvus
+ Pinecone
+ Tavily Search Tool
+ Seltz Search Tool
+ SerpApi Search Tool
+ Twitter Search via Xquik MCP
+ Web Research via Baizhi MCP
+ Marker Pdf Parser
+ URLLoader
+ Spider Cloud Crawler
+ Crawl4AI Crawler
+ LangDB AI Gateway
+ Portkey AI Gateway
+ Markitdown Parsers
+ LiteLLM Proxy
+ Chunking
+ Image, PDF Input
+ MCP Tools
+ Code-Injection Protection
+ TaskTool
+ Local Qdrant VectorDB Cleanup
+ OpenAI HTTP Client Configuration
+ OpenAI Client Caching
+ Rotating API Keys
+ Pro-active Rate Limiting
+ Cross-Encoder Reranking
+ Task Logs
+ Pydantic v2 Migration
+ Markdown, HTML Parsing
+ Context-Overflow Handling
+ Batch Processing
+ Attachment Token Preflight
+ Vector-Store Env Prefixes
+ Quiet Mode
+ Examples
+ Examples
+ Guide
+ Hierarchical Agent Computation
+ Demos
+ Demos
+ Audience Targeting
+ Tutorials
+ Tutorials
+ Langroid Tour
+ Supported LLMs
+ Local LLM Setup
+ Non-OpenAI LLMs
+ SQLChatAgent
+ LLM Usage Options
+ Code/API Docs
+ Code/API Docs
+ langroid
+ langroid
+ agent
+ agent
+ base
+ batch
+ callbacks
+ callbacks
+ chainlit
+ chat_agent
+ chat_document
+ done_sequence_parser
+ special
+ special
+ arangodb
+ arangodb
+ aql_validator
+ arangodb_agent
+ system_messages
+ tools
+ utils
+ doc_chat_agent
+ lance_doc_chat_agent
+ lance_rag
+ lance_rag
+ critic_agent
+ lance_rag_task
+ query_planner_agent
+ lance_tools
+ neo4j
+ neo4j
+ csv_kg_chat
+ cypher_validator
+ neo4j_chat_agent
+ system_messages
+ tools
+ relevance_extractor_agent
+ retriever_agent
+ sql
+ sql
+ sql_chat_agent
+ utils
+ utils
+ description_extractors
+ populate_metadata
+ system_message
+ tools
+ table_chat_agent
+ task
+ tool_message
+ tools
+ tools
+ duckduckgo_search_tool
+ exa_search_tool
+ file_tools
+ google_search_tool
+ mcp
+ mcp
+ decorators
+ fastmcp_client
+ metaphor_search_tool
+ orchestration
+ recipient_tool
+ retrieval_tool
+ rewind_tool
+ segment_extract_tool
+ seltz_search_tool
+ serpapi_search_tool
+ task_tool
+ tavily_search_tool
+ xml_tool_message
+ cachedb
+ cachedb
+ base
+ redis_cachedb
+ embedding_models
+ embedding_models
+ base
+ models
+ protoc
+ protoc
+ embeddings_pb2
+ embeddings_pb2_grpc
+ remote_embeds
+ exceptions
+ language_models
+ language_models
+ azure_openai
+ base
+ client_cache
+ config
+ httpx_compat
+ mock_lm
+ model_info
+ openai_gpt
+ prompt_formatter
+ prompt_formatter
+ base
+ hf_formatter
+ llama2_formatter
+ provider_params
+ rate_limiter
+ utils
+ mytypes
+ parsing
+ parsing
+ agent_chats
+ code_parser
+ document_parser
+ document_url
+ file_attachment
+ md_parser
+ para_sentence_split
+ parse_json
+ parser
+ pdf_utils
+ repo_loader
+ routing
+ search
+ spider
+ table_loader
+ url_loader
+ urls
+ utils
+ web_search
+ prompts
+ prompts
+ dialog
+ prompts_config
+ templates
+ pydantic_v1
+ pydantic_v1
+ main
+ u
+
+=== [meta] https://langroid.github.io/langroid/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/langroid/langroid
+<div align="center">
+  <img src="https://raw.githubusercontent.com/langroid/langroid/main/docs/assets/langroid-card-lambda-ossem-rust-1200-630.png" alt="Logo"
+        width="400" align="center">
+</div>
+
+<div align="center">
+
+[![PyPI - Version](https://img.shields.io/pypi/v/langroid)](https://pypi.org/project/langroid/)
+[![Downloads](https://img.shields.io/pypi/dm/langroid)](https://pypi.org/project/langroid/)
+[![Pytest](https://github.com/langroid/langroid/actions/workflows/pytest.yml/badge.svg)](https://github.com/langroid/langroid/actions/workflows/pytest.yml)
+[![codecov](https://codecov.io/gh/langroid/langroid/graph/badge.svg)](https://codecov.io/gh/langroid/langroid)
+[![Multi-Architecture DockerHub](https://github.com/langroid/langroid/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/langroid/langroid/actions/workflows/docker-publish.yml)
+
+[![Static Badge](https://img.shields.io/badge/Documentation-blue?link=https%3A%2F%2Flangroid.github.io%2Flangroid%2F&link=https%3A%2F%2Flangroid.github.io%2Flangroid%2F)](https://langroid.github.io/langroid)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/langroid/langroid/blob/main/examples/Langroid_quick_start.ipynb)
+[![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=flat&logo=discord&logoColor=white)](https://discord.gg/ZU36McDgDs)
+[![Substack](https://img.shields.io/badge/Substack-%23006f5c.svg?style=flat&logo=substack&logoColor=FF6719)](https://langroid.substack.com/p/langroid-harness-llms-with-multi-agent-programming)
+
+</div>
+
+<h3 align="center">
+  <a target="_blank" 
+    href="https://langroid.github.io/langroid/" rel="dofollow">
+      <strong>Documentation</strong></a>
+  &middot;
+  <a target="_blank" href="https://github.com/langroid/langroid-examples" rel="dofollow">
+      <strong>Examples Repo</strong></a>
+  &middot;
+  <a target="_blank" href="https://discord.gg/ZU36McDgDs" rel="dofollow">
+      <strong>Discord</strong></a>
+  &middot;
+  <a target="_blank" href="https://github.com/langroid/langroid/blob/main/CONTRIBUTING.md" rel="dofollow">
+      <strong>Contributing</strong></a>
+
+  <br />
+</h3>
+
+`Langroid` is an intuitive, lightweight, extensible and principled
+Python framework to easily build LLM-powered applications, from CMU and UW-Madison researchers. 
+You set up Agents, equip them with optional components (LLM, 
+vector-store and tools/functions), assign them tasks, and have them 
+collaboratively solve a problem by exchanging messages. 
+This Multi-Agent paradigm is inspired by the
+[Actor Framework](https://en.wikipedia.org/wiki/Actor_model)
+(but you do not need to know anything about this!). 
+
+`Langroid` is a fresh take on LLM app-development, where considerable thought has gone 
+into simplifying the developer experience; 
+it does not use `Langchain`, or any other LLM framework, 
+and works with [practically any LLM](https://langroid.github.io/langroid/tutorials/supported-models/).
+
+🔥 ✨ A Claude Code [plugin](#claude-code-plugin-optional) is available to
+accelerate Langroid development with built-in patterns and best practices.
+
+
+🔥 Read the (WIP) [overview of the langroid architecture](https://langroid.github.io/langroid/blog/2024/08/15/overview-of-langroids-multi-agent-architecture-prelim/), 
+ and a [quick tour of Langroid](https://langroid.github.io/langroid/tutorials/langroid-tour/).
+
+🔥 MCP Support: Allow any LLM-Agent to leverage MCP Servers via Langroid's simple
+[MCP tool adapter](https://langroid.github.io/langroid/notes/mcp-tools/) that converts 
+the server's tools into Langroid's `ToolMessage` instances.
+
+📢 Companies are using/adapting Langroid in **production**. Here is a quote:
+
+>[Nullify](https://www.nullify.ai) uses AI Agents for secure software development. 
+> It finds, prioritizes and fixes vulnerabilities. We have internally adapted Langroid's multi-agent orchestration framework in production, after evaluating CrewAI, Autogen, LangChain, Langflow, etc. We found Langroid to be far superior to those frameworks in terms of ease of setup and flexibility. Langroid's Agent and Task abstractions are intuitive, well thought out, and provide a great developer 

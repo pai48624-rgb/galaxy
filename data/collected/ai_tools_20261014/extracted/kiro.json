@@ -1,0 +1,175 @@
+{
+ "company": "AWS",
+ "one_liner_ko": "AI 코딩을 넘어 에이전트형 엔지니어링으로 — 명세 기반 개발과 병렬 에이전트를 내세운 AWS의 개발 도구.",
+ "what_it_does_ko": "Kiro는 프롬프트를 요구사항·아키텍처 설계·순서가 정해진 작업 목록(명세)으로 바꾼 뒤 병렬 에이전트로 구현한다. 코드를 쓰기 전에 요구사항의 모순과 빈틈을 자동 추론으로 점검하고, 속성 기반 테스트로 동작을 검증한다. IDE·CLI·웹·모바일이 같은 에이전트 하네스를 공유하며, CLI는 CI/CD에서 헤드리스로 PR 리뷰·버그 수정을 한다. Claude·GPT·오픈 가중치 모델을 고르거나 Auto가 작업별로 모델을 고른다.",
+ "key_features": [
+  "명세 기반 개발(요구사항·설계·작업 목록)",
+  "병렬 에이전트(로컬·클라우드)",
+  "속성 기반 테스트·요구사항 자동 점검",
+  "헤드리스 CLI(CI/CD PR 리뷰)",
+  "훅(Hooks)·스티어링·MCP·Agent Skills",
+  "여러 모델 선택 및 Auto 모델",
+  "IAM·SSO 등 기업용 관리 기능"
+ ],
+ "use_cases_ko": [
+  "요구사항·설계·작업으로 기능 계획",
+  "근본 원인 분석으로 버그 수정",
+  "CI/CD에서 PR 리뷰"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Kiro Free $0/월, 50 크레딧, 오픈 가중치 모델·Claude Sonnet 4.5)",
+  "plans": [
+   {
+    "name": "Kiro Free",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "50 크레딧",
+    "page_lang": "en"
+   },
+   {
+    "name": "Kiro Pro",
+    "price": 20,
+    "currency": "USD",
+    "period": "month",
+    "limits": "사용자당, 1,000 크레딧, 추가 크레딧 $0.04",
+    "page_lang": "en"
+   },
+   {
+    "name": "Kiro Pro+",
+    "price": 40,
+    "currency": "USD",
+    "period": "month",
+    "limits": "사용자당, 2,000 크레딧",
+    "page_lang": "en"
+   },
+   {
+    "name": "Kiro Pro Max",
+    "price": 100,
+    "currency": "USD",
+    "period": "month",
+    "limits": "사용자당, 5,000 크레딧",
+    "page_lang": "en"
+   },
+   {
+    "name": "Kiro Power",
+    "price": 200,
+    "currency": "USD",
+    "period": "month",
+    "limits": "사용자당, 10,000 크레딧",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": null,
+    "period": null,
+    "limits": "영업 문의, 초과분 크레딧당 $0.04",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://kiro.dev/pricing/"
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "CLI",
+  "웹"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://kiro.dev/",
+   "quote": "Built and operated by AWS, Kiro benefits from the same security"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://kiro.dev/",
+   "quote": "Move beyond AI coding to agentic engineering"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://kiro.dev/",
+   "quote": "Kiro turns your prompts into requirements, architectural designs, and sequenced tasks , then implements them with parallel agents ."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://kiro.dev/docs/",
+   "quote": "One unified agent harness powers every surface (IDE, CLI, Web, and Mobile)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://kiro.dev/",
+   "quote": "Before writing code, Kiro checks your requirements for contradictions and gaps using automated reasoning techniques."
+  },
+  {
+   "field": "key_features",
+   "url": "https://kiro.dev/",
+   "quote": "Run the headless CLI in CI/CD to review PRs and fix bugs without opening an editor."
+  },
+  {
+   "field": "key_features",
+   "url": "https://kiro.dev/",
+   "quote": "It supports AGENTS.md, Skills.md , and MCP ."
+  },
+  {
+   "field": "key_features",
+   "url": "https://kiro.dev/",
+   "quote": "Kiro offers IAM and SSO authentication"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://kiro.dev/docs/",
+   "quote": "Fix a bug with root cause analysis and regression prevention"
+  },
+  {
+   "field": "pricing",
+   "url": "https://kiro.dev/pricing/",
+   "quote": "KIRO FREE\n $0\n per month\n 50 credits"
+  },
+  {
+   "field": "pricing",
+   "url": "https://kiro.dev/pricing/",
+   "quote": "KIRO PRO\n $20\n per user / month\n 1,000 credits"
+  },
+  {
+   "field": "pricing",
+   "url": "https://kiro.dev/pricing/",
+   "quote": "KIRO PRO+\n $40\n per user / month\n 2,000 credits"
+  },
+  {
+   "field": "pricing",
+   "url": "https://kiro.dev/pricing/",
+   "quote": "KIRO PRO MAX\n $100\n per user / month\n 5,000 credits"
+  },
+  {
+   "field": "pricing",
+   "url": "https://kiro.dev/pricing/",
+   "quote": "KIRO POWER\n $200\n per user / month\n 10,000 credits"
+  },
+  {
+   "field": "platforms",
+   "url": "https://kiro.dev/",
+   "quote": "Install CLI curl -fsSL https://cli.kiro.dev/install | bash"
+  },
+  {
+   "field": "platforms",
+   "url": "https://kiro.dev/docs/",
+   "quote": "Browser-based agent for multi-repo tasks that plans, implements, and opens PRs"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://kiro.dev/",
+   "quote": "hreflang: en, fr-ca, x-default"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "크레딧 기반 4단계 유료(Pro $20·Pro+ $40·Pro Max $100·Power $200, 사용자당 월) + 추가 크레딧 $0.04",
+   "diff": "단순 구독이 아니라 크레딧 할당·모델별 크레딧 배수·추가 크레딧 구매 구조",
+   "url": "https://kiro.dev/pricing/"
+  }
+ ]
+}

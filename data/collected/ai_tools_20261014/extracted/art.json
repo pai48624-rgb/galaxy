@@ -1,0 +1,40 @@
+{
+ "company": "Linux Foundation AI & Data Foundation (호스팅)",
+ "one_liner_ko": "머신러닝 모델을 적대적 위협으로부터 평가·방어·인증·검증하는 머신러닝 보안용 파이썬 라이브러리.",
+ "what_it_does_ko": "Adversarial Robustness Toolbox(ART)는 머신러닝 보안을 위한 파이썬 라이브러리다. 개발자와 연구자가 회피(Evasion)·오염(Poisoning)·추출(Extraction)·추론(Inference) 같은 적대적 위협에 대해 머신러닝 모델과 애플리케이션을 평가·방어·인증·검증할 수 있게 한다. TensorFlow·Keras·PyTorch·scikit-learn·XGBoost 등 주요 프레임워크와 이미지·표·오디오·비디오 등 모든 데이터 유형, 분류·객체 탐지·생성·인증 등 작업을 지원한다. LF AI & Data 재단이 호스팅한다.",
+ "key_features": [
+  "회피 공격 모음(PGD·Carlini-Wagner·DeepFool 등)",
+  "추출·추론·오염(백도어) 공격",
+  "탐지기·전처리·후처리 방어",
+  "적대적 학습(Adversarial Training) 트레이너",
+  "인증(Randomized Smoothing·Interval 등) 추정기",
+  "TensorFlow·Keras·PyTorch·scikit-learn·XGBoost 등 프레임워크 지원",
+  "이미지·표·오디오·비디오 데이터 지원"
+ ],
+ "use_cases_ko": [
+  "개발자·연구자가 머신러닝 모델을 적대적 위협에 대해 평가·방어하기",
+  "레드팀·블루팀 활동"
+ ],
+ "pricing": {"free_tier": "불명", "plans": [], "pricing_url": null},
+ "open_source": "MIT",
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://github.com/Trusted-AI/adversarial-robustness-toolbox", "quote": "ART is hosted by the \n[Linux Foundation AI & Data Foundation](https://lfaidata.foundation) (LF AI & Data)."},
+  {"field": "one_liner_ko", "url": "https://adversarial-robustness-toolbox.readthedocs.io/en/latest/", "quote": "Adversarial Robustness Toolbox (ART) is a Python library for Machine Learning Security."},
+  {"field": "what_it_does_ko", "url": "https://adversarial-robustness-toolbox.readthedocs.io/en/latest/", "quote": "developers and researchers to evaluate, defend, certify and verify Machine Learning models and applications against\nthe adversarial threats of Evasion, Poisoning, Extraction, and Inference."},
+  {"field": "key_features", "url": "https://adversarial-robustness-toolbox.readthedocs.io/en/latest/", "quote": "Projected Gradient Descent (PGD)"},
+  {"field": "key_features", "url": "https://adversarial-robustness-toolbox.readthedocs.io/en/latest/", "quote": "art.attacks.extraction"},
+  {"field": "key_features", "url": "https://adversarial-robustness-toolbox.readthedocs.io/en/latest/", "quote": "Backdoor Poisoning Attack"},
+  {"field": "key_features", "url": "https://adversarial-robustness-toolbox.readthedocs.io/en/latest/", "quote": "art.defences.preprocessor"},
+  {"field": "key_features", "url": "https://adversarial-robustness-toolbox.readthedocs.io/en/latest/", "quote": "Adversarial Training Madry PGD"},
+  {"field": "key_features", "url": "https://adversarial-robustness-toolbox.readthedocs.io/en/latest/", "quote": "PyTorch Randomized Smoothing Classifier"},
+  {"field": "key_features", "url": "https://adversarial-robustness-toolbox.readthedocs.io/en/latest/", "quote": "(images, tables, audio, video, etc.)"},
+  {"field": "use_cases_ko", "url": "https://github.com/Trusted-AI/adversarial-robustness-toolbox", "quote": "## ART for Red and Blue Teams (selection)"},
+  {"field": "open_source", "url": "https://github.com/Trusted-AI/adversarial-robustness-toolbox", "quote": "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"},
+  {"field": "korean_support", "url": "https://adversarial-robustness-toolbox.readthedocs.io/en/latest/", "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

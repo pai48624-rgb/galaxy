@@ -1,0 +1,187 @@
+{
+ "company": "Prefect Technologies, Inc.",
+ "one_liner_ko": "데이터·ML·에이전트를 위한 내구성 있는 워크플로 오케스트레이션 플랫폼.",
+ "what_it_does_ko": "Prefect는 데이터·ML·에이전트용 워크플로 오케스트레이션 플랫폼이다. 평범한 파이썬 함수에 데코레이터를 붙여 워크플로로 만들고, 예약·재시도·캐싱·복구를 플랫폼이 처리한다. 관리형 컴퓨트(Prefect Serverless)나 자체 VPC 등 어디서든 같은 코드로 실행하며, 하이브리드 구조에서는 워커가 자체 인프라에서 실행하고 Prefect에는 로그와 상태만 보낸다. 오픈소스 프레임워크와 Prefect Cloud가 같은 엔진을 쓴다.",
+ "key_features": [
+  "@flow·@task 데코레이터로 상태·로깅·자동 재시도",
+  "관리형 컴퓨트·자체 VPC·쿠버네티스·ECS 실행",
+  "하이브리드 구조(워커가 API를 폴링, 인바운드 연결 없음)",
+  "모든 팀의 실행·로그·상태 관측",
+  "크론·이벤트 기반 예약·백필",
+  "실패·SLA 위반·지연 알림 자동화",
+  "Prefect CLI로 배포"
+ ],
+ "use_cases_ko": [
+  "깨지기 쉬운 크론 작업을 스스로 복구하는 데이터 파이프라인으로 교체",
+  "ML 워크플로 오케스트레이션"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Hobby 영구 무료 — 사용자 2명, 배포 5개, Serverless 500분, 실행 기록 7일)",
+  "plans": [
+   {
+    "name": "Hobby",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "영구 무료, 사용자 2명, 배포 5개, Prefect Serverless 월 500분, 실행 보관 7일",
+    "page_lang": "en"
+   },
+   {
+    "name": "Starter",
+    "price": 100,
+    "currency": "USD",
+    "period": "month",
+    "limits": "사용자 3명, 배포 20개, Serverless 월 75시간, 자체 컴퓨트, API 1,250회/분",
+    "page_lang": "en"
+   },
+   {
+    "name": "Team",
+    "price": 100,
+    "currency": "USD",
+    "period": "month",
+    "limits": "사용자당 월 $100, 사용자 4~8명, 배포 100개, Serverless 월 225시간, 감사 로그 24시간",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": "USD",
+    "period": "year",
+    "limits": "맞춤 요금(연간 결제), SSO·RBAC·배포 무제한·99.9% 가동 SLA",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://www.prefect.io/pricing"
+ },
+ "open_source": "Apache 2.0",
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "CLI"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.prefect.io/pricing",
+   "quote": "© Copyright 2026 Prefect Technologies, Inc. All rights reserved."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.prefect.io/",
+   "quote": "Durable orchestration for data, ML, and agents."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.prefect.io/",
+   "quote": "Prefect is a workflow orchestration platform for data, ML, and agents."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.prefect.io/",
+   "quote": "scheduling, retries, caching, and recovery are part of the platform rather than code you maintain"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.prefect.io/how-it-works",
+   "quote": "Prefect receives only logs and state updates for observability."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.prefect.io/",
+   "quote": "Add @flow to your Python functions for state, logging, and automatic retries."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.prefect.io/",
+   "quote": "Run anywhere Kubernetes, ECS, your own VPC, or serverless."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.prefect.io/how-it-works",
+   "quote": "Your workers poll our API—no inbound connections to your network"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.prefect.io/",
+   "quote": "Observability Every run, log, and state across all teams, in one view."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.prefect.io/",
+   "quote": "Scheduling Cron, event-driven, and backfills, recovered automatically."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.prefect.io/",
+   "quote": "Automation & alerts Alerts on failures, SLA misses, and late runs."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.prefect.io/how-it-works",
+   "quote": "Deploy workflows from your own infrastructure using the Prefect CLI."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.prefect.io/",
+   "quote": "Replace brittle cron jobs with pipelines that heal themselves, so your data always arrives on time."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.prefect.io/",
+   "quote": "Cash App Gains Flexibility in Machine Learning Workflows with Prefect"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.prefect.io/pricing",
+   "quote": "Start on the free Hobby tier, and add governance and scale when you're ready."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.prefect.io/pricing",
+   "quote": "Up to 5 deployments \n 500 min of Prefect Serverless"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.prefect.io/pricing",
+   "quote": "Bring your own compute. Full infrastructure control."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.prefect.io/pricing",
+   "quote": "Team collaboration with service accounts and audit logs."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.prefect.io/pricing",
+   "quote": "Billing N/A Monthly Monthly Annual"
+  },
+  {
+   "field": "open_source",
+   "url": "https://www.prefect.io/",
+   "quote": "The Prefect framework is open source under the Apache 2.0 license"
+  },
+  {
+   "field": "api",
+   "url": "https://www.prefect.io/how-it-works",
+   "quote": "Your workers poll our API—no inbound connections to your network"
+  },
+  {
+   "field": "platforms",
+   "url": "https://www.prefect.io/how-it-works",
+   "quote": "Deploy workflows from your own infrastructure using the Prefect CLI."
+  },
+  {
+   "field": "platforms",
+   "url": "https://www.prefect.io/",
+   "quote": "One UI shows every run and flags what's late or failed"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.prefect.io/",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

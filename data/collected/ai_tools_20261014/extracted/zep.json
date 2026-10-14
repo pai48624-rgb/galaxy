@@ -1,0 +1,61 @@
+{
+ "company": "Zep AI, Inc.",
+ "one_liner_ko": "기업의 데이터·문서·대화를 하나로 묶어, AI 에이전트가 쓸 수 있는 관리된 맥락(컨텍스트)으로 제공하는 기업용 컨텍스트 계층.",
+ "what_it_does_ko": "Zep은 업무 데이터, 문서, 대화를 하나의 공유·관리되는 맥락으로 모아 에이전트가 작업을 정확히 끝내도록 돕는다. 사용자·고객·계정·도메인별로 Context Graph를 만들고 각 작업에 필요한 맥락만 골라 돌려준다. 사실에는 날짜가 붙어 데이터 변화에 맞춰 갱신되고, 각 사실을 출처까지 추적할 수 있다. 접근·보관 정책과 감사 로그를 데이터 계층에서 적용하며, 관리형 클라우드·자체 암호키(BYOK)·고객 VPC 배포(BYOC) 중 선택할 수 있다. 오픈소스 프레임워크 Graphiti로 시간 축 지식 그래프를 만들 수도 있다.",
+ "key_features": [
+  "업무 데이터·문서·대화를 사용자/계정/도메인별 Context Graph로 구축",
+  "작업에 필요한 사실만 반환해 토큰 사용량 최대 90% 절감",
+  "그래프 크기와 무관하게 200ms 미만 검색",
+  "속성 기반 접근 제어·보관 정책·감사 및 API 로그",
+  "각 사실을 원본 출처까지 추적",
+  "Memory MCP Server와 웹훅",
+  "관리형 클라우드·BYOK·BYOC(VPC) 배포",
+  "오픈소스 Graphiti: 시간 축 지식 그래프 구축·하이브리드 검색"
+ ],
+ "use_cases_ko": [
+  "조직 전체 에이전트가 공유할 고객·프로젝트·업무 도메인 지식 통합",
+  "과거 대화·사용자 활동·변하는 선호를 기억하는 에이전트 메모리",
+  "계정 기록·대화·이벤트를 묶어 고객 상황을 이해하는 에이전트"
+ ],
+ "pricing": {
+  "free_tier": "있음 (무료 플랜 월 10,000 크레딧, 이월·자동충전 없음, 프로젝트 2개)",
+  "plans": [
+   {"name": "Free", "price": 0, "currency": "USD", "period": "month", "limits": "월 10,000 크레딧, 프로젝트 2개, MCP 좌석 1개, 처리 우선순위 낮음", "page_lang": "en"},
+   {"name": "Flex", "price": 125, "currency": "USD", "period": "month", "limits": "월 50,000 크레딧(초과 $25/10,000), 분당 600요청, 프로젝트 5개", "page_lang": "en"},
+   {"name": "Flex Plus", "price": 375, "currency": "USD", "period": "month", "limits": "월 200,000 크레딧(초과 $75/40,000), 분당 1,000요청, 프로젝트 10개, 웹훅·분석", "page_lang": "en"},
+   {"name": "Enterprise", "price": null, "currency": "USD", "period": "month", "limits": "맞춤 크레딧·협상 단가, SLA, 무제한 프로젝트, SOC 2·HIPAA BAA, BYOC", "page_lang": "en"}
+  ],
+  "pricing_url": "https://www.getzep.com/pricing/"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["웹", "API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://www.getzep.com/about/", "quote": "© 2026 Zep AI, Inc. All rights reserved."},
+  {"field": "one_liner_ko", "url": "https://www.getzep.com", "quote": "Zep unifies business data, documents, and conversations into shared, governed context so agents can complete tasks correctly."},
+  {"field": "what_it_does_ko", "url": "https://www.getzep.com", "quote": "Zep ingests data from across your business, builds a Context Graph for each user, customer, account, or domain, and retrieves the context each task needs."},
+  {"field": "what_it_does_ko", "url": "https://www.getzep.com", "quote": "Facts are dated and updated as your data changes."},
+  {"field": "what_it_does_ko", "url": "https://www.getzep.com", "quote": "Zep Cloud, Zep Cloud with your own encryption keys, or a deployment in your VPC."},
+  {"field": "what_it_does_ko", "url": "https://github.com/getzep/graphiti", "quote": "Graphiti is a framework for building and querying temporal context graphs for AI agents."},
+  {"field": "key_features", "url": "https://www.getzep.com", "quote": "03 Cut token use by 90%"},
+  {"field": "key_features", "url": "https://www.getzep.com", "quote": "Zep retrieves context in under 200 milliseconds, regardless of graph size or count."},
+  {"field": "key_features", "url": "https://www.getzep.com", "quote": "Use attributes to control what context each agent can access and what it can do with it."},
+  {"field": "key_features", "url": "https://www.getzep.com", "quote": "Trace each fact to the source it came from, and audit any answer back to its origin."},
+  {"field": "key_features", "url": "https://www.getzep.com/pricing/", "quote": "5 Memory MCP Server seats"},
+  {"field": "key_features", "url": "https://github.com/getzep/graphiti", "quote": "Query across time, meaning, and relationships with hybrid retrieval (semantic + keyword + graph traversal)."},
+  {"field": "use_cases_ko", "url": "https://www.getzep.com", "quote": "Unify knowledge about customers, projects, and business domains into shared context for agents across your organization."},
+  {"field": "use_cases_ko", "url": "https://www.getzep.com", "quote": "Give agents context from past conversations, user activity, and changing preferences."},
+  {"field": "use_cases_ko", "url": "https://www.getzep.com", "quote": "Unify account records, conversations, and events so agents understand each customer’s situation."},
+  {"field": "pricing", "url": "https://www.getzep.com/pricing/", "quote": "Prototyping? Start free with 10,000 credits a month. Limits apply ."},
+  {"field": "pricing", "url": "https://www.getzep.com/pricing/", "quote": "50,000 credits included. Then $25 / 10,000 credits."},
+  {"field": "pricing", "url": "https://www.getzep.com/pricing/", "quote": "200,000 credits included. Then $75 / 40,000 credits."},
+  {"field": "pricing", "url": "https://www.getzep.com/pricing/", "quote": "Flex $125 / month Flex Plus $375 / month Enterprise Custom"},
+  {"field": "pricing", "url": "https://www.getzep.com/pricing/", "quote": "· 2 projects, 1 Memory MCP Server seat, 5 custom entity & edge types."},
+  {"field": "api", "url": "https://www.getzep.com/about/", "quote": "API Reference"},
+  {"field": "platforms", "url": "https://www.getzep.com", "quote": "Use Zep's managed service. No infrastructure to run. Start in minutes."},
+  {"field": "korean_support", "url": "https://www.getzep.com", "quote": "html lang: en"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

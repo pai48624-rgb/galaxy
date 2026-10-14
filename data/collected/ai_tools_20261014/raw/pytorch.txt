@@ -1,0 +1,461 @@
+=== [home] https://pytorch.org (lang=en-US)
+PyTorch Foundation - PyTorch 
+ Skip to main content 
+ Join us at PyTorch Conference North America · Oct 20-21 · San Jose, CA 
+ Search 
+ Close Search 
+ search 
+ Menu 
+ Learn 
+ Get Started 
+ Tutorials 
+ Learn the Basics 
+ PyTorch Recipes 
+ Intro to PyTorch – YouTube Series 
+ Videos 
+ PyTorch Certification 
+ Community 
+ Landscape 
+ Join the Ecosystem 
+ Community Hub 
+ Forums 
+ Developer Resources 
+ Events 
+ Working Groups 
+ Meeting Calendar 
+ Contributor Awards 
+ Ambassadors 
+ Projects 
+ PyTorch 
+ Executorch 
+ vLLM 
+ DeepSpeed 
+ Ray 
+ Helion 
+ Safetensors 
+ Host Your Project 
+ Docs 
+ PyTorch 
+ Domains 
+ Blog & News 
+ Blog 
+ Announcements 
+ Case Studies 
+ Newsletter 
+ About 
+ PyTorch Foundation 
+ Members 
+ Governing Board 
+ Technical Advisory Council 
+ Cloud Credit Program 
+ Staff 
+ Contact 
+ Brand Guidelines 
+ JOIN 
+ search 
+ JOIN US
+ PyTorch Conference North America
+ October 20-21, 2026
+San Jose, CA
+#PyTorchCon
+ REGISTER NOW 
+ Get Started:  Install PyTorch Locally or Launch Instantly on Supported Cloud Platforms
+ Get started 
+ October 13, 2026 in Blog 
+ Extending Inductor for the IBM Spyre Accelerator
+ TL;DR The PyTorch-based software stack for IBM's Spyre accelerator recently moved its torch.compile backend from sendnn, a separate compilation stack built entirely from scratch, to backend=inductor, an open-source backend built…
+ Read More 
+ October 8, 2026 in Blog 
+ Session-Aware Agentic Inference with NVIDIA Dynamo
+ TL;DR Agentic workloads change the traffic an inference server sees. Unlike single-turn chat, an agent session can involve a large initial prefill, repeated model calls, and subagents running in parallel,…
+ Read More 
+ October 8, 2026 in Blog 
+ Building Spyre as a Native PyTorch Device
+ TL;DR Spyre becomes a native PyTorch device by connecting PyTorch's existing device, allocator, stream, and compiler abstractions through torch-spyre to the Spyre runtime and firmware. PrivateUse1 gives Spyre a real…
+ Read More 
+ Join PyTorch Foundation
+ As a member of the PyTorch Foundation, you’ll have access to resources that allow you to be stewards of stable, secure, and long-lasting codebases. You can collaborate on training, local and regional events, open-source developer tooling, academic research, and guides to help new users and contributors have a productive experience.
+ EXPLORE BENEFITS 
+ Key Features & Capabilities
+ Production Ready
+ Transition seamlessly between eager and graph modes with TorchScript, and accelerate the path to production with TorchServe.
+ Distributed Training
+ Scalable distributed training and performance optimization in research and production is enabled by the torch.distributed backend.
+ Robust Ecosystem
+ A rich ecosystem of tools and libraries extends PyTorch and supports development in computer vision, NLP and more.
+ Cloud Support
+ PyTorch is well supported on major cloud platforms, providing frictionless development and easy scaling.
+ Install PyTorch
+ Select your preferences and run the install command. Stable represents the most currently tested and supported version of PyTorch. This should be suitable for many users. Preview is available if you want the latest, not fully tested and supported, builds that are generated nightly. Please ensure that you have  met the prerequisites below (e.g., numpy) , depending on your package manager. You can also  install previous versions of PyTorch . Note that LibTorch is only available for C++.
+ NOTE:  Latest Stable PyTorch requires Python 3.10 or later.
+ PyTorch Build
+ Your OS
+ Package
+ Language
+ Compute Platform
+ Run this Command:
+ PyTorch Build
+ Stable (2.7.0)
+ Preview (Nightly)
+ Your OS
+ Linux
+ Mac
+ Windows
+ Package
+ Pip
+ LibTorch
+ Source
+ Language
+ Python
+ C++ / Java
+ Compute Platform
+ CUDA 11.8
+ CUDA 12.6
+ CUDA 12.8
+ ROCm 6.3
+ CPU
+ Run this Command:
+ pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118 
+ Previous versions of PyTorch 
+ Could not find the right platform for your hardware? See the PyTorch Additional Platforms page.
+ Quick Start With Cloud Partners
+ Get up and running with PyTorch quickly through popular cloud platforms and machine learning services.
+ Amazon Web Services 
+ PyTorch on AWS 
+ Amazon SageMaker 
+ AWS Deep Learning Containers 
+ AWS Deep Learning AMIs 
+ Google Cloud Platform 
+ Cloud Deep Learning VM Image 
+ Deep Learning Containers 
+ Microsoft Azure 
+ PyTorch on Azure 
+ Azure Machine Learning 
+ Azure Functions 
+ Lightning Studios 
+ lightning.ai 
+ Alibaba Cloud 
+ Alibaba Cloud PAI 
+ Alibaba Cloud PAI PyTorch processor 
+ Submit a single-node PyTorch transfer learning job 
+ Ecosystem
+ BROWSE PROJECTS 
+ Featured Projects
+ Explore a rich ecosystem of libraries, tools, and more to support development.
+ Captum
+ Captum (“comprehension” in Latin) is an open source, extensible library for model interpretability built on PyTorch.
+ PyTorch Geometric
+ PyTorch Geometric is a library for deep learning on irregular input data such as graphs, point clouds, and manifolds.
+ skorch
+ skorch is a high-level library for PyTorch that provides full scikit-learn compatibility.
+ Companies & Universities Using PyTorch
+ Amazon Advertising
+ Reduce inference costs by 71% and scale out using PyTorch, TorchServe, and AWS Inferentia.
+ READ CASE STUDIES 
+ Salesforce
+ Pushing the state of the art in NLP and Multi-task learning.
+ Stanford University
+ Using PyTorch’s flexibility to efficiently research new algorithmic approaches.
+ Docs
+ Access comprehensive developer documentation for PyTorch
+ View Docs › 
+ Tutorials
+ Get in-depth tutorials for beginners and advanced developers
+ View Tutorials › 
+ Resources
+ Find development resources and get your questions answered
+ View Resources › 
+ Stay in touch  for updates, event info, and the latest news
+ By submitting this form, I consent to receive marketing emails from the LF and its projects regarding their events, training, research, developments, and related announcements. I understand that I can unsubscribe at any time using the links in the footers of the emails I receive. Privacy Policy . 
+ x-twitter 
+ facebook 
+ linkedin 
+ youtube 
+ github 
+ slack 
+ discord 
+ © 2026 PyTorch. Copyright © The Linux Foundation®. All rights reserved. The Linux Foundation has registered trademarks and uses trademarks. For more information, including terms of use, privacy policy, and trademark usage, please see our Policies page. Trademark Usage . Privacy Policy 
+ Close Menu 
+ Learn 
+ Get Started 
+ Tutorials 
+ Learn the Basics 
+ PyTorch Recipes 
+ Intro to PyTorch – YouTube Series 
+ Videos 
+ PyTorch Certification 
+ Community 
+ Landscape 
+ Join the Ecosystem 
+ Community Hub 
+ Forums 
+ Developer Resources 
+ Events 
+ Working Groups 
+ Meeting Calendar 
+ Contributor Awards 
+ Ambassadors 
+ Projects 
+ PyTorch 
+ Executorch 
+ vLLM 
+ DeepSpeed 
+ Ray 
+ Helion 
+ Safetensors 
+ Host Your Project 
+ Docs 
+ PyTorch 
+ Domains 
+ Blog & News 
+ Blog 
+ Announcements 
+ Case Studies 
+ Newsletter 
+ About 
+ PyTorch Foundation 
+ Members 
+ Governing Board 
+ Technical Advisory Council 
+ Cloud Credit Program 
+ Staff 
+ Contact 
+ Brand Guidelines 
+ JOIN
+
+=== [about] https://docs.pytorch.org/docs/2.14/index.html (lang=en)
+PyTorch documentation — PyTorch 2.14 documentation 
+ 새 창에서 열림 외부 웹사이트를 엽니다. 새 창에서 외부 웹사이트를 엽니다. 
+ 이 웹사이트는 분석, 개인화 및 표적 광고뿐만 아니라 필수 사이트 기능을 활성화하기 위해 쿠키와 같은 기술을 활용합니다. 자세한 내용은 다음 링크를 참조하십시오. 개인정보 보호정책 
+ 환경 설정 관리 
+ Skip to main content 
+ Font Awesome fontawesome.com -->Back to top 
+ Font Awesome fontawesome.com -->
+ Ctrl + K 
+ Font Awesome fontawesome.com -->
+ v2.14.0 (stable) 
+ v2.15.0 (unstable) v2.14.0 (stable) v2.13.0 v2.12.0 v2.11.0 v2.10.0 v2.9.1 v2.8.0 v2.7.0 v2.6.0 v2.5.0 v2.4.0 v2.3.0 v2.2.0 v2.1.0 v2.0.0 v1.13 v1.12 v1.11 v1.10 v1.9.1 v1.9.0 v1.8.1 v1.8.0 v1.7.1 v1.7.0 v1.6.0 v1.5.1 v1.5.0 v1.4.0 v1.3.1 v1.3.0 v1.2.0 v1.1.0 v1.0.1 v1.0.0 v0.4.1 v0.4.0 v0.3.1 v0.3.0 v0.2.0 v0.1.12 
+ Install PyTorch  Font Awesome fontawesome.com -->
+ User Guide
+ PyTorch Main Components
+ torch.compiler
+ torch.export
+ Developer Notes
+ Accelerator Integration
+ Reference API
+ torch
+ torch.nn
+ torch.nn.functional
+ torch.Tensor
+ Tensor Attributes
+ Tensor Views
+ Automatic Mixed Precision package - torch.amp
+ Automatic differentiation package - torch.autograd
+ torch.library
+ torch.accelerator
+ torch.cpu
+ torch.cuda
+ Understanding CUDA Memory Usage
+ torch.mps
+ torch.xpu
+ torch.mtia
+ torch.mtia.memory
+ torch.mtia.mtia_graph
+ Meta device
+ torch.backends
+ torch.export
+ Distributed communication package - torch.distributed
+ torch.distributed.tensor
+ Generic Join Context Manager
+ Torch Distributed Elastic
+ FullyShardedDataParallel
+ torch.distributed.fsdp.fully_shard
+ Tensor Parallelism - torch.distributed.tensor.parallel
+ Distributed Optimizers
+ Pipeline Parallelism
+ PyTorch Symmetric Memory
+ Distributed Checkpoint - torch.distributed.checkpoint
+ Probability distributions - torch.distributions
+ torch.compiler API reference
+ torch.fft
+ torch.func
+ torch.futures
+ torch.fx
+ torch.fx.experimental
+ torch.hub
+ torch.linalg
+ torch.monitor
+ torch.signal
+ torch.special
+ torch.overrides
+ torch.nativert
+ torch.package
+ torch.profiler
+ torch.nn.init
+ torch.nn.attention
+ torch.onnx
+ torch.optim
+ Complex Numbers
+ DDP Communication Hooks
+ Quantization
+ Distributed RPC Framework
+ torch.random
+ torch.masked
+ torch.nested
+ torch.Size
+ torch.sparse
+ torch.Storage
+ torch.testing
+ torch.utils
+ Benchmark Utils - torch.utils.benchmark
+ torch.utils.checkpoint
+ torch.utils.cpp_extension
+ torch.utils.data
+ torch.utils.deterministic
+ JIT Utils - torch.utils.jit
+ torch.utils.dlpack
+ torch.utils.mobile_optimizer
+ torch.utils.model_zoo
+ torch.utils.tensorboard
+ torch.utils.module_tracker
+ Type Info
+ torch.config
+ torch.__future__
+ torch._logging
+ Torch Environment Variables
+ Developer Notes
+ Automatic Mixed Precision examples
+ Autograd mechanics
+ Broadcasting semantics
+ CPU threading and TorchScript inference
+ CUDA semantics
+ PyTorch Custom Operators Landing Page
+ Distributed Data Parallel
+ Extending PyTorch
+ Extending torch.func with autograd.Function
+ Frequently Asked Questions
+ Getting Started on Intel GPU
+ Gradcheck mechanics
+ HIP (ROCm) semantics
+ Features for large-scale deployments
+ LibTorch Stable ABI
+ LocalTensor Tutorial: Single-Process SPMD Debugging
+ MKLDNN backend
+ Modules
+ MPS backend
+ Multiprocessing best practices
+ Numerical accuracy
+ Out Notes
+ Reproducibility
+ Serialization semantics
+ TensorIterator (Python)
+ Windows FAQ
+ Community
+ PyTorch Governance | Build + CI
+ PyTorch Contribution Guide
+ PyTorch Design Philosophy
+ PyTorch Governance | Mechanics
+ PyTorch Governance | Maintainers
+ Tutorials  Font Awesome fontawesome.com -->
+ Go to 
+ pytorch.org Font Awesome fontawesome.com --> 
+ Font Awesome fontawesome.com -->
+ Ctrl + K 
+ Font Awesome fontawesome.com -->
+ × 
+ 맞춤검색
+ 정렬
+
+=== [meta] https://pytorch.org
+html lang: en-US
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/pytorch/pytorch
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/pytorch/pytorch/raw/main/docs/source/_static/img/pytorch-logo-light.png" />
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/pytorch/pytorch/raw/main/docs/source/_static/img/pytorch-logo-dark.png" />
+  <img src="https://github.com/pytorch/pytorch/raw/main/docs/source/_static/img/pytorch-logo-dark.png" alt="PyTorch logo" />
+</picture>
+
+--------------------------------------------------------------------------------
+
+PyTorch is a Python package that provides two high-level features:
+- Tensor computation (like NumPy) with strong GPU acceleration
+- Deep neural networks built on a tape-based autograd system
+
+You can reuse your favorite Python packages such as NumPy, SciPy, and Cython to extend PyTorch when needed.
+
+Our trunk health (Continuous Integration signals) can be found at [hud.pytorch.org](https://hud.pytorch.org/ci/pytorch/pytorch/main).
+
+<!-- toc -->
+
+- [More About PyTorch](#more-about-pytorch)
+  - [A GPU-Ready Tensor Library](#a-gpu-ready-tensor-library)
+  - [Dynamic Neural Networks: Tape-Based Autograd](#dynamic-neural-networks-tape-based-autograd)
+  - [Python First](#python-first)
+  - [Imperative Experiences](#imperative-experiences)
+  - [Fast and Lean](#fast-and-lean)
+  - [Extensions Without Pain](#extensions-without-pain)
+- [Installation](#installation)
+  - [Binaries](#binaries)
+    - [NVIDIA Jetson Platforms](#nvidia-jetson-platforms)
+  - [From Source](#from-source)
+    - [Prerequisites](#prerequisites)
+      - [NVIDIA CUDA Support](#nvidia-cuda-support)
+      - [AMD ROCm Support](#amd-rocm-support)
+      - [Intel GPU Support](#intel-gpu-support)
+    - [Get the PyTorch Source](#get-the-pytorch-source)
+    - [Install Dependencies](#install-dependencies)
+    - [Install PyTorch](#install-pytorch)
+      - [Adjust Build Options (Optional)](#adjust-build-options-optional)
+  - [Docker Image](#docker-image)
+    - [Using pre-built images](#using-pre-built-images)
+    - [Building the image yourself](#building-the-image-yourself)
+  - [Previous Versions](#previous-versions)
+- [Getting Started](#getting-started)
+- [Resources](#resources)
+- [Communication](#communication)
+- [Releases and Contributing](#releases-and-contributing)
+- [The Team](#the-team)
+- [License](#license)
+
+<!-- tocstop -->
+
+## More About PyTorch
+
+[Learn the basics of PyTorch](https://pytorch.org/tutorials/beginner/basics/intro.html)
+
+At a granular level, PyTorch is a library that consists of the following components:
+
+| Component | Description |
+| ---- | --- |
+| [**torch**](https://pytorch.org/docs/stable/torch.html) | A Tensor library like NumPy, with strong GPU support |
+| [**torch.autograd**](https://pytorch.org/docs/stable/autograd.html) | A tape-based automatic differentiation library that supports all differentiable Tensor operations in torch |
+| [**torch.nn**](https://pytorch.org/docs/stable/nn.html) | A neural networks library deeply integrated with autograd designed for maximum flexibility |
+| [**torch.multiprocessing**](https://pytorch.org/docs/stable/multiprocessing.html) | Python multiprocessing, but with magical memory sharing of torch Tensors across processes. Useful for data loading and Hogwild training |
+| [**torch.utils**](https://pytorch.org/docs/stable/data.html) | DataLoader and other utility functions for convenience |
+
+Usually, PyTorch is used either as:
+
+- A replacement for NumPy to use the power of GPUs.
+- A deep learning research platform that provides maximum flexibility and speed.
+
+Elaborating Further:
+
+### A GPU-Ready Tensor Library
+
+If you use NumPy, then you have used Tensors (a.k.a. ndarray).
+
+![Tensor illustration](https://github.com/pytorch/pytorch/raw/main/docs/source/_static/img/tensor_illustration.png)
+
+PyTorch provides Tensors that can live either on the CPU or the GPU and accelerates the
+computation by a huge amount.
+
+We provide a wide variety of tensor routines to accelerate and fit your scientific computation needs
+such as slicing, indexing, mathematical operations, linear algebra, reductions.
+And they are fast!
+
+### Dynamic Neural Networks: Tape-Based Autograd
+
+PyTorch has a unique way of building neural netw

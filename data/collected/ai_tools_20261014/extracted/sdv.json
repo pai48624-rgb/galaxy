@@ -1,0 +1,176 @@
+{
+ "company": "DataCebo",
+ "one_liner_ko": "실제 데이터의 패턴을 머신러닝으로 배워 표 형태의 합성 데이터를 만드는 파이썬 라이브러리(Synthetic Data Vault).",
+ "what_it_does_ko": "SDV는 여러 머신러닝 알고리즘으로 실제 데이터의 패턴을 학습해 합성 데이터로 재현하는 파이썬 라이브러리다. 단일 표, 서로 연결된 여러 표, 순차(시계열) 표의 데이터를 만들 수 있다. 합성 데이터를 실제 데이터와 비교 평가하고 품질 보고서를 만들며, 익명화 방식과 비즈니스 규칙(제약)을 정의할 수 있다. 무료 SDV Community와 유료 SDV Enterprise, 추가 기능 묶음(Bundles)으로 제공된다.",
+ "key_features": [
+  "단일 표·다중(관계형) 표·순차(시계열) 표 합성 데이터 생성",
+  "GaussianCopula 같은 통계 모델부터 CTGAN 같은 딥러닝 모델까지 여러 모델",
+  "합성 데이터와 실제 데이터 비교 평가·품질 보고서",
+  "전처리·익명화·논리 제약 정의",
+  "여러 표 사이 복잡한 규칙 적용(Constraint Augmented Generation, 번들)",
+  "차등 프라이버시 보장 합성 데이터(번들)",
+  "데이터베이스 직접 연동 AI Connectors(메타데이터·가져오기·내보내기)",
+  "합성 데이터 평가(SDMetrics)·생성기 벤치마크(SDGym)"
+ ],
+ "use_cases_ko": [
+  "개발팀이 현실적인 테스트 데이터로 소프트웨어 테스트",
+  "AI 모델 학습용 데이터 부족 보완",
+  "실제 데이터 대신 합성 데이터로 외부와 데이터 공유"
+ ],
+ "pricing": {
+  "free_tier": "있음 (SDV Community 무료 — 9개 모델·5개 데이터 유형, Business Source License로 상업 이용 제한)",
+  "plans": [
+   {
+    "name": "SDV Community",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "무료, 모델 9개·데이터 유형 5개·기본 제약 5개, CSV·Excel, 포럼 지원, 상업 이용 제한(BSL)",
+    "page_lang": "en"
+   },
+   {
+    "name": "SDV Enterprise Base",
+    "price": 500,
+    "currency": "USD",
+    "period": "month",
+    "limits": "사용자당 월 $500 + 사용량 요금, 모델 12개 이상·데이터 유형 10개 이상, AI Connectors는 추가 번들",
+    "page_lang": "en"
+   },
+   {
+    "name": "SDV Bundles",
+    "price": 250,
+    "currency": "USD",
+    "period": "month",
+    "limits": "번들 1개·사용자당 월 $250 + 사용량 요금(Enterprise 추가 기능)",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://datacebo.com/pricing/"
+ },
+ "open_source": "Business Source License (소스 공개, 상업 이용 제한)",
+ "api": "있음",
+ "platforms": [
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://github.com/sdv-dev/SDV",
+   "quote": "a project from <a href=\"https://datacebo.com\">DataCebo</a>"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/sdv-dev/SDV",
+   "quote": "is a Python library designed to be your one-stop shop for"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/sdv-dev/SDV",
+   "quote": "The SDV uses a variety of machine learning algorithms to learn"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/sdv-dev/SDV",
+   "quote": "Diagnose problems and generate a quality report to get more insights."
+  },
+  {
+   "field": "key_features",
+   "url": "https://datacebo.com/sdv-dev/",
+   "quote": "Learn a relational data model to synthesize multiple, related tables"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/sdv-dev/SDV",
+   "quote": "The SDV offers multiple models, ranging"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/sdv-dev/SDV",
+   "quote": "**Preprocess, anonymize and define constraints.**"
+  },
+  {
+   "field": "key_features",
+   "url": "https://datacebo.com/sdv-dev/",
+   "quote": "Apply complex multi-table logic with CAG"
+  },
+  {
+   "field": "key_features",
+   "url": "https://datacebo.com/sdv-dev/",
+   "quote": "Create synthetic data with differential privacy guarantees"
+  },
+  {
+   "field": "key_features",
+   "url": "https://datacebo.com/sdv-dev/",
+   "quote": "Integrate SDV with your database: metadata, import, export"
+  },
+  {
+   "field": "key_features",
+   "url": "https://datacebo.com/sdv-dev/",
+   "quote": "Benchmarking platform for synthetic data generators"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://datacebo.com/sdv-dev/",
+   "quote": "Boost developer productivity with access to realistic test data"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://datacebo.com/sdv-dev/",
+   "quote": "Overcome the shortage of data to train your AI models"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://datacebo.com/sdv-dev/",
+   "quote": "Share data externally to enhance collaboration outcomes"
+  },
+  {
+   "field": "pricing",
+   "url": "https://datacebo.com/pricing/",
+   "quote": "Explore SDV Community for free"
+  },
+  {
+   "field": "pricing",
+   "url": "https://datacebo.com/pricing/",
+   "quote": "SDV Enterprise Base\n $500 /mo + usage "
+  },
+  {
+   "field": "pricing",
+   "url": "https://datacebo.com/pricing/",
+   "quote": "SDV Bundles\n $250 /mo /bundle + usage "
+  },
+  {
+   "field": "pricing",
+   "url": "https://datacebo.com/pricing/",
+   "quote": "Each bundle costs an additional $ 250 /month/user."
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/sdv-dev/SDV",
+   "quote": "The SDV is publicly available under the [Business Source License]"
+  },
+  {
+   "field": "api",
+   "url": "https://github.com/sdv-dev/SDV",
+   "quote": "Learn how to use the SDV library with user guides and API references."
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/sdv-dev/SDV",
+   "quote": "is a Python library designed to be your one-stop shop for"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://datacebo.com/sdv-dev/",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "무료 SDV Community(BSL, 상업 이용 제한) + SDV Enterprise Base 사용자당 월 $500 + 사용량 요금 + 번들당 월 $250",
+   "diff": "유료가 '클라우드 매니지드 플랜'이 아니라 사용자당 라이선스 구독 + 사용량 종량제 + 추가 번들 구조이고, 무료판도 OSI 오픈소스가 아닌 Business Source License",
+   "url": "https://datacebo.com/pricing/"
+  }
+ ]
+}

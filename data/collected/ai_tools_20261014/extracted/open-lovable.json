@@ -1,0 +1,88 @@
+{
+ "company": "Firecrawl",
+ "one_liner_ko": "AI와 대화해 React 앱을 바로 만드는, Firecrawl 팀이 만든 예제 앱.",
+ "what_it_does_ko": "Open Lovable은 AI와 대화하며 React 앱을 즉시 만드는 앱으로, Firecrawl 팀이 만든 예제다. 직접 내려받아 설치하고 Firecrawl API 키와 Gemini·Anthropic·OpenAI·Groq 중 하나의 LLM 키를 넣어 실행한다. 코드 실행용 샌드박스로 Vercel(기본) 또는 E2B를 고를 수 있다. MIT 라이선스다.",
+ "key_features": [
+  "AI와 대화해 React 앱 생성",
+  "Gemini·Anthropic·OpenAI·Groq 중 LLM 선택",
+  "Vercel 또는 E2B 샌드박스 선택",
+  "더 빠른 편집 옵션(Morph, 선택)"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": "있음 (오픈소스 직접 실행, Firecrawl·LLM API 키 필요)",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "MIT",
+ "api": "불명",
+ "platforms": [
+  "웹"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://github.com/firecrawl/open-lovable",
+   "quote": "An example app made by the [Firecrawl](https://firecrawl.dev/?ref=open-lovable-github) team."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/firecrawl/open-lovable",
+   "quote": "Chat with AI to build React apps instantly."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/firecrawl/open-lovable",
+   "quote": "FIRECRAWL_API_KEY=your_firecrawl_api_key"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/firecrawl/open-lovable",
+   "quote": "SANDBOX_PROVIDER=vercel  # or 'e2b'"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/firecrawl/open-lovable",
+   "quote": "Chat with AI to build React apps instantly."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/firecrawl/open-lovable",
+   "quote": "# AI PROVIDER - Choose your LLM"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/firecrawl/open-lovable",
+   "quote": "# SANDBOX PROVIDER - Choose ONE: Vercel (default) or E2B"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/firecrawl/open-lovable",
+   "quote": "# FAST APPLY (Optional - for faster edits)"
+  },
+  {
+   "field": "pricing",
+   "url": "https://github.com/firecrawl/open-lovable",
+   "quote": "FIRECRAWL_API_KEY=your_firecrawl_api_key    # https://firecrawl.dev"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/firecrawl/open-lovable",
+   "quote": "## License\n\nMIT"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/firecrawl/open-lovable",
+   "quote": "Open [http://localhost:3000](http://localhost:3000)"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "GitHub 공개 MIT 오픈소스 예제 앱, 직접 설치·실행(Firecrawl·LLM API 키 필요), 구독 요금제 안내 없음",
+   "diff": "기존 분류 '프리미엄(무료+유료 구독)'과 달리 유료 구독이 없는 오픈소스 셀프호스팅 예제",
+   "url": "https://github.com/firecrawl/open-lovable"
+  }
+ ],
+ "plan_change": []
+}

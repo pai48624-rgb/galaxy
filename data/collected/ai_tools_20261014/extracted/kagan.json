@@ -1,0 +1,119 @@
+{
+ "company": null,
+ "one_liner_ko": "사람의 리뷰 승인을 구조적으로 강제하는 AI 코딩 에이전트용 칸반 TUI.",
+ "what_it_does_ko": "Kagan은 AI 코딩 에이전트용 칸반 TUI로, 사람이 명시적으로 승인하지 않으면 에이전트가 만든 작업이 메인 브랜치에 들어가지 못하게 상태 기계로 강제한다. 에이전트는 격리된 git worktree에서 일하고, 끝나면 카드가 REVIEW로 넘어가 사람이 diff를 확인·승인해야 병합된다. 받은 저장소(파이썬 버전)는 지원 종료(DEPRECATED)이며 새 버전은 OpenCode 플러그인으로 옮겨 갔다고 적혀 있다.",
+ "key_features": [
+  "상태 기계로 강제되는 칸반 보드(BACKLOG→IN_PROGRESS→REVIEW→DONE)",
+  "작업마다 독립 git worktree",
+  "백그라운드 실행 또는 tmux·편집기에서 함께 작업",
+  "병합 전 사람의 명시적 승인 필수",
+  "Claude Code·Codex 등이 보드를 조작하는 MCP 서버",
+  "kagan doctor 사전 점검",
+  "VS Code 확장"
+ ],
+ "use_cases_ko": [
+  "에이전트 작업을 사람 리뷰 없이 메인 브랜치에 넣지 않으려는 개발자"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "MIT",
+ "api": "불명",
+ "platforms": [
+  "맥",
+  "윈도",
+  "CLI"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/kagan-sh/kagan-legacy",
+   "quote": "Kagan is a Kanban TUI for AI coding agents with a structural human review gate."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/kagan-sh/kagan-legacy",
+   "quote": "No agent-authored task reaches your main branch without an explicit approval — the state machine enforces it."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/kagan-sh/kagan-legacy",
+   "quote": "The agent runs in an isolated git worktree. When it finishes, the task card moves to REVIEW."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/kagan-sh/kagan-legacy",
+   "quote": "experiemental python version of kagan harness are **DEPRECATED**"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/kagan-sh/kagan-legacy",
+   "quote": "available as a native OpenCode plugin"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/kagan-sh/kagan-legacy",
+   "quote": "Kanban board (BACKLOG → IN_PROGRESS → REVIEW → DONE) enforced by a state machine"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/kagan-sh/kagan-legacy",
+   "quote": "Each task runs in its own git worktree — your working copy stays untouched"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/kagan-sh/kagan-legacy",
+   "quote": "Managed runs (background agent) or interactive attach (you + agent in tmux/editor)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/kagan-sh/kagan-legacy",
+   "quote": "REVIEW stage requires explicit human approval before merge; no path around it"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/kagan-sh/kagan-legacy",
+   "quote": "MCP server so Claude Code, Codex, or any MCP-capable client can drive the board"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/kagan-sh/kagan-legacy",
+   "quote": "`kagan doctor` preflight checks all required tools before first run"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/kagan-sh/kagan-legacy",
+   "quote": "itemName=kagan.kagan-vscode"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/kagan-sh/kagan-legacy",
+   "quote": "No agent-authored task reaches your main branch without an explicit approval"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/kagan-sh/kagan-legacy",
+   "quote": "License-MIT-yellow.svg"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/kagan-sh/kagan-legacy",
+   "quote": "<summary>Mac / Linux (no uv)</summary>"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/kagan-sh/kagan-legacy",
+   "quote": "<summary>Windows (PowerShell)</summary>"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/kagan-sh/kagan-legacy",
+   "quote": "uv tool install kagan"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

@@ -1,0 +1,105 @@
+{
+ "company": "Sourcegraph",
+ "one_liner_ko": "최신 LLM과 개발 컨텍스트로 코드를 이해·작성·수정하게 돕는 AI 코딩 도우미(Sourcegraph Enterprise에서 지원).",
+ "what_it_does_ko": "Cody는 Sourcegraph의 검색 API로 로컬·원격 코드베이스에서 API·심볼·사용 패턴 컨텍스트를 가져와 답한다. 채팅으로 코드 질문·생성·편집을 하고, 자동 편집 제안과 맞춤 프롬프트를 제공한다. GitHub·GitLab 같은 코드 호스트와 VS Code·JetBrains·Visual Studio에 연결된다. 현재 Sourcegraph Enterprise에서 지원된다.",
+ "key_features": [
+  "코드 채팅(@로 파일·심볼·원격 저장소 컨텍스트 추가)",
+  "자동 편집(Auto-edit) 제안",
+  "재사용·공유 가능한 프롬프트",
+  "Sourcegraph 검색 API 기반 컨텍스트",
+  "디버깅 지원",
+  "컨텍스트 필터(저장소 제외)"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [
+   {
+    "name": "Enterprise",
+    "price": 16000,
+    "currency": "USD",
+    "period": "year",
+    "limits": "최소 연간 계약 'Starting at $16K', AI 기능 크레딧 포함",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://sourcegraph.com/pricing"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "CLI"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://sourcegraph.com/pricing",
+   "quote": "Cody is compatible with other Sourcegraph products, like Code Search ."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://sourcegraph.com/docs/cody",
+   "quote": "Cody is an AI coding assistant that uses all the latest LLMs and your development context to help you understand, write, and fix code faster."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://sourcegraph.com/docs/cody",
+   "quote": "Supported on Sourcegraph\nEnterprise ."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://sourcegraph.com/docs/cody",
+   "quote": "Cody connects seamlessly with codehosts like GitHub , GitLab and IDEs like VS Code , JetBrains , and Visual Studio ."
+  },
+  {
+   "field": "key_features",
+   "url": "https://sourcegraph.com/docs/cody",
+   "quote": "Auto-edit Suggests code changes by analyzing cursor movements and typing."
+  },
+  {
+   "field": "key_features",
+   "url": "https://sourcegraph.com/docs/cody",
+   "quote": "Context Filters Cody can ignore selected repositories from chat and autocomplete results"
+  },
+  {
+   "field": "key_features",
+   "url": "https://sourcegraph.com/docs/cody",
+   "quote": "Prompts Automate key tasks in your workflow with premade and customizable prompts."
+  },
+  {
+   "field": "pricing",
+   "url": "https://sourcegraph.com/pricing",
+   "quote": "$16K Minimum annual contract. Includes credits for AI features; scales with team size"
+  },
+  {
+   "field": "api",
+   "url": "https://sourcegraph.com/pricing",
+   "quote": "MCP server \n GraphQL and REST APIs \n CLI"
+  },
+  {
+   "field": "platforms",
+   "url": "https://sourcegraph.com/docs/cody",
+   "quote": "Available on VS Code, JetBrains, Visual Studio, and the Web app."
+  },
+  {
+   "field": "platforms",
+   "url": "https://sourcegraph.com/docs/cody",
+   "quote": "Cody CLI \n Run Cody from the command line."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://sourcegraph.com/docs/cody",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "Cody는 Sourcegraph Enterprise에서 지원되고, 가격 페이지에는 최소 연간 계약 $16K부터인 Enterprise 요금제만 있음",
+   "diff": "기존 분류는 '프리미엄(무료+유료 구독)'인데 공식 페이지에는 무료 요금제 없이 기업 연간 계약만 보임",
+   "url": "https://sourcegraph.com/pricing"
+  }
+ ],
+ "plan_change": []
+}

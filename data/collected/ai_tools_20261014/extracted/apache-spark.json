@@ -1,0 +1,128 @@
+{
+ "company": "The Apache Software Foundation",
+ "one_liner_ko": "단일 컴퓨터나 클러스터에서 데이터 엔지니어링·데이터 과학·머신러닝을 실행하는 대규모 데이터 분석용 통합 엔진.",
+ "what_it_does_ko": "Apache Spark는 대규모 데이터 처리를 위한 통합 분석 엔진으로 Java·Scala·Python·R 고수준 API를 제공한다. 배치와 실시간 스트리밍 처리를 한 엔진에서 통합하며, 분산 ANSI SQL 쿼리로 대시보드·임시 보고를 지원한다. Spark SQL, pandas API on Spark, MLlib(머신러닝), GraphX, Structured Streaming 같은 상위 도구를 포함한다. 노트북에서 학습한 머신러닝 코드를 수천 대 클러스터로 그대로 확장할 수 있다.",
+ "key_features": [
+  "배치·실시간 스트리밍 처리 통합",
+  "분산 ANSI SQL 분석",
+  "페타바이트 규모 탐색적 데이터 분석",
+  "MLlib 머신러닝",
+  "실행 중 계획을 바꾸는 적응형 쿼리 실행(AQE)",
+  "pandas API on Spark",
+  "Python·SQL·Scala·Java·R 지원"
+ ],
+ "use_cases_ko": [
+  "대시보드·임시 보고용 SQL 분석",
+  "다운샘플링 없이 페타바이트 데이터 탐색",
+  "머신러닝 모델을 클러스터 규모로 학습"
+ ],
+ "pricing": {
+  "free_tier": "오픈소스(Apache 2.0) — 요금제 안내 없음",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "Apache License 2.0",
+ "api": "있음",
+ "platforms": [
+  "윈도",
+  "맥",
+  "CLI",
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://spark.apache.org",
+   "quote": "trademarks of The Apache Software Foundation in the United States and other countries"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://spark.apache.org",
+   "quote": "Apache Spark ™ is a multi-language engine for executing data engineering,"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://spark.apache.org/docs/latest/",
+   "quote": "Apache Spark is a unified analytics engine for large-scale data processing."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://spark.apache.org/docs/latest/",
+   "quote": "It provides high-level APIs in Java, Scala, Python and R,"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://spark.apache.org",
+   "quote": "Train machine learning algorithms on a laptop and use the same code to scale to fault-tolerant clusters of thousands of machines."
+  },
+  {
+   "field": "key_features",
+   "url": "https://spark.apache.org",
+   "quote": "Unify the processing of your data in batches and real-time streaming, using your preferred language: Python, SQL, Scala, Java or R."
+  },
+  {
+   "field": "key_features",
+   "url": "https://spark.apache.org",
+   "quote": "Execute fast, distributed ANSI SQL queries for dashboarding and ad-hoc reporting."
+  },
+  {
+   "field": "key_features",
+   "url": "https://spark.apache.org",
+   "quote": "Perform Exploratory Data Analysis (EDA) on petabyte-scale data without having to resort to downsampling"
+  },
+  {
+   "field": "key_features",
+   "url": "https://spark.apache.org",
+   "quote": "Spark SQL adapts the execution plan at runtime, such as automatically setting the number of reducers and join algorithms."
+  },
+  {
+   "field": "key_features",
+   "url": "https://spark.apache.org/docs/latest/",
+   "quote": "pandas API on Spark for pandas workloads,"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://spark.apache.org",
+   "quote": "Execute fast, distributed ANSI SQL queries for dashboarding and ad-hoc reporting."
+  },
+  {
+   "field": "pricing",
+   "url": "https://spark.apache.org",
+   "quote": "Copyright © 2018 The Apache Software Foundation, Licensed under the Apache License, Version 2.0 ."
+  },
+  {
+   "field": "open_source",
+   "url": "https://spark.apache.org",
+   "quote": "Copyright © 2018 The Apache Software Foundation, Licensed under the Apache License, Version 2.0 ."
+  },
+  {
+   "field": "api",
+   "url": "https://spark.apache.org/docs/latest/",
+   "quote": "It provides high-level APIs in Java, Scala, Python and R,"
+  },
+  {
+   "field": "platforms",
+   "url": "https://spark.apache.org/docs/latest/",
+   "quote": "Spark runs on both Windows and UNIX-like systems (e.g. Linux, Mac OS)"
+  },
+  {
+   "field": "platforms",
+   "url": "https://spark.apache.org/docs/latest/",
+   "quote": "To run Spark interactively in a Python interpreter, use"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://spark.apache.org",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "Apache License 2.0 오픈소스 프로젝트(ASF)로, 공식 페이지에 자체 유료 요금제·관리형 클라우드 안내가 없음",
+   "diff": "기존 분류는 '오픈소스 + 클라우드 매니지드 유료 플랜'이나 공식 페이지에는 유료 플랜이 없음(순수 오픈소스)",
+   "url": "https://spark.apache.org"
+  }
+ ],
+ "plan_change": []
+}

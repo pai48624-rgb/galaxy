@@ -1,0 +1,231 @@
+=== [home] https://swe-agent.com/latest/ (lang=en)
+Getting Started - SWE-agent documentation 
+ Skip to content
+📣 We now recommend mini-swe-agent instead of SWE-agent: Same performance, much more simple & flexible
+ SWE-agent documentation
+ 1.0 1.0 
+ 0.7 
+ Getting Started
+ Type to start searching
+ SWE-agent/SWE-agent
+ v1.1.0
+ 20.5k
+ 2.3k
+ Getting Started
+ User Guides
+ API Reference
+ SWE-agent documentation
+ SWE-agent/SWE-agent
+ v1.1.0
+ 20.5k
+ 2.3k
+ Getting Started
+ Getting Started
+ Installation
+ Installation
+ From source
+ In browser
+ Models and keys
+ 1.0 migration
+ Troubleshooting
+ Changelog
+ Tutorials
+ Tutorials
+ Hello world
+ Command line basics
+ Solving coding challenges
+ Trajectory inspector
+ Batch mode
+ Competitive runs
+ Adding custom tools
+ What's next?
+ FAQ
+ User Guides
+ User Guides
+ Project overview
+ Project overview
+ Architecture
+ Agent tools
+ Command line interface
+ Output files
+ Configuration
+ Configuration
+ Config files
+ Templates
+ Models
+ Demonstrations
+ Tools
+ Environments
+ Development
+ Development
+ Contribution guide
+ Formatting conflicts
+ API Reference
+ API Reference
+ Run config
+ Run config
+ Run single
+ Run batch
+ Instance config
+ Instance config
+ Problem statements
+ Repository
+ Batch instances
+ Agent config
+ Agent config
+ Agent config
+ Model config
+ Templates
+ Tools
+ History processors
+ Action parsers
+ Environment config
+ Tool bundle config
+ Classes
+ Classes
+ Agent class
+ Environment class
+ Exceptions
+ Table of contents
+ 📣 News
+ ✍️ Doc updates
+ Getting Started
+ We recommend mini-swe-agent instead of SWE-agent
+ Most of our current development effort is on mini-swe-agent ,
+which has superseded SWE-agent. It matches the performance of SWE-agent, while being
+much simpler.
+See the FAQ for more details about the differences.
+ SWE-agent enables your language model of choice (e.g. GPT-4o or Claude Sonnet 4) to autonomously use tools to
+ fix issues in real GitHub repositories ,
+ find cybersecurity vulnerabilities , or
+ perform any custom task .
+ ✅ State of the art on SWE-bench among open-source projects
+ ✅ Free-flowing & generalizable : Leaves maximal agency to the LM
+ ✅ Configurable & fully documented : Governed by a single yaml file
+ ✅ Made for research : Simple & hackable by design
+ SWE-agent is built and maintained by researchers from Princeton University and Stanford University.
+ download 
+ Installation 
+ Installing SWE-agent.
+ settings 
+ Hello world 
+ Solve a GitHub issue with SWE-agent.
+ lightbulb 
+ User guides 
+ Dive deeper into SWE-agent's features and goals.
+ book 
+ Background & goals 
+ Learn more about the project goals and academic research.
+ 📣 News
+ July 24: Mini-SWE-Agent achieves 65% on SWE-bench verified in 100 lines of python!
+ July 9: Multimodal support for SWE-agent - Process images from GitHub issues with vision-capable AI models
+ May 2: SWE-agent-LM-32b achieves open-weights SOTA on SWE-bench
+ Feb 28: SWE-agent 1.0 + Claude 3.7 is SoTA on SWE-Bench full 
+ Feb 25: SWE-agent 1.0 + Claude 3.7 is SoTA on SWE-bench verified 
+ Feb 13: Releasing SWE-agent 1.0: SoTA on SWE-bench light & tons of new features 
+ Dec 7: An interview with the SWE-agent & SWE-bench team 
+ ✍️ Doc updates
+ June 26: Adding custom tools 
+ Apr 8: Running SWE-agent competitively 
+ Mar 7: Updated SWE-agent architecture diagram of 1.0 
+ SWE-agent has been superseded by mini-swe-agent .
+ mini-swe-agent is simpler & more flexible while still being as performant.
+ See the FAQ for more details about why you should switch.
+SWE-agent is now in maintenance-only mode.
+ Check out mini-swe-agent
+ Continue to SWE-agent
+ Our projects
+ Mini-SWE-Agent 
+ SWE-ReX 
+ SWE-smith 
+ SWE-bench 
+ sb-cli 
+ Back to top
+ Next
+ Setting up SWE-agent
+ Made with
+ Material for MkDocs
+
+=== [meta] https://swe-agent.com/latest/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/SWE-agent/SWE-agent
+<p align="center">
+  <a href="https://swe-agent.com/latest/">
+    <img src="assets/swe-agent-banner.png" alt="swe-agent.com" style="height: 7em" />
+  </a>
+</p>
+
+<p align="center">
+<a href="https://swe-agent.com/latest/"><img src="https://img.shields.io/badge/Docs-green?style=for-the-badge&logo=materialformkdocs&logoColor=white" alt="Docs"></a>
+<a href="https://swe-bench.slack.com"><img src="https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white" alt="Slack"></a>
+<a href="https://arxiv.org/abs/2405.15793"><img src="https://img.shields.io/badge/arxiv-2405.15793-red?style=for-the-badge&logo=arxiv&logoColor=white&labelColor=black" alt="arxiv 2405.15793"></a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/SWE-agent/mini-swe-agent/">
+    <img src="assets/warning.png" alt="mini-swe-agent.com" style="height: 7em" />
+  </a>
+</p>
+
+> [!warning]
+> Most of our current development effort is on [mini-swe-agent](https://github.com/SWE-agent/mini-swe-agent/),
+> which has superseded SWE-agent. It matches the performance performance of SWE-agent, while being
+> much simpler.
+> See the [FAQ](https://mini-swe-agent.com/latest/faq/) for more details about the differences.
+> Our general recommendation is to use mini-SWE-agent instead of SWE-agent going forward.
+
+
+SWE-agent enables your language model of choice (e.g. GPT-4o or Claude Sonnet 4) to autonomously use tools to
+[fix issues in real GitHub repositories](https://swe-agent.com/latest/usage/hello_world),
+[find cybersecurity vulnerabilities](https://enigma-agent.com/), or
+[perform any custom task](https://swe-agent.com/latest/usage/coding_challenges).
+
+* ✅ **State of the art** on SWE-bench among open-source projects
+* ✅ **Free-flowing & generalizable**: Leaves maximal agency to the LM
+* ✅ **Configurable & fully documented**: Governed by a single `yaml` file
+* ✅ **Made for research**: Simple & hackable by design
+
+SWE-agent is built and maintained by researchers from Princeton University and Stanford University.
+
+## 📣 News
+
+* July 24: [Mini-SWE-Agent](https://github.com/SWE-agent/mini-SWE-agent) achieves 65% on SWE-bench verified in 100 lines of python!
+* May 2: [SWE-agent-LM-32b](https://github.com/SWE-bench/SWE-smith) achieves open-weights SOTA on SWE-bench
+* Feb 28: [SWE-agent 1.0 + Claude 3.7 is SoTA on SWE-Bench full](https://x.com/KLieret/status/1895487966409298067)
+* Feb 25: [SWE-agent 1.0 + Claude 3.7 is SoTA on SWE-bench verified](https://x.com/KLieret/status/1894408819670733158)
+* Feb 13: [Releasing SWE-agent 1.0: SoTA on SWE-bench light & tons of new features](https://x.com/KLieret/status/1890048205448220849)
+* Dec 7: [An interview with the SWE-agent & SWE-bench team](https://www.youtube.com/watch?v=fcr8WzeEXyk)
+
+## 🚀 Get started!
+
+👉 Try SWE-agent in your browser: [![Open in GitHub Codespaces](https://img.shields.io/badge/Open_in_GitHub_Codespaces-gray?logo=github)](https://codespaces.new/SWE-agent/SWE-agent) ([more information](https://swe-agent.com/latest/installation/codespaces/))
+
+Read our [documentation][docs] to learn more:
+
+* [Installation](https://swe-agent.com/latest/installation/source/)
+* [Hello world from the command line](https://swe-agent.com/latest/usage/hello_world/)
+* [Benchmarking on SWE-bench](https://swe-agent.com/latest/usage/batch_mode/)
+* [Frequently Asked Questions](https://swe-agent.com/latest/faq/)
+
+[docs]: https://swe-agent.com
+
+## SWE-agent for offensive cybersecurity (EnIGMA) <a name="enigma"></a>
+
+<img src="https://github.com/user-attachments/assets/84599168-11a7-4776-8a49-33dbf0758bb2" height="80px"></img>
+
+[SWE-agent: EnIGMA][enigma] is a mode for solving offensive cybersecurity (capture the flag) challenges.
+EnIGMA achieves state-of-the-art results on multiple cybersecurity benchmarks (see [leaderboard](https://enigma-agent.com/#results)).
+Please use [SWE-agent 0.7](https://github.com/SWE-agent/SWE-agent/tree/v0.7) while we update EnIGMA for 1.0.
+
+[enigma]: https://enigma-agent.com
+[SWE-bench]: https://github.com/SWE-bench/SWE-bench
+[nyu-ctf]: https://arxiv.org/abs/2406.05590
+
+In addition, you might be interested in our other projects:
+
+
+<div align="center">
+  <a href="https://github.com/SWE-agent/mini-SWE-age

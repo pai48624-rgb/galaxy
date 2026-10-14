@@ -1,0 +1,407 @@
+=== [home] https://www.greptile.com (lang=en)
+AI Code Review | Greptile | Merge 4X Faster, Catch 3X More Bugs 
+ Introducing Plus and Apex, for more powerful reviews.
+ Learn more 
+ Examples Pricing Features Enterprise Blog Resources 
+ Contact sales Sign up 
+ Sign up 
+ TREX: Runtime Validation Beta 
+ Greptile Agent 
+ Independence 
+ Security Review 
+ Learning & Custom Context 
+ Greptile CLI 
+ Partners 
+ Knowledge Base 
+ Docs
+ Comprehensive documentation and guides
+ Greptile Examples
+ See Greptile catching bugs in large OS repos.
+ Contact sales
+ Schedule a demo with our team
+ Customers
+ Success stories and case studies
+ Benchmarks
+ Performance metrics and comparisons
+ Security
+ Security practices and compliance
+ The AI Code
+Reviewer
+ AI agents that review and test pull requests with full context of the codebase.
+ Contact sales Start now 
+ onboard with your agent 
+ Over 22,000+ teams use Greptile 
+ “ We've tried more code review tools than I can count. Greptile outperforms them all by a mile. Honestly the only AI reviewer that doesn't annoy the s**t out of me. ”
+ CTO , Brex
+ James Reggio
+ View Brex case study 
+ [ AGENT ] 
+ How Greptile reviews every PR
+ Greptile constructs a graph index of your codebase, then uses a swarm of agents to catch potential issues that humans might miss
+ Learn more 
+ How it works 
+ STEP 01 Indexes your codebase
+ Builds a graph of your repo - files, functions, and dependencies.
+ STEP 02 Swarm of agents review the PR
+ Parallel agents review changes, assess their impact beyond the diff, and flag issues.
+ STEP 03 Greptile learns your codebase over time
+ Reads other engineers' comments to understand your coding standards.
+ Catch them all
+ From style violations to security risks and multi-file logical bugs
+ Three bugs that should not hit prod. 
+ NVIDIA
+ 8.6k
+ Stars
+ 1.3k
+ Forks
+ 3
+ Repositories
+ dali/core/device_guard.cc 
+ 01 - 
+ 01 + 
+ 02 + 
+ greptile 
+ Unbalanced CUDA release wipes context
+ See PR 
+ Meta PyTorch
+ 1.8k
+ Stars
+ 350
+ Forks
+ meta-pytorch/OpenEnv
+ Repository
+ envs/repl_env/server/repl_environment.py 
+ 01 - 
+ 01 + 
+ 02 + 
+ greptile 
+ Undefined method breaks every step()
+ See PR 
+ Solana
+ 174
+ Stars
+ 249
+ Forks
+ solana-foundation/kora
+ Repository
+ crates/lib/src/transaction/instruction_util.rs 
+ 01 - 
+ 01 + 
+ 02 + 
+ greptile 
+ Mid-loop overflow leaves orphaned keys
+ See PR 
+ See more examples 
+ [ PERSONALIZATION ] 
+ Reviews that adapt to your team
+ From custom rules to continuous learning, Greptile gets smarter about your codebase with every review.
+ [ CUSTOM RULES ] Your house, your rules
+ Write standards in plain English, point Greptile at repo-specific context, and enforce the patterns your team actually cares about on every PR.
+ Set your rules 
+ [ LEARNING ] We're getting to know each other
+ Greptile learns your codebase and coding standards by reading your team' PR comments.
+ See learning 
+ [ YOUR STACK ] 
+ The Central Validation Layer.
+ Designed to work seamlessly with every coding agent, Greptile serves as the unified validation agent for all code changes.
+ Learn more 
+ Ways Greptile plugs into your workflow 
+ 01 Fix in your IDE
+ One-click send issue context to Claude Code, Cursor, Codex, or Devin
+ 02 Greptile MCP
+ Connect Greptile to any AI agent to share comment context.
+ 03 Claude Code Plugin
+ Let Claude Code automatically read and resolve Greptile comments.
+ 04 /greploop
+ Let any coding agent iterate with Greptile until all issues are resolved.
+ TEST · RUN · EXECUTE     TEST · RUN · EXECUTE     TEST · RUN · EXECUTE     TEST · RUN · EXECUTE     TEST · RUN · EXECUTE     TEST · RUN · EXECUTE     TEST · RUN · EXECUTE     TEST · RUN · EXECUTE     TEST · RUN · EXECUTE     TEST · RUN · EXECUTE     TEST · RUN · EXECUTE     TEST · RUN · EXECUTE     TEST · RUN · EXECUTE     TEST · RUN · EXECUTE     TEST · RUN · EXECUTE     TEST · RUN · EXECUTE     TEST · RUN · EXECUTE     TEST · RUN · EXECUTE     TEST · RUN · EXECUTE     TEST · RUN · EXECUTE     
+ [ INTRODUCING TREX ] 
+ Autonomously Test Every PR
+ TREX runs your PR branch in a sandbox to catch the bugs that only show up at runtime.
+ Explore TREX 
+ TEST · RUN · EXECUTE     TEST · RUN · EXECUTE     TEST · RUN · EXECUTE     TEST · RUN · EXECUTE     TEST · RUN · EXECUTE     TEST · RUN · EXECUTE     TEST · RUN · EXECUTE     TEST · RUN · EXECUTE     TEST · RUN · EXECUTE     TEST · RUN · EXECUTE     TEST · RUN · EXECUTE     TEST · RUN · EXECUTE     TEST · RUN · EXECUTE     TEST · RUN · EXECUTE     TEST · RUN · EXECUTE     TEST · RUN · EXECUTE     TEST · RUN · EXECUTE     TEST · RUN · EXECUTE     TEST · RUN · EXECUTE     TEST · RUN · EXECUTE     
+ Security-First Design
+ Built for enterprises across defense, healthcare, and financial services.
+ Learn more 
+ 01 Self-Hosted Deployment
+ Host Greptile in your own air-gapped environment.
+ 02 SOC 2 Compliance
+ Independent audits, reports available on request.
+ 03 Enterprise Ready
+ SSO, audit logs, dedicated support.
+ James Reggio CTO · Brex 
+ We've tried more code review tools than I can count. Greptile outperforms them all by a mile. Honestly the only AI reviewer that doesn't annoy the s**t out of me. 
+ Mark Tran Eng. Manager · WorkOS 
+ We've been impressed by Greptile's code review quality. It's tightened our feedback loops, improved consistency, and freed up engineers to focus on higher-level design and architecture. 
+ See what our customers are saying
+ View testimonials 
+ Anirudh Kamath Tech Lead · Browserbase 
+ Greptile helps the team do their best work. It levels everybody up and helps ensure that we're all proud of our code 
+ Hahnbee Lee CTO · Mintlify 
+ I'm thankful for the things Greptile catches in my pull requests. 
+ Isaiah Granet CEO · Bland.com 
+ Has been a game changer. Couldn't ever go back.... If you are on the fence — just try it. 
+ Chase Gladish CTO · RollCredits 
+ Greptile has been the first AI code review tool I've used that actually provides useful feedback on PRs. It's catching issues that human reviewers easily miss and giving senior-level suggestions to boot 
+ FAQ
+ How does Greptile pricing work? 
+ Starter is free for one active developer and includes unlimited repositories and 50 credits per month. Pro is $30 per seat per month and includes 50 credits per seat. Additional credits are $1 each.
+ Base review: 1 credit
+ Plus review: 3 credits
+ Apex review: 10 credits
+ See full pricing 
+ Can Greptile be self-hosted? 
+ Yes, you can self-host Greptile in your AWS environment and even use your own LLM providers for added flexibility.
+ Are there free trials or discounts available for Greptile? 
+ Greptile offers free usage for qualified open source projects and significant discounts for pre-Series A startups. Contact us to check your eligibility.
+ What programming languages does Greptile support? 
+ Greptile fully supports Python, JavaScript, TypeScript, Go, Elixir, Java, C, C++, C#, Swift, PHP, and Rust. Most other languages are supported with slightly lower response quality.
+ Which code providers does Greptile support? 
+ We support GitHub, GitLab, Bitbucket, and Cursor Origin. Our Enterprise plan also supports GitHub Enterprise Server, GitHub Enterprise Cloud with data residency, GitLab Self-Managed, Bitbucket Data Center, and Gitea. For on-premises deployments, we support Perforce through P4 Code Review.
+ What is AI code review? 
+ AI code review learns your codebase and applies repository context to analyze pull requests, catching syntax, logic, and style issues and suggesting fixes. Learn more in our AI code review guide .
+ Can't find your answer here? Get in touch .
+ Gre
+
+=== [pricing] https://www.greptile.com/pricing (lang=en)
+Greptile Pricing - Free, Pro, and Enterprise Plans 
+ Introducing Plus and Apex, for more powerful reviews.
+ Learn more 
+ Examples Pricing Features Enterprise Blog Resources 
+ Contact sales Sign up 
+ Sign up 
+ TREX: Runtime Validation Beta 
+ Greptile Agent 
+ Independence 
+ Security Review 
+ Learning & Custom Context 
+ Greptile CLI 
+ Partners 
+ Knowledge Base 
+ Docs
+ Comprehensive documentation and guides
+ Greptile Examples
+ See Greptile catching bugs in large OS repos.
+ Contact sales
+ Schedule a demo with our team
+ Customers
+ Success stories and case studies
+ Benchmarks
+ Performance metrics and comparisons
+ Security
+ Security practices and compliance
+ Greptile Pricing
+ Start 14 day free trial 
+ Starter
+ Best for individual developers
+ Free
+ Get started for free 
+ What's included 
+ 50 credits per month 
+ 1 active developer 
+ Unlimited repositories 
+ Recommended 
+ Pro
+ Best for teams
+ $30 /seat/month 
+ Start 14 day free trial 
+ What's included 
+ 50 credits per seat per month 
+ Extra credits at $1 each 
+ Custom review rules 
+ Unlimited seats 
+ Unlimited repositories 
+ Unlimited integrations 
+ Enterprise
+ Best for organizations at scale
+ Custom pricing
+ Talk to sales 
+ Everything in Pro, plus 
+ Self-host in your own infrastructure 
+ SSO and SAML 
+ GitHub Enterprise Server and Enterprise Cloud with data residency 
+ GitLab Self-Managed, Bitbucket Data Center, and Gitea 
+ Perforce with P4 Code Review for on-premises deployments 
+ Security and compliance reviews 
+ Dedicated Slack support channel 
+ Custom invoicing and payment terms 
+ Custom DPA and terms of service 
+ Starter
+ Best for individual developers
+ Free
+ Recommended 
+ Pro
+ Best for teams
+ $30 /seat/month 
+ Enterprise
+ Best for organizations at scale
+ Custom pricing
+ Get started for free 
+ Start 14 day free trial 
+ Talk to sales 
+ What's included 
+ 50 credits per month 
+ 1 active developer 
+ Unlimited repositories 
+ What's included 
+ 50 credits per seat per month 
+ Extra credits at $1 each 
+ Custom review rules 
+ Unlimited seats 
+ Unlimited repositories 
+ Unlimited integrations 
+ Everything in Pro, plus 
+ Self-host in your own infrastructure 
+ SSO and SAML 
+ GitHub Enterprise Server and Enterprise Cloud with data residency 
+ GitLab Self-Managed, Bitbucket Data Center, and Gitea 
+ Perforce with P4 Code Review for on-premises deployments 
+ Security and compliance reviews 
+ Dedicated Slack support channel 
+ Custom invoicing and payment terms 
+ Custom DPA and terms of service 
+ [ OPEN SOURCE ] 
+ Free for OSS projects
+ Greptile is free for qualified non-commercial projects with an OSI-approved license.
+ Apply for OSS 
+ [ STARTUP DISCOUNT ] 
+ 50% off for early-stage startups
+ Pre-Series A startups with under $2M revenue in the past 12 months qualify for a 50% discount.
+ Apply for startup discount 
+ FAQ
+ How does pricing work? 
+ Starter is free for one active developer and includes unlimited repositories and 50 credits per month. Pro is $30 per seat per month and includes 50 credits per seat. Additional credits are $1 each.
+ Base review: 1 credit
+ Plus review: 3 credits
+ Apex review: 10 credits
+ Can I prepay for a discount? 
+ We offer custom pricing for annual and multi-year contracts. Let's chat .
+ How do I cancel my subscription? 
+ You can cancel your subscription at any time through your account settings. If you have any questions, please contact us.
+ Can't find your answer here? Get in touch .
+ Product Enterprise Pricing Docs Zapier Status View status 
+ Company Examples Careers Blog Changelog Case Studies Podcast Brand 
+ Resources Grepository Content Library What is AI code review? Code review checklist Benchmarks Paste a PR Greptile vs Coderabbit Greptile vs Bugbot State of AI Coding 2026 For YC Companies 
+ Support Contact us Security Privacy Policy Terms of Service Report Bugs Socials 
+ Product Enterprise Pricing Docs Zapier Status View status 
+ Company Examples Careers Blog Changelog Case Studies Podcast Brand 
+ Resources Grepository Content Library What is AI code review? Code review checklist Benchmarks Paste a PR Greptile vs Coderabbit Greptile vs Bugbot State of AI Coding 2026 For YC Companies 
+ Support Contact us Security Privacy Policy Terms of Service Report Bugs Socials 
+ © 2026 Tabnam, Inc.
+
+=== [about] https://www.greptile.com/docs/introduction (lang=en)
+Overview - What is Greptile? - Greptile 
+ Documentation Index
+ Fetch the complete documentation index at: /docs/llms.txt 
+ Use this file to discover all available pages before exploring further.
+ Skip to main content Greptile home page 
+ Search...
+ ⌘ K 
+ Documentation 
+ Changelog 
+ Greptile Home 
+ Discord 
+ Blog 
+ Documentation 
+ Changelog 
+ Greptile Home 
+ Discord 
+ Blog 
+ Getting Started 
+ Introduction 
+ Quickstart 
+ CLI Onboarding 
+ Key Features 
+ Troubleshooting 
+ Code Review 
+ Anatomy of a Review 
+ Developer Essentials 
+ Customize Greptile 
+ Greptile CLI 
+ MCP 
+ Developer Tools 
+ Integrations 
+ Tips & Recipes 
+ Self-Hosting 
+ Deployment Options 
+ System Architecture 
+ Docker Compose 
+ Kubernetes Deployment 
+ Security 
+ Account 
+ Organizations & Teams 
+ Analytics 
+ Billing 
+ Network Rules 
+ How Greptile Works 
+ Graph-based Codebase Context 
+ Memory and Learning 
+ Custom Rules 
+ Knowledge Base 
+ Reducing Nitpicks 
+ Support 
+ Review My Code 
+ Log In 
+ Greptile home page 
+ Search...
+ ⌘ K Ask Assistant ⌘ I 
+ Support 
+ Log In 
+ Review My Code 
+ Review My Code 
+ Search... 
+ Navigation 
+ Getting Started 
+ Overview - What is Greptile?
+ Getting Started
+ Overview - What is Greptile?
+ Greptile is an AI code review agent that automatically reviews every pull request with complete understanding of your codebase. 
+ Unlike traditional linters that check files in isolation, Greptile builds a graph of your entire repository to understand how changes affect the whole system. 
+ ​ 
+ How it works 
+ 1
+ Connects to your repository
+ Connect your code provider and enable repositories. Greptile builds a complete graph of your codebase - every function, class, and dependency. 
+ 2
+ Reviews PRs automatically
+ On every pull request, Greptile analyzes changes with full context. Posts findings in ~3 minutes as PR comments with suggested fixes. 
+ 3
+ Fix with one click
+ Every review comment includes a Fix with your Agent button that sends the issue — with file paths, line numbers, and suggested code — straight to Claude Code, Codex, Conductor, Cursor, or Devin. A Fix All button in the review summary sends every issue at once. Learn more about Fix with your Agent → 
+ 4
+ Learns from your team
+ Your 👍/👎 reactions and replies teach Greptile what matters. After 2-3 weeks, it stops commenting on things you don’t care about. 
+ ​ 
+ Get started with Greptile 
+ I'm a developer
+ Learn to work with Greptile reviews, train it with reactions, and make the most out of it 
+ I'm setting up Greptile for my team
+ Connect your code provider, configure review standards, and manage team access 
+ I need self-hosting
+ Deploy in your infrastructure with Docker/Kubernetes, air-gapped environments, and custom LLMs 
+ ​ 
+ Why teams choose Greptile 
+ Catches issues humans miss : Full codebase context means Greptile sees how changes affect distant parts of your system
+ Reduces noise over time : Learning system adapts to your team’s preferences, suppressing irrelevant suggestions
+ No context switching : Fix issues directly in your IDE without jumping between PR and code
+ Enterprise ready : SOC2 Type II, self-hosting options, SSO/SAML, audit logs
+ ​ 
+ Technical details 
+ Languages
+ Platforms
+ Deployment
+ All languages supported Greptile works with any programming language in your codebase. 
+ Supported code providers 
+ GitHub Cloud, Enterprise Server & Enterprise Cloud with data residency
+ GitLab Cloud & Self-Managed
+ Bitbucket Cloud & Data Center
+ Cursor Origin (Beta)
+ Gitea
+ Perforce with P4 Code Review (on-premises Greptile only)
+ See Code providers for access requirements and setup. 
+ Cloud or
+
+=== [meta] https://www.greptile.com
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: English

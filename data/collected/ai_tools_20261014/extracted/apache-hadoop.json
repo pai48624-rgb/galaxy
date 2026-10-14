@@ -1,0 +1,46 @@
+{
+ "company": "Apache Software Foundation",
+ "one_liner_ko": "신뢰성 있고 확장 가능한 분산 컴퓨팅을 위한 오픈소스 소프트웨어 프로젝트.",
+ "what_it_does_ko": "Apache Hadoop 소프트웨어 라이브러리는 단순한 프로그래밍 모델로 컴퓨터 클러스터에서 대용량 데이터를 분산 처리하게 해 주는 프레임워크다. 단일 서버부터 각자 로컬 연산·저장을 하는 수천 대 머신까지 확장하도록 설계되었다. 하드웨어에 고가용성을 맡기지 않고 라이브러리 자체가 애플리케이션 계층에서 장애를 감지·처리한다. Hadoop Common, HDFS, YARN, MapReduce 모듈로 구성된다.",
+ "key_features": [
+  "고처리량 분산 파일 시스템 HDFS",
+  "작업 스케줄링·클러스터 자원 관리 프레임워크 YARN",
+  "YARN 기반 대용량 병렬 처리 MapReduce",
+  "다른 모듈을 지원하는 공통 유틸리티 Hadoop Common",
+  "애플리케이션 계층의 장애 감지·처리로 고가용성",
+  "WebHDFS·YARN REST API",
+  "Amazon S3·Azure Blob 등 호환 파일 시스템 지원"
+ ],
+ "use_cases_ko": [
+  "컴퓨터 클러스터에서 대용량 데이터 분산 처리(연구·운영)"
+ ],
+ "pricing": {"free_tier": "오픈소스 — 공식 페이지에 유료 요금제 없음", "plans": [], "pricing_url": null},
+ "open_source": "오픈소스(라이선스 이름은 받은 본문에 없음)",
+ "api": "있음",
+ "platforms": ["CLI", "API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://hadoop.apache.org", "quote": "Copyright © 2006-2026 The Apache Software Foundation"},
+  {"field": "one_liner_ko", "url": "https://hadoop.apache.org", "quote": "The Apache® Hadoop® project develops open-source software for reliable, scalable, distributed computing."},
+  {"field": "what_it_does_ko", "url": "https://hadoop.apache.org", "quote": "is a framework that allows for the distributed processing of large data sets across clusters of computers using simple programming models"},
+  {"field": "what_it_does_ko", "url": "https://hadoop.apache.org", "quote": "It is designed to scale up from single servers to thousands of machines, each offering local computation and storage."},
+  {"field": "what_it_does_ko", "url": "https://hadoop.apache.org", "quote": "the library itself is designed to detect and handle failures at the application layer"},
+  {"field": "key_features", "url": "https://hadoop.apache.org", "quote": "Hadoop Distributed File System (HDFS™) : A distributed file system that provides high-throughput access to application data."},
+  {"field": "key_features", "url": "https://hadoop.apache.org", "quote": "Hadoop YARN : A framework for job scheduling and cluster resource management."},
+  {"field": "key_features", "url": "https://hadoop.apache.org", "quote": "Hadoop MapReduce : A YARN-based system for parallel processing of large data sets."},
+  {"field": "key_features", "url": "https://hadoop.apache.org", "quote": "Hadoop Common : The common utilities that support the other Hadoop modules."},
+  {"field": "key_features", "url": "https://hadoop.apache.org/docs/r3.3.6/", "quote": "WebHDFS (REST API)"},
+  {"field": "key_features", "url": "https://hadoop.apache.org/docs/r3.3.6/", "quote": "Amazon S3 \n Azure Blob Storage"},
+  {"field": "use_cases_ko", "url": "https://hadoop.apache.org", "quote": "A wide variety of companies and organizations use Hadoop for both research and production."},
+  {"field": "pricing", "url": "https://hadoop.apache.org", "quote": "develops open-source software for reliable, scalable, distributed computing"},
+  {"field": "open_source", "url": "https://hadoop.apache.org", "quote": "develops open-source software for reliable, scalable, distributed computing"},
+  {"field": "api", "url": "https://hadoop.apache.org/docs/r3.3.6/", "quote": "YARN REST APIs"},
+  {"field": "platforms", "url": "https://hadoop.apache.org/docs/r3.3.6/", "quote": "FileSystem Shell"},
+  {"field": "platforms", "url": "https://hadoop.apache.org/docs/r3.3.6/", "quote": "Java API docs"},
+  {"field": "korean_support", "url": "https://hadoop.apache.org", "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [
+  {"official": "ASF 오픈소스 프로젝트로, 공식 사이트에 자체 클라우드 매니지드 유료 요금제가 없음", "diff": "기존 분류의 '클라우드 매니지드 유료 플랜'을 공식 페이지에서 확인할 수 없음 — 순수 오픈소스", "url": "https://hadoop.apache.org"}
+ ],
+ "plan_change": []
+}

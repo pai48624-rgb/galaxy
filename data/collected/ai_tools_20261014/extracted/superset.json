@@ -1,0 +1,267 @@
+{
+ "company": "Superset Inc.",
+ "one_liner_ko": "Claude Code·Codex 등 어떤 코딩 에이전트든 한 작업 공간에서 병렬로 지휘하는 도구.",
+ "what_it_does_ko": "Superset은 작업마다 격리된 git worktree를 주어 여러 에이전트에게 동시에 일을 맡기고, 결과를 일반 브랜치·PR로 합치게 해 주는 작업 공간이다. 터미널·코드 리뷰·브라우저 미리보기를 한곳에 모았다. 저장소·worktree·터미널 출력·에이전트 세션은 기본적으로 사용자 컴퓨터에 남고, 모델 제공사가 아니라 자기 에이전트 계정을 그대로 쓴다. 곧 이름이 바뀔 예정이라고 적혀 있다.",
+ "key_features": [
+  "기능·버그·리팩터링에 에이전트 병렬 실행과 상태 한눈에 보기",
+  "이슈 분류·변경 로그·의존성 업데이트 등 예약 자동화",
+  "에이전트마다 격리된 git worktree",
+  "어느 머신이든 호스트로 추가하는 원격 접속",
+  "앱 안에서 diff 검토·코멘트·편집",
+  "휴대폰에서 에이전트 실행",
+  "브라우저 패널에서 요소를 골라 에이전트에 UI 수정 요청",
+  "Linear·Slack 연동"
+ ],
+ "use_cases_ko": [
+  "같은 작업을 여러 에이전트에 맡겨 가장 좋은 diff 병합",
+  "기능·버그 수정·PR 리뷰를 브랜치 전환 없이 동시에 진행",
+  "에이전트 세션을 예약해 아침에 검토할 결과 받기"
+ ],
+ "pricing": {
+  "free_tier": "있음 (1인, 로컬 워크스페이스·데스크톱 앱·CLI)",
+  "plans": [
+   {
+    "name": "Free",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "사용자 1명, 로컬 워크스페이스",
+    "page_lang": "en"
+   },
+   {
+    "name": "Pro",
+    "price": 20,
+    "currency": "USD",
+    "period": "month",
+    "limits": "사용자당, 월간 결제, 원격 접속·자동화·모바일",
+    "page_lang": "en"
+   },
+   {
+    "name": "Pro",
+    "price": 15,
+    "currency": "USD",
+    "period": "month(연간 결제)",
+    "limits": "사용자당",
+    "page_lang": "en"
+   },
+   {
+    "name": "Pro",
+    "price": 180,
+    "currency": "USD",
+    "period": "year",
+    "limits": "사용자당 연간 결제",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": "USD",
+    "period": "year",
+    "limits": "맞춤 가격, 연간 결제만, SSO·SCIM·감사 로그",
+    "page_lang": "en"
+   },
+   {
+    "name": "무료",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "사용자 1명",
+    "page_lang": "ko"
+   },
+   {
+    "name": "Pro",
+    "price": 20,
+    "currency": "USD",
+    "period": "month",
+    "limits": "사용자당",
+    "page_lang": "ko"
+   },
+   {
+    "name": "Pro",
+    "price": 15,
+    "currency": "USD",
+    "period": "month(연간 결제)",
+    "limits": "사용자당",
+    "page_lang": "ko"
+   },
+   {
+    "name": "Pro",
+    "price": 180,
+    "currency": "USD",
+    "period": "year",
+    "limits": "사용자당 연간 결제",
+    "page_lang": "ko"
+   },
+   {
+    "name": "엔터프라이즈",
+    "price": null,
+    "currency": "USD",
+    "period": "year",
+    "limits": "맞춤 가격, 연간 결제만",
+    "page_lang": "ko"
+   }
+  ],
+  "pricing_url": "https://superset.sh/pricing/"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "맥",
+  "CLI"
+ ],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://superset.sh/pricing/",
+   "quote": "© 2026 Superset Inc."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://superset.sh",
+   "quote": "One workspace for Claude Code, Codex, and any coding agent."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.superset.sh/",
+   "quote": "Superset gives every task its own isolated git worktree, so you can delegate to many agents at once and integrate the results through ordinary branches and PRs."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/superset-sh/superset",
+   "quote": "Run Claude Code, Codex, or another CLI agent with terminals, code review, and browser previews in one workspace."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://superset.sh/pricing/",
+   "quote": "Repos, worktrees, terminal output, and agent sessions stay local by default"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://superset.sh/pricing/",
+   "quote": "Superset is the workspace your agents run in, not a model provider."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://superset.sh",
+   "quote": "Superset is getting a new name soon"
+  },
+  {
+   "field": "key_features",
+   "url": "https://superset.sh",
+   "quote": "Launch agents across features, bug fixes, and refactors, all in parallel."
+  },
+  {
+   "field": "key_features",
+   "url": "https://superset.sh",
+   "quote": "Turn chores into scheduled agents: issue triage, changelog drafts, dependency bumps."
+  },
+  {
+   "field": "key_features",
+   "url": "https://superset.sh",
+   "quote": "Each agent runs in its own isolated Git worktree."
+  },
+  {
+   "field": "key_features",
+   "url": "https://superset.sh",
+   "quote": "Add any machine as a host. Workspaces keep running when your laptop sleeps"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/superset-sh/superset",
+   "quote": "Inspect, comment on, and edit agent changes without leaving the app"
+  },
+  {
+   "field": "key_features",
+   "url": "https://superset.sh",
+   "quote": "Run your agents from your phone."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/superset-sh/superset",
+   "quote": "in the browser pane to select an element and send your requested change to an agent with element context"
+  },
+  {
+   "field": "key_features",
+   "url": "https://superset.sh/pricing/",
+   "quote": "Linear integration"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://docs.superset.sh/",
+   "quote": "Same prompt, multiple agents, isolated branches. Merge the best diff."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://docs.superset.sh/",
+   "quote": "A feature, a bugfix, and a PR review at once, without branch juggling."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://docs.superset.sh/",
+   "quote": "Schedule agent sessions; wake up to a reviewable workspace."
+  },
+  {
+   "field": "pricing",
+   "url": "https://superset.sh/pricing/",
+   "quote": "Pro is $20 per user/month billed monthly, or $15 per user/month billed yearly (a 25% discount)."
+  },
+  {
+   "field": "pricing",
+   "url": "https://superset.sh/pricing/",
+   "quote": "$180 per user, billed yearly"
+  },
+  {
+   "field": "pricing",
+   "url": "https://superset.sh/pricing/",
+   "quote": "Yes. Free covers individuals with 1 user, local workspaces, the desktop app, and the CLI."
+  },
+  {
+   "field": "pricing",
+   "url": "https://superset.sh/pricing/",
+   "quote": "Annual billing only"
+  },
+  {
+   "field": "pricing",
+   "url": "https://superset.sh/ko/pricing",
+   "quote": "사용자당 $180, 연간 결제"
+  },
+  {
+   "field": "pricing",
+   "url": "https://superset.sh/ko/pricing",
+   "quote": "$20 $15 사용자당 월"
+  },
+  {
+   "field": "pricing",
+   "url": "https://superset.sh/ko/pricing",
+   "quote": "연간 결제만 가능"
+  },
+  {
+   "field": "api",
+   "url": "https://docs.superset.sh/",
+   "quote": "Superset SDK Reference"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/superset-sh/superset",
+   "quote": "**macOS**: [Apple Silicon (.dmg)]"
+  },
+  {
+   "field": "platforms",
+   "url": "https://docs.superset.sh/",
+   "quote": "Superset CLI Reference"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://superset.sh",
+   "quote": "hreflang: cs, de, en, es, fr, id, it, ja, ko"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://superset.sh/ko/pricing",
+   "quote": "가격 모든 팀을 위한 간단한 가격"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

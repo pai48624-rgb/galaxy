@@ -1,0 +1,55 @@
+{
+ "company": "Blackbox",
+ "one_liner_ko": "모든 모델에 종단간 암호화를 적용한 기업용 고신뢰 AI 추론(인퍼런스) 플랫폼.",
+ "what_it_does_ko": "Blackbox는 300개 이상 모델을 하나의 엔드포인트와 하나의 청구서로 쓰게 하는 기업용 추론 플랫폼이다. 프롬프트는 사용자 기기를 떠나기 전에 암호화되고 모델이 실행되는 곳에서만 복호화되며, 데이터 무보관(zero data retention)을 내세운다. 스마트 라우팅·장애 조치·캐싱, 전용 단일 테넌트 배포, 데이터 거주지 지정을 제공한다. API·CLI와 클라우드 코딩 에이전트를 돌리는 Agents API, 원격 에이전트 샌드박스도 있다. 요금은 좌석이 아닌 토큰 단위이고 연간 약정 금액에 따라 할인된다.",
+ "key_features": [
+  "모든 모델에 종단간 암호화 추론",
+  "데이터 무보관(계약 + DPA)",
+  "300개 이상 모델을 한 엔드포인트·한 청구서로",
+  "스마트 라우팅·장애 조치·캐싱",
+  "전용 단일 테넌트 배포·데이터 거주지 지정",
+  "Agents API(클라우드 코딩 에이전트)·원격 에이전트 샌드박스",
+  "비공개 모델 전송 전 개인정보(PII) 제거",
+  "OpenAI·Anthropic·Google 계정 연결 라우팅"
+ ],
+ "use_cases_ko": [
+  "기업이 암호화·무보관 조건으로 여러 AI 모델 추론 사용",
+  "기업 팀이 API·CLI·클라우드 코딩 에이전트를 하나의 약정 잔액으로 사용"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [
+   {"name": "Enterprise", "price": null, "currency": "USD", "period": "year", "limits": "맞춤 연간 약정(PO 차감), 비공개 모델 −5%+·오픈 모델 −10%+ 할인, 전용 배포, SSO", "page_lang": "en"},
+   {"name": "모델별 토큰 정가", "price": null, "currency": "USD", "period": "usage", "limits": "100만 토큰당 입력·출력·캐시 별도 과금(예: deepseek-v4.1-flash 입력 $0.30·출력 $1.20)", "page_lang": "en"}
+  ],
+  "pricing_url": "https://www.blackbox.ai/pricing"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["CLI", "API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://www.blackbox.ai/", "quote": "Blackbox: The high-trust platform for frontier inference"},
+  {"field": "one_liner_ko", "url": "https://www.blackbox.ai/", "quote": "End-to-end encrypted inference for every model."},
+  {"field": "what_it_does_ko", "url": "https://www.blackbox.ai/", "quote": "Prompts are encrypted before they leave your machine and decrypted only where the model runs."},
+  {"field": "what_it_does_ko", "url": "https://www.blackbox.ai/pricing", "quote": "300+ models, one endpoint, one bill ✓"},
+  {"field": "what_it_does_ko", "url": "https://www.blackbox.ai/pricing", "quote": "No platform fees, no markups, and no seats."},
+  {"field": "key_features", "url": "https://www.blackbox.ai/pricing", "quote": "Zero data retention, contractual + DPA"},
+  {"field": "key_features", "url": "https://www.blackbox.ai/pricing", "quote": "Smart routing, failover, caching ✓"},
+  {"field": "key_features", "url": "https://www.blackbox.ai/pricing", "quote": "Dedicated single-tenant deployment"},
+  {"field": "key_features", "url": "https://www.blackbox.ai/pricing", "quote": "Agents API: cloud coding agents ✓"},
+  {"field": "key_features", "url": "https://www.blackbox.ai/pricing", "quote": "Remote Agent: cloud sandboxes ✓"},
+  {"field": "key_features", "url": "https://www.blackbox.ai/pricing", "quote": "PII removed before closed models"},
+  {"field": "key_features", "url": "https://www.blackbox.ai/pricing", "quote": "Connect your OpenAI, Anthropic, or Google accounts and route through your existing provider relationships and negotiated rates."},
+  {"field": "use_cases_ko", "url": "https://www.blackbox.ai/pricing", "quote": "Every surface uses the same balance: Enterprise Inference , the Blackbox Router , the API, the CLI, and the Agents API."},
+  {"field": "pricing", "url": "https://www.blackbox.ai/pricing", "quote": "Annual · PO burn-down"},
+  {"field": "pricing", "url": "https://www.blackbox.ai/pricing", "quote": "Closed −5%+ Open −10%+"},
+  {"field": "pricing", "url": "https://www.blackbox.ai/pricing", "quote": "Priced per 1M tokens. We bill input, output, and cached reads separately."},
+  {"field": "pricing", "url": "https://www.blackbox.ai/pricing", "quote": "Text 1M $0.30 $1.20 $0.007"},
+  {"field": "api", "url": "https://www.blackbox.ai/pricing", "quote": "Core surfaces: API, CLI ✓"},
+  {"field": "platforms", "url": "https://www.blackbox.ai/pricing", "quote": "Core surfaces: API, CLI ✓"},
+  {"field": "korean_support", "url": "https://www.blackbox.ai/", "quote": "html lang: en"}
+ ],
+ "mismatch": [{"official": "좌석·구독 없이 토큰 단위 과금, 연간 약정 기반 엔터프라이즈 계약만 안내(영업 상담부터 시작), 무료 요금제 언급 없음", "diff": "기존 '프리미엄(무료+유료 구독)'과 달리 무료·구독 구조가 보이지 않고 종량제+기업 약정임", "url": "https://www.blackbox.ai/pricing"}],
+ "plan_change": []
+}

@@ -1,0 +1,176 @@
+{
+ "company": "Unstructured",
+ "one_liner_ko": "PDF·표·양식·스캔본을 에이전트가 믿고 쓸 수 있는 구조화 데이터로 바꿔 주는 문서 변환·ETL 플랫폼.",
+ "what_it_does_ko": "Unstructured는 65개 이상 파일 형식의 문서를 자동으로 알맞은 처리 전략을 골라 AI가 쓸 수 있는 구조화 데이터로 바꾼다. 표 구조, OCR, 읽기 순서·계층 같은 레이아웃을 보존한다. 단순 파서가 아니라 원천 연결, 청킹, 임베딩, 데이터베이스 적재까지 파이프라인 전체를 일정에 맞춰 돌린다. 클라우드 SaaS 외에 전용 인스턴스나 자체 VPC에도 배포할 수 있다.",
+ "key_features": [
+  "65개 이상 파일 형식 지원(.HWP 포함)",
+  "여러 페이지 표까지 구조 보존 추출",
+  "스캔·이미지·손글씨 OCR",
+  "읽기 순서·계층 등 레이아웃 보존",
+  "S3·SharePoint 등 20개 이상 원천과 20개 이상 목적지 커넥터",
+  "파티션·청킹·보강·임베딩 전체 변환 파이프라인",
+  "SOC 2 Type 2·HIPAA·GDPR·ISO 27001·FedRAMP High",
+  "SaaS·전용 인스턴스·자체 VPC 배포"
+ ],
+ "use_cases_ko": [
+  "금융: 실적 보고서·규제 공시를 구조화 데이터 파이프라인으로",
+  "보험: 청구·양식 문서를 구조화해 심사 가속",
+  "법률: 계약서·공시에서 구조와 정보 추출"
+ ],
+ "pricing": {
+  "free_tier": "있음 (처음 10,000쪽 무료, 카드 불필요)",
+  "plans": [
+   {
+    "name": "Free",
+    "price": 0,
+    "currency": "USD",
+    "period": "one-time",
+    "limits": "처음 10,000쪽 무료, 모든 기능",
+    "page_lang": "en"
+   },
+   {
+    "name": "Pay-As-You-Go",
+    "price": 0.015,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "첫 10,000쪽 이후 쪽당 $0.015",
+    "page_lang": "en"
+   },
+   {
+    "name": "Business",
+    "price": null,
+    "currency": "USD",
+    "period": null,
+    "limits": "맞춤 가격, 다중 사용자, 전용 인스턴스·VPC",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://unstructured.io/pricing/"
+ },
+ "open_source": "오픈소스(라이선스 이름은 페이지에 없음)",
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://unstructured.io",
+   "quote": "SAP, IBM, Intel, Teradata and Uniphore use Unstructured to turn complex documents into production-ready AI data."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://unstructured.io",
+   "quote": "Parse PDFs, tables, forms and scans into structured data your agents can trust."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://unstructured.io",
+   "quote": "It automatically applies the right processing strategy, turning complex files into structured, agent-ready data with no manual setup."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://unstructured.io",
+   "quote": "The real work is connecting to your sources, then chunking, embedding, and loading the result into your database, on a schedule, at scale."
+  },
+  {
+   "field": "key_features",
+   "url": "https://unstructured.io",
+   "quote": "Support for 65+ File Types"
+  },
+  {
+   "field": "key_features",
+   "url": "https://unstructured.io/pricing/",
+   "quote": ".HTML \n .HWP \n .JPEG"
+  },
+  {
+   "field": "key_features",
+   "url": "https://unstructured.io",
+   "quote": "Preserve rows, columns, headers, and relationships—even across complex, multi-page tables."
+  },
+  {
+   "field": "key_features",
+   "url": "https://unstructured.io",
+   "quote": "Capture text from scans, images, handwriting, and low-quality documents with high accuracy."
+  },
+  {
+   "field": "key_features",
+   "url": "https://unstructured.io",
+   "quote": "Preserve reading order, hierarchy, sections, and relationships across every page."
+  },
+  {
+   "field": "key_features",
+   "url": "https://unstructured.io",
+   "quote": "Connect to 20+ sources (S3, SharePoint, Drive, Snowflake, Databricks, and more) and write to 20+ destinations"
+  },
+  {
+   "field": "key_features",
+   "url": "https://unstructured.io/pricing/",
+   "quote": "Full Transformation Pipeline: Partition, Chunk, Enrich, Embed"
+  },
+  {
+   "field": "key_features",
+   "url": "https://unstructured.io",
+   "quote": "It's SOC 2 Type 2, HIPAA, GDPR, ISO 27001, and FedRAMP High and it can run on shared Business SaaS, a dedicated isolated instance, or fully in your own VPC."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://unstructured.io",
+   "quote": "Unstructured enables financial institutions to turn earnings reports, regulatory filings, and risk summaries into structured data pipelines built for compliance and speed."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://unstructured.io",
+   "quote": "insurance turns claims and forms into clean, structured data"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://unstructured.io",
+   "quote": "legal extracts and checks contract terms"
+  },
+  {
+   "field": "pricing",
+   "url": "https://unstructured.io/pricing/",
+   "quote": "Start processing your data with 10,000 free pages."
+  },
+  {
+   "field": "pricing",
+   "url": "https://unstructured.io/pricing/",
+   "quote": "No card required."
+  },
+  {
+   "field": "pricing",
+   "url": "https://unstructured.io/pricing/",
+   "quote": "Pay only $0.015 a page after your first 10,000 free pages."
+  },
+  {
+   "field": "pricing",
+   "url": "https://unstructured.io/pricing/",
+   "quote": "Custom\n Contact Sales \n Includes \n Custom Pricing.\n Multi-user accounts."
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/Unstructured-IO/unstructured",
+   "quote": "https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github"
+  },
+  {
+   "field": "api",
+   "url": "https://docs.unstructured.io/transform/first-request",
+   "quote": "You can Parse a document directly through the API without uploading it in the web app first."
+  },
+  {
+   "field": "platforms",
+   "url": "https://docs.unstructured.io/transform/first-request",
+   "quote": "Log in to Transform, upload a document, then Parse its content."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://unstructured.io",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

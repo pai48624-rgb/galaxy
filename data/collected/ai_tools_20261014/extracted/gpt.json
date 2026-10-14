@@ -1,49 +1,113 @@
 {
- "company": null,
- "one_liner_ko": "GPT-6 계열 모델로 대화·이미지 생성·심층 리서치·Codex 등을 제공하는 ChatGPT의 개인용 요금제(Free·Go·Plus·Pro).",
- "what_it_does_ko": "받아 둔 GPT-4 소개 페이지는 열리지 않았고, ChatGPT 한국어 요금 페이지만 확인됐다. 요금 페이지에 따르면 ChatGPT는 GPT-6.1 Sol, GPT-6 Astra, GPT-5.6 Sol 등 여러 GPT 모델로 텍스트 대화를 제공한다. 이미지 생성, 음성·영상 음성 대화, 심층 리서치, 메모리, 프로젝트·예약 작업·맞춤형 GPT, Codex, ChatGPT Work 같은 기능이 요금제별 한도로 제공된다. 웹과 모바일(iOS, Android)에서 이용할 수 있다.",
+ "company": "OpenAI",
+ "one_liner_ko": null,
+ "what_it_does_ko": "GPT 소개 페이지(openai.com)는 받아지지 않았다. 상위 제품인 ChatGPT 요금 페이지에 따르면 Free 플랜에서 GPT-6와 무제한 텍스트 대화를 쓸 수 있고, Plus는 GPT-6 기반 고급 추론 모델, Pro는 GPT-6 Astra 기반 전문가급 추론을 제공한다. 플랜별로 GPT-6.1 Sol, GPT-6 Astra/Sol/Luna, GPT-5.6 계열 모델 이용 범위가 다르다.",
  "key_features": [
-  "GPT-6·GPT-5.6 계열 여러 모델 선택",
-  "이미지 생성",
-  "음성 대화·영상 음성 대화",
-  "심층 리서치",
-  "프로젝트·예약 작업·맞춤형 GPT",
-  "Codex 코딩 에이전트",
-  "ChatGPT Work(데스크톱·웹·모바일)",
-  "메모리와 긴 컨텍스트(Pro 최대 400K)"
+  "GPT-6와 무제한 텍스트 대화(Free)",
+  "GPT-6 기반 고급 추론 모델(Plus)",
+  "GPT-6 Astra 기반 전문가급 추론(Pro)",
+  "웹 및 모바일(iOS, Android) 액세스"
  ],
  "use_cases_ko": [],
  "pricing": {
-  "free_tier": "있음 (Free: 무제한 텍스트 대화, 업로드·이미지 생성·심층 리서치·Codex 제한적)",
+  "free_tier": "있음 (ChatGPT Free ₩0/월, 메시지·업로드·이미지 생성 등 제한)",
   "plans": [
-   {"name": "Free", "price": 0, "currency": null, "period": "month", "limits": "일상 대화 무제한*, 이미지 생성·음성·심층 리서치 제한적, 컨텍스트 27K", "page_lang": "ko-KR"},
-   {"name": "Go", "price": null, "currency": null, "period": "month", "limits": "Free 포함, 업로드·이미지 생성 한도 확대, 광고 포함 가능, 컨텍스트 54K", "page_lang": "ko-KR"},
-   {"name": "Plus", "price": null, "currency": null, "period": "month", "limits": "Go 포함, GPT-6 기반 고급 추론, 심층 리서치 확장, Codex 한도 확대", "page_lang": "ko-KR"},
-   {"name": "Pro", "price": null, "currency": null, "period": "month", "limits": "Plus 포함, 3가지 사용량 등급, GPT-6 Astra 전문가급 추론, 이미지 생성 무제한, 컨텍스트 128K/400K", "page_lang": "ko-KR"}
+   {
+    "name": "ChatGPT Free",
+    "price": 0,
+    "currency": "KRW",
+    "period": "month",
+    "limits": "GPT-6 무제한 텍스트 대화, 제한적 Codex 이용",
+    "page_lang": "ko-KR"
+   },
+   {
+    "name": "ChatGPT Go",
+    "price": 13000,
+    "currency": "KRW",
+    "period": "month",
+    "limits": "Free 기능 + 메시지·업로드·이미지 한도 상향, 광고 포함 가능",
+    "page_lang": "ko-KR"
+   },
+   {
+    "name": "ChatGPT Plus",
+    "price": 29000,
+    "currency": "KRW",
+    "period": "month",
+    "limits": "GPT-6 기반 고급 추론, Codex 사용 한도 확대",
+    "page_lang": "ko-KR"
+   },
+   {
+    "name": "ChatGPT Pro",
+    "price": 159000,
+    "currency": "KRW",
+    "period": "month",
+    "limits": "부터(From), 3가지 사용량 등급, GPT-6 Astra 전문가급 추론",
+    "page_lang": "ko-KR"
+   }
   ],
   "pricing_url": "https://chatgpt.com/ko-KR/pricing/"
  },
  "open_source": null,
  "api": "불명",
- "platforms": ["웹", "iOS", "안드로이드"],
+ "platforms": [
+  "웹",
+  "iOS",
+  "안드로이드"
+ ],
  "korean_support": "UI 한국어",
  "evidence": [
-  {"field": "one_liner_ko", "url": "https://chatgpt.com/ko-KR/pricing/", "quote": "개인·비즈니스·엔터프라이즈용 ChatGPT 플랜 가격을 자세히 비교해 보세요"},
-  {"field": "what_it_does_ko", "url": "https://openai.com/ko-KR/index/gpt-4/", "quote": " Reload to try again, or go back."},
-  {"field": "what_it_does_ko", "url": "https://chatgpt.com/ko-KR/pricing/", "quote": " 무제한* 플랜: Free, 기능: 일상적인 텍스트 대화, 무제한* "},
-  {"field": "key_features", "url": "https://chatgpt.com/ko-KR/pricing/", "quote": " 프로젝트, 예약 작업, 맞춤형 GPT"},
-  {"field": "key_features", "url": "https://chatgpt.com/ko-KR/pricing/", "quote": " 데스크톱, 웹, 모바일에서 ChatGPT Work 이용 확대 "},
-  {"field": "key_features", "url": "https://chatgpt.com/ko-KR/pricing/", "quote": " 400K 플랜: Pro, 기능: GPT 추론 총 컨텍스트 윈도우, 400K "},
-  {"field": "key_features", "url": "https://chatgpt.com/ko-KR/pricing/", "quote": " 플랜: Go, 기능: 영상 음성 대화, 예 "},
-  {"field": "pricing", "url": "https://chatgpt.com/ko-KR/pricing/", "quote": " GPT-6와 무제한 텍스트 대화"},
-  {"field": "pricing", "url": "https://chatgpt.com/ko-KR/pricing/", "quote": " 이 플랜에는 광고가 포함될 수 있습니다. 자세히 알아보기 ⁠ "},
-  {"field": "pricing", "url": "https://chatgpt.com/ko-KR/pricing/", "quote": " GPT-6 기반 고급 추론 모델"},
-  {"field": "pricing", "url": "https://chatgpt.com/ko-KR/pricing/", "quote": " GPT-6 Astra 기반의 전문가급 추론"},
-  {"field": "platforms", "url": "https://chatgpt.com/ko-KR/pricing/", "quote": " 플랜: Free, 기능: 웹 및 모바일(iOS, Android) 액세스, 예 "},
-  {"field": "korean_support", "url": "https://chatgpt.com/ko-KR/pricing/", "quote": "=== [pricing] https://chatgpt.com/ko-KR/pricing/ (lang=ko-KR)"}
+  {
+   "field": "company",
+   "url": "https://openai.com/ko-KR/index/gpt-4/",
+   "quote": "=== [home] https://openai.com/ko-KR/index/gpt-4/"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://chatgpt.com/ko-KR/pricing/",
+   "quote": "₩0 /월\n Free 사용하기 \n GPT-6와 무제한 텍스트 대화"
+  },
+  {
+   "field": "key_features",
+   "url": "https://chatgpt.com/ko-KR/pricing/",
+   "quote": "Go 플랜의 모든 기능 포함\n GPT-6 기반 고급 추론 모델"
+  },
+  {
+   "field": "key_features",
+   "url": "https://chatgpt.com/ko-KR/pricing/",
+   "quote": "3가지 사용량 등급 중 선택\n GPT-6 Astra 기반의 전문가급 추론"
+  },
+  {
+   "field": "platforms",
+   "url": "https://chatgpt.com/ko-KR/pricing/",
+   "quote": "플랜: Free, 기능: 웹 및 모바일(iOS, Android) 액세스, 예"
+  },
+  {
+   "field": "pricing",
+   "url": "https://chatgpt.com/ko-KR/pricing/",
+   "quote": "Free\n ChatGPT를 체험해 보기에 적합\n ₩0 /월\n Free 사용하기"
+  },
+  {
+   "field": "pricing",
+   "url": "https://chatgpt.com/ko-KR/pricing/",
+   "quote": "Go\n 더 긴 대화에 적합\n ₩13,000 /월\n Go 사용하기"
+  },
+  {
+   "field": "pricing",
+   "url": "https://chatgpt.com/ko-KR/pricing/",
+   "quote": "고차원적인 작업과 생산성 향상에 최적\n ₩29,000 /월"
+  },
+  {
+   "field": "pricing",
+   "url": "https://chatgpt.com/ko-KR/pricing/",
+   "quote": "생산성 극대화\n From\n ₩159,000 /월\n Pro 사용하기"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://chatgpt.com/ko-KR/pricing/",
+   "quote": "개인·비즈니스·엔터프라이즈용 ChatGPT 플랜 가격을 자세히 비교해 보세요"
+  }
  ],
  "mismatch": [],
- "plan_change": [
-  {"official": "ChatGPT 개인 요금제 Free·Go·Plus·Pro(Pro는 3가지 사용량 등급), Go 요금제는 광고 포함 가능. 페이지에 금액 숫자는 나오지 않음", "diff": "기존 '프리미엄(무료+유료 구독)' 분류와 같지만, 무료/유료 하나가 아니라 Go·Plus·Pro 3단 유료 구독과 광고 포함 요금제(Go)가 있음", "url": "https://chatgpt.com/ko-KR/pricing/"}
- ]
+ "plan_change": [],
+ "note": "홈(openai.com/ko-KR/index/gpt-4/)이 'This page couldn’t load' 로 받아지지 않음. 가격·기능·한국어는 상위 제품 ChatGPT 요금 페이지(한국어) 기준이며 GPT API 가격은 받아 둔 본문에 없음 → api 불명."
 }

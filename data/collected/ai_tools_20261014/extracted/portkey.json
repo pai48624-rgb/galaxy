@@ -1,0 +1,184 @@
+{
+ "company": "Portkey (현재 Prisma AIRS AI Gateway로 제공)",
+ "one_liner_ko": "AI 게이트웨이·관측·가드레일·거버넌스·프롬프트 관리를 한 플랫폼에 담은 생성형 AI 프로덕션 스택.",
+ "what_it_does_ko": "Portkey는 AI 팀이 프로덕션으로 가는 데 필요한 AI 게이트웨이, 관측, 가드레일, 거버넌스, 프롬프트 관리를 하나의 플랫폼으로 제공한다. 통합 API로 1,600개 이상 LLM에 접근하며 폴백·로드밸런싱·재시도를 지원한다. 연동은 몇 줄의 코드로 끝나며 모든 LLM 요청을 모니터링한다. 현재 'PRISMA AIRS AI Gateway'로 기업에 정식 제공 중이라고 밝힌다.",
+ "key_features": [
+  "통합 API로 1,600+ LLM 접근",
+  "자동 폴백·로드밸런싱·재시도",
+  "로그·트레이스 관측 대시보드",
+  "가드레일(결정적·LLM·파트너)",
+  "프롬프트 템플릿·버전 관리·플레이그라운드",
+  "단순·시맨틱 캐싱",
+  "RBAC·SSO 등 거버넌스",
+  "오픈소스 셀프호스팅 버전"
+ ],
+ "use_cases_ko": [
+  "LLM 앱을 프로덕션에 배포하는 팀",
+  "규정 준수가 필요한 대규모 기업 워크로드",
+  "프로토타입·엔터프라이즈 POC 평가"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Developer 평생 무료, 월 10k 기록 로그, 로그 3일 보관)",
+  "plans": [
+   {
+    "name": "Developer",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "월 10k 기록 로그, 로그 3일·지표 30일 보관, 템플릿 3개",
+    "page_lang": "en"
+   },
+   {
+    "name": "Production",
+    "price": 49,
+    "currency": "USD",
+    "period": "month",
+    "limits": "월 100k 기록 로그, 10만 요청당 +$9(최대 3M), 로그 30일 보관",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": null,
+    "period": null,
+    "limits": "맞춤 가격, 월 1,000만+ 로그, VPC·프라이빗 클라우드",
+    "page_lang": "en"
+   },
+   {
+    "name": "Open Source",
+    "price": 0,
+    "currency": null,
+    "period": null,
+    "limits": "셀프호스팅, 기본 대시보드, 커뮤니티 지원",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://portkey.ai/pricing"
+ },
+ "open_source": "오픈소스 버전 있음(라이선스 이름은 페이지에 없음)",
+ "api": "있음",
+ "platforms": [
+  "API",
+  "웹"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://portkey.ai",
+   "quote": "Portkey is now PRISMA AIRS AI Gateway, generally available for all enterprises."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://portkey.ai",
+   "quote": "Portkey equips AI teams with everything they need to go to production - AI Gateway, Observability, Guardrails, Governance, and Prompt Management, all in one platform."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://portkey.ai/docs/introduction/what-is-portkey",
+   "quote": "It takes 2 mins to integrate and with that, it starts monitoring all of your LLM requests and makes your app resilient, secure, performant, and more accurate at the same time."
+  },
+  {
+   "field": "key_features",
+   "url": "https://portkey.ai",
+   "quote": "Portkey lets you access 1,600+ LLMs via a unified API, so you can focus on building, not managing."
+  },
+  {
+   "field": "key_features",
+   "url": "https://portkey.ai/pricing",
+   "quote": "Universal API, Fallbacks, Loadbalancing, Retries & more"
+  },
+  {
+   "field": "key_features",
+   "url": "https://portkey.ai/pricing",
+   "quote": "Logs, Traces, Feedback, Custom Metadata, Filters"
+  },
+  {
+   "field": "key_features",
+   "url": "https://portkey.ai/pricing",
+   "quote": "LLM & Partner Guardrails"
+  },
+  {
+   "field": "key_features",
+   "url": "https://portkey.ai/pricing",
+   "quote": "Unlimited Templates, Playground, API Endpoints, Versioning, Variables"
+  },
+  {
+   "field": "key_features",
+   "url": "https://portkey.ai/pricing",
+   "quote": "Simple & Semantic Caching"
+  },
+  {
+   "field": "key_features",
+   "url": "https://portkey.ai/pricing",
+   "quote": "Role-Based Access Control, SSO, Granular Budget & Rate Limits"
+  },
+  {
+   "field": "key_features",
+   "url": "https://portkey.ai/pricing",
+   "quote": "Host it Yourself"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://portkey.ai/pricing",
+   "quote": "Great for teams ready to deploy LLM apps in production."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://portkey.ai/pricing",
+   "quote": "Built for organizations with complex compliance needs and high-volume production workloads."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://portkey.ai/pricing",
+   "quote": "Perfect for prototyping and testing or evaluating enterprise POCs. Not suitable for production workloads."
+  },
+  {
+   "field": "pricing",
+   "url": "https://portkey.ai/pricing",
+   "quote": "10k recorded logs per month"
+  },
+  {
+   "field": "pricing",
+   "url": "https://portkey.ai/pricing",
+   "quote": "3 days for Logs, 30 days for metrics"
+  },
+  {
+   "field": "pricing",
+   "url": "https://portkey.ai/pricing",
+   "quote": "$49/month"
+  },
+  {
+   "field": "pricing",
+   "url": "https://portkey.ai/pricing",
+   "quote": "+$9 overages per additional 100k requests"
+  },
+  {
+   "field": "pricing",
+   "url": "https://portkey.ai/pricing",
+   "quote": "$9/Month for Every 100K Up to 3M Requests"
+  },
+  {
+   "field": "pricing",
+   "url": "https://portkey.ai/pricing",
+   "quote": "Private Cloud Deployment, Data Export to Data Lakes, VPC Hosting"
+  },
+  {
+   "field": "open_source",
+   "url": "https://portkey.ai/pricing",
+   "quote": "Open Source\n Host it Yourself\n Deploy Locally"
+  },
+  {
+   "field": "api",
+   "url": "https://portkey.ai/docs/introduction/what-is-portkey",
+   "quote": "curl https://api.portkey.ai/v1/chat/completions"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://portkey.ai",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

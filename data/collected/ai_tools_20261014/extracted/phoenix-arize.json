@@ -1,0 +1,58 @@
+{
+ "company": "Arize AI",
+ "one_liner_ko": "AI 에이전트를 추적·평가·개선하며 로컬 실행이나 자체 호스팅이 가능한 오픈소스 AI 관측성·평가 도구.",
+ "what_it_does_ko": "Phoenix는 Arize가 만든 오픈소스 AI 관측성·평가 도구로, 로컬에서 실행하거나 자기 환경에 자체 호스팅할 수 있다. 에이전트가 거치는 프롬프트·검색·도구 호출·출력의 모든 단계를 트레이스로 보여 준다. 출력을 채점하는 평가(evals)를 만들고, 트레이스로 데이터셋을 만들어 실험을 돌린다. 자체 호스팅하면 트레이스가 자기 인프라 안에 머문다.",
+ "key_features": [
+  "에이전트 모든 단계 트레이싱",
+  "출력 채점 평가(evals) 작성",
+  "사람 검토·LLM-as-judge 주석",
+  "트레이스 기반 데이터셋과 실험",
+  "Prompt IDE",
+  "트레이스와 대화하는 AI 엔지니어링 에이전트(PXI)",
+  "코딩 에이전트 연동(npx skills add)"
+ ],
+ "use_cases_ko": [
+  "에이전트 응답 원인 추적과 디버깅",
+  "비용·지연·성능 기준으로 변경 사항 검증 후 배포",
+  "민감 데이터를 자체 인프라에 두고 관측"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Phoenix 오픈소스 로컬·자체 호스팅 / 관리형 Arize AX Free: 월 25k spans, 1GB, 15일 보관)",
+  "plans": [
+   {"name": "AX Free", "price": 0, "currency": "USD", "period": "month", "limits": "월 25k spans, 1GB, 15일 보관, 사용자 무제한", "page_lang": "en-US"},
+   {"name": "AX Pro", "price": 50, "currency": "USD", "period": "month", "limits": "월 50k spans, 10GB, 30일 보관, 사용자 무제한", "page_lang": "en-US"},
+   {"name": "AX Enterprise", "price": null, "currency": "USD", "period": "month", "limits": "맞춤, SaaS 또는 자체 호스팅", "page_lang": "en-US"}
+  ],
+  "pricing_url": "https://arize.com/pricing/"
+ },
+ "open_source": "오픈소스(라이선스 이름은 페이지에 없음)",
+ "api": "불명",
+ "platforms": ["CLI"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://arize.com/about/", "quote": "About Arize AI | Founders, Team, Awards & AI Infra & Ethics Alliance"},
+  {"field": "one_liner_ko", "url": "https://arize.com/phoenix/", "quote": "Trace, evaluate, and improve AI agents with Phoenix. Run locally or self-host in your environment."},
+  {"field": "what_it_does_ko", "url": "https://arize.com/phoenix/", "quote": "Phoenix shows every step your agent takes so you know what went wrong."},
+  {"field": "what_it_does_ko", "url": "https://arize.com/phoenix/", "quote": "Trace every step: prompts, retrievals, tool calls, outputs."},
+  {"field": "what_it_does_ko", "url": "https://arize.com/phoenix/", "quote": "Create datasets from traces, run experiments, and ship improvements."},
+  {"field": "what_it_does_ko", "url": "https://arize.com/phoenix/", "quote": "Your traces stay in your environment. Self-host Phoenix and keep sensitive data on your own infrastructure."},
+  {"field": "key_features", "url": "https://arize.com/phoenix/", "quote": "Build evals that score outputs and catch issues before they reach your users."},
+  {"field": "key_features", "url": "https://arize.com/phoenix/", "quote": "Add labels with human review or LLM-as-judge."},
+  {"field": "key_features", "url": "https://arize.com/phoenix/", "quote": "Open the Prompt IDE"},
+  {"field": "key_features", "url": "https://arize.com/phoenix/", "quote": "Talk with your traces\n Investigate issues, add annotations, run experiments, and more."},
+  {"field": "key_features", "url": "https://arize.com/phoenix/", "quote": "npx skills add Arize-ai/phoenix"},
+  {"field": "use_cases_ko", "url": "https://arize.com/phoenix/", "quote": "Why did my agent respond like that?"},
+  {"field": "use_cases_ko", "url": "https://arize.com/phoenix/", "quote": "Score output across cost, latency, and performance. Ship only what improves quality."},
+  {"field": "pricing", "url": "https://arize.com/pricing/", "quote": "25k spans per month \n Ingestion volume\n 1 GB per month \n Retention\n 15 days"},
+  {"field": "pricing", "url": "https://arize.com/pricing/", "quote": "$50 \n per month"},
+  {"field": "pricing", "url": "https://arize.com/pricing/", "quote": "50k spans per month \n Ingestion volume\n 10 GB per month \n Retention\n 30 days"},
+  {"field": "pricing", "url": "https://arize.com/pricing/", "quote": "SaaS or Self-Hosted"},
+  {"field": "open_source", "url": "https://arize.com/phoenix/", "quote": "Open-source observability and evals"},
+  {"field": "platforms", "url": "https://arize.com/phoenix/", "quote": "uvx arize-phoenix serve"},
+  {"field": "korean_support", "url": "https://arize.com/phoenix/", "quote": "html lang: en-US\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {"official": "Phoenix는 오픈소스, 유료 관리형은 별도 제품 Arize AX(Free $0 / Pro $50/월 / Enterprise 맞춤)", "diff": "Phoenix 자체 클라우드 유료 플랜이 아니라 Arize AX라는 다른 이름의 관리형 플랫폼 요금제로 판매", "url": "https://arize.com/pricing/"}
+ ]
+}

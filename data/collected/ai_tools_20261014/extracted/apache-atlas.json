@@ -1,0 +1,131 @@
+{
+ "company": "The Apache Software Foundation",
+ "one_liner_ko": "하둡 환경에서 기업의 규정 준수를 돕는 데이터 거버넌스·메타데이터 관리 프레임워크.",
+ "what_it_does_ko": "Apache Atlas는 기업이 하둡 안에서 규정 준수 요구를 효율적으로 충족하도록 돕는 확장 가능한 핵심 거버넌스 서비스 모음이다. 데이터 자산 카탈로그를 만들고 분류·관리하며, 데이터 과학자·분석가·거버넌스 팀의 협업 기능을 제공한다. 메타데이터 타입과 인스턴스, 분류와 계보를 통한 분류 전파, 계보 UI, 검색, 세밀한 보안을 지원한다. Apache Ranger와 연동해 분류 기반 권한·데이터 마스킹을 적용한다.",
+ "key_features": [
+  "사전 정의·사용자 정의 메타데이터 타입",
+  "PII 등 분류의 동적 생성과 계보 따라 자동 전파",
+  "데이터 계보를 보는 UI와 REST API",
+  "타입·분류·속성·자유 텍스트 검색과 DSL 쿼리",
+  "메타데이터 접근에 대한 세밀한 보안",
+  "Apache Ranger 연동 권한·데이터 마스킹",
+  "HBase·Hive·Kafka 등 훅"
+ ],
+ "use_cases_ko": [
+  "하둡 환경 기업의 규정 준수 대응",
+  "데이터 자산 카탈로그 구축과 분류·관리",
+  "PII·민감 데이터 접근 통제"
+ ],
+ "pricing": {
+  "free_tier": "오픈소스(Apache 2.0) — 요금제 안내 없음",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "Apache License 2.0",
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://atlas.apache.org/#/",
+   "quote": "Copyright © 2011-2018 The Apache Software Foundation. Licensed under the Apache License, Version 2.0 ."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://atlas.apache.org/#/",
+   "quote": "Apache Atlas – Data Governance and Metadata framework for Hadoop"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://atlas.apache.org/#/",
+   "quote": "Atlas is a scalable and extensible set of core foundational governance services – enabling"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://atlas.apache.org/#/",
+   "quote": "Apache Atlas provides open metadata management and governance capabilities for organizations"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://atlas.apache.org/#/",
+   "quote": "Integration with Apache Ranger enables authorization/data-masking on data access based on classifications associated with entities in Apache Atlas."
+  },
+  {
+   "field": "key_features",
+   "url": "https://atlas.apache.org/#/",
+   "quote": "Ability to define new types for the metadata to be managed"
+  },
+  {
+   "field": "key_features",
+   "url": "https://atlas.apache.org/#/",
+   "quote": "Ability to dynamically create classifications - like PII, EXPIRES_ON, DATA_QUALITY, SENSITIVE"
+  },
+  {
+   "field": "key_features",
+   "url": "https://atlas.apache.org/#/",
+   "quote": "Propagation of classifications via lineage - automatically ensures that classifications follow the data as it goes through various processing"
+  },
+  {
+   "field": "key_features",
+   "url": "https://atlas.apache.org/#/",
+   "quote": "Intuitive UI to view lineage of data as it moves through various processes"
+  },
+  {
+   "field": "key_features",
+   "url": "https://atlas.apache.org/#/",
+   "quote": "SQL like query language to search entities - Domain Specific Language (DSL)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://atlas.apache.org/#/",
+   "quote": "Fine-grained security for metadata access"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://atlas.apache.org/#/",
+   "quote": "to build a catalog of their data assets, classify and govern these assets"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://atlas.apache.org/#/",
+   "quote": "For example: who can access data classified as PII, SENSITIVE"
+  },
+  {
+   "field": "pricing",
+   "url": "https://atlas.apache.org/#/",
+   "quote": "Copyright © 2011-2018 The Apache Software Foundation. Licensed under the Apache License, Version 2.0 ."
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/apache/atlas",
+   "quote": "to you under the Apache License, Version 2.0 (the"
+  },
+  {
+   "field": "api",
+   "url": "https://atlas.apache.org/api/v2/index.html",
+   "quote": "Atlas exposes a variety of REST endpoints to work with types, entities, lineage and data discovery."
+  },
+  {
+   "field": "platforms",
+   "url": "https://atlas.apache.org/#/",
+   "quote": "Intuitive UI to search entities by type, classification, attribute value or free-text"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://atlas.apache.org/#/",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "Apache License 2.0 오픈소스 프로젝트(ASF)로, 공식 페이지에 자체 유료 요금제·관리형 클라우드 안내가 없음",
+   "diff": "기존 분류는 '오픈소스 + 클라우드 매니지드 유료 플랜'이나 공식 페이지에는 유료 플랜이 없음(순수 오픈소스)",
+   "url": "https://atlas.apache.org/#/"
+  }
+ ],
+ "plan_change": []
+}

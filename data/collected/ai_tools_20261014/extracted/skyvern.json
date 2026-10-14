@@ -1,0 +1,36 @@
+{
+ "company": "Skyvern (Ikonomos Inc.)",
+ "one_liner_ko": "LLM과 컴퓨터 비전으로 어떤 웹사이트의 업무 흐름이든 사람처럼 브라우저에서 자동화하는 AI 에이전트 플랫폼이다.",
+ "what_it_does_ko": "Skyvern은 LLM과 컴퓨터 비전으로 브라우저 기반 업무 흐름을 자동화한다. 고정된 선택자 대신 비전 LLM으로 화면을 이해하므로 처음 보는 사이트나 레이아웃이 바뀐 사이트에서도 동작한다. Playwright 호환 SDK와 노코드 워크플로 빌더를 제공해 개발자와 비개발자 모두 쓸 수 있다. 캡차·2FA 처리, 프록시, 자격 증명 보관함, 데이터 추출을 지원하며 클라우드 또는 Docker로 자체 호스팅할 수 있다.",
+ "key_features": ["비전 기반 브라우저 AI 에이전트", "드래그 앤 드롭 워크플로 빌더(17종 이상 블록)", "브라우저 녹화·SOP 문서 업로드·코파일럿 채팅으로 워크플로 생성", "캡차 자동 해결·2FA/TOTP 지원", "자격 증명 보관함(Bitwarden·1Password 연동)", "생성된 Playwright 코드 캐싱", "Python·TypeScript SDK, REST API, MCP", "Docker 자체 호스팅"],
+ "use_cases_ko": ["매입 채무: 여러 거래처 포털에서 청구서 다운로드", "양식 작성: 지원서·등록·규정 준수 양식 대량 제출", "데이터 추출: API 없이 가격·상품 목록·공공 기록을 JSON·CSV로 수집"],
+ "pricing": {"free_tier": "있음 (5,000크레딧, 동시 실행 1개)", "plans": [
+  {"name": "Free", "price": 0, "currency": "USD", "period": "month", "limits": "5,000크레딧, 동시 1개", "page_lang": "en"},
+  {"name": "Hobby", "price": 29, "currency": "USD", "period": "month", "limits": "월 30,000크레딧, 동시 10개", "page_lang": "en"},
+  {"name": "Pro", "price": 149, "currency": "USD", "period": "month", "limits": "월 150,000크레딧, 동시 25개", "page_lang": "en"},
+  {"name": "Enterprise", "price": null, "currency": "USD", "period": "month", "limits": "Custom, 동시 100개", "page_lang": "en"}
+ ], "pricing_url": "https://www.skyvern.com/pricing/"},
+ "open_source": "오픈소스(라이선스 이름은 페이지에 없음)",
+ "api": "있음",
+ "platforms": ["웹", "API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://www.skyvern.com", "quote": "© 2026 Ikonomos Inc. All rights reserved."},
+  {"field": "one_liner_ko", "url": "https://www.skyvern.com", "quote": "AI agents to automate workflows on any website."},
+  {"field": "what_it_does_ko", "url": "https://github.com/Skyvern-AI/skyvern", "quote": "It provides a Playwright-compatible SDK that adds AI functionality on top of playwright, as well as a no-code workflow builder"},
+  {"field": "what_it_does_ko", "url": "https://github.com/Skyvern-AI/skyvern", "quote": "Skyvern relies on Vision LLMs to learn and interact with the websites."},
+  {"field": "key_features", "url": "https://www.skyvern.com/products/", "quote": "Drag-and-drop visual editor with 17+ block types."},
+  {"field": "key_features", "url": "https://www.skyvern.com/products/", "quote": "Generated Playwright code is cached after the first run."},
+  {"field": "key_features", "url": "https://www.skyvern.com/products/", "quote": "integrates with Bitwarden, 1Password, and custom vaults."},
+  {"field": "key_features", "url": "https://www.skyvern.com", "quote": "Self-hostable (Docker)"},
+  {"field": "use_cases_ko", "url": "https://www.skyvern.com", "quote": "Download invoices from hundreds of vendor portals — behind logins, 2FA, CAPTCHAs."},
+  {"field": "use_cases_ko", "url": "https://www.skyvern.com", "quote": "Submit applications, registrations, and compliance forms across any site at scale."},
+  {"field": "pricing", "url": "https://www.skyvern.com/pricing/", "quote": "Price $0/mo $29/mo $149/mo Custom"},
+  {"field": "pricing", "url": "https://www.skyvern.com/pricing/", "quote": "Included credits 5,000 30,000/month 150,000/month Custom credits"},
+  {"field": "open_source", "url": "https://www.skyvern.com", "quote": "Check us out — we're open source"},
+  {"field": "api", "url": "https://www.skyvern.com/products/", "quote": "Full API for every capability: tasks, workflows, credentials, run status, cancellation, and webhook replay."},
+  {"field": "korean_support", "url": "https://www.skyvern.com", "quote": "화면에 보이는 언어 이름: English"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

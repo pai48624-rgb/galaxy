@@ -1,0 +1,46 @@
+{
+ "company": "NanoCo",
+ "one_liner_ko": "자기 컴퓨터에서 돌리고 쓰던 메신저로 대화하는, 컨테이너로 격리되어 안전하고 가벼운 개인 AI 에이전트.",
+ "what_it_does_ko": "NanoClaw는 자기 컴퓨터에서 실행하는 가볍고 오픈소스인 개인 AI 에이전트다. WhatsApp·Telegram·Slack·Discord 등 고른 메신저에 연결되고, 활성 세션마다 격리된 Docker 컨테이너에서 실행된다. 자격 증명은 기본적으로 OneCLI Agent Vault를 거쳐 에이전트가 원본 API 키를 갖지 않는다. 기본 제공자는 Claude이며 Codex·OpenCode·Ollama를 에이전트 그룹별로 설정할 수 있다. OpenClaw보다 훨씬 작은 코드베이스로 같은 핵심 기능을 제공한다고 설명한다.",
+ "key_features": [
+  "여러 메신저 연결(WhatsApp·Telegram·Slack·Discord·Signal 등)",
+  "세션마다 Docker 컨테이너 격리",
+  "에이전트 그룹별 작업공간·메모리·자격 증명 분리",
+  "예약 작업(아침 브리핑·주간 리뷰 등)",
+  "스킬로 채널·제공자·도구 추가",
+  "OneCLI Agent Vault로 자격 증명 보호",
+  "제공자 선택(Claude 기본, Codex·OpenCode·Ollama)"
+ ],
+ "use_cases_ko": [
+  "개인이 메신저로 주제 조사·요약을 시키기",
+  "알림·정기 업데이트 같은 반복 작업 맡기기",
+  "선호·작업 내용을 기억하는 개인 비서로 쓰기"
+ ],
+ "pricing": {"free_tier": "있음 (MIT 오픈소스 무료, 모델 사용료는 제공자 별도)", "plans": [], "pricing_url": "https://nanoclaw.dev"},
+ "open_source": "MIT",
+ "api": "불명",
+ "platforms": ["맥", "윈도", "CLI"],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {"field": "company", "url": "https://nanoclaw.dev", "quote": "Meet NanoCo, maintainers of NanoClaw"},
+  {"field": "one_liner_ko", "url": "https://nanoclaw.dev", "quote": "Your personal AI agent. Secure. Lightweight. Yours."},
+  {"field": "what_it_does_ko", "url": "https://nanoclaw.dev", "quote": "NanoClaw is a lightweight, open-source personal AI agent that runs on your own machine."},
+  {"field": "what_it_does_ko", "url": "https://nanoclaw.dev", "quote": "Claude is the default provider; Codex, OpenCode, and Ollama can be configured per agent group."},
+  {"field": "key_features", "url": "https://nanoclaw.dev", "quote": "WhatsApp, Telegram, Slack, Discord, Signal, and more. Add only the channels you use"},
+  {"field": "key_features", "url": "https://nanoclaw.dev", "quote": "Every agent session runs in an isolated Docker container on macOS, Linux, or Windows through WSL2."},
+  {"field": "key_features", "url": "https://nanoclaw.dev", "quote": "Scheduled jobs run with the provider you choose and message you back. Morning briefings, weekly reviews, and more."},
+  {"field": "key_features", "url": "https://nanoclaw.dev", "quote": "Add a channel, provider, or tool with a skill."},
+  {"field": "use_cases_ko", "url": "https://docs.nanoclaw.dev/introduction", "quote": "Research a topic. Ask for sources and a short summary."},
+  {"field": "use_cases_ko", "url": "https://docs.nanoclaw.dev/introduction", "quote": "Handle recurring work. Ask for a reminder or a regular update."},
+  {"field": "use_cases_ko", "url": "https://docs.nanoclaw.dev/introduction", "quote": "Remember preferences. Tell your assistant how you like answers or what you are working on."},
+  {"field": "pricing", "url": "https://nanoclaw.dev", "quote": "NanoClaw is free and open source under the MIT license. Your agent provider may charge for model usage"},
+  {"field": "open_source", "url": "https://nanoclaw.dev", "quote": "NanoClaw is free and open source under the MIT license."},
+  {"field": "platforms", "url": "https://nanoclaw.dev", "quote": "macOS, Linux, or Windows (WSL2) Node.js 20+ & pnpm 10+"},
+  {"field": "platforms", "url": "https://github.com/nanocoai/nanoclaw", "quote": "pairs your first channel (Slack, Telegram, Discord, WhatsApp, iMessage, or a local CLI)"},
+  {"field": "korean_support", "url": "https://nanoclaw.dev", "quote": "hreflang: ar, de, en, es, fr, he, hi, it, ja, ko, nl, pl, pt, ru, tr, uk, x-default, zh"}
+ ],
+ "mismatch": [
+  {"official": "MIT 라이선스 무료 오픈소스, 유료 요금제 언급 없음(모델 사용료만 제공자에게)", "diff": "기존 분류는 '프리미엄(무료+유료 구독)'이지만 공식 페이지에는 유료 구독이 없음", "url": "https://nanoclaw.dev"}
+ ],
+ "plan_change": []
+}

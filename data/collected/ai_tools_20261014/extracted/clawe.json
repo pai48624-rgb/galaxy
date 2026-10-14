@@ -1,0 +1,97 @@
+{
+ "company": null,
+ "one_liner_ko": "OpenClaw 기반으로 여러 AI 에이전트 팀을 함께 일하게 하는 다중 에이전트 협업 시스템.",
+ "what_it_does_ko": "Clawe는 OpenClaw로 구동되는 다중 에이전트 협업 시스템이다. 각자 정체성·작업 공간·예약 하트비트를 가진 AI 에이전트 팀을 배포해 작업을 조율하고 문맥을 공유하며 알림을 거의 실시간으로 전달한다. 칸반식 작업 관리와 웹 대시보드를 제공하고, 팀장·콘텐츠 편집자·디자이너·SEO 등 4개 에이전트가 미리 구성돼 있다. Docker Compose와 Convex 백엔드, Anthropic API 키가 필요하다.",
+ "key_features": [
+  "역할·성격이 다른 여러 AI 에이전트 실행",
+  "cron 일정에 맞춰 깨어나 일을 확인하는 에이전트",
+  "칸반식 작업 관리(배정·하위 작업)",
+  "@멘션·작업 업데이트 즉시 전달",
+  "공유 파일·Convex 백엔드로 협업",
+  "웹 대시보드에서 상태 확인·에이전트와 채팅",
+  "반복 업무 예약(Routines)"
+ ],
+ "use_cases_ko": [
+  "콘텐츠 편집·디자인·SEO 에이전트 팀 운영"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "웹"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/getclawe/clawe",
+   "quote": "A multi-agent coordination system powered by"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/getclawe/clawe",
+   "quote": "Deploy a team of AI agents that work together, each with their own identity, workspace, and scheduled heartbeats."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/getclawe/clawe",
+   "quote": "Clawe comes with 4 pre-configured agents"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/getclawe/clawe",
+   "quote": "- Docker & Docker Compose"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/getclawe/clawe",
+   "quote": "Run multiple AI agents with distinct roles and personalities"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/getclawe/clawe",
+   "quote": "Agents wake on cron schedules to check for work"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/getclawe/clawe",
+   "quote": "Kanban-style task management with assignments and subtasks"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/getclawe/clawe",
+   "quote": "Instant delivery of @mentions and task updates"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/getclawe/clawe",
+   "quote": "Agents collaborate through shared files and Convex backend"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/getclawe/clawe",
+   "quote": "Monitor squad status, tasks, and chat with agents from a web dashboard"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/getclawe/clawe",
+   "quote": "Schedule recurring tasks that automatically create inbox items"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/getclawe/clawe",
+   "quote": "| ✍️ Inky  | Content Editor | Every 15 min |"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/getclawe/clawe",
+   "quote": "**clawe**: Web dashboard at http://localhost:3000"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

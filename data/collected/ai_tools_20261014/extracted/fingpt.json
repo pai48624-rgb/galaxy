@@ -1,0 +1,68 @@
+{
+ "company": "AI4Finance Foundation",
+ "one_liner_ko": "AI4Finance 재단이 개발·관리하는 오픈소스 금융 대형 언어 모델 프로젝트.",
+ "what_it_does_ko": "FinGPT는 AI4Finance 재단이 만든 오픈소스 금융 LLM 프로젝트다. 금융 감성 분석 모델, 금융 멀티태스크 LLM, 주가 예측용 FinGPT-Forecaster 등을 Hugging Face에 공개했다. 금융 데이터셋 기반 instruction tuning 벤치마크(FinGPT-Benchmark)도 제공한다. PyPI 패키지로 배포된다.",
+ "key_features": [
+  "금융 감성 분석 모델",
+  "금융 멀티태스크 LLM",
+  "FinGPT-Forecaster(로보어드바이저형 예측)",
+  "FinGPT-Benchmark(금융 instruction tuning 벤치마크)",
+  "Hugging Face 모델·데모 공개"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://github.com/AI4Finance-Foundation/FinGPT",
+   "quote": "FinGPT is an open-source financial large language model project developed and maintained by the AI4Finance Foundation."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/AI4Finance-Foundation/FinGPT",
+   "quote": "# FinGPT: Open-Source Financial Large Language Models"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/AI4Finance-Foundation/FinGPT",
+   "quote": "FinGPT is an open-source financial large language model project developed and maintained by the AI4Finance Foundation."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/AI4Finance-Foundation/FinGPT",
+   "quote": "We release the [financial multi-task LLMs](https://huggingface.co/FinGPT)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/AI4Finance-Foundation/FinGPT",
+   "quote": "We release the [financial sentiment analysis model]"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/AI4Finance-Foundation/FinGPT",
+   "quote": "We release [FinGPT-Forecaster]"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/AI4Finance-Foundation/FinGPT",
+   "quote": "FinGPT: Instruction Tuning Benchmark for Open-Source Large Language Models in Financial Datasets"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "AI4Finance 재단의 오픈소스 금융 LLM 프로젝트(GitHub·Hugging Face 공개), 유료 요금제 언급 없음",
+   "diff": "기존 분류 '엔터프라이즈(가격 문의)'와 달리 오픈소스 공개 프로젝트",
+   "url": "https://github.com/AI4Finance-Foundation/FinGPT"
+  }
+ ],
+ "plan_change": [],
+ "note": "README 앞부분만 수집됨. 라이선스 배지는 이미지라 라이선스 이름을 본문에서 확인 못 함 → open_source null. [meta] 구간 없음 → 한국어 불명."
+}

@@ -1,0 +1,80 @@
+=== [github] https://github.com/PleasePrompto/notebooklm-skill
+> [!WARNING]
+> **This project is no longer maintained.** As of September 2026 the repository is archived: no updates, bug fixes or support. It may stop working when the upstream services change. Feel free to fork.
+
+<div align="center">
+
+# NotebookLM Claude Code Skill
+
+**Let [Claude Code](https://github.com/anthropics/claude-code) chat directly with NotebookLM for source-grounded answers based exclusively on your uploaded documents**
+
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
+[![Claude Code Skill](https://img.shields.io/badge/Claude%20Code-Skill-purple.svg)](https://www.anthropic.com/news/skills)
+[![Based on](https://img.shields.io/badge/Based%20on-NotebookLM%20MCP-green.svg)](https://github.com/PleasePrompto/notebooklm-mcp)
+[![GitHub](https://img.shields.io/github/stars/PleasePrompto/notebooklm-skill?style=social)](https://github.com/PleasePrompto/notebooklm-skill)
+
+> Use this skill to query your Google NotebookLM notebooks directly from Claude Code for source-grounded, citation-backed answers from Gemini. Browser automation, library management, persistent auth. Drastically reduced hallucinations - answers only from your uploaded documents.
+
+[Installation](#installation) • [Quick Start](#quick-start) • [Why NotebookLM](#why-notebooklm-not-local-rag) • [How It Works](#how-it-works) • [MCP Alternative](https://github.com/PleasePrompto/notebooklm-mcp)
+
+</div>
+
+---
+
+## ⚠️ Important: Local Claude Code Only
+
+**This skill works ONLY with local [Claude Code](https://github.com/anthropics/claude-code) installations, NOT in the web UI.**
+
+The web UI runs skills in a sandbox without network access, which this skill requires for browser automation. You must use [Claude Code](https://github.com/anthropics/claude-code) locally on your machine.
+
+---
+
+## The Problem
+
+When you tell [Claude Code](https://github.com/anthropics/claude-code) to "search through my local documentation", here's what happens:
+- **Massive token consumption**: Searching through documentation means reading multiple files repeatedly
+- **Inaccurate retrieval**: Searches for keywords, misses context and connections between docs
+- **Hallucinations**: When it can't find something, it invents plausible-sounding APIs
+- **Manual copy-paste**: Switching between NotebookLM browser and your editor constantly
+
+## The Solution
+
+This Claude Code Skill lets [Claude Code](https://github.com/anthropics/claude-code) chat directly with [**NotebookLM**](https://notebooklm.google/) — Google's **source-grounded knowledge base** powered by Gemini 2.5 that provides intelligent, synthesized answers exclusively from your uploaded documents.
+
+```
+Your Task → Claude asks NotebookLM → Gemini synthesizes answer → Claude writes correct code
+```
+
+**No more copy-paste dance**: Claude asks questions directly and gets answers straight back in the CLI. It builds deep understanding through automatic follow-ups, getting specific implementation details, edge cases, and best practices.
+
+---
+
+## Why NotebookLM, Not Local RAG?
+
+| Approach | Token Cost | Setup Time | Hallucinations | Answer Quality |
+|----------|------------|------------|----------------|----------------|
+| **Feed docs to Claude** | 🔴 Very high (multiple file reads) | Instant | Yes - fills gaps | Variable retrieval |
+| **Web search** | 🟡 Medium | Instant | High - unreliable sources | Hit or miss |
+| **Local RAG** | 🟡 Medium-High | Hours (embeddings, chunking) | Medium - retrieval gaps | Depends on setup |
+| **NotebookLM Skill** | 🟢 Minimal | 5 minutes | **Minimal** - source-grounded only | Expert synthesis |
+
+### What Makes NotebookLM Superior?
+
+1. **Pre-processed by Gemini**: Upload docs once, get instant expert knowledge
+2. **Natural language Q&A**: Not just retrieval — actual understanding and synthesis
+3. **Multi-source correlation**: Connects information across 50+ documents
+4. **Citation-backed**: Every answer includes source references
+5. **No infrastructure**: No vector DBs, embeddings, or chunking strategies needed
+
+---
+
+## Installation
+
+### The simplest installation ever:
+
+```bash
+# 1. Create skills directory (if it doesn't exist)
+mkdir -p ~/.claude/skills
+
+# 2. Clone this repository
+cd 

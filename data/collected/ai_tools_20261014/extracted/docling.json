@@ -1,0 +1,95 @@
+{
+ "company": null,
+ "one_liner_ko": "고급 PDF 이해를 포함해 다양한 문서 형식을 파싱하고 생성형 AI 생태계와 연결해 주는 문서 처리 도구.",
+ "what_it_does_ko": "Docling은 PDF, DOCX, PPTX, XLSX, HTML, 이미지, 오디오 등 여러 형식의 문서를 파싱한다. PDF의 페이지 레이아웃·읽기 순서·표 구조·수식 등을 이해하고, 통합 표현 형식(DoclingDocument)으로 바꾼 뒤 Markdown·HTML·JSON 등으로 내보낸다. 민감한 데이터를 위해 로컬·망분리 환경에서 실행할 수 있으며 LangChain, LlamaIndex, Crew AI, Haystack과 연동된다. MCP 서버, API 서버(docling-serve), CLI도 제공한다.",
+ "key_features": [
+  "PDF·DOCX·PPTX·XLSX·HTML·EPUB·이미지·오디오 등 다양한 형식 파싱",
+  "페이지 레이아웃·읽기 순서·표 구조·코드·수식 등 고급 PDF 이해",
+  "Markdown·HTML·DocTags·무손실 JSON 등으로 내보내기",
+  "민감 데이터·망분리 환경을 위한 로컬 실행",
+  "LangChain·LlamaIndex·Crew AI·Haystack 연동",
+  "스캔 PDF·이미지 OCR 지원",
+  "음성 인식(ASR) 모델로 오디오 처리",
+  "MCP 서버·API 서버·CLI 제공"
+ ],
+ "use_cases_ko": [
+  "생성형 AI·에이전트용으로 다양한 문서를 구조화 데이터로 변환",
+  "민감 데이터를 망분리 환경에서 로컬로 문서 처리"
+ ],
+ "pricing": {
+  "free_tier": null,
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "MIT",
+ "api": "있음",
+ "platforms": [
+  "CLI",
+  "API"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/docling-project/docling",
+   "quote": "Docling simplifies document processing by parsing diverse formats — including advanced PDF understanding — and providing seamless integrations with the generative AI ecosystem."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/docling-project/docling",
+   "quote": "A unified, expressive [DoclingDocument][docling_document] representation format"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/docling-project/docling",
+   "quote": "Advanced PDF understanding incl. page layout, reading order, table structure, code, formulas, image classification, and more"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/docling-project/docling",
+   "quote": "Various [export formats][supported_formats] and options, including Markdown, HTML, WebVTT, DocLang, [DocTags](https://arxiv.org/abs/2503.11576) and lossless JSON"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/docling-project/docling",
+   "quote": "Local execution capabilities for sensitive data and air-gapped environments"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/docling-project/docling",
+   "quote": "Plug-and-play [integrations][integrations] incl. LangChain, LlamaIndex, Crew AI & Haystack for agentic AI"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/docling-project/docling",
+   "quote": "Extensive OCR support for scanned PDFs and images"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/docling-project/docling",
+   "quote": "Audio support with Automatic Speech Recognition (ASR) models"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/docling-project/docling",
+   "quote": "Local execution capabilities for sensitive data and air-gapped environments"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/docling-project/docling",
+   "quote": "[![License MIT](https://img.shields.io/github/license/docling-project/docling)]"
+  },
+  {
+   "field": "api",
+   "url": "https://github.com/docling-project/docling",
+   "quote": "Run Docling as a service with the [API server](https://docling-project.github.io/docling/usage/api_server/) (docling-serve)"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/docling-project/docling",
+   "quote": "Simple and convenient CLI"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

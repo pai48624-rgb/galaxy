@@ -1,0 +1,158 @@
+=== [home] https://nullclaw.io (lang=en)
+NullClaw | Autonomous AI Ecosystem 
+ NullClaw — Autonomous AI Agent Runtime 
+ [ nullclaw ecosystem ] 
+ Overview Docs NullHub Ecosystem 
+ FX:OFF THEME 
+ GITHUB 
+ NULLCLAW RUNTIME
+ The High-Performance Autonomous AI Agent Runtime
+ Zero-dependency, single-binary execution engine for autonomous AI agents.
+ Features integrated providers, tools, memory, and a multi-channel gateway
+ — everything you need to run agents locally or deploy them to production.
+ Part of the NullHub ecosystem .
+ Get Started GitHub 
+ 19
+ top-level CLI commands
+ 0
+ external dependencies
+ Zig
+ single-binary, zero GC
+ Terminal + Web
+ dual operator surface
+ Core Capabilities
+ CORE Providers 
+ Universal Model Multiplexer
+ High-throughput model abstraction layer supporting OpenRouter,
+ OpenAI-compatible APIs, and custom local or remote endpoints.
+ Automatic model discovery and selection
+ Streaming and non-streaming completions
+ Key rotation and rate limit handling
+ Provider Docs 
+ CORE Tools 
+ Tool Execution Engine
+ Securely execute shell commands, file operations, and custom scripts
+ with robust approval policies and strict sandboxing constraints.
+ Built-in file, shell, and search tools
+ Configurable auto-approve and deny lists
+ Execution timeout and resource controls
+ Tools Docs 
+ CORE Channels 
+ Communication Channels
+ Terminal, WebSocket, and headless gateway modes for seamless integration
+ into any operational context or external infrastructure.
+ Terminal mode for local interactive sessions
+ WebChannel v1 protocol for browser clients
+ Gateway mode for headless worker execution
+ Channels Docs 
+ CORE Memory 
+ Context & Memory
+ Advanced conversation history, state persistence, and automatic context
+ window optimization for long-running, multi-turn agent threads.
+ Auto-compacting context windows
+ Session save/restore across restarts
+ Structured memory for tool outputs
+ Memory Docs 
+ When To Use NullClaw
+ Interactive Agent Sessions
+ Ideal for single-agent workflows where a dedicated assistant handles
+ complex, multi-step tasks end-to-end.
+ Launch NullClaw in terminal mode to refactor code, execute tests, and
+ open PRs interactively with human-in-the-loop oversight.
+ Headless Worker Execution
+ Ideal for automated background pipelines where agents execute
+ autonomously without human supervision.
+ Deploy NullClaw in gateway mode and dispatch automated task assignments
+ directly from an orchestrator like NullBoiler .
+ Browser-Based Operation
+ Ideal for teams requiring a comprehensive visual operator dashboard.
+ Pair NullClaw with the NullHub Ecosystem for real-time streaming, tool execution timelines, and visual human-in-the-loop
+ approvals.
+ Quick Start
+ # Clone and build
+git clone https://github.com/nullclaw/nullclaw.git
+cd nullclaw
+zig build -Doptimize=ReleaseSmall
+# Onboard a provider
+./zig-out/bin/nullclaw onboard --provider openrouter --api-key <YOUR_KEY>
+# Start an interactive agent session
+./zig-out/bin/nullclaw agent -m "hello from nullclaw"
+# Or use NullHub to install everything at once:
+# https://nullhub.io 
+ NullClaw — Autonomous AI agent runtime
+ nullclaw nullhub.io 
+ nullclaw@runtime:~# agent --ready _
+
+=== [meta] https://nullclaw.io
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/nullclaw/nullclaw
+Want a simpler way to install and configure nullclaw with a UI? Try [nullhub](https://github.com/nullclaw/nullhub)! (currently in beta)
+
+[nullhub](https://github.com/nullclaw/nullhub) provides a UI layer for the Null ecosystem: simpler nullclaw setup and configuration, orchestration from [nullboiler](https://github.com/nullclaw/nullboiler), observability from [nullwatch](https://github.com/nullclaw/nullwatch), and task tracking from [nulltickets](https://github.com/nullclaw/nulltickets).
+
+<p align="center">
+  <img src="nullclaw.png" alt="nullclaw" width="200" />
+</p>
+
+<h1 align="center">NullClaw</h1>
+
+<p align="center">
+  <strong>Null overhead. Null compromise. 100% Zig. 100% Agnostic.</strong><br>
+  <strong>678 KB binary. ~1 MB RAM. Boots in <2 ms. Runs on anything with a CPU.</strong>
+</p>
+
+<p align="center">
+  <a href="https://github.com/nullclaw/nullclaw/actions/workflows/ci.yml"><img src="https://github.com/nullclaw/nullclaw/actions/workflows/ci.yml/badge.svg" alt="CI" /></a>
+  <a href="https://github.com/nullclaw/nullclaw/actions/workflows/nightly.yml"><img src="https://github.com/nullclaw/nullclaw/actions/workflows/nightly.yml/badge.svg" alt="Nightly" /></a>
+  <a href="https://nullclaw.github.io"><img src="https://img.shields.io/badge/docs-nullclaw.github.io-informational" alt="Documentation" /></a>
+  <a href="https://discord.gg/Bfmdua22Ud"><img src="https://img.shields.io/badge/discord-join%20community-5865F2?logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT" /></a>
+</p>
+
+The smallest fully autonomous AI assistant infrastructure — a static Zig binary that fits on any $5 board, boots in milliseconds, and requires nothing but libc.
+
+Docs: [English](docs/en/README.md) · [中文](docs/zh/README.md) · [Contributing](CONTRIBUTING.md) · [Discord](https://discord.gg/Bfmdua22Ud)
+
+```
+678 KB binary · <2 ms startup · 5,300+ tests · 50+ providers · 19 channels · Pluggable everything
+```
+
+### Features
+
+- **Impossibly Small:** 678 KB static binary — no runtime, no VM, no framework overhead.
+- **Near-Zero Memory:** ~1 MB peak RSS. Runs comfortably on the cheapest ARM SBCs and microcontrollers.
+- **Instant Startup:** <2 ms on Apple Silicon, <8 ms on a 0.8 GHz edge core.
+- **True Portability:** Single self-contained binary across ARM, x86, and RISC-V. Drop it anywhere, it just runs.
+- **Feature-Complete:** 50+ providers, 19 channels, 35+ tools, 10 memory engines, multi-layer sandbox, tunnels, hardware peripherals, MCP, subagents, streaming, voice — the full stack.
+
+### Why nullclaw
+
+- **Lean by default:** Zig compiles to a tiny static binary. No allocator overhead, no garbage collector, no runtime.
+- **Secure by design:** pairing, strict sandboxing (landlock, firejail, bubblewrap, docker), explicit allowlists, workspace scoping, encrypted secrets.
+- **Fully swappable:** core systems are vtable interfaces (providers, channels, tools, memory, tunnels, peripherals, observers, runtimes).
+- **No lock-in:** OpenAI-compatible provider support + pluggable custom endpoints.
+
+## Benchmark Snapshot
+
+Local machine benchmark (macOS arm64, Feb 2026), normalized for 0.8 GHz edge hardware.
+
+| | [OpenClaw](https://github.com/openclaw/openclaw) | [NanoBot](https://github.com/HKUDS/nanobot) | [PicoClaw](https://github.com/sipeed/picoclaw) | [ZeroClaw](https://github.com/zeroclaw-labs/zeroclaw) | **[🦞 NullClaw](https://github.com/nullclaw/nullclaw)** |
+|---|---|---|---|---|---|
+| **Language** | TypeScript | Python | Go | Rust | **Zig** |
+| **RAM** | > 1 GB | > 100 MB | < 10 MB | < 5 MB | **~1 MB** |
+| **Startup (0.8 GHz)** | > 500 s | > 30 s | < 1 s | < 10 ms | **< 8 ms** |
+| **Binary Size** | ~28 MB (dist) | N/A (Scripts) | ~8 MB | ~8.8 MB | **678 KB** |
+| **Tests** | — | — | — | 1,017 | **5,300+** |
+| **Source Files** | ~400+ | — | — | ~120 | **~230** |
+| **Cost** | Mac Mini $599 | Linux SBC ~$50 | Linux Board $10 | Any $10 hardware | **Any $5 hardware** |
+
+> Measured with `/usr/bin/time -l` on ReleaseSmall builds. nullclaw is a static binary with zero runtime dependencies.
+
+Reproduce locally:
+
+```bash
+zig build -Doptimize=ReleaseSmall
+ls -lh zig-out/bin/

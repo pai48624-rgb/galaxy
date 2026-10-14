@@ -1,0 +1,122 @@
+{
+ "company": "LangChain Inc",
+ "one_liner_ko": "오래 실행되는 상태 유지(stateful) 에이전트를 만들고 관리·배포하는 저수준 오케스트레이션 프레임워크이자 런타임.",
+ "what_it_does_ko": "LangGraph는 장시간 실행되는 상태 유지 에이전트를 구축·관리·배포하기 위한 저수준 오케스트레이션 프레임워크이자 런타임이다. 손으로 짠 결정론적 단계와 LLM이 판단하는 에이전트 단계를 한 그래프 안에 섞어 쓸 수 있다. 내구성 있는 실행, 스트리밍, 사람 개입(human-in-the-loop), 영속성 같은 기반 기능에 집중하며 프롬프트나 구조를 추상화하지 않는다. LangChain 없이도 쓸 수 있고, LangSmith로 추적·평가·배포를 연결할 수 있다. Python과 JS/TS 버전이 있다.",
+ "key_features": [
+  "결정론적 단계와 에이전트 단계를 한 그래프에서 혼합",
+  "실패 후에도 이어서 실행하는 내구성 실행(영속성)",
+  "언제든 에이전트 상태를 점검·수정하는 사람 개입",
+  "단기 작업 메모리 + 세션 간 장기 메모리",
+  "LangSmith 기반 디버깅·추적",
+  "상태 유지형 장기 워크플로용 배포",
+  "스트리밍·서브그래프·타임 트래블"
+ ],
+ "use_cases_ko": [
+  "필요한 대로 정확히 동작하는 맞춤형 에이전트 워크플로 구축"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "MIT",
+ "api": "있음",
+ "platforms": [
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://docs.langchain.com/oss/python/langgraph/overview",
+   "quote": "LangGraph is built by LangChain Inc, the creators of LangChain, but can be used without LangChain."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://docs.langchain.com/oss/python/langgraph/overview",
+   "quote": "LangGraph is a low-level orchestration framework and runtime for building, managing, and deploying long-running, stateful agents."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.langchain.com/oss/python/langgraph/overview",
+   "quote": "LangGraph gives you fine-grained control to mix deterministic, hand-coded steps with LLM-driven agentic steps in the same graph"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.langchain.com/oss/python/langgraph/overview",
+   "quote": "LangGraph is focused on the underlying capabilities important for agent orchestration: durable execution, streaming, human-in-the-loop, and more."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.langchain.com/oss/python/langgraph/overview",
+   "quote": "LangGraph does not abstract prompts or architecture"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/langchain-ai/langgraph",
+   "quote": "For an equivalent JS/TS library, check out [LangGraph.js]"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.langchain.com/oss/python/langgraph/overview",
+   "quote": "Persistence : Build agents that persist through failures and can run for extended periods, resuming from where they left off."
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.langchain.com/oss/python/langgraph/overview",
+   "quote": "Human-in-the-loop : Incorporate human oversight by inspecting and modifying agent state at any point."
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.langchain.com/oss/python/langgraph/overview",
+   "quote": "Comprehensive memory : Create stateful agents with both short-term working memory for ongoing reasoning and long-term memory across sessions."
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.langchain.com/oss/python/langgraph/overview",
+   "quote": "Debugging with LangSmith : Gain deep visibility into complex agent behavior"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.langchain.com/oss/python/langgraph/overview",
+   "quote": "Production-ready deployment : Deploy sophisticated agent systems confidently"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.langchain.com/oss/python/langgraph/overview",
+   "quote": "Time travel"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://docs.langchain.com/oss/python/langgraph/overview",
+   "quote": "so you can build bespoke agents that behave exactly the way your application requires"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/langchain-ai/langgraph",
+   "quote": "<a href=\"https://opensource.org/licenses/MIT\" target=\"_blank\"><img src=\"https://img.shields.io/pypi/l/langgraph\" alt=\"PyPI - License\"></a>"
+  },
+  {
+   "field": "api",
+   "url": "https://docs.langchain.com/oss/python/langgraph/overview",
+   "quote": "Graph API"
+  },
+  {
+   "field": "api",
+   "url": "https://docs.langchain.com/oss/python/langgraph/overview",
+   "quote": "Functional API"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/langchain-ai/langgraph",
+   "quote": "pip install -U langgraph"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://docs.langchain.com/oss/python/langgraph/overview",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

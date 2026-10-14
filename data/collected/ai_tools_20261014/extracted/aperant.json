@@ -1,0 +1,174 @@
+{
+ "company": "Mikalsen AI AS",
+ "one_liner_ko": "제품을 만들고 출시하고 유지보수까지 하는 AI 코딩 플랫폼(옛 Auto Claude).",
+ "what_it_does_ko": "Aperant는 소프트웨어를 계획·구현·검증하는 자율 멀티 에이전트 코딩 프레임워크로, 이전 이름은 Auto Claude다. 만들 것을 설명하면 아키텍처를 계획하고 마일스톤으로 나눠 승인을 받은 뒤 구현하며, 단계마다 사람이 검토·승인하도록 설정할 수 있다. 출시 후에는 이슈를 수정으로, 기능 요청을 PR로 바꾸는 유지보수를 이어 간다. 현재 2.x 데스크톱 앱은 유지보수 모드이고, 클라우드 기능을 더한 3.0을 AGPL-3.0 오픈소스로 개발 중이다.",
+ "key_features": [
+  "아키텍처 계획·스펙 생성",
+  "모든 단계 자동 테스트·QA",
+  "출시 후 유지보수·반복 개선",
+  "단계별로 사람 개입 수준 설정(완전 자동~수동)",
+  "이슈 트래커 연동 자동 수정",
+  "의존성 업데이트·보안 패치",
+  "설계 결정·코딩 규칙을 기억하는 영구 프로젝트 메모리"
+ ],
+ "use_cases_ko": [
+  "코딩을 못 하는 창업자가 기능 계획·개발 관리",
+  "출시 후 버그 리포트·기능 요청을 자동으로 수정·PR로 처리"
+ ],
+ "pricing": {
+  "free_tier": "불명 (가격 미정, 모든 요금제 무료 체험 예정)",
+  "plans": [
+   {
+    "name": "Pro",
+    "price": null,
+    "currency": null,
+    "period": null,
+    "limits": "가격 출시 시 공개",
+    "page_lang": null
+   },
+   {
+    "name": "Team",
+    "price": null,
+    "currency": null,
+    "period": null,
+    "limits": "가격 출시 시 공개",
+    "page_lang": null
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": null,
+    "period": null,
+    "limits": "가격 출시 시 공개",
+    "page_lang": null
+   }
+  ],
+  "pricing_url": "https://aperant.com"
+ },
+ "open_source": "AGPL-3.0",
+ "api": "불명",
+ "platforms": [
+  "윈도",
+  "맥"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://aperant.com",
+   "quote": "Built by Mikalsen AI AS"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://aperant.com",
+   "quote": "The world's first AI coding platform that builds, ships, and maintains your product."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/AndyMik90/Aperant",
+   "quote": "Autonomous multi-agent coding framework that plans, builds, and validates software for you."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://aperant.com",
+   "quote": "Aperant plans the architecture, breaks it into milestones, and scopes every piece of work"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://aperant.com",
+   "quote": "Bug reports become fixes. Feature requests become PRs."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/AndyMik90/Aperant",
+   "quote": "The current 2.x desktop app is in maintenance mode"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/AndyMik90/Aperant",
+   "quote": "Aperant 3.0 will stay **fully open source under AGPL-3.0**"
+  },
+  {
+   "field": "key_features",
+   "url": "https://aperant.com",
+   "quote": "Architecture planning and spec generation"
+  },
+  {
+   "field": "key_features",
+   "url": "https://aperant.com",
+   "quote": "Automated testing and QA at every stage"
+  },
+  {
+   "field": "key_features",
+   "url": "https://aperant.com",
+   "quote": "Post-launch maintenance and iteration"
+  },
+  {
+   "field": "key_features",
+   "url": "https://aperant.com",
+   "quote": "Full auto or hands-on — configurable per project"
+  },
+  {
+   "field": "key_features",
+   "url": "https://aperant.com",
+   "quote": "Issue tracker integration for auto-fixes"
+  },
+  {
+   "field": "key_features",
+   "url": "https://aperant.com",
+   "quote": "Dependency updates and security patches"
+  },
+  {
+   "field": "key_features",
+   "url": "https://aperant.com",
+   "quote": "Your architecture decisions, coding conventions, and patterns are stored as persistent memory."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://aperant.com",
+   "quote": "I'm not a developer and I don't know how to code."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://aperant.com",
+   "quote": "Issues from your tracker become fixes. User feedback becomes features."
+  },
+  {
+   "field": "pricing",
+   "url": "https://aperant.com",
+   "quote": "Pricing coming soon."
+  },
+  {
+   "field": "pricing",
+   "url": "https://aperant.com",
+   "quote": "All plans include a free trial · Pricing announced at launch"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/AndyMik90/Aperant",
+   "quote": "license-AGPL--3.0-green"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/AndyMik90/Aperant",
+   "quote": "| **Windows** | [Auto-Claude-2.7.6-win32-x64.exe]"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/AndyMik90/Aperant",
+   "quote": "| **macOS (Apple Silicon)** |"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://aperant.com",
+   "quote": "html lang: en"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://aperant.com",
+   "quote": "hreflang: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

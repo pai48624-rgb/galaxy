@@ -1,0 +1,84 @@
+{
+ "company": null,
+ "one_liner_ko": "여러 코딩 에이전트를 병렬로 쉽게 돌리는 터미널 UI(TUI).",
+ "what_it_does_ko": "amux는 git worktree를 가져올 수 있는 작업 공간 중심 모델로 여러 코딩 에이전트를 병렬로 돌리는 터미널 UI다. 에이전트마다 자기 tmux 세션에서 돌아 터미널이 격리되고 유지된다. 작업 공간은 보통 자기 브랜치의 git worktree라 에이전트가 격리돼 일하고 끝나면 병합한다. UI에서 확인 단계를 거쳐 커밋과 병합(git merge --no-ff)을 하며, 푸시는 하지 않는다.",
+ "key_features": [
+  "작업 공간 중심 모델·git worktree 가져오기",
+  "에이전트마다 tmux 세션으로 격리·유지",
+  "UI에서 확인 후 커밋(c)·병합(M)",
+  "작업 공간 보관(shelve): worktree는 지우고 브랜치·메타데이터 유지",
+  "minisign 서명 검증 설치 스크립트"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "CLI"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/andyrewlee/amux",
+   "quote": "TUI for easily running parallel coding agents"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/andyrewlee/amux",
+   "quote": "amux is a terminal UI for running multiple coding agents in parallel with a workspace-first model that can import git worktrees."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/andyrewlee/amux",
+   "quote": "Each agent runs in its own tmux session for terminal isolation and persistence."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/andyrewlee/amux",
+   "quote": "workspaces are typically backed by git worktrees on their own branches so agents work in isolation and you can merge changes back when done."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/andyrewlee/amux",
+   "quote": "amux never pushes."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/andyrewlee/amux",
+   "quote": "a workspace-first model that can import git worktrees"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/andyrewlee/amux",
+   "quote": "Each agent runs in its own tmux session for terminal isolation and persistence."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/andyrewlee/amux",
+   "quote": "Both write actions are available from the UI, each behind an explicit confirmation:"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/andyrewlee/amux",
+   "quote": "Shelving puts a workspace away without deleting it"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/andyrewlee/amux",
+   "quote": "The install script verifies release signatures with [minisign]"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/andyrewlee/amux",
+   "quote": "Then run `amux` to open the dashboard."
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [],
+ "note": "GitHub README만 받음. 라이선스 배지는 있으나 이름이 본문에 없음. 요금 표기 없음."
+}

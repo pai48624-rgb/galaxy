@@ -1,0 +1,41 @@
+{
+ "company": "xgboost developers (DMLC 커뮤니티)",
+ "one_liner_ko": "효율적이고 유연하며 이식성 높게 설계된, 최적화된 분산 그래디언트 부스팅 라이브러리.",
+ "what_it_does_ko": "XGBoost는 효율성·유연성·이식성을 목표로 설계된 최적화된 분산 그래디언트 부스팅 라이브러리다. 그래디언트 부스팅 프레임워크로 머신러닝 알고리즘을 구현하며, 병렬 트리 부스팅(GBDT·GBM)으로 많은 데이터 과학 문제를 빠르고 정확하게 푼다. 같은 코드가 Kubernetes, Hadoop, Dask, Spark 등 주요 분산 환경에서 돌아가 수십억 건이 넘는 문제도 처리한다. 파이썬·R·JVM·Ruby·Swift·Julia·C 패키지를 제공하며 워싱턴대 연구 프로젝트에서 시작됐다.",
+ "key_features": [
+  "병렬 트리 부스팅(GBDT·GBM)",
+  "Kubernetes·Hadoop·Dask·Spark·PySpark·Ray 분산 학습",
+  "GPU 지원",
+  "순위 학습(Learning to Rank)·생존 분석·다중 출력",
+  "범주형 데이터 처리와 단조·특성 상호작용 제약",
+  "scikit-learn 추정기 인터페이스",
+  "파이썬·R·JVM·Ruby·Swift·Julia·C 패키지"
+ ],
+ "use_cases_ko": [
+  "수십억 건 규모 데이터의 빠르고 정확한 예측 모델링"
+ ],
+ "pricing": {"free_tier": "불명", "plans": [], "pricing_url": null},
+ "open_source": "Apache-2.0",
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://xgboost.readthedocs.io/en/stable/", "quote": "© Copyright 2026, xgboost developers."},
+  {"field": "one_liner_ko", "url": "https://xgboost.readthedocs.io/en/stable/", "quote": "XGBoost is an optimized distributed gradient boosting library designed to be highly efficient , flexible and portable ."},
+  {"field": "what_it_does_ko", "url": "https://xgboost.readthedocs.io/en/stable/", "quote": "XGBoost provides a parallel tree boosting (also known as GBDT, GBM) that solve many data science problems in a fast and accurate way."},
+  {"field": "what_it_does_ko", "url": "https://github.com/dmlc/xgboost", "quote": "The same code runs on major distributed environment (Kubernetes, Hadoop, SGE, Dask, Spark, PySpark) and can solve problems beyond billions of examples."},
+  {"field": "what_it_does_ko", "url": "https://github.com/dmlc/xgboost", "quote": "XGBoost originates from research project at University of Washington."},
+  {"field": "key_features", "url": "https://xgboost.readthedocs.io/en/stable/", "quote": "Distributed XGBoost with Ray"},
+  {"field": "key_features", "url": "https://xgboost.readthedocs.io/en/stable/", "quote": "GPU Support"},
+  {"field": "key_features", "url": "https://xgboost.readthedocs.io/en/stable/", "quote": "Learning to Rank"},
+  {"field": "key_features", "url": "https://xgboost.readthedocs.io/en/stable/", "quote": "Survival Analysis with Accelerated Failure Time"},
+  {"field": "key_features", "url": "https://xgboost.readthedocs.io/en/stable/", "quote": "Monotonic Constraints \n Feature Interaction Constraints"},
+  {"field": "key_features", "url": "https://xgboost.readthedocs.io/en/stable/", "quote": "Using the Scikit-Learn Estimator Interface"},
+  {"field": "key_features", "url": "https://xgboost.readthedocs.io/en/stable/", "quote": "JVM Package \n Ruby Package \n Swift Package \n Julia Package \n C Package"},
+  {"field": "use_cases_ko", "url": "https://xgboost.readthedocs.io/en/stable/", "quote": "The same code runs on major distributed environment (Hadoop, SGE, MPI) and can solve problems beyond billions of examples."},
+  {"field": "open_source", "url": "https://github.com/dmlc/xgboost", "quote": "Licensed under an [Apache-2]"},
+  {"field": "korean_support", "url": "https://xgboost.readthedocs.io/en/stable/", "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

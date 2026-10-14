@@ -1,0 +1,222 @@
+=== [home] https://docs.nvidia.com/nemoclaw/latest/user-guide/openclaw/home (lang=en)
+NVIDIA NemoClaw | NVIDIA NemoClaw For AI agents: a documentation index is available at the root level at /llms.txt. Append /llms.txt to any URL for a page-level index, or .md for the markdown version of any page.
+ NemoClaw 
+ Latest 
+ Latest
+ Search / 
+ Ask AI 
+ User Guide 
+ Skip to navigation On this page
+ Get Started 
+ From Your Coding Agent 
+ From Your Terminal 
+ NemoClaw Docs for AI Agents 
+ Resources 
+ Select User Guide Variant for Your Preferred Agent 
+ Scroll to top 
+ NVIDIA NemoClaw
+ Ask a question | Copy page | View as Markdown | More actions 
+ This page is for version Latest (default).
+For other versions, use one of these documentation indexes:
+- Latest (default): https://docs.nvidia.com/nemoclaw/latest/llms.txt
+ NVIDIA NemoClaw is an open source reference stack for running supported and qualified candidate AI agents more safely inside NVIDIA OpenShell sandboxes.
+NemoClaw provides guided onboarding, managed inference, network policy, managed integrations, and lifecycle operations while keeping qualification-only candidates separate from supported agent runtimes.
+It installs OpenShell, part of NVIDIA Agent Toolkit, and applies the selected agent integration layer and versioned blueprint.
+OpenShell provides credential custody for managed inference and host-configured integration credentials.
+ Get Started
+ Install NemoClaw and run the onboard wizard to get started.
+ From Your Coding Agent
+ Copy the starter prompt into your local coding agent for a guided NemoClaw setup.
+It helps you choose an agent to run in an OpenShell sandbox, asks one question at a time, handles credentials locally and securely, and asks for approval before running commands.
+ Install NemoClaw with your coding agent
+ # NemoClaw Instructions for a Non-Technical User
+Help me install and run NVIDIA NemoClaw from this coding-agent UI.
+I may use Cursor, Claude Code, Codex, Copilot, or another local coding agent.
+I do not know how to use a terminal.
+## Interaction Rules
+* Ask exactly one question at a time.
+* Use clickable choices when supported; otherwise show one short numbered list and wait.
+* Detect the operating system and whether it is WSL using read-only checks.
+* Ask which computer I am using only if the environment cannot be determined reliably.
+* Next ask which agent I want: OpenClaw, Hermes, or LangChain Deep Agents Code.
+* Never ask me to run commands myself, except the one workstation-side `ssh -N -L` command needed to open a remote credential form securely.
+* Explain each command in plain language, ask permission, then run it for me.
+* Pause before installs, system changes, administrator access, large downloads, credentials, sandbox creation, and long-running processes.
+* Summarize command output instead of asking me to copy it into chat.
+* Explain errors and unfamiliar terms such as Docker, container, model, API key, port, and SSH.
+* Never ask me to paste passwords, API keys, tokens, or private credentials into chat.
+* Use redacted placeholders such as `<PASTE_YOUR_API_KEY_HERE>` in examples.
+* During long operations, give a short update at least once per minute.
+* Do not start duplicate installers, downloads, or model servers.
+* Verify results after important commands; do not rely only on exit codes.
+## Goal
+Install NemoClaw, collect onboarding choices before execution, include messaging in the first sandbox build when the selected agent supports it, launch the selected agent, and verify that it responds.
+## Agent Selection
+Ask: “Which NemoClaw agent would you like?”
+Choices:
+1. OpenClaw, the default.
+2. Hermes.
+3. LangChain Deep Agents Code.
+Set `NEMOCLAW_AGENT=openclaw` for OpenClaw.
+Set `NEMOCLAW_AGENT=hermes` for Hermes, or use `nemohermes onboard`.
+Set `NEMOCLAW_AGENT=langchain-deepagents-code` for Deep Agents, or use `nemo-deepagents onboard`.
+## Hardware and Readiness
+* On Linux, ask permission to run a read-only readiness check before provider selection.
+* Check distribution, architecture, product and firmware identity, GPU and memory, NVIDIA driver, Container Toolkit, Docker, Node.js, disk space, existing NemoClaw, Ollama, vLLM, relevant ports, and administrator access.
+* Classify the computer as DGX Spark, DGX Station, NVIDIA GB300, another NVIDIA computer, ordinary macOS/Linux, or unknown.
+* Do not identify DGX Spark from the GPU name alone; combine product, firmware, architecture, and GPU evidence.
+* Treat DGX Station GB300 hardware as confirmed only when the Station hardware qualification passes. Do not load Station instructions for unsupported or inconclusive hardware.
+* If Station hardware is confirmed but its software profile is unqualified, load Station instructions only for the documented explicit validation-only recovery. This does not authorize Station Express onboarding.
+* Treat the host as qualified for Station Express only when the combined Station qualification passes.
+* A confirmed NVIDIA GB300 can independently qualify for expanded local-runtime choices.
+* If uncertain, explain that and let NemoClaw’s official preflight make the final platform decision.
+## Administrator Access
+* Check administrator availability without waiting for input, such as with a non-interactive sudo check.
+* If passwordless sudo works, continue without prompt mode.
+* If passwordless sudo is unavailable but the coding-agent UI provides a secure visible password prompt, explain why access is needed, ask permission, and set `NEMOCLAW_NON_INTERACTIVE_SUDO_MODE=prompt`.
+* Let the real `sudo` program collect the password; never use chat or the API-key form for the computer password.
+* If neither passwordless sudo nor a secure password prompt is available, stop before the affected install or system change.
+* Never pipe a password, store it in a file, generate a password helper, or put it in command arguments.
+* Offer a user-local alternative only when official documentation supports it for that operation.
+* Do not silently use user-local Ollama for a system Ollama upgrade when the old system service would remain active.
+## Execution Sandbox
+* If the coding agent’s execution sandbox blocks a Docker command, use its command-scoped approval flow, if available.
+* Request permission to rerun only that command outside the sandbox.
+* Before requesting approval, explain that Docker daemon access can modify containers, images, and host files.
+* Do not change Docker socket permissions or request broad host access only to bypass the execution sandbox.
+* If the user or managed policy denies approval, stop before the command.
+* Explain that `NEMOCLAW_NON_INTERACTIVE=1` removes NemoClaw prompts.
+* Explain that `NEMOCLAW_NON_INTERACTIVE=1` does not bypass execution-sandbox permissions.
+## Platform-Specific Instructions
+After the readiness check, load exactly one matching instruction asset before provider selection:
+* Confirmed DGX Spark: [DGX Spark Express instructions](https://raw.githubusercontent.com/NVIDIA/NemoClaw/021ff2dc65f18ba62ffd09921cade777d3f100dd/docs/resources/prompt-assets/dgx-spark.md).
+* Confirmed DGX Station: [DGX Station installation instructions](https://raw.githubusercontent.com/NVIDIA/NemoClaw/021ff2dc65f18ba62ffd09921cade777d3f100dd/docs/resources/prompt-assets/dgx-station.md).
+* Officially detected Windows WSL: [Windows WSL Express instructions](https://raw.githubusercontent.com/NVIDIA/NemoClaw/021ff2dc65f18ba62ffd09921cade777d3f100dd/docs/resources/prompt-assets/windows-wsl.md).
+Read the matching raw Markdown file completely and follow it before continuing.
+Do not load a
+
+=== [about] https://docs.nvidia.com/nemoclaw/latest/user-guide/openclaw/home (lang=en)
+NVIDIA NemoClaw | NVIDIA NemoClaw For AI agents: a documentation index is available at the root level at /llms.txt. Append /llms.txt to any URL for a page-level index, or .md for the markdown version of any page.
+ NemoClaw 
+ Latest 
+ Latest
+ Search / 
+ Ask AI 
+ User Guide 
+ Skip to navigation On this page
+ Get Started 
+ From Your Coding Agent 
+ From Your Terminal 
+ NemoClaw Docs for AI Agents 
+ Resources 
+ Select User Guide Variant for Your Preferred Agent 
+ Scroll to top 
+ NVIDIA NemoClaw
+ Ask a question | Copy page | View as Markdown | More actions 
+ This page is for version Latest (default).
+For other versions, use one of these documentation indexes:
+- Latest (default): https://docs.nvidia.com/nemoclaw/latest/llms.txt
+ NVIDIA NemoClaw is an open source reference stack for running supported and qualified candidate AI agents more safely inside NVIDIA OpenShell sandboxes.
+NemoClaw provides guided onboarding, managed inference, network policy, managed integrations, and lifecycle operations while keeping qualification-only candidates separate from supported agent runtimes.
+It installs OpenShell, part of NVIDIA Agent Toolkit, and applies the selected agent integration layer and versioned blueprint.
+OpenShell provides credential custody for managed inference and host-configured integration credentials.
+ Get Started
+ Install NemoClaw and run the onboard wizard to get started.
+ From Your Coding Agent
+ Copy the starter prompt into your local coding agent for a guided NemoClaw setup.
+It helps you choose an agent to run in an OpenShell sandbox, asks one question at a time, handles credentials locally and securely, and asks for approval before running commands.
+ Install NemoClaw with your coding agent
+ # NemoClaw Instructions for a Non-Technical User
+Help me install and run NVIDIA NemoClaw from this coding-agent UI.
+I may use Cursor, Claude Code, Codex, Copilot, or another local coding agent.
+I do not know how to use a terminal.
+## Interaction Rules
+* Ask exactly one question at a time.
+* Use clickable choices when supported; otherwise show one short numbered list and wait.
+* Detect the operating system and whether it is WSL using read-only checks.
+* Ask which computer I am using only if the environment cannot be determined reliably.
+* Next ask which agent I want: OpenClaw, Hermes, or LangChain Deep Agents Code.
+* Never ask me to run commands myself, except the one workstation-side `ssh -N -L` command needed to open a remote credential form securely.
+* Explain each command in plain language, ask permission, then run it for me.
+* Pause before installs, system changes, administrator access, large downloads, credentials, sandbox creation, and long-running processes.
+* Summarize command output instead of asking me to copy it into chat.
+* Explain errors and unfamiliar terms such as Docker, container, model, API key, port, and SSH.
+* Never ask me to paste passwords, API keys, tokens, or private credentials into chat.
+* Use redacted placeholders such as `<PASTE_YOUR_API_KEY_HERE>` in examples.
+* During long operations, give a short update at least once per minute.
+* Do not start duplicate installers, downloads, or model servers.
+* Verify results after important commands; do not rely only on exit codes.
+## Goal
+Install NemoClaw, collect onboarding choices before execution, include messaging in the first sandbox build when the selected agent supports it, launch the selected agent, and verify that it responds.
+## Agent Selection
+Ask: “Which NemoClaw agent would you like?”
+Choices:
+1. OpenClaw, the default.
+2. Hermes.
+3. LangChain Deep Agents Code.
+Set `N
+
+=== [meta] https://docs.nvidia.com/nemoclaw/latest/user-guide/openclaw/home
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/NVIDIA/NemoClaw
+<!--
+  SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+  SPDX-License-Identifier: Apache-2.0
+-->
+
+# NVIDIA NemoClaw: Reference Stack for Sandboxed AI Agents in OpenShell
+
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue)](https://github.com/NVIDIA/NemoClaw/blob/main/LICENSE)
+[![Security Policy](https://img.shields.io/badge/Security-Report%20a%20Vulnerability-red)](https://github.com/NVIDIA/NemoClaw/blob/main/SECURITY.md)
+[![Discord](https://img.shields.io/badge/Discord-Join-7289da)](https://discord.gg/XFpfPv9Uvx)
+
+NVIDIA NemoClaw is an open source reference stack for running supported AI agents more safely inside [NVIDIA OpenShell](https://github.com/NVIDIA/OpenShell) sandboxes.
+It provides guided onboarding, managed inference, network policy, managed integrations, OpenShell-backed state persistence, and lifecycle operations through the NemoClaw CLI and its agent-specific aliases.
+
+**Supported agents:**
+
+- [OpenClaw](https://openclaw.ai) (default)
+- [Hermes](https://get-hermes.ai/)
+- [LangChain Deep Agents Code](https://docs.langchain.com/oss/python/deepagents/code/overview)
+
+For capabilities, architecture, security controls, and the full feature list, see the [NemoClaw documentation](https://docs.nvidia.com/nemoclaw/latest/).
+
+## Get Started
+
+### Start with Your Coding Agent
+
+Use the starter prompt when you want Cursor, Claude Code, Codex, Copilot, or another local coding agent to install NemoClaw with you.
+
+**[Copy the NemoClaw starter prompt](https://docs.nvidia.com/nemoclaw/latest/user-guide/openclaw/home#from-your-coding-agent)**.
+
+The prompt tells your agent to use NemoClaw docs and skills, ask one question at a time, run commands only with your approval, and keep secrets out of chat.
+
+### Install Using the Installer in Your Terminal
+
+Review [Prerequisites](https://docs.nvidia.com/nemoclaw/latest/user-guide/openclaw/get-started/prerequisites) before installing.
+On a supported DGX or Windows Subsystem for Linux (WSL) host, press Enter at the `Run express install with these settings? [Y/n]:` prompt to use the recommended preset settings for that platform.
+Express install mode installs OpenClaw by default.
+If you accept, refer to [NemoClaw Quickstart with OpenClaw](https://docs.nvidia.com/nemoclaw/latest/user-guide/openclaw/get-started/quickstart).
+Enter `n` if you want to choose Hermes or LangChain Deep Agents Code, a sandbox name, an inference provider, and a model interactively.
+When connecting to a Hermes sandbox from a light terminal, NemoClaw may install a managed `nemoclaw-light` Hermes skin for readable assistant text; it removes that managed skin state again when the terminal no longer needs it and preserves any user-selected Hermes skin.
+
+| Agent | Guide |
+|-------|-------|
+| OpenClaw (default) | [Quickstart with OpenClaw](https://docs.nvidia.com/nemoclaw/latest/user-guide/openclaw/get-started/quickstart) |
+| Hermes | [Quickstart with Hermes](https://docs.nvidia.com/nemoclaw/latest/user-guide/hermes/get-started/quickstart) |
+| LangChain Deep Agents Code | [Quickstart with LangChain Deep Agents Code](https://docs.nvidia.com/nemoclaw/latest/user-guide/deepagents/get-started/quickstart) |
+
+## Documentation
+
+Refer to the following pages on the official documentation website for more information on NemoClaw.
+
+| Page | Description |
+|------|-------------|
+| [Overview](https://docs.nvidia.com/nemoclaw/latest/user-guide/openclaw/about/overview) | What NemoClaw does and how it fits together. |
+| [Architecture Overview](https://docs.nvidia.com/nemoclaw/latest/user-guide/openclaw/about/how-it-works) | High-level overview of the host CLI, agent integration layer, blueprint, sandbox lifecycle, and protection layers. |
+| [Ecosystem](https://docs.nvidia.com/nemoclaw/latest/user-guide/openclaw/about/ecosystem) | How OpenClaw, OpenShell, and NemoClaw form a stack and when to use NemoClaw versus OpenShell alone. |
+| [Architecture Details](https://docs.nvidia.com/nemoclaw/latest/user-guide/openclaw/reference/architecture) | Detailed description of agent integration structure, blueprint lifecycle, sandbox environment, and host-side state. |
+| [Prerequisites](https:/

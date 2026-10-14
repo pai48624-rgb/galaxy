@@ -1,0 +1,233 @@
+{
+ "company": "Chroma",
+ "one_liner_ko": "AI용 오픈소스 검색 인프라(벡터·전문·정규식·메타데이터 검색 데이터베이스).",
+ "what_it_does_ko": "Chroma는 벡터, 전문(full-text), 정규식, 메타데이터 검색을 지원하는 오픈소스 AI 데이터 인프라다. 임베딩과 메타데이터를 저장하고 밀집·희소·하이브리드 검색과 메타데이터 필터링, 텍스트·이미지 등 멀티모달 검색을 제공한다. 로컬 실행·셀프호스팅하거나, 객체 스토리지 기반의 서버리스 관리형 서비스인 Chroma Cloud를 쓸 수 있다. 엔터프라이즈용으로 BYOC(내 VPC), 멀티 리전 복제, 시점 복구를 제공한다.",
+ "key_features": [
+  "벡터(의미 유사도) 검색",
+  "희소 벡터 검색(BM25, SPLADE)",
+  "전문·정규식 검색",
+  "메타데이터 필터링·패싯",
+  "포킹(데이터셋 버전 관리·A/B 테스트)",
+  "멀티모달 검색",
+  "CLI",
+  "Chroma Cloud 서버리스·BYOC"
+ ],
+ "use_cases_ko": [
+  "에이전트형 검색(반복 검색으로 결과 개선)",
+  "코드베이스 색인으로 코딩 에이전트 지원"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Starter $0/월 + 사용량, $5 무료 크레딧)",
+  "plans": [
+   {
+    "name": "Starter",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "+ 사용량, $5 무료 크레딧, DB 10개, 팀원 10명",
+    "page_lang": "en"
+   },
+   {
+    "name": "Team",
+    "price": 250,
+    "currency": "USD",
+    "period": "month",
+    "limits": "+ 사용량, $100 크레딧(이월 안 됨), DB 100개, 팀원 30명, SOC II",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": null,
+    "period": null,
+    "limits": "맞춤 가격, 무제한 DB·팀원, 단일 테넌트·BYOC, SLA",
+    "page_lang": "en"
+   },
+   {
+    "name": "쓰기 (사용량)",
+    "price": 2.5,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "GiB 쓰기당",
+    "page_lang": "en"
+   },
+   {
+    "name": "저장 (사용량)",
+    "price": 0.33,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "GiB·월당",
+    "page_lang": "en"
+   },
+   {
+    "name": "조회 (사용량)",
+    "price": 0.0075,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "TiB 조회당",
+    "page_lang": "en"
+   },
+   {
+    "name": "네트워크 (사용량)",
+    "price": 0.09,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "반환 GiB당",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://www.trychroma.com/pricing/"
+ },
+ "open_source": "Apache-2.0",
+ "api": "있음",
+ "platforms": [
+  "API",
+  "CLI",
+  "웹"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.trychroma.com/",
+   "quote": "Chroma - open-source search infrastructure for AI"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.trychroma.com/",
+   "quote": "Fast, serverless, and scalable infrastructure supporting vector, full-text, regex, and metadata search. Built on object storage and trusted by millions of developers. Open-source Apache 2.0."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.trychroma.com/docs/overview/introduction",
+   "quote": "Chroma gives you everything you need for retrieval: store embeddings with metadata, search with dense and sparse vectors, filter by metadata, and retrieve across text, images, and more."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.trychroma.com/docs/overview/introduction",
+   "quote": "Run it locally, self-host, or use Chroma Cloud for a managed, serverless experience."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.trychroma.com/",
+   "quote": "BYOC in your VPC, multi-cloud/multi-region replication, point-in-time-recovery ensure a resilient and scalable search system with the same 0-ops story as Cloud."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.trychroma.com/",
+   "quote": "Semantic similarity search"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.trychroma.com/",
+   "quote": "Lexical search (BM25, SPLADE)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.trychroma.com/",
+   "quote": "Trigram and regex search"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.trychroma.com/",
+   "quote": "Filtering and faceted search"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.trychroma.com/",
+   "quote": "Dataset versioning, A/B testing, and roll-outs"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.trychroma.com/docs/overview/introduction",
+   "quote": "Index and search images, audio, and other modalities alongside text."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.trychroma.com/",
+   "quote": "Command-line tools for development"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://docs.trychroma.com/docs/overview/introduction",
+   "quote": "Build agents that iteratively search and refine results for complex queries."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://docs.trychroma.com/docs/overview/introduction",
+   "quote": "Index codebases to power coding agents using AST-aware chunking."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.trychroma.com/pricing/",
+   "quote": "Starter plan per month + $5 in free credits"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.trychroma.com/pricing/",
+   "quote": "Write per GiB written \n $2.50"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.trychroma.com/pricing/",
+   "quote": "Storage per GiB per month \n $0.33"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.trychroma.com/pricing/",
+   "quote": "Query per TiB queried \n $0.0075"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.trychroma.com/pricing/",
+   "quote": "Network per GiB returned \n $0.09"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.trychroma.com/pricing/",
+   "quote": "$0 + usage\n 10 databases\n 10 team members"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.trychroma.com/pricing/",
+   "quote": "$250 + usage\n 100 databases\n 30 team members"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.trychroma.com/pricing/",
+   "quote": "The $100 of included usage in the Team plan does not rollover."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.trychroma.com/pricing/",
+   "quote": "Unlimited databases\n Unlimited team members"
+  },
+  {
+   "field": "open_source",
+   "url": "https://docs.trychroma.com/docs/overview/introduction",
+   "quote": "Chroma is licensed under Apache 2.0 ."
+  },
+  {
+   "field": "api",
+   "url": "https://github.com/chroma-core/chroma",
+   "quote": "The core API is only 4 functions"
+  },
+  {
+   "field": "platforms",
+   "url": "https://www.trychroma.com/",
+   "quote": "Command-line tools for development"
+  },
+  {
+   "field": "platforms",
+   "url": "https://www.trychroma.com/",
+   "quote": "Start free on Cloud Read the docs"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.trychroma.com/",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

@@ -1,0 +1,229 @@
+=== [home] https://help.kagi.com/kagi/ (lang=en-US)
+Welcome to Kagi Search Help! | Kagi's Docs 
+ Skip to content Kagi's Docs 
+ Search K 
+ Main Navigation Kagi Orion 
+ Appearance
+ Menu Return to top 
+ Sidebar Navigation 
+ About
+ Company
+ About
+ Products
+ History
+ Assets
+ Jobs
+ Open Source Support
+ Contact Us
+ Plans & Payment
+ Plan Types
+ Ultimate Plan
+ Family Plan
+ Team Plan
+ Plan Management
+ Gift Kagi
+ Payment Methods
+ Support and Community
+ Get Connected
+ Reporting a Bug
+ Email Support
+ Share with Friends and Family
+ Community Roles
+ Frequently Asked Questions
+ Contribute
+ Translations
+ Open Source
+ Contributors
+ Kudos
+ Live Stats
+ Why Kagi
+ Why Pay for Search
+ Say no to Ads
+ Kagi vs. Others
+ Privacy & Security
+ Privacy Protection
+ Private Browser Sessions
+ Two Factor Authentication
+ Kagi Privacy Pass
+ How does Privacy Pass work?
+ Using Kagi with Tor
+ Log in with QR Code
+ Content Policy
+ Security
+ Legal Safe Harbor
+ Results
+ Sources
+ Quality
+ Speed
+ Small Web in Search Results
+ AI Philosophy
+ User Guide
+ Getting Started
+ Quick Start
+ Set Kagi as Your Default Search Engine
+ Application Integrations
+ Accessing via Tor
+ Kagi Search
+ SlopStop
+ Website Info & Personalized Results
+ Lenses
+ Keyboard Shortcuts
+ Bangs
+ Sharing Results
+ Search Shortcuts
+ Filtering Results
+ User Themes
+ Redirects
+ Code Searches
+ Verbatim Search
+ Widgets
+ Snaps
+ Exclude AI Images
+ Quick Answer
+ Ask Questions about a Page
+ Kagi Assistant
+ Kagi Assistant
+ Kagi Research Assistants
+ Custom Assistants
+ Kagi LLM Benchmarking Project
+ LLMs & Privacy
+ Kagi Translate
+ Kagi Maps
+ Kagi News
+ Kagi Summarize
+ Settings
+ Accessing settings
+ General
+ Appearance
+ Search
+ General
+ Lenses
+ Personalized Results
+ AI
+ Search Widgets
+ Privacy
+ Advanced
+ Billing
+ Account
+ Delete Your Account
+ Turning Off Animations
+ Community Resources
+ Add-ons
+ Themes
+ Lenses
+ Developers
+ API Portal
+ Quick Start
+ Search API
+ Kagi Summarizer
+ FastGPT
+ Enrichment API
+ Small Web RSS Feed
+ Kagi Sidekick
+ Bloopers
+ On this page
+ Welcome to Kagi Search Help! ​ 
+ Welcome to Kagi Search Help! If you're new to Kagi Search, our Quick Start and FAQs are great places to begin. If you cannot find an answer to your Kagi question, ask the community or email us at support@kagi.com .
+ To send a bug report or a feature suggestion, you can use KagiFeedback.org .
+ You can access our documentation in several ways:
+ Click or tap an article link from the list.
+ Click or tap the magnifying glass icon at the top of the screen and do a search.
+ Use the !help bang in Kagi Search. For example, searching in Kagi for !help setting Kagi as default search engine will show you results containing our default search documentation.
+ Feedback about this Kagi Search documentation can be shared on our Discord server . We would love to hear your thoughts on anything we can fix or improve.
+ About Kagi Search ​ 
+ Kagi is a high quality, 100% privacy-respecting search engine with results augmented by non-commercial indexes and personalized searches. We're glad you're here!
+ About Orion Browser ​ 
+ Orion is a fast, zero telemetry browser for Mac/iOS. Learn more about Orion or check Orion documentation .
+ Contributing ​ 
+ This documentation is open source at our Kagi Docs repo.
+ We gladly welcome any fixes & improvements! Please see our contribution guide before making a Pull Request.
+ Once your contributions are accepted, make sure to add yourself to the list of Contributors . Thank you!
+ Edit this page on GitHub 
+ Pager 
+ Next page Company
+
+=== [about] https://kagi.com/api/docs/openapi (lang=en)
+Kagi API 
+ Skip to content Search Ctrl+K 
+ Kagi API 
+ Official Client Libraries 
+ API Terms of Service 
+ MCP 
+ Support 
+ Discord 
+ Search API 
+ Extract API 
+ Kagi API (1) Copy 
+ Copy for LLM
+ Copy page as Markdown for LLMs
+ View as Markdown 
+ Open this page as Markdown
+ Open in ChatGPT 
+ Get insights from ChatGPT
+ Open in Claude 
+ Get insights from Claude
+ The Kagi API provides programmatic access to data that powers our search results & more.
+ Get started on the API Dashboard to set up billing, manage API keys, and more.
+ See our API Pricing page for standard rates.
+ Official Client Libraries 
+ We offer the following libraries you can use to interact with the Kagi API. These are generated from an OpenAPI spec.
+ Golang 
+ Python 
+ TypeScript 
+ Rust 
+ If you have a language you would like to use and it's not in the list, send us a message and we will add it to the list if it is supported. Or you can use the spec to build your own custom library.
+ In the future we will most likely offer more crafted API wrappers and spotlight clients and applications built by our community - feel free to send them to us!
+ API Terms of Service 
+ Use of the Kagi API is governed by our API Terms of Service .
+ MCP 
+ We offer a hosted MCP server at: https://mcp.kagi.com/mcp
+ At this time, we do not support setup via OAuth2 flow, but this is on our roadmap. You will need to get your API key from the dashboard and plug it into your local client with Bearer HTTP authentication.
+ Here is an example to get started with Claude Code:
+ claude mcp add kagi https://mcp.kagi.com/mcp --transport http --header "Authorization: Bearer $(read -sp 'API key: ' k; echo $k)" --scope user 
+ You can review and contribute to our MCP server on GitHub !
+ Support 
+ For bug reports, feature requests, or billing related issues please reach out to developers@kagi.com and we will be happy to assist you.
+ To help us answer your reports efficiently, please be prepared to provide as much info as you can:
+ For bugs, include request trace IDs from the meta.trace response field or the X-Kagi-Trace response header.
+ If issues are easily reproduced in our playground , send us a link to the playground - the URL will contain parameters to configure the request so that we can reproduce ourselves.
+ Include any code snippets or precise descriptions of the request you are making, and full samples of the response bodies from the API
+ Include mention of which wrapper you are using if any, or links to relevant application code we can review
+ Include the email address associated with your Kagi login if it is not the one you are emailing from
+ Thank you!
+ Discord 
+ Join our Discord ! Good for quick questions or chatting about things you've made with our APIs!
+ In the server you will find the #api forum for API related inquiries.
+ Download OpenAPI description 
+ openapi.json 
+ openapi.yaml 
+ Overview 
+ API Support developers@kagi.com 
+ License Apache-2.0 
+ Languages 
+ curl JavaScript Node.js Python 
+ Java 
+ C# 
+ PHP 
+ Go 
+ Ruby 
+ R 
+ Payload 
+ Servers 
+ Production api endpoint 
+ https://kagi.com/api/v1
+ Search API
+ Copy 
+ Copy for LLM
+ Copy page as Markdown for LLMs
+ View as Markdown 
+ Open this page as Markdown
+ Open in ChatGPT 
+ Get insights from ChatGPT
+ Open in Claude 
+ Get insights from Claude
+ The Search API is a feature-rich endpoint for search products and agents. It gives programmable access to Kagi's premium search results pulled from many different sources - including our in-house indexes - and re-ranked to surface accurate answers and interesting finds. You can read about our approach towards sear
+
+=== [meta] https://help.kagi.com/kagi/
+html lang: en-US
+hreflang: 없음
+화면에 보이는 언어 이름: 없음

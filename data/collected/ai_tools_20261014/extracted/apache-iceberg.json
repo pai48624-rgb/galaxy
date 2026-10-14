@@ -1,0 +1,124 @@
+{
+ "company": "The Apache Software Foundation",
+ "one_liner_ko": "대용량 분석 데이터셋을 위한 개방형 테이블 형식.",
+ "what_it_does_ko": "Apache Iceberg는 거대한 분석 테이블을 위한 고성능 형식이다. 빅데이터에 SQL 테이블의 안정성과 단순함을 가져와 Spark·Trino·Flink·Presto·Hive·Impala 같은 엔진이 같은 테이블을 동시에 안전하게 다루게 한다. 병합·업데이트·삭제 SQL, 테이블을 다시 쓰지 않는 스키마 진화, 숨은 파티셔닝, 타임 트래블과 롤백, 데이터 컴팩션을 지원한다. 핵심 자바 라이브러리가 참조 구현이다.",
+ "key_features": [
+  "MERGE·UPDATE·DELETE 등 표현력 있는 SQL",
+  "테이블 재작성 없는 전체 스키마 진화",
+  "숨은 파티셔닝(파티션 값 자동 생성)",
+  "타임 트래블과 버전 롤백",
+  "기본 제공 데이터 컴팩션",
+  "여러 엔진의 동시 안전 접근",
+  "REST 카탈로그 프로토콜"
+ ],
+ "use_cases_ko": [
+  "여러 엔진(Spark·Trino·Flink 등)이 같은 분석 테이블을 공유",
+  "재현 가능한 쿼리와 문제 발생 시 테이블 상태 복구"
+ ],
+ "pricing": {
+  "free_tier": "오픈소스(Apache 2.0) — 요금제 안내 없음",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "Apache License 2.0",
+ "api": "있음",
+ "platforms": [
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://github.com/apache/iceberg",
+   "quote": "Iceberg is under active development at the Apache Software Foundation."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://iceberg.apache.org",
+   "quote": "The open table format for analytic datasets."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/apache/iceberg",
+   "quote": "Iceberg is a high-performance format for huge analytic tables. Iceberg brings the reliability and simplicity of SQL tables to big data"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/apache/iceberg",
+   "quote": "The core Java library is located in this repository and is the reference implementation for other libraries."
+  },
+  {
+   "field": "key_features",
+   "url": "https://iceberg.apache.org",
+   "quote": "Iceberg supports flexible SQL commands to merge new data, update"
+  },
+  {
+   "field": "key_features",
+   "url": "https://iceberg.apache.org",
+   "quote": "schema changes never require rewriting your table."
+  },
+  {
+   "field": "key_features",
+   "url": "https://iceberg.apache.org",
+   "quote": "Iceberg handles the tedious and error-prone task of producing"
+  },
+  {
+   "field": "key_features",
+   "url": "https://iceberg.apache.org",
+   "quote": "Time-travel enables reproducible queries that use exactly the same"
+  },
+  {
+   "field": "key_features",
+   "url": "https://iceberg.apache.org",
+   "quote": "Data compaction is supported out-of-the-box and you can choose from"
+  },
+  {
+   "field": "key_features",
+   "url": "https://iceberg.apache.org",
+   "quote": "REST Catalog Protocol"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/apache/iceberg",
+   "quote": "making it possible for engines like Spark, Trino, Flink, Presto, Hive and Impala to safely work with the same tables, at the same time."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://iceberg.apache.org",
+   "quote": "rollback allows users to quickly correct problems by resetting"
+  },
+  {
+   "field": "pricing",
+   "url": "https://github.com/apache/iceberg",
+   "quote": "to you under the Apache License, Version 2.0 (the"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/apache/iceberg",
+   "quote": "to you under the Apache License, Version 2.0 (the"
+  },
+  {
+   "field": "api",
+   "url": "https://github.com/apache/iceberg",
+   "quote": "* `iceberg-api` contains the public Iceberg API"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/apache/iceberg",
+   "quote": "* `iceberg-api` contains the public Iceberg API"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://iceberg.apache.org",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "Apache License 2.0 오픈소스 프로젝트(ASF)로, 공식 페이지에 자체 유료 요금제·관리형 클라우드 안내가 없음",
+   "diff": "기존 분류는 '오픈소스 + 클라우드 매니지드 유료 플랜'이나 공식 페이지에는 유료 플랜이 없음(순수 오픈소스)",
+   "url": "https://iceberg.apache.org"
+  }
+ ],
+ "plan_change": []
+}

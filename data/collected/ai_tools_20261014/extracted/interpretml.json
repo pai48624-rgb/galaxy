@@ -1,0 +1,125 @@
+{
+ "company": "The InterpretML Contributors",
+ "one_liner_ko": "모델을 이해하고 책임 있는 머신러닝을 돕는 오픈소스 해석 도구 모음.",
+ "what_it_does_ko": "InterpretML은 최신 머신러닝 해석 기법을 한데 모은 오픈소스 패키지다. 구조 자체로 해석 가능한 글래스박스 모델(EBM 등)을 학습하고, 기존 블랙박스 시스템을 LIME·SHAP 등으로 설명할 수 있다. 모델 전체 동작(전역)과 개별 예측 이유(지역)를 모두 볼 수 있고, what-if 분석과 여러 모델 비교를 지원한다. 모델 디버깅, 공정성 문제 탐지, 규제 준수 감사 등에 쓰인다.",
+ "key_features": [
+  "Explainable Boosting Machine(EBM) 등 글래스박스 모델 학습",
+  "LIME·SHAP 등 블랙박스 설명기",
+  "전역·지역·부분집합 특징 중요도",
+  "what-if 분석으로 입력 변경 영향 확인",
+  "여러 모델 성능 동시 비교",
+  "차등 프라이버시 EBM",
+  "대화형 시각화"
+ ],
+ "use_cases_ko": [
+  "데이터 과학자의 모델 이해·디버깅·설명",
+  "감사자의 배포 전 모델 검증과 배포 후 감사",
+  "경영진이 고객에게 예측 투명성 제공"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "오픈소스(라이선스 이름 명시 없음)",
+ "api": "불명",
+ "platforms": [
+  "윈도",
+  "맥"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://interpret.ml",
+   "quote": "Copyright © 2023 The InterpretML Contributors"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://interpret.ml",
+   "quote": "A toolkit to help understand models and enable responsible machine learning"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/interpretml/interpret",
+   "quote": "InterpretML is an open-source package that incorporates state-of-the-art machine learning interpretability techniques under one roof."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/interpretml/interpret",
+   "quote": "With this package, you can train interpretable glassbox models and explain blackbox systems."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://interpret.ml",
+   "quote": "It can also be used to debug models, explain predictions and enable auditing to meet compliance with regulatory requirements."
+  },
+  {
+   "field": "key_features",
+   "url": "https://interpret.ml",
+   "quote": "Examples include: Explainable Boosting Machines (EBM), Linear models, and decision trees."
+  },
+  {
+   "field": "key_features",
+   "url": "https://interpret.ml",
+   "quote": "Examples include LIME and SHAP."
+  },
+  {
+   "field": "key_features",
+   "url": "https://interpret.ml",
+   "quote": "Explain a subset of predictions using group feature importance"
+  },
+  {
+   "field": "key_features",
+   "url": "https://interpret.ml",
+   "quote": "See how changes to input features impact predictions with techniques like what-if analysis"
+  },
+  {
+   "field": "key_features",
+   "url": "https://interpret.ml",
+   "quote": "compare multiple models simultaneously"
+  },
+  {
+   "field": "key_features",
+   "url": "https://interpret.ml/docs/",
+   "quote": "DPExplainableBoostingClassifier"
+  },
+  {
+   "field": "key_features",
+   "url": "https://interpret.ml",
+   "quote": "Access state-of-the-art interpretability techniques through an open unified API set and rich visualizations."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://interpret.ml",
+   "quote": "Understand models, debug or uncover issues and explain your model to other stakeholders."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://interpret.ml",
+   "quote": "Validate a model before it is deployed and audit it post-deployment."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://interpret.ml",
+   "quote": "Understand how models behave, in order to provide transparency about predictions to customers."
+  },
+  {
+   "field": "open_source",
+   "url": "https://interpret.ml",
+   "quote": "Community driven open source toolkit"
+  },
+  {
+   "field": "platforms",
+   "url": "https://interpret.ml/docs/",
+   "quote": "Interpret is supported across Windows, Mac and Linux on Python 3.5+"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://interpret.ml",
+   "quote": "hreflang: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

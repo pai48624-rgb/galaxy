@@ -1,0 +1,85 @@
+{
+ "company": "Datalab",
+ "one_liner_ko": "문서를 빠르고 정확하게 Markdown·JSON·청크·HTML로 변환하는 도구.",
+ "what_it_does_ko": "Marker는 PDF, 이미지, PPTX, DOCX, XLSX, HTML, EPUB 파일을 Markdown·JSON·청크·HTML로 변환한다. 표·양식·수식·인라인 수식·링크·참조·코드 블록을 정리하고, 이미지를 추출하며 머리글·바닥글 같은 잡음을 제거한다. --use_llm 옵션으로 LLM을 함께 써서 페이지를 넘는 표 병합 등 정확도를 높일 수 있다. 개발사 Datalab은 더 높은 정확도의 관리형 플랫폼도 운영한다.",
+ "key_features": [
+  "PDF·이미지·PPTX·DOCX·XLSX·HTML·EPUB 변환",
+  "표·양식·수식·링크·참조·코드 블록 서식 처리",
+  "이미지 추출·저장",
+  "머리글·바닥글 등 불필요한 요소 제거",
+  "LLM을 함께 쓰는 하이브리드 모드(--use_llm)",
+  "GPU·CPU·MPS에서 동작",
+  "사용자 서식·로직으로 확장 가능"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": "관리형 플랫폼 가입 시 $5 무료 크레딧",
+  "plans": [],
+  "pricing_url": "https://github.com/datalab-to/marker"
+ },
+ "open_source": "코드 Apache 2.0 / 모델 OpenRAIL-M",
+ "api": "불명",
+ "platforms": [
+  "CLI"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://github.com/datalab-to/marker",
+   "quote": "Try Datalab's Managed Platform"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/datalab-to/marker",
+   "quote": "Marker converts documents to markdown, JSON, chunks, and HTML quickly and accurately."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/datalab-to/marker",
+   "quote": "Converts PDF, image, PPTX, DOCX, XLSX, HTML, EPUB files in all languages"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/datalab-to/marker",
+   "quote": "Formats tables, forms, equations, inline math, links, references, and code blocks"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/datalab-to/marker",
+   "quote": "Removes headers/footers/other artifacts"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/datalab-to/marker",
+   "quote": "Optionally boost accuracy with LLMs (and your own prompt)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/datalab-to/marker",
+   "quote": "Works on GPU, CPU, or MPS"
+  },
+  {
+   "field": "pricing",
+   "url": "https://github.com/datalab-to/marker",
+   "quote": "Get started with **$5 in free credits**"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/datalab-to/marker",
+   "quote": "Code%20License-Apache%202.0-green.svg"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/datalab-to/marker",
+   "quote": "Model%20License-OpenRAIL--M-blue.svg"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/datalab-to/marker",
+   "quote": "For the highest accuracy, pass the `--use_llm` flag to use an LLM alongside marker."
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

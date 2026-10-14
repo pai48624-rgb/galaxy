@@ -1,0 +1,180 @@
+{
+ "company": "Element Labs, Inc.",
+ "one_liner_ko": "LM Studio Bionic: 오픈 모델을 위한 로컬 우선 업무·코딩 에이전트 앱.",
+ "what_it_does_ko": "LM Studio Bionic은 오픈 모델용 에이전트로, 로컬 실행을 기본으로 업무와 코딩을 돕는다. 에이전트와 문서를 만들고 편집하면 변경이 자동 저장되며, 코딩·자동화·컴퓨터 제어 작업도 맡길 수 있다. 앱 안에서 최신 로컬 LLM을 내려받아 MLX와 llama.cpp 기반 LM Studio 런타임으로 실행한다. 선택형 클라우드 추론은 미국 호스팅에 데이터 무보존(ZDR)이라고 밝힌다.",
+ "key_features": [
+  "Bionic 에이전트: 문서 작성·편집(자동 저장), 코딩·자동화·컴퓨터 제어",
+  "로컬 실시간 음성 받아쓰기(여러 언어 지원)",
+  "앱에서 로컬 LLM 다운로드·실행(MLX·llama.cpp)",
+  "GLM·Kimi·DeepSeek 등 프런티어 오픈 모델 실행",
+  "LM Link(무료 최대 5대 기기)",
+  "클라우드 서비스 데이터 무보존(ZDR)",
+  "개발자용 lmstudio-js·lmstudio-python SDK와 CLI(lms)"
+ ],
+ "use_cases_ko": [
+  "개인이 로컬 오픈 모델로 문서 작업·코딩·자동화",
+  "프라이버시가 중요한 사용자가 기기 안에서 음성 받아쓰기"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Bionic Agent, 로컬 LLM 실행, LM Link 최대 5대, 웹 검색 제한)",
+  "plans": [
+   {
+    "name": "Free",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "로컬 LLM·Bionic Agent, LM Link 최대 5대, 웹 검색 제한",
+    "page_lang": "en"
+   },
+   {
+    "name": "Bionic+",
+    "price": 20,
+    "currency": "USD",
+    "period": "month",
+    "limits": "미국 호스팅 오픈소스 모델, 대량 토큰 할인, 웹 검색·페이지 추출",
+    "page_lang": "en"
+   },
+   {
+    "name": "Pro",
+    "price": 100,
+    "currency": "USD",
+    "period": "month",
+    "limits": "Bionic+ 대비 사용 한도 5배, 새 기능 조기 이용",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://lmstudio.ai/pricing"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "CLI",
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://lmstudio.ai/",
+   "quote": "Element Labs, Inc. © 2026 LinkedIn GitHub Discord Twitter / X"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://lmstudio.ai/",
+   "quote": "Bionic is LM Studio's agent for open models."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://lmstudio.ai/",
+   "quote": "Work with Bionic to create and edit documents. Every change is automatically saved, so you can work with your agent freely."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://lmstudio.ai/",
+   "quote": "Bionic also excels at coding tasks, automations, and computer control."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://lmstudio.ai/",
+   "quote": "Powered by the LM Studio runtime, with MLX and llama.cpp under the hood."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://lmstudio.ai/pricing",
+   "quote": "Bionic cloud inference is US-hosted, with Zero data retention (ZDR)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://lmstudio.ai/",
+   "quote": "Your voice and audio data is processed locally and never leaves your device. Supports multiple languages."
+  },
+  {
+   "field": "key_features",
+   "url": "https://lmstudio.ai/",
+   "quote": "Download the latest local LLMs directly within the app"
+  },
+  {
+   "field": "key_features",
+   "url": "https://lmstudio.ai/",
+   "quote": "run Bionic with the latest frontier open models such as GLM 5.2, Kimi K3, and DeepSeek V4 Pro."
+  },
+  {
+   "field": "key_features",
+   "url": "https://lmstudio.ai/pricing",
+   "quote": "LM Link for up to 5 devices \n Limited web search"
+  },
+  {
+   "field": "key_features",
+   "url": "https://lmstudio.ai/",
+   "quote": "Our cloud services are Zero Data Retention (ZDR) across the board."
+  },
+  {
+   "field": "key_features",
+   "url": "https://lmstudio.ai/",
+   "quote": "Developer Docs lmstudio-js lmstudio-python LM Studio CLI (lms)"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://lmstudio.ai/",
+   "quote": "Natively local. Built for creativity, work, and code."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://lmstudio.ai/",
+   "quote": "Your voice and audio data is processed locally and never leaves your device."
+  },
+  {
+   "field": "pricing",
+   "url": "https://lmstudio.ai/pricing",
+   "quote": "Free\n $ 0 \n Run local LLMs on your machine"
+  },
+  {
+   "field": "pricing",
+   "url": "https://lmstudio.ai/pricing",
+   "quote": "Bionic+\n $ 20 USD / month \n Private, US-hosted OSS models."
+  },
+  {
+   "field": "pricing",
+   "url": "https://lmstudio.ai/pricing",
+   "quote": "Pro\n $ 100 USD / month \n More included usage."
+  },
+  {
+   "field": "pricing",
+   "url": "https://lmstudio.ai/pricing",
+   "quote": "5× usage limits \n Discounted bulk tokens"
+  },
+  {
+   "field": "pricing",
+   "url": "https://lmstudio.ai/pricing",
+   "quote": "Limited web search \n Download Bionic"
+  },
+  {
+   "field": "pricing",
+   "url": "https://lmstudio.ai/pricing",
+   "quote": "Cloud credits cover usage beyond the allowance included with your plan."
+  },
+  {
+   "field": "api",
+   "url": "https://lmstudio.ai/",
+   "quote": "Developer Docs lmstudio-js lmstudio-python LM Studio CLI (lms) llms.txt"
+  },
+  {
+   "field": "platforms",
+   "url": "https://lmstudio.ai/",
+   "quote": "Developer Docs lmstudio-js lmstudio-python LM Studio CLI (lms) llms.txt"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://lmstudio.ai/",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "Free($0, 로컬 실행) + Bionic+ 월 $20 + Pro 월 $100 구독, 초과분은 클라우드 크레딧",
+   "diff": "기존 분류는 '사용량 기반 종량제(클라우드/GPU)'이나 실제로는 무료 로컬 앱 + 월 구독 요금제가 중심이고 종량(크레딧)은 초과분에만 적용",
+   "url": "https://lmstudio.ai/pricing"
+  }
+ ]
+}

@@ -1,0 +1,108 @@
+=== [home] https://fastagency.ai/latest/ (lang=en)
+FastAgency - FastAgency 
+ You're not viewing the latest version. Click here to go to latest. 
+ FastAgency 
+ FastAgency 
+ Initializing search 
+ ag2ai/fastagency 
+ Features 
+ User guide 
+ Tutorials 
+ Reference 
+ Contributing 
+ Release Notes 
+ The fastest way to bring
+ multi-agent workflows to production.
+ FastAgency: The fastest way to bring multi-agent workflows to production.
+ Accelerate your AI development with FastAgency’s modular, open-source agents, designed
+ for quick integration and scaling of complex solutions.
+ Accelerate your AI development with FastAgency’s modular, open-source agents, designed for quick integration and scaling of complex solutions.
+ GET STARTED → 
+ FastAgency 
+ ag2ai/fastagency 
+ Features 
+ User guide 
+ Tutorials 
+ Reference 
+ Contributing 
+ Release Notes 
+ FastAgency
+ 2025-04-01 
+ Back to top © April 2025 onwards ag2ai 
+ Made with Material for MkDocs
+
+=== [meta] https://fastagency.ai/latest/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/ag2ai/fastagency
+![alt text](https://github.com/ag2ai/fastagency/blob/main/docs/docs/assets/img/FA-Secondary-LOGO.jpg?raw=true)
+
+
+# FastAgency
+
+
+<b>The fastest way to bring multi-agent workflows to production.</b>
+
+
+---
+
+<p align="center">
+  <a href="https://github.com/ag2ai/fastagency/actions/workflows/pipeline.yaml" target="_blank">
+    <img src="https://github.com/ag2ai/fastagency/actions/workflows/pipeline.yaml/badge.svg?branch=main" alt="Test Passing"/>
+  </a>
+
+  <a href="https://coverage-badge.samuelcolvin.workers.dev/redirect/ag2ai/fastagency" target="_blank">
+      <img src="https://coverage-badge.samuelcolvin.workers.dev/ag2ai/fastagency.svg" alt="Coverage">
+  </a>
+
+  <a href="https://www.pepy.tech/projects/fastagency" target="_blank">
+    <img src="https://static.pepy.tech/personalized-badge/fastagency?period=month&units=international_system&left_color=grey&right_color=green&left_text=downloads/month" alt="Downloads"/>
+  </a>
+
+  <a href="https://pypi.org/project/fastagency" target="_blank">
+    <img src="https://img.shields.io/pypi/v/fastagency?label=PyPI" alt="Package version">
+  </a>
+
+  <a href="https://pypi.org/project/fastagency" target="_blank">
+    <img src="https://img.shields.io/pypi/pyversions/fastagency.svg" alt="Supported Python versions">
+  </a>
+
+  <br/>
+
+  <a href="https://github.com/ag2ai/fastagency/actions/workflows/codeql.yml" target="_blank">
+    <img src="https://github.com/ag2ai/fastagency/actions/workflows/codeql.yml/badge.svg" alt="CodeQL">
+  </a>
+
+  <a href="https://github.com/ag2ai/fastagency/actions/workflows/dependency-review.yaml" target="_blank">
+    <img src="https://github.com/ag2ai/fastagency/actions/workflows/dependency-review.yaml/badge.svg" alt="Dependency Review">
+  </a>
+
+  <a href="https://github.com/ag2ai/fastagency/blob/main/LICENSE" target="_blank">
+    <img src="https://img.shields.io/github/license/ag2ai/fastagency.png" alt="License">
+  </a>
+
+  <a href="https://github.com/ag2ai/fastagency/blob/main/CODE_OF_CONDUCT.md" target="_blank">
+    <img src="https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg" alt="Code of Conduct">
+  </a>
+
+  <a href="https://discord.gg/kJjSGWrknU" target="_blank">
+      <img alt="Discord" src="https://img.shields.io/discord/1247409549158121512?logo=discord">
+  </a>
+</p>
+
+---
+
+## What is FastAgency?
+
+For start, FastAgency is not yet another agentic AI framework. There are many such
+frameworks available today, the most popular open-source one is [**AG2** (formerly AutoGen)](https://github.com/ag2ai/ag2). FastAgency provides you with a unified programming interface for deploying agentic workflows written in AG2 agentic framework in both development and productional settings. With only a few lines of code, you can create a web chat application or REST API service interacting with agents of your choice. If you need to scale-up your workloads, FastAgency can help you deploy a fully distributed system using internal message brokers coordinating multiple machines in multiple datacenters with just a few lines of code changed from your local development setup.
+
+**FastAgency** is an open-source framework designed to accelerate the transition from prototype to production for multi-agent AI workflows. For developers who use the AG2 (formerly AutoGen) framework, FastAgency enables you to seamlessly scale Jupyter notebook prototypes into a fully functional, production-ready applications. With multi-framework support, a unified programming interface, and powerful API integration capabilities, FastAgency streamlines the deployment process, saving time and effort while maintaining flexibility and performance.
+
+Whether you're orchestrating complex AI agents or integrating external APIs into workflows, FastAgency provides the tools necessary to quickly transition from concept to production, reducing development cycles and allowing you to focus on optimizing your multi-agent systems.
+
+## Key Features
+
+- [**Unified Programming Interface Across UIs**](user-guide/ui/index.md): FastAgency features a **common programming interface** that enables you to develop your core workflows once and reuse them across various user interfaces without rewriting code. This includes support f

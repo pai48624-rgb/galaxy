@@ -1,0 +1,167 @@
+{
+ "company": "Retell AI",
+ "one_liner_ko": "사람처럼 말하고 업무를 처리하는 AI 음성 에이전트로 전화 업무를 자동화하는 플랫폼",
+ "what_it_does_ko": "Retell은 전화·메시지 기능, 프롬프트, 도구, 분석이 내장된 AI 음성·채팅 에이전트를 만들고 테스트·배포·모니터링하는 플랫폼이다. 전화망·음성·언어 모델 계층을 Retell이 운영하므로 사용자는 공급자 연결 대신 에이전트 설정에 집중한다. 드래그앤드롭 캔버스로 복잡한 통화 흐름을 설계하고, 시나리오 시뮬레이션과 실제 통화 기반 회귀 테스트로 검증한다. 인바운드·아웃바운드 캠페인·웹·SMS에 배포하고 통화 QA와 맞춤 분석을 제공한다.",
+ "key_features": [
+  "드래그앤드롭 캔버스로 통화 흐름 설계(함수·연동·통화 전환·DTMF·SMS)",
+  "수천 개 시나리오 시뮬레이션과 실제 통화 기반 회귀 테스트",
+  "인바운드·아웃바운드 캠페인·웹 위젯·SMS 배포",
+  "통화 100%까지 AI 품질 검사(QA), 맞춤 분석·A/B 비교",
+  "IVR 메뉴 탐색, 실시간 통화 청취·개입, 사람 상담원 인계",
+  "CRM 정보 반영 및 통화 결과 기록",
+  "웹훅·API·SDK·MCP·CLI"
+ ],
+ "use_cases_ko": [
+  "AI 리셉션·예약 담당",
+  "리드 검증",
+  "고객 서비스·채권 추심 전화"
+ ],
+ "pricing": {
+  "free_tier": "있음 ($10 무료 크레딧, 이후 사용량 과금, 동시 통화 20 포함)",
+  "plans": [
+   {
+    "name": "Pay as you go(음성)",
+    "price": 0.07,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "분당 $0.07~$0.31(LLM·음성 선택에 따라), 동시 통화 20 포함",
+    "page_lang": "en"
+   },
+   {
+    "name": "Pay as you go(채팅)",
+    "price": 0.002,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "메시지당 $0.002부터",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "맞춤 가격, 동시 통화 제한 없음",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://www.retellai.com/pricing"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "CLI",
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.retellai.com/",
+   "quote": "AI Voice Agents Platform to Automate Phone Calls | Retell AI"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.retellai.com/",
+   "quote": "Build, deploy, and manage next-generation AI voice agents that sound human, execute tasks, and scale effortlessly."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.retellai.com/general/introduction",
+   "quote": "Retell is a platform to build, test, deploy, and monitor AI voice and chat agents with telephony, prompts, tools, and analytics built in."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.retellai.com/general/introduction",
+   "quote": "Retell runs the telephony, speech, and language model layers, so you configure the agent instead of connecting providers."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.retellai.com/",
+   "quote": "Add functions, integrations, call transfers, DTMF, SMS, and custom logic to handle even your most complex workflows."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.retellai.com/",
+   "quote": "Manually test changes, simulate thousands of scenarios, and turn real production calls into regression tests."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.retellai.com/",
+   "quote": "Deploy your agent in minutes for inbound calls, outbound campaigns, web, or SMS."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.retellai.com/",
+   "quote": "QA up to 100% of your AI calls to measure performance at scale"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.retellai.com/",
+   "quote": "Detect IVRs, understand menu options, press digits, enter extensions"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.retellai.com/",
+   "quote": "Enrich conversations with existing customer data, then write call outcomes, captured information, and follow-ups back to your CRM."
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.retellai.com/general/introduction",
+   "quote": "Guides \n API Reference \n SDK \n MCP \n CLI"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.retellai.com/",
+   "quote": "Receptionist \n Appointment Setter \n Lead Qualification \n Customer Service \n Debt Collection"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.retellai.com/pricing",
+   "quote": "Go live in minutes with $10 in free credits."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.retellai.com/pricing",
+   "quote": "$0.07-$0.31 / min for AI Voice Agents"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.retellai.com/pricing",
+   "quote": "$0.002+ / msg for AI Chat Agents"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.retellai.com/pricing",
+   "quote": "20 Free Concurrent Calls"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.retellai.com/pricing",
+   "quote": "Custom Pricing for AI Voice Agents"
+  },
+  {
+   "field": "api",
+   "url": "https://www.retellai.com/pricing",
+   "quote": "Webhooks and API Access"
+  },
+  {
+   "field": "platforms",
+   "url": "https://www.retellai.com/",
+   "quote": "Build and orchestrate custom communication experiences through a flexible API."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.retellai.com/",
+   "quote": "html lang: en\nhreflang: ar, da, de, el, en, es, it, ja, nl, pt, sv, x-default"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "구독 요금제 없이 $10 무료 크레딧 후 분당 $0.07~$0.31 종량제(채팅은 메시지당 $0.002+), 그 위는 Enterprise 맞춤 가격",
+   "diff": "기존 '무료+유료 구독'과 달리 월 구독 없이 순수 종량제",
+   "url": "https://www.retellai.com/pricing"
+  }
+ ]
+}

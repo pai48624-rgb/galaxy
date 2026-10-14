@@ -1,0 +1,114 @@
+{
+ "company": "NVIDIA",
+ "one_liner_ko": "GPU 가속 고성능 애플리케이션을 만들기 위한 NVIDIA의 개발 환경(무료 툴킷).",
+ "what_it_does_ko": "NVIDIA CUDA Toolkit은 GPU 가속 애플리케이션을 개발·최적화·배포하기 위한 개발 환경이다. 임베디드 시스템, 데스크톱 워크스테이션, 기업 데이터센터, 클라우드, 슈퍼컴퓨터에서 쓸 수 있다. GPU 가속 라이브러리, 디버깅·최적화 도구, C/C++ 컴파일러, 런타임 라이브러리를 포함한다. CUDA 13.4는 Windows on Arm 지원과 NVIDIA Rubin 아키텍처 개발 지원을 추가했다.",
+ "key_features": [
+  "GPU 가속 라이브러리·디버깅·최적화 도구·C/C++ 컴파일러·런타임 포함",
+  "CUDA Tile C++(타일 프로그래밍 모델)",
+  "cuTile Python으로 파이썬에서 타일 커널 작성",
+  "CUDA 13.4: Windows on Arm 지원",
+  "Nsight Compute·Nsight Systems 성능 분석 도구",
+  "NGC 카탈로그의 CUDA 컨테이너",
+  "CUDA-X 라이브러리(AI·데이터 과학·수학)",
+  "GitHub 샘플 CUDA 코드"
+ ],
+ "use_cases_ko": [
+  "개발자가 임베디드부터 데이터센터·슈퍼컴퓨터까지 GPU 가속 애플리케이션 개발·최적화·배포"
+ ],
+ "pricing": {
+  "free_tier": "있음 (무료 도구로 안내)",
+  "plans": [],
+  "pricing_url": "https://developer.nvidia.com/cuda/toolkit"
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "윈도"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://developer.nvidia.com/cuda/toolkit",
+   "quote": "NVIDIA CUDA Toolkit"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://developer.nvidia.com/cuda/toolkit",
+   "quote": "provides a development environment for creating high-performance, GPU-accelerated applications"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://developer.nvidia.com/cuda/toolkit",
+   "quote": "you can develop, optimize, and deploy your applications on GPU-accelerated embedded systems, desktop workstations, enterprise data centers, cloud-based platforms, and supercomputers."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://developer.nvidia.com/cuda/toolkit",
+   "quote": "CUDA 13.4 brings a host of advancements to the platform including CUDA support for the Windows on Arm ecosystem and developer support for the NVIDIA Rubin Architecture."
+  },
+  {
+   "field": "key_features",
+   "url": "https://developer.nvidia.com/cuda/toolkit",
+   "quote": "The toolkit includes GPU-accelerated libraries , debugging and optimization tools, a C/C++ compiler, and a runtime library."
+  },
+  {
+   "field": "key_features",
+   "url": "https://developer.nvidia.com/cuda/toolkit",
+   "quote": "CUDA Tile C++ is an expression of the CUDA Tile programming model in C++."
+  },
+  {
+   "field": "key_features",
+   "url": "https://developer.nvidia.com/cuda/toolkit",
+   "quote": "cuTile Python is an expression of the CUDA Tile programming model in Python."
+  },
+  {
+   "field": "key_features",
+   "url": "https://developer.nvidia.com/cuda/toolkit",
+   "quote": "NVIDIA Nsight Compute and Nsight System suite of tools"
+  },
+  {
+   "field": "key_features",
+   "url": "https://developer.nvidia.com/cuda/toolkit",
+   "quote": "CUDA containers are available to download from NGC™"
+  },
+  {
+   "field": "key_features",
+   "url": "https://developer.nvidia.com/cuda/toolkit",
+   "quote": "A suite of AI, data science, and math libraries developed to help developers accelerate their applications."
+  },
+  {
+   "field": "key_features",
+   "url": "https://developer.nvidia.com/cuda/toolkit",
+   "quote": "GitHub repository of sample CUDA code"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://developer.nvidia.com/cuda/toolkit",
+   "quote": "With it, you can develop, optimize, and deploy your applications on GPU-accelerated embedded systems"
+  },
+  {
+   "field": "pricing",
+   "url": "https://developer.nvidia.com/cuda/toolkit",
+   "quote": "CUDA Toolkit - Free Tools and Training | NVIDIA Developer"
+  },
+  {
+   "field": "platforms",
+   "url": "https://developer.nvidia.com/cuda/toolkit",
+   "quote": "Installing CUDA Toolkit on Windows and WSL"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://developer.nvidia.com/cuda/toolkit",
+   "quote": "html lang: en\nhreflang: en-us, x-default, zh-cn"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "CUDA Toolkit을 무료 도구(Free Tools)로 내려받아 쓰는 개발 환경으로 안내",
+   "diff": "기존 분류는 '사용량 기반 종량제(클라우드/GPU)'이나 공식 페이지는 무료 다운로드 툴킷이며 사용량 과금 언급 없음",
+   "url": "https://developer.nvidia.com/cuda/toolkit"
+  }
+ ],
+ "plan_change": []
+}

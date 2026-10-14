@@ -1,0 +1,50 @@
+{
+ "company": null,
+ "one_liner_ko": "하기 싫은 코딩 작업(버그 수정·버전 올리기·테스트 등)을 대신 처리하는 자율 코딩 에이전트.",
+ "what_it_does_ko": "Jules는 GitHub 저장소와 브랜치를 고르고 지시를 쓰면 작업을 대신 수행하는 자율 코딩 에이전트다. GitHub 이슈에 'jules' 라벨을 붙여 바로 작업을 맡길 수도 있다. 저장소를 클라우드 VM에 복제하고 Gemini 3 Pro 모델로 계획을 세운 뒤, 변경 diff를 보여 주어 사용자가 검토·승인하게 한다. 승인하면 PR을 만들어 브랜치에 병합하고 GitHub에 게시할 수 있다.",
+ "key_features": [
+  "GitHub 저장소·브랜치 선택 후 지시로 작업",
+  "이슈에 'jules' 라벨로 작업 할당",
+  "클라우드 VM에서 저장소 복제·작업",
+  "Gemini 3 Pro 기반 작업 계획",
+  "변경 diff 검토·승인",
+  "PR 생성·병합·게시",
+  "여러 작업 동시 실행"
+ ],
+ "use_cases_ko": [
+  "버그 수정·버전 올리기·테스트 작성 같은 반복 코딩 작업 위임",
+  "기능 구현"
+ ],
+ "pricing": {
+  "free_tier": "불명 (기본 Jules 등급: 하루 15작업·동시 3개, 가격 표시 없음)",
+  "plans": [
+   {"name": "Jules", "price": null, "currency": null, "period": null, "limits": "하루 15작업, 동시 3작업, Gemini 2.5 Pro", "page_lang": "en"},
+   {"name": "Jules in Pro", "price": null, "currency": null, "period": null, "limits": "하루 100작업, 동시 15작업, Gemini 3 Pro 접근 확대", "page_lang": "en"},
+   {"name": "Jules in Ultra", "price": null, "currency": null, "period": null, "limits": "하루 300작업, 동시 60작업, 최신 모델 우선 접근", "page_lang": "en"}
+  ],
+  "pricing_url": "https://jules.google/"
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": ["웹"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "one_liner_ko", "url": "https://jules.google/", "quote": "Jules does coding tasks you don't want to do."},
+  {"field": "what_it_does_ko", "url": "https://jules.google/", "quote": "1 Select your GitHub repository and branch. Write a detailed prompt for Jules."},
+  {"field": "what_it_does_ko", "url": "https://jules.google/", "quote": "2 Jules fetches your repository, clones it to a Cloud VM, and develops a plan utilizing the latest Gemini 3 Pro model ."},
+  {"field": "what_it_does_ko", "url": "https://jules.google/", "quote": "4 Jules creates a PR of the changes. Approve the PR, merge it to your branch, and publish it on GitHub."},
+  {"field": "key_features", "url": "https://jules.google/", "quote": "Use the \"jules\" label in an issue to assign a task directly in GitHub."},
+  {"field": "key_features", "url": "https://jules.google/", "quote": "3 Jules provides a diff of the changes. Quickly browse and approve code edits."},
+  {"field": "key_features", "url": "https://jules.google/", "quote": "15 concurrent tasks, so you can run multiple threads in parallel"},
+  {"field": "use_cases_ko", "url": "https://jules.google/", "quote": "Bug Fixing Version Bump Tests Fixing Jed's Code Feature Building"},
+  {"field": "pricing", "url": "https://jules.google/", "quote": "15 tasks per day"},
+  {"field": "pricing", "url": "https://jules.google/", "quote": "3 concurrent tasks"},
+  {"field": "pricing", "url": "https://jules.google/", "quote": "100 tasks per day, enough to run Jules throughout your coding day"},
+  {"field": "pricing", "url": "https://jules.google/", "quote": "300 tasks per day to handle the most demanding development cycles"},
+  {"field": "pricing", "url": "https://jules.google/", "quote": "60 concurrent tasks, built for massively parallel workflows"},
+  {"field": "platforms", "url": "https://jules.google/", "quote": "Plans Try Jules"},
+  {"field": "korean_support", "url": "https://jules.google/", "quote": "html lang: en"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

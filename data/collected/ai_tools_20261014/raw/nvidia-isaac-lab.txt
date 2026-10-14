@@ -1,0 +1,157 @@
+=== [home] https://developer.nvidia.com/isaac/lab (lang=en)
+Isaac Lab | NVIDIA Developer 
+ Home 
+ Isaac 
+ Isaac Lab
+ NVIDIA Isaac Lab
+ NVIDIA Isaac™ Lab is an open-source, GPU-accelerated, agent-ready simulation framework for robot learning designed to train robot policies at scale. 
+It supports flexible integration across physics engines, renderers, and learning algorithms, including Newton and NVIDIA Omniverse™ libraries. This helps to accelerate vision and perception training for real-world robot applications, from desktop to cloud.
+ Download Now from GitHub
+ Documentation
+ How Isaac Lab Works
+ Isaac Lab’s modular architecture and NVIDIA GPU-based parallelization make it ideal for building robot policies that cover a wide range of embodiments, including humanoid robots , manipulators, and autonomous mobile robots (AMRs). 
+This gives you a comprehensive framework for robot learning, covering everything from environment setup to policy training. It supports both imitation and reinforcement learning methods. Plus, you can further customize and extend Isaac Lab capabilities with a variety of physics engines, such as Newton, NVIDIA® PhysX®, NVIDIA Warp , and MuJoCo. 
+Isaac Lab is also the foundational robot learning framework of the NVIDIA Isaac GR00T platform .
+ Introductory Resources
+ Isaac Lab Whitepaper 
+ See how the combination of advanced simulation capabilities and data center scale execution unlock breakthroughs in robotics research .
+ Read the Whitepaper 
+ NVIDIA Isaac Lab-Arena
+ Built on Isaac Lab, Isaac Lab-Arena is an open-source framework for scalable policy evaluation in simulation.
+ Learn More 
+ Isaac Lab Courses
+ Explore our reference workflow that packages supported models, libraries, frameworks, and a task into a single reproducible workflow for a humanoid robot.
+ Take the Course 
+ Isaac Lab Office Hours
+ Stay informed with our recurring office hours that cover in-depth topics with experts answering questions about Isaac Lab.
+ Watch the Livestreams
+ Key Features
+ Flexible Robot Learning 
+ Customize workflows with robot training environments, tasks, learning techniques, and the ability to integrate custom libraries (e.g., skrl, RLLib, rl_games, and more). 
+ Reduced Sim-to-Real Gap 
+ Train policies with higher-fidelity physics using Newton, PhysX, or any physics engine, enabling stronger contact modeling and more realistic interactions for a broader class of tasks.
+ Scale Training Anywhere
+ Run fast, large-scale training with GPU-optimized simulation paths built on Warp and NVIDIA® CUDA®-graphable environments, and deploy easily with standalone headless operation, from workstation to data center.
+ Get Started With Isaac Lab
+ Download
+ Get started with the latest version of Isaac Lab by following the installation guides on GitHub. 
+ Installation Guide (GitHub) Documentation 
+ Tutorials
+ Access the step-by-step guide to help understand and use various features of the framework. 
+ Developer Guide 
+ Start Your Learning Path
+ Explore advanced concepts in robot learning, gain practical skills, and learn how you can streamline your development processes with Isaac Lab. 
+ Learn More 
+ Starter Kits
+ View more tutorials and how-to guides in the documentation . 
+ Accelerate Robot Learning
+ Choose from reinforcement learning and imitation learning to train AI robots. Easily bring your custom libraries and use the direct agent-environment or hierarchical-manager development workflows.
+ Read Use Case: Robot Learning 
+ Isaac GR00T-Mimic Blueprint for Synthetic Manipulation Motion Generation 
+ Physical AI Dataset 
+ Enable Perception in the Loop
+ Tiled rendering reduces rendering time by consolidating input from multiple cameras into a single large image. With a streamlined API for handling vision data, the rendered output directly serves as observational data for simulation learning.
+ Read Guide: Tiled Rendering 
+ Scale With Multi-GPU and Multi-Node Training
+ Scale up training of cross-embodied models for complex reinforcement learning environments across multiple GPUs and nodes. Deploy locally and on the cloud (AWS, GCP, Azure, and Alibaba Cloud) by integrating with NVIDIA OSMO.
+ Read Guide: Multi-GPU and Multi-Node Rendering 
+ Accurate High-Fidelity Physics Simulation and Rendering in Omniverse
+ Tap into the latest GPU-accelerated PhysX version through Isaac Lab, including support for deformables, ensuring quick and accurate physics simulations augmented by domain randomizations. 
+ Read Guide: Mastering Omniverse for Robotics 
+ Isaac Lab Learning Library
+ Research
+ A GPU Accelerated Simulation Framework For Multi-Modal Robot Learning
+ NVIDIA Isaac Lab 
+We present Isaac Lab, the natural successor to Isaac Gym, which extends the paradigm of GPU-native robotics simulation into the era of large-scale multi-modal learning.
+ Tech Blog
+ Streamline Robot Learning with Whole-Body Control and Enhanced Teleoperation in NVIDIA Isaac Lab 2.3
+ NVIDIA Isaac Lab
+The latest version of Isaac Lab 2.3, in early developer preview, improves humanoid robot capabilities with advanced whole-body control, enhanced imitation learning, and better locomotion.
+ Tech Blog
+ Quadruped Robot Locomotion and Multiphysics Simulation Using Newton in NVIDIA Isaac Lab
+ NVIDIA Isaac Lab 
+Walks through how to train a quadruped robot to move from one point to another and how to set up a multiphysics simulation with an industrial manipulator to fold clothes. This tutorial uses Newton within NVIDIA Isaac Lab.
+ Ecosystem
+ Our industry partners and collaborators are integrating NVIDIA Isaac Lab and accelerated computing into their platforms and solutions.
+ More Resources
+ Explore the Community 
+ Get Training and Certification
+ Join the Program for Startups
+ Latest Isaac Lab News
+ Get started with NVIDIA Isaac Lab today.
+ Download Now Documentation 
+ FAQs
+ The Isaac Lab framework is open-sourced under the BSD-3-Clause license .
+ Isaac Sim™ is a comprehensive robotics simulation platform built on NVIDIA Omniverse that provides high-fidelity simulation with advanced physics and photorealistic rendering. It focuses on synthetic data generation (SDG) and testing and validation (SIL/HIL) and is a reference template for custom robotics simulators.
+In contrast, Isaac Lab is a lightweight, open-source framework built on top of Isaac Sim, specifically optimized for robot learning workflows and designed to simplify common tasks in robotics research like reinforcement learning, imitation learning, and motion planning.
+ If you’re an existing NVIDIA Isaac Gym (predecessor of Isaac Lab) user, we recommend migrating to Isaac Lab to ensure you have access to the latest advancements in robot learning and a powerful development environment to accelerate your robot training efforts. Check out the migration guide from Isaac Gym environments to Isaac Lab.
+ Yes, Isaac Lab and MuJoCo are complementary. MuJoCo's ease of use and lightweight design allow for rapid prototyping and deployment of policies and Isaac Lab can complement it when you want to create more complex scenes, scaling massively parallel environments with GPUs and high-fidelity sensor simulations with RTX rendering. NVIDIA and MuJoCo are actively exploring advancing technical collaborations, stay tuned for future announcements.
+
+=== [meta] https://developer.nvidia.com/isaac/lab
+html lang: en
+hreflang: en-us, x-default, zh-cn
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/isaac-sim/IsaacLab
+![Isaac Lab](docs/source/_static/isaaclab.jpg)
+
+---
+
+# Isaac Lab 3.0.0
+
+[![IsaacSim](https://img.shields.io/badge/IsaacSim-6.2.0-silver.svg)](https://docs.isaacsim.omniverse.nvidia.com/latest/index.html)
+[![Python](https://img.shields.io/badge/python-3.12-blue.svg)](https://docs.python.org/3/whatsnew/3.12.html)
+[![Linux platform](https://img.shields.io/badge/platform-linux--64-orange.svg)](https://releases.ubuntu.com/22.04/)
+[![Windows platform](https://img.shields.io/badge/platform-windows--64-orange.svg)](https://www.microsoft.com/en-us/)
+[![pre-commit](https://img.shields.io/github/actions/workflow/status/isaac-sim/IsaacLab/pre-commit.yaml?logo=pre-commit&logoColor=white&label=pre-commit&color=brightgreen)](https://github.com/isaac-sim/IsaacLab/actions/workflows/pre-commit.yaml)
+[![docs status](https://img.shields.io/github/actions/workflow/status/isaac-sim/IsaacLab/docs.yaml?label=docs&color=brightgreen)](https://github.com/isaac-sim/IsaacLab/actions/workflows/docs.yaml)
+[![License](https://img.shields.io/badge/license-BSD--3-yellow.svg)](https://opensource.org/licenses/BSD-3-Clause)
+[![License](https://img.shields.io/badge/license-Apache--2.0-yellow.svg)](https://opensource.org/license/apache-2-0)
+
+
+This branch targets Isaac Sim 6.2. For installation instructions, see the
+[Isaac Lab documentation](https://isaac-sim.github.io/IsaacLab/develop/source/setup/installation/index.html).
+
+Note that this branch is currently under active development and may experience breaking changes or error messages.
+Performance issues and regressions may also be observed in some use cases.
+
+
+**Isaac Lab** is a GPU-accelerated, open-source framework designed to unify and simplify robotics research workflows,
+such as reinforcement learning, imitation learning, and motion planning. Built on [NVIDIA Isaac Sim](https://docs.isaacsim.omniverse.nvidia.com/latest/index.html),
+it combines fast and accurate physics and sensor simulation, making it an ideal choice for sim-to-real
+transfer in robotics.
+
+Isaac Lab provides developers with a range of essential features for accurate sensor simulation, such as RTX-based
+cameras, LIDAR, or contact sensors. The framework's GPU acceleration enables users to run complex simulations and
+computations faster, which is key for iterative processes like reinforcement learning and data-intensive tasks.
+Moreover, Isaac Lab can run locally or be distributed across the cloud, offering flexibility for large-scale deployments.
+
+A detailed description of Isaac Lab can be found in our [arXiv paper](https://arxiv.org/abs/2511.04831).
+
+## Key Features
+
+Isaac Lab offers a comprehensive set of tools and environments designed to facilitate robot learning:
+
+- **Robots**: A diverse collection of robots, from manipulators, quadrupeds, to humanoids, with more than 16 commonly available models.
+- **Environments**: Ready-to-train implementations of more than 30 environments, which can be trained with popular reinforcement learning frameworks such as RSL RL, SKRL, RL Games, or Stable Baselines. We also support multi-agent reinforcement learning.
+- **Physics**: Rigid bodies, articulated systems, deformable objects
+- **Sensors**: RGB/depth/segmentation cameras, camera annotations, IMU, contact sensors, ray casters.
+
+
+## Getting Started
+
+### Documentation
+
+Our [documentation page](https://isaac-sim.github.io/IsaacLab/develop/) provides everything you need to get started, including
+detailed tutorials and step-by-step guides. Follow these links to learn more about:
+
+- [Installation steps](https://isaac-sim.github.io/IsaacLab/develop/source/setup/installation/index.html)
+- [Reinforcement learning](https://isaac-sim.github.io/IsaacLab/develop/source/concepts/reinforcement_learning.html)
+- [Tutorials and how-to guides](https://isaac-sim.github.io/IsaacLab/develop/source/how-to/index.html)
+- [Available environments](https://isaac-sim.github.io/IsaacLab/develop/source/setup/environments.html)
+
+## Performance Dashboard
+
+We continuously benchmark Isaac Lab across different physics backends, renderers, and data types.
+The **[Isaac Lab Performance Dashboard](https://nvidia.github.io/omniperf/)** provides interactive
+charts showing preset comparison 

@@ -1,0 +1,84 @@
+{
+ "company": "Alibaba (계산 플랫폼 PAI 팀)",
+ "one_liner_ko": "Flink 기반의 범용 머신러닝 알고리즘 플랫폼",
+ "what_it_does_ko": "Alink는 알리바바 계산 플랫폼 PAI 팀이 개발한 Flink 기반 범용 알고리즘 플랫폼이다. Python 패키지 PyAlink를 pip로 설치해 Jupyter Notebook에서 쓸 수 있다. 알고리즘 컴포넌트의 인터페이스는 Java API와 거의 같고 setXXX로 파라미터를 정해 link로 다른 컴포넌트와 연결한다. Java판·Python판 튜토리얼과 오픈소스 알고리즘 목록을 제공한다.",
+ "key_features": [
+  "Flink 기반 머신러닝 알고리즘 컴포넌트",
+  "Python 패키지 PyAlink(pip 설치)",
+  "Java API와 같은 형태의 컴포넌트 인터페이스",
+  "Jupyter Notebook에서 사용",
+  "여러 Flink 버전별 패키지 제공",
+  "Java·Python 튜토리얼"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "오픈소스(라이선스 이름 미표기)",
+ "api": "있음",
+ "platforms": [
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://github.com/alibaba/Alink",
+   "quote": "由阿里巴巴计算平台PAI团队研发"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/alibaba/Alink",
+   "quote": "Alink是基于Flink的通用算法平台"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/alibaba/Alink",
+   "quote": "可以通过 Jupyter Notebook 来开始使用 PyAlink"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/alibaba/Alink",
+   "quote": "在 PyAlink 中，算法组件提供的接口基本与 Java API 一致"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/alibaba/Alink",
+   "quote": "PyAlink 根据 Alink 所支持的 Flink 版本提供不同的 Python 包"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/alibaba/Alink",
+   "quote": "使用 pip 命令进行安装"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/alibaba/Alink",
+   "quote": "Alink教程（Python版）"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/alibaba/Alink",
+   "quote": "开源算法列表"
+  },
+  {
+   "field": "api",
+   "url": "https://github.com/alibaba/Alink",
+   "quote": "在 PyAlink 中，算法组件提供的接口基本与 Java API 一致"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/alibaba/Alink",
+   "quote": "在 PyAlink 中，算法组件提供的接口基本与 Java API 一致"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://github.com/alibaba/Alink",
+   "quote": "[English](README.en-US.md)| 简体中文"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

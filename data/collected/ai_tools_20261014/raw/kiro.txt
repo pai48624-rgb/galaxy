@@ -1,0 +1,270 @@
+=== [home] https://kiro.dev/ (lang=en)
+Kiro: Move beyond AI coding to agentic engineering 
+ Move beyond AI coding to agentic engineering M o v e b e y o n d A I c o d i n g t o a g e n t i c e n g i n e e r i n g Move beyond AI coding to agentic engineering 
+ Kiro helps developers and teams do their best work: turn prompts into executable specs, validate code correctness to find bugs unit tests miss, and build across large codebases with parallel agents that learn from every session.
+ Download Kiro Crew 
+ Downloads 
+ Install CLI curl -fsSL https://cli.kiro.dev/install | bash 
+ What’s New
+ 🔥 $20 credit when you first sign up for a paid plan using social login or Builder ID ↗ Software factory with Kiro Crew Workflows 
+ Loading image... 
+ Terminal — 80×24
+ Loading cast file...
+ View transcript: Kiro CLI demo: starting a cloud session 
+ Loading image... 
+ Bring structure to AI coding with spec-driven development
+ Kiro turns your prompts into requirements, architectural designs, and sequenced tasks , then implements them with parallel agents . Property-based tests catch the edge cases that pass unit tests but break in production. With spec-driven development, you ship maintainable code that matches what you specified.
+ Loading image... 
+ Check correctness to catch issues missed by unit tests
+ “All tests passed” doesn’t mean the code matches your intent. Before writing code, Kiro checks your requirements for contradictions and gaps using automated reasoning techniques. Then it checks behavior with property-based tests (like fuzz testing) which assert rules that must hold across all inputs instead of checking a few examples.
+ Loading image... 
+ Alongside you from plan to PR
+ Plan with specs . Implement with parallel agents , on your local machine or in the cloud. Catch bugs with property-based tests , or pull context from tools like Figma or Terraform . Run the headless CLI in CI/CD to review PRs and fix bugs without opening an editor.
+ auto 1.0x baseline credit cost Kiro picks the best model for each task gpt-5.6-sol 4.4x the credit cost of Auto Hardest multi-step work with a 1M context window gpt-5.6-terra 2.2x the credit cost of Auto Balanced tier for everyday agentic work gpt-5.6-luna 0.6x the credit cost of Auto Fastest, lowest-cost GPT-5.6 tier for high-frequency tasks claude-fable-5.1 6.0x the credit cost of Auto Enterprise preview with a 1M context window, US East only claude-opus-5.5 2.0x the credit cost of Auto Demanding agentic coding and knowledge work with a 1M context window claude-sonnet-5.5 1.3x the credit cost of Auto Fast scoped coding and agentic work with a 1M context window claude-opus-5 2.2x the credit cost of Auto Highest reliability for sustained multi-file and multi-agent work claude-opus-4.8 2.2x the credit cost of Auto Previous Opus generation claude-opus-4.7 2.2x the credit cost of Auto Previous Opus generation claude-opus-4.6 2.2x the credit cost of Auto Previous Opus generation claude-opus-4.5 2.2x the credit cost of Auto Previous Opus generation claude-sonnet-5 1.3x the credit cost of Auto Near-Opus agentic coding at a lower cost claude-sonnet-4.6 1.3x the credit cost of Auto Previous Sonnet generation claude-sonnet-4.5 1.3x the credit cost of Auto Previous Sonnet generation claude-sonnet-4 1.3x the credit cost of Auto Hybrid reasoning and coding for regular use claude-haiku-4.5 0.4x the credit cost of Auto Fast and frugal for quick iterations and sub-agents deepseek-3.2 0.25x the credit cost of Auto Open-weight model from DeepSeek minimax-m2.5 0.25x the credit cost of Auto Frontier coding at low cost across the development lifecycle glm-5 0.5x the credit cost of Auto Repo-scale agentic work across large codebases minimax-m2.1 0.15x the credit cost of Auto Previous MiniMax generation qwen3-coder-next 0.05x the credit cost of Auto Long coding sessions on a budget with strong error recovery 
+ Set auto as default model for default Global default for new sessions… 
+ Add rate limiting to the /export endpoint and write property tests for it.
+ Trust 
+ default my-service · main 150 4 39 auto · Default 
+ Powered by your favorite models
+ Choose the best model for every task: Anthropic Claude, OpenAI GPT, open-weight models like DeepSeek and Qwen, or Auto , which picks the best model for the task based on complexity, factoring in model quality, latency, and cost. Try it: open the model menu, type to filter, pick a model, then set its reasoning effort.
+ Learn about models 
+ Built for the way you work
+ Built on open standards
+ The Kiro agent is compatible with Agent Client Protocol (ACP) so you can bring it to your favorite tools. It supports AGENTS.md, Skills.md , and MCP . The Kiro IDE supports Open VSX extensions , themes, and VS Code settings . Kiro CLI works with bash, zsh, fish, and over 500 popular CLIs .
+ Enterprise-ready
+ Built and operated by AWS, Kiro benefits from the same security, reliability, and privacy standards and controls trusted by millions of customers. Kiro offers IAM and SSO authentication , usage dashboards, cost management controls, IP indemnity, governance , and administration controls you’d expect from an enterprise-grade product.
+ Kiro for enterprise 
+ Predictable pricing
+ Kiro offers a credit-based pricing model with no daily or weekly rate limits and pre-paid overages, so you can code without breaking your flow or getting a surprise bill.
+ View pricing 
+ Trusted by engineers worldwide
+ As a startup co-founder and CTO, time is the most important resource. Kiro justifies the use of my time for developing our business critical assets in-house.
+ RO Rolf Koski
+ CTO & Co-Founder
+ In my role designing AWS Cloud and AI solutions with Terraform and Python, spec-driven development with Kiro has brought code relevancy and quality to a whole new level. We’ve accelerated feature development dramatically, reducing time to customer value from weeks to days. We are excited to welcome Kiro as our newest team member.
+ HÅ Håkon Eriksen Drange
+ Principal Cloud Architect
+ Kiro is a strong ally for startups. It naturally turns overlooked docs and specs into robust assets, making growth smoother and future scaling more effective.
+ KE Kento Ikeda
+ Founder & Engineer
+ I use Kiro for everything - drafting new Terraform modules, tweaking container setups, even writing down random AI ideas at 2 am. But more than anything, it supports how I learn. I’m endlessly curious, and Kiro helps me stay in that learning loop—tinkering, breaking things, fixing them, and then allowing me to share what I learn back with the community.
+ AD Adit Modi
+ Solution Architect
+ I’ve been blown away by Kiro’s capabilities. The agentic experience is really transformative. From the multimodal inputs that understand context to the complete lifecycle control within the IDE, it feels like I’m working with a senior developer.
+ VI Vivek Velso
+ Cloud Engineering Lead
+ Most tools are great at generating code, but Kiro gives structure to the chaos before you write a single line.
+ FA Farah Abdirahman
+ Cloud & AI Engineer
+ In roughly two days, I built a secure file sharing application from scratch. By simply sharing my requirements with Kiro, I was able to create a fully secure application that incorporates encryption and various security coding practices—no additional prompts needed.
+ IH Ihor Sasovets
+ Lead Security Engineer
+ I often forget to add unit tests, or update documentation when pushing changes, but with Kiro I can create a hook and it will automatically run those tasks in the background for me, never having 
+
+=== [pricing] https://kiro.dev/pricing/ (lang=en)
+Pricing - Kiro 
+ Pricing
+ Get $20 credited toward your subscription when you first upgrade to a paid plan using social login or AWS Builder ID. 
+ KIRO FREE
+ $0
+ per month
+ 50 credits 
+ Access to open weight models* and Claude Sonnet 4.5
+ Download now 
+ for teams up to 500
+ KIRO PRO
+ $20
+ per user / month
+ 1,000 credits 
+ Access to premium models**
+ Add-on credits ($0.04/credit)
+ Sign up / upgrade 
+ for teams up to 500
+ KIRO PRO+
+ $40
+ per user / month
+ 2,000 credits 
+ Access to premium models**
+ Add-on credits ($0.04/credit)
+ Sign up / upgrade 
+ for teams up to 500
+ KIRO PRO MAX
+ $100
+ per user / month
+ 5,000 credits 
+ Access to premium models**
+ Add-on credits ($0.04/credit)
+ Sign up / upgrade 
+ for teams up to 500
+ KIRO POWER
+ $200
+ per user / month
+ 10,000 credits 
+ Access to premium models**
+ Add-on credits ($0.04/credit)
+ Sign up / upgrade 
+ Kiro for enterprise Centralized billing, SSO, usage analytics, and enterprise security controls. 
+ Contact sales Enterprise features 
+ * Users on the Free Tier who signed up with social logins or AWS Builder ID have access to Claude Sonnet 4.5 and open weight models such as Qwen3 Coder Next, DeepSeek 3.2, and MiniMax M2.1. Access is subject to rate limits .
+ ** Paid plan users have access to open weight and premium models , including Auto, Claude Sonnet 5 and Claude Opus 5. Not all premium models are available in all countries/regions.
+ Prices are exclusive of applicable taxes and duties, including VAT and applicable sales tax. For customers with a Japanese billing address, use of Kiro is subject to Japanese Consumption Tax.
+ Common Questions
+ How does Kiro pricing work? 
+ How does Kiro pricing work?
+ Kiro offers flexible pricing tiers designed around how developers use Kiro. New users can start with the perpetual Kiro Free tier, which includes 50 credits. The Free Tier includes access to open weight models and Claude Sonnet 4.5, with limits. You can upgrade to paid tiers ranging from Pro ($20/month), Pro+ ($40/month), Pro Max ($100/month), to Power ($200/month) for increased capacity. Paid tiers allow purchasing add-on credits to continue using Kiro beyond plan limits. Plans for teams include flexible overages available at $0.04 per additional credit. Kiro prices shown do not include applicable taxes or duties (such as VAT or sales tax) unless explicitly noted. Note that if you have a Japanese billing address, Japanese Consumption Tax will apply to your Kiro usage. The amount of tax collected depends on many factors, including, but not limited to, your Tax Registration Number ("TRN" or Tax ID), and billing address. Kiro in GovCloud pricing is approximately 20% higher than commercial pricing and does not include the Free tier. Kiro processes paid subscriptions on the 1st day of each calendar month.
+ Which models does Kiro use under the hood? 
+ Which models does Kiro use under the hood?
+ By default, your prompts are processed by Auto, an agent that uses a mix of different frontier models, combined with specialized models that are experts in specific tasks, intent detection, caching, and other techniques to give you a better balance of quality, latency, and costs. You can also choose a specific model, including OpenAI's GPT-5.6 (Sol, Terra, and Luna), Anthropic's Claude models (Opus 5, Opus 4.8, Sonnet 5, Sonnet 4.6, Sonnet 4.5, and Haiku 4.5), and open weight models such as DeepSeek 3.2, MiniMax M2.5, GLM-5, and Qwen3 Coder Next. See the [models page](/docs/models) for the full list and current credit multipliers.
+ How does the sign-up bonus work? 
+ How does the sign-up bonus work?
+ The first time you upgrade to any Kiro paid plan, you get $20 credited towards your subscription when using Kiro via social login or Builder ID (not AWS Identity Center). Upgrading to a paid subscription requires a valid credit card. Kiro processes paid subscriptions on the 1st day of each calendar month. Let’s assume you first upgrade to a Kiro Pro plan ($20/month) on the 15th of June, for example, here’s how the sign-up bonus would work for you: you’d get credited $20 * 15/30 days left in June, which is $10. on July 1st, your card would get charged for (July subscription price) - (remaining free trial credit), which is $20 - ($20 * 15/30) = $10.
+ What is a credit? 
+ What is a credit?
+ A credit is a unit of work in response to user prompts. Simple prompts can consume less than 1 credit. More complex prompts, such as executing a spec task, typically cost more than 1 credit. Additionally, different models consume credits at different rates, with a prompt executed via Sonnet 4.6 costing more credits than executing it with Auto. For example, a given task that consumes X credits to execute in Auto, will cost you 1.3X credits to execute via Sonnet 4.6. Credits are metered to the second decimal point, so the least number of credits a task can consume is 0.01 credits.
+ What can I use credits for? 
+ What can I use credits for?
+ Any prompt you ask Kiro to execute, whether in vibe mode or spec mode, as well as spec refinement, task execution, and agent hook execution, will consume credits.
+ How can I track my credit usage? 
+ How can I track my credit usage?
+ You can see the monthly credit limits for your plan, the number of credits used, and credits remaining in your subscription dashboard accessible in Kiro. Credit usage is updated at least every 5 minutes.
+ How do Kiro workflows affect credit usage? 
+ How do Kiro workflows affect credit usage?
+ [Workflows](/docs/workflows/) use the same Kiro credit model as other agent work. Credit usage depends on the agent work they run, so more complex workflows can use more credits. You can guide how Kiro divides the work through your prompt or [steering](/docs/steering/). Kiro currently reports credit usage through your existing account usage view.
+ Can I buy more credits? 
+ Can I buy more credits?
+ Yes — how it works depends on your plan:
+**When signing in with social login or AWS Builder ID (Pro, Pro+, Pro Max, Power):** Purchase add-on credits to continue working. Credits cost $0.04 each, are billed immediately when you buy a pack, and you control exactly how much extra capacity to add. Packs range from $5 (125 credits) to $100. Unused add-on credits roll over and expire 12 months from the date of purchase. See [Add-on credits](/docs/billing/add-on-credits/) for details.
+**Enterprise:** Admins can enable overages so users keep working past their limits automatically. Additional usage is billed at $0.04 per credit at month-end based on usage beyond the plan allocation. Overages are disabled by default and must be enabled in
+
+=== [about] https://kiro.dev/docs/ (lang=en)
+Docs - Kiro 
+ Loading image... Product
+ About Kiro 
+ Agents 
+ IDE 
+ CLI 
+ Web 
+ Mobile 
+ Crew 
+ Pricing 
+ Downloads 
+ For
+ Enterprise 
+ Startups 
+ Students 
+ Community
+ Overview 
+ Ambassadors 
+ Case studies 
+ Discord 
+ Events 
+ Powers 
+ Shop 
+ Showcase 
+ Resources
+ Docs 
+ Blog 
+ Changelog 
+ FAQs 
+ Report a bug 
+ Suggest an idea 
+ Billing support 
+ Social
+ English 
+ Site Terms License Responsible AI Policy Legal Privacy Policy Cookie Preferences English 
+ Loading image... 
+ Agents 
+ Apps 
+ Enterprise 
+ Pricing 
+ Docs 
+ Community 
+ Resources 
+ SIGN IN DOWNLOADS 
+ Loading image... 
+ Get Started
+ Installation Authentication Your first project 
+ Models
+ Overview Available models Reasoning effort AWS GovCloud (US) models 
+ Features
+ How Kiro works Local command sandbox ACP integrations Specs 
+ Steering Hooks 
+ MCP 
+ Permissions Custom agents 
+ Workflows 
+ Agent Skills Powers 
+ Cloud sessions Memory Compaction Kiroignore Checkpoints and rewind Built-in tools 
+ Configuration scopes 
+ IDE 1.x
+ What's new in 1.0 
+ Setup & First Run Editor 
+ Chat 
+ Experimental 
+ Troubleshooting 0.x reference 
+ CLI
+ What's new in V3 
+ Setup & First Run Terminal UI 
+ Chat 
+ Fullscreen mode Voice mode Headless mode ACP Auto complete Experimental 
+ 2.x reference 
+ Crew
+ Quick start Installation Running 24/7 Chat 
+ Agent Capabilities 
+ Features 
+ Interfaces 
+ Apps 
+ System & storage Configuration Security Troubleshooting 
+ Web
+ Setup & First Run Identity Center Connect your repositories 
+ Working with the agent 
+ Autonomous mode Automations Configuration Sync Sandbox 
+ Mobile - Preview
+ Overview 
+ Commands and Reference
+ CLI commands Slash commands Built-in tools Exit codes Settings 
+ Billing
+ Overview Managing your subscription Upgrading your plan Downgrading your plan Cancelling your plan Purchasing add-on credits Managing your payments Managing usage notifications Managing your taxes Contacting billing support Deleting your account Related questions 
+ Enterprise
+ Concepts Onboarding quickstart Connecting your identity provider 
+ Deployment options Subscribe your team Manage subscriptions Governance 
+ Monitor and track 
+ Settings Managed updates Billing IAM Supported regions 
+ Privacy and Security
+ Overview Data protection Code references Compliance validation Infrastructure security IAM permissions Firewalls, proxies, and data perimeters VPC endpoints (AWS PrivateLink) 
+ Guides
+ Overview Language support 
+ Learn by playing 
+ Migration
+ Migrating from Q Developer Migrating from VSCode Upgrading from Q CLI 
+ Kiro Documentation
+ Kiro is an AI-powered development environment that helps you build software from prototype to production. One unified agent harness powers every surface (IDE, CLI, Web, and Mobile) so your configuration, specs, and steering work everywhere.
+ IDE 
+ Loading image... 
+ Web 
+ Terminal — 80×24
+ Loading cast file...
+ CLI 
+ Loading image... 
+ Mobile 
+ Choose your surface
+ Pick the surface that fits your workflow. Your .kiro/ configuration is shared across all of them.
+ IDE
+ Desktop editor with chat, specs, hooks, and full editor integration
+ CLI
+ Terminal-native agent with headless mode, session management, and CI integration
+ Web
+ Browser-based agent for multi-repo tasks that plans, implements, and opens PRs
+ Mobile
+ Monitor tasks, review PRs, and chat with your agent on the go
+ Crew
+ Personal AI agent with autonomous tasks, scheduling, memory, and multi-channel access
+ What you can do
+ I want to... Use 
+ Plan a feature with requirements, design, and tasks Specs 
+ Fix a bug with root cause analysis and regression prevention Bugfix Specs 
+ Chat and
+
+=== [meta] https://kiro.dev/
+html lang: en
+hreflang: en, fr-ca, x-default
+화면에 보이는 언어 이름: English

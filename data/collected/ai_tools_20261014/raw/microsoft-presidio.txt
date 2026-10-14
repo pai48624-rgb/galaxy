@@ -1,0 +1,297 @@
+=== [home] https://presidio.dataprivacystack.org/ (lang=en)
+Index - Presidio 
+ Skip to content
+ Presidio
+ Index
+ Search
+ GitHub
+ 2.2.364
+ 11.3k
+ 1.3k
+ Presidio
+ Quick start
+ Learn Presidio
+ Resources
+ Recipes
+ Samples
+ Presidio
+ GitHub
+ 2.2.364
+ 11.3k
+ 1.3k
+ Presidio
+ Presidio
+ Home
+ Home
+ On this page
+ Goals
+ How it works
+ Main features
+ Demo
+ Presidio's modules
+ Installing Presidio
+ Running Presidio
+ Support
+ Installation
+ FAQ
+ Quick start
+ Quick start
+ Home
+ Text
+ Images
+ Semi/Structured data
+ Learn Presidio
+ Learn Presidio
+ Home
+ Concepts
+ Tutorial
+ Tutorial
+ Home
+ Getting started
+ Deny-list recognizers
+ Regex recognizers
+ Rule-based recognizers
+ Additional models/languages
+ External services
+ Context enhancement
+ Decision process
+ No-code recognizers
+ Ad-hoc recognizers
+ Simple anonymization
+ Custom anonymization
+ Encryption/Decryption
+ Allow-lists
+ Text de-identification
+ Text de-identification
+ Home
+ Presidio Analyzer
+ Presidio Analyzer
+ Home
+ Developing PII recognizers
+ Developing PII recognizers
+ Tutorial
+ Best practices
+ Recognizer registry from file
+ Filtering recognizers by country
+ Multi-language support
+ Customizing the NLP model
+ Customizing the NLP model
+ Home
+ Spacy/Stanza
+ Transformers
+ GPU Acceleration
+ Tracing the decision process
+ Configure from file
+ Presidio Anonymizer
+ Presidio Anonymizer
+ Home
+ Developing PII anonymization operators
+ Azure Health Data Services de-identification service integration
+ Image de-identification
+ Image de-identification
+ Home
+ Evaluating DICOM redaction
+ Structured and Semi-structured
+ Structured and Semi-structured
+ Home
+ PII detection evaluation
+ Resources
+ Resources
+ Supported entities
+ Project transition update
+ Community
+ Change log
+ Setting up a development environment
+ Build and release process
+ Changes from V1 to V2
+ Python API reference
+ Python API reference
+ Home
+ Presidio Analyzer Python API
+ Presidio Anonymizer Python API
+ Presidio Image Redactor Python API
+ Presidio Structured Python API
+ REST API reference
+ Recipes
+ Recipes
+ Home
+ Contributing
+ Template
+ Samples
+ Samples
+ Home
+ Text
+ Text
+ Presidio Basic Usage Notebook
+ Customizing Presidio Analyzer
+ Configuring The NLP engine
+ Encrypting and Decrypting identified entities
+ Getting the identified entity value using a custom Operator
+ Anonymizing known values
+ Keeping some entities from being anonymized
+ Integrating with external services
+ Remote Recognizer
+ Azure AI Language as a Remote Recognizer
+ Azure Health DataServices De-identification as a Remote Recognizer
+ Using Flair as an external PII model
+ Using Span Marker as an external PII model
+ Using Transformers as an external PII model
+ Using GLiNER as an external PII model
+ Pseudonymization (replace PII values using mappings)
+ Passing a lambda as a Presidio anonymizer using Faker
+ Synthetic data generation with OpenAI
+ YAML based no-code configuration
+ Data
+ Data
+ Analyzing structured / semi-structured data in batch
+ Presidio Structured Basic Usage Notebook
+ Analyze and Anonymize CSV file
+ Images
+ Images
+ Redacting Text PII from DICOM images
+ Using an allow list with image redaction
+ Plot custom bounding boxes
+ Example DICOM redaction evaluation
+ PDF
+ PDF
+ Annotating PII in a PDF
+ Deployment
+ Deployment
+ Presidio with App Service
+ Presidio with Kubernetes
+ Presidio with Spark
+ Presidio with Fabric
+ Redacting Telemetry with Presidio
+ Azure Data Factory
+ Azure Data Factory
+ ETL using AppService/Databricks
+ Add Presidio as an HTTP service to your Azure Data Factory
+ Add Presidio on Databricks to your Azure Data Factory
+ PII Masking LLM calls using LiteLLM proxy
+ Demo app
+ Demo app
+ Create a simple demo app using Streamlit
+ On this page
+ Goals
+ How it works
+ Main features
+ Demo
+ Presidio's modules
+ Installing Presidio
+ Running Presidio
+ Support
+ Presidio
+ by Data Privacy Stack 
+ Presidio (Origin from Latin praesidium ‘protection, garrison’) 
+helps to ensure sensitive data is properly managed and governed.
+It provides fast identification and anonymization 
+modules for private entities in text and images such as
+credit card numbers, names, locations, social security numbers,
+bitcoin wallets, US phone numbers, financial data and more.
+ Project transition update
+ Presidio is transitioning to a community-owned project.
+Read the full announcement here .
+ Goals
+ Allow organizations to preserve privacy in a simpler way by democratizing de-identification technologies and introducing transparency in decisions.
+ Embrace extensibility and customizability to a specific business need.
+ Facilitate both fully automated and semi-automated PII de-identification flows on multiple platforms.
+ How it works
+ Main features
+ Predefined or custom PII recognizers leveraging Named Entity Recognition , regular expressions , rule based logic and checksum with relevant context in multiple languages.
+ Options for connecting to external PII detection models.
+ Multiple usage options, from Python or PySpark workloads through Docker to Kubernetes .
+ Customizability in PII identification and anonymization.
+ Module for redacting PII text in images .
+ Warning
+ Presidio can help identify sensitive/PII data in un/structured text. However, because it is using automated detection mechanisms, there is no guarantee that Presidio will find all sensitive information. Consequently, additional systems and protections should be employed.
+ Demo
+ Link to demo: https://huggingface.co/spaces/presidio/presidio_demo 
+ Presidio's modules
+ Presidio analyzer : PII identification in text
+ Presidio anonymizer : De-identify detected PII entities using different operators
+ Presidio image redactor : Redact PII entities from images using OCR and PII identification
+ Presidio structured : PII identification in structured/semi-structured data
+ Installing Presidio
+ Supported Python Versions 
+ Using pip 
+ Using Docker 
+ From source 
+ Migrating from V1 to V2 
+ Running Presidio
+ Samples for running Presidio via code 
+ Running Presidio as an HTTP service 
+ Setting up a development environment 
+ Perform PII identification using presidio-analyzer 
+ Perform PII de-identification using presidio-anonymizer 
+ Perform PII identification and redaction in images using presidio-image-redactor 
+ Example deployments 
+ Support
+ Before you submit an issue, please go over the documentation. For general discussions, please use the GitHub repo's discussion board .
+ If you have a usage question, found a bug or have a suggestion for improvement, please file a GitHub issue .
+ For other matters, please email presidio@dataprivacystack.org .
+ Back to top
+ Next
+ Installation
+ Data Privacy Stack 
+ Made with
+ Zensical
+ This site uses cookies via Microsoft Clarity to understand how you use our documentation. Learn more 
+ Decline Accept
+
+=== [meta] https://presidio.dataprivacystack.org/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/data-privacy-stack/presidio
+# Presidio - Data Protection and De-identification SDK
+## :mega: Presidio has moved to a new home! [Read more here](docs/project_transition.md) :mega:
+**Context aware, pluggable and customizable PII de-identification service for text and images.**
+
+---
+
+[![Build Status](https://github.com/data-privacy-stack/presidio/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/data-privacy-stack/presidio/actions/workflows/ci.yml)
+[![MIT license](https://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
+![Release](https://img.shields.io/github/release/data-privacy-stack/presidio.svg)
+[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/6076/badge)](https://www.bestpractices.dev/projects/6076)
+[![PyPI pyversions](https://img.shields.io/pypi/pyversions/presidio-analyzer.svg)](https://pypi.python.org/pypi/presidio-analyzer/)
+[![Discord](https://img.shields.io/badge/Discord-Join%20the%20community-5865F2?logo=discord&logoColor=white)](https://discord.gg/MewtBGFquB)
+
+| Component | Downloads | Coverage |
+|-----------|-----------|----------|
+| Presidio Analyzer | [![Pypi Downloads](https://img.shields.io/pypi/dm/presidio-analyzer.svg)](https://pypi.python.org/pypi/presidio-analyzer/) | [![Coverage](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/data-privacy-stack/presidio/coverage-data-presidio-analyzer/endpoint.json)](https://github.com/data-privacy-stack/presidio/tree/coverage-data-presidio-analyzer) |
+| Presidio Anonymizer | [![Pypi Downloads](https://img.shields.io/pypi/dm/presidio-anonymizer.svg)](https://pypi.python.org/pypi/presidio-anonymizer/) | [![Coverage](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/data-privacy-stack/presidio/coverage-data-presidio-anonymizer/endpoint.json)](https://github.com/data-privacy-stack/presidio/tree/coverage-data-presidio-anonymizer) |
+| Presidio Image-Redactor | [![Pypi Downloads](https://img.shields.io/pypi/dm/presidio-image-redactor.svg)](https://pypi.python.org/pypi/presidio-image-redactor/) | [![Coverage](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/data-privacy-stack/presidio/coverage-data-presidio-image-redactor/endpoint.json)](https://github.com/data-privacy-stack/presidio/tree/coverage-data-presidio-image-redactor) |
+| Presidio Structured | [![Pypi Downloads](https://img.shields.io/pypi/dm/presidio-structured.svg)](https://pypi.python.org/pypi/presidio-structured/) | [![Coverage](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/data-privacy-stack/presidio/coverage-data-presidio-structured/endpoint.json)](https://github.com/data-privacy-stack/presidio/tree/coverage-data-presidio-structured) |
+## What is Presidio
+
+Presidio _(Origin from Latin praesidium ‘protection, garrison’)_ helps to ensure sensitive data is properly managed and governed. It provides fast **_identification_** and **_anonymization_** modules for private entities in text such as credit card numbers, names, locations, social security numbers, bitcoin wallets, US phone numbers, financial data and more.
+
+![Presidio demo gif](docs/assets/changing_text.gif)
+
+---
+
+### :blue_book: [Full documentation](https://data-privacy-stack.github.io/presidio)
+
+### :mega: [Project transition update](docs/project_transition.md)
+
+### :question: [Frequently Asked Questions](docs/faq.md)
+
+### :thought_balloon: [Demo](https://huggingface.co/spaces/presidio/presidio_demo)
+
+### :flight_departure: [Examples](https://data-privacy-stack.github.io/presidio/samples/)
+
+---
+
+
+### Goals
+
+- Allow organizations to preserve privacy in a simpler way by democratizing de-identification technologies and introducing transparency in decisions.
+- Embrace extensibility and customizability to a specific business need.
+- Facilitate both fully automated and semi-automated PII de-identification flows on multiple platforms.
+
+### Main features
+
+1. **Predefined** or **custom PII recognizers** leveraging _Named Entity Recognition_, _regular expressions_, _rule based logic_ and _checksum_ with relevant context in multiple languages.
+2. Options for connecting to external PII detection models.
+3. Multiple usage options, **from

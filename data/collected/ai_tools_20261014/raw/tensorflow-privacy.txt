@@ -1,0 +1,611 @@
+=== [home] https://www.tensorflow.org/responsible_ai/privacy/guide?hl=ko (lang=ko)
+Responsible AI Toolkit  |  TensorFlow 
+ 기본 콘텐츠로 건너뛰기
+ 설치
+ 학습
+ 소개
+ TensorFlow를 처음 사용하시나요?
+ TensorFlow
+ 핵심 오픈소스 ML 라이브러리
+ 자바스크립트용
+ 자바스크립트를 사용하는 ML용 TensorFlow.js
+ 모바일 및 IoT용
+ 모바일 및 내장형 기기용 TensorFlow Lite
+ 프로덕션용
+ 엔드 투 엔드 ML 구성요소용 TensorFlow Extended
+ API
+ TensorFlow (2.12)
+ Versions…
+ TensorFlow.js
+ TensorFlow Lite
+ TFX
+ 리소스
+ 모델 및 데이터 세트
+ Google 및 커뮤니티에서 빌드한 선행 학습된 모델 및 데이터 세트
+ 도구
+ TensorFlow 사용에 도움이 되는 도구 생태계
+ 라이브러리 및 확장 프로그램
+ TensorFlow를 기반으로 빌드된 라이브러리 및 확장 프로그램
+ TensorFlow 인증 프로그램
+ ML 숙련도를 입증하여 경쟁에서 앞서가기
+ ML 알아보기
+ TensorFlow를 사용해 ML의 기초를 학습하기 위한 교육용 자료
+ 책임감 있는 AI
+ 책임감 있는 AI 관행을 ML 워크플로에 통합하기 위한 리소스 및 도구
+ 커뮤니티
+ 가입하기
+ 참여 방법 살펴보기
+ 포럼 ↗
+ TensorFlow 커뮤니티를 위한 토론 플랫폼
+ 그룹
+ 사용자 그룹, 관심분야 그룹 및 메일링 리스트
+ 참여
+ 코드 및 문서 참여 가이드
+ TensorFlow를 사용해야 하는 이유
+ 정보
+ 우수사례
+ AI 서비스 파트너
+ / 
+ English 
+ Español 
+ Español – América Latina 
+ Français 
+ Indonesia 
+ Italiano 
+ Polski 
+ Português 
+ Português – Brasil 
+ Tiếng Việt 
+ Türkçe 
+ Русский 
+ עברית 
+ العربيّة 
+ فارسی 
+ हिंदी 
+ বাংলা 
+ ภาษาไทย 
+ 中文 – 简体 
+ 中文 – 繁體 
+ 日本語 
+ 한국어 
+ GitHub
+ 로그인 
+ Responsible AI
+ 개요
+ 가이드
+ Tutorials
+ API
+ 설치
+ 학습
+ 더보기
+ API
+ 더보기
+ 리소스
+ 더보기
+ 개요
+ 가이드
+ Tutorials
+ API
+ 커뮤니티
+ 더보기
+ TensorFlow를 사용해야 하는 이유
+ 더보기
+ GitHub
+ 개요 
+ 공정성 지표 
+ 개요 
+ 공정성 평가 고려사항 
+ 모델 수정 
+ 개요 
+ 설치 
+ 사용 요건 
+ MinDiff 데이터 준비 
+ MinDiffModel을 사용하여 MinDiff 통합 
+ MinDiffModel 맞춤설정 
+ MinDiffModel을 사용하지 않고 MinDiff 통합 
+ Model Card 도구함 
+ 개요 
+ 설치 
+ 개념 
+ 템플릿 
+ 소개
+ TensorFlow
+ 자바스크립트용
+ 모바일 및 IoT용
+ 프로덕션용
+ TensorFlow (2.12)
+ Versions…
+ TensorFlow.js
+ TensorFlow Lite
+ TFX
+ 모델 및 데이터 세트
+ 도구
+ 라이브러리 및 확장 프로그램
+ TensorFlow 인증 프로그램
+ ML 알아보기
+ 책임감 있는 AI
+ 가입하기
+ 포럼 ↗
+ 그룹
+ 참여
+ 정보
+ 우수사례
+ AI 서비스 파트너
+ TensorFlow
+ 리소스
+ Responsible AI
+ 가이드
+ 컬렉션을 사용해 정리하기
+ 내 환경설정을 기준으로 콘텐츠를 저장하고 분류하세요.
+ 머신러닝에서의 개인 정보 보호
+ 책임감 있는 AI 사용에서 중요한 측면은 사용자를 식별하는 데 사용될 수 있는 학습 데이터 세트의 인구통계 정보나 기타 속성 등 잠재적으로 민감한 정보를 ML 모델이 노출하지 않도록 하는 것입니다. 이를 달성하는 방법 중 하나는 머신러닝의 표준 확률적 경사하강법(SGD) 알고리즘을 수정한 개인 정보 차등 보호 확률적 경사하강법(DP-SGD)을 사용하는 것입니다. 
+ DP-SGD로 학습된 모델은 개인 정보 차등 보호(DP)가 눈에 띄게 향상되어 민감한 학습 데이터가 노출될 위험을 줄입니다. DP의 목적은 개별 데이터 포인트가 식별되지 않도록 하는 데 있으므로 DP로 학습된 모델은 학습 데이터 세트의 단일 학습 예로 인해 영향을 받아서는 안 됩니다. DP-SGD 기법은 제휴 학습에도 사용되어 사용자 수준의 개인 정보 차등 보호를 제공할 수 있습니다. 개인 정보 차등 보호 딥 러닝에 관한 자세한 내용은 논문 원본 을 참고하세요. 
+ import tensorflow as tf 
+ from tensorflow_privacy.privacy.optimizers import dp_optimizer_keras 
+ # Select your differentially private optimizer 
+ optimizer = tensorflow_privacy . DPKerasSGDOptimizer ( 
+ l2_norm_clip = l2_norm_clip , 
+ noise_multiplier = noise_multiplier , 
+ num_microbatches = num_microbatches , 
+ learning_rate = learning_rate ) 
+ # Select your loss function 
+ loss = tf . keras . losses . CategoricalCrossentropy ( 
+ from_logits = True , reduction = tf . losses . Reduction . NONE ) 
+ # Compile your model 
+ model . compile ( optimizer = optimizer , loss = loss , metrics = [ 'accuracy' ]) 
+ # Fit your model 
+ model . fit ( train_data , train_labels , 
+ epochs = epochs , 
+ validation_data = ( test_data , test_labels ), 
+ batch_size = batch_size ) 
+ TensorFlow Privacy
+ Tensorflow Privacy(TF Privacy)는 Google 연구팀에서 개발한 오픈소스 라이브러리입니다. 라이브러리에는 DP를 사용하는 ML 모델을 학습시키기 위해 흔히 사용되는 TensorFlow 옵티마이저 구현이 포함됩니다. 목표는 표준 TensorFlow API를 사용하는 ML 실무자가 단 몇 줄의 코드만 변경하여 개인 정보 보호 모델을 학습할 수 있도록 하는 것입니다. 
+ 개인 정보 차등 보호 옵티마이저는 Optimizer 클래스(특히, Keras)를 사용하는 상위 수준 API와 함께 사용할 수 있습니다. 또한 일부 Keras 모델의 개인 정보 차등 보호 구현을 찾을 수 있습니다. 모든 옵티마이저와 모델은 API 문서 에서 찾을 수 있습니다.
+ TensorFlow Privacy 소개
+ TensorFlow 블로그 읽기 
+ TF Dev Summit 2020의 TensorFlow Privacy
+ 동영상 보기 
+ GitHub의 TensorFlow Privacy
+ GitHub에서 보기 
+ 달리 명시되지 않는 한 이 페이지의 콘텐츠에는 Creative Commons Attribution 4.0 라이선스 에 따라 라이선스가 부여되며, 코드 샘플에는 Apache 2.0 라이선스 에 따라 라이선스가 부여됩니다. 자세한 내용은 Google Developers 사이트 정책 을 참조하세요. 자바는 Oracle 및/또는 Oracle 계열사의 등록 상표입니다.
+ 최종 업데이트: 2021-09-27(UTC)
+ [[["이해하기 쉬움","easyToUnderstand","thumb-up"],["문제가 해결됨","solvedMyProblem","thumb-up"],["기타","otherUp","thumb-up"]],[["필요한 정보가 없음","missingTheInformationINeed","thumb-down"],["너무 복잡함/단계 수가 너무 많음","tooComplicatedTooManySteps","thumb-down"],["오래됨","outOfDate","thumb-down"],["번역 문제","translationIssue","thumb-down"],["샘플/코드 문제","samplesCodeIssue","thumb-down"],["기타","otherDown","thumb-down"]],["최종 업데이트: 2021-09-27(UTC)"],[],[]]
+ 최신 소식 확인하기
+ 블로그
+ 포럼
+ GitHub
+ Twitter
+ YouTube
+ 지원
+ 문제 추적기
+ 출시 노트
+ Stack Overflow
+ 브랜드 가이드라인
+ TensorFlow 인용
+ 약관
+ 개인정보처리방침
+ Manage cookies
+ TensorFlow 뉴스레터 신청 
+ 구독
+ English 
+ Español 
+ Español – América Latina 
+ Français 
+ Indonesia 
+ Italiano 
+ Polski 
+ Português 
+ Português – Brasil 
+ Tiếng Việt 
+ Türkçe 
+ Русский 
+ עברית 
+ العربيّة 
+ فارسی 
+ हिंदी 
+ বাংলা 
+ ภาษาไทย 
+ 中文 – 简体 
+ 中文 – 繁體 
+ 日本語 
+ 한국어
+
+=== [pricing] https://www.tensorflow.org/subscribe?hl=ko%2F (lang=ko)
+TensorFlow 뉴스레터 신청 
+ 기본 콘텐츠로 건너뛰기
+ www.tensorflow.org 은(는) 서비스 제공 및 서비스 품질 개선과 트래픽 분석을 위해 쿠키를 사용합니다. 동의 시 광고를 게재하고 표시되는 콘텐츠 및 광고를 맞춤설정하는 데도 쿠키가 사용됩니다. 자세히 알아보세요 
+ 동의함 나중에 
+ 설치
+ 학습
+ 소개
+ TensorFlow를 처음 사용하시나요?
+ TensorFlow
+ 핵심 오픈소스 ML 라이브러리
+ 자바스크립트용
+ 자바스크립트를 사용하는 ML용 TensorFlow.js
+ 모바일 및 IoT용
+ 모바일 및 내장형 기기용 TensorFlow Lite
+ 프로덕션용
+ 엔드 투 엔드 ML 구성요소용 TensorFlow Extended
+ API
+ TensorFlow (2.12)
+ Versions…
+ TensorFlow.js
+ TensorFlow Lite
+ TFX
+ 리소스
+ 모델 및 데이터 세트
+ Google 및 커뮤니티에서 빌드한 선행 학습된 모델 및 데이터 세트
+ 도구
+ TensorFlow 사용에 도움이 되는 도구 생태계
+ 라이브러리 및 확장 프로그램
+ TensorFlow를 기반으로 빌드된 라이브러리 및 확장 프로그램
+ TensorFlow 인증 프로그램
+ ML 숙련도를 입증하여 경쟁에서 앞서가기
+ ML 알아보기
+ TensorFlow를 사용해 ML의 기초를 학습하기 위한 교육용 자료
+ 책임감 있는 AI
+ 책임감 있는 AI 관행을 ML 워크플로에 통합하기 위한 리소스 및 도구
+ 더보기 
+ 커뮤니티
+ 가입하기
+ 참여 방법 살펴보기
+ 포럼 ↗
+ TensorFlow 커뮤니티를 위한 토론 플랫폼
+ 그룹
+ 사용자 그룹, 관심분야 그룹 및 메일링 리스트
+ 참여
+ 코드 및 문서 참여 가이드
+ TensorFlow를 사용해야 하는 이유
+ 정보
+ 우수사례
+ AI 서비스 파트너
+ / 
+ English 
+ Español – América Latina 
+ Français 
+ Português – Brasil 
+ 中文 – 简体 
+ 中文 – 繁體 
+ 日本語 
+ 한국어 
+ GitHub
+ 로그인
+ 설치
+ 학습
+ 더보기
+ API
+ 더보기
+ 리소스
+ 더보기
+ 커뮤니티
+ 더보기
+ TensorFlow를 사용해야 하는 이유
+ 더보기
+ GitHub
+ 소개
+ TensorFlow
+ 자바스크립트용
+ 모바일 및 IoT용
+ 프로덕션용
+ TensorFlow (2.12)
+ Versions…
+ TensorFlow.js
+ TensorFlow Lite
+ TFX
+ 모델 및 데이터 세트
+ 도구
+ 라이브러리 및 확장 프로그램
+ TensorFlow 인증 프로그램
+ ML 알아보기
+ 책임감 있는 AI
+ 가입하기
+ 포럼 ↗
+ 그룹
+ 참여
+ 정보
+ 우수사례
+ AI 서비스 파트너
+ TensorFlow
+ 보관처리
+ [자료실]에서 이전 TensorFlow 뉴스레터를 둘러보세요(/subscribe/latest).
+ May 2024
+ Discover the latest models and developer tools from Google I/O 2024.
+ April 2024
+ Explore the latest in Keras, improvements to TensorFlow Lite, and new on-device LLMs.
+ 2023년 3월
+ Check out the TensorFlow 2.16 release, learn how ML can reduce operational costs, and more.
+ TensorFlow 커뮤니티에 참여하기
+ 참여하기
+ [[["이해하기 쉬움","easyToUnderstand","thumb-up"],["문제가 해결됨","solvedMyProblem","thumb-up"],["기타","otherUp","thumb-up"]],[["필요한 정보가 없음","missingTheInformationINeed","thumb-down"],["너무 복잡함/단계 수가 너무 많음","tooComplicatedTooManySteps","thumb-down"],["오래됨","outOfDate","thumb-down"],["번역 문제","translationIssue","thumb-down"],["샘플/코드 문제","samplesCodeIssue","thumb-down"],["기타","otherDown","thumb-down"]],[],[],[]]
+ 최신 소식 확인하기
+ 블로그
+ 포럼
+ GitHub
+ Twitter
+ YouTube
+ 지원
+ 문제 추적기
+ 출시 노트
+ Stack Overflow
+ 브랜드 가이드라인
+ TensorFlow 인용
+ 약관
+ 개인정보처리방침
+ 쿠키 관리
+ TensorFlow 뉴스레터 신청 
+ 구독
+ English 
+ Español – América Latina 
+ Français 
+ Português – Brasil 
+ 中文 – 简体 
+ 中文 – 繁體 
+ 日本語 
+ 한국어
+
+=== [about] https://www.tensorflow.org/about?hl=ko/ (lang=ko)
+TensorFlow를 사용해야 하는 이유 
+ 기본 콘텐츠로 건너뛰기
+ 설치
+ 학습
+ 소개
+ TensorFlow를 처음 사용하시나요?
+ TensorFlow
+ 핵심 오픈소스 ML 라이브러리
+ 자바스크립트용
+ 자바스크립트를 사용하는 ML용 TensorFlow.js
+ 모바일 및 IoT용
+ 모바일 및 내장형 기기용 TensorFlow Lite
+ 프로덕션용
+ 엔드 투 엔드 ML 구성요소용 TensorFlow Extended
+ API
+ TensorFlow (2.12)
+ Versions…
+ TensorFlow.js
+ TensorFlow Lite
+ TFX
+ 리소스
+ 모델 및 데이터 세트
+ Google 및 커뮤니티에서 빌드한 선행 학습된 모델 및 데이터 세트
+ 도구
+ TensorFlow 사용에 도움이 되는 도구 생태계
+ 라이브러리 및 확장 프로그램
+ TensorFlow를 기반으로 빌드된 라이브러리 및 확장 프로그램
+ TensorFlow 인증 프로그램
+ ML 숙련도를 입증하여 경쟁에서 앞서가기
+ ML 알아보기
+ TensorFlow를 사용해 ML의 기초를 학습하기 위한 교육용 자료
+ 책임감 있는 AI
+ 책임감 있는 AI 관행을 ML 워크플로에 통합하기 위한 리소스 및 도구
+ 커뮤니티
+ 가입하기
+ 참여 방법 살펴보기
+ 포럼 ↗
+ TensorFlow 커뮤니티를 위한 토론 플랫폼
+ 그룹
+ 사용자 그룹, 관심분야 그룹 및 메일링 리스트
+ 참여
+ 코드 및 문서 참여 가이드
+ TensorFlow를 사용해야 하는 이유
+ 정보
+ 우수사례
+ AI 서비스 파트너
+ / 
+ English 
+ Español 
+ Español – América Latina 
+ Français 
+ Indonesia 
+ Italiano 
+ Polski 
+ Português 
+ Português – Brasil 
+ Tiếng Việt 
+ Türkçe 
+ Русский 
+ עברית 
+ العربيّة 
+ فارسی 
+ हिंदी 
+ বাংলা 
+ ภาษาไทย 
+ 中文 – 简体 
+ 中文 – 繁體 
+ 日本語 
+ 한국어 
+ GitHub
+ 로그인 
+ TensorFlow를 사용해야 하는 이유
+ 정보
+ 우수사례
+ AI 서비스 파트너
+ 설치
+ 학습
+ 더보기
+ API
+ 더보기
+ 리소스
+ 더보기
+ 커뮤니티
+ 더보기
+ TensorFlow를 사용해야 하는 이유
+ 더보기
+ 정보
+ 우수사례
+ AI 서비스 파트너
+ GitHub
+ 소개
+ TensorFlow
+ 자바스크립트용
+ 모바일 및 IoT용
+ 프로덕션용
+ TensorFlow (2.12)
+ Versions…
+ TensorFlow.js
+ TensorFlow Lite
+ TFX
+ 모델 및 데이터 세트
+ 도구
+ 라이브러리 및 확장 프로그램
+ TensorFlow 인증 프로그램
+ ML 알아보기
+ 책임감 있는 AI
+ 가입하기
+ 포럼 ↗
+ 그룹
+ 참여
+ 정보
+ 우수사례
+ AI 서비스 파트너
+ TensorFlow
+ TensorFlow를 사용해야 하는 이유
+ 컬렉션을 사용해 정리하기
+ 내 환경설정을 기준으로 콘텐츠를 저장하고 분류하세요.
+ TensorFlow를 사용해야 하는 이유
+ 전문가이든 초보자이든, TensorFlow는 ML 모델을 쉽게 빌드 및 배포할 수 있게 해주는 엔드 투 엔드 플랫폼입니다.
+ 동영상 보기
+ 우수사례
+ close
+ 머신러닝을 통해 까다로운 실생활 문제를 해결하도록 지원하는 전체 생태계
+ 손쉬운 모델 빌드
+ TensorFlow는 다양한 수준의 추상화를 제공하므로 사용자는 자신의 요구에 맞는 수준을 선택할 수 있습니다. 상위 수준의 Keras API를 사용하여 모델을 빌드하고 학습시키세요. 그러면 TensorFlow 및 머신러닝을 쉽게 시작할 수 있습니다.
+ 유연성이 더 필요한 경우 즉시 실행 기능을 사용하면 즉각적인 반복 및 직관적인 디버깅이 가능합니다. 대규모 ML 학습 작업이 필요한 경우, 모델 정의를 변경하지 않고 서로 다른 하드웨어 구성에서 분산 학습을 진행하려면 Distribution Strategy API를 사용하세요.
+ 리소스 보기
+ close
+ 어디서든 강력한 ML 제작
+ TensorFlow는 항상 프로덕션에 바로 배포할 방법을 제공해왔습니다. 서버, 에지 기기 또는 웹 등 어디서나 TensorFlow를 사용하면 언어나 플랫폼에 관계없이 모델을 쉽게 학습시키고 배포할 수 있습니다.
+ 전체 프로덕션 ML 파이프라인이 필요한 경우 TFX를 사용하세요. 모바일 및 에지 기기에서 추론을 실행하려면 TensorFlow Lite를 사용하세요. TensorFlow.js를 사용하면 자바스크립트 환경에서 모델을 학습시키고 배포할 수 있습니다.
+ 리소스 보기
+ close
+ 연구를 위한 강력한 실험
+ 속도나 성능 저하 없이 최첨단 모델을 빌드하고 학습시키세요. TensorFlow에서는 Keras Functional API 및 Model Subclassing API와 같은 기능을 사용하여 유연하고 긴밀하게 복잡한 토폴로지 생성을 제어할 수 있습니다. 손쉬운 프로토타입 제작과 빠른 디버깅을 구현하려면 즉시 실행 기능을 사용하세요.
+ TensorFlow는 Ragged Tensors, TensorFlow Probability, Tensor2Tensor, BERT를 비롯한 강력한 부가기능 라이브러리 및 모델을 실험해 볼 수 있는 생태계를 지원합니다.
+ 리소스 보기
+ close
+ 기업에서 TensorFlow를 사용하는 방법 보기
+ Airbnb
+ Coca Cola
+ Deepmind
+ GE Healthcare
+ Google
+ Intel
+ NERSC
+ 트위터
+ 우수사례 보기
+ 머신러닝 작동 방법 알아보기
+ 신경망의 작동 방식이나 ML 문제 해결 단계가 궁금하셨던 적이 있나요? 지금부터 함께 알아보겠습니다. 다음은 머신러닝의 기초에 관한 간단한 개요입니다. 더 깊이 있는 정보를 원하신다면 교육 페이지에서 초보자용 콘텐츠와 고급 콘텐츠를 찾아보세요.
+ ML 알아보기
+ ML 소개
+ ML 문제를 해결하는 단계
+ 신경망의 해부학적 구조
+ 신경망 학습시키기
+ ML 소개
+ 머신러닝은 소프트웨어가 명시적인 프로그래밍이나 규칙 없이 작업을 실행하도록 돕는 방식입니다. 기존의 컴퓨터 프로그래밍에서는 프로그래머가 컴퓨터가 사용해야 할 규칙을 지정하지만, ML에서는 다른 사고방식이 필요합니다. 실제 ML은 코딩보다 데이터 분석에 훨씬 더 중점을 둡니다. 프로그래머는 일련의 예제를 제공하고 컴퓨터는 데이터로부터 패턴을 학습합니다. 머신러닝은 '데이터를 이용한 프로그래밍'이라고 생각할 수 있습니다.
+ ML 문제를 해결하는 단계
+ ML을 사용하여 데이터에서 해답을 얻는 과정에는 여러 단계가 있습니다. 텍스트 분류의 전체 워크플로를 보여 주고 데이터 세트 수집, TensorFlow를 이용한 모델 학습 및 평가와 같은 중요한 단계를 설명하는 이 가이드 에서 단계별 개요를 확인하세요.
+ 신경망의 해부학적 구조
+ 신경망은 패턴을 인식하도록 학습시킬 수 있는 모델 유형으로, 입력 및 출력 레이어, 하나 이상의 히든 레이어 등 다양한 레이어로 구성됩니다. 각 레이어의 뉴런은 추상화 수준이 점점 높아지는 데이터 표현을 학습합니다. 예를 들어, 이 시각적 다이어그램에는 선, 모양, 텍스처를 감지하는 뉴런이 있습니다. 이러한 표현(또는 학습된 특성)을 사용하여 데이터를 분류할 수 있습니다.
+ 신경망 학습시키기
+ 신경망은 경사하강법을 통해 학습합니다. 각 레이어의 가중치는 임의의 값으로 시작하며, 시간이 지남에 따라
+
+=== [meta] https://www.tensorflow.org/responsible_ai/privacy/guide?hl=ko
+html lang: ko
+hreflang: ar, bn, en, es, es-419, fa, fr, he, hi, id, it, ja, ko, pl, pt, pt-br, ru, th, tr, vi, x-default, zh-hans, zh-hant
+화면에 보이는 언어 이름: 한국어, English, 日本語, 中文, Español, Français, Português, Italiano, Русский, ภาษาไทย, Türkçe, Polski
+
+=== [github] https://github.com/tensorflow/privacy
+# TensorFlow Privacy
+
+This repository contains the source code for TensorFlow Privacy, a Python
+library that includes implementations of TensorFlow optimizers for training
+machine learning models with differential privacy. The library comes with
+tutorials and analysis tools for computing the privacy guarantees provided.
+
+The TensorFlow Privacy library is under continual development, always welcoming
+contributions. In particular, we always welcome help towards resolving the
+issues currently open.
+
+## Latest Updates
+
+2024-02-14: As of version 0.9.0, the TensorFlow Privacy github repository will
+be published as two separate PyPI packages. The first will inherit the name
+tensorflow-privacy and contain the parts related to training of DP models. The
+second, tensorflow-empirical-privacy, will contain the parts related to testing
+for empirical privacy.
+
+2023-02-21: A new implementation of efficient per-example gradient clipping is
+now available for
+[DP keras models](https://github.com/tensorflow/privacy/tree/master/tensorflow_privacy/privacy/keras_models)
+consisting only of Dense and Embedding layers. The models use the fast gradient
+calculation results of [this paper](https://arxiv.org/abs/1510.01799). The
+implementation should allow for doing DP training without any meaningful memory
+or runtime overhead. It also removes the need for tuning the number of
+microbatches as it clips the gradient with respect to each example.
+
+## Setting up TensorFlow Privacy
+
+### Dependencies
+
+This library uses [TensorFlow](https://www.tensorflow.org/) to define machine
+learning models. Therefore, installing TensorFlow (>= 1.14) is a pre-requisite.
+You can find instructions [here](https://www.tensorflow.org/install/). For
+better performance, it is also recommended to install TensorFlow with GPU
+support (detailed instructions on how to do this are available in the TensorFlow
+installation documentation).
+
+### Installing TensorFlow Privacy
+
+If you only want to use TensorFlow Privacy as a library, you can simply execute
+
+`pip install tensorflow-privacy`
+
+Otherwise, you can clone this GitHub repository into a directory of your choice:
+
+```
+git clone https://github.com/tensorflow/privacy
+```
+
+You can then install the local package in "editable" mode in order to add it to
+your `PYTHONPATH`:
+
+```
+cd privacy
+pip install -e .
+```
+
+If you'd like to make contributions, we recommend first forking the repository
+and then cloning your fork rather than cloning this repository directly.
+
+## Contributing
+
+Contributions are welcomed! Bug fixes and new features can be initiated through
+GitHub pull requests. To speed the code review process, we ask that:
+
+*   When making code contributions to TensorFlow Privacy, you follow the `PEP8
+    with two spaces` coding style (the same as the one used by TensorFlow) in
+    your pull requests. In most cases this can be done by running `autopep8 -i
+    --indent-size 2 <file>` on the files you have edited.
+
+*   You should also check your code with pylint and TensorFlow's pylint
+    [configuration file](https://raw.githubusercontent.com/tensorflow/tensorflow/master/tensorflow/tools/ci_build/pylintrc)
+    by running `pylint --rcfile=/path/to/the/tf/rcfile <edited file.py>`.
+
+*   When making your first pull request, you
+    [sign the Google CLA](https://cla.developers.google.com/clas)
+
+*   We do not accept pull requests that add git submodules because of
+    [the problems that arise when maintaining git submodules](https://medium.com/@porteneuve/mastering-git-submodules-34c65e940407)
+
+## Tutorials directory
+
+To help you get started with the functionalities provided by this library, we
+provide a detailed walkthrough [here](tutorials/walkthrough/README.md) that will
+teach you how to wrap existing optimizers (e.g., SGD, Adam, ...) into their
+differentially private counterparts using TensorFlow (TF) Privacy. You will also
+learn how to tune the parameters introduced by differentially private
+optimization and how to measure the privacy guarantees provided using analysis
+tools included in TF Privacy.
+
+In addition, the `tutorials/` folder comes with scripts demonstrating how to use
+the library features. The list of tutorials is described in th

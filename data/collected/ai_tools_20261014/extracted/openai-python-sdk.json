@@ -1,0 +1,37 @@
+{
+ "company": "OpenAI",
+ "one_liner_ko": "파이썬 3.10 이상 애플리케이션에서 OpenAI REST API를 편리하게 쓰게 해 주는 공식 파이썬 라이브러리.",
+ "what_it_does_ko": "OpenAI Python 라이브러리는 파이썬 3.10 이상 애플리케이션에서 OpenAI REST API에 편리하게 접근하게 해 준다. 모든 요청 매개변수와 응답 필드의 타입 정의를 포함하고, 동기·비동기 클라이언트를 모두 제공한다. OpenAPI 명세에서 자동 생성되며 PyPI로 설치한다. Responses API와 Chat Completions API로 모델에서 텍스트를 생성할 수 있고, API 키 대신 클라우드 워크로드 ID 인증도 쓸 수 있다.",
+ "key_features": [
+  "모든 요청·응답 필드의 타입 정의",
+  "동기·비동기 클라이언트",
+  "OpenAPI 명세에서 자동 생성",
+  "Responses API로 텍스트 생성",
+  "Chat Completions API 지원(무기한 지원)",
+  "Kubernetes·Azure·GCP 워크로드 ID 인증(단기 토큰)"
+ ],
+ "use_cases_ko": [
+  "파이썬 애플리케이션에서 OpenAI 모델로 텍스트 생성"
+ ],
+ "pricing": {"free_tier": "불명", "plans": [], "pricing_url": null},
+ "open_source": null,
+ "api": "있음",
+ "platforms": [],
+ "korean_support": "불명",
+ "evidence": [
+  {"field": "company", "url": "https://github.com/openai/openai-python", "quote": "The OpenAI Python library provides convenient access to the OpenAI REST API from any Python 3.10+"},
+  {"field": "one_liner_ko", "url": "https://github.com/openai/openai-python", "quote": "The OpenAI Python library provides convenient access to the OpenAI REST API from any Python 3.10+"},
+  {"field": "what_it_does_ko", "url": "https://github.com/openai/openai-python", "quote": "and offers both synchronous and asynchronous clients powered by"},
+  {"field": "what_it_does_ko", "url": "https://github.com/openai/openai-python", "quote": "For secure, automated environments like cloud-managed Kubernetes, Azure, and Google Cloud Platform, you can use workload identity authentication"},
+  {"field": "key_features", "url": "https://github.com/openai/openai-python", "quote": "The library includes type definitions for all request params and response fields,"},
+  {"field": "key_features", "url": "https://github.com/openai/openai-python", "quote": "and offers both synchronous and asynchronous clients powered by"},
+  {"field": "key_features", "url": "https://github.com/openai/openai-python", "quote": "It is generated from our [OpenAPI specification]"},
+  {"field": "key_features", "url": "https://github.com/openai/openai-python", "quote": "The primary API for interacting with OpenAI models is the [Responses API]"},
+  {"field": "key_features", "url": "https://github.com/openai/openai-python", "quote": "The previous standard (supported indefinitely) for generating text is the [Chat Completions API]"},
+  {"field": "key_features", "url": "https://github.com/openai/openai-python", "quote": "you can use workload identity authentication with short-lived tokens from cloud identity providers instead of long-lived API keys"},
+  {"field": "use_cases_ko", "url": "https://github.com/openai/openai-python", "quote": "You can generate text from the model with the code below."},
+  {"field": "api", "url": "https://github.com/openai/openai-python", "quote": "The REST API documentation can be found on [platform.openai.com]"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

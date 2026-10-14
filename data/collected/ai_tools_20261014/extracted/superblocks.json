@@ -1,0 +1,171 @@
+{
+ "company": "Superblocks",
+ "one_liner_ko": "현업 팀이 AI로 사내 업무 앱을 만들고, IT·보안 팀이 통합·권한·감사를 통제하는 기업용 바이브 코딩 플랫폼",
+ "what_it_does_ko": "Superblocks는 AI가 만든 사내 앱을 만들고 관리·통제하는 플랫폼이다. 현업 팀은 AI 코딩 에이전트 Clark에게 자연어로 요청해 회사 데이터 위에서 운영용 앱을 만들고, IT는 통합·인증·접근 권한·감사·정책을 한곳에서 관리한다. AI 앱은 업무 시스템에 직접 접근하지 않고 Superblocks 통합 통제 계층을 거치며 모든 DB 쿼리와 API 호출이 감사된다. Claude·Lovable·Replit에서 만든 프로토타입을 가져와 운영으로 옮길 수 있고, 클라우드·하이브리드·고객 VPC(Cloud-Prem) 배포를 지원한다.",
+ "key_features": [
+  "AI 코딩 에이전트 Clark로 자연어 사내 앱 제작",
+  "Claude·Lovable·Replit 프로토타입 가져오기",
+  "API·MCP 인증, 접근 통제, 비밀값 관리, 상호작용 감사를 하는 통합 통제 계층",
+  "앱마다 격리된 Aurora PostgreSQL 데이터베이스 자동 생성",
+  "스테이징·운영 환경과 50개 이상 통합",
+  "AWS·GCP·Azure VPC 배포(하이브리드·Cloud-Prem)",
+  "SSO/SAML/OIDC, RBAC, 감사 로그, 보안 에이전트·스캔(Enterprise)",
+  "Superblocks MCP로 앱 사용·권한·위협 실시간 관리"
+ ],
+ "use_cases_ko": [
+  "바이브 코딩 프로토타입을 보안 통제 하에 운영 앱으로 전환",
+  "스프레드시트 업무를 RBAC·감사 로그가 있는 앱으로 대체",
+  "비싼 SaaS를 맞춤 사내 앱으로 대체·고객 포털 제공"
+ ],
+ "pricing": {
+  "free_tier": "없음 (Teams 14일 무료 체험만)",
+  "plans": [
+   {
+    "name": "Teams",
+    "price": 125,
+    "currency": "USD",
+    "period": "month",
+    "limits": "월 100 GAU, Clark AI, 호스팅 앱 1개(추가 앱당 월 $10), 빌더 최대 15명, 14일 무료 체험",
+    "page_lang": "en"
+   },
+   {
+    "name": "Teams",
+    "price": 100,
+    "currency": "USD",
+    "period": "month(연간 결제)",
+    "limits": "월간 결제 대비 20% 할인",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": "USD",
+    "period": "month",
+    "limits": "맞춤 가격, VPC 배포, SSO, 전담 지원",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://www.superblocks.com/pricing"
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "웹"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.superblocks.com/",
+   "quote": "© 20?? Superblocks. All rights reserved"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.superblocks.com/pricing",
+   "quote": "Superblocks is the enterprise AI vibe coding platform that lets anyone build business apps on private enterprise data, while enforcing your organization’s security, compliance, and governance policies."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.superblocks.com/getting-started/what-is-superblocks",
+   "quote": "Business teams generate production apps on your company data with AI, while IT manages integrations, authentication, access controls, auditing, and policies from one place."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.superblocks.com/getting-started/what-is-superblocks",
+   "quote": "Every database query and API call is centrally audited, so Admins have complete visibility."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.superblocks.com/pricing",
+   "quote": "Builders use Clark, an AI coding agent, to prompt and build internal applications in natural language and then deploy securely."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.superblocks.com/",
+   "quote": "Import from Claude, Lovable, Replit and code."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.superblocks.com/",
+   "quote": "Superblocks is your integration control layer — enforcing API and MCP authentication, inheriting access controls, abstracting secrets, and auditing every interaction."
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.superblocks.com/getting-started/what-is-superblocks",
+   "quote": "Superblocks Database gives every app its own Aurora PostgreSQL database inside your AWS account."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.superblocks.com/pricing",
+   "quote": "Staging and production environments"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.superblocks.com/pricing",
+   "quote": "VPC Deployment (Hybrid or Cloud Prem in AWS, GCP, Azure)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.superblocks.com/",
+   "quote": "Superblocks MCP gives IT real-time visibility and control over every internal app"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.superblocks.com/",
+   "quote": "Import Claude, Replit and Lovable prototypes and securely take to production."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.superblocks.com/",
+   "quote": "Turn spreadsheets into governed AI apps with RBAC and Audit Logs."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.superblocks.com/",
+   "quote": "replacements for clunky SaaS that fit your unique workflow perfectly."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.superblocks.com/pricing",
+   "quote": "Start 14-day free trial"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.superblocks.com/pricing",
+   "quote": "$125\n per month, billed monthly"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.superblocks.com/pricing",
+   "quote": "$100\n per month, billed annually"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.superblocks.com/pricing",
+   "quote": "100 Governed Agent Units (GAUs) / month"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.superblocks.com/pricing",
+   "quote": "$10/app/mo for additional apps"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.superblocks.com/pricing",
+   "quote": "flexible pricing tailored to your organization."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.superblocks.com/",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "요금제는 Teams(월 $125, 연간 결제 시 월 $100)와 Enterprise(맞춤)뿐이고 무료는 14일 체험만 있음",
+   "diff": "기존 '프리미엄(무료+유료 구독)'과 달리 상시 무료 요금제가 없음(유료 구독+무료 체험)",
+   "url": "https://www.superblocks.com/pricing"
+  }
+ ],
+ "plan_change": []
+}

@@ -1,0 +1,219 @@
+{
+ "company": "ZenML GmbH",
+ "one_liner_ko": "파이프라인·에이전트를 오케스트레이션하는 ZenML과 프로덕션 데이터로 에이전트를 재실행·평가하는 Kitaru를 제공하는 오픈소스 AI 플랫폼.",
+ "what_it_does_ko": "ZenML은 ML·LLM 파이프라인(에이전트 작업 포함)을 오케스트레이션하는 오픈소스 프레임워크로, 버전 관리되는 아티팩트·캐싱과 스택으로 추상화된 인프라를 제공한다. 파이썬으로 파이프라인과 에이전트를 작성해 이미 쓰는 오케스트레이터·클라우드에서 다시 쓰지 않고 실행한다. Kitaru는 에이전트가 실제로 실행한 세션을 가져와 변경 사항을 재실행(replay)하고 개선·퇴보·비용을 확인하는 평가 도구다. 둘 다 Apache 2.0 오픈소스이며 유료 Pro(관리형 컨트롤 플레인)를 SaaS나 자체 인프라로 제공한다.",
+ "key_features": [
+  "파이썬 파이프라인·에이전트를 기존 오케스트레이터·클라우드에서 실행",
+  "코드 자동 컨테이너화·실행 추적(지표·로그·메타데이터)",
+  "아티팩트 관리·기본 모델 레지스트리",
+  "Kitaru: 프로덕션 세션 재실행 기반 평가·회귀 테스트",
+  "Langfuse·LangSmith 등에서 내보낸 트레이스 가져오기",
+  "MLflow·Langgraph·Sagemaker·Vertex 등 도구 통합",
+  "Pro: Model·Artifact Control Plane, 스냅샷, 원격 IDE"
+ ],
+ "use_cases_ko": [
+  "기업의 ML·AI 엔지니어가 전통 ML·LLM 워크플로·에이전트 운영",
+  "에이전트 변경을 배포 전 과거 실제 세션으로 테스트"
+ ],
+ "pricing": {
+  "free_tier": "있음 (ZenML·Kitaru 오픈소스 자가 호스팅 무료; Kitaru Cloud 14일 무료 체험, 무료 호스팅 요금제는 없음)",
+  "plans": [
+   {
+    "name": "ZenML Open Source",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "자가 호스팅, 실행·프로젝트 무제한",
+    "page_lang": "en"
+   },
+   {
+    "name": "ZenML Scale",
+    "price": 999,
+    "currency": "USD",
+    "period": "month",
+    "limits": "SaaS, 월 실행 2,000회·프로젝트 3개·스냅샷 5개(실행 500/2,000/5,000 단계 선택)",
+    "page_lang": "en"
+   },
+   {
+    "name": "ZenML Enterprise",
+    "price": null,
+    "currency": "USD",
+    "period": "month",
+    "limits": "맞춤 요금, 실행 무제한, SSO·RBAC·에어갭 배포",
+    "page_lang": "en"
+   },
+   {
+    "name": "Kitaru Open Source",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "자가 호스팅, 가져오기·기록 무제한",
+    "page_lang": "en"
+   },
+   {
+    "name": "Kitaru Cloud",
+    "price": 39,
+    "currency": "USD",
+    "period": "month",
+    "limits": "정액, 에이전트 3개·좌석 2개·세션 90일 보관, 14일 무료 체험",
+    "page_lang": "en"
+   },
+   {
+    "name": "Kitaru Enterprise",
+    "price": null,
+    "currency": "USD",
+    "period": "month",
+    "limits": "맞춤 요금, 에이전트 무제한, SSO·감사 로그·원격 워커 풀",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://www.zenml.io/pricing"
+ },
+ "open_source": "Apache 2.0",
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.zenml.io/",
+   "quote": "© 2026 ZenML GmbH\n SOC 2 Type II ISO 27001"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.zenml.io/",
+   "quote": "ZenML orchestrates your pipelines and agents. Kitaru replays them on production data before a change ships."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.zenml.io/",
+   "quote": "ZenML is an open-source framework for orchestrating production ML and LLM pipelines, including pipelines that run agentic workloads."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.zenml.io/",
+   "quote": "with versioned artifacts, caching, and infrastructure abstracted behind stacks"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.zenml.io/",
+   "quote": "Import the sessions your agent has actually run, find what repeats, and replay a change against them."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.zenml.io/pricing",
+   "quote": "Upgrade to Pro for the managed control plane, on our SaaS or your own infrastructure."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.zenml.io/",
+   "quote": "Write pipelines and agents in Python and run them on the orchestrator and cloud you already have."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/zenml-io/zenml",
+   "quote": "Automatically containerizing and tracking your code."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.zenml.io/pricing",
+   "quote": "Pipeline & flow orchestration \n Artifact management \n Basic model registry"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.zenml.io/",
+   "quote": "It turns recorded or imported production traces into sessions for investigation, cohorts, evaluators, replay experiments, regression testing, and CI."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.zenml.io/pricing",
+   "quote": "Kitaru also imports trace files exported from Langfuse, LangSmith, Braintrust, Logfire or Arize Phoenix"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/zenml-io/zenml",
+   "quote": "Integrating your existing tools and infrastructure e.g. MLflow, Langgraph, Langfuse, Sagemaker, GCP Vertex, etc."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.zenml.io/pricing",
+   "quote": "Model Control Plane \n Artifact Control Plane \n Snapshots \n Codespaces (remote IDE)"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/zenml-io/zenml",
+   "quote": "ZenML is built for ML or AI Engineers working on traditional ML use-cases, LLM workflows, or agents, in a company setting."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.zenml.io/pricing",
+   "quote": "so you can test your next change against your last thousand sessions before it ships"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.zenml.io/pricing",
+   "quote": "There's no free hosted tier: the free option is the open-source version, self-hosted on your own infrastructure, forever."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.zenml.io/pricing",
+   "quote": "Unlimited executions · Unlimited projects"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.zenml.io/pricing",
+   "quote": "2,000 executions · 3 projects · 5 snapshots"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.zenml.io/pricing",
+   "quote": "3 agents · 2 seats · 90-day session retention"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.zenml.io/pricing",
+   "quote": "One flat plan while we launch: $39 a month, every feature, no meters to read."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.zenml.io/pricing",
+   "quote": "Unlimited agents · Custom seats and retention"
+  },
+  {
+   "field": "open_source",
+   "url": "https://www.zenml.io/",
+   "quote": "ZenML and Kitaru are Apache 2.0. Self-host, read the code, keep your data where it is."
+  },
+  {
+   "field": "api",
+   "url": "https://docs.zenml.io/",
+   "quote": "Client and REST API references, organized per project"
+  },
+  {
+   "field": "platforms",
+   "url": "https://www.zenml.io/pricing",
+   "quote": "Hosted dashboard and control plane"
+  },
+  {
+   "field": "platforms",
+   "url": "https://docs.zenml.io/",
+   "quote": "Client and REST API references, organized per project"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.zenml.io/",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "ZenML(실행 횟수 기반 Scale 월 $999·Enterprise)과 에이전트 재실행 제품 Kitaru(정액 월 $39·Enterprise) 두 작업공간을 하나의 구독으로 묶음",
+   "diff": "단일 클라우드 플랜이 아니라 제품 2개(ZenML·Kitaru)의 서로 다른 가격 구조(실행량 단계제 + 정액제)로 구성",
+   "url": "https://www.zenml.io/pricing"
+  }
+ ]
+}

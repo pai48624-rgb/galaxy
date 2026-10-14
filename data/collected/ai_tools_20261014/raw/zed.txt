@@ -1,0 +1,274 @@
+=== [home] https://zed.dev/ (lang=en)
+Zed — Your last next editor 
+ Zed Industries
+ Advancing the state of the art for collaborative software development.
+ Delta
+ Est 2026 
+ A multiplayer environment for coding with agents, powered by DeltaDB.
+ Download Learn More 
+ Zed
+ Est 2021 
+ The world's fastest IDE. Open source. AI optional.
+ Download Learn More 
+ Pinned Trace dropped keystrokes in GPUI inputs 
+ Review element cache invalidation rules 
+ Projects zed 
+ gpui Cache SumTree node summaries 
+ Investigate cache invalidation Trace summary propagation paths Check cursor invalidation callers 
+ Fix IME candidate window positioning 
+ Add scroll wheel phase events on macOS 
+ Simplify Entity subscription cleanup 
+ Reproduce stale text after window resize 
+ cosmic-text 
+ Threads Summarize feedback on my first GPUI PR 
+ Find a small rendering issue to work on 
+ Explain retained mode rendering 
+ Compare Metal frame capture tools 
+ Draft release notes for accessibility fixes 
+ nathansobo Zed 
+ Cache SumTree node summaries 
+ Share 
+ Cursor::seek recomputes each internal node's summary on every descent — for a rope of a few MB that's most of our seek time. Can we cache the summaries on the nodes and invalidate on edit?
+ Thought 3 times, ran 1 search, read 2 files 
+ Edit crates/sum_tree/src/sum_tree.rs 
+ Internal { height : u8 , summary : T :: Summary , summary_cache : SummaryCache < T :: Summary > , children : Vec < SumTree < T >> , 
+ Edit crates/sum_tree/src/cursor.rs 
+ let mut end = self . position . clone ( ) ; end . add_summary ( & child . compute_summary ( ) ) ; end . add_summary ( child . cached_summary ( ) ) ; if end . cmp ( target ) . is_ge ( ) { 
+ $ cargo test -p sum_tree 2>&1 | tail -20 
+ Done — internal nodes now carry a SummaryCache keyed on a generation counter, and structural edits (push, remove, rebalance) bump the counter instead of recomputing eagerly. Cursor::seek reads through the cache, so it only recomputes summaries for nodes whose subtree actually changed — repeated seeks over an unedited region are pure cache hits . All 47 tests pass, including two new ones covering invalidation on push and on rebalancing.
+ 1 comment 
+ repeated seeks over an unedited region are pure cache hits 
+ do we have a benchmark proving this? 
+ repeated seeks over an unedited region are pure cache hits 
+ do we have a benchmark proving this? 
+ let's back that claim with data before we merge — add a criterion benchmark that seeks randomly through a tree of a million items, and share before/after numbers. i'd also like one seek-after-push case so we can see the invalidation cost on the spine.
+ Thought 2 times, read 1 file 
+ $ cargo bench -p sum_tree -- seek 
+ Benchmarked on a tree of one million items: random seeks went from 41.2µs to 3.4µs (12x), and seek-after-push lands at 5.1µs — the spine invalidation only forces one recompute per level. Criterion configs and the raw numbers are in benches/seek.rs.
+ nice numbers. before we merge, extract SummaryCache into its own module and re-export it from lib.rs — rope is going to want the same trick for chunk summaries.
+ Thought 1 time, ran 1 search 
+ Edit crates/sum_tree/src/lib.rs 
+ mod cursor ; mod sum_tree ; mod summary_cache ; pub use cursor :: Cursor ; pub use summary_cache :: SummaryCache ; 
+ Extracted — SummaryCache lives in summary_cache.rs now and lib.rs re-exports it, so rope can depend on it without reaching into sum_tree's internals. No behavior change; the test suite is green.
+ what's the per-node memory overhead of the cache? we have trees with tens of millions of nodes in large buffers.
+ 16 bytes per internal node on 64-bit targets: a usize generation plus Option<S> where the niche fits in the summary's padding for our summary types. Leaves carry nothing. For a 10M-node tree that's ~160MB in internal nodes — but internal nodes are only ~1/32 of the total at our branching factor, so in practice it's closer to 5MB per 10M items .
+ 1 comment 
+ closer to 5MB per 10M items 
+ Can we link the benchmark for this estimate? 
+ delta / main 
+ + 6 − 4 
+ High Fable 5 
+ Changes 
+ sum_tree.rs 
+ cursor.rs 
+ Since origin/main + 6 − 4 
+ sum_tree.rs crates/sum_tree/src/ 
+ enum Node < T : Item > { 22 Internal { 23 height : u8 , summary : T :: Summary , 24 summary_cache : SummaryCache < T :: Summary > , 25 children : Vec < SumTree < T > > , 26 } , 27 Leaf { 28 items : Vec < T > , 29 } , } 
+ pub fn push ( & mut self , item : T ) { 87 match Arc :: make_mut ( & mut self . 0 ) { 88 Node :: Internal { summary , 89 summary_cache , 90 children , 91 .. 92 } => { * summary = compute_summary ( children ) ; 93 summary_cache . invalidate ( ) ; 94 children 95 . last_mut ( ) 96 . expect ( "internal nodes are never empty" ) 97 . push ( item ) ; 
+ cursor.rs crates/sum_tree/src/ 
+ fn descend ( & mut self , subtree : & ' a SumTree < T > , target : & T :: Summary ) -> bool { 39 for ( index , child ) in subtree . children ( ) . iter ( ) . enumerate ( ) { 40 let mut end = self . position . clone ( ) ; end . add_summary ( & child . compute_summary ( ) ) ; 41 end . add_summary ( child . cached_summary ( ) ) ; 42 if end . cmp ( target ) . is_ge ( ) { 
+ lib.rs crates/sum_tree/src/ 
+ 1 mod cursor ; 2 mod sum_tree ; 3 mod summary_cache ; 4 ​ 5 pub use cursor :: Cursor ; 6 pub use sum_tree :: { Item , SumTree , Summary } ; 7 pub use summary_cache :: SummaryCache ; 
+ Agent Client Protocol 
+ Connect any client to any agent.
+ GPUI 
+ A fast, GPU-accelerated UI framework for Rust.
+ Tree-sitter 
+ Incremental parsing for programming languages.
+ Zed Industries
+ • Jobs 
+ Values 
+ Team 
+ •
+
+=== [pricing] https://zed.dev/pricing (lang=en)
+Zed — Pricing 
+ Product 
+ Resources 
+ Extensions 
+ Docs 
+ Pricing 
+ Delta 
+ P 
+ Sign up S 
+ Download D 
+ Build better with Zed
+ All options include fast performance, multiplayer collaboration, and weekly releases that level up how you build. 
+ Personal
+ $0 forever 
+ The next-generation code editor. Free forever.
+ Unlimited use with your API keys or external agents like Claude Agent, Codex CLI, and more
+ Download Now 
+ Pro
+ Free Trial 
+ $10 per month 
+ The next-generation code editor + AI. Supercharge your development.
+ Unlimited edit predictions
+ $5 of tokens included
+ Usage-based billing beyond $5
+ Get Started 
+ Business
+ $30 per seat, per month 
+ The editor your team loves, with the org-level controls you need.
+ Org-wide AI model policies
+ Data governance controls
+ Unified spend visibility
+ Unlimited edit predictions
+ Role-based access controls
+ Order forms available at 25+ seats.
+ Get started 
+ Which Zed plan is right for me? 
+ Our Personal plan is for users who want a best-in-class code editor without AI capabilities, or for users who prefer to use their own keys/external agents.
+Our Pro plan comes with Zed hosted models out of the box.
+Our Business plan is for teams that need centralized control over how Zed is used.
+ What's the difference between Pro and Business? 
+ Pro is for individual developers: it comes with Zed-hosted AI models and unlimited edit predictions.
+Business is an org-level layer on top of that, not a replacement. Members can hold their own Pro subscriptions.
+What Business adds is the admin layer – org-wide controls over AI features, data sharing policies, and unified billing across every seat.
+ Do Business seats include AI credits? 
+ Business seats don't bundle a fixed LLM credit allotment.
+You can use Zed-hosted AI at standard usage rates, or bring your own API keys from Anthropic, OpenAI, Google, and others – in which case spend goes directly to your provider.
+Some teams already have existing AI contracts; Zed can run through them without requiring you to switch or double up.
+ Is there a minimum seat count for Business? 
+ No minimum. Business is self-serve and available to organizations of any size.
+Month-to-month plans are available to everyone. Order form contracts are available at 25+ seats – reach out to sales@zed.dev .
+ Can I trial Business before committing? 
+ Business doesn't currently have a free trial. You can start on a monthly plan and cancel at any time.
+For larger teams, reach out to sales@zed.dev – we're happy to discuss options.
+ What admin controls are available in Business? 
+ From dashboard.zed.dev , Business admins can restrict or disable Zed-hosted AI models by model, turn off edit predictions org-wide, and lock data sharing settings so members can't override them.
+Since Zed is open source, these controls govern Zed's hosted services specifically.
+ SSO, SAML, and SCIM are planned but not currently available.
+ How does the free trial work? 
+ We offer a 14-day free trial of Pro with $5 of GPT-6 Luna usage and unlimited accepted edit predictions.
+No credit card is required.
+The trial ends when you use the $5 balance or 14 days pass, whichever comes first.
+Your $5 trial balance is shared across Zed and Delta.
+Start your trial on your Account page .
+ GPT-6 Luna is the only hosted model available during the free trial.
+ What is a token? 
+ A token is a unit of text processed by an LLM (roughly 3–4 characters of English text).
+With token-based billing, you’re only charged for the text your prompts and responses actually consume.
+Costs vary by model, but Zed Pro bills at API list price +10% for hosted usage.
+See the full list of models and prices here .
+ What happens if I exceed Pro's $5 token credits? 
+ Once you use up your included monthly credits, you’ll be billed for additional token usage at API list price +10%.
+We’ll charge either at the end of the month or for every additional $10 incurred, whichever comes first.
+You can also set a spending cap to manage costs.
+ I don't want to pay for Zed, can I use my own keys? 
+ Yes you can!
+We currently support Amazon Bedrock, Anthropic, GitHub Copilot, Deepseek, Google AI, LM Studio, Mistral, Ollama, OpenAI, OpenRouter, Vercel, and more.
+Learn how to set them up by visiting the LLM providers docs .
+ Can I use Zed without the AI features? 
+ Yes! Zed is first and foremost a code editor with blazing-fast performance, true multiplayer collaboration, and a focus on developer productivity.
+You can disable all AI features if you'd like to.
+ Can I sponsor Zed? 
+ Yes, you can sponsor Zed Industries, Inc., the company that builds Zed.
+We offer that option via Github Sponsors .
+ Sponsorships are treated as general company income and do not provide access to paid features, support, or any other benefits.
+Sponsorship is entirely optional and simply a way to financially support Zed if you choose.
+We're very grateful for your support, if you choose to do so!
+ Zed for Business 
+ The editor your team loves. The controls your org needs.
+ Your developers already chose the world's fastest code editor. Manage their AI features, data sharing, and spend for every seat.
+ Get Started 
+ Daily drive with Zed
+ Code at the speed of thought.
+ Download now D Clone source C 
+ Zed Industries © 2026
+ Sign Up • Have an account? Sign In 
+ Terms of Service • Attributions 
+ Manage Site Cookies 
+ Product
+ Download 
+ Pricing 
+ Business 
+ Releases 
+ Extensions 
+ Roadmap 
+ Docs 
+ Compare 
+ GitHub ↗ 
+ Status ↗ 
+ Resources
+ FAQ 
+ CLA 
+ Community 
+ Support 
+ Discussions ↗ 
+ Privacy 
+ Subscribe 
+ Theme Builder 
+ Yearly Recaps 
+ Company
+ Blog 
+ About 
+ Values 
+ Team 
+ Jobs 
+ Press 
+ Brand 
+ Merch ↗ 
+ Social
+ Twitter ↗ 
+ Bluesky ↗ 
+ Instagram ↗ 
+ YouTube ↗ 
+ Discord ↗ 
+ Reddit ↗
+
+=== [meta] https://zed.dev/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/zed-industries/zed
+# Zed
+
+[![Zed](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/zed-industries/zed/main/assets/badge/v0.json)](https://zed.dev)
+[![CI](https://github.com/zed-industries/zed/actions/workflows/run_tests.yml/badge.svg)](https://github.com/zed-industries/zed/actions/workflows/run_tests.yml)
+
+Welcome to Zed, a high-performance, multiplayer code editor from the creators of [Atom](https://github.com/atom/atom) and [Tree-sitter](https://github.com/tree-sitter/tree-sitter).
+
+---
+
+### Installation
+
+On macOS, Linux, and Windows you can [download Zed directly](https://zed.dev/download) or install Zed via your local package manager ([macOS](https://zed.dev/docs/installation#macos)/[Linux](https://zed.dev/docs/linux#installing-via-a-package-manager)/[Windows](https://zed.dev/docs/windows#package-managers)).
+
+Other platforms are not yet available:
+
+- Web ([tracking discussion](https://github.com/zed-industries/zed/discussions/26195))
+
+### Developing Zed
+
+- [Building Zed for macOS](./docs/src/development/macos.md)
+- [Building Zed for Linux](./docs/src/development/linux.md)
+- [Building Zed for Windows](./docs/src/development/windows.md)
+
+### Contributing
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for ways you can contribute to Zed.
+
+Also... we're hiring! Check out our [jobs](https://zed.dev/jobs) page for open roles.
+
+### Licensing
+
+Zed source code is licensed primarily under GPL-3.0-or-later, with Apache-2.0 components where marked.
+
+License information for third party dependencies must be correctly provided for CI to pass.
+
+We use [`cargo-about`](https://github.com/EmbarkStudios/cargo-about) to automatically comply with open source licenses. If CI is failing, check the following:
+
+- Is it showing a `no license specified` error for a crate you've created? If so, add `publish = false` under `[package]` in your crate's Cargo.toml.
+- Is the error `failed to satisfy license requirements` for a dependency? If so, first determine what license the project has and whether this system is sufficient to comply with this license's requirements. If you're unsure, ask a lawyer. Once you've verified that this system is acceptable add the license's SPDX identifier to the `accepted` array in `script/licenses/zed-licenses.toml`.
+- Is `cargo-about` unable to find the license for a dependency? If so, add a clarification field at the end of `script/licenses/zed-licenses.toml`, as specified in the [cargo-about book](https://embarkstudios.github.io/cargo-about/cli/generate/config.html#crate-configuration).
+
+## Sponsorship
+
+Zed is developed by **Zed Industries, Inc.**, a for-profit company.
+
+If you’d like to financially support the project, you can do so via GitHub Sponsors.
+Sponsorships go directly to Zed Industries and are used as general company revenue.
+There are no perks or entitlements associated with sponsorship.
+

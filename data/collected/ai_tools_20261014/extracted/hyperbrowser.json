@@ -1,0 +1,35 @@
+{
+ "company": "Hyperbrowser",
+ "one_liner_ko": "AI 에이전트가 인터넷을 쓰도록 클라우드 브라우저·샌드박스·웹 데이터 API를 제공하는 플랫폼이다.",
+ "what_it_does_ko": "Hyperbrowser는 API와 SDK로 웹사이트 자동화, 격리된 환경에서의 코드 실행, 웹 데이터 추출을 제공한다. Playwright나 Puppeteer를 클라우드 크롬 세션에 연결하고 로그인 상태를 저장할 수 있다. 페이지 가져오기·사이트 크롤링·웹 검색 결과를 마크다운·HTML·스크린샷·JSON으로 돌려준다. 프롬프트로 HyperAgent, Browser Use, 컴퓨터 사용 모델을 관리형 브라우저에서 실행할 수 있다.",
+ "key_features": ["API로 클라우드 크롬 제어(Playwright·Puppeteer 연결)", "격리된 샌드박스 VM에서 코드 실행·스냅샷 저장", "Web API(페치·크롤·검색, 마크다운·JSON 출력)", "프롬프트 기반 AI 에이전트 실행(HyperAgent, Browser Use)", "세션 녹화·실시간 보기", "로그인·쿠키가 저장된 브라우저 프로필 재사용", "자동 캡차 해결·스텔스 모드·주거용 프록시", "Node.js·Python SDK, CLI, MCP"],
+ "use_cases_ko": ["AI 자동화용 클라우드 브라우저 실행", "대규모 웹 스크래핑", "에이전트형 코드 실행"],
+ "pricing": {"free_tier": "있음 (가입 시 5,000크레딧, 동시 세션 1개, 데이터 보관 7일)", "plans": [
+  {"name": "Free", "price": 0, "currency": "USD", "period": "one-time", "limits": "5,000크레딧 포함, 동시 1세션", "page_lang": "en"},
+  {"name": "Startup", "price": 30, "currency": "USD", "period": "month", "limits": "30,000크레딧, 동시 25세션", "page_lang": "en"},
+  {"name": "Scale", "price": 100, "currency": "USD", "period": "month", "limits": "100,000크레딧, 동시 100세션", "page_lang": "en"},
+  {"name": "Enterprise", "price": null, "currency": "USD", "period": "usage", "limits": "Custom, 동시 1,000세션 이상", "page_lang": "en"}
+ ], "pricing_url": "https://www.hyperbrowser.ai/pricing"},
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["웹", "API", "CLI"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://www.hyperbrowser.ai/", "quote": "Hyperbrowser | AI agents’ gateway to the internet"},
+  {"field": "one_liner_ko", "url": "https://www.hyperbrowser.ai/", "quote": "Give your agents a browser to work in, compute to run on, and web data they can use."},
+  {"field": "what_it_does_ko", "url": "https://www.hyperbrowser.ai/", "quote": "Automate websites, run code in isolated environments, and extract web data with APIs and SDKs."},
+  {"field": "what_it_does_ko", "url": "https://www.hyperbrowser.ai/", "quote": "Run HyperAgent, Browser Use, or computer-use models in a managed browser."},
+  {"field": "key_features", "url": "https://www.hyperbrowser.ai/", "quote": "Connect Playwright or Puppeteer to a cloud-hosted Chrome session. Save logins between runs and inspect sessions live."},
+  {"field": "key_features", "url": "https://www.hyperbrowser.ai/", "quote": "Fetch a page, crawl a site, or search the web. Return Markdown, HTML, screenshots, or JSON that matches your schema."},
+  {"field": "key_features", "url": "https://www.hyperbrowser.ai/", "quote": "Use Playwright, Puppeteer, the Node.js or Python SDKs, the CLI, or MCP."},
+  {"field": "use_cases_ko", "url": "https://www.hyperbrowser.ai/docs/home", "quote": "Fast, reliable cloud browsers and sandboxes for AI automation, large-scale web scraping, and agentic code execution."},
+  {"field": "pricing", "url": "https://www.hyperbrowser.ai/pricing", "quote": "$0 to start · 5,000 credits included"},
+  {"field": "pricing", "url": "https://www.hyperbrowser.ai/pricing", "quote": "30,000 credits for all four products"},
+  {"field": "pricing", "url": "https://www.hyperbrowser.ai/", "quote": "Startup $ 30 / month 30,000 credits included Scale $ 100 / month 100,000 credits included"},
+  {"field": "api", "url": "https://www.hyperbrowser.ai/docs/home", "quote": "Complete API documentation for all available endpoints"},
+  {"field": "platforms", "url": "https://www.hyperbrowser.ai/docs/home", "quote": "Manage sandboxes, volumes, images, and snapshots from your terminal"},
+  {"field": "korean_support", "url": "https://www.hyperbrowser.ai/", "quote": "html lang: en"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

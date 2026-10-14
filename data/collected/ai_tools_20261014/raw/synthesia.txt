@@ -1,0 +1,600 @@
+=== [home] https://www.synthesia.io (lang=en)
+Synthesia: #1 AI Video Platform for Business 
+ MEET SYREN
+ Our most advanced AI video model yet.
+ Try for free
+ What do you like best about Synthesia?
+ How easy it is to use and get started! The platform is user friendly - anyone can do it! It's also very easy to download and upload the videos into an LMS or other video hosting platform.
+ Zach F.
+ Senior Learning & Development Analyst
+ One of 2,000+ 5-star reviews on
+ Video
+ Products
+ Product Overview
+ The all-in-one AI Video Platform
+ AI Avatars
+ Lifelike avatars from a script
+ AI Video Generator
+ Turn docs and prompts into video
+ AI Video Dubbing
+ Dub videos in any language
+ AI Video Translation
+ Translate videos in one click
+ AI Screen Recorder
+ Record and narrate your screen
+ AI Motion Graphics
+ On brand motion and visuals
+ Teams
+ Learning & Development Human Resources Sales Enablement Marketing IT & Cybersecurity Knowledge Management 
+ Industries
+ Manufacturing Tech & Software Healthcare Financial Services Professional Services Retail 
+ Use cases
+ Technical Training Compliance Training Sales Training Employee Development SOP Videos Product Videos 
+ The #1 rated AI Video Platform
+ The complete platform to create, manage, translate and distribute video.
+ Sessions
+ Products
+ Product Overview
+ Interactive roleplays and surveys
+ Roleplay Sessions
+ Practice conversations with avatars
+ Survey Sessions
+ Conversational surveys at scale
+ Roleplay Use Cases
+ Sales Roleplay Discovery Call Cold Call Manager Training 
+ Survey Use Cases
+ Employee Insights Customer Insights Lead Qualification 
+ Roleplay and survey avatars
+ Interactive AI Avatar conversations for every scenario.
+ API
+ Products
+ Product Overview
+ The Synthesia API at a glance
+ Interactive Avatars
+ Real-time conversational avatars
+ Dubbing
+ Translate video via API
+ Video Creation
+ Create videos programmatically
+ Resources
+ API Pricing Interactive Avatars API Documentation Dubbing API Documentation AI Video Assistant API Documentation MCP Documentation 
+ Introducing the Synthesia API
+ Create and translate AI Videos at scale. Build Interactive Avatar products.
+ Resources
+ Resources
+ Video Templates Synthesia Blog Case Studies Customer Reviews 
+ Learn
+ Synthesia Academy Live sessions Help Center 
+ Company
+ Careers Responsible AI AI Research 
+ Case study
+ How Heineken embraces video transformation
+ Pricing 
+ Enterprise 
+ en
+ fr
+ de
+ es
+ pt-BR
+ en
+ English
+ fr
+ Français
+ de
+ Deutsch
+ es
+ Español
+ pt-BR
+ Português (Brasil)
+ Want to see this page in German ?
+ We’ve got the details in your language, just for you.
+ Switch to German 
+ Log in 
+ Book demo 
+ Get started
+ Book demo
+ Get started
+ Trusted by 90% of the Fortune 100
+ What do you like best about Synthesia?
+ How easy it is to use and get started! The platform is user friendly - anyone can do it! It's also very easy to download and upload the videos into an LMS or other video hosting platform.
+ Zach F.
+ Senior Learning & Development Analyst
+ One of 2,000+ 5-star reviews on
+ AI Video and Avatar platform for business
+ Create studio-quality videos with AI avatars and voiceovers in 140+ languages. Set up live Sessions for roleplay practice and conversational surveys.
+ Get started for free
+ Book demo
+ No credit card required
+ Over 2,000,000 users
+ Video
+ Sessions
+ API
+ AI Avatars
+ Syren
+ Video Assistant
+ Interactivity
+ PPT to Video
+ AI Dubbing
+ Roleplays
+ Surveys
+ Interactive Avatars
+ Dubbing
+ AI Video
+ MCP
+ Customizable avatars
+ Customizable Avatars
+ Change outfits and background that match your brand and context.
+ Personal avatars
+ Personal Avatars
+ Create an avatar of yourself from a single photo, for more personal videos.
+ Avatar builder
+ Avatar Builder
+ Build realistic, 3D, comic, anime, or claymation avatars, for more fun videos.
+ Customizable Avatars
+ 100s of avatars for any video. Customize outfits and backgrounds.
+ Create on brand videos with just one prompt.
+ Try for free
+ -->
+ -->
+ Turn any prompt, link, or file into a polished video with helpful AI Assistant.
+ Learn more
+ AI 
+ Turn passive viewers into active, with calls to action, branching scenarios, and built-in quizzes.
+ Learn more
+ Turn PPTs into fully editable and on brand narrated videos in minutes.
+ Learn more
+ AI 
+ Translate your existing videos into 130+ languages, with voice cloning and perfect lip-sync.
+ Learn more
+ Retail sales with Carol
+ Decision-maker
+ Start free roleplay
+ Secondary text
+ Popup heading
+ Popup description
+ Manager feedback with Laura
+ High-performer seeking growth
+ Start free roleplay
+ Secondary text
+ Popup heading
+ Popup description
+ Cold call with Marcus
+ Head of Sales
+ Start free roleplay
+ Secondary text
+ Popup heading
+ Popup description
+ Retail sales with Carol
+ Decision-maker
+ Start free roleplay
+ Secondary text
+ Popup heading
+ Popup description
+ Manager feedback with Laura
+ High-performer seeking growth
+ Start free roleplay
+ Secondary text
+ Popup heading
+ Popup description
+ Cold call with Marcus
+ Head of Sales
+ Start free roleplay
+ Secondary text
+ Popup heading
+ Popup description
+ Practice difficult conversations with Avatars that push back.
+ Learn more
+ Close sessions
+ Interview with Omar
+ Customer success interview
+ Get started for free
+ Learn more
+ Customer research with Jenny
+ Share how you manage photos on your phone
+ Start free survey
+ Secondary text
+ Popup heading
+ Popup description
+ Feedback collection with Kenji
+ Review a password security course
+ Start free survey
+ Secondary text
+ Popup heading
+ Popup description
+ Lead qualification with Mateo
+ Share how you might use Synthesia for your team
+ Start free survey
+ Secondary text
+ Popup heading
+ Popup description
+ Customer research with Jenny
+ Share how you manage photos on your phone
+ Start free survey
+ Secondary text
+ Popup heading
+ Popup description
+ Feedback collection with Kenji
+ Review a password security course
+ Start free survey
+ Secondary text
+ Popup heading
+ Popup description
+ Lead qualification with Mateo
+ Share how you might use Synthesia for your team
+ Start free survey
+ Secondary text
+ Popup heading
+ Popup description
+ Run surveys with Avatars that ask, probe, and turn answers into insights.
+ Learn more
+ Close sessions
+ Interview with Omar
+ Customer success interview
+ Get started for free
+ Learn more
+ from livekit.plugins import synthesia
+avatar = synthesia.AvatarSession(
+ avatar_id = "03cee7ec-ac90-45ec-8c20-74a399cf3dc4" ,
+)
+ await avatar.start(session, room =ctx.room) 
+-->
+ from livekit.plugins import synthesia
+avatar = synthesia.AvatarSession(
+ synthesia.AvatarConfig(
+ avatar_ids =[
+ "03cee7ec-ac90-45ec-8c20-74a399cf3dc4" ,
+ ],
+ ),
+)
+ await avatar.start(session, room =ctx.room) 
+ Embed a real-time, interactive avatar in your product.
+ Learn more
+ await fetch ( 'https://api.synthesia.io/v2/dubbing' , {
+ method : 'POST' ,
+ headers : {
+ Authorization : process.env.SYNTHESIA_API_KEY,
+ 'Content-Type' : 'application/json' ,
+ },
+ body : JSON. stringify ({
+ sourceAssetId : 'asset_9f3c21b8' ,
+ sourceLanguage : 'en' ,
+ targetLanguages : [ 'de-DE' , 'es-ES' ],
+ lipsyncEnabled : true ,
+ }),
+}); 
+ Translate your video library into 140+ languages, with lip sync and voice cloning.
+ Learn more
+ await fetch ( 'https://api.synthesia.io/v2/videos' , {
+ method : 'POST' ,
+ headers : {
+ Authorization : process.env.SYNTHESIA_API_KEY,
+ 'Content-Type' : 'application/json' ,
+ },
+ body : JSON. stringify ({
+ title : 'Product launch recap' ,
+ input : [{
+ scriptText : 'Three biggest changes we shipped.' ,
+ avatar : '03cee7ec-ac90-45ec-8c20-74a399cf3dc4' ,
+ background : '
+
+=== [pricing] https://www.synthesia.io/pricing (lang=en)
+Synthesia Pricing - Compare Free and Paid Plans 
+ Video
+ Products
+ Product Overview
+ The all-in-one AI Video Platform
+ AI Avatars
+ Lifelike avatars from a script
+ AI Video Generator
+ Turn docs and prompts into video
+ AI Video Dubbing
+ Dub videos in any language
+ AI Video Translation
+ Translate videos in one click
+ AI Screen Recorder
+ Record and narrate your screen
+ AI Motion Graphics
+ On brand motion and visuals
+ Teams
+ Learning & Development Human Resources Sales Enablement Marketing IT & Cybersecurity Knowledge Management 
+ Industries
+ Manufacturing Tech & Software Healthcare Financial Services Professional Services Retail 
+ Use cases
+ Technical Training Compliance Training Sales Training Employee Development SOP Videos Product Videos 
+ The #1 rated AI Video Platform
+ The complete platform to create, manage, translate and distribute video.
+ Sessions
+ Products
+ Product Overview
+ Interactive roleplays and surveys
+ Roleplay Sessions
+ Practice conversations with avatars
+ Survey Sessions
+ Conversational surveys at scale
+ Roleplay Use Cases
+ Sales Roleplay Discovery Call Cold Call Manager Training 
+ Survey Use Cases
+ Employee Insights Customer Insights Lead Qualification 
+ Roleplay and survey avatars
+ Interactive AI Avatar conversations for every scenario.
+ API
+ Products
+ Product Overview
+ The Synthesia API at a glance
+ Interactive Avatars
+ Real-time conversational avatars
+ Dubbing
+ Translate video via API
+ Video Creation
+ Create videos programmatically
+ Resources
+ API Pricing Interactive Avatars API Documentation Dubbing API Documentation AI Video Assistant API Documentation MCP Documentation 
+ Introducing the Synthesia API
+ Create and translate AI Videos at scale. Build Interactive Avatar products.
+ Resources
+ Resources
+ Video Templates Synthesia Blog Case Studies Customer Reviews 
+ Learn
+ Synthesia Academy Live sessions Help Center 
+ Company
+ Careers Responsible AI AI Research 
+ Case study
+ How Heineken embraces video transformation
+ Pricing 
+ Enterprise 
+ en
+ fr
+ de
+ es
+ pt-BR
+ en
+ English
+ fr
+ Français
+ de
+ Deutsch
+ es
+ Español
+ pt-BR
+ Português (Brasil)
+ Want to see this page in German ?
+ We’ve got the details in your language, just for you.
+ Switch to German 
+ Log in 
+ Book demo 
+ Get started
+ Book demo
+ Get started
+ Pricing that scales with your needs
+ Video & Sessions
+ API
+ Monthly
+ Yearly
+ Save up to 4 months with yearly
+ Save up to 3 months with yearly
+ Basic
+ $ 0  per month 
+ 500 credits / month
+ Get started
+ Get started on desktop
+ Free allowance
+ 10 minutes of video creation or dubbing
+ 3 survey responses
+ 500 credits to spend on anything
+ Syren
+ NEW
+ Share your content online via share link
+ Pre-built libraries, templates, roleplays, surveys
+ Videos carry a Synthesia watermark
+ See all features
+ Starter
+ Billed monthly. 
+ $ 29  per month 
+ 1,250 credits / month
+ Get started
+ CREDITS
+ What are Credits?
+ Credits are now the shared currency across all AI usage-based features - one common pool for everything you create.
+ Video
+ up to
+ ~12
+ min
+ Dubbing
+ up to
+ 16
+ min
+ Surveys
+ up to
+ 3
+ responses
+ On top of the free allowance
+ 10 minutes of video creation or dubbing
+ 3 survey responses
+ 500 credits to spend on anything
+ Roleplays
+ Add learner seat
+ 1 learner seat costs $ 29 
+ Everything in Basic +
+ Download your content
+ Remove Synthesia logo
+ AI Video Assistant
+ Survey Analytics
+ 3 guests
+ 125+ Synthesia AI Avatars
+ Chat/email support
+ See all features
+ Pro
+ Most popular
+ Billed monthly. 
+ $ 89  per month 
+ 6,000 credits / month
+ 6,000 / mo $89
+ 12,000 / mo -1.25%
+ $176
+ 24,000 / mo -2.5%
+ $347
+ 36,000 / mo -3.75%
+ $514
+ 48,000 / mo -5%
+ $676
+ Get started
+ CREDITS
+ What are Credits?
+ Credits are now the shared currency across all AI usage-based features - one common pool for everything you create.
+ Video
+ up to
+ ~60
+ min
+ Dubbing
+ up to
+ 78
+ min
+ Surveys
+ up to
+ 17
+ responses
+ On top of the free allowance
+ 10 minutes of video creation or dubbing
+ 3 survey responses
+ 500 credits to spend on anything
+ Roleplays
+ Add learner seat
+ 1 learner seat costs $ 29 
+ Everything in Starter +
+ 5 Personal Avatars
+ Branded video pages
+ Interactive videos
+ 5 guests
+ 180+ Synthesia AI Avatars
+ Flexible plan tiers
+ On-brand Avatars
+ Priority chat/email support
+ See all features
+ Enterprise
+ Custom pricing 
+ Let’s talk. 
+ Custom credit volumes
+ Book demo
+ Everything in Pro +
+ Unlimited video minutes
+ 1-Click Translations into 140+ languages
+ 240+ stock AI Avatars
+ Unlimited Personal Avatars
+ SAML/SSO
+ Live team collaboration
+ Brand Kits
+ SCORM export
+ Tailored onboarding
+ Implementation services
+ Dedicated CSM
+ Enterprise community
+ Access to live events
+ See all features
+ Roleplay Training
+ AI roleplay practice for your team. Assign scenarios, track completion and score progress. Add learner seats to any plan; no session limits for seated learners.
+ $ 29 / learner / month 
+ Add learner seats to plan
+ Need more than 100 seats? Book demo 
+ See what plan best fits your needs
+ Tell us roughly what you make each month, we’ll point you at the right plan.
+ Video minutes
+ 30 min / mo
+ 100 credits per minute · first 10 min included on every plan
+ Dubbing minutes
+ 0 min / mo
+ 76 credits per minute
+ Survey responses
+ 0 responses / mo
+ 350 credits per response · first 3 included on every plan
+ Estimates only. Actual credit use depends on what’s in your videos – avatars, B-roll, motion graphics and dubbing each count differently.
+ OUR RECOMMENDATION
+ Basic
+ The monthly allowance covers you 
+ $ 0 /month 
+ 10 min of video, 3 survey responses & 500 credits every month
+ Pre-built templates, roleplays & surveys
+ Upgrade any time
+ 0
+ learner seats included
+ ($87/mo)
+ OUR RECOMMENDATION
+ Starter
+ 1,250 credits / month 
+ $ 29 /month, billed monthly 
+ 6,000 credits / month included
+ Download videos, remove logo
+ Cancel anytime
+ 0
+ learner seats included
+ ($87/mo)
+ OUR RECOMMENDATION
+ Pro
+ 6,000 credits / month 
+ $ 89 /month, billed monthly 
+ 6,000 credits / month included
+ Everything in Starter + more
+ Scale up or down anytime
+ 0 
+ learner seats included 
+ ($87/mo)
+ OUR RECOMMENDATION
+ Enterprise
+ Your volume needs a custom plan 
+ Custom 
+ Credits tailored to your team
+ SAML/SSO & live team collaboration
+ Tailored onboarding & implementation services
+ Get started free Get started - $ 0 /mo Start Starter - $ 29 /mo Start Pro - $ 89 /mo Contact sales 
+ Compare plans
+ Basic
+ $ 0 /mo 
+ try for free
+ Get started
+ Starter
+ $ 29 /mo 
+ billed monthly
+ Get started
+ Pro
+ $ 89 /mo 
+ billed monthly
+ Get started
+ Enterprise
+ Custom
+ tailored pricing
+ Book demo
+ Workspaces
+ Seats
+ The maximum number of seats your workspa
+
+=== [about] https://docs.synthesia.io/ (lang=en)
+Synthesia 
+ For AI agents: the docs index is at https://docs.synthesia.io/llms.txt. Append .md to any documentation page URL to get its markdown version.
+ Jump to Content 
+ Home Documentation Synthesia APIs API updates Integrations Integrations Help center Synthesia Updates Log in 
+ Home
+ Integrations Help center Synthesia Updates Log in 
+ DOCS
+ Synthesia Document­ation 
+ Find comprehensive documentation and reference materials to help you work
+ with Synthesia, explore the Synthesia API, and create engaging, effective synthetic videos with
+ ease!
+ Documentation
+ Synthesia APIs
+ Home Documentation Synthesia APIs API updates Integrations 
+ Documentation
+ Videos 
+ SESSIONS 
+ Synthesia 
+ AI tools 
+ View All… 
+ API updates
+ Billing API 
+ Interactive Avatar API 
+ New Dubbing & Assets APIs 
+ API Improvements 
+ View All…
+
+=== [meta] https://www.synthesia.io
+html lang: en
+hreflang: de, en, es, fr, it, ja, nl, pt-br, sv, x-default, xx
+화면에 보이는 언어 이름: English, Español, Français, Deutsch, Português

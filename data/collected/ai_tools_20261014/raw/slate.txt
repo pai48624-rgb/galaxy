@@ -1,0 +1,218 @@
+=== [home] https://randomlabs.ai/ (lang=en)
+Random Labs 
+ home 
+ blog 
+ about 
+ ack 
+ products ▾ Slate CLI Agentic coding in your terminal 
+ docs ↗ | login ↗ 
+ ←→ enter
+ home 
+ blog 
+ about 
+ Meet Slate, a generalist software agent built for swarms.
+ A brand new architecture for massively parallel swarm orchestration. So you can talk to claude, and code with codex.
+ open beta
+ Install Slate
+ Run Slate in your terminal and give it the repo-level work you would normally split across multiple agent sessions.
+ npm i -g @randomlabs/slate && slate 
+ Quickstart docs -> 
+ Used by teams at
+ Prava 
+ slate swarm 
+ ███████ ██ █████ ████████ ███████
+ ██ ██ ██ ██ ██ ██
+ ███████ ██ ███████ ██ █████
+ ██ ██ ██ ██ ██ ██
+ ███████ ███████ ██ ██ ██ ███████ v1.0.26 
+ Workspace
+ ~/projects/slate
+ Quick Start
+ Type a message to start
+ /settings · /docs 
+ ❯ build the new dashboard page with auth guards 
+ @web/app should own the route shell and auth handoff 
+ I'll split this into parallel tracks: one subagent will map the auth guard flow, one will sketch the dashboard route shell, one will align the API/types layer, one will inspect the existing session wiring, and one will prep the final integration pass.
+ Ran 4 subagents ✓ 
+ ● Subagent: Explore the monorepo 
+ … +3 earlier tools 
+ I'll map the app/workspace boundaries… 
+ ├ Read packages/app-shell/src/index.ts ✓ 
+ └ Read packages/router/src/index.ts ✓ 
+ Done in 8s 1.8k tokens · $0.05 
+ ● Subagent: Auth & session flow 
+ … +2 earlier tools 
+ I'll trace the auth/session handoff… 
+ ├ Read packages/auth/src/guards.ts ✓ 
+ └ Read apps/web/src/auth/requireSession.ts ✓ 
+ Done in 9s 2.4k tokens · $0.07 
+ ● Subagent: Dashboard UI 
+ … +1 earlier tool 
+ I'll sketch the dashboard route shell… 
+ ├ Read app/routes/_protected.tsx ✓ 
+ └ Read app/components/layout/RouteShell.tsx ✓ 
+ Done in 6s 1.1k tokens · $0.03 
+ ● Subagent: Types & API client 
+ … +2 earlier tools 
+ I'll align the API/types surface… 
+ ├ Read apps/web/src/routes/dashboard.loader.ts ✓ 
+ └ Run pnpm typecheck --filter @web/app ✓ 
+ Done in 7s 1.9k tokens · $0.06 
+ Finished running 4 subagents ▰ ▰ ▰ ▰ (9s) ✓ 
+ ❯ /docs 
+ The fastest path is the docs page, and here is the CLI install command:
+ Copy
+ Click to copy
+ npm i -g @randomlabs/slate && slate 
+ • Quickstart 
+ • [Home 
+ ❯ T ype @ to mention files, / for commands 
+ ~/projects/slate (main*) 4 models · 7.2k tokens · $0.21 
+ What Slate does
+ Runs longer tasks
+ Slate keeps a task alive across exploration, implementation, builds, test failures, and follow-up edits instead of treating each prompt like a fresh start.
+ Coordinates parallel work
+ It can split independent research, coding, and verification work into focused threads, then bring the useful results back into the main session.
+ Manages context deliberately
+ Slate tracks what matters, summarizes when needed, and avoids losing the original goal while the agent gathers more codebase state.
+ FAQ
+ What makes Slate different from other coding agents?
+ Slate engineers its own context so you don't have to. It has a built-in compaction algorithm that surfaces the most important information at any time. This allows Slate to stay focused on the task at hand and avoid the dumb zone .
+ How do I plan without plan mode?
+ Slate plans implicitly. When given a task, Slate will start by researching it, and then present its plan to you. Slate doesn't have plan mode because a good plan is not made by asking 3 questions. A good plan is made by having an agent that has a discussion with you about how to solve a task.
+ Is it good?
+ Yes. 
+ open beta
+ Start with the repo you already have
+ Install the CLI, point Slate at a real codebase, and ask it for the kind of multi-step engineering work that normally requires a careful handoff.
+ npm i -g @randomlabs/slate && slate 
+ Quickstart docs -> 
+ © 2025 Random Labs
+ security · privacy · terms 
+ terms privacy security 
+ © 2025 Random Labs
+
+=== [about] https://docs.randomlabs.ai/en/getting-started/introduction (lang=en)
+Introduction - Slate 
+ Documentation Index
+ Fetch the complete documentation index at: /llms.txt 
+ Use this file to discover all available pages before exploring further.
+ Skip to main content Slate home page 
+ Search...
+ ⌘ K 
+ Documentation 
+ Blog 
+ Getting started 
+ Introduction 
+ Quickstart 
+ Using Slate 
+ The Basics 
+ Orchestration & Tracing 
+ Workspace Setup 
+ Skills 
+ Configuration 
+ Prompting Guide 
+ Troubleshooting 
+ Hotkey Reference 
+ Support 
+ Dashboard 
+ English 
+ Slate home page English 
+ Search...
+ ⌘ K 
+ Support 
+ Dashboard 
+ Dashboard 
+ Search... 
+ Navigation 
+ Getting started 
+ Introduction
+ Getting started
+ Introduction
+ Copy page Copy page 
+ Copy page Copy page 
+ Slate is the first frontier agent in the wild that is built for swarm orchestration. 
+ ​ 
+ What Makes Slate Different? 
+ Slate works with you across long, multi-hour sessions.
+ Slate automatically selects the right model for the job. For example with slate you can plan/talk to claude and search with glm and execute with codex and slate handles it.
+ Have slate in parallel deeply research your problem
+ Parallelize working and orchestration of many tasks at once.
+ Learn more about orchestration, deep research, and parallel work in Orchestration & Tracing . 
+ "Slate is the best debugging tool I have." 
+ - Stealth founder, Fintech, NYC. 
+ ​ 
+ Get Started 
+ Ready to try Slate? Follow our quickstart guide to install and run your first commands. 
+ Quickstart Guide
+ Install Slate and complete your first task. 
+ ​ 
+ Next Steps 
+ Using Slate
+ Learn about Slate’s capabilities and commands in detail. 
+ Quickstart
+ Set up Slate and work on your first task. 
+ Next 
+ ⌘ I 
+ x github 
+ Powered by This documentation is built and hosted on Mintlify, a developer documentation platform 
+ On this page 
+ What Makes Slate Different? 
+ Get Started 
+ Next Steps
+
+=== [pricing] https://randomlabs.ai/pricing (lang=en)
+Random Labs 
+ home 
+ blog 
+ about 
+ ack 
+ products ▾ Slate CLI Agentic coding in your terminal 
+ docs ↗ | login ↗ 
+ ←→ enter
+ home 
+ blog 
+ about 
+ © 2025 Random Labs
+ security · privacy · terms 
+ terms privacy security 
+ © 2025 Random Labs
+
+=== [pricing] https://randomlabs.ai/ko/pricing (lang=en)
+Random Labs 
+ home 
+ blog 
+ about 
+ ack 
+ products ▾ Slate CLI Agentic coding in your terminal 
+ docs ↗ | login ↗ 
+ ←→ enter
+ home 
+ blog 
+ about 
+ © 2025 Random Labs
+ security · privacy · terms 
+ terms privacy security 
+ © 2025 Random Labs
+
+=== [pricing] https://randomlabs.ai/plans (lang=en)
+Random Labs 
+ home 
+ blog 
+ about 
+ ack 
+ products ▾ Slate CLI Agentic coding in your terminal 
+ docs ↗ | login ↗ 
+ ←→ enter
+ home 
+ blog 
+ about 
+ © 2025 Random Labs
+ security · privacy · terms 
+ terms privacy security 
+ © 2025 Random Labs
+
+=== [meta] https://randomlabs.ai/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음

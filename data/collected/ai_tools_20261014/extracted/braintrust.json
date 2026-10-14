@@ -1,0 +1,61 @@
+{
+ "company": "Braintrust",
+ "one_liner_ko": "운영 데이터에서 패턴을 찾아 평가로 바꾸고 릴리스마다 품질을 높이는 에이전트용 능동 관측성 플랫폼.",
+ "what_it_does_ko": "Braintrust는 에이전트를 계측하고 이해하고 개선하기 위한 능동 관측성 플랫폼이다. 에이전트 트레이스에 지능을 적용해 가장 중요한 패턴을 자동으로 드러내 운영 중 행동을 파악하게 한다. 실제 데이터셋으로 실험을 돌리고 프롬프트·모델을 나란히 비교하며 LLM·코드·사람으로 출력을 채점한다. 운영 트레이스를 한 번에 평가 데이터셋으로 바꾸고, MCP 서버·CLI·여러 언어 SDK로 개발 환경과 연결한다.",
+ "key_features": [
+  "에이전트 트레이스·도구 호출 실시간 검사와 지연·비용·품질 추적",
+  "LLM·코드·사람 채점 평가와 실험",
+  "자연어 트레이스 조사와 패턴 자동 발견(Patterns)",
+  "프롬프트·채점기·데이터셋을 자동 생성하는 Loop 에이전트",
+  "운영 트레이스를 원클릭으로 평가 데이터셋으로 변환",
+  "IDE용 MCP 서버",
+  "Python·TypeScript·Go·Ruby·C# SDK",
+  "AI 데이터용 데이터베이스 Brainstore(하이브리드 배포)"
+ ],
+ "use_cases_ko": [
+  "운영 중 에이전트 문제를 찾아 수정하고 나쁜 릴리스 차단",
+  "대규모 엔지니어 조직의 AI 평가(Notion 사례)",
+  "AI 코드 리뷰 품질 관리(Graphite 사례)"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Starter $0: $10 크레딧, 처리 데이터 1GB, 점수 10k, 14일 보관, 사용자 무제한)",
+  "plans": [
+   {"name": "Starter", "price": 0, "currency": "USD", "period": "month", "limits": "$10 크레딧+토큰 요금, 1GB 처리 데이터(+$4/GB), 10k 점수(+$2.50/1k), 14일 보관", "page_lang": "en"},
+   {"name": "Pro", "price": 249, "currency": "USD", "period": "month", "limits": "$100 크레딧, 5GB(+$3/GB), 50k 점수(+$1.50/1k), 30일 보관(+$0.50/GB/월)", "page_lang": "en"},
+   {"name": "Enterprise", "price": null, "currency": "USD", "period": "month", "limits": "맞춤 가격, 온프레미스 또는 호스팅 배포", "page_lang": "en"}
+  ],
+  "pricing_url": "https://www.braintrust.dev/pricing"
+ },
+ "open_source": "일부 오픈소스 라이브러리·도구(라이선스 이름은 페이지에 없음)",
+ "api": "있음",
+ "platforms": ["웹", "CLI", "API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://www.braintrust.dev/", "quote": "Braintrust - The active observability platform for agents"},
+  {"field": "one_liner_ko", "url": "https://www.braintrust.dev/", "quote": "Discover patterns in production, turn them into evals, and improve quality with every release."},
+  {"field": "what_it_does_ko", "url": "https://www.braintrust.dev/docs", "quote": "Braintrust is the active observability platform for instrumenting, understanding, and improving agents."},
+  {"field": "what_it_does_ko", "url": "https://www.braintrust.dev/", "quote": "Run experiments against real datasets, compare prompts and models side-by-side, and score outputs with LLMs, code, or humans."},
+  {"field": "key_features", "url": "https://www.braintrust.dev/", "quote": "Inspect every agent trace and tool call, search across millions of logs, and track latency, cost, and quality in real time."},
+  {"field": "key_features", "url": "https://www.braintrust.dev/", "quote": "Natural language trace investigation\n Evidence-backed pattern discovery"},
+  {"field": "key_features", "url": "https://www.braintrust.dev/", "quote": "Describe what you want to optimize, and Loop generates better prompts, scorers, and datasets automatically."},
+  {"field": "key_features", "url": "https://www.braintrust.dev/", "quote": "Turn production traces into eval datasets with one click."},
+  {"field": "key_features", "url": "https://www.braintrust.dev/", "quote": "Braintrust's MCP server connects your coding agent to your AI stack."},
+  {"field": "key_features", "url": "https://www.braintrust.dev/", "quote": "SDKs for Python, TypeScript, Go, Ruby, C#, and more."},
+  {"field": "key_features", "url": "https://www.braintrust.dev/", "quote": "Deploy Brainstore data plane on your own infrastructure"},
+  {"field": "use_cases_ko", "url": "https://www.braintrust.dev/", "quote": "Catch issues early Block bad releases before they hit production"},
+  {"field": "use_cases_ko", "url": "https://www.braintrust.dev/", "quote": "How Notion evaluates AI at scale across 70 engineers"},
+  {"field": "use_cases_ko", "url": "https://www.braintrust.dev/", "quote": "How Graphite builds reliable AI code review at scale"},
+  {"field": "pricing", "url": "https://www.braintrust.dev/pricing", "quote": "No credit card required. Free usage is included for traces, evals, and your whole team."},
+  {"field": "pricing", "url": "https://www.braintrust.dev/pricing", "quote": "$0 / month \n $10 credits\n + tok rates\n 1 GB processed data\n + $4/GB\n 10k scores\n + $2.50/1k\n 14-day retention"},
+  {"field": "pricing", "url": "https://www.braintrust.dev/pricing", "quote": "$249 / month \n $100 credits\n + tok rates\n 5 GB processed data\n + $3/GB\n 50k scores\n + $1.50/1k\n 30-day retention"},
+  {"field": "pricing", "url": "https://www.braintrust.dev/pricing", "quote": "premium support with on-prem or hosted deployment for high volume or privacy-sensitive data."},
+  {"field": "open_source", "url": "https://www.braintrust.dev/", "quote": "GitHub Open source libraries and tools"},
+  {"field": "api", "url": "https://www.braintrust.dev/docs", "quote": "Connect your AI tools to Braintrust data and actions"},
+  {"field": "platforms", "url": "https://www.braintrust.dev/docs", "quote": "Instrument apps and run evals with the bt CLI"},
+  {"field": "korean_support", "url": "https://www.braintrust.dev/", "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [
+  {"official": "플랫폼은 Starter $0 / Pro $249/월 / Enterprise 맞춤의 상용 SaaS(온프레미스는 Enterprise), 오픈소스는 GitHub의 '라이브러리·도구'로만 언급", "diff": "기존 분류 '오픈소스 + 클라우드 매니지드 유료 플랜'과 달리 플랫폼 본체를 오픈소스로 제공한다는 내용이 공식 페이지에 없음", "url": "https://www.braintrust.dev/pricing"}
+ ],
+ "plan_change": []
+}

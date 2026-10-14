@@ -1,0 +1,65 @@
+{
+ "company": "Hanabi AI Inc.",
+ "one_liner_ko": "감정 표현이 풍부한 AI 음성 합성(TTS)과 무료로 시작하는 음성 복제를 제공하는 음성 AI 플랫폼",
+ "what_it_does_ko": "Fish Audio는 음성 AI 플랫폼으로, 모든 핵심 기능을 웹 앱(코드 없이), REST API, 공식 SDK 세 가지 방법으로 쓸 수 있다. 텍스트를 실감 나는 음성으로 바꾸고, 15초 클립으로 음성을 복제하며, 다화자·감정 표시가 들어간 음성 인식도 제공한다. [angry]·[whispering] 같은 감정 태그로 표현을 조절하고, 30개 이상 언어를 어떤 목소리로든 말할 수 있다. 사용자가 올린 200만 개 이상의 음성 라이브러리와 아바타 립싱크, 이미지·영상 생성 모델도 갖췄다.",
+ "key_features": [
+  "텍스트 음성 변환(감정·특수 태그로 표현 조절)",
+  "15초 클립으로 음성 복제, 전문 음성 복제",
+  "다화자·감정 표시 음성 인식(Speech to Text)",
+  "실시간 스트리밍과 엔드투엔드 음성 에이전트",
+  "30개 이상 언어 지원",
+  "200만 개 이상 음성 라이브러리",
+  "Voice Design·보이스 체인저·Story Studio·음악·효과음 생성",
+  "아바타 립싱크 및 이미지·영상 생성 모델"
+ ],
+ "use_cases_ko": [
+  "유튜브·광고·설명 영상 보이스오버",
+  "ACX/Audible 규격 오디오북 내레이션",
+  "게임·애니메이션 캐릭터 음성과 고객지원 챗봇 음성"
+ ],
+ "pricing": {
+  "free_tier": "있음 (월 8,000 크레딧, 최대 7분 생성, 생성당 500자, 공개 음성 슬롯 3개)",
+  "plans": [
+   {"name": "무료 티어", "price": 0, "currency": "USD", "period": "month", "limits": "월 8,000 크레딧, 최대 7분, 생성당 500자", "page_lang": "ko"},
+   {"name": "Plus (연간 결제)", "price": 11, "currency": "USD", "period": "month(연간 결제, $132 연간 청구)", "limits": "월 250,000 크레딧, 최대 200분, 생성당 15,000자, 전문 음성 슬롯 1개", "page_lang": "ko"},
+   {"name": "Plus (월간 결제)", "price": 15, "currency": "USD", "period": "month", "limits": "월 250,000 크레딧", "page_lang": "ko"},
+   {"name": "Pro (연간 결제)", "price": 75, "currency": "USD", "period": "month(연간 결제, $900 연간 청구)", "limits": "월 2,000,000 크레딧, 최대 1,620분, 팀 시트 3개, 전문 음성 슬롯 5개", "page_lang": "ko"},
+   {"name": "Pro (월간 결제)", "price": 100, "currency": "USD", "period": "month", "limits": "월 2,000,000 크레딧", "page_lang": "ko"},
+   {"name": "Max (연간 결제)", "price": 749, "currency": "USD", "period": "month(연간 결제, $8988 연간 청구)", "limits": "월 25,000,000 크레딧, 최대 6,250분, 팀 좌석 10개, 전문 음성 슬롯 15개", "page_lang": "ko"},
+   {"name": "Max (월간 결제)", "price": 999, "currency": "USD", "period": "month", "limits": "월 25,000,000 크레딧", "page_lang": "ko"},
+   {"name": "Enterprise", "price": null, "currency": null, "period": "usage", "limits": "맞춤형, 연간 청구 사용량 기반, 온프레미스·SOC2", "page_lang": "ko"}
+  ],
+  "pricing_url": "https://fish.audio/ko/plan/"
+ },
+ "open_source": "FISH AUDIO COMMUNITY LICENSE (S2-Pro 가중치는 Fish Audio Research License)",
+ "api": "있음",
+ "platforms": ["웹", "API"],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {"field": "company", "url": "https://fish.audio/ko/plan/", "quote": "Fish Audio © 2026 Hanabi AI Inc. All rights reserved."},
+  {"field": "one_liner_ko", "url": "https://fish.audio", "quote": "Best AI Text To Speech & Free Voice Cloning | Fish Audio"},
+  {"field": "what_it_does_ko", "url": "https://docs.fish.audio/overview/capabilities", "quote": "Fish Audio is a voice AI platform. Every core feature is available three ways: in the web app (no code), through the REST API , and via the official SDK ."},
+  {"field": "key_features", "url": "https://fish.audio", "quote": "[angry] [sad] [embarrassed] [emphasis] [whispering]"},
+  {"field": "key_features", "url": "https://fish.audio", "quote": "with perfect fidelity in 15 seconds"},
+  {"field": "key_features", "url": "https://fish.audio", "quote": "Include multispeaker, emotion tags & natural language description in your transcription"},
+  {"field": "key_features", "url": "https://fish.audio", "quote": "End-to-end voice agent solution"},
+  {"field": "key_features", "url": "https://fish.audio", "quote": "Speak 30+ languages with any voice"},
+  {"field": "key_features", "url": "https://fish.audio", "quote": "The Fish Audio platform hosts over 2,000,000 voices"},
+  {"field": "key_features", "url": "https://docs.fish.audio/overview/capabilities", "quote": "Generate music and cinematic sound effects from a prompt."},
+  {"field": "key_features", "url": "https://fish.audio", "quote": "Create images and videos, then lip-sync them to any Fish Audio voice for talking avatars, ads, and explainers."},
+  {"field": "use_cases_ko", "url": "https://fish.audio", "quote": "Turn scripts into rich, scene-matched narration, perfect for YouTube, advertisement, and explainers."},
+  {"field": "use_cases_ko", "url": "https://fish.audio", "quote": "Generate hours of audio that meets ACX/Audible specs without a recording booth."},
+  {"field": "use_cases_ko", "url": "https://fish.audio", "quote": "Clone signature voices or craft brand personas for games, animation, and interactive stories."},
+  {"field": "pricing", "url": "https://fish.audio/ko/plan/", "quote": "8,000 월간 크레딧 \n 최대 7분 생성"},
+  {"field": "pricing", "url": "https://fish.audio/ko/plan/", "quote": "$ 11 \n 모\n $ 15 \n $132 연간 청구됩니다"},
+  {"field": "pricing", "url": "https://fish.audio/ko/plan/", "quote": "$ 75 \n 모\n $ 100 \n $900 연간 청구됩니다"},
+  {"field": "pricing", "url": "https://fish.audio/ko/plan/", "quote": "$ 749 \n 모\n $ 999 \n $8988 연간 청구됩니다"},
+  {"field": "pricing", "url": "https://fish.audio/ko/plan/", "quote": "연간 청구되는 사용량 기반 요금"},
+  {"field": "open_source", "url": "https://github.com/fishaudio/fish-speech", "quote": "This codebase and its associated model weights are released under **[FISH AUDIO COMMUNITY LICENSE](LICENSE)**. The S2-Pro weights remain under the Fish Audio Research License."},
+  {"field": "api", "url": "https://fish.audio/ko/plan/", "quote": "프리미엄 구독자는 우리의 유연한 선불 API에 접근할 수 있습니다."},
+  {"field": "platforms", "url": "https://docs.fish.audio/overview/capabilities", "quote": "in the web app (no code), through the REST API"},
+  {"field": "korean_support", "url": "https://fish.audio", "quote": "hreflang: ar, de, en, es, fr, ja, ko, pt, ru, x-default, zh-cn"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

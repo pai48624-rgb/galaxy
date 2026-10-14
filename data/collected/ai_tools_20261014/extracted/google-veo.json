@@ -1,26 +1,87 @@
 {
  "company": "Google DeepMind",
- "one_liner_ko": "영화 제작자와 스토리텔러를 위한, 오디오까지 함께 만드는 구글 딥마인드의 대표 영상 생성 모델.",
- "what_it_does_ko": "Veo는 Google DeepMind의 영상 생성 모델로 최신 버전은 Veo 3.1이다. 효과음, 주변 소음, 대사까지 오디오를 영상과 함께 직접 생성한다. 실제 물리 표현과 사실감, 프롬프트를 따르는 정확도를 높였다. Gemini 앱과 Google Flow에서 써 볼 수 있다.",
+ "one_liner_ko": "오디오까지 함께 만드는 Google DeepMind의 대표 동영상 생성 모델.",
+ "what_it_does_ko": "Veo는 Google DeepMind의 동영상 생성 모델로, 최신 Veo 3.1은 영화 제작자와 스토리텔러를 위해 영상과 오디오를 함께 생성한다. Veo 3는 효과음, 주변 소리, 대사까지 오디오를 네이티브로 생성하며 물리 표현·사실감·프롬프트 준수가 뛰어나다고 소개한다. Gemini 앱과 Google Flow에서 써 볼 수 있고, Gemini API에서 Veo 3.1 Standard·Fast·Lite를 초당 요금으로 쓸 수 있다.",
  "key_features": [
-  "오디오(효과음·주변 소음·대사)를 함께 생성",
-  "실제 물리 법칙을 반영한 사실적인 영상",
-  "프롬프트 지시를 더 정확히 따름",
-  "오디오까지 포함한 창작 제어·일관성",
+  "영상과 오디오 동시 생성(효과음·주변 소리·대사)",
+  "현실 물리 기반 사실감 향상",
+  "프롬프트 준수 향상",
+  "오디오까지 확장된 제어·일관성",
+  "확장된 영상 길이와 창작 제어(Veo 3)",
   "Gemini·Google Flow에서 사용"
  ],
  "use_cases_ko": [
   "영화 제작자·스토리텔러의 영상 제작"
  ],
  "pricing": {
-  "free_tier": "불명",
-  "plans": [],
-  "pricing_url": null
+  "free_tier": "없음 (Gemini API 무료 등급에서 Veo 3.1 사용 불가)",
+  "plans": [
+   {
+    "name": "Veo 3.1 Standard",
+    "price": 0.4,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "720p·1080p, 초당, 오디오 포함",
+    "page_lang": "ko-x-mtfrom-en"
+   },
+   {
+    "name": "Veo 3.1 Standard 4k",
+    "price": 0.6,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "4k, 초당, 오디오 포함",
+    "page_lang": "ko-x-mtfrom-en"
+   },
+   {
+    "name": "Veo 3.1 Fast 720p",
+    "price": 0.1,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "720p, 초당, 오디오 포함",
+    "page_lang": "ko-x-mtfrom-en"
+   },
+   {
+    "name": "Veo 3.1 Fast 1080p",
+    "price": 0.12,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "1080p, 초당, 오디오 포함",
+    "page_lang": "ko-x-mtfrom-en"
+   },
+   {
+    "name": "Veo 3.1 Fast 4k",
+    "price": 0.3,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "4k, 초당, 오디오 포함",
+    "page_lang": "ko-x-mtfrom-en"
+   },
+   {
+    "name": "Veo 3.1 Lite 720p",
+    "price": 0.05,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "720p, 초당, 오디오 포함",
+    "page_lang": "ko-x-mtfrom-en"
+   },
+   {
+    "name": "Veo 3.1 Lite 1080p",
+    "price": 0.08,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "1080p, 4k 미지원, 초당, 오디오 포함",
+    "page_lang": "ko-x-mtfrom-en"
+   }
+  ],
+  "pricing_url": "https://ai.google.dev/gemini-api/docs/pricing?hl=ko"
  },
  "open_source": null,
- "api": "불명",
- "platforms": [],
- "korean_support": "불명",
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
  "evidence": [
   {
    "field": "company",
@@ -50,19 +111,50 @@
   {
    "field": "key_features",
    "url": "https://deepmind.google/models/veo/",
-   "quote": "Offers new levels of control, consistency, and creativity – now across audio."
+   "quote": "Introducing Veo 3, our video generation model with expanded creative controls – including native audio and extended videos."
   },
   {
-   "field": "key_features",
+   "field": "platforms",
    "url": "https://deepmind.google/models/veo/",
-   "quote": "Try in Gemini\n Try in Google Flow"
+   "quote": "Try in Gemini\n Try in Google Flow\n Build with Veo"
   },
   {
    "field": "use_cases_ko",
    "url": "https://deepmind.google/models/veo/",
-   "quote": "Our leading video generation model, designed to empower filmmakers and storytellers."
+   "quote": "designed to empower filmmakers and storytellers"
+  },
+  {
+   "field": "pricing",
+   "url": "https://ai.google.dev/gemini-api/docs/pricing?hl=ko",
+   "quote": "veo-3.1-generate-preview , veo-3.1-fast-generate-preview , veo-3.1-lite-generate-preview"
+  },
+  {
+   "field": "pricing",
+   "url": "https://ai.google.dev/gemini-api/docs/pricing?hl=ko",
+   "quote": "0.40달러 (720p 및 1080p)\n0.60달러 (4k)"
+  },
+  {
+   "field": "pricing",
+   "url": "https://ai.google.dev/gemini-api/docs/pricing?hl=ko",
+   "quote": "$0.10 (720p)\n$0.12 (1080p)\n$0.30 (4k)"
+  },
+  {
+   "field": "pricing",
+   "url": "https://ai.google.dev/gemini-api/docs/pricing?hl=ko",
+   "quote": "$0.05 (720p)\n$0.08 (1080p)\n(4k 출력은 지원되지 않음)"
+  },
+  {
+   "field": "api",
+   "url": "https://ai.google.dev/gemini-api/docs/pricing?hl=ko",
+   "quote": "veo-3.1-generate-preview , veo-3.1-fast-generate-preview , veo-3.1-lite-generate-preview"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://deepmind.google/models/veo/",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
   }
  ],
  "mismatch": [],
- "plan_change": []
+ "plan_change": [],
+ "note": "가격은 Gemini API 가격 문서 중 Veo 3.1 항목만 기록(유료 등급, 초당 USD). Gemini 앱 구독 요금은 본문에 없음. 동영상이 생성된 경우에만 청구된다고 적혀 있음."
 }

@@ -1,0 +1,112 @@
+=== [home] https://mujoco.org (lang=en)
+MuJoCo — Advanced Physics Simulation 
+ MuJoCo
+ Download
+ Documentation
+ GitHub
+ MuJoCo
+ Advanced physics simulation
+ MuJoCo is a free and open source physics engine that aims to facilitate research and
+ development in robotics, biomechanics, graphics and animation, and
+ other areas where fast and accurate simulation is needed.
+ MuJoCo offers a unique combination of speed, accuracy and modeling power, yet it is not merely a better simulator. Instead it is the first full-featured simulator designed from the ground up for the purpose of model-based optimization, and in particular optimization through contacts.
+ MuJoCo makes it possible to scale up computationally-intensive techniques such optimal control, physically-consistent state estimation, system identification and automated mechanism design, and apply them to complex dynamical systems in contact-rich behaviors. It also has more traditional applications such as testing and validation of control schemes before deployment on physical robots, interactive scientific visualization, virtual environments, animation and gaming.
+ Download 
+ Documentation 
+ GitHub 
+ Key features
+ Simulation in generalized coordinates, avoiding joint violations
+ Inverse dynamics that are well-defined even in the presence of contacts
+ Unified continuous-time formulation of constraints via convex optimization
+ Constraints include soft contacts, limits, dry friction, equality constraints
+ Simulation of particle systems, cloth, rope and soft objects
+ Actuators including motors, cylinders, muscles, tendons, slider-cranks
+ Choice of Newton, Conjugate Gradient, or Projected Gauss-Seidel solvers
+ Choice of pyramidal or elliptic friction cones, dense or sparse Jacobians
+ Choice of Euler or Runge-Kutta numerical integrators
+ Multi-threaded sampling and finite-difference approximations
+ Intuitive XML model format (called MJCF) and built-in model compiler
+ Cross-platform GUI with interactive 3D visualization in OpenGL
+ Run-time module written in ANSI C and hand-tuned for performance
+ MuJoCo is a trademark of Google DeepMind
+ © 2021 DeepMind Technologies Limited
+ Terms & Conditions
+ Privacy Policy
+
+=== [meta] https://mujoco.org
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/google-deepmind/mujoco
+<h1>
+  <a href="#"><img alt="MuJoCo" src="banner.png" width="100%"/></a>
+</h1>
+
+<p>
+  <a href="https://github.com/google-deepmind/mujoco/actions/workflows/build.yml?query=branch%3Amain" alt="GitHub Actions">
+    <img src="https://img.shields.io/github/actions/workflow/status/google-deepmind/mujoco/build.yml?branch=main">
+  </a>
+  <a href="https://mujoco.readthedocs.io/" alt="Documentation">
+    <img src="https://readthedocs.org/projects/mujoco/badge/?version=latest">
+  </a>
+  <a href="https://github.com/google-deepmind/mujoco/blob/main/LICENSE" alt="License">
+    <img src="https://img.shields.io/github/license/google-deepmind/mujoco">
+  </a>
+</p>
+
+**MuJoCo** stands for **Mu**lti-**Jo**int dynamics with **Co**ntact. It is a
+general purpose physics engine that aims to facilitate research and development
+in robotics, biomechanics, graphics and animation, machine learning, and other
+areas which demand fast and accurate simulation of articulated structures
+interacting with their environment.
+
+This repository is maintained by [Google DeepMind](https://www.deepmind.com/).
+
+MuJoCo has a C API and is intended for researchers and developers. The runtime
+simulation module is tuned to maximize performance and operates on low-level
+data structures that are preallocated by the built-in XML compiler. The library
+includes interactive visualization with a native GUI, rendered in OpenGL. MuJoCo
+further exposes a large number of utility functions for computing
+physics-related quantities.
+
+We also provide [Python bindings] and a plug-in for the [Unity] game engine.
+
+## Documentation
+
+MuJoCo's documentation can be found at [mujoco.readthedocs.io]. Upcoming
+features due for the next release can be found in the [changelog] in the
+"latest" branch.
+
+## Getting Started
+
+There are two easy ways to get started with MuJoCo:
+
+1. **Run `simulate` on your machine.**
+[This video](https://www.youtube.com/watch?v=P83tKA1iz2Y) shows a screen capture
+of `simulate`, MuJoCo's native interactive viewer. Follow the steps described in
+the [Getting Started] section of the documentation to get `simulate` running on
+your machine.
+
+2. **Explore our online IPython notebooks.**
+If you are a Python user, you might want to start with our tutorial notebooks
+running on Google Colab:
+
+ - The **introductory** tutorial teaches MuJoCo basics:
+   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/google-deepmind/mujoco/blob/main/python/tutorial.ipynb)
+ - The **Model Editing** tutorial shows how to create and edit models procedurally:
+   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/google-deepmind/mujoco/blob/main/python/mjspec.ipynb)
+ - The **rollout** tutorial shows how to use the multithreaded `rollout` module:
+   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/google-deepmind/mujoco/blob/main/python/rollout.ipynb)
+ - The **LQR** tutorial synthesizes a linear-quadratic controller, balancing a
+   humanoid on one leg:
+   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/google-deepmind/mujoco/blob/main/python/LQR.ipynb)
+ - The **least-squares** tutorial explains how to use the Python-based nonlinear
+   least-squares solver:
+   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/google-deepmind/mujoco/blob/main/python/least_squares.ipynb)
+ - The **MJX** tutorial provides usage examples of
+   [MuJoCo XLA](https://mujoco.readthedocs.io/en/stable/mjx.html), a branch of MuJoCo written in JAX:
+   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/google-deepmind/mujoco/blob/main/mjx/tutorial.ipynb)
+ - The **differentiable physics** tutorial trains locomotion policies with
+   analytical gradients automatically derived from MuJoCo's physics step:
+   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/google-deepmind/mu

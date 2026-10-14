@@ -1,0 +1,103 @@
+{
+ "company": null,
+ "one_liner_ko": "Claude Code에 작업 생성·서브에이전트 실행·진행 추적·리뷰를 위한 스킬과 CLI를 주는 도구.",
+ "what_it_does_ko": "Subtask는 Claude Code가 작업을 만들고 서브에이전트를 띄워 진행을 추적·리뷰·수정 요청하도록 스킬과 CLI를 제공한다. 작업마다 git worktree를 써서 병렬로 안전하게 진행된다. 서브에이전트가 끝나면 Claude가 알림을 받아 코드를 리뷰하고 병합 여부를 묻는다. 아직 초기 개발 단계라고 적혀 있다.",
+ "key_features": [
+  "작업마다 git worktree로 병렬 진행",
+  "Claude가 서브에이전트에 끼어들어 대화",
+  "진행·diff·대화를 보여 주는 TUI",
+  "작업을 폴더에 저장",
+  "Codex 서브에이전트 지원",
+  "~/.claude/skills에 스킬 설치, Claude Code 플러그인(선택)"
+ ],
+ "use_cases_ko": [
+  "Claude Code에게 여러 기능·버그 수정을 나눠 서브에이전트로 동시에 처리시키기"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "MIT",
+ "api": "불명",
+ "platforms": [
+  "맥",
+  "윈도",
+  "CLI"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/zippoxer/subtask",
+   "quote": "Subtask gives Claude Code a Skill and CLI to create tasks, spawn subagents, track progress, review and request changes."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/zippoxer/subtask",
+   "quote": "Each task gets a Git worktree, so they can be **done in parallel** safely"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/zippoxer/subtask",
+   "quote": "Claude gets notified when they're done, and reviews the code."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/zippoxer/subtask",
+   "quote": "Subtask is in early development."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/zippoxer/subtask",
+   "quote": "**Claude can interrupt and talk with subagents**!"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/zippoxer/subtask",
+   "quote": "TUI shows progress, diffs & conversations"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/zippoxer/subtask",
+   "quote": "Tasks are persisted in folders"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/zippoxer/subtask",
+   "quote": "Codex subagents supported"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/zippoxer/subtask",
+   "quote": "Claude will install the Subtask skill at `~/.claude/skills`"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/zippoxer/subtask",
+   "quote": "/plugin install subtask@subtask"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/zippoxer/subtask",
+   "quote": "\"lets do these 3 features with Subtask\""
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/zippoxer/subtask",
+   "quote": "[MIT](LICENSE)"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/zippoxer/subtask",
+   "quote": "#### Mac/Linux"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/zippoxer/subtask",
+   "quote": "#### Windows (PowerShell)"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

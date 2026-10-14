@@ -1,0 +1,89 @@
+{
+ "company": null,
+ "one_liner_ko": "여러 제공사의 CLI 에이전트를 안정적으로 협업시키는 가벼운 멀티 에이전트 TUI.",
+ "what_it_does_ko": "CCB는 Codex·Claude·Gemini 등 CLI 에이전트를 눈에 보이고 직접 넘겨받을 수 있는 작업 흐름으로 조율하는 멀티 에이전트 TUI다. A→B→C 같은 복잡한 협업 구조에서도 에이전트 간 통신을 안정적으로 유지한다. 백그라운드 데몬이 화면을 닫아도 프로젝트 상태를 유지하며, 모바일 원격 제어도 지원한다.",
+ "key_features": [
+  "복잡한 협업 그래프에서도 안정적인 에이전트 간 통신",
+  "에이전트를 실제 터미널로 띄워 화면 배치 제어·직접 개입",
+  "UI를 닫아도 상태를 유지하는 백그라운드 데몬",
+  "한 명령으로 여러 CLI 제공사 동시 실행(Hub)",
+  "모바일 원격 제어: 음성 제어·파일 전송·원격 터미널",
+  "16개 CLI 계열 지원"
+ ],
+ "use_cases_ko": [
+  "Codex·Claude·Gemini 등 서로 다른 에이전트를 한 작업에 함께 협업시키기"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "맥",
+  "윈도",
+  "CLI"
+ ],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/SeemSeam/claude_codex_bridge",
+   "quote": "A lightweight multi-agent TUI with a stable cross-provider collaboration layer"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/SeemSeam/claude_codex_bridge",
+   "quote": "Coordinate Codex, Claude, Gemini, and other CLI agents in visible, controllable workflows you can take over"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/SeemSeam/claude_codex_bridge",
+   "quote": "The background daemon keeps project state alive even when the foreground UI is closed."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/SeemSeam/claude_codex_bridge",
+   "quote": "Stable inter-agent communication for complex collaboration graphs"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/SeemSeam/claude_codex_bridge",
+   "quote": "Interactive CLI agents are full native terminals with visible layout control"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/SeemSeam/claude_codex_bridge",
+   "quote": "Hub capability: run multiple CLI providers concurrently from one command."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/SeemSeam/claude_codex_bridge",
+   "quote": "Mobile remote controller: cross-provider voice control, file transfer, and remote terminal access."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/SeemSeam/claude_codex_bridge",
+   "quote": "providers-16%20CLI%20families"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/SeemSeam/claude_codex_bridge",
+   "quote": "Coordinate Codex, Claude, Gemini, and other CLI agents"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/SeemSeam/claude_codex_bridge",
+   "quote": "platform-Linux%20%7C%20macOS%20%7C%20WSL%20%7C%20Windows%20beta"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://github.com/SeemSeam/claude_codex_bridge",
+   "quote": "[한국어](README/ko.md)"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [],
+ "note": "입력 저장소(bfly123/claude_code_bridge)가 아니라 SeemSeam/claude_codex_bridge 본문이 받아짐. 같은 CCB 제품으로 보고 작성 — 사람 확인 필요"
+}

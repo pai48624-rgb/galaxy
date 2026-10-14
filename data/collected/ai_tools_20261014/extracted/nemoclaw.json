@@ -1,0 +1,41 @@
+{
+ "company": "NVIDIA",
+ "one_liner_ko": "지원되는 AI 에이전트를 NVIDIA OpenShell 샌드박스 안에서 더 안전하게 돌리기 위한 오픈소스 참조 스택.",
+ "what_it_does_ko": "NVIDIA NemoClaw는 지원·검증 후보 AI 에이전트를 NVIDIA OpenShell 샌드박스 안에서 더 안전하게 실행하기 위한 오픈소스 참조 스택이다. 안내형 온보딩, 관리형 추론, 네트워크 정책, 관리형 연동, 수명주기 운영을 제공한다. NVIDIA Agent Toolkit의 일부인 OpenShell을 설치하고 선택한 에이전트 연동 계층과 버전별 블루프린트를 적용한다. 지원 에이전트는 OpenClaw(기본), Hermes, LangChain Deep Agents Code이다. 코딩 에이전트에 시작 프롬프트를 붙여 넣어 설치를 안내받거나 터미널 설치 프로그램으로 설치할 수 있다.",
+ "key_features": [
+  "안내형 온보딩(온보드 마법사)",
+  "관리형 추론",
+  "네트워크 정책",
+  "관리형 연동",
+  "수명주기 운영",
+  "OpenShell 기반 자격 증명 보관",
+  "OpenClaw·Hermes·LangChain Deep Agents Code 에이전트 지원",
+  "코딩 에이전트용 설치 시작 프롬프트"
+ ],
+ "use_cases_ko": [
+  "AI 에이전트(OpenClaw 등)를 샌드박스 안에서 더 안전하게 설치·운영하기",
+  "터미널을 모르는 사용자가 코딩 에이전트의 안내로 설치하기"
+ ],
+ "pricing": {"free_tier": "불명", "plans": [], "pricing_url": null},
+ "open_source": "Apache-2.0",
+ "api": "불명",
+ "platforms": ["CLI"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://github.com/NVIDIA/NemoClaw", "quote": "SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved."},
+  {"field": "one_liner_ko", "url": "https://github.com/NVIDIA/NemoClaw", "quote": "NVIDIA NemoClaw is an open source reference stack for running supported AI agents more safely inside [NVIDIA OpenShell](https://github.com/NVIDIA/OpenShell) sandboxes."},
+  {"field": "what_it_does_ko", "url": "https://docs.nvidia.com/nemoclaw/latest/user-guide/openclaw/home", "quote": "It installs OpenShell, part of NVIDIA Agent Toolkit, and applies the selected agent integration layer and versioned blueprint."},
+  {"field": "key_features", "url": "https://docs.nvidia.com/nemoclaw/latest/user-guide/openclaw/home", "quote": "NemoClaw provides guided onboarding, managed inference, network policy, managed integrations, and lifecycle operations"},
+  {"field": "key_features", "url": "https://docs.nvidia.com/nemoclaw/latest/user-guide/openclaw/home", "quote": "OpenShell provides credential custody for managed inference and host-configured integration credentials."},
+  {"field": "key_features", "url": "https://github.com/NVIDIA/NemoClaw", "quote": "- [OpenClaw](https://openclaw.ai) (default)"},
+  {"field": "key_features", "url": "https://docs.nvidia.com/nemoclaw/latest/user-guide/openclaw/home", "quote": "Copy the starter prompt into your local coding agent for a guided NemoClaw setup."},
+  {"field": "use_cases_ko", "url": "https://docs.nvidia.com/nemoclaw/latest/user-guide/openclaw/home", "quote": "Help me install and run NVIDIA NemoClaw from this coding-agent UI."},
+  {"field": "open_source", "url": "https://github.com/NVIDIA/NemoClaw", "quote": "SPDX-License-Identifier: Apache-2.0"},
+  {"field": "platforms", "url": "https://github.com/NVIDIA/NemoClaw", "quote": "lifecycle operations through the NemoClaw CLI and its agent-specific aliases."},
+  {"field": "korean_support", "url": "https://docs.nvidia.com/nemoclaw/latest/user-guide/openclaw/home", "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [
+  {"official": "Apache-2.0 오픈소스 참조 스택, 유료 구독 언급 없음", "diff": "기존 분류는 '프리미엄(무료+유료 구독)'이지만 공식 페이지에는 유료 구독이 없음", "url": "https://github.com/NVIDIA/NemoClaw"}
+ ],
+ "plan_change": []
+}

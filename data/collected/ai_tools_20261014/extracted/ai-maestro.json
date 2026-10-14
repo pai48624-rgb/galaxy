@@ -1,0 +1,31 @@
+{
+ "company": "23blocks",
+ "one_liner_ko": "여러 AI 에이전트를 한 대시보드에서 지휘하고, 영구 메모리·에이전트 간 메시지·여러 컴퓨터 연결을 제공하는 오픈소스 'AI 우선 조직용 OS'다.",
+ "what_it_does_ko": "AI Maestro는 사람 한 명이 여러 AI 에이전트를 한 대시보드에서 운영하도록 해 주는 무료 오픈소스 도구다. Claude Code, Codex, Grok Build 등 터미널 에이전트를 실행·채팅·상태 확인할 수 있고 tmux 세션을 자동으로 찾아 준다. 세션을 넘어 유지되는 메모리, 코드 그래프, 대화 기록 검색을 제공하며 에이전트끼리 메시지 프로토콜(AMP)로 직접 협업한다. 중앙 서버 없는 피어 메시 네트워크로 여러 컴퓨터와 클라우드 서버의 에이전트를 함께 관리한다.",
+ "key_features": ["tmux 세션 자동 발견(설정 불필요)", "Claude Code·Codex·Grok Build 실행·채팅·상태 표시", "세션을 넘는 영구 메모리·코드 그래프", "에이전트 간 메시지(AMP)·Slack·이메일 연결", "여러 컴퓨터를 잇는 피어 메시 네트워크", "모바일 접속(Tailscale VPN)", "에이전트 칸반 보드·회의실", "비밀 값 보관함·에이전트별 일정 실행"],
+ "use_cases_ko": ["개발자: 노트북에서 백엔드·프론트엔드·테스트용 Claude Code 에이전트 여러 개 운영", "스타트업·분산 팀: 여러 장소·서버에 흩어진 에이전트 협업 관리"],
+ "pricing": {"free_tier": "있음 (MIT 오픈소스, 영구 무료)", "plans": [], "pricing_url": "https://ai-maestro.23blocks.com"},
+ "open_source": "MIT",
+ "api": "불명",
+ "platforms": ["맥", "윈도", "CLI"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://github.com/23blocks-OS/ai-maestro", "quote": "[![Version](https://img.shields.io/badge/version-0.77.0-blue)](https://github.com/23blocks-OS/ai-maestro/releases)"},
+  {"field": "one_liner_ko", "url": "https://github.com/23blocks-OS/ai-maestro", "quote": "The OS for AI-first organizations — orchestrate any AI agent with persistent memory, agent-to-agent messaging, and multi-machine support."},
+  {"field": "what_it_does_ko", "url": "https://ai-maestro.23blocks.com", "quote": "Build and run your AI-first organization from one dashboard."},
+  {"field": "what_it_does_ko", "url": "https://github.com/23blocks-OS/ai-maestro", "quote": "Peer mesh network with no central server."},
+  {"field": "key_features", "url": "https://ai-maestro.23blocks.com", "quote": "Auto-discovers all tmux sessions. No config files. Just run and start coding."},
+  {"field": "key_features", "url": "https://ai-maestro.23blocks.com", "quote": "Agents talk securely, connect via Slack, and get email addresses on your domains."},
+  {"field": "key_features", "url": "https://ai-maestro.23blocks.com", "quote": "Monitor your AI agents from anywhere. Touch-optimized with secure Tailscale VPN."},
+  {"field": "key_features", "url": "https://ai-maestro.23blocks.com", "quote": "War room for agents with drag-and-drop Kanban board, shared tasks, and real-time chat."},
+  {"field": "use_cases_ko", "url": "https://ai-maestro.23blocks.com", "quote": "\"I build on my MacBook with 3 Claude Code agents — backend, frontend, tests.\""},
+  {"field": "use_cases_ko", "url": "https://ai-maestro.23blocks.com", "quote": "\"Developers in 3 cities. Agents on local machines and our cloud. They coordinate.\""},
+  {"field": "pricing", "url": "https://ai-maestro.23blocks.com", "quote": "OPEN SOURCE • MIT LICENSE • FREE FOREVER"},
+  {"field": "pricing", "url": "https://github.com/23blocks-OS/ai-maestro", "quote": "No account, no telemetry, no per-seat pricing, no hosted tier we upsell you to."},
+  {"field": "open_source", "url": "https://github.com/23blocks-OS/ai-maestro", "quote": "[![License](https://img.shields.io/badge/license-MIT-green)](./LICENSE)"},
+  {"field": "platforms", "url": "https://ai-maestro.23blocks.com", "quote": "macOS • Windows (WSL2) • Linux"},
+  {"field": "korean_support", "url": "https://ai-maestro.23blocks.com", "quote": "html lang: en"}
+ ],
+ "mismatch": [{"official": "MIT 라이선스 오픈소스로 '영원히 무료'이며 계정·좌석당 요금·업셀하는 호스팅 유료 등급이 없다고 명시", "diff": "기존 '오픈소스 + 프리미엄 혼합'과 달리 유료(프리미엄) 요소가 페이지에 없음 — 순수 오픈소스 무료", "url": "https://github.com/23blocks-OS/ai-maestro"}],
+ "plan_change": []
+}

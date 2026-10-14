@@ -1,0 +1,31 @@
+{
+ "company": "Magine AI",
+ "one_liner_ko": "화면을 보고 웹을 스스로 탐색하는 비전 기반 AI 에이전트(SDA)를 터미널 스타일 화면에서 만들고 돌리는 에이전트 오케스트레이션 도구다.",
+ "what_it_does_ko": "Magine은 GitHub 프로필 심층 분석, AI 브라우저 자동화, 예약 에이전트 작업을 하나의 명령줄 스타일 웹 화면에서 다룬다. 컴퓨터 비전과 자연어 이해를 결합한 Sight-Driven Agents(SDA)가 API나 MCP가 없어도 화면을 보고 웹을 조작한다. 스크린샷·영상 캡처를 바탕으로 비전 에이전트가 계획하고 GUI·API 동작을 실행한다. CatCode라는 자율 코딩 엔진으로 저장소 복제·계획·풀 리퀘스트 생성도 할 수 있다.",
+ "key_features": ["비전 기반 브라우저 에이전트(SDA)", "CatBot 에이전트 생성·예약 실행(cron 지원)", "변화 감시 하트비트 에이전트", "에이전트 단기·장기 메모리", "에이전트별 격리된 샌드박스 브라우저", "CatCode 자율 코딩(계획·승인·PR)", "GitHub 프로필 분석·임베드용 SVG 카드", "API 키·웹훅"],
+ "use_cases_ko": ["LinkedIn 예약 게시, X 피드 요약, Gmail 받은편지함 정리 같은 웹 작업 자동화", "코딩 에이전트가 저장소에 풀 리퀘스트 열기", "개발자 GitHub 프로필 심층 분석"],
+ "pricing": {"free_tier": "있음 (가입 시 무료 토큰 제공)", "plans": [
+  {"name": "Cat 충전(topup)", "price": 5, "currency": "USD", "period": "one-time", "limits": "1 Cat = 5M 토큰", "page_lang": "en"}
+ ], "pricing_url": "https://magine.cloud"},
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["웹", "API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://magine.cloud", "quote": "Magine AI - Your Purr-sonal Agent Orchestration Companion"},
+  {"field": "one_liner_ko", "url": "https://magine.cloud/docs", "quote": "Magine builds in-house, self-sufficient, vision-enabled agents called Sight-Driven Agents (SDAs)."},
+  {"field": "what_it_does_ko", "url": "https://github.com/S4nfs/Magine", "quote": "**Magine** is a retro-terminal web interface for deep GitHub profile analysis, AI-powered browser automation, and scheduled agent workflows"},
+  {"field": "what_it_does_ko", "url": "https://magine.cloud/docs", "quote": "screenshots + video capture → vision agent plans → GUI + API actions executed."},
+  {"field": "key_features", "url": "https://magine.cloud/docs", "quote": "Short-Term & Long-Term Memory - each agent retains context within a session (short-term) and across runs (long-term)"},
+  {"field": "key_features", "url": "https://magine.cloud/docs", "quote": "Isolated Session Handling - every agent runs in its own sandboxed browser environment"},
+  {"field": "key_features", "url": "https://magine.cloud", "quote": "MAGINE CODE — Autonomous Coding Engine"},
+  {"field": "key_features", "url": "https://magine.cloud", "quote": "<username> Generate embeddable SVG card"},
+  {"field": "use_cases_ko", "url": "https://github.com/S4nfs/Magine", "quote": "Send scheduled posts to LinkedIn, get a summary of your X (Twitter) feed, triage your Gmail inbox, let a coding agent open a pull request on your repo"},
+  {"field": "pricing", "url": "https://magine.cloud", "quote": "topup Buy Cats ($5 = 1 Cat = 5M tokens)"},
+  {"field": "pricing", "url": "https://magine.cloud", "quote": "Free tokens included to try your first SDA."},
+  {"field": "api", "url": "https://magine.cloud", "quote": "apikey Manage API keys for webhooks/API"},
+  {"field": "korean_support", "url": "https://magine.cloud", "quote": "html lang: en"}
+ ],
+ "mismatch": [],
+ "plan_change": [{"official": "구독 요금제 표시 없이 토큰 충전($5 = 1 Cat = 5M 토큰)과 가입 시 무료 토큰, PRO 전용 CatBot 기능만 확인됨", "diff": "기존 '프리미엄(무료+유료 구독)'과 달리 페이지에서 확인되는 유료 구조는 구독이 아니라 토큰 충전식", "url": "https://magine.cloud"}]
+}

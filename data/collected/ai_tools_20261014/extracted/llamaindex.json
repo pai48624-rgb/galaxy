@@ -1,0 +1,67 @@
+{
+ "company": "LlamaIndex",
+ "one_liner_ko": "어떤 문서든 AI가 쓸 수 있는 맥락으로 바꾸는 문서 OCR·워크플로용 AI 에이전트 플랫폼(LlamaParse)과 오픈소스 에이전트 앱 프레임워크.",
+ "what_it_does_ko": "LlamaIndex는 문서 파싱·추출을 위한 모델을 만드는 응용 AI 연구소로, 주력 상용 플랫폼 LlamaParse에서 50종 이상의 비정형 파일을 파싱(Parse)하고, 스키마 기반으로 구조화 추출(Extract)하며, 분할(Split)·분류(Classify)·색인(Index)을 제공한다. 손글씨·표·차트도 구조화 데이터로 바꾸고 자동 수정 루프로 오류를 잡는다. 오픈소스로는 RAG·에이전트 앱을 만드는 LlamaIndex 프레임워크(300개 이상 통합 패키지)와 클라우드·LLM 토큰 없이 로컬에서 문서를 파싱하는 LiteParse가 있다. GitHub 안내에 따르면 회사의 주된 초점은 오픈소스 프레임워크에서 LlamaParse로 옮겨 갔다.",
+ "key_features": [
+  "50종 이상 비정형 파일 파싱(이미지·복잡한 레이아웃·여러 쪽 표·손글씨)",
+  "스키마 기반 LLM 추출 에이전트(학습 불필요), 인용·신뢰도 점수",
+  "자연어 규칙 기반 문서 분할·분류",
+  "RAG용 청킹·임베딩 색인 파이프라인",
+  "로컬 오픈소스 파서 LiteParse",
+  "LlamaIndex 프레임워크와 300개 이상 통합 패키지",
+  "클라우드 또는 고객 VPC 배포, SOC2·HIPAA·GDPR 준수"
+ ],
+ "use_cases_ko": [
+  "금융 실사·송장 처리 자동화",
+  "보험 청구·심사, 의료 기록 처리",
+  "복잡한 기술 문서 검색과 AI 에이전트용 문서 맥락 제공"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Free: 월 10K 크레딧, 약 1,000쪽)",
+  "plans": [
+   {"name": "Free", "price": 0, "currency": "USD", "period": "month", "limits": "10K 크레딧 포함, 사용자 100명, 기본 지원", "page_lang": "en"},
+   {"name": "Starter", "price": 50, "currency": "USD", "period": "month", "limits": "40K 크레딧 포함, 종량제 최대 400K 크레딧", "page_lang": "en"},
+   {"name": "Pro", "price": 500, "currency": "USD", "period": "month", "limits": "400k 크레딧 포함, 종량제 최대 월 $5,000, 우선 Slack 지원", "page_lang": "en"},
+   {"name": "Enterprise", "price": null, "currency": null, "period": null, "limits": "맞춤(영업 문의), 크레딧 대량 할인, SSO, SaaS/하이브리드 배포", "page_lang": "en"},
+   {"name": "크레딧", "price": 1.25, "currency": "USD", "period": "usage", "limits": "1,000 크레딧당 $1.25", "page_lang": "en"}
+  ],
+  "pricing_url": "https://www.llamaindex.ai/pricing"
+ },
+ "open_source": "LlamaIndex 프레임워크·LiteParse 오픈소스(라이선스 이름은 수집 페이지에 없음), LlamaParse는 오픈소스 아님",
+ "api": "있음",
+ "platforms": ["웹", "API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://github.com/run-llama/llama_index", "quote": "LlamaIndex Framework (by [LlamaIndex](https://llamaindex.ai?utm_medium=li_github&utm_source=github&utm_campaign=2026--), the company behind LlamaParse)"},
+  {"field": "one_liner_ko", "url": "https://www.llamaindex.ai/", "quote": "Turn Any Document Into AI-Ready Context"},
+  {"field": "one_liner_ko", "url": "https://www.llamaindex.ai/", "quote": "LlamaIndex | AI Agents for Document OCR + Workflows"},
+  {"field": "what_it_does_ko", "url": "https://www.llamaindex.ai/", "quote": "We are an applied AI lab building the industry’s leading frontier models for document parsing and extraction."},
+  {"field": "what_it_does_ko", "url": "https://github.com/run-llama/llama_index", "quote": "our primary focus has shifted towards LlamaParse, along with liteparse and our benchmarking efforts."},
+  {"field": "key_features", "url": "https://www.llamaindex.ai/", "quote": "Industry-leading document parsing for 50+ unstructured file types — including support for embedded images, complex layouts, multi-page tables, and even handwritten notes."},
+  {"field": "key_features", "url": "https://www.llamaindex.ai/", "quote": "Turn unstructured content into structured insights using schema-based, LLM-powered extraction agents — no training required"},
+  {"field": "key_features", "url": "https://www.llamaindex.ai/", "quote": "Automatically categorize documents using natural-language rules."},
+  {"field": "key_features", "url": "https://www.llamaindex.ai/", "quote": "Enterprise-grade chunking and embedding pipeline."},
+  {"field": "key_features", "url": "https://www.llamaindex.ai/", "quote": "Parsed text from PDFs, Office docs, and images — no cloud, no LLM tokens, no limits."},
+  {"field": "key_features", "url": "https://github.com/run-llama/llama_index", "quote": "There are over 300 LlamaIndex integration"},
+  {"field": "key_features", "url": "https://www.llamaindex.ai/", "quote": "Run in our secure cloud or deploy fully in your VPC, ensuring data residence requirements."},
+  {"field": "use_cases_ko", "url": "https://www.llamaindex.ai/", "quote": "From financial research and due diligence to automated invoice processing"},
+  {"field": "use_cases_ko", "url": "https://www.llamaindex.ai/", "quote": "Insurance Automate claims and underwriting"},
+  {"field": "use_cases_ko", "url": "https://www.llamaindex.ai/", "quote": "Technical Document Search Find answers in complex docs"},
+  {"field": "pricing", "url": "https://www.llamaindex.ai/pricing", "quote": "Starter \n $50 \n /month \n Get started Includes 40K credits"},
+  {"field": "pricing", "url": "https://www.llamaindex.ai/pricing", "quote": "Join the pros Includes 400k credits"},
+  {"field": "pricing", "url": "https://www.llamaindex.ai/pricing", "quote": "1,000 credits = $1.25."},
+  {"field": "pricing", "url": "https://www.llamaindex.ai/pricing", "quote": "Get started Includes 10K credits"},
+  {"field": "pricing", "url": "https://www.llamaindex.ai/", "quote": "10,000 free credits per month (~1000 pages)"},
+  {"field": "pricing", "url": "https://www.llamaindex.ai/pricing", "quote": "Talk to sales Volume discount on credits"},
+  {"field": "open_source", "url": "https://www.llamaindex.ai/pricing", "quote": "It provides a generous provision of 10k free credits a month to all new users, but is not open source."},
+  {"field": "open_source", "url": "https://www.llamaindex.ai/pricing", "quote": "Our open source projects, LlamaIndex and Workflows, provide AI builders with the foundational building blocks for creating AI apps."},
+  {"field": "api", "url": "https://www.llamaindex.ai/pricing", "quote": "Webhooks & API callbacks"},
+  {"field": "platforms", "url": "https://www.llamaindex.ai/pricing", "quote": "Webhooks & API callbacks"},
+  {"field": "korean_support", "url": "https://www.llamaindex.ai/", "quote": "html lang: en"},
+  {"field": "plan_change", "url": "https://www.llamaindex.ai/pricing", "quote": "The LlamaIndex platform operates on a credit-based system, where each action—such as parsing, indexing, or extracting—costs a certain number of credits."}
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {"official": "유료 요금제는 오픈소스 프레임워크의 매니지드 호스팅이 아니라 문서 파싱·추출 플랫폼 LlamaParse용이며, 월 구독(Free $0·Starter $50·Pro $500·Enterprise 맞춤)에 크레딧 포함 + 종량제(1,000 크레딧 = $1.25) 구조", "diff": "기존 분류 '오픈소스 + 클라우드 매니지드 유료 플랜'과 큰 틀은 같지만, 유료 대상이 별도 상용 제품(LlamaParse, 오픈소스 아님)이고 크레딧 기반 과금이 핵심", "url": "https://www.llamaindex.ai/pricing"}
+ ]
+}

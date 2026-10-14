@@ -1,37 +1,194 @@
 {
  "company": "DeepSeek",
- "one_liner_ko": "대규모 강화학습으로 수학·코드·추론에서 OpenAI-o1에 견줄 성능을 내는 DeepSeek의 1세대 추론 모델.",
- "what_it_does_ko": "DeepSeek-R1은 DeepSeek의 1세대 추론 모델로, 지도 미세조정 없이 강화학습만으로 학습한 DeepSeek-R1-Zero를 바탕으로 콜드 스타트 데이터를 더해 만든 모델이다. 수학·코드·추론 작업에서 OpenAI-o1에 견줄 성능을 낸다고 밝힌다. DeepSeek-R1-Zero, DeepSeek-R1과 Llama·Qwen 기반 증류 모델 6개를 오픈소스로 공개했다. 로컬에서 실행할 수 있으며 채팅 사이트(chat.deepseek.com) 링크도 있다.",
+ "one_liner_ko": "대규모 강화학습으로 훈련한 DeepSeek의 1세대 추론 모델(오픈소스 공개).",
+ "what_it_does_ko": "DeepSeek-R1은 DeepSeek의 1세대 추론 모델로, 지도 미세조정 없이 대규모 강화학습(RL)으로 훈련한 DeepSeek-R1-Zero의 문제(끝없는 반복, 가독성, 언어 혼용)를 콜드 스타트 데이터로 보완했다. 수학·코드·추론 작업에서 OpenAI-o1에 견줄 성능을 낸다고 소개한다. 연구 커뮤니티를 위해 R1-Zero, R1, 그리고 Llama·Qwen 기반 증류 모델 6종을 오픈소스로 공개했으며 저장소 라이선스는 MIT다.",
  "key_features": [
-  "강화학습 기반 사고 사슬(CoT) 추론",
+  "대규모 강화학습 기반 추론(사고 사슬)",
   "자기 검증·반성·긴 사고 사슬 생성",
   "수학·코드·추론 작업 성능",
   "Llama·Qwen 기반 증류 모델 6종 공개",
-  "로컬 실행 가능"
+  "로컬 실행 지원(사용 권장사항 제공)"
  ],
  "use_cases_ko": [
-  "연구자가 강화학습 기반 추론 모델 연구에 활용"
+  "수학·코드·추론 문제 해결",
+  "추론 모델 연구(연구 커뮤니티 지원)"
  ],
  "pricing": {
   "free_tier": "불명",
-  "plans": [],
-  "pricing_url": null
+  "plans": [
+   {
+    "name": "deepseek-flash(V4.1-Flash) 입력 캐시 적중 (비혼잡)",
+    "price": 0.003,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "입력, 100만 토큰당",
+    "page_lang": "en"
+   },
+   {
+    "name": "deepseek-flash(V4.1-Flash) 입력 캐시 적중 (혼잡)",
+    "price": 0.006,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "입력, 100만 토큰당",
+    "page_lang": "en"
+   },
+   {
+    "name": "deepseek-flash(V4.1-Flash) 입력 캐시 미스 (비혼잡)",
+    "price": 0.15,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "입력, 100만 토큰당",
+    "page_lang": "en"
+   },
+   {
+    "name": "deepseek-flash(V4.1-Flash) 입력 캐시 미스 (혼잡)",
+    "price": 0.3,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "입력, 100만 토큰당",
+    "page_lang": "en"
+   },
+   {
+    "name": "deepseek-flash(V4.1-Flash) 출력 (비혼잡)",
+    "price": 0.6,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "출력, 100만 토큰당",
+    "page_lang": "en"
+   },
+   {
+    "name": "deepseek-flash(V4.1-Flash) 출력 (혼잡)",
+    "price": 1.2,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "출력, 100만 토큰당",
+    "page_lang": "en"
+   },
+   {
+    "name": "deepseek-v4-pro 입력 캐시 적중 (비혼잡)",
+    "price": 0.022,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "입력, 100만 토큰당",
+    "page_lang": "en"
+   },
+   {
+    "name": "deepseek-v4-pro 입력 캐시 적중 (혼잡)",
+    "price": 0.044,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "입력, 100만 토큰당",
+    "page_lang": "en"
+   },
+   {
+    "name": "deepseek-v4-pro 입력 캐시 미스 (비혼잡)",
+    "price": 0.66,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "입력, 100만 토큰당",
+    "page_lang": "en"
+   },
+   {
+    "name": "deepseek-v4-pro 입력 캐시 미스 (혼잡)",
+    "price": 1.32,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "입력, 100만 토큰당",
+    "page_lang": "en"
+   },
+   {
+    "name": "deepseek-v4-pro 출력 (비혼잡)",
+    "price": 1.98,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "출력, 100만 토큰당",
+    "page_lang": "en"
+   },
+   {
+    "name": "deepseek-v4-pro 출력 (혼잡)",
+    "price": 3.96,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "출력, 100만 토큰당",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://api-docs.deepseek.com/quick_start/pricing/"
  },
  "open_source": "MIT",
  "api": "불명",
- "platforms": ["웹"],
- "korean_support": "불명",
+ "platforms": [
+  "웹"
+ ],
+ "korean_support": "없음(영어 등만)",
  "evidence": [
-  {"field": "company", "url": "https://github.com/deepseek-ai/DeepSeek-R1", "quote": "<a href=\"https://www.deepseek.com/\" target=\"_blank\"><img alt=\"Homepage\""},
-  {"field": "one_liner_ko", "url": "https://github.com/deepseek-ai/DeepSeek-R1", "quote": "We introduce our first-generation reasoning models, DeepSeek-R1-Zero and DeepSeek-R1."},
-  {"field": "what_it_does_ko", "url": "https://github.com/deepseek-ai/DeepSeek-R1", "quote": "DeepSeek-R1 achieves performance comparable to OpenAI-o1 across math, code, and reasoning tasks."},
-  {"field": "key_features", "url": "https://github.com/deepseek-ai/DeepSeek-R1", "quote": "DeepSeek-R1-Zero demonstrates capabilities such as self-verification, reflection, and generating long CoTs"},
-  {"field": "key_features", "url": "https://github.com/deepseek-ai/DeepSeek-R1", "quote": "we have open-sourced DeepSeek-R1-Zero, DeepSeek-R1, and six dense models distilled from DeepSeek-R1 based on Llama and Qwen."},
-  {"field": "key_features", "url": "https://github.com/deepseek-ai/DeepSeek-R1", "quote": "**NOTE: Before running DeepSeek-R1 series models locally, we kindly recommend reviewing the [Usage Recommendation](#usage-recommendations) section.**"},
-  {"field": "use_cases_ko", "url": "https://github.com/deepseek-ai/DeepSeek-R1", "quote": "To support the research community, we have open-sourced DeepSeek-R1-Zero"},
-  {"field": "open_source", "url": "https://github.com/deepseek-ai/DeepSeek-R1", "quote": "src=\"https://img.shields.io/badge/License-MIT-f5de53?&color=f5de53\"/></a>"},
-  {"field": "platforms", "url": "https://github.com/deepseek-ai/DeepSeek-R1", "quote": "<a href=\"https://chat.deepseek.com/\" target=\"_blank\"><img alt=\"Chat\""}
+  {
+   "field": "company",
+   "url": "https://github.com/deepseek-ai/DeepSeek-R1",
+   "quote": "We introduce our first-generation reasoning models, DeepSeek-R1-Zero and DeepSeek-R1."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/deepseek-ai/DeepSeek-R1",
+   "quote": "DeepSeek-R1-Zero, a model trained via large-scale reinforcement learning (RL) without supervised fine-tuning (SFT) as a preliminary step, demonstrated remarkable performance on reasoning."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/deepseek-ai/DeepSeek-R1",
+   "quote": "DeepSeek-R1 achieves performance comparable to OpenAI-o1 across math, code, and reasoning tasks."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/deepseek-ai/DeepSeek-R1",
+   "quote": "To support the research community, we have open-sourced DeepSeek-R1-Zero, DeepSeek-R1, and six dense models distilled from DeepSeek-R1 based on Llama and Qwen."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/deepseek-ai/DeepSeek-R1",
+   "quote": "DeepSeek-R1-Zero demonstrates capabilities such as self-verification, reflection, and generating long CoTs"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/deepseek-ai/DeepSeek-R1",
+   "quote": "Before running DeepSeek-R1 series models locally, we kindly recommend reviewing the [Usage Recommendation]"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/deepseek-ai/DeepSeek-R1",
+   "quote": "DeepSeek-R1 achieves performance comparable to OpenAI-o1 across math, code, and reasoning tasks."
+  },
+  {
+   "field": "pricing",
+   "url": "https://api-docs.deepseek.com/quick_start/pricing/",
+   "quote": "MODEL VERSION DeepSeek-V4.1-Flash DeepSeek-V4-Pro-0813"
+  },
+  {
+   "field": "pricing",
+   "url": "https://api-docs.deepseek.com/quick_start/pricing/",
+   "quote": "1M OUTPUT TOKENS OFF-PEAK $0.6 $1.98"
+  },
+  {
+   "field": "pricing",
+   "url": "https://api-docs.deepseek.com/quick_start/pricing/",
+   "quote": "Off-peak rates are half of the peak rates."
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/deepseek-ai/DeepSeek-R1",
+   "quote": "https://img.shields.io/badge/License-MIT-f5de53?&color=f5de53"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/deepseek-ai/DeepSeek-R1",
+   "quote": "https://img.shields.io/badge/🤖%20Chat-DeepSeek%20R1-536af5?color=536af5&logoColor=white"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.deepseek.com/en/",
+   "quote": "hreflang: en-us, x-default, zh-cn"
+  }
  ],
  "mismatch": [],
- "plan_change": []
+ "plan_change": [],
+ "note": "가격 구간은 DeepSeek API 전체(상위 제품) 가격표이며 R1 이름의 모델은 없음 — 적힌 가격은 deepseek-flash(V4.1-Flash)·deepseek-v4-pro 것. R1을 API로 쓸 수 있는지는 페이지에 없어 api 불명. 홈(deepseek.com)은 V4.1 중심 회사 홈."
 }

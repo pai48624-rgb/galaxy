@@ -1,0 +1,44 @@
+{
+ "company": "Google",
+ "one_liner_ko": "에이전트가 주도하는 결제를 플랫폼 간에 안전하게 시작·처리하기 위해 결제·기술 기업들과 함께 만든 오픈 프로토콜.",
+ "what_it_does_ko": "AP2(Agent Payments Protocol)는 AI 에이전트가 사용자를 대신해 거래할 때 권한 증명(Authorization), 진정성(Authenticity), 책임 소재(Accountability)를 해결하기 위한 오픈 프로토콜로, A2A와 MCP의 확장으로 쓸 수 있다. 사용자 지시를 검증 가능하게 증명하는 암호 서명 디지털 계약인 Mandate(의도 Mandate·장바구니 Mandate)로 의도→장바구니→결제까지 부인할 수 없는 감사 기록을 만든다. 사람이 함께 있는 실시간 구매와 사람이 없는 위임 작업을 모두 다루며, 신용·직불카드부터 스테이블코인·실시간 계좌이체까지 결제 수단에 구애받지 않는다. Google은 Adyen·American Express·Mastercard·PayPal 등 60개 이상 조직과 협력한다고 밝혔다.",
+ "key_features": [
+  "암호 서명된 Mandate(검증 가능한 자격증명 기반)로 사용자 지시 증명",
+  "의도 Mandate·장바구니 Mandate로 의도→장바구니→결제 감사 기록",
+  "사람 참여 실시간 구매와 사람 부재 위임 작업 모두 지원",
+  "카드·스테이블코인·실시간 계좌이체 등 결제 수단 무관",
+  "A2A·MCP 프로토콜의 확장으로 사용 가능",
+  "에이전트 기반 암호화폐 결제용 A2A x402 확장",
+  "Python SDK와 Python·Go·Android 샘플 시나리오"
+ ],
+ "use_cases_ko": [
+  "원하는 상품이 조건에 맞게 나오면 에이전트가 자동 구매",
+  "가맹점 에이전트가 맞춤 번들 할인 제안",
+  "항공·호텔 예약을 예산 안에서 에이전트가 동시에 처리"
+ ],
+ "pricing": {"free_tier": "불명", "plans": [], "pricing_url": null},
+ "open_source": "Apache-2.0",
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {"field": "company", "url": "https://cloud.google.com/blog/products/ai-machine-learning/announcing-agents-to-payments-ap2-protocol?hl=en", "quote": "Today, Google announced the Agent Payments Protocol (AP2)"},
+  {"field": "one_liner_ko", "url": "https://cloud.google.com/blog/products/ai-machine-learning/announcing-agents-to-payments-ap2-protocol?hl=en", "quote": "an open protocol developed with leading payments and technology companies to securely initiate and transact agent-led payments across platforms."},
+  {"field": "what_it_does_ko", "url": "https://cloud.google.com/blog/products/ai-machine-learning/announcing-agents-to-payments-ap2-protocol?hl=en", "quote": "The protocol can be used as an extension of the Agent2Agent (A2A) protocol and Model Context Protocol (MCP)."},
+  {"field": "what_it_does_ko", "url": "https://cloud.google.com/blog/products/ai-machine-learning/announcing-agents-to-payments-ap2-protocol?hl=en", "quote": "We’re collaborating with a diverse group of more than 60 organizations to help shape the future of agentic payments"},
+  {"field": "key_features", "url": "https://cloud.google.com/blog/products/ai-machine-learning/announcing-agents-to-payments-ap2-protocol?hl=en", "quote": "AP2 builds trust by using Mandates—tamper-proof, cryptographically-signed digital contracts that serve as verifiable proof of a user's instructions."},
+  {"field": "key_features", "url": "https://cloud.google.com/blog/products/ai-machine-learning/announcing-agents-to-payments-ap2-protocol?hl=en", "quote": "This complete sequence—from intent, to cart, to payment—creates a non-repudiable audit trail"},
+  {"field": "key_features", "url": "https://cloud.google.com/blog/products/ai-machine-learning/announcing-agents-to-payments-ap2-protocol?hl=en", "quote": "It also supports different payment types–from credit and debit cards to stablecoins and real-time bank transfers."},
+  {"field": "key_features", "url": "https://cloud.google.com/blog/products/ai-machine-learning/announcing-agents-to-payments-ap2-protocol?hl=en", "quote": "launched the A2A x402 extension , a production-ready solution for agent-based crypto payments."},
+  {"field": "key_features", "url": "https://cloud.google.com/blog/products/ai-machine-learning/announcing-agents-to-payments-ap2-protocol?hl=en", "quote": "Delegated tasks (human not present)"},
+  {"field": "key_features", "url": "https://github.com/google-agentic-commerce/AP2", "quote": "the AP2 SDK (Python lives at"},
+  {"field": "key_features", "url": "https://github.com/google-agentic-commerce/AP2", "quote": "[**`code/samples/android/scenarios`**](code/samples/android/scenarios) — Android."},
+  {"field": "use_cases_ko", "url": "https://cloud.google.com/blog/products/ai-machine-learning/announcing-agents-to-payments-ap2-protocol?hl=en", "quote": "The agent then monitors prices and availability and automatically executes a secure purchase the moment that specific variant is found"},
+  {"field": "use_cases_ko", "url": "https://cloud.google.com/blog/products/ai-machine-learning/announcing-agents-to-payments-ap2-protocol?hl=en", "quote": "whose own agent can respond by creating a custom, time-sensitive bundle offer"},
+  {"field": "use_cases_ko", "url": "https://cloud.google.com/blog/products/ai-machine-learning/announcing-agents-to-payments-ap2-protocol?hl=en", "quote": "it can execute both cryptographically-signed bookings simultaneously."},
+  {"field": "open_source", "url": "https://github.com/google-agentic-commerce/AP2", "quote": "[![Apache License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)"},
+  {"field": "korean_support", "url": "https://cloud.google.com/blog/products/ai-machine-learning/announcing-agents-to-payments-ap2-protocol?hl=en", "quote": "화면에 보이는 언어 이름: 한국어, English, 日本語, Français, Deutsch"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

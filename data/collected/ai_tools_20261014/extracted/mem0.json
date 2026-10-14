@@ -1,0 +1,183 @@
+{
+ "company": "Mem0",
+ "one_liner_ko": "AI 에이전트와 앱에 세션·에이전트를 넘어 유지되는 기억을 붙여 주는 메모리 인프라.",
+ "what_it_does_ko": "Mem0는 AI 비서와 에이전트에 지능형 메모리 레이어를 더해 사용자 선호를 기억하고 개인화된 응답을 하게 한다. 데이터를 추가하면 Mem0가 기억을 추출·갱신하고, 사용자와 상호작용할 때 핵심 기억을 꺼내 준다. 대화 기록을 압축한 기억으로 토큰과 지연을 줄인다고 소개한다. 오픈소스 SDK와 독자 최적화가 들어간 관리형 플랫폼이 있다.",
+ "key_features": [
+  "사용자·세션·에이전트 단위 다층 메모리",
+  "대화 기록을 압축하는 메모리 압축 엔진",
+  "엔티티 연결·다중 신호(의미·BM25·엔티티) 검색",
+  "시간 인식 검색(Temporal Reasoning)",
+  "Python·Node.js SDK와 API",
+  "SOC 2·HIPAA·GDPR 대응, 쿠버네티스·프라이빗 클라우드·망분리 배포",
+  "MCP 연동·CLI"
+ ],
+ "use_cases_ko": [
+  "고객 지원 챗봇",
+  "의료: 환자 이력·알레르기를 기억하는 진료 보조",
+  "교육: 학생별 학습 방식을 기억하는 튜터"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Hobby: 월 추가 요청 10,000건·조회 1,000건)",
+  "plans": [
+   {
+    "name": "Hobby",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "월 add 10,000건, retrieval 1,000건, 프로젝트 1개",
+    "page_lang": "en"
+   },
+   {
+    "name": "Starter",
+    "price": 19,
+    "currency": "USD",
+    "period": "month",
+    "limits": "월 add 50,000건, retrieval 5,000건, 프로젝트 1개",
+    "page_lang": "en"
+   },
+   {
+    "name": "Pro",
+    "price": 249,
+    "currency": "USD",
+    "period": "month",
+    "limits": "월 add 500,000건, retrieval 50,000건, 프로젝트 무제한, 그래프 메모리",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": "USD",
+    "period": null,
+    "limits": "무제한 요청, 온프렘 배포, SSO, SLA",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://mem0.ai/pricing"
+ },
+ "open_source": "오픈소스 SDK(라이선스 이름은 페이지에 없음)",
+ "api": "있음",
+ "platforms": [
+  "API",
+  "CLI"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://mem0.ai",
+   "quote": "© 2026 Mem0"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://mem0.ai",
+   "quote": "AI memory that persists across sessions and agents"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://mem0.ai",
+   "quote": "Drop-in memory infrastructure for AI agents and apps. Context that persists. Built for production."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/mem0ai/mem0",
+   "quote": "enhances AI assistants and agents with an intelligent memory layer, enabling personalized AI interactions."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://mem0.ai",
+   "quote": "Mem0 extracts and  updates memories"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/mem0ai/mem0",
+   "quote": "Scores reflect Mem0's managed platform, which includes proprietary optimizations not available in the open-source SDK"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/mem0ai/mem0",
+   "quote": "**Multi-Level Memory**: Seamlessly retains User, Session, and Agent state with adaptive personalization"
+  },
+  {
+   "field": "key_features",
+   "url": "https://mem0.ai",
+   "quote": "Automatically condenses chat history into compact memories that cut tokens and latency while keeping the right context."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/mem0ai/mem0",
+   "quote": "**Multi-signal retrieval** -- semantic, BM25 keyword, and entity matching scored in parallel and fused."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/mem0ai/mem0",
+   "quote": "**Temporal Reasoning** -- time-aware retrieval"
+  },
+  {
+   "field": "key_features",
+   "url": "https://mem0.ai",
+   "quote": "Kubernetes, private cloud, or air-gapped. Same API everywhere."
+  },
+  {
+   "field": "key_features",
+   "url": "https://mem0.ai",
+   "quote": "Mem0 is SOC 2 (Type 1), HIPAA, and GDPR compliant"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/mem0ai/mem0",
+   "quote": "ideal for customer support chatbots, AI assistants, and autonomous systems."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://mem0.ai",
+   "quote": "Remembers patient history, allergies, and treatment preferences across visits"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://mem0.ai",
+   "quote": "Adapts to each student's pace and learning style, remembering what works best."
+  },
+  {
+   "field": "pricing",
+   "url": "https://mem0.ai/pricing",
+   "quote": "Unlimited end users\n 10,000 add requests/ month\n 1,000 retrieval requests/ month"
+  },
+  {
+   "field": "pricing",
+   "url": "https://mem0.ai/pricing",
+   "quote": "Price\n Free\n $19/month\n $249/month\n Custom"
+  },
+  {
+   "field": "pricing",
+   "url": "https://mem0.ai/pricing",
+   "quote": "500,000 add requests /month\n 50,000 retrieval requests /month"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/mem0ai/mem0",
+   "quote": "not available in the open-source SDK"
+  },
+  {
+   "field": "api",
+   "url": "https://mem0.ai/pricing",
+   "quote": "Developer Docs \n API Reference \n MCP Integration"
+  },
+  {
+   "field": "platforms",
+   "url": "https://mem0.ai/pricing",
+   "quote": "OpenMemory \n Gateway \n CLI"
+  },
+  {
+   "field": "platforms",
+   "url": "https://mem0.ai",
+   "quote": "# pip install mem0ai"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://mem0.ai",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

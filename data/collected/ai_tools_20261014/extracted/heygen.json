@@ -1,0 +1,67 @@
+{
+ "company": "HeyGen",
+ "one_liner_ko": "나만의 AI 아바타로 몇 분 만에 내가 주인공인 AI 동영상을 만드는 영상 생성 플랫폼",
+ "what_it_does_ko": "HeyGen은 카메라나 촬영팀 없이 스크립트만으로 영상을 만들고 현지화·확장·협업하게 해 주는 AI 동영상 플랫폼이다. Avatar V 아바타는 말투·제스처·움직임을 학습해 여러 각도와 영상에서 일관된 모습을 유지하고, 175개 이상 언어·방언에서 정확한 립싱크를 제공한다. 프롬프트 하나로 완성 영상을 만드는 비디오 에이전트, 문서처럼 편집하는 AI Studio, 음성 복제와 립싱크를 쓰는 원클릭 동영상 번역을 갖췄다. 텍스트·이미지·오디오·PPT/PDF를 영상으로 바꿀 수 있고, 개발자용 API도 제공한다.",
+ "key_features": [
+  "말투·제스처를 학습해 일관된 모습을 유지하는 AI 아바타(Avatar V)",
+  "175개 이상 언어·방언 립싱크",
+  "프롬프트 하나로 완성 영상을 만드는 비디오 에이전트",
+  "텍스트 기반 편집기 AI Studio(어조·제스처·감정 제어, 팀 협업)",
+  "음성 복제·립싱크를 쓰는 원클릭 동영상 번역",
+  "텍스트·이미지·오디오·PPT/PDF를 동영상으로 변환",
+  "커스텀 아바타 본인 카메라 인증",
+  "개발자용 API(Video Agent·생성·번역·립싱크)와 MCP·CLI"
+ ],
+ "use_cases_ko": [
+  "소셜 콘텐츠·온라인 강좌 영상 제작",
+  "기존 영상을 다국어로 번역해 전 세계 시청자에게 배포",
+  "팟캐스트·보이스오버를 아바타 영상으로 변환"
+ ],
+ "pricing": {
+  "free_tier": "있음 (월 3개 동영상, 최대 1분, 맞춤형 비디오 아바타 1개)",
+  "plans": [
+   {"name": "Free", "price": 0, "currency": "USD", "period": "month", "limits": "월 3개 동영상, 최대 1분", "page_lang": "en-us"},
+   {"name": "Creator", "price": 29, "currency": "USD", "period": "month", "limits": "600 크레딧, 최대 30분, 1080p, 음성 복제, 워터마크 제거", "page_lang": "en-us"},
+   {"name": "Pro", "price": 49, "currency": "USD", "period": "month", "limits": "1,000 크레딧, 최대 30분, 4K", "page_lang": "en-us"},
+   {"name": "Business", "price": 149, "currency": "USD", "period": "month", "limits": "1,500 크레딧, 최대 60분, 4K, SSO, 추가 좌석 $20/월", "page_lang": "en-us"},
+   {"name": "Enterprise", "price": null, "currency": null, "period": null, "limits": "영업 문의, 영상 길이 제한 없음", "page_lang": "en-us"},
+   {"name": "Free", "price": 0, "currency": "KRW", "period": "month", "limits": "월 3개 동영상, 최대 1분", "page_lang": "ko-kr"},
+   {"name": "Creator", "price": 40272, "currency": "KRW", "period": "month", "limits": "600 크레딧, 최대 30분, 1080p", "page_lang": "ko-kr"},
+   {"name": "Pro", "price": 73500, "currency": "KRW", "period": "month", "limits": "1,000 크레딧, 4K", "page_lang": "ko-kr"},
+   {"name": "Business", "price": 218000, "currency": "KRW", "period": "month", "limits": "1,500 크레딧, 최대 60분, 추가 좌석 $20", "page_lang": "ko-kr"}
+  ],
+  "pricing_url": "https://www.heygen.com/pricing"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["웹", "API", "CLI"],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {"field": "company", "url": "https://www.heygen.com/ko-kr/about", "quote": "HeyGen의 사명은 누구나 쉽게 접근할 수 있는 AI 영상 생성 기술을 통해 개인의 역량을 강화하는 데에 있습니다."},
+  {"field": "one_liner_ko", "url": "https://www.heygen.com/ko-kr", "quote": "몇 분 만에 완성되는, 내가 주인공인 AI 동영상"},
+  {"field": "what_it_does_ko", "url": "https://www.heygen.com/pricing", "quote": "HeyGen empowers 100,000+ businesses to create, localize, scale, and collaborate on video, no camera or crew needed."},
+  {"field": "key_features", "url": "https://www.heygen.com/ko-kr", "quote": "Avatar V learns how you talk, gesture, and move, then generates video that's convincingly you."},
+  {"field": "key_features", "url": "https://www.heygen.com/ko-kr", "quote": "175개 이상의 언어와 방언에서 어떤 재생 속도에서도 들리는 음성과 보이는 입 모양이 완벽하게 일치합니다."},
+  {"field": "key_features", "url": "https://www.heygen.com/ko-kr", "quote": "비디오 에이전트 프롬프트 하나로 아이디어부터 완성된 영상까지"},
+  {"field": "key_features", "url": "https://www.heygen.com/ko-kr", "quote": "문서를 작성하듯 사용할 수 있는 텍스트 기반 편집기에서 모든 단어와 제스처, 감정을 세밀하게 연출하세요."},
+  {"field": "key_features", "url": "https://www.heygen.com/ko-kr", "quote": "파일을 업로드하거나 YouTube 링크를 붙여넣기만 하면 클릭 한 번으로 동영상을 번역할 수 있습니다."},
+  {"field": "key_features", "url": "https://www.heygen.com/ko-kr", "quote": "PPT 또는 PDF를 가져와 각 슬라이드를 실감 나는 AI 아바타와 자연스러운 음성이 담긴 장면으로 만들어 보세요."},
+  {"field": "key_features", "url": "https://www.heygen.com/ko-kr", "quote": "모든 커스텀 아바타는 해당 인물의 카메라를 통한 본인 인증을 거쳐야 합니다."},
+  {"field": "key_features", "url": "https://www.heygen.com/ko-kr", "quote": "HeyGen for Developers는 Video Agent, Video Generation, Translation, Lipsync 모델을 포함한 프로덕션 환경용 확장 가능한 API를 제공합니다."},
+  {"field": "use_cases_ko", "url": "https://www.heygen.com/ko-kr", "quote": "소셜 콘텐츠 \n 온라인 강좌"},
+  {"field": "use_cases_ko", "url": "https://www.heygen.com/ko-kr", "quote": "175개 이상의 언어와 방언으로 전 세계 시청자에게 다가갈 수 있는 AI 동영상 번역"},
+  {"field": "use_cases_ko", "url": "https://www.heygen.com/ko-kr", "quote": "팟캐스트, 보이스오버 또는 모든 오디오 파일을 AI 아바타, 자막, 애니메이션이 포함된 매력적인 영상으로 만들어 보세요."},
+  {"field": "pricing", "url": "https://www.heygen.com/pricing", "quote": "Video Generation: 3 videos per month"},
+  {"field": "pricing", "url": "https://www.heygen.com/pricing", "quote": "Creator\n $29 / mo"},
+  {"field": "pricing", "url": "https://www.heygen.com/pricing", "quote": "Pro\n $49 / mo"},
+  {"field": "pricing", "url": "https://www.heygen.com/pricing", "quote": "Business\n $149 / mo"},
+  {"field": "pricing", "url": "https://www.heygen.com/ko-kr/pricing", "quote": "₩40,272 /월"},
+  {"field": "pricing", "url": "https://www.heygen.com/ko-kr/pricing", "quote": "₩73,500 /월"},
+  {"field": "pricing", "url": "https://www.heygen.com/ko-kr/pricing", "quote": "₩218,000 /월"},
+  {"field": "api", "url": "https://www.heygen.com/ko-kr", "quote": "프로덕션 환경용 확장 가능한 API를 제공합니다"},
+  {"field": "platforms", "url": "https://app.heygen.com/developers/api?modal=pricing/", "quote": "API 문서 \n MCP \n CLI"},
+  {"field": "korean_support", "url": "https://www.heygen.com/ko-kr", "quote": "Platform 활용 사례 개발자 리소스 Enterprise 연구 요금제 KO"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

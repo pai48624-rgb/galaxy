@@ -1,42 +1,45 @@
 {
- "company": null,
+ "company": "OpenAI",
  "one_liner_ko": null,
- "what_it_does_ko": "공식 소개 페이지(GPT-5.3-Codex)는 수집 시 로드되지 않아 기능 설명을 확인하지 못했다. ChatGPT 가격 페이지에 따르면 Codex는 ChatGPT 요금제에 포함되어 Free·Go는 제한적 이용, Plus는 사용 한도 확대, Pro는 한도 확장과 더 긴 Codex 세션을 제공한다.",
- "key_features": [],
+ "what_it_does_ko": "Codex 소개 페이지(openai.com)는 받아지지 않았다. 상위 제품인 ChatGPT 요금 페이지에 따르면 Codex는 ChatGPT 플랜에 포함되어 Free·Go는 제한적으로, Plus는 사용 한도가 확대되어, Pro는 한도 확장과 더 오래 이어갈 수 있는 세션으로 쓸 수 있다.",
+ "key_features": [
+  "ChatGPT 플랜에 포함된 Codex 이용",
+  "Pro 플랜의 더 오래 이어갈 수 있는 Codex 세션"
+ ],
  "use_cases_ko": [],
  "pricing": {
-  "free_tier": "있음 (ChatGPT Free ₩0/월, Codex 제한적 이용)",
+  "free_tier": "있음 (ChatGPT Free 플랜에서 Codex 제한적 이용)",
   "plans": [
    {
-    "name": "Free",
-    "price": 0,
+    "name": "ChatGPT Free",
+    "price": null,
     "currency": "KRW",
     "period": "month",
     "limits": "Codex 제한적 이용",
     "page_lang": "ko-KR"
    },
    {
-    "name": "Go",
-    "price": 13000,
+    "name": "ChatGPT Go",
+    "price": null,
     "currency": "KRW",
     "period": "month",
-    "limits": "Codex 제한적 이용, 광고 포함 가능",
+    "limits": "Codex 제한적 이용",
     "page_lang": "ko-KR"
    },
    {
-    "name": "Plus",
-    "price": 29000,
+    "name": "ChatGPT Plus",
+    "price": null,
     "currency": "KRW",
     "period": "month",
     "limits": "Codex 사용 한도 확대",
     "page_lang": "ko-KR"
    },
    {
-    "name": "Pro",
-    "price": 159000,
+    "name": "ChatGPT Pro",
+    "price": null,
     "currency": "KRW",
     "period": "month",
-    "limits": "₩159,000부터, 3가지 사용량 등급, Codex 한도 확장·더 긴 세션",
+    "limits": "Codex 한도 확장, 더 오래 이어갈 수 있는 Codex 세션",
     "page_lang": "ko-KR"
    }
   ],
@@ -48,34 +51,34 @@
  "korean_support": "UI 한국어",
  "evidence": [
   {
+   "field": "company",
+   "url": "https://openai.com/ko-KR/index/introducing-gpt-5-3-codex/",
+   "quote": "=== [home] https://openai.com/ko-KR/index/introducing-gpt-5-3-codex/"
+  },
+  {
    "field": "what_it_does_ko",
    "url": "https://chatgpt.com/ko-KR/pricing/",
-   "quote": "제한적 플랜: Free, 기능: Codex, 제한적 \n 제한적 플랜: Go, 기능: Codex, 제한적 \n 플랜: Plus, 기능: Codex, 예 \n 한도 확장 플랜: Pro, 기능: Codex, 한도 확장"
+   "quote": "제한적 플랜: Free, 기능: Codex, 제한적 \n 제한적 플랜: Go, 기능: Codex, 제한적"
   },
   {
-   "field": "pricing",
-   "url": "https://chatgpt.com/ko-KR/pricing/",
-   "quote": "Free\n 일상적인 작업을 위한 인텔리전스\n ₩0 /월\n Free 사용하기"
-  },
-  {
-   "field": "pricing",
-   "url": "https://chatgpt.com/ko-KR/pricing/",
-   "quote": "Go\n 이용 범위 확대\n ₩13,000 /월\n Go 사용하기"
-  },
-  {
-   "field": "pricing",
-   "url": "https://chatgpt.com/ko-KR/pricing/",
-   "quote": "Plus\n 고급 인텔리전스로 생산성 향상\n ₩29,000 /월"
-  },
-  {
-   "field": "pricing",
-   "url": "https://chatgpt.com/ko-KR/pricing/",
-   "quote": "From\n ₩159,000 /월\n Pro 사용하기 \n Plus 플랜의 모든 기능 포함\n 3가지 사용량 등급 중 선택"
-  },
-  {
-   "field": "pricing",
+   "field": "key_features",
    "url": "https://chatgpt.com/ko-KR/pricing/",
    "quote": "더 오래 이어갈 수 있는 Codex 및 ChatGPT Work 세션"
+  },
+  {
+   "field": "pricing",
+   "url": "https://chatgpt.com/ko-KR/pricing/",
+   "quote": "제한적 심층 리서치\n 제한적 메모리와 컨텍스트\n 제한적 Codex 이용"
+  },
+  {
+   "field": "pricing",
+   "url": "https://chatgpt.com/ko-KR/pricing/",
+   "quote": "프로젝트, 예약 작업, 맞춤형 GPT\n Codex 사용 한도 확대"
+  },
+  {
+   "field": "pricing",
+   "url": "https://chatgpt.com/ko-KR/pricing/",
+   "quote": "한도 확장 플랜: Pro, 기능: Codex, 한도 확장"
   },
   {
    "field": "korean_support",
@@ -84,5 +87,6 @@
   }
  ],
  "mismatch": [],
- "plan_change": []
+ "plan_change": [],
+ "note": "홈(GPT-5.3-Codex 소개)이 'This page couldn’t load' 로 받아지지 않음. 가격 구간은 상위 제품 ChatGPT 요금 페이지인데 이번 본문에는 금액 숫자가 빠져 있음('/월'만 표시) → 플랜 이름과 Codex 한도만 기록, price null. Codex API 가격은 본문에 없음."
 }

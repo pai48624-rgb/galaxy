@@ -1,0 +1,535 @@
+=== [home] https://snorkel.ai (lang=en-US)
+Expert data development for frontier AI | Snorkel AI 
+ Skip to content 
+ Capabilities 
+ Capabilities 
+ How it works 
+ Research-led data and environment development for the frontier's hardest problems 
+ Learn more 
+ Data development 
+ Overview 
+ Expert-curated datasets for frontier AI 
+ Use cases 
+ See how our data improves frontier models 
+ Specialized agents 
+ Overview 
+ Custom AI systems built to unlock ROI fast 
+ Enterprise stories 
+ Real-world results from enterprise deployments 
+ Research 
+ Research 
+ Research 
+ Research hub 
+ Our latest papers and data-centric AI findings 
+ Leaderboards 
+ Compare model performance across benchmarks 
+ Open Benchmarks Grants 
+ Benchmarks, red-teaming, and fellowships for open AI evaluation 
+ Benchmarks 
+ Agentic Coding 
+ Software Engineering 
+ Enterprise Environments 
+ Science & Research 
+ Computer Use 
+ Capability/Efficiency 
+ Knowledge Work 
+ Resources 
+ Resources 
+ Resources 
+ Resource library 
+ Guides, papers, and tools for data-centric AI 
+ Events 
+ Upcoming talks, workshops, and conferences 
+ Reading Group 
+ AI discussions for researchers and practitioners 
+ Blog 
+ News, updates, and perspectives from our team 
+ Featured blog 
+ Frontier AI is Accelerating. Open Benchmarks Need to Keep Up. 
+ Expanding Open Benchmarks Grants 10x to a $30M committment. 
+ Company 
+ Company 
+ Company 
+ About 
+ Our mission, story, and values 
+ Careers 
+ Open roles and life at our company 
+ Press 
+ Media resources and announcements 
+ Partners 
+ Organizations we work with 
+ Security 
+ How we keep data safe 
+ Contact us 
+ Get in touch with our team 
+ Join our expert community 
+ Get paid to shape safer, smarter AI 
+ Learn more 
+ Get started 
+ Get started 
+ NEW:
+ We're expanding Open Benchmarks Grants 10x
+ (opens in a new tab) 
+ We build the data that pushes the frontier
+ Snorkel helps frontier labs and AI teams develop specialized training data and environments that set their models and agents apart.
+ Request dataset samples 
+ Explore research 
+ Proud to partner with top frontier AI and research teams
+ Frontier models break at the edges. We build for that. 
+ Most data pipelines are built for volume, not difficulty. Frontier models fail on distributional gaps in specialized domains, benchmark blind spots, and tasks where correctness is hard to define. Snorkel is built specifically for these problems.
+ Founded out of Stanford AI Lab, we've been shaping and benchmarking frontier AI for nearly a decade.
+ See our research 
+ Open Benchmarks Grants 
+ What we've found
+ New
+ RL Research
+ RLVR in Low Data & Compute Regimes
+ Better data beats more compute — measured across low-resource settings.
+ Evaluation Research
+ RIFT: Rubric Failure Mode Taxonomy
+ A diagnostic framework for when AI evaluation rubrics break down.
+ Domain Agents
+ Benchmarking Agents in Insurance Underwriting
+ Environment-first benchmarking for agents in a genuinely high-stakes domain.
+ Leaderboards
+ Explore all 
+ Knowledge Work 
+ Agents’ Last Exam
+ Evaluating AI agents on long-horizon, economically valuable professional workflows with verifiable outcomes.
+ By Pass Rate
+ 1
+ Opus 5.5
+ 38.2%
+ 2
+ GPT-6 Astra 
+ 34.2%
+ 3
+ GPT-6 Sol
+ 32.2%
+ 4
+ Claude Opus 5
+ 32.2%
+ 5
+ Muse Spark 1.3
+ 32.2%
+ Computer Use 
+ OSWorld 2.0
+ Evaluates computer-use agents on 108 long-horizon workflows.
+ By Binary Accuracy (500 steps)
+ 1
+ Opus 5 · max 
+ 44.33%
+ 2
+ Opus 5 · high
+ 36.89%
+ 3
+ Opus 5 · xhigh
+ 33.33%
+ 4
+ Opus 5 · medium
+ 33.01%
+ 5
+ Opus 5 · xhigh (older run)
+ 30.21%
+ Agentic Coding 
+ Terminal-Bench 4.0
+ Evaluates terminal agents on continuously updated software-engineering tasks.
+ By Resolution Rate
+ 1
+ Opus 5.5
+ 64.8%
+ 2
+ Sonnet 5.5
+ 61.8%
+ 3
+ GPT-6 Astra
+ 58.2%
+ 4
+ GPT-6 Sol
+ 58.2%
+ 5
+ Fable 5.1 
+ 57.9%
+ Agentic Coding 
+ Agentic Coding 2.0
+ Evaluating whether coding agents can plan, execute, verify, and recover across complex terminal-native engineering tasks.
+ By pass@1
+ 1
+ GPT-6 Astra
+ 47.6%
+ 2
+ GPT-6.1 Sol
+ 42.8%
+ 3
+ Opus 5.5
+ 40.4%
+ 4
+ Fable 5.1
+ 39.6%
+ 5
+ Opus 5
+ 38.9%
+ Software Engineering 
+ Senior SWE-bench
+ Evaluates coding agents on senior-level software engineering tasks.
+ Tasteful Solve Rate 
+ Consistent reward hacking (e.g. copying fixes from newer PyPI/npm releases) detected, 5 tasks removed from score
+ Opus 5.5
+ 39.3%
+ 2
+ GPT-6 Astra
+ 36.8%
+ 3
+ Fable 5.1
+ 34.7%
+ 4
+ Fable 5
+ 34.7%
+ 5
+ Opus 5
+ 34.7%
+ Knowledge Work 
+ WorkplaceAgents
+ Evaluates AI agents on economically valuable professional work and verifiable workplace deliverables.
+ By pass@1
+ 1
+ Grok 4.6
+ 17.1%
+ 2
+ Fable 5.1
+ 15.8%
+ 3
+ Grok 4.7
+ 15.2%
+ 4
+ GPT-6.1 Sol
+ 15.0%
+ 5
+ Opus 5
+ 14.9%
+ Software Engineering 
+ SlopCode Bench
+ Measures coding-agent performance across evolving software requirements.
+ By Iso Solve
+ 1
+ GPT-5.5
+ 28.06%
+ 2
+ GPT-5.3
+ 26.02%
+ 3
+ GPT-5.4
+ 23.47%
+ 4
+ GPT 5.2
+ 21.94%
+ 5
+ Opus 4.6
+ 20.92%
+ Enterprise Environments 
+ SnorkelRevOps
+ Evaluates revenue-operations workflows involving systems, controls, and business-state updates.
+ By pass@1
+ 1
+ Grok 4.6
+ 15.8%
+ 2
+ Fable 5.1
+ 14.0%
+ 3
+ Kimi K3
+ 13.1%
+ 4
+ Muse Spark 1.3
+ 12.6%
+ 5
+ Opus 5.5
+ 12.5%
+ Capability/Efficiency 
+ Continual Learning Bench
+ Measures improvement across sequential, stateful tasks.
+ By Agg. Reward
+ 1
+ Sonnet 4.6 
+ +0.196
+ 2
+ GPT-5.4
+ +0.189
+ 3
+ Sonnet 4.6
+ +0.185
+ 4
+ Opus 4.7
+ +0.183
+ 5
+ GPT 5.4 
+ +0.148
+ Enterprise Environments 
+ SnorkelFinance 2.0
+ Evaluates financial workflows requiring evidence gathering, analysis, and compliance.
+ By pass@1
+ 1
+ Grok 4.6
+ 25.1%
+ 2
+ GLM 5.3
+ 21.2%
+ 3
+ Grok 4.7
+ 20.2%
+ 4
+ Fable 5.1 
+ 19.6%
+ 5
+ Opus 5.5
+ 18.6%
+ Agentic Coding 
+ Terminal-Bench 3.0
+ Evaluates terminal agents on containerized tasks across seven domains.
+ By Resolution Rate
+ 1
+ Opus 5
+ 42.7%
+ 2
+ GPT-5.6 Sol
+ 34.6%
+ 3
+ Fable 5
+ 34.1%
+ 4
+ GLM 5.3
+ 32.4%
+ 5
+ Grok 4.6
+ 26.5%
+ Software Engineering 
+ SWE-bench CLI
+ Evaluates validated multi-file code changes in open-source repositories.
+ By pass@1
+ 1
+ Opus 5.5
+ 16.6%
+ 2
+ Fable 5.1
+ 14.5%
+ 3
+ Opus 5
+ 14.0%
+ 4
+ GPT-6 Astra
+ 12.4%
+ 5
+ GPT-6.1 Sol
+ 9.8%
+ Enterprise Environments 
+ SnorkelManufacturing
+ Evaluates manufacturing decisions using fragmented plant-floor, engineering, and supplier evidence.
+ By pass@1
+ 1
+ GPT-6.1 Sol
+ 19.6%
+ 2
+ Grok 4.6
+ 16.4%
+ 3
+ Grok 4.7
+ 12.1%
+ 4
+ GLM 5.3
+ 11.9%
+ 5
+ Fable 5.1
+ 11.3%
+ Enterprise Environments 
+ SnorkelLegal
+ Evaluates legal workflows requiring evidence, procedure, authority, and action.
+ By pass@1
+ 1
+ Grok 4.6
+ 40.7%
+ 2
+ GLM 5.3
+ 37.8%
+ 3
+ Muse Spark 1.3
+ 36.5%
+ 4
+ Kimi K3
+ 36.1%
+ 5
+ Fable 5.1
+ 35.9%
+ Science & Research 
+ Terminal-Bench-Science
+ Evaluates agents on scientific workflows derived from researchers’ own work.
+ By Resolution Rate
+ 1
+ GPT-6 Astra
+ 68.1%
+ 2
+ Opus 5.5
+ 63.3%
+ 3
+ Fable 5.1 
+ 40.0%
+ 4
+ Opus 5
+ 30.0%
+ 5
+ Fable 5
+ 21.4%
+ Knowledge Work 
+ MBABench 2.0
+ Evaluates agents on building financial models in spreadsheets, across 101 expert-written tasks.
+ By pass rate
+ 1
+ Astra (Codex)
+ 15.8%
+ 2
+ Fable 5.1 (Claude Code)
+ 7.9%
+ 3
+ Astra (ChatGPT)
+ 7.9%
+ 4
+ Fable 5.1 (Claude Cowork)
+ 5.0%
+ 5
+ Opus 5 (Claude Code)
+ 4.0%
+ Enterprise Environments 
+ SnorkelUnderwrite 2.0
+ Evaluates auditable insurance underwriting decisions using incomplete, distributed evidence.
+ By pass@1
+ 1
+ Grok 4.7
+ 30.5%
+ 2
+ GLM 5.3
+ 30.4%
+ 3
+ Nemotron 3 Ultra 550B
+ 30.0%
+ 4
+ DeepSeek V4 Pro
+ 28.5%
+ 5
+ Kimi K3
+ 27.9%
+ Software Engineering 
+ LibraryDesignBench
+ Measures how well AI agents design libraries that other agents can use.
+ Pass Rate
+ 1
+ Opus 5.5 
+ 48.9%
+ 2
+ Fable 5.1 
+ 47.5%
+ 3
+ G
+
+=== [about] https://snorkel.ai/how-it-works/ (lang=en-US)
+How Snorkel Builds Frontier AI Data | Snorkel AI 
+ Skip to content 
+ Capabilities 
+ Capabilities 
+ How it works 
+ Research-led data and environment development for the frontier's hardest problems 
+ Learn more 
+ Data development 
+ Overview 
+ Expert-curated datasets for frontier AI 
+ Use cases 
+ See how our data improves frontier models 
+ Specialized agents 
+ Overview 
+ Custom AI systems built to unlock ROI fast 
+ Enterprise stories 
+ Real-world results from enterprise deployments 
+ Research 
+ Research 
+ Research 
+ Research hub 
+ Our latest papers and data-centric AI findings 
+ Leaderboards 
+ Compare model performance across benchmarks 
+ Open Benchmarks Grants 
+ Benchmarks, red-teaming, and fellowships for open AI evaluation 
+ Benchmarks 
+ Agentic Coding 
+ Software Engineering 
+ Enterprise Environments 
+ Science & Research 
+ Computer Use 
+ Capability/Efficiency 
+ Knowledge Work 
+ Resources 
+ Resources 
+ Resources 
+ Resource library 
+ Guides, papers, and tools for data-centric AI 
+ Events 
+ Upcoming talks, workshops, and conferences 
+ Reading Group 
+ AI discussions for researchers and practitioners 
+ Blog 
+ News, updates, and perspectives from our team 
+ Featured blog 
+ Frontier AI is Accelerating. Open Benchmarks Need to Keep Up. 
+ Expanding Open Benchmarks Grants 10x to a $30M committment. 
+ Company 
+ Company 
+ Company 
+ About 
+ Our mission, story, and values 
+ Careers 
+ Open roles and life at our company 
+ Press 
+ Media resources and announcements 
+ Partners 
+ Organizations we work with 
+ Security 
+ How we keep data safe 
+ Contact us 
+ Get in touch with our team 
+ Join our expert community 
+ Get paid to shape safer, smarter AI 
+ Learn more 
+ Get started 
+ Get started 
+ your frontier data factory
+ Better data is built, not collected
+ Snorkel combines task design, programmatic checks, calibrated expert review, and realistic evaluation environments to create measurable training signal for frontier models and agents.
+ Request dataset samples 
+ Talk to our team 
+ We build for the edges of the frontier 
+ Frontier models stall on specialized tasks, benchmark blind spots, and failure modes that only show up at the edges. Snorkel builds the data, evals, and environments needed to close those gaps.
+ how we work
+ Measure where models break 
+ Curate data and environments against those failures. Refine the system until performance improves. Repeat.
+ 01
+ Evaluate
+ Measure behavior against task-specific benchmarks inside realistic environments, with programmatically defined pass/fail criteria.
+ 02
+ Curate
+ Run rubric-guided pipelines with calibrated experts in the loop, including environment construction with the tools, documents, and verifiable reward signals agents are rigorously evaluated against.
+ 03
+ Refine
+ Analyze disagreements, trace failures, and map coverage gaps. Update rubrics, expand benchmarks, and target the next collection cycle for underperforming slices.
+ EXPERT-IN-THE-LOOP
+ Programmatic scale. Human precision. Together. 
+ Every dataset Snorkel builds is shaped by domain experts who understand the real-world context models will operate in. The result is training signal that reflects how decisions are actually made, not just how they look on the leaderboard. 
+ 1,000+ expert-level domains covered
+ Learn more 
+ Meta-evaluation
+ We evaluate our evaluators. Reviewer calibration is measured and corrected, not assumed.
+ Evaluator development
+ Model-based and rule-based evaluators trained on expert-adjudicated data, improving alongside the underlying models.
+ Expert correction and feedback
+ Every disagreement is adjudicated and fed back in
+
+=== [meta] https://snorkel.ai
+html lang: en-US
+hreflang: 없음
+화면에 보이는 언어 이름: 없음

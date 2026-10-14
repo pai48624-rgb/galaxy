@@ -1,0 +1,66 @@
+{
+ "company": "Langfuse",
+ "one_liner_ko": "AI 에이전트를 하나의 오픈 플랫폼에서 추적·평가·개선하는 오픈소스 에이전트 평가·관측성 플랫폼.",
+ "what_it_does_ko": "Langfuse는 팀이 AI 에이전트 애플리케이션을 함께 디버그·분석·개선하도록 돕는 오픈소스 AI 엔지니어링 플랫폼이다. 트레이싱, 모니터링, 데이터셋, 실험, 평가를 하나의 반복 루프로 연결한다. LLM 호출·도구 호출·검색 단계를 계층형 트레이스로 기록하고 비용·지연·품질을 대시보드와 알림으로 감시한다. Docker Compose, Kubernetes(Helm), Terraform으로 자체 호스팅할 수 있다.",
+ "key_features": [
+  "계층형 트레이스로 LLM·도구·검색 단계 기록(관측성)",
+  "LLM-as-a-judge·휴리스틱·사람 검토 평가",
+  "프롬프트 관리(원클릭 배포·롤백)",
+  "실제 운영 입력으로 프롬프트를 시험하는 플레이그라운드",
+  "데이터셋 기반 실험과 결과 비교",
+  "사람 주석(Human Annotation) 협업",
+  "비용·지연 대시보드와 자동 알림",
+  "REST API·CLI·MCP 서버"
+ ],
+ "use_cases_ko": [
+  "채팅 에이전트·코딩 에이전트·워크플로 자동화의 추적과 평가",
+  "운영 중 실패·고지연 트레이스 디버깅",
+  "토큰 비용·지연 분석으로 지출 최적화"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Hobby: 월 50k units, 30일 데이터, 사용자 2명) / 자체 호스팅 오픈소스",
+  "plans": [
+   {"name": "Hobby", "price": 0, "currency": "USD", "period": "month", "limits": "월 50k units, 30일 데이터 접근, 사용자 2명", "page_lang": "en"},
+   {"name": "Core", "price": 29, "currency": "USD", "period": "month", "limits": "월 100k units 포함, 추가 $8/100k units, 90일 데이터, 사용자 무제한", "page_lang": "en"},
+   {"name": "Pro", "price": 199, "currency": "USD", "period": "month", "limits": "월 100k units 포함, 추가 $8/100k units, 3년 데이터, 높은 요청 한도", "page_lang": "en"},
+   {"name": "Teams Add-on", "price": 300, "currency": "USD", "period": "month", "limits": "Pro 추가 옵션: 엔터프라이즈 SSO, 세분화된 RBAC", "page_lang": "en"},
+   {"name": "Enterprise", "price": 2499, "currency": "USD", "period": "month", "limits": "Pro+Teams 전부, 감사 로그, SCIM API, 업타임 SLA", "page_lang": "en"}
+  ],
+  "pricing_url": "https://langfuse.com/pricing"
+ },
+ "open_source": "MIT",
+ "api": "있음",
+ "platforms": ["웹", "CLI", "API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://github.com/langfuse/langfuse", "quote": "Langfuse is an **open source LLM engineering** platform."},
+  {"field": "one_liner_ko", "url": "https://langfuse.com", "quote": "Trace, evaluate, and improve AI agents with one open platform."},
+  {"field": "what_it_does_ko", "url": "https://langfuse.com/docs", "quote": "Langfuse is an open-source AI engineering platform ( GitHub ) that helps teams collaboratively debug, analyze, and iterate on their AI agent applications."},
+  {"field": "what_it_does_ko", "url": "https://langfuse.com", "quote": "Langfuse connects tracing, monitoring, datasets, experiments, and evaluation in one continuous loop."},
+  {"field": "what_it_does_ko", "url": "https://langfuse.com", "quote": "Self-host at scale\n Docker Compose Kubernetes (Helm) AWS (Terraform)"},
+  {"field": "key_features", "url": "https://langfuse.com", "quote": "Hierarchical traces capture every LLM call, tool invocation, and retrieval step."},
+  {"field": "key_features", "url": "https://langfuse.com", "quote": "LLM-as-a-judge, heuristic functions, or human review."},
+  {"field": "key_features", "url": "https://langfuse.com", "quote": "Separate prompts from code with one-click deployments and rollbacks."},
+  {"field": "key_features", "url": "https://langfuse.com", "quote": "Test prompts on real production inputs and compare models side-by-side."},
+  {"field": "key_features", "url": "https://langfuse.com", "quote": "Define test cases and run experiments. Compare results side by side."},
+  {"field": "key_features", "url": "https://langfuse.com", "quote": "Collaborative Human-in the-Loop workflows to review traces and create golden datasets."},
+  {"field": "key_features", "url": "https://langfuse.com", "quote": "Monitor cost, latency, and quality with dashboards and automated alerts."},
+  {"field": "key_features", "url": "https://langfuse.com", "quote": "SKILL.md, CLI, and MCP connect coding agents to Langfuse."},
+  {"field": "use_cases_ko", "url": "https://langfuse.com", "quote": "Chat agents Coding agents Workflow automation"},
+  {"field": "use_cases_ko", "url": "https://langfuse.com", "quote": "Find failed generations and traces with high latency"},
+  {"field": "use_cases_ko", "url": "https://langfuse.com", "quote": "Break down token spend, cost, and latency"},
+  {"field": "pricing", "url": "https://langfuse.com/pricing", "quote": "Get started on the Hobby plan for free. No credit card required."},
+  {"field": "pricing", "url": "https://langfuse.com/pricing", "quote": "50k units / month included \n 30 days data access \n 2 users"},
+  {"field": "pricing", "url": "https://langfuse.com/pricing", "quote": "$29 / month"},
+  {"field": "pricing", "url": "https://langfuse.com/pricing", "quote": "$199 / month"},
+  {"field": "pricing", "url": "https://langfuse.com/pricing", "quote": "100k units / month included, additional: $8/100k units."},
+  {"field": "pricing", "url": "https://langfuse.com/pricing", "quote": "Teams Add-on $300/mo"},
+  {"field": "pricing", "url": "https://langfuse.com/pricing", "quote": "$2499 / month"},
+  {"field": "open_source", "url": "https://langfuse.com", "quote": "MIT license\n All product features MIT licensed"},
+  {"field": "api", "url": "https://langfuse.com", "quote": "REST APIs for everything"},
+  {"field": "platforms", "url": "https://langfuse.com", "quote": "Langfuse CLI Full API access from the terminal for agent workflows, scripts, and CI/CD."},
+  {"field": "korean_support", "url": "https://langfuse.com", "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

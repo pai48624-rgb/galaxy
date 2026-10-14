@@ -1,0 +1,130 @@
+{
+ "company": "Data Privacy Stack (커뮤니티 소유 프로젝트로 전환 중)",
+ "one_liner_ko": "텍스트·이미지 속 개인정보(PII)를 빠르게 찾아 비식별화하는 맥락 인식형 오픈소스 SDK.",
+ "what_it_does_ko": "Presidio는 민감한 데이터가 제대로 관리되도록 돕는 데이터 보호·비식별화 SDK다. 텍스트와 이미지에서 신용카드 번호, 이름, 위치, 사회보장번호, 비트코인 지갑, 미국 전화번호, 금융 데이터 등을 식별하고 익명화한다. 개체명 인식·정규식·규칙·체크섬을 활용한 기본 또는 맞춤형 인식기를 제공하며 외부 PII 탐지 모델과도 연결할 수 있다. 자동 탐지 방식이라 모든 민감정보를 찾는다는 보장은 없다고 밝힌다. 현재 커뮤니티 소유 프로젝트로 전환 중이다.",
+ "key_features": [
+  "텍스트 PII 식별(Presidio analyzer)",
+  "다양한 연산자로 PII 비식별화(Presidio anonymizer)",
+  "OCR 기반 이미지 속 PII 가림(image redactor)",
+  "정형·반정형 데이터 PII 식별(Presidio structured)",
+  "개체명 인식·정규식·규칙·체크섬 기반 맞춤 인식기, 다국어",
+  "외부 PII 탐지 모델 연결",
+  "Python·PySpark·Docker·Kubernetes 실행, HTTP 서비스 운용"
+ ],
+ "use_cases_ko": [
+  "조직이 데이터 속 개인정보를 자동·반자동으로 비식별화",
+  "LLM 호출 시 PII 마스킹(LiteLLM 프록시)"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "MIT",
+ "api": "있음",
+ "platforms": [
+  "API",
+  "CLI"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://presidio.dataprivacystack.org/",
+   "quote": "by Data Privacy Stack"
+  },
+  {
+   "field": "company",
+   "url": "https://presidio.dataprivacystack.org/",
+   "quote": "Presidio is transitioning to a community-owned project."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/data-privacy-stack/presidio",
+   "quote": "Context aware, pluggable and customizable PII de-identification service for text and images."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://presidio.dataprivacystack.org/",
+   "quote": "credit card numbers, names, locations, social security numbers,"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://presidio.dataprivacystack.org/",
+   "quote": "there is no guarantee that Presidio will find all sensitive information"
+  },
+  {
+   "field": "key_features",
+   "url": "https://presidio.dataprivacystack.org/",
+   "quote": "Presidio analyzer : PII identification in text"
+  },
+  {
+   "field": "key_features",
+   "url": "https://presidio.dataprivacystack.org/",
+   "quote": "Presidio anonymizer : De-identify detected PII entities using different operators"
+  },
+  {
+   "field": "key_features",
+   "url": "https://presidio.dataprivacystack.org/",
+   "quote": "Presidio image redactor : Redact PII entities from images using OCR and PII identification"
+  },
+  {
+   "field": "key_features",
+   "url": "https://presidio.dataprivacystack.org/",
+   "quote": "Presidio structured : PII identification in structured/semi-structured data"
+  },
+  {
+   "field": "key_features",
+   "url": "https://presidio.dataprivacystack.org/",
+   "quote": "Options for connecting to external PII detection models."
+  },
+  {
+   "field": "key_features",
+   "url": "https://presidio.dataprivacystack.org/",
+   "quote": "Multiple usage options, from Python or PySpark workloads through Docker to Kubernetes ."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://presidio.dataprivacystack.org/",
+   "quote": "Facilitate both fully automated and semi-automated PII de-identification flows on multiple platforms."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://presidio.dataprivacystack.org/",
+   "quote": "PII Masking LLM calls using LiteLLM proxy"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/data-privacy-stack/presidio",
+   "quote": "[![MIT license](https://img.shields.io/badge/license-MIT-brightgreen.svg)]"
+  },
+  {
+   "field": "api",
+   "url": "https://presidio.dataprivacystack.org/",
+   "quote": "REST API reference"
+  },
+  {
+   "field": "platforms",
+   "url": "https://presidio.dataprivacystack.org/",
+   "quote": "Running Presidio as an HTTP service"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://presidio.dataprivacystack.org/",
+   "quote": "html lang: en"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://presidio.dataprivacystack.org/",
+   "quote": "hreflang: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "MIT 라이선스 오픈소스 SDK, 커뮤니티 소유 프로젝트로 전환 중이며 유료 플랜 안내 없음",
+   "diff": "기존 분류의 '엔터프라이즈 유료 플랜'이 공식 페이지에서 확인되지 않음",
+   "url": "https://presidio.dataprivacystack.org/"
+  }
+ ]
+}

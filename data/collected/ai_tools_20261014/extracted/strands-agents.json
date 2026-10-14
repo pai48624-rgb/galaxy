@@ -1,0 +1,42 @@
+{
+ "company": "Strands Agents",
+ "one_liner_ko": "프로덕션용 AI 에이전트를 만드는 오픈소스 도구 모음으로, 몇 줄의 코드로 모델 주도형 에이전트를 만든다.",
+ "what_it_does_ko": "Strands Agents는 파이썬과 타입스크립트로 AI 에이전트를 만들고 실행하는 오픈소스 SDK다. 호스팅된 컨트롤 플레인 없이 사용자 프로세스 안에서 돌아가며, 직접 짠 에이전트 루프가 커지면서 필요해지는 기능(턴 제한·토큰 예산·취소 등 수명 주기 제어, 도구, 구조화 출력, MCP, 멀티 에이전트, 메모리·세션, 스트리밍, 가드레일, 트레이싱, 평가)을 한 SDK에 담았다. 기본값이 최적화된 완성형 하네스, 에이전트 샌드박스(Box), 안전한 가상 셸, 평가 도구(evals)도 함께 제공한다.",
+ "key_features": [
+  "최적화된 기본값의 완성형 에이전트 하네스(CLI 또는 라이브러리)",
+  "수명 주기 제어(턴 제한·토큰 예산·취소·중지 사유)",
+  "도구·구조화 출력·MCP 연동",
+  "멀티 에이전트 패턴(A2A·Swarm·Graph·Workflow)",
+  "메모리·세션 유지",
+  "Bedrock·Anthropic·OpenAI·Ollama 등 여러 모델 제공자 지원",
+  "가드레일·트레이싱·평가(evals)",
+  "OS 격리 에이전트 샌드박스(Strands Box, 미리보기)"
+ ],
+ "use_cases_ko": [
+  "직접 에이전트 루프를 짜는 대신 프로덕션 에이전트를 만들려는 개발자",
+  "AWS Lambda·Fargate·EKS·Docker 등에 에이전트 배포"
+ ],
+ "pricing": {"free_tier": null, "plans": [], "pricing_url": null},
+ "open_source": "Apache (LICENSE.APACHE)",
+ "api": "불명",
+ "platforms": ["CLI"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://strandsagents.com", "quote": "Strands Agents | The open source toolkit for production AI agents"},
+  {"field": "one_liner_ko", "url": "https://github.com/strands-agents/harness-sdk", "quote": "A model-driven approach to building AI agents in just a few lines of code."},
+  {"field": "what_it_does_ko", "url": "https://github.com/strands-agents/harness-sdk", "quote": "Strands Agents is an open-source SDK for building and running AI agents in Python and TypeScript."},
+  {"field": "what_it_does_ko", "url": "https://github.com/strands-agents/harness-sdk", "quote": "it runs in your process with no hosted control plane"},
+  {"field": "key_features", "url": "https://strandsagents.com", "quote": "It gives you an optimized agent with benchmarked defaults for the system prompt, tools, memory, sessions, and context management"},
+  {"field": "key_features", "url": "https://strandsagents.com", "quote": "Build an agent with the strands CLI, or import it in Python or TypeScript."},
+  {"field": "key_features", "url": "https://github.com/strands-agents/harness-sdk", "quote": "(turn limits, token budgets, cancellation, stop reasons)"},
+  {"field": "key_features", "url": "https://strandsagents.com", "quote": "Multi-agent Agent2Agent (A2A)"},
+  {"field": "key_features", "url": "https://strandsagents.com", "quote": "Strands Box is in preview: an open source sandbox for AI agents, with Dogwood policy."},
+  {"field": "use_cases_ko", "url": "https://github.com/strands-agents/harness-sdk", "quote": "Choose Strands when you would otherwise write your own agent loop"},
+  {"field": "use_cases_ko", "url": "https://strandsagents.com", "quote": "AWS Lambda"},
+  {"field": "open_source", "url": "https://github.com/strands-agents/harness-sdk", "quote": "https://github.com/strands-agents/harness-sdk/blob/main/LICENSE.APACHE"},
+  {"field": "platforms", "url": "https://strandsagents.com", "quote": "CLI or library"},
+  {"field": "korean_support", "url": "https://strandsagents.com", "quote": "html lang: en"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

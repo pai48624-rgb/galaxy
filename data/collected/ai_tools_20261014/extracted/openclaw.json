@@ -1,0 +1,44 @@
+{
+ "company": "OpenClaw Foundation",
+ "one_liner_ko": "자기 기기에서 돌아가며 이미 쓰는 채팅 앱으로 일을 처리해 주는 오픈소스 개인 AI 비서.",
+ "what_it_does_ko": "OpenClaw는 자기 컴퓨터에서 실행되고 Discord·iMessage·Slack·Teams·Telegram·WhatsApp 등 20개 이상의 채널에서 만나는 오픈소스 AI 비서다. 받은편지함 정리, 이메일 발송, 캘린더 관리, 항공편 체크인 같은 일을 채팅 앱에서 처리한다. 상태·메모리·자격 증명은 사용자 하드웨어에 남고, 모델과 에이전트 하네스(Claude·Codex·로컬 모델)는 플러그인으로 교체할 수 있다. 하나의 Gateway로 개인 비서나 팀 공유 배포로 운영할 수 있다. 독립 비영리 501(c)(3)인 OpenClaw Foundation이 관리하며 유료 요금제·호스팅 서비스·토큰이 없다.",
+ "key_features": [
+  "20개 이상 채팅 채널 연결(Discord·iMessage·Slack·Teams·Telegram·WhatsApp 등)",
+  "macOS·iOS·Android·Windows·Linux 네이티브 앱",
+  "받은편지함 정리·이메일 발송·캘린더 관리·항공편 체크인",
+  "모델·에이전트 하네스를 플러그인으로 교체(Claude·Codex·로컬 모델)",
+  "개인용 또는 팀 공유 배포",
+  "상태·메모리·자격 증명을 내 하드웨어에 보관",
+  "Control UI 대시보드"
+ ],
+ "use_cases_ko": [
+  "개인이 채팅 앱으로 이메일·일정·항공편 체크인 같은 일을 맡기기",
+  "팀이 공유 비서로 함께 쓰기"
+ ],
+ "pricing": {"free_tier": "있음 (유료 요금제·호스팅·토큰 없음)", "plans": [], "pricing_url": "https://openclaw.ai"},
+ "open_source": "MIT",
+ "api": "불명",
+ "platforms": ["맥", "윈도", "iOS", "안드로이드", "CLI"],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {"field": "company", "url": "https://github.com/openclaw/openclaw", "quote": "OpenClaw is stewarded by the [OpenClaw Foundation](https://openclaw.org), an independent 501(c)(3)"},
+  {"field": "one_liner_ko", "url": "https://openclaw.ai", "quote": "The AI that really does things."},
+  {"field": "what_it_does_ko", "url": "https://github.com/openclaw/openclaw", "quote": "OpenClaw is an open-source AI assistant that runs on your own computer and meets you in the channels you already use"},
+  {"field": "what_it_does_ko", "url": "https://github.com/openclaw/openclaw", "quote": "State, memory, and credentials live on your hardware."},
+  {"field": "key_features", "url": "https://github.com/openclaw/openclaw", "quote": "Discord, iMessage, Slack, Teams, Telegram, WhatsApp, and 20+ more, plus native apps for macOS, iOS, Android, Windows, and Linux."},
+  {"field": "key_features", "url": "https://openclaw.ai", "quote": "Organizes your inbox, sends emails, manages your calendar, checks you in for flights."},
+  {"field": "key_features", "url": "https://github.com/openclaw/openclaw", "quote": "Models and agent harnesses (Claude, Codex, local models) are plugins you can swap without changing anything else."},
+  {"field": "key_features", "url": "https://github.com/openclaw/openclaw", "quote": "The last command opens the Control UI"},
+  {"field": "use_cases_ko", "url": "https://openclaw.ai", "quote": "Run it for yourself — or share it with your team."},
+  {"field": "pricing", "url": "https://openclaw.ai", "quote": "No subscription. No hosted tier. No token."},
+  {"field": "pricing", "url": "https://github.com/openclaw/openclaw", "quote": "has no paid tier, hosted service, or token."},
+  {"field": "open_source", "url": "https://github.com/openclaw/openclaw", "quote": "<img src=\"https://img.shields.io/badge/license-MIT-green?style=flat-square\" alt=\"License: MIT\">"},
+  {"field": "platforms", "url": "https://github.com/openclaw/openclaw", "quote": "plus native apps for macOS, iOS, Android, Windows, and Linux"},
+  {"field": "platforms", "url": "https://github.com/openclaw/openclaw", "quote": "openclaw onboard --install-daemon"},
+  {"field": "korean_support", "url": "https://docs.openclaw.ai/", "quote": "🇧🇷 Português (BR) 🇰🇷 한국어 🇩🇪 Deutsch"}
+ ],
+ "mismatch": [
+  {"official": "구독·호스팅 요금제·토큰이 없는 MIT 오픈소스", "diff": "기존 분류는 '프리미엄(무료+유료 구독)'이지만 공식 페이지는 유료 요금제가 없다고 명시", "url": "https://openclaw.ai"}
+ ],
+ "plan_change": []
+}

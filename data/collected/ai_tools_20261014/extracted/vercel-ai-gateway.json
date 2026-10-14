@@ -1,0 +1,186 @@
+{
+ "company": "Vercel",
+ "one_liner_ko": "여러 공급자의 AI 모델을 하나의 API로 쓰게 하고 장애 시에도 가용성을 지켜 주는 Vercel의 AI 게이트웨이.",
+ "what_it_does_ko": "Vercel AI Gateway는 어떤 공급자의 어떤 모델이든 단일 API로 호출하게 해 주며, 공급자 장애나 낮은 속도 제한에도 가용성을 유지한다. 인증, 사용량 추적, 페일오버, 결제를 대신 처리해 API 키·속도 제한·공급자 계정을 직접 관리할 필요가 없다. AI SDK 위에 만들어졌고 Vercel CDN을 기반으로 20ms 미만 지연을 내세운다. 토큰은 공급자 정가로 마크업 없이 제공하며 자체 키(BYOK)도 0% 마크업이다.",
+ "key_features": [
+  "단일 API로 수백 개 모델",
+  "공급자 장애 시 페일오버",
+  "토큰 마크업 0%·BYOK",
+  "사용량 추적·통합 결제",
+  "Vercel 자체 속도 제한 없음",
+  "AI SDK 연동(모델 문자열만 교체)",
+  "CLI로 API 키 생성"
+ ],
+ "use_cases_ko": [
+  "모델을 동적으로 평가·교체하는 팀",
+  "단일 장애점을 피해야 하는 AI 앱·에이전트·RAG 서비스"
+ ],
+ "pricing": {
+  "free_tier": "있음 (가입 시 30일마다 $5 크레딧, 첫 결제 후에는 지급 중단)",
+  "plans": [
+   {
+    "name": "AI Gateway 무료 크레딧",
+    "price": 5,
+    "currency": "USD",
+    "period": "month",
+    "limits": "30일마다 $5 크레딧, 프리미엄 모델 제한 없음, 첫 결제 후 중단",
+    "page_lang": "en"
+   },
+   {
+    "name": "AI Gateway 토큰",
+    "price": null,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "공급자 정가, 마크업 없음(BYOK 0%), 결제 수수료는 고객 부담",
+    "page_lang": "en"
+   },
+   {
+    "name": "Vercel Hobby",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "Vercel 플랫폼 요금제",
+    "page_lang": "en"
+   },
+   {
+    "name": "Vercel Pro",
+    "price": 20,
+    "currency": "USD",
+    "period": "month",
+    "limits": "Vercel 플랫폼 요금제, $20 사용 크레딧 포함",
+    "page_lang": "en"
+   },
+   {
+    "name": "Vercel Enterprise",
+    "price": null,
+    "currency": null,
+    "period": null,
+    "limits": "맞춤 가격",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://vercel.com/blog/ai-gateway-is-now-generally-available"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "API",
+  "CLI"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://vercel.com/blog/ai-gateway-is-now-generally-available",
+   "quote": "AI Gateway: Production-ready reliability for your AI apps - Vercel"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://vercel.com/blog/ai-gateway-is-now-generally-available",
+   "quote": "AI Gateway , now generally available, ensures availability when a provider fails, avoiding low rate limits and providing consistent reliability for AI workloads."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://vercel.com/blog/ai-gateway-is-now-generally-available",
+   "quote": "With AI Gateway you can use any vendor, any model, through a single API."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://vercel.com/blog/ai-gateway-is-now-generally-available",
+   "quote": "The Gateway handles authentication, usage tracking, failover, billing, and more."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://vercel.com/blog/ai-gateway-is-now-generally-available",
+   "quote": "Vercel's CDN powers trillions of requests a year , and sits at the core of AI Gateway providing sub-20ms latency."
+  },
+  {
+   "field": "key_features",
+   "url": "https://vercel.com/blog/ai-gateway-is-now-generally-available",
+   "quote": "AI Gateway supports hundreds of models, you can view the library here ."
+  },
+  {
+   "field": "key_features",
+   "url": "https://vercel.com/blog/ai-gateway-is-now-generally-available",
+   "quote": "And all this with zero markup: bring your own keys and contracts, with no added markup on model prices."
+  },
+  {
+   "field": "key_features",
+   "url": "https://vercel.com/blog/ai-gateway-is-now-generally-available",
+   "quote": "While the upstream providers may have limits, Vercel doesn’t place any rate limits on your queries."
+  },
+  {
+   "field": "key_features",
+   "url": "https://vercel.com/blog/ai-gateway-is-now-generally-available",
+   "quote": "Swap a model string and you’re testing a new provider in seconds:"
+  },
+  {
+   "field": "key_features",
+   "url": "https://vercel.com/docs",
+   "quote": "vercel ai-gateway api-keys create"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://vercel.com/blog/ai-gateway-is-now-generally-available",
+   "quote": "Evaluate or swap models dynamically"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://vercel.com/blog/ai-gateway-is-now-generally-available",
+   "quote": "Can’t afford a single point of failure"
+  },
+  {
+   "field": "pricing",
+   "url": "https://vercel.com/blog/ai-gateway-is-now-generally-available",
+   "quote": "Yes! When you sign up for a Vercel account, you get $5 of credits every 30 days to try out any model from our model list. We don’t restrict access to premium models."
+  },
+  {
+   "field": "pricing",
+   "url": "https://vercel.com/blog/ai-gateway-is-now-generally-available",
+   "quote": "Note: After you make your first payment, you are considered a paid customer and will no longer receive the free credits."
+  },
+  {
+   "field": "pricing",
+   "url": "https://vercel.com/blog/ai-gateway-is-now-generally-available",
+   "quote": "We offer tokens at list price from the upstream providers with no markup."
+  },
+  {
+   "field": "pricing",
+   "url": "https://vercel.com/blog/ai-gateway-is-now-generally-available",
+   "quote": "If you bring your own key, we will not add any markup to your token price (0%)."
+  },
+  {
+   "field": "pricing",
+   "url": "https://vercel.com/pricing",
+   "quote": "Hobby \n $0 /mo."
+  },
+  {
+   "field": "pricing",
+   "url": "https://vercel.com/pricing",
+   "quote": "Pro Popular \n $20 /mo."
+  },
+  {
+   "field": "api",
+   "url": "https://vercel.com/docs",
+   "quote": "export AI_GATEWAY_API_KEY = \"your-ai-gateway-api-key\""
+  },
+  {
+   "field": "platforms",
+   "url": "https://vercel.com/docs",
+   "quote": "# Route your agent's model calls through AI Gateway"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://vercel.com/blog/ai-gateway-is-now-generally-available",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "30일마다 $5 무료 크레딧 + 공급자 정가 그대로(마크업 0%, BYOK 0%), Vercel 계정·플랫폼 요금제(Hobby $0/Pro $20)와 묶임",
+   "diff": "기존 '오픈소스 + 종량제/구독 혼합'과 달리 오픈소스 언급 없음, 게이트웨이 자체 구독 없이 Vercel 계정에 묶인 무마크업 종량제",
+   "url": "https://vercel.com/blog/ai-gateway-is-now-generally-available"
+  }
+ ]
+}

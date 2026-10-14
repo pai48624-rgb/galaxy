@@ -1,0 +1,148 @@
+{
+ "company": "DataHub",
+ "one_liner_ko": "계보·품질·실시간 컨텍스트를 하나의 컨텍스트 그래프로 묶어 AI 에이전트가 의존할 수 있게 하는 컨텍스트 관리 플랫폼.",
+ "what_it_does_ko": "DataHub는 메타데이터 관리, 데이터 탐색, 데이터 거버넌스를 위한 데이터 카탈로그이자 AI 에이전트용 컨텍스트 플랫폼이다. 데이터 계보 추적, 데이터셋 프로파일링, 데이터 계약을 지원하고 소유권과 PII를 관리한다. 지표 정의·데이터 제품·런북 등을 컨텍스트 그래프로 모아 MCP로 Claude·Cursor·LangChain 등 에이전트에 제공한다. Apache 2.0 오픈소스(DataHub OSS)로 직접 운영하거나 관리형 DataHub Cloud를 쓸 수 있다.",
+ "key_features": [
+  "데이터 탐색(대시보드·데이터셋·ML 모델·파일 검색)",
+  "소유권 정의와 PII 추적 거버넌스",
+  "이상 탐지·assertion·데이터 계약으로 품질 관찰",
+  "컬럼 단위 계보와 영향 분석",
+  "UI·CLI 기반 수집, 150개 이상 통합",
+  "MCP 기본 지원으로 AI 에이전트 연동",
+  "API·Python·Java SDK"
+ ],
+ "use_cases_ko": [
+  "대규모 기업의 통합 데이터 카탈로그와 셀프서비스 거버넌스",
+  "AI 에이전트에 신뢰할 수 있는 데이터 컨텍스트 제공",
+  "데이터 변경의 하위 영향 분석"
+ ],
+ "pricing": {
+  "free_tier": "있음 (DataHub OSS 자체 호스팅, Apache 2.0) / DataHub Cloud 무료 체험",
+  "plans": [
+   {
+    "name": "DataHub OSS",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "자체 호스팅 오픈소스",
+    "page_lang": null
+   },
+   {
+    "name": "DataHub Cloud",
+    "price": null,
+    "currency": "USD",
+    "period": null,
+    "limits": "관리형·SLA, 가격 미표시(무료 체험)",
+    "page_lang": null
+   }
+  ],
+  "pricing_url": "https://github.com/datahub-project/datahub"
+ },
+ "open_source": "Apache 2.0",
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "CLI",
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://github.com/datahub-project/datahub",
+   "quote": "The company was founded by the creators of the popular DataHub open source product"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://datahub.com/",
+   "quote": "Your context graph — unified with lineage, quality, and real-time context for every agent to rely on."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.datahub.com/docs/features",
+   "quote": "DataHub is a modern data catalog designed to streamline metadata management, data discovery, and data governance."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.datahub.com/docs/features",
+   "quote": "It enables users to efficiently explore and understand their data, track data lineage, profile datasets, and establish data contracts."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://datahub.com/",
+   "quote": "MCP-native integration with Cortex, Genie, Cursor, Claude, LangChain, ADK, Crew AI, and your own agent."
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.datahub.com/docs/features",
+   "quote": "Search your entire data ecosystem, including dashboards, datasets, ML models, and raw files."
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.datahub.com/docs/features",
+   "quote": "Define ownership and track PII."
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.datahub.com/docs/features",
+   "quote": "Automated anomaly detection, assertions, and data contracts keep data reliable."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/datahub-project/datahub",
+   "quote": "Full access to the metadata graph, 150+ integrations, column-level lineage, governance, and discovery."
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.datahub.com/docs/features",
+   "quote": "DataHub supports ingestion by UI and CLI."
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.datahub.com/docs/features",
+   "quote": "API \n Python SDK \n Java SDK \n DataHub CLI"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://datahub.com/",
+   "quote": "Built a unified global catalog on DataHub to connect all data, ML, and software entities"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://datahub.com/",
+   "quote": "See where data comes from, how it’s used, and how a change cascades"
+  },
+  {
+   "field": "pricing",
+   "url": "https://github.com/datahub-project/datahub",
+   "quote": "Self-host on your own infrastructure. Apache 2.0 licensed."
+  },
+  {
+   "field": "pricing",
+   "url": "https://github.com/datahub-project/datahub",
+   "quote": "[Start a free trial →](https://datahub.com/free-trial/)"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/datahub-project/datahub",
+   "quote": "Self-host on your own infrastructure. Apache 2.0 licensed."
+  },
+  {
+   "field": "api",
+   "url": "https://docs.datahub.com/docs/features",
+   "quote": "For users who prefer programmatic control, DataHub offers a comprehensive set of APIs and SDKs."
+  },
+  {
+   "field": "platforms",
+   "url": "https://docs.datahub.com/docs/features",
+   "quote": "DataHub supports ingestion by UI and CLI."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://datahub.com/",
+   "quote": "html lang: en-US\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

@@ -1,0 +1,74 @@
+{
+ "company": null,
+ "one_liner_ko": "프로덕션급 AI 에이전트를 위한 컨텍스트·하네스 엔지니어링 에이전트 스킬 모음에 포함된, 컴팩션·마스킹·캐싱 전략 적용 스킬",
+ "what_it_does_ko": "컨텍스트 엔지니어링(모델의 컨텍스트 창 관리)에 초점을 둔 공개 에이전트 스킬 모음의 운영 스킬입니다. context-optimization 스킬은 컴팩션·마스킹·캐싱 전략을 적용합니다. 모음은 기초·아키텍처·운영 스킬로 나뉘며 어떤 에이전트 플랫폼에서도 에이전트 동작을 평가하도록 만들어졌습니다. 컨텍스트가 길어질수록 생기는 성능 저하(lost-in-the-middle 등)를 줄이는 것을 목표로 합니다.",
+ "key_features": [
+  "컴팩션·마스킹·캐싱 전략 적용(context-optimization)",
+  "컨텍스트 저하 패턴 인식(context-degradation)",
+  "장기 세션 압축 전략 설계(context-compression)",
+  "단기·장기·그래프 메모리 설계(memory-systems)",
+  "에이전트용 도구 설계(tool-design)"
+ ],
+ "use_cases_ko": [
+  "프로덕션급 AI 에이전트 시스템을 만드는 개발자"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
+   "quote": "A comprehensive, open collection of Agent Skills focused on context engineering and harness engineering principles for building production-grade AI agent systems."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
+   "quote": "| [context-optimization](skills/context-optimization/) | Apply compaction, masking, and caching strategies |"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
+   "quote": "Recognize patterns of context failure: lost-in-middle, poisoning, distraction, and clash"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
+   "quote": "Design and evaluate compression strategies for long-running sessions"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
+   "quote": "Design short-term, long-term, and graph-based memory architectures"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
+   "quote": "| [tool-design](skills/tool-design/) | Build tools that agents can use effectively |"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
+   "quote": "Context engineering is the discipline of managing the language model's context window."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
+   "quote": "evaluating agent behavior across any agent platform"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
+   "quote": "principles for building production-grade AI agent systems"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [],
+ "note": "raw는 저장소 README 앞부분으로 라이선스·가격 언급 없음"
+}

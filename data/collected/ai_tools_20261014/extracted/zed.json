@@ -1,0 +1,141 @@
+{
+ "company": "Zed Industries, Inc.",
+ "one_liner_ko": "세계에서 가장 빠른 IDE를 내세운 오픈소스 코드 에디터, AI는 선택 사항.",
+ "what_it_does_ko": "Zed는 Atom과 Tree-sitter 제작진이 만든 고성능 멀티플레이어(실시간 협업) 코드 에디터다. 자체 API 키나 Claude Agent·Codex CLI 같은 외부 에이전트를 붙여 쓰거나, Pro 요금제의 Zed 호스팅 모델을 쓸 수 있다. AI 기능은 모두 끌 수 있다. macOS·Linux·Windows에서 내려받아 쓴다.",
+ "key_features": [
+  "고성능 코드 에디터(GPU 가속 UI 프레임워크 GPUI)",
+  "멀티플레이어 실시간 협업",
+  "자체 API 키·외부 에이전트 연결",
+  "무제한 편집 예측(Pro)",
+  "Agent Client Protocol 지원",
+  "AI 기능 끄기 가능",
+  "조직용 AI 모델 정책·데이터 관리(Business)"
+ ],
+ "use_cases_ko": [
+  "AI 없이 빠른 코드 에디터를 원하는 개발자",
+  "Zed 호스팅 AI 모델을 쓰는 개인 개발자",
+  "AI 사용·지출을 중앙 관리하려는 팀"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Personal $0, 자체 키·외부 에이전트 무제한 사용)",
+  "plans": [
+   {
+    "name": "Personal",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "평생 무료, 자체 키·외부 에이전트",
+    "page_lang": "en"
+   },
+   {
+    "name": "Pro",
+    "price": 10,
+    "currency": "USD",
+    "period": "month",
+    "limits": "편집 예측 무제한, $5 토큰 포함, 초과분 API 가격+10%, 14일 무료 체험",
+    "page_lang": "en"
+   },
+   {
+    "name": "Business",
+    "price": 30,
+    "currency": "USD",
+    "period": "month",
+    "limits": "좌석당, 조직 AI 정책·데이터 관리",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://zed.dev/pricing"
+ },
+ "open_source": "GPL-3.0-or-later (일부 Apache-2.0)",
+ "api": "불명",
+ "platforms": [
+  "맥",
+  "리눅스",
+  "윈도"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://github.com/zed-industries/zed",
+   "quote": "Zed is developed by **Zed Industries, Inc.**, a for-profit company."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://zed.dev/",
+   "quote": "The world's fastest IDE. Open source. AI optional."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/zed-industries/zed",
+   "quote": "Welcome to Zed, a high-performance, multiplayer code editor from the creators of [Atom](https://github.com/atom/atom) and [Tree-sitter](https://github.com/tree-sitter/tree-sitter)."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://zed.dev/pricing",
+   "quote": "You can disable all AI features if you'd like to."
+  },
+  {
+   "field": "key_features",
+   "url": "https://zed.dev/",
+   "quote": "A fast, GPU-accelerated UI framework for Rust."
+  },
+  {
+   "field": "key_features",
+   "url": "https://zed.dev/pricing",
+   "quote": "Unlimited use with your API keys or external agents like Claude Agent, Codex CLI, and more"
+  },
+  {
+   "field": "key_features",
+   "url": "https://zed.dev/",
+   "quote": "Connect any client to any agent."
+  },
+  {
+   "field": "key_features",
+   "url": "https://zed.dev/pricing",
+   "quote": "Org-wide AI model policies\n Data governance controls"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://zed.dev/pricing",
+   "quote": "Our Personal plan is for users who want a best-in-class code editor without AI capabilities, or for users who prefer to use their own keys/external agents."
+  },
+  {
+   "field": "pricing",
+   "url": "https://zed.dev/pricing",
+   "quote": "Personal\n $0 forever \n The next-generation code editor. Free forever."
+  },
+  {
+   "field": "pricing",
+   "url": "https://zed.dev/pricing",
+   "quote": "$10 per month \n The next-generation code editor + AI."
+  },
+  {
+   "field": "pricing",
+   "url": "https://zed.dev/pricing",
+   "quote": "$30 per seat, per month \n The editor your team loves"
+  },
+  {
+   "field": "pricing",
+   "url": "https://zed.dev/pricing",
+   "quote": "Zed Pro bills at API list price +10% for hosted usage."
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/zed-industries/zed",
+   "quote": "Zed source code is licensed primarily under GPL-3.0-or-later, with Apache-2.0 components where marked."
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/zed-industries/zed",
+   "quote": "On macOS, Linux, and Windows you can [download Zed directly]"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://zed.dev/",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

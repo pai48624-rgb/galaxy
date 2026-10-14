@@ -1,0 +1,313 @@
+=== [home] https://magine.cloud (lang=en)
+Magine AI - Your Purr-sonal Agent Orchestration Companion 
+ .-~~~-.
+ .- ~ ~-( )_ _
+ / ~ -.
+| \
+ \ .'
+ ~- . _____________ . -~ .-~~~-.
+ .- ~ ~-( )_ _
+ / ~ -.
+ | \
+ \ .'
+ ~- . _____________ . -~ .~~.
+ .( ).
+(___.__)__) 
+███╗ ███╗ █████╗ ██████╗ ██╗███╗ ██╗███████╗
+████╗ ████║██╔══██╗██╔════╝ ██║████╗ ██║██╔════╝
+██╔████╔██║███████║██║ ███╗██║██╔██╗ ██║█████╗ 
+██║╚██╔╝██║██╔══██║██║ ██║██║██║╚██╗██║██╔══╝ 
+██║ ╚═╝ ██║██║ ██║╚██████╔╝██║██║ ╚████║███████╗
+╚═╝ ╚═╝╚═╝ ╚═╝ ╚═════╝ ╚═╝╚═╝ ╚═══╝╚══════╝
+ v1.5.9 beta 
+ 🌱 🌸 🌿 🌱 🌼 🌿 🌱 🌺 🌿 🌱 🌸 🌱 🌿 🌼 🌱 🌺 🌿 🌱 🌸 🌿 
+ > your purr-sonal agent orchestration companion ~ spawning SDA’s, shipping tasks, automating workflows 🐾 
+ Login or register
+ Demo Dark Docs 
+ ┌────────────────────────┐
+ │ DEV WORTH │
+ │ analyze a user │
+ │ to calculate │
+ └────────────────────────┘ 
+ Human Machine 
+ ⠿ 
+ input.sh 
+ ▼ 
+ [ Not Connected ] ⛶ 
+ Magine v1.5.9 - Your Purr-sonal Agent Orchestration Companion
+ Quick start: Type any GitHub username to generate a profile card.
+ COMMANDS
+ <username> Generate embeddable SVG card
+ analyze <user> Deep-dive profile analysis
+ theme Change card theme (30 presets)
+ customize Customize card colors
+ social Add social media links
+ bio Set your bio and title (supports markdown links)
+ credentials Update GitHub token / AI key
+ preview Preview & toggle card sections
+ tokens Check token balance & usage
+ topup Buy Cats ($5 = 1 Cat = 5M tokens)
+ catbot Manage CatBot agents (PRO)
+ apikey Manage API keys for webhooks/API
+ webhook Manage webhook callback URLs
+ voice Toggle voice commands 🐾
+ light / dark Switch app theme ☀️🌙
+ docs Open documentation 📖
+ help Full command list + API key info
+ about The story behind Magine
+ Login or register to save your customizations.
+ Use "login google" or "login github" to sign in with Google or GitHub, or "login" if you registered via email.
+ Use "help" for details on why GitHub tokens & AI keys are useful.
+ ------------------------------------------------------------
+ Welcome 
+ Get started 5 actions Try it free 2 actions Learn more 4 actions 
+ Sign in to unlock Vision, CatCode and your Cattery.
+ Log in with username or email The terminal will ask for your details step by step. Sign in with Google Sign in with GitHub Opens GitHub to authorize, then brings you straight back. Create an account Free tokens included to try your first SDA. Reset my password Verifies you through your GitHub token. 
+ Pick an action. The command it runs will appear here. 
+ ⠿ 
+ embed.md 
+ ▲ ▼ 
+ ⛶ 
+ // Copy this to your GitHub README.md
+ Enter a GitHub username first
+ to generate your embed code. 
+ ⠿ 
+ help.txt 
+ ▲ ▼ 
+ ⛶ 
+ +---------------------------------------------------+
+| COMMANDS |
++---------------------------------------------------+
+| login / register / forgot / logout |
+| login google / login github OAuth sign-in |
+| <username> Generate embeddable SVG card |
+| analyze Deep-dive profile analysis |
+| theme Change card theme (30 presets) |
+| customize Customize card colors |
+| social Add/edit social media links |
+| bio Set your bio (supports markdown) |
+| credentials Update GitHub token / AI key |
+| preview Preview current card settings |
+| preview <opt> Toggle: devworth ai activity deep |
+| tokens View token balance & usage |
+| topup Buy Cats ($5=1🐱=5M tokens) |
+| browser Link your local browser sessions |
+| browser link Get pairing code for the bridge ext |
+| browser status Show linked browser profiles |
+| whoami Show current user info |
+| voice Toggle voice commands 🐾 |
+| light / dark Switch app theme ☀️🌙 |
+| clear Clear terminal |
+| help Full help + API key info |
+| about The story behind Magine |
++---------------------------------------------------+
+| CATBOT (PRO) |
++---------------------------------------------------+
+| catbot CatBot help & overview |
+| catbot create Create agent CatBot |
+| catbot create sda Create SDA (vision) CatBot |
+| catbot create heartbeat watch "<w>" do "<a>" [every <s>] [url <u>] |
+| Reactive heartbeat agent (2 🐱) |
+| catbot list List your CatBot agents |
+| catbot run <id|name> Run a CatBot (agent or SDA) |
+| catbot mode <id|name> Switch mode (agent/sda/heartbeat) |
+| catbot heartbeat <id> Show heartbeat config |
+| catbot heartbeat <id> watch "<what>" do "<action>" [every <sec>] [url <url>] |
+| Configure mutation-driven watcher (every/url optional) |
+| catbot heartbeat <id> off Disable heartbeat (→ agent) |
+| catbot workflow <id> Switch workflow (classic/cdp/agp) |
+| catbot prompt <id|name> Set agent task prompt |
+| catbot do <task> Quick one-off browser task |
+| catbot schedule <id|name> <schedule> |
+| Presets: every_minute every_hour every_6h |
+| every_12h daily weekdays_9am twice_daily |
+| Or cron: "0 * * * *" (min hr day mon wkday) |
+| catbot memory View saved browsing memories |
+| catbot memory delete <site> Delete site memory |
+| catbot memory clear Clear ALL agent memories |
+| catbot email Check GitHub email |
+| catbot logs View activity logs |
+| catbot stats View statistics |
+| catbot rename <id|name> <new> Rename a CatBot |
+| catbot color <id|name> <color> Set agent identity color |
+| catbot sandbox [on|off] Temporary sandboxes for agents (default off) |
+| catbot delete <id|name> Delete a CatBot agent |
+| catbot mood Check CatBot mood & state |
+| catbot treat <why> Reward CatBot (good job!) |
+| catbot scold <why> Correct CatBot (fix this!) |
+| catbot continue Resume a paused agent run |
++---------------------------------------------------+
+| QUICK vs CREATED AGENTS |
++---------------------------------------------------+
+| catbot do <prompt> One-off task, shared browser |
+| catbot create Persistent agent, own browser |
+| |
+| QUICK TASK EXAMPLES (catbot do): |
+| "check NVIDIA stock price on Yahoo Finance" |
+| "order Sony WH-1000XM5 from Amazon" |
+| "send email on Gmail to Arthur about the meeting" |
+| "search arXiv for latest transformer LLM papers" |
+| "whats the latest Veritasium video on YouTube" |
+| "apply to senior frontend jobs on Indeed" |
+| "research best Mumbai street food on Reddit" |
+| "check what's happening on my X (Twitter) feed" |
++---------------------------------------------------+
+| WEBHOOK / API |
++---------------------------------------------------+
+| apikey create Generate a new API key |
+| apikey list List your active API keys |
+| apikey revoke <id> Revoke an API key |
++-----------------------------------------------------------------+
+| MAGINE CODE — Autonomous Coding Engine |
++-----------------------------------------------------------------+
+| catcode init <project> Create project (git init) |
+| catcode clone <url> Clone a GitHub repo |
+| catcode plan <task> Draft a plan to approve |
+| catcode approve Build the approved plan |
+| catcode do <proj>|<task> Plan and build in one go |
+| catcode diff Review agent changes |
+| catcode pr <title> Open a pull request |
+| catcode edit [project] Open rich code editor |
+| catcode files [project] List project files |
+| catcode commit <p> <msg> Git commit changes |
+| catcode projects List all your projects |
+| catcode sandbox up <p> Magine Sandbox (🐱 once/project)|
+| catcode sandbox run <p> <cmd> Run inside sandbox |
+| catcode sandbox down <p> Save files & stop sandbox |
+| catcode sandbox upgrade <p> 2× CPU+RAM (🐱 each) |
+| catcode evolve init <p> <f> Set up evolution |
+| catcode evolve <p> Evolve → DISCOVERY.md |
++---------------------------------------------------+
+| SETTINGS |
++---------------------------------------------------+
+| timezone Show current timezone |
+| timezone <tz> Set timezone (IANA format) |
+
+
+=== [about] https://magine.cloud/docs (lang=en)
+Magine AI - Your Purr-sonal Agent Orchestration Companion 
+ ☰ 🐱 ← magine / docs 
+ 🐛 Raise Issue GitHub 🌙 Dark v1.5.9 
+ Documentation
+ 📖 Introduction 🐱 Getting Started ⌨️ Terminal Commands 🤖 AI Browser Agents 🧠 Cross-Agent Memory ⏰ Smart Scheduling 🌐 Browser Actions 📺 SDA’s 🪙 Token Economy 💰 Pricing 🔗 Browser Bridge 🎨 Themes & UI 🐾 Voice Commands 🔐 Authentication 🛡️ Security & Privacy 🔗 Webhooks & API 📎 File, Folder & Workspace 🧬 CatCode Workspace 📜 Changelog ❓ FAQ /\_/\ z
+ ( -.- ) z
+ > ^ < z purrring through docs...
+ Magine AI Documentation
+ Everything you need to know about the purr-sonal agent orchestration companion.
+ “iMagine what your AI could do while you sleep...” 🐾
+ The browser extensions are completely optional - they simply help sync your signed-in credentials with Magine.
+ /\_/\
+ ( o.o )
+ > ^ < 
+ 📸 Product Overview
+ Magine AI Architecture Pipeline
+ SDA Browser Sessions - Agents that can see
+ Magine AI Terminal Interface
+ Hayai computer vision model doing its task
+ AGP Tracing Web Elements - the Autonomous GUI Pilot
+ 📖 What’s Magine AI ?
+ iMagine a world where AI agents can actually see
+ 🦇 The Problem: Blind Agents
+ Most AI agents today are blind as a bat . They rely entirely on APIs, structured data, MCP's and text-based interfaces. When APIs are missing, rate-limited, or unreliable, these agents fail silently - burning tokens while deceiving humans in the loop.
+ 👁️ The Solution: Sight-Driven Agents (SDAs)
+ Magine builds in-house, self-sufficient, vision-enabled agents called Sight-Driven Agents (SDAs). SDAs perceive, reason, plan, and act on visual data by combining computer vision with natural language understanding. They operate even when APIs or MCP servers are missing, limited, or unreliable.
+ Magine AI is purposely built for autonomous zero-human interference where AI can now see, dream, train in real-time, and think like humans where the internet will be for bots & humans are the watchers. . Instead of relying solely on static YAML scripts and CLIs, Magine creates Action Streams : screenshots + video capture → vision agent plans → GUI + API actions executed.
+ 🐱 Why Cats?
+ Cats see things humans miss. Just as cats perceive movements invisible to us, SDAs perceive web interfaces that traditional agents cannot navigate - login walls, CAPTCHAs, dynamic pages, and visual content that has no API. Cats are independent, observant, and self-sufficient. So are Magine's agents.
+ 🧠 Under the Hood
+ ▸ Self-Reinforced Learning - agents learn from past runs, adapting to page changes and new layouts
+ ▸ Short-Term & Long-Term Memory - each agent retains context within a session (short-term) and across runs (long-term) to avoid repeating mistakes
+ ▸ Isolated Session Handling - every agent runs in its own sandboxed browser environment with isolated cookies, storage, and fingerpring profiles
+ ▸ Mixture of Experts (MoE) - parallel execution of Magine native models and cloud models for faster, more accurate decision-making
+ ▸ GitHub Productivity Tracker - deep analysis of developer activity, contribution patterns, and AI-powered insights for your GitHub profile
+ 🚀 Where SDAs Are Used Today
+ SDAs are currently deployed in providers like Zeupiter to simplify the over-engineered part of cloud computing: deploying and scaling infrastructure. Zeupiter is building a cloud- and AI-agnostic multi-cloud platform that introduces “vibe deployments” - high-level, intent-driven deployments where users describe outcomes (latency, cost, scale, regions) and the platform intelligently provisions, optimizes, and manages resources across clouds.
+ 🐱 Magine is
+
+=== [meta] https://magine.cloud
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/S4nfs/Magine
+<div align="center">
+
+# 😸 Magine - A Terminal-Styled AI Orchestration Platform
+
+### _iMagine what your AI could do while you sleep_ 🐾
+
+**analyze anything. automate everything. from your terminal.**
+
+<br />
+<img src="magineAI.png" alt="Magine AI - Terminal-Styled AI Orchestration Platform" width="100%" />
+<br />
+<a href="https://chromewebstore.google.com/detail/magine-bridge/nbnppnlaacbhaknaikpkljfdjfelbbee" target="_blank"><img alt="Available in the Chrome Web Store" height="54" src="https://magine.cloud/badges/chrome.png"></a>&nbsp;
+<a href="https://www.producthunt.com/products/magine?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-magine" target="_blank" rel="noopener noreferrer"><img alt="Magine - Spawn vision-enabled AI agents autonomously browsing the web | Product Hunt" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1104302&amp;theme=light&amp;t=1774515441812"></a>&nbsp;
+<a href="https://addons.mozilla.org/en-US/firefox/addon/magine-bridge" target="_blank"><img alt="Get the Add-on for Firefox" height="54" src="https://magine.cloud/badges/firefox.svg"></a>
+<br />
+<sub>The browser extensions are completely optional - they only help sync your signed-in sessions with Magine.</sub>
+<br />
+
+[Live Demo](https://magine.cloud) · [Docs](https://magine.cloud/docs) · [Research](https://zeupiter.com/research) · [Issues](https://github.com/S4nfs/Magine/issues)
+
+</div>
+
+---
+
+## Table of Contents
+
+- [What is Magine?](#what-is-magine)
+- [Product Overview](#product-overview)
+- [The Story of Magine](#the-story-of-magine)
+- [Hayai Vision and the AGP Workflow](#hayai-vision-and-the-agp-workflow)
+- [How Magine Works](#how-magine-works)
+- [Features](#features)
+  - [GitHub Profile Analysis](#github-profile-analysis)
+  - [Sight-Driven Agents](#sight-driven-agents)
+  - [Smart Scheduling](#smart-scheduling)
+  - [Heartbeat Agents](#heartbeat-agents)
+  - [Human Mode](#human-mode)
+  - [Terminal Experience](#terminal-experience)
+  - [Browser Session Import](#browser-session-import)
+  - [Token Economy](#token-economy)
+  - [Authentication](#authentication)
+- [CatCode Coding Agents](#catcode-coding-agents)
+  - [Clone, Plan, Approve, Pull Request](#clone-plan-approve-pull-request)
+  - [Catcode CLI](#catcode-cli)
+- [Terminal Commands](#terminal-commands)
+  - [Core Commands](#core-commands)
+  - [Profile Card Customization](#profile-card-customization)
+  - [Account and Tokens](#account-and-tokens)
+  - [AI Browser Agents (CatBot)](#ai-browser-agents-catbot)
+  - [CatCode Commands](#catcode-commands)
+  - [Browser Session Import (Magine Bridge)](#browser-session-import-magine-bridge)
+  - [Webhooks and API](#webhooks-and-api)
+  - [Settings and UI](#settings-and-ui)
+- [AI Browser Agents](#ai-browser-agents)
+- [REST API and Webhooks](#rest-api-and-webhooks)
+- [Pricing](#pricing)
+- [Security and Privacy](#security-and-privacy)
+- [Roadmap](#roadmap)
+
+---
+
+## What is Magine?
+
+**Magine** is a retro-terminal web interface for deep GitHub profile analysis, AI-powered browser automation, and scheduled agent workflows - all controlled from a single command-line-inspired UI.
+
+Think of it as your personal command center: type a GitHub username and get an instant deep dive on a developer, or spin up autonomous browser SDAs (Sight-Driven Agents) that can see, navigate, interact, and report back - on a schedule or in real time. Send scheduled posts to LinkedIn, get a summary of your X (Twitter) feed, triage your Gmail inbox, let a coding agent open a pull request on your repo, or automate any web task you can _iMagine_.
+
+Prefer buttons to a command line? Flip the **Human | Machine** switch and every command becomes a form - [see Human Mode](#human-mode).
+
+---
+
+## Product Overview
+
+<p align="center">
+  <img src="https://magine.cloud/magine_line.png" alt="Magine AI Architecture Pipeline" width="49%" />
+  <img src="https://magine.cloud/sda-browsers.png" alt="SDA Browser Sessions - Agents that can see" width="49%" />
+</p>
+<p align="center"><sub><em>Left: the Magine architecture pipeline &nbsp;·&nbsp; Right: SDA browser sessions - agents that can see</em></sub></p>
+
+<p align="center">
+  <img src="haya

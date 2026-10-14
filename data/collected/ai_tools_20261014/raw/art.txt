@@ -1,0 +1,311 @@
+=== [home] https://adversarial-robustness-toolbox.readthedocs.io/en/latest/ (lang=en)
+Welcome to the Adversarial Robustness Toolbox — Adversarial Robustness Toolbox 1.17.0 documentation 
+ -->
+ Welcome to the Adversarial Robustness Toolbox ¶ 
+ Adversarial Robustness Toolbox (ART) is a Python library for Machine Learning Security. ART provides tools that enable
+developers and researchers to evaluate, defend, certify and verify Machine Learning models and applications against
+the adversarial threats of Evasion, Poisoning, Extraction, and Inference. ART supports all popular machine learning
+frameworks (TensorFlow, Keras, PyTorch, MXNet, scikit-learn, XGBoost, LightGBM, CatBoost, GPy, etc.), all data types
+(images, tables, audio, video, etc.) and machine learning tasks (classification, object detection, generation,
+certification, etc.).
+ The code of ART is on GitHub and the Wiki contains overviews of implemented attacks , defences and metrics .
+ The library is under continuous development. Feedback, bug reports and contributions are very welcome!
+ Supported Machine Learning Libraries ¶ 
+ TensorFlow (v1 and v2) ( https://www.tensorflow.org )
+ Keras ( https://www.keras.io )
+ PyTorch ( https://www.pytorch.org )
+ MXNet ( https://mxnet.apache.org )
+ Scikit-learn ( https://www.scikit-learn.org )
+ XGBoost ( https://www.xgboost.ai )
+ LightGBM ( https://lightgbm.readthedocs.io )
+ CatBoost ( https://www.catboost.ai )
+ GPy ( https://sheffieldml.github.io/GPy/ )
+ User guide 
+ Setup 
+ Examples 
+ Notebooks 
+ Modules 
+ art.attacks 
+ Base Class Attacks 
+ Base Class Evasion Attacks 
+ Base Class Poisoning Attacks 
+ Base Class Extraction Attacks 
+ Base Class Inference Attacks 
+ Base Class Reconstruction Attacks 
+ art.attacks.evasion 
+ Adversarial Patch 
+ Adversarial Patch - Numpy 
+ Adversarial Patch - PyTorch 
+ Adversarial Patch - TensorFlowV2 
+ Adversarial Texture - PyTorch 
+ Auto Attack 
+ Auto Projected Gradient Descent (Auto-PGD) 
+ Auto Conjugate Gradient (Auto-CG) 
+ Boundary Attack / Decision-Based Attack 
+ Brendel and Bethge Attack 
+ Carlini and Wagner L_0 Attack 
+ Carlini and Wagner L_2 Attack 
+ Carlini and Wagner L_inf Attack 
+ Carlini and Wagner ASR Attack 
+ Composite Adversarial Attack - PyTorch 
+ Decision Tree Attack 
+ DeepFool 
+ DPatch 
+ RobustDPatch 
+ Elastic Net Attack 
+ Fast Gradient Method (FGM) 
+ Feature Adversaries - Numpy 
+ Feature Adversaries - PyTorch 
+ Feature Adversaries - TensorFlow 
+ Frame Saliency Attack 
+ Geometric Decision Based Attack 
+ GRAPHITE - Blackbox 
+ GRAPHITE - Whitebox - PyTorch 
+ High Confidence Low Uncertainty Attack 
+ HopSkipJump Attack 
+ Imperceptible ASR Attack 
+ Imperceptible ASR Attack - PyTorch 
+ Basic Iterative Method (BIM) 
+ Projected Gradient Descent (PGD) 
+ Projected Gradient Descent (PGD) - Numpy 
+ Projected Gradient Descent (PGD) - PyTorch 
+ Projected Gradient Descent (PGD) - TensorFlowV2 
+ LaserAttack 
+ LowProFool 
+ NewtonFool 
+ Malware Gradient Descent - TensorFlow 
+ Over The Air Flickering Attack - PyTorch 
+ PixelAttack 
+ ThresholdAttack 
+ Jacobian Saliency Map Attack (JSMA) 
+ Shadow Attack 
+ ShapeShifter Attack 
+ Sign-OPT Attack 
+ Simple Black-box Adversarial Attack 
+ Spatial Transformations Attack 
+ Square Attack 
+ Targeted Universal Perturbation Attack 
+ Universal Perturbation Attack 
+ Virtual Adversarial Method 
+ Wasserstein Attack 
+ Zeroth-Order Optimization (ZOO) Attack 
+ art.attacks.extraction 
+ Copycat CNN 
+ Functionally Equivalent Extraction 
+ Knockoff Nets 
+ art.attacks.inference.attribute_inference 
+ Attribute Inference Baseline 
+ Attribute Inference Black-Box 
+ Attribute Inference Membership 
+ Attribute Inference Base Line True Label 
+ Attribute Inference White-Box Lifestyle Decision-Tree 
+ Attribute Inference White-Box Decision-Tree 
+ art.attacks.inference.membership_inference 
+ Membership Inference Black-Box 
+ Membership Inference Black-Box Rule-Based 
+ Membership Inference Label-Only - Decision Boundary 
+ Membership Inference Label-Only - Gap Attack 
+ Shadow Models 
+ art.attacks.inference.model_inversion 
+ Model Inversion MIFace 
+ art.attacks.inference.reconstruction 
+ Database Reconstruction 
+ art.attacks.poisoning 
+ Backdoor Attack DGM ReD 
+ Backdoor Attack DGM Trail 
+ Adversarial Embedding Attack 
+ Backdoor Poisoning Attack 
+ Hidden Trigger Backdoor Attack 
+ Bullseye Polytope Attack 
+ Clean Label Backdoor Attack 
+ Feature Collision Attack 
+ Gradient Matching Attack 
+ Poisoning SVM Attack 
+ Sleeper Agent Attack 
+ art.defences 
+ art.defences.detector.evasion 
+ Base Class 
+ Binary Input Detector 
+ Binary Activation Detector 
+ Subset Scanning Detector 
+ art.defences.detector.poison 
+ Base Class 
+ Activation Defence 
+ Data Provenance Defense 
+ Reject on Negative Impact (RONI) Defense 
+ Spectral Signature Defense 
+ art.defences.postprocessor 
+ Base Class Postprocessor 
+ Class Labels 
+ Gaussian Noise 
+ High Confidence 
+ Reverse Sigmoid 
+ Rounded 
+ art.defences.preprocessor 
+ Base Class Preprocessor 
+ CutMix 
+ CutMix - PyTorch 
+ CutMix - TensorFlowV2 
+ Cutout 
+ Cutout - PyTorch 
+ Cutout - TensorFlowV2 
+ Feature Squeezing 
+ Gaussian Data Augmentation 
+ InverseGAN 
+ DefenseGAN 
+ JPEG Compression 
+ Label Smoothing 
+ Mixup 
+ Mixup - PyTorch 
+ Mixup - TensorFlowV2 
+ Mp3 Compression 
+ PixelDefend 
+ Resample 
+ Spatial Smoothing 
+ Spatial Smoothing - PyTorch 
+ Spatial Smoothing - TensorFlow v2 
+ Thermometer Encoding 
+ Total Variance Minimization 
+ Video Compression 
+ art.defences.trainer 
+ Base Class Trainer 
+ Adversarial Training 
+ Adversarial Training Madry PGD 
+ Adversarial Training Adversarial Weight Perturbation (AWP) - PyTorch 
+ Adversarial Training Oracle Aligned Adversarial Training (OAAT) - PyTorch 
+ Adversarial Training TRADES - PyTorch 
+ Base Class Adversarial Training Fast is Better than Free 
+ Adversarial Training Fast is Better than Free - PyTorch 
+ Adversarial Training Certified - PyTorch 
+ Adversarial Training Certified Interval Bound Propagation - PyTorch 
+ DP - InstaHide Training 
+ art.defences.transformer.evasion 
+ Defensive Distillation 
+ art.defences.transformer.poisoning 
+ Neural Cleanse 
+ STRIP 
+ art.estimators 
+ Base Class Estimator 
+ Mixin Base Class Loss Gradients 
+ Mixin Base Class Neural Networks 
+ Mixin Base Class Decision Trees 
+ Base Class KerasEstimator 
+ Base Class MXEstimator 
+ Base Class PyTorchEstimator 
+ Base Class ScikitlearnEstimator 
+ Base Class TensorFlowEstimator 
+ Base Class TensorFlowV2Estimator 
+ art.estimators.certification 
+ art.estimators.certification.deep_z 
+ PytorchDeepZ 
+ Zono Dense Layer 
+ Zono Bounds 
+ Zono Convolution Layer 
+ Zono ReLU 
+ art.estimators.certification.interval 
+ PyTorchIBPClassifier 
+ Interval Dense Layer 
+ Interval Convolution Layer 
+ Interval Flatten Layer 
+ Interval ReLU 
+ Interval Bounds 
+ art.estimators.certification.randomized_smoothing 
+ Mixin Base Class Randomized Smoothing 
+ PyTorch Randomized Smoothing Classifier 
+ TensorFlow V2 Randomized Smoothing Classifier 
+ art.estimators.classification 
+ Mixin Base Class Classifier 
+ Mixin Base Class Class Gradients 
+ BlackBox Classifier 
+ BlackBox Classifier NeuralNetwork 
+ Deep Partition Aggregation Classifier 
+ Keras Classifier 
+ MXNet Classifier 
+ PyTorch Classifier 
+ Query-Efficient Black-box Gradient Estimation Classifier 
+ TensorFlow Classifier 
+ TensorFlow v2 Classifier 
+ Ensemble Classifier 
+ Scikit-learn Classifier Classifier 
+ GPy Gaussian Process Classifier 
+ art.estimators.classification.scikitlearn 
+ Base Class Scikit-learn 
+ Scikit-learn DecisionTreeClassifier Classifier 
+ Scikit-learn ExtraTreeClassifier Classifier 
+ Scikit-learn AdaBoostClassifier Classifier 
+ Scikit-learn Bag
+
+=== [meta] https://adversarial-robustness-toolbox.readthedocs.io/en/latest/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/Trusted-AI/adversarial-robustness-toolbox
+# Adversarial Robustness Toolbox (ART) v1.20
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Trusted-AI/adversarial-robustness-toolbox/main/docs/images/art_lfai.png" width="467" title="ART logo">
+</p>
+<br />
+
+![CodeQL](https://github.com/Trusted-AI/adversarial-robustness-toolbox/workflows/CodeQL/badge.svg)
+[![Documentation Status](https://readthedocs.org/projects/adversarial-robustness-toolbox/badge/?version=latest)](http://adversarial-robustness-toolbox.readthedocs.io/en/latest/?badge=latest)
+[![PyPI](https://badge.fury.io/py/adversarial-robustness-toolbox.svg)](https://badge.fury.io/py/adversarial-robustness-toolbox)
+[![codecov](https://codecov.io/gh/Trusted-AI/adversarial-robustness-toolbox/branch/main/graph/badge.svg)](https://codecov.io/gh/Trusted-AI/adversarial-robustness-toolbox)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/adversarial-robustness-toolbox)](https://pypi.org/project/adversarial-robustness-toolbox/)
+[![slack-img](https://img.shields.io/badge/chat-on%20slack-yellow.svg)](https://ibm-art.slack.com/)
+[![Downloads](https://static.pepy.tech/badge/adversarial-robustness-toolbox)](https://pepy.tech/project/adversarial-robustness-toolbox)
+[![Downloads](https://static.pepy.tech/badge/adversarial-robustness-toolbox/month)](https://pepy.tech/project/adversarial-robustness-toolbox)
+[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/5090/badge)](https://bestpractices.coreinfrastructure.org/projects/5090)
+
+[中文README请按此处](README-cn.md)
+
+ <div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/images/lfaidata-project-badge-graduate-color_dark.png" width="400" title="LF AI & Data">
+    <source media="(prefers-color-scheme: light)" srcset="docs/images/lfaidata-project-badge-graduate-color.png" width="400" title="LF AI & Data">
+    <img alt="Fallback image description" src="default-image.png" width="400">
+  </picture>
+</div>
+<br />
+
+Adversarial Robustness Toolbox (ART) is a Python library for Machine Learning Security. ART is hosted by the 
+[Linux Foundation AI & Data Foundation](https://lfaidata.foundation) (LF AI & Data). ART provides tools that enable
+developers and researchers to defend and evaluate Machine Learning models and applications against the
+adversarial threats of Evasion, Poisoning, Extraction, and Inference. ART supports all popular machine learning frameworks
+(TensorFlow, Keras, PyTorch, scikit-learn, XGBoost, LightGBM, CatBoost, GPy, etc.), all data types
+(images, tables, audio, video, etc.) and machine learning tasks (classification, object detection, speech recognition,
+generation, certification, etc.).
+
+## Adversarial Threats
+
+ <div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/images/adversarial_threats_attacker_dark.png" width="400 title="ART Threats">
+    <source media="(prefers-color-scheme: light)" srcset="docs/images/adversarial_threats_attacker.png" width="400 title="ART Threats">
+    <img alt="Fallback image description" src="default-image.png" width="400">
+  </picture>
+</div>
+
+<p align="center">
+  <img src="docs/images/adversarial_threats_art.png?raw=true" width="400" title="ART Matrix">
+</p>
+<br />
+
+## ART for Red and Blue Teams (selection)
+
+ <div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/images/white_hat_blue_red_dark.png" width="800 title="ART Red and Blue Teams">
+    <source media="(prefers-color-scheme: light)" srcset="docs/images/white_hat_blue_red.png" width="800 title="ART Red and Blue Teams">
+    <img alt="Fallback image description" src="default-image.png" width="800">
+  </picture>
+</div>
+<br />
+
+## Learn more
+
+| **[Get Started][get-started]**     | **[Documentation][documentation]**     | **[Contributing][contributing]**           |
+|-------------------------------------|-------------------------------|-----------------------------------|
+| - [Installation][installation]<br

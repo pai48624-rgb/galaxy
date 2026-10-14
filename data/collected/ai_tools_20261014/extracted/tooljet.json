@@ -1,0 +1,192 @@
+{
+ "company": "ToolJet",
+ "one_liner_ko": "관리자 화면·대시보드 같은 사내 도구를 AI로 만들고 관리하는 오픈소스 내부 도구 빌더.",
+ "what_it_does_ko": "ToolJet은 기존 데이터베이스·API·SaaS 위에서 돌아가는 관리자 패널, 대시보드, 업무용 앱을 만드는 오픈소스 플랫폼이다. 문장으로 설명하면 ToolJet AI가 화면·쿼리·컴포넌트를 만들어 주고, Claude Code·Codex 같은 코딩 에이전트도 MCP 서버를 통해 앱을 만들 수 있다. PostgreSQL 기반 노코드 데이터베이스와 100개 이상 연동을 제공한다. 직접 설치(셀프 호스팅)하거나 ToolJet Cloud를 쓸 수 있다.",
+ "key_features": [
+  "문장으로 앱 초안을 만드는 ToolJet AI",
+  "코딩 에이전트용 ToolJet MCP 서버(베타)",
+  "80개 이상 컴포넌트의 드래그 앤 드롭 앱 빌더",
+  "PostgreSQL 기반 노코드 ToolJet Database",
+  "데이터베이스·API·SaaS 100개 이상 연동",
+  "워크플로 자동화",
+  "SSO·RBAC·감사 로그 등 거버넌스",
+  "Docker·Kubernetes·VPC·온프레미스 셀프 호스팅"
+ ],
+ "use_cases_ko": [
+  "사내 도구·관리자 패널·대시보드 제작",
+  "고객 포털·백오피스 도구 제작",
+  "ServiceNow 데이터로 IT 장애 대시보드 같은 업무 앱 제작"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Free $0, 빌더 2명·최종 사용자 50명·앱 10개·AI 크레딧 100)",
+  "plans": [
+   {
+    "name": "Free",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "빌더당, 빌더 2명·최종 사용자 50명·앱 10개·AI 크레딧 100 (Cloud)",
+    "page_lang": "en"
+   },
+   {
+    "name": "Basic",
+    "price": 23,
+    "currency": "USD",
+    "period": "month",
+    "limits": "빌더당, 빌더 2명·최종 사용자 50명·앱 10개·빌더당 AI 크레딧 2,000, 페이지에 'Saved 20%' 표기 (Cloud)",
+    "page_lang": "en"
+   },
+   {
+    "name": "Pro",
+    "price": 79,
+    "currency": "USD",
+    "period": "month",
+    "limits": "빌더당, 최종 사용자 50명·앱 10개·빌더당 AI 크레딧 2,000, 버전 관리, 'Saved 20%' 표기 (Cloud)",
+    "page_lang": "en"
+   },
+   {
+    "name": "Team",
+    "price": 199,
+    "currency": "USD",
+    "period": "month",
+    "limits": "빌더당, 최종 사용자 100명·앱 무제한·빌더당 AI 크레딧 3,000, SSO·감사 로그·Git sync, 'Saved 20%' 표기",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": "USD",
+    "period": null,
+    "limits": "맞춤, 최종 사용자 무제한·SCIM·멀티 환경",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://tooljet.com/pricing"
+ },
+ "open_source": "AGPL",
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://tooljet.com/pricing",
+   "quote": "ToolJet Pricing | Compare Cloud and Self-Hosted Plans"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://tooljet.com",
+   "quote": "Build and govern your internal tools - or ask your agent to"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/ToolJet/ToolJet",
+   "quote": "ToolJet is an open-source platform for building internal tools: admin panels, dashboards, and operational apps that run on your existing databases, APIs, and SaaS systems."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/ToolJet/ToolJet",
+   "quote": "Self-host it, or use ToolJet Cloud."
+  },
+  {
+   "field": "key_features",
+   "url": "https://tooljet.com",
+   "quote": "ToolJet AI turns a sentence into a working draft - real components bound to real queries, ready to refine on the canvas."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/ToolJet/ToolJet",
+   "quote": "ToolJet MCP is currently in beta."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/ToolJet/ToolJet",
+   "quote": "**Visual App Builder:** 80+ responsive components"
+  },
+  {
+   "field": "key_features",
+   "url": "https://tooljet.com",
+   "quote": "Scalable in-built no-code database built on top of PostgreSQL"
+  },
+  {
+   "field": "key_features",
+   "url": "https://tooljet.com",
+   "quote": "Connect 100+ databases, APIs and SaaS tools to your apps"
+  },
+  {
+   "field": "key_features",
+   "url": "https://tooljet.com",
+   "quote": "Enterprise-grade workflow orchestration with reliability and scale"
+  },
+  {
+   "field": "key_features",
+   "url": "https://tooljet.com",
+   "quote": "SSO SAML RBAC Audit logs"
+  },
+  {
+   "field": "key_features",
+   "url": "https://tooljet.com",
+   "quote": "Run ToolJet on Docker, Kubernetes, your VPC or on-premise"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://tooljet.com",
+   "quote": "Internal tools Customer portals Back office tools Business applications"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://tooljet.com",
+   "quote": "Build an IT incidents dashboard using @servicenow data"
+  },
+  {
+   "field": "pricing",
+   "url": "https://tooljet.com/pricing",
+   "quote": "Perfect for small teams to evaluate ToolJet $0 per builder/month"
+  },
+  {
+   "field": "pricing",
+   "url": "https://tooljet.com/pricing",
+   "quote": "$23 per builder/month"
+  },
+  {
+   "field": "pricing",
+   "url": "https://tooljet.com/pricing",
+   "quote": "$79 per builder/month"
+  },
+  {
+   "field": "pricing",
+   "url": "https://tooljet.com/pricing",
+   "quote": "$199 per builder/month"
+  },
+  {
+   "field": "pricing",
+   "url": "https://tooljet.com/pricing",
+   "quote": "Unlimited end users — no per-user fees"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/ToolJet/ToolJet",
+   "quote": "GitHub license which is AGPL license"
+  },
+  {
+   "field": "api",
+   "url": "https://docs.tooljet.com/docs/",
+   "quote": "ToolJet API Personal Access Token GitSync API"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/ToolJet/ToolJet",
+   "quote": "The easiest way to get started with ToolJet is by creating a [ToolJet Cloud](https://tooljet.com) account."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://tooljet.com",
+   "quote": "화면에 보이는 언어 이름: English"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

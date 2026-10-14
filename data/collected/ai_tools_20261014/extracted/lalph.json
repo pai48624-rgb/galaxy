@@ -1,0 +1,82 @@
+{
+ "company": null,
+ "one_liner_ko": "GitHub Issues·Linear 같은 이슈 출처에서 작업을 가져와 LLM 에이전트를 돌리는 오케스트레이터.",
+ "what_it_does_ko": "lalph는 선택한 이슈 출처(GitHub Issues, Linear 등)에서 작업을 가져와 작업 상태를 동기화하며 LLM 에이전트로 처리하는 CLI 오케스트레이터다. 프로젝트별로 실행 여부·동시 실행 수·대상 브랜치·git 흐름·리뷰 에이전트를 설정한다. 에이전트 프리셋으로 어떤 CLI 에이전트와 모델을 쓸지 정하고, 라벨 기반으로 이슈를 다른 프리셋에 보낼 수 있다. 플랜 모드에서는 상위 계획을 명세서로 바꾸고 PRD 작업을 생성한다.",
+ "key_features": [
+  "이슈 출처(GitHub Issues, Linear 등)에서 작업 가져오기·상태 동기화",
+  "프로젝트별 동시 실행 수·대상 브랜치·git 흐름·리뷰 에이전트 설정",
+  "CLI 에이전트·모델을 정하는 에이전트 프리셋과 라벨 기반 라우팅",
+  "상위 계획을 명세서와 PRD 작업으로 바꾸는 플랜 모드",
+  "여러 반복을 동시에 돌리는 git worktree",
+  "자동 병합·이슈 의존성을 지원하는 PR 흐름(선택)",
+  "에디터에서 바로 이슈 생성"
+ ],
+ "use_cases_ko": [
+  "개발자가 이슈 트래커의 작업을 여러 AI 코딩 에이전트에 자동 배정"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "CLI"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/tim-smart/lalph",
+   "quote": "A LLM agent orchestrator driven by your chosen source of issues."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/tim-smart/lalph",
+   "quote": "Pull work from an issue source (GitHub Issues, Linear, etc.) and keep task state in sync"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/tim-smart/lalph",
+   "quote": "Projects to group execution settings (enabled state, concurrency, target branch, git flow, review agent)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/tim-smart/lalph",
+   "quote": "Agent presets to control which CLI agent and optional clanka model run tasks, with optional label-based routing"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/tim-smart/lalph",
+   "quote": "Plan mode to turn a high-level plan into a spec and generate PRD tasks"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/tim-smart/lalph",
+   "quote": "Git worktrees to support multiple concurrent iterations"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/tim-smart/lalph",
+   "quote": "Optional PR flow with auto-merge and support for issue dependencies"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/tim-smart/lalph",
+   "quote": "`lalph issue` opens a new-issue template in your editor."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/tim-smart/lalph",
+   "quote": "Run the main loop across enabled projects: `lalph`"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/tim-smart/lalph",
+   "quote": "npm install -g lalph"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

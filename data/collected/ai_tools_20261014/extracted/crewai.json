@@ -1,0 +1,58 @@
+{
+ "company": "CrewAI",
+ "one_liner_ko": "업무팀과 개발자가 함께 에이전트를 만들고, 플랫폼팀이 중앙에서 통제하는 기업용 에이전트 구축·실행 플랫폼(오픈소스 멀티 에이전트 프레임워크 기반).",
+ "what_it_does_ko": "CrewAI는 프로덕션용 멀티 에이전트 워크플로를 만드는 오픈소스 파이썬 프레임워크로, 역할 기반 에이전트 협업(Crews)과 이벤트 기반 정밀 제어(Flows)를 제공한다. 기업용 플랫폼에서는 프롬프트·캔버스형 빌더로 에이전트를 만들고(파이썬으로 내보내기 가능), 컨트롤 플레인이 모든 실행을 추적·감사·승인 단계로 관리한다. 운영 실행 결과를 학습 데이터로 삼아 정확도를 높이고, 여러 LLM을 바꿔 가며 시험할 수 있다. 자동화할 업무를 찾아 주는 Discovery 기능도 있다.",
+ "key_features": [
+  "역할 기반 에이전트 협업(Crews)과 이벤트 기반 워크플로(Flows)",
+  "노코드 비주얼 편집기(파이썬으로 내보내기)와 AI 코파일럿",
+  "모든 LLM·도구 호출 실시간 추적과 비용 집계",
+  "RBAC·감사 기록·사람 승인 단계",
+  "PII 마스킹·정책 검사 런타임 훅",
+  "여러 LLM 시험과 에이전트 학습",
+  "Gmail·Slack·Salesforce 등 트리거 연동",
+  "MCP 서버·UI 컴포넌트로 내보내기"
+ ],
+ "use_cases_ko": [
+  "회사 규모·매출 추정 등으로 리드 데이터 보강",
+  "강의 콘텐츠와 강사용 가이드 생성",
+  "기존 RPA를 대체한 고객 지원 티켓 응답"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Basic 무료: 자동화 2개, 월 50회 실행)",
+  "plans": [
+   {"name": "Basic", "price": 0, "currency": "USD", "period": "month", "limits": "비주얼 편집기·AI 코파일럿, GitHub 연동, 월 50회 워크플로 실행, 자동화 2개", "page_lang": "en"},
+   {"name": "Enterprise", "price": null, "currency": "USD", "period": null, "limits": "맞춤 가격, SSO·RBAC·PII 마스킹, 자체 VPC·인프라 배포, 45일 온보딩", "page_lang": "en"}
+  ],
+  "pricing_url": "https://crewai.com/pricing"
+ },
+ "open_source": "MIT",
+ "api": "있음",
+ "platforms": ["웹", "CLI", "API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://crewai.com", "quote": "CrewAI © Copyright 2026."},
+  {"field": "one_liner_ko", "url": "https://crewai.com", "quote": "Enabling business and technical teams to build agents while giving platform teams the control to govern them"},
+  {"field": "what_it_does_ko", "url": "https://github.com/crewAIInc/crewAI", "quote": "CrewAI is an open-source Python framework with high-level abstractions and low-level APIs for building production-ready multi-agent workflows."},
+  {"field": "what_it_does_ko", "url": "https://crewai.com", "quote": "CrewAI turns every production run into training data to sharpen accuracy, save money, and surface the next workflow to build"},
+  {"field": "what_it_does_ko", "url": "https://crewai.com", "quote": "You get a list of automation opportunities ranked by effort, value, and readiness."},
+  {"field": "key_features", "url": "https://github.com/crewAIInc/crewAI", "quote": "It gives developers autonomous agent collaboration through Crews and precise, event-driven control through Flows."},
+  {"field": "key_features", "url": "https://crewai.com", "quote": "No-code visual editor, exportable to Python"},
+  {"field": "key_features", "url": "https://crewai.com", "quote": "Real-time tracing of every LLM call, tool call, and memory read is observable with full cost accounting"},
+  {"field": "key_features", "url": "https://crewai.com", "quote": "Human-in-the-loop approval gates and intervention during execution"},
+  {"field": "key_features", "url": "https://crewai.com", "quote": "Runtime hooks inject PII redaction and policy checks at every LLM and tool call"},
+  {"field": "key_features", "url": "https://crewai.com", "quote": "Multi-LLM testing for model swapping at runtime, find the right model for every workflow"},
+  {"field": "key_features", "url": "https://docs.crewai.com/", "quote": "Connect Gmail, Slack, Salesforce, and more."},
+  {"field": "key_features", "url": "https://crewai.com/pricing", "quote": "Export as MCP server"},
+  {"field": "use_cases_ko", "url": "https://crewai.com", "quote": "Gelato improved lead quality and prioritization with AI agents that enrich leads with data on company size, printer infrastructure and revenue estimates."},
+  {"field": "use_cases_ko", "url": "https://crewai.com", "quote": "a crew of AI agents that generate lesson content and instructor guides."},
+  {"field": "use_cases_ko", "url": "https://crewai.com", "quote": "replacing its legacy RPA tooling with a crew of AI agents."},
+  {"field": "pricing", "url": "https://crewai.com/pricing", "quote": "50 workflow executions/month"},
+  {"field": "pricing", "url": "https://crewai.com/pricing", "quote": "Deploy on CrewAI cloud, your own VPC, or your own infrastructure"},
+  {"field": "open_source", "url": "https://github.com/crewAIInc/crewAI", "quote": "https://img.shields.io/badge/License-MIT-green.svg"},
+  {"field": "api", "url": "https://crewai.com", "quote": "Code-first API built for total control"},
+  {"field": "platforms", "url": "https://docs.crewai.com/", "quote": "Install via uv , configure API keys, and set up the CLI for local development."},
+  {"field": "korean_support", "url": "https://crewai.com", "quote": "html lang: en"}
+ ],
+ "mismatch": [],
+ "plan_change": [{"official": "오픈소스(MIT) 프레임워크 외에 클라우드 플랫폼 Basic 무료(월 50회 실행)와 Enterprise 맞춤 가격(초과 실행 유연 과금)", "diff": "'오픈소스(무료)' 분류는 프레임워크에만 맞고, 공식 사이트 주력은 실행 횟수 한도가 있는 상용 기업용 플랫폼(AMP)임", "url": "https://crewai.com/pricing"}]
+}

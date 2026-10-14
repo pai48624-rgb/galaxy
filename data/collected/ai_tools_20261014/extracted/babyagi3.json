@@ -1,0 +1,92 @@
+{
+ "company": null,
+ "one_liner_ko": "한 번 설정한 뒤 자연어로 부리는 최소형 AI 에이전트(기억·리서치·이메일·일정·스킬 학습).",
+ "what_it_does_ko": "BabyAGI 3는 한 번 설정하고 자연어로 조작하는 최소형 AI 에이전트다. 기억하기, 주제 조사, 이메일 보내기, 작업 예약, 새 스킬 학습을 시킬 수 있다. 실행하면 기억·스케줄링·백그라운드 작업·웹 검색을 갖춘 상주 에이전트가 된다. Anthropic 또는 OpenAI API 키 하나가 필요하고, AgentMail 이메일 채널과 SendBlue 문자/iMessage 채널을 붙일 수 있다. 자동화를 많이 돌리면 비용이 커질 수 있다고 경고한다.",
+ "key_features": [
+  "자연어로 설정·조작",
+  "지속 기억(memory)",
+  "작업 예약·백그라운드 작업",
+  "웹 검색",
+  "AgentMail 이메일 채널",
+  "SendBlue 문자·iMessage 채널",
+  "LLM 대화형 초기 설정 마법사"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "CLI"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/yoheinakajima/babyagi3",
+   "quote": "A minimal AI agent you configure once, then run through natural language."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/yoheinakajima/babyagi3",
+   "quote": "Tell it to remember things, research topics, send emails, schedule tasks, and learn new skills."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/yoheinakajima/babyagi3",
+   "quote": "You now have a persistent AI agent with memory, scheduling, background tasks, and web search."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/yoheinakajima/babyagi3",
+   "quote": "# Set one LLM API key (Anthropic OR OpenAI)"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/yoheinakajima/babyagi3",
+   "quote": "BabyAGI can become expensive if you run many automations, background objectives, or premium models."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/yoheinakajima/babyagi3",
+   "quote": "Everything is a message in a conversation."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/yoheinakajima/babyagi3",
+   "quote": "gives your agent its own email address for sending reports, handling signups, and email communication."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/yoheinakajima/babyagi3",
+   "quote": "lets you text your agent from your phone."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/yoheinakajima/babyagi3",
+   "quote": "an LLM-powered setup conversation guides you through onboarding before the agent starts."
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/yoheinakajima/babyagi3",
+   "quote": "python main.py"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://babyagi.org/",
+   "quote": "hreflang: 없음"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "GitHub에서 받아 자기 LLM API 키로 직접 실행하는 에이전트, 유료 구독 언급 없음",
+   "diff": "기존 분류 '프리미엄(무료+유료 구독)'과 달리 자체 실행형(비용은 쓰는 모델 API 요금)",
+   "url": "https://github.com/yoheinakajima/babyagi3"
+  }
+ ],
+ "plan_change": [],
+ "note": "babyagi.org 는 이전 BabyAGI(functionz 프레임워크) 소개 페이지라 babyagi3 내용은 GitHub 기준. 라이선스 이름 미확인."
+}

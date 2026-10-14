@@ -1,0 +1,170 @@
+{
+ "company": "dbt Labs, LLC",
+ "one_liner_ko": "SQL 기반 개발과 실시간 검증으로 AI에 쓸 수 있는 데이터 변환 파이프라인을 만들고 테스트·배포하는 개방형 표준 도구.",
+ "what_it_does_ko": "dbt는 데이터 분석가와 엔지니어가 소프트웨어 개발 방식(모듈화·테스트·버전 관리)으로 데이터를 변환하게 해 준다. select 문으로 모델을 작성하면 dbt가 이를 데이터 웨어하우스의 테이블과 뷰로 만든다. 프로젝트·컬럼 단위 계보(lineage)를 대화형 DAG로 보여 주고, 모델·컬럼 이름을 바꾸면 하위 참조를 자동으로 고친다. dbt는 데이터를 저장하지 않으며 Snowflake·Databricks 등과 연동된다. Fivetran과 dbt Labs는 합병해 한 회사가 되었다.",
+ "key_features": [
+  "SQL 기반 모듈형·테스트·버전 관리 데이터 변환",
+  "프로젝트·컬럼 단위 대화형 계보(lineage)",
+  "모델·컬럼 이름 변경 시 하위 참조 자동 수정",
+  "변경된 모델만 다시 빌드하는 상태 기반 오케스트레이션(dbt State)",
+  "dbt Semantic Layer로 지표 정의·조회",
+  "브라우저 IDE와 VS Code·Cursor 확장",
+  "분석 엔지니어링용 AI 에이전트 dbt Wizard",
+  "dbt MCP 서버"
+ ],
+ "use_cases_ko": [
+  "데이터 팀이 웨어하우스 안에서 분석용 데이터 모델을 만들고 테스트",
+  "AI·분석에 쓸 신뢰할 수 있는 데이터 준비",
+  "웨어하우스 컴퓨팅 비용 절감"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Developer: 개발자 1석, 월 3,000개 모델 빌드, 프로젝트 1개)",
+  "plans": [
+   {
+    "name": "Developer",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "개발자 1석, 월 3,000개 모델 빌드, 프로젝트 1개",
+    "page_lang": "en"
+   },
+   {
+    "name": "Starter",
+    "price": 100,
+    "currency": "USD",
+    "period": "month",
+    "limits": "사용자당, 개발자 5석, 월 15,000개 모델 빌드, 월 5,000 지표 쿼리, 프로젝트 1개",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": "USD",
+    "period": "month",
+    "limits": "맞춤 가격, 월 100,000개 모델 빌드, 프로젝트 30개",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise+",
+    "price": null,
+    "currency": "USD",
+    "period": "month",
+    "limits": "맞춤 가격, 프로젝트 무제한, PrivateLink·IP 제한",
+    "page_lang": "en"
+   },
+   {
+    "name": "dbt State (추가 기능)",
+    "price": 0.094,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "DATT(일별 활성 대상 테이블)당 종량제, 30일 무료 체험",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://www.getdbt.com/pricing"
+ },
+ "open_source": "Apache 2.0 (dbt v2.0 소스 코드)",
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "윈도",
+  "맥",
+  "CLI",
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.getdbt.com/",
+   "quote": "© 2026 dbt Labs, LLC. All Rights Reserved."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.getdbt.com/",
+   "quote": "dbt combines SQL-based development with real-time validation and stateful"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/dbt-labs/dbt",
+   "quote": "Analysts using dbt can transform their data by simply writing select statements, while dbt handles turning these statements into tables and views in a data warehouse."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.getdbt.com/",
+   "quote": "Fivetran and dbt are one company. Here's what that means."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.getdbt.com/",
+   "quote": "Rename a model or column once, and dbt automatically updates every downstream reference."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.getdbt.com/",
+   "quote": "drill down to column-level lineage to trace where fields come from"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.getdbt.com/pricing",
+   "quote": "dbt State simplifies orchestration and saves you on compute."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.getdbt.com/pricing",
+   "quote": "dbt Wizard is an agent built for analytics engineering, grounded natively in your project."
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.getdbt.com/",
+   "quote": "The dbt Semantic Layer eliminates duplicate coding by allowing data teams to define metrics on top of existing models"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.getdbt.com/",
+   "quote": "dbt helps teams spot inefficiencies, automate routine work, and use compute smarter—cutting costs and speeding delivery."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.getdbt.com/pricing",
+   "quote": "For individual developers getting started with dbt, without managing infrastructure."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.getdbt.com/pricing",
+   "quote": "$100 per user/month"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.getdbt.com/pricing",
+   "quote": "Pay-as-you-go: $0.094 / DATT"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/dbt-labs/dbt",
+   "quote": "The `main` branch now contains all the Apache 2.0 source code of dbt v2.0"
+  },
+  {
+   "field": "api",
+   "url": "https://www.getdbt.com/pricing",
+   "quote": "Define & query metrics with dbt Semantic Layer\n API access"
+  },
+  {
+   "field": "platforms",
+   "url": "https://www.getdbt.com/pricing",
+   "quote": "dbt command line interface (CLI) \n VSCode extension \n Browser-based studio IDE"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/dbt-labs/dbt",
+   "quote": "| macOS | 🟢 | 🟢 |\n| Linux | 🟢 | 🟢 |\n| Windows | 🟢 | 🟡 |"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.getdbt.com/",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

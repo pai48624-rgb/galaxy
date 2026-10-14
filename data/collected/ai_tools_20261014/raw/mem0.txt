@@ -1,0 +1,752 @@
+=== [home] https://mem0.ai (lang=en)
+Mem0 - AI Memory Layer for your Agents & Apps | Persistent Context 
+ DEVELOPERS
+ RESOURCES
+ PRICING
+ USECASES
+ COMPANY
+ Star 62,590 
+ home_primary_get-started
+ Home
+ Get Started
+ DEVELOPERS
+ RESOURCES
+ PRICING
+ USECASES
+ COMPANY
+ Star 62,590 
+ home_primary_get-started
+ Home
+ Get Started
+ Launching DolphinBench - a memory benchmark for how AI agents act on real tasks.
+ View benchmark
+ Launching DolphinBench - a memory benchmark for how AI agents act on real tasks.
+ View benchmark
+ View benchmark
+ Launching DolphinBench - a memory benchmark for how AI agents act on real tasks. 
+ Backed by
+ Combinator
+ AI memory that persists across sessions and agents
+ AI memory that persists across sessions and agents
+ Drop-in memory infrastructure for AI agents and apps. Context that persists. Built for production.
+ Drop-in memory infrastructure for AI agents and apps. Context that persists. Built for production.
+ home_primary_get-started
+ Home
+ Get Started
+ Copy to Clipboard Copy to Clipboard Copied! 
+ Setup for Agent
+ Home
+ home_secondary_agentsetup
+ SDK Integration
+ Agent Harness
+ Plugin
+ Python
+ node js
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ # Step 1 — Install the SDK. Run this in your terminal (not in Python): # # pip install mem0ai # # Step 2 — Save this file as mem0_quickstart.py and run: python mem0_quickstart.py import os from mem0 import MemoryClient   # Set your API key (get one at https://app.mem0.ai) client = MemoryClient (api_key=os. getenv ( "MEM0_API_KEY" , "your-api-key-here" ))   # Use the same user ID when adding and searching USER_ID = "user123"   # Add a memory messages = [ { "role" : "user" , "content" : "I'm a vegetarian and allergic to nuts." }, { "role" : "assistant" , "content" : "Got it! I'll remember your dietary preferences." }, ] client. add (messages, user_id=USER_ID)   # Search memories results = client. search ( "What are my dietary restrictions?" , filters={ "user_id" : USER_ID} ) print (results) 
+ SDK
+ Harness
+ Plugin
+ Python
+ node js
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ # Step 1 — Install the SDK. Run this in your terminal (not in Python): # # pip install mem0ai # # Step 2 — Save this file as mem0_quickstart.py and run: python mem0_quickstart.py import os from mem0 import MemoryClient   # Set your API key (get one at https://app.mem0.ai) client = MemoryClient (api_key=os. getenv ( "MEM0_API_KEY" , "your-api-key-here" ))   # Use the same user ID when adding and searching USER_ID = "user123"   # Add a memory messages = [ { "role" : "user" , "content" : "I'm a vegetarian and allergic to nuts." }, { "role" : "assistant" , "content" : "Got it! I'll remember your dietary preferences." }, ] client. add (messages, user_id=USER_ID)   # Search memories results = client. search ( "What are my dietary restrictions?" , filters={ "user_id" : USER_ID} ) print (results) 
+ 150,000 +
+ 150,000 +
+ 150,000 +
+ 150,000 +
+ 150,000 +
+ 150,000 +
+ Developers build with Mem0
+ Built for <developers> who want proof, not promises
+ Built for <developers> who want proof, not promises
+ Built for <developers> who want proof, not promises
+ Mem0 gives agents persistent memory without pipeline changes. Less redundant context, lower token costs, measurably faster responses.
+ Mem0 gives agents persistent memory without pipeline changes. Less redundant context, lower token costs, measurably faster responses.
+ Mem0
+ Try Mem0 now 
+ Efficiency
+ Visibility
+ Control
+ Memory Compression Engine
+ Automatically condenses chat history into compact memories that cut tokens and latency while keeping the right context.
+ Try Mem0 now 
+ Efficiency
+ Memory Compression Engine
+ Automatically condenses chat history into compact memories that cut tokens and latency while keeping the right context.
+ Visibility
+ Control
+ How it works
+ Add anything. Mem0 learns 
+ Add
+ Input data in seconds with no config or boilerplate 
+ Learn
+ Mem0 extracts and  updates memories
+ Retrieve
+ Mem0 retrieves key memories as users interact
+ Add
+ Input data in seconds with no config or boilerplate
+ Learn
+ Mem0 extracts and  updates memories
+ Retrieve
+ Mem0 retrieves key memories as users interact
+ AI memory that adapts to your domain 
+ Mem0 helps AI remember what matters.
+ Mem0 helps AI remember what matters.
+ Healthcare
+ Education
+ E-commerce
+ Customer Support
+ Sales & CRM
+ Smart Patient Care Assistant
+ Remembers patient history, allergies, and treatment preferences across visits therefore providing personalized care that improves with every interaction.
+ Chronic Condition Companion
+ Learns what works (and what doesn’t) for the patient over time, offering thoughtful reminders and insights tailored to each patient’s journey.
+ Therapy Progress Tracker
+ Builds on previous sessions to deliver consistent, context-aware mental health support. Creates trust through conversations that remember what matters to each patient.
+ home_secondary_healtcare
+ Home
+ Explore Mem0 for Healthcare
+ HEALTHCARE
+ Smart Patient Care Assistant
+ Remembers patient history, allergies, and treatment preferences across visits therefore providing personalized care that improves with every interaction.
+ home_primary_get-started
+ Home
+ Explore Mem0 for Healthcare
+ Education
+ Adaptive Learning Tutor
+ Adapts to each student's pace and learning style, remembering what works best. Transforms one-size-fits-all education into personalized learning that evolves with every lesson.
+ home_primary_get-started
+ Home
+ Explore Mem0 for Education
+ Sales & CRM
+ Sales Assistant with Persistent Context
+ Track every interaction, objection, and milestone across long sales cycles ensuring reps have instant recall at every touchpoint.
+ home_primary_get-started
+ Home
+ Explore Mem0 for Sales
+ New Algorithm
+ Benchmarking Mem0
+ Single-pass hierarchical distillation. Multi-signal retrieval. Benchmarked across LoCoMo, LongMemEval, and BEAM.
+ Single-pass hierarchical distillation. Multi-signal retrieval. Benchmarked across LoCoMo, LongMemEval, and BEAM.
+ home_primary_research
+ Home
+ View Research
+ Built for enterprise Designed for control 
+ Memory at scale is infrastructure. Mem0 gives enterprise teams governance, reliability, and full observability so engineers spend time building, not recovering lost context.
+ Memory at scale is infrastructure. Mem0 gives enterprise teams governance, reliability, and full observability so engineers spend time building, not recovering lost context.
+ Governance
+ SOC 2, HIPAA, BYOK, zero-trust. Your data stays yours.
+ Portable
+ Kubernetes, private cloud, or air-gapped. Same API everywhere.
+ Auditable
+ Every read and write logged. Know what, who, and when.
+ We take security and privacy seriously. Mem0 is SOC 2 (Type 1), HIPAA, and GDPR compliant, ensuring your data is protected with industry-standard safeguards at every step.
+ We take security and privacy seriously. Mem0 is SOC 2 (Type 1), HIPAA, and GDPR compliant, ensuring your data is protected with industry-standard safeguards at every step.
+ home_enterprise_talk-to-team
+ Home
+ Visit Trust Center
+ home_enterprise_talk-to-team
+ Home
+ Visit Trust Center
+ Blogs
+ Latest from the Mem0 Blog
+ Cursor Pricing 2026: Plans, Usage Models & Which to Choose
+ Sep 29, 2026 
+ ·
+ Library
+ Testing memory placement against compaction cliff
+ Sep 26, 2026 
+ ·
+ Library
+ Introducing DolphinBench: Mapping the Pareto Frontier of Agent Memory
+ Sep 22, 2026 
+ ·
+ Research
+ Give your AI memory 
+ and 
+ persona
+
+=== [pricing] https://mem0.ai/pricing (lang=en)
+AI Memory Pricing - LLM Memory Plans Starting Free | Mem0 
+ DEVELOPERS
+ RESOURCES
+ PRICING
+ USECASES
+ COMPANY
+ Star 62,590 
+ pricing_primary_get-started
+ Pricing
+ Get Started
+ DEVELOPERS
+ RESOURCES
+ PRICING
+ USECASES
+ COMPANY
+ Star 62,590 
+ pricing_primary_get-started
+ Pricing
+ Get Started
+ Pricing
+ Simple and Affordable
+ Hobby
+ For individuals exploring and building side projects.
+ Free
+ home_primary_get-started
+ Home
+ Get Started
+ Unlimited end users
+ 10,000 add requests/ month
+ 1,000 retrieval requests/ month
+ 1 project
+ Community support
+ Starter
+ For solo builders shipping their first AI agent.
+ $19
+ / month
+ home_primary_get-started
+ Home
+ Get Started
+ Unlimited end users
+ 50,000 add requests /month
+ 5,000 retrieval requests / month
+ 1 project
+ Community support
+ Pro
+ Popular
+ For production apps with real scale.
+ $249
+ / month
+ home_primary_get-started
+ Home
+ Get Started
+ Unlimited end users
+ 500,000 add requests /month
+ 50,000 retrieval requests /month
+ Unlimited projects 
+ Multiproject support 
+ Private Slack support 
+ Advanced analytics 
+ Graph memory (entity linking) 
+ Dream (Memory Consolidation) 
+ Enterprise
+ For teams that need compliance, control & SLAs.
+ Custom
+ home_primary_get-started
+ Home
+ Contact Us
+ Unlimited end users
+ Unlimited add requests
+ Unlimited retrieval requests
+ Unlimited projects
+ Multiproject support 
+ Private Slack support 
+ Advanced analytics
+ Graph memory (entity linking)
+ Dream (Memory Consolidation)
+ SLA support 
+ On-prem deployment 
+ Audit logs 
+ Custom integrations & SSO 
+ Compare Plans
+ Every detail, side by side
+ Feature
+ Hobby
+ Starter
+ Pro
+ Enterprise
+ Usage & limits
+ Price
+ Free
+ $19/month
+ $249/month
+ Custom
+ End users
+ Unlimited
+ Unlimited
+ Unlimited
+ Unlimited
+ Add requests / month
+ 10,000
+ 50,000
+ 500,000
+ Unlimited
+ Retrieval requests / month
+ 1,000
+ 5,000
+ 50,000
+ Unlimited
+ Projects
+ 1
+ 1
+ Unlimited
+ Unlimited
+ Support & enterprise features
+ Support
+ Community
+ Community
+ Private Slack
+ Private Slack + SLA
+ Analytics
+ —
+ —
+ Advanced
+ Advanced
+ Graph memory 
+ —
+ —
+ Dream
+ —
+ —
+ On-prem deployment
+ —
+ —
+ —
+ Audit logs
+ —
+ —
+ —
+ Custom integrations
+ —
+ —
+ —
+ SSO
+ —
+ —
+ —
+ Not finding something that fits your need?
+ We also support usage-based pricing for teams whose traffic doesn’t map cleanly to a fixed tier.
+ home_primary_get-started
+ Home
+ Talk to our team
+ FAQ
+ Frequently Asked Questions
+ Is Mem0 free? What's included in the free tier?
+ Is Mem0 free? What's included in the free tier?
+ What is the difference between Mem0 Open-Source and the Platform?
+ What is the difference between Mem0 Open-Source and the Platform?
+ What is a memory add request vs. a retrieval request?
+ What is a memory add request vs. a retrieval request?
+ What does the Pro plan include?
+ What does the Pro plan include?
+ Do you support usage-based pricing?
+ Do you support usage-based pricing?
+ How do I get started?
+ How do I get started?
+ Give your AI memory 
+ and 
+ personality 
+ pricing_primary_get-started
+ pricing_primary_get-started
+ Get Started
+ Drop-in memory infrastructure for AI agents and apps. Context that persists. Built for production.
+ Compliance
+ HIPAA Ready 
+ SOC 2 Type I 
+ GDPR Ready 
+ Developers
+ Developer Docs 
+ API Reference 
+ MCP Integration 
+ OpenMemory 
+ Gateway 
+ CLI 
+ Trust Center 
+ Status 
+ Product
+ Research 
+ DolphinBench ↗ 
+ Blog 
+ Library 
+ Guide 
+ Integrations 
+ Release notes 
+ GitHub 
+ Company
+ About Us 
+ Contact Us 
+ Careers 
+ Startup Program 
+ Investors 
+ Pricing 
+ Usecase
+ Customer Support 
+ Healthcare 
+ Education 
+ Sales & CRM 
+ E-Commerce 
+ © 2026 Mem0
+ Privacy Policy 
+ Terms of Service 
+ Give your AI memory 
+ and 
+ personality 
+ pricing_primary_get-started
+ pricing_primary_get-started
+ Get Started
+ Drop-in memory infrastructure for AI agents and apps. Context that persists. Built for production.
+ Compliance
+ HIPAA Ready 
+ SOC 2 Type I 
+ GDPR Ready 
+ Developers
+ Developer Docs 
+ API Reference 
+ MCP Integration 
+ OpenMemory 
+ Gateway 
+ CLI 
+ Trust Center 
+ Status 
+ Product
+ Research 
+ DolphinBench ↗ 
+ Blog 
+ Library 
+ Guide 
+ Integrations 
+ Release notes 
+ GitHub 
+ Company
+ About Us 
+ Contact Us 
+ Careers 
+ Startup Program 
+ Investors 
+ Pricing 
+ Usecase
+ Customer Support 
+ Healthcare 
+ Education 
+ Sales & CRM 
+ E-Commerce 
+ © 2026 Mem0
+ Privacy Policy 
+ Terms of Service 
+ Give your AI memory 
+ and 
+ personality 
+ pricing_primary_get-started
+ pricing_primary_get-started
+ Get Started
+ Drop-in memory infrastructure for AI agents and apps. Context that persists. Built for production.
+ Compliance
+ HIPAA Ready 
+ SOC 2 Type I 
+ GDPR Ready 
+ Developers
+ Developer Docs 
+ API Reference 
+ MCP Integration 
+ OpenMemory 
+ Gateway 
+ CLI 
+ Trust Center 
+ Status 
+ Product
+ Research 
+ DolphinBench ↗ 
+ Blog 
+ Library 
+ Guide 
+ Integrations 
+ Release notes 
+ GitHub 
+ Company
+ About Us 
+ Contact Us 
+ Careers 
+ Startup Program 
+ Investors 
+ Pricing 
+ Usecase
+ Customer Support 
+ Healthcare 
+ Education 
+ Sales & CRM 
+ E-Commerce 
+ © 2026 Mem0
+ Privacy Policy 
+ Terms of Service
+
+=== [about] https://mem0.ai/about-us (lang=en)
+About Mem0 - Persistent Memory for AI Agents 
+ DEVELOPERS
+ RESOURCES
+ PRICING
+ USECASES
+ COMPANY
+ Star 62,590 
+ about-us_primary_get-started
+ About Us
+ Get Started
+ DEVELOPERS
+ RESOURCES
+ PRICING
+ USECASES
+ COMPANY
+ Star 62,590 
+ about-us_primary_get-started
+ About Us
+ Get Started
+ About Us
+ Mem0 - The Memory Layer for AI Agents
+ So every interaction is personal, context-aware, and efficient.
+ So every interaction is personal, context-aware, and efficient.
+ about-us_primary_get-started
+ Home
+ Get Started
+ about-us_secondary
+ Home
+ Read Docs
+ 200,000+
+ Developers
+ 200,000+
+ Developers
+ $24M
+ Raised
+ $24M
+ Raised
+ 66,000+
+ Github Stars
+ 66,000+
+ Github Stars
+ 486+
+ Research citations
+ 486+
+ Research citations
+ Persistent Memory Infrastructure for AI Agents
+ Vision
+ A world where every AI agent remembers the people it serves, and memory is standard infrastructure rather than a research project.
+ Mission
+ Mem0 is building the default memory layer for AI agents, making persistent memory as standard for every developer as a database.
+ Purpose
+ In AI's digital amnesia, giving every agent persistent memory that learns, compresses, and recalls what matters automatically.
+ " Every agentic application needs memory, just as every application needs a database. We're building the default memory layer for AI agents - making LLM memory accessible and reliable for every developer. " 
+ Taranjeet Singh
+ Taranjeet Singh
+ Taranjeet Singh
+ CEO & Co-founder, Mem0
+ CEO & Co-founder, Mem0
+ CEO & Co-founder, Mem0
+ The team behind Mem0
+ Taranjeet Singh is the CEO and co-founder of Mem0, the memory layer for AI agents. He scaled one of the earliest GPT app stores to 1M+ users, shipped an AI tutoring app featured at Google I/O, and built EvalAI - before the industry had a name for what he was doing.
+ Taranjeet Singh
+ CEO & CO-FOUNDER
+ Taranjeet Singh is the CEO and co-founder of Mem0, the memory layer for AI agents. He scaled one of the earliest GPT app stores to 1M+ users, shipped an AI tutoring app featured at Google I/O, and built EvalAI - before the industry had a name for what he was doing.
+ Taranjeet Singh
+ CEO & CO-FOUNDER
+ Read More
+ Taranjeet Singh is the CEO and co-founder of Mem0, the memory layer for AI agents. He scaled one of the earliest GPT app stores to 1M+ users, shipped an AI tutoring app featured at Google I/O, and built EvalAI - before the industry had a name for what he was doing.
+ Taranjeet Singh
+ CEO & CO-FOUNDER
+ Read More
+ Deshraj Yadav is the CTO and co-founder of Mem0, where he leads the memory infrastructure benchmarked on LoCoMo, LongMemEval, and BEAM. He created EvalAI at Georgia Tech, then spent years at Tesla engineering the AI platform that kept Autopilot and FSD running at scale.
+ Deshraj Yadav
+ CTO & Co-founder
+ Deshraj Yadav is the CTO and co-founder of Mem0, where he leads the memory infrastructure benchmarked on LoCoMo, LongMemEval, and BEAM. He created EvalAI at Georgia Tech, then spent years at Tesla engineering the AI platform that kept Autopilot and FSD running at scale.
+ Deshraj Yadav
+ CTO & Co-founder
+ Read More
+ Deshraj Yadav is the CTO and co-founder of Mem0, where he leads the memory infrastructure benchmarked on LoCoMo, LongMemEval, and BEAM. He created EvalAI at Georgia Tech, then spent years at Tesla engineering the AI platform that kept Autopilot and FSD running at scale.
+ Deshraj Yadav
+ CTO & Co-founder
+ Read More
+ Backed by the best in AI infrastructure
+ Backed by the best in AI infrastructure
+ home_primary_investors
+ Home
+ View Investors
+ Built for enterprise Designed for control
+ Built for enterprise Designe
+
+=== [pricing2] https://mem0.ai/library/llms-and-models/cursor-pricing (lang=en)
+Cursor Pricing 2026: Plans, Usage Models & Which to Choose 
+ DEVELOPERS
+ RESOURCES
+ PRICING
+ USECASES
+ COMPANY
+ Star 62,590 
+ library_detail_primary
+ Library
+ Get Started
+ DEVELOPERS
+ RESOURCES
+ PRICING
+ USECASES
+ COMPANY
+ Star 62,590 
+ library_detail_primary
+ Library
+ Get Started
+ Home 
+ /
+ Library 
+ /
+ LLMs & Models 
+ /
+ Cursor Pricing 2026: Plans, Usage Models & Which to Choose
+ Share
+ Cursor Pricing 2026: Plans, Usage Models & Which to Choose
+ Cursor Pricing 2026: Plans, Usage Models & Which to Choose
+ Cursor Pricing 2026: Plans, Usage Models & Which to Choose
+ Aashi Dutt 
+ Published on Sep 29, 2026 
+ ·
+ 17 min read
+ On this page
+ Cursor is free on the Hobby plan. Monthly plans start at $20 for Pro, $60 for Pro+, and $200 for Ultra; Teams seats cost $40 per user for Standard or $120 for Premium, while Enterprise pricing is custom. Paid plans include model usage, but the allowances and eligible models vary by plan.
+ The subscription price is only part of the bill. Each paid plan includes model usage, but how quickly you use it depends on the models you choose and how often you run agents. If you reach your limit, you can upgrade or pay for extra usage. On-demand billing must be enabled for those extra charges, so check your settings before a busy month.
+ Key Takeaways
+ Cursor pricing combines seat-based plans with metered LLM usage, so both the number of engineers and how agents use tokens affect total cost.
+ Cursor still starts free with the Hobby plan, then runs Pro at $20/mo, Pro+ at $60/mo, Ultra at $200/mo, and Teams at $40/user/mo, with Enterprise priced on request. The headline prices barely moved; what changed is what those dollars actually buy.
+ The largest hidden cost driver is prompt size, especially when agents repeatedly send long conversation histories and broad code context.
+ Mem0 provides a persistent memory layer for agents built with Cursor, storing useful context outside the prompt and retrieving relevant information for each request.
+ Selective memory retrieval may reduce the tokens an agent sends to its LLM API, but net savings depend on caching and the costs of memory extraction, retrieval, and storage.
+ Mem0 can sit in an agent backend developed with Cursor and serve multiple agents or channels. It is separate from Cursor’s built-in assistant and does not automatically reduce Cursor subscription charges.
+ What is Cursor and what affects Cursor pricing? 
+ Cursor is an AI-first IDE and coding assistant that integrates directly with core developer tools like Git, CI, and issue trackers. It wraps LLM capabilities around everyday coding tasks so engineers can use features such as inline code completion, chat about repositories, automated refactors, and agent-like workflows while staying inside their editor.
+ Two main dimensions drive Cursor pricing:
+ Seats: how many engineers use Cursor, and which plan tier they are on.
+ LLM usage: how many tokens those engineers and their agents consume through code completion, chat, and advanced features.
+ On the seat side, Cursor offers a Free tier for hobby usage, Pro and higher tiers for individual power users, and Teams or Enterprise plans for organizations that need collaboration and administrative controls. The nominal monthly price per seat defines the baseline cost.
+ On the usage side, Cursor sits on top of foundation models that are billed by token. Each completion or chat request consumes input tokens for the prompt and output tokens for the response. The size and frequency of those prompts, along with the choice of underlying model, are the practical drivers of usage-
+
+=== [meta] https://mem0.ai
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/mem0ai/mem0
+<p align="center">
+  <a href="https://github.com/mem0ai/mem0">
+    <img src="docs/images/banner-sm.png" width="800px" alt="Mem0 - The Memory Layer for Personalized AI">
+  </a>
+</p>
+<p align="center" style="display: flex; justify-content: center; gap: 20px; align-items: center;">
+  <a href="https://trendshift.io/repositories/11194" target="blank">
+    <img src="https://trendshift.io/api/badge/repositories/11194" alt="mem0ai%2Fmem0 | Trendshift" width="250" height="55"/>
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://mem0.ai">Learn more</a>
+  ·
+  <a href="https://mem0.dev/DiG">Join Discord</a>
+  ·
+  <a href="https://mem0.dev/demo">Demo</a>
+</p>
+
+<p align="center">
+  <a href="https://mem0.dev/DiG">
+    <img src="https://img.shields.io/badge/Discord-%235865F2.svg?&logo=discord&logoColor=white" alt="Mem0 Discord">
+  </a>
+  <a href="https://pepy.tech/project/mem0ai">
+    <img src="https://img.shields.io/pypi/dm/mem0ai" alt="Mem0 PyPI - Downloads">
+  </a>
+  <a href="https://github.com/mem0ai/mem0">
+    <img src="https://img.shields.io/github/commit-activity/m/mem0ai/mem0?style=flat-square" alt="GitHub commit activity">
+  </a>
+  <a href="https://pypi.org/project/mem0ai" target="blank">
+    <img src="https://img.shields.io/pypi/v/mem0ai?color=%2334D058&label=pypi%20package" alt="Package version">
+  </a>
+  <a href="https://www.npmjs.com/package/mem0ai" target="blank">
+    <img src="https://img.shields.io/npm/v/mem0ai" alt="Npm package">
+  </a>
+  <a href="https://www.ycombinator.com/companies/mem0">
+    <img src="https://img.shields.io/badge/Y%20Combinator-S24-orange?style=flat-square" alt="Y Combinator S24">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://mem0.ai/research"><strong>📄 Benchmarking Mem0's token-efficient memory algorithm →</strong></a>
+</p>
+
+## New Memory Algorithm (April 2026)
+
+| Benchmark | Old | New  | Tokens  | Latency p50  |
+| --- | --- | --- | --- | --- |
+| **LoCoMo** | 71.4 | **92.5** | 7.0K  | 0.88s  |
+| **LongMemEval** | 67.8 | **94.4** | 6.8K  | 1.09s  |
+| **BEAM (1M)** | — | **64.1** | 6.7K  | 1.00s  |
+| **BEAM (10M)** | — | **48.6** | 6.9K  | 1.05s  |
+
+All benchmarks run on the same production-representative model stack. Single-pass retrieval (one call, no agentic loops) at a top_200 retrieval budget. Scores reflect Mem0's managed platform, which includes proprietary optimizations not available in the open-source SDK; open-source users should expect directionally similar gains but not identical numbers.
+
+**What changed:**
+- **Single-pass ADD-only extraction** -- one LLM call, no UPDATE/DELETE. Memories accumulate; nothing is overwritten.
+- **Agent-generated facts are first-class** -- when an agent confirms an action, that information is now stored with equal weight.
+- **Entity linking** -- entities are extracted, embedded, and linked across memories for retrieval boosting.
+- **Multi-signal retrieval** -- semantic, BM25 keyword, and entity matching scored in parallel and fused.
+- **Temporal Reasoning** -- time-aware retrieval that ranks the right dated instance for queries about current state, past events, and upcoming plans.
+
+See the [migration guide](https://docs.mem0.ai/migration/oss-v2-to-v3) for upgrade instructions. The [evaluation framework](https://github.com/mem0ai/memory-benchmarks) is open-sourced so anyone can reproduce the numbers.
+
+## Research Highlights
+- **92.5 on LoCoMo** -- +21 points over the previous algorithm
+- **94.4 on LongMemEval** -- +27 points, with 98.2 on assistant memory recall
+- **64.1 on BEAM (1M)** -- production-scale memory evaluation at 1M tokens
+- [Read the full paper](https://mem0.ai/research)
+
+# Introduction
+
+[Mem0](https://mem0.ai) ("mem-zero") enhances AI assistants and agents with an intelligent memory layer, enabling personalized AI interactions. It remembers user preferences, adapts to individual needs, and continuously learns over time—ideal for customer support chatbots, AI assistants, and autonomous systems.
+
+### Key Features & Use Cases
+
+**Core Capabilities:**
+- **Multi-Level Memory**: Seamlessly retains User, Session, and Agent state with adaptive personalization
+- **Developer-Friendly**: Intuitive API, cross-platform SDKs, and a fully managed service opt

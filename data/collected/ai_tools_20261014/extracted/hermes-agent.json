@@ -1,0 +1,197 @@
+{
+ "company": "Nous Research",
+ "one_liner_ko": "쓸수록 스스로 스킬을 만들고 기억을 쌓으며 성장하는 Nous Research의 오픈소스 AI 에이전트.",
+ "what_it_does_ko": "Hermes Agent는 Nous Research가 만든 자기 개선형 AI 에이전트로, 경험에서 스킬을 만들고 사용 중에 개선하며 세션을 넘어 사용자를 이해해 간다. 텔레그램·디스코드·슬랙·왓츠앱·시그널·이메일·CLI 등 여러 곳에서 하나의 에이전트·기억으로 대화한다. 자연어 예약 자동화, 격리된 하위 에이전트, 웹 검색·브라우저 자동화를 지원한다. $5 VPS, GPU 클러스터, 서버리스 인프라 어디서나 돌릴 수 있고 원하는 모델 제공자를 고를 수 있다. MIT 라이선스 무료 오픈소스이며 모델·호스팅 비용은 별도다.",
+ "key_features": [
+  "메신저 다중 연결(텔레그램·디스코드·슬랙·왓츠앱·시그널·이메일·CLI)",
+  "지속 기억·자동 스킬 생성",
+  "자연어 예약 자동화(크론)",
+  "격리된 하위 에이전트·Python RPC 스크립트",
+  "웹 검색·브라우저 자동화·이미지 생성·TTS",
+  "로컬·Docker·SSH 등 샌드박스 백엔드",
+  "MCP 서버 연동",
+  "음성 모드"
+ ],
+ "use_cases_ko": [
+  "클라우드 VM에서 작업하는 에이전트와 텔레그램으로 대화",
+  "보고서·백업·브리핑을 무인 예약 실행"
+ ],
+ "pricing": {
+  "free_tier": "있음 (에이전트 자체 무료 오픈소스, Nous Portal 무료 등급은 무료 모델만)",
+  "plans": [
+   {
+    "name": "Free (Nous Portal)",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "무료 모델만, 표준 속도 제한",
+    "page_lang": "en"
+   },
+   {
+    "name": "Plus (Nous Portal)",
+    "price": 20,
+    "currency": "USD",
+    "period": "month",
+    "limits": "월 $22 크레딧, 200+ 모델",
+    "page_lang": "en"
+   },
+   {
+    "name": "Super (Nous Portal)",
+    "price": 100,
+    "currency": "USD",
+    "period": "month",
+    "limits": "월 $110 크레딧",
+    "page_lang": "en"
+   },
+   {
+    "name": "Ultra (Nous Portal)",
+    "price": 200,
+    "currency": "USD",
+    "period": "month",
+    "limits": "월 $220 크레딧",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://hermes-agent.nousresearch.com"
+ },
+ "open_source": "MIT",
+ "api": "불명",
+ "platforms": [
+  "맥",
+  "윈도",
+  "CLI",
+  "안드로이드"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://hermes-agent.nousresearch.com",
+   "quote": "Hermes Agent — Open-Source AI Agent That Grows With You | Nous Research"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://hermes-agent.nousresearch.com",
+   "quote": "The Agent That Grows With You"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/NousResearch/hermes-agent",
+   "quote": "It's the only agent with a built-in learning loop — it creates skills from experience, improves them during use"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://hermes-agent.nousresearch.com",
+   "quote": "Telegram, Discord, Slack, WhatsApp, Signal, Email, CLI — and a growing list of platforms. One agent, one memory, every surface."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/NousResearch/hermes-agent",
+   "quote": "Run it on a $5 VPS, a GPU cluster, or serverless infrastructure that costs nearly nothing when idle."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/NousResearch/hermes-agent",
+   "quote": "Use any model you want"
+  },
+  {
+   "field": "key_features",
+   "url": "https://hermes-agent.nousresearch.com",
+   "quote": "It learns your projects, auto-generates skills, and never forgets how it solved a problem."
+  },
+  {
+   "field": "key_features",
+   "url": "https://hermes-agent.nousresearch.com",
+   "quote": "Natural-language scheduling for reports, backups, and briefings"
+  },
+  {
+   "field": "key_features",
+   "url": "https://hermes-agent.nousresearch.com",
+   "quote": "Isolated subagents with their own conversations, terminals, and Python RPC scripts"
+  },
+  {
+   "field": "key_features",
+   "url": "https://hermes-agent.nousresearch.com",
+   "quote": "Web search, browser automation, vision, image generation, text-to-speech, and multi-model reasoning."
+  },
+  {
+   "field": "key_features",
+   "url": "https://hermes-agent.nousresearch.com",
+   "quote": "Five backends — local, Docker, SSH, Singularity, Modal"
+  },
+  {
+   "field": "key_features",
+   "url": "https://hermes-agent.nousresearch.com/docs",
+   "quote": "Connect to MCP servers, filter their tools, and extend Hermes safely"
+  },
+  {
+   "field": "key_features",
+   "url": "https://hermes-agent.nousresearch.com/docs",
+   "quote": "Real-time voice interaction in CLI, Telegram, Discord, and Discord VC"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://hermes-agent.nousresearch.com/docs",
+   "quote": "Talk to it from Telegram while it works on a cloud VM you never SSH into yourself."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/NousResearch/hermes-agent",
+   "quote": "Daily reports, nightly backups, weekly audits — all in natural language, running unattended."
+  },
+  {
+   "field": "pricing",
+   "url": "https://hermes-agent.nousresearch.com",
+   "quote": "Hermes Agent is free and open source under the MIT license. Model providers and optional hosted services have their own pricing."
+  },
+  {
+   "field": "pricing",
+   "url": "https://hermes-agent.nousresearch.com",
+   "quote": "Free models only"
+  },
+  {
+   "field": "pricing",
+   "url": "https://hermes-agent.nousresearch.com",
+   "quote": "$22.00 monthly credits — 10% bonus"
+  },
+  {
+   "field": "pricing",
+   "url": "https://hermes-agent.nousresearch.com",
+   "quote": "$110.00 monthly credits — 10% bonus"
+  },
+  {
+   "field": "pricing",
+   "url": "https://hermes-agent.nousresearch.com",
+   "quote": "$220.00 monthly credits — 10% bonus"
+  },
+  {
+   "field": "open_source",
+   "url": "https://hermes-agent.nousresearch.com",
+   "quote": "Hermes Agent is free and open source under the MIT license."
+  },
+  {
+   "field": "platforms",
+   "url": "https://hermes-agent.nousresearch.com",
+   "quote": "Download Hermes Desktop for macOS or Windows, or use the terminal installation command above."
+  },
+  {
+   "field": "platforms",
+   "url": "https://hermes-agent.nousresearch.com/docs",
+   "quote": "For aarch64 Android devices, use the separate Termux APT guide ."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://hermes-agent.nousresearch.com",
+   "quote": "hreflang: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "에이전트는 MIT 오픈소스 무료, 유료 등급(Plus $20·Super $100·Ultra $200/월)은 Nous Portal 모델·도구 크레딧 구독",
+   "diff": "프리미엄 분류는 맞지만 유료는 에이전트 기능이 아니라 별도 Nous Portal 크레딧 구독(자기 모델 제공자 사용 시 불필요)",
+   "url": "https://hermes-agent.nousresearch.com"
+  }
+ ],
+ "note": "문서 언어 선택에 English·简体中文만 있고 한국어 없음. 리눅스도 지원(플랫폼 칸에 리눅스 항목 없음)."
+}

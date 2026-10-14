@@ -1,0 +1,638 @@
+=== [home] https://www.resemble.ai (lang=en)
+Multimodal Deepfake Detection and Watermarking for Enterprise | Resemble AI 
+ 4 preconnects. -->
+ Products
+ Real-time deepfake detection
+ Product overview
+ APIs
+ Deepfake detection
+ Detect synthetic audio, video, and images
+ Intelligence
+ Get structured insights and a plain-language result
+ Watermarking
+ Provenance and C2PA compliance
+ Identity registration
+ Enroll and authenticate a voice
+ READY-TO-USE
+ Meetings protection
+ Detect synthetic voices and faces.
+ Agent detection
+ The first System One model for AI agent detection
+ Deepfake detection Chrome extension
+ Detect deepfakes directly in your browser
+ IN YOUR STACK
+ Integrations and partners
+ Deployment environments
+ FEATURED PARTNER
+ Microsoft Teams
+ Now Microsoft Teams users can get Resemble detection in Teams in just one click.
+ LEARN MORE → 
+ Research
+ LATEST MODELS
+ DETECT-World
+ The first world model architecture for detection
+ PerTh Multimodal
+ Imperceptible, multimodal watermarks
+ Intelligence
+ Human-readable explainability for deterministic results
+ Identity
+ Enroll and detect voice and likeness for identity matching
+ Models overview 
+ FINDINGS
+ Benchmarks Research articles 
+ LATEST MODEL
+ DETECT-World
+ The first world model for deepfake detection offering both artifact- and physics-based detection.
+ VIEW MODEL → 
+ Solutions
+ USE CASE
+ Voice agents Dispute & claim verification Executive impersonation Media watermarking Contact center fraud Identity verification & KYC 
+ INDUSTRY
+ Telco Marketplace Finance Media & entertainment HealthTech Public sector 
+ ON DEMAND WEBINAR
+ Deepfake Fraud at Work
+ 62% of orgs experienced a deepfake attack in the last 12 months. Learn what these attacks look like and what stops them.
+ VIEW ON DEMAND → 
+ Learn
+ MONITOR
+ Deepfake Incident database Laws & regulations Attack vectors 
+ RESOURCES
+ Blog Case studies Trust center 
+ NOW AVAILABLE
+ 2026 Deepfake Threat Report Midyear Review
+ A breakdown of global incidents, their impact, and the implications of the growing AI deepfake crisis
+ DOWNLOAD → 
+ Developers
+ Start here
+ SDKs Docs Discord Status Changelog Builder’s Grant 
+ Get an API key
+ Start free. Put real-time detection in your workflow or app now.
+ START FREE → 
+ Pricing 
+ Log in Start free Contact us 
+ Contact us Start free Log in 
+ INTRODUCING THE 1ST SYSTEM ONE MODEL FOR AGENT DETECTION
+ NEW: 1ST SYSTEM ONE MODEL FOR AGENT DETECTION
+ Deepfakes are everywhere. So are we.
+ Detect AI-generated audio, video, and images in real time with explainable results enterprises can trust. Verify content, prevent fraud, and make confident decisions in seconds with the leading deepfake detection models.
+ Try latest model 
+ Detection models usable anywhere deepfakes happen.
+ 
+ In existing workflows
+ In workflows
+ 
+ Via integrations
+ Via integrations
+ 
+ Via API
+ Via API
+ Contact center fraud
+ Integrate directly into carrier call infrastructure. Alert your team before the call ends.
+ Get started 
+ Meetings protection
+ Detect synthetic voices and faces in real time on all major meeting platforms.
+ Try it free 
+ CSAM + sexualized deepfakes
+ Triage without exposing subjects.
+ Get started 
+ Law enforcement forensics
+ Court-ready, reproducible reports for evidence
+ Get started 
+ KYC + account onboarding
+ Verify an individual before letting them in.
+ Get started 
+ Document + receipt forgery
+ Verify the evidence behind the claim
+ Get started 
+ Social trust and safety
+ Verify UGC to allow or take down
+ Get started 
+ Executive + brand protection
+ Find impersonation before customers do
+ Get started 
+ 
+ Contact center fraud
+ Integrate directly into carrier call infrastructure. Alert your team before the call ends.
+ Get started 
+ 
+ Integrate directly into carrier call infrastructure for real-time detection alerts.
+ Contact centers and telephony
+ Meetings
+ Content moderation
+ AI agents
+ Developer platforms
+ Get started 
+ 
+ Contact centers and telephony
+ Integrate directly into carrier call infrastructure for real-time detection alerts.
+ 
+ Get Started 
+ Integrate directly into carrier call infrastructure for real-time detection alerts.
+ Detect deepfaked participants in real time before sensitive information is shared.
+ Screen uploaded media at scale to keep your platform safe for users.
+ Verify the voice on the other end before wasting time and tokens.
+ Add deepfake detection to the tools and pipelines your team already builds on.
+ Deploy deepfake detection in just one line.
+ Get Started 
+ pip install resemble
+ COPY 
+ # Analyze any file in seconds
+ from resemble import Resemble 
+ Resemble.api_key ( "your_api_key" ) 
+ # Audio
+ with open ( "sample.wav" , "rb" ) as f : 
+ response = Resemble.v2.deepfake_detection.detect_and_get ( file = f ) 
+ print ( response [ "item" ][ "metrics" ] ) 
+ Get API key 
+ Trusted partners include
+ DETECTION MODELS
+ Generative AI companies are in a race to realism. We’re in lockstep to combat misuse.
+ Models built and trained in-house — for audio, image, video, and text — by the team that understands media generation from the ground up.
+ Get started MODEL OVERVIEW
+ LATEST RELEASE
+ 
+ DETECT-World
+ Detect AI-generated audio, video and images. DETECT-World combines pattern matching and training with a world model architecture that recognizes deviations from physical reality.
+ OUTPUT: Deterministic score and verdict, human-readable results
+ ACCURACY: Audio - 99.5% | Video - 98% | Image - 96%
+ LEARN MORE DOCS
+ Three generations of detection
+ AUDIO
+ IMAGE
+ VIDEO
+ 75
+ 100
+ 5
+ 1
+ 398
+ 7
+ 2
+ #121614
+ #606060
+ #353836
+ #8A8885
+ #FBFBFA
+ Image and video introduced in DETECT-3B Omni, Audio in all. Audio: Podonos benchmark. Image/video: internal, external in progress
+ 
+ Intelligence
+ Human-readable explainability for deterministic detection scores and results.
+ OUTPUT: Auditable, structured, human-readable results
+ LEARN MORE DOCS
+ 
+ Signal
+ Alerts a user when content matches known fraud pattern without recording. Library customization available.
+ OUTPUT: Compliant alert and notification, human-readable results
+ CONTACT US DOCS
+ 
+ PerTh Multimodal
+ Imperceptible, multimodal watermarks
+ OUTPUT: EU AI Act compliant files, deterministic score and verdict, human-readable results
+ LEARN MORE DOCS
+ 
+ Identity
+ Enroll and detect voice and likeness for identity matching
+ OUTPUT: Deterministic score and verdict, human-readable results
+ LEARN MORE DOCS
+ BENCHMARKS
+ Third-party validated benchmarks
+ We don't grade our own homework. Public leaderboards consistently show our models leading the pack. We share data with methodology, source, and test conditions.
+ More benchmarks 
+ 99.5%
+ Audio detection accuracy
+ 95.8%
+ Image detection accuracy
+ 98.2%
+ Video detection accuracy
+ Latest benchmark: audio deepfake detection
+ Accuracy vs Real-time Factor (RTF). Higher accuracy and lower speed = better
+ RESEMBLE AI 
+ COMMERCIAL COMPETITOR
+ COMPETITOR
+ Real-time factor (RTF, in seconds)
+ Accuracy
+ descending
+ Accuracy (%)
+ 0
+ 1.75
+ 40
+ 100
+ 2
+ 0
+ 1
+ right
+ RTF = 1.0
+ Fails real-time
+ #b53012
+ #fff4ef
+ 95
+ above
+ 95% accuracy
+ #27b086
+ #e8f7f2
+ #27b086
+ #8a8885
+ #e6e0da
+ #242625
+ 8
+ Select a CSV file in the component properties.
+ CSV data source 
+ # 
+ Audio DFD Benchmark · Podonos · August 2026 · Source 
+ What sets Resemble AI apart is speed. They track where deepfake detection is heading and have solutions ready before we need them.
+ Tomaz Levak
+CEO
+ Umanitek
+ These systems can now do so much more, such as distinguish between real and artificially generated voices. This is ensured by the star
+
+=== [pricing] https://www.resemble.ai/pricing (lang=en)
+Deepfake Detection & AI Security Pricing | Resemble AI 
+ 4 preconnects. -->
+ Products
+ Real-time deepfake detection
+ Product overview
+ APIs
+ Deepfake detection
+ Detect synthetic audio, video, and images
+ Intelligence
+ Get structured insights and a plain-language result
+ Watermarking
+ Provenance and C2PA compliance
+ Identity registration
+ Enroll and authenticate a voice
+ READY-TO-USE
+ Meetings protection
+ Detect synthetic voices and faces.
+ Agent detection
+ The first System One model for AI agent detection
+ Deepfake detection Chrome extension
+ Detect deepfakes directly in your browser
+ IN YOUR STACK
+ Integrations and partners
+ Deployment environments
+ FEATURED PARTNER
+ Microsoft Teams
+ Now Microsoft Teams users can get Resemble detection in Teams in just one click.
+ LEARN MORE → 
+ Research
+ LATEST MODELS
+ DETECT-World
+ The first world model architecture for detection
+ PerTh Multimodal
+ Imperceptible, multimodal watermarks
+ Intelligence
+ Human-readable explainability for deterministic results
+ Identity
+ Enroll and detect voice and likeness for identity matching
+ Models overview 
+ FINDINGS
+ Benchmarks Research articles 
+ LATEST MODEL
+ DETECT-World
+ The first world model for deepfake detection offering both artifact- and physics-based detection.
+ VIEW MODEL → 
+ Solutions
+ USE CASE
+ Voice agents Dispute & claim verification Executive impersonation Media watermarking Contact center fraud Identity verification & KYC 
+ INDUSTRY
+ Telco Marketplace Finance Media & entertainment HealthTech Public sector 
+ ON DEMAND WEBINAR
+ Deepfake Fraud at Work
+ 62% of orgs experienced a deepfake attack in the last 12 months. Learn what these attacks look like and what stops them.
+ VIEW ON DEMAND → 
+ Learn
+ MONITOR
+ Deepfake Incident database Laws & regulations Attack vectors 
+ RESOURCES
+ Blog Case studies Trust center 
+ NOW AVAILABLE
+ 2026 Deepfake Threat Report Midyear Review
+ A breakdown of global incidents, their impact, and the implications of the growing AI deepfake crisis
+ DOWNLOAD → 
+ Developers
+ Start here
+ SDKs Docs Discord Status Changelog Builder’s Grant 
+ Get an API key
+ Start free. Put real-time detection in your workflow or app now.
+ START FREE → 
+ Pricing 
+ Log in Start free Contact us 
+ Contact us Start free Log in 
+ SAVE 20% WITH TEAM AND BUSINESS PLANS
+ SAVE 20% WITH TEAM AND BUSINESS PLANS
+ Start free. Scale with your team.
+ No credit card needed to try it. Start free and scale up to fit your organization’s needs. Contact us for enterprise solutions. 
+ Monthly billing
+ Annual billing
+ Save 20%
+ FLEX
+  1
+ For builders and teams exploring detection with no subscription fee. 
+ $0 /mo 
+ Buy credits as you go - view rates 
+ Start free 
+ Deepfake detection for audio, image, and video
+ 
+ Intelligence insights on detection results
+ 
+ Enroll an identity to fight impersonation
+ 
+ Real-time detection for meetings
+ 
+ Check for SynthID and sign C2PA records
+ 
+ Platform and API access
+ 
+ 1 team seat included
+ TEAM
+  5
+ For growing teams putting detection into production.
+ $350 /mo 
+ Billed monthly
+ $280 /mo 
+ Billed annually, save $840/yr 
+ Select Team 
+ Everything on Flex plan
+ 
+ Lower usage rates on select services
+ 
+ Intelligence for meetings included
+ 
+ Large file uploads
+ 
+ Batch uploads
+ 
+ 5 team seats included
+ BUSINESS
+  20
+ For larger orgs scaling Resemble across teams and workflows.
+ $1,000 /mo 
+ Billed monthly
+ $800 /mo 
+ Billed annually, save $2,400/yr 
+ Select Business 
+ Everything on Team plan
+ 
+ Configurable as deployment grows
+ 
+ Org-wide calendar integration for Meetings
+ 
+ Meetings security notifications
+ 
+ Single Sign-On (SSO)
+ 
+ 20 team seats included
+ Looking for enterprise solutions?
+ Get volume pricing, enterprise SLAs, custom model training, on-prem deployment, dedicated support, and more. Connect with our team to learn more.
+ Contact us 
+ FULL COMPARISON
+ Transparent flexible pricing
+ No matter what stage you’re at, our pricing is built to grow with you.
+ Monthly billing
+ Annual billing 
+save 20% 
+ FLEX
+ $0 /mo 
+ Start free 
+ TEAM
+ $350 /mo 
+ $280 /mo 
+ Select Team 
+ BUSINESS
+ $1,000 /mo 
+ $800 /mo 
+ Select Business 
+ ENTERPRISE
+ Custom
+ Contact us 
+ APIs, products, features
+ 
+ Resemble Detect
+ 
+ 
+ 
+ 
+ 
+ Resemble Intelligence
+ 
+ 
+ 
+ 
+ 
+ Resemble Meetings
+ 
+ 
+ 
+ 
+ 
+ Resemble Identity
+ 
+ 
+ 
+ 
+ 
+ Resemble Watermarker
+ 
+ 
+ 
+ 
+ 
+ Resemble Agent Detection
+ 
+ 
+ 
+ 
+ 
+ Platform and API access
+ 
+ 
+ 
+ 
+ Subscription fee
+ None
+ $350/mo 
+ $280/mo paid annually
+ $1,000/mo 
+ $800/mo paid annually
+ Talk to Sales
+ Number of seats
+ 1
+ 5
+ 20
+ Custom
+ Large file uploads (150MB+)
+ 
+ 
+ 
+ 
+ Batch uploads
+ 
+ 
+ 
+ 
+ Configurable as deployment grows
+ 
+ 
+ 
+ 
+ Org-wide calendar integration for Meetings
+ 
+ 
+ 
+ 
+ Meetings Intelligence
+ 
+ 
+ 
+ 
+ 
+ Meetings security notifications
+ 
+ 
+ 
+ 
+ Single Sign-On (SSO)
+ 
+ 
+ 
+ 
+ Volume pricing
+ 
+ 
+ 
+ 
+ Enterprise SLAs
+ 
+ 
+ 
+ 
+ Custom model training
+ 
+ 
+ 
+ 
+ Dedicated support
+ 
+ 
+ 
+ 
+ On-premises deployment
+ 
+ 
+ 
+ 
+ SOC 2 Documentation
+ 
+ 
+ 
+ 
+ Processing rates
+ 
+ Resemble Detect for audio
+ $0.03500 per second
+ $0.01500 per second
+ $0.01500 per second
+ Volume pricing available
+ Resemble Detect for images
+ $0.03500 per image
+ $0.01500 per image
+ $0.01500 per image
+ Volume pricing available
+ Resemble Detect for video
+ $0.07000 per second
+ $0.03000 per second
+ $0.03000 per second
+ Volume pricing available
+ Resemble Intelligence
+ $0.02500 per second
+ $0.01500 per second
+ $0.01500 per second
+ Volume pricing available
+ Resemble Identity search
+ $0.00050 per call
+ $0.00050 per call
+ $0.00050 per call
+ Volume pricing available
+ Resemble Watermarker encode
+ 
+ $0.00050 per call
+ $0.00050 per call
+ $0.00050 per call
+ Volume pricing available
+ Resemble Watermarker decode
+ 
+ $0.00020 per call
+ $0.00020 per call
+ $0.00020 per call
+ Volume pricing available
+ Resemble Agent Detection
+ 
+ $1 per 1,000 sessions
+ $1 per 1,000 sessions
+ $1 per 1,000 sessions
+ Volume pricing available
+ Frequently asked questions
+ How does the Flex plan work?
+ The Flex Plan is pay-as-you-go model where you load credits into your account and pay based on actual usage. You're only charged for the models and features you use, with no minimum commitments. 
+ Do credits expire?
+ No, credits on the Flex Plan never expire. Load credits when you need them and use them at your own pace. 
+ Is deepfake detection available on the Flex plan?
+ Yes! Deepfake Detection is now available on the Flex Plan. You can access audio, video, and image detection capabilities as well as intelligence analysis features, all
+
+=== [about] https://docs.resemble.ai/detect/ (lang=en)
+Deepfake Detection | Resemble | Documentation For AI agents: a documentation index is available at the root level at /llms.txt. Append /llms.txt to any URL for a page-level index, or .md for the markdown version of any page.
+ Search / 
+ Ask AI 
+ Status 
+ Overview Products Manage API Reference Tutorials Client Libraries Voice Archive 
+ Skip to navigation On this page
+ Choose an Integration 
+ Request Schema 
+ Face-only Video Analysis 
+ Optional Watermark Analysis 
+ Response Shapes 
+ Video Attack Type 
+ Related Endpoints 
+ Scroll to top 
+ Safety & Detection Deepfake Detection 
+ Deepfake Detection
+ Copy page 
+ Analyze audio, images, and video for synthetic tampering. Submit media for detection and retrieve structured metrics and visualizations.
+ For a single-file request, you can also opt in to Resemble watermark detection and SynthID by setting detect_watermark: true . Watermark evidence is returned separately and never changes the deepfake verdict.
+ Choose an Integration
+ Workflow Use it for Interface 
+ Single detection Persisted analysis of one audio, image, or video file, with synchronous waiting, polling, or a callback. Create Detection 
+ Batch detection Persisted analysis of up to 50 files in one request. Batch Detection 
+ Streaming audio Live, audio-only analysis with per-window results while audio is still arriving. Streaming results are not persisted as Detect jobs. Streaming Audio Detection 
+ Media can be referenced by a public HTTPS url or by a media_token issued from the Secure Upload API . Use a secure upload when you prefer not to host the source file publicly — the API reads it once via the signed token, which expires 1 hour after issuance.
+ Request Schema
+ interface DetectionRequest { 
+ url ?: string ; // publicly accessible media URL 
+ media_token ?: string ; // token from POST /secure_uploads (mutually exclusive with url) 
+ callback_url ?: string ; 
+ visualize ?: boolean ; 
+ frame_length ?: number ; 
+ start_region ?: number ; 
+ end_region ?: number ; 
+ max_video_secs ?: number ; 
+ modality ?: " audio " | " video " | " all " ; // video only 
+ face_only ?: boolean ; // visual video analysis only; default false 
+ intelligence ?: boolean ; 
+ detect_watermark ?: boolean ; // single-file audio/image/video only; default false 
+ audio_source_tracing ?: boolean ; 
+ use_reverse_search ?: boolean ; // image only 
+ use_ood_detector ?: boolean ; 
+ zero_retention_mode ?: boolean ; 
+ } 
+ Face-only Video Analysis
+ Set face_only: true to focus visual video detection on faces by masking non-face regions before analysis. Face-only mode is effective only for video inputs that run visual analysis ( modality: "all" or modality: "video" ). Audio, image, and audio-only video requests are accepted, but their effective value is false .
+ Face-only mode does not disable audio analysis or select which video components run. Use modality for that. It also does not change billing or the structure of detection verdicts and reports. Detection responses expose the effective setting in face_only for auditing.
+ Optional Watermark Analysis
+ Set detect_watermark: true on a single audio, image, or video detection to run the same decode detectors as the standalone Watermark API :
+ Audio checks Resemble Perth v1, Resemble Perth v2, and SynthID.
+ Image and video check the Resemble image/video watermark detector and SynthID.
+ The option defaults to false . When omitted or false, no Watermark job is created, no extra charge is added, and the watermark response field is omitted. When enabled, the existing Watermark detection charge is added to the request; SynthID d
+
+=== [meta] https://www.resemble.ai
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: Deutsch

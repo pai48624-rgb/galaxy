@@ -1,0 +1,327 @@
+=== [home] https://crawl4ai.com (lang=en)
+Crawl4AI - README 
+ skip to playground 
+ Crawl4AI 
+ ☀ 
+ Get a key 
+ README.md
+ ★ Check OSS self-host version 
+ Sign in 
+ Get a key 
+ ☀ 
+ from the docs You know the library. This is the same crawler, hosted. No browsers, no proxies, no cookies to babysit: one key with free credit to start, and it works in Claude Code, Codex, OpenCode and Cursor. Always open source, forever. Get a key + $ 2 free credit → 
+ NEW Finally, your favorite open-source crawler is now a hosted API. Your open-source crawler, now hosted. 
+ Crawl4AI now available on Cloud 
+ One key: /scrape a page to Markdown, /extract it to JSON, /search the web, /serp for Google's results page as data, /answer a question with sources. Free: 10 a minute, 2 at a time, 2,000 credits to start. Paid: 120 a minute, 10 at a time, from $ 10 .
+ #1 Repository Of The Day
+ 1
+ ★ stars 71,073 
+ downloads 1.9M / mo 
+ python 3.10 | 3.11 | 3.12 | 3.13 
+ license Apache-2.0 
+ chat Discord 
+ scrape 
+ extract 
+ search 
+ answer exp 
+ serp beta 
+ POST api.crawl4ai.com /scrape 
+ $ crawl scrape 
+ ✎ 
+ ▶ Run ≈ Estimate 
+   --instruction 
+ ▶ Run 
+ ▸ deep ground the answer in the top results 
+ Copy full command Live · play limits ✓ 200 OK 
+ # Type a URL above and hit Run - real output renders here 
+ ## What you get # 
+ /scrape URL → clean Markdown, boilerplate stripped, ready for a prompt.
+ /extract URL + a plain-English ask → typed JSON records. No selectors.
+ /search query → ranked results as JSON - add rich=1 for follow-ups, related & more.
+ /answer a question → a direct answer with its sources. Experimental.
+ /serp query → Google's results page as data: true ranks, every block, localised to a place. For rank tracking. Beta since 8 Oct 2026.
+ at scale queues, jobs, retries, and solid proxies - handled for you.
+ ## Use it in Claude Code, Cursor & agents - paste one line # 
+ Same key everywhere. Mint one above and it drops into each line below.
+ Ask your agent one line in its chat: it reads llms.txt and sets itself up 
+ set up crawl4ai - https://crawl4ai.com/llms.txt with key: sk_live_… Copy 
+ Claude Code, Codex, Cursor, Gemini CLI, OpenCode, OpenClaw, or any agent that reads a URL · open llms.txt 
+ MCP your agent's tools, one line per tool 
+ Claude Code 
+ Codex 
+ OpenCode 
+ Cursor · Windsurf 
+ OpenClaw 
+ any client 
+ claude mcp add --transport http crawl4ai https://api.crawl4ai.com/mcp --header "Authorization: Bearer sk_live_… " Copy 
+ ~/.codex/config.toml
+ [mcp_servers.crawl4ai] url = "https://api.crawl4ai.com/mcp" http_headers = { Authorization = "Bearer sk_live_… " } Copy 
+ opencode.json
+ "mcp" : { "crawl4ai" : { "type": "remote", "url": "https://api.crawl4ai.com/mcp", "headers": { "Authorization": "Bearer sk_live_… " } } } Copy 
+ ~/.cursor/mcp.json · Windsurf: ~/.codeium/windsurf/mcp_config.json
+ "crawl4ai" : { "url": "https://api.crawl4ai.com/mcp", "headers": { "Authorization": "Bearer sk_live_… " } } Copy 
+ ~/.openclaw/openclaw.json, the mcp.servers block
+ mcp: { servers: { crawl4ai : { url: "https://api.crawl4ai.com/mcp", transport: "streamable-http", headers: { Authorization: "Bearer sk_live_… " } } } } Copy 
+ Claude Desktop, ChatGPT, Gemini CLI, VS Code, n8n, or your own client · streamable HTTP
+ url https://api.crawl4ai.com/mcp · header Authorization: Bearer sk_live_… Copy 
+ HTTP code or curl, any language: base url + key 
+ export CRAWL4AI_URL=https://api.crawl4ai.com CRAWL4AI_KEY= sk_live_… Copy 
+ curl -s "https://api.crawl4ai.com/search?q=web+scraping" -H "Authorization: Bearer sk_live_… " Copy 
+ ## Self-host, or skip the setup # 
+ // run it yourself
+ Self-host
+ It's Apache-2.0. pip install crawl4ai , point it at your own boxes and proxies. No gate, no token. It's yours.
+ ★ Clone the repo 
+ // let us run it
+ Hosted
+ Or forget the infra. We've operated this crawler at scale for years - proxies, queues, jobs, the hard parts. You keep the key; we keep it fast.
+ Get a key → 
+ Who runs it better than the people who built it? Self-host for control; host with us to move fast. Same crawler either way.
+ ## Pricing # 
+ Your favourite open-source crawler, now in the cloud. Credits, not seats: you pay very little and get more than anywhere else.
+ Try it now: 20 free credits , no signup. Verify your email for your free credit .
+ tier
+ price
+ for
+ Free
+ Free credit to start · no card 
+ Prototypes and side projects. 2,000 credits to start, 10 a minute, 2 at a time. Get a key 
+ Starter
+ $ 10 · $ 25 · $ 100 credit packs 
+ Pay as you go. 120 a minute, 10 at a time, 50,000 credits a month. Credit never expires.
+ Builder
+ Coming soon
+ A monthly plan with included credits and higher limits: 600 a minute, 20 at a time, 500,000 credits a month. Tell us you want it 
+ Enterprise
+ Let's talk
+ Volume, regions, SLA. Contact us 
+ 1 credit = $0.001 · page 0.5 · search 1 · from our archive 0.25 · real browser 1 · hard site 2 * 
+ * Soft launch
+Prices and the free credit can change while we learn; the live table is /v1/prices . What you bought stays yours and never expires.
+ ## Philosophy # 
+ # we don't hide. 
+ every result carries where it came from - the origin travels with the data.
+ # and the whole "block the bots" arms race? a phase. 
+ let crawlers crawl. 
+ Built in the open by @unclecode & the community. 
+ GitHub · Docs · Discord · console 
+ Terms · Privacy · Acceptable Use · Security 
+ ⌂ Home 
+ ▶ Playground 
+ ▤ Recipes 
+ ✦ Pricing 
+ ⚿ Get key
+
+=== [about] https://docs.crawl4ai.com/ (lang=en)
+Home - Crawl4AI Documentation (v0.9.x) 
+ Crawl4AI Documentation (v0.9.x) 
+ Home 
+ Growth 
+ Ask AI 
+ Quick Start 
+ Code Examples 
+ Brand Book 
+ Search 
+ New good news for everyone who runs Crawl4AI
+ Crawl4AI Cloud is live.
+The same crawler, hosted.
+ No browsers to run, no proxies to buy, no cookies to babysit. One key with free credit to start , and your AI agent can scrape, extract, search, read Google's results page (SERP) and answer questions through the same engine you already use. Free: 10 a minute, 2 at a time, 2,000 credits to start. Paid: 120 a minute, 10 at a time, from $10.
+ Always open source, forever. The library stays here and stays free. The cloud is for the days you want to build fast and let us run the infrastructure.
+ Get a key, free credit to start → 
+ See Crawl4AI Cloud 
+ no card free credit to start · soft launch: prices can change, what you buy stays yours EU · Singapore · US MCP built in 
+ Claude Code 
+ Codex 
+ OpenCode 
+ Cursor 
+ curl 
+ Paste it once. Your agent gets the whole web. cloud docs → 
+ × 
+ don't show this again 
+ ★ 
+ Crawl4AI Cloud is live — the same crawler, hosted. Get a key with free credit to start and paste one line into your agent. 
+ Get a key → 
+ show 
+ Home 
+ Growth 
+ Ask AI 
+ Quick Start 
+ Code Examples 
+ Apps 
+ Demo Apps 
+ C4A-Script Editor 
+ LLM Context Builder 
+ Marketplace 
+ Marketplace Admin 
+ Setup & Installation 
+ Installation 
+ Self-Hosting Guide 
+ Blog & Changelog 
+ Blog Home 
+ Changelog 
+ Core 
+ Command Line Interface 
+ Simple Crawling 
+ Deep Crawling 
+ Adaptive Crawling 
+ URL Seeding 
+ Domain Mapping 
+ C4A-Script 
+ Crawler Result 
+ Browser, Crawler & LLM Config 
+ Markdown Generation 
+ Fit Markdown 
+ Page Interaction 
+ Content Selection 
+ Cache Modes 
+ Local Files & Raw HTML 
+ Link & Media 
+ Advanced 
+ Overview 
+ Adaptive Strategies 
+ Virtual Scroll 
+ File Downloading 
+ Lazy Loading 
+ Hooks & Auth 
+ Proxy & Security 
+ Anti-Bot & Fallback 
+ Undetected Browser 
+ Session Management 
+ Multi-URL Crawling 
+ Crawl Dispatcher 
+ Identity Based Crawling 
+ SSL Certificate 
+ Network & Console Capture 
+ PDF Parsing 
+ Extraction 
+ LLM-Free Strategies 
+ LLM Strategies 
+ Clustering Strategies 
+ Chunking 
+ API Reference 
+ AsyncWebCrawler 
+ arun() 
+ arun_many() 
+ Browser, Crawler & LLM Config 
+ CrawlResult 
+ Strategies 
+ C4A-Script Reference 
+ Brand Book 
+ Community 
+ Contributing Guide 
+ Code of Conduct 
+ Contributors 
+ Legal 
+ Privacy Policy 
+ Terms of Service 
+ Support 
+ 🚀🤖 Crawl4AI: the open-source web crawler for LLMs and AI agents 
+ Two ways to use Crawl4AI 
+ 🆕 AI Assistant Skill Now Available! 
+ 🎯 New: Adaptive Web Crawling 
+ Video Tutorial 
+ What Does Crawl4AI Do? 
+ Documentation Structure 
+ How You Can Support 
+ Quick Links 
+ 🚀🤖 Crawl4AI: the open-source web crawler for LLMs and AI agents
+ Crawl4AI turns any website into clean, LLM-ready Markdown for RAG, AI agents and data pipelines. Run the open-source web crawler and scraper yourself, free forever, or use it hosted with one key: /scrape a page to Markdown, /extract it to JSON, /search the web, /serp for Google's results page as data, /answer a question with sources; MCP for your agent. Free: 10 a minute, 2 at a time, 2,000 credits to start. Paid: 120 a minute, 10 at a time, from $10.
+ Two ways to use Crawl4AI
+ 🐍 Run it yourself: open source, forever
+ pip install -U crawl4ai
+ crawl4ai-setup # installs the browser, once 
+ import asyncio 
+ from crawl4ai import AsyncWebCrawler 
+ async def main (): 
+ async with AsyncWebCrawler () as crawler : 
+ result = await crawler . arun ( url = "https://news.ycombinator.com" ) 
+ print ( result . markdown ) 
+
+=== [meta] https://crawl4ai.com
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: English
+
+=== [github] https://github.com/unclecode/crawl4ai
+# 🚀🤖 Crawl4AI: the open-source web crawler for LLMs and AI agents
+
+<div align="center">
+
+<a href="https://trendshift.io/repositories/11716" target="_blank"><img src="https://trendshift.io/api/badge/repositories/11716" alt="unclecode%2Fcrawl4ai | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+
+[![GitHub Stars](https://img.shields.io/github/stars/unclecode/crawl4ai?style=social)](https://github.com/unclecode/crawl4ai/stargazers)
+[![PyPI version](https://badge.fury.io/py/crawl4ai.svg)](https://badge.fury.io/py/crawl4ai)
+[![Downloads](https://static.pepy.tech/badge/crawl4ai/month)](https://pepy.tech/project/crawl4ai)
+[![Discord](https://img.shields.io/badge/Discord-join%20us-5865F2?logo=discord&logoColor=white)](https://discord.gg/jP8KfhDhyN)
+[![Crawl4AI Cloud](https://img.shields.io/badge/Crawl4AI_Cloud-try_it_free-f5a300?style=flat&labelColor=0d0d10)](https://crawl4ai.com/?ref=readme-badge)
+
+**Latest: [v0.9.4](https://github.com/unclecode/crawl4ai/releases/tag/v0.9.4) (23 Sep 2026)** · [all releases →](https://github.com/unclecode/crawl4ai/releases)
+
+<a href="https://crawl4ai.com/?ref=readme-banner">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/unclecode/crawl4ai/main/docs/assets/cloud-launch-banner-dark.svg">
+    <img alt="Crawl4AI Cloud is live. Soft launch: free credit to start, no card. Get your key." src="https://raw.githubusercontent.com/unclecode/crawl4ai/main/docs/assets/cloud-launch-banner-light.svg" width="960">
+  </picture>
+</a>
+
+</div>
+
+Crawl4AI turns any website into clean, LLM-ready Markdown for RAG, AI agents and data pipelines. Run the open-source web crawler and scraper yourself, free forever, or use it hosted with one key: `/scrape` a page to Markdown, `/extract` it to JSON, `/search` the web, `/serp` for Google's results page as data, `/answer` a question with sources; MCP for your agent. Free: 10 a minute, 2 at a time, 2,000 credits to start. Paid: 120 a minute, 10 at a time, from $10.
+
+## Two ways to use Crawl4AI
+
+### 🐍 Run it yourself: open source, forever
+
+```bash
+pip install -U crawl4ai
+crawl4ai-setup        # installs the browser, once
+```
+
+```python
+import asyncio
+from crawl4ai import AsyncWebCrawler
+
+async def main():
+    async with AsyncWebCrawler() as crawler:
+        result = await crawler.arun(url="https://news.ycombinator.com")
+        print(result.markdown)
+
+asyncio.run(main())
+```
+
+Docker server, CLI and every option: [Installation](#installation) · [docs.crawl4ai.com](https://docs.crawl4ai.com)
+
+### ☁️ Or use the cloud: no browsers, no proxies
+
+1. [![Get a key in 10 seconds](https://img.shields.io/badge/Get_a_key_in_10_seconds-20_free_credits%2C_no_signup-f5a300?style=for-the-badge&labelColor=0d0d10)](https://crawl4ai.com/?ref=readme)  
+   Verify your email and free credit to start is yours. No card. Soft launch: prices can change, what you buy stays yours.
+2. Get any page as Markdown:
+
+   ```bash
+   curl -s https://api.crawl4ai.com/scrape \
+     -H "Authorization: Bearer $CRAWL4AI_KEY" \
+     -H "Content-Type: application/json" \
+     -d '{"url": "https://news.ycombinator.com"}' | jq -r .markdown
+   ```
+
+   The same key works for `/extract`, `/search`, `/serp`, `/answer` and many URLs at once (`/scrape/batch`, `/scrape/jobs`). Pay as you go: [live prices](https://crawl4ai.com/docs?ref=readme#pricing).
+3. Give it to your AI agent. Claude Code shown; [Codex, Cursor and OpenCode →](https://crawl4ai.com/docs?ref=readme#mcp)
+
+   ```bash
+   claude mcp add --transport http crawl4ai https://api.crawl4ai.com/mcp \
+     --header "Authorization: Bearer $CRAWL4AI_KEY"
+   ```
+
+### Which one?
+
+| | 🐍 Library | 🐳 Your own server | ☁️ Crawl4AI Cloud |
+|---|---|---|---|
+| **Runs the browsers** | you, in your Python process | you, in Docker on your machine | we do |
+| **JS-heavy pages and bot walls** | your settings, your proxies | your settings, your proxies | handled for you, automatically |
+| **Web search** | – | – | `/search`, `/serp` and `/answer` |
+| **Price** | free, forever | free (your hosting) | pay as you go; free credit to start |
+
+<details>
+  <summary>🤓 <strong>My Personal Story</strong></summary>
+
+I grew up

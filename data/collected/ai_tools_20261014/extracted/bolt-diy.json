@@ -1,0 +1,107 @@
+{
+ "company": null,
+ "one_liner_ko": "프롬프트마다 원하는 LLM을 골라 브라우저에서 풀스택 웹앱을 만드는 오픈소스 AI 개발 작업 공간.",
+ "what_it_does_ko": "bolt.diy는 프롬프트마다 원하는 LLM을 고를 수 있는 오픈소스 AI 개발 작업 공간이다. OpenAI·Anthropic·Gemini·Groq·DeepSeek·Ollama·LM Studio 등 22개 이상 모델 제공자를 지원하며 브라우저에서 풀스택 웹앱을 만든다. 직접 설치해 실행하거나 Docker, 또는 윈도·맥·리눅스용 데스크톱 앱으로 쓸 수 있다. API 키는 화면 설정이나 환경 변수로 넣는다.",
+ "key_features": [
+  "WebContainers 기반 브라우저 내 풀스택 Node.js 개발",
+  "22개 이상 AI 제공자(클라우드·로컬 Ollama·LM Studio)",
+  "코드 편집기·터미널·변경 비교·실시간 미리보기 작업대",
+  "프레임워크별 시작 템플릿",
+  "Docker 실행 지원",
+  "윈도·맥·리눅스 데스크톱 앱(Electron)"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": "있음 (오픈소스 직접 실행, 모델 API 키는 사용자 부담)",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "오픈소스(라이선스 이름은 받아 둔 본문에 없음)",
+ "api": "불명",
+ "platforms": [
+  "웹",
+  "윈도",
+  "맥"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/stackblitz-labs/bolt.diy",
+   "quote": "the open-source AI developer workspace that lets you select your preferred LLM for every prompt"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/stackblitz-labs/bolt.diy",
+   "quote": "Build full-stack web applications in the browser with support for 22+ model providers"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/stackblitz-labs/bolt.diy",
+   "quote": "Download binaries for Windows, macOS, and Linux"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/stackblitz-labs/bolt.diy",
+   "quote": "You can configure model providers either directly in the UI or via environment variables"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/stackblitz-labs/bolt.diy",
+   "quote": "Full-stack Node.js development environment powered by WebContainers."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/stackblitz-labs/bolt.diy",
+   "quote": "Cloud (Anthropic, OpenAI, Google, DeepSeek, Groq, xAI, Mistral, etc.) and Local (Ollama, LM Studio)."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/stackblitz-labs/bolt.diy",
+   "quote": "Integrated code editor, terminal, visual diff viewer, and real-time live preview."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/stackblitz-labs/bolt.diy",
+   "quote": "Explicit framework requests select a matching starter in code."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/stackblitz-labs/bolt.diy",
+   "quote": "docker compose --profile production up"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/stackblitz-labs/bolt.diy",
+   "quote": "bolt.diy is also available as a cross-platform desktop application"
+  },
+  {
+   "field": "pricing",
+   "url": "https://github.com/stackblitz-labs/bolt.diy",
+   "quote": "Enter your API keys or configure local endpoints"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/stackblitz-labs/bolt.diy",
+   "quote": "the open-source AI developer workspace"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/stackblitz-labs/bolt.diy",
+   "quote": "Download binaries for Windows, macOS, and Linux"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/stackblitz-labs/bolt.diy",
+   "quote": "Open [http://localhost:5173](http://localhost:5173) in your browser."
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "GitHub 공개 오픈소스, 직접 설치·실행하고 모델 API 키는 사용자가 넣음, 구독 요금제 안내 없음",
+   "diff": "기존 분류 '프리미엄(무료+유료 구독)'과 달리 유료 구독이 없는 오픈소스 셀프호스팅 도구",
+   "url": "https://github.com/stackblitz-labs/bolt.diy"
+  }
+ ],
+ "plan_change": []
+}

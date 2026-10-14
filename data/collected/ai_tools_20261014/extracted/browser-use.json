@@ -1,0 +1,59 @@
+{
+ "company": "Browser Use",
+ "one_liner_ko": "브라우저를 사용해 작업을 끝내는 AI 에이전트와, 직접 만든 에이전트용 원격 브라우저 인프라를 제공한다",
+ "what_it_does_ko": "Browser Use는 웹에서 사람처럼 브라우저를 다루는 AI 에이전트다. 호스팅형 Browser Use Agents에 작업을 맡기면 결과를 받아 오고, Browser Infrastructure로는 클라우드 브라우저를 띄워 Playwright·Puppeteer 코드에서 CDP로 직접 연결할 수 있다. 오픈소스 에이전트는 MIT 라이선스로 클라우드나 자기 컴퓨터에서 실행할 수 있다. 클라우드 브라우저는 스텔스·CAPTCHA 해결·주거용 프록시를 지원한다.",
+ "key_features": [
+  "작업을 주면 결과를 돌려주는 호스팅형 브라우저 에이전트",
+  "AI 에이전트용 원격 클라우드 브라우저(시간당 $0.02)",
+  "Playwright·Puppeteer에서 CDP로 브라우저 연결",
+  "CAPTCHA 해결·스텔스·주거용 프록시",
+  "Python·TypeScript SDK와 API V4",
+  "MIT 라이선스 오픈소스 에이전트(로컬 실행 가능)",
+  "MCP 서버 제공"
+ ],
+ "use_cases_ko": [
+  "데이터 추출·쇼핑 결제·여행 예약 같은 웹 작업 자동화",
+  "자체 AI 에이전트에 원격 브라우저를 붙이려는 개발자",
+  "테스트·QA 자동화"
+ ],
+ "pricing": {
+  "free_tier": "있음 (1인 1회 무료 크레딧 $1, 카드 불필요)",
+  "plans": [
+   {"name": "Browsers", "price": 0.02, "currency": "USD", "period": "usage", "limits": "브라우저 시간당, 분 단위 올림, 트래픽 별도", "page_lang": "en"},
+   {"name": "Browser agents", "price": null, "currency": "USD", "period": "usage", "limits": "모델 비용 + 20%, 브라우저 시간·트래픽 별도", "page_lang": "en"},
+   {"name": "Residential proxy", "price": 5, "currency": "USD", "period": "usage", "limits": "GB당", "page_lang": "en"},
+   {"name": "크레딧 충전", "price": 5, "currency": "USD", "period": "one-time", "limits": "최소 충전액, 만료 없음, 구독 없음", "page_lang": "en"}
+  ],
+  "pricing_url": "https://browser-use.com/pricing"
+ },
+ "open_source": "MIT",
+ "api": "있음",
+ "platforms": ["API", "CLI"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://browser-use.com", "quote": "© 2026 Browser Use"},
+  {"field": "one_liner_ko", "url": "https://browser-use.com", "quote": "Browser Use Agents finish the task. Browser Infrastructure is the simple remote browser for your own agents."},
+  {"field": "what_it_does_ko", "url": "https://github.com/browser-use/browser-use", "quote": "# Navigate the web like a human does."},
+  {"field": "what_it_does_ko", "url": "https://docs.browser-use.com/cloud/quickstart", "quote": "Choose whether Browser Use drives the browser or\nyour Playwright/Puppeteer code connects directly over CDP."},
+  {"field": "key_features", "url": "https://browser-use.com", "quote": "The simple remote browser for AI agents. $0.02 an hour."},
+  {"field": "key_features", "url": "https://github.com/browser-use/browser-use", "quote": "a $0.02 per browser-hour cloud browser with stealth, CAPTCHA solving and residential proxies, and a hosted agent API"},
+  {"field": "key_features", "url": "https://docs.browser-use.com/cloud/quickstart", "quote": "pip install --upgrade browser-use-sdk playwright"},
+  {"field": "key_features", "url": "https://browser-use.com", "quote": "MIT licensed. Run it in the cloud or on your own machine."},
+  {"field": "key_features", "url": "https://browser-use.com", "quote": "Browser for coding agents MCP server Web agent API"},
+  {"field": "use_cases_ko", "url": "https://browser-use.com", "quote": "Data extraction Shopping & checkout Travel & booking Testing & QA"},
+  {"field": "pricing", "url": "https://browser-use.com/pricing", "quote": "No subscription. Credits never expire."},
+  {"field": "pricing", "url": "https://browser-use.com/pricing", "quote": "Free credits $ 1 once per person. Eligible Google, GitHub or Microsoft signups. No card required."},
+  {"field": "pricing", "url": "https://browser-use.com/pricing", "quote": "Residential proxy $5 / GB"},
+  {"field": "pricing", "url": "https://browser-use.com/pricing", "quote": "Model cost + 20 %"},
+  {"field": "pricing", "url": "https://browser-use.com/pricing", "quote": "Minimum top-up $ 5 · unlocks every model"},
+  {"field": "pricing", "url": "https://browser-use.com/pricing", "quote": "Browser billing Rounded up to whole minutes. 1-minute minimum."},
+  {"field": "open_source", "url": "https://browser-use.com", "quote": "Licence MIT"},
+  {"field": "api", "url": "https://docs.browser-use.com/cloud/quickstart", "quote": "Both Cloud paths use API V4."},
+  {"field": "platforms", "url": "https://github.com/browser-use/browser-use", "quote": "your existing agent with Browser Use CLI"},
+  {"field": "korean_support", "url": "https://browser-use.com", "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {"official": "구독 없는 종량제(브라우저 시간당 $0.02, 에이전트는 모델 비용+20%), 무료 크레딧 $1 1회, 오픈소스 MIT", "diff": "기존 '프리미엄(무료+유료 구독)'과 달리 구독 요금제가 없고 크레딧 충전식 종량제", "url": "https://browser-use.com/pricing"}
+ ]
+}

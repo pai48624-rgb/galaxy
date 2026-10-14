@@ -1,0 +1,235 @@
+=== [home] https://goose-docs.ai/ (lang=en)
+goose | Your open source AI agent 
+ Skip to main content 
+ ✨ goose has moved to the Agentic AI Foundation (AAIF): Learn more ! ✨
+ Quickstart Docs Tutorials Blog Resources Extensions 
+ Recipe Cookbook 
+ Deeplink Generator 
+ Discord GitHub 
+ Open Source · Apache 2.0 · Agentic AI Foundation
+ Your native open source AI agent. Desktop app, CLI, and API — for code, workflows, and everything in between.
+ Install goose Quickstart 
+ 55k+ GitHub stars 
+ 600+ Contributors 
+ 70+ MCP extensions 
+ What goose does
+ goose is a general-purpose AI agent that runs on your machine. Not just for code — use it for research, writing, automation, data analysis, or anything you need to get done.
+ 🖥️
+ Desktop app, CLI, and API
+ A native desktop app for macOS, Linux, and Windows. A full CLI for terminal workflows. An API to embed it anywhere. Built in Rust for performance and portability.
+ 🔌
+ Extensible
+ Connect to 70+ extensions — databases, APIs, browsers, GitHub, Google Drive, and more — via the Model Context Protocol open standard. Add skills , or build your own extension .
+ 🤖
+ Any LLM, including your subscriptions
+ Works with 15+ providers — Anthropic, OpenAI, Google, Ollama, OpenRouter, Azure, Bedrock, and more. Use API keys or your existing Claude, ChatGPT, or Gemini subscriptions via ACP .
+ 📋
+ Recipes
+ Capture workflows as portable YAML configs. Share with your team, run in CI, include instructions, extensions, parameters, and subrecipes .
+ 🧩
+ MCP Apps
+ Extensions can render interactive UIs directly inside goose Desktop — buttons, forms, visualizations. A new way to build agent-powered tools .
+ 🔀
+ Subagents
+ Spawn independent subagents to handle tasks in parallel — code review, research, file processing — keeping the main conversation clean.
+ 🔒
+ Security
+ Prompt injection detection, tool permission controls, sandbox mode, and an adversary reviewer that watches for unsafe actions.
+ Built on open standards
+ Model Context Protocol
+ MCP is the open standard for connecting AI agents to tools and data sources. goose was one of the earliest adopters and has one of the deepest integrations in the ecosystem — with 70+ documented extensions and growing.
+ Browse MCP extensions → 
+ Agent Client Protocol
+ ACP is a standard for communicating with coding agents. goose works as an ACP server — connect from Zed, JetBrains, or VS Code — and can use ACP agents like Claude Code and Codex as providers.
+ goose as ACP server → 
+ Agentic AI Foundation
+ goose is part of the Agentic AI Foundation at the Linux Foundation — ensuring the project remains vendor-neutral, community-governed, and open for the long term.
+ Learn about AAIF → 
+ Community
+ An active community of developers, contributors, and users building extensions, sharing recipes, and pushing the boundaries of what local AI agents can do.
+ 💬 Discord
+ Ask questions, share what you've built, get help from the community.
+ 🐙 GitHub
+ Star, fork, file issues, contribute code. goose is built in the open.
+ 🧩 Extensions
+ Browse community-built MCP extensions and add your own.
+ 📝 Blog
+ Tutorials, deep dives, release notes, and community spotlights.
+ Get started
+ Download the desktop app Available for macOS, Linux, and Windows
+ or install the CLI 
+ curl -fsSL https://github.com/aaif-goose/goose/releases/download/stable/download_cli.sh | bash 
+ See goose in action
+ Quick Links
+ Install goose 
+ Extensions 
+ Community
+ Spotlight 
+ Discord 
+ YouTube 
+ LinkedIn 
+ Twitter / X 
+ BlueSky 
+ Nostr 
+ More
+ Blog 
+ GitHub 
+ Copyright © 2026 AAIF (Agentic AI Foundation)
+
+=== [about] https://goose-docs.ai/docs/gdk/acp/ (lang=en)
+Use goose as an ACP agent | goose | Your open source AI agent 
+ Skip to main content 
+ ✨ goose has moved to the Agentic AI Foundation (AAIF): Learn more ! ✨
+ Quickstart Docs Tutorials Blog Resources Extensions 
+ Recipe Cookbook 
+ Deeplink Generator 
+ Discord GitHub 
+ Quickstart 
+ Getting Started 
+ GDK 
+ SDK 
+ ACP 
+ Reference 
+ Set up goose in Zed 
+ Guides 
+ Tutorials 
+ MCP Servers 
+ Architecture Overview 
+ Experimental 
+ Troubleshooting 
+ GDK 
+ ACP 
+ On this page 
+ Copy page 
+ Use goose as an ACP agent
+ Use the Agent Client Protocol (ACP) to build
+clients that connect to goose's agent runtime, tools, extensions, and configured
+models. These clients can be code editors, desktop, web, or mobile apps,
+automated services, or other custom integrations.
+ For methods provided by goose in addition to the standard ACP methods, see the
+ goose ACP Reference .
+ Install ​ 
+ Choose one installation method based on how your ACP client runs goose.
+ Install the goose CLI ​ 
+ Install the goose CLI to configure a client
+to launch goose acp or to run goose serve yourself.
+ Install from the ACP Registry ​ 
+ Supported ACP clients can install and manage goose for you through the
+ goose entry in the ACP Registry .
+This does not require a separate goose CLI installation.
+ Run the agent ​ 
+ Connect over stdio ​ 
+ Configure your ACP client to launch goose as a subprocess with this command:
+ goose acp 
+ The client communicates with goose through stdin and stdout and manages the
+process for the lifetime of the connection.
+ Connect over HTTP or WebSocket ​ 
+ Run goose serve when your ACP client connects over HTTP or WebSocket:
+ GOOSE_SERVER__SECRET_KEY='a-long-random-secret' goose serve 
+ GOOSE_SERVER__SECRET_KEY sets the secret your clients use to authenticate.
+When you run goose serve directly, it listens on 127.0.0.1:3284 and exposes
+the ACP endpoint at /acp . To use a different address, pass --host and
+ --port .
+ Authentication ​ 
+ HTTP clients authenticate with the X-Secret-Key header. WebSocket clients can
+use the same header, but browser-based WebSocket clients must pass the secret in
+the ?token= query parameter. Requests without the correct secret receive a
+ 401 Unauthorized response.
+ Local development only
+ Passing --dangerously-unauthenticated starts goose serve without
+authentication. Use it only when the server is isolated from untrusted traffic.
+ Browser origins ​ 
+ Most clients do not need to configure origins. Browser-based clients served from
+a non-loopback origin must allow that origin when starting goose. To allow both
+a local development client and a deployed web client, specify both origins:
+ GOOSE_SERVER__SECRET_KEY='a-long-random-secret' goose serve \ 
+ --allowed-origin 'http://localhost:5173' \ 
+ --allowed-origin 'https://app.example' 
+ Specifying any --allowed-origin values replaces the default loopback origins,
+so include every origin your clients need, including localhost origins used for
+development. Origins must match exactly, including the scheme and port.
+ For remote deployment, TLS, and certificate setup, see
+ Running a Remote goose Server .
+Run goose serve --help for the complete list of options.
+ ACP client examples ​ 
+ Clients over stdio ​ 
+ Browse the official ACP clients directory 
+for clients that can run local ACP agents. For a worked example of installing
+and configuring goose as a stdio agent, see the
+ Zed setup example .
+ goose Desktop over WebSocket ​ 
+ goose Desktop is an
+ACP client that uses WebSocket. It starts goose serve locally on an available
+loopback port and connects to its /acp endpoint over WebSocket.
+ Previous
+
+=== [meta] https://goose-docs.ai/
+html lang: en
+hreflang: en, x-default
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/aaif-goose/goose
+<div align="center">
+
+# goose
+
+_your native open source AI agent — desktop app, CLI, and API — for code, workflows, and everything in between_
+
+<p align="center">
+  <a href="https://opensource.org/licenses/Apache-2.0"
+    ><img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg"></a>
+  <a href="https://discord.gg/n8R5VaWDAn"
+    ><img src="https://img.shields.io/discord/1287729918100246654?logo=discord&logoColor=white&label=Join+Us&color=blueviolet" alt="Discord"></a>
+  <a href="https://github.com/aaif-goose/goose/actions/workflows/ci.yml"
+     ><img src="https://img.shields.io/github/actions/workflow/status/aaif-goose/goose/ci.yml?branch=main" alt="CI"></a>
+  <a href="https://insights.linuxfoundation.org/project/goose"><img src="https://insights.linuxfoundation.org/api/badge/health-score?project=goose"></a>
+  <a href="https://repology.org/project/goose-cli/versions"><img src="https://repology.org/badge/tiny-repos/goose-cli.svg" alt="Packaging status"></a>
+</p>
+
+<a href="https://trendshift.io/repositories/25298?utm_source=repository-badge&amp;utm_medium=badge&amp;utm_campaign=badge-repository-25298" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/repositories/25298" alt="aaif-goose%2Fgoose | Trendshift" width="250" height="55"/></a>
+
+</div>
+
+
+goose is a general-purpose AI agent that runs on your machine. Not just for code — use it for research, writing, automation, data analysis, or anything you need to get done.
+
+A native desktop app for macOS, Linux, and Windows. A full CLI for terminal workflows. An API to embed it anywhere. Built in Rust for performance and portability.
+
+goose works with 15+ providers — Anthropic, OpenAI, Google, Ollama, OpenRouter, Azure, Bedrock, and more. Use API keys or your existing Claude, ChatGPT, or Gemini subscriptions via [ACP](https://goose-docs.ai/docs/guides/acp-providers). Connect to 70+ extensions via the [Model Context Protocol](https://modelcontextprotocol.io/) open standard.
+
+goose is part of the [Agentic AI Foundation (AAIF)](https://aaif.io/) at the Linux Foundation.
+
+# Get started
+
+**[Download the desktop app](https://goose-docs.ai/docs/getting-started/installation)** for macOS, Linux, and Windows.
+
+Or install the CLI:
+
+```bash
+curl -fsSL https://github.com/aaif-goose/goose/releases/download/stable/download_cli.sh | bash
+```
+
+# Quick links
+- [Quickstart](https://goose-docs.ai/docs/quickstart)
+- [Installation](https://goose-docs.ai/docs/getting-started/installation)
+- [Tutorials](https://goose-docs.ai/docs/category/tutorials)
+- [Documentation](https://goose-docs.ai/docs/category/getting-started)
+- [Governance](https://github.com/aaif-goose/goose/blob/main/GOVERNANCE.md)
+- [Custom Distributions](https://github.com/aaif-goose/goose/blob/main/CUSTOM_DISTROS.md) — build your own goose distro with preconfigured providers, extensions, and branding
+
+## Need help?
+- [Diagnostics & Reporting](https://goose-docs.ai/docs/troubleshooting/diagnostics-and-reporting)
+- [Known Issues](https://goose-docs.ai/docs/troubleshooting/known-issues)
+
+# a little goose humor 🪿
+
+> Why did the developer choose goose as their AI agent?
+> 
+> Because it always helps them "migrate" their code to production! 🚀
+
+# goose around with us
+- [Discord](https://discord.gg/n8R5VaWDAn)
+- [YouTube](https://www.youtube.com/@goose-oss)
+- [LinkedIn](https://www.linkedin.com/company/goose-oss)
+- [Twitter/X](https://x.com/goose_oss)
+

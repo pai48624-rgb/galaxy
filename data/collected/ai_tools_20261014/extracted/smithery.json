@@ -1,0 +1,57 @@
+{
+ "company": "Smithery (Arcade.dev에 합류)",
+ "one_liner_ko": "에이전트를 수천 개의 도구·서비스에 몇 분 만에 연결하고 인증·자격증명·세션을 대신 처리해 주는 MCP 플랫폼.",
+ "what_it_does_ko": "Smithery는 AI 에이전트를 웹 검색, 데이터베이스 조회, 브라우저 제어, 업무 도구 등 외부 세계에 연결해 주는 서비스로, 내부적으로 Model Context Protocol(MCP)을 사용한다. 늘어나는 도구·통합 카탈로그에 에이전트를 연결하고, 자신의 MCP 서버를 게시해 다른 사람이 쓰게 할 수도 있다. OAuth 설정 없이 관리형 OAuth, 자동 토큰 갱신, 암호화된 자격증명 저장, 연결 수명주기 자동 관리를 제공한다. REST API와 Smithery CLI가 있으며, 사이트에는 Smithery가 Arcade.dev의 일부가 되었다는 공지가 있다.",
+ "key_features": [
+  "수천 개 도구·서비스(MCP 서버) 카탈로그에 에이전트 연결",
+  "관리형 OAuth(리디렉트 URI·클라이언트 ID 관리 불필요)",
+  "자동 토큰 갱신",
+  "암호화된 쓰기 전용 자격증명 저장",
+  "자체 MCP 서버 게시·배포와 관측성",
+  "MCP 연결 관리용 REST API와 Smithery CLI",
+  "문서를 MCP·마크다운 등 LLM 친화 형식으로 제공"
+ ],
+ "use_cases_ko": [
+  "챗봇·백그라운드 에이전트·AI 코파일럿을 외부 서비스에 연결",
+  "MCP 서버 개발자가 자신의 통합을 게시·배포"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Hobby: 월 50K RPC, 네임스페이스 3개)",
+  "plans": [
+   {"name": "Hobby", "price": 0, "currency": "USD", "period": "month", "limits": "월 50K RPC, 네임스페이스 3개, 관리형 OAuth, 지속 연결", "page_lang": "en"},
+   {"name": "Pay as you Go", "price": 10, "currency": "USD", "period": "month", "limits": "월 100K RPC, 네임스페이스 100개, $10 크레딧 소진 후 1K RPC당 $0.10", "page_lang": "en"},
+   {"name": "Custom", "price": null, "currency": null, "period": null, "limits": "문의, 맞춤 요청 한도·가동시간 SLA·Slack 지원", "page_lang": "en"}
+  ],
+  "pricing_url": "https://smithery.ai/pricing"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["웹", "CLI", "API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://smithery.ai", "quote": "🎉 Smithery is now a part of Arcade.dev! Read more in our announcement here"},
+  {"field": "one_liner_ko", "url": "https://smithery.ai", "quote": "Connect agents to thousands of tools and services.\nAuth, credentials, and sessions handled for you."},
+  {"field": "one_liner_ko", "url": "https://smithery.ai", "quote": "Smithery - Connect agents to services in minutes"},
+  {"field": "what_it_does_ko", "url": "https://smithery.ai/docs", "quote": "Smithery gives agents more agency by connecting them to the outside world — search the web, query databases, control browsers, reach into business tools, and much more."},
+  {"field": "what_it_does_ko", "url": "https://smithery.ai/docs", "quote": "Under the hood, Smithery speaks the Model Context Protocol (MCP)."},
+  {"field": "key_features", "url": "https://smithery.ai/docs", "quote": "Zero OAuth configuration — No redirect URIs, client IDs, or secrets to manage"},
+  {"field": "key_features", "url": "https://smithery.ai/docs", "quote": "Automatic token refresh — Credentials stay valid without manual intervention"},
+  {"field": "key_features", "url": "https://smithery.ai/docs", "quote": "Secure credential storage — Encrypted, write-only storage for API keys and tokens"},
+  {"field": "key_features", "url": "https://smithery.ai/docs", "quote": "Publish your MCP server to Smithery for distribution and observability"},
+  {"field": "key_features", "url": "https://smithery.ai/docs", "quote": "Manage MCP connections with a simple REST API - OAuth, tokens, and sessions handled for you."},
+  {"field": "key_features", "url": "https://smithery.ai/docs", "quote": "The Smithery documentation is available in multiple LLM-friendly formats:"},
+  {"field": "use_cases_ko", "url": "https://smithery.ai/docs", "quote": "Whether you’re building chatbots, background agents, or AI copilots, Smithery handles the messy parts of plugging agents into external services:"},
+  {"field": "use_cases_ko", "url": "https://smithery.ai/docs", "quote": "Smithery connects your AI agent to a growing catalog of tools and integrations — and lets you publish your own for others to use."},
+  {"field": "pricing", "url": "https://smithery.ai/pricing", "quote": "Pay as you Go\n $10/mo\n RPCs /month* 100K"},
+  {"field": "pricing", "url": "https://smithery.ai/pricing", "quote": "* RPCs consume your $10 credits, then $0.10 / 1K"},
+  {"field": "pricing", "url": "https://smithery.ai/pricing", "quote": "Hobby\n Free\n RPCs /month 50K"},
+  {"field": "pricing", "url": "https://smithery.ai/pricing", "quote": "Custom rate limits"},
+  {"field": "api", "url": "https://smithery.ai/docs", "quote": "Manage MCP connections with a simple REST API - OAuth, tokens, and sessions handled for you."},
+  {"field": "platforms", "url": "https://smithery.ai/docs", "quote": "Smithery CLI"},
+  {"field": "korean_support", "url": "https://smithery.ai", "quote": "html lang: en"}
+ ],
+ "mismatch": [
+  {"official": "Hobby 무료(월 50K RPC) 외에 Pay as you Go 월 $10(크레딧 소진 후 1K RPC당 $0.10)와 Custom(문의) 유료 요금제를 파는 상업 서비스", "diff": "기존 분류는 '오픈소스(무료, 표준/규격)'이나 공식 페이지는 유료 구독·종량제 요금이 있는 관리형 연결 서비스이며 오픈소스 라이선스 표기는 없음", "url": "https://smithery.ai/pricing"}
+ ],
+ "plan_change": []
+}

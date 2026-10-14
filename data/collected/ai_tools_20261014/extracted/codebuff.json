@@ -1,0 +1,56 @@
+{
+ "company": "Codebuff",
+ "one_liner_ko": "터미널에서 쓰는 AI 코딩 도우미로, 코드베이스 전체를 이해해 더 좋은 코드를 만든다고 내세운다.",
+ "what_it_does_ko": "Codebuff는 터미널에서 실행하는 AI 코딩 에이전트로, npm으로 설치해 프로젝트 폴더에서 바로 쓴다. 코드베이스 전체 구조·의존성·패턴을 파악해 기존 구조와 스타일을 지키며 정밀하게 수정한다. 한 번의 지시로 코드베이스 전반을 바꿀 수 있고 Free·Max·Plan 같은 모드를 제공한다. 사용자가 직접 에이전트를 만들고 고칠 수 있으며 MCP 서버, 스킬, 지식 파일(AGENTS.md·CLAUDE.md)을 지원한다.",
+ "key_features": [
+  "코드베이스 전체를 2초 만에 색인",
+  "숨은 의존성까지 포함한 프로젝트 전체 지도 작성",
+  "기존 구조·스타일을 지키는 정밀 코드 수정",
+  "어떤 기술 스택이든 터미널에서 바로 작동(npm 설치)",
+  "Free·Max·Plan 등 사용 모드",
+  "사용자 정의 에이전트 만들기·고치기",
+  "MCP 서버·스킬·지식 파일 지원",
+  "SDK·프로그래밍 방식 접근"
+ ],
+ "use_cases_ko": [
+  "개발자가 한 번의 프롬프트로 코드베이스 전반을 변경",
+  "바쁜 창업자·엔지니어의 일상 코딩 작업"
+ ],
+ "pricing": {
+  "free_tier": "Free 모드 언급 있음(한도 불명)",
+  "plans": [
+   {"name": "Strong 구독 1×", "price": 100, "currency": "USD", "period": "month", "limits": "1× 사용량, 모든 모드", "page_lang": "en"},
+   {"name": "Strong 구독 2.5×", "price": 200, "currency": "USD", "period": "month", "limits": "2.5× 사용량", "page_lang": "en"},
+   {"name": "Strong 구독 7×", "price": 500, "currency": "USD", "period": "month", "limits": "7× 사용량", "page_lang": "en"},
+   {"name": "종량제(Pay as you go)", "price": 0.01, "currency": "USD", "period": "usage", "limits": "크레딧당 1센트, 구독 불필요, 작업 복잡도에 따라 소모", "page_lang": "en"}
+  ],
+  "pricing_url": "https://www.codebuff.com/pricing/"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["CLI"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://www.codebuff.com/", "quote": "© 2026 Codebuff . All rights reserved."},
+  {"field": "one_liner_ko", "url": "https://www.codebuff.com/", "quote": "Codebuff – AI Coding Assistant for Your Terminal"},
+  {"field": "what_it_does_ko", "url": "https://www.codebuff.com/", "quote": "Codebuff deeply understands your entire codebase structure, dependencies, and patterns to generate code that other AI tools can't match."},
+  {"field": "what_it_does_ko", "url": "https://www.codebuff.com/docs/help/quick-start", "quote": "Check out the modes for using Codebuff, such as Free, Max, or Plan."},
+  {"field": "key_features", "url": "https://www.codebuff.com/", "quote": "Indexes your entire codebase in 2 seconds"},
+  {"field": "key_features", "url": "https://www.codebuff.com/", "quote": "Builds a complete map of your project, including hidden dependencies"},
+  {"field": "key_features", "url": "https://www.codebuff.com/", "quote": "Makes pinpoint changes while respecting your codebase's existing structure and style"},
+  {"field": "key_features", "url": "https://www.codebuff.com/", "quote": "Works in your terminal with any tech stack, no special environments needed."},
+  {"field": "key_features", "url": "https://www.codebuff.com/docs/help/quick-start", "quote": "What Makes Codebuff Unique Modes Knowledge Files MCP Servers Skills"},
+  {"field": "key_features", "url": "https://www.codebuff.com/docs/help/quick-start", "quote": "Building custom agents — running /init is the first step to creating your own agents !"},
+  {"field": "use_cases_ko", "url": "https://www.codebuff.com/", "quote": "Codebuff lets you make wholesale changes to the codebase with a single prompt."},
+  {"field": "use_cases_ko", "url": "https://www.codebuff.com/docs/help/quick-start", "quote": "Codebuff for Busy Founders Codebuff as an Engineer"},
+  {"field": "pricing", "url": "https://www.codebuff.com/pricing/", "quote": "Subscribe to use all modes with higher usage limits"},
+  {"field": "pricing", "url": "https://www.codebuff.com/pricing/", "quote": "$ 500 /mo"},
+  {"field": "pricing", "url": "https://www.codebuff.com/pricing/", "quote": "2.5× usage"},
+  {"field": "pricing", "url": "https://www.codebuff.com/pricing/", "quote": "Pay just 1¢ per credit. Credits are consumed based on task complexity"},
+  {"field": "api", "url": "https://www.codebuff.com/docs/help/quick-start", "quote": "SDK & Programmatic Access"},
+  {"field": "platforms", "url": "https://www.codebuff.com/", "quote": "npm install -g codebuff"},
+  {"field": "korean_support", "url": "https://www.codebuff.com/", "quote": "html lang: en"}
+ ],
+ "mismatch": [],
+ "plan_change": [{"official": "Strong 구독 $100/$200/$500 월 + 구독 없는 종량제(크레딧당 1센트)", "diff": "무료+구독 분류지만 실제로는 고가 구독 3단계와 크레딧 종량제가 함께 있음, 무료는 Free 모드 언급뿐", "url": "https://www.codebuff.com/pricing/"}]
+}

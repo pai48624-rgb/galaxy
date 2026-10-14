@@ -1,0 +1,64 @@
+{
+ "company": "Elicit, inc.",
+ "one_liner_ko": "연구자가 근거 중심으로 연구·의사결정을 하도록 돕는 과학 연구용 AI.",
+ "what_it_does_ko": "Elicit은 연구 질문을 받아 수백만 편의 학술 논문을 검색하고 인용이 달린 구조화된 연구 보고서를 만들어 준다. 1억 3,800만 편 이상의 논문과 54만 5천 건의 임상시험을 의미 기반으로 검색할 수 있다. 체계적 문헌고찰의 선별·데이터 추출을 자동화하고, 연구 에이전트가 과학 DB·학술지·공공 데이터·업로드 문서에서 근거를 모아 보고서·표·그림·슬라이드를 만든다. AI가 만든 모든 주장에 문장 단위 인용을 단다.",
+ "key_features": [
+  "과학 DB·학술지·공공 데이터·업로드 문서에서 근거를 모으는 연구 에이전트",
+  "1억 3,800만 편 논문·54만 5천 건 임상시험 의미 검색",
+  "체계적 문헌고찰 기반의 맞춤형 연구 보고서",
+  "체계적 문헌고찰 선별·데이터 추출 자동화",
+  "출처를 저장·정리하는 라이브러리",
+  "새 연구를 계속 추적하는 Routines",
+  "모든 AI 주장에 문장 단위 인용",
+  "논문 검색·보고서·문헌고찰용 API"
+ ],
+ "use_cases_ko": [
+  "연구자가 체계적 문헌고찰의 선별·추출 시간을 줄임",
+  "제약·의료기기·정책 분야에서 근거 기반 의사결정",
+  "학계에서 과학이 이미 밝혀낸 내용을 빠르게 파악"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Basic: 연구 에이전트·보고서는 제한 사용, 논문 검색·요약·논문 채팅 무제한)",
+  "plans": [
+   {"name": "Basic", "price": 0, "currency": "USD", "period": "month", "limits": "연구 에이전트·보고서 제한 사용, 검색 무제한", "page_lang": "en"},
+   {"name": "Pro", "price": 49, "currency": "USD", "period": "month(연간 결제)", "limits": "사용자당, 연 $588 청구, 5,000편 선별, API 접근", "page_lang": "en"},
+   {"name": "Scale", "price": 169, "currency": "USD", "period": "month(연간 결제)", "limits": "사용자당, 연 $2,028 청구, Pro의 5배 사용량, 실시간 협업", "page_lang": "en"},
+   {"name": "Enterprise", "price": null, "currency": "USD", "period": null, "limits": "맞춤 견적, 40,000편 선별, SSO·SAML, 무제한 API", "page_lang": "en"}
+  ],
+  "pricing_url": "https://elicit.com/pricing"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["웹", "API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://elicit.com/pricing", "quote": "© 2026 Elicit, inc."},
+  {"field": "one_liner_ko", "url": "https://elicit.com", "quote": "Elicit: AI for research & decision-making"},
+  {"field": "one_liner_ko", "url": "https://elicit.com", "quote": "Elicit helps researchers be 10x more evidence-based"},
+  {"field": "what_it_does_ko", "url": "https://elicit.com", "quote": "A researcher types a research question, Elicit searches through millions of academic papers, and automatically generates a structured research report with citations in seconds."},
+  {"field": "what_it_does_ko", "url": "https://elicit.com", "quote": "Elicit supports all AI-generated claims with sentence-level citations from the underlying sources."},
+  {"field": "key_features", "url": "https://elicit.com", "quote": "Gathers evidence across scientific databases, academic journals, public data sources, and internally uploaded documents."},
+  {"field": "key_features", "url": "https://elicit.com", "quote": "Search over 138 million academic papers and 545,000 clinical trials, with more data sources coming soon."},
+  {"field": "key_features", "url": "https://elicit.com", "quote": "Elicit generates high-quality research briefs based on a process inspired by systematic reviews."},
+  {"field": "key_features", "url": "https://elicit.com", "quote": "Elicit can automate screening and data extraction of systematic reviews"},
+  {"field": "key_features", "url": "https://elicit.com", "quote": "store and organize the sources that you find so that you can easily reuse them in future projects."},
+  {"field": "key_features", "url": "https://elicit.com", "quote": "use Elicit Routines to stay on top of new research and keep your work up to date"},
+  {"field": "key_features", "url": "https://docs.elicit.com/", "quote": "The Elicit API lets you search academic papers and clinical trials, run research workflows, and manage your library and shared projects."},
+  {"field": "use_cases_ko", "url": "https://elicit.com", "quote": "Researchers report up to 80% time savings using Elicit for systematic reviews."},
+  {"field": "use_cases_ko", "url": "https://elicit.com", "quote": "Make evidence-based policies"},
+  {"field": "use_cases_ko", "url": "https://elicit.com", "quote": "Use Elicit to understand more quickly what science already knows, so that you can discover the unknown."},
+  {"field": "pricing", "url": "https://elicit.com/pricing", "quote": "Limited usage for Research Agent and Research Reports"},
+  {"field": "pricing", "url": "https://elicit.com/pricing", "quote": "Unlimited search across more than 138 million papers"},
+  {"field": "pricing", "url": "https://elicit.com/pricing", "quote": "Per user/month, billed as $588 annually"},
+  {"field": "pricing", "url": "https://elicit.com/pricing", "quote": "Per user/month, billed as $2,028 annually"},
+  {"field": "pricing", "url": "https://elicit.com/pricing", "quote": "Dedicated Systematic Review Workflow that can screen 5,000 papers"},
+  {"field": "pricing", "url": "https://elicit.com/pricing", "quote": "5x usage for Research Agent, Research Reports, and Systematic Literature Reviews"},
+  {"field": "pricing", "url": "https://elicit.com/pricing", "quote": "Greater scale: screen 40,000 papers and extract 40 columns"},
+  {"field": "api", "url": "https://docs.elicit.com/", "quote": "API access requires a Pro plan or above."},
+  {"field": "platforms", "url": "https://docs.elicit.com/", "quote": "production base URL https://elicit.com/api/v2"},
+  {"field": "platforms", "url": "https://elicit.com", "quote": "Elicit goes beyond chat to provide rich, interactive tables and multi-step workflows."},
+  {"field": "korean_support", "url": "https://elicit.com", "quote": "화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

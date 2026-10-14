@@ -24,3 +24,118 @@ tensorrt-llm,TensorRT-LLM,사용량 기반 종량제(클라우드/GPU),"Apache 2
 deepspeed,DeepSpeed,사용량 기반 종량제(클라우드/GPU),"Apache 2.0 오픈소스 학습 최적화 라이브러리(PyPI), 요금 표기 없음",기존 '사용량 기반 종량제(클라우드/GPU)'와 반대로 자체 설치형 오픈소스 라이브러리,https://github.com/deepspeedai/DeepSpeed
 megatron-lm,Megatron-LM,사용량 기반 종량제(클라우드/GPU),"Apache 라이선스 오픈소스 학습 라이브러리, PyPI·소스로 설치, 요금 표기 없음",기존 '사용량 기반 종량제(클라우드/GPU)'와 반대로 자체 설치형 오픈소스 라이브러리,https://github.com/NVIDIA/Megatron-LM
 horovod,Horovod,사용량 기반 종량제(클라우드/GPU),"Apache 2.0 오픈소스 분산 학습 프레임워크(LF AI & Data), 직접 설치, 요금 표기 없음 — 2026년 9월 보관 처리",기존 '사용량 기반 종량제(클라우드/GPU)'와 반대로 자체 설치형 오픈소스 소프트웨어,https://horovod.ai
+sglang,SGLang,사용량 기반 종량제(클라우드/GPU),"Apache 2.0 오픈소스 추론 프레임워크(pip·Docker로 직접 설치), 가격 페이지는 404로 유료 요금제 없음",기존 분류는 '사용량 기반 종량제(클라우드/GPU)'이나 공식 페이지는 무료 오픈소스 소프트웨어로만 소개,https://github.com/sgl-project/sglang
+cuda,CUDA,사용량 기반 종량제(클라우드/GPU),CUDA Toolkit을 무료 도구(Free Tools)로 내려받아 쓰는 개발 환경으로 안내,기존 분류는 '사용량 기반 종량제(클라우드/GPU)'이나 공식 페이지는 무료 다운로드 툴킷이며 사용량 과금 언급 없음,https://developer.nvidia.com/cuda/toolkit
+exo,EXO,사용량 기반 종량제(클라우드/GPU),"Apache-2.0 오픈소스 소프트웨어로, 사용자가 가진 기기에서 로컬 추론",기존 분류는 '사용량 기반 종량제(클라우드/GPU)'이나 공식 페이지는 자기 하드웨어에서 돌리는 오픈소스이며 사용량 과금 언급 없음(기업용은 문의),https://github.com/exo-explore/exo
+rocm,ROCm,사용량 기반 종량제(클라우드/GPU),AMD의 오픈소스 GPU 소프트웨어 스택(직접 설치하는 SDK),기존 분류는 '사용량 기반 종량제(클라우드/GPU)'이나 공식 페이지는 오픈소스 소프트웨어 플랫폼이며 사용량 과금 언급 없음,https://rocm.docs.amd.com/en/latest/
+tenstorrent,Tenstorrent,사용량 기반 종량제(클라우드/GPU),"AI 카드·워크스테이션·서버를 시작가($999·$9,999·$70,000, USD)로 판매하고 IP 라이선스 제공",기존 분류는 '사용량 기반 종량제(클라우드/GPU)'이나 공식 페이지는 하드웨어 구매·라이선스 판매가 중심,https://tenstorrent.com
+anthropic-api,Anthropic API,오픈소스 + 종량제/구독 혼합,"Claude 모델을 100만 토큰당 요금으로 쓰는 종량제 API(Messages API), 오픈소스 언급 없음",기존 분류는 '오픈소스 + 종량제/구독 혼합'이나 공식 API 페이지는 비공개 모델의 유료 종량제 API만 제시(오픈소스 아님),https://claude.com/ko/platform/api
+open-webui,Open WebUI,사용량 기반 종량제(클라우드/GPU),"pip 한 줄로 계정 없이 설치해 자기 서버에서 돌리는 자체 호스팅 소프트웨어(Open WebUI License), 엔터프라이즈는 영업 문의",기존 분류는 '사용량 기반 종량제(클라우드/GPU)'이나 공식 페이지는 자체 호스팅 소프트웨어이며 사용량 과금 언급 없음,https://openwebui.com/
+sillytavern,SillyTavern,사용량 기반 종량제(클라우드/GPU),항상 무료·오픈소스이며 온라인·호스팅 서비스를 제공하지 않는 로컬 설치형 프런트엔드,기존 분류 '사용량 기반 종량제(클라우드/GPU)'와 반대 — 자체 요금·클라우드 과금 없음(백엔드 비용은 사용자가 고른 외부 API 몫),https://github.com/SillyTavern/SillyTavern
+pinecone,Pinecone,오픈소스 + 클라우드 매니지드 유료 플랜,Pinecone은 완전 관리형 벡터 데이터베이스이며 공식 페이지에 오픈소스·자체 설치 언급이 없음(Starter 무료 + 유료 요금제),기존 분류 '오픈소스 + 클라우드 매니지드 유료 플랜'의 '오픈소스' 부분을 공식 페이지에서 확인할 수 없음 — 관리형 SaaS 프리미엄 구조,https://www.pinecone.io/
+opensearch,OpenSearch,오픈소스 + 클라우드 매니지드 유료 플랜,"Linux Foundation 산하 벤더 중립 프로젝트로 전 구성요소가 Apache 2.0 오픈소스, 공식 사이트에 자체 유료 클라우드 요금제 없음(외부 솔루션 제공사 안내만)",기존 분류의 '클라우드 매니지드 유료 플랜'이 공식 페이지에 없음 — 순수 오픈소스,https://opensearch.org
+apache-flink,Apache Flink,오픈소스 + 클라우드 매니지드 유료 플랜,"ASF 오픈소스 프로젝트로, 공식 사이트·저장소에 자체 클라우드 매니지드 유료 요금제가 없음",기존 분류의 '클라우드 매니지드 유료 플랜'을 공식 페이지에서 확인할 수 없음 — 순수 오픈소스,https://flink.apache.org
+apache-kafka,Apache Kafka,오픈소스 + 클라우드 매니지드 유료 플랜,"ASF 오픈소스 프로젝트로, 공식 사이트에 자체 클라우드 매니지드 유료 요금제가 없음",기존 분류의 '클라우드 매니지드 유료 플랜'을 공식 페이지에서 확인할 수 없음 — 순수 오픈소스,https://kafka.apache.org
+apache-pulsar,Apache Pulsar,오픈소스 + 클라우드 매니지드 유료 플랜,"Apache License 2.0 오픈소스 ASF 프로젝트로, 공식 사이트에 자체 클라우드 매니지드 유료 요금제가 없음",기존 분류의 '클라우드 매니지드 유료 플랜'을 공식 페이지에서 확인할 수 없음 — 순수 오픈소스,https://pulsar.apache.org
+apache-hadoop,Apache Hadoop,오픈소스 + 클라우드 매니지드 유료 플랜,"ASF 오픈소스 프로젝트로, 공식 사이트에 자체 클라우드 매니지드 유료 요금제가 없음",기존 분류의 '클라우드 매니지드 유료 플랜'을 공식 페이지에서 확인할 수 없음 — 순수 오픈소스,https://hadoop.apache.org
+apache-spark,Apache Spark,오픈소스 + 클라우드 매니지드 유료 플랜,"Apache License 2.0 오픈소스 프로젝트(ASF)로, 공식 페이지에 자체 유료 요금제·관리형 클라우드 안내가 없음",기존 분류는 '오픈소스 + 클라우드 매니지드 유료 플랜'이나 공식 페이지에는 유료 플랜이 없음(순수 오픈소스),https://spark.apache.org
+stitch,Stitch,오픈소스 + 클라우드 매니지드 유료 플랜,"공식 페이지는 행 수 기반 유료 SaaS(Standard $100~, Advanced $1,500, Premium $3,000)와 14일 체험만 안내하고 오픈소스 언급이 없음",기존 분류 '오픈소스 + 클라우드 매니지드 유료 플랜'과 달리 오픈소스 제공 근거가 없는 유료 전용 서비스,https://www.stitchdata.com/pricing/
+apache-hudi,Apache Hudi,오픈소스 + 클라우드 매니지드 유료 플랜,"Apache License 2.0 오픈소스 프로젝트(ASF)로, 공식 페이지에 자체 유료 요금제·관리형 클라우드 안내가 없음(외부 벤더 목록만 있음)",기존 분류는 '오픈소스 + 클라우드 매니지드 유료 플랜'이나 공식 페이지에는 유료 플랜이 없음(순수 오픈소스),https://hudi.apache.org
+delta-lake,Delta Lake,오픈소스 + 클라우드 매니지드 유료 플랜,"리눅스 재단 산하 Apache 2.0 오픈소스 프로젝트로, 공식 페이지에 자체 유료 요금제·관리형 클라우드 안내가 없음",기존 분류는 '오픈소스 + 클라우드 매니지드 유료 플랜'이나 공식 페이지에는 유료 플랜이 없음(순수 오픈소스),https://delta.io
+apache-iceberg,Apache Iceberg,오픈소스 + 클라우드 매니지드 유료 플랜,"Apache License 2.0 오픈소스 프로젝트(ASF)로, 공식 페이지에 자체 유료 요금제·관리형 클라우드 안내가 없음",기존 분류는 '오픈소스 + 클라우드 매니지드 유료 플랜'이나 공식 페이지에는 유료 플랜이 없음(순수 오픈소스),https://iceberg.apache.org
+alation,Alation,오픈소스 + 클라우드 매니지드 유료 플랜,공식 페이지는 기업용 상용 플랫폼(AIOS)과 상담 요청('Start a Conversation')만 안내하고 오픈소스나 공개 요금제가 없음,기존 분류 '오픈소스 + 클라우드 매니지드 유료 플랜'과 달리 오픈소스 근거가 없는 상용(영업 문의) 제품,https://www.alation.com/learn-more/
+apache-atlas,Apache Atlas,오픈소스 + 클라우드 매니지드 유료 플랜,"Apache License 2.0 오픈소스 프로젝트(ASF)로, 공식 페이지에 자체 유료 요금제·관리형 클라우드 안내가 없음",기존 분류는 '오픈소스 + 클라우드 매니지드 유료 플랜'이나 공식 페이지에는 유료 플랜이 없음(순수 오픈소스),https://atlas.apache.org/#/
+vertex-feature-store,Vertex Feature Store,오픈소스 + 클라우드 매니지드 유료 플랜,"Google Cloud 관리형 서비스, 사용량 기반 과금($300 신규 크레딧), 오픈소스 언급 없음",기존 분류 '오픈소스 + 클라우드 매니지드 유료 플랜'과 달리 오픈소스가 아닌 클라우드 전용 종량제 서비스로 보임,https://cloud.google.com/pricing?hl=ko/
+accord-net,Accord.NET,오픈소스 + 클라우드 매니지드 유료 플랜,"소프트웨어는 완전 무료이며 앞으로도 무료(기부만 받음), 프로젝트는 보관 상태",기존 분류의 '클라우드 매니지드 유료 플랜'이 공식 페이지에 없음 — 순수 무료 오픈소스 라이브러리,http://accord-framework.net
+google-automl,Google AutoML,오픈소스 + 클라우드 매니지드 유료 플랜,"Google Cloud 관리형 플랫폼, 사용량 기반 과금(신규 $300 크레딧), 오픈소스 언급 없음",기존 분류 '오픈소스 + 클라우드 매니지드 유료 플랜'과 달리 오픈소스가 아닌 클라우드 전용 종량제 서비스로 보임,https://cloud.google.com/pricing
+tensorflow,TensorFlow,오픈소스 + 클라우드 매니지드 유료 플랜,"공식 페이지는 TensorFlow를 오픈소스 ML 라이브러리·플랫폼으로만 소개하고, 받은 본문에 요금제나 관리형 클라우드 유료 플랜이 없음(요금 구간은 뉴스레터 페이지)",기존 분류 '오픈소스 + 클라우드 매니지드 유료 플랜'의 유료 관리형 플랜을 공식 페이지에서 확인할 수 없음 — 무료 오픈소스로 보는 게 맞을 가능성,https://www.tensorflow.org/?hl=ko
+fiddler-ai,Fiddler AI,오픈소스 + 클라우드 매니지드 유료 플랜,"상용 SaaS 플랫폼: Free(가드레일) / Developer trace당 $0.002 / Enterprise 문의, 받은 본문 어디에도 오픈소스 언급 없음",기존 분류는 '오픈소스 + 클라우드 매니지드 유료 플랜'이지만 공식 페이지에는 오픈소스 제품이 없고 종량제 상용 서비스로 보임,https://www.fiddler.ai/pricing
+braintrust,Braintrust,오픈소스 + 클라우드 매니지드 유료 플랜,"플랫폼은 Starter $0 / Pro $249/월 / Enterprise 맞춤의 상용 SaaS(온프레미스는 Enterprise), 오픈소스는 GitHub의 '라이브러리·도구'로만 언급",기존 분류 '오픈소스 + 클라우드 매니지드 유료 플랜'과 달리 플랫폼 본체를 오픈소스로 제공한다는 내용이 공식 페이지에 없음,https://www.braintrust.dev/pricing
+eleutherai-lm-evaluation-harness,EleutherAI LM Evaluation Harness,오픈소스 + 클라우드 매니지드 유료 플랜,"GitHub에 공개된 평가 프레임워크(pip 설치 라이브러리·CLI)만 있고, 받은 본문에 유료 플랜이나 관리형 클라우드 언급 없음",기존 분류 '오픈소스 + 클라우드 매니지드 유료 플랜'의 유료 관리형 플랜이 공식 페이지에서 확인되지 않음 — 무료 오픈소스 도구로 보임,https://github.com/EleutherAI/lm-evaluation-harness
+humaneval,HumanEval,오픈소스 + 클라우드 매니지드 유료 플랜,GitHub에 공개된 벤치마크 데이터셋·평가 하네스 코드뿐이고 유료 플랜·관리형 클라우드 언급 없음,기존 분류 '오픈소스 + 클라우드 매니지드 유료 플랜'과 달리 판매 상품이 아닌 무료 공개 벤치마크로 보임,https://github.com/openai/human-eval
+mmlu,MMLU,오픈소스 + 클라우드 매니지드 유료 플랜,논문용 벤치마크 저장소(평가 코드·시험 데이터 다운로드·리더보드)뿐이고 유료 플랜·관리형 클라우드 언급 없음,기존 분류 '오픈소스 + 클라우드 매니지드 유료 플랜'과 달리 판매 상품이 아닌 학술 벤치마크로 보임,https://github.com/hendrycks/test
+helm,HELM,오픈소스 + 클라우드 매니지드 유료 플랜,스탠퍼드 CRFM의 오픈소스 평가 프레임워크·공개 리더보드이며 받은 본문에 유료 플랜·관리형 클라우드 언급 없음,기존 분류 '오픈소스 + 클라우드 매니지드 유료 플랜'의 유료 관리형 플랜이 확인되지 않음 — 무료 학술 프로젝트로 보임,https://github.com/stanford-crfm/helm
+whylabs,WhyLabs,오픈소스 + 클라우드 매니지드 유료 플랜,"WhyLabs, Inc.는 운영을 중단했고 전체 플랫폼을 오픈소스로 공개, 요금 페이지(/pricing, /plans)는 종료 안내문만 표시",기존 분류 '오픈소스 + 클라우드 매니지드 유료 플랜'과 달리 유료 관리형 서비스가 더 이상 없음(서비스 종료),https://whylabs.ai/pricing
+loom,loom,오픈소스(무료),"라이선스가 Proprietary(독점, All rights reserved)이며 '작성자가 아니면 사용하지 말 것'이라고 경고하는 연구 프로젝트",기존 pricing_policy는 '오픈소스(무료)'이나 공식 저장소는 독점 라이선스로 오픈소스가 아님,https://github.com/ghuntley/loom
+questflow,Questflow,오픈소스(무료),"AI 금융 에이전트 구독 서비스: Free $0, Pro $19.99/월, Max $99.99/월","기존 '오픈소스(무료)' 분류와 달리 유료 구독 요금제가 있는 상용 서비스이며, 제품도 멀티 에이전트 오케스트레이션이 아니라 AI 금융·트레이딩 에이전트로 바뀜",https://questflow.ai/pricing/?utm_source=website&amp;utm_medium=footer&amp;utm_campaign=questflow/
+gpt-engineer,GPT Engineer,오픈소스(무료),"등록 주소 gptengineer.app은 Lovable(유료 크레딧 구독 앱 빌더: Free $0, Pro $25/월, Business $50/월, Enterprise)로 연결됨","기존 '오픈소스(무료)' 분류와 달리 공식 사이트 제품은 유료 구독 서비스이고, 원래 gpt-engineer 저장소의 라이선스 이름도 받은 페이지에 적혀 있지 않음",https://lovable.dev/ko/pricing
+composio,Composio,"오픈소스(무료, 표준/규격)","무료(Hobby, 월 10만 도구 호출) 후 종량제로 과금하는 상업용 관리형 플랫폼(SDK·MCP 게이트웨이·엔터프라이즈 제공). 수집 페이지에 오픈소스 라이선스 표기 없음","기존 분류 '오픈소스(무료, 표준/규격)'와 달리 표준·규격이 아닌 유료 종량제 상용 서비스",https://composio.dev/pricing
+smithery,Smithery,"오픈소스(무료, 표준/규격)",Hobby 무료(월 50K RPC) 외에 Pay as you Go 월 $10(크레딧 소진 후 1K RPC당 $0.10)와 Custom(문의) 유료 요금제를 파는 상업 서비스,"기존 분류는 '오픈소스(무료, 표준/규격)'이나 공식 페이지는 유료 구독·종량제 요금이 있는 관리형 연결 서비스이며 오픈소스 라이선스 표기는 없음",https://smithery.ai/pricing
+llamaparse,LlamaParse,오픈소스 + 클라우드 매니지드 유료 플랜,요금 FAQ: LlamaParse는 상용 플랫폼이며 오픈소스가 아님(오픈소스는 LlamaIndex·Workflows),기존 분류 '오픈소스 + 클라우드 매니지드 유료 플랜'과 달리 LlamaParse 자체는 오픈소스가 아닌 상용 크레딧 과금 서비스,https://www.llamaindex.ai/pricing
+blackbox-ai,Blackbox AI,프리미엄(무료+유료 구독),"좌석·구독 없이 토큰 단위 과금, 연간 약정 기반 엔터프라이즈 계약만 안내(영업 상담부터 시작), 무료 요금제 언급 없음",기존 '프리미엄(무료+유료 구독)'과 달리 무료·구독 구조가 보이지 않고 종량제+기업 약정임,https://www.blackbox.ai/pricing
+devin,Devin,유료 구독제,Free $0 요금제(가벼운 사용량)가 있고 Pro $20·Max $200·Teams 유료,기존 '유료 구독제'와 달리 무료 요금제가 있어 무료+유료(프리미엄) 구조,https://devin.ai/pricing
+factory,Factory,프리미엄(무료+유료 구독),요금 페이지에 Pro $20부터 시작하는 유료 요금제만 있고 무료 요금제 없음,기존 '프리미엄(무료+유료 구독)'과 달리 무료 등급이 확인되지 않음,https://factory.com/pricing
+gemini-code-assist,Gemini Code Assist,프리미엄(무료+유료 구독),"개인용 무료 등급(Gemini Code Assist for individuals)의 CLI·IDE 확장은 2026-06-18 Antigravity로 대체, 이 페이지는 유료 Standard·Enterprise만 안내",기존 '프리미엄(무료+유료 구독)'과 달리 Code Assist 자체의 무료 등급이 종료된 것으로 보임,https://codeassist.google/products/business
+goose,Goose,프리미엄(무료+유료 구독),"Apache 2.0 오픈소스, 요금제 없음, 사용자 API 키나 기존 Claude·ChatGPT·Gemini 구독 사용",기존 '프리미엄(무료+유료 구독)'과 달리 자체 유료 구독이 없는 오픈소스 도구,https://goose-docs.ai/
+open-interpreter,Open Interpreter,프리미엄(무료+유료 구독),"Apache 2.0 오픈소스 터미널 에이전트, 자기 API 키·로컬 모델 사용 가능(요금표 없음)",기존 '프리미엄(무료+유료 구독)'과 달리 공식 페이지에서 유료 구독 요금제는 확인되지 않음,https://www.openinterpreter.com/
+qwen-code,Qwen Code,프리미엄(무료+유료 구독),"프레임워크와 Qwen 모델 모두 오픈소스, 여러 API·로컬 모델 사용(요금표 없음)",기존 '프리미엄(무료+유료 구독)'과 달리 공식 페이지에서 유료 구독 요금제는 확인되지 않음,https://github.com/QwenLM/qwen-code
+roo-code,Roo Code,프리미엄(무료+유료 구독),공식 GitHub에 Roo Code 확장이 5월 15일 종료됐다고 적힘(유료 사용자는 결제 문의만 안내),기존 분류는 '프리미엄(무료+유료 구독)'이지만 현재 서비스 자체가 종료됨,https://github.com/RooCodeInc/Roo-Code
+sourcegraph-cody,Sourcegraph Cody,프리미엄(무료+유료 구독),"Cody는 Sourcegraph Enterprise에서 지원되고, 가격 페이지에는 최소 연간 계약 $16K부터인 Enterprise 요금제만 있음",기존 분류는 '프리미엄(무료+유료 구독)'인데 공식 페이지에는 무료 요금제 없이 기업 연간 계약만 보임,https://sourcegraph.com/pricing
+ruler,Ruler,프리미엄(무료+유료 구독),"공식 GitHub에 MIT 라이선스 오픈소스 CLI(npm 배포)로 나와 있고, 등록된 홈·가격 주소(agentic-ventures.com)는 강의 사이트·로그인 화면뿐이라 Ruler 유료 요금제가 보이지 않음",기존 분류는 '프리미엄(무료+유료 구독)'이지만 확인된 것은 MIT 오픈소스 도구뿐,https://github.com/intellectronica/ruler
+continue,Continue,프리미엄(무료+유료 구독),"Continue는 Cursor에 인수됐고 저장소는 읽기 전용(더 이상 관리 안 함), 가격 페이지 없음",기존 분류는 '프리미엄(무료+유료 구독)'이지만 현재 유료 구독을 파는 서비스로 운영되지 않음,https://continue.dev
+a0,a0,프리미엄(무료+유료 구독),공식 요금 페이지에는 Pro(월 $20)·Max(월 $200) 유료 요금제만 있고 무료 요금제가 보이지 않음,"기존 '프리미엄(무료+유료 구독)'의 무료 부분을 공식 페이지에서 확인할 수 없음(유료 전용일 가능성, 사람 확인 필요)",https://a0.dev/pricing/
+superblocks,Superblocks,프리미엄(무료+유료 구독),"요금제는 Teams(월 $125, 연간 결제 시 월 $100)와 Enterprise(맞춤)뿐이고 무료는 14일 체험만 있음",기존 '프리미엄(무료+유료 구독)'과 달리 상시 무료 요금제가 없음(유료 구독+무료 체험),https://www.superblocks.com/pricing
+adorable,Adorable,프리미엄(무료+유료 구독),"GitHub 공개 오픈소스, 직접 설치·실행(Freestyle API 키와 LLM 키 필요), 구독 요금제 안내 없음",기존 분류 '프리미엄(무료+유료 구독)'과 달리 페이지에는 유료 구독이 없고 오픈소스 셀프호스팅 + 외부 API 사용료 구조,https://github.com/freestyle-sh/Adorable
+bolt-diy,bolt.diy,프리미엄(무료+유료 구독),"GitHub 공개 오픈소스, 직접 설치·실행하고 모델 API 키는 사용자가 넣음, 구독 요금제 안내 없음",기존 분류 '프리미엄(무료+유료 구독)'과 달리 유료 구독이 없는 오픈소스 셀프호스팅 도구,https://github.com/stackblitz-labs/bolt.diy
+open-lovable,Open Lovable,프리미엄(무료+유료 구독),"GitHub 공개 MIT 오픈소스 예제 앱, 직접 설치·실행(Firecrawl·LLM API 키 필요), 구독 요금제 안내 없음",기존 분류 '프리미엄(무료+유료 구독)'과 달리 유료 구독이 없는 오픈소스 셀프호스팅 예제,https://github.com/firecrawl/open-lovable
+coderabbit,CodeRabbit,프리미엄(무료+유료 구독),"Essentials $24·Team $48·Advanced $72/사용자/월·Enterprise 문의, 무료 요금제 없이 14일 체험만 표시",기존 '프리미엄(무료+유료 구독)'과 달리 영구 무료 요금제가 가격 페이지에 없음(유료 구독+체험),https://www.coderabbit.ai/pricing
+fabric,Fabric,프리미엄(무료+유료 구독),"MIT 라이선스 오픈소스 프레임워크(GitHub), 유료 요금제 언급 없음",기존 '프리미엄(무료+유료 구독)'과 달리 공식 저장소에는 유료 구독이 없고 MIT 오픈소스,https://github.com/danielmiessler/Fabric
+qodo,Qodo,프리미엄(무료+유료 구독),"""We don’t offer a permanent free tier"" — 14일 체험 후 Pro Team($30~, 크레딧 팩) 또는 Enterprise 유료만",기존 '프리미엄(무료+유료 구독)'과 달리 영구 무료 요금제 없음(오픈소스 프로젝트 무료 프로그램만 있음),https://www.qodo.ai/pricing/
+giga-ai,Giga AI,프리미엄(무료+유료 구독),"Starter $29/월·Pro $69/월·Enterprise 상담, 무료 요금제 없이 체험·환불 보장만 표기",기존 '프리미엄(무료+유료 구독)'과 달리 무료 요금제가 요금표에 없음(유료 구독만),https://gigamind.dev/context
+vibetunnel,Vibetunnel,프리미엄(무료+유료 구독),"MIT 라이선스 공개 도구, 결제는 원하는 만큼 내는 후원(Polar)뿐",기존 '프리미엄(무료+유료 구독)'과 달리 유료 구독 요금제가 없음,https://vibetunnel.sh/
+anyword,Anyword,프리미엄(무료+유료 구독),"Starter $49/월·Data-Driven $99/월·Business/Enterprise 맞춤 가격, 무료 요금제 없이 7일 무료 체험만",기존 '프리미엄(무료+유료 구독)'과 달리 상시 무료 요금제가 보이지 않음,https://www.anyword.com/pricing
+jasper,Jasper,프리미엄(무료+유료 구독),"Pro $69/월(좌석당)·Business 맞춤 가격, 무료 요금제 없이 7일 무료 체험",기존 '프리미엄(무료+유료 구독)'과 달리 상시 무료 요금제가 없음,https://www.jasper.ai/pricing
+writesonic,Writesonic,프리미엄(무료+유료 구독),"Starter $79~Growth $399/월(연간 결제)·Enterprise 맞춤, 무료 요금제 없이 7일 무료 체험",기존 '프리미엄(무료+유료 구독)'과 달리 상시 무료 요금제가 없음,https://writesonic.com/pricing
+beautiful-ai,Beautiful.ai,프리미엄(무료+유료 구독),"Pro $14.50/월(연간)·Team $40/월(연간)·커스텀, 일반 사용자는 14일 무료 체험만",기존 '프리미엄(무료+유료 구독)'과 달리 일반 무료 요금제가 가격표에 없음(학생용 무료 플랜 메뉴만 있음),https://www.beautiful.ai/pricing/
+writer,Writer,프리미엄(무료+유료 구독),"상시 무료 요금제 없이 Starter 14일 무료 체험 후 좌석제 유료, Enterprise는 영업 문의",기존 분류는 프리미엄(무료+유료)이지만 공식 페이지에는 계속 쓸 수 있는 무료 요금제가 없고 체험판만 있음,https://writer.com/plans/
+adobe-generative-fill,Adobe Generative Fill,프리미엄(무료+유료 구독),"Generative Fill은 Photoshop 기능으로, 페이지에는 무료 체험과 유료 요금제(Single App US$22.99/월 등)만 있음",기존 분류는 프리미엄(무료+유료)이지만 계속 쓸 수 있는 무료 요금제는 페이지에 없음,https://www.adobe.com/products/photoshop/generative-fill.html
+topaz-video-ai,Topaz Video AI,프리미엄(무료+유료 구독),"웹 영상 $19/월, Astra $19/월, Topaz Studio $399/년·$69/월 등 유료 요금제만 표시",기존 분류는 프리미엄(무료+유료)이지만 공식 가격표에 무료 요금제가 없음,https://www.topazlabs.com/pricing
+coqui-tts,Coqui TTS,프리미엄(무료+유료 구독),"GitHub 공개 라이브러리(MPL 2.0 라이선스), 유료 요금제 언급 없음",기존 '프리미엄(무료+유료 구독)' 분류와 달리 오픈소스 라이브러리로만 확인됨,https://github.com/coqui-ai/TTS
+sora,Sora,프리미엄(무료+유료 구독),"Sora 웹·앱은 2026-04-26 종료, API는 2026-09-24 종료 예정",기존 '프리미엄(무료+유료 구독)' 분류와 달리 서비스 자체가 종료됨,https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation
+agent-qa,Agent QA,프리미엄(무료+유료 구독),"오픈소스 하네스로 소개, 유료 요금제 언급 없음",기존 '프리미엄(무료+유료 구독)' 분류와 달리 유료 구독이 확인되지 않음(오픈소스),https://github.com/vostride/agent-qa
+crawl4ai,Crawl4AI,프리미엄(무료+유료 구독),"본체는 Apache-2.0 오픈소스로 '영원히 무료', 별도로 호스팅 API를 크레딧 팩(종량제)으로 판매","기존 '프리미엄(무료+유료 구독)'은 오픈소스 성격을 빠뜨렸고, 유료도 구독이 아닌 크레딧 팩(월 구독 Builder는 출시 예정)이라 '오픈소스 + 프리미엄 혼합'에 가까움",https://crawl4ai.com
+ai-maestro,ai-maestro,오픈소스 + 프리미엄 혼합,MIT 라이선스 오픈소스로 '영원히 무료'이며 계정·좌석당 요금·업셀하는 호스팅 유료 등급이 없다고 명시,기존 '오픈소스 + 프리미엄 혼합'과 달리 유료(프리미엄) 요소가 페이지에 없음 — 순수 오픈소스 무료,https://github.com/23blocks-OS/ai-maestro
+supacode,supacode,오픈소스 + 프리미엄 혼합,"소스 공개(source available) + 유료 영구 라이선스(Basic $99·Standard $129·Team $79/좌석), 무료는 로컬 worktree 5회 체험뿐",기존 '오픈소스 + 프리미엄 혼합'과 달리 오픈소스라는 표기가 없고(source available) 무료 버전이 아닌 체험판 후 유료 구매 구조,https://supacode.sh
+jean,jean,오픈소스 + 프리미엄 혼합,"Apache 2.0 오픈소스, 100% 무료이며 유료 요금제·기능 제한·사용 한도가 없음(후원만 받음)",기존 분류는 '오픈소스 + 프리미엄 혼합'이지만 공식 페이지는 유료(프리미엄) 요금제가 없다고 명시,https://jean.build/pricing
+zeroclaw,zeroclaw,오픈소스 + 프리미엄 혼합,"MIT 또는 Apache-2.0 오픈소스 바이너리, 클라우드 좌석·구독 없음",기존 '오픈소스 + 프리미엄 혼합'과 달리 공식 페이지는 유료 구독이 없다고 명시,https://www.zeroclaw.com/
+biomedlm,BioMedLM,엔터프라이즈(가격 문의),"Stanford CRFM 연구용 모델로 커뮤니티에 공개, 생성 기능은 연구 목적 전용(실서비스 부적합)",기존 '엔터프라이즈(가격 문의)'와 달리 판매 제품이 아닌 공개 연구 모델,https://crfm.stanford.edu/2022/12/15/biomedlm.html
+fingpt,FinGPT,엔터프라이즈(가격 문의),"AI4Finance 재단의 오픈소스 금융 LLM 프로젝트(GitHub·Hugging Face 공개), 유료 요금제 언급 없음",기존 분류 '엔터프라이즈(가격 문의)'와 달리 오픈소스 공개 프로젝트,https://github.com/AI4Finance-Foundation/FinGPT
+khanmigo,Khanmigo,엔터프라이즈(가격 문의),"교사용 무료, 학습자·가족용 월 $4/연 $44 공개 가격, 학군용만 가격 문의",기존 분류 '엔터프라이즈(가격 문의)'와 달리 무료+공개 유료 구독(프리미엄형),https://khanmigo.ai/pricing
+synthesis-tutor,Synthesis Tutor,엔터프라이즈(가격 문의),"가족·개인용 월·연·평생 요금 공개($29/월, $119/년 등), 7일 무료 체험",기존 분류 '엔터프라이즈(가격 문의)'와 달리 소비자용 공개 유료 구독(학교용만 문의),https://www.synthesis.com/tutor
+assistant,assistant,프리미엄(무료+유료 구독),"개인이 공개한 실험적 GitHub 소프트웨어, 직접 설치(npm)해 실행, 유료 요금제 언급 없음",기존 분류 '프리미엄(무료+유료 구독)'과 달리 유료 구독 없는 자체 설치형,https://github.com/kcosr/assistant
+babyagi3,babyagi3,프리미엄(무료+유료 구독),"GitHub에서 받아 자기 LLM API 키로 직접 실행하는 에이전트, 유료 구독 언급 없음",기존 분류 '프리미엄(무료+유료 구독)'과 달리 자체 실행형(비용은 쓰는 모델 API 요금),https://github.com/yoheinakajima/babyagi3
+lemon,lemon,프리미엄(무료+유료 구독),"GitHub 자체 호스팅 오픈 저장소, 사용자가 설치해 자기 모델 제공자로 실행, 유료 요금제 언급 없음",기존 분류 '프리미엄(무료+유료 구독)'과 달리 유료 구독 없는 자체 호스팅형,https://github.com/z80dev/lemon
+semantic-scholar,Semantic Scholar,프리미엄(무료+유료 구독),"'A free, AI-powered research tool' — 무료 도구, 유료 요금제 언급 없음",기존 분류 '프리미엄(무료+유료 구독)'과 달리 유료 구독이 보이지 않는 무료 서비스,https://www.semanticscholar.org
+mercury,mercury,프리미엄(무료+유료 구독),"npm으로 설치해 자기 도커 컨테이너로 돌리는 개인 GitHub 프로젝트, 유료 요금제 언급 없음",기존 분류 '프리미엄(무료+유료 구독)'과 달리 유료 구독 없는 자체 호스팅형,https://github.com/Michaelliv/mercury
+leon,leon,프리미엄(무료+유료 구독),"MIT 오픈소스로 자기 서버에 설치해 쓰며, 후원만 받고 유료 요금제 안내 없음",기존 '프리미엄(무료+유료 구독)' 분류와 달리 유료 구독이 확인되지 않음(오픈소스),https://getleon.ai
+rho,rho,프리미엄(무료+유료 구독),"MIT 오픈소스, 기존 LLM 구독을 그대로 써서 추가 비용 $0(하트비트 하루 약 $0.05), 자체 유료 구독 요금제 안내 없음",기존 '프리미엄(무료+유료 구독)' 분류와 달리 유료 구독이 확인되지 않음(오픈소스),https://rhobot.dev/pricing
+clawwork,ClawWork,프리미엄(무료+유료 구독),"MIT 오픈소스 연구용 벤치마크 저장소, 요금제 안내 없음",기존 '프리미엄(무료+유료 구독)' 분류와 달리 유료 구독이 확인되지 않음(오픈소스),https://github.com/HKUDS/ClawWork
+cashclaw,cashclaw,프리미엄(무료+유료 구독),"CashClaw는 오픈소스 에이전트이고 Moltlaunch는 작업 수수료 0%, 유료 구독 요금제 안내 없음","기존 '프리미엄(무료+유료 구독)' 분류와 달리 유료 구독이 확인되지 않음(오픈소스, 수수료 0%)",https://moltlaunch.com/docs
+metaclaw,MetaClaw,프리미엄(무료+유료 구독),"MIT 오픈소스 연구 프로젝트(기술 보고서 공개), 요금제 안내 없음",기존 '프리미엄(무료+유료 구독)' 분류와 달리 유료 구독이 확인되지 않음(오픈소스),https://github.com/aiming-lab/MetaClaw
+nanobot,nanobot,프리미엄(무료+유료 구독),"MIT 오픈소스 자체 호스팅 프레임워크, 요금제 안내 없음",기존 '프리미엄(무료+유료 구독)' 분류와 달리 유료 구독이 확인되지 않음(오픈소스),https://github.com/HKUDS/nanobot
+ghostclaw,ghostclaw,프리미엄(무료+유료 구독),"MIT 오픈소스로 자기 기기에서 실행, Anthropic API 키 사용료만 들고 자체 유료 구독 안내 없음",기존 '프리미엄(무료+유료 구독)' 분류와 달리 유료 구독이 확인되지 않음(오픈소스),https://www.ghostclaw.io/
+nanoclaw,nanoclaw,프리미엄(무료+유료 구독),"MIT 라이선스 무료 오픈소스, 유료 요금제 언급 없음(모델 사용료만 제공자에게)",기존 분류는 '프리미엄(무료+유료 구독)'이지만 공식 페이지에는 유료 구독이 없음,https://nanoclaw.dev
+nemoclaw,NemoClaw,프리미엄(무료+유료 구독),"Apache-2.0 오픈소스 참조 스택, 유료 구독 언급 없음",기존 분류는 '프리미엄(무료+유료 구독)'이지만 공식 페이지에는 유료 구독이 없음,https://github.com/NVIDIA/NemoClaw
+openclaw,openclaw,프리미엄(무료+유료 구독),구독·호스팅 요금제·토큰이 없는 MIT 오픈소스,기존 분류는 '프리미엄(무료+유료 구독)'이지만 공식 페이지는 유료 요금제가 없다고 명시,https://openclaw.ai
+picoclaw,picoclaw,프리미엄(무료+유료 구독),"MIT 오픈소스 무료 소프트웨어, LLM API 사용료만 본인 부담",기존 분류는 '프리미엄(무료+유료 구독)'이지만 공식 페이지에는 유료 구독이 없음,https://picoclaw.io
+lakera-guard,Lakera Guard,오픈소스 + 엔터프라이즈 유료 플랜,"SaaS 보안 플랫폼(무료 Community 월 1만 요청 + 문의형 Enterprise), 오픈소스 코드 공개 언급 없음",기존 분류는 '오픈소스 + 엔터프라이즈 유료'인데 공식 페이지에는 오픈소스가 아니라 프리미엄형 SaaS로 나옴,https://platform.lakera.ai/pricing
+patronus-ai,Patronus AI,오픈소스 + 엔터프라이즈 유료 플랜,"프런티어 AI 연구소 대상 학습 데이터·시뮬레이션 환경 공급(가격은 상담), 오픈소스 언급 없음","기존 분류는 '오픈소스 + 엔터프라이즈 유료'이고 설명은 LLM 평가·안전 플랫폼인데, 공식 페이지는 오픈소스 없이 상담형 데이터·환경 공급 사업만 소개",https://www.patronus.ai/pricing
+eu-ai-act,EU AI Act,오픈소스 + 엔터프라이즈 유료 플랜,"EU 규제(법률)와 이를 해설하는 비영리 정보 사이트, 판매하는 소프트웨어·요금제 없음",기존 분류 '오픈소스 + 엔터프라이즈 유료 플랜'과 달리 오픈소스 소프트웨어도 유료 플랜도 아님,https://artificialintelligenceact.eu/about/
+docx,DOCX,오픈소스(무료),"docx·pdf·pptx·xlsx 문서 스킬은 'source-available, not open source'라고 명시",기존 분류 '오픈소스(무료)'와 달리 오픈소스가 아님,https://github.com/anthropics/skills
+nist-ai-rmf,NIST AI RMF,오픈소스 + 엔터프라이즈 유료 플랜,"미국 정부기관(NIST)의 자발적 위험관리 프레임워크와 공개 자료 센터, 요금제 없음",기존 분류 '오픈소스 + 엔터프라이즈 유료 플랜'과 달리 정부 공개 표준 문서이며 유료 플랜 없음,https://airc.nist.gov/
+owasp-top-10-for-llms,OWASP Top 10 for LLMs,오픈소스 + 엔터프라이즈 유료 플랜,"비영리 오픈소스 커뮤니티 프로젝트, 모든 자료 무료(후원·스폰서로 운영)",기존 분류의 '엔터프라이즈 유료 플랜'과 반대로 유료 플랜 없이 전부 무료,https://owasp.org/projects/top-10-for-large-language-model-applications
+pdf-processing,PDF Processing,오픈소스(무료),"docx·pdf·pptx·xlsx 문서 스킬은 'source-available, not open source'라고 명시",기존 분류 '오픈소스(무료)'와 달리 오픈소스가 아님,https://github.com/anthropics/skills
+pptx,PPTX,오픈소스(무료),"docx·pdf·pptx·xlsx 문서 스킬은 'source-available, not open source'라고 명시",기존 분류 '오픈소스(무료)'와 달리 오픈소스가 아님,https://github.com/anthropics/skills
+xlsx,XLSX,오픈소스(무료),"docx·pdf·pptx·xlsx 문서 스킬은 'source-available, not open source'라고 명시",기존 분류 '오픈소스(무료)'와 달리 오픈소스가 아님,https://github.com/anthropics/skills
+pipecat,Pipecat,프리미엄(무료+유료 구독),"프레임워크는 BSD-2 라이선스 오픈소스로 무료, 사용하는 서비스 비용만 지불(관리형 Pipecat Cloud·Enterprise는 별도, 가격은 페이지에 없음)",기존 '프리미엄(무료+유료 구독)'과 달리 핵심 제품이 무료 오픈소스,https://docs.pipecat.ai/overview/introduction
+gumloop,Gumloop,프리미엄(무료+유료 구독),"무료 요금제 없이 Pro(월 $37부터, 14일 무료 체험)와 Enterprise 맞춤 가격만 있음",기존 '프리미엄(무료+유료 구독)'과 달리 상시 무료 등급이 페이지에 없음(체험판만),https://www.gumloop.com/pricing
+hugging-face-lerobot,Hugging Face LeRobot,연구/엔터프라이즈(가격 비공개),LeRobot은 Apache 2.0 오픈소스 라이브러리(pip install lerobot),기존 '연구/엔터프라이즈(가격 비공개)'와 달리 공개 오픈소스 라이브러리,https://github.com/huggingface/lerobot
+xiaomi-robotics-xr-1,Xiaomi Robotics XR-1,연구/엔터프라이즈(가격 비공개),모델·코드가 Apache 2.0 라이선스로 Hugging Face·GitHub에 공개,기존 '연구/엔터프라이즈(가격 비공개)'와 달리 공개 오픈소스 모델,https://github.com/XiaomiRobotics/Xiaomi-Robotics-1
+mujoco,MuJoCo,연구/엔터프라이즈(가격 비공개),MuJoCo는 무료 오픈소스 물리 엔진,기존 '연구/엔터프라이즈(가격 비공개)'와 달리 무료 오픈소스,https://mujoco.org
+ros-2,ROS 2,연구/엔터프라이즈(가격 비공개),ROS는 전부 오픈소스인 로봇 소프트웨어 라이브러리·도구 모음(비영리 재단 지원),기존 '연구/엔터프라이즈(가격 비공개)'와 달리 공개 오픈소스,https://github.com/ros2/ros2
+nvidia-isaac-sim,NVIDIA Isaac Sim,연구/엔터프라이즈(가격 비공개),Isaac Sim은 Apache 2.0 오픈소스로 무료 사용(단 Omniverse Kit 재배포는 Omniverse Enterprise 구독 필요),기존 '연구/엔터프라이즈(가격 비공개)'와 달리 무료 오픈소스,https://developer.nvidia.com/isaac/sim
+nvidia-isaac-lab,NVIDIA Isaac Lab,연구/엔터프라이즈(가격 비공개),Isaac Lab은 BSD-3-Clause 라이선스의 오픈소스 프레임워크,기존 '연구/엔터프라이즈(가격 비공개)'와 달리 공개 오픈소스,https://developer.nvidia.com/isaac/lab
+label-studio,Label Studio,엔터프라이즈(가격 문의),"오픈소스 Community Edition을 무료로 설치해 쓸 수 있고, Enterprise·Starter Cloud는 별도",기존 '엔터프라이즈(가격 문의)'만이 아니라 무료 오픈소스 판이 핵심,https://labelstud.io
+prodigy,Prodigy,엔터프라이즈(가격 문의),"개인 $390, 회사 좌석당 $490(5좌석 단위)의 평생 라이선스 가격이 공개되어 있고 바로 구매 가능",기존 분류 '엔터프라이즈(가격 문의)'와 달리 가격이 공개된 일회성 구매(평생 라이선스) 제품,https://prodi.gy/buy
+argilla,Argilla,엔터프라이즈(가격 문의),"오픈소스 도구로 Hugging Face Hub나 Docker로 무료 배포 가능, 공개된 유료 요금제·가격 문의 안내 없음",기존 분류 '엔터프라이즈(가격 문의)'와 달리 무료 오픈소스,https://docs.argilla.io/latest/
+hugging-face-datasets,Hugging Face Datasets,엔터프라이즈(가격 문의),"GitHub에 LICENSE 파일과 함께 공개된 Python 라이브러리로, 받은 본문에 이 라이브러리 자체의 가격·영업 문의 안내 없음(요금 페이지 본문은 비어 있음)",기존 분류 '엔터프라이즈(가격 문의)'와 달리 공개 오픈소스 라이브러리,https://github.com/huggingface/datasets

@@ -1,0 +1,27 @@
+{
+ "company": "Microsoft",
+ "one_liner_ko": "테스트·스크립트·AI 에이전트를 위한 안정적인 웹 자동화 프레임워크로, 하나의 API로 Chromium·Firefox·WebKit을 조작한다.",
+ "what_it_does_ko": "Playwright는 웹 자동화와 테스트용 프레임워크로, 하나의 API로 Chromium·Firefox·WebKit을 구동한다. TypeScript, Python, .NET, Java로 쓸 수 있다. 자동 대기·자동 재시도 단언·병렬 실행을 갖춘 테스트 러너를 제공한다. AI 에이전트용으로 접근성 스냅샷 기반의 MCP 서버와 코딩 에이전트용 CLI를 제공한다.",
+ "key_features": ["Playwright Test(자동 대기·단언·트레이싱·병렬 실행 테스트 러너)", "Playwright MCP(접근성 스냅샷으로 AI 에이전트에 브라우저 제어 제공)", "Playwright CLI(코딩 에이전트용 토큰 효율적 자동화)", "사용자 관점 로케이터(getByRole 등)", "테스트 생성기(동작 녹화로 코드 작성)", "Trace Viewer(DOM 스냅샷·네트워크·콘솔 타임라인)", "VS Code 확장"],
+ "use_cases_ko": ["엔드투엔드 테스트", "브라우저 자동화 스크립트", "AI 에이전트·LLM 기반 자동화"],
+ "pricing": {"free_tier": "불명", "plans": [], "pricing_url": null},
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["윈도", "맥", "CLI"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://playwright.dev", "quote": "Copyright © 2026 Microsoft"},
+  {"field": "one_liner_ko", "url": "https://playwright.dev", "quote": "Playwright enables reliable web automation for testing, scripting, and AI"},
+  {"field": "what_it_does_ko", "url": "https://github.com/microsoft/playwright", "quote": "Playwright is a framework for web automation and testing. It drives Chromium, Firefox, and WebKit with a single API"},
+  {"field": "what_it_does_ko", "url": "https://playwright.dev", "quote": "Available for TypeScript , Python , .NET , and Java ."},
+  {"field": "key_features", "url": "https://playwright.dev", "quote": "Model Context Protocol server that gives AI agents full browser control through structured accessibility snapshots."},
+  {"field": "key_features", "url": "https://playwright.dev", "quote": "Record your actions in the browser and Playwright writes the test code."},
+  {"field": "key_features", "url": "https://playwright.dev", "quote": "Full timeline of test execution with DOM snapshots, network requests, console logs, and screenshots at every step."},
+  {"field": "use_cases_ko", "url": "https://github.com/microsoft/playwright", "quote": "| **[Playwright MCP](#playwright-mcp)** | AI agents and LLM-driven automation |"},
+  {"field": "api", "url": "https://github.com/microsoft/playwright", "quote": "## [Documentation](https://playwright.dev) | [API reference](https://playwright.dev/docs/api/class-playwright)"},
+  {"field": "platforms", "url": "https://playwright.dev", "quote": "Chromium, Firefox, and WebKit on Linux, macOS, and Windows."},
+  {"field": "korean_support", "url": "https://playwright.dev", "quote": "html lang: en"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

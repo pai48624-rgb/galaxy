@@ -1,0 +1,742 @@
+=== [home] https://www.inngest.com
+Durable Execution for Workflows & AI | Inngest 
+ Watch our CodeTV episode on YouTube! 📺 Platform 
+ Use Cases 
+ Customers 
+ Resources 
+ Docs 
+ Pricing 
+ Open Source 7.1K Open Source 7.1K 
+ Sign in Start free 
+ Open source durable execution
+ make every
+backend
+ unbreakable. 
+ Inngest is the fastest way to orchestrate all your async code. Wrap functions in steps to handle any event, at any scale. Pause, fan-out, defer, retry, and A/B test—one SDK, zero infra.
+ npm install inngest Copied Start free 
+ import { copyFromURL, upload, list } from "./s3-client"
+ export default inngest.createFunction(
+ {
+ id: "import-product-images",
+ triggers: [{ event: "shop/product.imported" }],
+ retries: 3,
+ },
+ async ({ event, step }) => {
+ const uploadedImageURLs = await step. run (
+ "copy-images-to-s3",
+ async () => copyFromURL (event.data.imageURLs)
+ );   const manifestURL = await step. run (
+ "save-image-manifest",
+ async () => upload (JSON.stringify(uploadedImageURLs))
+ );   const files = await step. run (
+ "list-product-files",
+ async () => list (manifestURL)
+ );   },
+ ); 
+ Trusted in production by
+ Read the case study Read the case study Read the case study Read the case study Read the case study Read the case study Read the case study 
+ Read the case study Read the case study Read the case study Read the case study Read the case study Read the case study Read the case study 
+ The DX in durable execution
+ However it’s written, wherever it runs, Inngest makes it unbreakable. Start locally, scale instantly.
+ Copy prompt to start locally Copied Start free in cloud 
+ Everything queues can’t do; everything you don’t want to do.
+ Observability 
+ Know what happened
+ No more bespoke instrumentation. Inngest executes your functions, so you get observability by default. Trace every background job, agent, and event from trigger to completion, and use that data to evaluate outcomes on real production traffic.
+ See docs → 
+ Flow control 
+ Know what to run
+ Basic queues don't know what to do when multiple users compete for the same resource. Noisy neighbors, hand-rolled rate limits, wasted compute… Inngest’s flow control ensures every user gets their fair share, without extra work.
+ See docs → 
+ Sandboxes 
+ Know what's safe
+ Sandboxes need durability too. Try a change without putting production traffic behind it. Run a new prompt, model, or code path in an isolated sandbox, on the same triggers and the same data as the real thing, and compare the results before you ship it to anyone.
+ See docs → 
+ A/B Testing & Scoring 
+ Know what works
+ How do you know if your agent works? If you want to know which variant actually performed better, you used to have to stitch together data from multiple systems, implement human reviews, and build a layer of instrumentation on top. Inngest captures all of this data by default, so you can add scoring the same way you add retries.
+ See docs → 
+ Observability 
+ Know what happened
+ No more bespoke instrumentation. Inngest executes your functions, so you get observability by default. Trace every background job, agent, and event from trigger to completion, and use that data to evaluate outcomes on real production traffic.
+ See docs → 
+ Flow control 
+ Know what to run
+ Basic queues don't know what to do when multiple users compete for the same resource. Noisy neighbors, hand-rolled rate limits, wasted compute… Inngest’s flow control ensures every user gets their fair share, without extra work.
+ See docs → 
+ Sandboxes 
+ Know what's safe
+ Sandboxes need durability too. Try a change without putting production traffic behind it. Run a new prompt, model, or code path in an isolated sandbox, on the same triggers and the same data as the real thing, and compare the results before you ship it to anyone.
+ See docs → 
+ A/B Testing & Scoring 
+ Know what works
+ How do you know if your agent works? If you want to know which variant actually performed better, you used to have to stitch together data from multiple systems, implement human reviews, and build a layer of instrumentation on top. Inngest captures all of this data by default, so you can add scoring the same way you add retries.
+ See docs → 
+ Stories from production
+ Inngest is for any human or agent that wants to focus on what code does, not how it fails.
+ Inngest completely transformed how we handle AI orchestration at Cohere. Its intuitive developer experience, built-in multi-tenant concurrency, and flow control allowed us to scale without the complexity of other tools or the need to build custom solutions. What would have taken us a month.
+ Our pipelines have many interdependent components chained together. Lots can go wrong in that workflow—including unpredictable behavior from the models themselves. Inngest gives us fine-grained control over errors, and how they propagate, so we can just focus on what the agents should do, not what to do when they fail.
+ Day AI is a complex network of LLMs, data processing, and 3rd party services. Every component in the system needs to wake up at the right times, run for long periods of time, and react intelligently to behavior in other components. Inngest is like the nervous system for all of that, it makes things reliable by default so we can focus on building.
+ Inngest completely transformed how we handle AI orchestration at Cohere. Its intuitive developer experience, built-in multi-tenant concurrency, and flow control allowed us to scale without the complexity of other tools or the need to build custom solutions. What would have taken us a month.
+ Sully Omar 
+ Co-founder - Otto (Acquired by Cohere) 
+ View case study View all 
+ Make any code durable, observable, and improvable.
+ Add durable functions to your existing code, to keep event-driven workflows, background jobs, and agents running. No infrastructure to provision or maintain.
+ Background jobs
+ One line in your code makes any background job reliable. Automatic retries, recovery, and observability.
+ Learn More → 
+ Messaging queues
+ Durable message queues without the infrastructure—no Redis or broker, with built-in flow control.
+ Learn More → 
+ Workflow orchestration
+ Multi-step workflow orchestration in code: functions that checkpoint, wait, and fan out across steps.
+ Learn More → 
+ Scheduled & cron jobs
+ Run scheduled and cron jobs as functions that sleep, fan out, parallelize, retry, and recover.
+ Learn More → 
+ Webhooks & Events
+ Handle webhooks and event-driven functions reliably. Inngest retries failures and shows what happened.
+ Learn More → 
+ Serverless background jobs
+ Replace your serverless background job stack with one SDK you drop into your existing codebase.
+ Learn More → 
+ It doesn’t have to It doesn’t have to be hard 
+ Durability that runs on top of existing code, not alongside it in separate infrastructure. 
+ Before 
+ After 
+ Scale instantly, improve constantly
+ Guardrails for scale 
+ Set concurrency, ensure fairness, and handle every blip, burst, and bounce without babysitting.
+ See docs → 
+ Faster troubleshooting 
+ Store and track everything that happens in your product inside your own OLAP environment.
+ See docs → 
+ Traces, metrics, evals 
+ Step-level insights and scores for every run and session.
+ See docs → 
+ Stuff your CISO needs to see
+ No fancy animations here—just the facts. We serve heavily regulated industries, and have the certs to prove it.
+ SOC 2 Compliant
+ Regular security audits and compliance with SOC 2 standards. Read more here .
+ E2E Encryption
+ Encrypt all data that passes through I
+
+=== [pricing] https://www.inngest.com/pricing?ref=footer/
+Pricing | Inngest 
+ Watch our CodeTV episode on YouTube! 📺 Platform 
+ Use Cases 
+ Customers 
+ Resources 
+ Docs 
+ Pricing 
+ Open Source 7.1K Open Source 7.1K 
+ Sign in Start free 
+ Pricing that scales with you 
+ Inngest is an open source SDK for orchestrating event-driven apps and agents. Start locally, and move to Cloud when you're ready for production. Zero infra required.
+ Trusted by 100k+
+developers at logos
+you actually know.
+ Free
+ Generous monthly limits to prove it before production. No credit card required.
+ $ 0 / mo 
+ No credit card required
+ Start Free 
+ Platform
+ 5 seats 
+ 50k executions 
+ 5 concurrent steps 
+ 3 workers 
+ Unlimited serverless workers 
+ Events
+ 500k events ingested 
+ 100k queue depth 
+ 50 realtime connections 
+ 256 KiB event size 
+ Observability
+ 500 MB span data ingested 
+ 10K scores 
+ 24 hour trace history 
+ 30 minute metrics granularity 
+ POPULAR POPULAR 
+ Pro
+ Production-ready features for teams that are scaling fast, but still need flexibility.
+ Starting at
+ $ 99 / mo 
+ Start Free 
+ Platform
+ 15 seats 
+ 1M executions + add-on 
+ 100+ concurrent steps 
+ 20 workers + add-on 
+ Unlimited serverless workers 
+ Events
+ 5M+ events ingested 
+ 1M+ queue depth 
+ 1000 realtime connections 
+ 3 MiB event size 
+ Observability
+ 5GB span data + overages 
+ 50K scores 
+ 7 day trace history 
+ 15 minute metrics granularity 
+ Datadog / advanced observability add-on 
+ Security
+ HIPAA add-on 
+ Sandboxes
+ 100 concurrent sandboxes 
+ 24 hour max duration 
+ Business
+ For growing teams that need higher limits, and greater cost efficiency as they scale.
+ Starting at
+ $ 499 / mo 
+ Start Free 
+ Platform
+ 30 seats 
+ 10M executions + add-on 
+ 500 concurrent steps 
+ 100 workers + add-on 
+ Unlimited serverless workers 
+ Events
+ 50M+ events ingested 
+ 10M+ queue depth 
+ 5000 realtime connections 
+ 3 MiB event size 
+ Observability
+ 25GB span data + overages 
+ 250K scores 
+ 14 day trace history 
+ 1 minute metrics granularity 
+ Datadog / advanced observability add-on 
+ Security
+ HIPAA add-on 
+ Sandboxes
+ 1,000 concurrent sandboxes 
+ 24 hour max duration 
+ Enterprise
+ For established teams that need additional security, support, and observability.
+ Custom 
+ Contact us to learn more
+ Contact Us 
+ Platform
+ Custom seats 
+ Custom executions 
+ Custom concurrent steps 
+ Custom workers 
+ Unlimited serverless workers 
+ Events
+ Custom events ingested 
+ Custom queue depth 
+ 1000 realtime connections 
+ Custom event size 
+ Observability
+ Custom span data ingested 
+ Custom scores 
+ 90 day trace history 
+ 1 minute metrics granularity 
+ Trace and log exports 
+ Datadog and advanced observability 
+ Security
+ SAML, RBAC, audit trails 
+ HIPAA included 
+ Support
+ Dedicated Slack channel 
+ Dedicated account management 
+ Sandboxes
+ Custom concurrent sandboxes 
+ Custom max duration 
+ “Inngest completely transformed how Otto (by Cohere) handles AI orchestration. What would have taken us a month on other providers we evaluated took us only a couple hours.” Sully Omar Co-founder, Otto (acquired by Cohere) 
+ Sandboxes & compute
+ Billed per second for vCPU and memory.
+ Resource Per second Per hour 
+ 1 vCPU Compute 
+ $0.000011 $0.0396 
+ 1 GB Memory 
+ $0.000003 $0.0108 
+ Show machine sizes 1–16 vCPU · 1–128 GB RAM Hourly cost by vCPU count and memory per vCPU RAM per vCPU 
+ vCPU 1 × RAM ( 1 GB per vCPU) 2 × RAM ( 2 GB per vCPU) 4 × RAM ( 4 GB per vCPU) 8 × RAM ( 8 GB per vCPU) 
+ 1 vCPU 1 GB $0.0504 /hr 
+ 2 GB $0.0612 /hr 
+ 4 GB $0.0828 /hr 
+ 8 GB $0.1260 /hr 
+ 2 vCPU 2 GB $0.1008 /hr 
+ 4 GB $0.1224 /hr 
+ 8 GB $0.1656 /hr 
+ 16 GB $0.2520 /hr 
+ 4 vCPU 4 GB $0.2016 /hr 
+ 8 GB $0.2448 /hr 
+ 16 GB $0.3312 /hr 
+ 32 GB $0.5040 /hr 
+ 8 vCPU 8 GB $0.4032 /hr 
+ 16 GB $0.4896 /hr 
+ 32 GB $0.6624 /hr 
+ 64 GB $1.0080 /hr 
+ 16 vCPU 16 GB $0.8064 /hr 
+ 32 GB $0.9792 /hr 
+ 64 GB $1.3248 /hr 
+ 128 GB $2.0160 /hr 
+ vCPUs are available in powers of two: 1, 2, 4, 8, or 16. Each vCPU can be paired with 1, 2, 4, or 8 GB of RAM (e.g. 2 vCPU with 2, 4, 8, or 16 GB). Usage is billed per second; hourly rates are shown for reference.
+ Which plan is right for me?
+ Use the pricing calculator to see which plan is the best option for you.
+ Pricing calculator
+ Number of runs 30,000 
+ Function invocations per month.
+ Average steps per run 2 
+ step.run() calls per run. Executions = runs × (steps + 1).
+ Scores 5,000 
+ Evaluation scores ingested per month.
+ Queue depth 50,000 
+ Maximum events queued awaiting execution.
+ Realtime connections 20 
+ Concurrent realtime connections.
+ Seats 
+ Concurrent steps 
+ Workers 
+ FREE
+ Recommended 
+ Generous monthly limits to prove it before production. No credit card required.
+ $0 /mo 
+ No credit card required
+ seats 5 
+ executions 50k 
+ concurrent steps 5 
+ scores 10K 
+ queue depth 100k 
+ realtime connections 50 
+ Start Free 
+ Compare All Plan Features
+ A detailed look at every Cloud pricing tier. Know exactly what you get at every phase of growth.
+ Free
+ Start Free 
+ Pro
+ Start Free 
+ Business
+ Start Free 
+ Enterprise
+ Contact Us 
+ Platform Base price
+ $0 
+ $99 /mo 
+ $499 /mo 
+ Contact us 
+ Executions
+ A single durable function run or step execution 
+ 50k /mo included 
+ 1M executions + add-on 
+ 10M executions + add-on 
+ Custom 
+ Concurrent steps
+ Process steps in parallel while smoothing load 
+ 5 included 
+ 100 included then $25 per 25 
+ 500 included 
+ 500 included 
+ Maximum run length
+ Total lifetime of a function run, including sleeps and waits 
+ 30 days 
+ 90 days 
+ 366 days 
+ Custom 
+ Seats
+ Develop with your entire team 
+ 5 
+ 15 then $10/seat 
+ 30 then $10/seat 
+ Custom 
+ Workers
+ Low latency always-connected workers 
+ 3 
+ 20 workers + add-on 
+ 100 workers + add-on 
+ Custom 
+ Serverless workers
+ Serverless endpoints for your apps 
+ Unlimited 
+ Unlimited 
+ Unlimited 
+ Unlimited 
+ Dedicated slack channel
+ Direct P0 support from our team 
+ HIPAA
+ BAAs for healthcare compliance 
+ Add-on 
+ Add-on 
+ Events Events
+ Received/processed 
+ 500k/mo included 
+ 5m/mo included then $0.5 per 1m 
+ 50m/mo included 
+ Custom 
+ Queue depth
+ Maximum events queued awaiting execution 
+ 100k included 
+ 1m included 
+ 10m included 
+ Custom 
+ Size
+ Size of a single event 
+ 256 KiB 
+ 3 MiB 
+ 3 MiB 
+ Custom 
+ Batch capacity
+ Number of events in a single batch 
+ 5 
+ 100 
+ 500 
+ Custom 
+ Batch timeout
+ Time to wait for a batch to be full 
+ 30 seconds 
+ 5 minutes 
+ 5 minutes 
+ Custom 
+ Realtime Connections
+ 50 
+ 1000 
+ 5000 
+ Custom 
+ Messages
+ 250k per day 
+ 1m per day 
+ 5m per day 
+ Custom 
+ Observability Metrics granularity
+ Real-time function metrics 
+ 30 minutes 
+ 15 minutes 
+ 1 minute 
+ 1 minute 
+ Trace and log history
+ Tracing for e
+
+=== [about] https://www.inngest.com/docs?ref=footer/
+Inngest Documentation 
+ Documentation 
+ Examples 
+ SDKs & APIs 
+ Search... 
+ Contact sales Sign Up 
+ Search... 
+ Documentation 
+ Examples 
+ SDKs & APIs 
+ Learn Reference 
+ TypeScript 
+ Introduction 
+ Overview 
+ What is Inngest? 
+ Local development 
+ Get started 
+ Platform 
+ Durable Execution 
+ Overview 
+ Durable workflows 
+ Durable endpoints 
+ Durable agents 
+ Concepts 
+ Quick start 
+ Primitives and steps 
+ Flow control 
+ Events and triggers 
+ Error handling 
+ Cancellation 
+ Deploying functions 
+ Advanced 
+ Limits 
+ Best practices 
+ Sandboxes 
+ Agent Evals 
+ Realtime 
+ SDKs & APIs 
+ Platform & operations 
+ Labs 
+ About Labs 
+ Inngest CI 
+ Contact sales Sign Up 
+ Introducing Inngest
+ Build durable, observable, failure-resistant code with sandboxing, agent evals, and A/B tests built in.
+ Inngest is the platform for building durable workflows and agents that survive failures, without managing orchestration infrastructure. Write functions in your existing code and add steps. Inngest runs each step, saves its result, and retries failed work from the step that failed.
+ Quick start
+ Run your first durable workflow, Sandbox, eval, or live update.
+ What is Inngest?
+ See how workflows, Sandboxes, and outcome scores fit together.
+ Coding agents
+ Using a coding agent? Give it skills, MCP, and LLM-ready docs.
+ SDK reference
+ TypeScript, Python, and Go SDKs, plus the REST API.
+ The Inngest platform 
+ Durable execution, isolated Sandboxes, outcome scores, and live updates all share the same run, so you can follow the whole job in one trace.
+ Durable Execution
+ Coordinate steps, retries, waits, and events so work finishes after failures.
+ Sandboxes
+ Run code in isolated microVMs as part of a durable run.
+ Agent Evals
+ Score outcomes and compare changes to steps and workflows.
+ Realtime
+ Stream progress from durable runs to your users.
+ Flow control
+ Control concurrency, throughput, and fairness across tenants.
+ Observability
+ Inspect traces, replay runs, and track metrics in production.
+ For example, a support agent can call tools and run code in a Sandbox while it answers a request. Inngest retries failed steps and records the work in a trace. When feedback arrives later, a score links it to the run and experiment variant, so you can compare the outcomes of agent changes.
+ Explore use cases 
+ See how teams use Inngest to run agents, background jobs, generated code, and experiments in production.
+ AI agents
+ Run agent loops that call tools, wait for people, and survive failures.
+ Workflows and background jobs
+ Run multi-step jobs that retry each failed step, not the whole job.
+ Code execution
+ Run generated code and test repositories in isolated microVMs.
+ Evals and A/B tests
+ Score real outcomes and compare prompts, models, and workflows.
+ Start building 
+ Pick your language to build your first durable workflow. Use Local Development to run and inspect it on your machine.
+ TypeScript
+ Works with Node.js, Bun, Deno, and edge runtimes.
+ Python
+ Sync and async functions with FastAPI, Flask, or Django.
+ Go
+ Typed events and durable steps with the standard library.
+ Or start from your framework:
+ Next.js Node.js Express TanStack Start NestJS Astro H3 FastAPI & Flask 
+ Coding agent resources 
+ AI development tools
+ Resources for using Inngest with AI coding agents, MCP, CLI workflows, and LLM-ready documentation.
+ Agent Plugins and Skills
+ Official plugins and skills that teach coding agents how to write, test, and debug Inngest functions.
+ Inngest MCP
+ Connect coding agents to Inngest Cloud or your local Dev Server to inspect functions, send events, and 
+
+=== [pricing2] https://www.inngest.com/pricing?ref=homepage-dx/
+Pricing | Inngest 
+ Watch our CodeTV episode on YouTube! 📺 Platform 
+ Use Cases 
+ Customers 
+ Resources 
+ Docs 
+ Pricing 
+ Open Source 7.1K Open Source 7.1K 
+ Sign in Start free 
+ Pricing that scales with you 
+ Inngest is an open source SDK for orchestrating event-driven apps and agents. Start locally, and move to Cloud when you're ready for production. Zero infra required.
+ Trusted by 100k+
+developers at logos
+you actually know.
+ Free
+ Generous monthly limits to prove it before production. No credit card required.
+ $ 0 / mo 
+ No credit card required
+ Start Free 
+ Platform
+ 5 seats 
+ 50k executions 
+ 5 concurrent steps 
+ 3 workers 
+ Unlimited serverless workers 
+ Events
+ 500k events ingested 
+ 100k queue depth 
+ 50 realtime connections 
+ 256 KiB event size 
+ Observability
+ 500 MB span data ingested 
+ 10K scores 
+ 24 hour trace history 
+ 30 minute metrics granularity 
+ POPULAR POPULAR 
+ Pro
+ Production-ready features for teams that are scaling fast, but still need flexibility.
+ Starting at
+ $ 99 / mo 
+ Start Free 
+ Platform
+ 15 seats 
+ 1M executions + add-on 
+ 100+ concurrent steps 
+ 20 workers + add-on 
+ Unlimited serverless workers 
+ Events
+ 5M+ events ingested 
+ 1M+ queue depth 
+ 1000 realtime connections 
+ 3 MiB event size 
+ Observability
+ 5GB span data + overages 
+ 50K scores 
+ 7 day trace history 
+ 15 minute metrics granularity 
+ Datadog / advanced observability add-on 
+ Security
+ HIPAA add-on 
+ Sandboxes
+ 100 concurrent sandboxes 
+ 24 hour max duration 
+ Business
+ For growing teams that need higher limits, and greater cost efficiency as they scale.
+ Starting at
+ $ 499 / mo 
+ Start Free 
+ Platform
+ 30 seats 
+ 10M executions + add-on 
+ 500 concurrent steps 
+ 100 workers + add-on 
+ Unlimited serverless workers 
+ Events
+ 50M+ events ingested 
+ 10M+ queue depth 
+ 5000 realtime connections 
+ 3 MiB event size 
+ Observability
+ 25GB span data + overages 
+ 250K scores 
+ 14 day trace history 
+ 1 minute metrics granularity 
+ Datadog / advanced observability add-on 
+ Security
+ HIPAA add-on 
+ Sandboxes
+ 1,000 concurrent sandboxes 
+ 24 hour max duration 
+ Enterprise
+ For established teams that need additional security, support, and observability.
+ Custom 
+ Contact us to learn more
+ Contact Us 
+ Platform
+ Custom seats 
+ Custom executions 
+ Custom concurrent steps 
+ Custom workers 
+ Unlimited serverless workers 
+ Events
+ Custom events ingested 
+ Custom queue depth 
+ 1000 realtime connections 
+ Custom event size 
+ Observability
+ Custom span data ingested 
+ Custom scores 
+ 90 day trace history 
+ 1 minute metrics granularity 
+ Trace and log exports 
+ Datadog and advanced observability 
+ Security
+ SAML, RBAC, audit trails 
+ HIPAA included 
+ Support
+ Dedicated Slack channel 
+ Dedicated account management 
+ Sandboxes
+ Custom concurrent sandboxes 
+ Custom max duration 
+ “Inngest completely transformed how Otto (by Cohere) handles AI orchestration. What would have taken us a month on other providers we evaluated took us only a couple hours.” Sully Omar Co-founder, Otto (acquired by Cohere) 
+ Sandboxes & compute
+ Billed per second for vCPU and memory.
+ Resource Per second Per hour 
+ 1 vCPU Compute 
+ $0.000011 $0.0396 
+ 1 GB Memory 
+ $0.000003 $0.0108 
+ Show machine sizes 1–16 vCPU · 1–128 GB RAM Hourly cost by vCPU count and memory per vCPU RAM per vCPU 
+ vCPU 1 × RAM ( 1 GB per vCPU) 2 × RAM ( 2 GB per vCPU) 4 × RAM ( 4 GB per vCPU) 8 × RAM ( 8 GB per vCPU) 
+ 1 vCPU 1 GB $0.0504 /hr 
+ 2 GB $0.0612 /hr 
+ 4 GB $0.0828 /hr 
+ 8 GB $0.1260 /hr 
+ 2 vCPU 2 GB $0.1008 /hr 
+ 4 GB $0.1224 /hr 
+ 8 GB $0.1656 /hr 
+ 16 GB $0.2520 /hr 
+ 4 vCPU 4 GB $0.2016 /hr 
+ 8 GB
+
+=== [meta] https://www.inngest.com
+html lang: 없음
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/inngest/inngest
+# [![Inngest](https://github.com/inngest/.github/raw/main/profile/github-readme-banner-2025-06-20.png)](https://www.inngest.com)
+
+[![Latest release](https://img.shields.io/github/v/release/inngest/inngest?include_prereleases&sort=semver)](https://github.com/inngest/inngest/releases)
+[![Test Status](https://img.shields.io/github/actions/workflow/status/inngest/inngest/go.yaml?branch=main&label=tests)](https://github.com/inngest/inngest/actions?query=branch%3Amain)
+[![Discord](https://img.shields.io/discord/842170679536517141?label=discord)](https://www.inngest.com/discord)
+[![Twitter Follow](https://img.shields.io/twitter/follow/inngest?style=social)](https://twitter.com/inngest)
+
+[Inngest](https://www.inngest.com/?ref=github-inngest-readme)'s durable functions replace queues, state management, and scheduling to enable any developer to write reliable step functions faster without touching infrastructure.
+
+1. Write durable functions using any of [**our language SDKs**](#sdks)
+2. Run the [**Inngest Dev Server**](#getting-started) for a complete local development experience, with production parity.
+3. Deploy your functions to your own infrastructure
+4. Sync your application's functions with the [**Inngest Platform**](https://www.inngest.com/?ref=github-inngest-readme) or a [self-hosted Inngest server](#self-hosting).
+5. Inngest invokes your functions securely via HTTPS whenever triggering events are received.
+
+### An example durable function
+
+Inngest Functions enable developers to run reliable background logic, from background jobs to complex workflows. An Inngest Function is composed of three key parts that provide robust support for retrying, scheduling, and coordinating complex sequences of operations:
+
+- [**Triggers**](https://www.inngest.com/docs/features/events-triggers?ref=github-inngest-readme) - Events, Cron schedules or webhook events that trigger the function.
+- [**Flow Control**](https://www.inngest.com/docs/guides/flow-control?ref=github-inngest-readme) - Configure how the function runs are enqueued and executed including concurrency, throttling, debouncing, rate limiting, and prioritization.
+- [**Steps**](/docs/features/inngest-functions/steps-workflows?ref=github-inngest-readme) - Steps are fundamental building blocks of Inngest, turning your Inngest Functions into reliable workflows that can run for months and recover from failures.
+
+Here is an example function that limits concurrency for each unique user id and performs two steps that will be retried on error:
+
+```typescript
+export default inngest.createFunction(
+  {
+    id: "import-product-images",
+    concurrency: {
+      key: "event.data.userId",
+      limit: 10
+    }
+  },
+  { event: "shop/product.imported" },
+  async ({ event, step }) => {
+    // Here goes the business logic
+    // By wrapping code in steps, each will be retried automatically on failure
+    const s3Urls = await step.run("copy-images-to-s3", async () => {
+      return copyAllImagesToS3(event.data.imageURLs);
+    });
+    // You can include numerous steps in your function
+    await step.run("resize-images", async () => {
+      await resizer.bulk({ urls: s3Urls, quality: 0.9, maxWidth: 1024 });
+    })
+  };
+);
+
+// Elsewhere in your code (e.g. in your API endpoint):
+await inngest.send({
+  name: "shop/product.imported",
+  data: {
+    userId: "01J8G44701QYGE0DH65PZM8DPM",
+    imageURLs: [
+      "https://useruploads.acme.com/q2345678/1094.jpg",
+      "https://useruploads.acme.com/q2345678/1095.jpg"
+    ],
+  },
+});
+```
+
+## Learn more
+
+- [Getting started](#getting-started)
+- [SDKs](#sdks)
+- [Project Architecture](#project-architecture)
+- [Self-hosting](#self-hosting)
+- [Community](#community)
+
+## Getting started
+
+Run the Inngest Dev Server using our CLI:
+
+```
+npx inngest-cli@latest dev
+```
+
+Open the Inngest Dev Server dashboard at http://localhost:8288:
+
+![Screenshot of the Inngest dashboard served by the Inngest Dev Server](.github/assets/dashboard-screenshot-2024-09-23.png)
+
+Follow our [Next.js](https://www.inngest.com/docs/getting-started/nextjs-quick-start?ref=github-inngest-readme), [Node.js](https://www.inngest.com/docs/getting-started/nodejs-quick-start?ref=github-inngest-readme) or [Python](h

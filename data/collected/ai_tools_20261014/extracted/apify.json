@@ -1,0 +1,37 @@
+{
+ "company": "Apify",
+ "one_liner_ko": "웹 데이터 수집·자동화용 즉시 실행 도구(Actor)를 모아 놓은 AI용 마켓플레이스이자 실행 플랫폼이다.",
+ "what_it_does_ko": "Apify는 실시간 웹 데이터 수집, 경쟁사 추적, 리드 발굴, 소셜 미디어 모니터링 등에 쓰는 바로 실행 가능한 도구(Actor)를 모은 마켓플레이스다. Apify Store에 8만 개가 넘는 Actor가 있고, 직접 Actor를 만들어 배포하거나 공개해 수익을 낼 수도 있다. 클라우드 실행, 프록시, 차단 회피, 저장소, 일정 실행, 모니터링, 외부 앱 연동을 제공한다. MCP 서버·CLI·스킬로 AI 에이전트와 연결할 수 있고, 오픈소스 크롤링 라이브러리 Crawlee도 만든다.",
+ "key_features": ["Apify Store(사전 제작된 스크래퍼·자동화 Actor 마켓플레이스)", "직접 Actor 개발·배포·수익화", "프록시(데이터센터·주거용) IP 교체", "차단 회피(Anti-blocking)", "일정 실행·모니터링", "결과 저장소(데이터셋·키-값 저장소) 및 다양한 형식 내보내기", "MCP 서버로 AI 에이전트 연결", "API·SDK·CLI"],
+ "use_cases_ko": ["생성형 AI·AI 에이전트용 데이터 수집", "리드 발굴", "시장 조사·가격 모니터링"],
+ "pricing": {"free_tier": "있음 (월 $5 사용액, 컴퓨트 유닛당 $0.2)", "plans": [
+  {"name": "Free", "price": 0, "currency": "USD", "period": "month", "limits": "$5 사용액 포함, 동시 실행 5개", "page_lang": "en"},
+  {"name": "Starter", "price": 19, "currency": "USD", "period": "month", "limits": "+종량제, $19 사용액 포함, 동시 실행 32개", "page_lang": "en"},
+  {"name": "Scale", "price": 199, "currency": "USD", "period": "month", "limits": "+종량제, $199 사용액 포함, $0.16/CU", "page_lang": "en"},
+  {"name": "Business", "price": 999, "currency": "USD", "period": "month", "limits": "+종량제, $999 사용액 포함, $0.13/CU", "page_lang": "en"},
+  {"name": "Enterprise", "price": null, "currency": "USD", "period": "month", "limits": "Custom", "page_lang": "en"}
+ ], "pricing_url": "https://apify.com/pricing"},
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["웹", "API", "CLI"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://apify.com", "quote": "Apify: Marketplace of ready-to-run tools for AI"},
+  {"field": "one_liner_ko", "url": "https://apify.com", "quote": "Apify is a marketplace of ready-to-run tools for AI."},
+  {"field": "what_it_does_ko", "url": "https://apify.com", "quote": "Get real-time web data, track competitors,"},
+  {"field": "what_it_does_ko", "url": "https://docs.apify.com/", "quote": "Apify is all about Actors—a new way to package your code to make it easy to share, integrate, and build upon."},
+  {"field": "key_features", "url": "https://docs.apify.com/", "quote": "Avoid blocking by smartly rotating datacenter and residential IP addresses."},
+  {"field": "key_features", "url": "https://docs.apify.com/", "quote": "Automatically start Actors and saved tasks at specific times."},
+  {"field": "key_features", "url": "https://docs.apify.com/", "quote": "Discover and use Actors with AI agents and LLMs via Apify MCP server."},
+  {"field": "key_features", "url": "https://apify.com", "quote": "Publish your Actors and get paid"},
+  {"field": "use_cases_ko", "url": "https://apify.com", "quote": "Data for generative AI\n Data for AI agents\n Lead generation\n Market research"},
+  {"field": "pricing", "url": "https://apify.com/pricing", "quote": "$19 to spend in Apify Store or on your own Actors"},
+  {"field": "pricing", "url": "https://apify.com/pricing", "quote": "$999 to spend in Apify Store or on your own Actors"},
+  {"field": "pricing", "url": "https://apify.com/pricing", "quote": "$5 to spend in Apify Store or on your own Actors"},
+  {"field": "api", "url": "https://docs.apify.com/", "quote": "Interact with the Apify platform from your applications."},
+  {"field": "platforms", "url": "https://docs.apify.com/", "quote": "CLI Installation Quick start Command reference"},
+  {"field": "korean_support", "url": "https://apify.com", "quote": "html lang: en"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

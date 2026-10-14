@@ -1,0 +1,47 @@
+{
+ "company": "Stanford CRFM (Center for Research on Foundation Models)",
+ "one_liner_ko": "파운데이션 모델을 재현 가능하고 투명하게 평가하는 프레임워크와 리더보드 모음.",
+ "what_it_does_ko": "HELM은 스탠퍼드 CRFM이 만든 오픈소스 Python 프레임워크로, LLM과 멀티모달 모델을 포함한 파운데이션 모델을 종합적이고 재현 가능하며 투명하게 평가한다. 표준 형식의 데이터셋·벤치마크, 여러 제공사 모델을 하나의 인터페이스로 부르는 기능, 정확도 외에 효율·편향·유해성까지 재는 지표를 갖췄다. 개별 프롬프트와 응답을 살펴보는 웹 UI와 결과 비교용 웹 리더보드를 제공한다. 2026년 6월 1일부터 유지보수 모드에 들어갔다.",
+ "key_features": [
+  "표준 형식 데이터셋·벤치마크(MMLU-Pro, GPQA, IFEval, WildBench 등)",
+  "여러 제공사 모델을 통합 인터페이스로 평가",
+  "효율·편향·유해성 등 정확도 외 지표",
+  "프롬프트·응답 확인용 웹 UI",
+  "모델·벤치마크 비교 웹 리더보드(Capabilities, Safety, VHELM, MedHELM 등)",
+  "helm-run·helm-summarize·helm-server 명령"
+ ],
+ "use_cases_ko": [
+  "최신 모델을 주요 벤치마크로 평가해 리더보드로 비교",
+  "의료·금융 등 분야별, 다국어·규제 준수 측면 평가"
+ ],
+ "pricing": {
+  "free_tier": "불명 (받은 본문에 요금 정보 없음)",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "오픈소스(라이선스 이름은 받은 본문에 없음)",
+ "api": "불명",
+ "platforms": ["웹", "CLI"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://github.com/stanford-crfm/helm", "quote": "created by the [Center for Research on Foundation Models (CRFM) at Stanford](https://crfm.stanford.edu/)"},
+  {"field": "one_liner_ko", "url": "https://crfm.stanford.edu/helm/", "quote": "A reproducible and transparent framework for evaluating foundation models."},
+  {"field": "what_it_does_ko", "url": "https://github.com/stanford-crfm/helm", "quote": "for holistic, reproducible and transparent evaluation of foundation models, including large language models (LLMs) and multimodal models."},
+  {"field": "what_it_does_ko", "url": "https://github.com/stanford-crfm/helm", "quote": "_Note: HELM entered maintenance mode on June 1, 2026."},
+  {"field": "key_features", "url": "https://github.com/stanford-crfm/helm", "quote": "Datasets and benchmarks in a standardized format (e.g. MMLU-Pro, GPQA, IFEval, WildBench)"},
+  {"field": "key_features", "url": "https://github.com/stanford-crfm/helm", "quote": "Models from various providers accessible through a unified interface"},
+  {"field": "key_features", "url": "https://github.com/stanford-crfm/helm", "quote": "Metrics for measuring various aspects beyond accuracy (e.g. efficiency, bias, toxicity)"},
+  {"field": "key_features", "url": "https://github.com/stanford-crfm/helm", "quote": "Web UI for inspecting individual prompts and responses"},
+  {"field": "key_features", "url": "https://github.com/stanford-crfm/helm", "quote": "Web leaderboard for comparing results across models and benchmarks"},
+  {"field": "key_features", "url": "https://github.com/stanford-crfm/helm", "quote": "# Start a web server to display benchmark results\nhelm-server --suite my-suite"},
+  {"field": "use_cases_ko", "url": "https://github.com/stanford-crfm/helm", "quote": "We maintain official leaderboards with results from evaluating recent models on notable benchmarks using this framework."},
+  {"field": "use_cases_ko", "url": "https://github.com/stanford-crfm/helm", "quote": "We also maintain leaderboards for a diverse range of domains (e.g. medicine, finance)"},
+  {"field": "open_source", "url": "https://github.com/stanford-crfm/helm", "quote": "is an open source Python framework"},
+  {"field": "platforms", "url": "https://github.com/stanford-crfm/helm", "quote": "Then go to http://localhost:8000/ in your browser."},
+  {"field": "korean_support", "url": "https://crfm.stanford.edu/helm/", "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [
+  {"official": "스탠퍼드 CRFM의 오픈소스 평가 프레임워크·공개 리더보드이며 받은 본문에 유료 플랜·관리형 클라우드 언급 없음", "diff": "기존 분류 '오픈소스 + 클라우드 매니지드 유료 플랜'의 유료 관리형 플랜이 확인되지 않음 — 무료 학술 프로젝트로 보임", "url": "https://github.com/stanford-crfm/helm"}
+ ],
+ "plan_change": []
+}

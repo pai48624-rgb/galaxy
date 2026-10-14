@@ -1,0 +1,52 @@
+{
+ "company": "AAIF (Agentic AI Foundation)",
+ "one_liner_ko": "코드·업무 흐름 등 무엇이든 처리하는, 내 컴퓨터에서 도는 오픈소스 범용 AI 에이전트(데스크톱 앱·CLI·API).",
+ "what_it_does_ko": "goose는 사용자 컴퓨터에서 실행되는 범용 AI 에이전트로, 코딩뿐 아니라 조사, 글쓰기, 자동화, 데이터 분석에도 쓸 수 있다. macOS·리눅스·윈도용 데스크톱 앱, 터미널용 CLI, 어디든 넣을 수 있는 API로 제공되며 Rust로 만들어졌다. Anthropic·OpenAI·Google·Ollama 등 15개 이상 제공자의 API 키나 기존 Claude·ChatGPT·Gemini 구독을 ACP로 연결해 쓴다. MCP로 70개 이상 확장을 연결하고, 작업 흐름을 YAML 레시피로 저장·공유하며, 하위 에이전트로 작업을 병렬 처리한다. Apache 2.0 오픈소스이며 리눅스 재단 산하 Agentic AI Foundation 프로젝트다.",
+ "key_features": [
+  "데스크톱 앱(macOS·리눅스·윈도)·CLI·API",
+  "MCP로 70개 이상 확장 연결",
+  "15개 이상 LLM 제공자·기존 구독(ACP) 사용",
+  "작업 흐름을 YAML 레시피로 저장·공유·CI 실행",
+  "데스크톱 안 인터랙티브 UI(MCP Apps)",
+  "하위 에이전트 병렬 실행",
+  "프롬프트 인젝션 탐지·도구 권한·샌드박스 모드",
+  "ACP 서버로 Zed·JetBrains·VS Code 연결"
+ ],
+ "use_cases_ko": [
+  "코딩 작업",
+  "조사·글쓰기·자동화·데이터 분석",
+  "팀이 레시피로 작업 흐름을 공유하고 CI에서 실행"
+ ],
+ "pricing": {
+  "free_tier": "불명 (요금 페이지 없음, Apache 2.0 오픈소스)",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "Apache 2.0",
+ "api": "있음",
+ "platforms": ["윈도", "맥", "CLI", "API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://goose-docs.ai/", "quote": "Copyright © 2026 AAIF (Agentic AI Foundation)"},
+  {"field": "one_liner_ko", "url": "https://goose-docs.ai/", "quote": "Your native open source AI agent. Desktop app, CLI, and API — for code, workflows, and everything in between."},
+  {"field": "what_it_does_ko", "url": "https://goose-docs.ai/", "quote": "goose is a general-purpose AI agent that runs on your machine. Not just for code — use it for research, writing, automation, data analysis, or anything you need to get done."},
+  {"field": "what_it_does_ko", "url": "https://goose-docs.ai/", "quote": "goose is part of the Agentic AI Foundation at the Linux Foundation"},
+  {"field": "key_features", "url": "https://goose-docs.ai/", "quote": "A native desktop app for macOS, Linux, and Windows. A full CLI for terminal workflows. An API to embed it anywhere."},
+  {"field": "key_features", "url": "https://goose-docs.ai/", "quote": "Connect to 70+ extensions — databases, APIs, browsers, GitHub, Google Drive, and more — via the Model Context Protocol open standard."},
+  {"field": "key_features", "url": "https://goose-docs.ai/", "quote": "Use API keys or your existing Claude, ChatGPT, or Gemini subscriptions via ACP ."},
+  {"field": "key_features", "url": "https://goose-docs.ai/", "quote": "Capture workflows as portable YAML configs. Share with your team, run in CI"},
+  {"field": "key_features", "url": "https://goose-docs.ai/", "quote": "Extensions can render interactive UIs directly inside goose Desktop"},
+  {"field": "key_features", "url": "https://goose-docs.ai/", "quote": "Spawn independent subagents to handle tasks in parallel"},
+  {"field": "key_features", "url": "https://goose-docs.ai/", "quote": "Prompt injection detection, tool permission controls, sandbox mode, and an adversary reviewer that watches for unsafe actions."},
+  {"field": "key_features", "url": "https://goose-docs.ai/", "quote": "goose works as an ACP server — connect from Zed, JetBrains, or VS Code"},
+  {"field": "use_cases_ko", "url": "https://goose-docs.ai/", "quote": "use it for research, writing, automation, data analysis, or anything you need to get done."},
+  {"field": "use_cases_ko", "url": "https://goose-docs.ai/", "quote": "Capture workflows as portable YAML configs. Share with your team, run in CI"},
+  {"field": "pricing", "url": "https://goose-docs.ai/", "quote": "Open Source · Apache 2.0 · Agentic AI Foundation"},
+  {"field": "open_source", "url": "https://goose-docs.ai/", "quote": "Open Source · Apache 2.0 · Agentic AI Foundation"},
+  {"field": "api", "url": "https://goose-docs.ai/", "quote": "An API to embed it anywhere."},
+  {"field": "platforms", "url": "https://goose-docs.ai/", "quote": "Download the desktop app Available for macOS, Linux, and Windows"},
+  {"field": "korean_support", "url": "https://goose-docs.ai/", "quote": "hreflang: en, x-default"}
+ ],
+ "mismatch": [{"official": "Apache 2.0 오픈소스, 요금제 없음, 사용자 API 키나 기존 Claude·ChatGPT·Gemini 구독 사용", "diff": "기존 '프리미엄(무료+유료 구독)'과 달리 자체 유료 구독이 없는 오픈소스 도구", "url": "https://goose-docs.ai/"}],
+ "plan_change": []
+}

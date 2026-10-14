@@ -1,0 +1,54 @@
+=== [github] https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering
+# Agent Skills for Context Engineering
+
+A comprehensive, open collection of Agent Skills focused on context engineering and harness engineering principles for building production-grade AI agent systems. These skills teach the art and science of curating context, designing agent operating loops, and evaluating agent behavior across any agent platform.
+
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/muratcankoylan/Agent-Skills-for-Context-Engineering)
+
+## What is Context Engineering?
+
+Context engineering is the discipline of managing the language model's context window. Unlike prompt engineering, which focuses on crafting effective instructions, context engineering addresses the holistic curation of all information that enters the model's limited attention budget: system prompts, tool definitions, retrieved documents, message history, and tool outputs.
+
+The fundamental challenge is that context windows are constrained not by raw token capacity but by attention mechanics. As context length increases, models exhibit predictable degradation patterns: the "lost-in-the-middle" phenomenon, U-shaped attention curves, and attention scarcity. Effective context engineering means finding the smallest possible set of high-signal tokens that maximize the likelihood of desired outcomes.
+
+## Recognition
+
+This repository is cited in academic research as foundational work on static skill architecture:
+
+> "While static skills are well-recognized [Anthropic, 2025b; Muratcan Koylan, 2025], MCE is among the first to dynamically evolve them, bridging manual skill engineering and autonomous self-improvement."
+1. [Meta Context Engineering via Agentic Skill Evolution](https://arxiv.org/pdf/2601.21557), Peking University State Key Laboratory of General Artificial Intelligence (2025)
+2. [Agent Harness Engineering: A Survey](https://openreview.net/pdf/f358711a95aaaf61fdeffd4ef3fc60fba9b8da57.pdf), CMU, Yale, JHU, NEU, Tulane, UAB, OSU, Virginia Tech, and Amazon (2026)
+
+## Skills Overview
+
+### Foundational Skills
+
+These skills establish the foundational understanding required for all subsequent context engineering work.
+
+| Skill | Description |
+|-------|-------------|
+| [context-fundamentals](skills/context-fundamentals/) | Understand what context is, why it matters, and the anatomy of context in agent systems |
+| [context-degradation](skills/context-degradation/) | Recognize patterns of context failure: lost-in-middle, poisoning, distraction, and clash |
+| [context-compression](skills/context-compression/) | Design and evaluate compression strategies for long-running sessions |
+
+### Architectural Skills
+
+These skills cover the patterns and structures for building effective agent systems.
+
+| Skill | Description |
+|-------|-------------|
+| [multi-agent-patterns](skills/multi-agent-patterns/) | Master orchestrator, peer-to-peer, and hierarchical multi-agent architectures |
+| [long-horizon-prompting](skills/long-horizon-prompting/) | **NEW** Write pseudo-formal task briefs for long-running autonomous agents and parallel orchestrations: exact success predicates, non-counting outcomes, audit-gated return conditions, per-worker handoff contracts, effort floors, and diversity policies, modeled on the published GPT-5.6 Sol Ultra Cycle Double Cover prompt and Sakana AI's MASS workflow contracts |
+| [memory-systems](skills/memory-systems/) | Design short-term, long-term, and graph-based memory architectures |
+| [tool-design](skills/tool-design/) | Build tools that agents can use effectively |
+| [filesystem-context](skills/filesystem-context/) | Use filesystems for dynamic context discovery, tool output offloading, and plan persistence |
+| [hosted-agents](skills/hosted-agents/) | **NEW** Build background coding agents with sandboxed VMs, pre-built images, multiplayer support, and multi-client interfaces |
+
+### Operational Skills
+
+These skills address the ongoing operation and optimization of agent systems.
+
+| Skill | Description |
+|-------|-------------|
+| [context-optimization](skills/context-optimization/) | Apply compaction, masking, and caching strategies |
+| [self-managed-context](skills/self-managed-context/) | **NEW** Give the model 

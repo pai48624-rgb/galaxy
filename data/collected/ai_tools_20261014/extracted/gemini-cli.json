@@ -1,0 +1,89 @@
+{
+ "company": "Google",
+ "one_liner_ko": "Gemini 모델을 터미널로 바로 가져오는 오픈소스 AI 에이전트.",
+ "what_it_does_ko": "Gemini CLI는 Gemini의 능력을 터미널로 직접 가져오는 오픈소스 AI 에이전트다. 개인 Google 계정으로 분당 60회·하루 1,000회 요청의 무료 등급을 제공하고, 1M 토큰 컨텍스트의 Gemini 3 모델을 쓴다. Google 검색 그라운딩, 파일 작업, 셸 명령, 웹 가져오기 같은 내장 도구와 MCP 확장을 지원한다. 큰 코드베이스 질의·수정, PDF·이미지·스케치로 앱 생성, PR 조회나 리베이스 같은 작업 자동화에 쓸 수 있다.",
+ "key_features": [
+  "무료 등급(분당 60회, 하루 1,000회, 개인 Google 계정)",
+  "Gemini 3 모델과 1M 토큰 컨텍스트",
+  "Google 검색 그라운딩·파일 작업·셸 명령·웹 가져오기 내장 도구",
+  "MCP 지원으로 확장",
+  "큰 코드베이스 질의·수정",
+  "PDF·이미지·스케치로 앱 생성(멀티모달)",
+  "스크립트에서 비대화형 실행으로 자동화"
+ ],
+ "use_cases_ko": [
+  "명령줄에서 일하는 개발자의 코드 이해·생성",
+  "PR 조회·복잡한 리베이스 같은 운영 작업 자동화"
+ ],
+ "pricing": {
+  "free_tier": "있음 (개인 Google 계정, 분당 60회·하루 1,000회 요청)",
+  "plans": [],
+  "pricing_url": "https://github.com/google-gemini/gemini-cli"
+ },
+ "open_source": "Apache 2.0",
+ "api": "불명",
+ "platforms": [
+  "CLI",
+  "맥"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://github.com/google-gemini/gemini-cli",
+   "quote": "https://github.com/google-gemini/gemini-cli"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/google-gemini/gemini-cli",
+   "quote": "Gemini CLI is an open-source AI agent that brings the power of Gemini directly"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/google-gemini/gemini-cli",
+   "quote": "It provides lightweight access to Gemini, giving you the"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/google-gemini/gemini-cli",
+   "quote": "**🔧 Built-in tools**: Google Search grounding, file operations, shell"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/google-gemini/gemini-cli",
+   "quote": "**🔌 Extensible**: MCP (Model Context Protocol) support for custom"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/google-gemini/gemini-cli",
+   "quote": "Generate new apps from PDFs, images, or sketches using multimodal capabilities"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/google-gemini/gemini-cli",
+   "quote": "Run non-interactively in scripts for workflow automation"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/google-gemini/gemini-cli",
+   "quote": "Automate operational tasks like querying pull requests or handling complex"
+  },
+  {
+   "field": "pricing",
+   "url": "https://github.com/google-gemini/gemini-cli",
+   "quote": "**🎯 Free tier**: 60 requests/min and 1,000 requests/day with personal Google"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/google-gemini/gemini-cli",
+   "quote": "**🛡️ Open source**: Apache 2.0 licensed."
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/google-gemini/gemini-cli",
+   "quote": "#### Install globally with Homebrew (macOS/Linux)"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

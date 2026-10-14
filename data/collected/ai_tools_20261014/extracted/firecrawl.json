@@ -1,0 +1,38 @@
+{
+ "company": "Firecrawl",
+ "one_liner_ko": "AI 에이전트에게 웹 검색·스크래핑 데이터를 주는 웹 데이터 API로, 오픈소스로도 공개돼 있다.",
+ "what_it_does_ko": "Firecrawl은 AI가 실시간 웹을 찾고, 읽고, 조작할 수 있게 하는 인프라 계층이다. 웹을 검색해 결과 본문을 가져오고, 웹사이트를 마크다운·JSON·스크린샷 같은 LLM용 데이터로 스크래핑한다. 페이지를 스크래핑한 뒤 AI 프롬프트나 코드로 클릭·탐색하는 Interact 기능도 있다. MCP나 CLI·스킬로 AI 에이전트에 연결할 수 있다.",
+ "key_features": ["Search: 웹 검색 후 결과 본문까지 가져오기", "Scrape: 마크다운·JSON·스크린샷 등 LLM용 데이터 추출", "Map·Crawl: 사이트 전체 페이지 수집", "Interact: 스크래핑한 페이지를 프롬프트·코드로 조작", "Monitor: 페이지 변화 점검", "Agent: 자율 데이터 수집", "MCP·CLI·Python·Node.js SDK"],
+ "use_cases_ko": [],
+ "pricing": {"free_tier": "있음 (월 1,000크레딧, 카드 불필요)", "plans": [
+  {"name": "Free", "price": 0, "currency": "USD", "period": "month", "limits": "월 1,000크레딧, 동시 2개", "page_lang": "en"},
+  {"name": "Hobby", "price": 19, "currency": "USD", "period": "month", "limits": "월 5,000크레딧, 월별 결제", "page_lang": "en"},
+  {"name": "Hobby", "price": 16, "currency": "USD", "period": "month(연간 결제)", "limits": "월 5,000크레딧, 동시 5개", "page_lang": "en"},
+  {"name": "Standard", "price": 83, "currency": "USD", "period": "month(연간 결제)", "limits": "월 100,000크레딧, 동시 25개", "page_lang": "en"},
+  {"name": "Growth", "price": 333, "currency": "USD", "period": "month(연간 결제)", "limits": "월 500,000크레딧, 동시 50개", "page_lang": "en"},
+  {"name": "Scale", "price": 599, "currency": "USD", "period": "month(연간 결제)", "limits": "월 1,000,000크레딧, 동시 100개", "page_lang": "en"},
+  {"name": "Enterprise", "price": null, "currency": "USD", "period": "month", "limits": "Custom", "page_lang": "en"}
+ ], "pricing_url": "https://www.firecrawl.dev/pricing"},
+ "open_source": "오픈소스(라이선스 이름은 페이지에 없음)",
+ "api": "있음",
+ "platforms": ["API", "CLI"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://www.firecrawl.dev/", "quote": "Firecrawl | Web Data API for AI Agents"},
+  {"field": "one_liner_ko", "url": "https://www.firecrawl.dev/", "quote": "The web data API to search and scrape with access to more sources through Alexandria . It's also open source."},
+  {"field": "what_it_does_ko", "url": "https://www.firecrawl.dev/", "quote": "The infrastructure layer that helps AI find, read, and act on the live web."},
+  {"field": "what_it_does_ko", "url": "https://www.firecrawl.dev/", "quote": "Scrape a page, then interact with it using AI prompts or code."},
+  {"field": "key_features", "url": "https://www.firecrawl.dev/", "quote": "Get llm-ready data from websites. Markdown, JSON, screenshot, etc."},
+  {"field": "key_features", "url": "https://www.firecrawl.dev/", "quote": "Search the web and get full content from results."},
+  {"field": "key_features", "url": "https://www.firecrawl.dev/pricing", "quote": "Credit unit 1 credit = 1 page on a basic scrape, crawl, or map."},
+  {"field": "key_features", "url": "https://www.firecrawl.dev/", "quote": "Connect Firecrawl to any AI agent or MCP client in minutes."},
+  {"field": "pricing", "url": "https://www.firecrawl.dev/pricing", "quote": "Free tier 1,000 credits every month, refreshed monthly, no credit card required."},
+  {"field": "pricing", "url": "https://www.firecrawl.dev/pricing", "quote": "Entry plan Hobby: $19/month billed monthly, or $16/month billed annually, for 5,000 credits per month"},
+  {"field": "pricing", "url": "https://www.firecrawl.dev/pricing", "quote": "Prices shown are per month, billed annually."},
+  {"field": "open_source", "url": "https://www.firecrawl.dev/", "quote": "It's also open source."},
+  {"field": "api", "url": "https://docs.firecrawl.dev/introduction", "quote": "API Reference"},
+  {"field": "korean_support", "url": "https://www.firecrawl.dev/", "quote": "html lang: en"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

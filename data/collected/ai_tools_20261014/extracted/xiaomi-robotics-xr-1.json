@@ -1,0 +1,92 @@
+{
+ "company": "Xiaomi Robotics",
+ "one_liner_ko": "10만 시간 이상의 실제 조작 궤적으로 학습해 처음 보는 환경에서도 바로 이동·조작하는 VLA 로봇 파운데이션 모델.",
+ "what_it_does_ko": "Xiaomi-Robotics-1(XR-1)은 10만 시간 이상의 실제 조작 궤적으로 학습한 비전-언어-행동(VLA) 모델이다. 사전학습으로 폭넓은 능력을 익히고 사후학습으로 실제 로봇과 자연어 지시에 맞추는 2단계 방식을 쓴다. 사전학습된 VLM(Qwen3-VL)과 Diffusion-Transformer를 Mixture-of-Transformers로 결합했다. 모델은 Hugging Face에 공개됐고 사후학습·추론·벤치마크 평가 코드와 체크포인트도 공개됐다.",
+ "key_features": [
+  "1,700개+ 시나리오의 10만 시간+ UMI 궤적으로 사전학습한 강한 일반화",
+  "비동기 실행으로 추론 지연을 줄인 실시간 동작",
+  "Hugging Face transformers 기반, 일반 소비자용 GPU에 최적화",
+  "작업당 몇 시간의 시범만으로 새 작업 학습",
+  "사전학습·사후학습 2단계 학습 방식",
+  "사후학습·추론·벤치마크 평가 코드와 체크포인트 공개"
+ ],
+ "use_cases_ko": [
+  "처음 보는 환경·물체에서의 모바일 조작",
+  "적은 시범 데이터로 새 로봇 작업에 적응"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "Apache 2.0",
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://github.com/XiaomiRobotics/Xiaomi-Robotics-1",
+   "quote": "**Xiaomi-Robotics-1** is a robot foundation model trained on"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/XiaomiRobotics/Xiaomi-Robotics-1",
+   "quote": "model engineered for out-of-the-box mobile manipulation in unseen environments"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/XiaomiRobotics/Xiaomi-Robotics-1",
+   "quote": "XR-1 follows a two-stage training paradigm inspired by large language models"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/XiaomiRobotics/Xiaomi-Robotics-1",
+   "quote": "XR-1 couples a pre-trained VLM (**Qwen3-VL**) with a Diffusion-Transformer (DiT)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/XiaomiRobotics/Xiaomi-Robotics-1",
+   "quote": "spanning 1,700+ scenarios across household, commercial, industrial, and outdoor environments"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/XiaomiRobotics/Xiaomi-Robotics-1",
+   "quote": "Optimized with asynchronous execution to minimize inference latency."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/XiaomiRobotics/Xiaomi-Robotics-1",
+   "quote": "(pinned to `4.57.1`) and optimized for consumer GPUs"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/XiaomiRobotics/Xiaomi-Robotics-1",
+   "quote": "Learns entirely new complex tasks from just a few hours of demonstrations per task."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/XiaomiRobotics/Xiaomi-Robotics-1",
+   "quote": "Released code and checkpoints for post-training, inference, and benchmark evaluation."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/XiaomiRobotics/Xiaomi-Robotics-1",
+   "quote": "XR-1 can perform mobile manipulation in unseen environments with unseen objects, out of the box."
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/XiaomiRobotics/Xiaomi-Robotics-1",
+   "quote": "[![License](https://img.shields.io/badge/License-Apache_2.0-green.svg)](LICENSE)"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "모델·코드가 Apache 2.0 라이선스로 Hugging Face·GitHub에 공개",
+   "diff": "기존 '연구/엔터프라이즈(가격 비공개)'와 달리 공개 오픈소스 모델",
+   "url": "https://github.com/XiaomiRobotics/Xiaomi-Robotics-1"
+  }
+ ],
+ "plan_change": [],
+ "note": "raw 에 github 구간만 있고 [meta] 구간이 없어 한국어 지원은 불명. 저장소 이름은 Xiaomi-Robotics-1이며 본문에서 XR-1로 줄여 부름."
+}

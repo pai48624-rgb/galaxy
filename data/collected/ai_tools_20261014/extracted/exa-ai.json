@@ -1,0 +1,71 @@
+{
+ "company": "Exa Labs Inc.",
+ "one_liner_ko": "AI 에이전트를 위해 공개 웹과 비공개 정보를 검색해 주는 실시간 웹 검색 API.",
+ "what_it_does_ko": "Exa는 AI 에이전트용 웹 검색 API로, 공개 웹과 비공개 정보의 대규모 색인을 검색한다. 빠른 검색(약 180ms~1초)부터 약 10초 걸리는 심층 검색까지 하나의 API로 설정할 수 있고, 구조화된 출력과 근거 인용을 제공한다. 웹 페이지 본문과 하이라이트 발췌를 돌려줘 모델에 넘기는 토큰을 줄인다. 회사·인물·코드 등 분야별 검색과 웹 모니터링, 비동기 심층 리서치용 Agent API도 있다.",
+ "key_features": [
+  "에이전트용 웹 검색 API (지연 시간 180ms~1초 설정)",
+  "페이지 본문·토큰 절약형 하이라이트를 주는 Contents API",
+  "구조화 출력과 웹 근거 인용을 주는 Deep Search",
+  "비동기 심층 리서치용 Agent API",
+  "정해진 주기로 검색해 웹훅으로 알려 주는 Monitors",
+  "MCP 서버·Claude 커넥터·ChatGPT 플러그인 등 50개 이상 연동",
+  "웹·인물·회사·학술 색인"
+ ],
+ "use_cases_ko": [
+  "코딩 에이전트가 GitHub 저장소·문서·변경 기록을 실시간으로 검색",
+  "회사·인물 정보를 구조화 데이터로 보강(enrichment)",
+  "뉴스 모니터링·챗봇·음성 에이전트에 최신 웹 정보 제공"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Starter: 매달 $10 크레딧 + 가입 보너스 $10, 결제수단 불필요, 초당 10회 검색)",
+  "plans": [
+   {"name": "Starter", "price": 0, "currency": "USD", "period": "month", "limits": "매달 $10 크레딧, 10 Search QPS, 에이전트 동시 50", "page_lang": "en"},
+   {"name": "Developer", "price": null, "currency": "USD", "period": "usage", "limits": "종량제, 최대 25 Search QPS", "page_lang": "en"},
+   {"name": "Enterprise", "price": null, "currency": "USD", "period": null, "limits": "맞춤 견적(영업 문의)", "page_lang": "en"},
+   {"name": "Search", "price": 4, "currency": "USD", "period": "usage", "limits": "1천 요청당 $4부터", "page_lang": "en"},
+   {"name": "Contents", "price": 1, "currency": "USD", "period": "usage", "limits": "콘텐츠 유형별 1천 페이지당 $1", "page_lang": "en"},
+   {"name": "Deep Search", "price": 12, "currency": "USD", "period": "usage", "limits": "1천 요청당 $12~15", "page_lang": "en"},
+   {"name": "Monitors", "price": 15, "currency": "USD", "period": "usage", "limits": "1천 요청당 $15", "page_lang": "en"},
+   {"name": "Agent", "price": 0.012, "currency": "USD", "period": "usage", "limits": "실행 1회당 $0.012~$1.00", "page_lang": "en"}
+  ],
+  "pricing_url": "https://exa.ai/pricing/"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://exa.ai", "quote": "EXA LABS INC."},
+  {"field": "one_liner_ko", "url": "https://exa.ai", "quote": "Search the largest index of public web and private information."},
+  {"field": "one_liner_ko", "url": "https://exa.ai", "quote": "Exa | Search API for AI Agents — Real-Time Web Data"},
+  {"field": "what_it_does_ko", "url": "https://exa.ai", "quote": "Configure for fast results or deep research with structured outputs and grounded citations"},
+  {"field": "what_it_does_ko", "url": "https://exa.ai", "quote": "latency Fast 450ms Auto 1s Deep ~10s"},
+  {"field": "key_features", "url": "https://exa.ai/pricing/", "quote": "Configurable latency: 180ms to 1s"},
+  {"field": "key_features", "url": "https://exa.ai/pricing/", "quote": "Full page contents for LLM context"},
+  {"field": "key_features", "url": "https://exa.ai/pricing/", "quote": "Asynchronous deep research runs"},
+  {"field": "key_features", "url": "https://exa.ai/pricing/", "quote": "Receive updates with webhooks"},
+  {"field": "key_features", "url": "https://exa.ai/pricing/", "quote": "Web grounded citations"},
+  {"field": "key_features", "url": "https://exa.ai/pricing/", "quote": "Scholarly works index"},
+  {"field": "key_features", "url": "https://exa.ai/pricing/", "quote": "50+ integrations"},
+  {"field": "use_cases_ko", "url": "https://exa.ai/pricing/", "quote": "Search over millions of GitHub repos, docs, and Stack Overflow with high-accuracy code retrieval."},
+  {"field": "use_cases_ko", "url": "https://exa.ai/pricing/", "quote": "Coding agents Chatbots News monitoring Enrichments Voice agents People search Company search"},
+  {"field": "use_cases_ko", "url": "https://exa.ai", "quote": "Extracts enrichments as structured outputs across 70M+ companies with Exa"},
+  {"field": "pricing", "url": "https://exa.ai/pricing/", "quote": "$10 credits every month plus a $10 onboarding bonus. No payment method required"},
+  {"field": "pricing", "url": "https://exa.ai/pricing/", "quote": "10 Search Queries Per Second (QPS)"},
+  {"field": "pricing", "url": "https://exa.ai/pricing/", "quote": "Use the Search API with no commitment with our flexible per-request pricing"},
+  {"field": "pricing", "url": "https://exa.ai/pricing/", "quote": "Up to 25 Search QPS"},
+  {"field": "pricing", "url": "https://exa.ai/pricing/", "quote": "Tailored for your organization to solve for large scale requirements and enterprise needs"},
+  {"field": "pricing", "url": "https://exa.ai/pricing/", "quote": "$1 /1k pages per content type"},
+  {"field": "pricing", "url": "https://exa.ai/pricing/", "quote": "$12–15 /1k requests"},
+  {"field": "pricing", "url": "https://exa.ai/pricing/", "quote": "$15 /1k requests"},
+  {"field": "pricing", "url": "https://exa.ai/pricing/", "quote": "$0.012–$1.00 /run"},
+  {"field": "pricing", "url": "https://exa.ai/pricing/", "quote": "From $4 /1k requests"},
+  {"field": "api", "url": "https://exa.ai/docs", "quote": "curl -s -X POST \"https://api.exa.ai/search\""},
+  {"field": "platforms", "url": "https://exa.ai/docs", "quote": "A powerful web search tool designed for agents."},
+  {"field": "korean_support", "url": "https://exa.ai", "quote": "화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {"official": "무료 Starter(매달 $10 크레딧) + Developer 종량제(요청·페이지·실행당 과금) + Enterprise 맞춤", "diff": "기존 '무료+유료 구독'과 달리 정기 구독 요금제가 없고 크레딧·종량제 과금 구조", "url": "https://exa.ai/pricing/"}
+ ]
+}

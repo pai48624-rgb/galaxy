@@ -1,0 +1,56 @@
+{
+ "company": "Melty Labs",
+ "one_liner_ko": "여러 코딩 에이전트를 팀처럼 클라우드(또는 내 맥)에서 동시에 돌리는 도구.",
+ "what_it_does_ko": "Conductor는 Claude Code, Codex, Cursor, OpenCode 같은 코딩 에이전트를 병렬로 실행하게 해 준다. 작업마다 별도 작업공간·브랜치·파일·터미널·diff·리뷰 경로가 생기고, 완료되면 diff 검토, 풀 리퀘스트 생성, 병합, 작업공간 보관까지 돕는다. Conductor Cloud는 저장소와 의존성이 미리 설치된 격리 microVM 샌드박스에서 에이전트를 오래 돌릴 수 있다. 작업공간 링크를 공유해 동료와 실시간으로 함께 에이전트에게 지시하는 멀티플레이어 기능이 있으며, 사용자는 자기 구독과 API 키를 그대로 쓴다.",
+ "key_features": [
+  "여러 코딩 에이전트(Claude Code·Codex·Cursor·OpenCode) 병렬 실행",
+  "작업마다 격리된 작업공간·브랜치·터미널",
+  "diff 검토·PR 생성·병합 지원",
+  "격리 microVM 클라우드 샌드박스(Conductor Cloud)",
+  "작업공간 공유·실시간 공동 지시(멀티플레이어)",
+  "내 구독·API 키 가져오기",
+  "macOS 데스크톱·iOS 앱·Conductor API"
+ ],
+ "use_cases_ko": [
+  "개발자가 여러 코딩 작업을 에이전트들에게 병렬로 맡기고 결과를 리뷰·병합",
+  "팀이 같은 작업공간에서 실시간으로 함께 에이전트에게 지시"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Free $0: 맥 로컬 작업공간, 병렬 에이전트, 내 구독·키 사용)",
+  "plans": [
+   {"name": "Free", "price": 0, "currency": "USD", "period": "month", "limits": "맥 로컬 작업공간, 병렬 에이전트, 내 구독·키", "page_lang": "en"},
+   {"name": "Pro", "price": 50, "currency": "USD", "period": "month", "limits": "Conductor Cloud 작업공간 시간, 최대 5명 Pro 협업, API, 모바일 앱", "page_lang": "en"},
+   {"name": "Teams", "price": 60, "currency": "USD", "period": "month", "limits": "사용자당 월, 인원 제한 없는 협업, 관리자 포털, 통합 청구", "page_lang": "en"},
+   {"name": "Enterprise", "price": null, "currency": "USD", "period": "month", "limits": "맞춤 가격; DPA, SAML SSO·SCIM, SLA", "page_lang": "en"}
+  ],
+  "pricing_url": "https://www.conductor.build/pricing"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["맥", "iOS", "API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://www.conductor.build/", "quote": "© 2026 Melty Labs SOC 2 Type II"},
+  {"field": "one_liner_ko", "url": "https://www.conductor.build/", "quote": "Conductor - Run a team of coding agents in the cloud"},
+  {"field": "what_it_does_ko", "url": "https://www.conductor.build/docs", "quote": "Conductor lets you run Claude Code, Codex, Cursor, and OpenCode in parallel."},
+  {"field": "what_it_does_ko", "url": "https://www.conductor.build/docs", "quote": "Each task gets its own workspace, branch, files, terminal, diff, and review path."},
+  {"field": "what_it_does_ko", "url": "https://www.conductor.build/docs", "quote": "When the work is ready, Conductor helps you review the diff, open a pull request, merge, and archive the workspace."},
+  {"field": "what_it_does_ko", "url": "https://www.conductor.build/", "quote": "Conductor Cloud runs on isolated microVMs with your repos and dependencies pre-installed."},
+  {"field": "key_features", "url": "https://www.conductor.build/", "quote": "Share a workspace link (⌘⇧C) with teammates, see who is active, follow work you care about, and prompt agents together in real-time."},
+  {"field": "key_features", "url": "https://www.conductor.build/", "quote": "Bring your own subscriptions and keys."},
+  {"field": "key_features", "url": "https://www.conductor.build/", "quote": "Conduct from the desktop app, mobile, or your own integrations to the Conductor API."},
+  {"field": "key_features", "url": "https://www.conductor.build/pricing", "quote": "└ Run multiple coding agents in parallel"},
+  {"field": "use_cases_ko", "url": "https://www.conductor.build/docs", "quote": "Each task gets its own workspace, branch, files, terminal, diff, and review path."},
+  {"field": "use_cases_ko", "url": "https://www.conductor.build/pricing", "quote": "users in the same Conductor org can collaborate live by sharing workspaces and prompting agents in real-time together."},
+  {"field": "pricing", "url": "https://www.conductor.build/pricing", "quote": "└ Local workspaces on your Mac"},
+  {"field": "pricing", "url": "https://www.conductor.build/pricing", "quote": "$50 /mo"},
+  {"field": "pricing", "url": "https://www.conductor.build/pricing", "quote": "$60 /mo/user"},
+  {"field": "pricing", "url": "https://www.conductor.build/pricing", "quote": "└ Conductor Cloud and a bunch of cloud workspace hours"},
+  {"field": "pricing", "url": "https://www.conductor.build/pricing", "quote": "└ SAML SSO, SCIM"},
+  {"field": "api", "url": "https://www.conductor.build/pricing", "quote": "└ Conductor API"},
+  {"field": "platforms", "url": "https://www.conductor.build/", "quote": "macOS iOS API"},
+  {"field": "korean_support", "url": "https://www.conductor.build/", "quote": "html lang: en"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

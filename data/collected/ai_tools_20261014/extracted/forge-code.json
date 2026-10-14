@@ -1,0 +1,50 @@
+{
+ "company": "ForgeCode",
+ "one_liner_ko": "버그·포럼 글·Slack·알림·프롬프트를 받아 테스트된 변경으로 만들어 주는, 쉬지 않는 '소프트웨어 공장'.",
+ "what_it_does_ko": "ForgeCode는 버그 보고, 포럼 글, Slack 메시지, 장애 알림, 프롬프트로 작업을 시작해 테스트된 변경을 보드에 올려 주는 서비스다. Slack에서 @ForgeCode로 부르면 미션을 열어 여러 이슈로 나누고 에이전트가 작업한 뒤 같은 스레드로 PR을 돌려준다. 장애 알림·멈춘 이슈·리뷰 대기 같은 조건에 반응하는 자동화를 둘 수 있고, 공장이 죽어도 체크포인트에서 이어서 실행한다. 별도로 오픈 저장소의 Forge는 터미널에서 쓰는 코딩 에이전트로, 처음 실행할 때 AI 제공자 자격 증명을 설정한다.",
+ "key_features": [
+  "버그·포럼·Slack·알림·프롬프트로 작업 시작",
+  "미션을 여러 이슈로 나눠 에이전트가 처리",
+  "Slack 스레드로 PR 결과 보고",
+  "알림·대기·일정 기반 자동화(장애 원인 분석·PR)",
+  "장애 시 체크포인트에서 자동 재개",
+  "고객 클라우드(BYOC) 실행",
+  "터미널 코딩 에이전트 Forge CLI(TUI·원샷·ZSH 플러그인 모드)",
+  "MCP 설정 지원"
+ ],
+ "use_cases_ko": [
+  "엔지니어링 팀이 Slack에서 기능 개발을 맡기고 PR 받기",
+  "운영 장애 알림에 대해 원인 분석·수정 PR 자동 작성",
+  "터미널에서 코드 이해·기능 구현·디버깅"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": ["CLI"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://forgecode.dev/about/", "quote": "© 2026 ForgeCode"},
+  {"field": "one_liner_ko", "url": "https://forgecode.dev", "quote": "Bugs, forum posts, Slack, alerts or a prompt start work; it lands on your board as a tested change, ready to ship."},
+  {"field": "what_it_does_ko", "url": "https://forgecode.dev", "quote": "09:16 Mission opens, splits into 5 issues"},
+  {"field": "what_it_does_ko", "url": "https://forgecode.dev", "quote": "14:05 Factory crashes (node OOM), restarts itself, runs resume from checkpoint"},
+  {"field": "what_it_does_ko", "url": "https://github.com/tailcallhq/forgecode", "quote": "On first run, Forge will guide you through setting up your AI provider credentials using the interactive login flow."},
+  {"field": "key_features", "url": "https://forgecode.dev", "quote": "09:14 Priya mentions @ForgeCode in a Slack thread"},
+  {"field": "key_features", "url": "https://forgecode.dev", "quote": "18:32 PR #1187 lands back in the same thread"},
+  {"field": "key_features", "url": "https://forgecode.dev", "quote": "Production alert: open incident, find root cause, open PR alert sentry prod 02:10 on alert"},
+  {"field": "key_features", "url": "https://forgecode.dev", "quote": "larkspur-aws-eu Your cloud (BYOC): AWS eu-west-1. Idle"},
+  {"field": "key_features", "url": "https://github.com/tailcallhq/forgecode", "quote": "A comprehensive coding agent that integrates AI capabilities with your development environment"},
+  {"field": "key_features", "url": "https://github.com/tailcallhq/forgecode", "quote": "- [How Forge Works: Three Modes](#how-forge-works-three-modes)"},
+  {"field": "key_features", "url": "https://github.com/tailcallhq/forgecode", "quote": "  - [MCP Configuration](#mcp-configuration)"},
+  {"field": "use_cases_ko", "url": "https://forgecode.dev", "quote": "Slack message in #api-platform slack @ForgeCode 09:14 on message"},
+  {"field": "use_cases_ko", "url": "https://forgecode.dev", "quote": "02:10 Production alert: RCA, PR, explanation for the dev."},
+  {"field": "use_cases_ko", "url": "https://github.com/tailcallhq/forgecode", "quote": "<summary><strong>Debugging Assistance</strong></summary>"},
+  {"field": "platforms", "url": "https://github.com/tailcallhq/forgecode", "quote": "curl -fsSL https://forgecode.dev/cli | sh"},
+  {"field": "korean_support", "url": "https://forgecode.dev", "quote": "html lang: en"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

@@ -1,0 +1,131 @@
+{
+ "company": "Cognitum (RuvNet)",
+ "one_liner_ko": "Claude Code와 Codex용 에이전트 메타 하네스(현재 이름 Ruflo)로, 계획·기억·테스트·개선하는 AI 팀을 꾸리게 해 준다.",
+ "what_it_does_ko": "claude-flow는 현재 Ruflo라는 이름의 Claude Code·Codex용 에이전트 메타 하네스다. Claude Code 플러그인(Core·Console·Mods)으로 설치하면 기본 도구, 에이전트 콘솔, 라우팅·정책 적용 기능이 추가된다. Codex 등 MCP를 지원하는 도구는 npx로 Ruflo MCP 서버에 연결해 쓸 수 있고, Claude Code 없이 터미널 UI(개요·비용·스웜·이벤트·미션)로도 실행된다. 공식 홈은 Cognitum.One으로, 엣지·물리 세계용 AI 생태계 안에 Ruflo를 '추론·오케스트레이션' 제품으로 둔다.",
+ "key_features": [
+  "Claude Code 플러그인(Core 도구·Console 에이전트 콘솔·Mods 라우팅/정책)",
+  "MCP 서버로 Codex 등 다른 클라이언트에 도구 제공",
+  "npx 설정 마법사(init wizard)",
+  "개요·비용·스웜·이벤트·미션을 보는 터미널 UI",
+  "ruOS 데스크톱을 MCP로 ChatGPT·Claude에 연결(선택)",
+  "RuVector 에이전트 메모리(벡터 검색·영구 컨텍스트) 연동"
+ ],
+ "use_cases_ko": [
+  "Claude Code·Codex 사용자가 계획·기억·테스트하는 AI 에이전트 팀 구성"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": "https://cognitum.one/pricing"
+ },
+ "open_source": "MIT",
+ "api": "있음",
+ "platforms": [
+  "CLI"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://cognitum.one/",
+   "quote": "© 2026 Cognitum. All rights reserved."
+  },
+  {
+   "field": "company",
+   "url": "https://cognitum.one/",
+   "quote": "Cognitum One / RuvNet"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/ruvnet/ruflo",
+   "quote": "**An agent meta-harness for Claude Code and Codex.**"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/ruvnet/ruflo",
+   "quote": "RuFlo Explained — build an AI team that plans, remembers, tests, and improves"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/ruvnet/ruflo",
+   "quote": "**Core** provides foundation tools. **Console** opens the agent cockpit. **Mods** add routing and policy enforcement inside Claude Code."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/ruvnet/ruflo",
+   "quote": "Use NPX for Ruflo project setup and connect your client to the Ruflo MCP server."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/ruvnet/ruflo",
+   "quote": "It shows Overview, Cost, Swarm, Events and Missions, plus an optional AI page."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://cognitum.one/",
+   "quote": "Bring models, agents, and tools together to plan, execute, and verify complex work."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/ruvnet/ruflo",
+   "quote": "/plugin install ruflo-core@ruflo"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/ruvnet/ruflo",
+   "quote": "MCP exposes Ruflo tools to your client."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/ruvnet/ruflo",
+   "quote": "npx ruflo@latest init wizard"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/ruvnet/ruflo",
+   "quote": "Connect ruOS to ChatGPT or Claude via MCP"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/ruvnet/ruflo",
+   "quote": "RuVector: Give your agents memory. Local vector search, persistent context, graph relationships and feedback learning."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/ruvnet/ruflo",
+   "quote": "build an AI team that plans, remembers, tests, and improves"
+  },
+  {
+   "field": "pricing",
+   "url": "https://cognitum.one/pricing",
+   "quote": "404\n Page not found"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/ruvnet/ruflo",
+   "quote": "https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge"
+  },
+  {
+   "field": "api",
+   "url": "https://cognitum.one/",
+   "quote": "API Reference"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/ruvnet/ruflo",
+   "quote": "npx -y ruflo@latest mcp start"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://github.com/ruvnet/ruflo",
+   "quote": "[English](README.md) · [简体中文](README.zh-CN.md)"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://cognitum.one/",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

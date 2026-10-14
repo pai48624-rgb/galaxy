@@ -1,0 +1,125 @@
+{
+ "company": "HumanLayer",
+ "one_liner_ko": "팀이 에이전트 세션·계획 문서·코드 변경을 한곳에서 함께 다루는 멀티플레이어 코딩 에이전트 IDE + 클라우드.",
+ "what_it_does_ko": "HumanLayer는 내 작업용 PC부터 백그라운드 에이전트를 돌리는 어디서나 쓰는 멀티플레이어 코딩 에이전트 IDE이자 클라우드다. 에이전트 세션, 계획 산출물, 코드 diff를 한곳에 모아 팀이 협업한다. 로컬 데몬이 노트북에서 여러 에이전트 세션을 병렬로 돌리고, 오래 걸리는 작업은 클라우드 데몬으로 돌리며, 모두 HumanLayer API로 동기화된다. 질문·조사·설계·구조·계획·구현의 6단계(QRSPI) 워크플로와 설계 문서 댓글 리뷰를 제공한다. GitHub 저장소의 기존 코드는 대부분 폐기(deprecated)되었다고 공지되어 있다.",
+ "key_features": [
+  "에이전트 세션·산출물·worktree를 묶는 작업(Task) 단위 협업",
+  "조사·설계·계획·목업 산출물 버전 관리·공유",
+  "설계 문서 인라인 댓글로 사람과 에이전트가 함께 검토",
+  "질문→조사→설계→구조→계획→구현 6단계 QRSPI 워크플로",
+  "로컬 데몬 병렬 세션 + 클라우드 데몬",
+  "웹·데스크톱·휴대폰 동일 UI",
+  "모든 동작을 단축키로 부르는 명령 팔레트"
+ ],
+ "use_cases_ko": [
+  "개발팀이 대규모(수백만 줄) 코드베이스 작업을 코딩 에이전트와 함께 설계·구현",
+  "노트북을 닫아도 클라우드에서 장시간 에이전트 작업 실행"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "맥",
+  "윈도"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.humanlayer.dev/",
+   "quote": "HumanLayer - The multiplayer control plane for your software factory"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.humanlayer.dev/",
+   "quote": "It brings agent sessions, plan artifacts, and code diffs together in one place for your team to collaborate and ship."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.humanlayer.dev/",
+   "quote": "HumanLayer is a multiplayer coding agent IDE and cloud that works seamlessly from your workstation to anywhere you want to run background agents."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.humanlayer.dev/",
+   "quote": "A local daemon runs many Agent sessions in parallel on your laptop. Spin up cloud daemons for long-running work. Everything syncs through the HumanLayer API"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.humanlayer.dev/",
+   "quote": "Six phases that turn fuzzy intent into shipped code, with checkpoints your team can verify."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/humanlayer/humanlayer",
+   "quote": "the code here is pretty much all deprecated"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.humanlayer.dev/",
+   "quote": "Tasks group agent sessions, artifacts, and worktrees in one workspace that you can collaborate on with your whole team."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.humanlayer.dev/",
+   "quote": "Research, designs, plans, mockups. Versioned, shareable, and tied to the task."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.humanlayer.dev/",
+   "quote": "Inline comments on design documents. Your whole team — humans and Agents — collaborating in real-time."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.humanlayer.dev/",
+   "quote": "same UI on web, desktop, or phone, with your teammates one tab away"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.humanlayer.dev/",
+   "quote": "Jump between tasks, sessions, and artifacts with a keystroke. A command palette for every action."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.humanlayer.dev/",
+   "quote": "Battle-tested for solving large problems in million-LOC enterprise codebases."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.humanlayer.dev/",
+   "quote": "Agents keep working even if you close your laptop."
+  },
+  {
+   "field": "api",
+   "url": "https://www.humanlayer.dev/",
+   "quote": "Everything syncs through the HumanLayer API"
+  },
+  {
+   "field": "platforms",
+   "url": "https://www.humanlayer.dev/",
+   "quote": "Download ⌘+Enter Linux/Windows install instructions"
+  },
+  {
+   "field": "platforms",
+   "url": "https://www.humanlayer.dev/",
+   "quote": "same UI on web, desktop, or phone"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.humanlayer.dev/",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  },
+  {
+   "field": "platforms",
+   "url": "https://www.humanlayer.dev/",
+   "quote": "$ brew install humanlayer/humanlayer/humanlayer"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

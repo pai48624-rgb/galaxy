@@ -1,0 +1,66 @@
+{
+ "company": "Resemble AI",
+ "one_liner_ko": "AI로 생성된 오디오·영상·이미지를 실시간으로 탐지하고 설명 가능한 결과를 주는 기업용 딥페이크 탐지·워터마킹 플랫폼",
+ "what_it_does_ko": "Resemble AI는 AI가 만든 오디오·영상·이미지를 실시간으로 탐지해 기업이 신뢰할 수 있는 설명 가능한 결과를 제공한다. 최신 모델 DETECT-World는 패턴 매칭과 물리적 현실에서의 이탈을 인식하는 월드 모델 구조를 결합한다. 눈에 띄지 않는 멀티모달 워터마크(PerTh), 음성·얼굴 신원 등록·대조, 회의 중 합성 음성·얼굴 탐지 등을 API·연동·기존 업무 흐름에서 쓸 수 있다. 공식 사이트에는 음성 복제·TTS 기능 소개가 보이지 않는다.",
+ "key_features": [
+  "오디오·영상·이미지 딥페이크 탐지(DETECT-World)",
+  "탐지 결과를 사람이 읽을 수 있게 설명하는 Intelligence",
+  "눈에 띄지 않는 멀티모달 워터마크(PerTh), C2PA·SynthID 확인",
+  "음성·얼굴 신원 등록 및 대조(Identity)",
+  "회의 플랫폼에서 실시간 합성 음성·얼굴 탐지",
+  "AI 에이전트 탐지",
+  "딥페이크 탐지 크롬 확장, Microsoft Teams 연동",
+  "Python SDK·API(최대 50개 파일 일괄 탐지, 스트리밍 오디오 탐지)"
+ ],
+ "use_cases_ko": [
+  "콜센터 사기 전화 실시간 탐지",
+  "KYC·계정 가입 시 본인 확인",
+  "임원·브랜드 사칭 탐지"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Flex: 구독료 $0, 크레딧 충전 후 사용량만큼 과금, 카드 없이 시작)",
+  "plans": [
+   {"name": "Flex", "price": 0, "currency": "USD", "period": "month", "limits": "구독료 없음, 종량제 크레딧(만료 없음), 1석", "page_lang": "en"},
+   {"name": "Team", "price": 350, "currency": "USD", "period": "month", "limits": "5석, 일부 서비스 할인 요율, 대용량·일괄 업로드", "page_lang": "en"},
+   {"name": "Team (연간 결제)", "price": 280, "currency": "USD", "period": "month(연간 결제)", "limits": "5석", "page_lang": "en"},
+   {"name": "Business", "price": 1000, "currency": "USD", "period": "month", "limits": "20석, SSO, 조직 단위 캘린더 연동", "page_lang": "en"},
+   {"name": "Business (연간 결제)", "price": 800, "currency": "USD", "period": "month(연간 결제)", "limits": "20석", "page_lang": "en"},
+   {"name": "Enterprise", "price": null, "currency": null, "period": null, "limits": "맞춤, 대량 요금·온프레미스·맞춤 모델 학습", "page_lang": "en"},
+   {"name": "Resemble Detect 오디오(Flex)", "price": 0.035, "currency": "USD", "period": "usage", "limits": "초당", "page_lang": "en"}
+  ],
+  "pricing_url": "https://www.resemble.ai/pricing"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["웹", "API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://www.resemble.ai", "quote": "Multimodal Deepfake Detection and Watermarking for Enterprise | Resemble AI"},
+  {"field": "one_liner_ko", "url": "https://www.resemble.ai", "quote": "Detect AI-generated audio, video, and images in real time with explainable results enterprises can trust."},
+  {"field": "what_it_does_ko", "url": "https://www.resemble.ai", "quote": "DETECT-World combines pattern matching and training with a world model architecture that recognizes deviations from physical reality."},
+  {"field": "key_features", "url": "https://www.resemble.ai", "quote": "Human-readable explainability for deterministic detection scores and results."},
+  {"field": "key_features", "url": "https://www.resemble.ai", "quote": "PerTh Multimodal\n Imperceptible, multimodal watermarks"},
+  {"field": "key_features", "url": "https://www.resemble.ai", "quote": "Enroll and detect voice and likeness for identity matching"},
+  {"field": "key_features", "url": "https://www.resemble.ai", "quote": "Detect synthetic voices and faces in real time on all major meeting platforms."},
+  {"field": "key_features", "url": "https://www.resemble.ai", "quote": "The first System One model for AI agent detection"},
+  {"field": "key_features", "url": "https://www.resemble.ai", "quote": "Deepfake detection Chrome extension"},
+  {"field": "key_features", "url": "https://docs.resemble.ai/detect/", "quote": "Batch detection Persisted analysis of up to 50 files in one request."},
+  {"field": "key_features", "url": "https://www.resemble.ai", "quote": "pip install resemble"},
+  {"field": "use_cases_ko", "url": "https://www.resemble.ai", "quote": "Integrate directly into carrier call infrastructure. Alert your team before the call ends."},
+  {"field": "use_cases_ko", "url": "https://www.resemble.ai", "quote": "Verify an individual before letting them in."},
+  {"field": "use_cases_ko", "url": "https://www.resemble.ai", "quote": "Find impersonation before customers do"},
+  {"field": "pricing", "url": "https://www.resemble.ai/pricing", "quote": "For builders and teams exploring detection with no subscription fee."},
+  {"field": "pricing", "url": "https://www.resemble.ai/pricing", "quote": "$350 /mo \n Billed monthly\n $280 /mo \n Billed annually, save $840/yr"},
+  {"field": "pricing", "url": "https://www.resemble.ai/pricing", "quote": "$1,000 /mo \n Billed monthly\n $800 /mo \n Billed annually, save $2,400/yr"},
+  {"field": "pricing", "url": "https://www.resemble.ai/pricing", "quote": "Resemble Detect for audio\n $0.03500 per second"},
+  {"field": "pricing", "url": "https://www.resemble.ai/pricing", "quote": "No, credits on the Flex Plan never expire."},
+  {"field": "api", "url": "https://www.resemble.ai", "quote": "Start free. Put real-time detection in your workflow or app now."},
+  {"field": "platforms", "url": "https://www.resemble.ai/pricing", "quote": "Platform and API access"},
+  {"field": "korean_support", "url": "https://www.resemble.ai", "quote": "화면에 보이는 언어 이름: Deutsch"}
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {"official": "무료 Flex(종량제 크레딧) + Team $350/월·Business $1,000/월 구독, 딥페이크 탐지 중심", "diff": "분류(무료+유료 구독)는 맞지만 무료는 무료 사용량이 아니라 구독료 0원 종량제이고, 요금 대상이 음성 생성이 아닌 탐지·워터마킹 서비스", "url": "https://www.resemble.ai/pricing"}
+ ],
+ "note": "input_tools.json 설명은 '음성 복제·speech-to-speech 음성 생성기'인데, 현재 공식 사이트(같은 회사·도메인)는 딥페이크 탐지·워터마킹만 소개하고 음성 복제·TTS 언급이 없음. 카테고리 재검토 필요."
+}

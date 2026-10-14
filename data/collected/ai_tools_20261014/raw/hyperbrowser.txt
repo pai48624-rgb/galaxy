@@ -1,0 +1,243 @@
+=== [home] https://www.hyperbrowser.ai/ (lang=en)
+Hyperbrowser | AI agents’ gateway to the internet 
+ Skip to content Overview Products Browsers Sandboxes Web APIs AI Agents 
+ Pricing Blog Documentation App On this page Overview The platform In production Pricing Blog New: WebMCP Human Agent 
+ AI Agents Gateway to the Internet
+ Automate websites, run code in isolated environments, and extract web data with APIs and SDKs.
+ Start for free Copy agent setup prompt 
+ Book a demo 
+ Give your agents a browser to work in, compute to run on, and web data they can use.
+ Browser sessions 100M + Sessions run on Hyperbrowser. 
+ Concurrent sessions 1,000 + Isolated browsers running at once. 
+ Startup time <500 ms From request to a ready browser. 
+ Browsers, compute, and web data.
+ Browsers
+ Control Chrome through an API
+ Connect Playwright or Puppeteer to a cloud-hosted Chrome session. Save logins between runs and inspect sessions live.
+ Explore browsers 
+ Browser Code 
+ Chrome 
+ Example workflow: browsing GitHub repositories Pause Sandboxes
+ Run code in isolated environments
+ Install dependencies, execute commands, and expose local services. Save the environment as a snapshot to reuse in later runs.
+ Explore sandboxes 
+ sandbox.ts Node.js 
+ 1 const vm = await client.sandboxes.create({ 
+ 2 imageName: "node" , 
+ 3 }); 
+ 4 
+ 5 await vm.exec( "echo Sandbox ready" ); 
+ 6 
+ 7 await vm.createMemorySnapshot({ 
+ 8 snapshotName: "node-base" , 
+ 9 }); 
+ OUTPUT     
+ Create, run, and snapshot with the SDK Pause Web API
+ Extract data from websites
+ Fetch a page, crawl a site, or search the web. Return Markdown, HTML, screenshots, or JSON that matches your schema.
+ Explore the Web API 
+ Web API Fetch 
+ await client.web.fetch({
+ url: "https://example.com",
+ outputs: { formats: ["markdown", "links"] }
+}); Markdown Links 
+ fetching… 
+ Reading the page… 
+ Fetch a page as Markdown and links Pause AI Agents
+ Run browser tasks from a prompt
+ Run HyperAgent, Browser Use, or computer-use models in a managed browser. Send a task, inspect the steps, and retrieve the result.
+ Explore agents 
+ Agent Google Flights 
+ TASK Find flights from Los Angeles to San Francisco.
+ Example workflow: searching Google Flights Pause 
+ In production
+ Session state, debugging, and isolation.
+ Saved state
+ Reuse browser profiles with saved cookies and logins. Restore sandbox environments from memory snapshots.
+ Session recordings
+ Watch browser sessions live and replay recordings to debug a run.
+ Isolated execution
+ Run commands in isolated virtual machines, separate from your application.
+ SDKs and integrations
+ Use Playwright, Puppeteer, the Node.js or Python SDKs, the CLI, or MCP.
+ Security and access controls
+ Read about encryption, access controls, and independent security assessments.
+ Security overview 
+ Pricing
+ Start with 5,000 free credits.
+ Free $ 0 to start 5,000 credits included Startup $ 30 / month 30,000 credits included Scale $ 100 / month 100,000 credits included 
+ Need more capacity or custom pricing?
+ Talk to sales 
+ All plans and usage rates 
+ Blog
+ Introducing WebMCP Support
+ Browser sessions with x402: Let agents buy their own browser
+ Introducing Hyperbrowser MCP Server: AI Meets the Web
+ More from the blog 
+ Start with a free account.
+ Includes 5,000 credits for browsers, sandboxes, and web data.
+ Create an account Read the docs 
+ Browser and compute infrastructure.
+ Platform
+ Browsers Sandboxes Web API Agents Pricing Templates Documentation 
+ Company
+ Blog Security Trust center 
+ Connect
+ X GitHub LinkedIn Discord 
+ © 2026 Hyperbrowser Privacy Terms Status 
+ Back to top
+
+=== [pricing] https://www.hyperbrowser.ai/pricing (lang=en)
+Pricing | Hyperbrowser 
+ Skip to content Overview Products Browsers Sandboxes Web APIs AI Agents 
+ Pricing Blog Documentation App On this page Plans Usage rates Questions 
+ Pay only for what you use.
+ Each plan includes credits for browsers, sandboxes, web data, and agents. Choose your capacity, then use those credits across all four products.
+ Included with a free account 5,000 credits.
+Try your first workflow.
+ Enough for 50 browser hours or 5,000 fetched pages at base rates.
+ Start building 
+ Plans Usage rates Questions Choose a plan
+ 1,000 credits = $1 in usage
+ Startup
+ $30 per month 
+ Get Startup $ 30 in usage included each month
+ For scheduled jobs and small applications.
+ 30,000 credits for all four products
+ 25 concurrent sessions
+ 30 days of data retention
+ Automatic CAPTCHA solving
+ Basic stealth mode
+ Residential proxies
+ Scale
+ $100 per month 
+ Get Scale $ 100 in usage included each month
+ For applications running more browser sessions at once.
+ 100,000 credits for all four products
+ 100 concurrent sessions
+ 30 days of data retention
+ Automatic CAPTCHA solving
+ Basic stealth mode
+ Premium residential proxies
+ Enterprise
+ Custom 
+ Contact sales Custom capacity. Volume pricing.
+ For custom capacity, volume pricing, and premium support.
+ Custom credit allocations for all four products
+ 1,000+ concurrent sessions
+ 180+ days of data retention
+ Automatic CAPTCHA solving
+ Ultra stealth mode
+ Premium residential proxies
+ Free
+ $0 to start · 5,000 credits included
+ All four products · 1 concurrent session · 7 days of data retention 
+ Start for free 
+ Paid plans support additional credit purchases when your included balance runs out.
+ Usage rates
+ The same unit rates apply to Free, Startup, and Scale. Enterprise volume pricing is available through sales.
+ Browser sessions
+ Browser time, plus any proxy data used.
+ Usage Credits Price 
+ Browser usage 100 credits / hour $0.10 / hour 
+ Proxy data 10,000 credits / GB $10 / GB 
+ Sandboxes
+ Both vCPU and allocated memory are billed while the VM runs.
+ Usage Credits Price 
+ vCPU 45 credits / vCPU-hour $0.045 / vCPU-hour 
+ Memory 15 credits / GiB-hour $0.015 / GiB-hour 
+ Web API
+ Fetch is billed per page. JSON output adds to the base rate, and so do ultra stealth and location targeting.
+ Usage Credits Price 
+ Fetch 1 credit / page $0.001 / page 
+ Fetch with JSON output +5 credits / page +$0.005 / page 
+ Fetch with ultra stealth or location +9 credits / page +$0.009 / page 
+ Search 5 credits / query $0.005 / query 
+ Search with location 10 credits / query $0.01 / query 
+ AI Extract 0.03 credits / output token $30 / million output tokens 
+ AI Agents
+ Agent usage is billed in addition to browser time and any proxy data.
+ Usage Credits Price 
+ HyperAgent 20 credits / step $0.02 / step 
+ Browser Use 20 credits / step $0.02 / step 
+ Computer-use models Per input and output token View model rates 
+ Full pricing reference 
+ Pricing questions
+ What happens when I run out of credits?
+ On a paid plan, buy more credits or enable auto-reload when your balance falls below a set threshold. If you use all the credits on Free, upgrade to continue.
+ Can I change my plan at any time?
+ Yes, you can upgrade or downgrade at any time. Upgrades take effect immediately and are prorated. Downgrades take effect at the end of your current billing cycle.
+ Is there a free trial for paid plans?
+ The Free plan gives you 5,000 credits to test the service. For Enterprise plans, we offer a 14-day trial with full access to all features.
+ What payment methods do you accept?
+ We accept all major credit cards, ACH transfers for Enterprise plans, and can issue invoices for annual contracts.
+ Do you offer volume discounts?
+ Enterprise plans offer custom volume pricing. Contact sales with your expected usage.
+ Do credits expire?
+ Your plan's credits reset each time your plan renews, and unused plan credits don't carry over. Credits you buy separately, as a one-time purchase or through auto-reload, expire after 12 months.
+ Try it with 5,000 credits.
+ Create an account and run your first browser, sandbox, or API request.
+ Start for free 
+ Browser and compute infrastructure.
+ Platform
+ Browsers Sandboxes Web API Agents Pricing Templates Documentation 
+ Company
+ Blog Security Trust center 
+ Connect
+ X GitHub LinkedIn Discord 
+ © 2026 Hyperbrowser Privacy Terms Status 
+ Back to top
+
+=== [about] https://www.hyperbrowser.ai/docs/home (lang=en)
+Home - Hyperbrowser 
+ Documentation Index
+ Fetch the complete documentation index at: /docs/llms.txt 
+ Use this file to discover all available pages before exploring further.
+ Skip to main content Search...
+ ⌘ K 
+ Hyperbrowser home page 
+ Home 
+ Browsers 
+ Sandboxes 
+ API reference 
+ SDKs 
+ Pricing 
+ GitHub 
+ Support 
+ Discord 
+ Get Started 
+ Get Started 
+ Search... 
+ Navigation 
+ Home
+ Automate with 
+ Fast, reliable cloud browsers and sandboxes for AI automation, large-scale web scraping, and agentic code execution. 
+ Browser Sessions
+ Get up and running with cloud browser sessions in 5 minutes 
+ Web API
+ Get up and running with Hyperbrowser’s Web API in 5 minutes 
+ AI Agents
+ Get started with AI-powered browser automation agents in 5 minutes 
+ Resources
+ Session Management
+ Learn how to create and manage cloud browser sessions at scale 
+ Playwright & Puppeteer
+ Connect your existing automation scripts to cloud browsers 
+ Stealth & Proxies
+ Master anti-detection features and proxy configuration 
+ Sandbox CLI
+ Manage sandboxes, volumes, images, and snapshots from your terminal 
+ Python SDK
+ Get started with our Python SDK for seamless integration 
+ Node SDK
+ Integrate Hyperbrowser into your Node.js applications 
+ API Reference
+ Complete API documentation for all available endpoints 
+ ⌘ I 
+ Assistant 
+ Responses are generated using AI and may contain mistakes.
+
+=== [meta] https://www.hyperbrowser.ai/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음

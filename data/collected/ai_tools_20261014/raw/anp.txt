@@ -1,0 +1,356 @@
+=== [home] https://agent-network-protocol.com (lang=en)
+Agent Network Protocol 
+ Skip to content ANP 
+ Search K 
+ Main Navigation Guide Specifications Versions
+ ANP 1.2 Latest 
+ ANP 1.1 Archive 
+ ANP 1.0 Archive 
+ Core Protocols
+ 01-ANP Technical White Paper 
+ 06-Agent Communication Meta-Protocol (Draft) 
+ 07-Agent Description Protocol 
+ 08-Agent Discovery Protocol 
+ Identity & Namespace
+ 03-DID:WBA Method Specification 
+ 02-DID Authentication Protocol 
+ 04-DID:WBA Namespace Specification 
+ Appendix A: DID:WBA k1 Compatibility 
+ Appendix B: Native did:web Compatibility 
+ Messaging Profiles
+ 09-Instant Messaging Overview 
+ Messaging 1.2 Profile Index 
+ P1 Core Binding 
+ P2 Identity and Discovery 
+ P3 Direct Messaging Base 
+ P4 Group Messaging Base 
+ P5 Direct End-to-End Encryption 
+ P6 Group End-to-End Encryption 
+ P7 Attachments and Object Transfer 
+ P8 Federation and Cross-Domain 
+ P9 Message Mentions 
+ Application Protocols
+ 10-Agent Payment Protocol (Draft) 
+ Blog All Posts 
+ Interactive ANP Guide 
+ Message Protocol Upgrade 
+ Google AP2 Analysis 
+ ANP vs MCP 
+ Communication Protocols 
+ DID:WBA Introduction 
+ Code Contact English
+ 简体中文 
+ English
+ 简体中文 
+ Appearance
+ Agent Network Protocol Open protocol stack for the Agentic Web 
+ Decentralized identity, discovery, messaging, and payment protocols for interoperable AI agents.
+ Read the Specs 
+ Get Started 
+ GitHub 
+ ID
+ Decentralized identity
+ did:wba and WNS provide verifiable agent identity, readable handles, and cross-domain trust roots.
+ AD
+ Description and discovery
+ Agent descriptions and discovery protocols let agents publish capabilities and find interoperable services.
+ IM
+ End-to-end messaging
+ The messaging profiles define direct chat, groups, encryption, attachments, and federation semantics.
+ AP
+ Domain protocols
+ Domain protocols build on ANP identity and communication foundations for payment, authorization, authentication, and vertical workflows.
+ Protocol stack
+ From identity to application protocols
+ ANP is organized as a layered protocol suite so implementations can adopt the foundation first, then add messaging, discovery, and payment capabilities as needed.
+ Base Open infrastructure
+ ANP reuses the open Internet foundation: HTTP, CA, DNS, CDN, Search, TLS, and existing web deployment patterns.
+ 02 / 03 / 04 / 09 Identity and communication
+ DID:WBA, WNS, authentication, key distribution, and secure messaging form the cross-domain infrastructure layer.
+ 07 / 08 Description and discovery
+ Agents describe services, capabilities, endpoints, and discovery mechanisms in a way other agents can consume.
+ 09 / P1-P9 Messaging profiles
+ Direct messaging, group messaging, E2EE, attachments, and federation are split into focused profiles.
+ Domain Domain protocols
+ Payment, authorization, authentication, commerce, and other vertical protocols sit at the application layer.
+ Architecture
+ Designed for open, cross-domain agent networks
+ ANP 1.2 builds on open Internet infrastructure with identity and encrypted communication foundations and domain-specific application protocols.
+ Open Internet infrastructure The bottom layer reuses HTTP, CA, DNS, CDN, Search, TLS, and the existing web operating model. Identity and communication infrastructure The middle layer provides DID:WBA identity, WNS handles, authentication, key material, secure messaging, and cross-domain communication foundations. Application protocol layer The top layer includes Agent Description, Agent Discovery, and domain-specific protocols for payment, authorization, authentication, commerce, and other agent workflows. 
+ Latest protocol updates
+ New specifications now available
+ New DID authentication
+ ANP-02 defines method-independent request authentication for did:wba and native did:web.
+ New Messaging 1.2
+ The updated profile set covers direct messages, groups, device-bound E2EE, attachments, and federation. P6 remains a candidate.
+ Updated WBA Name Space
+ Human-readable handles such as alice.example.com map to did:wba identities with bidirectional verification.
+
+=== [pricing] https://agent-network-protocol.com/pricing (lang=en)
+Agent Network Protocol 
+ Skip to content ANP 
+ Search K 
+ Main Navigation Guide Specifications Versions
+ ANP 1.2 Latest 
+ ANP 1.1 Archive 
+ ANP 1.0 Archive 
+ Core Protocols
+ 01-ANP Technical White Paper 
+ 06-Agent Communication Meta-Protocol (Draft) 
+ 07-Agent Description Protocol 
+ 08-Agent Discovery Protocol 
+ Identity & Namespace
+ 03-DID:WBA Method Specification 
+ 02-DID Authentication Protocol 
+ 04-DID:WBA Namespace Specification 
+ Appendix A: DID:WBA k1 Compatibility 
+ Appendix B: Native did:web Compatibility 
+ Messaging Profiles
+ 09-Instant Messaging Overview 
+ Messaging 1.2 Profile Index 
+ P1 Core Binding 
+ P2 Identity and Discovery 
+ P3 Direct Messaging Base 
+ P4 Group Messaging Base 
+ P5 Direct End-to-End Encryption 
+ P6 Group End-to-End Encryption 
+ P7 Attachments and Object Transfer 
+ P8 Federation and Cross-Domain 
+ P9 Message Mentions 
+ Application Protocols
+ 10-Agent Payment Protocol (Draft) 
+ Blog All Posts 
+ Interactive ANP Guide 
+ Message Protocol Upgrade 
+ Google AP2 Analysis 
+ ANP vs MCP 
+ Communication Protocols 
+ DID:WBA Introduction 
+ Code Contact English
+ 简体中文 
+ English
+ 简体中文 
+ Appearance
+ Agent Network Protocol Open protocol stack for the Agentic Web 
+ Decentralized identity, discovery, messaging, and payment protocols for interoperable AI agents.
+ Read the Specs 
+ Get Started 
+ GitHub 
+ ID
+ Decentralized identity
+ did:wba and WNS provide verifiable agent identity, readable handles, and cross-domain trust roots.
+ AD
+ Description and discovery
+ Agent descriptions and discovery protocols let agents publish capabilities and find interoperable services.
+ IM
+ End-to-end messaging
+ The messaging profiles define direct chat, groups, encryption, attachments, and federation semantics.
+ AP
+ Domain protocols
+ Domain protocols build on ANP identity and communication foundations for payment, authorization, authentication, and vertical workflows.
+ Protocol stack
+ From identity to application protocols
+ ANP is organized as a layered protocol suite so implementations can adopt the foundation first, then add messaging, discovery, and payment capabilities as needed.
+ Base Open infrastructure
+ ANP reuses the open Internet foundation: HTTP, CA, DNS, CDN, Search, TLS, and existing web deployment patterns.
+ 02 / 03 / 04 / 09 Identity and communication
+ DID:WBA, WNS, authentication, key distribution, and secure messaging form the cross-domain infrastructure layer.
+ 07 / 08 Description and discovery
+ Agents describe services, capabilities, endpoints, and discovery mechanisms in a way other agents can consume.
+ 09 / P1-P9 Messaging profiles
+ Direct messaging, group messaging, E2EE, attachments, and federation are split into focused profiles.
+ Domain Domain protocols
+ Payment, authorization, authentication, commerce, and other vertical protocols sit at the application layer.
+ Architecture
+ Designed for open, cross-domain agent networks
+ ANP 1.2 builds on open Internet infrastructure with identity and encrypted communication foundations and domain-specific application protocols.
+ Open Internet infrastructure The bottom layer reuses HTTP, CA, DNS, CDN, Search, TLS, and the existing web operating model. Identity and communication infrastructure The middle layer provides DID:WBA identity, WNS handles, authentication, key material, secure messaging, and cross-domain communication foundations. Application protocol layer The top layer includes Agent Description, Agent Discovery, and domain-specific protocols for payment, authorization, authentication, commerce, and other agent workflows. 
+ Latest protocol updates
+ New specifications now available
+ New DID authentication
+ ANP-02 defines method-independent request authentication for did:wba and native did:web.
+ New Messaging 1.2
+ The updated profile set covers direct messages, groups, device-bound E2EE, attachments, and federation. P6 remains a candidate.
+ Updated WBA Name Space
+ Human-readable handles such as alice.example.com map to did:wba identities with bidirectional verification.
+
+=== [pricing] https://agent-network-protocol.com/ko/pricing (lang=en)
+Agent Network Protocol 
+ Skip to content ANP 
+ Search K 
+ Main Navigation Guide Specifications Versions
+ ANP 1.2 Latest 
+ ANP 1.1 Archive 
+ ANP 1.0 Archive 
+ Core Protocols
+ 01-ANP Technical White Paper 
+ 06-Agent Communication Meta-Protocol (Draft) 
+ 07-Agent Description Protocol 
+ 08-Agent Discovery Protocol 
+ Identity & Namespace
+ 03-DID:WBA Method Specification 
+ 02-DID Authentication Protocol 
+ 04-DID:WBA Namespace Specification 
+ Appendix A: DID:WBA k1 Compatibility 
+ Appendix B: Native did:web Compatibility 
+ Messaging Profiles
+ 09-Instant Messaging Overview 
+ Messaging 1.2 Profile Index 
+ P1 Core Binding 
+ P2 Identity and Discovery 
+ P3 Direct Messaging Base 
+ P4 Group Messaging Base 
+ P5 Direct End-to-End Encryption 
+ P6 Group End-to-End Encryption 
+ P7 Attachments and Object Transfer 
+ P8 Federation and Cross-Domain 
+ P9 Message Mentions 
+ Application Protocols
+ 10-Agent Payment Protocol (Draft) 
+ Blog All Posts 
+ Interactive ANP Guide 
+ Message Protocol Upgrade 
+ Google AP2 Analysis 
+ ANP vs MCP 
+ Communication Protocols 
+ DID:WBA Introduction 
+ Code Contact English
+ 简体中文 
+ English
+ 简体中文 
+ Appearance
+ Agent Network Protocol Open protocol stack for the Agentic Web 
+ Decentralized identity, discovery, messaging, and payment protocols for interoperable AI agents.
+ Read the Specs 
+ Get Started 
+ GitHub 
+ ID
+ Decentralized identity
+ did:wba and WNS provide verifiable agent identity, readable handles, and cross-domain trust roots.
+ AD
+ Description and discovery
+ Agent descriptions and discovery protocols let agents publish capabilities and find interoperable services.
+ IM
+ End-to-end messaging
+ The messaging profiles define direct chat, groups, encryption, attachments, and federation semantics.
+ AP
+ Domain protocols
+ Domain protocols build on ANP identity and communication foundations for payment, authorization, authentication, and vertical workflows.
+ Protocol stack
+ From identity to application protocols
+ ANP is organized as a layered protocol suite so implementations can adopt the foundation first, then add messaging, discovery, and payment capabilities as needed.
+ Base Open infrastructure
+ ANP reuses the open Internet foundation: HTTP, CA, DNS, CDN, Search, TLS, and existing web deployment patterns.
+ 02 / 03 / 04 / 09 Identity and communication
+ DID:WBA, WNS, authentication, key distribution, and secure messaging form the cross-domain infrastructure layer.
+ 07 / 08 Description and discovery
+ Agents describe services, capabilities, endpoints, and discovery mechanisms in a way other agents can consume.
+ 09 / P1-P9 Messaging profiles
+ Direct messaging, group messaging, E2EE, attachments, and federation are split into focused profiles.
+ Domain Domain protocols
+ Payment, authorization, authentication, commerce, and other vertical protocols sit at the application layer.
+ Architecture
+ Designed for open, cross-domain agent networks
+ ANP 1.2 builds on open Internet infrastructure with identity and encrypted communication foundations and domain-specific application protocols.
+ Open Internet infrastructure The bottom layer reuses HTTP, CA, DNS, CDN, Search, TLS, and the existing web operating model. Identity and communication infrastructure The middle layer provides DID:WBA identity, WNS handles, authentication, key material, secure messaging, and cross-domain communication foundations. Application protocol layer The top layer includes Agent Description, Agent Discovery, and domain-specific protocols for payment, authorization, authentication, commerce, and other agent workflows. 
+ Latest protocol updates
+ New specifications now available
+ New DID authentication
+ ANP-02 defines method-independent request authentication for did:wba and native did:web.
+ New Messaging 1.2
+ The updated profile set covers direct messages, groups, device-bound E2EE, attachments, and federation. P6 remains a candidate.
+ Updated WBA Name Space
+ Human-readable handles such as alice.example.com map to did:wba identities with bidirectional verification.
+
+=== [pricing] https://agent-network-protocol.com/plans (lang=en)
+Agent Network Protocol 
+ Skip to content ANP 
+ Search K 
+ Main Navigation Guide Specifications Versions
+ ANP 1.2 Latest 
+ ANP 1.1 Archive 
+ ANP 1.0 Archive 
+ Core Protocols
+ 01-ANP Technical White Paper 
+ 06-Agent Communication Meta-Protocol (Draft) 
+ 07-Agent Description Protocol 
+ 08-Agent Discovery Protocol 
+ Identity & Namespace
+ 03-DID:WBA Method Specification 
+ 02-DID Authentication Protocol 
+ 04-DID:WBA Namespace Specification 
+ Appendix A: DID:WBA k1 Compatibility 
+ Appendix B: Native did:web Compatibility 
+ Messaging Profiles
+ 09-Instant Messaging Overview 
+ Messaging 1.2 Profile Index 
+ P1 Core Binding 
+ P2 Identity and Discovery 
+ P3 Direct Messaging Base 
+ P4 Group Messaging Base 
+ P5 Direct End-to-End Encryption 
+ P6 Group End-to-End Encryption 
+ P7 Attachments and Object Transfer 
+ P8 Federation and Cross-Domain 
+ P9 Message Mentions 
+ Application Protocols
+ 10-Agent Payment Protocol (Draft) 
+ Blog All Posts 
+ Interactive ANP Guide 
+ Message Protocol Upgrade 
+ Google AP2 Analysis 
+ ANP vs MCP 
+ Communication Protocols 
+ DID:WBA Introduction 
+ Code Contact English
+ 简体中文 
+ English
+ 简体中文 
+ Appearance
+ Agent Network Protocol Open protocol stack for the Agentic Web 
+ Decentralized identity, discovery, messaging, and payment protocols for interoperable AI agents.
+ Read the Specs 
+ Get Started 
+ GitHub 
+ ID
+ Decentralized identity
+ did:wba and WNS provide verifiable agent identity, readable handles, and cross-domain trust roots.
+ AD
+ Description and discovery
+ Agent descriptions and discovery protocols let agents publish capabilities and find interoperable services.
+ IM
+ End-to-end messaging
+ The messaging profiles define direct chat, groups, encryption, attachments, and federation semantics.
+ AP
+ Domain protocols
+ Domain protocols build on ANP identity and communication foundations for payment, authorization, authentication, and vertical workflows.
+ Protocol stack
+ From identity to application protocols
+ ANP is organized as a layered protocol suite so implementations can adopt the foundation first, then add messaging, discovery, and payment capabilities as needed.
+ Base Open infrastructure
+ ANP reuses the open Internet foundation: HTTP, CA, DNS, CDN, Search, TLS, and existing web deployment patterns.
+ 02 / 03 / 04 / 09 Identity and communication
+ DID:WBA, WNS, authentication, key distribution, and secure messaging form the cross-domain infrastructure layer.
+ 07 / 08 Description and discovery
+ Agents describe services, capabilities, endpoints, and discovery mechanisms in a way other agents can consume.
+ 09 / P1-P9 Messaging profiles
+ Direct messaging, group messaging, E2EE, attachments, and federation are split into focused profiles.
+ Domain Domain protocols
+ Payment, authorization, authentication, commerce, and other vertical protocols sit at the application layer.
+ Architecture
+ Designed for open, cross-domain agent networks
+ ANP 1.2 builds on open Internet infrastructure with identity and encrypted communication foundations and domain-specific application protocols.
+ Open Internet infrastructure The bottom layer reuses HTTP, CA, DNS, CDN, Search, TLS, and the existing web operating model. Identity and communication infrastructure The middle layer provides DID:WBA identity, WNS handles, authentication, key material, secure messaging, and cross-domain communication foundations. Application protocol layer The top layer includes Agent Description, Agent Discovery, and domain-specific protocols for payment, authorization, authentication, commerce, and other agent workflows. 
+ Latest protocol updates
+ New specifications now available
+ New DID authentication
+ ANP-02 defines method-independent request authentication for did:wba and native did:web.
+ New Messaging 1.2
+ The updated profile set covers direct messages, groups, device-bound E2EE, attachments, and federation. P6 remains a candidate.
+ Updated WBA Name Space
+ Human-readable handles such as alice.example.com map to did:wba identities with bidirectional verification.
+
+=== [meta] https://agent-network-protocol.com
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: English, 中文, 简体中文

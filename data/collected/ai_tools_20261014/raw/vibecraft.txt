@@ -1,0 +1,149 @@
+=== [github] https://github.com/rayzhudev/vibecraft
+# VibeCraft
+
+![](assets/readme/vibecraft-workspace-example.png)
+
+**An RTS-style workspace for managing AI coding agents.**
+
+VibeCraft turns your local coding workflow into a visual strategy game: agents, folders, terminals, and browsers all live on one shared canvas.
+
+## What You Can Do
+
+- Spawn Claude and Codex agents as units
+- Attach agents to project folders and run tasks in context
+- Open terminals for each agent and workspace
+- Keep multiple projects visible in one place
+- Use built-in git worktree actions from folder entities
+
+## The RTS Paradigm
+
+VibeCraft is easiest to use when you think of it like a strategy game.
+
+### Entities on the Canvas
+
+- **Hero**: your command center
+- **Agents**: Claude/Codex units that execute coding tasks
+- **Folders**: project entities that agents can attach to
+- **Browser panels**: embedded web views for docs/tools
+- **Terminal panels**: terminal sessions for agents and workspace workflows
+
+### The Canvas
+
+The main workspace is an infinite, pannable canvas.
+
+- **Pan** to navigate large workspaces
+- **Zoom** to switch between overview and detail
+- **Select** any entity to see its details and actions
+- **Move** entities to organize your layout
+
+### HUD: Details + Abilities
+
+When you select an entity, the HUD shows:
+
+- **Details**: current state and context for that entity
+- **Abilities**: actions you can perform right now
+
+Examples:
+
+- Select an **agent** to attach/detach, open terminal, clear history, or destroy
+- Select a **folder** to rename, remove/trash, or run git worktree actions
+- Select a **browser/terminal panel** to refresh/restart/close
+
+### Agent Status Colors
+
+- **Gray**: idle
+- **Yellow**: starting
+- **Green**: online
+- **Orange**: stopping
+- **Red**: error
+
+## Requirements
+
+- Node.js 20 or higher
+- Bun (recommended)
+- macOS, Windows, or Linux
+- Optional: Claude Code CLI and/or Codex CLI for agent workflows
+
+## Run Locally
+
+### Bun (recommended)
+
+```bash
+bun install
+bun run dev
+```
+
+### Other package managers
+
+```bash
+# npm
+npm install
+npm run dev
+
+# pnpm
+pnpm install
+pnpm dev
+
+# yarn
+yarn install
+yarn dev
+```
+
+## First 5 Minutes
+
+1. Launch the app and create or open a workspace.
+2. Add a folder/project to the canvas.
+3. Spawn a Claude or Codex agent.
+4. Attach the agent to a folder.
+5. Open the agent terminal and start prompting.
+
+## Controls at a Glance
+
+- Left click: select entity
+- Left drag: move selected entity
+- Shift + drag (or middle mouse drag): pan canvas
+- Scroll/pinch: zoom
+- Click empty space: clear selection
+
+## Example Workflows
+
+### 1) Parallel feature work
+
+- Create two agents
+- Attach each one to a different project folder
+- Run two tasks in parallel while keeping both terminals visible
+
+### 2) Worktree-based changes
+
+- Use folder git worktree actions to create/sync/merge worktrees
+- Keep source and worktree folders side by side on the canvas
+- Move agents between folders depending on what needs attention
+
+### 3) Build + docs loop
+
+- Keep your app terminal open in one panel
+- Keep docs/reference open in a browser panel
+- Use an attached agent to apply and iterate changes quickly
+
+## Learn More
+
+- [User docs overview](user-docs/README.md)
+- [Controls](user-docs/Reference/Controls.md)
+- [Glossary](user-docs/Reference/Glossary.md)
+
+## Build a Production App
+
+```bash
+bun run build
+bun run package
+```
+
+## Support
+
+- [Security policy](SECURITY.md)
+- [Support guide](SUPPORT.md)
+
+## License
+
+See [LICENSE](LICENSE).
+

@@ -1,0 +1,121 @@
+=== [github] https://github.com/mikeyobrien/ralph-orchestrator
+<!-- 2026-01-28 -->
+# Ralph Orchestrator
+
+[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![Rust](https://img.shields.io/badge/rust-1.75+-orange)](https://www.rust-lang.org/)
+[![Build](https://img.shields.io/github/actions/workflow/status/mikeyobrien/ralph-orchestrator/ci.yml?branch=main&label=CI)](https://github.com/mikeyobrien/ralph-orchestrator/actions)
+[![Coverage](https://img.shields.io/endpoint?url=https://mikeyobrien.github.io/ralph-orchestrator/badges/coverage.json)](CONTRIBUTING.md#coverage)
+[![Mentioned in Awesome Claude Code](https://awesome.re/mentioned-badge.svg)](https://github.com/hesreallyhim/awesome-claude-code)
+[![Docs](https://img.shields.io/badge/docs-mkdocs-blue)](https://mikeyobrien.github.io/ralph-orchestrator/)
+[![Discord](https://img.shields.io/discord/1482421188700667906?label=Discord&logo=discord&logoColor=white)](https://discord.gg/XWUyeUNffh)
+
+A hat-based orchestration framework that keeps AI agents in a loop until the task is done.
+
+> "Me fail English? That's unpossible!" - Ralph Wiggum
+
+**[Documentation](https://mikeyobrien.github.io/ralph-orchestrator/)** | **[Getting Started](https://mikeyobrien.github.io/ralph-orchestrator/getting-started/quick-start/)** | **[Presets](https://mikeyobrien.github.io/ralph-orchestrator/guide/presets/)**
+
+## Installation
+
+### Via npm (Recommended)
+
+```bash
+npm install -g @ralph-orchestrator/ralph-cli
+```
+
+### Via GitHub Releases installer
+
+```bash
+curl --proto '=https' --tlsv1.2 -LsSf \
+  https://github.com/mikeyobrien/ralph-orchestrator/releases/latest/download/ralph-cli-installer.sh | sh
+```
+
+### Via Cargo
+
+```bash
+cargo install ralph-cli
+```
+
+> Homebrew is not currently published from this repository's automated release flow. Prefer npm, Cargo, or the GitHub Releases installer.
+
+## Quick Start
+
+```bash
+# 1. Initialize Ralph with your preferred backend
+ralph init --backend claude
+
+# 2. Plan your feature (interactive PDD session)
+ralph plan "Add user authentication with JWT"
+# Creates: .ralph/specs/user-authentication/requirements.md, design.md, implementation-plan.md
+
+# 3. Implement the feature
+ralph run -p "Implement the feature in .ralph/specs/user-authentication/"
+```
+
+Ralph iterates until it outputs `LOOP_COMPLETE` or hits the iteration limit.
+
+For simpler tasks, skip planning and run directly:
+
+```bash
+ralph run -p "Add input validation to the /users endpoint"
+```
+
+## Web Dashboard (Alpha)
+
+> **Alpha:** The web dashboard is under active development. Expect rough edges and breaking changes.
+
+<img width="1513" height="1128" alt="image" src="https://github.com/user-attachments/assets/ce5f072f-3d81-44d8-8f2f-88b42b33a3be" />
+
+Ralph includes a web dashboard for monitoring and managing orchestration loops.
+
+```bash
+ralph web                              # starts Rust RPC API + frontend + opens browser
+ralph web --no-open                    # skip browser auto-open
+ralph web --backend-port 4000          # custom RPC API port
+ralph web --frontend-port 8080         # custom frontend port
+ralph web --legacy-node-api            # opt into deprecated Node tRPC backend
+```
+
+### MCP Server Workspace Scope
+
+`ralph mcp serve` is scoped to a single workspace root per server instance.
+
+```bash
+ralph mcp serve --workspace-root /path/to/repo
+```
+
+Precedence is:
+
+1. `--workspace-root`
+2. `RALPH_API_WORKSPACE_ROOT`
+3. current working directory
+
+For multi-repo use, run one MCP server instance per repo/workspace. Ralph's current
+control-plane APIs persist config, tasks, loops, planning sessions, and collections
+under a single workspace root, so server-per-workspace is the deterministic model.
+
+**Requirements:**
+- Rust toolchain (for `ralph-api`)
+- Node.js >= 18 + npm (for the frontend)
+
+On first run, `ralph web` auto-detects missing `node_modules` and runs `npm install`.
+
+To set up Node.js:
+
+```bash
+# Option 1: nvm (recommended)
+nvm install    # reads .nvmrc
+
+# Option 2: direct install
+# https://nodejs.org/
+```
+
+For development:
+
+```bash
+npm install              # install frontend + legacy backend deps
+npm run dev:api          # Rust RPC API (port 3000)
+npm run dev:web          # frontend (port 5173)
+npm run dev              # frontend only (default)
+npm 

@@ -1,0 +1,56 @@
+{
+ "company": "Topaz Labs",
+ "one_liner_ko": "영화급 품질로 영상 화질을 높여 주는 AI 영상 향상 소프트웨어.",
+ "what_it_does_ko": "Topaz Video는 AI로 영상의 해상도와 품질을 높이는 Topaz Labs의 영상 향상 소프트웨어다. 정밀 업스케일·크리에이티브 업스케일, 프레임 보간, 슬로 모션, SDR을 HDR로 바꾸는 기능을 제공한다. 로컬에서 무제한 렌더링하거나 월 클라우드 영상 크레딧으로 웹에서 처리할 수 있다. Topaz Studio 요금제에는 Topaz Video와 Topaz Photo, Topaz Gigapixel, 모바일·웹 앱이 함께 들어 있다.",
+ "key_features": [
+  "정밀 업스케일·크리에이티브 업스케일",
+  "프레임 보간",
+  "슬로 모션",
+  "SDR을 HDR로 변환",
+  "로컬 무제한 렌더링",
+  "웹 클라우드 영상 처리(월 크레딧)",
+  "Astra: 최대 4K AI 영상 향상"
+ ],
+ "use_cases_ko": [
+  "사진가·영상 제작자의 영상 화질 개선"
+ ],
+ "pricing": {
+  "free_tier": "없음 (가격표에 무료 요금제 없음)",
+  "plans": [
+   {"name": "Topaz for Web - Video", "price": 19, "currency": "USD", "period": "month", "limits": "월 200 클라우드 영상 크레딧, 동시 2 (할인 전 $29, 기간 한정 할인)", "page_lang": "en"},
+   {"name": "Astra Standard", "price": 19, "currency": "USD", "period": "month", "limits": "월 400 크레딧(HD 약 10분), 4K 출력 (할인 전 $39)", "page_lang": "en"},
+   {"name": "Topaz Studio", "price": 399, "currency": "USD", "period": "year", "limits": "모든 앱, 로컬 무제한 렌더링, 월 300 클라우드 영상 크레딧 ($34/월 연간 결제 표기)", "page_lang": "en"},
+   {"name": "Topaz Studio", "price": 69, "currency": "USD", "period": "month", "limits": "모든 앱, 월 300 클라우드 영상 크레딧", "page_lang": "en"},
+   {"name": "Topaz Studio Pro", "price": null, "currency": null, "period": null, "limits": "가격 미표시, Pro 라이선스, 월 600 클라우드 영상 크레딧, 전체 상업적 이용", "page_lang": "en"}
+  ],
+  "pricing_url": "https://www.topazlabs.com/pricing"
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": ["웹"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://www.topazlabs.com/mobile?pricingopen/", "quote": "Topaz Labs | Topaz Mobile"},
+  {"field": "one_liner_ko", "url": "https://www.topazlabs.com/topaz-video", "quote": "Topaz Video - Cinematic-Grade Video Quality Enhancement Software"},
+  {"field": "what_it_does_ko", "url": "https://www.topazlabs.com/topaz-video", "quote": "Precision Upscale, Creative Upscale, Frame Interpolation, Slow Motion, SDR to HDR"},
+  {"field": "what_it_does_ko", "url": "https://www.topazlabs.com/topaz-video", "quote": "Topaz Video, Topaz Photo, Topaz Gigapixel, Topaz for Mobile, Topaz for Web."},
+  {"field": "key_features", "url": "https://www.topazlabs.com/topaz-video", "quote": "Unlimited local rendering"},
+  {"field": "key_features", "url": "https://www.topazlabs.com/topaz-video", "quote": "200 monthly cloud video credits"},
+  {"field": "key_features", "url": "https://www.topazlabs.com/topaz-video", "quote": "AI video enhancement up to 4K"},
+  {"field": "use_cases_ko", "url": "https://www.topazlabs.com/topaz-video", "quote": "Trusted by over 1 million photographers and filmmakers."},
+  {"field": "pricing", "url": "https://www.topazlabs.com/topaz-video", "quote": "Limited time offer—save up to 50%"},
+  {"field": "pricing", "url": "https://www.topazlabs.com/topaz-video", "quote": " $29 $19/mo"},
+  {"field": "pricing", "url": "https://www.topazlabs.com/topaz-video", "quote": " $39 $19/mo"},
+  {"field": "pricing", "url": "https://www.topazlabs.com/topaz-video", "quote": " $399 billed annually"},
+  {"field": "pricing", "url": "https://www.topazlabs.com/topaz-video", "quote": " $69/mo"},
+  {"field": "pricing", "url": "https://www.topazlabs.com/pricing", "quote": "600 monthly cloud video credits"},
+  {"field": "platforms", "url": "https://www.topazlabs.com/topaz-video", "quote": "Topaz for Web - Video"},
+  {"field": "korean_support", "url": "https://www.topazlabs.com/topaz-video", "quote": "html lang: en"}
+ ],
+ "mismatch": [
+  {"official": "웹 영상 $19/월, Astra $19/월, Topaz Studio $399/년·$69/월 등 유료 요금제만 표시", "diff": "기존 분류는 프리미엄(무료+유료)이지만 공식 가격표에 무료 요금제가 없음", "url": "https://www.topazlabs.com/pricing"}
+ ],
+ "plan_change": [
+  {"official": "Topaz Video 단독 요금 대신 웹 영상 구독·Astra·Topaz Studio(모든 앱 묶음) 구독과 월 클라우드 크레딧 구조", "diff": "단독 소프트웨어가 아니라 묶음 구독과 크레딧 방식으로 판매", "url": "https://www.topazlabs.com/topaz-video"}
+ ]
+}

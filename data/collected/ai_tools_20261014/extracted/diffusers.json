@@ -1,0 +1,104 @@
+{
+ "company": "Hugging Face",
+ "one_liner_ko": "이미지·영상·오디오 생성을 위한 사전학습 확산(diffusion) 모델과 구성 요소를 제공하는 라이브러리",
+ "what_it_does_ko": "Diffusers는 사전학습 확산 모델과 이미지·영상·오디오 워크플로를 만드는 구성 요소를 제공한다. DiffusionPipeline으로 몇 줄 코드만에 추론하고 LoRA 같은 어댑터를 쓸 수 있다. Modular Diffusers로 블록을 조합해 맞춤 파이프라인을 만들 수 있다. 오프로딩·양자화로 메모리가 적은 기기에서도 큰 모델을 돌리고, 확산 모델과 어댑터의 학습·미세조정도 지원한다.",
+ "key_features": [
+  "DiffusionPipeline으로 몇 줄 추론",
+  "LoRA 등 어댑터 지원",
+  "Modular Diffusers로 맞춤 파이프라인 조합",
+  "교체 가능한 노이즈 스케줄러",
+  "오프로딩·양자화·torch.compile 최적화",
+  "확산 모델·어댑터 학습과 미세조정",
+  "CLI로 파이프라인 실행·패키징"
+ ],
+ "use_cases_ko": [
+  "텍스트로 이미지 생성",
+  "확산 모델 미세조정"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "Apache 2.0",
+ "api": "있음",
+ "platforms": [
+  "CLI",
+  "API"
+ ],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://github.com/huggingface/diffusers",
+   "quote": "Copyright 2022 - The HuggingFace Team. All rights reserved."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://huggingface.co/docs/diffusers/index",
+   "quote": "Diffusers provides pretrained diffusion models and the building blocks for custom image, video, and audio workflows."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://huggingface.co/docs/diffusers/index",
+   "quote": "DiffusionPipeline supports few-line inference with pretrained checkpoints, plus adapters like LoRA."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://huggingface.co/docs/diffusers/index",
+   "quote": "Modular Diffusers enables composable blocks and ModularPipeline for custom pipelines when you need more control."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://huggingface.co/docs/diffusers/index",
+   "quote": "Optimizations such as offloading and quantization keep large models runnable on memory-constrained devices."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/huggingface/diffusers",
+   "quote": "Interchangeable noise [schedulers]"
+  },
+  {
+   "field": "key_features",
+   "url": "https://huggingface.co/docs/diffusers/index",
+   "quote": "Train and fine-tune — train diffusion models and adapters"
+  },
+  {
+   "field": "key_features",
+   "url": "https://huggingface.co/docs/diffusers/index",
+   "quote": "CLI - run and package pipelines from the command line"
+  },
+  {
+   "field": "key_features",
+   "url": "https://huggingface.co/docs/diffusers/index",
+   "quote": "Diffusers also supports torch.compile for faster inference."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/huggingface/diffusers",
+   "quote": "To generate an image from text, use the `from_pretrained` method"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/huggingface/diffusers",
+   "quote": "Licensed under the Apache License, Version 2.0"
+  },
+  {
+   "field": "api",
+   "url": "https://github.com/huggingface/diffusers",
+   "quote": "https://huggingface.co/docs/diffusers/api/pipelines/overview"
+  },
+  {
+   "field": "platforms",
+   "url": "https://huggingface.co/docs/diffusers/index",
+   "quote": "CLI - run and package pipelines from the command line"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://huggingface.co/docs/diffusers/index",
+   "quote": "hreflang: en, ja, ko, pt, x-default, zh"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

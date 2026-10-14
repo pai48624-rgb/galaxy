@@ -1,0 +1,148 @@
+{
+ "company": "RightNow-AI",
+ "one_liner_ko": "Rust로 만든 오픈소스 '에이전트 운영체제'로, 일정에 따라 스스로 일하는 자율 에이전트를 바이너리 하나로 돌린다.",
+ "what_it_does_ko": "OpenFang은 Rust로 처음부터 만든 오픈소스 에이전트 운영체제다. 사용자가 입력하기를 기다리는 대신 일정에 따라 24시간 자율 에이전트를 돌려 지식 그래프를 만들고, 대상을 모니터링하고, 잠재 고객을 찾고, 결과를 대시보드에 보고한다. 7개의 자율 기능 패키지(Hands), 30개 에이전트, 40개 채널, 38개 도구, 26개 LLM 제공자, 16개 보안 시스템을 약 32MB 바이너리 하나에 담았다. 아직 1.0 이전 버전이라 마이너 버전 간 호환성 깨짐이 있을 수 있다고 공지한다.",
+ "key_features": [
+  "일정 기반 자율 기능 패키지 7종(Hands: 쇼츠 제작·리드 발굴·모니터링·예측·리서치·X 계정 관리·브라우저 자동화)",
+  "WASM 샌드박스 등 16개 보안 시스템",
+  "사전 제작 에이전트 30종",
+  "내장 도구 38종 + MCP 클라이언트·서버",
+  "SQLite·벡터 임베딩 영구 메모리",
+  "텔레그램·디스코드·슬랙·왓츠앱 등 40개 채널 어댑터",
+  "MCP·A2A·OFP 프로토콜",
+  "Tauri 2.0 네이티브 데스크톱 앱"
+ ],
+ "use_cases_ko": [
+  "매일 잠재 고객을 찾아 점수화한 리드 목록 받기",
+  "유튜브 영상을 세로 쇼츠로 잘라 자막·썸네일 붙여 게시",
+  "경쟁사 조사 결과를 아침마다 텔레그램으로 보고받기"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "MIT",
+ "api": "있음",
+ "platforms": [
+  "맥",
+  "윈도",
+  "CLI",
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://github.com/RightNow-AI/openfang",
+   "quote": "https://github.com/RightNow-AI/openfang/issues"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/RightNow-AI/openfang",
+   "quote": "A full operating system for autonomous agents, built from scratch in Rust."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/RightNow-AI/openfang",
+   "quote": "OpenFang runs **autonomous agents that work for you**: on schedules, 24/7, building knowledge graphs, monitoring targets, generating leads, managing your social media, and reporting results to your dashboard."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.openfang.sh/",
+   "quote": "7 autonomous Hands that run on schedules, build knowledge graphs, and report to your dashboard. 30 agents, 40 channels, 38 tools, 26 LLM providers. 16 security systems. One binary."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/RightNow-AI/openfang",
+   "quote": "The entire system compiles to a **single ~32MB binary**."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/RightNow-AI/openfang",
+   "quote": "OpenFang is feature complete but still pre-1.0. Expect rough edges and breaking changes between minor versions."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.openfang.sh/",
+   "quote": "Clip turns video into shorts. Lead generates qualified leads. Collector monitors targets. Predictor forecasts with Brier scores. Researcher fact-checks with CRAAP. Twitter manages your X account. Browser automates the web."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.openfang.sh/",
+   "quote": "WASM dual-metered sandbox, Ed25519 manifest signing, Merkle audit trail"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.openfang.sh/",
+   "quote": "From orchestrators to code reviewers to customer support."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.openfang.sh/",
+   "quote": "38 native tools plus Model Context Protocol client and server."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.openfang.sh/",
+   "quote": "SQLite-backed storage with vector embeddings."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.openfang.sh/",
+   "quote": "Telegram, Discord, Slack, WhatsApp, Teams, IRC, Matrix, and 33 more."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.openfang.sh/",
+   "quote": "Model Context Protocol (client + server), Google A2A agent-to-agent tasks, and OpenFang Protocol for P2P networking"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.openfang.sh/",
+   "quote": "Native desktop application with system tray, notifications, single-instance enforcement, auto-start on login, and global shortcuts."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/RightNow-AI/openfang",
+   "quote": "Discovers prospects matching your ICP, enriches them with web research, scores 0-100"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/RightNow-AI/openfang",
+   "quote": "cuts them into vertical shorts with captions and thumbnails"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/RightNow-AI/openfang",
+   "quote": "researches your competitors, builds a knowledge graph, scores the findings, and delivers a report to your Telegram"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/RightNow-AI/openfang",
+   "quote": "https://img.shields.io/badge/license-MIT-blue?style=flat-square"
+  },
+  {
+   "field": "api",
+   "url": "https://www.openfang.sh/docs",
+   "quote": "76 REST/WS/SSE endpoints, OpenAI compat"
+  },
+  {
+   "field": "platforms",
+   "url": "https://www.openfang.sh/",
+   "quote": "macOS / Linux Windows"
+  },
+  {
+   "field": "platforms",
+   "url": "https://www.openfang.sh/docs",
+   "quote": "Every command, flag, and subcommand"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.openfang.sh/",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

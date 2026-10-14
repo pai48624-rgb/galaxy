@@ -1,0 +1,113 @@
+{
+ "company": "NVIDIA",
+ "one_liner_ko": "NVIDIA Omniverse 라이브러리 기반의 로봇 시뮬레이션·테스트·합성 데이터 생성용 오픈소스 레퍼런스 프레임워크.",
+ "what_it_does_ko": "Isaac Sim은 물리 기반 가상 환경에서 로봇을 시뮬레이션·테스트하고 합성 데이터를 만드는 오픈소스 프레임워크다. CAD, URDF, 실측 캡처 등 여러 소스의 데이터를 USD로 바꾼 뒤 재질·물리·로봇·센서를 설정해 장면을 만든다. 조명·색·위치 등을 무작위로 바꿔 학습용 합성 데이터를 생성하고, Cosmos 모델로 데이터를 보강할 수 있다. 인식·이동 스택을 시뮬레이션에서 학습시키고 SIL/HIL 테스트로 전체 시스템을 평가한다.",
+ "key_features": [
+  "CAD·URDF·실측 데이터를 USD로 변환해 장면 구성",
+  "강체·차량 동역학·다관절·SDF 충돌체 물리 시뮬레이션",
+  "조명·반사·색·위치 무작위화로 합성 데이터 생성",
+  "소프트웨어/하드웨어 인 더 루프(SIL/HIL) 테스트",
+  "Isaac ROS/ROS2 브리지로 ROS 연동",
+  "OnShape·URDF·MJCF·ShapeNet 임포터",
+  "Brev에서 클릭 한 번으로 클라우드 GPU 실행"
+ ],
+ "use_cases_ko": [
+  "공장·창고·산업 시설 디지털 트윈",
+  "로봇 인식·이동 스택을 시뮬레이션에서 학습·평가",
+  "합성 데이터로 AI 모델 학습"
+ ],
+ "pricing": {
+  "free_tier": "있음 (무료 사용, Apache 2.0 오픈소스)",
+  "plans": [],
+  "pricing_url": "https://developer.nvidia.com/isaac/sim"
+ },
+ "open_source": "Apache 2.0",
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://developer.nvidia.com/isaac/sim",
+   "quote": "Isaac Sim - Robotics Simulation and Synthetic Data Generation | NVIDIA Developer"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://developer.nvidia.com/isaac/sim",
+   "quote": "is an open source reference framework built on NVIDIA Omniverse"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://developer.nvidia.com/isaac/sim",
+   "quote": "convert it into USD"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://developer.nvidia.com/isaac/sim",
+   "quote": "Isaac Sim also supports controllable synthetic data generation"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://developer.nvidia.com/isaac/sim",
+   "quote": "using software-in-the-loop or hardware-in-the-loop testing"
+  },
+  {
+   "field": "key_features",
+   "url": "https://developer.nvidia.com/isaac/sim",
+   "quote": "Isaac Sim can simulate rigid body and vehicle dynamics, multi-joint articulation, SDF colliders"
+  },
+  {
+   "field": "key_features",
+   "url": "https://developer.nvidia.com/isaac/sim",
+   "quote": "Generate training data by randomizing attributes like lighting, reflection, color, and position of scene and assets."
+  },
+  {
+   "field": "key_features",
+   "url": "https://developer.nvidia.com/isaac/sim",
+   "quote": "you can connect Isaac Sim to ROS/ROS2 using the Isaac ROS/ROS2 Bridge Extensions"
+  },
+  {
+   "field": "key_features",
+   "url": "https://developer.nvidia.com/isaac/sim",
+   "quote": "You can import 3D robot models using OnShape, URDF, MJCF, and ShapeNet Importers"
+  },
+  {
+   "field": "key_features",
+   "url": "https://developer.nvidia.com/isaac/sim",
+   "quote": "you can access Isaac Sim on Brev, which gives one-click access to NVIDIA GPU instances"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://developer.nvidia.com/isaac/sim",
+   "quote": "Build intelligent factory, warehouse, and industrial facility solutions"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://developer.nvidia.com/isaac/sim",
+   "quote": "developers can train perception and mobility stacks in simulation"
+  },
+  {
+   "field": "pricing",
+   "url": "https://developer.nvidia.com/isaac/sim",
+   "quote": "Yes, Isaac Sim is free to use, licensed as open source under Apache 2.0 and available on GitHub."
+  },
+  {
+   "field": "open_source",
+   "url": "https://developer.nvidia.com/isaac/sim",
+   "quote": "Yes, Isaac Sim is free to use, licensed as open source under Apache 2.0 and available on GitHub."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://developer.nvidia.com/isaac/sim",
+   "quote": "hreflang: en-us, ja-jp, x-default, zh-cn"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "Isaac Sim은 Apache 2.0 오픈소스로 무료 사용(단 Omniverse Kit 재배포는 Omniverse Enterprise 구독 필요)",
+   "diff": "기존 '연구/엔터프라이즈(가격 비공개)'와 달리 무료 오픈소스",
+   "url": "https://developer.nvidia.com/isaac/sim"
+  }
+ ],
+ "plan_change": []
+}

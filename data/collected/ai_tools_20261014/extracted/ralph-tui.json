@@ -1,0 +1,42 @@
+{
+ "company": null,
+ "one_liner_ko": "터미널에서 자율 AI 코딩 에이전트가 작업 목록을 차례로 처리하게 돌려 주는 AI 에이전트 루프 오케스트레이터.",
+ "what_it_does_ko": "Ralph TUI는 AI 코딩 에이전트를 작업 목록에 따라 자율로 돌리는 터미널 UI다. 작업 선택, 프롬프트 생성, 에이전트 실행, 완료 감지를 반복하며 백로그가 끝날 때까지 작업을 하나씩 처리한다. 실행 전에 AI와 대화하며 PRD를 만들고 의존성을 고려한 작은 작업으로 쪼개는 계획 단계도 돕는다. Claude Code·OpenCode·Factory Droid 등 에이전트를 prd.json·Beads 같은 작업 관리 도구와 연결한다.",
+ "key_features": [
+  "AI와 대화로 PRD 작성 후 의존성을 고려한 작업으로 분해",
+  "JSON 파일·Beads·Beads-BV 작업 관리 도구 연동",
+  "Claude Code·OpenCode 등 에이전트 플러그인과 실시간 출력",
+  "Handlebars 프롬프트 템플릿",
+  "세션 저장·재개와 충돌 후 복구",
+  "실시간 TUI 대시보드와 서브에이전트 추적",
+  "작업 그래프 기반 의존성 해결·병렬 실행",
+  "여러 컴퓨터의 인스턴스를 한 TUI에서 원격 관리"
+ ],
+ "use_cases_ko": [
+  "개발자가 작업 내용을 Claude Code 등에 일일이 복사하지 않고 작업 목록을 자율로 처리"
+ ],
+ "pricing": {"free_tier": "불명", "plans": [], "pricing_url": null},
+ "open_source": "MIT",
+ "api": "불명",
+ "platforms": ["CLI"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "one_liner_ko", "url": "https://ralph-tui.com", "quote": "Orchestrate autonomous AI coding agents with ease - all from your terminal."},
+  {"field": "what_it_does_ko", "url": "https://ralph-tui.com/docs/getting-started/introduction", "quote": "Ralph TUI is an AI Agent Loop Orchestrator that automates the cycle of selecting tasks, building prompts, running AI agents, and detecting completion."},
+  {"field": "what_it_does_ko", "url": "https://ralph-tui.com", "quote": "Ralph TUI helps you create structured, dependency-aware task breakdowns through interactive AI collaboration."},
+  {"field": "key_features", "url": "https://ralph-tui.com", "quote": "Transform PRDs into dependency-aware, right-sized tasks that agents can complete in a single iteration."},
+  {"field": "key_features", "url": "https://ralph-tui.com", "quote": "Seamlessly integrate with JSON files, Beads issue tracker, or Beads-BV for graph-aware task prioritization."},
+  {"field": "key_features", "url": "https://ralph-tui.com", "quote": "Run Claude Code, OpenCode, or custom agents with full plugin architecture and real-time output streaming."},
+  {"field": "key_features", "url": "https://ralph-tui.com", "quote": "Define reusable Handlebars templates with context injection for consistent, high-quality agent prompts."},
+  {"field": "key_features", "url": "https://github.com/subsy/ralph-tui", "quote": "**Session Persistence**: Pause anytime, resume later, survive crashes"},
+  {"field": "key_features", "url": "https://ralph-tui.com", "quote": "Trace and debug nested agent calls with full visibility into execution paths and decision trees."},
+  {"field": "key_features", "url": "https://ralph-tui.com", "quote": "Automatic dependency resolution and parallel execution scheduling based on task graph analysis."},
+  {"field": "key_features", "url": "https://github.com/subsy/ralph-tui", "quote": "Monitor and control ralph-tui running on multiple machines from a single TUI"},
+  {"field": "use_cases_ko", "url": "https://ralph-tui.com/docs/getting-started/introduction", "quote": "Instead of manually copying task details into Claude Code, OpenCode, or Factory Droid, Ralph does it for you in a continuous loop."},
+  {"field": "open_source", "url": "https://ralph-tui.com", "quote": "© 2026 Ralph TUI. Open source under MIT License."},
+  {"field": "platforms", "url": "https://ralph-tui.com", "quote": "$ bun install -g ralph-tui"},
+  {"field": "korean_support", "url": "https://ralph-tui.com", "quote": "화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

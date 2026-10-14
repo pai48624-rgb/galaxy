@@ -1,0 +1,81 @@
+{
+ "company": "Random Labs",
+ "one_liner_ko": "대규모 병렬 스웜(swarm) 오케스트레이션을 위해 만든 범용 소프트웨어 에이전트 Slate.",
+ "what_it_does_ko": "Slate는 Random Labs가 만든 터미널용 코딩 에이전트로, 여러 하위 에이전트를 병렬로 돌리는 스웜 오케스트레이션 구조를 내세운다. 탐색·구현·빌드·테스트 실패·후속 수정까지 긴 작업을 이어 가고, 독립적인 조사·코딩·검증을 병렬 스레드로 나눴다가 결과를 합친다. 작업에 맞는 모델을 자동으로 고르며(예: 대화는 Claude, 실행은 Codex), 자체 압축(compaction) 알고리즘으로 맥락을 관리한다. 현재 오픈 베타이며 npm으로 설치한다.",
+ "key_features": [
+  "병렬 스웜 오케스트레이션(서브에이전트)",
+  "긴 다단계 작업 유지",
+  "작업별 자동 모델 선택",
+  "내장 컨텍스트 압축 알고리즘",
+  "계획 모드 없이 조사 후 계획 제시",
+  "오케스트레이션·추적(Tracing)"
+ ],
+ "use_cases_ko": [
+  "여러 에이전트 세션으로 나눠 하던 저장소 단위 작업을 한 번에 맡김"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "CLI"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://randomlabs.ai/",
+   "quote": "© 2025 Random Labs"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://randomlabs.ai/",
+   "quote": "Meet Slate, a generalist software agent built for swarms."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://randomlabs.ai/",
+   "quote": "Slate keeps a task alive across exploration, implementation, builds, test failures, and follow-up edits instead of treating each prompt like a fresh start."
+  },
+  {
+   "field": "key_features",
+   "url": "https://randomlabs.ai/",
+   "quote": "It can split independent research, coding, and verification work into focused threads, then bring the useful results back into the main session."
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.randomlabs.ai/en/getting-started/introduction",
+   "quote": "Slate automatically selects the right model for the job."
+  },
+  {
+   "field": "key_features",
+   "url": "https://randomlabs.ai/",
+   "quote": "It has a built-in compaction algorithm that surfaces the most important information at any time."
+  },
+  {
+   "field": "key_features",
+   "url": "https://randomlabs.ai/",
+   "quote": "Slate plans implicitly. When given a task, Slate will start by researching it, and then present its plan to you."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://randomlabs.ai/",
+   "quote": "Run Slate in your terminal and give it the repo-level work you would normally split across multiple agent sessions."
+  },
+  {
+   "field": "platforms",
+   "url": "https://randomlabs.ai/",
+   "quote": "npm i -g @randomlabs/slate && slate"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://randomlabs.ai/",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

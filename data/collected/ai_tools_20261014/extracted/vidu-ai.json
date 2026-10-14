@@ -1,0 +1,232 @@
+{
+ "company": "Vidu",
+ "one_liner_ko": "텍스트·이미지·참조 영상으로 동영상을 만드는 AI 동영상 생성 서비스.",
+ "what_it_does_ko": "Vidu AI는 텍스트, 이미지, 참조 자료로 동영상을 생성하는 AI 동영상 생성기다. Vidu Q4·Q3 등 영상 모델과 이미지 생성, AI 사운드 이펙트, 템플릿을 제공하고, 한 문장에서 완성작까지 함께 만드는 Vidu Agent도 있다. 크레딧 기반 무료·유료 구독 요금제가 있으며 유료 플랜은 상업적 사용과 워터마크 없는 다운로드를 지원한다. 개발자·기업용 API 플랫폼에서는 영상·실시간 스트리밍·이미지·오디오 모델을 크레딧 종량제로 제공한다.",
+ "key_features": [
+  "참조 자료로 영상 생성(Reference to Video)",
+  "이미지로 영상 생성·텍스트로 영상 생성",
+  "텍스트·참조 이미지로 이미지 생성",
+  "AI 사운드 이펙트 생성기",
+  "Vidu Agent(한 문장에서 완성작까지 협업)",
+  "비혼잡 시간대(Off-Peak) 모드",
+  "한 번에 영상 4개 일괄 생성",
+  "실시간 인터랙티브 모델 S2(API)"
+ ],
+ "use_cases_ko": [
+  "개인 크리에이터의 일상적인 영상 제작",
+  "광고 영상·숏드라마·코믹 콘텐츠 제작(API 솔루션)",
+  "기업의 대량 콘텐츠 제작"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Free $0/월, Q4 모델 540P 초당 4크레딧, 참고 자료 월 10개; 가입·매일 로그인 크레딧)",
+  "plans": [
+   {
+    "name": "Free",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "Q4 모델 540P 초당 4크레딧, 참고 자료 월 10개",
+    "page_lang": "en"
+   },
+   {
+    "name": "Standard(일반)",
+    "price": 8.25,
+    "currency": "USD",
+    "period": "month(연간 결제)",
+    "limits": "연간 $99 청구(표시 정가 $10), 월 800 크레딧",
+    "page_lang": "en"
+   },
+   {
+    "name": "Premium(프리미엄)",
+    "price": 35.42,
+    "currency": "USD",
+    "period": "month(연간 결제)",
+    "limits": "연간 $425 청구(표시 정가 $43), 월 3500 크레딧, 비혼잡 시간대 하루 20개 영상",
+    "page_lang": "en"
+   },
+   {
+    "name": "Ultimate(얼티메이트)",
+    "price": 191.67,
+    "currency": "USD",
+    "period": "month(연간 결제)",
+    "limits": "연간 $2300 청구(표시 정가 $230), 월 20,000 크레딧(비교표에는 8000), 비혼잡 시간대 하루 200개 영상",
+    "page_lang": "en"
+   },
+   {
+    "name": "Free",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "Q4 모델 540P 초당 4크레딧, 참고 자료 월 10개",
+    "page_lang": "ko"
+   },
+   {
+    "name": "Standard(일반)",
+    "price": 8.25,
+    "currency": "USD",
+    "period": "month(연간 결제)",
+    "limits": "연간 $99 청구(표시 정가 $10), 월 800 크레딧",
+    "page_lang": "ko"
+   },
+   {
+    "name": "Premium(프리미엄)",
+    "price": 35.42,
+    "currency": "USD",
+    "period": "month(연간 결제)",
+    "limits": "연간 $425 청구(표시 정가 $43), 월 3500 크레딧, 비혼잡 시간대 하루 20개 영상",
+    "page_lang": "ko"
+   },
+   {
+    "name": "Ultimate(얼티메이트)",
+    "price": 191.67,
+    "currency": "USD",
+    "period": "month(연간 결제)",
+    "limits": "연간 $2300 청구(표시 정가 $230), 월 20,000 크레딧(비교표에는 8000), 비혼잡 시간대 하루 200개 영상",
+    "page_lang": "ko"
+   },
+   {
+    "name": "API Starter Trial Pack(Q4 Preview 출시 특가)",
+    "price": 105,
+    "currency": "USD",
+    "period": "one-time",
+    "limits": "30,000 크레딧(크레딧당 USD 0.0035), 12개월 유효, 30% 할인가",
+    "page_lang": "en"
+   },
+   {
+    "name": "API Project Trial Pack",
+    "price": 350,
+    "currency": "USD",
+    "period": "one-time",
+    "limits": "100,000 크레딧(크레딧당 USD 0.0035), 12개월 유효, 30% 할인가",
+    "page_lang": "en"
+   },
+   {
+    "name": "API Advanced Creator Pack",
+    "price": 1050,
+    "currency": "USD",
+    "period": "one-time",
+    "limits": "300,000 크레딧(크레딧당 USD 0.0035), 12개월 유효, 30% 할인가",
+    "page_lang": "en"
+   },
+   {
+    "name": "API Creator Team Pack",
+    "price": 3500,
+    "currency": "USD",
+    "period": "one-time",
+    "limits": "1,000,000 크레딧(크레딧당 USD 0.0035), 12개월 유효, 30% 할인가",
+    "page_lang": "en"
+   },
+   {
+    "name": "API Enterprise Content Pack",
+    "price": 14000,
+    "currency": "USD",
+    "period": "one-time",
+    "limits": "4,000,000 크레딧(크레딧당 USD 0.0035), 12개월 유효, 30% 할인가",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://www.vidu.com/pricing"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "API"
+ ],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.vidu.com/",
+   "quote": "Copyright © 2026 Vidu® Terms of Use Privacy Policy Cookies Policy"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.vidu.com/",
+   "quote": "AI Video Generator for Text, Image & Reference Videos | Vidu AI"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.vidu.com/",
+   "quote": "Your dedicated Agent, intelligently collaborating with you from a single sentence to a complete work—unlocking limitless creativity."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.vidu.com/",
+   "quote": "Reference to Video Image to Video Text to Video AI Sound Effect Generator Templates AI Image Generator Vidu Q3 All Tools"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.vidu.com/pricing",
+   "quote": "Generate up to 4 videos at once"
+  },
+  {
+   "field": "key_features",
+   "url": "https://platform.vidu.com/",
+   "quote": "Real-Time Generation Model S2 A globally leading real-time interactive model"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.vidu.com/pricing",
+   "quote": "For everyday lightweight creation"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://platform.vidu.com/",
+   "quote": "One-click explainer comic Short drama"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://platform.vidu.com/",
+   "quote": "Ideal for enterprise-level content production"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.vidu.com/pricing",
+   "quote": "$ 8.25 / month $10 \n Billed yearly as $99"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.vidu.com/pricing",
+   "quote": "$ 35.42 / month $43 \n Billed yearly as $425"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.vidu.com/pricing",
+   "quote": "$ 191.67 / month $230 \n Billed yearly as $2300"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.vidu.com/pricing",
+   "quote": "Q4 model usage: 540P 4 credits/sec"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.vidu.com/ko/pricing",
+   "quote": "일상적인 가벼운 제작용\n $ 8.25 / 월 $10 \n 연간 $99"
+  },
+  {
+   "field": "pricing",
+   "url": "https://platform.vidu.com/",
+   "quote": "30,000 credits (USD 0.0035/credit)"
+  },
+  {
+   "field": "api",
+   "url": "https://platform.vidu.com/",
+   "quote": "Multimodal generation empowers developers and enterprises to unlock creativity and drive business growth."
+  },
+  {
+   "field": "platforms",
+   "url": "https://www.vidu.com/",
+   "quote": "Blog \n Get App Try Vidu \n Create Use the player"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.vidu.com/",
+   "quote": "hreflang: de, en, es, fr, ja, ko, pt, ru, x-default, zh"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [],
+ "note": "Ultimate 카드에는 월 20,000 크레딧, 비교표에는 월 8000 크레딧으로 서로 다르게 적혀 있음. 'Get App' 이 있으나 앱 OS는 페이지에 없음."
+}

@@ -1,0 +1,196 @@
+{
+ "company": "Weights & Biases (CoreWeave Forge 소속)",
+ "one_liner_ko": "AI 에이전트·애플리케이션·모델을 만들고 평가하는 AI 개발자 플랫폼.",
+ "what_it_does_ko": "Weights & Biases는 AI 에이전트·애플리케이션·모델 개발용 플랫폼이다. W&B Weave로 LLM 앱의 트레이스·평가·플레이그라운드·모니터를 제공하고, W&B Models로 실험 추적, 하이퍼파라미터 스윕, 아티팩트, 리포트, 자동화를 제공한다. 현재 CoreWeave Forge의 일부가 되어 클라우드 요금제도 Forge로 옮겨졌다. 자체 인프라에 W&B 서버를 설치하는 자가 호스팅도 지원한다.",
+ "key_features": [
+  "Weave 트레이스로 AI 앱 탐색·디버그",
+  "AI 앱 평가",
+  "프로덕션 지속 개선용 모니터",
+  "실험 추적·하이퍼파라미터 스윕·아티팩트·리포트·자동화(W&B Models)",
+  "AI 실험 모니터링용 iOS 앱",
+  "Docker·Python으로 W&B 서버 자가 호스팅",
+  "ISO 27001·SOC 2·HIPAA 등 보안 인증"
+ ],
+ "use_cases_ko": [
+  "자동차 회사의 자율주행 모델 개발",
+  "기업이 ML 모델을 배포·관리"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Forge Free 월 $0 — 개인 개발용, 모델 시트 최대 5; 자가 호스팅 Personal 무료 — 기업 사용 불가; 학술 연구 영구 무료)",
+  "plans": [
+   {
+    "name": "Free (CoreWeave Forge)",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "개인 개발용, 모델 시트 최대 5, 커뮤니티 지원",
+    "page_lang": "en"
+   },
+   {
+    "name": "Pro (CoreWeave Forge)",
+    "price": 60,
+    "currency": "USD",
+    "period": "month",
+    "limits": "월 $60부터(월 결제), 모델 시트 최대 10, 30일 무료 체험, 직원 50명 미만 팀 대상",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise (CoreWeave Forge)",
+    "price": null,
+    "currency": "USD",
+    "period": "month",
+    "limits": "맞춤 요금, HIPAA 옵션·SSO·감사 로그 등",
+    "page_lang": "en"
+   },
+   {
+    "name": "Personal (자가 호스팅)",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "사용자 1명, 개인 프로젝트 전용, 기업 사용 불가",
+    "page_lang": "en-US"
+   },
+   {
+    "name": "Advanced Enterprise (자가 호스팅)",
+    "price": null,
+    "currency": "USD",
+    "period": "month",
+    "limits": "맞춤 요금, 무료 엔터프라이즈 체험 라이선스",
+    "page_lang": "en-US"
+   }
+  ],
+  "pricing_url": "https://coreweave.com/forge-pricing"
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "웹",
+  "iOS"
+ ],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://wandb.ai/site",
+   "quote": "Weights & Biases is now part of CoreWeave Forge"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://wandb.ai/site",
+   "quote": "The AI developer platform to build AI agents, applications, "
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.coreweave.com/forge-home",
+   "quote": "W&B Models for experiment tracking, hyperparameter sweeps, artifacts, reports, and automations, with W&B Weave alongside for LLM and agent evaluation."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://wandb.ai/site/pricing-privately-hosted/",
+   "quote": "Cloud-hosted pricing has moved to CoreWeave Forge."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://wandb.ai/site/pricing-privately-hosted/",
+   "quote": "Self-hosting allows you to run Weights & Biases on your own infrastructure"
+  },
+  {
+   "field": "key_features",
+   "url": "https://wandb.ai/site",
+   "quote": "Explore and debug AI applications"
+  },
+  {
+   "field": "key_features",
+   "url": "https://wandb.ai/site",
+   "quote": "Rigorous evaluations of AI applications"
+  },
+  {
+   "field": "key_features",
+   "url": "https://wandb.ai/site",
+   "quote": "Continuously improve in production"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.coreweave.com/forge-home",
+   "quote": "W&B Models for experiment tracking, hyperparameter sweeps, artifacts, reports, and automations"
+  },
+  {
+   "field": "key_features",
+   "url": "https://wandb.ai/site",
+   "quote": "The first iOS app to monitor AI experiments and track training runs anytime, anywhere."
+  },
+  {
+   "field": "key_features",
+   "url": "https://wandb.ai/site/pricing-privately-hosted/",
+   "quote": "Run a W&B server locally on any machine with Docker and Python installed"
+  },
+  {
+   "field": "key_features",
+   "url": "https://wandb.ai/site",
+   "quote": "Weights & Biases AI development platform is certified under ISO/IEC 27001:2022"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://wandb.ai/site",
+   "quote": "Learn how Toyota uses W&B for autonomous driving"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://wandb.ai/site",
+   "quote": "Learn how Canva leverages W&B to deploy models"
+  },
+  {
+   "field": "pricing",
+   "url": "https://coreweave.com/forge-pricing",
+   "quote": "Designed for personal development of AI applications and models"
+  },
+  {
+   "field": "pricing",
+   "url": "https://coreweave.com/forge-pricing",
+   "quote": "Starts at $60/month, billed monthly"
+  },
+  {
+   "field": "pricing",
+   "url": "https://coreweave.com/forge-pricing",
+   "quote": "For early-stage teams fewer than 50 employees."
+  },
+  {
+   "field": "pricing",
+   "url": "https://coreweave.com/forge-pricing",
+   "quote": "Companies prioritizing security and compliance for AI applications and models"
+  },
+  {
+   "field": "pricing",
+   "url": "https://wandb.ai/site/pricing-privately-hosted/",
+   "quote": "For personal projects only. Corporate use is not allowed."
+  },
+  {
+   "field": "pricing",
+   "url": "https://wandb.ai/site/pricing-privately-hosted/",
+   "quote": "Coordinate projects remotely. Unlimited projects, teams, and 200GB free cloud storage."
+  },
+  {
+   "field": "platforms",
+   "url": "https://wandb.ai/site",
+   "quote": "The first iOS app to monitor AI experiments and track training runs anytime, anywhere."
+  },
+  {
+   "field": "platforms",
+   "url": "https://wandb.ai/site/pricing-privately-hosted/",
+   "quote": "Cloud-hosted is a fully managed service that provides you with a scalable and reliable platform."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://wandb.ai/site",
+   "quote": "화면에 보이는 언어 이름: 한국어, Korean, English, 日本語, Deutsch"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "클라우드 요금제가 CoreWeave Forge 요금제(Free $0, Pro 월 $60부터, Enterprise 맞춤)로 이전, 자가 호스팅은 Personal 무료·Advanced Enterprise 맞춤",
+   "diff": "W&B 단독 클라우드 요금제가 아니라 다른 회사(CoreWeave) 제품군 Forge 요금제 안으로 묶임",
+   "url": "https://coreweave.com/forge-pricing"
+  }
+ ]
+}

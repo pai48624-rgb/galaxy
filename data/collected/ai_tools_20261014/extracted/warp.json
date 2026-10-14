@@ -1,0 +1,200 @@
+{
+ "company": "Warp",
+ "one_liner_ko": "코딩 에이전트 무리를 돌리는 클라우드 소프트웨어 팩토리용 오픈 인프라이자 에이전트 코딩용 현대식 터미널.",
+ "what_it_does_ko": "Warp는 터미널에서 출발한 에이전트형 개발 환경으로, 내장 코딩 에이전트나 Claude Code·Codex·Gemini CLI 같은 외부 CLI 에이전트를 쓸 수 있다. Warp Factories는 저장소·에이전트·모델·권한을 코드(factory.yaml)로 정의해 개발 전 과정에 에이전트를 돌리고, 평가·벤치마크·자가 개선을 기본 제공한다. 코드 리뷰, 버그 조사, 리팩터링·마이그레이션, 장애 대응을 주요 활용으로 내세운다. 클라이언트 코드는 오픈소스다.",
+ "key_features": [
+  "에이전트 코딩용 현대식 터미널",
+  "Warp Agent CLI",
+  "Warp Factories(팩토리 정의를 코드로)",
+  "평가·벤치마크·자가 개선 루프",
+  "API·CLI·SDK·MCP 제공",
+  "Slack·Linear·Jira 연동",
+  "Warp Drive 협업·내장 코드 에디터"
+ ],
+ "use_cases_ko": [
+  "모든 PR 1차 코드 리뷰",
+  "버그 재현과 수정 배분",
+  "알림 조사와 장애 대응"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Free $0/월, 추가 에이전트 사용은 종량제·자체 AI 사용 가능)",
+  "plans": [
+   {
+    "name": "Free",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "터미널 핵심 기능, 제한된 클라우드 에이전트",
+    "page_lang": "en"
+   },
+   {
+    "name": "Build",
+    "price": 20,
+    "currency": "USD",
+    "period": "month",
+    "limits": "월 $20 에이전트 사용량 포함(API 요금 기준)",
+    "page_lang": "en"
+   },
+   {
+    "name": "Build",
+    "price": 18,
+    "currency": "USD",
+    "period": "month(연간 결제)",
+    "limits": "월 $20 에이전트 사용량 포함",
+    "page_lang": "en"
+   },
+   {
+    "name": "Max",
+    "price": 200,
+    "currency": "USD",
+    "period": "month",
+    "limits": "월 $200 에이전트 사용량 포함",
+    "page_lang": "en"
+   },
+   {
+    "name": "Max",
+    "price": 180,
+    "currency": "USD",
+    "period": "month(연간 결제)",
+    "limits": "월 $200 에이전트 사용량 포함",
+    "page_lang": "en"
+   },
+   {
+    "name": "Business",
+    "price": 50,
+    "currency": "USD",
+    "period": "month",
+    "limits": "사용자당, 좌석당 $20 사용량 포함, 최대 25석",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": null,
+    "period": null,
+    "limits": "맞춤, 좌석 무제한",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://www.warp.dev/pricing"
+ },
+ "open_source": "AGPL v3 (UI 프레임워크는 MIT)",
+ "api": "있음",
+ "platforms": [
+  "CLI",
+  "웹",
+  "리눅스",
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://github.com/warpdotdev/warp",
+   "quote": "Warp's client codebase is open source and lives in this repository."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.warp.dev/",
+   "quote": "Open infrastructure for cloud software factories"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/warpdotdev/warp",
+   "quote": "is an agentic development environment, born out of the terminal. Use Warp's built-in coding agent, or bring your own CLI agent (Claude Code, Codex, Gemini CLI, and others)."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.warp.dev/",
+   "quote": "build on Warp: factories as code, any model or harness, with evals, benchmarks, and self-improvement built in."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.warp.dev/",
+   "quote": "warp terminal A modern terminal for agentic coding"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.warp.dev/",
+   "quote": "warp agent cli A powerful coding agent that works in any terminal"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.warp.dev/",
+   "quote": "built as a platform, not a vertical product or AI teammate."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.warp.dev/",
+   "quote": "evals, benchmarks, and self-improvement loops drive measurable gains."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.warp.dev/",
+   "quote": "code review First-pass review on every PR bug investigation Reproduce bugs and route fixes"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.warp.dev/pricing",
+   "quote": "Pricing for Warp\n Free\n $0 /month"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.warp.dev/pricing",
+   "quote": "Monthly plan\n $20 /month \n For developers who want flexible access"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.warp.dev/pricing",
+   "quote": "Annual plan\n $18 /month \n For developers who want flexible access"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.warp.dev/pricing",
+   "quote": "Monthly plan\n $200 /month \n For developers who need maximum AI capacity"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.warp.dev/pricing",
+   "quote": "Annual plan\n $180 /month \n For developers who need maximum AI capacity"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.warp.dev/pricing",
+   "quote": "$50 /user /month \n For teams scaling AI-powered development (up to 25 seats)"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/warpdotdev/warp",
+   "quote": "The rest of the code in this repository is licensed under the [AGPL v3](LICENSE-AGPL)."
+  },
+  {
+   "field": "api",
+   "url": "https://www.warp.dev/",
+   "quote": "03 API, CLI, SDK and MCP\n built as a platform, not a vertical product"
+  },
+  {
+   "field": "platforms",
+   "url": "https://www.warp.dev/",
+   "quote": "watch, steer, and hand off runs from web, mobile, terminal, or IDE."
+  },
+  {
+   "field": "platforms",
+   "url": "https://docs.warp.dev/",
+   "quote": "Warp URI scheme \n Warp for Linux \n Command Palette"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.warp.dev/",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "Free·Build $20·Max $200·Business $50/사용자·Enterprise, 유료 요금제에 월 에이전트 사용량(달러)이 포함되고 초과분은 추가 구매",
+   "diff": "구독에 API 요금 기준 사용량이 포함되는 사용량 결합형 구조",
+   "url": "https://www.warp.dev/pricing"
+  }
+ ]
+}

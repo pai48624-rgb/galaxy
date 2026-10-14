@@ -1,0 +1,86 @@
+{
+ "company": "OpenAI",
+ "one_liner_ko": "내 컴퓨터에서 로컬로 실행되는 OpenAI의 코딩 에이전트 Codex CLI.",
+ "what_it_does_ko": "Codex CLI는 OpenAI가 만든 코딩 에이전트로 사용자 컴퓨터에서 로컬로 실행된다. Mac·Linux는 설치 스크립트, Windows는 PowerShell로 설치하고 npm·Homebrew로도 설치할 수 있다. ChatGPT 계정으로 로그인해 Plus, Pro, Business, Edu, Enterprise 요금제의 일부로 쓰는 것을 권장하며, 추가 설정을 하면 API 키로도 쓸 수 있다. IDE 확장, 데스크톱 앱(codex app), 클라우드 에이전트 Codex Web도 따로 있다. (수집한 문서·요금 페이지는 메뉴만 있어 가격은 확인되지 않음)",
+ "key_features": [
+  "로컬 실행 코딩 에이전트",
+  "Mac·Linux·Windows 설치 스크립트, npm·Homebrew 설치",
+  "ChatGPT 계정 로그인으로 요금제 한도 사용",
+  "API 키 사용 지원",
+  "IDE 확장·데스크톱 앱·Codex Web 연계"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "Apache-2.0",
+ "api": "불명",
+ "platforms": [
+  "CLI",
+  "맥",
+  "윈도"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://github.com/openai/codex",
+   "quote": "<strong>Codex CLI</strong> is a coding agent from OpenAI that runs locally on your computer."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/openai/codex",
+   "quote": "is a coding agent from OpenAI that runs locally on your computer."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/openai/codex",
+   "quote": "We recommend signing into your ChatGPT account to use Codex as part of your Plus, Pro, Business, Edu, or Enterprise plan."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/openai/codex",
+   "quote": "Codex CLI can also be installed via the following package managers:"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/openai/codex",
+   "quote": "You can also use Codex with an API key, but this requires"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/openai/codex",
+   "quote": "If you want Codex in your code editor (VS Code, Cursor, Windsurf),"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/openai/codex",
+   "quote": "This repository is licensed under the [Apache-2.0 License](LICENSE)."
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/openai/codex",
+   "quote": "Run the following on Windows to install Codex CLI:"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/openai/codex",
+   "quote": "Run the following on Mac or Linux to install Codex CLI:"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://learn.chatgpt.com/docs/codex/cli",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "Codex CLI는 ChatGPT 계정 로그인으로 Plus·Pro·Business·Edu·Enterprise 요금제의 일부로 쓰거나 API 키로 사용",
+   "diff": "독자 구독이 아니라 ChatGPT 요금제에 묶이거나 API 종량제로 쓰는 구조",
+   "url": "https://github.com/openai/codex"
+  }
+ ]
+}

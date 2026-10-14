@@ -1,0 +1,112 @@
+{
+ "company": "Microsoft",
+ "one_liner_ko": "LLM 기반 AI 앱의 아이디어·프로토타입·테스트·평가·배포·모니터링 전 과정을 돕는 개발 도구 모음(2026-04-20 개발 종료, 2027-04-20 완전 종료 예정).",
+ "what_it_does_ko": "Prompt flow는 LLM 기반 AI 애플리케이션의 개발 주기 전체를 간소화하는 개발 도구 모음이다. LLM·프롬프트·파이썬 코드·도구를 실행 가능한 플로로 연결하고, LLM 호출 추적으로 디버깅한다. 큰 데이터셋으로 품질·성능을 평가하고 CI/CD에 테스트를 넣을 수 있으며, 원하는 서빙 플랫폼에 배포한다. SDK·CLI·VS Code 확장을 제공하고 Azure AI의 클라우드 버전과 연동된다. 공식 페이지에 따르면 기능 개발은 2026년 4월 20일 종료됐고 2027년 4월 20일 완전 종료되며 Microsoft Agent Framework로의 이전을 권장한다.",
+ "key_features": [
+  "LLM·프롬프트·파이썬 코드·도구를 잇는 실행 가능한 플로",
+  "LLM 호출 추적(tracing)과 디버깅",
+  "대용량 데이터셋으로 품질·성능 평가",
+  "CI/CD에 테스트·평가 통합",
+  "원하는 서빙 플랫폼으로 배포",
+  "Azure AI 클라우드 버전으로 팀 협업",
+  "pf CLI·파이썬 SDK·VS Code 확장"
+ ],
+ "use_cases_ko": [
+  "PDF와 대화하는 챗봇 같은 LLM 앱 개발·평가"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "MIT",
+ "api": "불명",
+ "platforms": [
+  "CLI"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://microsoft.github.io/promptflow/",
+   "quote": "© Copyright 2024, Microsoft."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://microsoft.github.io/promptflow/",
+   "quote": "Prompt flow is a suite of development tools designed to streamline the end-to-end development cycle of LLM-based AI applications"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://microsoft.github.io/promptflow/",
+   "quote": "Prompt Flow feature development ended on April 20, 2026. The feature will be fully retired on April 20, 2027."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://microsoft.github.io/promptflow/",
+   "quote": "Recommended action: Migrate your Prompt Flow workloads to Microsoft Agent Framework before April 20, 2027."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://microsoft.github.io/promptflow/",
+   "quote": "This documentation site contains guides for prompt flow sdk, cli and vscode extension users."
+  },
+  {
+   "field": "key_features",
+   "url": "https://microsoft.github.io/promptflow/",
+   "quote": "Create flows that link LLMs , prompts , Python code and other tools together in a executable workflow."
+  },
+  {
+   "field": "key_features",
+   "url": "https://microsoft.github.io/promptflow/",
+   "quote": "Debug and iterate your flows , especially tracing interaction with LLMs with ease."
+  },
+  {
+   "field": "key_features",
+   "url": "https://microsoft.github.io/promptflow/",
+   "quote": "Evaluate your flows , calculate quality and performance metrics with larger datasets."
+  },
+  {
+   "field": "key_features",
+   "url": "https://microsoft.github.io/promptflow/",
+   "quote": "Integrate the testing and evaluation into your CI/CD system to ensure quality of your flow."
+  },
+  {
+   "field": "key_features",
+   "url": "https://microsoft.github.io/promptflow/",
+   "quote": "Deploy your flows to the serving platform you choose"
+  },
+  {
+   "field": "key_features",
+   "url": "https://microsoft.github.io/promptflow/",
+   "quote": "Collaborate with your team by leveraging the cloud version of Prompt flow in Azure AI ."
+  },
+  {
+   "field": "key_features",
+   "url": "https://microsoft.github.io/promptflow/",
+   "quote": "Command line Interface reference: pf"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://microsoft.github.io/promptflow/",
+   "quote": "E2E development tutorial: chat with PDF"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/microsoft/promptflow",
+   "quote": "[![License: MIT]"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/microsoft/promptflow",
+   "quote": "pf flow init --flow ./my_chatbot --type chat"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://microsoft.github.io/promptflow/",
+   "quote": "hreflang: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

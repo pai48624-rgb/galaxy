@@ -1,13 +1,13 @@
 {
- "company": "zai-org",
- "one_liner_ko": "zai-org가 Hugging Face에 MIT 라이선스로 공개한 대화형 텍스트 생성 모델 GLM-4.7-Flash.",
- "what_it_does_ko": "받아 둔 페이지는 GLM-4.7-Flash의 Hugging Face 모델 페이지 메타데이터 위주로, 모델 카드 본문 설명은 거의 없다. 메타데이터상 대화형 텍스트 생성 모델이며 영어·중국어 태그가 붙어 있고 MIT 라이선스다. 채팅 템플릿에 도구(함수) 호출과 사고(think) 모드가 들어 있고, SWE-bench Verified 59.2, GPQA Diamond 75.2 평가 결과가 올라 있다. zai-org를 포함한 여러 추론 제공업체를 통해 호출할 수 있다.",
+ "company": "zai-org (Z.ai, Hugging Face 조직명)",
+ "one_liner_ko": "zai-org가 Hugging Face에 공개한 텍스트 생성 모델 GLM-4.7-Flash.",
+ "what_it_does_ko": "GLM-4.7-Flash는 zai-org가 Hugging Face에 올린 텍스트 생성(대화형) 모델로, transformers 라이브러리로 쓸 수 있다. 채팅 템플릿에 도구(함수) 호출과 사고(think) 구간이 들어 있다. 모델 태그상 언어는 영어·중국어이며 라이선스는 MIT다. Hugging Face Inference Providers(zai-org, novita, featherless-ai, deepinfra)를 통해 호출할 수 있다.",
  "key_features": [
-  "대화형 텍스트 생성",
-  "도구(함수) 호출 지원",
-  "사고(think) 모드 켜기·끄기",
-  "SWE-bench Verified 59.2 평가 결과",
-  "Hugging Face 추론 제공업체로 호출"
+  "텍스트 생성·대화",
+  "도구(함수) 호출",
+  "사고(추론) 모드 채팅 템플릿",
+  "transformers 라이브러리 지원",
+  "Hugging Face Inference Providers로 호출"
  ],
  "use_cases_ko": [],
  "pricing": {
@@ -17,20 +17,58 @@
  },
  "open_source": "MIT",
  "api": "있음",
- "platforms": ["API"],
+ "platforms": [
+  "API"
+ ],
  "korean_support": "없음(영어 등만)",
  "evidence": [
-  {"field": "company", "url": "https://huggingface.co/zai-org/GLM-4.7-Flash", "quote": "zai-org/GLM-4.7-Flash · Hugging Face "},
-  {"field": "one_liner_ko", "url": "https://huggingface.co/zai-org/GLM-4.7-Flash", "quote": "\"tags\":[\"transformers\",\"safetensors\",\"glm4_moe_lite\",\"text-generation\",\"conversational\",\"en\",\"zh\",\"arxiv:2508.06471\",\"license:mit\""},
-  {"field": "what_it_does_ko", "url": "https://huggingface.co/zai-org/GLM-4.7-Flash", "quote": "\"task_id\":\"swe_bench_%_resolved\"},\"value\":59.2"},
-  {"field": "key_features", "url": "https://huggingface.co/zai-org/GLM-4.7-Flash", "quote": "You may call one or more functions to assist with the user query."},
-  {"field": "key_features", "url": "https://huggingface.co/zai-org/GLM-4.7-Flash", "quote": "'</think>' if (enable_thinking is defined and not enable_thinking) else '<think>'"},
-  {"field": "key_features", "url": "https://huggingface.co/zai-org/GLM-4.7-Flash", "quote": "\"features\":{\"structuredOutput\":false,\"toolCalling\":true}"},
-  {"field": "open_source", "url": "https://huggingface.co/zai-org/GLM-4.7-Flash", "quote": "\"conversational\",\"en\",\"zh\",\"arxiv:2508.06471\",\"license:mit\""},
-  {"field": "api", "url": "https://huggingface.co/zai-org/GLM-4.7-Flash", "quote": "\"availableInferenceProviders\":[{\"provider\":\"zai-org\",\"modelStatus\":\"live\",\"providerStatus\":\"live\",\"providerId\":\"glm-4.7-flashx\""},
-  {"field": "platforms", "url": "https://huggingface.co/zai-org/GLM-4.7-Flash", "quote": "\"providerId\":\"zai-org/glm-4.7-flash\",\"task\":\"conversational\""},
-  {"field": "korean_support", "url": "https://huggingface.co/zai-org/GLM-4.7-Flash", "quote": "\"text-generation\",\"conversational\",\"en\",\"zh\""}
+  {
+   "field": "company",
+   "url": "https://huggingface.co/zai-org/GLM-4.7-Flash",
+   "quote": "\"downloadsAllTime\":14677013,\"id\":\"zai-org/GLM-4.7-Flash\""
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://huggingface.co/zai-org/GLM-4.7-Flash",
+   "quote": "\"pipeline_tag\":\"text-generation\",\"library_name\":\"transformers\""
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://huggingface.co/zai-org/GLM-4.7-Flash",
+   "quote": "\"tags\":[\"transformers\",\"safetensors\",\"glm4_moe_lite\",\"text-generation\",\"conversational\",\"en\",\"zh\""
+  },
+  {
+   "field": "key_features",
+   "url": "https://huggingface.co/zai-org/GLM-4.7-Flash",
+   "quote": "You may call one or more functions to assist with the user query."
+  },
+  {
+   "field": "key_features",
+   "url": "https://huggingface.co/zai-org/GLM-4.7-Flash",
+   "quote": "\"features\":{\"structuredOutput\":false,\"toolCalling\":true}"
+  },
+  {
+   "field": "open_source",
+   "url": "https://huggingface.co/zai-org/GLM-4.7-Flash",
+   "quote": "\"arxiv:2508.06471\",\"license:mit\""
+  },
+  {
+   "field": "api",
+   "url": "https://huggingface.co/zai-org/GLM-4.7-Flash",
+   "quote": "\"availableInferenceProviders\":[{\"provider\":\"zai-org\",\"modelStatus\":\"live\""
+  },
+  {
+   "field": "platforms",
+   "url": "https://huggingface.co/zai-org/GLM-4.7-Flash",
+   "quote": "\"availableInferenceProviders\":[{\"provider\":\"zai-org\",\"modelStatus\":\"live\""
+  },
+  {
+   "field": "korean_support",
+   "url": "https://huggingface.co/zai-org/GLM-4.7-Flash",
+   "quote": "html lang: 없음\nhreflang: 없음\n화면에 보이는 언어 이름: English"
+  }
  ],
  "mismatch": [],
- "plan_change": []
+ "plan_change": [],
+ "note": "모델 페이지 본문이 대부분 채팅 템플릿·메타데이터 JSON. pricing 구간은 Hugging Face 플랫폼 요금 페이지인데 내용이 장식 기호뿐이라 가격 없음. 제공사 데이터에 pricingOutput 0.4 가 있으나 단위·통화가 없어 기록 안 함."
 }

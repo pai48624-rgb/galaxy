@@ -1,0 +1,114 @@
+=== [home] https://www.magickml.com/
+Search Ctrl K 
+ Support Try Now Oneirocom/Magick
+ - - 
+ Support Try Now Oneirocom/Magick
+ - - 
+ Open Now in Beta! 
+ Create AI Agents with Magick
+ Magick is a powerful visual IDE for programming and deploying AI Agents. Design, develop, and deploy intelligent agents with ease using our intuitive node-based interface.
+ Documentation View on GitHub 
+ Open-Source Flexibility
+ Dive into a community-driven development experience. Contribute, customize, and extend Magick's capabilities. Benefit from continuous improvements and innovations from a passionate developer community.
+ Platform Agnostic
+ Freedom to choose your preferred LLM. Seamlessly integrate and compare various models like GPT-4, Claude, or open-source alternatives. Optimize your AI's performance by selecting the best model for each task.
+ Visual Node Builder
+ Transform complex AI logic into intuitive visual workflows. Drag, drop, and connect nodes to create sophisticated AI behaviors without writing a single line of code. Perfect for both beginners and experienced developers.
+ Powerful Document Processing
+ Effortlessly handle and analyze complex documents and datasets. Extract insights, summarize content, and generate responses based on embedded knowledge. Ideal for building AI assistants with domain-specific expertise.
+ Rapid-Prototyping
+ Accelerate your AI development cycle. Quickly test ideas, iterate on designs, and refine your agents' behavior in real-time. Turn concepts into functional prototypes in minutes, not days.
+ Deep Customization
+ Tailor every aspect of your AI to meet specific requirements. Fine-tune models, create custom nodes, and design unique behaviors. Build AI solutions that perfectly align with your vision and business needs.
+ User-Friendly Interface
+ Designed for accessibility without compromising on power. Whether you're a seasoned AI engineer or new to the field, Magick's intuitive interface makes AI development approachable and enjoyable for all skill levels.
+ Real-Time & Event-Driven
+ Create responsive AI agents that react instantly to events and user interactions. Test and refine your agents' behavior in real-time within the AIDE, ensuring smooth and natural interactions in production.
+ Scalable Deployment
+ Build once, scale effortlessly. Magick's architecture ensures your AI agents can handle growing user bases and increasing workloads. Deploy with confidence, knowing your solution can expand to meet demand.
+ Multi-Platform Integrations
+ Seamlessly connect your AI agents to popular platforms and tools. From Discord bots to Unreal Engine NPCs, Google AI services to custom APIs, Magick empowers you to create AI that works across diverse ecosystems.
+ Comprehensive Tooling
+ Everything you need for the full AI development lifecycle. From initial concept to final deployment, Magick provides a rich set of tools for building, testing, debugging, and monitoring your AI agents.
+ Metered Billing
+ Fair and flexible pricing that scales with your success. Only pay for the resources you use, making it easy to start small and grow your AI projects organically. Transparent pricing ensures cost-effective development and deployment.
+
+=== [meta] https://www.magickml.com/
+html lang: 없음
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/Oneirocom/Magick
+<p align="center"><img src="apps/docs/readme-files/magick-github-banner.png" /></p>
+
+<p align="center">
+  <a href="https://bit.ly/magickdiscordgh">
+    <img src="https://dcbadge.vercel.app/api/server/tacYgMnuzP?style=social" alt="Join Discord" />
+  </a>
+  <a href="https://twitter.com/magickml">
+    <img src="https://img.shields.io/twitter/follow/magickml?style=social" alt="Follow on Twitter" />
+  </a>
+  <a href="https://www.linkedin.com/company/magickml/about/">
+    <img src="https://img.shields.io/badge/LinkedIn-Follow-blue?style=social&logo=linkedin" alt="Follow on LinkedIn" />
+  </a>
+  <a href="https://www.youtube.com/@magickml">
+    <img src="https://img.shields.io/badge/YouTube-Subscribe-red?style=social&logo=youtube" alt="Subscribe on YouTube" />
+  </a>
+</p>
+
+<h3 align = "center">Magick is a groundbreaking visual AIDE (Artificial Intelligence Development Environment) for no-code data pipelines and multimodal agents. Magick can connect to other services and comes with nodes and templates well-suited for intelligent agents, chatbots, complex reasoning systems and realistic characters.</h3>
+
+## 🗝 Key Features
+
+- Realtime agents which can perform actions on their own, interact with users and other agents in different modalities with a unified memory and self
+- Social connectors to Discord, Twitter and Twilio -- Zoom, Google Meet, Reddit, Slack connectors will be available soon as plugins!
+- Search Google, Wikipedia and the Semantic Web
+- Many included powertools, including voice and image generation and vector search
+- Powerful graph-based IDE for complex data pipelines
+- Graphs can be embedded in subgraphs and shared for rapid community development.
+
+## 🔮 Magick: Automate, Build, and Bring Your Ideas to Life with AI.
+
+With Magick, you can unleash the power of AI without needing to know how to code everything in a command line interface. Using our visual node based environment, you can connect to popular services and explore a world of pre-built nodes and connectors to bring your vision to life.
+
+<p align="center"><img src="apps/docs/readme-files/ui.png" /></p>
+
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=Xy7tMmKluvE" target="_blank">
+    <img src="https://img.youtube.com/vi/Xy7tMmKluvE/0.jpg" alt="Magick - AI for Mere Mortals" style="width:65%;max-width:640px;" />
+  </a>
+  <br />
+  ▶️ <strong>Click the image above to watch the <a href="https://www.youtube.com/watch?v=Xy7tMmKluvE" target="_blank">video</a></strong>
+</p>
+
+## Core Concepts
+
+### Spells
+
+A spell is a pipeline that describes data moving from one place to another, running through different processes we call "nodes", via wires we call "connections". In Magick, the collection of data, nodes, variables, and presets for each graph is known as a "spell".
+Spell is not a machine learning term.
+
+We just like it. Spells can be imported and exported at any time. Spells in their raw form are JSON, a standard format that is easy to share.
+
+### Nodes
+
+**At the core, Magick is a system for taking in data, doing stuff to it, and then sending the final data out.**
+
+This "stuff" is called a "transformation", the data transforms from one thing into the next. The "stuff" that is happening to the data is a black box that takes something in, anything, and returns something out.
+
+We call the black box where the transformstion takes place a "node". Nodes are the building blocks of Magick.
+
+### Creating Nodes
+
+Nodes are created in the composer window of the "Spells" tab. You can right-click in the composer and add nodes from the context menu. You can also drag and drop nodes from the "Nodes" tab into the composer. Nodes can be dragged and dropped around the composer to re-arrange them.
+
+Nodes can be deleted by right-clicking on them and selecting "Delete".
+
+### Node Types
+
+- Input Node
+- Prompt Template
+- Code Node: Lets you define both inputs and outputs.
+- Generator Node: Lets you define your own input sockets and then work with that data inside of the node.
+- Wait For All Node: Used to wait for different execution branches to complete before joining back into a single branch -- this is a good way to do several slow tasks at once.
+- ...and lots more! (if you have 

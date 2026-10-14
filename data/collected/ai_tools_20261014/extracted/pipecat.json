@@ -1,0 +1,143 @@
+{
+ "company": "Daily, Inc.",
+ "one_liner_ko": "음성·멀티모달 AI 에이전트를 만드는 가장 널리 쓰이는 오픈소스 생태계(Daily가 관리)",
+ "what_it_does_ko": "Pipecat은 실시간 음성·멀티모달 대화형 에이전트를 만드는 오픈소스 파이썬 프레임워크다. 음성·영상·텍스트·이미지를 하나의 파이프라인에서 다루고, 200개 이상 공급자의 음성·언어·비전 서비스를 바꿔 끼울 수 있다. 끼어들기 처리·턴 감지·문맥 관리로 자연스러운 대화를 만들고, 여러 에이전트 간 인계·병렬 처리를 지원한다. 프레임워크는 BSD-2 라이선스로 무료이며 자체 호스팅하거나 관리형 Pipecat Cloud·Enterprise에 배포한다.",
+ "key_features": [
+  "음성·영상·텍스트·이미지를 한 파이프라인에서 프레임 단위 제어",
+  "200개 이상 공급자·서비스 통합, 보통 코드 한 줄로 교체",
+  "실시간 스트리밍 처리(말하는 중에 응답 시작)",
+  "끼어들기 처리·턴 감지·문맥 관리",
+  "멀티 에이전트(인계·병렬·사이드카)와 Pipecat Flows",
+  "WebRTC·SIP·PSTN 전송, 클라이언트 SDK(JS·React·React Native·iOS·Android·C++)",
+  "pipecat init CLI로 프로젝트 생성·코딩 에이전트 연동(MCP)"
+ ],
+ "use_cases_ko": [
+  "음성 비서",
+  "고객 접수·지원 봇 같은 업무 에이전트",
+  "코치·회의 도우미 같은 AI 동반자"
+ ],
+ "pricing": {
+  "free_tier": "있음 (프레임워크 BSD-2 무료, 사용하는 서비스 비용만 지불)",
+  "plans": [],
+  "pricing_url": "https://docs.pipecat.ai/overview/introduction"
+ },
+ "open_source": "BSD-2",
+ "api": "불명",
+ "platforms": [
+  "CLI",
+  "웹",
+  "iOS",
+  "안드로이드"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.pipecat.ai/",
+   "quote": "© 2026 Daily, Inc."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.pipecat.ai/",
+   "quote": "Pipecat is the most widely used open source ecosystem for building voice and multimodal AI agents"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/pipecat-ai/pipecat",
+   "quote": "**Pipecat** is an open-source Python framework for building real-time voice and multimodal conversational agents."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.pipecat.ai/overview/introduction",
+   "quote": "The framework is free to use under the BSD-2 license, and works with any AI provider and any hosting environment — you pay only for the services you choose."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.pipecat.ai/",
+   "quote": "Coordinate voice, video, text, and images in one pipeline, with frame-level control over every step of the conversation."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.pipecat.ai/",
+   "quote": "Swap speech, language, and vision services from any of 200+ integrated providers and services — usually one line of code."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.pipecat.ai/",
+   "quote": "so the agent starts responding while you're still talking."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.pipecat.ai/",
+   "quote": "Interruption handling, turn detection, and smart context management make agents feel natural to talk to."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.pipecat.ai/",
+   "quote": "Hand off to subagents for long-running tools and complex tasks, and use Pipecat Flows when a conversation needs to follow a defined path."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.pipecat.ai/",
+   "quote": "Any Transport: WebRTC, SIP, PSTN"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.pipecat.ai/overview/introduction",
+   "quote": "Client SDKs for JavaScript, React, React Native, iOS, Android, and C++."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.pipecat.ai/",
+   "quote": "It registers the Pipecat Context Hub's MCP server"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/pipecat-ai/pipecat",
+   "quote": "**Voice Assistants** – natural, streaming conversations with AI"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/pipecat-ai/pipecat",
+   "quote": "**Business Agents** – customer intake, support bots, guided flows"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/pipecat-ai/pipecat",
+   "quote": "**AI Companions** – coaches, meeting assistants, characters"
+  },
+  {
+   "field": "pricing",
+   "url": "https://docs.pipecat.ai/overview/introduction",
+   "quote": "The framework is free to use under the BSD-2 license"
+  },
+  {
+   "field": "open_source",
+   "url": "https://docs.pipecat.ai/overview/introduction",
+   "quote": "free to use under the BSD-2 license"
+  },
+  {
+   "field": "platforms",
+   "url": "https://www.pipecat.ai/",
+   "quote": "Pipecat's CLI scaffolds a runnable project and wires up your coding agent."
+  },
+  {
+   "field": "platforms",
+   "url": "https://docs.pipecat.ai/overview/introduction",
+   "quote": "Client SDKs for JavaScript, React, React Native, iOS, Android, and C++."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.pipecat.ai/",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "프레임워크는 BSD-2 라이선스 오픈소스로 무료, 사용하는 서비스 비용만 지불(관리형 Pipecat Cloud·Enterprise는 별도, 가격은 페이지에 없음)",
+   "diff": "기존 '프리미엄(무료+유료 구독)'과 달리 핵심 제품이 무료 오픈소스",
+   "url": "https://docs.pipecat.ai/overview/introduction"
+  }
+ ],
+ "plan_change": []
+}

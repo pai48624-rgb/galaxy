@@ -1,0 +1,47 @@
+{
+ "company": "WhyLabs, Inc.",
+ "one_liner_ko": "AI 관측성 회사 WhyLabs는 운영을 종료했고, 전체 플랫폼과 whylogs·langkit을 오픈소스로 남겼다.",
+ "what_it_does_ko": "WhyLabs, Inc.는 운영을 중단한다고 공식 사이트에 밝혔다. 전체 WhyLabs 플랫폼은 AI 관측성 연구의 다음 단계를 돕기 위해 오픈소스로 공개되었다. 데이터 로깅 오픈 표준 whylogs는 데이터셋 요약(프로필)을 만들어 변화 추적, 데이터 제약 조건, 요약 통계 시각화를 지원한다. LLM 모니터링용 오픈소스 툴킷 langkit도 계속 제공된다.",
+ "key_features": [
+  "전체 WhyLabs 플랫폼 오픈소스 공개",
+  "whylogs 데이터 로깅(프로필 생성)",
+  "데이터셋 변화 추적",
+  "데이터 제약 조건(data constraints)",
+  "요약 통계 시각화",
+  "LLM 모니터링·보안 툴킷 langkit"
+ ],
+ "use_cases_ko": [
+  "모델 입력 특성의 데이터 드리프트 탐지",
+  "모델 입력·데이터 파이프라인의 데이터 품질 검증",
+  "조직 전반의 데이터 감사·거버넌스"
+ ],
+ "pricing": {
+  "free_tier": "불명 (회사 운영 종료, 요금 페이지도 종료 안내문만 표시)",
+  "plans": [],
+  "pricing_url": "https://whylabs.ai/pricing"
+ },
+ "open_source": "Apache 2 (whylogs)",
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://whylabs.ai", "quote": "WhyLabs, Inc. is discontinuing operations."},
+  {"field": "one_liner_ko", "url": "https://whylabs.ai", "quote": "The complete WhyLabs platform has been open sourced to help support next iterations of AI observability research."},
+  {"field": "what_it_does_ko", "url": "https://whylabs.ai", "quote": "After an incredible journey, we are closing this chapter of our story. WhyLabs, Inc. is discontinuing operations."},
+  {"field": "what_it_does_ko", "url": "https://github.com/whylabs/whylogs", "quote": "whylogs is an open source library for logging any kind of data."},
+  {"field": "what_it_does_ko", "url": "https://whylabs.ai", "quote": "The open source toolkit for monitoring LLMs, langkit will continue to help teams monitor and secure LLMs while preserving privacy."},
+  {"field": "key_features", "url": "https://whylabs.ai", "quote": "The complete WhyLabs platform has been open sourced"},
+  {"field": "key_features", "url": "https://github.com/whylabs/whylogs", "quote": "users are able to generate summaries of their datasets (called _whylogs profiles_)"},
+  {"field": "key_features", "url": "https://github.com/whylabs/whylogs", "quote": "1. Track changes in their dataset\n2. Create _data constraints_ to know whether their data looks the way it should\n3. Quickly visualize key summary statistics about their datasets"},
+  {"field": "use_cases_ko", "url": "https://github.com/whylabs/whylogs", "quote": "- Detect data drift in model input features"},
+  {"field": "use_cases_ko", "url": "https://github.com/whylabs/whylogs", "quote": "- Validate data quality in model inputs or in a data pipeline"},
+  {"field": "use_cases_ko", "url": "https://github.com/whylabs/whylogs", "quote": "- Enable data auditing and governance across the organization"},
+  {"field": "pricing", "url": "https://whylabs.ai/pricing", "quote": "While WhyLabs as a company is ending, the importance of tools that enable responsible AI adoption is ever growing."},
+  {"field": "open_source", "url": "https://github.com/whylabs/whylogs", "quote": "<img src=\"http://img.shields.io/:license-Apache%202-blue.svg\" alt=\"License\">"},
+  {"field": "korean_support", "url": "https://whylabs.ai", "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [
+  {"official": "WhyLabs, Inc.는 운영을 중단했고 전체 플랫폼을 오픈소스로 공개, 요금 페이지(/pricing, /plans)는 종료 안내문만 표시", "diff": "기존 분류 '오픈소스 + 클라우드 매니지드 유료 플랜'과 달리 유료 관리형 서비스가 더 이상 없음(서비스 종료)", "url": "https://whylabs.ai/pricing"}
+ ],
+ "plan_change": []
+}

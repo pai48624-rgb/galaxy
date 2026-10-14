@@ -1,0 +1,191 @@
+{
+ "company": "LiveKit",
+ "one_liner_ko": "음성·영상·피지컬 AI 에이전트를 만드는 오픈소스 프레임워크이자 클라우드 플랫폼",
+ "what_it_does_ko": "LiveKit Agents는 서버에서 실행되는 실시간 프로그래머블 참가자를 만드는 프레임워크로, 보고 듣고 이해하는 대화형 멀티모달 음성 에이전트를 만든다. STT·LLM·TTS·Realtime API를 골라 조합하고, 전화(텔레포니) 스택과 연동해 전화를 걸고 받을 수 있다. 전체 스택이 오픈소스라 자체 서버에서 돌릴 수 있고, LiveKit Cloud에서 배포·관측·시뮬레이션을 제공한다.",
+ "key_features": [
+  "STT·LLM·TTS·Realtime API를 자유롭게 조합하는 연동 생태계",
+  "디스패치 API로 작업 스케줄링·분배",
+  "전화 스택 연동(전화 걸기·받기)",
+  "트랜스포머 모델 기반 의미적 턴 감지로 끼어들기 감소",
+  "MCP 기본 지원",
+  "테스트 프레임워크와 판정(judge) 내장",
+  "클라우드: 에이전트 배포·관측·시뮬레이션, 추론 크레딧"
+ ],
+ "use_cases_ko": [
+  "의료 접수 데스크 에이전트(접수·예약·사람 연결)",
+  "호텔 리셉션 에이전트(객실·식당 예약, 취소, 문의)",
+  "드라이브스루 음성 주문 에이전트"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Build $0/월, 카드 불필요, 무료 전화번호 1개)",
+  "plans": [
+   {
+    "name": "Build",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "에이전트 배포·관측·시뮬레이션, 추론 크레딧, 전화번호 1개, 커뮤니티 지원",
+    "page_lang": "en"
+   },
+   {
+    "name": "Ship",
+    "price": 50,
+    "currency": "USD",
+    "period": "month",
+    "limits": "시작가, 팀 협업·커스텀 음성·이메일 지원",
+    "page_lang": "en"
+   },
+   {
+    "name": "Scale",
+    "price": 500,
+    "currency": "USD",
+    "period": "month",
+    "limits": "시작가, 역할 기반 접근·리전 고정·HIPAA·추론 할인",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": "USD",
+    "period": "month",
+    "limits": "맞춤",
+    "page_lang": "en"
+   },
+   {
+    "name": "에이전트 세션(분당)",
+    "price": 0.01,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "Build/Ship 기준 분당 $0.0100, 모델 비용 별도",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://livekit.com/pricing"
+ },
+ "open_source": "오픈소스(라이선스 이름은 본문에 없음)",
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://livekit.com/agents",
+   "quote": "© 2026 LiveKit. Engineered and designed worldwide. All rights reserved."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://livekit.com/agents",
+   "quote": "The open source framework and cloud platform for voice, video, and physical AI agents."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/livekit/agents",
+   "quote": "The Agent Framework is designed for building realtime, programmable participants\nthat run on servers."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/livekit/agents",
+   "quote": "Use it to create conversational, multi-modal voice\nagents that can see, hear, and understand."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/livekit/agents",
+   "quote": "A comprehensive ecosystem to mix and match the right STT, LLM, TTS, and Realtime API to suit your use case."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/livekit/agents",
+   "quote": "Built-in task scheduling and distribution with [dispatch APIs]"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/livekit/agents",
+   "quote": "allowing your agent to make calls to or receive calls from phones."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/livekit/agents",
+   "quote": "Uses a transformer model to detect when a user is done with their turn, helps to reduce interruptions."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/livekit/agents",
+   "quote": "**MCP support**: Native support for MCP."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/livekit/agents",
+   "quote": "Write tests and use judges to ensure your agent is performing as expected."
+  },
+  {
+   "field": "key_features",
+   "url": "https://livekit.com/pricing",
+   "quote": "Agent deployment\n Agent observability\n Agent simulations\n Inference credits"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://livekit.com/agents",
+   "quote": "A medical front-desk agent that handles intake, authenticates returning patients, books appointments"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://livekit.com/agents",
+   "quote": "A boutique-hotel receptionist agent."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://livekit.com/agents",
+   "quote": "A drive-thru ordering agent that takes the order over voice"
+  },
+  {
+   "field": "pricing",
+   "url": "https://livekit.com/pricing",
+   "quote": "Start for free No credit card required\n $0/mo"
+  },
+  {
+   "field": "pricing",
+   "url": "https://livekit.com/pricing",
+   "quote": "Telephony (1 free number)"
+  },
+  {
+   "field": "pricing",
+   "url": "https://livekit.com/pricing",
+   "quote": "Start building STARTING AT\n $50/mo"
+  },
+  {
+   "field": "pricing",
+   "url": "https://livekit.com/pricing",
+   "quote": "Start building STARTING AT\n $500/mo"
+  },
+  {
+   "field": "pricing",
+   "url": "https://livekit.com/pricing",
+   "quote": "Agent session \n $ 0.0100 /min"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/livekit/agents",
+   "quote": "**Open-source**: Fully open-source, allowing you to run the entire stack on your own servers"
+  },
+  {
+   "field": "api",
+   "url": "https://livekit.com/about",
+   "quote": "a full ecosystem of APIs and tools for multimodal computing"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/livekit/agents",
+   "quote": "Build client applications using LiveKit's open-source SDK ecosystem, supporting all major platforms."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://livekit.com/agents",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

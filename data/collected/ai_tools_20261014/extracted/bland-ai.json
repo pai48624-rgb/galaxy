@@ -1,0 +1,175 @@
+{
+ "company": "Bland",
+ "one_liner_ko": "실수가 소송이나 환자 위험으로 이어지는 규제 업종의 고위험 전화 통화를 자동화하는 기업용 음성 AI 플랫폼",
+ "what_it_does_ko": "Bland는 기업용 음성 AI 플랫폼으로, 실제 대화를 대규모로 처리하는 AI 전화 에이전트를 만들고 운영·모니터링한다. 인바운드·아웃바운드 모두 지원하고 전화·SMS·웹에 배포하며 어떤 시스템과도 연결한다. 음성 인식·LLM·음성 합성을 모두 자체 모델로 돌려 데이터가 제3자로 나가지 않는다고 설명한다. 의료·보험·금융 등 규제 업종의 콜센터 업무(IVR 대체, 예약, 결제·수금 등)를 겨냥한다.",
+ "key_features": [
+  "복잡한 대화도 처리하는 엔드투엔드 에이전트 구축, 전화·SMS·웹 배포",
+  "에이전트 결정 이유까지 보는 관측(observability)",
+  "실제 통화에 영향 없이 변경을 테스트·측정",
+  "STT·LLM·TTS 모두 자체 모델로 실행",
+  "40개 이상 언어, 23개 언어 실시간 번역, 통화 중 언어 전환",
+  "SOC 2·HIPAA·PCI DSS 인증, 자체 호스팅·온프레미스 옵션",
+  "Conversational Pathways·웹훅·MCP 서버·CLI·웹 에이전트 SDK"
+ ],
+ "use_cases_ko": [
+  "IVR(전화 메뉴) 대체로 인바운드 문의 응대",
+  "병원 등의 예약·확인·변경 전화",
+  "결제·청구·연체 수금 전화"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Start: 플랫폼 요금 $0, 크레딧 2개 + 인바운드 번호, 카드 불필요, 통화는 분당 과금)",
+  "plans": [
+   {
+    "name": "Start",
+    "price": 0.14,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "분당 $0.14, 플랫폼 요금 $0, 동시 통화 10, 하루 100통",
+    "page_lang": "en"
+   },
+   {
+    "name": "Build",
+    "price": 0.12,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "분당 $0.12 + 월 플랫폼 요금 $299, 동시 통화 50, 하루 2,000통",
+    "page_lang": "en"
+   },
+   {
+    "name": "Build 플랫폼 요금",
+    "price": 299,
+    "currency": "USD",
+    "period": "month",
+    "limits": "Build 요금제 월 플랫폼 요금",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "물량 계약 맞춤",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://www.bland.ai/pricing"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "CLI",
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.bland.ai/pricing",
+   "quote": "© 2026 Bland. All rights reserved."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.bland.ai/",
+   "quote": "Bland automates the calls where a single misstep can mean a lawsuit or a patient in danger."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.bland.ai/",
+   "quote": "Bland is an enterprise voice AI platform. Customers use it to build, run, and monitor AI phone agents that hold real conversations at scale."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.bland.ai/",
+   "quote": "Because calls don’t ever leave to a 3rd party, your customer data never trains other models"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.bland.ai/",
+   "quote": "Deploy them on phone, SMS, and web, and connect them to any system."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.bland.ai/",
+   "quote": "See exactly why your agent made each decision, so you can diagnose and fix things fast."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.bland.ai/",
+   "quote": "Make your agent better without risking your live calls."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.bland.ai/",
+   "quote": "The only voice AI that runs entirely on its own models"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.bland.ai/",
+   "quote": "Bland supports 40+ languages natively, with real-time translation available in 23 of them."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.bland.ai/",
+   "quote": "Self-hosted and on-premises deployments are available for the most sensitive workloads."
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.bland.ai/welcome-to-bland",
+   "quote": "Bland MCP Server"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.bland.ai/",
+   "quote": "Answer inbound calls without a phone tree, from order status to fraud disputes."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.bland.ai/",
+   "quote": "Book, confirm, and reschedule appointments"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.bland.ai/",
+   "quote": "Take payments over the phone and work every past-due account."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.bland.ai/pricing",
+   "quote": "2 credits + an inbound number ($15/mo value).\n $0.14 /min \n $0 platform fee. No card required."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.bland.ai/pricing",
+   "quote": "$0.12 /min \n $299/month platform fee"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.bland.ai/pricing",
+   "quote": "Daily Cap 100 calls 2,000 calls Unlimited"
+  },
+  {
+   "field": "api",
+   "url": "https://docs.bland.ai/welcome-to-bland",
+   "quote": "Reach Bland from your own code or your coding agent with SDKs, MCP, and API references."
+  },
+  {
+   "field": "platforms",
+   "url": "https://docs.bland.ai/welcome-to-bland",
+   "quote": "Command Line Interface"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.bland.ai/",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: English"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "Start는 플랫폼 요금 $0에 통화 분당 $0.14, Build는 월 $299 플랫폼 요금 + 분당 $0.12, Enterprise는 물량 계약",
+   "diff": "기존 '무료+유료 구독' 분류와 달리 통화 분당 종량제가 중심이고 구독은 플랫폼 요금 형태로 붙음",
+   "url": "https://www.bland.ai/pricing"
+  }
+ ]
+}

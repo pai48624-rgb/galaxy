@@ -1,0 +1,86 @@
+{
+ "company": "Hugging Face",
+ "one_liner_ko": "트랜스포머 모델 사전학습을 쉽게 해 주는 라이브러리.",
+ "what_it_does_ko": "Nanotron은 트랜스포머 모델을 사전학습하기 위한 라이브러리로, 사용자 데이터셋으로 모델을 사전학습할 수 있는 간단하고 유연한 API를 제공한다. 쉬운 사용·속도·확장성을 원칙으로 설계됐다고 설명한다. 예제로 8×H100 단일 노드에서 작은 Llama 모델을 약 10분 만에 학습하는 명령을 제시하고, Slurm 기반 멀티노드 학습 가이드도 제공한다. 학습한 체크포인트로 텍스트 생성을 실행할 수 있으며 텐서 병렬·파이프라인 병렬 옵션을 지원한다.",
+ "key_features": [
+  "사용자 데이터셋 사전학습용 간단·유연한 API",
+  "텐서 병렬(--tp)·파이프라인 병렬(--pp) 지원",
+  "Slurm 멀티노드 학습 가이드",
+  "설정 파일(config) 기반 학습 실행",
+  "체크포인트에서 텍스트 생성 실행",
+  "Ultrascale Playbook(대규모 학습 확장 가이드)"
+ ],
+ "use_cases_ko": [
+  "연구자·엔지니어가 자체 데이터셋으로 트랜스포머 모델을 사전학습"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "CLI"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://github.com/huggingface/nanotron",
+   "quote": "For Hugging Face cluster users"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/huggingface/nanotron",
+   "quote": "<p>Pretraining models made easy"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/huggingface/nanotron",
+   "quote": "Nanotron is a library for pretraining transformer models. It provides a simple and flexible API to pretrain models on custom datasets."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/huggingface/nanotron",
+   "quote": "The following command will train a tiny Llama model on a single node of 8 x H100s in about 10 minutes"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/huggingface/nanotron",
+   "quote": "Increase the value of `--tp` (tensor parallel) to accelerate generation with multiple GPUs and use a larger value of `--pp` (pipeline parallel) for very large models."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/huggingface/nanotron",
+   "quote": "For multi-node training with Slurm, see our [Multi-Node Training guide]"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/huggingface/nanotron",
+   "quote": "📚 **Check out our [Ultrascale Playbook](https://huggingface.co/spaces/nanotron/ultrascale-playbook)** - A comprehensive guide to efficiently scale LLM training with Nanotron!"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/huggingface/nanotron",
+   "quote": "### Run generation from your checkpoint"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/huggingface/nanotron",
+   "quote": "pretrain models on custom datasets"
+  },
+  {
+   "field": "api",
+   "url": "https://github.com/huggingface/nanotron",
+   "quote": "It provides a simple and flexible API to pretrain models on custom datasets."
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/huggingface/nanotron",
+   "quote": "torchrun --nproc_per_node=1 run_generate.py"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

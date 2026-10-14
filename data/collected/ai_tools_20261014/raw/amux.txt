@@ -1,0 +1,77 @@
+=== [github] https://github.com/andyrewlee/amux
+<p align="center">
+  <img width="339" height="105" alt="Screenshot 2026-01-20 at 1 00 23 AM" src="https://github.com/user-attachments/assets/fdbefab9-9f7c-4e08-a423-a436dda3c496" />  
+</p>
+
+<p align="center">TUI for easily running parallel coding agents</p>
+
+<p align="center">
+  <a href="https://github.com/andyrewlee/amux/releases">
+    <img src="https://img.shields.io/github/v/release/andyrewlee/amux?style=flat-square" alt="Latest release" />
+  </a>
+  <a href="LICENSE">
+    <img src="https://img.shields.io/github/license/andyrewlee/amux?style=flat-square" alt="License" />
+  </a>
+  <img src="https://img.shields.io/badge/Go-1.26-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go version" />
+  <a href="https://discord.gg/Dswc7KFPxs">
+    <img src="https://img.shields.io/badge/Discord-5865F2?style=flat-square&logo=discord&logoColor=white" alt="Discord" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="#quick-start">Quick start</a> ·
+  <a href="#how-it-works">How it works</a> ·
+  <a href="#features">Features</a> ·
+  <a href="#configuration">Configuration</a>
+</p>
+
+![amux TUI preview](https://github.com/user-attachments/assets/f5c4647e-a6ee-4d62-b548-0fdd73714c90)
+
+## What is amux?
+
+amux is a terminal UI for running multiple coding agents in parallel with a workspace-first model that can import git worktrees.
+
+## Prerequisites
+
+amux requires [tmux](https://github.com/tmux/tmux) (minimum 3.2). Each agent runs in its own tmux session for terminal isolation and persistence.
+
+The install script verifies release signatures with [minisign](https://jedisct1.github.io/minisign/) — install it first, or set `AMUX_ALLOW_UNVERIFIED=1` to proceed with checksum-only verification. The Homebrew and `go install` paths don't need it.
+
+## Quick start
+
+```bash
+brew tap andyrewlee/amux
+brew install amux
+```
+
+Or via the install script:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/andyrewlee/amux/main/install.sh | sh
+```
+
+Or with Go (requires Go 1.26 or newer; contributors should use the patched
+toolchain pinned in `go.mod`):
+
+```bash
+go install github.com/andyrewlee/amux/cmd/amux@latest
+```
+
+Then run `amux` to open the dashboard.
+
+## How it works
+
+Each workspace tracks a repo checkout and its metadata. For local workflows, workspaces are typically backed by git worktrees on their own branches so agents work in isolation and you can merge changes back when done. The create dialog (press `enter` on a project's `+ New` row) takes the workspace name plus an optional **base** ref — branch, tag, or commit the new branch is created from; leave it empty to use the repo's detected default branch. If the requested branch already exists, amux attaches the worktree to it instead of failing — and if creation then fails partway, rollback removes the worktree it made but never deletes a branch it did not create.
+
+Both write actions are available from the UI, each behind an explicit confirmation:
+
+- **Commit** — press `c` in the Changes sidebar to stage everything in the workspace and commit it with a message you type. The commit lands on the workspace's own branch; amux never pushes.
+- **Merge** — press `M` on a workspace row in the dashboard to merge its branch into its base with `git merge --no-ff`. The merge happens in the project's primary checkout, so amux checks that the base branch is checked out there before asking, then re-verifies it at the moment you confirm — if the checkout moved (or detached) while the dialog was open, the merge refuses rather than landing on the new HEAD or moving it for you. On a conflict it lists the conflicted files and offers to abort; resolving them is yours to do in the terminal.
+
+Note that amux runs git with repository hooks disabled (see `AMUX_ALLOW_GIT_HOOKS` below), so your own `pre-commit` or `pre-merge` hooks will not fire on these actions.
+
+Shelving puts a workspace away without deleting it: press `S` on a live
+workspace row in the dashboard to shelve it — the worktree is removed, while
+the branch, workspace metadata, and scripts are kept. Shelve runs the repo's
+`archive` hook first if one is configured (it's a repo-supplied command, so
+the usual trust gating applies), and it's best-effort like delete: a fai

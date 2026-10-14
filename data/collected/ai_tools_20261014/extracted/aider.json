@@ -1,0 +1,83 @@
+{
+ "company": null,
+ "one_liner_ko": "터미널에서 LLM과 함께 페어 프로그래밍하는 AI 코딩 도구.",
+ "what_it_does_ko": "Aider는 터미널에서 LLM과 페어 프로그래밍을 하며 새 프로젝트를 시작하거나 기존 코드베이스를 고칠 수 있게 해 준다. 코드베이스 전체 지도를 만들어 큰 프로젝트에서도 잘 동작하고, 변경 사항을 알맞은 커밋 메시지와 함께 자동 커밋한다. Claude, DeepSeek, OpenAI 모델 등 거의 모든 LLM과 로컬 모델에 연결할 수 있다. IDE 안에서 코드에 주석을 달아 요청하거나, 음성·이미지·웹페이지를 맥락으로 쓸 수 있다.",
+ "key_features": [
+  "클라우드·로컬 LLM 연결",
+  "코드베이스 전체 맵(repo map)",
+  "100개 이상 프로그래밍 언어",
+  "Git 자동 커밋과 되돌리기",
+  "IDE·에디터 안에서 주석으로 요청",
+  "이미지·웹페이지를 대화에 추가",
+  "음성으로 코드 요청(voice-to-code)",
+  "변경할 때마다 자동 린트·테스트"
+ ],
+ "use_cases_ko": [
+  "개발자가 새 프로젝트를 시작하거나 기존 코드베이스를 LLM과 함께 수정"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "CLI"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://aider.chat",
+   "quote": "AI pair programming in your terminal"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/Aider-AI/aider",
+   "quote": "Aider lets you pair program with LLMs to start a new project or build on your existing codebase."
+  },
+  {
+   "field": "key_features",
+   "url": "https://aider.chat",
+   "quote": "Aider works best with Claude 3.7 Sonnet, DeepSeek R1 & Chat V3, OpenAI o1, o3-mini & GPT-4o, but can connect to almost any LLM, including local models."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/Aider-AI/aider",
+   "quote": "Aider makes a map of your entire codebase, which helps it work well in larger projects."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/Aider-AI/aider",
+   "quote": "Aider automatically commits changes with sensible commit messages. Use familiar git tools to easily diff, manage and undo AI changes."
+  },
+  {
+   "field": "key_features",
+   "url": "https://aider.chat",
+   "quote": "Automatically lint and test your code every time aider makes changes."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/Aider-AI/aider",
+   "quote": "Use aider from within your favorite IDE or editor. Ask for changes by adding comments to your code and aider will get to work."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://aider.chat/docs/",
+   "quote": "Usage — How to use aider to pair program with AI and edit code in your local git repo."
+  },
+  {
+   "field": "platforms",
+   "url": "https://aider.chat",
+   "quote": "python -m pip install aider-install"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://aider.chat",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

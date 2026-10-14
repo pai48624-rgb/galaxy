@@ -1,0 +1,188 @@
+{
+ "company": "Comet",
+ "one_liner_ko": "AI 에이전트·LLM 앱의 관측·평가(Opik)와 ML 실험 관리를 제공하는 AI 개발자 플랫폼.",
+ "what_it_does_ko": "Comet은 AI 기능 출시에 초점을 둔 엔드투엔드 모델 평가 플랫폼이다. 오픈소스 Opik으로 에이전트의 모든 단계를 트레이스로 기록하고, 반복 오류를 자동으로 묶어 원인과 수정안을 제시하며, 테스트 스위트와 LLM 심사 지표로 수정 결과를 검증한다. 엔지니어링 팀의 Claude Code·Codex 사용 비용도 추적한다. ML 쪽으로는 실험 추적, 모델 버전 관리, 데이터셋 관리, 프로덕션 모니터링을 제공한다.",
+ "key_features": [
+  "에이전트·LLM 호출 단계별 트레이싱(60개 이상 통합, MCP 서버)",
+  "Diagnostics: 반복 오류 자동 탐지·원인 분석·수정 제안",
+  "Ollie 에이전트의 수정 제안",
+  "Test Suites·LLM-as-a-judge 지표로 평가",
+  "Cost Intelligence: Claude Code·Codex 사용 비용 추적",
+  "ML 실험 추적·모델 레지스트리·프로덕션 모니터링",
+  "오픈소스 자가 호스팅 또는 클라우드 배포"
+ ],
+ "use_cases_ko": [
+  "엔지니어링 팀이 코딩 에이전트(Claude Code·Codex) 비용 파악·절감",
+  "개발자가 GenAI 앱·에이전트를 테스트·디버그·모니터링",
+  "ML 팀이 모델 학습 실행을 추적·비교"
+ ],
+ "pricing": {
+  "free_tier": "있음 (오픈소스 자가 호스팅 무료, Free Cloud: 팀원 10명·월 25k spans·60일 보관)",
+  "plans": [
+   {
+    "name": "Open Source",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "자가 호스팅, 호스팅판과 같은 코드",
+    "page_lang": "en-US"
+   },
+   {
+    "name": "Free Cloud",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "팀원 10명, 월 25k spans, 60일 데이터 보관",
+    "page_lang": "en-US"
+   },
+   {
+    "name": "Pro Cloud",
+    "price": 19,
+    "currency": "USD",
+    "period": "month",
+    "limits": "팀원 50명, 월 100k spans, 60일 보관, span 한도·보관 기간 조정 가능",
+    "page_lang": "en-US"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": "USD",
+    "period": "month",
+    "limits": "맞춤 요금, 팀원 무제한, 유연한 배포·SSO·전담 지원",
+    "page_lang": "en-US"
+   }
+  ],
+  "pricing_url": "https://www.comet.com/site/pricing/"
+ },
+ "open_source": "오픈소스(Opik, 라이선스 이름은 페이지에 없음)",
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.comet.com/site/",
+   "quote": "Comet - The AI Developer Platform"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.comet.com/site/",
+   "quote": "Comet’s end-to-end model evaluation platform for developers focuses on shipping AI features"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.comet.com/site/",
+   "quote": "Opik connects observability to action, automatically turning trace data and eval results into code fixes."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.comet.com/site/",
+   "quote": "Comet Experiment Management gives you the tools to ensure your models are explainable and reproducible"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.comet.com/site/",
+   "quote": "Tracing is easy to instrument with 60+ integrations"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.comet.com/site/",
+   "quote": "Diagnostics detects and groups similar recurring issues, identifies their root causes, and recommends fixes"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.comet.com/site/",
+   "quote": "The Ollie agent lives inside Opik, understands your traces"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.comet.com/site/",
+   "quote": "create golden datasets and run evaluations with 40+ LLM-as-a-judge metrics"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.comet.com/site/",
+   "quote": "Get full visibility into engineering teams’ Claude Code and Codex usage with Cost Intelligence in Opik."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.comet.com/site/",
+   "quote": "with custom visualizations, model versioning , dataset management , production monitoring , and more."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.comet.com/site/",
+   "quote": "Self-host the OSS version , try Opik in the cloud, or talk to us about custom deployment options."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.comet.com/site/",
+   "quote": "Get full visibility into engineering teams’ Claude Code and Codex usage with Cost Intelligence in Opik."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.comet.com/site/",
+   "quote": "so you can confidently test, debug, and monitor your GenAI apps and agents"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.comet.com/site/",
+   "quote": "MLOps: Track & Compare Model Training Runs"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.comet.com/site/pricing/",
+   "quote": "True OSS: same codebase as the hosted versions"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.comet.com/site/pricing/",
+   "quote": "Up to 10 team members\n 25k spans per month"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.comet.com/site/pricing/",
+   "quote": "Popular\n Expanded usage for teams"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.comet.com/site/pricing/",
+   "quote": "Up to 50 team members\n 100k spans per month"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.comet.com/site/pricing/",
+   "quote": "Security, compliance & flexible deployments"
+  },
+  {
+   "field": "open_source",
+   "url": "https://www.comet.com/site/",
+   "quote": "Opik is both truly open source, and powered by Comet’s enterprise-grade infrastructure"
+  },
+  {
+   "field": "api",
+   "url": "https://www.comet.com/docs/v2/",
+   "quote": "REST API REST API Overview Read Endpoints Write Endpoints"
+  },
+  {
+   "field": "platforms",
+   "url": "https://www.comet.com/site/",
+   "quote": "Self-host the OSS version , try Opik in the cloud, or talk to us about custom deployment options."
+  },
+  {
+   "field": "platforms",
+   "url": "https://www.comet.com/docs/v2/",
+   "quote": "Java SDK Java SDK Overview JavaScript SDK JavaScript SDK Overview R SDK"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.comet.com/site/",
+   "quote": "html lang: en-US\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

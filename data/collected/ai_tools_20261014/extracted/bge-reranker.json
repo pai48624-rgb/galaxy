@@ -1,0 +1,38 @@
+{
+ "company": "BAAI (Beijing Academy of Artificial Intelligence)",
+ "one_liner_ko": "질의와 문서를 함께 입력받아 관련도 점수를 바로 내는, 다국어 능력이 강한 경량 리랭커 모델.",
+ "what_it_does_ko": "bge-reranker-v2-m3는 BAAI가 Hugging Face에 공개한 리랭커 모델로, bge-m3를 기반 모델로 한다. 임베딩 모델과 달리 질문과 문서를 입력으로 받아 임베딩 대신 유사도(관련도 점수)를 직접 출력하며, 점수는 시그모이드 함수로 0~1 값으로 바꿀 수 있다. 강한 다국어 능력을 갖추고 배포가 쉬우며 추론이 빠른 경량 모델로 소개된다. FlagEmbedding, sentence-transformers(CrossEncoder), Transformers로 사용할 수 있고, Hugging Face의 hf-inference 추론 제공자로도 호출된다. 모델 카드 라이선스는 apache-2.0이다.",
+ "key_features": [
+  "질의·문서 쌍의 관련도 점수 직접 출력(0~1로 변환 가능)",
+  "강한 다국어 능력의 경량 리랭커(bge-m3 기반)",
+  "배포가 쉽고 빠른 추론",
+  "FlagEmbedding·sentence-transformers·Transformers 라이브러리 지원",
+  "Hugging Face hf-inference 추론 제공자로 호출",
+  "미세조정(Fine-tune) 데이터 형식·학습 방법 안내"
+ ],
+ "use_cases_ko": [
+  "검색·RAG에서 후보 문서를 질의 관련도로 재정렬"
+ ],
+ "pricing": {"free_tier": "불명", "plans": [], "pricing_url": null},
+ "open_source": "Apache-2.0 (모델 카드), FlagEmbedding 저장소는 MIT",
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://huggingface.co/BAAI/bge-reranker-v2-m3", "quote": "Beijing Academy of Artificial Intelligence 4.49k"},
+  {"field": "one_liner_ko", "url": "https://huggingface.co/BAAI/bge-reranker-v2-m3", "quote": "Lightweight reranker model, possesses strong multilingual capabilities, easy to deploy, with fast inference."},
+  {"field": "what_it_does_ko", "url": "https://huggingface.co/BAAI/bge-reranker-v2-m3", "quote": "Different from embedding model, reranker uses question and document as input and directly output similarity instead of embedding."},
+  {"field": "what_it_does_ko", "url": "https://huggingface.co/BAAI/bge-reranker-v2-m3", "quote": "And the score can be mapped to a float value in [0,1] by sigmoid function."},
+  {"field": "key_features", "url": "https://huggingface.co/BAAI/bge-reranker-v2-m3", "quote": "You can get a relevance score by inputting query and passage to the reranker."},
+  {"field": "key_features", "url": "https://huggingface.co/BAAI/bge-reranker-v2-m3", "quote": "from FlagEmbedding import FlagReranker"},
+  {"field": "key_features", "url": "https://huggingface.co/BAAI/bge-reranker-v2-m3", "quote": "model = CrossEncoder(\"BAAI/bge-reranker-v2-m3\")"},
+  {"field": "key_features", "url": "https://huggingface.co/BAAI/bge-reranker-v2-m3", "quote": "{\"provider\":\"hf-inference\",\"modelStatus\":\"live\",\"providerStatus\":\"live\",\"providerId\":\"BAAI/bge-reranker-v2-m3\""},
+  {"field": "key_features", "url": "https://huggingface.co/BAAI/bge-reranker-v2-m3", "quote": "Fine-tune Data Format"},
+  {"field": "use_cases_ko", "url": "https://github.com/FlagOpen/FlagEmbedding", "quote": "BGE: One-Stop Retrieval Toolkit For Search and RAG"},
+  {"field": "open_source", "url": "https://huggingface.co/BAAI/bge-reranker-v2-m3", "quote": "License: apache-2.0"},
+  {"field": "open_source", "url": "https://github.com/FlagOpen/FlagEmbedding", "quote": "<img alt=\"License\" src=\"https://img.shields.io/badge/LICENSE-MIT-green\">"},
+  {"field": "korean_support", "url": "https://github.com/FlagOpen/FlagEmbedding", "quote": "[English](README.md) | [中文](https://github.com/FlagOpen/FlagEmbedding/blob/master/README_zh.md)"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

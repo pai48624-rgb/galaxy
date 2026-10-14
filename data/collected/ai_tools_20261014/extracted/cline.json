@@ -1,0 +1,154 @@
+{
+ "company": "Cline Bot Inc.",
+ "one_liner_ko": "에디터·터미널·데스크톱에서 쓰고 SDK로 내 제품에 넣을 수 있는 오픈소스 코딩 에이전트.",
+ "what_it_does_ko": "Cline은 에디터와 터미널에서 동작하는 AI 코딩 에이전트로, 파일 읽기·쓰기, 터미널 명령 실행, 브라우저 사용을 하며 모든 동작에 사용자 승인을 받는다. VS Code·JetBrains 확장, CLI, 데스크톱 앱, SDK, Kanban으로 제공되고 Cursor·Windsurf·Zed 등에서도 쓸 수 있다. Plan 모드로 전략을 맞춘 뒤 Act 모드로 실행하며, Claude·GPT·Gemini·로컬 모델 등 원하는 모델을 자기 키로 연결할 수 있다. 개인 개발자는 무료이고 AI 추론 비용만 사용량대로 낸다.",
+ "key_features": [
+  "프로젝트 전반 다중 파일 수정·체크포인트·되돌리기",
+  "터미널 bash 명령 실행",
+  "Plan/Act 모드와 단계별 승인(자동 승인 선택)",
+  ".clinerules 규칙과 Skills",
+  "모든 모델·BYOK·로컬 모델",
+  "MCP·플러그인·SDK 확장",
+  "멀티 에이전트 팀과 예약 실행",
+  "Slack·Linear·CI 연동"
+ ],
+ "use_cases_ko": [
+  "코드베이스 구조 이해와 질문",
+  "대규모 코드베이스 리팩터링",
+  "CLI로 스크립트·cron·CI 파이프라인 자동화"
+ ],
+ "pricing": {
+  "free_tier": "있음 (개인 개발자 무료, AI 추론만 사용량 과금)",
+  "plans": [
+   {
+    "name": "Open Source",
+    "price": 0,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "개인용, AI 추론은 원가 또는 BYOK로 사용량 과금",
+    "page_lang": "en"
+   },
+   {
+    "name": "ClinePass",
+    "price": 9.99,
+    "currency": "USD",
+    "period": "month",
+    "limits": "인기 오픈 코딩 모델 사용량 표준 API 대비 2~5배",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": "USD",
+    "period": null,
+    "limits": "맞춤 가격, SSO·SLA·전담 지원·JetBrains 확장",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://cline.bot/pricing"
+ },
+ "open_source": "Apache 2.0",
+ "api": "있음",
+ "platforms": [
+  "CLI",
+  "맥",
+  "윈도",
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://cline.bot/",
+   "quote": "© 2026 Cline Bot Inc. All rights reserved."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://cline.bot/",
+   "quote": "One open source agent runtime. Use it in your editor, your terminal, or embed it in your own products."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.cline.bot/cline-overview",
+   "quote": "Cline is an AI coding agent that lives in your editor and your terminal. It can read and write files, run terminal commands, use a browser, and help you build features through natural conversation."
+  },
+  {
+   "field": "key_features",
+   "url": "https://cline.bot/",
+   "quote": "Coordinated multi-file changes with linter-aware fixes, diffs, checkpoints, and one-click undo on every step."
+  },
+  {
+   "field": "key_features",
+   "url": "https://cline.bot/",
+   "quote": "Toggle Plan mode to align on a strategy, then Act to execute. Approve every step, or flip auto-approve for autopilot."
+  },
+  {
+   "field": "key_features",
+   "url": "https://cline.bot/",
+   "quote": "Claude, GPT, Gemini, local Ollama / LM Studio, or any OpenAI-compatible endpoint. Bring your own key or your own weights."
+  },
+  {
+   "field": "key_features",
+   "url": "https://cline.bot/",
+   "quote": "Coordinator agents delegate to specialists with their own tools and context. Run them on cron for recurring automations."
+  },
+  {
+   "field": "key_features",
+   "url": "https://cline.bot/",
+   "quote": "Chat with the agent from Slack, Discord, Telegram, or Linear. Run it headlessly inside GitHub Actions, GitLab, or any pipeline."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://cline.bot/",
+   "quote": "Use Cline CLI in scripts, cron jobs, and CI pipelines to run recurring checks, updates, and custom workflows."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://cline.bot/",
+   "quote": "Make coordinated changes across large codebases while Cline keeps imports, types, and behavior consistent."
+  },
+  {
+   "field": "pricing",
+   "url": "https://cline.bot/pricing",
+   "quote": "Cline is free for individual developers. Pay only for AI inference on a usage basis - no subscriptions, no vendor lock-in."
+  },
+  {
+   "field": "pricing",
+   "url": "https://docs.cline.bot/cline-overview",
+   "quote": "Flat $9.99/month subscription that offers 2-5x the usage on popular open coding models compared to standard API rate."
+  },
+  {
+   "field": "pricing",
+   "url": "https://cline.bot/pricing",
+   "quote": "Enterprise\n Custom \n SSO, SLA & Dedicated Support"
+  },
+  {
+   "field": "open_source",
+   "url": "https://cline.bot/",
+   "quote": "Built with the model labs · 250+ contributors · Apache 2.0 open source"
+  },
+  {
+   "field": "api",
+   "url": "https://docs.cline.bot/cline-overview",
+   "quote": "Programmatic access to Cline’s enterprise features."
+  },
+  {
+   "field": "platforms",
+   "url": "https://cline.bot/",
+   "quote": "Download for Mac Download for Windows Download for Linux"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://cline.bot/",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "개인은 무료(오픈소스) + AI 추론 종량제, 선택형 ClinePass $9.99/월, Enterprise 맞춤 가격",
+   "diff": "기능 잠금형 유료 구독이 아니라 '무료 도구 + 추론 종량제' 중심, 구독은 모델 사용량 패스(ClinePass)만",
+   "url": "https://cline.bot/pricing"
+  }
+ ]
+}

@@ -1,0 +1,314 @@
+=== [home] https://anannas.ai/ (lang=en)
+Anannas - Single API to access any model 
+ 🍍BYOK and get 1M free requests/month! Know more 
+ Awin
+ Documentation Models Blogs Store Contact Us Enterprise Toggle theme Sign In 
+ Single API to access any LLM 
+ Seamlessly connect to multiple models through a single gateway with failproof routing, cost control, and instant usage insights.
+ See All Models 
+ 0 + 
+ LLMs supported — unified under one dashboard 
+ 0 % 
+ cost savings — smarter routing reduces unnecessary spend 
+ 0 % 
+ uptime guarantee — enterprise reliability keeps your AI always on. 
+ 0 + 
+ LLMs supported — unified under one dashboard 
+ 0 % 
+ cost savings — smarter routing reduces unnecessary spend 
+ 0 % 
+ uptime guarantee — enterprise reliability keeps your AI always on. 
+ 0 + 
+ LLMs supported — unified under one dashboard 
+ 0 % 
+ cost savings — smarter routing reduces unnecessary spend 
+ 0 % 
+ uptime guarantee — enterprise reliability keeps your AI always on. 
+ About Anannas
+ Connect, manage, and optimize multiple LLMs through a single, streamlined dashboard 
+ How It works
+ Your Path to Unified AI
+ 1. Connect Your Models
+ Easily link providers like OpenAI and more to your Anannas dashboard. One setup, unlimited flexibility.
+ 2. Manage & Monitor
+ Control usage, track costs, and compare model outputs in real time — all from one unified interface.
+ 3. Optimize & Scale
+ Use smart routing to cut costs, improve performance, and scale AI across your team.
+ Unified LLM Dashboard
+ Simplify how your team works with LLMs by unifying access, orchestration, and monitoring in one dashboard.
+ API & Integrations
+ Seamlessly connect large language models to your existing workflows with a single, powerful API that simplifies integration and scales with your needs.
+ Features
+ Anannas Key Features 
+ One Dashboard, Every Model
+ Bring together different LLM providers under one intuitive interface — no more switching platforms.
+ Smarter Orchestration
+ Easily route queries, compare outputs side by side with clarity, and confidently select the most suitable model for each task.
+ Cost Control & Analytics
+ Track detailed usage, monitor spending across providers, and optimize model performance and efficiency in real time.
+ Featured Models
+ Leading LLMs on Anannas
+ google/gemini-3-pro
+ by Google 
+ Reasoning 
+ 1M
+ Context
+ +480%
+ Weekly growth
+ $2
+ Input
+ $12
+ Output
+ openai/gpt-5.2
+ by OpenAI 
+ Flagship 
+ 400K
+ Context
+ +204%
+ Weekly growth
+ $1.75
+ Input
+ $14
+ Output
+ grok/grok-4-1-fast-reasoning
+ by Grok 
+ Reasoning 
+ 2M
+ Context
+ +204%
+ Weekly growth
+ $0.20
+ Input
+ $0.50
+ Output
+ anthropic/claude-4.5-sonnet
+ by Anthropic 
+ Flagship 
+ 1M
+ Context
+ +204%
+ Weekly growth
+ $3
+ Input
+ $15
+ Output
+ google/gemini-3-flash
+ by Google 
+ Lite 
+ 1M
+ Context
+ +380%
+ Weekly growth
+ $0.50
+ Input
+ $3
+ Output
+ deepseek/deepseek-r1-distill-llama-70b
+ by DeepSeek 
+ Light 
+ 131k
+ Context
+ +204%
+ Weekly growth
+ $0.03
+ Input
+ $0.13
+ Output
+ google/gemini-3-pro by Google 
+ openai/gpt-5.2 by OpenAI 
+ grok/grok-4-1-fast-reasoning by Grok 
+ anthropic/claude-4.5-sonnet by Anthropic 
+ google/gemini-3-flash by Google 
+ deepseek/deepseek-r1-distill-llama-70b by DeepSeek 
+ Get Started
+ Unify Your LLMs with Anannas
+ Stop API switching. Start scaling.
+ Sign In 
+ © 2025 Anannas
+ Models Documentation Contact Us
+
+=== [about] https://docs.anannas.ai/quickstart (lang=en)
+Quickstart - Anannas 
+ Documentation Index
+ Fetch the complete documentation index at: /llms.txt 
+ Use this file to discover all available pages before exploring further.
+ Skip to main content 
+ ✨ New: Bring Your Own Keys (BYOK) — use your own provider API keys with Anannas. Learn more → 
+ Anannas home page 
+ Search...
+ ⌘ K 
+ Search... 
+ Navigation 
+ Getting Started 
+ Quickstart
+ Getting Started 
+ Quickstart 
+ FAQs 
+ Principles 
+ Features 
+ Structured Outputs 
+ Tool Calling 
+ Multimodal Capabilities 
+ Image Input 
+ Audio Inputs 
+ PDF Inputs 
+ API 
+ API Reference 
+ Authentication 
+ Parameters 
+ Streaming 
+ Anthropic API Compatibility 
+ Rate Limits 
+ Errors 
+ Responses API 
+ Models 
+ Models 
+ Use Cases 
+ Usage Accounting 
+ Reasoning Tokens 
+ Bring Your Own Keys (BYOK) 
+ Community 
+ Community 
+ On this page 
+ Overview 
+ Authentication 
+ Endpoint 
+ Request Format 
+ Using the OpenAI SDK 
+ Direct HTTP Requests 
+ Response Format 
+ Streaming 
+ Model Format 
+ Error Handling 
+ Next Steps 
+ Getting Started
+ Quickstart
+ Get started with the Anannas API
+ ​ 
+ Overview 
+ Anannas provides a unified OpenAI-compatible API for accessing multiple LLM providers. The Anannas API endpoint is https://api.anannas.ai/v1 and uses standard HTTP POST requests with JSON payloads. 
+ ​ 
+ Authentication 
+ All requests require a Bearer token in the Authorization header. Get your API key from the Anannas dashboard . 
+ Authorization: Bearer < ANANNAS_API_KE Y > 
+ ​ 
+ Endpoint 
+ POST https://api.anannas.ai/v1/chat/completions 
+ ​ 
+ Request Format 
+ The Anannas API follows the OpenAI Chat Completions format. Required fields: 
+ model (string): Model identifier in format provider/model-name (e.g., openai/gpt-5-mini , anthropic/claude-3-sonnet )
+ messages (array): Array of message objects with role and content fields
+ ​ 
+ Using the OpenAI SDK 
+ The official OpenAI SDK works with Anannas by setting the base_url parameter: 
+ python
+ typescript
+ from openai import OpenAI 
+ client = OpenAI( 
+ base_url = "https://api.anannas.ai/v1" , 
+ api_key = "<ANANNAS_API_KEY>" , 
+ ) 
+ response = client.chat.completions.create( 
+ model = "openai/gpt-5-mini" , 
+ messages = [ 
+ { "role" : "user" , "content" : "Explain quantum computing" } 
+ ] 
+ ) 
+ print (response.choices[ 0 ].message.content) 
+ import OpenAI from "openai" ; 
+ const client = new OpenAI ({ 
+ baseURL: "https://api.anannas.ai/v1" , 
+ apiKey: "<ANANNAS_API_KEY>" , 
+ }); 
+ const completion = await client . chat . completions . create ({ 
+ model: "anthropic/claude-3-sonnet" , 
+ messages: [ 
+ { role: "user" , content: "Explain quantum computing" }, 
+ ], 
+ }); 
+ console . log ( completion . choices [ 0 ]. message . content ); 
+ ​ 
+ Direct HTTP Requests 
+ python
+ typescript
+ bash
+ import requests 
+ response = requests.post( 
+ "https://api.anannas.ai/v1/chat/completions" , 
+ headers = { 
+ "Authorization" : "Bearer <ANANNAS_API_KEY>" , 
+ "Content-Type" : "application/json" , 
+ }, 
+ json = { 
+ "model" : "openai/gpt-5-mini" , 
+ "messages" : [ 
+ { "role" : "user" , "content" : "Explain quantum computing" } 
+ ] 
+ } 
+ ) 
+ data = response.json() 
+ print (data[ "choices" ][ 0 ][ "message" ][ "content" ]) 
+ const response = await fetch ( "https://api.anannas.ai/v1/chat/completions" , { 
+ method: "POST" , 
+ headers: { 
+ "Authorization" : "Bearer <ANANNAS_API_KEY>" , 
+ "Content-Type" : "application/json" , 
+ }, 
+ body: JSON . stringify ({ 
+ model: "anthropic/claude-3-sonnet" , 
+ messages: [ 
+ { role: "user" , content: "Explain quantum computing" }, 
+ ], 
+ }), 
+ }); 
+ const data = await response . json (); 
+ console . log ( data . choices [ 0 ]. mes
+
+=== [pricing] https://anannas.ai/pricing (lang=en)
+Anannas - Single API to access any model 
+ 🍍BYOK and get 1M free requests/month! Know more 
+ Awin
+ Documentation Models Blogs Store Contact Us Enterprise Toggle theme Sign In 
+ Pricing
+
+=== [pricing] https://anannas.ai/auth/login (lang=en)
+Anannas - Single API to access any model 
+ Spend
+ Avg Day
+ Past Month
+ Tokens
+ Avg Day
+ Past Month
+ Requests
+ Avg Day
+ Past Month
+ Recent Activity
+ Latest API calls and usage details
+ Awin
+ Loading... 
+ Single API to access any LLM
+ Seamlessly connect to multiple models through a single gateway with failproof routing, cost control, and instant usage insights.
+
+=== [pricing] https://anannas.ai/auth/login (lang=en)
+Anannas - Single API to access any model 
+ Spend
+ Avg Day
+ Past Month
+ Tokens
+ Avg Day
+ Past Month
+ Requests
+ Avg Day
+ Past Month
+ Recent Activity
+ Latest API calls and usage details
+ Awin
+ Loading... 
+ Single API to access any LLM
+ Seamlessly connect to multiple models through a single gateway with failproof routing, cost control, and instant usage insights.
+
+=== [meta] https://anannas.ai/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음

@@ -1,0 +1,435 @@
+=== [home] https://mistral.ai/news/shieldstral/ (lang=en)
+Introducing Shieldstral. | Mistral 
+ Get in touch
+ Menu
+ Research
+ Sovereign AI
+ Cloud
+ Customers
+ Company
+ Get in touch
+ Login
+ Seminal contributions to AI
+ Latest research
+ Why Sovereign AI
+ Our products
+ Our method
+ Sovereign AI in practice
+ Inference
+ Compute
+ Energy & utilities
+ Manufacturing
+ Financial services
+ Public sector
+ All customers
+ Blog
+ Docs
+ About us
+ Careers
+ Research Sovereign AI Cloud Customers Company 
+ Seminal contributions to AI
+ Latest research
+ Why Sovereign AI
+ Our products
+ Our method
+ Sovereign AI in practice
+ Inference
+ Compute
+ Energy & utilities
+ Manufacturing
+ Financial services
+ Public sector
+ All customers
+ Blog
+ Docs
+ About us
+ Careers
+ Get in touch
+ --> Login
+ Studio
+ Vibe
+ Solutions
+ Introducing Shieldstral.
+ August 4, 2026
+ By Mistral
+ Back to Blog 
+ 6 min read
+ Share this post 
+ Copy url to clipboard Copied 
+ Thinking
+ Summary
+ Shieldstral introduces a 3B open-weights multimodal safety classifier that outperforms models up to 7x its size by framing content moderation as a policy-adaptive question-answering task. Unlike traditional guardrail models, it accepts plain-language policies at inference time, unifying text and image safety evaluation without retraining. Released under Apache 2.0, it delivers calibrated safety scores across diverse benchmarks while running efficiently on a single 16GB NVIDIA GPU.
+ A 3B open-weights, policy-adaptive multimodal safety classifier that matches models up to 7x its size on text safety and sets a new state of the art on multimodal moderation. 
+ “Does this content promote violence against a protected group? Is this image safe to show to a minor? Did the assistant refuse the request?”
+ Every product that ships a model needs to answer questions like these — but the right answer depends on the product, the audience, and the moment. The same content can be fine for a cybersecurity research tool and harmful on a mental-health platform. Most guardrail models bake a fixed taxonomy of harm categories into their weights, so re-targeting them to a new deployment context means retraining. And because safety definitions differ across applications and domains, there is no single "correct" set of categories to model in the first place.
+ Shieldstral takes a different approach: you write the policy as a plain-language question at inference time, and the model returns a calibrated safety score. No retraining, one interface for text and images, and a verdict from a single token. Please refer to our technical report here.
+ As an inaugural member of the Open Secure AI Alliance with NVIDIA and other organizations, today we're releasing Shieldstral as open weights under Apache 2.0, available for download here . 
+ Moderation as a question
+ Shieldstral frames content moderation as a binary question-answering task . Each request has three parts:
+ <Instruct> — the evaluation context, strictness, and (optionally) a definition of what counts as unsafe content.
+ <Query> — a single yes/no question, e.g. "Does this content promote physical violence?" 
+ <Document> — the content to judge: a prompt, a response, a prompt–response pair, or an image with optional text.
+ At inference the model reads out only the yes and no logits and softmax-normalizes them into a continuous safety score. This one simple formulation does a lot of work: it unifies prompt classification, response moderation, refusal detection, and toxicity detection into a single problem; it lets policies live entirely in the prompt, so one checkpoint adapts to novel policies at deployment time.
+ Highlights
+ Strong performance — matches or outperforms open guard models up to 7× its size across text safety, refusal detection, policy adaptability, and multimodal benchmarks.
+ Adaptive and flexible — a single natural-language interface covers text, image, and text+image content across prompts, responses, and prompt–response pairs. Policies are supplied as free-form queries and re-targeted at inference time, without retraining.
+ Small, trained on heterogeneous sources — a 3B model that runs on a single 16GB GPU, trained on real and synthetic data with diverse label formats and taxonomies, consolidated into one framework.
+ Continuous safety score — returns a calibrated yes / no probability from a single forward pass, so you can threshold or rank by confidence rather than relying on a discrete label.
+ Open — Apache 2.0 weights.
+ Benchmarks
+ We evaluate Shieldstral against open guard models up to 7x its size across four axes. All evaluation samples are held out from training.
+ Text safety
+ Refusal detection
+ Policy adaptability
+ Multimodal safety
+ How we built it
+ The core idea is that a small model can beat much larger ones if the data is right. Getting the data right meant solving four problems:
+ Unify heterogeneous data. Public safety datasets disagree on taxonomies, labels, and annotation conventions — from binary safe/unsafe flags to fine-grained multi-label taxonomies. We convert every dataset into the same instruction–query–document format with a per-dataset processor, and we vary the wording of instructions, queries, and prompt–response delimiters so the model generalizes across phrasing instead of overfitting to one style. We also calibrate strictness per source — strict for adversarial jailbreaks, lenient for response-quality data — so the model learns calibrated decision boundaries. This lets us consolidate sources that would otherwise be incompatible.
+ Teach discrimination, not memorization. If trained on a fixed set of policy labels, a model learns only to classify those predefined policies, rather than reasoning about the precise boundaries of a given policy. This prevents generalization to novel policies. Instead, we construct sets of deliberately similar, easily confused policies and ask an LLM to rewrite safe text into contrastive pairs: each rewrite is engineered to violate one policy but not its sibling. This trains the model to distinguish which specific policy a piece of content violates , a skill that transfers to unseen, user-defined policies at inference time.
+ Ground safety in images. Unsafe images can't be synthezised by an LLM the way text can, so visual safety data is scarce. We supplement limited moderation datasets with general-purpose image datasets as high-quality negatives, mutate queries to augment the dataset, and filter every image–query pair through a vision–language reranker to reduce mislabeled data and hallucinations.
+ Combine complementary checkpoints. We fine-tune with LoRA and merge — via SLERP — a checkpoint calibrated on public data, one that adds fine-grained policy discrimination from generated data, and the base instruct model. The merge recovers common policy calibration and policy adaptability in a single model, and instruction-following from the base model transfers to the moderation task.
+ Forge . We built Shieldstral end to end on Forge , our platform for training, aligning, and evaluating custom models. Forge managed the infrastructure, data and model sharding, metrics, and logging on top of state-of-the-art distributed training, so the team could stay focused on the data which is what determines the safety model's quality.
+ What's next
+ Shieldstral is a step toward moderation that adapts to context instead of forcing every product through one frozen taxonomy. We're continuing to push on multilingual coverage, longer-document robustness, and broader multimodal safety — and we'd love to see what the community buil
+
+=== [pricing] https://mistral.ai/pricing/ (lang=en)
+Pricing | Mistral 
+ Get in touch
+ Menu
+ Research
+ Sovereign AI
+ Cloud
+ Customers
+ Company
+ Get in touch
+ Login
+ Seminal contributions to AI
+ Latest research
+ Why Sovereign AI
+ Our products
+ Our method
+ Sovereign AI in practice
+ Inference
+ Compute
+ Energy & utilities
+ Manufacturing
+ Financial services
+ Public sector
+ All customers
+ Blog
+ Docs
+ About us
+ Careers
+ Research Sovereign AI Cloud Customers Company 
+ Seminal contributions to AI
+ Latest research
+ Why Sovereign AI
+ Our products
+ Our method
+ Sovereign AI in practice
+ Inference
+ Compute
+ Energy & utilities
+ Manufacturing
+ Financial services
+ Public sector
+ All customers
+ Blog
+ Docs
+ About us
+ Careers
+ Get in touch
+ --> Login
+ Studio
+ Vibe
+ Pricing
+ Pricing
+ Pricing
+ Pricing
+ USD ($)
+ EUR (€)
+ France
+ Austria Belgium Bulgaria Croatia Cyprus Czech Republic Denmark Estonia Finland France Germany Greece Hungary Ireland Italy Latvia Lithuania Luxembourg Malta Netherlands Poland Portugal Romania Slovakia Slovenia Spain Sweden United Kingdom 
+ Free
+ Your personal AI agent for everyday tasks.
+ Test out Vibe’s capabilities.
+ Access on web and mobile.
+ Limited messages and web searches.
+ Limited coding sessions.
+ Basic image generation and editing.
+ 100+ connectors.
+ Start now
+ Popular
+ Pro
+ Education plan
+ Full access to Vibe for all-day coding and long-running tasks.
+ $14.99 
+ /mo
+ Excluding taxes
+ Including taxes
+ Subject to fair usage limits and Mistral's Terms of Service .
+ Valid for a maximum of 12 months for verified students at accredited higher institutions and if you haven't used Vibe (or Le Chat) before. Price not inclusive of taxes.
+ I'm a student
+ More access and usage.
+ More messages and web searches.
+ Faster responses.
+ All-day coding in the CLI, IDE, or on web.
+ Generate spreadsheets and slides.
+ Better image generation and editing.
+ $25.5 /mo in API credits.
+ Chat and email support.
+ More access and usage.
+ More messages and web searches.
+ Get more complex tasks done.
+ All-day coding in the CLI, IDE, or on web.
+ More image generations.
+ $15 /mo in API credits.
+ Chat and email support.
+ Start now
+ Team
+ Secure, collaborative workspace for teams building with AI.
+ $24.99 
+ /user/mo
+ Excluding taxes
+ Including taxes
+ Subject to fair usage limits and Mistral's Terms of Service .
+ Even higher limits.
+ Even faster responses.
+ Up to 30GB of storage /user.
+ Domain name verification.
+ Data export.
+ $50 
+ /mo
+ Users
+ Start now
+ Enterprise
+ Private deployments powered by custom models, UI, and tools.
+ Custom models.
+ Custom agents.
+ Custom workflows.
+ Audit logs.
+ SAML SSO.
+ White label.
+ Contact us
+ Free
+ Start now
+ Pro
+ Start now
+ Team
+ Start now
+ Enterprise
+ Contact us
+ Interfaces.
+ Vibe on web 
+ Vibe in your browser: run long-horizon work and code tasks from a chat interface.
+ Vibe CLI 
+ Terminal-native coding agent powered by Devstral for autonomous software engineering tasks.
+ Vibe for IDE 
+ VS Code and JetBrains plugin powered by Devstral—tab completion, natural language code editing, and context-aware chat.
+ Vibe on mobile (iOS and Android)
+ Features and tools.
+ Messages 
+ Chat with our most powerful, SOTA models.
+ Up to 6x free
+ Up to 6x free
+ Voice mode 
+ Record or upload audio, get transcriptions, ask questions, or generate summaries.
+ Skills 
+ Create and load instructions, tools, and scripts for specialized, repeatable tasks.
+ Web searches
+ Up to 5x free
+ Up to 5x free
+ Libraries and document upload 
+ Organize and include information for your chats. Supported file formats: PDF, images, CSV, all text files (.json...), Office Suite (ppt, xls, docx). 
+ Limited
+ Up to 15GB
+ Up to 30GB / user
+ Task scheduling 
+ Schedule prompts, agents, or workflows to run automatically at set times.
+ Up to 5
+ Unlimited 
+ Subject to fair usage limits and Mistral's Terms of Service.
+ Unlimited 
+ Subject to fair usage limits and Mistral's Terms of Service.
+ Spreadsheets 
+ Create, edit, and share or download your spreadsheets.
+ Slides 
+ Create, edit, and share or download your presentations.
+ Workflows 
+ Run multi-step automations orchestrated from Mistral Studio.
+ Connectors (beta) 
+ Search, summarize, and act across your stack with the widest enterprise-ready connector directory.
+ Custom MCP connectors (beta) 
+ Connect to any remote MCP server of choice.
+ Canvas 
+ Create documents, presentations, code, mockups, and more.
+ Project folders 
+ Group chats into organized, context-rich workspaces.
+ Up to 1,000
+ Up to 1,000
+ Image generation 
+ Generate and edit high-quality AI images, turning ideas into visuals with just a few words.
+ Up to 40x free
+ Up to 40x free
+ Verified news 
+ Fetch reliable and verified news content in responses.
+ Coding features.
+ Use Vibe in the CLI, IDE, and remotely.
+ Connectors 
+ Pull context from your tools like Notion, Slack, Linear, and Drive directly into Vibe while it codes.
+ Hooks 
+ Run custom shell commands before and after each agent turn to enforce conventions, block patterns, or trigger your own automations.
+ Remote coding agents 
+ Remote coding agent in isolated sandboxes for parallel task execution.
+ Teleport 
+ Hand off a Vibe session from your local machine to a remote coding agent , then pick it back up locally when needed.
+ Remote agent observability 
+ Monitor remote coding sessions with run history, tool calls, code changes, logs, and audit trails.
+ Domain name verification
+ Team and enterprise features.
+ Knowledge connectors 
+ Connect external knowledge sources to Vibe for real-time, accurate answers.
+ Custom deployments 
+ Deploy self-hosted, in your private cloud, or on-premises; your data stays in your environment.
+ Admin API 
+ Programmatically manage users, teams, and permissions.
+ Data export
+ Audit logs 
+ Detailed logs for tracking usage, changes, and ensuring compliance.
+ SAML SSO
+ White label 
+ Dedicated hostname, your logo.
+ Usage and data.
+ Extend usage with PAYG credits 
+ Keep going past your plan limit by paying only for what you use beyond it at API rate.
+ Model training
+ Opt-out
+ Opt-out
+ Opt-out
+ Customer service.
+ Help center
+ Chat and email support
+ Frequently asked questions.
+ Does Mistral have a free plan?
+ Yes, Mistral’s Free plan provides limited access to Vibe , including our latest models, chat, search, creation, and Vibe for code for agentic coding in your terminal. On the Free plan, you also get access to Mistral Studio .
+ Which model should I use?
+ For most tasks and coding: Mistral Medium . For document AI: OCR. For audio and speech intelligence: Voxtral . For cost-sensitive projects: Mistral Small . See the Models overview for more information.
+ How is API pricing calculat
+
+=== [about] https://docs.mistral.ai/ (lang=en)
+Documentation - Mistral AI 
+ Docs & API 
+ Search docs 
+ ⌘K 
+ Vibe Studio Inference & Models Admin Resources API Reference Search docs 
+ ⌘K 
+ Toggle theme Reach out Try Studio 
+ Home 
+ Getting started 
+ Platform overview 
+ Quickstarts 
+ Vibe Work 
+ Run your first task 
+ Analyze a dataset 
+ Create your first Skill 
+ Vibe Code 
+ Install the Vibe CLI 
+ Scaffold a project 
+ Studio 
+ Developer 
+ Send your first API request 
+ Build an agent with tools 
+ RAG with document search 
+ Build a workflow 
+ Admin 
+ Create your organization 
+ Configure SSO 
+ Manage workspaces 
+ Glossary ↗ 
+ SDK Clients ↗ 
+ API Reference ↗ 
+ Getting started 
+ Mistral AI Documentation
+ All our documentation in your hands: build, customize, and deploy AI, your way.
+ Vibe
+ Studio
+ Models
+ Admin
+ Discover our platform
+ Copy section link Discover our platform
+ Three products, one platform. Pick where you want to start.
+ Vibe
+ The unified agent for productivity and coding. Chat with it on the web or mobile, or run it in your terminal and editor.
+ Studio
+ The developer console and the Mistral API. Keys, the Playground, evaluations, agents, and SDKs to ship applications.
+ Admin
+ The control plane for organization setup, billing, SSO, Workspaces, and access policies.
+ Compare our products 
+ Latest models
+ Copy section link Latest models
+ Mistral Large 4
+ Open 
+ A state-of-the-art, open-weight, general-purpose multimodal model.
+ v 26.10
+ Z.ai GLM 5.3
+ Open 
+ A third-party open weight text model from Z.ai with a 1M-token context window.
+ v 5.3
+ Mistral Medium 3.5
+ Modified MIT 
+ Our frontier-class multimodal model optimized for agentic and coding use cases.
+ v 26.04
+ Mistral Small 4
+ Apache 2.0 
+ Hybrid model unifying instruct, reasoning, and coding in a single efficient model.
+ v 26.03
+ Voxtral Mini Transcribe Realtime
+ Apache 2.0 
+ An efficient audio input model, pre-trained and optimized for live transcription purposes.
+ v 26.02
+ OCR 4.1
+ Premier 
+ Our latest OCR service with paragraph-level bounding boxes, structural block labels, and block-level confidence scores.
+ v 4.1
+ View all models 
+ Quickstarts
+ Copy section link Quickstarts
+ Self-contained walkthroughs grouped by product and role. Most take 15 minutes or less.
+ All Vibe Work Vibe Code Studio API Admin 
+ Run your first Vibe Work task
+ Open Vibe Work, run a multi-step task end-to-end, and review the result.
+ 5 min to complete 
+ Analyze a dataset
+ Upload a spreadsheet and ask questions in plain language. Work writes and runs code.
+ 10 min to complete 
+ Create your first Skill
+ Package a repeatable method into a Skill so Work applies the same procedure every time.
+ 10 min to complete 
+ Install the Vibe CLI
+ Install the CLI, configure your API key, and send your first prompt from the terminal.
+ 5 min to complete 
+ Scaffold a project with Vibe Code
+ Describe a project in natural language and let Vibe Code generate the files and structure.
+ 10 min to complete 
+ Activate Studio and generate an API key
+ Activate Studio in Free mode and generate your first API key.
+ 5 min to complete 
+ Test a model in the API playground
+ Send prompts, adjust parameters, and compare model outputs in the Studio playground.
+ 5 min to complete 
+ Create a reusable Prompt
+ Save a prompt template with versions and a clear usage description.
+ 5 min to complete 
+ Create a Skill in Studio
+ Package reusable instructions and files into a Skill for repeated tasks.
+ 10 min to complete 
+ Send your first API request
+ Install the SDK, set your API key, and get a model response.
+ 5 min to complete 
+ Build an agent with tools
+ Define tools, let the model call fu
+
+=== [meta] https://mistral.ai/news/shieldstral/
+html lang: en
+hreflang: en, fr, it, x-default
+화면에 보이는 언어 이름: English, Français, Italiano

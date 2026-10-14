@@ -1,0 +1,120 @@
+{
+ "company": "Nectry Inc",
+ "one_liner_ko": "AI가 정해진 규칙을 처음부터 어길 수 없게 막아 주는 AI 권한 통제·감사 계층(Trust Layer)",
+ "what_it_does_ko": "Nectry는 AI 에이전트와 업무 도구·데이터 사이에서 규칙을 강제하는 신뢰 계층이다. 에이전트·통합·도구·데이터 종류 단위로 AI가 할 수 있는 일과 없는 일을 정하고, 규칙 밖의 작업은 실행 전에 차단한다. Gmail·Calendar·Drive·GitHub·HubSpot·Slack 등 서비스를 연결해 작업별 규칙을 붙인 뒤 하나의 관리형 MCP로 배포하며, Claude·ChatGPT·Cursor 같은 에이전트가 이를 쓴다. 모든 읽기·쓰기·변경을 감사 로그로 남기고 Datadog·Splunk·SIEM으로 실시간 전송할 수 있다.",
+ "key_features": [
+  "작업(operation) 단위 규칙과 켜기/끄기",
+  "필드·내용 규칙으로 민감 정보 차단",
+  "기존 역할 기반 팀 권한 관리",
+  "모든 AI 작업 감사 로그",
+  "Datadog·Splunk·SIEM 로그 스트리밍",
+  "여러 서비스를 하나의 관리형 MCP로 배포",
+  "자연어로 설정을 고치는 Mozart",
+  "Nectry Cloud 또는 자체 서버 배포"
+ ],
+ "use_cases_ko": [
+  "보안·운영·재무·법무 팀이 AI 에이전트의 업무 도구 접근을 통제",
+  "지원 상담 에이전트가 고객 기록을 조회할 때 결제 정보 같은 민감 필드 차단"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "웹"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://nectry.com/",
+   "quote": "© 2026 Nectry Inc"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://nectry.com/",
+   "quote": "Nectry prevents your AI from being able to break the rules in the first place."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://nectry.com/",
+   "quote": "Define how your teams use AI, down to individual agents, integrations, tools, and data types."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://nectry.com/",
+   "quote": "Nectry blocks operations that fall outside your rules before they execute."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://nectry.com/product/mcp/",
+   "quote": "Connect your services, choose what agents can access and do, set precise limits on each action, and deploy it all through one MCP."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://nectry.com/",
+   "quote": "Work with Claude, ChatGPT, Cursor, or your preferred agent."
+  },
+  {
+   "field": "key_features",
+   "url": "https://nectry.com/product/mcp/",
+   "quote": "Attach a requirement directly to one action, like limiting Send to @nectry.com addresses."
+  },
+  {
+   "field": "key_features",
+   "url": "https://nectry.com/",
+   "quote": "Ban sensitive data from emails or chatbots, and have total confidence that your AI can't slip up."
+  },
+  {
+   "field": "key_features",
+   "url": "https://nectry.com/",
+   "quote": "Set permissions using your existing roles and team hierarchy."
+  },
+  {
+   "field": "key_features",
+   "url": "https://nectry.com/",
+   "quote": "AUDIT LOG Every read, write, and change - recorded."
+  },
+  {
+   "field": "key_features",
+   "url": "https://nectry.com/",
+   "quote": "Nectry seamlessly works with Datadog, Splunk, or your SIEM."
+  },
+  {
+   "field": "key_features",
+   "url": "https://nectry.com/product/mcp/",
+   "quote": "Ask Mozart to add tools, change rules, or adjust your MCP configuration."
+  },
+  {
+   "field": "key_features",
+   "url": "https://nectry.com/",
+   "quote": "Get into production quickly—in our cloud or on your own servers."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://nectry.com/",
+   "quote": "SECURITY · OPERATIONS · FINANCE · LEGAL"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://nectry.com/",
+   "quote": "01 · FIELD RULE Block payment details"
+  },
+  {
+   "field": "platforms",
+   "url": "https://nectry.com/product/mcp/",
+   "quote": "Governance nectry.app"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://nectry.com/",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [],
+ "note": "요금 페이지가 없고 'Contact us' 문의형만 있어 요금·무료 여부 확인 못 함(기존 분류 확인 불가)."
+}

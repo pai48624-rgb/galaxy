@@ -1,0 +1,64 @@
+{
+ "company": "Consensus",
+ "one_liner_ko": "동료 심사를 거친 연구 논문을 검색·분석하는 AI 학술 검색 엔진.",
+ "what_it_does_ko": "Consensus는 과학 연구용 AI 작업 공간이자 학술 검색 엔진으로, 동료 심사 논문을 검색하고 분석한다. 주요 출판사의 라이선스 전문을 포함한 2억 5천만 편 이상의 논문을 바탕으로 답한다. Deep Search는 핵심 용어 확장, 상반된 주장 식별, 인용 그래프 탐색으로 문헌고찰을 몇 분으로 줄인다. 예/아니오 질문에는 Consensus Meter로 연구 결과가 얼마나 일치하는지 보여 준다.",
+ "key_features": [
+  "동료 심사 논문 검색·AI 분석",
+  "문헌고찰을 자동화하는 Deep Search",
+  "임상 지침·상위 의학 저널로 범위를 좁히는 Medical 모드",
+  "자연어로 기간·대상·연구 설계 필터 적용",
+  "연구 결과 일치도를 보여 주는 Consensus Meter",
+  "인용 그래프 등 연구 도구",
+  "API·MCP 사용(유료 요금제에 포함)"
+ ],
+ "use_cases_ko": [
+  "연구자·학생·임상의가 문헌고찰을 빠르게 진행",
+  "임상의가 지침 기반 임상 질문에 근거 있는 답을 확인",
+  "대학 도서관이 학생·교수에게 연구 검색 도구 제공"
+ ],
+ "pricing": {
+  "free_tier": "있음 (기본 논문 검색, 월 10회 Pro 메시지, 월 최대 3회 Deep 리뷰)",
+  "plans": [
+   {"name": "Free", "price": 0, "currency": "USD", "period": "month", "limits": "월 10회 Pro 메시지, Deep 리뷰 월 3회", "page_lang": "en"},
+   {"name": "Pro", "price": 12, "currency": "USD", "period": "month", "limits": "연 $144 표기, Pro 메시지 무제한, Deep 리뷰 월 15회, API·MCP 월 500회", "page_lang": "en"},
+   {"name": "Deep", "price": 45, "currency": "USD", "period": "month", "limits": "연 $540 표기, Deep 리뷰 월 200회, API·MCP 월 2,000회", "page_lang": "en"},
+   {"name": "API·MCP 추가 사용", "price": 0.05, "currency": "USD", "period": "usage", "limits": "포함량 초과 시 1회당 $0.05", "page_lang": "en"}
+  ],
+  "pricing_url": "https://consensus.app/pricing/"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["웹", "API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://consensus.app/home/about-us/", "quote": "Learn more about Consensus & our mission"},
+  {"field": "one_liner_ko", "url": "https://consensus.app/", "quote": "Consensus is the AI-powered academic search engine"},
+  {"field": "what_it_does_ko", "url": "https://consensus.app/home/about-us/", "quote": "Consensus is an AI workspace for scientific research."},
+  {"field": "what_it_does_ko", "url": "https://consensus.app/", "quote": "Consensus draws on 250M+ research papers, including licensed full text content from leading publishers."},
+  {"field": "what_it_does_ko", "url": "https://consensus.app/", "quote": "Consensus Deep Search builds a comprehensive search strategy, expanding key terms, identifying conflicting arguments, and exploring the citation graph."},
+  {"field": "key_features", "url": "https://consensus.app/", "quote": "Search and analyze peer-reviewed literature."},
+  {"field": "key_features", "url": "https://consensus.app/", "quote": "Automate Literature Review with Deep Search"},
+  {"field": "key_features", "url": "https://consensus.app/", "quote": "Narrow your results to the highest-quality medical sources"},
+  {"field": "key_features", "url": "https://consensus.app/", "quote": "Specify timeframes, populations, designs, and more directly in your prompt"},
+  {"field": "key_features", "url": "https://consensus.app/", "quote": "the Consensus Meter instantly shows how much the evidence agrees or disagrees"},
+  {"field": "key_features", "url": "https://consensus.app/pricing/", "quote": "Search, analysis, citation graph, and more"},
+  {"field": "key_features", "url": "https://consensus.app/pricing/", "quote": "500 API & MCP uses included per month"},
+  {"field": "use_cases_ko", "url": "https://consensus.app/", "quote": "10 million researchers, students, and clinicians use Consensus to supercharge literature reviews"},
+  {"field": "use_cases_ko", "url": "https://consensus.app/", "quote": "Guideline-based management of atrial fibrillation with CKD"},
+  {"field": "use_cases_ko", "url": "https://consensus.app/", "quote": "Over 170 university libraries partner with Consensus to give students and faculty access."},
+  {"field": "pricing", "url": "https://consensus.app/pricing/", "quote": "Keep using basic paper search for free, without any AI analysis."},
+  {"field": "pricing", "url": "https://consensus.app/pricing/", "quote": "10 Pro messages per month"},
+  {"field": "pricing", "url": "https://consensus.app/pricing/", "quote": "Up to 3 Deep reviews per month"},
+  {"field": "pricing", "url": "https://consensus.app/pricing/", "quote": "$144 annually"},
+  {"field": "pricing", "url": "https://consensus.app/pricing/", "quote": "$540 annually"},
+  {"field": "pricing", "url": "https://consensus.app/pricing/", "quote": "15 Deep reviews per month"},
+  {"field": "pricing", "url": "https://consensus.app/pricing/", "quote": "2,000 API & MCP uses included per month"},
+  {"field": "pricing", "url": "https://consensus.app/pricing/", "quote": "$0.05/use after included, up to 1,000 per month"},
+  {"field": "api", "url": "https://consensus.app/pricing/", "quote": "500 API & MCP uses included per month"},
+  {"field": "platforms", "url": "https://consensus.app/home/about-us/", "quote": "Open app"},
+  {"field": "platforms", "url": "https://consensus.app/pricing/", "quote": "2,000 API & MCP uses included per month"},
+  {"field": "korean_support", "url": "https://consensus.app/", "quote": "화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

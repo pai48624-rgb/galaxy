@@ -1,0 +1,60 @@
+{
+ "company": "Mastra",
+ "one_liner_ko": "며칠씩 도는 AI 에이전트를 만들고 관찰·개선하는 타입스크립트 에이전트 프레임워크.",
+ "what_it_does_ko": "Mastra는 최신 타입스크립트 스택으로 AI 애플리케이션과 에이전트를 만드는 프레임워크다. 에이전트·워크플로·메모리·하네스·서버를 제공하며, React·Next.js·Node에 붙이거나 독립 서버로 배포할 수 있다. 하나의 인터페이스로 40개 넘는 모델 제공자에 연결하고, 내장 평가와 관찰 기능으로 에이전트를 측정·개선한다. 오픈소스 프레임워크(Apache 2.0)는 무료이고, 호스팅 플랫폼(Mastra Cloud)은 사용량 기반 유료 요금제가 있다.",
+ "key_features": [
+  "지시·모델·도구를 한곳에 정의하는 타입 에이전트",
+  "단계·재시도·분기를 갖춘 그래프 기반 워크플로",
+  "관찰형 메모리·의미 검색 기반 메모리",
+  "40개 이상 제공자에 연결하는 모델 라우팅",
+  "사람 승인을 기다리는 일시 정지·재개(Human-in-the-loop)",
+  "MCP 서버 작성",
+  "내장 평가(evals)와 관찰(트레이스·지표·로그)",
+  "에이전트 개발·테스트용 Mastra Studio"
+ ],
+ "use_cases_ko": [
+  "영업·마케팅 에이전트",
+  "고객 대면 에이전트",
+  "이슈부터 배포까지 소프트웨어 작업을 맡는 전문 에이전트 시스템(Factory)"
+ ],
+ "pricing": {
+  "free_tier": "있음 (오픈소스 프레임워크 무료, 플랫폼 Starter $0: 관찰 이벤트 10만·CPU 24시간·보존 15일)",
+  "plans": [
+   {"name": "Starter (Mastra Platform)", "price": 0, "currency": "USD", "period": "month", "limits": "관찰 이벤트 10만 + $10/10만, CPU 24시간 + $0.35/시간, 보존 15일", "page_lang": "en"},
+   {"name": "Teams (Mastra Platform)", "price": 250, "currency": "USD", "period": "month", "limits": "관찰 이벤트 100만 + $8/10만, CPU 250시간 + $0.25/시간, 보존 6개월, SSO", "page_lang": "en"},
+   {"name": "Enterprise (Mastra Platform)", "price": null, "currency": "USD", "period": null, "limits": "맞춤 가격, RBAC·감사 로그·SLA", "page_lang": "en"},
+   {"name": "Free (Self-Hosted)", "price": 0, "currency": "USD", "period": "month", "limits": "Apache 2.0, 어디서나 빌드·호스팅", "page_lang": "en"},
+   {"name": "Enterprise (Self-Hosted)", "price": null, "currency": "USD", "period": "year", "limits": "맞춤 가격, 연 단일 요금, 데이터가 VPC 안에 머묾", "page_lang": "en"}
+  ],
+  "pricing_url": "https://mastra.ai/pricing"
+ },
+ "open_source": "Apache-2.0",
+ "api": "불명",
+ "platforms": ["웹", "CLI"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://mastra.ai", "quote": "TypeScript AI Framework for Agents and Apps | Mastra"},
+  {"field": "one_liner_ko", "url": "https://mastra.ai", "quote": "Build , observe , and improve agents that run for days with Mastra, the leading TypeScript agent framework"},
+  {"field": "what_it_does_ko", "url": "https://github.com/mastra-ai/mastra", "quote": "Mastra is a framework for building AI-powered applications and agents with a modern TypeScript stack."},
+  {"field": "what_it_does_ko", "url": "https://github.com/mastra-ai/mastra", "quote": "Mastra integrates with frontend and backend frameworks like React, Next.js, and Node, or you can deploy it anywhere as a standalone server."},
+  {"field": "key_features", "url": "https://mastra.ai", "quote": "Define typed agents with instructions, models, tools, and runtime behavior in one place."},
+  {"field": "key_features", "url": "https://mastra.ai", "quote": "Compose typed steps, retries, and branches into production workflows your team can inspect and ship."},
+  {"field": "key_features", "url": "https://mastra.ai", "quote": "Give agents durable context with observational memory, semantic recall, and thread-aware storage."},
+  {"field": "key_features", "url": "https://github.com/mastra-ai/mastra", "quote": "Connect to 40+ providers through one standard interface."},
+  {"field": "key_features", "url": "https://github.com/mastra-ai/mastra", "quote": "Suspend an agent or workflow and await user input or approval before resuming."},
+  {"field": "key_features", "url": "https://github.com/mastra-ai/mastra", "quote": "Author Model Context Protocol servers, exposing agents, tools, and other structured resources via the MCP interface."},
+  {"field": "key_features", "url": "https://mastra.ai", "quote": "Studio is the interface for building, testing, and managing agents, workflows, and tools."},
+  {"field": "use_cases_ko", "url": "https://mastra.ai", "quote": "Sales agents Marketing agents Company Brain Financial Services Healthcare Customer-facing agents Developer Infra"},
+  {"field": "use_cases_ko", "url": "https://mastra.ai", "quote": "A system of specialized AI agents that takes software from issue to production."},
+  {"field": "pricing", "url": "https://mastra.ai/pricing", "quote": "Observability events 100K events + $10/100K"},
+  {"field": "pricing", "url": "https://mastra.ai/pricing", "quote": "Teams $250 / month"},
+  {"field": "pricing", "url": "https://mastra.ai/pricing", "quote": "Observability events 1M events + $8/100K"},
+  {"field": "pricing", "url": "https://mastra.ai/pricing", "quote": "Predictable cost One flat annual fee — no per-trace or per-seat metering."},
+  {"field": "open_source", "url": "https://mastra.ai/pricing", "quote": "Apache 2.0 licensed"},
+  {"field": "platforms", "url": "https://mastra.ai", "quote": "Open Mastra Studio at `http://localhost:4111`."},
+  {"field": "platforms", "url": "https://github.com/mastra-ai/mastra", "quote": "npm create mastra@latest"},
+  {"field": "korean_support", "url": "https://mastra.ai", "quote": "html lang: en"}
+ ],
+ "mismatch": [],
+ "plan_change": [{"official": "오픈소스 프레임워크(Apache 2.0) 무료 + 호스팅 Mastra Platform: Starter $0, Teams $250/월, Enterprise 맞춤, 관찰 이벤트·CPU 시간·토큰(시장가+5.5%) 등 사용량 과금", "diff": "'오픈소스(무료)' 분류는 맞지만 공식 페이지에 구독+종량제 호스팅 플랫폼 요금제와 셀프호스트 엔터프라이즈 라이선스가 함께 있음", "url": "https://mastra.ai/pricing"}]
+}

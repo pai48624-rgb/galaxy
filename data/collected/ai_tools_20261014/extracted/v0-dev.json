@@ -1,0 +1,186 @@
+{
+ "company": "Vercel",
+ "one_liner_ko": "프롬프트만으로 풀스택 웹앱을 만들고 바로 공개 사이트로 배포하는 Vercel의 AI 에이전트.",
+ "what_it_does_ko": "v0는 누구나 실제 코드와 풀스택 앱·에이전트를 만들 수 있게 돕는 AI 에이전트다. 원하는 것을 설명하면 몇 분 만에 작동하는 앱을 만들고 몇 초 만에 라이브 웹사이트로 게시한다. 와이어프레임·목업으로 고품질 UI를 만들고 백엔드·데이터베이스와 연결할 수 있으며, 바로 운영 배포하거나 풀 리퀘스트로 검토를 받을 수 있다. 코드 오류를 진단해 자동으로 고치는 기능도 있다.",
+ "key_features": [
+  "GitHub 저장소 연동·코드 푸시",
+  "Vercel 원클릭 배포",
+  "디자인 모드로 화면을 시각적으로 미세 조정",
+  "템플릿으로 빠르게 시작",
+  "색·글꼴·스타일을 정하는 디자인 시스템 생성",
+  "계획·작업 생성·DB 연결까지 하는 에이전트 방식",
+  "iOS 앱으로 휴대폰에서 제작",
+  "오류 자동 진단·수정"
+ ],
+ "use_cases_ko": [
+  "제품 관리자: 빠른 프로토타입으로 이해관계자 설득·아이디어 검증",
+  "디자이너: 목업을 실제 동작하는 고품질 UI로 전환",
+  "엔지니어: 풀스택 앱·컴포넌트 골격을 빠르게 생성"
+ ],
+ "pricing": {
+  "free_tier": "있음 (하루 메시지 7개 제한)",
+  "plans": [
+   {
+    "name": "Free",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "하루 메시지 7개",
+    "page_lang": "en"
+   },
+   {
+    "name": "Plus",
+    "price": 30,
+    "currency": "USD",
+    "period": "month",
+    "limits": "사용자당. 페이지에 '$30 $ 90 /user/month'로 두 금액이 함께 표기됨. 사용자당 월 $30 크레딧 + 로그인 시 일 $2 무료 크레딧",
+    "page_lang": "en"
+   },
+   {
+    "name": "Business",
+    "price": 100,
+    "currency": "USD",
+    "period": "month",
+    "limits": "사용자당. 월 $30 크레딧, 학습 제외 기본값",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": "USD",
+    "period": "month",
+    "limits": "맞춤 견적(Custom), SAML SSO·역할 기반 접근",
+    "page_lang": "en"
+   },
+   {
+    "name": "모델 토큰 요금 v0 Mini",
+    "price": 0.2,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "입력 100만 토큰당 $0.20, 출력 $1.20",
+    "page_lang": "en"
+   },
+   {
+    "name": "모델 토큰 요금 v0 Pro",
+    "price": 2,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "입력 100만 토큰당 $2, 출력 $10",
+    "page_lang": "en"
+   },
+   {
+    "name": "모델 토큰 요금 v0 Max",
+    "price": 5,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "입력 100만 토큰당 $5, 출력 $25",
+    "page_lang": "en"
+   },
+   {
+    "name": "모델 토큰 요금 v0 Max Fast",
+    "price": 10,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "입력 100만 토큰당 $10, 출력 $50",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://v0.app/pricing"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "iOS"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://v0.app/",
+   "quote": "v0 by Vercel - Build Full-Stack Web Apps with AI"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://v0.app/",
+   "quote": "Generate working applications in minutes with AI. Publish as live websites in seconds."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://v0.app/docs",
+   "quote": "v0 is an AI agent that helps anyone create real code and full-stack apps and agents."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://v0.app/docs",
+   "quote": "Deploy to production immediately, or open a pull request for review."
+  },
+  {
+   "field": "key_features",
+   "url": "https://v0.app/",
+   "quote": "Connect to GitHub and push code directly to your repository."
+  },
+  {
+   "field": "key_features",
+   "url": "https://v0.app/",
+   "quote": "Fine-tune every detail with visual controls and live preview."
+  },
+  {
+   "field": "key_features",
+   "url": "https://v0.app/",
+   "quote": "v0 plans, creates tasks, and connects to databases as it builds."
+  },
+  {
+   "field": "key_features",
+   "url": "https://v0.app/docs",
+   "quote": "Automatically fix errors in your code with intelligent diagnostics."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://v0.app/docs",
+   "quote": "Quickly prototype and iterate to align stakeholders, validate ideas early"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://v0.app/docs",
+   "quote": "Turn mockups into real, high-fidelity user interfaces that reflect user flows and constraints."
+  },
+  {
+   "field": "pricing",
+   "url": "https://v0.app/pricing",
+   "quote": "7 message/day limit"
+  },
+  {
+   "field": "pricing",
+   "url": "https://v0.app/pricing",
+   "quote": "$30 $ 90 /user/month"
+  },
+  {
+   "field": "pricing",
+   "url": "https://v0.app/pricing",
+   "quote": "$100 /user/month"
+  },
+  {
+   "field": "pricing",
+   "url": "https://v0.app/pricing",
+   "quote": "v 0 Mini Lightning-fast speed with near-frontier intelligence $0.20/1M $0.25/1M $0.02/1M $1.20/1M"
+  },
+  {
+   "field": "api",
+   "url": "https://v0.app/docs",
+   "quote": "Docs API"
+  },
+  {
+   "field": "platforms",
+   "url": "https://v0.app/",
+   "quote": "Build anywhere with the v0 iOS app. Design on the go."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://v0.app/",
+   "quote": "hreflang: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

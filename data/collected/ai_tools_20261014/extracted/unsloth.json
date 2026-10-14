@@ -1,0 +1,154 @@
+{
+ "company": "Unsloth",
+ "one_liner_ko": "LLM을 내 컴퓨터에서 실행하고 학습(미세조정)하는 오픈소스 프레임워크이자 데스크톱 앱",
+ "what_it_does_ko": "Unsloth는 오픈소스 UI로 로컬 하드웨어에서 AI 모델을 실행하고 학습할 수 있게 해준다. 텍스트·오디오·임베딩·비전·이미지 확산 모델의 추론과 미세조정을 지원하며 500개 이상의 모델을 다룬다. 학습은 정확도 손실 없이 2배 빠르고 VRAM을 70% 덜 쓴다고 밝힌다. OpenAI 호환 API로 모델을 서빙하고 Claude Code·Codex 같은 에이전트를 로컬 모델에 연결할 수 있다.",
+ "key_features": [
+  "로컬에서 LLM·확산·임베딩·오디오 모델 실행 및 학습",
+  "2배 빠른 학습, VRAM 70% 절감(공식 주장)",
+  "LoRA·QLoRA·전체 미세조정·GRPO·DPO·FP8 지원",
+  "GGUF·NVFP4·FP8 등으로 내보내기",
+  "OpenAI 호환 API로 모델 서빙",
+  "unsloth start 명령으로 Claude Code·Codex 등 에이전트 연결",
+  "PDF·CSV·DOCX로 데이터셋 만들기(Data Recipes)"
+ ],
+ "use_cases_ko": [
+  "개발자가 자기 PC에서 LLM을 미세조정",
+  "코딩 에이전트를 로컬 모델로 실행"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Free: 오픈소스, 단일 GPU)",
+  "plans": [
+   {
+    "name": "Free",
+    "price": 0,
+    "currency": null,
+    "period": null,
+    "limits": "오픈소스, 단일 GPU, 4bit·16bit LoRA",
+    "page_lang": "en"
+   },
+   {
+    "name": "unsloth Pro",
+    "price": null,
+    "currency": null,
+    "period": null,
+    "limits": "문의(Contact us), 최대 8 GPU",
+    "page_lang": "en"
+   },
+   {
+    "name": "unsloth Enterprise",
+    "price": null,
+    "currency": null,
+    "period": null,
+    "limits": "문의(Contact us), 멀티 노드, 고객 지원",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://unsloth.ai/pricing"
+ },
+ "open_source": "오픈소스(라이선스 이름 미표기)",
+ "api": "있음",
+ "platforms": [
+  "윈도",
+  "맥",
+  "리눅스",
+  "웹",
+  "CLI",
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://unsloth.ai/docs",
+   "quote": "© Unsloth, 2026"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://unsloth.ai/docs",
+   "quote": "Unsloth is an open-source framework for running and training LLMs."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://unsloth.ai/docs",
+   "quote": "Unsloth lets you run and train AI models on your own local hardware via an open-source UI."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://unsloth.ai/docs",
+   "quote": "Unsloth supports inference and training for 500+ models: vision , TTS , embedding , RL"
+  },
+  {
+   "field": "key_features",
+   "url": "https://unsloth.ai/docs",
+   "quote": "Fine-tuning: Train LLMs, diffusion, TTS, and embedding models 2× faster with 70% less VRAM with no accuracy loss"
+  },
+  {
+   "field": "key_features",
+   "url": "https://unsloth.ai/docs",
+   "quote": "Complete support: Supports reinforcement learning , LoRA, QLoRA, full fine tuning, pretraining, RL, GRPO, DPO, and FP8."
+  },
+  {
+   "field": "key_features",
+   "url": "https://unsloth.ai/docs",
+   "quote": "Connect: Serve models through an OpenAI compatible API ."
+  },
+  {
+   "field": "key_features",
+   "url": "https://unsloth.ai/docs",
+   "quote": "Datasets: Build datasets from PDFs, CSVs, DOCX files, and more with Data Recipes ."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://unsloth.ai/docs",
+   "quote": "Unsloth Start lets you connect Claude Code , Codex and other agents to local models via the unsloth start command."
+  },
+  {
+   "field": "pricing",
+   "url": "https://unsloth.ai/pricing",
+   "quote": "Free Freeware of our standard version of unsloth"
+  },
+  {
+   "field": "pricing",
+   "url": "https://unsloth.ai/pricing",
+   "quote": "unsloth Pro 2.5x faster training + 20% less VRAM"
+  },
+  {
+   "field": "pricing",
+   "url": "https://unsloth.ai/pricing",
+   "quote": "Up to 8 GPUS support"
+  },
+  {
+   "field": "open_source",
+   "url": "https://unsloth.ai/docs",
+   "quote": "Unsloth is an open-source framework for running and training LLMs."
+  },
+  {
+   "field": "api",
+   "url": "https://unsloth.ai/docs",
+   "quote": "Connect: Serve models through an OpenAI compatible API ."
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/unslothai/unsloth",
+   "quote": "Unsloth works on **Windows, Linux, WSL** and **macOS**."
+  },
+  {
+   "field": "platforms",
+   "url": "https://unsloth.ai/docs",
+   "quote": "Or, install Unsloth Studio natively, our browser-based web UI:"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://unsloth.ai/docs",
+   "quote": "hreflang: de, fr, ja, zh"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "Free(오픈소스) / unsloth Pro / unsloth Enterprise, 유료는 가격 미표기 'Contact us'",
+   "diff": "유료 플랜이 클라우드 매니지드 서비스가 아니라 더 빠른 학습·멀티 GPU/노드를 주는 상위 버전(문의형)",
+   "url": "https://unsloth.ai/pricing"
+  }
+ ]
+}

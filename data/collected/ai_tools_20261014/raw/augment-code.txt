@@ -1,0 +1,588 @@
+=== [home] https://www.augmentcode.com/ (lang=en)
+Augment Code: Agentic software development at organizational scale 
+ Skip to content 
+ Product 
+ Solutions 
+ Context Engine Pricing Docs Blog Resources 
+ Sign in Get Started 
+ Product Software Factory CLI Cloud Agents Changelog 
+ Solutions Software Factory Connect agents across your SDLC Code Review Review every PR with agents Test Coverage Coverage that climbs, suites that stay green Incident Management Investigate alerts before humans arrive Ticket to PR Assign a ticket, merge a reviewed PR Large Projects From design doc to shipped feature Automations Recurring work as repeatable workflows Security Remediation From CVE alert to a reviewed fix Migrations Modernization as a program, not a project Onboarding Ramp every engineer in days Team Standards at Scale Your best workflow, everyone's default 
+ Context Engine Pricing Docs Blog Resources Workflows Podcast Books & Guides Customers Status Page Trust Center 
+ Talk to Sales Sign in 
+ Try Cosmos Get Started 
+ Latest Augment Code Joins Harness: Advancing the Autonomous SDLC from Idea to Production 
+ Run your
+ software factory 
+ Cosmos is the platform for building an always-on software delivery system that moves work from spec to verification. Build and tune it in natural language, with your engineers in control at the points that matter.
+ Get Started Book a demo 
+ 01 · Ticket
+ Intent · Scope
+ 02 · Code
+ Spec · Delegate
+ 03 · Review
+ Intent · Verify
+ 04 · Deploy
+ Approve · Release
+ 05 · Monitor
+ Alert · Correct
+ ↺ back to ticket
+ Continuous learning · every run improves the loop
+ Trusted by leading enterprises
+ Build your software factory
+with these loops
+ A software factory isn't built in one go. It's assembled loop by loop: agents carry the repetitive middle of the SDLC, your engineers hold the quality gates.
+ Code review
+ Every PR gets a substantive first-pass review within minutes. Senior engineers review for intent and architecture, not line-by-line diffs.
+ 66%
+ Faster time to merge
+ Explore the solution → 
+ Ticket to PR
+ Assign a ticket; the loop investigates, writes the change, and exercises it end to end. Its output feeds the code review loop.
+ 2–3×
+ Engineering throughput
+ Explore the solution → 
+ Vulnerability remediation
+ From alert to reviewed fix without a war room. Agents map the blast radius and hand your team patches to approve, not research to start.
+ 60%+
+ CVEs remediated automatically
+ Explore the solution → 
+ Incident response
+ By the time the on-call engineer joins, the investigation is done: likely cause identified, timeline drafted, context assembled.
+ 70%+
+ Resolved before on-call joins
+ Explore the solution → 
+ One loop is a local optimization. Connected loops are a
+ software factory : measured in outcomes, not output.
+ Cosmos in action. 
+ Two minutes: describe the loop you want, approve the plan, and watch the first run go live.
+ Watch the demo 
+ Ask: describe the loop you want Pick the Advisor and say what you need in plain language. It asks only what it needs to know. Plan: approve it at the checkpoint The Advisor lays out the Experts, environment, and automation. You approve the plan, not the prompts. Run: the loop goes live Fleet created, trigger armed. The first ticket-to-PR run kicks off on its own. 
+ Agents run the whole factory.
+Not just the code.
+ Cosmos ships with experts for every stage of the software development lifecycle. Each one owns its slice end to end, hands off to the next, and pulls humans in only at the checkpoints that matter.
+ TRIAGE 
+ AUTHOR 
+ REVIEW 
+ VERIFY 
+ Triage
+ Work Dispatcher
+ Scans open tickets, applies a triage rubric, and dispatches the right expert as a worker.
+ Author
+ PR Author
+ Takes a task description and drives it from first commit through merge.
+ Review
+ Code Review Fleet
+ Pair Review, Deep Code Review, and PR Risk Analysis work the PR end to end and post inline findings.
+ Verify
+ Tester
+ Exercises the change end to end and posts results, screenshots included.
+ Triage
+ Work Dispatcher
+ Scans open tickets, applies a triage rubric, and dispatches the right expert as a worker.
+ Author
+ PR Author
+ Takes a task description and drives it from first commit through merge.
+ Review
+ Code Review Fleet
+ Pair Review, Deep Code Review, and PR Risk Analysis work the PR end to end and post inline findings.
+ Verify
+ Tester
+ Exercises the change end to end and posts results, screenshots included.
+ Build your own / Use the experts we ship, choose from our library , fork them, or build your own. Every expert is a reusable template with its own environment, capabilities, and memory.
+ + Agent Orchestration Platform + 
+ Meet Cosmos .
+ Cosmos runs your software agents at scale, giving them the context, tools, and feedback loops they need to get better with every workflow.
+ Watch the demo 
+ Built to run your software factory,
+end to end.
+ Anyone can point an agent at a task. Running a software factory for an entire engineering organization, reliably and securely, is a platform problem. This is the platform.
+ Start from anything
+ Native triggers for GitHub, GitLab, Slack, Linear, Jira, schedules, and typed webhooks for the rest of your stack.
+ Run anywhere
+ Managed cloud sandboxes, your own machines for code that cannot leave the building, or pools of both.
+ Expertise as an asset
+ Your factory is built from Experts: captured judgment, made runnable. Improve the prompt once; every future run upgrades.
+ Humans in by design
+ Quality gates are first-class. Work pauses for review, resumes on reply, and consequential actions are approved by a person.
+ A factory that learns
+ Shared memory across runs, agents, and teams. One engineer's correction sharpens everyone's runs.
+ Loops that connect
+ Loops hand outcomes to each other: triage feeds authoring, authoring feeds review, postmortems file the next tickets.
+ Your Experts on top.
+Your infrastructure below.
+ Cosmos orchestrates the work. 
+ Cosmos
+ Agent Orchestration Platform
+ + Services
+ Expert Registry
+ Discover and share
+ Human-in-the-Loop
+ Smart escalation
+ Integrations
+ Slack · GitHub · Jira · CI
+ Organization Knowledge
+ Shared memory & knowledge across agents & teams
+ + Cosmos Core
+ Agent Runtime
+ Scheduling, isolation
+ Context Engine
+ Codebase understanding
+ Trigger & Automation
+ Software development lifecycle triggers
+ Shared File System
+ Tenant and user level
+ Sandboxes
+ Isolated execution
+ + Works Everywhere
+ Laptops
+ Local dev
+ Dev VMs
+ Codespaces · Devcontainers
+ Our Cloud
+ Managed · Zero setup
+ Your Cloud
+ AWS · GCP · More
+ Talk to our experts Try Cosmos 
+ Every software factory
+started with one loop.
+ Code review is the usual first: the trigger is obvious, the quality gate is natural, and the outcome shows up in merge times within a week.
+ Book a demo Try Cosmos 
+ Cosmos · New Session
+Cosmos ▾ 
+ New session
+ Sessions
+ Files
+▾
+ User
+ Organization
+ Configuration
+▾
+ Foundation
+ Experts
+ Environments
+ Capabilities
+ Integrations
+ MCP Registry
+ Webhooks
+ Automations
+ Recent Sessions ▾
+ Implement the Vercel Change in…
+ Add Project.json File and Team…
+ Implement Vercel Demo Chang…
+ AV
+ Alex Vance
+ alex.vance@acme.com
+ What's next, Alex?
+ All Experts
+ Mine
+ Pinned
+ Deep Code Reviewer 
+ ★ 
+ Reads a PR end-to-end — logic, edge cases, naming, security surface, and test completeness — then posts detailed inline comments with an approve / request-changes verdict.
+ 12/wk 
+ CI Failure Investigator 
+ ★ 
+ Triggered on any failed GitHub Actions run — reads the log, identifies the root-cause step, and posts a plain-English diagnosis 
+
+=== [pricing] https://www.augmentcode.com/pricing (lang=en)
+Augment Code Pricing - Standard, Business, and Enterprise Plans | Augment Code 
+ Skip to content 
+ Product 
+ Solutions 
+ Context Engine Pricing Docs Blog Resources 
+ Sign in Get Started 
+ Product Software Factory CLI Cloud Agents Changelog 
+ Solutions Software Factory Connect agents across your SDLC Code Review Review every PR with agents Test Coverage Coverage that climbs, suites that stay green Incident Management Investigate alerts before humans arrive Ticket to PR Assign a ticket, merge a reviewed PR Large Projects From design doc to shipped feature Automations Recurring work as repeatable workflows Security Remediation From CVE alert to a reviewed fix Migrations Modernization as a program, not a project Onboarding Ramp every engineer in days Team Standards at Scale Your best workflow, everyone's default 
+ Context Engine Pricing Docs Blog Resources Workflows Podcast Books & Guides Customers Status Page Trust Center 
+ Talk to Sales Sign in 
+ Try Cosmos Get Started 
+ PRICING
+ Pricing that scales with you & your team.
+ POPULAR 
+ STANDARD
+ $20 /month 
+ flat, no per-seat charge
+ One flat price for your whole team, up to 50 seats with $20 of usage included every month.
+ Try Cosmos 
+ $20/mo of usage across LLM, Context Engine & compute 
+ Up to 50 seats included 
+ Cosmos NEW 
+ CLI access 
+ MCP & Native Tools 
+ Top-ups, pay as you go 
+ SOC 2 Type II 
+ No AI training allowed 
+ BUSINESS
+ $100 /month 
+ flat, no per-seat charge
+ One flat price for your whole team, up to 50 seats with $100 of usage included every month.
+ Try Cosmos 
+ $100/mo of usage across LLM, Context Engine & compute 
+ Up to 50 seats included 
+ Cosmos NEW 
+ CLI access 
+ MCP & Native Tools 
+ Top-ups, pay as you go 
+ SOC 2 Type II 
+ No AI training allowed 
+ ENTERPRISE
+ Custom 
+ For enterprise teams with high volume, security, or support needs.
+ Contact sales 
+ Cosmos NEW 
+ Custom user pricing 
+ Bespoke usage limits 
+ Volume-based annual discounts 
+ SSO, OIDC, & SCIM support 
+ SOC 2 & Security Reports 
+ CMEK & ISO 42001 compliance 
+ Dedicated support 
+ No AI training allowed 
+ TRUSTED BY ENGINEERS AT
+ Meet our customers 
+ 001
+ Compare plans
+ STANDARD
+ $20
+ BUSINESS
+ $100
+ ENTERPRISE
+ Custom
+ STANDARD
+ $20 /month 
+ flat, no per-seat charge
+ $20/mo of usage included 
+ Top-ups, pay as you go 
+ Up to 50 seats 
+ Context Engine 
+ Coding Agent
+ Chat & Agents 
+ CLI access 
+ MCP & Native Tools 
+ Usage Analytics 
+ Cosmos
+ Standard size compute 
+ Daemon mode 
+ 50 concurrent sessions 
+ Security
+ SOC 2 Type II 
+ CMEK & ISO 42001 Compliance 
+ SIEM Integration 
+ Data Residency Options 
+ Granular Access Controls 
+ Comprehensive Audit Trails 
+ Enterprise SSO Integration 
+ BUSINESS POPULAR 
+ $100 /month 
+ flat, no per-seat charge
+ $100/mo of usage included 
+ Top-ups, pay as you go 
+ Up to 50 seats 
+ Context Engine 
+ Coding Agent
+ Chat & Agents 
+ CLI access 
+ MCP & Native Tools 
+ Usage Analytics 
+ Cosmos
+ Standard size compute 
+ Daemon mode 
+ 50 concurrent sessions 
+ Security
+ SOC 2 Type II 
+ CMEK & ISO 42001 Compliance 
+ SIEM Integration 
+ Data Residency Options 
+ Granular Access Controls 
+ Comprehensive Audit Trails 
+ Enterprise SSO Integration 
+ ENTERPRISE
+ Custom
+ Custom usage 
+ Custom top-up 
+ Unlimited users 
+ Context Engine 
+ Coding Agent
+ Chat & Agents 
+ CLI access 
+ MCP & Native Tools 
+ Usage Analytics 
+ Cosmos
+ Custom size compute 
+ Multi-region compute 
+ Daemon mode 
+ Unlimited concurrent sessions 
+ Security
+ SOC 2 Type II 
+ CMEK & ISO 42001 Compliance 
+ SIEM Integration 
+ Data Residency Options 
+ Granular Access Controls 
+ Comprehensive Audit Trails 
+ Enterprise SSO Integration 
+ STANDARD
+ $20 /month 
+ flat, no per-seat charge
+ BUSINESS
+ $100 /month 
+ flat, no per-seat charge
+ ENTERPRISE
+ Custom
+ $20/mo of usage included 
+ Top-ups, pay as you go 
+ Up to 50 seats 
+ Context Engine 
+ $100/mo of usage included 
+ Top-ups, pay as you go 
+ Up to 50 seats 
+ Context Engine 
+ Custom usage 
+ Custom top-up 
+ Unlimited users 
+ Context Engine 
+ Coding Agent 
+ Chat & Agents 
+ CLI access 
+ MCP & Native Tools 
+ Usage Analytics 
+ Chat & Agents 
+ CLI access 
+ MCP & Native Tools 
+ Usage Analytics 
+ Chat & Agents 
+ CLI access 
+ MCP & Native Tools 
+ Usage Analytics 
+ Cosmos 
+ Standard size compute 
+ Daemon mode 
+ 50 concurrent sessions 
+ Standard size compute 
+ Daemon mode 
+ 50 concurrent sessions 
+ Custom size compute 
+ Multi-region compute 
+ Daemon mode 
+ Unlimited concurrent sessions 
+ Security 
+ SOC 2 Type II 
+ CMEK & ISO 42001 Compliance 
+ SIEM Integration 
+ Data Residency Options 
+ Granular Access Controls 
+ Comprehensive Audit Trails 
+ Enterprise SSO Integration 
+ SOC 2 Type II 
+ CMEK & ISO 42001 Compliance 
+ SIEM Integration 
+ Data Residency Options 
+ Granular Access Controls 
+ Comprehensive Audit Trails 
+ Enterprise SSO Integration 
+ SOC 2 Type II 
+ CMEK & ISO 42001 Compliance 
+ SIEM Integration 
+ Data Residency Options 
+ Granular Access Controls 
+ Comprehensive Audit Trails 
+ Enterprise SSO Integration 
+ 002
+ Frequently asked questions
+ 01 How does usage work on the Standard and Business plans? 
+ Standard includes $20 of usage every month, and Business includes $100. Usage is measured in dollars across LLMs, Context Engine, and compute:
+ LLM : model inference, billed at the provider's public API list price
+ Service fee : a flat 40% fee on LLM usage (no fee on compute)
+ Compute : Cosmos compute time
+If you use more than your plan's included usage, you can top up as you go and pay only for what you use, with no plan changes required.
+ 02 Is usage pooled across my team? 
+ Yes. Your included usage and any top-ups are pooled across your whole team, up to 50 seats on the Standard and Business plans, with no per-seat charge. Heavy users and occasional users draw from the same shared balance, so you never pay for seats that go unused.
+ 03 What counts as a seat? 
+ A seat is any team member with access to your Augment workspace. Standard and Business each include up to 50 seats at one flat monthly price, with no per-seat charge. If your team is larger than 50, talk to us about Enterprise → 
+ 04 Do you train on my data on a paid plan? 
+ No. All paid plans exclude any AI training on your data as part of our Commercial Terms of Service.
+ 05 How are you handling Security & Compliance? 
+ We take security & compliance seriously. In addition to our rigorous encryption and access controls, we undergo annual SOC 2 audits. Visit our Security page to learn more, or head to our Trust Center to request additional details and reports.
+ 06 What SLA and support do I get on each plan? 
+ All paid subscriptions are covered by the same core uptime and response target
+
+=== [about] https://docs.augmentcode.com/introduction (lang=en)
+Introduction - Augment 
+ Documentation Index
+ Fetch the complete documentation index at: /llms.txt 
+ Use this file to discover all available pages before exploring further.
+ Skip to main content 
+ Augment home page 
+ Search...
+ ⌘ K Ask Assistant ⌘ I 
+ Status 
+ Blog 
+ Support 
+ Search... 
+ Navigation 
+ Getting Started 
+ Introduction
+ Getting Started 
+ Introduction 
+ Cosmos 
+ Getting Started 
+ Configuring Cosmos 
+ Software Factory 
+ Environments 
+ Sessions 
+ Experts 
+ Workflow Automation 
+ Cosmos Advisor 
+ Settings 
+ Connectors 
+ Spaces 
+ Guides 
+ Keyboard shortcuts 
+ Auggie CLI 
+ Overview 
+ Setup Auggie 
+ Configure Auggie 
+ Interactive mode 
+ Automation 
+ Cosmos 
+ ACP 
+ SDK 
+ CLI reference 
+ Other clients 
+ Visual Studio Code 
+ JetBrains IDEs 
+ Vim and Neovim 
+ Context Engine MCP 
+ Context Engine SDK 
+ Context Connectors 
+ Augment Code Review 
+ Admin 
+ Analytics 
+ Configuration 
+ Models & Pricing 
+ Available Models 
+ Token-Based Pricing 
+ Troubleshooting 
+ Feedback 
+ Request and Session IDs 
+ Logs 
+ On this page 
+ Get started in minutes 
+ Cosmos 
+ Auggie CLI 
+ Automate your SDLC 
+ Getting Started
+ Introduction
+ Augment Code is the AI-native coding platform built for enterprise-grade software engineering. Transform how you build and ship software with powerful coding agents, deep codebase intelligence, and flexible automations.
+ ​ 
+ Get started in minutes 
+ ​ 
+ Cosmos 
+ Combine custom triggers and specialized agents to build powerful software development automations. 
+ ​ 
+ Auggie CLI 
+ All the power of Augment’s agent, context engine, and tools in your terminal. 
+ Looking for Augment for your favorite IDE? See documentation for Visual Studio Code or JetBrains IDEs . 
+ ​ 
+ Automate your SDLC 
+ Cosmos ships with built-in experts that enable you to automate how you build, review, and ship code to production. 
+ Code
+ Go from prompt to implementation, and handle follow-ups automatically. 
+ Review
+ Automatically review every PR to catch critical bugs. 
+ Other automation
+ Run a specialized agent from a trigger or on schedule. 
+ Getting Started
+ x github linkedin 
+ Powered by This documentation is built and hosted on Mintlify, a developer documentation platform 
+ Assistant 
+ Responses are generated using AI and may contain mistakes.
+
+=== [meta] https://www.augmentcode.com/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: English
+
+=== [github] https://github.com/augmentcode/auggie
+# Auggie
+
+![Node.js 22+](https://img.shields.io/badge/Node.js-22%2B-brightgreen?style=flat-square) [![npm](https://img.shields.io/npm/v/@augmentcode/auggie.svg?style=flat-square)](https://www.npmjs.com/package/@augmentcode/auggie)
+
+Auggie is Augment’s agentic coding CLI that runs in your terminal. It understands your codebase and helps you ship faster by analyzing code, making safe edits, and automating routine tasks — all via natural language.
+
+Learn more in the Augment Docs:
+
+- Overview: [Introducing Auggie CLI](https://docs.augmentcode.com/cli/overview)
+- Custom Commands Examples: [Custom Slash Commands Examples](https://docs.augmentcode.com/cli/custom-commands-examples)
+
+## Quick start
+
+1. Install Auggie (Node 22+ required):
+
+```sh
+npm install -g @augmentcode/auggie@latest
+```
+
+2. Login:
+
+```sh
+auggie login
+```
+
+3. Run Auggie in your project directory:
+
+```sh
+cd /path/to/your/project
+auggie "optional initial prompt"
+```
+
+- Use `auggie --print "your instruction"` to run once and print to stdout (great for CI)
+- Add `--quiet` to return only the final output
+
+## Custom slash commands
+
+Store reusable prompts in `.augment/commands/` as markdown files with frontmatter. Once added, they’re available as slash commands (e.g., `/code-review path/to/file`).
+
+Example structure:
+
+```
+your-project/
+├─ .augment/
+│  └─ commands/
+│     ├─ code-review.md
+│     ├─ bug-fix.md
+│     ├─ security-review.md
+│     └─ performance-optimization.md
+└─ ...
+```
+
+See example command templates in [/examples/commands](https://github.com/augmentcode/auggie/tree/main/examples/commands) and the docs page linked above.
+
+## GitHub Actions for PRs
+
+Use our official GitHub Actions to improve PR quality automatically:
+
+- Augment Agent: [augmentcode/augment-agent](https://github.com/augmentcode/augment-agent)
+- Review PR: [augmentcode/review-pr](https://github.com/augmentcode/review-pr)
+- Describe PR: [augmentcode/describe-pr](https://github.com/augmentcode/describe-pr)
+
+Examples:
+
+- Review PR workflow example: [example usage](https://github.com/augmentcode/review-pr#example-usage)
+- Describe PR workflow example: [example usage](https://github.com/augmentcode/describe-pr#example-usage)
+
+Add the workflows under `.github/workflows/` in your repository.
+
+## Feedback and bug reports
+
+- In Auggie or the IDE agent, use `/feedback` to send feedback or report bugs directly with helpful context.
+- Alternatively, open a GitHub issue using our templates (Bug report / Feature request) in the [Github Issues](https://github.com/augmentcode/auggie/issues) tab.
+
+## Community
+
+- Support: [Support Portal](https://support.augmentcode.com/)
+- Reddit: https://www.reddit.com/r/AugmentCodeAI/
+
+## Privacy and data usage
+
+See Augment’s policies at [augmentcode.com/legal](https://augmentcode.com/legal) and product docs for latest details.
+

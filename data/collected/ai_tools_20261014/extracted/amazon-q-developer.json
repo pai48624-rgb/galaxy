@@ -1,0 +1,57 @@
+{
+ "company": "Amazon Web Services",
+ "one_liner_ko": "소프트웨어 개발 전 과정을 돕는 AWS의 생성형 AI 기반 개발 어시스턴트.",
+ "what_it_does_ko": "Amazon Q Developer는 IDE·명령줄·AWS 콘솔 등에서 쓰는 생성형 AI 개발 어시스턴트다. 주석과 기존 코드를 바탕으로 코드 조각부터 전체 함수까지 실시간 제안하고, 인라인 채팅과 CLI 자동 완성·자연어-bash 변환을 지원한다. 에이전틱 기능으로 기능 구현, 문서화, 테스트, 코드 검토, 리팩터링, 소프트웨어 업그레이드를 자율적으로 수행한다. AWS 콘솔·Teams·Slack에서 클라우드 비용·리소스 최적화, 운영 인시던트 조사, 네트워크 문제 진단을 돕고, .NET 포팅과 Java 업그레이드 같은 애플리케이션 변환도 지원한다. 영구 프리 티어가 있으며 Pro 요금제가 있다.",
+ "key_features": [
+  "실시간 코드 제안·인라인 채팅",
+  "CLI 자동 완성·자연어-bash 변환",
+  "에이전틱 코딩(파일 읽기·쓰기, 쉘 명령 실행, 코드 차이 생성)",
+  "유닛 테스트 작성·취약성 스캔",
+  "프라이빗 저장소 연결 코드 맞춤화",
+  ".NET Windows→Linux 포팅·Java 업그레이드 변환",
+  "AWS 콘솔·Teams·Slack에서 AWS 운영 지원",
+  "GitLab Duo·GitHub 연동"
+ ],
+ "use_cases_ko": [
+  "개발자가 IDE·터미널에서 코딩·테스트·리뷰 가속",
+  "Java 8→17 업그레이드 등 레거시 애플리케이션 변환",
+  "AWS 비용·리소스 최적화와 운영 인시던트 조사"
+ ],
+ "pricing": {
+  "free_tier": "있음 (영구 프리 티어: 매월 에이전틱 채팅 50회, 코드 변환 월 최대 1,000줄)",
+  "plans": [
+   {"name": "프리 티어", "price": 0, "currency": null, "period": "month", "limits": "매월 에이전틱 채팅 50회, 코드 변환 월 1,000줄", "page_lang": "ko-KR"},
+   {"name": "Pro", "price": null, "currency": null, "period": null, "limits": "가격은 수집된 페이지에 없음, 독점 콘텐츠를 서비스 개선에 쓰지 않음", "page_lang": "ko-KR"}
+  ],
+  "pricing_url": "https://aws.amazon.com/ko/q/developer/"
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": ["웹", "맥", "iOS", "안드로이드", "CLI"],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {"field": "company", "url": "https://aws.amazon.com/ko/q/developer/", "quote": "© 2026, Amazon Web Services,"},
+  {"field": "one_liner_ko", "url": "https://aws.amazon.com/ko/q/developer/", "quote": "소프트웨어 개발을 위한 가장 뛰어난 생성형 AI 기반 어시스턴트"},
+  {"field": "what_it_does_ko", "url": "https://aws.amazon.com/ko/q/developer/", "quote": "Amazon Q Developer는 코멘트 및 기존 코드를 기반으로 코드 조각부터 전체 함수에 이르는 코드 제안을 실시간으로 생성합니다."},
+  {"field": "what_it_does_ko", "url": "https://aws.amazon.com/ko/q/developer/", "quote": "기능 구현, 문서화, 테스트, 검토, 코드 리팩터링부터 소프트웨어 업그레이드 수행에 이르기까지 다양한 업무를 자율적으로 수행할 수 있습니다."},
+  {"field": "what_it_does_ko", "url": "https://aws.amazon.com/ko/q/developer/", "quote": "운영 인시던트를 조사하고, 네트워킹 문제를 진단 및 해결하는 데 도움을 줍니다."},
+  {"field": "key_features", "url": "https://aws.amazon.com/ko/q/developer/", "quote": "또한 코드 편집기에서 직접 인라인 채팅을 지원하고 명령줄에서 CLI 완성 및 자연어-bash 변환을 지원합니다."},
+  {"field": "key_features", "url": "https://aws.amazon.com/ko/q/developer/", "quote": "에이전틱 코딩 경험은 자동으로 파일을 읽고 쓰고 코드 차이를 생성하고 쉘 명령을 실행하는"},
+  {"field": "key_features", "url": "https://aws.amazon.com/ko/q/developer/", "quote": "유닛 테스트를 작성하고 코드를 최적화하며, 취약성을 검사합니다."},
+  {"field": "key_features", "url": "https://aws.amazon.com/ko/q/developer/", "quote": "Amazon Q Developer를 프라이빗 리포지토리에 안전하게 연결하여 더 관련성 높은 코드 권장 사항을 생성하고"},
+  {"field": "key_features", "url": "https://aws.amazon.com/ko/q/developer/", "quote": "Amazon Q Developer 에이전트는 Windows에서 Linux로의 .NET 포팅과 Java 업그레이드를 가속화하여"},
+  {"field": "key_features", "url": "https://aws.amazon.com/ko/q/developer/", "quote": "Microsoft Teams와 Slack에서 Amazon Q Developer를 사용할 수 있으므로 운영 이벤트를 모니터링하고"},
+  {"field": "key_features", "url": "https://aws.amazon.com/ko/q/developer/", "quote": "GitLab Duo with Amazon Q를 사용하면 익숙한 GitLab 워크플로를 사용하여"},
+  {"field": "use_cases_ko", "url": "https://aws.amazon.com/ko/q/developer/", "quote": "Java 8에서 Java 17로 업그레이드"},
+  {"field": "use_cases_ko", "url": "https://aws.amazon.com/ko/q/developer/", "quote": "클라우드 비용 및 리소스를 최적화하고, 아키텍처 모범 사례에 대한 지침을 제공하며"},
+  {"field": "use_cases_ko", "url": "https://aws.amazon.com/ko/q/developer/", "quote": "전체 소프트웨어 개발 수명 주기에 걸쳐 구축을 가속화하기 위해"},
+  {"field": "pricing", "url": "https://aws.amazon.com/ko/q/developer/", "quote": "Amazon Q Developer 영구 프리 티어는 매월 50회의 에이전틱 채팅 상호 작용을 제공합니다. 또한 매월 최대 1,000줄의 코드를 변환할 수 있습니다."},
+  {"field": "pricing", "url": "https://aws.amazon.com/ko/q/developer/", "quote": "Amazon Q Developer Pro 사용 시 고객의 독점 콘텐츠는 서비스 개선을 위해 이용되지 않습니다."},
+  {"field": "platforms", "url": "https://aws.amazon.com/ko/q/developer/", "quote": "iOS 및 Android용 AWS Console 모바일 애플리케이션에서도 사용할 수 있습니다."},
+  {"field": "platforms", "url": "https://aws.amazon.com/ko/q/developer/", "quote": "즐겨 사용하는 터미널(로컬 및 Secure Shell 사용)에서 CLI 자동 완성 및 AI 채팅을 이용할 수 있습니다."},
+  {"field": "platforms", "url": "https://github.com/aws/amazon-q-developer-cli", "quote": "brew install --cask amazon-q"},
+  {"field": "korean_support", "url": "https://aws.amazon.com/ko/q/developer/", "quote": "hreflang: ar-sa, de-de, en-us, es-es, fr-fr, id-id, it-it, ja-jp, ko-kr, pt-br, ru-ru, th-th, tr-tr, vi-vn, zh-cn, zh-tw"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

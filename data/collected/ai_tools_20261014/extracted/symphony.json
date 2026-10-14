@@ -1,0 +1,34 @@
+{
+ "company": "OpenAI",
+ "one_liner_ko": "프로젝트 작업을 격리된 자율 구현 실행으로 바꿔, 팀이 코딩 에이전트 감독 대신 작업 관리에 집중하게 하는 도구.",
+ "what_it_does_ko": "Symphony는 프로젝트 작업을 격리된 자율 구현 실행 단위로 바꿔 준다. 데모에서는 Linear 보드를 감시하다가 작업이 생기면 에이전트를 띄워 처리하고, CI 상태·PR 리뷰 피드백·복잡도 분석·설명 영상 같은 작업 증거를 낸다. 승인되면 에이전트가 PR을 안전하게 반영한다. 스펙을 보고 직접 구현하거나 실험용 Elixir 참조 구현을 쓸 수 있으며, 신뢰된 환경에서 시험하는 엔지니어링 프리뷰 단계다.",
+ "key_features": [
+  "Linear 보드를 감시해 작업마다 에이전트 자동 생성",
+  "CI 상태·PR 리뷰 피드백·복잡도 분석·설명 영상으로 작업 증거 제공",
+  "승인되면 에이전트가 PR을 안전하게 반영",
+  "공개 스펙(SPEC.md)으로 원하는 언어로 직접 구현 가능",
+  "실험용 Elixir 참조 구현 제공"
+ ],
+ "use_cases_ko": [
+  "엔지니어링 팀이 코딩 에이전트를 일일이 감독하지 않고 더 높은 수준에서 작업을 관리"
+ ],
+ "pricing": {"free_tier": "불명", "plans": [], "pricing_url": null},
+ "open_source": "Apache-2.0",
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "불명",
+ "evidence": [
+  {"field": "company", "url": "https://github.com/openai/symphony", "quote": "=== [github] https://github.com/openai/symphony"},
+  {"field": "one_liner_ko", "url": "https://github.com/openai/symphony", "quote": "Symphony turns project work into isolated, autonomous implementation runs, allowing teams to manage"},
+  {"field": "what_it_does_ko", "url": "https://github.com/openai/symphony", "quote": "Symphony monitors a Linear board for work and spawns agents to handle the tasks."},
+  {"field": "what_it_does_ko", "url": "https://github.com/openai/symphony", "quote": "Symphony is a low-key engineering preview for testing in trusted environments."},
+  {"field": "key_features", "url": "https://github.com/openai/symphony", "quote": "CI status, PR review feedback, complexity analysis, and walkthrough videos"},
+  {"field": "key_features", "url": "https://github.com/openai/symphony", "quote": "When accepted, the agents land the PR safely."},
+  {"field": "key_features", "url": "https://github.com/openai/symphony", "quote": "Implement Symphony according to the following spec:"},
+  {"field": "key_features", "url": "https://github.com/openai/symphony", "quote": "### Option 2. Use our experimental reference implementation"},
+  {"field": "use_cases_ko", "url": "https://github.com/openai/symphony", "quote": "Engineers do not need to supervise Codex; they can manage the work at a higher level."},
+  {"field": "open_source", "url": "https://github.com/openai/symphony", "quote": "This project is licensed under the [Apache License 2.0](LICENSE)."}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

@@ -1,0 +1,107 @@
+{
+ "company": "OpenRLHF",
+ "one_liner_ko": "Ray + vLLM 분산 구조와 에이전트 기반 설계를 결합한 고성능 오픈소스 RLHF(사람 피드백 강화학습) 프레임워크.",
+ "what_it_does_ko": "OpenRLHF는 Ray + vLLM 분산 구조로 70B 이상 모델까지 확장되는 오픈소스 RLHF 프레임워크다. vLLM으로 생성 병목을 줄이고 DeepSpeed ZeRO-3로 HuggingFace 체크포인트를 변환 없이 학습한다. PPO·REINFORCE++·GRPO·RLOO 등 알고리즘을 플래그 하나로 바꿀 수 있고, 단일 턴 보상과 멀티 턴 에이전트 환경을 지원한다. SFT·보상 모델·DPO 학습과 시각-언어 모델(VLM) RLHF도 지원한다.",
+ "key_features": [
+  "Ray + vLLM 분산 구조(70B+ 모델)",
+  "PPO·REINFORCE++·GRPO·RLOO 등 RL 알고리즘 전환",
+  "하이브리드 엔진(같은 GPU에 Actor·Critic·Reward·vLLM 공존)",
+  "비동기 학습·부분 롤아웃",
+  "커스텀 보상 함수·멀티 턴 에이전트 환경",
+  "시각-언어 모델(VLM) RLHF",
+  "SFT·보상 모델·DPO, LoRA·QLoRA, SLURM 멀티 노드"
+ ],
+ "use_cases_ko": [
+  "커스텀 파이썬 보상 함수로 강화 파인튜닝"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "오픈소스(라이선스 이름은 페이지에 없음)",
+ "api": "불명",
+ "platforms": [
+  "CLI"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://openrlhf.readthedocs.io/en/latest/",
+   "quote": "© Copyright 2026, OpenRLHF.\n Built with Sphinx using a"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://openrlhf.readthedocs.io/en/latest/",
+   "quote": "OpenRLHF is the first high-performance, production-ready open-source RLHF framework that combines a Ray + vLLM distributed architecture"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://openrlhf.readthedocs.io/en/latest/",
+   "quote": "Ray + vLLM distributed architecture — scales to 70B+ models."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://openrlhf.readthedocs.io/en/latest/",
+   "quote": "Single-turn rewards & multi-turn agents — HTTP remote RM, custom Python reward functions"
+  },
+  {
+   "field": "key_features",
+   "url": "https://openrlhf.readthedocs.io/en/latest/",
+   "quote": "Ray + vLLM distributed architecture — scales to 70B+ models."
+  },
+  {
+   "field": "key_features",
+   "url": "https://openrlhf.readthedocs.io/en/latest/",
+   "quote": "State-of-the-art RL algorithms — PPO, REINFORCE++, REINFORCE++-baseline, GRPO, Dr. GRPO,"
+  },
+  {
+   "field": "key_features",
+   "url": "https://openrlhf.readthedocs.io/en/latest/",
+   "quote": "Hybrid Engine — colocate Actor / Critic / Reward / Reference / vLLM on the same GPUs"
+  },
+  {
+   "field": "key_features",
+   "url": "https://openrlhf.readthedocs.io/en/latest/",
+   "quote": "Async training & Partial Rollout — overlap rollout with training"
+  },
+  {
+   "field": "key_features",
+   "url": "https://openrlhf.readthedocs.io/en/latest/",
+   "quote": "Single-turn rewards & multi-turn agents — HTTP remote RM, custom Python reward functions"
+  },
+  {
+   "field": "key_features",
+   "url": "https://openrlhf.readthedocs.io/en/latest/",
+   "quote": "Vision-Language Model RLHF (0.10) — train VLMs (e.g., Qwen3.5) end-to-end with image"
+  },
+  {
+   "field": "key_features",
+   "url": "https://openrlhf.readthedocs.io/en/latest/",
+   "quote": "TensorBoard logging, SLURM multi-node, LoRA / QLoRA for SFT / RM / DPO."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://openrlhf.readthedocs.io/en/latest/",
+   "quote": "(Reinforced Fine-Tuning), full multi-turn environments, or wrap vLLM as an OpenAI-compatible"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/OpenRLHF/OpenRLHF",
+   "quote": "OpenRLHF is **the first** high-performance, production-ready open-source RLHF framework"
+  },
+  {
+   "field": "platforms",
+   "url": "https://openrlhf.readthedocs.io/en/latest/",
+   "quote": "Hierarchical CLI (new in 0.10.2) — every flag lives under a named section"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://github.com/OpenRLHF/OpenRLHF",
+   "quote": "[ English | <a href=\"README_zh.md\">中文</a> | <a href=\"README_ja.md\">日本語</a> ]"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

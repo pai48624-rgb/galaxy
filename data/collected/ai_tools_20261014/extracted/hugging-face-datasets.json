@@ -1,0 +1,47 @@
+{
+ "company": "Hugging Face",
+ "one_liner_ko": "오디오·컴퓨터 비전·자연어 처리용 AI 데이터셋을 쉽게 불러오고 공유하는 라이브러리",
+ "what_it_does_ko": "🤗 Datasets는 오디오·비전·NLP 작업용 AI 데이터셋에 쉽게 접근하고 공유하게 해 주는 라이브러리다. 코드 한 줄로 Hugging Face Hub나 로컬 파일의 데이터셋을 불러오고, 처리·스트리밍 기능으로 딥러닝 학습용으로 빠르게 준비할 수 있다. Apache Arrow 형식을 기반으로 대용량 데이터셋도 메모리 제약 없이 처리한다. Hugging Face Hub와 깊이 연동되어 데이터셋을 머신러닝 커뮤니티와 쉽게 공유할 수 있다.",
+ "key_features": [
+  "load_dataset() 한 줄로 Hub·로컬 데이터셋 불러오기",
+  "CSV·JSON·JSONL·Parquet·Arrow·XML·텍스트·Webdataset 등 여러 형식 지원",
+  "텍스트·오디오·이미지·비디오·PDF·NIfTI(3D 의료 영상) 멀티모달 데이터 지원",
+  "내려받지 않고 바로 읽는 스트리밍 모드",
+  "Apache Arrow 기반 제로카피 읽기로 대용량 처리",
+  "dataset.map()으로 빠르고 재현 가능한 전처리",
+  "NumPy·Pandas·PyTorch·TensorFlow·JAX·Polars와 연동",
+  "Hugging Face Hub에 데이터셋 공유"
+ ],
+ "use_cases_ko": [
+  "ML 엔지니어가 공개 데이터셋을 내려받아 모델 학습·평가에 바로 사용",
+  "연구자가 자기 데이터셋을 만들어 Hub에 공유"
+ ],
+ "pricing": {"free_tier": "불명", "plans": [], "pricing_url": null},
+ "open_source": "오픈소스(라이선스 이름은 받은 본문에 없음)",
+ "api": "불명",
+ "platforms": ["CLI"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://huggingface.co/docs/datasets/index", "quote": "Datasets · Hugging Face"},
+  {"field": "one_liner_ko", "url": "https://huggingface.co/docs/datasets/index", "quote": "🤗 Datasets is a library for easily accessing and sharing AI datasets for Audio, Computer Vision, and Natural Language Processing (NLP) tasks."},
+  {"field": "what_it_does_ko", "url": "https://huggingface.co/docs/datasets/index", "quote": "Load a dataset in a single line of code, and use our powerful data processing and streaming methods to quickly get your dataset ready for training in a deep learning model."},
+  {"field": "what_it_does_ko", "url": "https://huggingface.co/docs/datasets/index", "quote": "Backed by the Apache Arrow format, process large datasets with zero-copy reads without any memory constraints for optimal speed and efficiency."},
+  {"field": "what_it_does_ko", "url": "https://huggingface.co/docs/datasets/index", "quote": "allowing you to easily load and share a dataset with the wider machine learning community."},
+  {"field": "key_features", "url": "https://github.com/huggingface/datasets", "quote": "Load AI-ready datasets from the [Hugging Face Hub](https://huggingface.co/datasets) or local files with `load_dataset()`"},
+  {"field": "key_features", "url": "https://github.com/huggingface/datasets", "quote": "Native support for CSV, JSON, JSONL, Parquet, Arrow, XML, Text, Webdataset, and more"},
+  {"field": "key_features", "url": "https://github.com/huggingface/datasets", "quote": "Built-in support for text, audio, image, video, PDF, and NIfTI (3D medical) data"},
+  {"field": "key_features", "url": "https://github.com/huggingface/datasets", "quote": "Stream datasets without downloading — iterate over data on-the-fly with `streaming=True`"},
+  {"field": "key_features", "url": "https://github.com/huggingface/datasets", "quote": "simple, fast and reproducible data pre-processing for the public datasets as well as your own local datasets"},
+  {"field": "key_features", "url": "https://github.com/huggingface/datasets", "quote": "(Numpy/Pandas/PyTorch/TensorFlow/JAX/Polars)"},
+  {"field": "key_features", "url": "https://huggingface.co/docs/datasets/index", "quote": "Share a dataset to the Hub"},
+  {"field": "use_cases_ko", "url": "https://github.com/huggingface/datasets", "quote": "get any of these datasets ready to use in a dataloader for training/evaluating a ML model"},
+  {"field": "use_cases_ko", "url": "https://github.com/huggingface/datasets", "quote": "🤗 Datasets is designed to let the community easily add and share new datasets"},
+  {"field": "open_source", "url": "https://github.com/huggingface/datasets", "quote": "https://github.com/huggingface/datasets/blob/main/LICENSE"},
+  {"field": "platforms", "url": "https://huggingface.co/docs/datasets/index", "quote": "Cache management Cloud storage Search index CLI Troubleshooting"},
+  {"field": "korean_support", "url": "https://huggingface.co/docs/datasets/index", "quote": "html lang: 없음\nhreflang: en, x-default\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [
+  {"official": "GitHub에 LICENSE 파일과 함께 공개된 Python 라이브러리로, 받은 본문에 이 라이브러리 자체의 가격·영업 문의 안내 없음(요금 페이지 본문은 비어 있음)", "diff": "기존 분류 '엔터프라이즈(가격 문의)'와 달리 공개 오픈소스 라이브러리", "url": "https://github.com/huggingface/datasets"}
+ ],
+ "plan_change": []
+}

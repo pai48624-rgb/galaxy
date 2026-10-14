@@ -1,0 +1,77 @@
+{
+ "company": null,
+ "one_liner_ko": "Claude Code가 구글 NotebookLM과 직접 대화해, 올린 문서에만 근거한 출처 달린 답을 받게 해 주는 Claude Code 스킬",
+ "what_it_does_ko": "Claude Code 스킬로, Claude Code에서 구글 NotebookLM 노트북에 직접 질문해 사용자가 올린 문서에만 근거한 답을 받아온다. 브라우저 자동화, 노트북 라이브러리 관리, 로그인 유지 기능을 갖췄다. 웹 UI가 아닌 로컬 Claude Code 설치에서만 작동한다. 저장소는 2026년 9월부로 보관(archived) 처리되어 더 이상 업데이트·버그 수정·지원이 없다.",
+ "key_features": [
+  "Claude Code에서 NotebookLM 노트북에 직접 질문(출처 근거 답변)",
+  "브라우저 자동화로 NotebookLM 조작",
+  "노트북 라이브러리 관리",
+  "로그인(인증) 상태 유지",
+  "답변마다 출처 인용",
+  "후속 질문을 자동으로 이어가며 세부 내용 파악"
+ ],
+ "use_cases_ko": [
+  "개발자가 자기 문서를 NotebookLM에 올려 두고 Claude Code가 코드 작성 전에 정확한 답을 찾게 하기"
+ ],
+ "pricing": {
+  "free_tier": null,
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "CLI"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/PleasePrompto/notebooklm-skill",
+   "quote": "Let [Claude Code](https://github.com/anthropics/claude-code) chat directly with NotebookLM for source-grounded answers based exclusively on your uploaded documents"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/PleasePrompto/notebooklm-skill",
+   "quote": "Browser automation, library management, persistent auth."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/PleasePrompto/notebooklm-skill",
+   "quote": "**This project is no longer maintained.** As of September 2026 the repository is archived"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/PleasePrompto/notebooklm-skill",
+   "quote": "**This skill works ONLY with local [Claude Code](https://github.com/anthropics/claude-code) installations, NOT in the web UI.**"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/PleasePrompto/notebooklm-skill",
+   "quote": "Use this skill to query your Google NotebookLM notebooks directly from Claude Code for source-grounded, citation-backed answers from Gemini."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/PleasePrompto/notebooklm-skill",
+   "quote": "It builds deep understanding through automatic follow-ups"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/PleasePrompto/notebooklm-skill",
+   "quote": "4. **Citation-backed**: Every answer includes source references"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/PleasePrompto/notebooklm-skill",
+   "quote": "Your Task → Claude asks NotebookLM → Gemini synthesizes answer → Claude writes correct code"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/PleasePrompto/notebooklm-skill",
+   "quote": "You must use [Claude Code](https://github.com/anthropics/claude-code) locally on your machine."
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [],
+ "note": "2026년 9월부로 저장소 보관(유지보수 중단) — 사람 확인용"
+}

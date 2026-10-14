@@ -1,0 +1,141 @@
+=== [github] https://github.com/guidance-ai/guidance
+<div align="right">
+  <a href="https://discord.gg/cjPfAK43dz"><img src="https://img.shields.io/badge/Discord-Join%20Us-5865F2?logo=discord&logoColor=white" alt="Discord"></a>
+  <a href="mailto:guidanceai@microsoft.com"><img src="https://img.shields.io/badge/Email-guidanceai%40microsoft.com-0078D4?logo=microsoft-outlook&logoColor=white" alt="Email"></a>
+  <img src="https://img.shields.io/badge/Hours-10am--2pm%20Pacific-gray" alt="Hours">
+</div>
+<div align="center"><picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/figures/guidance_logo_blue_dark.svg">
+  <img alt="guidance" src="docs/figures/guidance_logo_blue.svg" width=300">
+</picture></div>
+<br/>
+
+**Guidance is an efficient programming paradigm for steering language models.** With Guidance, you can control how output is structured and get high-quality output for your use case—*while reducing latency and cost vs. conventional prompting or fine-tuning.* It allows users to constrain generation (e.g. with regex and CFGs) as well as to interleave control (conditionals, loops, tool use) and generation seamlessly.
+
+   * [Install](#install)
+   * [Features](#features)
+
+
+## Install
+Guidance is available through PyPI and supports a variety of backends (Transformers, llama.cpp, OpenAI, etc.).
+If you already have the backend required for your model, you can simply run
+```bash
+pip install guidance
+```
+
+## Features
+
+### A Pythonic interface for language models
+
+When using Guidance, you can work with large language models using common Python idioms:
+
+```python
+from guidance import system, user, assistant, gen
+from guidance.models import Transformers
+
+# Could also do LlamaCpp or many other models
+phi_lm = Transformers("microsoft/Phi-4-mini-instruct")
+
+# Model objects are immutable, so this is a copy
+lm = phi_lm
+
+with system():
+    lm += "You are a helpful assistant"
+
+with user():
+    lm += "Hello. What is your name?"
+
+with assistant():
+    lm += gen(max_tokens=20)
+
+print(lm)
+```
+If run at the command line, this will produce output like:
+```
+<|system|>You are a helpful assistant<|end|><|user|>Hello. What is your name?<|end|><|assistant|>I am Phi, an AI developed by Microsoft. How can I help you today?
+```
+However, if running in a Jupyter notebook, then Guidance provides a widget for a richer user experience:
+
+<img src="docs/figures/widget_basic_example_20250703.png" alt="Guidance widget showing HTML generation" />
+
+With Guidance, it's really easy to capture generated text:
+
+```python
+# Get a new copy of the Model
+lm = phi_lm
+
+with system():
+    lm += "You are a helpful assistant"
+
+with user():
+    lm += "Hello. What is your name?"
+
+with assistant():
+    lm += gen(name="lm_response", max_tokens=20)
+
+print(f"{lm['lm_response']=}")
+```
+
+```
+lm['lm_response']='I am Phi, an AI developed by Microsoft. How can I help you today?'
+```
+
+### Guarantee output syntax with constrained generation
+
+Guidance provides an easy to use, yet immensely powerful syntax for constraining the output of a language model.
+For example, a `gen()` call can be constrained to match a regular expression:
+
+```python
+lm = phi_lm
+
+with system():
+    lm += "You are a teenager"
+
+with user():
+    lm += "How old are you?"
+
+with assistant():
+    lm += gen("lm_age", regex=r"\d+", temperature=0.8)
+
+print(f"The language model is {lm['lm_age']} years old")
+```
+
+```
+The language model is 13 years old
+```
+
+Often, we know that the output has to be an item from a list we know in advance.
+Guidance provides a `select()` function for this scenario:
+
+```python
+from guidance import select
+
+lm = phi_lm
+
+with system():
+    lm += "You are a geography expert"
+
+with user():
+    lm += """What is the capital of Sweden? Answer with the correct letter.
+
+    A) Helsinki
+    B) Reykjavík 
+    C) Stockholm
+    D) Oslo
+    """
+
+with assistant():
+    lm += select(["A", "B", "C", "D"], name="model_selection")
+
+print(f"The model selected {lm['model_selection']}")
+```
+
+```
+The model selected C
+```
+
+The constraint system offered by Guidance is extremely powerful.
+It can ensure that the output conforms to any context free grammar (so long as the backend LLM has full support for Guidance).
+More on this below.
+
+### Debug grammars offline (no mode

@@ -1,0 +1,261 @@
+{
+ "company": "Comfy Org",
+ "one_liner_ko": "노드를 연결해 이미지·영상·오디오·3D 생성 AI 작업 흐름을 세밀하게 제어하는 오픈소스 엔진.",
+ "what_it_does_ko": "ComfyUI는 생성형 AI용 노드 기반 화면이자 추론 엔진으로, 모델과 처리 단계를 노드로 연결해 이미지·영상·3D·오디오 등을 만든다. 완전한 오픈소스로 내 컴퓨터(윈도·맥·리눅스)에서 돌릴 수 있고, 유료 클라우드 버전(Comfy Cloud)도 있다. 원하는 것을 설명하면 Comfy Agent가 워크플로를 만들어 실행해 주고, Comfy API로 워크플로를 실서비스 API로 배포할 수 있다. Partner Nodes로 Nano Banana 같은 비공개 모델도 쓸 수 있다.",
+ "key_features": [
+  "무한 캔버스에서 노드를 연결하는 시각적 워크플로",
+  "설명만으로 워크플로를 만들고 실행하는 Comfy Agent",
+  "워크플로를 실서비스 API로 배포하는 Comfy API",
+  "Partner Nodes로 비공개 모델(Nano Banana·Seedance 등) 사용",
+  "커뮤니티 템플릿·60,000개 이상 노드",
+  "4GB VRAM에서도 큰 모델 실행(비동기 가중치 스트리밍)",
+  "Comfy MCP·Comfy CLI 에이전트 도구",
+  "클라우드에 900개 이상 모델 사전 설치"
+ ],
+ "use_cases_ko": [
+  "VFX·애니메이션, 광고·크리에이티브 스튜디오의 영상·이미지 생성",
+  "게임·이커머스·패션 콘텐츠 제작",
+  "내 앱에서 워크플로를 API로 호출"
+ ],
+ "pricing": {
+  "free_tier": "있음 (로컬 오픈소스 무료; Comfy Cloud 신규 사용자 GPU 실행 5회 무료·Comfy Agent 무료 크레딧)",
+  "plans": [
+   {
+    "name": "Standard",
+    "price": 20,
+    "currency": "USD",
+    "period": "month",
+    "limits": "워크플로 최대 30분, 연 50,400 크레딧",
+    "page_lang": "en"
+   },
+   {
+    "name": "Standard",
+    "price": 16,
+    "currency": "USD",
+    "period": "month(연간 결제)",
+    "limits": "$192 연간 청구",
+    "page_lang": "en"
+   },
+   {
+    "name": "Creator",
+    "price": 35,
+    "currency": "USD",
+    "period": "month",
+    "limits": "자체 모델 가져오기, 연 88,800 크레딧",
+    "page_lang": "en"
+   },
+   {
+    "name": "Creator",
+    "price": 28,
+    "currency": "USD",
+    "period": "month(연간 결제)",
+    "limits": "$336 연간 청구",
+    "page_lang": "en"
+   },
+   {
+    "name": "Pro",
+    "price": 100,
+    "currency": "USD",
+    "period": "month",
+    "limits": "워크플로 최대 1시간, 연 253,200 크레딧",
+    "page_lang": "en"
+   },
+   {
+    "name": "Pro",
+    "price": 80,
+    "currency": "USD",
+    "period": "month(연간 결제)",
+    "limits": "$960 연간 청구",
+    "page_lang": "en"
+   },
+   {
+    "name": "Team",
+    "price": 700,
+    "currency": "USD",
+    "period": "month",
+    "limits": "멤버 최대 50명, 공유 크레딧 풀, 역할 권한",
+    "page_lang": "en"
+   },
+   {
+    "name": "Team",
+    "price": 630,
+    "currency": "USD",
+    "period": "month(연간 결제)",
+    "limits": "$7,560 연간 청구",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": "USD",
+    "period": null,
+    "limits": "문의",
+    "page_lang": "en"
+   },
+   {
+    "name": "Comfy API GPU (RTX PRO 6000 등)",
+    "price": 4.54,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "시간당 $4.54(RTX PRO 6000)~$11.23(B200), GPU 초 단위 과금",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://comfy.org/pricing/"
+ },
+ "open_source": "오픈소스(라이선스 이름은 페이지에 없음)",
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "윈도",
+  "맥",
+  "CLI",
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://comfy.org/",
+   "quote": "© 2026 Comfy Org"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/Comfy-Org/ComfyUI",
+   "quote": "Its powerful and modular node graph interface empowers creatives to generate images, videos, 3D models, audio, and more"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.comfy.org/",
+   "quote": "ComfyUI is a node-based interface and inference engine for generative AI"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.comfy.org/",
+   "quote": "ComfyUI is completely open source and can run on your local device"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/Comfy-Org/ComfyUI",
+   "quote": "Our official paid cloud version for those who can't afford local hardware."
+  },
+  {
+   "field": "key_features",
+   "url": "https://comfy.org/",
+   "quote": "Build powerful AI pipelines by connecting nodes on an infinite canvas."
+  },
+  {
+   "field": "key_features",
+   "url": "https://comfy.org/",
+   "quote": "Describe what you want and Comfy Agent builds and runs the workflow for you."
+  },
+  {
+   "field": "key_features",
+   "url": "https://comfy.org/",
+   "quote": "Deploy your ComfyUI workflow as a production API."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/Comfy-Org/ComfyUI",
+   "quote": "provide access to the best closed source models such as Nano Banana, Seedance, Hunyuan3D, etc."
+  },
+  {
+   "field": "key_features",
+   "url": "https://comfy.org/",
+   "quote": "Powered by 60,000+ nodes, thousands of workflows"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/Comfy-Org/ComfyUI",
+   "quote": "Can run even the biggest open source models on as low as 4GB vram + 8GB ram"
+  },
+  {
+   "field": "key_features",
+   "url": "https://comfy.org/",
+   "quote": "Comfy MCP Comfy Agent Comfy CLI Supported Models"
+  },
+  {
+   "field": "key_features",
+   "url": "https://comfy.org/pricing/",
+   "quote": "Access a library of 900+ pre-installed models."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://comfy.org/",
+   "quote": "VFX & Animation Advertising & Creative Studios Gaming eCommerce & Fashion"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://comfy.org/",
+   "quote": "Run Comfy workflows and models from your own app with one API."
+  },
+  {
+   "field": "pricing",
+   "url": "https://comfy.org/pricing/",
+   "quote": "5 free runs on real GPUs and free Comfy Agent credits for new users"
+  },
+  {
+   "field": "pricing",
+   "url": "https://comfy.org/pricing/",
+   "quote": "$16 $20 /month $192 billed yearly"
+  },
+  {
+   "field": "pricing",
+   "url": "https://comfy.org/pricing/",
+   "quote": "$28 $35 /month $336 billed yearly"
+  },
+  {
+   "field": "pricing",
+   "url": "https://comfy.org/pricing/",
+   "quote": "$80 $100 /month $960 billed yearly"
+  },
+  {
+   "field": "pricing",
+   "url": "https://comfy.org/pricing/",
+   "quote": "$630 $700 /month"
+  },
+  {
+   "field": "pricing",
+   "url": "https://comfy.org/pricing/",
+   "quote": "$7,560 billed yearly"
+  },
+  {
+   "field": "pricing",
+   "url": "https://comfy.org/pricing/",
+   "quote": "RTX PRO 6000 96 GB VRAM $4.54/hr"
+  },
+  {
+   "field": "open_source",
+   "url": "https://docs.comfy.org/",
+   "quote": "ComfyUI is completely open source and can run on your local device"
+  },
+  {
+   "field": "api",
+   "url": "https://comfy.org/pricing/",
+   "quote": "Comfy API lets you deploy your workflow as a production API."
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/Comfy-Org/ComfyUI",
+   "quote": "It is available on Windows, Linux, and macOS, locally with our [desktop application]"
+  },
+  {
+   "field": "platforms",
+   "url": "https://docs.comfy.org/",
+   "quote": "Call partner models from the terminal with comfy generate (beta)"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://comfy.org/",
+   "quote": "hreflang: en, ja, x-default, zh-cn"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "본체는 오픈소스로 로컬 무료, Comfy Cloud는 Standard $20·Creator $35·Pro $100·Team $700/월 크레딧 구독, Comfy API는 GPU 초 단위 종량제",
+   "diff": "무료는 로컬 오픈소스판(클라우드는 신규 5회 무료뿐)이고, 유료는 크레딧 구독과 GPU 종량제가 섞인 구조",
+   "url": "https://comfy.org/pricing/"
+  }
+ ]
+}

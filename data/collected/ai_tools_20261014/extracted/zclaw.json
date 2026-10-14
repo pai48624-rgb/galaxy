@@ -1,0 +1,38 @@
+{
+ "company": null,
+ "one_liner_ko": "ESP32 보드에서 돌아가는 가장 작은 AI 개인 비서.",
+ "what_it_does_ko": "zclaw는 C로 작성되어 ESP32에 상주하는 AI 에이전트로, 기본 빌드 기준 펌웨어 전체 888 KiB 이하를 목표로 한다. Telegram이나 호스트 웹 릴레이로 대화하며 예약 작업, GPIO 제어, 영구 메모리, 자연어로 만드는 사용자 정의 도구를 지원한다. 사용자가 평범한 말로 보내면 도구 호출로 바꿔 펌웨어가 칩에서 실행한다. LLM 백엔드로 Anthropic·OpenAI·OpenRouter·Ollama(사용자 엔드포인트)를 쓸 수 있다. USB 로컬 관리 콘솔로 Wi-Fi나 LLM 없이도 복구할 수 있다.",
+ "key_features": [
+  "Telegram 또는 웹 릴레이로 대화",
+  "시간대 인식 예약(daily·periodic·once)",
+  "GPIO·DHT·I2C 제어",
+  "재부팅 후에도 유지되는 메모리",
+  "내장·사용자 정의 도구",
+  "USB 로컬 관리 콘솔(복구·안전 모드)",
+  "Anthropic·OpenAI·OpenRouter·Ollama 지원",
+  "888 KiB 이하 펌웨어"
+ ],
+ "use_cases_ko": [
+  "ESP32 보드로 알림·화분 물주기 같은 예약 작업 자동화",
+  "자연어로 GPIO·센서 제어"
+ ],
+ "pricing": {"free_tier": "불명", "plans": [], "pricing_url": null},
+ "open_source": null,
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "one_liner_ko", "url": "https://github.com/tnm/zclaw", "quote": "The smallest possible AI personal assistant for ESP32."},
+  {"field": "what_it_does_ko", "url": "https://zclaw.dev", "quote": "zclaw is an ESP32-resident AI agent written in C. It runs as a practical assistant over Telegram or host relay, with scheduling, GPIO control, memory, and a tight firmware budget."},
+  {"field": "what_it_does_ko", "url": "https://zclaw.dev", "quote": "You send plain language, zclaw maps to tool calls, firmware executes on silicon."},
+  {"field": "key_features", "url": "https://github.com/tnm/zclaw", "quote": "- Timezone-aware schedules (`daily`, `periodic`, and one-shot `once`)"},
+  {"field": "key_features", "url": "https://github.com/tnm/zclaw", "quote": "- USB local admin console for recovery, safe mode, and pre-network bring-up"},
+  {"field": "key_features", "url": "https://github.com/tnm/zclaw", "quote": "- Provider support for Anthropic, OpenAI, OpenRouter, and Ollama (custom endpoint)"},
+  {"field": "key_features", "url": "https://github.com/tnm/zclaw", "quote": "- Persistent memory across reboots"},
+  {"field": "use_cases_ko", "url": "https://zclaw.dev", "quote": "\"Water the plants every day at 8:15.\""},
+  {"field": "use_cases_ko", "url": "https://zclaw.dev", "quote": "\"Set GPIO 5 high.\""},
+  {"field": "korean_support", "url": "https://zclaw.dev", "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

@@ -1,0 +1,59 @@
+{
+ "company": "Agno",
+ "one_liner_ko": "자기 클라우드에서 돌아가는 에이전트 플랫폼으로, 고객용 에이전트와 MCP 서버를 직접 만들어 운영하게 해 준다.",
+ "what_it_does_ko": "Agno는 에이전트 플랫폼을 위한 프레임워크이자 런타임이다. Agno SDK로 에이전트·팀·워크플로를 만들고, AgentOS 런타임으로 이를 REST API와 MCP 서버로 서비스하며, 컨트롤 플레인(웹 UI)으로 실행·세션·트레이스를 관리한다. 데이터·메모리·보안을 직접 소유하고, 만든 에이전트를 자사 제품·Claude·ChatGPT·Slack 등에 제공할 수 있다. 런타임은 오픈소스로 무료이고, 실서비스 배포를 관리하는 컨트롤 플레인은 유료 요금제가 있다.",
+ "key_features": [
+  "에이전트·팀·워크플로 3가지 패턴과 100개 이상 툴킷(Agno SDK)",
+  "에이전트를 API·MCP 서버로 서비스하는 AgentOS 런타임",
+  "실행·세션·평가·사용량을 한곳에서 보는 컨트롤 플레인",
+  "30개 이상 모델 제공자 지원",
+  "Slack·WhatsApp·Telegram·Discord 등 인터페이스 노출",
+  "사람 승인(Human approval)과 JWT 기반 RBAC",
+  "크론 기반 스케줄링",
+  "Docker·AWS·GCP 등 컨테이너가 도는 어디든 배포"
+ ],
+ "use_cases_ko": [
+  "제품 문서·주문 이력으로 고객 문의에 답하는 지원 에이전트",
+  "승인 단계를 둔 송장 처리 워크플로",
+  "자격 있는 잠재 고객을 찾아 맞춤 영업 메일 초안 작성"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Free $0/월, 사용량·보존 무제한, 로컬 AgentOS용 컨트롤 플레인)",
+  "plans": [
+   {"name": "Free", "price": 0, "currency": "USD", "period": "month", "limits": "사용량·보존 무제한, 컨트롤 플레인은 로컬 전용", "page_lang": "en"},
+   {"name": "Pro", "price": 150, "currency": "USD", "period": "month", "limits": "라이브 AgentOS 연결 1개, 팀 좌석 3개, 기본 RBAC; 좌석 추가 $30/월, 연결 추가 $95/월, SAML SSO $300/월", "page_lang": "en"},
+   {"name": "Enterprise", "price": null, "currency": "USD", "period": null, "limits": "맞춤 가격, 최종 사용자 관리·감사 로그·셀프호스트 컨트롤 플레인", "page_lang": "en"}
+  ],
+  "pricing_url": "https://www.agno.com/pricing"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["웹", "API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://www.agno.com", "quote": "Agno: The Agent Platform That Builds Itself"},
+  {"field": "one_liner_ko", "url": "https://www.agno.com", "quote": "Agno is a self-driving agent platform that runs in your cloud. Build customer-facing agents and MCP servers with Agno."},
+  {"field": "what_it_does_ko", "url": "https://github.com/agno-agi/agno", "quote": "Agno is a framework and runtime for agent platforms. Build agents, run them as a service, manage your platform using a web UI."},
+  {"field": "what_it_does_ko", "url": "https://www.agno.com/pricing", "quote": "The runtime is free and open source. Serving your agents costs nothing on any plan, at any scale."},
+  {"field": "key_features", "url": "https://www.agno.com", "quote": "The Agno SDK gives you three patterns: agents, teams and workflows, 100+ toolkits"},
+  {"field": "key_features", "url": "https://www.agno.com", "quote": "AgentOS is a batteries-included runtime that turns your agents into an API your product calls and an MCP server ChatGPT and Claude connect to."},
+  {"field": "key_features", "url": "https://www.agno.com", "quote": "Manage every agent, team and workflow run in real time. Traces, sessions, evals and usage metrics, all in one place."},
+  {"field": "key_features", "url": "https://www.agno.com", "quote": "Native support for 30+ model providers."},
+  {"field": "key_features", "url": "https://github.com/agno-agi/agno", "quote": "Expose your agents via Slack, Telegram, WhatsApp, Discord, AG-UI, A2A."},
+  {"field": "key_features", "url": "https://github.com/agno-agi/agno", "quote": "Pause runs for user confirmation. Block tools that require admin approval."},
+  {"field": "key_features", "url": "https://github.com/agno-agi/agno", "quote": "Cron-based scheduling and background jobs with no external infrastructure."},
+  {"field": "key_features", "url": "https://github.com/agno-agi/agno", "quote": "Run on any cloud platform that runs containers. Docker, Railway, AWS, GCP."},
+  {"field": "use_cases_ko", "url": "https://www.agno.com", "quote": "Answers customer tickets with product docs, order history and past resolutions."},
+  {"field": "use_cases_ko", "url": "https://www.agno.com", "quote": "Ingest, extract, validate, post — with an approval gate before anything ships."},
+  {"field": "use_cases_ko", "url": "https://www.agno.com", "quote": "Finds qualified prospects and drafts personalized outbound."},
+  {"field": "pricing", "url": "https://www.agno.com/pricing", "quote": "Agno Pricing: Free Runtime, $150 for the Control Plane"},
+  {"field": "pricing", "url": "https://www.agno.com/pricing", "quote": "$30/mo per additional seat"},
+  {"field": "pricing", "url": "https://www.agno.com/pricing", "quote": "$95/mo per additional live connection"},
+  {"field": "pricing", "url": "https://www.agno.com/pricing", "quote": "Free connects the control plane to AgentOS instances on your own machine. Pro connects it to a live deployment, with one live connection, three team seats and roles."},
+  {"field": "api", "url": "https://github.com/agno-agi/agno", "quote": "50+ endpoints with SSE and websockets to build a product on top."},
+  {"field": "platforms", "url": "https://docs.agno.com/", "quote": "Control Plane Monitor runs, inspect sessions, and manage your platform using the AgentOS UI."},
+  {"field": "korean_support", "url": "https://www.agno.com", "quote": "html lang: en"}
+ ],
+ "mismatch": [],
+ "plan_change": [{"official": "SDK·AgentOS 런타임은 오픈소스 무료, 컨트롤 플레인은 Free $0 / Pro $150/월(좌석·연결 추가 과금) / Enterprise 맞춤", "diff": "'오픈소스(무료)' 분류는 런타임에만 해당하고, 실서비스 관리용 컨트롤 플레인 구독 요금제가 별도로 있음", "url": "https://www.agno.com/pricing"}]
+}

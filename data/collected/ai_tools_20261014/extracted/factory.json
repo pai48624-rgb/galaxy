@@ -1,0 +1,64 @@
+{
+ "company": "Factory",
+ "one_liner_ko": "자율 에이전트(Droid)로 소프트웨어를 계획·개발·리뷰·배포하는 에이전트 중심 소프트웨어 개발 플랫폼.",
+ "what_it_does_ko": "Factory는 데스크톱·터미널·웹·CLI에서 자율 에이전트로 소프트웨어를 계획하고 만들고 리뷰하고 출시하게 하는 플랫폼이다. Droid가 변경을 계획·구현·검증하고 팀은 목표와 정책을 정한다. 코드 리뷰·QA·문서화 같은 반복 엔지니어링 작업을 자동화하고, 작업마다 가장 알맞은 모델로 자동 라우팅한다. 저장소마다 코드 변경에 맞춰 갱신되는 위키를 만들고, 개발자·팀별 사용량 분석과 에이전트 준비도 점수를 제공한다. 기업용으로 SSO, 데이터 무보관, 온프레미스 배포 옵션이 있다.",
+ "key_features": [
+  "Droid 에이전트로 계획·구현·검증",
+  "반복 엔지니어링 작업 자동화(Automations)",
+  "작업별 최적 모델 자동 라우팅",
+  "모든 PR에 인라인 코드 리뷰",
+  "코드와 함께 갱신되는 저장소 위키(AutoWiki)",
+  "실행 중인 미션 모니터링(Mission Control)",
+  "에이전트 전용 컴퓨터(Droid Computers)",
+  "개발자·팀별 사용량 분석과 에이전트 준비도 측정"
+ ],
+ "use_cases_ko": [
+  "개발자가 작업을 맡기고 diff를 검토해 병합",
+  "여러 저장소의 코드 리뷰·QA·문서화 자동화",
+  "기업 전체에 Droid를 배포·보안·관리"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [
+   {"name": "Pro", "price": 20, "currency": "USD", "period": "month", "limits": "데스크톱·CLI·SDK, 클라우드·로컬 백그라운드 에이전트", "page_lang": "en"},
+   {"name": "Plus", "price": 100, "currency": "USD", "period": "month", "limits": "Pro의 약 5배 사용량, Droid Computers", "page_lang": "en"},
+   {"name": "Max", "price": 200, "currency": "USD", "period": "month", "limits": "Pro의 약 10배 사용량, 신기능 조기 이용", "page_lang": "en"},
+   {"name": "Teams", "price": 60, "currency": "USD", "period": "month", "limits": "팀당 월 $60 + 좌석당 월 $40, 최대 10좌석", "page_lang": "en"},
+   {"name": "Business", "price": null, "currency": "USD", "period": "month", "limits": "맞춤; SSO·SAML/SCIM·ZDR·감사 로그", "page_lang": "en"},
+   {"name": "Enterprise", "price": null, "currency": "USD", "period": "month", "limits": "맞춤; 무제한 인원, 온프레미스, 데이터 거주지", "page_lang": "en"}
+  ],
+  "pricing_url": "https://factory.com/pricing"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["웹", "윈도", "맥", "CLI", "API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://factory.com/", "quote": "@Factory 2026 . All rights reserved."},
+  {"field": "one_liner_ko", "url": "https://factory.com/", "quote": "Plan, build, review, and ship software with autonomous agents across desktop, terminal, web, and CLI."},
+  {"field": "what_it_does_ko", "url": "https://factory.com/", "quote": "Use Droid to plan, build, and validate changes, while your team sets the goals and policies."},
+  {"field": "what_it_does_ko", "url": "https://docs.factory.com/", "quote": "Put code review, QA, and documentation on autopilot across your repos."},
+  {"field": "key_features", "url": "https://factory.com/", "quote": "Put repetitive engineering work on autopilot with droids that plan, execute, and validate on a shared context."},
+  {"field": "key_features", "url": "https://factory.com/", "quote": "Route every task to the best model for the job, balancing quality, speed, and cost automatically."},
+  {"field": "key_features", "url": "https://factory.com/", "quote": "Get a thorough review on every pull request, with inline comments that catch real issues before they merge."},
+  {"field": "key_features", "url": "https://factory.com/", "quote": "Give every repository a living wiki that stays current as the code changes, so anyone can navigate the system."},
+  {"field": "key_features", "url": "https://factory.com/", "quote": "Monitor active missions, track worker progress, and view detailed execution logs in real time."},
+  {"field": "key_features", "url": "https://factory.com/", "quote": "Purpose-built hardware that runs your agents locally with dedicated compute, keeping state persistent across sessions."},
+  {"field": "key_features", "url": "https://factory.com/", "quote": "Track adoption and consumption per developer and per team, with real-time usage metrics and exportable reports."},
+  {"field": "use_cases_ko", "url": "https://docs.factory.com/", "quote": "Delegate a task, review the diff, and merge from the App or your terminal."},
+  {"field": "use_cases_ko", "url": "https://docs.factory.com/", "quote": "Deploy, secure, govern, and observe Droid across your organization."},
+  {"field": "pricing", "url": "https://factory.com/pricing", "quote": "Complete software development agents for individuals."},
+  {"field": "pricing", "url": "https://factory.com/pricing", "quote": "• ~5x the usage of Pro"},
+  {"field": "pricing", "url": "https://factory.com/pricing", "quote": "• ~10x the usage of Pro"},
+  {"field": "pricing", "url": "https://factory.com/pricing", "quote": "per team, plus $40/mo per seat"},
+  {"field": "pricing", "url": "https://factory.com/pricing", "quote": "• Up to 10 seats with centralized billing"},
+  {"field": "pricing", "url": "https://factory.com/pricing", "quote": "• On-premise deployment options"},
+  {"field": "api", "url": "https://docs.factory.com/", "quote": "API Reference : drive sessions, computers, wikis, and analytics programmatically."},
+  {"field": "platforms", "url": "https://docs.factory.com/", "quote": "Mac (Apple Silicon) Download for M-series Macs Mac (Intel) Download for Intel Macs Windows (x64) Download for Intel and AMD PCs"},
+  {"field": "platforms", "url": "https://docs.factory.com/", "quote": "Nothing to install: cloud session sync and Droid Computers make your sessions available from any browser"},
+  {"field": "platforms", "url": "https://docs.factory.com/", "quote": "Factory App Droid CLI Web & Mobile"},
+  {"field": "korean_support", "url": "https://factory.com/", "quote": "hreflang: en, ja, x-default"}
+ ],
+ "mismatch": [{"official": "요금 페이지에 Pro $20부터 시작하는 유료 요금제만 있고 무료 요금제 없음", "diff": "기존 '프리미엄(무료+유료 구독)'과 달리 무료 등급이 확인되지 않음", "url": "https://factory.com/pricing"}],
+ "plan_change": []
+}

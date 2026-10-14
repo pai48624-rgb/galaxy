@@ -1,0 +1,155 @@
+{
+ "company": "Tabnam, Inc.",
+ "one_liner_ko": "코드베이스 전체 맥락을 이해하고 PR을 리뷰·테스트하는 AI 코드 리뷰 에이전트.",
+ "what_it_does_ko": "Greptile은 코드베이스 전체를 이해한 상태로 모든 PR을 자동 리뷰하는 AI 코드 리뷰 에이전트다. 저장소의 파일·함수·의존성 그래프를 만든 뒤 여러 에이전트가 변경 영향을 검토해 약 3분 안에 수정 제안이 담긴 댓글을 단다. 팀의 반응과 댓글에서 코딩 기준을 배우고, 리뷰 이슈를 Claude Code·Cursor·Codex 등으로 한 번에 보내 고치게 한다. TREX는 PR 브랜치를 샌드박스에서 실행해 런타임 버그를 잡는다(베타).",
+ "key_features": [
+  "코드베이스 그래프 인덱싱",
+  "여러 에이전트의 병렬 PR 리뷰",
+  "평이한 영어로 쓰는 맞춤 리뷰 규칙",
+  "팀 PR 댓글·반응으로 학습",
+  "원클릭으로 코딩 에이전트에 수정 요청",
+  "Greptile MCP·Claude Code 플러그인",
+  "샌드박스 런타임 테스트 TREX(베타)",
+  "AWS 셀프 호스팅·SSO·감사 로그"
+ ],
+ "use_cases_ko": [
+  "팀 PR 리뷰 자동화로 사람이 놓치는 버그 잡기",
+  "방위·의료·금융 기업의 폐쇄망 셀프 호스팅 리뷰"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Starter: 활성 개발자 1명, 월 50 크레딧, 저장소 무제한)",
+  "plans": [
+   {
+    "name": "Starter",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "활성 개발자 1명, 월 50 크레딧",
+    "page_lang": "en"
+   },
+   {
+    "name": "Pro",
+    "price": 30,
+    "currency": "USD",
+    "period": "month",
+    "limits": "좌석당, 좌석당 월 50 크레딧, 추가 크레딧 $1, 14일 체험",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": "USD",
+    "period": null,
+    "limits": "맞춤 가격, 셀프 호스팅·SSO",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://www.greptile.com/pricing"
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "웹",
+  "CLI"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.greptile.com/pricing",
+   "quote": "© 2026 Tabnam, Inc."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.greptile.com",
+   "quote": "AI agents that review and test pull requests with full context of the codebase."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.greptile.com/docs/introduction",
+   "quote": "Greptile is an AI code review agent that automatically reviews every pull request with complete understanding of your codebase."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.greptile.com/docs/introduction",
+   "quote": "Posts findings in ~3 minutes as PR comments with suggested fixes."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.greptile.com",
+   "quote": "TREX runs your PR branch in a sandbox to catch the bugs that only show up at runtime."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.greptile.com",
+   "quote": "Builds a graph of your repo - files, functions, and dependencies."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.greptile.com",
+   "quote": "Parallel agents review changes, assess their impact beyond the diff, and flag issues."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.greptile.com",
+   "quote": "Write standards in plain English, point Greptile at repo-specific context"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.greptile.com",
+   "quote": "Greptile learns your codebase and coding standards by reading your team' PR comments."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.greptile.com",
+   "quote": "One-click send issue context to Claude Code, Cursor, Codex, or Devin"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.greptile.com",
+   "quote": "Connect Greptile to any AI agent to share comment context."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.greptile.com",
+   "quote": "Yes, you can self-host Greptile in your AWS environment and even use your own LLM providers"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.greptile.com",
+   "quote": "SSO, audit logs, dedicated support."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.greptile.com",
+   "quote": "Built for enterprises across defense, healthcare, and financial services."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.greptile.com",
+   "quote": "Host Greptile in your own air-gapped environment."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.greptile.com/pricing",
+   "quote": "Starter is free for one active developer and includes unlimited repositories and 50 credits per month. Pro is $30 per seat per month and includes 50 credits per seat. Additional credits are $1 each."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.greptile.com/pricing",
+   "quote": "Start 14 day free trial"
+  },
+  {
+   "field": "platforms",
+   "url": "https://www.greptile.com/docs/introduction",
+   "quote": "Greptile CLI"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.greptile.com",
+   "quote": "화면에 보이는 언어 이름: English"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

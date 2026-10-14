@@ -1,0 +1,229 @@
+=== [home] https://spring.io/projects/spring-ai/ (lang=en)
+Spring AI Skip to main content Learn more about Day 0 access to security patches via Enterprise support. 
+ Why Spring Overview 
+ Trending
+ Generative AI 
+ Cloud 
+ Architecture Patterns
+ Microservices 
+ Reactive 
+ Event Driven 
+ Application Types
+ Web Applications 
+ Serverless 
+ Batch 
+ Learn Getting Started
+ Quickstart 
+ Guides 
+ Academy
+ Courses 
+ Get Certified 
+ Projects Overview 
+ Projects
+ Spring Boot 
+ Spring Framework 
+ Spring Cloud 
+ Spring AI 
+ Spring Data 
+ Spring Integration 
+ Spring Batch 
+ Spring Security 
+ Foundational Projects
+ Micrometer 
+ Reactor 
+ Development Tools
+ Spring Tools 
+ Spring Initializr 
+ Resources Blog 
+ Release Calendar 
+ Version Mappings 
+ Release Highlights 
+ Security Advisories 
+ GitHub Orgs
+ Spring Projects 
+ Spring Cloud 
+ Community Overview 
+ Events 
+ Authors 
+ Enterprise Overview 
+ Long-term Support 
+ Automated Upgrades 
+ Governance and Compliance 
+ Modern App Development 
+ All projects 
+ Micrometer 
+ Project Reactor 
+ Spring Boot 
+ Spring Framework 
+ Spring Data 
+ Spring Cloud 
+ Spring AI 
+ Spring gRPC 
+ Spring Security 
+ Spring for GraphQL 
+ Spring Session 
+ Spring Integration 
+ Spring HATEOAS 
+ Spring Modulith 
+ Spring REST Docs 
+ Spring Batch 
+ Spring AMQP 
+ Spring CredHub 
+ Spring for Apache Kafka 
+ Spring LDAP 
+ Spring for Apache Pulsar 
+ Spring Shell 
+ Spring Vault 
+ Spring Web Flow 
+ Spring Web Services 
+ Spring AI 2.0.1 
+ Overview 
+ Learn 
+ Support 
+ Spring AI is an application framework for AI engineering.
+Its goal is to apply to the AI domain Spring ecosystem design principles such as portability and modular design and promote using POJOs as the building blocks of an application to the AI domain.
+ At its core, Spring AI addresses the fundamental challenge of AI integration: Connecting your enterprise Data and APIs with the AI Models .
+ Features
+ Spring AI provides the following features:
+ Support for all major AI Model providers such as Anthropic, OpenAI, Microsoft, Amazon, Google, and Ollama. Supported model types include:
+ Chat Completion 
+ Embedding 
+ Text to Image 
+ Audio Transcription 
+ Text to Speech 
+ Moderation 
+ Portable API support across AI providers for both synchronous and streaming API options are supported. Access to model-specific features is also available.
+ Structured Outputs - Mapping of AI Model output to POJOs.
+ Support for all major Vector Database providers such as Apache Cassandra, Azure Vector Search, Chroma, Milvus, MongoDB Atlas, Neo4j, Oracle, PostgreSQL/PGVector, PineCone, Qdrant, Redis, and Weaviate .
+ Portable API across Vector Store providers, including a novel SQL-like metadata filter API .
+ Tools/Function Calling - permits the model to request the execution of client-side tools and functions, thereby accessing necessary real-time information as required.
+ Observability - Provides insights into AI-related operations.
+ Document injection ETL framework for Data Engineering.
+ AI Model Evaluation - Utilities to help evaluate generated content and protect against hallucinated response.
+ ChatClient API - Fluent API for communicating with AI Chat Models, idiomatically similar to the WebClient and RestClient APIs.
+ Advisors API - Encapsulates recurring Generative AI patterns, transforms data sent to and from Language Models (LLMs), and provides portability across various models and use cases.
+ Support for Chat Conversation Memory and Retrieval Augmented Generation (RAG) .
+ Spring Boot Auto Configuration and Starters for all AI Models and Vector Stores - use the start.spring.io to select the Model or Vector-store of choice.
+ This feature set lets you implement common use cases such as " Q&A over your documentation " or " Chat with your documentation. "
+ Documentation
+ Extensive reference documentation , sample applications, and workshop/course material.
+ Getting Started
+ You can get started in a few simple steps:
+ Create a Spring Boot Web application with a Spring AI OpenAI boot starter dependency. This Spring Initializr link can help you bootstrap the application.
+( With start.spring.io you can select any AI Models or Vector Stores that you want to use in your new applications ).
+ Add your OpenAI key to the application.properties :
+ spring.ai.openai.api-key=<YOUR OPENAI KEY>
+ Add the following snippet to your SpringAiDemoApplication class:
+ @Bean
+public CommandLineRunner runner(ChatClient.Builder builder) {
+ return args -> {
+ ChatClient chatClient = builder.build();
+ String response = chatClient.prompt("Tell me a joke").call().content(); 
+ System.out.println(response);
+ };
+}
+ Run the application:
+ ./mvnw spring-boot:run
+ Want to get started in another way? View the Getting Started section in the reference documentation.
+ Quickstart Your Project
+ Bootstrap your application with Spring Initializr .
+ Get ahead
+ VMware offers training and certification to turbo-charge your progress.
+ Learn more Get support
+ Tanzu Spring offers support and binaries for OpenJDK™, Spring, and Apache Tomcat® in one simple subscription.
+ Learn more Upcoming events
+ Check out all the upcoming events in the Spring community.
+ View all 
+ Why Spring 
+ Generative AI 
+ Microservices 
+ Reactive 
+ Event Driven 
+ Cloud 
+ Web Applications 
+ Serverless 
+ Batch 
+ Learn 
+ Quickstart 
+ Guides 
+ Courses 
+ Get Certified 
+ Projects 
+ Resources
+ Blog 
+ Release Calendar 
+ Version Mappings 
+ Release Highlights 
+ Security Advisories 
+ Community 
+ Events 
+ Authors 
+ Enterprise 
+ Long-term Support 
+ Automated Upgrades 
+ Governance and Compliance 
+ Modern App Development 
+ Thank You 
+ Get the Spring newsletter
+ Stay connected with the Spring newsletter
+ Subscribe 
+ Copyright © 2005 - 2026 Broadcom. All Rights Reserved. The term "Broadcom" refers to Broadcom Inc. and/or its subsidiaries. 
+ Terms of Use • Privacy • Trademark Guidelines 
+ Apache®, Apache Tomcat®, Apache Kafka®, Apache Cassandra™, and Apache Geode™ are trademarks or registered trademarks of the Apache Software Foundation in the United States and/or other countries. Java™, Java™ SE, Java™ EE, and OpenJDK™ are trademarks of Oracle and/or its affiliates. Kubernetes® is a registered trademark of the Linux Foundation in the United States and other countries. Linux® is the registered trademark of Linus Torvalds in the United States and other countries. Windows® and Microsoft® Azure are registered trademarks of Microsoft Corporation. “AWS” and “Amazon Web Services” are trademarks or registered trademarks of Amazon.com Inc. or its affiliates. All other trademarks and copyrights are property of their respective owners and are only mentioned for informative purposes. Other names may be trademarks of their respective owners.
+
+=== [meta] https://spring.io/projects/spring-ai/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/spring-projects/spring-ai
+# Spring AI [![build status](https://github.com/spring-projects/spring-ai/actions/workflows/build-and-deploy-snapshot.yml/badge.svg)](https://github.com/spring-projects/spring-ai/actions/workflows/build-and-deploy-snapshot.yml) [![Maven Central](https://img.shields.io/maven-central/v/org.springframework.ai/spring-ai-model?label=Maven%20Central&versionPrefix=2.0)](https://central.sonatype.com/artifact/org.springframework.ai/spring-ai-model)
+
+The Spring AI project provides a Spring-friendly API and abstractions for developing AI applications.
+
+Its goal is to apply Spring ecosystem design principles, such as portability and modular design, to the AI domain and promote using strongly-typed data structures and APIs as the building blocks of an application.
+
+![spring-ai-integration-diagram-3](https://docs.spring.io/spring-ai/reference/_images/spring-ai-integration-diagram-3.svg)
+
+At its core, Spring AI addresses the fundamental challenge of AI integration: connecting your enterprise __Data__ and __APIs__ with the __AI Models__.
+
+## Getting Started
+
+The [reference documentation](https://docs.spring.io/spring-ai/reference/) includes a [Getting Started](https://docs.spring.io/spring-ai/reference/getting-started.html) guide.
+
+Spring Boot Version Compatibility:
+* **Spring AI 2.x.x** ([main](https://github.com/spring-projects/spring-ai/tree/main) branch) - Spring Boot `4.x`
+* **Spring AI 1.1.x** ([1.1.x](https://github.com/spring-projects/spring-ai/tree/1.1.x) branch) - Spring Boot `3.5.x`
+
+## Project Resources
+
+* [Reference documentation](https://docs.spring.io/spring-ai/reference/)
+* [Javadoc](https://docs.spring.io/spring-ai/docs/current/api/)
+* [Upgrade notes](https://docs.spring.io/spring-ai/reference/upgrade-notes.html)
+* [Awesome Spring AI](https://github.com/spring-ai-community/awesome-spring-ai) - A curated list of awesome resources, tools, tutorials, and projects for building generative AI applications using Spring AI
+* [Spring AI Examples](https://github.com/spring-projects/spring-ai-examples) - Contains example projects that explain specific features in more detail.
+* [Spring AI Community](https://github.com/spring-ai-community) - A community-driven organization for building Spring-based integrations with AI models, agents, vector databases, and more.
+
+## Contributing
+
+We welcome contributions of all kinds!
+Please read our [contribution guidelines](CONTRIBUTING.md) before submitting a pull request or an issue.
+
+## Features
+
+This is a high level feature overview.
+
+* Support for all major [AI Model providers](https://docs.spring.io/spring-ai/reference/api/index.html) such as Anthropic, OpenAI, Amazon Bedrock, Google, Ollama, Mistral AI, DeepSeek, and more.
+  Supported model types include:
+  - [Chat](https://docs.spring.io/spring-ai/reference/api/chatmodel.html)
+  - [Embedding](https://docs.spring.io/spring-ai/reference/api/embeddings.html)
+  - [Text to Image](https://docs.spring.io/spring-ai/reference/api/imageclient.html)
+  - [Audio Transcription](https://docs.spring.io/spring-ai/reference/api/audio/transcriptions.html)
+  - [Text to Speech](https://docs.spring.io/spring-ai/reference/api/audio/speech.html)
+  - [Moderation](https://docs.spring.io/spring-ai/reference/api/index.html#api/moderation)
+* Portable API support across AI providers for both synchronous and streaming options.
+  Access to [model-specific features](https://docs.spring.io/spring-ai/reference/api/chatmodel.html#_chat_options) is also available.
+* [Structured Outputs](https://docs.spring.io/spring-ai/reference/api/structured-output-converter.html) - Mapping of AI Model output to POJOs.
+* Support for all major [Vector Store providers](https://docs.spring.io/spring-ai/reference/api/vectordbs.html) such as *Amazon Bedrock Knowledge Base, Amazon S3, Apache Cassandra, Azure Vector Search, Chroma, Couchbase, Elasticsearch, GemFire, MariaDB, Milvus, MongoDB Atlas, Neo4j, OpenSearch, Oracle, PostgreSQL/PGVector, Pinecone, Qdrant, Redis, Typesense, and Weaviate*.
+* Portable API across Vector Store providers, including a novel SQL-like [metadata filter API](https://docs.spring.io/spring-ai/reference/api/vectordbs.html#metadata-filters).
+* [Tool Calling](https://docs.s

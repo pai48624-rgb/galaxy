@@ -1,0 +1,161 @@
+{
+ "company": "Hopsworks AB",
+ "one_liner_ko": "피처 스토어·모델 레지스트리·모델 서빙을 한 플랫폼에 담은 실시간 ML용 AI 레이크하우스",
+ "what_it_does_ko": "Hopsworks는 학습·배포·모니터링까지 ML 전체 수명주기를 한 플랫폼에서 다룬다. RonDB 기반으로 1ms 미만 지연의 피처 조회를 내세우는 피처 스토어가 중심이다. Iceberg·Delta·Hudi 테이블을 그대로 쓰는 AI 레이크하우스와 실험 추적·모델 레지스트리·배포 파이프라인을 제공한다. 관리형 SaaS(무료 티어 있음)와 자체 클라우드·온프레미스·에어갭 설치를 지원한다.",
+ "key_features": [
+  "1ms 미만 지연의 피처 스토어(RonDB 기반)",
+  "Iceberg·Delta·Hudi 개방형 포맷 레이크하우스",
+  "실험 추적·모델 레지스트리·배포 파이프라인",
+  "LLM 등을 위한 GPU·컴퓨트 관리(Ray, KServe/vLLM)",
+  "Spark·Flink·Pandas·DuckDB 등 프레임워크 지원",
+  "에어갭·온프레미스·하이브리드 배포",
+  "Python·Java API와 hops CLI"
+ ],
+ "use_cases_ko": [
+  "실시간 개인화 추천(사례: Zalando)",
+  "실시간 사기 탐지·신용 심사(사례: Clicklease)",
+  "RAG·임베딩 관리 등 LLM 애플리케이션"
+ ],
+ "pricing": {
+  "free_tier": "있음 (프로젝트 1개, 카드 불필요)",
+  "plans": [
+   {
+    "name": "Free",
+    "price": 0,
+    "currency": "USD",
+    "period": null,
+    "limits": "프로젝트 1개, 피처 스토어+모델 레지스트리, 커뮤니티 지원",
+    "page_lang": "en"
+   },
+   {
+    "name": "SaaS",
+    "price": null,
+    "currency": null,
+    "period": "usage",
+    "limits": "사용량 기반(Pay as you go), 프로젝트 무제한, 모델 서빙",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": null,
+    "period": null,
+    "limits": "Custom, 온프레미스·에어갭, 전담 지원",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://www.hopsworks.ai/pricing"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "CLI",
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.hopsworks.ai/",
+   "quote": "© 2026 Hopsworks AB. All rights reserved."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.hopsworks.ai/pricing",
+   "quote": "The AI Lakehouse - Feature Store, Model Registry, Model Serving"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.hopsworks.ai/",
+   "quote": "The full ML lifecycle in one platform: train, deploy, monitor."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.hopsworks.ai/latest/",
+   "quote": "Sign in to the Hopsworks serverless app and create a project. Nothing to install, free tier available."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.hopsworks.ai/",
+   "quote": "Central repository for feature data with sub-millisecond retrieval."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.hopsworks.ai/",
+   "quote": "Work directly with Iceberg, Delta, and Hudi tables."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.hopsworks.ai/",
+   "quote": "Experiment tracking, model registry, and deployment pipelines in one unified platform."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.hopsworks.ai/",
+   "quote": "Train at scale with Ray, serve with KServe/vLLM."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.hopsworks.ai/",
+   "quote": "Spark, Flink, Pandas, DuckDB - use any framework."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.hopsworks.ai/",
+   "quote": "Air-gapped, on-premises, hybrid."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.hopsworks.ai/",
+   "quote": "to power real-time personalization across 25 countries and 50 million customers."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.hopsworks.ai/",
+   "quote": "streamlined ML platform powering real-time fraud detection and credit decisioning."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.hopsworks.ai/",
+   "quote": "RAG pipelines, embedding management, and LLM-powered applications with feature store integration."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.hopsworks.ai/pricing",
+   "quote": "Most Popular Free"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.hopsworks.ai/pricing",
+   "quote": "Start Free 1 project included"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.hopsworks.ai/pricing",
+   "quote": "Scale up with usage-based pricing."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.hopsworks.ai/pricing",
+   "quote": "Dedicated support and custom deployments."
+  },
+  {
+   "field": "api",
+   "url": "https://docs.hopsworks.ai/latest/",
+   "quote": "Java API"
+  },
+  {
+   "field": "platforms",
+   "url": "https://docs.hopsworks.ai/latest/",
+   "quote": "hops setup # opens a browser, picks a project, caches the key"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.hopsworks.ai/",
+   "quote": "html lang: en"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

@@ -1,0 +1,97 @@
+{
+ "company": "Meta Platforms, Inc.",
+ "one_liner_ko": "PyTorch 모델의 해석 가능성(어떤 특징이 출력에 기여했는지)을 분석하는 오픈소스 라이브러리.",
+ "what_it_does_ko": "Captum은 PyTorch 기반의 확장 가능한 오픈소스 모델 해석 라이브러리다. Integrated Gradients, TCAV, TracIn 같은 알고리즘으로 어떤 특징·학습 예시·개념이 모델 예측에 기여했는지 알려 준다. 비전·텍스트 등 여러 모달리티 모델을 지원하고 원래 신경망을 거의 고치지 않고 쓸 수 있다. 연구자는 새 알고리즘을 구현해 기존 알고리즘과 비교할 수 있고, 반사실적 설명용 적대적 공격·최소 입력 교란 기능도 제공한다.",
+ "key_features": [
+  "비전·텍스트 등 멀티모달 모델 해석",
+  "PyTorch 모델을 최소 수정으로 지원",
+  "Integrated Gradients·TCAV·TracIn 등 해석 알고리즘",
+  "saliency map·smoothgrad·vargrad 구현",
+  "적대적 공격·최소 입력 교란(반사실적 설명)",
+  "새 알고리즘 구현·벤치마크가 쉬운 확장 구조",
+  "torchvision·torchtext 등과 빠른 연동"
+ ],
+ "use_cases_ko": [
+  "모델 개발자가 중요한 특징을 찾아 모델 개선·문제 해결",
+  "해석 가능성 연구자가 새 알고리즘을 기존 알고리즘과 비교",
+  "운영 중인 모델을 쓰는 앱 엔지니어가 추천 이유 등 설명 제공"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "오픈소스(라이선스 이름 명시 없음)",
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://captum.ai",
+   "quote": "Copyright © 2026 Meta Platforms, Inc."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://captum.ai/docs/introduction/",
+   "quote": "Captum (“comprehension” in Latin) is an open source, extensible library for model interpretability built on PyTorch."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/meta-pytorch/captum",
+   "quote": "Captum provides state-of-the-art algorithms such as Integrated Gradients, Testing with Concept Activation Vectors (TCAV), TracIn influence functions"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/meta-pytorch/captum",
+   "quote": "Captum also provides adversarial attacks and minimal input perturbation capabilities"
+  },
+  {
+   "field": "key_features",
+   "url": "https://captum.ai",
+   "quote": "Supports interpretability of models across modalities including vision, text, and more."
+  },
+  {
+   "field": "key_features",
+   "url": "https://captum.ai",
+   "quote": "Supports most types of PyTorch models and can be used with minimal modification to the original neural network."
+  },
+  {
+   "field": "key_features",
+   "url": "https://captum.ai",
+   "quote": "Open source, generic library for interpretability research. Easily implement and benchmark new algorithms."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/meta-pytorch/captum",
+   "quote": "integrated gradients, saliency maps, smoothgrad, vargrad and others"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/meta-pytorch/captum",
+   "quote": "It has quick integration for models built with domain-specific"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://captum.ai/docs/introduction/",
+   "quote": "The primary audiences for Captum are model developers who are looking to improve their models and understand which features are important"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://captum.ai/docs/introduction/",
+   "quote": "Captum can also be used by application engineers who are using trained models in production."
+  },
+  {
+   "field": "open_source",
+   "url": "https://captum.ai",
+   "quote": "Open source, generic library for interpretability research."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://captum.ai",
+   "quote": "hreflang: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

@@ -1,0 +1,82 @@
+{
+ "company": null,
+ "one_liner_ko": "게임 이론의 섀플리 값으로 어떤 머신러닝 모델의 출력이든 설명하는 방법(SHAP).",
+ "what_it_does_ko": "SHAP(SHapley Additive exPlanations)은 게임 이론에 기반해 머신러닝 모델의 출력을 설명하는 방법이다. 고전적 섀플리 값과 그 확장으로 최적의 기여도 배분과 지역 설명을 연결한다. PyPI나 conda-forge로 설치하며, XGBoost·LightGBM·CatBoost·scikit-learn·pyspark 트리 모델에는 빠른 C++ 정확 알고리즘을 쓴다. waterfall·force plot 등으로 각 특징이 예측을 얼마나 밀어 올리거나 내렸는지 시각화한다.",
+ "key_features": [
+  "어떤 머신러닝 모델이든 출력 설명",
+  "트리 앙상블용 고속 정확 알고리즘(C++)",
+  "CUDA로 GPU 가속 Tree SHAP",
+  "waterfall·force plot 시각화",
+  "표·텍스트·이미지·유전체 데이터 예제",
+  "공정성 지표 설명 개요 문서"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/shap/shap",
+   "quote": "is a game theoretic approach to explain the output of any machine learning model."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/shap/shap",
+   "quote": "It connects optimal credit allocation with local explanations using the classic Shapley values from game theory and their related extensions"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/shap/shap",
+   "quote": "Fast C++ implementations are supported for *XGBoost*, *LightGBM*, *CatBoost*, *scikit-learn* and *pyspark* tree models"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/shap/shap",
+   "quote": "Features pushing the prediction higher are shown in red, those pushing the prediction lower are in blue."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/shap/shap",
+   "quote": "we have developed a high-speed exact algorithm for tree ensemble methods"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/shap/shap",
+   "quote": "To enable GPU-accelerated Tree SHAP, install from source with the CUDA toolkit available"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/shap/shap",
+   "quote": "shap.plots.waterfall(shap_values[0])"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/shap/shap",
+   "quote": "shap.plots.force(shap_values[0])"
+  },
+  {
+   "field": "key_features",
+   "url": "https://shap.readthedocs.io/en/latest/",
+   "quote": "DeepExplainer Genomics Example"
+  },
+  {
+   "field": "key_features",
+   "url": "https://shap.readthedocs.io/en/latest/",
+   "quote": "Explaining quantitative measures of fairness"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://shap.readthedocs.io/en/latest/",
+   "quote": "hreflang: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

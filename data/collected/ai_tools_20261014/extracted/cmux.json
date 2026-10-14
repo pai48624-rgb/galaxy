@@ -1,0 +1,219 @@
+{
+ "company": "Manaflow",
+ "one_liner_ko": "멀티태스킹·정리·프로그래밍을 위해 만든 Ghostty 기반 macOS 터미널로, 여러 코딩 에이전트 실행에 맞춰져 있다.",
+ "what_it_does_ko": "cmux는 Ghostty 기반의 무료 오픈소스 네이티브 macOS 터미널로 세로 탭, 에이전트가 주의를 필요로 할 때의 알림 링, 분할 패널, 프로그래밍용 CLI를 제공한다. 에이전트가 서브에이전트나 팀원을 만들면 숨은 백그라운드 프로세스 대신 네이티브 패널로 보여 준다. SSH로 원격 머신의 워크스페이스를 열 수 있고, 유료 요금제에서는 클라우드 VM에서 에이전트를 돌린다.",
+ "key_features": [
+  "세로 탭에 git 브랜치·작업 디렉터리·포트·알림 표시",
+  "에이전트가 주의를 필요로 하면 패널 알림 링",
+  "스크립트로 제어하는 내장 브라우저",
+  "탭 안 가로·세로 분할 패널",
+  "자동화용 CLI와 소켓 API",
+  "iPhone·iPad 실시간 동기화 iOS 앱",
+  "재실행·재부팅 후 세션 복원",
+  "SSH 원격 워크스페이스"
+ ],
+ "use_cases_ko": [
+  "Claude Code·Codex 등 CLI 에이전트 여러 개를 한 터미널에서 병렬 실행·감시",
+  "원격 서버에서 에이전트를 돌리고 로컬 cmux에서 제어"
+ ],
+ "pricing": {
+  "free_tier": "있음 (터미널·로컬 에이전트 무료, 클라우드 VM 제외)",
+  "plans": [
+   {
+    "name": "Free",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "오픈소스 터미널, 자기 키로 로컬 에이전트",
+    "page_lang": "en"
+   },
+   {
+    "name": "Pro",
+    "price": 40,
+    "currency": "USD",
+    "period": "month(연간 결제)",
+    "limits": "클라우드 VM 최대 5대(20 vCPU·40GB 공유), iOS 앱",
+    "page_lang": "en"
+   },
+   {
+    "name": "Pro",
+    "price": 50,
+    "currency": "USD",
+    "period": "month",
+    "limits": "월간 결제",
+    "page_lang": "en"
+   },
+   {
+    "name": "Max",
+    "price": 160,
+    "currency": "USD",
+    "period": "month(연간 결제)",
+    "limits": "클라우드 VM 최대 5대(80 vCPU·160GB 공유)",
+    "page_lang": "en"
+   },
+   {
+    "name": "Max",
+    "price": 200,
+    "currency": "USD",
+    "period": "month",
+    "limits": "월간 결제",
+    "page_lang": "en"
+   },
+   {
+    "name": "Team",
+    "price": 60,
+    "currency": "USD",
+    "period": "month",
+    "limits": "사용자당, 좌석당 VM 5대, 우선 지원",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": "USD",
+    "period": null,
+    "limits": "맞춤 가격, 자체 호스팅·SSO·감사 로그",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://cmux.com/pricing"
+ },
+ "open_source": "GPL",
+ "api": "있음",
+ "platforms": [
+  "맥",
+  "iOS",
+  "CLI",
+  "API"
+ ],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://cmux.com/pricing",
+   "quote": "© 2026 Manaflow · Open source"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://cmux.com/ko",
+   "quote": "The terminal built for multitasking, organization, and programmability."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://cmux.com/ko",
+   "quote": "Ghostty 기반 무료 오픈 소스 네이티브 macOS 터미널. 세로 탭, 에이전트가 주의를 필요로 할 때 알림 링, 분할 패널, 프로그래밍을 위한 CLI 를 제공합니다."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://cmux.com/ko",
+   "quote": "cmux는 그것들을 숨겨진 백그라운드 프로세스 대신 네이티브 패널과 분할로 바꿉니다."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://cmux.com/pricing",
+   "quote": "Cloud agents on Cloud VMs in isolated remote sandboxes"
+  },
+  {
+   "field": "key_features",
+   "url": "https://cmux.com/ko",
+   "quote": "세로 탭 : 사이드바에 git 브랜치, 작업 디렉토리, 포트, 알림 텍스트 표시"
+  },
+  {
+   "field": "key_features",
+   "url": "https://cmux.com/ko",
+   "quote": "알림 링 : 에이전트가 주의를 필요로 하면 패널이 강조 표시됩니다"
+  },
+  {
+   "field": "key_features",
+   "url": "https://cmux.com/ko",
+   "quote": "내장 브라우저 : 스크립팅 가능한 API로 터미널 옆에 브라우저를 분할 배치"
+  },
+  {
+   "field": "key_features",
+   "url": "https://cmux.com/ko",
+   "quote": "분할 패널 : 각 탭 내에서 가로 및 세로 분할"
+  },
+  {
+   "field": "key_features",
+   "url": "https://cmux.com/ko",
+   "quote": "프로그래밍 가능 : 자동화 및 스크립팅을 위한 CLI와 소켓 API"
+  },
+  {
+   "field": "key_features",
+   "url": "https://cmux.com/ko",
+   "quote": "iOS 컴패니언 : 터미널이 iPhone과 iPad로 실시간 동기화"
+  },
+  {
+   "field": "key_features",
+   "url": "https://cmux.com/ko",
+   "quote": "cmux는 다시 실행할 때 창, 워크스페이스, 패널, 작업 디렉터리, 스크롤백을 복원하며"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/manaflow-ai/cmux",
+   "quote": "<code>cmux ssh user@remote</code> creates a workspace for a remote machine."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://cmux.com/ko",
+   "quote": "Claude Code, Codex, OpenCode, Gemini CLI, Kiro, Aider, Goose, Amp, Cline, Cursor Agent 등 커맨드라인에서 실행할 수 있는 모든 것이 지원됩니다."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://cmux.com/ko",
+   "quote": "SSH로 워크스페이스를 열고 원격 tmux 세션에 연결하면, 에이전트는 원격 호스트에서 실행되고 당신은 cmux에서 그것들을 제어할 수 있습니다."
+  },
+  {
+   "field": "pricing",
+   "url": "https://cmux.com/pricing",
+   "quote": "Pro is $50/mo, or $480/yr ($40/mo) when billed yearly. Max is $200/mo, or $1,920/yr ($160/mo) when billed yearly. Team is $60/user/mo."
+  },
+  {
+   "field": "pricing",
+   "url": "https://cmux.com/pricing",
+   "quote": "Yes. The macOS app is open source and free forever. Local agents run with your own API keys at no cost to you. Cloud VMs are part of the paid plans."
+  },
+  {
+   "field": "pricing",
+   "url": "https://cmux.com/pricing",
+   "quote": "Enterprise Custom Contact sales"
+  },
+  {
+   "field": "open_source",
+   "url": "https://cmux.com/ko",
+   "quote": "오픈 소스 : 무료이며 GPL 라이선스"
+  },
+  {
+   "field": "api",
+   "url": "https://cmux.com/ko",
+   "quote": "모든 동작을 cmux CLI와 Unix socket을 통해 사용할 수 있습니다."
+  },
+  {
+   "field": "platforms",
+   "url": "https://cmux.com/ko",
+   "quote": "네이티브 macOS 터미널"
+  },
+  {
+   "field": "platforms",
+   "url": "https://cmux.com/ko",
+   "quote": "iOS 앱이 있나요?"
+  },
+  {
+   "field": "platforms",
+   "url": "https://cmux.com/ko/docs/api",
+   "quote": "cmux는 프로그래밍 방식 제어를 위한 CLI 도구와 Unix 소켓을 모두 제공합니다."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://cmux.com/ko",
+   "quote": "html lang: ko"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://cmux.com/ko",
+   "quote": "화면에 보이는 언어 이름: 한국어, English, 日本語"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

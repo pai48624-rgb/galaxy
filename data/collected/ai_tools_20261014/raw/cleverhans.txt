@@ -1,0 +1,107 @@
+=== [github] https://github.com/cleverhans-lab/cleverhans
+# CleverHans (latest release: v4.0.0)
+
+<img src="https://github.com/tensorflow/cleverhans/blob/master/assets/logo.png?raw=true" alt="cleverhans logo">
+
+
+This repository contains the source code for CleverHans, a Python library to
+benchmark machine learning systems' vulnerability to
+[adversarial examples](http://karpathy.github.io/2015/03/30/breaking-convnets/).
+You can learn more about such vulnerabilities on the accompanying [blog](http://cleverhans.io).
+
+The CleverHans library is under continual development, always welcoming
+[contributions](https://github.com/cleverhans-lab/cleverhans#contributing)
+of the latest attacks and defenses.
+In particular, we always welcome help towards resolving the [issues](https://github.com/cleverhans-lab/cleverhans/issues)
+currently open.
+
+Since v4.0.0, CleverHans supports 3 frameworks: JAX, PyTorch, and TF2. We are currently prioritizing implementing 
+attacks in PyTorch, but we very much welcome contributions for all 3 frameworks. In versions v3.1.0 and prior,
+CleverHans supported TF1; the code for v3.1.0 can be found under `cleverhans_v3.1.0/` or by checking
+out a prior Github release.
+
+The library focuses on providing reference implementation of attacks
+against machine learning models to help with benchmarking models against
+adversarial examples. 
+
+The directory structure is as follows: 
+`cleverhans/` contain attack implementations, `tutorials/` contain scripts demonstrating the features
+of CleverHans, and `defenses/` contains defense implementations. Each framework has its own subdirectory
+within these folders, e.g. `cleverhans/jax`.
+
+## Setting up CleverHans
+
+### Dependencies
+
+This library uses [Jax](https://github.com/google/jax), [PyTorch](https://pytorch.org/) or [TensorFlow 2](https://www.tensorflow.org/) to accelerate graph
+computations performed by many machine learning models.
+Therefore, installing one of these libraries is a pre-requisite.
+
+### Installation
+
+Once dependencies have been taken care of, you can install CleverHans using
+`pip` or by cloning this Github repository.
+
+#### `pip` installation
+
+If you are installing CleverHans using `pip`, run the following command:
+
+```
+pip install cleverhans
+```
+
+This will install the last version uploaded to
+[Pypi](https://pypi.org/project/cleverhans).
+If you'd instead like to install the bleeding edge version, use:
+
+```
+pip install git+https://github.com/cleverhans-lab/cleverhans.git#egg=cleverhans
+```
+
+#### Installation for development
+
+If you want to make an editable installation of CleverHans so that you can
+develop the library and contribute changes back, first fork the repository
+on GitHub and then clone your fork into a directory of your choice:
+
+```
+git clone https://github.com/<your-org>/cleverhans
+```
+
+You can then install the local package in "editable" mode in order to add it to
+your `PYTHONPATH`:
+
+```
+cd cleverhans
+pip install -e .
+```
+
+### Currently supported setups
+
+Although CleverHans is likely to work on many other machine configurations, we
+currently test it with Python
+3.6, Jax 0.2, PyTorch 1.7, and Tensorflow 2.4 on Ubuntu 18.04 LTS (Bionic Beaver).
+
+## Getting support
+
+If you have a request for support, please ask a question
+on [StackOverflow](https://stackoverflow.com/questions/tagged/cleverhans)
+rather than opening an issue in the GitHub tracker. The GitHub
+issue tracker should *only* be used to report bugs or make feature requests.
+
+## Contributing
+
+Contributions are welcomed! To speed the code review process, we ask that:
+* New efforts and features be coordinated on the [discussion board](https://github.com/cleverhans-lab/cleverhans/discussions).
+* When making code contributions to CleverHans, you should follow the [`Black`](https://black.readthedocs.io/en/stable/index.html)
+ coding style in your pull requests.
+* We do not accept pull requests that add git submodules because of [the
+  problems that arise when maintaining git
+  submodules](https://medium.com/@porteneuve/mastering-git-submodules-34c65e940407).
+
+Bug fixes can be initiated through Github pull requests.
+
+## Tutorials: `tutorials` directory
+
+To help you get started with the functionalities provided by this library, the
+`tutorials/` folder comes with

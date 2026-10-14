@@ -1,0 +1,64 @@
+{
+ "company": "Descript",
+ "one_liner_ko": "문서를 고치듯 텍스트를 편집해 영상·오디오를 편집하는 AI 비디오 편집기",
+ "what_it_does_ko": "Descript는 영상을 녹화·편집·공유하는 비디오 편집 앱이다. 녹화하거나 가져온 영상을 몇 초 만에 받아쓰기하고, 그 텍스트를 고치면 영상이 편집된다. AI 공동 편집자 Underlord에게 원하는 편집을 지시할 수 있고, 배경 소음 제거·음성 향상(Studio Sound), 군더더기 말·재촬영 제거, 자막·번역·클립 생성 등을 한 번의 클릭으로 처리한다. API와 MCP로 코드나 AI 비서 안에서도 영상을 편집할 수 있다.",
+ "key_features": [
+  "텍스트를 고치면 영상이 편집되는 텍스트 기반 편집",
+  "AI 공동 편집자 Underlord",
+  "자동 받아쓰기(25개 언어)",
+  "Studio Sound 배경 소음 제거·음성 향상",
+  "군더더기 말·재촬영 원클릭 제거",
+  "음성 복제와 AI 음성",
+  "영상 번역·더빙, 자막, 클립 생성",
+  "API + MCP로 코드·AI 비서에서 편집"
+ ],
+ "use_cases_ko": [
+  "팟캐스트 녹음·편집·클립 제작·게시",
+  "마케팅·웨비나·튜토리얼·제품 데모 영상 제작",
+  "긴 영상을 여러 플랫폼용 짧은 클립으로 재가공"
+ ],
+ "pricing": {
+  "free_tier": "있음 (월 60분 미디어, AI 크레딧 100 1회)",
+  "plans": [
+   {"name": "Free", "price": 0, "currency": "USD", "period": "month", "limits": "월 1시간 미디어, AI 크레딧 100(1회)", "page_lang": "en"},
+   {"name": "Hobbyist (연간 결제)", "price": 16, "currency": "USD", "period": "month(연간 결제, 1인당)", "limits": "월 10시간 미디어, AI 크레딧 400, 1080p 워터마크 없음", "page_lang": "en"},
+   {"name": "Hobbyist (월간 결제)", "price": 24, "currency": "USD", "period": "month(1인당)", "limits": "월 10시간 미디어, AI 크레딧 400", "page_lang": "en"},
+   {"name": "Creator (연간 결제)", "price": 24, "currency": "USD", "period": "month(연간 결제, 1인당)", "limits": "월 30시간 미디어, AI 크레딧 800, 4K 내보내기", "page_lang": "en"},
+   {"name": "Creator (월간 결제)", "price": 35, "currency": "USD", "period": "month(1인당)", "limits": "월 30시간 미디어, AI 크레딧 800", "page_lang": "en"},
+   {"name": "Business (연간 결제)", "price": 50, "currency": "USD", "period": "month(연간 결제, 1인당)", "limits": "월 40시간 미디어, AI 크레딧 1500, Brand Studio, 30개+ 언어 번역·더빙", "page_lang": "en"},
+   {"name": "Business (월간 결제)", "price": 65, "currency": "USD", "period": "month(1인당)", "limits": "월 40시간 미디어, AI 크레딧 1500", "page_lang": "en"},
+   {"name": "Enterprise", "price": null, "currency": null, "period": null, "limits": "맞춤, 영업 문의", "page_lang": "en"}
+  ],
+  "pricing_url": "https://www.descript.com/pricing"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["웹", "API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://www.descript.com/about", "quote": "Descript is a video editing app that does it all."},
+  {"field": "one_liner_ko", "url": "https://www.descript.com", "quote": "With Descript, video editing is as easy as typing."},
+  {"field": "what_it_does_ko", "url": "https://www.descript.com", "quote": "Whether you record in Descript or drag in a recording, you'll get an instant transcript. Then edit your video by editing the text."},
+  {"field": "key_features", "url": "https://www.descript.com", "quote": "Underlord is your AI video editor. It can turn a raw recording into a tight cut in minutes."},
+  {"field": "key_features", "url": "https://www.descript.com/pricing", "quote": "Automatically transcribe your recordings into text in 25 languages"},
+  {"field": "key_features", "url": "https://www.descript.com", "quote": "Crisp, clear, pristine audio with AI-powered background-noise removal and voice enhancement. One click."},
+  {"field": "key_features", "url": "https://www.descript.com", "quote": "Cut filler words and retakes in a click."},
+  {"field": "key_features", "url": "https://www.descript.com", "quote": "Easily create a realistic voice clone or pick from our stock AI voices."},
+  {"field": "key_features", "url": "https://www.descript.com", "quote": "Translate to dozens of languages. Reformat for all the platforms: YouTube, TikTok, LinkedIn, wherever."},
+  {"field": "key_features", "url": "https://www.descript.com", "quote": "API + MCP Edit video through code, or from inside your AI assistant"},
+  {"field": "use_cases_ko", "url": "https://www.descript.com", "quote": "Record, transcribe, edit, make clips, and publish, all in the same place."},
+  {"field": "use_cases_ko", "url": "https://www.descript.com", "quote": "Marketing video\n Webinar recording\n Tutorial video\n Product demo"},
+  {"field": "use_cases_ko", "url": "https://www.descript.com", "quote": "turn your long-form video or podcast into clips"},
+  {"field": "pricing", "url": "https://www.descript.com/pricing", "quote": "Saving up to 35% over monthly plan\n Hobbyist\n $ 16\n $ 24\n per person / month"},
+  {"field": "pricing", "url": "https://www.descript.com/pricing", "quote": "Creator\n $ 24\n $ 35\n per person / month"},
+  {"field": "pricing", "url": "https://www.descript.com/pricing", "quote": "Business\n $ 50\n $ 65\n per person / month"},
+  {"field": "pricing", "url": "https://www.descript.com/pricing", "quote": "Free\n $0\n Get started on your creative journey with text-based editing"},
+  {"field": "pricing", "url": "https://www.descript.com/pricing", "quote": "60 minutes (1 hr) / month"},
+  {"field": "pricing", "url": "https://www.descript.com/pricing", "quote": "100 (one-time)"},
+  {"field": "api", "url": "https://www.descript.com", "quote": "API + MCP Edit video through code"},
+  {"field": "platforms", "url": "https://www.descript.com/about", "quote": "It makes it easy for anyone to record, edit, and share any video"},
+  {"field": "korean_support", "url": "https://www.descript.com", "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

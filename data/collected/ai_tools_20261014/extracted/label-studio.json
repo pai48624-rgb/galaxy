@@ -1,0 +1,152 @@
+{
+ "company": "HumanSignal",
+ "one_liner_ko": "데이터 라벨링·AI 평가·휴먼 인 더 루프 워크플로를 위한 오픈소스 플랫폼.",
+ "what_it_does_ko": "Label Studio는 오디오, 텍스트, 이미지, 영상, 시계열 등 모든 유형의 데이터를 라벨링하는 오픈소스 도구다. 간단한 UI로 라벨링한 뒤 여러 모델 형식으로 내보내 학습 데이터를 준비하거나 개선한다. LLM·에이전트 평가, RLHF, RAG 평가 같은 AI 평가 작업도 지원한다. API·Python SDK·웹훅으로 ML 파이프라인에 연결하며, pip·Brew·Docker로 설치하거나 Starter Cloud를 무료 체험할 수 있다.",
+ "key_features": [
+  "이미지 객체 탐지(박스·다각형·원·키포인트)",
+  "개체명 인식 등 NLP·문서 라벨링",
+  "음성 전사·화자 분리",
+  "시계열 이벤트 라벨링",
+  "RLHF용 사람 선호·수정·순위 수집",
+  "LLM 평가용 맞춤 벤치마크·루브릭·나란히 비교",
+  "데이터·작업에 맞춘 커스텀 레이아웃·템플릿",
+  "API·Python SDK·웹훅 연동"
+ ],
+ "use_cases_ko": [
+  "ML 팀이 원시 데이터를 준비하거나 학습 데이터 품질 개선",
+  "LLM·에이전트 출력 평가와 RLHF 데이터 수집",
+  "RAG 검색 관련성·답변 평가"
+ ],
+ "pricing": {
+  "free_tier": "있음 (오픈소스 Community Edition 무료 설치, Starter Cloud 무료 체험)",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "오픈소스(라이선스명 페이지에 없음)",
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://labelstud.io",
+   "quote": "© 2026 HumanSignal, Inc."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://labelstud.io",
+   "quote": "The open source platform for data labeling, AI evaluation, and human-in-the-loop workflows."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/HumanSignal/label-studio",
+   "quote": "It lets you label data types like audio, text, images, videos, and time series with a simple and straightforward UI and export to various model formats."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://labelstud.io",
+   "quote": "API, Python SDK, and webhooks let you create projects, stream predictions"
+  },
+  {
+   "field": "key_features",
+   "url": "https://labelstud.io",
+   "quote": "Detect objects on image, boxes, polygons, circular, and keypoints supported"
+  },
+  {
+   "field": "key_features",
+   "url": "https://labelstud.io",
+   "quote": "Extract and put relevant bits of information into pre-defined categories"
+  },
+  {
+   "field": "key_features",
+   "url": "https://labelstud.io",
+   "quote": "Partition an input audio stream into homogeneous segments according to the speaker identity"
+  },
+  {
+   "field": "key_features",
+   "url": "https://labelstud.io",
+   "quote": "Label single events on plots of time series data"
+  },
+  {
+   "field": "key_features",
+   "url": "https://labelstud.io",
+   "quote": "Collect human preferences, corrections, rankings"
+  },
+  {
+   "field": "key_features",
+   "url": "https://labelstud.io",
+   "quote": "Create custom benchmarks and rubrics, side-by-side comparison"
+  },
+  {
+   "field": "key_features",
+   "url": "https://labelstud.io",
+   "quote": "Custom layouts and templates adapt to your data, tasks, and evaluation criteria."
+  },
+  {
+   "field": "key_features",
+   "url": "https://labelstud.io",
+   "quote": "API, Python SDK, and webhooks let you create projects, stream predictions"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/HumanSignal/label-studio",
+   "quote": "It can be used to prepare raw data or improve existing training data to get more accurate ML models."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://labelstud.io",
+   "quote": "Connect observability tools to enable human-in-the-loop review"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://labelstud.io",
+   "quote": "Evaluate retrieval relevance, grade generated answers against source"
+  },
+  {
+   "field": "pricing",
+   "url": "https://github.com/HumanSignal/label-studio",
+   "quote": "Or sign up for a free trial of our Starter Cloud edition!"
+  },
+  {
+   "field": "pricing",
+   "url": "https://labelstud.io",
+   "quote": "Download OSS Compare Versions"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/HumanSignal/label-studio",
+   "quote": "Label Studio is an open source data labeling tool."
+  },
+  {
+   "field": "api",
+   "url": "https://labelstud.io",
+   "quote": "API, Python SDK, and webhooks let you create projects, stream predictions"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/HumanSignal/label-studio",
+   "quote": "with a simple and straightforward UI"
+  },
+  {
+   "field": "platforms",
+   "url": "https://labelstud.io",
+   "quote": "API, Python SDK, and webhooks let you create projects, stream predictions"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://labelstud.io",
+   "quote": "html lang: en"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "오픈소스 Community Edition을 무료로 설치해 쓸 수 있고, Enterprise·Starter Cloud는 별도",
+   "diff": "기존 '엔터프라이즈(가격 문의)'만이 아니라 무료 오픈소스 판이 핵심",
+   "url": "https://labelstud.io"
+  }
+ ],
+ "plan_change": []
+}

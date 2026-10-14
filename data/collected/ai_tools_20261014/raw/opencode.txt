@@ -1,0 +1,108 @@
+=== [github] https://github.com/opencode-ai/opencode
+# Archived: Project has Moved
+
+This repository is no longer maintained and has been archived for provenance.
+
+The project has continued under the name [Crush][crush], developed by the original author and the Charm team.
+
+Please follow [Crush][crush] for ongoing development.
+
+[crush]: https://github.com/charmbracelet/crush
+
+
+# ⌬ OpenCode
+
+<p align="center"><img src="https://github.com/user-attachments/assets/9ae61ef6-70e5-4876-bc45-5bcb4e52c714" width="800"></p>
+
+> **⚠️ Early Development Notice:** This project is in early development and is not yet ready for production use. Features may change, break, or be incomplete. Use at your own risk.
+
+A powerful terminal-based AI assistant for developers, providing intelligent coding assistance directly in your terminal.
+
+## Overview
+
+OpenCode is a Go-based CLI application that brings AI assistance to your terminal. It provides a TUI (Terminal User Interface) for interacting with various AI models to help with coding tasks, debugging, and more.
+
+<p>For a quick video overview, check out
+<a href="https://www.youtube.com/watch?v=P8luPmEa1QI"><img width="25" src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg"> OpenCode + Gemini 2.5 Pro: BYE Claude Code! I'm SWITCHING To the FASTEST AI Coder!</a></p>
+
+<a href="https://www.youtube.com/watch?v=P8luPmEa1QI"><img width="550" src="https://i3.ytimg.com/vi/P8luPmEa1QI/maxresdefault.jpg"></a><p>
+
+## Features
+
+- **Interactive TUI**: Built with [Bubble Tea](https://github.com/charmbracelet/bubbletea) for a smooth terminal experience
+- **Multiple AI Providers**: Support for OpenAI, Anthropic Claude, Google Gemini, AWS Bedrock, Groq, Azure OpenAI, and OpenRouter
+- **Session Management**: Save and manage multiple conversation sessions
+- **Tool Integration**: AI can execute commands, search files, and modify code
+- **Vim-like Editor**: Integrated editor with text input capabilities
+- **Persistent Storage**: SQLite database for storing conversations and sessions
+- **LSP Integration**: Language Server Protocol support for code intelligence
+- **File Change Tracking**: Track and visualize file changes during sessions
+- **External Editor Support**: Open your preferred editor for composing messages
+- **Named Arguments for Custom Commands**: Create powerful custom commands with multiple named placeholders
+
+## Installation
+
+### Using the Install Script
+
+```bash
+# Install the latest version
+curl -fsSL https://raw.githubusercontent.com/opencode-ai/opencode/refs/heads/main/install | bash
+
+# Install a specific version
+curl -fsSL https://raw.githubusercontent.com/opencode-ai/opencode/refs/heads/main/install | VERSION=0.1.0 bash
+```
+
+### Using Homebrew (macOS and Linux)
+
+```bash
+brew install opencode-ai/tap/opencode
+```
+
+### Using AUR (Arch Linux)
+
+```bash
+# Using yay
+yay -S opencode-ai-bin
+
+# Using paru
+paru -S opencode-ai-bin
+```
+
+### Using Go
+
+```bash
+go install github.com/opencode-ai/opencode@latest
+```
+
+## Configuration
+
+OpenCode looks for configuration in the following locations:
+
+- `$HOME/.opencode.json`
+- `$XDG_CONFIG_HOME/opencode/.opencode.json`
+- `./.opencode.json` (local directory)
+
+### Auto Compact Feature
+
+OpenCode includes an auto compact feature that automatically summarizes your conversation when it approaches the model's context window limit. When enabled (default setting), this feature:
+
+- Monitors token usage during your conversation
+- Automatically triggers summarization when usage reaches 95% of the model's context window
+- Creates a new session with the summary, allowing you to continue your work without losing context
+- Helps prevent "out of context" errors that can occur with long conversations
+
+You can enable or disable this feature in your configuration file:
+
+```json
+{
+  "autoCompact": true // default is true
+}
+```
+
+### Environment Variables
+
+You can configure OpenCode using environment variables:
+
+| Environment Variable       | Purpose                                                                          |
+| -------------------------- | -------------------------------------------------------------------------------- |
+| `ANTHROPIC_API_KEY`        | For Claude models                         

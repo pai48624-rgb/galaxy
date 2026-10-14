@@ -1,0 +1,111 @@
+{
+ "company": null,
+ "one_liner_ko": "학습·추론 때 AI·LLM 애플리케이션에 정형 데이터를 대규모로 공급하는 오픈소스 피처 스토어",
+ "what_it_does_ko": "Feast는 프로덕션 ML 시스템을 위해 피처를 정의·관리·검증·서빙하는 오픈소스 피처 스토어다. 모델 학습용 과거 피처를 뽑는 오프라인 스토어와 실시간 서빙용 저지연 온라인 스토어로 구성된다. 기존 인프라를 재사용하며 Python SDK, 선택형 피처 서버, UI, CLI를 제공한다. 시점이 맞는(point-in-time) 피처 세트로 데이터 누수를 막는다.",
+ "key_features": [
+  "오프라인 스토어(학습용 과거 피처)와 온라인 스토어(저지연 서빙)",
+  "피처·엔티티·소스를 정의하는 Python SDK",
+  "비 Python 언어용 선택형 피처 서버",
+  "피처 탐색용 웹 UI",
+  "CLI 도구",
+  "시점 정합(point-in-time) 피처로 데이터 누수 방지",
+  "RAG용 벡터 유사도 문서 검색"
+ ],
+ "use_cases_ko": [
+  "실시간 추천",
+  "사기 탐지",
+  "금융 리스크 점수 계산"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "Apache 2.0",
+ "api": "있음",
+ "platforms": [
+  "CLI",
+  "웹",
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://feast.dev",
+   "quote": "Feast is an open source feature store that delivers structured data to AI and LLM applications at high scale during training and inference"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.feast.dev/",
+   "quote": "an offline store for historical feature extraction used in model training and (2) an online store for serving features at low-latency in production systems and applications."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.feast.dev/",
+   "quote": "Feast is a configurable operational data system that re-uses existing infrastructure"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.feast.dev/",
+   "quote": "A Python SDK for programmatically defining features, entities, sources, and (optionally) transformations"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.feast.dev/",
+   "quote": "An optional feature server for reading and writing features (useful for non-python languages)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.feast.dev/",
+   "quote": "A CLI tool for viewing and updating feature information"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/feast-dev/feast",
+   "quote": "**Avoid data leakage** by generating point-in-time correct feature sets"
+  },
+  {
+   "field": "key_features",
+   "url": "https://feast.dev",
+   "quote": "# Retrieve your documents using vector similarity search for RAG"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://feast.dev",
+   "quote": "Real-Time Recommendations"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://feast.dev",
+   "quote": "Fraud Detection"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://feast.dev",
+   "quote": "Calculate risk scores for financial services using consistent features across training and inference"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/feast-dev/feast",
+   "quote": "License-Apache%202.0-blue"
+  },
+  {
+   "field": "api",
+   "url": "https://docs.feast.dev/",
+   "quote": "Python API reference"
+  },
+  {
+   "field": "platforms",
+   "url": "https://docs.feast.dev/",
+   "quote": "A UI for viewing and exploring information about features defined in the project"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://feast.dev",
+   "quote": "html lang: en"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

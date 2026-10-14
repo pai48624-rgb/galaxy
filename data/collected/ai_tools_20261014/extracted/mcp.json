@@ -1,0 +1,42 @@
+{
+ "company": null,
+ "one_liner_ko": "AI 애플리케이션을 외부 시스템에 연결하기 위한 오픈소스 표준.",
+ "what_it_does_ko": "MCP(Model Context Protocol)는 AI 애플리케이션을 외부 시스템에 연결하는 오픈소스 표준이다. Claude나 ChatGPT 같은 AI 애플리케이션이 데이터 소스(로컬 파일·데이터베이스), 도구(검색엔진·계산기), 워크플로(특화 프롬프트)에 연결해 정보에 접근하고 작업을 수행할 수 있게 한다. 공식 문서는 AI 애플리케이션용 USB-C 포트에 비유한다. 서버·클라이언트·MCP 앱을 만들 수 있고, 공개 MCP 서버의 메타데이터를 모으는 공식 MCP 레지스트리(프리뷰)와 REST API도 운영한다. 사양 저장소는 MIT 라이선스다.",
+ "key_features": [
+  "AI 앱과 데이터 소스·도구·워크플로를 잇는 표준 프로토콜",
+  "MCP 서버 구축(데이터·도구 노출)",
+  "MCP 클라이언트 구축",
+  "AI 클라이언트 안에서 동작하는 대화형 MCP 앱 구축",
+  "공식 MCP 레지스트리(프리뷰): 서버 메타데이터 게시·DNS 기반 네임스페이스 관리",
+  "레지스트리 검색용 REST API",
+  "TypeScript로 정의하고 JSON Schema로도 제공되는 프로토콜 스키마"
+ ],
+ "use_cases_ko": [
+  "AI 에이전트가 Google Calendar·Notion에 접근하는 개인화 비서",
+  "기업 챗봇이 조직 내 여러 데이터베이스에 연결해 채팅으로 데이터 분석",
+  "개발자가 AI 애플리케이션·에이전트 개발·연동 시간과 복잡도 절감"
+ ],
+ "pricing": {"free_tier": "불명", "plans": [], "pricing_url": null},
+ "open_source": "MIT",
+ "api": "있음",
+ "platforms": ["API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "one_liner_ko", "url": "https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro", "quote": "MCP (Model Context Protocol) is an open-source standard for connecting AI applications to external systems."},
+  {"field": "what_it_does_ko", "url": "https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro", "quote": "Think of MCP like a USB-C port for AI applications."},
+  {"field": "key_features", "url": "https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro", "quote": "Build interactive apps that run inside AI clients"},
+  {"field": "key_features", "url": "https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro", "quote": "Create MCP servers to expose your data and tools"},
+  {"field": "key_features", "url": "https://modelcontextprotocol.io/registry/about", "quote": "A REST API for MCP clients and aggregators to discover available servers"},
+  {"field": "key_features", "url": "https://modelcontextprotocol.io/registry/about", "quote": "Namespace management through DNS verification"},
+  {"field": "key_features", "url": "https://github.com/modelcontextprotocol/modelcontextprotocol", "quote": "[made available as JSON Schema](schema/2026-07-28/schema.json)"},
+  {"field": "use_cases_ko", "url": "https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro", "quote": "Enterprise chatbots can connect to multiple databases across an organization, empowering users to analyze data using chat."},
+  {"field": "use_cases_ko", "url": "https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro", "quote": "Agents can access your Google Calendar and Notion, acting as a more personalized AI assistant."},
+  {"field": "use_cases_ko", "url": "https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro", "quote": "MCP reduces development time and complexity when building, or integrating with, an AI application or agent."},
+  {"field": "open_source", "url": "https://github.com/modelcontextprotocol/modelcontextprotocol", "quote": "This project is licensed under the [MIT License](LICENSE)."},
+  {"field": "api", "url": "https://modelcontextprotocol.io/registry/about", "quote": "A REST API for MCP clients and aggregators to discover available servers"},
+  {"field": "platforms", "url": "https://modelcontextprotocol.io/registry/about", "quote": "A REST API for MCP clients and aggregators to discover available servers"},
+  {"field": "korean_support", "url": "https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro", "quote": "html lang: en"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

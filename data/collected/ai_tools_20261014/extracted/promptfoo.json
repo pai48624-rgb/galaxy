@@ -1,0 +1,185 @@
+{
+ "company": "Promptfoo, Inc. (OpenAI 소속)",
+ "one_liner_ko": "LLM 앱을 평가하고 레드팀(취약점) 테스트하는 CLI·라이브러리.",
+ "what_it_does_ko": "promptfoo는 LLM 기반 앱을 평가하고 레드팀 테스트하는 CLI이자 라이브러리다. 실제 사용자를 흉내 낸 맞춤 공격(프롬프트 인젝션·탈옥·개인정보 유출 등)으로 앱별 취약점을 찾는다. 프롬프트·모델·RAG 파이프라인을 자동 평가하고 여러 모델을 나란히 비교하며, CI/CD와 PR 코드 스캔에 넣을 수 있다. 평가는 100% 로컬에서 돌아 프롬프트가 외부로 나가지 않는다. 공식 페이지에 따르면 Promptfoo는 OpenAI에 합류했으며 계속 MIT 오픈소스로 유지된다.",
+ "key_features": [
+  "에이전트·RAG 대상 자동 레드팀(프롬프트 인젝션·탈옥·PII 유출 등)",
+  "프롬프트·모델 자동 평가와 모델 나란히 비교",
+  "CI/CD 자동 점검과 PR 코드 스캔",
+  "실시간 가드레일(탈옥·적대적 공격 방어)",
+  "MCP 프록시",
+  "로컬 실행(프롬프트가 기기를 떠나지 않음)",
+  "결과 공유·취약점 보고서"
+ ],
+ "use_cases_ko": [
+  "개발자가 프롬프트·모델 품질을 자동 테스트",
+  "보안팀이 LLM 앱 취약점을 지속 점검",
+  "금융·보험·통신 등 업종별 AI 보안·규정 준수 테스트"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Community: 영구 무료 오픈소스, 레드팀 월 10k 프로브)",
+  "plans": [
+   {
+    "name": "Community",
+    "price": 0,
+    "currency": null,
+    "period": null,
+    "limits": "Free Forever, 모든 평가 기능, 레드팀 월 10k 프로브, 로컬·셀프호스팅, 커뮤니티 지원",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": null,
+    "period": null,
+    "limits": "맞춤 가격, 팀 협업·지속 모니터링·SSO·API 접근·관리형 클라우드",
+    "page_lang": "en"
+   },
+   {
+    "name": "On-Premise",
+    "price": null,
+    "currency": null,
+    "period": null,
+    "limits": "맞춤 가격, 자체 인프라 배포·데이터 완전 격리·전담 엔지니어",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://www.promptfoo.dev/pricing/"
+ },
+ "open_source": "MIT",
+ "api": "있음",
+ "platforms": [
+  "CLI",
+  "웹"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.promptfoo.dev/",
+   "quote": "© 2026 Promptfoo, Inc."
+  },
+  {
+   "field": "company",
+   "url": "https://www.promptfoo.dev/about/",
+   "quote": "Promptfoo is now part of OpenAI. Promptfoo remains open source"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/promptfoo/promptfoo",
+   "quote": "is a CLI and library for evaluating and red-teaming LLM-based apps."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.promptfoo.dev/",
+   "quote": "Promptfoo simulates real users to uncover application-specific vulnerabilities"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/promptfoo/promptfoo",
+   "quote": "**Private**: LLM evals run 100% locally - your prompts never leave your machine"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/promptfoo/promptfoo",
+   "quote": "Promptfoo is now part of OpenAI. Promptfoo remains open source and MIT licensed."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.promptfoo.dev/",
+   "quote": "Direct and indirect prompt injections"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/promptfoo/promptfoo",
+   "quote": "**Compare models** side-by-side"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/promptfoo/promptfoo",
+   "quote": "**Review pull requests** for LLM-related security and compliance issues"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.promptfoo.dev/",
+   "quote": "Real-time protection against jailbreaks and adversarial attacks"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.promptfoo.dev/",
+   "quote": "Secure proxy for Model Context Protocol communications"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/promptfoo/promptfoo",
+   "quote": "**Share results** with your team"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/promptfoo/promptfoo",
+   "quote": "It also can generate [security vulnerability reports]"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/promptfoo/promptfoo",
+   "quote": "**Test your prompts and models** with [automated evaluations]"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.promptfoo.dev/pricing/",
+   "quote": "Larger teams and organizations that want to continuously monitor risk in development and production."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.promptfoo.dev/",
+   "quote": "FINRA-aligned security testing"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.promptfoo.dev/pricing/",
+   "quote": "Community\n Free Forever\n Our open-source tool, perfect for individual developers and small teams."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.promptfoo.dev/pricing/",
+   "quote": "Red teaming (10k probes/month)"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.promptfoo.dev/pricing/",
+   "quote": "Enterprise\n Custom\n For teams that need advanced features."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.promptfoo.dev/pricing/",
+   "quote": "On-Premise\n Custom\n For organizations that require full control over their infrastructure."
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/promptfoo/promptfoo",
+   "quote": "**Open source**: MIT licensed, with an active community"
+  },
+  {
+   "field": "api",
+   "url": "https://www.promptfoo.dev/pricing/",
+   "quote": "Promptfoo API access"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/promptfoo/promptfoo",
+   "quote": "npm install -g promptfoo"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/promptfoo/promptfoo",
+   "quote": "alt=\"prompt evaluation matrix - web viewer\""
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.promptfoo.dev/",
+   "quote": "hreflang: en, x-default"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

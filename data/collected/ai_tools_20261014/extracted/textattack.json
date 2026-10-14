@@ -1,0 +1,42 @@
+{
+ "company": null,
+ "one_liner_ko": "자연어 처리(NLP) 모델을 위한 적대적 공격·데이터 증강·모델 학습 파이썬 프레임워크.",
+ "what_it_does_ko": "TextAttack은 NLP에서 적대적 공격, 데이터 증강, 모델 학습을 하기 위한 파이썬 프레임워크다. 여러 적대적 공격을 NLP 모델에 돌려 출력을 살펴보며 모델을 더 잘 이해하고, 구성요소 라이브러리로 새 공격을 연구·개발할 수 있다. 데이터셋을 증강해 모델의 일반화와 견고성을 높이고, 명령 하나로 NLP 모델을 학습시킬 수 있다. textattack 명령줄이나 파이썬 모듈로 실행한다.",
+ "key_features": [
+  "적대적 공격 레시피(TextFooler·DeepWordBug·BERT-Attack 등)",
+  "데이터 증강(textattack augment)",
+  "모델 학습(textattack train)·평가(textattack eval)",
+  "사전 학습 모델 모음(Model Zoo)",
+  "다국어 공격(프랑스어·스페인어·중국어 레시피)",
+  "사용자 정의 변환·제약·데이터셋·모델",
+  "여러 GPU 병렬 공격(--parallel)"
+ ],
+ "use_cases_ko": [
+  "적대적 공격으로 NLP 모델을 이해·평가하기",
+  "새 NLP 적대적 공격 연구·개발",
+  "데이터셋 증강으로 모델 견고성 높이기"
+ ],
+ "pricing": {"free_tier": "불명", "plans": [], "pricing_url": null},
+ "open_source": null,
+ "api": "불명",
+ "platforms": ["CLI"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "one_liner_ko", "url": "https://github.com/QData/TextAttack", "quote": "TextAttack is a Python framework for adversarial attacks, data augmentation, and model training in NLP."},
+  {"field": "what_it_does_ko", "url": "https://github.com/QData/TextAttack", "quote": "1. **Understand NLP models better** by running different adversarial attacks on them and examining the output"},
+  {"field": "what_it_does_ko", "url": "https://github.com/QData/TextAttack", "quote": "4. **Train NLP models** using just a single command (all downloads included!)"},
+  {"field": "key_features", "url": "https://textattack.readthedocs.io/en/master/", "quote": "TextFooler (Is BERT Really Robust?)"},
+  {"field": "key_features", "url": "https://textattack.readthedocs.io/en/master/", "quote": "Data Augmentation with textattack augment"},
+  {"field": "key_features", "url": "https://textattack.readthedocs.io/en/master/", "quote": "Training Models with textattack train"},
+  {"field": "key_features", "url": "https://github.com/QData/TextAttack", "quote": "you might want the [TextAttack Model Zoo]"},
+  {"field": "key_features", "url": "https://textattack.readthedocs.io/en/master/", "quote": "Attack French Recipe \n Attack Spanish Recipe \n Attack Chinese Recipe"},
+  {"field": "key_features", "url": "https://textattack.readthedocs.io/en/master/", "quote": "User defined Custom attack components"},
+  {"field": "key_features", "url": "https://github.com/QData/TextAttack", "quote": "you can distribute the attack across them using the `--parallel` option."},
+  {"field": "use_cases_ko", "url": "https://github.com/QData/TextAttack", "quote": "2. **Research and develop different NLP adversarial attacks** using the TextAttack framework and library of components"},
+  {"field": "use_cases_ko", "url": "https://github.com/QData/TextAttack", "quote": "3. **Augment your dataset** to increase model generalization and robustness downstream"},
+  {"field": "platforms", "url": "https://github.com/QData/TextAttack", "quote": "Once TextAttack is installed, you can run it via command-line (`textattack ...`)"},
+  {"field": "korean_support", "url": "https://textattack.readthedocs.io/en/master/", "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: English"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

@@ -1,0 +1,191 @@
+{
+ "company": "Letta",
+ "one_liner_ko": "경험에서 배우고 쓸수록 나아지는, 상태를 유지하는(stateful) 에이전트를 만드는 플랫폼.",
+ "what_it_does_ko": "Letta(이전 이름 MemGPT)는 메모리를 가진 상태 유지형 에이전트를 만드는 플랫폼이다. 에이전트 하네스는 완전 오픈소스이며, 코딩 에이전트·개인 비서·AI 동료·앱 내장 에이전트를 만들 수 있다. CLI, 웹 앱, 데스크톱 앱, Slack·Telegram·Discord 등 채널, TypeScript용 Agent SDK로 쓸 수 있다. 관리형 Letta Cloud를 쓰거나 Letta App Server로 직접 운영할 수 있다.",
+ "key_features": [
+  "메모리를 가진 상태 유지형 에이전트",
+  "Skills로 기능 확장",
+  "Schedules로 반복 작업 자동화",
+  "Slack·Telegram·Discord·WhatsApp·Signal 채널 연동",
+  "클라우드 샌드박스에서 에이전트 실행",
+  "Letta App Server로 자체 호스팅",
+  "TypeScript용 Letta Agent SDK",
+  "macOS·Windows·Linux 데스크톱 앱"
+ ],
+ "use_cases_ko": [
+  "AI 코딩 어시스턴트",
+  "업무용 개인 비서",
+  "Slack·Telegram·Discord 속 AI 동료"
+ ],
+ "pricing": {
+  "free_tier": "있음 (상태 유지 에이전트 3개까지, BYOK)",
+  "plans": [
+   {
+    "name": "Free",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "에이전트 제한, Letta Auto 제한적 사용, 자체 API 키",
+    "page_lang": "en"
+   },
+   {
+    "name": "Pro",
+    "price": 20,
+    "currency": "USD",
+    "period": "month",
+    "limits": "Letta Auto 주간+월간 할당량, 초과분 종량제, 상태 유지 에이전트 최대 20개",
+    "page_lang": "en"
+   },
+   {
+    "name": "API Plan",
+    "price": 20,
+    "currency": "USD",
+    "period": "month",
+    "limits": "에이전트 무제한, 활성 에이전트당 월 $0.10, 도구 실행 초당 $0.00015, LLM 종량제",
+    "page_lang": "en"
+   },
+   {
+    "name": "Teams Pro",
+    "price": 20,
+    "currency": "USD",
+    "period": "month(좌석당)",
+    "limits": "팀원 추가, 에이전트 공유·권한 설정",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": "USD",
+    "period": null,
+    "limits": "볼륨 기반 맞춤 가격, SAML/OIDC SSO",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://docs.letta.com/pricing"
+ },
+ "open_source": "오픈소스(라이선스 이름은 페이지에 없음)",
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "윈도",
+  "맥",
+  "CLI",
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://docs.letta.com/",
+   "quote": "Follow Letta on X"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://docs.letta.com/",
+   "quote": "The platform for building stateful agents"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://docs.letta.com/",
+   "quote": "Letta agents learn from experience and improve with use."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/letta-ai/letta",
+   "quote": "Letta (f.k.a. MemGPT) is actively developed."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.letta.com/",
+   "quote": "Use Letta to create coding agents, personal assistants, AI coworkers, and stateful agents embedded in your own applications."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.letta.com/",
+   "quote": "choose between managed deployment with Letta Cloud or running the complete runtime yourself with the Letta App Server"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.letta.com/",
+   "quote": "Explore Schedules for recurring prompts, Skills for reusable workflows, and Mods for extending the harness."
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.letta.com/",
+   "quote": "Channels Overview \n Automatic reply relay \n Slack \n Telegram \n Discord \n WhatsApp \n Signal"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.letta.com/pricing",
+   "quote": "With the Pro plan, you can run agents in remote sandboxes"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/letta-ai/letta",
+   "quote": "the [Letta Agent SDK](https://docs.letta.com/letta-agent-sdk/overview) for building agents into TypeScript applications"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://docs.letta.com/",
+   "quote": "I want an AI coworker in Slack, Telegram, or Discord"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://docs.letta.com/",
+   "quote": "I want a personal assistant for work"
+  },
+  {
+   "field": "pricing",
+   "url": "https://docs.letta.com/pricing",
+   "quote": "Free plans are limited to 3 stateful agents."
+  },
+  {
+   "field": "pricing",
+   "url": "https://docs.letta.com/pricing",
+   "quote": "Pro\n For personal use.\n $20 /month\n Letta Auto weekly + monthly quota\n Pay-as-you-go overage\n Up to 20 stateful agents"
+  },
+  {
+   "field": "pricing",
+   "url": "https://docs.letta.com/pricing",
+   "quote": "API Plan\n For teams building on the Letta API.\n $20 /month\n Unlimited agents\n $0.10 / active agent / mo"
+  },
+  {
+   "field": "pricing",
+   "url": "https://docs.letta.com/pricing",
+   "quote": "Teams Pro\n For teams\n $20 /seat/month"
+  },
+  {
+   "field": "open_source",
+   "url": "https://docs.letta.com/",
+   "quote": "The Letta agent harness is fully open source"
+  },
+  {
+   "field": "api",
+   "url": "https://docs.letta.com/pricing",
+   "quote": "Developer plans are usage-based for teams building on the Letta API with API keys and automated workloads."
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/letta-ai/letta",
+   "quote": "the [desktop app](https://docs.letta.com/letta-code/desktop-app) for macOS, Windows, and Linux"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/letta-ai/letta",
+   "quote": "[chat.letta.com](https://chat.letta.com) in your browser, including on mobile"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://docs.letta.com/",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "개인 Free($0, 에이전트 3개)·Pro($20/월, Letta Auto 모델 사용 할당량 포함), 개발자 API Plan($20/월+활성 에이전트당 $0.10), Teams Pro($20/좌석/월), Enterprise 맞춤",
+   "diff": "분류(오픈소스+클라우드 유료)는 맞지만, 요금제가 메모리 클라우드 호스팅이 아니라 모델 사용 할당량이 들어간 개인 구독(Letta Auto)과 개발자 종량제(에이전트·도구 실행 단가)로 나뉨",
+   "url": "https://docs.letta.com/pricing"
+  }
+ ]
+}

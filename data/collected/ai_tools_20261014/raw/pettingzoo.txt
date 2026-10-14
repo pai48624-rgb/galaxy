@@ -1,0 +1,197 @@
+=== [home] https://pettingzoo.farama.org (lang=en)
+PettingZoo Documentation 
+ Toggle site navigation sidebar
+ PettingZoo Documentation 
+ Farama Foundation 
+ Menu 
+ Expand 
+ Light mode 
+ Dark mode 
+ Auto light/dark mode 
+ Hide navigation sidebar
+ Hide table of contents sidebar
+ Toggle site navigation sidebar
+ PettingZoo Documentation
+ Toggle Light / Dark / Auto color theme
+ Toggle table of contents sidebar
+ -->
+ PettingZoo Documentation 
+ Introduction 
+ Basic Usage 
+ Environment Creation 
+ Testing Environments 
+ API 
+ AEC API 
+ Parallel API 
+ Wrappers Toggle navigation of Wrappers
+ PettingZoo Wrappers 
+ Supersuit Wrappers 
+ Shimmy Compatibility Wrappers 
+ Utils 
+ Environments 
+ Atari Toggle navigation of Atari
+ Basketball Pong 
+ Boxing 
+ Combat: Plane 
+ Combat: Tank 
+ Double Dunk 
+ Emtombed: Competitive 
+ Emtombed: Cooperative 
+ Flag Capture 
+ Foozpong 
+ Ice Hockey 
+ Joust 
+ Mario Bros 
+ Maze Craze 
+ Othello 
+ Pong 
+ Quadrapong 
+ Space Invaders 
+ Space War 
+ Surround 
+ Tennis 
+ Video Checkers 
+ Volleyball Pong 
+ Warlords 
+ Wizard of Wor 
+ Butterfly Toggle navigation of Butterfly
+ Cooperative Pong 
+ Knights Archers Zombies (‘KAZ’) 
+ Pistonball 
+ Classic Toggle navigation of Classic
+ Chess 
+ Connect Four 
+ Go 
+ Hanabi 
+ Leduc Hold’em 
+ Rock Paper Scissors 
+ Texas Hold’em No Limit 
+ Texas Hold’em 
+ Tic Tac Toe 
+ SISL Toggle navigation of SISL
+ Multiwalker 
+ Pursuit 
+ MAgent (moved to MAgent2) 
+ MPE (moved to MPE2) 
+ Third-Party Environments 
+ Tutorials 
+ Custom Environment Tutorial Toggle navigation of Custom Environment Tutorial
+ Tutorial: Repository Structure 
+ Tutorial: Environment Logic 
+ Tutorial: Action Masking 
+ Tutorial: Testing Your Environment 
+ CleanRL Tutorial Toggle navigation of CleanRL Tutorial
+ CleanRL: Implementing PPO 
+ CleanRL: Advanced PPO 
+ Tianshou Tutorial Toggle navigation of Tianshou Tutorial
+ Tianshou: Basic API Usage 
+ Tianshou: Training Agents 
+ Tianshou: CLI and Logging 
+ Ray RLlib Tutorial Toggle navigation of Ray RLlib Tutorial
+ RLlib: PPO for Pistonball 
+ RLlib: DQN for Simple Poker 
+ LangChain Tutorial Toggle navigation of LangChain Tutorial
+ LangChain: Creating LLM agents 
+ Stable-Baselines3 Tutorial Toggle navigation of Stable-Baselines3 Tutorial
+ SB3: PPO for Knights-Archers-Zombies 
+ SB3: Action Masked PPO for Connect Four 
+ AgileRL Tutorial Toggle navigation of AgileRL Tutorial
+ AgileRL: Implementing DQN - Curriculum Learning and Self-play 
+ AgileRL: Implementing MADDPG 
+ AgileRL: Implementing MATD3 
+ Development 
+ Github 
+ Release Notes 
+ Contribute to the Docs 
+ Back to top 
+ Edit this page 
+ Toggle Light / Dark / Auto color theme
+ Toggle table of contents sidebar
+An API standard for multi-agent reinforcement learning.
+ PettingZoo is a simple, pythonic interface capable of representing general multi-agent reinforcement learning (MARL) problems. 
+PettingZoo includes a wide variety of reference environments, helpful utilities, and tools for creating your own custom environments.
+ The AEC API supports sequential turn based environments, while the Parallel API supports environments with simultaneous actions.
+ Environments can be interacted with using a similar interface to Gymnasium :
+ from pettingzoo import make 
+ env = make ( "aec" , "butterfly/knights_archers_zombies-v11" , render_mode = "human" ) 
+ env . reset ( seed = 42 ) 
+ for agent in env . agent_iter (): 
+ observation , reward , termination , truncation , info = env . last () 
+ if termination or truncation : 
+ action = None 
+ else : 
+ # this is where you would insert your policy 
+ action = env . action_space ( agent ) . sample () 
+ env . step ( action ) 
+ Copyright © 2023 Farama Foundation
+ Sphinx and @pradyunsg 's
+ Furo 
+ -->
+
+=== [meta] https://pettingzoo.farama.org
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/Farama-Foundation/PettingZoo
+[![Python](https://img.shields.io/pypi/pyversions/pettingzoo.svg)](https://badge.fury.io/py/pettingzoo) [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://pre-commit.com/) [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+<p align="center">
+    <a href = "https://pettingzoo.farama.org/" target = "_blank"><img src="https://raw.githubusercontent.com/Farama-Foundation/PettingZoo/master/pettingzoo-text.png" width="500px"/> </a>
+</p>
+
+PettingZoo is a Python library for conducting research in multi-agent reinforcement learning, akin to a multi-agent version of [Gymnasium](https://github.com/Farama-Foundation/Gymnasium).
+
+The documentation website is at [pettingzoo.farama.org](https://pettingzoo.farama.org) and we have a public discord server (which we also use to coordinate development work) that you can join here: https://discord.gg/nhvKkYa6qX
+
+## Environments
+
+PettingZoo includes the following families of environments:
+
+* [Atari](https://pettingzoo.farama.org/environments/atari/): Multi-player Atari 2600 games (cooperative, competitive and mixed sum)
+* [Butterfly](https://pettingzoo.farama.org/environments/butterfly): Cooperative graphical games developed by us, requiring a high degree of coordination
+* [Classic](https://pettingzoo.farama.org/environments/classic): Classical games including card games, board games, etc.
+* [SISL](https://pettingzoo.farama.org/environments/sisl): 2 cooperative environments, originally from https://github.com/sisl/MADRL
+
+## Installation
+
+To install the base PettingZoo library: `pip install pettingzoo`.
+
+This does not include dependencies for all families of environments (some environments can be problematic to install on certain systems).
+
+To install the dependencies for one family, use `pip install 'pettingzoo[atari]'`, or use `pip install 'pettingzoo[all]'` to install all dependencies.
+
+We support and maintain PettingZoo for Linux and macOS. We will accept PRs related to Windows, but do not officially support it.
+
+## Getting started
+
+For an introduction to PettingZoo, see [Basic Usage](https://pettingzoo.farama.org/content/basic_usage/). To create a new environment, see our [Environment Creation Tutorial](https://pettingzoo.farama.org/tutorials/custom_environment/1-project-structure/) and [Custom Environment Examples](https://pettingzoo.farama.org/content/environment_creation/).
+For examples of training RL models using PettingZoo see our tutorials:
+* [CleanRL: Implementing PPO](https://pettingzoo.farama.org/tutorials/cleanrl/implementing_PPO/): train multiple PPO agents in the [Pistonball](https://pettingzoo.farama.org/environments/butterfly/pistonball/) environment.
+* [Tianshou: Training Agents](https://pettingzoo.farama.org/tutorials/tianshou/intermediate/): train DQN agents in the [Tic-Tac-Toe](https://pettingzoo.farama.org/environments/classic/tictactoe/) environment.
+* [AgileRL: Training, Curriculums and Self-play](https://pettingzoo.farama.org/main/tutorials/agilerl/DQN/): train agents with curriculum learning and self-play in the [Connect Four](https://pettingzoo.farama.org/environments/classic/connect_four/) environment.
+
+## API
+
+PettingZoo model environments as [*Agent Environment Cycle* (AEC) games](https://arxiv.org/pdf/2009.14471.pdf), in order to be able to cleanly support all types of multi-agent RL environments under one API and to minimize the potential for certain classes of common bugs.
+
+Using environments in PettingZoo is very similar to Gymnasium, i.e. you initialize an environment via:
+
+```python
+from pettingzoo import make
+env = make("aec", "butterfly/pistonball-v6")  # need to specify aec or parallel API
+```
+
+Environments can be interacted with in a manner very similar to Gymnasium:
+
+```python
+env.reset()
+for agent in env.agent_iter():
+    observation, reward, termination, truncation, info = env.last()
+    action = None if termination or truncation else env.action_space(agent).sample()  # this is where you would insert your policy
+    env.step(action)
+```
+
+For the complete API documentation, please see https://pettingzoo.farama.org/api/aec/
+
+#

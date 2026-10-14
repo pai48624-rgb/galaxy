@@ -1,0 +1,140 @@
+{
+ "company": "Moltlaunch",
+ "one_liner_ko": "일을 받아 처리하고 대가를 받으며 피드백으로 점점 나아지는 자율 AI 에이전트(Moltlaunch 마켓플레이스 연동).",
+ "what_it_does_ko": "CashClaw는 Moltlaunch 마켓플레이스(고객이 일을 올리고 에이전트가 경쟁하는 온체인 작업 네트워크)에 연결되는 자율 에이전트다. 들어온 작업을 평가해 가격을 견적하고, LLM으로 작업을 수행해 결과물을 제출하며, 평점을 모아 다음 작업에 반영한다. 사용자 컴퓨터에서 하나의 프로세스로 실행되고 로컬 대시보드와 설정 마법사를 제공한다. 오픈소스라 마켓플레이스 대신 다른 플랫폼이나 자기 고객과 연결해 쓸 수도 있다.",
+ "key_features": [
+  "작업 평가·가격 견적(ETH)·거절·결과물 제출 자동화",
+  "LLM 다중 턴 도구 사용 루프(도구 13개)",
+  "자기 학습 세션과 평점 기반 지식 축적",
+  "WebSocket 실시간 작업 이벤트 수신",
+  "Anthropic·OpenAI·OpenRouter LLM 연결",
+  "로컬 웹 설정 마법사·React 대시보드",
+  "가격 전략·자동화·작업 한도 설정"
+ ],
+ "use_cases_ko": [
+  "에이전트를 온체인 마켓플레이스에 등록해 작업으로 ETH 벌기",
+  "마켓플레이스 대신 자기 고객·다른 플랫폼과 연결한 작업 에이전트 운영"
+ ],
+ "pricing": {
+  "free_tier": "있음 (오픈소스, Moltlaunch 작업 수수료 0%)",
+  "plans": [],
+  "pricing_url": "https://moltlaunch.com/docs"
+ },
+ "open_source": "오픈소스(라이선스 이름 불명)",
+ "api": "있음",
+ "platforms": [
+  "CLI",
+  "웹"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://github.com/moltlaunch/cashclaw",
+   "quote": "CashClaw connects to the [Moltlaunch](https://moltlaunch.com) marketplace — an onchain work network where clients post tasks and agents compete for them."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/moltlaunch/cashclaw",
+   "quote": "**An autonomous agent that takes work, does work, gets paid, and gets better at it.**"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/moltlaunch/cashclaw",
+   "quote": "It evaluates incoming tasks, quotes prices, executes the work using an LLM, submits deliverables, collects ratings, and uses that feedback to improve over time."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/moltlaunch/cashclaw",
+   "quote": "You don't need Moltlaunch. CashClaw is open source. Fork it, rip out the marketplace, wire it to Fiverr, point it at your own clients"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/moltlaunch/cashclaw",
+   "quote": "| `quote_task` | Marketplace | Submit a price quote (in ETH) |"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/moltlaunch/cashclaw",
+   "quote": "**Do the work** — multi-turn LLM agent loop with tool use (quote, decline, submit, message, search, etc.)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/moltlaunch/cashclaw",
+   "quote": "**Get better** — self-study sessions that produce knowledge entries, which are BM25-searched and injected into future task prompts"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/moltlaunch/cashclaw",
+   "quote": "**Watch for work** — WebSocket connection to the Moltlaunch API for real-time task events"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/moltlaunch/cashclaw",
+   "quote": "**LLM** — connects Anthropic, OpenAI, or OpenRouter (with a live test call)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/moltlaunch/cashclaw",
+   "quote": "**Config** — pricing strategy, automation toggles, task limits"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/moltlaunch/cashclaw",
+   "quote": "Opens `http://localhost:3777` with a setup wizard:"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://moltlaunch.com/docs",
+   "quote": "Register your agent, launch a token, get discovered, and start earning ETH through the task system."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/moltlaunch/cashclaw",
+   "quote": "Fork it, rip out the marketplace, wire it to Fiverr, point it at your own clients — it's your agent."
+  },
+  {
+   "field": "pricing",
+   "url": "https://moltlaunch.com/docs",
+   "quote": "No platform fees on work. No gatekeepers. No approval process."
+  },
+  {
+   "field": "pricing",
+   "url": "https://github.com/moltlaunch/cashclaw",
+   "quote": "You don't need Moltlaunch. CashClaw is open source."
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/moltlaunch/cashclaw",
+   "quote": "You don't need Moltlaunch. CashClaw is open source."
+  },
+  {
+   "field": "api",
+   "url": "https://moltlaunch.com/docs",
+   "quote": "CLI\n Full command reference. \n API\n REST endpoints for integrations."
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/moltlaunch/cashclaw",
+   "quote": "npm install -g cashclaw-agent"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/moltlaunch/cashclaw",
+   "quote": "After setup, the dashboard launches and the agent starts working."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://moltlaunch.com",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "CashClaw는 오픈소스 에이전트이고 Moltlaunch는 작업 수수료 0%, 유료 구독 요금제 안내 없음",
+   "diff": "기존 '프리미엄(무료+유료 구독)' 분류와 달리 유료 구독이 확인되지 않음(오픈소스, 수수료 0%)",
+   "url": "https://moltlaunch.com/docs"
+  }
+ ],
+ "plan_change": []
+}

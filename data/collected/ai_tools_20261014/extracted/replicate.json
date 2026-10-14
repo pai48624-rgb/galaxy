@@ -1,0 +1,183 @@
+{
+ "company": "Replicate",
+ "one_liner_ko": "코드 한 줄로 AI 모델을 API로 실행·파인튜닝·배포하는 서비스.",
+ "what_it_does_ko": "Replicate는 커뮤니티가 올린 수천 개의 오픈소스 모델과 공식(독점) 모델을 운영용 API로 실행하게 해 준다. 이미지·영상·음성·음악 생성, LLM 등을 다루며 모델 파인튜닝도 가능하다. 오픈소스 도구 Cog로 직접 만든 모델을 패키징해 전용 하드웨어에 배포할 수 있다. 요금은 사용한 만큼만 내며, 모델에 따라 하드웨어 사용 시간 또는 입력·출력량으로 청구된다.",
+ "key_features": [
+  "공개 모델을 API로 실행",
+  "모델 파인튜닝",
+  "Cog로 커스텀 모델 배포",
+  "디플로이먼트·웹훅",
+  "스트리밍 출력",
+  "MCP 서버·클라이언트 라이브러리·HTTP API",
+  "플레이그라운드에서 모델 비교"
+ ],
+ "use_cases_ko": [
+  "개발자가 이미지·음성·음악·영상 생성 모델을 앱에 연결",
+  "자체 모델을 API로 배포"
+ ],
+ "pricing": {
+  "free_tier": "무료로 시작 가능(무료 한도는 페이지에 없음)",
+  "plans": [
+   {
+    "name": "flux-1.1-pro",
+    "price": 0.04,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "출력 이미지 1장당",
+    "page_lang": "en"
+   },
+   {
+    "name": "deepseek-r1 (입력)",
+    "price": 3.75,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "입력 100만 토큰당",
+    "page_lang": "en"
+   },
+   {
+    "name": "CPU (Small)",
+    "price": 0.09,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "시간당 ($0.000025/초)",
+    "page_lang": "en"
+   },
+   {
+    "name": "Nvidia T4 GPU",
+    "price": 0.81,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "시간당 ($0.000225/초)",
+    "page_lang": "en"
+   },
+   {
+    "name": "Nvidia A100 (80GB) GPU",
+    "price": 5.04,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "시간당 ($0.001400/초)",
+    "page_lang": "en"
+   },
+   {
+    "name": "Nvidia H100 GPU",
+    "price": 5.49,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "시간당 ($0.001525/초)",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://replicate.com/pricing/"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "API",
+  "웹"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://replicate.com",
+   "quote": "Replicate - Run AI with an API"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://replicate.com",
+   "quote": "Run and fine-tune models. Deploy custom models. All with one line of code."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://replicate.com/pricing/",
+   "quote": "Thousands of open-source machine learning models have been contributed by our community and more are added every day. We also host a wide variety of proprietary models."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://replicate.com/pricing/",
+   "quote": "You only pay for what you use on Replicate. Some models are billed by hardware and time, others by input and output."
+  },
+  {
+   "field": "key_features",
+   "url": "https://replicate.com/pricing/",
+   "quote": "you can deploy your own custom models using Cog , our open-source tool for packaging machine learning models."
+  },
+  {
+   "field": "key_features",
+   "url": "https://replicate.com",
+   "quote": "All the latest models are on Replicate. They’re not just demos — they all actually work and have production-ready APIs."
+  },
+  {
+   "field": "key_features",
+   "url": "https://replicate.com/docs/",
+   "quote": "Fine-tune an image model"
+  },
+  {
+   "field": "key_features",
+   "url": "https://replicate.com/docs/",
+   "quote": "Streaming output"
+  },
+  {
+   "field": "key_features",
+   "url": "https://replicate.com",
+   "quote": "Compare models in the Playground"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://replicate.com",
+   "quote": "Generate images Generate speech Generate music Restore images Generate videos from images Caption Images Large Language Models (LLMs)"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://replicate.com/docs/",
+   "quote": "Deploy a custom model"
+  },
+  {
+   "field": "pricing",
+   "url": "https://replicate.com",
+   "quote": "Get started for free"
+  },
+  {
+   "field": "pricing",
+   "url": "https://replicate.com/pricing/",
+   "quote": "$0.04 / output image"
+  },
+  {
+   "field": "pricing",
+   "url": "https://replicate.com/pricing/",
+   "quote": "$3.75 / million input tokens"
+  },
+  {
+   "field": "pricing",
+   "url": "https://replicate.com/pricing/",
+   "quote": "cpu-small $ 0.000025 /sec\n $ 0.09 /hr"
+  },
+  {
+   "field": "pricing",
+   "url": "https://replicate.com/pricing/",
+   "quote": "gpu-t4 $ 0.000225 /sec\n $ 0.81 /hr"
+  },
+  {
+   "field": "pricing",
+   "url": "https://replicate.com/pricing/",
+   "quote": "gpu-a100-large $ 0.001400 /sec\n $ 5.04 /hr"
+  },
+  {
+   "field": "pricing",
+   "url": "https://replicate.com/pricing/",
+   "quote": "gpu-h100 $ 0.001525 /sec\n $ 5.49 /hr"
+  },
+  {
+   "field": "api",
+   "url": "https://replicate.com",
+   "quote": "const replicate = new Replicate ({ auth : process. env . REPLICATE_API_TOKEN })"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://replicate.com",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

@@ -1,0 +1,45 @@
+{
+ "company": "Broadcom (Spring)",
+ "one_liner_ko": "AI 엔지니어링을 위한 Spring 애플리케이션 프레임워크로, 기업의 데이터·API를 AI 모델과 연결한다.",
+ "what_it_does_ko": "Spring AI는 이식성·모듈형 설계 같은 Spring 생태계 설계 원칙을 AI 분야에 적용한 애플리케이션 프레임워크다. 핵심 목표는 기업의 데이터와 API를 AI 모델과 연결하는 것이다. Anthropic·OpenAI·Microsoft·Amazon·Google·Ollama 등 주요 모델 제공자와 여러 벡터 데이터베이스를 공통 API로 지원하며, 구조화 출력·도구 호출·관측성·RAG·대화 메모리 등을 제공한다. Spring Boot 자동 설정과 스타터로 시작할 수 있고, 2.x는 Spring Boot 4.x, 1.1.x는 Spring Boot 3.5.x와 호환된다.",
+ "key_features": [
+  "주요 AI 모델 제공자 지원(채팅·임베딩·텍스트→이미지·음성 전사·TTS·모더레이션)",
+  "제공자 간 이식 가능한 동기·스트리밍 API",
+  "AI 모델 출력을 POJO로 매핑하는 구조화 출력",
+  "주요 벡터 DB 지원과 SQL 유사 메타데이터 필터 API",
+  "도구/함수 호출(Tools/Function Calling)",
+  "관측성·AI 모델 평가 유틸리티",
+  "ChatClient API·Advisors API, 대화 메모리와 RAG 지원",
+  "Spring Boot 자동 설정·스타터"
+ ],
+ "use_cases_ko": [
+  "문서에 대한 Q&A(문서와 채팅) 구현"
+ ],
+ "pricing": {"free_tier": "불명", "plans": [], "pricing_url": null},
+ "open_source": null,
+ "api": "있음",
+ "platforms": [],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://spring.io/projects/spring-ai/", "quote": "Copyright © 2005 - 2026 Broadcom. All Rights Reserved."},
+  {"field": "one_liner_ko", "url": "https://spring.io/projects/spring-ai/", "quote": "Spring AI is an application framework for AI engineering."},
+  {"field": "one_liner_ko", "url": "https://spring.io/projects/spring-ai/", "quote": "At its core, Spring AI addresses the fundamental challenge of AI integration: Connecting your enterprise Data and APIs with the AI Models ."},
+  {"field": "what_it_does_ko", "url": "https://spring.io/projects/spring-ai/", "quote": "Its goal is to apply to the AI domain Spring ecosystem design principles such as portability and modular design"},
+  {"field": "what_it_does_ko", "url": "https://github.com/spring-projects/spring-ai", "quote": "* **Spring AI 2.x.x** ([main](https://github.com/spring-projects/spring-ai/tree/main) branch) - Spring Boot `4.x`"},
+  {"field": "key_features", "url": "https://spring.io/projects/spring-ai/", "quote": "Support for all major AI Model providers such as Anthropic, OpenAI, Microsoft, Amazon, Google, and Ollama."},
+  {"field": "key_features", "url": "https://spring.io/projects/spring-ai/", "quote": "Structured Outputs - Mapping of AI Model output to POJOs."},
+  {"field": "key_features", "url": "https://spring.io/projects/spring-ai/", "quote": "Portable API across Vector Store providers, including a novel SQL-like metadata filter API ."},
+  {"field": "key_features", "url": "https://spring.io/projects/spring-ai/", "quote": "Tools/Function Calling - permits the model to request the execution of client-side tools and functions"},
+  {"field": "key_features", "url": "https://spring.io/projects/spring-ai/", "quote": "AI Model Evaluation - Utilities to help evaluate generated content and protect against hallucinated response."},
+  {"field": "key_features", "url": "https://spring.io/projects/spring-ai/", "quote": "Support for Chat Conversation Memory and Retrieval Augmented Generation (RAG) ."},
+  {"field": "key_features", "url": "https://spring.io/projects/spring-ai/", "quote": "Spring Boot Auto Configuration and Starters for all AI Models and Vector Stores"},
+  {"field": "use_cases_ko", "url": "https://spring.io/projects/spring-ai/", "quote": "This feature set lets you implement common use cases such as \" Q&A over your documentation \" or \" Chat with your documentation. \""},
+  {"field": "api", "url": "https://spring.io/projects/spring-ai/", "quote": "ChatClient API - Fluent API for communicating with AI Chat Models"},
+  {"field": "korean_support", "url": "https://spring.io/projects/spring-ai/", "quote": "html lang: en"},
+  {"field": "plan_change", "url": "https://spring.io/projects/spring-ai/", "quote": "Tanzu Spring offers support and binaries for OpenJDK™, Spring, and Apache Tomcat® in one simple subscription."}
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {"official": "Spring AI 자체의 클라우드 매니지드 유료 플랜은 페이지에 없음. 대신 Tanzu Spring이 OpenJDK·Spring·Apache Tomcat 지원과 바이너리를 묶은 구독을 제공하고, 엔터프라이즈 지원(장기 지원·보안 패치) 안내가 있음", "diff": "기존 분류의 '클라우드 매니지드 유료 플랜'이 아니라 Spring 전체를 묶은 엔터프라이즈 지원 구독(Tanzu Spring) 형태, 가격은 페이지에 없음", "url": "https://spring.io/projects/spring-ai/"}
+ ]
+}

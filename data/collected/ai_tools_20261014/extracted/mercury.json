@@ -1,0 +1,103 @@
+{
+ "company": null,
+ "one_liner_ko": "왓츠앱·슬랙·디스코드 등 채팅하는 곳에 사는 개인 AI 어시스턴트(도커 컨테이너 하나로 배포).",
+ "what_it_does_ko": "Mercury는 사용자가 채팅하는 곳에 상주하는 개인 AI 어시스턴트다. 왓츠앱, 슬랙, 디스코드에 연결되고, pi를 샌드박스 하위 프로세스로 실행하며, 도커 컨테이너 하나로 배포된다. npm으로 설치해 mercury init·build·start 명령으로 실행하고, 왓츠앱 DM 페어링으로 관리자 권한을 받는다. 모든 엔드포인트에 Bearer 토큰 인증이 필요한 /chat API도 있다.",
+ "key_features": [
+  "왓츠앱·슬랙·디스코드·CLI 지원",
+  "pi 샌드박스 하위 프로세스 실행",
+  "도커 컨테이너 단일 배포",
+  "페어링 코드로 관리자·그룹 활성화",
+  "트리거·권한·음소거·속도 제한 정책",
+  "Bearer 토큰 API 인증",
+  "SQLite에 메시지·작업·역할 저장"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "CLI",
+  "API"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/Michaelliv/mercury",
+   "quote": "Mercury is a personal AI assistant that lives where you chat."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/Michaelliv/mercury",
+   "quote": "It connects to WhatsApp, Slack, and Discord, runs [pi](https://github.com/badlogic/pi) as a sandboxed subprocess, and deploys as a single Docker container."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/Michaelliv/mercury",
+   "quote": "npm install -g mercury-ai"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/Michaelliv/mercury",
+   "quote": "Send \"/pair <CODE>\" in a WhatsApp DM → grants admin"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/Michaelliv/mercury",
+   "quote": "All endpoints require Bearer token"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/Michaelliv/mercury",
+   "quote": "WhatsApp, Slack, Discord, or CLI-only"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/Michaelliv/mercury",
+   "quote": "triggers · permissions"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/Michaelliv/mercury",
+   "quote": "mutes · rate limits"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/Michaelliv/mercury",
+   "quote": "mercury build                   # Build Docker image with extensions"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/Michaelliv/mercury",
+   "quote": "mercury pair                    # Show pairing code"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/Michaelliv/mercury",
+   "quote": "│   SQLite DB   │"
+  },
+  {
+   "field": "api",
+   "url": "https://github.com/Michaelliv/mercury",
+   "quote": "| **API key auth** | All endpoints require Bearer token |"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/Michaelliv/mercury",
+   "quote": "WhatsApp, Slack, Discord, or CLI-only"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "npm으로 설치해 자기 도커 컨테이너로 돌리는 개인 GitHub 프로젝트, 유료 요금제 언급 없음",
+   "diff": "기존 분류 '프리미엄(무료+유료 구독)'과 달리 유료 구독 없는 자체 호스팅형",
+   "url": "https://github.com/Michaelliv/mercury"
+  }
+ ],
+ "plan_change": [],
+ "note": "README 앞부분만 수집됨. 라이선스 이름 미확인. 회사 없음(개인 저장소). [meta] 없음 → 한국어 불명."
+}

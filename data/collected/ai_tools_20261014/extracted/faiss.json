@@ -1,0 +1,38 @@
+{
+ "company": "Meta (FAIR, 기초 AI 연구팀)",
+ "one_liner_ko": "밀집 벡터의 효율적인 유사도 검색과 클러스터링을 위한 라이브러리.",
+ "what_it_does_ko": "Faiss는 밀집 벡터의 효율적인 유사도 검색과 클러스터링을 위한 라이브러리로, RAM에 다 들어가지 않을 수도 있는 크기까지 모든 규모의 벡터 집합을 검색하는 알고리즘을 담고 있다. 평가와 파라미터 튜닝용 코드도 포함한다. C++로 작성되었고 Python(numpy) 래퍼를 완전히 제공하며, 가장 유용한 일부 알고리즘은 GPU로 구현되어 있다. 주로 Meta의 기초 AI 연구팀(FAIR)에서 개발한다.",
+ "key_features": [
+  "k번째까지의 최근접 이웃 검색과 여러 벡터 일괄 검색",
+  "정확도와 속도·메모리를 맞바꾸는 근사 검색",
+  "최대 내적 검색과 반경 내 범위 검색",
+  "인덱스를 RAM 대신 디스크에 저장",
+  "이진 벡터 인덱싱",
+  "CUDA·AMD ROCm GPU 지원(단일·다중 GPU)",
+  "HNSW·NSG·곱 양자화(PQ) 등 다양한 인덱스 방식"
+ ],
+ "use_cases_ko": [],
+ "pricing": {"free_tier": null, "plans": [], "pricing_url": null},
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://faiss.ai", "quote": "It is developed primarily at FAIR , the fundamental AI research team of Meta."},
+  {"field": "one_liner_ko", "url": "https://faiss.ai", "quote": "Faiss is a library for efficient similarity search and clustering of dense vectors."},
+  {"field": "what_it_does_ko", "url": "https://faiss.ai", "quote": "It contains algorithms that search in sets of vectors of any size, up to ones that possibly do not fit in RAM."},
+  {"field": "what_it_does_ko", "url": "https://faiss.ai", "quote": "Faiss is written in C++ with complete wrappers for Python. Some of the most useful algorithms are implemented on the GPU."},
+  {"field": "key_features", "url": "https://faiss.ai", "quote": "return not just the nearest neighbor, but also the 2nd nearest, 3rd, …, k-th nearest neighbor"},
+  {"field": "key_features", "url": "https://faiss.ai", "quote": "trade precision for speed, ie. give an incorrect result 10% of the time with a method that’s 10x faster or uses 10x less memory"},
+  {"field": "key_features", "url": "https://faiss.ai", "quote": "return all elements that are within a given radius of the query point (range search)"},
+  {"field": "key_features", "url": "https://faiss.ai", "quote": "store the index on disk rather than in RAM."},
+  {"field": "key_features", "url": "https://faiss.ai", "quote": "index binary vectors rather than floating-point vectors"},
+  {"field": "key_features", "url": "https://github.com/facebookresearch/faiss", "quote": "Optional GPU support is provided via CUDA or AMD ROCm"},
+  {"field": "key_features", "url": "https://github.com/facebookresearch/faiss", "quote": "Other methods, like HNSW and NSG add an indexing structure on top of the raw vectors to make searching more efficient."},
+  {"field": "api", "url": "https://faiss.ai", "quote": "C++ API"},
+  {"field": "platforms", "url": "https://faiss.ai", "quote": "$ conda install -c pytorch faiss-cpu"},
+  {"field": "korean_support", "url": "https://faiss.ai", "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

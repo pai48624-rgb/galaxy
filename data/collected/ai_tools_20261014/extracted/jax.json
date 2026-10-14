@@ -1,0 +1,39 @@
+{
+ "company": null,
+ "one_liner_ko": "고성능 수치 계산과 대규모 머신러닝을 위한, 가속기 중심 배열 계산·프로그램 변환 파이썬 라이브러리.",
+ "what_it_does_ko": "JAX는 가속기 중심 배열 계산과 프로그램 변환을 위한 파이썬 라이브러리로, 고성능 수치 계산과 대규모 머신러닝용으로 설계됐다. 파이썬·NumPy 함수를 자동 미분하며 반복문·분기·재귀를 거쳐서도 미분하고 고계 미분도 된다. XLA로 NumPy 프로그램을 컴파일해 TPU·GPU 등 하드웨어 가속기에서 확장 실행한다. grad·jit·vmap 같은 조합 가능한 함수 변환이 핵심이며, 공식 구글 제품이 아닌 연구 프로젝트라고 밝힌다.",
+ "key_features": [
+  "파이썬·NumPy 함수 자동 미분(역방향·순방향, 임의 차수)",
+  "XLA 기반 jit 컴파일",
+  "vmap 자동 벡터화",
+  "TPU·GPU 등 가속기에서 확장 실행",
+  "분산 배열과 자동 병렬화, shard_map 수동 병렬화",
+  "Pallas로 TPU·GPU 커스텀 커널 작성",
+  "외부 함수 인터페이스(FFI)"
+ ],
+ "use_cases_ko": [
+  "고성능 수치 계산",
+  "대규모 머신러닝 모델 학습"
+ ],
+ "pricing": {"free_tier": "불명", "plans": [], "pricing_url": null},
+ "open_source": null,
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "one_liner_ko", "url": "https://github.com/jax-ml/jax", "quote": "JAX is a Python library for accelerator-oriented array computation and program transformation,"},
+  {"field": "what_it_does_ko", "url": "https://github.com/jax-ml/jax", "quote": "designed for high-performance numerical computing and large-scale machine learning."},
+  {"field": "what_it_does_ko", "url": "https://github.com/jax-ml/jax", "quote": "This is a research project, not an official Google product."},
+  {"field": "what_it_does_ko", "url": "https://github.com/jax-ml/jax", "quote": "to compile and scale your NumPy programs on TPUs, GPUs, and other hardware accelerators."},
+  {"field": "key_features", "url": "https://github.com/jax-ml/jax", "quote": "JAX can automatically differentiate native"},
+  {"field": "key_features", "url": "https://github.com/jax-ml/jax", "quote": "Here are three: `jax.grad`, `jax.jit`, and `jax.vmap`."},
+  {"field": "key_features", "url": "https://docs.jax.dev/en/latest/", "quote": "Distributed arrays and automatic parallelization"},
+  {"field": "key_features", "url": "https://docs.jax.dev/en/latest/", "quote": "Manual parallelism with shard_map"},
+  {"field": "key_features", "url": "https://docs.jax.dev/en/latest/", "quote": "Pallas: custom kernels in JAX"},
+  {"field": "key_features", "url": "https://docs.jax.dev/en/latest/", "quote": "Foreign function interface (FFI)"},
+  {"field": "use_cases_ko", "url": "https://github.com/jax-ml/jax", "quote": "designed for high-performance numerical computing and large-scale machine learning."},
+  {"field": "korean_support", "url": "https://docs.jax.dev/en/latest/", "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

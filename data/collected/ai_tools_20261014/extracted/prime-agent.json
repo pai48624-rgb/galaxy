@@ -1,0 +1,95 @@
+{
+ "company": "Prime Intellect",
+ "one_liner_ko": "재귀 언어 모델(RLM)과 Continual Harness를 바탕으로 스스로 개선하는 오픈소스 코딩·연구 에이전트.",
+ "what_it_does_ko": "Prime Agent는 영구 IPython 커널(REPL)을 유일한 도구로 쓰고, 파일 작업·셸 명령·하위 에이전트 호출을 코드로 처리한다. 하위 에이전트를 병렬·백그라운드로 띄우고 에이전트끼리 직접 메시지를 주고받는다. 프롬프트·스킬·메모리·하위 에이전트 같은 하네스 상태를 실행 기록을 바탕으로 스스로 고친다. 백그라운드 데몬이 세션을 유지해 터미널을 끊어도 작업이 계속된다.",
+ "key_features": [
+  "영구 Python REPL 기반 프로그래밍식 도구·하위 에이전트 호출",
+  "rlm으로 하위 에이전트 병렬·백그라운드 실행",
+  "/refine으로 하네스 상태 자가 개선(롤백 지원)",
+  "실행 가능한 Python 패키지 형태 스킬",
+  "백그라운드 데몬·Agents View로 세션 관리",
+  "에이전트 간 직접 메시지",
+  "자동 컴팩션·일정·자율 모드로 장기 작업"
+ ],
+ "use_cases_ko": [
+  "일반 코딩 도우미",
+  "장기 자율 평가의 기본 런타임",
+  "연구·자동 연구 협업"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "오픈소스(라이선스 이름 미표기)",
+ "api": "불명",
+ "platforms": [
+  "CLI",
+  "윈도"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.primeintellect.ai/blog/prime-agent",
+   "quote": "Welcome to the Prime Intellect Documentation"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/PrimeIntellect-ai/prime-agent",
+   "quote": "Prime Agent is an open-source coding and research agent for general and long-running work."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.primeintellect.ai/blog/prime-agent",
+   "quote": "Models in Prime Agent use a persistent IPython kernel as their only tool."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/PrimeIntellect-ai/prime-agent",
+   "quote": "**Sessions run in the background:** daemon-backed agents keep running when the terminal disconnects and can be reattached later."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/PrimeIntellect-ai/prime-agent",
+   "quote": "`/refine` reviews the current trajectory and can apply small, evidence-backed updates to supplemental harness state."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/PrimeIntellect-ai/prime-agent",
+   "quote": "**Skills are executable:** skills are importable Python packages"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/PrimeIntellect-ai/prime-agent",
+   "quote": "**Agents communicate directly:** running agents can exchange messages and orchestrate one another"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.primeintellect.ai/blog/prime-agent",
+   "quote": "Prime Agent is built to be effective as a general coding assistant, as a default runtime for long-horizon autonomous evaluation, and as a collaborator for research and autoresearch."
+  },
+  {
+   "field": "open_source",
+   "url": "https://www.primeintellect.ai/blog/prime-agent",
+   "quote": "Prime Agent is fully open-source , and can be installed via:"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/PrimeIntellect-ai/prime-agent",
+   "quote": "The Windows installer downloads the latest stable Windows x64 build"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/PrimeIntellect-ai/prime-agent",
+   "quote": "curl -fsSL https://app.primeintellect.ai/prime-agent/install.sh | sh"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.primeintellect.ai/blog/prime-agent",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: English"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

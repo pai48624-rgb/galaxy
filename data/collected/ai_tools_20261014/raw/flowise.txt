@@ -1,0 +1,488 @@
+=== [home] https://flowiseai.com (lang=en)
+Flowise - Build AI Agents, Visually We're sunsetting Flowise. Learn more 
+ Star 
+ Features 
+ Case Studies 
+ Pricing 
+ Community 
+ Webinars 
+ Docs 
+ Get Started 
+ Menu Features 
+ Case Studies 
+ Pricing 
+ Community 
+ Webinars 
+ Docs 
+ Get Started 
+ Build AI Agents
+ Visually
+ Open source agentic systems development platform
+ Get Started GitHub 
+ Trusted and used by teams around the globe
+ Iterate, fast
+ Flowise provides modular building blocks for you to build any agentic systems, from simple compositional workflows to autonomous agents
+ $ npm install -g flowise
+ $ npx flowise start
+ Get Started 
+ Agentflow
+ Multi Agents
+ Build multi-agent systems with workflow orchestration distributed across multiple coordinated agents
+ Chatflow
+ Chat Assistants
+ Build single-agent systems and chatbots with support for tool calling and knowledge retrieval (RAG) from various data sources
+ HITL
+ Human In the Loop
+ Allow humans to review tasks performed by agents within the feedback loop
+ Observability
+ Execution Traces
+ Full execution traces, support Prometheus, OpenTelemetry and other observability tools
+ import requests
+ url = "/api/v1/prediction/:id" 
+ def query ( payload ) :
+   response = requests.post ( 
+     url, 
+     json = payload 
+    ) 
+   return response.json ( ) 
+ output = query ( { 
+   question : "hello!" 
+ ) } 
+ Developer Friendly
+ API, SDK, Embed
+ Extend and integrate to your applications using APIs, SDK and Embedded Chat
+ APIs 
+ Embedded Widget 
+ Typescript & Python SDK 
+ Enterprise Ready
+ Production Scale
+ Deploy and scale your AI applications with enterprise-grade infrastructure, support for both cloud and on-premises environments
+ 100+ LLMs, Embeddings, Vector DBs 
+ On-prem & Cloud deployment 
+ Scale horizontally with message queue and workers 
+ Customer Success Stories
+ See how our customers are transforming their businesses
+ Flowise allows us to supercharge our existing embedded analytics platform with built-in AI features that our clients absolutely love
+ Terrence Sheflin, Director of Engineering
+ UneeQ is very excited to utilize a best-in-class engine that orchestrates AI as part of our proprietary AI brain, Synapse. Flowise has been able to dramatically decrease the resources required to deploy our digital human experiences
+ Tyler Merritt, CTO, UneeQ
+ Integrating Flowise with many other components and utilizing the function-calling capability of LLMs significantly enhanced the quality and efficiency of our new copilot feature in the QmicQatar iFleet product
+ Dr. Fethi Filali, Director of Technology & Applied Research
+ With Flowise, we were able to accelerate our internal "Build your own AI assistants easily & intuitively" initiative. Truly a game-changer in our tech journey
+ Iokin Pardo, BTS Digital Senior Director
+ Flowise enable us to do magic using GenAI with state of the art LLM and other suite of tools
+ Dr. Tu Hao Tran, General Cardiologist
+ Flowise has truly changed how we approach AI. It’s simple enough to prototype an idea in minutes, yet powerful enough to take all the way to production
+ David Micotto, Senior Director of DX & AI
+ Pricing
+ Start building for free, then scale with your users and teams
+ Free
+ $0 /month 
+ 2 Flows & Assistants 
+ 100 Predictions / month 
+ 5MB Storage 
+ Evaluations & Metrics 
+ Custom Embedded Chatbot Branding 
+ Community Support 
+ Get Started 
+ Most Popular Starter
+ For individuals & small teams
+ $35 /month 
+ Everything in Free 
+ Unlimited Flows & Assistants 
+ 10,000 Predictions / month 
+ 1GB Storage 
+ Community Support 
+ Get Started - First Month Free 
+ Pro
+ For medium-sized businesses
+ $65 /month 
+ Everything in Starter 
+ 50,000 Predictions / month 
+ 10GB Storage 
+ Unlimited Workspaces 
+ 5 Users + $15/user/month 
+ Admin Roles & Permissions 
+ Priority Support 
+ Get Started 
+ Community 🫶
+ Open source community is the heart of Flowise. See why developers love and build using Flowise
+   Join Discord 
+ Siddhant Gupta 
+ @ Siddhan65490545 · Follow 
+ Finally after a month of relentless trial and error, I've successfully created an AI persona bot emulating the teaching style of my mentor @abnux , the founder of @10kdesigners . Excited to share my journey in this twitter thread. 🤖🎨 "Sound on 🎙️🔊" 
+ Watch on X 
+ 2:43 PM · Oct 10, 2023 
+ 259 
+ Reply 
+ Copy link 
+ Read 31 replies 
+ Shubham Saboo 
+ @ Saboo_Shubham_ · Follow 
+ Flowise is trending on GitHub
+It's an open-source drag & drop UI tool that lets you build custom LLM apps in just minutes.
+Powered by LangChain, it features:
+- Ready-to-use app templates
+- Conversational agents that remember
+- Seamless deployment on cloud platforms   Show more 
+ Watch on X 
+ 4:05 AM · Aug 16, 2023 
+ 518 
+ Reply 
+ Copy link 
+ Read 18 replies 
+ Eugene 
+ @ sudo_eugene · Follow 
+ Using our new AI bot called Koos with @FlowiseAI to create project management tasks in Notion, right from Slack 🤯
+Let me know who would like to see a 5min explainer on how we did this 🎉 
+ 8:39 AM · Sep 20, 2023 
+ 16 
+ Reply 
+ Copy link 
+ Read 8 replies 
+ Lior Alexander 
+ @ LiorOnAI · Follow 
+ Flowise just reached 12,000 stars on Github. 
+It allows you to build customized LLM apps using a simple drag & drop UI.
+You can even use built-in templates with logic and conditions connected to LangChain and GPT:
+▸ Conversational agent with memory
+▸ Chat with PDF and Excel   Show more 
+ Watch on X 
+ 4:33 PM · Aug 10, 2023 
+ 810 
+ Reply 
+ Copy link 
+ Read 26 replies 
+ Derek Cheung 
+ @ derekcheungsa · Follow 
+ A multi-modal chatbot that effortlessly merges text and image generation into seamless conversations. 🚀
+📢 Watch the demo with conversation starting with asking for advice on building strong financial habits (sped up slightly for demo)
+ 🪄Chatbot magically generates a visual   Show more 
+ Watch on X 
+ 3:11 AM · Oct 2, 2023 
+ 21 
+ Reply 
+ Copy link 
+ Read 4 replies 
+ armand 
+ @ armand_ruiz · Follow 
+ Create your first custom chatbot using LLMs in 5 min!
+No-coding required. We will use @FlowiseAI 
+Join here to get the step-by-step tutorial and video tomorrow at 7 a.m. ET: nocode.ai 
+ 5:06 PM · Aug 25, 2023 
+ 14 
+ Reply 
+ Copy link 
+ Read 3 replies 
+ Alessio Pomaro 
+ @ alepom · Follow 
+ 🧠 Realizzare un #chatbot o una ricerca evoluta per un sito web: quanto sarebbe stato complesso un paio d'anni fa? Tanto. Pochi servizi erano davvero efficienti. 
+🦾 Nelle immagini si vede un'esempio di come l'ho creato con @FlowiseAI .
+ #AI #Flowise #LLaMA2 #Claude 
+ 6:38 AM · Aug 24, 2023 
+ 8 
+ Reply 
+ Copy link 
+ Read 2 replies 
+ !RTFM 
+ @ jbdamask · Follow 
+ Flowise is seriously impressive. Not only for quickly building and deploying LLM apps, but for visualizing chains 
+ 12:08 AM · Aug 22, 2023 
+ 9 
+ Reply 
+ Copy link 
+ Read 3 replies 
+ Abu Mu'aaz 
+ @ abumuaaz · Follow 
+ Thanks to @FlowiseAI & @langchain , it's so easy to create Telegram Bot that capable of getting real-time bus info (location & speed) from GPS device. Plus more functionality to calculate distance, duration & presenting map to user. @OpenAI Function Calling is awesome too 👍 
+ 2:20 AM · Aug 21, 2023 
+ 19 
+ Reply 
+ Copy link 
+ Read 3 replies 
+ Tweet not found
+ The embedded tweet could not be found…
+ Damian Soto 
+ @ sotoplatero · Follow 
+ Chatea Gratis con tus PDF sin código !!!
+En este hilo te muestro como crear un chat gpt personalizado sin una linea de código que puedes incluir en tu web
+Usamos @FlowiseAI que es una increíble herramienta para crear aplicaciones LLM con #nocode .
+Empezamos🧵 
+ 9:25 PM · Aug 17, 2023 
+ 23 
+ Reply 
+ Copy link 
+ Read 2 replies 
+ VerySmallWoods 
+ @ ver
+
+=== [about] https://docs.flowiseai.com/ (lang=en)
+Introduction | FlowiseAI 
+ FlowiseAI
+ ⌘ Ctrl k 
+ FlowiseAI
+ English 
+ Introduction 
+ Get Started 
+ Contribution Guide 
+ API Reference 
+ CLI Reference 
+ Using Flowise 
+ Configuration 
+ Integrations 
+ Migration Guide 
+ Tutorials 
+ Flowise 
+ Flowise GitHub 
+ Flowise Cloud 
+ Powered by GitBook 
+ On this page 
+ For the complete documentation index, see llms.txt . This page is also available as Markdown .
+ Copy 
+ On this page 
+ English 
+ Introduction
+ Welcome to the official Flowise documentation
+ Flowise is an open source generative AI development platform for building AI Agents and LLM workflows.
+ It offers a complete solution that includes:
+ Visual Builder
+ Tracing & Analytics
+ Evaluations 
+ Human in the Loop
+ API, CLI, SDK, Embedded Chatbot
+ Teams & Workspaces
+ There are 3 main visual builders namely:
+ Assistant
+ Chatflow
+ Agentflow
+ Assistant 
+ Assistant is the most beginner-friendly way of creating an AI Agent. Users can create chat assistant that is able to follow instructions, use tools when necessary, and retrieve knowledge base from uploaded files ( RAG ) to respond to user queries.
+ Chatflow 
+ Chatflow is designed to build single-agent systems, chatbots and simple LLM flows. It is more flexible than Assistant. Users can use advance techniques like Graph RAG, Reranker, Retriever, etc.
+ Agentflow 
+ Agentflow is the superset of Chatflow & Assistant. It can be used to create chat assistant, single-agent system, multi-agent systems, and complex workflow orchestration. Learn more Agentflow V2 
+ Flowise Capabilities 
+ Feature Area
+ Flowise Capabilities
+ Orchestration
+ Visual editor, supports open-source & proprietary models, expressions, custom code, branching/looping/routing logic
+ Data Ingestion & Integration
+ Connects to 100+ sources, tools, vector databases, memories
+ Monitoring
+ Execution logs, visual debugging, external log streaming
+ Deployment
+ Self-hosted options, air-gapped deploy
+ Data Processing
+ Data transforms, filters, aggregates, custom code, RAG indexing pipelines
+ Memory & Planning
+ Various memory optimization technique and integrations
+ MCP Integration
+ MCP client/server nodes, tool listing, SSE, auth support
+ Safety & Control
+ Input moderation & output post-processing
+ API, SDK, CLI
+ API access, JS/Python SDK, Command Line Interface
+ Embedded & Share Chatbot
+ Customizable embedded chat widget and component
+ Templates & Components
+ Template marketplace, reusable components
+ Security Controls
+ RBAC, SSO, encrypted creds, secret managers, rate limit, restricted domains
+ Scalability
+ Vertical/horizontal scale, high throughput/workflow load
+ Evaluations
+ Datasets, Evaluators and Evaluations
+ Community Support
+ Active community forum
+ Vendor Support
+ SLA support, consultations, fixed/deterministic pricing
+ Contributing 
+ If you want to help this project, please consider reviewing the Contribution Guide .
+ Need Help? 
+ For support and further discussion, head over to our Discord server.
+ Next Get Started 
+ Last updated 8 months ago 
+ Assistant 
+ Chatflow 
+ Agentflow 
+ Flowise Capabilities 
+ Contributing 
+ Need Help?
+
+=== [pricing] https://flowiseai.com/auth/login (lang=en)
+Flowise - Build AI Agents, Visually 
+ Sign In
+ New to Flowise? Sign up for an account .
+ Sign in with Github Sign in with Google 
+ or 
+ Email Address Password Forgot Password? 
+ Sign In
+
+=== [meta] https://flowiseai.com
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/FlowiseAI/Flowise
+<!-- markdownlint-disable MD030 -->
+
+<p align="center">
+<img src="https://github.com/FlowiseAI/Flowise/blob/main/images/flowise_white.svg#gh-light-mode-only">
+<img src="https://github.com/FlowiseAI/Flowise/blob/main/images/flowise_dark.svg#gh-dark-mode-only">
+</p>
+
+<div align="center">
+
+[![Release Notes](https://img.shields.io/github/release/FlowiseAI/Flowise)](https://github.com/FlowiseAI/Flowise/releases)
+[![Discord](https://img.shields.io/discord/1087698854775881778?label=Discord&logo=discord)](https://discord.gg/jbaHfsRVBW)
+[![Twitter Follow](https://img.shields.io/twitter/follow/FlowiseAI?style=social)](https://twitter.com/FlowiseAI)
+[![GitHub star chart](https://img.shields.io/github/stars/FlowiseAI/Flowise?style=social)](https://star-history.com/#FlowiseAI/Flowise)
+[![GitHub fork](https://img.shields.io/github/forks/FlowiseAI/Flowise?style=social)](https://github.com/FlowiseAI/Flowise/fork)
+
+English | [繁體中文](./i18n/README-TW.md) | [简体中文](./i18n/README-ZH.md) | [日本語](./i18n/README-JA.md) | [한국어](./i18n/README-KR.md)
+
+</div>
+
+<h2>Flowise has been archived. Refer to [Future of Flowise](https://github.com/FlowiseAI/Flowise/discussions/6727)</h2>
+
+<h3>Build AI Agents, Visually</h3>
+<a href="https://github.com/FlowiseAI/Flowise">
+<img width="100%" src="https://github.com/FlowiseAI/Flowise/blob/main/images/flowise_agentflow.gif?raw=true"></a>
+
+## 📚 Table of Contents
+
+-   [⚡ Quick Start](#-quick-start)
+-   [🐳 Docker](#-docker)
+-   [👨‍💻 Developers](#-developers)
+-   [🌱 Env Variables](#-env-variables)
+-   [📖 Documentation](#-documentation)
+-   [🌐 Self Host](#-self-host)
+-   [☁️ Flowise Cloud](#️-flowise-cloud)
+-   [🙋 Support](#-support)
+-   [🙌 Contributing](#-contributing)
+-   [📄 License](#-license)
+
+## ⚡Quick Start
+
+Download and Install [NodeJS](https://nodejs.org/en/download) >= 20.0.0
+
+1. Install Flowise
+    ```bash
+    npm install -g flowise
+    ```
+2. Start Flowise
+
+    ```bash
+    npx flowise start
+    ```
+
+3. Open [http://localhost:3000](http://localhost:3000)
+
+## 🐳 Docker
+
+### Docker Compose
+
+1. Clone the Flowise project
+2. Go to `docker` folder at the root of the project
+3. Copy `.env.example` file, paste it into the same location, and rename to `.env` file
+4. `docker compose up -d`
+5. Open [http://localhost:3000](http://localhost:3000)
+6. You can bring the containers down by `docker compose stop`
+
+### Docker Image
+
+1. Build the image locally:
+
+    ```bash
+    docker build --no-cache -t flowise .
+    ```
+
+2. Run image:
+
+    ```bash
+    docker run -d --name flowise -p 3000:3000 flowise
+    ```
+
+3. Stop image:
+
+    ```bash
+    docker stop flowise
+    ```
+
+## 👨‍💻 Developers
+
+Flowise has 3 different modules in a single mono repository.
+
+-   `server`: Node backend to serve API logics
+-   `ui`: React frontend
+-   `components`: Third-party nodes integrations
+-   `api-documentation`: Auto-generated swagger-ui API docs from express
+
+### Prerequisite
+
+-   Install [PNPM](https://pnpm.io/installation)
+    ```bash
+    npm i -g pnpm
+    ```
+
+### Setup
+
+1.  Clone the repository:
+
+    ```bash
+    git clone https://github.com/FlowiseAI/Flowise.git
+    ```
+
+2.  Go into repository folder:
+
+    ```bash
+    cd Flowise
+    ```
+
+3.  Install all dependencies of all modules:
+
+    ```bash
+    pnpm install
+    ```
+
+4.  Build all the code:
+
+    ```bash
+    pnpm build
+    ```
+
+    <details>
+    <summary>Exit code 134 (JavaScript heap out of memory)</summary>  
+    If you get this error when running the above `build` script, try increasing the Node.js heap size and run the script again:
+
+    ```bash
+    # macOS / Linux / Git Bash
+    export NODE_OPTIONS="--max-old-space-size=4096"
+
+    # Windows PowerShell
+    $env:NODE_OPTIONS="--max-old-space-size=4096"
+
+    # Windows CMD
+    set NODE_OPTIONS=--max-old-space-size=4096
+    ```
+
+    Then run:
+
+    ```bash
+    pnpm build
+    ```
+
+    </details>
+
+5.  Start the app:
+
+    ```bash
+    pnpm start
+    ```
+
+    You can now access the app on [http://localhost:3000](http://localhost:3000)
+
+6.  For development build:
+
+    -   Create `.env` file and specify the `VITE_PORT` (refer to `.env.example`) in `packages/ui`
+    -   Create `.env` file and specify the `PORT` (refer to `.env.example`) in `packages/serve

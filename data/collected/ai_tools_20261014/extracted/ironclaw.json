@@ -1,0 +1,53 @@
+{
+ "company": "NEAR AI (Near Foundation)",
+ "one_liner_ko": "비밀 정보가 모델에 닿지 않도록 암호화된 엔클레이브에서 잡무를 처리하는 오픈소스 보안 AI 에이전트.",
+ "what_it_does_ko": "IronClaw는 Rust로 만든 보안 중심 오픈소스 AI 에이전트 프레임워크로, NEAR AI Cloud에 배포하거나 로컬에서 실행한다. 사용자의 도구·서비스에 접근해 메일 분류, 아침 브리핑, 회의 준비, 배포 상태 감시 같은 일을 맡아 처리한다. API 키·토큰·비밀번호는 암호화 금고에 두고 허용된 엔드포인트 요청에만 주입해 AI가 원문을 보지 못하게 한다. 클라우드 인스턴스는 신뢰 실행 환경(TEE) 안에서 돌고, 도구마다 Wasm 샌드박스에서 실행된다. 웹 인터페이스·슬랙·텔레그램·터미널에서 쓸 수 있다.",
+ "key_features": [
+  "암호화 자격 증명 금고와 호스트 경계 주입",
+  "도구별 Wasm 샌드박스·엔드포인트 허용 목록",
+  "NEAR AI Cloud TEE(암호화 엔클레이브) 원클릭 배포",
+  "외부 유출 실시간 탐지·차단",
+  "웹·슬랙·텔레그램·터미널 멀티 채널",
+  "25개 이상 LLM 제공자 선택",
+  "병렬 작업·하이브리드 검색 영구 메모리·하트비트",
+  "cron·이벤트·웹훅 루틴 자동화"
+ ],
+ "use_cases_ko": [
+  "매일 아침 메일함 정리·답장 초안",
+  "회의 전 참석자·회사 브리핑",
+  "배포 엔드포인트·GitHub 릴리스 감시 알림"
+ ],
+ "pricing": {"free_tier": "불명", "plans": [], "pricing_url": null},
+ "open_source": "MIT OR Apache-2.0",
+ "api": "있음",
+ "platforms": ["웹", "맥", "윈도", "CLI"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://www.ironclaw.com", "quote": "Built by Near Foundation"},
+  {"field": "company", "url": "https://docs.ironclaw.com/", "quote": "IronClaw is a secure, open-source AI agent framework built in Rust and deployed on NEAR AI Cloud."},
+  {"field": "one_liner_ko", "url": "https://www.ironclaw.com", "quote": "An open-source agent for your busywork — in encrypted enclaves, where your secrets never touch the model."},
+  {"field": "what_it_does_ko", "url": "https://docs.ironclaw.com/", "quote": "It enables creating AI agents with access to your tools and services, while keeping your credentials safe and private."},
+  {"field": "what_it_does_ko", "url": "https://www.ironclaw.com", "quote": "Add API keys, tokens, and passwords to the encrypted vault. IronClaw injects them only where you've allowed — the AI never sees the raw values."},
+  {"field": "what_it_does_ko", "url": "https://www.ironclaw.com", "quote": "Your instance runs inside a Trusted Execution Environment on NEAR AI Cloud — encrypted in memory, from boot to shutdown."},
+  {"field": "what_it_does_ko", "url": "https://docs.ironclaw.com/", "quote": "Reach IronClaw from the web interface, Slack, Telegram, or the terminal"},
+  {"field": "key_features", "url": "https://www.ironclaw.com", "quote": "Every tool runs in its own Wasm container with capability-based permissions, allowlisted endpoints, and strict resource limits."},
+  {"field": "key_features", "url": "https://www.ironclaw.com", "quote": "Launch your own IronClaw instance on NEAR AI Cloud. It boots inside a Trusted Execution Environment"},
+  {"field": "key_features", "url": "https://www.ironclaw.com", "quote": "All outbound traffic is scanned in real-time. Anything that looks like a secret heading out the door is blocked automatically."},
+  {"field": "key_features", "url": "https://www.ironclaw.com", "quote": "Your credentials are invisible to the AI. API keys, tokens, and passwords are encrypted at rest and injected into requests at the host boundary"},
+  {"field": "key_features", "url": "https://docs.ironclaw.com/", "quote": "Choose from 25+ providers: NEAR AI, Anthropic, OpenAI, Gemini, Ollama, Tinfoil, and more"},
+  {"field": "key_features", "url": "https://docs.ironclaw.com/", "quote": "Execute multiple tasks concurrently with state machine and self-repair"},
+  {"field": "key_features", "url": "https://docs.ironclaw.com/", "quote": "Hybrid search (FTS + vector) with identity files and heartbeat system"},
+  {"field": "key_features", "url": "https://github.com/nearai/ironclaw", "quote": "**Routines** - Cron schedules, event triggers, webhook handlers for background automation"},
+  {"field": "use_cases_ko", "url": "https://www.ironclaw.com", "quote": "Reads, prioritizes, and summarizes email. Labels inbound as Action, FYI, or Ignore and drafts replies for the ones that matter."},
+  {"field": "use_cases_ko", "url": "https://www.ironclaw.com", "quote": "10 minutes before each meeting, get a brief on the company, attendees, and recent news."},
+  {"field": "use_cases_ko", "url": "https://www.ironclaw.com", "quote": "Pings your endpoint every 5 minutes and alerts you in chat if it returns anything but a 200."},
+  {"field": "open_source", "url": "https://github.com/nearai/ironclaw", "quote": "<img src=\"https://img.shields.io/badge/license-MIT%20OR%20Apache%202.0-blue.svg\" alt=\"License: MIT OR Apache-2.0\" />"},
+  {"field": "api", "url": "https://docs.ironclaw.com/", "quote": " API \n Responses API \n Extensions (Tools) "},
+  {"field": "platforms", "url": "https://github.com/nearai/ironclaw", "quote": "then install it on macOS, Linux, or Windows/WSL."},
+  {"field": "platforms", "url": "https://docs.ironclaw.com/", "quote": "For local deployment, IronClaw ships as a single binary that runs a web interface on your machine"},
+  {"field": "korean_support", "url": "https://www.ironclaw.com", "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [],
+ "plan_change": [],
+ "note": "받아 둔 본문에 NEAR AI Cloud 요금 정보가 없어 가격은 불명. GitHub README에 한국어 번역 링크(README.ko.md)는 있으나 사이트 화면은 영어뿐."
+}

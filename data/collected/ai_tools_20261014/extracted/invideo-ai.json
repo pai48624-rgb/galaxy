@@ -1,0 +1,64 @@
+{
+ "company": "invideo",
+ "one_liner_ko": "AI 에이전트가 편집의 나머지를 맡아 주는, 창작에 진심인 크리에이터를 위한 AI 영상 플랫폼",
+ "what_it_does_ko": "invideo는 영상을 올리고 원하는 편집을 일상적인 말로 설명하면 편집 에이전트가 실제 멀티트랙 타임라인에서 작업해 주는 AI 영상 플랫폼이다. 에이전트가 모든 클립을 살펴 기억해 두므로 원하는 장면을 말로 찾을 수 있고, 한 번의 지시를 타임라인의 모든 샷에 한꺼번에 적용할 수 있다. 실시간 공동 편집, 스토리보드, 대본 작성, 맞춤형 역할 에이전트 기능이 있다. Veo·Sora·Kling·Seedance 등 영상 모델과 Nano Banana Pro 등 이미지 모델, 음성·음악 도구를 크레딧으로 쓴다.",
+ "key_features": [
+  "말로 지시하면 편집 에이전트가 멀티트랙 타임라인에서 편집",
+  "모든 클립을 기억해 설명만으로 장면 찾기",
+  "여러 샷에 한 번에 같은 편집 적용(멈춘 구간 삭제·톤 맞추기 등)",
+  "실시간 커서로 함께 편집하는 멀티플레이어 모드",
+  "스토리보드와 AI 공동 작가 대본 작성",
+  "각본가·촬영감독·음악 디자이너 등 맞춤형 에이전트 만들기",
+  "Google Veo 3.1·Sora 2·Kling·Seedance 등 영상 모델과 이미지·음성·음악 생성 도구",
+  "컬러·오디오·3D 전문가용 도구"
+ ],
+ "use_cases_ko": [
+  "영화 제작자가 연출에 집중하고 세부 작업은 AI 에이전트에 맡기기",
+  "광고·마이크로드라마 제작에서 브랜드 톤·캐릭터 일관성 유지",
+  "하나의 아이디어를 채널별 세로형 소셜 영상 수십 개로 확장"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [
+   {"name": "Basic", "price": 4, "currency": "USD", "period": "month(좌석당, 연간 청구)", "limits": "좌석당 월 190크레딧, 할인 전 표기 $9, 최대 5좌석, Agent Two Lite만, 100GB", "page_lang": "ko"},
+   {"name": "Pro", "price": 15, "currency": "USD", "period": "month(좌석당, 연간 청구)", "limits": "좌석당 월 1,000크레딧, 할인 전 표기 $30, 최대 10좌석, Seedance 2.5, 300GB", "page_lang": "ko"},
+   {"name": "Ultra", "price": 40, "currency": "USD", "period": "month(좌석당, 연간 청구)", "limits": "좌석당 월 3,000크레딧, 할인 전 표기 $80, 최대 20좌석, 800GB, 크레딧당 최저 비용", "page_lang": "ko"},
+   {"name": "Starter", "price": 10, "currency": "USD", "period": "month(좌석당, 연간 청구)", "limits": "좌석당 월 400크레딧, 할인 전 표기 $20, 최대 5좌석, Agent Two Lite만, 200GB", "page_lang": "en"},
+   {"name": "Plus", "price": 30, "currency": "USD", "period": "month(좌석당, 연간 청구)", "limits": "좌석당 월 2,000크레딧, 할인 전 표기 $60, 최대 10좌석, Seedance 2.5, 600GB", "page_lang": "en"},
+   {"name": "Max", "price": 75, "currency": "USD", "period": "month(좌석당, 연간 청구)", "limits": "좌석당 월 5,000크레딧, 할인 전 표기 $150, 최대 20좌석, 2,000GB, 크레딧당 최저 비용", "page_lang": "en"}
+  ],
+  "pricing_url": "https://invideo.io/pricing/"
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": ["웹"],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {"field": "company", "url": "https://invideo.io/pricing/", "quote": "© 2026 invideo"},
+  {"field": "one_liner_ko", "url": "https://invideo.io/ko/?src=al", "quote": "창작에 진심인 크리에이터를 위한 AI 영상 플랫폼"},
+  {"field": "what_it_does_ko", "url": "https://invideo.io/ko/?src=al", "quote": "원하는 편집을 일상적인 말로 설명하면 invideo의 편집 에이전트가 실제 멀티트랙 타임라인에서 작업해요."},
+  {"field": "what_it_does_ko", "url": "https://invideo.io/ko/?src=al", "quote": "invideo의 편집 에이전트가 모든 클립을 살펴보고 기억해 두므로, 원하는 순간을 말로 설명하기만 하면 바로 찾을 수 있어요."},
+  {"field": "what_it_does_ko", "url": "https://invideo.io/pricing/", "quote": "Credits work like currency on our platform and are used for video creation, generative models and across other features"},
+  {"field": "key_features", "url": "https://invideo.io/ko/?src=al", "quote": "멈춘 구간 삭제부터 영상 톤 맞추기까지 타임라인의 모든 샷에 한꺼번에 적용해요."},
+  {"field": "key_features", "url": "https://invideo.io/ko/?src=al", "quote": "실시간 커서로 서로의 작업 내용을 확인하며 함께 편집하세요."},
+  {"field": "key_features", "url": "https://invideo.io/ko/?src=al", "quote": "대본이나 아이디어를 샷별 계획으로 구성하고, 생성 전에 필요한 부분을 다듬으세요."},
+  {"field": "key_features", "url": "https://invideo.io/ko/?src=al", "quote": "invideo에서 대본을 작성하고, 필요하면 AI 공동 작가의 도움을 받아보세요."},
+  {"field": "key_features", "url": "https://invideo.io/ko/?src=al", "quote": "촬영감독, 음악 디자이너 등 특정 역할을 맡을 맞춤형 에이전트를 만들어 보세요."},
+  {"field": "key_features", "url": "https://invideo.io/pricing/", "quote": "Google Veo 3.1 \n Sora 2 \n Kling AI"},
+  {"field": "key_features", "url": "https://invideo.io/pricing/", "quote": "Professional tools \n Color, Audio, 3D"},
+  {"field": "use_cases_ko", "url": "https://invideo.io/ko/?src=al", "quote": "모든 샷을 직접 연출하고, 세부 작업은 invideo의 AI 에이전트에게 맡기세요."},
+  {"field": "use_cases_ko", "url": "https://invideo.io/ko/?src=al", "quote": "캐릭터와 이야기의 일관성을 유지하면서 몰입도 높은 시리즈를 빠르게 확장하세요."},
+  {"field": "use_cases_ko", "url": "https://invideo.io/ko/?src=al", "quote": "하나의 아이디어를 채널별로 바로 활용할 수 있는 수십 개의 세로형 영상으로 확장하세요."},
+  {"field": "pricing", "url": "https://invideo.io/ko/?src=al", "quote": "$9 $4 좌석당 월, 연간 청구"},
+  {"field": "pricing", "url": "https://invideo.io/ko/?src=al", "quote": "$30 $15 좌석당 월, 연간 청구"},
+  {"field": "pricing", "url": "https://invideo.io/ko/?src=al", "quote": "$80 $40 좌석당 월, 연간 청구"},
+  {"field": "pricing", "url": "https://invideo.io/pricing/", "quote": "$20 $10 per seat/mo, billed annually"},
+  {"field": "pricing", "url": "https://invideo.io/pricing/", "quote": "$60 $30 per seat/mo, billed annually"},
+  {"field": "pricing", "url": "https://invideo.io/pricing/", "quote": "$150 $75 per seat/mo, billed annually"},
+  {"field": "pricing", "url": "https://invideo.io/pricing/", "quote": "Heads up: Unused credits don't roll over to the next month."},
+  {"field": "platforms", "url": "https://invideo.io/pricing/", "quote": "Online Video Editor"},
+  {"field": "korean_support", "url": "https://invideo.io/ko/?src=al", "quote": "html lang: ko"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

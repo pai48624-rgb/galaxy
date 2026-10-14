@@ -1,0 +1,95 @@
+{
+ "company": "jatstack",
+ "one_liner_ko": "코딩 에이전트 무리가 일을 계획·구현·배포하는 데 필요한 것을 모은 셀프호스팅 에이전트 개발 스택.",
+ "what_it_does_ko": "jat는 여러 에이전트를 파일 단위로 나눠 충돌 없이 생성·조율·추적하는 에이전트형 개발 IDE이자 jatstack의 대표 도구다. 작업 큐·에이전트 메일함·브라우저 자동화·암호화 자격 증명 금고·연산 분산 등 7개의 조합형 도구로 이뤄진다. 내 컴퓨터와 내 tailnet에서 셀프호스팅하며 계정·클라우드 없이 네트워크 밖으로 아무것도 나가지 않는다. 명령 한 줄(curl)로 설치하며 현재 알파 단계다.",
+ "key_features": [
+  "파일 단위로 나눈 에이전트 무리 생성·조율·추적(작업 큐·신호·임대·라이브 보드)",
+  "jt/jat-task 작업 큐와 의존성 그래프",
+  "jat-send·jat-inbox 에이전트 공유 메일함",
+  "jat-pilot 동의 범위 브라우저 자동화",
+  "jat-secret 암호화 자격 증명 금고",
+  "jat-appliance·jat.run 연산·추론 분산"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "CLI"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://jat.tools",
+   "quote": "© 2026 jatstack · All rights reserved (alpha)"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://jat.tools",
+   "quote": "Everything a fleet of coding agents needs to plan, build, and ship real work ."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://jat.tools",
+   "quote": "The agentic dev IDE — multi-agent orchestration for real work."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://jat.tools",
+   "quote": "Seven composable tools for task orchestration, the framework you build"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://jat.tools",
+   "quote": "Self-hosted on your own machines and your own tailnet — no account, no"
+  },
+  {
+   "field": "key_features",
+   "url": "https://jat.tools",
+   "quote": "Spawn, coordinate, and track fleets of agents partitioned"
+  },
+  {
+   "field": "key_features",
+   "url": "https://jat.tools",
+   "quote": "The task queue agents pick work from — create, track, and"
+  },
+  {
+   "field": "key_features",
+   "url": "https://jat.tools",
+   "quote": "A shared agent mailbox — agents message each other and drain their"
+  },
+  {
+   "field": "key_features",
+   "url": "https://jat.tools",
+   "quote": "Drive your own browser — consent-scoped agent automation."
+  },
+  {
+   "field": "key_features",
+   "url": "https://jat.tools",
+   "quote": "Encrypted credential vault across every machine in the fleet."
+  },
+  {
+   "field": "key_features",
+   "url": "https://jat.tools",
+   "quote": "The box — one machine turned into a private compute + inference node."
+  },
+  {
+   "field": "platforms",
+   "url": "https://jat.tools",
+   "quote": "curl -fsSL jat.tools/install | sh"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://jat.tools",
+   "quote": "hreflang: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [],
+ "note": "요금·라이선스 표기 없음(소스는 github.com/jatstack 에 있다고만 적힘, 푸터는 'All rights reserved (alpha)'). GitHub README 구간은 받지 못함."
+}

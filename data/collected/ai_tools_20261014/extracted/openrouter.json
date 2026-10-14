@@ -1,0 +1,177 @@
+{
+ "company": "OpenRouter, Inc",
+ "one_liner_ko": "모든 AI 모델을 하나의 API로 쓰게 해 주는 통합 인터페이스.",
+ "what_it_does_ko": "OpenRouter는 80개 이상 공급자의 500개 이상 모델을 단일 API 엔드포인트로 제공한다. 한 공급자가 멈추면 다른 공급자로 자동 폴백하고, 요청마다 비용 효율이 좋은 선택지를 고른다. 크레딧을 사서 어떤 모델·공급자에도 쓸 수 있고 OpenAI와 완전히 호환된다. 세밀한 데이터 정책으로 프롬프트가 신뢰하는 모델·공급자에게만 가게 할 수 있다.",
+ "key_features": [
+  "500+ 모델·80+ 공급자 단일 API",
+  "공급자 장애 시 자동 폴백",
+  "OpenAI 완전 호환",
+  "맞춤 데이터 정책 라우팅",
+  "예산·지출 통제",
+  "프롬프트 캐싱",
+  "BYOK(자체 키 사용)",
+  "채팅 화면 제공"
+ ],
+ "use_cases_ko": [
+  "앱 개발자가 여러 모델을 한 API로 호출",
+  "팀·기업이 데이터 정책·예산으로 모델 사용 관리"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Free: 무료 모델 25개+, 무료 공급자 4곳, 하루 50요청)",
+  "plans": [
+   {
+    "name": "Free",
+    "price": 0,
+    "currency": "USD",
+    "period": null,
+    "limits": "무료 모델 25+·무료 공급자 4곳, 50 requests/day",
+    "page_lang": "en-US"
+   },
+   {
+    "name": "Standard (Pay-as-you-go)",
+    "price": null,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "플랫폼 수수료 5.5%, 500+ 모델",
+    "page_lang": "en-US"
+   },
+   {
+    "name": "Business (Pay-as-you-go)",
+    "price": null,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "플랫폼 수수료 8%, 워크스페이스 1,000개, EU·US 지역 라우팅",
+    "page_lang": "en-US"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": null,
+    "period": null,
+    "limits": "수수료 할인·SSO/SAML·계약 SLA",
+    "page_lang": "en-US"
+   },
+   {
+    "name": "Gemini 4 Argon (모델 예시)",
+    "price": 2,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "100만 토큰당 입력 $2 / 출력 $10",
+    "page_lang": "en-US"
+   }
+  ],
+  "pricing_url": "https://openrouter.ai/pricing/"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "API",
+  "웹"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://openrouter.ai",
+   "quote": "© 2026 OpenRouter, Inc"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://openrouter.ai",
+   "quote": "The Unified Interface For Every Model"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://openrouter.ai/docs/quickstart",
+   "quote": "OpenRouter gives you access to hundreds of AI models through a single API endpoint. It handles fallbacks automatically and picks the most cost-effective option for each request."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://openrouter.ai",
+   "quote": "Credits can be used with any model or provider."
+  },
+  {
+   "field": "key_features",
+   "url": "https://openrouter.ai",
+   "quote": "500+ active models on 80+ providers"
+  },
+  {
+   "field": "key_features",
+   "url": "https://openrouter.ai",
+   "quote": "Reliable AI models via our distributed infrastructure. Fall back to other providers when one goes down."
+  },
+  {
+   "field": "key_features",
+   "url": "https://openrouter.ai",
+   "quote": "Create an API key and start making requests. Fully OpenAI compatible ."
+  },
+  {
+   "field": "key_features",
+   "url": "https://openrouter.ai",
+   "quote": "Protect your organization with fine grained data policies. Ensure prompts only go to the models and providers you trust."
+  },
+  {
+   "field": "key_features",
+   "url": "https://openrouter.ai/pricing/",
+   "quote": "Budgets & Spend Controls Free No Standard Yes Business Yes Enterprise Yes"
+  },
+  {
+   "field": "key_features",
+   "url": "https://openrouter.ai/pricing/",
+   "quote": "Prompt Caching Learn more → Free No Standard Yes Business Yes Enterprise Yes"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://openrouter.ai/pricing/",
+   "quote": "Plans for indie hackers, AI native startups, growing teams, and enterprises"
+  },
+  {
+   "field": "pricing",
+   "url": "https://openrouter.ai/pricing/",
+   "quote": "Platform fees Free N/A Standard 5.5% Business 8% Enterprise Fee discounts available"
+  },
+  {
+   "field": "pricing",
+   "url": "https://openrouter.ai/pricing/",
+   "quote": "Models Explore all models → Free 25+ free models Standard 500+ models Business 500+ models Enterprise 500+ models"
+  },
+  {
+   "field": "pricing",
+   "url": "https://openrouter.ai/pricing/",
+   "quote": "Rate limits 50 requests/day"
+  },
+  {
+   "field": "pricing",
+   "url": "https://openrouter.ai/pricing/",
+   "quote": "Workspace limit Learn more → Free 5 Standard 5 Business 1,000 Enterprise Custom"
+  },
+  {
+   "field": "pricing",
+   "url": "https://openrouter.ai/models?order=pricing-low-to-high/",
+   "quote": "by google Oct 13, 2026 1.05M context $2 /M input tokens $10 /M output tokens"
+  },
+  {
+   "field": "api",
+   "url": "https://openrouter.ai/docs/quickstart",
+   "quote": "Send standard HTTP requests to the /api/v1/chat/completions endpoint."
+  },
+  {
+   "field": "platforms",
+   "url": "https://openrouter.ai",
+   "quote": "Models Benchmarks Chat Chat Rankings Apps Ori Pricing Docs"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://openrouter.ai",
+   "quote": "html lang: en-US\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "구독 없이 크레딧 선불 + 플랫폼 수수료(Standard 5.5%, Business 8%) 구조, Free는 하루 50요청",
+   "diff": "기존 '오픈소스 + 종량제/구독 혼합'과 달리 오픈소스 언급이 없고 '구독 없음'을 명시, 요금은 수수료율 기반 종량제",
+   "url": "https://openrouter.ai/pricing/"
+  }
+ ]
+}

@@ -1,0 +1,90 @@
+=== [github] https://github.com/danielmiessler/Fabric
+<div align="center">
+    <a href="https://go.warp.dev/fabric" target="_blank">
+        <sup>Special thanks to:</sup>
+        <br>
+        <img alt="Warp sponsorship" width="400" src="https://raw.githubusercontent.com/warpdotdev/brand-assets/refs/heads/main/Github/Sponsor/Warp-Github-LG-02.png">
+        <br>
+        <h>Warp, built for coding with multiple AI agents</b>
+        <br>
+        <sup>Available for macOS, Linux and Windows</sup>
+    </a>
+</div>
+
+<br>
+
+<div align="center">
+
+<img src="./docs/images/fabric-logo-gif.gif" alt="fabriclogo" width="400" height="400"/>
+
+# `fabric`
+
+[![Static Badge](https://img.shields.io/badge/mission-human_flourishing_via_AI_augmentation-purple)](https://github.com/danielmiessler/fabric)
+<br />
+[![GitHub top language](https://img.shields.io/github/languages/top/danielmiessler/fabric)](https://github.com/danielmiessler/fabric)
+[![GitHub last commit](https://img.shields.io/github/last-commit/danielmiessler/fabric)](https://github.com/danielmiessler/fabric/commits/main)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/danielmiessler/fabric)
+
+<div align="center">
+<h4><code>fabric</code> is an open-source framework for augmenting humans using AI.</h4>
+</div>
+
+<p align="center">
+  <strong>English</strong> ·
+  <a href="README.ar.md">العربية</a> ·
+  <a href="README.zh.md">中文</a>
+</p>
+
+![Screenshot of fabric](./docs/images/fabric-summarize.png)
+
+</div>
+
+[Updates](#updates) •
+[What and Why](#what-and-why) •
+[Philosophy](#philosophy) •
+[Installation](#installation) •
+[Usage](#usage) •
+[REST API](#rest-api-server) •
+[Examples](#examples) •
+[Just Use the Patterns](#just-use-the-patterns) •
+[Custom Patterns](#custom-patterns) •
+[Helper Apps](#helper-apps) •
+[Meta](#meta)
+
+</div>
+
+## What and why
+
+Since the start of modern AI in late 2022 we've seen an **_extraordinary_** number of AI applications for accomplishing tasks. There are thousands of websites, chat-bots, mobile apps, and other interfaces for using all the different AI out there.
+
+It's all really exciting and powerful, but _it's not easy to integrate this functionality into our lives._
+
+<div class="align center">
+<h4>In other words, AI doesn't have a capabilities problem—it has an <em>integration</em> problem.</h4>
+</div>
+
+**Fabric was created to address this by creating and organizing the fundamental units of AI—the prompts themselves!**
+
+Fabric organizes prompts by real-world task, allowing people to create, collect, and organize their most important AI solutions in a single place for use in their favorite tools. And if you're command-line focused, you can use Fabric itself as the interface!
+
+## Updates
+
+For a deep dive into Fabric and its internals, read the documentation in the [docs folder](https://github.com/danielmiessler/Fabric/tree/main/docs). There is
+also the extremely useful and regularly updated [DeepWiki](https://deepwiki.com/danielmiessler/Fabric) for Fabric.
+
+<details>
+<summary>Click to view recent updates</summary>
+
+Dear Users,
+
+We've been doing so many exciting things here at Fabric, I wanted to give a quick summary here to give you a sense of our development velocity!
+
+Below are the **new features and capabilities** we've added (newest first):
+
+### Recent Major Features
+
+- [v1.4.447](https://github.com/danielmiessler/fabric/releases/tag/v1.4.447) (April 16, 2026) — **Claude Opus 4.7**: Updates the Anthropic SDK to v1.37.0 and adds the new [Claude Opus 4.7](https://www.anthropic.com/news/claude-opus-4-7) to the available models, including 1M-token context window support.
+- [v1.4.437](https://github.com/danielmiessler/fabric/releases/tag/v1.4.437) (March 16, 2026) — **OpenAI Codex PLugin**: Fabric now supports using OpenAI Codex (with your OpenAI subscription) as a backend!
+- [v1.4.417](https://github.com/danielmiessler/fabric/releases/tag/v1.4.417) (Feb 21, 2026) — **Azure AI Gateway Plugin**: Added Azure AI Gateway plugin supporting multiple backends (AWS Bedrock, Azure OpenAI, Google Vertex AI) through a unified Azure APIM Gateway with shared subscription key authentication.
+- [v1.4.416](https://g

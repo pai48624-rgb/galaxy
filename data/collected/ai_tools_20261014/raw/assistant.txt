@@ -1,0 +1,109 @@
+=== [github] https://github.com/kcosr/assistant
+# assistant
+
+> **⚠️ Experimental Software**
+>
+> This is personal software shared with the community for educational purposes.
+> Qustions and contributions are welcome, but don't expect stability or support.
+
+A personal AI assistant with a panel-based plugin system, multi-agent CLI integrations, and text/voice UI.
+Plugins define panels and operations so agents can collaborate on lists, notes, and other workflows,
+or extend the app with custom user-provided plugins.
+In-process chat uses the Earendil Pi SDK for model access, tool execution, and streaming.
+
+<table>
+  <tr>
+    <td valign="top"><img src="assets/screenshot.png" alt="Assistant Screenshot" width="600"></td>
+    <td valign="top"><img src="assets/mobile.jpeg" alt="Assistant Mobile" width="200"></td>
+  </tr>
+</table>
+
+## Table of Contents
+
+- [Features](#features)
+- [Quick Start](#quick-start)
+- [Repository Layout](#repository-layout)
+- [Documentation](#documentation)
+- [External Integrations](#external-integrations)
+- [Configuration](#configuration)
+- [Development](#development)
+- [Architecture](#architecture)
+- [License](#license)
+
+## Features
+
+- **Text chat** with streaming responses
+- **Voice input** using browser-based speech recognition (Web Speech API)
+- **Voice output** via OpenAI TTS or ElevenLabs streaming TTS (optional)
+- **Android Thread voice** via [openai-speech-server](https://github.com/kcosr/openai-speech-server) for authenticated local Parakeet/Kokoro speech, with native token storage and model selection ([setup](packages/mobile-web/README.md#native-voice-runtime))
+- **CLI agent integrations** (Claude, Codex, Pi) alongside built-in providers
+- **Scheduled sessions** for cron-driven CLI runs
+- **Panel plugins** for lists, notes, and custom workflows
+- **Tool integration** via MCP (Model Context Protocol) over stdio
+- **Built-in session tools** – agent can list, search, create, switch, rename, and pin sessions
+- **Persistent sessions** with JSONL event logs and optional naming/pinning
+- **Multi-client support** – multiple browser windows can share a session
+- **Theme + font preferences** (auto/light/dark + presets, including Herdr). Dark uses nearly black
+  backgrounds, charcoal controls, and subtle borders; Auto uses the same palette in dark mode.
+
+## Quick Start
+
+Requires Node.js **22.19.0 or newer**. The in-process Pi provider uses Pi SDK 1.0;
+CLI providers require their own separately installed executables.
+
+```bash
+# Clone the repository
+git clone https://github.com/kcosr/assistant
+cd assistant
+
+# Install dependencies
+npm install
+
+# Build all packages
+npm run build
+
+# Build all packages in parallel
+npm run build:parallel
+
+# Build all packages in parallel on the remote builder
+npm run build:remote
+
+# Start the server (uses built-in config at packages/agent-server/data/config.json)
+npm run start -w @assistant/agent-server
+
+# Open http://localhost:3000 in your browser
+```
+
+In-process Pi agents reference named `chatProfiles` containing ordered `provider/model` choices,
+and per-model thinking levels. Shared request overrides supply optional sampling settings. Pi’s
+registry owns provider connections, authentication, capabilities, and limits, including custom models in
+`~/.pi/agent/models.json` on the service host. See [Pi configuration](docs/CONFIG.md#pi-provider).
+
+The built-in config includes Claude Code, Codex, and Pi CLI agents. For a full configuration example with all options, see `packages/agent-server/data/config.example.json`.
+
+### Configuration Overrides
+
+Override the default paths using environment variables:
+
+```bash
+# Use a custom data directory (sessions, events, config)
+export DATA_DIR=/path/to/data
+
+# Use a specific config file
+export APP_CONFIG_PATH=/path/to/config.json
+
+npm run start -w @assistant/agent-server
+```
+
+The server looks for config at `${DATA_DIR}/config.json` by default, or at `APP_CONFIG_PATH` if set.
+
+### Building Skills for CLI Agents
+
+Plugins can be exported as skills for use with CLI agents that support skills (e.g., Claude Code, Codex, Pi):
+
+```bash
+# Build all plugin skills to a directory
+npm run build:plugins -- --skills-dir /tmp/skills
+
+# Copy specific skills to your agent's skills directory
+# Claude: ~/.claude/skil

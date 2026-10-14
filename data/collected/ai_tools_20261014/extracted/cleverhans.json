@@ -1,0 +1,30 @@
+{
+ "company": null,
+ "one_liner_ko": "머신러닝 시스템이 적대적 예제에 얼마나 취약한지 벤치마크하는 파이썬 라이브러리.",
+ "what_it_does_ko": "CleverHans는 머신러닝 시스템의 적대적 예제 취약성을 벤치마크하기 위한 파이썬 라이브러리다. 모델을 적대적 예제에 대해 벤치마크할 수 있도록 공격의 참조 구현을 제공하는 데 초점을 둔다. v4.0.0부터 JAX·PyTorch·TF2 세 프레임워크를 지원한다. 공격 구현, 튜토리얼, 방어 구현이 각 폴더로 나뉘어 있다. pip로 설치할 수 있다.",
+ "key_features": [
+  "적대적 공격의 참조 구현",
+  "방어 구현(defenses 폴더)",
+  "JAX·PyTorch·TF2 지원",
+  "튜토리얼 스크립트",
+  "pip 설치"
+ ],
+ "use_cases_ko": [
+  "머신러닝 모델을 적대적 예제에 대해 벤치마크하기"
+ ],
+ "pricing": {"free_tier": "불명", "plans": [], "pricing_url": null},
+ "open_source": null,
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "불명",
+ "evidence": [
+  {"field": "one_liner_ko", "url": "https://github.com/cleverhans-lab/cleverhans", "quote": "a Python library to\nbenchmark machine learning systems' vulnerability to"},
+  {"field": "what_it_does_ko", "url": "https://github.com/cleverhans-lab/cleverhans", "quote": "The library focuses on providing reference implementation of attacks\nagainst machine learning models to help with benchmarking models against\nadversarial examples."},
+  {"field": "key_features", "url": "https://github.com/cleverhans-lab/cleverhans", "quote": "Since v4.0.0, CleverHans supports 3 frameworks: JAX, PyTorch, and TF2."},
+  {"field": "key_features", "url": "https://github.com/cleverhans-lab/cleverhans", "quote": "`tutorials/` contain scripts demonstrating the features\nof CleverHans, and `defenses/` contains defense implementations."},
+  {"field": "key_features", "url": "https://github.com/cleverhans-lab/cleverhans", "quote": "pip install cleverhans"},
+  {"field": "use_cases_ko", "url": "https://github.com/cleverhans-lab/cleverhans", "quote": "to help with benchmarking models against\nadversarial examples."}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

@@ -1,0 +1,734 @@
+=== [home] https://www.anthropic.com/news/3-5-models-and-computer-use (lang=en)
+Introducing computer use, a new Claude 3.5 Sonnet, and Claude 3.5 Haiku \ Anthropic 
+ Skip to main content Skip to footer 
+ Research 
+ Policy 
+ Commitments 
+ Learn 
+ News 
+ Try Claude 
+ Announcements 
+ Introducing computer use, a new Claude 3.5 Sonnet, and Claude 3.5 Haiku
+ Oct 22, 2024 
+ Update (12/03/2024): We have revised the pricing for Claude 3.5 Haiku. The model is now priced at $0.80 MTok input / $4 MTok output. 
+ Today, we’re announcing an upgraded Claude 3.5 Sonnet , and a new model, Claude 3.5 Haiku . The upgraded Claude 3.5 Sonnet delivers across-the-board improvements over its predecessor, with particularly significant gains in coding—an area where it already led the field. Claude 3.5 Haiku matches the performance of Claude 3 Opus, our prior largest model, on many evaluations at a similar speed to the previous generation of Haiku.
+ We’re also introducing a groundbreaking new capability in public beta: computer use . Available today on the API , developers can direct Claude to use computers the way people do—by looking at a screen, moving a cursor, clicking buttons, and typing text. Claude 3.5 Sonnet is the first frontier AI model to offer computer use in public beta. At this stage, it is still experimental —at times cumbersome and error-prone. We're releasing computer use early for feedback from developers, and expect the capability to improve rapidly over time.
+ Asana, Canva, Cognition, DoorDash, Replit, and The Browser Company have already begun to explore these possibilities, carrying out tasks that require dozens, and sometimes even hundreds, of steps to complete. For example, Replit is using Claude 3.5 Sonnet's capabilities with computer use and UI navigation to develop a key feature that evaluates apps as they’re being built for their Replit Agent product.
+ The upgraded Claude 3.5 Sonnet is now available for all users. Starting today, developers can build with the computer use beta on the Anthropic API, Amazon Bedrock, and Google Cloud’s Vertex AI. The new Claude 3.5 Haiku will be released later this month.
+ Claude 3.5 Sonnet: Industry-leading software engineering skills
+ The updated Claude 3.5 Sonnet shows wide-ranging improvements on industry benchmarks, with particularly strong gains in agentic coding and tool use tasks. On coding, it improves performance on SWE-bench Verified from 33.4% to 49.0%, scoring higher than all publicly available models—including reasoning models like OpenAI o1-preview and specialized systems designed for agentic coding. It also improves performance on TAU-bench , an agentic tool use task, from 62.6% to 69.2% in the retail domain, and from 36.0% to 46.0% in the more challenging airline domain. The new Claude 3.5 Sonnet offers these advancements at the same price and speed as its predecessor.
+ Early customer feedback suggests the upgraded Claude 3.5 Sonnet represents a significant leap for AI-powered coding. GitLab, which tested the model for DevSecOps tasks, found it delivered stronger reasoning (up to 10% across use cases) with no added latency, making it an ideal choice to power multi-step software development processes. Cognition uses the new Claude 3.5 Sonnet for autonomous AI evaluations, and experienced substantial improvements in coding, planning, and problem-solving compared to the previous version. The Browser Company, in using the model for automating web-based workflows, noted Claude 3.5 Sonnet outperformed every model they’ve tested before.
+ As part of our continued effort to partner with external experts, joint pre-deployment testing of the new Claude 3.5 Sonnet model was conducted by the US AI Safety Institute (US AISI) and the UK Safety Institute (UK AISI).
+ We also evaluated the upgraded Claude 3.5 Sonnet for catastrophic risks and found that the ASL-2 Standard, as outlined in our Responsible Scaling Policy , remains appropriate for this model.
+ Claude 3.5 Haiku: State-of-the-art meets affordability and speed
+ Claude 3.5 Haiku is the next generation of our fastest model. For a similar speed to Claude 3 Haiku, Claude 3.5 Haiku improves across every skill set and surpasses even Claude 3 Opus, the largest model in our previous generation, on many intelligence benchmarks. Claude 3.5 Haiku is particularly strong on coding tasks. For example, it scores 40.6% on SWE-bench Verified, outperforming many agents using publicly available state-of-the-art models—including the original Claude 3.5 Sonnet and GPT-4o.
+ With low latency, improved instruction following, and more accurate tool use, Claude 3.5 Haiku is well suited for user-facing products, specialized sub-agent tasks, and generating personalized experiences from huge volumes of data—like purchase history, pricing, or inventory records.
+ Claude 3.5 Haiku will be made available later this month across our first-party API, Amazon Bedrock, and Google Cloud’s Vertex AI—initially as a text-only model and with image input to follow.
+ Teaching Claude to navigate computers, responsibly
+ With computer use, we're trying something fundamentally new. Instead of making specific tools to help Claude complete individual tasks, we're teaching it general computer skills—allowing it to use a wide range of standard tools and software programs designed for people. Developers can use this nascent capability to automate repetitive processes, build and test software , and conduct open-ended tasks like research .
+ To make these general skills possible, we've built an API that allows Claude to perceive and interact with computer interfaces. Developers can integrate this API to enable Claude to translate instructions (e.g., “use data from my computer and online to fill out this form”) into computer commands (e.g. check a spreadsheet; move the cursor to open a web browser; navigate to the relevant web pages; fill out a form with the data from those pages; and so on). On OSWorld , which evaluates AI models' ability to use computers like people do, Claude 3.5 Sonnet scored 14.9% in the screenshot-only category—notably better than the next-best AI system's score of 7.8%. When afforded more steps to complete the task, Claude scored 22.0%.
+ While we expect this capability to improve rapidly in the coming months, Claude's current ability to use computers is imperfect. Some actions that people perform effortlessly—scrolling, dragging, zooming—currently present challenges for Claude and we encourage developers to begin exploration with low-risk tasks. Because computer use may provide a new vector for more familiar threats such as spam, misinformation, or fraud, we're taking a proactive approach to promote its safe deployment. We've developed new classifiers that can identify when computer use is being used and whether harm is occurring. You can read more about the research process behind this new skill, along with further discussion of safety measures, in our post on developing computer use .
+ Looking ahead
+ Learning from the initial deployments of this technology, which is still in its earliest stages, will help us better understand both the potential and the implications of increasingly capable AI systems.
+ We’re excited for you to explore our new models and the public beta of computer use—and welcome you to share your feedback with us. We believe these developments will open up new possibilities for how you work with Claude, and we look forward to seeing what you'll create.
+ Related content
+ 2026 Usage Policy update
+ We’re publishing a new version of our Usage Policy. In this post, 
+
+=== [about] https://platform.claude.com/docs/en/agents-and-tools/tool-use/computer-use-tool (lang=en)
+Computer use tool - Claude Platform Docs 
+ 쿠키 설정
+ 당사는 서비스를 제공 및 개선하고, 사이트 이용 현황을 분석하며, 동의하시는 경우 이용 경험을 맞춤화 또는 개인화하고 서비스를 마케팅하기 위해 쿠키를 사용합니다. 쿠키 정책은 여기 (새 탭에서 열림) 에서 확인하실 수 있습니다.
+ 맞춤설정 쿠키 설정 사용자 지정 거부 모든 쿠키 거부 수락 모든 쿠키 허용 
+ Claude Platform Docs 
+ Messages 
+ Managed Agents 
+ Admin 
+ Resources  Best practices 
+ Models & pricing 
+ SDKs, CLI, and libraries 
+ Claude API skill 
+ Release notes 
+  API reference 
+  English  
+  Console Log in 
+  
+  Search Ctrl K 
+ First steps
+ Intro to Claude Get your API key Quickstart Authentication 
+ Building with Claude
+ Features overview Using the Messages API Stop reasons and fallback Refusals and fallback Fallback credit 
+ Model capabilities
+ Effort Task budgets (beta) Fast mode (research preview) Structured outputs Citations Streaming Messages Batch processing Search results Streaming refusals Multilingual support Embeddings Thinking 
+ Tools
+ Overview How tool use works Tutorial: Build a tool-using agent Define tools Handle tool calls Parallel tool use Tool Runner (SDK) Strict tool use Server tools Web search tool Web fetch tool Code execution tool Advisor tool Tool search tool Memory tool Bash tool Text editor tool Browser and computer use (SDK) Computer use tool Browser use tool Troubleshooting 
+ Tool infrastructure
+ Tool reference Manage tool context Tool combinations Tool use with prompt caching Programmatic tool calling Fine-grained tool streaming 
+ Context management
+ Context windows Context editing Prompt caching Mid-conversation system messages and tool changes Build an orchestration mode Cache diagnostics Token counting Compaction 
+ Working with files
+ Files API PDF support Images and vision 
+ Skills
+ Overview Quickstart Best practices Skills for enterprise Skills in the API 
+ MCP
+ Remote MCP servers MCP connector MCP tunnels 
+ Claude on cloud platforms
+ Amazon Bedrock (Opus 4.7 and later) Amazon Bedrock (Opus 4.6 and earlier) Claude Platform on AWS Google Cloud Microsoft Foundry 
+  Console 
+ Messages  Tools 
+ Computer use tool
+ ZDR 
+  Eligible excludes Covered Models 
+ Computer use tool
+  Copy page 
+  
+ Give Claude screenshot, mouse, and keyboard control of a desktop environment with the computer use tool, the computer_toolset_20260801 client toolset.
+  Copy page 
+  
+  Start with the SDK toolsets: For computer_toolset_20260801 , the Python and TypeScript SDKs have a computer toolset class, in beta. Start from a partner's integration , or see the computer toolset section of the SDK toolsets page. Use this page as the tool reference, or when you handle the tool calls yourself.
+ Claude can interact with computer environments through the computer use tool, which provides screenshot capabilities and mouse/keyboard control for autonomous desktop interaction.
+ The computer use tool is an Anthropic-defined client toolset : one {"type": "computer_toolset_20260801"} entry in tools gives Claude 17 member tools such as screenshot , left_click , type , and zoom , and your application runs every call in an environment you control. It isn't currently available in Claude Managed Agents . Claude's calls are tool_use blocks whose name is the member and which carry "toolset_name": "computer" , often several per turn (a batch action ).
+ For tasks that stay inside webpages, the browser use tool is the closer fit: its member tools read and act on the page itself, and it doesn't need a full desktop environment.
+  Computer use is available on the Claude API and Google Cloud as the computer_toolset_20260801 toolset; see Compatibility for the supported models.
+ Existing computer_20251124 integrations kee
+
+=== [pricing] https://claude.com/ko/pricing (lang=ko)
+플랜 및 요금제 | Claude by Anthropic 
+ Skip to main content 제품 
+ 제품
+ Claude 
+ Claude Code 
+ @Claude 
+ 특화 기능
+ Claude Security 
+ Claude Science 
+ 기능
+ 아티팩트 
+ 디자인 
+ Connectors 
+ 플러그인 
+ 기술 
+ 확장 프로그램
+ Claude for Chrome 
+ Claude for Microsoft 365 
+ 모델
+ Mythos 
+ Fable 
+ Opus 
+ Sonnet 
+ Haiku 
+ Claude로 가져오기 
+ 앱 다운로드 
+ 로그인 (opens in new tab) 
+ 개발자 
+ 함께 구축하기
+ Claude Code 
+ Claude Platform 
+ 개발자를 위한
+ Claude Academy 
+ 커뮤니티 
+ 개발자 블로그 
+ 개발자 문서 
+ 콘솔 
+ Enterprise 
+ Enterprise
+ 개요 
+ Claude Code for Enterprise 
+ Claude Platform 
+ 사용 사례
+ AI 에이전트 
+ 코딩 
+ 커머스 
+ 부서
+ 고객 지원 
+ 보안 
+ 법률 
+ 영업 
+ 산업
+ 재무 어드바이저 
+ 금융 서비스 
+ 정부 
+ 의료 
+ 고등 교육 
+ K-12 교사 
+ 생명과학 
+ 비영리 단체 
+ 마켓플레이스 둘러보기 
+ 고객 
+ 도입 문의 
+ 리소스 
+ 인사이트
+ 리소스 
+ 아티클 
+ 웨비나 
+ 고객 성공 사례 
+ 마켓플레이스 
+ Anthropic 뉴스 
+ 학습
+ Claude Academy 
+ 강좌 
+ 튜토리얼 
+ 사용 사례 
+ 연결
+ 이벤트 
+ 커뮤니티 
+ 요금제 
+ 개요 
+ API 
+ 로그인 도입 문의 Claude 사용해 보기 
+ 요금제 
+ 둘러보기 
+ 이 페이지에 대해 질문하기 
+ 마크다운으로 복사 
+최신 뉴스 
+ Claude Cowork가 이제 Claude가 되었습니다.
+ Pro 및 Max에 우선 출시되며, 추후 더 많은 플랜으로 확대될 예정입니다.
+ 변경 사항 읽기 (opens in new tab) 
+ 요금제 
+ 개인 Team & Enterprise API 
+ Free
+ Claude 사용해 보기
+ $0
+ 모두에게 무료
+ Claude 사용해 보기 
+ 웹, 데스크톱, 모바일에서 채팅
+ 웹 검색, 파일 생성 및 코드 실행
+ 대화 간 메모리
+ 앱과 도구 연결
+ 아티팩트 만들기
+ Claude Design, Slides, Docs
+ Pro
+ 일상적인 업무에
+ $17
+ 연간 구독 할인 적용 시 월 요금 (선불 $200 ). 월별 결제 시 $20 .
+ Claude 사용해 보기 
+ Free의 모든 혜택, 추가로:
+ 더 많은 사용량*
+ 작업 위임 및 예약
+ Claude Dashboards(베타)
+ Claude Code
+ Claude Science
+ 프로젝트
+ 더 많은 Claude 모델
+ Chrome 및 Microsoft 365에서 Claude 사용
+ Max
+ 하루 종일 Claude와 함께하는 분들을 위해
+ $100부터
+ 월
+ Claude 사용해 보기 
+ Pro의 모든 혜택, 추가로:
+ Pro보다 5배 또는 20배 더 많은 사용량 선택*
+ 모든 작업에 대한 더 높은 출력 한도
+ 고급 Claude 기능 얼리 액세스
+ 트래픽 급증 시 우선 접근
+ Claude Platform에서 개발할 수 있는 월 $100~$200 API 크레딧 † 
+ 사용 한도 가 적용됩니다. 표시된 가격에는 해당 세금이 포함되지 않습니다. 요금 및 플랜은 Anthropic의 재량에 따라 변경될 수 있습니다.
+ 사용 한도 가 적용됩니다. 요금 및 플랜은 Anthropic의 재량에 따라 변경될 수 있습니다.
+ 플랜별 기능 비교 
+ 검색 
+ Free
+ Claude 사용해 보기 
+ Pro
+ Claude 사용해 보기 
+ Max 5x
+ Claude 사용해 보기 
+ Max 20x
+ Claude 사용해 보기 
+ 기능 및 특징
+ 기능 Free Pro Max 5x Max 20x 
+ @Claude 
+ 아니요 
+ 아니요 
+ 아니요 
+ 아니요 
+ Claude Code 
+ 아니요 
+ 예 
+ 예 
+ 예 
+ Claude Science 
+ 아니요 
+ 예 
+ 예 
+ 예 
+ Claude in Chrome 
+ 아니요 
+ 예 
+ 예 
+ 예 
+ Claude for Microsoft 365 
+ 아니요 
+ 예 
+ 예 
+ 예 
+ Claude for Microsoft Outlook 
+ 아니요 
+ 예 
+ 예 
+ 예 
+ 웹, iOS, Android 및 데스크톱에서 채팅 
+ 예 
+ 예 
+ 예 
+ 예 
+ Claude Design 
+ 예 
+ 예 
+ 예 
+ 예 
+ Claude Slides 
+ 예 
+ 예 
+ 예 
+ 예 
+ Claude Docs 
+ 예 
+ 예 
+ 예 
+ 예 
+ Claude Dashboards(베타) 
+ 아니요 
+ 예 
+ 예 
+ 예 
+ Claude Motion(베타) 
+ 아니요 
+ 아니요 
+ 아니요 
+ 아니요 
+ 웹 검색 기능 
+ 예 
+ 예 
+ 예 
+ 예 
+ 아티팩트 만들기 추가 정보 
+ 예 
+ 예 
+ 예 
+ 예 
+ 데스크톱 확장 프로그램 
+ 예 
+ 예 
+ 예 
+ 예 
+ 음성 모드 
+ 예 
+ 예 
+ 예 
+ 예 
+ 시크릿 채팅 추가 정보 
+ 예 
+ 예 
+ 예 
+ 예 
+ 사용자 환경 설정 
+ 예 
+ 예 
+ 예 
+ 예 
+ 프로젝트 
+ 최대 5 
+ 예 
+ 예 
+ 예 
+ 프로젝트 공유 및 협업 
+ 아니요 
+ 아니요 
+ 아니요 
+ 아니요 
+ 코드 실행으로 파일 생성 및 편집 추가 정보 
+ 예 
+ 예 
+ 예 
+ 예 
+ 리서치 
+ 아니요 
+ 예 
+ 예 
+ 예 
+ 메모리 
+ 예 
+ 예 
+ 예 
+ 예 
+ Skills 추가 정보 
+ 예 
+ 예 
+ 예 
+ 예 
+ 커넥터 추가 정보 
+ 예 
+ 예 
+ 예 
+ 예 
+ 웹 검색 
+ 예 
+ 예 
+ 예 
+ 예 
+ Enterprise 검색 추가 정보 
+ 아니요 
+ 아니요 
+ 아니요 
+ 아니요 
+ 보안 및 관리
+ 기능 Free Pro Max 5x Max 20x 
+ 싱글 사인온(SSO) 및 도메인 캡처 
+ 아니요 
+ 아니요 
+ 아니요 
+ 아니요 
+ 중앙 집중식 청구 및 관리 
+ 아니요 
+ 아니요 
+ 아니요 
+ 아니요 
+ 원격 및 로컬 커넥터에 대한 관리자 제어 
+ 아니요 
+ 아니요 
+ 아니요 
+ 아니요 
+ Claude 데스크톱 앱 Enterprise 배포 
+ 아니요 
+ 아니요 
+ 아니요 
+ 아니요 
+ 역할 기반 접근 제어 
+ 아니요 
+ 아니요 
+ 아니요 
+ 아니요 
+ 도메인 간 ID 관리 시스템(SCIM) 
+ 아니요 
+ 아니요 
+ 아니요 
+ 아니요 
+ 감사 로그 
+ 아니요 
+ 아니요 
+ 아니요 
+ 아니요 
+ 사용량 분석 
+ 아니요 
+ 아니요 
+ 아니요 
+ 아니요 
+ 컴플라이언스 API 
+ 아니요 
+ 아니요 
+ 아니요 
+ 아니요 
+ HIPAA 준수 옵션 
+ 아니요 
+ 아니요 
+ 아니요 
+ 아니요 
+ 맞춤형 데이터 보존 제어 
+ 아니요 
+ 아니요 
+ 아니요 
+ 아니요 
+ 조직 전체 Skills 배포 
+ 아니요 
+ 아니요 
+ 아니요 
+ 아니요 
+ 결제 옵션
+ 기능 Free Pro Max 5x Max 20x 
+ 신용카드 
+ 해당 없음 
+ 예 
+ 예 
+ 예 
+ ACH 
+ 아니요 
+ 아니요 
+ 아니요 
+ 아니요 
+ 청구서 발행 / 후불 조건 
+ 아니요 
+ 아니요 
+ 아니요 
+ 아니요 
+ 결제 주기 
+ 해당 없음 월간 및 연간 월간 월간 
+ 중도 시트 추가 
+ 해당 없음 해당 없음 해당 없음 해당 없음 
+ 모델 및 사용량
+ 기능 Free Pro Max 5x Max 20x 
+ Fable 추가 정보 
+ 아니요 사용 크레딧 주간 한도의 50%* 주간 한도의 50%* 
+ Opus 
+ 아니요 
+ 예 
+ 예 
+ 예 
+ Sonnet 
+ 예 
+ 예 
+ 예 
+ 예 
+ Haiku 
+ 예 
+ 예 
+ 예 
+ 예 
+ 컨텍스트 윈도우 추가 정보 
+ 최대 100만 모델에 따라 다름 최대 100만 모델에 따라 다름 최대 100만 모델에 따라 다름 최대 100만 모델에 따라 다름 
+ 사용 크레딧 추가 정보 
+ 아니요 
+ 예 
+ 예 
+ 예 
+ 신규 월간 API 크레딧 † 
+ 아니요 
+ 아니요 월 $100 월 $200 
+ 트래픽 급증 시 우선 접근 
+ 아니요 
+ 아니요 
+ 예 
+ 예 
+ 사용자 및 조직 수준의 지출 관리 
+ 아니요 
+ 아니요 
+ 아니요 
+ 아니요 
+ 모델 학습 추가 정보 
+ 옵트아웃 옵트아웃 옵트아웃 옵트아웃 
+ Team
+ 2~150명 팀을 위한 플랜
+ Team 플랜 시작하기 
+ 스탠다드 시트
+ 모든 Claude 기능, Pro보다 더 많은 사용량*
+ $20
+ 연간 청구 시 시트당 월 요금. 월간 청구 시 $25 .
+ 프리미엄 시트
+ 스탠다드 시트보다 5배 많은 사용량*
+ $100
+ 연간 청구 시 시트당 월 요금. 월간 청구 시 $125 .
+ Claude Code 및 Claude Cowork
+ Claude Design, Slides, Docs
+ Claude Motion 및 Dashboards(베타)
+ Claude Science
+ Microsoft 365, @Claude 등
+ 조직 전반의 Enterprise 검색
+ 중앙 집중식 청구 및 관리
+ 싱글 사인온(SSO)
+ 원격 및 로컬 커넥터에 대한 관리자 제어
+ Claude 데스크톱 앱 Enterprise 배포
+ 기본적으로 사용자 콘텐츠로 모델 학습 없음
+ 시트 유형 자유롭게 조합
+ 월 최대 $500의 공유 API 크레딧 † 
+ Enterprise
+ 대규모로 운영되는 대기업을 위한
+ Enterprise 플랜 시작하기 구매 전문가와 채팅 
+ 시트 요금 + API 요금으로 청구되는 사용량
+ 월 US$20/시트, 연간 청구. 사용 비용은 모델 및 작업에 따라 달라집니다.
+ 모든 Team 플랜 기능, 추가로:
+ 관리자가 사용자 및 조직 지출 한도 설정
+ 세밀한 권한 설정을 갖춘 역할 기반 액세스
+ 도메인 간 ID 관리 시스템(SCIM)
+ 감사 로그
+ 가시성 및 모니터링을 위한 컴플라이언스 API
+ 맞춤형 데이터 보존 제어
+ 네트워크 수준 접근 제어
+ IP 허용 목록
+ HIPAA 준수 옵션 제공
+ Claude Security(베타)
+ 사용 한도 가 적용됩니다. 표시된 가격에는 해당 세금이 포함되지 않습니다. 요금 및 플랜은 Anthropic의 재량에 따라 변경될 수 있습니다.
+ 사용 한도 가 적용됩니다. 요금 및 플랜은 Anthropic의 재량에 따라 변경될 수 있습니다.
+ 교육 플랜
+ 학생, 교수진, 직원을 포함한 기관 전체를 위한 대학 전용 플랜을 이용하세요.
+ 자세히 알아보기 
+ 학생 및 교직원 접근
+ 할인된 요금으로 모든 대학 구성원에게 포괄적인 접근 제공
+ 학술 연구 및 학습 모드
+ 학생 학습을 위한 전용 API 크레딧 및 교육 기능
+ 교육 및 지원
+ 기관 전체의 성공적인 도입을 위한 리소스
+ 플랜별 기능 비교 
+ 검색 
+ Team
+ 플랜 생성 
+ Enterprise (셀프서비스)
+ 플랜 생성 
+ Enterprise (영업 지원)
+ 영업팀 문의 
+ 기능 및 특징
+ 기능 Team Enterprise (셀프서비스) Enterprise (영업 지원) 
+ @Claude 
+ 예 
+ 예 
+ 예 
+ Claude Code 
+ 예 
+ 예 
+ 예 
+ Claude Science 
+ 예 
+ 예 
+ 예 
+ Claude Security 추가 정보 
+ 아니요 
+ 예 
+ 예 
+ Claude in Chrome 
+ 예 
+ 예 
+ 예 
+ Claude for Microsoft 365 
+ 예 
+ 예 
+ 예 
+ Claude for Microsoft Outlook 
+ 예 
+ 예 
+ 예 
+ 웹, iOS, Android 및 데스크톱에서 채팅 
+ 예 
+ 예 
+ 예 
+ Claude Design 추가 정보 
+ 예 
+ 예 
+ 예 
+ Claude Slides 추가 정보 
+ 예 
+ 예 
+ 예 
+ Claude Docs 추가 정보 
+ 예 
+ 예 
+ 예 
+ Claude Dashboards(베타) 추가 정보 
+ 예 
+ 예 
+ 예 
+ Claude Motion(베타) 추가 정보 
+ 예 
+ 예 
+ 예 
+ 웹 검색 기능 
+ 예 
+ 예 
+ 예 
+ 아티팩트 만들기 추가 정보 
+ 예 
+ 예 
+ 예 
+ 데스크톱 확장 프로그램 
+ 예 
+ 예 
+ 예 
+ 음성 모드 
+ 예 
+ 예 
+ 예 
+ 시크릿 채팅 추가 정보 
+ 예 
+ 예 
+ 예 
+ 사용자 환경 설정 
+ 예 
+ 예 
+ 예 
+ 프로젝트 
+ 예 
+ 예 
+ 예 
+ 프로젝트 공유 및 협업 
+ 예 
+ 예 
+ 예 
+ 코드 실행으로 파일 생성 및 편집 추가 정보 
+ 예 
+ 예 
+ 예 
+ 리서치 
+ 예 
+ 예 
+ 예 
+ 메모리 
+ 예 
+ 예 
+ 예 
+ Skills 추가 정보 
+ 예 
+ 예 
+ 예 
+ 커넥터 추가 정보 
+ 예 
+ 예 
+ 예 
+ 웹 검색 
+ 예 
+ 예 
+ 예 
+ Enterprise 검색 추가 정보 
+ 예 
+ 예 
+ 예 
+ 보안 및 관리
+ 기능 Team Enterprise (셀프서비스) Enterprise (영업 지원) 
+ 싱글 사인온(SSO) 
+ 예 
+ 예 
+ 예 
+ 도메인 인증 
+ 예 
+ 예 
+ 예 
+ 조직 생성 제한 추가 정보 
+ 예 
+ 예 
+ 예 
+ 도메인을 사용하는 계정 마이그레이션 추가 정보 
+ 아니요 
+ 예 
+ 예 
+ 중앙 집중식 청구 및 관리 
+ 예 
+ 예 
+ 예 
+ 원격 및 로컬 커넥터에 대한 관리자 제어 
+ 예 
+ 예 
+ 예 
+ Claude 데스크톱 앱 Enterprise 배포 
+ 예 
+ 예 
+ 예 
+ 사용량 분석 
+ 예 
+ 예 
+ 예 
+ 조직 전체 Skills 배포 
+ 예 
+ 예 
+ 예 
+ 도메인 캡처 
+ 아니요 
+ 예 
+ 예 
+ 역할 기반 접근 제어 
+ 아니요 
+ 예 
+ 예 
+ 도메인 간 ID 관리 시스템(SCIM) 
+ 아니요 
+ 예 
+ 예 
+ 감사 로그 
+ 아니요 
+ 예 
+ 예 
+ 컴플라이언스 API 
+ 아니요 
+ 예 
+ 예 
+ 맞춤형
+
+=== [meta] https://www.anthropic.com/news/3-5-models-and-computer-use
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음

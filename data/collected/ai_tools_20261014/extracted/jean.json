@@ -1,0 +1,157 @@
+{
+ "company": "coolLabs Solutions Kft.",
+ "one_liner_ko": "여러 AI 코딩 에이전트를 각자의 git worktree에서 병렬로 돌리는 오픈소스 개발 환경.",
+ "what_it_does_ko": "Jean은 Claude CLI·Codex CLI·OpenCode·Cursor 등을 위한 로컬 우선 데스크톱 작업 공간이다. 작업마다 git worktree를 만들어 에이전트를 병렬로 돌리고, git 작업·리뷰·터미널·GitHub·Linear 연동을 한 흐름으로 묶는다. 네이티브 데스크톱 앱이나 리눅스 서버의 jean-server로 실행해 브라우저나 앱에서 접속할 수 있다. 자기 CLI 설치와 구독을 그대로 쓰며 모든 것이 사용자 소유 머신에서 돈다.",
+ "key_features": [
+  "작업마다 독립 git worktree",
+  "충돌 없이 여러 에이전트 병렬 실행",
+  "커밋·리뷰·PR 생성·충돌 해결 매직 git 명령",
+  "PR·worktree 병합 시 AI가 충돌 해결",
+  "Linear 이슈를 세션에 불러오기",
+  "RTK로 도구 출력 토큰 60~90% 절감",
+  "GitHub 이슈를 훑어 계획 초안 작성(Mr. Robot, 베타)",
+  "여러 서버의 프로젝트를 한 사이드바에"
+ ],
+ "use_cases_ko": [
+  "노트북이나 자체 서버에서 AI 코딩 에이전트를 병렬로 돌리기",
+  "통제권을 유지하며 로컬 AI 작업 흐름을 원하는 팀·1인 개발자"
+ ],
+ "pricing": {
+  "free_tier": "있음 (전부 무료, 유료 요금제·기능 제한·사용 한도 없음)",
+  "plans": [],
+  "pricing_url": "https://jean.build/pricing"
+ },
+ "open_source": "Apache-2.0",
+ "api": "불명",
+ "platforms": [
+  "맥",
+  "윈도",
+  "웹"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://jean.build",
+   "quote": "© 2026 coolLabs Solutions Kft. All rights reserved."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://jean.build",
+   "quote": "Open-source dev environment to run AI coding agents in parallel, on your laptop or your own server."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://jean.build/docs/",
+   "quote": "Jean is a local-first desktop workspace for Claude CLI, Codex CLI, OpenCode, Cursor Agent, PI, Command Code, Grok, and Kimi Code."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/coollabsio/jean",
+   "quote": "every task gets its own git worktree, agents run in parallel, and git work, reviews, terminals, and GitHub, Linear, and Sentry integrations live in one cohesive workflow."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/coollabsio/jean",
+   "quote": "Run it as a native desktop app, as a headless `jean-server` on Linux, or both"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/coollabsio/jean",
+   "quote": "No vendor lock-in. Jean uses your own CLI installations and subscriptions, and everything runs on machines you control."
+  },
+  {
+   "field": "key_features",
+   "url": "https://jean.build",
+   "quote": "Every task gets its own git worktree."
+  },
+  {
+   "field": "key_features",
+   "url": "https://jean.build",
+   "quote": "Run many agents at once, without conflicts."
+  },
+  {
+   "field": "key_features",
+   "url": "https://jean.build",
+   "quote": "Commit, review, open PRs, fix conflicts."
+  },
+  {
+   "field": "key_features",
+   "url": "https://jean.build",
+   "quote": "Merge PRs or worktrees, AI fixes conflicts."
+  },
+  {
+   "field": "key_features",
+   "url": "https://jean.build",
+   "quote": "Load Linear issues into any session."
+  },
+  {
+   "field": "key_features",
+   "url": "https://jean.build",
+   "quote": "RTK cuts tool-output tokens by 60-90%."
+  },
+  {
+   "field": "key_features",
+   "url": "https://jean.build",
+   "quote": "Sweeps GitHub issues and drafts plans."
+  },
+  {
+   "field": "key_features",
+   "url": "https://jean.build",
+   "quote": "Projects from all servers in one sidebar."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://jean.build",
+   "quote": "Open-source dev environment to run AI coding agents in parallel, on your laptop or your own server."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://jean.build/docs/",
+   "quote": "A practical introduction to Jean for teams and solo developers who want local AI workflows without giving up control."
+  },
+  {
+   "field": "pricing",
+   "url": "https://jean.build/pricing",
+   "quote": "There are no paid tiers, no feature gates, and no usage limits."
+  },
+  {
+   "field": "open_source",
+   "url": "https://jean.build",
+   "quote": "Apache 2.0. Free forever."
+  },
+  {
+   "field": "platforms",
+   "url": "https://jean.build/pricing",
+   "quote": "macOS (DMG)"
+  },
+  {
+   "field": "platforms",
+   "url": "https://jean.build/pricing",
+   "quote": "Windows (EXE)"
+  },
+  {
+   "field": "platforms",
+   "url": "https://jean.build",
+   "quote": "connect from a browser or the native app"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://jean.build",
+   "quote": "html lang: en"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://jean.build",
+   "quote": "hreflang: 없음"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "Apache 2.0 오픈소스, 100% 무료이며 유료 요금제·기능 제한·사용 한도가 없음(후원만 받음)",
+   "diff": "기존 분류는 '오픈소스 + 프리미엄 혼합'이지만 공식 페이지는 유료(프리미엄) 요금제가 없다고 명시",
+   "url": "https://jean.build/pricing"
+  }
+ ],
+ "plan_change": []
+}

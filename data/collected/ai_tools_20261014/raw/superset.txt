@@ -1,0 +1,728 @@
+=== [home] https://superset.sh (lang=en)
+Superset - Orchestrate any coding agent 
+ Product 
+ Resources 
+ Pricing 
+ Enterprise 
+ Join us 
+ 15.2k 
+ Superset is getting a new name soon → Bring Any Agent
+Orchestrate Them All Bring Any Agent
+ Orchestrate Them All 
+ One workspace for Claude Code, Codex, and any coding agent.
+ Download for macOS Download 
+ Free to start · No credit card required 
+ Orchestrate Parallel Agents Automate Tasks Remote Access See Changes 
+ Orchestrate Parallel Agents Automate Tasks Remote Access See Changes 
+ Workspaces 
+ Automations 
+ New Workspace 
+ desktop 5 
+ ⠋ new workspace creating 
+ ⠋ 
+ fix onboarding crash + 46 − 1 
+ billing webhooks + 193 
+ refactor auth flow + 394 − 23 
+ speed up cold start + 33 
+ bump dependencies + 127 − 8 
+ cloud 3 
+ ⠋ 
+ nightly evals + 812 − 64 
+ api hotfix + 12 − 3 
+ docs refresh + 58 
+ gpu-box 14 
+ mobile 1 
+ cli 4 
+ claude 
+ codex 
+ cursor 
+ opencode 
+ Claude Code v2.1.278
+ Fable 5.1 with high effort · Claude Max
+ ~/.superset/worktrees/superset/cloud-ws
+ ❯ /mcp 
+ MCP Servers
+ 1 connected
+ ❯ 1. superset-mcp ✓ connected 
+ config: .mcp.json 
+ claude finished · worked for 7s 
+ Pushed and opened a draft PR.
+ 2 files +46 −1 
+ Preview 
+ ❯ Type a task for Claude… 
+ ❯ superset automations 
+ Name
+ Schedule
+ Last run
+ daily-triage
+ daily 9:00
+ ⠋ running 
+ changelog-draft
+ sun 11:00
+ ✓ 2h ago
+ dep-upgrades
+ weekly
+ ✓ 1d ago
+ roadmap-sync
+ monthly
+ ✓ 3d ago
+ ❯ superset connect gpu-box 
+ ✓ connected · us-east · 64 cores · 128 GB
+ Run PR #827 
+ Files
+ Changes
+ Review
+ +393 −42 · 5 files · main 
+ packages/db/src/schema 
+ cloud-workspace.ts 
+ + 119 
+ enums.ts 
+ + 21 
+ apps/desktop/src/renderer 
+ CloudTerminal.tsx 
+ + 169 
+ useCloudWorkspaces.ts 
+ + 84 
+ LegacyTerminalPane.tsx 
+ − 42 
+ cloud-workspace.ts enums.ts +4 
+ @@ -1,4 +1,6 @@
+ 1 import { db } from "../db" 
+ + import { CloudWorkspace } from "./types" 
+ + import { createSSHConnection } from "./ssh" 
+ 2 
+ − export const getWorkspaces = () => { 
+ + export const getWorkspaces = async () => { 
+ 4 return db.query.workspaces 
+ Approve Comment 
+ gpu-box (ssh) 
+ ❯ ssh gpu-box 
+ Welcome to gpu-box · us-east · 64 cores · 128 GB
+ ❯ superset status 
+ 3 workspaces running
+ ⠋ nightly evals · claude · 42m 
+ ✓ api hotfix · ready for review 
+ ✓ docs refresh · PR opened 
+ Start work from anywhere
+ Run your agents from your phone.
+ 9:41 
+ A Acme 
+ acme-devbox Last updated 
+ acme 4 
+ Fix input overflow handling fix-input-overflow · +26 −2 
+ main 
+ Tidy up empty states tidy-empty-states · +10 −0 
+ Update icon size update-icon-size · +1 −0 
+ acme-ios 2 
+ Add transcription demo add-transcription-demo · +14 −0 
+ Add haptics to buttons add-button-haptics · +19 −0 
+ Plan, ask, build… 
+ 9:41 
+ Fix input overflow handling 
+ › Cap long queries in the command bar and add tests.
+ ● Reading normalizeQuery.ts 
+ ● Two changes. Cap the query at MAX_QUERY_LENGTH and return didOverflow so callers can show a hint.
+ ● Run npm test 
+ ✔ 14 passed 
+ ✻ Worked for 55s · done 4:57 AM
+ › open a PR for this
+ esc ↵ tab ↑ ↓ ^C 
+ Type a message… 
+ 9:41 
+ Open +26 −2 · 2 files 
+ Fix input overflow handling in the command bar #1 
+ Waiting for review
+ All checks passed
+ src/normalizeQuery.ts
+ export function normalizeQuery(q) { 
+ - return q.trim(); 
+ + const next = q.trim(); 
+ + return next.slice(0, MAX); 
+ } 
+ 2 files changed 
+ Trusted by builders from
+ Agent Independence Switch agents. Keep your workflow
+ Use Claude Code, Codex, OpenCode, or any coding agent for each task. Your workspaces, branches, and review flow stay the same.
+ new terminal 
+ New Terminal 
+ Claude 
+ OpenCode 
+ Codex 
+ Gemini 
+ Cursor Agent 
+ Mistral Vibe 
+ Kimi Code 
+ Grok CLI 
+ Hermes 
+ Muse Code 
+ Devin 
+ fx 
+ Antigravity 
+ Kiro 
+ Terminals (3) 
+ Parallel Execution Scale to 100+ agents
+ Launch agents across features, bug fixes, and refactors, all in parallel. Status at a glance shows which agents are working, which are blocked, and which are waiting on you.
+ superset 
+ In Progress 3 
+ Analyze Tab vs Agent Usag...
+ Generating
+ PyTorch MNIST Experiments
+ Generating
+ Fix PR Comments Fetching I...
+ Generating
+ Ready for Review 3 
+ Enterprise Order Mana... now 
+ + 93 − 18 
+ Set up Cursor Rules fo... 30m 
+ + 37 
+ Bioinformatics Tools 45m 
+ + 135 − 21 
+ ❯ Type a task for Claude… 
+ Automations Put recurring work on a schedule
+ Turn chores into scheduled agents: issue triage, changelog drafts, dependency bumps. They run on their own and open PRs for you to review.
+ automations 
+ Name
+ Schedule
+ Last run
+ daily-triage
+ daily 9:00
+ ⠋ running
+ changelog-draft
+ sun 11:00
+ ✓ 2h ago
+ dep-upgrades
+ weekly
+ ✓ 1d ago
+ roadmap-sync
+ monthly
+ ✓ 3d ago
+ daily-triage
+ → triaging 12 new issues…
+ → drafted 3 support replies
+ → opened PR #841 for review
+ Isolation Changes are isolated
+ Each agent runs in its own isolated Git worktree. No overwriting each other's files. Review and merge work when you're ready.
+ components/HeroSection/HeroSection.tsx 
+ Side by Side Inline 
+ Messages 
+ Commits 3 
+ Against Main 
+ Unstaged
+ HeroSection.tsx + 12 - 3 
+ GridBackground.ts + 45 
+ constants.ts + 8 - 2 
+ ProductDemo.tsx + 23 - 15 
+ 1 export function HeroSection() { 
+ 2   return ( 
+ 3 -     <div className="hero-old"> 
+ 4 +     <section className="relative py-24"> 
+ 5 +       <GridBackground /> 
+ 6       <div className="max-w-7xl mx-auto"> 
+ 7 -         <h1>Welcome</h1> 
+ 8 +         <m.h1 
+ 9 +           initial={{ opacity: 0 }} 
+ 10 +           animate={{ opacity: 1 }} 
+ 11 +         > 
+ 12 +           Superset 
+ 13 +         </m.h1> 
+ 14       </div> 
+ 15 -     </div> 
+ 16 +     </section> 
+ 17   ); 
+ 18 } 
+ Remote Access Run workspaces anywhere
+ Add any machine as a host. Workspaces keep running when your laptop sleeps, and you can check in from wherever you are.
+ gpu-box (ssh) 
+ ❯ ssh gpu-box 
+ Welcome to gpu-box · us-east · 64 cores · 128 GB
+ ❯ superset status 
+ 3 workspaces running
+ ⠋ nightly evals · claude · 42m 
+ ✓ api hotfix · ready for review 
+ ✓ docs refresh · PR opened 
+ CLI & SDK Drive it from the terminal
+ Everything is scriptable. Spawn workspaces and agents from the CLI, wire Superset into CI with the SDK, or let your agent drive it over MCP.
+ superset (cli) 
+ ❯ superset new "fix onboarding crash" --agent claude 
+ ✓ workspace ready · fix-onboarding-crash 
+ ❯ superset ls 
+ ⠋ fix onboarding crash claude working 
+ ✓ billing webhooks codex review 
+ ✓ speed up cold start opencode ready 
+ Open Anywhere Open in any IDE
+ Jump into your favorite editor with one click. VS Code, Cursor, Xcode, JetBrains IDEs, or any terminal: open worktrees exactly where you need them.
+ superset 
+ src 
+ Search files... 
+ Open in 
+ components 
+ HeroSection.tsx 
+ constants.ts 
+ index.ts 
+ hooks 
+ utils 
+ Finder 
+ Cursor 
+ ⌘O 
+ VS Code 
+ Xcode 
+ Sublime Text 
+ Terminal 
+ JetBrains 
+ What builders say about Superset
+ Abhi Aiyer 
+ Co-founder & CTO at Mastra 
+ Just realized that I have done all my work in @superset_sh since Dec 26.
+ Chris Laupama 
+ TS Lead at Webflow 
+ Oh snap @superset_sh is soooooo damn good!
+Now THIS is the experience I've been wanting for CLI agents!
+ Gregor Zunic 
+ Co-founder & CTO at Browser Use 
+ Damn @superset_sh is really cool. You should try it.
+worktrees are a breeze
+cmd + t auto opens Claude Code
+you can view git changes within itself
+closing a laptop doesn't kill the sessions
+ Zach Dive 
+ Co-founder & CEO at Adam 
+ if you're not using @superset_sh, you're getting left behind in 2026
+ Eric Clemmons 
+ Principal Engineer at Cloudflare 
+ Was using Warp, but now @superset_sh has become my primary terminal
+ Felipe C
+
+=== [pricing] https://superset.sh/pricing/ (lang=en)
+Pricing | Superset 
+ Product 
+ Resources 
+ Pricing 
+ Enterprise 
+ Join us 
+ 15.2k 
+ Pricing Simple pricing for every team
+ Start free. Upgrade when your team outgrows it. Enterprise plans for organizations with advanced security and compliance needs.
+ Monthly Yearly Save 25% 
+ Free
+ For individuals getting started
+ $0 
+ Free for everyone
+ Download app No credit card required.
+ 1 user 
+ Local workspaces 
+ Desktop app 
+ CLI 
+ Pro
+ Popular 
+ For teams that need more power
+ $20 $15 per user/month 
+ $180 per user, billed yearly
+ Download app 
+ Everything in Free 
+ Unlimited users 
+ Remote access 
+ Automations 
+ Linear integration 
+ Slack integration 
+ Mobile 
+ Enterprise
+ For organizations with advanced needs
+ Custom pricing 
+ Annual billing only
+ Contact sales Review our security 
+ Everything in Pro 
+ SAML SSO & SCIM provisioning 
+ Audit logs 
+ SOC 2 Type II report 
+ Uptime SLA & dedicated support 
+ Custom integrations 
+ Trusted by builders from
+ Compare plans All features, side by side
+ Features Free $0 Pro from $15/user/mo Enterprise Custom 
+ Usage 
+ Team members 
+ 1 Unlimited Unlimited 
+ Workspaces 
+ Unlimited Unlimited Unlimited 
+ Projects 
+ Unlimited Unlimited Unlimited 
+ Features 
+ Desktop app 
+ Local workspaces 
+ Remote access 
+ Automations 
+ Mobile app 
+ Linear integration 
+ Slack integration 
+ Team collaboration 
+ Support 
+ Priority support 
+ Uptime SLA 
+ Custom contracts 
+ Security 
+ SSO/SAML 
+ IP restrictions 
+ SCIM provisioning 
+ Audit log 
+ SOC 2 Type II report 
+ Free Pro Enterprise 
+ Usage
+ Team members 
+ Unlimited 
+ Workspaces 
+ Unlimited 
+ Projects 
+ Unlimited 
+ Features
+ Desktop app 
+ Local workspaces 
+ Remote access 
+ Automations 
+ Mobile app 
+ Linear integration 
+ Slack integration 
+ Team collaboration 
+ Support
+ Priority support 
+ Uptime SLA 
+ Custom contracts 
+ Security
+ SSO/SAML 
+ IP restrictions 
+ SCIM provisioning 
+ Audit log 
+ SOC 2 Type II report 
+ FAQ Common questions
+ Is there a free plan? Yes. Free covers individuals with 1 user, local workspaces, the desktop app, and the CLI. No credit card required.
+ How does Pro pricing work? Pro is $20 per user/month billed monthly, or $15 per user/month billed yearly (a 25% discount). You're billed per active seat on your team.
+ Can I switch plans or cancel anytime? Yes. You can upgrade, downgrade, or cancel at any time from the billing settings inside the app. Changes take effect at the end of your current billing period.
+ What's included in Enterprise? Everything in Pro plus SSO & SAML, SCIM provisioning, IP restrictions, audit logs, a custom SLA, dedicated support, and custom contracts. Pricing is tailored to your organization. Get in touch and we'll scope something that fits.
+ Is Superset SOC 2 compliant? Yes. Superset has completed a SOC 2 Type II audit with an independent auditor, covering our security controls in operation over time. Request the report and review our security documentation at trust.superset.sh.
+ Where does my code run? On your machine. Repos, worktrees, terminal output, and agent sessions stay local by default; cloud sync covers account and organization metadata only. Superset doesn't proxy any API calls.
+ Do I need my own coding agent subscriptions? Yes. Superset is the workspace your agents run in, not a model provider. Bring Claude Code, Codex, OpenCode, or any CLI agent, and use your existing accounts or API keys on every plan.
+ © 2026 Superset Inc.
+ English 
+ Product
+ Download 
+ Mobile 
+ Pages 
+ Automations 
+ Browser 
+ Leaderboard 
+ How it works 
+ Features 
+ Security 
+ MCP 
+ Marketplace 
+ Compare 
+ Company
+ About 
+ Contact 
+ Careers 
+ Media kit 
+ Status 
+ Resources
+ Documentation 
+ Pricing 
+ Blog 
+ Parallel agents guide 
+ Orchestration guide 
+ Community 
+ Enterprise 
+ Changelog 
+ Roadmap 
+ Legal
+ Security 
+ Terms 
+ Privacy 
+ Download for macOS Download 
+ Download for macOS Download
+
+=== [about] https://docs.superset.sh/ (lang=ko)
+Superset Documentation | Superset 문서 
+ 변경 로그 웹사이트 English 日本語 简体中文 Français 한국어 繁體中文 Español Deutsch Português (Brasil) Italiano Русский Türkçe Polski Nederlands Bahasa Indonesia Čeština Tiếng Việt 
+ 다운로드 
+ Get Started
+ What is Superset? Install Your First Parallel Session The Superset Model 
+ Recipes
+ Race Agents on One Task Run Three Workstreams at Once Clear PR Feedback in the Background Fan Out a Big Refactor Wake Up to a Finished Audit Command Your Fleet from the CLI Drive Superset from Your Agent Agent Orchestration 
+ Core Features
+ Workspaces Multiple Windows Diff Viewer Editor & Files Terminal Port Management In-App Browser Computer Control Pages AI Agents Supported Agents Claude Code in Superset Codex in Superset Agent Sessions & Forking Keep Agents Running Agent Status & Notifications Tasks Pull Requests Remote Access Automations Usage Skills Superset MCP Server 
+ CLI
+ Getting Started Superset CLI Reference Host Server Environment variables 
+ TypeScript SDK
+ Getting Started Superset SDK Reference Advanced Usage 
+ Integrations
+ IDE Integration Linear Integration Slack Integration Use with OpenRouter, Bedrock, Vertex, or Vercel Add Superset Support to Your Agent 
+ Configuration
+ Project Lifecycle Scripts Switch to Superset Monorepos Terminal Scripts Keyboard Shortcuts Custom Themes Customization 
+ Help
+ Troubleshooting FAQ Community & Support 
+ 문서 검색... ⌘K 
+ Get Started
+ What is Superset? Install Your First Parallel Session The Superset Model 
+ Recipes
+ Race Agents on One Task Run Three Workstreams at Once Clear PR Feedback in the Background Fan Out a Big Refactor Wake Up to a Finished Audit Command Your Fleet from the CLI Drive Superset from Your Agent Agent Orchestration 
+ Core Features
+ Workspaces Multiple Windows Diff Viewer Editor & Files Terminal Port Management In-App Browser Computer Control Pages AI Agents Supported Agents Claude Code in Superset Codex in Superset Agent Sessions & Forking Keep Agents Running Agent Status & Notifications Tasks Pull Requests Remote Access Automations Usage Skills Superset MCP Server 
+ CLI
+ Getting Started Superset CLI Reference Host Server Environment variables 
+ TypeScript SDK
+ Getting Started Superset SDK Reference Advanced Usage 
+ Integrations
+ IDE Integration Linear Integration Slack Integration Use with OpenRouter, Bedrock, Vertex, or Vercel Add Superset Support to Your Agent 
+ Configuration
+ Project Lifecycle Scripts Switch to Superset Monorepos Terminal Scripts Keyboard Shortcuts Custom Themes Customization 
+ Help
+ Troubleshooting FAQ Community & Support 
+ 이 페이지에서 
+ Superset Documentation 
+ Run AI coding agents in parallel, each in its own isolated workspace
+ Markdown 복사 다음에서 열기 
+ Superset gives every task its own isolated git worktree, so you can delegate to many agents at once and integrate the results through ordinary branches and PRs.
+ Start Here 
+ What is Superset?
+ The 60-second version.
+ Install
+ Requirements and first launch. Two minutes.
+ Your First Parallel Session
+ Three agents in parallel, ship the winner. Ten minutes.
+ The Superset Model
+ The five concepts everything else builds on.
+ What You Can Do 
+ Race agents on one task
+ Same prompt, multiple agents, isolated branches. Merge the best diff.
+ Run parallel workstreams
+ A feature, a bugfix, and a PR review at once, without branch juggling.
+ Review and ship
+ Stage, commit, push, and open PRs from the built-in diff viewer.
+ Automate maintenance
+ Schedule agent sessions; wake up to a reviewable workspace.
+ Bring any agent
+ Claude Code, Codex, Amp, Gemini, and more, or the built-in chat.
+ Work across devices
+ Reach work
+
+=== [pricing_ko] https://superset.sh/ko/pricing (lang=ko)
+가격 | Superset 
+ 제품 
+ 리소스 
+ 가격 
+ 엔터프라이즈 
+ 함께하기 
+ 15.2k 
+ 가격 모든 팀을 위한 간단한 가격
+ 무료로 시작하세요. 팀이 커지면 업그레이드하세요. 고급 보안과 규정 준수가 필요한 조직을 위한 엔터프라이즈 플랜도 있습니다.
+ 월간 연간 25% 절약 
+ 무료
+ 처음 시작하는 개인용
+ $0 
+ 누구나 무료
+ 앱 다운로드 신용카드가 필요 없습니다.
+ 사용자 1명 
+ 로컬 워크스페이스 
+ 데스크톱 앱 
+ CLI 
+ Pro
+ 인기 
+ 더 큰 성능이 필요한 팀용
+ $20 $15 사용자당 월 
+ 사용자당 $180, 연간 결제
+ 앱 다운로드 
+ 무료 플랜의 모든 기능 
+ 사용자 무제한 
+ 원격 접속 
+ 자동화 
+ Linear 연동 
+ Slack 연동 
+ 모바일 
+ 엔터프라이즈
+ 고급 요구 사항이 있는 조직용
+ 맞춤 가격 
+ 연간 결제만 가능
+ 영업팀 문의 보안 정보 확인 
+ Pro의 모든 기능 
+ SAML SSO 및 SCIM 프로비저닝 
+ 감사 로그 
+ SOC 2 Type II 보고서 
+ 가동률 SLA 및 전담 지원 
+ 맞춤 연동 
+ 다음 기업의 빌더들이 사용합니다
+ 플랜 비교 모든 기능 한눈에 비교
+ 기능 무료 $0 Pro 사용자당 월 $15부터 엔터프라이즈 사용자 지정 
+ 사용량 
+ 팀 멤버 
+ 1 무제한 무제한 
+ 워크스페이스 
+ 무제한 무제한 무제한 
+ 프로젝트 
+ 무제한 무제한 무제한 
+ 기능 
+ 데스크톱 앱 
+ 로컬 워크스페이스 
+ 원격 접속 
+ 자동화 
+ 모바일 앱 
+ Linear 연동 
+ Slack 연동 
+ 팀 협업 
+ 지원 
+ 우선 지원 
+ 가동률 SLA 
+ 맞춤 계약 
+ 보안 
+ SSO/SAML 
+ IP 제한 
+ SCIM 프로비저닝 
+ 감사 로그 
+ SOC 2 Type II 보고서 
+ 무료 Pro 엔터프라이즈 
+ 사용량
+ 팀 멤버 
+ 무제한 
+ 워크스페이스 
+ 무제한 
+ 프로젝트 
+ 무제한 
+ 기능
+ 데스크톱 앱 
+ 로컬 워크스페이스 
+ 원격 접속 
+ 자동화 
+ 모바일 앱 
+ Linear 연동 
+ Slack 연동 
+ 팀 협업 
+ 지원
+ 우선 지원 
+ 가동률 SLA 
+ 맞춤 계약 
+ 보안
+ SSO/SAML 
+ IP 제한 
+ SCIM 프로비저닝 
+ 감사 로그 
+ SOC 2 Type II 보고서 
+ FAQ 자주 묻는 질문
+ 무료 플랜이 있나요? 네. 무료 플랜은 사용자 1명, 로컬 워크스페이스, 데스크톱 앱, CLI를 제공합니다. 신용카드는 필요 없습니다.
+ Pro 가격은 어떻게 책정되나요? Pro는 월간 결제 시 사용자당 월 $20, 연간 결제 시 사용자당 월 $15입니다(25% 할인). 팀의 활성 좌석 수만큼 청구됩니다.
+ 언제든 플랜을 바꾸거나 해지할 수 있나요? 네. 앱 안의 결제 설정에서 언제든 업그레이드, 다운그레이드, 해지할 수 있습니다. 변경 사항은 현재 결제 주기가 끝날 때 적용됩니다.
+ 엔터프라이즈에는 무엇이 포함되나요? Pro의 모든 기능에 더해 SSO 및 SAML, SCIM 프로비저닝, IP 제한, 감사 로그, 맞춤 SLA, 전담 지원, 맞춤 계약이 포함됩니다. 가격은 조직에 맞춰 책정합니다. 문의해 주시면 적합한 범위를 잡아 드립니다.
+ Superset은 SOC 2를 준수하나요? 네. Superset은 독립 감사인과 함께 SOC 2 Type II 감사를 완료했으며, 이는 일정 기간 운영된 보안 통제를 다룹니다. trust.superset.sh에서 보고서를 요청하고 보안 문서를 확인하세요.
+ 제 코드는 어디에서 실행되나요? 본인의 머신에서 실행됩니다. 리포지토리, worktree, 터미널 출력, 에이전트 세션은 기본적으로 로컬에 머물고, 클라우드 동기화는 계정과 조직 메타데이터만 다룹니다. Superset은 어떤 API 호출도 중계하지 않습니다.
+ 코딩 에이전트 구독이 따로 필요한가요? 네. Superset은 모델 제공사가 아니라 에이전트가 실행되는 워크스페이스입니다. Claude Code, Codex, OpenCode 등 어떤 CLI 에이전트든 가져와 모든 플랜에서 기존 계정이나 API 키를 그대로 사용하세요.
+ © 2026 Superset Inc.
+ 한국어 
+ 제품
+ 다운로드 
+ 모바일 
+ 페이지 
+ 자동화 
+ 브라우저 
+ 리더보드 
+ 작동 방식 
+ 기능 
+ 보안 
+ MCP 
+ 마켓플레이스 
+ 비교 
+ 회사
+ 회사 소개 
+ 문의 
+ 채용 
+ 미디어 키트 
+ 상태 
+ 리소스
+ 문서 
+ 가격 
+ 블로그 
+ 병렬 에이전트 가이드 
+ 오케스트레이션 가이드 
+ 커뮤니티 
+ 엔터프라이즈 
+ 변경 로그 
+ 로드맵 
+ 법적 고지
+ 보안 
+ 약관 
+ 개인정보 
+ macOS용 다운로드 다운로드 
+ macOS용 다운로드 다운로드
+
+=== [meta] https://superset.sh
+html lang: en
+hreflang: cs, de, en, es, fr, id, it, ja, ko, nl, pl, pt-br, ru, tr, vi, x-default, zh-cn, zh-tw
+화면에 보이는 언어 이름: English
+
+=== [github] https://github.com/superset-sh/superset
+<div align="center">
+
+<img src="apps/desktop/src/resources/build/icons/icon.png" alt="Superset app icon" width="96" height="96" />
+
+### Superset
+
+Run Claude Code, Codex, or another CLI agent with terminals, code review, and browser previews in one workspace.
+
+[**Download for macOS**](https://github.com/superset-sh/superset/releases/latest) &nbsp;&bull;&nbsp; [Documentation](https://docs.superset.sh) &nbsp;&bull;&nbsp; [Changelog](https://github.com/superset-sh/superset/releases) &nbsp;&bull;&nbsp; [Discord](https://discord.gg/cZeD9WYcV7)
+
+<p align="center">
+  <img width="800" alt="Claude and OpenCode working in parallel Superset workspaces with live diffs" src="apps/marketing/public/images/readme-hero.gif" />
+</p>
+
+</div>
+
+### Documentation for agents
+
+The docs are available as [a Markdown index](https://docs.superset.sh/llms.txt) linking to individual pages, or [one full-text file](https://docs.superset.sh/llms-full.txt).
+
+## Install
+
+Download the desktop app:
+
+- **macOS**: [Apple Silicon (.dmg)](https://github.com/superset-sh/superset/releases/latest/download/Superset-arm64.dmg) · [Intel (.dmg)](https://github.com/superset-sh/superset/releases/latest/download/Superset-x64.dmg)
+- **Linux**: [x64 AppImage](https://github.com/superset-sh/superset/releases/latest/download/Superset-x86_64.AppImage) (experimental; macOS is the primary target)
+- **Windows**: not yet available
+- [All builds](https://github.com/superset-sh/superset/releases/latest)
+
+All you need installed is [Git](https://git-scm.com/). [gh](https://cli.github.com/) is optional and enables the PR workflows; Superset offers to install it for you.
+
+## Start with one task
+
+1. [Install Superset](#install) and add a repository from your computer or clone one.
+2. Create a workspace, choose your CLI agent, and describe a small change you want to make.
+3. Inspect its patch in **Changes**, run the relevant tests, and preview your app in the browser pane before committing.
+
+For a walkthrough of workspace creation and review, see [Your First Parallel Session](https://docs.superset.sh/first-workspace).
+
+## Review and revise
+
+- **Change your app's UI.** Use **Design** in the browser pane to select an element and send your requested change to an agent with element context. [Walkthrough](https://superset.sh/blog/change-ui-with-your-coding-agent) · [Design Mode docs](https://docs.superset.sh/browser#design-mode)
+- **Ask an agent to fix a PR.** Open **Pull requests → Code**, select diff lines, and send feedback to a running or new agent session. Posting to GitHub is optional. [Walkthrough](https://superset.sh/blog/send-pr-feedback-to-your-agent) · [PR docs](https://docs.superset.sh/pull-requests#comment-straight-to-an-agent)
+- **Review a report with your team.** Ask an agent to publish a Page. Teammates pin comments, and a watching agent can revise it at the same link. Keep its host and session running for feedback delivery. [Walkthrough](https://superset.sh/blog/review-agent-work-with-pages) · [Pages docs](https://docs.superset.sh/pages)
+
+<details>
+<summary>See the diff viewer and browser previews</summary>
+
+### Built-in Diff Viewer
+
+Inspect, comment on, and edit agent changes without leaving the app, then commit and push when it's ready.
+
+[Docs →](https://docs.superset.sh/diff-viewer)
+
+<a href="https://docs.superset.sh/diff-viewer"><img src="apps/marketing/public/images/readme/diff-viewer.png" alt="Reviewing an agent's changes in the diff viewer" width="100%" /></a>
+
+### In-App Browser & Ports
+
+Preview running dev servers in a browser pane. Ports are detected per workspace, so every worktree gets its own preview.
+
+[Docs →](https://docs.superset.sh/browser)
+
+<a href="https://docs.superset.sh/browser"><img src="apps/marketing/public/images/readme/browser-ports.png" alt="In-app browser previewing a dev server with detected ports" width="100%" /></a>
+
+</details>
+
+## Run independent tasks
+
+Give each task a Git worktree with its own branch and terminals. Worktrees separate working files; they do not sandbox processes or prevent merge conflicts.
+
+[Workspace docs](https://docs.superset.sh/workspaces) · [Terminal docs](https://docs.superset.sh/terminal-integration) · [Agent status](http

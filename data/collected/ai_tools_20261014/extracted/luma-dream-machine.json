@@ -1,0 +1,60 @@
+{
+ "company": "Luma",
+ "one_liner_ko": "기획부터 생성·수정까지 맥락을 유지하며 작업하는 크리에이티브 전문가용 AI 에이전트.",
+ "what_it_does_ko": "Luma는 여러 전문 멀티모달 모델을 하나의 흐름으로 묶어 콘셉트부터 최종 결과물까지 크리에이티브 작업을 진행하는 Luma Agents를 제공한다. 자체 모델 Ray3.2·Ray3.14·Uni-1과 Nano Banana Pro, Veo 3.1, Kling 3.0, Seedance 2.0, ElevenLabs 등 외부 모델로 이미지·영상·오디오를 만든다. 텍스트·이미지로 영상을 만들고, 영상 변환·리프레임·업스케일·립싱크·배경 제거 등을 크레딧 단위로 쓴다. 팀 작업공간에서 크레딧을 공유하고, 클립 이어 붙이기·자막 추가와 EXR 파일 내보내기를 지원한다.",
+ "key_features": [
+  "Luma Agents: 여러 모델을 묶어 기획·생성·반복·수정",
+  "자체 영상 모델 Ray3.2·Ray3.14와 이미지 모델 Uni-1",
+  "외부 모델(Veo 3.1, Kling 3.0, Seedance 2.0, Nano Banana Pro, ElevenLabs 등)",
+  "텍스트·이미지→영상, 영상→영상, 영상 확장·리프레임",
+  "립싱크·음성·효과음·음악 생성",
+  "팀 작업공간과 공유 크레딧",
+  "프로덕션용 EXR 내보내기",
+  "Luma Skills: 워크플로를 스킬로 저장"
+ ],
+ "use_cases_ko": [
+  "브랜드 캠페인·제품 사진·SNS 영상 광고 제작",
+  "스토리보드·트레일러 등 영상 콘텐츠 기획",
+  "영상을 여러 언어로 현지화"
+ ],
+ "pricing": {
+  "free_tier": "불명 ('Try for free' 문구는 있으나 가격표에 무료 요금제 없음)",
+  "plans": [
+   {"name": "Plus", "price": 30, "currency": "USD", "period": "month", "limits": "10,000 크레딧, 상업적 이용 (연간 $300)", "page_lang": "en"},
+   {"name": "Pro", "price": 90, "currency": "USD", "period": "month", "limits": "40,000 크레딧, Luma Agents 4배 사용 (연간 $900)", "page_lang": "en"},
+   {"name": "Ultra", "price": 300, "currency": "USD", "period": "month", "limits": "150,000 크레딧, Luma Agents 15배 사용 (연간 $3,000)", "page_lang": "en"},
+   {"name": "Team", "price": null, "currency": null, "period": null, "limits": "문의, 공유 팀 크레딧, SSO", "page_lang": "en"},
+   {"name": "Enterprise", "price": null, "currency": null, "period": null, "limits": "문의, 맞춤 미세조정", "page_lang": "en"}
+  ],
+  "pricing_url": "https://lumalabs.ai/pricing"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["웹", "API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://lumalabs.ai/app", "quote": "Creative agents for creative professionals | Luma"},
+  {"field": "one_liner_ko", "url": "https://lumalabs.ai/app", "quote": "Plan, generate, iterate, and refine, keeping full context across every stage of creative work."},
+  {"field": "what_it_does_ko", "url": "https://lumalabs.ai/app", "quote": "Luma unifies specialized multimodal models into one continuous workflow, advancing creative work from concept to final delivery."},
+  {"field": "what_it_does_ko", "url": "https://lumalabs.ai/app", "quote": "Stitch clips, add captions, and create polished deliverables."},
+  {"field": "key_features", "url": "https://lumalabs.ai/app", "quote": "Turn workflows into skills."},
+  {"field": "key_features", "url": "https://lumalabs.ai/app", "quote": "Share credits and manage usage in one place."},
+  {"field": "key_features", "url": "https://lumalabs.ai/app", "quote": "Deliver high-quality EXR files for pro workflows."},
+  {"field": "key_features", "url": "https://lumalabs.ai/pricing", "quote": " Sync Lipsync 2"},
+  {"field": "key_features", "url": "https://lumalabs.ai/pricing", "quote": " Extend Video (SDR)"},
+  {"field": "key_features", "url": "https://lumalabs.ai/pricing", "quote": " Luma and third-party image and video models "},
+  {"field": "use_cases_ko", "url": "https://lumalabs.ai/app", "quote": "Quickly create short-form video ads with hooks, captions, and formats tailored for every platform."},
+  {"field": "use_cases_ko", "url": "https://lumalabs.ai/app", "quote": "Translate and localize videos with natural voiceovers and synced visuals across languages."},
+  {"field": "use_cases_ko", "url": "https://lumalabs.ai/app", "quote": "Develop characters, story arcs, and episode boards—then bring the pilot to life."},
+  {"field": "pricing", "url": "https://lumalabs.ai/pricing", "quote": " $300 billed yearly"},
+  {"field": "pricing", "url": "https://lumalabs.ai/pricing", "quote": " 40,000 credits "},
+  {"field": "pricing", "url": "https://lumalabs.ai/pricing", "quote": " 15x usage with the Luma Agents "},
+  {"field": "pricing", "url": "https://lumalabs.ai/app", "quote": " Try for free Contact Sales "},
+  {"field": "api", "url": "https://lumalabs.ai/pricing", "quote": " Product Pricing API Enterprise News Join us "},
+  {"field": "platforms", "url": "https://lumalabs.ai/app", "quote": " AI Video Generator from Image "},
+  {"field": "korean_support", "url": "https://lumalabs.ai/app", "quote": "html lang: en"}
+ ],
+ "mismatch": [],
+ "plan_change": [],
+ "note": "공식 페이지 본문에 'Dream Machine' 이름은 보이지 않고 'Luma Agents' 중심으로 소개됨(사람 확인용)."
+}

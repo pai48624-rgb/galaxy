@@ -1,0 +1,271 @@
+=== [home] https://docs.camel-ai.org/get_started/introduction (lang=en)
+CAMEL - Build Multi-Agent AI Systems 
+ Documentation Index
+ Fetch the complete documentation index at: /llms.txt 
+ Use this file to discover all available pages before exploring further.
+ Skip to main content 
+ CAMEL-AI Documentation home page 
+ Search...
+ ⌘ K 
+ CAMEL Home 
+ GitHub 
+ Join Community 
+ Join Community 
+ Search... 
+ Navigation 
+ Get Started 
+ Introduction
+ Documentation 
+ API Reference 
+Website 
+ Get Started 
+ Introduction 
+ Installation 
+ Setup 
+ Key Modules 
+ Agents 
+ Models 
+ Tools 
+ Societies 
+ Workforce 
+ Datagen 
+ Interpreters 
+ Runtimes 
+ Messages 
+ Memory 
+ Prompts 
+ Tasks 
+ Loaders 
+ Storages 
+ Embeddings 
+ Retrievers 
+ Awesome Toolkits 
+ Browser Toolkit 
+ Terminal Toolkit 
+ CAMEL with MCP 
+ Overview 
+ CAMEL Agents as an MCP Client 
+ CAMEL Agent as an MCP Server 
+ Toolkit as MCP Server 
+ CAMEL-AI MCPHub 
+ Cookbooks 
+ Basic Concepts 
+ Advanced Features 
+ Applications 
+ Data Generation 
+ Data Processing 
+ Loong 
+ Multi Agent Society 
+ MCP 
+ On this page 
+ What is CAMEL-AI? 
+ Core Components 
+ Ecosystem Highlights 
+ Ready to Get Started? 
+ Get Started
+ Introduction
+ CAMEL-AI is an open-source community for finding the scaling laws of agents for data generation, world simulation, and task automation.
+ ​ 
+ What is CAMEL-AI? 
+ CAMEL‑AI is an open‑source, modular framework for building intelligent multi‑agent systems. It provides the primitives to: 
+ Create Agents that reason, plan, and act
+ Compose Societies of agents with defined roles
+ Integrate Interpreters for code execution and analysis
+ Manage Memory for long‑horizon context and learning
+ Orchestrate Retrieval‑Augmented Generation (RAG) pipelines
+ Generate Synthetic Data at scale with self‑instruct and verifier loops
+ Simulate Worlds and agent interactions in environments like social networks
+ ​ 
+ Core Components 
+ Agents : Atomic reasoning units driven by LLMs, capable of tool calls and decision‑making
+ Societies : Coordinator layers that assign roles, delegate tasks, and manage collaboration
+ Interpreters : Execution backends (Python, shell, browsers) for live code evaluation and automation
+ Memory & Storage : Persistent context layers for chat history, tool outputs, and learned knowledge
+ RAG Pipelines : Combine chunking, retrieval, and generation for grounded, accurate responses
+ Synthetic Data Engines : Self‑instruct, Chain‑of‑Thought, and Source2Synth pipelines with verifiers
+ World Simulation : Platforms like Oasis for large‑scale multi‑agent social simulations
+ Task Automation : Benchmarks like CRAB for real‑world multi‑step software workflows
+ ​ 
+ Ecosystem Highlights 
+ OASIS
+ Large‑scale social simulation environment: model Reddit, Twitter, and user interactions 
+ CRAB Benchmark
+ Cross‑environment agent automation tasks across Ubuntu and Android platforms 
+ Project Loong
+ Verifier‑driven synthetic data generation for domain‑specific QA at scale 
+ OWL 🦉
+ OWL (Optimized Workforce Learning) is a multi-agent automation framework for real-world tasks. Built on CAMEL-AI,
+it enables dynamic agent collaboration using tools like browsers, code interpreters, and multimodal models. 
+ ​ 
+ Ready to Get Started? 
+ Quickstart
+ Spin up your first agent in under 5 minutes 
+ Installation
+ pip install camel-ai[all] – all toolkits and interpreters included 
+ Explore Cookbooks
+ Hands‑on examples: data gen, RAG, simulations, and more 
+ Installation
+ github twitter 
+ Powered by This documentation is built and hosted on Mintlify, a developer documentation platform
+
+=== [about] https://docs.camel-ai.org/llms.txt
+# CAMEL-AI Documentation
+## Docs
+- [Introduction](https://docs.camel-ai.org/get_started/introduction.md): CAMEL-AI is an open-source community for finding the scaling laws of agents for data generation, world simulation, and task automation.
+- [Installation](https://docs.camel-ai.org/get_started/installation.md): Get started with CAMEL-AI - Install, configure, and build your first multi-agent system
+- [Setup](https://docs.camel-ai.org/get_started/setup.md): Configure API credentials and select a model provider
+- [Agents](https://docs.camel-ai.org/key_modules/agents.md): Learn about CAMEL's agent types, with a focus on ChatAgent and advanced agent architectures for AI-powered automation.
+- [Models](https://docs.camel-ai.org/key_modules/models.md): CAMEL-AI: Flexible integration and deployment of top LLMs and multimodal models like [OpenAI](https://openai.com/), [Mistral](https://mistral.ai/), [Gemini](https://ai.google.dev/gemini-api/docs/models), [Llama](https://www.llama.com/), [Nebius](https://nebius.com/), and more.
+- [Tools](https://docs.camel-ai.org/key_modules/tools.md)
+- [Societies](https://docs.camel-ai.org/key_modules/societies.md): Collaborative agent frameworks in CAMEL: autonomous social behaviors, role-based task solving, and turn-based agent societies.
+- [Workforce](https://docs.camel-ai.org/key_modules/workforce.md)
+- [Datagen](https://docs.camel-ai.org/key_modules/datagen.md): CAMEL’s data generation modules for high-quality, instruction-tuned, and reasoning-rich datasets.
+- [Interpreters](https://docs.camel-ai.org/key_modules/interpreters.md): Execute code safely and flexibly with CAMEL’s suite of interpreters: local, isolated, and cloud-based execution environments.
+- [Runtimes](https://docs.camel-ai.org/key_modules/runtimes.md): Flexible, secure, and scalable code execution with CAMEL’s runtime environments: guardrails, Docker, remote, and cloud sandboxes.
+- [Messages](https://docs.camel-ai.org/key_modules/messages.md)
+- [Memory](https://docs.camel-ai.org/key_modules/memory.md)
+- [Prompts](https://docs.camel-ai.org/key_modules/prompts.md)
+- [Tasks](https://docs.camel-ai.org/key_modules/tasks.md)
+- [Loaders](https://docs.camel-ai.org/key_modules/loaders.md)
+- [Storages](https://docs.camel-ai.org/key_modules/storages.md)
+- [Embeddings](https://docs.camel-ai.org/key_modules/embeddings.md)
+- [Retrievers](https://docs.camel-ai.org/key_modules/retrievers.md)
+- [Browser Toolkit](https://docs.camel-ai.org/key_modules/browsertoolkit.md)
+- [Terminal Toolkit](https://docs.camel-ai.org/key_modules/terminaltoolkit.md)
+- [Overview](https://docs.camel-ai.org/mcp/overview.md): Introduction to MCP: what it is, why it matters, and how it transforms agent integration.
+- [CAMEL Agents as an MCP Client](https://docs.camel-ai.org/mcp/camel_agents_as_an_mcp_clients.md)
+- [CAMEL Agent as an MCP Server](https://docs.camel-ai.org/mcp/export_camel_agent_as_mcp_server.md): Turn your CAMEL ChatAgent into an MCP server—let any client (Claude, Cursor, custom apps) connect and use your agent as a universal AI backend.
+- [Toolkit as MCP Server](https://docs.camel-ai.org/mcp/camel_toolkits_as_an_mcp_server.md): Share any CAMEL toolkit as an MCP server so external clients and agents can use your tools.
+- [CAMEL-AI MCPHub](https://docs.camel-ai.org/mcp/mcp_hub.md)
+- [Message Cookbook](https://docs.camel-ai.org/cookbooks/basic_concepts/agents_message.md)
+- [Prompting Cookbook](https://docs.camel-ai.org/cookbooks/basic_concepts/agents_prompting.md)
+- [Creating Your First Agent](https://docs.camel-ai.org/cookbooks/basic_concepts/create_your_first_agent.m
+
+=== [meta] https://docs.camel-ai.org/get_started/introduction
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/camel-ai/camel
+<div align="center">
+  <a href="https://www.camel-ai.org/">
+    <img src="docs/images/banner.png" alt="Banner">
+  </a>
+</div>
+
+</br>
+
+<div align="center">
+
+[![Documentation][docs-image]][docs-url]
+[![Discord][discord-image]][discord-url]
+[![X][x-image]][x-url]
+[![Reddit][reddit-image]][reddit-url]
+[![Wechat][wechat-image]][wechat-url]
+[![Hugging Face][huggingface-image]][huggingface-url]
+[![Star][star-image]][star-url]
+[![Package License][package-license-image]][package-license-url]
+[![PyPI Download][package-download-image]][package-download-url]
+[![][join-us-image]][join-us]
+
+<a href="https://trendshift.io/repositories/649" target="_blank"><img src="https://trendshift.io/api/badge/repositories/649" alt="camel-ai/camel | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+
+[English](README.md) |
+[简体中文](README.zh.md) |
+[日本語](README.ja.md)
+
+</div>
+
+
+<hr>
+
+<div align="center">
+<h4 align="center">
+
+[Community](https://github.com/camel-ai/camel#community) |
+[Installation](https://github.com/camel-ai/camel#installation) |
+[Examples](https://github.com/camel-ai/camel/tree/HEAD/examples) |
+[Paper](https://arxiv.org/abs/2303.17760) |
+[Citation](https://github.com/camel-ai/camel#citation) |
+[Contributing](https://github.com/camel-ai/camel#contributing-to-camel-) |
+[CAMEL-AI](https://www.camel-ai.org/)
+
+</h4>
+
+<p style="line-height: 1.5; text-align: center;"> 🐫 CAMEL is an open-source community dedicated to finding the scaling laws of agents. We believe that studying these agents on a large scale offers valuable insights into their behaviors, capabilities, and potential risks. To facilitate research in this field, we implement and support various types of agents, tasks, prompts, models, and simulated environments.</p>
+
+
+<br>
+
+
+Join us ([*Discord*](https://discord.camel-ai.org/) or [*WeChat*](https://ghli.org/camel/wechat.png)) in pushing the boundaries of finding the scaling laws of agents.
+
+🌟 Star CAMEL on GitHub and be instantly notified of new releases.
+
+</div>
+
+<div align="center">
+    <img src="docs/images/stars.gif" alt="Star">
+  </a>
+</div>
+
+<br>
+
+[![][image-join-us]][join-us]
+
+<details>
+<summary><kbd>Table of contents</kbd></summary>
+
+<br/>
+
+- [CAMEL Framework Design Principles](#camel-framework-design-principles)
+- [Why Use CAMEL for Your Research?](#why-use-camel-for-your-research)
+- [What Can You Build With CAMEL?](#what-can-you-build-with-camel)
+  - [Data Generation](#1-data-generation)
+  - [Task Automation](#2-task-automation)
+  - [World Simulation](#3-world-simulation)
+- [Quick Start](#quick-start)
+  - [Starting with ChatAgent](#starting-with-chatagent)
+  - [Seeking Help](#seeking-help)
+- [Tech Stack](#tech-stack)
+- [Research](#research)
+- [Synthetic Datasets](#synthetic-datasets)
+- [Cookbooks (Usecases)](#cookbooks-usecases)
+  - [Basic Concepts](#1-basic-concepts)
+  - [Advanced Features](#2-advanced-features)
+  - [Model Training & Data Generation](#3-model-training--data-generation)
+  - [Multi-Agent Systems & Applications](#4-multi-agent-systems--applications)
+  - [Data Processing](#5-data-processing)
+- [Real-World Usecases](#real-world-usecases)
+- [🧱 Built with CAMEL (Real-world Producs & Research)](#-built-with-camel-real-world-producs--research)
+  - [Research Projects](#research-projects)
+  - [Product Projects](#product-projects)
+- [🗓️ Events](#️-events)
+- [Contributing to CAMEL](#contributing-to-camel)
+- [Community & Contact](#community--contact)
+- [Citation](#citation)
+- [Acknowledgment](#acknowledgment)
+- [License](#license)
+
+####
+
+<br/>
+
+</details>
+
+
+## CAMEL Framework Design Principles
+
+<h3>🧬 Evolvability</h3 >
+
+The framework enables multi-agent systems to continuously evolve by generating data and interacting with environments. This evolution can be driven by reinforcement learning with verifiable rewards or supervised learning.
+
+<h3>📈 Scalability</h3>
+
+The framework is designed to support systems with millions of agents, ensuring efficient coordination, communication, and resource management at scale.
+
+<h3>💾 Statefulness</h3>
+
+Agents maintain stateful memory, enabling them to perform multi-step interactions with environments and efficiently tackle sophisticated tasks.
+
+<h3>📖 Code-as-

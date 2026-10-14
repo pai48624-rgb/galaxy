@@ -1,0 +1,43 @@
+{
+ "company": null,
+ "one_liner_ko": "AI 에이전트·애플리케이션·사람을 연결하는 에이전트 상호운용용 오픈 프로토콜(현재 Linux Foundation 산하 A2A에 합류).",
+ "what_it_does_ko": "ACP(Agent Communication Protocol)는 서로 다른 프레임워크·팀·인프라에서 따로 만들어진 AI 에이전트들이 표준화된 RESTful API로 소통하게 하는 오픈 프로토콜이다. 모든 모달리티, 동기·비동기 통신, 스트리밍, 상태 유지·비유지 방식, 온라인·오프라인 에이전트 발견, 장시간 작업을 지원한다. BeeAI 프레임워크·LangChain·CrewAI·자체 코드 등 구현 방식과 무관하게 쓸 수 있으며, BeeAI 플랫폼의 기반이 된다. 공식 페이지에는 ACP가 이제 Linux Foundation 산하 A2A의 일부가 되었다는 공지와 이전 안내가 있다.",
+ "key_features": [
+  "표준 HTTP 패턴의 REST 기반 통신",
+  "MimeType 기반으로 모든 메시지 형식(텍스트·이미지·오디오·영상 등) 지원",
+  "SDK 없이 curl·Postman으로도 사용 가능, 공식 Python·TypeScript SDK 제공",
+  "패키지에 메타데이터를 넣는 오프라인 에이전트 발견",
+  "비동기 우선, 동기 통신도 지원",
+  "OpenAPI 사양과 MCP 어댑터 제공"
+ ],
+ "use_cases_ko": [
+  "운영 중인 에이전트를 다른 프레임워크의 에이전트로 교체",
+  "조사·작성·SEO 최적화 에이전트가 팀처럼 협업하는 멀티 에이전트 시스템",
+  "기업 간 에이전트 협업(예: 물류사 경로 에이전트와 공급사 재고 에이전트)"
+ ],
+ "pricing": {"free_tier": "불명", "plans": [], "pricing_url": null},
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "one_liner_ko", "url": "https://agentcommunicationprotocol.dev/introduction/welcome", "quote": "The Agent Communication Protocol (ACP) is an open protocol for agent interoperability that solves the growing challenge of connecting AI agents, applications, and humans."},
+  {"field": "one_liner_ko", "url": "https://agentcommunicationprotocol.dev/introduction/welcome", "quote": "ACP is now part of A2A under the Linux Foundation!"},
+  {"field": "what_it_does_ko", "url": "https://agentcommunicationprotocol.dev/introduction/welcome", "quote": "ACP solves this by enabling agents to communicate through a standardized RESTful API that supports:"},
+  {"field": "what_it_does_ko", "url": "https://agentcommunicationprotocol.dev/introduction/welcome", "quote": "ACP also underpins the BeeAI platform - a project that allows you to test, deploy, and share ACP agents with your team."},
+  {"field": "key_features", "url": "https://agentcommunicationprotocol.dev/introduction/welcome", "quote": "REST-based Communication: ACP uses simple, well-defined REST endpoints that align with standard HTTP patterns."},
+  {"field": "key_features", "url": "https://agentcommunicationprotocol.dev/introduction/welcome", "quote": "Support for All Message Types: ACP uses MimeTypes for content identification"},
+  {"field": "key_features", "url": "https://agentcommunicationprotocol.dev/introduction/welcome", "quote": "an official Python SDK and Typescript SDK is available."},
+  {"field": "key_features", "url": "https://agentcommunicationprotocol.dev/introduction/welcome", "quote": "Offline Discovery: Agents can be made discoverable even when inactive by embedding metadata directly into their distribution packages."},
+  {"field": "key_features", "url": "https://agentcommunicationprotocol.dev/introduction/welcome", "quote": "Async-first, Sync Supported"},
+  {"field": "key_features", "url": "https://agentcommunicationprotocol.dev/introduction/welcome", "quote": "View the complete OpenAPI specification"},
+  {"field": "use_cases_ko", "url": "https://agentcommunicationprotocol.dev/introduction/welcome", "quote": "ACP compatibility lets you seamlessly swap agents in production systems, even when built with different frameworks."},
+  {"field": "use_cases_ko", "url": "https://agentcommunicationprotocol.dev/introduction/welcome", "quote": "Multi-Agent Collaboration Build sophisticated systems where specialized agents work as coordinated teams."},
+  {"field": "use_cases_ko", "url": "https://agentcommunicationprotocol.dev/introduction/welcome", "quote": "A logistics company’s routing agent could work with a supplier’s inventory agent to optimize delivery schedules"},
+  {"field": "api", "url": "https://agentcommunicationprotocol.dev/introduction/welcome", "quote": "ACP solves this by enabling agents to communicate through a standardized RESTful API that supports:"},
+  {"field": "platforms", "url": "https://agentcommunicationprotocol.dev/introduction/welcome", "quote": "REST-based Communication: ACP uses simple, well-defined REST endpoints that align with standard HTTP patterns."},
+  {"field": "korean_support", "url": "https://agentcommunicationprotocol.dev/introduction/welcome", "quote": "html lang: en"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

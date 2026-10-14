@@ -1,0 +1,109 @@
+{
+ "company": null,
+ "one_liner_ko": "사람을 위해 설계된 딥러닝 API로, JAX·TensorFlow·PyTorch 위에서 돌아가는 멀티 백엔드 딥러닝 프레임워크.",
+ "what_it_does_ko": "Keras는 파이썬으로 작성된 딥러닝 API로 JAX, TensorFlow, PyTorch 중 하나 위에서 실행된다. 디버깅 속도, 간결한 코드, 유지보수성, 배포 용이성에 초점을 둔다. 컴퓨터 비전·자연어 처리·오디오·시계열 예측·추천 시스템 모델을 만들고 학습할 수 있다. KerasHub로 인기 모델 구조와 Kaggle Models의 사전학습 체크포인트를 제공하며, 노트북에서 대형 GPU·TPU 클러스터까지 확장 학습을 지원한다.",
+ "key_features": [
+  "JAX·TensorFlow·PyTorch 멀티 백엔드(OpenVINO는 추론 전용)",
+  "모델에 가장 빠른 백엔드 선택으로 20~350% 속도 향상",
+  "KerasHub 사전학습 모델(Kaggle Models 체크포인트)",
+  "KerasTuner 하이퍼파라미터 튜닝",
+  "Functional API와 서브클래싱으로 모델·층 구성",
+  "model.fit 내장 학습·평가",
+  "GPU·TPU 클러스터까지 확장 학습"
+ ],
+ "use_cases_ko": [
+  "컴퓨터 비전·자연어 처리·오디오·시계열·추천 모델 개발",
+  "연구 기관과 실서비스의 딥러닝(CERN·NASA·Waymo 사용 사례)"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "맥",
+  "리눅스"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://keras.io",
+   "quote": "Keras is a deep learning API designed for human beings, not"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/keras-team/keras",
+   "quote": "Keras 3 is a multi-backend deep learning framework, with support for JAX, TensorFlow, PyTorch, and OpenVINO (for inference-only)."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://keras.io/getting_started/about/",
+   "quote": "Keras is a deep learning API written in Python and capable of running on top of either JAX ,"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://keras.io",
+   "quote": "Keras focuses on debugging speed, code elegance & conciseness, maintainability, and deployability."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://keras.io",
+   "quote": "The KerasHub library provides Keras 3 implementations of popular model architectures, paired with a collection of pretrained checkpoints available on Kaggle Models."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/keras-team/keras",
+   "quote": "leverage speedups ranging from 20% to 350% compared to other frameworks"
+  },
+  {
+   "field": "key_features",
+   "url": "https://keras.io",
+   "quote": "KerasTuner: Hyperparam Tuning"
+  },
+  {
+   "field": "key_features",
+   "url": "https://keras.io",
+   "quote": "Starting from the beginning and learn how to build models using the functional building pattern."
+  },
+  {
+   "field": "key_features",
+   "url": "https://keras.io",
+   "quote": "Learn how to customize your model via subclassing Keras layers."
+  },
+  {
+   "field": "key_features",
+   "url": "https://keras.io",
+   "quote": "Train and evaluate your model using model.fit(...)."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/keras-team/keras",
+   "quote": "Scale confidently from your laptop to large clusters of GPUs or TPUs."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/keras-team/keras",
+   "quote": "Effortlessly build and train models for computer vision, natural language processing, audio processing,"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://keras.io",
+   "quote": "Keras is used by CERN, NASA, NIH, and many more scientific"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/keras-team/keras",
+   "quote": "Keras 3 is compatible with Linux and macOS systems. For Windows users, we recommend using WSL2 to run Keras."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://keras.io",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

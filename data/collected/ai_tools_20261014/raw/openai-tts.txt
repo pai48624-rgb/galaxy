@@ -1,0 +1,849 @@
+=== [home] https://developers.openai.com/api/docs/guides/text-to-speech (lang=en)
+Text to speech | OpenAI API
+For the complete documentation index, see llms.txt . Markdown versions of documentation pages are available by appending
+ .md to the page URL.
+ ChatGPT Start searching API Dashboard 
+ Try ChatGPT 
+ Home 
+ API Overview 
+ Get started with the OpenAI API 
+ Models 
+ Explore models and compare capabilities 
+ Agents 
+ Build persistent agents on hosted infrastructure 
+ Tools 
+ Connect models to tools and data 
+ Audio & voice 
+ Build speech and realtime voice experiences 
+ Production 
+ Deploy and scale your API integrations 
+ API reference 
+ Explore endpoints, parameters, and responses 
+ ChatGPT Plugins 
+ Extend ChatGPT and Codex 
+ Sign in with ChatGPT 
+ Apps powered by your user's ChatGPT plan 
+ Commerce 
+ Build commerce flows in ChatGPT 
+ Ads 
+ Publish and measure ads in ChatGPT 
+ Workspace Agents 
+ Trigger published ChatGPT workspace agents 
+ ChatGPT + Codex user docs 
+ Guides and product docs for ChatGPT and Codex 
+ Use cases 
+ Example workflows and tasks teams can take on with ChatGPT or Codex 
+ Docs 
+ Use cases 
+ Training 
+ Resources 
+ Resources Showcase 
+ Demo apps to get inspired 
+ Blog 
+ Learnings and experiences from developers 
+ Cookbook 
+ Notebook examples for building with OpenAI models 
+ Learn 
+ Docs, videos, and demo apps for building with OpenAI 
+ Community 
+ Programs, meetups, and support for builders 
+ Overview Models Agents Tools Audio & voice Production API reference 
+ Search the API docs 
+ Search docs 
+ Suggested
+ responses create reasoning_effort realtime prompt caching 
+ Primary navigation API ChatGPT Docs Use cases Training Resources Resources 
+ Search docs 
+ Suggested
+ responses create reasoning_effort realtime prompt caching 
+ Overview Models Agents Tools Audio & voice Production API reference 
+ Docs Audio & voice 
+ Home 
+ Get started 
+ Quickstart 
+ Using GPT-6 
+ Key concepts 
+ Core concepts 
+ Responses API 
+ Decisions API 
+ Conversation state 
+ Background mode 
+ Streaming 
+ WebSocket mode 
+ Mid-turn steering 
+ Multi-agent 
+ Webhooks 
+ File inputs 
+ Compaction 
+ Counting tokens 
+ SDKs and CLI 
+ OpenAI SDK 
+ OpenAI CLI 
+ Resources 
+ Changelog 
+ Deprecations 
+ Supported countries 
+ OpenAI Crawlers 
+ Terms and policies 
+ Legacy APIs 
+ Agent Builder Overview 
+ Migration guide 
+ Node reference 
+ Safety in building agents 
+ Evals Getting started 
+ Working with evals 
+ Prompt optimizer 
+ External models 
+ Graders 
+ Fine-tuning Optimization cycle 
+ Supervised fine-tuning 
+ Vision fine-tuning 
+ Direct preference optimization 
+ Reinforcement fine-tuning 
+ RFT use cases 
+ Best practices 
+ Assistants API Migration guide 
+ Model catalog 
+ Choose a model 
+ Pricing 
+ Model selection 
+ Text and code 
+ Text generation 
+ Code generation 
+ Structured output 
+ Prompting 
+ Overview 
+ Prompt engineering 
+ Citation formatting 
+ Migration guide 
+ Prompt generation 
+ Frontend prompting 
+ Reasoning 
+ Reasoning models 
+ Reasoning best practices 
+ Images 
+ Images and vision Image input cost calculator 
+ Image generation Overview 
+ Image prompting 
+ Realtime and audio 
+ Audio and speech 
+ Getting started 
+ Voice agents 
+ Specialized models 
+ Deep research 
+ Embeddings 
+ Moderation 
+ Overview 
+ Agents API 
+ Overview 
+ Quickstart 
+ Architecture 
+ Configuring Agents 
+ Sessions Run and continue sessions 
+ Events and items 
+ Manage sessions 
+ Webhooks 
+ Environments and sandboxes OpenAI-hosted sandboxes 
+ Self-hosted sandboxes 
+ Sandbox lifecycle 
+ Pre-warm sandboxes 
+ Sandbox security 
+ Files and artifacts 
+ Tools and integrations Web search 
+ Computer use 
+ Functions 
+ MCP connections 
+ Plugins 
+ Vaults 
+ Multi-agent 
+ Observability and usage 
+ Tracing 
+ Errors and recovery 
+ API reference 
+ Bedrock Managed Agents 
+ Agents SDK 
+ Overview 
+ Quickstart 
+ Agent definitions 
+ Models and providers 
+ Running agents 
+ Sandbox agents 
+ Orchestration 
+ Guardrails 
+ Results and state 
+ Integrations and observability 
+ Evaluate agent workflows 
+ ChatKit 
+ Overview 
+ Customize 
+ Widgets 
+ Actions 
+ Advanced integrations 
+ Overview 
+ Function calling 
+ Search and retrieval 
+ Web search 
+ File search 
+ Retrieval 
+ Connect tools and data 
+ MCP servers 
+ Secure MCP Tunnel 
+ Build tool workflows 
+ Skills 
+ Tool search 
+ Programmatic tool calling 
+ Async tool calling 
+ Computer and code 
+ Shell 
+ Computer use 
+ Apply Patch 
+ Local shell 
+ Code interpreter 
+ Media 
+ Image generation 
+ Overview 
+ GPT-Live 
+ Getting started 
+ Prompting 
+ Managing sessions 
+ Delegation and tools 
+ Migrate to GPT-Live 
+ Partner integrations 
+ Realtime API 
+ Getting started 
+ Prompting 
+ Managing conversations 
+ Voice activity detection 
+ Tools and MCP 
+ Build with voice 
+ Voice agents 
+ Connect voice to Decisions 
+ Custom voices 
+ Cost optimization 
+ Connections 
+ WebRTC 
+ WebRTC with WARP 
+ WebSockets 
+ Telephony and SIP 
+ Server-side controls 
+ Audio processing 
+ File transcription 
+ Live transcription 
+ Live translation 
+ Text to speech 
+ Audio in Chat Completions 
+ Go live 
+ Production best practices 
+ Deployment checklist 
+ Performance and quality 
+ Fast mode 
+ Ultrafast mode 
+ Latency optimization 
+ Predicted Outputs 
+ Accuracy optimization 
+ Evaluation 
+ Evaluation best practices 
+ Promptfoo 
+ Cost and throughput 
+ Cost optimization 
+ Prompt caching Prompt cache diagnostics 
+ Batch 
+ Flex processing 
+ Safety and governance 
+ Safety best practices 
+ Red teaming 
+ Daybreak 
+ Safety checks Safety classifiers 
+ Cybersecurity checks 
+ Misalignment monitoring 
+ Enforcement notifications 
+ Under-18 guidance 
+ CSAM guidance 
+ Content provenance 
+ Your data 
+ Private Safety Processing 
+ Permissions 
+ Infrastructure and access 
+ Terraform provider Overview 
+ Projects and access 
+ Service accounts 
+ Rate limits and spend 
+ Model, tool, and data controls 
+ Import and reconciliation 
+ Private Link 
+ IP allowlist 
+ Organization blocking 
+ Mutual TLS 
+ Workload identity federation Federation rules 
+ X.509 certificates 
+ Kubernetes 
+ AWS 
+ Microsoft Azure 
+ Google Cloud 
+ Oracle Cloud Infrastructure 
+ GitHub Actions 
+ SPIFFE 
+ IP egress ranges 
+ Amazon Bedrock 
+ Operations 
+ Rate limits 
+ Spend limits 
+ Admin APIs 
+ Error codes 
+ Overview Plugins Sign in with ChatGPT Commerce Ads Workspace Agents ChatGPT + Codex user docs Use cases 
+ Docs Overview 
+ Home 
+ Quickstart 
+ Core concepts 
+ Plugin architecture 
+ Skills 
+ MCP server 
+ Plan 
+ Brainstorm use cases 
+ Define tools 
+ Build 
+ Build an MCP server 
+ Add UI to your MCP server (optional) 
+ Add events to your MCP server (optional) 
+ Extensions 
+ Authenticate users 
+ Build skills 
+ Package your plugin 
+ Examples 
+ Test and publish 
+ Connect and test your plugin 
+ Submit and publish 
+ Submit desktop-only plugins 
+ Submission error reference 
+ Conversion specs 
+ Restaurant reservation spec 
+ Get Quote spec 
+ Product checkout spec 
+ Guides 
+ UI guidelines 
+ Optimize Metadata 
+ Submit a Claude Code plugin 
+ Security & Privacy 
+ Troubleshooting 
+ Resources 
+ Changelog 
+ Plugin guidelines 
+ MCP server review requirements 
+ Plugin UI reference 
+ Checkout API reference 
+ Home 
+ Quickstart 
+ Request a client ID 
+ Identity 
+ On your website 
+ In your ChatGPT plugin 
+ ChatGPT plan usage 
+ Overview 
+ UI/UX guidelines 
+ Registration and sign-in 
+ Accounts and sessions 
+ Models and inference 
+ Codex app-server 
+ Self-hosted VMs 
+ Token reference 
+ Errors and recovery 
+ Preview limitations 
+ Home 
+ Guides 
+ Get started 
+ Best practices 
+ File Upload 
+ Overview 
+ Products 
+ API 
+ Overview 
+ Feeds 
+ Products 
+ Promotions 
+ Ads Overview 
+ Measurement 
+ Measureme
+
+=== [pricing] https://learn.chatgpt.com/docs/pricing (lang=en)
+Pricing | ChatGPT Learn
+For the complete documentation index, see llms.txt . Markdown versions of documentation pages are available by appending
+ .md to the page URL.
+ ChatGPT Start searching API Dashboard 
+ Try ChatGPT 
+ Home 
+ API Overview 
+ Get started with the OpenAI API 
+ Models 
+ Explore models and compare capabilities 
+ Agents 
+ Build persistent agents on hosted infrastructure 
+ Tools 
+ Connect models to tools and data 
+ Audio & voice 
+ Build speech and realtime voice experiences 
+ Production 
+ Deploy and scale your API integrations 
+ API reference 
+ Explore endpoints, parameters, and responses 
+ ChatGPT Plugins 
+ Extend ChatGPT and Codex 
+ Sign in with ChatGPT 
+ Apps powered by your user's ChatGPT plan 
+ Commerce 
+ Build commerce flows in ChatGPT 
+ Ads 
+ Publish and measure ads in ChatGPT 
+ Workspace Agents 
+ Trigger published ChatGPT workspace agents 
+ ChatGPT + Codex user docs 
+ Guides and product docs for ChatGPT and Codex 
+ Use cases 
+ Example workflows and tasks teams can take on with ChatGPT or Codex 
+ Docs 
+ Use cases 
+ Training 
+ Resources 
+ Resources Showcase 
+ Demo apps to get inspired 
+ Blog 
+ Learnings and experiences from developers 
+ Cookbook 
+ Notebook examples for building with OpenAI models 
+ Learn 
+ Docs, videos, and demo apps for building with OpenAI 
+ Community 
+ Programs, meetups, and support for builders 
+ Overview Features Configuration Developers Security Administration Use Cases Resources 
+ Search the docs 
+ Search docs 
+ Suggested
+ responses create reasoning_effort realtime prompt caching 
+ Primary navigation API ChatGPT Docs Use cases Training Resources Resources 
+ Search docs 
+ Suggested
+ responses create reasoning_effort realtime prompt caching 
+ Overview Models Agents Tools Audio & voice Production API reference 
+ Docs Overview 
+ Home 
+ Get started 
+ Quickstart 
+ Using GPT-6 
+ Key concepts 
+ Core concepts 
+ Responses API 
+ Decisions API 
+ Conversation state 
+ Background mode 
+ Streaming 
+ WebSocket mode 
+ Mid-turn steering 
+ Multi-agent 
+ Webhooks 
+ File inputs 
+ Compaction 
+ Counting tokens 
+ SDKs and CLI 
+ OpenAI SDK 
+ OpenAI CLI 
+ Resources 
+ Changelog 
+ Deprecations 
+ Supported countries 
+ OpenAI Crawlers 
+ Terms and policies 
+ Legacy APIs 
+ Agent Builder Overview 
+ Migration guide 
+ Node reference 
+ Safety in building agents 
+ Evals Getting started 
+ Working with evals 
+ Prompt optimizer 
+ External models 
+ Graders 
+ Fine-tuning Optimization cycle 
+ Supervised fine-tuning 
+ Vision fine-tuning 
+ Direct preference optimization 
+ Reinforcement fine-tuning 
+ RFT use cases 
+ Best practices 
+ Assistants API Migration guide 
+ Model catalog 
+ Choose a model 
+ Pricing 
+ Model selection 
+ Text and code 
+ Text generation 
+ Code generation 
+ Structured output 
+ Prompting 
+ Overview 
+ Prompt engineering 
+ Citation formatting 
+ Migration guide 
+ Prompt generation 
+ Frontend prompting 
+ Reasoning 
+ Reasoning models 
+ Reasoning best practices 
+ Images 
+ Images and vision Image input cost calculator 
+ Image generation Overview 
+ Image prompting 
+ Realtime and audio 
+ Audio and speech 
+ Getting started 
+ Voice agents 
+ Specialized models 
+ Deep research 
+ Embeddings 
+ Moderation 
+ Overview 
+ Agents API 
+ Overview 
+ Quickstart 
+ Architecture 
+ Configuring Agents 
+ Sessions Run and continue sessions 
+ Events and items 
+ Manage sessions 
+ Webhooks 
+ Environments and sandboxes OpenAI-hosted sandboxes 
+ Self-hosted sandboxes 
+ Sandbox lifecycle 
+ Pre-warm sandboxes 
+ Sandbox security 
+ Files and artifacts 
+ Tools and integrations Web search 
+ Computer use 
+ Functions 
+ MCP connections 
+ Plugins 
+ Vaults 
+ Multi-agent 
+ Observability and usage 
+ Tracing 
+ Errors and recovery 
+ API reference 
+ Bedrock Managed Agents 
+ Agents SDK 
+ Overview 
+ Quickstart 
+ Agent definitions 
+ Models and providers 
+ Running agents 
+ Sandbox agents 
+ Orchestration 
+ Guardrails 
+ Results and state 
+ Integrations and observability 
+ Evaluate agent workflows 
+ ChatKit 
+ Overview 
+ Customize 
+ Widgets 
+ Actions 
+ Advanced integrations 
+ Overview 
+ Function calling 
+ Search and retrieval 
+ Web search 
+ File search 
+ Retrieval 
+ Connect tools and data 
+ MCP servers 
+ Secure MCP Tunnel 
+ Build tool workflows 
+ Skills 
+ Tool search 
+ Programmatic tool calling 
+ Async tool calling 
+ Computer and code 
+ Shell 
+ Computer use 
+ Apply Patch 
+ Local shell 
+ Code interpreter 
+ Media 
+ Image generation 
+ Overview 
+ GPT-Live 
+ Getting started 
+ Prompting 
+ Managing sessions 
+ Delegation and tools 
+ Migrate to GPT-Live 
+ Partner integrations 
+ Realtime API 
+ Getting started 
+ Prompting 
+ Managing conversations 
+ Voice activity detection 
+ Tools and MCP 
+ Build with voice 
+ Voice agents 
+ Connect voice to Decisions 
+ Custom voices 
+ Cost optimization 
+ Connections 
+ WebRTC 
+ WebRTC with WARP 
+ WebSockets 
+ Telephony and SIP 
+ Server-side controls 
+ Audio processing 
+ File transcription 
+ Live transcription 
+ Live translation 
+ Text to speech 
+ Audio in Chat Completions 
+ Go live 
+ Production best practices 
+ Deployment checklist 
+ Performance and quality 
+ Fast mode 
+ Ultrafast mode 
+ Latency optimization 
+ Predicted Outputs 
+ Accuracy optimization 
+ Evaluation 
+ Evaluation best practices 
+ Promptfoo 
+ Cost and throughput 
+ Cost optimization 
+ Prompt caching Prompt cache diagnostics 
+ Batch 
+ Flex processing 
+ Safety and governance 
+ Safety best practices 
+ Red teaming 
+ Daybreak 
+ Safety checks Safety classifiers 
+ Cybersecurity checks 
+ Misalignment monitoring 
+ Enforcement notifications 
+ Under-18 guidance 
+ CSAM guidance 
+ Content provenance 
+ Your data 
+ Private Safety Processing 
+ Permissions 
+ Infrastructure and access 
+ Terraform provider Overview 
+ Projects and access 
+ Service accounts 
+ Rate limits and spend 
+ Model, tool, and data controls 
+ Import and reconciliation 
+ Private Link 
+ IP allowlist 
+ Organization blocking 
+ Mutual TLS 
+ Workload identity federation Federation rules 
+ X.509 certificates 
+ Kubernetes 
+ AWS 
+ Microsoft Azure 
+ Google Cloud 
+ Oracle Cloud Infrastructure 
+ GitHub Actions 
+ SPIFFE 
+ IP egress ranges 
+ Amazon Bedrock 
+ Operations 
+ Rate limits 
+ Spend limits 
+ Admin APIs 
+ Error codes 
+ Overview Plugins Sign in with ChatGPT Commerce Ads Workspace Agents ChatGPT + Codex user docs Use cases 
+ Docs Overview 
+ Home 
+ Quickstart 
+ Core concepts 
+ Plugin architecture 
+ Skills 
+ MCP server 
+ Plan 
+ Brainstorm use cases 
+ Define tools 
+ Build 
+ Build an MCP server 
+ Add UI to your MCP server (optional) 
+ Add events to your MCP server (optional) 
+ Extensions 
+ Authenticate users 
+ Build skills 
+ Package your plugin 
+ Examples 
+ Test and publish 
+ Connect and test your p
+
+=== [about] https://platform.openai.com/login/ (lang=ko-kr)
+잠시만 기다리십시오… 
+ 확인에 성공했습니다. platform.openai.com 응답을 기다리는 중
+
+=== [pricing2] https://developers.openai.com/api/docs/pricing (lang=en)
+Pricing | OpenAI API
+For the complete documentation index, see llms.txt . Markdown versions of documentation pages are available by appending
+ .md to the page URL.
+ ChatGPT Start searching API Dashboard 
+ Try ChatGPT 
+ Home 
+ API Overview 
+ Get started with the OpenAI API 
+ Models 
+ Explore models and compare capabilities 
+ Agents 
+ Build persistent agents on hosted infrastructure 
+ Tools 
+ Connect models to tools and data 
+ Audio & voice 
+ Build speech and realtime voice experiences 
+ Production 
+ Deploy and scale your API integrations 
+ API reference 
+ Explore endpoints, parameters, and responses 
+ ChatGPT Plugins 
+ Extend ChatGPT and Codex 
+ Sign in with ChatGPT 
+ Apps powered by your user's ChatGPT plan 
+ Commerce 
+ Build commerce flows in ChatGPT 
+ Ads 
+ Publish and measure ads in ChatGPT 
+ Workspace Agents 
+ Trigger published ChatGPT workspace agents 
+ ChatGPT + Codex user docs 
+ Guides and product docs for ChatGPT and Codex 
+ Use cases 
+ Example workflows and tasks teams can take on with ChatGPT or Codex 
+ Docs 
+ Use cases 
+ Training 
+ Resources 
+ Resources Showcase 
+ Demo apps to get inspired 
+ Blog 
+ Learnings and experiences from developers 
+ Cookbook 
+ Notebook examples for building with OpenAI models 
+ Learn 
+ Docs, videos, and demo apps for building with OpenAI 
+ Community 
+ Programs, meetups, and support for builders 
+ Overview Models Agents Tools Audio & voice Production API reference 
+ Search the API docs 
+ Search docs 
+ Suggested
+ responses create reasoning_effort realtime prompt caching 
+ Primary navigation API ChatGPT Docs Use cases Training Resources Resources 
+ Search docs 
+ Suggested
+ responses create reasoning_effort realtime prompt caching 
+ Overview Models Agents Tools Audio & voice Production API reference 
+ Docs Models 
+ Home 
+ Get started 
+ Quickstart 
+ Using GPT-6 
+ Key concepts 
+ Core concepts 
+ Responses API 
+ Decisions API 
+ Conversation state 
+ Background mode 
+ Streaming 
+ WebSocket mode 
+ Mid-turn steering 
+ Multi-agent 
+ Webhooks 
+ File inputs 
+ Compaction 
+ Counting tokens 
+ SDKs and CLI 
+ OpenAI SDK 
+ OpenAI CLI 
+ Resources 
+ Changelog 
+ Deprecations 
+ Supported countries 
+ OpenAI Crawlers 
+ Terms and policies 
+ Legacy APIs 
+ Agent Builder Overview 
+ Migration guide 
+ Node reference 
+ Safety in building agents 
+ Evals Getting started 
+ Working with evals 
+ Prompt optimizer 
+ External models 
+ Graders 
+ Fine-tuning Optimization cycle 
+ Supervised fine-tuning 
+ Vision fine-tuning 
+ Direct preference optimization 
+ Reinforcement fine-tuning 
+ RFT use cases 
+ Best practices 
+ Assistants API Migration guide 
+ Model catalog 
+ Choose a model 
+ Pricing 
+ Model selection 
+ Text and code 
+ Text generation 
+ Code generation 
+ Structured output 
+ Prompting 
+ Overview 
+ Prompt engineering 
+ Citation formatting 
+ Migration guide 
+ Prompt generation 
+ Frontend prompting 
+ Reasoning 
+ Reasoning models 
+ Reasoning best practices 
+ Images 
+ Images and vision Image input cost calculator 
+ Image generation Overview 
+ Image prompting 
+ Realtime and audio 
+ Audio and speech 
+ Getting started 
+ Voice agents 
+ Specialized models 
+ Deep research 
+ Embeddings 
+ Moderation 
+ Overview 
+ Agents API 
+ Overview 
+ Quickstart 
+ Architecture 
+ Configuring Agents 
+ Sessions Run and continue sessions 
+ Events and items 
+ Manage sessions 
+ Webhooks 
+ Environments and sandboxes OpenAI-hosted sandboxes 
+ Self-hosted sandboxes 
+ Sandbox lifecycle 
+ Pre-warm sandboxes 
+ Sandbox security 
+ Files and artifacts 
+ Tools and integrations Web search 
+ Computer use 
+ Functions 
+ MCP connections 
+ Plugins 
+ Vaults 
+ Multi-agent 
+ Observability a
+
+=== [meta] https://developers.openai.com/api/docs/guides/text-to-speech
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: Korean, English

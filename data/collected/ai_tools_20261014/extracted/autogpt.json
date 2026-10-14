@@ -1,0 +1,59 @@
+{
+ "company": "AutoGPT",
+ "one_liner_ko": "콘텐츠·영업·리서치 등 반복 업무를 맡는 AI 전문가 팀을 Otto가 조율해 주는 AI 에이전트 플랫폼.",
+ "what_it_does_ko": "AutoGPT는 AI 에이전트를 만들고 배포·실행해 전체 업무 흐름을 처리하게 하는 오픈소스 플랫폼이다. 원하는 결과를 쉬운 영어로 설명하거나 시각적 빌더로 단계를 짜고, 필요할 때·일정에 따라·트리거로 에이전트를 실행한다. 클라우드 버전에서는 'Otto'가 SEO 작가·영업·비서 같은 AI 전문가(Experts)를 불러 일을 나누고 진행 상황을 알려 준다. 전문가마다 접근할 앱 계정과 지출 한도를 정할 수 있고, 직접 설치(셀프 호스트)도 가능하다.",
+ "key_features": [
+  "AI 전문가 팀을 조율하는 Otto 채팅",
+  "프롬프트로 워크플로 생성 및 자동 시험·수정",
+  "드래그 앤 드롭 시각적 워크플로 빌더",
+  "일정 실행·반복 루틴·트리거",
+  "전문가별 앱 접근 권한과 지출 승인 한도",
+  "브라우저 자동화·MCP 도구·웹 검색",
+  "검증된 에이전트를 가져다 쓰는 마켓플레이스",
+  "셀프 호스트 가능"
+ ],
+ "use_cases_ko": [
+  "SEO 글 기획·초안 작성(AI SEO 작가)",
+  "잠재 고객 목록과 첫 연락 초안 작성(AI SDR)",
+  "받은 편지함 정리·회의 준비(AI 비서)"
+ ],
+ "pricing": {
+  "free_tier": "없음 (Pro 7일 무료 체험, 카드 필요)",
+  "plans": [
+   {"name": "Pro", "price": 50, "currency": "USD", "period": "month", "limits": "7일 무료 체험, Otto·전문가 채팅, 일정 워크플로는 크레딧 지갑 사용", "page_lang": "en"},
+   {"name": "Max", "price": 320, "currency": "USD", "period": "month", "limits": "Pro 사용량 8.5배, 파일 저장 5배, 우선 지원", "page_lang": "en"},
+   {"name": "Team", "price": null, "currency": "USD", "period": null, "limits": "출시 예정, 영업 문의", "page_lang": "en"}
+  ],
+  "pricing_url": "https://agpt.co/pricing/"
+ },
+ "open_source": "오픈소스(라이선스 이름 페이지에 미기재)",
+ "api": "있음",
+ "platforms": ["웹"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://agpt.co", "quote": "AutoGPT — Your team of AI Experts"},
+  {"field": "one_liner_ko", "url": "https://agpt.co", "quote": "Bring in specialists for content, sales, research, and the work that keeps coming back. Brief them in plain English. Let Otto coordinate."},
+  {"field": "what_it_does_ko", "url": "https://github.com/Significant-Gravitas/AutoGPT", "quote": "AutoGPT lets you build, deploy, and run AI agents that carry out complete workflows."},
+  {"field": "what_it_does_ko", "url": "https://github.com/Significant-Gravitas/AutoGPT", "quote": "then run the agent on demand, on a schedule, or from a trigger."},
+  {"field": "what_it_does_ko", "url": "https://agpt.co", "quote": "Choose app access and set spending guardrails for each Expert."},
+  {"field": "key_features", "url": "https://agpt.co/pricing/", "quote": "Otto Chat natural-language chat to coordinate experts, answer questions, and create or run workflows."},
+  {"field": "key_features", "url": "https://agpt.co/pricing/", "quote": "Dry-Run Self-Repair Loop newly-generated workflows are simulated, errors caught, and fixed automatically."},
+  {"field": "key_features", "url": "https://agpt.co/pricing/", "quote": "Visual Workflow Builder drag-and-drop graph builder for composing workflows from blocks."},
+  {"field": "key_features", "url": "https://agpt.co/pricing/", "quote": "Browser Automation multi-step browser tasks via Stagehand and a Chromium-backed agent browser."},
+  {"field": "key_features", "url": "https://agpt.co/pricing/", "quote": "MCP Tool Support discover and execute Model Context Protocol tools from any compatible MCP server."},
+  {"field": "key_features", "url": "https://github.com/Significant-Gravitas/AutoGPT", "quote": "Start from proven agents, add one to your library, and customize it for your work."},
+  {"field": "key_features", "url": "https://agpt.co", "quote": "GitHub Explore the code and self-host"},
+  {"field": "use_cases_ko", "url": "https://agpt.co", "quote": "AI SEO writer Maria · Briefs, drafts and page fixes"},
+  {"field": "use_cases_ko", "url": "https://agpt.co", "quote": "AI SDR Max · Prospect lists and first drafts"},
+  {"field": "use_cases_ko", "url": "https://agpt.co", "quote": "AI executive assistant Kai · Inbox sorted, meetings prepped"},
+  {"field": "pricing", "url": "https://agpt.co/pricing/", "quote": "7 days free, then $50/mo on Pro. Trial terms confirmed at checkout."},
+  {"field": "pricing", "url": "https://agpt.co/pricing/", "quote": "$320.00 / month"},
+  {"field": "pricing", "url": "https://agpt.co/pricing/", "quote": "Pro covers Otto and Expert chat. Scheduled workflow runs use your credit wallet"},
+  {"field": "open_source", "url": "https://agpt.co/docs/", "quote": "Our product is 100% open source and built by developers just like you."},
+  {"field": "api", "url": "https://agpt.co/pricing/", "quote": "APIs, SDKs & Developer Platform 13"},
+  {"field": "platforms", "url": "https://agpt.co", "quote": "Try the interactive demo"},
+  {"field": "korean_support", "url": "https://agpt.co", "quote": "화면에 보이는 언어 이름: English"}
+ ],
+ "mismatch": [],
+ "plan_change": [{"official": "오픈소스 셀프 호스트 외에 클라우드 구독 Pro $50/월(7일 체험), Max $320/월, Team 출시 예정", "diff": "'오픈소스(무료)' 분류는 셀프 호스트에만 맞고, 공식 사이트의 주력은 유료 클라우드 구독(크레딧 지갑 포함)임", "url": "https://agpt.co/pricing/"}]
+}

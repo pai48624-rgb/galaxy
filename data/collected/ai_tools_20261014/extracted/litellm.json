@@ -1,0 +1,141 @@
+{
+ "company": "BerriAI",
+ "one_liner_ko": "100개 이상 LLM 공급자를 OpenAI 형식 하나로 호출하게 해 주는 오픈소스 AI 게이트웨이.",
+ "what_it_does_ko": "LiteLLM은 OpenAI, Anthropic, Gemini, Bedrock, Azure 등 100개 이상 LLM 공급자를 OpenAI 형식의 단일 인터페이스로 부르게 해 주는 오픈소스·셀프호스팅 AI 게이트웨이다. Python SDK로 라이브러리처럼 쓰거나, 프록시 서버로 배포해 팀·조직의 중앙 게이트웨이로 쓸 수 있다. 앱·사람마다 예산과 속도 제한이 걸린 가상 키를 주고, 요청마다 비용을 기록하며, MCP 도구와 A2A 에이전트도 같은 게이트웨이로 연결한다.",
+ "key_features": [
+  "OpenAI 호환 단일 API(140+ 공급자, 1,800+ 모델)",
+  "가상 키·예산·속도 제한",
+  "요청별 비용(지출) 추적",
+  "가드레일(PII 마스킹·프롬프트 인젝션 등)",
+  "SSO 로그인·팀/프로젝트 범위 지정",
+  "MCP 게이트웨이",
+  "에이전트(A2A) 게이트웨이",
+  "Python SDK(스트리밍·재시도·폴백)"
+ ],
+ "use_cases_ko": [
+  "플랫폼 팀이 사내 전체에 모든 모델 접근을 열고 지출을 통제",
+  "앱 코드 변경 없이 백엔드 모델 교체"
+ ],
+ "pricing": {
+  "free_tier": "오픈소스·셀프호스팅 (자체 요금표는 페이지에 없음)",
+  "plans": [
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": null,
+    "period": null,
+    "limits": "가격 미표기, 영업 문의",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": null
+ },
+ "open_source": "오픈소스(라이선스 이름은 페이지에 없음)",
+ "api": "있음",
+ "platforms": [
+  "API",
+  "맥",
+  "리눅스",
+  "윈도"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.litellm.ai/",
+   "quote": "https://raw.githubusercontent.com/BerriAI/litellm/main/scripts/quickstart.sh"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/BerriAI/litellm",
+   "quote": "LiteLLM is an open source AI Gateway that gives you a single, unified interface to call 100+ LLM providers"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/BerriAI/litellm",
+   "quote": "Use it as a **Python SDK** for direct library integration, or deploy the **AI Gateway (Proxy Server)** as a centralized service for your team or organization."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.litellm.ai/",
+   "quote": "It gives one API to 100+ LLM providers, MCP tools, and A2A agents. It controls keys and budgets, and it records the cost of each request."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.litellm.ai/",
+   "quote": "One OpenAI-compatible API to 140+ providers and 1,800+ models. Swap models without changing app code."
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.litellm.ai/",
+   "quote": "Each app or person gets a virtual key with a budget and a rate limit."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.litellm.ai/",
+   "quote": "One login with SSO , scoped by team, project, or app."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.litellm.ai/",
+   "quote": "Guardrails pii-masking prompt-injection secret-detection"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.litellm.ai/",
+   "quote": "MCP Gateway Make all MCP tools available from one endpoint."
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.litellm.ai/",
+   "quote": "Agent Gateway Send agent-to-agent calls through the gateway."
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.litellm.ai/",
+   "quote": "The SDK also gives streaming, retries, fallbacks, and the cost of each call."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.litellm.ai/",
+   "quote": "Put your full AI stack behind one key. See who is driving spend, cap it before it runs, and send each request to the model that should handle it."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.litellm.ai/",
+   "quote": "If we decide to switch the backend model, it’s a simple configuration update in the gateway"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.litellm.ai/",
+   "quote": "Open source. Self-hosted."
+  },
+  {
+   "field": "pricing",
+   "url": "https://github.com/BerriAI/litellm",
+   "quote": "Enterprise Tier"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/BerriAI/litellm",
+   "quote": "Open Source AI Gateway for 100+ LLMs. Self-hosted. Enterprise-ready. Call any LLM in OpenAI format."
+  },
+  {
+   "field": "api",
+   "url": "https://docs.litellm.ai/",
+   "quote": "Apps in all programming languages send requests to the gateway in the OpenAI format."
+  },
+  {
+   "field": "platforms",
+   "url": "https://www.litellm.ai/",
+   "quote": "Quick start macOS & Linux Windows Python SDK"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.litellm.ai/",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

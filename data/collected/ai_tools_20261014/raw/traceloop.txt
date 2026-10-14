@@ -1,0 +1,334 @@
+=== [home] https://traceloop.com (lang=en)
+Traceloop - LLM Reliability Platform 
+ Traceloop is joining ServiceNow!
+ Learn more 
+ Home About Pricing Blog Docs 
+ Star 
+ Sign in
+ Book a Demo
+ Ship LLM Apps - 10x Faster
+ Traceloop turns evals and monitors into a continuous feedback loop - so every release gets better
+ Book a Demo
+ Try for Free
+ Quality Blind spots
+ Everyone's guessing 
+No one's sure
+ Spreadsheets stuffed with ad-hoc scores and gut-check metrics leave every result in doubt, wasting hours hunting down context across tabs.
+ Reggie
+ Have you tried it with claude 4? I heard it's really good so maybe...
+ 😫 2
+ Sam
+ No idea why it's better, it just is ...I think?
+ 🤯 1
+ LLM drift
+ You can’t fix 
+what you can't see
+ Model quality drops quietly — your users feel it before you do. Traceloop catches the failures before they hit production.
+ Priya
+ Users are complaining it’s acting weird again
+ 🤦 1
+ Alex
+ Feels like it's lost some of the tone we had before.
+ 😲 2
+ Take control of your LLM
+ Traceloop monitors what your model says, how fast it responds, and when things start to slip — so you can debug faster and deploy safely.
+ Start with raw data,
+end with real answers
+ Traceloop turns noisy LLM logs into clear insights — instantly
+ Start tracking in seconds
+ Just one line of code gets you live visibility into prompts, responses, latency, and more — no setup, no hassle.
+ Run quality checks with zero setup
+ Traceloop runs trusted checks like faithfulness, relevance, and safety using built-in metrics — applied automatically to your real data. Get a baseline understanding of model quality without writing a single test.
+ Define quality on your terms
+ Off-the-shelf metrics don’t always cut it. With Traceloop, you can define what quality means for your use case, annotate real examples, and train a custom evaluator that scores output the way you would.
+ Make quality part of the pipeline
+ Traceloop runs your standard and custom evaluations automatically — whether it’s on every pull request or in real time as your app runs. Catch issues early, enforce thresholds, and ship with confidence.
+ Traceloop is built for real-world teams
+ From startup to enterprise, cloud to air-gapped — we’ve got you covered.
+ Enterprise-ready by design
+ SOC 2 & HIPAA compliant. Deploy Traceloop in the cloud, on-prem, or air-gapped.
+ Open standards at the core
+ Traceloop is built on OpenTelemetry and ships with OpenLLMetry, our open-source SDK — giving you transparency without lock-in.
+ Works with every stack
+ Connect your LLMs in Python, TypeScript, Go, or Ruby using OpenLLMetry or our native OpenTelemetry-based gateway, Hub .
+ Compatible with the tools you actually use
+ Traceloop supports 20+ providers (OpenAI, Anthropic, Gemini, Bedrock, Ollama), vector DBs (Pinecone, Chroma), and frameworks like LangChain, LlamaIndex, and CrewAI.
+ Proudly open source with OpenLLMetry
+ Check out our GitHub repository 
+to see contributions and perhaps make your own!
+ Star 
+ Ready to Engineer reliable AI?
+ ‍ Start tracking, testing, and improving your LLMs with Traceloop — one line of code, full observability.
+ Start now
+ Deploy on-prem 
+ All systems online
+ Product
+ Sign In
+ Status
+ Trust
+ Product
+ Pricing
+ Docs
+ Company
+ About
+ Blog
+ Contact
+ Legal
+ Terms
+ Privacy
+ © 2026 Traceloop
+
+=== [pricing] https://traceloop.com/pricing/ (lang=en)
+Pricing | Traceloop - LLM Application Observability 
+ Traceloop is joining Service now!
+ Learn more 
+ Home About Pricing Blog Docs 
+ Star 
+ Sign in
+ Book a Demo
+ Yes, You Can Afford It.
+ Start for free and scale as you grow.
+ Free Forever
+ To check things out
+ $0 / mo
+ Up to 50K spans / month
+ Up to 5 Seats
+ 24 Hours Data Retention
+ Monitoring Dashboard
+ Evaluation Dashboard
+ CI/CD integration
+ Prompt Management
+ Try it out
+ Enterprise 
+ To get it into production
+ Let's chat
+ >50K spans / month
+ Unlimited Seats
+ Custom Data Retention
+ Monitoring Dashboard
+ Evaluation Dashboard
+ CI/CD integration
+ Prompt Management
+ SOC 2 Compliance
+ On-prem deployment option
+ Dedicated slack support
+ Get a demo
+ Traceloop is available for purchase on the AWS, GCP and Azure Marketplaces
+ Simplified legal, procurement, and contribute directly to your EDP spend.
+ AWS Marketplace
+ GCP Marketplace
+ Azure Marketplace
+ Free 14-day Trial
+ Frequently asked questions
+ Can I use OpenLLMetry for Free?
+ Yes! OpenLLMetry is Apache-2.0 licensed and you can use it for free, and connect it to any of the 25+ supported observability platforms (Traceloop included).
+ Can I try Traceloop for free?
+ Yes! You can sign up and use Traceloop for free, as long as you don't sent more than 50,000 spans a month. There is no seat limit, and all features are open.
+ What is a span?
+ A span is a common definition for tracing systems. A span is an event that is part of a trace in your system. Every call to an LLM (like OpenAI), and every call to a vector database is considered a span.
+ Can I deploy Traceloop in my own environment?
+ Yes! Traceloop can be deployed on-premise in any environment, including AWS, GCP, Azure, and any Kubernetes setup. We also support air-gapped and other restricted environments. Click here to get started. 
+ Ready to Engineer reliable AI?
+ ‍ Start tracking, testing, and improving your LLMs with Traceloop — one line of code, full observability.
+ Start now
+ Deploy on-prem 
+ All systems online
+ Product
+ Sign In
+ Status
+ Trust
+ Product
+ Pricing
+ Docs
+ Company
+ About
+ Blog
+ Contact
+ Legal
+ Terms
+ Privacy
+ © 2026 Traceloop
+
+=== [about] https://www.traceloop.com/docs/ (lang=en)
+Introduction - traceloop 
+ Documentation Index
+ Fetch the complete documentation index at: /docs/llms.txt 
+ Use this file to discover all available pages before exploring further.
+ Skip to main content 
+ traceloop home page 
+ Search...
+ ⌘ K Ask Assistant ⌘ I 
+ Community 
+ Support 
+ Start now 
+ Start now 
+ Search... 
+ Navigation 
+ Learn 
+ Introduction
+Documentation 
+OpenLLMetry 
+Hub 
+Dashboard API 
+Community 
+GitHub 
+ Learn 
+ Introduction 
+ Self-host 
+ Self-Hosting Overview 
+ Hybrid Deployment 
+ Full Platform Self-Hosting 
+ Troubleshooting Guide 
+ Datasets 
+ Quick Start 
+ SDK usage 
+ Playgrounds 
+ Quick Start 
+ Columns 
+ Evaluators 
+ Introduction 
+ Guardrails 
+ Custom Evaluators 
+ Made by Traceloop 
+ Evaluator Slugs 
+ Experiments 
+ Introduction 
+ Result Overview 
+ Run via SDK 
+ Monitoring 
+ Introduction 
+ Defining Monitors 
+ Using Monitors 
+ Prompt Management 
+ Quick Start 
+ Prompt Registry 
+ Fetching Prompts 
+ Settings 
+ Managing API Keys 
+ Projects and Environments 
+ Integrations 
+ Posthog 
+ Slack 
+ GitHub 
+ On this page 
+ Get Started - with OpenLLMetry SDK or Traceloop Hub 
+ Learn
+ Introduction
+ Monitor, debug and test the quality of your LLM outputs
+ Traceloop automatically monitors the quality of your LLM outputs. It helps you to debug and test changes to your models and prompts. 
+ Get real-time alerts about your model’s quality
+ Execution tracing for every request
+ Gradually rollout changes to models and prompts
+ Debug and re-run issues from production in your IDE
+ Need help using Traceloop? Ping us at [email protected] 
+ ​ 
+ Get Started - with OpenLLMetry SDK or Traceloop Hub 
+ Traceloop uses OpenTelemetry to monitor and trace your LLM application.
+You can install the OpenLLMetry SDK in your application, or use Traceloop Hub as a smart proxy to all your LLM calls. 
+ To get started, pick the language you are using and follow the instructions. 
+ Hub
+ Beta 
+ Python SDK
+ Available 
+ Typescript SDK
+ Available 
+ Go SDK
+ Beta 
+ Ruby SDK
+ Beta 
+ Was this page helpful?
+ Yes No 
+ Suggest edits 
+ Self-Hosting Overview
+ github twitter 
+ Powered by This documentation is built and hosted on Mintlify, a developer documentation platform 
+ Assistant 
+ Responses are generated using AI and may contain mistakes.
+
+=== [meta] https://traceloop.com
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/traceloop/openllmetry
+<p align="center">
+<a href="https://www.traceloop.com/openllmetry#gh-light-mode-only">
+<img width="600" src="https://raw.githubusercontent.com/traceloop/openllmetry/main/img/logo-light.png">
+</a>
+<a href="https://www.traceloop.com/openllmetry#gh-dark-mode-only">
+<img width="600" src="https://raw.githubusercontent.com/traceloop/openllmetry/main/img/logo-dark.png">
+</a>
+</p>
+<p align="center">
+  <p align="center">Open-source observability for your LLM application</p>
+</p>
+<h4 align="center">
+    <a href="https://traceloop.com/docs/openllmetry/getting-started-python"><strong>Get started »</strong></a>
+    <br />
+    <br />
+  <a href="https://traceloop.com/slack">Slack</a> |
+  <a href="https://traceloop.com/docs/openllmetry/introduction">Docs</a> |
+  <a href="https://www.traceloop.com/openllmetry">Website</a>
+</h4>
+
+<h4 align="center">
+  <a href="https://github.com/traceloop/openllmetry/releases">
+    <img src="https://img.shields.io/github/release/traceloop/openllmetry">
+  </a>
+  <a href="https://pepy.tech/project/opentelemetry-instrumentation-openai">
+  <img src="https://static.pepy.tech/badge/opentelemetry-instrumentation-openai/month">
+  </a>
+   <a href="https://github.com/traceloop/openllmetry/blob/main/LICENSE">
+    <img src="https://img.shields.io/badge/license-Apache 2.0-blue.svg" alt="OpenLLMetry is released under the Apache-2.0 License">
+  </a>
+  <a href="https://github.com/traceloop/openllmetry/actions/workflows/ci.yml">
+  <img src="https://github.com/traceloop/openllmetry/actions/workflows/ci.yml/badge.svg">
+  </a>
+  <a href="https://github.com/traceloop/openllmetry/issues">
+    <img src="https://img.shields.io/github/commit-activity/m/traceloop/openllmetry" alt="git commit activity" />
+  </a>
+  <a href="https://www.ycombinator.com/companies/traceloop"><img src="https://img.shields.io/website?color=%23f26522&down_message=Y%20Combinator&label=Backed&logo=ycombinator&style=flat-square&up_message=Y%20Combinator&url=https%3A%2F%2Fwww.ycombinator.com"></a>
+  <a href="https://github.com/traceloop/openllmetry/blob/main/CONTRIBUTING.md">
+    <img src="https://img.shields.io/badge/PRs-Welcome-brightgreen" alt="PRs welcome!" />
+  </a>
+  <a href="https://traceloop.com/slack">
+    <img src="https://img.shields.io/badge/chat-on%20Slack-blueviolet" alt="Slack community channel" />
+  </a>
+  <a href="https://twitter.com/traceloopdev">
+    <img src="https://img.shields.io/badge/follow-%40traceloopdev-1DA1F2?logo=twitter&style=social" alt="Traceloop Twitter" />
+  </a>
+</h4>
+
+**🎉 New**:
+Our semantic conventions are now part of OpenTelemetry! Join the [discussion](https://github.com/open-telemetry/community/blob/1c71595874e5d125ca92ec3b0e948c4325161c8a/projects/llm-semconv.md) and help us shape the future of LLM observability.
+
+Looking for the JS/TS version? Check out [OpenLLMetry-JS](https://github.com/traceloop/openllmetry-js).
+
+OpenLLMetry is a set of extensions built on top of [OpenTelemetry](https://opentelemetry.io/) that gives you complete observability over your LLM application. Because it uses OpenTelemetry under the hood, [it can be connected to your existing observability solutions](https://www.traceloop.com/docs/openllmetry/integrations/introduction) - Datadog, Honeycomb, and others.
+
+It's built and maintained by Traceloop under the Apache 2.0 license.
+
+The repo contains standard OpenTelemetry instrumentations for LLM providers and Vector DBs, as well as a Traceloop SDK that makes it easy to get started with OpenLLMetry, while still outputting standard OpenTelemetry data that can be connected to your observability stack.
+If you already have OpenTelemetry instrumented, you can just add any of our instrumentations directly.
+
+## 🚀 Getting Started
+
+The easiest way to get started is to use our SDK.
+For a complete guide, go to our [docs](https://traceloop.com/docs/openllmetry/getting-started-python).
+
+Install the SDK:
+
+```bash
+pip install traceloop-sdk
+```
+
+Then, to start instrumenting your code, just add this line to your code:
+
+```python
+from traceloop.sdk import Traceloop
+
+Traceloop.init()
+```
+
+That's it. You're now tracing your code with OpenLLMetry!
+If you're running this locally, you may want to disable batch sending, so y

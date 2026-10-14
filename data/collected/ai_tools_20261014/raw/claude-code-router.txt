@@ -1,0 +1,80 @@
+=== [github] https://github.com/musistudio/claude-code-router
+<div align="center">
+
+# Claude Code Router
+
+### Manage every agent and provider from one place.
+
+Connect Claude Code, Claude Design, Codex, Grok CLI, Kimi CLI, Kilo Code, OpenCode, Pi, ZCode, WorkBuddy, and compatible API clients to the providers you choose—then route, fail over, extend, and observe every request from one app.
+
+<p>
+  <a href="https://github.com/musistudio/claude-code-router/releases"><img alt="Download Desktop" src="https://img.shields.io/badge/Download-Desktop_App-2563EB?style=for-the-badge&logo=github&logoColor=white" /></a>
+  <a href="#quick-start"><img alt="Quick Start" src="https://img.shields.io/badge/Get_Started-Quick_Start-16A34A?style=for-the-badge&logo=rocket&logoColor=white" /></a>
+  <a href="https://ccrdesk.top/"><img alt="Read the Docs" src="https://img.shields.io/badge/Explore-Documentation-0F172A?style=for-the-badge&logo=readthedocs&logoColor=white" /></a>
+</p>
+
+<p>
+  <a href="README_zh.md"><img alt="Chinese README" src="https://img.shields.io/badge/%F0%9F%87%A8%F0%9F%87%B3-%E4%B8%AD%E6%96%87%E7%89%88-ff0000?style=flat" /></a>
+  <a href="https://discord.gg/rdftVMaUcS"><img alt="Discord" src="https://img.shields.io/badge/Discord-%235865F2.svg?&logo=discord&logoColor=white" /></a>
+  <a href="https://x.com/musistudio2026"><img alt="X" src="https://img.shields.io/badge/X-@musistudio2026-000000?logo=x&logoColor=white" /></a>
+  <a href="https://github.com/musistudio/claude-code-router/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/github/license/musistudio/claude-code-router" /></a>
+</p>
+
+<br />
+
+<img src="blog/images/claude-code-router.png" width="820" alt="Claude Code Router Desktop dashboard" />
+
+</div>
+
+## Why use Claude Code Router?
+
+Claude Code Router (CCR) is a local model gateway and control plane for coding agents. It gives Claude Code, Claude Design, Codex, Grok CLI, Kimi CLI, Kilo Code, OpenCode, Pi, ZCode, WorkBuddy, and compatible API clients **one stable local endpoint**, while you manage the providers, models, accounts, routing rules, and tools behind it from one place.
+
+Use CCR to:
+
+- **Manage all agents and providers together** instead of maintaining a separate model configuration for every client.
+- **Switch providers or models without changing your workflow** or repeatedly editing agent configuration files.
+- **Keep requests running** with retries, credential pools, key rotation, and ordered fallback models.
+- **Add capabilities to existing models** with Fusion vision, web search, MCP tools, and ToolHub.
+- **See what actually happened** through request logs, resolved routes, latency, token usage, cost estimates, and account status.
+
+CCR supports OpenAI Chat / Responses, Anthropic Messages, Gemini Generate Content / Interactions, OpenRouter, DeepSeek, SiliconFlow, Moonshot, Kimi Code, Mistral, Z.AI, Bailian, and custom compatible providers.
+
+<details open>
+<summary><strong>Supported Agents</strong></summary>
+
+<div align="center">
+
+<table width="100%">
+  <tr>
+    <td align="center" width="20%">
+      <a href="https://github.com/anthropics/claude-code">
+        <img src="/packages/ui/src/assets/agent-logos/claude-code.png" width="44" height="44" alt="Claude Code logo" />
+        <br />
+        <strong>Claude Code (CLI & APP)</strong>
+      </a>
+    </td>
+    <td align="center" width="20%">
+      <a href="https://github.com/openai/codex">
+        <img src="/packages/ui/src/assets/agent-logos/codex.png" width="44" height="44" alt="Codex logo" />
+        <br />
+        <strong>Codex (CLI & APP)</strong>
+      </a>
+    </td>
+    <td align="center" width="20%">
+      <a href="https://github.com/xai-org/grok-build">
+        <img src="/packages/ui/src/assets/agent-logos/grok.ico" width="44" height="44" alt="Grok CLI logo" />
+        <br />
+        <strong>Grok CLI (CLI)</strong>
+      </a>
+    </td>
+    <td align="center" width="20%">
+      <a href="https://github.com/MoonshotAI/kimi-cli">
+        <img src="/docs/public/provider-icons/moonshot.ico" width="44" height="44" alt="Kimi CLI logo" />
+        <br />
+        <strong>Kimi CLI (CLI)</strong>
+      </a>
+    </td>
+    <td align="center" width="20%">
+      <a href="https://kilo.ai/">
+        <img src="/packages/ui/sr

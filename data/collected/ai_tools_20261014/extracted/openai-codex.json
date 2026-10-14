@@ -1,0 +1,146 @@
+{
+ "company": "OpenAI",
+ "one_liner_ko": "OpenAI의 코딩 에이전트로, 로컬 CLI·IDE·데스크톱 앱과 클라우드(Codex Web)에서 쓰며 ChatGPT 요금제에 포함된다.",
+ "what_it_does_ko": "Codex는 OpenAI의 코딩 에이전트다. 로컬 컴퓨터에서 도는 Codex CLI, 코드 에디터(VS Code, Cursor, Windsurf)용 IDE 확장, 데스크톱 앱, 클라우드 기반 에이전트 Codex Web으로 제공된다. ChatGPT 계정으로 로그인해 Plus, Pro, Business, Edu, Enterprise 요금제의 일부로 쓰는 것을 권장하며, API 키로도 쓸 수 있다. ChatGPT 요금표에서 Free·Go는 제한적 Codex 이용, Plus는 Codex 사용, Pro는 한도 확장으로 표시된다. (공식 Codex 소개 페이지는 수집 시 열리지 않음)",
+ "key_features": [
+  "로컬에서 실행되는 Codex CLI",
+  "VS Code·Cursor·Windsurf IDE 확장",
+  "데스크톱 앱(codex app)",
+  "클라우드 에이전트 Codex Web",
+  "ChatGPT 계정 로그인으로 요금제 한도 사용",
+  "API 키 사용 지원"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": "있음 (ChatGPT Free ₩0/월, 제한적 Codex 이용)",
+  "plans": [
+   {
+    "name": "Free",
+    "price": 0,
+    "currency": "KRW",
+    "period": "month",
+    "limits": "제한적 Codex 이용",
+    "page_lang": "ko-KR"
+   },
+   {
+    "name": "Go",
+    "price": 13000,
+    "currency": "KRW",
+    "period": "month",
+    "limits": "제한적 Codex 이용, 광고 포함 가능",
+    "page_lang": "ko-KR"
+   },
+   {
+    "name": "Plus",
+    "price": 29000,
+    "currency": "KRW",
+    "period": "month",
+    "limits": "Codex 사용 한도 확대",
+    "page_lang": "ko-KR"
+   },
+   {
+    "name": "Pro",
+    "price": 159000,
+    "currency": "KRW",
+    "period": "month",
+    "limits": "From 표기, 3가지 사용량 등급, Codex 한도 확장",
+    "page_lang": "ko-KR"
+   }
+  ],
+  "pricing_url": "https://chatgpt.com/ko-KR/pricing/"
+ },
+ "open_source": "Apache-2.0",
+ "api": "불명",
+ "platforms": [
+  "CLI",
+  "웹",
+  "맥",
+  "윈도"
+ ],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://github.com/openai/codex",
+   "quote": "<strong>Codex CLI</strong> is a coding agent from OpenAI that runs locally on your computer."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/openai/codex",
+   "quote": "If you are looking for the <em>cloud-based agent</em> from OpenAI, <strong>Codex Web</strong>, go to"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/openai/codex",
+   "quote": "We recommend signing into your ChatGPT account to use Codex as part of your Plus, Pro, Business, Edu, or Enterprise plan."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/openai/codex",
+   "quote": "If you want Codex in your code editor (VS Code, Cursor, Windsurf),"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/openai/codex",
+   "quote": "If you want the desktop app experience, run <code>codex app</code>"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/openai/codex",
+   "quote": "You can also use Codex with an API key, but this requires"
+  },
+  {
+   "field": "pricing",
+   "url": "https://chatgpt.com/ko-KR/pricing/",
+   "quote": "ChatGPT를 체험해 보기에 적합\n ₩0 /월"
+  },
+  {
+   "field": "pricing",
+   "url": "https://chatgpt.com/ko-KR/pricing/",
+   "quote": "더 긴 대화에 적합\n ₩13,000 /월"
+  },
+  {
+   "field": "pricing",
+   "url": "https://chatgpt.com/ko-KR/pricing/",
+   "quote": "고차원적인 작업과 생산성 향상에 최적\n ₩29,000 /월"
+  },
+  {
+   "field": "pricing",
+   "url": "https://chatgpt.com/ko-KR/pricing/",
+   "quote": "From\n ₩159,000 /월"
+  },
+  {
+   "field": "pricing",
+   "url": "https://chatgpt.com/ko-KR/pricing/",
+   "quote": "제한적 플랜: Free, 기능: Codex, 제한적"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/openai/codex",
+   "quote": "This repository is licensed under the [Apache-2.0 License](LICENSE)."
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/openai/codex",
+   "quote": "Run the following on Windows to install Codex CLI:"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/openai/codex",
+   "quote": "Run the following on Mac or Linux to install Codex CLI:"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://chatgpt.com/ko-KR/pricing/",
+   "quote": "개인·비즈니스·엔터프라이즈용 ChatGPT 플랜 가격을 자세히 비교해 보세요"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "Codex는 별도 요금제 없이 ChatGPT 요금제(Free ₩0·Go ₩13,000·Plus ₩29,000·Pro ₩159,000부터/월)에 포함, 등급별 사용 한도 차등",
+   "diff": "독자 구독이 아니라 ChatGPT 구독에 묶인 구조",
+   "url": "https://chatgpt.com/ko-KR/pricing/"
+  }
+ ]
+}

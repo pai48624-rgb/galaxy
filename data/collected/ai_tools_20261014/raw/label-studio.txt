@@ -1,0 +1,260 @@
+=== [home] https://labelstud.io (lang=en)
+Open Source Data Labeling and AI Evaluation | Label Studio 
+ New Video Object Segmentation and Tracking for SAM 2 
+Use Cases
+ Playground 
+ Templates 
+Learn
+ Blog 
+ Videos 
+ Tutorials 
+Community
+ Academic Program 
+Docs
+ Quick start 
+ Install 
+ Import Data 
+ API & SDK Reference 
+ Customizable Tags 
+ Labeling Templates 
+Integrations
+Enterprise
+ Platform 
+ Services 
+ Quick Start 
+ Label any data .
+Evaluate any AI. 
+ The open source platform for data labeling, AI evaluation, and human-in-the-loop workflows. 
+ Download OSS Compare Versions 
+Last Commit: 
+Latest version: 
+ Quick Start 
+ PIP 
+ Brew 
+ Git 
+ Docker 
+# Install the package # into python virtual environment
+ pip install -U label-studio # Launch it! label-studio 
+ # Install the cask brew install humansignal/tap/label-studio # Launch it! label-studio 
+ # clone repo 
+git clone https://github.com/HumanSignal/label-studio.git
+ # install dependencies 
+cd label-studio pip install poetry poetry install
+ # apply db migrations poetry run python label_studio/manage.py migrate # collect static files 
+poetry run python label_studio/manage.py collectstatic
+ # launch poetry run python label_studio/manage.py runserver 
+ # Run latest Docker version 
+docker run -it -p 8080:8080 -v `pwd`/mydata:/label-studio/data
+ heartexlabs/label-studio:latest
+ # Now visit http://localhost:8080/ 
+ Supports All Data Modalities 
+ From training data to production AI evaluation 
+ AI Evaluation 
+ Computer Vision 
+ Document & NLP 
+ Audio & Speech 
+ Time series 
+ Multi-Modal 
+ LLM & Agent Evaluation 
+ Agentic Traces 
+ Connect observability tools to enable human-in-the-loop review 
+ RLHF & Fine-Tuning 
+ Collect human preferences, corrections, rankings 
+ LLM Evaluations 
+ Create custom benchmarks and rubrics, side-by-side comparison 
+ RAG & Retrieval QA 
+ Evaluate retrieval relevance, grade generated answers against source 
+ Quick Start 
+ Computer Vision 
+ Image Classification 
+ Put images into categories 
+ Object Detection 
+ Detect objects on image, boxes, polygons, circular, and keypoints supported 
+ Object Tracking 
+ Label and track multiple objects frame-by-frame 
+ Semantic Segmentation 
+ Partition image into multiple segments. Use ML models to pre-label and optimize the process 
+ Quick Start 
+ NLP, Documents, Chatbots 
+ PDF & Image OCR 
+ Annotate complex, large-scale documents with ease 
+ Named Entity Recognition 
+ Extract and put relevant bits of information into pre-defined categories 
+ Question Answering 
+ Answer questions based on context 
+ Sentiment Analysis 
+ Determine whether a document is positive, negative or neutral 
+ Quick Start 
+ Audio & Speech 
+ Audio Transcription 
+ Advanced interface for speed and precision at scale 
+ Waveform or Spectrogram 
+ Supports advanced audio files and use cases 
+ Speaker Diarization 
+ Partition an input audio stream into homogeneous segments according to the speaker identity 
+ Emotion Recognition 
+ Tag and identify emotion from the audio 
+ Quick Start 
+ Robots, Sensors, IoT Devices 
+ Classification 
+ Put time series into categories 
+ Segmentation 
+ Identify regions relevant to the activity type you're building your ML algorithm for 
+ Event Recognition 
+ Label single events on plots of time series data 
+ Quick Start 
+ Multi-Modal 
+ Dialogue Processing 
+ Call center recording can be simultaneously transcribed and processed as text 
+ Optical Character Recognition 
+ Put an image and text right next to each other 
+ Time Series with Reference 
+ Use video or audio streams to easier segment time series data 
+ Quick Start 
+ The most flexible labeling platform 
+ Fits your stack, not the other way around 
+ Programmable Interfaces 
+ Custom layouts and templates adapt to your data, tasks, and evaluation criteria. 
+ Native to your ML / AI Pipeline 
+ API, Python SDK, and webhooks let you create projects, stream predictions, and trigger training, active learning, and evaluation workflows in real time. 
+ Connect Any Data or Models 
+ Sync data from any storage and connect any model to power AI-assisted labeling, benchmarking, and continuous model evaluation. 
+ Trusted by Leading AI Builders 
+ 1M+ AI Practitioners 
+ Join the vibrant, global community using Label Studio to build the best AI 
+Millions
+of data items labeled
+ 20,000+ 
+Slack members
+GitHub stars
+ Thanks to our Core Contributors 
+Join Community
+ From the Blog 
+ View All Articles 
+ {icon && }
+ {type === "blog" ? "Article" : type}
+ )
+ } --> Insights 
+ Rubric Design: The Missing Layer Between Guidelines and Good Annotations 
+ Guidelines that read clearly can still produce annotators who disagree. Rubric design is the missing layer, and this post shows how we make it explicit, inspectable, and testable before labeling starts. 
+ Nikolai Liubimov 
+ CTO 
+ {icon && }
+ {type === "blog" ? "Article" : type}
+ )
+ } --> Medical AI 
+ Annotating DICOM without flattening it to PNGs 
+ Most teams convert DICOM to PNG before labeling, losing windowing and structure data. Label Studio Enterprise reads DICOM natively, so annotators keep windowing, structures, and slice geometry intact. 
+ HumanSignal Team 
+ September 30, 2026 
+ {icon && }
+ {type === "blog" ? "Article" : type}
+ )
+ } --> Physical AI 
+ LiDAR annotation without the tool sprawl: point clouds, camera fusion, and tracking in one workspace 
+ Point clouds, calibrated cameras, temporal tracks, and QA belong in one workspace. Here is how the LiDAR interface in Label Studio Enterprise keeps them together. 
+ HumanSignal Team 
+ September 18, 2026 
+Products
+ Community Edition 
+ Enterprise 
+ Pricing 
+Community
+ Blog 
+ Newsletter 
+ Slack 
+ Discourse 
+ Learning Center 
+ Academic Program 
+Documentation
+ Quick start 
+ API & SDK Reference 
+ Customizable Tags 
+ Labeling Templates 
+ Tutorials 
+Company
+ About Us 
+ Careers 
+ Contact 
+ Privacy 
+Quick Start
+© 2026 HumanSignal, Inc.
+
+=== [meta] https://labelstud.io
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/HumanSignal/label-studio
+<img src="https://user-images.githubusercontent.com/12534576/192582340-4c9e4401-1fe6-4dbb-95bb-fdbba5493f61.png"/>
+
+![GitHub](https://img.shields.io/github/license/heartexlabs/label-studio?logo=heartex) ![label-studio:build](https://github.com/HumanSignal/label-studio/workflows/label-studio:build/badge.svg) ![GitHub release](https://img.shields.io/github/v/release/heartexlabs/label-studio?include_prereleases)
+
+[Website](https://labelstud.io/) • [Docs](https://labelstud.io/guide/) • [Join Slack Community <img src="https://app.heartex.ai/docs/images/slack-mini.png" width="18px"/>](https://slack.labelstud.io/?source=github-1)
+
+
+## What is Label Studio?
+
+<!-- <a href="https://labelstud.io/blog/release-130.html"><img src="https://github.com/HumanSignal/label-studio/raw/master/docs/themes/htx/source/images/release-130/LS-Hits-v1.3.png" align="right" /></a> -->
+
+Label Studio is an open source data labeling tool. It lets you label data types like audio, text, images, videos, and time series with a simple and straightforward UI and export to various model formats. It can be used to prepare raw data or improve existing training data to get more accurate ML models.
+
+- [Try out Label Studio](#try-out-label-studio)
+- [What you get from Label Studio](#what-you-get-from-label-studio)
+- [Included templates for labeling data in Label Studio](#included-templates-for-labeling-data-in-label-studio)
+- [Set up machine learning models with Label Studio](#set-up-machine-learning-models-with-Label-Studio)
+- [Integrate Label Studio with your existing tools](#integrate-label-studio-with-your-existing-tools)
+
+![Gif of Label Studio annotating different types of data](/images/annotation_examples.gif)
+
+Have a custom dataset? You can customize Label Studio to fit your needs. Read an [introductory blog post](https://towardsdatascience.com/introducing-label-studio-a-swiss-army-knife-of-data-labeling-140c1be92881) to learn more. 
+
+## Try out Label Studio
+
+Install Label Studio locally or deploy it in a cloud instance. [Or sign up for a free trial of our Starter Cloud edition!](https://humansignal.com/platform/starter-cloud/) You can learn more about what each edition offers [here](https://labelstud.io/guide/label_studio_compare). 
+
+- [Install locally with Docker](#install-locally-with-docker)
+- [Run with Docker Compose (Label Studio + Nginx + PostgreSQL)](#run-with-docker-compose)
+- [Install locally with pip](#install-locally-with-pip)
+- [Install locally with poetry](#install-locally-with-poetry)
+- [Install locally with Anaconda](#install-locally-with-anaconda)
+- [Install for local development](#install-for-local-development)
+- [Deploy in a cloud instance](#deploy-in-a-cloud-instance)
+
+### Install locally with Docker
+Official Label Studio docker image is [here](https://hub.docker.com/r/heartexlabs/label-studio) and it can be downloaded with `docker pull`. 
+Run Label Studio in a Docker container and access it at `http://localhost:8080`.
+
+
+```bash
+docker pull heartexlabs/label-studio:latest
+docker run -it -p 8080:8080 -v $(pwd)/mydata:/label-studio/data heartexlabs/label-studio:latest
+```
+You can find all the generated assets, including SQLite3 database storage `label_studio.sqlite3` and uploaded files, in the `./mydata` directory.
+
+#### Override default Docker install
+You can override the default launch command by appending the new arguments:
+```bash
+docker run -it -p 8080:8080 -v $(pwd)/mydata:/label-studio/data heartexlabs/label-studio:latest label-studio --log-level DEBUG
+```
+
+#### Build a local image with Docker
+If you want to build a local image, run:
+```bash
+docker build -t heartexlabs/label-studio:latest .
+```
+
+### Run with Docker Compose
+Docker Compose script provides production-ready stack consisting of the following components:
+
+- Label Studio
+- [Nginx](https://www.nginx.com/) - proxy web server used to load various static data, including uploaded audio, images, etc.
+- [PostgreSQL](https://www.postgresql.org/) - production-ready database that replaces less performant SQLite3.
+
+To start using the app from `http://localhost` run this command:
+```bash
+docker-compose up
+```
+
+### Run with Docker Compose + MinIO
+You can also run it with an additional MinI

@@ -1,0 +1,189 @@
+{
+ "company": "CodeRabbit",
+ "one_liner_ko": "에이전트가 만든 코드 변경을 리뷰·우선순위·이해·보안 점검까지 해 주는 AI 코드 리뷰 플랫폼.",
+ "what_it_does_ko": "CodeRabbit은 에이전트가 만든 코드 변경을 리뷰하고 우선순위를 정하고 이해하고 보안 점검하도록 돕는다. 모든 PR을 자동으로 리뷰해 버그를 잡고 기준을 지키게 하며, 팀 피드백에서 배우고 원클릭 수정을 제안한다. Triage는 PR 대기열을 가치·위험 기준으로 순위 매겨 알맞은 리뷰어에게 보내고, Change Stack은 큰 diff를 이해하기 쉽게 보여 준다. CodeRabbit Security는 저장소의 취약점·유출된 비밀값·취약한 의존성을 검사한다.",
+ "key_features": [
+  "PR·CLI·IDE·에이전트 루프에서 AI 코드 리뷰",
+  "팀 피드백 학습(Learnings)과 원클릭 수정",
+  "PR 대기열 우선순위·리뷰어 배정(Triage)",
+  "큰 diff 설명(Change Stack, 의미 diff·영향 범위)",
+  "취약점·비밀값·의존성 보안 검사(CodeRabbit Security)",
+  "병합 전 검사·병합 후 작업 자동화",
+  "단위 테스트 자동 생성",
+  "Slack·Discord에서 코드베이스 질의"
+ ],
+ "use_cases_ko": [
+  "코딩 에이전트가 쏟아내는 PR을 팀이 검증·우선순위화",
+  "저장소·PR 보안 상시 감시"
+ ],
+ "pricing": {
+  "free_tier": "없음 (가격 페이지에는 14일 체험만)",
+  "plans": [
+   {
+    "name": "Essentials",
+    "price": 24,
+    "currency": "USD",
+    "period": "month",
+    "limits": "사용자당, 연간/월간 전환 표시(연간 20% 할인)",
+    "page_lang": "en"
+   },
+   {
+    "name": "Team",
+    "price": 48,
+    "currency": "USD",
+    "period": "month",
+    "limits": "사용자당, 테스트 생성·병합 후 작업·PR 대기열",
+    "page_lang": "en"
+   },
+   {
+    "name": "Advanced",
+    "price": 72,
+    "currency": "USD",
+    "period": "month",
+    "limits": "사용자당, 영향 범위 감사·상시 보안 모니터링",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": "USD",
+    "period": null,
+    "limits": "문의, SSO·감사 로그·API 접근",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://www.coderabbit.ai/pricing"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "CLI"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.coderabbit.ai/pricing",
+   "quote": "CodeRabbit Pricing | AI Code Review Plans"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://docs.coderabbit.ai/",
+   "quote": "Review, prioritize, understand, and secure agent-generated changes with CodeRabbit."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.coderabbit.ai/",
+   "quote": "Catches bugs, enforces standards, and learns from your team’s feedback. One-click fixes and continuous improvement"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.coderabbit.ai/",
+   "quote": "Prioritize your PR queue by value and risk, surface the changes that need attention, and route each pull request to the right reviewer."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.coderabbit.ai/",
+   "quote": "Scan repositories for code vulnerabilities, leaked secrets, and vulnerable dependencies"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.coderabbit.ai/pricing",
+   "quote": "Agentic code reviews in PR, CLI, IDE, and in agent loops"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.coderabbit.ai/pricing",
+   "quote": "Agent learns from your feedback"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.coderabbit.ai",
+   "quote": "With more PRs than ever ballooning your queue, CodeRabbit Triage scores, ranks, and routes them to ship value faster."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.coderabbit.ai",
+   "quote": "Change Stack helps you understand a thousand-line diff in minutes."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.coderabbit.ai",
+   "quote": "Semantic diffs Blast radius context Architectural diagrams"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.coderabbit.ai",
+   "quote": "Pre-Merge Checks & Post-Merge Actions Enforce standards before merge. Complete follow-up work after."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.coderabbit.ai/pricing",
+   "quote": "Generate comprehensive tests automatically for PRs, including edge cases and error conditions"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.coderabbit.ai/",
+   "quote": "CodeRabbit for Slack and Discord Investigate your codebase, generate implementation plans, and open pull requests from"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.coderabbit.ai",
+   "quote": "Coding agents are flooding pipelines with massive PRs faster than teams can validate, prioritize, understand, or secure them."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.coderabbit.ai/pricing",
+   "quote": "Continuous security monitoring of every repo and PR with severity, exploitability, and reachability"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.coderabbit.ai/pricing",
+   "quote": "Annual Plans saves 20% Monthly Plans"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.coderabbit.ai/pricing",
+   "quote": "$24 /user/mo."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.coderabbit.ai/pricing",
+   "quote": "$48 /user/mo."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.coderabbit.ai/pricing",
+   "quote": "$72 /user/mo."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.coderabbit.ai/pricing",
+   "quote": "Start Your 14-Day Trial"
+  },
+  {
+   "field": "api",
+   "url": "https://www.coderabbit.ai/pricing",
+   "quote": "API access and usage metrics"
+  },
+  {
+   "field": "platforms",
+   "url": "https://docs.coderabbit.ai/",
+   "quote": "AI code reviews on pull requests, IDE, and CLI"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.coderabbit.ai",
+   "quote": "화면에 보이는 언어 이름: English"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "Essentials $24·Team $48·Advanced $72/사용자/월·Enterprise 문의, 무료 요금제 없이 14일 체험만 표시",
+   "diff": "기존 '프리미엄(무료+유료 구독)'과 달리 영구 무료 요금제가 가격 페이지에 없음(유료 구독+체험)",
+   "url": "https://www.coderabbit.ai/pricing"
+  }
+ ],
+ "plan_change": []
+}

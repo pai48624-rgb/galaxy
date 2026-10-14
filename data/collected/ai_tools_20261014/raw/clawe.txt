@@ -1,0 +1,148 @@
+=== [github] https://github.com/getclawe/clawe
+<div align="center">
+  <img src="./docs/images/clawe-logo.png" alt="Clawe" width="600" />
+  <p><strong>A multi-agent coordination system powered by <a href="https://github.com/openclaw/openclaw">OpenClaw</a>.</strong></p>
+  <p>Deploy a team of AI agents that work together, each with their own identity, workspace, and scheduled heartbeats. Coordinate tasks, share context, and deliver notifications in near real-time.</p>
+</div>
+
+<div align="center">
+  <video src="https://github.com/user-attachments/assets/d2f892d9-4c32-4c31-95e5-222d4ea87592" width="600" controls>
+    <a href="https://www.clawe.ai/assets/clawe-demo.mp4">
+      <img src="./docs/images/board.png" alt="Clawe" width="600" />
+      <br>▶ Watch demo
+    </a>
+  </video>
+</div>
+
+## Features
+
+- Run multiple AI agents with distinct roles and personalities
+- Agents wake on cron schedules to check for work
+- Kanban-style task management with assignments and subtasks
+- Instant delivery of @mentions and task updates
+- Agents collaborate through shared files and Convex backend
+- Monitor squad status, tasks, and chat with agents from a web dashboard
+
+## Quick Start
+
+### Prerequisites
+
+- Docker & Docker Compose
+- [Convex](https://convex.dev) account (free tier works)
+- Anthropic API key
+
+### 1. Clone and Setup
+
+```bash
+git clone https://github.com/getclawe/clawe.git
+cd clawe
+cp .env.example .env
+```
+
+### 2. Configure Environment
+
+Edit `.env`:
+
+```bash
+# Required
+SQUADHUB_TOKEN=your-secure-token
+CONVEX_URL=https://your-deployment.convex.cloud
+
+# API keys (Anthropic, OpenAI) are configured via the UI during onboarding
+```
+
+### 3. Deploy Convex Backend
+
+```bash
+pnpm install
+cd packages/backend
+npx convex deploy
+```
+
+### 4. Start the System
+
+**Production (recommended):**
+
+```bash
+./scripts/start.sh
+```
+
+This script will:
+
+- Create `.env` from `.env.example` if missing
+- Auto-generate a secure `SQUADHUB_TOKEN`
+- Validate all required environment variables
+- Build necessary packages
+- Start the Docker containers
+
+**Development:**
+
+```bash
+# Start squadhub gateway only (use local web dev server)
+pnpm dev:docker
+
+# In another terminal, start web + Convex
+pnpm dev
+```
+
+The production stack starts:
+
+- **squadhub**: Gateway running all agents
+- **watcher**: Notification delivery + cron setup
+- **clawe**: Web dashboard at http://localhost:3000
+
+## The Squad
+
+Clawe comes with 4 pre-configured agents:
+
+| Agent    | Role           | Heartbeat    |
+| -------- | -------------- | ------------ |
+| 🦞 Clawe | Squad Lead     | Every 15 min |
+| ✍️ Inky  | Content Editor | Every 15 min |
+| 🎨 Pixel | Designer       | Every 15 min |
+| 🔍 Scout | SEO            | Every 15 min |
+
+Heartbeats are staggered to avoid rate limits.
+
+## Routines
+
+Schedule recurring tasks that automatically create inbox items:
+
+- Configure day/time schedules per routine
+- 1-hour trigger window for crash tolerance
+- Tasks created with Clawe as the creator
+- Manage via Settings → General in the dashboard
+
+## Architecture
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                     DOCKER COMPOSE                          │
+├─────────────────┬─────────────────────┬─────────────────────┤
+│    squadhub     │       watcher       │        clawe        │
+│                 │                     │                     │
+│  Agent Gateway  │  • Register agents  │  Web Dashboard      │
+│  with 4 agents  │  • Setup crons      │  • Squad status     │
+│                 │  • Deliver notifs   │  • Task board       │
+│                 │                     │  • Agent chat       │
+└────────┬────────┴──────────┬──────────┴──────────┬──────────┘
+         │                   │                     │
+         └───────────────────┼─────────────────────┘
+                             │
+                    ┌────────▼────────┐
+                    │     CONVEX      │
+                    │   (Backend)     │
+                    │                 │
+                    │  • Agents       │
+                    │  • Tasks        │
+                    │  • Notifications│
+                    │  • Activities   │
+                    └─────────────────┘
+```
+
+## Project Structure
+
+```
+clawe/
+├── apps/
+│   ├── web/              # Next.js dashbo

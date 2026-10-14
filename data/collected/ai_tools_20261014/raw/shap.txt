@@ -1,0 +1,177 @@
+=== [home] https://shap.readthedocs.io/en/latest/ (lang=en)
+Welcome to the SHAP documentation — SHAP latest documentation 
+ Introduction 
+ Topical overviews 
+ Examples 
+ Tabular examples 
+ Text examples 
+ Image examples 
+ Genomic examples 
+ Reference 
+ API reference 
+ API examples 
+ Benchmarks 
+ Development 
+ Release notes 
+ Contributing guide 
+ SHAP 
+ Welcome to the SHAP documentation
+ View page source 
+ Welcome to the SHAP documentation  
+ SHAP (SHapley Additive exPlanations) is a game theoretic approach to explain the output of
+any machine learning model. It connects optimal credit allocation with local explanations
+using the classic Shapley values from game theory and their related extensions (see
+ papers for details and citations).
+ Install  
+ SHAP can be installed from either PyPI or
+ conda-forge :
+ pip install shap 
+ or 
+ conda install - c conda - forge shap 
+ Introduction 
+ Topical overviews 
+ An introduction to explainable AI with Shapley values 
+ Be careful when interpreting predictive models in search of causal insights 
+ Explaining quantitative measures of fairness 
+ Examples 
+ Tabular examples 
+ Tree-based models 
+ Linear models 
+ Neural networks 
+ Model agnostic 
+ Text examples 
+ Sentiment analysis 
+ Translation 
+ Text generation 
+ Summarization 
+ Question Answering 
+ Language modelling 
+ Text entailment 
+ Image examples 
+ Image classification 
+ Image captioning 
+ Genomic examples 
+ DeepExplainer Genomics Example 
+ Reference 
+ API reference 
+ Explanation 
+ explainers 
+ plots 
+ maskers 
+ models 
+ utils 
+ datasets 
+ API examples 
+ Migrating to the new “Explanation” API 
+ explainers 
+ maskers 
+ models 
+ plots 
+ Benchmarks 
+ Image 
+ Tabular 
+ Text 
+ Others 
+ Development 
+ Release notes 
+ Contributing guide 
+ Next 
+ © Copyright 2018, Scott Lundberg.
+ Built with Sphinx using a
+ theme 
+ provided by Read the Docs .
+
+=== [meta] https://shap.readthedocs.io/en/latest/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/shap/shap
+
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/shap/shap/main/docs/artwork/shap_header.svg" width="800" />
+</p>
+
+---
+[![PyPI](https://img.shields.io/pypi/v/shap)](https://pypi.org/project/shap/)
+[![Conda](https://img.shields.io/conda/vn/conda-forge/shap)](https://anaconda.org/conda-forge/shap)
+![License](https://img.shields.io/github/license/shap/shap)
+![Tests](https://github.com/shap/shap/actions/workflows/run_tests.yml/badge.svg)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/shap/shap/main)
+[![Documentation Status](https://readthedocs.org/projects/shap/badge/?version=latest)](https://shap.readthedocs.io/en/latest/?badge=latest)
+![Downloads](https://img.shields.io/pypi/dm/shap)
+[![PyPI pyversions](https://img.shields.io/pypi/pyversions/shap)](https://pypi.org/pypi/shap/)
+
+
+**SHAP (SHapley Additive exPlanations)** is a game theoretic approach to explain the output of any machine learning model. It connects optimal credit allocation with local explanations using the classic Shapley values from game theory and their related extensions (see [papers](#citations) for details and citations).
+
+<!--**SHAP (SHapley Additive exPlanations)** is a unified approach to explain the output of any machine learning model. SHAP connects game theory with local explanations, uniting several previous methods [1-7] and representing the only possible consistent and locally accurate additive feature attribution method based on expectations (see our [papers](#citations) for details and citations).-->
+
+
+
+## Install
+
+SHAP can be installed from either [PyPI](https://pypi.org/project/shap) or [conda-forge](https://anaconda.org/conda-forge/shap):
+
+<pre>
+pip install shap
+<i>or</i>
+conda install -c conda-forge shap
+</pre>
+
+### GPU support
+
+To enable GPU-accelerated Tree SHAP, install from source with the CUDA toolkit available and the `SHAP_ENABLE_CUDA` environment variable set:
+
+<pre>
+SHAP_ENABLE_CUDA=1 pip install .
+</pre>
+
+This requires the [CUDA toolkit](https://developer.nvidia.com/cuda-toolkit) to be installed on your system.
+
+## Supported versions
+
+SHAP follows [SPEC 0](https://scientific-python.org/specs/spec-0000/) for minimum supported dependency versions. We test against the versions specified there and may not fix bugs for older versions.
+
+## Contributing
+
+We welcome contributions highly. Feel free to file an issue. Before opening a PR make sure you've read our [CONTRIBUTING.md](CONTRIBUTING.md) guideline.
+
+## Tree ensemble example (XGBoost/LightGBM/CatBoost/scikit-learn/pyspark models)
+
+While SHAP can explain the output of any machine learning model, we have developed a high-speed exact algorithm for tree ensemble methods (see our [Nature MI paper](https://rdcu.be/b0z70)). Fast C++ implementations are supported for *XGBoost*, *LightGBM*, *CatBoost*, *scikit-learn* and *pyspark* tree models:
+
+```python
+import xgboost
+import shap
+
+# train an XGBoost model
+X, y = shap.datasets.california()
+model = xgboost.XGBRegressor().fit(X, y)
+
+# explain the model's predictions using SHAP
+# (same syntax works for LightGBM, CatBoost, scikit-learn, transformers, Spark, etc.)
+explainer = shap.Explainer(model)
+shap_values = explainer(X)
+
+# visualize the first prediction's explanation
+shap.plots.waterfall(shap_values[0])
+```
+
+<p align="center">
+  <img width="616" src="./docs/artwork/california_waterfall.png" />
+</p>
+
+The above explanation shows features each contributing to push the model output from the base value (the average model output over the training dataset we passed) to the model output. Features pushing the prediction higher are shown in red, those pushing the prediction lower are in blue. Another way to visualize the same explanation is to use a force plot (these are introduced in our [Nature BME paper](https://rdcu.be/baVbR)):
+
+```python
+# visualize the first prediction's explanation with a force plot
+shap.plots.force(shap_values[0])
+```
+
+<p align="center">
+  <img width="811" src="./docs/artwork/california_instance.png" />
+</p>
+
+If we take many force plot explanations such as the one shown above, rotate them 90 degrees, and then stack them horizontally, we can see explanations for an entire dataset (in

@@ -1,0 +1,62 @@
+{
+ "company": "Fiddler AI",
+ "one_liner_ko": "모니터링·평가, 정책 집행, 거버넌스를 하나의 시스템으로 묶은 기업용 AI 에이전트 컨트롤 플레인.",
+ "what_it_does_ko": "Fiddler는 자체·외부 에이전트를 생성 단계부터 운영까지 관리하는 AI 컨트롤 플레인이다. 지속적 평가, 모니터링, 정책 집행, 감사 가능한 거버넌스를 제공해 기업이 AI를 신뢰 속에 확장하게 한다. 자체 Fiddler Centor 모델이 외부 LLM API 호출 없이 환경 안에서 가드레일과 평가를 저지연·저비용으로 실행한다. 전통적 ML 모델, LLM 애플리케이션, 멀티 에이전트 시스템을 함께 관측하며 SaaS·VPC·AWS GovCloud에 배포할 수 있다.",
+ "key_features": [
+  "에이전트 관측성(Agentic Observability)",
+  "테스트부터 운영까지 지속적 평가(Continuous Evaluations)",
+  "80ms 미만 실시간 가드레일(환각·유해성·PII/PHI·프롬프트 인젝션·탈옥)",
+  "요청·응답 경로에서 PII·PHI·비밀정보 탐지·가림",
+  "감사 가능한 AI 거버넌스·리스크·컴플라이언스",
+  "전통 ML 모델 관측성",
+  "평가·가드레일용 Fiddler Centor 모델",
+  "100개 이상 기본 지표와 맞춤 지표"
+ ],
+ "use_cases_ko": [
+  "금융·의료·보험·정부 등 규제 산업의 에이전트 운영",
+  "에이전트·예측 모델의 정확성·안전성·규정 준수 관리",
+  "코딩 에이전트 요청에 대한 정책 집행"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Free: 실시간 가드레일, 데모 요청 방식)",
+  "plans": [
+   {"name": "Free", "price": 0, "currency": null, "period": null, "limits": "실시간 가드레일(환각·유해성·PII/PHI·인젝션·탈옥 차단)", "page_lang": "en"},
+   {"name": "Developer", "price": 0.002, "currency": "USD", "period": "usage", "limits": "trace당 $0.002, 통합 관측성·실험, 맞춤 평가기, RBAC·SSO, SaaS", "page_lang": "en"},
+   {"name": "Enterprise", "price": null, "currency": null, "period": null, "limits": "영업 문의, SaaS·VPC·온프레미스 배포, 전담 지원", "page_lang": "en"}
+  ],
+  "pricing_url": "https://www.fiddler.ai/pricing"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["웹", "API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://www.fiddler.ai/pricing", "quote": "© 2026 Fiddler AI. All rights reserved."},
+  {"field": "one_liner_ko", "url": "https://www.fiddler.ai/", "quote": "The Control Plane for Enterprise AI Agents\n Monitoring and evals, enforcement, and governance across the lifecycle and in one system."},
+  {"field": "what_it_does_ko", "url": "https://www.fiddler.ai/", "quote": "Fiddler is the AI Control Plane , the system of trust, for first-party and third-party agents from the creation layer to production."},
+  {"field": "what_it_does_ko", "url": "https://www.fiddler.ai/", "quote": "Fiddler Centor Models power guardrails and evaluations in-environment, with no external LLM API calls"},
+  {"field": "what_it_does_ko", "url": "https://docs.fiddler.ai/", "quote": "The only platform delivering enterprise-grade visibility, context, and control across traditional ML models, LLM applications, and autonomous multi-agent systems."},
+  {"field": "what_it_does_ko", "url": "https://www.fiddler.ai/", "quote": "Security and scale in SaaS, VPC, and AWS GovCloud."},
+  {"field": "key_features", "url": "https://www.fiddler.ai/", "quote": "Agentic Observability\n End-to-end visibility, context, and control for the agentic lifecycle"},
+  {"field": "key_features", "url": "https://www.fiddler.ai/", "quote": "Continuous Evaluations\n In-environment evaluation from testing to production"},
+  {"field": "key_features", "url": "https://www.fiddler.ai/pricing", "quote": "Protects against hallucinations, Toxicity, PII/PHI, Prompt Injection, and Jailbreak attempts\n Latency of <80ms"},
+  {"field": "key_features", "url": "https://www.fiddler.ai/", "quote": "Detects and redacts PII, PHI, and secrets on the same request"},
+  {"field": "key_features", "url": "https://www.fiddler.ai/", "quote": "Centralized control and accountability for enterprise AI governance and compliance"},
+  {"field": "key_features", "url": "https://docs.fiddler.ai/", "quote": "ML Observability\n Monitor traditional ML models"},
+  {"field": "key_features", "url": "https://www.fiddler.ai/", "quote": "Fast and cost-effective models for evaluation and real-time policy enforcement"},
+  {"field": "key_features", "url": "https://www.fiddler.ai/", "quote": "100+ pre-defined metrics + any custom metric."},
+  {"field": "use_cases_ko", "url": "https://www.fiddler.ai/", "quote": "as well as highly regulated industries like financial services , healthcare , insurance , and government ."},
+  {"field": "use_cases_ko", "url": "https://www.fiddler.ai/", "quote": "responsible for keeping agents and predictive models accurate, safe, and compliant across their lifecycle."},
+  {"field": "use_cases_ko", "url": "https://www.fiddler.ai/", "quote": "How Fiddler enforces coding agents"},
+  {"field": "pricing", "url": "https://www.fiddler.ai/pricing", "quote": "Free\n Real-time guardrails to detect harmful exposure."},
+  {"field": "pricing", "url": "https://www.fiddler.ai/pricing", "quote": "$0.002 per trace"},
+  {"field": "pricing", "url": "https://www.fiddler.ai/pricing", "quote": "Flexible deployment: SaaS, VPC, or on-premise"},
+  {"field": "api", "url": "https://docs.fiddler.ai/", "quote": "Get started SDK & API reference Changelog"},
+  {"field": "platforms", "url": "https://www.fiddler.ai/pricing", "quote": "SaaS deployment"},
+  {"field": "korean_support", "url": "https://www.fiddler.ai/", "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [
+  {"official": "상용 SaaS 플랫폼: Free(가드레일) / Developer trace당 $0.002 / Enterprise 문의, 받은 본문 어디에도 오픈소스 언급 없음", "diff": "기존 분류는 '오픈소스 + 클라우드 매니지드 유료 플랜'이지만 공식 페이지에는 오픈소스 제품이 없고 종량제 상용 서비스로 보임", "url": "https://www.fiddler.ai/pricing"}
+ ],
+ "plan_change": []
+}

@@ -1,0 +1,169 @@
+{
+ "company": "Bloop AI Limited",
+ "one_liner_ko": "코딩 에이전트가 기다리는 사람의 계획·리뷰 작업을 빠르게 해 주는 칸반형 에이전트 관리 도구.",
+ "what_it_does_ko": "Vibe Kanban은 칸반 이슈로 작업을 계획하고, 준비가 되면 코딩 에이전트가 실행될 워크스페이스를 만드는 도구다. 워크스페이스를 만들면 선택한 저장소의 git worktree를 자동으로 만들고 코딩 에이전트를 띄운다. 여러 에이전트를 병렬로 돌리고 변경 사항을 리뷰·코멘트한 뒤 PR을 만들어 병합한다. 공식 페이지에 서비스 종료(sunsetting) 예정이며 오픈소스·커뮤니티 유지로 이어진다고 적혀 있다.",
+ "key_features": [
+  "칸반 보드에서 이슈 생성·우선순위·담당 지정",
+  "워크스페이스마다 브랜치·터미널·개발 서버 제공",
+  "diff 리뷰와 인라인 코멘트로 에이전트에 피드백",
+  "개발자도구·검사 모드·기기 에뮬레이션이 있는 내장 브라우저 미리보기",
+  "Claude Code·Codex·Gemini CLI 등 10개 이상 코딩 에이전트 전환",
+  "AI가 작성한 설명으로 PR 생성·병합",
+  "자체 호스팅(Docker Compose) 가능"
+ ],
+ "use_cases_ko": [
+  "코딩 에이전트로 개발하는 팀의 이슈·프로젝트 관리",
+  "여러 로컬 코딩 에이전트를 병렬로 돌리며 대기 시간 줄이기"
+ ],
+ "pricing": {
+  "free_tier": "있음 (1인, 핵심 기능)",
+  "plans": [
+   {
+    "name": "FREE",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "사용자 1명, 핵심 기능, 커뮤니티 지원",
+    "page_lang": "en"
+   },
+   {
+    "name": "PRO",
+    "price": 30,
+    "currency": "USD",
+    "period": "month",
+    "limits": "사용자당, 2~49명, 99.5% SLA, Discord 지원",
+    "page_lang": "en"
+   },
+   {
+    "name": "ENTERPRISE",
+    "price": null,
+    "currency": "USD",
+    "period": "month",
+    "limits": "맞춤 가격, 50명 이상, SSO/SAML, 99.9% SLA",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://www.vibekanban.com/pricing"
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "웹",
+  "CLI"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.vibekanban.com/pricing",
+   "quote": "© 2026 Bloop AI Limited. All rights reserved."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.vibekanban.com/",
+   "quote": "Accelerate the human planning and review your coding agents are waiting on"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/BloopAI/vibe-kanban",
+   "quote": "Use kanban issues to plan work, either privately or with your team. When you're ready to begin, create workspaces where coding agents can execute."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.vibekanban.com/docs/getting-started",
+   "quote": "When you create a workspace, Vibe Kanban automatically creates git worktrees for your selected repositories, and launches your coding agent."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.vibekanban.com/",
+   "quote": "Vibe Kanban is sunsetting. The project will continue as open source and community maintained."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/BloopAI/vibe-kanban",
+   "quote": "**Plan with kanban issues** — create, prioritise, and assign issues on a kanban board"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/BloopAI/vibe-kanban",
+   "quote": "each workspace gives an agent a branch, a terminal, and a dev server"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/BloopAI/vibe-kanban",
+   "quote": "**Review diffs and leave inline comments** — send feedback directly to the agent without leaving the UI"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/BloopAI/vibe-kanban",
+   "quote": "built-in browser with devtools, inspect mode, and device emulation"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/BloopAI/vibe-kanban",
+   "quote": "**Switch between 10+ coding agents**"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/BloopAI/vibe-kanban",
+   "quote": "open PRs with AI-generated descriptions, review on GitHub, and merge"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/BloopAI/vibe-kanban",
+   "quote": "Want to host your own Vibe Kanban Cloud instance?"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.vibekanban.com/",
+   "quote": "The ultimate project management tool for teams that ship with coding agents"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.vibekanban.com/",
+   "quote": "Run local coding agents in parallel"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.vibekanban.com/pricing",
+   "quote": "$ 0 /month"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.vibekanban.com/pricing",
+   "quote": "$ 30 /user/month"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.vibekanban.com/pricing",
+   "quote": "For teams of 2-49."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.vibekanban.com/pricing",
+   "quote": "Custom /month"
+  },
+  {
+   "field": "platforms",
+   "url": "https://www.vibekanban.com/docs/getting-started",
+   "quote": "Start the Vibe Kanban client and open the UI in your browser:"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/BloopAI/vibe-kanban",
+   "quote": "npx vibe-kanban"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.vibekanban.com/",
+   "quote": "html lang: en"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.vibekanban.com/",
+   "quote": "hreflang: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

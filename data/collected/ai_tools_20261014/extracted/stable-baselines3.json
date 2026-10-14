@@ -1,0 +1,43 @@
+{
+ "company": null,
+ "one_liner_ko": "PyTorch로 구현한 신뢰할 수 있는 강화학습 알고리즘 모음으로, Stable Baselines의 다음 주요 버전.",
+ "what_it_does_ko": "Stable Baselines3(SB3)는 PyTorch로 만든 신뢰할 수 있는 강화학습 알고리즘 구현 모음이며 Stable Baselines의 다음 주요 버전이다. A2C, DDPG, DQN, HER, PPO, SAC, TD3 같은 알고리즘을 통일된 구조로 제공하고 각 알고리즘의 성능을 시험했다. 연구계와 산업계가 결과를 재현·개선하고 새 방법을 기존 방법과 비교하는 기준선으로 쓰도록 만들었다. 학습 프레임워크 RL Baselines3 Zoo, 실험적 알고리즘 SB3 Contrib, Jax판 SBX가 함께 있으며 강화학습 기초 지식을 전제로 한다.",
+ "key_features": [
+  "A2C·DDPG·DQN·HER·PPO·SAC·TD3 알고리즘",
+  "모든 알고리즘에 통일된 구조와 공통 인터페이스",
+  "알고리즘별 성능 시험 결과 제공",
+  "TensorBoard 지원",
+  "사용자 정의 환경·정책",
+  "벡터화 환경(멀티프로세싱)",
+  "ONNX·TensorFlow.js·TFLite 등으로 모델 내보내기",
+  "Weights & Biases·Hugging Face·MLflow 연동"
+ ],
+ "use_cases_ko": [
+  "연구·산업에서 강화학습 결과 재현과 새 방법 비교 기준선",
+  "강화학습 입문자가 구현 세부에 묻히지 않고 고급 도구 실험"
+ ],
+ "pricing": {"free_tier": "불명", "plans": [], "pricing_url": null},
+ "open_source": null,
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "one_liner_ko", "url": "https://stable-baselines3.readthedocs.io/en/master/", "quote": "Stable Baselines3 (SB3) is a set of reliable implementations of reinforcement learning algorithms in PyTorch."},
+  {"field": "what_it_does_ko", "url": "https://github.com/DLR-RM/stable-baselines3", "quote": "These algorithms will make it easier for the research community and industry to replicate, refine, and identify new ideas, and will create good baselines to build projects on top of."},
+  {"field": "what_it_does_ko", "url": "https://stable-baselines3.readthedocs.io/en/master/", "quote": "RL Baselines3 Zoo provides a collection of pre-trained agents, scripts for training, evaluating agents, tuning hyperparameters, plotting results, and recording videos."},
+  {"field": "what_it_does_ko", "url": "https://github.com/DLR-RM/stable-baselines3", "quote": "Despite its simplicity of use, Stable Baselines3 (SB3) assumes you have some knowledge about Reinforcement Learning (RL)."},
+  {"field": "key_features", "url": "https://stable-baselines3.readthedocs.io/en/master/", "quote": "A2C \n DDPG \n DQN \n HER \n PPO \n SAC \n TD3"},
+  {"field": "key_features", "url": "https://stable-baselines3.readthedocs.io/en/master/", "quote": "Unified structure for all algorithms"},
+  {"field": "key_features", "url": "https://stable-baselines3.readthedocs.io/en/master/", "quote": "The performance of each algorithm was tested (see Results section in their respective page)"},
+  {"field": "key_features", "url": "https://stable-baselines3.readthedocs.io/en/master/", "quote": "TensorBoard support"},
+  {"field": "key_features", "url": "https://github.com/DLR-RM/stable-baselines3", "quote": "| Custom policies             | :heavy_check_mark: |"},
+  {"field": "key_features", "url": "https://stable-baselines3.readthedocs.io/en/master/", "quote": "Multiprocessing: Unleashing the Power of Vectorized Environments"},
+  {"field": "key_features", "url": "https://stable-baselines3.readthedocs.io/en/master/", "quote": "Export to TensorFlow.js"},
+  {"field": "key_features", "url": "https://stable-baselines3.readthedocs.io/en/master/", "quote": "Weights & Biases \n Hugging Face 🤗 \n MLflow"},
+  {"field": "use_cases_ko", "url": "https://github.com/DLR-RM/stable-baselines3", "quote": "and as a tool for comparing a new approach against existing ones"},
+  {"field": "use_cases_ko", "url": "https://github.com/DLR-RM/stable-baselines3", "quote": "We also hope that the simplicity of these tools will allow beginners to experiment with a more advanced toolset, without being buried in implementation details."},
+  {"field": "korean_support", "url": "https://stable-baselines3.readthedocs.io/en/master/", "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

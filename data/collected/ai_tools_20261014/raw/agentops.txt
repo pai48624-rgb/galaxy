@@ -1,0 +1,301 @@
+=== [home] https://www.agentops.ai/ (lang=en)
+AgentOps 
+ Blog Contact us Pricing Docs Courses 
+ Dashboard 
+ Agency raises $2.6M 
+ Trace, Debug, & Deploy
+Reliable AI Agents.
+ The leading developer platform for building AI agents and LLM apps. 
+ Agent observability for OpenAI, CrewAI, Autogen, and 400+ LLMs and frameworks.
+ pip install agentops 
+ Start for Free 4,000+ 
+ Powering thousands of engineers building reliable agents
+ Visualize
+ Visually track events such as LLM calls, tools, and multi-agent interactions.
+ Time Travel Debugging
+ Rewind and replay agent runs with point in time precision.
+ Debug and Audit
+ Keep a full data trail of logs, errors, and prompt injection attacks from prototype to production.
+ One SDK. Many integrations.
+ Native integrations with the top agent frameworks
+ Track spending
+Across multiple agents.
+ Token Counts
+ Track, save, and monitor every token your agent sees.
+ Cost Tracking
+ Manage and vizualize agent spend with up-to-date price monitoring.
+ Fine-tuning
+ Fine-tune specialized LLMs up to 25x cheaper on saved completions.
+ Pricing
+ Free to get started. Flexibility at scale.
+ Basic 
+ $0 per month
+ Free up to 5,000 events
+ Start for Free 
+ Features
+ Agent Agnostic SDK
+ LLM Cost Tracking (400+ LLMs)
+ Replay Analytics
+ Pro starts at
+ $40 per month
+ Pay as you go, see pricing calculator
+ Upgrade 
+ Everything in Basic plus:
+ Unlimited event limit
+ Unlimited log retention
+ Session and event export
+ Dedicated Slack and email support
+ Role-based permissioning
+ Enterprise starts at
+ Custom 
+ Going beyond? Let's chat
+ Get a Demo 
+ Everything in Pro plus:
+ SLA
+ Slack Connect
+ Custom SSO
+ On-premise deployment
+ Custom data retention policy
+ Self-hosting (AWS, GCP, Azure)
+ SOC-2, HIPAA, NIST AI RMF
+ Need help building agents?
+ We've tested 400+ agents. We know which ones actually work.
+ Hire an Agent Expert
+ We help select teams build and scale enterprise-grade agents.
+ Scale to Enterprise
+ Deploying your agents to production? We're here to help.
+ The future is High Agency. 
+ Are you ready to build it?
+ Get Started Docs 
+ General
+ Documentation 
+ Enterprise 
+ View all Agents 
+ Company
+ Contact us 
+ Dashboard 
+ 2025 © All rights reserved
+ We use cookies
+ We use cookies to ensure you get the best experience on our website. For more information on how we use cookies, please see our cookie policy.
+ By clicking " Accept ", you agree to our use of cookies. 
+ Learn more. 
+ Accept Decline
+
+=== [about] https://docs.agentops.ai/v2/introduction (lang=en)
+Introduction - AgentOps 
+ Documentation Index
+ Fetch the complete documentation index at: /llms.txt 
+ Use this file to discover all available pages before exploring further.
+ Skip to main content 
+ AgentOps home page v2 
+ Search...
+ ⌘ K 
+ Your Dashboard 
+ Your Dashboard 
+ Search... 
+ Navigation 
+ Introduction
+ Introduction 
+ Getting Started 
+ Quickstart 
+ Examples 
+ MCP Docs 
+ MCP Server 
+ Concepts 
+ Core Concepts 
+ Decorators 
+ Traces 
+ Spans 
+ Tags 
+ Integrations 
+ AG2 
+ Agno 
+ Anthropic 
+ AutoGen 
+ CrewAI 
+ Haystack 
+ Google ADK 
+ Google Generative AI 
+ LangChain 
+ LangGraph 
+ LlamaIndex 
+ LiteLLM 
+ Mem0 
+ Memori 
+ OpenAI 
+ OpenAI Agents SDK 
+ OpenAI Agents JS 
+ Smolagents 
+ IBM Watsonx.ai 
+ xAI (Grok) 
+ Xpander 
+ Usage 
+ Dashboard 
+ SDK Reference 
+ TypeScript SDK 
+ Advanced Configuration 
+ Context Managers 
+ Tracking LLM Calls 
+ Tracking Agents 
+ Recording Operations 
+ Trace Decorator 
+ Track Endpoint Decorator 
+ Manual Trace Control 
+ Public API 
+ Self-Hosting 
+ Self-Hosting Overview 
+ Backend Setup Guide 
+ Docker Guide 
+ Native Development Guide 
+ Just Commands Reference 
+ Other Info 
+ Host Environment 
+ On this page 
+ Integrate with developer favorite LLM providers and agent frameworks Agent Frameworks 
+ LLM Providers 
+ The AgentOps Dashboard Session Drilldown 
+ Session Overview 
+ Introduction
+ AgentOps is the developer favorite platform for testing, debugging, and deploying AI agents and LLM apps.
+ Prefer asking your IDE? Install the Mintlify MCP Docs Server for AgentOps to chat with the docs while you code:
+ npx mint-mcp add agentops 
+ The AgentOps app is open source. Browse the code or contribute in our GitHub app directory . 
+ ​ 
+ Integrate with developer favorite LLM providers and agent frameworks 
+ ​ 
+ Agent Frameworks 
+ AG2
+ Agno
+ AutoGen
+ CrewAI
+ Google ADK
+ Haystack
+ LangChain
+ OpenAI Agents (Python)
+ OpenAI Agents (TypeScript)
+ Smolagents
+ ​ 
+ LLM Providers 
+ Anthropic
+ Google Generative AI
+ OpenAI
+ LiteLLM
+ Watsonx
+ x.AI
+ Mem0
+ Memori
+ Observability and monitoring for your AI agents and LLM apps. And we do it all in just two lines of code… 
+ python
+ import agentops 
+ agentops.init( < INSERT YOUR API KEY HERE > ) 
+ … that logs everything back to your AgentOps Dashboard. 
+ AgentOps is also available for TypeScript/JavaScript applications. Check out our TypeScript SDK guide for Node.js projects. 
+ That’s it! AgentOps will automatically instrument your code and start tracking traces. 
+ Need more control? You can create custom traces using the @trace decorator (recommended) or manage traces manually for advanced use cases: 
+ python
+ import agentops 
+ from agentops.sdk.decorators import trace 
+ agentops.init( < INSERT YOUR API KEY HERE > , auto_start_session = False ) 
+ @trace ( name = "my-workflow" , tags = [ "production" ]) 
+ def my_workflow (): 
+ # Your code here 
+ return "Workflow completed" 
+ You can also set a custom trace name during initialization: 
+ python
+ import agentops 
+ agentops.init( < INSERT YOUR API KEY HERE > , trace_name = "custom-trace-name" ) 
+ ​ 
+ The AgentOps Dashboard 
+ Give us a star to bookmark on GitHub, save for later 🖇️)
+ With just two lines of code, you can free yourself from the chains of the terminal and, instead, visualize your agents’ behavior
+in your AgentOps Dashboard. After setting up AgentOps, each execution of your program is recorded as a session and the above
+data is automatically recorded for you. 
+ The examples below were captured with two lines of code. 
+ ​ 
+ Session Drilldown 
+ Here you will find a list of all of your previously recorded sessions and useful data about each such 
+
+=== [meta] https://www.agentops.ai/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/AgentOps-AI/agentops
+<div align="center">
+  <a href="https://agentops.ai?ref=gh">
+    <img src="docs/images/external/logo/github-banner.png" alt="Logo">
+  </a>
+</div>
+
+<div align="center">
+  <em>Observability and DevTool platform for AI Agents</em>
+</div>
+
+<br />
+
+<div align="center">
+  <a href="https://pepy.tech/project/agentops">
+    <img src="https://static.pepy.tech/badge/agentops/month" alt="Downloads">
+  </a>
+  <a href="https://github.com/agentops-ai/agentops/issues">
+  <img src="https://img.shields.io/github/commit-activity/m/agentops-ai/agentops" alt="git commit activity">
+  </a>
+  <img src="https://img.shields.io/pypi/v/agentops?&color=3670A0" alt="PyPI - Version">
+  <a href="https://opensource.org/licenses/MIT">
+    <img src="https://img.shields.io/badge/License-MIT-yellow.svg?&color=3670A0" alt="License: MIT">
+  </a>
+  <a href="https://smithery.ai/server/@AgentOps-AI/agentops-mcp">
+    <img src="https://smithery.ai/badge/@AgentOps-AI/agentops-mcp"/>
+  </a>
+</div>
+
+<p align="center">
+  <a href="https://twitter.com/agentopsai/">
+    <img src="https://img.shields.io/twitter/follow/agentopsai?style=social" alt="Twitter" style="height: 20px;">
+  </a>
+  <a href="https://discord.gg/FagdcwwXRR">
+    <img src="https://img.shields.io/badge/discord-7289da.svg?style=flat-square&logo=discord" alt="Discord" style="height: 20px;">
+  </a>
+  <a href="https://app.agentops.ai/?ref=gh">
+    <img src="https://img.shields.io/badge/Dashboard-blue.svg?style=flat-square" alt="Dashboard" style="height: 20px;">
+  </a>
+  <a href="https://docs.agentops.ai/introduction">
+    <img src="https://img.shields.io/badge/Documentation-orange.svg?style=flat-square" alt="Documentation" style="height: 20px;">
+  </a>
+  <a href="https://entelligence.ai/AgentOps-AI&agentops">
+    <img src="https://img.shields.io/badge/Chat%20with%20Docs-green.svg?style=flat-square" alt="Chat with Docs" style="height: 20px;">
+  </a>
+</p>
+
+<div align="center">
+  <video src="https://github.com/user-attachments/assets/dfb4fa8d-d8c4-4965-9ff6-5b8514c1c22f" width="650" autoplay loop muted></video>
+</div>
+
+<br/>
+
+AgentOps helps developers build, evaluate, and monitor AI agents. From prototype to production.
+
+## Open Source
+
+The AgentOps app is open source under the MIT license. Explore the code in our [app directory](https://github.com/AgentOps-AI/agentops/tree/main/app).
+
+## Key Integrations 🔌
+
+<div align="center" style="background-color: white; padding: 20px; border-radius: 10px; margin: 0 auto; max-width: 800px;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 30px; margin-bottom: 20px;">
+    <a href="https://docs.agentops.ai/v2/integrations/openai_agents_python"><img src="docs/images/external/openai/agents-sdk.svg" height="45" alt="OpenAI Agents SDK"></a>
+    <a href="https://docs.agentops.ai/v1/integrations/crewai"><img src="docs/v1/img/docs-icons/crew-banner.png" height="45" alt="CrewAI"></a>
+    <a href="https://docs.ag2.ai/docs/ecosystem/agentops"><img src="docs/images/external/ag2/ag2-logo.svg" height="45" alt="AG2 (AutoGen)"></a>
+    <a href="https://docs.agentops.ai/v1/integrations/microsoft"><img src="docs/images/external/microsoft/microsoft_logo.svg" height="45" alt="Microsoft"></a>
+  </div>
+  
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 30px; margin-bottom: 20px;">
+    <a href="https://docs.agentops.ai/v1/integrations/langchain"><img src="docs/images/external/langchain/langchain-logo.svg" height="45" alt="LangChain"></a>
+    <a href="https://docs.agentops.ai/v1/integrations/camel"><img src="docs/images/external/camel/camel.png" height="45" alt="Camel AI"></a>
+    <a href="https://docs.llamaindex.ai/en/stable/module_guides/observability/?h=agentops#agentops"><img src="docs/images/external/ollama/ollama-icon.png" height="45" alt="LlamaIndex"></a>
+    <a href="https://docs.agentops.ai/v1/integrations/cohere"><img src="docs/images/external/cohere/cohere-logo.svg" height="45" alt="Cohere"></a>
+  </div>
+</div>
+
+|                                       |                                                               |
+| ------------------------------------- | ----------------------------------

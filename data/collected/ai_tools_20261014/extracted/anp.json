@@ -1,0 +1,88 @@
+{
+ "company": null,
+ "one_liner_ko": "상호 운용되는 AI 에이전트를 위한 분산 신원·발견·메시징·결제 프로토콜을 묶은 '에이전트 웹'용 개방형 프로토콜 스택.",
+ "what_it_does_ko": "ANP(Agent Network Protocol)는 에이전트들이 도메인을 넘어 서로 통신하도록 하는 계층형 프로토콜 모음이다. 맨 아래는 HTTP·DNS·TLS 등 기존 인터넷 인프라를 재사용하고, 중간 층은 DID:WBA 신원·WNS 핸들·인증·보안 메시징을 제공한다. 맨 위 층에는 에이전트 설명·발견 프로토콜과 결제·인가·인증 같은 도메인 프로토콜이 있다. 최신 버전은 ANP 1.2다.",
+ "key_features": [
+  "did:wba·WNS 기반 분산 에이전트 신원",
+  "에이전트 설명(Agent Description)·발견(Agent Discovery) 프로토콜",
+  "직접·그룹 메시징, 종단간 암호화, 첨부, 연합(P1~P9 메시징 프로필)",
+  "에이전트 결제 프로토콜(초안)",
+  "필요한 층부터 단계적으로 도입하는 계층형 구조",
+  "HTTP·CA·DNS·CDN·TLS 등 기존 인터넷 인프라 재사용",
+  "alice.example.com 같은 사람이 읽을 수 있는 핸들"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": null,
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "개방형 프로토콜(라이선스 이름은 페이지에 없음)",
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://agent-network-protocol.com",
+   "quote": "Agent Network Protocol Open protocol stack for the Agentic Web"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://agent-network-protocol.com",
+   "quote": "Decentralized identity, discovery, messaging, and payment protocols for interoperable AI agents."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://agent-network-protocol.com",
+   "quote": "ANP is organized as a layered protocol suite so implementations can adopt the foundation first, then add messaging, discovery, and payment capabilities as needed."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://agent-network-protocol.com",
+   "quote": "ANP 1.2 builds on open Internet infrastructure with identity and encrypted communication foundations and domain-specific application protocols."
+  },
+  {
+   "field": "key_features",
+   "url": "https://agent-network-protocol.com",
+   "quote": "did:wba and WNS provide verifiable agent identity, readable handles, and cross-domain trust roots."
+  },
+  {
+   "field": "key_features",
+   "url": "https://agent-network-protocol.com",
+   "quote": "Agent descriptions and discovery protocols let agents publish capabilities and find interoperable services."
+  },
+  {
+   "field": "key_features",
+   "url": "https://agent-network-protocol.com",
+   "quote": "The messaging profiles define direct chat, groups, encryption, attachments, and federation semantics."
+  },
+  {
+   "field": "key_features",
+   "url": "https://agent-network-protocol.com",
+   "quote": "10-Agent Payment Protocol (Draft)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://agent-network-protocol.com",
+   "quote": "ANP reuses the open Internet foundation: HTTP, CA, DNS, CDN, Search, TLS, and existing web deployment patterns."
+  },
+  {
+   "field": "key_features",
+   "url": "https://agent-network-protocol.com",
+   "quote": "Human-readable handles such as alice.example.com map to did:wba identities with bidirectional verification."
+  },
+  {
+   "field": "open_source",
+   "url": "https://agent-network-protocol.com",
+   "quote": "Open protocol stack for the Agentic Web"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://agent-network-protocol.com",
+   "quote": "화면에 보이는 언어 이름: English, 中文, 简体中文"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

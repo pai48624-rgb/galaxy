@@ -1,0 +1,42 @@
+{
+ "company": "Farama Foundation",
+ "one_liner_ko": "강화학습용 표준 API와 다양한 기준 환경 모음을 제공하는, OpenAI Gym의 후속 유지보수 포크(Gymnasium).",
+ "what_it_does_ko": "Gymnasium은 학습 알고리즘과 환경 사이의 표준 API와 그 API를 따르는 표준 환경 모음을 제공해 강화학습 알고리즘을 개발·비교하게 해 주는 오픈소스 파이썬 라이브러리다. OpenAI가 외부 팀에 유지보수를 넘긴 Gym 라이브러리의 포크로, 앞으로의 유지보수는 여기서 이뤄진다. Classic Control, Box2D, Toy Text, MuJoCo, Atari 등 환경 묶음과 다양한 서드파티 환경을 포함한다. 기존 Gym 환경을 옮기는 이전 안내서도 제공한다.",
+ "key_features": [
+  "강화학습용 표준 환경 API(env 클래스)",
+  "Classic Control·Box2D·Toy Text·MuJoCo·Atari 환경 묶음",
+  "서드파티 호환 환경",
+  "래퍼(Action·Observation·Reward 등)",
+  "벡터화 환경(AsyncVectorEnv·SyncVectorEnv)",
+  "기존 Gym 이전 안내서",
+  "에이전트 녹화와 사용자 정의 환경 만들기"
+ ],
+ "use_cases_ko": [
+  "강화학습 알고리즘 개발과 비교",
+  "강화학습 구현 디버깅(단순한 Toy Text 환경)"
+ ],
+ "pricing": {"free_tier": "불명", "plans": [], "pricing_url": null},
+ "open_source": "오픈소스(라이선스 이름 미표기)",
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://gymnasium.farama.org", "quote": "Copyright © 2026 Farama Foundation"},
+  {"field": "one_liner_ko", "url": "https://gymnasium.farama.org", "quote": "An API standard for reinforcement learning with a diverse collection of reference environments"},
+  {"field": "one_liner_ko", "url": "https://gymnasium.farama.org", "quote": "Gymnasium is a maintained fork of OpenAI’s Gym library."},
+  {"field": "what_it_does_ko", "url": "https://github.com/Farama-Foundation/Gymnasium", "quote": "Gymnasium is an open source Python library for developing and comparing reinforcement learning algorithms by providing a standard API to communicate between learning algorithms and environments"},
+  {"field": "what_it_does_ko", "url": "https://github.com/Farama-Foundation/Gymnasium", "quote": "(OpenAI handed over maintenance a few years ago to an outside team), and is where future maintenance will occur going forward."},
+  {"field": "key_features", "url": "https://github.com/Farama-Foundation/Gymnasium", "quote": "The Gymnasium API models environments as simple Python `env` classes."},
+  {"field": "key_features", "url": "https://github.com/Farama-Foundation/Gymnasium", "quote": "Gymnasium includes the following families of environments along with a wide variety of third-party environments"},
+  {"field": "key_features", "url": "https://gymnasium.farama.org", "quote": "Action Wrappers \n Observation Wrappers \n Reward Wrappers"},
+  {"field": "key_features", "url": "https://gymnasium.farama.org", "quote": "AsyncVectorEnv \n SyncVectorEnv"},
+  {"field": "key_features", "url": "https://gymnasium.farama.org", "quote": "has a migration guide for old Gym environments"},
+  {"field": "key_features", "url": "https://gymnasium.farama.org", "quote": "Recording Agents"},
+  {"field": "key_features", "url": "https://gymnasium.farama.org", "quote": "Create a Custom Environment"},
+  {"field": "use_cases_ko", "url": "https://github.com/Farama-Foundation/Gymnasium", "quote": "As a result, they are suitable for debugging implementations of reinforcement learning algorithms."},
+  {"field": "open_source", "url": "https://github.com/Farama-Foundation/Gymnasium", "quote": "Gymnasium is an open source Python library for developing and comparing reinforcement learning algorithms"},
+  {"field": "korean_support", "url": "https://gymnasium.farama.org", "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

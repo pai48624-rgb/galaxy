@@ -1,0 +1,641 @@
+=== [home] https://cloud.google.com/blog/products/ai-machine-learning/announcing-agents-to-payments-ap2-protocol?hl=en (lang=en)
+Announcing Agent Payments Protocol (AP2) | Google Cloud Blog Jump to Content 
+ Cloud 
+ Blog 
+ Contact sales Get started for free 
+ Cloud 
+ Blog 
+ Solutions & technology AI & Machine Learning 
+ API Management 
+ Application Development 
+ Application Modernization 
+ Chrome Enterprise 
+ Compute 
+ Containers & Kubernetes 
+ Data Analytics 
+ Databases 
+ DevOps & SRE 
+ Maps & Geospatial 
+ Security Security & Identity 
+ Threat Intelligence 
+ Infrastructure 
+ Infrastructure Modernization 
+ Networking 
+ Productivity & Collaboration 
+ SAP on Google Cloud 
+ Storage & Data Transfer 
+ Sustainability 
+ Ecosystem IT Leaders 
+ Industries Financial Services 
+ Healthcare & Life Sciences 
+ Manufacturing 
+ Media & Entertainment 
+ Public Sector 
+ Retail 
+ Supply Chain 
+ Telecommunications 
+ Partners 
+ Startups & SMB 
+ Training & Certifications 
+ Inside Google Cloud 
+ Google Cloud Next & Events 
+ Google Cloud Consulting 
+ Google Maps Platform 
+ Google Workspace 
+ Developers & Practitioners 
+ Transform with Google Cloud 
+ Contact sales Get started for free 
+ AI & Machine Learning
+ Powering AI commerce with the new Agent Payments Protocol (AP2)
+ September 17, 2025
+ Stavan Parikh
+ VP/GM, Payments, Google
+ Rao Surapaneni
+ VP/GM, Business Applications Platform, Google Cloud
+ Try Gemini today
+ The front door to AI in the workplace
+ Try now 
+ Today, Google announced the Agent Payments Protocol (AP2), an open protocol developed with leading payments and technology companies to securely initiate and transact agent-led payments across platforms. The protocol can be used as an extension of the Agent2Agent (A2A) protocol and Model Context Protocol (MCP). In concert with industry rules and standards, it establishes a payment-agnostic framework for users, merchants, and payments providers to transact with confidence across all types of payment methods. 
+ We’re collaborating with a diverse group of more than 60 organizations to help shape the future of agentic payments, including Adyen, American Express, Ant International, Coinbase, Etsy, Forter, Intuit, JCB, Mastercard, Mysten Labs, Paypal, Revolut, Salesforce, ServiceNow, UnionPay International, Worldpay, and more. 
+ Why is a protocol needed? 
+ AI agents are capable of transacting on behalf of users, which creates a need to establish a common foundation to securely authenticate, validate, and convey an agent’s authority to transact. While today’s payment systems generally assume a human is directly clicking "buy" on a trusted surface, the rise of autonomous agents and their ability to initiate a payment breaks this fundamental assumption and raises critical questions that AP2 helps to address, including: 
+ Authorization : Proving that a user gave an agent the specific authority to make a particular purchase. 
+ Authenticity : Enabling a merchant to be sure that an agent's request accurately reflects the user's true intent.  
+ Accountability : Determining accountability if a fraudulent or incorrect transaction occurs.  
+ AP2 is an open, shared protocol that provides a common language for secure, compliant transactions between agents and merchants, helping to prevent a fragmented ecosystem. It also supports different payment types–from credit and debit cards to stablecoins and real-time bank transfers. This helps ensure a consistent, secure, and scalable experience for users and merchants, while also providing financial institutions with the clarity they need to effectively manage risk. 
+ How it works: Establishing trust via mandates and verifiable credentials 
+ AP2 builds trust by using Mandates—tamper-proof, cryptographically-signed digital contracts that serve as verifiable proof of a user's instructions. These mandates are signed by verifiable credentials (VCs) and act as the foundational evidence for every transaction. 
+ Mandates address the two primary ways a user will shop with an agent: 
+ Real-time purchases (human present ): When you ask an agent, “Find me new white running shoes,” your request is captured in an initial Intent Mandate . This provides the auditable context for the entire interaction in a transaction process. After the agent presents a cart with the shoes you want, your approval signs a Cart Mandate . This is a critical step that creates a secure, unchangeable record of the exact items and price, ensuring what you see is what you pay for. 
+ Delegated tasks (human not present) : When you delegate a task like, “Buy concert tickets the moment they go on sale,” you sign a detailed Intent Mandate upfront. This mandate specifies the rules of engagement—price limits, timing, and other conditions. It serves as verifiable, pre-authorized proof that can allow the agent to automatically generate a Cart Mandate on your behalf once your precise conditions are met. 
+ In both scenarios, this chain of evidence culminates in securely linking your payment method to the verified contents of the Cart Mandate. This complete sequence—from intent, to cart, to payment—creates a non-repudiable audit trail that answers the critical questions of authorization and authenticity, providing a clear foundation for accountability. 
+ Unlocking new commerce experiences 
+ AP2’s flexible design provides a foundation to support both simple and entirely new commercial models. Let’s consider a few examples below, which all assume Intent Mandates have been signed on behalf of a user:  
+ Smarter shopping : A customer discovers a winter jacket they want is unavailable in a specific color, so they tell their agent: "I really want this jacket in green, and I'm willing to pay up to 20% more for it." The agent then monitors prices and availability and automatically executes a secure purchase the moment that specific variant is found, capturing a high-intent sale that would have otherwise been lost. 
+ Personalized offers : A shopper tells their agent they want a new bicycle for an upcoming trip from a specific merchant. Their agent communicates this information—which includes the trip's date—to the merchant, whose own agent can respond by creating a custom, time-sensitive bundle offer that includes the bike, a helmet, and a travel rack at a 15% discount, turning a simple query into a more valuable sale. 
+ Coordinated tasks : A user is planning a weekend trip and tells their agent: "Book me a round-trip flight and a hotel in Palm Springs for the first weekend of November, with a total budget of $700." The agent can then interact with both airline and hotel agents, as well as online travel agencies and booking platforms, and once it finds a combination that fits the budget, it can execute both cryptographically-signed bookings simultaneously. 
+ Support for emerging payments systems 
+ AP2 is designed as a universal protocol, providing security and trust for a variety of payments like stablecoins and cryptocurrencies. To accelerate support for the web3 ecosystem, in collaboration with Coinbase, Ethereum Foundation, MetaMask and other leading organizations, we have extended the core constructs of AP2 and launched the A2A x402 extension , a production-ready solution for agent-based crypto payments. Extensions like these will help shape the evolution of cryptocurrency integrations within the core AP2 protocol.  
+ What’s next: A call for collaboration  
+ AP2 provides a trusted foundation to fuel a new era of AI-driven commerce. It establishes the core building blocks for secure transactions, creating clear opportunities for the industry–including networks, issuers, merchants, te
+
+=== [about] https://cloud.google.com/products (lang=ko)
+제품 및 서비스 | Google Cloud 
+ 150개가 넘는 Google Cloud 제품 살펴보기
+ 추천 서비스 중 하나로 시작하거나 아래의 카탈로그를 둘러보세요
+ 개발자용 AI 플랫폼
+ Gemini platform
+ 가상 머신(VM)
+ Compute Engine
+ 데이터 웨어하우스
+ BigQuery
+ 서버리스 컴퓨팅
+ Cloud Run
+ SQL Database
+ Cloud SQL
+ 객체 스토리지
+ Cloud Storage
+ 신규 고객에게는 가장 인기 있는 제품을 사용해 볼 수 있는 $300 상당의 무료 크레딧이 제공됩니다. 무료로 시작 
+ 카테고리별로 검색
+ AI/ML 
+ 인프라 
+ 데이터베이스 및 분석 
+ 개발자 도구 
+ 앱 개발 
+ 통합 서비스 
+ 관리 도구 
+ 보안 및 ID 
+ 웹 및 앱 호스팅 
+ 생산성 및 공동작업 
+ 업종 
+ 탐색 기준: 카테고리 
+ AI/ML 
+ 인프라 
+ 데이터베이스 및 분석 
+ 개발자 도구 
+ 앱 개발 
+ 통합 서비스 
+ 관리 도구 
+ 보안 및 ID 
+ 웹 및 앱 호스팅 
+ 생산성 및 공동작업 
+ 업종 
+ 카테고리별로 검색
+ AI/ML 
+ 인프라 
+ 데이터베이스 및 분석 
+ 개발자 도구 
+ 앱 개발 
+ 통합 서비스 
+ 관리 도구 
+ 보안 및 ID 
+ 웹 및 앱 호스팅 
+ 생산성 및 공동작업 
+ 업종 
+ 탐색 기준: 카테고리 
+ AI/ML 
+ 인프라 
+ 데이터베이스 및 분석 
+ 개발자 도구 
+ 앱 개발 
+ 통합 서비스 
+ 관리 도구 
+ 보안 및 ID 
+ 웹 및 앱 호스팅 
+ 생산성 및 공동작업 
+ 업종 
+ search 
+ search 
+ search 
+ AI 빌드 및 사용
+ 생성형 AI, 챗봇, ML 모델, API를 제공합니다.
+ 더보기 
+ 개발자용 AI 플랫폼
+ open_in_new 
+ Gemini platform
+ ML 모델, 생성형 AI, 에이전트 빌드를 위한 통합 플랫폼
+ 직원용 AI 플랫폼
+ open_in_new 
+ Gemini for your business
+ 조직 전반에서 AI 에이전트를 발견, 생성, 공유, 실행할 수 있는 안전한 단일 환경을 제공합니다.
+ Google Cloud 인프라에서 빌드 및 실행
+ 가상 머신, 네트워킹, 스토리지, 멀티 클라우드 솔루션 등을 제공합니다.
+ 더보기 
+ 가상 머신(VM)
+ expand_content 
+ Compute Engine
+ Google의 데이터 센터에서 실행되는 가상 머신
+ 컨테이너
+ expand_content 
+ Google Kubernetes Engine
+ 컨테이너화된 앱 실행을 위한 관리형 환경
+ Tensor Processing Unit
+ open_in_new 
+ Cloud TPUs
+ 머신러닝 애플리케이션용 Tensor Processing Unit
+ 객체 스토리지
+ expand_content 
+ Cloud Storage
+ 안전하고 내구성과 확장성이 뛰어난 객체 스토리지
+ 분석에 액세스하기 및 데이터베이스 만들기
+ 애플리케이션 코딩, 배포, 디버깅을 지원하는 제품 및 서비스입니다.
+ 더보기 
+ 데이터 웨어하우스
+ expand_content 
+ BigQuery
+ 비즈니스 민첩성을 높이고 통찰력을 얻기 위한 데이터 웨어하우스
+ 비즈니스 인텔리전스 플랫폼
+ expand_content 
+ Looker
+ BI, 데이터 애플리케이션, 임베디드 분석을 위한 플랫폼
+ SQL Database
+ expand_content 
+ Cloud SQL
+ MySQL, PostgreSQL, SQL Server용 완전 관리형 데이터베이스
+ 스트리밍 데이터 분석
+ expand_content 
+ Dataflow
+ 스트림 및 일괄 처리를 위한 스트리밍 분석
+ 인기 개발 도구 탐색
+ 애플리케이션 코딩, 배포, 디버깅을 지원하는 제품 및 서비스입니다.
+ 더보기 
+ AI 지원 코딩
+ open_in_new 
+ Gemini Code Assist
+ AI 지원 애플리케이션 개발 및 코딩
+ 온라인 개발 터미널
+ open_in_new 
+ Cloud Shell
+ 명령줄이 내장된 대화형 셸 환경
+ 서버리스 컴퓨팅
+ expand_content 
+ Cloud Run
+ 컨테이너화된 앱 실행을 위한 완전 관리형 환경
+ 애플리케이션 및 기능 개발 지원
+ 애플리케이션을 빌드, 실행, 관리, 배포할 수 있습니다.
+ 더보기 
+ 이벤트 기반 함수
+ expand_content 
+ Cloud Run functions
+ 클라우드 서비스 및 앱을 위한 이벤트 기반 컴퓨팅 플랫폼
+ Container Registry
+ open_in_new 
+ Artifact Registry
+ 컨테이너 이미지 및 언어 패키지를 저장, 관리, 보호
+ CI/CD 플랫폼
+ expand_content 
+ Cloud Build
+ Docker 컨테이너에서 빌드 단계를 실행하기 위한 솔루션
+ 노 코드 플랫폼
+ open_in_new 
+ AppSheet
+ 애플리케이션을 빌드 및 확장하는 코딩 없는 개발 플랫폼
+ 시작할 준비가 되셨나요? 다음 단계 수행
+ Google Cloud 영업 담당자에게 문의
+ 고유한 문제의 솔루션을 자세히 논의하세요.
+ 제품 및 솔루션 가격 책정에 대해 자세히 알아보세요.
+ 내 업종에 맞는 제품과 서비스를 살펴보세요.
+ 전화 상담 요청
+ 문의 양식을 작성하여 Google Cloud 전문가의 도움을 받아 적합한 제품 또는 솔루션을 찾으세요.
+ 문의 양식 시작 
+ 전문가의 안내 및 지원을 받고 싶다면 컨설팅 서비스를 이용하세요. arrow_forward 
+ 솔루션을 배포할 Google Cloud 파트너 를 찾아보세요. arrow_forward 
+ 제품 출시 단계
+ 모두 펼치기 
+ 프리뷰
+ 프리뷰 단계의 제품 또는 기능은 고객이 테스트에 사용하기에 적합한 버전입니다. 프리뷰 제품은 공개적으로 발표되는 경우가 많지만 기능이 완성된 상태가 아닐 수도 있으며 이러한 제품에 대한 SLA 또는 기술 지원 약정은 제공되지 않습니다. Google에서 달리 명시하지 않는 한 프리뷰 제품은 테스트 환경에서만 사용할 수 있습니다. 프리뷰 단계의 평균 지속 기간은 약 6개월입니다.
+ 정식 버전
+ 정식 버전 제품 및 기능은 모든 고객에게 제공되며 프로덕션 환경에서 사용하기에 적합하고, 해당하는 경우 Google Cloud SLA 가 적용됩니다. Google은 보통 API, CLI, Google Cloud 콘솔을 통해 정식 버전 제품 및 기능을 지원하며, 이러한 방식을 통한 특정 제품 또는 기능 제공이 불합리한 예외적 상황은 제외됩니다.
+ 지원 중단됨
+ 지원 중단된 기능은 서비스 종료 및 삭제가 예정된 기능입니다. 자세한 내용은 Google Cloud Platform 서비스 약관 의 '서비스의 중단' 항을 참조하세요.
+ [레거시] 사전 체험판, 알파, 베타
+ 사전 체험판: 사전 체험판은 제한된 출시 하위 항목에 대해 특정 테스터 그룹을 대상으로 한정적으로 제공되는 기능입니다. 참가는 초대를 통해서만 이루어지며 비밀유지 조항이 포함된 정식 버전 출시 전 계약에 서명해야 할 수 있습니다. 사전 체험판 기능은 안정적이지 않을 수 있고 이전 버전과 호환되지 않는 방식으로 변경될 수 있으며 정식 버전으로 출시되지 않을 수 있습니다. SLA는 제공되지 않으며 기술 지원 의무도 없습니다. 사전 체험판 출시는 드물며 제품 프로토타입을 검증하는 데 초점을 둡니다.
+ 알파: 알파는 더 광범위한 제품 출시를 승인하기 전에 제한된 범위에서 제공되는 테스트입니다. 알파 
+
+=== [pricing] https://cloud.google.com/pricing (lang=ko)
+가격 책정 개요 | Google Cloud 
+ Google Cloud 가격 책정
+ Google Cloud의 투명하고 혁신적인 가격 책정 방식으로 비용을 절감해 보세요. 가격 계산기 로 비용을 예상해 보거나 Google에 문의하여 조직에 대한 견적을 받아보세요.
+ 견적 요청 
+ 무료로 시작하기 
+ 워크로드 무료로 실행해 보기
+ 계정을 만들어 실제 시나리오에서 Google Cloud 제품 실적을 평가하세요. 신규 고객에게는 Google에서 추천하는 사전 빌드된 솔루션 을 포함하여 워크로드를 실행, 테스트, 배포하는 데 사용할 수 있는 $300의 무료 크레딧 이 제공됩니다. 모든 고객이 월간 사용량 한도까지 20개 이상의 제품을 무료 로 사용할 수 있습니다.
+ $300
+ 무료 크레딧 
+ 20+
+ 무료 제품
+ 사용한 만큼만 비용 지불
+ Google Cloud의 사용한 만큼만 지불 가격 책정 구조를 사용하면 사용한 서비스에 대한 요금만 지불하면 됩니다. 선불 비용은 없으며, 해지 수수료가 부과되지 않습니다. 가격은 제품 및 사용량에 따라 다릅니다( 자세한 가격 목록 보기 ).
+ 워크로드 비용 최대 57% 절감하기
+ Google Cloud를 사용하면 월별 사용량에 기초한 자동 절약과 할인된 가격에 리소스 비용 선불 결제를 통해 다른 제공업체를 사용할 때보다 비용을 절감할 수 있습니다. 예를 들어 머신 유형 또는 GPU와 같은 Compute Engine 리소스에 약정 사용 할인을 적용하여 최대 57%를 절약 할 수 있습니다.
+ 2:48 
+ 현재의 비용 추세와 예상 비용 파악
+ 지속적인 지출 관리
+ 예산, 알림, 할당량 한도, 기타 무료 비용 관리 도구로 지출을 관리 하세요. 활용 가능한 AI 기반 지능형 추천과 비용 추세 및 예상 비용을 보여주는 커스텀 대시보드로 비용을 최적화 하세요. 
+ 연중무휴 무료 결제 지원 으로 도와드리겠습니다.
+ 비용 예측 
+ 가격 계산기 로 위치, 워크로드, 기타 변수에 따라 비용이 어떻게 달라지는지 알아보세요. 또는 영업 담당자 에게 문의하여 커스텀 견적을 받으세요.
+ 0:46 
+ 4:01 
+ 무료 크레딧 받기
+ 아이디어 구상부터 출시 이후까지 Google과 함께 빌드하고 Google의 최고의 서비스를 이용하세요. 스타트업은 Google for Startups Cloud Program 을 통해 최대 $350,000의 Cloud 크레딧을 받아 맞춤 지원 및 솔루션을 통해 계속해서 확장할 수 있습니다.
+ 지금 신청하기 
+ 더 자세한 안내가 필요하신가요? Google에서 지원해 드립니다.
+ 마이그레이션 평가: 마이그레이션 비용을 예측해 보고 엔드 투 엔드 계획을 세워 보세요.
+ 무료 마이그레이션 평가 요청 
+ 비용 최적화 전략으로 전반적인 클라우드 지출을 줄이는 5가지 방법을 알아보세요.
+ 백서 다운로드 
+ 전문 컨설턴트와 협력하여 구현, 마이그레이션 등의 지원을 받으세요.
+ 모든 예산에 맞는 파트너 찾기 
+ 다음 단계 수행
+ 해결해야 하는 문제를 알려주세요. 가장 적합한 솔루션을 찾을 수 있도록 Google Cloud 전문가가 도와드립니다.
+ 영업팀에 문의 
+ 신뢰할 수 있는 파트너 지원
+ 파트너 찾기 
+ Google Cloud 사용 시작하기
+ 무료로 사용해 보기 
+ 계속 탐색
+ 모든 제품 보기 
+ menu 
+ 개요 솔루션 제품 가격 책정 리소스 Docs 지원 문의하기 
+  
+ Docs 지원 
+ 콘솔 로그인 
+ 무료로 시작하기 
+ 무료로 시작하기 
+ 문의하기 
+ close 디지털 혁신 가속화
+ 디지털 혁신을 이제 막 시작한 기업이든 이미 일정 수준에 도달한 기업이든 Google Cloud를 사용하면 가장 까다로운 도전과제를 해결할 수 있습니다.
+ 자세히 알아보기
+ 주요 이점
+ Google Cloud를 선택해야 하는 이유
+ 기업들이 Google을 선택하는 주요 이유
+ AI 및 에이전트
+ 엔터프라이즈 지원 AI를 활용하세요.
+ 멀티 클라우드
+ 어디서나 필요한 앱을 실행
+ 글로벌 인프라
+ Google과 동일한 인프라를 기반으로 빌드
+ 데이터 클라우드
+ 통합 데이터를 통한 더욱 스마트한 결정
+ 최신 인프라 클라우드
+ 차세대 클라우드 인프라입니다.
+ 보안
+ 사용자, 데이터, 앱을 보호하세요.
+ 생산성 및 공동작업
+ AI 지원 앱으로 팀과 소통
+ 보고서 및 통계
+ 경영진 통계
+ 최고 책임자의 관점에 맞게 선별됩니다.
+ 애널리스트 보고서
+ Google에 대한 업계 분석가들의 평가
+ 백서
+ 인기 백서 탐색 및 다운로드
+ 고객 사례
+ 우수사례 및 동영상 살펴보기
+ close 업종별 솔루션 
+ 애플리케이션 현대화 
+ 인공지능 
+ API 및 애플리케이션 
+ 데이터 분석 
+ 데이터베이스 
+ 인프라 
+ 생산성 및 공동작업 
+ 보안 
+ 스타트업 및 SMB 
+ 모든 솔루션 보기 
+ 업종별 솔루션
+ 비용 절감, 운영 민첩성 향상, 새로운 시장 기회 포착
+ 소매업
+ 소매 가치 사슬을 위한 분석 및 공동작업 도구
+ 소비재
+ 소비재 디지털 혁신 및 브랜드 성장 솔루션
+ 금융 서비스
+ 금융 서비스를 위한 컴퓨팅, 데이터 관리, 분석 도구
+ 의료 및 생명과학
+ 대규모의 연구 진행 및 의료 혁신 지원
+ 미디어 및 엔터테인먼트
+ 콘텐츠 제작 및 배포 작업을 위한 솔루션
+ 전자통신
+ 5G 배포 및 수익 창출을 위한 하이브리드 및 멀티 클라우드 서비스
+ 게임
+ 게임을 더욱 빠르게 빌드하고 확장할 수 있는 AI 기반 솔루션
+ 제조업
+ 제조업 가치 사슬을 최적화하는 마이그레이션 및 AI 도구
+ 공급망 및 물류
+ 공급망 및 물류 운영 전반에서 지속 가능하고 효율적이며 복원력이 우수한 데이터 기반 운영을 지원합니다.
+ 정부 기관
+ 정부 기관을 위한 데이터 스토리지, AI, 분석 솔루션
+ 교육
+ 더 적극적인 학습 경험을 제공하는 교육 도구
+ 원하는 내용을 찾을 수 없으신가요?
+ 모든 업종별 솔루션 보기
+ 애플리케이션 현대화
+ 소프트웨어 관행과 기능을 평가, 계획, 구현, 측정하여 조직의 비즈니스 애플리케이션 포트폴리오를 현대화하고 단순화합니다.
+ CAMP
+ DORA를 사용하여 소프트웨어 배포 기능을 개선하는 프로그램
+ 기존 애플리케이션 현대화
+ 기존 워크로드의 클라우드 마이그레이션을 분석 및 분류하고 시작합니다.
+ PaaS에서 마이그레이션: Cloud Foundry, OpenShift
+ 기존 컨테이너를 Google의 관리형 컨테이너 서비스로 이동하기 위한 도구입니다.
+ 메인프레임에서 마이그레이션
+ 메인프레임 앱을 클라우드로 이전하기 위한 자동화된 도구 및 처방적 안내입니다.
+ 소프트웨어 배포 현대화
+ 내부 루프 생산성, CI/CD, S3C 등 소프트웨어 공급망 권장사항입니다.
+ DevOps 권장사항
+ 조직에서 DevOps를 구현하기 위한 프로세스 및 리소스
+ SRE 원칙
+ 조직에 사이트 안정성 엔지니어링(SRE)을 채택하기 위한 도구 및 리소스
+ 플랫폼 엔지니어링
+ IDP를 빌드, 관리, 확장하기 위한 포괄적인 관리형 서비스 제품군과 최적의 경로를 제공합니다.
+ 멀티 클라우드를 위한 설계
+ 여러 클라우드에서 일관된 플랫폼으로 워크로드를 관리합니다.
+ 인공지능
+ AI 및 머신러닝을 사용하여 비즈니스에 인텔리전스 및 효율성 추가
+ Gemini Enterprise for Customer Experience
+ 고객 수명 주기 전반에서 사용 가능한 에이전트를 빌드하고 관리할 수 있습니다.
+ Gemini Enterprise
+ 조직 전체를 위한 통합 에이전트형 포트폴리오입니다.
+ AI Commerce Search
+ 소매업체를 위한 Google 품질 수준의 검색 및 제품 추천
+ Gemini 기반 Google Cloud
+ 애플리케이션 개발, 코딩 등을 위한 AI 어시스턴트입니다.
+ 물리적 AI
+ 차세대 로봇, 자율 주행 차량, 산업용 기기, 기계를 시뮬레이션하고 학습시키고 작동시킵니다.
+ API 및 애플리케이션
+ API, 앱, 자동화를 사용하여 코딩 없이도 혁신 속도 향상
+ API를 사용한 새 비즈니스 채널
+ 개발자 및 파트너 생태계의 조성과 지원
+ API를 사용한 기존 애플리케이션 활용
+ 기존 앱을 확장하고 현대화하는 클라우드 서비스
+ Open Banking APIx
+ 오픈 뱅킹 규정 준수 API의 보안 전송 간소화 및 가속화
+ 데이터 분석
+ 분석을 대폭 간소화하는 완전 관리형 서버리스 분석 플랫폼으로 규모에 상관없이 데이터에서 빠르게 유용한 정보 파악
+ 데이터 마이그레이션
+ AI 기반 마이그레이션 서비스로 데이터 웨어하우스 및 데이터 레이크를 마이그레이션하고 현대화하세요.
+ 데이터 레이크하우스
+ 고성능 개방형 데이터 레이크하우스로 멀티모달 데이터를 통합하고 제어하세요.
+ 실시간 분석
+ 이벤트 스트림 수집, 처리, 분석을 통해 유용한 정보 파악
+ 마케팅 분석
+ 고객 데이터 수집, 분석, 활성화를 위한 솔루션
+ 데이터 세트
+ Google, 공공부문, 상용 공급업체 제공 데이터로 분석 및 AI 이니셔티브 강화
+ 비즈니스 인텔리전스
+ BI 스택을 현대화하고 풍부한 데이터 환경을 만들기 위한 솔루션
+ 데이터 분석 에이전트
+ 데이터 수명 주기를 위한 기본 제공 에이전트와 자체 에이전트를 빌드할 수 있는 도구입니다.
+ 지리 공간 분석
+ 지리 공간 사용 사례를 대규모로 해결할 수 있는 포괄적인 플랫폼입니다.
+ 데이터 과학
+ 데이터 과학을 빌드, 관리, 확장하기 위한 관리형 서비스 및 통합 워크플로입니다.
+ 데이터베이스
+ 보안, 안정성, 고가용성, 완전 관리형 데이터 서비스로 기업 데이터를 마이그레이션하고 관리
+ 데이터베이스 마이그레이션
+ 데이터베이스 마이그레이션 수명 주기를 간소화하는 가이드 및 도구
+ 데이터베이스 현대화
+ 운영 데이터베이스 인프라 현대화를 위한 업그레이드
+ 게임용 데이터베이스
+ Google Cloud 데이터베이스로 글로벌 실시간 게임 빌드
+ Google Cloud 데이터베이스
+ 데이터를 마이그레이션, 관리, 현대화하는 데이터베이스 서비스
+ Oracle 워크로드를 Google Cloud로 마이그레이션
+ Oracle 워크로드의 재호스팅, 플랫폼 변경, 재작성
+ 오픈소스 데이터베이스
+ 엔터프라이즈급 지원을 제공하는 완전 관리형 오픈소스 데이터베이스
+ Google Cloud 기반 SQL Server
+ Google Cloud에서 SQL Server 가상 머신을 실행하는 옵션
+ 데이터베이스를 위한 Gemini
+ AI를 사용하여 데이터베이스 개발 및 관리를 강화하세요.
+ 인프라
+ SAP, VMware, Windows, Oracle, 기타 워크로드를 위한 솔루션으로 빠르게 마이그레이션
+ 애플리케이션 마이그레이션
+ 클라우드로 이전하기 위한 검색 및 분석 도구
+ Google Cloud 기반 SAP
+ SAP 애플리케이션 및 SAP HANA 실행을 위한 인증
+ 고성능 컴퓨팅
+ 모든 워크로드를 지원하는 컴퓨팅, 스토리지, 네트워킹 옵션
+ Google Cloud에서 Windows 실행
+ Windows 워크로드 실행을 위한 도구 및 파트너
+ 데이터 센터 마이그레이션
+ VM, 앱, 데이터베이스 등을 위한 마이그레이션 솔루션
+ Active Assist
+ 클라우드 리소스의 자동 최적화 및 보안 강화
+ 가상 데스크톱
+ 데스크톱 및 애플리케이션용 원격 근무 솔루션(VDI 및 DaaS)
+ Rapid Migration and Modernization Program
+ 클라우드로 간편하게 이전할 수 있게 해주는 엔드 투 엔드 마이그레이션 프로그램
+ 백업 및 재해 복구
+ 비즈니스 연속성 니즈를 충족하는지 확인
+ Google Cloud 기반 Red Hat
+ Google과 Red Hat은 기존 온프렘 및 커스텀 애플리케이션을 위한 엔터프라이즈급 플랫폼을 제공합니다.
+ 교차 클라우드 네트워크
+ 하이브리드 및 멀티 클라우드 네트워킹을 간소화하고 워크로드, 데이터, 사용자를 보호하세요.
+ 생산성 및 공동작업
+ 영향력을 발휘하기 위해 빌드된 인간 중심 설계의 솔루션으로 팀의 공동작업 방식을 변경
+ Google Workspace
+ 기업용 공동작업 및 생산성 도구
+ Google Workspace Essentials
+ 팀을 위한 안전한 화상 회의와 현대적 공동작업 도구
+ Cloud ID
+ IT 관리자가 사용자 기기와 앱을 관리할 수 있는 통합 플랫폼
+ Chrome Enterprise
+ 비즈니스용 ChromeOS, Chrome 브라우저, Chrome 기기
+ 보안
+ 온라인 위협을 감지, 조사, 대응하여 비즈니스 보호
+ 에이전트형 SOC
+ AI 에이전트를 통해 더욱 우수한 보안 성과를 제공합니다.
+ 웹 앱 및 API 보호
+ 웹 애플리케이션 및 API에 대한 위협 및 사기 방지
+ 보안 및 복원력 프레임워크
+ 보안 및 복원력 수명 주기의 각 단계에 대한 솔루션
+ 코드형 위험 및 규정 준수(RCaC)
+ 자동화를 통해 거버넌스, 위험, 규정 준수 기능을 현대화하는 솔루션
+ 소프트웨어 공급망 보안
+ 엔드 투 엔드 소프트웨어 공급망 보안 개선을 위한 솔루션
+ Security Foundation
+ 강력한 보안 상황을 달성하는 데 도움이 되는 추천 제품
+ 스타트업 및 SMB
+ 맞춤형 솔루션과 프로그램을 통해 스타트업 및 SMB 성장 가속화
+ 스타트업 프로그램
+ 스타트업의 역량을 한 단계 끌어올리기 위한 재무, 비즈니스, 기술 지원 받기
+ 중소기업
+ 웹 호스팅, 앱 개발, AI, 분석을 위한 솔루션 살펴보기
+ Software as a Service
+ 더욱 우수한 SaaS 제품을 빌드하고 효율적으로 확장하며 비즈니스 성장 도모
+ close 추천 제품 
+ AI 및 머신러닝 
+ 비즈니스 인텔리전스 
+ 컴퓨팅 
+ 컨테이너 
+ 데이터 분석 
+ 데이터베이스 
+ 개발자 도구 
+ 분산 클라우드 
+ 하이브리드 및 멀티 클라우드
+
+=== [meta] https://cloud.google.com/blog/products/ai-machine-learning/announcing-agents-to-payments-ap2-protocol?hl=en
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 한국어, English, 日本語, Français, Deutsch
+
+=== [github] https://github.com/google-agentic-commerce/AP2
+# Agent Payments Protocol (AP2)
+
+[![Apache License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/google-agentic-commerce/AP2)
+
+<!-- markdownlint-disable MD041 -->
+<p align="center">
+  <img src="docs/assets/ap2_graphic.png" alt="Agent Payments Protocol Graphic">
+</p>
+
+This repository contains code samples and demos of the Agent Payments Protocol.
+
+## Intro to AP2 Video
+
+[![A2A Intro Video](https://img.youtube.com/vi/jSHj0z9Gi24/hqdefault.jpg)](https://youtu.be/jSHj0z9Gi24?si=JyzMu2wZCMpVuxvv)
+
+### AP2 on The Agent Factory - September 2025
+
+[![The Agent Factory (September 2025) - Episode 8: Agent payments, can you do my shopping?](https://img.youtube.com/vi/T1MtWnEYXM0/hqdefault.jpg)](https://youtu.be/T1MtWnEYXM0?si=QkJWnAiav0JAP9F6)
+
+## About the Samples
+
+These samples use [Agent Development Kit (ADK)](https://google.github.io/adk-docs/) and Gemini 3.1 Flash Lite Preview.
+
+The Agent Payments Protocol doesn't require the use of either. While these were
+used in the samples, you're free to use any tools you prefer to build your
+agents.
+
+## Navigating the Repository
+
+The top-level layout is:
+
+- [**`docs/`**](docs/) — specification, flows, FAQ, and MkDocs sources.
+- [**`code/`**](code/) — all source code, organized by artifact:
+    - [**`code/sdk/`**](code/sdk/) — the AP2 SDK (Python lives at
+      [`code/sdk/python/ap2/`](code/sdk/python/ap2/)).
+    - [**`code/samples/`**](code/samples/) — reference implementations and
+      scenarios.
+    - [**`code/web-client/`**](code/web-client/) — the demo web client
+      (Vite + React).
+
+The **`samples`** directory contains a collection of curated scenarios meant to
+demonstrate the key components of the Agent Payments Protocol.
+
+The scenarios can be found in:
+
+- [**`code/samples/python/scenarios`**](code/samples/python/scenarios) — Python.
+- [**`code/samples/go/scenarios`**](code/samples/go/scenarios) — Go.
+- [**`code/samples/android/scenarios`**](code/samples/android/scenarios) — Android.
+
+Each scenario contains:
+
+- a `README.md` file describing the scenario and instructions for running it.
+- a `run.sh` script to simplify the process of running the scenario locally.
+
+This demonstration features various agents and servers, with most source code
+located in [**`code/samples/python/src`**](code/samples/python/src/).
+Scenarios that use an Android app as the shopping assistant have their source
+code in [**`code/samples/android`**](code/samples/android/); Go roles live in
+[**`code/samples/go`**](code/samples/go/).
+
+For the SDK API reference see
+[**`code/sdk/python/ap2/sdk/README.md`**](code/sdk/python/ap2/sdk/README.md).
+
+## Quickstart
+
+### Prerequisites
+
+- Python 3.11 or higher
+- [`uv`](https://docs.astral.sh/uv/getting-started/installation/) package manager
+
+### Setup
+
+You can authenticate using either a Google API Key or Vertex AI.
+
+For either method, you can set the required credentials as environment variables in your shell or place them in a `.env` file at the root of your project.
+
+#### Option 1: Google API Key (Recommended for development)
+
+1. Obtain a Google API key from [Google AI Studio](http://aistudio.google.com/apikey).
+2. Set the `GOOGLE_API_KEY` environment variable.
+
+    - **As an environment variable:**
+
+        ```sh
+        export GOOGLE_API_KEY='your_key'
+        ```
+
+    - **In a `.env` file:**
+
+        ```sh
+        GOOGLE_API_KEY='your_key'
+        ```
+
+#### Option 2: [Vertex AI](https://cloud.google.com/vertex-ai) (Recommended for production)
+
+1. **Configure your environment to use Vertex AI.**
+    - **As environment variables:**
+
+        ```sh
+        export GOOGLE_GENAI_USE_VERTEXAI=true
+        export GOOGLE_CLOUD_PROJECT='your-project-id'
+        export GOOGLE_CLOUD_LOCATION='global' # or your preferred region
+        ```
+
+    - **In a `.env` file:**
+
+        ```sh
+        GOOGLE_GENAI_USE_VERTEXAI=true
+        GOOGLE_CLOUD_PROJECT='your-project-id'
+        GOOGLE_CLOUD_LOCATION='global'
+        ```
+
+2. **Authenticate your application.**
+    - **Using the [`gcloud` CLI](https://cloud.google.com/sdk/docs/install):**
+
+        ```sh
+        gcloud auth application-default log

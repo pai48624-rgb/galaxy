@@ -1,0 +1,37 @@
+{
+ "company": "Google Research",
+ "one_liner_ko": "사실적이고 일관된 움직임의 영상을 만드는 시공간 확산(Space-Time Diffusion) 영상 생성 연구 모델.",
+ "what_it_does_ko": "Lumiere는 Google Research가 발표한 텍스트-영상 확산 모델이다. Space-Time U-Net 구조로 영상 전체 길이를 모델 한 번에 생성해, 먼저 키프레임을 만들고 사이를 채우는 기존 방식보다 시간적 일관성을 높였다고 설명한다. 텍스트·이미지로 영상을 만들고, 참조 이미지 한 장으로 같은 스타일의 영상을 생성할 수 있다. 영상 스타일 변환, 이미지 일부만 움직이는 시네마그래프, 영상 인페인팅에도 쓸 수 있다. 공개된 페이지는 논문과 결과 예시를 보여 주는 연구 소개 페이지다.",
+ "key_features": [
+  "텍스트로 영상 생성(Text-to-Video)",
+  "이미지로 영상 생성(Image-to-Video)",
+  "참조 이미지 한 장으로 스타일 영상 생성",
+  "텍스트 기반 영상 스타일 변환",
+  "지정 영역만 움직이는 시네마그래프",
+  "영상 인페인팅"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://lumiere-video.github.io", "quote": " Google Research"},
+  {"field": "one_liner_ko", "url": "https://lumiere-video.github.io", "quote": "A Space-Time Diffusion Model for Video Generation"},
+  {"field": "what_it_does_ko", "url": "https://lumiere-video.github.io", "quote": "we introduce a Space-Time U-Net architecture that generates the entire temporal duration of the video at once, through a single pass in the model."},
+  {"field": "what_it_does_ko", "url": "https://lumiere-video.github.io", "quote": "including image-to-video, video inpainting, and stylized generation."},
+  {"field": "key_features", "url": "https://lumiere-video.github.io", "quote": "Using a single reference image, Lumiere can generate videos in the target style by utilizing fine-tuned text-to-image model weights."},
+  {"field": "key_features", "url": "https://lumiere-video.github.io", "quote": "With Lumiere, off-the-shelf text-based image editing methods can be used for consistent video editing."},
+  {"field": "key_features", "url": "https://lumiere-video.github.io", "quote": "The Lumiere model is able to animate the content of an image within a specific user-provided region."},
+  {"field": "key_features", "url": "https://lumiere-video.github.io", "quote": " Text-to-Video "},
+  {"field": "korean_support", "url": "https://lumiere-video.github.io", "quote": "html lang: 없음"}
+ ],
+ "mismatch": [],
+ "plan_change": [],
+ "note": "공식 페이지는 Google Research의 논문 소개 페이지로, 일반 사용자용 서비스·가입·요금 정보가 전혀 없음. 기존 분류 '프리미엄(무료+유료)'은 근거 확인 불가(사람 확인 필요)."
+}

@@ -1,0 +1,55 @@
+{
+ "company": "deepset GmbH",
+ "one_liner_ko": "운영 수준의 AI 에이전트를 위한 오픈소스 AI 오케스트레이션 프레임워크.",
+ "what_it_does_ko": "Haystack은 운영 수준의 AI 에이전트, RAG 애플리케이션, 확장 가능한 멀티모달 검색 시스템을 만드는 오픈소스 AI 프레임워크다. 각자 특정 작업을 맡는 재사용 가능한 컴포넌트를 파이프라인으로 연결하며, 문서 저장소·에이전트·도구와 많은 통합을 갖춘다. OpenAI·Anthropic·Mistral·Hugging Face·Weaviate·Pinecone·Elasticsearch 등과 벤더 종속 없이 연결된다. 파이프라인은 직렬화 가능하고 클라우드 비종속·Kubernetes 대응이며, 별도로 기업 지원과 Haystack 기반 Haystack Enterprise Platform(무료 체험 가능)을 제공한다.",
+ "key_features": [
+  "재사용 가능한 컴포넌트와 파이프라인으로 AI 시스템 구성",
+  "검색부터 추론·메모리·도구 사용까지 에이전트 전 단계 오케스트레이션",
+  "OpenAI·Anthropic·Hugging Face·Pinecone 등과 벤더 종속 없는 통합",
+  "직렬화 가능·클라우드 비종속·Kubernetes 대응 파이프라인",
+  "파이프라인·에이전트를 HTTP 엔드포인트로 배포",
+  "이미지 처리·음성 전사 등 멀티모달 작업",
+  "Jinja-2 템플릿 기반 프롬프트 흐름"
+ ],
+ "use_cases_ko": [
+  "하이브리드 검색·자기 수정 루프를 쓰는 고성능 RAG 파이프라인",
+  "표준화된 도구 호출을 쓰는 운영용 AI 에이전트",
+  "대화형 봇·콘텐츠 생성 엔진"
+ ],
+ "pricing": {
+  "free_tier": "있음 (오픈소스 프레임워크, Enterprise Platform 무료 체험)",
+  "plans": [
+   {"name": "Haystack (오픈소스)", "price": 0, "currency": null, "period": null, "limits": "커뮤니티 지원", "page_lang": "en"},
+   {"name": "Enterprise Support", "price": null, "currency": null, "period": null, "limits": "회사 규모에 따른 유연한 가격, 비공개 엔지니어링 지원", "page_lang": "en"},
+   {"name": "Haystack Enterprise Platform", "price": null, "currency": null, "period": null, "limits": "무료 체험, 클라우드 또는 온프렘 배포", "page_lang": "en"}
+  ],
+  "pricing_url": "https://haystack.deepset.ai"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": ["API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://haystack.deepset.ai", "quote": "© 2026 deepset GmbH. All rights reserved."},
+  {"field": "one_liner_ko", "url": "https://haystack.deepset.ai", "quote": "Haystack | Open-Source AI Framework for Production-Grade Agents"},
+  {"field": "what_it_does_ko", "url": "https://docs.haystack.deepset.ai/docs/intro", "quote": "Haystack is an open-source AI framework for building production-ready AI Agents , powerful RAG applications and scalable multimodal search systems ."},
+  {"field": "what_it_does_ko", "url": "https://haystack.deepset.ai", "quote": "Haystack Pipelines are serializable, cloud-agnostic, and Kubernetes-ready"},
+  {"field": "key_features", "url": "https://docs.haystack.deepset.ai/docs/intro", "quote": "Build pipelines using reusable components, each responsible for specific tasks."},
+  {"field": "key_features", "url": "https://haystack.deepset.ai", "quote": "Orchestrate every step of your AI agent, from retrieval to reasoning to memory and tool use."},
+  {"field": "key_features", "url": "https://haystack.deepset.ai", "quote": "and more with no vendor lock-in."},
+  {"field": "key_features", "url": "https://docs.haystack.deepset.ai/docs/intro", "quote": "Deployment - serve your pipeline or agent as an HTTP endpoint."},
+  {"field": "key_features", "url": "https://haystack.deepset.ai", "quote": "Haystack can do tasks like image processing and audio transcription too."},
+  {"field": "key_features", "url": "https://haystack.deepset.ai", "quote": "Leverage our Jinja-2 templates and build a content generation engine"},
+  {"field": "use_cases_ko", "url": "https://haystack.deepset.ai", "quote": "Build highly performant RAG pipelines with a multitude of retrieval and generation strategies."},
+  {"field": "use_cases_ko", "url": "https://haystack.deepset.ai", "quote": "Design production-ready AI agents with standardized tool calling and scalable context engineering."},
+  {"field": "use_cases_ko", "url": "https://haystack.deepset.ai", "quote": "All of our generators provide a standardized interface so that you can focus on building the perfect bot for your users."},
+  {"field": "pricing", "url": "https://haystack.deepset.ai", "quote": "Flexible pricing based on company size"},
+  {"field": "pricing", "url": "https://haystack.deepset.ai", "quote": "Try Haystack Enterprise Platform for free"},
+  {"field": "pricing", "url": "https://haystack.deepset.ai", "quote": "Open Source AI framework for building production-ready, LLM-powered agents and applications, on your own or with Community support."},
+  {"field": "api", "url": "https://docs.haystack.deepset.ai/docs/intro", "quote": "Deployment - serve your pipeline or agent as an HTTP endpoint."},
+  {"field": "platforms", "url": "https://docs.haystack.deepset.ai/docs/intro", "quote": "Docs API Reference"},
+  {"field": "korean_support", "url": "https://haystack.deepset.ai", "quote": "html lang: en"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

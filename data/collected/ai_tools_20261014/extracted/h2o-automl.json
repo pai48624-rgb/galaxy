@@ -1,0 +1,101 @@
+{
+ "company": "H2O.ai",
+ "one_liner_ko": "사용자가 정한 시간 안에 여러 모델을 자동으로 학습·튜닝해 비전문가도 쓸 수 있게 만든 H2O의 자동 머신러닝 기능.",
+ "what_it_does_ko": "H2O AutoML은 사용자가 지정한 시간 한도 안에서 많은 모델을 자동으로 학습·튜닝해 머신러닝 작업 흐름을 자동화한다. 데이터셋과 정답 열만 지정하고 시간이나 모델 수 한도를 정하면 되도록 매개변수를 최소화했다. 결과 모델들을 리더보드로 순위 매기고, 함수 하나로 모델 설명 자료를 자동 생성한다. 바탕이 되는 H2O는 분산·확장형 인메모리 머신러닝 플랫폼으로 R·파이썬 등에서 쓰고 Hadoop·Spark와 연동된다.",
+ "key_features": [
+  "시간·모델 수 한도 안에서 다수 모델 자동 학습·튜닝",
+  "모델 순위를 매기는 리더보드",
+  "Stacked Ensemble 모델 자동 생성",
+  "함수 하나로 모델 설명(Explainability) 자동 생성",
+  "R·파이썬 인터페이스와 H2O Wave 웹 UI",
+  "POJO·MOJO 형식으로 내보내 운영 환경에서 빠른 예측",
+  "Hadoop·Spark 등 빅데이터 기술과 연동"
+ ],
+ "use_cases_ko": [
+  "데이터 과학 지식이 적은 사용자가 고성능 모델 만들기",
+  "고급 사용자가 반복 모델링 코드를 줄이고 전처리·피처 엔지니어링에 집중"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://github.com/h2oai/h2o-3",
+   "quote": "H2O is an in-memory platform for distributed, scalable machine learning."
+  },
+  {
+   "field": "company",
+   "url": "https://github.com/h2oai/h2o-3",
+   "quote": "please visit: [https://h2o.ai/download](https://h2o.ai/download)"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://docs.h2o.ai/h2o/latest-stable/h2o-docs/automl.html",
+   "quote": "H2O’s AutoML can be used for automating the machine learning workflow, which includes automatic training and tuning of many models within a user-specified time-limit."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.h2o.ai/h2o/latest-stable/h2o-docs/automl.html",
+   "quote": "all the user needs to do is point to their dataset, identify the response column, and optionally specify a time constraint or limit on the number of total models trained"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/h2oai/h2o-3",
+   "quote": "works seamlessly with big data technologies like Hadoop and Spark"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.h2o.ai/h2o/latest-stable/h2o-docs/automl.html",
+   "quote": "You can then configure values for max_runtime_secs and/or max_models to set explicit time or number-of-model limits on your run."
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.h2o.ai/h2o/latest-stable/h2o-docs/automl.html",
+   "quote": "This argument allows the user to specify a particular data frame to use to score and rank models on the leaderboard."
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.h2o.ai/h2o/latest-stable/h2o-docs/automl.html",
+   "quote": "If provided, all Stacked Ensembles produced by AutoML will be trained using Blending"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.h2o.ai/h2o/latest-stable/h2o-docs/automl.html",
+   "quote": "Explanations can be generated automatically with a single function call"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.h2o.ai/h2o/latest-stable/h2o-docs/automl.html",
+   "quote": "See the Web UI via H2O Wave section below for information on how to use the H2O Wave web interface for AutoML."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/h2oai/h2o-3",
+   "quote": "or exported into POJO or MOJO format for extremely fast scoring in"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://docs.h2o.ai/h2o/latest-stable/h2o-docs/automl.html",
+   "quote": "we have designed an easy-to-use interface that automates the process of training a large selection of candidate models"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://docs.h2o.ai/h2o/latest-stable/h2o-docs/automl.html",
+   "quote": "freeing up time to focus on other data science tasks such as data preprocessing, feature engineering, and model deployment"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://docs.h2o.ai/h2o/latest-stable/h2o-docs/automl.html",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

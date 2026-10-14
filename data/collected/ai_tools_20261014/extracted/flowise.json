@@ -1,0 +1,182 @@
+{
+ "company": "FlowiseAI",
+ "one_liner_ko": "AI 에이전트와 LLM 워크플로를 시각적으로 만드는 오픈소스 에이전트 개발 플랫폼(현재 서비스 종료 예정).",
+ "what_it_does_ko": "Flowise는 AI 에이전트와 LLM 워크플로를 만드는 오픈소스 생성형 AI 개발 플랫폼이다. Assistant·Chatflow·Agentflow 세 가지 시각적 빌더로 챗봇부터 멀티 에이전트 시스템까지 만들 수 있다. 실행 추적·평가·사람 승인(HITL)을 제공하고 API·SDK·임베드 채팅으로 앱에 붙일 수 있다. 수집 시점에 홈은 Flowise 서비스 종료(sunsetting)를, GitHub는 저장소 보관(archived)을 알리고 있다.",
+ "key_features": [
+  "멀티 에이전트 오케스트레이션(Agentflow)",
+  "도구 호출·RAG 챗봇(Chatflow)",
+  "사람 검토 루프(Human in the Loop)",
+  "실행 추적(Prometheus·OpenTelemetry 지원)",
+  "API·TypeScript/Python SDK·임베드 채팅 위젯",
+  "LLM·임베딩·벡터DB 100개 이상 연동",
+  "온프레미스·클라우드 배포와 수평 확장",
+  "MCP 클라이언트/서버 노드"
+ ],
+ "use_cases_ko": [
+  "기존 분석 플랫폼에 AI 기능 추가",
+  "사내용 'AI 어시스턴트 직접 만들기' 프로그램"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Free $0/월, Flow 2개·월 100 예측·저장 5MB)",
+  "plans": [
+   {
+    "name": "Free",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "Flow·Assistant 2개, 월 100 예측, 저장 5MB",
+    "page_lang": "en"
+   },
+   {
+    "name": "Starter",
+    "price": 35,
+    "currency": "USD",
+    "period": "month",
+    "limits": "Flow 무제한, 월 10,000 예측, 저장 1GB, 첫 달 무료",
+    "page_lang": "en"
+   },
+   {
+    "name": "Pro",
+    "price": 65,
+    "currency": "USD",
+    "period": "month",
+    "limits": "월 50,000 예측, 저장 10GB, 사용자 5명(+$15/사용자/월)",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://flowiseai.com"
+ },
+ "open_source": "오픈소스(라이선스 이름은 페이지에 없음)",
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "CLI",
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://docs.flowiseai.com/",
+   "quote": "Introduction | FlowiseAI"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://flowiseai.com",
+   "quote": "Open source agentic systems development platform"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.flowiseai.com/",
+   "quote": "Flowise is an open source generative AI development platform for building AI Agents and LLM workflows."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.flowiseai.com/",
+   "quote": "There are 3 main visual builders namely: Assistant Chatflow Agentflow"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://flowiseai.com",
+   "quote": "We're sunsetting Flowise."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/FlowiseAI/Flowise",
+   "quote": "Flowise has been archived."
+  },
+  {
+   "field": "key_features",
+   "url": "https://flowiseai.com",
+   "quote": "Build multi-agent systems with workflow orchestration distributed across multiple coordinated agents"
+  },
+  {
+   "field": "key_features",
+   "url": "https://flowiseai.com",
+   "quote": "Build single-agent systems and chatbots with support for tool calling and knowledge retrieval (RAG) from various data sources"
+  },
+  {
+   "field": "key_features",
+   "url": "https://flowiseai.com",
+   "quote": "Allow humans to review tasks performed by agents within the feedback loop"
+  },
+  {
+   "field": "key_features",
+   "url": "https://flowiseai.com",
+   "quote": "Full execution traces, support Prometheus, OpenTelemetry and other observability tools"
+  },
+  {
+   "field": "key_features",
+   "url": "https://flowiseai.com",
+   "quote": "APIs Embedded Widget Typescript & Python SDK"
+  },
+  {
+   "field": "key_features",
+   "url": "https://flowiseai.com",
+   "quote": "100+ LLMs, Embeddings, Vector DBs"
+  },
+  {
+   "field": "key_features",
+   "url": "https://flowiseai.com",
+   "quote": "Scale horizontally with message queue and workers"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.flowiseai.com/",
+   "quote": "MCP client/server nodes, tool listing, SSE, auth support"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://flowiseai.com",
+   "quote": "Flowise allows us to supercharge our existing embedded analytics platform with built-in AI features"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://flowiseai.com",
+   "quote": "we were able to accelerate our internal \"Build your own AI assistants easily & intuitively\" initiative"
+  },
+  {
+   "field": "pricing",
+   "url": "https://flowiseai.com",
+   "quote": "Free $0 /month 2 Flows & Assistants 100 Predictions / month 5MB Storage"
+  },
+  {
+   "field": "pricing",
+   "url": "https://flowiseai.com",
+   "quote": "$35 /month Everything in Free Unlimited Flows & Assistants 10,000 Predictions / month 1GB Storage"
+  },
+  {
+   "field": "pricing",
+   "url": "https://flowiseai.com",
+   "quote": "$65 /month Everything in Starter 50,000 Predictions / month 10GB Storage"
+  },
+  {
+   "field": "pricing",
+   "url": "https://flowiseai.com",
+   "quote": "5 Users + $15/user/month"
+  },
+  {
+   "field": "open_source",
+   "url": "https://docs.flowiseai.com/",
+   "quote": "Flowise is an open source generative AI development platform"
+  },
+  {
+   "field": "api",
+   "url": "https://docs.flowiseai.com/",
+   "quote": "API access, JS/Python SDK, Command Line Interface"
+  },
+  {
+   "field": "platforms",
+   "url": "https://flowiseai.com",
+   "quote": "$ npm install -g flowise $ npx flowise start"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://flowiseai.com",
+   "quote": "html lang: en"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [],
+ "note": "홈 'We're sunsetting Flowise', GitHub 'Flowise has been archived' — 서비스 종료 예정, 사람 확인 필요."
+}

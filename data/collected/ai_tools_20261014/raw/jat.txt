@@ -1,0 +1,134 @@
+=== [home] https://jat.tools (lang=en)
+jat.tools — the agentic dev stack 
+ Home 
+ Docs 
+ Reference 
+ Skills 
+ Install 
+ GitHub 
+ Home 
+ Docs 
+ Reference 
+ Skills 
+ Install 
+ GitHub 
+ the agentic dev stack
+ Everything a fleet of coding agents needs to plan, build, and ship real work .
+ Seven composable tools for task orchestration, the framework you build
+ on, browser automation, credential management, and compute offload.
+ Self-hosted on your own machines and your own tailnet — no account, no
+ cloud, nothing leaves your network.
+ Get started Explore tools GitHub 
+ jat fleet · 4 agents · 12 tasks · 1 tailnet spawn auth-refactor src/auth/** spawn billing-webhook src/billing/** "> pilot drive checkout in your own browser "> secret resolve stripe-api-key from the vault "> run offload build → appliance mesh review passed · 3 changes shipped 
+ The jatstack family
+ Every tool stands alone. Together they cover the full loop from task to
+ shipped change — one system where the parts assume each other.
+ jat the flagship 
+ The agentic dev IDE — multi-agent orchestration for real work. Spawn, coordinate, and track fleets of agents partitioned
+ by file so they never conflict — task queue, signals, leases, and a live
+ board.
+ curl -fsSL jat.tools/install | sh 
+ The coordination layer
+ jt · jat-task The task queue agents pick work from — create, track, and
+ dependency-graph tasks. jat-task is the
+ long-form alias of jt .
+ jat-send · jat-inbox A shared agent mailbox — agents message each other and drain their
+ inbox to stay coordinated.
+ jst The agent-proven SvelteKit starter you scaffold a new app on. use as a GitHub template → npm install jat-pilot Drive your own browser — consent-scoped agent automation. jat install pilot jat-secret Encrypted credential vault across every machine in the fleet. jat install secret jat-appliance The box — one machine turned into a private compute + inference node. jat install appliance jatstation An opinionated agentic Linux desktop — the workstation layer. curl -fsSL jat.tools/jomarchy | sh jat.run The fabric — many appliances pooled behind one tailnet endpoint. jat install run jat orchestrates. jst is the framework you build on, pilot drives your
+ browser, secret resolves the keys, appliance and run take the heavy
+ compute. jatstation is the desk it all runs on.
+ How they fit together → 
+ Install
+ One command bootstraps the stack onto your PATH. Pull in the rest of the
+ tools as you need them — each tool's docs page carries its own
+ installer.
+ Prefer to read first? Start with the docs .
+ curl -fsSL jat.tools/install | sh 
+ Copy 
+ jat metaskills
+ jatstack composes best-in-class open frameworks ( impeccable , HyperFrames , Omarchy ) and runs them
+ at fleet scale.
+ See the skills → 
+ jatstack The agentic dev stack.
+ Tools
+ jat 
+ jst 
+ jat-pilot 
+ jat-secret 
+ jat-appliance 
+ jatstation 
+ jat.run 
+ Docs
+ Overview 
+ Reference 
+ Install 
+ llms.txt 
+ Project
+ GitHub 
+ © 2026 jatstack · All rights reserved (alpha)
+
+=== [about] https://jat.tools/docs (lang=en)
+Tools — jat.tools 
+ Home 
+ Docs 
+ Reference 
+ Skills 
+ Install 
+ GitHub 
+ Home 
+ Docs 
+ Reference 
+ Skills 
+ Install 
+ GitHub 
+ The jatstack family
+ Documentation for every tool in the stack.
+ A family of small, composable tools for running agentic dev work — from the
+ desktop you sit at to the compute your agents run on. Each one works
+ standalone; together they cover a full agent-driven dev loop. Looking for
+ the complete list? See the full tool reference .
+ jat the flagship 
+ The agentic dev IDE — multi-agent orchestration for real work. Spawn, coordinate, and track fleets of agents partitioned
+ by file so they never conflict — task queue, signals, leases, and a live board.
+ curl -fsSL jat.tools/install | sh Read the docs → 
+ The supporting cast
+ jst The agent-proven SvelteKit starter you scaffold a new app on. use as a GitHub template → npm install jat-pilot Drive your own browser — consent-scoped agent automation. jat install pilot jat-secret Encrypted credential vault across every machine in the fleet. jat install secret jat-appliance The box — one machine turned into a private compute + inference node. jat install appliance jatstation An opinionated agentic Linux desktop — the workstation layer. curl -fsSL jat.tools/jomarchy | sh jat.run The fabric — many appliances pooled behind one tailnet endpoint. jat install run 
+ The loop
+ How they fit together
+ Start at the flagship, end on the mesh — pick up any tool on its own where
+ you need it.
+ jat → 
+ jst → 
+ jat-pilot → 
+ jat-secret → 
+ jat-appliance → 
+ jatstation → 
+ jat.run 
+ 2 + 2 = 5
+ jat orchestrates. jst is the framework you build on, pilot drives your
+ browser, secret resolves the keys, appliance and run take the heavy
+ compute. jatstation is the desk it all runs on. Every tool stands alone —
+ but the whole assumes its parts, and adds up to more than the sum of them.
+ Source for every tool lives under github.com/jatstack .
+ jatstack The agentic dev stack.
+ Tools
+ jat 
+ jst 
+ jat-pilot 
+ jat-secret 
+ jat-appliance 
+ jatstation 
+ jat.run 
+ Docs
+ Overview 
+ Reference 
+ Install 
+ llms.txt 
+ Project
+ GitHub 
+ © 2026 jatstack · All rights reserved (alpha)
+
+=== [meta] https://jat.tools
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음

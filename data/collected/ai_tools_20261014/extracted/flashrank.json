@@ -1,0 +1,80 @@
+{
+ "company": null,
+ "one_liner_ko": "검색 결과를 LLM에 넣기 전에 최신 Pairwise·Listwise 리랭커로 다시 정렬해 주는 초경량 파이썬 라이브러리.",
+ "what_it_does_ko": "FlashRank는 기존 검색·검색 파이프라인에 리랭킹을 붙이는 초경량·고속 파이썬 라이브러리다. 크로스 인코더 기반 Pairwise/Pointwise 리랭커와 LLM 기반 Listwise 리랭커를 지원한다. Torch나 Transformers 없이 CPU에서 돌아가며 약 4MB짜리 기본 모델을 쓴다. 패키지가 작아 Lambda 같은 서버리스 배포에서 호출당 비용과 콜드 스타트 시간을 줄일 수 있다고 소개한다.",
+ "key_features": [
+  "크로스 인코더 기반 Pairwise/Pointwise 리랭커(최대 512토큰)",
+  "LLM 기반 Listwise 리랭커(최대 8192토큰)",
+  "Torch·Transformers 불필요, CPU에서 실행",
+  "약 4MB 크기의 초소형 기본 리랭킹 모델",
+  "작은 패키지로 서버리스 배포 콜드 스타트 단축",
+  "여러 모델 선택(ms-marco-MiniLM-L-12-v2, rank-T5-flan 등)"
+ ],
+ "use_cases_ko": [
+  "기존 검색·RAG 파이프라인에서 LLM에 넣기 전 결과 재정렬",
+  "Lambda 같은 서버리스 환경에서 저비용 리랭킹"
+ ],
+ "pricing": {
+  "free_tier": null,
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "Apache",
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/PrithivirajDamodaran/FlashRank",
+   "quote": "Re-rank your search results with SoTA Pairwise or Listwise rerankers before feeding into your LLMs"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/PrithivirajDamodaran/FlashRank",
+   "quote": "Ultra-lite &amp; Super-fast Python library to add re-ranking to your existing search &amp; retrieval pipelines."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/PrithivirajDamodaran/FlashRank",
+   "quote": "Pairwise / Pointwise rerankers. (Cross encoder based, i.e. ```Max tokens = 512```)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/PrithivirajDamodaran/FlashRank",
+   "quote": "Listwise LLM based rerankers. (LLM based, i.e. ```Max tokens = 8192```)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/PrithivirajDamodaran/FlashRank",
+   "quote": "**No Torch or Transformers** needed. Runs on CPU."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/PrithivirajDamodaran/FlashRank",
+   "quote": "Boasts the **tiniest reranking model in the world, ~4MB**."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/PrithivirajDamodaran/FlashRank",
+   "quote": "**Smaller package size** = shorter cold start times, quicker re-deployments for Serverless."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/PrithivirajDamodaran/FlashRank",
+   "quote": "| `rank-T5-flan` | Best non cross-encoder reranker | ~110MB |"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/PrithivirajDamodaran/FlashRank",
+   "quote": "**Lowest $ per invocation:** Serverless deployments like Lambda are charged by memory & time per invocation*"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/PrithivirajDamodaran/FlashRank",
+   "quote": "https://img.shields.io/badge/License-Apache-blue.svg"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

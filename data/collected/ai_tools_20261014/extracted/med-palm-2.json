@@ -1,0 +1,78 @@
+{
+ "company": "Google Research",
+ "one_liner_ko": "의료 분야에 맞춰 만든 Google Research의 대규모 언어 모델(의학 질문 답변용).",
+ "what_it_does_ko": "Med-PaLM은 의학 질문에 질 높은 답을 내도록 설계된 LLM이다. 두 번째 버전인 Med-PaLM 2는 의료 산업용 파운데이션 모델 모음 MedLM을 구동하는 연구 모델 중 하나이며, MedLM은 Google Cloud 고객이 쓸 수 있다. 연구 단계에서 MedQA 의학 시험 벤치마크 정확도 86.5%를 기록했고, 미국 의사면허시험(USMLE) 유형 문제에서 처음으로 전문가 수준에 도달했다고 밝힌다. 흉부 X선 등 이미지까지 다루는 멀티모달 버전 Med-PaLM M 연구도 진행 중이다. 안전하고 책임 있는 사용을 위해 아직 평가 중이라고 적혀 있다.",
+ "key_features": [
+  "의학 질문 답변",
+  "소비자 건강 질문에 대한 긴 답변 생성",
+  "MedLM(Google Cloud)으로 제공되는 의료 특화 모델",
+  "멀티모달 버전 Med-PaLM M(흉부 X선·유방촬영 등 이미지 해석 연구)"
+ ],
+ "use_cases_ko": [
+  "Google Cloud 고객이 의료 업무 흐름에 MedLM을 적용"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://sites.research.google/gr/med-palm/",
+   "quote": "A large language model from Google Research, designed for the medical domain."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://sites.research.google/gr/med-palm/",
+   "quote": "Med-PaLM is a large language model (LLM) designed to provide high quality answers to medical questions."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://sites.research.google/gr/med-palm/",
+   "quote": "Med-PaLM 2, is one of the research models that powers MedLM"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://sites.research.google/gr/med-palm/",
+   "quote": "Med-PaLM 2 reached 86.5% accuracy on the MedQA medical exam benchmark in research."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://sites.research.google/gr/med-palm/",
+   "quote": "Med-PaLM 2 was the first to reach human expert level on answering USMLE-style questions."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://sites.research.google/gr/med-palm/",
+   "quote": "Med-PaLM 2 is currently being evaluated to ensure safe and responsible use."
+  },
+  {
+   "field": "key_features",
+   "url": "https://sites.research.google/gr/med-palm/",
+   "quote": "Med-PaLM also generates accurate, helpful long-form answers to consumer health questions"
+  },
+  {
+   "field": "key_features",
+   "url": "https://sites.research.google/gr/med-palm/",
+   "quote": "This system can synthesize and communicate information from images like chest X-rays, mammograms, and more"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://sites.research.google/gr/med-palm/",
+   "quote": "MedLM is now available to Google Cloud customers who have been exploring a range of applications"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://sites.research.google/gr/med-palm/",
+   "quote": "hreflang: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [],
+ "note": "연구 소개 페이지. 가격·API 정보 없음(Google Cloud 링크만 있음)."
+}

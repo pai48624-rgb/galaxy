@@ -1,0 +1,231 @@
+{
+ "company": "Inngest",
+ "one_liner_ko": "비동기 코드를 단계(step)로 감싸 실패해도 이어서 실행되게 하는 오픈소스 내구 실행(durable execution) 플랫폼.",
+ "what_it_does_ko": "Inngest는 워크플로와 에이전트를 오케스트레이션 인프라 관리 없이 내구성 있게 실행하는 플랫폼이다. 기존 코드의 함수에 단계를 추가하면 Inngest가 각 단계를 실행·저장하고 실패한 단계부터 재시도한다. 흐름 제어, 관측(트레이스), 격리 샌드박스(microVM), 에이전트 평가·A/B 테스트를 함께 제공한다. TypeScript·Python·Go SDK와 REST API를 제공하며 로컬 Dev Server로 개발한 뒤 클라우드나 자체 호스팅 서버로 운영한다.",
+ "key_features": [
+  "자동 재시도·복구·관측이 붙는 백그라운드 작업",
+  "Redis·브로커 없는 내구성 메시지 큐",
+  "잠자기·팬아웃·재시도 가능한 예약·크론 작업",
+  "테넌트별 동시성·처리량·공정성 흐름 제어",
+  "내구 실행 안에서 격리 microVM 코드 실행(Sandboxes)",
+  "결과 점수화와 A/B 비교(Agent Evals)",
+  "실행 진행 상황 실시간 스트리밍",
+  "트리거부터 완료까지 전체 트레이스"
+ ],
+ "use_cases_ko": [
+  "도구 호출·사람 대기·장애 복구가 필요한 AI 에이전트 루프",
+  "실패한 단계만 재시도하는 다단계 백그라운드 작업",
+  "프롬프트·모델·워크플로의 평가와 A/B 테스트"
+ ],
+ "pricing": {
+  "free_tier": "있음 (월 50k 실행, 50만 이벤트, 좌석 5, 카드 불필요)",
+  "plans": [
+   {
+    "name": "Free",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "좌석 5, 50k 실행, 동시 스텝 5, 워커 3",
+    "page_lang": null
+   },
+   {
+    "name": "Pro",
+    "price": 99,
+    "currency": "USD",
+    "period": "month",
+    "limits": "시작가(Starting at), 좌석 15, 1M 실행, 동시 스텝 100+, 동시 샌드박스 100",
+    "page_lang": null
+   },
+   {
+    "name": "Business",
+    "price": 499,
+    "currency": "USD",
+    "period": "month",
+    "limits": "좌석 30, 10M 실행, 동시 스텝 500, 동시 샌드박스 1,000",
+    "page_lang": null
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": "USD",
+    "period": "month",
+    "limits": "맞춤(Custom), 문의",
+    "page_lang": null
+   },
+   {
+    "name": "Sandbox 1 vCPU",
+    "price": 0.0396,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "시간당(초 단위 과금)",
+    "page_lang": null
+   },
+   {
+    "name": "Sandbox 1 GB 메모리",
+    "price": 0.0108,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "시간당(초 단위 과금)",
+    "page_lang": null
+   }
+  ],
+  "pricing_url": "https://www.inngest.com/pricing?ref=footer/"
+ },
+ "open_source": "오픈소스 SDK(라이선스명 페이지에 없음)",
+ "api": "있음",
+ "platforms": [
+  "API",
+  "CLI"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.inngest.com",
+   "quote": "Durable Execution for Workflows & AI | Inngest"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.inngest.com",
+   "quote": "Inngest is the fastest way to orchestrate all your async code."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.inngest.com",
+   "quote": "Open source durable execution"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.inngest.com/docs?ref=footer/",
+   "quote": "Inngest is the platform for building durable workflows and agents that survive failures, without managing orchestration infrastructure."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.inngest.com/docs?ref=footer/",
+   "quote": "Inngest runs each step, saves its result, and retries failed work from the step that failed."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.inngest.com/docs?ref=footer/",
+   "quote": "TypeScript, Python, and Go SDKs, plus the REST API."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.inngest.com",
+   "quote": "Automatic retries, recovery, and observability."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.inngest.com",
+   "quote": "Durable message queues without the infrastructure"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.inngest.com",
+   "quote": "Run scheduled and cron jobs as functions that sleep, fan out, parallelize, retry, and recover."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.inngest.com/docs?ref=footer/",
+   "quote": "Control concurrency, throughput, and fairness across tenants."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.inngest.com/docs?ref=footer/",
+   "quote": "Run code in isolated microVMs as part of a durable run."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.inngest.com/docs?ref=footer/",
+   "quote": "Score outcomes and compare changes to steps and workflows."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.inngest.com/docs?ref=footer/",
+   "quote": "Stream progress from durable runs to your users."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.inngest.com",
+   "quote": "Trace every background job, agent, and event from trigger to completion"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.inngest.com/docs?ref=footer/",
+   "quote": "Run agent loops that call tools, wait for people, and survive failures."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.inngest.com/docs?ref=footer/",
+   "quote": "Run multi-step jobs that retry each failed step, not the whole job."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.inngest.com/docs?ref=footer/",
+   "quote": "Score real outcomes and compare prompts, models, and workflows."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.inngest.com/pricing?ref=footer/",
+   "quote": "Generous monthly limits to prove it before production. No credit card required."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.inngest.com/pricing?ref=footer/",
+   "quote": "500k events ingested"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.inngest.com/pricing?ref=footer/",
+   "quote": "$ 99 / mo"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.inngest.com/pricing?ref=footer/",
+   "quote": "$ 499 / mo"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.inngest.com/pricing?ref=footer/",
+   "quote": "$0.000011 $0.0396"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.inngest.com/pricing?ref=footer/",
+   "quote": "$0.000003 $0.0108"
+  },
+  {
+   "field": "open_source",
+   "url": "https://www.inngest.com/pricing?ref=footer/",
+   "quote": "Inngest is an open source SDK for orchestrating event-driven apps and agents."
+  },
+  {
+   "field": "api",
+   "url": "https://www.inngest.com/docs?ref=footer/",
+   "quote": "TypeScript, Python, and Go SDKs, plus the REST API."
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/inngest/inngest",
+   "quote": "npx inngest-cli@latest dev"
+  },
+  {
+   "field": "platforms",
+   "url": "https://www.inngest.com/docs?ref=footer/",
+   "quote": "TypeScript, Python, and Go SDKs, plus the REST API."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.inngest.com",
+   "quote": "hreflang: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "Free($0)·Pro($99/월부터)·Business($499/월)·Enterprise(맞춤) 구독 요금제 + 샌드박스 초 단위 과금",
+   "diff": "순수 사용량 기반이 아니라 월정액 구독 단계(Pro·Business)가 중심",
+   "url": "https://www.inngest.com/pricing?ref=footer/"
+  }
+ ]
+}

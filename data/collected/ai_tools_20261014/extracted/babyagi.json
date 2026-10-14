@@ -1,0 +1,35 @@
+{
+ "company": null,
+ "one_liner_ko": "스스로를 만들어 가는 자율 에이전트를 위한 실험용 프레임워크(원래 BabyAGI는 보관 처리됨).",
+ "what_it_does_ko": "새 BabyAGI는 스스로를 만드는 자율 에이전트를 위한 실험적 프레임워크다. 핵심은 데이터베이스에 함수를 저장·관리·실행하는 함수 프레임워크(functionz)로, 임포트·의존 함수·인증 비밀키를 그래프 구조로 추적하고 자동 로딩과 상세 로그를 제공한다. 함수 관리·업데이트·로그 확인용 대시보드가 함께 온다. 2023년 3월의 원래 BabyAGI는 보관 저장소로 옮겨졌고, 이 프로젝트는 아이디어 공유용이며 프로덕션용이 아니라고 밝힌다.",
+ "key_features": [
+  "데이터베이스 기반 함수 저장·관리·실행(functionz)",
+  "임포트·의존 함수·비밀키를 그래프 구조로 추적",
+  "함수 묶음(팩) 불러오기",
+  "함수 실행·오류·트리거 로그",
+  "이벤트에 따라 함수를 자동 실행하는 트리거",
+  "함수 관리·의존 관계 시각화·비밀키 관리 대시보드"
+ ],
+ "use_cases_ko": [
+  "숙련 개발자가 아이디어를 시험해 보고 토론하는 용도(프로덕션용 아님)"
+ ],
+ "pricing": {"free_tier": null, "plans": [], "pricing_url": null},
+ "open_source": null,
+ "api": "불명",
+ "platforms": ["웹"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "one_liner_ko", "url": "https://babyagi.org/", "quote": "This newest BabyAGI is an experimental framework for a self-building autonomous agent."},
+  {"field": "what_it_does_ko", "url": "https://babyagi.org/", "quote": "The core is a new function framework ( functionz ) for storing, managing, and executing functions from a database."},
+  {"field": "what_it_does_ko", "url": "https://babyagi.org/", "quote": "This project has been archived and moved to the babyagi_archive repo (September 2024 snapshot)."},
+  {"field": "key_features", "url": "https://babyagi.org/", "quote": "It offers a graph-based structure for tracking imports, dependent functions, and authentication secrets, with automatic loading and comprehensive logging capabilities."},
+  {"field": "key_features", "url": "https://babyagi.org/", "quote": "BabyAGI comes with built-in function packs, or you can load your own packs by pointing to the file path."},
+  {"field": "key_features", "url": "https://babyagi.org/", "quote": "Triggers are mechanisms that allow certain functions to be automatically executed in response to specific events or actions within the system."},
+  {"field": "key_features", "url": "https://babyagi.org/", "quote": "Dependency Visualization: View and manage dependencies between functions to understand their relationships."},
+  {"field": "use_cases_ko", "url": "https://babyagi.org/", "quote": "The purpose of this repo is to share ideas and spark discussion and for experienced devs to play with. Not meant for production use."},
+  {"field": "platforms", "url": "https://babyagi.org/", "quote": "Open your browser and go to http://localhost:8080/dashboard to access the BabyAGI dashboard."},
+  {"field": "korean_support", "url": "https://babyagi.org/", "quote": "html lang: en-US"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

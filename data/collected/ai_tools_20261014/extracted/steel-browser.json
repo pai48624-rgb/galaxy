@@ -1,0 +1,34 @@
+{
+ "company": "Steel",
+ "one_liner_ko": "AI 에이전트가 쓸 브라우저 수천 개를 API 하나로 띄우고 제어하는 오픈소스 브라우저 인프라다.",
+ "what_it_does_ko": "Steel은 AI 에이전트용 오픈소스 브라우저 API로, 스텔스·주거용 프록시·캡차 해결·영구 프로필·세션 리플레이를 갖춘 관리형 클라우드 브라우저를 제공한다. 1초 안에 브라우저 세션을 시작하고, 기존 Puppeteer 스크립트를 그대로 연결할 수 있다. 쿠키·탭·상태를 유지한 채 세션을 이어서 쓸 수 있고, 사람이 2FA나 결제 단계에 개입했다가 다시 에이전트에게 넘길 수 있다. Steel Browser는 GitHub에 공개돼 직접 자체 호스팅할 수 있다.",
+ "key_features": ["Sessions API(1초 내 브라우저 시작, Puppeteer 연결)", "세션 재개·에이전트별 프로필 유지", "읽기 쉬운 실행 추적·라이브 세션 뷰어·리플레이", "사람 개입(Human-in-the-loop)", "스텔스·프록시·캡차 해결", "Steel CLI·에이전트 스킬", "Python·Node.js SDK와 REST API", "자체 호스팅"],
+ "use_cases_ko": ["웹 스크래핑: 로그인·자바스크립트 포함 사이트에서 구조화 데이터 수집", "가격 모니터링: 여러 쇼핑몰의 가격·재고 추적", "QA: 실제 브라우저에서 엔드투엔드 테스트"],
+ "pricing": {"free_tier": "있음 (1회성 $30 크레딧, 동시 세션 10개, 세션 최대 15분)", "plans": [
+  {"name": "Launch", "price": 0, "currency": "USD", "period": "month", "limits": "+사용량, $30 크레딧 1회, 동시 10세션", "page_lang": "en"},
+  {"name": "Scale", "price": 250, "currency": "USD", "period": "month", "limits": "+사용량, 매월 $100 크레딧, 동시 100세션", "page_lang": "en"},
+  {"name": "Enterprise", "price": null, "currency": "USD", "period": "month", "limits": "Custom, 동시 1,000세션 이상", "page_lang": "en"}
+ ], "pricing_url": "https://steel.dev/pricing"},
+ "open_source": "오픈소스(라이선스 이름은 페이지에 없음)",
+ "api": "있음",
+ "platforms": ["웹", "API", "CLI"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://steel.dev", "quote": "Steel | Open-source Browser Infrastructure for AI Agents"},
+  {"field": "one_liner_ko", "url": "https://steel.dev", "quote": "Steel is an API that lets you control fleets of browsers. Spin up thousands of sessions on the web."},
+  {"field": "what_it_does_ko", "url": "https://docs.steel.dev/", "quote": "Steel is the open-source browser API for AI agents — managed cloud browsers with stealth, residential proxies, CAPTCHA solving, persistent profiles, session replays, and agent observability."},
+  {"field": "key_features", "url": "https://steel.dev", "quote": "Point your existing script at Steel and it runs."},
+  {"field": "key_features", "url": "https://steel.dev", "quote": "Step in for 2FA, payments or anything unsure."},
+  {"field": "key_features", "url": "https://steel.dev", "quote": "Start, steer and stop cloud browsers from a shell."},
+  {"field": "key_features", "url": "https://steel.dev", "quote": "Use Steel's Python and Node.js SDKs or its REST API in the stack you have."},
+  {"field": "use_cases_ko", "url": "https://steel.dev", "quote": "Pull structured data from any site, logins and JavaScript included, without running a fleet of your own."},
+  {"field": "use_cases_ko", "url": "https://steel.dev", "quote": "Track prices and stock across retailers, on a schedule or the moment they change."},
+  {"field": "pricing", "url": "https://steel.dev/pricing", "quote": "Start for free with $30 of credits, and pay only for what your agents run."},
+  {"field": "pricing", "url": "https://steel.dev/pricing", "quote": "$250 per month + usage"},
+  {"field": "open_source", "url": "https://steel.dev/pricing", "quote": "Steel Browser is built in the open on GitHub."},
+  {"field": "api", "url": "https://docs.steel.dev/", "quote": "Explore API endpoints for managing Steel Sessions."},
+  {"field": "korean_support", "url": "https://steel.dev", "quote": "html lang: en"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

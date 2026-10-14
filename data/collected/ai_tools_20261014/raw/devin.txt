@@ -1,0 +1,512 @@
+=== [home] https://devin.ai (lang=en)
+Devin: the autonomous software engineer 
+ Product 
+ Solutions 
+ Resources 
+ Customers 
+ Pricing 
+ Blog 
+ Get a demo Login Get started 
+ Meet Devin, your team's autonomous software engineer
+ Devin runs in the cloud or on your machine, tests in its own browser, and won't stop until the PR is ready to merge
+ Get started Book a demo 
+ New session 
+ Automations 
+ Security 
+ Review 
+ Wiki 
+ More 
+ Sessions 
+ Pinned 3 
+ Add enterprise SSO 
+ Add multi-region failover 
+ Upgrade Node.js across services 
+ Investigate API latency spike 
+ Patch vulnerable dependencies 
+ Fix failing checkout tests 
+ Review authentication changes 
+ Expand payment test coverage 
+ Document service architecture 
+ More 
+ Participated 12 
+ Review API changes 
+ Optimize database queries 
+ Fix failing checkout tests 
+ More 
+ Kenzo Park Cognition 
+ Add enterprise SSO 
+ XL 
+ Add SAML SSO for enterprise customers.
+ Follow our existing auth patterns and let admins configure it in organization settings. Keep email login working for everyone else.
+ Explored authentication across 3 repositories 
+ Implemented SSO and organization settings + 13 - 1 
+ Devin 8:05 PM 
+ Here’s the PR. Enterprise admins can now configure SSO in organization settings, and members can sign in through their identity provider.
+ I tested setup, sign-in, and account linking in the browser. Existing email login still works, and all checks pass.
+ Tested sign-in and account linking in the browser 5 tests passed 
+ feat: Add SAML SSO for enterprise
+ acme/platform #2922 · + 9 - 14 
+ View PR 
+ Added to the PR. Admins can require SSO once setup is verified. I also added tests for enforcement and recovery access.
+ Plan a feature, fix bugs, or perform a security scan
+ Ultra 
+ PR Open · acme/platform #2922 
+ Add enterprise SSO
+ bwhuffman 
+ main enterprise-sso 
+ 12 files changed + 8 - 14 
+ Devin’s analysis
+ Adds SAML single sign-on for enterprise organizations. Admins can configure their identity provider, verify the connection, and require SSO from organization settings.
+ Test recording on Mac OS X virtual environment 
+ 2/5 
+ New session 
+ Automations 
+ Security 
+ Review 
+ Wiki 
+ More 
+ Sessions 
+ Pinned 3 
+ Add enterprise SSO 
+ Add multi-region failover 
+ Upgrade Node.js across services 
+ Investigate API latency spike 
+ Patch vulnerable dependencies 
+ Fix failing checkout tests 
+ Review authentication changes 
+ Expand payment test coverage 
+ Document service architecture 
+ More 
+ Participated 12 
+ Review API changes 
+ Optimize database queries 
+ Fix failing checkout tests 
+ More 
+ Kenzo Park Cognition 
+ Add enterprise SSO 
+ XL 
+ Add SAML SSO for enterprise customers.
+ Follow our existing auth patterns and let admins configure it in organization settings. Keep email login working for everyone else.
+ Explored authentication across 3 repositories 
+ Implemented SSO and organization settings + 13 - 1 
+ Devin 8:05 PM 
+ Here’s the PR. Enterprise admins can now configure SSO in organization settings, and members can sign in through their identity provider.
+ I tested setup, sign-in, and account linking in the browser. Existing email login still works, and all checks pass.
+ Tested sign-in and account linking in the browser 5 tests passed 
+ feat: Add SAML SSO for enterprise
+ acme/platform #2922 · + 9 - 14 
+ View PR 
+ Added to the PR. Admins can require SSO once setup is verified. I also added tests for enforcement and recovery access.
+ Plan a feature, fix bugs, or perform a security scan
+ Ultra 
+ PR Open · acme/platform #2922 
+ Add enterprise SSO
+ bwhuffman 
+ main enterprise-sso 
+ 12 files changed + 8 - 14 
+ Devin’s analysis
+ Adds SAML single sign-on for enterprise organizations. Admins can configure their identity provider, verify the connection, and require SSO from organization settings.
+ Test recording on Mac OS X virtual environment 
+ 2/5 
+ Your teammate’s favorite teammate
+ Selecting seat
+ Devin’s computer
+ Flag enabled; mobile viewport on enterprise child org
+ Testing 3/12
+ 0:24
+ Ensure compatibility across various screen sizes and maintain usability features
+ 0:36
+ Incorporate accessibility guidelines to enhance user experience for all
+ 0:24
+ Render in light and dark themes
+ 0:24
+ Test for offline mode
+ 0:30
+ Loading screen improvement
+ 0:45
+ User feedback integration
+ 1:00
+ Sync error handling
+ 1:15
+ Data retrieval optimization
+ 1:30
+ Offline data storage enhancement
+ 2:15
+ Real-time analytics integration
+ 3:00
+ User interface optimization
+ Tests end to end on its own computer
+ Devin spins up its own Windows, Mac, and Linux virtual machines as needed to build, test in its browser, and record itself clicking through what it built
+ Search all models 
+ Fusion 
+ Ultra 
+ Normal 
+ Lite 
+ All models
+ SWE-2 
+ Fable 5.1 
+ GPT-6 Astra 
+ Grok 4.7 
+ Gemini 3.8 Flash 
+ Fusion
+ Pairs frontier intelligence with cost-efficient execution
+ Lead Claude Fable 5.1 
+ Effort High 
+ Sidekick SWE-2 Medium 
+ Fast mode 
+ Fusion 
+ Gets the best from every frontier model
+ Access frontier performance for up to 60% less. Devin mixes and matches models to get the most from each
+ Sessions
+ Weekly dependency upgrades
+ 1 min 1 1 
+ Upgrade React to 19.2
+ PR is ready 1 1 
+ Bump Next.js to 16.3
+ PR is ready 1 1 
+ Architecture rewrite
+ Working · 56 hours 
+ · 
+ Notification panel UX
+ Review PR 1 
+ Refactor artifact library
+ 1 min 1 
+ Update CSS styles for mobile responsiveness
+ 5 min 1 
+ Optimize images for faster loading
+ 3 min 1 
+ Architecture rewrite
+ XL
+ J
+ Jin Park
+ 8:05 PM
+ Hello there
+ I want to build a mobile webapp
+ Rewrite the notification inbox architecture to simplify state management, component boundaries, and data flow while preserving all existing user-facing behavior.
+ Worked for 1 min
+ +13 -1 
+ Devin
+ 8:05 PM
+ Hey! I have this cool idea can you help me create an awesome snake game for my portfolio? Like those ones you use to play on the old Nokia phones? I’ve attached some reference pics
+ generic-file.txt
+ 321 KB
+ Keeps working when your laptop is closed
+ Delegate a big task, then Devin splits it across parallel cloud agents, manages them, and reports back
+ #eng-bugs 
+ Jin Park 11:55 
+ The API is returning duplicate results when loading the next page. @Devin can you help fix this?
+ 👀 1 
+ Devin 11:55 
+ Fixed it and added a regression test.
+Here’s the PR: #1934 Duplicate content 
+ Devin is working... 
+ Joins the thread when you @Devin
+ Tag @Devin in Slack, Teams, and more. Devin reads the thread, responds to follow-ups, and gets to work
+ PagerDuty 8:05 PM 
+ 🔴 High severity: Elevated error rate in api-server . Error rate exceeded 8% following the latest deployment.
+ Devin 8:05 PM 
+ I found the errors were introduced by the latest deployment to api-server. I’m reproducing the failure and preparing a fix.
+ Worked for 1 min +13 -1 
+ fix: handle null user in api-server auth middleware
+ acme-api #30146 · +13 -1 
+ View PR 
+ Watches for issues and fixes them proactively
+ Set up automations so Devin handles bugs, failed CI, and other alerts as they land
+ From problem to merged PR, Devin gets hard engineering work done.
+ 01
+ Understand and plan
+ Map the codebase and systems architecture accurately and efficiently. Devin updates diagrams and code maps as quickly as the codebase changes
+ Explore Wiki 
+ Getting Started
+ Overview
+ Purpose and scope
+ Technology stack
+ Application architecture
+ MyApp Component Wrapper
+ File-based routing structure
+ Homepage structure
+ Core dependencies
+ Key dependency roles
+ Global styling system
+ Typography system
+ Layout utilities
+ Custom components
+
+=== [pricing] https://devin.ai/pricing (lang=en)
+Plans and Pricing | Devin 
+ Product 
+ Solutions 
+ Resources 
+ Customers 
+ Pricing 
+ Blog 
+ Get a demo Login Get started 
+ Devin 
+ Plans and Pricing 
+ Choose the perfect plan for your journey
+ SWE-2, our latest model, is now available → 
+ INDIVIDUAL PLANS 
+ Free 
+ $0 
+ Download Light quota to code with agents 
+ Limited model availability 
+ Unlimited inline edits 
+ Unlimited Tab completions 
+ Pro POPULAR 
+ $20 per month 
+ Select plan Everything in Free, plus: 
+ Increased quotas, including access to frontier models from OpenAI, Claude, Gemini, and SpaceXAI, plus leading open source models 
+ Full model availability 
+ Free use of SWE-2 Free in Devin Desktop and CLI through October 16, 2026 
+ Access to cloud agents (Devin Cloud) 
+ Purchase extra usage at API pricing 
+ Max NEW 
+ $200 per month 
+ Select plan Everything in Pro, plus: 
+ Significantly higher quotas 
+ TEAM PLANS 
+ Teams 
+ $80 /month for team plan + $40/mo per full dev seat 
+ Select plan Everything in Pro, plus: 
+ Up to 200 users 
+ Share and collaborate 
+ Centralized billing 
+ Admin dashboard with analytics 
+ Priority support 
+ Enterprise 
+ Let's talk 
+ Get a Demo Built to scale across your organization: 
+ Highest priority support 
+ Dedicated account management 
+ SAML/OIDC SSO 
+ Centralized enterprise admin controls 
+ Dedicated deployment option 
+ First class support for
+every major model provider
+ Compare Plans
+ Free $0/month 
+ Pro $20/month 
+ Max $200/month 
+ Team $80/month 
+ Enterprise Let's talk 
+ Members 
+ 1
+ 1
+ 1
+ Up to 200 users $40/month per full user Each full user includes their own generous quota and access to Devin Desktop 
+ Unlimited
+ Devin Desktop
+ Tab 
+ Unlimited 
+ Unlimited 
+ Unlimited 
+ Unlimited 
+ Unlimited 
+ Premium models 
+ Fast context 
+ Free SWE-2 Free in Devin Desktop and CLI through October 16, 2026 
+ Slow 
+ Devin Cloud
+ DeepWiki 
+ Devin API 
+ Ask Devin 
+ Advanced capabilities 
+ Sharing and collaboration 
+ Concurrent sessions limit 
+ Up to 10
+ Up to 10
+ Unlimited
+ Unlimited
+ Integrations
+ Slack and Teams 
+ Linear and Jira 
+ GitHub, GitLab, and Bitbucket 
+ Custom git provider support 
+ Account support
+ Dedicated Slack Connect channel for support 
+ Optional onboarding call with the Cognition team 
+ Dedicated account and engineering support
+ Access to early feature releases and research previews 
+ Custom
+ Dedicated account team 
+ Custom terms 
+ Enterprise accounts Centralized management of multiple Devin organizations 
+ Security
+ Deploy in your virtual private cloud (VPC) 
+ SAML/OIDC SSO 
+ Centralized enterprise admin controls 
+ Teamspace isolation 
+ Frequently Asked Questions
+ How does usage work? 
+ Each paid plan comes with a usage allowance that refreshes automatically on a daily and weekly basis. For the majority of users, this quota will be enough to fully cover all agent usage. Cost per message varies based on the model used, the task size and complexity, and the reasoning required.
+ What happens when I reach my usage limit? 
+ Most users will never hit their limits. If you do go beyond your included usage on a paid plan, you can purchase extra usage which is consumed at API pricing.
+ How can I make my usage limits last longer? 
+ Control the size of your prompts. Be precise with your instructions, but remove unnecessary context.
+ Switch to smaller models for routine tasks. Using mini models like Haiku, GPT 5.2 Mini, and open source models like Kimi K2.5 will extend your usage.
+ What is the Max plan? 
+ The Max plan is for power users who need significantly higher usage quotas. It includes everything in Pro, plus significantly higher quotas.
+ What is included in the Free plan? 
+ The Free plan includes a light quota to code with agents, limited model availability, unlimited inline edits, and unlimited Tab completions.
+ Company
+ Careers 
+ Brand 
+ About 
+ Support 
+ Legal
+ Terms of Service 
+ Acceptable Use Policy 
+ Privacy Policy 
+ Data Use 
+ Your Privacy Choices 
+ Connect
+ X 
+ LinkedIn 
+ YouTube 
+ Reddit 
+ Product 
+ Solutions 
+ Resources 
+ Customers 
+ Pricing 
+ Blog 
+ Get a demo Login Get started
+
+=== [about] https://docs.devin.ai/integrations/gh (lang=en)
+Devin GitHub integration - Devin Docs 
+ Documentation Index
+ Fetch the complete documentation index at: /llms.txt 
+ Use this file to discover all available pages before exploring further.
+ Skip to main content 
+ Devin Docs home page English 
+ Search...
+ ⌘ K Ask Assistant ⌘ I 
+ Support 
+ Devin 
+ Devin 
+ Search... 
+ Navigation 
+ Integrations 
+ Devin GitHub integration
+ Cloud 
+ CLI 
+ Desktop 
+ Enterprise 
+ Use Cases 
+ API 
+ Federal 
+ Get Started 
+ Introducing Devin 
+ Your First Session 
+ Tutorial Library 
+ Essential Guidelines 
+ When to Use Devin 
+ Instructing Devin Effectively 
+ Good vs. Bad Instructions 
+ Prompt Templates Cheat Sheet 
+ How does Devin fit into my existing SDLC? 
+ Onboarding Devin 
+ Environment configuration 
+ Devin Outposts 
+ Index a Repository 
+ VPN configuration 
+ Knowledge Onboarding 
+ AGENTS.md 
+ Working with Devin 
+ Devin Review 
+ Stacked PRs 
+ Devin Session Tools 
+ Voice mode 
+ Computer Use 
+ Browser Authentication 
+ Testing & Video Recordings 
+ Slash Commands 
+ Ask Devin 
+ Data Analyst Agent 
+ DeepWiki 
+ Security Swarm 
+ Code Scans 
+ Hand off to cloud Devins 
+ MCP (Model Context Protocol) Marketplace 
+ DeepWiki MCP 
+ Devin MCP 
+ Devin CLI 
+ Advanced Capabilities 
+ Dynamic Workflows 
+ Product Guides 
+ Skills 
+ Memory 
+ Plugins 
+ Set up your plugin ecosystem 
+ Session Insights 
+ Secrets & Site Cookies 
+ Security Profiles 
+ Cloud Authentication with OIDC 
+ Creating Playbooks 
+ Using Playbooks 
+ Automations 
+ Auto-triage 
+ Scheduled Sessions 
+ Deployments 
+ Responding to bots 
+ Invite your Team 
+ Integrations 
+ Integrations Overview 
+ Slack 
+ Microsoft Teams 
+ GitHub 
+ GitLab 
+ Bitbucket 
+ Linear 
+ Jira 
+ Databricks 
+ MongoDB 
+ PagerDuty 
+ Pylon 
+ GitHub Pull Request Templates 
+ Self-Hosted SCM & Artifacts 
+ Admin 
+ Security at Cognition 
+ Billing 
+ Common Issues 
+ Release Notes 
+ Recent Updates 
+ 2026 
+ 2025 
+ 2024 
+ On this page 
+ Why integrate Devin with GitHub? 
+ Setting up the Integration 
+ Using Devin with the GitHub Integration For Core and Teams users 
+ For Enterprise users 
+ Start Devin from a PR comment 
+ User Linking 
+ Managing Devin’s Permissions in GitHub 
+ Pull Request Templates Devin-specific template (recommended) 
+ Template search order 
+ Commit Signing 
+ Security Considerations 
+ IP Allowlisting 
+ Troubleshooting: GitHub organization connected to the wrong Devin organization 
+ GitHub Integration FAQs 
+ Integrations
+ Devin GitHub integration
+ Copy page Copy page 
+ Connect Devin to GitHub to create pull requests, respond to review comments, and control repository access for your organization.
+ Copy page Copy page 
+ ​ 
+ Why integrate Devin with GitHub? 
+ Integrating Devin with your GitHub organization enables Devin to create pull requests, respond to PR comments, and collaborate directly within your repositories. This allows Devin to function as a full contributor on your engineering team. 
+ To get started, open Settings → Connections → GitHub , click Add Connection , and follow the prompts. You will select which repositories Devin can access and review the required permissions. 
+ Using GitHub Enterprise Server or GitHub Enterprise Cloud with Data Residency? See the GitHub Enterprise Server Integration guide for setup instructions. 
+ ​ 
+ Setting up the Integration 
+ You must be an admin of your GitHub organization to create and manage the Devin integration. Having trouble? Check out our Common Issues .
+ In your Devin account, open Settings → Connections → GitHub and click Add Connection .
+ If you are not already logged in to GitHub, you will be prompted to authenticate.
+ Select the GitHub organization 
+
+=== [meta] https://devin.ai
+html lang: en
+hreflang: en, ja, x-default
+화면에 보이는 언어 이름: 없음

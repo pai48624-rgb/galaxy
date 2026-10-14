@@ -1,0 +1,82 @@
+=== [github] https://github.com/PrithivirajDamodaran/FlashRank
+<p align ="center">
+<img width=200 src = "./images/fr_logo.png">
+</p>
+
+
+
+
+<div align="center">
+
+[![Downloads](https://static.pepy.tech/badge/flashrank)](https://pepy.tech/project/flashrank)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)]()
+[![license]( https://img.shields.io/badge/License-Apache-blue.svg)](https://opensource.org/licenses/Apache2.0)
+[![package]( https://img.shields.io/badge/Package-PYPI-blue.svg)](https://pypi.org/project/FlashRank/)[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11093524.svg)](https://doi.org/10.5281/zenodo.11093524)
+
+</div>
+
+
+<div align="center">
+
+  <p align="center">
+    <b>Re-rank your search results with SoTA Pairwise or Listwise rerankers before feeding into your LLMs</b>
+    <br />
+  </p>
+</div>
+
+
+Ultra-lite &amp; Super-fast Python library to add re-ranking to your existing search &amp; retrieval pipelines. It is based on SoTA LLMs and cross-encoders, with gratitude to all the model owners. 
+
+
+Supports:
+
+- Pairwise / Pointwise rerankers. (Cross encoder based, i.e. ```Max tokens = 512```)
+- Listwise LLM based rerankers. (LLM based, i.e. ```Max tokens = 8192```)
+- See below for full list of supported models.
+
+
+# Table of Contents  
+
+1. [Features](#features)  
+2. [Installation](#installation)
+3. [Making ranking faster](#making-ranking-faster)
+4. [Getting started](#getting-started)
+5. [Deployment patterns](#deployment-patterns)
+6. [How to Cite?](#how-to-cite)
+7. [Papers citing flashrank](#papers-citing-flashrank) 
+
+
+## Features
+
+1. ⚡ **Ultra-lite**: 
+    - **No Torch or Transformers** needed. Runs on CPU.
+    - Boasts the **tiniest reranking model in the world, ~4MB**.
+    
+2. ⏱️ **Super-fast**:
+    - Rerank speed is a function of **# of tokens in passages, query + model depth (layers)**
+    - To give an idea, Time taken by the example (in code) using the default model is below.
+    - <center><img src="./images/time.png" width=600/></center>
+    - Detailed benchmarking, TBD
+
+3. 💸 **$ concious**:
+    - **Lowest $ per invocation:** Serverless deployments like Lambda are charged by memory & time per invocation*
+    - **Smaller package size** = shorter cold start times, quicker re-deployments for Serverless.
+
+4. 🎯 **Based on SoTA Cross-encoders and other models**:
+    - "How good are Zero-shot rerankers?" - look at the reference section.
+    <!-- - Below are the list of models supported as of now.
+        * `ms-marco-TinyBERT-L-2-v2` (default) [Model card](https://huggingface.co/cross-encoder/ms-marco-TinyBERT-L-2)
+        * `ms-marco-MiniLM-L-12-v2` [Model card](https://huggingface.co/cross-encoder/ms-marco-MiniLM-L-12-v2)
+        * `rank-T5-flan` (Best non cross-encoder reranker) [Model card](https://huggingface.co/bergum/rank-T5-flan)
+        * `ms-marco-MultiBERT-L-12`  (Multi-lingual, [supports 100+ languages](https://github.com/google-research/bert/blob/master/multilingual.md#list-of-languages))
+        * `ce-esci-MiniLM-L12-v2` [FT on Amazon ESCI dataset](https://github.com/amazon-science/esci-data) (This is interesting because most models are FT on MSFT MARCO Bing queries) [Model card](https://huggingface.co/metarank/ce-esci-MiniLM-L12-v2)
+        * `rank_zephyr_7b_v1_full` (4-bit-quantised GGUF) [Model card](https://huggingface.co/castorini/rank_zephyr_7b_v1_full) (Offers very competitive performance, with large context window and relatively faster for a 4GB model).
+            - **Important note:** Our current integration of `rank_zephyr` supports a max of 20 passages in one pass. The sliding window logic support is yet to be added.
+        * `miniReranker_arabic_v1` [Model card](https://huggingface.co/prithivida/miniReranker_arabic_v1)              -->
+
+| Model Name | Description | Size | Notes |
+|------------|-------------|------|-------|
+| `ms-marco-TinyBERT-L-2-v2` | Default model | ~4MB | [Model card](https://huggingface.co/cross-encoder/ms-marco-TinyBERT-L-2) |
+| `ms-marco-MiniLM-L-12-v2` | `Best Cross-encoder reranker`  | ~34MB | [Model card](https://huggingface.co/cross-encoder/ms-marco-MiniLM-L-12-v2) |
+| `rank-T5-flan` | Best non cross-encoder reranker | ~110MB | [Model card](https://huggingface.co/bergum/rank-T5-flan) |
+| `ms-marco-MultiB

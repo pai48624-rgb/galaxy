@@ -1,0 +1,102 @@
+{
+ "company": "Orchestrator.inc",
+ "one_liner_ko": "여러 코딩 에이전트를 한곳에서 계획·실행·감독하는 로컬 데스크톱 작업 공간.",
+ "what_it_does_ko": "Orchestrator.inc(agent-orchestrator)는 에이전트 중심 개발을 위한 로컬 데스크톱 작업 공간이다. 저장소를 추가하고 작업에 맞는 코딩 에이전트·모델·인터페이스로 워커 세션을 만들며, Git 작업에는 워커마다 별도 브랜치와 worktree를 준다. 작업·대화·터미널·변경 파일·브라우저 미리보기·PR·CI·리뷰 상태가 세션에 묶여 실시간 칸반으로 보인다. 로컬 데몬이 에이전트 활동과 소스 관리 상태를 감시한다.",
+ "key_features": [
+  "코딩 작업마다 별도 에이전트·작업 공간·피드백 루프",
+  "프로젝트를 이해하는 오케스트레이터로 큰 작업 계획·위임",
+  "워커·PR·CI·리뷰를 실시간 칸반으로 추적",
+  "Git 작업마다 독립 브랜치·worktree",
+  "로컬 데몬이 에이전트 활동·소스 관리 상태 감시",
+  "자동 업데이트되는 데스크톱 앱"
+ ],
+ "use_cases_ko": [
+  "여러 코딩 에이전트를 한 프로젝트에서 동시에 돌리며 브랜치 충돌 없이 리뷰·병합까지 관리"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "Apache-2.0",
+ "api": "불명",
+ "platforms": [
+  "윈도",
+  "맥"
+ ],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://github.com/OrchestratorInc/agent-orchestrator",
+   "quote": "### Orchestrator.inc"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/OrchestratorInc/agent-orchestrator",
+   "quote": "#### Plan, run, and supervise coding agents from one place."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/OrchestratorInc/agent-orchestrator",
+   "quote": "Orchestrator.inc is a local desktop workspace built for that job."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/OrchestratorInc/agent-orchestrator",
+   "quote": "For Git-backed work, Orchestrator.inc gives the worker its own branch and worktree."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/OrchestratorInc/agent-orchestrator",
+   "quote": "Behind the desktop app, Orchestrator.inc's local daemon watches agent activity and source-control state."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/OrchestratorInc/agent-orchestrator",
+   "quote": "Give every coding task its own agent, workspace, and feedback loop."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/OrchestratorInc/agent-orchestrator",
+   "quote": "Plan and delegate larger outcomes with a project-aware orchestrator."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/OrchestratorInc/agent-orchestrator",
+   "quote": "Follow every worker, pull request, CI run, and review in a live Kanban."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/OrchestratorInc/agent-orchestrator",
+   "quote": "Orchestrator.inc checks for updates automatically."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/OrchestratorInc/agent-orchestrator",
+   "quote": "Running several across a project creates a different job: deciding what matters, splitting work cleanly, giving each agent the right context, preventing branch collisions"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/OrchestratorInc/agent-orchestrator",
+   "quote": "[![License: Apache-2.0]"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/OrchestratorInc/agent-orchestrator",
+   "quote": "| macOS (Apple silicon) | [Download]"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/OrchestratorInc/agent-orchestrator",
+   "quote": "| Windows               | [Download]"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://github.com/OrchestratorInc/agent-orchestrator",
+   "quote": "[한국어](translations/README.ko.md)"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

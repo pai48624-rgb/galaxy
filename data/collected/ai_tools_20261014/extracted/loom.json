@@ -1,0 +1,122 @@
+{
+ "company": null,
+ "one_liner_ko": "Rust로 만든 AI 코딩 에이전트 연구 프로젝트로, REPL에서 LLM 에이전트가 파일 작업·코드 분석 같은 개발 작업을 수행한다(작성자 외 사용 금지 공지).",
+ "what_it_does_ko": "Loom은 Rust로 만든 AI 코딩 에이전트로, LLM 에이전트와 상호작용하는 REPL 인터페이스를 제공하며 에이전트가 파일 시스템 작업·코드 분석 등 개발 작업을 도구로 수행한다. 30개 이상의 crate로 된 Cargo 작업공간이며 CLI, HTTP API 서버, Svelte 웹 프런트엔드를 포함한다. 모든 LLM 호출은 서버 측 프록시를 거쳐 API 키가 서버 밖으로 나가지 않는다. 저장소는 실험적·불안정한 연구 프로젝트이며 작성자가 아니면 사용하지 말라고 경고하고, 라이선스는 독점(Proprietary)이다.",
+ "key_features": [
+  "대화 흐름·도구 조율용 상태 머신 핵심 에이전트",
+  "API 키를 서버에만 두는 서버 측 LLM 프록시",
+  "에이전트 도구 등록·실행 프레임워크",
+  "Kubernetes 파드 원격 실행 환경(Weaver)",
+  "FTS5 검색이 되는 대화 영구 저장",
+  "OAuth·매직 링크·ABAC 인증",
+  "기능 플래그·실험"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "Proprietary(독점, 오픈소스 아님)",
+ "api": "있음",
+ "platforms": [
+  "CLI",
+  "웹"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/ghuntley/loom",
+   "quote": "Loom is an AI-powered coding agent built in Rust. It provides a REPL interface for interacting with LLM-powered agents"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/ghuntley/loom",
+   "quote": "Loom is a research project. If your name is not Geoffrey Huntley then do not use."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/ghuntley/loom",
+   "quote": "that can execute tools to perform file system operations, code analysis, and other development tasks"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/ghuntley/loom",
+   "quote": "Loom is organized as a Cargo workspace with 30+ crates"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/ghuntley/loom",
+   "quote": "API keys are stored server-side only. Clients communicate through the proxy."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/ghuntley/loom",
+   "quote": "Proprietary. Copyright (c) 2025 Geoffrey Huntley. All rights reserved."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/ghuntley/loom",
+   "quote": "| **Core Agent** | State machine for conversation flow and tool orchestration |"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/ghuntley/loom",
+   "quote": "| **LLM Proxy** | Server-side proxy architecture - API keys never leave the server |"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/ghuntley/loom",
+   "quote": "| **Tool System** | Registry and execution framework for agent capabilities |"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/ghuntley/loom",
+   "quote": "| **Weaver** | Remote execution environments via Kubernetes pods |"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/ghuntley/loom",
+   "quote": "| **Thread System** | Conversation persistence with FTS5 search |"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/ghuntley/loom",
+   "quote": "| **Auth** | OAuth, magic links, ABAC authorization |"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/ghuntley/loom",
+   "quote": "| **Feature Flags** | Runtime feature toggles, experiments, and kill switches |"
+  },
+  {
+   "field": "api",
+   "url": "https://github.com/ghuntley/loom",
+   "quote": "│   ├── loom-server/         # HTTP API server with LLM proxy"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/ghuntley/loom",
+   "quote": "│   ├── loom-cli/            # Command-line interface"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/ghuntley/loom",
+   "quote": "│   └── loom-web/            # Svelte 5 web frontend"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/ghuntley/loom",
+   "quote": "SPDX-License-Identifier: Proprietary"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "라이선스가 Proprietary(독점, All rights reserved)이며 '작성자가 아니면 사용하지 말 것'이라고 경고하는 연구 프로젝트",
+   "diff": "기존 pricing_policy는 '오픈소스(무료)'이나 공식 저장소는 독점 라이선스로 오픈소스가 아님",
+   "url": "https://github.com/ghuntley/loom"
+  }
+ ],
+ "plan_change": []
+}

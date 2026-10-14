@@ -1,0 +1,62 @@
+{
+ "company": "Rowboat Labs",
+ "one_liner_ko": "메모리를 갖춘 업무용 AI 동료로, 개인 비서와 팀이 함께 쓰는 공간(Space)을 한데 묶은 멀티플레이어 개인 비서.",
+ "what_it_does_ko": "Rowboat는 이메일·회의·슬랙·비서 대화를 지식 그래프로 색인하고 이를 이용해 사용자 컴퓨터에서 일을 처리하는 개인 AI 비서다. 이메일 클라이언트·노트·브라우저·코드 모드·회의록 작성기 같은 작업 화면을 함께 제공한다. 팀원과 각자의 비서가 한 공간(Space)에서 대화하고 화이트보드·문서·발표 자료를 함께 만든다. 개인 데이터는 사용자 컴퓨터에 저장되며, 오픈소스로 직접 호스팅하거나 로컬 모델을 연결할 수 있다.",
+ "key_features": [
+  "이메일·회의·슬랙을 엮은 지식 그래프(Brain)",
+  "중요 메일 분류·답장 초안 자동 작성 이메일 클라이언트",
+  "이벤트·일정에 따라 도는 백그라운드 에이전트",
+  "격리된 내장 브라우저",
+  "회의록 작성·음성 모드",
+  "팀 공유 공간(화이트보드·문서·발표 자료)",
+  "MCP 서버 제공, Ollama·LM Studio 로컬 모델 연결",
+  "오픈소스·자체 호스팅"
+ ],
+ "use_cases_ko": [
+  "회의 준비·메일 정리 등 개인 업무 처리",
+  "팀이 비서와 함께 한 공간에서 기획서·자료 작성"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Free $0/월, 하루 사용량 제한)",
+  "plans": [
+   {"name": "Free", "price": 0, "currency": "USD", "period": "month", "limits": "하루 사용량 제한, 팀 협업", "page_lang": "en"},
+   {"name": "Starter", "price": 5, "currency": "USD", "period": "month", "limits": "페이지 표기 월 $5–25; 팀 공간·노트 무제한, 이메일 클라이언트, 회의록, 음성 모드, 백그라운드 에이전트, MCP 서버 접근", "page_lang": "en"},
+   {"name": "Pro", "price": 50, "currency": "USD", "period": "month", "limits": "페이지 표기 월 $50–200; Starter 전부 + Rowboat 팀 Space 직접 접근", "page_lang": "en"},
+   {"name": "Enterprise", "price": null, "currency": "USD", "period": "month", "limits": "상담(Let's talk), 맞춤 설정·요금제", "page_lang": "en"}
+  ],
+  "pricing_url": "https://www.rowboatlabs.com/pricing/"
+ },
+ "open_source": "오픈소스(라이선스 이름 불명)",
+ "api": "있음",
+ "platforms": ["윈도", "맥"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://www.rowboatlabs.com/", "quote": "© 2026 Rowboat Labs. All rights reserved."},
+  {"field": "one_liner_ko", "url": "https://www.rowboatlabs.com/", "quote": "Rowboat - Your AI coworker, with memory"},
+  {"field": "one_liner_ko", "url": "https://www.rowboatlabs.com/", "quote": "The multiplayer personal assistant for work\n An assistant that's yours. A space that's everyone's."},
+  {"field": "what_it_does_ko", "url": "https://github.com/rowboatlabs/rowboat", "quote": "Rowboat indexes your work into a living knowledge graph and uses that to get work done on your machine. It includes work surfaces for collaborating with AI: email client, notes, browser, code mode, meeting note taker, and workspaces for different projects."},
+  {"field": "what_it_does_ko", "url": "https://www.rowboatlabs.com/", "quote": "You, your teammates, and your assistants,\nworking on the same canvas."},
+  {"field": "what_it_does_ko", "url": "https://www.rowboatlabs.com/", "quote": "Personal context stays local. Your emails, notes, and memory are stored on your machine."},
+  {"field": "key_features", "url": "https://github.com/rowboatlabs/rowboat", "quote": "Rowboat indexes email, meetings, slack and assistant conversations into a living Obsidian-style backlinked knowledge graph."},
+  {"field": "key_features", "url": "https://github.com/rowboatlabs/rowboat", "quote": "The built-in email client sorts emails into important and everything else. Rowboat automatically drafts responses for important email using all the work context."},
+  {"field": "key_features", "url": "https://github.com/rowboatlabs/rowboat", "quote": "You can set up background agents that run on events like new email or on schedule like every day at 8am."},
+  {"field": "key_features", "url": "https://www.rowboatlabs.com/", "quote": "A separate browser for your assistant. Rowboat comes with an isolated local browser."},
+  {"field": "key_features", "url": "https://www.rowboatlabs.com/pricing/", "quote": "Meeting note taker \n Voice mode"},
+  {"field": "key_features", "url": "https://www.rowboatlabs.com/", "quote": " Whiteboard Docs & markdown Presentations "},
+  {"field": "key_features", "url": "https://www.rowboatlabs.com/", "quote": "Connect through MCP. Spaces exposes an MCP server for your own agents to interact.\n Use local models. Connect models through Ollama or LM Studio."},
+  {"field": "key_features", "url": "https://www.rowboatlabs.com/", "quote": "Open source. Self-hostable. Inspect the code and run Rowboat yourself."},
+  {"field": "use_cases_ko", "url": "https://www.rowboatlabs.com/", "quote": "Prep me for the 10am Horizon Ventures meeting agenda, asks and likely questions"},
+  {"field": "use_cases_ko", "url": "https://www.rowboatlabs.com/", "quote": "Sketch it out. Write it down. Make the deck."},
+  {"field": "pricing", "url": "https://www.rowboatlabs.com/pricing/", "quote": "$0\n per month\n Start exploring Rowboat.\n Choice of latest LLMs \n Limited daily usage"},
+  {"field": "pricing", "url": "https://www.rowboatlabs.com/pricing/", "quote": "$5–25\n per month"},
+  {"field": "pricing", "url": "https://www.rowboatlabs.com/pricing/", "quote": "$50–200\n per month\n Everything in Starter, plus:"},
+  {"field": "pricing", "url": "https://www.rowboatlabs.com/pricing/", "quote": "Let’s talk\n For your whole team.\n Choice of latest LLMs \n Customized setup and plans"},
+  {"field": "open_source", "url": "https://github.com/rowboatlabs/rowboat", "quote": "Open-source personal AI assistant with built-in docs, whiteboard and email. Works solo or with your team."},
+  {"field": "api", "url": "https://www.rowboatlabs.com/", "quote": "Connect through MCP. Spaces exposes an MCP server for your own agents to interact."},
+  {"field": "platforms", "url": "https://github.com/rowboatlabs/rowboat", "quote": "Download latest for Mac/Windows/Linux: [Download](https://www.rowboatlabs.com/downloads)"},
+  {"field": "korean_support", "url": "https://www.rowboatlabs.com/", "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [],
+ "plan_change": [],
+ "note": "Starter·Pro 가격은 페이지에 범위($5–25, $50–200)로 적혀 있어 price에는 하한값을 넣고 limits에 원문 범위를 적음. GitHub README에 한국어 README 링크가 있으나 사이트 화면은 영어뿐."
+}

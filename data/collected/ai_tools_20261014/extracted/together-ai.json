@@ -1,0 +1,169 @@
+{
+ "company": "Together AI",
+ "one_liner_ko": "오픈소스 AI 모델을 실행·학습·서빙하는 'AI 네이티브 클라우드'.",
+ "what_it_does_ko": "Together AI는 오픈소스 모델을 OpenAI 호환 API로 실행하는 서버리스 추론을 중심으로 한 풀스택 AI 플랫폼이다. 배치 추론, 처리량 예약(SLA), 전용 모델·컨테이너 추론을 제공한다. 자체 데이터로 모델을 파인튜닝·후학습할 수 있고, H100·B200 등 GPU 클러스터와 코드 샌드박스, 관리형 스토리지도 제공한다.",
+ "key_features": [
+  "서버리스 추론(OpenAI 호환 API)",
+  "배치 추론",
+  "프로비저닝 처리량(99% 가동 SLA)",
+  "전용 모델·컨테이너 추론",
+  "파인튜닝",
+  "GPU 클러스터",
+  "코드 샌드박스",
+  "관리형 스토리지(송신료 없음)"
+ ],
+ "use_cases_ko": [
+  "오픈소스 모델을 운영 서비스에 쓰는 팀",
+  "자체 데이터로 모델 파인튜닝",
+  "대규모 학습·배치 작업용 GPU 클러스터"
+ ],
+ "pricing": {
+  "free_tier": "일부 모델 무료 표기(예: Ternary Bonsai 27B $0.00) — 계정 무료 크레딧은 페이지에 없음",
+  "plans": [
+   {
+    "name": "서버리스 MiniMax M3",
+    "price": 0.3,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "100만 토큰당 입력 $0.30 / 출력 $1.20",
+    "page_lang": "en"
+   },
+   {
+    "name": "서버리스 Kimi K3",
+    "price": 3.0,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "100만 토큰당 입력 $3.00 / 출력 $15.00",
+    "page_lang": "en"
+   },
+   {
+    "name": "서버리스 gpt-oss-120B",
+    "price": 0.15,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "100만 토큰당 입력 $0.15 / 출력 $0.60",
+    "page_lang": "en"
+   },
+   {
+    "name": "서버리스 Gemma 4 31B",
+    "price": 0.39,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "100만 토큰당 입력 $0.39 / 출력 $0.97",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://www.together.ai/pricing"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "API",
+  "웹"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.together.ai/",
+   "quote": "Together AI | The AI Native Cloud"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://docs.together.ai/intro",
+   "quote": "Run, train, and serve open-source AI models on Together AI."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.together.ai/",
+   "quote": "The fastest way to run open-source models on demand. Powered by cutting-edge inference research. No infrastructure to manage, no long-term commitments."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.together.ai/intro",
+   "quote": "Spin up H100 and B200 clusters with attached storage for training or large"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.together.ai/",
+   "quote": "Cost-effectively process massive workloads asynchronously."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.together.ai/",
+   "quote": "Committed inference capacity with token-based pricing, reserved throughput, and a 99% uptime SLA."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.together.ai/",
+   "quote": "Deploy models on dedicated infrastructure."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.together.ai/",
+   "quote": "Fine-tune open-source models for production workloads, using the latest research techniques."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.together.ai/",
+   "quote": "Use fast, secure code sandboxes at scale to set up full-scale development environments for AI apps and agents."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.together.ai/",
+   "quote": "Object storage and parallel filesystems optimized for AI, with zero egress fees."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://docs.together.ai/intro",
+   "quote": "Fine-tune models on your own data and deploy them for inference."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.together.ai/",
+   "quote": "Scale from self-serve instant clusters to thousands of GPUs"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.together.ai/pricing",
+   "quote": "Most teams start with serverless inference and move to dedicated endpoints at scale."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.together.ai/pricing",
+   "quote": "MiniMax M3\n $0.30"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.together.ai/pricing",
+   "quote": "Kimi K3\n $3.00"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.together.ai/pricing",
+   "quote": "gpt-oss-120B\n $0.15\n $0.60"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.together.ai/pricing",
+   "quote": "Gemma 4 31B\n $0.39\n $0.97"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.together.ai/pricing",
+   "quote": "Ternary Bonsai 27B\n $0.00"
+  },
+  {
+   "field": "api",
+   "url": "https://docs.together.ai/intro",
+   "quote": "Run leading open-source AI models with our OpenAI-compatible API."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.together.ai/",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

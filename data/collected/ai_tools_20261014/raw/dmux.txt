@@ -1,0 +1,532 @@
+=== [home] https://dmux.ai/ (lang=en)
+dmux - Parallel agents with tmux and worktrees 
+ Parallel agents with tmux and worktrees
+ Manage multiple AI coding agents in isolated git worktrees. Branch, develop, and merge — all in parallel.
+ Get Started 
+ Star
+ 1.8k 
+ npm -g i dmux 
+ Overview
+ Introduction Getting Started 
+ Usage
+ Core Concepts Keyboard Shortcuts Merging 
+ Advanced
+ Hooks Configuration Agents Multi-Agent Multi-Project 
+ What is dmux?
+ dmux runs multiple coding agents and shell panes in parallel using tmux and git worktrees. It automates the worktree lifecycle, restores regular terminals in their last working directories, supports multiple projects in one session, includes a built-in read-only file browser for each worktree, and can raise native macOS notifications when background panes need attention. Configure any supported inference provider—or a Codex/ChatGPT or Grok Build/SpaceXAI subscription login—to add branch names, terminal names, commit messages, summaries, and other quality-of-life automation.
+ Use f to browse files inside a pane's worktree, h and H to hide panes without stopping them, and P to focus a single project's panes inside a shared session.
+ Claude Code 
+ OpenCode 
+ Codex 
+ Grok 
+ Cline 
+ Gemini 
+ Qwen 
+ Amp 
+ pi 
+ Cursor 
+ Copilot 
+ Crush 
+ Early Access 
+ From the team behind FormKit , Tempo , dmux, AutoAnimate , and Drag and Drop — Standard Agents is an open standard for creating domain-specific agents you can distribute and compose together to form safe, efficient, and effective agents. Join the early access waitlist below.
+ Request Early Access 
+ You're on the list! We'll be in touch. 
+ Getting Started
+ Get dmux running in under a minute. All you need is tmux, Node.js, and at least one AI coding agent.
+ Install dmux
+ npm -g i dmux bash 
+ Choose an Inference Provider (Recommended)
+ On first run, dmux can configure the model used for smart branch names, terminal names, commit messages, summaries, and pane-state analysis. Search the provider list, choose a provider, then choose from the provider's live model catalog.
+ You can use an API key from OpenRouter, OpenAI, Anthropic, Google, Cerebras, Groq, and other supported providers. You can also choose ChatGPT subscription or Grok Build subscription ; dmux reuses the corresponding Codex or Grok Build CLI login and included plan usage instead of asking for an API key.
+ # Optional: sign in before starting dmux 
+codex login bash 
+ The same setup is available later under s → Inference Providers , including an optional backup provider/model.
+ First Run
+ Navigate to a git repository: 
+ cd /path/to/your/project bash 
+ Launch dmux: 
+ dmux bash 
+ dmux will create or attach to a project-scoped tmux session named like dmux-your-project-a1b2c3d4 and show the TUI.
+ Create your first pane: Press n to create a new pane. You'll be prompted for:
+ A description of what you want the agent to do
+ Which agent to use (if multiple are installed)
+ Watch the agent work: Press j to jump to the pane and see the agent running.
+ dmux keeps tracking that pane even when it is in the background. On macOS, background panes can send native notifications when they settle into a waiting or attention-needed state.
+ Merge when done: Navigate back to the dmux sidebar, select the pane, and press m to open the pane menu where you can merge the work back to your main branch.
+ Useful First-Day Shortcuts
+ Key Action 
+ f Open a read-only file browser for the selected pane's worktree 
+ h Hide or show the selected pane without stopping it 
+ H Hide all other panes, or show them again 
+ P Show only the selected project's panes, then restore all panes on the next press 
+ macOS notifications
+ On macOS, dmux can launch its native helper automatically and deliver background attention notifications. Open s settings and adjust Attention Notification Sounds if you want a different sound set.
+ What Gets Created
+ When you first run dmux in a project, it creates a .dmux/ directory:
+ your-project/
+├── .dmux/ # dmux data (gitignored)
+│ ├── dmux.config.json # Pane tracking
+│ ├── settings.json # Project settings
+│ └── worktrees/ # Git worktrees
+│ └── fix-auth/ # One per pane
+└── .dmux-hooks/ # Lifecycle hooks (optional)
+ Tip
+ Add .dmux/ to your project's .gitignore . dmux will suggest this on first run.
+ tmux Configuration
+ On first run, dmux will detect if you have no tmux config and offer to install a recommended preset (dark or light theme). This handles pane borders, navigation bindings, mouse support, and clipboard integration automatically.
+ If you'd rather configure tmux manually, edit ~/.tmux.conf (or ~/.config/tmux/tmux.conf ). Here's a solid starting point:
+ # Extended keys for Ctrl-Shift-Arrow support 
+set -g extended-keys on
+# Active/inactive pane dimming — makes it obvious which pane has focus 
+set -g window-style 'fg=colour247,bg=colour236' 
+set -g window-active-style 'fg=default,bg=colour234' 
+# Pane borders with labels showing pane number and current command 
+set -g pane-border-style "fg=colour238 bg=default" 
+set -g pane-active-border-style "fg=blue bg=default" 
+set -g pane-border-format ' #[bold]#P #[default]#{?pane_title,#{pane_title},#{pane_current_command}} ' 
+set -g pane-border-status top
+# Status bar 
+set -g status-style 'bg=colour236' 
+# Fast pane navigation with Ctrl+Shift+Arrow 
+bind -n C-S-Left select-pane -L 
+bind -n C-S-Right select-pane -R 
+bind -n C-S-Up select-pane -U 
+bind -n C-S-Down select-pane -D 
+# Mouse support — click panes, resize, scroll 
+set -g mouse on
+# Clipboard and terminal passthrough 
+set -g set-clipboard on
+set -g allow-passthrough all
+# Copy mouse selection to system clipboard (macOS) 
+bind-key -T copy-mode MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "pbcopy" 
+bind-key -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "pbcopy" 
+# Terminal overrides for clipboard/cursor compatibility 
+set -ga terminal-overrides ',xterm-256color:Ms=\E]52;c;%p2%s\007' 
+set -ga terminal-overrides ',*:Ss=\E[%p1%d q:Se=\E[2 q' 
+set -ga update-environment "TERM_PROGRAM" bash 
+ After editing, reload with tmux source-file ~/.tmux.conf or restart tmux.
+ dmux also applies its clipboard and passthrough compatibility settings to dmux-managed sessions at runtime. These settings improve terminal clipboard behavior, but tmux may still block rich image-paste flows that rely on terminal-specific clipboard protocols.
+ Note
+ On Linux, swap pbcopy for wl-copy (Wayland) or xclip -selection clipboard -in (X11) in the clipboard bindings.
+ Next Steps
+ Core Concepts — understand worktrees, panes, and the merge flow
+ Keyboard Shortcuts — navigate the TUI efficiently
+ Configuration — customize dmux settings
+ Join the Discord 
+ Core Concepts
+ dmux is built around three core concepts: projects, panes, and worktrees. Understanding how they interact will help you get the most out of parallel development.
+ Projects
+ A project in dmux corresponds to a git repository. When you run dmux inside a repo, it creates a stable, project-scoped tmux session named like dmux-your-project-a1b2c3d4 .
+ Each project gets its own isolated tmux session
+ Session state is stored in .dmux/dmux.config.json 
+ Multiple projects can be attached to one session via multi-project support
+ Panes
+ A pane is a tmux pane running an AI agent or shell surface in an isolated environment. Each pane has:
+ A unique ID (e.g. dmux-1 , dmux-2 )
+ A slug derived from your prompt (e.g. fix-auth )
+ Its own git worktree and branch
+ An agent, terminal, or file browser running against that worktree
+ Pa
+
+=== [pricing] https://dmux.ai/pricing (lang=en)
+dmux - Parallel agents with tmux and worktrees 
+ Parallel agents with tmux and worktrees
+ Manage multiple AI coding agents in isolated git worktrees. Branch, develop, and merge — all in parallel.
+ Get Started 
+ Star
+ 1.8k 
+ npm -g i dmux 
+ Overview
+ Introduction Getting Started 
+ Usage
+ Core Concepts Keyboard Shortcuts Merging 
+ Advanced
+ Hooks Configuration Agents Multi-Agent Multi-Project 
+ What is dmux?
+ dmux runs multiple coding agents and shell panes in parallel using tmux and git worktrees. It automates the worktree lifecycle, restores regular terminals in their last working directories, supports multiple projects in one session, includes a built-in read-only file browser for each worktree, and can raise native macOS notifications when background panes need attention. Configure any supported inference provider—or a Codex/ChatGPT or Grok Build/SpaceXAI subscription login—to add branch names, terminal names, commit messages, summaries, and other quality-of-life automation.
+ Use f to browse files inside a pane's worktree, h and H to hide panes without stopping them, and P to focus a single project's panes inside a shared session.
+ Claude Code 
+ OpenCode 
+ Codex 
+ Grok 
+ Cline 
+ Gemini 
+ Qwen 
+ Amp 
+ pi 
+ Cursor 
+ Copilot 
+ Crush 
+ Early Access 
+ From the team behind FormKit , Tempo , dmux, AutoAnimate , and Drag and Drop — Standard Agents is an open standard for creating domain-specific agents you can distribute and compose together to form safe, efficient, and effective agents. Join the early access waitlist below.
+ Request Early Access 
+ You're on the list! We'll be in touch. 
+ Getting Started
+ Get dmux running in under a minute. All you need is tmux, Node.js, and at least one AI coding agent.
+ Install dmux
+ npm -g i dmux bash 
+ Choose an Inference Provider (Recommended)
+ On first run, dmux can configure the model used for smart branch names, terminal names, commit messages, summaries, and pane-state analysis. Search the provider list, choose a provider, then choose from the provider's live model catalog.
+ You can use an API key from OpenRouter, OpenAI, Anthropic, Google, Cerebras, Groq, and other supported providers. You can also choose ChatGPT subscription or Grok Build subscription ; dmux reuses the corresponding Codex or Grok Build CLI login and included plan usage instead of asking for an API key.
+ # Optional: sign in before starting dmux 
+codex login bash 
+ The same setup is available later under s → Inference Providers , including an optional backup provider/model.
+ First Run
+ Navigate to a git repository: 
+ cd /path/to/your/project bash 
+ Launch dmux: 
+ dmux bash 
+ dmux will create or attach to a project-scoped tmux session named like dmux-your-project-a1b2c3d4 and show the TUI.
+ Create your first pane: Press n to create a new pane. You'll be prompted for:
+ A description of what you want the agent to do
+ Which agent to use (if multiple are installed)
+ Watch the agent work: Press j to jump to the pane and see the agent running.
+ dmux keeps tracking that pane even when it is in the background. On macOS, background panes can send native notifications when they settle into a waiting or attention-needed state.
+ Merge when done: Navigate back to the dmux sidebar, select the pane, and press m to open the pane menu where you can merge the work back to your main branch.
+ Useful First-Day Shortcuts
+ Key Action 
+ f Open a read-only file browser for the selected pane's worktree 
+ h Hide or show the selected pane without stopping it 
+ H Hide all other panes, or show them again 
+ P Show only the selected project's panes, then restore all panes on the next press 
+ macOS notifications
+ On macOS, dmux can launch its native helper automatically and deliver background attention notifications. Open s settings and adjust Attention Notification Sounds if you want a different sound set.
+ What Gets Created
+ When you first run dmux in a project, it creates a .dmux/ directory:
+ your-project/
+├── .dmux/ # dmux data (gitignored)
+│ ├── dmux.config.json # Pane tracking
+│ ├── settings.json # Project settings
+│ └── worktrees/ # Git worktrees
+│ └── fix-auth/ # One per pane
+└── .dmux-hooks/ # Lifecycle hooks (optional)
+ Tip
+ Add .dmux/ to your project's .gitignore . dmux will suggest this on first run.
+ tmux Configuration
+ On first run, dmux will detect if you have no tmux config and offer to install a recommended preset (dark or light theme). This handles pane borders, navigation bindings, mouse support, and clipboard integration automatically.
+ If you'd rather configure tmux manually, edit ~/.tmux.conf (or ~/.config/tmux/tmux.conf ). Here's a solid starting point:
+ # Extended keys for Ctrl-Shift-Arrow support 
+set -g extended-keys on
+# Active/inactive pane dimming — makes it obvious which pane has focus 
+set -g window-style 'fg=colour247,bg=colour236' 
+set -g window-active-style 'fg=default,bg=colour234' 
+# Pane borders with labels showing pane number and current command 
+set -g pane-border-style "fg=colour238 bg=default" 
+set -g pane-active-border-style "fg=blue bg=default" 
+set -g pane-border-format ' #[bold]#P #[default]#{?pane_title,#{pane_title},#{pane_current_command}} ' 
+set -g pane-border-status top
+# Status bar 
+set -g status-style 'bg=colour236' 
+# Fast pane navigation with Ctrl+Shift+Arrow 
+bind -n C-S-Left select-pane -L 
+bind -n C-S-Right select-pane -R 
+bind -n C-S-Up select-pane -U 
+bind -n C-S-Down select-pane -D 
+# Mouse support — click panes, resize, scroll 
+set -g mouse on
+# Clipboard and terminal passthrough 
+set -g set-clipboard on
+set -g allow-passthrough all
+# Copy mouse selection to system clipboard (macOS) 
+bind-key -T copy-mode MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "pbcopy" 
+bind-key -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "pbcopy" 
+# Terminal overrides for clipboard/cursor compatibility 
+set -ga terminal-overrides ',xterm-256color:Ms=\E]52;c;%p2%s\007' 
+set -ga terminal-overrides ',*:Ss=\E[%p1%d q:Se=\E[2 q' 
+set -ga update-environment "TERM_PROGRAM" bash 
+ After editing, reload with tmux source-file ~/.tmux.conf or restart tmux.
+ dmux also applies its clipboard and passthrough compatibility settings to dmux-managed sessions at runtime. These settings improve terminal clipboard behavior, but tmux may still block rich image-paste flows that rely on terminal-specific clipboard protocols.
+ Note
+ On Linux, swap pbcopy for wl-copy (Wayland) or xclip -selection clipboard -in (X11) in the clipboard bindings.
+ Next Steps
+ Core Concepts — understand worktrees, panes, and the merge flow
+ Keyboard Shortcuts — navigate the TUI efficiently
+
+=== [pricing] https://dmux.ai/ko/pricing (lang=en)
+dmux - Parallel agents with tmux and worktrees 
+ Parallel agents with tmux and worktrees
+ Manage multiple AI coding agents in isolated git worktrees. Branch, develop, and merge — all in parallel.
+ Get Started 
+ Star
+ 1.8k 
+ npm -g i dmux 
+ Overview
+ Introduction Getting Started 
+ Usage
+ Core Concepts Keyboard Shortcuts Merging 
+ Advanced
+ Hooks Configuration Agents Multi-Agent Multi-Project 
+ What is dmux?
+ dmux runs multiple coding agents and shell panes in parallel using tmux and git worktrees. It automates the worktree lifecycle, restores regular terminals in their last working directories, supports multiple projects in one session, includes a built-in read-only file browser for each worktree, and can raise native macOS notifications when background panes need attention. Configure any supported inference provider—or a Codex/ChatGPT or Grok Build/SpaceXAI subscription login—to add branch names, terminal names, commit messages, summaries, and other quality-of-life automation.
+ Use f to browse files inside a pane's worktree, h and H to hide panes without stopping them, and P to focus a single project's panes inside a shared session.
+ Claude Code 
+ OpenCode 
+ Codex 
+ Grok 
+ Cline 
+ Gemini 
+ Qwen 
+ Amp 
+ pi 
+ Cursor 
+ Copilot 
+ Crush 
+ Early Access 
+ From the team behind FormKit , Tempo , dmux, AutoAnimate , and Drag and Drop — Standard Agents is an open standard for creating domain-specific agents you can distribute and compose together to form safe, efficient, and effective agents. Join the early access waitlist below.
+ Request Early Access 
+ You're on the list! We'll be in touch. 
+ Getting Started
+ Get dmux running in under a minute. All you need is tmux, Node.js, and at least one AI coding agent.
+ Install dmux
+ npm -g i dmux bash 
+ Choose an Inference Provider (Recommended)
+ On first run, dmux can configure the model used for smart branch names, terminal names, commit messages, summaries, and pane-state analysis. Search the provider list, choose a provider, then choose from the provider's live model catalog.
+ You can use an API key from OpenRouter, OpenAI, Anthropic, Google, Cerebras, Groq, and other supported providers. You can also choose ChatGPT subscription or Grok Build subscription ; dmux reuses the corresponding Codex or Grok Build CLI login and included plan usage instead of asking for an API key.
+ # Optional: sign in before starting dmux 
+codex login bash 
+ The same setup is available later under s → Inference Providers , including an optional backup provider/model.
+ First Run
+ Navigate to a git repository: 
+ cd /path/to/your/project bash 
+ Launch dmux: 
+ dmux bash 
+ dmux will create or attach to a project-scoped tmux session named like dmux-your-project-a1b2c3d4 and show the TUI.
+ Create your first pane: Press n to create a new pane. You'll be prompted for:
+ A description of what you want the agent to do
+ Which agent to use (if multiple are installed)
+ Watch the agent work: Press j to jump to the pane and see the agent running.
+ dmux keeps tracking that pane even when it is in the background. On macOS, background panes can send native notifications when they settle into a waiting or attention-needed state.
+ Merge when done: Navigate back to the dmux sidebar, select the pane, and press m to open the pane menu where you can merge the work back to your main branch.
+ Useful First-Day Shortcuts
+ Key Action 
+ f Open a read-only file browser for the selected pane's worktree 
+ h Hide or show the selected pane without stopping it 
+ H Hide all other panes, or show them again 
+ P Show only the selected project's panes, then restore all panes on the next press 
+ macOS notifications
+ On macOS, dmux can launch its native helper automatically and deliver background attention notifications. Open s settings and adjust Attention Notification Sounds if you want a different sound set.
+ What Gets Created
+ When you first run dmux in a project, it creates a .dmux/ directory:
+ your-project/
+├── .dmux/ # dmux data (gitignored)
+│ ├── dmux.config.json # Pane tracking
+│ ├── settings.json # Project settings
+│ └── worktrees/ # Git worktrees
+│ └── fix-auth/ # One per pane
+└── .dmux-hooks/ # Lifecycle hooks (optional)
+ Tip
+ Add .dmux/ to your project's .gitignore . dmux will suggest this on first run.
+ tmux Configuration
+ On first run, dmux will detect if you have no tmux config and offer to install a recommended preset (dark or light theme). This handles pane borders, navigation bindings, mouse support, and clipboard integration automatically.
+ If you'd rather configure tmux manually, edit ~/.tmux.conf (or ~/.config/tmux/tmux.conf ). Here's a solid starting point:
+ # Extended keys for Ctrl-Shift-Arrow support 
+set -g extended-keys on
+# Active/inactive pane dimming — makes it obvious which pane has focus 
+set -g window-style 'fg=colour247,bg=colour236' 
+set -g window-active-style 'fg=default,bg=colour234' 
+# Pane borders with labels showing pane number and current command 
+set -g pane-border-style "fg=colour238 bg=default" 
+set -g pane-active-border-style "fg=blue bg=default" 
+set -g pane-border-format ' #[bold]#P #[default]#{?pane_title,#{pane_title},#{pane_current_command}} ' 
+set -g pane-border-status top
+# Status bar 
+set -g status-style 'bg=colour236' 
+# Fast pane navigation with Ctrl+Shift+Arrow 
+bind -n C-S-Left select-pane -L 
+bind -n C-S-Right select-pane -R 
+bind -n C-S-Up select-pane -U 
+bind -n C-S-Down select-pane -D 
+# Mouse support — click panes, resize, scroll 
+set -g mouse on
+# Clipboard and terminal passthrough 
+set -g set-clipboard on
+set -g allow-passthrough all
+# Copy mouse selection to system clipboard (macOS) 
+bind-key -T copy-mode MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "pbcopy" 
+bind-key -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "pbcopy" 
+# Terminal overrides for clipboard/cursor compatibility 
+set -ga terminal-overrides ',xterm-256color:Ms=\E]52;c;%p2%s\007' 
+set -ga terminal-overrides ',*:Ss=\E[%p1%d q:Se=\E[2 q' 
+set -ga update-environment "TERM_PROGRAM" bash 
+ After editing, reload with tmux source-file ~/.tmux.conf or restart tmux.
+ dmux also applies its clipboard and passthrough compatibility settings to dmux-managed sessions at runtime. These settings improve terminal clipboard behavior, but tmux may still block rich image-paste flows that rely on terminal-specific clipboard protocols.
+ Note
+ On Linux, swap pbcopy for wl-copy (Wayland) or xclip -selection clipboard -in (X11) in the clipboard bindings.
+ Next Steps
+ Core Concepts — understand worktrees, panes, and the merge flow
+ Keyboard Shortcuts — navigate the TUI efficiently
+
+=== [pricing] https://dmux.ai/plans (lang=en)
+dmux - Parallel agents with tmux and worktrees 
+ Parallel agents with tmux and worktrees
+ Manage multiple AI coding agents in isolated git worktrees. Branch, develop, and merge — all in parallel.
+ Get Started 
+ Star
+ 1.8k 
+ npm -g i dmux 
+ Overview
+ Introduction Getting Started 
+ Usage
+ Core Concepts Keyboard Shortcuts Merging 
+ Advanced
+ Hooks Configuration Agents Multi-Agent Multi-Project 
+ What is dmux?
+ dmux runs multiple coding agents and shell panes in parallel using tmux and git worktrees. It automates the worktree lifecycle, restores regular terminals in their last working directories, supports multiple projects in one session, includes a built-in read-only file browser for each worktree, and can raise native macOS notifications when background panes need attention. Configure any supported inference provider—or a Codex/ChatGPT or Grok Build/SpaceXAI subscription login—to add branch names, terminal names, commit messages, summaries, and other quality-of-life automation.
+ Use f to browse files inside a pane's worktree, h and H to hide panes without stopping them, and P to focus a single project's panes inside a shared session.
+ Claude Code 
+ OpenCode 
+ Codex 
+ Grok 
+ Cline 
+ Gemini 
+ Qwen 
+ Amp 
+ pi 
+ Cursor 
+ Copilot 
+ Crush 
+ Early Access 
+ From the team behind FormKit , Tempo , dmux, AutoAnimate , and Drag and Drop — Standard Agents is an open standard for creating domain-specific agents you can distribute and compose together to form safe, efficient, and effective agents. Join the early access waitlist below.
+ Request Early Access 
+ You're on the list! We'll be in touch. 
+ Getting Started
+ Get dmux running in under a minute. All you need is tmux, Node.js, and at least one AI coding agent.
+ Install dmux
+ npm -g i dmux bash 
+ Choose an Inference Provider (Recommended)
+ On first run, dmux can configure the model used for smart branch names, terminal names, commit messages, summaries, and pane-state analysis. Search the provider list, choose a provider, then choose from the provider's live model catalog.
+ You can use an API key from OpenRouter, OpenAI, Anthropic, Google, Cerebras, Groq, and other supported providers. You can also choose ChatGPT subscription or Grok Build subscription ; dmux reuses the corresponding Codex or Grok Build CLI login and included plan usage instead of asking for an API key.
+ # Optional: sign in before starting dmux 
+codex login bash 
+ The same setup is available later under s → Inference Providers , including an optional backup provider/model.
+ First Run
+ Navigate to a git repository: 
+ cd /path/to/your/project bash 
+ Launch dmux: 
+ dmux bash 
+ dmux will create or attach to a project-scoped tmux session named like dmux-your-project-a1b2c3d4 and show the TUI.
+ Create your first pane: Press n to create a new pane. You'll be prompted for:
+ A description of what you want the agent to do
+ Which agent to use (if multiple are installed)
+ Watch the agent work: Press j to jump to the pane and see the agent running.
+ dmux keeps tracking that pane even when it is in the background. On macOS, background panes can send native notifications when they settle into a waiting or attention-needed state.
+ Merge when done: Navigate back to the dmux sidebar, select the pane, and press m to open the pane menu where you can merge the work back to your main branch.
+ Useful First-Day Shortcuts
+ Key Action 
+ f Open a read-only file browser for the selected pane's worktree 
+ h Hide or show the selected pane without stopping it 
+ H Hide all other panes, or show them again 
+ P Show only the selected project's panes, then restore all panes on the next press 
+ macOS notifications
+ On macOS, dmux can launch its native helper automatically and deliver background attention notifications. Open s settings and adjust Attention Notification Sounds if you want a different sound set.
+ What Gets Created
+ When you first run dmux in a project, it creates a .dmux/ directory:
+ your-project/
+├── .dmux/ # dmux data (gitignored)
+│ ├── dmux.config.json # Pane tracking
+│ ├── settings.json # Project settings
+│ └── worktrees/ # Git worktrees
+│ └── fix-auth/ # One per pane
+└── .dmux-hooks/ # Lifecycle hooks (optional)
+ Tip
+ Add .dmux/ to your project's .gitignore . dmux will suggest this on first run.
+ tmux Configuration
+ On first run, dmux will detect if you have no tmux config and offer to install a recommended preset (dark or light theme). This handles pane borders, navigation bindings, mouse support, and clipboard integration automatically.
+ If you'd rather configure tmux manually, edit ~/.tmux.conf (or ~/.config/tmux/tmux.conf ). Here's a solid starting point:
+ # Extended keys for Ctrl-Shift-Arrow support 
+set -g extended-keys on
+# Active/inactive pane dimming — makes it obvious which pane has focus 
+set -g window-style 'fg=colour247,bg=colour236' 
+set -g window-active-style 'fg=default,bg=colour234' 
+# Pane borders with labels showing pane number and current command 
+set -g pane-border-style "fg=colour238 bg=default" 
+set -g pane-active-border-style "fg=blue bg=default" 
+set -g pane-border-format ' #[bold]#P #[default]#{?pane_title,#{pane_title},#{pane_current_command}} ' 
+set -g pane-border-status top
+# Status bar 
+set -g status-style 'bg=colour236' 
+# Fast pane navigation with Ctrl+Shift+Arrow 
+bind -n C-S-Left select-pane -L 
+bind -n C-S-Right select-pane -R 
+bind -n C-S-Up select-pane -U 
+bind -n C-S-Down select-pane -D 
+# Mouse support — click panes, resize, scroll 
+set -g mouse on
+# Clipboard and terminal passthrough 
+set -g set-clipboard on
+set -g allow-passthrough all
+# Copy mouse selection to system clipboard (macOS) 
+bind-key -T copy-mode MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "pbcopy" 
+bind-key -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "pbcopy" 
+# Terminal overrides for clipboard/cursor compatibility 
+set -ga terminal-overrides ',xterm-256color:Ms=\E]52;c;%p2%s\007' 
+set -ga terminal-overrides ',*:Ss=\E[%p1%d q:Se=\E[2 q' 
+set -ga update-environment "TERM_PROGRAM" bash 
+ After editing, reload with tmux source-file ~/.tmux.conf or restart tmux.
+ dmux also applies its clipboard and passthrough compatibility settings to dmux-managed sessions at runtime. These settings improve terminal clipboard behavior, but tmux may still block rich image-paste flows that rely on terminal-specific clipboard protocols.
+ Note
+ On Linux, swap pbcopy for wl-copy (Wayland) or xclip -selection clipboard -in (X11) in the clipboard bindings.
+ Next Steps
+ Core Concepts — understand worktrees, panes, and the merge flow
+ Keyboard Shortcuts — navigate the TUI efficiently
+
+=== [meta] https://dmux.ai/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/standardagents/dmux
+<p align="center">
+  <img src="./dmux.png" alt="dmux logo" width="400" />
+</p>
+
+<h3 align="center">Parallel agents with tmux and worktrees</h3>
+
+<p align="center">
+  Manage multiple AI coding agents in isolated git worktrees.<br/>
+  Branch, develop, and merge &mdash; all in parallel.
+</p>
+
+<p align="center">
+  <a href="https://dmux.ai"><strong>Documentation</strong></a> &nbsp;&middot;&nbsp;
+  <a href="https://dmux.ai#getting-started"><strong>Getting Started</strong></a> &nbsp;&middot;&nbsp;
+  <a href="https://github.com/formkit/dmux/issues"><strong>Issues</strong></a>
+</p>
+
+<p align="center">
+  <strong>Language:</strong>
+  <a href="./README.md">English</a> |
+  <a href="./README.ja.md">日本語</a>
+</p>
+
+---
+
+<img src="./dmux.webp" alt="dmux demo" width="100%" />
+
+## Install
+
+```bash
+npm install -g dmux
+```
+
+## Quick Start
+
+```bash
+cd /path/to/your/project
+dmux
+```
+
+Press `n` to create a new pane, type a prompt, pick one or more agents (or none for a plain terminal), and dmux handles the rest &mdash; worktree, branch, and agent launch.
+
+On first run, dmux can configure a primary inference provider/model and an optional backup. It discovers models from the provider when possible and supports API-key providers, custom OpenAI-compatible endpoints, a Codex login backed by your ChatGPT subscription, or a Grok Build login backed by your SpaceXAI subscription. Reopen the flow with `s` → **Inference Providers**.
+
+## What it does
+
+dmux creates a tmux pane for each task. Every pane gets its own git worktree and branch so agents work in complete isolation. When a task is done, open the pane menu with `m` and choose Merge to bring it back into your main branch, or Create GitHub PR to push the branch and file a pull request.
+
+- **Worktree isolation** &mdash; each pane is a full working copy, no conflicts between agents
+- **Agent support** &mdash; Claude Code, Codex, OpenCode, Cline CLI, Gemini CLI, Qwen CLI, Amp CLI, pi CLI, Cursor CLI, Copilot CLI, and Crush CLI
+- **Goal launches** &mdash; optionally start supported agents in goal mode from the initial prompt
+- **Multi-select launches** &mdash; choose any combination of enabled agents per prompt
+- **AI naming** &mdash; branches, commit messages, and active terminal panes named automatically
+- **Durable terminals** &mdash; regular terminals restore in their last observed directory; if Codex, Claude, or another

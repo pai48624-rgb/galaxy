@@ -1,0 +1,238 @@
+=== [home] https://labelbox.com
+Labelbox | Where AI learns to do real work 
+ Products 
+ Resources 
+ Company 
+ Try Recursion 
+ Where AI learns to do real work
+ Labelbox builds the environments frontier labs train AI on, and the agents engineering and research teams hand their backlog to.
+ For enterprises Recursion For frontier AI Horizon 
+ Work → 
+ Fleet → 
+ Learn 
+ Recursion · Sessions 
+ Recursion · Sessions Agents at work on your code, infrastructure and experiments 
+ A model regression, traced to its cause.
+ A coordinator and five specialists rerun the evals, diff the training data, bisect the code and ablate each change, then send the fix for review in Slack. A grader agent scores the outcome.
+ EVAL-482 · model v7 · ckpt-0907 · release review Friday
+ Regression: why did checkpoint 0907 lose 4 points on long-context code?
+ Confirm the drop, find the cause in the data, code or config, prove it with an ablation and send the fix for the research lead’s review.
+ running 
+ 7 agents · 4 models
+ outcome 0.93 · cause reproduced · fix merged
+ GitHub 0 
+ Google Cloud 0 
+ BigQuery 0 
+ Sandbox 0 
+ Jira 0 
+ Slack 0 
+ coordinator · Jira EVAL-482: long-context code eval down 4.1 points at ckpt-0907 · release review Friday · plan: 4 checks 
+ A model regression, traced to its cause.
+ A coordinator and five specialists rerun the evals, diff the training data, bisect the code and ablate each change, then send the fix for review in Slack. A grader agent scores the outcome.
+ That was one of 144 sessions this week.
+ Research, engineering, data and infrastructure agents, started by schedules, alerts, commits and API calls. Every run is graded.
+ Every run makes the next one better.
+ Graded sessions leave memories, notes and skills that the next session reads before it acts.
+ Explore Recursion 
+ For enterprises
+ Agents for the work that keeps coming back
+ Recursion isn’t another assistant in your editor. Its agents start on their own, on a red build, an alert, a new checkpoint or a schedule, and work in the background until the job is done: every flaky test fixed, every dependency kept current, every eval rerun, dozens of experiments compared at once. Here are a few of the jobs teams hand it.
+ Software engineering Reliability & infra Security engineering ML research Evals R&D Product Finance Sales Strategy Procurement More 
+ Ticket moved to Ready 
+ Linear GitHub Vercel Slack 
+ Delivers: A tested pull request with a preview link, ready for review 
+ Software engineering
+ Feature Builder
+ Builds each ready ticket into a working feature, with tests, in its own sandbox.
+ New issue in Sentry 
+ Sentry GitHub Linear 
+ Delivers: A pull request with the fix and a test that proves it 
+ Software engineering
+ Bug Fixer
+ Reproduces each new bug, finds the cause and writes the fix with a regression test.
+ New package version released 
+ GitHub Jenkins Slack 
+ Delivers: One ready-to-merge pull request per package, tests green 
+ Software engineering
+ Dependency Upgrader
+ Upgrades dependencies as new versions ship, fixes what breaks and reruns every test.
+ CI failure on main 
+ GitHub Jenkins Slack 
+ Delivers: A pull request with the fix and 50 green runs in a row 
+ Software engineering
+ Flaky Test Fixer
+ Reproduces each flaky test, finds the race and fixes it.
+ API marked deprecated 
+ GitHub Jenkins Linear 
+ Delivers: One pull request per service, CI green on each 
+ Software engineering
+ Deprecation Cleanup
+ Moves every caller off each API you deprecate, one service at a time, with tests.
+ PagerDuty alert 
+ PagerDuty Datadog Sentry GitHub 
+ Delivers: A root-cause draft and the suspect commit before on-call is up 
+ Reliability & infra
+ Incident Investigation
+ Correlates alerts, logs and recent deploys the moment an alert fires.
+ Incident resolved in PagerDuty 
+ PagerDuty Slack Datadog Confluence 
+ Delivers: A postmortem draft in Confluence, every event linked to its source 
+ Reliability & infra
+ Postmortem Writer
+ Drafts the timeline, cause and follow-ups from the incident channel, alerts and deploys.
+ Preview deploy ready 
+ Vercel GitHub Linear 
+ Delivers: A pass on the pull request, or a screenshot and repro steps for each break 
+ Reliability & infra
+ Preview QA
+ Checks every preview deploy in a real browser, clicking through the flows the pull request touched.
+ Daily 06:00 
+ Google BigQuery Datadog GitHub 
+ Delivers: The change behind each spike, with the fix as a pull request 
+ Reliability & infra
+ Cloud Cost Watch
+ Traces each spend spike to the change behind it and writes the fix.
+ New pull request 
+ GitHub Jira 
+ Delivers: Real vulnerabilities only, each with proof and the fix 
+ Security engineering
+ Code Security Review
+ Reviews every pull request and reproduces what it finds.
+ Critical CVE published 
+ GitHub Jira Slack 
+ Delivers: A tested patch for every exposed service, most urgent first 
+ Security engineering
+ Vulnerability Patcher
+ Finds every service a new critical vulnerability touches and patches it.
+ Nightly 02:00 
+ Google Cloud Logging GitHub Jira 
+ Delivers: Each real exposure, ranked, with the fix as a pull request 
+ Security engineering
+ Cloud Posture Review
+ Checks every cloud account for misconfigurations and exposed data.
+ First day of each quarter 
+ Okta GitHub Google Drive 
+ Delivers: Every stale or risky grant, with a revoke list for approval 
+ Security engineering
+ Access Review
+ Reviews who can reach what, and flags access no one uses or should have.
+ Alert webhook 
+ Okta Google Cloud Logging Slack 
+ Delivers: Every alert investigated, with a recommended containment step 
+ Security engineering
+ Threat Investigation
+ Investigates every identity, mailbox and endpoint alert as it fires.
+ Issue labeled sweep 
+ Linear GitHub Databricks 
+ Delivers: A results table with the winning config, rerun to confirm 
+ ML research
+ Experiment Sweep
+ Runs dozens of experiment configs at once and compares every run with the baseline.
+ New dataset version 
+ Databricks GitHub Slack 
+ Delivers: A checkpoint, its eval report and a model card 
+ ML research
+ Model Trainer
+ Launches fine-tuning runs, watches the curves and stops bad runs early.
+ Run beats its baseline 
+ Databricks GitHub Slack 
+ Delivers: An ablation table naming the changes that mattered, each rerun to confirm 
+ ML research
+ Ablation Runner
+ Ablates each change in a training run to find what actually moved the metric.
+ Dataset version registered 
+ Databricks Google BigQuery Slack 
+ Delivers: A cleaned dataset version, with what was removed and why 
+ ML research
+ Data Quality Audit
+ Checks each new dataset version for duplicates, leakage and label drift before training.
+ Mondays 09:00 
+ Notion GitHub Slack 
+ Delivers: A digest of what reproduced, with the code and numbers 
+ ML research
+ Research Digest
+ Reads new papers and repos on your topics and reruns the key result.
+ Pull request touching prompts 
+ GitHub Google BigQuery Slack 
+ Delivers: A per-task score diff, and a blocked merge if anything regresses 
+ Evals
+ Eval Regression Watch
+ Reruns your eval suite on every model or prompt change.
+ New model released 
+ Databricks Google BigQuery Slack 
+ Delivers: A leaderboard on your tasks, with cost and latency for each model 
+ Evals
+ Benchmark Runner
+ Runs every candidate model against your own benchmarks in parallel, overnight.
+ Eval score drops 
+ Google BigQuery GitHub Databricks Slack 
+ Delivers: The cause, proven with an ablation, and the fix as a pull request 
+ Evals
+ Regression Triage
+ Traces each eval drop to the data, code or config that caused it, and pro
+
+=== [about] https://labelbox.com/products/terra/
+Terra | Labelbox 
+ Products 
+ Resources 
+ Company 
+ Try Recursion 
+ Robots learn from what people do. We turn it into training data at scale. 
+ Terra is Labelbox’s data engine for robotics: egocentric and teleoperated demonstrations captured on purpose-built rigs, annotated and validated by an AI diversity engine, and delivered from pre-training through evals.
+ 1PB+
+ produced as of January 2026
+ 7
+ capture rig configurations
+ Up to 4
+ synced camera streams per episode
+ Pre-training → evals
+ one pipeline, one episode format
+ Why this is hard Physical AI is blocked by data, not models
+ Language models had the internet. Robots have nothing of the kind: every demonstration has to be recorded on purpose, in the real world, by a person. Whoever solves that at scale, with the variety the world actually has, sets the pace for the field.
+ 0 1 Scale
+ One task needs thousands of demonstrations to generalize. No lab can record that in-house.
+ 0 2 Diversity
+ Ten thousand episodes in one kitchen is one episode. Coverage across environments, objects, operators and lighting is the whole point.
+ 0 3 Ground truth
+ Raw video is not training data. Actions, poses, contacts and success labels have to be right, or the model learns the noise.
+ What ships One pipeline, pre-training to evals
+ Every rig writes the same episode format, so the data that pre-trains a model is the same shape as the demonstrations that post-train it and the episodes that evaluate it.
+ 0 1 Pre-training
+ Diverse egocentric and third-person video across environments, objects and tasks, with auto-labels for scene, object and action segments.
+ ego mono ego stereo ego trio 
+ 0 2 Post-training
+ Expert teleoperation and instrumented-gripper demonstrations with synchronized action streams and success labels, for imitation learning and RL fine-tuning.
+ teleop trio + gripper ego + wrist 
+ 0 3 Evals
+ Standardized manipulation and navigation tasks with scoring rubrics, run against your policy and reported per environment.
+ overhead protocol per-environment report 
+ Capture rigs Seven ways to see a task
+ Every rig is hardware-synchronized, ships to the operator pre-configured, and writes to the same episode format. Pick the viewpoints your policy needs and mix them in one program.
+ Rig Cameras Modality Best for 
+ Ego mono 1 head-mounted RGB Scene understanding, pre-training 
+ Ego stereo 2 head-mounted, synced RGB + depth 3D scene, navigation 
+ Ego trio 3 head + peripheral RGB wide FOV Full-context manipulation 
+ Ego + wrist Head + 1–2 wrist RGB close-up Grasping, fine manipulation 
+ Trio + gripper 3 head + instrumented gripper RGB + gripper state Action-labelled demonstrations 
+ Overhead 1–2 fixed above the workspace RGB Bird’s-eye view, bimanual tracking 
+ Teleoperation Robot-mounted + operator Joint states, actions, video Post-training, imitation learning 
+ How it works An engine that knows what it has not seen yet
+ Every episode is ingested, auto-categorized by environment, object, task and operator, validated, and counted against a target distribution. Where coverage is thin, collection is steered there next.
+ 1 Ingest · Raw streams land from operators worldwide 
+ 2 Categorize · Environment, objects, task and operator style auto-tagged 
+ 3 Validate · Automated checks, human review on edge cases 
+ 4 Steer · Gaps found, collection redirected to fill them 
+ Terra · diversity engine · coverage vs target · wk 37 ingest · categorize · validate 
+ pick + place stack insert tool use fold pour open / close navigate 
+ kitchen 
+ office 
+ warehouse 
+ retail 
+ home 
+ lab 
+ bar = episodes collected vs targe
+
+=== [meta] https://labelbox.com
+html lang: 없음
+hreflang: 없음
+화면에 보이는 언어 이름: 없음

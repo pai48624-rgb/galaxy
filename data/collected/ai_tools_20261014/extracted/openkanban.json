@@ -1,0 +1,96 @@
+{
+ "company": null,
+ "one_liner_ko": "AI 코딩 에이전트를 관리하는 터미널(TUI) 칸반 보드.",
+ "what_it_does_ko": "OpenKanban은 여러 프로젝트의 AI 코딩 에이전트 작업을 하나의 칸반 화면으로 보여 주는 TUI다. 티켓마다 자체 git worktree와 내장 터미널이 생기고, 에이전트를 띄워 작업을 지켜보며 작업 사이를 오갈 수 있다. 에이전트·단축키·브랜치 이름 규칙 등을 설정 파일로 바꿀 수 있다.",
+ "key_features": [
+  "티켓마다 격리된 git 브랜치(worktree)",
+  "TUI 안에서 에이전트를 돌리는 내장 터미널",
+  "OpenCode·Claude Code·Gemini·Codex·Aider 등 아무 CLI 에이전트",
+  "여러 저장소의 티켓을 한 보드에서 관리",
+  "에이전트·단축키·브랜치 이름·정리 동작 설정"
+ ],
+ "use_cases_ko": [
+  "여러 프로젝트에서 에이전트를 돌리며 터미널이 뒤엉키는 문제 정리"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "AGPL-3.0",
+ "api": "불명",
+ "platforms": [
+  "맥",
+  "CLI"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/TechDufus/openkanban",
+   "quote": "A TUI kanban board for orchestrating AI coding agents."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/TechDufus/openkanban",
+   "quote": "OpenKanban gives you a single view of all your work. Each ticket gets its own git worktree and embedded terminal."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/TechDufus/openkanban",
+   "quote": "Spawn an agent, watch it work, jump between tasks."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/TechDufus/openkanban",
+   "quote": "Agents, keybindings, branch naming, cleanup behavior - all customizable"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/TechDufus/openkanban",
+   "quote": "**Tickets as worktrees** - Each task gets an isolated git branch"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/TechDufus/openkanban",
+   "quote": "**Embedded terminals** - Agents run inside the TUI, not in random terminal tabs"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/TechDufus/openkanban",
+   "quote": "**Any agent** - OpenCode, Claude Code, Gemini, Codex, Aider"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/TechDufus/openkanban",
+   "quote": "**Multi-project** - Manage tickets across all your repositories from one board"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/TechDufus/openkanban",
+   "quote": "Agents, keybindings, branch naming, cleanup behavior - all customizable"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/TechDufus/openkanban",
+   "quote": "managing multiple agents across projects gets messy fast"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/TechDufus/openkanban",
+   "quote": "[AGPL-3.0](LICENSE)"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/TechDufus/openkanban",
+   "quote": "### Homebrew (macOS/Linux)"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/TechDufus/openkanban",
+   "quote": "openkanban new \"My App\""
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

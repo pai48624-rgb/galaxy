@@ -1,0 +1,217 @@
+=== [home] https://openclaw.ai (lang=en)
+OpenClaw — Open-Source AI Assistant OpenClaw Product Install Ecosystem Integrations Blog Podcast Docs Product Install Ecosystem Integrations Blog Podcast Docs ... .:.::-::... ..--==++xxx++==--::.. ..::--==++x+x++==--... ..::-::.:. .. . 
+ . . . ..:::.:.. ..::-=+++++==--::.. ..::--==+++++=-::.. ....:::.. . . . 
+ . ..:::::.. .::--==+++==--.:.. ..::--==++++=--::. ...:::.:.. . 
+ ....:.... ..::-=+====::.. ..::==+====::.. ..:.:.:.. 
+ ..:::.:.. .::--==+==--::. ....:.::::-:-:-::::.:.... .::--==+==--::. ..:.:.:.. 
+ ....:.. ..::--===--:: ..::-:-=+=++xxxxXxXxxxx++====:-::.. .:--===--::.. ..:.:.. 
+ ..:.:.. ..:-=-=--::.. ..::--++xxX###88@8@@@@@@@@@@@88##XXxx++--::.. ..::--=-=-:.. ..:.:.. 
+ ....... ..:----::.. ..::==xxX#8#88@8@8888#8#8#8#8#8888@8@88#8#Xxx==::.. ..::----:.. ....... 
+ ..:.... .::-----::.. ..--=+XX##888#8##XXxx++++=+===+=+=++xxXX##88888##XX+=--.. ..::-----::. ....:.. 
+ . ... . ..::-:-::.. ..:-=+xx#####XX++==--::.:...... ......:.::--==++XX#####xx+=-:.. ..::-:-::.. . ... . 
+ ..... ..::-:-::.. .::==xxXX#XXx+==--::.. ..:.--==+xXX#XXxx==::. ..::-:-::.. ...... 
+ . ... ..:.:::.... ..:-++xxXxx+=--:. . . .:--=+xxXxx+=--.. ..:.:::.:.. ... . 
+ ... ..::-::.:. .::==+xxxx+=--... .:--=+xxxx+==::. .::::-::.. ..... 
+ . . ..:.:::.. ..::==+++==-:.. ..--==+++==::.. ..:::.... . . 
+ ... ...:::.. ..:-==+=+--::. ::--+++==-:.. ..:.:... . . 
+ . ..:.... ..--===--::.. . . . ... . . . ..::--===-:.. ....:.. . 
+ ...:.... .:--===--:. ....:.:::::::::::::.:.... ...--===--:. ....:.. 
+ ..... . ..-:---::.. ....:::::::::::.:::::::::::.... ..::---::.. . ..... 
+ ...... ..::---::. ..:.:.:::.:.... ....:.:.:::.:.. .::---::.. ...... 
+ . . ..:::::.. ....:.... ......... ..::-::.. . . 
+ ... ..:::::.. ...:.... ....:... ..:::::.. .... 
+ . ...:.:.. . ..... ..... . ....:... . 
+ ..:.... ..... ... . ....:.. 
+ . ... . . ... . 
+ ... ..... 
+ . . 
+ Open source · Runs on your machine · Nobody's business model
+ The AI that really does things.
+Organizes your inbox, sends emails, manages your calendar, checks you in for flights. 
+All from WhatsApp, Telegram, or any chat app you already use. 
+Run it for yourself — or share it with your team.
+No subscription. No hosted tier. No token. Stewarded by an independent 501(c)(3). Your memories. Your skills. Your models. Your machines. Your data. 
+ Get started Read the docs Who is behind OpenClaw 
+ Quick Start
+ All install options related content 
+ install Apps One-liner npm Hackable 
+ npm pnpm 
+ installer pnpm 
+ macOS & Linux Windows 
+ β Beta 
+ # Works everywhere. On macOS, first run may need an Administrator for Homebrew.
+ $ curl -fsSL https://openclaw.ai/install.sh | bash 
+ # Install OpenClaw
+ $ npm i -g openclaw 
+ # Meet your lobster
+ $ openclaw onboard 
+ # For those who read source code for fun
+ $ curl -fsSL https://openclaw.ai/install.sh | bash -s -- --install-method git 
+ # Source checkouts are pnpm workspaces
+ $ git clone https://github.com/openclaw/openclaw.git 
+ $ cd openclaw && corepack enable && pnpm install 
+ # Run from source; bundled plugins use extensions/* deps
+ $ pnpm openclaw onboard 
+ Desktop Apps 
+ Full apps that install everything for you — gateway, chat, setup, and node features. Available for macOS, Windows, and Linux. 
+ macOS 
+ macOS 15+ · Apple Silicon or Intel · v2026.10.3 
+Download Universal
+ Silicon Intel 
+ Windows 
+ Windows 10/11 · x64 or ARM64 · v2026.9.8-1 
+Download x64
+Download ARM64
+ Linux New 
+ x64 · AppImage or Debian package · v2026.10.3 
+Download AppImage
+Download .deb
+Works on macOS, Linux, and Windows. The apps and the one-liner install Node.js and everything else for you. Switch later with openclaw update --channel dev or openclaw update --channel stable .
+ What People Say
+ View all related content 
+ "The Clawfather 🦞. Thank you for joining us at Build today @steipete!"
+ @pavandavuluri 
+ "The speed of agents in this new version is incredible. Kudos to @steipete and the whole community 🦞"
+ @rodrigofarinha 
+ "Last night we celebrated @openclaw, the fastest growing project on GitHub. In just six months, @steipete, dozens of maintainers, and thousands of contributors built something remarkable: open source personal agents. 🚀 We had over 3,300 people registered for the event!"
+ @ashleywolf 
+ "If it wasn't for OpenClaw we wouldn't have the massive progress across these kinds of personal agent harnesses. OpenClaw was the first agent harness I used, and now I get to enjoy other harnesses too. Thank you Legend, keep it up"
+ @bartslodyczka 
+ "I'm finally testing @openclaw. This is crazy good, this thing is probably going to run my life. Congratulations @steipete! But I want my sleep back 🤣"
+ @nelsonlopes_ 
+ "Thanks Peter, I've been super impressed with how much OpenClaw has improved over the last month. As someone that's been using it since the early days, it's kinda like a whole new product now, so much polish 🤌"
+ @morganlinton 
+ "The latest OpenClaw release is fantastic! Fixes all the issues I've having the past week. Thank you!"
+ @mronge 
+ "Thanks for joining us, and all the partnership as we make OpenClaw run super well on Windows! 🦞"
+ @satyanadella 
+ "Peter Steinberger is the creator of OpenClaw, the open-source AI agent that went from a weekend project to the most-starred software repo on GitHub in under 5 months, with 346k+ stars."
+ @ycombinator 
+ "Using Microsoft Execution Containers, you can run OpenClaw natively on Windows, and the sandbox prevented deletion of all files on the Desktop. Running OpenClaw more safely in an enterprise is "pretty dope". :)"
+ @jennifermarsman 
+ "I'm addicted to building thanks to OpenClaw and Codex. Yesterday I built dm-annotate, a Mac screen annotation tool. Today, I'm building a curriculum recorder suite."
+ @BradGroux 
+ "you can sign in to openclaw with your chatgpt account now and use your subscription there! happy lobstering."
+ @sama 
+ "You can access 𝕏 API via @OpenClaw. We’re trying to make it affordable without giving away the shop. Hopefully, this can be useful & fun 💫"
+ @elonmusk 
+ "A snake showed up in our backyard yesterday. Instead of panicking, I sent this photo to my OpenClaw. It identified it as a harmless gopher snake, gave me a local number to call to confirm, and suggested ways to catch it to make it a pet for the kids. I have small moments like this everyday now, usually less dramatic, that remind me how AI has made daily life feel a little more magical."
+ @growing_daniel 
+ "It's happened. My OpenClaw and Hermes Agent are now chatting with one another. The cyberpunk future is here, but hopefully it's a whitepill instead of a blackpill. Let's try to push it to the former."
+ @garrytan 
+ "I am SO SO excited about the Windows x OpenClaw announcement at #MSBuild. I love that our 🦞s can do all sorts of work for us (prepping for performance reviews, figuring out what happened in meetings that I refused to go to, godforsaken EXPENSE REPORTS, ha). And @steipete is ACTUALLY the coolest dude you’ve ever met."
+ @donasarkar 
+ "I changed my mind recently. OpenClaw acquisition will pay off for OpenAI. It’s still by far the best personal agent in the world. Nothing has come close. It’s a net new product experience for normies and non SaaS businesses. Plus, Peter is top 0.1% talent acquisition. gg"
+ @frankdegods 
+ "Here’s OpenAI’s latest realtime voice model, GPT-Realtime-2, wired up to OpenClaw. It’s amazing. Realtime continuous chat and fast OpenClaw agent action on real tasks. Truly excellent."
+ @BenjaminBadejo 
+ "Shit wow I just gave my @openclaw Lobster a real phone number using @twilio and called him. 
+
+=== [about] https://docs.openclaw.ai/ (lang=en)
+OpenClaw Docs 
+ OpenClaw Docs 
+ Search documentation K 
+ Product Install Ecosystem Integrations Blog Community 
+ 🇺🇸 English 🇺🇸 English 🇨🇳 简体中文 🇨🇳 繁體中文 🇯🇵 日本語 🇪🇸 Español 🇧🇷 Português (BR) 🇰🇷 한국어 🇩🇪 Deutsch 🇫🇷 Français 🇮🇳 हिन्दी 🇸🇦 العربية 🇮🇹 Italiano 🇻🇳 Tiếng Việt 🇳🇱 Nederlands 🇮🇷 فارسی 🇹🇷 Türkçe 🇺🇦 Українська 🇮🇩 Bahasa Indonesia 🇵🇱 Polski 🇹🇭 ไทย 🇷🇺 Русский 
+ OpenClaw Docs 
+ Get started
+ Overview Quickstart Installation Onboarding Configuration Documentation
+ Get started Overview
+ OpenClaw Why OpenClaw The trust boundary Policy as code Identity and roles Secrets Versioned state, guarded upgrades Provenance OpenClaw and Hermes Agent Features Docs hubs Docs directory First steps
+ Getting started Onboarding overview Onboarding (CLI) Onboarding (macOS app) Setup guides and reference
+ Personal assistant setup Team setup CLI setup reference CLI automation 
+ Install Install overview
+ Install Installer internals Runtimes
+ Node.js Node.js compatibility Bun Bun compatibility Nix Maintenance
+ Backups Updating Updating
+ Other update methods Automatic updates Rollback and recovery Update troubleshooting Migrating
+ Migration guide Migrating from Claude Migrating from Hermes OpenProse removal and migration Uninstall Release channels Containers
+ Docker Docker
+ Docker environment variables Docker networking, providers, and storage Docker Compose operations and image maintenance Docker agent sandbox and troubleshooting Podman Hosting
+ Linux server App platforms
+ Cloudflare Containers Daytona exe.dev Fly.io Northflank Railway Render Upstash Box Cloud servers
+ Azure DigitalOcean GCP Hetzner Hostinger Oracle Cloud Self-hosted and local
+ Ansible Docker VM runtime Kubernetes macOS VMs Raspberry Pi Advanced setup
+ Setup 
+ Channels Overview
+ Chat channels Mainstream messaging
+ Discord
+ Discord Discord setup Discord access control Discord message behavior Discord threads and sessions Discord components and approvals Discord events and operations Discord voice channels Discord voice transcripts and meeting notes Follow users in Discord voice Discord troubleshooting Discord Activities Google Chat iMessage
+ iMessage iMessage setup Enabling the imsg private API iMessage access control and routing iMessage deployment patterns iMessage media and attachments iMessage private API actions iMessage message behavior iMessage troubleshooting Coming from BlueBubbles BlueBubbles removal and the imsg iMessage path Matrix
+ Matrix Matrix setup Matrix access control Matrix message behavior Matrix rich messages and approvals Matrix encryption and verification Matrix threads and sessions Matrix accounts and homeservers Matrix migration Matrix presentation metadata Matrix push rules for quiet previews Microsoft Teams
+ Microsoft Teams Microsoft Teams setup Microsoft Teams access control Microsoft Teams authentication Microsoft Teams manifest and permissions Microsoft Teams configuration Microsoft Teams message behavior Microsoft Teams cards and actions Microsoft Teams troubleshooting Signal Slack
+ Slack Slack setup Slack transports Slack Enterprise Grid Slack manifest and scopes Slack access control Slack threads and sessions Slack message behavior Slack media and attachments Slack charts, tables, and approvals Slack events and operations Slack troubleshooting SMS Telegram
+ Telegram Telegram setup Telegram access control Telegram message behavior Telegram threads and sessions Telegram rich messages and approvals Telegram media and attachments Telegram events and operations Telegram transports Telegram Control UI Mini App Telegram troubleshooting WhatsApp X / Twitter Developer and se
+
+=== [meta] https://openclaw.ai
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/openclaw/openclaw
+# OpenClaw 🦞 — Your assistant, on your devices, in your chats
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/openclaw/openclaw/main/docs/assets/openclaw-banner-light.png">
+    <img src="https://raw.githubusercontent.com/openclaw/openclaw/main/docs/assets/openclaw-banner-dark.png" alt="OpenClaw — EXFOLIATE! EXFOLIATE! Your AI assistant, running on your own devices.">
+  </picture>
+</p>
+
+<p align="center">
+  <a href="https://github.com/openclaw/openclaw/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/openclaw/openclaw/ci.yml?branch=main&style=flat-square&label=ci" alt="CI status"></a>
+  <a href="https://www.npmjs.com/package/openclaw"><img src="https://img.shields.io/npm/v/openclaw?style=flat-square&label=npm" alt="npm version"></a>
+  <a href="https://nodejs.org"><img src="https://img.shields.io/node/v/openclaw?style=flat-square" alt="Node.js version"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="License: MIT"></a>
+  <a href="https://discord.gg/clawd"><img src="https://img.shields.io/discord/1456350064065904867?label=discord&logo=discord&logoColor=white&color=5865F2&style=flat-square" alt="Discord"></a>
+</p>
+
+OpenClaw is an open-source AI assistant that runs on your own computer and meets you in the channels you already use: Discord, iMessage, Slack, Teams, Telegram, WhatsApp, and 20+ more, plus native apps for macOS, iOS, Android, Windows, and Linux. One Gateway runs it as a personal assistant on a laptop or as a shared [team deployment](https://docs.openclaw.ai/start/teams); configuration is the only difference.
+
+**Yours, with no catch.** State, memory, and credentials live on your hardware. Models and agent harnesses (Claude, Codex, local models) are plugins you can swap without changing anything else. Your prompts go to the model provider and chat platforms you configure, plus any diagnostics export you enable yourself; by default OpenClaw itself phones home for nothing but a daily version check, anonymous feature statistics are opt-in, and `update.checkOnStart: false` disables both ([what OpenClaw sends](https://docs.openclaw.ai/gateway/telemetry)). OpenClaw is stewarded by the [OpenClaw Foundation](https://openclaw.org), an independent 501(c)(3), and has no paid tier, hosted service, or token. The architecture case — trusted gateway, untrusted execution, deterministic policy — is in [Why OpenClaw](https://docs.openclaw.ai/start/why-openclaw).
+
+[Website](https://openclaw.ai) · [Docs](https://docs.openclaw.ai) · [Getting started](https://docs.openclaw.ai/start/getting-started) · [Why OpenClaw](https://docs.openclaw.ai/start/why-openclaw) · [FAQ](https://docs.openclaw.ai/help/faq) · [Vision](VISION.md) · [DeepWiki](https://deepwiki.com/openclaw/openclaw)
+
+## Install
+
+The installer supports macOS, Linux, and Windows. It provisions a supported Node.js runtime when needed.
+
+```bash
+# macOS / Linux / WSL2
+curl -fsSL https://openclaw.ai/install.sh | bash
+```
+
+```powershell
+# Windows PowerShell
+iwr -useb https://openclaw.ai/install.ps1 | iex
+```
+
+Already manage Node.js? Install the published package instead (Node 24.16+ or 26.1+; Node 26 recommended):
+
+```bash
+npm install -g openclaw@latest --allow-scripts=openclaw
+```
+
+That command is for npm 12 or npm 11.16+. On npm 11.15 and earlier, omit
+`--allow-scripts=openclaw`. See the
+[installation guide](https://docs.openclaw.ai/install) for the lifecycle script
+contract, Docker, Nix, and other deployment paths.
+
+## Quick start
+
+On a fresh install, the installer scripts start onboarding automatically.
+Complete the wizard they open. If you installed the package directly with npm,
+pnpm, or Bun, run:
+
+```bash
+openclaw onboard --install-daemon
+```
+
+After onboarding:
+
+```bash
+openclaw gateway status
+openclaw dashboard
+```
+
+Onboarding verifies model access, creates the workspace, and configures the Gateway. The last command opens the Control UI; send a message there to confirm the assistant is working. See the [getting started guide](https://docs.openclaw.ai/start/getting-started) for channel setup and troubleshooti

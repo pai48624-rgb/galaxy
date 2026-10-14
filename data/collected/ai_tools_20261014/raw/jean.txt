@@ -1,0 +1,551 @@
+=== [home] https://jean.build (lang=en)
+Jean - A dev environment for AI agents. 
+ Jean Philosophy Features Docs FAQ Changelog Sponsor us 
+Community 20k+ Download 
+ Philosophy Features Docs FAQ Changelog Sponsor us 
+Community 20k+ Download 
+Open source and free forever. Read our philosophy
+A dev environment for AI agents . 
+An opinionated AI agent workspace. Git worktrees, chat sessions, terminals,
+ and GitHub & Linear integrations in one cohesive workflow. Run it on
+ your laptop or a dedicated server - connect from a browser or the native app.
+ Download for your platform 
+Run on a server
+Tested on macOS. Windows & Linux
+ testers needed .
+ Works with 
+View all 7 screenshots
+ Every task in its own worktree. One project, many isolated worktrees: issues, pull requests and manual tasks, with diff size, PR status and your own labels. 
+ How it works
+Bring your own agent.
+Pick an issue, a PR or just a prompt, then choose the backend. Use one per
+ task or run several at once - each in its own git worktree.
+ Claude Codex OpenCode Cursor Pi Command Code Grok Kimi Code 
+ Local · Remote · Web
+Local and remote, in one sidebar . 
+Run jean-server on any Linux box and
+ add it to the desktop app. Its projects show up next to your local ones,
+ grouped by server. No switching - every session, terminal and git action
+ runs on the server that owns the project.
+ Many servers - add as many remotes as you want, or install one over SSH from the app. 
+ Agents keep running - close your laptop, the work continues on the server. 
+ Browser too - every server serves the full UI, token-protected. Tailscale recommended. 
+Read the guide
+Install jean-server
+ Projects All servers 
+ Local 
+ jean.build 1 
+ coolify.io 4 
+ devserver 
+ coolify 22 
+ sentinel 1 
+ hetzner-vps 
+ orbit 3 
+ Features
+Everything you need
+Opinionated by design. Read the docs for the details.
+ Isolated workspaces 
+ Every task gets its own git worktree.
+ Parallel agents 
+ Run many agents at once, without conflicts.
+ Magic git commands 
+ Commit, review, open PRs, fix conflicts.
+ Learn more 
+ Magic prompts 
+ Edit every prompt, pick a model per workflow.
+ Learn more 
+ Mr. Robot Beta 
+ Sweeps GitHub issues and drafts plans.
+ Linked projects 
+ Share context across related repos.
+ Learn more 
+ Automated merging 
+ Merge PRs or worktrees, AI fixes conflicts.
+ Linear integration 
+ Load Linear issues into any session.
+ Fewer tokens 
+ RTK cuts tool-output tokens by 60-90%.
+ Learn more 
+ Local + remote 
+ Projects from all servers in one sidebar.
+ See how it works 
+ Opinionated 
+ Good defaults, no endless configuration.
+ Open source 
+ Apache 2.0. Free forever.
+ FAQ
+Frequently asked questions
+ What is Jean? Jean is an open-source AI assistant that helps you manage multiple projects, worktrees, and sessions with Claude CLI, Codex CLI, OpenCode, Cursor, Pi, Command Code, Grok, and Kimi Code. Use it as a desktop app, or run it on a server and connect from a browser or the native app - same projects and sessions either way.
+ Can I run Jean on a server? Yes. Install jean-server on Linux (or enable Web Access in the desktop app). Add it in the desktop app under Connections → Add remote (or let Jean install it over SSH): its projects appear in the same sidebar as your local ones, grouped by server. You can also open the full UI in a browser with an access token. We recommend binding on Tailscale (or similar) instead of the public internet. See Web Access and headless .
+ Is Jean really free? Yes, 100%. Jean is open source under the Apache 2.0 license. There are no paid tiers, no feature gates, and no usage limits. You bring your own subscription for any supported AI coding agent. If you'd like to support development, consider sponsoring us .
+ What platforms does Jean support? The desktop app is tested on macOS; Windows and Linux desktop builds work but need more testing. Headless jean-server targets Linux amd64/arm64. Download release builds from GitHub - Node.js and Rust are only required if you build from source.
+ How does Jean work with git? Jean uses git worktrees to create isolated workspaces for each AI agent session. It automates common git operations like reviewing code, creating commits, opening PRs, and resolving merge conflicts. Each workspace is independent, so multiple agents can work on different branches simultaneously.
+ What AI models does Jean use? Jean supports Claude CLI, Codex CLI, OpenCode, Cursor, Pi, Command Code, Grok, and Kimi Code. Pi, Command Code, and Kimi Code are currently beta integrations. You bring your own subscription or API access for each provider.
+ Does Jean help reduce token usage? Yes. The Opinionated pane installs RTK (a CLI proxy that compresses tool outputs 60-90% across every backend) and Caveman (a Claude skill that produces terse replies, ~65-75% shorter) with one click. See Opinionated Plugins .
+ How do I contribute? We welcome contributions of all kinds - code, documentation, bug reports, and feature requests. Check out the repository's CONTRIBUTING.md to get started.
+ Why is Jean opinionated? We believe developer tools should make decisions for you, not present you with a wall of configuration options. Jean picks the best workflows - git worktrees for isolation, automated merging, structured context loading - so you can focus on building. If a workflow is clearly better, we just do it that way.
+ Jean 
+Open-source dev environment to run AI coding agents in parallel, on your laptop or your own server.
+ Product
+ Features 
+ Docs 
+ Changelog 
+ Download 
+ Community
+ Discord 
+ GitHub 
+ Sponsor us 
+ Company
+ Philosophy 
+ Other projects 
+ Privacy policy 
+ Terms of service 
+ © 2026 coolLabs Solutions Kft. All rights reserved.
+
+=== [about] https://jean.build/docs/ (lang=en)
+Jean Docs Jean 
+ Jean 
+ Search ⌘ K 
+ Home About Jean 
+ What is Jean How Jean Works Local-First and Security Get Started 
+ Install and Setup Add Your First Project Start Your First Session Core Concepts 
+ Projects, Worktrees, Sessions Backends, Models, and MCP Project Linking Workflows 
+ Project Canvas and Chat Browser Context Grab Magic Commands GitHub, Linear, and Reviews Manage Jean 
+ Settings and Customization Magic Prompts Opinionated Plugins Web Access and Headless Archive, Recovery, Updates Reset Settings 
+ Home 
+ Home
+ Learn how Jean organizes projects, worktrees, chat sessions, and AI tooling around real development work.
+ Copy Markdown Open 
+ Jean is a local-first desktop workspace for Claude CLI, Codex CLI, OpenCode, Cursor Agent, PI, Command Code, Grok, and Kimi Code.
+ It gives you one place to manage repositories, spin up worktrees, talk to coding agents, inspect diffs, open terminals, and move work toward a branch or pull request.
+ How Jean fits
+ Jean does not replace your git workflow or your AI provider account. It sits on top of the tools you already use and turns them into a tighter day-to-day workspace.
+ Get started 
+ Install and set up
+ Install Jean, connect your CLIs, and finish the first-run setup.
+ Add your first project
+ Bring in a repository, organize it in folders, and add a jean.json .
+ Start your first session
+ Choose a base session or worktree, then send the first message.
+ Understand the model 
+ What Jean is
+ See where Jean sits between your editor, git workflow, and AI backends.
+ How Jean works
+ Learn the project, worktree, session, and canvas model.
+ Local-first and security
+ Understand what stays local, what Jean stores, and how web access is protected.
+ Move through real work 
+ Projects, Worktrees, Sessions
+ Build the right mental model before your workspace gets busy.
+ Backends, models, and MCP
+ Pick the right backend and decide how much context to attach.
+ Project canvas and chat
+ Work from the canvas, the chat window, the terminal, and the command palette.
+ Magic commands
+ Use built-in commands for context, commits, PRs, reviews, notes, and conflict resolution.
+ Connect your workflow 
+ GitHub, Linear, and reviews
+ Start sessions from issues, PRs, branches, security alerts, advisories, and Linear tickets.
+ Settings and Customization
+ Tune backends, prompts, fonts, keybindings, integrations, and experimental features.
+ Web access and headless
+ Every instance can serve the UI over HTTP - desktop or jean-server - ideally over Tailscale.
+ Archive, Recovery, Updates
+ Keep sessions tidy, restore work, and understand how updates behave.
+ What is Jean 
+ A practical introduction to Jean for teams and solo developers who want local AI workflows without giving up control.
+ On this page
+ Get started Understand the model Move through real work Connect your workflow
+
+=== [pricing] https://jean.build/pricing (lang=en)
+Jean - A dev environment for AI agents. 
+ Jean Philosophy Features Docs FAQ Changelog Sponsor us 
+Community 21k+ Download 
+ Philosophy Features Docs FAQ Changelog Sponsor us 
+Community 21k+ Download 
+Open source and free forever. Read our philosophy
+A dev environment for AI agents . 
+An opinionated AI agent workspace. Git worktrees, chat sessions, terminals,
+ and GitHub & Linear integrations in one cohesive workflow. Run it on
+ your laptop or a dedicated server - connect from a browser or the native app.
+ Download Latest Release v1.0.10 
+ macOS (DMG)
+ Jean_1.0.10_universal.dmg Windows (EXE)
+ Jean_1.0.10_x64-setup.exe Windows (MSI)
+ Jean_1.0.10_x64_en-US.msi Linux x64 (AppImage)
+ Jean_1.0.10_amd64.AppImage Linux ARM (AppImage)
+ Jean_1.0.10_arm64.AppImage Linux x64 (DEB)
+ Jean_1.0.10_amd64.deb Linux ARM (DEB)
+ Jean_1.0.10_arm64.deb Linux x64 (RPM)
+ Jean-1.0.10-1.x86_64.rpm Linux ARM (RPM)
+ Jean-1.0.10-1.aarch64.rpm 
+Run on a server
+Tested on macOS. Windows & Linux
+ testers needed .
+ Works with 
+View all 7 screenshots
+ Every task in its own worktree. One project, many isolated worktrees: issues, pull requests and manual tasks, with diff size, PR status and your own labels. 
+ How it works
+Bring your own agent.
+Pick an issue, a PR or just a prompt, then choose the backend. Use one per
+ task or run several at once - each in its own git worktree.
+ Claude Codex OpenCode Cursor Pi Command Code Grok Kimi Code 
+ Local · Remote · Web
+Local and remote, in one sidebar . 
+Run jean-server on any Linux box and
+ add it to the desktop app. Its projects show up next to your local ones,
+ grouped by server. No switching - every session, terminal and git action
+ runs on the server that owns the project.
+ Many servers - add as many remotes as you want, or install one over SSH from the app. 
+ Agents keep running - close your laptop, the work continues on the server. 
+ Browser too - every server serves the full UI, token-protected. Tailscale recommended. 
+Read the guide
+Install jean-server
+ Projects All servers 
+ Local 
+ jean.build 1 
+ coolify.io 4 
+ devserver 
+ coolify 22 
+ sentinel 1 
+ hetzner-vps 
+ orbit 3 
+ Features
+Everything you need
+Opinionated by design. Read the docs for the details.
+ Isolated workspaces 
+ Every task gets its own git worktree.
+ Parallel agents 
+ Run many agents at once, without conflicts.
+ Magic git commands 
+ Commit, review, open PRs, fix conflicts.
+ Learn more 
+ Magic prompts 
+ Edit every prompt, pick a model per workflow.
+ Learn more 
+ Mr. Robot Beta 
+ Sweeps GitHub issues and drafts plans.
+ Linked projects 
+ Share context across related repos.
+ Learn more 
+ Automated merging 
+ Merge PRs or worktrees, AI fixes conflicts.
+ Linear integration 
+ Load Linear issues into any session.
+ Fewer tokens 
+ RTK cuts tool-output tokens by 60-90%.
+ Learn more 
+ Local + remote 
+ Projects from all servers in one sidebar.
+ See how it works 
+ Opinionated 
+ Good defaults, no endless configuration.
+ Open source 
+ Apache 2.0. Free forever.
+ FAQ
+Frequently asked questions
+ What is Jean? Jean is an open-source AI assistant that helps you manage multiple projects, worktrees, and sessions with Claude CLI, Codex CLI, OpenCode, Cursor, Pi, Command Code, Grok, and Kimi Code. Use it as a desktop app, or run it on a server and connect from a browser or the native app - same projects and sessions either way.
+ Can I run Jean on a server? Yes. Install jean-server on Linux (or enable Web Access in the desktop app). Add it in the desktop app under Connections → Add remote (or let Jean install it over SSH): its projects appear in the same sidebar as your local ones, grouped by server. You can also open the full UI in a browser with an access token. We recommend binding on Tailscale (or similar) instead of the public internet. See Web Access and headless .
+ Is Jean really free? Yes, 100%. Jean is open source under the Apache 2.0 license. There are no paid tiers, no feature gates, and no usage limits. You bring your own subscription for any supported AI coding agent. If you'd like to support development, consider sponsoring us .
+ What platforms does Jean support? The desktop app is tested on macOS; Windows and Linux desktop builds work but need more testing. Headless jean-server targets Linux amd64/arm64. Download release builds from GitHub - Node.js and Rust are only required if you build from source.
+ How does Jean work with git? Jean uses git worktrees to create isolated workspaces for each AI agent session. It automates common git operations like reviewing code, creating commits, opening PRs, and resolving merge conflicts. Each workspace is independent, so multiple agents can work on different branches simultaneously.
+ What AI models does Jean use? Jean supports Claude CLI, Codex CLI, OpenCode, Cursor, Pi, Command Code, Grok, and Kimi Code. Pi, Command Code, and Kimi Code are currently beta integrations. You bring your own subscription or API access for each provider.
+ Does Jean help reduce token usage? Yes. The Opinionated pane installs RTK (a CLI proxy that compresses tool outputs 60-90% across every backend) and Caveman (a Claude skill that produces terse replies, ~65-75% shorter) with one click. See Opinionated Plugins .
+ How do I contribute? We welcome contributions of all kinds - code, documentation, bug reports, and feature requests. Check out the repository's CONTRIBUTING.md to get started.
+ Why is Jean opinionated? We believe developer tools should make decisions for you, not present you with a wall of configuration options. Jean picks the best workflows - git worktrees for isolation, automated merging, structured context loading - so you can focus on building. If a workflow is clearly better, we just do it that way.
+ Jean 
+Open-source dev environment to run AI coding agents in parallel, on your laptop or your own server.
+ Product
+ Features 
+ Docs 
+ Changelog 
+ Download 
+ Community
+ Discord 
+ GitHub 
+ Sponsor us 
+ Company
+ Philosophy 
+ Other projects 
+ Privacy policy 
+ Terms of service 
+ © 2026 coolLabs Solutions Kft. All rights reserved.
+
+=== [pricing] https://jean.build/ko/pricing (lang=en)
+Jean - A dev environment for AI agents. 
+ Jean Philosophy Features Docs FAQ Changelog Sponsor us 
+Community 21k+ Download 
+ Philosophy Features Docs FAQ Changelog Sponsor us 
+Community 21k+ Download 
+Open source and free forever. Read our philosophy
+A dev environment for AI agents . 
+An opinionated AI agent workspace. Git worktrees, chat sessions, terminals,
+ and GitHub & Linear integrations in one cohesive workflow. Run it on
+ your laptop or a dedicated server - connect from a browser or the native app.
+ Download Latest Release v1.0.10 
+ macOS (DMG)
+ Jean_1.0.10_universal.dmg Windows (EXE)
+ Jean_1.0.10_x64-setup.exe Windows (MSI)
+ Jean_1.0.10_x64_en-US.msi Linux x64 (AppImage)
+ Jean_1.0.10_amd64.AppImage Linux ARM (AppImage)
+ Jean_1.0.10_arm64.AppImage Linux x64 (DEB)
+ Jean_1.0.10_amd64.deb Linux ARM (DEB)
+ Jean_1.0.10_arm64.deb Linux x64 (RPM)
+ Jean-1.0.10-1.x86_64.rpm Linux ARM (RPM)
+ Jean-1.0.10-1.aarch64.rpm 
+Run on a server
+Tested on macOS. Windows & Linux
+ testers needed .
+ Works with 
+View all 7 screenshots
+ Every task in its own worktree. One project, many isolated worktrees: issues, pull requests and manual tasks, with diff size, PR status and your own labels. 
+ How it works
+Bring your own agent.
+Pick an issue, a PR or just a prompt, then choose the backend. Use one per
+ task or run several at once - each in its own git worktree.
+ Claude Codex OpenCode Cursor Pi Command Code Grok Kimi Code 
+ Local · Remote · Web
+Local and remote, in one sidebar . 
+Run jean-server on any Linux box and
+ add it to the desktop app. Its projects show up next to your local ones,
+ grouped by server. No switching - every session, terminal and git action
+ runs on the server that owns the project.
+ Many servers - add as many remotes as you want, or install one over SSH from the app. 
+ Agents keep running - close your laptop, the work continues on the server. 
+ Browser too - every server serves the full UI, token-protected. Tailscale recommended. 
+Read the guide
+Install jean-server
+ Projects All servers 
+ Local 
+ jean.build 1 
+ coolify.io 4 
+ devserver 
+ coolify 22 
+ sentinel 1 
+ hetzner-vps 
+ orbit 3 
+ Features
+Everything you need
+Opinionated by design. Read the docs for the details.
+ Isolated workspaces 
+ Every task gets its own git worktree.
+ Parallel agents 
+ Run many agents at once, without conflicts.
+ Magic git commands 
+ Commit, review, open PRs, fix conflicts.
+ Learn more 
+ Magic prompts 
+ Edit every prompt, pick a model per workflow.
+ Learn more 
+ Mr. Robot Beta 
+ Sweeps GitHub issues and drafts plans.
+ Linked projects 
+ Share context across related repos.
+ Learn more 
+ Automated merging 
+ Merge PRs or worktrees, AI fixes conflicts.
+ Linear integration 
+ Load Linear issues into any session.
+ Fewer tokens 
+ RTK cuts tool-output tokens by 60-90%.
+ Learn more 
+ Local + remote 
+ Projects from all servers in one sidebar.
+ See how it works 
+ Opinionated 
+ Good defaults, no endless configuration.
+ Open source 
+ Apache 2.0. Free forever.
+ FAQ
+Frequently asked questions
+ What is Jean? Jean is an open-source AI assistant that helps you manage multiple projects, worktrees, and sessions with Claude CLI, Codex CLI, OpenCode, Cursor, Pi, Command Code, Grok, and Kimi Code. Use it as a desktop app, or run it on a server and connect from a browser or the native app - same projects and sessions either way.
+ Can I run Jean on a server? Yes. Install jean-server on Linux (or enable Web Access in the desktop app). Add it in the desktop app under Connections → Add remote (or let Jean install it over SSH): its projects appear in the same sidebar as your local ones, grouped by server. You can also open the full UI in a browser with an access token. We recommend binding on Tailscale (or similar) instead of the public internet. See Web Access and headless .
+ Is Jean really free? Yes, 100%. Jean is open source under the Apache 2.0 license. There are no paid tiers, no feature gates, and no usage limits. You bring your own subscription for any supported AI coding agent. If you'd like to support development, consider sponsoring us .
+ What platforms does Jean support? The desktop app is tested on macOS; Windows and Linux desktop builds work but need more testing. Headless jean-server targets Linux amd64/arm64. Download release builds from GitHub - Node.js and Rust are only required if you build from source.
+ How does Jean work with git? Jean uses git worktrees to create isolated workspaces for each AI agent session. It automates common git operations like reviewing code, creating commits, opening PRs, and resolving merge conflicts. Each workspace is independent, so multiple agents can work on different branches simultaneously.
+ What AI models does Jean use? Jean supports Claude CLI, Codex CLI, OpenCode, Cursor, Pi, Command Code, Grok, and Kimi Code. Pi, Command Code, and Kimi Code are currently beta integrations. You bring your own subscription or API access for each provider.
+ Does Jean help reduce token usage? Yes. The Opinionated pane installs RTK (a CLI proxy that compresses tool outputs 60-90% across every backend) and Caveman (a Claude skill that produces terse replies, ~65-75% shorter) with one click. See Opinionated Plugins .
+ How do I contribute? We welcome contributions of all kinds - code, documentation, bug reports, and feature requests. Check out the repository's CONTRIBUTING.md to get started.
+ Why is Jean opinionated? We believe developer tools should make decisions for you, not present you with a wall of configuration options. Jean picks the best workflows - git worktrees for isolation, automated merging, structured context loading - so you can focus on building. If a workflow is clearly better, we just do it that way.
+ Jean 
+Open-source dev environment to run AI coding agents in parallel, on your laptop or your own server.
+ Product
+ Features 
+ Docs 
+ Changelog 
+ Download 
+ Community
+ Discord 
+ GitHub 
+ Sponsor us 
+ Company
+ Philosophy 
+ Other projects 
+ Privacy policy 
+ Terms of service 
+ © 2026 coolLabs Solutions Kft. All rights reserved.
+
+=== [pricing] https://jean.build/plans (lang=en)
+Jean - A dev environment for AI agents. 
+ Jean Philosophy Features Docs FAQ Changelog Sponsor us 
+Community 21k+ Download 
+ Philosophy Features Docs FAQ Changelog Sponsor us 
+Community 21k+ Download 
+Open source and free forever. Read our philosophy
+A dev environment for AI agents . 
+An opinionated AI agent workspace. Git worktrees, chat sessions, terminals,
+ and GitHub & Linear integrations in one cohesive workflow. Run it on
+ your laptop or a dedicated server - connect from a browser or the native app.
+ Download Latest Release v1.0.10 
+ macOS (DMG)
+ Jean_1.0.10_universal.dmg Windows (EXE)
+ Jean_1.0.10_x64-setup.exe Windows (MSI)
+ Jean_1.0.10_x64_en-US.msi Linux x64 (AppImage)
+ Jean_1.0.10_amd64.AppImage Linux ARM (AppImage)
+ Jean_1.0.10_arm64.AppImage Linux x64 (DEB)
+ Jean_1.0.10_amd64.deb Linux ARM (DEB)
+ Jean_1.0.10_arm64.deb Linux x64 (RPM)
+ Jean-1.0.10-1.x86_64.rpm Linux ARM (RPM)
+ Jean-1.0.10-1.aarch64.rpm 
+Run on a server
+Tested on macOS. Windows & Linux
+ testers needed .
+ Works with 
+View all 7 screenshots
+ Every task in its own worktree. One project, many isolated worktrees: issues, pull requests and manual tasks, with diff size, PR status and your own labels. 
+ How it works
+Bring your own agent.
+Pick an issue, a PR or just a prompt, then choose the backend. Use one per
+ task or run several at once - each in its own git worktree.
+ Claude Codex OpenCode Cursor Pi Command Code Grok Kimi Code 
+ Local · Remote · Web
+Local and remote, in one sidebar . 
+Run jean-server on any Linux box and
+ add it to the desktop app. Its projects show up next to your local ones,
+ grouped by server. No switching - every session, terminal and git action
+ runs on the server that owns the project.
+ Many servers - add as many remotes as you want, or install one over SSH from the app. 
+ Agents keep running - close your laptop, the work continues on the server. 
+ Browser too - every server serves the full UI, token-protected. Tailscale recommended. 
+Read the guide
+Install jean-server
+ Projects All servers 
+ Local 
+ jean.build 1 
+ coolify.io 4 
+ devserver 
+ coolify 22 
+ sentinel 1 
+ hetzner-vps 
+ orbit 3 
+ Features
+Everything you need
+Opinionated by design. Read the docs for the details.
+ Isolated workspaces 
+ Every task gets its own git worktree.
+ Parallel agents 
+ Run many agents at once, without conflicts.
+ Magic git commands 
+ Commit, review, open PRs, fix conflicts.
+ Learn more 
+ Magic prompts 
+ Edit every prompt, pick a model per workflow.
+ Learn more 
+ Mr. Robot Beta 
+ Sweeps GitHub issues and drafts plans.
+ Linked projects 
+ Share context across related repos.
+ Learn more 
+ Automated merging 
+ Merge PRs or worktrees, AI fixes conflicts.
+ Linear integration 
+ Load Linear issues into any session.
+ Fewer tokens 
+ RTK cuts tool-output tokens by 60-90%.
+ Learn more 
+ Local + remote 
+ Projects from all servers in one sidebar.
+ See how it works 
+ Opinionated 
+ Good defaults, no endless configuration.
+ Open source 
+ Apache 2.0. Free forever.
+ FAQ
+Frequently asked questions
+ What is Jean? Jean is an open-source AI assistant that helps you manage multiple projects, worktrees, and sessions with Claude CLI, Codex CLI, OpenCode, Cursor, Pi, Command Code, Grok, and Kimi Code. Use it as a desktop app, or run it on a server and connect from a browser or the native app - same projects and sessions either way.
+ Can I run Jean on a server? Yes. Install jean-server on Linux (or enable Web Access in the desktop app). Add it in the desktop app under Connections → Add remote (or let Jean install it over SSH): its projects appear in the same sidebar as your local ones, grouped by server. You can also open the full UI in a browser with an access token. We recommend binding on Tailscale (or similar) instead of the public internet. See Web Access and headless .
+ Is Jean really free? Yes, 100%. Jean is open source under the Apache 2.0 license. There are no paid tiers, no feature gates, and no usage limits. You bring your own subscription for any supported AI coding agent. If you'd like to support development, consider sponsoring us .
+ What platforms does Jean support? The desktop app is tested on macOS; Windows and Linux desktop builds work but need more testing. Headless jean-server targets Linux amd64/arm64. Download release builds from GitHub - Node.js and Rust are only required if you build from source.
+ How does Jean work with git? Jean uses git worktrees to create isolated workspaces for each AI agent session. It automates common git operations like reviewing code, creating commits, opening PRs, and resolving merge conflicts. Each workspace is independent, so multiple agents can work on different branches simultaneously.
+ What AI models does Jean use? Jean supports Claude CLI, Codex CLI, OpenCode, Cursor, Pi, Command Code, Grok, and Kimi Code. Pi, Command Code, and Kimi Code are currently beta integrations. You bring your own subscription or API access for each provider.
+ Does Jean help reduce token usage? Yes. The Opinionated pane installs RTK (a CLI proxy that compresses tool outputs 60-90% across every backend) and Caveman (a Claude skill that produces terse replies, ~65-75% shorter) with one click. See Opinionated Plugins .
+ How do I contribute? We welcome contributions of all kinds - code, documentation, bug reports, and feature requests. Check out the repository's CONTRIBUTING.md to get started.
+ Why is Jean opinionated? We believe developer tools should make decisions for you, not present you with a wall of configuration options. Jean picks the best workflows - git worktrees for isolation, automated merging, structured context loading - so you can focus on building. If a workflow is clearly better, we just do it that way.
+ Jean 
+Open-source dev environment to run AI coding agents in parallel, on your laptop or your own server.
+ Product
+ Features 
+ Docs 
+ Changelog 
+ Download 
+ Community
+ Discord 
+ GitHub 
+ Sponsor us 
+ Company
+ Philosophy 
+ Other projects 
+ Privacy policy 
+ Terms of service 
+ © 2026 coolLabs Solutions Kft. All rights reserved.
+
+=== [meta] https://jean.build
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/coollabsio/jean
+<div align="center">
+
+# Jean
+
+A dev environment for AI agents. Run Claude, Codex, Cursor, OpenCode, Pi, Command Code, Grok, Kimi Code, and Antigravity in parallel - each in its own git worktree - on your laptop or your own server.
+
+Tauri v2 · React 19 · Rust · TypeScript · Tailwind CSS v4 · shadcn/ui v4 · Zustand v5 · TanStack Query · Pierre Diffs · xterm.js
+
+</div>
+
+## About the Project
+
+Jean is an opinionated AI agent workspace. It has strong opinions about how AI-assisted development should work: every task gets its own git worktree, agents run in parallel, and git work, reviews, terminals, and GitHub, Linear, and Sentry integrations live in one cohesive workflow.
+
+Run it as a native desktop app, as a headless `jean-server` on Linux, or both: the desktop app shows local and remote projects together in one sidebar, grouped by server.
+
+No vendor lock-in. Jean uses your own CLI installations and subscriptions, and everything runs on machines you control.
+
+For more information, take a look at [jean.build](https://jean.build).
+
+## Screenshots
+
+<p align="center"><img src="screenshots/worktrees.webp" width="820" alt="Project view with worktrees, linked pull requests, diff stats and labels" /></p>
+
+<table>
+<tr>
+<td><img src="screenshots/recent-sessions.webp" width="400" alt="Recent tab with sessions from many projects, next to parallel session tabs" /><br /><sub><b>Recent sessions & parallel agents</b></sub></td>
+<td><img src="screenshots/terminal.webp" width="400" alt="Terminal panel next to an agent session" /><br /><sub><b>Built-in terminal</b></sub></td>
+</tr>
+<tr>
+<td><img src="screenshots/diff-review.webp" width="400" alt="Split diff viewer with a file list" /><br /><sub><b>Diff review with line comments</b></sub></td>
+<td><img src="screenshots/magic-commands.webp" width="400" alt="Magic command palette" /><br /><sub><b>Magic commands</b></sub></td>
+</tr>
+<tr>
+<td><img src="screenshots/magic-prompts.webp" width="400" alt="Magic Prompts settings with backend, model, reasoning and mode" /><br /><sub><b>Magic prompts</b></sub></td>
+<td><img src="screenshots/issues.webp" width="400" alt="New session dialog with open GitHub issues" /><br /><sub><b>Start from an issue, PR, Linear or Sentry</b></sub></td>
+</tr>
+</table>
+
+## Features
+
+- **Project & Worktree Management** - Multi-project support, linked projects for cross-project context, git worktree automation (create, archive, restore, delete), worktree labels and filters, custom project avatars
+- **Session Management** - Multiple sessions per worktree, Recent tab across all projects, execution modes (Plan, Build, Yolo) with plan approval flows, `/goal` tracking, session recap/digest, saved contexts with AI summarization, archiving with retention settings, recovery, auto-naming, canvas views
+- **AI Backends** - Claude, Codex, Cursor, OpenCode, Pi, Command Code, Grok, Kimi Code, and Antigravity (beta). Model selection and thinking/effort levels with per-mode overrides, MCP server support, multi-agent collaboration, file picker & image attachments, chat search, no

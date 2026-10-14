@@ -1,0 +1,356 @@
+=== [home] https://modal.com/products/sandboxes (lang=en)
+Sandboxes: Isolated environments for reinforcement learning and AI agents | Modal 
+ Skip to content 
+ Runtime recap: the full keynote, VM Sandboxes, Modal Clusters, and more. See what's new 
+ Download logo as .svg 
+ Download wordmark as .svg 
+ Go to press kit 
+ Products 
+ Resources 
+ Customers 
+ Pricing 
+ Docs 
+ Log in Sign up 
+ Products
+ Inference Serve LLMs, image, video, and audio models, from real-time to batch Sandboxes Isolated environments for coding agents, RL rollouts, and untrusted code Training Fine-tune, run RL, and evaluate models on GPUs that spin up in seconds 
+ Platform
+ Modal Infrastructure Infrastructure rebuilt for AI, from the container runtime and storage to a multi-cloud capacity pool 
+ Tools
+ Playground Explore Modal in the browser GPU Glossary A fast guide to GPU concepts LLM Engine Advisor Pick the right model 
+ Resources
+ Blog Changelog Startup Credits Partners Slack Community 
+ Company
+ About Careers Events 
+ Featured
+ Scaling to 1 million concurrent sandboxes in seconds Engineering 
+ Products Products
+ Inference Serve LLMs, image, video, and audio models, from real-time to batch Sandboxes Isolated environments for coding agents, RL rollouts, and untrusted code Training Fine-tune, run RL, and evaluate models on GPUs that spin up in seconds 
+ Platform
+ Modal Infrastructure Infrastructure rebuilt for AI, from the container runtime and storage to a multi-cloud capacity pool 
+ Resources Tools
+ Playground Explore Modal in the browser GPU Glossary A fast guide to GPU concepts LLM Engine Advisor Pick the right model 
+ Resources
+ Blog Changelog Startup Credits Partners Slack Community 
+ Company
+ About Careers Events 
+ Featured
+ Scaling to 1 million concurrent sandboxes in seconds Engineering 
+ Customers 
+ Pricing 
+ Docs 
+ Log in Sign up 
+ Sandboxes
+ Trusted infrastructure for untrusted agents 
+ High performance sandboxes designed to give agents the computers they need
+ at a scale they demand. 
+ Get started Read the docs 
+ Computers for agents.
+ Reinforcement learning rollouts
+ import modal app = modal.App( "code-rl-reward" ) @app.function() def compute_reward (completion: str , testcase: list [ str ]) -> int : code = get_generated_code_and_test_cases(completion, testcase) # Each rollout gets its own isolated, disposable sandbox sb = modal.Sandbox.create(app=app) score = 0 try : p = sb. exec ( "python" , "-c" , code, timeout= 30 ) p.wait() score = 1 if p.returncode == 0 else 0 # reward = did the code run? finally : sb.terminate() return score 
+ SANDBOXES
+ 1M+ in parallel
+ Rollouts that scale fast without slowing down your workflow.
+ Get started 
+ 1M+ sandboxes in under a minute
+ Keep your GPUs saturated and rollouts fast with massively parallel sandboxes that spin up fast.
+ Any dependency, any image
+ Programmatically define your exact rollout environment and dependencies.
+ Egress controls to prevent cheating
+ Lock each rollout's egress, keeping rollout environments reproducible and contained.
+ Coding Agents
+ import modal app = modal.App.lookup( "coding-agent" , create_if_missing=True) sandbox = modal.Sandbox.create(app=app) try: code = agent.generate_code( "Calculate the first 20 Fibonacci numbers" ) result = sandbox.exec( "python" , "-c" , code, timeout=30) agent.process_result(result) finally: sandbox.terminate() 
+ SANDBOX
+ Started
+ Environment
+ agent.py - tools.py
+ Image
+ Resources
+ Volumes
+ Task
+ Executing untrusted code
+ python / workspace / agent.py
+ The fast, reliable computer your coding agent needs to do its best work.
+ Get started 
+ Fast startup on any image
+ Snapshot full or partial filesystems to save state and resume instantly later.
+ Secure networking
+ Lock down domain egress while still giving agents access to the Secrets, data, and tools they need.
+ Build robust environments
+ Start from any image, install what you need at runtime, and keep state across a long agent session.
+ Reinforcement learning rollouts Coding Agents 
+ import modal app = modal.App( "code-rl-reward" ) @app.function() def compute_reward (completion: str , testcase: list [ str ]) -> int : code = get_generated_code_and_test_cases(completion, testcase) # Each rollout gets its own isolated, disposable sandbox sb = modal.Sandbox.create(app=app) score = 0 try : p = sb. exec ( "python" , "-c" , code, timeout= 30 ) p.wait() score = 1 if p.returncode == 0 else 0 # reward = did the code run? finally : sb.terminate() return score 
+ SANDBOXES
+ 1M+ in parallel
+ Rollouts that scale fast without slowing down your workflow.
+ Get started 
+ 1M+ sandboxes in under a minute
+ Keep your GPUs saturated and rollouts fast with massively parallel sandboxes that spin up fast.
+ Any dependency, any image
+ Programmatically define your exact rollout environment and dependencies.
+ Egress controls to prevent cheating
+ Lock each rollout's egress, keeping rollout environments reproducible and contained.
+ div]:pr-12 v2-tablet-lg:[&>div]:pr-0 v2-tablet-lg:[&>div]:col-span-9"> Engineered for the speed and scale agents require
+ 1 
+ Scale to a million in under a minute
+ Modal's infrastructure scales to the parallelism that production agent systems and RL training actually demand.
+ Learn more 
+ 2 
+ Fast on any image
+ Bring your dependencies, your base image, your setup scripts. Sub-second cold-starts even on custom and large images.
+ Learn more 
+ 3 
+ Adaptive provisioning of resources
+ Elastically scale both CPU and Memory as needed so you never have to worry about under provisioning or over paying.
+ Learn more 
+ Modal Sandbox Pricing
+ Only pay for what you use. Burst up to what you need without over-allocating CPU or memory in advance. 
+ Compute costs
+ Per hour Per second 
+ CPU
+ Physical core (2 vCPU equivalent)
+ $ 0.1419 0 . 1 4 1 9 / core / h 
+ *minimum of 0.125 cores per container
+ Memory
+ $ 0.0240 0 . 0 2 4 0 / GiB / h 
+ GPU
+ See standard pricing 
+ Reinforcement Learning “Modal powers both our reinforcement learning infrastructure and production inference. Millions of sandboxes on one end, real-time serving on the other.” 
+ Scott Wu CEO, Cognition 
+ Coding Agents “We use Sandboxes to power Coding Sessions, which allows users to delegate and iterate on issues with their coding agent by tagging @Linear.” 
+ Ryan Delaney Software Engineer, Linear 
+ Coding Agents “It would have been really hard to build Inspect without Modal. A lot of the complexity is hidden behind just being able to spin up sandboxes very quickly with a lot of services and data, and effectively have infinite of them at any given time.” 
+ Rahul Sengottuvelu Head of Applied AI, Ramp 
+ Blog 
+ Latest updates
+ Toward RL on mixed-precision, mixed-accelerator samplers
+ We trained a model on agentic coding tasks using fully asynchronous RL and mixed-precision, mixed-accelerator samplers. With off-policy correction, training stayed stable through convergence, on par with homogeneous samplers, at a lower cost.
+ Research 
+ Endpoint Candidates: evaluate and promote inference endpoints
+ Test and promote inference endpoints to evaluate quality, latency, throughput, and cost.
+ News 
+ TypeSafe AI scales Jev to trillions of tokens in three days on Modal
+ TypeSafe AI launched Jev, a new class of AI model built for automation, and scaled to trillions of tokens over a weekend on Modal.
+ Customer Stories 
+ Ship your first app in minutes
+ Get started Contact us 
+ $30 / month free compute
+ Products
+ Inference 
+ Sandboxes 
+ Training 
+ Notebooks 
+ Batch 
+ Modal Platform 
+ Solutions
+ LLM Inference 
+ Coding Agents 
+ Image + Video Inference 
+ Audio Transcr
+
+=== [pricing] https://modal.com/pricing (lang=en)
+Pricing: Pay per second for GPUs and CPUs | Modal 
+ Skip to content 
+ Runtime recap: the full keynote, VM Sandboxes, Modal Clusters, and more. See what's new 
+ Download logo as .svg 
+ Download wordmark as .svg 
+ Go to press kit 
+ Products 
+ Resources 
+ Customers 
+ Pricing 
+ Docs 
+ Log in Sign up 
+ Products
+ Inference Serve LLMs, image, video, and audio models, from real-time to batch Sandboxes Isolated environments for coding agents, RL rollouts, and untrusted code Training Fine-tune, run RL, and evaluate models on GPUs that spin up in seconds 
+ Platform
+ Modal Infrastructure Infrastructure rebuilt for AI, from the container runtime and storage to a multi-cloud capacity pool 
+ Tools
+ Playground Explore Modal in the browser GPU Glossary A fast guide to GPU concepts LLM Engine Advisor Pick the right model 
+ Resources
+ Blog Changelog Startup Credits Partners Slack Community 
+ Company
+ About Careers Events 
+ Featured
+ Scaling to 1 million concurrent sandboxes in seconds Engineering 
+ Products Products
+ Inference Serve LLMs, image, video, and audio models, from real-time to batch Sandboxes Isolated environments for coding agents, RL rollouts, and untrusted code Training Fine-tune, run RL, and evaluate models on GPUs that spin up in seconds 
+ Platform
+ Modal Infrastructure Infrastructure rebuilt for AI, from the container runtime and storage to a multi-cloud capacity pool 
+ Resources Tools
+ Playground Explore Modal in the browser GPU Glossary A fast guide to GPU concepts LLM Engine Advisor Pick the right model 
+ Resources
+ Blog Changelog Startup Credits Partners Slack Community 
+ Company
+ About Careers Events 
+ Featured
+ Scaling to 1 million concurrent sandboxes in seconds Engineering 
+ Customers 
+ Pricing 
+ Docs 
+ Log in Sign up 
+ Pricing as magical as our product
+ With Modal, you always pay for what you use and nothing more. You
+ never pay for idle resources — just actual compute time, by the
+ CPU cycle.
+ Get started Contact us 
+ Resource costs
+ Per hour Per second 
+ GPU Tasks Nvidia B300 $ 0.001972 0 . 0 0 1 9 7 2 / sec 
+ Nvidia B200 $ 0.001736 0 . 0 0 1 7 3 6 / sec 
+ Nvidia H200 SXM $ 0.001261 0 . 0 0 1 2 6 1 / sec 
+ Nvidia H100 SXM5 $ 0.001097 0 . 0 0 1 0 9 7 / sec 
+ Nvidia RTX PRO 6000 $ 0.000842 0 . 0 0 0 8 4 2 / sec 
+ Nvidia A100, 80 GB $ 0.000694 0 . 0 0 0 6 9 4 / sec 
+ Nvidia A100, 40 GB $ 0.000583 0 . 0 0 0 5 8 3 / sec 
+ Nvidia L40S $ 0.000542 0 . 0 0 0 5 4 2 / sec 
+ Nvidia A10 $ 0.000306 0 . 0 0 0 3 0 6 / sec 
+ Nvidia L4 $ 0.000222 0 . 0 0 0 2 2 2 / sec 
+ Nvidia T4 $ 0.000164 0 . 0 0 0 1 6 4 / sec 
+ CPU $ 0.0000131 0 . 0 0 0 0 1 3 1 / core / sec 
+ Physical core (2 vCPU equivalent)
+ *minimum of 0.125 cores per container
+ Memory $ 0.00000222 0 . 0 0 0 0 0 2 2 2 / GiB / sec 
+ Volumes $ 0.09 0 . 0 9 / GiB / mo 
+ *includes 1 TiB / mo free
+ Network Egress $ 0.04 0 . 0 4 / GiB 
+ *See plan for included usage / mo 
+ Pricing plans
+ Starter
+ Popular 
+ Built for small teams and independent developers looking to level up.
+ $0 + compute / month 
+ $30 / month free credits
+ 3 workspace seats included
+ 100 containers + 10 GPU concurrency
+ Scheduled and Web Functions (limited)
+ Real-time metrics and logs
+ Region selection
+ 1 TiB / month free network egress
+ Get started with $30 / month free credit Get started Team
+ Built for startups and larger organizations looking to scale quickly.
+ $250 + compute / month 
+ $100 / month free credits
+ Unlimited seats
+ 5000 containers + 50 GPU concurrency
+ Unlimited Scheduled Functions
+ Custom domains
+ Static IP proxy
+ Deployment rollbacks
+ Environment-level budgets
+ 10 TiB / month free network egress
+ Sign in to upgrade Enterprise
+ For organizations prioritizing security, support, and everlasting confidence.
+ Custom 
+ Volume-based discounts
+ Unlimited seats
+ Higher GPU concurrency
+ Embedded ML engineering services
+ Environment-level budgets
+ Support via private Slack
+ Audit logs, Okta SSO, and HIPAA
+ 100 TiB / month free network egress
+ Get in touch 
+ div]:col-span-10"> Programs and purchasing options
+ Credit grants for startups 
+ Early-stage startups can get free compute credits on Modal.
+ Apply now Credit grants for academics 
+ Graduate students, labs, and researchers can get up to $10k free compute credits on Modal
+ Apply now Use committed spend on Modal
+ Transact through the AWS and GCP marketplace to use committed spend on Modal.
+ Apply now 
+ Modal Sandbox + Notebooks pricing
+ Only pay for what you use. Burst up to what you need without over-allocating CPU or memory in advance. 
+ Compute costs
+ button]:px-3.5 [&>button]:py-[3px]"> Per hour Per second 
+ CPU
+ Physical core (2 vCPU equivalent)
+ $ 0.00003942 0 . 0 0 0 0 3 9 4 2 / core / sec 
+ *minimum of 0.125 cores per container
+ Memory
+ $ 0.00000667 0 . 0 0 0 0 0 6 6 7 / GiB / sec 
+ GPU
+ See standard pricing 
+ Why serverless?
+ Modal is serverless, which means that we instantly autoscale up and
+ down for you based on request volume. For spiky or unpredictable
+ workloads, we are more cost-effective than fixed on-demand/reserved
+ compute.
+ Traditional cloud
+ You’re billed for reserved GPUs, even when usage drops.
+ 100 75 50 25 0 
+ 3 AM 6 AM 9 AM 12 PM 3 PM 
+ $5,400
+ 75 GPUs * 24 hrs * $3 / GPU-hr
+ Degraded service at peak demand 
+ Modal serverless cloud
+ Only pay for what you use, when you use it.
+ 100 75 50 25 0 
+ 3 AM 6 AM 9 AM 12 PM 3 PM 
+ $4,740
+ Avg 50 GPUs * 24 hrs * $3.95 / GPU-hr
+ 12% lower cost 
+ Compare features
+ Plans Starter
+ $0 + compute / month 
+ Team
+ $250 + compute / month 
+ Enterprise
+ Custom compute 
+ Compare Starter, Team, and Enterprise plans Plans Starter: $0 + compute / month Team: $250 + compute / month Enterprise: Custom compute 
+ Workspace
+ Number of seats Up to 3 Unlimited Unlimited 
+ Credits and variable costs
+ Included compute $30 / month $100 / month Custom 
+ Included network egress 1 TiB / month 10 TiB / month 100 TiB / month 
+ Features
+ Containers 100 5000 Custom 
+ GPU concurrency 10 50 Custom 
+ Deployed apps 200 1000 1000 
+ Log retention 1 day 30 days Custom 
+ Custom domains Not included Included Included 
+ Real-time metrics Included Included Included 
+ Sharing and collaboration Included Included Included 
+ Secrets Unlimited Unlimited Unlimited 
+ Custom images Unlimited Unlimited Unlimited 
+ Instant deploys Unlimited Unlimited Unlimited 
+ Cron jobs 5 deployed crons Unlimited Unlimited 
+ Deployment rollbacks Not included 3 versions Custom 
+ Environment-level budgets Not included Included Included 
+ Distributed queue Unlimited Unlimited Unlimited 
+ Distributed dict Unlimited Unlimited Unlimited 
+ Region selection 1.15 - 1.75x base prices 1.15 - 1.75x base prices 1.15 - 1.75
+
+=== [about] https://modal.com/docs/guide (lang=en)
+Introduction | Modal Docs 
+ Guide Examples Reference 
+ Releases 
+ Playground 
+ Search documentation / 
+ Log In Sign Up 
+ Guide Introduction to Modal Getting started Functions Functions Invocation methods Function lookups Container lifecycle management Parametrized Functions Dynamic configuration Sandboxes Sandboxes Running commands Networking and security File access Snapshots Pricing and resources Sidecars Beta Secret injection Beta Endpoints Endpoints Shared Endpoints Dedicated Endpoints Endpoint candidates Endpoint integrations Training Quickstart Tinker-compatible API Beta Multi-node training Images Defining Images Using existing container images Named images Fast pull from registry GPUs and other resources GPU acceleration Using CUDA on Modal Configuring CPU, memory, and disk Scaling out Scaling out Input concurrency Batch processing Job queues Dynamic batching Multi-node Clusters Deployment Apps, Functions, and entrypoints Managing deployments Continuous deployment Scheduled Functions HTTP Applications Servers Sticky Sessions Web Functions Streaming endpoints Web Function URLs Request timeouts Proxy Tokens Networking Tunnels Proxies Beta Cluster networking Data sharing and storage Passing local data Volumes Storing model weights Cloud bucket mounts Dicts Queues Dataset ingestion Secrets and environment variables Secrets Environment variables Performance Cold start performance Memory Snapshots High-performance LLM inference Reliability and robustness Failures and retries Preemption Timeouts GPU health Troubleshooting Security and privacy Security and privacy Data residency Customer-supplied encryption keys Alpha Audit logs Integrations Using OIDC to authenticate with external services Connecting Modal to your Datadog account Connecting Modal to your OpenTelemetry provider Okta SSO Microsoft Entra SSO Custom SAML SSO SCIM Integration Slack notifications Beta Workspace & account settings Workspaces Environments Service users User groups Role-Based Access Control (RBAC) Billing Network egress billing Budgets Other topics Feature maturity Notebooks Restricted Functions JavaScript/Go SDKs Beta Modal 1.0 migration guide File and project structure Developing and debugging Jupyter notebooks Asynchronous API usage Global variables Region selection GPU Metrics 
+ Copy page 
+ Introduction 
+ Modal is an AI infrastructure platform that lets you:
+ Run low latency inference with sub-second cold starts, using open weights or custom models
+ Scale out batch jobs to run massively in parallel
+ Train or fine-tune open weights or custom models on the latest GPUs
+ Spin up thousands of isolated and secure Sandboxes to execute AI generated code
+ Launch GPU-backed Notebooks in seconds and collaborate with your colleagues in real-time
+ You get full serverless execution and pricing because we host everything and charge per second of usage.
+ Notably, there’s zero configuration in Modal - everything, including container environments and GPU specification , is code. Take a breath of fresh air and feel how good it tastes with no YAML in it.
+ Here’s a complete, minimal example of LLM inference running on Modal:
+ Using a GPU requires having a valid payment method on file.
+ from pathlib import Path
+import modal
+app = modal.App("example-inference")
+image = modal.Image.debian_slim().uv_pip_install("transformers[torch]")
+@app.function(gpu="h100", image=image)
+def chat(prompt: str | None = None) -> list[dict]:
+ from transformers import pipeline
+ if prompt is None:
+ prompt = f"/no_think Read this code.\n\n{Path(__file__).read_text()}\nIn one paragraph, what does the cod
+
+=== [meta] https://modal.com/products/sandboxes
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음

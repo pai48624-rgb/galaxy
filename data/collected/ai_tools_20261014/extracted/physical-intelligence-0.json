@@ -1,0 +1,119 @@
+{
+ "company": "Physical Intelligence",
+ "one_liner_ko": "어떤 로봇이든 어떤 작업이든 제어하는 범용 로봇 모델을 만드는 Physical Intelligence의 첫 범용 정책 π0.",
+ "what_it_does_ko": "Physical Intelligence는 범용 AI를 물리 세계로 가져오는 것을 목표로, 모든 로봇의 모든 작업을 제어하는 모델을 개발한다. π0는 대규모 다중 작업·다중 로봇 데이터와 새 신경망 구조를 결합한 첫 범용 로봇 정책이다. openpi 저장소로 π0, π0-FAST, π0.5 모델과 1만 시간+ 로봇 데이터로 사전학습한 기본 체크포인트를 공개해 바로 쓰거나 미세조정할 수 있다. 최신 모델은 Pi API 베타로 데이터 업로드·미세조정·클라우드 추론을 제공한다.",
+ "key_features": [
+  "1만 시간+ 로봇 데이터로 사전학습한 기본 모델 체크포인트",
+  "FAST 행동 토크나이저 기반 자기회귀 VLA(π0-FAST)",
+  "개방형 환경 일반화를 높인 π0.5",
+  "자체 데이터셋으로 미세조정 예제 제공",
+  "PyTorch 지원",
+  "Pi API 베타: 데이터 업로드·미세조정·클라우드 추론"
+ ],
+ "use_cases_ko": [
+  "연구자·실무자가 π0를 자기 로봇 플랫폼에 맞춰 실험",
+  "로봇 기업이 Pi API로 자사 로봇에 모델 미세조정·배포"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "오픈소스(openpi, 라이선스명 페이지에 없음)",
+ "api": "있음",
+ "platforms": [
+  "API",
+  "리눅스(Ubuntu 22.04)"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.pi.website/",
+   "quote": "Physical Intelligence is bringing general-purpose AI into the physical world."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.pi.website/",
+   "quote": "developing learning algorithms to create a model that will control any robot to do any task."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.pi.website/",
+   "quote": "a prototype model that combines large-scale multi-task and multi-robot data collection with a new network architecture"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.pi.website/",
+   "quote": "We are releasing the weights and code for π0 as well as our new π0-FAST autoregressive model."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/Physical-Intelligence/openpi",
+   "quote": "pre-trained on 10k+ hours of robot data"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/Physical-Intelligence/openpi",
+   "quote": "an autoregressive VLA, based on the FAST action tokenizer"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/Physical-Intelligence/openpi",
+   "quote": "with better open-world generalization trained with"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/Physical-Intelligence/openpi",
+   "quote": "examples for using them out of the box or fine-tuning them to your own datasets"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/Physical-Intelligence/openpi",
+   "quote": "We released PyTorch support in openpi."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.pi.website/",
+   "quote": "Upload data, fine-tune models, and deploy cloud-hosted inference on your own robots."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/Physical-Intelligence/openpi",
+   "quote": "researchers and practitioners will be able to run creative new experiments adapting"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.pi.website/",
+   "quote": "Upload data, fine-tune models, and deploy cloud-hosted inference on your own robots."
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/Physical-Intelligence/openpi",
+   "quote": "openpi holds open-source models and packages for robotics"
+  },
+  {
+   "field": "api",
+   "url": "https://www.pi.website/",
+   "quote": "Build with the Pi API. Join the waitlist"
+  },
+  {
+   "field": "platforms",
+   "url": "https://www.pi.website/",
+   "quote": "Build with the Pi API. Join the waitlist"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/Physical-Intelligence/openpi",
+   "quote": "The repo has been tested with Ubuntu 22.04, we do not currently support other operating systems."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.pi.website/",
+   "quote": "html lang: en"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [],
+ "note": "Pi API는 베타(대기자 명단)이며 가격 공개 없음. π0 가중치·코드는 공개(openpi)."
+}

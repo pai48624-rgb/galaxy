@@ -1,0 +1,164 @@
+{
+ "company": "Redpanda",
+ "one_liner_ko": "Kafka 호환 실시간 데이터 스트리밍 플랫폼과, AI 에이전트의 데이터 접근을 통제하는 에이전틱 데이터 플레인을 제공.",
+ "what_it_does_ko": "Redpanda는 Apache Kafka 호환 스트리밍 데이터 플랫폼으로, ZooKeeper와 JVM 없이 C++ 엔진으로 더 가볍고 빠르게 동작하도록 설계됐다. Redpanda Connect로 300개 이상의 커넥터와 선언적 YAML 파이프라인을, Redpanda SQL로 실시간·과거 데이터 쿼리를 제공한다. Agentic Data Plane은 AI 에이전트가 쓰는 데이터·도구·모델 접근을 통제하고 모든 행동을 기록하며 예산 초과 시 멈추는 킬 스위치를 둔다. 서버리스, 자체 클라우드(BYOC), 자체 운영 Enterprise Edition으로 쓸 수 있다.",
+ "key_features": [
+  "Kafka 호환 C++ 스트리밍 엔진(의존성 없음)",
+  "Redpanda Connect: 300개 이상 커넥터, YAML 파이프라인",
+  "Redpanda SQL: PostgreSQL 호환 분산 OLAP",
+  "AI 에이전트 관리용 MCP Gateway·AI Gateway",
+  "에이전트 감사 로그와 킬 스위치",
+  "계층형 스토리지와 Apache Iceberg 토픽",
+  "SSO·RBAC·감사 로그"
+ ],
+ "use_cases_ko": [
+  "실시간 스트리밍으로 Iceberg 테이블·Snowflake 적재",
+  "기업 데이터 위에서 AI 에이전트를 안전하게 운영",
+  "금융·제조·게임 등 산업의 실시간 데이터 인프라"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Serverless 무료 시작, 카드 불필요 / Community Edition)",
+  "plans": [
+   {
+    "name": "Serverless",
+    "price": null,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "종량제 또는 연간 약정, 쓰기 최대 100MB/s, 파티션 5,000개, 99.9% SLA",
+    "page_lang": "en"
+   },
+   {
+    "name": "Bring Your Own Cloud",
+    "price": null,
+    "currency": "USD",
+    "period": "year",
+    "limits": "연간 약정, 자체 VPC(AWS·GCP·Azure), 쓰기 최대 2GB/s, 99.99% SLA, 14일 체험",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise Edition",
+    "price": null,
+    "currency": "USD",
+    "period": null,
+    "limits": "자체 운영, 30일 체험, 가격은 문의",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://www.redpanda.com/try-data-streaming"
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "CLI"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.redpanda.com/",
+   "quote": "© 2026 Redpanda. All rights reserved."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.redpanda.com/",
+   "quote": "Redpanda Streaming: Kafka-compatible, C++ engine, zero dependencies"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.redpanda.com/",
+   "quote": "Control what data agents access, what they do, and every action they take"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/redpanda-data/redpanda",
+   "quote": "Redpanda is the most complete, Apache Kafka®-compatible streaming data platform, designed from the ground up to be lighter, faster, and simpler to operate."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.redpanda.com/",
+   "quote": "Redpanda Connect: 300+ connectors, declarative YAML pipelines"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.redpanda.com/",
+   "quote": "Freeze agents when they go over budget or break rules—or anytime for any reason."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.redpanda.com/",
+   "quote": "Redpanda SQL: PostgreSQL-compatible distributed OLAP engine"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.redpanda.com/",
+   "quote": "One governed path to every system. Per-agent tool scoping, field-level policy, and a kill switch cut at the gateway."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.redpanda.com/",
+   "quote": "A complete, immutable, real-time transcript of every input, output, and tool call."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.redpanda.com/try-data-streaming",
+   "quote": "Intelligent tiered storage\n Apache Iceberg topics"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.redpanda.com/try-data-streaming",
+   "quote": "SSO (Google, GitHub, OIDC), role-based access control (RBAC), audit logs"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.redpanda.com/",
+   "quote": "Streaming Iceberg Tables\n Snowflake Ingestion"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.redpanda.com/",
+   "quote": "Run agents in production on enterprise data, safely"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.redpanda.com/",
+   "quote": "Financial Services\n Technology\n Manufacturing"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.redpanda.com/try-data-streaming",
+   "quote": "Start for free Sign Up Within Seconds | No Credit Card Required"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.redpanda.com/try-data-streaming",
+   "quote": "Pay as you go, or Annual Commit plan"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.redpanda.com/try-data-streaming",
+   "quote": "Free your team from operations and contact us for a 14-day trial."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.redpanda.com/try-data-streaming",
+   "quote": "Run your own Redpanda platform with a 30-day trial, allowing you to store limitless data cost effectively."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.redpanda.com/try-data-streaming",
+   "quote": "Try our Community Edition to start streaming fast with essential features"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/redpanda-data/redpanda",
+   "quote": "Prebuilt `rpk` binaries for Linux, macOS and Windows (amd64 and arm64) are"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.redpanda.com/",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

@@ -1,0 +1,166 @@
+{
+ "company": "Topoteretes UG",
+ "one_liner_ko": "AI 에이전트에 세션을 넘는 장기 기억을 주는 무료 오픈소스 AI 메모리 플랫폼.",
+ "what_it_does_ko": "Cognee는 문서·코드·대화를 자체 호스팅 지식 그래프로 바꿔 에이전트가 검색하고 재사용할 수 있는 기억으로 만든다. Slack·GitHub·Linear 등을 연결해 회사 지식을 하나의 '회사 두뇌'로 모으고, 도메인 규칙을 위한 온톨로지도 생성한다. Python 라이브러리·CLI·MCP 서버·HTTP API로 쓰거나 관리형 Cognee Cloud를 쓸 수 있다. API 키 없이 CPU의 작은 무료 모델로 로컬에서 실행할 수 있다고 안내한다.",
+ "key_features": [
+  "문서·코드·대화를 지식 그래프 기억으로 변환(remember·recall)",
+  "Slack·GitHub·Linear 등 데이터 연결",
+  "에이전트가 따를 도메인 온톨로지 생성",
+  "Claude Code·Cursor·LangGraph 등 연동과 MCP 서버",
+  "피드백으로 회수 가중치를 개선하는 자기 개선 기억",
+  "API 키 없이 로컬 실행",
+  "관리형 Cognee Cloud·Rust SDK·TypeScript SDK"
+ ],
+ "use_cases_ko": [
+  "팀: 흩어진 문서·티켓·대화를 하나의 회사 두뇌로",
+  "에이전트 개발자: 세션을 넘는 에이전트 기억",
+  "기업: 도메인 규칙에 맞게 에이전트를 근거화"
+ ],
+ "pricing": {
+  "free_tier": "있음 (워크스페이스 1개, 1M 토큰 포함, 카드 불필요)",
+  "plans": [
+   {
+    "name": "Free",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "워크스페이스 1개, 1M 토큰, 사용자·API 호출 무제한",
+    "page_lang": "en"
+   },
+   {
+    "name": "Standard",
+    "price": 1.0,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "1M 토큰당 $1.00 + 추가 워크스페이스당 월 $5",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": "USD",
+    "period": null,
+    "limits": "BYOC 계약(자체 클라우드), 전담 지원, SLA",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://www.cognee.ai/pricing"
+ },
+ "open_source": "오픈소스(라이선스 이름은 페이지에 없음)",
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "CLI",
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.cognee.ai/pricing",
+   "quote": "© 2026 Topoteretes UG."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/topoteretes/cognee",
+   "quote": "Cognee is a free open-source AI memory platform that gives AI agents persistent long-term memory across sessions."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/topoteretes/cognee",
+   "quote": "Turn documents, code, and conversations into a self-hosted knowledge graph your agents can search and reuse."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/topoteretes/cognee",
+   "quote": "<p><strong>Runs locally for free — no API key required.</strong><br />"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.cognee.ai/",
+   "quote": "the Python library, the CLI , the MCP server , the HTTP API , and direct integrations"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.cognee.ai",
+   "quote": "Connect Slack , GitHub , Linear to Cognee and help agents recall what your company knows."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.cognee.ai",
+   "quote": "Cognee generates the ontologies your agents follow."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.cognee.ai",
+   "quote": "First-party integrations for Claude Code, Cursor, LangGraph, OpenClaw, and more, plus an MCP server"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.cognee.ai",
+   "quote": "✓ feedback stored · recall weights updated for next run"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.cognee.ai/",
+   "quote": "The same engine, managed: a web UI, preconfigured storage, pipeline execution, and dataset-level permissions for a team."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.cognee.ai",
+   "quote": "Cognee connects all your data into one brain."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.cognee.ai",
+   "quote": "Cognee gives your agents memory."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/topoteretes/cognee",
+   "quote": "**Ground agents in your domain.**"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.cognee.ai/pricing",
+   "quote": "1 workspace and 1M tokens included — no card required"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.cognee.ai/pricing",
+   "quote": "$1.00 / 1M tokens"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.cognee.ai/pricing",
+   "quote": "+ $5 per additional workspace"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.cognee.ai/pricing",
+   "quote": "Delivered as a BYOC engagement: your own cloud, dedicated support, and SLAs for memory at scale."
+  },
+  {
+   "field": "open_source",
+   "url": "https://www.cognee.ai/pricing",
+   "quote": "Cognee is open source. Run the full memory engine locally or on your own stack — free, forever."
+  },
+  {
+   "field": "api",
+   "url": "https://docs.cognee.ai/",
+   "quote": "Reach it from the Python SDK , the HTTP API , or MCP"
+  },
+  {
+   "field": "platforms",
+   "url": "https://docs.cognee.ai/",
+   "quote": "Cognee CLI"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.cognee.ai",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

@@ -1,0 +1,484 @@
+=== [home] https://www.skyvern.com (lang=en)
+Skyvern — AI-Powered Browser Automation for Any Website 
+ Skyvern Products Use Cases 
+ Developers Pricing Resources 
+ 23.2K Login Book a Demo 
+ Check us out — we're open source 
+ AI agents to automate workflows on any website. 
+ Your team logs into dozens of portals to download invoices, copy-paste data, and fill forms. Skyvern automates these workflows natively in the browser, just like a human would.
+ Start Building 
+ HIPAA Compliant SOC2 Compliant 
+ Y
+ Backed By Combinator 
+ 30,000+ users & customers 
+ Giving time back to teams at
+ CarEdge 
+ pilot 
+ Valence Intelligence 
+ rapidAND 
+ Legion Health 
+ ONLAYER 
+ Pathmonk 
+ CarEdge 
+ pilot 
+ Valence Intelligence 
+ rapidAND 
+ Legion Health 
+ ONLAYER 
+ Pathmonk 
+ CarEdge 
+ pilot 
+ Valence Intelligence 
+ rapidAND 
+ Legion Health 
+ ONLAYER 
+ Pathmonk 
+ Everything you need to take your business to the next level. 
+ Skyvern handles the complexity of real-world automation — from CAPTCHAs and 2FA to data extraction and full observability.
+ Verification 
+ Let's check if you're human 
+ CAPTCHA Support
+ Skyvern solves CAPTCHAs natively so your automations keep running without interruption — no third-party solving services needed.
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ Submit Your 2FA Code
+ Two-Factor Authentication
+ Log into accounts requiring 2FA and TOTP — Skyvern handles the full authentication flow so you can automate within your existing tech stack.
+ 🇨🇦 
+ 🇧🇷 
+ 🇪🇺 
+ 🇮🇳 
+ 🇯🇵 
+ 🇺🇸 
+ Proxy Networks
+ Support for country, state, or even precise zip-code level targeting across residential and datacenter proxy networks.
+ Action Taken
+ The consent checkbox for future job opportunities is not checked. Check this box to allow the company to contact the user for future opportunities.
+ Explainable AI
+ Inspect every run using Skyvern's built-in summaries, detailing every action the AI takes and why.
+ {
+ "flights": [ {
+ "flight_number": "SMP 920" ,
+ "departure": "6:50 am" ,
+ "price": "$49" 
+ }]
+ }
+ Data Extraction
+ Extract data from workflows in any schema of your choice including CSV or JSON formats.
+ If it happens in a browser, Skyvern can run it. 
+ No APIs required. No custom scripts. Just describe the workflow and let Skyvern handle the rest.
+ Document Processing
+ Download, parse, classify, and route documents from any portal. OCR, extraction, and structured output piped directly to your systems.
+ Accounts Payable
+ Download invoices from hundreds of vendor portals — behind logins, 2FA, CAPTCHAs. No manual login, no missed PDFs.
+ Data Extraction
+ Pull structured data from any site — pricing, product catalogs, public records — without needing an API. Return results as JSON or CSV.
+ Form Filling
+ Submit applications, registrations, and compliance forms across any site at scale.
+ Lead Gen & Outreach
+ Find contacts, enrich profiles, submit outreach forms across directories and platforms.
+ Testing & QA
+ Browser testing that adapts to UI changes. No more flaky suites.
+ Ready to automate
+ your workflows?
+ Get Started Free Book a Demo 
+ Many ways to build.
+ Pick the path that fits your team. Every approach ends in a production-ready workflow.
+ Copilot Chat Upload SOPs Record Browser Visual Builder Native SDKs 
+ Tell Skyvern what to do in natural language. The AI Copilot turns your instructions into a structured workflow automatically.
+ Copilot Chat 
+ " "
+ Copilot Chat
+ Describe in plain English
+ Tell Skyvern what to do in natural language. The AI Copilot turns your instructions into a structured workflow automatically.
+ Upload SOPs
+ Turn docs into workflows
+ Record Browser
+ Show once, run forever
+ Visual Builder
+ Drag, drop, refine
+ Native SDKs
+ Code-first integration
+ Copilot Chat 
+ " "
+ Seamless integration with your stack
+ Plug Skyvern into your existing automation stack — no custom glue code needed.
+ Zapier 
+ Make 
+ Clay 
+ n8n 
+ Workato 
+ View All Integrations 
+ For Devs
+ Developer-first automation.
+ We built Skyvern to fit into your existing stack. Trigger workflows via our Python and TypeScript SDKs, or run entirely on-premise with our Docker containers.
+ Python & TypeScript SDKs
+ Self-hostable (Docker)
+ Model Context Protocol (MCP) ready
+ Webhooks & Event Streaming
+ Read the Documentation 
+ Python TypeScript 
+ 1 from skyvern import Skyvern 
+ 2 
+ 3 skyvern = Skyvern ( api_key = "YOUR_API_KEY" ) 
+ 4 
+ 5 browser = await skyvern . use_cloud_browser () 
+ 6 page = await browser . get_working_page () 
+ 7 
+ 8 await page . goto ( "https://www.saucedemo.com/" ) 
+ 9 await page . agent . login ( 
+ 10 credential_type = "skyvern" , 
+ 11 credential_id = "cred_123" 
+ 12 ) 
+ 13 
+ 14 await page . agent . run_task ( 
+ 15 "Checkout the order using: John Snow, 12345" 
+ 16 ) 
+ 17 await page . screenshot ( path = "screenshot4.png" , full_page = True ) 
+ Skyvern vs. the alternatives. 
+ See how Skyvern compares to the tools you've probably already tried.
+ See Our Benchmark 
+ Skyvern vs. Playwright / Selenium 
+ Problem 
+ Selector-based scripts break when UI changes
+ Requires constant engineering maintenance
+ Automation tightly coupled to DOM structure
+ Skyvern's Solution 
+ Uses vision instead of brittle selectors
+ Workflows survive UI updates automatically
+ No ongoing code refactoring required
+ Skyvern vs. RPA Tools 
+ Problem 
+ Built for one-off tasks, not repeatable workflows
+ Each run behaves like starting from scratch
+ Limited adaptability to dynamic websites
+ Skyvern's Solution 
+ Blends LLM reasoning with executable code
+ Generates deterministic, repeatable workflows
+ Higher reliability, speed, and lower cost
+ Skyvern vs. Other AI Agents 
+ Problem 
+ Prompt-only agents hallucinate
+ Fail on authentication flows (login, 2FA)
+ Break on complex, multi-step tasks
+ Skyvern's Solution 
+ Combines vision, code execution, and LLM reasoning
+ Navigates captchas and 2FA natively
+ Built for real-world, edge-case-heavy workflows
+ 23,100+
+ GitHub Stars
+ 500+
+ Enterprise Users
+ 99.9%
+ Uptime SLA
+ 10M+
+ Workflows Run
+ Enterprise-grade security by default.
+ SOC2 Type II 
+ HIPAA Compliant 
+ E2E Encrypted Vault 
+ Visit our Trust Center 
+ A better way to automate
+ your workflows.
+ Start Building Book a Demo 
+ Skyvern The AI agent platform for automating browser-based workflows. Stop writing brittle scrapers and start building intelligent agents.
+ Product
+ Features 
+ Pricing 
+ Integrations 
+ Use Cases 
+ Industries
+ Healthcare 
+ Insurance 
+ Fintech & Banking 
+ HR Tech 
+ Developers
+ Documentation 
+ GitHub 
+ Discord 
+ SDKs & API 
+ Skyvern for machines (llms.txt) 
+ Company
+ Blog 
+ Book a Demo 
+ Privacy Policy 
+ Terms of Service 
+ Trust Center 
+ Cookie Settings 
+ © 2026 Ikonomos Inc. All rights reserved.
+ /
+
+=== [pricing] https://www.skyvern.com/pricing/ (lang=en)
+Skyvern Pricing — Free to Enterprise Automation Plans 
+ Skyvern Products Use Cases 
+ Developers Pricing Resources 
+ 23.2K Login Book a Demo 
+ Start free, scale as you grow 
+ Simple, transparent pricing 
+ Whether you're a developer automating a side project or an enterprise team replacing manual portal work — there's a plan that fits.
+ Plans
+ Free
+ 5,000 credits
+ $0 /month 
+ Start Free 
+ 1 concurrent run
+ Webhooks
+ Country geo-targeting
+ Community support
+ Try Skyvern with zero commitment
+ Hobby
+ 30,000 credits/month
+ $29 /month 
+ Get Hobby 
+ 10 concurrent runs
+ Basic CAPTCHA solver
+ Webhooks
+ Stored credentials
+ Country geo-targeting
+ Email support
+ For side projects and small automations
+ Pro
+ 150,000 credits/month
+ $149 /month 
+ Get Pro 
+ 25 concurrent runs
+ Advanced CAPTCHA solver
+ Team workspaces
+ 2FA / TOTP support
+ Skyvern SMS number — $10/month per number
+ 1Password integration
+ Residential proxy
+ City-level geo-targeting
+ Priority support
+ For teams shipping production automations
+ Enterprise
+ Custom credits
+ Custom /month 
+ Contact Us 
+ 100 concurrent runs
+ HIPAA compliant
+ SOC-2 Report
+ Dedicated Slack channel
+ Azure Key Vault
+ Bitwarden integration
+ Custom code blocks
+ Human-in-the-loop
+ For regulated industries and large-scale operations
+ The right plan for how you work 
+ Skyvern serves two audiences. Here's how to pick the right plan for your role.
+ Developers & Engineers
+ Building automation into your stack
+ You're replacing brittle Selenium scripts, integrating browser automation via API, or building workflows into your product. You want to try things fast, see the docs, and scale when ready.
+ Free — Evaluate and prototype 
+ Hobby — Side projects and small pipelines 
+ Pro — Production-grade with team features 
+ Most developers start on Free and move to Pro within 2 weeks 
+ Enterprise & Ops Leaders
+ Replacing manual portal work at scale
+ You're evaluating automation vendors for your operations team. You need compliance certifications, dedicated support, and a partner who understands your industry's portals.
+ Pro — Start a pilot with your team 
+ Enterprise — HIPAA, SOC-2, dedicated support 
+ SOC 2 Type II certified, HIPAA compliant 
+ 500+ enterprise teams already on Skyvern 
+ Compare every feature 
+ Full feature breakdown across all plans.
+ Feature Free Hobby Pro Enterprise 
+ Usage 
+ Price $0/mo $29/mo $149/mo Custom 
+ Included credits 5,000 30,000/month 150,000/month Custom credits 
+ Estimated actions ~170 ~1,200/month ~6,200/month Custom 
+ Concurrent runs 1 10 25 100 
+ Infrastructure 
+ CAPTCHA solver Basic Basic Advanced Advanced 
+ Proxy type Datacenter Datacenter Residential Residential 
+ Geo-targeting Country Country Country, State, City Country, State, City 
+ Webhooks 
+ Security & Credentials 
+ Stored credentials — 
+ 2FA / TOTP support — — 
+ Skyvern SMS numbers — — $10/month per number Included/custom 
+ 1Password integration — — 
+ Azure Key Vault — — — 
+ Bitwarden integration — — — 
+ HIPAA compliant — — — 
+ SOC-2 Report — — — 
+ Team & Workflow 
+ Team workspaces — — 
+ Custom code blocks — — — 
+ Human-in-the-loop — — — 
+ Support 
+ Support level Community Email Priority Dedicated 
+ Dedicated Slack channel — — — 
+ Frequently asked questions
+ Everything you need to know about Skyvern plans and billing.
+ What plans does Skyvern offer? 
+ What counts as a run or credit? 
+ Can I try Skyvern for free? 
+ What's included in the Enterprise plan? 
+ How does Skyvern pricing compare to traditional RPA? 
+ Ready to stop maintaining brittle scripts?
+ Start free with 5,000 credits. No credit card required. Upgrade when you're ready for production.
+ Start Free Contact Sales 
+ Skyvern The AI agent platform for automating browser-based workflows. Stop writing brittle scrapers and start building intelligent agents.
+ Product
+ Features 
+ Pricing 
+ Integrations 
+ Use Cases 
+ Industries
+ Healthcare 
+ Insurance 
+ Fintech & Banking 
+ HR Tech 
+ Developers
+ Documentation 
+ GitHub 
+ Discord 
+ SDKs & API 
+ Skyvern for machines (llms.txt) 
+ Company
+ Blog 
+ Book a Demo 
+ Privacy Policy 
+ Terms of Service 
+ Trust Center 
+ Cookie Settings 
+ © 2026 Ikonomos Inc. All rights reserved.
+ /
+
+=== [about] https://www.skyvern.com/products/ (lang=en)
+Skyvern Products — AI Agents & Workflow Builder 
+ Skyvern Products Use Cases 
+ Developers Pricing Resources 
+ 23.2K Login Book a Demo 
+ Everything you need to automate the browser. 
+ AI agents, visual workflow builder, secure credential management, and enterprise-grade infrastructure — all in one platform.
+ Get Started 
+ HIPAA compliant SOC2 Type II 
+ Skyvern Platform 
+ AI Agent
+ Automate any browser task
+ Workflow Builder
+ Visual no-code editor
+ Credential Vault
+ 2FA, passwords, credit cards
+ REST API & SDKs
+ Python, TypeScript, REST
+ 01 Infrastructure 
+ Production-grade from day one. 
+ Persistent sessions, CAPTCHA handling, code caching for repeatability and cost savings, anti-bot bypass, proxy network, and secure credential storage — the infrastructure layer that makes browser automation reliable at scale.
+ Browser Sessions
+ Persistent browser sessions preserve cookies, auth tokens, and local storage across runs. Pick up exactly where the last task left off — no re-login, no repeated setup.
+ CAPTCHA Handling
+ Automatic CAPTCHA solving for reCAPTCHA, hCaptcha, and image challenges. Runs transparently — your automations never get stuck on verification.
+ Code Caching
+ Generated Playwright code is cached after the first run. Repeat runs skip the LLM entirely — 3–5× faster, up to 70% cheaper, fully deterministic.
+ Anti-Bot Bypass
+ Built-in bypass for Cloudflare, DataDome, PerimeterX, and other protection systems. Navigate protected sites without getting blocked.
+ Proxy & Geo Targeting
+ Global residential proxy network with country, state, and city-level targeting across 20+ countries. ISP proxy pool for static IPs.
+ Credential Vault
+ Securely store passwords, 2FA codes, and credit cards. Credentials are never exposed to the LLM — integrates with Bitwarden, 1Password, and custom vaults.
+ 02 Agent Builder 
+ Build agents that automate the web. 
+ Create automations in any way you want, and let AI maintain them for you.
+ Workflow Builder
+ Drag-and-drop visual editor with 17+ block types. Chain navigation, extraction, login, loops, code blocks, and more — no code required.
+ Popular 
+ Record Your Browser
+ Record yourself performing a task in the browser. Skyvern watches, learns, and generates a reusable automation — show once, run forever.
+ Upload SOP
+ Upload a PDF or document describing your standard operating procedure. Skyvern converts it into an executable workflow automatically.
+ Copilot Chat
+ Describe what you want in plain English. Skyvern's copilot builds the workflow step-by-step through an interactive conversation.
+ AI Resilience
+ Computer vision + LLM reasoning adapts when websites change. No brittle selectors — your automations keep working even after site redesigns.
+ Webhooks & API Triggers
+ Trigger workflows via REST API or webhooks. HMAC-signed callbacks on completion with retry and replay support for reliable orchestration.
+ 03 Developer Tools 
+ Built for developers. By developers. 
+ SDKs, REST API, MCP integration, real-time observability, and connections to every major automation platform — everything you need to build, debug, and ship.
+ Python & TypeScript SDKs
+ Playwright-compatible SDKs that add AI on top. Mix traditional CSS selectors with natural language prompts in the same script — page.act(), page.extract(), page.validate().
+ REST API
+ Full API for every capability: tasks, workflows, credentials, run status, cancellation, and webhook replay. Build any integration programmatically.
+ New 
+ Model Context Protocol (MCP)
+ Use Skyvern as a tool in Claude, Cursor, Windsurf, or any MCP-compatible client. Give your AI assistan
+
+=== [meta] https://www.skyvern.com
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: English
+
+=== [github] https://github.com/Skyvern-AI/skyvern
+<!-- DOCTOC SKIP -->
+
+<h1 align="center">
+ <a href="https://www.skyvern.com">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="fern/images/skyvern_logo.png"/>
+    <img height="120" src="fern/images/skyvern_logo_blackbg.png"/>
+  </picture>
+ </a>
+ <br />
+</h1>
+<p align="center">
+🐉 Automate Browser-based workflows using LLMs and Computer Vision 🐉
+</p>
+<p align="center">
+  <a href="https://www.skyvern.com/"><img src="https://img.shields.io/badge/Website-blue?logo=googlechrome&logoColor=black"/></a>
+  <a href="https://www.skyvern.com/docs/"><img src="https://img.shields.io/badge/Docs-yellow?logo=gitbook&logoColor=black"/></a>
+  <a href="https://discord.gg/fG2XXEuQX3"><img src="https://img.shields.io/discord/1212486326352617534?logo=discord&label=discord"/></a>
+  <!-- <a href="https://pepy.tech/project/skyvern" target="_blank"><img src="https://static.pepy.tech/badge/skyvern" alt="Total Downloads"/></a> -->
+  <a href="https://github.com/skyvern-ai/skyvern"><img src="https://img.shields.io/github/stars/skyvern-ai/skyvern" /></a>
+  <a href="https://github.com/Skyvern-AI/skyvern/blob/main/LICENSE"><img src="https://img.shields.io/github/license/skyvern-ai/skyvern"/></a>
+  <a href="https://twitter.com/skyvernai"><img src="https://img.shields.io/twitter/follow/skyvernai?style=social"/></a>
+  <a href="https://www.linkedin.com/company/95726232"><img src="https://img.shields.io/badge/Follow%20 on%20LinkedIn-8A2BE2?logo=linkedin"/></a>
+</p>
+
+[Skyvern](https://www.skyvern.com) automates browser-based workflows using LLMs and computer vision. It provides a Playwright-compatible SDK that adds AI functionality on top of playwright, as well as a no-code workflow builder to help both technical and non-technical users automate manual workflows on any website, replacing brittle or unreliable automation solutions.
+
+<p align="center">
+  <img src="fern/images/geico_shu_recording_cropped.gif"/>
+</p>
+
+Traditional approaches to browser automations required writing custom scripts for websites, often relying on DOM parsing and XPath-based interactions which would break whenever the website layouts changed.
+
+Instead of only relying on code-defined XPath interactions, Skyvern relies on Vision LLMs to learn and interact with the websites.
+
+# How it works
+Skyvern was inspired by the Task-Driven autonomous agent design popularized by [BabyAGI](https://github.com/yoheinakajima/babyagi) and [AutoGPT](https://github.com/Significant-Gravitas/AutoGPT) -- with one major bonus: we give Skyvern the ability to interact with websites using browser automation libraries like [Playwright](https://playwright.dev/).
+
+Skyvern uses a swarm of agents to comprehend a website, and plan and execute its actions:
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="fern/images/skyvern_2_0_system_diagram.png" />
+  <img src="fern/images/skyvern_2_0_system_diagram.png" />
+</picture>
+
+This approach has a few advantages:
+
+1. Skyvern can operate on websites it's never seen before, as it's able to map visual elements to actions necessary to complete a workflow, without any customized code
+1. Skyvern is resistant to website layout changes, as there are no pre-determined XPaths or other selectors our system is looking for while trying to navigate
+1. Skyvern is able to take a single workflow and apply it to a large number of websites, as it's able to reason through the interactions necessary to complete the workflow
+A detailed technical report can be found [here](https://www.skyvern.com/blog/skyvern-2-0-state-of-the-art-web-navigation-with-85-8-on-webvoyager-eval/).
+
+# Demo
+<!-- Redo demo -->
+https://github.com/user-attachments/assets/5cab4668-e8e2-4982-8551-aab05ff73a7f
+
+# Quickstart
+
+## Skyvern Cloud
+[Skyvern Cloud](https://app.skyvern.com) is a managed cloud version of Skyvern that allows you to run Skyvern without worrying about the infrastructure. It allows you to run multiple Skyvern instances in parallel and comes bundled with anti-bot detection mechanisms, proxy network, and CAPTCHA solvers.
+
+If you'd like to try it out, navigate to [app.skyvern.com](https://app.skyvern.com) and create an account.
+
+## Run Locally (UI + Server)
+
+Choose your preferred 

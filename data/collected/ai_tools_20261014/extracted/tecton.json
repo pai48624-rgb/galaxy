@@ -1,0 +1,168 @@
+{
+ "company": "Databricks",
+ "one_liner_ko": "(수집된 공식 주소가 Databricks 사이트로 연결됨) 분석·운영 워크로드를 한곳에서 돌리는 통합 데이터·AI 플랫폼",
+ "what_it_does_ko": "수집된 페이지는 모두 Databricks 사이트이며 Tecton이라는 이름은 본문에 나오지 않는다. Databricks는 분석과 운영 워크로드를 하나의 개방형·거버넌스 기반 위에서 실행하는 통합 데이터·AI 플랫폼이라고 설명한다. 요금은 선불 없는 초 단위 사용량 과금이며 약정 사용 계약으로 할인받을 수 있다. 피처 서빙과 관련해서는 데이터와 피처를 제공하는 완전 관리형 Postgres 운영 데이터베이스(Lakebase)가 있다.",
+ "key_features": [
+  "통합 데이터·AI 플랫폼",
+  "데이터·피처 서빙용 관리형 Postgres(Lakebase)",
+  "Agent Bricks로 AI 에이전트 구축",
+  "Unity Catalog 통합 거버넌스",
+  "Lakeflow ETL 파이프라인",
+  "Genie 자연어 분석"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": "있음 (무료 체험, 카드 불필요 / Free Edition)",
+  "plans": [
+   {
+    "name": "Artificial Intelligence",
+    "price": 0.07,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "Starting at, DBU당",
+    "page_lang": "en-US"
+   },
+   {
+    "name": "Operational Database",
+    "price": 0.069,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "Starting at, CU당",
+    "page_lang": "en-US"
+   },
+   {
+    "name": "Data Engineering",
+    "price": 0.15,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "Starting at, DBU당",
+    "page_lang": "en-US"
+   },
+   {
+    "name": "Interactive workloads",
+    "price": 0.4,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "Starting at, DBU당",
+    "page_lang": "en-US"
+   },
+   {
+    "name": "인공지능",
+    "price": 0.07,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "Starting at, DBU당",
+    "page_lang": "ko-KR"
+   },
+   {
+    "name": "운영 데이터베이스",
+    "price": 0.069,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "Starting at, DBU당(한국어 페이지 표기)",
+    "page_lang": "ko-KR"
+   },
+   {
+    "name": "데이터 엔지니어링",
+    "price": 0.15,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "Starting at, DBU당",
+    "page_lang": "ko-KR"
+   },
+   {
+    "name": "대화형 워크로드",
+    "price": 0.4,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "Starting at, DBU당",
+    "page_lang": "ko-KR"
+   }
+  ],
+  "pricing_url": "https://www.databricks.com/product/pricing"
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.databricks.com/",
+   "quote": "Databricks: Leading Data and AI Platform for Enterprises"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.databricks.com/",
+   "quote": "Databricks is a unified data and AI platform that runs both analytical and operational workloads on one open, governed foundation."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.databricks.com/product/pricing",
+   "quote": "Databricks offers you a pay-as-you-go approach with no up-front costs."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.databricks.com/product/pricing",
+   "quote": "Fully-managed Postgres transactional database for serving data and features to support applications built on Databricks."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.databricks.com/product/pricing",
+   "quote": "Fully-managed Postgres transactional database for serving data and features to support applications built on Databricks."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.databricks.com/",
+   "quote": "Explore Agent Bricks"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.databricks.com/",
+   "quote": "Explore Unity Catalog"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.databricks.com/",
+   "quote": "Build reliable ETL pipelines for batch and streaming with Lakeflow."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.databricks.com/",
+   "quote": "Get started with Databricks for free. No credit card required."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.databricks.com/product/pricing",
+   "quote": "Starting at $0.069 / CU"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.databricks.com/product/pricing",
+   "quote": "Starting at $0.40 / DBU"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.databricks.com/kr/product/pricing",
+   "quote": "Starting at $0.069 / DBU"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.databricks.com/kr/product/pricing",
+   "quote": "사용하는 만큼 지불"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.databricks.com/",
+   "quote": "hreflang: de, en, es-419, fr, it, ja, ko, pt-br, x-default"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "공식 주소가 Databricks로 연결되고 Databricks 사용량(DBU) 기반 요금만 표시, Tecton 별도 요금제 없음",
+   "diff": "Tecton 단독 요금제가 아니라 Databricks 플랫폼 과금에 묶인 것으로 보임",
+   "url": "https://www.databricks.com/product/pricing"
+  }
+ ]
+}

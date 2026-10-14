@@ -1,0 +1,120 @@
+{
+ "company": "Potpie",
+ "one_liner_ko": "대규모 엔지니어링 조직을 위한 AI 네이티브 SDLC 자동화 플랫폼.",
+ "what_it_does_ko": "코드베이스와 개발 과정을 AI 에이전트용 컨텍스트 그래프로 만들어, 에이전트가 질문 답변·변경 계획·디버깅·코드 작성을 프로젝트 맥락에 맞게 하도록 돕는다. 디버깅, 테스트, 구현 계획, 근본 원인 분석, 배포 워크플로 자동화를 내세운다. 기능 구축·워크플로 구축·오류 디버깅 에이전트와 사용자 정의 에이전트를 제공하고 Slack·GitHub·Notion과 연동한다. CLI는 PyPI로 설치한다.",
+ "key_features": [
+  "코드베이스 컨텍스트 그래프(Context Engine)",
+  "기능 구축 에이전트(계획·설계·구현)",
+  "오류 디버깅·원인 분석 에이전트",
+  "사용자 정의 에이전트",
+  "Slack·GitHub·Notion 연동",
+  "웹 UI 그래프 탐색기",
+  "명세 기반(Spec driven) 개발 워크플로"
+ ],
+ "use_cases_ko": [
+  "대규모·레거시 코드베이스 이해",
+  "오류 원인 분석과 수정",
+  "마이그레이션·리팩터링·아키텍처 검토용 에이전트 구축"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [
+   {
+    "name": "맞춤 견적(사용자당 라이선스 + 플랫폼 이용료)",
+    "price": null,
+    "currency": null,
+    "period": null,
+    "limits": "팀 규모에 따라 견적",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://potpie.ai/pricing"
+ },
+ "open_source": "Apache 2.0",
+ "api": "있음",
+ "platforms": [
+  "CLI",
+  "웹"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://potpie.ai/pricing",
+   "quote": "© 2026 Potpie. All rights reserved."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://potpie.ai",
+   "quote": "AI - native SDLC automation for large scale engineering"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/potpie-ai/potpie",
+   "quote": "turns your codebase and software development lifecycle into a living context graph for AI agents."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://potpie.ai",
+   "quote": "to automate debugging, testing, implementation planning, root cause analysis, and software delivery workflows."
+  },
+  {
+   "field": "key_features",
+   "url": "https://potpie.ai",
+   "quote": "Describe a feature idea and let the agent build it end-to-end with comprehensive planning, design and implementation"
+  },
+  {
+   "field": "key_features",
+   "url": "https://potpie.ai",
+   "quote": "Connect your Slack workspace to get AI-powered assistance directly in your team channels."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/potpie-ai/potpie",
+   "quote": "This will open a graph explorer in your browser."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://potpie.ai",
+   "quote": "From migrations to refactors to architecture reviews create specialized agents for whatever your team needs."
+  },
+  {
+   "field": "pricing",
+   "url": "https://potpie.ai/pricing",
+   "quote": "Licenses are priced per user\n There is a platform fee based on the number of users supported"
+  },
+  {
+   "field": "pricing",
+   "url": "https://potpie.ai/pricing",
+   "quote": "There is a platform fee based on the number of users supported"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/potpie-ai/potpie",
+   "quote": "label=License&color=64748b&labelColor=111827\" alt=\"Apache 2.0\""
+  },
+  {
+   "field": "api",
+   "url": "https://docs.potpie.ai/introduction",
+   "quote": "Generate an API Key \n Modes \n Overview"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/potpie-ai/potpie",
+   "quote": "install the CLI through [PyPI](https://pypi.org/project/potpie/) with `uv` or `pip`:"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://potpie.ai",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "공개 가격 없이 사용자당 라이선스 + 사용자 수 기반 플랫폼 이용료, 양식 작성 후 맞춤 제안",
+   "diff": "무료+유료 구독 형태가 아니라 견적형 기업 라이선스 구조",
+   "url": "https://potpie.ai/pricing"
+  }
+ ]
+}

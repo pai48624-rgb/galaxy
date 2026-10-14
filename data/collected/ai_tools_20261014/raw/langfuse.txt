@@ -1,0 +1,566 @@
+=== [home] https://langfuse.com (lang=en)
+Langfuse: Open Source Agent Evals & Observability 
+ Langfuse v4: up to 165× faster · Read more Langfuse v4 is here: real-time, up to 165× faster · Read more 
+ by ClickHouse 
+ 🐐 Hiring in Europe and SF Hiring 
+ Product Overview LLM Observability Prompt Management Evaluation Metrics 
+ langfuse 
+ Get Started with Tracing
+ Step-by-step guide to ingesting your first trace using OpenAI, LangChain, or the SDKs.
+ Get Started with Tracing
+ This guide walks you through ingesting your first trace.
+ Read docs 
+ Resources Academy Workshop Blog Changelog Roadmap Example Project Walkthroughs Support 
+ langfuse 
+ ClickHouse 
+ Langfuse joins ClickHouse
+ Our goal continues to be building the best AI engineering platform
+ Read story 
+ Solutions Use cases
+ Chat agents Coding agents Workflow automation 
+ Industries
+ Financial Services Industry 
+ Customers Docs Changelog Pricing 
+ Launch App L 
+ Get Demo G 
+ Community Stats
+ GitHub Stars
+ 35.8k
+ Community Q&A threads
+ 1.9k
+ Roadmap threads
+ 1.7k
+ Latest OSS release
+ today
+ Changelog
+ View All
+ Redesigned session view
+ 1 days ago
+ Use any System One decision model
+ 1 days ago
+ Set expiration dates for API keys
+ 7 days ago
+ Self Hosting Guides
+ Docker Compose
+ Kubernetes (Helm)
+ Terraform ( AWS , GCP , Azure )
+ Blog Posts
+ View All
+ Langfuse September Update
+ 2 weeks ago
+ Catching conversation signals in Langfuse
+ 3 weeks ago
+ Using TypeSafe's Jev for evals
+ 4 weeks ago
+ Used by 21 of the Fortune 50
+ 90B+ observations/month
+ 100,000+ engineers building on Langfuse
+ Used by 21 of the Fortune 50
+ 90B+ observations/month
+ 100,000+ engineers building on Langfuse
+ Used by 21 of the Fortune 50
+ 90B+ observations/month
+ 100,000+ engineers building on Langfuse
+ Open Source   Agent Evals & Observability 
+ Trace, evaluate, and improve AI agents with one open platform. Use production data to understand behavior, collaborate on fixes, and ship better quality at lower cost and latency.
+ Start free S 
+ Documentation D 
+ Onboard with AI 
+ Read story
+ Read story
+ Read story
+ Read story
+ Read story
+ Read story
+ Launch,  observe,  improve — repeat.
+ Langfuse connects tracing, monitoring, datasets, experiments, and evaluation in one continuous loop. Use production signals to understand behavior, test improvements, and ship better agents with confidence.
+ The full AI engineering loop
+ See how observability, prompts, evals, experiments, and human feedback work together.
+ Learn in Academy 
+ All the tools, one integrated platform. 
+ One integrated platform to trace, manage prompts, evaluate, and experiment from prototype to production scale.
+ Observability
+ Hierarchical traces capture every LLM call, tool invocation, and retrieval step. Filter by user, session, cost, latency, or custom metadata.
+ Evaluation
+ LLM-as-a-judge, heuristic functions, or human review. Run evaluators on production data or during experiments.
+ Prompt Management
+ Separate prompts from code with one-click deployments and rollbacks. Turn improving your production prompts a team sport.
+ Playground
+ Test prompts on real production inputs and compare models side-by-side.
+ Experiments
+ Define test cases and run experiments. Compare results side by side.
+ Human Annotation
+ Collaborative Human-in the-Loop workflows to review traces and create golden datasets.
+ Cost & Latency
+ Monitor cost, latency, and quality with dashboards and automated alerts.
+ Start free S 
+ Canva Canva's AI team relies on Langfuse to trace and debug their generative design features in production.
+ Works with any stack. 
+ Langfuse works with any language and framework supporting OTel instrumentation. Additionally, 100+ integrations make getting started even easier. No framework lock-in.
+ Languages (via OTel)
+ Python (Native SDK) TypeScript (Native SDK) Go Java .NET Ruby PHP Swift 
+ Agent frameworks
+ LangChain Vercel AI SDK LiteLLM Pydantic AI Google ADK CrewAI LiveKit and many more… 
+ Model providers
+ OpenAI Anthropic Amazon Bedrock Azure OpenAI Mistral AI Google Gemini xAI vLLM Groq and many more… 
+ 100+ more integrations
+ Claude Code LiteLLM (Proxy/Gateway) OpenClaw Claude Agent SDK (Python) LangChain DeepAgents OpenWebUI Ollama OpenAI Agents SDK Dify Langflow OpenRouter n8n Spring AI Cursor PostHog Claude Code LiteLLM (Proxy/Gateway) OpenClaw Claude Agent SDK (Python) LangChain DeepAgents OpenWebUI Ollama OpenAI Agents SDK Dify Langflow OpenRouter n8n Spring AI Cursor PostHog 
+ DSPy Amazon AgentCore Strands LlamaIndex Agno Agents Temporal ClickHouse Agentic Data Stack Mastra Claude Agent SDK (JS) Promptfoo Microsoft Agent Framework Google Vertex AI Ragas AutoGen RAGflow DSPy Amazon AgentCore Strands LlamaIndex Agno Agents Temporal ClickHouse Agentic Data Stack Mastra Claude Agent SDK (JS) Promptfoo Microsoft Agent Framework Google Vertex AI Ragas AutoGen RAGflow 
+ See all integrations 
+ Don't find your integration? Request it → 
+ Open platform. Open source.
+ We are huge fans of open standards and data portability. Langfuse won't lock in your data, ever.
+ Self-host at scale
+ Docker Compose Kubernetes (Helm) AWS (Terraform) GCP (Terraform) Azure (Terraform) 
+ MIT license
+ All product features MIT licensed 
+ Scales to billions of monthly events 
+ Fork, modify, contribute 
+ APIs & exports
+ REST APIs for everything 
+ Query SDK 
+ S3 blob storage export 
+ Active OSS community
+ 35,000+ GitHub stars 
+ 5,000+ Discord members 
+ Weekly releases and community hours 
+ Made for developers , loved by agents . 
+ Work in the app or from your IDE. The Assistant investigates production and takes approved actions; SKILL.md, CLI, and MCP connect coding agents to Langfuse.
+ 00 In-app 
+ Langfuse Assistant
+ Automate the AI engineering loop: investigate production data, understand what happened, and turn findings into approved actions without leaving Langfuse.
+ Debug traces
+ Find failed generations and traces with high latency
+ Optimize spend
+ Break down token spend, cost, and latency
+ Build evals
+ Create regression datasets and score configs
+ View documentation → 
+ 0 1 Coding agents 
+ SKILL.md A ready-made skill for managing prompts, traces, and evals through natural language.
+ Install the skill → 
+ 0 2 Terminal 
+ Langfuse CLI Full API access from the terminal for agent workflows, scripts, and CI/CD.
+ Configure the CLI → 
+ 0 3 IDE agents 
+ Platform MCP Server Structured access for IDE agents to manage prompts, query traces, and use Langfuse data.
+ Configure MCP → 
+ Enterprise scale   and security . 
+ Traditional observability handles many small spans. LLM systems run differently. Every step carries rich, verbose I/O that legacy platforms can't handle at scale. Langfuse ingests and queries LLM traces reliably at enterprise scale while following strict compliance frameworks.
+ Architecture
+ Clickhouse OLAP database 
+ Async ingestion via Redis queue 
+ S3/Blob storage for large payloads 
+ Edge-cached prompts 
+ Reliability at scale
+ 65M+ SDK installs/month 
+ 90B+ observations processed per month
+ 50,000+ companies using Langfuse 
+ 99.9% uptime
+ Security & compliance
+ SOC 2 Type II & ISO 27001 
+ EU & US Data Regions 
+ HIPAA-ready region 
+ Hardening for Gov (soon) 
+ GDPR 
+ Start free S 
+ Canva Canva's AI team relies on Langfuse to trace and debug their generative design features in production.
+ Why use Langfuse?
+ Langfuse is the most widely adopted open-source LLM engineering platform. Developers who value open-source and control over their data build production grade agents and LLM applications with Langfuse.
+ The full cycle
+ Langfuse powers the
+
+=== [pricing] https://langfuse.com/pricing (lang=en)
+Pricing - Langfuse 
+ Langfuse v4: up to 165× faster · Read more Langfuse v4 is here: real-time, up to 165× faster · Read more 
+ by ClickHouse 
+ 🐐 Hiring in Europe and SF Hiring 
+ Product Overview LLM Observability Prompt Management Evaluation Metrics 
+ langfuse 
+ Get Started with Tracing
+ Step-by-step guide to ingesting your first trace using OpenAI, LangChain, or the SDKs.
+ Get Started with Tracing
+ This guide walks you through ingesting your first trace.
+ Read docs 
+ Resources Academy Workshop Blog Changelog Roadmap Example Project Walkthroughs Support 
+ langfuse 
+ ClickHouse 
+ Langfuse joins ClickHouse
+ Our goal continues to be building the best AI engineering platform
+ Read story 
+ Solutions Use cases
+ Chat agents Coding agents Workflow automation 
+ Industries
+ Financial Services Industry 
+ Customers Docs Changelog Pricing 
+ Launch App L 
+ Get Demo G 
+ Community Stats
+ GitHub Stars
+ 35.8k
+ Community Q&A threads
+ 1.9k
+ Roadmap threads
+ 1.7k
+ Latest OSS release
+ today
+ Changelog
+ View All
+ Redesigned session view
+ 1 days ago
+ Use any System One decision model
+ 1 days ago
+ Set expiration dates for API keys
+ 7 days ago
+ Self Hosting Guides
+ Docker Compose
+ Kubernetes (Helm)
+ Terraform ( AWS , GCP , Azure )
+ Blog Posts
+ View All
+ Langfuse September Update
+ 2 weeks ago
+ Catching conversation signals in Langfuse
+ 3 weeks ago
+ Using TypeSafe's Jev for evals
+ 4 weeks ago
+ Pricing 
+ Get started on the Hobby plan for free. No credit card required.
+ Langfuse Cloud (we host) Self-hosted (you host) 
+ Hobby
+ Get started, no credit card required. Great for hobby projects and POCs.
+ Free 
+ Sign up 
+ Trusted by:
+ All platform features (with limits) 
+ 50k units / month included 
+ 30 days data access 
+ 2 users 
+ Community support via GitHub 
+ Unlimited Users
+ Core
+ For production projects. Longer data access and unlimited users.
+ $29 / month 
+ Sign up 
+ Discounts: Startups, EDU, OSS 
+ Trusted by:
+ Everything in Hobby 
+ 100k units / month included, additional: $8/100k units. Lower with volume ( pricing calculator ) 
+ 90 days data access 
+ Unlimited users 
+ In-app support 
+ Unlimited Users
+ Pro
+ For scaling projects. Unlimited history, high rate limits, all features.
+ $199 / month 
+ Sign up 
+ Discounts: Startups, EDU, OSS 
+ Trusted by:
+ Everything in Core 
+ 100k units / month included, additional: $8/100k units. Lower with volume ( pricing calculator ) 
+ 3 years data access 
+ Data retention management 
+ Unlimited annotation queues 
+ High rate limits 
+ SOC2 & ISO27001 reports, HIPAA-ready region 
+ Prioritized in-app support 
+ + optional
+ Teams Add-on $300/mo 
+ Enterprise SSO (e.g. Okta) 
+ SSO enforcement 
+ Fine-grained RBAC 
+ Support via Dedicated Slack / MS Teams Channel 
+ Enterprise
+ For large scale teams. Enterprise-grade support and security.
+ $2499 / month 
+ Talk to sales 
+ Enterprise FAQ 
+ Trusted by:
+ Everything in Pro + Teams 
+ 100k units / month included, additional: $8/100k units. Lower with volume ( pricing calculator ) 
+ Audit Logs 
+ SCIM API 
+ Custom rate limits 
+ Uptime SLA 
+ Support SLA 
+ Named lead support engineer 
+ + optional
+ Yearly Commitment 
+ Custom Volume Pricing 
+ Architecture reviews 
+ Billing via AWS Marketplace 
+ Billing via Invoice 
+ Vendor Onboarding 
+ Feature comparison
+ Hobby
+ Get started, no credit card required. Great for hobby projects and POCs.
+ LLM Application & Agent Tracing 
+ Traces and Graphs (Agents) 
+ Session Tracking (Chats/Threads) 
+ User Tracking 
+ Token and Cost Tracking 
+ Native Frameworks Integrations 
+ SDKs (Python, JavaScript) 
+ OpenTelemetry (Java, Go, custom) 
+ Proxy-based Logging (via LiteLLM) 
+ Custom via API 
+ Included usage 50k units
+ Additional usage 
+ Custom Usage Pricing 
+ Multi-modal Free while in beta
+ Access to historical data 30 days
+ Ingestion throughput 1,000 requests / min
+ Langfuse AI 
+ Langfuse Assistant (in-app agent) 
+ Langfuse Assistant usage limits Low
+ Prompt Management 
+ Prompt Versioning 
+ Prompt Fetching Unlimited
+ Prompt Release Management 
+ Prompt Composability 
+ Prompt Caching (server and client) 
+ Playground 
+ Prompt Experiments 
+ Webhooks & Slack 
+ Protected Deployment Labels 
+ Evaluation (online and offline) 
+ Datasets 
+ Experiments via SDK 
+ Experiments via UI 
+ Evaluation Scores (custom) 
+ User Feedback Tracking 
+ External Evaluation Pipelines 
+ LLM-as-judge evaluators 
+ Human Annotation 
+ Human Annotation Queues 1 queue
+ Metrics 
+ Custom Dashboards 
+ Alerts 2 alerts
+ Collaboration 
+ Projects Unlimited
+ Users 2
+ API 
+ Extensive Public API 
+ Rate limit (General API) 30 requests / min
+ Rate limit (Datasets API) 100 requests / min
+ Rate limit (Metrics API v2) 100 requests / day
+ Rate limit (Observations API v2) 30 requests / min
+ Rate limit (Legacy Metrics API) 100 requests / day
+ SLA 
+ Exports 
+ Batch Export via UI 
+ PostHog Integration 
+ Mixpanel Integration 
+ Scheduled Batch Export to Blob Storage 
+ Support 
+ Ask AI 
+ Community (GitHub) 
+ In-app support 
+ Private Slack / MS Teams channel 
+ Named Lead Support Engineer 
+ Onboarding & Architectural guidance 
+ Response time SLO n/a
+ Support SLA 
+ Security 
+ Data region US, EU, or JP
+ AWS PrivateLink 
+ Sign in with Google, AzureAD, GitHub 
+ Organization-level RBAC 
+ Enterprise SSO (e.g. Okta, AzureAD/EntraID) 
+ SSO enforcement 
+ Client-side data masking 
+ Project-level RBAC 
+ Data retention management 
+ SCIM API for automated user provisioning 
+ Audit Logs 
+ Billing 
+ Subscription management 
+ Payment methods 
+ Contract duration 
+ Billing via AWS Marketplace 
+ Compliance 
+ Contracts Standard T&Cs & DPA
+ Data processing agreement (GDPR) 
+ SOC2 Type II & ISO27001 reports 
+ HIPAA-ready region 
+ InfoSec/legal reviews 
+ Core
+ For production projects. Longer data access and unlimited users.
+ LLM Application & Agent Tracing 
+ Traces and Graphs (Agents) 
+ Session Tracking (Chats/Threads) 
+ User Tracking 
+ Token and Cost Tracking 
+ Native Frameworks Integrations 
+ SDKs (Python, JavaScript) 
+ OpenTelemetry (Java, Go, custom) 
+ Proxy-based Logging (via LiteLLM) 
+ Custom via API 
+ Included usage 100k units
+ Additional usage $8/100k units. Lower with volume ( pricing calculator )
+ Custom Usage Pricing 
+ Multi-modal Free while in beta
+ Access to historical data 90 days
+ Ingestion throughput 4,000 requests / min
+ Langfuse AI 
+ Langfuse Assistant (in-app agent) 
+ Langfuse Assistant usage limits Medium
+ Prompt Management 
+ Prompt Versioning 
+ Prompt Fetching Unlimited
+ Prompt Release Management 
+ Prompt Composability 
+ Prompt Caching (server and client) 
+ Playground 
+ Prompt Experiments 
+ Webhooks & Slack 
+ Protected Deployment Labels 
+ Evaluation (online and offline) 
+ Datasets 
+ Exp
+
+=== [about] https://langfuse.com/docs (lang=en)
+Open Source AI Engineering Platform - Langfuse 
+ Langfuse v4: up to 165× faster · Read more Langfuse v4 is here: real-time, up to 165× faster · Read more 
+ Docs 
+ 🐐 Hiring in Europe and SF 
+ Launch App L 
+ Get Demo G 
+ Docs Integrations Self Hosting Academy Workshop Guides AI Engineering Library 
+ Docs 
+ Overview Example Project Ask AI Get Started
+ Start Tracing Use Prompt Management Set up Evals Products
+ Observability 
+ Prompt Management 
+ Evaluation 
+ Platform
+ Metrics 
+ API & Data Platform 
+ Assistant Administration 
+ Security & Guardrails Versions & Compatibility More
+ Glossary Roadmap Langfuse v4 is live Docs MCP Server SDK & API References 
+ Security & Compliance ↗ Support ↗ 
+ Overview 
+ Docs Overview 
+ Copy page 
+ Langfuse Overview 
+ Langfuse is an open-source AI engineering platform ( GitHub ) that helps teams collaboratively debug, analyze, and iterate on their AI agent applications. All platform features are natively integrated to accelerate the development workflow. Langfuse is open, self-hostable, and extensible ( why Langfuse? ).
+ Observability
+ Log traces
+ Lowest level transparency
+ Understand cost and latency
+ Prompts
+ Version control and deploy
+ Collaborate on prompts
+ Test prompts and models
+ Evaluation
+ Measure output quality
+ Monitor production health
+ Test changes in development
+ Platform
+ API-first architecture
+ Data exports to blob storage
+ Enterprise security and administration
+ Start with Langfuse 
+ Sign up → 
+ Observability 
+ Observability is essential for understanding and debugging AI agent applications. Unlike traditional software, AI agent applications involve complex, non-deterministic interactions that can be challenging to monitor and debug. Langfuse provides comprehensive tracing capabilities that help you understand exactly what's happening in your application.
+ Traces include all LLM and non-LLM calls, including retrieval, embedding, API calls, and more
+ Support for tracking multi-turn conversations as sessions and user tracking
+ Agents can be represented as graphs
+ Capture traces via our native SDKs for Python/JS, 100+ library/framework integrations, OpenTelemetry, or via an LLM Gateway such as LiteLLM
+ Based on OpenTelemetry to increase compatibility and reduce vendor lock-in
+ Want to see an example? Play with the interactive demo .
+ 🎥 Want to learn more?
+ Watch end-to-end walkthrough of Langfuse Observability and how to integrate it with your application.
+ Trace Details Sessions Timeline Users Agent Graphs Dashboard Alerts 
+ Traces allow you to track every LLM call and other relevant logic in your app.
+ Sessions allow you to track multi-step conversations or agentic workflows.
+ Debug latency issues by inspecting the timeline view.
+ Add your own userId to monitor costs and usage for each user. Optionally, create a deep link to this view in your systems.
+ LLM agents can be visualized as a graph to illustrate the flow of complex agentic workflows.
+ See quality, cost, and latency metrics in the dashboard to monitor your LLM application.
+ Get notified over Slack, GitHub Actions, or Webhooks when a metric crosses a threshold with alerts .
+ Prompt Management 
+ Prompt Management is critical in building effective AI applications. Langfuse provides tools to help you manage, version, and optimize your prompts throughout the development lifecycle.
+ Get started with prompt management
+ Manage, version, and optimize your prompts throughout the development lifecycle
+ Test prompts interactively in the LLM Playground 
+ Run Experiments against datasets to test new prompt versions directly within Langfuse
+ 🎥 Want to
+
+=== [meta] https://langfuse.com
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/langfuse/langfuse
+<img width="2400" alt="hero-b (1)" src="https://github.com/user-attachments/assets/5810ae13-15d6-4b60-afd2-927adc501861" />
+
+<div align="center">
+   <div>
+      <h3>
+         <a href="https://cloud.langfuse.com">
+            <strong>Langfuse Cloud</strong>
+         </a> · 
+         <a href="https://langfuse.com/docs/deployment/self-host">
+            <strong>Self Host</strong>
+         </a> · 
+         <a href="https://langfuse.com/demo">
+            <strong>Demo</strong>
+         </a>
+      </h3>
+   </div>
+
+   <div>
+      <a href="https://langfuse.com/docs"><strong>Docs</strong></a> ·
+      <a href="https://langfuse.com/issues"><strong>Report Bug</strong></a> ·
+      <a href="https://langfuse.com/ideas"><strong>Feature Request</strong></a> ·
+      <a href="https://langfuse.com/changelog"><strong>Changelog</strong></a> ·
+      <a href="https://langfuse.com/roadmap"><strong>Roadmap</strong></a> ·
+   </div>
+   <br/>
+   <div>
+   </div>
+</div>
+
+<p align="center">
+   <a href="https://github.com/langfuse/langfuse/blob/main/LICENSE">
+   <img src="https://img.shields.io/badge/License-MIT-E11311.svg" alt="MIT License">
+   </a>
+   <a href="https://www.ycombinator.com/companies/langfuse"><img src="https://img.shields.io/badge/Y%20Combinator-W23-orange" alt="Y Combinator W23"></a>
+   <a href="https://hub.docker.com/u/langfuse" target="_blank">
+   <img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/langfuse/langfuse?labelColor=%20%23FDB062&logo=Docker&labelColor=%20%23528bff"></a>
+   <a href="https://pypi.python.org/pypi/langfuse"><img src="https://img.shields.io/pypi/dm/langfuse?logo=python&logoColor=white&label=pypi%20langfuse&color=blue" alt="langfuse Python package on PyPi"></a>
+   <a href="https://www.npmjs.com/package/langfuse"><img src="https://img.shields.io/npm/dm/langfuse?logo=npm&logoColor=white&label=npm%20langfuse&color=blue" alt="langfuse npm package"></a>
+   <br/>
+   <a href="https://discord.com/invite/7NXusRtqYU" target="_blank">
+   <img src="https://img.shields.io/discord/1111061815649124414?logo=discord&labelColor=%20%235462eb&logoColor=%20%23f5f5f5&color=%20%235462eb"
+      alt="chat on Discord"></a>
+   <a href="https://twitter.com/intent/follow?screen_name=langfuse" target="_blank">
+   <img src="https://img.shields.io/twitter/follow/langfuse?logo=X&color=%20%23f5f5f5"
+      alt="follow on X(Twitter)"></a>
+   <a href="https://www.linkedin.com/company/langfuse/" target="_blank">
+   <img src="https://custom-icon-badges.demolab.com/badge/LinkedIn-0A66C2?logo=linkedin-white&logoColor=fff"
+      alt="follow on LinkedIn"></a>
+   <a href="https://github.com/langfuse/langfuse/graphs/commit-activity" target="_blank">
+   <img alt="Commits last month" src="https://img.shields.io/github/commit-activity/m/langfuse/langfuse?labelColor=%20%2332b583&color=%20%2312b76a"></a>
+   <a href="https://github.com/langfuse/langfuse/" target="_blank">
+   <img alt="Issues closed" src="https://img.shields.io/github/issues-search?query=repo%3Alangfuse%2Flangfuse%20is%3Aclosed&label=issues%20closed&labelColor=%20%237d89b0&color=%20%235d6b98"></a>
+   <a href="https://github.com/langfuse/langfuse/discussions/" target="_blank">
+   <img alt="Discussion posts" src="https://img.shields.io/github/discussions/langfuse/langfuse?labelColor=%20%239b8afb&color=%20%237a5af8"></a>
+</p>
+
+<p align="center">
+  <a href="./README.md"><img alt="README in English" src="https://img.shields.io/badge/English-d9d9d9"></a>
+  <a href="./README.cn.md"><img alt="简体中文版自述文件" src="https://img.shields.io/badge/简体中文-d9d9d9"></a>
+  <a href="./README.ja.md"><img alt="日本語のREADME" src="https://img.shields.io/badge/日本語-d9d9d9"></a>
+  <a href="./README.kr.md"><img alt="README in Korean" src="https://img.shields.io/badge/한국어-d9d9d9"></a>
+</p>
+
+Langfuse is an **open source LLM engineering** platform. It helps teams collaboratively
+**develop, monitor, evaluate,** and **debug** AI applications. Langfuse can be **self-hosted in minutes** and is **battle-tested**. Proudly made with [ClickHouse open source database](https://github.com/ClickHouse/ClickHouse).
+
+> ### 🧑‍💻 We're hiring
+>
+> Langfuse is growing fast (we doubled the team in the last 6 months) - since January 2026 we're p

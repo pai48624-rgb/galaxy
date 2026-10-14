@@ -1,0 +1,178 @@
+{
+ "company": "Qodo",
+ "one_liner_ko": "에이전트용 코드 리뷰와 사람용 거버넌스로 품질을 지키며 빠르게 배포하게 하는 AI 코드 리뷰 플랫폼.",
+ "what_it_does_ko": "Qodo는 코딩 에이전트 시대의 품질 관리를 내세운 AI 코드 리뷰 플랫폼이다. 전문 리뷰 에이전트들이 코드베이스 전체 맥락으로 모든 PR에서 실제 버그·규칙 위반·요구사항 누락을 찾는다. 코드베이스와 PR 기록에서 팀 규칙을 스스로 배워 기계가 따를 수 있는 기준으로 만들고, 저장소 간 관계와 변경 영향을 보여 준다. 위험·해결률·감사 기록을 한곳에서 관리하는 거버넌스 기능을 제공한다.",
+ "key_features": [
+  "멀티 에이전트 PR 코드 리뷰",
+  "코드베이스·PR 기록에서 스스로 배우는 규칙 시스템",
+  "저장소 간(Cross Repo) 리뷰",
+  "저장소·서비스 연결을 보여 주는 Software Map",
+  "코딩 에이전트용 CLI 도구(Agentic Toolbox)",
+  "Git·IDE 연동",
+  "위험 추적·감사 기록 거버넌스",
+  "온프레미스·BYOK(엔터프라이즈)"
+ ],
+ "use_cases_ko": [
+  "조직 코딩 기준을 모든 PR에 강제",
+  "여러 팀·저장소의 코드 품질 위험 추적"
+ ],
+ "pricing": {
+  "free_tier": "없음 (영구 무료 없음, 14일 무료 체험; 자격 있는 오픈소스는 무료)",
+  "plans": [
+   {
+    "name": "Pro Team",
+    "price": 30,
+    "currency": "USD",
+    "period": "month",
+    "limits": "크레딧 팩 선택(2,500·5,000·20,000 크레딧), $.012/크레딧, 최대 30명, 월 결제·약정 없음",
+    "page_lang": "en-US"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": "USD",
+    "period": null,
+    "limits": "30명 이상 맞춤, SSO·감사 로그·BYOK·온프레미스",
+    "page_lang": "en-US"
+   }
+  ],
+  "pricing_url": "https://www.qodo.ai/pricing/"
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "웹",
+  "CLI"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.qodo.ai/",
+   "quote": "AI Code Review – Qodo: Deploy with confidence"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.qodo.ai/",
+   "quote": "Code review for agents. Governance for humans."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.qodo.ai/",
+   "quote": "Qodo 3.0: Quality Control for the Agentic Software Factory"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.qodo.ai/",
+   "quote": "Specialized agents run on every pull request, surfacing real bugs, rule violations, and requirement gaps with full codebase context."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.qodo.ai/",
+   "quote": "Self-learning rules turn organizational knowledge into machine-readable standards every developer, reviewer, and AI agent can follow."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.qodo.ai/",
+   "quote": "Track review findings, resolution rates, and risk concentration across teams and repositories."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.qodo.ai/",
+   "quote": "Multi Agent Code Review Enforce organizational standards on every pull request."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.qodo.ai/",
+   "quote": "Rules & Skills Lifecycle Transform tribal knowledge and PR history into self-learning standards."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.qodo.ai/",
+   "quote": "Cross Repo Review Catch breaking changes before they reach other repos and cause downstream impact."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.qodo.ai/",
+   "quote": "See how every repo, service and contract connects."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.qodo.ai/",
+   "quote": "Give coding agents (including Codex, Claude, and Kiro) a CLI-powered quality counterpart."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.qodo.ai/pricing/",
+   "quote": "Git + IDE integrations"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.qodo.ai/",
+   "quote": "Every issue and compliance flag logged for full traceability."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.qodo.ai/pricing/",
+   "quote": "Single-tenant SaaS or on-prem"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.qodo.ai/",
+   "quote": "Enforce organizational standards on every pull request."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.qodo.ai/",
+   "quote": "Centralized visibility into risk, relationships, and quality history across every repo and team."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.qodo.ai/pricing/",
+   "quote": "$.012/credit, pooled across the team"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.qodo.ai/pricing/",
+   "quote": "Pro Team $30 Raise the code quality bar across your team"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.qodo.ai/pricing/",
+   "quote": "~18 Reviews/Mo 2,500 credits ~36 Reviews/Mo 5,000 credits ~144 Reviews/Mo 20,000 credits"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.qodo.ai/pricing/",
+   "quote": "We don’t offer a permanent free tier. After your trial, pick a paid plan to keep reviewing."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.qodo.ai/pricing/",
+   "quote": "Free 14 Day Trial"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.qodo.ai/pricing/",
+   "quote": "Monthly billing • no commitment"
+  },
+  {
+   "field": "platforms",
+   "url": "https://www.qodo.ai/",
+   "quote": "a CLI-powered quality counterpart"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.qodo.ai/",
+   "quote": "html lang: en-US"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "\"We don’t offer a permanent free tier\" — 14일 체험 후 Pro Team($30~, 크레딧 팩) 또는 Enterprise 유료만",
+   "diff": "기존 '프리미엄(무료+유료 구독)'과 달리 영구 무료 요금제 없음(오픈소스 프로젝트 무료 프로그램만 있음)",
+   "url": "https://www.qodo.ai/pricing/"
+  }
+ ],
+ "plan_change": []
+}

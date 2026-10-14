@@ -1,0 +1,187 @@
+{
+ "company": "Tenstorrent",
+ "one_liner_ko": "카드·워크스테이션·서버부터 IP 라이선스까지, 오픈 아키텍처와 오픈소스 소프트웨어를 갖춘 AI 하드웨어.",
+ "what_it_does_ko": "Tenstorrent는 '모든 규모를 위한 컴퓨팅'으로 AI 가속 카드(Blackhole), 워크스테이션(TT-QuietBox), 서버(Tenstorrent Galaxy)를 판매하고 칩 IP 라이선스도 제공한다. IP는 투명하고 아키텍처는 개방형이며 소프트웨어는 오픈소스라고 밝힌다. MLIR 기반 오픈소스 컴파일러 TT-Forge로 PyTorch·JAX·ONNX 모델을 컴파일하고, TT-NN·TT-Metalium 등 저수준 SDK와 OpenAI 호환 추론 서버를 제공한다. 하드웨어가 없어도 브라우저의 Tenstorrent Cloud Console로 실리콘을 써 볼 수 있다.",
+ "key_features": [
+  "Blackhole PCIe 카드(패시브·액티브·수랭 쿨링)",
+  "TT-QuietBox 워크스테이션(최대 1,200억 파라미터 모델을 책상에서 구동)",
+  "Tenstorrent Galaxy 스케일아웃 서버",
+  "칩 IP 라이선스",
+  "TT-Forge: MLIR 기반 오픈소스 컴파일러(PyTorch·JAX·ONNX)",
+  "TT-NN·TT-Metalium SDK",
+  "OpenAI 호환 추론 서버(TT-Inference-Server)",
+  "Kubernetes 지원, 버그 바운티 프로그램"
+ ],
+ "use_cases_ko": [
+  "개인·연구자가 책상에서 대형 모델 구동(워크스테이션)",
+  "기업의 프로덕션 AI용 주권형 스케일아웃 서버",
+  "칩 설계 기업의 IP 라이선스 활용"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [
+   {
+    "name": "Cards (Blackhole)",
+    "price": 999,
+    "currency": "USD",
+    "period": "one-time",
+    "limits": "시작가(부터)",
+    "page_lang": "ko"
+   },
+   {
+    "name": "Workstations (TT-QuietBox)",
+    "price": 9999,
+    "currency": "USD",
+    "period": "one-time",
+    "limits": "시작가(부터)",
+    "page_lang": "ko"
+   },
+   {
+    "name": "Servers (Tenstorrent Galaxy)",
+    "price": 70000,
+    "currency": "USD",
+    "period": "one-time",
+    "limits": "시작가(부터)",
+    "page_lang": "ko"
+   }
+  ],
+  "pricing_url": "https://tenstorrent.com"
+ },
+ "open_source": "오픈소스 (라이선스 이름은 페이지에 없음)",
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "API"
+ ],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://tenstorrent.com",
+   "quote": "Tenstorrent의 최신 소식을 받아보세요.\n 제출"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://tenstorrent.com",
+   "quote": "모든 규모를 위한 컴퓨팅."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://tenstorrent.com",
+   "quote": "특정 벤더에 종속되지 않고, 검증된 성능과 유연성을 갖춘 IP를 활용하여 비즈니스의 성장을 가속화하세요."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://tenstorrent.com",
+   "quote": "私たちのIPは透明で、アーキテクチャはオープン、ソフトウェアはオープンソースです。"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.tenstorrent.com/",
+   "quote": "No hardware yet? Get access to Tenstorrent silicon right in your browser with"
+  },
+  {
+   "field": "key_features",
+   "url": "https://tenstorrent.com",
+   "quote": "기존 시스템에 추가하거나 나만의 리그를 구성해 보세요. 패시브, 액티브 및 수랭식 쿨링 옵션이 제공됩니다."
+  },
+  {
+   "field": "key_features",
+   "url": "https://tenstorrent.com",
+   "quote": "최대 1,200억 개의 파라미터를 가진 모델을 책상에서 바로 구동할 수 있습니다."
+  },
+  {
+   "field": "key_features",
+   "url": "https://tenstorrent.com",
+   "quote": "프로덕션용 AI를 위한 주권형 스케일아웃 서버.\n 70,000달러(USD)부터"
+  },
+  {
+   "field": "key_features",
+   "url": "https://tenstorrent.com",
+   "quote": "지금 라이선스 구매하기 IP 살펴보기 \n 뉴스 속의 Tenstorrent"
+  },
+  {
+   "field": "key_features",
+   "url": "https://tenstorrent.com",
+   "quote": "TT-Forge™는 Tenstorrent의 MLIR 기반 오픈 소스 컴파일러로"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.tenstorrent.com/",
+   "quote": "Low-level C++ SDK for writing custom kernels on Tensix cores."
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.tenstorrent.com/",
+   "quote": "Stand up an OpenAI-compatible inference server for high-throughput LLM serving."
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.tenstorrent.com/",
+   "quote": "Run Tenstorrent accelerators on Kubernetes"
+  },
+  {
+   "field": "key_features",
+   "url": "https://tenstorrent.com",
+   "quote": "우리와 함께 열린 미래를 만들어가세요. 버그를 수정하고, 기능을 추가하고, 보상을 받으세요."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://tenstorrent.com",
+   "quote": "최대 1,200억 개의 파라미터를 가진 모델을 책상에서 바로 구동할 수 있습니다."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://tenstorrent.com",
+   "quote": "프로덕션용 AI를 위한 주권형 스케일아웃 서버.\n 70,000달러(USD)부터"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://tenstorrent.com",
+   "quote": "특정 벤더에 종속되지 않고, 검증된 성능과 유연성을 갖춘 IP를 활용하여"
+  },
+  {
+   "field": "pricing",
+   "url": "https://tenstorrent.com",
+   "quote": "999달러(USD)부터"
+  },
+  {
+   "field": "pricing",
+   "url": "https://tenstorrent.com",
+   "quote": "9,999달러(USD)부터\n Buy TT-QuietBox®"
+  },
+  {
+   "field": "pricing",
+   "url": "https://tenstorrent.com",
+   "quote": "70,000달러(USD)부터\n Explore Tenstorrent Galaxy™"
+  },
+  {
+   "field": "open_source",
+   "url": "https://tenstorrent.com",
+   "quote": "TT-Forge™는 Tenstorrent의 MLIR 기반 오픈 소스 컴파일러로"
+  },
+  {
+   "field": "api",
+   "url": "https://docs.tenstorrent.com/",
+   "quote": "Stand up an OpenAI-compatible inference server"
+  },
+  {
+   "field": "platforms",
+   "url": "https://docs.tenstorrent.com/",
+   "quote": "Get access to Tenstorrent silicon right in your browser with"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://tenstorrent.com",
+   "quote": "html lang: ko\nhreflang: en, ja, ko, x-default, zh"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "AI 카드·워크스테이션·서버를 시작가($999·$9,999·$70,000, USD)로 판매하고 IP 라이선스 제공",
+   "diff": "기존 분류는 '사용량 기반 종량제(클라우드/GPU)'이나 공식 페이지는 하드웨어 구매·라이선스 판매가 중심",
+   "url": "https://tenstorrent.com"
+  }
+ ],
+ "plan_change": []
+}

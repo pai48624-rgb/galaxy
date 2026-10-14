@@ -1,0 +1,130 @@
+{
+ "company": "Coder Technologies, Inc.",
+ "one_liner_ko": "격리된 작업 공간마다 코딩 에이전트를 병렬로 돌리는 오픈소스 코딩 에이전트 멀티플렉서(현재 이름 Xum).",
+ "what_it_does_ko": "Xum(옛 이름 Mux)은 브라우저나 데스크톱에서 코딩 에이전트를 각자 격리된 작업 공간에서 병렬로 돌리게 해 주는 오픈소스 도구로, LLM 공급자에 묶이지 않는다. 작업 공간은 로컬 디렉터리·로컬 git worktree·SSH 원격 서버에서 돌고 git 상태를 한곳에서 본다. 자체 에이전트 루프를 쓰며 Plan/Exec 모드·vim 입력·/compact 등 Claude Code와 비슷한 UX를 제공한다. Mux.com의 상표 문제 제기로 Mux에서 Xum으로 이름을 바꿨다.",
+ "key_features": [
+  "격리된 작업 공간(로컬·worktree·SSH)과 git 상태 중앙 보기",
+  "멀티 모델(sonnet·grok·gpt·opus), Ollama·OpenRouter 지원",
+  "VS Code 확장",
+  "계획 모드(실행 전 계획 검토·승인)",
+  "통합 코드 리뷰",
+  "비용·토큰 사용량 보기",
+  "모바일용 반응형 서버 모드",
+  "mermaid·LaTeX 등 풍부한 마크다운 출력"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "AGPL-3.0",
+ "api": "불명",
+ "platforms": [
+  "맥",
+  "윈도",
+  "웹",
+  "CLI"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://xum.cdr.dev/",
+   "quote": "Copyright (C) 2026 Coder Technologies, Inc."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://xum.cdr.dev/",
+   "quote": "Xum makes it easy to run parallel coding agents, each with its own isolated workspace, right from your browser or desktop."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://xum.cdr.dev/",
+   "quote": "Xum is open source and LLM provider-agnostic."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/coder/xum",
+   "quote": "**Isolated workspaces** with central view on git divergence"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/coder/xum",
+   "quote": "Xum has a custom agent loop but much of the core UX is inspired by Claude Code."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/coder/xum",
+   "quote": "This project was renamed from Mux to Xum after Mux.com raised a trademark concern."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/coder/xum",
+   "quote": "**[SSH](https://mux.coder.com/runtime/ssh)**: remote execution on a server over SSH"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/coder/xum",
+   "quote": "Ollama supported for local LLMs"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/coder/xum",
+   "quote": "**VS Code Extension**: Jump into Xum workspaces directly from VS Code"
+  },
+  {
+   "field": "key_features",
+   "url": "https://xum.cdr.dev/agents/plan-mode/",
+   "quote": "Plan mode lets you review and refine the agent’s approach before any code changes happen."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/coder/xum",
+   "quote": "Integrated code-review for faster iteration"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/coder/xum",
+   "quote": "Stay looped in on costs and token consumption"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/coder/xum",
+   "quote": "Xum server mode has a responsive UI for mobile users"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/coder/xum",
+   "quote": "Rich markdown outputs (mermaid diagrams, LaTeX, etc.)"
+  },
+  {
+   "field": "open_source",
+   "url": "https://xum.cdr.dev/",
+   "quote": "Xum is licensed under the GNU Affero General Public License v3.0 (AGPL-3.0) ."
+  },
+  {
+   "field": "platforms",
+   "url": "https://xum.cdr.dev/",
+   "quote": "Download and install Xum for macOS, Linux, and Windows"
+  },
+  {
+   "field": "platforms",
+   "url": "https://xum.cdr.dev/",
+   "quote": "right from your browser or desktop"
+  },
+  {
+   "field": "platforms",
+   "url": "https://xum.cdr.dev/",
+   "quote": "CLI"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://xum.cdr.dev/",
+   "quote": "hreflang: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [],
+ "note": "Mux가 상표 문제로 Xum으로 이름만 바뀜(같은 Coder 프로젝트, 다른 제품 아님). 'pricing' 구간은 Plan Mode 문서라 가격 아님. 문서에 'Xum Gateway' 평가 크레딧(자격 시) 언급은 있으나 가격 없음 → 요금 불명."
+}

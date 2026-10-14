@@ -1,0 +1,213 @@
+=== [home] https://takopi.dev (lang=en)
+takopi 
+ Skip to content
+ takopi
+ takopi
+ Search
+ banteg/takopi
+ Home
+ Tutorials
+ How-to
+ Reference
+ Explanation
+ takopi
+ banteg/takopi
+ Home
+ Home
+ On this page
+ Quick start
+ Pick your workflow
+ Tutorials
+ How-to guides
+ Reference
+ Tutorials
+ Tutorials
+ Overview
+ Install
+ First run
+ Projects & branches
+ Multi-engine
+ How-to
+ How-to
+ Overview
+ Switch engines
+ Projects
+ Worktrees
+ Route by chat
+ Topics
+ Voice notes
+ File transfer
+ Schedule tasks
+ Troubleshooting
+ Write a plugin
+ Add a runner
+ Dev setup
+ Reference
+ Reference
+ Overview
+ Commands & directives
+ Configuration
+ Environment variables
+ Changelog
+ Specification
+ Plugin API
+ Plugins
+ Context resolution
+ Telegram transport
+ Runners
+ Runners
+ Overview
+ Claude
+ Claude
+ Runner
+ Stream JSON cheatsheet
+ Takopi events
+ Codex
+ Codex
+ Exec JSON cheatsheet
+ Takopi events
+ OpenCode
+ OpenCode
+ Runner
+ Stream JSON cheatsheet
+ Takopi events
+ Pi
+ Pi
+ Runner
+ Stream JSON cheatsheet
+ Takopi events
+ For agents
+ For agents
+ Agent entrypoint
+ Repo map
+ Invariants
+ Explanation
+ Explanation
+ Overview
+ Architecture
+ Routing & sessions
+ Plugin system
+ Module map
+ On this page
+ Quick start
+ Pick your workflow
+ Tutorials
+ How-to guides
+ Reference
+ Takopi documentation ¶ 
+ Takopi runs coding agents on your computer and bridges them to Telegram. Send tasks from anywhere, watch progress stream live, pick up when back at the terminal. Scale from quick one-offs to multi-project workflows with topics and parallel worktrees.
+ Quick start ¶ 
+ uv tool install -U takopi
+takopi --onboard
+ Onboarding walks you through bot setup and asks how you want to work. Full install guide → 
+ Pick your workflow ¶ 
+ Assistant 
+ Ongoing chat. New messages auto-continue; /new to reset.
+ Best for: solo work, natural conversation flow.
+ Get started → 
+ Workspace 
+ Forum topics bound to projects and branches.
+ Best for: teams, organized multi-repo workflows.
+ Set up topics → 
+ Handoff 
+ Reply-to-continue. Copy resume lines to your terminal.
+ Best for: explicit control, terminal-first workflow.
+ Get started → 
+ You can change workflows later by editing ~/.takopi/takopi.toml .
+ Tutorials ¶ 
+ Step-by-step guides for new users:
+ Install & onboard — set up Takopi and your bot
+ First run — send a task, watch it stream, continue the conversation
+ Projects & branches — target repos from anywhere, run on feature branches
+ Multi-engine — use different engines for different tasks
+ How-to guides ¶ 
+ Chat sessions , Topics , Projects , Worktrees 
+ Voice notes , File transfer , Schedule tasks 
+ Write a plugin , Add a runner , Dev setup 
+ Reference ¶ 
+ Exact options, defaults, and contracts:
+ Commands & directives 
+ Configuration 
+ Specification — normative behavior
+ Next
+ Overview
+
+=== [meta] https://takopi.dev
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/banteg/takopi
+# takopi
+
+🐙 *he just wants to help-pi*
+
+telegram bridge for codex, claude code, opencode, pi. manage multiple projects and worktrees, stream progress, and resume sessions anywhere.
+
+## features
+
+- projects and worktrees: work on multiple repos/branches simultaneously, branches are git worktrees
+- stateless resume: continue in chat or copy the resume line to pick up in terminal
+- progress streaming: commands, tools, file changes, elapsed time
+- parallel runs across agent sessions, per-agent-session queue with Codex steering/cancel controls
+- works with telegram features like voice notes and scheduled messages
+- file transfer: send files to the repo or fetch files/dirs back
+- group chats and topics: map group topics to repo/branch contexts
+- works with existing anthropic and openai subscriptions
+
+## requirements
+
+`uv` for installation (`curl -LsSf https://astral.sh/uv/install.sh | sh`)
+
+python 3.14+ (`uv python install 3.14`)
+
+at least one engine on PATH: `codex`, `claude`, `opencode`, or `pi`
+
+## install
+
+```sh
+uv tool install -U takopi
+```
+
+## setup
+
+run `takopi` and follow the setup wizard. it will help you:
+
+1. create a bot token via @BotFather
+2. pick a workflow (assistant, workspace, or handoff)
+3. connect your chat
+4. choose a default engine
+
+workflows configure conversation mode, topics, and resume lines automatically:
+
+- **assistant**: ongoing chat with auto-resume (recommended)
+- **workspace**: forum topics bound to repos/branches
+- **handoff**: reply-to-continue with terminal resume lines
+
+## usage
+
+```sh
+cd ~/dev/happy-gadgets
+takopi
+```
+
+send a message to your bot. prefix with `/codex`, `/claude`, `/opencode`, or `/pi` to pick an engine. reply to continue a thread.
+
+register a project with `takopi init happy-gadgets`, then target it from anywhere with `/happy-gadgets hard reset the timeline`.
+
+mention a branch to run an agent in a dedicated worktree `/happy-gadgets @feat/memory-box freeze artifacts forever`.
+
+inspect or update settings with `takopi config list`, `takopi config get`, and `takopi config set`.
+
+see [takopi.dev](https://takopi.dev/) for configuration, worktrees, topics, file transfer, and more.
+
+## plugins
+
+takopi supports entrypoint-based plugins for engines, transports, and commands.
+
+see [`docs/how-to/write-a-plugin.md`](docs/how-to/write-a-plugin.md) and [`docs/reference/plugin-api.md`](docs/reference/plugin-api.md).
+
+## development
+
+see [`docs/reference/specification.md`](docs/reference/specification.md) and [`docs/developing.md`](docs/developing.md).
+

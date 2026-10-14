@@ -1,0 +1,160 @@
+{
+ "company": "Cloudflare, Inc.",
+ "one_liner_ko": "AI 앱의 요청을 한곳으로 모아 관찰하고 제어하는 Cloudflare의 AI 게이트웨이.",
+ "what_it_does_ko": "Cloudflare AI Gateway는 앱을 게이트웨이에 연결해 사람들이 앱을 어떻게 쓰는지 분석·로그로 파악하게 해 준다. 캐싱, 속도 제한, 요청 재시도, 모델 폴백으로 앱의 확장과 안정성을 제어한다. Workers AI, Anthropic, Google Gemini, OpenAI, Replicate 등 여러 공급자를 지원하며 코드 한 줄로 시작할 수 있다. 핵심 기능은 모든 요금제에서 무료이고, 로그 저장은 Workers 요금제 기준을 따른다.",
+ "key_features": [
+  "분석(요청 수·토큰·비용)",
+  "요청·오류 로깅",
+  "캐싱",
+  "속도 제한",
+  "요청 재시도·모델 폴백",
+  "여러 AI 공급자 지원",
+  "가드레일·DLP(베타)",
+  "동적 라우팅(베타)"
+ ],
+ "use_cases_ko": [
+  "AI 앱 운영자가 사용 현황을 보고 비용·확장 제어"
+ ],
+ "pricing": {
+  "free_tier": "있음 (분석·캐싱·속도 제한 등 핵심 기능 무료, Cloudflare 계정 필요)",
+  "plans": [
+   {
+    "name": "AI Gateway 핵심 기능",
+    "price": 0,
+    "currency": "USD",
+    "period": null,
+    "limits": "대시보드 분석·캐싱·속도 제한 무료",
+    "page_lang": "en"
+   },
+   {
+    "name": "Workers Free (레거시 로그)",
+    "price": null,
+    "currency": null,
+    "period": null,
+    "limits": "전체 게이트웨이 합계 로그 100,000개 (2026-09-24 이전 고객)",
+    "page_lang": "en"
+   },
+   {
+    "name": "Workers Paid (레거시 로그)",
+    "price": null,
+    "currency": null,
+    "period": null,
+    "limits": "게이트웨이당 로그 10,000,000개 (2026-09-24 이전 고객)",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://developers.cloudflare.com/ai-gateway/reference/pricing/"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "API",
+  "웹"
+ ],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://developers.cloudflare.com/ai-gateway/",
+   "quote": "© 2026 Cloudflare, Inc."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://developers.cloudflare.com/ai-gateway/",
+   "quote": "Observe and control your AI applications."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://developers.cloudflare.com/ai-gateway/",
+   "quote": "By connecting your apps to AI Gateway, you can gather insights on how people are using your application with analytics and logging and then control how your application scales with features such as caching, rate limiting, as well as request retries, model fallback, and more."
+  },
+  {
+   "field": "key_features",
+   "url": "https://developers.cloudflare.com/ai-gateway/",
+   "quote": "Analytics View metrics such as the number of requests, tokens, and the cost it takes to run your application."
+  },
+  {
+   "field": "key_features",
+   "url": "https://developers.cloudflare.com/ai-gateway/",
+   "quote": "Logging Gain insight on requests and errors."
+  },
+  {
+   "field": "key_features",
+   "url": "https://developers.cloudflare.com/ai-gateway/",
+   "quote": "Caching Serve requests directly from Cloudflare's cache instead of the original model provider for faster requests and cost savings."
+  },
+  {
+   "field": "key_features",
+   "url": "https://developers.cloudflare.com/ai-gateway/",
+   "quote": "Rate limiting Control how your application scales by limiting the number of requests your application receives."
+  },
+  {
+   "field": "key_features",
+   "url": "https://developers.cloudflare.com/ai-gateway/",
+   "quote": "Request retry and fallback Improve resilience by defining request retry and model fallbacks in case of an error."
+  },
+  {
+   "field": "key_features",
+   "url": "https://developers.cloudflare.com/ai-gateway/",
+   "quote": "Your favorite providers Workers AI, Anthropic, Google Gemini, OpenAI, Replicate, and more work with AI Gateway."
+  },
+  {
+   "field": "key_features",
+   "url": "https://developers.cloudflare.com/ai-gateway/",
+   "quote": "Guardrails Beta Overview"
+  },
+  {
+   "field": "key_features",
+   "url": "https://developers.cloudflare.com/ai-gateway/",
+   "quote": "Dynamic routing Beta Overview"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://developers.cloudflare.com/ai-gateway/",
+   "quote": "Cloudflare's AI Gateway allows you to gain visibility and control over your AI apps."
+  },
+  {
+   "field": "pricing",
+   "url": "https://developers.cloudflare.com/ai-gateway/reference/pricing/",
+   "quote": "AI Gateway's core features available today are offered for free, and all it takes is a Cloudflare account and one line of code to get started . Core features include: dashboard analytics, caching, and rate limiting."
+  },
+  {
+   "field": "pricing",
+   "url": "https://developers.cloudflare.com/ai-gateway/reference/pricing/",
+   "quote": "Customers who create their first gateway on or after September 24, 2026 follow Workers Logs pricing and retention ."
+  },
+  {
+   "field": "pricing",
+   "url": "https://developers.cloudflare.com/ai-gateway/reference/pricing/",
+   "quote": "100,000 logs total across all gateways"
+  },
+  {
+   "field": "pricing",
+   "url": "https://developers.cloudflare.com/ai-gateway/reference/pricing/",
+   "quote": "10,000,000 logs per gateway"
+  },
+  {
+   "field": "api",
+   "url": "https://developers.cloudflare.com/ai-gateway/",
+   "quote": "Using AI Gateway REST API"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.cloudflare.com/ko-kr/plans/",
+   "quote": "AI Gateway AI 애플리케이션 관찰 및 제어"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.cloudflare.com/ko-kr/plans/",
+   "quote": "=== [pricing_ko] https://www.cloudflare.com/ko-kr/plans/ (lang=ko-kr)"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": [
+  {
+   "official": "핵심 기능(분석·캐싱·속도 제한)은 무료, 로그 저장은 Workers Free/Paid 요금제·Workers Logs 가격을 따름",
+   "diff": "오픈소스·자체 구독이 아니라 Cloudflare Workers 요금제에 묶인 무료+로그 종량 구조",
+   "url": "https://developers.cloudflare.com/ai-gateway/reference/pricing/"
+  }
+ ]
+}

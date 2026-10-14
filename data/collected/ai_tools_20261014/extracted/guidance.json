@@ -1,0 +1,68 @@
+{
+ "company": null,
+ "one_liner_ko": "언어 모델의 출력을 구조적으로 제어(조종)하는 효율적인 프로그래밍 방식.",
+ "what_it_does_ko": "Guidance는 언어 모델을 조종하기 위한 프로그래밍 방식으로, 출력 구조를 제어하면서 일반 프롬프트나 파인튜닝보다 지연·비용을 줄인다고 설명한다. 정규식·문맥 자유 문법(CFG)으로 생성을 제한하고, 조건문·반복·도구 사용 같은 제어와 생성을 자연스럽게 섞을 수 있다. PyPI로 설치하며 Transformers·llama.cpp·OpenAI 등 여러 백엔드를 지원한다. Jupyter 노트북에서는 위젯으로 결과를 보여 준다.",
+ "key_features": [
+  "파이썬 문법으로 언어 모델 다루기",
+  "정규식·CFG로 출력 형식 제한(제약 생성)",
+  "select()로 정해진 목록 중 하나만 고르게 하기",
+  "조건문·반복·도구 사용과 생성을 섞는 제어",
+  "Transformers·llama.cpp·OpenAI 등 다양한 백엔드",
+  "Jupyter 노트북 위젯 제공",
+  "생성 텍스트를 이름으로 쉽게 캡처"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/guidance-ai/guidance",
+   "quote": "Guidance is an efficient programming paradigm for steering language models."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/guidance-ai/guidance",
+   "quote": "while reducing latency and cost vs. conventional prompting or fine-tuning."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/guidance-ai/guidance",
+   "quote": "It allows users to constrain generation (e.g. with regex and CFGs) as well as to interleave control (conditionals, loops, tool use) and generation seamlessly."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/guidance-ai/guidance",
+   "quote": "When using Guidance, you can work with large language models using common Python idioms"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/guidance-ai/guidance",
+   "quote": "Guidance provides a `select()` function for this scenario"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/guidance-ai/guidance",
+   "quote": "supports a variety of backends (Transformers, llama.cpp, OpenAI, etc.)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/guidance-ai/guidance",
+   "quote": "if running in a Jupyter notebook, then Guidance provides a widget for a richer user experience"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/guidance-ai/guidance",
+   "quote": "With Guidance, it's really easy to capture generated text"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

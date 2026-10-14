@@ -1,0 +1,338 @@
+=== [home] https://www.zeroclaw.com/ (lang=en)
+ZeroClaw — The Lightweight Personal AI Agent You Own 
+ Zero Claw How it works Security Blog Docs GitHub Discord X 
+ Open Source · v0.8.5 
+ THE PERSONAL AI AGENT 
+ YOU ACTUALLY OWN. 
+ One lightweight Rust binary on your machine, with your keys or your local models. It reaches 30+ channels, asks before risky actions, and can stamp every tool call with a cryptographic receipt. No cloud seat. No subscription. 
+ One-liner brew Docker 
+ $ curl -fsSL https://zeroclaw.com/install.sh | bash COPY 
+ v0.8.5 shipped last month · 20 releases in the last year · 419 + contributors · MIT OR Apache-2.0
+ zeroclaw terminal 
+ 70+ LLM Providers
+ Ollama LM Studio llama.cpp vLLM Anthropic OpenAI OpenRouter Google Gemini Amazon Bedrock DeepSeek Groq Mistral xAI Perplexity Together AI Ollama LM Studio llama.cpp vLLM Anthropic OpenAI OpenRouter Google Gemini Amazon Bedrock DeepSeek Groq Mistral xAI Perplexity Together AI 
+ 30+ Channels
+ Telegram Discord WhatsApp Slack Signal iMessage Email Matrix Mattermost IRC Bluesky Reddit Nostr DingTalk Lark Line QQ WeChat Work Notion Webhooks Telegram Discord WhatsApp Slack Signal iMessage Email Matrix Mattermost IRC Bluesky Reddit Nostr DingTalk Lark Line QQ WeChat Work Notion Webhooks 
+ Most AI assistants are a seat you rent on someone else's machine. ZeroClaw is a binary you own on yours. 
+ 1 native binary No Node, no JVM, no Python environment to install. 
+ <20 ms cold start A full CLI process start measures ~12 ms on Apple Silicon — speed is an architectural constraint, not a marketing claim. 
+ 70+ LLM providers Hosted or fully local: Ollama, LM Studio, llama.cpp, vLLM, and more. 
+ 30+ channels One agent loop behind every channel you enable. 
+ It uses less memory than a browser tab and runs on hardware as small as a Raspberry Pi — the same agent on your workstation, your homelab, and boards it can actually touch (GPIO on Pi, STM32, Arduino, ESP32).
+ Running in under a minute 
+ Install the binary, point it at a provider, connect a channel. The one-liner grabs a prebuilt binary — a measured 14 seconds — and compiling from source is strictly opt-in.
+ 01 
+ Install ZeroClaw
+ One command downloads the prebuilt native binary — no Rust toolchain needed. Homebrew and Docker work too.
+ $ curl -fsSL https://zeroclaw.com/install.sh | bash 
+ 02 
+ Run Quickstart
+ Create your first agent end-to-end: pick a provider (local Ollama or your own key) and connect a channel in one guided pass.
+ $ zeroclaw quickstart 
+ 03 
+ Start Agent Mode
+ Run interactive chat or one-shot prompts with tool + memory support.
+ $ zeroclaw agent 
+ 04 
+ Run Runtime Services
+ Start gateway/daemon for channel and webhook workflows, then validate with status/doctor.
+ $ zeroclaw gateway && zeroclaw daemon 
+ An agent with shell access you can audit 
+ ZeroClaw is security-first by default: supervised autonomy, OS-level sandboxes, command policy — and opt-in receipts that make every tool call provable.
+ Tool receipt HMAC-SHA256 
+ tool shell 
+ command git push origin feature/checkout 
+ policy supervised → approval required 
+ approved by you 
+ result ✓ pushed · 2 objects 
+ receipt zc-receipt-1774608496-gzpEBu…vQiWA 
+ the model can't forge one — it never sees the key
+ Supervised autonomy
+ The default mode asks before medium-risk actions and blocks high-risk ones. Autonomy is something you grant, not something you hope to contain.
+ OS sandboxes
+ Landlock, Bubblewrap, Seatbelt, or Docker contain what the agent can touch — enforced by the operating system, not by a prompt.
+ Command policy
+ Explicit allowlists and workspace scoping decide what runs and where. Medium-risk actions wait for your approval; high-risk ones are blocked outright.
+ Tool receipts
+ Flip on receipts and every successful tool call returns with an HMAC-SHA256 tag. A run the model claims but never made — or a result it invented — produces a missing or invalid receipt.
+ YOLO mode exists for trusted dev boxes. It is opt-in — never the default.
+ Built for Production 
+ Security, portability, and low overhead — capabilities in the shipping binary, not the pitch deck.
+ Secure by Design
+ Pairing, strict sandboxing, explicit allowlists, and workspace scoping are enabled by default.
+ Fast Cold Starts
+ The core agent starts in milliseconds — cold-start speed is an architectural constraint, not a marketing claim.
+ No Lock-In
+ OpenAI-compatible provider support plus custom endpoints and pluggable integrations.
+ Lean Runtime
+ Uses less memory than a browser tab: a small core, extended by the components you choose.
+ Trait-Driven Core
+ Providers, channels, tools, memory, and tunnels are swappable with config changes.
+ Deploy Anywhere
+ One binary-first workflow across ARM and x86, from a Raspberry Pi to a cloud VM — plus Docker.
+ What people build with ZeroClaw 
+ Three setups, with the pieces each one takes and the guide that walks through it.
+ 💬
+ An assistant on your phone that answers from your own hardware
+ Run the agent on a machine you control and talk to it from Telegram. Point it at a local model and the thinking happens on your own hardware, with no AI provider in the loop.
+ zeroclaw quickstart picks the provider and channel in one guided pass 
+ Ollama, LM Studio, llama.cpp or vLLM for a local model — or your own hosted key 
+ The same agent answers on Discord, Signal, Matrix or email once you enable them 
+ Connect Telegram 
+ 🔐
+ Shell automation that asks first, and proves what it ran
+ Give an agent real commands without giving it a blank cheque. Medium-risk actions wait for your approval, high-risk ones are refused, and every successful call can come back signed.
+ Supervised autonomy is the default; YOLO mode is opt-in and never assumed 
+ Landlock, Bubblewrap, Seatbelt or Docker decide what the process can touch 
+ Tool receipts stamp each call with an HMAC tag the model cannot forge 
+ Read the autonomy model 
+ ⚙️
+ Jobs that run in your homelab while you are asleep
+ Schedules, webhooks and channel events trigger the same agent loop, inside the same allowlists, on a box that costs a few watts.
+ Run it as a service on Linux, macOS or a Raspberry Pi 
+ Skills package a repeatable task and its tools together 
+ Every unattended step stays inside the sandbox and workspace you scoped 
+ Run it as a service 
+ Development Roadmap 
+ Curated from the live GitHub milestones. No dates — things ship when they're ready.
+ Shipped
+ The v0.8 Runtime
+ The big rewrite is behind us; the v0.8.x series ships at a regular cadence
+ Multi-agent runtime — many named agents from one daemon, each isolated 
+ zerocode terminal UI 
+ Security hardening — per-agent tool allowlists, sandboxing, tool receipts 
+ A2A discovery — agents describe and discover one another through the gateway 
+ Skills expansion — extra registries, typed slash-commands, plugin loading 
+ Completed 
+ In progress
+ Plugins + Operations
+ Easier to extend and operate seriously
+ A fuller WASM plugin platform 
+ Richer operator management surfaces 
+ Easier ways to install, manage, and inspect plugins, skills, and tools 
+ In Progress 
+ In progress
+ Durable Automation + Access
+ Automation you can supervise, resume, and audit
+ A more durable SOP control plane — auditable procedures and approval gates 
+ Persisted run state and shared event fan-in across channels and triggers 
+ Pluggable authentication (OIDC, ssh-key, and more) 
+ Per-user, per-agent authorization and per-user isolation 
+ In Progress 
+ North star
+ v1.0
+ A stable 1.0 that's sandboxable and interoperable with other agents — the foundation for enter
+
+=== [about] https://docs.zeroclaw.com/v0.8.5/en/ (lang=en)
+Introduction - ZeroClaw Docs 
+ Keyboard shortcuts
+ Press ← or → to navigate between chapters
+ Press S or / to search in the book
+ Press ? to show this help
+ Press Esc to hide this help
+ 1. Introduction 
+ 2. Philosophy ❱
+ 2.1. You own it 
+ 2.2. Security-first, with escape hatches 
+ 2.3. Minimal: in binary size, dependencies, and surface area 
+ 2.4. Provider-agnostic 
+ 2.5. What this isn't 
+ 2.6. How decisions get made 
+ 3. Getting Started ❱
+ 3.1. Concepts 
+ 3.2. Quickstart 
+ 3.3. YOLO mode 
+ 3.4. Multi-model setup 
+ 3.5. zerocode 
+ 3.6. Language & translations 
+ 4. zerocode ❱
+ 4.1. Running zerocode 
+ 4.2. Config pane 
+ 4.3. Themes & terminal colours 
+ 4.4. Remote setup (WSS) 
+ 4.5. Secure transport (end-to-end config) 
+ 4.6. Environment pass-through 
+ 5. Installation ❱
+ 5.1. Linux 
+ 5.2. macOS 
+ 5.3. Windows 
+ 5.4. FreeBSD 
+ 5.5. NixOS 
+ 5.6. Docker & containers 
+ 5.7. Service management 
+ 5.8. Platform install files 
+ 6. Architecture ❱
+ 6.1. Request lifecycle 
+ 6.2. Channel runtime lifecycle 
+ 6.3. Tool execution lifecycle 
+ 6.4. Background work lifecycle 
+ 6.5. Provider routing lifecycle 
+ 6.6. Crates 
+ 6.7. Architecture Decision Records ❱
+ 6.7.1. ADR-001: Rust first 
+ 6.7.2. ADR-002: Trait-driven extensibility 
+ 6.7.3. ADR-003: Extism plugin bootstrap 
+ 6.7.4. ADR-004: Tool shared state ownership 
+ 6.7.5. ADR-005: Pluggable memory backends 
+ 6.7.6. ADR-006: Runtime channel plugins 
+ 6.7.7. ADR-007: Gateway extraction 
+ 6.7.8. ADR-008: Goal mode control plane 
+ 6.7.9. ADR-009: WIT/wasmtime plugin execution 
+ 6.7.10. ADR-010: Memory authority boundaries 
+ 6.7.11. ADR-011: Multi-agent runtime boundaries 
+ 6.7.12. ADR-012: Generation-scoped live config apply 
+ 6.7.13. ADR-013: Key-source authority 
+ 6.7.14. ADR-015: Unified capability catalog 
+ 6.8. Logging 
+ 6.9. Runtime state and persistence 
+ 6.10. Memory and payload lifecycle 
+ 6.11. Config lifecycle 
+ 6.12. Generated documentation pipeline 
+ 6.13. Localization catalog lifecycle 
+ 6.14. RPC socket transport 
+ 7. Reference ❱
+ 7.1. CLI 
+ 7.2. Config 
+ 7.3. Environment variables 
+ 7.4. Feature and support matrix 
+ 7.5. API (rustdoc) 
+ 7.6. Gateway HTTP API 
+ 7.7. A2A agent discovery 
+ 7.8. Web dashboard (web_dist_dir) 
+ 8. Agents ❱
+ 8.1. Anatomy of an agent 
+ 8.2. Filesystem components 
+ 8.3. Running agents 
+ 8.4. Delegation & SubAgents 
+ 8.5. Runtime internals 
+ 8.6. History management 
+ 9. Model Providers ❱
+ 9.1. Provider catalog 
+ 9.2. Configuration 
+ 9.3. Streaming 
+ 9.4. Routing 
+ 9.5. Custom providers 
+ 9.6. OpenAI Codex (subscription) 
+ 10. Channels & Integrations ❱
+ 10.1. Peer Groups 
+ 10.2. Matrix 
+ 10.3. Telegram 
+ 10.4. Discord 
+ 10.5. Slack 
+ 10.6. Mattermost 
+ 10.7. LINE 
+ 10.8. Nextcloud Talk 
+ 10.9. Signal 
+ 10.10. WhatsApp 
+ 10.11. Other chat platforms 
+ 10.12. Social (Bluesky, Nostr, Twitter, Reddit) 
+ 10.13. Email 
+ 10.14. Voice & telephony 
+ 10.15. Webhooks 
+ 10.16. MQTT 
+ 10.17. AMQP 
+ 10.18. Filesystem 
+ 10.19. ZEGA AI (external prototype) 
+ 10.20. Git (GitHub / Gitea / Forgejo) ❱
+ 10.20.1. Creating a GitHub App 
+ 10.20.2. Creating a Gitea / Forgejo token (Codeberg) 
+ 10.21. ACP (Agent Client Protocol) 
+ 11. Tools & Extensibility ❱
+ 11.1. MCP (Model Context Protocol) 
+ 11.2. Browser automation 
+ 11.3. Relationship memory ❱
+ 11.3.1. Using relationship memory from skills 
+ 11.4. Skills ❱
+ 11.4.1. Skill bundles 
+ 11.5. Python skills 
+ 12. Security & Autonomy ❱
+ 12.1. The security model 
+ 12.2. Autonomy levels 
+ 12.3. Sandboxing 
+ 12.4. Tool receipts 
+ 13. Operations & Deployment ❱
+ 13.1. Service & daemon 
+ 13.2. Logs & observability 
+ 13.3. Cost tracking 
+ 13.4. Troub
+
+=== [meta] https://www.zeroclaw.com/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/zeroclaw-labs/zeroclaw
+<p align="center">
+  <img src="docs/assets/zeroclaw-banner.png" alt="ZeroClaw" width="600" />
+</p>
+
+<h1 align="center">🦀 ZeroClaw — Personal AI Assistant</h1>
+
+<p align="center">
+  <strong>You own the agent. You own the data. You own the machine it runs on.</strong>
+</p>
+
+<p align="center">
+  <a href="https://github.com/zeroclaw-labs/zeroclaw/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/zeroclaw-labs/zeroclaw/ci.yml?branch=master&label=build" alt="Build Status" /></a>
+  <a href="https://github.com/zeroclaw-labs/zeroclaw/releases/latest"><img src="https://img.shields.io/github/v/release/zeroclaw-labs/zeroclaw?label=release" alt="Latest release" /></a>
+  <a href="LICENSE-APACHE"><img src="https://img.shields.io/badge/license-MIT%20OR%20Apache%202.0-blue.svg" alt="License" /></a>
+  <a href="https://www.rust-lang.org"><img src="https://img.shields.io/badge/rust-edition%202024-orange?logo=rust" alt="Rust Edition 2024" /></a>
+  <a href="https://github.com/zeroclaw-labs/zeroclaw/graphs/contributors"><img src="https://img.shields.io/github/contributors/zeroclaw-labs/zeroclaw?color=green" alt="Contributors" /></a>
+  <a href="https://discord.gg/zeroclaw"><img src="https://img.shields.io/badge/Discord-join-5865F2?style=flat&logo=discord&logoColor=white" alt="Discord" /></a>
+</p>
+
+<p align="center">
+  <a href="https://www.zeroclaw.com">Website</a> ·
+  <a href="https://docs.zeroclaw.com/master/en/introduction.html">Docs</a> ·
+  <a href="docs/book/src/philosophy/index.md">Philosophy</a> ·
+  <a href="docs/book/src/getting-started/quickstart.md">Quick start</a> ·
+  <a href="docs/book/src/architecture/overview.md">Architecture</a> ·
+  <a href="https://discord.gg/zeroclaw">Discord</a>
+</p>
+
+---
+
+ZeroClaw is an agent runtime — a single Rust binary you configure and run. It talks to LLM providers (Anthropic, OpenAI, Ollama, and ~20 others), reaches the world through 30+ channels (Discord, Telegram, Matrix, email, voice, webhooks, your own CLI), and acts through tools (shell, browser, HTTP, hardware, custom MCP servers). Everything runs on your machine, with your keys, in your workspace.
+
+Read the [Philosophy](docs/book/src/philosophy/index.md) for the four opinions that shape it.
+
+## Install
+
+### Unix (recommended)
+
+<!-- >>> generated:readme-unix-fast by `cargo generate installers` - do not edit <<< -->
+```sh
+curl -fsSL https://raw.githubusercontent.com/zeroclaw-labs/zeroclaw/master/install.sh | sh
+"${CARGO_HOME:-$HOME/.cargo}/bin/zeroclaw" quickstart
+```
+<!-- >>> end generated:readme-unix-fast <<< -->
+
+### Windows (recommended)
+
+Use the Rust-free [prebuilt PowerShell path](docs/book/src/setup/windows.md#option-1-prebuilt-binary-recommended) in the Windows setup guide. It installs the current release, updates PATH, and runs Quickstart.
+
+For the guided Unix installer, source builds, app and feature selection, and PATH behavior, compare the [installation paths](docs/book/src/getting-started/quickstart.md#install).
+
+Run `./install.sh --help` for the complete Unix installer flag reference.
+
+> **Working on the docs?** The translated documentation catalogues live in a
+> git submodule (`docs/book/po`). The Rust build does not need it, but building
+> or syncing the docs does. Clone with it, or add it to an existing clone:
+>
+> ```bash
+> git clone --recurse-submodules https://github.com/zeroclaw-labs/zeroclaw.git
+> git submodule update --init docs/book/po   # existing clone
+> ```
+
+Platform-specific notes: [Linux](docs/book/src/setup/linux.md) · [macOS](docs/book/src/setup/macos.md) · [Windows](docs/book/src/setup/windows.md) · [FreeBSD](docs/book/src/setup/freebsd.md) · [NixOS](docs/book/src/setup/nixos.md) · [Docker](docs/book/src/setup/container.md)
+
+## Quick start
+
+```bash
+zeroclaw quickstart               # one-shot setup: pick a provider, write a working config
+zeroclaw agent -a <alias>         # interactive chat using the [agents.<alias>] entry
+zeroclaw service install          # register as systemd/launchctl/Windows Service
+zeroclaw service start            # run it always-on in the background
+```
+
+Full walkthrough: [Quick start](docs/book/src/getting-started/quickstart.md) — or skip the safety gates 

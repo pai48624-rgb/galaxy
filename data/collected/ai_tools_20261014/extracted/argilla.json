@@ -1,0 +1,50 @@
+{
+ "company": "Argilla (Hugging Face 합류)",
+ "one_liner_ko": "AI 엔지니어와 분야 전문가가 함께 고품질 데이터셋을 만드는 협업 도구",
+ "what_it_does_ko": "Argilla는 AI 엔지니어와 분야 전문가가 협업해 고품질 데이터셋을 만드는 오픈소스 도구다. 텍스트 분류·개체명 인식 같은 기존 NLP, RAG·선호도 튜닝 같은 LLM, 텍스트-이미지 같은 멀티모달 프로젝트의 사람 피드백을 모으는 데 쓴다. Hugging Face Hub나 Docker로 무료 배포하고 Python SDK로 프로젝트를 만든다. 필터, AI 피드백 제안, 의미 검색으로 빠르게 라벨링할 수 있다. 원 개발자들은 다른 프로젝트로 옮겨 새 기능 추가는 중단되었고 버그 수정·패치만 이어진다.",
+ "key_features": [
+  "도메인 전문가와 AI 엔지니어의 협업 주석",
+  "LLM 미세조정·RLHF·평가용 데이터 구축",
+  "필터·AI 피드백 제안·의미 검색으로 빠른 라벨링",
+  "Python SDK와 FastAPI 서버",
+  "Hugging Face Spaces 또는 Docker로 배포",
+  "주석 작업 분배·사용자·워크스페이스 관리",
+  "웹훅으로 서버 이벤트 대응",
+  "데이터셋 가져오기·내보내기"
+ ],
+ "use_cases_ko": [
+  "NLP·LLM·멀티모달 프로젝트의 사람 피드백 수집",
+  "데이터 과학 팀의 능동 학습·지속 평가 워크플로 구축"
+ ],
+ "pricing": {"free_tier": "있음 (Hugging Face Hub 또는 Docker로 무료 배포)", "plans": [], "pricing_url": "https://docs.argilla.io/latest/"},
+ "open_source": "오픈소스(라이선스 이름은 받은 본문에 없음)",
+ "api": "있음",
+ "platforms": ["웹", "API"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://argilla.io", "quote": "Argilla is joining Hugging Face!"},
+  {"field": "company", "url": "https://argilla.io", "quote": "Copyright © 2024 Argilla.io All rights reserved"},
+  {"field": "one_liner_ko", "url": "https://argilla.io", "quote": "Argilla is a collaboration tool for AI engineers and domain experts to build high-quality datasets"},
+  {"field": "what_it_does_ko", "url": "https://docs.argilla.io/latest/", "quote": "Argilla can be used for collecting human feedback for a wide variety of AI projects like traditional NLP (text classification, NER, etc.), LLMs (RAG, preference tuning, etc.), or multimodal models (text to image, etc.)."},
+  {"field": "what_it_does_ko", "url": "https://docs.argilla.io/latest/", "quote": "Deploy Argilla for free on the Hugging Face Hub or with Docker . Install the Python SDK with pip and create your first project."},
+  {"field": "what_it_does_ko", "url": "https://github.com/argilla-io/argilla", "quote": "While we won't be adding new features going forward, we're committed to solve bug fixes and publish patches as needed."},
+  {"field": "key_features", "url": "https://argilla.io", "quote": "Domain experts focus on key data for language model fine-tuning, RLHF, and evaluation."},
+  {"field": "key_features", "url": "https://github.com/argilla-io/argilla", "quote": "label your data with filters, AI feedback suggestions and semantic search"},
+  {"field": "key_features", "url": "https://docs.argilla.io/latest/", "quote": "Distribute the annotation task"},
+  {"field": "key_features", "url": "https://docs.argilla.io/latest/", "quote": "Use webhooks to respond to server events"},
+  {"field": "key_features", "url": "https://docs.argilla.io/latest/", "quote": "Import and export datasets"},
+  {"field": "key_features", "url": "https://docs.argilla.io/latest/", "quote": "Manage users and credentials"},
+  {"field": "use_cases_ko", "url": "https://argilla.io", "quote": "I use Argilla specifically for active learning"},
+  {"field": "use_cases_ko", "url": "https://docs.argilla.io/latest/", "quote": "Argilla's programmatic approach lets you build workflows for continuous evaluation and model improvement."},
+  {"field": "pricing", "url": "https://docs.argilla.io/latest/", "quote": "Deploy Argilla for free on the Hugging Face Hub or with Docker ."},
+  {"field": "open_source", "url": "https://argilla.io", "quote": "Argilla open-source tool"},
+  {"field": "open_source", "url": "https://github.com/argilla-io/argilla", "quote": "We are an open-source community-driven project"},
+  {"field": "api", "url": "https://docs.argilla.io/latest/", "quote": "Python SDK\n Python SDK\n rg.Argilla"},
+  {"field": "platforms", "url": "https://github.com/argilla-io/argilla", "quote": "Or, play with the Argilla UI by signing in with your Hugging Face account:"},
+  {"field": "korean_support", "url": "https://argilla.io", "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [
+  {"official": "오픈소스 도구로 Hugging Face Hub나 Docker로 무료 배포 가능, 공개된 유료 요금제·가격 문의 안내 없음", "diff": "기존 분류 '엔터프라이즈(가격 문의)'와 달리 무료 오픈소스", "url": "https://docs.argilla.io/latest/"}
+ ],
+ "plan_change": []
+}

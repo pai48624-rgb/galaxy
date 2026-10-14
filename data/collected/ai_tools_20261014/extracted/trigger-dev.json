@@ -1,0 +1,196 @@
+{
+ "company": "Trigger.dev",
+ "one_liner_ko": "TypeScript로 오래 실행되는 내구성 있는 AI 에이전트와 워크플로를 만들고 배포하는 오픈소스 플랫폼",
+ "what_it_does_ko": "Trigger.dev는 TypeScript로 AI 에이전트를 만드는 오픈소스 플랫폼으로, 재시도·큐·관측·탄력적 확장을 갖춘 장시간 작업을 제공한다. 작업은 타임아웃 없이 실행되고, 새로고침·재배포·장애에도 살아남는 내구성 있는 채팅 에이전트를 만들 수 있다. 사람 승인을 기다리는 동안은 과금되지 않으며, Realtime으로 실행 상태와 LLM 응답을 프런트엔드에 스트리밍한다. 관리형 클라우드에서 실행하거나 자체 호스팅할 수 있다.",
+ "key_features": [
+  "타임아웃 없는 장시간 작업",
+  "내구성 있는 실행·재시도·큐·멱등성",
+  "사람 승인(human-in-the-loop)으로 작업 일시 정지",
+  "Realtime: 실행 상태 구독과 LLM 응답 스트리밍",
+  "OpenTelemetry 기반 실시간 추적·로그·오류 알림",
+  "빌드 확장: Python·FFmpeg·브라우저·시스템 패키지 실행",
+  "내구성 있는 cron 일정, React 훅, MCP 서버"
+ ],
+ "use_cases_ko": [
+  "새로고침·재배포에도 유지되는 AI 채팅 에이전트(예: 고객 지원)",
+  "미디어 처리·생성, 브라우저 자동화 같은 장시간 백그라운드 작업",
+  "여러 날에 걸친 이메일 마케팅 흐름 같은 예약 작업"
+ ],
+ "pricing": {
+  "free_tier": "있음 (월 $5 무료 크레딧, 동시 실행 20)",
+  "plans": [
+   {
+    "name": "Free",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "월 $5 무료 크레딧, 동시 실행 20, 팀원 5, 로그 1일",
+    "page_lang": "en"
+   },
+   {
+    "name": "Hobby",
+    "price": 10,
+    "currency": "USD",
+    "period": "month",
+    "limits": "월 $10 크레딧 포함, 동시 실행 50, 로그 7일",
+    "page_lang": "en"
+   },
+   {
+    "name": "Pro",
+    "price": 50,
+    "currency": "USD",
+    "period": "month",
+    "limits": "월 $50 크레딧 포함, 동시 실행 200+, 팀원 25+, 로그 30일",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": "USD",
+    "period": "month",
+    "limits": "맞춤",
+    "page_lang": "en"
+   },
+   {
+    "name": "실행 호출(run)",
+    "price": 2.5e-05,
+    "currency": "USD",
+    "period": "usage",
+    "limits": "실행당 $0.000025(1만 회당 $0.25), 컴퓨트는 초당 별도(Small 1x $0.0000338/초)",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://trigger.dev/pricing/"
+ },
+ "open_source": "Apache 2.0",
+ "api": "있음",
+ "platforms": [
+  "CLI",
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://trigger.dev",
+   "quote": "Trigger.dev | The open source platform for durable AI agents"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://trigger.dev",
+   "quote": "agents in TypeScript. Long-running tasks with retries, queues, AI observability, and elastic"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://trigger.dev",
+   "quote": "Build durable AI agents that survive refreshes, redeploys, and crashes."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://trigger.dev/product/",
+   "quote": "When one waits for someone to approve a tool call, it picks up from the line it stopped at, and you aren't billed for the wait."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://trigger.dev/pricing/",
+   "quote": "Absolutely. We have a self hosting guide right here ."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/triggerdotdev/trigger.dev",
+   "quote": "Execute your tasks with absolutely no timeouts"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/triggerdotdev/trigger.dev",
+   "quote": "Build rock solid agents and AI applications using our durable tasks, retries, queues and idempotency."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/triggerdotdev/trigger.dev",
+   "quote": "Programmatically pause your tasks until a human can approve, reject or give feedback."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/triggerdotdev/trigger.dev",
+   "quote": "Move your background jobs to the foreground by subscribing to runs or streaming AI responses to your app."
+  },
+  {
+   "field": "key_features",
+   "url": "https://trigger.dev/product/",
+   "quote": "Our live run page, powered by OpenTelemetry, provides a real-time trace view of each run as it executes."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/triggerdotdev/trigger.dev",
+   "quote": "Customize your deployed tasks with system packages – run browsers, Python scripts, FFmpeg and more."
+  },
+  {
+   "field": "key_features",
+   "url": "https://trigger.dev",
+   "quote": "Durable cron schedules\n Realtime updates & streaming\n React hooks\n MCP Server"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://trigger.dev",
+   "quote": "// Durable AI chat agent: survives refreshes, redeploys, and crashes"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://trigger.dev",
+   "quote": "Media processing \nMedia generation"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://trigger.dev/pricing/",
+   "quote": "such as multi-day email marketing flows"
+  },
+  {
+   "field": "pricing",
+   "url": "https://trigger.dev/pricing/",
+   "quote": "$ 5 / month free credits"
+  },
+  {
+   "field": "pricing",
+   "url": "https://trigger.dev/pricing/",
+   "quote": "$10 /month"
+  },
+  {
+   "field": "pricing",
+   "url": "https://trigger.dev/pricing/",
+   "quote": "$50 /month"
+  },
+  {
+   "field": "pricing",
+   "url": "https://trigger.dev/pricing/",
+   "quote": "($ 0.25 per 10,000 runs)"
+  },
+  {
+   "field": "pricing",
+   "url": "https://trigger.dev/pricing/",
+   "quote": "$0.0000338"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/triggerdotdev/trigger.dev",
+   "quote": "license-Apache%202.0"
+  },
+  {
+   "field": "api",
+   "url": "https://trigger.dev/pricing/",
+   "quote": "All plans are limited to 1,500 API requests per minute"
+  },
+  {
+   "field": "platforms",
+   "url": "https://trigger.dev/pricing/",
+   "quote": "Using our CLI you develop your tasks locally with hot reloading."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://trigger.dev",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

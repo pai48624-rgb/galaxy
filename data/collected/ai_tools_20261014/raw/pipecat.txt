@@ -1,0 +1,248 @@
+=== [home] https://www.pipecat.ai/ (lang=en)
+Pipecat 
+ Skip to content 
+ Pipecat home Resources 
+ Deploy 
+ Enterprise 
+ pipecat-ai 16.4k on GitHub 
+ Documentation 
+ Pipecat is the most widely used open source ecosystem for building voice and multimodal AI agents
+ Maintained by Daily with the support of the Pipecat developer community
+ Pipeline Soniox + OpenAI + Cartesia 
+ Try live example 
+ Get started Learn Pipecat 
+ ~ uv add pipecat-ai 
+ Enterprises building with Pipecat
+ Production-grade agents run on Pipecat
+ Build, test and scale voice and video AI applications
+ Multi-Modal Orchestration
+ Coordinate voice, video, text, and images in one pipeline, with frame-level control over every step of the conversation.
+ Use Any Model
+ Swap speech, language, and vision services from any of 200+ integrated providers and services — usually one line of code.
+ Built for Real-Time
+ Frames stream through the pipeline as they're produced. No stage waits on the one before it, so the agent starts responding while you're still talking.
+ Human-like Conversation
+ Interruption handling, turn detection, and smart context management make agents feel natural to talk to.
+ Multi-Agent Workflows
+ Hand off to subagents for long-running tools and complex tasks, and use Pipecat Flows when a conversation needs to follow a defined path.
+ Any Transport: WebRTC, SIP, PSTN
+ Client SDKs and UI Kit
+ Metrics, Traces, OpenTelemetry
+ Orchestration, and more
+ Compose a pipeline, connect a transport, and add tools. Then test it and watch it run.
+ Start with one command 
+ Pipecat's CLI scaffolds a runnable project and wires up your coding agent. It registers the Pipecat Context Hub's MCP server so your agent codes using Pipecat's current APIs, not its training data.
+ Copy command $ pipecat init 
+ Project directory [pipecat-bot]: flower-shop 
+ ✓ Wrote flower-shop/AGENTS.md 
+ ✓ Wrote flower-shop/CLAUDE.md 
+ ? How do you want to build? 
+ ❯ Build with a coding agent (recommended) 
+ Scaffold a runnable bot now 
+ ✓ Wrote flower-shop/GETTING_STARTED.md 
+ ✓ Registered the Context Hub MCP server 
+ ✓ Built the Context Hub index (2m 47s) 
+ Your project is ready. 
+ Read the docs More examples 
+ Compose a pipeline 
+ Connect over WebRTC and telephony 
+ Give your agent tools 
+ Run evals, not phone calls 
+ Observe every turn 
+ Copy command $ pipecat init 
+ Project directory [pipecat-bot]: flower-shop 
+ ✓ Wrote flower-shop/AGENTS.md 
+ ✓ Wrote flower-shop/CLAUDE.md 
+ ? How do you want to build? 
+ ❯ Build with a coding agent (recommended) 
+ Scaffold a runnable bot now 
+ ✓ Wrote flower-shop/GETTING_STARTED.md 
+ ✓ Registered the Context Hub MCP server 
+ ✓ Built the Context Hub index (2m 47s) 
+ Your project is ready. 
+ Read the docs More examples 
+ Run your agents on any infrastructure
+ From your own servers to fully managed cloud — pick the deployment model that fits your team, and change it as you grow.
+ Self-hosted
+ Pipecat is open source and runs wherever Python runs. Deploy agents on your own infrastructure.
+ Learn more 
+ Pipecat Cloud
+ Ship to production without managing infrastructure. Pipecat Cloud runs, scales, and observes your agents for you.
+ Learn more 
+ Pipecat Enterprise
+ Meet security, compliance, and procurement needs with Pipecat Cloud deployed in your own environment, including AWS, Azure, and GCP, backed by enterprise support.
+ Learn more 
+ Enterprise support
+ Get expert support and FDE hours from the team that created Pipecat.
+ Work with the engineers behind Pipecat — on architecture reviews, latency tuning, custom deployments, and more — from your first prototype to enterprise scale.
+ Talk to us 
+ Ready to build?
+ Start building with the Pipecat docs, MCP, and dozens of ready-to-run examples for voice and multimodal agents.
+ Read the docs View on GitHub 
+ Stay up to the date
+ Learn about our community, events, webinars and more.
+ Join our Discord 
+ pipecat.ai 
+ © 2026 Daily, Inc. | Privacy Policy | Cookies 
+ Resources
+ Documentation 
+ Benchmarks 
+ MCP 
+ Voice AI Primer 
+ Events 
+ Platform
+ Pipecat Cloud 
+ Pipecat Enterprise 
+ Pipecat Flows 
+ Gradient Bang 
+ Community
+ GitHub 
+ Discord
+
+=== [about] https://docs.pipecat.ai/overview/introduction (lang=en)
+Pipecat Documentation - Pipecat 
+ Documentation Index
+ Fetch the complete documentation index at: /llms.txt 
+ Use this file to discover all available pages before exploring further.
+ Skip to main content 
+ Pipecat home page 
+ Search...
+ ⌘ K 
+ Join the Discord 
+ Github 
+ Search... 
+ Navigation 
+ Overview 
+ Pipecat Documentation
+ Overview 
+ Pipecat 
+ Pipecat Clients 
+ Pipecat Cloud & Enterprise 
+ API Reference 
+Pipecat Events 
+Community 
+GitHub 
+Changelog 
+ Overview 
+ Introduction 
+ Pipecat 
+ Pipecat Clients 
+ Pipecat Cloud & Enterprise 
+ On this page 
+ The Pipecat Ecosystem 
+ How It All Fits Together 
+ Getting Started 
+ Community 
+ Enterprise Support 
+ Overview
+ Pipecat Documentation
+ Copy page Copy page 
+ Documentation for the Pipecat ecosystem: the open source framework, the client SDKs, and Pipecat Cloud managed hosting.
+ Copy page Copy page 
+ Pipecat is an open source ecosystem for building voice and multimodal AI agents. It provides everything you need to create, deploy, and scale real-time AI applications that can see, hear, and speak. The framework is free to use under the BSD-2 license, and works with any AI provider and any hosting environment — you pay only for the services you choose. 
+ ​ 
+ The Pipecat Ecosystem 
+ Pipecat
+ Open source Python framework for building voice and multimodal AI pipelines.
+Orchestrate 150+ AI services with ultra-low latency. 
+ Pipecat Clients
+ Client SDKs for JavaScript, React, React Native, iOS, Android, and C++.
+Connect users to your agents via web and mobile. 
+ Pipecat Cloud & Enterprise
+ Hosted infrastructure for deploying and scaling Pipecat agents, either fully
+managed in Daily-hosted regions or with agents running in your own VPC. 
+ ​ 
+ How It All Fits Together 
+ A typical Pipecat application has a client and a server . The client connects users via browser, mobile app, or phone. The server runs a Pipecat pipeline that processes audio, runs LLMs, and generates speech in real-time. Your hosting provider — Pipecat Cloud or self-hosted — manages deployment and scales instances to handle concurrent sessions. 
+ ​ 
+ Getting Started 
+ 1
+ Build your first agent
+ Follow the Quickstart to create a voice
+AI bot in 5 minutes. 
+ 2
+ Learn core concepts
+ Work through the Learning Pipecat guide to
+understand pipelines, processors, and transports. 
+ 3
+ Add a client
+ Connect users to your agent with a Client SDK for
+web or mobile. 
+ 4
+ Deploy
+ Ship to production with Pipecat Cloud or
+ self-host on your own infrastructure. 
+ ​ 
+ Community 
+ Discord
+ Connect with other developers, share projects, and get support. 
+ GitHub
+ Explore the source code, open issues, and contribute. 
+ ​ 
+ Enterprise Support 
+ Pipecat is built and maintained by Daily. If your team is taking voice agents to production, we’re here to help. 
+ Learn more about enterprise support 
+ Pipecat
+ x github discord 
+ Powered by This documentation is built and hosted on Mintlify, a developer documentation platform
+
+=== [meta] https://www.pipecat.ai/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/pipecat-ai/pipecat
+<h1><div align="center">
+ <img alt="pipecat" width="300px" height="auto" src="https://raw.githubusercontent.com/pipecat-ai/pipecat/main/pipecat.png">
+</div></h1>
+
+[![PyPI](https://img.shields.io/pypi/v/pipecat-ai)](https://pypi.org/project/pipecat-ai) ![Tests](https://github.com/pipecat-ai/pipecat/actions/workflows/tests.yaml/badge.svg) [![codecov](https://codecov.io/gh/pipecat-ai/pipecat/graph/badge.svg?token=LNVUIVO4Y9)](https://codecov.io/gh/pipecat-ai/pipecat) [![Docs](https://img.shields.io/badge/Documentation-blue)](https://docs.pipecat.ai) [![Discord](https://img.shields.io/discord/1239284677165056021)](https://discord.gg/pipecat) [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/pipecat-ai/pipecat)
+
+# 🎙️ Pipecat: Real-Time Voice & Multimodal AI Agents
+
+**Pipecat** is an open-source Python framework for building real-time voice and multimodal conversational agents. Build a single voice agent or a full multi-agent system where specialists hand off, fan out in parallel, and coordinate over a shared bus, locally or distributed across processes and machines. Orchestrate audio and video, AI services, transports, and conversation pipelines effortlessly, so you can focus on what makes your agents unique.
+
+> Want to dive right in? Run `pipecat init quickstart` or follow the [quickstart guide](https://docs.pipecat.ai/getting-started/quickstart).
+
+## 🚀 What you can build
+
+- **Voice Assistants** – natural, streaming conversations with AI
+- **Multi-Agent Systems** – specialists that hand off, fan out in parallel, or run as sidecars over a shared bus
+- **AI Companions** – coaches, meeting assistants, characters
+- **Multimodal Interfaces** – voice, video, images, and more
+- **Interactive Storytelling** – creative tools with generative media
+- **Business Agents** – customer intake, support bots, guided flows
+- **Complex Dialog Systems** – design logic with structured conversations
+
+## 🧠 Why Pipecat?
+
+- **Voice-first**: Integrates speech recognition, text-to-speech, and conversation handling
+- **Pluggable**: Supports many AI services and tools
+- **Composable Pipelines**: Build complex behavior from modular components
+- **Multi-Agent Ready**: Each pipeline is an agent. Compose them with handoff, parallel fan-out, sidecar workers, or distributed deployments
+- **Real-Time**: Ultra-low latency interaction with different transports (e.g. WebSockets or WebRTC)
+
+## 🌐 Pipecat ecosystem
+
+### 📱 Client SDKs
+
+Building client applications? You can connect to Pipecat from any platform using our official SDKs:
+
+<a href="https://docs.pipecat.ai/client/js/introduction">JavaScript</a> | <a href="https://docs.pipecat.ai/client/react/introduction">React</a> | <a href="https://docs.pipecat.ai/client/react-native/introduction">React Native</a> |
+<a href="https://docs.pipecat.ai/client/ios/introduction">Swift</a> | <a href="https://docs.pipecat.ai/client/android/introduction">Kotlin</a> | <a href="https://docs.pipecat.ai/client/c++/introduction">C++</a> | <a href="https://github.com/pipecat-ai/pipecat-esp32">ESP32</a>
+
+### 🧭 Structured conversations
+
+Need predefined or dynamic conversation paths with state management? [Pipecat Flows](https://docs.pipecat.ai/guides/features/pipecat-flows) is built into Pipecat. Browse the [examples](https://github.com/pipecat-ai/pipecat/tree/main/examples/flows) to see it in action.
+
+### 🪄 Beautiful UIs
+
+Want to build beautiful and engaging experiences? Check out [Pipecat UI](https://github.com/pipecat-ai/pipecat-ui), a shadcn registry of components for building voice AI applications. Browse the [documentation](https://ui.pipecat.ai/) for component previews and installation guides.
+
+### 🛠️ Create and deploy projects
+
+The [Pipecat CLI](https://docs.pipecat.ai/api-reference/cli/overview) ships with `pipecat-ai` — install it with `uv tool install "pipecat-ai[cli]"`. Run `pipecat init` to start a project: it sets you up so an AI coding assistant (Claude Code, Codex) builds it for you, and can scaffold a runnable bot in under a minute. Then use the CLI to monitor and deploy your agent to production.
+
+### 🔍 Debugging
+
+Looking for help debugging your pipeline and processors? Check out [Whisker](https://githu

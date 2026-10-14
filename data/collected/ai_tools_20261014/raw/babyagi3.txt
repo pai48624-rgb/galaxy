@@ -1,0 +1,204 @@
+=== [home] https://babyagi.org/ (lang=en-US)
+BabyAGI | babyagi 
+ babyagi 
+ BabyAGI
+ [!NOTE]
+The original BabyAGI from March 2023 introduced task planning as a method for developing autonomous agents. This project has been archived and moved to the babyagi_archive repo (September 2024 snapshot).
+ [!CAUTION]
+This is a framework built by Yohei who has never held a job as a developer. The purpose of this repo is to share ideas and spark discussion and for experienced devs to play with. Not meant for production use. Use with cautioun.
+ This newest BabyAGI is an experimental framework for a self-building autonomous agent. Earlier efforts to expand BabyAGI have made it clear that the optimal way to build a general autonomous agent is to build the simplest thing that can build itself.
+ Check out this introductory X/Twitter thread for a simple overview.
+ The core is a new function framework ( functionz ) for storing, managing, and executing functions from a database. It offers a graph-based structure for tracking imports, dependent functions, and authentication secrets, with automatic loading and comprehensive logging capabilities. Additionally, it comes with a dashboard for managing functions, running updates, and viewing logs.
+ Table of Contents
+ Quick Start 
+ Basic Usage 
+ Function Metadata 
+ Function Loading 
+ Key Dependencies 
+ Execution Environment 
+ Log 
+ Dashboard 
+ Pre-loaded Functions 
+ Future/Draft Features 
+ API Reference 
+ Contributing 
+ License 
+ Quick Start
+ To quickly check out the dashboard and see how it works:
+ Install BabyAGI: 
+ pip install babyagi
+ Import BabyAGI and load the dashboard: 
+ import babyagi 
+ if __name__ == "__main__" : 
+ app = babyagi . create_app ( '/dashboard' ) 
+ app . run ( host = '0.0.0.0' , port = 8080 ) 
+ Navigate to the dashboard: 
+ Open your browser and go to http://localhost:8080/dashboard to access the BabyAGI dashboard.
+ Basic Usage
+ Start by importing babyagi and registering your functions. Here’s how to register two functions, where one depends on the other:
+ import babyagi 
+ # Register a simple function
+ @ babyagi . register_function () 
+ def world (): 
+ return "world" 
+ # Register a function that depends on 'world'
+ @ babyagi . register_function ( dependencies = [ "world" ]) 
+ def hello_world (): 
+ x = world () 
+ return f "Hello { x } !" 
+ # Execute the function
+ print ( babyagi . hello_world ()) # Output: Hello world!
+ if __name__ == "__main__" : 
+ app = babyagi . create_app ( '/dashboard' ) 
+ app . run ( host = '0.0.0.0' , port = 8080 ) 
+ Function Metadata
+ Functions can be registered with metadata to enhance their capabilities and manage their relationships. Here’s a more comprehensive example of function metadata, showing logical usage of all fields:
+ import babyagi 
+ @ babyagi . register_function ( 
+ imports = [ "math" ], 
+ dependencies = [ "circle_area" ], 
+ key_dependencies = [ "openai_api_key" ], 
+ metadata = { 
+ "description" : "Calculates the volume of a cylinder using the circle_area function." 
+ } 
+ ) 
+ def cylinder_volume ( radius , height ): 
+ import math 
+ area = circle_area ( radius ) 
+ return area * height 
+ Available Metadata Fields: 
+ imports : List of external libraries the function depends on.
+ dependencies : List of other functions this function depends on.
+ key_dependencies : List of secret keys required by the function.
+ metadata["description"] : A description of what the function does.
+ Function Loading
+ In addition to using register_function , you can use load_function to load plugins or draft packs of functions. BabyAGI comes with built-in function packs, or you can load your own packs by pointing to the file path.
+ You can find available function packs in babyagi/functionz/packs .
+ Loading Custom Function Packs: 
+ import babyagi 
+ # Load your custom function pack
+ babyagi . load_functions ( "path/to/your/custom_functions.py" ) 
+ This approach makes function building and management easier by organizing related functions into packs.
+ Key Dependencies
+ You can store key_dependencies directly from your code or manage them via the dashboard.
+ Storing Key Dependencies from Code: 
+ import babyagi 
+ # Add a secret key
+ babyagi . add_key_wrapper ( 'openai_api_key' , 'your_openai_api_key' ) 
+ Adding Key Dependencies via Dashboard: 
+ Navigate to the dashboard and use the add_key_wrapper feature to securely add your secret keys.
+ Execution Environment
+ BabyAGI automatically loads essential function packs and manages their dependencies, ensuring a seamless execution environment. Additionally, it logs all activities, including the relationships between functions, to provide comprehensive tracking of function executions and dependencies.
+ Log
+ BabyAGI implements a comprehensive logging system to track all function executions and their interactions. The logging mechanism ensures that every function call, including its inputs, outputs, execution time, and any errors, is recorded for monitoring and debugging purposes.
+ Key Logging Features: 
+ Execution Tracking: Logs when a function starts and finishes execution, including the function name, arguments, keyword arguments, and execution time.
+ Error Logging: Captures and logs any errors that occur during function execution, providing detailed error messages for troubleshooting.
+ Dependency Management: Automatically resolves and logs dependencies between functions, ensuring that all required functions and libraries are loaded before execution.
+ Trigger Logging: Logs the execution of triggered functions, detailing which functions were triggered by others and their respective execution outcomes.
+ Comprehensive Records: Maintains a history of all function executions, enabling users to review past activities, understand function relationships, and analyze performance metrics.
+ How Triggers Work: 
+ Triggers are mechanisms that allow certain functions to be automatically executed in response to specific events or actions within the system. For example, when a function is added or updated, a trigger can initiate the generation of a description for that function.
+ Triggers enhance the autonomy of BabyAGI by enabling automated workflows and reducing the need for manual intervention. However, it’s essential to manage triggers carefully to avoid unintended recursive executions or conflicts between dependent functions.
+ Dashboard
+ The BabyAGI dashboard offers a user-friendly interface for managing functions, monitoring executions, and handling configurations. Key features include:
+ Function Management: Register, deregister, and update functions directly from the dashboard.
+ Dependency Visualization: View and manage dependencies between functions to understand their relationships.
+ Secret Key Management: Add and manage secret keys securely through the dashboard interface.
+ Logging and Monitoring: Access comprehensive logs of function executions, including inputs, outputs, and execution times.
+ Trigger Management: Set up triggers to automate function executions based on specific events or conditions.
+ Accessing the Dashboard: 
+ After running your application, navigate to http://localhost:8080/dashboard to access the BabyAGI dashboard.
+ Pre-loaded Functions Summary
+ BabyAGI includes two pre-loaded function packs:
+ Default Functions ( packs/default_functions.py ): 
+ Function Execution: Run, add, update, or retrieve functions and versions.
+ Key Management: Add and retrieve secret keys.
+ Triggers: Add triggers to execute functions based on others.
+ Logs: Retrieve logs with optional filters.
+ AI Functions ( packs/ai_genera
+
+=== [meta] https://babyagi.org/
+html lang: en-US
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/yoheinakajima/babyagi3
+# BabyAGI 3
+
+A minimal AI agent you configure once, then run through natural language. Tell it to remember things, research topics, send emails, schedule tasks, and learn new skills.
+
+> ⚠️ **Cost warning**: BabyAGI can become expensive if you run many automations, background objectives, or premium models. Review model/config choices before long-running use: [Configuration](#configuration), [MODELS.md](MODELS.md), and [metrics/README.md](metrics/README.md).
+>
+> ⚠️ **Production warning**: If you deploy beyond localhost, read [Production hardening](#production-hardening) before exposing any API/webhook endpoints.
+
+> **Core philosophy**: Everything is a message in a conversation. The entire system is one loop: `input -> LLM -> action -> execute -> output`.
+
+## Quick Start
+
+```bash
+# Install
+git clone https://github.com/yoheinakajima/babyagi3 && cd babyagi3
+uv sync  # or: pip install -e .
+
+# Set one LLM API key (Anthropic OR OpenAI)
+export ANTHROPIC_API_KEY="sk-ant-..."
+# or: export OPENAI_API_KEY="sk-..."
+
+# Run
+python main.py
+```
+
+That's it. You now have a persistent AI agent with memory, scheduling, background tasks, and web search.
+
+Verbose mode is on by default — you'll see tool calls, webhook activity, and background operations as they happen. To turn it off, just tell the agent "turn off verbose" or type `/verbose off`.
+
+## Dev Bootstrap (one command)
+
+```bash
+uv sync --group dev && uv run pytest -q
+```
+
+This installs runtime + development dependencies, then runs the test suite in one step.
+
+## Initialization
+
+BabyAGI figures out the right setup path automatically — no manual file management needed.
+
+### How it works
+
+On first run, BabyAGI checks whether it has enough configuration to start:
+
+1. **Already configured?** If `OWNER_NAME` and `OWNER_EMAIL` are set (via environment variables or `config.yaml`), the agent starts immediately — no wizard, no prompts, no extra steps.
+2. **Need info?** If the minimum config is missing, an LLM-powered setup conversation guides you through onboarding before the agent starts. You can ask it questions ("what does AgentMail do?", "do I need SendBlue?") and provide info in any order.
+3. **Already ran setup before?** The agent remembers and skips straight to startup.
+
+In every case, the agent starts normally after initialization — no restart required.
+
+### What gets collected
+
+At minimum, the setup assistant needs your **name** and **email**. It will also walk you through setting up:
+
+- **Email channel ([AgentMail](https://agentmail.to))** — gives your agent its own email address for sending reports, handling signups, and email communication. Free tier available.
+- **SMS/iMessage channel ([SendBlue](https://sendblue.co))** — lets you text your agent from your phone. Needs an API key, secret, and the SendBlue phone number from your dashboard. Also needs your personal phone number so the agent knows which texts are from you.
+
+### Providing API keys
+
+API keys can be provided in several ways. All options persist across restarts unless noted:
+
+1. **Secure prompt during setup (recommended)** — after the setup conversation, a secure prompt asks for each API key. Input is hidden (never echoed) and never sent to the AI. Keys are stored in the system keyring.
+2. **Environment variables** — `export SENDBLUE_API_KEY="..."` before running
+3. **`.env` file** — create a `.env` file in the project root with `KEY=value` lines (loaded automatically if `python-dotenv` is installed)
+4. **Replit secrets** — if running on Replit, add secrets in the Secrets panel (they appear as env vars)
+5. **During the setup chat** — you can paste keys directly in the conversation. They work and are persisted to keyring, but they do pass through the LLM API. The secure prompt (option 1) is preferred.
+6. **After setup** — tell the agent directly: *"set the SendBlue API key to ..."* or *"update my phone number to +15559876543"*. These are persisted to keyring.
+
+### Updating configuration after setup
+
+You can change any configuration value at any time by telling the agent:
+
+```
+You: Update my phone number to +15559876543
+You: Set the SendBlue phone number to +15551234567
+You: Change the AgentMail API key to am_xxx
+You: Update my

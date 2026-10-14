@@ -1,0 +1,178 @@
+{
+ "company": "Airbyte",
+ "one_liner_ko": "700개 이상의 시스템을 분석·AI 추론 계층에 연결해 데이터를 복제하고, 검색하고, 에이전트가 실행하게 하는 데이터 이동 플랫폼.",
+ "what_it_does_ko": "Airbyte는 오픈소스 데이터 복제 플랫폼이자 AI 에이전트용 컨텍스트 계층이다. API·데이터베이스·파일 등 수백 개 소스의 데이터를 웨어하우스·데이터 레이크·데이터베이스로 옮긴다. Context Store로 여러 시스템을 의미 기반으로 검색하고, 에이전트가 커넥터를 통해 시스템에 읽고 쓰게 한다. 웨어하우스·VPC·온프레미스 배포와, 데이터 플레인은 고객 환경에 두는 하이브리드 배포를 지원한다.",
+ "key_features": [
+  "700개 이상 커넥터로 데이터 복제",
+  "변경 데이터 캡처(CDC)와 스키마 전파",
+  "엔티티 해석·의미 검색을 하는 Context Store",
+  "AI 에이전트가 시스템을 읽고 쓰는 Airbyte Agents",
+  "노코드 Connector Builder와 로우코드 CDK",
+  "Airbyte API·Terraform Provider·PyAirbyte",
+  "하이브리드·인바운더리 배포"
+ ],
+ "use_cases_ko": [
+  "여러 소스의 데이터를 웨어하우스·레이크로 통합(ELT)",
+  "AI 에이전트에 업무 데이터 실시간 접근 제공",
+  "규제 산업의 자체 경계 내 데이터 이동"
+ ],
+ "pricing": {
+  "free_tier": "체험만 (14일 무료 체험, 400크레딧=$2,000 사용량) / 자체 호스팅 오픈소스 Airbyte Core",
+  "plans": [
+   {
+    "name": "Standard",
+    "price": 20,
+    "currency": "USD",
+    "period": "month",
+    "limits": "시작가, 5크레딧 포함, 추가 크레딧 $5, 최대 1시간 동기화",
+    "page_lang": "en-US"
+   },
+   {
+    "name": "Plus",
+    "price": 189,
+    "currency": "USD",
+    "period": "month",
+    "limits": "40크레딧(100크레딧 $449~2,000크레딧 $4,999), 초과 $5/크레딧, 15분 동기화, SSO, 워크스페이스 2개",
+    "page_lang": "en-US"
+   },
+   {
+    "name": "Pro",
+    "price": null,
+    "currency": "USD",
+    "period": "month",
+    "limits": "맞춤, 용량(Data Workers) 기반, 최대 5분 동기화, RBAC",
+    "page_lang": "en-US"
+   },
+   {
+    "name": "Enterprise Flex",
+    "price": null,
+    "currency": "USD",
+    "period": "month",
+    "limits": "맞춤, 인바운더리·하이브리드 배포",
+    "page_lang": "en-US"
+   }
+  ],
+  "pricing_url": "https://airbyte.com/pricing"
+ },
+ "open_source": "MIT / ELv2",
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://airbyte.com",
+   "quote": "© 2026 Airbyte. All rights reserved."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://airbyte.com",
+   "quote": "Connect 700+ systems to your inference and analytics layers. Replicate data, search semantically, and act with agents across your entire business."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.airbyte.com/",
+   "quote": "Airbyte is an open source data replication platform and context layer for AI agents."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://airbyte.com",
+   "quote": "The data plane runs in your environment, not ours. We run the control plane so you don't have to."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://airbyte.com",
+   "quote": "Deploy in your warehouse, VPC, or on-premises."
+  },
+  {
+   "field": "key_features",
+   "url": "https://airbyte.com",
+   "quote": "The Context Store provides entity resolution and semantic search"
+  },
+  {
+   "field": "key_features",
+   "url": "https://airbyte.com/pricing",
+   "quote": "Change Data Capture (CDC)\n Schema Propagation"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/airbytehq/airbyte",
+   "quote": "Create connectors in minutes with our [no-code Connector Builder]"
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.airbyte.com/",
+   "quote": "Airbyte Agents is a data and context layer for AI agents."
+  },
+  {
+   "field": "key_features",
+   "url": "https://airbyte.com/pricing",
+   "quote": "Airbyte API\n Terraform Provider\n PyAirbyte"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://docs.airbyte.com/",
+   "quote": "Consolidate data from hundreds of sources into your data warehouses, data lakes, and databases."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://airbyte.com/pricing",
+   "quote": "In-boundary and hybrid deployment for regulated industries."
+  },
+  {
+   "field": "pricing",
+   "url": "https://airbyte.com/pricing",
+   "quote": "Start with a 14-day free trial. 400 credits included ($2,000 of usage)."
+  },
+  {
+   "field": "pricing",
+   "url": "https://airbyte.com/pricing",
+   "quote": "5 credits included. Extra credits $5 each."
+  },
+  {
+   "field": "pricing",
+   "url": "https://airbyte.com/pricing",
+   "quote": "40 credits / $189/mo 100 credits / $449/mo"
+  },
+  {
+   "field": "pricing",
+   "url": "https://airbyte.com/pricing",
+   "quote": "Talk to sales for capacity-based pricing."
+  },
+  {
+   "field": "pricing",
+   "url": "https://airbyte.com/pricing",
+   "quote": "Prefer to self-host? Try Airbyte Core, our open source offering."
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/airbytehq/airbyte",
+   "quote": "label=license&message=MIT&color=white"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/airbytehq/airbyte",
+   "quote": "label=license&message=ELv2&color=white"
+  },
+  {
+   "field": "api",
+   "url": "https://docs.airbyte.com/",
+   "quote": "Interact with Airbyte programmatically using our API, Terraform provider, and more."
+  },
+  {
+   "field": "platforms",
+   "url": "https://docs.airbyte.com/",
+   "quote": "Choose how to work with your data: the web app, MCP server, Python SDK, or HTTP API."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://airbyte.com",
+   "quote": "html lang: en-US\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

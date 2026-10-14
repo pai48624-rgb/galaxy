@@ -1,0 +1,96 @@
+{
+ "company": null,
+ "one_liner_ko": "Claude·Cursor 등 AI 클라이언트가 Microsoft Excel 없이 엑셀 파일을 만들고 읽고 편집하게 하는 오픈소스 MCP 서버",
+ "what_it_does_ko": "Model Context Protocol(MCP) 서버로, AI 클라이언트가 차트·피벗테이블·수식·표 등을 포함한 엑셀 파일을 다루게 합니다. openpyxl 기반이라 Microsoft Excel이 필요 없고 윈도·맥·리눅스에서 실행됩니다. 내장 엔진이 약 260개 함수를 계산해 엑셀에서 연 적 없는 파일도 값을 돌려줍니다. 큰 파일은 스트리밍으로 페이지 단위로 읽습니다. 폴더 제한·읽기 전용 모드 등 안전 장치가 있습니다.",
+ "key_features": [
+  "차트·Excel 2016 차트 유형 생성",
+  "엑셀이 새로 고치는 실제 피벗테이블",
+  "내장 수식 엔진(약 260개 함수)",
+  "대용량 파일 스트리밍 읽기",
+  "VBA 읽기(쓰기는 옵트인, 매크로 실행 안 함)",
+  "폴더 제한·읽기 전용 모드 등 안전 설계"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": "있음 (오픈소스, MIT)",
+  "plans": [],
+  "pricing_url": "https://github.com/haris-musa/excel-mcp-server"
+ },
+ "open_source": "MIT",
+ "api": "있음",
+ "platforms": [
+  "윈도",
+  "맥",
+  "리눅스"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/haris-musa/excel-mcp-server",
+   "quote": "It is built on `openpyxl`, needs **no Microsoft"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/haris-musa/excel-mcp-server",
+   "quote": "Claude, Cursor, VS Code Copilot, Codex and other AI clients create, read and edit Excel files:"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/haris-musa/excel-mcp-server",
+   "quote": "The Excel 2016 chart types: waterfall, histogram, Pareto, box and whisker, treemap, sunburst"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/haris-musa/excel-mcp-server",
+   "quote": "Real PivotTables that Excel refreshes (grouping, calculated fields"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/haris-musa/excel-mcp-server",
+   "quote": "Formulas are calculated without Excel by a built-in engine (about 260 functions"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/haris-musa/excel-mcp-server",
+   "quote": "Reads stream the workbook and return pages, so memory stays flat on sheets with hundreds of"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/haris-musa/excel-mcp-server",
+   "quote": "Writing VBA is off unless you start the server with"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/haris-musa/excel-mcp-server",
+   "quote": "Optional folder confinement, a formula safety check, read-only mode, localhost-only HTTP by"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/haris-musa/excel-mcp-server",
+   "quote": "An open-source [Model Context Protocol](https://modelcontextprotocol.io) (MCP) server that lets"
+  },
+  {
+   "field": "pricing",
+   "url": "https://github.com/haris-musa/excel-mcp-server",
+   "quote": "An open-source [Model Context Protocol](https://modelcontextprotocol.io) (MCP) server that lets"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/haris-musa/excel-mcp-server",
+   "quote": "<img src=\"https://img.shields.io/badge/License-MIT-yellow.svg\" alt=\"License: MIT\">"
+  },
+  {
+   "field": "api",
+   "url": "https://github.com/haris-musa/excel-mcp-server",
+   "quote": "An open-source [Model Context Protocol](https://modelcontextprotocol.io) (MCP) server that lets"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/haris-musa/excel-mcp-server",
+   "quote": "Excel**, and runs on Windows, macOS and Linux."
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

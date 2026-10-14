@@ -1,0 +1,48 @@
+=== [github] https://github.com/AI4Finance-Foundation/FinGPT
+<div align="center">
+<img align="center" width="30%" alt="image" src="https://github.com/AI4Finance-Foundation/FinGPT/assets/31713746/e0371951-1ce1-488e-aa25-0992dafcc139">
+</div>
+
+# FinGPT: Open-Source Financial Large Language Models
+[![Downloads](https://static.pepy.tech/badge/fingpt)](https://pepy.tech/project/fingpt)
+[![Downloads](https://static.pepy.tech/badge/fingpt/week)](https://pepy.tech/project/fingpt)
+[![Join Discord](https://img.shields.io/badge/Discord-Join-blue)](https://discord.gg/trsr8SXpW5)
+[![Python 3.8](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-360/)
+[![PyPI](https://img.shields.io/pypi/v/fingpt.svg)](https://pypi.org/project/fingpt/)
+![License](https://img.shields.io/github/license/AI4Finance-Foundation/fingpt.svg?color=brightgreen)
+![](https://img.shields.io/github/issues-raw/AI4Finance-Foundation/fingpt?label=Issues)
+![](https://img.shields.io/github/issues-closed-raw/AI4Finance-Foundation/fingpt?label=Closed+Issues)
+![](https://img.shields.io/github/issues-pr-raw/AI4Finance-Foundation/fingpt?label=Open+PRs)
+![](https://img.shields.io/github/issues-pr-closed-raw/AI4Finance-Foundation/fingpt?label=Closed+PRs)
+
+<div align="center">
+<img align="center" src=figs/logo_transparent_background.png width="40%"/>
+</div>
+
+Let us not expect Wall Street to open-source LLMs or open APIs, due to FinTech institutes' internal regulations and policies.
+
+[Blueprint of FinGPT](https://ai4finance.org/research/fingpt-open-source-finllm.html)
+
+<https://huggingface.co/FinGPT>
+
+![Visitors](https://api.visitorbadge.io/api/VisitorHit?user=AI4Finance-Foundation&repo=FinGPT&countColor=%23B17A)
+[![Discord](https://dcbadge.limes.pink/api/server/trsr8SXpW5?v=20260320)](https://discord.gg/trsr8SXpW5)
+
+## Project Contributors
+
+FinGPT is an open-source financial large language model project developed and maintained by the AI4Finance Foundation.
+
+Key contributors include:
+
+- [**Hongyang (Bruce) Yang**](https://www.linkedin.com/in/brucehy/) – research and development on financial large language models and related applications
+- [other contributors…]
+
+## What's New:
+ - [Model Release] Nov, 2023: We release [FinGPT-Forecaster](https://github.com/AI4Finance-Foundation/FinGPT/tree/master/fingpt/FinGPT_Forecaster)!  🔥[Demo](https://huggingface.co/spaces/FinGPT/FinGPT-Forecaster), [Medium Blog](https://medium.datadriveninvestor.com/introducing-fingpt-forecaster-the-future-of-robo-advisory-services-50add34e3d3c) & [Model](https://huggingface.co/FinGPT/fingpt-forecaster_dow30_llama2-7b_lora) are available on Huggingface🤗!
+ - [Paper Acceptance] Oct, 2023: ["FinGPT: Instruction Tuning Benchmark for Open-Source Large Language Models in Financial Datasets"](https://arxiv.org/abs/2310.04793) is accepted🎉 by [Instruction Workshop](https://an-instructive-workshop.github.io/) @ NeurIPS 2023 
+ - [Paper Acceptance] Oct, 2023: ["FinGPT: Democratizing Internet-scale Data for Financial Large Language Models"](https://arxiv.org/abs/2307.10485) is accepted🎉 by [Instruction Workshop](https://an-instructive-workshop.github.io/) @ NeurIPS 2023
+ - [Model Release] Oct, 2023: We release the [financial multi-task LLMs](https://huggingface.co/FinGPT) 🔥 produced when evaluating base-LLMs on [FinGPT-Benchmark](https://github.com/AI4Finance-Foundation/FinGPT/tree/master/fingpt/FinGPT_Benchmark)
+ - [Paper Acceptance] Sep, 2023: ["Enhancing Financial Sentiment Analysis via Retrieval Augmented Large Language Models"](https://arxiv.org/abs/2310.04027) is accepted🎉 by [ACM International Conference on AI in Finance (ICAIF-23)](https://ai-finance.org/icaif-23-accepted-papers/)
+ - [Model Release] Aug, 2023: We release the [financial sentiment analysis model](https://huggingface.co/FinGPT/fingpt-sentiment_llama2-13b_lora) 🔥
+ - [Paper Acceptance] Jul, 2023: ["Instruct-FinGPT: Financial Sentiment Analysis by Instruction Tuning of General-Purpose Large Language Models"](https://arxiv.org/abs/2306.12659) is accepted🎉 by [FinLLM 2023](https://finllm.github.io/workshop/#/fcb)@IJCAI 2023
+ - [Paper Acceptance] Jul, 2023: ["FinGPT: Open-Source Financial Large Language Models"](https://arxiv.org/abs/2306.06031) is accepted🎉 by [FinLL

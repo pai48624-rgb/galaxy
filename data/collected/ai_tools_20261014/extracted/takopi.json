@@ -1,0 +1,43 @@
+{
+ "company": "takopi (오픈소스 프로젝트)",
+ "one_liner_ko": "내 컴퓨터의 코딩 에이전트(Codex·Claude Code·OpenCode·Pi)를 텔레그램에 연결해 어디서나 작업을 보내고 진행 상황을 보는 도구.",
+ "what_it_does_ko": "Takopi는 사용자 컴퓨터에서 코딩 에이전트를 실행하고 이를 텔레그램과 연결한다. 어디서든 텔레그램으로 작업을 보내고 진행 상황을 실시간으로 보며, 터미널로 돌아와 이어서 작업할 수 있다. 여러 프로젝트와 브랜치(git worktree)를 동시에 다루고, 그룹 토픽을 저장소·브랜치에 연결할 수 있다. 기존 Anthropic·OpenAI 구독과 함께 쓰며 플러그인으로 엔진·전송 방식·명령을 확장한다.",
+ "key_features": [
+  "Codex·Claude Code·OpenCode·Pi 엔진을 텔레그램으로 연결",
+  "여러 저장소·브랜치를 git worktree로 동시 작업",
+  "명령·도구·파일 변경·경과 시간 실시간 스트리밍",
+  "채팅에서 이어가거나 터미널로 세션 재개",
+  "음성 메모·예약 메시지 등 텔레그램 기능 지원",
+  "저장소로 파일 보내기·가져오기",
+  "그룹 토픽을 저장소·브랜치에 연결",
+  "엔진·전송·명령 플러그인"
+ ],
+ "use_cases_ko": [
+  "혼자 개발할 때 텔레그램 대화로 코딩 에이전트에 일 시키기",
+  "팀이 포럼 토픽별로 여러 저장소 작업 정리"
+ ],
+ "pricing": {"free_tier": "불명", "plans": [], "pricing_url": null},
+ "open_source": null,
+ "api": "불명",
+ "platforms": ["CLI"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://takopi.dev", "quote": "Takopi documentation ¶"},
+  {"field": "one_liner_ko", "url": "https://github.com/banteg/takopi", "quote": "telegram bridge for codex, claude code, opencode, pi. manage multiple projects and worktrees, stream progress, and resume sessions anywhere."},
+  {"field": "what_it_does_ko", "url": "https://takopi.dev", "quote": "Takopi runs coding agents on your computer and bridges them to Telegram. Send tasks from anywhere, watch progress stream live, pick up when back at the terminal."},
+  {"field": "what_it_does_ko", "url": "https://github.com/banteg/takopi", "quote": "works with existing anthropic and openai subscriptions"},
+  {"field": "what_it_does_ko", "url": "https://github.com/banteg/takopi", "quote": "takopi supports entrypoint-based plugins for engines, transports, and commands."},
+  {"field": "key_features", "url": "https://github.com/banteg/takopi", "quote": "projects and worktrees: work on multiple repos/branches simultaneously, branches are git worktrees"},
+  {"field": "key_features", "url": "https://github.com/banteg/takopi", "quote": "progress streaming: commands, tools, file changes, elapsed time"},
+  {"field": "key_features", "url": "https://github.com/banteg/takopi", "quote": "stateless resume: continue in chat or copy the resume line to pick up in terminal"},
+  {"field": "key_features", "url": "https://github.com/banteg/takopi", "quote": "works with telegram features like voice notes and scheduled messages"},
+  {"field": "key_features", "url": "https://github.com/banteg/takopi", "quote": "file transfer: send files to the repo or fetch files/dirs back"},
+  {"field": "key_features", "url": "https://github.com/banteg/takopi", "quote": "group chats and topics: map group topics to repo/branch contexts"},
+  {"field": "use_cases_ko", "url": "https://takopi.dev", "quote": "Ongoing chat. New messages auto-continue; /new to reset.\n Best for: solo work, natural conversation flow."},
+  {"field": "use_cases_ko", "url": "https://takopi.dev", "quote": "Forum topics bound to projects and branches.\n Best for: teams, organized multi-repo workflows."},
+  {"field": "platforms", "url": "https://github.com/banteg/takopi", "quote": "inspect or update settings with `takopi config list`, `takopi config get`, and `takopi config set`."},
+  {"field": "korean_support", "url": "https://takopi.dev", "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

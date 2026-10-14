@@ -1,0 +1,287 @@
+=== [home] https://www.blackbox.ai/ (lang=en)
+Blackbox: The high-trust platform for frontier inference 
+ PLATFORM MODELS
+ Model catalog Compare models Blackbox Router 
+ DEPLOYMENT
+ Dedicated deployment Zero data retention Microsoft Azure 
+ ENTERPRISE
+ Move faster with direct support from Blackbox engineers, from your first token to production scale.
+ TALK TO SALES → 
+ RESOURCES Developer Documentation GUIDES · API REFERENCE · SDKS Quickstarts, the full API reference, and SDK guides, from your first key to production traffic. LATEST BLOGS
+ Recursive Self Improving Inference Engine SEP 29, 2026 · 2 MIN READ Announcing Nemotron 3.5 Lightning: reasoning at 1,200 tokens/sec AUG 11, 2026 · 5 MIN READ TB v2.1 Blackbox: GPT-5.6 Sol + Opus 4.8 (90% pass@1) JUL 21, 2026 · 2 MIN READ View all blogs → 
+ COMPANY
+ Careers Brand guide 
+ GET STARTED
+ Create an account Log in 
+ TALK TO US
+ Questions about deployment, procurement, or a custom contract? We route you to a person, not a form reply.
+ CONTACT US → 
+ LOGIN GET STARTED 
+ SECURE INFERENCE FOR ENTERPRISE 
+ End-to-end encrypted inference for every model. 
+ Prompts are encrypted before they leave your machine and decrypted only where the model runs. Nothing readable crosses the wire, and zero data retention means nothing is kept after the answer.
+ GET A DEMO 
+ ENCRYPTED NOT ENCRYPTED 
+ Sealed in the client. The proxy, the host, and the operator never hold the key.
+ agent tui | docker logs -f 
+ CLIENT · DECRYPTED ⌘1 
+ agent tui 0.4.2 | local embedded | agent main > explain ssh SSH, or Secure Shell , is a protocol for logging in to another computer over a network you do not trust and working on it as if you were at its keyboard. Everything that passes between the two machines (commands, output, files) is encrypted before it leaves and decrypted only on the other end. ### 1. What is it used for? - Remote administration: open a shell on a server to install packages, edit configs, or read logs. - File transfer: scp and sftp ride on top of SSH, so copies inherit the same protection. - Port forwarding: wrap a plaintext service, like a database port, inside the tunnel. ### 2. Where does the security come from? SSH replaced Telnet , which sent passwords in the clear. It layers three kinds of cryptography: - Key exchange: both sides derive a fresh session key; an observer never sees it. - Symmetric encryption: that key encrypts the traffic, fast enough for interactive use. - Integrity checks: every packet carries a MAC, so tampering is detected and the connection drops. ### 3. Keys instead of passwords Put your public key on the server in authorized_keys . Your private key never leaves your machine, so there is no password to phish, and access is revoked by deleting one line. ### 4. A minimal config ``` # ~/.ssh/config Host prod HostName 203.0.113.7 User admin IdentityFile ~/.ssh/id_ed25519 ForwardAgent no ``` Then ssh prod connects. On the first connection SSH shows the host fingerprint and asks whether to trust it. ### 5. Summary | Concern | Mechanism | |-----------|---------------------------| | Identity | Host key fingerprint | | Login | Public and private key | | Privacy | Per-session symmetric key | | Integrity | Per-packet MAC | local ready | idle agent main | session tui-976f797a… | bbenc/nvidia/nemotron-3.5-lightning | tokens 7.6k/128k (6%) 
+ WIRE · ENCRYPTED ⌘2 
+ 2026-09-10 14:12:37,911 INFO cc_proxy.wire: <- https://enterprise.blackbox.ai/enc/nvidia/nemotron-3.5-lightning/message_stream {"nonce": 3670, "iv": "mquT4lcbJtQk+UKf", "ciphertext": "TyoKRmRG6qGOgqOylpIA/RUTOqh4iZhcbX5GHbDTSO5OIs2hS844v8Oq1rd+ibeOuTEGUTuANMasZv7GxAhCX7SMaXTVgroB+jkaqRacyYTjaaJt7/U9sJOS/laIfmewr411F2StW5QzO2t11NJQ2vz5Et4JpVac", [84 chars omitted], "signature": "MGUCMQ82XS/mYhia46lQonRablP5ELn4kadv5TjVYyAqGhr/RIKyRzSDvr3KMsyJzp3FGTCxcE2HPR4TdjWxAVarsvr/dgR2PIHzhE34w+81Y/rJW8bW6UroqTpHgaBL7bT1Bl3Zj7=="} 2026-09-10 14:12:37,928 INFO cc_proxy.wire: <- https://enterprise.blackbox.ai/enc/nvidia/nemotron-3.5-lightning/message_stream {"nonce": 3671, "iv": "CJcOr94pE8iV6AaN", "ciphertext": "ZaaPLZACnVp/b0YMMRR/1v7WqvCPSzDZ9+Xc/eT0AbrwCjLOWYtttXlXRksMoopMSmMpnOnOl3M6hSs/YWtu5LCBFmfOTNBt2wCwRw4s1vloxLTYz4lpnOmU40ann5ZQ3RmQDhdq7ED5xN+dtYZjbocSFrkABzet", [116 chars omitted], "signature": "MGYCMQChrKXkOwt94F2UF18nCgVnk8Q7iFLPzadUSeNAPcP2nebs32fweHePk6cZwkirVmdqkOLbY3Swk+xphNBjgf5S/G+dLkgchDuengxzFenXjCi4WaaDzlxORx2thz4/BHabhM=="} 2026-09-10 14:12:37,944 INFO cc_proxy.wire: <- https://enterprise.blackbox.ai/enc/nvidia/nemotron-3.5-lightning/message_stream {"nonce": 3672, "iv": "p6Sqt1n1h6525zoE", "ciphertext": "jJnvPAYPkjPLGC4rWOY7/UZ40KudTa8eNlhiqGrIDaq4pFDstP0q0t7gqDjMu7iVb6QCEyRetQqaywkF83I5+dlcfj+XmiFaeAPa3wMZJ2fLtTTc3PWotXsaTf/PpzPIgFRHoohTWQe0NCF/Q1aurSyhejfJnpVL", [84 chars omitted], "signature": "MGYCMQCB8mbCfd/fa0rX1C3vt+0yNb4YKeLILy3rB4B1f98PXwNVOv9p5trYpXKb/o4eALId5tgdfaP1Tz7meCw0bd8RniafSCCnnfhq0+CD8tKGkK1b7KRNmEdx0MAoUGtRSVpC4y=="} 2026-09-10 14:12:37,957 INFO cc_proxy.wire: <- https://enterprise.blackbox.ai/enc/nvidia/nemotron-3.5-lightning/message_stream {"nonce": 3673, "iv": "vZ1Cak0NUinTrEEJ", "ciphertext": "5gHvZ/LD6f/03lymaGq4DXdd++mW1BkW575BGkjz0QNWLq0Wqrz3MbQWbYvf6ujRQ68I7XMxR/qwlM1+yHET9tSizTLb5Fcxo4bC3nV5skhrkJuHvrCKpaxb4lG6ry04gCLK6w/+DT2/cGe6+ajF9DPDPm9nfHSs", [144 chars omitted], "signature": "MGQCMBjU4KjvQf8dgvO2Z9wSA6jBRetGKAyWm3AveLqu+aQb0ntPNxIepPrdStqZz80q1QX65pmfFa0gHU0r4C1rdz2XS5WqoXOfkusN+XkJoMIax81GAUOUjlXQMB/Aa88E3ifn/6=="} 2026-09-10 14:12:37,972 INFO cc_proxy.wire: <- https://enterprise.blackbox.ai/enc/nvidia/nemotron-3.5-lightning/message_stream {"nonce": 3674, "iv": "vW9P60XJ9xCt5R99", "ciphertext": "8h8pJaIVAzLUNSUTuSXUIh5XPxoLpFSW4RHai+1FWysHw3F8y3MgS4QeiaXqwtn33gXlbvIdQ5hVTNGSOwXMJWjtjbzNb7IvmnxaM892tkRlxjHytBZMUWs9F/EZYIr3ckKBWpm9IRfbPs6nyBYp4uc0nqlp9NG6", [120 chars omitted], "signature": "MGYCMQC+g7vpczz5R/Bm6XJsZUZJljT8ws+T1ri6Lz14K9uD8XYIm+BJ3zgwG+TSTV+Cf/uWhtMwF7RCGNDvP4TAm7gwY8BOVDvmyQTVh/jXLZrMJOBlSmYL7jvhq0b8A4cBB/9HkJ=="} 2026-09-10 14:12:37,988 INFO cc_proxy.wire: <- https://enterprise.blackbox.ai/enc/nvidia/nemotron-3.5-lightning/message_stream {"nonce": 3675, "iv": "+Js1aOImo8Ero/B3", "ciphertext": "a9wqKl5TrVqtk7og0KnCK6SCzzwA3087hXqlUI/zZsYLMHhMWOXywWXKgxsH0LhBSypH0AptOo1lt4rq4InSbUNhaUuwE7CCgPDU6LQg09eTU/UfIT37rvex8zgOuf7qdwvOYcPpw8MFBpZ8hfErDqykMX36mFPk", [64 chars omitted], "signature": "MGQCMBgmUF+hZx2XqHEG8CUN08OmgBkg+lkh2R9rJCZzpeYsBFdj6T5W8fqsRqY+nU/oQFiqZ8pDeTVFXALCFbmtjfe3Vx0/+0l3P9fTVFYWXx+vxNcyZkzJCVmXfpzTrBvxB119OJ=="} 2026-09-10 14:12:38,007 INFO cc_proxy.wire: <- https://enterprise.blackbox.ai/enc/nvidia/nemotron-3.5-lightning/message_stream {"nonce": 3676, "iv": "M9d/mcFukyywwQEO", "ciphertext": "2ZyarBxQ+9KyLjoNqq3jPx6I1YiS9QOhf0RI4KcyLp+wpARd4Jv0ivKUvnCUVPa55B8Skpvkm2X+rYS6UT4bzb22Tocfew3rQhQfoKYjiLOIWJsja3DnIYt9sniZpIJnPswaI4wcUpuyzOWXIqT9hlugtPEOQT7+", [60 chars omitted], "signature": "MGYCMQCUeFVamY4vIOBcD72WSNXHD34mAQVYtgSFhzzn1ti597GsLHdgS05ES0dPnZIAFgpGq40JRuW2yOk7TSMEDLa5190NG9lJSNgaay9y7yTrCIJiHrWOE2+qSm/djiRx3d0jPF=="} 2026-09-10 14:12:38,020 INFO cc_proxy.wire: <- https://enterprise.blackbox.ai/enc/nvidia/nemotron-3.5-lightning/message_stream {"nonce": 3677, "iv": "AIMSLo4qH/2JzcT7", "ciphertext": "cIIZTXc6BG5lYr1ly6t9GgViTty8DR0ta/IS4HVlIX/X2IR0Jt6jXSW6pipBtMeRMS5kj7LuzdxEr5P9ltVJfwH66/LZZjok2hdC/VfL713Ckx8LFkdWnRg6yqRiDToKyO/0hJXmwgs6WHMFADcnGDhVCClZuKDG", [68 chars omitted], "signature": "MGYCMQCtE1itME8TZTBkMaQw8HExD8JomDXgQs33GoLJaRFCnV1OB3cHXFpqe4uemLJIPPPltEMB+jXXENHQd7dDMdy//OQLRdEMDpfHI3cFW935gbGRngiacYwPD9qr8tc
+
+=== [pricing] https://www.blackbox.ai/pricing (lang=en)
+Blackbox Pricing: commit more, pay less per token 
+ PLATFORM MODELS
+ Model catalog Compare models Blackbox Router 
+ DEPLOYMENT
+ Dedicated deployment Zero data retention Microsoft Azure 
+ ENTERPRISE
+ Move faster with direct support from Blackbox engineers, from your first token to production scale.
+ TALK TO SALES → 
+ RESOURCES Developer Documentation GUIDES · API REFERENCE · SDKS Quickstarts, the full API reference, and SDK guides, from your first key to production traffic. LATEST BLOGS
+ Recursive Self Improving Inference Engine SEP 29, 2026 · 2 MIN READ Announcing Nemotron 3.5 Lightning: reasoning at 1,200 tokens/sec AUG 11, 2026 · 5 MIN READ TB v2.1 Blackbox: GPT-5.6 Sol + Opus 4.8 (90% pass@1) JUL 21, 2026 · 2 MIN READ View all blogs → 
+ COMPANY
+ Careers Brand guide 
+ GET STARTED
+ Create an account Log in 
+ TALK TO US
+ Questions about deployment, procurement, or a custom contract? We route you to a person, not a form reply.
+ CONTACT US → 
+ LOGIN GET STARTED 
+ PRICING 
+ Priced per token, committed once.
+ The same 300+ model catalog at the same rack rates, with end-to-end encryption on every connection. Commitment is the only variable. Commit annual enterprise spend for a discount on every token: the balance decreases as your teams consume it, with dedicated deployments, customer-managed keys, and custom contracts when you need them. No platform fees, no markups, and no seats.
+ 01 ENTERPRISE 
+ Your model, your keys, your contract.
+ Custom
+ Annual · PO burn-down
+ Committed spend Sized with your team
+ Closed −5%+ Open −10%+ 
+ Includes
+ Dedicated forward-deployed engineer 
+ Implementation included, $0 
+ Dedicated single-tenant deployment 
+ Data residency 
+ SAML SSO, SCIM, RBAC · audit logs 
+ Zero data retention, contractual + DPA 
+ PII removed before closed models 
+ End-to-end encryption on every connection 
+ Guaranteed TPM · custom rate limits 
+ Dedicated Remote Agent runners · SSO 
+ Agents API: cloud coding agents 
+ Custom SLAs · volume discounts 
+ TALK TO SALES 
+ Your contract is quoted against the per-token rates below as a reference point. The rate on your contract improves as committed spend grows.
+ 02 COMPARE 
+ Everything, by plan.
+ Enterprise 
+ Products & surfaces 
+ Core surfaces: API, CLI ✓ 
+ Agents API: cloud coding agents ✓ 
+ /multi-agent + Chairman LLM orchestration ✓ metered 
+ Remote Agent: cloud sandboxes ✓ 
+ Remote Agent: dedicated runners, SSO ✓ 
+ Platform 
+ 300+ models, one endpoint, one bill ✓ 
+ End-to-end encryption on every connection ✓ 
+ Smart routing, failover, caching ✓ 
+ Rate limits Custom 
+ Trust & operations 
+ Zero data retention ✓ contractual 
+ PII removed before closed models ✓ 
+ SAML SSO, SCIM, RBAC ✓ 
+ Audit logs ✓ 
+ Uptime SLA Custom 
+ Engineering & support 
+ Forward-deployed engineering Dedicated FDE 
+ Implementation Included, $0 
+ Support Custom SLAs 
+ Deployment 
+ Cloud API ✓ 
+ Dedicated single-tenant deployment (Enterprise Inference) ✓ 
+ Data residency ✓ 
+ We suppress retention and training on routed traffic through provider terms and per-request flags, wherever the provider API supports it. Blackbox runs dedicated deployments on single-tenant infrastructure, isolated from every other customer.
+ 03 PER-MODEL RATES 
+ Transparent token pricing
+ Priced per 1M tokens. We bill input, output, and cached reads separately. These are list rates. We quote contracts against them, and your rate improves as committed spend grows.
+ MODEL TYPE CONTEXT INPUT / 1M OUTPUT / 1M CACHE READ / 1M 
+ moonshotai
+ kimi-k3
+ Text 1M $3.00 $15.00 $0.30 
+ zai
+ glm-5.3
+ Text 1M $1.40 $4.40 $0.14 
+ alibaba
+ qwen3.8-max
+ Text 262K $2.00 $6.00 $0.25 
+ deepseek
+ deepseek-v4-pro-0813
+ Text 1M $0.66 $1.98 $0.07 
+ deepseek
+ deepseek-v4.1-flash
+ Text 1M $0.30 $1.20 $0.007 
+ tencent
+ hy4-preview
+ Text 1M $0.83 $2.50 $0.04 
+ $0.44
+ BLENDED / 1M ON NEMOTRON 3 ULTRA · #1 SPEED
+ 2.7×
+ CHEAPER THAN THE #2 FASTEST PROVIDER
+ PER TOKEN
+ METERED PER TOKEN, NOT PER SEAT
+ 300+
+ MODELS, ONE ENDPOINT
+ 04 FAQ 
+ Questions, answered
+ How does the commit work?
+ You commit to a token volume through a purchase order, and the balance decreases as your teams consume it, metered at the published per-model rates above. Commits are sized so that a director or VP can sign without an approval chain, and then expand. You can watch the balance in real time in the dashboard, and intelligent routing and prompt caching extend the same commit 10–20% , even on closed models. 
+ What does the commit cover?
+ Every surface uses the same balance: Enterprise Inference , the Blackbox Router , the API, the CLI, and the Agents API. Metering is per token, not per seat, and the contract specifies how seats are treated. 
+ What happens to unused commitment?
+ It expires at the end of the billing period. We send spend alerts at 75% and 90% of your commit, so nothing expires without warning. Size the commit to your minimum usage. 
+ Is there a platform fee?
+ No. There is no credit-purchase fee and no per-seat charge. You pay for tokens at or below the list rates. 
+ Can I connect my own provider accounts?
+ Yes. Connect your OpenAI, Anthropic, or Google accounts and route through your existing provider relationships and negotiated rates. Routing, failover, caching, and the dashboard remain available, while usage bills through your provider. 
+ Why is the open-weight discount bigger?
+ Open-weight models run on infrastructure that Blackbox operates end to end, which includes the Nemotron deployment that Artificial Analysis benchmarked #1 on output speed (July 2026). Closed models route to their providers, and we pass our scale discounts to you. 
+ What is included beyond the tokens?
+ The trust stack: end-to-end encryption, encryption at rest, the PII anonymization layer, custom SLAs, and a forward-deployed engineer who configures the account with you at contract start. See the security overview for the full detail. 
+ What does a forward-deployed engineer actually do?
+ The engineer writes code in your stack: migration from your current provider, production integrations, eval harnesses, and routing and latency tuning. On Enterprise, the engineer is dedicated to your account, and implementation is included at no added cost. 
+ When do I have to talk to sales?
+ From the start. The commit is the contract. Enterprise exists for committed discounts, dedicated single-tenant deployments, data residency, and custom contracts. 
+ How does an engagement start?
+ With a conversation, not a signup. We scope the workload and the volume with you and agree a commit. A forward-deployed engineer then configures the account, with any controls, such as PII remov
+
+=== [about] https://docs.blackbox.ai/api-reference/chat (lang=en)
+Create Chat Completion - BLACKBOX AI 
+ Inference API 
+ Dedicated API 
+ Search ⌘K 
+ Dashboard 
+ Inference API 
+ Inference API 
+ Dedicated API 
+ Endpoints
+ Models
+ LLM Pricing 
+ Chat Completion
+ Create Chat Completion 
+ Messages API
+ Messages API 
+ Tool Calling 
+ Interleaved Thinking 
+ Responses API
+ Text Generation 
+ Streaming 
+ Tool Calling 
+ Reasoning 
+ Interactions API
+ Interactions API 
+ Text Generation 
+ Streaming 
+ Tool Calling 
+ Reasoning 
+ Images 
+ Overview
+ Introduction 
+ Authentication 
+ Enterprise 
+ Requests 
+ Responses 
+ Parameters 
+ Provider Routing 
+ Rate Limits 
+ Service Tiers 
+ GPT-5.2 context limits 
+ System One 
+ Jev Examples & Tips 
+ Reasoning and Interleaved Thinking 
+ Zero Data Retention 
+ Prompt caching 
+ Errors 
+ Tool & Function Calling 
+ Web Search 
+ Encrypted Model 
+ Sample Usage 
+ API Best Practices 
+ Benchmark Performance 
+ API Reference › Endpoints › Chat Completion › Create Chat Completion
+ Create Chat Completion
+ Send a chat completion request. Find your API Key .
+ Headers
+ Authorization string required 
+ API Key of the from Bearer <api_key> , you can get it from here .
+ Request
+ model string required 
+ The model ID to use. See the LLM Pricing page 
+ messages array required 
+ Array of message objects containing the conversation history.
+ Message Object role string required 
+ The role of the message author. One of system , user , assistant , or tool .
+ content string | array 
+ The content of the message. Can be a string or array of content parts for multimodal inputs.
+ name string 
+ An optional name for the participant. Provides the model information to differentiate between participants of the same role.
+ tool_call_id string 
+ For tool messages, the ID of the tool call this message is responding to.
+ models array 
+ Alternate list of models for routing overrides.
+ provider object 
+ Preferences for provider routing.
+ stream boolean 
+ Enable streaming of results via Server-Sent Events.
+ max_tokens integer 
+ Maximum number of tokens to generate (range: [1, context_length)).
+ temperature number 
+ Sampling temperature (range: [0, 2]).
+ seed integer 
+ Seed for deterministic outputs.
+ top_p number 
+ Top-p sampling value (range: (0, 1]).
+ top_k integer 
+ Top-k sampling value (range: [1, Infinity)).
+ frequency_penalty number 
+ Frequency penalty (range: [-2, 2]).
+ presence_penalty number 
+ Presence penalty (range: [-2, 2]).
+ repetition_penalty number 
+ Repetition penalty (range: (0, 2]).
+ logit_bias object 
+ Mapping of token IDs to bias values.
+ top_logprobs integer 
+ Number of top log probabilities to return.
+ min_p number 
+ Minimum probability threshold (range: [0, 1]).
+ top_a number 
+ Alternate top sampling parameter (range: [0, 1]).
+ stop array 
+ Stop sequences - generation will stop if any of these strings are encountered.
+ tools array 
+ Tool definitions following OpenAI's tool calling format.
+ Tool Object type string 
+ Type of tool, typically function .
+ function object 
+ Function definition.
+ Function Definition name string 
+ Name of the function.
+ description string 
+ Description of what the function does.
+ parameters object 
+ JSON Schema object defining the function parameters.
+ tool_choice string | object 
+ Controls which (if any) tool is called by the model.
+ none - Model will not call any tool
+ auto - Model can pick between generating a message or calling tools
+ required - Model must call one or more tools
+ Or specify a particular tool via {"type": "function", "function": {"name": "function_name"}} 
+ response_format object 
+ Enforce structured output format.
+ user string 
+ A stable identifier for your end
+
+=== [meta] https://www.blackbox.ai/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음

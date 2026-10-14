@@ -1,0 +1,36 @@
+{
+ "company": "Coqui.ai",
+ "one_liner_ko": "고급 텍스트-투-스피치(TTS) 생성을 위한 라이브러리",
+ "what_it_does_ko": "🐸TTS는 고급 텍스트-투-스피치 생성을 위한 라이브러리다. 1100개 이상 언어의 사전학습 모델을 제공하고, 어떤 언어로든 새 모델을 학습하거나 기존 모델을 미세조정하는 도구를 갖췄다. 데이터셋 분석·정리용 유틸리티도 포함한다. 13~16개 언어를 말하는 XTTS 모델은 200ms 미만 지연으로 스트리밍할 수 있다.",
+ "key_features": [
+  "1100개 이상 언어의 사전학습 모델",
+  "새 모델 학습 및 기존 모델 미세조정 도구",
+  "데이터셋 분석·정리 유틸리티",
+  "XTTSv2: 16개 언어 지원",
+  "XTTS 200ms 미만 지연 스트리밍",
+  "Bark를 통한 음성 복제 추론",
+  "Tortoise 모델 지원(빠른 추론)"
+ ],
+ "use_cases_ko": [],
+ "pricing": {"free_tier": null, "plans": [], "pricing_url": null},
+ "open_source": "MPL-2.0",
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "불명",
+ "evidence": [
+  {"field": "company", "url": "https://github.com/coqui-ai/TTS", "quote": "## 🐸Coqui.ai News"},
+  {"field": "one_liner_ko", "url": "https://github.com/coqui-ai/TTS", "quote": "**🐸TTS is a library for advanced Text-to-Speech generation.**"},
+  {"field": "what_it_does_ko", "url": "https://github.com/coqui-ai/TTS", "quote": "🛠️ Tools for training new models and fine-tuning existing models in any language."},
+  {"field": "key_features", "url": "https://github.com/coqui-ai/TTS", "quote": "🚀 Pretrained models in +1100 languages."},
+  {"field": "key_features", "url": "https://github.com/coqui-ai/TTS", "quote": "📚 Utilities for dataset analysis and curation."},
+  {"field": "key_features", "url": "https://github.com/coqui-ai/TTS", "quote": "ⓍTTSv2 is here with 16 languages and better performance across the board."},
+  {"field": "key_features", "url": "https://github.com/coqui-ai/TTS", "quote": "ⓍTTS can now stream with <200ms latency."},
+  {"field": "key_features", "url": "https://github.com/coqui-ai/TTS", "quote": "is now available for inference with unconstrained voice cloning."},
+  {"field": "key_features", "url": "https://github.com/coqui-ai/TTS", "quote": "🐸TTS now supports 🐢Tortoise with faster inference."},
+  {"field": "open_source", "url": "https://github.com/coqui-ai/TTS", "quote": "License-MPL%202.0-brightgreen.svg"}
+ ],
+ "mismatch": [
+  {"official": "GitHub 공개 라이브러리(MPL 2.0 라이선스), 유료 요금제 언급 없음", "diff": "기존 '프리미엄(무료+유료 구독)' 분류와 달리 오픈소스 라이브러리로만 확인됨", "url": "https://github.com/coqui-ai/TTS"}
+ ],
+ "plan_change": []
+}

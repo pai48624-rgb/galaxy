@@ -1,0 +1,70 @@
+{
+ "company": null,
+ "one_liner_ko": "머신러닝 분류기가 개별 예측을 왜 했는지 설명해 주는 파이썬 패키지(LIME).",
+ "what_it_does_ko": "lime은 머신러닝 분류기(모델)가 무엇을 하는지 설명하기 위한 프로젝트다. 텍스트·표 형식(numpy 배열)·이미지 분류기의 개별 예측을 설명한다. 클래스별 확률을 출력하는 함수만 있으면 두 개 이상 클래스의 어떤 블랙박스 분류기도 설명할 수 있고, scikit-learn 분류기는 기본 지원한다. 설명 결과는 HTML로 만들어 IPython 노트북에 넣을 수 있다.",
+ "key_features": [
+  "텍스트 분류기 예측 설명",
+  "표 형식(수치·범주형) 데이터 분류기 설명",
+  "이미지 분류기 예측 설명",
+  "임의의 블랙박스 분류기 지원(클래스별 확률 함수만 필요)",
+  "scikit-learn 분류기 기본 지원",
+  "HTML 시각화(노트북 삽입)와 matplotlib 시각화",
+  "회귀 모델 설명 튜토리얼 제공"
+ ],
+ "use_cases_ko": [
+  "모델 개발자가 분류기의 개별 예측 근거를 확인"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/marcotcr/lime",
+   "quote": "This project is about explaining what machine learning classifiers (or models) are doing."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/marcotcr/lime",
+   "quote": "we support explaining individual predictions for text classifiers or classifiers that act on tables (numpy arrays of numerical or categorical data) or images"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/marcotcr/lime",
+   "quote": "Lime is able to explain any black box classifier, with two or more classes."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/marcotcr/lime",
+   "quote": "All we require is that the classifier implements a function that takes in raw text or a numpy array and outputs a probability for each class."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/marcotcr/lime",
+   "quote": "Support for scikit-learn classifiers is built-in."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/marcotcr/lime",
+   "quote": "These are generated in html, and can be easily produced and embedded in ipython notebooks. We also support visualizations using matplotlib"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/marcotcr/lime",
+   "quote": "Simple regression"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/marcotcr/lime",
+   "quote": "explaining individual predictions for text classifiers"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

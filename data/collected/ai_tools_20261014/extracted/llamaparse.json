@@ -1,0 +1,169 @@
+{
+ "company": "LlamaIndex",
+ "one_liner_ko": "복잡한 레이아웃·표·차트·손글씨·체크박스·이미지까지 깔끔한 Markdown으로 바꿔 주는 AI 문서 파싱 도구.",
+ "what_it_does_ko": "LlamaParse는 복잡한 문서를 대규모로 AI가 쓸 수 있는 데이터로 바꾸는 LlamaIndex의 상용 문서 처리 플랫폼이다. 90개 이상 형식에서 레이아웃을 인식하고 차트·표·이미지까지 처리하며, 비용과 정확도 균형을 맞추는 여러 파싱 모드를 제공한다. 파싱 외에 추출(Extract), 분류·분할, 인덱싱(RAG) 기능도 있으며 크레딧 기반으로 과금한다. 요금 FAQ에서 오픈소스가 아니라고 밝힌다.",
+ "key_features": [
+  "머리글·바닥글·분할 구역 등 레이아웃 인식",
+  "차트·표·이미지까지 처리하는 멀티모달 파싱",
+  "비용·정확도 균형을 고르는 여러 파싱 모드",
+  "수백만 페이지 규모 처리",
+  "100개 이상 언어 지원",
+  "Markdown·JSON·XLSX·HTML 표 등 출력",
+  "추출 에이전트·분류·분할·인덱스(RAG) 기능",
+  "웹훅·API 콜백"
+ ],
+ "use_cases_ko": [
+  "금융 실사(컴플라이언스 검토) 가속",
+  "청구서 처리 자동화",
+  "복잡한 기술 문서 검색"
+ ],
+ "pricing": {
+  "free_tier": "있음 (월 10K 크레딧)",
+  "plans": [
+   {
+    "name": "Free",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "10K 크레딧 포함, 사용자 100명",
+    "page_lang": "en"
+   },
+   {
+    "name": "Starter",
+    "price": 50,
+    "currency": "USD",
+    "period": "month",
+    "limits": "40K 크레딧 포함, 종량제 최대 400K 크레딧",
+    "page_lang": "en"
+   },
+   {
+    "name": "Pro",
+    "price": 500,
+    "currency": "USD",
+    "period": "month",
+    "limits": "400k 크레딧 포함, 종량제 최대 $5,000/월",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": "USD",
+    "period": null,
+    "limits": "맞춤 가격, SSO, SaaS·하이브리드 배포",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://www.llamaindex.ai/pricing"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.llamaindex.ai/llamaparse",
+   "quote": "© 2026 LlamaIndex"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.llamaindex.ai/llamaparse",
+   "quote": "The AI parsing tool built to turn even the most complex layouts, tables, charts, handwriting, checkboxes, and images into clean markdown"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.llamaindex.ai/llamaparse",
+   "quote": "Parse transforms messy documents into AI-ready data at scale"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.llamaindex.ai/pricing",
+   "quote": "LlamaParse is our commercial platform designed to automate document workflows, including agentic document parsing, extraction and indexing."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.llamaindex.ai/llamaparse",
+   "quote": "Layout-aware \n Understand complex structures like headers, footers, and split sections"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.llamaindex.ai/llamaparse",
+   "quote": "Multimodal parsing \n Go beyond text to process context from charts, tables, and images"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.llamaindex.ai/llamaparse",
+   "quote": "Different parsing modes to optimize for the right balance of cost and accuracy"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.llamaindex.ai/llamaparse",
+   "quote": "Out-of-the-box compatibility for over 100+ languages, across continents"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.llamaindex.ai/pricing",
+   "quote": "Markdown, Plain Text, JSON (per-page), XLSX, HTML Tables, Annotated PDF"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.llamaindex.ai/llamaparse",
+   "quote": "Financial Due Diligence Speed up compliance reviews"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.llamaindex.ai/llamaparse",
+   "quote": "Invoice Processing Automate manual review"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://www.llamaindex.ai/llamaparse",
+   "quote": "Technical Document Search Find answers in complex docs"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.llamaindex.ai/pricing",
+   "quote": "Free \n $0 \n /month \n Get started Includes 10K credits"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.llamaindex.ai/pricing",
+   "quote": "Starter \n $50 \n /month \n Get started Includes 40K credits"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.llamaindex.ai/pricing",
+   "quote": "Pro \n $500 \n /month \n Join the pros Includes 400k credits"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.llamaindex.ai/pricing",
+   "quote": "1,000 credits = $1.25."
+  },
+  {
+   "field": "api",
+   "url": "https://www.llamaindex.ai/pricing",
+   "quote": "Webhooks & API callbacks"
+  },
+  {
+   "field": "platforms",
+   "url": "https://www.llamaindex.ai/pricing",
+   "quote": "Webhooks & API callbacks"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.llamaindex.ai/llamaparse",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "요금 FAQ: LlamaParse는 상용 플랫폼이며 오픈소스가 아님(오픈소스는 LlamaIndex·Workflows)",
+   "diff": "기존 분류 '오픈소스 + 클라우드 매니지드 유료 플랜'과 달리 LlamaParse 자체는 오픈소스가 아닌 상용 크레딧 과금 서비스",
+   "url": "https://www.llamaindex.ai/pricing"
+  }
+ ],
+ "plan_change": []
+}

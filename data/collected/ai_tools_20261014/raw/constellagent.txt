@@ -1,0 +1,98 @@
+=== [home] https://constellagent.vercel.app/ (lang=en)
+Constellagent | Parallel AI Workspaces 
+ Constellagent 
+ Features 
+ How it Works 
+ Star on GitHub
+ Download
+ Parallel AI workspaces 
+ Command your
+ constellation 
+ of AI agents
+ Run dozens of Claude Code workspaces in parallel. Give each one a branch, a task, and let them rip.
+ Download
+ Star on GitHub
+ Free and open source 
+ // capabilities 
+ A control room for
+your AI agents
+ Parallel Workspaces
+ Run multiple Claude Code sessions simultaneously. Each workspace gets its own terminal, files, and git branch.
+ Integrated Terminal
+ Full xterm.js terminal emulation with GPU rendering. Supports TUI apps, colors, and persistent scrollback.
+ Git & PR Status
+ Live branch detection, file status, and GitHub PR badges. Open, merged, closed — visible right from the sidebar.
+ Scheduled Automations
+ Set agents on a cron schedule with templates. Hourly, daily, or whenever you want. They just keep going.
+ Code Editor & Diffs
+ Monaco editor with syntax highlighting. Context-collapsing diff viewer to review what your agents changed.
+ Keyboard-First
+ 45+ shortcuts. Quick Open, workspace switching, font scaling. Mice are optional.
+ // workflow 
+ From zero to shipping
+in three steps
+ 01 
+ Create a project
+ Group related workspaces. Each project maps to a git repo with isolated worktree branches.
+ 02 
+ Spin up agents
+ Launch parallel Claude Code sessions. Each agent gets its own terminal, branch, and context.
+ 03 
+ Review & ship
+ See diffs, check PR status, and merge. Automations keep agents running while you sleep.
+ Ready to orchestrate?
+ Star on GitHub and grab the latest release.
+ Download
+ Free and open source 
+ © 2026 Constellagent 
+ GitHub
+
+=== [meta] https://constellagent.vercel.app/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/owengretzinger/constellagent
+# Constellagent
+
+A macOS desktop app for running multiple AI agents in parallel. Each agent gets its own terminal, editor, and git worktree, all in one window.
+
+<img width="3506" height="2200" alt="image" src="https://github.com/user-attachments/assets/9f055656-c213-4d56-8af4-251bd739ad8b" />
+
+## Features
+
+- Run separate agent sessions side-by-side, each in its own workspace with an isolated git worktree
+- Full terminal emulator (`xterm.js` + node-pty)
+- Monaco code editor with syntax highlighting and diffs
+- Git staging, committing, branching, and worktree management
+- File tree navigation
+- Cron-based automation scheduling
+- Sleep/wake recovery for automations (coalesces missed runs while app stays open)
+- Keyboard-driven - Quick Open, tab switching, shortcuts
+
+## Getting started
+
+Requires macOS and [Bun](https://bun.sh).
+
+```bash
+bun run setup
+bun run dev
+```
+
+### Build and package
+
+```bash
+bun run build     # Production build
+bun run dist      # Package as signed macOS DMG
+```
+
+### Test
+
+```bash
+bun run test      # Playwright e2e tests
+```
+
+Automation scheduling notes:
+- If the laptop sleeps during a scheduled time while the app is still running, Constellagent runs one catch-up execution on wake.
+- If the app is fully quit, missed runs are not backfilled on next launch.
+

@@ -1,0 +1,236 @@
+=== [home] https://haystack.deepset.ai (lang=en)
+Haystack | Open-Source AI Framework for Production-Grade Agents
+ Overview
+ What is Haystack?
+ Get Started
+ Demos
+ Ambassadors
+ Documentation
+ Learn
+ 📚 Tutorials & Walkthroughs
+ 🧑‍🍳 Cookbook
+ New 
+ 📬 Haystack 3.0 Launch Week
+ ⭐️ Release Notes
+ 💚 DataCamp Course: Building AI Agents
+ 🚀 DeepLearning.AI: Building AI Applications
+ Integrations
+ Blog
+ Haystack Enterprise
+ Sign up 
+ Haystack Enterprise Trial
+ Haystack Enterprise Platform
+ Haystack Enterprise Blog
+ Careers
+ Get Enterprise Support
+ Get Started
+ Overview
+ What is Haystack?
+ Get Started
+ Demos
+ Ambassadors
+ Documentation 
+ Learn
+ 📚 Tutorials & Walkthroughs
+ 🧑‍🍳 Cookbook
+ New 
+ 📬 Haystack 3.0 Launch Week
+ ⭐️ Release Notes
+ 💚 DataCamp Course: Building AI Agents
+ 🚀 DeepLearning.AI: Building AI Applications
+ Integrations 
+ Blog 
+ Haystack Enterprise
+ Sign up 
+ Haystack Enterprise Trial
+ Haystack Enterprise Platform
+ Haystack Enterprise Blog
+ Careers
+ Get Enterprise Support
+ Get Started
+ 🆕 Haystack 3.3 is here! Faster SentenceWindowRetriever without code changes, bug fixes and a security update
+ Open-Source AI Orchestration for 
+Production-Grade Agents 
+ pip install haystack-ai
+ Get Started with Haystack
+ Haystack 3.0 shipped over five days.
+ See the recap
+ Stars | 
+ Join Discord 
+ Haystack Sets the Standard for Agentic AI Across Industries
+ Why Teams Choose Haystack for their AI Workflows
+ Build Transparent, Context Engineered AI Systems
+ Orchestrate every step of your AI agent, from retrieval to reasoning to memory and tool use.
+ Haystack’s modular framework gives you full visibility to inspect, debug, and optimize every decision your AI makes.
+ Integrate Freely with Your AI Stack
+ Connect to OpenAI, Anthropic, Mistral, Hugging Face, Weaviate, Pinecone, Elasticsearch, and more with no vendor lock-in.
+ Haystack’s open architecture lets you mix and match components to fit your workflow.
+ Develop and Deploy Faster
+ Move from prototype to production using the same composable building blocks.
+ Haystack lets you go from a proof-of-concept to a full production system with unified tooling for building, testing, and shipping your AI use cases.
+ Operate at Enterprise Scale
+ Run production workloads across any environment with built-in reliability and observability.
+ Haystack Pipelines are serializable, cloud-agnostic, and Kubernetes-ready, with logging, monitoring, and deployment guides to support you.
+ Build and Scale with the Haystack Ecosystem
+ From open source to enterprise: tools for every step of your AI journey
+ Haystack, AI Orchestration Framework
+ Open Source AI framework for building production-ready, LLM-powered agents and applications, on your own or with Community support.
+ Start with Haystack
+ Enterprise Support
+ Enterprise-support for the Haystack framework, with exclusive access to:
+ Private, secure engineering support
+ Best practices templates & deployment guides
+ Access to flexible services
+ Flexible pricing based on company size
+ Get Enterprise Support
+ AI Orchestration Platform
+ Sovereign AI toolset built on Haystack to accelerate and scale AI use cases with:
+ Visual, code-aligned pipeline design
+ Data, retrieval, and testing workflows
+ Secure access controls and auditability
+ Scalable cloud or on-prem deployment
+ Try Haystack Enterprise Platform for free
+ Haystack Use Cases
+ Advanced
+ RAG
+ Build highly performant RAG pipelines with a multitude of retrieval and generation strategies. From hybrid retrieval to self-correction loops, Haystack has got you covered.
+ AI
+ Agents
+ Design production-ready AI agents with standardized tool calling and scalable context engineering. Branching and looping pipelines give you full control over complex, multi-step decision flows.
+ Multimodal
+ AI
+ Architect a next generation AI app around all modalities, not just text. Haystack can do tasks like image processing and audio transcription too.
+ Conversational
+ AI
+ All of our generators provide a standardized interface so that you can focus on building the perfect bot for your users.
+ Content
+ Generation
+ The flexibility and composability of Haystack’s prompt flow is unparalleled. Leverage our Jinja-2 templates and build a content generation engine that exactly matches your workflow.
+ Join the community
+ Join our Discord
+ Our community on Discord is for everyone interested in NLP, using Haystack or even just getting started!
+ GET STARTED
+ Sign up for
+ Haystack updates
+ Stay tuned for the latest Haystack community news and events.
+ Subscribe
+ Thanks! You'll soon receive a confirmation email 📧 
+ Upcoming Haystack Events
+ This events calendar is hosted on Lu.ma. Loading it sets Lu.ma cookies.
+ Load events calendar 
+ This video is hosted on YouTube. Loading it sets YouTube cookies.
+ Load video 
+ Breaking Down DeepSeek-R1
+ This video is hosted on YouTube. Loading it sets YouTube cookies.
+ Load video 
+ Evaluating AI with Haystack
+ This video is hosted on YouTube. Loading it sets YouTube cookies.
+ Load video 
+ Adding Tools to Agentic Pipelines & Other Experimental Features
+ Build custom AI agents and RAG applications with smart context engineering, powered by open AI orchestration.
+ © 2026 deepset GmbH. All rights reserved. 
+ Privacy Settings 
+ Privacy 
+ Imprint 
+ Community
+ Events 
+ GitHub Discussions 
+ Discord 
+ Hugging Face 
+ Resources
+ Docs 
+ Tutorials 
+ Cookbook 
+ Release Notes 
+ Company
+ About 
+ Careers 
+ Privacy Settings 
+ Privacy 
+ Imprint 
+ © 2026 deepset GmbH. All rights reserved.
+
+=== [about] https://docs.haystack.deepset.ai/docs/intro (lang=en)
+Introduction to Haystack | Haystack Documentation 
+ Skip to main content 
+ Haystack Documentation 3.3 3.4-unstable 
+ 3.3 
+ 3.2 
+ 3.1 
+ 3.0 
+ 2.31 
+ 1.x archived documentation 
+ 2.x archived documentation 
+ Docs API Reference 
+ Haystack Enterprise Platform Contribute GitHub 
+ 🔍 Search documentation... 
+ Introduction 
+ Get Started 
+ Core Concepts 
+ Pipeline Components 
+ Agent Tools 
+ Document Stores 
+ Optimization 
+ Deployment 
+ Production usage 
+ Resources 
+ Introduction 
+ Version: 3.3 On this page 
+ Copy 
+ Introduction to Haystack
+ Haystack is an open-source AI framework for building production-ready AI Agents , powerful RAG applications and scalable multimodal search systems . Build pipelines using reusable components, each responsible for specific tasks. Customize and extend pipelines to match your requirements. Learn more about Haystack and how it works.
+ Welcome to Haystack
+ To skip the introductions and go directly to installing and creating a search app, see Get Started .
+ Haystack is an open-source AI orchestration framework that you can use to build powerful, production-ready applications with Large Language Models (LLMs) for various use cases. Whether you’re creating autonomous agents, multimodal apps, or scalable RAG systems, Haystack provides the tools to move from idea to production easily.
+ Haystack is designed in a modular way, allowing you to combine the best technology from OpenAI, Google, Anthropic, and open-source projects like Hugging Face's Transformers.
+ The core foundation of Haystack consists of components and pipelines , along with Document Stores, Agents , Tools, and many integrations. A pipeline is a graph you wire yourself, so it runs the same way every time; an agent hands step-by-step control to the LLM, trading that predictability for the ability to handle requests you didn't enumerate in advance. See Choosing Between Pipelines and Agents to decide which one your use case needs - and note that an agent can be a step inside a pipeline, and a pipeline can be a tool an agent calls, so it's rarely all-or-nothing. Read more about Haystack concepts in the Haystack Concepts Overview .
+ Supported by an engaged community of developers, Haystack has grown into a comprehensive and user-friendly framework for LLM-based development.
+ Start here ​ 
+ New to Haystack? Follow this path:
+ Installation - install the haystack-ai package.
+ Get Started - build your first RAG pipeline and tool-calling agent.
+ Core Concepts - components, pipelines, agents, and the other building blocks.
+ Deployment - serve your pipeline or agent as an HTTP endpoint.
+ Production Usage - evaluate, trace, and log it once it's running.
+ Looking to scale with confidence?
+ The Haystack Enterprise Platform gives you production infrastructure without the operational overhead:
+ Built-in tracing — every deployed pipeline is traced automatically, no setup required
+ Zero-downtime deploys — auto-scaling replicas absorb demand spikes without dropping traffic
+ Built-in testing and analytics — a Playground for testing pipelines, plus dashboards for monitoring them in production
+ Explore the Haystack Enterprise Platform 
+ Edit this page 
+ Next
+ Installation
+ Start here 
+ Community
+ Learn
+ Tutorials 
+ Cookbooks 
+ Articles 
+ More
+ Integrations 
+ Haystack Enterprise Platform 
+ Enterprise Support 
+ Company
+ About 
+ Careers 
+ Blog 
+ Legal
+ Privacy Policy 
+ Imprint 
+ © 2026 deepset GmbH. All rights reserved.
+
+=== [meta] https://haystack.deepset.ai
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/deepset-ai/haystack
+<div align="center">
+  <a href="https://haystack.deepset.ai/"><img src="https://raw.githubusercontent.com/deepset-ai/haystack/main/images/banner.png" alt="Blue banner with the Haystack logo and the text ‘haystack by deepset – The Open Source AI Framework for Production Ready RAG & Agents’ surrounded by abstract icons representing search, documents, agents, pipelines, and cloud systems."></a>
+
+|         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| CI/CD   | [![Tests](https://github.com/deepset-ai/haystack/actions/workflows/tests.yml/badge.svg)](https://github.com/deepset-ai/haystack/actions/workflows/tests.yml) [![types - Mypy](https://img.shields.io/badge/types-Mypy-blue.svg)](https://github.com/python/mypy) [![Coverage badge](https://raw.githubusercontent.com/deepset-ai/haystack/python-coverage-comment-action-data/badge.svg)](https://htmlpreview.github.io/?https://github.com/deepset-ai/haystack/blob/python-coverage-comment-action-data/htmlcov/index.html) [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff) |
+| Docs    | [![Website](https://img.shields.io/website?label=documentation&up_message=online&url=https%3A%2F%2Fdocs.haystack.deepset.ai)](https://docs.haystack.deepset.ai)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Package | [![PyPI](https://img.shields.io/pypi/v/haystack-ai)](https://pypi.org/project/haystack-ai/) ![PyPI - Downloads](https://img.shields.io/pypi/dm/haystack-ai?color=blue&logo=pypi&logoColor=gold) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/haystack-ai?logo=python&logoColor=gold) [![Conda Version](https://img.shields.io/conda/vn/conda-forge/haystack-ai.svg)](https://anaconda.org/conda-forge/haystack-ai) [![GitHub](https://img.shields.io/github/license/deepset-ai/haystack?color=blue)](LICENSE) [![License Compliance](https://github.com/deepset-ai/haystack/actions/workflows/license_compliance.yml/badge.svg)](https://github.com/deepset-ai/haystack/actions/workflows/license_compliance.yml) [![HVTrust](https://hvtracker.net/badge/haystack.svg)](https://hvtracker.net/agents/haystack/) [![Evidence Grade](https://hvtracker.net/badge/haystack-grade.svg)](https://hvtracker.net/agents/haystack/) [![OpenSSF Best Practices](http

@@ -1,0 +1,603 @@
+=== [home] https://adk.dev/ (lang=en)
+Agent Development Kit (ADK) - Agent Development Kit (ADK) 
+ Agent Development Kit (ADK) 
+ Released! 
+ ADK TypeScript 2.0 GA
+ is now available with graph workflows support! Get started 
+ Agent Development Kit (ADK)
+ Agent Development Kit (ADK)
+ Python 
+ JS 
+ Go 
+ Java 
+ Kotlin 
+ Home
+ Build Agents
+ Run Agents
+ Components
+ Integrations
+ Reference
+ Community
+ ADK 2.0
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to
+ deal in the Software without restriction, including without limitation the
+ rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+ sell copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+ IN THE SOFTWARE.
+-->
+ Python 
+ JS 
+ Go 
+ Java 
+ Kotlin 
+ Home
+ Build Agents
+ Build Agents
+ Get Started
+ Get Started
+ Python
+ TypeScript
+ Go
+ Java
+ Kotlin
+ Agents CLI
+ Installation
+ Google Cloud
+ Migrate to ADK
+ Build your Agent
+ Build your Agent
+ Multi-tool agent
+ Agent team
+ Code with AI
+ Agent Config
+ Agents
+ Agents
+ Simple agents
+ Managed agents
+ Graph Workflows
+ Graph Workflows
+ Graph routes
+ Data handling
+ Human input
+ Dynamic workflows
+ Multi-Agent Workflows
+ Multi-Agent Workflows
+ Collaborative workflows
+ Template workflows
+ Template workflows
+ Sequential workflow
+ Loop workflow
+ Parallel workflow
+ Custom template workflows
+ Agent routing
+ Workflow patterns
+ Models for Agents
+ Models for Agents
+ Gemini
+ Gemini
+ Deferred scheduling
+ Gemma
+ Claude
+ Agent Platform hosted
+ Apigee AI Gateway
+ Model routing
+ OpenAI
+ Ollama
+ vLLM
+ LiteLLM
+ LiteRT-LM
+ Run Agents
+ Run Agents
+ Agent Runtime
+ Agent Runtime
+ Web Interface
+ Web Interface
+ Visual Builder
+ Command Line
+ API Server
+ Ambient Agents
+ Resume Agents
+ Cancel Agent Runs
+ Runtime Config
+ Event Loop
+ Deployment
+ Deployment
+ Agent Runtime
+ Agent Runtime
+ Standard deployment
+ agents-cli
+ Test deployed agents
+ Cloud Run
+ GKE
+ Observability
+ Observability
+ Logging
+ Metrics
+ Traces
+ Evaluation
+ Evaluation
+ Criteria
+ User Simulation
+ Environment Simulation
+ Custom Metrics
+ Optimization
+ Safety and Security
+ Safety and Security
+ Components
+ Components
+ Technical Overview
+ Custom Tools
+ Custom Tools
+ Function tools
+ Function tools
+ Overview
+ Tool performance
+ Action confirmations
+ MCP tools
+ MCP tools
+ Advanced configuration
+ Deployment
+ Agent as MCP server
+ Sub-agent delegation
+ OpenAPI tools
+ Authentication
+ Tool limitations
+ Artifacts
+ Artifacts
+ Skills for Agents
+ Skills for Agents
+ App management
+ App management
+ Callbacks
+ Callbacks
+ Types of callbacks
+ Callback patterns
+ Plugins
+ Agent context
+ Agent context
+ Conversational context
+ Sessions
+ Sessions
+ Rewind sessions
+ Migrate sessions
+ State
+ Events
+ Memory
+ Context compression
+ Model context caching
+ A2A Protocol
+ A2A Protocol
+ Introduction to A2A
+ A2A Quickstart (Exposing)
+ A2A Quickstart (Exposing)
+ Python
+ Go
+ Java
+ A2A Quickstart (Consuming)
+ A2A Quickstart (Consuming)
+ Python
+ Go
+ Java
+ Kotlin
+ A2A Extension
+ Live and Voice Agents
+ Live and Voice Agents
+ Get started
+ Get started
+ Python
+ Java
+ Building
+ Building
+ Workflows
+ Tools
+ Sessions
+ Events
+ Audio and video
+ Configuration
+ Production
+ Production
+ Guardrails
+ Evaluation
+ Build a custom server
+ Supported models
+ Grounding
+ Grounding
+ Google Search Grounding
+ Grounding with Search
+ Integrations
+ Integrations
+ Reference
+ Reference
+ API Reference
+ API Reference
+ Python ADK
+ TypeScript ADK
+ Go ADK
+ Go ADK
+ Go v2.x
+ Go v1.x
+ Java ADK
+ Kotlin ADK
+ CLI Reference
+ Agent Config Reference
+ REST API
+ Release Notes
+ Community
+ Community
+ Contributing Guide
+ ADK 2.0
+ ADK 2.0
+ Build production agents, not prototypes. 
+ ADK is the open-source agent development framework that lets you build, debug, and deploy reliable AI agents at enterprise scale. Available in Python, TypeScript, Go, Java, and Kotlin.
+ Start building 
+ Agent skills -->
+ Python
+ TypeScript
+ Go
+ Java
+ Kotlin
+ from google.adk import Agent 
+ from google.adk.tools import google_search
+agent = Agent (
+ name= "researcher" ,
+ model= "gemini-flash-latest" ,
+ instruction= "You help users research topics thoroughly." ,
+ tools=[google_search],
+) 
+ import { LlmAgent, GOOGLE_SEARCH } from '@google/adk' ;
+ const agent = new LlmAgent ({
+ name: 'researcher' ,
+ model: 'gemini-flash-latest' ,
+ instruction: 'You help users research topics thoroughly.' ,
+ tools: [GOOGLE_SEARCH],
+});
+ import "google.golang.org/adk/v2/agent/llmagent" 
+model, _ := gemini. NewModel (context. Background (), "gemini-flash-latest" , nil )
+a, _ := llmagent. New (llmagent. Config {
+ Name: "researcher" ,
+ Model: model,
+ Instruction: "You help users research topics thoroughly." ,
+ Tools: []tool.Tool{geminitool. GoogleSearch {}},
+}) 
+ import com.google.adk.agents. LlmAgent ;
+ import com.google.adk.tools. GoogleSearchTool ;
+ LlmAgent agent = LlmAgent .builder()
+ .name( "researcher" )
+ .model( "gemini-flash-latest" )
+ .instruction( "You help users research topics thoroughly." )
+ .tools( new GoogleSearchTool() )
+ .build(); 
+ import com.google.adk.kt.agents. LlmAgent 
+ import com.google.adk.kt.tools. GoogleSearchTool 
+ val agent = LlmAgent (
+ name = "researcher" ,
+ model = Gemini (name = "gemini-flash-latest" ),
+ instruction = Instruction ( "You help users research topics thoroughly." ),
+ tools = listOf( GoogleSearchTool ()),
+) 
+ pip install google-adk 
+ 📋 
+ npm install @google/adk 
+ 📋 
+ go get google.golang.org/adk/v2 
+ 📋 
+ com.google.adk:google-adk 
+ 📋 
+ com.google.adk:google-adk-kotlin-core 
+ 📋 
+ Agents CLI 
+ Build agents with agents.
+ Go from idea to coded ADK agent in minutes. Use your favorite AI-enabled developer environment to scaffold, build, test, evaluate, and deploy with Agents CLI.
+ Learn more 
+ Graph Workflows 
+ Reliable logic. Intelligent reasoning.
+ Weave deterministic code with adaptive AI reasoning. Orchestrate
+ complex tasks through structured, graph-based architectures, with explicit
+ execution paths and predictable outcomes. New in ADK 2.0!
+ Learn more 
+ Framework 
+ Powerful simplicity. Built for scale.
+ Start building ADK agents with prompts and tool calls, then grow to multi-agent orchestration, graph-based workflows, performance evaluation, and deployment to world class enterprise services for scalability, reliability, and throughput.
+ Learn more 
+ Ecosystem 
+ Open ecosystem. Connect everything.
+ ADK's open integration partners connect your agents with existing apps, a wide range of AI models, and extend agent capabilities to access data, add resilience, and evaluate performance.
+ Learn more 
+ Ready to build agents?
+ We think one of the best ways to learn is by building, so we've created guides that help you get your development environment set up and run an ADK agent in minutes.
+ Start building 
+ Developer Community
+ Build alongside a growing community of developers engineering the next generation of production-re
+
+=== [about] https://adk.dev/get-started/about/ (lang=en)
+Technical Overview - Agent Development Kit (ADK) 
+ Agent Development Kit (ADK) 
+ Skip to content
+ Released! 
+ ADK TypeScript 2.0 GA
+ is now available with graph workflows support! Get started 
+ Agent Development Kit (ADK)
+ Technical Overview
+ Python 
+ JS 
+ Go 
+ Java 
+ Kotlin 
+ Home
+ Build Agents
+ Run Agents
+ Components
+ Integrations
+ Reference
+ Community
+ ADK 2.0
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to
+ deal in the Software without restriction, including without limitation the
+ rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+ sell copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+ IN THE SOFTWARE.
+-->
+ Python 
+ JS 
+ Go 
+ Java 
+ Kotlin 
+ Home
+ Build Agents
+ Build Agents
+ Get Started
+ Get Started
+ Python
+ TypeScript
+ Go
+ Java
+ Kotlin
+ Agents CLI
+ Installation
+ Google Cloud
+ Migrate to ADK
+ Build your Agent
+ Build your Agent
+ Multi-tool agent
+ Agent team
+ Code with AI
+ Agent Config
+ Agents
+ Agents
+ Simple agents
+ Managed agents
+ Graph Workflows
+ Graph Workflows
+ Graph routes
+ Data handling
+ Human input
+ Dynamic workflows
+ Multi-Agent Workflows
+ Multi-Agent Workflows
+ Collaborative workflows
+ Template workflows
+ Template workflows
+ Sequential workflow
+ Loop workflow
+ Parallel workflow
+ Custom template workflows
+ Agent routing
+ Workflow patterns
+ Models for Agents
+ Models for Agents
+ Gemini
+ Gemini
+ Deferred scheduling
+ Gemma
+ Claude
+ Agent Platform hosted
+ Apigee AI Gateway
+ Model routing
+ OpenAI
+ Ollama
+ vLLM
+ LiteLLM
+ LiteRT-LM
+ Run Agents
+ Run Agents
+ Agent Runtime
+ Agent Runtime
+ Web Interface
+ Web Interface
+ Visual Builder
+ Command Line
+ API Server
+ Ambient Agents
+ Resume Agents
+ Cancel Agent Runs
+ Runtime Config
+ Event Loop
+ Deployment
+ Deployment
+ Agent Runtime
+ Agent Runtime
+ Standard deployment
+ agents-cli
+ Test deployed agents
+ Cloud Run
+ GKE
+ Observability
+ Observability
+ Logging
+ Metrics
+ Traces
+ Evaluation
+ Evaluation
+ Criteria
+ User Simulation
+ Environment Simulation
+ Custom Metrics
+ Optimization
+ Safety and Security
+ Safety and Security
+ Components
+ Components
+ Technical Overview
+ Technical Overview
+ Table of contents
+ Core Concepts
+ Key Capabilities
+ Get Started
+ Custom Tools
+ Custom Tools
+ Function tools
+ Function tools
+ Overview
+ Tool performance
+ Action confirmations
+ MCP tools
+ MCP tools
+ Advanced configuration
+ Deployment
+ Agent as MCP server
+ Sub-agent delegation
+ OpenAPI tools
+ Authentication
+ Tool limitations
+ Artifacts
+ Artifacts
+ Skills for Agents
+ Skills for Agents
+ App management
+ App management
+ Callbacks
+ Callbacks
+ Types of callbacks
+ Callback patterns
+ Plugins
+ Agent context
+ Agent context
+ Conversational context
+ Sessions
+ Sessions
+ Rewind sessions
+ Migrate sessions
+ State
+ Events
+ Memory
+ Context compression
+ Model context caching
+ A2A Protocol
+ A2A Protocol
+ Introduction to A2A
+ A2A Quickstart (Exposing)
+ A2A Quickstart (
+
+=== [meta] https://adk.dev/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/google/adk-python
+# Agent Development Kit (ADK) 2.0
+
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
+[![PyPI version](https://img.shields.io/pypi/v/google-adk.svg)](https://pypi.org/project/google-adk/)
+[![Python versions](https://img.shields.io/pypi/pyversions/google-adk.svg)](https://pypi.org/project/google-adk/)
+[![PyPI downloads](https://static.pepy.tech/badge/google-adk/month)](https://pepy.tech/project/google-adk)
+[![Continuous Integration](https://github.com/google/adk-python/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/google/adk-python/actions/workflows/continuous-integration.yml)
+[![Docs](https://img.shields.io/badge/docs-latest-blue.svg)](https://adk.dev/)
+[![r/agentdevelopmentkit](https://img.shields.io/badge/Reddit-r%2Fagentdevelopmentkit-FF4500?style=flat&logo=reddit&logoColor=white)](https://www.reddit.com/r/agentdevelopmentkit/)
+<a href="https://codewiki.google/github.com/google/adk-python"><img src="https://www.gstatic.com/_/boq-sdlc-agents-ui/_/r/Mvosg4klCA4.svg" alt="Ask Code Wiki" height="20"></a>
+
+<h2 align="center">
+  <img src="https://raw.githubusercontent.com/google/adk-python/main/assets/agent-development-kit.png" width="256"/>
+</h2>
+<h3 align="center">
+  An open-source, code-first Python framework for building, evaluating, and deploying sophisticated AI agents with flexibility and control.
+</h3>
+<h3 align="center">
+  Important Links:
+  <a href="https://adk.dev/">Docs</a>,
+  <a href="https://github.com/google/adk-recipes">Samples</a> &
+  <a href="https://github.com/google/adk-web">ADK Web</a>.
+</h3>
+<h3 align="center">
+  ADK in other languages:
+  <a href="https://github.com/google/adk-java">ADK Java</a>,
+  <a href="https://github.com/google/adk-kotlin">ADK Kotlin</a>,
+  <a href="https://github.com/google/adk-go">ADK Go</a> &
+  <a href="https://github.com/google/adk-js">ADK Typescript</a>.
+</h3>
+
+Agent Development Kit (ADK) is a flexible and modular framework that applies
+software development principles to AI agent creation. It is designed to
+simplify building, deploying, and orchestrating agent workflows, from simple
+tasks to complex systems. While optimized for Gemini, ADK is model-agnostic,
+deployment-agnostic, and compatible with other frameworks.
+
+## ✨ Key Features
+
+- **Workflow Runtime**: A graph-based execution engine for composing
+  deterministic execution flows for agentic apps, with support for routing,
+  fan-out/fan-in, loops, retry, state management, dynamic nodes,
+  human-in-the-loop, and nested workflows.
+
+- **Task API**: Structured agent-to-agent delegation with multi-turn task
+  mode, single-turn controlled output, mixed delegation patterns,
+  human-in-the-loop, and task agents as workflow nodes.
+
+- **Modular Multi-Agent Systems**: Design scalable applications by composing
+  multiple specialized agents into flexible hierarchies.
+
+- **Rich Tool Ecosystem**: Utilize pre-built tools, custom functions,
+  OpenAPI specs, MCP tools or integrate existing tools to give agents diverse
+  capabilities, all for tight integration with the Google ecosystem.
+
+- **Code-First Development**: Define agent logic, tools, and orchestration
+  directly in Python for ultimate flexibility, testability, and versioning.
+
+- **Agent Config**: Build agents without code. Check out the
+  [Agent Config](https://adk.dev/agents/config/) feature.
+
+- **Tool Confirmation**: A [tool confirmation flow (HITL)](https://adk.dev/tools-custom/confirmation/) that can guard tool execution with explicit confirmation and custom input.
+
+- **Deploy Anywhere**: Easily containerize and deploy agents on Cloud Run or
+  scale seamlessly with Vertex AI Agent Engine.
+
+## 🚀 Installation
+
+### Stable Release (Recommended)
+
+You can install the latest stable version of ADK using `pip`:
+
+```bash
+pip install google-adk
+```
+
+**Requirements:** Python 3.11+.
+
+For transitive dependency protection, we recommend to install with our companion
+constraints files (for python 3.11 to 3.15).
+
+Choose the constraints file matching your Python version:
+
+```bash
+# For example, for Python 3.11
+curl -o constraints-3.11.txt https://raw.githubusercontent.com/google/adk-python/main/constraints-3.11.txt
+pip install google-adk 

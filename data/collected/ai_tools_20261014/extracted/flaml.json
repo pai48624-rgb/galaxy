@@ -1,0 +1,41 @@
+{
+ "company": "Microsoft Research (FLAML Authors)",
+ "one_liner_ko": "적은 계산 자원으로 머신러닝 모델 선택과 하이퍼파라미터 튜닝을 자동화하는 빠르고 가벼운 AutoML·튜닝 라이브러리.",
+ "what_it_does_ko": "FLAML은 머신러닝·AI 작업을 효율적으로 자동화하는 가벼운 파이썬 라이브러리다. 분류·회귀 같은 일반 작업에서 사용자 데이터에 맞는 좋은 모델을 적은 계산 자원으로 빠르게 찾아 준다. 대형 언어 모델을 용도에 맞게 자동 조정해 비용을 줄이고, 평가 비용이 제각각인 넓은 탐색 공간도 다루는 빠른 자동 튜닝 도구를 제공한다. Microsoft Fabric Data Science에서 AutoML과 하이퍼파라미터 튜닝을 지원한다.",
+ "key_features": [
+  "자원 제약 아래 모델 선택과 하이퍼파라미터 최적화 자동화",
+  "scikit-learn 방식 추정기로 쓰는 AutoML 엔진(코드 세 줄로 시작)",
+  "비용 효율적인 새 튜닝 방식 기반의 빠른 자동 튜닝",
+  "넓은 탐색 공간·복잡한 제약·조기 종료 처리",
+  "대형 언어 모델을 용도에 맞게 자동 조정해 비용 절감",
+  "결측값 자동 전처리(수치형 중앙값 대체, 범주형 별도 값)",
+  "MLflow 연동과 Microsoft Fabric Data Science 지원"
+ ],
+ "use_cases_ko": [
+  "분류·회귀 작업에서 데이터에 맞는 모델을 빠르게 찾기",
+  "MLOps/LMOps 워크플로·파이프라인 설정의 자동 튜닝"
+ ],
+ "pricing": {"free_tier": "불명", "plans": [], "pricing_url": null},
+ "open_source": null,
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://github.com/microsoft/FLAML", "quote": "from Microsoft Research and collaborators such as Penn State University"},
+  {"field": "company", "url": "https://microsoft.github.io/FLAML/", "quote": "Copyright © 2026 FLAML Authors."},
+  {"field": "one_liner_ko", "url": "https://microsoft.github.io/FLAML/", "quote": "A Fast Library for Automated Machine Learning & Tuning"},
+  {"field": "what_it_does_ko", "url": "https://github.com/microsoft/FLAML", "quote": "FLAML is a lightweight Python library for efficient automation of machine"},
+  {"field": "what_it_does_ko", "url": "https://github.com/microsoft/FLAML", "quote": "For common machine learning tasks like classification and regression, it quickly finds quality models for user-provided data with low computational resources."},
+  {"field": "what_it_does_ko", "url": "https://microsoft.github.io/FLAML/", "quote": "By automatically adapting LLMs to applications, FLAML maximizes the benefits of expensive LLMs and reduces monetary costs."},
+  {"field": "key_features", "url": "https://github.com/microsoft/FLAML", "quote": "including model selection and hyperparameter optimization under resource constraints"},
+  {"field": "key_features", "url": "https://github.com/microsoft/FLAML", "quote": "With three lines of code, you can start using this economical and fast"},
+  {"field": "key_features", "url": "https://microsoft.github.io/FLAML/", "quote": "FLAML offers a fast auto-tuning tool powered by a novel cost-effective tuning approach."},
+  {"field": "key_features", "url": "https://microsoft.github.io/FLAML/", "quote": "It is capable of handling large search spaces with heterogeneous evaluation costs and complex constraints/guidance/early stopping."},
+  {"field": "key_features", "url": "https://microsoft.github.io/FLAML/docs/FAQ/", "quote": "FLAML automatically preprocesses missing values in the input data through its DataTransformer class"},
+  {"field": "key_features", "url": "https://github.com/microsoft/FLAML", "quote": "comprehensive integration with MLflow—thanks to contributions from the Microsoft Fabric product team"},
+  {"field": "use_cases_ko", "url": "https://github.com/microsoft/FLAML", "quote": "configurations in MLOps/LMOps workflows, pipelines, mathematical/statistical models"},
+  {"field": "korean_support", "url": "https://microsoft.github.io/FLAML/", "quote": "hreflang: en, x-default"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

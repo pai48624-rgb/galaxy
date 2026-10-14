@@ -1,0 +1,37 @@
+{
+ "company": "NVIDIA",
+ "one_liner_ko": "LLM 기반 대화 시스템에 프로그래밍 가능한 가드레일을 쉽게 붙이는 오픈소스 툴킷.",
+ "what_it_does_ko": "NeMo Guardrails는 LLM 기반 대화 애플리케이션에 프로그래밍 가능한 가드레일(rails)을 쉽게 추가하는 오픈소스 툴킷이다. 가드레일은 정치 이야기를 하지 않기, 특정 요청에 정해진 방식으로 답하기, 미리 정한 대화 경로 따르기, 특정 언어 스타일 쓰기, 구조화 데이터 추출 등 LLM 출력을 제어하는 방법이다. 애플리케이션 코드와 LLM 사이에 가드레일을 두어 신뢰할 수 있고 안전한 앱을 만들고, LLM을 다른 서비스(도구)와 안전하게 연결할 수 있다. 문서는 Colang 언어 참조와 보안·평가 주제를 다룬다. pip로 설치한다.",
+ "key_features": [
+  "프로그래밍 가능한 가드레일(rails)",
+  "원치 않는 주제 대화 차단",
+  "미리 정한 대화 경로로 유도(제어 가능한 대화)",
+  "LLM과 다른 서비스·도구의 안전한 연결",
+  "구조화 데이터 추출",
+  "Colang 언어"
+ ],
+ "use_cases_ko": [
+  "LLM 기반 앱 개발자가 대화를 보호·통제하기",
+  "인증·고객지원 같은 표준 운영 절차를 대화에 강제하기"
+ ],
+ "pricing": {"free_tier": "불명", "plans": [], "pricing_url": null},
+ "open_source": "Apache-2.0",
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://github.com/NVIDIA-NeMo/Guardrails", "quote": "NVIDIA NeMo Guardrails library is an open-source toolkit for easily adding *programmable guardrails* to LLM-based conversational applications."},
+  {"field": "one_liner_ko", "url": "https://docs.nvidia.com/nemo-guardrails/", "quote": "NeMo Guardrails is an open-source toolkit for easily adding programmable guardrails to LLM-based conversational systems."},
+  {"field": "what_it_does_ko", "url": "https://github.com/NVIDIA-NeMo/Guardrails", "quote": "such as not talking about politics, responding in a particular way to specific user requests, following a predefined dialog path, using a particular language style, extracting structured data, and more."},
+  {"field": "what_it_does_ko", "url": "https://docs.nvidia.com/nemo-guardrails/", "quote": "reference documentation for the Colang language. It also covers security and evaluation-related topics."},
+  {"field": "key_features", "url": "https://github.com/NVIDIA-NeMo/Guardrails", "quote": "prevent it from engaging in discussions on unwanted topics."},
+  {"field": "key_features", "url": "https://github.com/NVIDIA-NeMo/Guardrails", "quote": "- **Controllable dialog**: you can steer the LLM to follow pre-defined conversational paths"},
+  {"field": "key_features", "url": "https://github.com/NVIDIA-NeMo/Guardrails", "quote": "you can connect an LLM to other services (a.k.a. tools) seamlessly and securely."},
+  {"field": "use_cases_ko", "url": "https://github.com/NVIDIA-NeMo/Guardrails", "quote": "The NeMo Guardrails library enables developers building LLM-based applications to add **programmable guardrails** between the application code and the LLM."},
+  {"field": "use_cases_ko", "url": "https://github.com/NVIDIA-NeMo/Guardrails", "quote": "enforce standard operating procedures (e.g., authentication, support)."},
+  {"field": "open_source", "url": "https://github.com/NVIDIA-NeMo/Guardrails", "quote": "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"},
+  {"field": "korean_support", "url": "https://docs.nvidia.com/nemo-guardrails/", "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

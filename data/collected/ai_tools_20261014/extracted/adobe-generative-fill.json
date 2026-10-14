@@ -1,0 +1,118 @@
+{
+ "company": "Adobe",
+ "one_liner_ko": "Photoshop에서 AI로 이미지의 빈 곳을 채우고 늘리고 지우는 생성형 채우기 기능.",
+ "what_it_does_ko": "Generative Fill은 Photoshop 안에서 쓰는 AI 이미지 편집 기능으로, 이미지의 일부를 생성 콘텐츠로 채운다. 최신 Firefly 모델로 Generative Fill·Generative Expand·Remove Tool 결과의 해상도와 가장자리, 디테일을 개선했다고 밝힌다. Gemini 3(Nano Banana Pro)와 FLUX.2 pro 같은 파트너 AI 모델과 Firefly Fill & Expand 모델(베타)도 고를 수 있다. 웹 페이지에서 JPEG·PNG 이미지를 올려 바로 체험해 볼 수 있다.",
+ "key_features": [
+  "AI로 이미지 일부 채우기(Generative Fill)",
+  "이미지 바깥 확장(Generative Expand)",
+  "Remove Tool로 대상 지우기",
+  "최신 Firefly 모델로 고해상도·깔끔한 가장자리",
+  "파트너 모델 Gemini 3(Nano Banana Pro)·FLUX.2 pro 선택"
+ ],
+ "use_cases_ko": [],
+ "pricing": {
+  "free_tier": "없음 (무료 체험만 표시, Photoshop 등 Adobe 요금제에 포함)",
+  "plans": [
+   {
+    "name": "Creative Cloud Single App (Photoshop 등 앱 1개)",
+    "price": 22.99,
+    "currency": "USD",
+    "period": "month(연간 약정, 월 청구)",
+    "limits": "Creative Cloud 앱 1개 전체 이용",
+    "page_lang": "en-US"
+   },
+   {
+    "name": "Adobe Firefly Pro",
+    "price": 19.99,
+    "currency": "USD",
+    "period": "month",
+    "limits": "생성형 AI 크레딧 4,000, 웹·모바일 Photoshop, Adobe Express Premium",
+    "page_lang": "en-US"
+   },
+   {
+    "name": "Creative Cloud Pro",
+    "price": 69.99,
+    "currency": "USD",
+    "period": "month(연간 약정, 월 청구)",
+    "limits": "Photoshop 포함 20개 이상 앱 + Firefly",
+    "page_lang": "en-US"
+   }
+  ],
+  "pricing_url": "https://www.adobe.com/plans.html"
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://www.adobe.com/products/photoshop/generative-fill.html",
+   "quote": "Photoshop Generative Fill: Use AI to Fill in Images | Adobe"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://www.adobe.com/products/photoshop/generative-fill.html",
+   "quote": "Photoshop Generative Fill: Use AI to Fill in Images"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.adobe.com/products/photoshop/generative-fill.html",
+   "quote": "Higher resolution. Cleaner edges. Sharper details. Get more realistic results with the latest Generative Fill, Expand, and Remove Tool models."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://www.adobe.com/products/photoshop/generative-fill.html",
+   "quote": "File must be JPEG, JPG or PNG and up to 40MB"
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.adobe.com/products/photoshop/generative-fill.html",
+   "quote": "Get more choice and better results with Gemini 3 (with Nano Banana Pro) and FLUX.2 pro, plus a new Firefly Fill & Expand model (beta)."
+  },
+  {
+   "field": "key_features",
+   "url": "https://www.adobe.com/products/photoshop/generative-fill.html",
+   "quote": "New Firefly models for the best results yet."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.adobe.com/products/photoshop/generative-fill.html",
+   "quote": "Start free trial View plans and pricing"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.adobe.com/plans.html",
+   "quote": "Get full access to one Creative Cloud app, such as Photoshop, Illustrator, or Premiere."
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.adobe.com/plans.html",
+   "quote": "Adobe Firefly Pro"
+  },
+  {
+   "field": "pricing",
+   "url": "https://www.adobe.com/plans.html",
+   "quote": "Get full access to 20+ apps, including Photoshop, Illustrator, Premiere, and Acrobat Pro, plus Adobe Firefly creative AI."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://www.adobe.com/products/photoshop/generative-fill.html",
+   "quote": "html lang: 없음"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "Generative Fill은 Photoshop 기능으로, 페이지에는 무료 체험과 유료 요금제(Single App US$22.99/월 등)만 있음",
+   "diff": "기존 분류는 프리미엄(무료+유료)이지만 계속 쓸 수 있는 무료 요금제는 페이지에 없음",
+   "url": "https://www.adobe.com/products/photoshop/generative-fill.html"
+  }
+ ],
+ "plan_change": [
+  {
+   "official": "단독 요금제 없이 Creative Cloud Single App·Creative Cloud Pro·Firefly Pro 등 Adobe 구독에 묶여 제공",
+   "diff": "도구 자체 요금제가 아니라 Photoshop/Creative Cloud 구독에 포함된 기능",
+   "url": "https://www.adobe.com/plans.html"
+  }
+ ]
+}

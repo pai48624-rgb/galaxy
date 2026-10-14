@@ -1,0 +1,54 @@
+{
+ "company": "Arize AI",
+ "one_liner_ko": "운영 신호를 지속적인 학습으로 바꿔 에이전트가 상호작용마다 나아지게 하는 에이전트 관측성·평가 플랫폼.",
+ "what_it_does_ko": "Arize AX는 Arize AI의 관리형 AI 엔지니어링 플랫폼으로, 에이전트의 관측·평가·개선을 하나의 흐름으로 제공한다. OpenInference·OpenTelemetry 표준으로 에이전트가 실제로 한 일을 추적하고, span·trace·session 단위 평가를 대규모로 돌린다. Signal 기능이 중요한 이슈와 근본 원인을 찾아 검토 가능한 수정안을 만들고, AI 엔지니어링 에이전트 Alyx가 평가 실행·디버깅·개선을 돕는다. 오픈소스 관측·평가 도구 Phoenix도 함께 제공한다.",
+ "key_features": [
+  "OpenInference 기반 에이전트 트레이싱",
+  "span·trace·session 단위 대규모 평가",
+  "배포 전 프롬프트·하네스 테스트",
+  "Signal: 이슈·근본 원인 탐지와 수정안 생성",
+  "AI 엔지니어링 에이전트 Alyx",
+  "Cursor·Claude Code 등 코딩 에이전트 연동 워크플로",
+  "GenAI 트레이스 저장소 ADB"
+ ],
+ "use_cases_ko": [
+  "에이전트 출시 전 개발과 출시 후 디버깅",
+  "에이전트 개발 중 실시간 온라인 평가"
+ ],
+ "pricing": {
+  "free_tier": "있음 (AX Free: 월 25k spans, 1GB, 15일 보관, 사용자 무제한)",
+  "plans": [
+   {"name": "AX Free", "price": 0, "currency": "USD", "period": "month", "limits": "월 25k spans, 1GB, 15일 보관, Signal 월 10건", "page_lang": "en-US"},
+   {"name": "AX Pro", "price": 50, "currency": "USD", "period": "month", "limits": "월 50k spans, 10GB, 30일 보관, Signal 월 25건", "page_lang": "en-US"},
+   {"name": "AX Enterprise", "price": null, "currency": "USD", "period": "month", "limits": "맞춤, SaaS 또는 자체 호스팅", "page_lang": "en-US"}
+  ],
+  "pricing_url": "https://arize.com/pricing/"
+ },
+ "open_source": "오픈소스 Phoenix·OpenInference 제공(라이선스 이름은 페이지에 없음)",
+ "api": "불명",
+ "platforms": ["웹", "CLI"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://arize.com", "quote": "Agent Observability, Evaluation & Improvement Platform | Arize AI"},
+  {"field": "one_liner_ko", "url": "https://arize.com", "quote": "Turn production signals into continual learning so your agents improve with every interaction."},
+  {"field": "what_it_does_ko", "url": "https://arize.com", "quote": "Arize AX \n Managed AI engineering platform"},
+  {"field": "what_it_does_ko", "url": "https://arize.com", "quote": "Run span, trace, and session evals that run at scale."},
+  {"field": "what_it_does_ko", "url": "https://arize.com", "quote": "Signal surfaces what matters, uncovers root causes, and generates review-ready fixes."},
+  {"field": "key_features", "url": "https://arize.com", "quote": "Trace everything from the team who founded OpenInference, the leading open standard for GenAI observability."},
+  {"field": "key_features", "url": "https://arize.com", "quote": "Test prompts and harnesses faster before deploying to production."},
+  {"field": "key_features", "url": "https://arize.com", "quote": "Alyx runs evals, debugs issues, and improves your agents."},
+  {"field": "key_features", "url": "https://arize.com", "quote": "Run agent-native workflows across Cursor, Claude Code, OpenCode, and beyond"},
+  {"field": "key_features", "url": "https://arize.com", "quote": "ADB: The datastore for GenAI traces"},
+  {"field": "use_cases_ko", "url": "https://arize.com", "quote": "We rely on Arize for both pre-launch development and post-launch debugging."},
+  {"field": "use_cases_ko", "url": "https://arize.com", "quote": "The ability to run real-time online evaluations has been crucial as we've developed our agents."},
+  {"field": "pricing", "url": "https://arize.com/pricing/", "quote": "10 issues per month \n Trace spans\n 25k spans per month"},
+  {"field": "pricing", "url": "https://arize.com/pricing/", "quote": "$50 \n per month"},
+  {"field": "pricing", "url": "https://arize.com/pricing/", "quote": "25 issues per month \n Trace spans\n 50k spans per month"},
+  {"field": "pricing", "url": "https://arize.com/pricing/", "quote": "SaaS or Self-Hosted"},
+  {"field": "open_source", "url": "https://arize.com", "quote": "Host locally. Trace every LLM call, run evals, and keep control of your data with the leading open-source eval and observability tool."},
+  {"field": "platforms", "url": "https://arize.com", "quote": "Start in the product \n Start in your terminal"},
+  {"field": "korean_support", "url": "https://arize.com", "quote": "html lang: en-US\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

@@ -1,0 +1,179 @@
+{
+ "company": "supermemory",
+ "one_liner_ko": "에이전트를 위한 기억과 지속 학습(continual learning) 엔진.",
+ "what_it_does_ko": "supermemory는 대화에서 사실을 추출하고 사용자 프로필을 만들며, 지식 갱신·모순·만료 정보 망각까지 처리해 필요한 맥락을 제때 에이전트에 넣어 준다. 자체 모델 learner-1이 맥락을 추출해 벡터-그래프 DB에 저장하고 실시간으로 모델 컨텍스트에 토큰을 주입한다. API, 플러그인, MCP로 제공되며 RAG·커넥터·파일 처리까지 한 시스템에서 다룬다. 데이터센터·VPC·노트북 등 망분리 환경에도 배포할 수 있다.",
+ "key_features": [
+  "대화에서 사실 추출, 시간 변화·모순·자동 망각 처리",
+  "자동 유지되는 사용자 프로필(약 50ms)",
+  "RAG와 메모리를 한 번에 검색하는 하이브리드 검색",
+  "Google Drive·Gmail·Notion·OneDrive·GitHub 커넥터",
+  "PDF·이미지 OCR·영상 전사·코드 청킹 멀티모달 추출",
+  "Claude Code·Cursor·Codex 등용 플러그인·MCP 서버",
+  "자체 호스팅·망분리 배포"
+ ],
+ "use_cases_ko": [
+  "AI 도구 사용자: 코딩 도구에 대화 간 지속 기억 부여",
+  "AI 제품 개발자: 단일 API로 메모리·RAG·사용자 프로필 추가"
+ ],
+ "pricing": {
+  "free_tier": "있음 (월 $5 크레딧 포함)",
+  "plans": [
+   {
+    "name": "Free",
+    "price": 0,
+    "currency": "USD",
+    "period": "month",
+    "limits": "매월 $5 크레딧",
+    "page_lang": "en"
+   },
+   {
+    "name": "Pro",
+    "price": 19,
+    "currency": "USD",
+    "period": "month",
+    "limits": "월 $20 크레딧, 팀 좌석 3개",
+    "page_lang": "en"
+   },
+   {
+    "name": "Max",
+    "price": 100,
+    "currency": "USD",
+    "period": "month",
+    "limits": "월 $130 크레딧, Gmail 커넥터",
+    "page_lang": "en"
+   },
+   {
+    "name": "Scale",
+    "price": 399,
+    "currency": "USD",
+    "period": "month",
+    "limits": "월 $600 크레딧, 고급 PDF 추출, 자체 호스팅 옵션",
+    "page_lang": "en"
+   },
+   {
+    "name": "Enterprise",
+    "price": null,
+    "currency": "USD",
+    "period": null,
+    "limits": "맞춤 배포, 약정 사용량",
+    "page_lang": "en"
+   }
+  ],
+  "pricing_url": "https://supermemory.ai/pricing/"
+ },
+ "open_source": "자체 호스팅 가능 공개 저장소(라이선스 이름은 페이지에 없음)",
+ "api": "있음",
+ "platforms": [
+  "API"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://supermemory.ai",
+   "quote": "© 2026 supermemory Privacy"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://supermemory.ai",
+   "quote": "supermemory is building the default engine for memory and continual learning for agents."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/supermemoryai/supermemory",
+   "quote": "handles knowledge updates and contradictions, forgets expired information, and delivers the right context at the right time."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://supermemory.ai",
+   "quote": "Our model learner-1 helps any model continuously improve by extracting and dreaming on the context of any user, task, or tenant, and putting it on our vector-graph database."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://supermemory.ai",
+   "quote": "Available through our API, plugins, and MCP."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/supermemoryai/supermemory",
+   "quote": "Extracts facts from conversations. Handles temporal changes, contradictions, and automatic forgetting."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/supermemoryai/supermemory",
+   "quote": "Auto-maintained user context — stable facts + recent activity. One call, ~50ms."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/supermemoryai/supermemory",
+   "quote": "RAG + Memory in a single query."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/supermemoryai/supermemory",
+   "quote": "Google Drive · Gmail · Notion · OneDrive · GitHub — auto-sync with real-time webhooks."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/supermemoryai/supermemory",
+   "quote": "PDFs, images (OCR), videos (transcription), code (AST-aware chunking)."
+  },
+  {
+   "field": "key_features",
+   "url": "https://supermemory.ai",
+   "quote": "supermemory runs everywhere, even in air-gapped environments."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/supermemoryai/supermemory",
+   "quote": "Give Claude Code, Muse Code, Cursor, Codex and OpenCode **persistent memory across every conversation**"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/supermemoryai/supermemory",
+   "quote": "Add memory, RAG, user profiles, and connectors to your agents and apps with **a single API**."
+  },
+  {
+   "field": "pricing",
+   "url": "https://supermemory.ai/pricing/",
+   "quote": "Free\n $0 per month · $5 of credits included, renewed every month"
+  },
+  {
+   "field": "pricing",
+   "url": "https://supermemory.ai/pricing/",
+   "quote": "Pro\n $19 per month \n Get Pro $20 included per month"
+  },
+  {
+   "field": "pricing",
+   "url": "https://supermemory.ai/pricing/",
+   "quote": "$100 per month \n Get Max $130 included per month"
+  },
+  {
+   "field": "pricing",
+   "url": "https://supermemory.ai/pricing/",
+   "quote": "Scale\n $399 per month \n Get Scale $600 included per month"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/supermemoryai/supermemory",
+   "quote": "State-of-the-art memory, on your machine. **One binary. Zero config.**"
+  },
+  {
+   "field": "api",
+   "url": "https://github.com/supermemoryai/supermemory",
+   "quote": "Add memory, RAG, user profiles, and connectors to your agents and apps with **a single API**."
+  },
+  {
+   "field": "platforms",
+   "url": "https://supermemory.ai",
+   "quote": "Available through our API, plugins, and MCP."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://supermemory.ai",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

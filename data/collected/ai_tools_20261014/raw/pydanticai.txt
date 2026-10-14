@@ -1,0 +1,594 @@
+=== [home] https://pydantic.dev/docs/ai/overview/ (lang=en)
+Pydantic AI | Pydantic Docs Skip to content / 
+Docs
+ Pydantic Docs 
+ Pydantic Validation Pydantic AI Pydantic Logfire HTTPX2 Monty 
+More
+ HTTPX2 Monty 
+ Search Ctrl K
+ Pydantic Validation Pydantic AI Pydantic Logfire HTTPX2 Monty 
+ Pydantic Validation Pydantic AI Pydantic Logfire HTTPX2 Monty Theme 
+ pydantic/pydantic-ai 
+ Pydantic Validation Pydantic AI Pydantic Logfire HTTPX2 Monty Theme 
+ pydantic/pydantic-ai Pydantic AI 
+ Installation 
+ Coding Agent Skills 
+ Getting Help 
+ Enterprise Support 
+ Troubleshooting 
+ Core Concepts Agents 
+ Dependencies 
+ Output 
+ Multimodal Input 
+ Hooks 
+ Workspaces 
+ Capabilities 
+ On-Demand Capabilities 
+ Building Custom Capabilities 
+ Agent Specs 
+ Messages and chat history 
+ Persistence 
+ Direct Model Requests 
+ Retries 
+ Timeouts 
+ Multi-Agent Patterns 
+ Models & Providers Overview 
+ Pydantic AI Gateway 
+ OpenAI 
+ Anthropic 
+ Google 
+ AWS Bedrock 
+ Google Cloud 
+ Microsoft Azure / Foundry 
+ Cerebras 
+ Cohere 
+ Crusoe 
+ DeepSeek 
+ GitHub Copilot 
+ Groq 
+ Hugging Face 
+ Mistral 
+ Moonshot AI / Kimi 
+ Ollama 
+ OpenAI Codex 
+ OpenRouter 
+ Snowflake Cortex 
+ System One API 
+ TypeSafe (Jev) 
+ xAI 
+ Z.AI 
+ Other compatible APIs 
+ Decision models 
+ Tools & Toolsets Function Tools 
+ Advanced Tool Features 
+ Toolsets 
+ Deferred Tools 
+ Native Tools 
+ Common Tools 
+ Third-Party Tools 
+ Capabilities Pydantic AI Harness 
+ Harnesses Coder 
+ Researcher 
+ Execution Environments FileSystem 
+ Shell 
+ Modal Sandbox 
+ E2B Sandbox 
+ Sprites Sandbox 
+ Smol Sandbox 
+ SSH Workspace 
+ Bubblewrap Sandbox 
+ Durable Execution 
+ Tools & Native Abilities MCP 
+ Image Generation 
+ StackOne 
+ LocalStack 
+ Macroscope 
+ Day AI 
+ GitHub 
+ Google Workspace 
+ Grain 
+ Linear 
+ Logfire MCP 
+ Notion 
+ Ordinal 
+ PostHog 
+ Pylon 
+ Slack 
+ Web & Research Web Search 
+ Web Fetch 
+ X Search 
+ Exa Search 
+ You.com 
+ Browser Use 
+ Playwright Browser 
+ Reasoning, Planning & Delegation Thinking 
+ Planning 
+ Subagents 
+ Dynamic Workflow 
+ Advisor 
+ Background Tools 
+ Context Management Code Mode 
+ Tool Search 
+ Caching 
+ Provider-Native Compaction 
+ Compaction Strategies 
+ Tool Output Limits 
+ Warn On Cache Busts 
+ Knowledge & Memory Memory 
+ Conversation Search 
+ Skills 
+ Repo Context 
+ Pydantic AI Docs 
+ Control & Safety Guardrails 
+ Prompt Injection Defender 
+ Spend Limits 
+ Handle Deferred Tool Calls 
+ Ask User 
+ System Reminders 
+ Trajectory Judge 
+ Tool Call Judge 
+ Runtime Capability Creation 
+ Execution Runtime Instrumentation 
+ Step Persistence 
+ Render Workflows 
+ Media Stores 
+ Managed Prompt 
+ Repair Tool Arguments 
+ Thread Executor 
+ Loop Customization Select Model 
+ Resolve Model ID 
+ Prepare Tools 
+ Prefix Tools 
+ Include Tool Return Schemas 
+ Set Tool Metadata 
+ Raise Content Filter Error 
+ Reinject System Prompt 
+ Process History 
+ Process Event Stream 
+ Examples 
+ Third-Party Capabilities 
+ Realtime (speech-to-speech) Overview 
+ Audio, images, and transcripts 
+ Events 
+ Turns and interruptions 
+ Tools 
+ Capabilities and hooks 
+ History and handoff 
+ Connecting a frontend 
+ Connection lifecycle 
+ Usage and observability 
+ Troubleshooting 
+ OpenAI 
+ Azure 
+ Google Gemini 
+ xAI 
+ Durable Execution Overview 
+ Building a backend 
+ Temporal 
+ DBOS 
+ Prefect 
+ Restate 
+ AWS Lambda 
+ Absurd 
+ pgtask 
+ Kitaru 
+ Apache Airflow 
+ Interfaces Overview 
+ Web Chat UI 
+ UI Event Streams Overview 
+ AG-UI 
+ Vercel AI 
+ Command Line Interface (CLI) 
+ GitHub Agentic Workflows 
+ ACP 
+ Extensibility 
+ Observability 
+ Image Generation 
+ Embeddings 
+ Testing 
+ MCP Overview 
+ Client 
+ Server 
+ Pydantic Evals Overview 
+ Getting Started Quick Start 
+ Core Concepts 
+ Evaluators Overview 
+ Built-in Evaluators 
+ LLM Judge 
+ Third-Party Integrations 
+ Custom Evaluators 
+ Report Evaluators 
+ Span-Based 
+ Agentic Evaluators 
+ Standard Quality Metrics 
+ Online Evaluation 
+ How-To Guides Logfire Integration 
+ Dataset Management 
+ Dataset Serialization 
+ Concurrency & Performance 
+ Multi-Run Evaluation 
+ Retry Strategies 
+ Metrics & Attributes 
+ Case Lifecycle Hooks 
+ Simple Validation 
+ Pydantic Graph Overview 
+ Graph Builder Getting Started 
+ Steps 
+ Joins & Reducers 
+ Decisions 
+ Parallel Execution 
+ Examples Setup 
+ Getting Started Pydantic Model 
+ Weather Agent 
+ Conversational Agents Chat App with FastAPI 
+ Bank Support 
+ Data & Analytics SQL Generation 
+ Data Analyst 
+ RAG 
+ TwelveLabs Video Agent 
+ Streaming Stream Markdown 
+ Stream Whales 
+ Cancel and Resume 
+ Realtime Voice Assistant 
+ Text to Audio 
+ Agent Handoff 
+ Camera Agent 
+ Browser WebRTC 
+ Complex Workflows Flight Booking 
+ Medical Agent Delegation 
+ Business Applications 
+ UI Examples 
+ Comparisons Overview 
+ Migrate to Pydantic AI 
+ vs LangChain & LangGraph 
+ vs Claude Agent SDK 
+ vs Vercel AI SDK 
+ vs OpenAI Agents SDK 
+ vs Google ADK 
+ vs Mastra 
+ vs LiveKit Agents 
+ vs Pipecat 
+ vs Pi 
+ vs Agno 
+ vs CrewAI 
+ API Reference pydantic_ai agent 
+ native_tools 
+ capabilities 
+ common_tools 
+ concurrency 
+ conversation 
+ direct 
+ durable_exec 
+ embeddings 
+ exceptions 
+ ext 
+ format_prompt 
+ function_signature 
+ images 
+ mcp 
+ messages 
+ models anthropic 
+ base 
+ bedrock 
+ bedrock_mantle 
+ cerebras 
+ cohere 
+ crusoe 
+ fallback 
+ function 
+ google 
+ github_copilot 
+ xai 
+ groq 
+ huggingface 
+ instrumented 
+ mcp-sampling 
+ mistral 
+ ollama 
+ openai 
+ openai_codex 
+ openai_decisions 
+ openrouter 
+ snowflake 
+ test 
+ decision 
+ system_one 
+ typesafe 
+ zai 
+ wrapper 
+ output 
+ profiles 
+ providers 
+ realtime 
+ realtime codec 
+ openai 
+ live 
+ google 
+ xai 
+ azure 
+ result 
+ retries 
+ run 
+ workspaces 
+ settings 
+ template 
+ tools 
+ toolsets 
+ ui ag_ui 
+ base 
+ vercel_ai 
+ usage 
+ pydantic_evals pydantic_evals.dataset 
+ pydantic_evals.evaluators 
+ pydantic_evals.lifecycle 
+ pydantic_evals.online 
+ pydantic_evals.online_capability 
+ pydantic_evals.reporting 
+ pydantic_evals.otel 
+ pydantic_evals.generation 
+ pydantic_graph pydantic_graph.basenode 
+ pydantic_graph.graph_builder 
+ pydantic_graph.step 
+ pydantic_graph.join 
+ pydantic_graph.decision 
+ pydantic_graph.node 
+ pydantic_graph.util 
+ pydantic_graph.exceptions 
+ Project Contributing 
+ Upgrade Guide 
+ V1 → V2 Migration Map 
+ Version Policy 
+ On this page Overview 
+ What are you building? 
+ Why Pydantic AI 
+ Putting it together: a bank support agent 
+ Instrumentation with Pydantic Logfire 
+ llms.txt 
+ Next steps 
+ Part of the Pydantic Stack 
+ On this page
+ Overview 
+ What are you building? 
+ Why Pydantic AI 
+ Putting it together: a bank support agent 
+ Instrumentation with Pydantic Logfire 
+ llms.txt 
+ Next steps 
+ Part of the Pydantic Stack 
+ Pydantic AI
+ How Python does AI 
+ Agents, realtime voice, image generation, embeddings. Every model, every interface, typed end to end.
+ Pydantic AI is the Python AI SDK: a typed, extensible agent loop with every model a string swap away. The same agent runs everywhere you need it : behind a web frontend , in the terminal , on a voice call , on a durable background queue , in GitHub Actions , or as a plain object you call run() on. Image generation and embeddings come in the same box; Pydantic Graph and Pydantic Evals are separate packages, for typed control flow and for testing agent behavior the way pytest tests code.
+ Pydantic AI Harness has everything an agent needs for complex, long-running work, snapped on as capabilities , from memory , guardrails , and sub-agents to planning , context management , and persistence , up to a complete coding agent .
+ Pydantic Logfire is the AI observability platform that sees your whole app, not ju
+
+=== [pricing] https://pydantic.dev/pricing (lang=en)
+Pricing and Plans for Pydantic Logfire 
+Skip to main content
+ Download logo as .svg Download logomark as .svg Go to press kit 
+ Logfire AI Gateway Pydantic AI Products Enterprise Pricing Resources 
+ Contact us 
+ Sign up 
+ Sign in 
+ Transparent pricing for AI teams
+ One record-based meter covers AI observability, evals, application performance, and infrastructure.
+ no hidden fees no surprise bills 
+ Every plan includes $20 of free usage a month: 10 million spans, logs, or metrics. After that, $2 per million on Team and Growth.
+ Start with
+this one!
+ Personal
+ Free, forever
+ Perfect for solo devs — and the agents building with them. No credit card required. 
+ Start Free 
+ Plan highlights
+ ✓ 10M telemetry records/month — hard-capped at $0 
+ ✓ Monitor agents, services, and hosts 
+ ✓ 3 projects · 30-day retention 
+ ✓ 1 seat + 2 read-only guests 
+ See all 11 features What you get
+ $20/mo credit for records
+ Covers 10 million logs, spans, and metrics every month. Personal is hard-capped here — upgrade to Team for additional records.
+ Monitor your agents
+ Trace agent runs from prompt through tool calls — Pydantic AI, LangChain, OpenAI SDK, anything OTel-instrumented.
+ Monitor your services
+ Supports all OTel SDKs — every service lands on one correlated timeline.
+ Monitor your hosts
+ Kubernetes, hosts, databases, and more — logs and host metrics with pre-built dashboards.
+ AI Gateway with BYOK
+ Bring up to 3 provider credentials (no markup). Access built-in providers with a 5% markup fee (requires adding a credit card).
+ Scale
+ Up to 10 million records
+ This is a lot of telemetry for a solo developer! Once you hit the limit, ingestion pauses — so you can't owe us anything on the personal tier.
+ 1 seat
+ One admin seat (you).
+ 2 guests (read-only)
+ Learn more 
+ 3 projects
+ Organize your apps.
+ 30-day data retention
+ Query your traces, logs, and metrics for the last 30 days.
+ Support & compliance
+ Community support
+ Get help from the Pydantic community — Slack, GitHub Discussions, and Stack Overflow. No SLA; response times depend on the community.
+ Team
+ $49/mo
+ For small teams shipping their first production workloads.
+ Subscribe 
+ Plan highlights
+ ✓ 10M records included · $2/M after 
+ ✓ Unlimited agent, service, and host monitoring 
+ ✓ AI output evaluations + human review 
+ ✓ 5 seats included · 10 read-only guests 
+ See all 13 features What you get
+ $20/mo credit for records
+ Covers 10 million logs, spans, and metrics every month. Additional records are $2 per million, or set a hard price cap to lock in your bill.
+ Monitor unlimited agents
+ No per-agent fees — trace every agent run and only pay for the telemetry (records) you send.
+ Monitor unlimited services
+ Supports all OTel SDKs — every service on one correlated timeline with service inventory, service maps, and more. No per-service fees.
+ Monitor unlimited hosts
+ Kubernetes, hosts, databases, and more — logs and host metrics with pre-built dashboards and alerts.
+ $0/1000 Scores
+ Evaluate your AI outputs for free — no per-score charges.
+ Human Annotations
+ Add human review to any trace or eval run — for RLHF training or manual quality checks.
+ AI Gateway with BYOK
+ Bring up to 3 provider credentials (no markup). Access built-in providers with a 5% markup fee.
+ Scale
+ Up to 12 seats (5 included)
+ Admin or member seats for you & your core team. 5 seats included, $25/extra seat.
+ 10 guests (read-only)
+ Learn more 
+ 5 projects
+ Organize your apps. Scope access per project.
+ 30-day data retention
+ Query your traces, logs, and metrics for the last 30 days.
+ Support & compliance
+ Spending cap
+ Learn more 
+ Money-back guarantee
+ Unsure after your first month? We'll refund you. And if you get hit with an unexpectedly large bill in your first month because of a spike in volume, we'll refund that too.
+ Growth
+ $249/mo
+ For teams running production AI services core to their business.
+ Subscribe 
+ Plan highlights
+ ✓ Everything in Team 
+ ✓ Unlimited seats, guests, and projects 
+ ✓ Up to 90-day retention 
+ ✓ Priority support + boilerplate BAA 
+ See all 17 features What you get
+ $20/mo credit for records
+ Covers 10 million logs, spans, and metrics every month. Additional records are $2 per million, or set a hard price cap to lock in your bill.
+ Monitor unlimited agents
+ No per-agent fees — trace every agent run and only pay for the telemetry (records) you send.
+ Monitor unlimited services
+ Supports all OTel SDKs — every service on one correlated timeline with service inventory, service maps, and more. No per-service fees.
+ Monitor unlimited hosts
+ Kubernetes, hosts, databases, and more — logs and host metrics with pre-built dashboards and alerts.
+ $0/1000 Scores
+ Evaluate your AI outputs for free — no per-score charges.
+ Human Annotations
+ Add human review to any trace or eval run — for RLHF training or manual quality checks.
+ AI Gateway with BYOK
+ Unlimited BYO provider credentials (no markup). Access built-in providers with a 3% markup fee.
+ Early access to features
+ Try new Logfire capabilities before they ship broadly. Feedback shapes what lands and when.
+ Scale
+ All seats included, flat price
+ No per-seat cost — add your whole team.
+ Read-only guests for the whole company
+ No cap on read-only viewers. Bring in stakeholders, clients, or your CTO.
+ Projects for every service
+ No limits on services, environments, or experiments.
+ Up to 90-day retention
+ Query your traces, logs, and metrics for the last 90 days, vs 30 on lower tiers.
+ Support & compliance
+ Spending cap
+ Learn more 
+ Money-back guarantee
+ Unsure after your first month? We'll refund you. And if you get hit with an unexpectedly large bill in your first month because of a spike in volume, we'll refund that too.
+ Priority support
+ Faster response times when you need help.
+ Data deletion (GDPR)
+ Self-serve deletion of users and trace data.
+ Boilerplate BAA (HIPAA)
+ Ready-to-sign agreement for healthcare compliance.
+ Enterprise
+ Custom
+ For organizations where observability has to pass security review.
+ Book a call 
+ Plan highlights
+ ✓ Observability SLOs with burn-rate alerts 
+ ✓ Cloud, Dedicated, or Self-hosted 
+ ✓ SSO, SCIM, and custom roles 
+ ✓ Custom retention + SLA-backed support 
+ 17 Growth features + 12 more What you get
+ Everything from Growth
+ Growth-tier capabilities carry over to Enterprise, plus the below.
+ Observability SLOs
+ Define Service Level Objectives on your traces and metrics, with error budgets and burn-rate alerts. Includes LLM provider SLOs — measure SLIs (latency, error rate) on the upstream LLM providers your enterprise services depend on.
+ Data Loss Prevention
+
+=== [about] https://pydantic.dev/docs/ (lang=en)
+Pydantic Docs - Validation, AI Agents, Logfire Observability Skip to content / 
+Docs
+ Pydantic Docs 
+ Pydantic Validation Pydantic AI Pydantic Logfire HTTPX2 Monty 
+More
+ HTTPX2 Monty 
+ Search Ctrl K
+ Pydantic Validation Pydantic AI Pydantic Logfire HTTPX2 Monty 
+ Pydantic Validation Pydantic AI Pydantic Logfire HTTPX2 Monty Theme 
+ Pydantic Docs
+ Pydantic is the end-to-end AI Engineering stack. Validate untrusted data and build agents you’ll actually ship to production using our Python libraries. Observe, govern, and optimize agents written in any language or framework once they’re live.
+ AI Engineering
+ Build, run, and improve production AI systems.
+ Not just Python ! Logfire lets you monitor, secure, and optimize agents written in Python, TypeScript, Rust, Go, Java, Ruby, or any other language. Pydantic Logfire
+ Observability and governance for AI agents, LLMs, applications, services, and hosts.
+ logfire. configure () ; 
+logfire. info ( 'app started' ) ; See the best AI Engineering platform → 
+ Pydantic AI
+ The batteries-included type-safe framework for building production agents.
+ model = ' openai:gpt-5.6-sol ' 
+agent = Agent (model)
+agent. run_sync ( 'Does it snow?' ) 
+ Build production-ready Agents → 
+ Monty
+ A minimal, secure Python interpreter in Rust, for running the code your agent writes.
+ with Monty () as pool:
+ with pool. checkout () as s:
+ s. feed_run ( '2 ** 10' ) Run agent code safely → 
+ Python Ecosystem
+ Open source foundations for trusted data and HTTP.
+ Pydantic Validation
+ Data validation from Python type hints. Parse, validate, and serialize with confidence.
+ class User (BaseModel):
+ name: str 
+ age: int Learn about Validation → 
+ HTTPX2
+ A next-generation HTTP client. Sync and async APIs, HTTP/1.1 and HTTP/2.
+ client = httpx2. Client ()
+r = client. get ( 'https://pydantic.dev' ) Make requests with HTTPX2 → 
+ © Pydantic Services Inc. 2025 to present
+
+=== [meta] https://pydantic.dev/docs/ai/overview/
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/pydantic/pydantic-ai
+<div align="center">
+  <a href="https://pydantic.dev/docs/ai/">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://pydantic.dev/docs/ai/img/pydantic-ai-dark.svg">
+      <img src="https://pydantic.dev/docs/ai/img/pydantic-ai-light.svg" alt="Pydantic AI">
+    </picture>
+  </a>
+</div>
+<div align="center">
+  <h3>How Python does AI</h3>
+</div>
+<div align="center">
+  <a href="https://github.com/pydantic/pydantic-ai/actions/workflows/ci.yml?query=branch%3Amain"><img src="https://github.com/pydantic/pydantic-ai/actions/workflows/ci.yml/badge.svg?event=push" alt="CI"></a>
+  <img src="https://img.shields.io/badge/coverage-100%25-brightgreen.svg" alt="Coverage">
+  <a href="https://pypi.python.org/pypi/pydantic-ai"><img src="https://img.shields.io/pypi/v/pydantic-ai.svg" alt="PyPI"></a>
+  <a href="https://github.com/pydantic/pydantic-ai"><img src="https://img.shields.io/pypi/pyversions/pydantic-ai.svg" alt="versions"></a>
+  <a href="https://github.com/pydantic/pydantic-ai/blob/main/LICENSE"><img src="https://img.shields.io/github/license/pydantic/pydantic-ai.svg?v" alt="license"></a>
+  <a href="https://logfire.pydantic.dev/docs/join-slack/"><img src="https://img.shields.io/badge/Slack-Join%20Slack-4A154B?logo=slack" alt="Join Slack" /></a>
+</div>
+<p align="center">
+  Agents, realtime voice, image generation, embeddings. Every model, every interface, typed end to end.
+</p>
+
+---
+
+**Pydantic AI** is the Python AI SDK: a typed, [extensible](https://pydantic.dev/docs/ai/guides/extensibility/) agent loop with [every model](https://pydantic.dev/docs/ai/models/overview/) a string swap away. The same agent [runs everywhere you need it](https://pydantic.dev/docs/ai/overview/interfaces/): behind a [web frontend](https://pydantic.dev/docs/ai/integrations/ui/overview/), in the [terminal](https://pydantic.dev/docs/ai/integrations/cli/), on a [voice call](https://pydantic.dev/docs/ai/realtime/overview/), on a [durable background queue](https://pydantic.dev/docs/ai/capabilities/durable_execution/overview/), in [GitHub Actions](https://pydantic.dev/docs/ai/harness/gh-aw/), or as a plain object you call [`run()`](https://pydantic.dev/docs/ai/core-concepts/agent/#running-agents) on. [Image generation](https://pydantic.dev/docs/ai/guides/image-generation/) and [embeddings](https://pydantic.dev/docs/ai/guides/embeddings/) come in the same box; [Pydantic Graph](https://pydantic.dev/docs/ai/graph/graph/) and [Pydantic Evals](https://pydantic.dev/docs/ai/evals/evals/) are separate packages, for typed control flow and for testing agent behavior the way pytest tests code.
+
+**[Pydantic AI Harness](https://pydantic.dev/docs/ai/harness/)** has everything an agent needs for complex, long-running work, snapped on as [capabilities](https://pydantic.dev/docs/ai/capabilities/overview/), from [memory](https://pydantic.dev/docs/ai/harness/memory/), [guardrails](https://pydantic.dev/docs/ai/harness/guardrails/), and [sub-agents](https://pydantic.dev/docs/ai/harness/subagents/) to [planning](https://pydantic.dev/docs/ai/harness/planning/), [context management](https://pydantic.dev/docs/ai/harness/compaction/), and [persistence](https://pydantic.dev/docs/ai/core-concepts/persistence/), up to a complete [coding agent](https://pydantic.dev/docs/ai/harness/coder/).
+
+[Pydantic Logfire](https://pydantic.dev/logfire?utm_source=github&utm_medium=readme&utm_campaign=pydantic-ai) is the AI observability platform that sees your whole app, not just the LLM calls, and the [Pydantic AI Gateway](https://pydantic.dev/ai-gateway?utm_source=github&utm_medium=readme&utm_campaign=pydantic-ai) is one key for every model with real-time cost monitoring and budget control; the Gateway self-hosts if you would rather, and our [instrumentation](https://pydantic.dev/docs/ai/integrations/logfire/) is plain OpenTelemetry, so any backend you already run works. Underneath both, [genai-prices](https://github.com/pydantic/genai-prices) keeps model pricing current, and [Monty](https://github.com/pydantic/monty) is the sandboxed Python interpreter that runs model-written code.
+
+View the complete documentation at [pydantic.dev/docs/ai](https://pydantic.dev/docs/ai/).
+
+## What ar

@@ -1,0 +1,107 @@
+{
+ "company": "Hugging Face",
+ "one_liner_ko": "사람이 몇 번 시범을 보이면 로봇이 스스로 작업을 배우게 하는 Hugging Face의 오픈소스 로봇 AI 라이브러리.",
+ "what_it_does_ko": "LeRobot은 로봇에게 시범으로 작업을 가르치는 라이브러리로, 3D 프린팅 팔부터 휴머노이드까지 지원한다. 원격 조종, 기록, 학습, 배포의 네 단계를 모든 로봇에서 같은 방식으로 진행한다. 기록한 데이터는 Parquet와 MP4로 된 LeRobotDataset 형식으로 Hugging Face 허브에 저장·공유한다. 하드웨어에 묶이지 않는 파이썬 인터페이스로 여러 로봇 제어를 표준화한다.",
+ "key_features": [
+  "리더 암·휴대폰·게임패드로 로봇 원격 조종",
+  "카메라 영상과 모든 동작을 데이터셋으로 기록",
+  "자체 GPU나 클라우드에서 로봇 제어 모델 학습",
+  "하드웨어 무관 파이썬 제어 인터페이스",
+  "허브에 올리는 표준 LeRobotDataset 형식(Parquet + MP4)",
+  "에피소드 삭제·분할·병합 등 데이터셋 편집 도구",
+  "SO100·Koch·Unitree G1 등 여러 하드웨어 기본 지원"
+ ],
+ "use_cases_ko": [
+  "로봇 개발자가 시범 데이터를 모아 로봇 정책을 학습·배포",
+  "연구자·개발자가 공유 데이터셋과 사전학습 모델을 활용"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "Apache 2.0",
+ "api": "불명",
+ "platforms": [],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://huggingface.co/lerobot",
+   "quote": "LeRobot is Hugging Face's library for teaching robots by example."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://huggingface.co/lerobot",
+   "quote": "Open-source AI for real-world robots"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://huggingface.co/lerobot",
+   "quote": "Guide a robot through a task a few times and it learns to do it on its own"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://huggingface.co/lerobot",
+   "quote": "Robots learn from your demonstrations, the same four steps on every robot."
+  },
+  {
+   "field": "key_features",
+   "url": "https://huggingface.co/lerobot",
+   "quote": "Move the robot yourself with a leader arm, phone, or gamepad."
+  },
+  {
+   "field": "key_features",
+   "url": "https://huggingface.co/lerobot",
+   "quote": "Each run is saved as a dataset: camera video plus every movement."
+  },
+  {
+   "field": "key_features",
+   "url": "https://huggingface.co/lerobot",
+   "quote": "Train a model that controls the robot. Use your own GPU or the cloud."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/huggingface/lerobot",
+   "quote": "A hardware-agnostic, Python-native interface that standardizes control across diverse platforms"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/huggingface/lerobot",
+   "quote": "A standardized, scalable LeRobotDataset format (Parquet + MP4 or images) hosted on the Hugging Face Hub"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/huggingface/lerobot",
+   "quote": "Seamlessly delete episodes, split by indices/fractions, add/remove features, and merge multiple datasets."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/huggingface/lerobot",
+   "quote": "SO100, LeKiwi, Koch, HopeJR, OMX, EarthRover, Reachy2"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/huggingface/lerobot",
+   "quote": "The goal is to lower the barrier to entry so that everyone can contribute to and benefit from shared datasets and pretrained models."
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/huggingface/lerobot",
+   "quote": "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)]"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://huggingface.co/lerobot",
+   "quote": "hreflang: 없음"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "LeRobot은 Apache 2.0 오픈소스 라이브러리(pip install lerobot)",
+   "diff": "기존 '연구/엔터프라이즈(가격 비공개)'와 달리 공개 오픈소스 라이브러리",
+   "url": "https://github.com/huggingface/lerobot"
+  }
+ ],
+ "plan_change": []
+}

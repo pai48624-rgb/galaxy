@@ -1,0 +1,339 @@
+=== [home] https://www.ironclaw.com (lang=en)
+IronClaw: Unleash Your AI Agent, With Peace of Mind 
+ Use Cases Integrations How It Works Features Compare Docs GitHub 
+ Deploy agent 
+ Use Cases Integrations How It Works Features Why Switch Compare Docs GitHub 
+ Built by Near Foundation 
+ Do what you do best,
+ IronClaw will do the rest. 
+ An open-source agent for your busywork — in encrypted enclaves, where your secrets never touch the model.
+ Triage my inbox every morning 
+ Let's Start 
+ Discover use cases View source 
+ Explore More you can hand off.
+ You don't need to pick anything to get started — just open your agent above. But if you're curious, here's a taste of what IronClaw takes off your plate. Tap any to start it in your agent; it sets itself up in chat, then runs on its own.
+ All Communication Productivity Monitoring Developer Automation 
+ Inbox triage
+ Reads, prioritizes, and summarizes email. Labels inbound as Action, FYI, or Ignore and drafts replies for the ones that matter.
+ Gmail 
+ Daily morning briefing
+ A concise daily summary of your calendar, email, tasks, and key signals — delivered wherever you are.
+ Calendar Telegram 
+ Meeting prep assistant
+ 10 minutes before each meeting, get a brief on the company, attendees, and recent news.
+ Calendar 
+ Team chat operations
+ Slack or Telegram as your control layer — send updates, triage messages, and coordinate work from chat.
+ Slack Telegram 
+ Keyword monitor
+ Watches Hacker News, Twitter, or the web for mentions of your product and sends a summary the moment they appear.
+ Slack 
+ Deployment health watcher
+ Pings your endpoint every 5 minutes and alerts you in chat if it returns anything but a 200.
+ Telegram 
+ Release tracker
+ Watches a GitHub repo and summarizes new releases into your channel of choice.
+ GitHub Telegram 
+ Task capture & delegation
+ Turns messages and emails into structured tasks with assignments and tracking — "create task: …" from anywhere.
+ Slack Linear 
+ Invoice parser
+ Forward a PDF invoice and the amount, date, and vendor land in a spreadsheet automatically.
+ Gmail Sheets 
+ Daily KPI reporter
+ Pulls simple metrics from a CSV or API and posts a formatted dashboard to your team channel daily.
+ Slack 
+ Missing yours? IronClaw builds new tools and connectors on the fly — just ask it in chat.
+ Integrations Works with your stack.
+ Email, calendars, chat, code, tickets — your agent plugs into the tools you already use. Click any of them for automations you can hand off right now. Missing one? It builds the connector itself.
+ Gmail 3 recipes Google Drive 3 recipes Google Sheets 3 recipes GitHub 3 recipes Discord 3 recipes Web Search 3 recipes Gmail 3 recipes Google Drive 3 recipes Google Sheets 3 recipes GitHub 3 recipes Discord 3 recipes Web Search 3 recipes Gmail 3 recipes Google Drive 3 recipes Google Sheets 3 recipes GitHub 3 recipes Discord 3 recipes Web Search 3 recipes 
+ Google Calendar 3 recipes Google Docs 3 recipes Google Slides 3 recipes Telegram 3 recipes Signal 3 recipes MCP Servers 3 recipes Google Calendar 3 recipes Google Docs 3 recipes Google Slides 3 recipes Telegram 3 recipes Signal 3 recipes MCP Servers 3 recipes Google Calendar 3 recipes Google Docs 3 recipes Google Slides 3 recipes Telegram 3 recipes Signal 3 recipes MCP Servers 3 recipes 
+ ...and anything with an API: IronClaw builds and sandboxes new tools on the fly — just describe what you need.
+ OPEN SOURCE
+ Defense-in-depth security
+ BUILT ON RUST
+ 1-CLICK CLOUD DEPLOYMENT
+ How It Works 
+ From zero to secure agent in minutes.
+ IronClaw offers simple setup and built-in security for OpenClaw's personal AI assistant—powered by NEAR AI Cloud or run locally.
+ Deploy in one click.
+ Launch your own IronClaw instance on NEAR AI Cloud. It boots inside a Trusted Execution Environment — encrypted from the start, no setup required.
+ Store your credentials.
+ Add API keys, tokens, and passwords to the encrypted vault. IronClaw injects them only where you've allowed — the AI never sees the raw values.
+ Work like you always do.
+ Browse, research, code, automate. Powerful capabilities that are exempt from protected injection that can steal your credentials.
+ fn deploy(cfg: &Config) -> Result<()> {
+ let tee = TeeEnclave::provision()?;
+ tee.verify_memory_safety()?;
+ let vault = Vault::seal(cfg)?;
+ vault.bind_endpoints(&cfg.allowlist)?;
+ agent::spawn(tee, vault)
+ }
+ #[derive(Encrypt, ZeroOnDrop)]
+ struct Credentials {
+ api_key: Secret<String>,
+ bearer: Secret<String>,
+ }
+ impl Vault {
+ fn inject(&self, req: &mut Request) {
+ if self.allowlist.permits(req.url()) {
+ req.set_auth(&self.credentials)
+ }
+ }
+ }
+ fn verify_wasm(bytes: &[u8]) -> bool {
+ wasmparser::validate(bytes).is_ok()
+ && !contains_unsafe(bytes)
+ }
+ struct AllowList { endpoints: Vec<Url> }
+ impl AllowList {
+ fn permits(&self, url: &Url) -> bool {
+ self.endpoints.iter().any(|e| e == url)
+ }
+ }
+ fn deploy(cfg: &Config) -> Result<()> {
+ let tee = TeeEnclave::provision()?;
+ tee.verify_memory_safety()?;
+ let vault = Vault::seal(cfg)?;
+ vault.bind_endpoints(&cfg.allowlist)?;
+ agent::spawn(tee, vault)
+ }
+ #[derive(Encrypt, ZeroOnDrop)]
+ struct Credentials {
+ api_key: Secret<String>,
+ bearer: Secret<String>,
+ }
+ impl Vault {
+ fn inject(&self, req: &mut Request) {
+ if self.allowlist.permits(req.url()) {
+ req.set_auth(&self.credentials)
+ }
+ }
+ }
+ fn verify_wasm(bytes: &[u8]) -> bool {
+ wasmparser::validate(bytes).is_ok()
+ && !contains_unsafe(bytes)
+ }
+ struct AllowList { endpoints: Vec<Url> }
+ impl AllowList {
+ fn permits(&self, url: &Url) -> bool {
+ self.endpoints.iter().any(|e| e == url)
+ }
+ }
+ ironclaw — near-cloud 
+ IronClaw Instance
+ NEAR AI Cloud · TEE Ready
+ Deploy Now
+ What You Get 
+ Security you don't have to think about.
+ IronClaw is powered by NEAR AI's cryptographically secure infrastructure, which ensures your credentials never leave the vault.
+ Encrypted Vault
+ Your credentials are invisible to the AI. API keys, tokens, and passwords are encrypted at rest and injected into requests at the host boundary — only for endpoints you've approved.
+ Sandboxed Tools
+ A compromised skill can't touch anything else. Every tool runs in its own Wasm container with capability-based permissions, allowlisted endpoints, and strict resource limits.
+ Encrypted Enclaves
+ Not even the cloud provider can see your data. Your instance runs inside a Trusted Execution Environment on NEAR AI Cloud — encrypted in memory, from boot to shutdown.
+ Leak Detection
+ Credential exfiltration gets caught before it leaves. All outbound traffic is scanned in real-time. Anything that looks like a secret heading out the door is blocked automatically.
+ Built in Rust
+ Entire classes of exploits don't exist here. No garbage collector, no buffer overflows, no use-after-free. Memory safety is enforced at compile time, not at runtime.
+ Network Allowlisting
+ You control exactly where data goes. Tools can only reach endpoints you've pre-approved. No silent phone-home, no data exfil to unknown servers.
+ OpenClaw Problem 
+ Empower your agent with full system access and persistent memory while still protecting your secrets.
+ OpenClaw unlocks the agentic future but it also risks exposing your secrets. Credentials can be exposed through prompt injections. Malicious skills exist to steal passwords. If you're running OpenClaw by itself with anything sensitive, there are significant risks.
+ 1 Prompt injection can dump your secrets.
+ A single crafted prompt can trick the LLM into revealing every API key and password you've given it. Telling it "don't share" doesn't 
+
+=== [about] https://docs.ironclaw.com/ (lang=en)
+Introduction - IronClaw 
+ Documentation Index
+ Fetch the complete documentation index at: /llms.txt 
+ Use this file to discover all available pages before exploring further.
+ Skip to main content 
+ IronClaw home page 
+ Docs 
+ Changelog 
+ Get Support 
+ Deploy Now 
+ Deploy Now 
+ Search... 
+ Navigation 
+ Introduction
+ Search...
+ ⌘ K 
+ Agent Dashboard 
+ NEAR AI Cloud 
+ Introduction 
+ Quickstart 
+ Onboard 
+ Using IronClaw 
+ Web Interface 
+ CLI Reference 
+ Run as a Service 
+ Capabilities 
+ Overview 
+ Inference Providers 
+ Core Capabilities 
+ Channels 
+ Overview 
+ Slack 
+ Telegram 
+ IronHub 
+ Overview 
+ Installing skills & tools 
+ Contributing 
+ API 
+ Responses API 
+ Extensions (Tools) 
+ Overview 
+ Built-in Extensions 
+ Tutorials 
+ How to implement a Reborn tool extension 
+ How to build a channel 
+ How to host IronClaw on... 
+ English 
+ On this page 
+ Key Capabilities 
+ Get started 
+ Introduction
+ Copy page Copy page 
+ The secure, open-source AI agent
+ Copy page Copy page 
+ IronClaw is a secure, open-source AI agent framework built in Rust and deployed on NEAR AI Cloud. It enables creating AI agents with access to your tools and services, while keeping your credentials safe and private. 
+ The fastest way to get started is the Agent Hub — sign in, spin up a private instance, and chat with your agent immediately. For local deployment, IronClaw ships as a single binary that runs a web interface on your machine where you chat with the agent, manage projects and jobs, connect channels, and change settings. 
+ Get started
+ Deploy your first agent in minutes. 
+ ​ 
+ Key Capabilities 
+ Multi-Channel
+ Reach IronClaw from the web interface, Slack, Telegram, or the terminal 
+ Security-First
+ Multi-layer defense: safety layer, WASM sandbox, process isolation, encrypted secrets 
+ Multi-Provider LLM
+ Choose from 25+ providers: NEAR AI, Anthropic, OpenAI, Gemini, Ollama, Tinfoil, and more 
+ Extensions
+ Give your agent access to complex tools so it can perform real-world tasks 
+ Parallel Jobs
+ Execute multiple tasks concurrently with state machine and self-repair 
+ Persistent Memory
+ Hybrid search (FTS + vector) with identity files and heartbeat system 
+ ​ 
+ Get started 
+ Agent Hub
+ Spin up a private instance in minutes — no installation needed. 
+ Install Locally
+ Run IronClaw on your own machine with the single binary. 
+ IronHub
+ Discover and install tools and skills from the signed catalog. 
+ Was this page helpful?
+ Yes No 
+ Quickstart
+ Next 
+ ⌘ I 
+ x github linkedin 
+ Powered by This documentation is built and hosted on Mintlify, a developer documentation platform
+
+=== [meta] https://www.ironclaw.com
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/nearai/ironclaw
+<p align="center">
+  <img src="ironclaw.png?v=2" alt="IronClaw" width="200"/>
+</p>
+
+<h1 align="center">IronClaw</h1>
+
+<p align="center">
+  <strong>Your secure personal AI assistant, always on your side</strong>
+</p>
+
+<p align="center">
+  <a href="#license"><img src="https://img.shields.io/badge/license-MIT%20OR%20Apache%202.0-blue.svg" alt="License: MIT OR Apache-2.0" /></a>
+  <a href="https://t.me/ironclawAI"><img src="https://img.shields.io/badge/Telegram-%40ironclawAI-26A5E4?style=flat&logo=telegram&logoColor=white" alt="Telegram: @ironclawAI" /></a>
+  <a href="https://www.reddit.com/r/ironclawAI/"><img src="https://img.shields.io/badge/Reddit-r%2FironclawAI-FF4500?style=flat&logo=reddit&logoColor=white" alt="Reddit: r/ironclawAI" /></a>
+  <a href="https://gitcgr.com/nearai/ironclaw">
+    <img src="https://gitcgr.com/badge/nearai/ironclaw.svg" alt="gitcgr" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="README.md">English</a> |
+  <a href="README.zh-CN.md">简体中文</a> |
+  <a href="README.ru.md">Русский</a> |
+  <a href="README.ja.md">日本語</a> |
+  <a href="README.ko.md">한국어</a>
+</p>
+
+<p align="center">
+  <a href="#quick-start">Quick Start</a> •
+  <a href="#philosophy">Philosophy</a> •
+  <a href="#features">Features</a> •
+  <a href="#installation">Installation</a> •
+  <a href="#configuration">Configuration</a> •
+  <a href="#security">Security</a> •
+  <a href="#architecture">Architecture</a>
+</p>
+
+---
+
+## Quick Start
+
+Choose an `ironclaw-v*` tag from the [Releases page](https://github.com/nearai/ironclaw/releases/),
+then install it on macOS, Linux, or Windows/WSL. Replace `X.Y.Z` with the
+selected version, including any prerelease suffix:
+
+```bash
+IRONCLAW_RELEASE_TAG=ironclaw-vX.Y.Z
+curl --proto '=https' --tlsv1.2 -LsSf \
+  "https://github.com/nearai/ironclaw/releases/download/${IRONCLAW_RELEASE_TAG}/ironclaw-installer.sh" | sh
+```
+
+Then run the guided setup:
+
+```bash
+ironclaw onboard
+```
+
+Choose an LLM provider, enter its API key in the hidden prompt, and accept the
+default model or enter another one. IronClaw provisions its local configuration,
+encrypted credential store, and WebUI login token. On macOS and Linux it also
+installs and starts the background service, then prints a link that opens the
+WebUI.
+
+Use `ironclaw status` to check the service and print the login link again.
+Windows users can start the WebUI in the foreground with `ironclaw serve`.
+See [Installation](#installation) for Windows installers and source builds.
+
+## Philosophy
+
+IronClaw is built on a simple principle: **your AI assistant should work for you, not against you**.
+
+In a world where AI systems are increasingly opaque about data handling and aligned with corporate interests, IronClaw takes a different approach:
+
+- **Your data stays yours** - All information is stored locally, encrypted, and never leaves your control
+- **Transparency by design** - Open source, auditable, no hidden telemetry or data harvesting
+- **Self-expanding capabilities** - Build new tools on the fly without waiting for vendor updates
+- **Defense in depth** - Multiple security layers protect against prompt injection and data exfiltration
+
+IronClaw is the AI assistant you can actually trust with your personal and professional life.
+
+## Features
+
+### Security First
+
+- **WASM Sandbox** - Untrusted tools run in isolated WebAssembly containers with capability-based permissions
+- **Credential Protection** - Secrets are never exposed to tools; injected at the host boundary with leak detection
+- **Prompt Injection Defense** - Pattern detection, content sanitization, and policy enforcement
+- **Endpoint Allowlisting** - HTTP requests only to explicitly approved hosts and paths
+
+### Always Available
+
+- **Multi-channel** - REPL, HTTP webhooks, WASM channels (Telegram, Slack), and web gateway
+- **Docker Sandbox** - Isolated container execution with per-job tokens and orchestrator/worker pattern
+- **Web Gateway** - Browser UI with real-time SSE/WebSocket streaming
+- **Routines** - Cron schedules, event triggers, webhook handlers for background automation
+- **Heartbeat System** - Proactive background execution for monitoring and maintenance tasks
+- **Parallel Jobs** - Handle multiple requests conc

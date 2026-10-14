@@ -1,0 +1,120 @@
+{
+ "company": "GitLab",
+ "one_liner_ko": "코드 변경을 계속 빌드·테스트·배포·모니터링하는 GitLab의 CI/CD 기능",
+ "what_it_does_ko": "프로젝트 루트에 .gitlab-ci.yml 파일을 두면 단계(stage)와 작업(job)으로 이루어진 파이프라인을 정의할 수 있다. 커밋, 머지 리퀘스트, 일정, 수동 실행 때 파이프라인이 만들어지고 러너가 작업을 실행한다. GitLab.com에서는 리눅스·윈도·맥OS 러너를 바로 쓸 수 있고 자체 러너도 등록할 수 있다. CI/CD 변수·표현식과 재사용 가능한 CI/CD 컴포넌트로 설정을 구성한다.",
+ "key_features": [
+  "YAML(.gitlab-ci.yml)로 파이프라인 정의",
+  "단계·작업 기반 파이프라인",
+  "리눅스·윈도·맥OS 러너 제공 및 자체 러너 등록",
+  "보호·마스킹 가능한 CI/CD 변수",
+  "$[[ ]] 문법의 CI/CD 표현식",
+  "재사용 가능한 CI/CD 컴포넌트와 CI/CD 카탈로그"
+ ],
+ "use_cases_ko": [
+  "개발팀이 코드 빌드·테스트·배포를 자동화",
+  "버그를 개발 초기에 잡고 배포 코드가 기준을 지키는지 확인"
+ ],
+ "pricing": {
+  "free_tier": "있음 (Free 티어, 한도 불명)",
+  "plans": [
+   {
+    "name": "Free",
+    "price": null,
+    "currency": null,
+    "period": null,
+    "limits": "불명",
+    "page_lang": "en-us"
+   },
+   {
+    "name": "Premium",
+    "price": null,
+    "currency": null,
+    "period": null,
+    "limits": "가격 미표기",
+    "page_lang": "en-us"
+   },
+   {
+    "name": "Ultimate",
+    "price": null,
+    "currency": null,
+    "period": null,
+    "limits": "가격 미표기",
+    "page_lang": "en-us"
+   }
+  ],
+  "pricing_url": "https://docs.gitlab.com/ci/"
+ },
+ "open_source": null,
+ "api": "있음",
+ "platforms": [
+  "웹",
+  "리눅스",
+  "윈도",
+  "맥"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://docs.gitlab.com/ci/",
+   "quote": "About GitLab"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://docs.gitlab.com/ci/",
+   "quote": "CI/CD is a continuous method of software development, where you continuously build,"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.gitlab.com/ci/",
+   "quote": "To use GitLab CI/CD, add a .gitlab-ci.yml file to the root of your project."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://docs.gitlab.com/ci/",
+   "quote": "If you use GitLab.com, runners on Linux, Windows, and macOS are already available for use."
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.gitlab.com/ci/",
+   "quote": "Masked variables: Hide variable values in job logs to prevent sensitive information from being exposed."
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.gitlab.com/ci/",
+   "quote": "A CI/CD component is a reusable pipeline configuration unit."
+  },
+  {
+   "field": "key_features",
+   "url": "https://docs.gitlab.com/ci/",
+   "quote": "CI/CD expressions use the $[[ ]] syntax and are validated when you create a pipeline."
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://docs.gitlab.com/ci/",
+   "quote": "GitLab CI/CD can catch bugs early in the development cycle,"
+  },
+  {
+   "field": "pricing",
+   "url": "https://docs.gitlab.com/ci/",
+   "quote": "Tier : Free, Premium, Ultimate"
+  },
+  {
+   "field": "api",
+   "url": "https://docs.gitlab.com/ci/",
+   "quote": "Custom variables: Variables that you create and manage in the UI, API, or configuration files."
+  },
+  {
+   "field": "platforms",
+   "url": "https://docs.gitlab.com/ci/",
+   "quote": "Offering : GitLab.com, GitLab Self-Managed, GitLab Dedicated"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://docs.gitlab.com/ci/",
+   "quote": "html lang: en-us"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

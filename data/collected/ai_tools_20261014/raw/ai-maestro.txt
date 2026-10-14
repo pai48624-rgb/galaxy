@@ -1,0 +1,407 @@
+=== [home] https://ai-maestro.23blocks.com (lang=en)
+AI Maestro - The Future of Work: Humans + AI Agents 
+ COPY FOR AI
+ AI MAESTRO 
+ WHO IT'S FOR 
+ FEATURES 
+ ECOSYSTEM 
+ SKILLS 
+ PROTOCOLS 
+ GET STARTED 
+ START FREE
+ START 
+ Who It's For 
+ Features 
+ Ecosystem 
+ Skills 
+ Protocols 
+ Get Started 
+ GitHub
+ OPEN SOURCE • MIT LICENSE • FREE FOREVER 
+ The future of work is here. 
+ Build and run your AI-first organization from one dashboard.
+ One human. Multiple AI agents. Working together.
+ Get Started on GitHub
+ See Who It's For
+ ▸ 
+ v0.77.0 
+ ▸ 
+ macOS • Windows (WSL2) • Linux 
+ ▸ 
+ Claude Code • Codex • Grok Build • Any terminal agent 
+ Agent Skills Standard 
+ ✕ 
+ THE PROBLEM
+ — 
+ Chaos: Your AI workforce scattered across terminals with zero visibility
+ — 
+ Amnesia: Agents wake up every morning with no memory
+ — 
+ Isolation: No coordination between departments — you're the message bus
+ ✓ 
+ THE SOLUTION
+ — 
+ Command Center: One dashboard for your entire AI organization
+ — 
+ Persistent Memory: Your agents remember across sessions, and know what a change affects
+ — 
+ Direct Communication: Agents coordinate across teams and machines
+ CREW MANIFEST 
+ Who It's For
+ From solo founders to AI-first organizations. Start with one agent, scale your workforce.
+ 👤 
+ ONLINE 
+ Developer
+ Me + Agents
+ "I build on my MacBook with 3 Claude Code agents — backend, frontend, tests."
+ Infrastructure
+ 1-2 computers 
+ local 
+ Also try: 
+ docker-local 
+ multi-computer 
+ 🚀 
+ SCALING 
+ Startup
+ Us + Agents
+ "Our 3-person team shares a dev server. Agents run where the resources are."
+ Infrastructure
+ laptops + server 
+ Also try: 
+ peers 
+ docker-local 
+ cloud-aws 
+ 👥 
+ DISTRIBUTED 
+ Team
+ Us + Agents
+ "Developers in 3 cities. Agents on local machines and our cloud. They coordinate."
+ Infrastructure
+ multi-location 
+ cloud 
+ Also try: 
+ docker-hybrid 
+ cloud-aws 
+ 👑 
+ AI-FIRST 
+ AI-First Org
+ CEO + AI Workforce
+ "I run my company with AI agents. Lola was my first hire. Now I have 40 agents across 3 machines."
+ Infrastructure
+ distributed 
+ data centers 
+ Also try: 
+ peers 
+ cloud-aws 
+ SYSTEM CAPABILITIES 
+ Everything You Need
+ Everything you need to run an AI-first organization — from one agent to an entire workforce.
+ 01 
+ The Foundation
+ Everything you need to manage multiple AI agents
+ 🎯 
+ Zero Configuration
+ Auto-discovers all tmux sessions. No config files. Just run and start coding.
+ 🤖 
+ Universal Support
+ Claude Code, Codex and Grok Build with launch, chat and status. Any other terminal agent runs in the terminal tab.
+ ⚡ 
+ Real-time Terminals
+ WebSocket streaming. No lag, no polling. Keyboard shortcuts for power users.
+ 📁 
+ Smart Organization
+ 3-level hierarchy with dynamic colors. Instant visual organization for any project.
+ 📡 
+ Standalone Agents
+ Agents without tmux appear live via heartbeat. Plain terminals, API agents, remote hosts — all visible.
+ 02 
+ The Superpowers
+ Your agents remember, learn, and understand your codebase
+ 🧠 
+ Persistent Memory
+ Memory that survives Claude Code's 30-day transcript deletion, plus an entity graph of what a change affects.
+ 🗺️ 
+ Code Graph
+ Visualize your entire codebase structure. Multi-language support with delta indexing.
+ 💬 
+ Conversation History
+ Browse, search, and analyze every agent conversation. Full thinking and tool tracking.
+ 📚 
+ Docs Search
+ Auto-generated documentation index. Agents search function signatures and API specs before coding.
+ NEW 
+ 👩‍💼 
+ Lola Framework
+ Personal Assistant starter kit. Email, semantic memory, task management, and content security. Pre-built templates at lolabots.com .
+ 03 
+ The Multiplier
+ From your MacBook to cloud infrastructure
+ + SLACK 
+ + EMAIL 
+ 📬 
+ Agent Communication
+ Agents talk securely, connect via Slack, and get email addresses on your domains.
+ 🌐 
+ Peer Mesh Network
+ Control agents across multiple computers and cloud servers from one dashboard.
+ 📱 
+ Mobile Access
+ Monitor your AI agents from anywhere. Touch-optimized with secure Tailscale VPN.
+ NEW 
+ 🔄 
+ Portable Agents
+ Export to .zip, import anywhere. Transfer agents between hosts with full state.
+ NEW 
+ 🧩 
+ Plugin Builder
+ Build custom skill sets for each agent. Pick from GitHub, mix your own, assemble the perfect plugin.
+ NEW 
+ 🎯 
+ Agent Actions (AAP)
+ Open protocol for structured UI-to-agent interactions. Canvas clicks, forms, and custom actions — delivered to your agents.
+ NEW 
+ 📋 
+ Team Meetings & Kanban
+ War room for agents with drag-and-drop Kanban board, shared tasks, and real-time chat.
+ 🔐 
+ Secrets Vault
+ Agents use a credential by name without seeing it. A local vault, a masked card in the chat, and the aim-secret CLI.
+ 🔗 
+ Open Protocols
+ AMP for messages, AID for identity, AAP for actions and AFP for files. Open standards, each usable on its own.
+ 🛠️ 
+ 13 Skills
+ Memory, code graph, messaging, files, canvases, secrets, safe SQL, support cases and SEO audits in one plugin.
+ 🧩 
+ Claude Code Mods
+ An inbox band and a secrets form drawn inside Claude Code (2.1.287 or later). AI Maestro itself works with any version.
+ ⏰ 
+ Scheduled Work
+ Give an agent its own schedule. The timer belongs to the agent, so it moves with it and fires when the agent goes idle.
+ 💭 
+ Chat View
+ Talk to an agent in a chat on desktop or phone. Questions and approval prompts show up as cards you can click.
+ 👩‍💼 
+ Meet Lola
+ NEW 
+ Your First Hire
+ Every AI-first organization starts with one agent. Lola is a batteries-included Chief of Staff framework — email triage, semantic memory, task management, and content security out of the box. Install AI Maestro, deploy Lola, add more agents, run your AI company.
+ 📧 Email 
+ 🧠 Memory 
+ 📋 Tasks 
+ 🔒 Security 
+ # Clone and deploy Lola on AI Maestro 
+ $ git clone https://github.com/23blocks-OS/lolabot.git 
+ $ cd lolabot && ./setup.sh 
+ Get Started with Lola
+ GET STARTED
+ Up and running in under 5 minutes.
+ 1
+ Install
+ # One command installs everything
+ curl -fsSL https://raw.githubusercontent.com/23blocks-OS/ai-maestro/main/scripts/remote-install.sh | sh 
+ Copy 
+ ▸ 
+ Or install manually
+ git clone https://github.com/23blocks-OS/ai-maestro.git
+ cd ai-maestro && yarn install && yarn dev
+ ▸ 
+ Already installed? Update
+ cd ai-maestro && ./update-aimaestro.sh -y
+ ▸ 
+ Or install the Claude Code plugin only
+ /plugin marketplace add 23blocks-OS/ai-maestro-plugins
+ /plugin install ai-maestro@ai-maestro-plugins
+ Note: The plugin has 13 skills. Skills for memory, docs, code graph, agent management and canvases need the AI Maestro service; planning and agentic-support work without it. See the skills page .
+ Dashboard opens at http://localhost:23000 
+ Windows Users: See our Windows installation guide for WSL2 setup.
+ 2
+ Create Your First Agent
+ 🛠️ 
+ From Scratch
+ ▸ 
+ Click the + button in the sidebar 
+ ▸ 
+ Enter a name: myproject-backend-api 
+ ▸ 
+ Choose your working directory 
+ ▸ 
+ Click Create Agent 
+ 👩‍💼 
+ Or Deploy Lola
+ NEW 
+ Get a working AI Chief of Staff in seconds — email, memory, tasks, and security included.
+ $ git clone https://github.com/23blocks-OS/lolabot.git 
+ $ cd lolabot && ./setup.sh 
+ Learn more about Lola
+ 3
+ Start Coding
+ Your agent is live. Click to switch between agents. Add notes. Organize your work. That's it. 
+ WHY AI MAESTRO?
+ 🧠 
+ Agents That Remember
+ Persistent memory powered by CozoDB. They learn your codebase.
+ 💬 
+ Agents That Communicate
+ Direct agent-to-agent messaging. No human relay required.
+ 🌐 
+ Agents Everywhere
+ Run on laptops, servers, Docker, or cloud. One dashboard.
+ 🗺️ 
+ Agents That Understand
+ Code Graph shows your entire codebase struct
+
+=== [about] https://ai-maestro.23blocks.com/skills.html (lang=en)
+AI Maestro Skills: 13 Skills for Coding Agents 
+ COPY FOR AI
+ AI MAESTRO 
+ WHO IT'S FOR 
+ FEATURES 
+ ECOSYSTEM 
+ SKILLS 
+ PROTOCOLS 
+ GET STARTED 
+ START FREE
+ START 
+ Who It's For 
+ Features 
+ Ecosystem 
+ Skills 
+ Protocols 
+ Get Started 
+ GitHub
+ AI Maestro plugin 1.7.3 · 13 skills
+ Agent Skills Standard format
+ AI Maestro Skills: 13 skills for your coding agents
+ Memory, code graph, messaging, files, canvases, secrets, safe SQL, support cases and SEO audits. One plugin gives a Claude Code agent all of them; the format is open, so other agents can read the same SKILL.md files.
+ See all 13 skills 
+ Install 
+ What is an agent skill?
+ A skill is a folder with a SKILL.md file in the open Agent Skills Standard . Its description says what the skill does and when to use it, so the agent loads it when the task calls for it and ignores it otherwise.
+ Plain files
+ Markdown plus small scripts. No runtime to run and no server to host.
+ Loaded when needed
+ Only the short description sits in the agent's context. The body loads when the description matches the task.
+ Built from open repos
+ The plugin is assembled by the plugin builder from local sources and from separate repositories, so each skill is versioned on its own.
+ The 13 skills
+ Grouped by what they are for. Each card names what the skill needs and where its source lives.
+ Memory and code
+ memory-search
+ MEMORY 
+ Search what the agent learned in past sessions: decisions, facts, corrections, and what depends on an entity ( --about ).
+ Needs: AI Maestro running
+ Source: ai-maestro-plugins (src) 
+ docs-search
+ CODE 
+ Look up a function, class or API in the generated documentation before calling it: signature, parameters, return type.
+ Needs: AI Maestro running
+ Source: ai-maestro-plugins (src) 
+ graph-query
+ CODE 
+ Query the code graph for callers, dependencies and the blast radius of a change.
+ Needs: AI Maestro running
+ Source: ai-maestro-plugins (src) 
+ Agents, messages and files
+ agent-messaging
+ AMP 
+ Send, read and reply to signed messages between agents with the Agent Messaging Protocol. Local and federated delivery, attachments, Ed25519 signatures.
+ Needs: curl, jq, openssl; AI Maestro for local delivery
+ Source: agentmessaging/claude-plugin 
+ agent-identity
+ AID 
+ Authenticate an agent with an auth server using Agent Identity: Ed25519 identity documents, proof of possession, OAuth 2.0 token exchange.
+ Needs: curl, jq, openssl 3.x
+ Source: agentmessaging/agent-identity 
+ agent-files
+ AFP 
+ Share a file between agents, hosts and people through an AFP space (S3-compatible storage). Store, fetch, list and make time-limited links.
+ Needs: curl, jq, openssl; a configured AFP space
+ Source: agentmessaging/agent-files 
+ canvas-actions
+ AAP 
+ Create interactive HTML pages (canvases) the person sees in the dashboard, and handle what they click, submit or select.
+ Needs: AI Maestro dashboard
+ Source: agentmessaging/agent-actions 
+ ai-maestro-agents-management
+ CLI 
+ Create, list, rename, hibernate, wake, export and delete agents, and install plugins on them, with the aimaestro-agent.sh CLI.
+ Needs: AI Maestro running
+ Source: ai-maestro-plugins (src) 
+ Safe work with secrets, data, customers and sites
+ aim-secret-management
+ SECRETS 
+ Use an API key, token or password without ever seeing it, and ask the person to store one without pasting it into the chat. Backed by the aim-secret CLI and a local vault.
+ Needs: aim-secret (AI Maestro installs it)
+ Source: ai-maestro-plugins (src) 
+ agentic-sql
+ SQL 
+ Run SQL against a production or staging database safely: check the saved query library first,
+
+=== [meta] https://ai-maestro.23blocks.com
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/23blocks-OS/ai-maestro
+<div align="center">
+
+<img src="./docs/logo-constellation.svg" alt="AI Maestro Logo" width="120"/>
+
+# AI Maestro
+
+*I was running 35 AI agents across multiple terminals and became the human mailman between them. So I built AI Maestro.*
+
+**The OS for AI-first organizations — orchestrate any AI agent with persistent memory, agent-to-agent messaging, and multi-machine support.**
+
+[![Version](https://img.shields.io/badge/version-0.77.0-blue)](https://github.com/23blocks-OS/ai-maestro/releases)
+[![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Linux%20%7C%20Windows%20(WSL2)-lightgrey)](https://github.com/23blocks-OS/ai-maestro)
+[![License](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
+[![GitHub Stars](https://img.shields.io/github/stars/23blocks-OS/ai-maestro?style=social)](https://github.com/23blocks-OS/ai-maestro)
+
+![AI Maestro Dashboard](./docs/images/aiteam-web.png)
+
+[Quick Start](#quick-start) · [Features](#features) · [Skills](#skills) · [Protocols](#protocols) · [Documentation](#documentation) · [Contributing](./CONTRIBUTING.md)
+
+</div>
+
+---
+
+## The Story
+
+I gave an AI agent a real task — not autocomplete, a real engineering problem. It checked the code, read the logs, queried the database, and came back with the answer. That was the moment. *This thing can actually work.*
+
+Within a week I was running 35 agents across terminals. They were productive, but they couldn't talk to each other. I became the human message bus — copying context from one terminal, pasting into another. I was the bottleneck in my own AI team.
+
+**So I built AI Maestro** — one dashboard to see every agent, on every machine, with persistent memory and direct agent-to-agent communication. Today I run 80+ agents across multiple computers, building real companies with them every day.
+
+**What makes this different:**
+- **Works with the agents you already use** — Claude Code, Codex and Grok Build get launch, chat history, status and approval cards. Pi, OpenClaw and GitHub Copilot CLI launch from AI Maestro and run in the terminal tab, as does any other terminal agent. [What each one supports](./docs/AGENT-PROGRAMS.md). We don't lock you in.
+- **Multi-machine from day one** — Peer mesh network with no central server. Nobody else does this.
+- **Agents that communicate** — The Agent Messaging Protocol (AMP) lets agents coordinate directly. You orchestrate, they collaborate.
+- **Yours, entirely** — MIT licensed. No account, no telemetry, no per-seat pricing, no hosted tier we upsell you to. Your code and your agents stay on your machines.
+
+---
+
+## The Mental Model
+
+**AI Maestro is an operating system for an AI-first company.** Not a task runner — a place where a standing team works.
+
+An agent here is closer to an **employee** than to a job. It has a name, a face, a memory that survives the session, an inbox — and it **owns** something: a product, a repository, a process, a customer. Its memory and code graph are indexed against what it owns, which is why it gets better at that thing over months rather than starting cold every morning.
+
+Because agents own things, **they don't share a working copy.** Two agents that need the same repository each clone it, work on their own branch, and integrate through git — push, pull request, review, merge — exactly like two engineers on a team.
+
+That's deliberate, and it follows from the one thing that defines this product: **your agents run on different machines.** A shared checkout needs a shared filesystem. Git worktrees — the isolation primitive the single-machine agent IDEs are built on — are several working directories over **one `.git` store on one disk**, so they stop working the moment your backend agent is on a Linux box and your iOS agent is on a Mac. A clone is the only primitive that survives the move. It's why transferring an agent to another host clones its repos to the destination: an agent's repositories travel with the agent.
+
+[The full model →](./docs/CONCEPTS.md#agent-ownership)
+
+---
+
+## Quick Start
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/23blocks-OS/ai-maestro/main/scripts/remote-install.sh | sh
+```
+
+This installs everything you need:
+- AI Maestro dashboard and ser

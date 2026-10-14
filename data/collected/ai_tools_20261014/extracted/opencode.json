@@ -1,0 +1,83 @@
+{
+ "company": null,
+ "one_liner_ko": "터미널에서 코딩을 돕는 Go 기반 AI 도우미(TUI)로, 현재 저장소는 보관 처리되고 Crush로 이어졌다.",
+ "what_it_does_ko": "OpenCode는 터미널로 AI 도움을 가져오는 Go 기반 CLI 앱으로, 여러 AI 모델과 대화하며 코딩·디버깅을 하는 TUI를 제공한다. OpenAI, Anthropic Claude, Google Gemini, AWS Bedrock, Groq, Azure OpenAI, OpenRouter를 지원하고, AI가 명령 실행·파일 검색·코드 수정을 할 수 있다. 다만 이 저장소는 더 이상 유지되지 않고 보관(archived) 처리되었으며, 원저자와 Charm 팀이 Crush라는 이름으로 개발을 이어 가고 있다.",
+ "key_features": [
+  "Bubble Tea 기반 대화형 TUI",
+  "다중 AI 공급자 지원",
+  "세션 저장·관리(SQLite)",
+  "명령 실행·파일 검색·코드 수정 도구",
+  "LSP 연동",
+  "파일 변경 추적",
+  "컨텍스트 한도 근접 시 자동 요약(Auto Compact)"
+ ],
+ "use_cases_ko": [
+  "개발자가 터미널에서 코딩·디버깅 도움을 받음"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": [
+  "CLI",
+  "맥"
+ ],
+ "korean_support": "불명",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/opencode-ai/opencode",
+   "quote": "A powerful terminal-based AI assistant for developers, providing intelligent coding assistance directly in your terminal."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://github.com/opencode-ai/opencode",
+   "quote": "This repository is no longer maintained and has been archived for provenance."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/opencode-ai/opencode",
+   "quote": "The project has continued under the name [Crush][crush], developed by the original author and the Charm team."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/opencode-ai/opencode",
+   "quote": "OpenCode is a Go-based CLI application that brings AI assistance to your terminal."
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/opencode-ai/opencode",
+   "quote": "**Multiple AI Providers**: Support for OpenAI, Anthropic Claude, Google Gemini, AWS Bedrock, Groq, Azure OpenAI, and OpenRouter"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/opencode-ai/opencode",
+   "quote": "**Tool Integration**: AI can execute commands, search files, and modify code"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/opencode-ai/opencode",
+   "quote": "**LSP Integration**: Language Server Protocol support for code intelligence"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/opencode-ai/opencode",
+   "quote": "**Persistent Storage**: SQLite database for storing conversations and sessions"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/opencode-ai/opencode",
+   "quote": "It provides a TUI (Terminal User Interface) for interacting with various AI models to help with coding tasks, debugging, and more."
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/opencode-ai/opencode",
+   "quote": "### Using Homebrew (macOS and Linux)"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

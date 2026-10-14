@@ -1,0 +1,53 @@
+{
+ "company": "21st Labs, Inc.",
+ "one_liner_ko": "디자인 엔지니어들이 만든 1만 2천 개 이상의 React 컴포넌트·템플릿·shadcn 테마를 모아 둔 UI 라이브러리(레지스트리)",
+ "what_it_does_ko": "21st는 디자인 엔지니어들이 만든 React 컴포넌트, 전체 템플릿, shadcn 테마, 셰이더, 그라디언트를 모은 커뮤니티 카탈로그다. 사용자는 컴포넌트를 둘러보고 실시간 미리보기를 한 뒤, AI용 프롬프트를 복사해 Cursor·Claude Code·v0·Lovable 같은 AI 도구에 붙여 넣어 자기 코드베이스에 넣는다. 코드는 패키지로 설치되는 것이 아니라 저장소에 복사되어 사용자가 직접 소유·수정한다. shadcn CLI 설치 명령도 제공하며, 누구나 자기 컴포넌트를 올리고 템플릿 작성자는 직접 판매할 수 있다. 유료 애드온인 21st AI로 UI를 생성·다듬을 수 있다.",
+ "key_features": [
+  "1만 2천 개 이상의 React 컴포넌트·템플릿·shadcn 테마 탐색과 실시간 미리보기",
+  "컴포넌트마다 AI용 프롬프트 복사 → Claude Code·Codex·Lovable 등에 붙여 넣어 설치",
+  "shadcn CLI 설치 명령 제공(shadcn 레지스트리 형식)",
+  "MCP·CLI로 컴포넌트 검색·코드 가져오기",
+  "북마크 목록(개인·팀 공유)",
+  "누구나 컴포넌트 게시, 템플릿 작성자 직접 판매",
+  "21st AI: 여러 AI 모델 비교 생성(Sketch), React 코드 모드와 실시간 샌드박스",
+  "Design Bug Bot: PR 디자인 리뷰와 수정 코드 제안"
+ ],
+ "use_cases_ko": [
+  "AI 코딩 도구를 쓰는 개발자가 완성된 UI 컴포넌트를 자기 프로젝트에 빠르게 넣기",
+  "에이전시·팀이 공유 컬렉션과 비공개 팀 컴포넌트로 UI 자산 관리",
+  "디자인 엔지니어가 자기 컴포넌트를 게시하고 템플릿을 판매"
+ ],
+ "pricing": {
+  "free_tier": "있음 (전체 둘러보기 무료, 하루 2번 무료 컴포넌트 복사, Design Bug Bot 무료 리뷰 5회)",
+  "plans": [
+   {"name": "Builder", "price": 6, "currency": "USD", "period": "month(연간 결제)", "limits": "무제한 코드·프롬프트 복사, MCP·CLI 설치 무제한, AI 크레딧 없음", "page_lang": "en"},
+   {"name": "Builder + AI", "price": 15, "currency": "USD", "period": "month(연간 결제)", "limits": "월 AI 크레딧 500~2,000, 추가 100크레딧 $5(이월)", "page_lang": "en"},
+   {"name": "Team", "price": 7.5, "currency": "USD", "period": "month(좌석당, 연간 결제)", "limits": "2~50석, 중앙 결제·공유 컬렉션·관리자 기능, AI 크레딧은 선택", "page_lang": "en"}
+  ],
+  "pricing_url": "https://21st.dev/pricing"
+ },
+ "open_source": null,
+ "api": "불명",
+ "platforms": ["웹", "CLI"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://21st.dev/", "quote": "© 2026 21st Labs, Inc."},
+  {"field": "one_liner_ko", "url": "https://21st.dev/", "quote": "12,000+ crafted React components, templates, and shadcn themes. Built by real design engineers."},
+  {"field": "what_it_does_ko", "url": "https://21st.dev/", "quote": "21st is a community catalog of UI built by design engineers: React components, full templates, shadcn themes, shaders, and gradients."},
+  {"field": "what_it_does_ko", "url": "https://21st.dev/", "quote": "21st is a registry: many authors, many styles, and the code is copied into your repo rather than imported."},
+  {"field": "key_features", "url": "https://21st.dev/", "quote": "Every component also comes with a shadcn CLI install command."},
+  {"field": "key_features", "url": "https://21st.dev/", "quote": "Anyone can publish to the registry. You keep authorship, your components live on your public profile, and template authors can sell their work directly."},
+  {"field": "key_features", "url": "https://21st.dev/", "quote": "Bookmark any component into your lists — personal or team-shared — and pull it back up in one click."},
+  {"field": "key_features", "url": "https://21st.dev/pricing", "quote": "PR design reviews with findings and fix code"},
+  {"field": "key_features", "url": "https://21st.dev/pricing", "quote": "Search components via MCP & CLI"},
+  {"field": "use_cases_ko", "url": "https://21st.dev/pricing", "quote": "For agencies and businesses."},
+  {"field": "pricing", "url": "https://21st.dev/", "quote": "Browsing the whole registry is free, and you get 2 free component copies every day."},
+  {"field": "pricing", "url": "https://21st.dev/pricing", "quote": "Builder + AI\n Popular \n Build with AI. Review every PR.\n $15\n per month\n billed yearly"},
+  {"field": "pricing", "url": "https://21st.dev/pricing", "quote": "$7.50\n per seat / month\n billed yearly"},
+  {"field": "pricing", "url": "https://21st.dev/pricing", "quote": "$6\n per month\n billed yearly"},
+  {"field": "platforms", "url": "https://21st.dev/pricing", "quote": "Unlimited installs via MCP & CLI"},
+  {"field": "korean_support", "url": "https://21st.dev/", "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

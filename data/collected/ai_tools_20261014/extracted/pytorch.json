@@ -1,0 +1,44 @@
+{
+ "company": "PyTorch Foundation (The Linux Foundation)",
+ "one_liner_ko": "GPU 가속 텐서 계산과 테이프 기반 자동 미분 신경망을 제공하는 파이썬 딥러닝 패키지.",
+ "what_it_does_ko": "PyTorch는 GPU 가속이 강한 NumPy 같은 텐서 계산과 테이프 기반 자동 미분 시스템 위의 심층 신경망이라는 두 가지 고수준 기능을 제공하는 파이썬 패키지다. TorchScript로 eager 모드와 그래프 모드를 오가고 TorchServe로 운영 배포를 빠르게 할 수 있다. torch.distributed 백엔드로 연구·운영 환경에서 확장 가능한 분산 학습을 지원한다. 주요 클라우드 플랫폼에서 잘 지원되며 컴퓨터 비전·NLP 등을 돕는 생태계 도구와 라이브러리가 풍부하다.",
+ "key_features": [
+  "GPU 가속 텐서 계산",
+  "테이프 기반 자동 미분(autograd) 신경망",
+  "TorchScript로 eager·그래프 모드 전환, TorchServe 운영 배포",
+  "torch.distributed 분산 학습",
+  "주요 클라우드 플랫폼 지원(AWS·GCP·Azure 등)",
+  "CUDA·ROCm·CPU 등 연산 플랫폼별 설치",
+  "Captum·PyTorch Geometric·skorch 등 생태계 라이브러리"
+ ],
+ "use_cases_ko": [
+  "딥러닝 연구에서 새 알고리즘 실험(스탠퍼드 사례)",
+  "추론 비용 절감과 확장(Amazon Advertising 사례)",
+  "NLP·멀티태스크 학습(Salesforce 사례)"
+ ],
+ "pricing": {"free_tier": "불명", "plans": [], "pricing_url": null},
+ "open_source": null,
+ "api": "불명",
+ "platforms": ["윈도", "맥", "리눅스"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://pytorch.org", "quote": "© 2026 PyTorch. Copyright © The Linux Foundation®. All rights reserved."},
+  {"field": "company", "url": "https://pytorch.org", "quote": "PyTorch Foundation - PyTorch"},
+  {"field": "one_liner_ko", "url": "https://github.com/pytorch/pytorch", "quote": "PyTorch is a Python package that provides two high-level features:"},
+  {"field": "what_it_does_ko", "url": "https://github.com/pytorch/pytorch", "quote": "Deep neural networks built on a tape-based autograd system"},
+  {"field": "what_it_does_ko", "url": "https://pytorch.org", "quote": "Transition seamlessly between eager and graph modes with TorchScript, and accelerate the path to production with TorchServe."},
+  {"field": "what_it_does_ko", "url": "https://pytorch.org", "quote": "A rich ecosystem of tools and libraries extends PyTorch and supports development in computer vision, NLP and more."},
+  {"field": "key_features", "url": "https://github.com/pytorch/pytorch", "quote": "Tensor computation (like NumPy) with strong GPU acceleration"},
+  {"field": "key_features", "url": "https://pytorch.org", "quote": "Scalable distributed training and performance optimization in research and production is enabled by the torch.distributed backend."},
+  {"field": "key_features", "url": "https://pytorch.org", "quote": "PyTorch is well supported on major cloud platforms, providing frictionless development and easy scaling."},
+  {"field": "key_features", "url": "https://pytorch.org", "quote": "ROCm 6.3"},
+  {"field": "key_features", "url": "https://pytorch.org", "quote": "Captum (“comprehension” in Latin) is an open source, extensible library for model interpretability built on PyTorch."},
+  {"field": "use_cases_ko", "url": "https://pytorch.org", "quote": "Using PyTorch’s flexibility to efficiently research new algorithmic approaches."},
+  {"field": "use_cases_ko", "url": "https://pytorch.org", "quote": "Reduce inference costs by 71% and scale out using PyTorch, TorchServe, and AWS Inferentia."},
+  {"field": "use_cases_ko", "url": "https://pytorch.org", "quote": "Pushing the state of the art in NLP and Multi-task learning."},
+  {"field": "platforms", "url": "https://pytorch.org", "quote": "Your OS\n Linux\n Mac\n Windows"},
+  {"field": "korean_support", "url": "https://pytorch.org", "quote": "html lang: en-US\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

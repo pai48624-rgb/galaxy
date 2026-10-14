@@ -1,0 +1,205 @@
+=== [home] https://www.codexmonitor.app (lang=en)
+Codex Monitor - Orchestrate Codex agents across your workspaces 
+ Codex Monitor
+ Features 
+ Screens 
+ Workflow 
+ Changelog 
+ Get started 
+ GitHub 
+ Download 
+ Desktop command center for Codex
+ Monitor your Codex situation.
+ Orchestrate any number of Codex agents across any number of projects in a beautifully crafted
+ command center for threads, reviews, and worktrees.
+ Get the app 
+ Explore features 
+ Built on 
+ Tauri + React 
+ Platform 
+ macOS + Windows + Linux 
+ Everything you need to run Codex like a studio.
+ Build, review, and ship across multiple repos without losing context. Codex Monitor keeps the
+ entire workflow in one surface.
+ Workspace orchestration
+ Add, persist, and reconnect workspaces with a live dashboard of recent activity.
+ Thread control
+ Start threads, resume history, and handle approvals without leaving the main view.
+ Worktree agents
+ Spin up per-branch worktrees for isolated changes and clean reviews.
+ Git + GitHub insight
+ Diffs, logs, branch controls, and Issues via gh built right in.
+ Model + access controls
+ Pick models, tune reasoning effort, and lock in access modes per run.
+ Plans and reviews
+ Track per-turn plans, run reviews, and export debug logs on demand.
+ Skills + prompts
+ Autocomplete skills, prompts, and file tokens in the composer.
+ Updater + polish
+ Toast-driven updates, resizable panels, and platform-specific window chrome.
+ The next-generation IDE.
+ Without a text editor built in, because you don’t need it.
+ Command center layout 
+ Threads, reviews, and activity stacked into one view. 
+ Conversation + terminal 
+ Ask, approve, and run commands with context attached. 
+ Projects hub 
+ Keep every workspace, thread, and run in view. 
+ Git + issues 
+ Diffs, logs, and GitHub issues in one dock. 
+ Files tree 
+ Search and jump through large repos quickly. 
+ Beautiful live git diff 
+ Real-time diff visualization with syntax highlighting. 
+ Skills support 
+ Autocomplete and use skills seamlessly in your workflow. 
+ From repo to review in three moves.
+ 01 
+ Connect your workspaces
+ Codex Monitor runs one shared Codex app-server and restores your threads across workspaces.
+ 02 
+ Run the agent
+ Pick models, access mode, and skills, then chat and manage approvals in one view.
+ 03 
+ Review + ship
+ Open diffs, logs, and reviews alongside your threads with instant context.
+ Testimonials
+ Live feedback
+ Theo - t3.gg
+ @theo 
+ View 
+ “I would like to rescind this - CodexMonitor is the best performing tool like this that I’ve
+ used and I’m much less interested in building my own now”
+ Gabriel Garrett
+ @GabGarrett 
+ View 
+ “@tszzl needs to use @Dimillian’s CodexMonitor”
+ Adam Bardon
+ @bardonadam 
+ View 
+ “Started using @Dimillian's Codex Monitor, which is awesome! I don't use monorepos (yet?)
+ but I added both the API and frontend projects separately. The agent working on the backend
+ realized by itself that it could update the frontend as well and it did it successfully 🤯”
+ Elashera ⛩️
+ @elashera_ 
+ View 
+ “From multiple vs code to just one app, thanks @Dimillian codexMonitor is awsome”
+ Ready to monitor every agent run?
+ Codex Monitor keeps your Codex workflows visible, organized, and fast.
+ View repo 
+ Codex Monitor
+ Desktop Codex agent orchestration, built by and for individuals who ship fast.
+ Features 
+ Screenshots 
+ Workflow 
+ Testimonials 
+ Changelog 
+ GitHub 
+ © 2026 Thomas Ricouard. All rights reserved.
+ Codex Monitor is an independent third-party application and is not affiliated with, endorsed by,
+ or sponsored by OpenAI. Codex and OpenAI are trademarks of OpenAI. Codex Monitor is provided "as
+ is" during the beta period without warranties of any kind. Use of Codex Monitor requires a
+ separate agent CLI installation and is subject to the agent provider's terms of service.
+
+=== [meta] https://www.codexmonitor.app
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/Dimillian/CodexMonitor
+# CodexMonitor
+
+[![gitcgr](https://gitcgr.com/badge/Dimillian/CodexMonitor.svg)](https://gitcgr.com/Dimillian/CodexMonitor)
+
+![CodexMonitor](screenshot.png)
+
+CodexMonitor is a Tauri app for orchestrating multiple Codex agents across local workspaces. It provides a sidebar to manage projects, a home screen for quick actions, and a conversation view backed by the Codex app-server protocol.
+
+## Features
+
+### Workspaces & Threads
+
+- Add and persist workspaces, group/sort them, and jump into recent agent activity from the home dashboard.
+- Spawn one `codex app-server` per workspace, resume threads, and track unread/running state.
+- Worktree and clone agents for isolated work; worktrees live under the app data directory (legacy `.codex-worktrees` supported).
+- Thread management: pin/rename/archive/copy, per-thread drafts, and stop/interrupt in-flight turns.
+- Optional remote backend (daemon) mode for running Codex on another machine.
+- Remote setup helpers for self-hosted connectivity (Tailscale detection/host bootstrap for TCP mode).
+
+### Composer & Agent Controls
+
+- Compose with image attachments (picker, drag/drop, paste) and configurable follow-up behavior (`Queue` vs `Steer` while a run is active).
+- Use `Shift+Cmd+Enter` (macOS) or `Shift+Ctrl+Enter` (Windows/Linux) to send the opposite follow-up action for a single message.
+- Autocomplete for skills (`$`), prompts (`/prompts:`), reviews (`/review`), and file paths (`@`).
+- Model picker, collaboration modes (when enabled), reasoning effort, access mode, and context usage ring.
+- Dictation with hold-to-talk shortcuts and live waveform (Whisper).
+- Render reasoning/tool/diff items and handle approval prompts.
+
+### Git & GitHub
+
+- Diff stats, staged/unstaged file diffs, revert/stage controls, and commit log.
+- Branch list with checkout/create plus upstream ahead/behind counts.
+- GitHub Issues and Pull Requests via `gh` (lists, diffs, comments) and open commits/PRs in the browser.
+- PR composer: "Ask PR" to send PR context into a new agent thread.
+
+### Files & Prompts
+
+- File tree with search, file-type icons, and Reveal in Finder/Explorer.
+- Prompt library for global/workspace prompts: create/edit/delete/move and run in current or new threads.
+
+### UI & Experience
+
+- Resizable sidebar/right/plan/terminal/debug panels with persisted sizes.
+- Responsive layouts (desktop/tablet/phone) with tabbed navigation.
+- Sidebar usage and credits meter for account rate limits plus a home usage snapshot.
+- Terminal dock with multiple tabs for background commands (experimental).
+- In-app updates with toast-driven download/install, debug panel copy/clear, sound notifications, plus platform-specific window effects (macOS overlay title bar + vibrancy) and a reduced transparency toggle.
+
+## Requirements
+
+- Node.js + npm
+- Rust toolchain (stable)
+- CMake (required for native dependencies; dictation/Whisper uses it)
+- LLVM/Clang (required on Windows to build dictation dependencies via bindgen)
+- Codex CLI installed and available as `codex` in `PATH` (or configure a custom Codex binary in app/workspace settings)
+- Git CLI (used for worktree operations)
+- GitHub CLI (`gh`) for GitHub Issues/PR integrations (optional)
+
+If you hit native build errors, run:
+
+```bash
+npm run doctor
+```
+
+## Getting Started
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run in dev mode:
+
+```bash
+npm run tauri:dev
+```
+
+## iOS Support (WIP)
+
+iOS support is currently in progress.
+
+- Current status: mobile layout runs, remote backend flow is wired, and iOS defaults to remote backend mode.
+- Current limits: terminal and dictation remain unavailable on mobile builds.
+- Desktop behavior is unchanged: macOS/Linux/Windows remain local-first unless remote mode is explicitly selected.
+
+### iOS + Tailscale Setup (TCP)
+
+Use this when connecting the iOS app to a desktop-hosted daemon over your Tailscale tailnet.
+Canonical runbook: `docs/mobile-ios-tailscale-blueprint.md`.
+
+1. Install and sign in to Tailscale on both desktop and iPhone (same tailnet).
+2. On desktop CodexMonitor, open `Settings > Server`.
+3. Set a `Remote backend token`.
+4. Start the desktop daemon with `Start daemon` (in `Mobile access daemon`).
+5. In `Tailscale helpe

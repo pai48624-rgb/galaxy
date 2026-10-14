@@ -1,0 +1,135 @@
+{
+ "company": "AMD (Advanced Micro Devices)",
+ "one_liner_ko": "AMD의 오픈소스 GPU 컴퓨팅 플랫폼(컴파일러·런타임·라이브러리 생태계).",
+ "what_it_does_ko": "ROCm은 AI, HPC, 특정 분야 작업을 위한 컴파일러·런타임·라이브러리로 이루어진 AMD의 오픈소스 GPU 컴퓨팅 플랫폼이다. AMD Instinct, Radeon, Ryzen AI 기기에 최적화돼 있다. CUDA와 비슷한 인터페이스로 이식 가능한 GPU 코드를 쓰게 해 주는 C++ 런타임 API·커널 언어 HIP를 기반으로 하며 OpenMP·OpenCL도 지원한다. PyTorch·JAX·vLLM·SGLang 등 AI 프레임워크 설치 가이드와 분야별 툴킷을 제공한다.",
+ "key_features": [
+  "HIP: CUDA와 비슷한 C++ 런타임 API·커널 언어",
+  "OpenMP·OpenCL 지원",
+  "수학·연산 라이브러리(hipBLAS, rocBLAS, MIOpen 등)",
+  "통신 라이브러리(RCCL 등)",
+  "프로파일링·디버깅 도구(ROCm Compute Profiler, ROCgdb 등)",
+  "PyTorch·JAX·vLLM·SGLang 지원",
+  "Kubernetes 네트워크 오퍼레이터 등 GPU 시스템 운영 가이드",
+  "데이터 과학·금융·생명과학·시뮬레이션 툴킷"
+ ],
+ "use_cases_ko": [
+  "GPU 가속 HPC·AI·과학 계산·CAD 작업",
+  "AMD GPU에서 PyTorch·JAX로 AI 학습·추론"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "오픈소스 (라이선스 이름은 페이지에 없음)",
+ "api": "있음",
+ "platforms": [
+  "윈도"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://rocm.docs.amd.com/en/latest/",
+   "quote": "© 2026 Advanced Micro Devices, Inc"
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://rocm.docs.amd.com/en/latest/",
+   "quote": "ROCm is AMD’s open-source GPU computing platform"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://rocm.docs.amd.com/en/latest/",
+   "quote": "ROCm is AMD’s open-source GPU computing platform: an end‑to‑end ecosystem of"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/ROCm/legacy-rocm-build",
+   "quote": "with an interface similar to NVIDIA CUDA™. It also supports OpenMP and OpenCL,"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://rocm.docs.amd.com/en/latest/",
+   "quote": "Full-stack documentation and recipes to deploy AI workloads on AMD"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/ROCm/legacy-rocm-build",
+   "quote": "ROCm is powered by [HIP](https://rocm.docs.amd.com/projects/HIP/en/latest/), a"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/ROCm/legacy-rocm-build",
+   "quote": "It also supports OpenMP and OpenCL,"
+  },
+  {
+   "field": "key_features",
+   "url": "https://rocm.docs.amd.com/en/latest/",
+   "quote": " hipBLAS \n hipBLASLt"
+  },
+  {
+   "field": "key_features",
+   "url": "https://rocm.docs.amd.com/en/latest/",
+   "quote": "Communication libraries \n RCCL"
+  },
+  {
+   "field": "key_features",
+   "url": "https://rocm.docs.amd.com/en/latest/",
+   "quote": "ROCm Compute Profiler (rocprofiler-compute)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://rocm.docs.amd.com/en/latest/",
+   "quote": "Inference\n vLLM \n SGLang \n Go to AI Ecosystem docs"
+  },
+  {
+   "field": "key_features",
+   "url": "https://rocm.docs.amd.com/en/latest/",
+   "quote": "Network Operator (Kubernetes) \n Go to GPU Systems docs"
+  },
+  {
+   "field": "key_features",
+   "url": "https://rocm.docs.amd.com/en/latest/",
+   "quote": " ROCm Data Science \n ROCm Finance \n ROCm Life Science"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/ROCm/legacy-rocm-build",
+   "quote": "is particularly well-suited to GPU-accelerated high-performance computing (HPC),"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://github.com/ROCm/legacy-rocm-build",
+   "quote": "ROCm integrates with machine learning frameworks such as PyTorch and"
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/ROCm/legacy-rocm-build",
+   "quote": "Open-source software stack for AMD GPU computing"
+  },
+  {
+   "field": "api",
+   "url": "https://github.com/ROCm/legacy-rocm-build",
+   "quote": "a\nC++ runtime API and kernel language"
+  },
+  {
+   "field": "platforms",
+   "url": "https://rocm.docs.amd.com/en/latest/",
+   "quote": "It is open source, cross‑platform (Linux and Windows), and optimized for AMD"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://rocm.docs.amd.com/en/latest/",
+   "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"
+  }
+ ],
+ "mismatch": [
+  {
+   "official": "AMD의 오픈소스 GPU 소프트웨어 스택(직접 설치하는 SDK)",
+   "diff": "기존 분류는 '사용량 기반 종량제(클라우드/GPU)'이나 공식 페이지는 오픈소스 소프트웨어 플랫폼이며 사용량 과금 언급 없음",
+   "url": "https://rocm.docs.amd.com/en/latest/"
+  }
+ ],
+ "plan_change": []
+}

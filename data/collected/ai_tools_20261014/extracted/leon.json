@@ -1,0 +1,49 @@
+{
+ "company": "Leon (오픈소스 프로젝트)",
+ "one_liner_ko": "사용자의 서버에서 동작하며 요청한 일을 해 주는 오픈소스 개인 AI 비서.",
+ "what_it_does_ko": "Leon은 사용자의 서버에 설치해 쓰는 오픈소스 개인 비서로, 말이나 글로 대화하며 요청한 일을 처리한다. 스킬(패키지·모듈) 구조라 필요한 기능을 직접 만들거나 가져다 쓸 수 있다. 음성 합성(TTS)·음성 인식(STT)을 클라우드나 오프라인 방식으로 쓸 수 있어 외부 서비스 없이도 동작하게 설정할 수 있다. 현재 2.0 개발자 프리뷰에서는 도구·컨텍스트·메모리·에이전트 실행 중심으로 다시 만들어지고 있다.",
+ "key_features": [
+  "모듈형 스킬(패키지·모듈) 구조로 기능 확장",
+  "음성 합성·음성 인식(클라우드 또는 오프라인)",
+  "smart·controlled·agent 실행 모드",
+  "데스크톱·브라우저 화면을 조작하는 컴퓨터 사용 기능",
+  "선호·일상 맥락을 기억하는 계층형 메모리",
+  "로컬·원격 AI 제공자 모두 지원",
+  "Leon CLI로 설치·실행"
+ ],
+ "use_cases_ko": [
+  "개인이 자기 서버에 비서를 두고 일상 디지털 작업 자동화",
+  "개발자가 자기 필요에 맞는 스킬을 만들어 공유"
+ ],
+ "pricing": {
+  "free_tier": "있음 (MIT 오픈소스, 후원만 받음)",
+  "plans": [],
+  "pricing_url": "https://getleon.ai"
+ },
+ "open_source": "MIT",
+ "api": "있음",
+ "platforms": ["CLI"],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {"field": "company", "url": "https://getleon.ai", "quote": "Leon - Your Open-Source Personal Assistant"},
+  {"field": "one_liner_ko", "url": "https://getleon.ai", "quote": "Leon is your open-source personal assistant who can live on your server.\nHe does stuff when you ask him to."},
+  {"field": "what_it_does_ko", "url": "https://docs.getleon.ai/", "quote": "You can talk to him and he can talk to you.\nYou can also text him and he can also text you."},
+  {"field": "what_it_does_ko", "url": "https://getleon.ai", "quote": "Leon supports several text-to-speech and speech-to-text cloud solutions.\nOr you can also go for the offline ones."},
+  {"field": "what_it_does_ko", "url": "https://github.com/leon-ai/leon", "quote": "**Leon** is **your open-source personal AI assistant** built around **tools, context, memory, and agentic execution**."},
+  {"field": "key_features", "url": "https://getleon.ai", "quote": "Leon is built on a modular architecture that gives you the flexibility to create or use packages/modules (skills) that fit your need."},
+  {"field": "key_features", "url": "https://github.com/leon-ai/leon", "quote": "`smart` mode chooses for you, `controlled` mode follows deterministic native skills and actions, and `agent` mode can plan step by step."},
+  {"field": "key_features", "url": "https://github.com/leon-ai/leon", "quote": "Leon includes advanced, progressively loaded computer use that can operate desktop and browser interfaces"},
+  {"field": "key_features", "url": "https://github.com/leon-ai/leon", "quote": "Leon keeps layered memory so it can remember durable preferences, day-to-day context, and recent discussion context."},
+  {"field": "key_features", "url": "https://github.com/leon-ai/leon", "quote": "Leon supports both local and remote AI providers, which helps balance privacy, control, and capability."},
+  {"field": "key_features", "url": "https://getleon.ai", "quote": "Install Leon CLI npm install --global @leon-ai/cli"},
+  {"field": "use_cases_ko", "url": "https://getleon.ai", "quote": "Remove the hassle of your virtual life by automating stuff. You can think of Leon as your virtual brain."},
+  {"field": "use_cases_ko", "url": "https://docs.getleon.ai/", "quote": "With this generic structure, everyone can create their own modules and share them ."},
+  {"field": "pricing", "url": "https://getleon.ai", "quote": "If you already benefit from Leon, or you'd love to see the upcoming features happening faster, please consider to sponsor the project."},
+  {"field": "open_source", "url": "https://getleon.ai", "quote": "Under MIT license which is the most permissive license in the open-source world"},
+  {"field": "api", "url": "https://docs.getleon.ai/", "quote": " Packages & Modules \n HTTP API \n Collaborative Logger"},
+  {"field": "platforms", "url": "https://docs.getleon.ai/", "quote": "The Leon CLI is the companion that will help with your journey by making the setup very smooth and more!"},
+  {"field": "korean_support", "url": "https://getleon.ai", "quote": "html lang: en\nhreflang: 없음\n화면에 보이는 언어 이름: 없음"}
+ ],
+ "mismatch": [{"official": "MIT 오픈소스로 자기 서버에 설치해 쓰며, 후원만 받고 유료 요금제 안내 없음", "diff": "기존 '프리미엄(무료+유료 구독)' 분류와 달리 유료 구독이 확인되지 않음(오픈소스)", "url": "https://getleon.ai"}],
+ "plan_change": []
+}

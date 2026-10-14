@@ -1,0 +1,42 @@
+{
+ "company": "Vostride",
+ "one_liner_ko": "메모리를 갖추고 스스로 개선되는 에이전트형 QA 하네스로, 웹·모바일 테스트를 자연어로 작성한다",
+ "what_it_does_ko": "agent-qa는 웹과 모바일 앱 테스트를 자연어로 작성하게 해 주는 에이전트형 QA 도구다. 과거 실행에서 배우고 UI 변화에 적응해 출시 전에 회귀 오류를 잡는다. 클릭·입력 같은 하위 동작이 실패하면 UI를 다시 관찰해 다른 경로를 시도하고, 실행 기록을 메모리로 쌓아 다음 실행에 활용한다. 개발자용 대시보드와 CLI, 코딩 에이전트용 MCP·스킬을 제공한다.",
+ "key_features": [
+  "웹·모바일 테스트를 자연어로 작성",
+  "실패한 동작을 다른 경로로 재시도하는 자가 복구 실행",
+  "실행 기록 기반 메모리로 자기 개선",
+  "개발자용 대시보드·CLI, 코딩 에이전트용 MCP·스킬",
+  "검증된 계획을 재사용하는 액션 캐시",
+  "Docker 격리 컨테이너에서 Node·Bun·Python·Bash 훅 실행",
+  "원하는 LLM 사용(OpenAI·Anthropic 호환, Gemini, 로컬 모델, Codex·Claude Code 구독)"
+ ],
+ "use_cases_ko": [
+  "출시 전에 웹·모바일 앱 회귀 오류를 잡으려는 개발팀"
+ ],
+ "pricing": {"free_tier": null, "plans": [], "pricing_url": null},
+ "open_source": "오픈소스(라이선스 이름은 본문에 없음, LICENSE.md 참조)",
+ "api": "불명",
+ "platforms": ["CLI", "웹"],
+ "korean_support": "불명",
+ "evidence": [
+  {"field": "company", "url": "https://github.com/vostride/agent-qa", "quote": "<a href=\"https://vostride.com/docs/agent-qa\">Docs</a>"},
+  {"field": "one_liner_ko", "url": "https://github.com/vostride/agent-qa", "quote": "The self-improving Agentic QA harness with Memory"},
+  {"field": "what_it_does_ko", "url": "https://github.com/vostride/agent-qa", "quote": "agent-qa learns from past runs, adapts to UI changes, and catches regressions before you ship."},
+  {"field": "key_features", "url": "https://github.com/vostride/agent-qa", "quote": "**Write tests in natural language for web and mobile**"},
+  {"field": "key_features", "url": "https://github.com/vostride/agent-qa", "quote": "**Self-healing test execution**"},
+  {"field": "key_features", "url": "https://github.com/vostride/agent-qa", "quote": "**Self-improves with Memory**"},
+  {"field": "key_features", "url": "https://github.com/vostride/agent-qa", "quote": "A polished dashboard and CLI for developers, plus MCP and skills for coding agents."},
+  {"field": "key_features", "url": "https://github.com/vostride/agent-qa", "quote": "**Accelerate runs with smart Cache**"},
+  {"field": "key_features", "url": "https://github.com/vostride/agent-qa", "quote": "Run Node, Bun, Python, or Bash hooks in isolated Docker containers"},
+  {"field": "key_features", "url": "https://github.com/vostride/agent-qa", "quote": "**Bring your own LLM**"},
+  {"field": "use_cases_ko", "url": "https://github.com/vostride/agent-qa", "quote": "catches regressions before you ship"},
+  {"field": "open_source", "url": "https://github.com/vostride/agent-qa", "quote": "**Open source, reviewable QA**: The harness is open source"},
+  {"field": "platforms", "url": "https://github.com/vostride/agent-qa", "quote": "npx agent-qa run tests/hacker-news-top-story.yaml"},
+  {"field": "platforms", "url": "https://github.com/vostride/agent-qa", "quote": "npx agent-qa dashboard --open"}
+ ],
+ "mismatch": [
+  {"official": "오픈소스 하네스로 소개, 유료 요금제 언급 없음", "diff": "기존 '프리미엄(무료+유료 구독)' 분류와 달리 유료 구독이 확인되지 않음(오픈소스)", "url": "https://github.com/vostride/agent-qa"}
+ ],
+ "plan_change": []
+}

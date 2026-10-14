@@ -1,0 +1,101 @@
+{
+ "company": "Hugging Face",
+ "one_liner_ko": "텍스트·비전·오디오·영상·멀티모달 최신 모델의 추론과 학습을 위한 모델 정의 프레임워크",
+ "what_it_does_ko": "Transformers는 텍스트, 컴퓨터 비전, 오디오, 영상, 멀티모달 최신 머신러닝 모델의 정의를 담는 프레임워크로 추론과 학습에 모두 쓰인다. 모델 정의를 한곳에 모아 여러 학습 프레임워크·추론 엔진·관련 라이브러리와 호환되게 한다. Hugging Face Hub에 100만 개 이상의 Transformers 체크포인트가 있다. Pipeline, Trainer, generate 기능으로 추론·학습·텍스트 생성을 지원한다.",
+ "key_features": [
+  "Pipeline: 여러 작업용 간단한 추론 클래스",
+  "Trainer: 혼합 정밀도·torch.compile·FlashAttention·분산 학습 지원",
+  "generate: LLM·VLM 빠른 텍스트 생성과 스트리밍",
+  "허브의 100만 개 이상 체크포인트 사용",
+  "vLLM·SGLang·TGI·llama.cpp 등과 호환되는 모델 정의",
+  "설정·모델·전처리기 3개 클래스 구조"
+ ],
+ "use_cases_ko": [
+  "개발자·ML 엔지니어·연구자가 사전학습 모델로 추론·미세조정"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "Apache 2.0",
+ "api": "있음",
+ "platforms": [
+  "API"
+ ],
+ "korean_support": "UI 한국어",
+ "evidence": [
+  {
+   "field": "company",
+   "url": "https://github.com/huggingface/transformers",
+   "quote": "Copyright 2020 The HuggingFace Team. All rights reserved."
+  },
+  {
+   "field": "one_liner_ko",
+   "url": "https://huggingface.co/docs/transformers/index",
+   "quote": "Transformers acts as the model-definition framework for state-of-the-art machine learning models in text, computer"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://huggingface.co/docs/transformers/index",
+   "quote": "It centralizes the model definition so that this definition is agreed upon across the ecosystem."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://huggingface.co/docs/transformers/index",
+   "quote": "There are over 1M+ Transformers model checkpoints on the Hugging Face Hub you can use."
+  },
+  {
+   "field": "key_features",
+   "url": "https://huggingface.co/docs/transformers/index",
+   "quote": "Pipeline : Simple and optimized inference class for many machine learning tasks"
+  },
+  {
+   "field": "key_features",
+   "url": "https://huggingface.co/docs/transformers/index",
+   "quote": "Trainer : A comprehensive trainer that supports features such as mixed precision, torch.compile, and FlashAttention"
+  },
+  {
+   "field": "key_features",
+   "url": "https://huggingface.co/docs/transformers/index",
+   "quote": "generate : Fast text generation with large language models (LLMs) and vision language models (VLMs), including support for streaming"
+  },
+  {
+   "field": "key_features",
+   "url": "https://huggingface.co/docs/transformers/index",
+   "quote": "inference engines (vLLM, SGLang, TGI, …)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://huggingface.co/docs/transformers/index",
+   "quote": "Every model is implemented from only three main classes (configuration, model, and preprocessor)"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://huggingface.co/docs/transformers/index",
+   "quote": "Transformers is designed for developers and machine learning engineers and researchers."
+  },
+  {
+   "field": "open_source",
+   "url": "https://github.com/huggingface/transformers",
+   "quote": "Licensed under the Apache License, Version 2.0"
+  },
+  {
+   "field": "api",
+   "url": "https://huggingface.co/docs/transformers/index",
+   "quote": "Pipeline API"
+  },
+  {
+   "field": "platforms",
+   "url": "https://huggingface.co/docs/transformers/index",
+   "quote": "Pipeline API"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://huggingface.co/docs/transformers/index",
+   "quote": "hreflang: ar, de, en, es, fr, it, ja, ko, pt, ro, tr, x-default, zh"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

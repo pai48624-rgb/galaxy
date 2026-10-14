@@ -1,0 +1,106 @@
+{
+ "company": null,
+ "one_liner_ko": "Claude Code·Codex·Aider 같은 여러 AI 에이전트를 함께 관리하는 터미널 앱.",
+ "what_it_does_ko": "Claude Squad는 Claude Code·Codex·Gemini·Aider 등 로컬 에이전트 여러 개를 각자의 작업 공간에서 관리해 여러 작업을 동시에 진행하게 해 주는 터미널 앱이다. 작업마다 격리된 git 작업 공간을 주어 충돌을 막고, 변경 사항을 적용·푸시하기 전에 검토할 수 있다. tmux와 GitHub CLI(gh)가 필요하다.",
+ "key_features": [
+  "백그라운드 작업 완료(자동 수락 모드 포함)",
+  "한 터미널 창에서 인스턴스·작업 관리",
+  "적용 전 변경 검토, 푸시 전 체크아웃",
+  "작업마다 격리된 git 작업 공간",
+  "여러 프로그램 설정을 프로필로 전환",
+  "브랜치 커밋·GitHub 푸시 단축키"
+ ],
+ "use_cases_ko": [
+  "여러 AI 코딩 에이전트를 한 UI에서 감독하며 여러 작업 동시 진행"
+ ],
+ "pricing": {
+  "free_tier": "불명",
+  "plans": [],
+  "pricing_url": null
+ },
+ "open_source": "AGPL-3.0",
+ "api": "불명",
+ "platforms": [
+  "CLI"
+ ],
+ "korean_support": "없음(영어 등만)",
+ "evidence": [
+  {
+   "field": "one_liner_ko",
+   "url": "https://smtg-ai.github.io/claude-squad/",
+   "quote": "Manage multiple AI agents like Claude Code , Codex , and Aider"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/smtg-ai/claude-squad",
+   "quote": "is a terminal app that manages multiple"
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://github.com/smtg-ai/claude-squad",
+   "quote": "in separate workspaces, allowing you to work on multiple tasks simultaneously."
+  },
+  {
+   "field": "what_it_does_ko",
+   "url": "https://smtg-ai.github.io/claude-squad/",
+   "quote": "Prerequisites: tmux, gh (GitHub CLI)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/smtg-ai/claude-squad",
+   "quote": "Complete tasks in the background (including yolo / auto-accept mode!)"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/smtg-ai/claude-squad",
+   "quote": "Manage instances and tasks in one terminal window"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/smtg-ai/claude-squad",
+   "quote": "Review changes before applying them, checkout changes before pushing them"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/smtg-ai/claude-squad",
+   "quote": "Each task gets its own isolated git workspace, so no conflicts"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/smtg-ai/claude-squad",
+   "quote": "Profiles let you define multiple named program configurations"
+  },
+  {
+   "field": "key_features",
+   "url": "https://github.com/smtg-ai/claude-squad",
+   "quote": "`s` - Commit and push branch to github"
+  },
+  {
+   "field": "use_cases_ko",
+   "url": "https://smtg-ai.github.io/claude-squad/",
+   "quote": "Supervise multiple agents in one UI"
+  },
+  {
+   "field": "open_source",
+   "url": "https://smtg-ai.github.io/claude-squad/",
+   "quote": "Licensed under GNU AGPL v3.0"
+  },
+  {
+   "field": "platforms",
+   "url": "https://github.com/smtg-ai/claude-squad",
+   "quote": "Both Homebrew and manual installation will install Claude Squad as `cs` on your system."
+  },
+  {
+   "field": "korean_support",
+   "url": "https://smtg-ai.github.io/claude-squad/",
+   "quote": "html lang: en"
+  },
+  {
+   "field": "korean_support",
+   "url": "https://smtg-ai.github.io/claude-squad/",
+   "quote": "hreflang: 없음"
+  }
+ ],
+ "mismatch": [],
+ "plan_change": []
+}

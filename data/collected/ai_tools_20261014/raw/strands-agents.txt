@@ -1,0 +1,483 @@
+=== [home] https://strandsagents.com (lang=en)
+Strands Agents | The open source toolkit for production AI agents 
+ Strands Box is in preview: an open source sandbox for AI agents, with Dogwood policy. Read the post 
+ Projects /harness Strands harness is a state-of-the-art, fully assembled agent harness. /harness-sdk The Strands Harness SDK for building an agent harness from the ground up. /box An agent sandbox that pairs OS containment with Dogwood policy. /shell A virtual shell designed for AI agents to use safely. /evals Validate your agent before you ship. /labs Experimental projects pushing the boundaries of what agents can do. 
+ Learn Courses Guided lessons from your first agent to multi-agent systems. Examples Runnable samples you can drop into your own project. 
+ Integrations 
+ Contribute 
+ Blog 
+ Search 
+ TypeScript 
+ Python 
+ 14,700+ 
+ TypeScript 
+ Python 
+ Projects /harness Strands harness is a state-of-the-art, fully assembled agent harness. 
+ Get started Overview 
+ Quickstart 
+ Compose with the Strands Harness SDK 
+ Configure the agent Choose a model and reasoning 
+ Add tools and instructions 
+ Delegate to subagents 
+ Load agent skills 
+ Persist sessions 
+ Give long-term memory 
+ Checkpoints vs memory 
+ Manage context and caching 
+ Gate tool calls with interventions 
+ Connect MCP servers 
+ Run work in the background 
+ Built-in tools Shell and file tools 
+ Web access 
+ Programmatic tool calling 
+ Task tracking and environment 
+ Take Strands harness to production 
+ Reference Configuration reference 
+ Versioning & Support 
+ /harness-sdk The Strands Harness SDK for building an agent harness from the ground up. 
+ Get started Overview 
+ Quickstart 
+ Quickstart 
+ Migrate Choosing an agent foundation 
+ Migrate from OpenAI 
+ Build guides Tools Overview 
+ Attach and invoke tools 
+ Use MCP tools 
+ Create custom tools 
+ Sessions Persist state across sessions 
+ Memory Overview 
+ Control what the agent remembers 
+ Responses Return structured output 
+ Stream responses 
+ Manage the context window 
+ Pause for input and control 
+ Coordinate multiple agents 
+ Run guides Deploy to production Operating Agents in Production 
+ Amazon Bedrock AgentCore Overview 
+ Python 
+ TypeScript 
+ AWS Lambda 
+ AWS Fargate 
+ AWS App Runner 
+ Amazon EKS 
+ Amazon EC2 
+ Docker Overview 
+ Python 
+ TypeScript 
+ Kubernetes 
+ Terraform 
+ Nx Plugin for AWS 
+ Observe your agent Observability 
+ Metrics 
+ Traces 
+ Logs 
+ Secure for production Responsible AI 
+ Guardrails 
+ Prompt Engineering 
+ Trusted Message History 
+ PII Redaction 
+ Components Agent loop 
+ Production lifecycle controls 
+ State 
+ Storage 
+ Snapshots 
+ Prompts 
+ Hooks 
+ Hook events 
+ Context management Overview 
+ Built-in Modes 
+ Custom Strategies 
+ Strategy Presets 
+ Context Estimation 
+ Retry strategies 
+ Interrupts Overview 
+ Interrupts in Multi-Agent Systems 
+ Models Overview 
+ Model Routing 
+ Amazon Bedrock 
+ Bedrock Prompt Caching 
+ Amazon Nova 
+ Anthropic 
+ Google 
+ LiteLLM 
+ llama.cpp 
+ LlamaAPI 
+ MistralAI 
+ Ollama 
+ OpenAI 
+ OpenAI Responses API 
+ SageMaker 
+ Vercel 
+ Writer 
+ Custom Providers 
+ Tools Tool result format 
+ MCP Transports 
+ Executors 
+ Community Tools Package 
+ Vended Tools 
+ Memory Test Store 
+ Bedrock Knowledge Base 
+ Plugins Overview 
+ Skills 
+ Context Offloader 
+ Context Injector 
+ GoalLoop 
+ Build a custom plugin 
+ Interventions Overview 
+ Human in the loop 
+ Cedar Authorization 
+ Steering 
+ Sandbox Overview 
+ Available Sandboxes 
+ Building a Custom Sandbox 
+ Multi-agent Agent2Agent (A2A) 
+ A2A server configuration 
+ Agents as Tools 
+ Swarm 
+ Graph 
+ Graph components 
+ Workflow 
+ Streaming Async Iterators 
+ Callback Handlers 
+ Event types 
+ Voice Overview 
+ Quickstart 
+ BidiAgent 
+ Models Overview 
+ Bedrock Nova Sonic 
+ Google Gemini Live 
+ OpenAI Realtime 
+ Tools 
+ I/O 
+ Input Content 
+ Stream Events 
+ Hooks 
+ Session Management 
+ Interrupts 
+ Observability 
+ Conversation management 
+ Experimental AgentConfig 
+ Reference Versioning & Support 
+ API reference 
+ API reference 
+ /box An agent sandbox that pairs OS containment with Dogwood policy. 
+ Get started Overview 
+ Getting started 
+ How-to guides Run the Strands harness 
+ Run Claude Code 
+ Run Codex CLI 
+ Run pi 
+ Grant files and directories 
+ Allow network destinations 
+ Add a tool 
+ Write a policy 
+ Write shell policy 
+ Record telemetry 
+ Collect CLI traces and metrics 
+ Security Security model 
+ Agent and tool sandboxes 
+ Reference box.toml 
+ CLI 
+ Policy actions 
+ Strands Shell 
+ Python (Monty) 
+ /shell A virtual shell designed for AI agents to use safely. 
+ Get started Overview 
+ Quickstart 
+ How it works 
+ Guides Configure the sandbox 
+ Run the MCP server 
+ Inspect the configuration 
+ Components Commands 
+ Shell language and builtins 
+ Lua scripting 
+ Security Security model 
+ Reference Reference 
+ /evals Validate your agent before you ship. 
+ Get started Overview 
+ Quickstart 
+ How evaluation works 
+ Evaluate with AI 
+ Build guides Generate test cases 
+ Plan topic coverage 
+ Run guides Task decorator 
+ Result caching 
+ Experiment management 
+ Serialization 
+ Evaluating remote traces 
+ AgentCore evaluations 
+ Components Evaluators Overview 
+ Quality Output 
+ Trajectory 
+ Interactions 
+ Helpfulness 
+ Faithfulness 
+ Correctness 
+ Coherence 
+ Conciseness 
+ Response relevance 
+ Safety Harmfulness 
+ Refusal 
+ Stereotyping 
+ Multimodal Multimodal output 
+ Multimodal overall quality 
+ Multimodal correctness 
+ Multimodal faithfulness 
+ Multimodal instruction following 
+ Agentic Instruction following 
+ Goal success rate 
+ Failure communication 
+ Partial completion 
+ Recovery strategy 
+ Tool selection accuracy 
+ Tool parameter accuracy 
+ Skill Skill selection accuracy 
+ Skill instruction following 
+ Deterministic 
+ Custom 
+ Detectors Overview 
+ Failure detection 
+ Root cause analysis 
+ Session diagnosis 
+ Simulators Overview 
+ User simulation 
+ Customizing user simulation 
+ Tool simulation 
+ Red teaming Overview 
+ Quickstart 
+ Attack strategies 
+ Writing custom cases 
+ Scoring attacks 
+ Reading the report 
+ Chaos testing 
+ CLI Overview 
+ run 
+ generate 
+ diagnose & fetch 
+ report & validate 
+ /labs Experimental projects pushing the boundaries of what agents can do. 
+ Learn Courses Guided lessons from your first agent to multi-agent systems. Examples Runnable samples you can drop into your own project. 
+ Integrations Contribute Blog 
+ TypeScript 
+ Python 
+ Search 
+ Theme 
+ GitHub 
+ Discord 
+ Search Ctrl K Cancel 
+ The open source toolkit for building production agents.
+ Quick start 
+ GitHub 
+ $ npm install @strands-agents/harness copy 
+ Explore by Toolkit
+ Start
+ /harness
+ Strands harness is a state-of-the-art, fully assembled agent harness.
+ Optimized
+ CLI or library
+ Fully customizable
+ /harness
+ Strands harness is a fully assembled, state-of-the-art agent harness. It gives you an optimized agent with benchmarked defaults for the system prompt, tools, memory, sessions, and context management, ready to take from idea to production.
+ Optimized defaults Every default is tuned and optimized. Spend your time on what makes your agent different, not on wiring up a harness piece by piece.
+ CLI or library Build an agent with the strands CLI, or import it in Python or TypeScript.
+ Customize anything Strands harness is built on the Strands Harness SDK, so nothing is a black box. Swap the model provider, override any default, add your own tools, or go all the way down to the primitives, with no rewrite.
+ copy 
+ 1 
+ import { createHarness } from "@strands-agents/harness" 
+ 2 
+ 3 
+ const agent = await createH
+
+=== [about] https://strandsagents.com/docs/labs/ (lang=en)
+Strands Labs | Strands Agents before first paint and CSS in
+ custom.css hides the chrome. Without JS the page renders normally. --> Skip to content 
+ Projects /harness Strands harness is a state-of-the-art, fully assembled agent harness. /harness-sdk The Strands Harness SDK for building an agent harness from the ground up. /box An agent sandbox that pairs OS containment with Dogwood policy. /shell A virtual shell designed for AI agents to use safely. /evals Validate your agent before you ship. /labs Experimental projects pushing the boundaries of what agents can do. 
+ Learn Courses Guided lessons from your first agent to multi-agent systems. Examples Runnable samples you can drop into your own project. 
+ Integrations 
+ Contribute 
+ Blog 
+ Search 
+ TypeScript 
+ Python 
+ 14,700+ 
+ TypeScript 
+ Python 
+ Projects /harness Strands harness is a state-of-the-art, fully assembled agent harness. 
+ Get started Overview 
+ Quickstart 
+ Compose with the Strands Harness SDK 
+ Configure the agent Choose a model and reasoning 
+ Add tools and instructions 
+ Delegate to subagents 
+ Load agent skills 
+ Persist sessions 
+ Give long-term memory 
+ Checkpoints vs memory 
+ Manage context and caching 
+ Gate tool calls with interventions 
+ Connect MCP servers 
+ Run work in the background 
+ Built-in tools Shell and file tools 
+ Web access 
+ Programmatic tool calling 
+ Task tracking and environment 
+ Take Strands harness to production 
+ Reference Configuration reference 
+ Versioning & Support 
+ /harness-sdk The Strands Harness SDK for building an agent harness from the ground up. 
+ Get started Overview 
+ Quickstart 
+ Quickstart 
+ Migrate Choosing an agent foundation 
+ Migrate from OpenAI 
+ Build guides Tools Overview 
+ Attach and invoke tools 
+ Use MCP tools 
+ Create custom tools 
+ Sessions Persist state across sessions 
+ Memory Overview 
+ Control what the agent remembers 
+ Responses Return structured output 
+ Stream responses 
+ Manage the context window 
+ Pause for input and control 
+ Coordinate multiple agents 
+ Run guides Deploy to production Operating Agents in Production 
+ Amazon Bedrock AgentCore Overview 
+ Python 
+ TypeScript 
+ AWS Lambda 
+ AWS Fargate 
+ AWS App Runner 
+ Amazon EKS 
+ Amazon EC2 
+ Docker Overview 
+ Python 
+ TypeScript 
+ Kubernetes 
+ Terraform 
+ Nx Plugin for AWS 
+ Observe your agent Observability 
+ Metrics 
+ Traces 
+ Logs 
+ Secure for production Responsible AI 
+ Guardrails 
+ Prompt Engineering 
+ Trusted Message History 
+ PII Redaction 
+ Components Agent loop 
+ Production lifecycle controls 
+ State 
+ Storage 
+ Snapshots 
+ Prompts 
+ Hooks 
+ Hook events 
+ Context management Overview 
+ Built-in Modes 
+ Custom Strategies 
+ Strategy Presets 
+ Context Estimation 
+ Retry strategies 
+ Interrupts Overview 
+ Interrupts in Multi-Agent Systems 
+ Models Overview 
+ Model Routing 
+ Amazon Bedrock 
+ Bedrock Prompt Caching 
+ Amazon Nova 
+ Anthropic 
+ Google 
+ LiteLLM 
+ llama.cpp 
+ LlamaAPI 
+ MistralAI 
+ Ollama 
+ OpenAI 
+ OpenAI Responses API 
+ SageMaker 
+ Vercel 
+ Writer 
+ Custom Providers 
+ Tools Tool result format 
+ MCP Transports 
+ Executors 
+ Community Tools Package 
+ Vended Tools 
+ Memory Test Store 
+ Bedrock Knowledge Base 
+ Plugins Overview 
+ Skills 
+ Context Offloader 
+ Context Injector 
+ GoalLoop 
+ Build a custom plugin 
+ Interventions Overview 
+ Human in the loop 
+ Cedar Authorization 
+ Steering 
+ Sandbox Overview 
+ Available Sandboxes 
+ Building a Custom Sandbox 
+ Multi-agent Agent2Agent (A2A) 
+ A2A server configuration 
+ Agents as Tools 
+ Swarm 
+ Graph 
+ Graph components 
+ Workflow 
+ Streaming Async Iterators 
+ Callback Handlers 
+ Event types 
+ 
+
+=== [meta] https://strandsagents.com
+html lang: en
+hreflang: 없음
+화면에 보이는 언어 이름: 없음
+
+=== [github] https://github.com/strands-agents/harness-sdk
+<div align="center">
+  <div>
+    <a href="https://strandsagents.com">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://strandsagents.com/latest/assets/wordmark-github-dark.svg">
+        <img src="https://strandsagents.com/latest/assets/wordmark-github-light.svg" alt="Strands" width="320">
+      </picture>
+    </a>
+  </div>
+
+  <h1>
+    Strands Agents
+  </h1>
+
+  <h2>
+    A model-driven approach to building AI agents in just a few lines of code.
+  </h2>
+
+  <div align="center">
+    <a href="https://github.com/strands-agents/harness-sdk/graphs/commit-activity"><img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/strands-agents/harness-sdk"/></a>
+    <a href="https://github.com/strands-agents/harness-sdk/issues"><img alt="GitHub open issues" src="https://img.shields.io/github/issues/strands-agents/harness-sdk"/></a>
+    <a href="https://github.com/strands-agents/harness-sdk/pulls"><img alt="GitHub open pull requests" src="https://img.shields.io/github/issues-pr/strands-agents/harness-sdk"/></a>
+    <a href="https://github.com/strands-agents/harness-sdk/blob/main/LICENSE.APACHE"><img alt="License" src="https://img.shields.io/github/license/strands-agents/harness-sdk"/></a>
+    <a href="https://pypi.org/project/strands-harness/"><img alt="Python harness version" src="https://img.shields.io/pypi/v/strands-harness?label=Python%20harness"/></a>
+    <a href="https://www.npmjs.com/package/@strands-agents/harness"><img alt="TypeScript harness version" src="https://img.shields.io/npm/v/%40strands-agents%2Fharness?label=TypeScript%20harness"/></a>
+    <a href="https://www.npmjs.com/package/@strands-agents/cli"><img alt="CLI version" src="https://img.shields.io/npm/v/%40strands-agents%2Fcli?label=CLI"/></a>
+    <a href="https://pypi.org/project/strands-agents/"><img alt="Python SDK version" src="https://img.shields.io/pypi/v/strands-agents?label=Python%20SDK"/></a>
+    <a href="https://www.npmjs.com/package/@strands-agents/sdk"><img alt="TypeScript SDK version" src="https://img.shields.io/npm/v/%40strands-agents%2Fsdk?label=TypeScript%20SDK"/></a>
+  </div>
+  
+  <p>
+    <a href="https://strandsagents.com/">Documentation</a>
+    ◆ <a href="https://github.com/strands-agents/samples">Samples</a>
+    ◆ <a href="https://github.com/strands-agents/harness-sdk/tree/main/strands-mcp">MCP Server</a>
+    ◆ <a href="https://discord.gg/strands">Discord</a>
+  </p>
+</div>
+
+Strands Agents is an open-source SDK for building and running AI agents in Python and TypeScript. Choose Strands when you would otherwise write your own agent loop: it runs in your process with no hosted control plane, and it covers the jobs a hand-rolled loop grows into. In one SDK you get [lifecycle controls](https://strandsagents.com/docs/user-guide/concepts/agents/agent-loop/) (turn limits, token budgets, cancellation, stop reasons), [tools](https://strandsagents.com/docs/user-guide/concepts/tools/) and [structured output](https://strandsagents.com/docs/user-guide/concepts/agents/structured-output/), [MCP](https://strandsagents.com/docs/user-guide/concepts/tools/mcp-tools/), [multi-agent patterns](https://strandsagents.com/docs/user-guide/concepts/multi-agent/multi-agent-patterns/), [memory](https://strandsagents.com/docs/user-guide/concepts/memory/overview/) and [sessions](https://strandsagents.com/docs/user-guide/concepts/agents/session-management/), [model portability](https://strandsagents.com/docs/user-guide/concepts/model-providers/), [streaming](https://strandsagents.com/docs/user-guide/concepts/streaming/), [guardrails](https://strandsagents.com/docs/user-guide/safety-security/guardrails/), [tracing](https://strandsagents.com/docs/user-guide/observability-evaluation/observability/), and [evals](https://strandsagents.com/docs/user-guide/evals-sdk/quickstart/).
+
+Using a coding agent? Load the [Strands skill](.agents/skills/strands/) for framework selection, scaffolding, tools, MCP integration, and LangGraph migrations. Claude Code discovers it automatically in this repository through `.claude/skills/strands`; in another repository, copy or symlink the same folder to `.claude/skills/strands`.
+
+This monorepo c
