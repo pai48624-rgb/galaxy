@@ -38,7 +38,7 @@ const siteName = lang === 'en' ? SITE.nameEn : SITE.name;
 <link rel="alternate" type="application/rss+xml" title={siteName} href="/rss.xml" />
 <link rel="sitemap" href="/sitemap-index.xml" />
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+<link rel="stylesheet" href="/fonts/pretendard-optional.css" />{/* Pretendard CSS 복사본(font-display:optional) — 첫 방문 글꼴 교체로 화면이 밀리던 것, 2026-10-15. 글꼴 파일은 jsdelivr */}
 <!-- Google Analytics(GA4) -->
 <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}></script>
 <script is:inline define:vars={{ GA_ID }}>
