@@ -54,7 +54,7 @@ const money = (v: any, cur: string | null) => {
 };
 const per = (pd: string | null) => (pd === 'month' ? `/${U.perMonth}` : pd === 'year' ? `/${U.perYear}` : '');
 const facts: Array<[string, string]> = off ? ([
-  [U.fCompany, lang === 'en' && /[가-힣]/.test(off.company || '') ? ((off.company || '').match(/\(([^()]*[A-Za-z][^()]*)\)\s*$/)?.[1] || tx(off.company || '', lang)) : off.company || ''], [U.fKorean, off.korean ? tx(off.korean, lang) : ''], [U.fApi, off.api ? tx(off.api, lang) : ''],
+  [U.fCompany, lang === 'en' && /[가-힣]/.test(off.company || '') ? ((off.company || '').match(/\(([^()가-힣]*[A-Za-z][^()가-힣]*)\)\s*$/)?.[1] || tx(off.company || '', lang)) : off.company || ''], [U.fKorean, off.korean ? tx(off.korean, lang) : ''], [U.fApi, off.api ? tx(off.api, lang) : ''],
   [U.fPlatforms, off.platforms.map((x) => tx(x, lang)).join(', ')], [U.fOpen, off.open_source ? tx(off.open_source, lang) : ''],
   [U.fGithub, off.github ? [off.github.stars != null ? U.stars(off.github.stars) : '', off.github.license || ''].filter(Boolean).join(' · ') : ''],
 ] as Array<[string, string]>).filter(([, v]) => v) : [];

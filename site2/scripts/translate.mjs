@@ -45,7 +45,7 @@ function collectTools() {
 function collectOfficial() {
   if (!existsSync(join(ROOT, 'data/ai_official.json'))) return [];
   const O = Object.values(readJson('data/ai_official.json').tools || {});
-  return O.flatMap((o) => [o.what, o.free, o.korean, o.api, o.open_source, ...(o.features || []), ...(o.uses || []), ...(o.platforms || []),
+  return O.flatMap((o) => [o.what, o.company, o.free, o.korean, o.api, o.open_source, ...(o.features || []), ...(o.uses || []), ...(o.platforms || []),  // company: 2026-10-15 영어판에 한글 회사명 남던 것
     ...(o.plans || []).flatMap((x) => [x.name, x.limits])]);
 }
 function collectCombos() {

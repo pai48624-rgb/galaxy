@@ -21,7 +21,10 @@ const RULE = { minWhat: 150, minFeatures: 5, minEvidence: 8 };
 const okStatus = (s) => /^(ok|redirect)\b/.test(String(s || ''));
 const known = (v) => v != null && v !== '' && v !== '불명';
 
-const rows = readFileSync(join(src, 'tools.jsonl'), 'utf8').split(/\r?\n/).filter(Boolean).map((l) => JSON.parse(l));
+// 품질 메모(notes_quality.tsv)에 적힌 도구는 통째로 뺀다(2026-10-15): 봇 차단·주소가 다른 사이트로 바뀜·인수됨 등 — 받은 내용이 그 도구 것이 아닐 수 있음. 사람이 확인한 뒤 메모에서 지우면 다음 실행 때 들어감.
+const notesF = join(src, 'notes_quality.tsv');
+const skip = new Set(existsSync(notesF) ? readFileSync(notesF, 'utf8').split(/\r?\n/).filter(Boolean).map((l) => l.split('\t')[0].trim()) : []);
+const rows = readFileSync(join(src, 'tools.jsonl'), 'utf8').split(/\r?\n/).filter(Boolean).map((l) => JSON.parse(l)).filter((r) => !skip.has(r.slug));
 const tools = {};
 let eligible = 0;
 for (const r of rows) {
@@ -52,4 +55,4 @@ for (const r of rows) {
 }
 const out = { generated: new Date().toISOString().slice(0, 10), source: src.replace(DEV, '').replace(/\\/g, '/'), rule: RULE, count: Object.keys(tools).length, eligible, tools };
 writeFileSync(join(ROOT, 'data', 'ai_official.json'), JSON.stringify(out, null, 1));
-console.log(`공식 자료 ${rows.length}줄 → 옮김 ${out.count}개, 상세 페이지 기준 통과 ${eligible}개 (기준: 설명 ${RULE.minWhat}자·기능 ${RULE.minFeatures}개·근거 ${RULE.minEvidence}개 이상) → data/ai_official.json`);
+console.log(`품질 메모로 뺀 도구 ${skip.size}개 · 공식 자료 ${rows.length}줄 → 옮김 ${out.count}개, 상세 페이지 기준 통과 ${eligible}개 (기준: 설명 ${RULE.minWhat}자·기능 ${RULE.minFeatures}개·근거 ${RULE.minEvidence}개 이상) → data/ai_official.json`);
