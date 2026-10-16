@@ -12,15 +12,16 @@ export interface Props {
 
 const { items, bar = false, hideCurrent = false, class: className = '' } = Astro.props;
 
+// 구조화 데이터(2026-10-16 서치콘솔 "'item' 입력란 누락(itemListElement)"): 중간 칸에 링크 없는 항목(예: AI 상세의 세부 분야)이
+// 'item' 없이 들어가 오류 → 주소 있는 칸만 넣고, 마지막(현재 페이지)은 이 페이지 주소를 넣는다. 화면 표시는 그대로.
+const pageUrl = new URL(Astro.url.pathname, SITE.site).href;
+const schemaItems = items
+  .map(({ text, href }, index) => ({ name: text, url: href ? new URL(href, SITE.site).href : index === items.length - 1 ? pageUrl : '' }))
+  .filter((x) => x.url && x.name);
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
-  itemListElement: items.map(({ text, href }, index) => ({
-    '@type': 'ListItem',
-    position: index + 1,
-    name: text,
-    ...(href ? { item: SITE.site + href } : {}),
-  })),
+  itemListElement: schemaItems.map((x, index) => ({ '@type': 'ListItem', position: index + 1, name: x.name, item: x.url })),
 };
 ---
 
