@@ -37,6 +37,8 @@ const EMBED = `<script>if(self!==top)document.documentElement.classList.add("in-
 if (!html.includes('in-site2')) html = html.replace('</head>', `${EMBED}</head>`);
 // 앱 안의 /map/ 자기 링크(검색 폼·메뉴)는 사본 주소로
 html = html.replace(/action="\/map\/"/g, 'action="/map/app/"');
+// 로그인 자동 만료(2026-10-16): 지도 앱도 supabase 앞에 /session-limit.js (원본 20_modules/session_limit)
+if (!html.includes('session-limit.js')) html = html.replace(/<script src="\/?vendor\/supabase\.min\.js"><\/script>/, (m) => '<script src="/session-limit.js"></script>' + m);
 writeFileSync(join(PUB, 'map', 'app', 'index.html'), html);
 
 // 미리보기 전용: 검색엔진 제외(_headers). 본 사이트로 합칠 땐 SITE2_PREVIEW 없이 빌드하면 안 만듦.

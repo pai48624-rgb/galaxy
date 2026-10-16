@@ -21,6 +21,7 @@ const lang = metadata.lang || 'ko';
     <CustomStyles />
     <ApplyColorMode />
     <slot name="head" />
+    <script is:inline src="/session-limit.js"></script><!-- 로그인 자동 만료(활동 없이 2시간·로그인 뒤 24시간, 원본 20_modules/session_limit) -->
     <script is:inline src="/vendor/supabase.min.js"></script>
   </head>
   <body class="antialiased text-default bg-page tracking-tight min-h-screen flex flex-col">
