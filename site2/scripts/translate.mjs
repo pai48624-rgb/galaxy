@@ -127,6 +127,9 @@ async function translateGroup(name) {
   const todo = src.filter((s) => !cache[s]);
   console.log(`[translate] ${name}: 원문 ${src.length}개(${src.reduce((n, s) => n + s.length, 0)}자), 캐시 ${src.length - todo.length}개, 번역할 것 ${todo.length}개`);
   if (DRY || !todo.length) return { name, total: src.length, done: 0, failed: 0 };
+  // 2026-10-16 사용자 '토큰 대량 사용은 미리 말해': 많으면 예상만 보이고 멈춤(--yes로 실행)
+  const BIG_OK = args.includes('--yes');
+  if (todo.length > 300 && !BIG_OK) { console.log(`[translate] ${name}: 번역할 것 ${todo.length}개 ≈ claude 호출 ${Math.ceil(todo.length / BATCH_ITEMS)}번 — 구독 사용량이 큼. 사용자에게 먼저 묻고 --yes 로 다시 실행`); return { name, total: src.length, done: 0, failed: 0 }; }
   const batches = []; let cur = [], chars = 0;
   for (const s of todo) { if (cur.length && (cur.length >= BATCH_ITEMS || chars + s.length > BATCH_CHARS)) { batches.push(cur); cur = []; chars = 0; } cur.push(s); chars += s.length; }
   if (cur.length) batches.push(cur);
