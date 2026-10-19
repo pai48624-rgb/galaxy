@@ -257,6 +257,176 @@ function json(obj, status = 200) {
   return new Response(JSON.stringify(obj), { status, headers: { "content-type": "application/json; charset=utf-8", ...CORS } });
 }
 
+// ==== §DOC: 구조화된 글 (2026-10-19) ====
+// 글 공장이 완성 HTML 대신 글 칸(doc)과 메뉴·카테고리·틀 코드를 보내면 형식 검사·정리 후 board_posts 의
+// menu_code·cat_code·design_code·doc(jsonb)에 저장하고, /trend/<id> 는 renderDoc 이 그린다(galaxy_pick 의 doc_struct.py 와 같은 규칙).
+// 모든 칸 선택. 형식이 틀리면 400, 모르는 칸은 버림. 글자 칸은 태그를 빼고 화면에서 이스케이프,
+// intro·sections[].body·faq[].a 만 짧은 HTML 허용(cleanHtml 로 스크립트·이벤트 속성·위험한 태그 제거). 주소는 http(s)·//·/ 로 시작하는 것만.
+// SQL: scripts/migrate_board_posts_doc.sql (사람이 실행). 실행 전에도 코드·doc 없는 요청·화면은 예전과 똑같이 동작.
+const DOC_CODES = ["menu_code", "cat_code", "design_code"];
+const DOC_CODE_RE = /^[A-Za-z0-9][A-Za-z0-9._-]{0,39}$/;
+const DOC_URL_RE = /^(https?:)?\/\/|^\/(?!\/)/i;
+class DocError extends Error {}
+
+function cleanHtml(html) {
+  return String(html || "")
+    .replace(/<(script|style|iframe|object|embed|form|noscript)\b[\s\S]*?<\/\1\s*>/gi, "")
+    .replace(/<\/?(script|style|iframe|object|embed|form|noscript|input|button|link|meta|base)\b[^>]*>/gi, "")
+    .replace(/\son\w+\s*=\s*("[^"]*"|'[^']*'|[^\s>]+)/gi, "")
+    .replace(/(href|src)\s*=\s*(["'])\s*javascript:[^"']*\2/gi, '$1="#"');
+}
+const stripTags = (s) => String(s).replace(/<[^>]+>/g, "");
+
+function docText(v, where, n = 2000) {
+  if (v === undefined || v === null) return "";
+  if (!["string", "number"].includes(typeof v)) throw new DocError(`${where}: 글자여야 해요`);
+  return stripTags(v).replace(/\s+/g, " ").trim().slice(0, n);
+}
+function docHtml(v, where) {
+  if (v === undefined || v === null) return "";
+  if (typeof v !== "string") throw new DocError(`${where}: 글자여야 해요`);
+  const h = cleanHtml(v).trim().slice(0, 20000);
+  if (h.includes("<")) return h;
+  return h.split(/\n\s*\n/).map((x) => x.trim()).filter(Boolean).map((x) => `<p>${escHtml(x)}</p>`).join(""); // 그냥 글자면 빈 줄로 문단
+}
+function docUrl(v, where) { const u = docText(v, where, 1000); return DOC_URL_RE.test(u) ? u : ""; }
+function docList(v, where) {
+  if (v === undefined || v === null) return [];
+  if (!Array.isArray(v)) throw new DocError(`${where}: 목록([])이어야 해요`);
+  return v.slice(0, 60);
+}
+function docObj(v, where) {
+  if (v === undefined || v === null) return {};
+  if (typeof v !== "object" || Array.isArray(v)) throw new DocError(`${where}: 묶음({})이어야 해요`);
+  return v;
+}
+const docTexts = (v, w) => docList(v, w).map((x, i) => docText(x, `${w}[${i}]`)).filter(Boolean);
+const compact = (o) => Object.fromEntries(Object.entries(o).filter(([, v]) => v && (!Array.isArray(v) || v.length)));
+function docImage(v, w) {
+  const o = docObj(v, w);
+  const img = { src: docUrl(o.src, `${w}.src`), alt: docText(o.alt, `${w}.alt`, 200), credit: docText(o.credit, `${w}.credit`, 200) };
+  return img.src ? compact(img) : null;
+}
+function docRows(v, w, fields, html = []) {
+  return docList(v, w).map((x, i) => {
+    const ww = `${w}[${i}]`, o = docObj(x, ww), r = {};
+    for (const f of fields) {
+      r[f] = f === "link" || f === "url" ? docUrl(o[f], `${ww}.${f}`) : f === "image" ? docImage(o[f], `${ww}.${f}`)
+        : html.includes(f) ? docHtml(o[f], `${ww}.${f}`) : docText(o[f], `${ww}.${f}`);
+    }
+    return compact(r);
+  }).filter((r) => Object.keys(r).length);
+}
+function docTable(v, w) {
+  const o = docObj(v, w);
+  const head = docTexts(o.head, `${w}.head`);
+  const rows = docList(o.rows, `${w}.rows`).map((r, i) => docList(r, `${w}.rows[${i}]`).map((c, j) => docText(c, `${w}.rows[${i}][${j}]`, 500)));
+  return head.length || rows.length ? { head, rows } : null;
+}
+
+// doc 검사·정리 → 정리된 묶음(빈 칸 뺌) 또는 null. 형식이 틀리면 DocError
+function cleanDoc(doc) {
+  if (doc === undefined || doc === null) return null;
+  const w = "doc";
+  if (typeof doc !== "object" || Array.isArray(doc)) throw new DocError("doc: 묶음({})이어야 해요");
+  const cta = docObj(doc.cta, `${w}.cta`);
+  const d = compact({
+    chip: docText(doc.chip, `${w}.chip`, 40), title: docText(doc.title, `${w}.title`, 200),
+    subtitle: docText(doc.subtitle, `${w}.subtitle`, 300), meta: docText(doc.meta, `${w}.meta`, 300),
+    summary: docTexts(doc.summary, `${w}.summary`), intro: docHtml(doc.intro, `${w}.intro`), hero: docImage(doc.hero, `${w}.hero`),
+    tiles: docRows(doc.tiles, `${w}.tiles`, ["n", "t", "d"]),
+    sections: docList(doc.sections, `${w}.sections`).map((x, i) => {
+      const ww = `${w}.sections[${i}]`, o = docObj(x, ww);
+      return compact({ h: docText(o.h, `${ww}.h`, 200), body: docHtml(o.body, `${ww}.body`), list: docTexts(o.list, `${ww}.list`),
+        table: docTable(o.table, `${ww}.table`), image: docImage(o.image, `${ww}.image`) });
+    }).filter((s) => Object.keys(s).length),
+    pros: docTexts(doc.pros, `${w}.pros`), cons: docTexts(doc.cons, `${w}.cons`), who: docText(doc.who, `${w}.who`),
+    steps: docRows(doc.steps, `${w}.steps`, ["t", "d"]), checklist: docTexts(doc.checklist, `${w}.checklist`),
+    items: docRows(doc.items, `${w}.items`, ["name", "price", "desc", "link", "image"]),
+    faq: docRows(doc.faq, `${w}.faq`, ["q", "a"], ["a"]),
+    cta: (() => { const c = { text: docText(cta.text, `${w}.cta.text`, 100), link: docUrl(cta.link, `${w}.cta.link`) }; return c.text && c.link ? c : null; })(),
+    sources: docRows(doc.sources, `${w}.sources`, ["title", "url", "date"]),
+    tags: docTexts(doc.tags, `${w}.tags`).map((t) => t.slice(0, 30)).slice(0, 15),
+  });
+  return Object.keys(d).length ? d : null;
+}
+
+// 요청에서 코드·doc 꺼내기 → { fields:{menu_code,cat_code,design_code,doc}|null(새 칸이 하나도 없음), doc }
+function docFields(p) {
+  if (![...DOC_CODES, "doc"].some((k) => p[k] !== undefined && p[k] !== null)) return { fields: null, doc: null };
+  const fields = {};
+  for (const k of DOC_CODES) {
+    const v = p[k];
+    if (v === undefined || v === null || String(v).trim() === "") fields[k] = null;
+    else if (typeof v !== "string" || !DOC_CODE_RE.test(v.trim())) throw new DocError(`${k}: 영문·숫자·점(.)으로 된 코드여야 해요(예 GP.01.01)`);
+    else fields[k] = v.trim();
+  }
+  const doc = cleanDoc(p.doc);
+  fields.doc = doc;
+  return { fields, doc };
+}
+
+// doc 의 글자만 이어 붙임 — body_text 없이 doc 만 온 글의 본문 글자(목록 요약·검색·RSS용)
+function docPlain(doc) {
+  const out = [];
+  const walk = (v, k) => {
+    if (["src", "link", "url", "credit", "alt"].includes(k)) return;
+    if (Array.isArray(v)) v.forEach((x) => walk(x));
+    else if (v && typeof v === "object") Object.entries(v).forEach(([kk, x]) => walk(x, kk));
+    else if (typeof v === "string") out.push(stripTags(v));
+  };
+  walk(doc);
+  return out.join(" ").replace(/\s+/g, " ").trim();
+}
+
+// doc → 본문 HTML(트렌드 글 화면). design_code 는 지금은 data-design 표시만 — 틀 고르기는 다음 단계.
+const DOC_CSS = `<style>
+.gdoc .d-chip{display:inline-block;font-size:12px;font-weight:700;padding:2px 10px;border-radius:999px;border:1px solid var(--line);color:var(--amber)}
+.gdoc .d-sub{font-size:17px;color:var(--soft);margin:6px 0}.gdoc .d-meta{color:var(--dim);font-size:13px;margin-bottom:12px}
+.gdoc .d-sum{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 16px 12px 34px;margin:12px 0}
+.gdoc figure{margin:16px 0}.gdoc figure img{width:100%;height:auto;border-radius:12px;display:block}.gdoc figcaption{font-size:12px;color:var(--dim);margin-top:4px}
+.gdoc .d-tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(160px,100%),1fr));gap:10px;margin:14px 0}
+.gdoc .d-tile{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px}.gdoc .d-tile b{display:block;font-size:20px;color:var(--amber)}.gdoc .d-tile small{display:block;color:var(--dim)}
+.gdoc .d-table{overflow-x:auto;margin:12px 0}
+.gdoc .d-pc{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}.gdoc .d-pc>div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px}.gdoc .d-pc ul{padding-left:18px;margin:6px 0 0}
+.gdoc .d-who{border-left:4px solid var(--purple);background:var(--card);padding:10px 14px;border-radius:0 12px 12px 0;margin:14px 0}
+.gdoc .d-steps{counter-reset:st;list-style:none;padding:0}.gdoc .d-steps li{counter-increment:st;position:relative;padding:0 0 10px 36px}.gdoc .d-steps li::before{content:counter(st);position:absolute;left:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--purple);color:#0b0b14;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center}
+.gdoc .d-check{list-style:none;padding:0}.gdoc .d-check li::before{content:"☐ ";color:var(--amber)}
+.gdoc .d-items{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(220px,100%),1fr));gap:12px;margin:14px 0}.gdoc .d-item{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.gdoc .d-item img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;border-radius:0}.gdoc .d-item div{padding:10px 12px;display:grid;gap:4px}.gdoc .d-item .pr{color:var(--amber);font-weight:700}
+.gdoc .d-faq details{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 12px;margin:6px 0}.gdoc .d-faq summary{font-weight:700;cursor:pointer;color:#fff}
+.gdoc .d-src{font-size:13px;color:var(--dim);margin-top:18px}.gdoc .d-src ul{padding-left:18px}
+@media (max-width:600px){.gdoc .d-pc{grid-template-columns:1fr}}
+</style>`;
+
+function renderDoc(d, designCode) {
+  const e = escHtml, li = (xs) => xs.map((x) => `<li>${e(x)}</li>`).join("");
+  const img = (i, alt) => `<figure><img src="${e(i.src)}" alt="${e(i.alt || alt || "")}" loading="lazy">${i.credit ? `<figcaption>사진: ${e(i.credit)}</figcaption>` : ""}</figure>`;
+  const ext = (u) => /^(https?:)?\/\//i.test(u) ? ' target="_blank" rel="noopener nofollow"' : "";
+  const h = [];
+  if (d.chip) h.push(`<span class="d-chip">${e(d.chip)}</span>`);
+  if (d.subtitle) h.push(`<p class="d-sub">${e(d.subtitle)}</p>`);
+  if (d.meta) h.push(`<div class="d-meta">${e(d.meta)}</div>`);
+  if (d.summary) h.push(`<ul class="d-sum">${li(d.summary)}</ul>`);
+  if (d.hero) h.push(img(d.hero, d.title));
+  if (d.intro) h.push(`<div class="d-intro">${cleanHtml(d.intro)}</div>`);  // HTML 칸은 저장 때 걸렀어도 그릴 때 한 번 더
+  if (d.tiles) h.push(`<div class="d-tiles">${d.tiles.map((t) => `<div class="d-tile">${t.n ? `<b>${e(t.n)}</b>` : ""}${t.t ? `<span>${e(t.t)}</span>` : ""}${t.d ? `<small>${e(t.d)}</small>` : ""}</div>`).join("")}</div>`);
+  (d.sections || []).forEach((s, i) => {
+    h.push(`<section>${s.h ? `<h2 id="d${i + 1}">${e(s.h)}</h2>` : ""}${cleanHtml(s.body)}${s.list ? `<ul>${li(s.list)}</ul>` : ""}`
+      + (s.table ? `<div class="d-table"><table>${s.table.head.length ? `<thead><tr>${s.table.head.map((x) => `<th>${e(x)}</th>`).join("")}</tr></thead>` : ""}<tbody>${s.table.rows.map((r) => `<tr>${r.map((c) => `<td>${e(c)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>` : "")
+      + (s.image ? img(s.image, s.h) : "") + `</section>`);
+  });
+  if (d.pros || d.cons) h.push(`<div class="d-pc">${d.pros ? `<div><b>👍 좋은 점</b><ul>${li(d.pros)}</ul></div>` : ""}${d.cons ? `<div><b>🤔 아쉬운 점</b><ul>${li(d.cons)}</ul></div>` : ""}</div>`);
+  if (d.who) h.push(`<div class="d-who"><b>이런 분께</b><br>${e(d.who)}</div>`);
+  if (d.steps) h.push(`<h2 id="d-steps">순서대로</h2><ol class="d-steps">${d.steps.map((x) => `<li>${x.t ? `<b>${e(x.t)}</b>` : ""}${x.d ? `<div>${e(x.d)}</div>` : ""}</li>`).join("")}</ol>`);
+  if (d.checklist) h.push(`<h2 id="d-check">체크리스트</h2><ul class="d-check">${li(d.checklist)}</ul>`);
+  if (d.items) h.push(`<h2 id="d-items">추천 도구</h2><div class="d-items">${d.items.map((it) => `<div class="d-item">${it.image ? `<img src="${e(it.image.src)}" alt="${e(it.image.alt || it.name || "")}" loading="lazy">` : ""}<div>${it.name ? `<b>${e(it.name)}</b>` : ""}${it.price ? `<span class="pr">${e(it.price)}</span>` : ""}${it.desc ? `<small>${e(it.desc)}</small>` : ""}${it.link ? `<a href="${e(it.link)}" target="_blank" rel="sponsored nofollow noopener">보러 가기 →</a>` : ""}</div></div>`).join("")}</div>`);
+  if (d.faq) h.push(`<h2 id="d-faq">자주 묻는 질문</h2><div class="d-faq">${d.faq.map((x, i) => `<details${i ? "" : " open"}><summary>${e(x.q || "")}</summary><div>${cleanHtml(x.a)}</div></details>`).join("")}</div>`);
+  if (d.cta) h.push(`<a class="cta" href="${e(d.cta.link)}"${ext(d.cta.link)}>${e(d.cta.text)}</a>`);
+  if (d.sources) h.push(`<div class="d-src"><b>출처</b><ul>${d.sources.map((x) => `<li>${x.url ? `<a href="${e(x.url)}" target="_blank" rel="noopener nofollow">${e(x.title || x.url)}</a>` : e(x.title || "")}${x.date ? ` (${e(x.date)})` : ""}</li>`).join("")}</ul></div>`);
+  return `${DOC_CSS}<article class="gdoc"${designCode ? ` data-design="${e(designCode)}"` : ""}>${h.join("\n")}</article>`;
+}
+
 // 이미 올라간 글 갱신 ("update": true, 같은 external_id) — 2026-10-03 글 형식을 바꾼 뒤 /trend/7 을 새 글로 바꾸려고 추가.
 // DB 함수(factory_post)를 고치지 않고, 네이버 로그인용으로 이미 있는 SUPABASE_SERVICE_ROLE_KEY 로
 // ① 토큰 해시가 factory_tokens 에 있는지 ② 같은 external_id 의 ai_trend 글을 찾아 제목·본문만 바꿈.
@@ -266,7 +436,7 @@ async function sha256hex(s) {
   return [...new Uint8Array(d)].map((b) => b.toString(16).padStart(2, "0")).join("");
 }
 
-async function updatePost(token, p, env) {
+async function updatePost(token, p, env, extra = null) {
   const key = env?.SUPABASE_SERVICE_ROLE_KEY;
   if (!key) return json({ ok: false, msg: "갱신 기능 미설정 (SUPABASE_SERVICE_ROLE_KEY 없음)" }, 500);
   const h = { apikey: key, Authorization: `Bearer ${key}`, "content-type": "application/json" };
@@ -278,7 +448,7 @@ async function updatePost(token, p, env) {
   const r = await fetch(`${UPSTREAM}/rest/v1/board_posts?id=eq.${id}`, {
     method: "PATCH", headers: { ...h, Prefer: "return=minimal" },
     body: JSON.stringify({ title: String(p.title).slice(0, 120), body: p.body_text, body_html: p.body_html || null,
-      tags: Array.isArray(p.tags) ? p.tags.slice(0, 15) : [] }),
+      tags: Array.isArray(p.tags) ? p.tags.slice(0, 15) : [], ...(extra || {}) }),  // extra = 코드·doc(보냈을 때만, §DOC)
   });
   if (!r.ok) return json({ ok: false, msg: `갱신 실패 ${r.status}: ${(await r.text()).slice(0, 150)}` }, 400);
   return json({ ok: true, id, updated: true, url: `${SITE}/trend/${id}` });
@@ -291,18 +461,28 @@ async function receivePost(request, env) {
   if (!token) return json({ ok: false, msg: "토큰 없음" }, 401);
   let p;
   try { p = await request.json(); } catch (e) { return json({ ok: false, msg: "JSON 형식 아님" }, 400); }
-  if (!p?.title || !p?.body_text) return json({ ok: false, msg: "title, body_text 필요" }, 400);
+  if (!p || typeof p !== "object") return json({ ok: false, msg: "JSON 형식 아님" }, 400);
+  // 구조화된 글(§DOC): menu_code·cat_code·design_code·doc — 하나도 없으면 extra=null 이라 아래는 예전과 똑같음
+  let extra = null, doc = null;
+  try { ({ fields: extra, doc } = docFields(p)); } catch (e) { if (e instanceof DocError) return json({ ok: false, msg: e.message }, 400); throw e; }
+  if (doc) {  // doc 만 와도 됨: 제목은 doc.title, 본문 글자(목록 요약·RSS용)는 doc 글자, 태그는 doc.tags
+    p = { ...p, title: p.title || doc.title, body_text: p.body_text || docPlain(doc).slice(0, 19000),  /* 트렌드 본문 2만 자 제한(DB) */ tags: p.tags || doc.tags };
+  }
+  if (!p?.title || !p?.body_text) return json({ ok: false, msg: "title, body_text(또는 doc) 필요" }, 400);
   if (p.update && p.external_id) {
-    const res = await updatePost(token, p, env);
+    const res = await updatePost(token, p, env, extra);
     if (res) return res; // 없는 글이면 아래에서 새로 등록
   }
-  const r = await fetch(`${UPSTREAM}/rest/v1/rpc/factory_post`, {
+  const args = {
+    p_token: token, p_external_id: p.external_id || null, p_title: String(p.title).slice(0, 120),
+    p_body: p.body_text, p_body_html: p.body_html || null, p_tags: Array.isArray(p.tags) ? p.tags.slice(0, 15) : [],
+  };
+  // 새 칸이 있으면 factory_post_doc(scripts/migrate_board_posts_doc.sql) — 없으면 예전 factory_post 그대로
+  if (extra) Object.assign(args, { p_menu_code: extra.menu_code, p_cat_code: extra.cat_code, p_design_code: extra.design_code, p_doc: extra.doc });
+  const r = await fetch(`${UPSTREAM}/rest/v1/rpc/${extra ? "factory_post_doc" : "factory_post"}`, {
     method: "POST",
     headers: { apikey: ANON_KEY, Authorization: `Bearer ${ANON_KEY}`, "content-type": "application/json" },
-    body: JSON.stringify({
-      p_token: token, p_external_id: p.external_id || null, p_title: String(p.title).slice(0, 120),
-      p_body: p.body_text, p_body_html: p.body_html || null, p_tags: Array.isArray(p.tags) ? p.tags.slice(0, 15) : [],
-    }),
+    body: JSON.stringify(args),
   });
   const res = await r.json().catch(() => ({}));
   if (!r.ok) {
@@ -388,7 +568,10 @@ async function trendList() {
 async function trendPost(id, request, env) {
   let p, others = [];
   try {
-    [p] = await sbGet(`board_posts?select=id,title,body,body_html,tags,created_at&board=eq.ai_trend&hidden=eq.false&id=eq.${id}`);
+    // 코드·doc 칸(§DOC)까지 읽고, SQL 실행 전이라 칸이 없으면(400) 예전 칸만 다시 읽음
+    const q = `&board=eq.ai_trend&hidden=eq.false&id=eq.${id}`;
+    try { [p] = await sbGet(`board_posts?select=id,title,body,body_html,tags,created_at,design_code,doc${q}`); }
+    catch (e) { [p] = await sbGet(`board_posts?select=id,title,body,body_html,tags,created_at${q}`); }
     others = await sbGet(`board_posts?select=id,title,created_at&board=eq.ai_trend&hidden=eq.false&id=neq.${id}&order=created_at.desc&limit=6`);
   } catch (e) { /* 아래 404 처리 */ }
   if (!p) return new Response(await trendShell({ title: "글을 찾을 수 없어요 | AI 성단 지도", description: "", canonical: `${SITE}/trend/`,
@@ -409,7 +592,9 @@ async function trendPost(id, request, env) {
     canonical,
     jsonLd: { "@context": "https://schema.org", "@type": "Article", headline: p.title, datePublished: p.created_at,
       author: { "@type": "Organization", name: "AI 성단 지도" }, mainEntityOfPage: canonical },
-    body: (content.includes('class="gx"')
+    body: (p.doc && typeof p.doc === "object" && Object.keys(p.doc).length  // 구조화된 글이면 템플릿(§DOC), 아니면 아래 예전 그대로
+      ? `<h1 class="post-h1 serif">${escHtml(p.title)}</h1><div class="meta">AI 성단 지도 · ${fmtDate(p.created_at)}</div>${renderDoc(p.doc, p.design_code)}`
+      : content.includes('class="gx"')
       ? `<article>${content}</article>`
       : `<h1 class="post-h1 serif">${escHtml(p.title)}</h1><div class="meta">AI 성단 지도 · ${fmtDate(p.created_at)}</div><article class="paper">${content}</article>`)
       + `${tags ? `<div class="tags">${tags}</div>` : ""}`,
