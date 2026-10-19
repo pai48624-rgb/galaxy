@@ -5,3 +5,5 @@
 export const SITE_URL: string = (import.meta.env.PUBLIC_SITE_URL as string) || 'https://aigalaxy-map.com';
 export const API = '/api';                       // 워커 프록시(Supabase·트렌드·네이버 로그인)
 export const TREND_API = `${API}/trend/latest`;
+// 문의 메일(사이트 소개·문의 화면). .env 의 PUBLIC_CONTACT_EMAIL — 비어 있으면 문의 화면에 메일 줄을 안 그림(게시판 안내만).
+export const CONTACT_EMAIL: string = (import.meta.env.PUBLIC_CONTACT_EMAIL as string) || '';

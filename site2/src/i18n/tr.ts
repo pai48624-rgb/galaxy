@@ -61,7 +61,7 @@ export const catLabel = (c: { name: string; name_en: string }, lang: Lang) => (l
 // ---- 주소 ----
 // 영어판이 있는 한국어 경로(앞부분 일치). /korea/ 는 영어판이 /en/korea/ (같은 규칙).
 const EN_PREFIX = ['/trend/', '/ai/', '/category/', '/combos/', '/pricing/', '/rank/', '/search/', '/board/', '/map/', '/korea/'];
-const EN_EXACT = ['/', '/privacy'];
+const EN_EXACT = ['/', '/privacy', '/about', '/contact'];
 export function hasEn(koPath: string): boolean {
   const p = koPath.split(/[?#]/)[0];
   if (EN_EXACT.includes(p)) return true;

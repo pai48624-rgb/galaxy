@@ -34,7 +34,7 @@ export const footerData = (lang: Lang) =>
           { title: 'Travel', links: [{ text: 'Korea Travel (English)', href: R.korea('en') }, { text: 'Korea Travel (in Korean)', href: R.korea() }] },
           { title: 'Community', links: [{ text: 'Board', href: R.board('en') }, { text: 'Chat', href: R.chat() }, { text: 'Sign in', href: R.login() }] },
         ],
-        secondaryLinks: [{ text: 'Privacy', href: R.privacy('en') }, { text: 'RSS', href: R.rss() }, { text: 'Sitemap', href: '/sitemap-index.xml' /* 검색엔진 파일 */ }],
+        secondaryLinks: [{ text: 'About', href: R.about('en') }, { text: 'Contact', href: R.contact('en') }, { text: 'Privacy', href: R.privacy('en') }, { text: 'RSS', href: R.rss() }, { text: 'Sitemap', href: '/sitemap-index.xml' /* 검색엔진 파일 */ }],
         footNote: '© 2026 AI Galaxy Map · aigalaxy-map.com',
       }
     : {
@@ -43,6 +43,6 @@ export const footerData = (lang: Lang) =>
           { title: '여행', links: [{ text: '한국 여행', href: R.korea() }, { text: 'Korea Travel (English)', href: R.korea('en') }] },
           { title: '함께', links: [{ text: '게시판', href: R.board() }, { text: '채팅', href: R.chat() }, { text: '로그인', href: R.login() }] },
         ],
-        secondaryLinks: [{ text: '개인정보 처리방침', href: R.privacy() }, { text: 'RSS', href: R.rss() }, { text: '사이트맵', href: '/sitemap-index.xml' /* 검색엔진 파일 */ }],
+        secondaryLinks: [{ text: '사이트 소개', href: R.about() }, { text: '문의', href: R.contact() }, { text: '개인정보 처리방침', href: R.privacy() }, { text: 'RSS', href: R.rss() }, { text: '사이트맵', href: '/sitemap-index.xml' /* 검색엔진 파일 */ }],
         footNote: '© 2026 AI 성단 지도 · aigalaxy-map.com',
       };

@@ -17,7 +17,7 @@ if (lang === 'en') {
   // scripts/translate.mjs privacyBlocks 와 같은 규칙으로 쪼갬
   const ko = rawBody.split(/<hr[^>]*>/)[0];
   const blocks = (ko.match(/<(h1|h2|p|ul)[\s\S]*?<\/\1>/g) || []).map((s) => s.replace(/\s+/g, ' ').trim());
-  body = blocks.map((b) => tx(b, 'en')).join('\n').replace(/hl=ko/g, 'hl=en');
+  body = blocks.map((b) => tx(b, 'en')).join('\n').replace(/hl=ko/g, 'hl=en').replace(/href="\/contact"/g, `href="${R.contact('en')}"`);
   body = body.replace(/(<\/h1>)/, `$1\n<p class="updated">${T.note}</p>`);
 } else {
   body = rawBody.replace(/<h1 style="font-size:16px">([^<]*)<\/h1>/, '<h2>$1</h2>'); // 영문 요약 제목은 h2로(h1은 하나만)

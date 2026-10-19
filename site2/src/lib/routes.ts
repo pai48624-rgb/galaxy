@@ -4,7 +4,7 @@ import { lp, type Lang } from '~/i18n/tr';
 
 const P = {
   home: '/', map: '/map/', board: '/board/', trend: '/trend/', ai: '/ai/', category: '/category/',
-  combos: '/combos/', pricing: '/pricing/', rank: '/rank/', search: '/search/', korea: '/korea/', privacy: '/privacy',
+  combos: '/combos/', pricing: '/pricing/', rank: '/rank/', search: '/search/', korea: '/korea/', privacy: '/privacy', about: '/about', contact: '/contact',
 } as const;
 
 export const R = {
@@ -24,5 +24,7 @@ export const R = {
   search: (l: Lang = 'ko', q?: string) => lp(P.search, l) + (q ? `?q=${encodeURIComponent(q)}` : ''),
   korea: (l: Lang = 'ko', slug?: string) => (l === 'en' ? '/en/korea/' : P.korea) + (slug ? `${slug}/` : ''),
   privacy: (l: Lang = 'ko') => lp(P.privacy, l),
+  about: (l: Lang = 'ko') => lp(P.about, l),
+  contact: (l: Lang = 'ko') => lp(P.contact, l),
   rss: () => '/rss.xml',
 };

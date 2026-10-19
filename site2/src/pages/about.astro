@@ -1,0 +1,33 @@
+---
+// 사이트 소개(/about, 영어판 /en/about) — 2026-10-19 애드센스 재심사 준비. 문구는 src/i18n/ui.ts(about), 숫자는 실제 데이터 개수.
+import PageLayout from '~/layouts/PageLayout.astro';
+import { R } from '~/lib/routes';
+import { ui } from '~/i18n/ui';
+import type { Lang } from '~/i18n/tr';
+import { loadTools, categories, combos, koreaArticles } from '~/lib/data';
+import { dataDate } from '~/lib/data2';
+const lang: Lang = (Astro.props as { lang?: Lang }).lang || 'ko';
+const T = ui(lang).about;
+const n = loadTools().length, c = categories().length, cb = combos().length, k = koreaArticles().length;
+---
+
+<PageLayout metadata={{ title: T.title, description: T.desc, canonical: R.about(lang), lang }}>
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 py-7 md:py-9 prose prose-invert prose-base max-w-none info-body">
+    <h1>{T.h1}</h1>
+    <p class="lead">{T.lead(n, c)}</p>
+    <h2>{T.whatH}</h2>
+    <ul>{T.what(n, c, cb, k).map((x) => <li>{x}</li>)}</ul>
+    <h2>{T.srcH}</h2>
+    <ul>{T.src(dataDate()).map((x) => <li>{x}</li>)}</ul>
+    <h2>{T.ruleH}</h2>
+    <ul>{T.rules.map((x) => <li>{x}</li>)}</ul>
+    <h2>{T.contactH}</h2>
+    <p>{T.contactP} <a href={R.contact(lang)}>{T.contactLink}</a></p>
+  </div>
+</PageLayout>
+
+<style is:global>
+  .info-body h1 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+  .info-body .lead { font-size: 1.05rem; }
+  .info-body h2 { font-size: 1.15rem; margin-top: 2rem; }
+</style>

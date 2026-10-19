@@ -1,0 +1,35 @@
+---
+// 문의(/contact, 영어판 /en/contact) — 2026-10-19. 메일 주소는 .env PUBLIC_CONTACT_EMAIL(src/env.ts) 한 곳, 비어 있으면 메일 칸을 안 그림.
+import PageLayout from '~/layouts/PageLayout.astro';
+import { R } from '~/lib/routes';
+import { ui } from '~/i18n/ui';
+import type { Lang } from '~/i18n/tr';
+import { CONTACT_EMAIL } from '~/env';
+const lang: Lang = (Astro.props as { lang?: Lang }).lang || 'ko';
+const T = ui(lang).contact;
+if (!CONTACT_EMAIL) console.warn('[contact] PUBLIC_CONTACT_EMAIL 이 비어 있어 문의 화면에 메일 칸이 빠집니다.');
+---
+
+<PageLayout metadata={{ title: T.title, description: T.desc, canonical: R.contact(lang), lang }}>
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 py-7 md:py-9 prose prose-invert prose-base max-w-none info-body">
+    <h1>{T.h1}</h1>
+    <p class="lead">{T.lead}</p>
+    {CONTACT_EMAIL && (
+      <>
+        <h2>{T.mailH}</h2>
+        <p>{T.mailP}</p>
+        <p><a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a></p>
+      </>
+    )}
+    <h2>{T.boardH}</h2>
+    <p>{T.boardP} <a href={R.board(lang)}>{T.boardLink}</a></p>
+    <h2>{T.tipH}</h2>
+    <ul>{T.tips.map((x) => <li>{x}</li>)}</ul>
+  </div>
+</PageLayout>
+
+<style is:global>
+  .info-body h1 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+  .info-body .lead { font-size: 1.05rem; }
+  .info-body h2 { font-size: 1.15rem; margin-top: 2rem; }
+</style>
