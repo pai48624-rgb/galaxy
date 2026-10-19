@@ -239,6 +239,8 @@ const SITE_VERIFICATION_FILES = {
 // 게시판 화면(index.html)은 JS로 그려서 검색엔진이 글을 못 읽으므로, 글마다 /trend/<id> 를
 // 워커가 서버에서 완성된 HTML로 만들어 줌 + /sitemap-trend.xml 로 색인 요청.
 const SITE = "https://aigalaxy-map.com";
+// 겹친 트렌드 글 정리(2026-10-19): 옮긴 글 번호 → 남긴 글 번호. 되돌리려면 줄을 지우고 DB hidden=false.
+const TREND_MERGED = { "27": "30", "31": "36" };
 const TREND_HEADERS = { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=300" };
 
 function escHtml(s) {
@@ -513,6 +515,9 @@ export default {
     if (url.pathname === "/api/pages") return receivePage(request);
     if (url.pathname === "/api/trend/latest") return trendLatest();
     /* /trend/ 목록은 site2 정적 페이지가 그림 */
+    // 같은 주제로 겹친 글은 남긴 글로 영구 이동(옮긴 글은 DB에서 hidden=true). 한국어·영어 둘 다.
+    const mm = url.pathname.match(/^(\/en)?\/trend\/(\d+)\/?$/);
+    if (mm && TREND_MERGED[mm[2]]) return Response.redirect(`${url.origin}${mm[1] ? `/en/trend/${TREND_MERGED[mm[2]]}/` : `/trend/${TREND_MERGED[mm[2]]}`}`, 301);
     const tm = url.pathname.match(/^\/trend\/(\d+)\/?$/);
     if (tm) return trendPost(tm[1], request, env);
     if (url.pathname === "/sitemap-trend.xml") return trendSitemap();
