@@ -1,0 +1,36 @@
+---
+// 메뉴 옆 'New' 표시(2026-10-19) — 새 글이 올라온 메뉴(AI 트렌드·한국 여행·게시판) 옆에 붙임.
+// 판단(24시간·KST·공개일)은 워커 /api/nav-new 한 곳(worker/_worker.js §NAVNEW). 여기선 그 JSON만 읽어 붙이므로 빌드·배포 없이 바뀐다.
+// 붙는 곳: 머리줄(휴대폰에선 펼친 메뉴) · 왼쪽 메뉴(aside) · 휴대폰 아래 탭 — 그 안에서 주소가 메뉴 주소(/trend/ 등, 영어 /en/… 포함)와 같은 링크.
+---
+
+<script>
+  const PATHS: Record<string, string> = { '/trend/': 'trend', '/korea/': 'korea', '/board/': 'board' };
+  const keyOf = (a: HTMLAnchorElement) => {
+    try { return PATHS[new URL(a.getAttribute('href') || '', location.href).pathname.replace(/^\/en(?=\/)/, '')]; } catch { return undefined; }
+  };
+  fetch('/api/nav-new')
+    .then((r) => (r.ok ? r.json() : null))
+    .then((d) => {
+      const on = d?.new || {};
+      document.querySelectorAll<HTMLAnchorElement>('#header nav a, aside a, mobile-tabs a').forEach((a) => {
+        const k = keyOf(a);
+        if (!k || !on[k] || a.querySelector('.nav-new')) return;
+        const b = document.createElement('span');
+        b.className = 'nav-new';
+        b.textContent = 'New';
+        b.title = `${d.hours || 24}시간 안에 올라온 새 글이 있어요`;
+        a.append(b);
+      });
+    })
+    .catch(() => {});
+</script>
+
+<style is:global>
+  .nav-new {
+    display: inline-block; margin-left: 0.3rem; padding: 0 0.35rem; border-radius: 999px;
+    background: #e5484d; color: #fff; font-size: 10px; font-weight: 700; line-height: 14px; letter-spacing: 0;
+  }
+  mobile-tabs a { position: relative; }
+  mobile-tabs .nav-new { position: absolute; top: 2px; left: calc(50% + 6px); margin: 0; }
+</style>

@@ -549,6 +549,26 @@ async function trendLatest() {
   return new Response(JSON.stringify({ posts: out, total: out.length }), { headers: { "content-type": "application/json; charset=utf-8", "cache-control": "public, max-age=300", "access-control-allow-origin": "*" } });
 }
 
+// ==== §NAVNEW: 메뉴 옆 'New' 표시 (2026-10-19) ====
+// 새 글이 올라오면 그 메뉴(AI 트렌드·한국 여행·게시판) 옆에 NEW_BADGE_HOURS 동안 'New'. 기준 시간은 여기 한 곳.
+// 화면(site2 components/common/NavNew.astro)은 이 JSON만 읽어 붙임 → 빌드·배포 없이 글이 올라오면 바로 바뀜.
+//   AI 트렌드 = board_posts(board=ai_trend, 숨김 아님) created_at / 게시판 = board_posts(board=free, 숨김 아님) created_at
+//   한국 여행 = korea_articles publish_date(한국 날짜, 그날 0시 KST부터 공개) — 공개일 전 글은 셈에 안 넣음
+// DB 오류인 칸은 New 없음(false). 5분 캐시.
+const NEW_BADGE_HOURS = 24;
+async function navNew() {
+  const now = Date.now(), win = NEW_BADGE_HOURS * 3600 * 1000;
+  const fresh = (t) => Number.isFinite(t) && t <= now && now - t < win;
+  const latest = async (q, f) => { try { const r = await sbGet(q); return r.length ? f(r[0]) : null; } catch (e) { return null; } };
+  const [trend, board, korea] = await Promise.all([
+    latest("board_posts?select=created_at&board=eq.ai_trend&hidden=eq.false&order=created_at.desc&limit=1", (r) => r.created_at),
+    latest("board_posts?select=created_at&board=eq.free&hidden=eq.false&order=created_at.desc&limit=1", (r) => r.created_at),
+    latest(`korea_articles?select=publish_date&publish_date=lte.${kstToday()}&order=publish_date.desc&limit=1`, (r) => r.publish_date),
+  ]);
+  const at = { trend: Date.parse(trend), board: Date.parse(board), korea: Date.parse(`${korea}T00:00:00+09:00`) };
+  const out = { hours: NEW_BADGE_HOURS, new: { trend: fresh(at.trend), korea: fresh(at.korea), board: fresh(at.board) }, latest: { trend, korea, board } };
+  return new Response(JSON.stringify(out), { headers: { "content-type": "application/json; charset=utf-8", "cache-control": "public, max-age=300", "access-control-allow-origin": "*" } });
+}
 
 async function trendList() {
   let posts = [];
@@ -910,6 +930,7 @@ export default {
     if (url.pathname === "/api/pages") return receivePage(request);
     if (url.pathname === "/api/korea") return receiveKorea(request);
     if (url.pathname === "/api/trend/latest") return trendLatest();
+    if (url.pathname === "/api/nav-new") return navNew();
     /* /trend/ 목록은 site2 정적 페이지가 그림 */
     // 같은 주제로 겹친 글은 남긴 글로 영구 이동(옮긴 글은 DB에서 hidden=true). 한국어·영어 둘 다.
     const mm = url.pathname.match(/^(\/en)?\/trend\/(\d+)\/?$/);

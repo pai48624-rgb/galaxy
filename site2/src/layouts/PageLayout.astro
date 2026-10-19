@@ -6,6 +6,7 @@ import Footer from '~/components/widgets/Footer.astro';
 import MobileTabBar from '~/components/blocks/MobileTabBar.astro';
 import SideMenu from '~/components/blocks/SideMenu.astro';
 import ChatDock from '~/components/chat/ChatDock.astro';
+import NavNew from '~/components/common/NavNew.astro';
 import { homeData } from '~/lib/data';
 import { hasEn, koPathOf } from '~/i18n/tr';
 import type { Props as MetaProps } from '~/components/common/Metadata.astro';
@@ -50,6 +51,7 @@ const d = fullBleed ? null : await homeData();
   <div class="h-14 lg:hidden" aria-hidden="true"></div>
   <MobileTabBar lang={lang} />
   <ChatDock lang={lang} disabled={!chat} />
+  <NavNew />
 </Layout>
 
 <style is:global>
