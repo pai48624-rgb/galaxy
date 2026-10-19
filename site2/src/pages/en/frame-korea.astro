@@ -1,0 +1,14 @@
+---
+// 한국 여행 화면 틀(영어, 2026-10-19) — 워커(_worker.js §KOREA)가 빌드된 이 HTML을 읽어 자리표를 DB 글(korea_articles)로 바꿔 내보낸다.
+// 사이트 공통 틀(PageLayout: 머리줄·왼쪽 메뉴·꼬리말)을 그대로 쓰므로 틀을 바꿔 배포하면 DB 글 화면도 같이 바뀐다. 글 하나(/korea/<slug>/)와 목록(/korea/) 둘 다 이 틀.
+// 자리표: __TITLE__ __DESC__ __SLUG__(글이면 'slug/', 목록이면 빈칸) __OGTYPE__ __IMAGE__ __BODY__ · 이 페이지 자체는 noindex(워커가 지움)
+import PageLayout from '~/layouts/PageLayout.astro';
+import KoreaStyles from '~/components/blocks/KoreaStyles.astro';
+const P = (base: string) => `${base}__SLUG__`;
+---
+
+<PageLayout metadata={{ lang: 'en', title: '__TITLE__ | AI Galaxy Map', description: '__DESC__', canonical: P('/en/korea/'), ogType: '__OGTYPE__' as any, image: '__IMAGE__', noindex: true, alternates: [{ hreflang: 'ko', href: P('/korea/') }, { hreflang: 'en', href: P('/en/korea/') }, { hreflang: 'x-default', href: P('/en/korea/') }] }} altLangHref={P('/korea/')}>
+  <Fragment set:html="__BODY__" />
+</PageLayout>
+
+<KoreaStyles />

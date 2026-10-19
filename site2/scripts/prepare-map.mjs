@@ -26,7 +26,7 @@ for (const f of ['ads.txt', 'naver11527827ffc572c4fc7337b69af3d8a9.html', 'naver
 const _envTxt = existsSync(join(SITE2, '.env')) ? readFileSync(join(SITE2, '.env'), 'utf8') : '';
 const SITE_URL = ((process.env.PUBLIC_SITE_URL || (_envTxt.match(/^PUBLIC_SITE_URL=(.+)$/m) || [])[1] || '').trim()).replace(/\/$/, '');
 if (!SITE_URL) throw new Error('[prepare-map] PUBLIC_SITE_URL 없음(.env)');
-writeFileSync(join(PUB, 'robots.txt'), ['User-agent: *', 'Allow: /', 'Disallow: /frame-template', 'Disallow: /home/', 'Disallow: /map/app/',
+writeFileSync(join(PUB, 'robots.txt'), ['User-agent: *', 'Allow: /', 'Disallow: /frame-template', 'Disallow: /frame-korea', 'Disallow: /en/frame-korea', 'Disallow: /home/', 'Disallow: /map/app/',
   ...['sitemap.xml', 'sitemap-ai.xml', 'sitemap-trend.xml', 'sitemap-korea.xml'].map((f) => `Sitemap: ${SITE_URL}/${f}`), ''].join(String.fromCharCode(10)));
 // chrome.js 는 원본 그대로(상대 주소 /api/trend/latest — 같은 출처 규칙, src/env.ts)
 

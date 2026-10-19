@@ -304,7 +304,9 @@ const docTexts = (v, w) => docList(v, w).map((x, i) => docText(x, `${w}[${i}]`))
 const compact = (o) => Object.fromEntries(Object.entries(o).filter(([, v]) => v && (!Array.isArray(v) || v.length)));
 function docImage(v, w) {
   const o = docObj(v, w);
-  const img = { src: docUrl(o.src, `${w}.src`), alt: docText(o.alt, `${w}.alt`, 200), credit: docText(o.credit, `${w}.credit`, 200) };
+  // width·height(선택, 2026-10-19 한국 여행): 화면이 사진 자리를 미리 잡게(정적 글과 같게). 양의 정수만
+  const px = (v) => (Number.isInteger(v) && v > 0 && v < 20000 ? v : 0);
+  const img = { src: docUrl(o.src, `${w}.src`), alt: docText(o.alt, `${w}.alt`, 200), credit: docText(o.credit, `${w}.credit`, 200), width: px(o.width), height: px(o.height) };
   return img.src ? compact(img) : null;
 }
 function docRows(v, w, fields, html = []) {
@@ -643,6 +645,7 @@ async function rssFeed(request, env) {
 // ==== §PAGES: 공장이 올린 화면(한국 여행 글 등) — 배포 없이 바로 보이게 (2026-10-14) ====
 // 공장(common_prj)이 로컬 빌드한 완성 화면을 POST /api/pages 로 보내면 DB 함수 factory_page 가 토큰(해시)을 확인해 site_pages 에 저장.
 // 방문자가 /korea/…, /en/korea/…, /sitemap-korea.xml 을 열면 저장된 화면이 있으면 그것을, 없거나 DB 오류면 원래 정적 파일을 보여 줌.
+// → 2026-10-19부터 한국 여행은 §KOREA(korea_articles + 템플릿)가 먼저. 여기 저장분은 표가 없을 때·정적 파일도 없을 때만(지우지 않음).
 // 틀은 site2 Astro 컴포넌트 하나(KoreaArticle) — 워커는 완성된 HTML을 그대로 내보내기만 함. 표: scripts/migrate_site_pages.sql
 const PAGE_RE = /^\/(en\/)?korea\/([a-z0-9][a-z0-9-]{0,80}\/)?$/;
 
@@ -690,6 +693,213 @@ async function storedPage(path, request) {
   }
 }
 
+
+// ==== §KOREA: 한국 여행 글 = DB 글 칸 + 템플릿 (2026-10-19) ====
+// 사용자 원칙 "대본 텍스트·이미지만 DB에 저장하고 화면은 전부 템플릿이 그린다".
+// 글 공장이 POST /api/korea 로 글 칸(doc, AI 트렌드와 같은 공통 글 구조)을 보내면 검사·정리(cleanDoc) 후 DB 함수 factory_korea 가
+// korea_articles 에 저장(같은 slug·lang 이면 갱신). /korea/<slug>/ · /en/korea/<slug>/ · 목록 /korea/ · /en/korea/ · /sitemap-korea.xml 은
+// 이 표에서 읽어 그린다. 틀 = 빌드된 /frame-korea · /en/frame-korea(사이트 공통 PageLayout — 머리줄·왼쪽 메뉴·꼬리말)라서 틀을 바꿔 배포하면 같이 바뀜.
+// 글 본문 모양은 site2 KoreaArticle.astro·KoreaList.astro 와 같은 마크업(같은 Tailwind 칸·KoreaStyles CSS).
+// 순서: korea_articles → (없으면) 정적 빌드 → (정적도 없으면) site_pages 옛 저장 화면. 표가 아직 없거나(SQL 전) 비었으면 예전 순서(site_pages → 정적) 그대로.
+// SQL: scripts/migrate_korea_articles.sql · 옮기기: scripts/korea_articles_to_sql.mjs (둘 다 사람이 실행)
+const KOREA_SLUG_RE = /^[a-z0-9][a-z0-9-]{0,80}$/;
+const KOREA_HEADERS = { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=300" };
+const KT = {
+  ko: { site: "AI 성단 지도", list: "/korea/", listName: "한국 여행", updated: "기준", src: "자료 출처", other: "Read in English", o: "en",
+    note: "거리는 직선거리예요. 운영시간·요금은 바뀔 수 있으니 출발 전에 한 번 더 확인하세요.", emergency: "응급 119 · 바다 해양경찰 122",
+    lTitle: "한국 여행 — 공공데이터로 정리한 가기 전 체크", lDesc: "주차·응급실·숙소·수질·이용객 같은 공공데이터로 정리한 한국 여행지 안내예요. 영어판도 함께 있어요.", empty: "아직 글이 없어요.",
+    faq: "자주 묻는 질문", steps: "순서대로", check: "체크리스트", pros: "좋은 점", cons: "아쉬운 점", who: "이런 분께", items: "추천" },
+  en: { site: "AI Galaxy Map", list: "/en/korea/", listName: "Korea travel", updated: "Data as of", src: "Sources", other: "한국어로 보기", o: "ko",
+    note: "Distances are straight-line. Opening hours and fees can change, so check again before you travel.", emergency: "Emergency 119 · Coast Guard 122",
+    lTitle: "Korea travel — before-you-go guides from public data", lDesc: "Guides to places in Korea built from public data: parking, emergency care, places to stay, water quality and visitor numbers. Each guide also has a Korean version.", empty: "No guides yet.",
+    faq: "FAQ", steps: "Step by step", check: "Checklist", pros: "Good", cons: "Not so good", who: "Good for", items: "Picks" },
+};
+const kPath = (lang, slug) => (lang === "en" ? "/en/korea/" : "/korea/") + (slug ? `${slug}/` : "");
+// 아이콘(astro-icon tabler) — 정적 글과 같은 SVG. 첫 번째만 symbol 정의
+const ICON_D = { "chevron-right": "m9 6l6 6l-6 6", "arrow-right": "M5 12h14m-6 6l6-6m-6-6l6 6" };
+function kIcon(name, cls, used) {
+  const sym = used.has(name) ? "" : `<symbol id="ai:tabler:${name}"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="${ICON_D[name]}"/></symbol>`;
+  used.add(name);
+  return `<svg width="1em" height="1em" viewBox="0 0 24 24" class="${cls}" data-icon="tabler:${name}">${sym}<use href="#ai:tabler:${name}"></use></svg>`;
+}
+const ldJson = (o) => `<script type="application/ld+json">${JSON.stringify(o).replace(/</g, "\\u003c")}</script>`;
+function kstToday() { const k = new Date(Date.now() + 9 * 3600 * 1000); return k.toISOString().slice(0, 10); }
+const srcText = (s) => `${s.title || ""}${s.date ? ` (${s.date})` : ""}`;
+
+// doc 본문(소개·소제목 칸 + 그 밖의 공통 칸) → .korea-body 안쪽 HTML. 표는 정적 글처럼 가로 넘김 칸(.tw)으로 감쌈
+function koreaBody(d, T) {
+  const e = escHtml, li = (xs) => xs.map((x) => `<li>${e(x)}</li>`).join("");
+  const h = [];
+  if (d.summary) h.push(`<ul>${li(d.summary)}</ul>`);
+  if (d.intro) h.push(cleanHtml(d.intro));
+  for (const s of d.sections || []) {
+    h.push(`${s.h ? `<h2>${e(s.h)}</h2>` : ""}${s.body ? cleanHtml(s.body) : ""}${s.list ? `<ul>${li(s.list)}</ul>` : ""}`
+      + (s.table ? `<table>${s.table.head.length ? `<thead><tr>${s.table.head.map((x) => `<th>${e(x)}</th>`).join("")}</tr></thead>` : ""}<tbody>${s.table.rows.map((r) => `<tr>${r.map((c) => `<td>${e(c)}</td>`).join("")}</tr>`).join("")}</tbody></table>` : "")
+      + (s.image ? `<figure><img src="${e(s.image.src)}" alt="${e(s.image.alt || s.h || "")}" loading="lazy">${s.image.credit ? `<figcaption>${e(s.image.credit)}</figcaption>` : ""}</figure>` : ""));
+  }
+  if (d.pros) h.push(`<h3>${T.pros}</h3><ul>${li(d.pros)}</ul>`);
+  if (d.cons) h.push(`<h3>${T.cons}</h3><ul>${li(d.cons)}</ul>`);
+  if (d.who) h.push(`<p><b>${T.who}</b> ${e(d.who)}</p>`);
+  if (d.steps) h.push(`<h2>${T.steps}</h2><ol>${d.steps.map((x) => `<li>${x.t ? `<b>${e(x.t)}</b> ` : ""}${x.d ? e(x.d) : ""}</li>`).join("")}</ol>`);
+  if (d.checklist) h.push(`<h2>${T.check}</h2><ul>${li(d.checklist)}</ul>`);
+  if (d.items) h.push(`<h2>${T.items}</h2><ul>${d.items.map((it) => `<li>${it.link ? `<a href="${e(it.link)}" target="_blank" rel="sponsored nofollow noopener">${e(it.name || it.link)}</a>` : e(it.name || "")}${it.price ? ` · ${e(it.price)}` : ""}${it.desc ? ` — ${e(it.desc)}` : ""}</li>`).join("")}</ul>`);
+  if (d.faq) h.push(`<h2>${T.faq}</h2>${d.faq.map((x) => `<details><summary>${e(x.q || "")}</summary>${cleanHtml(x.a || "")}</details>`).join("")}`);
+  return h.join("\n").replace(/<table>/g, '<div class="tw"><table>').replace(/<\/table>/g, "</table></div>");
+}
+
+// 글 한 편(한 언어) → <article> — KoreaArticle.astro 와 같은 구성(크럼·제목·소개·기준일·사진·숫자 칸·본문·안내 링크·주의·출처·다른 언어·JSON-LD)
+function koreaArticleHtml(row, lang, hasOther) {
+  const d = row.doc || {}, T = KT[lang], e = escHtml, used = new Set();
+  const path = kPath(lang, row.slug), altPath = kPath(T.o, row.slug);
+  const title = row.title || d.title || "", sources = Array.isArray(row.sources) && row.sources.length ? row.sources : d.sources || [];
+  const crumbs = [{ text: T.listName, href: T.list }, { text: d.chip || "" }];
+  const crumbLd = { "@context": "https://schema.org", "@type": "BreadcrumbList",
+    itemListElement: crumbs.map((c, i) => ({ name: c.text, url: c.href ? SITE + c.href : i === crumbs.length - 1 ? SITE + path : "" })).filter((x) => x.url && x.name)
+      .map((x, i) => ({ "@type": "ListItem", position: i + 1, name: x.name, item: x.url })) };
+  const site = T.site;
+  const articleLd = { "@context": "https://schema.org", "@type": "Article", headline: title, description: d.subtitle || "", inLanguage: lang,
+    datePublished: row.publish_date, dateModified: row.publish_date, ...(d.hero ? { image: [d.hero.src] } : {}), mainEntityOfPage: SITE + path,
+    author: { "@type": "Organization", name: site, url: SITE }, publisher: { "@type": "Organization", name: site, url: SITE },
+    isBasedOn: sources.map(srcText) };
+  const h = [];
+  h.push(`<article class="max-w-3xl mx-auto px-4 sm:px-6 py-7 md:py-9"><nav aria-label="Breadcrumb" class="text-sm text-muted mb-3"><ol class="flex flex-wrap items-center gap-1 list-none">`
+    + crumbs.map((c, i) => `<li class="flex min-w-0 items-center gap-1">${i > 0 ? kIcon("chevron-right", "h-3.5 w-3.5 shrink-0 opacity-60 rtl:rotate-180", used) : ""}`
+      + (c.href && i < crumbs.length - 1 ? `<a href="${e(c.href)}" class="inline-flex items-center hover:text-link hover:underline">${e(c.text)}</a>` : `<span aria-current="page" class="text-default">${e(c.text)}</span>`) + `</li>`).join("")
+    + `</ol></nav>${ldJson(crumbLd)}`);
+  h.push(`<h1 class="text-2xl md:text-3xl font-bold leading-tighter tracking-tighter font-heading text-heading text-balance">${e(title)}</h1>`);
+  h.push(`<p class="mt-2 text-base text-muted text-pretty">${e(d.subtitle || "")}</p><p class="mt-2 text-sm text-muted">${T.updated} ${e(row.publish_date)}</p>`);
+  if (d.hero) h.push(`<figure class="mt-6"><img src="${e(d.hero.src)}" alt="${e(d.hero.alt || "")}" class="w-full h-auto rounded-md bg-slate-800" loading="eager"${d.hero.width && d.hero.height ? ` width="${d.hero.width}" height="${d.hero.height}"` : ""}><figcaption class="text-xs text-muted mt-2">${e(d.hero.credit || "")}</figcaption></figure>`);
+  if (d.tiles) h.push(`<div class="grid grid-cols-2 md:grid-cols-4 gap-px bg-slate-700 border border-slate-700 rounded-md overflow-hidden mt-6">${d.tiles.map((t) => `<div class="bg-page p-3"><small class="block text-xs text-muted">${e(t.t || t.d || "")}</small><b class="text-xl tabular-nums text-heading">${e(t.n || "")}</b></div>`).join("")}</div>`);
+  h.push(`<div class="prose prose-invert prose-base max-w-none mt-8 korea-body">${koreaBody(d, T)}</div>`);
+  if (d.cta) h.push(`<a href="${e(d.cta.link)}" class="btn-primary mt-6">${e(d.cta.text)}${kIcon("arrow-right", "w-5 h-5 ml-1 -mr-1", used)}</a>`);
+  h.push(`<p class="text-sm text-muted mt-6">${T.note} ${T.emergency}</p>`);
+  h.push(`<div class="border-t border-slate-800 mt-8 pt-4 text-sm text-muted"><b class="text-default">${T.src}</b><ul class="list-disc pl-5 mt-2 space-y-1">`
+    + sources.map((s) => `<li>${s.url ? `<a href="${e(s.url)}" target="_blank" rel="noopener nofollow">${e(s.title || s.url)}</a>${s.date ? ` (${e(s.date)})` : ""}` : e(srcText(s))}</li>`).join("") + `</ul>`
+    + (hasOther ? `<a href="${altPath}" hreflang="${T.o}" class="inline-flex items-center gap-1 mt-4 text-link hover:underline font-medium">${T.other}${kIcon("chevron-right", "w-4 h-4", used)}</a>` : "")
+    + `</div>${ldJson(articleLd)}</article>`);
+  return h.join("");
+}
+
+// 목록 → KoreaList.astro 와 같은 카드 격자
+function koreaListHtml(rows, lang) {
+  const T = KT[lang], e = escHtml;
+  const cards = rows.map((r) => `<a href="${kPath(lang, r.slug)}" class="block rounded-md border border-slate-700 bg-slate-900/40 md:p-5 not-prose hover:border-primary/70 hover:bg-slate-900/70 transition duration-150 ease-in-out p-0 overflow-hidden">`
+    + (r.hero?.src ? `<img src="${e(r.hero.src)}" alt="${e(r.hero.alt || "")}" loading="lazy" class="w-full h-44 object-cover bg-slate-800">` : "")
+    + `<div class="p-5"><small class="text-xs text-link">${e(r.chip || "")} · ${e(r.publish_date)}</small><h3 class="text-lg font-bold text-heading leading-snug mt-1 text-balance">${e(r.title)}</h3>`
+    + `<p class="text-sm text-muted mt-2 line-clamp-3">${e(r.subtitle || "")}</p></div></a>`).join("");
+  return `<div class="max-w-[1320px] mx-auto px-4 sm:px-6 py-7 md:py-9"><h1 class="text-2xl md:text-3xl font-bold leading-tighter tracking-tighter font-heading text-heading text-balance">${T.lTitle}</h1>`
+    + `<p class="mt-2 text-base text-muted max-w-3xl text-pretty">${T.lDesc}</p>`
+    + (rows.length ? `<div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-8">${cards}</div>` : `<p class="mt-8 text-muted">${T.empty}</p>`) + `</div>`;
+}
+
+// 빌드된 틀(/frame-korea, /en/frame-korea)에 자리표 채우기 — trendShell 과 같은 방식
+const _koreaFrame = {};
+async function koreaShell(lang, { title, description, slug, ogType, image, body, hasKo = true, hasEn = true }, request, env) {
+  if (!_koreaFrame[lang]) {
+    const r = await env.ASSETS.fetch(new Request(new URL(lang === "en" ? "/en/frame-korea" : "/frame-korea", request.url)));
+    const t = await r.text();
+    if (!r.ok || !t.includes("__BODY__")) throw new Error("frame-korea 없음 " + r.status);
+    _koreaFrame[lang] = t;
+  }
+  let t = _koreaFrame[lang].replace(/<meta name="robots" content="noindex, nofollow">/, "");
+  if (image) t = t.split(`${SITE}__IMAGE__`).join(escHtml(/^https?:/i.test(image) ? image : SITE + image));
+  else t = t.replace(/<meta property="og:image"[^>]*>/, "").replace('content="summary_large_image"', 'content="summary"');
+  // 짝 언어가 없는 글이면 그 hreflang 줄은 뺌(x-default 는 있는 쪽으로)
+  if (!hasEn) t = t.replace(/<link rel="alternate" hreflang="en"[^>]*>/, "").split(`hreflang="x-default" href="${SITE}/en/korea/__SLUG__"`).join(`hreflang="x-default" href="${SITE}/korea/__SLUG__"`);
+  if (!hasKo) t = t.replace(/<link rel="alternate" hreflang="ko"[^>]*>/, "");
+  // Astro 와 같은 이스케이프: 글자 칸(<title>)은 & < > " ' 모두, 속성 값은 & " 만
+  const attr = (x) => String(x ?? "").replace(/&/g, "&amp;").replace(/"/g, "&quot;");
+  t = t.split("<title>__TITLE__").join("<title>" + escHtml(title)).split("__TITLE__").join(attr(title)).split("__DESC__").join(attr(description)).split("__OGTYPE__").join(ogType)
+    .split("__SLUG__").join(slug ? `${slug}/` : "").replace("__BODY__", () => body);
+  // 목록 화면이면 머리줄 '한국 여행' 메뉴를 켜진 모양으로(틀은 글 주소 기준으로 빌드돼 목록 주소와 안 맞음 — Header.astro isActive 와 같게)
+  return slug ? t : t.replace(`whitespace-nowrap gap-1" href="${kPath(lang)}"`, `whitespace-nowrap gap-1 aw-link-active" href="${kPath(lang)}"`);
+}
+
+const KOREA_LIST_SEL = "slug,lang,title,publish_date,chip:doc->>chip,subtitle:doc->>subtitle,hero:doc->hero";
+const koreaSort = (rows) => rows.sort((a, b) => (String(b.publish_date) + b.slug).localeCompare(String(a.publish_date) + a.slug));
+
+// 한국 여행 주소 하나 → Response | "missing"(표엔 있는데 이 글이 없음) | "legacy"(표가 없거나 비었거나 DB 오류 → 예전 순서)
+async function koreaFromDb(path, request, env) {
+  const today = kstToday();
+  try {
+    if (path === "/sitemap-korea.xml") {
+      const rows = await sbGet(`korea_articles?select=slug,lang,publish_date&publish_date=lte.${today}&order=publish_date.desc,slug.desc`);
+      if (!rows.length) return "legacy";
+      // 정적 빌드(postbuild.mjs)와 같은 모양: 영어 글 → 한국어 글, 각각 slug 순, 끝 / 없이
+      const bySlug = (l) => rows.filter((r) => r.lang === l).map((r) => r.slug).sort();
+      const locs = [...bySlug("en").map((x) => `${SITE}/en/korea/${x}`), ...bySlug("ko").map((x) => `${SITE}/korea/${x}`)];
+      return new Response(`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${locs.map((u) => `  <url><loc>${u}</loc></url>`).join("\n")}\n</urlset>\n`,
+        { headers: { "content-type": "application/xml; charset=utf-8", "cache-control": "public, max-age=3600" } });
+    }
+    const m = path.match(/^\/(en\/)?korea\/(?:([a-z0-9][a-z0-9-]{0,80})\/)?$/);
+    if (!m) return "legacy";
+    const lang = m[1] ? "en" : "ko", T = KT[lang];
+    if (!m[2]) {
+      const rows = await sbGet(`korea_articles?select=${KOREA_LIST_SEL}&lang=eq.${lang}&publish_date=lte.${today}&order=publish_date.desc,slug.desc`);
+      if (!rows.length) return "legacy";
+      koreaSort(rows);
+      return new Response(await koreaShell(lang, { title: T.lTitle, description: T.lDesc, slug: "", ogType: "website", image: "", body: koreaListHtml(rows, lang) }, request, env), { headers: KOREA_HEADERS });
+    }
+    const rows = await sbGet(`korea_articles?select=slug,lang,title,doc,design_code,publish_date,sources,updated_at&slug=eq.${m[2]}&publish_date=lte.${today}`);
+    const row = rows.find((r) => r.lang === lang);
+    if (!row) return "missing";
+    const hasOther = rows.some((r) => r.lang === T.o);
+    const d = row.doc || {};
+    return new Response(await koreaShell(lang, { title: row.title || d.title || "", description: d.subtitle || "", slug: row.slug, ogType: "article", image: d.hero?.src || "",
+      body: koreaArticleHtml(row, lang, hasOther), hasKo: lang === "ko" || hasOther, hasEn: lang === "en" || hasOther }, request, env),
+      { headers: { ...KOREA_HEADERS, "x-galaxy-page": "korea_articles " + row.updated_at } });
+  } catch (e) {
+    return "legacy"; // 표가 아직 없음(SQL 전)·DB 오류·틀 없음 → 예전 순서
+  }
+}
+
+async function koreaRoute(path, request, env) {
+  const r = await koreaFromDb(path, request, env);
+  if (r instanceof Response) return r;
+  if (r === "legacy") { const page = await storedPage(path, request); return page || env.ASSETS.fetch(request); }
+  // 표에 이 글이 없음 → 정적 빌드, 정적도 없으면 옛 저장 화면(site_pages, 지우지 않고 마지막 대안으로만)
+  const stat = await env.ASSETS.fetch(request);
+  if (stat.status < 400) return stat;
+  return (await storedPage(path, request)) || stat;
+}
+
+// POST /api/korea — AI 트렌드 /api/posts 와 같은 토큰(factory_tokens 해시, DB 함수 안에서 확인)·같은 doc 검사(cleanDoc)
+// 보낼 것: { slug, lang:"ko"|"en", doc, publish_date:"YYYY-MM-DD", title?(없으면 doc.title), sources?(없으면 doc.sources), menu_code?, cat_code?, design_code? }
+async function receiveKorea(request) {
+  if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: CORS });
+  if (request.method !== "POST") return json({ ok: false, msg: "POST only" }, 405);
+  const token = (request.headers.get("Authorization") || "").replace(/^Bearer\s+/i, "").trim();
+  if (!token) return json({ ok: false, msg: "토큰 없음" }, 401);
+  let p;
+  try { p = await request.json(); } catch (e) { return json({ ok: false, msg: "JSON 형식 아님" }, 400); }
+  if (!p || typeof p !== "object") return json({ ok: false, msg: "JSON 형식 아님" }, 400);
+  const slug = String(p.slug || "").trim(), lang = String(p.lang || "").trim(), publish = String(p.publish_date || p.publish || "").trim();
+  if (!KOREA_SLUG_RE.test(slug)) return json({ ok: false, msg: "slug: 영문 소문자·숫자·- 만(예 seoraksan)" }, 400);
+  if (!["ko", "en"].includes(lang)) return json({ ok: false, msg: "lang: ko 또는 en" }, 400);
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(publish) || isNaN(Date.parse(publish))) return json({ ok: false, msg: "publish_date: YYYY-MM-DD" }, 400);
+  let fields, sources;
+  try {
+    ({ fields } = docFields({ ...p, doc: p.doc ?? {} }));
+    sources = p.sources !== undefined && p.sources !== null ? docRows(p.sources, "sources", ["title", "url", "date"]) : null;
+  } catch (e) { if (e instanceof DocError) return json({ ok: false, msg: e.message }, 400); throw e; }
+  const doc = fields?.doc;
+  if (!doc) return json({ ok: false, msg: "doc 필요" }, 400);
+  const title = docText(p.title, "title", 200) || doc.title;
+  if (!title) return json({ ok: false, msg: "title(또는 doc.title) 필요" }, 400);
+  const r = await fetch(`${UPSTREAM}/rest/v1/rpc/factory_korea`, {
+    method: "POST",
+    headers: { apikey: ANON_KEY, Authorization: `Bearer ${ANON_KEY}`, "content-type": "application/json" },
+    body: JSON.stringify({ p_token: token, p_slug: slug, p_lang: lang, p_title: title, p_doc: doc, p_menu_code: fields.menu_code, p_cat_code: fields.cat_code,
+      p_design_code: fields.design_code, p_publish_date: publish, p_sources: sources || doc.sources || [] }),
+  });
+  const res = await r.json().catch(() => ({}));
+  if (!r.ok) {
+    const bad = String(res?.message || "").includes("bad_token");
+    return json({ ok: false, msg: bad ? "토큰이 맞지 않음" : (res?.message || `저장 실패 ${r.status}`) }, bad ? 401 : 400);
+  }
+  return json({ ok: true, slug, lang, updated: !!res.updated, url: `${SITE}${kPath(lang, slug)}` });
+}
+
 export default {
   async fetch(request, env) {
     if (new URL(request.url).pathname === "/rss.xml") return rssFeed(request, env);
@@ -698,6 +908,7 @@ export default {
     if (url.pathname === "/api/auth/naver/callback") return naverCallback(request, url, env);
     if (url.pathname === "/api/posts") return receivePost(request, env);
     if (url.pathname === "/api/pages") return receivePage(request);
+    if (url.pathname === "/api/korea") return receiveKorea(request);
     if (url.pathname === "/api/trend/latest") return trendLatest();
     /* /trend/ 목록은 site2 정적 페이지가 그림 */
     // 같은 주제로 겹친 글은 남긴 글로 영구 이동(옮긴 글은 DB에서 hidden=true). 한국어·영어 둘 다.
@@ -714,8 +925,9 @@ export default {
       });
     }
     if (request.method === "GET" || request.method === "HEAD") {
+      // 한국 여행(§KOREA): korea_articles → 정적 빌드 → site_pages(옛 저장 화면은 새 화면을 덮지 않음)
       const pp = pagePath(url.pathname);
-      if (pp) { const page = await storedPage(pp, request); if (page) return page; }
+      if (pp) return koreaRoute(pp, request, env);
     }
     return env.ASSETS.fetch(request);
   },

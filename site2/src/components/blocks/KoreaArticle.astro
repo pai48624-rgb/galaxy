@@ -5,6 +5,7 @@ import Breadcrumbs from '~/components/common/Breadcrumbs.astro';
 import type { KoreaArticle } from '~/lib/data';
 import { esc } from '~/utils/utils';
 import { R } from '~/lib/routes';
+import KoreaStyles from '~/components/blocks/KoreaStyles.astro';
 
 export interface Props { a: KoreaArticle; lang: 'ko' | 'en' }
 const { a, lang } = Astro.props;
@@ -78,12 +79,4 @@ const jsonLd = {
   <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd).replace(/</g, '\\u003c')} />
 </article>
 
-<style is:global>
-  .korea-body .tw { overflow-x: auto; margin: 0.5rem 0 1rem; }
-  .korea-body table { min-width: 420px; }
-  .korea-body .chart svg { width: 100%; height: auto; }
-  .korea-body .chart text { fill: rgb(229 236 246 / 66%); font-size: 11px; }
-  .korea-body .chart .v { fill: rgb(229 236 246); font-weight: 700; }
-  .korea-body .chart .bar { fill: rgb(109 95 245); }
-  .korea-body .chart .dip { fill: rgb(234 179 8); }
-</style>
+<KoreaStyles />

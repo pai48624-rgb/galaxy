@@ -18,7 +18,7 @@ export default defineConfig({
   build: { format: 'preserve' },
   integrations: [
     icon({ include: { tabler: ['*'] } }),
-    sitemap({ filter: (p) => !/\/board\/?$|\/404|\/frame-template|\/home\/[abc](\/|$)|\/map\/app\//.test(p) }),  // 게시판·404·글 틀·시안·지도 앱 사본 제외, /map/ 은 서버처럼 색인(10/14)
+    sitemap({ filter: (p) => !/\/board\/?$|\/404|\/frame-template|\/frame-korea|\/home\/[abc](\/|$)|\/map\/app\//.test(p) }),  // 게시판·404·글 틀·시안·지도 앱 사본 제외, /map/ 은 서버처럼 색인(10/14)
   ],
   vite: {
     plugins: [tailwindcss()],
