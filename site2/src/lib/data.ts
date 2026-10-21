@@ -6,6 +6,8 @@ import { readFileSync, existsSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { kstToday, textLen } from '~/utils/utils';
+// @ts-ignore — 워커(js) 함수: 트렌드 목록 썸네일 규칙 한 곳
+import { trendThumb } from '../../worker/_worker.js';
 
 // galaxy 프로젝트 뿌리: 빌드 묶음이 dist/.prerender/ 로 옮겨져도 맞게, 현재 폴더에서 위로 올라가며 data/ai_landscape.json 을 찾음
 function findRoot() {
@@ -281,7 +283,7 @@ export function koreaArticles(today = kstToday()): KoreaArticle[] {
 // ---- AI 트렌드 글(빌드 때 Supabase 공개 읽기 — 워커 trendList 와 같은 조회) ----
 const UPSTREAM = 'https://urflispegkzouclljxzg.supabase.co';
 const ANON_KEY = 'sb_publishable_MtDGFqdSWe09vUXg2ALtqw_5p1gZVCr'; // 기존 index.html·gen-seo-pages.mjs 에 있는 공개 키
-export interface TrendPost { id: number; title: string; tags: string[]; created_at: string; summary: string; img?: string }
+export interface TrendPost { id: number; title: string; tags: string[]; created_at: string; summary: string; img?: string; thumb?: string }
 /** 글 본문의 첫 그림(https만) — 목록 사진 칸용 */
 export const firstImg = (html?: string) => { const m = String(html || '').match(/<img[^>]+src="(https:[^"]+)"/i); return m ? m[1] : undefined; };
 const summary = (body: string, n: number) => { const s = String(body || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim(); return s.length > n ? s.slice(0, n - 1) + '…' : s; };
@@ -294,7 +296,7 @@ export async function trendPosts(): Promise<TrendPost[]> {
     });
     if (!r.ok) throw new Error(String(r.status));
     const rows = (await r.json()) as any[];
-    _trend = rows.map((p) => ({ id: p.id, title: p.title, tags: p.tags || [], created_at: p.created_at, summary: summary(p.body, 120), img: firstImg(p.body_html) }));
+    _trend = rows.map((p) => ({ id: p.id, title: p.title, tags: p.tags || [], created_at: p.created_at, summary: summary(p.body, 120), img: firstImg(p.body_html), thumb: trendThumb(p.body_html, p.id) }));  // 썸네일 규칙 = 워커 한 곳(2026-10-21)
   } catch (e) {
     console.warn('[site2] 트렌드 글 목록을 못 읽음(빌드는 계속):', (e as Error).message);
     _trend = [];

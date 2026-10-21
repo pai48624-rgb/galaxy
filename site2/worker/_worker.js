@@ -542,11 +542,32 @@ function trendSide(more) {
   return `<div class="trend-side"><div class="box"><b>함께 보면 좋은 글</b><ul>${more || '<li><a href="/trend/">AI 트렌드 목록</a></li>'}</ul></div><div class="box"><b>새 글 받아 보기</b><ul><li><a href="/rss.xml">RSS 구독</a></li><li><a href="/map/">✦ 3D 성단 지도 열기</a></li></ul></div></div>`;
 }
 
+// 트렌드 목록 썸네일(2026-10-21 사용자: "글 누르면 나오는 그림을 목록 왼쪽 위에") — 규칙은 여기 한 곳.
+// 빌드 목록(src/lib/data.ts)도 이 함수를 불러 씀. ① 글의 첫 그림(SVG, 궤도 등) ② 없으면 숫자 카드(tiles) 3개 ③ 둘 다 없으면 ''(별 배경)
+// 그림 속 id 는 글마다 앞에 t<글번호>- 를 붙임(한 화면에 그림 여러 개면 그라데이션 id 가 겹쳐 색이 섞임)
+export function trendThumb(html, id) {
+  const h = String(html || "");
+  const m = h.match(/<svg[\s\S]*?<\/svg>/i);
+  if (m) {
+    const p = `t${String(id).replace(/\D/g, "")}-`;
+    const s = m[0].replace(/<script[\s\S]*?<\/script>/gi, "").replace(/\son\w+\s*=\s*("[^"]*"|'[^']*'|[^\s>]+)/gi, "").replace(/javascript:/gi, "")
+      .replace(/\bid=(['"])([^'"]+)\1/g, (_, q, v) => `id=${q}${p}${v}${q}`)
+      .replace(/url\(#([^)\s]+)\)/g, (_, v) => `url(#${p}${v})`)
+      .replace(/href=(['"])#([^'"]+)\1/g, (_, q, v) => `href=${q}#${p}${v}${q}`)
+      .replace(/^<svg([^>]*?)\swidth=(['"])[^'"]*\2/i, "<svg$1").replace(/^<svg([^>]*?)\sstyle=(['"])[^'"]*\2/i, "<svg$1");
+    return `<span class="tz-ph tz-fig">${s}</span>`;
+  }
+  const strip = (x) => String(x).replace(/<[^>]*>/g, "").trim();
+  const tiles = [...h.matchAll(/<div class="tile"><div class="n">([\s\S]*?)<\/div><div class="t">([\s\S]*?)<\/div>/g)].slice(0, 3);
+  if (tiles.length) return `<span class="tz-ph tz-tiles">${tiles.map(([, n, t]) => `<span><b>${strip(n)}</b><small>${strip(t)}</small></span>`).join("")}</span>`;
+  return "";
+}
+
 // /api/trend/latest — 공통 껍데기(chrome.js)가 "이번 주 신호" 띠·최신 글 칸을 채울 때 씀. 5분 캐시.
 async function trendLatest() {
   let posts = [];
   try { posts = await sbGet("board_posts?select=id,title,body,body_html,tags,created_at&board=eq.ai_trend&hidden=eq.false&order=created_at.desc&limit=12"); } catch (e) {}
-  const out = posts.map((p) => { const m = String(p.body_html || "").match(/<img[^>]+src="(https:[^"]+)"/i); return { id: p.id, title: p.title, tags: p.tags || [], created_at: p.created_at, summary: summary(p.body, 120), ...(m ? { img: m[1] } : {}) }; });  // img = 본문 첫 그림(목록 사진 칸, 10/14)
+  const out = posts.map((p) => { const m = String(p.body_html || "").match(/<img[^>]+src="(https:[^"]+)"/i); return { id: p.id, title: p.title, tags: p.tags || [], created_at: p.created_at, summary: summary(p.body, 120), ...(m ? { img: m[1] } : {}), thumb: trendThumb(p.body_html, p.id) }; });  // img = 본문 첫 그림(목록 사진 칸, 10/14)
   return new Response(JSON.stringify({ posts: out, total: out.length }), { headers: { "content-type": "application/json; charset=utf-8", "cache-control": "public, max-age=300", "access-control-allow-origin": "*" } });
 }
 

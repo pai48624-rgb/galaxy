@@ -38,7 +38,9 @@ const kickerOf = (p: TrendPost) => (lang === 'en' ? p.tags.find((t) => /^[ -~]+$
             </div>
           </a>
           <a href={href} class="tz-pic" tabindex="-1" aria-hidden="true">
-            {p.img
+            {p.thumb
+              ? <Fragment set:html={p.thumb} />
+              : p.img
               ? <span class="tz-ph tz-band"><small># {kickerOf(p)}</small><b>{title}</b><em></em><i>&lt;/&gt;</i></span>
               : <span class="tz-ph"><i>✦</i><b>{tag || 'AI'}</b></span>}
           </a>
@@ -89,6 +91,13 @@ const kickerOf = (p: TrendPost) => (lang === 'en' ? p.tags.find((t) => /^[ -~]+$
   .tz-band b { font-size: 1.2rem; line-height: 1.45; color: #fff; text-shadow: 0 1px 12px rgb(5 8 22 / .9); }
   .tz-band em { display: block; width: 2.4rem; height: 3px; border-radius: 2px; background: linear-gradient(90deg, rgb(56 189 248), rgb(124 108 240)); }
   .tz-band i { position: absolute; right: 1.5rem; top: 50%; transform: translateY(-50%); font-size: 1.5rem; font-weight: 700; color: rgb(139 124 246); }
+  /* 글 그림 썸네일(2026-10-21): 궤도 등 글의 첫 그림 / 숫자 카드 3개 — 워커 trendThumb */
+  .tz-fig { display: grid; place-items: center; padding: .5rem; }
+  .tz-fig svg { width: 100%; height: 100%; max-height: 100%; }
+  .tz-tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .6rem; padding: 1rem; align-content: center; }
+  .tz-tiles > span { display: grid; gap: .3rem; padding: .8rem .6rem; border: 1px solid rgb(51 65 85 / .8); border-radius: .75rem; background: rgb(10 15 44 / .72); text-align: left; }
+  .tz-tiles b { font-size: 1.45rem; line-height: 1.1; color: #f5b83d; word-break: keep-all; }
+  .tz-tiles small { font-size: .78rem; line-height: 1.35; color: rgb(203 213 225); word-break: keep-all; }
   @media (max-width: 480px) { .tz-band { padding: 1rem 3.5rem 1rem 1.25rem; } .tz-band b { font-size: 1.05rem; } .tz-band i { right: 1rem; font-size: 1.25rem; } }
 </style>
 
@@ -110,7 +119,7 @@ const kickerOf = (p: TrendPost) => (lang === 'en' ? p.tags.find((t) => /^[ -~]+$
         list.innerHTML = posts.map((p, i) => {
           const href = `/trend/${p.id}`, tag = (p.tags || [])[0] || '';
           const kicker = (p.tags || []).find((t: string) => t === 'AI 도구 리뷰') || tag || 'AI';
-          const img = p.img ? `<span class="tz-ph tz-band"><small># ${esc(kicker)}</small><b>${esc(p.title)}</b><em></em><i>&lt;/&gt;</i></span>` : `<span class="tz-ph"><i>✦</i><b>${esc(tag || 'AI')}</b></span>`;
+          const img = p.thumb ? p.thumb : p.img ? `<span class="tz-ph tz-band"><small># ${esc(kicker)}</small><b>${esc(p.title)}</b><em></em><i>&lt;/&gt;</i></span>` : `<span class="tz-ph"><i>✦</i><b>${esc(tag || 'AI')}</b></span>`;
           return `<li class="tz-row${i % 2 ? ' tz-flip' : ''}"><a href="${href}" class="tz-text group"><div class="flex gap-3 items-start"><span class="tz-num">${i + 1}</span><b class="tz-title group-hover:text-link">${esc(p.title)}</b></div><p class="tz-sum">${esc(p.summary)}</p><div class="tz-meta"><span>${cal}${fmt(p.created_at)}</span>${tag ? `<span>${fold}${esc(tag)}</span>` : ''}</div></a><a href="${href}" class="tz-pic" tabindex="-1" aria-hidden="true">${img}</a></li>`;
         }).join('');
       } catch (e) { /* 실패하면 빌드 때 목록 그대로 */ }
