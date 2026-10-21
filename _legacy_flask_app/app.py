@@ -5,8 +5,8 @@ import json
 from functools import wraps
 
 app = Flask(__name__)
-app.secret_key = os.environ.get('SECRET_KEY', 'dev-secret-바꿔주세요')
-ADMIN_PASSWORD = os.environ.get('ADMIN_PASSWORD', 'change-me-1234')
+app.secret_key = os.environ.get('SECRET_KEY') or os.urandom(32)  # 기본 비밀값 없음(2026-10-21 보안 점검)
+ADMIN_PASSWORD = os.environ.get('ADMIN_PASSWORD')  # 없으면 관리자 로그인 꺼짐(2026-10-21 보안 점검)
 DB_PATH = os.path.join(os.path.dirname(__file__), 'constellation.db')
 DATA_PATH = os.path.join(os.path.dirname(__file__), 'data', 'ai_landscape.json')
 
@@ -274,7 +274,7 @@ def admin_relation_delete(rid):
 def admin_login():
     error = None
     if request.method == 'POST':
-        if request.form.get('password') == ADMIN_PASSWORD:
+        if ADMIN_PASSWORD and request.form.get('password') == ADMIN_PASSWORD:
             session['is_admin'] = True
             next_url = request.args.get('next') or url_for('admin')
             return redirect(next_url)
@@ -330,4 +330,4 @@ def admin_delete(node_id):
 init_db()
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=os.environ.get('FLASK_DEBUG') == '1')
