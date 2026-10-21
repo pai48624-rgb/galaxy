@@ -3,10 +3,10 @@
 // 확인: 칸 없는 옛 요청 = 예전 factory_post 그대로 / 코드·doc 요청 = factory_post_doc 에 정리된 doc / 틀린 doc = 400
 //       /trend/<id>: doc 있으면 템플릿(제목·소제목·표·사진·FAQ·출처), 없으면 body_html 그대로, SQL 전(칸 없음)에도 옛 글 화면 정상
 import assert from "node:assert/strict";
-import { pathToFileURL } from "node:url";
+import { pathToFileURL, fileURLToPath } from "node:url";
 import path from "node:path";
 
-const here = path.dirname(new URL(import.meta.url).pathname);
+const here = path.dirname(fileURLToPath(import.meta.url));
 const worker = (await import(pathToFileURL(path.join(here, "../worker/_worker.js")).href)).default;
 
 const FRAME = "<html><head><title>__TITLE__</title></head><body><main>__BODY__</main><aside>__SIDE__</aside></body></html>";

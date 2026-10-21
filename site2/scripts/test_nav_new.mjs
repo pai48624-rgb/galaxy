@@ -2,10 +2,10 @@
 // 실행: node site2/scripts/test_nav_new.mjs
 // 확인: 새 글 → New / 24시간 지난 글 → 없음 / 공개일 전 한국 여행 → 없음(오늘 공개 글만 New) / 숨긴 글·다른 게시판 글은 안 셈 / DB 오류 → 없음
 import assert from "node:assert/strict";
-import { pathToFileURL } from "node:url";
+import { pathToFileURL, fileURLToPath } from "node:url";
 import path from "node:path";
 
-const here = path.dirname(new URL(import.meta.url).pathname);
+const here = path.dirname(fileURLToPath(import.meta.url));
 const worker = (await import(pathToFileURL(path.join(here, "../worker/_worker.js")).href)).default;
 const env = { ASSETS: { fetch: async () => new Response("", { status: 404 }) } };
 

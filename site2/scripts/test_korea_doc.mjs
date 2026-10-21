@@ -5,10 +5,10 @@
 //       공개일 전 글 숨김 / 목록·사이트맵 = 정적 빌드와 같음 / 표가 없을 때 예전 순서 / POST /api/korea 토큰·검사 / 옮기기(글 원본·site_pages 저장분)
 import assert from "node:assert/strict";
 import { readFileSync, existsSync } from "node:fs";
-import { pathToFileURL } from "node:url";
+import { pathToFileURL, fileURLToPath } from "node:url";
 import path from "node:path";
 
-const here = path.dirname(new URL(import.meta.url).pathname);
+const here = path.dirname(fileURLToPath(import.meta.url));
 const DIST = path.join(here, "..", "dist");
 if (!existsSync(path.join(DIST, "frame-korea.html"))) { console.error("dist/frame-korea.html 없음 — 먼저 site2 빌드"); process.exit(1); }
 const worker = (await import(pathToFileURL(path.join(here, "../worker/_worker.js")).href)).default;
@@ -189,7 +189,8 @@ ok("표가 없거나 비었으면(SQL·옮기기 전) 예전과 같은 순서");
   assert.ok(extra.skipped.some(([k]) => k === "/korea/broken/") && extra.skipped.some(([k, w]) => k === "/korea/seoraksan/" && w.includes("글 원본")));
   const sql = M.toSql(extra.rows);
   assert.equal((sql.match(/on conflict \(slug, lang\) do nothing;/g) || []).length, extra.rows.length);
-  assert.ok(!/delete|update public\.site_pages|drop /i.test(sql.replace(/^--.*$/gm, "")));
+  // 명령 줄만 본다 — 글 본문 속 낱말(waterfalls that drop…)은 SQL 명령이 아님
+  assert.ok(!/^\s*(delete|update public\.site_pages|drop )/im.test(sql.replace(/^--.*$/gm, "")));
   ok(`옮기기: 저장 화면 ${migrated.length}개에서 뽑은 칸 = 글 원본, 원본 없는 저장분만 추가, SQL 은 on conflict do nothing(site_pages 안 건드림)`);
 }
 console.log(`\n한국 여행 시험 ${n}묶음 통과`);
