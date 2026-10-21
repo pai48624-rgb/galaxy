@@ -2,7 +2,8 @@
 //  /api/*              → Supabase REST 프록시 (일부 망이 *.supabase.co 를 막아도 앱이 동작하도록)
 //  /api/auth/naver/*   → 네이버 로그인(Supabase가 기본 지원하는 목록에 없어서 직접 구현, 아래 §NAVER 참고)
 //  그 외                 → 정적 자산(index.html) 그대로 서빙
-const UPSTREAM = "https://urflispegkzouclljxzg.supabase.co";
+// DB 주소: 실서버는 이 값. 로컬 시험은 site2/.dev.vars 의 SUPABASE_URL(내 컴퓨터 DB, tools/local_supabase.py)로 바꿈(2026-10-21)
+let UPSTREAM = "https://urflispegkzouclljxzg.supabase.co";
 // anon(publishable) 키 — 원래 클라이언트 JS에도 그대로 노출되는 공개 키라 여기 있어도 안전함
 const ANON_KEY = "sb_publishable_MtDGFqdSWe09vUXg2ALtqw_5p1gZVCr";
 
@@ -614,10 +615,12 @@ async function trendPost(id, request, env) {
     canonical,
     jsonLd: { "@context": "https://schema.org", "@type": "Article", headline: p.title, datePublished: p.created_at,
       author: { "@type": "Organization", name: "AI 성단 지도" }, mainEntityOfPage: canonical },
-    body: (p.doc && typeof p.doc === "object" && Object.keys(p.doc).length  // 구조화된 글이면 템플릿(§DOC), 아니면 아래 예전 그대로
-      ? `<h1 class="post-h1 serif">${escHtml(p.title)}</h1><div class="meta">AI 성단 지도 · ${fmtDate(p.created_at)}</div>${renderDoc(p.doc, p.design_code)}`
-      : content.includes('class="gx"')
+    // 공장 우주 틀(class="gx", 12벌) 화면이 있으면 그것 먼저 — doc 기본 모양으로 그리면 우주 틀이 사라짐(2026-10-21 로컬 /trend/37 확인).
+    // 우주 틀이 없는 구조화된 글만 doc 템플릿(§DOC), 그 밖은 예전 그대로
+    body: (content.includes('class="gx"')
       ? `<article>${content}</article>`
+      : p.doc && typeof p.doc === "object" && Object.keys(p.doc).length
+      ? `<h1 class="post-h1 serif">${escHtml(p.title)}</h1><div class="meta">AI 성단 지도 · ${fmtDate(p.created_at)}</div>${renderDoc(p.doc, p.design_code)}`
       : `<h1 class="post-h1 serif">${escHtml(p.title)}</h1><div class="meta">AI 성단 지도 · ${fmtDate(p.created_at)}</div><article class="paper">${content}</article>`)
       + `${tags ? `<div class="tags">${tags}</div>` : ""}`,
     side: trendSide(others.map((o) => `<li><a href="/trend/${o.id}">${escHtml(o.title)}</a></li>`).join("")),
@@ -922,6 +925,7 @@ async function receiveKorea(request) {
 
 export default {
   async fetch(request, env) {
+    if (env?.SUPABASE_URL) UPSTREAM = env.SUPABASE_URL;  // 로컬 시험용 DB(설정 있을 때만)
     if (new URL(request.url).pathname === "/rss.xml") return rssFeed(request, env);
     const url = new URL(request.url);
     if (url.pathname === "/api/auth/naver/start") return naverStart(request, url, env);
