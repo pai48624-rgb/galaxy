@@ -28,3 +28,7 @@ dist/*
 
 # 한국 여행 옮기기 SQL(scripts/korea_articles_to_sql.mjs 가 만듦 — 실행용, 저장소엔 안 넣음)
 scripts/korea_articles_data.sql
+
+# 로컬 DB는 올리지 않음(10/21 보안 점검)
+*.db
+*.sqlite
